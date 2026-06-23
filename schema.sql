@@ -47,6 +47,7 @@ CREATE TABLE IF NOT EXISTS results (
   placement       INTEGER,            -- место в группе, NULL если не присвоено/не финишировал
   total_score     REAL,               -- нормализованный итоговый балл для сравнения между событиями
   qualification   TEXT,               -- 'CACL, RegCACL' и т.п., как присуждено
+  vc              TEXT,               -- статус '+' или пусто
   status          TEXT DEFAULT 'finished', -- 'finished' | 'disqualified' | 'withdrawn' | 'dns'
   raw_scores_json TEXT,               -- судейские баллы по кругам / время — формат зависит от event_type
   raw_text        TEXT,               -- исходная строка как есть, для отладки парсера и ручной проверки

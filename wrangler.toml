@@ -1,0 +1,8 @@
+name = "procoursing-stats"
+main = "src/worker.js"
+compatibility_date = "2024-01-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "pc-db"
+database_id = "a5d6d4ad-7fc5-41b4-a33b-05f4daa382d4"

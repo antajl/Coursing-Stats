@@ -33,6 +33,23 @@ async function loadEvents() {
   const sqlStatements = [];
   
   for (const event of events) {
+    // Определяем event_type из results_url если не задан
+    let eventType = event.event_type;
+    if (!eventType && event.results_url) {
+      if (event.results_url.includes('Coursing')) {
+        eventType = 'coursing';
+      } else if (event.results_url.includes('BZMP')) {
+        eventType = 'bzmp';
+      } else if (event.results_url.includes('Racing')) {
+        eventType = 'racing';
+      } else {
+        eventType = 'unknown';
+      }
+    }
+    if (!eventType) {
+      eventType = 'unknown';
+    }
+
     const sql = `
 INSERT INTO events (
   year, date_start, date_end, rank_label, event_type, 
@@ -42,7 +59,7 @@ INSERT INTO events (
   '${event.date_start}',
   '${event.date_end}',
   '${(event.rank_label || "").replace(/'/g, "''")}',
-  ${event.event_type ? `'${event.event_type}'` : 'NULL'},
+  '${eventType}',
   '${(event.title || "").replace(/'/g, "''")}',
   '${(event.host_club || "").replace(/'/g, "''")}',
   '${(event.location || "").replace(/'/g, "''")}',
