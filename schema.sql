@@ -78,7 +78,7 @@ SELECT
   SUM(CASE WHEN r.placement = 1 THEN 1 ELSE 0 END) AS gold,
   SUM(CASE WHEN r.placement = 2 THEN 1 ELSE 0 END) AS silver,
   SUM(CASE WHEN r.placement = 3 THEN 1 ELSE 0 END) AS bronze,
-  COUNT(*) AS starts
+  COUNT(*) AS total_starts
 FROM results r
 JOIN dogs d ON d.id = r.dog_id
 WHERE r.status = 'finished'
@@ -96,7 +96,7 @@ SELECT
   d.breed,
   MAX(r.total_score) AS best_score,
   ROUND(AVG(r.total_score), 1) AS avg_score,
-  COUNT(*) AS starts
+  COUNT(*) AS total_starts
 FROM results r
 JOIN dogs d ON d.id = r.dog_id
 WHERE r.status = 'finished' AND r.total_score IS NOT NULL

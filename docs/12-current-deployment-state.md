@@ -11,6 +11,17 @@
 - **Статус:** Создан, но фронтенд ещё не разработан
 - **Подключение:** Подключён к GitHub репозиторию antajl/ProCoursing
 
+## Cloudflare Worker API
+- **URL:** https://procoursing-stats.antajltube.workers.dev
+- **Статус:** Активен, эндпоинты работают
+- **Эндпоинты:**
+  - `GET /api/top/placement?breed=&year=&minStarts=`
+  - `GET /api/top/score?breed=&year=&minStarts=`
+  - `GET /api/dogs/:id`
+  - `GET /api/breeds`
+  - `GET /api/years`
+  - `GET /api/events`
+
 ## Cloudflare D1
 - **Название базы данных:** pc-db
 - **Database ID:** a5d6d4ad-7fc5-41b4-a33b-05f4daa382d4
@@ -54,15 +65,10 @@ database_id = "a5d6d4ad-7fc5-41b4-a33b-05f4daa382d4"
 
 ## Следующие шаги
 
-### 1. Cloudflare Worker API
+### 1. ✅ Cloudflare Worker API
 - Создать файл `src/worker.js` с API эндпоинтами
-- Эндпоинты:
-  - `GET /api/top/placement?breed=&year=&minStarts=`
-  - `GET /api/top/score?breed=&year=&minStarts=`
-  - `GET /api/dogs/:id`
-  - `GET /api/breeds`
-  - `GET /api/years`
 - Деплой: `wrangler deploy`
+- Статус: Завершено
 
 ### 2. Фронтенд
 - Создать React приложение с TailwindCSS
@@ -138,4 +144,3 @@ wrangler deploy
 - Загружены только события 2026 года с результатами
 - Для полного архива 2015-2025 нужен бэкафилл
 - Фронтенд ещё не создан
-- Worker API ещё не создан
