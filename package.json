@@ -1,0 +1,18 @@
+{
+  "name": "procoursing-stats-scraper",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "scrape-index": "node scrape-year-index.mjs",
+    "parse-coursing": "node parse-results-coursing.mjs",
+    "parse-bzmp": "node parse-results-bzmp.mjs",
+    "parse-racing": "node parse-results-racing.mjs",
+    "load-events": "node scripts/load-events.mjs",
+    "load-results": "node scripts/load-results.mjs"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "iconv-lite": "^0.6.3"
+  }
+}
