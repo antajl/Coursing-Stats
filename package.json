@@ -4,15 +4,19 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "scrape-index": "node scrape-year-index.mjs",
-    "parse-coursing": "node parse-results-coursing.mjs",
-    "parse-bzmp": "node parse-results-bzmp.mjs",
-    "parse-racing": "node parse-results-racing.mjs",
-    "load-events": "node scripts/load-events.mjs",
-    "load-results": "node scripts/load-results.mjs"
+    "dev": "concurrently \"npx wrangler dev backend/src/worker.js --port 8787\" \"cd frontend && npm run dev\"",
+    "scrape-index": "node backend/scripts/scrape-year-index.mjs",
+    "parse-coursing": "node backend/parsers/parse-results-coursing.mjs",
+    "parse-bzmp": "node backend/parsers/parse-results-bzmp.mjs",
+    "parse-racing": "node backend/parsers/parse-results-racing.mjs",
+    "load-events": "node backend/scripts/load-events.mjs",
+    "load-results": "node backend/scripts/load-results.mjs"
   },
   "dependencies": {
     "cheerio": "^1.0.0",
     "iconv-lite": "^0.6.3"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }

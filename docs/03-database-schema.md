@@ -49,13 +49,41 @@
 | breed_class | TEXT | Заголовок группы ('Афганская - Стандартная - Сука') |
 | catalog_no | INTEGER | Каталожный номер |
 | placement | INTEGER | Место (NULL если не финишировал) |
-| total_score | REAL | Нормализованный итоговый балл |
+| total_score | REAL | Нормализованный итоговый балл (для coursing/bzmp) |
 | qualification | TEXT | 'CACL, RegCACL' и т.п. |
 | status | TEXT | 'finished' \| 'disqualified' \| 'withdrawn' \| 'dns' |
-| raw_scores_json | TEXT | JSON судейских баллов |
+| raw_scores_json | TEXT | JSON с детальными данными (баллы или скорость) |
 | raw_text | TEXT | Исходная строка для отладки |
 
 **UNIQUE:** `(event_id, dog_id, breed_class)`
+
+**raw_scores_json структура:**
+
+Для Coursing/БЗМП:
+```json
+{
+  "heat1": [score1, score2, score3],
+  "sum1": total1,
+  "heat2": [score1, score2, score3],
+  "sum2": total2
+}
+```
+
+Для Racing:
+```json
+{
+  "heat1": {
+    "num": 1,
+    "bib": "red",
+    "time": 21.88,
+    "speed": 16.45
+  },
+  "heat2": { ... },
+  "heat3": { ... },
+  "distance": 480
+}
+```
+Скорость в м/с, конвертируется в км/ч в API (×3.6).
 
 ## Views
 

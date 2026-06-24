@@ -1,6 +1,9 @@
 name = "procoursing-stats"
-main = "src/worker.js"
+main = "backend/src/worker.js"
 compatibility_date = "2024-01-01"
+
+[triggers]
+crons = ["0 2 * * 1"]  # Weekly on Monday at 2 AM UTC
 
 [[d1_databases]]
 binding = "DB"
