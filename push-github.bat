@@ -16,14 +16,16 @@ REM Add all files
 echo Adding files...
 git add .
 
-REM Commit
+REM Commit with auto message
 echo Committing changes...
-git commit -m "Restructure project: backend/frontend/data separation with documentation"
+git commit -m "Auto update %date% %time%"
 
 REM Push
 echo Pushing to GitHub...
-git push -u origin main
+git push
 
 echo.
 echo Done!
+echo.
+echo Note: Both frontend and backend will be deployed automatically to Cloudflare.
 pause

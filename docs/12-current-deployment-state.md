@@ -7,7 +7,9 @@
 - **Репозиторий:** https://github.com/antajl/ProCoursing
 - **Ветка:** main
 - **Secrets (настроены):** `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`
-- **GitHub Actions:** `.github/workflows/update-db.yml` — еженедельное обновление текущего года (понедельник 03:00 UTC) + `workflow_dispatch`
+- **GitHub Actions:**
+  - `.github/workflows/update-db.yml` — еженедельное обновление текущего года (понедельник 03:00 UTC) + `workflow_dispatch`
+  - `.github/workflows/deploy-frontend.yml` — автоматический деплой фронтенда при push в main с изменениями в `frontend/`
 
 ## Cloudflare Pages (фронтенд)
 
@@ -110,7 +112,7 @@ npx wrangler d1 execute pc-db --remote --file=./data/migrate-remote-schema.sql
 npx wrangler deploy
 
 # Деплой фронтенда
-cd frontend && npm run build && npx wrangler pages deploy dist --project-name procoursing-stats
+cd frontend && npm run build && npx wrangler pages deploy dist --project-name procoursing
 ```
 
 ## npm-скрипты (корень)

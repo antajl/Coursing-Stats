@@ -223,17 +223,36 @@ wrangler deploy
 
 ## Шаг 5: Cloudflare Pages (фронтенд)
 
-### 5.1 Подключить GitHub к Cloudflare Pages
-1. Зайди в Cloudflare Dashboard → Pages
-2. Нажми "Create a project"
-3. Выбери "Connect to Git"
-4. Выбери свой репозиторий `procoursing-stats`
-5. Настройки билда:
-   - Build command: `npm run build` (пока нет, оставь пустым)
-   - Build output directory: `dist` (пока нет, оставь пустым)
-6. Нажми "Save and Deploy"
+### 5.1 Автоматический деплой через GitHub Actions (РЕКОМЕНДУЕТСЯ)
 
-**Примечание:** Фронтенд ещё не создан — это следующий этап.
+Проект настроен на автоматический деплой фронтенда через GitHub Actions:
+
+**Workflow:** `.github/workflows/deploy-frontend.yml`
+
+**Триггеры:**
+- При push в main с изменениями в `frontend/`
+- Ручной запуск через GitHub UI
+
+**Что делает:**
+- Устанавливает зависимости фронтенда
+- Собирает React-приложение
+- Деплоит на Cloudflare Pages
+
+**Результат:** Автоматическое обновление сайта https://procoursing.pages.dev
+
+**Ручной запуск:**
+1. Перейди в GitHub → Actions → Deploy Frontend
+2. Нажми "Run workflow"
+
+### 5.2 Ручной деплой (альтернатива)
+
+Если GitHub Actions не работает, можно деплоить вручную:
+
+```bash
+cd frontend
+npm run build
+npx wrangler pages deploy dist --project-name=procoursing
+```
 
 ---
 

@@ -88,6 +88,26 @@ npm run dev
 
 **ВАЖНО:** Серверы МОЖНО запускать командами. Это разрешено и рекомендуется для разработки.
 
+## Автоматизация (GitHub Actions)
+
+### Workflow: Update D1 Database
+- **Запуск:** Каждый понедельник в 03:00 UTC
+- **Ручной запуск:** GitHub → Actions → Update D1 Database → Run workflow
+- **Что делает:**
+  - Скрапинг индекса событий текущего года
+  - Парсинг результатов с procoursing.ru
+  - Загрузка данных в remote D1
+- **Скрипт:** `backend/scripts/ci-update-db.mjs`
+
+### Workflow: Deploy Frontend
+- **Запуск:** При push в main с изменениями в `frontend/`
+- **Ручной запуск:** GitHub → Actions → Deploy Frontend → Run workflow
+- **Что делает:**
+  - Установка зависимостей фронтенда
+  - Сборка React-приложения
+  - Деплой на Cloudflare Pages
+- **Результат:** Автоматическое обновление сайта https://procoursing.pages.dev
+
 ### Тестирование парсера
 ```bash
 cd backend
