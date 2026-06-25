@@ -5,7 +5,7 @@ export async function onRequest(context) {
   const search = url.search;
   
   // Check if D1 binding is available
-  if (!env.pc_db) {
+  if (!env['pc-db']) {
     return new Response(JSON.stringify({ error: 'D1 database not available' }), {
       status: 500,
       headers: {
@@ -15,7 +15,7 @@ export async function onRequest(context) {
     });
   }
   
-  const db = env.pc_db;
+  const db = env['pc-db'];
   
   // Handle different API endpoints
   try {
