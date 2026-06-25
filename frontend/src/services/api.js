@@ -8,7 +8,7 @@ import {
 
 const API_URL = import.meta.env.VITE_API_URL || 
   (import.meta.env.PROD 
-    ? '' // Use relative paths on production to avoid CORS
+    ? 'https://procoursing-stats.antajltube.workers.dev'
     : 'http://127.0.0.1:8787');
 
 const FORCE_MOCK = false;

@@ -5,7 +5,7 @@ export default {
     
     // CORS headers
     const corsHeaders = {
-      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Origin': 'https://procoursing.pages.dev',
       'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, HEAD, PUT, DELETE',
       'Access-Control-Allow-Headers': 'Content-Type, Authorization, X-Requested-With, Origin, Accept',
       'Access-Control-Max-Age': '86400',
