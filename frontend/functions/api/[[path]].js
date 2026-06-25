@@ -40,7 +40,7 @@ export async function onRequest(context) {
     
     if (path === '/api/breeds') {
       const { results } = await db.prepare('SELECT DISTINCT breed FROM dogs ORDER BY breed').all();
-      const breeds = results.map(r => r.breed);
+      const breeds = results.map(r => ({ breed: r.breed }));
       return new Response(JSON.stringify(breeds), {
         headers: {
           'Content-Type': 'application/json',
@@ -51,7 +51,7 @@ export async function onRequest(context) {
     
     if (path === '/api/years') {
       const { results } = await db.prepare('SELECT DISTINCT year FROM events ORDER BY year DESC').all();
-      const years = results.map(r => r.year);
+      const years = results.map(r => ({ year: r.year }));
       return new Response(JSON.stringify(years), {
         headers: {
           'Content-Type': 'application/json',
@@ -150,8 +150,8 @@ export async function onRequest(context) {
       
       let query = `
         SELECT d.id AS dog_id, d.name_lat, d.name_ru, d.breed, e.year,
-          MAX(JSON_EXTRACT(r.raw_scores_json, '$.speed')) AS best_speed,
-          ROUND(AVG(JSON_EXTRACT(r.raw_scores_json, '$.speed')), 2) AS avg_speed,
+          MAX(CAST(JSON_EXTRACT(r.raw_scores_json, '$.heat1.speed') AS REAL)) AS best_speed,
+          ROUND(AVG(CAST(JSON_EXTRACT(r.raw_scores_json, '$.heat1.speed') AS REAL)), 2) AS avg_speed,
           COUNT(*) AS total_starts
         FROM results r
         JOIN dogs d ON d.id = r.dog_id
