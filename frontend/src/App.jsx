@@ -6,7 +6,7 @@ import DogProfile from './pages/DogProfile'
 
 const API_URL = import.meta.env.VITE_API_URL || 
   (import.meta.env.PROD 
-    ? '' // Use relative paths on production for Pages Functions
+    ? 'https://procoursing-stats.antajltube.workers.dev'
     : 'http://127.0.0.1:8787');
 
 function App() {
