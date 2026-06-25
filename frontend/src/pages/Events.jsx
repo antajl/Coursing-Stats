@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
 
 const API_URL = import.meta.env.PROD 
   ? 'https://procoursing-stats.antajltube.workers.dev'
@@ -37,15 +36,6 @@ function getImportantCompetitionStyle(competitionKind) {
   return ''
 }
 
-function translateEventType(type) {
-  const translations = {
-    'coursing': 'Курсинг',
-    'bzmp': 'БЗМП',
-    'racing': 'Бега',
-    'unknown': 'Неизвестно'
-  }
-  return translations[type] || type
-}
 
 export default function Events() {
   const [events, setEvents] = useState([])
@@ -55,53 +45,44 @@ export default function Events() {
   const [filterType, setFilterType] = useState('')
   const [sortField, setSortField] = useState('date_start')
   const [sortDirection, setSortDirection] = useState('asc')
-  const [updateLoading, setUpdateLoading] = useState(false)
-  const [updateMessage, setUpdateMessage] = useState(null)
-  const [lastUpdateTime, setLastUpdateTime] = useState(null)
   const [searchQuery, setSearchQuery] = useState('')
-  const UPDATE_COOLDOWN = 4 * 60 * 60 * 1000 // 4 hours in milliseconds
 
   useEffect(() => {
+    async function fetchYears() {
+      try {
+        const response = await fetch(`${API_URL}/api/years`)
+        const yearsData = await response.json()
+        setAllYears(yearsData.map(y => y.year))
+      } catch (err) {
+        console.error('Error fetching years:', err)
+      }
+    }
+
     fetchYears()
   }, [])
 
   useEffect(() => {
+    async function fetchEvents() {
+      setLoading(true)
+      try {
+        const url = filterYear ? `${API_URL}/api/events?year=${filterYear}` : `${API_URL}/api/events`
+        const response = await fetch(url)
+        
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`)
+        }
+        
+        const data = await response.json()
+        setEvents(data)
+      } catch (err) {
+        console.error('Error fetching events:', err)
+      } finally {
+        setLoading(false)
+      }
+    }
+
     fetchEvents()
   }, [filterYear])
-
-  const fetchYears = async () => {
-    try {
-      const response = await fetch(`${API_URL}/api/years`)
-      const yearsData = await response.json()
-      setAllYears(yearsData.map(y => y.year))
-    } catch (error) {
-      console.error('Error fetching years:', error)
-    }
-  }
-
-  const fetchEvents = async () => {
-    try {
-      const url = filterYear ? `${API_URL}/api/events?year=${filterYear}` : `${API_URL}/api/events`
-      console.log('Fetching from:', url)
-      const response = await fetch(url)
-      console.log('Response status:', response.status)
-      console.log('Response ok:', response.ok)
-      
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
-      }
-      
-      const data = await response.json()
-      console.log('Events data:', data)
-      console.log('Events count:', data.length)
-      setEvents(data)
-    } catch (error) {
-      console.error('Error fetching events:', error)
-      console.error('Error details:', error.message)
-    } finally {
-      setLoading(false)
-    }
-  }
 
   const handleSort = (field) => {
     if (sortField === field) {
@@ -109,68 +90,6 @@ export default function Events() {
     } else {
       setSortField(field)
       setSortDirection('asc')
-    }
-  }
-
-  const handleUpdate = async () => {
-    // Check cooldown
-    if (lastUpdateTime) {
-      const timeSinceLastUpdate = Date.now() - lastUpdateTime
-      if (timeSinceLastUpdate < UPDATE_COOLDOWN) {
-        const remainingTime = Math.ceil((UPDATE_COOLDOWN - timeSinceLastUpdate) / 1000 / 60 / 60)
-        setUpdateMessage({
-          type: 'warning',
-          text: `Обновление доступно через ${remainingTime} часов.`
-        })
-        setTimeout(() => setUpdateMessage(null), 3000)
-        return
-      }
-    }
-
-    setUpdateLoading(true)
-    setUpdateMessage(null)
-    
-    try {
-      console.log('Sending update request to:', `${API_URL}/api/update/trigger`)
-      const response = await fetch(`${API_URL}/api/update/trigger`, {
-        method: 'POST'
-      })
-      console.log('Update response status:', response.status)
-      console.log('Update response ok:', response.ok)
-      
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
-      }
-      
-      const data = await response.json()
-      console.log('Update response data:', data)
-      
-      if (data.success) {
-        setLastUpdateTime(Date.now())
-        setUpdateMessage({
-          type: 'success',
-          text: 'Обновление запущено. Данные будут обновлены в ближайшее время.'
-        })
-        
-        // Refresh events after a short delay
-        setTimeout(() => {
-          fetchEvents()
-        }, 2000)
-      } else {
-        setUpdateMessage({
-          type: 'error',
-          text: 'Ошибка при запуске обновления'
-        })
-      }
-    } catch (error) {
-      console.error('Error triggering update:', error)
-      console.error('Error details:', error.message)
-      setUpdateMessage({
-        type: 'error',
-        text: `Ошибка при запуске обновления: ${error.message}`
-      })
-    } finally {
-      setUpdateLoading(false)
     }
   }
 
@@ -253,18 +172,6 @@ export default function Events() {
           className="flex-1 min-w-64 h-12 px-5 py-3 bg-white border-2 border-old-money-300 rounded-xl text-old-money-800 focus:ring-2 focus:ring-gold-400 focus:border-transparent transition-all duration-300 shadow-sm"
         />
       </div>
-
-      {updateMessage && (
-        <div className={`mb-4 p-4 rounded-xl ${
-          updateMessage.type === 'success' 
-            ? 'bg-green-50 border-2 border-green-200 text-green-800' 
-            : updateMessage.type === 'warning'
-            ? 'bg-amber-50 border-2 border-amber-200 text-amber-800'
-            : 'bg-red-50 border-2 border-red-200 text-red-800'
-        }`}>
-          {updateMessage.text}
-        </div>
-      )}
 
       <div className="mb-4 text-sm text-old-money-600">
         Всего событий: {events.length} | Отфильтровано: {filteredEvents.length}

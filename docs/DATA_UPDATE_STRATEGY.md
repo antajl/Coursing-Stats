@@ -217,10 +217,11 @@ npx wrangler d1 execute pc-db --local --file=./load-results.sql
 - Cron Trigger запускает обновление напрямую
 - Сложнее из-за ограничений Worker
 
-**Вариант 3: GitHub Actions**
-- Настроить GitHub Action с расписанием
-- Action запускает скрипты обновления
-- Обновляет production базу через `--remote` флаг
+**Вариант 3: GitHub Actions** ✅ Реализовано
+- Workflow: `.github/workflows/update-db.yml`
+- Скрипт: `backend/scripts/ci-update-db.mjs`
+- Secrets: `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`
+- Расписание: понедельник 03:00 UTC + `workflow_dispatch`
 
 ---
 
@@ -240,5 +241,6 @@ npx wrangler d1 execute pc-db --local --file=./load-results.sql
 - ✅ Скрипт бэкафилла исторических годов создан
 - ✅ Скрипт инкрементального обновления создан
 - ✅ Колонка `last_modified` добавлена в БД
-- ✅ Cron Trigger настроен в worker.js
-- ⏳ Автоматическое обновление через Cron требует дополнительной настройки
+- ✅ Cron Trigger настроен в worker.js (логирование)
+- ✅ GitHub Actions для автоматического обновления
+- ✅ Полный синк local → remote (`sync-local-to-remote.mjs`)

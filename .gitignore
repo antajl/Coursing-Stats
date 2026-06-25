@@ -9,6 +9,8 @@ package-lock.json
 data/events-*.json
 data/events.json
 data/load-*.sql
+data/sync-*.sql
+data/migrate-normalize-dogs.sql
 
 # Environment files
 .env

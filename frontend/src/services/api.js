@@ -3,8 +3,7 @@ import {
   mockTopScoreData,
   mockBreeds,
   mockYears,
-  mockEvents,
-  mockDogProfileData
+  mockEvents
 } from '../data/mockData';
 
 const API_URL = import.meta.env.PROD 
@@ -46,11 +45,15 @@ async function fetchWithFallback(url, mockData, timeout = 5000) {
 }
 
 export const api = {
-  async getTopPlacement(year = '', breed = '', minStarts = 0) {
+  async getTopPlacement(year = '', breed = '', minStarts = 0, limit = null, offset = 0) {
     const params = new URLSearchParams();
     if (year) params.append('year', year);
     if (breed) params.append('breed', breed);
     if (minStarts > 0) params.append('minStarts', minStarts);
+    if (limit !== null) {
+      params.append('limit', limit);
+      params.append('offset', offset);
+    }
 
     const url = `${API_URL}/api/top/placement?${params}`;
     let mockData = mockTopPlacementData;
@@ -68,11 +71,15 @@ export const api = {
     return fetchWithFallback(url, mockData);
   },
 
-  async getTopScore(year = '', breed = '', minStarts = 0) {
+  async getTopScore(year = '', breed = '', minStarts = 0, limit = null, offset = 0) {
     const params = new URLSearchParams();
     if (year) params.append('year', year);
     if (breed) params.append('breed', breed);
     if (minStarts > 0) params.append('minStarts', minStarts);
+    if (limit !== null) {
+      params.append('limit', limit);
+      params.append('offset', offset);
+    }
 
     const url = `${API_URL}/api/top/score?${params}`;
     let mockData = mockTopScoreData;
@@ -90,11 +97,15 @@ export const api = {
     return fetchWithFallback(url, mockData);
   },
 
-  async getTopSpeed(year = '', breed = '', minStarts = 0) {
+  async getTopSpeed(year = '', breed = '', minStarts = 0, limit = null, offset = 0) {
     const params = new URLSearchParams();
     if (year) params.append('year', year);
     if (breed) params.append('breed', breed);
     if (minStarts > 0) params.append('minStarts', minStarts);
+    if (limit !== null) {
+      params.append('limit', limit);
+      params.append('offset', offset);
+    }
 
     const url = `${API_URL}/api/top/speed?${params}`;
     // Mock data for speed - will be replaced with actual API data
@@ -193,5 +204,12 @@ export const api = {
       data: mockData,
       source: 'mock'
     };
+  },
+
+  async getDogEvents(dogId) {
+    return fetchWithFallback(
+      `${API_URL}/api/dogs/${dogId}/events`,
+      []
+    );
   }
 };

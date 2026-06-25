@@ -42,7 +42,55 @@ function cleanText(text) {
   return text.replace(/\s+/g, " ").trim();
 }
 
-function parseDogRow($row, breedClass) {
+export function normalizeDogName(name) {
+  if (!name) return "";
+  return name
+    .toUpperCase()
+    .replace(/['"`‘’“”]/g, "")
+    .replace(/[-]/g, " ")
+    .replace(/Ё/g, "Е")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+export function normalizeBreed(breed) {
+  if (!breed) return "";
+  return breed
+    .toUpperCase()
+    .replace(/['"`‘’“”]/g, "")
+    .replace(/[-]/g, " ")
+    .replace(/Ё/g, "Е")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+export function detectStatusFromText(text, hasScore = true) {
+  const normalized = cleanText(text).toLowerCase().replace(/ё/g, "е");
+
+  if (/\bнеявк|не\s*явил|не\s*приб/.test(normalized)) {
+    return "dns";
+  }
+
+  if (/дисквал/.test(normalized)) {
+    return "disqualified";
+  }
+
+  if (/снят|снята|снятие|ветеринар|владельц/.test(normalized)) {
+    return "withdrawn";
+  }
+
+  if (/не\s*финиш|сош[еелла]*|сход\s+с\s+трасс|уход\s+с\s+трасс/.test(normalized)) {
+    return "dnf";
+  }
+
+  if (/отстран/.test(normalized)) {
+    return "disqualified";
+  }
+
+  return hasScore ? "finished" : "unknown_status_check_raw_text";
+}
+
+function parseDogRow($, $row, breedClass, allRows, rowIndex) {
   const $cells = $row.find("td");
   
   // Проверяем количество ячеек - формат 2025 имеет 25, формат 2024 имеет 23
@@ -60,12 +108,12 @@ function parseDogRow($row, breedClass) {
   const placement = placementText ? extractNumber(placementText) : null;
 
   // Порода, класс, пол
-  const breed = cleanText($cells.eq(2).text());
+  const breed = normalizeBreed($cells.eq(2).text());
   const class_ = cleanText($cells.eq(3).text());
   const sex = cleanText($cells.eq(4).text());
 
   // Кличка (с <br> между рус/лат)
-  const name = cleanText($cells.eq(5).text());
+  const name = normalizeDogName($cells.eq(5).text());
   
   // Filter out score/summary rows - if name is just a number, it's not a dog
   if (name && /^\d+$/.test(name)) {
@@ -77,33 +125,75 @@ function parseDogRow($row, breedClass) {
     return null; // Это строка с оценками, не собака
   }
 
+  // Определяем количество судей по rowspan первой ячейки
+  const firstCellRowspan = $cells.eq(0).attr("rowspan");
+  const judgeCount = firstCellRowspan ? parseInt(firstCellRowspan, 10) : 3; // По умолчанию 3 судьи
+
+  // Собираем все строки оценок для этой собаки
+  const dogRows = [$row]; // Сначала добавляем саму строку собаки
+  
+  // Собираем следующие строки оценок (они имеют меньше ячеек из-за rowspan)
+  for (let i = 1; i < judgeCount; i++) {
+    const currentRowIndex = rowIndex + i;
+    if (currentRowIndex < allRows.length) {
+      const $currentRow = $(allRows[currentRowIndex]);
+      const $currentCells = $currentRow.find("td");
+      
+      // Строка оценок имеет меньше ячеек (нет rowspan в первых ячейках)
+      const currentCellCount = $currentCells.length;
+      const isScoreRow = currentCellCount < cellCount;
+      
+      if (isScoreRow) {
+        dogRows.push($currentRow);
+      }
+    }
+  }
+
   // Определяем формат по количеству ячеек
-  let totalScore, qualification, vc;
+  let totalScore, qualification, vc, rawScoresJson;
   
   if (cellCount >= 25) {
-    // Формат 2025 (25 ячеек)
-    // Судейские оценки забега 1 (ячейки 7-12)
-    const heat1Scores = [];
-    for (let i = 7; i <= 12; i++) {
+    // Формат 2025 (25 ячеек) - используем данные из первой строки собаки
+    // Судейские оценки забега 1 (ячейки 7-12) - 5 категорий + сумма
+    const heat1Categories = [];
+    for (let i = 7; i <= 11; i++) {
       const score = extractNumber($cells.eq(i).text());
-      heat1Scores.push(score);
+      heat1Categories.push(score);
     }
-
-    // Сумма 1 (ячейка 13, bold)
-    const sum1 = extractBoldNumber($cells.eq(13));
-
+    const sum1 = extractBoldNumber($cells.eq(12)); // Сумма судьи 1
+    
     // Судейские оценки забега 2 (ячейки 15-20)
-    const heat2Scores = [];
-    for (let i = 15; i <= 20; i++) {
-      const score = extractNumber($cells.eq(i).text());
-      heat2Scores.push(score);
+    const heat2Categories = [];
+    let heat2Status = null;
+    
+    for (let i = 15; i <= 19; i++) {
+      const cellText = $cells.eq(i).text().trim();
+      const score = extractNumber(cellText);
+      if (cellText && !score && cellText !== '') {
+        heat2Status = cellText;
+      }
+      heat2Categories.push(score);
     }
+    const sum2 = extractBoldNumber($cells.eq(20)); // Сумма судьи 1
+    
+    // Общая сумма из таблицы (ячейка 22)
+    const rawTotalScore = extractBoldNumber($cells.eq(22));
+    
+    // Нормализуем total_score по количеству судей
+    // rawTotalScore уже является суммой всех судей за оба забега
+    totalScore = rawTotalScore ? Math.round((rawTotalScore / judgeCount) * 100) / 100 : null;
 
-    // Сумма 2 (ячейка 21, bold)
-    const sum2 = extractBoldNumber($cells.eq(21));
-
-    // Общая сумма (ячейка 22, bold, крупный шрифт)
-    totalScore = extractBoldNumber($cells.eq(22));
+    // Сохраняем детальные оценки в raw_scores_json
+    rawScoresJson = JSON.stringify({
+      judge_count: judgeCount,
+      heat1: heat1Categories,
+      sum1: sum1,
+      heat2: heat2Categories,
+      sum2: sum2,
+      raw_total: rawTotalScore,
+      normalized_score: totalScore,
+      heat2_status: heat2Status
+    });
 
     // ВС (ячейка 23)
     vc = cleanText($cells.eq(23).text());
@@ -112,19 +202,25 @@ function parseDogRow($row, breedClass) {
     qualification = cleanText($cells.eq(24).text());
   } else {
     // Формат 2024 (23 ячеек) - упрощенная структура
-    // Общая сумма обычно в предпоследней ячейке
-    totalScore = extractBoldNumber($cells.eq(cellCount - 3));
+    const rawTotalScore = extractBoldNumber($cells.eq(cellCount - 3));
+    
+    // Нормализуем total_score по количеству судей
+    totalScore = rawTotalScore ? Math.round((rawTotalScore / judgeCount) * 100) / 100 : null;
+
+    // Сохраняем базовую структуру в raw_scores_json
+    rawScoresJson = JSON.stringify({
+      raw_total: rawTotalScore,
+      judge_count: judgeCount,
+      normalized_score: totalScore,
+      format: "simplified_2024"
+    });
     
     // ВС и титул в последних ячейках
     vc = cleanText($cells.eq(cellCount - 2).text());
     qualification = cleanText($cells.eq(cellCount - 1).text());
   }
 
-  // Определяем статус
-  let status = "finished";
-  if (!totalScore) {
-    status = "unknown_status_check_raw_text";
-  }
+  const status = detectStatusFromText($row.text(), totalScore !== null && totalScore !== undefined);
 
   return {
     breed_class: breedClass,
@@ -135,9 +231,11 @@ function parseDogRow($row, breedClass) {
     sex,
     name,
     total_score: totalScore,
+    judge_count: judgeCount,
     qualification,
     vc,
     status,
+    raw_scores_json: rawScoresJson,
     raw_text: $row.html() || "",
   };
 }
@@ -150,12 +248,12 @@ function parseNonArrivedRow($row) {
   if (!catalogNo) return null;
 
   // Порода, класс, пол
-  const breed = cleanText($cells.eq(2).text());
+  const breed = normalizeBreed($cells.eq(2).text());
   const class_ = cleanText($cells.eq(3).text());
   const sex = cleanText($cells.eq(4).text());
 
   // Кличка
-  const name = cleanText($cells.eq(5).text());
+  const name = normalizeDogName($cells.eq(5).text());
 
   // Статус (колонка 6 с colspan=19)
   const statusText = cleanText($cells.eq(6).text());
@@ -182,9 +280,14 @@ export function parseCoursingHTML(html) {
   let currentBreedClass = null;
   let inNonArrivedSection = false;
 
-  // Ищем строки таблицы
+  // Собираем все строки таблицы
+  const allRows = [];
   $("table tr").each((_, row) => {
-    const $row = $(row);
+    allRows.push($(row));
+  });
+
+  // Ищем строки таблицы
+  allRows.forEach(($row, rowIndex) => {
     const $firstCell = $row.find("td").first();
 
     // Заголовок группы породы (формат с colspan=25 и жирным текстом)
@@ -208,7 +311,7 @@ export function parseCoursingHTML(html) {
         const parsed = parseNonArrivedRow($row);
         if (parsed) results.push(parsed);
       } else if (currentBreedClass) {
-        const parsed = parseDogRow($row, currentBreedClass);
+        const parsed = parseDogRow($, $row, currentBreedClass, allRows, rowIndex);
         if (parsed) results.push(parsed);
       }
     }
@@ -220,7 +323,10 @@ export function parseCoursingHTML(html) {
     }
   });
 
-  return results;
+  // Фильтруем собак со статусом "Неявка"
+  const filteredResults = results.filter(r => r.status !== 'dns');
+
+  return filteredResults;
 }
 
 export async function parseCoursingResultsPage(url) {

@@ -190,15 +190,15 @@ async function main() {
     await sleep(500); // вежливая пауза между запросами
   }
 
-  await fs.writeFile("events-current.json", JSON.stringify(events, null, 2), "utf-8");
+  await fs.writeFile("data/events-current.json", JSON.stringify(events, null, 2), "utf-8");
   console.log(`\nГотово. Всего событий: ${events.length}`);
   console.log(`Проверено Last-Modified: ${updatedCount}`);
-  console.log("Записано в events-current.json");
+  console.log("Записано в data/events-current.json");
   console.log("\nДалее:");
-  console.log("1. node scripts/load-events.mjs events-current.json");
-  console.log("2. node scripts/load-results.mjs");
-  console.log("3. npx wrangler d1 execute pc-db --local --file=./load-events.sql");
-  console.log("4. npx wrangler d1 execute pc-db --local --file=./load-results.sql");
+  console.log("1. node backend/scripts/load-events.mjs data/events-current.json");
+  console.log("2. node backend/scripts/load-results.mjs data/events-current.json");
+  console.log("3. npx wrangler d1 execute pc-db --remote --file=./data/load-events.sql");
+  console.log("4. npx wrangler d1 execute pc-db --remote --file=./data/load-results.sql");
 }
 
 main();

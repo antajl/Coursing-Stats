@@ -1,8 +1,13 @@
 import fs from "node:fs/promises";
-import { parseCoursingResultsPage } from "../parse-results-coursing.mjs";
-import { parseBZMPResultsPage } from "../parse-results-bzmp.mjs";
-import { parseRacingResultsPage } from "../parse-results-racing.mjs";
+import { parseCoursingResultsPage } from "../parsers/parse-results-coursing.mjs";
+import { parseBZMPResultsPage } from "../parsers/parse-results-bzmp.mjs";
+import { parseRacingResultsPage } from "../parsers/parse-results-racing.mjs";
+import { normalizeDogName, normalizeBreed } from "../lib/dog-lookup.mjs";
 import { sleep } from "../lib/fetch-win1251.mjs";
+
+function sqlEscape(value) {
+  return (value || "").replace(/'/g, "''");
+}
 
 /**
  * Загрузка результатов в D1/SQLite.
@@ -59,16 +64,18 @@ async function loadResults() {
     
     // Сначала добавляем собак
     for (const result of results) {
-      const dogKey = `${result.name}|${result.breed}`;
-      
+      const nameLat = normalizeDogName(result.name);
+      const breed = normalizeBreed(result.breed);
+      const dogKey = `${nameLat}|${breed}`;
+
       if (!dogsMap.has(dogKey)) {
         const dogSql = `
 INSERT OR IGNORE INTO dogs (
   name_lat, breed, name_ru, pedigree_url
 ) VALUES (
-  '${(result.name || "").replace(/'/g, "''")}',
-  '${(result.breed || "").replace(/'/g, "''")}',
-  '${(result.name || "").replace(/'/g, "''")}',
+  '${sqlEscape(nameLat)}',
+  '${sqlEscape(breed)}',
+  '${sqlEscape(result.name_ru || result.name)}',
   NULL
 );`;
         sqlStatements.push(dogSql);
@@ -78,83 +85,29 @@ INSERT OR IGNORE INTO dogs (
     
     // Затем добавляем результаты
     for (const result of results) {
-      const dogKey = `${result.name}|${result.breed}`;
-      
-      // Для курсинга/БЗМП с детальными оценками
-      if (result.heat1_scores) {
-        const scoresJson = JSON.stringify({
-          heat1: result.heat1_scores,
-          sum1: result.sum1,
-          heat2: result.heat2_scores,
-          sum2: result.sum2
-        });
+      const nameLat = normalizeDogName(result.name);
+      const breed = normalizeBreed(result.breed);
+
+      // Используем raw_scores_json из парсера
+      const scoresJson = result.raw_scores_json || '{}';
         
-        const resultSql = `
-INSERT INTO results (
-  dog_id, event_id, placement, total_score, 
+      const resultSql = `
+INSERT OR IGNORE INTO results (
+  dog_id, event_id, placement, total_score, judge_count,
   raw_scores_json, qualification, vc, status, raw_text
 ) VALUES (
-  (SELECT id FROM dogs WHERE name_lat = '${(result.name || "").replace(/'/g, "''")}' AND breed = '${(result.breed || "").replace(/'/g, "''")}'),
+  (SELECT id FROM dogs WHERE name_lat = '${sqlEscape(nameLat)}' AND breed = '${sqlEscape(breed)}'),
   (SELECT id FROM events WHERE results_url = '${event.results_url}'),
   ${result.placement || 'NULL'},
   ${result.total_score || 'NULL'},
+  ${result.judge_count || 3},
   '${scoresJson.replace(/'/g, "''")}',
   '${(result.qualification || "").replace(/'/g, "''")}',
   '${(result.vc || "").replace(/'/g, "''")}',
   '${result.status}',
   '${(result.raw_text || "").replace(/'/g, "''").replace(/\n/g, " ")}'
 );`;
-        sqlStatements.push(resultSql);
-      }
-      // Для Racing
-      else if (result.heat1) {
-        const scoresJson = JSON.stringify({
-          heat1: result.heat1,
-          heat2: result.heat2,
-          heat3: result.heat3,
-          distance: result.distance
-        });
-        
-        const resultSql = `
-INSERT INTO results (
-  dog_id, event_id, placement, total_score, 
-  raw_scores_json, qualification, vc, status, raw_text
-) VALUES (
-  (SELECT id FROM dogs WHERE name_lat = '${(result.name || "").replace(/'/g, "''")}' AND breed = '${(result.breed || "").replace(/'/g, "''")}'),
-  (SELECT id FROM events WHERE results_url = '${event.results_url}'),
-  ${result.placement || 'NULL'},
-  NULL,
-  '${scoresJson.replace(/'/g, "''")}',
-  '${(result.qualification || "").replace(/'/g, "''")}',
-  '${(result.vc || "").replace(/'/g, "''")}',
-  '${result.status}',
-  '${(result.raw_text || "").replace(/'/g, "''").replace(/\n/g, " ")}'
-);`;
-        sqlStatements.push(resultSql);
-      }
-      // Для упрощенного формата (2023-2024) - только total_score
-      else if (result.total_score !== undefined || result.placement !== undefined) {
-        const scoresJson = JSON.stringify({
-          total_score: result.total_score
-        });
-        
-        const resultSql = `
-INSERT INTO results (
-  dog_id, event_id, placement, total_score, 
-  raw_scores_json, qualification, vc, status, raw_text
-) VALUES (
-  (SELECT id FROM dogs WHERE name_lat = '${(result.name || "").replace(/'/g, "''")}' AND breed = '${(result.breed || "").replace(/'/g, "''")}'),
-  (SELECT id FROM events WHERE results_url = '${event.results_url}'),
-  ${result.placement || 'NULL'},
-  ${result.total_score || 'NULL'},
-  '${scoresJson.replace(/'/g, "''")}',
-  '${(result.qualification || "").replace(/'/g, "''")}',
-  '${(result.vc || "").replace(/'/g, "''")}',
-  '${result.status}',
-  '${(result.raw_text || "").replace(/'/g, "''").replace(/\n/g, " ")}'
-);`;
-        sqlStatements.push(resultSql);
-      }
+      sqlStatements.push(resultSql);
     }
   }
   

@@ -49,6 +49,7 @@ CREATE TABLE IF NOT EXISTS results (
   catalog_no      INTEGER,
   placement       INTEGER,            -- место в группе, NULL если не присвоено/не финишировал
   total_score     REAL,               -- нормализованный итоговый балл для сравнения между событиями
+  judge_count     INTEGER DEFAULT 3,  -- количество судей на соревновании (для нормализации очков)
   qualification   TEXT,               -- 'CACL, RegCACL' и т.п., как присуждено
   vc              TEXT,               -- статус '+' или пусто
   status          TEXT DEFAULT 'finished', -- 'finished' | 'disqualified' | 'withdrawn' | 'dns'
@@ -86,7 +87,7 @@ SELECT
 FROM results r
 JOIN dogs d ON d.id = r.dog_id
 JOIN events e ON r.event_id = e.id
-WHERE r.status = 'finished'
+WHERE r.status = 'finished' AND e.event_type IN ('coursing', 'bzmp')
 GROUP BY d.id, e.year
 ORDER BY e.year DESC, gold DESC, silver DESC, bronze DESC;
 
@@ -101,11 +102,11 @@ SELECT
   d.breed,
   e.year,
   MAX(r.total_score) AS best_score,
-  ROUND(AVG(r.total_score), 1) AS avg_score,
+  ROUND(AVG(r.total_score), 2) AS avg_score,
   COUNT(*) AS total_starts
 FROM results r
 JOIN dogs d ON d.id = r.dog_id
 JOIN events e ON r.event_id = e.id
-WHERE r.status = 'finished' AND r.total_score IS NOT NULL
+WHERE r.status = 'finished' AND r.total_score IS NOT NULL AND e.event_type IN ('coursing', 'bzmp')
 GROUP BY d.id, e.year
 ORDER BY e.year DESC, best_score DESC;

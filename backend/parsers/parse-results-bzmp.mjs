@@ -1,5 +1,6 @@
 import * as cheerio from "cheerio";
 import { fetchWin1251 } from "../lib/fetch-win1251.mjs";
+import { normalizeDogName, normalizeBreed } from "./parse-results-coursing.mjs";
 
 /**
  * Парсер результатов БЗМП (v1 - HTML version).
@@ -45,12 +46,12 @@ function parseDogRow($row, breedClass) {
   const placement = placementText ? extractNumber(placementText) : null;
 
   // Порода, класс, пол
-  const breed = cleanText($cells.eq(2).text());
+  const breed = normalizeBreed($cells.eq(2).text());
   const class_ = cleanText($cells.eq(3).text());
   const sex = cleanText($cells.eq(4).text());
 
   // Кличка
-  const name = cleanText($cells.eq(5).text());
+  const name = normalizeDogName($cells.eq(5).text());
 
   // Судейские оценки забега 1 (ячейки 7-12)
   const heat1Scores = [];

@@ -3,20 +3,39 @@
 ## Overview
 This guide covers the data import process for ProCoursing Stats application. Data is scraped from procoursing.ru and loaded into Cloudflare D1 database.
 
-## Current Data State (Updated 2026-06-24)
-- **Years available:** 2015-2026
-- **Successfully imported:** 2023-2026 (4639 results total)
-- **Data status:** 
-  - 2015-2022: **NOT IMPORTABLE** - stored as images, requires OCR
-  - 2023-2024: Static, successfully imported
-  - 2025: Static, successfully imported  
-  - 2026: Dynamic, successfully imported
-- **Total events:** ~300+ events across 2023-2026
-- **Total results:** 4639 dog results
-  - 2023: 771 results (22 events)
-  - 2024: 1086 results (27 events)
-  - 2025: 1971 results (50 events)
-  - 2026: 811 results (16 events)
+## Current Data State (Updated 2026-06-25)
+
+- **Local D1 = Remote D1** (синхронизировано `sync-local-to-remote.mjs`)
+- **2023–2026:** 4639 results на production
+- **2015–2022:** NOT IMPORTABLE (images, OCR required)
+
+## Sync Local → Remote (после бэкафилла локально)
+
+```bash
+# Генерация SQL (events, dogs, results — отдельные файлы в data/)
+node backend/scripts/sync-local-to-remote.mjs
+
+# Применить на remote (схема + данные)
+npm run sync-to-remote
+```
+
+Перед первым синком на старую remote-схему:
+```bash
+npx wrangler d1 execute pc-db --remote --file=./data/migrate-remote-schema.sql
+```
+
+Нормализация кличек (если ещё не применена):
+```bash
+npm run migrate-dog-names
+npx wrangler d1 execute pc-db --remote --file=./data/migrate-normalize-dogs.sql
+```
+
+## Автообновление (GitHub Actions)
+
+- Workflow: `.github/workflows/update-db.yml`
+- Secrets: `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`
+- Ручной запуск: Actions → Update D1 Database → Run workflow
+- Локально: `npm run ci-update-db`
 
 ## Data Import Scripts
 
@@ -30,9 +49,13 @@ Located in `scripts/` directory:
 - **`backfill-2026.mjs`** - Scrapes only 2026 year with date filtering
 - **`update-current-year.mjs`** - Incremental updates for current year
 
-### 2. Load Scripts
+### 2. Load & Sync Scripts
 - **`load-events.mjs`** - Converts events JSON to SQL
 - **`load-results.mjs`** - Scrapes and loads results from event pages
+- **`sync-local-to-remote.mjs`** - Экспорт локальной D1 → SQL → remote
+- **`ci-update-db.mjs`** - Пайплайн для GitHub Actions (текущий год)
+- **`migrate-normalize-dog-names.mjs`** - Нормализация кличек в dogs
+- **`merge-dogs.mjs`** - Ручное слияние дубликатов
 
 ### 3. Parser Scripts
 - **`parse-results-coursing.mjs`** - Parses coursing results (supports multiple HTML formats)

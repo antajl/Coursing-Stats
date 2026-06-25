@@ -10,8 +10,8 @@ export default defineConfig({
         target: 'https://procoursing-stats.antajltube.workers.dev',
         changeOrigin: true,
         secure: true,
-        configure: (proxy, options) => {
-          proxy.on('proxyReq', (proxyReq, req, res) => {
+        configure: (proxy) => {
+          proxy.on('proxyReq', (proxyReq) => {
             console.log('Proxying request to:', proxyReq.path)
           })
         }

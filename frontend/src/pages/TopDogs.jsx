@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
 import { api } from '../services/api'
 import DogStatsTable from '../components/DogStatsTable'
 
@@ -13,95 +12,69 @@ export default function TopDogs() {
   const [loadingData, setLoadingData] = useState(false)
   const [error, setError] = useState(null)
   
-  const [activeTab, setActiveTab] = useState('placement')
+  const [activeTab, setActiveTab] = useState('score')
   const [filterBreed, setFilterBreed] = useState('')
-  const [filterYear, setFilterYear] = useState('2026')
+  const [filterYear, setFilterYear] = useState('')
   const [topSpeed, setTopSpeed] = useState([])
   const [searchQuery, setSearchQuery] = useState('')
 
   useEffect(() => {
+    async function fetchFilters() {
+      setLoadingFilters(true)
+      setError(null)
+      
+      try {
+        const [breedsResult, yearsResult] = await Promise.all([
+          api.getBreeds(),
+          api.getYears()
+        ])
+
+        if (!breedsResult.success || !yearsResult.success) {
+          setError('Не удалось загрузить фильтры. Используются демо-данные.')
+        }
+
+        setBreeds(breedsResult.data || [])
+        setYears(yearsResult.data || [])
+      } catch (err) {
+        console.error('Error fetching filters:', err)
+        setError(`Ошибка при загрузке фильтров: ${err.message}`)
+      } finally {
+        setLoadingFilters(false)
+      }
+    }
+
     fetchFilters()
   }, [])
 
   useEffect(() => {
-    if (filterYear) {
-      fetchTopData()
-    }
-  }, [filterYear])
-
-  useEffect(() => {
-    if (filterBreed) {
-      fetchTopData()
-    }
-  }, [filterBreed])
-
-  const fetchFilters = async () => {
-    setLoadingFilters(true)
-    setError(null)
-    
-    try {
-      const [breedsResult, yearsResult] = await Promise.all([
-        api.getBreeds(),
-        api.getYears()
-      ])
-
-      if (!breedsResult.success || !yearsResult.success) {
-        setError('Не удалось загрузить фильтры. Используются демо-данные.')
-      }
-
-      setBreeds(breedsResult.data || [])
-      setYears(yearsResult.data || [])
-    } catch (error) {
-      console.error('Error fetching filters:', error)
-      setError(`Ошибка при загрузке фильтров: ${error.message}`)
-    } finally {
-      setLoadingFilters(false)
-    }
-  }
-
-  const fetchTopData = async () => {
-    setLoadingData(true)
-    setError(null)
-    
-    try {
-      const [placementResult, scoreResult, speedResult] = await Promise.all([
-        api.getTopPlacement(filterYear, filterBreed, 0),
-        api.getTopScore(filterYear, filterBreed, 0),
-        api.getTopSpeed(filterYear, filterBreed, 0)
-      ])
+    async function fetchTopData() {
+      setLoadingData(true)
+      setError(null)
       
-      if (placementResult.source === 'mock') {
-        console.log('✓ TopPlacement загружены из моков')
-      } else {
-        console.log('✓ TopPlacement загружены из API')
-      }
+      try {
+        const [placementResult, scoreResult, speedResult] = await Promise.all([
+          api.getTopPlacement(filterYear, filterBreed, 0),
+          api.getTopScore(filterYear, filterBreed, 0),
+          api.getTopSpeed(filterYear, filterBreed, 0)
+        ])
+        
+        setTopPlacement(placementResult.data || [])
+        setTopScore(scoreResult.data || [])
+        setTopSpeed(speedResult.data || [])
 
-      if (scoreResult.source === 'mock') {
-        console.log('✓ TopScore загружены из моков')
-      } else {
-        console.log('✓ TopScore загружены из API')
+        if (!placementResult.success || !scoreResult.success) {
+          setError('Не удалось загрузить данные таблиц. Используются демо-данные.')
+        }
+      } catch (err) {
+        console.error('Error fetching top data:', err)
+        setError(`Ошибка при загрузке таблиц: ${err.message}`)
+      } finally {
+        setLoadingData(false)
       }
-
-      if (speedResult.source === 'mock') {
-        console.log('✓ TopSpeed загружены из моков')
-      } else {
-        console.log('✓ TopSpeed загружены из API')
-      }
-      
-      setTopPlacement(placementResult.data || [])
-      setTopScore(scoreResult.data || [])
-      setTopSpeed(speedResult.data || [])
-
-      if (!placementResult.success || !scoreResult.success) {
-        setError('Не удалось загрузить данные таблиц. Используются демо-данные.')
-      }
-    } catch (error) {
-      console.error('Error fetching top data:', error)
-      setError(`Ошибка при загрузке таблиц: ${error.message}`)
-    } finally {
-      setLoadingData(false)
     }
-  }
+
+    fetchTopData()
+  }, [filterYear, filterBreed])
 
   const filteredPlacement = topPlacement.filter(dog => {
     if (filterBreed && dog.breed !== filterBreed) return false
@@ -240,11 +213,11 @@ export default function TopDogs() {
           <p className="text-sm mt-2">Попробуйте изменить год или убрать фильтры</p>
         </div>
       ) : activeTab === 'placement' ? (
-        <DogStatsTable data={filteredPlacement} type="placement" filterYear={filterYear} />
+        <DogStatsTable key={`placement-${filterYear}-${filterBreed}`} data={filteredPlacement} type="placement" filterYear={filterYear} />
       ) : activeTab === 'score' ? (
-        <DogStatsTable data={filteredScore} type="score" filterYear={filterYear} />
+        <DogStatsTable key={`score-${filterYear}-${filterBreed}`} data={filteredScore} type="score" filterYear={filterYear} />
       ) : (
-        <DogStatsTable data={filteredSpeed} type="speed" filterYear={filterYear} />
+        <DogStatsTable key={`speed-${filterYear}-${filterBreed}`} data={filteredSpeed} type="speed" filterYear={filterYear} />
       )}
     </div>
   )

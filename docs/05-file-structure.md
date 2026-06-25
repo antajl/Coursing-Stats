@@ -28,7 +28,12 @@
 | `scripts/scrape-year-index.mjs` | Скрапер индекса событий по годам | ✅ |
 | `scripts/load-events.mjs` | Загрузка событий в D1 | ✅ |
 | `scripts/load-results.mjs` | Загрузка результатов в D1 | ✅ |
-| `scripts/test-parser.mjs` | Тест парсера на синтетических данных | ✅ |
+| `scripts/sync-local-to-remote.mjs` | Синк локальной D1 → remote | ✅ |
+| `scripts/ci-update-db.mjs` | Пайплайн GitHub Actions | ✅ |
+| `scripts/migrate-normalize-dog-names.mjs` | Миграция кличек | ✅ |
+| `scripts/merge-dogs.mjs` | Слияние дубликатов | ✅ |
+| `lib/dog-lookup.mjs` | Нормализация и поиск собак | ✅ |
+| `scripts/test-parser.mjs` | Тест парсера | ✅ |
 | `scripts/backfill-*.mjs` | Скрипты бэкафилла по годам | ✅ |
 
 ## Папка frontend/
@@ -55,7 +60,19 @@
 
 ## Папка data/
 
-Содержит данные событий и SQL файлы:
+| Файл | Назначение | В git |
+|------|------------|-------|
+| `migrate-remote-schema.sql` | Миграция схемы remote D1 | ✅ |
+| `migrate-normalize-dogs.sql` | SQL нормализации кличек | ❌ (генерируется) |
+| `sync-*.sql` | Экспорт для remote | ❌ (генерируется) |
+| `load-*.sql` | SQL загрузки | ❌ (генерируется) |
+| `events-*.json` | Индексы событий | ❌ (генерируется) |
+
+## GitHub Actions
+
+| Файл | Назначение |
+|------|------------|
+| `.github/workflows/update-db.yml` | Еженедельное обновление D1 |
 
 | Файл | Назначение | Статус |
 |------|------------|--------|

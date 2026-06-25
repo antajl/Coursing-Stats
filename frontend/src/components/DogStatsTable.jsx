@@ -1,11 +1,14 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import DogTooltip from './DogTooltip';
+
+const PAGE_SIZE = 50;
 
 export default function DogStatsTable({ data, type = 'placement', filterYear }) {
   const [tooltipDog, setTooltipDog] = useState(null)
-  const [tooltipPosition, setTooltipPosition] = useState(null)
-  const [tooltipPinned, setTooltipPinned] = useState(false)
-  const [isClicking, setIsClicking] = useState(false)
+  const [anchorRect, setAnchorRect] = useState(null)
+  const [page, setPage] = useState(0)
+  const navigate = useNavigate()
   const [sortConfig, setSortConfig] = useState({ key: null, direction: 'asc' })
 
   if (!data || data.length === 0) {
@@ -13,6 +16,7 @@ export default function DogStatsTable({ data, type = 'placement', filterYear }) 
   }
 
   const handleSort = (key) => {
+    setPage(0)
     let direction = 'asc'
     if (sortConfig.key === key && sortConfig.direction === 'asc') {
       direction = 'desc'
@@ -46,44 +50,27 @@ export default function DogStatsTable({ data, type = 'placement', filterYear }) 
       : bValue - aValue
   })
 
+  const totalPages = Math.ceil(sortedData.length / PAGE_SIZE)
+  const pageData = sortedData.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE)
+
   const handleMouseEnter = (e, dogId) => {
-    if (!tooltipPinned && !isClicking) {
-      const rect = e.target.getBoundingClientRect()
-      setTooltipPosition({
-        x: rect.right + 10,
-        y: rect.top
-      })
-      setTooltipDog(dogId)
-    }
+    setAnchorRect(e.target.getBoundingClientRect())
+    setTooltipDog(dogId)
   }
 
   const handleMouseLeave = () => {
-    if (!tooltipPinned && !isClicking) {
-      setTooltipDog(null)
-      setTooltipPosition(null)
-    }
+    setTooltipDog(null)
+    setAnchorRect(null)
   }
 
   const handleClick = (e, dogId) => {
     e.preventDefault()
-    setIsClicking(true)
-    const rect = e.target.getBoundingClientRect()
-    setTooltipPosition({
-      x: rect.right + 10,
-      y: rect.top
-    })
-    setTooltipDog(dogId)
-    setTooltipPinned(true)
-    
-    // Reset clicking flag after a short delay
-    setTimeout(() => setIsClicking(false), 100)
+    navigate(`/dog/${dogId}`)
   }
 
   const closeTooltip = () => {
     setTooltipDog(null)
-    setTooltipPosition(null)
-    setTooltipPinned(false)
-    setIsClicking(false)
+    setAnchorRect(null)
   }
 
   return (
@@ -179,10 +166,10 @@ export default function DogStatsTable({ data, type = 'placement', filterYear }) 
             </tr>
           </thead>
           <tbody className="divide-y divide-old-money-200">
-            {sortedData.map((dog, index) => (
+            {pageData.map((dog, index) => (
               <tr key={dog.dog_id} className="hover:bg-old-money-50">
                 <td className="px-6 py-4 text-sm text-old-money-800 font-bold">
-                  {index + 1}
+                  {page * PAGE_SIZE + index + 1}
                 </td>
                 {filterYear && (
                   <td className="px-6 py-4 text-sm text-old-money-800">
@@ -232,10 +219,10 @@ export default function DogStatsTable({ data, type = 'placement', filterYear }) 
                 ) : (
                   <>
                     <td className="px-6 py-4 text-center text-sm text-old-money-800 font-bold">
-                      {dog.best_score}
+                      {dog.best_score ? parseFloat(dog.best_score).toFixed(2).replace(/\.00$/, '') : '-'}
                     </td>
                     <td className="px-6 py-4 text-center text-sm text-old-money-800">
-                      {dog.avg_score}
+                      {dog.avg_score ? parseFloat(dog.avg_score).toFixed(2).replace(/\.00$/, '') : '-'}
                     </td>
                   </>
                 )}
@@ -247,13 +234,41 @@ export default function DogStatsTable({ data, type = 'placement', filterYear }) 
           </tbody>
         </table>
       </div>
+
+      {totalPages > 1 && (
+        <div className="mt-4 flex items-center justify-between text-sm text-old-money-600">
+          <span>
+            Показано {page * PAGE_SIZE + 1}–{Math.min((page + 1) * PAGE_SIZE, sortedData.length)} из {sortedData.length}
+          </span>
+          <div className="flex gap-2">
+            <button
+              type="button"
+              disabled={page === 0}
+              onClick={() => setPage(page - 1)}
+              className="px-4 py-2 rounded-lg border border-old-money-300 bg-white disabled:opacity-40 hover:bg-old-money-50"
+            >
+              Назад
+            </button>
+            <span className="px-3 py-2">
+              {page + 1} / {totalPages}
+            </span>
+            <button
+              type="button"
+              disabled={page >= totalPages - 1}
+              onClick={() => setPage(page + 1)}
+              className="px-4 py-2 rounded-lg border border-old-money-300 bg-white disabled:opacity-40 hover:bg-old-money-50"
+            >
+              Вперёд
+            </button>
+          </div>
+        </div>
+      )}
       
-      {tooltipDog && tooltipPosition && (
-        <DogTooltip 
-          dogId={tooltipDog} 
-          position={tooltipPosition} 
+      {tooltipDog && anchorRect && (
+        <DogTooltip
+          dogId={tooltipDog}
+          anchorRect={anchorRect}
           onClose={closeTooltip}
-          pinned={tooltipPinned}
         />
       )}
     </>

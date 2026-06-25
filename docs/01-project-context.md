@@ -4,7 +4,9 @@
 
 **Проект:** агрегатор статистики собак по результатам procoursing.ru (курсинг/БЗМП/бега).
 
-**Полная спецификация:** см. `README.md`, схема БД — `schema.sql`.
+**Статус:** ✅ **ПОЛНОСТЬЮ РАБОЧИЙ** — фронтенд и бэкенд развернуты и функционируют.
+
+**Полная спецификация:** см. `00-PROJECT-OVERVIEW.md` для полного контекста, схема БД — `03-database-schema.md`.
 
 ## Scope
 
@@ -41,3 +43,29 @@
 4. **Tooltip дизайн:** раздельные блоки для курсинга и бегов с сайд-бай-сайд layout.
 
 5. **Данные о скорости:** извлекаются из Racing результатов (м/с конвертируются в км/ч).
+
+## Current Data Status (2026-06-25)
+
+### База данных (local = remote, синхронизировано)
+- **events:** 302
+- **dogs:** ~1579
+- **results:** 4639 (2023–2026)
+
+### Автоматизация
+- GitHub Actions: `.github/workflows/update-db.yml` (secrets настроены)
+- `npm run ci-update-db` — инкремент текущего года
+- `npm run sync-to-remote` — полный синк local → remote
+
+### Статусы результатов
+- `finished` — завершенные выступления
+- `dns` — неявка
+- `withdrawn` — снят/сошел
+- `disqualified` — дисквалифицирован
+- `dnf` — не финишировал
+- `unknown_status_check_raw_text` — требует ручной проверки
+
+## Known Issues
+
+### Остаточные «Dog not found»
+- Существенно снижено после `normalizeDogName` и миграции remote
+- Ручное слияние: `backend/scripts/merge-dogs.mjs`

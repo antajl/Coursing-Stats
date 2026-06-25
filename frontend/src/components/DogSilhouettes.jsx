@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 // Dog silhouettes for tooltip
 // NOTE: These are placeholder silhouettes that need to be confirmed as accurate
 // representations of actual coursing/racing breeds before production use.

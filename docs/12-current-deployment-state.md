@@ -1,51 +1,85 @@
 # 12. Текущее состояние развертывания
 
+**Обновлено:** 2026-06-25
+
 ## GitHub
+
 - **Репозиторий:** https://github.com/antajl/ProCoursing
 - **Ветка:** main
-- **Статус:** Активный, файлы загружены
+- **Secrets (настроены):** `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`
+- **GitHub Actions:** `.github/workflows/update-db.yml` — еженедельное обновление текущего года (понедельник 03:00 UTC) + `workflow_dispatch`
 
-## Cloudflare Pages
-- **Название проекта:** procoursing
-- **URL:** https://procoursing.pages.dev
-- **Статус:** Создан, но фронтенд ещё не разработан
-- **Подключение:** Подключён к GitHub репозиторию antajl/ProCoursing
+## Cloudflare Pages (фронтенд)
+
+- **URL:** https://procoursing.pages.dev (также preview: `*.procoursing-stats.pages.dev`)
+- **Статус:** ✅ React + Vite + TailwindCSS развёрнут
+- **Сборка:** `frontend/dist/`
 
 ## Cloudflare Worker API
+
 - **URL:** https://procoursing-stats.antajltube.workers.dev
-- **Статус:** Активен, эндпоинты работают
-- **Эндпоинты:**
-  - `GET /api/top/placement?breed=&year=&minStarts=`
-  - `GET /api/top/score?breed=&year=&minStarts=`
-  - `GET /api/dogs/:id`
-  - `GET /api/breeds`
-  - `GET /api/years`
-  - `GET /api/events`
+- **Статус:** ✅ Активен
+- **Cron:** понедельник 02:00 UTC (логирует намерение; реальное обновление — через GitHub Actions)
 
-## Cloudflare D1
-- **Название базы данных:** pc-db
-- **Database ID:** a5d6d4ad-7fc5-41b4-a33b-05f4daa382d4
-- **Статус:** Активен, данные загружены
-- **Размер:** 3.42 MB
+### Эндпоинты
 
-## Текущие данные в D1
-- **События (events):** 225 записей
-- **Собаки (dogs):** 460 записей
-- **Результаты (results):** 811 записей
+| Метод | Путь | Описание |
+|-------|------|----------|
+| GET | `/api/top/placement` | Топ по местам (`breed`, `year`, `minStarts`, `limit`, `offset`) |
+| GET | `/api/top/score` | Топ по очкам |
+| GET | `/api/top/speed` | Топ по скорости (racing) |
+| GET | `/api/dogs/:id` | Профиль собаки |
+| GET | `/api/dogs/:id/events` | История выступлений |
+| GET | `/api/breeds` | Список пород |
+| GET | `/api/years` | Список годов |
+| GET | `/api/events` | Календарь событий |
+| POST | `/api/update/trigger` | Ручной триггер (информирует о GitHub Actions) |
 
-### Детали данных
-- **Период:** 2015-2026 (все годы)
-- **Типы событий:** Coursing, BZMP, Racing
-- **Загружено:** Только события с results_url (16 событий из 225 имеют результаты)
-- **Примечание:** Это только 2026 год. Для полного бэкафилла 2015-2025 нужно запустить скрапер на все годы.
+## Cloudflare D1 (production / remote)
 
-## Файлы конфигурации
+- **Имя:** `pc-db`
+- **ID:** `a5d6d4ad-7fc5-41b4-a33b-05f4daa382d4`
+- **Размер:** ~21 MB (после полного синка 2026-06-25)
 
-### wrangler.toml
+### Данные на remote (актуально)
+
+| Таблица | Записей |
+|---------|---------|
+| events | 302 |
+| dogs | ~1579 |
+| results | 4639 |
+
+### По годам (results)
+
+| Год | Результатов |
+|-----|-------------|
+| 2023 | 771 |
+| 2024 | 1086 |
+| 2025 | 1971 |
+| 2026 | 811 |
+| 2015–2022 | нет (изображения на сайте, нужен OCR) |
+
+### Выполненные миграции remote
+
+1. `data/migrate-normalize-dogs.sql` — нормализация кличек (1456 запросов)
+2. `data/migrate-remote-schema.sql` — колонки `competition_kind`, `competition_type`, `last_modified`, `judge_count`
+3. `data/sync-events.sql`, `sync-dogs.sql`, `sync-results.sql` — полный синк с локальной D1
+
+## Локальная D1 (miniflare)
+
+Путь: `.wrangler/state/v3/d1/miniflare-D1DatabaseObject/*.sqlite`
+
+Содержимое совпадает с remote (источник правды для бэкафилла). Запуск API локально: `npx wrangler dev` → http://127.0.0.1:8787
+
+## wrangler.toml
+
 ```toml
 name = "procoursing-stats"
-main = "src/worker.js"
+main = "backend/src/worker.js"
 compatibility_date = "2024-01-01"
+
+[triggers]
+crons = ["0 2 * * 1"]
 
 [[d1_databases]]
 binding = "DB"
@@ -53,94 +87,39 @@ database_name = "pc-db"
 database_id = "a5d6d4ad-7fc5-41b4-a33b-05f4daa382d4"
 ```
 
-### package.json
-- **Зависимости:** cheerio, iconv-lite
-- **Скрипты:**
-  - `scrape-index` — скрапинг индекса событий
-  - `parse-coursing` — парсинг результатов курсинга
-  - `parse-bzmp` — парсинг результатов БЗМП
-  - `parse-racing` — парсинг результатов бега
-  - `load-events` — генерация SQL для загрузки событий
-  - `load-results` — генерация SQL для загрузки результатов
+## Команды эксплуатации
 
-## Следующие шаги
-
-### 1. ✅ Cloudflare Worker API
-- Создать файл `src/worker.js` с API эндпоинтами
-- Деплой: `wrangler deploy`
-- Статус: Завершено
-
-### 2. Фронтенд
-- Создать React приложение с TailwindCSS
-- Компоненты:
-  - Профиль собаки (история, график баллов, титулы)
-  - Топ по местам (медальный зачёт)
-  - Топ по очкам (лучший результат, средний, старты)
-  - Фильтры (порода, год, минимум стартов)
-- Деплой в Cloudflare Pages
-
-### 3. Бэкафилл истории 2015-2025
-- Запустить скрапер на все годы
-- Загрузить результаты в D1
-- Это может занять несколько часов
-
-## Команды для работы
-
-### Обновление данных
 ```bash
-# Скрапинг индекса событий
-npm run scrape-index
+# Локальная разработка (Worker + Frontend)
+npm run dev
 
-# Загрузка событий в D1
-npm run load-events
-wrangler d1 execute pc-db --remote --file=./load-events.sql
+# Еженедельное обновление текущего года (CI или вручную)
+npm run ci-update-db
 
-# Загрузка результатов в D1 (займёт время)
-npm run load-results
-wrangler d1 execute pc-db --remote --file=./load-results.sql
+# Синхронизация локальной D1 → remote (после бэкафилла)
+npm run sync-to-remote
+
+# Нормализация кличек (локально + SQL для remote)
+npm run migrate-dog-names
+npx wrangler d1 execute pc-db --remote --file=./data/migrate-normalize-dogs.sql
+
+# Миграция схемы remote (один раз, если отстаёт от schema.sql)
+npx wrangler d1 execute pc-db --remote --file=./data/migrate-remote-schema.sql
+
+# Деплой Worker
+npx wrangler deploy
+
+# Деплой фронтенда
+cd frontend && npm run build && npx wrangler pages deploy dist --project-name procoursing-stats
 ```
 
-### Проверка данных
-```bash
-# Количество событий
-wrangler d1 execute pc-db --remote --command="SELECT COUNT(*) FROM events"
+## npm-скрипты (корень)
 
-# Количество собак
-wrangler d1 execute pc-db --remote --command="SELECT COUNT(*) FROM dogs"
-
-# Количество результатов
-wrangler d1 execute pc-db --remote --command="SELECT COUNT(*) FROM results"
-
-# Топ по местам
-wrangler d1 execute pc-db --remote --command="SELECT * FROM v_top_by_placement LIMIT 10"
-
-# Топ по очкам
-wrangler d1 execute pc-db --remote --command="SELECT * FROM v_top_by_score LIMIT 10"
-```
-
-### Деплой Worker
-```bash
-# Создать src/worker.js
-wrangler deploy
-```
-
-## Важные примечания
-
-1. **Кодировка сайта:** procoursing.ru использует windows-1251, декодируется через iconv-lite
-2. **Вежливость к сайту:** Пауза 1 сек между запросами при скрапинге
-3. **Статусы собак:** Используется эвристика (нет bold-итога = нестандартный статус), raw_text сохраняется всегда
-4. **Родословные:** Ссылка на https://saluki.breedarchive.com/ (пока не реализовано)
-5. **Два рейтинга:** По местам (медальный зачёт) и по очкам — не сводить в одну формулу
-
-## Проблемы и решения
-
-### Исправленные проблемы
-1. ✅ Кодировка windows-1251 — исправлено через iconv-lite
-2. ✅ Парсер для markdown вместо HTML — переписан для cheerio
-3. ✅ NULL constraint для event_type — определяется из results_url
-4. ✅ Отсутствие колонки vc в results — добавлена в schema.sql
-
-### Известные ограничения
-- Загружены только события 2026 года с результатами
-- Для полного архива 2015-2025 нужен бэкафилл
-- Фронтенд ещё не создан
+| Скрипт | Назначение |
+|--------|------------|
+| `npm run dev` | Worker + Vite параллельно |
+| `npm run scrape-index` | Индекс событий 2015–2026 |
+| `npm run load-events` / `load-results` | Генерация SQL из JSON |
+| `npm run ci-update-db` | Инкремент текущего года → remote D1 |
+| `npm run sync-to-remote` | Полный синк локальной D1 → remote |
+| `npm run migrate-dog-names` | Нормализация кличек в локальной D1 |

@@ -43,8 +43,9 @@ Pages-сайт (фронтенд: React, профиль собаки, топы, 
 ### 3. Worker (API)
 
 ```javascript
-GET /api/top/placement?breed=&year=
-GET /api/top/score?breed=&year=
+GET /api/top/placement?breed=&year=&minStarts=
+GET /api/top/score?breed=&year=&minStarts=
+GET /api/top/speed?breed=&year=&minStarts=
 GET /api/dogs/:id
 GET /api/breeds
 GET /api/years

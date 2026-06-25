@@ -16,6 +16,32 @@ All endpoints support CORS with the following headers:
 - `Access-Control-Allow-Methods: GET, POST, OPTIONS, HEAD, PUT, DELETE`
 - `Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Origin, Accept`
 
+## Pagination (топы)
+
+Эндпоинты `/api/top/placement`, `/api/top/score`, `/api/top/speed` поддерживают опциональную пагинацию:
+
+| Параметр | Описание | По умолчанию |
+|----------|----------|--------------|
+| `limit` | Размер страницы (1–500) | не задан — вернуть все |
+| `offset` | Смещение | 0 |
+
+**Без `limit`** — ответ массив (как раньше).
+
+**С `limit`** — ответ:
+```json
+{
+  "items": [ ... ],
+  "total": 693,
+  "limit": 50,
+  "offset": 0
+}
+```
+
+**Пример:**
+```
+GET /api/top/placement?year=2025&limit=50&offset=0
+```
+
 ## Endpoints
 
 ### GET /api/test
@@ -79,10 +105,11 @@ Get top dogs by score. Filters by breed and year.
 **Query Parameters:**
 - `breed` (optional): Filter by breed name
 - `year` (optional): Filter by year (e.g., "2026")
+- `minStarts` (optional): Minimum number of starts
 
 **Example:**
 ```
-GET /api/top/score?breed=Saluki&year=2026
+GET /api/top/score?breed=Saluki&year=2026&minStarts=2
 ```
 
 **Response:**
@@ -93,13 +120,46 @@ GET /api/top/score?breed=Saluki&year=2026
     "name_lat": "Saluki Desert Wind",
     "name_ru": "Салюки Пустынный Ветер",
     "breed": "Saluki",
-    "year": 2026,
     "best_score": 95.5,
     "avg_score": 82.3,
     "total_starts": 10
   }
 ]
 ```
+
+### GET /api/top/speed
+
+Get top dogs by racing speed. Filters by breed and year.
+
+**Query Parameters:**
+- `breed` (optional): Filter by breed name
+- `year` (optional): Filter by year (e.g., "2026")
+- `minStarts` (optional): Minimum number of starts
+
+**Example:**
+```
+GET /api/top/speed?breed=Greyhound&year=2026&minStarts=2
+```
+
+**Response:**
+```json
+[
+  {
+    "dog_id": 1,
+    "name_lat": "Greyhound Speed",
+    "name_ru": "Грейхаунд Скорость",
+    "breed": "Greyhound",
+    "total_starts": 5,
+    "best_speed": 59.23,
+    "avg_speed": 55.12
+  }
+]
+```
+
+**Notes:**
+- Speed values are in km/h (converted from m/s in database)
+- Considers all 3 heats (heat1, heat2, heat3)
+- Only includes racing events
 
 ### GET /api/dogs/:id
 

@@ -10,13 +10,18 @@
     "parse-bzmp": "node backend/parsers/parse-results-bzmp.mjs",
     "parse-racing": "node backend/parsers/parse-results-racing.mjs",
     "load-events": "node backend/scripts/load-events.mjs",
-    "load-results": "node backend/scripts/load-results.mjs"
+    "load-results": "node backend/scripts/load-results.mjs",
+    "ci-update-db": "node backend/scripts/ci-update-db.mjs",
+    "migrate-dog-names": "node backend/scripts/migrate-normalize-dog-names.mjs",
+    "sync-to-remote": "node backend/scripts/sync-local-to-remote.mjs --push"
   },
   "dependencies": {
+    "better-sqlite3": "^12.11.1",
     "cheerio": "^1.0.0",
     "iconv-lite": "^0.6.3"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "wrangler": "^4.14.0"
   }
 }

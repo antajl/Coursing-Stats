@@ -40,7 +40,8 @@ export default {
         },
       },
       fontFamily: {
-        serif: ['Georgia', 'Times New Roman', 'serif'],
+        sans: ['Montserrat', 'sans-serif'],
+        serif: ['Montserrat', 'sans-serif'],
       },
     },
   },
