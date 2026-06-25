@@ -240,8 +240,28 @@ export async function onRequest(context) {
       
       const racingStats = await db.prepare(`
         SELECT e.year,
-          MAX(JSON_EXTRACT(r.raw_scores_json, '$.speed')) AS best_speed,
-          ROUND(AVG(JSON_EXTRACT(r.raw_scores_json, '$.speed')), 2) AS avg_speed,
+          MAX(
+            CASE 
+              WHEN JSON_EXTRACT(r.raw_scores_json, '$.heat1.speed') IS NOT NULL 
+              THEN CAST(JSON_EXTRACT(r.raw_scores_json, '$.heat1.speed') AS REAL) * 3.6
+              WHEN JSON_EXTRACT(r.raw_scores_json, '$.heat2.speed') IS NOT NULL 
+              THEN CAST(JSON_EXTRACT(r.raw_scores_json, '$.heat2.speed') AS REAL) * 3.6
+              WHEN JSON_EXTRACT(r.raw_scores_json, '$.heat3.speed') IS NOT NULL 
+              THEN CAST(JSON_EXTRACT(r.raw_scores_json, '$.heat3.speed') AS REAL) * 3.6
+              ELSE 0
+            END
+          ) AS best_speed,
+          ROUND(AVG(
+            CASE 
+              WHEN JSON_EXTRACT(r.raw_scores_json, '$.heat1.speed') IS NOT NULL 
+              THEN CAST(JSON_EXTRACT(r.raw_scores_json, '$.heat1.speed') AS REAL) * 3.6
+              WHEN JSON_EXTRACT(r.raw_scores_json, '$.heat2.speed') IS NOT NULL 
+              THEN CAST(JSON_EXTRACT(r.raw_scores_json, '$.heat2.speed') AS REAL) * 3.6
+              WHEN JSON_EXTRACT(r.raw_scores_json, '$.heat3.speed') IS NOT NULL 
+              THEN CAST(JSON_EXTRACT(r.raw_scores_json, '$.heat3.speed') AS REAL) * 3.6
+              ELSE 0
+            END
+          ), 2) AS avg_speed,
           COUNT(*) AS total_starts
         FROM results r
         JOIN events e ON r.event_id = e.id
