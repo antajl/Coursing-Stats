@@ -30,8 +30,8 @@ function SpeedRecords() {
 
   return (
     <div className="space-y-6">
-      <div className="bg-white/90 backdrop-blur-lg rounded-2xl shadow-xl border border-gold-200 p-8">
-        <h1 className="text-4xl font-extrabold text-gold-600 mb-6">
+      <div className="bg-white/90 backdrop-blur-lg rounded-2xl shadow-xl border border-old-money-300 p-8">
+        <h1 className="text-4xl font-extrabold text-navy-700 mb-6">
           Рекорды скорости Донино
         </h1>
 
@@ -41,7 +41,7 @@ function SpeedRecords() {
             <select
               value={filterBreed}
               onChange={(e) => setFilterBreed(e.target.value)}
-              className="w-full px-4 py-3 rounded-xl border-2 border-gold-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-200 transition-all bg-white"
+              className="w-full px-4 py-3 rounded-xl border-2 border-old-money-300 focus:border-navy-500 focus:ring-2 focus:ring-navy-200 transition-all bg-white"
             >
               <option value="">Все породы</option>
               {breeds.map(breed => (
@@ -54,7 +54,7 @@ function SpeedRecords() {
             <select
               value={filterSex}
               onChange={(e) => setFilterSex(e.target.value)}
-              className="w-full px-4 py-3 rounded-xl border-2 border-gold-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-200 transition-all bg-white"
+              className="w-full px-4 py-3 rounded-xl border-2 border-old-money-300 focus:border-navy-500 focus:ring-2 focus:ring-navy-200 transition-all bg-white"
             >
               <option value="">Все</option>
               {sexes.map(sex => (
@@ -84,9 +84,9 @@ function SpeedRecords() {
         )}
 
         {!loading && !error && records.length > 0 && (
-          <div className="overflow-x-auto rounded-xl border-2 border-gold-200">
+          <div className="overflow-x-auto rounded-xl border-2 border-old-money-300">
             <table className="w-full">
-              <thead className="bg-gradient-to-r from-gold-500 to-gold-600 text-white">
+              <thead className="bg-navy-700 text-white">
                 <tr>
                   <th className="px-6 py-4 text-left font-semibold">Кличка</th>
                   <th className="px-6 py-4 text-left font-semibold">Пол</th>
@@ -97,9 +97,9 @@ function SpeedRecords() {
                   <th className="px-6 py-4 text-left font-semibold">Скриншот</th>
                 </tr>
               </thead>
-              <tbody className="bg-white divide-y divide-gold-100">
+              <tbody className="bg-white divide-y divide-old-money-200">
                 {records.map((record) => (
-                  <tr key={record.id} className="hover:bg-gold-50 transition-colors">
+                  <tr key={record.id} className="hover:bg-old-money-50 transition-colors">
                     <td className="px-6 py-4 font-semibold text-old-money-900">{record.name}</td>
                     <td className="px-6 py-4 text-old-money-900">{record.sex === 'С' ? 'Сука' : record.sex === 'К' ? 'Кабель' : record.sex}</td>
                     <td className="px-6 py-4 text-old-money-900">{record.breed}</td>
@@ -111,17 +111,17 @@ function SpeedRecords() {
                     <td className="px-6 py-4 text-old-money-700">{record.date}</td>
                     <td className="px-6 py-4">
                       {record.status === 'new' && (
-                        <span className="inline-block px-3 py-1 rounded-full bg-green-500 text-white font-bold text-sm">
+                        <span className="inline-block px-3 py-1 rounded-full bg-forest-600 text-white font-bold text-sm">
                           Новый результат
                         </span>
                       )}
                       {record.status === 'improved' && (
-                        <span className="inline-block px-3 py-1 rounded-full bg-blue-500 text-white font-bold text-sm">
+                        <span className="inline-block px-3 py-1 rounded-full bg-navy-600 text-white font-bold text-sm">
                           Улучшение личного рекорда
                         </span>
                       )}
                       {record.status === 'normal' && (
-                        <span className="inline-block px-3 py-1 rounded-full bg-gray-300 text-gray-700 font-bold text-sm">
+                        <span className="inline-block px-3 py-1 rounded-full bg-old-money-300 text-old-money-700 font-bold text-sm">
                           Обычный результат
                         </span>
                       )}
@@ -132,7 +132,7 @@ function SpeedRecords() {
                           href={record.screenshot_url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-gold-600 hover:text-gold-700 font-semibold"
+                          className="text-navy-600 hover:text-navy-700 font-semibold"
                         >
                           Открыть
                         </a>
