@@ -9,32 +9,30 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-gradient-to-br from-old-money-50 via-old-money-100 to-old-money-200">
-        <nav className="bg-white/80 backdrop-blur-lg border-b border-old-money-300 shadow-sm">
+        <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-old-money-200 shadow-md">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center h-20">
-              <div className="flex items-center">
-                <Link to="/" className="text-3xl font-extrabold text-navy-700 hover:text-navy-800 transition-all duration-300">
-                  ProCoursing Stats
-                </Link>
-              </div>
-              <div className="flex items-center space-x-3">
+            <div className="flex justify-center items-center h-16">
+              <div className="flex items-center space-x-2">
                 <Link 
                   to="/" 
-                  className="text-lg font-bold text-white bg-navy-600 hover:bg-navy-700 px-6 py-3 rounded-xl shadow-lg transition-all duration-300 backdrop-blur-sm"
+                  className="group relative px-6 py-2 text-sm font-semibold text-navy-700 hover:text-navy-900 transition-all duration-300"
                 >
-                  Календарь событий procoursing.ru
+                  <span className="relative z-10">Календарь</span>
+                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-navy-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                 </Link>
                 <Link 
                   to="/top" 
-                  className="text-lg font-bold text-white bg-navy-600 hover:bg-navy-700 px-6 py-3 rounded-xl shadow-lg transition-all duration-300 backdrop-blur-sm"
+                  className="group relative px-6 py-2 text-sm font-semibold text-navy-700 hover:text-navy-900 transition-all duration-300"
                 >
-                  Рейтинг собак procoursing.ru
+                  <span className="relative z-10">Рейтинг</span>
+                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-navy-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                 </Link>
                 <Link 
                   to="/speed-records" 
-                  className="text-lg font-bold text-white bg-navy-600 hover:bg-navy-700 px-6 py-3 rounded-xl shadow-lg transition-all duration-300 backdrop-blur-sm"
+                  className="group relative px-6 py-2 text-sm font-semibold text-navy-700 hover:text-navy-900 transition-all duration-300"
                 >
-                  Рекорды скорости Донино
+                  <span className="relative z-10">Рекорды</span>
+                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-navy-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                 </Link>
               </div>
             </div>
