@@ -20,21 +20,21 @@ function App() {
               <div className="flex items-center space-x-3">
                 <Link 
                   to="/" 
-                  className="text-lg font-bold text-white bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-600 hover:to-gold-700 px-6 py-3 rounded-xl shadow-lg shadow-gold-500/30 transition-all duration-300 backdrop-blur-sm"
+                  className="text-lg font-bold text-white bg-gold-600 hover:bg-gold-700 px-6 py-3 rounded-xl shadow-lg shadow-gold-500/30 transition-all duration-300 backdrop-blur-sm"
                 >
-                  Календарь событий
+                  Календарь событий procoursing.ru
                 </Link>
                 <Link 
                   to="/top" 
-                  className="text-lg font-bold text-white bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-600 hover:to-gold-700 px-6 py-3 rounded-xl shadow-lg shadow-gold-500/30 transition-all duration-300 backdrop-blur-sm"
+                  className="text-lg font-bold text-white bg-gold-600 hover:bg-gold-700 px-6 py-3 rounded-xl shadow-lg shadow-gold-500/30 transition-all duration-300 backdrop-blur-sm"
                 >
-                  Рейтинг собак
+                  Рейтинг собак procoursing.ru
                 </Link>
                 <Link 
                   to="/speed-records" 
-                  className="text-lg font-bold text-white bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-600 hover:to-gold-700 px-6 py-3 rounded-xl shadow-lg shadow-gold-500/30 transition-all duration-300 backdrop-blur-sm"
+                  className="text-lg font-bold text-white bg-gold-600 hover:bg-gold-700 px-6 py-3 rounded-xl shadow-lg shadow-gold-500/30 transition-all duration-300 backdrop-blur-sm"
                 >
-                  Личные рекорды скорости
+                  Рекорды скорости Донино
                 </Link>
               </div>
             </div>

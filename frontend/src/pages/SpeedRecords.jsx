@@ -31,8 +31,8 @@ function SpeedRecords() {
   return (
     <div className="space-y-6">
       <div className="bg-white/90 backdrop-blur-lg rounded-2xl shadow-xl border border-gold-200 p-8">
-        <h1 className="text-4xl font-extrabold bg-gradient-to-r from-gold-600 to-gold-400 bg-clip-text text-transparent mb-6">
-          Личные рекорды скорости в Донино
+        <h1 className="text-4xl font-extrabold text-gold-600 mb-6">
+          Рекорды скорости Донино
         </h1>
 
         <div className="flex gap-4 mb-6">
@@ -104,7 +104,7 @@ function SpeedRecords() {
                     <td className="px-6 py-4 text-old-money-900">{record.sex === 'С' ? 'Сука' : record.sex === 'К' ? 'Кабель' : record.sex}</td>
                     <td className="px-6 py-4 text-old-money-900">{record.breed}</td>
                     <td className="px-6 py-4">
-                      <span className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-gold-500 to-gold-600 text-white font-bold text-sm">
+                      <span className="inline-block px-3 py-1 rounded-full bg-gold-600 text-white font-bold text-sm">
                         {record.speed_km_h} км/ч
                       </span>
                     </td>
