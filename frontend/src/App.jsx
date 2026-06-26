@@ -4,6 +4,7 @@ import TopDogs from './pages/TopDogs'
 import DogProfile from './pages/DogProfile'
 import EventResults from './pages/EventResults'
 import SpeedRecords from './pages/SpeedRecords'
+import Procoursing from './pages/Procoursing'
 
 function App() {
   return (
@@ -14,24 +15,17 @@ function App() {
             <div className="flex justify-center items-center h-16">
               <div className="flex items-center space-x-2">
                 <Link 
-                  to="/" 
+                  to="/procoursing" 
                   className="group relative px-6 py-2 text-sm font-semibold text-charcoal-700 hover:text-charcoal-900 transition-all duration-300"
                 >
-                  <span className="relative z-10">Календарь</span>
-                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-camel-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-                </Link>
-                <Link 
-                  to="/top" 
-                  className="group relative px-6 py-2 text-sm font-semibold text-charcoal-700 hover:text-charcoal-900 transition-all duration-300"
-                >
-                  <span className="relative z-10">Рейтинг</span>
+                  <span className="relative z-10">Procoursing</span>
                   <span className="absolute bottom-0 left-0 w-full h-0.5 bg-camel-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                 </Link>
                 <Link 
                   to="/speed-records" 
                   className="group relative px-6 py-2 text-sm font-semibold text-charcoal-700 hover:text-charcoal-900 transition-all duration-300"
                 >
-                  <span className="relative z-10">Рекорды</span>
+                  <span className="relative z-10">Рекорды Донино</span>
                   <span className="absolute bottom-0 left-0 w-full h-0.5 bg-camel-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                 </Link>
               </div>
@@ -41,8 +35,8 @@ function App() {
 
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
           <Routes>
-            <Route path="/" element={<Events />} />
-            <Route path="/top" element={<TopDogs />} />
+            <Route path="/" element={<Procoursing />} />
+            <Route path="/procoursing" element={<Procoursing />} />
             <Route path="/dog/:id" element={<DogProfile />} />
             <Route path="/event/:id" element={<EventResults />} />
             <Route path="/speed-records" element={<SpeedRecords />} />

@@ -32,7 +32,7 @@ function SpeedRecords() {
     <div className="space-y-6">
       <div className="bg-cream-50/90 backdrop-blur-lg rounded-2xl shadow-xl border border-cream-300 p-8">
         <h1 className="text-4xl font-extrabold text-charcoal-700 mb-6">
-          Рекорды скорости Донино
+          Рекорды Донино
         </h1>
 
         <div className="flex gap-4 mb-6">
