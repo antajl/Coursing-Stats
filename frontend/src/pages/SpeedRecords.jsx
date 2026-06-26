@@ -1,8 +1,11 @@
 import { useState, useEffect, useRef } from 'react';
 import { api } from '../services/api';
 import { toPng } from 'html-to-image';
+import * as XLSX from 'xlsx';
+import SpeedRecordsStats from './SpeedRecordsStats';
 
 function SpeedRecords() {
+  const [activeTab, setActiveTab] = useState('table');
   const [records, setRecords] = useState([]);
   const [allRecords, setAllRecords] = useState([]); // Все записи для фильтрации
   const [loading, setLoading] = useState(true);
@@ -23,7 +26,7 @@ function SpeedRecords() {
   
   // Состояние для сортировки
   const [sortField, setSortField] = useState('speed_km_h');
-  const [sortDirection, setSortDirection] = useState('desc');
+  const [sortDirection, setSortDirection] = useState('desc'); // По умолчанию от большего к меньшему
   
   useEffect(() => {
     function handleClickOutside(event) {
@@ -85,15 +88,29 @@ function SpeedRecords() {
     // Поиск
     if (searchQuery) {
       const searchLower = searchQuery.toLowerCase();
-      filtered = filtered.filter(record => 
-        record.name.toLowerCase().includes(searchLower) ||
-        record.breed.toLowerCase().includes(searchLower) ||
-        record.date.includes(searchQuery)
-      );
+      filtered = filtered.filter(record => {
+        const nameMatch = record.name.toLowerCase().includes(searchLower);
+        const breedMatch = record.breed.toLowerCase().includes(searchLower);
+        
+        // Алиасы для поиска по полу
+        let sexMatch = record.sex.toLowerCase().includes(searchLower);
+        if (!sexMatch) {
+          if (searchLower.includes('сука') || searchLower.includes('сук') || searchLower.includes('самка') || searchLower.includes('самки')) {
+            sexMatch = record.sex === 'С';
+          } else if (searchLower.includes('кабель') || searchLower.includes('кобель') || searchLower.includes('каб') || searchLower.includes('самец') || searchLower.includes('самцы')) {
+            sexMatch = record.sex === 'К';
+          }
+        }
+        
+        const speedMatch = record.speed_km_h.toString().includes(searchQuery);
+        const dateMatch = record.date.includes(searchQuery);
+        
+        return nameMatch || breedMatch || sexMatch || speedMatch || dateMatch;
+      });
     }
     
     // Сортировка
-    filtered.sort((a, b) => {
+    const sorted = [...filtered].sort((a, b) => {
       let aVal = a[sortField];
       let bVal = b[sortField];
       
@@ -111,14 +128,16 @@ function SpeedRecords() {
         bVal = parseDate(bVal);
       }
       
-      if (sortDirection === 'asc') {
-        return aVal > bVal ? 1 : -1;
+      // desc = от большего к меньшему (стрелка ↓)
+      // asc = от меньшего к большему (стрелка ↑)
+      if (sortDirection === 'desc') {
+        return aVal > bVal ? -1 : aVal < bVal ? 1 : 0; // от большего к меньшему
       } else {
-        return aVal < bVal ? 1 : -1;
+        return aVal < bVal ? -1 : aVal > bVal ? 1 : 0; // от меньшего к большему
       }
     });
     
-    setRecords(filtered);
+    setRecords(sorted);
   }
 
   useEffect(() => {
@@ -143,16 +162,30 @@ function SpeedRecords() {
 
   function handleSort(field) {
     if (sortField === field) {
+      // Переключаем направление сортировки
       setSortDirection(sortDirection === 'asc' ? 'desc' : 'asc');
     } else {
+      // Новое поле - устанавливаем направление по умолчанию
       setSortField(field);
-      setSortDirection('asc');
+      // Для текстовых полей и даты - asc (по алфавиту/хронологии), для скорости - desc (от большего к меньшему)
+      if (field === 'speed_km_h') {
+        setSortDirection('desc');
+      } else {
+        setSortDirection('asc');
+      }
     }
   }
 
   async function downloadCardAsImage(recordId, dogName) {
     const element = document.getElementById(`history-card-${recordId}`);
     if (!element) return;
+
+    // Сохраняем текущие классы
+    const originalClasses = element.className;
+    
+    // Делаем элемент видимым для скриншота
+    element.classList.remove('opacity-0', 'invisible');
+    element.classList.add('opacity-100', 'visible');
 
     try {
       const dataUrl = await toPng(element, {
@@ -166,6 +199,9 @@ function SpeedRecords() {
       link.click();
     } catch (error) {
       console.error('Ошибка при создании скриншота:', error);
+    } finally {
+      // Возвращаем исходные классы
+      element.className = originalClasses;
     }
   }
 
@@ -174,6 +210,29 @@ function SpeedRecords() {
     setFilterBreeds([]);
     setFilterSexes([]);
     setSearchQuery('');
+  }
+
+  function exportToExcel() {
+    // Заголовки Excel
+    const headers = ['Кличка', 'Пол', 'Порода', 'Скорость (км/ч)', 'Дата', 'Скриншот'];
+    
+    // Данные для экспорта (только отфильтрованные записи)
+    const excelData = records.map(record => ({
+      'Кличка': record.name,
+      'Пол': record.sex === 'С' ? 'Сука' : record.sex === 'К' ? 'Кабель' : record.sex,
+      'Порода': record.breed,
+      'Скорость (км/ч)': record.speed_km_h,
+      'Дата': record.date,
+      'Скриншот': record.screenshot_url || ''
+    }));
+    
+    // Создаем книгу Excel
+    const worksheet = XLSX.utils.json_to_sheet(excelData);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, 'Рекорды');
+    
+    // Скачиваем файл
+    XLSX.writeFile(workbook, `рекорды-донино-${new Date().toISOString().split('T')[0]}.xlsx`);
   }
 
   const hasActiveFilters = filterYears.length > 0 || filterBreeds.length > 0 || filterSexes.length > 0 || searchQuery;
@@ -196,100 +255,133 @@ function SpeedRecords() {
           </a>
         </h1>
 
-        <div className="flex gap-4 mb-6" ref={dropdownRef}>
-          <div className="flex-1 relative">
-            <label className="block text-sm font-semibold text-old-money-700 mb-2">Год</label>
-            <button
-              onClick={() => setOpenDropdown(openDropdown === 'year' ? null : 'year')}
-              className="w-full px-4 py-3 rounded-xl border-2 border-cream-300 focus:border-camel-500 focus:ring-2 focus:ring-camel-200 transition-all bg-white text-left"
-            >
-              {filterYears.length > 0 ? `Выбрано: ${filterYears.length}` : 'Все годы'}
-            </button>
-            {openDropdown === 'year' && (
-              <div className="absolute z-10 w-full mt-1 bg-white border-2 border-cream-300 rounded-xl shadow-xl max-h-60 overflow-y-auto">
-                {years.map(year => (
-                  <label key={year} className="flex items-center px-4 py-2 hover:bg-cream-50 cursor-pointer">
-                    <input
-                      type="checkbox"
-                      checked={filterYears.includes(year)}
-                      onChange={() => toggleFilter('year', year)}
-                      className="mr-2"
-                    />
-                    {year}
-                  </label>
-                ))}
-              </div>
-            )}
-          </div>
-          <div className="flex-1 relative">
-            <label className="block text-sm font-semibold text-old-money-700 mb-2">Порода</label>
-            <button
-              onClick={() => setOpenDropdown(openDropdown === 'breed' ? null : 'breed')}
-              className="w-full px-4 py-3 rounded-xl border-2 border-cream-300 focus:border-camel-500 focus:ring-2 focus:ring-camel-200 transition-all bg-white text-left"
-            >
-              {filterBreeds.length > 0 ? `Выбрано: ${filterBreeds.length}` : 'Все породы'}
-            </button>
-            {openDropdown === 'breed' && (
-              <div className="absolute z-10 w-full mt-1 bg-white border-2 border-cream-300 rounded-xl shadow-xl max-h-60 overflow-y-auto">
-                {breeds.map(breed => (
-                  <label key={breed} className="flex items-center px-4 py-2 hover:bg-cream-50 cursor-pointer">
-                    <input
-                      type="checkbox"
-                      checked={filterBreeds.includes(breed)}
-                      onChange={() => toggleFilter('breed', breed)}
-                      className="mr-2"
-                    />
-                    {breed}
-                  </label>
-                ))}
-              </div>
-            )}
-          </div>
-          <div className="flex-1 relative">
-            <label className="block text-sm font-semibold text-old-money-700 mb-2">Пол</label>
-            <button
-              onClick={() => setOpenDropdown(openDropdown === 'sex' ? null : 'sex')}
-              className="w-full px-4 py-3 rounded-xl border-2 border-cream-300 focus:border-camel-500 focus:ring-2 focus:ring-camel-200 transition-all bg-white text-left"
-            >
-              {filterSexes.length > 0 ? `Выбрано: ${filterSexes.length}` : 'Все'}
-            </button>
-            {openDropdown === 'sex' && (
-              <div className="absolute z-10 w-full mt-1 bg-white border-2 border-cream-300 rounded-xl shadow-xl max-h-60 overflow-y-auto">
-                {sexes.map(sex => (
-                  <label key={sex} className="flex items-center px-4 py-2 hover:bg-cream-50 cursor-pointer">
-                    <input
-                      type="checkbox"
-                      checked={filterSexes.includes(sex)}
-                      onChange={() => toggleFilter('sex', sex)}
-                      className="mr-2"
-                    />
-                    {sex === 'С' ? 'Сука' : sex === 'К' ? 'Кабель' : sex}
-                  </label>
-                ))}
-              </div>
-            )}
-          </div>
-          <div className="flex-1">
-            <label className="block text-sm font-semibold text-old-money-700 mb-2">Поиск</label>
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Имя, порода или дата..."
-              className="w-full px-4 py-3 rounded-xl border-2 border-cream-300 focus:border-camel-500 focus:ring-2 focus:ring-camel-200 transition-all bg-white"
-            />
-          </div>
-          {hasActiveFilters && (
-            <div className="flex items-end">
-              <button
-                onClick={clearAllFilters}
-                className="px-4 py-3 rounded-xl border-2 border-red-300 text-red-600 hover:bg-red-50 transition-all font-semibold"
-              >
-                Сбросить
-              </button>
-            </div>
-          )}
+        <div className="flex gap-4 mb-6">
+          <button
+            onClick={() => setActiveTab('table')}
+            className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
+              activeTab === 'table'
+                ? 'bg-camel-600 text-white shadow-lg'
+                : 'bg-white text-charcoal-700 border-2 border-cream-300 hover:border-camel-500'
+            }`}
+          >
+            Таблица
+          </button>
+          <button
+            onClick={() => setActiveTab('stats')}
+            className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
+              activeTab === 'stats'
+                ? 'bg-camel-600 text-white shadow-lg'
+                : 'bg-white text-charcoal-700 border-2 border-cream-300 hover:border-camel-500'
+            }`}
+          >
+            Статистика
+          </button>
         </div>
+
+        {activeTab === 'table' && (
+          <div className="space-y-6">
+            <div className="flex gap-4 mb-6" ref={dropdownRef}>
+              <div className="flex-1 relative">
+                <label className="block text-sm font-semibold text-old-money-700 mb-2">Год</label>
+                <button
+                  onClick={() => setOpenDropdown(openDropdown === 'year' ? null : 'year')}
+                  className="w-full px-4 py-3 rounded-xl border-2 border-cream-300 focus:border-camel-500 focus:ring-2 focus:ring-camel-200 transition-all bg-white text-left"
+                >
+                  {filterYears.length > 0 ? `Выбрано: ${filterYears.length}` : 'Все года'}
+                </button>
+                {openDropdown === 'year' && (
+                  <div className="absolute z-10 w-full mt-1 bg-white border-2 border-cream-300 rounded-xl shadow-xl max-h-60 overflow-y-auto">
+                    {years.map(year => (
+                      <label key={year} className="flex items-center px-4 py-2 hover:bg-cream-50 cursor-pointer">
+                        <input
+                          type="checkbox"
+                          checked={filterYears.includes(year)}
+                          onChange={() => toggleFilter('year', year)}
+                          className="mr-2"
+                        />
+                        {year}
+                      </label>
+                    ))}
+                  </div>
+                )}
+              </div>
+              <div className="flex-1 relative">
+                <label className="block text-sm font-semibold text-old-money-700 mb-2">Порода</label>
+                <button
+                  onClick={() => setOpenDropdown(openDropdown === 'breed' ? null : 'breed')}
+                  className="w-full px-4 py-3 rounded-xl border-2 border-cream-300 focus:border-camel-500 focus:ring-2 focus:ring-camel-200 transition-all bg-white text-left"
+                >
+                  {filterBreeds.length > 0 ? `Выбрано: ${filterBreeds.length}` : 'Все породы'}
+                </button>
+                {openDropdown === 'breed' && (
+                  <div className="absolute z-10 w-full mt-1 bg-white border-2 border-cream-300 rounded-xl shadow-xl max-h-60 overflow-y-auto">
+                    {breeds.map(breed => (
+                      <label key={breed} className="flex items-center px-4 py-2 hover:bg-cream-50 cursor-pointer">
+                        <input
+                          type="checkbox"
+                          checked={filterBreeds.includes(breed)}
+                          onChange={() => toggleFilter('breed', breed)}
+                          className="mr-2"
+                        />
+                        {breed}
+                      </label>
+                    ))}
+                  </div>
+                )}
+              </div>
+              <div className="flex-1 relative">
+                <label className="block text-sm font-semibold text-old-money-700 mb-2">Пол</label>
+                <button
+                  onClick={() => setOpenDropdown(openDropdown === 'sex' ? null : 'sex')}
+                  className="w-full px-4 py-3 rounded-xl border-2 border-cream-300 focus:border-camel-500 focus:ring-2 focus:ring-camel-200 transition-all bg-white text-left"
+                >
+                  {filterSexes.length > 0 ? `Выбрано: ${filterSexes.length}` : 'Все'}
+                </button>
+                {openDropdown === 'sex' && (
+                  <div className="absolute z-10 w-full mt-1 bg-white border-2 border-cream-300 rounded-xl shadow-xl max-h-60 overflow-y-auto">
+                    {sexes.map(sex => (
+                      <label key={sex} className="flex items-center px-4 py-2 hover:bg-cream-50 cursor-pointer">
+                        <input
+                          type="checkbox"
+                          checked={filterSexes.includes(sex)}
+                          onChange={() => toggleFilter('sex', sex)}
+                          className="mr-2"
+                        />
+                        {sex === 'С' ? 'Сука' : sex === 'К' ? 'Кабель' : sex}
+                      </label>
+                    ))}
+                  </div>
+                )}
+              </div>
+              <div className="flex-1">
+                <label className="block text-sm font-semibold text-old-money-700 mb-2">Поиск</label>
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Имя, порода или дата..."
+                  className="w-full px-4 py-3 rounded-xl border-2 border-cream-300 focus:border-camel-500 focus:ring-2 focus:ring-camel-200 transition-all bg-white"
+                />
+              </div>
+              <div className="flex items-end">
+                <button
+                  onClick={exportToExcel}
+                  className="px-4 py-3 rounded-xl border-2 border-camel-300 text-camel-700 hover:bg-camel-50 transition-all font-semibold"
+                >
+                  Скачать Excel
+                </button>
+              </div>
+              {hasActiveFilters && (
+                <div className="flex items-end">
+                  <button
+                    onClick={clearAllFilters}
+                    className="px-4 py-3 rounded-xl border-2 border-red-300 text-red-600 hover:bg-red-50 transition-all font-semibold"
+                  >
+                    Сбросить
+                  </button>
+                </div>
+              )}
+            </div>
 
         {loading && (
           <div className="text-center py-12">
@@ -319,31 +411,31 @@ function SpeedRecords() {
                     className="px-6 py-4 text-center font-semibold cursor-pointer hover:bg-charcoal-600 transition-colors"
                     onClick={() => handleSort('name')}
                   >
-                    Кличка {sortField === 'name' && (sortDirection === 'asc' ? '↑' : '↓')}
+                    Кличка {sortField === 'name' && (sortDirection === 'desc' ? '↑' : '↓')}
                   </th>
                   <th 
                     className="px-6 py-4 text-center font-semibold cursor-pointer hover:bg-charcoal-600 transition-colors"
                     onClick={() => handleSort('sex')}
                   >
-                    Пол {sortField === 'sex' && (sortDirection === 'asc' ? '↑' : '↓')}
+                    Пол {sortField === 'sex' && (sortDirection === 'desc' ? '↑' : '↓')}
                   </th>
                   <th 
                     className="px-6 py-4 text-center font-semibold cursor-pointer hover:bg-charcoal-600 transition-colors"
                     onClick={() => handleSort('breed')}
                   >
-                    Порода {sortField === 'breed' && (sortDirection === 'asc' ? '↑' : '↓')}
+                    Порода {sortField === 'breed' && (sortDirection === 'desc' ? '↑' : '↓')}
                   </th>
                   <th 
                     className="px-6 py-4 text-center font-semibold cursor-pointer hover:bg-charcoal-600 transition-colors"
                     onClick={() => handleSort('speed_km_h')}
                   >
-                    Скорость {sortField === 'speed_km_h' && (sortDirection === 'asc' ? '↑' : '↓')}
+                    Скорость {sortField === 'speed_km_h' && (sortDirection === 'desc' ? '↓' : '↑')}
                   </th>
                   <th 
                     className="px-6 py-4 text-center font-semibold cursor-pointer hover:bg-charcoal-600 transition-colors"
                     onClick={() => handleSort('date')}
                   >
-                    Дата {sortField === 'date' && (sortDirection === 'asc' ? '↑' : '↓')}
+                    Дата {sortField === 'date' && (sortDirection === 'desc' ? '↓' : '↑')}
                   </th>
                   <th className="px-6 py-4 text-center font-semibold">Скриншот</th>
                 </tr>
@@ -445,6 +537,10 @@ function SpeedRecords() {
             </table>
           </div>
         )}
+          </div>
+        )}
+
+        {activeTab === 'stats' && <SpeedRecordsStats />}
       </div>
     </div>
   );
