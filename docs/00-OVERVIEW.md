@@ -31,11 +31,21 @@
 
 **GitHub:** https://github.com/antajl/ProCoursing
 
-**Cloudflare Pages:** https://procoursing.pages.dev
+**Домены:**
+- `antajl.ru` — основной домен (куплен 2026-06-26)
+- `antajl.online` — дополнительный домен (куплен 2026-06-26)
+
+**Фронтенд:**
+- https://procoursing.antajl.ru (новый домен, после обновления DNS)
+- https://procoursing.pages.dev (старый домен, работает)
 - Автоматический деплой через GitHub Actions при push в main
 
-**Cloudflare Worker:** https://procoursing-stats.antajltube.workers.dev
+**API (Worker):**
+- https://api.procoursing.antajl.ru (новый домен, после обновления DNS)
+- https://procoursing-stats.antajltube.workers.dev (старый домен, работает)
 - Активен, cron: понедельник 02:00 UTC
+
+**Примечание:** uBlock Origin может блокировать старый домен `antajltube.workers.dev` как потенциальный трекер. Новый домен `antajl.ru` не будет блокироваться.
 
 ## Автоматизация
 
