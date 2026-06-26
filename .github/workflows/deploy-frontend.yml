@@ -37,7 +37,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: deploy backend/src/worker.js
+          command: deploy --config wrangler.toml
 
       - name: Deploy Frontend to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3

@@ -6,10 +6,15 @@
 - `README.md` — Основная спецификация проекта
 - `package.json` — Зависимости Node.js
 - `wrangler.toml` — Конфигурация Cloudflare Worker
-- `start.bat` — Скрипт запуска серверов
+- `start-local.bat` — Скрипт запуска серверов
 
 ### Backend
-- `src/worker.js` — Cloudflare Worker API
+- `src/worker.js` — Тонкий диспетчер запросов (~60 строк), делегирует в src/routes/
+- `src/routes/` — Модули обработки API маршрутов
+  - `events.js` — Обработка /api/events endpoints
+  - `dogs.js` — Обработка /api/dogs и /api/breeds endpoints
+  - `top.js` — Обработка /api/top и /api/years endpoints
+  - `admin.js` — Обработка admin endpoints
 - `schema.sql` — Схема БД D1
 - `parsers/` — Парсеры результатов событий
   - `parse-results-coursing.mjs` — Парсер результатов курсинга
@@ -31,9 +36,11 @@
 
 ### Frontend
 - `src/` — React приложение
+- `src/constants.js` — Константы приложения (цвета дисциплин, статусы)
 - `src/components/` — React компоненты
   - `DogStatsTable.jsx` — Таблица статистики собак
   - `DogTooltip.jsx` — Tooltip с информацией о собаке
+  - `DogSilhouettes.jsx` — SVG силуэты пород
 - `src/pages/` — Страницы приложения
   - `DogProfile.jsx` — Профиль собаки
   - `Events.jsx` — Календарь событий

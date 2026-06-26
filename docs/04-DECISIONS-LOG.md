@@ -2,6 +2,43 @@
 
 Этот файл фиксирует важные архитектурные решения и эксперименты, чтобы избежать повторения ошибок.
 
+## 2026-06-26: Рефакторинг фронтенда
+
+**Проблемы:**
+- Mock-фолбэк в prod: `fetchWithFallback()` всегда возвращал mock-данные при ошибке, даже в продакшене
+- Events.jsx обходил api.js и делал прямые fetch() с собственной копией API_URL
+- App.jsx дублировал API_URL из api.js
+- TopDogs.jsx загружал все три рейтинга одновременно при смене фильтров
+- Дублирование фильтрации по breed (API + клиент)
+- Константы (цвета дисциплин, статусы) дублировались по файлам
+- Шаблонные файлы от create-vite (hero.png, react.svg, vite.svg) не использовались
+
+**Решения:**
+- Добавлена проверка `IS_DEV` в `fetchWithFallback()` — в prod нет fallback на mock
+- Events.jsx переведён на api.js (api.getEvents(), api.getYears())
+- Удалена дублирующаяся константа API_URL из App.jsx
+- TopDogs.jsx загружает только активную вкладку, отслеживает загруженные вкладки
+- Убрана клиентская фильтрация по breed (API уже возвращает отфильтрованные данные)
+- Создан `frontend/src/constants.js` с DISCIPLINE_COLORS и STATUSES
+- Удалены неиспользуемые assets (hero.png, react.svg, vite.svg)
+
+**Реализация:**
+- Обновлён `frontend/src/services/api.js`
+- Обновлён `frontend/src/pages/Events.jsx`
+- Обновлён `frontend/src/App.jsx`
+- Обновлён `frontend/src/pages/TopDogs.jsx`
+- Создан `frontend/src/constants.js`
+- Обновлён `frontend/src/pages/Events.jsx` (импорт из constants.js)
+- Удалены файлы из `frontend/src/assets/`
+
+**Коммиты:**
+- Починен mock-фолбэк в продакшене
+- Events.jsx переведён на api.js
+- Убрано дублирование API_URL из App.jsx
+- Оптимизирован TopDogs.jsx
+- Вынесены константы в constants.js
+- Удалены неиспользуемые assets
+
 ## 2026-06-26: Упрощение статусов участников
 
 **Проблема:** В коде использовались 5 статусов (finished, disqualified, withdrawn, dnf, dns), но на фронтенде они группировались в 2 категории (дисквалифицирован/не участвовал). Детальное разделение не использовалось по-разному.
