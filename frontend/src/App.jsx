@@ -3,6 +3,7 @@ import Events from './pages/Events'
 import TopDogs from './pages/TopDogs'
 import DogProfile from './pages/DogProfile'
 import EventResults from './pages/EventResults'
+import SpeedRecords from './pages/SpeedRecords'
 
 function App() {
   return (
@@ -29,6 +30,12 @@ function App() {
                 >
                   Рейтинг собак
                 </Link>
+                <Link 
+                  to="/speed-records" 
+                  className="text-lg font-bold text-white bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-600 hover:to-gold-700 px-6 py-3 rounded-xl shadow-lg shadow-gold-500/30 transition-all duration-300 backdrop-blur-sm"
+                >
+                  Личные рекорды скорости
+                </Link>
               </div>
             </div>
           </div>
@@ -40,6 +47,7 @@ function App() {
             <Route path="/top" element={<TopDogs />} />
             <Route path="/dog/:id" element={<DogProfile />} />
             <Route path="/event/:id" element={<EventResults />} />
+            <Route path="/speed-records" element={<SpeedRecords />} />
           </Routes>
         </main>
 

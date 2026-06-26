@@ -150,5 +150,14 @@ export const api = {
 
   async getEventResults(eventId) {
     return fetchWithFallback(`${API_URL}/api/events/${eventId}/results`, []);
+  },
+
+  async getSpeedRecords(breed = '', sex = '', limit = 100) {
+    const params = new URLSearchParams();
+    if (breed) params.append('breed', breed);
+    if (sex) params.append('sex', sex);
+    params.append('limit', limit);
+    const url = `${API_URL}/api/speed-records?${params}`;
+    return fetchWithFallback(url, []);
   }
 };

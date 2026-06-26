@@ -116,3 +116,22 @@ JOIN events e ON r.event_id = e.id
 WHERE r.status = 'finished' AND r.total_score IS NOT NULL AND e.event_type IN ('coursing', 'bzmp')
 GROUP BY d.id, e.year
 ORDER BY e.year DESC, best_score DESC;
+
+-- ===========================================================================
+-- РЕКОРДЫ СКОРОСТИ
+-- ===========================================================================
+-- Таблица для хранения рекордов скорости из Google Sheets
+CREATE TABLE IF NOT EXISTS speed_records (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  breed TEXT NOT NULL,
+  sex TEXT NOT NULL,
+  name TEXT NOT NULL,
+  speed_km_h REAL NOT NULL,
+  date TEXT NOT NULL,
+  screenshot_url TEXT,
+  status TEXT DEFAULT 'normal',
+  updated_at TEXT DEFAULT (datetime('now'))
+);
+
+CREATE INDEX IF NOT EXISTS idx_speed_records_breed ON speed_records(breed);
+CREATE INDEX IF NOT EXISTS idx_speed_records_speed ON speed_records(speed_km_h DESC);
