@@ -34,6 +34,53 @@ function cleanText(text) {
   return text.replace(/\s+/g, " ").trim();
 }
 
+function detectStatusFromText(text, hasScore = true) {
+  if (!text) return { status: hasScore ? "finished" : "unknown_status_check_raw_text", reason: null };
+  
+  const normalized = text.toLowerCase().replace(/ё/g, "е");
+  
+  if (/неявка|неприбыв/.test(normalized)) {
+    return { status: "dns", reason: "Неявка" };
+  }
+  
+  if (/отстран/.test(normalized)) {
+    return { status: "disqualified", reason: extractReasonText(text) };
+  }
+  
+  if (/снят|снята|снятие/.test(normalized)) {
+    return { status: "withdrawn", reason: extractReasonText(text) };
+  }
+  
+  if (/не\s*финиш|dnf/.test(normalized)) {
+    return { status: "dnf", reason: extractReasonText(text) };
+  }
+  
+  // Если есть явный текст о статусе, но не совпал с паттернами выше
+  if (/сход|возврат|потеря|агрессия|жестокое|нарушение|уход/.test(normalized)) {
+    return { status: "disqualified", reason: extractReasonText(text) };
+  }
+  
+  return { status: hasScore ? "finished" : "unknown_status_check_raw_text", reason: null };
+}
+
+function extractReasonText(fullText) {
+  if (!fullText) return null;
+  
+  // Сначала ищем текст, содержащий причину, обычно в скобках или отдельной ячейке
+  const match = fullText.match(/(?:отстранение|неявка|снят|снята|снятие|ветеринар|владелец|дисквал|не\s*финиш|сош[еелла]*|сход|уход)[^(]*\(([^)]+)\)/i);
+  if (match) {
+    return match[1].trim();
+  }
+  
+  // Если не нашли в скобках, ищем просто слово "Отстранение" или "Неявка" как причину
+  const keywordMatch = fullText.match(/(?:отстранение|неявка|снят|снята|снятие|ветеринар|владелец|дисквал|не\s*финиш|сош[еелла]*|сход|уход|отстранена|снята)/i);
+  if (keywordMatch) {
+    return keywordMatch[0].trim();
+  }
+  
+  return null;
+}
+
 function parseTimeSpeed(html) {
   // Формат: "21.88 с<br>16.45 м/с<br>59.232 км/ч"
   if (!html) return null;
@@ -98,10 +145,9 @@ function parseDogRow($row, breedClass) {
   const qualification = cleanText($cells.eq(17).text());
 
   // Определяем статус
-  let status = "finished";
-  if (!heat1TimeSpeed?.time && !heat2TimeSpeed?.time && !heat3TimeSpeed?.time) {
-    status = "unknown_status_check_raw_text";
-  }
+  const statusResult = detectStatusFromText($row.text(), heat1TimeSpeed?.time || heat2TimeSpeed?.time || heat3TimeSpeed?.time);
+  const status = statusResult.status;
+  const statusReason = statusResult.reason;
 
   return {
     breed_class: breedClass,
@@ -118,6 +164,7 @@ function parseDogRow($row, breedClass) {
     qualification,
     vc,
     status,
+    status_reason: statusReason,
     raw_text: $row.html() || "",
   };
 }

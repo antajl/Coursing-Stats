@@ -14,4 +14,3 @@ echo Servers started!
 echo - Worker: http://127.0.0.1:8787
 echo - Frontend: http://localhost:5173
 echo.
-pause

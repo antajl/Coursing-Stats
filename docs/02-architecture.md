@@ -1,18 +1,18 @@
-# 02. Architecture — Cloudflare Pages + Worker + D1
+# Architecture — Архитектура проекта
 
 ## High-Level Architecture
 
 ```
-Источник (procoursing.ru)
-   │  Cron Trigger (Cloudflare Worker, раз в день/неделю)
-   ▼
-Скрапер/парсер (Node, локально для бэкафилла; Worker — для инкремента)
-   │
+Источник данных (procoursing.ru)
+   │  Скрапер/парсер (Node.js)
    ▼
 Cloudflare D1 (events, dogs, results)
    │
    ▼
-Pages-сайт (фронтенд: React, профиль собаки, топы, фильтры, tooltip)
+Cloudflare Worker API
+   │
+   ▼
+Cloudflare Pages (фронтенд: React)
 ```
 
 ## Components
@@ -26,8 +26,8 @@ Pages-сайт (фронтенд: React, профиль собаки, топы, 
 | `backend/parsers/parse-results-coursing.mjs` | `backend/parsers/` | Парсер результатов курсинга |
 | `backend/parsers/parse-results-bzmp.mjs` | `backend/parsers/` | Парсер БЗМП |
 | `backend/parsers/parse-results-racing.mjs` | `backend/parsers/` | Парсер бега с извлечением данных о скорости |
-| `backend/scripts/load-results.mjs` | `backend/scripts/` | Загрузка результатов в D1 |
 | `backend/scripts/load-events.mjs` | `backend/scripts/` | Загрузка событий в D1 |
+| `backend/scripts/load-results.mjs` | `backend/scripts/` | Загрузка результатов в D1 |
 
 ### 2. Database (D1)
 
@@ -95,12 +95,159 @@ GET /api/events?year=
 **Services:**
 - `frontend/src/services/api.js` — API сервис для общения с backend
 
-**Data:**
-- `frontend/src/data/mockData.js` — мок данные для разработки
+## Database Schema
 
-**Features:**
-- Фильтры по породе и году
-- Поиск по имени собаки
-- Tooltip при наведении на имя собаки
-- Кнопка обновления данных в хедере
-- Адаптивный дизайн
+### events
+
+| Column | Type | Description |
+|--------|------|-------------|
+| id | INTEGER PK | |
+| year | INTEGER | Год события |
+| date_start | TEXT | Дата начала (ISO 'YYYY-MM-DD') |
+| date_end | TEXT | Дата окончания (для многодневных) |
+| rank_label | TEXT | Ранг ('ЧРКФ', 'CACL', 'РКФ' и т.п.) |
+| event_type | TEXT | 'coursing' \| 'bzmp' \| 'racing' |
+| title | TEXT | Название состязания |
+| host_club | TEXT | Принимающая организация |
+| region | TEXT | Регион |
+| location | TEXT | Место проведения |
+| catalog_url | TEXT | Ссылка на каталог PDF |
+| results_url | TEXT UNIQUE | Ссылка на результаты (естественный ключ) |
+| confirmed | INTEGER | Флаг подтверждения ('+') |
+| scraped_at | TEXT | Время скрапинга |
+
+### dogs
+
+| Column | Type | Description |
+|--------|------|-------------|
+| id | INTEGER PK | |
+| name_lat | TEXT | Каноническое имя латиницей |
+| name_ru | TEXT | Имя на русском |
+| breed | TEXT | Порода |
+| sex | TEXT | 'M' \| 'F' |
+| pedigree_no | TEXT | Номер родословной |
+| microchip | TEXT | Микрошильд |
+| owner | TEXT | Владелец |
+| pedigree_url | TEXT | Ссылка на внешний архив родословных |
+| merged_into_dog_id | INTEGER FK | Для ручной склейки дублей |
+| created_at | TEXT | Время создания |
+
+**UNIQUE:** `(name_lat, breed)`
+
+### results
+
+| Column | Type | Description |
+|--------|------|-------------|
+| id | INTEGER PK | |
+| event_id | INTEGER FK | Ссылка на events |
+| dog_id | INTEGER FK | Ссылка на dogs |
+| breed_class | TEXT | Заголовок группы ('Афганская - Стандартная - Сука') |
+| catalog_no | INTEGER | Каталожный номер |
+| placement | INTEGER | Место (NULL если не финишировал) |
+| total_score | REAL | Нормализованный итоговый балл (для coursing/bzmp) |
+| qualification | TEXT | 'CACL, RegCACL' и т.п. |
+| status | TEXT | 'finished' \| 'disqualified' \| 'withdrawn' \| 'dns' |
+| raw_scores_json | TEXT | JSON с детальными данными (баллы или скорость) |
+| raw_text | TEXT | Исходная строка для отладки |
+
+**UNIQUE:** `(event_id, dog_id, breed_class)`
+
+**raw_scores_json структура:**
+
+Для Coursing/БЗМП:
+```json
+{
+  "heats": [
+    {
+      "heat_number": 1,
+      "bib_number": 30,
+      "bib_color": "red",
+      "judges": [
+        {
+          "judge_number": 1,
+          "scores": [15, 16, 16, 15, 15],
+          "sum": 77
+        }
+      ],
+      "total": 156
+    }
+  ],
+  "grand_total": 318
+}
+```
+
+Для Racing:
+```json
+{
+  "heat1": {
+    "num": 1,
+    "bib": "red",
+    "time": 21.88,
+    "speed": 16.45
+  },
+  "heat2": { ... },
+  "heat3": { ... },
+  "distance": 480
+}
+```
+Скорость в м/с, конвертируется в км/ч в API (×3.6).
+
+## API Reference
+
+### Base URL
+**Production:** `https://procoursing-stats.antajltube.workers.dev`
+**Development:** `http://127.0.0.1:8787`
+
+### Endpoints
+
+#### GET /api/top/placement
+Топ по местам (медальный зачёт). Параметры: `breed`, `year`, `minStarts`, `limit`, `offset`.
+
+#### GET /api/top/score
+Топ по очкам. Параметры: `breed`, `year`, `minStarts`, `limit`, `offset`.
+
+#### GET /api/top/speed
+Топ по скорости (racing). Параметры: `breed`, `year`, `minStarts`, `limit`, `offset`.
+
+#### GET /api/dogs/:id
+Профиль собаки с раздельной статистикой для курсинга и racing.
+
+#### GET /api/breeds
+Список всех пород.
+
+#### GET /api/years
+Список годов с событиями.
+
+#### GET /api/events
+Список событий с фильтром по году.
+
+## Tools and Libraries
+
+### Dependencies
+- **cheerio** — Парсинг HTML (jQuery-like API)
+- **iconv-lite** — Декодирование windows-1251 → UTF-8
+
+### Built-in Node.js modules
+- `fs` / `fs/promises` — работа с файлами
+- `path` — работа с путями файлов
+
+### Frontend stack
+- React + Vite
+- TailwindCSS
+- shadcn/ui
+- Lucide (иконки)
+
+## Deployment State
+
+**GitHub:** https://github.com/antajl/ProCoursing
+
+**Cloudflare Pages:** https://procoursing.pages.dev
+- Автоматический деплой через GitHub Actions при push в main
+
+**Cloudflare Worker:** https://procoursing-stats.antajltube.workers.dev
+- Активен, cron: понедельник 02:00 UTC
+
+**Cloudflare D1:** `pc-db` (~21 MB)
+- events: 302
+- dogs: ~1579
+- results: 4639 (2023–2026)

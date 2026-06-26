@@ -20,10 +20,8 @@ async function loadEvents() {
   const eventsData = await fs.readFile(EVENTS_FILE, "utf8");
   let events = JSON.parse(eventsData);
   
-  // Фильтруем события: только до текущей даты
-  const currentDate = new Date().toISOString().split('T')[0];
-  events = events.filter(event => event.date_start <= currentDate);
-  console.log(`Найдено ${events.length} событий (отфильтрованы будущие события)`);
+  // Не фильтруем будущие события - загружаем весь год
+  console.log(`Найдено ${events.length} событий`);
   
   // Для локального SQLite используем better-sqlite3
   // Для D1 через wrangler нужно использовать wrangler d1 execute

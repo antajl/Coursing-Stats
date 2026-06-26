@@ -1,30 +1,10 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
-import { useState } from 'react'
 import Events from './pages/Events'
 import TopDogs from './pages/TopDogs'
 import DogProfile from './pages/DogProfile'
-
-const API_URL = import.meta.env.VITE_API_URL || 
-  (import.meta.env.PROD 
-    ? 'https://procoursing-stats.antajltube.workers.dev'
-    : 'http://127.0.0.1:8787');
+import EventResults from './pages/EventResults'
 
 function App() {
-  const [updateLoading, setUpdateLoading] = useState(false)
-
-  const handleUpdate = async () => {
-    setUpdateLoading(true)
-    try {
-      const response = await fetch(`${API_URL}/api/update/trigger`, { method: 'POST' })
-      const data = await response.json()
-      console.log('Update triggered:', data)
-    } catch (err) {
-      console.error('Update error:', err)
-    } finally {
-      setUpdateLoading(false)
-    }
-  }
-
   return (
     <Router>
       <div className="min-h-screen bg-gradient-to-br from-old-money-50 via-old-money-100 to-old-money-200">
@@ -50,15 +30,6 @@ function App() {
                   Рейтинг собак
                 </Link>
               </div>
-              <div className="flex items-center">
-                <button
-                  onClick={handleUpdate}
-                  disabled={updateLoading}
-                  className="px-4 py-2 text-sm text-old-money-700 bg-white border-2 border-old-money-300 hover:bg-old-money-50 rounded-lg font-medium transition-all duration-300 shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {updateLoading ? 'Обновление...' : 'Обновить данные'}
-                </button>
-              </div>
             </div>
           </div>
         </nav>
@@ -68,6 +39,7 @@ function App() {
             <Route path="/" element={<Events />} />
             <Route path="/top" element={<TopDogs />} />
             <Route path="/dog/:id" element={<DogProfile />} />
+            <Route path="/event/:id" element={<EventResults />} />
           </Routes>
         </main>
 

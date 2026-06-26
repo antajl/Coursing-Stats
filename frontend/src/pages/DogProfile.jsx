@@ -315,14 +315,12 @@ export default function DogProfile() {
                     </div>
                   </div>
                   {event.results_url && (
-                    <a
-                      href={event.results_url}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <Link
+                      to={`/event/${event.event_id}`}
                       className="inline-block mt-3 text-sm text-gold-600 hover:text-gold-500"
                     >
                       Результаты →
-                    </a>
+                    </Link>
                   )}
                 </div>
               ))}

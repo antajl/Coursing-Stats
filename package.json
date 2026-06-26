@@ -1,5 +1,5 @@
 {
-  "name": "procoursing-stats-scraper",
+  "name": "procoursing-stats",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -13,7 +13,8 @@
     "load-results": "node backend/scripts/load-results.mjs",
     "ci-update-db": "node backend/scripts/ci-update-db.mjs",
     "migrate-dog-names": "node backend/scripts/migrate-normalize-dog-names.mjs",
-    "sync-to-remote": "node backend/scripts/sync-local-to-remote.mjs --push"
+    "sync-to-remote": "node backend/scripts/sync-local-to-remote.mjs --push",
+    "test": "vitest run backend/tests/"
   },
   "dependencies": {
     "better-sqlite3": "^12.11.1",
@@ -22,6 +23,8 @@
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
-    "wrangler": "^4.14.0"
+    "wrangler": "^4.14.0",
+    "vitest": "^2.0.0",
+    "miniflare": "^4.0.0"
   }
 }

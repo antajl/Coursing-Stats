@@ -41,7 +41,7 @@ export default {
       },
       fontFamily: {
         sans: ['Montserrat', 'sans-serif'],
-        serif: ['Montserrat', 'sans-serif'],
+        serif: ['Georgia', 'serif'],
       },
     },
   },

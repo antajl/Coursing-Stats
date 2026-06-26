@@ -19,7 +19,8 @@ function sqlEscape(value) {
  * node scripts/load-results.mjs events-historical.json
  */
 
-const EVENTS_FILE = process.argv[2] || "data/events.json";
+const EVENTS_FILE = process.argv[2] || "../data/events.json";
+const OUTPUT_DIR = process.argv[3] || "data";
 
 async function loadResults() {
   console.log(`Загрузка результатов из ${EVENTS_FILE}...`);
@@ -50,7 +51,8 @@ async function loadResults() {
                       (event.results_url?.includes('Racing') ? 'racing' : null);
     
     if (eventType === 'coursing') {
-      results = await parseCoursingResultsPage(event.results_url);
+      const parsed = await parseCoursingResultsPage(event.results_url);
+      results = parsed.results;
     } else if (eventType === 'bzmp') {
       results = await parseBZMPResultsPage(event.results_url);
     } else if (eventType === 'racing') {
@@ -94,7 +96,7 @@ INSERT OR IGNORE INTO dogs (
       const resultSql = `
 INSERT OR IGNORE INTO results (
   dog_id, event_id, placement, total_score, judge_count,
-  raw_scores_json, qualification, vc, status, raw_text
+  raw_scores_json, qualification, vc, status, raw_text, breed_class, status_reason
 ) VALUES (
   (SELECT id FROM dogs WHERE name_lat = '${sqlEscape(nameLat)}' AND breed = '${sqlEscape(breed)}'),
   (SELECT id FROM events WHERE results_url = '${event.results_url}'),
@@ -105,7 +107,9 @@ INSERT OR IGNORE INTO results (
   '${(result.qualification || "").replace(/'/g, "''")}',
   '${(result.vc || "").replace(/'/g, "''")}',
   '${result.status}',
-  '${(result.raw_text || "").replace(/'/g, "''").replace(/\n/g, " ")}'
+  '${(result.raw_text || "").replace(/'/g, "''").replace(/\n/g, " ")}',
+  '${(result.breed_class || "").replace(/'/g, "''")}',
+  '${(result.status_reason || "").replace(/'/g, "''")}'
 );`;
       sqlStatements.push(resultSql);
     }
@@ -114,8 +118,9 @@ INSERT OR IGNORE INTO results (
   const sqlScript = sqlStatements.join("\n");
   
   // Сохраняем SQL-скрипт
-  await fs.writeFile("data/load-results.sql", sqlScript);
-  console.log(`SQL-скрипт сохранён в data/load-results.sql`);
+  const outputPath = `${OUTPUT_DIR}/load-results.sql`;
+  await fs.writeFile(outputPath, sqlScript);
+  console.log(`SQL-скрипт сохранён в ${outputPath}`);
   console.log(`Всего SQL-запросов: ${sqlStatements.length}`);
   
   console.log("\nДля выполнения:");

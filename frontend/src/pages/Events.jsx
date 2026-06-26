@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react'
-
-const API_URL = import.meta.env.PROD 
-  ? 'https://procoursing-stats.antajltube.workers.dev'
-  : 'http://127.0.0.1:8787'
+import { Link } from 'react-router-dom'
+import { api } from '../services/api'
+import { getDisciplineColor } from '../constants'
 
 function formatDate(dateStr) {
   if (!dateStr) return ''
@@ -14,19 +13,6 @@ function isImportantCompetition(competitionKind) {
   if (!competitionKind) return false
   const upperKind = competitionKind.toUpperCase()
   return upperKind.includes('ЧЕМПИОНАТ РОССИИ') || upperKind.includes('КУБОК РОССИИ')
-}
-
-function getDisciplineColor(eventType) {
-  switch(eventType) {
-    case 'coursing':
-      return 'bg-green-50 hover:bg-green-100'
-    case 'bzmp':
-      return 'bg-blue-50 hover:bg-blue-100'
-    case 'racing':
-      return 'bg-red-50 hover:bg-red-100'
-    default:
-      return 'hover:bg-old-money-50'
-  }
 }
 
 function getImportantCompetitionStyle(competitionKind) {
@@ -49,12 +35,11 @@ export default function Events() {
 
   useEffect(() => {
     async function fetchYears() {
-      try {
-        const response = await fetch(`${API_URL}/api/years`)
-        const yearsData = await response.json()
-        setAllYears(yearsData.map(y => y.year))
-      } catch (err) {
-        console.error('Error fetching years:', err)
+      const result = await api.getYears()
+      if (result.success) {
+        setAllYears(result.data.map(y => y.year))
+      } else {
+        console.error('Error fetching years:', result.error)
       }
     }
 
@@ -64,21 +49,13 @@ export default function Events() {
   useEffect(() => {
     async function fetchEvents() {
       setLoading(true)
-      try {
-        const url = filterYear ? `${API_URL}/api/events?year=${filterYear}` : `${API_URL}/api/events`
-        const response = await fetch(url)
-        
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`)
-        }
-        
-        const data = await response.json()
-        setEvents(data)
-      } catch (err) {
-        console.error('Error fetching events:', err)
-      } finally {
-        setLoading(false)
+      const result = await api.getEvents(filterYear)
+      if (result.success) {
+        setEvents(result.data)
+      } else {
+        console.error('Error fetching events:', result.error)
       }
+      setLoading(false)
     }
 
     fetchEvents()
@@ -248,14 +225,12 @@ export default function Events() {
                 </td>
                 <td className="px-3 py-3 text-sm">
                   {event.results_url ? (
-                    <a 
-                      href={event.results_url} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
+                    <Link 
+                      to={`/event/${event.id}`}
                       className="px-3 py-1.5 text-xs font-bold rounded-full bg-gradient-to-r from-old-money-600 to-old-money-700 text-white shadow-md hover:from-old-money-500 hover:to-old-money-600 transition-all duration-300"
                     >
                       Открыть
-                    </a>
+                    </Link>
                   ) : (
                     <></>
                   )}

@@ -5,18 +5,21 @@ import DogStatsTable from '../components/DogStatsTable'
 export default function TopDogs() {
   const [topPlacement, setTopPlacement] = useState([])
   const [topScore, setTopScore] = useState([])
+  const [topSpeed, setTopSpeed] = useState([])
   const [breeds, setBreeds] = useState([])
   const [years, setYears] = useState([])
-  
+
   const [loadingFilters, setLoadingFilters] = useState(true)
   const [loadingData, setLoadingData] = useState(false)
   const [error, setError] = useState(null)
-  
+
   const [activeTab, setActiveTab] = useState('score')
   const [filterBreed, setFilterBreed] = useState('')
   const [filterYear, setFilterYear] = useState('')
-  const [topSpeed, setTopSpeed] = useState([])
   const [searchQuery, setSearchQuery] = useState('')
+
+  // Track which tabs have been loaded
+  const [loadedTabs, setLoadedTabs] = useState({ placement: false, score: false, speed: false })
 
   useEffect(() => {
     async function fetchFilters() {
@@ -48,23 +51,33 @@ export default function TopDogs() {
 
   useEffect(() => {
     async function fetchTopData() {
+      // Only load data for the active tab if not already loaded
+      if (loadedTabs[activeTab] && topPlacement.length > 0 && topScore.length > 0 && topSpeed.length > 0) {
+        return
+      }
+
       setLoadingData(true)
       setError(null)
-      
-      try {
-        const [placementResult, scoreResult, speedResult] = await Promise.all([
-          api.getTopPlacement(filterYear, filterBreed, 0),
-          api.getTopScore(filterYear, filterBreed, 0),
-          api.getTopSpeed(filterYear, filterBreed, 0)
-        ])
-        
-        setTopPlacement(placementResult.data || [])
-        setTopScore(scoreResult.data || [])
-        setTopSpeed(speedResult.data || [])
 
-        if (!placementResult.success || !scoreResult.success) {
+      try {
+        // Load only the active tab's data
+        let result
+        if (activeTab === 'placement') {
+          result = await api.getTopPlacement(filterYear, filterBreed, 0)
+          setTopPlacement(result.data || [])
+        } else if (activeTab === 'score') {
+          result = await api.getTopScore(filterYear, filterBreed, 0)
+          setTopScore(result.data || [])
+        } else if (activeTab === 'speed') {
+          result = await api.getTopSpeed(filterYear, filterBreed, 0)
+          setTopSpeed(result.data || [])
+        }
+
+        if (!result.success) {
           setError('Не удалось загрузить данные таблиц. Используются демо-данные.')
         }
+
+        setLoadedTabs(prev => ({ ...prev, [activeTab]: true }))
       } catch (err) {
         console.error('Error fetching top data:', err)
         setError(`Ошибка при загрузке таблиц: ${err.message}`)
@@ -74,10 +87,9 @@ export default function TopDogs() {
     }
 
     fetchTopData()
-  }, [filterYear, filterBreed])
+  }, [filterYear, filterBreed, activeTab])
 
   const filteredPlacement = topPlacement.filter(dog => {
-    if (filterBreed && dog.breed !== filterBreed) return false
     if (searchQuery) {
       const query = searchQuery.toLowerCase()
       const nameMatch = dog.name_lat && dog.name_lat.toLowerCase().includes(query)
@@ -89,7 +101,6 @@ export default function TopDogs() {
   })
 
   const filteredScore = topScore.filter(dog => {
-    if (filterBreed && dog.breed !== filterBreed) return false
     if (searchQuery) {
       const query = searchQuery.toLowerCase()
       const nameMatch = dog.name_lat && dog.name_lat.toLowerCase().includes(query)
@@ -101,7 +112,6 @@ export default function TopDogs() {
   })
 
   const filteredSpeed = topSpeed.filter(dog => {
-    if (filterBreed && dog.breed !== filterBreed) return false
     if (searchQuery) {
       const query = searchQuery.toLowerCase()
       const nameMatch = dog.name_lat && dog.name_lat.toLowerCase().includes(query)

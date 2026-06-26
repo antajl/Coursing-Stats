@@ -6,19 +6,14 @@ import {
   mockEvents
 } from '../data/mockData';
 
-const API_URL = import.meta.env.VITE_API_URL || 
-  (import.meta.env.PROD 
+const API_URL = import.meta.env.VITE_API_URL ||
+  (import.meta.env.PROD
     ? 'https://procoursing-stats.antajltube.workers.dev'
     : 'http://127.0.0.1:8787');
 
-const FORCE_MOCK = false;
+const IS_DEV = import.meta.env.DEV;
 
-async function fetchWithFallback(url, mockData, timeout = 5000) {
-  if (FORCE_MOCK) {
-    console.log(`[MOCK] ${url}`);
-    return { success: true, data: mockData, source: 'mock' };
-  }
-
+async function fetchAPI(url, timeout = 5000) {
   try {
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), timeout);
@@ -31,18 +26,44 @@ async function fetchWithFallback(url, mockData, timeout = 5000) {
     }
 
     const data = await response.json();
-    return { success: true, data, source: 'api' };
+    return { success: true, data };
   } catch (error) {
-    console.warn(`[API ERROR] ${url}: ${error.message}`);
-    console.warn(`[FALLBACK] Using mock data for: ${url}`);
-    
+    console.error(`[API ERROR] ${url}: ${error.message}`);
     return {
       success: false,
-      data: mockData,
-      source: 'mock',
       error: error.message
     };
   }
+}
+
+async function fetchWithFallback(url, mockData, timeout = 5000) {
+  const result = await fetchAPI(url, timeout);
+
+  if (result.success) {
+    return result;
+  }
+
+  // In production, don't fallback to mock data
+  if (!IS_DEV) {
+    return result;
+  }
+
+  // In development, fallback to mock data on error
+  console.warn(`[FALLBACK] Using mock data for: ${url}`);
+  return {
+    success: true,
+    data: mockData,
+    source: 'mock',
+    error: result.error
+  };
+}
+
+function filterMockData(mockData, year, breed, minStarts) {
+  let filtered = mockData;
+  if (year) filtered = filtered.filter(d => d.year === parseInt(year));
+  if (breed) filtered = filtered.filter(d => d.breed === breed);
+  if (minStarts > 0) filtered = filtered.filter(d => d.total_starts >= minStarts);
+  return filtered;
 }
 
 export const api = {
@@ -57,17 +78,7 @@ export const api = {
     }
 
     const url = `${API_URL}/api/top/placement?${params}`;
-    let mockData = mockTopPlacementData;
-    
-    if (year) {
-      mockData = mockData.filter(d => d.year === parseInt(year));
-    }
-    if (breed) {
-      mockData = mockData.filter(d => d.breed === breed);
-    }
-    if (minStarts > 0) {
-      mockData = mockData.filter(d => d.total_starts >= minStarts);
-    }
+    const mockData = filterMockData(mockTopPlacementData, year, breed, minStarts);
 
     return fetchWithFallback(url, mockData);
   },
@@ -83,17 +94,7 @@ export const api = {
     }
 
     const url = `${API_URL}/api/top/score?${params}`;
-    let mockData = mockTopScoreData;
-    
-    if (year) {
-      mockData = mockData.filter(d => d.year === parseInt(year));
-    }
-    if (breed) {
-      mockData = mockData.filter(d => d.breed === breed);
-    }
-    if (minStarts > 0) {
-      mockData = mockData.filter(d => d.total_starts >= minStarts);
-    }
+    const mockData = filterMockData(mockTopScoreData, year, breed, minStarts);
 
     return fetchWithFallback(url, mockData);
   },
@@ -109,108 +110,45 @@ export const api = {
     }
 
     const url = `${API_URL}/api/top/speed?${params}`;
-    // Mock data for speed - will be replaced with actual API data
-    let mockData = mockTopScoreData.map(d => ({
+    const mockData = filterMockData(mockTopScoreData, year, breed, minStarts).map(d => ({
       ...d,
-      best_speed: (Math.random() * 20 + 40).toFixed(2), // Mock speed in km/h
+      best_speed: (Math.random() * 20 + 40).toFixed(2),
       avg_speed: (Math.random() * 15 + 35).toFixed(2)
     }));
-    
-    if (year) {
-      mockData = mockData.filter(d => d.year === parseInt(year));
-    }
-    if (breed) {
-      mockData = mockData.filter(d => d.breed === breed);
-    }
-    if (minStarts > 0) {
-      mockData = mockData.filter(d => d.total_starts >= minStarts);
-    }
 
     return fetchWithFallback(url, mockData);
   },
 
   async getBreeds() {
-    return fetchWithFallback(
-      `${API_URL}/api/breeds`,
-      mockBreeds
-    );
+    return fetchWithFallback(`${API_URL}/api/breeds`, mockBreeds);
   },
 
   async getYears() {
-    return fetchWithFallback(
-      `${API_URL}/api/years`,
-      mockYears
-    );
+    return fetchWithFallback(`${API_URL}/api/years`, mockYears);
   },
 
   async getEvents(year = '') {
     const params = new URLSearchParams();
     if (year) params.append('year', year);
-
     const url = `${API_URL}/api/events?${params}`;
-    let mockData = mockEvents;
-    
-    if (year) {
-      mockData = mockData.filter(e => e.year === parseInt(year));
-    }
+    const mockData = year ? mockEvents.filter(e => e.year === parseInt(year)) : mockEvents;
 
     return fetchWithFallback(url, mockData);
   },
 
   async getDogProfile(dogId) {
-    // Try to fetch from real API first
-    const result = await fetchWithFallback(
-      `${API_URL}/api/dogs/${dogId}`,
-      null
-    );
-
-    // If API returned data, use it
-    if (result.success && result.data) {
-      return result;
-    }
-
-    // Fallback: Generate profile data dynamically from existing mock data
-    const placementDog = mockTopPlacementData.find(d => d.dog_id === dogId);
-    const scoreDog = mockTopScoreData.find(d => d.dog_id === dogId);
-    
-    if (!placementDog && !scoreDog) {
-      return result;
-    }
-
-    const baseDog = placementDog || scoreDog;
-    const mockData = {
-      dog_id: dogId,
-      name_lat: baseDog.name_lat,
-      name_ru: baseDog.name_ru,
-      breed: baseDog.breed,
-      sex: baseDog.sex || null,
-      owner: 'Владелец',
-      coursing_stats: {
-        total_starts: placementDog?.total_starts || 0,
-        best_score: scoreDog?.best_score || null,
-        avg_score: scoreDog?.avg_score || null,
-        gold: placementDog?.gold || 0,
-        silver: placementDog?.silver || 0,
-        bronze: placementDog?.bronze || 0
-      },
-      racing_stats: {
-        total_starts: 0,
-        best_speed: null,
-        avg_speed: null
-      }
-    };
-
-    return {
-      success: true,
-      data: mockData,
-      source: 'mock'
-    };
+    return fetchWithFallback(`${API_URL}/api/dogs/${dogId}`, null);
   },
 
   async getDogEvents(dogId) {
-    return fetchWithFallback(
-      `${API_URL}/api/dogs/${dogId}/events`,
-      []
-    );
+    return fetchWithFallback(`${API_URL}/api/dogs/${dogId}/events`, []);
+  },
+
+  async getEvent(eventId) {
+    return fetchWithFallback(`${API_URL}/api/events/${eventId}`, null);
+  },
+
+  async getEventResults(eventId) {
+    return fetchWithFallback(`${API_URL}/api/events/${eventId}/results`, []);
   }
 };

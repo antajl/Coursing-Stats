@@ -1,0 +1,7 @@
+UPDATE events SET track_schemes = '[{"number":1,"url":"http://procoursing.ru/2026/2026-05-10_Map.png","name":"Схема трассы","length":"670 м"}]' WHERE id = 639;
+UPDATE events SET track_schemes = '[{"number":1,"url":"http://procoursing.ru/2026/2026-04-25_Map.png","name":"Схема трассы","length":"650 м"}]' WHERE id = 634;
+UPDATE events SET track_schemes = '[{"number":1,"url":"http://procoursing.ru/2026/2026-04-25_Map.png","name":"Схема трассы","length":"650 м"}]' WHERE id = 635;
+UPDATE events SET track_schemes = '[{"number":1,"url":"http://procoursing.ru/2026/2026-04-18_Map.png","name":"Схема трассы","length":"600 м"}]' WHERE id = 628;
+UPDATE events SET track_schemes = '[{"number":1,"url":"http://procoursing.ru/2026/2026-04-18_Map.png","name":"Схема трассы","length":"600 м"}]' WHERE id = 629;
+UPDATE events SET track_schemes = '[{"number":1,"url":"http://procoursing.ru/2026/2026-04-04_M1.png","name":"Схема трассы","length":"700 м"},{"number":1,"url":"http://procoursing.ru/2026/2026-04-04_M2.png","name":"Схема трассы","length":"700 м"}]' WHERE id = 624;
+UPDATE events SET track_schemes = '[{"number":1,"url":"http://procoursing.ru/2026/2026-04-04_M1.png","name":"Схема трассы","length":"700 м"},{"number":1,"url":"http://procoursing.ru/2026/2026-04-04_M2.png","name":"Схема трассы","length":"700 м"}]' WHERE id = 625;

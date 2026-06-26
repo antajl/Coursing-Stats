@@ -17,7 +17,13 @@ CREATE TABLE IF NOT EXISTS events (
   results_url   TEXT UNIQUE,          -- естественный ключ для дедупликации при повторных прогонах
   confirmed     INTEGER DEFAULT 0,    -- флаг "+" на сайте
   last_modified TEXT,                 -- Last-Modified заголовок для инкрементальных обновлений
-  scraped_at    TEXT DEFAULT (datetime('now'))
+  scraped_at    TEXT DEFAULT (datetime('now')),
+  telegram_url  TEXT,
+  full_title    TEXT,
+  event_date    TEXT,                  -- дата события из заголовка результатов (DD.MM.YYYY)
+  protocol_location TEXT,             -- локация из заголовка протокола (Регион, Район/Город)
+  judges        TEXT,                  -- информация о судьях (JSON или строка)
+  track_schemes TEXT                 -- схемы трасс (JSON массив с URL и названиями)
 );
 
 CREATE INDEX IF NOT EXISTS idx_events_year ON events(year);

@@ -1,0 +1,15 @@
+UPDATE events SET judges = 'Главный судья - Гольдинова Л.М., судья - Карелина Н.В.' WHERE id = 641;
+UPDATE events SET judges = 'Главный судья - Вронская О.В., судья - Мухотин Н.П.' WHERE id = 639;
+UPDATE events SET judges = 'Главный судья - Козлова И.В., судья - Крылова Е.В.' WHERE id = 638;
+UPDATE events SET judges = 'Главный судья - Минина С.В., судья - Меркушенкова О.В.' WHERE id = 636;
+UPDATE events SET judges = 'Главный судья - Минина С.В., судья - Меркушенкова О.В.' WHERE id = 637;
+UPDATE events SET judges = 'Главный судья - Серова Т.Г., судья - Козлова И.В.' WHERE id = 634;
+UPDATE events SET judges = 'Главный судья - Серова Т.Г., судья - Козлова И.В.' WHERE id = 635;
+UPDATE events SET judges = 'Главный судья - Егорова М.А., судья - Евграфова О.Н.' WHERE id = 631;
+UPDATE events SET judges = 'Главный судья - Егорова М.А., судья - Карелина Н.В.' WHERE id = 632;
+UPDATE events SET judges = 'Главный судья - Иванова Г.С., судья - Богаченко В.В.' WHERE id = 628;
+UPDATE events SET judges = 'Главный судья - Иванова Г.С., судья - Богаченко В.В.' WHERE id = 629;
+UPDATE events SET judges = 'Главный судья - Карелина Н.В.' WHERE id = 626;
+UPDATE events SET judges = 'Главный судья - Карелина Н.В.' WHERE id = 627;
+UPDATE events SET judges = 'Главный судья - Лукина Д.М., судья - Гродинская Т.Л.' WHERE id = 624;
+UPDATE events SET judges = 'Главный судья - Лукина Д.М., судья - Гродинская Т.Л.' WHERE id = 625;
