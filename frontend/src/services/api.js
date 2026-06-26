@@ -8,7 +8,7 @@ import {
 
 const API_URL = import.meta.env.VITE_API_URL ||
   (import.meta.env.PROD
-    ? 'https://api.antajl.ru'
+    ? 'https://procoursing-stats.antajltube.workers.dev'
     : 'http://127.0.0.1:8787');
 
 const IS_DEV = import.meta.env.DEV;
