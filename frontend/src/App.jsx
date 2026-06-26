@@ -13,7 +13,7 @@ function App() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-20">
               <div className="flex items-center">
-                <Link to="/" className="text-3xl font-extrabold bg-gradient-to-r from-gold-600 to-gold-400 bg-clip-text text-transparent hover:from-gold-500 hover:to-gold-300 transition-all duration-300">
+                <Link to="/" className="text-3xl font-extrabold text-gold-600 hover:text-gold-700 transition-all duration-300">
                   ProCoursing Stats
                 </Link>
               </div>

@@ -132,7 +132,7 @@ function SpeedRecords() {
                           href={record.screenshot_url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-gold-600 hover:text-gold-700 font-semibold hover:underline"
+                          className="text-gold-600 hover:text-gold-700 font-semibold"
                         >
                           Открыть
                         </a>
