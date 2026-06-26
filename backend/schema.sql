@@ -130,6 +130,7 @@ CREATE TABLE IF NOT EXISTS speed_records (
   date TEXT NOT NULL,
   screenshot_url TEXT,
   status TEXT DEFAULT 'normal',
+  history TEXT,  -- JSON массив исторических результатов
   updated_at TEXT DEFAULT (datetime('now'))
 );
 

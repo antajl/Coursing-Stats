@@ -152,10 +152,12 @@ export const api = {
     return fetchWithFallback(`${API_URL}/api/events/${eventId}/results`, []);
   },
 
-  async getSpeedRecords(breed = '', sex = '', limit = 100) {
+  async getSpeedRecords(breed = '', sex = '', limit = 100, search = '', year = '') {
     const params = new URLSearchParams();
     if (breed) params.append('breed', breed);
     if (sex) params.append('sex', sex);
+    if (search) params.append('search', search);
+    if (year) params.append('year', year);
     params.append('limit', limit);
     const url = `${API_URL}/api/speed-records?${params}`;
     return fetchWithFallback(url, []);

@@ -33,6 +33,7 @@
   - `merge-dogs.mjs` — Слияние дубликатов
   - `test-parser.mjs` — Тест парсера
   - `backfill-*.mjs` — Скрипты бэкафилла по годам
+  - `fetch-speed-records.mjs` — Загрузка рекордов скорости из Google Sheets
 
 ### Frontend
 - `src/` — React приложение
@@ -428,3 +429,55 @@ node parse-results-coursing.mjs <url>
 node parse-results-bzmp.mjs <url>
 node parse-results-racing.mjs <url>
 ```
+
+## Speed Records (Рекорды Донино)
+
+### Google Sheets
+
+**Spreadsheet ID:** `1NTiY3HXZIkXE8xTeXZESgMKaZsEXunmcWhTfhhkoKyE`
+
+**Листы документа:**
+- **2026** (gid=1787526009) — есть цвета ✓
+- **2025** (gid=0) — есть цвета ✓
+- **2025 по породам** (gid=1620065603) — без цветов
+- **Абсолютный зачёт** (gid=1812358334) — без цветов
+- **старые личные рекорды** (gid=1775097609) — есть цвета ✓
+
+**PDF экспорт URL (пример для 2026):**
+```
+https://docs.google.com/spreadsheets/d/1NTiY3HXZIkXE8xTeXZESgMKaZsEXunmcWhTfhhkoKyE/export?format=pdf&gid=1787526009
+```
+
+**Рабочее решение:**
+PDF экспорт с парсингом через PyMuPDF. Google рендерит условное форматирование в PDF, а PyMuPDF извлекает цвета и текст по координатам.
+
+**Статусы определяются по цвету:**
+- `#B6D7A8` (зелёный) → status = 'new'
+- `#9FC5E8` (синий) → status = 'improved'
+- Чёрный/без цвета → status = 'normal'
+
+**Структура данных:**
+- Порода, Пол, Кличка, Лучшая скорость (км/ч), Дата, Скриншот
+
+**Логика сопоставления:**
+- Сопоставление по кличке и породе собаки
+- Если есть несколько результатов с разной датой — отображать новую дату, при наведении показывать старую дату и результат скорости
+- Если есть две одинаковые собаки с одинаковой породой, скоростью и датой — писать только один результат
+
+**Скрипт загрузки (Python):**
+```bash
+# Генерация SQL
+python backend/scripts/fetch-speed-records-pdf.py
+
+# Загрузка в remote D1 (через GitHub Actions)
+```
+
+**Зависимости:**
+```bash
+pip install pymupdf requests
+```
+
+**GitHub Actions:**
+- Workflow: `.github/workflows/update-speed-records.yml`
+- Расписание: ежедневно в 04:00 UTC
+- Ручной запуск: Actions → Update Speed Records → Run workflow

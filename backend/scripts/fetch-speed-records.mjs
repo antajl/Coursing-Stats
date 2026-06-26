@@ -1,7 +1,7 @@
 /**
  * Загрузка рекордов скорости из Google Sheets в D1.
  * 
- * Google Sheets: https://docs.google.com/spreadsheets/d/1NTiY3HXZIkXE8xTeXZESgMKaZsEXunmcWhTfhhkoKyE/export?format=csv&gid=1787526009
+ * XLSX экспорт с определением статуса по текстовому значению
  * 
  * Usage:
  *   node backend/scripts/fetch-speed-records.mjs           # только парсинг
@@ -93,30 +93,24 @@ function parseXLSX(buffer) {
     
     if (!hasData) continue;
     
-    // Получаем цвет фона первой ячейки строки
-    const firstCellAddress = XLSX.utils.encode_cell({ r: row, c: range.s.c });
-    const firstCell = worksheet[firstCellAddress];
+    // Определяем статус и скорость по значению в колонке скорости
+    const speedValue = record['Лучшая скорость (км/ч)'] || record['лучшая скорость (км/ч)'] || record['speed_km_h'] || 0;
     let status = 'normal';
+    let speed_km_h = 0;
     
-    if (firstCell && firstCell.s && firstCell.s.fgColor) {
-      const color = firstCell.s.fgColor;
-      // Проверяем на зелёный (новый результат) и синий (улучшение личного рекорда)
-      if (color.rgb) {
-        const rgb = color.rgb.toLowerCase();
-        if (rgb === '00ff00' || rgb === '00b050') {
-          status = 'new';
-        } else if (rgb === '0070c0' || rgb === '0000ff') {
-          status = 'improved';
-        }
-      } else if (color.theme) {
-        // Для theme цветов используем индексы
-        // 4 = зелёный, 5 = синий (примерно, зависит от темы)
-        if (color.theme === 4) {
-          status = 'new';
-        } else if (color.theme === 5) {
-          status = 'improved';
-        }
+    if (typeof speedValue === 'string') {
+      const speedLower = speedValue.toLowerCase();
+      if (speedLower === 'новый результат') {
+        status = 'new';
+        speed_km_h = 0;
+      } else if (speedLower === 'улучшение личного рекорда') {
+        status = 'improved';
+        speed_km_h = 0;
+      } else {
+        speed_km_h = parseFloat(speedValue) || 0;
       }
+    } else {
+      speed_km_h = parseFloat(speedValue) || 0;
     }
     
     // Конвертация Excel даты в DD.MM.YYYY
@@ -129,18 +123,17 @@ function parseXLSX(buffer) {
       dateStr = `${day}.${month}.${year}`;
     }
     
-    // Маппинг полей из Google Sheets в структуру БД
     const speedRecord = {
       breed: record['Порода'] || record['breed'] || '',
       sex: record['Пол'] || record['пол'] || record['sex'] || '',
       name: record['Кличка'] || record['кличка'] || record['name'] || '',
-      speed_km_h: parseFloat(record['Лучшая скорость (км/ч)'] || record['лучшая скорость (км/ч)'] || record['speed_km_h'] || 0),
+      speed_km_h: speed_km_h,
       date: dateStr,
       screenshot_url: record['Скриншот'] || record['скриншот'] || record['screenshot_url'] || null,
       status: status
     };
 
-    if (speedRecord.breed && speedRecord.name && speedRecord.speed_km_h > 0) {
+    if (speedRecord.breed && speedRecord.name) {
       records.push(speedRecord);
     }
   }

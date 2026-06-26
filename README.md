@@ -18,7 +18,7 @@
 # Установка зависимостей
 npm install
 
-# Локальная разработка
+# Локальная разработка (использует remote D1)
 npm run dev
 
 # Тестирование парсера
@@ -27,9 +27,28 @@ npm run test-parser
 
 ## Деплой
 
-- **Фронтенд:** https://procoursing.pages.dev (Cloudflare Pages)
+- **Фронтенд:** https://procoursing.antajl.ru (Cloudflare Pages)
 - **API:** https://procoursing-stats.antajltube.workers.dev (Cloudflare Worker)
 - **GitHub:** https://github.com/antajl/ProCoursing
+
+## Новые функции (июнь 2026)
+
+### Страница "Рекорды Донино"
+- Отображение личных рекордов скорости из Google Sheets
+- Фильтрация по породе и полу
+- Статусы: "новый результат" (зелёный), "улучшение личного рекорда" (синий), "обычный результат" (серый)
+- Автоматическое обновление через GitHub Actions (ежедневно)
+- Ссылка на оригинальную Google таблицу
+
+### Обновлённая навигация
+- Минималистичный дизайн с анимированными подчёркиваниями
+- Две основные вкладки: "Procoursing" и "Рекорды Донино"
+- Вкладка "Procoursing" содержит подвкладки: "Календарь событий" и "Рейтинг собак"
+- Old money цветовая палитра (cream, camel, charcoal, forest)
+
+### Новый домен
+- Фронтенд: https://procoursing.antajl.ru
+- API: https://procoursing-stats.antajltube.workers.dev (временно, custom domain требует платного плана)
 
 ## Лицензия
 
