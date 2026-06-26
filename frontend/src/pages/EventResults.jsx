@@ -87,75 +87,99 @@ export default function EventResults() {
         </Link>
 
         {/* Информация о событии */}
-        <div className="bg-old-money-50 rounded-2xl shadow-2xl border border-gold-200 p-8 mb-6">
-          <h1 className="text-3xl font-serif font-bold text-gold-700 mb-2">
-            {event.full_title || `${event.competition_kind} ${event.competition_type}`}
+        <div className="bg-old-money-50 rounded-2xl shadow-2xl border border-gold-200 p-6 mb-6">
+          <h1 className="text-2xl font-serif font-bold text-gold-700 mb-4">
+            {event.results_url ? (
+              <a 
+                href={event.results_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-camel-700 hover:underline transition-colors"
+              >
+                {event.full_title || `${event.competition_kind} ${event.competition_type}`}
+              </a>
+            ) : (
+              event.full_title || `${event.competition_kind} ${event.competition_type}`
+            )}
           </h1>
-          <div className="text-old-money-800 mb-2">
-            {event.event_date || formatDate(event.date_start)}
+          
+          <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-old-money-800 mb-4">
+            <span>
+              <span className="text-old-money-500">Дата:</span> {event.event_date || formatDate(event.date_start)}
+            </span>
+            <span>
+              <span className="text-old-money-500">Локация:</span> {event.protocol_location || event.location}
+            </span>
+            <span>
+              <span className="text-old-money-500">Участников:</span> {new Set(results.map(r => r.dog_id)).size}
+            </span>
+            <span>
+              <span className="text-old-money-500">Пород:</span> {new Set(results.map(r => r.breed)).size}
+            </span>
           </div>
-          <div className="text-old-money-800 mb-2">
-            {event.protocol_location || event.location}
-          </div>
-          {event.host_club && (
-            <div className="text-sm text-old-money-800 mb-2">
-              Кинологическая организация: {event.host_club}
-            </div>
-          )}
-          {event.title && (
-            <div className="text-sm text-old-money-800">
-              Клуб-организатор:{' '}
-              {event.telegram_url ? (
-                <a 
-                  href={event.telegram_url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gold-600 hover:text-gold-500 underline"
-                >
-                  {event.title.replace(/Курсинг\d{4}/i, '').trim()}
-                </a>
-              ) : event.results_url ? (
-                <a 
-                  href={event.results_url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gold-600 hover:text-gold-500 underline"
-                >
-                  {event.title.replace(/Курсинг\d{4}/i, '').trim()}
-                </a>
-              ) : (
-                <span className="text-gold-600">{event.title.replace(/Курсинг\d{4}/i, '').trim()}</span>
-              )}
-            </div>
-          )}
-          {event.judges && (
-            <div className="text-sm text-old-money-800 mt-2">
-              {event.judges}
-            </div>
-          )}
-          {event.track_schemes && JSON.parse(event.track_schemes).length > 0 && (
-            <div className="text-sm text-old-money-800 mt-2">
-              {JSON.parse(event.track_schemes).map((scheme, index) => (
-                <span key={index} className="group relative inline-block mr-4 cursor-pointer">
-                  <span className="text-gold-600 hover:text-gold-500 underline">
-                    {scheme.name}{scheme.length && ` (${scheme.length})`}
+
+          <div className="space-y-1 text-sm text-old-money-800">
+            {event.host_club && (
+              <div>
+                <span className="text-old-money-500">Кинологическая организация:</span> {event.host_club}
+              </div>
+            )}
+            {event.title && (
+              <div>
+                <span className="text-old-money-500">Клуб-организатор:</span>{' '}
+                {event.telegram_url ? (
+                  <a 
+                    href={event.telegram_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gold-600 hover:text-gold-500 underline"
+                  >
+                    {event.title.replace(/Курсинг\d{4}/i, '').trim()}
+                  </a>
+                ) : event.results_url ? (
+                  <a 
+                    href={event.results_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gold-600 hover:text-gold-500 underline"
+                  >
+                    {event.title.replace(/Курсинг\d{4}/i, '').trim()}
+                  </a>
+                ) : (
+                  <span className="text-gold-600">{event.title.replace(/Курсинг\d{4}/i, '').trim()}</span>
+                )}
+              </div>
+            )}
+            {event.judges && (
+              <div>
+                <span className="text-old-money-500">Судьи:</span> {event.judges}
+              </div>
+            )}
+            {event.track_schemes && JSON.parse(event.track_schemes).length > 0 && (
+              <div>
+                <span className="text-old-money-500">Схемы трасс:</span>{' '}
+                {JSON.parse(event.track_schemes).map((scheme, index) => (
+                  <span key={index} className="group relative inline-block mr-3 cursor-pointer">
+                    <span className="text-gold-600 hover:text-gold-500 underline">
+                      {scheme.name}{scheme.length && ` (${scheme.length})`}
+                    </span>
+                    {scheme.url && (
+                      <div className="absolute hidden group-hover:block z-50 top-full left-0 mt-2 p-2 bg-white rounded-lg shadow-xl border border-gold-200">
+                        <img 
+                          src={scheme.url} 
+                          alt={scheme.name}
+                          className="max-w-md max-h-96 object-contain"
+                          onError={(e) => {
+                            e.target.style.display = 'none';
+                          }}
+                        />
+                      </div>
+                    )}
                   </span>
-                  {scheme.url && (
-                    <div className="absolute hidden group-hover:block z-50 top-full left-0 mt-2 p-2 bg-white rounded-lg shadow-xl border border-gold-200">
-                      <img 
-                        src={scheme.url} 
-                        alt={scheme.name}
-                        className="max-w-md max-h-96 object-contain"
-                        onError={(e) => {
-                          e.target.style.display = 'none';
-                        }}
-                      />
-                    </div>
-                  )}
-                </span>
-              ))}
-            </div>
-          )}
+                ))}
+              </div>
+            )}
+          </div>
         </div>
 
         {/* Результаты */}
@@ -237,7 +261,7 @@ export default function EventResults() {
                                         </svg>
                                       </div>
                                     ) : result.placement === 1 ? (
-                                      <div className="w-10 h-10 rounded-full bg-gold-500 border-2 border-gold-600 flex items-center justify-center text-white font-bold text-sm">
+                                      <div className="w-10 h-10 rounded-full bg-yellow-400 border-2 border-yellow-500 flex items-center justify-center text-white font-bold text-sm">
                                         {result.placement}
                                       </div>
                                     ) : result.placement === 2 ? (

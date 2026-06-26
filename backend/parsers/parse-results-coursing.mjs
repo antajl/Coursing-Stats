@@ -387,8 +387,8 @@ function parseDogRow($, $row, breedClass, allRows, rowIndex, judgesText) {
       });
     }
     
-    // Нормализуем total_score - делим на количество судей для сравнимости
-    totalScore = judgeCount > 0 ? Math.round((grandTotal / judgeCount) * 100) / 100 : grandTotal;
+    // Сохраняем исходную сумму без нормализации
+    totalScore = grandTotal;
 
     // Сохраняем детальные оценки в raw_scores_json
     rawScoresJson = JSON.stringify({
@@ -401,8 +401,8 @@ function parseDogRow($, $row, breedClass, allRows, rowIndex, judgesText) {
     // Формат 2024 (23 ячеек) - упрощенная структура
     const rawTotalScore = extractBoldNumber($cells.eq(cellCount - 3));
     
-    // Нормализуем total_score по количеству судей
-    totalScore = rawTotalScore ? Math.round((rawTotalScore / judgeCount) * 100) / 100 : null;
+    // Сохраняем исходную сумму без нормализации
+    totalScore = rawTotalScore;
 
     // Пытаемся извлечь номер забега и цвет попоны из ячейки 6
     const heatCell = $cells.eq(6);
@@ -749,10 +749,8 @@ export async function parseCoursingHTML(html) {
         const parsed = parseDogRow($, $row, currentBreedClass, allRows, rowIndex, judges);
         if (parsed) results.push(parsed);
       }
-    }
-
-    // Строка неприбывших (серый фон)
-    if (bgColor === "#eaeaea") {
+    } else if (bgColor === "#eaeaea") {
+      // Строка неприбывших (серый фон) - только если не в белом фоне
       const parsed = parseNonArrivedRow($row);
       if (parsed) results.push(parsed);
     }

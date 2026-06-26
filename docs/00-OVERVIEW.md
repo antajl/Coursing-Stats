@@ -2,22 +2,24 @@
 
 ## Краткое описание
 
-**ProCoursing Stats** — агрегатор статистики собак по результатам соревнований курсинга, БЗМП и бегов с сайта procoursing.ru (2015-2026).
+**ProCoursing Stats** — агрегатор статистики собак по результатам соревнований курсинга, БЗМП и бегов с сайта procoursing.ru (2015-2026), а также страница рекордов скорости Донино.
 
 **Статус проекта:** ✅ **ПОЛНОСТЬЮ РАБОЧИЙ** — фронтенд и бэкенд развернуты и функционируют.
 
 ## Технический стек
 
 - **Backend:** Cloudflare Worker (API), Cloudflare D1 (SQLite), Node.js (скраперы/парсеры)
-- **Frontend:** React, Vite, TailwindCSS, shadcn/ui, Lucide
+- **Frontend:** React, Vite, TailwindCSS, shadcn/ui, Lucide, xlsx (Excel export)
 - **Деплой:** Cloudflare Pages (фронтенд), Cloudflare Workers (бэкенд), Cloudflare D1 (база данных)
+- **Внешние данные:** Google Sheets (рекорды Донино)
 
 ## Текущее состояние данных
 
-**База данных:** local и remote синхронизированы (2026-06-25)
+**База данных:** local и remote синхронизированы (2026-06-26)
 - events: 302
 - dogs: ~1579
 - results: 4639
+- speed_records: данные из Google Sheets (автообновление)
 - Remote D1: ~21 MB
 
 **Распределение по годам:**

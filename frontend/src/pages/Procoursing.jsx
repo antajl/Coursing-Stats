@@ -15,7 +15,7 @@ function Procoursing() {
             rel="noopener noreferrer"
             className="hover:text-camel-700 hover:underline transition-colors"
           >
-            Статистика соревнований procoursing
+            Аналитика ProCoursing
           </a>
         </h1>
 

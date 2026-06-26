@@ -13,6 +13,17 @@ Cloudflare Worker API
    │
    ▼
 Cloudflare Pages (фронтенд: React)
+
+Google Sheets (рекорды Донино)
+   │  Скрипт загрузки (GitHub Actions)
+   ▼
+Cloudflare D1 (speed_records)
+   │
+   ▼
+Cloudflare Worker API
+   │
+   ▼
+Cloudflare Pages (фронтенд: React)
 ```
 
 ## Components
@@ -28,6 +39,7 @@ Cloudflare Pages (фронтенд: React)
 | `backend/parsers/parse-results-racing.mjs` | `backend/parsers/` | Парсер бега с извлечением данных о скорости |
 | `backend/scripts/load-events.mjs` | `backend/scripts/` | Загрузка событий в D1 |
 | `backend/scripts/load-results.mjs` | `backend/scripts/` | Загрузка результатов в D1 |
+| `backend/scripts/fetch-speed-records.mjs` | `backend/scripts/` | Загрузка рекордов Донино из Google Sheets |
 
 ### 2. Database (D1)
 
@@ -35,6 +47,7 @@ Cloudflare Pages (фронтенд: React)
 - `events` — мероприятия (event_type: coursing, bzmp, racing)
 - `dogs` — собаки
 - `results` — результаты выступлений (raw_scores_json хранит детальные данные)
+- `speed_records` — рекорды скорости Донино (из Google Sheets)
 
 **Views (для топов):**
 - `v_top_by_placement` — медальный зачёт (курсинг + БЗМП)
@@ -50,6 +63,7 @@ GET /api/dogs/:id
 GET /api/breeds
 GET /api/years
 GET /api/events?year=
+GET /api/speed-records?breed=&sex=&limit=&offset=
 ```
 
 **Dog Profile API Response Structure:**
@@ -152,6 +166,31 @@ GET /api/events?year=
 
 **UNIQUE:** `(event_id, dog_id, breed_class)`
 
+### speed_records
+
+| Column | Type | Description |
+|--------|------|-------------|
+| id | INTEGER PK | |
+| breed | TEXT | Порода |
+| sex | TEXT | 'С' (сука) или 'К' (кабель) |
+| name | TEXT | Кличка |
+| speed_km_h | REAL | Скорость в км/ч |
+| date | TEXT | Дата в формате DD.MM.YYYY |
+| screenshot_url | TEXT | Ссылка на скриншот |
+| history | TEXT | JSON с предыдущими результатами |
+| status | TEXT | 'new', 'improved' или null |
+| updated_at | TEXT | Время последнего обновления |
+
+**history структура:**
+```json
+[
+  {
+    "speed_km_h": 58.5,
+    "date": "15.03.2025"
+  }
+]
+```
+
 **raw_scores_json структура:**
 
 Для Coursing/БЗМП:
@@ -221,6 +260,9 @@ GET /api/events?year=
 #### GET /api/events
 Список событий с фильтром по году.
 
+#### GET /api/speed-records
+Рекорды скорости Донино. Параметры: `breed`, `sex`, `limit`, `offset`.
+
 ## Tools and Libraries
 
 ### Dependencies
@@ -236,6 +278,8 @@ GET /api/events?year=
 - TailwindCSS
 - shadcn/ui
 - Lucide (иконки)
+- xlsx (Excel export)
+- html-to-image (скриншоты карточек)
 
 ## Deployment State
 
@@ -251,3 +295,4 @@ GET /api/events?year=
 - events: 302
 - dogs: ~1579
 - results: 4639 (2023–2026)
+- speed_records: данные из Google Sheets (автообновление)
