@@ -39,17 +39,23 @@ async function reparseCoursingEvents() {
       const parsed = await parseCoursingResultsPage(event.url);
       const results = parsed.results;
       const trackSchemes = parsed.track_schemes || [];
+      const judges = parsed.judges || null;
       
       console.log(`  Найдено ${results.length} записей`);
       console.log(`  Найдено ${trackSchemes.length} схем трасс`);
+      console.log(`  Судьи: ${judges || 'не найдены'}`);
       
       // Удаляем старые результаты для этого события
       sqlStatements.push(`DELETE FROM results WHERE event_id = ${event.id};`);
       
-      // Обновляем track_schemes в событии
+      // Обновляем track_schemes и judges в событии
       if (trackSchemes.length > 0) {
         const trackSchemesJson = JSON.stringify(trackSchemes).replace(/'/g, "''");
         sqlStatements.push(`UPDATE events SET track_schemes = '${trackSchemesJson}' WHERE id = ${event.id};`);
+      }
+      
+      if (judges) {
+        sqlStatements.push(`UPDATE events SET judges = '${sqlEscape(judges)}' WHERE id = ${event.id};`);
       }
       
       // Добавляем новые результаты
@@ -75,7 +81,7 @@ INSERT OR IGNORE INTO dogs (
         const resultSql = `
 INSERT INTO results (
   dog_id, event_id, placement, total_score, judge_count,
-  raw_scores_json, qualification, vc, status, raw_text, breed_class, status_reason
+  raw_scores_json, qualification, vc, status, raw_text, breed_class, status_reason, judges
 ) VALUES (
   (SELECT id FROM dogs WHERE name_lat = '${sqlEscape(nameLat)}' AND breed = '${sqlEscape(breed)}'),
   ${event.id},
@@ -88,7 +94,8 @@ INSERT INTO results (
   '${result.status}',
   '${(result.raw_text || "").replace(/'/g, "''").replace(/\n/g, " ")}',
   '${(result.breed_class || "").replace(/'/g, "''")}',
-  '${(result.status_reason || "").replace(/'/g, "''")}'
+  '${(result.status_reason || "").replace(/'/g, "''")}',
+  '${(result.judges || "").replace(/'/g, "''")}'
 );`;
         sqlStatements.push(resultSql);
       }

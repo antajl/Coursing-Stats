@@ -161,5 +161,21 @@ export const api = {
     params.append('limit', limit);
     const url = `${API_URL}/api/speed-records?${params}`;
     return fetchWithFallback(url, []);
+  },
+
+  async getJudges(breed = '', discipline = '') {
+    const params = new URLSearchParams();
+    if (breed) params.append('breed', breed);
+    if (discipline) params.append('discipline', discipline);
+    const url = `${API_URL}/api/judges?${params}`;
+    return fetchWithFallback(url, []);
+  },
+
+  async getJudgeDetails(judgeId, breed = '', discipline = '') {
+    const params = new URLSearchParams();
+    if (breed) params.append('breed', breed);
+    if (discipline) params.append('discipline', discipline);
+    const url = `${API_URL}/api/judges/${encodeURIComponent(judgeId)}/details?${params}`;
+    return fetchWithFallback(url, null);
   }
 };

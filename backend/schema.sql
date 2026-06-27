@@ -47,6 +47,14 @@ CREATE TABLE IF NOT EXISTS dogs (
 
 CREATE INDEX IF NOT EXISTS idx_dogs_breed ON dogs(breed);
 
+CREATE TABLE IF NOT EXISTS judges (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT NOT NULL UNIQUE,
+  created_at TEXT DEFAULT (datetime('now'))
+);
+
+CREATE INDEX IF NOT EXISTS idx_judges_name ON judges(name);
+
 CREATE TABLE IF NOT EXISTS results (
   id              INTEGER PRIMARY KEY AUTOINCREMENT,
   event_id        INTEGER NOT NULL REFERENCES events(id),
@@ -61,6 +69,8 @@ CREATE TABLE IF NOT EXISTS results (
   status          TEXT DEFAULT 'finished', -- 'finished' | 'disqualified' | 'withdrawn' | 'dns'
   raw_scores_json TEXT,               -- судейские баллы по кругам / время — формат зависит от event_type
   raw_text        TEXT,               -- исходная строка как есть, для отладки парсера и ручной проверки
+  judges          TEXT,               -- информация о судьях из строки результата
+  status_reason   TEXT,               -- причина статуса (disqualification, dns и т.д.)
   UNIQUE(event_id, dog_id, breed_class)
 );
 

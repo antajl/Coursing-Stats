@@ -38,7 +38,7 @@ async function loadEvents() {
     const sql = `
 INSERT INTO events (
   year, date_start, date_end, rank_label, event_type, competition_kind, competition_type,
-  title, host_club, location, catalog_url, results_url, confirmed
+  title, host_club, location, catalog_url, results_url, confirmed, judges
 ) VALUES (
   ${event.year},
   '${event.date_start}',
@@ -52,7 +52,8 @@ INSERT INTO events (
   '${(event.location || "").replace(/'/g, "''")}',
   ${event.catalog_url ? `'${event.catalog_url}'` : 'NULL'},
   ${event.results_url ? `'${event.results_url}'` : 'NULL'},
-  ${event.confirmed}
+  ${event.confirmed},
+  ${(event.judges ? `'${event.judges.replace(/'/g, "''")}'` : 'NULL')}
 )
 ON CONFLICT(results_url) DO UPDATE SET
   event_type = excluded.event_type,
@@ -63,7 +64,8 @@ ON CONFLICT(results_url) DO UPDATE SET
   host_club = excluded.host_club,
   location = excluded.location,
   catalog_url = excluded.catalog_url,
-  confirmed = excluded.confirmed;`;
+  confirmed = excluded.confirmed,
+  judges = excluded.judges;`;
     sqlStatements.push(sql);
   }
   

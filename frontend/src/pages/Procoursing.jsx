@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Events from './Events';
 import TopDogs from './TopDogs';
+import Judges from './Judges';
 
 function Procoursing() {
   const [activeTab, setActiveTab] = useState('calendar');
@@ -29,11 +30,22 @@ function Procoursing() {
           >
             Рейтинг собак
           </button>
+          <button
+            onClick={() => setActiveTab('judges')}
+            className={`flex-1 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+              activeTab === 'judges'
+                ? 'bg-white text-charcoal-700 shadow-sm'
+                : 'text-charcoal-600 hover:text-charcoal-700'
+            }`}
+          >
+            Статистика судей
+          </button>
         </div>
 
         <div className="min-h-[400px]">
           {activeTab === 'calendar' && <Events />}
           {activeTab === 'ranking' && <TopDogs />}
+          {activeTab === 'judges' && <Judges />}
         </div>
       </div>
     </div>

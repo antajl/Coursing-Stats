@@ -81,7 +81,7 @@ INSERT OR IGNORE INTO dogs (
         const resultSql = `
 INSERT INTO results (
   dog_id, event_id, placement, total_score, judge_count,
-  raw_scores_json, qualification, vc, status, raw_text, breed_class, status_reason
+  raw_scores_json, qualification, vc, status, raw_text, breed_class, status_reason, judges
 ) VALUES (
   (SELECT id FROM dogs WHERE name_lat = '${sqlEscape(nameLat)}' AND breed = '${sqlEscape(breed)}'),
   ${event.id},
@@ -94,7 +94,8 @@ INSERT INTO results (
   '${result.status}',
   '${(result.raw_text || "").replace(/'/g, "''").replace(/\n/g, " ")}',
   '${(result.breed_class || "").replace(/'/g, "''")}',
-  '${(result.status_reason || "").replace(/'/g, "''")}'
+  '${(result.status_reason || "").replace(/'/g, "''")}',
+  '${(result.judges || "").replace(/'/g, "''")}'
 );`;
         sqlStatements.push(resultSql);
       }

@@ -192,7 +192,7 @@ export default function DogStatsTable({ data, type = 'placement', filterYear }) 
                 {type === 'placement' ? (
                   <>
                     <td className="px-6 py-4 text-center text-sm">
-                      <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-gold-400 to-gold-500 text-white font-bold shadow-md">
+                      <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500 text-white font-bold shadow-md">
                         {dog.gold}
                       </span>
                     </td>

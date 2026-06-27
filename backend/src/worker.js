@@ -3,6 +3,7 @@ import { handleDogs } from './routes/dogs.js';
 import { handleTop } from './routes/top.js';
 import { handleAdmin } from './routes/admin.js';
 import { handleSpeed } from './routes/speed.js';
+import { handleJudges } from './routes/judges.js';
 
 export default {
   async fetch(request, env) {
@@ -71,6 +72,7 @@ async function handleAPI(request, env, url, responseHeaders) {
       () => handleDogs(path, url, db, responseHeaders),
       () => handleCompetitions(path, url, db, responseHeaders),
       () => handleSpeed(path, url, db, responseHeaders),
+      () => handleJudges(path, url, db, responseHeaders),
     ];
 
     for (const handler of handlers) {

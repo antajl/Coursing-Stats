@@ -92,11 +92,13 @@ INSERT OR IGNORE INTO dogs (
 
       // Используем raw_scores_json из парсера
       const scoresJson = result.raw_scores_json || '{}';
+      // Используем judges из парсера
+      const judges = result.judges || null;
         
       const resultSql = `
 INSERT OR IGNORE INTO results (
   dog_id, event_id, placement, total_score, judge_count,
-  raw_scores_json, qualification, vc, status, raw_text, breed_class, status_reason
+  raw_scores_json, qualification, vc, status, raw_text, breed_class, status_reason, judges
 ) VALUES (
   (SELECT id FROM dogs WHERE name_lat = '${sqlEscape(nameLat)}' AND breed = '${sqlEscape(breed)}'),
   (SELECT id FROM events WHERE results_url = '${event.results_url}'),
@@ -109,7 +111,8 @@ INSERT OR IGNORE INTO results (
   '${result.status}',
   '${(result.raw_text || "").replace(/'/g, "''").replace(/\n/g, " ")}',
   '${(result.breed_class || "").replace(/'/g, "''")}',
-  '${(result.status_reason || "").replace(/'/g, "''")}'
+  '${(result.status_reason || "").replace(/'/g, "''")}',
+  ${judges ? `'${judges.replace(/'/g, "''")}'` : 'NULL'}
 );`;
       sqlStatements.push(resultSql);
     }

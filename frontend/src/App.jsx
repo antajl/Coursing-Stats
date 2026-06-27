@@ -6,6 +6,8 @@ import DogProfile from './pages/DogProfile'
 import EventResults from './pages/EventResults'
 import SpeedRecords from './pages/SpeedRecords'
 import Procoursing from './pages/Procoursing'
+import Judges from './pages/Judges'
+import JudgeDetail from './pages/JudgeDetail'
 import { DogSilhouettes } from './components/DogSilhouettes'
 
 function Nav() {
@@ -114,6 +116,8 @@ function App() {
             <Route path="/dog/:id" element={<DogProfile />} />
             <Route path="/event/:id" element={<EventResults />} />
             <Route path="/speed-records" element={<SpeedRecords />} />
+            <Route path="/judges" element={<Judges />} />
+            <Route path="/judges/:judgeId" element={<JudgeDetail />} />
           </Routes>
         </main>
       </div>
