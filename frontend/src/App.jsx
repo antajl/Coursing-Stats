@@ -116,14 +116,6 @@ function App() {
             <Route path="/speed-records" element={<SpeedRecords />} />
           </Routes>
         </main>
-
-        <footer className="bg-white/80 backdrop-blur-lg border-t border-old-money-300 mt-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-            <p className="text-center text-old-money-600 text-sm">
-              © 2026 ProCoursing Stats. Данные с procoursing.ru
-            </p>
-          </div>
-        </footer>
       </div>
     </Router>
   )

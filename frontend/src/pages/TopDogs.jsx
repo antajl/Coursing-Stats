@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { api } from '../services/api'
 import DogStatsTable from '../components/DogStatsTable'
 
 export default function TopDogs() {
+  const [searchParams, setSearchParams] = useSearchParams()
   const [topPlacement, setTopPlacement] = useState([])
   const [topScore, setTopScore] = useState([])
   const [topSpeed, setTopSpeed] = useState([])
@@ -13,13 +15,23 @@ export default function TopDogs() {
   const [loadingData, setLoadingData] = useState(false)
   const [error, setError] = useState(null)
 
-  const [activeTab, setActiveTab] = useState('score')
-  const [filterBreed, setFilterBreed] = useState('')
-  const [filterYear, setFilterYear] = useState('')
-  const [searchQuery, setSearchQuery] = useState('')
+  const [activeTab, setActiveTab] = useState(() => searchParams.get('tab') || 'score')
+  const [filterBreed, setFilterBreed] = useState(() => searchParams.get('breed') || '')
+  const [filterYear, setFilterYear] = useState(() => searchParams.get('year') || '')
+  const [searchQuery, setSearchQuery] = useState(() => searchParams.get('search') || '')
 
   // Track which tabs have been loaded
   const [loadedTabs, setLoadedTabs] = useState({ placement: false, score: false, speed: false })
+
+  // Синхронизация фильтров с URL
+  useEffect(() => {
+    const params = new URLSearchParams()
+    if (filterBreed) params.set('breed', filterBreed)
+    if (filterYear) params.set('year', filterYear)
+    if (searchQuery) params.set('search', searchQuery)
+    if (activeTab !== 'score') params.set('tab', activeTab)
+    setSearchParams(params)
+  }, [filterBreed, filterYear, searchQuery, activeTab, setSearchParams])
 
   useEffect(() => {
     async function fetchFilters() {
@@ -149,7 +161,7 @@ export default function TopDogs() {
           className="h-12 px-5 py-3 bg-white border-2 border-old-money-300 rounded-xl text-old-money-800 focus:ring-2 focus:ring-gold-400 focus:border-transparent transition-all duration-300 shadow-sm"
           disabled={loadingFilters}
         >
-          <option value="">Все годы</option>
+          <option value="">Все года</option>
           {years.map(y => (
             <option key={y.year} value={y.year} className="text-gray-900">{y.year}</option>
           ))}
