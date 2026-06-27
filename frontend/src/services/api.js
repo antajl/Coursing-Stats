@@ -130,7 +130,7 @@ export const api = {
   async getEvents(year = '') {
     const params = new URLSearchParams();
     if (year) params.append('year', year);
-    const url = `${API_URL}/api/events?${params}`;
+    const url = `${API_URL}/api/competitions?${params}`;
     const mockData = year ? mockEvents.filter(e => e.year === parseInt(year)) : mockEvents;
 
     return fetchWithFallback(url, mockData);
@@ -141,15 +141,15 @@ export const api = {
   },
 
   async getDogEvents(dogId) {
-    return fetchWithFallback(`${API_URL}/api/dogs/${dogId}/events`, []);
+    return fetchWithFallback(`${API_URL}/api/dogs/${dogId}/competitions`, []);
   },
 
   async getEvent(eventId) {
-    return fetchWithFallback(`${API_URL}/api/events/${eventId}`, null);
+    return fetchWithFallback(`${API_URL}/api/competitions/${eventId}`, null);
   },
 
   async getEventResults(eventId) {
-    return fetchWithFallback(`${API_URL}/api/events/${eventId}/results`, []);
+    return fetchWithFallback(`${API_URL}/api/competitions/${eventId}/results`, []);
   },
 
   async getSpeedRecords(breed = '', sex = '', limit = 100, search = '', year = '') {

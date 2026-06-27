@@ -1,6 +1,6 @@
-export async function handleEvents(path, url, db, corsHeaders) {
-  // GET /api/events
-  if (path === '/api/events') {
+export async function handleCompetitions(path, url, db, corsHeaders) {
+  // GET /api/competitions
+  if (path === '/api/competitions') {
     const breed = url.searchParams.get('breed') || '';
     const year = url.searchParams.get('year') || '';
 
@@ -18,8 +18,8 @@ export async function handleEvents(path, url, db, corsHeaders) {
     return Response.json(results, { headers: corsHeaders });
   }
 
-  // GET /api/events/:id
-  if (path.match(/^\/api\/events\/\d+$/) && !path.endsWith('/results')) {
+  // GET /api/competitions/:id
+  if (path.match(/^\/api\/competitions\/\d+$/) && !path.endsWith('/results')) {
     const eventId = path.split('/')[3];
     const { results } = await db.prepare('SELECT * FROM events WHERE id = ?').bind(eventId).all();
 
@@ -30,8 +30,8 @@ export async function handleEvents(path, url, db, corsHeaders) {
     return Response.json(results[0], { headers: corsHeaders });
   }
 
-  // GET /api/events/:id/results
-  if (path.match(/^\/api\/events\/\d+\/results$/)) {
+  // GET /api/competitions/:id/results
+  if (path.match(/^\/api\/competitions\/\d+\/results$/)) {
     const eventId = path.split('/')[3];
     const { results } = await db.prepare(`
       SELECT r.*, d.name_lat, d.name_ru, d.breed
