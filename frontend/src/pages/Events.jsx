@@ -154,9 +154,26 @@ export default function Events() {
         Всего событий: {events.length} | Отфильтровано: {filteredEvents.length}
       </div>
 
+      {/* Легенда цветов дисциплин */}
+      <div className="mb-4 flex items-center gap-4 text-sm text-old-money-700">
+        <span className="font-medium">Дисциплины:</span>
+        <div className="flex items-center gap-2">
+          <div className="w-3 h-3 rounded-full bg-forest-100 border border-forest-300"></div>
+          <span>Курсинг</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <div className="w-3 h-3 rounded-full bg-warm-blue-100 border border-warm-blue-300"></div>
+          <span>БЗМП</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <div className="w-3 h-3 rounded-full bg-terracotta-100 border border-terracotta-300"></div>
+          <span>Бега</span>
+        </div>
+      </div>
+
       <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-old-money-200">
         <table className="w-full divide-y divide-old-money-200 table-auto">
-          <thead className="bg-gradient-to-r from-gold-100 to-old-money-100">
+          <thead className="bg-gradient-to-r from-gold-200 to-old-money-200 border-b-2 border-old-money-300">
             <tr>
               <th 
                 className="px-3 py-4 text-center text-xs font-bold text-gold-700 uppercase tracking-wider cursor-pointer hover:text-gold-600 w-auto"
@@ -225,14 +242,14 @@ export default function Events() {
                 </td>
                 <td className="px-3 py-3 text-sm">
                   {event.results_url ? (
-                    <Link 
+                    <Link
                       to={`/event/${event.id}`}
-                      className="px-3 py-1.5 text-xs font-bold rounded-full bg-gradient-to-r from-old-money-600 to-old-money-700 text-white shadow-md hover:from-old-money-500 hover:to-old-money-600 transition-all duration-300"
+                      className="text-xs font-medium text-gold-600 hover:text-gold-500 hover:underline transition-colors"
                     >
-                      Открыть
+                      Открыть →
                     </Link>
                   ) : (
-                    <></>
+                    <span className="text-gray-400 text-xs italic">Ожидается</span>
                   )}
                 </td>
               </tr>

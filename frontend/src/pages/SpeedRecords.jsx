@@ -1,19 +1,32 @@
 import { useState, useEffect, useRef } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { api } from '../services/api';
 import { toPng } from 'html-to-image';
 import * as XLSX from 'xlsx';
 import SpeedRecordsStats from './SpeedRecordsStats';
 
 function SpeedRecords() {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [activeTab, setActiveTab] = useState('table');
   const [records, setRecords] = useState([]);
   const [allRecords, setAllRecords] = useState([]); // Все записи для фильтрации
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [filterYears, setFilterYears] = useState([]);
-  const [filterBreeds, setFilterBreeds] = useState([]);
-  const [filterSexes, setFilterSexes] = useState([]);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [filterYears, setFilterYears] = useState(() => {
+    const years = searchParams.get('years');
+    return years ? years.split(',') : [];
+  });
+  const [filterBreeds, setFilterBreeds] = useState(() => {
+    const breeds = searchParams.get('breeds');
+    return breeds ? breeds.split(',') : [];
+  });
+  const [filterSexes, setFilterSexes] = useState(() => {
+    const sexes = searchParams.get('sexes');
+    return sexes ? sexes.split(',') : [];
+  });
+  const [searchQuery, setSearchQuery] = useState(() => searchParams.get('search') || '');
+  const [sortField, setSortField] = useState(() => searchParams.get('sort') || 'speed_km_h');
+  const [sortDirection, setSortDirection] = useState(() => searchParams.get('dir') || 'desc');
   
   // Состояние для dropdown menus
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -23,11 +36,7 @@ function SpeedRecords() {
   
   // Состояние для модального окна истории (не используется, но оставлено для будущего)
   const [selectedRecord, setSelectedRecord] = useState(null);
-  
-  // Состояние для сортировки
-  const [sortField, setSortField] = useState('speed_km_h');
-  const [sortDirection, setSortDirection] = useState('desc'); // По умолчанию от большего к меньшему
-  
+
   useEffect(() => {
     function handleClickOutside(event) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -41,6 +50,18 @@ function SpeedRecords() {
   useEffect(() => {
     loadRecords();
   }, []);
+
+  // Синхронизация фильтров с URL
+  useEffect(() => {
+    const params = new URLSearchParams();
+    if (filterYears.length > 0) params.set('years', filterYears.join(','));
+    if (filterBreeds.length > 0) params.set('breeds', filterBreeds.join(','));
+    if (filterSexes.length > 0) params.set('sexes', filterSexes.join(','));
+    if (searchQuery) params.set('search', searchQuery);
+    if (sortField !== 'speed_km_h') params.set('sort', sortField);
+    if (sortDirection !== 'desc') params.set('dir', sortDirection);
+    setSearchParams(params);
+  }, [filterYears, filterBreeds, filterSexes, searchQuery, sortField, sortDirection, setSearchParams]);
 
   async function loadRecords() {
     setLoading(true);
@@ -244,17 +265,6 @@ function SpeedRecords() {
   return (
     <div className="space-y-6">
       <div className="bg-cream-50/90 backdrop-blur-lg rounded-2xl shadow-xl border border-cream-300 p-8">
-        <h1 className="text-4xl font-extrabold text-charcoal-700 mb-6">
-          <a 
-            href="https://docs.google.com/spreadsheets/d/1NTiY3HXZIkXE8xTeXZESgMKaZsEXunmcWhTfhhkoKyE/edit?gid=1787526009#gid=1787526009" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="hover:text-camel-700 hover:underline transition-colors"
-          >
-            Рекорды Донино
-          </a>
-        </h1>
-
         <div className="flex gap-4 mb-6">
           <button
             onClick={() => setActiveTab('table')}

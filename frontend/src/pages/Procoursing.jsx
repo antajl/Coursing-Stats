@@ -8,34 +8,23 @@ function Procoursing() {
   return (
     <div className="space-y-6">
       <div className="bg-cream-50/90 backdrop-blur-lg rounded-2xl shadow-xl border border-cream-300 p-8">
-        <h1 className="text-4xl font-extrabold text-charcoal-700 mb-6">
-          <a 
-            href="http://procoursing.ru" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="hover:text-camel-700 hover:underline transition-colors"
-          >
-            Аналитика ProCoursing
-          </a>
-        </h1>
-
-        <div className="flex gap-4 mb-6">
+        <div className="flex gap-2 mb-6 bg-old-money-100 p-1 rounded-xl">
           <button
             onClick={() => setActiveTab('calendar')}
-            className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
+            className={`flex-1 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
               activeTab === 'calendar'
-                ? 'bg-camel-600 text-white shadow-lg'
-                : 'bg-white text-charcoal-700 border-2 border-cream-300 hover:border-camel-500'
+                ? 'bg-white text-charcoal-700 shadow-sm'
+                : 'text-charcoal-600 hover:text-charcoal-700'
             }`}
           >
             Календарь событий
           </button>
           <button
             onClick={() => setActiveTab('ranking')}
-            className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
+            className={`flex-1 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
               activeTab === 'ranking'
-                ? 'bg-camel-600 text-white shadow-lg'
-                : 'bg-white text-charcoal-700 border-2 border-cream-300 hover:border-camel-500'
+                ? 'bg-white text-charcoal-700 shadow-sm'
+                : 'text-charcoal-600 hover:text-charcoal-700'
             }`}
           >
             Рейтинг собак

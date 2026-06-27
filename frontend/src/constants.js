@@ -1,9 +1,9 @@
 // Константы для фронтенда
 
 export const DISCIPLINE_COLORS = {
-  coursing: 'bg-green-50 hover:bg-green-100',
-  bzmp: 'bg-blue-50 hover:bg-blue-100',
-  racing: 'bg-red-50 hover:bg-red-100',
+  coursing: 'bg-forest-50 hover:bg-forest-100',
+  bzmp: 'bg-warm-blue-50 hover:bg-warm-blue-100',
+  racing: 'bg-terracotta-50 hover:bg-terracotta-100',
   default: 'hover:bg-old-money-50'
 }
 
