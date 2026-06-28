@@ -275,7 +275,7 @@ function SpeedRecordsStats() {
           const parts = d.split('.');
           return new Date(parts[2], parts[1] - 1, parts[0]);
         };
-        return parseDate(a.date) - parseDate(b.date);
+        return parseDate(b.date) - parseDate(a.date);
       })
     };
   })() : null;
