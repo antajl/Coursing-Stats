@@ -105,5 +105,39 @@ npx tsx backend/scripts/speed/fetch-speed-records.ts --remote
 
 ### Wrong grouping
 - Check grouping key for history formation (name + breed)
-- Check grouping key for frontend display (name + breed + sex)
+- Check grouping key for frontend display (name + breed)
 - Verify data consistency in Google Sheets
+
+### Database has too many records (duplicates)
+- **Symptom**: Database has 2000+ records instead of expected ~187
+- **Cause**: Multiple `INSERT OR REPLACE` operations without cleaning old data
+- **Solution**: Clean database before loading new data
+  ```bash
+  npx wrangler d1 execute pc-db --remote --command="DELETE FROM speed_records"
+  npx tsx backend/scripts/speed/fetch-speed-records.ts --remote
+  ```
+- **Prevention**: Always clean database before major data reloads
+
+### Frontend shows only one record per dog
+- **Symptom**: Dog shows only best result, history not visible on hover
+- **Cause**: Frontend grouping key doesn't match backend history grouping key
+- **Solution**: Ensure both use same grouping key (name + breed)
+  - Backend: `fetch-speed-records.ts` line 240: `key = ${record.name}_${record.breed}`
+  - Frontend: `index.tsx` line 105: `key = ${record.name}_${record.breed}`
+
+### Infinite React render loop
+- **Symptom**: "Maximum update depth exceeded" error in console
+- **Cause**: setState inside useCallback or useEffect with wrong dependencies
+- **Solution**: 
+  - Remove setState from useCallback, return filtered data instead
+  - Use useMemo for filtered data
+  - Use useEffect only to update state from useMemo result
+  - Example: See `frontend/src/pages/SpeedRecords/index.tsx` lines 146-231
+
+### API returns only 100 records
+- **Symptom**: Frontend shows limited number of dogs despite more in database
+- **Cause**: Default LIMIT in API endpoint is 100
+- **Solution**: Increase LIMIT in both backend and frontend
+  - Backend: `backend/src/routes/speed.ts` change LIMIT 100 to 1000
+  - Frontend: `useSpeedRecords('', '', 1000, '', '')` change 100 to 1000
+  - Deploy backend after changes: `npx wrangler deploy`
