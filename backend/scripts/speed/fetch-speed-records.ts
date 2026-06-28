@@ -48,6 +48,83 @@ function parseXLSX(buffer) {
     const worksheet = workbook.Sheets[sheetName];
     
     const range = XLSX.utils.decode_range(worksheet['!ref']);
+    
+    // Специальная обработка для листа "старые личные рекорды" (без заголовков)
+    if (sheetName.toLowerCase().includes('старые') || sheetName.toLowerCase().includes('old')) {
+      console.log(`Sheet "${sheetName}": Parsing as old records (no headers)`);
+      
+      // Предполагаем порядок колонок: Порода, Пол, Кличка, Скорость, Дата, Скриншот
+      for (let row = range.s.r; row <= range.e.r; row++) {
+        const breedCell = worksheet[XLSX.utils.encode_cell({ r: row, c: range.s.c })];
+        const sexCell = worksheet[XLSX.utils.encode_cell({ r: row, c: range.s.c + 1 })];
+        const nameCell = worksheet[XLSX.utils.encode_cell({ r: row, c: range.s.c + 2 })];
+        const speedCell = worksheet[XLSX.utils.encode_cell({ r: row, c: range.s.c + 3 })];
+        const dateCell = worksheet[XLSX.utils.encode_cell({ r: row, c: range.s.c + 4 })];
+        const screenshotCell = worksheet[XLSX.utils.encode_cell({ r: row, c: range.s.c + 5 })];
+        
+        if (!breedCell || !breedCell.v) continue;
+        
+        const breed = breedCell.v;
+        const sex = sexCell?.v || '';
+        const name = nameCell?.v || '';
+        const speedValue = speedCell?.v || 0;
+        const dateValue = dateCell?.v || '';
+        const screenshotUrl = screenshotCell?.v || null;
+        
+        // Определяем статус и скорость
+        let status = 'normal';
+        let speed_km_h = 0;
+        
+        if (typeof speedValue === 'string') {
+          const speedLower = speedValue.toLowerCase();
+          if (speedLower === 'новый результат') {
+            status = 'new';
+            speed_km_h = 0;
+          } else if (speedLower === 'улучшение личного рекорда') {
+            status = 'improved';
+            speed_km_h = 0;
+          } else {
+            speed_km_h = parseFloat(speedValue) || 0;
+          }
+        } else {
+          speed_km_h = parseFloat(speedValue) || 0;
+        }
+        
+        // Конвертация даты
+        let dateStr = dateValue;
+        if (typeof dateStr === 'number') {
+          const excelDate = new Date(Math.round((dateStr - 25569) * 86400 * 1000));
+          const day = String(excelDate.getDate()).padStart(2, '0');
+          const month = String(excelDate.getMonth() + 1).padStart(2, '0');
+          const year = excelDate.getFullYear();
+          dateStr = `${day}.${month}.${year}`;
+        } else if (typeof dateStr === 'string') {
+          dateStr = dateStr.replace(/[;,\/\-]/g, '.');
+          const parts = dateStr.split('.');
+          if (parts.length === 3) {
+            const day = String(parts[0]).padStart(2, '0');
+            const month = String(parts[1]).padStart(2, '0');
+            const year = parts[2];
+            dateStr = `${day}.${month}.${year}`;
+          }
+        }
+        
+        if (breed && name) {
+          records.push({
+            breed,
+            sex,
+            name,
+            speed_km_h,
+            date: dateStr,
+            screenshot_url: screenshotUrl,
+            status
+          });
+        }
+      }
+      continue;
+    }
+    
+    // Стандартная обработка для листов с заголовками
     const headers = [];
     
     // Находим строку с заголовками

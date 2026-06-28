@@ -22,7 +22,7 @@ VALUES (
   '14.05.2026',
   'https://disk.yandex.ru/i/eedvi966A_DRpQ',
   'normal',
-  '[{"speed_km_h":60,"date":"20.08.2025"}]'
+  '[{"speed_km_h":59,"date":"29.06.2025"},{"speed_km_h":60,"date":"20.08.2025"}]'
 );
 
 INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
@@ -58,7 +58,7 @@ VALUES (
   '20.06.2026',
   'https://disk.yandex.ru/i/PmkzSj3f7EPYDw',
   'normal',
-  NULL
+  '[{"speed_km_h":57,"date":"31.05.2026"}]'
 );
 
 INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
@@ -130,7 +130,7 @@ VALUES (
   '14.05.2026',
   'https://disk.yandex.ru/i/Zt00i2dVgOiT2Q',
   'normal',
-  '[{"speed_km_h":58,"date":"23.07.2025"}]'
+  '[{"speed_km_h":55,"date":"29.06.2025"},{"speed_km_h":58,"date":"23.07.2025"}]'
 );
 
 INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
@@ -142,7 +142,7 @@ VALUES (
   '14.05.2026',
   'https://disk.yandex.ru/i/f8DDgGLm4y8puQ',
   'normal',
-  '[{"speed_km_h":56,"date":"22.11.2025"}]'
+  '[{"speed_km_h":51,"date":"06.07.2025"},{"speed_km_h":53,"date":"08.11.2025"},{"speed_km_h":56,"date":"22.11.2025"},{"speed_km_h":55,"date":"11.05.2026"}]'
 );
 
 INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
@@ -166,7 +166,7 @@ VALUES (
   '17.06.2026',
   'https://disk.yandex.ru/i/5G258DmN6u0img',
   'normal',
-  '[{"speed_km_h":54,"date":"29.11.2025"}]'
+  '[{"speed_km_h":54,"date":"29.11.2025"},{"speed_km_h":54,"date":"08.04.2026"}]'
 );
 
 INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
@@ -190,7 +190,7 @@ VALUES (
   '25.06.2026',
   'https://disk.yandex.ru/i/qNjYob7WAmEu4A',
   'normal',
-  NULL
+  '[{"speed_km_h":55,"date":"11.05.2026"}]'
 );
 
 INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
@@ -202,7 +202,7 @@ VALUES (
   '11.05.2026',
   'https://disk.yandex.ru/i/KUNTdVq6Zf128A',
   'normal',
-  '[{"speed_km_h":54,"date":"29.11.2025"}]'
+  '[{"speed_km_h":51,"date":"06.07.2025"},{"speed_km_h":54,"date":"29.11.2025"}]'
 );
 
 INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
@@ -214,7 +214,7 @@ VALUES (
   '14.05.2026',
   'https://disk.yandex.ru/i/7pIwJ_njaydDHw',
   'normal',
-  '[{"speed_km_h":54,"date":"20.08.2025"}]'
+  '[{"speed_km_h":52,"date":"30.07.2025"},{"speed_km_h":53,"date":"13.08.2025"},{"speed_km_h":54,"date":"20.08.2025"},{"speed_km_h":54,"date":"08.04.2026"}]'
 );
 
 INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
@@ -334,7 +334,7 @@ VALUES (
   '07.06.2026',
   'https://disk.yandex.ru/i/Sd4DDmREPAqUBQ',
   'normal',
-  '[{"speed_km_h":52,"date":"22.11.2025"}]'
+  '[{"speed_km_h":50,"date":"23.07.2025"},{"speed_km_h":52,"date":"22.11.2025"}]'
 );
 
 INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
@@ -358,7 +358,7 @@ VALUES (
   '25.06.2026',
   'https://disk.yandex.ru/i/rYxSt2D1o46LrA',
   'normal',
-  '[{"speed_km_h":50,"date":"25.10.2025"}]'
+  '[{"speed_km_h":50,"date":"25.10.2025"},{"speed_km_h":47,"date":"11.05.2026"}]'
 );
 
 INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
@@ -418,7 +418,7 @@ VALUES (
   '27.05.2026',
   'https://disk.yandex.ru/i/nHoMJVf_vSnEOA',
   'normal',
-  '[{"speed_km_h":49,"date":"09.11.2025"}]'
+  '[{"speed_km_h":48,"date":"07.09.2025"},{"speed_km_h":49,"date":"09.11.2025"}]'
 );
 
 INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
@@ -442,7 +442,7 @@ VALUES (
   '07.06.2026',
   'https://disk.yandex.ru/i/uCELazlb6QSUuQ',
   'normal',
-  '[{"speed_km_h":51,"date":"07.12.2025"}]'
+  '[{"speed_km_h":48,"date":"23.07.2025"},{"speed_km_h":51,"date":"07.12.2025"}]'
 );
 
 INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
@@ -454,7 +454,7 @@ VALUES (
   '27.06.2026',
   'https://disk.yandex.ru/i/5vNWX0rE3PtuNQ',
   'normal',
-  '[{"speed_km_h":50,"date":"22.11.2025"}]'
+  '[{"speed_km_h":48,"date":"29.06.2025"},{"speed_km_h":50,"date":"22.11.2025"}]'
 );
 
 INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
@@ -538,7 +538,7 @@ VALUES (
   '31.05.2026',
   'https://disk.yandex.ru/i/bSl1B14oF-oddg',
   'normal',
-  '[{"speed_km_h":45,"date":"03.12.2025"}]'
+  '[{"speed_km_h":44,"date":"06.07.2025"},{"speed_km_h":45,"date":"03.12.2025"}]'
 );
 
 INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
@@ -658,7 +658,7 @@ VALUES (
   '03.12.2025',
   'https://disk.yandex.ru/i/fFO8hgLGKo8kfg',
   'normal',
-  NULL
+  '[{"speed_km_h":62,"date":"23.11.2025"}]'
 );
 
 INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
@@ -670,7 +670,7 @@ VALUES (
   '20.08.2025',
   'https://disk.yandex.ru/i/T1zY3nLlfA_n-A',
   'normal',
-  NULL
+  '[{"speed_km_h":59,"date":"29.06.2025"}]'
 );
 
 INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
@@ -694,7 +694,7 @@ VALUES (
   '23.07.2025',
   'https://disk.yandex.ru/i/eyJv9HWTX-Em_A',
   'normal',
-  NULL
+  '[{"speed_km_h":55,"date":"29.06.2025"}]'
 );
 
 INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
@@ -742,7 +742,7 @@ VALUES (
   '24.09.2025',
   'https://disk.yandex.ru/i/izdRpdV5NMrPeg',
   'normal',
-  NULL
+  '[{"speed_km_h":56,"date":"04.09.2025"}]'
 );
 
 INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
@@ -790,7 +790,7 @@ VALUES (
   '22.11.2025',
   'https://disk.yandex.ru/i/epyGng5kLTzxDw',
   'normal',
-  NULL
+  '[{"speed_km_h":51,"date":"06.07.2025"},{"speed_km_h":53,"date":"08.11.2025"}]'
 );
 
 INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
@@ -826,7 +826,7 @@ VALUES (
   '29.11.2025',
   'https://disk.yandex.ru/i/VtDb9eXPWPqm_w',
   'normal',
-  NULL
+  '[{"speed_km_h":54,"date":"23.11.2025"}]'
 );
 
 INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
@@ -886,7 +886,7 @@ VALUES (
   '20.08.2025',
   'https://disk.yandex.ru/i/3StLt1KVotFWOQ',
   'normal',
-  NULL
+  '[{"speed_km_h":52,"date":"30.07.2025"},{"speed_km_h":53,"date":"13.08.2025"}]'
 );
 
 INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
@@ -898,7 +898,7 @@ VALUES (
   '29.11.2025',
   'https://disk.yandex.ru/i/-YaDdYuvhp2NWg',
   'normal',
-  NULL
+  '[{"speed_km_h":51,"date":"06.07.2025"}]'
 );
 
 INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
@@ -1042,7 +1042,7 @@ VALUES (
   '22.11.2025',
   'https://disk.yandex.ru/i/7PrV87uw8LtrLw',
   'normal',
-  NULL
+  '[{"speed_km_h":50,"date":"23.07.2025"}]'
 );
 
 INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
@@ -1078,7 +1078,7 @@ VALUES (
   '23.07.2025',
   'https://disk.yandex.ru/i/8l7eotysQ-vwUA',
   'normal',
-  NULL
+  '[{"speed_km_h":50,"date":"29.06.2025"}]'
 );
 
 INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
@@ -1114,7 +1114,7 @@ VALUES (
   '07.12.2025',
   'https://disk.yandex.ru/i/6xW33C49HtMbRg',
   'normal',
-  NULL
+  '[{"speed_km_h":48,"date":"23.07.2025"}]'
 );
 
 INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
@@ -1162,7 +1162,7 @@ VALUES (
   '22.11.2025',
   'https://disk.yandex.ru/i/zKknbxevKz9AgQ',
   'normal',
-  NULL
+  '[{"speed_km_h":48,"date":"29.06.2025"}]'
 );
 
 INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
@@ -1246,7 +1246,7 @@ VALUES (
   '09.11.2025',
   'https://disk.yandex.ru/i/iuQ18P1jpG8Nug',
   'normal',
-  NULL
+  '[{"speed_km_h":48,"date":"07.09.2025"}]'
 );
 
 INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
@@ -1426,7 +1426,7 @@ VALUES (
   '03.12.2025',
   'https://disk.yandex.ru/i/tsEfnOQd1JWIYw',
   'normal',
-  NULL
+  '[{"speed_km_h":44,"date":"06.07.2025"}]'
 );
 
 INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
@@ -1618,7 +1618,7 @@ VALUES (
   '30.07.2025',
   'https://disk.yandex.ru/i/zLg2DA3oAtU7uA',
   'normal',
-  NULL
+  '[{"speed_km_h":40,"date":"29.06.2025"}]'
 );
 
 INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
@@ -1726,7 +1726,7 @@ VALUES (
   '30.07.2025',
   'https://disk.yandex.ru/i/Nbb0UoXGDcfYqw',
   'normal',
-  NULL
+  '[{"speed_km_h":36,"date":"13.07.2025"}]'
 );
 
 INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
@@ -1774,7 +1774,7 @@ VALUES (
   '07.12.2025',
   'https://disk.yandex.ru/i/NQMZmQfgKy8r7w',
   'normal',
-  NULL
+  '[{"speed_km_h":38,"date":"07.09.2025"}]'
 );
 
 INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
@@ -1834,7 +1834,7 @@ VALUES (
   '29.11.2025',
   'https://disk.yandex.ru/i/UrPsTVGps1jVyw',
   'normal',
-  NULL
+  '[{"speed_km_h":32,"date":"13.07.2025"},{"speed_km_h":34,"date":"07.09.2025"}]'
 );
 
 INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
@@ -1893,6 +1893,354 @@ VALUES (
   44,
   '17.05.2026',
   'https://disk.yandex.ru/i/XFM2La15d-mw_w',
+  'normal',
+  NULL
+);
+
+INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
+VALUES (
+  'Фараонова собака',
+  'К',
+  'Гоша',
+  50,
+  '29.06.2025',
+  'https://disk.yandex.ru/i/W3dGaqpWmSq5sg',
+  'normal',
+  NULL
+);
+
+INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
+VALUES (
+  'Уиппет',
+  'С',
+  'Груша',
+  55,
+  '29.06.2025',
+  'https://disk.yandex.ru/i/po1F4rxjp0H3cg',
+  'normal',
+  NULL
+);
+
+INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
+VALUES (
+  'Немецкая овчарка',
+  'С',
+  'Ая',
+  36,
+  '13.07.2025',
+  'https://disk.yandex.ru/i/j9_-0EbBw5bQHw',
+  'normal',
+  NULL
+);
+
+INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
+VALUES (
+  'Немецкая овчарка',
+  'С',
+  'Вирна',
+  40,
+  '29.06.2025',
+  'https://disk.yandex.ru/i/FwYb0OYC68mQHA',
+  'normal',
+  NULL
+);
+
+INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
+VALUES (
+  'Уиппет',
+  'С',
+  'Антоша',
+  52,
+  '30.07.2025',
+  'https://disk.yandex.ru/i/KLI1oYQCdGsxnQ',
+  'normal',
+  NULL
+);
+
+INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
+VALUES (
+  'Уиппет',
+  'С',
+  'Зизи',
+  59,
+  '29.06.2025',
+  'https://disk.yandex.ru/i/S7i6jKrJ7txvIw',
+  'normal',
+  NULL
+);
+
+INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
+VALUES (
+  'Уиппет',
+  'С',
+  'Антоша',
+  53,
+  '13.08.2025',
+  'https://disk.yandex.ru/i/_NjzxKXes7lmbQ',
+  'normal',
+  '[{"speed_km_h":52,"date":"30.07.2025"}]'
+);
+
+INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
+VALUES (
+  'Поденко ибиценко',
+  'С',
+  'Иви',
+  50,
+  '10.09.2025',
+  'https://disk.yandex.ru/i/nTMEbMcCQ9N6GQ',
+  'normal',
+  '[{"speed_km_h":52,"date":"27.08.2025"}]'
+);
+
+INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
+VALUES (
+  'Фокстерьер',
+  'К',
+  'Билли',
+  32,
+  '13.07.2025',
+  'https://disk.yandex.ru/i/u8Le5k7AwtdbVA',
+  'normal',
+  NULL
+);
+
+INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
+VALUES (
+  'Уиппет',
+  'К',
+  'Вэш',
+  56,
+  '04.09.2025',
+  'https://disk.yandex.ru/i/MU4CCJunPohkZQ',
+  'normal',
+  NULL
+);
+
+INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
+VALUES (
+  'Уиппет',
+  'С',
+  'Афи',
+  51,
+  '06.07.2025',
+  'https://disk.yandex.ru/i/BpAims9KOwpy6w',
+  'normal',
+  NULL
+);
+
+INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
+VALUES (
+  'Левретка',
+  'К',
+  'Айвенго',
+  48,
+  '07.09.2025',
+  'https://disk.yandex.ru/i/elM6vROzdd9HtQ',
+  'normal',
+  NULL
+);
+
+INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
+VALUES (
+  'Уиппет',
+  'С',
+  'Афи',
+  53,
+  '08.11.2025',
+  'https://disk.yandex.ru/i/GNEJiQ6UBgzjZA',
+  'normal',
+  '[{"speed_km_h":51,"date":"06.07.2025"}]'
+);
+
+INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
+VALUES (
+  'Фараонова собака',
+  'К',
+  'Джед',
+  50,
+  '23.07.2025',
+  'https://disk.yandex.ru/i/1g6JVcfC9XGQ9w',
+  'normal',
+  NULL
+);
+
+INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
+VALUES (
+  'Фараонова собака',
+  'К',
+  'Ларс',
+  48,
+  '29.06.2025',
+  'https://disk.yandex.ru/i/ZiPklrw9Izep_w',
+  'normal',
+  NULL
+);
+
+INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
+VALUES (
+  'Фокстерьер',
+  'К',
+  'Билли',
+  34,
+  '07.09.2025',
+  'https://disk.yandex.ru/i/16HpATFHoeoLHw',
+  'normal',
+  '[{"speed_km_h":32,"date":"13.07.2025"}]'
+);
+
+INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
+VALUES (
+  'Салюки',
+  'С',
+  'Тайга',
+  51,
+  '06.07.2025',
+  'https://disk.yandex.ru/i/BA4ZDb5EmJmK0Q',
+  'normal',
+  NULL
+);
+
+INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
+VALUES (
+  'Уиппет',
+  'С',
+  'Стеша',
+  54,
+  '23.11.2025',
+  'https://disk.yandex.ru/i/Aw3YJWhes-uPKQ',
+  'normal',
+  NULL
+);
+
+INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
+VALUES (
+  'Ирландский терьер',
+  'С',
+  'Душечка',
+  44,
+  '06.07.2025',
+  'https://disk.yandex.ru/i/ZKdJ9a2bZHrE1w',
+  'normal',
+  NULL
+);
+
+INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
+VALUES (
+  'Уиппет',
+  'К',
+  'Каро',
+  62,
+  '23.11.2025',
+  'https://disk.yandex.ru/i/HGNLy4zF-FQIuw',
+  'normal',
+  NULL
+);
+
+INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
+VALUES (
+  'Фараонова собака',
+  'С',
+  'Гела',
+  48,
+  '23.07.2025',
+  'https://disk.yandex.ru/i/CbyIh-kwSZDw8Q',
+  'normal',
+  NULL
+);
+
+INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
+VALUES (
+  'Цвергпинчер',
+  'К',
+  'Марвел',
+  38,
+  '07.09.2025',
+  'https://disk.yandex.ru/i/_keEYxMsfehtxQ',
+  'normal',
+  NULL
+);
+
+INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
+VALUES (
+  'Уиппет',
+  'С',
+  'Антоша',
+  54,
+  '08.04.2026',
+  'https://disk.yandex.ru/i/NQJADmNTAmVArA',
+  'normal',
+  '[{"speed_km_h":52,"date":"30.07.2025"},{"speed_km_h":53,"date":"13.08.2025"},{"speed_km_h":54,"date":"20.08.2025"}]'
+);
+
+INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
+VALUES (
+  'Уиппет',
+  'С',
+  'Афи',
+  55,
+  '11.05.2026',
+  'https://disk.yandex.ru/i/RQGEKcTNLFnr-A',
+  'normal',
+  '[{"speed_km_h":51,"date":"06.07.2025"},{"speed_km_h":53,"date":"08.11.2025"},{"speed_km_h":56,"date":"22.11.2025"}]'
+);
+
+INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
+VALUES (
+  'Уиппет',
+  'С',
+  'Рэя',
+  54,
+  '08.04.2026',
+  'https://disk.yandex.ru/i/ta2_cLSKJ3f7HA',
+  'normal',
+  '[{"speed_km_h":54,"date":"29.11.2025"}]'
+);
+
+INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
+VALUES (
+  'Салюки',
+  'С',
+  'Грэйси',
+  48,
+  '07.06.2026',
+  'https://disk.yandex.ru/i/gKnxmCFxxyxT4Q',
+  'normal',
+  NULL
+);
+
+INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
+VALUES (
+  'Гальго',
+  'К',
+  'Шерегеш',
+  57,
+  '31.05.2026',
+  'https://disk.yandex.ru/i/_C3ux38PCk_hHA',
+  'normal',
+  NULL
+);
+
+INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
+VALUES (
+  'Салюки',
+  'С',
+  'Тундра',
+  47,
+  '11.05.2026',
+  'https://disk.yandex.ru/i/hNfN189FZESFNw',
+  'normal',
+  '[{"speed_km_h":50,"date":"25.10.2025"}]'
+);
+
+INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
+VALUES (
+  'Гальго',
+  'С',
+  'Шелби',
+  55,
+  '11.05.2026',
+  'https://disk.yandex.ru/i/Tju0_76AXBNsKg',
   'normal',
   NULL
 );
