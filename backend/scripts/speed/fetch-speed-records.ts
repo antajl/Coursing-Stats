@@ -261,20 +261,20 @@ function parseXLSX(buffer) {
   // Для каждой собаки сортируем результаты по дате и формируем историю
   Object.keys(recordsByDog).forEach(key => {
     const dogRecords = recordsByDog[key];
-    // Сортируем по дате (от старых к новым)
+    // Сортируем по дате (от новых к старым)
     dogRecords.sort((a, b) => {
       const parseDate = (d) => {
         const parts = d.split('.');
         return new Date(parts[2], parts[1] - 1, parts[0]);
       };
-      return parseDate(a.date) - parseDate(b.date);
+      return parseDate(b.date) - parseDate(a.date);
     });
     
     // Для каждой записи (кроме последней) сохраняем историю предыдущих результатов
     dogRecords.forEach((record, idx) => {
       if (idx > 0) {
-        // Предыдущие результаты - все до текущего
-        record.history = dogRecords.slice(0, idx).map(r => ({
+        // Предыдущие результаты - все после текущего (более старые)
+        record.history = dogRecords.slice(idx).map(r => ({
           speed_km_h: r.speed_km_h,
           date: r.date
         }));
