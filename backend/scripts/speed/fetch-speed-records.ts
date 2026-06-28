@@ -234,9 +234,22 @@ function parseXLSX(buffer) {
 
   console.log(`Parsed ${records.length} speed records from ${workbook.SheetNames.length} sheets`);
   
+  // Дедупликация записей по имени+порода+пол+дата+скорость
+  const uniqueRecords = [];
+  const seenKeys = new Set();
+  records.forEach(record => {
+    const key = `${record.name}_${record.breed}_${record.sex}_${record.date}_${record.speed_km_h}`;
+    if (!seenKeys.has(key)) {
+      seenKeys.add(key);
+      uniqueRecords.push(record);
+    }
+  });
+  
+  console.log(`After deduplication: ${uniqueRecords.length} records (removed ${records.length - uniqueRecords.length} duplicates)`);
+  
   // Группируем записи по имени собаки для формирования истории
   const recordsByDog = {};
-  records.forEach(record => {
+  uniqueRecords.forEach(record => {
     const key = `${record.name}_${record.breed}`;
     if (!recordsByDog[key]) {
       recordsByDog[key] = [];
