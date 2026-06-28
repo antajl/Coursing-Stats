@@ -21,7 +21,7 @@ function SpeedRecords() {
   };
   
   // React Query хуки для данных
-  const speedRecordsQuery = useSpeedRecords('', '', 100, '', '');
+  const speedRecordsQuery = useSpeedRecords('', '', 1000, '', '');
   const coursingRecordsQuery = useCoursingRecords('', 1000, '', '');
   
   // Локальное состояние для фильтров
@@ -229,7 +229,7 @@ function SpeedRecords() {
 
   useEffect(() => {
     applyFilters(allRecords);
-  }, [allRecords, applyFilters]);
+  }, [allRecords]);
 
   function toggleFilter(type, value) {
     if (type === 'year') {
