@@ -107,6 +107,9 @@ function SpeedRecords() {
     const seenSpeedKeys = new Set();
     const sortedSpeedRecords = [...speedRecordsWithHistory].sort((a, b) => b.speed_km_h - a.speed_km_h);
     
+    console.log('DEBUG: speedRecordsData length:', speedRecordsData.length);
+    console.log('DEBUG: speedRecordsWithHistory length:', speedRecordsWithHistory.length);
+    
     for (const record of sortedSpeedRecords) {
       const key = `${record.name}_${record.breed}_${record.sex}`;
       if (!seenSpeedKeys.has(key)) {
@@ -114,6 +117,10 @@ function SpeedRecords() {
         records.push(record);
       }
     }
+    
+    console.log('DEBUG: bestSpeedRecords length:', records.length);
+    console.log('DEBUG: records with history:', records.filter(r => r.history && r.history.length > 0).length);
+    
     return records;
   }, [speedRecordsWithHistory]);
   
