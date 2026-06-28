@@ -73,12 +73,25 @@ function SpeedRecords() {
 
   // Фильтрация бегов борзых по поиску
   const filteredCoursingRecords = useMemo(() => {
-    if (!searchQuery) return bestCoursingRecords;
-    const query = searchQuery.toLowerCase();
-    return bestCoursingRecords.filter(record => 
-      record.name.toLowerCase().includes(query)
-    );
-  }, [bestCoursingRecords, searchQuery]);
+    let filtered = bestCoursingRecords;
+    
+    if (searchQuery) {
+      const query = searchQuery.toLowerCase();
+      filtered = filtered.filter(record => 
+        record.name.toLowerCase().includes(query)
+      );
+    }
+    
+    if (filterBreeds.length > 0) {
+      filtered = filtered.filter(record => filterBreeds.includes(record.breed));
+    }
+    
+    if (filterYears.length > 0) {
+      filtered = filtered.filter(record => filterYears.includes(record.date.split('.')[2]));
+    }
+    
+    return filtered;
+  }, [bestCoursingRecords, searchQuery, filterBreeds, filterYears]);
   
   // Обработка speed records с группировкой
   const speedRecordsWithHistory = useMemo(() => 
@@ -309,6 +322,9 @@ function SpeedRecords() {
   }
 
   const hasActiveFilters = filterYears.length > 0 || filterBreeds.length > 0 || filterSexes.length > 0 || searchQuery;
+
+  const coursingYears = [...new Set(bestCoursingRecords.map(r => r.date.split('.')[2]))].sort().reverse();
+  const coursingBreeds = [...new Set(bestCoursingRecords.map(r => r.breed))].sort();
 
   const years = [...new Set(allRecords.map(r => r.date.split('.')[2]))].sort().reverse();
   const breeds = [...new Set(allRecords.map(r => r.breed))].sort();
@@ -615,8 +631,8 @@ function SpeedRecords() {
             ) : (
               <>
                 {/* Фильтры для бегов борзых */}
-                <div className="flex gap-2 md:gap-4 mb-4 md:mb-6 flex-wrap">
-                  <div className="flex-1 min-w-[120px]">
+                <div className="flex gap-2 md:gap-4 mb-4 md:mb-6 flex-wrap" ref={dropdownRef}>
+                  <div className="flex-1 min-w-[200px]">
                     <input
                       type="text"
                       value={searchQuery}
@@ -625,14 +641,66 @@ function SpeedRecords() {
                       className="w-full px-4 py-3 rounded-xl border-2 border-cream-300 focus:border-camel-500 focus:ring-2 focus:ring-camel-200 transition-all bg-white"
                     />
                   </div>
-                  <div className="flex items-end">
+                  <div className="flex-1 min-w-[120px] relative">
                     <button
-                      onClick={() => setSearchQuery('')}
-                      className="px-4 py-3 rounded-xl border-2 border-red-300 text-red-600 hover:bg-red-50 transition-all font-semibold"
+                      onClick={() => setOpenDropdown(openDropdown === 'breed' ? null : 'breed')}
+                      className="w-full px-4 py-3 rounded-xl border-2 border-cream-300 focus:border-camel-500 focus:ring-2 focus:ring-camel-200 transition-all bg-white text-left"
                     >
-                      Сбросить
+                      {filterBreeds.length > 0 ? `Выбрано: ${filterBreeds.length}` : 'Породы'}
                     </button>
+                    {openDropdown === 'breed' && (
+                      <div className="absolute z-10 w-full mt-1 bg-white border-2 border-cream-300 rounded-xl shadow-xl max-h-60 overflow-y-auto">
+                        {coursingBreeds.map(breed => (
+                          <label key={breed} className="flex items-center px-4 py-2 hover:bg-cream-50 cursor-pointer">
+                            <input
+                              type="checkbox"
+                              checked={filterBreeds.includes(breed)}
+                              onChange={() => toggleFilter('breed', breed)}
+                              className="mr-2"
+                            />
+                            {breed}
+                          </label>
+                        ))}
+                      </div>
+                    )}
                   </div>
+                  <div className="flex-1 min-w-[120px] relative">
+                    <button
+                      onClick={() => setOpenDropdown(openDropdown === 'year' ? null : 'year')}
+                      className="w-full px-4 py-3 rounded-xl border-2 border-cream-300 focus:border-camel-500 focus:ring-2 focus:ring-camel-200 transition-all bg-white text-left"
+                    >
+                      {filterYears.length > 0 ? `Выбрано: ${filterYears.length}` : 'Годы'}
+                    </button>
+                    {openDropdown === 'year' && (
+                      <div className="absolute z-10 w-full mt-1 bg-white border-2 border-cream-300 rounded-xl shadow-xl max-h-60 overflow-y-auto">
+                        {coursingYears.map(year => (
+                          <label key={year} className="flex items-center px-4 py-2 hover:bg-cream-50 cursor-pointer">
+                            <input
+                              type="checkbox"
+                              checked={filterYears.includes(year)}
+                              onChange={() => toggleFilter('year', year)}
+                              className="mr-2"
+                            />
+                            {year}
+                          </label>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                  {(searchQuery || filterBreeds.length > 0 || filterYears.length > 0) && (
+                    <div className="flex items-end">
+                      <button
+                        onClick={() => {
+                          setSearchQuery('');
+                          setFilterBreeds([]);
+                          setFilterYears([]);
+                        }}
+                        className="px-4 py-3 rounded-xl border-2 border-red-300 text-red-600 hover:bg-red-50 transition-all font-semibold"
+                      >
+                        Сбросить
+                      </button>
+                    </div>
+                  )}
                 </div>
 
                 {/* Таблица бегов борзых */}
