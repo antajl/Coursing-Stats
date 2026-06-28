@@ -10,11 +10,6 @@ function SpeedRecords() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [activeTab, setActiveTab] = useState(() => searchParams.get('tab') || 'table');
 
-  useEffect(() => {
-    const currentTab = searchParams.get('tab') || 'table';
-    setActiveTab(currentTab);
-  }, [searchParams]);
-
   const handleTabChange = (tab) => {
     setActiveTab(tab);
     setSearchParams({ tab });
@@ -224,12 +219,16 @@ function SpeedRecords() {
       }
     });
     
-    setRecords(sorted);
+    return sorted;
   }, [filterYears, filterBreeds, filterSexes, searchQuery, sortField, sortDirection]);
 
+  const filteredRecords = useMemo(() => {
+    return applyFilters(allRecords);
+  }, [allRecords, applyFilters]);
+
   useEffect(() => {
-    applyFilters(allRecords);
-  }, [allRecords]);
+    setRecords(filteredRecords);
+  }, [filteredRecords]);
 
   function toggleFilter(type, value) {
     if (type === 'year') {
