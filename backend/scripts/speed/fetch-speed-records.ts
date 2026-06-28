@@ -123,6 +123,17 @@ function parseXLSX(buffer) {
         const month = String(excelDate.getMonth() + 1).padStart(2, '0');
         const year = excelDate.getFullYear();
         dateStr = `${day}.${month}.${year}`;
+      } else if (typeof dateStr === 'string') {
+        // Нормализация формата даты: заменяем неправильные разделители на точку
+        dateStr = dateStr.replace(/[;,\/\-]/g, '.');
+        // Проверяем формат DD.MM.YYYY и исправляем если нужно
+        const parts = dateStr.split('.');
+        if (parts.length === 3) {
+          const day = String(parts[0]).padStart(2, '0');
+          const month = String(parts[1]).padStart(2, '0');
+          const year = parts[2];
+          dateStr = `${day}.${month}.${year}`;
+        }
       }
       
       const speedRecord = {

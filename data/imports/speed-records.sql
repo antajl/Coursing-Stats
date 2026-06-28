@@ -283,7 +283,7 @@ VALUES (
   'С',
   'Мелодия',
   53,
-  '27;06.2026',
+  '27.06.2026',
   'https://disk.yandex.ru/i/VZyZInEpYU7qNg',
   'normal',
   NULL
