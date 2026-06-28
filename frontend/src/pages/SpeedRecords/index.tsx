@@ -385,19 +385,6 @@ function SpeedRecords() {
           </button>
         </div>
 
-        {/* Отладочная информация */}
-        <div className="bg-yellow-50 border-2 border-yellow-300 rounded-xl p-4 mb-4">
-          <div className="text-sm font-semibold text-yellow-800">DEBUG INFO:</div>
-          <div className="text-xs text-yellow-700">
-            loading: {loading ? 'true' : 'false'} | 
-            error: {error ? 'true' : 'false'} | 
-            speedRecordsData: {speedRecordsData?.length || 0} | 
-            bestSpeedRecords: {bestSpeedRecords?.length || 0} | 
-            filteredRecords: {filteredRecords?.length || 0}
-          </div>
-          {error && <div className="text-xs text-red-600 mt-1">Error: {String(error)}</div>}
-        </div>
-
         {activeTab === 'table' && (
           <div className="space-y-6">
             <div className="flex gap-2 md:gap-4 mb-4 md:mb-6 flex-wrap" ref={dropdownRef}>
