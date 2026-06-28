@@ -13,6 +13,7 @@ function SpeedRecordsStats() {
   const [filterSexes, setFilterSexes] = useState([]);
   const [filterMinSpeed, setFilterMinSpeed] = useState('');
   const [filterMaxSpeed, setFilterMaxSpeed] = useState('');
+  const [searchQuery, setSearchQuery] = useState('');
   
   // Состояние для dropdown menus
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -146,6 +147,14 @@ function SpeedRecordsStats() {
   function applyFilters(data) {
     let filtered = data;
     
+    // Поиск по кличке
+    if (searchQuery) {
+      const query = searchQuery.toLowerCase();
+      filtered = filtered.filter(record => 
+        record.name.toLowerCase().includes(query)
+      );
+    }
+    
     // Фильтр по годам
     if (filterYears.length > 0) {
       filtered = filtered.filter(record => 
@@ -215,6 +224,61 @@ function SpeedRecordsStats() {
     return { breed, count: breedRecords.length, avgSpeed, maxSpeed, avgTime350, bestTime350, names };
   });
   const sortedBreedStats = sortData(breedStats, sortConfig.key);
+
+  // Карта породных средних для сравнения
+  const breedAverageMap = new Map();
+  breedStats.forEach(stat => {
+    breedAverageMap.set(stat.breed, stat.avgSpeed);
+  });
+
+  // Поиск конкретной собаки
+  const searchedDog = searchQuery ? filteredRecords.find(r => 
+    r.name.toLowerCase() === searchQuery.toLowerCase()
+  ) : null;
+
+  // Статистика найденной собаки
+  const dogStats = searchedDog ? (() => {
+    const dogRecords = filteredRecords.filter(r => 
+      r.name.toLowerCase() === searchedDog.name.toLowerCase() &&
+      r.breed === searchedDog.breed &&
+      r.sex === searchedDog.sex
+    );
+    const bestSpeed = Math.max(...dogRecords.map(r => parseFloat(r.speed_km_h)));
+    const avgSpeed = dogRecords.reduce((sum, r) => sum + parseFloat(r.speed_km_h), 0) / dogRecords.length;
+    const breedAvg = breedAverageMap.get(searchedDog.breed) || 0;
+    const diffFromBreedAvg = breedAvg > 0 ? ((bestSpeed - breedAvg) / breedAvg * 100).toFixed(1) : 0;
+    
+    // Процентиль в породе
+    const breedDogs = [...new Set(filteredRecords.filter(r => r.breed === searchedDog.breed).map(r => r.name))];
+    const breedBestSpeeds = breedDogs.map(name => {
+      const dogRecs = filteredRecords.filter(r => r.name === name && r.breed === searchedDog.breed);
+      return Math.max(...dogRecs.map(r => parseFloat(r.speed_km_h)));
+    }).sort((a, b) => b - a);
+    const percentile = breedBestSpeeds.length > 0 
+      ? ((breedBestSpeeds.findIndex(s => s <= bestSpeed) + 1) / breedBestSpeeds.length * 100).toFixed(0)
+      : 0;
+    
+    // Рейтинг в породе
+    const rank = breedBestSpeeds.findIndex(s => s === bestSpeed) + 1;
+    
+    return {
+      ...searchedDog,
+      bestSpeed,
+      avgSpeed,
+      breedAvg,
+      diffFromBreedAvg,
+      percentile,
+      rank,
+      totalInBreed: breedBestSpeeds.length,
+      history: dogRecords.sort((a, b) => {
+        const parseDate = (d) => {
+          const parts = d.split('.');
+          return new Date(parts[2], parts[1] - 1, parts[0]);
+        };
+        return parseDate(a.date) - parseDate(b.date);
+      })
+    };
+  })() : null;
 
   const sexes = [...new Set(filteredRecords.map(r => r.sex))];
   const sexStats = sexes.map(sex => {
@@ -315,6 +379,15 @@ function SpeedRecordsStats() {
 
       {/* Фильтры */}
       <div className="flex gap-2 md:gap-4 mb-6 flex-wrap" ref={dropdownRef}>
+        <div className="flex-1 min-w-[200px]">
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Поиск по кличке..."
+            className="w-full px-4 py-3 rounded-xl border-2 border-cream-300 focus:border-camel-500 focus:ring-2 focus:ring-camel-200 transition-all bg-white"
+          />
+        </div>
         <div className="flex-1 min-w-[120px] relative">
           <button
             onClick={() => setOpenDropdown(openDropdown === 'year' ? null : 'year')}
@@ -413,6 +486,68 @@ function SpeedRecordsStats() {
           </div>
         )}
       </div>
+
+      {/* Статистика найденной собаки */}
+      {dogStats && (
+        <div className="bg-white rounded-xl border-2 border-cream-300 p-6 shadow-sm">
+          <h2 className="text-xl lg:text-2xl font-bold text-charcoal-900 mb-4">
+            Статистика: {dogStats.name} ({dogStats.breed})
+          </h2>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+            <div className="bg-cream-50 rounded-xl p-4">
+              <div className="text-sm font-semibold text-old-money-600 mb-1">Лучшая скорость</div>
+              <div className="text-2xl font-bold text-camel-700">{dogStats.bestSpeed} км/ч</div>
+            </div>
+            <div className="bg-cream-50 rounded-xl p-4">
+              <div className="text-sm font-semibold text-old-money-600 mb-1">Средняя скорость</div>
+              <div className="text-2xl font-bold text-charcoal-900">{dogStats.avgSpeed.toFixed(1)} км/ч</div>
+            </div>
+            <div className="bg-cream-50 rounded-xl p-4">
+              <div className="text-sm font-semibold text-old-money-600 mb-1">Среднее по породе</div>
+              <div className="text-2xl font-bold text-charcoal-900">{dogStats.breedAvg.toFixed(1)} км/ч</div>
+            </div>
+            <div className="bg-cream-50 rounded-xl p-4">
+              <div className="text-sm font-semibold text-old-money-600 mb-1">Отличие от среднего</div>
+              <div className={`text-2xl font-bold ${parseFloat(dogStats.diffFromBreedAvg) >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+                {parseFloat(dogStats.diffFromBreedAvg) >= 0 ? '+' : ''}{dogStats.diffFromBreedAvg}%
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-2 gap-4 mb-6">
+            <div className="bg-cream-50 rounded-xl p-4">
+              <div className="text-sm font-semibold text-old-money-600 mb-1">Рейтинг в породе</div>
+              <div className="text-2xl font-bold text-camel-700">#{dogStats.rank} из {dogStats.totalInBreed}</div>
+            </div>
+            <div className="bg-cream-50 rounded-xl p-4">
+              <div className="text-sm font-semibold text-old-money-600 mb-1">Процентиль</div>
+              <div className="text-2xl font-bold text-camel-700">Топ {100 - dogStats.percentile}%</div>
+            </div>
+          </div>
+
+          {/* График прогресса */}
+          <div>
+            <h3 className="text-lg font-bold text-charcoal-900 mb-3">Прогресс во времени</h3>
+            <div className="space-y-2">
+              {dogStats.history.map((record, idx) => (
+                <div key={idx} className="flex items-center gap-4">
+                  <div className="w-24 text-sm text-charcoal-700 text-right">{record.date}</div>
+                  <div className="flex-1 bg-cream-200 rounded-full h-6 overflow-hidden relative">
+                    <div 
+                      className="bg-gradient-to-r from-camel-400 to-camel-600 h-full rounded-full transition-all duration-500"
+                      style={{ width: `${(parseFloat(record.speed_km_h) / 80) * 100}%` }}
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center text-sm font-bold text-charcoal-900">
+                      {record.speed_km_h} км/ч
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Контент вкладок */}
       {statsTab === 'overview' && (
