@@ -234,23 +234,9 @@ function parseXLSX(buffer) {
 
   console.log(`Parsed ${records.length} speed records from ${workbook.SheetNames.length} sheets`);
   
-  // Дедупликация записей по уникальному ключу
-  const uniqueRecords = [];
-  const seenKeys = new Set();
-  
-  for (const record of records) {
-    const key = `${record.name}_${record.breed}_${record.sex}_${record.speed_km_h}_${record.date}`;
-    if (!seenKeys.has(key)) {
-      seenKeys.add(key);
-      uniqueRecords.push(record);
-    }
-  }
-  
-  console.log(`After deduplication: ${uniqueRecords.length} unique records (removed ${records.length - uniqueRecords.length} duplicates)`);
-  
   // Группируем записи по имени собаки для формирования истории
   const recordsByDog = {};
-  uniqueRecords.forEach(record => {
+  records.forEach(record => {
     const key = `${record.name}_${record.breed}_${record.sex}`;
     if (!recordsByDog[key]) {
       recordsByDog[key] = [];
@@ -284,7 +270,7 @@ function parseXLSX(buffer) {
     });
   });
   
-  return uniqueRecords;
+  return records;
 }
 
 function esc(value) {
@@ -294,12 +280,12 @@ function esc(value) {
 }
 
 function generateSQL(records) {
-  const lines = ["-- speed_records", "DELETE FROM speed_records;"];
+  const lines = ["-- speed_records", "-- Insert or update records (no DELETE)"];
 
   for (const record of records) {
     const historyJson = record.history && record.history.length > 0 ? JSON.stringify(record.history) : null;
     lines.push(`
-INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
+INSERT OR REPLACE INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
 VALUES (
   ${esc(record.breed)},
   ${esc(record.sex)},

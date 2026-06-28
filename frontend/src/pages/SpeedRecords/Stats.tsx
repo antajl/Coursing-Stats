@@ -619,36 +619,6 @@ function SpeedRecordsStats() {
             </div>
           </div>
 
-          {/* Топ собак по скорости */}
-          <div className="bg-white rounded-xl border-2 border-cream-300 p-6 shadow-sm">
-            <h2 className="text-xl lg:text-2xl font-bold text-charcoal-900 mb-4">Топ 20 собак по скорости</h2>
-            <div className="overflow-x-auto">
-              <table className="w-full min-w-[600px]">
-                <thead>
-                  <tr className="border-b-2 border-cream-300">
-                    <th className="px-4 py-3 text-center font-semibold text-charcoal-900">#</th>
-                    <th className="px-4 py-3 text-left font-semibold text-charcoal-900">Кличка</th>
-                    <th className="px-4 py-3 text-left font-semibold text-charcoal-900">Порода</th>
-                    <th className="px-4 py-3 text-center font-semibold text-charcoal-900">Пол</th>
-                    <th className="px-4 py-3 text-center font-semibold text-charcoal-900">Скорость</th>
-                    <th className="px-4 py-3 text-center font-semibold text-charcoal-900">Дата</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {topDogs.map((dog, idx) => (
-                    <tr key={idx} className="border-b border-cream-200 hover:bg-cream-50">
-                      <td className="px-4 py-3 text-center font-bold text-camel-700">{idx + 1}</td>
-                      <td className="px-4 py-3 font-semibold text-charcoal-900">{dog.name}</td>
-                      <td className="px-4 py-3 text-charcoal-700">{dog.breed}</td>
-                      <td className="px-4 py-3 text-center text-charcoal-700">{dog.sex === 'С' ? 'Сука' : dog.sex === 'К' ? 'Кабель' : dog.sex}</td>
-                      <td className="px-4 py-3 text-center text-camel-700 font-bold">{dog.speed_km_h} км/ч</td>
-                      <td className="px-4 py-3 text-center text-charcoal-700">{dog.date}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
         </>
       )}
 
