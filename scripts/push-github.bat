@@ -41,7 +41,7 @@ git push
 REM Always update remote D1 database (even if no code changes)
 echo.
 echo Updating remote D1 database with coursing records...
-node backend\scripts\speed\fetch-coursing-records.mjs --remote
+npx tsx backend\scripts\speed\fetch-coursing-records.ts --remote
 
 echo.
 echo Done!

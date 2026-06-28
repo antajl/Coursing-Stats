@@ -148,7 +148,22 @@
 
 ### Source Data
 - **URL:** http://procoursing.ru/2026/[date]_Complete_Results_Coursing.html
-- **Парсер:** `backend/parsers/parse-results-coursing.mjs`
+- **Парсер:** `backend/parsers/coursing/index.ts` (модульная версия)
+- **Fallback:** `backend/parsers/parse-results-coursing.ts` (старая версия)
+
+### Модульная структура
+
+**Файлы:**
+- `parsers/coursing/utils.ts` - утилиты (extractNumber, normalizeDogName, etc.)
+- `parsers/coursing/row-parsers.ts` - парсинг строк (parseDogRow1Judge, parseDogRow2Judges)
+- `parsers/coursing/header-parsers.ts` - парсинг заголовков (extractJudgeCount)
+- `parsers/coursing/schemas.ts` - Zod схемы для валидации
+- `parsers/coursing/index.ts` - модульный парсер с валидацией
+
+**Функции:**
+- `parseCoursingHTML(html)` - базовый парсинг
+- `parseCoursingHTMLWithValidation(html)` - парсинг с Zod валидацией
+- `parseCoursingResultsPage(url)` - парсинг по URL
 
 ### HTML Structure
 
@@ -375,7 +390,20 @@
 
 ### Source Data
 - **URL:** http://procoursing.ru/2026/[date]_Complete_Results_BZMP.html
-- **Парсер:** `backend/parsers/parse-results-bzmp.mjs`
+- **Парсер:** `backend/parsers/bzmp/index.ts` (модульная версия)
+- **Fallback:** `backend/parsers/parse-results-bzmp.ts` (старая версия)
+
+### Модульная структура
+
+**Файлы:**
+- `parsers/bzmp/row-parsers.ts` - парсинг строк для БЗМП
+- `parsers/bzmp/schemas.ts` - Zod схемы для БЗМП
+- `parsers/bzmp/index.ts` - модульный парсер с валидацией
+
+**Функции:**
+- `parseBzmpHTML(html)` - базовый парсинг
+- `parseBzmpHTMLWithValidation(html)` - парсинг с Zod валидацией
+- `parseBzmpResultsPage(url)` - парсинг по URL
 
 ### Особенности формата
 - Метрики: Судейские оценки (как в курсинге)
@@ -411,7 +439,20 @@
 
 ### Source Data
 - **URL:** http://procoursing.ru/2026/[date]_Complete_Results_Racing.html
-- **Парсер:** `backend/parsers/parse-results-racing.mjs`
+- **Парсер:** `backend/parsers/racing/index.ts` (модульная версия)
+- **Fallback:** `backend/parsers/parse-results-racing.ts` (старая версия)
+
+### Модульная структура
+
+**Файлы:**
+- `parsers/racing/row-parsers.ts` - парсинг строк для рейсинга (время, скорость)
+- `parsers/racing/schemas.ts` - Zod схемы для рейсинга
+- `parsers/racing/index.ts` - модульный парсер с валидацией
+
+**Функции:**
+- `parseRacingHTML(html)` - базовый парсинг
+- `parseRacingHTMLWithValidation(html)` - парсинг с Zod валидацией
+- `parseRacingResultsPage(url)` - парсинг по URL
 
 ### Особенности формата
 - Метрики: Время и скорость (не судейские оценки как в курсинге)
@@ -447,16 +488,43 @@
 
 ---
 
+## Unique Parsing (уникальные турниры)
+
+### Source Data
+- **URL:** http://procoursing.ru/2026/[date]_Complete_Results_[Type].html
+- **Парсер:** `backend/parsers/unique/index.ts` (модульная версия)
+
+### Модульная структура
+
+**Файлы:**
+- `parsers/unique/row-parsers.ts` - гибкий парсинг для нестандартных форматов
+- `parsers/unique/schemas.ts` - Zod схемы для уникальных турниров
+- `parsers/unique/index.ts` - модульный парсер с валидацией
+
+**Функции:**
+- `parseUniqueHTML(html)` - базовый парсинг
+- `parseUniqueHTMLWithValidation(html)` - парсинг с Zod валидацией
+- `parseUniqueResultsPage(url)` - парсинг по URL
+
+### Особенности
+- Гибкий парсинг для нестандартных форматов турниров
+- Автоматическое определение структуры таблицы
+- Поддержка различных форматов колонок
+- Используется для турниров категории "other" (Кубок Котейки Глюка, Тройки и т.д.)
+
+---
+
 ## Сравнение форматов
 
-| Характеристика | Coursing | BZMP | Racing |
-|---------------|----------|------|--------|
-| Колонок | 25 | 25 | 18 |
-| rowspan | Да (2) | Да (2) | Нет |
-| Метрики | Судейские оценки | Судейские оценки | Время/скорость |
-| Забеги | 2 | 2 | До 3 |
-| Дистанция | Нет | Нет | Да |
-| Попоны | Нет | Нет | Да |
+| Характеристика | Coursing | BZMP | Racing | Unique |
+|---------------|----------|------|--------|--------|
+| Колонок | 25 | 25 | 18 | Переменная |
+| rowspan | Да (2) | Да (2) | Нет | Переменная |
+| Метрики | Судейские оценки | Судейские оценки | Время/скорость | Переменные |
+| Забеги | 2 | 2 | До 3 | Переменные |
+| Дистанция | Нет | Нет | Да | Переменная |
+| Попоны | Нет | Нет | Да | Переменные |
+| Парсер | `parsers/coursing/index.ts` | `parsers/bzmp/index.ts` | `parsers/racing/index.ts` | `parsers/unique/index.ts` |
 
 ---
 
@@ -527,6 +595,44 @@ node backend/parsers/parse-results-racing.mjs <url>
 Перед изменением парсера — прогони `node backend/scripts/test-parser.mjs`
 
 Текущий тест использует синтетические данные. ОБЯЗАТЕЛЬНО прогнать на 5-10 реальных страницах разных лет.
+
+---
+
+## Перепарсинг после изменений
+
+### Универсальный скрипт по годам
+```bash
+# Перепарсинг всех событий года
+npm run reparse-2026
+npm run reparse-2025
+npm run reparse-2024
+npm run reparse-2023
+
+# Перепарсинг только определенного типа событий
+npm run reparse-2026-coursing
+npm run reparse-2026-bzmp
+npm run reparse-2026-racing
+```
+
+Или напрямую:
+```bash
+node backend/scripts/reparse/reparse-by-year.mjs 2026
+node backend/scripts/reparse/reparse-by-year.mjs 2026 coursing
+```
+
+### Специализированные скрипты (legacy)
+```bash
+npm run reparse-coursing
+npm run reparse-bzmp
+npm run reparse-racing
+```
+
+### Применение изменений к базе данных
+```bash
+wrangler d1 execute pc-db --remote --file=./data/updates/reparse-2026.sql
+```
+
+**ВАЖНО:** Изменения в парсерах не применяются автоматически к существующим данным в базе. Необходимо всегда перезапускать парсинг и обновлять базу после изменений логики извлечения данных.
 
 ---
 

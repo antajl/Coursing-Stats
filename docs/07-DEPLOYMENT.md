@@ -62,7 +62,7 @@
 
 **Worker name:** `procoursing-stats`
 
-**Main:** `backend/src/worker.js`
+**Main:** `backend/src/worker.ts`
 
 **Compatibility date:** 2024-01-01
 
@@ -78,11 +78,8 @@
 
 ```toml
 name = "procoursing-stats"
-main = "backend/src/worker.js"
+main = "backend/src/worker.ts"
 compatibility_date = "2024-01-01"
-
-[vars]
-ADMIN_TOKEN = "your-secret-token"
 
 [[d1_databases]]
 binding = "DB"
@@ -90,8 +87,8 @@ database_name = "pc-db"
 database_id = "a5d6d4ad-7fc5-41b4-a33b-05f4daa382d4"
 ```
 
-**Environment Variables:**
-- `ADMIN_TOKEN` — токен для авторизации admin endpoints (например, `/api/admin/import-results`)
+**Secrets:**
+- `ADMIN_API_TOKEN` — токен для авторизации admin endpoints (хранится как секрет в Cloudflare через `wrangler secret put ADMIN_API_TOKEN`)
 
 ### GitHub Actions
 
@@ -157,6 +154,12 @@ npx wrangler d1 execute pc-db --local --file=script.sql
 - Push в `main`
 - Manual dispatch
 
+**Процесс:**
+1. Checkout кода
+2. Установка зависимостей
+3. Build фронтенда (`cd frontend && npm run build`)
+4. Деплой на Cloudflare Pages через Wrangler
+
 #### update-db.yml
 
 Обновление D1 базы данных.
@@ -165,7 +168,15 @@ npx wrangler d1 execute pc-db --local --file=script.sql
 - Cron: понедельник 02:00 UTC
 - Manual dispatch
 
-**Скрипт:** `backend/scripts/ci-update-db.mjs`
+**Скрипт:** `backend/scripts/ci/ci-update-db.mjs`
+
+**Процесс:**
+1. Checkout кода
+2. Установка зависимостей
+3. Скрапинг индекса событий текущего года
+4. Загрузка событий в D1
+5. Загрузка результатов в D1
+6. Синк local → remote D1
 
 #### update-speed-records.yml
 
@@ -175,13 +186,26 @@ npx wrangler d1 execute pc-db --local --file=script.sql
 - Cron: ежедневно 03:00 UTC
 - Manual dispatch
 
-**Скрипт:** `backend/scripts/speed/fetch-speed-records.mjs`
+**Скрипт:** `backend/scripts/speed/fetch-speed-records-pdf.py`
+
+**Процесс:**
+1. Checkout кода
+2. Установка Python зависимостей (pymupdf, requests)
+3. Загрузка PDF из Google Sheets
+4. Парсинг PDF с извлечением цветов и текста
+5. Обновление таблицы `speed_records` в D1
+6. Определение статусов "new" и "improved" на основе истории
 
 ### Secrets
 
 **Required:**
-- `CLOUDFLARE_API_TOKEN` — API токен Cloudflare
+- `CLOUDFLARE_API_TOKEN` — API токен Cloudflare (с правами D1 и Workers)
 - `CLOUDFLARE_ACCOUNT_ID` — ID аккаунта Cloudflare
+
+**Настройка:**
+1. GitHub Repository → Settings → Secrets and variables → Actions
+2. New repository secret
+3. Добавить оба секрета
 
 ---
 

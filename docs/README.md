@@ -93,12 +93,12 @@
 **Статус:** Полностью рабочий, развернут на Cloudflare (Pages + Worker + D1).
 
 **Технический стек:**
-- Backend: Cloudflare Worker (API), Cloudflare D1 (SQLite), Node.js (скраперы/парсеры)
-- Frontend: React, Vite, TailwindCSS, shadcn/ui, Lucide, xlsx
+- Backend: Cloudflare Worker (API), Cloudflare D1 (SQLite), TypeScript, Node.js (скраперы/парсеры)
+- Frontend: React, Vite, TailwindCSS, shadcn/ui, Lucide, xlsx, TypeScript
 - Деплой: Cloudflare Pages (фронтенд), Cloudflare Workers (бэкенд), Cloudflare D1 (база данных)
 
 **Данные:**
-- events: 302
+- events: 219 (2023-2026)
 - dogs: ~1579
 - results: 4639
 - speed_records: данные из Google Sheets (автообновление)

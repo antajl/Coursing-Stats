@@ -23,7 +23,7 @@ Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Ori
 #### POST /api/admin/import-results
 Загрузка результатов соревнований в базу данных.
 
-**Авторизация:** Требуется заголовок `X-Admin-Token` со значением ADMIN_TOKEN
+**Авторизация:** Требуется заголовок `X-Admin-Token` со значением ADMIN_API_TOKEN (хранится как секрет в Cloudflare)
 
 **Тело запроса:**
 ```json
@@ -288,23 +288,23 @@ GET /api/breeds
 }
 ```
 
-### Events
+### Competitions
 
-#### GET /api/events
-Список событий с фильтром по году.
+#### GET /api/competitions
+Список соревнований с фильтром по году.
 
 **Параметры:**
 - `year` (опционально) — фильтр по году
 
 **Пример:**
 ```
-GET /api/events?year=2025
+GET /api/competitions?year=2025
 ```
 
 **Ответ:**
 ```json
 {
-  "events": [
+  "competitions": [
     {
       "id": 1,
       "year": 2025,
@@ -322,12 +322,12 @@ GET /api/events?year=2025
 }
 ```
 
-#### GET /api/events/:id
-Детальная информация о событии.
+#### GET /api/competitions/:id
+Детальная информация о соревновании.
 
 **Пример:**
 ```
-GET /api/events/1
+GET /api/competitions/1
 ```
 
 **Ответ:**
@@ -349,12 +349,12 @@ GET /api/events/1
 }
 ```
 
-#### GET /api/events/:id/results
-Результаты события.
+#### GET /api/competitions/:id/results
+Результаты соревнования.
 
 **Пример:**
 ```
-GET /api/events/1/results
+GET /api/competitions/1/results
 ```
 
 **Ответ:**
@@ -372,6 +372,35 @@ GET /api/events/1/results
       "qualification": "CACL, RegCACL",
       "status": "finished",
       "raw_scores_json": "{...}"
+    }
+  ]
+}
+```
+
+#### GET /api/dogs/:id/competitions
+Список соревнований собаки.
+
+**Пример:**
+```
+GET /api/dogs/1/competitions
+```
+
+**Ответ:**
+```json
+{
+  "competitions": [
+    {
+      "event_id": 1,
+      "date_start": "2025-04-04",
+      "date_end": null,
+      "title": "Чемпионат РКФ по курсингу",
+      "event_type": "coursing",
+      "competition_kind": "Чемпионат РКФ",
+      "results_url": "http://procoursing.ru/...",
+      "location": "Москва",
+      "placement": 1,
+      "total_score": 95.5,
+      "status": "finished"
     }
   ]
 }
@@ -497,7 +526,9 @@ GET /api/years
 }
 ```
 
-### Admin Endpoints
+---
+
+## Admin Endpoints
 
 #### POST /api/admin/recreate-views
 Пересоздание view'ов в БД.

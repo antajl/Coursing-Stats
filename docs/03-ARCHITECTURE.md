@@ -55,6 +55,15 @@ Cloudflare Pages (фронтенд: React)
 
 ### 3. Worker (API)
 
+**Entry point:** `backend/src/worker.js` (~93 строки)
+
+**Architecture:**
+- Тонкий диспетчер, делегирует в `src/routes/`
+- CORS с wildcard для всех запросов
+- Логирование всех запросов
+- Обработка OPTIONS для CORS preflight
+
+**Routes:**
 ```javascript
 GET /api/top/placement?breed=&year=&minStarts=
 GET /api/top/score?breed=&year=&minStarts=
@@ -62,8 +71,17 @@ GET /api/top/speed?breed=&year=&minStarts=
 GET /api/dogs/:id
 GET /api/breeds
 GET /api/years
-GET /api/events?year=
+GET /api/competitions?year=
+GET /api/competitions/:id
+GET /api/competitions/:id/results
+GET /api/dogs/:id/competitions
 GET /api/speed-records?breed=&sex=&limit=&offset=
+GET /api/judges?breed=&discipline=
+GET /api/judges/:id/details
+POST /api/admin/import-results
+POST /api/admin/delete-results/:eventId
+POST /api/admin/reparse-coursing
+POST /api/admin/recreate-views
 ```
 
 **Dog Profile API Response Structure:**
@@ -96,10 +114,16 @@ GET /api/speed-records?breed=&sex=&limit=&offset=
 **Directory:** `frontend/src/`
 
 **Pages:**
-- `/` — главная страница с навигацией
+- `/` — главная страница с навигацией (Procoursing.jsx)
 - `/top/placement` — топ по местам (медальный зачёт)
 - `/top/score` — топ по очкам
 - `/events` — календарь событий
+- `/events/:id` — результаты события
+- `/dogs/:id` — профиль собаки
+- `/judges` — список судей
+- `/judges/:judgeId` — детальная страница судьи
+- `/speed-records` — рекорды Донино (таблица)
+- `/speed-records/stats` — статистика рекордов
 
 **Components:**
 - `frontend/src/components/DogTooltip.jsx` — tooltip с раздельной статистикой курсинга и бегов (сайд-бай-сайд layout)
@@ -243,11 +267,17 @@ GET /api/speed-records?breed=&sex=&limit=&offset=
 
 ### Frontend stack
 - React + Vite
-- TailwindCSS
+- TailwindCSS (адаптивный дизайн с брейкпоинтами md:)
 - shadcn/ui
 - Lucide (иконки)
 - xlsx (Excel export)
 - html-to-image (скриншоты карточек)
+
+**Мобильная адаптивность:**
+- Полная адаптация всех страниц для мобильных устройств
+- Таблицы заменены на карточки на мобильных
+- Фильтры адаптированы для touch-интерфейса
+- Контент использует responsive контейнеры
 
 ## Deployment State
 
@@ -260,7 +290,7 @@ GET /api/speed-records?breed=&sex=&limit=&offset=
 - Активен, cron: понедельник 02:00 UTC
 
 **Cloudflare D1:** `pc-db` (~21 MB)
-- events: 219
+- events: 219 (2023–2026)
 - dogs: ~1579
-- results: 4639 (2023–2026)
+- results: 4639
 - speed_records: данные из Google Sheets (автообновление)

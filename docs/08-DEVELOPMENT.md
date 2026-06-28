@@ -9,31 +9,31 @@
 ```
 backend/
 ├── src/
-│   ├── worker.js              # Cloudflare Worker entry point
+│   ├── worker.js              # Cloudflare Worker entry point (~93 строки)
 │   └── routes/                # API endpoints
-│       ├── admin.js           # Admin endpoints
+│       ├── admin.js           # Admin endpoints (import-results, delete-results, recreate-views)
 │       ├── events.js           # Events & results (renamed from competitions.js)
 │       ├── dogs.js            # Dog profiles
 │       ├── judges.js          # Judges statistics
 │       ├── speed.js           # Speed records
-│       └── top.js             # Top ratings
+│       └── top.js             # Top ratings (placement, score, speed)
 ├── parsers/                   # Data parsers
-│   ├── parse-results-coursing.mjs
-│   ├── parse-results-bzmp.mjs
-│   └── parse-results-racing.mjs
-├── scripts/                   # Data loading scripts
+│   ├── parse-results-coursing.mjs  # Coursing parser (~39 KB)
+│   ├── parse-results-bzmp.mjs      # BZMP parser (~30 KB)
+│   └── parse-results-racing.mjs    # Racing parser (~14 KB)
+├── scripts/                   # Data loading scripts (organized by folders)
 │   ├── scrape/                # Scraping scripts
 │   │   └── scrape-year-index.mjs
 │   ├── load/                  # Load scripts
 │   │   ├── load-events.mjs
 │   │   └── load-results.mjs
-│   ├── reparse/               # Reparse scripts
+│   ├── reparse/               # Reparse scripts (after parser changes)
 │   │   ├── reparse-bzmp-events.mjs
 │   │   ├── reparse-coursing-events.mjs
 │   │   └── reparse-racing-events.mjs
 │   ├── migrate/               # Migration scripts
 │   │   └── migrate-normalize-dog-names.mjs
-│   ├── sync/                  # Sync scripts
+│   ├── sync/                  # Sync scripts (local ↔ remote)
 │   │   └── sync-local-to-remote.mjs
 │   ├── update/                # Update scripts
 │   │   ├── update-current-year.mjs
@@ -43,7 +43,7 @@ backend/
 │   │   └── fetch-speed-records-pdf.py
 │   ├── test/                  # Test scripts
 │   │   └── test-parser.mjs
-│   ├── ci/                    # CI/CD scripts
+│   ├── ci/                    # CI/CD scripts (GitHub Actions)
 │   │   └── ci-update-db.mjs
 │   └── archive/               # One-time scripts (DO NOT REUSE)
 ├── lib/                       # Common modules
@@ -158,9 +158,16 @@ npm run parse-bzmp             # Parse BZMP results
 npm run parse-racing           # Parse racing results
 npm run load-events            # Load events to D1
 npm run load-results           # Load results to D1
-npm run reparse-bzmp           # Reparse BZMP events
-npm run reparse-coursing       # Reparse coursing events
-npm run reparse-racing         # Reparse racing events
+npm run reparse-bzmp           # Reparse BZMP events (legacy)
+npm run reparse-coursing       # Reparse coursing events (legacy)
+npm run reparse-racing         # Reparse racing events (legacy)
+npm run reparse-2023           # Reparse all 2023 events
+npm run reparse-2024           # Reparse all 2024 events
+npm run reparse-2025           # Reparse all 2025 events
+npm run reparse-2026           # Reparse all 2026 events
+npm run reparse-2026-coursing  # Reparse 2026 coursing events only
+npm run reparse-2026-bzmp      # Reparse 2026 BZMP events only
+npm run reparse-2026-racing    # Reparse 2026 racing events only
 npm run ci-update-db           # Increment current year → remote D1
 npm run migrate-dog-names      # Normalize dog names in local D1
 npm run sync-to-remote         # Full sync local D1 → remote
@@ -296,6 +303,73 @@ build: {
   chunkSizeWarningLimit: 1000
 }
 ```
+
+---
+
+## Мобильная адаптивность
+
+### Обзор
+Сайт полностью адаптирован для мобильных устройств с использованием TailwindCSS брейкпоинтов (`md:`).
+
+### Реализация
+
+**App.jsx:**
+- Мобильная шапка с лого слева и кнопкой меню справа
+- Контент на всю ширину экрана на мобильных
+- Убран футер
+
+**Страницы:**
+
+**Events/index.jsx:**
+- Карточки вместо таблицы на мобильных
+- Фильтр по годам вынесен из "больше фильтров"
+- Поиск и фильтры на разных строках на мобильных
+- Легенда дисциплин скрыта на мобильных
+
+**Judges/index.jsx:**
+- Карточки с именем судьи и статистикой в grid 2x2 на мобильных
+
+**SpeedRecords/index.jsx:**
+- Карточки с кличкой, породой, полом, датой и скоростью на мобильных
+
+**DogStatsTable.jsx (TopDogs):**
+- Карточки с кличкой и статистикой в зависимости от типа (места/очки/скорость)
+- Медали в карточках отображаются в одну строку (grid-cols-4)
+
+**DogProfile.jsx:**
+- Уменьшенные отступы и размеры на мобильных
+- Стрелочка "←" скрыта на мобильных
+
+**Procoursing.jsx:**
+- Табы с flex-wrap и min-width
+- Вкладки вертикальные с сокращёнными названиями на мобильных
+
+**SpeedRecords/Stats.jsx:**
+- Фильтры с flex-wrap
+- Grid 2x2 на мобильных
+
+**Judges/JudgeDetail.jsx:**
+- Адалтивные фильтры и таблицы с overflow-x-auto
+- Статистика по породам и критериям: карточки на мобильных, таблицы на десктопе
+- Стрелочки "←" скрыты на мобильных
+
+**Events/EventResults.jsx:**
+- Детальные оценки: карточки для каждого забега на мобильных
+- Причины отстранения под именем на мобильных, справа на десктопе
+- Стрелочка "←" скрыта на мобильных
+
+**DogTooltip.jsx:**
+- Ширина 320px на мобильных, 440px на десктопе
+
+**FiltersDropdown.jsx:**
+- Ширина 320px на мобильных, 600px на десктопе
+
+### Технические детали
+
+- Все изменения используют Tailwind брейкпоинты (`md:`) для сохранения десктопного вида
+- Таблицы на мобильных заменены на карточки с `md:hidden` / `hidden md:block`
+- Фильтры используют `flex-wrap` и `min-w-*` для адаптивности
+- Контент использует `w-full md:max-w-7xl` и `px-2 sm:px-4 md:px-6 lg:px-8`
 
 ---
 
