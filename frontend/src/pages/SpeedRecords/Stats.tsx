@@ -245,10 +245,25 @@ function SpeedRecordsStats() {
   const allBreeds = [...new Set(records.map(r => r.breed))].sort();
   const allSexes = [...new Set(records.map(r => r.sex))].sort();
   
-  // Топ собак по скорости
-  const topDogs = [...filteredRecords]
-    .sort((a, b) => parseFloat(b.speed_km_h) - parseFloat(a.speed_km_h))
-    .slice(0, 20);
+  // Топ собак по скорости - только лучшие результаты для каждой собаки
+  const topDogs = (() => {
+    const dogsMap = new Map();
+    
+    // Группируем по собаке и сохраняем только лучший результат
+    filteredRecords.forEach(record => {
+      const key = `${record.name}_${record.breed}_${record.sex}`;
+      const currentBest = dogsMap.get(key);
+      
+      if (!currentBest || parseFloat(record.speed_km_h) > parseFloat(currentBest.speed_km_h)) {
+        dogsMap.set(key, record);
+      }
+    });
+    
+    // Получаем массив лучших результатов и сортируем по скорости
+    return Array.from(dogsMap.values())
+      .sort((a, b) => parseFloat(b.speed_km_h) - parseFloat(a.speed_km_h))
+      .slice(0, 20);
+  })();
 
   const hasActiveFilters = filterYears.length > 0 || filterBreeds.length > 0 || filterSexes.length > 0 || filterMinSpeed || filterMaxSpeed;
 
