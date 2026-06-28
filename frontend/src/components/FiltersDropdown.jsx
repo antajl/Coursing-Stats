@@ -49,8 +49,8 @@ export default function FiltersDropdown({ children, onReset, label = 'Больш
       </button>
 
       {open && (
-        <div className="absolute right-0 mt-2 w-[600px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl border-2 border-old-money-200 z-50 overflow-visible">
-          <div className="p-6 max-h-[80vh] overflow-y-auto">
+        <div className="absolute right-0 mt-2 w-[320px] md:w-[600px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl border-2 border-old-money-200 z-50 overflow-visible">
+          <div className="p-4 md:p-6 max-h-[80vh] overflow-y-auto">
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-xl font-bold text-charcoal-800">Фильтры</h2>
               <button

@@ -211,10 +211,10 @@ export default function TopDogs() {
       )}
 
       {/* Tabs section */}
-      <div className="mb-4 flex gap-2">
+      <div className="mb-4 flex gap-2 flex-wrap">
         <button
           onClick={() => setActiveTab('placement')}
-          className={`px-6 py-3 rounded-xl font-bold transition-all duration-300 ${
+          className={`flex-1 min-w-[120px] px-4 py-3 rounded-xl font-bold transition-all duration-300 ${
             activeTab === 'placement' 
               ? 'bg-camel-600 text-white shadow-lg' 
               : 'bg-white border-2 border-cream-300 text-charcoal-700 hover:bg-cream-50'
@@ -224,7 +224,7 @@ export default function TopDogs() {
         </button>
         <button
           onClick={() => setActiveTab('score')}
-          className={`px-6 py-3 rounded-xl font-bold transition-all duration-300 ${
+          className={`flex-1 min-w-[120px] px-4 py-3 rounded-xl font-bold transition-all duration-300 ${
             activeTab === 'score' 
               ? 'bg-camel-600 text-white shadow-lg' 
               : 'bg-white border-2 border-cream-300 text-charcoal-700 hover:bg-cream-50'
@@ -234,7 +234,7 @@ export default function TopDogs() {
         </button>
         <button
           onClick={() => setActiveTab('speed')}
-          className={`px-6 py-3 rounded-xl font-bold transition-all duration-300 ${
+          className={`flex-1 min-w-[120px] px-4 py-3 rounded-xl font-bold transition-all duration-300 ${
             activeTab === 'speed' 
               ? 'bg-camel-600 text-white shadow-lg' 
               : 'bg-white border-2 border-cream-300 text-charcoal-700 hover:bg-cream-50'
@@ -245,43 +245,44 @@ export default function TopDogs() {
       </div>
       
       {/* Search and filters section */}
-      <div className="mb-4 flex gap-3 items-center">
+      <div className="mb-4 flex flex-col md:flex-row gap-3 items-stretch">
         <input
           type="text"
           placeholder="Поиск по кличке, породе или количеству участий..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="flex-1 min-w-64 h-12 px-5 py-3 bg-white border-2 border-old-money-300 rounded-xl text-old-money-800 focus:ring-2 focus:ring-gold-400 focus:border-transparent transition-all duration-300 shadow-sm"
+          className="flex-1 h-12 px-5 py-3 bg-white border-2 border-old-money-300 rounded-xl text-old-money-800 focus:ring-2 focus:ring-gold-400 focus:border-transparent transition-all duration-300 shadow-sm"
         />
 
-        <FiltersDropdown onReset={handleResetFilters}>
-          <div className="flex gap-3 items-center">
-            <div className="flex-1">
-              <select
-                value={filterYear}
-                onChange={(e) => setFilterYear(e.target.value)}
-                className="w-full h-12 px-4 py-3 bg-white border-2 border-old-money-300 rounded-xl text-old-money-800 focus:ring-2 focus:ring-gold-400 focus:border-transparent transition-all duration-300"
-                disabled={loadingFilters}
-              >
-                <option value="">Все года</option>
-                {years.map((y) => (
-                  <option key={y.year} value={y.year} className="text-gray-900">{y.year}</option>
-                ))}
-              </select>
-            </div>
+        <div className="flex gap-3">
+          <div className="min-w-[120px] flex-1">
+            <select
+              value={filterYear}
+              onChange={(e) => setFilterYear(e.target.value)}
+              className="w-full h-12 px-4 py-3 bg-white border-2 border-old-money-300 rounded-xl text-old-money-800 focus:ring-2 focus:ring-gold-400 focus:border-transparent transition-all duration-300"
+              disabled={loadingFilters}
+            >
+              <option value="">Все года</option>
+              {years.map((y) => (
+                <option key={y.year} value={y.year} className="text-gray-900">{y.year}</option>
+              ))}
+            </select>
+          </div>
 
-            <div className="flex-1">
-              <select
-                value={filterBreed}
-                onChange={(e) => setFilterBreed(e.target.value)}
-                className="w-full h-12 px-4 py-3 bg-white border-2 border-old-money-300 rounded-xl text-old-money-800 focus:ring-2 focus:ring-gold-400 focus:border-transparent transition-all duration-300"
-              >
-                <option value="">Все породы</option>
-                {breeds.map((b) => (
-                  <option key={b.breed} value={b.breed} className="text-gray-900">{b.breed}</option>
-                ))}
-              </select>
-            </div>
+          <FiltersDropdown onReset={handleResetFilters}>
+            <div className="flex gap-3 items-center flex-wrap">
+              <div className="flex-1 min-w-[150px]">
+                <select
+                  value={filterBreed}
+                  onChange={(e) => setFilterBreed(e.target.value)}
+                  className="w-full h-12 px-4 py-3 bg-white border-2 border-old-money-300 rounded-xl text-old-money-800 focus:ring-2 focus:ring-gold-400 focus:border-transparent transition-all duration-300"
+                >
+                  <option value="">Все породы</option>
+                  {breeds.map((b) => (
+                    <option key={b.breed} value={b.breed} className="text-gray-900">{b.breed}</option>
+                  ))}
+                </select>
+              </div>
           </div>
 
           <div className="flex gap-3 items-center">
@@ -368,6 +369,7 @@ export default function TopDogs() {
             </div>
           </div>
         </FiltersDropdown>
+        </div>
       </div>
 
       {loadingData && (

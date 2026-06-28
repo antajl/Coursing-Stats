@@ -7,10 +7,17 @@
 
 Полная документация проекта находится в папке `docs/`:
 
-- **[docs/00-OVERVIEW.md](docs/00-OVERVIEW.md)** — Обзор проекта, стек, текущее состояние, деплой
-- **[docs/01-AI-GUIDELINES.md](docs/01-AI-GUIDELINES.md)** — Правила для ИИ-агента
-- **[docs/02-ARCHITECTURE.md](docs/02-ARCHITECTURE.md)** — Архитектура, БД, API, деплой
-- **[docs/03-DEVELOPMENT.md](docs/03-DEVELOPMENT.md)** — Разработка, данные, парсинг
+- **[docs/README.md](docs/README.md)** — Оглавление и краткий обзор
+- **[docs/01-QUICK-START.md](docs/01-QUICK-START.md)** — Быстрый старт для новых разработчиков
+- **[docs/02-AI-GUIDELINES.md](docs/02-AI-GUIDELINES.md)** — Правила для ИИ-агента
+- **[docs/03-ARCHITECTURE.md](docs/03-ARCHITECTURE.md)** — Архитектура системы
+- **[docs/04-API-REFERENCE.md](docs/04-API-REFERENCE.md)** — Документация API
+- **[docs/05-PARSING.md](docs/05-PARSING.md)** — Парсинг данных
+- **[docs/06-DATABASE.md](docs/06-DATABASE.md)** — Работа с БД
+- **[docs/07-DEPLOYMENT.md](docs/07-DEPLOYMENT.md)** — Деплой и инфраструктура
+- **[docs/08-DEVELOPMENT.md](docs/08-DEVELOPMENT.md)** — Разработка
+- **[docs/09-DECISIONS-LOG.md](docs/09-DECISIONS-LOG.md)** — История архитектурных решений
+- **[docs/10-FUTURE-PLANS.md](docs/10-FUTURE-PLANS.md)** — Планы на будущее
 
 ## Быстрый старт
 

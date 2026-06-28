@@ -23,7 +23,8 @@ CREATE TABLE IF NOT EXISTS events (
   event_date    TEXT,                  -- дата события из заголовка результатов (DD.MM.YYYY)
   protocol_location TEXT,             -- локация из заголовка протокола (Регион, Район/Город)
   judges        TEXT,                  -- информация о судьях (JSON или строка)
-  track_schemes TEXT                 -- схемы трасс (JSON массив с URL и названиями)
+  track_schemes TEXT,                 -- схемы трасс (JSON массив с URL и названиями)
+  UNIQUE(date_start, title, location, event_type)  -- для дедупликации событий без results_url
 );
 
 CREATE INDEX IF NOT EXISTS idx_events_year ON events(year);

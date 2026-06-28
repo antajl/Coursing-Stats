@@ -11,9 +11,9 @@
  * @param {{ value: string, label: string }[]} options - без опции "Все ..." — она добавляется автоматически
  * @param {string} allLabel - текст для опции "сбросить фильтр" (например "Все года")
  */
-export default function FilterSelect({ label, value, onChange, options, allLabel, disabled = false }) {
+export default function FilterSelect({ label, value, onChange, options, allLabel, disabled = false, className = '' }) {
   return (
-    <div>
+    <div className={className}>
       {label && (
         <label className="block text-sm font-semibold text-old-money-700 mb-2">{label}</label>
       )}

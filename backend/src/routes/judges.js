@@ -371,7 +371,7 @@ export async function handleJudges(path, url, db, corsHeaders) {
     
     // Формируем статистику по критериям
     const criteriaData = [];
-    const criteriaNames = ['Манёвренность', 'Резвость', 'Выносливость', 'Преследование', 'Энтельмент'];
+    const criteriaNames = ['Манёвренность', 'Резвость', 'Выносливость', 'Преследование', 'Энтузиазм'];
     for (let i = 0; i < 5; i++) {
       const scores = criteriaStats[i].filter(s => s !== null && !isNaN(s));
       if (scores.length > 0) {

@@ -51,13 +51,61 @@ function extractBibColor($cell) {
   return null;
 }
 
-function extractJudgeCount(judgesText) {
-  if (!judgesText) return 2; // По умолчанию 2 судьи
+function extractJudgeCount(judgesText, $) {
+  // Сначала проверяем текст судей - это самый надежный способ
+  if (judgesText) {
+    // Формат: "Главный судья - Карелина Н.В." (1 судья)
+    // Формат: "Главный судья - Лукина Д.М., судья - Гродинская Т.Л." (2 судьи)
+    // Считаем количество имен (разделенных запятыми)
+    const names = judgesText.split(',').filter(name => name.trim().length > 0);
+    const countFromNames = Math.max(1, names.length);
+    
+    // Если есть явное указание на количество судей в тексте
+    if (judgesText.includes('Главный судья') && !judgesText.includes('судья -')) {
+      return 1; // Только главный судья
+    }
+    
+    return countFromNames;
+  }
   
-  // Формат: "Главный судья - Лукина Д.М., судья - Гродинская Т.Л."
-  // Считаем количество имен (разделенных запятыми)
-  const names = judgesText.split(',').filter(name => name.trim().length > 0);
-  return Math.max(1, names.length); // Минимум 1 судья
+  // Если текст судей недоступен, пробуем определить из структуры заголовков таблицы
+  if ($) {
+    const headerRows = $('table tr').slice(7, 9);
+    let judgeBlocks = 0;
+    
+    headerRows.each((i, row) => {
+      const $row = $(row);
+      const $cells = $row.find('td');
+      $cells.each((j, cell) => {
+        const $cell = $(cell);
+        const text = $cell.text().trim();
+        const colspan = $cell.attr('colspan');
+        
+        // Считаем блоки "Главный судья" или просто "Судья"
+        if ((text.includes('Главный судья') || text.includes('Судья')) && colspan === '6') {
+          judgeBlocks++;
+        }
+      });
+    });
+    
+    // Если есть 2 блока "Главный судья", это может быть 1 судья (для 2 забегов) или 2 судьи
+    // Нужно проверить количество строк заголовков
+    if (judgeBlocks === 2) {
+      // Проверяем, есть ли отдельные строки для второго судьи
+      // Если в заголовках только 2 строки, то это 1 судья (забег 1 и забег 2)
+      // Если в заголовках 3+ строки, то это 2 судьи
+      const totalHeaderRows = headerRows.length;
+      if (totalHeaderRows <= 2) {
+        return 1; // 1 судья для 2 забегов
+      }
+    }
+    
+    if (judgeBlocks > 0) {
+      return judgeBlocks;
+    }
+  }
+  
+  return 2; // По умолчанию 2 судьи
 }
 
 function extractItalicNumber($el) {
@@ -134,6 +182,399 @@ function extractReasonText(fullText, pattern) {
   return null;
 }
 
+function parseDogRow1Judge($, $cells, cellCount, allRows, rowIndex, judgesText) {
+  // Парсинг для формата с 1 судьей
+  // Структура: все оценки в одной строке
+  // 0: место, 1: каталожный номер, 2: порода, 3: класс, 4: пол, 5: кличка
+  // 6: номер забега 1 (с цветом фона)
+  // 7-11: судья 1, забег 1 (5 категорий)
+  // 12: сумма судьи 1, забег 1
+  // 13: сумма забега 1
+  // 14: номер забега 2 (с цветом фона)
+  // 15-19: судья 1, забег 2 (5 категорий)
+  // 20: сумма судьи 1, забег 2
+  // 21: сумма забега 2
+  // 22: общая сумма
+  // 23: ВС
+  // 24: титул
+  
+  const heats = [];
+  
+  // Номер забега 1 и цвет формы (ячейка 6)
+  const heat1Cell = $cells.eq(6);
+  const heat1Text = heat1Cell.text().trim();
+  const heat1Number = extractNumber(heat1Text);
+  const heat1Color = extractBibColor(heat1Cell);
+  
+  // Проверяем disqualified для heat1 (colspan в ячейке 7)
+  const heat1FirstCell = $cells.eq(7);
+  const heat1Colspan = heat1FirstCell.attr('colspan');
+  let heat1Disqualified = false;
+  let heat1DisqualificationReason = null;
+  let heat1Judge1Scores = [];
+  
+  if (heat1Colspan && parseInt(heat1Colspan) >= 7) {
+    heat1Disqualified = true;
+    heat1DisqualificationReason = heat1FirstCell.text().trim();
+    heat1Judge1Scores = [null, null, null, null, null];
+  } else {
+    // Парсим оценки судьи 1 для забега 1
+    for (let i = 7; i <= 11; i++) {
+      if (i < cellCount) {
+        const score = extractNumber($cells.eq(i).text());
+        heat1Judge1Scores.push((score !== null && score <= 20) ? score : null);
+      } else {
+        heat1Judge1Scores.push(null);
+      }
+    }
+  }
+  
+  const heat1Judge1Sum = (cellCount > 12) ? extractBoldNumber($cells.eq(12)) : null;
+  const heat1Total = (cellCount > 13) ? extractBoldNumber($cells.eq(13)) : null;
+  
+  // Номер забега 2 и цвет формы (ячейка 14)
+  let heat2Number = null;
+  let heat2Color = null;
+  if (cellCount > 14) {
+    const heat2Cell = $cells.eq(14);
+    const heat2Text = heat2Cell.text().trim();
+    heat2Number = extractNumber(heat2Text);
+    heat2Color = extractBibColor(heat2Cell);
+  }
+  
+  // Проверяем disqualified для heat2 (colspan в ячейке 15)
+  let heat2Disqualified = false;
+  let heat2DisqualificationReason = null;
+  let heat2Judge1Scores = [];
+  let heat2Judge1Sum = null;
+  let heat2Total = null;
+  
+  if (cellCount > 15) {
+    const heat2FirstCell = $cells.eq(15);
+    const heat2Colspan = heat2FirstCell.attr('colspan');
+    
+    if (heat2Colspan && parseInt(heat2Colspan) >= 7) {
+      heat2Disqualified = true;
+      heat2DisqualificationReason = heat2FirstCell.text().trim();
+      heat2Judge1Scores = [null, null, null, null, null];
+    } else {
+      // Парсим оценки судьи 1 для забега 2
+      for (let i = 15; i <= 19; i++) {
+        if (i < cellCount) {
+          const score = extractNumber($cells.eq(i).text());
+          heat2Judge1Scores.push((score !== null && score <= 20) ? score : null);
+        } else {
+          heat2Judge1Scores.push(null);
+        }
+      }
+      heat2Judge1Sum = (cellCount > 20) ? extractBoldNumber($cells.eq(20)) : null;
+      heat2Total = (cellCount > 21) ? extractBoldNumber($cells.eq(21)) : null;
+    }
+  }
+  
+  // Формируем heats
+  if (heat1Number !== null) {
+    const heat1Judges = [];
+    if (heat1Judge1Scores.some(s => s !== null)) {
+      heat1Judges.push({
+        judge_number: 1,
+        scores: heat1Judge1Scores,
+        sum: heat1Judge1Sum
+      });
+    }
+    
+    heats.push({
+      heat_number: 1,
+      bib_number: heat1Number,
+      bib_color: heat1Color,
+      judges: heat1Judges,
+      total: heat1Total,
+      disqualified: heat1Disqualified,
+      disqualification_reason: heat1DisqualificationReason
+    });
+  }
+  
+  if (heat2Number !== null) {
+    const heat2Judges = [];
+    if (heat2Judge1Scores.some(s => s !== null)) {
+      heat2Judges.push({
+        judge_number: 1,
+        scores: heat2Judge1Scores,
+        sum: heat2Judge1Sum
+      });
+    }
+    
+    heats.push({
+      heat_number: 2,
+      bib_number: heat2Number,
+      bib_color: heat2Color,
+      judges: heat2Judges,
+      total: heat2Total,
+      disqualified: heat2Disqualified,
+      disqualification_reason: heat2DisqualificationReason
+    });
+  }
+  
+  // Общая сумма
+  let grandTotal = null;
+  if (cellCount > 22) {
+    grandTotal = extractBoldNumber($cells.eq(22));
+  } else if (cellCount > 13) {
+    grandTotal = extractBoldNumber($cells.eq(cellCount - 3));
+  }
+  
+  // ВС и титул
+  let vc = null;
+  let qualification = null;
+  if (cellCount > 23) {
+    vc = cleanText($cells.eq(23).text());
+  } else {
+    vc = cleanText($cells.eq(cellCount - 2).text());
+  }
+  
+  if (cellCount > 24) {
+    qualification = cleanText($cells.eq(24).text());
+  } else {
+    qualification = cleanText($cells.eq(cellCount - 1).text());
+  }
+  
+  const rawScoresJson = JSON.stringify({ heats });
+  
+  return {
+    total_score: grandTotal,
+    judge_count: 1,
+    qualification,
+    vc,
+    raw_scores_json: rawScoresJson,
+    heats
+  };
+}
+
+function parseDogRow2Judges($, $cells, cellCount, allRows, rowIndex, judgesText) {
+  // Парсинг для формата с 2 судьями
+  // Строка 1 содержит оценки судьи 1
+  // Строка 2 содержит оценки судьи 2
+  
+  const heats = [];
+  
+  // Номер забега 1 и цвет формы (ячейка 6)
+  const heat1Cell = $cells.eq(6);
+  const heat1Text = heat1Cell.text().trim();
+  const heat1Number = extractNumber(heat1Text);
+  const heat1Color = extractBibColor(heat1Cell);
+  
+  // Проверяем disqualified для heat1 (colspan в ячейке 7)
+  const heat1FirstCell = $cells.eq(7);
+  const heat1Colspan = heat1FirstCell.attr('colspan');
+  let heat1Disqualified = false;
+  let heat1DisqualificationReason = null;
+  let heat1Judge1Scores = [];
+  
+  if (heat1Colspan && parseInt(heat1Colspan) >= 7) {
+    heat1Disqualified = true;
+    heat1DisqualificationReason = heat1FirstCell.text().trim();
+    heat1Judge1Scores = [null, null, null, null, null];
+  } else {
+    // Парсим оценки судьи 1 для забега 1
+    for (let i = 7; i <= 11; i++) {
+      if (i < cellCount) {
+        const score = extractNumber($cells.eq(i).text());
+        heat1Judge1Scores.push((score !== null && score <= 20) ? score : null);
+      } else {
+        heat1Judge1Scores.push(null);
+      }
+    }
+  }
+  
+  const heat1Judge1Sum = (cellCount > 12) ? extractBoldNumber($cells.eq(12)) : null;
+  const heat1Total = (cellCount > 13) ? extractBoldNumber($cells.eq(13)) : null;
+  
+  // Получаем оценки судьи 2 из следующей строки
+  let heat1Judge2Scores = [];
+  let heat1Judge2Sum = null;
+  
+  if (rowIndex + 1 < allRows.length) {
+    const $row2 = $(allRows[rowIndex + 1]);
+    const $cells2 = $row2.find("td");
+    const cellCount2 = $cells2.length;
+    
+    // Проверяем, что следующая строка содержит оценки (много чисел 0-20)
+    let hasJudgeScores = false;
+    for (let i = 7; i <= 19; i++) {
+      if (i < cellCount2) {
+        const score = extractNumber($cells2.eq(i).text());
+        if (score !== null && score <= 20) {
+          hasJudgeScores = true;
+          break;
+        }
+      }
+    }
+    
+    if (hasJudgeScores) {
+      // Оценки судьи 2 для забега 1 (ячейки 7-11)
+      for (let i = 7; i <= 11; i++) {
+        if (i < cellCount2) {
+          const score = extractNumber($cells2.eq(i).text());
+          heat1Judge2Scores.push((score !== null && score <= 20) ? score : null);
+        } else {
+          heat1Judge2Scores.push(null);
+        }
+      }
+      heat1Judge2Sum = (cellCount2 > 12) ? extractBoldNumber($cells2.eq(12)) : null;
+    }
+  }
+  
+  // Номер забега 2 и цвет формы (ячейка 14)
+  let heat2Number = null;
+  let heat2Color = null;
+  if (cellCount > 14) {
+    const heat2Cell = $cells.eq(14);
+    const heat2Text = heat2Cell.text().trim();
+    heat2Number = extractNumber(heat2Text);
+    heat2Color = extractBibColor(heat2Cell);
+  }
+  
+  // Проверяем disqualified для heat2 (colspan в ячейке 15)
+  let heat2Disqualified = false;
+  let heat2DisqualificationReason = null;
+  let heat2Judge1Scores = [];
+  let heat2Judge1Sum = null;
+  let heat2Total = null;
+  let heat2Judge2Scores = [];
+  let heat2Judge2Sum = null;
+  
+  if (cellCount > 15) {
+    const heat2FirstCell = $cells.eq(15);
+    const heat2Colspan = heat2FirstCell.attr('colspan');
+    
+    if (heat2Colspan && parseInt(heat2Colspan) >= 7) {
+      heat2Disqualified = true;
+      heat2DisqualificationReason = heat2FirstCell.text().trim();
+      heat2Judge1Scores = [null, null, null, null, null];
+    } else {
+      // Парсим оценки судьи 1 для забега 2
+      for (let i = 15; i <= 19; i++) {
+        if (i < cellCount) {
+          const score = extractNumber($cells.eq(i).text());
+          heat2Judge1Scores.push((score !== null && score <= 20) ? score : null);
+        } else {
+          heat2Judge1Scores.push(null);
+        }
+      }
+      heat2Judge1Sum = (cellCount > 20) ? extractBoldNumber($cells.eq(20)) : null;
+      heat2Total = (cellCount > 21) ? extractBoldNumber($cells.eq(21)) : null;
+      
+      // Получаем оценки судьи 2 для забега 2 из следующей строки
+      if (rowIndex + 1 < allRows.length) {
+        const $row2 = $(allRows[rowIndex + 1]);
+        const $cells2 = $row2.find("td");
+        const cellCount2 = $cells2.length;
+        
+        for (let i = 15; i <= 19; i++) {
+          if (i < cellCount2) {
+            const score = extractNumber($cells2.eq(i).text());
+            heat2Judge2Scores.push((score !== null && score <= 20) ? score : null);
+          } else {
+            heat2Judge2Scores.push(null);
+          }
+        }
+        heat2Judge2Sum = (cellCount2 > 20) ? extractBoldNumber($cells2.eq(20)) : null;
+      }
+    }
+  }
+  
+  // Формируем heats
+  if (heat1Number !== null) {
+    const heat1Judges = [];
+    if (heat1Judge1Scores.some(s => s !== null)) {
+      heat1Judges.push({
+        judge_number: 1,
+        scores: heat1Judge1Scores,
+        sum: heat1Judge1Sum
+      });
+    }
+    if (heat1Judge2Scores.some(s => s !== null)) {
+      heat1Judges.push({
+        judge_number: 2,
+        scores: heat1Judge2Scores,
+        sum: heat1Judge2Sum
+      });
+    }
+    
+    heats.push({
+      heat_number: 1,
+      bib_number: heat1Number,
+      bib_color: heat1Color,
+      judges: heat1Judges,
+      total: heat1Total,
+      disqualified: heat1Disqualified,
+      disqualification_reason: heat1DisqualificationReason
+    });
+  }
+  
+  if (heat2Number !== null) {
+    const heat2Judges = [];
+    if (heat2Judge1Scores.some(s => s !== null)) {
+      heat2Judges.push({
+        judge_number: 1,
+        scores: heat2Judge1Scores,
+        sum: heat2Judge1Sum
+      });
+    }
+    if (heat2Judge2Scores.some(s => s !== null)) {
+      heat2Judges.push({
+        judge_number: 2,
+        scores: heat2Judge2Scores,
+        sum: heat2Judge2Sum
+      });
+    }
+    
+    heats.push({
+      heat_number: 2,
+      bib_number: heat2Number,
+      bib_color: heat2Color,
+      judges: heat2Judges,
+      total: heat2Total,
+      disqualified: heat2Disqualified,
+      disqualification_reason: heat2DisqualificationReason
+    });
+  }
+  
+  // Общая сумма
+  let grandTotal = null;
+  if (cellCount > 22) {
+    grandTotal = extractBoldNumber($cells.eq(22));
+  } else if (cellCount > 13) {
+    grandTotal = extractBoldNumber($cells.eq(cellCount - 3));
+  }
+  
+  // ВС и титул
+  let vc = null;
+  let qualification = null;
+  if (cellCount > 23) {
+    vc = cleanText($cells.eq(23).text());
+  } else {
+    vc = cleanText($cells.eq(cellCount - 2).text());
+  }
+  
+  if (cellCount > 24) {
+    qualification = cleanText($cells.eq(24).text());
+  } else {
+    qualification = cleanText($cells.eq(cellCount - 1).text());
+  }
+  
+  const rawScoresJson = JSON.stringify({ heats });
+  
+  return {
+    total_score: grandTotal,
+    judge_count: 2,
+    qualification,
+    vc,
+    raw_scores_json: rawScoresJson,
+    heats
+  };
+}
+
 function parseDogRow($, $row, breedClass, allRows, rowIndex, judgesText) {
   const $cells = $row.find("td");
   
@@ -171,7 +612,7 @@ function parseDogRow($, $row, breedClass, allRows, rowIndex, judgesText) {
 
   // Определяем формат по количеству ячеек
   let totalScore, qualification, vc, rawScoresJson;
-  const judgeCount = extractJudgeCount(judgesText); // Определяем количество судей из текста
+  const judgeCount = extractJudgeCount(judgesText, $); // Определяем количество судей из структуры
   let disqualificationReason = null;
   
   // Проверяем, есть ли данные о забегах (ячейка 6 с номером забега)
@@ -180,223 +621,29 @@ function parseDogRow($, $row, breedClass, allRows, rowIndex, judgesText) {
   const heat1Number = extractNumber(heat1Text);
   const hasHeatData = heat1Number !== null;
   
-  if (cellCount >= 25 || (hasHeatData && cellCount >= 20)) {
-    // Формат с двумя строками на собаку (25+ ячеек) или с данными о забегах (20+ ячеек для disqualified)
-    // Строка 1 содержит:
-    // 0: место, 1: каталожный номер, 2: порода, 3: класс, 4: пол, 5: кличка
-    // 6: номер забега 1 (с цветом фона)
-    // 7-12: судья 1, забег 1 (5 категорий + сумма)
-    // 13: сумма 1 (rowspan=2)
-    // 14: номер забега 2 (с цветом фона) - может отсутствовать для disqualified
-    // 15-20: судья 1, забег 2 (5 категорий + сумма) - может отсутствовать
-    // 21: сумма 2 (rowspan=2) - может отсутствовать
-    // 22: общая сумма (rowspan=2)
-    // 23: ВС
-    // 24: титул
+  if (cellCount >= 25 || (hasHeatData && cellCount >= 13)) {
+    // Формат с данными о забегах - используем соответствующую функцию в зависимости от количества судей
+    let scoresData;
     
-    // Строка 2 содержит:
-    // 7-12: судья 2, забег 1 (5 категорий + сумма)
-    // 15-20: судья 2, забег 2 (5 категорий + сумма) - может отсутствовать
-    
-    const heats = [];
-    
-    // Номер забега 1 и цвет формы (ячейка 6)
-    const heat1Cell = $cells.eq(6);
-    const heat1Text = heat1Cell.text().trim();
-    const heat1Number = extractNumber(heat1Text);
-    const heat1Color = extractBibColor(heat1Cell);
-    
-    // Номер забега 2 и цвет формы (ячейка 14) - может отсутствовать для disqualified
-    let heat2Number = null;
-    let heat2Color = null;
-    if (cellCount > 14) {
-      const heat2Cell = $cells.eq(14);
-      const heat2Text = heat2Cell.text().trim();
-      heat2Number = extractNumber(heat2Text);
-      heat2Color = extractBibColor(heat2Cell);
-    }
-    
-    // Судья 1, забег 1 (ячейки 7-11: 5 категорий, ячейка 12: сумма)
-    const heat1Judge1Scores = [];
-    for (let i = 7; i <= 11; i++) {
-      if (i < cellCount) {
-        const score = extractNumber($cells.eq(i).text());
-        // Исключаем слишком большие значения (общие суммы) из оценок
-        heat1Judge1Scores.push((score !== null && score < 100) ? score : null);
-      } else {
-        heat1Judge1Scores.push(null);
-      }
-    }
-    const heat1Judge1Sum = (cellCount > 12) ? extractBoldNumber($cells.eq(12)) : null;
-    
-    // Сумма 1 (ячейка 13) - итог за забег 1
-    const heat1Total = (cellCount > 13) ? extractBoldNumber($cells.eq(13)) : null;
-    
-    // Судья 1, забег 2 (ячейки 15-19: 5 категорий, ячейка 20: сумма) - может отсутствовать или содержать текст отстранения
-    let heat2Judge1Scores = [];
-    let heat2Judge1Sum = null;
-    let heat2Total = null;
-    let heat2Disqualified = false;
-    let heat2DisqualificationReason = null;
-    
-    if (cellCount > 15) {
-      // Проверяем, есть ли текст отстранения в ячейках 15-20
-      const heat2CellsText = [];
-      for (let i = 15; i <= 20; i++) {
-        if (i < cellCount) {
-          heat2CellsText.push($cells.eq(i).text().trim());
-        }
-      }
-      const disqualificationText = heat2CellsText.find(text => 
-        text.toLowerCase().includes('отстранение') || 
-        text.toLowerCase().includes('покинул')
-      );
-      
-      if (disqualificationText) {
-        heat2Disqualified = true;
-        heat2DisqualificationReason = disqualificationText;
-        heat2Judge1Scores = [null, null, null, null, null];
-      } else {
-        for (let i = 15; i <= 19; i++) {
-          if (i < cellCount) {
-            const score = extractNumber($cells.eq(i).text());
-            // Исключаем слишком большие значения (общие суммы) из оценок
-            heat2Judge1Scores.push((score !== null && score < 100) ? score : null);
-          } else {
-            heat2Judge1Scores.push(null);
-          }
-        }
-        heat2Judge1Sum = (cellCount > 20) ? extractBoldNumber($cells.eq(20)) : null;
-        heat2Total = (cellCount > 21) ? extractBoldNumber($cells.eq(21)) : null;
-      }
-    }
-    
-    // Общая сумма (ячейка 22 или последняя доступная)
-    let grandTotal = null;
-    if (cellCount > 22) {
-      grandTotal = extractBoldNumber($cells.eq(22));
-    } else if (cellCount > 13) {
-      // Для disqualified с одним забегом, общая сумма может быть в другой позиции
-      grandTotal = extractBoldNumber($cells.eq(cellCount - 3));
-    }
-    
-    // ВС (ячейка 23 или предпоследняя)
-    if (cellCount > 23) {
-      vc = cleanText($cells.eq(23).text());
+    if (judgeCount === 1) {
+      scoresData = parseDogRow1Judge($, $cells, cellCount, allRows, rowIndex, judgesText);
     } else {
-      vc = cleanText($cells.eq(cellCount - 2).text());
+      scoresData = parseDogRow2Judges($, $cells, cellCount, allRows, rowIndex, judgesText);
     }
     
-    // Титул (ячейка 24 или последняя)
-    if (cellCount > 24) {
-      qualification = cleanText($cells.eq(24).text());
-    } else {
-      qualification = cleanText($cells.eq(cellCount - 1).text());
-    }
+    totalScore = scoresData.total_score;
+    qualification = scoresData.qualification;
+    vc = scoresData.vc;
+    rawScoresJson = scoresData.raw_scores_json;
+    const heats = scoresData.heats;
     
-    // Получаем строку 2 (оценки судьи 2)
-    let heat1Judge2Scores = [];
-    let heat1Judge2Sum = null;
-    let heat2Judge2Scores = [];
-    let heat2Judge2Sum = null;
-    
-    if (rowIndex + 1 < allRows.length) {
-      const $row2 = $(allRows[rowIndex + 1]);
-      const $cells2 = $row2.find("td");
-      const cellCount2 = $cells2.length;
-      
-      // Собираем все числовые значения из строки 2, игнорируя пустые ячейки
-      const allNumericValues = [];
-      for (let i = 0; i < cellCount2; i++) {
-        const cellText = $cells2.eq(i).text().trim();
-        const num = extractNumber(cellText);
-        // Исключаем слишком большие значения (общие суммы) из оценок
-        if (num !== null && num < 100) {
-          allNumericValues.push(num);
-        }
-      }
-      
-      // Если есть ровно 12 числовых значений, делим их 6+6
-      if (allNumericValues.length >= 12) {
-        // Первые 6: Судья 2, Забег 1 (5 категорий + сумма)
-        heat1Judge2Scores = allNumericValues.slice(0, 5);
-        heat1Judge2Sum = allNumericValues[5];
-        
-        // Следующие 6: Судья 2, Забег 2 (5 категорий + сумма)
-        heat2Judge2Scores = allNumericValues.slice(6, 11);
-        heat2Judge2Sum = allNumericValues[11];
-      } else if (allNumericValues.length >= 6) {
-        // Если меньше 12, но есть хотя бы 6, берем первые 6 для забега 1
-        heat1Judge2Scores = allNumericValues.slice(0, 5);
-        heat1Judge2Sum = allNumericValues[5];
+    // Определяем disqualified из heats
+    if (heats.length > 0) {
+      const disqualifiedHeat = heats.find(h => h.disqualified);
+      if (disqualifiedHeat) {
+        disqualificationReason = disqualifiedHeat.disqualification_reason;
       }
     }
-    
-    // Формируем структуру забегов
-    const heat1Judges = [];
-    if (heat1Judge1Scores.some(s => s !== null)) {
-      heat1Judges.push({
-        judge_number: 1,
-        scores: heat1Judge1Scores,
-        sum: heat1Judge1Sum
-      });
-    }
-    if (heat1Judge2Scores.some(s => s !== null)) {
-      heat1Judges.push({
-        judge_number: 2,
-        scores: heat1Judge2Scores,
-        sum: heat1Judge2Sum
-      });
-    }
-    
-    const heat2Judges = [];
-    if (heat2Judge1Scores.some(s => s !== null)) {
-      heat2Judges.push({
-        judge_number: 1,
-        scores: heat2Judge1Scores,
-        sum: heat2Judge1Sum
-      });
-    }
-    if (heat2Judge2Scores.some(s => s !== null)) {
-      heat2Judges.push({
-        judge_number: 2,
-        scores: heat2Judge2Scores,
-        sum: heat2Judge2Sum
-      });
-    }
-    
-    if (heat1Judges.length > 0) {
-      heats.push({
-        heat_number: 1,
-        bib_number: heat1Number,
-        bib_color: heat1Color,
-        judges: heat1Judges,
-        total: heat1Total
-      });
-    }
-    
-    if (heat2Judges.length > 0 || heat2Disqualified) {
-      heats.push({
-        heat_number: 2,
-        bib_number: heat2Number,
-        bib_color: heat2Color,
-        judges: heat2Judges,
-        total: heat2Total,
-        disqualified: heat2Disqualified,
-        disqualification_reason: heat2DisqualificationReason
-      });
-    }
-    
-    // Сохраняем исходную сумму без нормализации
-    totalScore = grandTotal;
-
-    // Сохраняем детальные оценки в raw_scores_json
-    rawScoresJson = JSON.stringify({
-      heats: heats,
-      grand_total: grandTotal,
-      raw_total: grandTotal,
-      normalized_score: totalScore
-    });
   } else {
     // Формат 2024 (23 ячеек) - упрощенная структура
     const rawTotalScore = extractBoldNumber($cells.eq(cellCount - 3));
@@ -467,6 +714,7 @@ function parseDogRow($, $row, breedClass, allRows, rowIndex, judgesText) {
     class: class_,
     sex,
     name,
+    name_lat: name, // Добавляем name_lat для совместимости
     total_score: totalScore,
     judge_count: judgeCount,
     qualification,
@@ -604,7 +852,7 @@ export async function parseCoursingHTML(html) {
       }
     } catch (err) {
       // Если URL недоступен, пропускаем его
-      console.log(`Track scheme URL not accessible: ${scheme.url}`);
+      // console.log(`Track scheme URL not accessible: ${scheme.url}`);
     }
   }
   
@@ -670,7 +918,7 @@ export async function parseCoursingHTML(html) {
             if (i + 1 < lines.length) {
               const nextLine = lines[i + 1].trim();
               // Ищем паттерн с главным судьей и вторым судьей (и третьим если есть)
-              const judgeMatch = nextLine.match(/Главный\s+судья\s*[:\s-]+\s*([А-ЯЁ][а-яё]+(?:\s+[А-ЯЁ]\.[А-ЯЁ]\.)?)(?:\s*,\s*судья\s*[:\s-]+\s*([А-ЯЁ][а-яё]+(?:\s+[А-ЯЁ]\.[А-ЯЁ]\.)?))(?:\s*,\s*судья\s*[:\s-]+\s*([А-ЯЁ][а-яё]+(?:\s+[А-ЯЁ]\.[А-ЯЁ]\.)?))?/i);
+              const judgeMatch = nextLine.match(/Главный\s+судья\s*[:\s-]+\s*([А-ЯЁ][а-яё]+(?:\s+[А-ЯЁ]\.[А-ЯЁ]\.)?)(?:\s*,\s*судья\s*[:\s-]+\s*([А-ЯЁ][а-яё]+(?:\s+[А-ЯЁ]\.[А-ЯЁ]\.)?))?/i);
               if (judgeMatch) {
                 if (judgeMatch[1] && judgeMatch[2] && judgeMatch[3]) {
                   judges = `${judgeMatch[1].trim()}, ${judgeMatch[2].trim()}, ${judgeMatch[3].trim()}`;
@@ -719,12 +967,29 @@ export async function parseCoursingHTML(html) {
         
         // Если не нашли многострочный формат, пробуем однострочный в той же ячейке
         if (!judges) {
+          // Проверяем однострочный формат: "Судьи:Главный судья - Карелина Н.В."
+          const singleLinePattern = /Судьи[:\s]*Главный\s+судья\s*[:\s-]+\s*([А-ЯЁ][а-яё]+(?:\s+[А-ЯЁ]\.[А-ЯЁ]\.)?)(?:\s*,\s*судья\s*[:\s-]+\s*([А-ЯЁ][а-яё]+(?:\s+[А-ЯЁ]\.[А-ЯЁ]\.)?))?/i;
+          const singleLineMatch = cellText.match(singleLinePattern);
+          if (singleLineMatch) {
+            if (singleLineMatch[1] && singleLineMatch[2]) {
+              judges = `${singleLineMatch[1].trim()}, ${singleLineMatch[2].trim()}`;
+            } else if (singleLineMatch[1]) {
+              judges = singleLineMatch[1].trim();
+            }
+            if (judges && judges.length > 3) {
+              return false; // Прерываем each
+            }
+          }
+        }
+        
+        // Если все еще не нашли, пробуем другие паттерны
+        if (!judges) {
           const judgePatterns = [
             /Главный\s+судья\s*[:\s-]+\s*([А-ЯЁ][а-яё]+(?:\s+[А-ЯЁ]\.[А-ЯЁ]\.)?)(?:\s*,\s*судья\s*[:\s-]+\s*([А-ЯЁ][а-яё]+(?:\s+[А-ЯЁ]\.[А-ЯЁ]\.)?))/i,
             /Главный\s+судья\s*[:\s-]+\s*([^.]+?)(?:\s*,\s*судья\s*[:\s-]+\s*([^.]+))/i,
             /Главный\s+судья\s*[:\s-]+\s*([^.]+)/i,
-            /Судьи\s*[:\s-]+\s*([А-ЯЁ][а-яё]+(?:\s+[А-ЯЁ]\.[А-ЯЁ]\.)?(?:\s*,\s*[А-ЯЁ][а-яё]+(?:\s+[А-ЯЁ]\.[А-ЯЁ]\.)?)*)/i,
-            /Судьи\s*[:\s-]+\s*([^.]+)/i,
+            /Судьи[:\s]+([А-ЯЁ][а-яё]+(?:\s+[А-ЯЁ]\.[А-ЯЁ]\.)?(?:\s*,\s*[А-ЯЁ][а-яё]+(?:\s+[А-ЯЁ]\.[А-ЯЁ]\.)?)*)/i,
+            /Судьи[:\s]+([^.]+)/i,
           ];
           for (const pattern of judgePatterns) {
             const match = cellText.match(pattern);
@@ -788,7 +1053,7 @@ export async function parseCoursingHTML(html) {
     // Если не нашли многострочный формат, пробуем однострочный
     if (!judges) {
       const beforeTablePatterns = [
-        /Главный\s+судья\s*[:\s-]+\s*([А-ЯЁ][а-яё]+(?:\s+[А-ЯЁ]\.[А-ЯЁ]\.)?)(?:\s*,\s*судья\s*[:\s-]+\s*([А-ЯЁ][а-яё]+(?:\s+[А-ЯЁ]\.[А-ЯЁ]\.)?))?/i,
+        /Главный\s+судья\s*[:\s-]+\s*([А-ЯЁ][а-яё]+(?:\s+[А-ЯЁ]\.?[А-ЯЁ]\.?)?)(?:\s*,\s*судья\s*[:\s-]+\s*([А-ЯЁ][а-яё]+(?:\s+[А-ЯЁ]\.?[А-ЯЁ]\.?)?))?/i,
         /Судьи[:\s]+([^.]+?)(?:\n|$)/i,
         /Судьи[:\s]+([^.]+?)(?:Клуб|Организация|Место|Дата|Время|Таблица)/i,
         /(?:Судья|Судьи)[:\s]+([^.]+?)(?:\n|$)/i,
@@ -868,8 +1133,11 @@ export async function parseCoursingHTML(html) {
     
     if (hasColspan25 && hasBoldText) {
       const text = $firstCell.find("b").text();
-      currentBreedClass = cleanText(text);
-      inNonArrivedSection = text.includes("Неприбывшие");
+      // Более строгое условие: текст должен содержать дефис и не быть заголовком страницы
+      if (text.includes('-') && !text.includes('Организатор') && !text.includes('Полные результаты') && !text.includes('Судья') && !text.includes('Состязания')) {
+        currentBreedClass = cleanText(text);
+        inNonArrivedSection = text.includes("Неприбывшие");
+      }
       return;
     }
 

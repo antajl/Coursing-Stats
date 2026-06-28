@@ -1,18 +1,19 @@
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom'
 import { useState, useRef } from 'react'
-import Events from './pages/Events'
+import Events from './pages/Events/index'
 import TopDogs from './pages/TopDogs'
 import DogProfile from './pages/DogProfile'
-import EventResults from './pages/EventResults'
-import SpeedRecords from './pages/SpeedRecords'
+import EventResults from './pages/Events/EventResults'
+import SpeedRecords from './pages/SpeedRecords/index'
 import Procoursing from './pages/Procoursing'
-import Judges from './pages/Judges'
-import JudgeDetail from './pages/JudgeDetail'
+import Judges from './pages/Judges/index'
+import JudgeDetail from './pages/Judges/JudgeDetail'
 import { DogSilhouettes } from './components/DogSilhouettes'
 
 function Nav() {
   const location = useLocation();
   const [sourcesOpen, setSourcesOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const timeoutRef = useRef(null);
   const isActive = (path) => location.pathname === path || (path === '/' && location.pathname === '/procoursing');
 
@@ -29,12 +30,23 @@ function Nav() {
     }, 200);
   };
 
+  const toggleSources = () => {
+    setSourcesOpen(!sourcesOpen);
+  };
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
   return (
     <nav className="sticky top-0 z-50 bg-cream-50/90 backdrop-blur-xl border-b border-cream-300 shadow-md relative">
+      {/* Logo */}
       <div className="absolute left-0 top-0 h-16 flex items-center px-4">
         <img src="/assets/navbar-bg.svg" alt="Logo" className="h-[61px] opacity-80" style={{ objectFit: 'contain' }} />
       </div>
-      <div className="absolute right-0 top-0 h-16 flex items-center px-4">
+
+      {/* Desktop navigation */}
+      <div className="hidden md:flex absolute right-0 top-0 h-16 items-center px-4">
         <div 
           className="relative"
           onMouseEnter={handleMouseEnter}
@@ -62,15 +74,42 @@ function Nav() {
                 href="https://docs.google.com/spreadsheets/d/1NTiY3HXZIkXE8xTeXZESgMKaZsEXunmcWhTfhhkoKyE/edit?gid=1787526009#gid=1787526009"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="block px-4 py-3 text-sm text-charcoal-700 hover:bg-old-money-50 transition-colors border-b border-old-money-100"
+              >
+                Рекорды Донино (бега)
+              </a>
+              <a
+                href="https://docs.google.com/spreadsheets/d/1hpdA8vlIfeECgpnPvuk5xfezPsdUh1EXULjeATAF9dw/edit?pli=1&gid=0#gid=0"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block px-4 py-3 text-sm text-charcoal-700 hover:bg-old-money-50 transition-colors"
               >
-                Таблица рекордов Донино
+                Рекорды Донино (курсинг)
               </a>
             </div>
           )}
         </div>
       </div>
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      {/* Mobile header with logo and menu button */}
+      <div className="md:hidden flex items-center justify-between h-12 px-3">
+        <img src="/assets/navbar-bg.svg" alt="Logo" className="h-10 opacity-80" style={{ objectFit: 'contain' }} />
+        <button
+          onClick={toggleMobileMenu}
+          className="w-9 h-9 border-2 border-old-money-300 rounded-lg bg-old-money-50 hover:bg-old-money-100 transition-colors flex items-center justify-center"
+        >
+          <svg className="w-5 h-5 text-old-money-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            {mobileMenuOpen ? (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            ) : (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            )}
+          </svg>
+        </button>
+      </div>
+
+      {/* Desktop links */}
+      <div className="hidden md:block relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-end items-center h-16">
           <div className="flex items-center space-x-2">
             <Link
@@ -98,6 +137,71 @@ function Nav() {
           </div>
         </div>
       </div>
+
+      {/* Mobile menu */}
+      {mobileMenuOpen && (
+        <div className="md:hidden absolute top-12 left-0 right-0 bg-white border-b border-old-money-200 shadow-lg z-50">
+          <div className="px-4 py-3 space-y-2">
+            <Link
+              to="/procoursing"
+              onClick={() => setMobileMenuOpen(false)}
+              className={`block px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${
+                isActive('/') ? 'bg-camel-100 text-camel-700' : 'text-charcoal-700 hover:bg-old-money-50'
+              }`}
+            >
+              Procoursing
+            </Link>
+            <Link
+              to="/speed-records"
+              onClick={() => setMobileMenuOpen(false)}
+              className={`block px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${
+                isActive('/speed-records') ? 'bg-camel-100 text-camel-700' : 'text-charcoal-700 hover:bg-old-money-50'
+              }`}
+            >
+              Рекорды Донино
+            </Link>
+            <div className="border-t border-old-money-200 pt-2 mt-2">
+              <button
+                onClick={toggleSources}
+                className="w-full flex items-center justify-between px-4 py-2 rounded-lg text-sm font-semibold text-charcoal-700 hover:bg-old-money-50 transition-colors"
+              >
+                <span>Источники данных</span>
+                <svg className={`w-4 h-4 transition-transform ${sourcesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {sourcesOpen && (
+                <div className="mt-2 space-y-1 pl-4">
+                  <a
+                    href="http://procoursing.ru"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-4 py-2 text-sm text-charcoal-700 hover:bg-old-money-50 rounded-lg transition-colors"
+                  >
+                    Procoursing.ru
+                  </a>
+                  <a
+                    href="https://docs.google.com/spreadsheets/d/1NTiY3HXZIkXE8xTeXZESgMKaZsEXunmcWhTfhhkoKyE/edit?gid=1787526009#gid=1787526009"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-4 py-2 text-sm text-charcoal-700 hover:bg-old-money-50 rounded-lg transition-colors"
+                  >
+                    Рекорды Донино (курсинг)
+                  </a>
+                  <a
+                    href="https://docs.google.com/spreadsheets/d/1hpdA8vlIfeECgpnPvuk5xfezPsdUh1EXULjeATAF9dw/edit?pli=1&gid=0#gid=0"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-4 py-2 text-sm text-charcoal-700 hover:bg-old-money-50 rounded-lg transition-colors"
+                  >
+                    Рекорды Донино (бега)
+                  </a>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }
@@ -109,10 +213,11 @@ function App() {
       <div className="min-h-screen bg-gradient-to-br from-old-money-50 via-old-money-100 to-old-money-200">
         <Nav />
 
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
+        <main className="w-full md:max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 py-5">
           <Routes>
             <Route path="/" element={<Procoursing />} />
             <Route path="/procoursing" element={<Procoursing />} />
+            <Route path="/top" element={<TopDogs />} />
             <Route path="/dog/:id" element={<DogProfile />} />
             <Route path="/event/:id" element={<EventResults />} />
             <Route path="/speed-records" element={<SpeedRecords />} />

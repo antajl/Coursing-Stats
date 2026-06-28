@@ -163,16 +163,33 @@ function parseDogRow($, $row, breedClass, allRows, rowIndex) {
   // Номер забега 1 и VC (ячейка 6)
   const heat1Cell = $cells.eq(6);
   const heat1Text = heat1Cell.text().trim();
-  const heat1Number = extractNumber(heat1Text);
   const heat1Color = extractBibColor(heat1Cell);
+  
+  // Жесткая привязка: если есть цвет, то это номер забега
+  const heat1Number = heat1Color ? extractNumber(heat1Text) : extractNumber(heat1Text);
+
+  // Проверяем, есть ли отстранение в забеге 1 (colspan=6 в ячейке 7)
+  let heat1Disqualified = false;
+  let heat1DisqualificationReason = null;
+  const heat1FirstCell = $cells.eq(7);
+  const heat1Colspan = heat1FirstCell.attr('colspan');
+  
+  if (heat1Colspan && parseInt(heat1Colspan) >= 6) {
+    heat1Disqualified = true;
+    heat1DisqualificationReason = heat1FirstCell.text().trim();
+  }
 
   // Судейские оценки забега 1 (ячейки 7-12: 5 категорий + сумма)
   const heat1Judge1Scores = [];
-  for (let i = 7; i <= 11; i++) {
-    const score = extractNumber($cells.eq(i).text());
-    heat1Judge1Scores.push((score !== null && score < 100) ? score : null);
+  if (!heat1Disqualified) {
+    for (let i = 7; i <= 11; i++) {
+      const score = extractNumber($cells.eq(i).text());
+      heat1Judge1Scores.push((score !== null && score < 100) ? score : null);
+    }
+  } else {
+    heat1Judge1Scores.push(null, null, null, null, null);
   }
-  const heat1Judge1Sum = extractBoldNumber($cells.eq(12));
+  const heat1Judge1Sum = heat1Disqualified ? null : extractBoldNumber($cells.eq(12));
 
   // Сумма 1 (ячейка 13, bold) - итог за забег 1
   const sum1 = extractBoldNumber($cells.eq(13));
@@ -180,24 +197,20 @@ function parseDogRow($, $row, breedClass, allRows, rowIndex) {
   // Номер забега 2 и VC (ячейка 14)
   const heat2Cell = $cells.eq(14);
   const heat2Text = heat2Cell.text().trim();
-  const heat2Number = extractNumber(heat2Text);
   const heat2Color = extractBibColor(heat2Cell);
+  
+  // Жесткая привязка: если есть цвет, то это номер забега
+  const heat2Number = heat2Color ? extractNumber(heat2Text) : extractNumber(heat2Text);
 
-  // Проверяем, есть ли отстранение в забеге 2
+  // Проверяем, есть ли отстранение в забеге 2 (colspan=6 в ячейке 15)
   let heat2Disqualified = false;
   let heat2DisqualificationReason = null;
-  const heat2CellsText = [];
-  for (let i = 15; i <= 20; i++) {
-    heat2CellsText.push($cells.eq(i).text().trim());
-  }
-  const disqualificationText = heat2CellsText.find(text => 
-    text.toLowerCase().includes('отстранение') || 
-    text.toLowerCase().includes('сход')
-  );
+  const heat2FirstCell = $cells.eq(15);
+  const heat2Colspan = heat2FirstCell.attr('colspan');
   
-  if (disqualificationText) {
+  if (heat2Colspan && parseInt(heat2Colspan) >= 6) {
     heat2Disqualified = true;
-    heat2DisqualificationReason = disqualificationText;
+    heat2DisqualificationReason = heat2FirstCell.text().trim();
   }
 
   // Судейские оценки забега 2 (ячейки 15-20: 5 категорий + сумма)
@@ -283,13 +296,15 @@ function parseDogRow($, $row, breedClass, allRows, rowIndex) {
     });
   }
   
-  if (heat1Judges.length > 0) {
+  if (heat1Judges.length > 0 || heat1Disqualified) {
     heats.push({
       heat_number: 1,
       bib_number: heat1Number,
       bib_color: heat1Color,
       judges: heat1Judges,
-      total: sum1
+      total: sum1,
+      disqualified: heat1Disqualified,
+      disqualification_reason: heat1DisqualificationReason
     });
   }
   

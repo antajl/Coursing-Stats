@@ -1,4 +1,4 @@
-import { handleCompetitions } from './routes/competitions.js';
+import { handleCompetitions } from './routes/events.js';
 import { handleDogs } from './routes/dogs.js';
 import { handleTop } from './routes/top.js';
 import { handleAdmin } from './routes/admin.js';

@@ -76,7 +76,84 @@ export default function DogStatsTable({ data, type = 'placement', filterYear }) 
   return (
     <>
       <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-old-money-200">
-        <table className="w-full">
+        {/* Mobile cards */}
+        <div className="md:hidden space-y-3 p-3">
+          {pageData.map((dog, index) => (
+            <div key={dog.dog_id} className="bg-old-money-50 rounded-xl p-4 hover:bg-old-money-100 transition-colors">
+              <div className="flex justify-between items-start mb-3">
+                <div className="flex-1">
+                  <div className="text-xs text-gray-500 mb-1">#{page * PAGE_SIZE + index + 1}</div>
+                  <button
+                    onClick={(e) => handleClick(e, dog.dog_id)}
+                    className="text-base font-bold text-gold-600 hover:text-gold-500"
+                  >
+                    {dog.name_lat}
+                  </button>
+                  <div className="text-xs text-gray-600 mt-1">{dog.breed}</div>
+                  {filterYear && (
+                    <div className="text-xs text-gray-500 mt-1">Год: {dog.year}</div>
+                  )}
+                </div>
+              </div>
+              <div className="grid grid-cols-4 gap-2 text-xs">
+                {type === 'placement' ? (
+                  <>
+                    <div className="bg-white rounded-lg p-2 text-center">
+                      <div className="text-lg">🥇</div>
+                      <div className="font-bold text-old-money-800">{dog.gold}</div>
+                    </div>
+                    <div className="bg-white rounded-lg p-2 text-center">
+                      <div className="text-lg">🥈</div>
+                      <div className="font-bold text-old-money-800">{dog.silver}</div>
+                    </div>
+                    <div className="bg-white rounded-lg p-2 text-center">
+                      <div className="text-lg">🥉</div>
+                      <div className="font-bold text-old-money-800">{dog.bronze}</div>
+                    </div>
+                    <div className="bg-white rounded-lg p-2 text-center">
+                      <div className="text-gray-500">Участий</div>
+                      <div className="font-bold text-old-money-800">{dog.total_starts}</div>
+                    </div>
+                  </>
+                ) : type === 'speed' ? (
+                  <>
+                    <div className="bg-white rounded-lg p-2 text-center col-span-2">
+                      <div className="text-gray-500">Лучшая</div>
+                      <div className="font-bold text-old-money-800">{dog.best_speed ? `${dog.best_speed} км/ч` : '-'}</div>
+                    </div>
+                    <div className="bg-white rounded-lg p-2 text-center col-span-2">
+                      <div className="text-gray-500">Средняя</div>
+                      <div className="font-bold text-old-money-800">{dog.avg_speed ? `${dog.avg_speed} км/ч` : '-'}</div>
+                    </div>
+                    <div className="bg-white rounded-lg p-2 text-center col-span-4">
+                      <div className="text-gray-500">Участий</div>
+                      <div className="font-bold text-old-money-800">{dog.total_starts}</div>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div className="bg-white rounded-lg p-2 text-center col-span-2">
+                      <div className="text-gray-500">Лучший</div>
+                      <div className="font-bold text-old-money-800">{dog.best_score ? parseFloat(dog.best_score).toFixed(2).replace(/\.00$/, '') : '-'}</div>
+                    </div>
+                    <div className="bg-white rounded-lg p-2 text-center col-span-2">
+                      <div className="text-gray-500">Средний</div>
+                      <div className="font-bold text-old-money-800">{dog.avg_score ? parseFloat(dog.avg_score).toFixed(2).replace(/\.00$/, '') : '-'}</div>
+                    </div>
+                    <div className="bg-white rounded-lg p-2 text-center col-span-4">
+                      <div className="text-gray-500">Участий</div>
+                      <div className="font-bold text-old-money-800">{dog.total_starts}</div>
+                    </div>
+                  </>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop table */}
+        <div className="hidden md:block overflow-x-auto">
+          <table className="w-full min-w-[800px]">
           <thead className="bg-gradient-to-r from-gold-100 to-old-money-100">
             <tr>
               <th 
@@ -233,6 +310,7 @@ export default function DogStatsTable({ data, type = 'placement', filterYear }) 
             ))}
           </tbody>
         </table>
+        </div>
       </div>
 
       {totalPages > 1 && (

@@ -38,5 +38,38 @@ export async function handleSpeed(path, url, db, corsHeaders) {
     return Response.json(results, { headers: corsHeaders });
   }
 
+  // GET /api/coursing-records
+  if (path === '/api/coursing-records') {
+    const breed = url.searchParams.get('breed') || '';
+    const search = url.searchParams.get('search') || '';
+    const year = url.searchParams.get('year') || '';
+    const limit = url.searchParams.get('limit') || '100';
+
+    let query = 'SELECT * FROM coursing_records WHERE 1=1';
+    const params = [];
+
+    if (breed) {
+      query += ' AND breed = ?';
+      params.push(breed);
+    }
+
+    if (year) {
+      query += ' AND date LIKE ?';
+      params.push(`%.${year}`);
+    }
+
+    if (search) {
+      query += ' AND (name LIKE ? OR breed LIKE ? OR date LIKE ?)';
+      const searchPattern = `%${search}%`;
+      params.push(searchPattern, searchPattern, searchPattern);
+    }
+
+    query += ' ORDER BY time_seconds ASC LIMIT ?';
+    params.push(parseInt(limit));
+
+    const { results } = await db.prepare(query).bind(...params).all();
+    return Response.json(results, { headers: corsHeaders });
+  }
+
   return null;
 }

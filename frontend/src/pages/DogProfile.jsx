@@ -109,12 +109,13 @@ export default function DogProfile() {
 
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-old-money-50 to-gold-50 p-6">
+    <div className="min-h-screen bg-gradient-to-br from-old-money-50 to-gold-50 p-4 md:p-6">
       <DogSilhouettes />
       <div className="max-w-4xl mx-auto">
-        <div className="flex items-center justify-between mb-6">
+        <div className="flex items-center justify-between mb-4 md:mb-6 flex-wrap gap-2">
           <Link to="/top" className="text-gold-600 hover:text-gold-500 font-medium">
-            ← Назад к топу
+            <span className="md:hidden">Назад</span>
+            <span className="hidden md:inline">← Назад к топу</span>
           </Link>
           <button
             onClick={handleExport}
@@ -128,16 +129,16 @@ export default function DogProfile() {
         <div ref={exportRef}>
 
         {/* Шапка профиля */}
-        <div className="bg-white rounded-2xl shadow-2xl border-2 border-gold-200 p-8 mb-6">
-          <div className="flex items-center gap-6 mb-6 pb-6 border-b border-old-money-100">
-            <div className="flex-shrink-0 w-20 h-20 bg-gradient-to-br from-old-money-100 to-old-money-200 rounded-full flex items-center justify-center">
-              <svg className="w-14 h-14 text-old-money-600">
+        <div className="bg-white rounded-2xl shadow-2xl border-2 border-gold-200 p-4 md:p-8 mb-6">
+          <div className="flex items-center gap-4 md:gap-6 mb-4 md:mb-6 pb-4 md:pb-6 border-b border-old-money-100 flex-wrap">
+            <div className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-old-money-100 to-old-money-200 rounded-full flex items-center justify-center">
+              <svg className="w-10 h-10 md:w-14 md:h-14 text-old-money-600">
                 <use href={`#silhouette-${silhouetteType}`} />
               </svg>
             </div>
-            <div className="flex-1">
-              <div className="flex items-baseline gap-3 flex-wrap">
-                <h1 className="text-3xl font-bold text-gold-700">{dogData.name_lat}</h1>
+            <div className="flex-1 min-w-0">
+              <div className="flex items-baseline gap-2 md:gap-3 flex-wrap">
+                <h1 className="text-2xl md:text-3xl font-bold text-gold-700">{dogData.name_lat}</h1>
                 {dogData.sex && (
                   <span className="text-xl text-gray-400">
                     {dogData.sex === 'M' ? '♂' : '♀'}
@@ -163,11 +164,11 @@ export default function DogProfile() {
         </div>
 
         {/* Статистика по дисциплинам */}
-        <div className={`grid gap-6 mb-6 ${hasCoursingData && hasRacingData ? 'grid-cols-2' : 'grid-cols-1'}`}>
+        <div className={`grid gap-4 md:gap-6 mb-6 ${hasCoursingData && hasRacingData ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1'}`}>
           {/* Курсинг */}
           {hasCoursingData && (
-            <div className="bg-white rounded-2xl shadow-2xl border border-old-money-200 p-6">
-              <h2 className="text-xl font-bold text-old-money-700 mb-4">Курсинг / БЗМП</h2>
+            <div className="bg-white rounded-2xl shadow-2xl border border-old-money-200 p-4 md:p-6">
+              <h2 className="text-lg md:text-xl font-bold text-old-money-700 mb-4">Курсинг / БЗМП</h2>
 
               {bestScoreUrl ? (
                 <a
@@ -224,8 +225,8 @@ export default function DogProfile() {
 
           {/* Рейсинг */}
           {hasRacingData && (
-            <div className="bg-white rounded-2xl shadow-2xl border border-steel-200 p-6">
-              <h2 className="text-xl font-bold text-steel-700 mb-4">Рейсинг</h2>
+            <div className="bg-white rounded-2xl shadow-2xl border border-steel-200 p-4 md:p-6">
+              <h2 className="text-lg md:text-xl font-bold text-steel-700 mb-4">Рейсинг</h2>
 
               {bestSpeedUrl ? (
                 <a
@@ -273,8 +274,8 @@ export default function DogProfile() {
         </div>
 
         {/* История выступлений */}
-        <div className="bg-white rounded-2xl shadow-2xl border border-old-money-200 p-6">
-          <h2 className="text-xl font-bold text-old-money-700 mb-4">История выступлений</h2>
+        <div className="bg-white rounded-2xl shadow-2xl border border-old-money-200 p-4 md:p-6">
+          <h2 className="text-lg md:text-xl font-bold text-old-money-700 mb-4">История выступлений</h2>
           
           {eventsLoading ? (
             <div className="flex items-center gap-3 text-old-money-500">

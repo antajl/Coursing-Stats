@@ -12,19 +12,43 @@ if %errorlevel% neq 0 (
     exit /b 1
 )
 
-REM Add all files
-echo Adding files...
-git add .
+REM Check if there are any changes
+git status --porcelain >nul 2>&1
+if %errorlevel% equ 0 (
+    echo No changes to commit. Skipping git push.
+    echo.
+) else (
+    REM Show what will be committed
+    echo Changes to be committed:
+    git status --short
+    echo.
 
-REM Commit with auto message
-echo Committing changes...
-for /f "tokens=2-4 delims=/ " %%a in ('date /t') do (set mydate=%%c-%%a-%%b)
-for /f "tokens=1-2 delims=: " %%a in ('time /t') do (set mytime=%%a:%%b)
-git commit -m "Auto update %mydate% %mytime%"
+    REM Ask for commit message
+    set /p commit_msg="Enter commit message (or press Enter for auto message): "
 
-REM Push
-echo Pushing to GitHub...
-git push
+    REM Add all files
+    echo Adding files...
+    git add .
+
+    REM Commit with custom or auto message
+    echo Committing changes...
+    if "%commit_msg%"=="" (
+        for /f "tokens=2-4 delims=/ " %%a in ('date /t') do (set mydate=%%c-%%a-%%b)
+        for /f "tokens=1-2 delims=: " %%a in ('time /t') do (set mytime=%%a:%%b)
+        git commit -m "Auto update %mydate% %mytime%"
+    ) else (
+        git commit -m "%commit_msg%"
+    )
+
+    REM Push
+    echo Pushing to GitHub...
+    git push
+)
+
+REM Always update remote D1 database (even if no code changes)
+echo.
+echo Updating remote D1 database with coursing records...
+node backend\scripts\speed\fetch-coursing-records.mjs --remote
 
 echo.
 echo Done!

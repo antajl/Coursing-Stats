@@ -96,7 +96,7 @@ export default function DogTooltip({ dogId, anchorRect, onClose }) {
   if (loading) {
     return (
       <div ref={tooltipRef} style={style}
-        className="bg-white rounded-2xl shadow-2xl border border-old-money-200 p-5 w-[440px] animate-fade-in">
+        className="bg-white rounded-2xl shadow-2xl border border-old-money-200 p-5 w-[320px] md:w-[440px] animate-fade-in">
         <div className="flex items-center gap-3 text-old-money-500">
           <div className="w-4 h-4 border-2 border-old-money-300 border-t-gold-500 rounded-full animate-spin" />
           <span className="text-sm">Загрузка...</span>
@@ -109,7 +109,7 @@ export default function DogTooltip({ dogId, anchorRect, onClose }) {
   if (error) {
     return (
       <div ref={tooltipRef} style={style}
-        className="bg-white rounded-2xl shadow-2xl border border-red-200 p-5 w-[440px] animate-fade-in">
+        className="bg-white rounded-2xl shadow-2xl border border-red-200 p-5 w-[320px] md:w-[440px] animate-fade-in">
         <div className="text-sm text-red-500">{error}</div>
       </div>
     )
@@ -141,9 +141,9 @@ export default function DogTooltip({ dogId, anchorRect, onClose }) {
     <>
       <DogSilhouettes />
       <div ref={tooltipRef} style={style}
-        className="bg-white rounded-2xl shadow-2xl border border-old-money-200 w-[440px] animate-fade-in-scale">
+        className="bg-white rounded-2xl shadow-2xl border border-old-money-200 w-[320px] md:w-[440px] animate-fade-in-scale">
 
-        <div className="p-5 relative">
+        <div className="p-4 md:p-5 relative">
 
           {/* ── Шапка ─────────────────────────────────────────────────────── */}
           <div className="flex items-center gap-4 mb-4 pb-4 border-b border-old-money-100">

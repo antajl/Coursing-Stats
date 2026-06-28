@@ -2,6 +2,9 @@ name = "procoursing-stats"
 main = "backend/src/worker.js"
 compatibility_date = "2024-01-01"
 
+[vars]
+ADMIN_TOKEN = "my-secret-key-3580"
+
 [[d1_databases]]
 binding = "DB"
 database_name = "pc-db"
