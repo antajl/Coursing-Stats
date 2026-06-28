@@ -102,7 +102,7 @@ function SpeedRecords() {
     const sortedSpeedRecords = [...speedRecordsWithHistory].sort((a, b) => b.speed_km_h - a.speed_km_h);
     
     for (const record of sortedSpeedRecords) {
-      const key = `${record.name}_${record.breed}_${record.sex}`;
+      const key = `${record.name}_${record.breed}`;
       if (!seenSpeedKeys.has(key)) {
         seenSpeedKeys.add(key);
         records.push(record);
