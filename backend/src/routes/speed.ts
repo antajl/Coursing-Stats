@@ -13,7 +13,7 @@ export function handleSpeed(app: Hono<{ Bindings: Env }>) {
     const sex = c.req.query('sex') || '';
     const search = c.req.query('search') || '';
     const year = c.req.query('year') || '';
-    const limit = c.req.query('limit') || '100';
+    const limit = c.req.query('limit') || '1000';
 
     let query = 'SELECT * FROM speed_records WHERE 1=1';
     const params = [];
@@ -52,7 +52,7 @@ export function handleSpeed(app: Hono<{ Bindings: Env }>) {
     const breed = c.req.query('breed') || '';
     const search = c.req.query('search') || '';
     const year = c.req.query('year') || '';
-    const limit = c.req.query('limit') || '100';
+    const limit = c.req.query('limit') || '1000';
 
     let query = 'SELECT * FROM coursing_records WHERE 1=1';
     const params = [];
