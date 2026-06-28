@@ -321,6 +321,27 @@ function SpeedRecords() {
     XLSX.writeFile(workbook, `рекорды-донино-${new Date().toISOString().split('T')[0]}.xlsx`);
   }
 
+  function exportCoursingToExcel() {
+    // Заголовки Excel для бегов борзых
+    const headers = ['Кличка', 'Порода', 'Время (сек)', 'Дата'];
+    
+    // Данные для экспорта (только отфильтрованные записи)
+    const excelData = filteredCoursingRecords.map(record => ({
+      'Кличка': record.name,
+      'Порода': record.breed,
+      'Время (сек)': record.time_seconds,
+      'Дата': record.date
+    }));
+    
+    // Создаем книгу Excel
+    const worksheet = XLSX.utils.json_to_sheet(excelData);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, 'Беги борзых');
+    
+    // Скачиваем файл
+    XLSX.writeFile(workbook, `беги-борзых-${new Date().toISOString().split('T')[0]}.xlsx`);
+  }
+
   const hasActiveFilters = filterYears.length > 0 || filterBreeds.length > 0 || filterSexes.length > 0 || searchQuery;
 
   const coursingYears = [...new Set(bestCoursingRecords.map(r => r.date.split('.')[2]))].sort().reverse();
@@ -643,10 +664,33 @@ function SpeedRecords() {
                   </div>
                   <div className="flex-1 min-w-[120px] relative">
                     <button
+                      onClick={() => setOpenDropdown(openDropdown === 'year' ? null : 'year')}
+                      className="w-full px-4 py-3 rounded-xl border-2 border-cream-300 focus:border-camel-500 focus:ring-2 focus:ring-camel-200 transition-all bg-white text-left"
+                    >
+                      {filterYears.length > 0 ? `Выбрано: ${filterYears.length}` : 'Год'}
+                    </button>
+                    {openDropdown === 'year' && (
+                      <div className="absolute z-10 w-full mt-1 bg-white border-2 border-cream-300 rounded-xl shadow-xl max-h-60 overflow-y-auto">
+                        {coursingYears.map(year => (
+                          <label key={year} className="flex items-center px-4 py-2 hover:bg-cream-50 cursor-pointer">
+                            <input
+                              type="checkbox"
+                              checked={filterYears.includes(year)}
+                              onChange={() => toggleFilter('year', year)}
+                              className="mr-2"
+                            />
+                            {year}
+                          </label>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                  <div className="flex-1 min-w-[120px] relative">
+                    <button
                       onClick={() => setOpenDropdown(openDropdown === 'breed' ? null : 'breed')}
                       className="w-full px-4 py-3 rounded-xl border-2 border-cream-300 focus:border-camel-500 focus:ring-2 focus:ring-camel-200 transition-all bg-white text-left"
                     >
-                      {filterBreeds.length > 0 ? `Выбрано: ${filterBreeds.length}` : 'Породы'}
+                      {filterBreeds.length > 0 ? `Выбрано: ${filterBreeds.length}` : 'Порода'}
                     </button>
                     {openDropdown === 'breed' && (
                       <div className="absolute z-10 w-full mt-1 bg-white border-2 border-cream-300 rounded-xl shadow-xl max-h-60 overflow-y-auto">
@@ -664,28 +708,13 @@ function SpeedRecords() {
                       </div>
                     )}
                   </div>
-                  <div className="flex-1 min-w-[120px] relative">
+                  <div className="flex items-end">
                     <button
-                      onClick={() => setOpenDropdown(openDropdown === 'year' ? null : 'year')}
-                      className="w-full px-4 py-3 rounded-xl border-2 border-cream-300 focus:border-camel-500 focus:ring-2 focus:ring-camel-200 transition-all bg-white text-left"
+                      onClick={exportCoursingToExcel}
+                      className="px-4 py-3 rounded-xl border-2 border-camel-300 text-camel-700 hover:bg-camel-50 transition-all font-semibold"
                     >
-                      {filterYears.length > 0 ? `Выбрано: ${filterYears.length}` : 'Годы'}
+                      Скачать Excel
                     </button>
-                    {openDropdown === 'year' && (
-                      <div className="absolute z-10 w-full mt-1 bg-white border-2 border-cream-300 rounded-xl shadow-xl max-h-60 overflow-y-auto">
-                        {coursingYears.map(year => (
-                          <label key={year} className="flex items-center px-4 py-2 hover:bg-cream-50 cursor-pointer">
-                            <input
-                              type="checkbox"
-                              checked={filterYears.includes(year)}
-                              onChange={() => toggleFilter('year', year)}
-                              className="mr-2"
-                            />
-                            {year}
-                          </label>
-                        ))}
-                      </div>
-                    )}
                   </div>
                   {(searchQuery || filterBreeds.length > 0 || filterYears.length > 0) && (
                     <div className="flex items-end">
