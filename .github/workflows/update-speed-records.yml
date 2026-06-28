@@ -29,3 +29,11 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: npx tsx backend/scripts/speed/sync-speed-records.ts
+
+      - name: Commit updated cache file
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/speed-records.json
+          git diff --staged --quiet || git commit -m "Update speed records cache [skip ci]"
+          git push
