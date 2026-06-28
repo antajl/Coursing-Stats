@@ -54,6 +54,7 @@ function parseXLSX(buffer) {
       console.log(`Sheet "${sheetName}": Parsing as old records (no headers)`);
       
       // Предполагаем порядок колонок: Порода, Пол, Кличка, Скорость, Дата, Скриншот
+      let sheetRecordCount = 0;
       for (let row = range.s.r; row <= range.e.r; row++) {
         const breedCell = worksheet[XLSX.utils.encode_cell({ r: row, c: range.s.c })];
         const sexCell = worksheet[XLSX.utils.encode_cell({ r: row, c: range.s.c + 1 })];
@@ -119,8 +120,10 @@ function parseXLSX(buffer) {
             screenshot_url: screenshotUrl,
             status
           });
+          sheetRecordCount++;
         }
       }
+      console.log(`  Parsed ${sheetRecordCount} records from sheet "${sheetName}"`);
       continue;
     }
     
