@@ -20,7 +20,6 @@ function SpeedRecords() {
   const coursingRecordsQuery = useCoursingRecords('', 1000, '', '');
   
   // Локальное состояние для фильтров
-  const [records, setRecords] = useState([]);
   const [filterYears, setFilterYears] = useState(() => {
     const years = searchParams.get('years');
     return years ? years.split(',') : [];
@@ -226,10 +225,6 @@ function SpeedRecords() {
     return applyFilters(allRecords);
   }, [allRecords, applyFilters]);
 
-  useEffect(() => {
-    setRecords(filteredRecords);
-  }, [filteredRecords]);
-
   function toggleFilter(type, value) {
     if (type === 'year') {
       setFilterYears(prev => 
@@ -398,7 +393,7 @@ function SpeedRecords() {
             error: {error ? 'true' : 'false'} | 
             speedRecordsData: {speedRecordsData?.length || 0} | 
             bestSpeedRecords: {bestSpeedRecords?.length || 0} | 
-            records: {records?.length || 0}
+            filteredRecords: {filteredRecords?.length || 0}
           </div>
           {error && <div className="text-xs text-red-600 mt-1">Error: {String(error)}</div>}
         </div>
@@ -517,17 +512,17 @@ function SpeedRecords() {
           </div>
         )}
 
-        {!loading && !error && records.length === 0 && (
+        {!loading && !error && filteredRecords.length === 0 && (
           <div className="text-center py-12 text-old-money-600">
             Нет данных
           </div>
         )}
 
-        {!loading && !error && records.length > 0 && (
+        {!loading && !error && filteredRecords.length > 0 && (
           <div className="rounded-xl border-2 border-cream-300 overflow-visible">
             {/* Mobile cards */}
             <div className="md:hidden space-y-3 p-3">
-              {records.map((record) => (
+              {filteredRecords.map((record) => (
                 <div key={record.id} className="bg-white rounded-xl p-4 shadow-sm border border-cream-200">
                   <div className="flex justify-between items-start mb-2">
                     <div className="flex-1">
@@ -593,7 +588,7 @@ function SpeedRecords() {
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-cream-200">
-                {records.map((record) => (
+                {filteredRecords.map((record) => (
                   <tr key={record.id} className="hover:bg-cream-50 transition-colors">
                     <td className="px-6 py-4 text-center">
                       <span 
