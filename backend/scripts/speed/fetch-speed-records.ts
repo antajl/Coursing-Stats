@@ -237,7 +237,7 @@ function parseXLSX(buffer) {
   // Группируем записи по имени собаки для формирования истории
   const recordsByDog = {};
   records.forEach(record => {
-    const key = `${record.name}_${record.breed}_${record.sex}`;
+    const key = `${record.name}_${record.breed}`;
     if (!recordsByDog[key]) {
       recordsByDog[key] = [];
     }
