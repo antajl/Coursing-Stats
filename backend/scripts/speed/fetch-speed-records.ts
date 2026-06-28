@@ -244,6 +244,8 @@ function parseXLSX(buffer) {
     recordsByDog[key].push(record);
   });
   
+  console.log(`Total unique dogs: ${Object.keys(recordsByDog).length}`);
+  
   // Для каждой собаки сортируем результаты по дате и формируем историю
   Object.keys(recordsByDog).forEach(key => {
     const dogRecords = recordsByDog[key];
@@ -256,19 +258,18 @@ function parseXLSX(buffer) {
       return parseDate(b.date) - parseDate(a.date);
     });
     
-    // Для каждой записи (кроме последней) сохраняем историю предыдущих результатов
+    // Для каждой записи сохраняем историю всех предыдущих результатов (кроме текущей)
     dogRecords.forEach((record, idx) => {
-      if (idx > 0) {
-        // Предыдущие результаты - все после текущего (более старые)
-        record.history = dogRecords.slice(idx).map(r => ({
-          speed_km_h: r.speed_km_h,
-          date: r.date
-        }));
-      } else {
-        record.history = [];
-      }
+      // История - все записи кроме текущей (от новых к старым)
+      record.history = dogRecords.filter((_, i) => i !== idx).map(r => ({
+        speed_km_h: r.speed_km_h,
+        date: r.date
+      }));
     });
   });
+  
+  const recordsWithHistory = records.filter(r => r.history && r.history.length > 0);
+  console.log(`Records with history: ${recordsWithHistory.length}`);
   
   return records;
 }
