@@ -746,7 +746,7 @@ function SpeedRecords() {
                           </div>
                           <div className="text-right">
                             <div className="text-2xl font-bold text-camel-700">{record.time_seconds}</div>
-                            <div className="text-xs text-gray-500">сек</div>
+                            <div className="text-xs text-gray-500">350 м</div>
                           </div>
                         </div>
                       </div>
@@ -760,7 +760,7 @@ function SpeedRecords() {
                         <tr>
                           <th className="px-6 py-4 text-center font-semibold">Кличка</th>
                           <th className="px-6 py-4 text-center font-semibold">Порода</th>
-                          <th className="px-6 py-4 text-center font-semibold">Время (сек)</th>
+                          <th className="px-6 py-4 text-center font-semibold">Время (350 метров)</th>
                           <th className="px-6 py-4 text-center font-semibold">Дата</th>
                         </tr>
                       </thead>
