@@ -70,6 +70,15 @@ function SpeedRecords() {
     }
     return records;
   }, [coursingRecords]);
+
+  // Фильтрация бегов борзых по поиску
+  const filteredCoursingRecords = useMemo(() => {
+    if (!searchQuery) return bestCoursingRecords;
+    const query = searchQuery.toLowerCase();
+    return bestCoursingRecords.filter(record => 
+      record.name.toLowerCase().includes(query)
+    );
+  }, [bestCoursingRecords, searchQuery]);
   
   // Обработка speed records с группировкой
   const speedRecordsWithHistory = useMemo(() => 
@@ -604,55 +613,104 @@ function SpeedRecords() {
                 <p className="mt-4 text-old-money-600">Загрузка рекордов курсинга...</p>
               </div>
             ) : (
-              <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-old-money-200">
-                <div className="overflow-x-auto">
-                  <table className="w-full divide-y divide-cream-200 table-auto min-w-[600px]">
-                    <thead className="bg-gradient-to-r from-gold-200 to-old-money-200 border-b-2 border-old-money-300">
-                      <tr>
-                        <th className="px-6 py-4 text-center font-semibold">Кличка</th>
-                        <th className="px-6 py-4 text-center font-semibold">Порода</th>
-                        <th className="px-6 py-4 text-center font-semibold">Время (сек)</th>
-                        <th className="px-6 py-4 text-center font-semibold">Дата</th>
-                      </tr>
-                    </thead>
-                    <tbody className="bg-white divide-y divide-cream-200">
-                      {coursingRecords.map((record) => (
-                        <tr key={record.id} className="hover:bg-cream-50 transition-colors">
-                          <td className="px-6 py-4 text-center">
-                            <span 
-                              className={`font-semibold text-charcoal-900 transition-colors cursor-pointer ${
-                                record.history && record.history.length > 0 
-                                  ? 'text-camel-700 hover:text-camel-800 border-2 border-gold-300 rounded-lg px-2 py-0.5' 
-                                  : ''
-                              }`}
-                              onMouseEnter={(e) => {
-                                if (record.history && record.history.length > 0) {
-                                  const rect = e.target.getBoundingClientRect();
-                                  setCardPosition({
-                                    top: rect.top - 10,
-                                    left: rect.left + rect.width / 2
-                                  });
-                                  setHoveredRecord(record);
-                                }
-                              }}
-                              onMouseLeave={() => setHoveredRecord(null)}
-                            >
-                              {record.name}
-                            </span>
-                          </td>
-                          <td className="px-6 py-4 text-center text-charcoal-900">{record.breed}</td>
-                          <td className="px-6 py-4 text-center">
-                            <span className="inline-block px-3 py-1 rounded-full bg-camel-600 text-white font-bold text-sm">
-                              {record.time_seconds} сек
-                            </span>
-                          </td>
-                          <td className="px-6 py-4 text-center text-charcoal-900">{record.date}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
+              <>
+                {/* Фильтры для бегов борзых */}
+                <div className="flex gap-2 md:gap-4 mb-4 md:mb-6 flex-wrap">
+                  <div className="flex-1 min-w-[120px]">
+                    <input
+                      type="text"
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      placeholder="Поиск по кличке..."
+                      className="w-full px-4 py-3 rounded-xl border-2 border-cream-300 focus:border-camel-500 focus:ring-2 focus:ring-camel-200 transition-all bg-white"
+                    />
+                  </div>
+                  <div className="flex items-end">
+                    <button
+                      onClick={() => setSearchQuery('')}
+                      className="px-4 py-3 rounded-xl border-2 border-red-300 text-red-600 hover:bg-red-50 transition-all font-semibold"
+                    >
+                      Сбросить
+                    </button>
+                  </div>
                 </div>
-              </div>
+
+                {/* Таблица бегов борзых */}
+                <div className="rounded-xl border-2 border-cream-300 overflow-visible">
+                  {/* Mobile cards */}
+                  <div className="md:hidden space-y-3 p-3">
+                    {filteredCoursingRecords.map((record) => (
+                      <div key={record.id} className="bg-white rounded-xl p-4 shadow-sm border border-cream-200">
+                        <div className="flex justify-between items-start mb-2">
+                          <div className="flex-1">
+                            <div className="font-bold text-charcoal-900 mb-1">{record.name}</div>
+                            <div className="text-xs text-gray-600">{record.breed}</div>
+                            <div className="text-xs text-gray-500 mt-1">{record.date}</div>
+                          </div>
+                          <div className="text-right">
+                            <div className="text-2xl font-bold text-camel-700">{record.time_seconds}</div>
+                            <div className="text-xs text-gray-500">сек</div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Desktop table */}
+                  <div className="hidden md:block overflow-x-auto">
+                    <table className="w-full min-w-[600px]">
+                      <thead className="bg-charcoal-700 text-white">
+                        <tr>
+                          <th className="px-6 py-4 text-center font-semibold">Кличка</th>
+                          <th className="px-6 py-4 text-center font-semibold">Порода</th>
+                          <th className="px-6 py-4 text-center font-semibold">Время (сек)</th>
+                          <th className="px-6 py-4 text-center font-semibold">Дата</th>
+                        </tr>
+                      </thead>
+                      <tbody className="bg-white divide-y divide-cream-200">
+                        {filteredCoursingRecords.map((record) => (
+                          <tr key={record.id} className="hover:bg-cream-50 transition-colors">
+                            <td className="px-6 py-4 text-center">
+                              <span 
+                                className={`font-semibold text-charcoal-900 transition-colors cursor-pointer ${
+                                  record.history && record.history.length > 0 
+                                    ? 'text-camel-700 hover:text-camel-800 border-2 border-gold-300 rounded-lg px-2 py-0.5' 
+                                    : ''
+                                }`}
+                                onMouseEnter={(e) => {
+                                  if (record.history && record.history.length > 0) {
+                                    const rect = e.target.getBoundingClientRect();
+                                    setCardPosition({
+                                      top: rect.top - 10,
+                                      left: rect.left + rect.width / 2
+                                    });
+                                    setHoveredRecord(record);
+                                  }
+                                }}
+                                onMouseLeave={() => setHoveredRecord(null)}
+                              >
+                                {record.name}
+                              </span>
+                            </td>
+                            <td className="px-6 py-4 text-center text-charcoal-900">{record.breed}</td>
+                            <td className="px-6 py-4 text-center">
+                              <div className="relative inline-block">
+                                <span className="inline-block px-3 py-1 rounded-full bg-camel-600 text-white font-bold text-sm">
+                                  {record.time_seconds} сек
+                                </span>
+                                {record.history && record.history.length > 0 && (
+                                  <span className="absolute -top-3 -right-4 text-[10px] font-bold text-blue-600 bg-blue-100 border border-blue-300 px-1 py-0.5 rounded shadow-sm">upd</span>
+                                )}
+                              </div>
+                            </td>
+                            <td className="px-6 py-4 text-center text-charcoal-900">{record.date}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </>
             )}
           </div>
         )}
