@@ -672,43 +672,53 @@ function SpeedRecordsStats() {
                     Количество {sortConfig.key === 'count' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
                   </th>
                   <th 
-                    className="px-4 py-3 text-center font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50"
+                    className="px-4 py-3 text-center font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50 whitespace-nowrap"
                     onClick={() => handleSort('avgSpeed')}
                   >
                     Средняя скорость {sortConfig.key === 'avgSpeed' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
                   </th>
                   <th 
-                    className="px-4 py-3 text-center font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50"
+                    className="px-4 py-3 text-center font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50 whitespace-nowrap"
                     onClick={() => handleSort('maxSpeed')}
                   >
                     Лучшая скорость {sortConfig.key === 'maxSpeed' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
                   </th>
                   <th 
-                    className="px-4 py-3 text-center font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50"
+                    className="px-4 py-3 text-center font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50 whitespace-nowrap"
                     onClick={() => handleSort('avgTime350')}
                   >
                     Время за 350м (ср) {sortConfig.key === 'avgTime350' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
                   </th>
                   <th 
-                    className="px-4 py-3 text-center font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50"
+                    className="px-4 py-3 text-center font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50 whitespace-nowrap"
                     onClick={() => handleSort('bestTime350')}
                   >
                     Время за 350м (лучшее) {sortConfig.key === 'bestTime350' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
                   </th>
-                  <th className="px-4 py-3 text-left font-semibold text-charcoal-900">Клички</th>
                 </tr>
               </thead>
               <tbody>
                 {sortedBreedStats.map((stat, idx) => (
-                  <tr key={idx} className="border-b border-cream-200 hover:bg-cream-50">
-                    <td className="px-4 py-3 font-semibold text-charcoal-900">{stat.breed}</td>
-                    <td className="px-4 py-3 text-center text-charcoal-700">{stat.count}</td>
-                    <td className="px-4 py-3 text-center text-camel-700 font-semibold">{stat.avgSpeed.toFixed(1)} км/ч</td>
-                    <td className="px-4 py-3 text-center text-camel-700 font-bold">{stat.maxSpeed} км/ч</td>
-                    <td className="px-4 py-3 text-center text-charcoal-700">{stat.avgTime350} сек</td>
-                    <td className="px-4 py-3 text-center text-camel-700 font-bold">{stat.bestTime350} сек</td>
-                    <td className="px-4 py-3 text-sm text-charcoal-600 max-w-md truncate" title={stat.names}>{stat.names}</td>
-                  </tr>
+                  <React.Fragment key={idx}>
+                    <tr 
+                      className="border-b border-cream-200 hover:bg-cream-50 cursor-pointer"
+                      onClick={() => setExpandedSection(expandedSection === `breed-${idx}` ? null : `breed-${idx}`)}
+                    >
+                      <td className="px-4 py-3 font-semibold text-charcoal-900">{stat.breed}</td>
+                      <td className="px-4 py-3 text-center text-charcoal-700">{stat.count}</td>
+                      <td className="px-4 py-3 text-center text-camel-700 font-semibold whitespace-nowrap">{stat.avgSpeed.toFixed(1)} км/ч</td>
+                      <td className="px-4 py-3 text-center text-camel-700 font-bold whitespace-nowrap">{stat.maxSpeed} км/ч</td>
+                      <td className="px-4 py-3 text-center text-charcoal-700 whitespace-nowrap">{stat.avgTime350} сек</td>
+                      <td className="px-4 py-3 text-center text-camel-700 font-bold whitespace-nowrap">{stat.bestTime350} сек</td>
+                    </tr>
+                    {expandedSection === `breed-${idx}` && (
+                      <tr className="bg-cream-50">
+                        <td colSpan={6} className="px-4 py-3 text-sm text-charcoal-700">
+                          <strong>Клички:</strong> {stat.names}
+                        </td>
+                      </tr>
+                    )}
+                  </React.Fragment>
                 ))}
               </tbody>
             </table>
@@ -736,43 +746,53 @@ function SpeedRecordsStats() {
                     Количество {sortConfig.key === 'count' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
                   </th>
                   <th 
-                    className="px-4 py-3 text-center font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50"
+                    className="px-4 py-3 text-center font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50 whitespace-nowrap"
                     onClick={() => handleSort('avgSpeed')}
                   >
                     Средняя скорость {sortConfig.key === 'avgSpeed' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
                   </th>
                   <th 
-                    className="px-4 py-3 text-center font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50"
+                    className="px-4 py-3 text-center font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50 whitespace-nowrap"
                     onClick={() => handleSort('maxSpeed')}
                   >
                     Лучшая скорость {sortConfig.key === 'maxSpeed' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
                   </th>
                   <th 
-                    className="px-4 py-3 text-center font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50"
+                    className="px-4 py-3 text-center font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50 whitespace-nowrap"
                     onClick={() => handleSort('avgTime350')}
                   >
                     Время за 350м (ср) {sortConfig.key === 'avgTime350' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
                   </th>
                   <th 
-                    className="px-4 py-3 text-center font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50"
+                    className="px-4 py-3 text-center font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50 whitespace-nowrap"
                     onClick={() => handleSort('bestTime350')}
                   >
                     Время за 350м (лучшее) {sortConfig.key === 'bestTime350' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
                   </th>
-                  <th className="px-4 py-3 text-left font-semibold text-charcoal-900">Клички</th>
                 </tr>
               </thead>
               <tbody>
                 {sortedSexStats.map((stat, idx) => (
-                  <tr key={idx} className="border-b border-cream-200 hover:bg-cream-50">
-                    <td className="px-4 py-3 font-semibold text-charcoal-900">{stat.sex}</td>
-                    <td className="px-4 py-3 text-center text-charcoal-700">{stat.count}</td>
-                    <td className="px-4 py-3 text-center text-camel-700 font-semibold">{stat.avgSpeed.toFixed(1)} км/ч</td>
-                    <td className="px-4 py-3 text-center text-camel-700 font-bold">{stat.maxSpeed} км/ч</td>
-                    <td className="px-4 py-3 text-center text-charcoal-700">{stat.avgTime350} сек</td>
-                    <td className="px-4 py-3 text-center text-camel-700 font-bold">{stat.bestTime350} сек</td>
-                    <td className="px-4 py-3 text-sm text-charcoal-600 max-w-md truncate" title={stat.names}>{stat.names}</td>
-                  </tr>
+                  <React.Fragment key={idx}>
+                    <tr 
+                      className="border-b border-cream-200 hover:bg-cream-50 cursor-pointer"
+                      onClick={() => setExpandedSection(expandedSection === `sex-${idx}` ? null : `sex-${idx}`)}
+                    >
+                      <td className="px-4 py-3 font-semibold text-charcoal-900">{stat.sex}</td>
+                      <td className="px-4 py-3 text-center text-charcoal-700">{stat.count}</td>
+                      <td className="px-4 py-3 text-center text-camel-700 font-semibold whitespace-nowrap">{stat.avgSpeed.toFixed(1)} км/ч</td>
+                      <td className="px-4 py-3 text-center text-camel-700 font-bold whitespace-nowrap">{stat.maxSpeed} км/ч</td>
+                      <td className="px-4 py-3 text-center text-charcoal-700 whitespace-nowrap">{stat.avgTime350} сек</td>
+                      <td className="px-4 py-3 text-center text-camel-700 font-bold whitespace-nowrap">{stat.bestTime350} сек</td>
+                    </tr>
+                    {expandedSection === `sex-${idx}` && (
+                      <tr className="bg-cream-50">
+                        <td colSpan={6} className="px-4 py-3 text-sm text-charcoal-700">
+                          <strong>Клички:</strong> {stat.names}
+                        </td>
+                      </tr>
+                    )}
+                  </React.Fragment>
                 ))}
               </tbody>
             </table>
@@ -800,43 +820,53 @@ function SpeedRecordsStats() {
                     Количество {sortConfig.key === 'count' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
                   </th>
                   <th 
-                    className="px-4 py-3 text-center font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50"
+                    className="px-4 py-3 text-center font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50 whitespace-nowrap"
                     onClick={() => handleSort('avgSpeed')}
                   >
                     Средняя скорость {sortConfig.key === 'avgSpeed' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
                   </th>
                   <th 
-                    className="px-4 py-3 text-center font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50"
+                    className="px-4 py-3 text-center font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50 whitespace-nowrap"
                     onClick={() => handleSort('maxSpeed')}
                   >
                     Лучшая скорость {sortConfig.key === 'maxSpeed' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
                   </th>
                   <th 
-                    className="px-4 py-3 text-center font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50"
+                    className="px-4 py-3 text-center font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50 whitespace-nowrap"
                     onClick={() => handleSort('avgTime350')}
                   >
                     Время за 350м (ср) {sortConfig.key === 'avgTime350' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
                   </th>
                   <th 
-                    className="px-4 py-3 text-center font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50"
+                    className="px-4 py-3 text-center font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50 whitespace-nowrap"
                     onClick={() => handleSort('bestTime350')}
                   >
                     Время за 350м (лучшее) {sortConfig.key === 'bestTime350' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
                   </th>
-                  <th className="px-4 py-3 text-left font-semibold text-charcoal-900">Клички</th>
                 </tr>
               </thead>
               <tbody>
                 {sortedYearStats.map((stat, idx) => (
-                  <tr key={idx} className="border-b border-cream-200 hover:bg-cream-50">
-                    <td className="px-4 py-3 font-semibold text-charcoal-900">{stat.year}</td>
-                    <td className="px-4 py-3 text-center text-charcoal-700">{stat.count}</td>
-                    <td className="px-4 py-3 text-center text-camel-700 font-semibold">{stat.avgSpeed.toFixed(1)} км/ч</td>
-                    <td className="px-4 py-3 text-center text-camel-700 font-bold">{stat.maxSpeed} км/ч</td>
-                    <td className="px-4 py-3 text-center text-charcoal-700">{stat.avgTime350} сек</td>
-                    <td className="px-4 py-3 text-center text-camel-700 font-bold">{stat.bestTime350} сек</td>
-                    <td className="px-4 py-3 text-sm text-charcoal-600 max-w-md truncate" title={stat.names}>{stat.names}</td>
-                  </tr>
+                  <React.Fragment key={idx}>
+                    <tr 
+                      className="border-b border-cream-200 hover:bg-cream-50 cursor-pointer"
+                      onClick={() => setExpandedSection(expandedSection === `year-${idx}` ? null : `year-${idx}`)}
+                    >
+                      <td className="px-4 py-3 font-semibold text-charcoal-900">{stat.year}</td>
+                      <td className="px-4 py-3 text-center text-charcoal-700">{stat.count}</td>
+                      <td className="px-4 py-3 text-center text-camel-700 font-semibold whitespace-nowrap">{stat.avgSpeed.toFixed(1)} км/ч</td>
+                      <td className="px-4 py-3 text-center text-camel-700 font-bold whitespace-nowrap">{stat.maxSpeed} км/ч</td>
+                      <td className="px-4 py-3 text-center text-charcoal-700 whitespace-nowrap">{stat.avgTime350} сек</td>
+                      <td className="px-4 py-3 text-center text-camel-700 font-bold whitespace-nowrap">{stat.bestTime350} сек</td>
+                    </tr>
+                    {expandedSection === `year-${idx}` && (
+                      <tr className="bg-cream-50">
+                        <td colSpan={6} className="px-4 py-3 text-sm text-charcoal-700">
+                          <strong>Клички:</strong> {stat.names}
+                        </td>
+                      </tr>
+                    )}
+                  </React.Fragment>
                 ))}
               </tbody>
             </table>
