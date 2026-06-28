@@ -1,19 +1,30 @@
 # Speed Records Documentation
 
 ## Overview
-Speed records are fetched from Google Sheets and displayed on the website to show the best running speeds for dogs.
+Speed records are fetched from Google Sheets, cached locally, and displayed on the website to show the best running speeds for dogs.
+
+## Architecture
+The system uses a hybrid approach:
+1. **Google Sheets** - Primary data source
+2. **Local JSON cache** - `data/speed-records.json` for version control and backup
+3. **D1 database** - Production database for API
+4. **Sync script** - Compares Google Sheets with local cache and updates both
 
 ## Data Source
-- **Google Sheets URL**: https://docs.google.com/spreadsheets/d/1NTiY3HXZIkXE8xTeXZESgMKaZsEXunmcWhTfhhkoKyE/export?format=csv&gid=1787526009
+- **Google Sheets URL**: https://docs.google.com/spreadsheets/d/1NTiY3HXZIkXE8xTeXZESgMKaZsEXunmcWhTfhhkoKyE/export?format=xlsx
 - **Sheets**: "2026", "2025", "2025 по породам", "Абсолютный зачёт", "старые личные рекорды"
 - **Columns**: Порода, Пол, Кличка, Лучшая скорость (км/ч), Дата, Скриншот
 
 ## Data Processing Pipeline
 
-### 1. Fetching
-- Script: `backend/scripts/speed/fetch-speed-records.ts`
+### 1. Sync Script
+- Script: `backend/scripts/speed/sync-speed-records.ts`
 - Downloads XLSX file from Google Sheets
 - Parses all sheets and extracts records
+- Compares with local cache (`data/speed-records.json`)
+- Identifies new and updated records
+- Updates local cache
+- Generates SQL and loads to D1 database
 
 ### 2. Deduplication
 - **Purpose**: Remove duplicate records that may exist in different sheets
@@ -21,13 +32,19 @@ Speed records are fetched from Google Sheets and displayed on the website to sho
 - **Example**: If the same record (same dog, same date, same speed) appears in both "2025" and "2025 по породам" sheets, only one is kept
 - **Result**: 418 records → 187 unique records (231 duplicates removed)
 
-### 3. Grouping for History
+### 3. Cache Comparison
+- **Purpose**: Identify new and updated records
+- **Comparison key**: `name + breed + sex + date + speed_km_h`
+- **Output**: Shows count of new records and updated records
+- **Action**: Updates local cache file with all records
+
+### 4. Grouping for History
 - **Grouping key**: `name + breed`
 - **Purpose**: Group records by dog to form history
 - **Logic**: Dogs with the same name and breed are considered the same dog, regardless of sex
 - **Example**: "Тайга" + "Салюки" → all records for this dog are grouped together
 
-### 4. History Formation
+### 5. History Formation
 - For each dog, records are sorted by date (newest to oldest)
 - For each record, history contains all other records for that dog (except current)
 - History format: `[{speed_km_h, date}, ...]`
@@ -36,20 +53,20 @@ Speed records are fetched from Google Sheets and displayed on the website to sho
   - Record 2 (54 km/h): history = [{55 km/h, 11.05.2026}, {51 km/h, 06.07.2025}]
   - Record 3 (51 km/h): history = [{55 km/h, 11.05.2026}, {54 km/h, 29.11.2025}]
 
-### 5. Database Storage
+### 6. Database Storage
 - **Table**: `speed_records`
 - **Fields**: breed, sex, name, speed_km_h, date, screenshot_url, status, history
 - **History storage**: JSON string in `history` field
 - **Update method**: `INSERT OR REPLACE` (incremental updates, no DELETE)
 - **Database**: D1 `pc-db` (remote)
 
-### 6. API Endpoint
+### 7. API Endpoint
 - **Endpoint**: `/api/speed-records`
 - **Method**: GET
 - **Limit**: 1000 records (configurable)
 - **Response format**: `{success: true, data: [...]}`
 
-### 7. Frontend Display
+### 8. Frontend Display
 - **Component**: `frontend/src/pages/SpeedRecords/index.tsx`
 - **Grouping for display**: `name + breed` (one best record per unique dog, matches backend history logic)
 - **History display**: Hover over dog name to see history popup
@@ -76,20 +93,22 @@ Speed records are fetched from Google Sheets and displayed on the website to sho
 
 ## Running the Script
 
-### Local testing
+### Manual sync
 ```bash
-npx tsx backend/scripts/speed/fetch-speed-records.ts
+npx tsx backend/scripts/speed/sync-speed-records.ts
 ```
 
-### Update remote database
-```bash
-npx tsx backend/scripts/speed/fetch-speed-records.ts --remote
-```
+This will:
+1. Fetch from Google Sheets
+2. Compare with local cache
+3. Update local cache
+4. Generate SQL
+5. Load to D1 database
 
 ### GitHub Actions
 - **Workflow**: `.github/workflows/update-speed-records.yml`
-- **Schedule**: Daily at 03:00 UTC
-- **Action**: Fetches from Google Sheets, deduplicates, groups, forms history, updates D1
+- **Schedule**: Daily at 04:00 UTC
+- **Action**: Runs sync script, commits updated cache file to repository
 
 ## Troubleshooting
 
@@ -99,7 +118,7 @@ npx tsx backend/scripts/speed/fetch-speed-records.ts --remote
 - Verify grouping key (name + breed) matches expected behavior
 
 ### Duplicate records visible
-- Check deduplication logic in `fetch-speed-records.ts`
+- Check deduplication logic in `sync-speed-records.ts`
 - Verify deduplication key includes all necessary fields
 - Check if records have different dates (different records, not duplicates)
 
@@ -114,15 +133,15 @@ npx tsx backend/scripts/speed/fetch-speed-records.ts --remote
 - **Solution**: Clean database before loading new data
   ```bash
   npx wrangler d1 execute pc-db --remote --command="DELETE FROM speed_records"
-  npx tsx backend/scripts/speed/fetch-speed-records.ts --remote
+  npx tsx backend/scripts/speed/sync-speed-records.ts
   ```
-- **Prevention**: Always clean database before major data reloads
+- **Prevention**: The sync script uses INSERT OR REPLACE which should handle duplicates, but manual cleaning may be needed if database gets corrupted
 
 ### Frontend shows only one record per dog
 - **Symptom**: Dog shows only best result, history not visible on hover
 - **Cause**: Frontend grouping key doesn't match backend history grouping key
 - **Solution**: Ensure both use same grouping key (name + breed)
-  - Backend: `fetch-speed-records.ts` line 240: `key = ${record.name}_${record.breed}`
+  - Backend: `sync-speed-records.ts` line 253: `key = ${record.name}_${record.breed}`
   - Frontend: `index.tsx` line 105: `key = ${record.name}_${record.breed}`
 
 ### Infinite React render loop
@@ -141,3 +160,11 @@ npx tsx backend/scripts/speed/fetch-speed-records.ts --remote
   - Backend: `backend/src/routes/speed.ts` change LIMIT 100 to 1000
   - Frontend: `useSpeedRecords('', '', 1000, '', '')` change 100 to 1000
   - Deploy backend after changes: `npx wrangler deploy`
+
+### Cache file not updating
+- **Symptom**: Local cache file doesn't change after sync
+- **Cause**: File permissions or git conflicts
+- **Solution**: 
+  - Check file permissions on `data/speed-records.json`
+  - Ensure file is not locked by another process
+  - Manually delete cache file and run sync again
