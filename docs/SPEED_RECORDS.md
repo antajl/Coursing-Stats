@@ -51,7 +51,7 @@ Speed records are fetched from Google Sheets and displayed on the website to sho
 
 ### 7. Frontend Display
 - **Component**: `frontend/src/pages/SpeedRecords/index.tsx`
-- **Grouping for display**: `name + breed + sex` (one best record per unique dog)
+- **Grouping for display**: `name + breed` (one best record per unique dog, matches backend history logic)
 - **History display**: Hover over dog name to see history popup
 - **Filtering**: By year, breed, sex, search query
 - **Sorting**: By any column (name, speed, date, etc.)
@@ -65,7 +65,7 @@ Speed records are fetched from Google Sheets and displayed on the website to sho
 ### Grouping Keys
 - **Deduplication**: `name + breed + sex + date + speed` (very specific)
 - **History formation**: `name + breed` (broader, allows same dog with different sex records)
-- **Frontend display**: `name + breed + sex` (one record per unique dog)
+- **Frontend display**: `name + breed` (one record per unique dog, matches backend history logic)
 
 ## Statistics
 - **Total records (raw)**: 418
