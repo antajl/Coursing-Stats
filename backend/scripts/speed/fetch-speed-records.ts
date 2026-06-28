@@ -281,10 +281,10 @@ function parseXLSX(buffer) {
     });
   });
   
-  const recordsWithHistory = records.filter(r => r.history && r.history.length > 0);
+  const recordsWithHistory = uniqueRecords.filter(r => r.history && r.history.length > 0);
   console.log(`Records with history: ${recordsWithHistory.length}`);
   
-  return records;
+  return uniqueRecords;
 }
 
 function esc(value) {
