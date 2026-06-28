@@ -393,7 +393,7 @@ function SpeedRecordsStats() {
             onClick={() => setOpenDropdown(openDropdown === 'year' ? null : 'year')}
             className="w-full px-4 py-3 rounded-xl border-2 border-cream-300 focus:border-camel-500 focus:ring-2 focus:ring-camel-200 transition-all bg-white text-left"
           >
-            {filterYears.length > 0 ? `Выбрано: ${filterYears.length}` : 'Года'}
+            {filterYears.length > 0 ? `Выбрано: ${filterYears.length}` : 'Год'}
           </button>
           {openDropdown === 'year' && (
             <div className="absolute z-10 w-full mt-1 bg-white border-2 border-cream-300 rounded-xl shadow-xl max-h-60 overflow-y-auto">
@@ -416,7 +416,7 @@ function SpeedRecordsStats() {
             onClick={() => setOpenDropdown(openDropdown === 'breed' ? null : 'breed')}
             className="w-full px-4 py-3 rounded-xl border-2 border-cream-300 focus:border-camel-500 focus:ring-2 focus:ring-camel-200 transition-all bg-white text-left"
           >
-            {filterBreeds.length > 0 ? `Выбрано: ${filterBreeds.length}` : 'Породы'}
+            {filterBreeds.length > 0 ? `Выбрано: ${filterBreeds.length}` : 'Порода'}
           </button>
           {openDropdown === 'breed' && (
             <div className="absolute z-10 w-full mt-1 bg-white border-2 border-cream-300 rounded-xl shadow-xl max-h-60 overflow-y-auto">
