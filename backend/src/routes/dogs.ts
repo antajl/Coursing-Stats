@@ -75,19 +75,11 @@ export function handleDogs(app: Hono<{ Bindings: Env }>) {
           FROM results r2
           JOIN events e ON r2.event_id = e.id
           WHERE r2.dog_id = ? AND e.event_type = 'racing' AND r2.raw_scores_json IS NOT NULL
-          ORDER BY
-            CASE
-              WHEN json_extract(r2.raw_scores_json, '$.heat1.speed') IS NOT NULL THEN CAST(json_extract(r2.raw_scores_json, '$.heat1.speed') AS REAL)
-              ELSE 0
-            END DESC,
-            CASE
-              WHEN json_extract(r2.raw_scores_json, '$.heat2.speed') IS NOT NULL THEN CAST(json_extract(r2.raw_scores_json, '$.heat2.speed') AS REAL)
-              ELSE 0
-            END DESC,
-            CASE
-              WHEN json_extract(r2.raw_scores_json, '$.heat3.speed') IS NOT NULL THEN CAST(json_extract(r2.raw_scores_json, '$.heat3.speed') AS REAL)
-              ELSE 0
-            END DESC
+          ORDER BY (
+            SELECT MAX(CAST(json_extract(h.value, '$.speed_kmh') AS REAL))
+            FROM json_each(json_extract(r2.raw_scores_json, '$.heats')) AS h
+            WHERE json_extract(h.value, '$.speed_kmh') IS NOT NULL
+          ) DESC
           LIMIT 1
         ) AS best_speed_event_url
       FROM results r
@@ -114,23 +106,27 @@ export function handleDogs(app: Hono<{ Bindings: Env }>) {
 
       const { results: speedResults } = await db.prepare(speedQuery).bind(dogId).all();
 
-      // Extract speeds from raw_scores_json
+      // Extract speeds from raw_scores_json (new format with heats array)
       const speeds = [];
       for (const row of speedResults) {
         try {
           const scores = JSON.parse(row.raw_scores_json);
-          if (scores.heat1?.speed) speeds.push(parseFloat(scores.heat1.speed));
-          if (scores.heat2?.speed) speeds.push(parseFloat(scores.heat2.speed));
-          if (scores.heat3?.speed) speeds.push(parseFloat(scores.heat3.speed));
+          if (scores.heats && Array.isArray(scores.heats)) {
+            for (const heat of scores.heats) {
+              if (heat.speed_kmh) {
+                speeds.push(parseFloat(heat.speed_kmh));
+              }
+            }
+          }
         } catch (e) {
           console.error('Error parsing raw_scores_json:', e);
         }
       }
 
-      // Calculate best and average speed (convert m/s to km/h)
+      // Calculate best and average speed (already in km/h)
       if (speeds.length > 0) {
-        const bestSpeed = Math.max(...speeds) * 3.6; // m/s to km/h
-        const avgSpeed = (speeds.reduce((a, b) => a + b, 0) / speeds.length) * 3.6; // m/s to km/h
+        const bestSpeed = Math.max(...speeds);
+        const avgSpeed = speeds.reduce((a, b) => a + b, 0) / speeds.length;
         dogData.racing_stats.best_speed = bestSpeed.toFixed(2);
         dogData.racing_stats.avg_speed = avgSpeed.toFixed(2);
       }
