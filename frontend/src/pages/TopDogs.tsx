@@ -263,7 +263,7 @@ export default function TopDogs() {
       </div>
 
       {/* Tabs section */}
-      <div className="flex gap-2 border-b-2 border-cream-300 dark:border-charcoal-600 pb-2 overflow-x-auto scrollbar-thin scrollbar-gray-300 mb-4">
+      <div className="flex gap-2 overflow-x-auto scrollbar-thin scrollbar-gray-300 mb-4">
         <button
           onClick={() => setActiveTab('placement')}
           className={`flex-1 min-w-[120px] px-4 py-2.5 rounded-xl font-semibold transition-all duration-200 ${
