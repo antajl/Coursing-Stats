@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
-import { createPortal } from 'react-dom';
 import { useSpeedRecords, useCoursingRecords } from '../../hooks/useApi';
 import { toPng } from 'html-to-image';
 import * as XLSX from 'xlsx';
@@ -123,15 +122,8 @@ function SpeedRecords() {
   // Состояние для dropdown menus
   const [openDropdown, setOpenDropdown] = useState(null);
   
-  // Состояние для карточки истории
-  const [hoveredRecord, setHoveredRecord] = useState(null);
-  const [cardPosition, setCardPosition] = useState({ top: 0, left: 0 });
-  
   // Ref для закрытия dropdown при клике вне
   const dropdownRef = useRef(null);
-  
-  // Состояние для модального окна истории (не используется, но оставлено для будущего)
-  const [selectedRecord, setSelectedRecord] = useState(null);
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -591,27 +583,12 @@ function SpeedRecords() {
                   <tr key={record.id} className="hover:bg-cream-50 dark:hover:bg-charcoal-700 transition-colors">
                     <td className="px-6 py-4 text-center">
                       <span 
-                        className={`font-semibold text-charcoal-900 dark:text-charcoal-100 transition-colors cursor-pointer ${
-                          record.history && record.history.length > 0 
-                            ? 'rounded-lg border border-camel-300 dark:border-camel-600 px-2 py-0.5 text-camel-700 dark:text-camel-400 hover:text-camel-800 dark:hover:text-camel-300' 
-                            : 'hover:text-camel-700 dark:hover:text-camel-400'
-                        }`}
+                        className="font-semibold text-charcoal-900 dark:text-charcoal-100 transition-colors cursor-pointer hover:text-camel-700 dark:hover:text-camel-400"
                         onClick={() => {
                           if (record.dog_id) {
                             navigate(`/dog/${record.dog_id}`);
                           }
                         }}
-                        onMouseEnter={(e) => {
-                          if (record.history && record.history.length > 0) {
-                            const rect = e.target.getBoundingClientRect();
-                            setCardPosition({
-                              top: rect.top - 10,
-                              left: rect.left + rect.width / 2
-                            });
-                            setHoveredRecord(record);
-                          }
-                        }}
-                        onMouseLeave={() => setHoveredRecord(null)}
                       >
                         {record.name}
                       </span>
@@ -792,27 +769,12 @@ function SpeedRecords() {
                           <tr key={record.id} className="hover:bg-cream-50 dark:hover:bg-charcoal-700 transition-colors">
                             <td className="px-6 py-4 text-center">
                               <span 
-                                className={`font-semibold text-charcoal-900 dark:text-charcoal-100 transition-colors cursor-pointer ${
-                                  record.history && record.history.length > 0 
-                                    ? 'rounded-lg border border-camel-300 dark:border-camel-600 px-2 py-0.5 text-camel-700 dark:text-camel-400 hover:text-camel-800 dark:hover:text-camel-300' 
-                                    : 'hover:text-camel-700 dark:hover:text-camel-400'
-                                }`}
+                                className="font-semibold text-charcoal-900 dark:text-charcoal-100 transition-colors cursor-pointer hover:text-camel-700 dark:hover:text-camel-400"
                                 onClick={() => {
                                   if (record.dog_id) {
                                     navigate(`/dog/${record.dog_id}`);
                                   }
                                 }}
-                                onMouseEnter={(e) => {
-                                  if (record.history && record.history.length > 0) {
-                                    const rect = e.target.getBoundingClientRect();
-                                    setCardPosition({
-                                      top: rect.top - 10,
-                                      left: rect.left + rect.width / 2
-                                    });
-                                    setHoveredRecord(record);
-                                  }
-                                }}
-                                onMouseLeave={() => setHoveredRecord(null)}
                               >
                                 {record.name}
                               </span>
@@ -842,59 +804,6 @@ function SpeedRecords() {
 
         {activeTab === 'stats' && <SpeedRecordsStats />}
       </div>
-      
-      {/* Portal для карточки истории */}
-      {hoveredRecord && createPortal(
-        <div 
-          className="fixed bg-white dark:bg-charcoal-800 rounded-xl shadow-2xl border-2 border-cream-300 dark:border-charcoal-600 p-4 z-[9999] transition-opacity duration-200"
-          style={{
-            top: `${cardPosition.top}px`,
-            left: `${cardPosition.left}px`,
-            transform: 'translate(-50%, -100%)',
-            marginTop: '-10px'
-          }}
-          onMouseEnter={() => setHoveredRecord(hoveredRecord)}
-          onMouseLeave={() => setHoveredRecord(null)}
-        >
-          <div className="flex justify-between items-start mb-2">
-            <div className="font-bold text-charcoal-900 dark:text-charcoal-100">{hoveredRecord.name}</div>
-          </div>
-          <div className="text-sm text-charcoal-600 dark:text-charcoal-300 mb-3">{hoveredRecord.breed}{hoveredRecord.sex ? ` • ${hoveredRecord.sex === 'С' ? 'Сука' : hoveredRecord.sex === 'К' ? 'Кабель' : hoveredRecord.sex}` : ''}</div>
-          
-          <div className="space-y-2">
-            <div className="bg-camel-50 dark:bg-charcoal-700 border border-camel-200 dark:border-charcoal-600 rounded-lg p-2">
-              <div className="text-xs text-charcoal-600 dark:text-charcoal-300">Текущий результат</div>
-              <div className="flex justify-between items-center">
-                <div className="text-lg font-bold text-camel-700 dark:text-camel-400">
-                  {hoveredRecord.time_seconds ? `${hoveredRecord.time_seconds} сек` : `${hoveredRecord.speed_km_h} км/ч`}
-                </div>
-                <div className="text-sm text-charcoal-600 dark:text-charcoal-300">{hoveredRecord.date}</div>
-              </div>
-            </div>
-            
-            {hoveredRecord.history && hoveredRecord.history.length > 0 && (
-              <div>
-                <div className="text-xs font-semibold text-charcoal-700 dark:text-charcoal-200 mb-1">Предыдущие результаты:</div>
-                <div className="space-y-1">
-                  {hoveredRecord.history.map((h, idx) => (
-                    <div key={idx} className="bg-cream-50 dark:bg-charcoal-700 border border-cream-200 dark:border-charcoal-600 rounded-lg p-2">
-                      <div className="flex justify-between items-center">
-                        <div className="text-sm font-bold text-charcoal-900 dark:text-charcoal-100">
-                          {h.time_seconds ? `${h.time_seconds} сек` : `${h.speed_km_h} км/ч`}
-                        </div>
-                        <div className="text-xs text-charcoal-600 dark:text-charcoal-300">{h.date}</div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-          
-          <div className="absolute left-1/2 -translate-x-1/2 bottom-0 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-cream-300 dark:border-t-charcoal-600 translate-y-full"></div>
-        </div>,
-        document.body
-      )}
     </div>
   );
 }
