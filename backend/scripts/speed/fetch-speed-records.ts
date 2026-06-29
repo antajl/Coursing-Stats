@@ -355,6 +355,15 @@ async function loadToRemote(sql) {
   console.log("Loaded speed records to remote D1");
 }
 
+async function loadToLocalSQL(sql) {
+  console.log("Generating SQL file for local D1...");
+  const sqlPath = path.join(ROOT, "data/imports/speed-records-local.sql");
+  await fs.writeFile(sqlPath, sql);
+  console.log(`SQL file generated: ${sqlPath}`);
+  console.log("To load to local D1, run:");
+  console.log("npx wrangler d1 execute pc-db --local --file=./data/imports/speed-records-local.sql");
+}
+
 async function main() {
   const buffer = await fetchXLSX();
   const records = parseXLSX(buffer);
@@ -379,9 +388,7 @@ async function main() {
     console.log("\nTo load to local D1: node backend/scripts/fetch-speed-records.mjs --local");
     console.log("To load to remote D1: node backend/scripts/fetch-speed-records.mjs --remote");
   } else if (mode === "local") {
-    const db = new Database(LOCAL_DB);
-    await loadToLocal(db, sql);
-    db.close();
+    await loadToLocalSQL(sql);
   } else if (mode === "remote") {
     await loadToRemote(sql);
   }
