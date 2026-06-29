@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import React from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { api } from '../../services/api'
+import ErrorState from '../../components/ErrorState'
 
 export default function EventResults() {
   const { id } = useParams()
@@ -64,10 +65,15 @@ export default function EventResults() {
     return (
       <div className="min-h-screen bg-cream-50 dark:bg-charcoal-800 p-6">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center py-8 text-old-money-600 dark:text-old-money-400">
-            <div className="mb-4">Событие не найдено</div>
-            <div className="text-sm text-gray-500 dark:text-gray-400">ID: {id}</div>
-          </div>
+          <ErrorState
+            title="Событие не найдено"
+            message={`ID: ${id}`}
+            action={
+              <Link to="/" className="rounded-xl border-2 border-camel-300 dark:border-camel-600 bg-white dark:bg-charcoal-800 px-4 py-2 text-sm font-semibold text-camel-700 dark:text-camel-400 transition-all hover:bg-camel-50 dark:hover:bg-charcoal-700 hover:border-camel-400">
+                На главную
+              </Link>
+            }
+          />
         </div>
       </div>
     )
@@ -77,9 +83,11 @@ export default function EventResults() {
     <div className="min-h-screen bg-cream-50 dark:bg-charcoal-800 p-4 md:p-6">
       <div className="max-w-4xl mx-auto">
         {error && (
-          <div className="mb-4 p-4 bg-amber-50 dark:bg-amber-900 border border-amber-200 dark:border-amber-700 rounded-xl text-amber-800 dark:text-amber-300">
-            <p className="font-medium">⚠️ {error}</p>
-          </div>
+          <ErrorState
+            title="Ошибка загрузки"
+            message={error}
+            onRetry={() => window.location.reload()}
+          />
         )}
 
         <Link to="/" className="mb-6 inline-block font-medium text-camel-700 dark:text-camel-400 transition-colors hover:text-camel-800 dark:hover:text-camel-300">
