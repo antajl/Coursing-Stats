@@ -813,7 +813,7 @@ function SpeedRecords() {
       {/* Portal для карточки истории */}
       {hoveredRecord && createPortal(
         <div 
-          className="fixed bg-white rounded-xl shadow-2xl border-2 border-cream-300 p-4 z-[9999] transition-opacity duration-200"
+          className="fixed bg-white dark:bg-charcoal-800 rounded-xl shadow-2xl border-2 border-cream-300 dark:border-charcoal-600 p-4 z-[9999] transition-opacity duration-200"
           style={{
             top: `${cardPosition.top}px`,
             left: `${cardPosition.left}px`,
@@ -824,32 +824,32 @@ function SpeedRecords() {
           onMouseLeave={() => setHoveredRecord(null)}
         >
           <div className="flex justify-between items-start mb-2">
-            <div className="font-bold text-charcoal-900">{hoveredRecord.name}</div>
+            <div className="font-bold text-charcoal-900 dark:text-charcoal-100">{hoveredRecord.name}</div>
           </div>
-          <div className="text-sm text-charcoal-600 mb-3">{hoveredRecord.breed}{hoveredRecord.sex ? ` • ${hoveredRecord.sex === 'С' ? 'Сука' : hoveredRecord.sex === 'К' ? 'Кабель' : hoveredRecord.sex}` : ''}</div>
+          <div className="text-sm text-charcoal-600 dark:text-charcoal-300 mb-3">{hoveredRecord.breed}{hoveredRecord.sex ? ` • ${hoveredRecord.sex === 'С' ? 'Сука' : hoveredRecord.sex === 'К' ? 'Кабель' : hoveredRecord.sex}` : ''}</div>
           
           <div className="space-y-2">
-            <div className="bg-camel-50 border border-camel-200 rounded-lg p-2">
-              <div className="text-xs text-charcoal-600">Текущий результат</div>
+            <div className="bg-camel-50 dark:bg-charcoal-700 border border-camel-200 dark:border-charcoal-600 rounded-lg p-2">
+              <div className="text-xs text-charcoal-600 dark:text-charcoal-300">Текущий результат</div>
               <div className="flex justify-between items-center">
-                <div className="text-lg font-bold text-camel-700">
+                <div className="text-lg font-bold text-camel-700 dark:text-camel-400">
                   {hoveredRecord.time_seconds ? `${hoveredRecord.time_seconds} сек` : `${hoveredRecord.speed_km_h} км/ч`}
                 </div>
-                <div className="text-sm text-charcoal-600">{hoveredRecord.date}</div>
+                <div className="text-sm text-charcoal-600 dark:text-charcoal-300">{hoveredRecord.date}</div>
               </div>
             </div>
             
             {hoveredRecord.history && hoveredRecord.history.length > 0 && (
               <div>
-                <div className="text-xs font-semibold text-charcoal-700 mb-1">Предыдущие результаты:</div>
+                <div className="text-xs font-semibold text-charcoal-700 dark:text-charcoal-200 mb-1">Предыдущие результаты:</div>
                 <div className="space-y-1">
                   {hoveredRecord.history.map((h, idx) => (
-                    <div key={idx} className="bg-cream-50 border border-cream-200 rounded-lg p-2">
+                    <div key={idx} className="bg-cream-50 dark:bg-charcoal-700 border border-cream-200 dark:border-charcoal-600 rounded-lg p-2">
                       <div className="flex justify-between items-center">
-                        <div className="text-sm font-bold text-charcoal-900">
+                        <div className="text-sm font-bold text-charcoal-900 dark:text-charcoal-100">
                           {h.time_seconds ? `${h.time_seconds} сек` : `${h.speed_km_h} км/ч`}
                         </div>
-                        <div className="text-xs text-charcoal-600">{h.date}</div>
+                        <div className="text-xs text-charcoal-600 dark:text-charcoal-300">{h.date}</div>
                       </div>
                     </div>
                   ))}
@@ -858,7 +858,7 @@ function SpeedRecords() {
             )}
           </div>
           
-          <div className="absolute left-1/2 -translate-x-1/2 bottom-0 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-cream-300 translate-y-full"></div>
+          <div className="absolute left-1/2 -translate-x-1/2 bottom-0 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-cream-300 dark:border-t-charcoal-600 translate-y-full"></div>
         </div>,
         document.body
       )}
