@@ -96,9 +96,9 @@ export default function DogTooltip({ dogId, anchorRect, onClose }) {
   if (loading) {
     return (
       <div ref={tooltipRef} style={style}
-        className="bg-white rounded-2xl shadow-2xl border border-old-money-200 p-5 w-[320px] md:w-[440px] animate-fade-in">
-        <div className="flex items-center gap-3 text-old-money-500">
-          <div className="w-4 h-4 border-2 border-old-money-300 border-t-gold-500 rounded-full animate-spin" />
+        className="bg-white dark:bg-charcoal-800 rounded-2xl shadow-xl border border-old-money-200 dark:border-charcoal-600 p-5 w-[320px] md:w-[440px] animate-fade-in">
+          <div className="flex items-center gap-3 text-old-money-500 dark:text-old-money-400">
+          <div className="h-4 w-4 animate-spin rounded-full border-2 border-old-money-300 border-t-camel-600" />
           <span className="text-sm">Загрузка...</span>
         </div>
       </div>
@@ -109,8 +109,8 @@ export default function DogTooltip({ dogId, anchorRect, onClose }) {
   if (error) {
     return (
       <div ref={tooltipRef} style={style}
-        className="bg-white rounded-2xl shadow-2xl border border-red-200 p-5 w-[320px] md:w-[440px] animate-fade-in">
-        <div className="text-sm text-red-500">{error}</div>
+        className="bg-white dark:bg-charcoal-800 rounded-2xl shadow-xl border border-red-200 dark:border-red-700 p-5 w-[320px] md:w-[440px] animate-fade-in">
+        <div className="text-sm text-red-500 dark:text-red-400">{error}</div>
       </div>
     )
   }
@@ -141,15 +141,15 @@ export default function DogTooltip({ dogId, anchorRect, onClose }) {
     <>
       <DogSilhouettes />
       <div ref={tooltipRef} style={style}
-        className="bg-white rounded-2xl shadow-2xl border border-old-money-200 w-[320px] md:w-[440px] animate-fade-in-scale">
+        className="bg-white dark:bg-charcoal-800 rounded-2xl shadow-xl border border-old-money-200 dark:border-charcoal-600 w-[320px] md:w-[440px] animate-fade-in-scale">
 
         <div className="p-4 md:p-5 relative">
 
           {/* ── Шапка ─────────────────────────────────────────────────────── */}
-          <div className="flex items-center gap-4 mb-4 pb-4 border-b border-old-money-100">
+          <div className="flex items-center gap-4 mb-4 pb-4 border-b border-old-money-100 dark:border-charcoal-600">
             {/* Силуэт */}
-            <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-old-money-100 to-old-money-200 rounded-full flex items-center justify-center">
-              <svg className="w-10 h-10 text-old-money-600">
+            <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-old-money-100 dark:from-charcoal-700 to-old-money-200 dark:to-charcoal-600 rounded-full flex items-center justify-center">
+              <svg className="w-10 h-10 text-old-money-600 dark:text-old-money-400">
                 <use href={`#silhouette-${silhouetteType}`} />
               </svg>
             </div>
@@ -157,21 +157,21 @@ export default function DogTooltip({ dogId, anchorRect, onClose }) {
             {/* Имя и порода — всё выровнено по левому краю силуэта */}
             <div className="flex-1 min-w-0">
               <div className="flex items-baseline gap-2 flex-wrap">
-                <h3 className="text-base font-bold text-gold-700 leading-tight">
+                <h3 className="text-base font-bold font-serif text-charcoal-900 dark:text-charcoal-100 leading-tight">
                   {dogData.name_lat}
                 </h3>
                 {dogData.sex && (
-                  <span className="text-sm text-gray-400 flex-shrink-0">
+                  <span className="text-sm text-gray-400 dark:text-gray-500 flex-shrink-0">
                     {dogData.sex === 'M' ? '♂' : '♀'}
                   </span>
                 )}
               </div>
               {showRuName && (
-                <div className="text-xs text-gray-500 mt-0.5 truncate">{dogData.name_ru}</div>
+                <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5 truncate">{dogData.name_ru}</div>
               )}
               {/* Порода — под именем, не правее */}
               <div className="mt-1.5">
-                <span className="inline-block bg-old-money-100 text-old-money-700 text-xs font-medium rounded-full py-0.5 px-3">
+                <span className="inline-block bg-old-money-100 dark:bg-charcoal-700 text-old-money-700 dark:text-old-money-300 text-xs font-medium font-serif rounded-full py-0.5 px-3">
                   {dogData.breed}
                 </span>
               </div>
@@ -183,8 +183,8 @@ export default function DogTooltip({ dogId, anchorRect, onClose }) {
 
             {/* Курсинг */}
             {hasCoursingData && (
-              <div className="bg-gradient-to-br from-old-money-50 to-old-money-100 rounded-xl p-3 border border-old-money-200">
-                <div className="text-xs font-bold text-old-money-700 mb-3">Курсинг / БЗМП</div>
+              <div className="bg-gradient-to-br from-old-money-50 dark:from-charcoal-700 to-old-money-100 dark:to-charcoal-600 rounded-xl p-3 border border-old-money-200 dark:border-charcoal-600">
+                <div className="text-xs font-bold text-old-money-700 dark:text-old-money-300 mb-3">Курсинг / БЗМП</div>
 
                 {/* Лучший результат — кликабельный если есть ссылка */}
                 {bestScoreUrl ? (
@@ -192,34 +192,34 @@ export default function DogTooltip({ dogId, anchorRect, onClose }) {
                     href={bestScoreUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block bg-white rounded-lg p-3 shadow-sm mb-3 text-center group hover:bg-gold-50 transition-colors"
+                  className="group mb-3 block rounded-lg border border-camel-200 dark:border-camel-600 bg-white dark:bg-charcoal-800 p-3 text-center shadow-sm transition-colors hover:bg-camel-50 dark:hover:bg-charcoal-700"
                     title="Открыть протокол соревнования"
                   >
-                    <div className="text-[10px] text-gray-400 mb-1">Лучший результат</div>
-                    <div className="text-2xl font-bold text-gold-600 leading-none group-hover:text-gold-500">
+                    <div className="text-[10px] text-gray-400 dark:text-gray-500 mb-1">Лучший результат</div>
+                    <div className="text-2xl font-bold text-camel-700 dark:text-camel-400 leading-none group-hover:text-camel-800 dark:group-hover:text-camel-300">
                       {coursing.best_score ?? '—'}
                     </div>
-                    <div className="text-[10px] text-gold-500 mt-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <div className="mt-1 text-[10px] text-camel-700 dark:text-camel-500 opacity-0 transition-opacity group-hover:opacity-100">
                       открыть протокол →
                     </div>
                   </a>
                 ) : (
-                  <div className="bg-white rounded-lg p-3 shadow-sm mb-3 text-center">
-                    <div className="text-[10px] text-gray-400 mb-1">Лучший результат</div>
-                    <div className="text-2xl font-bold text-gold-600 leading-none">
+                  <div className="bg-white dark:bg-charcoal-800 rounded-lg p-3 shadow-sm mb-3 text-center">
+                    <div className="text-[10px] text-gray-400 dark:text-gray-500 mb-1">Лучший результат</div>
+                    <div className="text-2xl font-bold text-camel-700 leading-none">
                       {coursing.best_score ?? '—'}
                     </div>
                   </div>
                 )}
 
                 <div className="grid grid-cols-2 gap-2 mb-3">
-                  <div className="bg-white rounded-lg p-2 shadow-sm text-center">
-                    <div className="text-[10px] text-gray-400 mb-0.5">Участия</div>
-                    <div className="text-base font-bold text-old-money-800">{coursing.total_starts}</div>
+                  <div className="bg-white dark:bg-charcoal-800 rounded-lg p-2 shadow-sm text-center">
+                    <div className="text-[10px] text-gray-400 dark:text-gray-500 mb-0.5">Участия</div>
+                    <div className="text-base font-bold text-old-money-800 dark:text-old-money-300">{coursing.total_starts}</div>
                   </div>
-                  <div className="bg-white rounded-lg p-2 shadow-sm text-center">
-                    <div className="text-[10px] text-gray-400 mb-0.5">Средний</div>
-                    <div className="text-base font-bold text-old-money-800">{formatScore(coursing.avg_score)}</div>
+                  <div className="bg-white dark:bg-charcoal-800 rounded-lg p-2 shadow-sm text-center">
+                    <div className="text-[10px] text-gray-400 dark:text-gray-500 mb-0.5">Средний</div>
+                    <div className="text-base font-bold text-old-money-800 dark:text-old-money-300">{formatScore(coursing.avg_score)}</div>
                   </div>
                 </div>
 
@@ -227,11 +227,11 @@ export default function DogTooltip({ dogId, anchorRect, onClose }) {
                 {hasCourseMedals && (
                   <div className="flex gap-1.5">
                     {[
-                      { emoji: '🥇', count: coursing.gold, color: 'text-yellow-700' },
-                      { emoji: '🥈', count: coursing.silver, color: 'text-gray-600' },
-                      { emoji: '🥉', count: coursing.bronze, color: 'text-orange-700' },
+                      { emoji: '🥇', count: coursing.gold, color: 'text-camel-700 dark:text-camel-400' },
+                      { emoji: '🥈', count: coursing.silver, color: 'text-old-money-600 dark:text-old-money-400' },
+                      { emoji: '🥉', count: coursing.bronze, color: 'text-terracotta-600 dark:text-terracotta-400' },
                     ].map(({ emoji, count, color }) => (
-                      <div key={emoji} className="flex-1 bg-white rounded-lg py-1.5 shadow-sm text-center">
+                      <div key={emoji} className="flex-1 bg-white dark:bg-charcoal-800 rounded-lg py-1.5 shadow-sm text-center">
                         <div className="text-sm">{emoji}</div>
                         <div className={`text-xs font-bold ${color}`}>{count || 0}</div>
                       </div>
@@ -243,8 +243,8 @@ export default function DogTooltip({ dogId, anchorRect, onClose }) {
 
             {/* Рейсинг */}
             {hasRacingData && (
-              <div className="bg-gradient-to-br from-steel-50 to-steel-100 rounded-xl p-3 border border-steel-200">
-                <div className="text-xs font-bold text-steel-700 mb-3">Рейсинг</div>
+              <div className="rounded-xl border border-warm-blue-200 dark:border-warm-blue-600 bg-gradient-to-br from-warm-blue-50 dark:from-charcoal-700 to-warm-blue-100 dark:to-charcoal-600 p-3">
+                <div className="mb-3 text-xs font-bold text-warm-blue-800 dark:text-warm-blue-400">Рейсинг</div>
 
                 {/* Лучшая скорость — кликабельная если есть ссылка */}
                 {bestSpeedUrl ? (
@@ -252,23 +252,23 @@ export default function DogTooltip({ dogId, anchorRect, onClose }) {
                     href={bestSpeedUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block bg-white rounded-lg p-3 shadow-sm mb-3 text-center group hover:bg-steel-50 transition-colors"
+                  className="group mb-3 block rounded-lg border border-warm-blue-200 dark:border-warm-blue-600 bg-white dark:bg-charcoal-800 p-3 text-center shadow-sm transition-colors hover:bg-warm-blue-50 dark:hover:bg-charcoal-700"
                     title="Открыть протокол соревнования"
                   >
-                    <div className="text-[10px] text-gray-400 mb-1">Лучшая скорость</div>
+                    <div className="text-[10px] text-gray-400 dark:text-gray-500 mb-1">Лучшая скорость</div>
                     {/* whitespace-nowrap не даёт км/ч переноситься */}
-                    <div className="text-2xl font-bold text-steel-600 leading-none group-hover:text-steel-500 whitespace-nowrap">
+                    <div className="whitespace-nowrap text-2xl font-bold text-warm-blue-800 dark:text-warm-blue-400 leading-none group-hover:text-warm-blue-900 dark:group-hover:text-warm-blue-300">
                       {racing.best_speed ?? '—'}
                       {racing.best_speed && <span className="text-sm font-normal text-gray-400 ml-1">км/ч</span>}
                     </div>
-                    <div className="text-[10px] text-steel-500 mt-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <div className="mt-1 text-[10px] text-warm-blue-700 dark:text-warm-blue-500 opacity-0 transition-opacity group-hover:opacity-100">
                       открыть протокол →
                     </div>
                   </a>
                 ) : (
-                  <div className="bg-white rounded-lg p-3 shadow-sm mb-3 text-center">
-                    <div className="text-[10px] text-gray-400 mb-1">Лучшая скорость</div>
-                    <div className="text-2xl font-bold text-steel-600 leading-none whitespace-nowrap">
+                  <div className="bg-white dark:bg-charcoal-800 rounded-lg p-3 shadow-sm mb-3 text-center">
+                    <div className="text-[10px] text-gray-400 dark:text-gray-500 mb-1">Лучшая скорость</div>
+                    <div className="whitespace-nowrap text-2xl font-bold text-warm-blue-800 leading-none">
                       {racing.best_speed ?? '—'}
                       {racing.best_speed && <span className="text-sm font-normal text-gray-400 ml-1">км/ч</span>}
                     </div>
@@ -276,16 +276,16 @@ export default function DogTooltip({ dogId, anchorRect, onClose }) {
                 )}
 
                 <div className="grid grid-cols-2 gap-2">
-                  <div className="bg-white rounded-lg p-2 shadow-sm text-center">
-                    <div className="text-[10px] text-gray-400 mb-0.5">Участия</div>
-                    <div className="text-base font-bold text-steel-800">{racing.total_starts}</div>
+                  <div className="bg-white dark:bg-charcoal-800 rounded-lg p-2 shadow-sm text-center">
+                    <div className="text-[10px] text-gray-400 dark:text-gray-500 mb-0.5">Участия</div>
+                    <div className="text-base font-bold text-warm-blue-900 dark:text-warm-blue-400">{racing.total_starts}</div>
                   </div>
-                  <div className="bg-white rounded-lg p-2 shadow-sm text-center">
-                    <div className="text-[10px] text-gray-400 mb-0.5">Средняя</div>
+                  <div className="bg-white dark:bg-charcoal-800 rounded-lg p-2 shadow-sm text-center">
+                    <div className="text-[10px] text-gray-400 dark:text-gray-500 mb-0.5">Средняя</div>
                     {/* whitespace-nowrap предотвращает перенос "км/ч" на вторую строку */}
-                    <div className="text-base font-bold text-steel-800 whitespace-nowrap">
+                    <div className="whitespace-nowrap text-base font-bold text-warm-blue-900 dark:text-warm-blue-400">
                       {racing.avg_speed
-                        ? <>{racing.avg_speed}<span className="text-[10px] font-normal text-gray-400 ml-0.5">км/ч</span></>
+                        ? <>{racing.avg_speed}<span className="text-[10px] font-normal text-gray-400 dark:text-gray-500 ml-0.5">км/ч</span></>
                         : '—'
                       }
                     </div>
@@ -297,8 +297,8 @@ export default function DogTooltip({ dogId, anchorRect, onClose }) {
 
           {/* ── Владелец ──────────────────────────────────────────────────── */}
           {dogData.owner && (
-            <div className="text-xs text-gray-500 pt-3 border-t border-old-money-100">
-              <span className="font-medium text-gray-600">Владелец:</span> {dogData.owner}
+            <div className="text-xs text-gray-500 dark:text-gray-400 pt-3 border-t border-old-money-100 dark:border-charcoal-600">
+              <span className="font-medium text-gray-600 dark:text-gray-300">Владелец:</span> {dogData.owner}
             </div>
           )}
         </div>
