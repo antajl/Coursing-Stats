@@ -32,7 +32,8 @@ export default function TopDogs() {
       const currentTab = searchParams.get('rankingTab') || 'placement'
       setActiveTab(currentTab)
     }
-  }, [searchParams, isStandalone])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isStandalone])
 
   // React Query hooks
   const { data: breedsData, isLoading: breedsLoading } = useBreeds()
