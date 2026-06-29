@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { useDogProfile, useDogEvents, useDogSpeedRecords, useSpeedRecordsByBreed } from '../hooks/useApi'
+import { useDogProfile, useDogEvents, useDogSpeedRecords, useSpeedRecordsByBreed, useDogCoursingRecords } from '../hooks/useApi'
 import { DogSilhouettes, getSilhouetteType } from '../components/DogSilhouettes'
 import { toPng } from 'html-to-image'
 import SkeletonLoader from '../components/SkeletonLoader'
@@ -16,10 +16,12 @@ export default function DogProfile() {
   const { data: dogDataResult, isLoading: loading } = useDogProfile(id)
   const { data: eventsData, isLoading: eventsLoading } = useDogEvents(id)
   const { data: speedRecordsData } = useDogSpeedRecords(id)
+  const { data: coursingRecordsData } = useDogCoursingRecords(id)
 
   const dog = dogDataResult?.success ? dogDataResult.data : null
   const events = eventsData?.success ? (Array.isArray(eventsData.data) ? eventsData.data : []) : []
   const speedRecords = speedRecordsData?.success ? (Array.isArray(speedRecordsData.data) ? speedRecordsData.data : []) : []
+  const coursingRecords = coursingRecordsData?.success ? (Array.isArray(coursingRecordsData.data) ? coursingRecordsData.data : []) : []
   
   const { data: breedRecordsData } = useSpeedRecordsByBreed(dog?.breed || '')
   const breedRecords = breedRecordsData?.success ? (Array.isArray(breedRecordsData.data) ? breedRecordsData.data : []) : []
@@ -123,6 +125,25 @@ export default function DogProfile() {
     }
     
     return { bestSpeed, avgSpeed, history, screenshotUrl, breedRank, breedTotal, percentile };
+  })() : null
+
+  // Статистика бегов борзых
+  const hasCoursingRecords = coursingRecords.length > 0
+  const coursingStats = hasCoursingRecords ? (() => {
+    const bestTime = Math.min(...coursingRecords.map(r => parseFloat(r.time_seconds)))
+    const avgTime = coursingRecords.reduce((sum, r) => sum + parseFloat(r.time_seconds), 0) / coursingRecords.length
+    const history = coursingRecords.map(r => ({
+      time_seconds: parseFloat(r.time_seconds),
+      date: r.date
+    })).sort((a, b) => {
+      const parseDate = (d) => {
+        const parts = d.split('.');
+        return new Date(parts[2], parts[1] - 1, parts[0]);
+      };
+      return parseDate(b.date) - parseDate(a.date);
+    });
+    
+    return { bestTime, avgTime, history };
   })() : null
 
   const silhouetteType = getSilhouetteType(dog?.breed)
@@ -362,6 +383,45 @@ export default function DogProfile() {
                       />
                       <div className="absolute inset-0 flex items-center justify-center text-sm font-bold text-charcoal-900 dark:text-charcoal-100">
                         {record.speed_km_h} км/ч
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Статистика бегов борзых */}
+        {hasCoursingRecords && (
+          <div className="rounded-2xl border-2 border-camel-200 dark:border-camel-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6 mb-6">
+            <h2 className="text-lg md:text-xl font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 mb-4">Беги борзых</h2>
+            
+            <div className="grid grid-cols-2 gap-4 mb-6">
+              <div className="bg-gradient-to-br from-camel-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-camel-200 dark:border-charcoal-500">
+                <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Лучшее время</div>
+                <div className="text-2xl font-bold text-camel-700 dark:text-camel-400">{coursingStats.bestTime} <span className="text-sm font-normal">сек</span></div>
+              </div>
+              <div className="bg-gradient-to-br from-old-money-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-old-money-200 dark:border-charcoal-500">
+                <div className="text-xs font-medium text-old-money-600 mb-1 uppercase tracking-wide">Среднее время</div>
+                <div className="text-2xl font-bold text-charcoal-900 dark:text-charcoal-100">{coursingStats.avgTime.toFixed(2)} <span className="text-sm font-normal">сек</span></div>
+              </div>
+            </div>
+
+            {/* График прогресса */}
+            <div>
+              <h3 className="text-lg font-bold text-charcoal-900 dark:text-charcoal-100 mb-3">Прогресс во времени</h3>
+              <div className="space-y-2">
+                {coursingStats.history.map((record, idx) => (
+                  <div key={idx} className="flex items-center gap-4">
+                    <div className="w-24 text-sm text-charcoal-700 dark:text-charcoal-300 text-right">{record.date}</div>
+                    <div className="flex-1 bg-cream-200 dark:bg-charcoal-600 rounded-full h-6 overflow-hidden relative">
+                      <div 
+                        className="bg-gradient-to-r from-camel-400 to-camel-600 h-full rounded-full transition-all duration-500"
+                        style={{ width: `${(30 / record.time_seconds) * 100}%` }}
+                      />
+                      <div className="absolute inset-0 flex items-center justify-center text-sm font-bold text-charcoal-900 dark:text-charcoal-100">
+                        {record.time_seconds} сек
                       </div>
                     </div>
                   </div>

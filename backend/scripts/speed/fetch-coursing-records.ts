@@ -187,30 +187,54 @@ function esc(value) {
 }
 
 function generateSQL(records) {
-  const lines = ["-- coursing_records", "DELETE FROM coursing_records;"];
+  const lines = ["-- coursing_records", "-- Delete old records and insert new with dog_id"];
 
+  // Удаляем все старые записи coursing_records
+  lines.push("DELETE FROM coursing_records;");
+
+  // Сначала создаём записи в dogs если их нет
+  const dogsSet = new Set();
+  records.forEach(record => {
+    const key = `${record.name}_${record.breed}`;
+    if (!dogsSet.has(key)) {
+      dogsSet.add(key);
+      lines.push(`
+INSERT OR IGNORE INTO dogs (name_lat, breed, sex)
+VALUES (
+  ${esc(record.name)},
+  ${esc(record.breed)},
+  'F'
+);`);
+    }
+  });
+
+  // Затем вставляем coursing_records с dog_id
   for (const record of records) {
     const historyJson = record.history && record.history.length > 0 ? JSON.stringify(record.history) : null;
     lines.push(`
-INSERT INTO coursing_records (breed, name, time_seconds, date, track_length, history)
-VALUES (
+INSERT INTO coursing_records (breed, name, time_seconds, date, track_length, history, dog_id)
+SELECT
   ${esc(record.breed)},
   ${esc(record.name)},
   ${record.time_seconds},
   ${esc(record.date)},
   ${record.track_length},
-  ${historyJson ? esc(historyJson) : "NULL"}
-);`);
+  ${historyJson ? esc(historyJson) : "NULL"},
+  id
+FROM dogs
+WHERE name_lat = ${esc(record.name)} AND breed = ${esc(record.breed)};`);
   }
 
   return lines.join("\n");
 }
 
-async function loadToLocal(db, sql) {
-  console.log("Loading coursing records to local D1...");
-  db.exec(sql);
-  const count = db.prepare("SELECT COUNT(*) AS c FROM coursing_records").get().c;
-  console.log(`Loaded ${count} coursing records to local D1`);
+async function loadToLocalSQL(sql) {
+  console.log("Generating SQL file for local D1...");
+  const sqlPath = path.join(ROOT, "data/imports/coursing-records-local.sql");
+  await fs.writeFile(sqlPath, sql);
+  console.log(`SQL file generated: ${sqlPath}`);
+  console.log("To load to local D1, run:");
+  console.log("npx wrangler d1 execute pc-db --local --file=./data/imports/coursing-records-local.sql");
 }
 
 async function loadToRemote(sql) {
@@ -249,13 +273,7 @@ async function main() {
     console.log("\nTo load to local D1: node backend/scripts/speed/fetch-coursing-records.mjs --local");
     console.log("To load to remote D1: node backend/scripts/speed/fetch-coursing-records.mjs --remote");
   } else if (mode === "local") {
-    const sqlPath = path.join(ROOT, "data/imports/coursing-records.sql");
-    await fs.writeFile(sqlPath, sql, 'utf8');
-    execSync(`npx wrangler d1 execute pc-db --local --file=./data/imports/coursing-records.sql -y`, {
-      cwd: ROOT,
-      stdio: "inherit",
-    });
-    console.log("Loaded coursing records to local D1");
+    await loadToLocalSQL(sql);
   } else if (mode === "remote") {
     await loadToRemote(sql);
   }

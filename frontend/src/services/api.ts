@@ -179,11 +179,12 @@ export const api = {
     return fetchWithFallback(url, []);
   },
 
-  async getCoursingRecords(breed = '', limit = 100, search = '', year = '') {
+  async getCoursingRecords(breed = '', limit = 100, search = '', year = '', dogId = '') {
     const params = new URLSearchParams();
     if (breed) params.append('breed', breed);
     if (search) params.append('search', search);
     if (year) params.append('year', year);
+    if (dogId) params.append('dog_id', dogId);
     params.append('limit', limit);
     const url = `${API_URL}/api/coursing-records?${params}`;
     return fetchWithFallback(url, []);

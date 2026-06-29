@@ -149,3 +149,23 @@ CREATE TABLE IF NOT EXISTS speed_records (
 CREATE INDEX IF NOT EXISTS idx_speed_records_breed ON speed_records(breed);
 CREATE INDEX IF NOT EXISTS idx_speed_records_speed ON speed_records(speed_km_h DESC);
 CREATE INDEX IF NOT EXISTS idx_speed_records_dog_id ON speed_records(dog_id);
+
+-- ===========================================================================
+-- РЕКОРДЫ КУРСИНГА (БЕГИ БОРЗЫХ)
+-- ===========================================================================
+-- Таблица для хранения рекордов курсинга из Google Sheets
+CREATE TABLE IF NOT EXISTS coursing_records (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  dog_id INTEGER REFERENCES dogs(id),
+  breed TEXT NOT NULL,
+  name TEXT NOT NULL,
+  time_seconds REAL NOT NULL,
+  date TEXT NOT NULL,
+  track_length INTEGER DEFAULT 350,
+  history TEXT,  -- JSON массив исторических результатов
+  updated_at TEXT DEFAULT (datetime('now'))
+);
+
+CREATE INDEX IF NOT EXISTS idx_coursing_records_breed ON coursing_records(breed);
+CREATE INDEX IF NOT EXISTS idx_coursing_records_time ON coursing_records(time_seconds ASC);
+CREATE INDEX IF NOT EXISTS idx_coursing_records_dog_id ON coursing_records(dog_id);
