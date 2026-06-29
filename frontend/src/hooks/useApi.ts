@@ -85,8 +85,16 @@ export function useSpeedRecords(breed = '', sex = '', limit = 100, search = '', 
 export function useDogSpeedRecords(dogId: string) {
   return useQuery({
     queryKey: ['dogSpeedRecords', dogId],
-    queryFn: () => api.getSpeedRecords('', '', 100, '', '', dogId),
+    queryFn: () => api.getSpeedRecords('', '', 1000, '', '', dogId),
     enabled: !!dogId,
+  });
+}
+
+export function useSpeedRecordsByBreed(breed: string) {
+  return useQuery({
+    queryKey: ['speedRecordsByBreed', breed],
+    queryFn: () => api.getSpeedRecords(breed, '', 10000, '', ''),
+    enabled: !!breed,
   });
 }
 

@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { useDogProfile, useDogEvents, useDogSpeedRecords } from '../hooks/useApi'
+import { useDogProfile, useDogEvents, useDogSpeedRecords, useSpeedRecordsByBreed } from '../hooks/useApi'
 import { DogSilhouettes, getSilhouetteType } from '../components/DogSilhouettes'
 import { toPng } from 'html-to-image'
 import SkeletonLoader from '../components/SkeletonLoader'
@@ -20,6 +20,9 @@ export default function DogProfile() {
   const dog = dogDataResult?.success ? dogDataResult.data : null
   const events = eventsData?.success ? (Array.isArray(eventsData.data) ? eventsData.data : []) : []
   const speedRecords = speedRecordsData?.success ? (Array.isArray(speedRecordsData.data) ? speedRecordsData.data : []) : []
+  
+  const { data: breedRecordsData } = useSpeedRecordsByBreed(dog?.breed || '')
+  const breedRecords = breedRecordsData?.success ? (Array.isArray(breedRecordsData.data) ? breedRecordsData.data : []) : []
 
   const handleExport = async () => {
     if (!exportRef.current || exporting) return
@@ -90,7 +93,36 @@ export default function DogProfile() {
     const bestRecord = speedRecords.find(r => parseFloat(r.speed_km_h) === bestSpeed);
     const screenshotUrl = bestRecord?.screenshot_url || null;
     
-    return { bestSpeed, avgSpeed, history, screenshotUrl };
+    // Рассчитываем рейтинг в породе
+    let breedRank = 0;
+    let breedTotal = 0;
+    let percentile = 0;
+    
+    if (breedRecords.length > 0) {
+      // Группируем по собакам и находим лучший результат для каждой
+      const dogBestSpeeds = new Map();
+      breedRecords.forEach(r => {
+        const key = `${r.name}_${r.breed}`;
+        const currentBest = dogBestSpeeds.get(key);
+        const speed = parseFloat(r.speed_km_h);
+        if (!currentBest || speed > currentBest) {
+          dogBestSpeeds.set(key, speed);
+        }
+      });
+      
+      // Сортируем по скорости
+      const sortedSpeeds = Array.from(dogBestSpeeds.values()).sort((a, b) => b - a);
+      breedTotal = sortedSpeeds.length;
+      
+      // Находим позицию текущей собаки
+      const rank = sortedSpeeds.findIndex(s => s === bestSpeed);
+      if (rank !== -1) {
+        breedRank = rank + 1;
+        percentile = Math.round((rank / breedTotal) * 100);
+      }
+    }
+    
+    return { bestSpeed, avgSpeed, history, screenshotUrl, breedRank, breedTotal, percentile };
   })() : null
 
   const silhouetteType = getSilhouetteType(dog?.breed)
@@ -286,6 +318,19 @@ export default function DogProfile() {
                 <div className="text-2xl font-bold text-charcoal-900 dark:text-charcoal-100">{speedStats.avgSpeed.toFixed(1)} <span className="text-sm font-normal">км/ч</span></div>
               </div>
             </div>
+
+            {speedStats.breedRank > 0 && (
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="bg-gradient-to-br from-camel-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-camel-200 dark:border-charcoal-500">
+                  <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Рейтинг в породе</div>
+                  <div className="text-2xl font-bold text-camel-700 dark:text-camel-400">#{speedStats.breedRank} <span className="text-base font-normal text-charcoal-600 dark:text-charcoal-400">из {speedStats.breedTotal}</span></div>
+                </div>
+                <div className="bg-gradient-to-br from-camel-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-camel-200 dark:border-charcoal-500">
+                  <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Процентиль</div>
+                  <div className="text-2xl font-bold text-camel-700 dark:text-camel-400">Топ {100 - speedStats.percentile}%</div>
+                </div>
+              </div>
+            )}
 
             {speedStats.screenshotUrl && (
               <div className="mb-6">
