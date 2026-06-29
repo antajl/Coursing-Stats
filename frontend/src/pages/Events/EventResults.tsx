@@ -3,6 +3,7 @@ import React from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { api } from '../../services/api'
 import ErrorState from '../../components/ErrorState'
+import SkeletonLoader from '../../components/SkeletonLoader'
 
 export default function EventResults() {
   const { id } = useParams()
@@ -52,10 +53,7 @@ export default function EventResults() {
     return (
       <div className="min-h-screen bg-cream-50 dark:bg-charcoal-800 p-6">
         <div className="max-w-4xl mx-auto">
-          <div className="flex items-center gap-3 text-old-money-500 dark:text-old-money-400">
-            <div className="h-6 w-6 animate-spin rounded-full border-2 border-old-money-300 border-t-camel-600" />
-            <span className="text-lg">Загрузка...</span>
-          </div>
+          <SkeletonLoader variant="card" count={3} />
         </div>
       </div>
     )
