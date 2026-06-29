@@ -764,9 +764,9 @@ function SpeedRecords() {
                           <tr key={record.id} className="hover:bg-cream-50 dark:hover:bg-charcoal-700 transition-colors">
                             <td className="px-6 py-4 text-center">
                               <span 
-                                className={`font-semibold text-charcoal-900 transition-colors cursor-pointer ${
+                                className={`font-semibold text-charcoal-900 dark:text-charcoal-100 transition-colors cursor-pointer ${
                                   record.history && record.history.length > 0 
-                                    ? 'rounded-lg border border-camel-300 px-2 py-0.5 text-camel-700 hover:text-camel-800' 
+                                    ? 'rounded-lg border border-camel-300 dark:border-camel-600 px-2 py-0.5 text-camel-700 dark:text-camel-400 hover:text-camel-800 dark:hover:text-camel-300' 
                                     : ''
                                 }`}
                                 onMouseEnter={(e) => {
