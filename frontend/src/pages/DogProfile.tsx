@@ -156,7 +156,8 @@ export default function DogProfile() {
         </div>
 
         {/* Статистика по дисциплинам */}
-        <div className={`grid gap-4 md:gap-6 mb-6 ${hasCoursingData && hasRacingData ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1'}`}>
+        {(hasCoursingData || hasRacingData) && (
+          <div className={`grid gap-4 md:gap-6 mb-6 ${hasCoursingData && hasRacingData ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1'}`}>
           {/* Курсинг */}
           {hasCoursingData && (
             <div className="rounded-2xl border-2 border-old-money-200 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
@@ -264,6 +265,7 @@ export default function DogProfile() {
             </div>
           )}
         </div>
+        )}
 
         {/* Статистика Донино */}
         {hasSpeedRecords && (
