@@ -272,11 +272,11 @@ export default function EventResults() {
                                         {result.placement}
                                       </div>
                                     ) : result.placement === 2 ? (
-                                      <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-300 dark:bg-charcoal-500 border-2 border-gray-400 dark:border-charcoal-400 flex items-center justify-center text-gray-700 dark:text-gray-300 font-bold text-xs md:text-sm">
+                                      <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-old-money-200 dark:bg-charcoal-500 border-2 border-old-money-300 dark:border-charcoal-400 flex items-center justify-center text-old-money-700 dark:text-old-money-200 font-bold text-xs md:text-sm">
                                         {result.placement}
                                       </div>
                                     ) : result.placement === 3 ? (
-                                      <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-orange-400 dark:bg-terracotta-700 border-2 border-orange-500 dark:border-terracotta-600 flex items-center justify-center text-white font-bold text-xs md:text-sm">
+                                      <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-terracotta-400 dark:bg-terracotta-700 border-2 border-terracotta-500 dark:border-terracotta-600 flex items-center justify-center text-white font-bold text-xs md:text-sm">
                                         {result.placement}
                                       </div>
                                     ) : result.placement ? (
