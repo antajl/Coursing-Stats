@@ -294,7 +294,10 @@ function esc(value) {
 }
 
 function generateSQL(records) {
-  const lines = ["-- speed_records", "-- Insert or update records (no DELETE)"];
+  const lines = ["-- speed_records", "-- Delete old records and insert new with dog_id"];
+
+  // Удаляем все старые записи speed_records
+  lines.push("DELETE FROM speed_records;");
 
   // Сначала создаём записи в dogs если их нет
   const dogsSet = new Set();
@@ -318,7 +321,7 @@ VALUES (
   for (const record of records) {
     const historyJson = record.history && record.history.length > 0 ? JSON.stringify(record.history) : null;
     lines.push(`
-INSERT OR REPLACE INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history, dog_id)
+INSERT INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history, dog_id)
 SELECT
   ${esc(record.breed)},
   ${esc(record.sex)},
