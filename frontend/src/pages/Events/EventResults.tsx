@@ -353,10 +353,10 @@ export default function EventResults() {
                               
                               {/* Detailed scores table */}
                               <div className="mt-2 ml-10 md:ml-14 mr-4 md:mr-20">
-                                {rawScores && rawScores.heats && rawScores.heats.length > 0 && (
+                                {rawScores && (rawScores.heats || rawScores.format === 'racing') && (
                                   <>
                                     {/* Racing format - time and speed */}
-                                    {rawScores.format === 'racing' ? (
+                                    {(rawScores.format === 'racing' || rawScores.heats) ? (
                                       <>
                                         {/* Mobile cards */}
                                         <div className="md:hidden space-y-3">
