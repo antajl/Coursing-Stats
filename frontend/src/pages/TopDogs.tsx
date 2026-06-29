@@ -4,6 +4,7 @@ import { useTopPlacement, useTopScore, useTopSpeed, useBreeds, useYears } from '
 import DogStatsTable from '../components/DogStatsTable'
 import FiltersDropdown from '../components/FiltersDropdown'
 import EmptyState from '../components/EmptyState'
+import SkeletonLoader from '../components/SkeletonLoader'
 
 export default function TopDogs() {
   const [searchParams, setSearchParams] = useSearchParams()
@@ -33,12 +34,14 @@ export default function TopDogs() {
   }, [searchParams.get('rankingTab'), isStandalone])
 
   // React Query hooks
-  const { data: breedsData } = useBreeds()
-  const { data: yearsData } = useYears()
-  const { data: topPlacementData } = useTopPlacement(filterYear, filterBreed, parseInt(filterStartsFrom) || 0)
-  const { data: topScoreData } = useTopScore(filterYear, filterBreed, parseInt(filterStartsFrom) || 0)
-  const { data: topSpeedData } = useTopSpeed(filterYear, filterBreed, parseInt(filterStartsFrom) || 0)
+  const { data: breedsData, isLoading: breedsLoading } = useBreeds()
+  const { data: yearsData, isLoading: yearsLoading } = useYears()
+  const { data: topPlacementData, isLoading: placementLoading } = useTopPlacement(filterYear, filterBreed, parseInt(filterStartsFrom) || 0)
+  const { data: topScoreData, isLoading: scoreLoading } = useTopScore(filterYear, filterBreed, parseInt(filterStartsFrom) || 0)
+  const { data: topSpeedData, isLoading: speedLoading } = useTopSpeed(filterYear, filterBreed, parseInt(filterStartsFrom) || 0)
 
+  const loading = breedsLoading || yearsLoading || placementLoading || scoreLoading || speedLoading
+  
   // API возвращает { success: true, data: [...] }, поэтому нужно извлечь data.data
   const breeds = breedsData?.success ? (Array.isArray(breedsData.data) ? breedsData.data : []) : []
   const years = yearsData?.success ? (Array.isArray(yearsData.data) ? yearsData.data : []) : []
@@ -51,6 +54,10 @@ export default function TopDogs() {
   const topPlacement = topPlacementData?.success ? (Array.isArray(topPlacementData.data) ? topPlacementData.data : (topPlacementData.data?.items || [])) : []
   const topScore = topScoreData?.success ? (Array.isArray(topScoreData.data) ? topScoreData.data : (topScoreData.data?.items || [])) : []
   const topSpeed = topSpeedData?.success ? (Array.isArray(topSpeedData.data) ? topSpeedData.data : (topSpeedData.data?.items || [])) : []
+
+  if (loading) {
+    return <SkeletonLoader variant="card" count={4} />
+  }
 
   const handleResetFilters = () => {
     setFilterYear('2026')
