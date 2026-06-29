@@ -305,60 +305,60 @@ export default function DogProfile() {
         )}
 
         {/* История выступлений */}
-        <div className="rounded-2xl border-2 border-old-money-200 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
-          <h2 className="text-lg md:text-xl font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 mb-4">История выступлений</h2>
-          
-          {eventsLoading ? (
-            <div className="flex items-center gap-3 text-old-money-500 dark:text-old-money-400">
-              <div className="h-4 w-4 animate-spin rounded-full border-2 border-old-money-300 border-t-camel-600" />
-              <span className="text-sm">Загрузка...</span>
-            </div>
-          ) : events.length === 0 ? (
-            <div className="text-sm text-old-money-500 dark:text-old-money-400">Нет данных о выступлениях</div>
-          ) : (
-            <div className="space-y-3">
-              {events.map((event, idx) => (
-                <div key={idx} className="bg-cream-50 dark:bg-charcoal-700 rounded-xl p-4 hover:bg-cream-100 dark:hover:bg-charcoal-600 transition-colors border border-old-money-200 dark:border-charcoal-600">
-                  <div className="flex items-start justify-between gap-4">
-                    <div className="flex-1">
-                      {event.competition_kind && (
-                        <div className="mb-1 text-xs font-bold text-camel-700 dark:text-camel-400 uppercase tracking-wide">{event.competition_kind}</div>
-                      )}
-                      <div className="font-semibold text-charcoal-800 dark:text-charcoal-100 mb-1">{event.date_start}</div>
-                      <div className="text-gray-700 dark:text-gray-300 mb-2">{event.title}</div>
-                      {event.location && (
-                        <div className="text-sm text-old-money-600 dark:text-old-money-400">{event.location}</div>
-                      )}
-                    </div>
-                    <div className="flex flex-col items-end gap-2">
-                      <div className="text-xs font-medium px-2.5 py-1 rounded-full bg-white dark:bg-charcoal-800 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-charcoal-600">
-                        {event.event_type === 'coursing' ? 'Курсинг' : event.event_type === 'bzmp' ? 'БЗМП' : 'Рейсинг'}
+        {events.length > 0 && (
+          <div className="rounded-2xl border-2 border-old-money-200 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
+            <h2 className="text-lg md:text-xl font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 mb-4">История выступлений</h2>
+            
+            {eventsLoading ? (
+              <div className="flex items-center gap-3 text-old-money-500 dark:text-old-money-400">
+                <div className="h-4 w-4 animate-spin rounded-full border-2 border-old-money-300 border-t-camel-600" />
+                <span className="text-sm">Загрузка...</span>
+              </div>
+            ) : (
+              <div className="space-y-3">
+                {events.map((event, idx) => (
+                  <div key={idx} className="bg-cream-50 dark:bg-charcoal-700 rounded-xl p-4 hover:bg-cream-100 dark:hover:bg-charcoal-600 transition-colors border border-old-money-200 dark:border-charcoal-600">
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="flex-1">
+                        {event.competition_kind && (
+                          <div className="mb-1 text-xs font-bold text-camel-700 dark:text-camel-400 uppercase tracking-wide">{event.competition_kind}</div>
+                        )}
+                        <div className="font-semibold text-charcoal-800 dark:text-charcoal-100 mb-1">{event.date_start}</div>
+                        <div className="text-gray-700 dark:text-gray-300 mb-2">{event.title}</div>
+                        {event.location && (
+                          <div className="text-sm text-old-money-600 dark:text-old-money-400">{event.location}</div>
+                        )}
                       </div>
-                      {event.placement && (
-                        <div className="text-lg font-bold text-camel-700 dark:text-camel-400">
-                          #{event.placement}
+                      <div className="flex flex-col items-end gap-2">
+                        <div className="text-xs font-medium px-2.5 py-1 rounded-full bg-white dark:bg-charcoal-800 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-charcoal-600">
+                          {event.event_type === 'coursing' ? 'Курсинг' : event.event_type === 'bzmp' ? 'БЗМП' : 'Рейсинг'}
                         </div>
-                      )}
-                      {event.total_score && (
-                        <div className="text-sm text-old-money-600 dark:text-old-money-400 font-medium">
-                          {event.total_score} баллов
-                        </div>
-                      )}
+                        {event.placement && (
+                          <div className="text-lg font-bold text-camel-700 dark:text-camel-400">
+                            #{event.placement}
+                          </div>
+                        )}
+                        {event.total_score && (
+                          <div className="text-sm text-old-money-600 dark:text-old-money-400 font-medium">
+                            {event.total_score} баллов
+                          </div>
+                        )}
+                      </div>
                     </div>
+                    {event.results_url && (
+                      <Link
+                        to={`/event/${event.event_id}`}
+                        className="mt-3 inline-block text-sm text-camel-700 dark:text-camel-400 transition-colors hover:text-camel-800 dark:hover:text-camel-300 font-medium"
+                      >
+                        Результаты →
+                      </Link>
+                    )}
                   </div>
-                  {event.results_url && (
-                    <Link
-                      to={`/event/${event.event_id}`}
-                      className="mt-3 inline-block text-sm text-camel-700 dark:text-camel-400 transition-colors hover:text-camel-800 dark:hover:text-camel-300 font-medium"
-                    >
-                      Результаты →
-                    </Link>
-                  )}
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
         </div>
       </div>
     </div>
