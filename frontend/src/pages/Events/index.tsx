@@ -326,19 +326,19 @@ export default function Events() {
         <div className="flex flex-wrap items-center gap-3">
           <span className="font-medium">Дисциплины:</span>
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-forest-300 dark:bg-forest-900/20 border border-forest-400 dark:border-forest-700"></div>
+            <div className="w-3 h-3 rounded-full bg-forest-300 dark:bg-forest-900/25 border border-forest-400 dark:border-forest-700"></div>
             <span>Курсинг</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-warm-blue-300 dark:bg-warm-blue-900/20 border border-warm-blue-400 dark:border-warm-blue-700"></div>
+            <div className="w-3 h-3 rounded-full bg-warm-blue-300 dark:bg-warm-blue-900/25 border border-warm-blue-400 dark:border-warm-blue-700"></div>
             <span>БЗМП</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-terracotta-300 dark:bg-terracotta-900/20 border border-terracotta-400 dark:border-terracotta-700"></div>
+            <div className="w-3 h-3 rounded-full bg-terracotta-300 dark:bg-terracotta-900/25 border border-terracotta-400 dark:border-terracotta-700"></div>
             <span>Бега</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-camel-300 dark:bg-camel-900/20 border border-camel-400 dark:border-camel-700"></div>
+            <div className="w-3 h-3 rounded-full bg-camel-300 dark:bg-camel-900/25 border border-camel-400 dark:border-camel-700"></div>
             <span>Другие</span>
           </div>
         </div>
@@ -401,7 +401,7 @@ export default function Events() {
 
         {/* Desktop table */}
         <div className="hidden md:block overflow-x-auto">
-          <table className="w-full divide-y divide-charcoal-200 dark:divide-charcoal-700 table-auto min-w-[800px]">
+          <table className="w-full divide-y-2 divide-old-money-200 dark:divide-charcoal-700 table-auto min-w-[800px]">
             <thead className="border-b border-old-money-300 dark:border-charcoal-600 bg-cream-100 dark:bg-charcoal-700">
             <tr>
               <th 
