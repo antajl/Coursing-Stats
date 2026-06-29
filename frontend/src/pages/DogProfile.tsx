@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { useDogProfile, useDogEvents, useDogSpeedRecords, useSpeedRecordsByBreed, useDogCoursingRecords } from '../hooks/useApi'
+import { useDogProfile, useDogEvents, useDogSpeedRecords, useSpeedRecordsByBreed, useDogCoursingRecords, useCoursingRecordsByBreed } from '../hooks/useApi'
 import { DogSilhouettes, getSilhouetteType } from '../components/DogSilhouettes'
 import { toPng } from 'html-to-image'
 import SkeletonLoader from '../components/SkeletonLoader'
@@ -25,6 +25,9 @@ export default function DogProfile() {
   
   const { data: breedRecordsData } = useSpeedRecordsByBreed(dog?.breed || '')
   const breedRecords = breedRecordsData?.success ? (Array.isArray(breedRecordsData.data) ? breedRecordsData.data : []) : []
+  
+  const { data: breedCoursingRecordsData } = useCoursingRecordsByBreed(dog?.breed || '')
+  const breedCoursingRecords = breedCoursingRecordsData?.success ? (Array.isArray(breedCoursingRecordsData.data) ? breedCoursingRecordsData.data : []) : []
 
   const handleExport = async () => {
     if (!exportRef.current || exporting) return
@@ -143,7 +146,36 @@ export default function DogProfile() {
       return parseDate(b.date) - parseDate(a.date);
     });
     
-    return { bestTime, avgTime, history };
+    // Рассчитываем рейтинг в породе
+    let breedRank = 0;
+    let breedTotal = 0;
+    let percentile = 0;
+    
+    if (breedCoursingRecords.length > 0) {
+      // Группируем по собакам и находим лучший результат для каждой
+      const dogBestTimes = new Map();
+      breedCoursingRecords.forEach(r => {
+        const key = `${r.name}_${r.breed}`;
+        const currentBest = dogBestTimes.get(key);
+        const time = parseFloat(r.time_seconds);
+        if (!currentBest || time < currentBest) {
+          dogBestTimes.set(key, time);
+        }
+      });
+      
+      // Сортируем по времени (меньшее время = лучший результат)
+      const sortedTimes = Array.from(dogBestTimes.values()).sort((a, b) => a - b);
+      breedTotal = sortedTimes.length;
+      
+      // Находим позицию текущей собаки
+      const rank = sortedTimes.findIndex(t => t === bestTime);
+      if (rank !== -1) {
+        breedRank = rank + 1;
+        percentile = Math.round((rank / breedTotal) * 100);
+      }
+    }
+    
+    return { bestTime, avgTime, history, breedRank, breedTotal, percentile };
   })() : null
 
   const silhouetteType = getSilhouetteType(dog?.breed)
@@ -330,7 +362,7 @@ export default function DogProfile() {
             {/* Статистика Донино */}
             {hasSpeedRecords && (
               <div className="rounded-2xl border-2 border-camel-200 dark:border-camel-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
-                <h2 className="text-lg md:text-xl font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 mb-4">Статистика Донино</h2>
+                <h2 className="text-lg md:text-xl font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 mb-4">Замер скорости</h2>
                 
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="bg-gradient-to-br from-camel-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-camel-200 dark:border-charcoal-500">
@@ -410,6 +442,19 @@ export default function DogProfile() {
                     <div className="text-2xl font-bold text-charcoal-900 dark:text-charcoal-100">{coursingStats.avgTime.toFixed(2)} <span className="text-sm font-normal">сек</span></div>
                   </div>
                 </div>
+
+                {coursingStats.breedRank > 0 && (
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div className="bg-gradient-to-br from-camel-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-camel-200 dark:border-charcoal-500">
+                      <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Рейтинг в породе</div>
+                      <div className="text-2xl font-bold text-camel-700 dark:text-camel-400">#{coursingStats.breedRank} <span className="text-base font-normal text-charcoal-600 dark:text-charcoal-400">из {coursingStats.breedTotal}</span></div>
+                    </div>
+                    <div className="bg-gradient-to-br from-camel-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-camel-200 dark:border-charcoal-500">
+                      <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Процентиль</div>
+                      <div className="text-2xl font-bold text-camel-700 dark:text-camel-400">Топ {100 - coursingStats.percentile}%</div>
+                    </div>
+                  </div>
+                )}
 
                 {/* График прогресса */}
                 <div>

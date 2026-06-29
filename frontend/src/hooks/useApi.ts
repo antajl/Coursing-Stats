@@ -113,6 +113,14 @@ export function useDogCoursingRecords(dogId: string) {
   });
 }
 
+export function useCoursingRecordsByBreed(breed: string) {
+  return useQuery({
+    queryKey: ['coursingRecordsByBreed', breed],
+    queryFn: () => api.getCoursingRecords(breed, 10000, '', ''),
+    enabled: !!breed,
+  });
+}
+
 export function useJudges(breed = '', discipline = '') {
   return useQuery({
     queryKey: ['judges', breed, discipline],
