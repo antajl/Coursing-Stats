@@ -22,7 +22,7 @@ import {
 
 const API_URL = import.meta.env.VITE_API_URL ||
   (import.meta.env.PROD
-    ? 'https://procoursing-stats.antajltube.workers.dev'
+    ? 'https://api.procoursing.antajl.ru'
     : 'http://127.0.0.1:8787');
 
 const IS_DEV = import.meta.env.DEV;
@@ -167,12 +167,13 @@ export const api = {
     return fetchWithFallback(`${API_URL}/api/competitions/${eventId}/results`, []);
   },
 
-  async getSpeedRecords(breed = '', sex = '', limit = 100, search = '', year = '') {
+  async getSpeedRecords(breed = '', sex = '', limit = 100, search = '', year = '', dogId = '') {
     const params = new URLSearchParams();
     if (breed) params.append('breed', breed);
     if (sex) params.append('sex', sex);
     if (search) params.append('search', search);
     if (year) params.append('year', year);
+    if (dogId) params.append('dog_id', dogId);
     params.append('limit', limit);
     const url = `${API_URL}/api/speed-records?${params}`;
     return fetchWithFallback(url, []);

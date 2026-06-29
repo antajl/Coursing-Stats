@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { useDogProfile, useDogEvents } from '../hooks/useApi'
+import { useDogProfile, useDogEvents, useDogSpeedRecords } from '../hooks/useApi'
 import { DogSilhouettes, getSilhouetteType } from '../components/DogSilhouettes'
 import { toPng } from 'html-to-image'
 import SkeletonLoader from '../components/SkeletonLoader'
@@ -15,9 +15,11 @@ export default function DogProfile() {
   // React Query hooks
   const { data: dogDataResult, isLoading: loading } = useDogProfile(id)
   const { data: eventsData, isLoading: eventsLoading } = useDogEvents(id)
+  const { data: speedRecordsData } = useDogSpeedRecords(id)
 
   const dog = dogDataResult?.success ? dogDataResult.data : null
   const events = eventsData?.success ? (Array.isArray(eventsData.data) ? eventsData.data : []) : []
+  const speedRecords = speedRecordsData?.success ? (Array.isArray(speedRecordsData.data) ? speedRecordsData.data : []) : []
 
   const handleExport = async () => {
     if (!exportRef.current || exporting) return
@@ -67,6 +69,25 @@ export default function DogProfile() {
   const racing = dog.racing_stats || {}
   const hasCoursingData = coursing.total_starts > 0
   const hasRacingData = racing.total_starts > 0
+
+  // Статистика Донино
+  const hasSpeedRecords = speedRecords.length > 0
+  const speedStats = hasSpeedRecords ? (() => {
+    const bestSpeed = Math.max(...speedRecords.map(r => parseFloat(r.speed_km_h)))
+    const avgSpeed = speedRecords.reduce((sum, r) => sum + parseFloat(r.speed_km_h), 0) / speedRecords.length
+    const history = speedRecords.map(r => ({
+      speed_km_h: parseFloat(r.speed_km_h),
+      date: r.date
+    })).sort((a, b) => {
+      const parseDate = (d) => {
+        const parts = d.split('.');
+        return new Date(parts[2], parts[1] - 1, parts[0]);
+      };
+      return parseDate(b.date) - parseDate(a.date);
+    });
+    
+    return { bestSpeed, avgSpeed, history };
+  })() : null
 
   const silhouetteType = getSilhouetteType(dog?.breed)
   const showRuName = dog.name_ru && dog.name_ru !== dog.name_lat
@@ -243,6 +264,45 @@ export default function DogProfile() {
             </div>
           )}
         </div>
+
+        {/* Статистика Донино */}
+        {hasSpeedRecords && (
+          <div className="rounded-2xl border-2 border-camel-200 dark:border-camel-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
+            <h2 className="text-lg md:text-xl font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 mb-4">Статистика Донино</h2>
+            
+            <div className="grid grid-cols-2 gap-4 mb-6">
+              <div className="bg-gradient-to-br from-camel-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-camel-200 dark:border-charcoal-500">
+                <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Лучшая скорость</div>
+                <div className="text-2xl font-bold text-camel-700 dark:text-camel-400">{speedStats.bestSpeed} <span className="text-sm font-normal">км/ч</span></div>
+              </div>
+              <div className="bg-gradient-to-br from-old-money-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-old-money-200 dark:border-charcoal-500">
+                <div className="text-xs font-medium text-old-money-600 mb-1 uppercase tracking-wide">Средняя скорость</div>
+                <div className="text-2xl font-bold text-charcoal-900 dark:text-charcoal-100">{speedStats.avgSpeed.toFixed(1)} <span className="text-sm font-normal">км/ч</span></div>
+              </div>
+            </div>
+
+            {/* График прогресса */}
+            <div>
+              <h3 className="text-lg font-bold text-charcoal-900 dark:text-charcoal-100 mb-3">Прогресс во времени</h3>
+              <div className="space-y-2">
+                {speedStats.history.map((record, idx) => (
+                  <div key={idx} className="flex items-center gap-4">
+                    <div className="w-24 text-sm text-charcoal-700 dark:text-charcoal-300 text-right">{record.date}</div>
+                    <div className="flex-1 bg-cream-200 dark:bg-charcoal-600 rounded-full h-6 overflow-hidden relative">
+                      <div 
+                        className="bg-gradient-to-r from-camel-400 to-camel-600 h-full rounded-full transition-all duration-500"
+                        style={{ width: `${(record.speed_km_h / 80) * 100}%` }}
+                      />
+                      <div className="absolute inset-0 flex items-center justify-center text-sm font-bold text-charcoal-900 dark:text-charcoal-100">
+                        {record.speed_km_h} км/ч
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* История выступлений */}
         <div className="rounded-2xl border-2 border-old-money-200 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
