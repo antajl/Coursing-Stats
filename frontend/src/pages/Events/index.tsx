@@ -4,6 +4,8 @@ import { useYears, useEvents } from '../../hooks/useApi'
 import { getDisciplineColor } from '../../constants'
 import FiltersDropdown from '../../components/FiltersDropdown'
 import FilterSelect from '../../components/FilterSelect'
+import EmptyState from '../../components/EmptyState'
+import SkeletonLoader from '../../components/SkeletonLoader'
 
 function formatDate(dateStr) {
   if (!dateStr) return ''
@@ -227,7 +229,7 @@ export default function Events() {
   })
 
   if (loading) {
-    return <div className="text-center py-8 text-old-money-600">Загрузка...</div>
+    return <SkeletonLoader variant="card" count={6} />
   }
 
   return (
@@ -239,7 +241,7 @@ export default function Events() {
           placeholder="Поиск по названию, месту, клубу..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="flex-1 h-12 px-5 py-3 bg-white border-2 border-old-money-300 rounded-xl text-old-money-800 focus:ring-2 focus:ring-gold-400 focus:border-transparent transition-all duration-300 shadow-sm"
+          className="h-12 flex-1 rounded-xl border border-old-money-300 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 px-5 py-3 text-charcoal-800 dark:text-charcoal-200 shadow-sm transition-all duration-200 focus:border-camel-500 focus:outline-none focus:ring-4 focus:ring-camel-100 dark:focus:ring-camel-900 focus-visible:ring-2 focus-visible:ring-camel-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-charcoal-900"
         />
 
         <div className="grid grid-cols-2 md:flex gap-3">
@@ -295,21 +297,21 @@ export default function Events() {
 
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-semibold text-old-money-700 mb-2">Дата от</label>
+              <label className="block text-sm font-semibold text-old-money-700 dark:text-old-money-400 mb-2">Дата от</label>
               <input
                 type="date"
                 value={filterDateFrom}
                 onChange={(e) => setFilterDateFrom(e.target.value)}
-                className="w-full h-12 px-4 py-3 bg-white border-2 border-old-money-300 rounded-xl text-old-money-800 focus:ring-2 focus:ring-gold-400 focus:border-transparent transition-all duration-300"
+                className="h-12 w-full rounded-xl border border-old-money-300 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 px-4 py-3 text-charcoal-800 dark:text-charcoal-200 shadow-sm transition-all duration-200 focus:border-camel-500 focus:outline-none focus:ring-4 focus:ring-camel-100 dark:focus:ring-camel-900 focus-visible:ring-2 focus-visible:ring-camel-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-charcoal-900"
               />
             </div>
             <div>
-              <label className="block text-sm font-semibold text-old-money-700 mb-2">Дата до</label>
+              <label className="block text-sm font-semibold text-old-money-700 dark:text-old-money-400 mb-2">Дата до</label>
               <input
                 type="date"
                 value={filterDateTo}
                 onChange={(e) => setFilterDateTo(e.target.value)}
-                className="w-full h-12 px-4 py-3 bg-white border-2 border-old-money-300 rounded-xl text-old-money-800 focus:ring-2 focus:ring-gold-400 focus:border-transparent transition-all duration-300"
+                className="h-12 w-full rounded-xl border border-old-money-300 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 px-4 py-3 text-charcoal-800 dark:text-charcoal-200 shadow-sm transition-all duration-200 focus:border-camel-500 focus:outline-none focus:ring-4 focus:ring-camel-100 dark:focus:ring-camel-900 focus-visible:ring-2 focus-visible:ring-camel-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-charcoal-900"
               />
             </div>
           </div>
@@ -317,39 +319,45 @@ export default function Events() {
         </div>
       </div>
 
-      <div className="mb-4 hidden md:flex flex-wrap justify-between items-start gap-4 text-sm text-old-money-600">
+      <div className="mb-4 hidden md:flex flex-wrap justify-between items-start gap-4 text-sm text-old-money-600 dark:text-old-money-400">
         <div>
           Всего событий: {events.length} | Отфильтровано: {filteredEvents.length}
         </div>
         <div className="flex flex-wrap items-center gap-3">
           <span className="font-medium">Дисциплины:</span>
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-forest-100 border border-forest-300"></div>
+            <div className="w-3 h-3 rounded-full bg-forest-300 dark:bg-forest-800 border border-forest-400 dark:border-forest-600"></div>
             <span>Курсинг</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-warm-blue-100 border border-warm-blue-300"></div>
+            <div className="w-3 h-3 rounded-full bg-warm-blue-300 dark:bg-warm-blue-800 border border-warm-blue-400 dark:border-warm-blue-600"></div>
             <span>БЗМП</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-terracotta-100 border border-terracotta-300"></div>
+            <div className="w-3 h-3 rounded-full bg-terracotta-300 dark:bg-terracotta-800 border border-terracotta-400 dark:border-terracotta-600"></div>
             <span>Бега</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-yellow-100 border border-yellow-300"></div>
+            <div className="w-3 h-3 rounded-full bg-yellow-300 dark:bg-yellow-800 border border-yellow-400 dark:border-yellow-600"></div>
             <span>Другие</span>
           </div>
         </div>
       </div>
 
       {/* Mobile stats - simplified */}
-      <div className="md:hidden mb-3 text-xs text-gray-500">
+      <div className="md:hidden mb-3 text-xs text-gray-500 dark:text-gray-400">
         {filteredEvents.length} из {events.length} событий
       </div>
 
-      <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-old-money-200">
-        {/* Mobile cards */}
-        <div className="md:hidden space-y-3 p-3">
+      <div className="overflow-hidden rounded-2xl border-2 border-old-money-200 dark:border-charcoal-700 bg-white dark:bg-charcoal-800 shadow-md">
+        {filteredEvents.length === 0 ? (
+          <EmptyState
+            title="События не найдены"
+            description="Попробуйте изменить фильтры или поисковый запрос"
+          />
+        ) : (
+          <>
+        <div className="md:hidden space-y-3 p-3 min-w-[320px]">
           {filteredEvents.map((event) => (
             <div 
               key={event.id} 
@@ -357,20 +365,20 @@ export default function Events() {
             >
               <div className="flex justify-between items-start mb-2">
                 <div className="flex-1">
-                  <div className="text-sm font-bold text-old-money-800 mb-1">
+                  <div className="mb-1 text-sm font-bold text-charcoal-900 dark:text-charcoal-100">
                     {formatDateRange(event.date_start, event.date_end)}
                   </div>
                   {event.competition_kind && (
-                    <div className="text-xs text-gold-600 font-medium mb-1">{event.competition_kind}</div>
+                    <div className="mb-1 text-xs font-medium text-camel-700 dark:text-camel-400">{event.competition_kind}</div>
                   )}
                   {event.location && (
-                    <div className="text-xs text-gray-600">{event.location}</div>
+                    <div className="text-xs text-gray-600 dark:text-gray-400">{event.location}</div>
                   )}
                 </div>
                 {event.results_url ? (
                   <Link
                     to={`/event/${event.id}`}
-                    className="text-xs font-medium text-gold-600 hover:text-gold-500 hover:underline transition-colors ml-2"
+                    className="ml-2 text-xs font-medium text-camel-700 dark:text-camel-400 transition-colors hover:text-camel-800 dark:hover:text-camel-300 hover:underline"
                   >
                     <span className="md:hidden">Открыть</span>
                     <span className="hidden md:inline">Открыть →</span>
@@ -379,7 +387,7 @@ export default function Events() {
                   <span className="text-gray-400 text-xs italic ml-2">Ожидается</span>
                 )}
               </div>
-              <div className="flex gap-2 text-xs text-old-money-700">
+              <div className="flex gap-2 text-xs text-old-money-700 dark:text-old-money-400">
                 {event.competition_type && (
                   <span className="bg-white/50 px-2 py-1 rounded">{event.competition_type}</span>
                 )}
@@ -394,39 +402,39 @@ export default function Events() {
         {/* Desktop table */}
         <div className="hidden md:block overflow-x-auto">
           <table className="w-full divide-y divide-old-money-200 table-auto min-w-[800px]">
-            <thead className="bg-gradient-to-r from-gold-200 to-old-money-200 border-b-2 border-old-money-300">
+            <thead className="border-b border-old-money-300 dark:border-charcoal-600 bg-cream-100 dark:bg-charcoal-700">
             <tr>
               <th 
-                className="px-3 py-4 text-center text-xs font-bold text-gold-700 uppercase tracking-wider cursor-pointer hover:text-gold-600 w-auto"
+                className="w-auto cursor-pointer px-3 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-200 dark:hover:bg-charcoal-600"
                 onClick={() => handleSort('date_start')}
               >
                 Дата {sortField === 'date_start' && (sortDirection === 'asc' ? '↑' : '↓')}
               </th>
               <th 
-                className="px-3 py-4 text-center text-xs font-bold text-gold-700 uppercase tracking-wider cursor-pointer hover:text-gold-600 w-auto"
+                className="w-auto cursor-pointer px-3 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-200 dark:hover:bg-charcoal-600"
                 onClick={() => handleSort('competition_kind')}
               >
                 Вид {sortField === 'competition_kind' && (sortDirection === 'asc' ? '↑' : '↓')}
               </th>
               <th 
-                className="px-3 py-4 text-center text-xs font-bold text-gold-700 uppercase tracking-wider cursor-pointer hover:text-gold-600 w-auto"
+                className="w-auto cursor-pointer px-3 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-200 dark:hover:bg-charcoal-600"
                 onClick={() => handleSort('competition_type')}
               >
                 Дисциплина {sortField === 'competition_type' && (sortDirection === 'asc' ? '↑' : '↓')}
               </th>
               <th 
-                className="px-3 py-4 text-center text-xs font-bold text-gold-700 uppercase tracking-wider cursor-pointer hover:text-gold-600"
+                className="cursor-pointer px-3 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-200 dark:hover:bg-charcoal-600"
                 onClick={() => handleSort('location')}
               >
                 Локация {sortField === 'location' && (sortDirection === 'asc' ? '↑' : '↓')}
               </th>
               <th 
-                className="px-3 py-4 text-center text-xs font-bold text-gold-700 uppercase tracking-wider cursor-pointer hover:text-gold-600"
+                className="cursor-pointer px-3 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-200 dark:hover:bg-charcoal-600"
                 onClick={() => handleSort('judges')}
               >
                 Судьи {sortField === 'judges' && (sortDirection === 'asc' ? '↑' : '↓')}
               </th>
-              <th className="px-3 py-4 text-center text-xs font-bold text-gold-700 uppercase tracking-wider w-auto">
+              <th className="w-auto px-3 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200">
                 Результаты
               </th>
             </tr>
@@ -437,26 +445,26 @@ export default function Events() {
                 key={event.id} 
                 className={`${getDisciplineColor(event.event_type)} ${getImportantCompetitionStyle(event.competition_kind)} transition-all duration-300`}
               >
-                <td className="px-3 py-3 text-sm text-old-money-800 whitespace-nowrap">
+                <td className="px-3 py-3 text-sm text-old-money-800 dark:text-old-money-300 whitespace-nowrap">
                   {formatDateRange(event.date_start, event.date_end)}
                 </td>
-                <td className="px-3 py-3 text-center text-sm text-old-money-800">
+                <td className="px-3 py-3 text-center text-sm text-old-money-800 dark:text-old-money-300">
                   {event.competition_kind || '-'}
                 </td>
-                <td className="px-3 py-3 text-center text-sm text-old-money-800">
+                <td className="px-3 py-3 text-center text-sm text-old-money-800 dark:text-old-money-300">
                   {event.competition_type || '-'}
                 </td>
-                <td className="px-3 py-3 text-sm text-old-money-800">
+                <td className="px-3 py-3 text-sm text-old-money-800 dark:text-old-money-300">
                   {event.location}
                 </td>
-                <td className="px-3 py-3 text-sm text-old-money-800">
+                <td className="px-3 py-3 text-sm text-old-money-800 dark:text-old-money-300">
                   {event.judges || '-'}
                 </td>
                 <td className="px-3 py-3 text-sm">
                   {event.results_url ? (
                     <Link
                       to={`/event/${event.id}`}
-                      className="text-xs font-medium text-gold-600 hover:text-gold-500 hover:underline transition-colors"
+                      className="text-xs font-medium text-camel-700 dark:text-camel-400 transition-colors hover:text-camel-800 dark:hover:text-camel-300 hover:underline"
                     >
                       Открыть
                     </Link>
@@ -469,6 +477,8 @@ export default function Events() {
           </tbody>
         </table>
         </div>
+        </>
+        )}
       </div>
     </div>
   )
