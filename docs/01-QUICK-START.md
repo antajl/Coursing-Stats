@@ -49,7 +49,7 @@ npm run dev
 ### Windows (batch файл)
 
 ```bash
-start-local.bat
+scripts\start-servers.bat
 ```
 
 ## Первые шаги
@@ -120,10 +120,10 @@ npm test
 
 ## Следующие шаги
 
-- Прочитайте [02-AI-GUIDELINES.md](02-AI-GUIDELINES.md) для правил работы с проектом
-- Прочитайте [03-ARCHITECTURE.md](03-ARCHITECTURE.md) для понимания архитектуры
-- Прочитайте [04-API-REFERENCE.md](04-API-REFERENCE.md) для работы с API
-- Прочитайте [05-PARSING.md](05-PARSING.md) для понимания парсинга
+- Прочитайте [ai/GUIDELINES.md](ai/GUIDELINES.md) для правил работы с проектом
+- Прочитайте [architecture/ARCHITECTURE.md](architecture/ARCHITECTURE.md) для понимания архитектуры
+- Прочитайте [architecture/API-REFERENCE.md](architecture/API-REFERENCE.md) для работы с API
+- Прочитайте [data/PARSING.md](data/PARSING.md) для понимания парсинга
 
 ## Полезные ссылки
 

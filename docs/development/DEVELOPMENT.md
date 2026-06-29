@@ -394,6 +394,84 @@ build: {
 
 ---
 
+## Best Practices — Лучшие практики
+
+### Предотвращение бесконечных циклов в useEffect
+
+При синхронизации состояния с URL параметрами всегда проверяйте, действительно ли значения изменились перед обновлением URL:
+
+```javascript
+// ❌ ПЛОХО — вызывает бесконечный цикл
+useEffect(() => {
+  const params = new URLSearchParams(searchParams)
+  if (filterBreed) params.set('breed', filterBreed)
+  if (filterYear) params.set('year', filterYear)
+  setSearchParams(params)
+}, [filterBreed, filterYear, setSearchParams, searchParams])
+```
+
+```javascript
+// ✅ ХОРОШО — проверяет изменения перед обновлением
+useEffect(() => {
+  const params = new URLSearchParams(searchParams)
+  
+  // Проверяем, нужно ли обновлять URL
+  const needsUpdate = 
+    (filterBreed !== params.get('breed')) ||
+    (filterYear !== params.get('year'))
+  
+  if (!needsUpdate) return
+  
+  // Обновляем только если значения изменились
+  const newParams = new URLSearchParams()
+  if (filterBreed) newParams.set('breed', filterBreed)
+  if (filterYear) newParams.set('year', filterYear)
+  setSearchParams(newParams)
+}, [filterBreed, filterYear, setSearchParams, searchParams])
+```
+
+### Предотвращение фликера при загрузке данных
+
+Используйте `isInitialLoad` состояние для показа SkeletonLoader только при первой загрузке:
+
+```javascript
+const [isInitialLoad, setIsInitialLoad] = useState(true)
+
+const { data, isLoading } = useApi(params)
+
+useEffect(() => {
+  if (!isLoading && data?.length > 0) {
+    setIsInitialLoad(false)
+  }
+}, [isLoading, data?.length])
+
+if (isInitialLoad && isLoading) {
+  return <SkeletonLoader variant="card" count={4} />
+}
+```
+
+### Dark Mode для компонентов
+
+При добавлении новых компонентов всегда добавляйте dark mode варианты:
+
+```javascript
+// Фоны
+bg-white dark:bg-charcoal-800
+bg-cream-50 dark:bg-charcoal-900
+
+// Границы
+border-old-money-200 dark:border-charcoal-600
+
+// Текст
+text-charcoal-900 dark:text-charcoal-100
+text-old-money-800 dark:text-old-money-300
+
+// Hover состояния
+hover:bg-cream-50 dark:hover:bg-charcoal-700
+```
+
+---
+
 ## Полезные ссылки
 
 - Парсеры: `backend/parsers/`
