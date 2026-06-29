@@ -7,10 +7,12 @@ type Env = {
 
 function parsePagination(c: any) {
   const limitStr = c.req.query('limit');
-  if (limitStr === null || limitStr === '') return null;
-  const limit = Math.min(Math.max(parseInt(limitStr, 10) || 50, 1), 500);
+  if (!limitStr || limitStr === '') return null;
+  const limit = parseInt(limitStr, 10);
+  if (isNaN(limit)) return null;
+  const validLimit = Math.min(Math.max(limit, 1), 500);
   const offset = Math.max(parseInt(c.req.query('offset') || '0', 10) || 0, 0);
-  return { limit, offset };
+  return { limit: validLimit, offset };
 }
 
 async function queryWithPagination(db: any, query: string, params: any[], pagination: any) {
@@ -179,7 +181,7 @@ export function handleTop(app: Hono<{ Bindings: Env }>) {
             WHEN json_extract(r.raw_scores_json, '$.heat1.speed') IS NOT NULL THEN CAST(json_extract(r.raw_scores_json, '$.heat1.speed') AS REAL)
             WHEN json_extract(r.raw_scores_json, '$.heat2.speed') IS NOT NULL THEN CAST(json_extract(r.raw_scores_json, '$.heat2.speed') AS REAL)
             WHEN json_extract(r.raw_scores_json, '$.heat3.speed') IS NOT NULL THEN CAST(json_extract(r.raw_scores_json, '$.heat3.speed') AS REAL)
-            ELSE 0
+            ELSE NULL
           END
         ) AS best_speed,
         ROUND(AVG(

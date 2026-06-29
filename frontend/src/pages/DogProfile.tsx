@@ -16,6 +16,7 @@ export default function DogProfile() {
 
   // Определяем источник навигации
   const fromSpeedRecords = location.state?.from === 'speed-records'
+  const fromCoursingRecords = location.state?.from === 'coursing-records'
 
   // React Query hooks
   const { data: dogDataResult, isLoading: loading } = useDogProfile(id)
@@ -200,11 +201,19 @@ export default function DogProfile() {
       <div className="max-w-4xl mx-auto">
         <div className="flex items-center justify-between mb-4 md:mb-6 flex-wrap gap-2">
           <button
-            onClick={() => navigate(fromSpeedRecords ? '/speed-records' : '/top')}
+            onClick={() => {
+              if (fromSpeedRecords) {
+                navigate('/speed-records')
+              } else if (fromCoursingRecords) {
+                navigate('/speed-records', { state: { tab: 'coursing' } })
+              } else {
+                navigate('/top')
+              }
+            }}
             className="font-medium text-camel-700 dark:text-camel-400 transition-colors hover:text-camel-800 dark:hover:text-camel-300"
           >
             <span className="md:hidden">← Назад</span>
-            <span className="hidden md:inline">← {fromSpeedRecords ? 'Назад к рекордам' : 'Назад к топу'}</span>
+            <span className="hidden md:inline">← {fromSpeedRecords ? 'Назад к рекордам' : fromCoursingRecords ? 'Назад к бегам борзых' : 'Назад к топу'}</span>
           </button>
           <button
             onClick={handleExport}

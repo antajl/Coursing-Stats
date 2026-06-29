@@ -735,7 +735,7 @@ function SpeedRecords() {
                               }`}
                               onClick={() => {
                                 if (record.dog_id) {
-                                  navigate(`/dog/${record.dog_id}`);
+                                  navigate(`/dog/${record.dog_id}`, { state: { from: 'coursing-records' } });
                                 }
                               }}
                             >
@@ -772,7 +772,7 @@ function SpeedRecords() {
                                 className="font-semibold text-charcoal-900 dark:text-charcoal-100 transition-colors cursor-pointer hover:text-camel-700 dark:hover:text-camel-400"
                                 onClick={() => {
                                   if (record.dog_id) {
-                                    navigate(`/dog/${record.dog_id}`);
+                                    navigate(`/dog/${record.dog_id}`, { state: { from: 'coursing-records' } });
                                   }
                                 }}
                               >

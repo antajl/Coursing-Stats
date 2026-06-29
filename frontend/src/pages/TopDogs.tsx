@@ -30,9 +30,9 @@ export default function TopDogs() {
   // React Query hooks
   const { data: breedsData, isLoading: breedsLoading } = useBreeds()
   const { data: yearsData, isLoading: yearsLoading } = useYears()
-  const { data: topPlacementData, isLoading: placementLoading } = useTopPlacement(filterYear, filterBreed, parseInt(filterStartsFrom) || 0)
-  const { data: topScoreData, isLoading: scoreLoading } = useTopScore(filterYear, filterBreed, parseInt(filterStartsFrom) || 0)
-  const { data: topSpeedData, isLoading: speedLoading } = useTopSpeed(filterYear, filterBreed, parseInt(filterStartsFrom) || 0)
+  const { data: topPlacementData, isLoading: placementLoading } = useTopPlacement(filterYear, filterBreed, parseInt(filterStartsFrom) || 0, null, 0)
+  const { data: topScoreData, isLoading: scoreLoading } = useTopScore(filterYear, filterBreed, parseInt(filterStartsFrom) || 0, null, 0)
+  const { data: topSpeedData, isLoading: speedLoading } = useTopSpeed(filterYear, filterBreed, parseInt(filterStartsFrom) || 0, null, 0)
 
   const loading = breedsLoading || yearsLoading || placementLoading || scoreLoading || speedLoading
   
