@@ -539,42 +539,42 @@ function SpeedRecords() {
             {/* Desktop table */}
             <div className="hidden md:block overflow-x-auto">
               <table className="w-full min-w-[700px]">
-              <thead className="bg-cream-100 text-charcoal-800">
+              <thead className="bg-cream-100 dark:bg-charcoal-700">
                 <tr>
                   <th 
-                    className="cursor-pointer px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] transition-colors hover:bg-cream-200 dark:hover:bg-charcoal-600"
+                    className="cursor-pointer px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 transition-colors hover:bg-cream-200 dark:hover:bg-charcoal-600"
                     onClick={() => handleSort('name')}
                   >
                     Кличка {sortField === 'name' && (sortDirection === 'desc' ? '↑' : '↓')}
                   </th>
                   <th 
-                    className="cursor-pointer px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] transition-colors hover:bg-cream-200 dark:hover:bg-charcoal-600"
+                    className="cursor-pointer px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 transition-colors hover:bg-cream-200 dark:hover:bg-charcoal-600"
                     onClick={() => handleSort('sex')}
                   >
                     Пол {sortField === 'sex' && (sortDirection === 'desc' ? '↑' : '↓')}
                   </th>
                   <th 
-                    className="cursor-pointer px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] transition-colors hover:bg-cream-200 dark:hover:bg-charcoal-600"
+                    className="cursor-pointer px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 transition-colors hover:bg-cream-200 dark:hover:bg-charcoal-600"
                     onClick={() => handleSort('breed')}
                   >
                     Порода {sortField === 'breed' && (sortDirection === 'desc' ? '↑' : '↓')}
                   </th>
                   <th 
-                    className="cursor-pointer px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] transition-colors hover:bg-cream-200 dark:hover:bg-charcoal-600"
+                    className="cursor-pointer px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 transition-colors hover:bg-cream-200 dark:hover:bg-charcoal-600"
                     onClick={() => handleSort('speed_km_h')}
                   >
                     Скорость {sortField === 'speed_km_h' && (sortDirection === 'desc' ? '↓' : '↑')}
                   </th>
                   <th 
-                    className="cursor-pointer px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] transition-colors hover:bg-cream-200 dark:hover:bg-charcoal-600"
+                    className="cursor-pointer px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 transition-colors hover:bg-cream-200 dark:hover:bg-charcoal-600"
                     onClick={() => handleSort('date')}
                   >
                     Дата {sortField === 'date' && (sortDirection === 'desc' ? '↓' : '↑')}
                   </th>
-                  <th className="px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em]">Скриншот</th>
+                  <th className="px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200">Скриншот</th>
                 </tr>
               </thead>
-              <tbody className="bg-white dark:bg-charcoal-800 divide-y divide-cream-200 dark:divide-charcoal-600">
+              <tbody className="divide-y divide-old-money-200 dark:divide-charcoal-600">
                 {filteredRecords.map((record) => (
                   <tr key={record.id} className="hover:bg-cream-50 dark:hover:bg-charcoal-700 transition-colors">
                     <td className="px-6 py-4 text-center">
@@ -599,8 +599,8 @@ function SpeedRecords() {
                         {record.name}
                       </span>
                     </td>
-                    <td className="px-6 py-4 text-center text-charcoal-900">{record.sex === 'С' ? 'Сука' : record.sex === 'К' ? 'Кабель' : record.sex}</td>
-                    <td className="px-6 py-4 text-center text-charcoal-900">{record.breed}</td>
+                    <td className="px-6 py-4 text-center text-old-money-800 dark:text-old-money-300">{record.sex === 'С' ? 'Сука' : record.sex === 'К' ? 'Кабель' : record.sex}</td>
+                    <td className="px-6 py-4 text-center text-old-money-800 dark:text-old-money-300">{record.breed}</td>
                     <td className="px-6 py-4 text-center">
                       <div className="relative inline-block">
                         <span className="inline-block rounded-full bg-camel-600 px-3 py-1 text-sm font-bold text-white shadow-sm">
@@ -614,7 +614,7 @@ function SpeedRecords() {
                         )}
                       </div>
                     </td>
-                    <td className="px-6 py-4 text-center text-charcoal-700">{record.date}</td>
+                    <td className="px-6 py-4 text-center text-old-money-800 dark:text-old-money-300">{record.date}</td>
                     <td className="px-6 py-4 text-center">
                       {record.screenshot_url && (
                         <a
@@ -751,15 +751,15 @@ function SpeedRecords() {
                   {/* Desktop table */}
                   <div className="hidden md:block overflow-x-auto">
                     <table className="w-full min-w-[600px]">
-                      <thead className="bg-cream-100 dark:bg-charcoal-700 text-charcoal-800 dark:text-charcoal-200">
+                      <thead className="bg-cream-100 dark:bg-charcoal-700">
                         <tr>
-                          <th className="px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em]">Кличка</th>
-                          <th className="px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em]">Порода</th>
-                          <th className="px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em]">Время (350 метров)</th>
-                          <th className="px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em]">Дата</th>
+                          <th className="px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200">Кличка</th>
+                          <th className="px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200">Порода</th>
+                          <th className="px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200">Время (350 метров)</th>
+                          <th className="px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200">Дата</th>
                         </tr>
                       </thead>
-                      <tbody className="bg-white dark:bg-charcoal-800 divide-y divide-cream-200 dark:divide-charcoal-600">
+                      <tbody className="divide-y divide-old-money-200 dark:divide-charcoal-600">
                         {filteredCoursingRecords.map((record) => (
                           <tr key={record.id} className="hover:bg-cream-50 dark:hover:bg-charcoal-700 transition-colors">
                             <td className="px-6 py-4 text-center">
@@ -784,7 +784,7 @@ function SpeedRecords() {
                                 {record.name}
                               </span>
                             </td>
-                            <td className="px-6 py-4 text-center text-charcoal-900">{record.breed}</td>
+                            <td className="px-6 py-4 text-center text-old-money-800 dark:text-old-money-300">{record.breed}</td>
                             <td className="px-6 py-4 text-center">
                               <div className="relative inline-block">
                                 <span className="inline-block px-3 py-1 rounded-full bg-camel-600 text-white font-bold text-sm">
@@ -795,7 +795,7 @@ function SpeedRecords() {
                                 )}
                               </div>
                             </td>
-                            <td className="px-6 py-4 text-center text-charcoal-900">{record.date}</td>
+                            <td className="px-6 py-4 text-center text-old-money-800 dark:text-old-money-300">{record.date}</td>
                           </tr>
                         ))}
                       </tbody>
