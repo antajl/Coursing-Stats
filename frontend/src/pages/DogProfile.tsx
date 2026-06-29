@@ -473,8 +473,8 @@ export default function DogProfile() {
                   </div>
                 )}
 
-                {/* Компенсируем скриншот из левого блока */}
-                {hasSpeedRecords && speedStats?.screenshotUrl && (
+                {/* Компенсируем отсутствие скриншота в левом блоке */}
+                {hasSpeedRecords && !speedStats?.screenshotUrl && (
                   <div className="mb-6" />
                 )}
 
