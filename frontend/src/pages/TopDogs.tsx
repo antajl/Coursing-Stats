@@ -79,20 +79,40 @@ export default function TopDogs() {
     if (!isStandalone) return; // Don't update URL when inside Procoursing
     
     const params = new URLSearchParams(searchParams)
-    if (filterBreed) params.set('breed', filterBreed)
-    if (filterYear) params.set('year', filterYear)
-    if (searchQuery) params.set('search', searchQuery)
-    if (activeTab) params.set('rankingTab', activeTab)
-    if (filterStartsFrom) params.set('startsFrom', filterStartsFrom)
-    if (filterStartsTo) params.set('startsTo', filterStartsTo)
-    if (filterScoreFrom) params.set('scoreFrom', filterScoreFrom)
-    if (filterScoreTo) params.set('scoreTo', filterScoreTo)
-    if (filterScoreType !== 'best') params.set('scoreType', filterScoreType)
-    if (filterSpeedFrom) params.set('speedFrom', filterSpeedFrom)
-    if (filterSpeedTo) params.set('speedTo', filterSpeedTo)
-    if (filterSpeedType !== 'best') params.set('speedType', filterSpeedType)
-    setSearchParams(params)
-  }, [filterBreed, filterYear, searchQuery, activeTab, filterStartsFrom, filterStartsTo, filterScoreFrom, filterScoreTo, filterScoreType, filterSpeedFrom, filterSpeedTo, filterSpeedType, setSearchParams, isStandalone])
+    
+    // Проверяем, нужно ли обновлять URL
+    const needsUpdate = 
+      (filterBreed !== params.get('breed')) ||
+      (filterYear !== params.get('year')) ||
+      (searchQuery !== params.get('search')) ||
+      (activeTab !== params.get('rankingTab')) ||
+      (filterStartsFrom !== params.get('startsFrom')) ||
+      (filterStartsTo !== params.get('startsTo')) ||
+      (filterScoreFrom !== params.get('scoreFrom')) ||
+      (filterScoreTo !== params.get('scoreTo')) ||
+      (filterScoreType !== (params.get('scoreType') || 'best')) ||
+      (filterSpeedFrom !== params.get('speedFrom')) ||
+      (filterSpeedTo !== params.get('speedTo')) ||
+      (filterSpeedType !== (params.get('speedType') || 'best'))
+    
+    if (!needsUpdate) return
+    
+    // Обновляем только если значения изменились
+    const newParams = new URLSearchParams()
+    if (filterBreed) newParams.set('breed', filterBreed)
+    if (filterYear) newParams.set('year', filterYear)
+    if (searchQuery) newParams.set('search', searchQuery)
+    if (activeTab) newParams.set('rankingTab', activeTab)
+    if (filterStartsFrom) newParams.set('startsFrom', filterStartsFrom)
+    if (filterStartsTo) newParams.set('startsTo', filterStartsTo)
+    if (filterScoreFrom) newParams.set('scoreFrom', filterScoreFrom)
+    if (filterScoreTo) newParams.set('scoreTo', filterScoreTo)
+    if (filterScoreType !== 'best') newParams.set('scoreType', filterScoreType)
+    if (filterSpeedFrom) newParams.set('speedFrom', filterSpeedFrom)
+    if (filterSpeedTo) newParams.set('speedTo', filterSpeedTo)
+    if (filterSpeedType !== 'best') newParams.set('speedType', filterSpeedType)
+    setSearchParams(newParams)
+  }, [filterBreed, filterYear, searchQuery, activeTab, filterStartsFrom, filterStartsTo, filterScoreFrom, filterScoreTo, filterScoreType, filterSpeedFrom, filterSpeedTo, filterSpeedType, setSearchParams, isStandalone, searchParams])
 
   const filteredPlacement = topPlacement.filter(dog => {
     if (searchQuery) {
