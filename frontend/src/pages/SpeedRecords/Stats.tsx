@@ -491,7 +491,7 @@ function SpeedRecordsStats() {
       {dogStats && (
         <div className="bg-white dark:bg-charcoal-800 rounded-2xl border-2 border-cream-300 dark:border-charcoal-600 p-6 shadow-md">
           <h2 className="text-xl lg:text-2xl font-bold text-charcoal-900 dark:text-charcoal-100 mb-4">
-            Статистика: {dogStats.name} ({dogStats.breed})
+            Статистика: {dogStats.name} ({dogStats.breed}, 350 метров)
           </h2>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
