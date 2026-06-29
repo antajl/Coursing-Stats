@@ -338,7 +338,7 @@ export default function Events() {
             <span>Бега</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-yellow-300 dark:bg-yellow-800 border border-yellow-400 dark:border-yellow-600"></div>
+            <div className="w-3 h-3 rounded-full bg-camel-300 dark:bg-camel-700 border border-camel-400 dark:border-camel-600"></div>
             <span>Другие</span>
           </div>
         </div>
