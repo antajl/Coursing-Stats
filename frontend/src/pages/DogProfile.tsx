@@ -462,7 +462,6 @@ export default function DogProfile() {
           <div className={`grid gap-4 md:gap-6 mb-6 ${hasSpeedRecords && hasCoursingRecords ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1'}`}>
             {hasSpeedRecords && (
               <div className="rounded-2xl border-2 border-camel-200 dark:border-camel-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
-                <h3 className="text-lg font-bold text-charcoal-900 dark:text-charcoal-100 mb-3">Прогресс во времени (Замер скорости)</h3>
                 <div className="space-y-2">
                   {speedStats.history.map((record, idx) => (
                     <div key={idx} className="flex items-center gap-4">
@@ -484,7 +483,6 @@ export default function DogProfile() {
 
             {hasCoursingRecords && (
               <div className="rounded-2xl border-2 border-camel-200 dark:border-camel-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
-                <h3 className="text-lg font-bold text-charcoal-900 dark:text-charcoal-100 mb-3">Прогресс во времени (Беги борзых)</h3>
                 <div className="space-y-2">
                   {coursingStats.history.map((record, idx) => (
                     <div key={idx} className="flex items-center gap-4">
