@@ -80,18 +80,25 @@ export function parseDogRow($, $row, breedClass, allRows, rowIndex) {
   let vc = null;
   let disqualificationReason = null;
 
-  // Парсим забеги из ячеек 6-17
-  // Формат: "21.88 с<br>16.45 м/с<br>59.232 км/ч"
+  // Структура колонок:
+  // 0: Место, 1: №, 2: Порода, 3: Класс, 4: Пол, 5: Кличка, 6: Дистанция (м),
+  // 7: Забег 1, 8: Попона, 9: Время 1 + скорость,
+  // 10: Забег 2, 11: Попона, 12: Время 2 + скорость,
+  // 13: Забег 3, 14: Попона, 15: Время 3 + скорость,
+  // 16: ВС, 17: Титул(ы)
+  
+  // Парсим забеги из ячеек 9, 12, 15
+  // Формат: "21.88 с\n16.45 м/с\n59.232 км/ч"
   for (let heatIndex = 0; heatIndex < 3; heatIndex++) {
-    const heatCellIndex = 6 + (heatIndex * 4);
-    if (heatCellIndex + 3 >= cellCount) break;
+    const heatCellIndex = 9 + (heatIndex * 3);
+    if (heatCellIndex >= cellCount) break;
     
     const timeCell = $cells.eq(heatCellIndex);
     const timeText = timeCell.text().trim();
     
     // Проверяем disqualified (colspan)
     const colspan = timeCell.attr('colspan');
-    if (colspan && parseInt(colspan) >= 4) {
+    if (colspan && parseInt(colspan) >= 3) {
       disqualificationReason = timeText;
       continue;
     }
@@ -109,13 +116,9 @@ export function parseDogRow($, $row, breedClass, allRows, rowIndex) {
     }
   }
 
-  // Общая сумма (обычно лучшее время или среднее)
-  const totalScoreCell = $cells.eq(cellCount - 3);
-  totalScore = extractNumber(totalScoreCell.text());
-
-  // ВС и титул в последних ячейках
-  vc = cleanText($cells.eq(cellCount - 2).text());
-  qualification = cleanText($cells.eq(cellCount - 1).text());
+  // ВС и титул в последних ячейках (16 и 17)
+  vc = cleanText($cells.eq(16).text());
+  qualification = cleanText($cells.eq(17).text());
 
   const statusResult = detectStatusFromText($row.text(), totalScore !== null && totalScore !== undefined);
   const status = statusResult.status;
