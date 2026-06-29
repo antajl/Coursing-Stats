@@ -205,7 +205,7 @@ export default function DogProfile() {
               if (fromSpeedRecords) {
                 navigate('/speed-records')
               } else if (fromCoursingRecords) {
-                navigate('/speed-records', { state: { tab: 'coursing' } })
+                navigate('/speed-records?tab=coursing')
               } else {
                 navigate('/top')
               }
