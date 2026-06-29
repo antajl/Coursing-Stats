@@ -102,19 +102,19 @@ export default function Judges() {
                 </div>
                 <div className="grid grid-cols-2 gap-2 text-xs">
                   <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2">
-                    <div className="text-gray-500 dark:text-gray-400">Оцениваний</div>
+                    <div className="text-old-money-500 dark:text-old-money-400">Оцениваний</div>
                     <div className="font-bold text-old-money-800 dark:text-old-money-300">{judge.total_evaluations_count || 0}</div>
                   </div>
                   <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2">
-                    <div className="text-gray-500 dark:text-gray-400">Всего оценок</div>
+                    <div className="text-old-money-500 dark:text-old-money-400">Всего оценок</div>
                     <div className="font-bold text-old-money-800 dark:text-old-money-300">{judge.total_evaluations || 0}</div>
                   </div>
                   <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2">
-                    <div className="text-gray-500 dark:text-gray-400">Средняя</div>
+                    <div className="text-old-money-500 dark:text-old-money-400">Средняя</div>
                     <div className="font-bold text-old-money-800 dark:text-old-money-300">{judge.avg_score ? judge.avg_score.toFixed(2) : '-'}</div>
                   </div>
                   <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2">
-                    <div className="text-gray-500 dark:text-gray-400">Пород</div>
+                    <div className="text-old-money-500 dark:text-old-money-400">Пород</div>
                     <div className="font-bold text-old-money-800 dark:text-old-money-300">{judge.unique_breeds || 0}</div>
                   </div>
                 </div>

@@ -348,14 +348,14 @@ function SpeedRecords() {
 
   return (
     <div className="space-y-6">
-      <div className="bg-cream-50/90 backdrop-blur-lg rounded-2xl shadow-xl border border-cream-300 p-4 md:p-8">
-        <div className="flex gap-2 md:gap-4 mb-4 md:mb-6 bg-old-money-100 p-1 rounded-xl flex-wrap">
+      <div className="bg-cream-50/90 dark:bg-charcoal-800/90 backdrop-blur-lg rounded-2xl shadow-xl border border-cream-300 dark:border-charcoal-700 p-4 md:p-8">
+        <div className="flex gap-2 md:gap-4 mb-4 md:mb-6 bg-old-money-100 dark:bg-charcoal-700 p-1 rounded-xl flex-wrap">
           <button
             onClick={() => handleTabChange('table')}
             className={`flex-1 min-w-[100px] px-4 py-3 rounded-lg font-semibold transition-all duration-300 ${
               activeTab === 'table'
-                ? 'bg-white text-charcoal-700 shadow-sm'
-                : 'text-charcoal-600 hover:text-charcoal-700'
+                ? 'bg-white dark:bg-charcoal-600 text-charcoal-700 dark:text-charcoal-200 shadow-sm'
+                : 'text-charcoal-600 dark:text-charcoal-300 hover:text-charcoal-700 dark:hover:text-charcoal-200'
             }`}
           >
             <span className="md:hidden">Скорость</span>
@@ -394,18 +394,18 @@ function SpeedRecords() {
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="Поиск..."
-                  className="w-full px-4 py-3 rounded-xl border-2 border-cream-300 focus:border-camel-500 focus:ring-2 focus:ring-camel-200 transition-all bg-white"
+                  className="w-full rounded-xl border border-old-money-300 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 px-4 py-3 text-charcoal-800 dark:text-charcoal-200 shadow-sm transition-all duration-200 focus:border-camel-500 focus:outline-none focus:ring-4 focus:ring-camel-100 dark:focus:ring-camel-900"
                 />
               </div>
               <div className="flex-1 min-w-[100px] relative">
                 <button
                   onClick={() => setOpenDropdown(openDropdown === 'year' ? null : 'year')}
-                  className="w-full px-4 py-3 rounded-xl border-2 border-cream-300 focus:border-camel-500 focus:ring-2 focus:ring-camel-200 transition-all bg-white text-left"
+                  className="w-full rounded-xl border border-old-money-300 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 px-4 py-3 text-left text-charcoal-800 dark:text-charcoal-200 shadow-sm transition-all duration-200 hover:bg-cream-50 dark:hover:bg-charcoal-700 focus:border-camel-500 focus:outline-none focus:ring-4 focus:ring-camel-100 dark:focus:ring-camel-900"
                 >
                   {filterYears.length > 0 ? `Год: ${filterYears.length}` : 'Год'}
                 </button>
                 {openDropdown === 'year' && (
-                  <div className="absolute z-10 w-full mt-1 bg-white border-2 border-cream-300 rounded-xl shadow-xl max-h-60 overflow-y-auto">
+                  <div className="absolute z-10 mt-1 max-h-60 w-full overflow-y-auto rounded-xl border border-old-money-200 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 shadow-xl">
                     {years.map(year => (
                       <label key={year} className="flex items-center px-4 py-2 hover:bg-cream-50 cursor-pointer">
                         <input
@@ -423,12 +423,12 @@ function SpeedRecords() {
               <div className="flex-1 min-w-[120px] relative">
                 <button
                   onClick={() => setOpenDropdown(openDropdown === 'breed' ? null : 'breed')}
-                  className="w-full px-4 py-3 rounded-xl border-2 border-cream-300 focus:border-camel-500 focus:ring-2 focus:ring-camel-200 transition-all bg-white text-left"
+                  className="w-full rounded-xl border border-old-money-300 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 px-4 py-3 text-left text-charcoal-800 dark:text-charcoal-200 shadow-sm transition-all duration-200 hover:bg-cream-50 dark:hover:bg-charcoal-700 focus:border-camel-500 focus:outline-none focus:ring-4 focus:ring-camel-100 dark:focus:ring-camel-900"
                 >
                   {filterBreeds.length > 0 ? `Порода: ${filterBreeds.length}` : 'Порода'}
                 </button>
                 {openDropdown === 'breed' && (
-                  <div className="absolute z-10 w-full mt-1 bg-white border-2 border-cream-300 rounded-xl shadow-xl max-h-60 overflow-y-auto">
+                  <div className="absolute z-10 mt-1 max-h-60 w-full overflow-y-auto rounded-xl border border-old-money-200 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 shadow-xl">
                     {breeds.map(breed => (
                       <label key={breed} className="flex items-center px-4 py-2 hover:bg-cream-50 cursor-pointer">
                         <input
@@ -446,14 +446,14 @@ function SpeedRecords() {
               <div className="flex-1 min-w-[80px] relative">
                 <button
                   onClick={() => setOpenDropdown(openDropdown === 'sex' ? null : 'sex')}
-                  className="w-full px-4 py-3 rounded-xl border-2 border-cream-300 focus:border-camel-500 focus:ring-2 focus:ring-camel-200 transition-all bg-white text-left"
+                  className="w-full rounded-xl border border-old-money-300 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 px-4 py-3 text-left text-charcoal-800 dark:text-charcoal-200 shadow-sm transition-all duration-200 hover:bg-cream-50 dark:hover:bg-charcoal-700 focus:border-camel-500 focus:outline-none focus:ring-4 focus:ring-camel-100 dark:focus:ring-camel-900"
                 >
                   {filterSexes.length > 0 ? `Пол: ${filterSexes.length}` : 'Пол'}
                 </button>
                 {openDropdown === 'sex' && (
-                  <div className="absolute z-10 w-full mt-1 bg-white border-2 border-cream-300 rounded-xl shadow-xl max-h-60 overflow-y-auto">
+                  <div className="absolute z-10 mt-1 max-h-60 w-full overflow-y-auto rounded-xl border border-old-money-200 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 shadow-xl">
                     {sexes.map(sex => (
-                      <label key={sex} className="flex items-center px-4 py-2 hover:bg-cream-50 cursor-pointer">
+                      <label key={sex} className="flex items-center px-4 py-2 hover:bg-cream-50 dark:hover:bg-charcoal-700 cursor-pointer">
                         <input
                           type="checkbox"
                           checked={filterSexes.includes(sex)}
@@ -469,7 +469,7 @@ function SpeedRecords() {
               <div className="flex items-end">
                 <button
                   onClick={exportToExcel}
-                  className="px-4 py-3 rounded-xl border-2 border-camel-300 text-camel-700 hover:bg-camel-50 transition-all font-semibold"
+                  className="rounded-xl border border-camel-300 dark:border-camel-600 px-4 py-3 font-semibold text-camel-700 dark:text-camel-400 transition-all hover:bg-camel-50 dark:hover:bg-charcoal-700"
                 >
                   Скачать Excel
                 </button>
@@ -478,7 +478,7 @@ function SpeedRecords() {
                 <div className="flex items-end">
                   <button
                     onClick={clearAllFilters}
-                    className="px-4 py-3 rounded-xl border-2 border-red-300 text-red-600 hover:bg-red-50 transition-all font-semibold"
+                    className="rounded-xl border border-red-300 dark:border-red-600 px-4 py-3 font-semibold text-red-600 dark:text-red-400 transition-all hover:bg-red-50 dark:hover:bg-red-900"
                   >
                     Сбросить
                   </button>
@@ -488,38 +488,38 @@ function SpeedRecords() {
 
         {loading && (
           <div className="text-center py-12">
-            <div className="inline-block animate-spin rounded-full h-12 w-12 border-4 border-gold-500 border-t-transparent"></div>
-            <p className="mt-4 text-old-money-600">Загрузка...</p>
+            <div className="inline-block h-12 w-12 animate-spin rounded-full border-4 border-camel-500 border-t-transparent"></div>
+            <p className="mt-4 text-old-money-600 dark:text-old-money-400">Загрузка...</p>
           </div>
         )}
 
         {error && (
-          <div className="bg-red-50 border-2 border-red-200 rounded-xl p-4 text-red-700">
+          <div className="bg-red-50 dark:bg-red-900 border-2 border-red-200 dark:border-red-700 rounded-xl p-4 text-red-700 dark:text-red-300">
             Ошибка: {error instanceof Error ? error.message : String(error)}
           </div>
         )}
 
         {!loading && !error && filteredRecords.length === 0 && (
-          <div className="text-center py-12 text-old-money-600">
+          <div className="text-center py-12 text-old-money-600 dark:text-old-money-400">
             Нет данных
           </div>
         )}
 
         {!loading && !error && filteredRecords.length > 0 && (
-          <div className="rounded-xl border-2 border-cream-300 overflow-visible">
+          <div className="overflow-visible rounded-xl border border-old-money-200 dark:border-charcoal-600">
             {/* Mobile cards */}
             <div className="md:hidden space-y-3 p-3">
               {filteredRecords.map((record) => (
-                <div key={record.id} className="bg-white rounded-xl p-4 shadow-sm border border-cream-200">
+                <div key={record.id} className="bg-white dark:bg-charcoal-800 rounded-xl p-4 shadow-sm border border-cream-200 dark:border-charcoal-600">
                   <div className="flex justify-between items-start mb-2">
                     <div className="flex-1">
-                      <div className="font-bold text-charcoal-900 mb-1">{record.name}</div>
-                      <div className="text-xs text-gray-600">{record.breed} • {record.sex === 'С' ? 'Сука' : record.sex === 'К' ? 'Кабель' : record.sex}</div>
-                      <div className="text-xs text-gray-500 mt-1">{record.date}</div>
+                      <div className="font-bold text-charcoal-900 dark:text-charcoal-100 mb-1">{record.name}</div>
+                      <div className="text-xs text-old-money-600 dark:text-old-money-400">{record.breed} • {record.sex === 'С' ? 'Сука' : record.sex === 'К' ? 'Кабель' : record.sex}</div>
+                      <div className="text-xs text-old-money-500 dark:text-old-money-400 mt-1">{record.date}</div>
                     </div>
                     <div className="text-right">
-                      <div className="text-2xl font-bold text-camel-700">{record.speed_km_h}</div>
-                      <div className="text-xs text-gray-500">км/ч</div>
+                      <div className="text-2xl font-bold text-camel-700 dark:text-camel-400">{record.speed_km_h}</div>
+                      <div className="text-xs text-old-money-500 dark:text-old-money-400">км/ч</div>
                     </div>
                   </div>
                   {record.screenshot_url && (
@@ -527,7 +527,7 @@ function SpeedRecords() {
                       href={record.screenshot_url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-block mt-2 text-xs text-camel-700 hover:text-camel-800 font-semibold"
+                      className="inline-block mt-2 text-xs text-camel-700 dark:text-camel-400 hover:text-camel-800 dark:hover:text-camel-300 font-semibold"
                     >
                       Открыть скриншот →
                     </a>
@@ -539,49 +539,49 @@ function SpeedRecords() {
             {/* Desktop table */}
             <div className="hidden md:block overflow-x-auto">
               <table className="w-full min-w-[700px]">
-              <thead className="bg-charcoal-700 text-white">
+              <thead className="bg-cream-100 text-charcoal-800">
                 <tr>
                   <th 
-                    className="px-6 py-4 text-center font-semibold cursor-pointer hover:bg-charcoal-600 transition-colors"
+                    className="cursor-pointer px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] transition-colors hover:bg-cream-200 dark:hover:bg-charcoal-600"
                     onClick={() => handleSort('name')}
                   >
                     Кличка {sortField === 'name' && (sortDirection === 'desc' ? '↑' : '↓')}
                   </th>
                   <th 
-                    className="px-6 py-4 text-center font-semibold cursor-pointer hover:bg-charcoal-600 transition-colors"
+                    className="cursor-pointer px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] transition-colors hover:bg-cream-200 dark:hover:bg-charcoal-600"
                     onClick={() => handleSort('sex')}
                   >
                     Пол {sortField === 'sex' && (sortDirection === 'desc' ? '↑' : '↓')}
                   </th>
                   <th 
-                    className="px-6 py-4 text-center font-semibold cursor-pointer hover:bg-charcoal-600 transition-colors"
+                    className="cursor-pointer px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] transition-colors hover:bg-cream-200 dark:hover:bg-charcoal-600"
                     onClick={() => handleSort('breed')}
                   >
                     Порода {sortField === 'breed' && (sortDirection === 'desc' ? '↑' : '↓')}
                   </th>
                   <th 
-                    className="px-6 py-4 text-center font-semibold cursor-pointer hover:bg-charcoal-600 transition-colors"
+                    className="cursor-pointer px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] transition-colors hover:bg-cream-200 dark:hover:bg-charcoal-600"
                     onClick={() => handleSort('speed_km_h')}
                   >
                     Скорость {sortField === 'speed_km_h' && (sortDirection === 'desc' ? '↓' : '↑')}
                   </th>
                   <th 
-                    className="px-6 py-4 text-center font-semibold cursor-pointer hover:bg-charcoal-600 transition-colors"
+                    className="cursor-pointer px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] transition-colors hover:bg-cream-200 dark:hover:bg-charcoal-600"
                     onClick={() => handleSort('date')}
                   >
                     Дата {sortField === 'date' && (sortDirection === 'desc' ? '↓' : '↑')}
                   </th>
-                  <th className="px-6 py-4 text-center font-semibold">Скриншот</th>
+                  <th className="px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em]">Скриншот</th>
                 </tr>
               </thead>
-              <tbody className="bg-white divide-y divide-cream-200">
+              <tbody className="bg-white dark:bg-charcoal-800 divide-y divide-cream-200 dark:divide-charcoal-600">
                 {filteredRecords.map((record) => (
-                  <tr key={record.id} className="hover:bg-cream-50 transition-colors">
+                  <tr key={record.id} className="hover:bg-cream-50 dark:hover:bg-charcoal-700 transition-colors">
                     <td className="px-6 py-4 text-center">
                       <span 
-                        className={`font-semibold text-charcoal-900 transition-colors cursor-pointer ${
+                        className={`font-semibold text-charcoal-900 dark:text-charcoal-100 transition-colors cursor-pointer ${
                           record.history && record.history.length > 0 
-                            ? 'text-camel-700 hover:text-camel-800 border-2 border-gold-300 rounded-lg px-2 py-0.5' 
+                            ? 'rounded-lg border border-camel-300 dark:border-camel-600 px-2 py-0.5 text-camel-700 dark:text-camel-400 hover:text-camel-800 dark:hover:text-camel-300' 
                             : ''
                         }`}
                         onMouseEnter={(e) => {
@@ -603,14 +603,14 @@ function SpeedRecords() {
                     <td className="px-6 py-4 text-center text-charcoal-900">{record.breed}</td>
                     <td className="px-6 py-4 text-center">
                       <div className="relative inline-block">
-                        <span className="inline-block px-3 py-1 rounded-full bg-camel-600 text-white font-bold text-sm">
+                        <span className="inline-block rounded-full bg-camel-600 px-3 py-1 text-sm font-bold text-white shadow-sm">
                           {record.speed_km_h} км/ч
                         </span>
                         {record.status === 'new' && (
-                          <span className="absolute -top-3 -right-4 text-[10px] font-bold text-red-600 bg-red-100 border border-red-300 px-1 py-0.5 rounded shadow-sm">new</span>
+                          <span className="absolute -right-4 -top-3 rounded border border-red-300 bg-red-100 px-1 py-0.5 text-[10px] font-bold text-red-600 shadow-sm">new</span>
                         )}
                         {(record.status === 'improved' || (record.history && record.history.length > 0)) && (
-                          <span className="absolute -top-3 -right-4 text-[10px] font-bold text-blue-600 bg-blue-100 border border-blue-300 px-1 py-0.5 rounded shadow-sm">upd</span>
+                          <span className="absolute -right-4 -top-3 rounded border border-warm-blue-300 bg-warm-blue-100 px-1 py-0.5 text-[10px] font-bold text-warm-blue-700 shadow-sm">upd</span>
                         )}
                       </div>
                     </td>
@@ -621,7 +621,7 @@ function SpeedRecords() {
                           href={record.screenshot_url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-camel-700 hover:text-camel-800 font-semibold"
+                          className="font-semibold text-camel-700 transition-colors hover:text-camel-800"
                         >
                           Открыть
                         </a>
@@ -641,7 +641,7 @@ function SpeedRecords() {
           <div className="space-y-6">
             {coursingLoading ? (
               <div className="text-center py-12">
-                <div className="inline-block animate-spin rounded-full h-12 w-12 border-4 border-gold-500 border-t-transparent"></div>
+                <div className="inline-block h-12 w-12 animate-spin rounded-full border-4 border-camel-500 border-t-transparent"></div>
                 <p className="mt-4 text-old-money-600">Загрузка рекордов курсинга...</p>
               </div>
             ) : (
@@ -654,18 +654,18 @@ function SpeedRecords() {
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
                       placeholder="Поиск по кличке..."
-                      className="w-full px-4 py-3 rounded-xl border-2 border-cream-300 focus:border-camel-500 focus:ring-2 focus:ring-camel-200 transition-all bg-white"
+                      className="w-full rounded-xl border border-old-money-300 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 px-4 py-3 text-charcoal-800 dark:text-charcoal-200 shadow-sm transition-all duration-200 focus:border-camel-500 focus:outline-none focus:ring-4 focus:ring-camel-100 dark:focus:ring-camel-900"
                     />
                   </div>
                   <div className="flex-1 min-w-[120px] relative">
                     <button
                       onClick={() => setOpenDropdown(openDropdown === 'year' ? null : 'year')}
-                      className="w-full px-4 py-3 rounded-xl border-2 border-cream-300 focus:border-camel-500 focus:ring-2 focus:ring-camel-200 transition-all bg-white text-left"
+                      className="w-full rounded-xl border border-old-money-300 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 px-4 py-3 text-left text-charcoal-800 dark:text-charcoal-200 shadow-sm transition-all duration-200 hover:bg-cream-50 dark:hover:bg-charcoal-700 focus:border-camel-500 focus:outline-none focus:ring-4 focus:ring-camel-100 dark:focus:ring-camel-900"
                     >
                       {filterYears.length > 0 ? `Выбрано: ${filterYears.length}` : 'Год'}
                     </button>
                     {openDropdown === 'year' && (
-                      <div className="absolute z-10 w-full mt-1 bg-white border-2 border-cream-300 rounded-xl shadow-xl max-h-60 overflow-y-auto">
+                      <div className="absolute z-10 mt-1 max-h-60 w-full overflow-y-auto rounded-xl border border-old-money-200 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 shadow-xl">
                         {coursingYears.map(year => (
                           <label key={year} className="flex items-center px-4 py-2 hover:bg-cream-50 cursor-pointer">
                             <input
@@ -683,12 +683,12 @@ function SpeedRecords() {
                   <div className="flex-1 min-w-[120px] relative">
                     <button
                       onClick={() => setOpenDropdown(openDropdown === 'breed' ? null : 'breed')}
-                      className="w-full px-4 py-3 rounded-xl border-2 border-cream-300 focus:border-camel-500 focus:ring-2 focus:ring-camel-200 transition-all bg-white text-left"
+                      className="w-full rounded-xl border border-old-money-300 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 px-4 py-3 text-left text-charcoal-800 dark:text-charcoal-200 shadow-sm transition-all duration-200 hover:bg-cream-50 dark:hover:bg-charcoal-700 focus:border-camel-500 focus:outline-none focus:ring-4 focus:ring-camel-100 dark:focus:ring-camel-900"
                     >
                       {filterBreeds.length > 0 ? `Выбрано: ${filterBreeds.length}` : 'Порода'}
                     </button>
                     {openDropdown === 'breed' && (
-                      <div className="absolute z-10 w-full mt-1 bg-white border-2 border-cream-300 rounded-xl shadow-xl max-h-60 overflow-y-auto">
+                      <div className="absolute z-10 mt-1 max-h-60 w-full overflow-y-auto rounded-xl border border-old-money-200 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 shadow-xl">
                         {coursingBreeds.map(breed => (
                           <label key={breed} className="flex items-center px-4 py-2 hover:bg-cream-50 cursor-pointer">
                             <input
@@ -706,7 +706,7 @@ function SpeedRecords() {
                   <div className="flex items-end">
                     <button
                       onClick={exportCoursingToExcel}
-                      className="px-4 py-3 rounded-xl border-2 border-camel-300 text-camel-700 hover:bg-camel-50 transition-all font-semibold"
+                      className="rounded-xl border border-camel-300 dark:border-camel-600 px-4 py-3 font-semibold text-camel-700 dark:text-camel-400 transition-all hover:bg-camel-50 dark:hover:bg-charcoal-700"
                     >
                       Скачать Excel
                     </button>
@@ -719,7 +719,7 @@ function SpeedRecords() {
                           setFilterBreeds([]);
                           setFilterYears([]);
                         }}
-                        className="px-4 py-3 rounded-xl border-2 border-red-300 text-red-600 hover:bg-red-50 transition-all font-semibold"
+                        className="rounded-xl border border-red-300 dark:border-red-600 px-4 py-3 font-semibold text-red-600 dark:text-red-400 transition-all hover:bg-red-50 dark:hover:bg-red-900"
                       >
                         Сбросить
                       </button>
@@ -728,20 +728,20 @@ function SpeedRecords() {
                 </div>
 
                 {/* Таблица бегов борзых */}
-                <div className="rounded-xl border-2 border-cream-300 overflow-visible">
+                <div className="overflow-visible rounded-xl border border-old-money-200 dark:border-charcoal-600">
                   {/* Mobile cards */}
                   <div className="md:hidden space-y-3 p-3">
                     {filteredCoursingRecords.map((record) => (
-                      <div key={record.id} className="bg-white rounded-xl p-4 shadow-sm border border-cream-200">
+                      <div key={record.id} className="bg-white dark:bg-charcoal-800 rounded-xl p-4 shadow-sm border border-cream-200 dark:border-charcoal-600">
                         <div className="flex justify-between items-start mb-2">
                           <div className="flex-1">
-                            <div className="font-bold text-charcoal-900 mb-1">{record.name}</div>
-                            <div className="text-xs text-gray-600">{record.breed}</div>
-                            <div className="text-xs text-gray-500 mt-1">{record.date}</div>
+                            <div className="font-bold text-charcoal-900 dark:text-charcoal-100 mb-1">{record.name}</div>
+                            <div className="text-xs text-gray-600 dark:text-gray-400">{record.breed}</div>
+                            <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">{record.date}</div>
                           </div>
                           <div className="text-right">
-                            <div className="text-2xl font-bold text-camel-700">{record.time_seconds}</div>
-                            <div className="text-xs text-gray-500">350 м</div>
+                            <div className="text-2xl font-bold text-camel-700 dark:text-camel-400">{record.time_seconds}</div>
+                            <div className="text-xs text-gray-500 dark:text-gray-400">350 м</div>
                           </div>
                         </div>
                       </div>
@@ -751,22 +751,22 @@ function SpeedRecords() {
                   {/* Desktop table */}
                   <div className="hidden md:block overflow-x-auto">
                     <table className="w-full min-w-[600px]">
-                      <thead className="bg-charcoal-700 text-white">
+                      <thead className="bg-cream-100 dark:bg-charcoal-700 text-charcoal-800 dark:text-charcoal-200">
                         <tr>
-                          <th className="px-6 py-4 text-center font-semibold">Кличка</th>
-                          <th className="px-6 py-4 text-center font-semibold">Порода</th>
-                          <th className="px-6 py-4 text-center font-semibold">Время (350 метров)</th>
-                          <th className="px-6 py-4 text-center font-semibold">Дата</th>
+                          <th className="px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em]">Кличка</th>
+                          <th className="px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em]">Порода</th>
+                          <th className="px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em]">Время (350 метров)</th>
+                          <th className="px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em]">Дата</th>
                         </tr>
                       </thead>
-                      <tbody className="bg-white divide-y divide-cream-200">
+                      <tbody className="bg-white dark:bg-charcoal-800 divide-y divide-cream-200 dark:divide-charcoal-600">
                         {filteredCoursingRecords.map((record) => (
-                          <tr key={record.id} className="hover:bg-cream-50 transition-colors">
+                          <tr key={record.id} className="hover:bg-cream-50 dark:hover:bg-charcoal-700 transition-colors">
                             <td className="px-6 py-4 text-center">
                               <span 
                                 className={`font-semibold text-charcoal-900 transition-colors cursor-pointer ${
                                   record.history && record.history.length > 0 
-                                    ? 'text-camel-700 hover:text-camel-800 border-2 border-gold-300 rounded-lg px-2 py-0.5' 
+                                    ? 'rounded-lg border border-camel-300 px-2 py-0.5 text-camel-700 hover:text-camel-800' 
                                     : ''
                                 }`}
                                 onMouseEnter={(e) => {
@@ -791,7 +791,7 @@ function SpeedRecords() {
                                   {record.time_seconds} сек
                                 </span>
                                 {record.history && record.history.length > 0 && (
-                                  <span className="absolute -top-3 -right-4 text-[10px] font-bold text-blue-600 bg-blue-100 border border-blue-300 px-1 py-0.5 rounded shadow-sm">upd</span>
+                                  <span className="absolute -right-4 -top-3 rounded border border-warm-blue-300 bg-warm-blue-100 px-1 py-0.5 text-[10px] font-bold text-warm-blue-700 shadow-sm">upd</span>
                                 )}
                               </div>
                             </td>

@@ -345,7 +345,7 @@ export default function Events() {
       </div>
 
       {/* Mobile stats - simplified */}
-      <div className="md:hidden mb-3 text-xs text-gray-500 dark:text-gray-400">
+      <div className="md:hidden mb-3 text-xs text-old-money-500 dark:text-old-money-400">
         {filteredEvents.length} из {events.length} событий
       </div>
 
@@ -372,7 +372,7 @@ export default function Events() {
                     <div className="mb-1 text-xs font-medium text-camel-700 dark:text-camel-400">{event.competition_kind}</div>
                   )}
                   {event.location && (
-                    <div className="text-xs text-gray-600 dark:text-gray-400">{event.location}</div>
+                    <div className="text-xs text-old-money-600 dark:text-old-money-400">{event.location}</div>
                   )}
                 </div>
                 {event.results_url ? (

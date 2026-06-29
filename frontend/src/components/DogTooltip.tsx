@@ -167,7 +167,7 @@ export default function DogTooltip({ dogId, anchorRect, onClose }) {
                 )}
               </div>
               {showRuName && (
-                <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5 truncate">{dogData.name_ru}</div>
+                <div className="text-xs text-old-money-500 dark:text-old-money-400 mt-0.5 truncate">{dogData.name_ru}</div>
               )}
               {/* Порода — под именем, не правее */}
               <div className="mt-1.5">
@@ -297,8 +297,8 @@ export default function DogTooltip({ dogId, anchorRect, onClose }) {
 
           {/* ── Владелец ──────────────────────────────────────────────────── */}
           {dogData.owner && (
-            <div className="text-xs text-gray-500 dark:text-gray-400 pt-3 border-t border-old-money-100 dark:border-charcoal-600">
-              <span className="font-medium text-gray-600 dark:text-gray-300">Владелец:</span> {dogData.owner}
+            <div className="text-xs text-old-money-500 dark:text-old-money-400 pt-3 border-t border-old-money-100 dark:border-charcoal-600">
+              <span className="font-medium text-old-money-600 dark:text-old-money-300">Владелец:</span> {dogData.owner}
             </div>
           )}
         </div>

@@ -194,7 +194,7 @@ export default function EventResults() {
           <h2 className="mb-4 text-lg font-bold tracking-tight text-charcoal-900 dark:text-charcoal-100 md:text-xl">Результаты</h2>
           
           {results.length === 0 ? (
-            <div className="text-sm text-gray-500 dark:text-gray-400">Нет данных о результатах</div>
+            <div className="text-sm text-old-money-500 dark:text-old-money-400">Нет данных о результатах</div>
           ) : (
             <div className="space-y-6">
               {(() => {

@@ -117,7 +117,7 @@ export default function DogProfile() {
                 )}
               </div>
               {showRuName && (
-                <div className="text-base text-gray-500 dark:text-gray-400 mt-1 font-medium">{dog.name_ru}</div>
+                <div className="text-base text-old-money-500 dark:text-old-money-400 mt-1 font-medium">{dog.name_ru}</div>
               )}
               <div className="mt-3">
                 <span className="inline-block rounded-full bg-cream-100 dark:bg-charcoal-700 px-4 py-1.5 text-sm font-semibold text-charcoal-700 dark:text-charcoal-300 border border-old-money-200 dark:border-charcoal-600">
@@ -128,8 +128,8 @@ export default function DogProfile() {
           </div>
 
           {dog.owner && (
-            <div className="mt-4 pt-4 border-t border-old-money-100 dark:border-charcoal-600 text-sm text-gray-600 dark:text-gray-400">
-              <span className="font-semibold text-gray-700 dark:text-gray-300">Владелец:</span> {dog.owner}
+            <div className="mt-4 pt-4 border-t border-old-money-100 dark:border-charcoal-600 text-sm text-old-money-600 dark:text-old-money-400">
+              <span className="font-semibold text-old-money-700 dark:text-old-money-300">Владелец:</span> {dog.owner}
             </div>
           )}
         </div>
@@ -167,11 +167,11 @@ export default function DogProfile() {
 
               <div className="grid grid-cols-2 gap-3 mb-4">
                 <div className="bg-cream-50 dark:bg-charcoal-700 rounded-xl p-4 text-center border border-old-money-200 dark:border-charcoal-600">
-                  <div className="text-xs font-semibold text-gray-500 mb-1 uppercase tracking-wide">Участий</div>
+                  <div className="text-xs font-semibold text-old-money-500 mb-1 uppercase tracking-wide">Участий</div>
                   <div className="text-2xl font-bold text-charcoal-800 dark:text-charcoal-100">{coursing.total_starts}</div>
                 </div>
                 <div className="bg-cream-50 dark:bg-charcoal-700 rounded-xl p-4 text-center border border-old-money-200 dark:border-charcoal-600">
-                  <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-1 uppercase tracking-wide">Средний</div>
+                  <div className="text-xs font-semibold text-old-money-500 dark:text-old-money-400 mb-1 uppercase tracking-wide">Средний</div>
                   <div className="text-2xl font-bold text-charcoal-800 dark:text-charcoal-100">{formatScore(coursing.avg_score)}</div>
                 </div>
               </div>
@@ -186,7 +186,7 @@ export default function DogProfile() {
                     <div key={emoji} className="flex-1 bg-cream-50 dark:bg-charcoal-700 rounded-xl p-3 text-center border border-old-money-200 dark:border-charcoal-600">
                       <div className="text-xl mb-1">{emoji}</div>
                       <div className="text-xl font-bold text-charcoal-800 dark:text-charcoal-100">{count || 0}</div>
-                      <div className="text-xs text-gray-500 dark:text-gray-400 font-medium">{label}</div>
+                      <div className="text-xs text-old-money-600 dark:text-old-money-400 font-medium">{label}</div>
                     </div>
                   ))}
                 </div>
@@ -227,11 +227,11 @@ export default function DogProfile() {
 
               <div className="grid grid-cols-2 gap-3">
                 <div className="rounded-xl bg-warm-blue-50 dark:bg-charcoal-700 p-4 text-center border border-warm-blue-100 dark:border-warm-blue-600">
-                  <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-1 uppercase tracking-wide">Участий</div>
+                  <div className="text-xs font-semibold text-old-money-500 dark:text-old-money-400 mb-1 uppercase tracking-wide">Участий</div>
                   <div className="text-2xl font-bold text-warm-blue-900 dark:text-warm-blue-400">{racing.total_starts}</div>
                 </div>
                 <div className="rounded-xl bg-warm-blue-50 dark:bg-charcoal-700 p-4 text-center border border-warm-blue-100 dark:border-warm-blue-600">
-                  <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-1 uppercase tracking-wide">Средняя</div>
+                  <div className="text-xs font-semibold text-old-money-500 dark:text-old-money-400 mb-1 uppercase tracking-wide">Средняя</div>
                   <div className="whitespace-nowrap text-2xl font-bold text-warm-blue-900 dark:text-warm-blue-400">
                     {racing.avg_speed
                       ? <>{racing.avg_speed}<span className="text-sm font-normal text-gray-400 dark:text-gray-500 ml-1">км/ч</span></>
@@ -254,7 +254,7 @@ export default function DogProfile() {
               <span className="text-sm">Загрузка...</span>
             </div>
           ) : events.length === 0 ? (
-            <div className="text-sm text-gray-500 dark:text-gray-400">Нет данных о выступлениях</div>
+            <div className="text-sm text-old-money-500 dark:text-old-money-400">Нет данных о выступлениях</div>
           ) : (
             <div className="space-y-3">
               {events.map((event, idx) => (
@@ -267,7 +267,7 @@ export default function DogProfile() {
                       <div className="font-semibold text-charcoal-800 dark:text-charcoal-100 mb-1">{event.date_start}</div>
                       <div className="text-gray-700 dark:text-gray-300 mb-2">{event.title}</div>
                       {event.location && (
-                        <div className="text-sm text-gray-500 dark:text-gray-400">{event.location}</div>
+                        <div className="text-sm text-old-money-600 dark:text-old-money-400">{event.location}</div>
                       )}
                     </div>
                     <div className="flex flex-col items-end gap-2">
@@ -280,7 +280,7 @@ export default function DogProfile() {
                         </div>
                       )}
                       {event.total_score && (
-                        <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">
+                        <div className="text-sm text-old-money-600 dark:text-old-money-400 font-medium">
                           {event.total_score} баллов
                         </div>
                       )}

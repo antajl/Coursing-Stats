@@ -82,16 +82,16 @@ export default function DogStatsTable({ data, type = 'placement', filterYear }) 
             <div key={dog.dog_id} className="rounded-xl border border-old-money-200 dark:border-charcoal-600 bg-cream-50 dark:bg-charcoal-700 p-4 transition-colors hover:bg-cream-100 dark:hover:bg-charcoal-600">
               <div className="flex justify-between items-start mb-3">
                 <div className="flex-1">
-                  <div className="text-xs text-gray-500 dark:text-gray-400 mb-1">#{page * PAGE_SIZE + index + 1}</div>
+                  <div className="text-xs text-old-money-500 dark:text-old-money-400 mb-1">#{page * PAGE_SIZE + index + 1}</div>
                   <button
                     onClick={(e) => handleClick(e, dog.dog_id)}
                     className="text-base font-bold text-camel-700 dark:text-camel-400 transition-colors hover:text-camel-800 dark:hover:text-camel-300"
                   >
                     {dog.name_lat}
                   </button>
-                  <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">{dog.breed}</div>
+                  <div className="text-xs text-old-money-600 dark:text-old-money-400 mt-1">{dog.breed}</div>
                   {filterYear && (
-                    <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">Год: {dog.year}</div>
+                    <div className="text-xs text-old-money-500 dark:text-old-money-400 mt-1">Год: {dog.year}</div>
                   )}
                 </div>
               </div>
@@ -99,49 +99,49 @@ export default function DogStatsTable({ data, type = 'placement', filterYear }) 
                 {type === 'placement' ? (
                   <>
                     <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center">
-                      <div className="text-xs text-gray-500 dark:text-gray-400">1-е</div>
+                      <div className="text-xs text-old-money-500 dark:text-old-money-400">1-е</div>
                       <div className="font-bold text-old-money-800 dark:text-old-money-300">{dog.gold}</div>
                     </div>
                     <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center">
-                      <div className="text-xs text-gray-500 dark:text-gray-400">2-е</div>
+                      <div className="text-xs text-old-money-500 dark:text-old-money-400">2-е</div>
                       <div className="font-bold text-old-money-800 dark:text-old-money-300">{dog.silver}</div>
                     </div>
                     <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center">
-                      <div className="text-xs text-gray-500 dark:text-gray-400">3-е</div>
+                      <div className="text-xs text-old-money-500 dark:text-old-money-400">3-е</div>
                       <div className="font-bold text-old-money-800 dark:text-old-money-300">{dog.bronze}</div>
                     </div>
                     <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center">
-                      <div className="text-gray-500 dark:text-gray-400">Участий</div>
+                      <div className="text-old-money-500 dark:text-old-money-400">Участий</div>
                       <div className="font-bold text-old-money-800 dark:text-old-money-300">{dog.total_starts}</div>
                     </div>
                   </>
                 ) : type === 'speed' ? (
                   <>
                     <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center col-span-2">
-                      <div className="text-gray-500 dark:text-gray-400">Лучшая</div>
+                      <div className="text-old-money-500 dark:text-old-money-400">Лучшая</div>
                       <div className="font-bold text-old-money-800 dark:text-old-money-300">{dog.best_speed ? `${dog.best_speed} км/ч` : '-'}</div>
                     </div>
                     <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center col-span-2">
-                      <div className="text-gray-500 dark:text-gray-400">Средняя</div>
+                      <div className="text-old-money-500 dark:text-old-money-400">Средняя</div>
                       <div className="font-bold text-old-money-800 dark:text-old-money-300">{dog.avg_speed ? `${dog.avg_speed} км/ч` : '-'}</div>
                     </div>
                     <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center col-span-4">
-                      <div className="text-gray-500 dark:text-gray-400">Участий</div>
+                      <div className="text-old-money-500 dark:text-old-money-400">Участий</div>
                       <div className="font-bold text-old-money-800 dark:text-old-money-300">{dog.total_starts}</div>
                     </div>
                   </>
                 ) : (
                   <>
                     <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center col-span-2">
-                      <div className="text-gray-500 dark:text-gray-400">Лучший</div>
+                      <div className="text-old-money-500 dark:text-old-money-400">Лучший</div>
                       <div className="font-bold text-old-money-800 dark:text-old-money-300">{dog.best_score ? parseFloat(dog.best_score).toFixed(2).replace(/\.00$/, '') : '-'}</div>
                     </div>
                     <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center col-span-2">
-                      <div className="text-gray-500 dark:text-gray-400">Средний</div>
+                      <div className="text-old-money-500 dark:text-old-money-400">Средний</div>
                       <div className="font-bold text-old-money-800 dark:text-old-money-300">{dog.avg_score ? parseFloat(dog.avg_score).toFixed(2).replace(/\.00$/, '') : '-'}</div>
                     </div>
                     <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center col-span-4">
-                      <div className="text-gray-500 dark:text-gray-400">Участий</div>
+                      <div className="text-old-money-500 dark:text-old-money-400">Участий</div>
                       <div className="font-bold text-old-money-800 dark:text-old-money-300">{dog.total_starts}</div>
                     </div>
                   </>
