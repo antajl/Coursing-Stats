@@ -365,8 +365,8 @@ function SpeedRecords() {
             onClick={() => handleTabChange('coursing')}
             className={`flex-1 min-w-[100px] px-4 py-3 rounded-lg font-semibold transition-all duration-300 ${
               activeTab === 'coursing'
-                ? 'bg-white text-charcoal-700 shadow-sm'
-                : 'text-charcoal-600 hover:text-charcoal-700'
+                ? 'bg-white dark:bg-charcoal-600 text-charcoal-700 dark:text-charcoal-200 shadow-sm'
+                : 'text-charcoal-600 dark:text-charcoal-300 hover:text-charcoal-700 dark:hover:text-charcoal-200'
             }`}
           >
             <span className="md:hidden">Бега</span>
@@ -376,8 +376,8 @@ function SpeedRecords() {
             onClick={() => handleTabChange('stats')}
             className={`flex-1 min-w-[100px] px-4 py-3 rounded-lg font-semibold transition-all duration-300 ${
               activeTab === 'stats'
-                ? 'bg-white text-charcoal-700 shadow-sm'
-                : 'text-charcoal-600 hover:text-charcoal-700'
+                ? 'bg-white dark:bg-charcoal-600 text-charcoal-700 dark:text-charcoal-200 shadow-sm'
+                : 'text-charcoal-600 dark:text-charcoal-300 hover:text-charcoal-700 dark:hover:text-charcoal-200'
             }`}
           >
             <span className="md:hidden">Статистика</span>
