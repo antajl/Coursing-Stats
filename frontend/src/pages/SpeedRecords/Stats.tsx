@@ -189,16 +189,16 @@ function SpeedRecordsStats() {
 
   if (loading) {
     return (
-      <div className="text-center py-12">
-        <div className="inline-block animate-spin rounded-full h-12 w-12 border-4 border-gold-500 border-t-transparent"></div>
-        <p className="mt-4 text-old-money-600">Загрузка статистики...</p>
+      <div className="text-center py-12 text-charcoal-900 dark:text-charcoal-100">
+        <div className="inline-block h-12 w-12 animate-spin rounded-full border-4 border-camel-600 border-t-transparent"></div>
+        <p className="mt-4 text-old-money-600 dark:text-old-money-400">Загрузка статистики...</p>
       </div>
     );
   }
 
   if (error) {
     return (
-      <div className="bg-red-50 border-2 border-red-200 rounded-xl p-4 text-red-700">
+      <div className="bg-red-50 dark:bg-red-900 border-2 border-red-200 dark:border-red-700 rounded-xl p-4 text-red-700 dark:text-red-300">
         Ошибка: {error}
       </div>
     );
@@ -334,46 +334,46 @@ function SpeedRecordsStats() {
   return (
     <div className="space-y-6">
       {/* Вкладки статистики */}
-      <div className="flex gap-2 border-b-2 border-cream-300 pb-2">
+      <div className="flex gap-2 border-b-2 border-cream-300 dark:border-charcoal-600 pb-2 overflow-x-auto scrollbar-thin scrollbar-gray-300">
         <button
           onClick={() => setStatsTab('overview')}
-          className={`flex-1 px-4 py-2 rounded-lg font-semibold transition-colors ${
+          className={`flex-1 min-w-[120px] px-4 py-2.5 rounded-xl font-semibold transition-all duration-200 ${
             statsTab === 'overview'
-              ? 'bg-camel-600 text-white'
-              : 'bg-cream-100 text-charcoal-900 hover:bg-cream-200'
+              ? 'bg-camel-600 text-white shadow-md'
+              : 'bg-cream-100 dark:bg-charcoal-700 text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-200 dark:hover:bg-charcoal-600 hover:text-charcoal-900 dark:hover:text-charcoal-100'
           }`}
         >
           Обзор
         </button>
         <button
           onClick={() => setStatsTab('breeds')}
-          className={`flex-1 px-4 py-2 rounded-lg font-semibold transition-colors ${
+          className={`flex-1 min-w-[120px] px-4 py-2.5 rounded-xl font-semibold transition-all duration-200 ${
             statsTab === 'breeds'
-              ? 'bg-camel-600 text-white'
-              : 'bg-cream-100 text-charcoal-900 hover:bg-cream-200'
+              ? 'bg-camel-600 text-white shadow-md'
+              : 'bg-cream-100 dark:bg-charcoal-700 text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-200 dark:hover:bg-charcoal-600 hover:text-charcoal-900 dark:hover:text-charcoal-100'
           }`}
         >
-          Породы
+          Порода
         </button>
         <button
           onClick={() => setStatsTab('sex')}
-          className={`flex-1 px-4 py-2 rounded-lg font-semibold transition-colors ${
+          className={`flex-1 min-w-[100px] px-4 py-2.5 rounded-xl font-semibold transition-all duration-200 ${
             statsTab === 'sex'
-              ? 'bg-camel-600 text-white'
-              : 'bg-cream-100 text-charcoal-900 hover:bg-cream-200'
+              ? 'bg-camel-600 text-white shadow-md'
+              : 'bg-cream-100 dark:bg-charcoal-700 text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-200 dark:hover:bg-charcoal-600 hover:text-charcoal-900 dark:hover:text-charcoal-100'
           }`}
         >
           Пол
         </button>
         <button
           onClick={() => setStatsTab('years')}
-          className={`flex-1 px-4 py-2 rounded-lg font-semibold transition-colors ${
+          className={`flex-1 min-w-[100px] px-4 py-2.5 rounded-xl font-semibold transition-all duration-200 ${
             statsTab === 'years'
-              ? 'bg-camel-600 text-white'
-              : 'bg-cream-100 text-charcoal-900 hover:bg-cream-200'
+              ? 'bg-camel-600 text-white shadow-md'
+              : 'bg-cream-100 dark:bg-charcoal-700 text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-200 dark:hover:bg-charcoal-600 hover:text-charcoal-900 dark:hover:text-charcoal-100'
           }`}
         >
-          Года
+          Год
         </button>
       </div>
 
@@ -385,20 +385,20 @@ function SpeedRecordsStats() {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Поиск по кличке..."
-            className="w-full px-4 py-3 rounded-xl border-2 border-cream-300 focus:border-camel-500 focus:ring-2 focus:ring-camel-200 transition-all bg-white"
+            className="w-full px-4 py-3 rounded-xl border-2 border-cream-300 dark:border-charcoal-600 focus:border-camel-500 focus:ring-2 focus:ring-camel-200 transition-all bg-white dark:bg-charcoal-800 text-charcoal-900 dark:text-charcoal-100"
           />
         </div>
         <div className="flex-1 min-w-[120px] relative">
           <button
             onClick={() => setOpenDropdown(openDropdown === 'year' ? null : 'year')}
-            className="w-full px-4 py-3 rounded-xl border-2 border-cream-300 focus:border-camel-500 focus:ring-2 focus:ring-camel-200 transition-all bg-white text-left"
+            className="w-full px-4 py-3 rounded-xl border-2 border-cream-300 dark:border-charcoal-600 focus:border-camel-500 focus:ring-2 focus:ring-camel-200 transition-all bg-white dark:bg-charcoal-800 text-left text-charcoal-900 dark:text-charcoal-100"
           >
             {filterYears.length > 0 ? `Выбрано: ${filterYears.length}` : 'Год'}
           </button>
           {openDropdown === 'year' && (
-            <div className="absolute z-10 w-full mt-1 bg-white border-2 border-cream-300 rounded-xl shadow-xl max-h-60 overflow-y-auto">
+            <div className="absolute z-10 w-full mt-1 bg-white dark:bg-charcoal-800 border-2 border-cream-300 dark:border-charcoal-600 rounded-xl shadow-xl max-h-60 overflow-y-auto">
               {allYears.map(year => (
-                <label key={year} className="flex items-center px-4 py-2 hover:bg-cream-50 cursor-pointer">
+                <label key={year} className="flex items-center px-4 py-2 hover:bg-cream-50 dark:hover:bg-charcoal-700 cursor-pointer text-charcoal-900 dark:text-charcoal-100">
                   <input
                     type="checkbox"
                     checked={filterYears.includes(year)}
@@ -414,14 +414,14 @@ function SpeedRecordsStats() {
         <div className="flex-1 min-w-[120px] relative">
           <button
             onClick={() => setOpenDropdown(openDropdown === 'breed' ? null : 'breed')}
-            className="w-full px-4 py-3 rounded-xl border-2 border-cream-300 focus:border-camel-500 focus:ring-2 focus:ring-camel-200 transition-all bg-white text-left"
+            className="w-full px-4 py-3 rounded-xl border-2 border-cream-300 dark:border-charcoal-600 focus:border-camel-500 focus:ring-2 focus:ring-camel-200 transition-all bg-white dark:bg-charcoal-800 text-left text-charcoal-900 dark:text-charcoal-100"
           >
             {filterBreeds.length > 0 ? `Выбрано: ${filterBreeds.length}` : 'Порода'}
           </button>
           {openDropdown === 'breed' && (
-            <div className="absolute z-10 w-full mt-1 bg-white border-2 border-cream-300 rounded-xl shadow-xl max-h-60 overflow-y-auto">
+            <div className="absolute z-10 w-full mt-1 bg-white dark:bg-charcoal-800 border-2 border-cream-300 dark:border-charcoal-600 rounded-xl shadow-xl max-h-60 overflow-y-auto">
               {allBreeds.map(breed => (
-                <label key={breed} className="flex items-center px-4 py-2 hover:bg-cream-50 cursor-pointer">
+                <label key={breed} className="flex items-center px-4 py-2 hover:bg-cream-50 dark:hover:bg-charcoal-700 cursor-pointer text-charcoal-900 dark:text-charcoal-100">
                   <input
                     type="checkbox"
                     checked={filterBreeds.includes(breed)}
@@ -437,14 +437,14 @@ function SpeedRecordsStats() {
         <div className="flex-1 min-w-[100px] relative">
           <button
             onClick={() => setOpenDropdown(openDropdown === 'sex' ? null : 'sex')}
-            className="w-full px-4 py-3 rounded-xl border-2 border-cream-300 focus:border-camel-500 focus:ring-2 focus:ring-camel-200 transition-all bg-white text-left"
+            className="w-full px-4 py-3 rounded-xl border-2 border-cream-300 dark:border-charcoal-600 focus:border-camel-500 focus:ring-2 focus:ring-camel-200 transition-all bg-white dark:bg-charcoal-800 text-left text-charcoal-900 dark:text-charcoal-100"
           >
             {filterSexes.length > 0 ? `Выбрано: ${filterSexes.length}` : 'Пол'}
           </button>
           {openDropdown === 'sex' && (
-            <div className="absolute z-10 w-full mt-1 bg-white border-2 border-cream-300 rounded-xl shadow-xl max-h-60 overflow-y-auto">
+            <div className="absolute z-10 w-full mt-1 bg-white dark:bg-charcoal-800 border-2 border-cream-300 dark:border-charcoal-600 rounded-xl shadow-xl max-h-60 overflow-y-auto">
               {allSexes.map(sex => (
-                <label key={sex} className="flex items-center px-4 py-2 hover:bg-cream-50 cursor-pointer">
+                <label key={sex} className="flex items-center px-4 py-2 hover:bg-cream-50 dark:hover:bg-charcoal-700 cursor-pointer text-charcoal-900 dark:text-charcoal-100">
                   <input
                     type="checkbox"
                     checked={filterSexes.includes(sex)}
@@ -463,7 +463,7 @@ function SpeedRecordsStats() {
             value={filterMinSpeed}
             onChange={(e) => setFilterMinSpeed(e.target.value)}
             placeholder="Мин. скорость"
-            className="w-full px-4 py-3 rounded-xl border-2 border-cream-300 focus:border-camel-500 focus:ring-2 focus:ring-camel-200 transition-all bg-white"
+            className="w-full px-4 py-3 rounded-xl border-2 border-cream-300 dark:border-charcoal-600 focus:border-camel-500 focus:ring-2 focus:ring-camel-200 transition-all bg-white dark:bg-charcoal-800 text-charcoal-900 dark:text-charcoal-100"
           />
         </div>
         <div className="flex-1 min-w-[100px]">
@@ -472,14 +472,14 @@ function SpeedRecordsStats() {
             value={filterMaxSpeed}
             onChange={(e) => setFilterMaxSpeed(e.target.value)}
             placeholder="Макс. скорость"
-            className="w-full px-4 py-3 rounded-xl border-2 border-cream-300 focus:border-camel-500 focus:ring-2 focus:ring-camel-200 transition-all bg-white"
+            className="w-full px-4 py-3 rounded-xl border-2 border-cream-300 dark:border-charcoal-600 focus:border-camel-500 focus:ring-2 focus:ring-camel-200 transition-all bg-white dark:bg-charcoal-800 text-charcoal-900 dark:text-charcoal-100"
           />
         </div>
         {hasActiveFilters && (
           <div className="flex items-end">
             <button
               onClick={clearAllFilters}
-              className="px-4 py-3 rounded-xl border-2 border-red-300 text-red-600 hover:bg-red-50 transition-all font-semibold"
+              className="px-4 py-3 rounded-xl border-2 border-red-300 dark:border-red-700 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900 transition-all font-semibold"
             >
               Сбросить
             </button>
@@ -489,56 +489,56 @@ function SpeedRecordsStats() {
 
       {/* Статистика найденной собаки */}
       {dogStats && (
-        <div className="bg-white rounded-xl border-2 border-cream-300 p-6 shadow-sm">
-          <h2 className="text-xl lg:text-2xl font-bold text-charcoal-900 mb-4">
+        <div className="bg-white dark:bg-charcoal-800 rounded-2xl border-2 border-cream-300 dark:border-charcoal-600 p-6 shadow-md">
+          <h2 className="text-xl lg:text-2xl font-bold text-charcoal-900 dark:text-charcoal-100 mb-4">
             Статистика: {dogStats.name} ({dogStats.breed})
           </h2>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-            <div className="bg-cream-50 rounded-xl p-4">
-              <div className="text-sm font-semibold text-old-money-600 mb-1">Лучшая скорость</div>
-              <div className="text-2xl font-bold text-camel-700">{dogStats.bestSpeed} км/ч</div>
+            <div className="bg-gradient-to-br from-camel-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-camel-200 dark:border-charcoal-500">
+              <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Лучшая скорость</div>
+              <div className="text-2xl font-bold text-camel-700 dark:text-camel-400">{dogStats.bestSpeed} <span className="text-sm font-normal text-charcoal-600 dark:text-charcoal-400">км/ч</span></div>
             </div>
-            <div className="bg-cream-50 rounded-xl p-4">
-              <div className="text-sm font-semibold text-old-money-600 mb-1">Средняя скорость</div>
-              <div className="text-2xl font-bold text-charcoal-900">{dogStats.avgSpeed.toFixed(1)} км/ч</div>
+            <div className="bg-gradient-to-br from-old-money-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-old-money-200 dark:border-charcoal-500">
+              <div className="text-xs font-medium text-old-money-600 mb-1 uppercase tracking-wide">Средняя скорость</div>
+              <div className="text-2xl font-bold text-charcoal-900 dark:text-charcoal-100">{dogStats.avgSpeed.toFixed(1)} <span className="text-sm font-normal text-charcoal-600 dark:text-charcoal-400">км/ч</span></div>
             </div>
-            <div className="bg-cream-50 rounded-xl p-4">
-              <div className="text-sm font-semibold text-old-money-600 mb-1">Среднее по породе</div>
-              <div className="text-2xl font-bold text-charcoal-900">{dogStats.breedAvg.toFixed(1)} км/ч</div>
+            <div className="bg-gradient-to-br from-old-money-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-old-money-200 dark:border-charcoal-500">
+              <div className="text-xs font-medium text-old-money-600 mb-1 uppercase tracking-wide">Среднее по породе</div>
+              <div className="text-2xl font-bold text-charcoal-900 dark:text-charcoal-100">{dogStats.breedAvg.toFixed(1)} <span className="text-sm font-normal text-charcoal-600 dark:text-charcoal-400">км/ч</span></div>
             </div>
-            <div className="bg-cream-50 rounded-xl p-4">
-              <div className="text-sm font-semibold text-old-money-600 mb-1">Отличие от среднего</div>
-              <div className={`text-2xl font-bold ${parseFloat(dogStats.diffFromBreedAvg) >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+            <div className="bg-gradient-to-br from-old-money-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-old-money-200 dark:border-charcoal-500">
+              <div className="text-xs font-medium text-old-money-600 mb-1 uppercase tracking-wide">Отличие от среднего</div>
+              <div className={`text-2xl font-bold ${parseFloat(dogStats.diffFromBreedAvg) >= 0 ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'}`}>
                 {parseFloat(dogStats.diffFromBreedAvg) >= 0 ? '+' : ''}{dogStats.diffFromBreedAvg}%
               </div>
             </div>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-2 gap-4 mb-6">
-            <div className="bg-cream-50 rounded-xl p-4">
-              <div className="text-sm font-semibold text-old-money-600 mb-1">Рейтинг в породе</div>
-              <div className="text-2xl font-bold text-camel-700">#{dogStats.rank} из {dogStats.totalInBreed}</div>
+            <div className="bg-gradient-to-br from-camel-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-camel-200 dark:border-charcoal-500">
+              <div className="text-xs font-medium text-old-money-600 mb-1 uppercase tracking-wide">Рейтинг в породе</div>
+              <div className="text-2xl font-bold text-camel-700 dark:text-camel-400">#{dogStats.rank} <span className="text-base font-normal text-charcoal-600 dark:text-charcoal-400">из {dogStats.totalInBreed}</span></div>
             </div>
-            <div className="bg-cream-50 rounded-xl p-4">
-              <div className="text-sm font-semibold text-old-money-600 mb-1">Процентиль</div>
-              <div className="text-2xl font-bold text-camel-700">Топ {100 - dogStats.percentile}%</div>
+            <div className="bg-gradient-to-br from-camel-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-camel-200 dark:border-charcoal-500">
+              <div className="text-xs font-medium text-old-money-600 mb-1 uppercase tracking-wide">Процентиль</div>
+              <div className="text-2xl font-bold text-camel-700 dark:text-camel-400">Топ <span className="text-charcoal-600 dark:text-charcoal-400">{100 - dogStats.percentile}%</span></div>
             </div>
           </div>
 
           {/* График прогресса */}
           <div>
-            <h3 className="text-lg font-bold text-charcoal-900 mb-3">Прогресс во времени</h3>
+            <h3 className="text-lg font-bold text-charcoal-900 dark:text-charcoal-100 mb-3">Прогресс во времени</h3>
             <div className="space-y-2">
               {dogStats.history.map((record, idx) => (
                 <div key={idx} className="flex items-center gap-4">
-                  <div className="w-24 text-sm text-charcoal-700 text-right">{record.date}</div>
-                  <div className="flex-1 bg-cream-200 rounded-full h-6 overflow-hidden relative">
+                  <div className="w-24 text-sm text-charcoal-700 dark:text-charcoal-300 text-right">{record.date}</div>
+                  <div className="flex-1 bg-cream-200 dark:bg-charcoal-600 rounded-full h-6 overflow-hidden relative">
                     <div 
                       className="bg-gradient-to-r from-camel-400 to-camel-600 h-full rounded-full transition-all duration-500"
                       style={{ width: `${(parseFloat(record.speed_km_h) / 80) * 100}%` }}
                     />
-                    <div className="absolute inset-0 flex items-center justify-center text-sm font-bold text-charcoal-900">
+                    <div className="absolute inset-0 flex items-center justify-center text-sm font-bold text-charcoal-900 dark:text-charcoal-100">
                       {record.speed_km_h} км/ч
                     </div>
                   </div>
@@ -554,27 +554,27 @@ function SpeedRecordsStats() {
         <>
           {/* Общая статистика */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div className="bg-white rounded-xl border-2 border-cream-300 p-6 shadow-sm">
-              <div className="text-sm font-semibold text-old-money-600 mb-2">Всего записей</div>
-              <div className="text-3xl font-bold text-charcoal-900">{totalRecords}</div>
+            <div className="bg-white dark:bg-charcoal-800 rounded-2xl border-2 border-cream-300 dark:border-charcoal-600 p-5 shadow-md hover:shadow-lg transition-shadow">
+              <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-2 uppercase tracking-wide">Всего записей</div>
+              <div className="text-3xl font-bold text-charcoal-900 dark:text-charcoal-100">{totalRecords}</div>
             </div>
-            <div className="bg-white rounded-xl border-2 border-cream-300 p-6 shadow-sm">
-              <div className="text-sm font-semibold text-old-money-600 mb-2">Средняя скорость</div>
-              <div className="text-3xl font-bold text-camel-700">{averageSpeed.toFixed(1)} км/ч</div>
+            <div className="bg-white dark:bg-charcoal-800 rounded-2xl border-2 border-camel-300 dark:border-camel-600 p-5 shadow-md hover:shadow-lg transition-shadow">
+              <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-2 uppercase tracking-wide">Средняя скорость</div>
+              <div className="text-3xl font-bold text-camel-700 dark:text-camel-400">{averageSpeed.toFixed(1)} <span className="text-base font-normal text-charcoal-600 dark:text-charcoal-400">км/ч</span></div>
             </div>
-            <div className="bg-white rounded-xl border-2 border-cream-300 p-6 shadow-sm">
-              <div className="text-sm font-semibold text-old-money-600 mb-2">Лучшая скорость</div>
-              <div className="text-3xl font-bold text-camel-700">{maxSpeed} км/ч</div>
+            <div className="bg-white dark:bg-charcoal-800 rounded-2xl border-2 border-camel-300 dark:border-camel-600 p-5 shadow-md hover:shadow-lg transition-shadow">
+              <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-2 uppercase tracking-wide">Лучшая скорость</div>
+              <div className="text-3xl font-bold text-camel-700 dark:text-camel-400">{maxSpeed} <span className="text-base font-normal text-charcoal-600 dark:text-charcoal-400">км/ч</span></div>
             </div>
-            <div className="bg-white rounded-xl border-2 border-cream-300 p-6 shadow-sm">
-              <div className="text-sm font-semibold text-old-money-600 mb-2">Минимальная скорость</div>
-              <div className="text-3xl font-bold text-charcoal-900">{minSpeed} км/ч</div>
+            <div className="bg-white dark:bg-charcoal-800 rounded-2xl border-2 border-cream-300 dark:border-charcoal-600 p-5 shadow-md hover:shadow-lg transition-shadow">
+              <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-2 uppercase tracking-wide">Минимальная скорость</div>
+              <div className="text-3xl font-bold text-charcoal-900 dark:text-charcoal-100">{minSpeed} <span className="text-base font-normal text-charcoal-600 dark:text-charcoal-400">км/ч</span></div>
             </div>
           </div>
 
           {/* График распределения скоростей */}
-          <div className="bg-white rounded-xl border-2 border-cream-300 p-6 shadow-sm">
-            <h2 className="text-xl lg:text-2xl font-bold text-charcoal-900 mb-4">Распределение скоростей</h2>
+          <div className="bg-white dark:bg-charcoal-800 rounded-2xl border-2 border-cream-300 dark:border-charcoal-600 p-6 shadow-md">
+            <h2 className="text-xl lg:text-2xl font-bold text-charcoal-900 dark:text-charcoal-100 mb-4">Распределение скоростей</h2>
             <div className="space-y-2">
               {(() => {
                 const speedRanges = [
@@ -604,14 +604,14 @@ function SpeedRecordsStats() {
                   
                   return (
                     <div key={idx} className="flex items-center gap-4">
-                      <div className="w-24 text-sm text-charcoal-700 text-right">{range.label}</div>
-                      <div className="flex-1 bg-cream-200 rounded-full h-6 overflow-hidden">
+                      <div className="w-24 text-sm text-charcoal-700 dark:text-charcoal-300 text-right">{range.label}</div>
+                      <div className="flex-1 bg-cream-200 dark:bg-charcoal-600 rounded-full h-6 overflow-hidden">
                         <div 
                           className="bg-gradient-to-r from-camel-400 to-camel-600 h-full rounded-full transition-all duration-500"
                           style={{ width: `${barWidth}%` }}
                         />
                       </div>
-                      <div className="w-20 text-sm font-semibold text-charcoal-900">{count} ({percentage.toFixed(1)}%)</div>
+                      <div className="w-20 text-sm font-semibold text-charcoal-900 dark:text-charcoal-100">{count} <span className="text-charcoal-600 dark:text-charcoal-400">({percentage.toFixed(1)}%)</span></div>
                     </div>
                   );
                 });
@@ -623,44 +623,44 @@ function SpeedRecordsStats() {
       )}
 
       {statsTab === 'breeds' && (
-        <div className="bg-white rounded-xl border-2 border-cream-300 p-6 shadow-sm">
-          <h2 className="text-xl lg:text-2xl font-bold text-charcoal-900 mb-4">Статистика по породам</h2>
+        <div className="bg-white dark:bg-charcoal-800 rounded-2xl border-2 border-cream-300 dark:border-charcoal-600 p-6 shadow-md">
+          <h2 className="text-xl lg:text-2xl font-bold text-charcoal-900 dark:text-charcoal-100 mb-4">Статистика по породам</h2>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[600px]">
               <thead>
-                <tr className="border-b-2 border-cream-300">
+                <tr className="border-b-2 border-cream-300 dark:border-charcoal-600">
                   <th 
-                    className="px-4 py-3 text-left font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50"
+                    className="px-4 py-3 text-left font-semibold text-charcoal-900 dark:text-charcoal-100 cursor-pointer hover:bg-cream-50 dark:hover:bg-charcoal-700"
                     onClick={() => handleSort('breed')}
                   >
                     Порода {sortConfig.key === 'breed' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
                   </th>
                   <th 
-                    className="px-4 py-3 text-center font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50"
+                    className="px-4 py-3 text-center font-semibold text-charcoal-900 dark:text-charcoal-100 cursor-pointer hover:bg-cream-50 dark:hover:bg-charcoal-700"
                     onClick={() => handleSort('count')}
                   >
                     Количество {sortConfig.key === 'count' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
                   </th>
                   <th 
-                    className="px-4 py-3 text-center font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50 whitespace-nowrap"
+                    className="px-4 py-3 text-center font-semibold text-charcoal-900 dark:text-charcoal-100 cursor-pointer hover:bg-cream-50 dark:hover:bg-charcoal-700 whitespace-nowrap"
                     onClick={() => handleSort('avgSpeed')}
                   >
                     Средняя скорость {sortConfig.key === 'avgSpeed' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
                   </th>
                   <th 
-                    className="px-4 py-3 text-center font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50 whitespace-nowrap"
+                    className="px-4 py-3 text-center font-semibold text-charcoal-900 dark:text-charcoal-100 cursor-pointer hover:bg-cream-50 dark:hover:bg-charcoal-700 whitespace-nowrap"
                     onClick={() => handleSort('maxSpeed')}
                   >
                     Лучшая скорость {sortConfig.key === 'maxSpeed' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
                   </th>
                   <th 
-                    className="px-4 py-3 text-center font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50 whitespace-nowrap"
+                    className="px-4 py-3 text-center font-semibold text-charcoal-900 dark:text-charcoal-100 cursor-pointer hover:bg-cream-50 dark:hover:bg-charcoal-700 whitespace-nowrap"
                     onClick={() => handleSort('avgTime350')}
                   >
                     Время за 350м (ср) {sortConfig.key === 'avgTime350' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
                   </th>
                   <th 
-                    className="px-4 py-3 text-center font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50 whitespace-nowrap"
+                    className="px-4 py-3 text-center font-semibold text-charcoal-900 dark:text-charcoal-100 cursor-pointer hover:bg-cream-50 dark:hover:bg-charcoal-700 whitespace-nowrap"
                     onClick={() => handleSort('bestTime350')}
                   >
                     Время за 350м (лучшее) {sortConfig.key === 'bestTime350' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
@@ -671,19 +671,19 @@ function SpeedRecordsStats() {
                 {sortedBreedStats.map((stat, idx) => (
                   <React.Fragment key={idx}>
                     <tr 
-                      className="border-b border-cream-200 hover:bg-cream-50 cursor-pointer"
+                      className="border-b border-cream-200 dark:border-charcoal-600 hover:bg-cream-50 dark:hover:bg-charcoal-700 cursor-pointer"
                       onClick={() => setExpandedSection(expandedSection === `breed-${idx}` ? null : `breed-${idx}`)}
                     >
-                      <td className="px-4 py-3 font-semibold text-charcoal-900">{stat.breed}</td>
-                      <td className="px-4 py-3 text-center text-charcoal-700">{stat.count}</td>
-                      <td className="px-4 py-3 text-center text-camel-700 font-semibold whitespace-nowrap">{stat.avgSpeed.toFixed(1)} км/ч</td>
-                      <td className="px-4 py-3 text-center text-camel-700 font-bold whitespace-nowrap">{stat.maxSpeed} км/ч</td>
-                      <td className="px-4 py-3 text-center text-charcoal-700 whitespace-nowrap">{stat.avgTime350} сек</td>
-                      <td className="px-4 py-3 text-center text-camel-700 font-bold whitespace-nowrap">{stat.bestTime350} сек</td>
+                      <td className="px-4 py-3 font-semibold text-charcoal-900 dark:text-charcoal-100">{stat.breed}</td>
+                      <td className="px-4 py-3 text-center text-charcoal-700 dark:text-charcoal-300">{stat.count}</td>
+                      <td className="px-4 py-3 text-center text-camel-700 dark:text-camel-400 font-semibold whitespace-nowrap">{stat.avgSpeed.toFixed(1)} <span className="text-charcoal-600 dark:text-charcoal-400">км/ч</span></td>
+                      <td className="px-4 py-3 text-center text-camel-700 dark:text-camel-400 font-bold whitespace-nowrap">{stat.maxSpeed} <span className="text-charcoal-600 dark:text-charcoal-400">км/ч</span></td>
+                      <td className="px-4 py-3 text-center text-charcoal-700 dark:text-charcoal-300 whitespace-nowrap">{stat.avgTime350} <span className="text-charcoal-600 dark:text-charcoal-400">сек</span></td>
+                      <td className="px-4 py-3 text-center text-camel-700 dark:text-camel-400 font-bold whitespace-nowrap">{stat.bestTime350} <span className="text-charcoal-600 dark:text-charcoal-400">сек</span></td>
                     </tr>
                     {expandedSection === `breed-${idx}` && (
-                      <tr className="bg-cream-50">
-                        <td colSpan={6} className="px-4 py-3 text-sm text-charcoal-700">
+                      <tr className="bg-cream-50 dark:bg-charcoal-700">
+                        <td colSpan={6} className="px-4 py-3 text-sm text-charcoal-700 dark:text-charcoal-300">
                           <strong>Клички:</strong> {stat.names}
                         </td>
                       </tr>
@@ -697,44 +697,44 @@ function SpeedRecordsStats() {
       )}
 
       {statsTab === 'sex' && (
-        <div className="bg-white rounded-xl border-2 border-cream-300 p-6 shadow-sm">
-          <h2 className="text-2xl font-bold text-charcoal-900 mb-4">Статистика по полу</h2>
+        <div className="bg-white dark:bg-charcoal-800 rounded-2xl border-2 border-cream-300 dark:border-charcoal-600 p-6 shadow-md">
+          <h2 className="text-2xl font-bold text-charcoal-900 dark:text-charcoal-100 mb-4">Статистика по полу</h2>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[600px]">
               <thead>
-                <tr className="border-b-2 border-cream-300">
+                <tr className="border-b-2 border-cream-300 dark:border-charcoal-600">
                   <th 
-                    className="px-4 py-3 text-left font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50"
+                    className="px-4 py-3 text-left font-semibold text-charcoal-900 dark:text-charcoal-100 cursor-pointer hover:bg-cream-50 dark:hover:bg-charcoal-700"
                     onClick={() => handleSort('sex')}
                   >
                     Пол {sortConfig.key === 'sex' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
                   </th>
                   <th 
-                    className="px-4 py-3 text-center font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50"
+                    className="px-4 py-3 text-center font-semibold text-charcoal-900 dark:text-charcoal-100 cursor-pointer hover:bg-cream-50 dark:hover:bg-charcoal-700"
                     onClick={() => handleSort('count')}
                   >
                     Количество {sortConfig.key === 'count' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
                   </th>
                   <th 
-                    className="px-4 py-3 text-center font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50 whitespace-nowrap"
+                    className="px-4 py-3 text-center font-semibold text-charcoal-900 dark:text-charcoal-100 cursor-pointer hover:bg-cream-50 dark:hover:bg-charcoal-700 whitespace-nowrap"
                     onClick={() => handleSort('avgSpeed')}
                   >
                     Средняя скорость {sortConfig.key === 'avgSpeed' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
                   </th>
                   <th 
-                    className="px-4 py-3 text-center font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50 whitespace-nowrap"
+                    className="px-4 py-3 text-center font-semibold text-charcoal-900 dark:text-charcoal-100 cursor-pointer hover:bg-cream-50 dark:hover:bg-charcoal-700 whitespace-nowrap"
                     onClick={() => handleSort('maxSpeed')}
                   >
                     Лучшая скорость {sortConfig.key === 'maxSpeed' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
                   </th>
                   <th 
-                    className="px-4 py-3 text-center font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50 whitespace-nowrap"
+                    className="px-4 py-3 text-center font-semibold text-charcoal-900 dark:text-charcoal-100 cursor-pointer hover:bg-cream-50 dark:hover:bg-charcoal-700 whitespace-nowrap"
                     onClick={() => handleSort('avgTime350')}
                   >
                     Время за 350м (ср) {sortConfig.key === 'avgTime350' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
                   </th>
                   <th 
-                    className="px-4 py-3 text-center font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50 whitespace-nowrap"
+                    className="px-4 py-3 text-center font-semibold text-charcoal-900 dark:text-charcoal-100 cursor-pointer hover:bg-cream-50 dark:hover:bg-charcoal-700 whitespace-nowrap"
                     onClick={() => handleSort('bestTime350')}
                   >
                     Время за 350м (лучшее) {sortConfig.key === 'bestTime350' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
@@ -745,19 +745,19 @@ function SpeedRecordsStats() {
                 {sortedSexStats.map((stat, idx) => (
                   <React.Fragment key={idx}>
                     <tr 
-                      className="border-b border-cream-200 hover:bg-cream-50 cursor-pointer"
+                      className="border-b border-cream-200 dark:border-charcoal-600 hover:bg-cream-50 dark:hover:bg-charcoal-700 cursor-pointer"
                       onClick={() => setExpandedSection(expandedSection === `sex-${idx}` ? null : `sex-${idx}`)}
                     >
-                      <td className="px-4 py-3 font-semibold text-charcoal-900">{stat.sex}</td>
-                      <td className="px-4 py-3 text-center text-charcoal-700">{stat.count}</td>
-                      <td className="px-4 py-3 text-center text-camel-700 font-semibold whitespace-nowrap">{stat.avgSpeed.toFixed(1)} км/ч</td>
-                      <td className="px-4 py-3 text-center text-camel-700 font-bold whitespace-nowrap">{stat.maxSpeed} км/ч</td>
-                      <td className="px-4 py-3 text-center text-charcoal-700 whitespace-nowrap">{stat.avgTime350} сек</td>
-                      <td className="px-4 py-3 text-center text-camel-700 font-bold whitespace-nowrap">{stat.bestTime350} сек</td>
+                      <td className="px-4 py-3 font-semibold text-charcoal-900 dark:text-charcoal-100">{stat.sex}</td>
+                      <td className="px-4 py-3 text-center text-charcoal-700 dark:text-charcoal-300">{stat.count}</td>
+                      <td className="px-4 py-3 text-center text-camel-700 dark:text-camel-400 font-semibold whitespace-nowrap">{stat.avgSpeed.toFixed(1)} <span className="text-charcoal-600 dark:text-charcoal-400">км/ч</span></td>
+                      <td className="px-4 py-3 text-center text-camel-700 dark:text-camel-400 font-bold whitespace-nowrap">{stat.maxSpeed} <span className="text-charcoal-600 dark:text-charcoal-400">км/ч</span></td>
+                      <td className="px-4 py-3 text-center text-charcoal-700 dark:text-charcoal-300 whitespace-nowrap">{stat.avgTime350} <span className="text-charcoal-600 dark:text-charcoal-400">сек</span></td>
+                      <td className="px-4 py-3 text-center text-camel-700 dark:text-camel-400 font-bold whitespace-nowrap">{stat.bestTime350} <span className="text-charcoal-600 dark:text-charcoal-400">сек</span></td>
                     </tr>
                     {expandedSection === `sex-${idx}` && (
-                      <tr className="bg-cream-50">
-                        <td colSpan={6} className="px-4 py-3 text-sm text-charcoal-700">
+                      <tr className="bg-cream-50 dark:bg-charcoal-700">
+                        <td colSpan={6} className="px-4 py-3 text-sm text-charcoal-700 dark:text-charcoal-300">
                           <strong>Клички:</strong> {stat.names}
                         </td>
                       </tr>
@@ -771,44 +771,44 @@ function SpeedRecordsStats() {
       )}
 
       {statsTab === 'years' && (
-        <div className="bg-white rounded-xl border-2 border-cream-300 p-6 shadow-sm">
-          <h2 className="text-xl lg:text-2xl font-bold text-charcoal-900 mb-4">Статистика по годам</h2>
+        <div className="bg-white dark:bg-charcoal-800 rounded-2xl border-2 border-cream-300 dark:border-charcoal-600 p-6 shadow-md">
+          <h2 className="text-xl lg:text-2xl font-bold text-charcoal-900 dark:text-charcoal-100 mb-4">Статистика по годам</h2>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[600px]">
               <thead>
-                <tr className="border-b-2 border-cream-300">
+                <tr className="border-b-2 border-cream-300 dark:border-charcoal-600">
                   <th 
-                    className="px-4 py-3 text-left font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50"
+                    className="px-4 py-3 text-left font-semibold text-charcoal-900 dark:text-charcoal-100 cursor-pointer hover:bg-cream-50 dark:hover:bg-charcoal-700"
                     onClick={() => handleSort('year')}
                   >
                     Год {sortConfig.key === 'year' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
                   </th>
                   <th 
-                    className="px-4 py-3 text-center font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50"
+                    className="px-4 py-3 text-center font-semibold text-charcoal-900 dark:text-charcoal-100 cursor-pointer hover:bg-cream-50 dark:hover:bg-charcoal-700"
                     onClick={() => handleSort('count')}
                   >
                     Количество {sortConfig.key === 'count' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
                   </th>
                   <th 
-                    className="px-4 py-3 text-center font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50 whitespace-nowrap"
+                    className="px-4 py-3 text-center font-semibold text-charcoal-900 dark:text-charcoal-100 cursor-pointer hover:bg-cream-50 dark:hover:bg-charcoal-700 whitespace-nowrap"
                     onClick={() => handleSort('avgSpeed')}
                   >
                     Средняя скорость {sortConfig.key === 'avgSpeed' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
                   </th>
                   <th 
-                    className="px-4 py-3 text-center font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50 whitespace-nowrap"
+                    className="px-4 py-3 text-center font-semibold text-charcoal-900 dark:text-charcoal-100 cursor-pointer hover:bg-cream-50 dark:hover:bg-charcoal-700 whitespace-nowrap"
                     onClick={() => handleSort('maxSpeed')}
                   >
                     Лучшая скорость {sortConfig.key === 'maxSpeed' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
                   </th>
                   <th 
-                    className="px-4 py-3 text-center font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50 whitespace-nowrap"
+                    className="px-4 py-3 text-center font-semibold text-charcoal-900 dark:text-charcoal-100 cursor-pointer hover:bg-cream-50 dark:hover:bg-charcoal-700 whitespace-nowrap"
                     onClick={() => handleSort('avgTime350')}
                   >
                     Время за 350м (ср) {sortConfig.key === 'avgTime350' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
                   </th>
                   <th 
-                    className="px-4 py-3 text-center font-semibold text-charcoal-900 cursor-pointer hover:bg-cream-50 whitespace-nowrap"
+                    className="px-4 py-3 text-center font-semibold text-charcoal-900 dark:text-charcoal-100 cursor-pointer hover:bg-cream-50 dark:hover:bg-charcoal-700 whitespace-nowrap"
                     onClick={() => handleSort('bestTime350')}
                   >
                     Время за 350м (лучшее) {sortConfig.key === 'bestTime350' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
@@ -819,19 +819,19 @@ function SpeedRecordsStats() {
                 {sortedYearStats.map((stat, idx) => (
                   <React.Fragment key={idx}>
                     <tr 
-                      className="border-b border-cream-200 hover:bg-cream-50 cursor-pointer"
+                      className="border-b border-cream-200 dark:border-charcoal-600 hover:bg-cream-50 dark:hover:bg-charcoal-700 cursor-pointer"
                       onClick={() => setExpandedSection(expandedSection === `year-${idx}` ? null : `year-${idx}`)}
                     >
-                      <td className="px-4 py-3 font-semibold text-charcoal-900">{stat.year}</td>
-                      <td className="px-4 py-3 text-center text-charcoal-700">{stat.count}</td>
-                      <td className="px-4 py-3 text-center text-camel-700 font-semibold whitespace-nowrap">{stat.avgSpeed.toFixed(1)} км/ч</td>
-                      <td className="px-4 py-3 text-center text-camel-700 font-bold whitespace-nowrap">{stat.maxSpeed} км/ч</td>
-                      <td className="px-4 py-3 text-center text-charcoal-700 whitespace-nowrap">{stat.avgTime350} сек</td>
-                      <td className="px-4 py-3 text-center text-camel-700 font-bold whitespace-nowrap">{stat.bestTime350} сек</td>
+                      <td className="px-4 py-3 font-semibold text-charcoal-900 dark:text-charcoal-100">{stat.year}</td>
+                      <td className="px-4 py-3 text-center text-charcoal-700 dark:text-charcoal-300">{stat.count}</td>
+                      <td className="px-4 py-3 text-center text-camel-700 dark:text-camel-400 font-semibold whitespace-nowrap">{stat.avgSpeed.toFixed(1)} <span className="text-charcoal-600 dark:text-charcoal-400">км/ч</span></td>
+                      <td className="px-4 py-3 text-center text-camel-700 dark:text-camel-400 font-bold whitespace-nowrap">{stat.maxSpeed} <span className="text-charcoal-600 dark:text-charcoal-400">км/ч</span></td>
+                      <td className="px-4 py-3 text-center text-charcoal-700 dark:text-charcoal-300 whitespace-nowrap">{stat.avgTime350} <span className="text-charcoal-600 dark:text-charcoal-400">сек</span></td>
+                      <td className="px-4 py-3 text-center text-camel-700 dark:text-camel-400 font-bold whitespace-nowrap">{stat.bestTime350} <span className="text-charcoal-600 dark:text-charcoal-400">сек</span></td>
                     </tr>
                     {expandedSection === `year-${idx}` && (
-                      <tr className="bg-cream-50">
-                        <td colSpan={6} className="px-4 py-3 text-sm text-charcoal-700">
+                      <tr className="bg-cream-50 dark:bg-charcoal-700">
+                        <td colSpan={6} className="px-4 py-3 text-sm text-charcoal-700 dark:text-charcoal-300">
                           <strong>Клички:</strong> {stat.names}
                         </td>
                       </tr>
