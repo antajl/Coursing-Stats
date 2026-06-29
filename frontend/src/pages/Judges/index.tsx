@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useJudges } from '../../hooks/useApi'
 import EmptyState from '../../components/EmptyState'
@@ -9,12 +9,20 @@ export default function Judges() {
   const [filterDiscipline, setFilterDiscipline] = useState('')
   const [sortField, setSortField] = useState('total_evaluations')
   const [sortDirection, setSortDirection] = useState('desc')
+  const [isInitialLoad, setIsInitialLoad] = useState(true)
 
   // React Query hook
   const { data: judgesData, isLoading: loading } = useJudges(filterBreed, filterDiscipline)
 
   const judges = judgesData?.success ? (Array.isArray(judgesData.data?.judges) ? judgesData.data.judges : (Array.isArray(judgesData.data) ? judgesData.data : [])) : []
   const availableBreeds = judgesData?.success ? (Array.isArray(judgesData.data?.available_breeds) ? judgesData.data.available_breeds : []) : []
+
+  // Отслеживаем первую загрузку
+  useEffect(() => {
+    if (!loading && judges.length > 0) {
+      setIsInitialLoad(false)
+    }
+  }, [loading, judges.length])
 
   const handleSort = (field) => {
     if (sortField === field) {
@@ -39,7 +47,7 @@ export default function Judges() {
     }
   })
 
-  if (loading) {
+  if (isInitialLoad && loading) {
     return <SkeletonLoader variant="card" count={4} />
   }
 
