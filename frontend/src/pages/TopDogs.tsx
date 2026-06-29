@@ -32,7 +32,7 @@ export default function TopDogs() {
       const currentTab = searchParams.get('rankingTab') || 'placement'
       setActiveTab(currentTab)
     }
-  }, [searchParams.get('rankingTab'), isStandalone])
+  }, [searchParams, isStandalone])
 
   // React Query hooks
   const { data: breedsData, isLoading: breedsLoading } = useBreeds()
