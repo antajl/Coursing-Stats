@@ -378,7 +378,7 @@ export default function DogProfile() {
           <div className={`grid gap-4 md:gap-6 mb-6 ${hasSpeedRecords && hasCoursingRecords ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1'}`}>
             {/* Статистика Донино */}
             {hasSpeedRecords && (
-              <div className="rounded-2xl border-2 border-camel-200 dark:border-camel-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6 flex flex-col">
+              <div className="rounded-2xl border-2 border-camel-200 dark:border-camel-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
                 <h2 className="text-lg md:text-xl font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 mb-4">Замер скорости</h2>
                 
                 <div className="grid grid-cols-2 gap-4 mb-6">
@@ -406,7 +406,7 @@ export default function DogProfile() {
                 )}
 
                 {speedStats.screenshotUrl && (
-                  <div className="mb-6">
+                  <div>
                     <a
                       href={speedStats.screenshotUrl}
                       target="_blank"
@@ -420,33 +420,12 @@ export default function DogProfile() {
                     </a>
                   </div>
                 )}
-
-                {/* График прогресса */}
-                <div className="flex-1">
-                  <h3 className="text-lg font-bold text-charcoal-900 dark:text-charcoal-100 mb-3">Прогресс во времени</h3>
-                  <div className="space-y-2">
-                    {speedStats.history.map((record, idx) => (
-                      <div key={idx} className="flex items-center gap-4">
-                        <div className="w-24 text-sm text-charcoal-700 dark:text-charcoal-300 text-right">{record.date}</div>
-                        <div className="flex-1 bg-cream-200 dark:bg-charcoal-600 rounded-full h-6 overflow-hidden relative">
-                          <div 
-                            className="bg-gradient-to-r from-camel-400 to-camel-600 h-full rounded-full transition-all duration-500"
-                            style={{ width: `${(record.speed_km_h / 80) * 100}%` }}
-                          />
-                          <div className="absolute inset-0 flex items-center justify-center text-sm font-bold text-charcoal-900 dark:text-charcoal-100">
-                            {record.speed_km_h} км/ч
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
               </div>
             )}
 
             {/* Статистика бегов борзых */}
             {hasCoursingRecords && (
-              <div className="rounded-2xl border-2 border-camel-200 dark:border-camel-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6 flex flex-col">
+              <div className="rounded-2xl border-2 border-camel-200 dark:border-camel-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
                 <h2 className="text-lg md:text-xl font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 mb-4">Беги борзых</h2>
                 
                 <div className="grid grid-cols-2 gap-4 mb-6">
@@ -473,30 +452,54 @@ export default function DogProfile() {
                   </div>
                 )}
 
-                {/* Компенсируем отсутствие скриншота в левом блоке */}
-                {hasSpeedRecords && !speedStats?.screenshotUrl && (
-                  <div className="mb-6" />
-                )}
+              </div>
+            )}
+          </div>
+        )}
 
-                {/* График прогресса */}
-                <div className="flex-1">
-                  <h3 className="text-lg font-bold text-charcoal-900 dark:text-charcoal-100 mb-3">Прогресс во времени</h3>
-                  <div className="space-y-2">
-                    {coursingStats.history.map((record, idx) => (
-                      <div key={idx} className="flex items-center gap-4">
-                        <div className="w-24 text-sm text-charcoal-700 dark:text-charcoal-300 text-right">{record.date}</div>
-                        <div className="flex-1 bg-cream-200 dark:bg-charcoal-600 rounded-full h-6 overflow-hidden relative">
-                          <div 
-                            className="bg-gradient-to-r from-camel-400 to-camel-600 h-full rounded-full transition-all duration-500"
-                            style={{ width: `${(30 / record.time_seconds) * 100}%` }}
-                          />
-                          <div className="absolute inset-0 flex items-center justify-center text-sm font-bold text-charcoal-900 dark:text-charcoal-100">
-                            {record.time_seconds} сек
-                          </div>
+        {/* Графики прогресса во времени */}
+        {(hasSpeedRecords || hasCoursingRecords) && (
+          <div className={`grid gap-4 md:gap-6 mb-6 ${hasSpeedRecords && hasCoursingRecords ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1'}`}>
+            {hasSpeedRecords && (
+              <div className="rounded-2xl border-2 border-camel-200 dark:border-camel-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
+                <h3 className="text-lg font-bold text-charcoal-900 dark:text-charcoal-100 mb-3">Прогресс во времени (Замер скорости)</h3>
+                <div className="space-y-2">
+                  {speedStats.history.map((record, idx) => (
+                    <div key={idx} className="flex items-center gap-4">
+                      <div className="w-24 text-sm text-charcoal-700 dark:text-charcoal-300 text-right">{record.date}</div>
+                      <div className="flex-1 bg-cream-200 dark:bg-charcoal-600 rounded-full h-6 overflow-hidden relative">
+                        <div 
+                          className="bg-gradient-to-r from-camel-400 to-camel-600 h-full rounded-full transition-all duration-500"
+                          style={{ width: `${(record.speed_km_h / 80) * 100}%` }}
+                        />
+                        <div className="absolute inset-0 flex items-center justify-center text-sm font-bold text-charcoal-900 dark:text-charcoal-100">
+                          {record.speed_km_h} км/ч
                         </div>
                       </div>
-                    ))}
-                  </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {hasCoursingRecords && (
+              <div className="rounded-2xl border-2 border-camel-200 dark:border-camel-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
+                <h3 className="text-lg font-bold text-charcoal-900 dark:text-charcoal-100 mb-3">Прогресс во времени (Беги борзых)</h3>
+                <div className="space-y-2">
+                  {coursingStats.history.map((record, idx) => (
+                    <div key={idx} className="flex items-center gap-4">
+                      <div className="w-24 text-sm text-charcoal-700 dark:text-charcoal-300 text-right">{record.date}</div>
+                      <div className="flex-1 bg-cream-200 dark:bg-charcoal-600 rounded-full h-6 overflow-hidden relative">
+                        <div 
+                          className="bg-gradient-to-r from-camel-400 to-camel-600 h-full rounded-full transition-all duration-500"
+                          style={{ width: `${(30 / record.time_seconds) * 100}%` }}
+                        />
+                        <div className="absolute inset-0 flex items-center justify-center text-sm font-bold text-charcoal-900 dark:text-charcoal-100">
+                          {record.time_seconds} сек
+                        </div>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             )}
