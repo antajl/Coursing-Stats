@@ -456,6 +456,11 @@ export default function DogProfile() {
                   </div>
                 )}
 
+                {/* Компенсируем скриншот из левого блока */}
+                {hasSpeedRecords && speedStats?.screenshotUrl && (
+                  <div className="mb-6" />
+                )}
+
                 {/* График прогресса */}
                 <div>
                   <h3 className="text-lg font-bold text-charcoal-900 dark:text-charcoal-100 mb-3">Прогресс во времени</h3>
