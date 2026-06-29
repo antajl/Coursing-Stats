@@ -112,37 +112,37 @@ export default function DogStatsTable({ data, type = 'placement', filterYear }) 
                     </div>
                     <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center">
                       <div className="text-old-money-500 dark:text-old-money-400">Участий</div>
-                      <div className="font-bold text-old-money-800 dark:text-old-money-300">{dog.total_starts}</div>
+                      <div className="font-bold text-old-money-800 dark:text-old-money-200">{dog.total_starts}</div>
                     </div>
                   </>
                 ) : type === 'speed' ? (
                   <>
                     <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center col-span-2">
                       <div className="text-old-money-500 dark:text-old-money-400">Лучшая</div>
-                      <div className="font-bold text-old-money-800 dark:text-old-money-300">{dog.best_speed ? `${dog.best_speed} км/ч` : '-'}</div>
+                      <div className="font-bold text-old-money-800 dark:text-old-money-200">{dog.best_speed ? `${dog.best_speed} км/ч` : '-'}</div>
                     </div>
                     <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center col-span-2">
                       <div className="text-old-money-500 dark:text-old-money-400">Средняя</div>
-                      <div className="font-bold text-old-money-800 dark:text-old-money-300">{dog.avg_speed ? `${dog.avg_speed} км/ч` : '-'}</div>
+                      <div className="font-bold text-old-money-800 dark:text-old-money-200">{dog.avg_speed ? `${dog.avg_speed} км/ч` : '-'}</div>
                     </div>
                     <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center col-span-4">
                       <div className="text-old-money-500 dark:text-old-money-400">Участий</div>
-                      <div className="font-bold text-old-money-800 dark:text-old-money-300">{dog.total_starts}</div>
+                      <div className="font-bold text-old-money-800 dark:text-old-money-200">{dog.total_starts}</div>
                     </div>
                   </>
                 ) : (
                   <>
                     <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center col-span-2">
                       <div className="text-old-money-500 dark:text-old-money-400">Лучший</div>
-                      <div className="font-bold text-old-money-800 dark:text-old-money-300">{dog.best_score ? parseFloat(dog.best_score).toFixed(2).replace(/\.00$/, '') : '-'}</div>
+                      <div className="font-bold text-old-money-800 dark:text-old-money-200">{dog.best_score ? parseFloat(dog.best_score).toFixed(2).replace(/\.00$/, '') : '-'}</div>
                     </div>
                     <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center col-span-2">
                       <div className="text-old-money-500 dark:text-old-money-400">Средний</div>
-                      <div className="font-bold text-old-money-800 dark:text-old-money-300">{dog.avg_score ? parseFloat(dog.avg_score).toFixed(2).replace(/\.00$/, '') : '-'}</div>
+                      <div className="font-bold text-old-money-800 dark:text-old-money-200">{dog.avg_score ? parseFloat(dog.avg_score).toFixed(2).replace(/\.00$/, '') : '-'}</div>
                     </div>
                     <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center col-span-4">
                       <div className="text-old-money-500 dark:text-old-money-400">Участий</div>
-                      <div className="font-bold text-old-money-800 dark:text-old-money-300">{dog.total_starts}</div>
+                      <div className="font-bold text-old-money-800 dark:text-old-money-200">{dog.total_starts}</div>
                     </div>
                   </>
                 )}
@@ -286,24 +286,24 @@ export default function DogStatsTable({ data, type = 'placement', filterYear }) 
                   </>
                 ) : type === 'speed' ? (
                   <>
-                    <td className="px-6 py-4 text-center text-sm text-old-money-800 font-bold">
+                    <td className="px-6 py-4 text-center text-sm text-old-money-800 dark:text-old-money-200 font-bold">
                       {dog.best_speed ? `${dog.best_speed} км/ч` : '-'}
                     </td>
-                    <td className="px-6 py-4 text-center text-sm text-old-money-800">
+                    <td className="px-6 py-4 text-center text-sm text-old-money-800 dark:text-old-money-200">
                       {dog.avg_speed ? `${dog.avg_speed} км/ч` : '-'}
                     </td>
                   </>
                 ) : (
                   <>
-                    <td className="px-6 py-4 text-center text-sm text-old-money-800 font-bold">
+                    <td className="px-6 py-4 text-center text-sm text-old-money-800 dark:text-old-money-200 font-bold">
                       {dog.best_score ? parseFloat(dog.best_score).toFixed(2).replace(/\.00$/, '') : '-'}
                     </td>
-                    <td className="px-6 py-4 text-center text-sm text-old-money-800">
+                    <td className="px-6 py-4 text-center text-sm text-old-money-800 dark:text-old-money-200">
                       {dog.avg_score ? parseFloat(dog.avg_score).toFixed(2).replace(/\.00$/, '') : '-'}
                     </td>
                   </>
                 )}
-                <td className="px-6 py-4 text-center text-sm text-old-money-800">
+                <td className="px-6 py-4 text-center text-sm text-old-money-800 dark:text-old-money-200">
                   {dog.total_starts}
                 </td>
               </tr>
