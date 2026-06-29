@@ -15,6 +15,7 @@ export default function TopDogs() {
   const [filterBreed, setFilterBreed] = useState(() => searchParams.get('breed') || '')
   const [filterYear, setFilterYear] = useState(() => searchParams.get('year') || '2026')
   const [searchQuery, setSearchQuery] = useState(() => searchParams.get('search') || '')
+  const [isInitialLoad, setIsInitialLoad] = useState(true)
   
   // Новые фильтры
   const [filterStartsFrom, setFilterStartsFrom] = useState(() => searchParams.get('startsFrom') || '')
@@ -26,15 +27,6 @@ export default function TopDogs() {
   const [filterSpeedTo, setFilterSpeedTo] = useState(() => searchParams.get('speedTo') || '')
   const [filterSpeedType, setFilterSpeedType] = useState(() => searchParams.get('speedType') || 'best')
 
-  // Синхронизация activeTab с URL - только для standalone
-  useEffect(() => {
-    if (isStandalone) {
-      const currentTab = searchParams.get('rankingTab') || 'placement'
-      setActiveTab(currentTab)
-    }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isStandalone])
-
   // React Query hooks
   const { data: breedsData, isLoading: breedsLoading } = useBreeds()
   const { data: yearsData, isLoading: yearsLoading } = useYears()
@@ -43,6 +35,13 @@ export default function TopDogs() {
   const { data: topSpeedData, isLoading: speedLoading } = useTopSpeed(filterYear, filterBreed, parseInt(filterStartsFrom) || 0)
 
   const loading = breedsLoading || yearsLoading || placementLoading || scoreLoading || speedLoading
+  
+  // Отслеживаем первую загрузку
+  useEffect(() => {
+    if (!loading) {
+      setIsInitialLoad(false)
+    }
+  }, [loading])
   
   // API возвращает { success: true, data: [...] }, поэтому нужно извлечь data.data
   const breeds = breedsData?.success ? (Array.isArray(breedsData.data) ? breedsData.data : []) : []
@@ -57,7 +56,7 @@ export default function TopDogs() {
   const topScore = topScoreData?.success ? (Array.isArray(topScoreData.data) ? topScoreData.data : (topScoreData.data?.items || [])) : []
   const topSpeed = topSpeedData?.success ? (Array.isArray(topSpeedData.data) ? topSpeedData.data : (topSpeedData.data?.items || [])) : []
 
-  if (loading) {
+  if (isInitialLoad && loading) {
     return <SkeletonLoader variant="card" count={4} />
   }
 
@@ -73,46 +72,6 @@ export default function TopDogs() {
     setFilterSpeedTo('')
     setFilterSpeedType('best')
   }
-
-  // Синхронизация фильтров с URL - только для standalone страницы
-  useEffect(() => {
-    if (!isStandalone) return; // Don't update URL when inside Procoursing
-    
-    const params = new URLSearchParams(searchParams)
-    
-    // Проверяем, нужно ли обновлять URL
-    const needsUpdate = 
-      (filterBreed !== params.get('breed')) ||
-      (filterYear !== params.get('year')) ||
-      (searchQuery !== params.get('search')) ||
-      (activeTab !== params.get('rankingTab')) ||
-      (filterStartsFrom !== params.get('startsFrom')) ||
-      (filterStartsTo !== params.get('startsTo')) ||
-      (filterScoreFrom !== params.get('scoreFrom')) ||
-      (filterScoreTo !== params.get('scoreTo')) ||
-      (filterScoreType !== (params.get('scoreType') || 'best')) ||
-      (filterSpeedFrom !== params.get('speedFrom')) ||
-      (filterSpeedTo !== params.get('speedTo')) ||
-      (filterSpeedType !== (params.get('speedType') || 'best'))
-    
-    if (!needsUpdate) return
-    
-    // Обновляем только если значения изменились
-    const newParams = new URLSearchParams()
-    if (filterBreed) newParams.set('breed', filterBreed)
-    if (filterYear) newParams.set('year', filterYear)
-    if (searchQuery) newParams.set('search', searchQuery)
-    if (activeTab) newParams.set('rankingTab', activeTab)
-    if (filterStartsFrom) newParams.set('startsFrom', filterStartsFrom)
-    if (filterStartsTo) newParams.set('startsTo', filterStartsTo)
-    if (filterScoreFrom) newParams.set('scoreFrom', filterScoreFrom)
-    if (filterScoreTo) newParams.set('scoreTo', filterScoreTo)
-    if (filterScoreType !== 'best') newParams.set('scoreType', filterScoreType)
-    if (filterSpeedFrom) newParams.set('speedFrom', filterSpeedFrom)
-    if (filterSpeedTo) newParams.set('speedTo', filterSpeedTo)
-    if (filterSpeedType !== 'best') newParams.set('speedType', filterSpeedType)
-    setSearchParams(newParams)
-  }, [filterBreed, filterYear, searchQuery, activeTab, filterStartsFrom, filterStartsTo, filterScoreFrom, filterScoreTo, filterScoreType, filterSpeedFrom, filterSpeedTo, filterSpeedType, setSearchParams, isStandalone, searchParams])
 
   const filteredPlacement = topPlacement.filter(dog => {
     if (searchQuery) {
