@@ -3,6 +3,13 @@ import { fetchWin1251 } from "../lib/fetch-win1251";
 import { normalizeDogName, normalizeBreed } from "./parse-results-coursing";
 
 /**
+ * АКТИВНО ИСПОЛЬЗУЕТСЯ скриптами перепарсинга:
+ *   - backend/scripts/reparse/reparse-racing-events.ts
+ *   - backend/scripts/reparse/reparse-by-year.ts
+ *
+ * Новая модульная версия (пока не переключена в продакшен):
+ *   - backend/parsers/racing/index.ts
+ *
  * Парсер результатов Racing (бега) (v1 - HTML version).
  * 
  * Структура отличается от курсинга/БЗМП:
@@ -88,14 +95,13 @@ function parseTimeSpeed(html) {
   const $ = cheerio.load(html);
   const text = $.text();
   
-  // Извлекаем все числа из текста
-  const numbers = text.match(/[\d.]+/g) || [];
+  // Извлекаем время (число перед "с")
+  const timeMatch = text.match(/(\d+\.?\d*)\s*с/);
+  const time = timeMatch ? parseFloat(timeMatch[1]) : null;
   
-  // Первое число — время в секундах
-  const time = numbers[0] ? parseFloat(numbers[0]) : null;
-  
-  // Второе число — скорость в м/с
-  const speed = numbers[1] ? parseFloat(numbers[1]) : null;
+  // Извлекаем скорость в км/ч (число перед "км/ч")
+  const speedMatch = text.match(/(\d+\.?\d*)\s*км\/ч/);
+  const speed = speedMatch ? parseFloat(speedMatch[1]) : null;
   
   return { time, speed };
 }

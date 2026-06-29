@@ -178,17 +178,21 @@ export function handleTop(app: Hono<{ Bindings: Env }>) {
         d.breed,
         MAX(
           CASE
-            WHEN json_extract(r.raw_scores_json, '$.heat1.speed') IS NOT NULL THEN CAST(json_extract(r.raw_scores_json, '$.heat1.speed') AS REAL)
-            WHEN json_extract(r.raw_scores_json, '$.heat2.speed') IS NOT NULL THEN CAST(json_extract(r.raw_scores_json, '$.heat2.speed') AS REAL)
-            WHEN json_extract(r.raw_scores_json, '$.heat3.speed') IS NOT NULL THEN CAST(json_extract(r.raw_scores_json, '$.heat3.speed') AS REAL)
+            WHEN json_extract(r.raw_scores_json, '$.format') = 'racing' THEN (
+              SELECT MAX(CAST(json_extract(h.value, '$.speed_kmh') AS REAL))
+              FROM json_each(json_extract(r.raw_scores_json, '$.heats')) AS h
+              WHERE json_extract(h.value, '$.speed_kmh') IS NOT NULL
+            )
             ELSE NULL
           END
         ) AS best_speed,
         ROUND(AVG(
           CASE
-            WHEN json_extract(r.raw_scores_json, '$.heat1.speed') IS NOT NULL THEN CAST(json_extract(r.raw_scores_json, '$.heat1.speed') AS REAL)
-            WHEN json_extract(r.raw_scores_json, '$.heat2.speed') IS NOT NULL THEN CAST(json_extract(r.raw_scores_json, '$.heat2.speed') AS REAL)
-            WHEN json_extract(r.raw_scores_json, '$.heat3.speed') IS NOT NULL THEN CAST(json_extract(r.raw_scores_json, '$.heat3.speed') AS REAL)
+            WHEN json_extract(r.raw_scores_json, '$.format') = 'racing' THEN (
+              SELECT AVG(CAST(json_extract(h.value, '$.speed_kmh') AS REAL))
+              FROM json_each(json_extract(r.raw_scores_json, '$.heats')) AS h
+              WHERE json_extract(h.value, '$.speed_kmh') IS NOT NULL
+            )
             ELSE NULL
           END
         ), 2) AS avg_speed,
