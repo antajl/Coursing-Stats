@@ -373,7 +373,7 @@ export default function DogProfile() {
         </div>
         )}
 
-        {/* Статистика Донино и Беги борзых */}
+        {/* Статистика Донино и Бега борзых */}
         {(hasSpeedRecords || hasCoursingRecords) && (
           <div className={`grid gap-4 md:gap-6 mb-6 ${hasSpeedRecords && hasCoursingRecords ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1'}`}>
             {/* Статистика Донино */}
