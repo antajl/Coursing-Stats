@@ -42,7 +42,30 @@
 - lang атрибут соответствует языку сайта
 
 **Осталось:**
-- navbar-bg-dark.svg - требует оригинальный PNG для регенерации (path данные обрезаны)
+- (нет)
+
+---
+
+## 2026-06-29: Критичные баг-фиксы после ревью
+
+**Проблемы:**
+- TopDogs.tsx - белый экран из-за неправильной useEffect зависимости
+- DogProfile.tsx - несогласованность фона между loading-state и основным контентом (charcoal-800 vs charcoal-900)
+- TopDogs.tsx - отсутствовал ErrorState импорт (был добавлен только EmptyState)
+
+**Решения:**
+- TopDogs.tsx:35 - исправлена useEffect зависимость: `searchParams.get('rankingTab')` → `searchParams`
+- DogProfile.tsx:40 - исправлен loading-state фон: `dark:bg-charcoal-800` → `dark:bg-charcoal-900`
+- TopDogs.tsx:7 - добавлен ErrorState импорт
+
+**Реализация:**
+- Обновлён `frontend/src/pages/TopDogs.tsx`
+- Обновлён `frontend/src/pages/DogProfile.tsx`
+
+**Результат:**
+- Страница TopDogs теперь открывается без белого экрана
+- Убрано мигание фона при загрузке в DogProfile
+- ErrorState доступен для использования в TopDogs
 
 ---
 
