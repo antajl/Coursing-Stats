@@ -156,33 +156,33 @@ export default function TopDogs() {
     <div className="p-4">
 
       {/* Tabs section */}
-      <div className="mb-4 flex gap-2 flex-wrap">
+      <div className="flex gap-2 border-b-2 border-cream-300 dark:border-charcoal-600 pb-2 overflow-x-auto scrollbar-thin scrollbar-gray-300">
         <button
           onClick={() => setActiveTab('placement')}
-          className={`min-w-[120px] flex-1 rounded-xl px-4 py-3 font-bold transition-all duration-200 ${
+          className={`flex-1 min-w-[120px] px-4 py-2.5 rounded-xl font-semibold transition-all duration-200 ${
             activeTab === 'placement' 
-              ? 'bg-camel-600 dark:bg-camel-700 text-white shadow-md' 
-              : 'bg-white dark:bg-charcoal-800 border border-old-money-300 dark:border-charcoal-600 text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-50 dark:hover:bg-charcoal-700'
+              ? 'bg-camel-600 text-white shadow-md' 
+              : 'bg-cream-100 dark:bg-charcoal-700 text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-200 dark:hover:bg-charcoal-600 hover:text-charcoal-900 dark:hover:text-charcoal-100'
           }`}
         >
           По местам
         </button>
         <button
           onClick={() => setActiveTab('score')}
-          className={`min-w-[120px] flex-1 rounded-xl px-4 py-3 font-bold transition-all duration-200 ${
+          className={`flex-1 min-w-[120px] px-4 py-2.5 rounded-xl font-semibold transition-all duration-200 ${
             activeTab === 'score' 
               ? 'bg-camel-600 text-white shadow-md' 
-              : 'bg-white border border-old-money-300 text-charcoal-700 hover:bg-cream-50'
+              : 'bg-cream-100 dark:bg-charcoal-700 text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-200 dark:hover:bg-charcoal-600 hover:text-charcoal-900 dark:hover:text-charcoal-100'
           }`}
         >
           По очкам
         </button>
         <button
           onClick={() => setActiveTab('speed')}
-          className={`min-w-[120px] flex-1 rounded-xl px-4 py-3 font-bold transition-all duration-200 ${
+          className={`flex-1 min-w-[120px] px-4 py-2.5 rounded-xl font-semibold transition-all duration-200 ${
             activeTab === 'speed' 
               ? 'bg-camel-600 text-white shadow-md' 
-              : 'bg-white border border-old-money-300 text-charcoal-700 hover:bg-cream-50'
+              : 'bg-cream-100 dark:bg-charcoal-700 text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-200 dark:hover:bg-charcoal-600 hover:text-charcoal-900 dark:hover:text-charcoal-100'
           }`}
         >
           По скорости
