@@ -206,7 +206,7 @@ export default function DogTooltip({ dogId, anchorRect, onClose }) {
                 ) : (
                   <div className="bg-white dark:bg-charcoal-800 rounded-lg p-3 shadow-sm mb-3 text-center">
                     <div className="text-[10px] text-gray-400 dark:text-gray-500 mb-1">Лучший результат</div>
-                    <div className="text-2xl font-bold text-camel-700 leading-none">
+                    <div className="text-2xl font-bold text-camel-700 dark:text-camel-400 leading-none">
                       {coursing.best_score ?? '—'}
                     </div>
                   </div>
@@ -268,9 +268,9 @@ export default function DogTooltip({ dogId, anchorRect, onClose }) {
                 ) : (
                   <div className="bg-white dark:bg-charcoal-800 rounded-lg p-3 shadow-sm mb-3 text-center">
                     <div className="text-[10px] text-gray-400 dark:text-gray-500 mb-1">Лучшая скорость</div>
-                    <div className="whitespace-nowrap text-2xl font-bold text-warm-blue-800 leading-none">
+                    <div className="whitespace-nowrap text-2xl font-bold text-warm-blue-800 dark:text-warm-blue-400 leading-none">
                       {racing.best_speed ?? '—'}
-                      {racing.best_speed && <span className="text-sm font-normal text-gray-400 ml-1">км/ч</span>}
+                      {racing.best_speed && <span className="text-sm font-normal text-gray-400 dark:text-gray-500 ml-1">км/ч</span>}
                     </div>
                   </div>
                 )}
