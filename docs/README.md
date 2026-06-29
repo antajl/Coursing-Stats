@@ -4,38 +4,51 @@
 
 ## Для ИИ-агентов
 
-**Важно:** Если вы ИИ-агент и впервые анализируете этот проект, **сначала прочитайте [00-AI-MEMORY-SETUP.md](00-AI-MEMORY-SETUP.md)** и создайте указанные memories. Это критически важно для корректной работы с проектом.
+**Важно:** Если вы ИИ-агент и впервые анализируете этот проект, **сначала прочитайте [ai/MEMORY-SETUP.md](ai/MEMORY-SETUP.md)** и создайте указанные memories. Это критически важно для корректной работы с проектом.
 
 ## Структура документации
 
 ### Начало работы
+- **[00-PROJECT-STATUS.md](00-PROJECT-STATUS.md)** — Текущий статус проекта
 - **[01-QUICK-START.md](01-QUICK-START.md)** — Быстрый старт для новых разработчиков
   - Установка зависимостей
   - Запуск серверов
   - Первые шаги
 
+### Вклад в проект
+- **[CONTRIBUTING.md](CONTRIBUTING.md)** — Как внести вклад
+  - Как начать
+  - Стандарты кода
+  - Pull Requests
+
+### История изменений
+- **[CHANGELOG.md](CHANGELOG.md)** — История изменений проекта
+  - Датированные записи
+  - Добавления, изменения, удаления
+
 ### Для ИИ-агента
-- **[02-AI-GUIDELINES.md](02-AI-GUIDELINES.md)** — Правила для ИИ-агента
+- **[ai/MEMORY-SETUP.md](ai/MEMORY-SETUP.md)** — Настройка памяти ИИ-агента
+  - Критически важные memories
+  - Правила работы с проектом
+- **[ai/GUIDELINES.md](ai/GUIDELINES.md)** — Правила для ИИ-агента
   - Зафиксированные архитектурные решения
   - Правила турниров курсинга
   - Критически важное (кодировка windows-1251)
   - Рабочий процесс
 
 ### Архитектура
-- **[03-ARCHITECTURE.md](03-ARCHITECTURE.md)** — Архитектура системы
+- **[architecture/ARCHITECTURE.md](architecture/ARCHITECTURE.md)** — Архитектура системы
   - High-level architecture
   - Components (Scraper, Database, Worker, Frontend)
   - Deployment state
-
-### API
-- **[04-API-REFERENCE.md](04-API-REFERENCE.md)** — Документация API
+- **[architecture/API-REFERENCE.md](architecture/API-REFERENCE.md)** — Документация API
   - Base URL
   - Endpoints с примерами
   - Response structures
   - Error handling
 
-### Парсинг
-- **[05-PARSING.md](05-PARSING.md)** — Парсинг данных
+### Данные
+- **[data/PARSING.md](data/PARSING.md)** — Парсинг данных
   - Источник данных
   - HTML формат по годам
   - Coursing parsing
@@ -43,46 +56,52 @@
   - Racing parsing
   - Статистика судей
   - Рекорды Донино
-
-### База данных
-- **[06-DATABASE.md](06-DATABASE.md)** — Работа с БД
+- **[data/DATABASE.md](data/DATABASE.md)** — Работа с БД
   - Schema
   - Views
   - Migrations
   - Data import/export
   - Sync local ↔ remote
+- **[data/SPEED_RECORDS.md](data/SPEED_RECORDS.md)** — Рекорды скорости
+  - Google Sheets интеграция
+  - Data processing pipeline
+  - Troubleshooting guide
 
-### Деплой
-- **[07-DEPLOYMENT.md](07-DEPLOYMENT.md)** — Деплой и инфраструктура
+### Разработка
+- **[development/DEVELOPMENT.md](development/DEVELOPMENT.md)** — Разработка
+  - File structure
+  - NPM scripts
+  - Local development
+  - Testing
+  - Code splitting
+- **[development/DEPLOYMENT.md](development/DEPLOYMENT.md)** — Деплой и инфраструктура
   - Cloudflare Pages
   - Cloudflare Worker
   - Cloudflare D1
   - GitHub Actions
   - Домены
 
-### Разработка
-- **[08-DEVELOPMENT.md](08-DEVELOPMENT.md)** — Разработка
-  - File structure
-  - NPM scripts
-  - Local development
-  - Testing
-  - Code splitting
+### Дизайн
+- **[design/design.md](design/design.md)** — Дизайн-система
+  - Цветовая палитра (light + dark mode)
+  - Оценка по направлениям
+  - План улучшения
+- **[design/changelog.md](design/changelog.md)** — История изменений дизайна
+  - Все визуальные изменения фронтенда
+  - Датированные записи
 
 ### История
-- **[09-DECISIONS-LOG.md](09-DECISIONS-LOG.md)** — Лог архитектурных решений
+- **[history/DECISIONS-LOG.md](history/DECISIONS-LOG.md)** — Лог архитектурных решений
   - Датированные записи
   - Эксперименты и их результаты
+- **[history/MIGRATION-PLAN.md](history/MIGRATION-PLAN.md)** — План миграции
 
 ### Планы
-- **[10-FUTURE-PLANS.md](10-FUTURE-PLANS.md)** — Планы на будущее
+- **[plans/FUTURE-PLANS.md](plans/FUTURE-PLANS.md)** — Планы на будущее
   - Статистика судей
   - Оптимизация сборки
   - Парсинг результатов
   - Общие задачи
-
-### Архив
-- **[archive/](archive/)** — Устаревшая документация
-  - AUDIT-ProCoursing.md
 
 ---
 
