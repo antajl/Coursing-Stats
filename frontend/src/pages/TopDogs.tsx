@@ -102,10 +102,12 @@ export default function TopDogs() {
     if (filterStartsFrom && dog.total_starts < parseInt(filterStartsFrom)) return false
     if (filterStartsTo && dog.total_starts > parseInt(filterStartsTo)) return false
     
-    // Фильтр по очкам
-    const scoreValue = filterScoreType === 'best' ? dog.best_score : dog.avg_score
-    if (filterScoreFrom && scoreValue < parseFloat(filterScoreFrom)) return false
-    if (filterScoreTo && scoreValue > parseFloat(filterScoreTo)) return false
+    // Фильтр по очкам - только если указаны значения
+    if (filterScoreFrom || filterScoreTo) {
+      const scoreValue = filterScoreType === 'best' ? dog.best_score : dog.avg_score
+      if (filterScoreFrom && scoreValue < parseFloat(filterScoreFrom)) return false
+      if (filterScoreTo && scoreValue > parseFloat(filterScoreTo)) return false
+    }
     
     return true
   })
@@ -123,10 +125,12 @@ export default function TopDogs() {
     if (filterStartsFrom && dog.total_starts < parseInt(filterStartsFrom)) return false
     if (filterStartsTo && dog.total_starts > parseInt(filterStartsTo)) return false
     
-    // Фильтр по скорости
-    const speedValue = filterSpeedType === 'best' ? dog.best_speed : dog.avg_speed
-    if (filterSpeedFrom && speedValue < parseFloat(filterSpeedFrom)) return false
-    if (filterSpeedTo && speedValue > parseFloat(filterSpeedTo)) return false
+    // Фильтр по скорости - только если указаны значения
+    if (filterSpeedFrom || filterSpeedTo) {
+      const speedValue = filterSpeedType === 'best' ? dog.best_speed : dog.avg_speed
+      if (filterSpeedFrom && speedValue < parseFloat(filterSpeedFrom)) return false
+      if (filterSpeedTo && speedValue > parseFloat(filterSpeedTo)) return false
+    }
     
     return true
   })

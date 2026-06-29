@@ -500,7 +500,7 @@ export default function EventResults() {
                                           
                                           return (
                                             <tr key={`judge${judgeIdx}`} className={judgeIdx > 0 ? "border-t border-old-money-200 dark:border-charcoal-600" : ""}>
-                                              <td className="py-1 pr-2">{judgeLabel}</td>
+                                              <td className="py-1 pr-2 text-charcoal-900 dark:text-charcoal-100">{judgeLabel}</td>
                                               {rawScores.heats.map((heat, heatIdx) => {
                                                 const heatJudge = heat.judges[judgeIdx];
                                                 const heatHasScores = heatJudge && heatJudge.scores && heatJudge.scores.some(s => s !== null);

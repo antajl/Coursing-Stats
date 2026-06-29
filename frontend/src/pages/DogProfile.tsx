@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useNavigate, useLocation } from 'react-router-dom'
 import { useDogProfile, useDogEvents, useDogSpeedRecords, useSpeedRecordsByBreed, useDogCoursingRecords, useCoursingRecordsByBreed } from '../hooks/useApi'
 import { DogSilhouettes, getSilhouetteType } from '../components/DogSilhouettes'
 import { toPng } from 'html-to-image'
@@ -8,9 +8,14 @@ import ErrorState from '../components/ErrorState'
 
 export default function DogProfile() {
   const { id } = useParams()
+  const navigate = useNavigate()
+  const location = useLocation()
   const [exporting, setExporting] = useState(false)
 
   const exportRef = useRef(null)
+
+  // Определяем источник навигации
+  const fromSpeedRecords = location.state?.from === 'speed-records'
 
   // React Query hooks
   const { data: dogDataResult, isLoading: loading } = useDogProfile(id)
@@ -194,10 +199,13 @@ export default function DogProfile() {
       <DogSilhouettes />
       <div className="max-w-4xl mx-auto">
         <div className="flex items-center justify-between mb-4 md:mb-6 flex-wrap gap-2">
-          <Link to="/top" className="font-medium text-camel-700 dark:text-camel-400 transition-colors hover:text-camel-800 dark:hover:text-camel-300">
+          <button
+            onClick={() => navigate(fromSpeedRecords ? '/speed-records' : '/top')}
+            className="font-medium text-camel-700 dark:text-camel-400 transition-colors hover:text-camel-800 dark:hover:text-camel-300"
+          >
             <span className="md:hidden">← Назад</span>
-            <span className="hidden md:inline">← Назад к топу</span>
-          </Link>
+            <span className="hidden md:inline">← {fromSpeedRecords ? 'Назад к рекордам' : 'Назад к топу'}</span>
+          </button>
           <button
             onClick={handleExport}
             disabled={exporting}
