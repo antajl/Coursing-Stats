@@ -399,23 +399,23 @@ export default function EventResults() {
                                                       <div className="grid grid-cols-5 gap-1 text-xs text-center">
                                                         <div className="bg-white dark:bg-charcoal-800 rounded p-1">
                                                           <div className="text-gray-500 dark:text-gray-400 text-[10px]">М</div>
-                                                          <div className="font-bold">{judge.scores[0] !== null ? judge.scores[0] : '-'}</div>
+                                                          <div className="font-bold text-charcoal-900 dark:text-charcoal-100">{judge.scores[0] !== null ? judge.scores[0] : '-'}</div>
                                                         </div>
                                                         <div className="bg-white dark:bg-charcoal-800 rounded p-1">
                                                           <div className="text-gray-500 dark:text-gray-400 text-[10px]">Р</div>
-                                                          <div className="font-bold">{judge.scores[1] !== null ? judge.scores[1] : '-'}</div>
+                                                          <div className="font-bold text-charcoal-900 dark:text-charcoal-100">{judge.scores[1] !== null ? judge.scores[1] : '-'}</div>
                                                         </div>
                                                         <div className="bg-white dark:bg-charcoal-800 rounded p-1">
                                                           <div className="text-gray-500 dark:text-gray-400 text-[10px]">В</div>
-                                                          <div className="font-bold">{judge.scores[2] !== null ? judge.scores[2] : '-'}</div>
+                                                          <div className="font-bold text-charcoal-900 dark:text-charcoal-100">{judge.scores[2] !== null ? judge.scores[2] : '-'}</div>
                                                         </div>
                                                         <div className="bg-white dark:bg-charcoal-800 rounded p-1">
                                                           <div className="text-gray-500 dark:text-gray-400 text-[10px]">П</div>
-                                                          <div className="font-bold">{judge.scores[3] !== null ? judge.scores[3] : '-'}</div>
+                                                          <div className="font-bold text-charcoal-900 dark:text-charcoal-100">{judge.scores[3] !== null ? judge.scores[3] : '-'}</div>
                                                         </div>
                                                         <div className="bg-white dark:bg-charcoal-800 rounded p-1">
                                                           <div className="text-gray-500 dark:text-gray-400 text-[10px]">Э</div>
-                                                          <div className="font-bold">{judge.scores[4] !== null ? judge.scores[4] : '-'}</div>
+                                                          <div className="font-bold text-charcoal-900 dark:text-charcoal-100">{judge.scores[4] !== null ? judge.scores[4] : '-'}</div>
                                                         </div>
                                                       </div>
                                                       <div className="mt-2 text-center">
@@ -510,11 +510,11 @@ export default function EventResults() {
                                                   <React.Fragment key={`heat${heatIdx}`}>
                                                     {heatHasScores ? (
                                                       <>
-                                                        <td className={`py-1 pr-2 text-center ${heatIdx > 0 ? 'border-l-2 border-old-money-200 dark:border-charcoal-600' : ''}`}>{heatJudge.scores[0] !== null ? heatJudge.scores[0] : '-'}</td>
-                                                        <td className="py-1 pr-2 text-center">{heatJudge.scores[1] !== null ? heatJudge.scores[1] : '-'}</td>
-                                                        <td className="py-1 pr-2 text-center">{heatJudge.scores[2] !== null ? heatJudge.scores[2] : '-'}</td>
-                                                        <td className="py-1 pr-2 text-center">{heatJudge.scores[3] !== null ? heatJudge.scores[3] : '-'}</td>
-                                                        <td className="py-1 pr-2 text-center">{heatJudge.scores[4] !== null ? heatJudge.scores[4] : '-'}</td>
+                                                        <td className={`py-1 pr-2 text-center ${heatIdx > 0 ? 'border-l-2 border-old-money-200 dark:border-charcoal-600' : ''} text-charcoal-900 dark:text-charcoal-100`}>{heatJudge.scores[0] !== null ? heatJudge.scores[0] : '-'}</td>
+                                                        <td className="py-1 pr-2 text-center text-charcoal-900 dark:text-charcoal-100">{heatJudge.scores[1] !== null ? heatJudge.scores[1] : '-'}</td>
+                                                        <td className="py-1 pr-2 text-center text-charcoal-900 dark:text-charcoal-100">{heatJudge.scores[2] !== null ? heatJudge.scores[2] : '-'}</td>
+                                                        <td className="py-1 pr-2 text-center text-charcoal-900 dark:text-charcoal-100">{heatJudge.scores[3] !== null ? heatJudge.scores[3] : '-'}</td>
+                                                        <td className="py-1 pr-2 text-center text-charcoal-900 dark:text-charcoal-100">{heatJudge.scores[4] !== null ? heatJudge.scores[4] : '-'}</td>
                                                         <td className="py-1 text-center font-bold text-old-money-800 dark:text-old-money-300">{heatJudge.sum || '-'}</td>
                                                       </>
                                                     ) : (
