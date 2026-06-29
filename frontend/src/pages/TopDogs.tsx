@@ -155,40 +155,6 @@ export default function TopDogs() {
   return (
     <div className="p-4">
 
-      {/* Tabs section */}
-      <div className="flex gap-2 border-b-2 border-cream-300 dark:border-charcoal-600 pb-2 overflow-x-auto scrollbar-thin scrollbar-gray-300">
-        <button
-          onClick={() => setActiveTab('placement')}
-          className={`flex-1 min-w-[120px] px-4 py-2.5 rounded-xl font-semibold transition-all duration-200 ${
-            activeTab === 'placement' 
-              ? 'bg-camel-600 text-white shadow-md' 
-              : 'bg-cream-100 dark:bg-charcoal-700 text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-200 dark:hover:bg-charcoal-600 hover:text-charcoal-900 dark:hover:text-charcoal-100'
-          }`}
-        >
-          По местам
-        </button>
-        <button
-          onClick={() => setActiveTab('score')}
-          className={`flex-1 min-w-[120px] px-4 py-2.5 rounded-xl font-semibold transition-all duration-200 ${
-            activeTab === 'score' 
-              ? 'bg-camel-600 text-white shadow-md' 
-              : 'bg-cream-100 dark:bg-charcoal-700 text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-200 dark:hover:bg-charcoal-600 hover:text-charcoal-900 dark:hover:text-charcoal-100'
-          }`}
-        >
-          По очкам
-        </button>
-        <button
-          onClick={() => setActiveTab('speed')}
-          className={`flex-1 min-w-[120px] px-4 py-2.5 rounded-xl font-semibold transition-all duration-200 ${
-            activeTab === 'speed' 
-              ? 'bg-camel-600 text-white shadow-md' 
-              : 'bg-cream-100 dark:bg-charcoal-700 text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-200 dark:hover:bg-charcoal-600 hover:text-charcoal-900 dark:hover:text-charcoal-100'
-          }`}
-        >
-          По скорости
-        </button>
-      </div>
-      
       {/* Search and filters section */}
       <div className="mb-4 flex flex-col md:flex-row gap-3 items-stretch">
         <input
@@ -315,6 +281,40 @@ export default function TopDogs() {
           </div>
         </FiltersDropdown>
         </div>
+      </div>
+
+      {/* Tabs section */}
+      <div className="flex gap-2 border-b-2 border-cream-300 dark:border-charcoal-600 pb-2 overflow-x-auto scrollbar-thin scrollbar-gray-300 mb-4">
+        <button
+          onClick={() => setActiveTab('placement')}
+          className={`flex-1 min-w-[120px] px-4 py-2.5 rounded-xl font-semibold transition-all duration-200 ${
+            activeTab === 'placement' 
+              ? 'bg-camel-600 text-white shadow-md' 
+              : 'bg-cream-100 dark:bg-charcoal-700 text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-200 dark:hover:bg-charcoal-600 hover:text-charcoal-900 dark:hover:text-charcoal-100'
+          }`}
+        >
+          По местам
+        </button>
+        <button
+          onClick={() => setActiveTab('score')}
+          className={`flex-1 min-w-[120px] px-4 py-2.5 rounded-xl font-semibold transition-all duration-200 ${
+            activeTab === 'score' 
+              ? 'bg-camel-600 text-white shadow-md' 
+              : 'bg-cream-100 dark:bg-charcoal-700 text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-200 dark:hover:bg-charcoal-600 hover:text-charcoal-900 dark:hover:text-charcoal-100'
+          }`}
+        >
+          По очкам
+        </button>
+        <button
+          onClick={() => setActiveTab('speed')}
+          className={`flex-1 min-w-[120px] px-4 py-2.5 rounded-xl font-semibold transition-all duration-200 ${
+            activeTab === 'speed' 
+              ? 'bg-camel-600 text-white shadow-md' 
+              : 'bg-cream-100 dark:bg-charcoal-700 text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-200 dark:hover:bg-charcoal-600 hover:text-charcoal-900 dark:hover:text-charcoal-100'
+          }`}
+        >
+          По скорости
+        </button>
       </div>
 
       {filteredPlacement.length === 0 && filteredScore.length === 0 && filteredSpeed.length === 0 ? (
