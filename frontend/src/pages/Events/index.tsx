@@ -330,7 +330,7 @@ export default function Events() {
             <span>Курсинг</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-warm-blue-300 dark:bg-warm-blue-900/25 border border-warm-blue-400 dark:border-warm-blue-700"></div>
+            <div className="w-3 h-3 rounded-full bg-warm-blue-300 dark:bg-warm-blue-900/35 border border-warm-blue-400 dark:border-warm-blue-700"></div>
             <span>БЗМП</span>
           </div>
           <div className="flex items-center gap-2">
@@ -439,7 +439,7 @@ export default function Events() {
               </th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-old-money-200">
+          <tbody className="divide-y-2 divide-old-money-200 dark:divide-charcoal-700">
             {filteredEvents.map((event) => (
               <tr 
                 key={event.id} 
