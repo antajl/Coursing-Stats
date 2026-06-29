@@ -121,7 +121,7 @@ export default function DogProfile() {
         <div ref={exportRef}>
 
         {/* Шапка профиля */}
-        <div className="mb-6 rounded-2xl border-2 border-old-money-200 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-8">
+        <div className="mb-4 rounded-2xl border-2 border-old-money-200 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-8">
           <div className="flex flex-wrap items-center gap-5 md:gap-8">
             <div className="flex h-20 w-20 flex-shrink-0 items-center justify-center rounded-2xl border-2 border-old-money-200 dark:border-charcoal-600 bg-cream-100 dark:bg-charcoal-700 md:h-24 md:w-24">
               <svg className="w-12 h-12 md:w-16 md:h-16 text-old-money-500 dark:text-old-money-400">
@@ -156,7 +156,7 @@ export default function DogProfile() {
         </div>
 
         {/* Статистика по дисциплинам */}
-        <div className={`grid gap-4 md:gap-6 mb-6 ${hasCoursingData && hasRacingData ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1'}`}>
+        <div className={`grid gap-4 md:gap-6 mb-4 ${hasCoursingData && hasRacingData ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1'}`}>
           {/* Курсинг */}
           {hasCoursingData && (
             <div className="rounded-2xl border-2 border-old-money-200 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
@@ -267,7 +267,7 @@ export default function DogProfile() {
 
         {/* Статистика Донино */}
         {hasSpeedRecords && (
-          <div className="rounded-2xl border-2 border-camel-200 dark:border-camel-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
+          <div className="rounded-2xl border-2 border-camel-200 dark:border-camel-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6 mb-4">
             <h2 className="text-lg md:text-xl font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 mb-4">Статистика Донино</h2>
             
             <div className="grid grid-cols-2 gap-4 mb-6">
