@@ -324,110 +324,115 @@ export default function DogProfile() {
         </div>
         )}
 
-        {/* Статистика Донино */}
-        {hasSpeedRecords && (
-          <div className="rounded-2xl border-2 border-camel-200 dark:border-camel-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6 mb-6">
-            <h2 className="text-lg md:text-xl font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 mb-4">Статистика Донино</h2>
-            
-            <div className="grid grid-cols-2 gap-4 mb-6">
-              <div className="bg-gradient-to-br from-camel-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-camel-200 dark:border-charcoal-500">
-                <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Лучшая скорость</div>
-                <div className="text-2xl font-bold text-camel-700 dark:text-camel-400">{speedStats.bestSpeed} <span className="text-sm font-normal">км/ч</span></div>
-              </div>
-              <div className="bg-gradient-to-br from-old-money-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-old-money-200 dark:border-charcoal-500">
-                <div className="text-xs font-medium text-old-money-600 mb-1 uppercase tracking-wide">Средняя скорость</div>
-                <div className="text-2xl font-bold text-charcoal-900 dark:text-charcoal-100">{speedStats.avgSpeed.toFixed(1)} <span className="text-sm font-normal">км/ч</span></div>
-              </div>
-            </div>
-
-            {speedStats.breedRank > 0 && (
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="bg-gradient-to-br from-camel-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-camel-200 dark:border-charcoal-500">
-                  <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Рейтинг в породе</div>
-                  <div className="text-2xl font-bold text-camel-700 dark:text-camel-400">#{speedStats.breedRank} <span className="text-base font-normal text-charcoal-600 dark:text-charcoal-400">из {speedStats.breedTotal}</span></div>
+        {/* Статистика Донино и Беги борзых */}
+        {(hasSpeedRecords || hasCoursingRecords) && (
+          <div className={`grid gap-4 md:gap-6 mb-6 ${hasSpeedRecords && hasCoursingRecords ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1'}`}>
+            {/* Статистика Донино */}
+            {hasSpeedRecords && (
+              <div className="rounded-2xl border-2 border-camel-200 dark:border-camel-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
+                <h2 className="text-lg md:text-xl font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 mb-4">Статистика Донино</h2>
+                
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="bg-gradient-to-br from-camel-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-camel-200 dark:border-charcoal-500">
+                    <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Лучшая скорость</div>
+                    <div className="text-2xl font-bold text-camel-700 dark:text-camel-400">{speedStats.bestSpeed} <span className="text-sm font-normal">км/ч</span></div>
+                  </div>
+                  <div className="bg-gradient-to-br from-old-money-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-old-money-200 dark:border-charcoal-500">
+                    <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Средняя скорость</div>
+                    <div className="text-2xl font-bold text-charcoal-900 dark:text-charcoal-100">{speedStats.avgSpeed.toFixed(1)} <span className="text-sm font-normal">км/ч</span></div>
+                  </div>
                 </div>
-                <div className="bg-gradient-to-br from-camel-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-camel-200 dark:border-charcoal-500">
-                  <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Процентиль</div>
-                  <div className="text-2xl font-bold text-camel-700 dark:text-camel-400">Топ {100 - speedStats.percentile}%</div>
+
+                {speedStats.breedRank > 0 && (
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div className="bg-gradient-to-br from-camel-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-camel-200 dark:border-charcoal-500">
+                      <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Рейтинг в породе</div>
+                      <div className="text-2xl font-bold text-camel-700 dark:text-camel-400">#{speedStats.breedRank} <span className="text-base font-normal text-charcoal-600 dark:text-charcoal-400">из {speedStats.breedTotal}</span></div>
+                    </div>
+                    <div className="bg-gradient-to-br from-camel-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-camel-200 dark:border-charcoal-500">
+                      <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Процентиль</div>
+                      <div className="text-2xl font-bold text-camel-700 dark:text-camel-400">Топ {100 - speedStats.percentile}%</div>
+                    </div>
+                  </div>
+                )}
+
+                {speedStats.screenshotUrl && (
+                  <div className="mb-6">
+                    <a
+                      href={speedStats.screenshotUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm font-medium text-camel-700 dark:text-camel-400 hover:text-camel-800 dark:hover:text-camel-300 transition-colors"
+                    >
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                      </svg>
+                      Скриншот лучшего результата
+                    </a>
+                  </div>
+                )}
+
+                {/* График прогресса */}
+                <div>
+                  <h3 className="text-lg font-bold text-charcoal-900 dark:text-charcoal-100 mb-3">Прогресс во времени</h3>
+                  <div className="space-y-2">
+                    {speedStats.history.map((record, idx) => (
+                      <div key={idx} className="flex items-center gap-4">
+                        <div className="w-24 text-sm text-charcoal-700 dark:text-charcoal-300 text-right">{record.date}</div>
+                        <div className="flex-1 bg-cream-200 dark:bg-charcoal-600 rounded-full h-6 overflow-hidden relative">
+                          <div 
+                            className="bg-gradient-to-r from-camel-400 to-camel-600 h-full rounded-full transition-all duration-500"
+                            style={{ width: `${(record.speed_km_h / 80) * 100}%` }}
+                          />
+                          <div className="absolute inset-0 flex items-center justify-center text-sm font-bold text-charcoal-900 dark:text-charcoal-100">
+                            {record.speed_km_h} км/ч
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             )}
 
-            {speedStats.screenshotUrl && (
-              <div className="mb-6">
-                <a
-                  href={speedStats.screenshotUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm font-medium text-camel-700 dark:text-camel-400 hover:text-camel-800 dark:hover:text-camel-300 transition-colors"
-                >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                  Скриншот лучшего результата
-                </a>
+            {/* Статистика бегов борзых */}
+            {hasCoursingRecords && (
+              <div className="rounded-2xl border-2 border-camel-200 dark:border-camel-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
+                <h2 className="text-lg md:text-xl font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 mb-4">Беги борзых</h2>
+                
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="bg-gradient-to-br from-camel-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-camel-200 dark:border-charcoal-500">
+                    <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Лучшее время</div>
+                    <div className="text-2xl font-bold text-camel-700 dark:text-camel-400">{coursingStats.bestTime} <span className="text-sm font-normal">сек</span></div>
+                  </div>
+                  <div className="bg-gradient-to-br from-old-money-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-old-money-200 dark:border-charcoal-500">
+                    <div className="text-xs font-medium text-old-money-600 mb-1 uppercase tracking-wide">Среднее время</div>
+                    <div className="text-2xl font-bold text-charcoal-900 dark:text-charcoal-100">{coursingStats.avgTime.toFixed(2)} <span className="text-sm font-normal">сек</span></div>
+                  </div>
+                </div>
+
+                {/* График прогресса */}
+                <div>
+                  <h3 className="text-lg font-bold text-charcoal-900 dark:text-charcoal-100 mb-3">Прогресс во времени</h3>
+                  <div className="space-y-2">
+                    {coursingStats.history.map((record, idx) => (
+                      <div key={idx} className="flex items-center gap-4">
+                        <div className="w-24 text-sm text-charcoal-700 dark:text-charcoal-300 text-right">{record.date}</div>
+                        <div className="flex-1 bg-cream-200 dark:bg-charcoal-600 rounded-full h-6 overflow-hidden relative">
+                          <div 
+                            className="bg-gradient-to-r from-camel-400 to-camel-600 h-full rounded-full transition-all duration-500"
+                            style={{ width: `${(30 / record.time_seconds) * 100}%` }}
+                          />
+                          <div className="absolute inset-0 flex items-center justify-center text-sm font-bold text-charcoal-900 dark:text-charcoal-100">
+                            {record.time_seconds} сек
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             )}
-
-            {/* График прогресса */}
-            <div>
-              <h3 className="text-lg font-bold text-charcoal-900 dark:text-charcoal-100 mb-3">Прогресс во времени</h3>
-              <div className="space-y-2">
-                {speedStats.history.map((record, idx) => (
-                  <div key={idx} className="flex items-center gap-4">
-                    <div className="w-24 text-sm text-charcoal-700 dark:text-charcoal-300 text-right">{record.date}</div>
-                    <div className="flex-1 bg-cream-200 dark:bg-charcoal-600 rounded-full h-6 overflow-hidden relative">
-                      <div 
-                        className="bg-gradient-to-r from-camel-400 to-camel-600 h-full rounded-full transition-all duration-500"
-                        style={{ width: `${(record.speed_km_h / 80) * 100}%` }}
-                      />
-                      <div className="absolute inset-0 flex items-center justify-center text-sm font-bold text-charcoal-900 dark:text-charcoal-100">
-                        {record.speed_km_h} км/ч
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* Статистика бегов борзых */}
-        {hasCoursingRecords && (
-          <div className="rounded-2xl border-2 border-camel-200 dark:border-camel-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6 mb-6">
-            <h2 className="text-lg md:text-xl font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 mb-4">Беги борзых</h2>
-            
-            <div className="grid grid-cols-2 gap-4 mb-6">
-              <div className="bg-gradient-to-br from-camel-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-camel-200 dark:border-charcoal-500">
-                <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Лучшее время</div>
-                <div className="text-2xl font-bold text-camel-700 dark:text-camel-400">{coursingStats.bestTime} <span className="text-sm font-normal">сек</span></div>
-              </div>
-              <div className="bg-gradient-to-br from-old-money-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-old-money-200 dark:border-charcoal-500">
-                <div className="text-xs font-medium text-old-money-600 mb-1 uppercase tracking-wide">Среднее время</div>
-                <div className="text-2xl font-bold text-charcoal-900 dark:text-charcoal-100">{coursingStats.avgTime.toFixed(2)} <span className="text-sm font-normal">сек</span></div>
-              </div>
-            </div>
-
-            {/* График прогресса */}
-            <div>
-              <h3 className="text-lg font-bold text-charcoal-900 dark:text-charcoal-100 mb-3">Прогресс во времени</h3>
-              <div className="space-y-2">
-                {coursingStats.history.map((record, idx) => (
-                  <div key={idx} className="flex items-center gap-4">
-                    <div className="w-24 text-sm text-charcoal-700 dark:text-charcoal-300 text-right">{record.date}</div>
-                    <div className="flex-1 bg-cream-200 dark:bg-charcoal-600 rounded-full h-6 overflow-hidden relative">
-                      <div 
-                        className="bg-gradient-to-r from-camel-400 to-camel-600 h-full rounded-full transition-all duration-500"
-                        style={{ width: `${(30 / record.time_seconds) * 100}%` }}
-                      />
-                      <div className="absolute inset-0 flex items-center justify-center text-sm font-bold text-charcoal-900 dark:text-charcoal-100">
-                        {record.time_seconds} сек
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
         )}
 
