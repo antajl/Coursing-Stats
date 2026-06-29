@@ -86,7 +86,11 @@ export default function DogProfile() {
       return parseDate(b.date) - parseDate(a.date);
     });
     
-    return { bestSpeed, avgSpeed, history };
+    // Находим лучший результат и его скриншот
+    const bestRecord = speedRecords.find(r => parseFloat(r.speed_km_h) === bestSpeed);
+    const screenshotUrl = bestRecord?.screenshot_url || null;
+    
+    return { bestSpeed, avgSpeed, history, screenshotUrl };
   })() : null
 
   const silhouetteType = getSilhouetteType(dog?.breed)
@@ -282,6 +286,22 @@ export default function DogProfile() {
                 <div className="text-2xl font-bold text-charcoal-900 dark:text-charcoal-100">{speedStats.avgSpeed.toFixed(1)} <span className="text-sm font-normal">км/ч</span></div>
               </div>
             </div>
+
+            {speedStats.screenshotUrl && (
+              <div className="mb-6">
+                <a
+                  href={speedStats.screenshotUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-camel-700 dark:text-camel-400 hover:text-camel-800 dark:hover:text-camel-300 transition-colors"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  Скриншот лучшего результата
+                </a>
+              </div>
+            )}
 
             {/* График прогресса */}
             <div>
