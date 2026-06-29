@@ -3,6 +3,7 @@ import { useSearchParams } from 'react-router-dom'
 import { useTopPlacement, useTopScore, useTopSpeed, useBreeds, useYears } from '../hooks/useApi'
 import DogStatsTable from '../components/DogStatsTable'
 import FiltersDropdown from '../components/FiltersDropdown'
+import EmptyState from '../components/EmptyState'
 
 export default function TopDogs() {
   const [searchParams, setSearchParams] = useSearchParams()
@@ -10,7 +11,7 @@ export default function TopDogs() {
 
   const [activeTab, setActiveTab] = useState(() => searchParams.get('rankingTab') || 'placement')
   const [filterBreed, setFilterBreed] = useState(() => searchParams.get('breed') || '')
-  const [filterYear, setFilterYear] = useState(() => searchParams.get('year') || '')
+  const [filterYear, setFilterYear] = useState(() => searchParams.get('year') || '2026')
   const [searchQuery, setSearchQuery] = useState(() => searchParams.get('search') || '')
   
   // Новые фильтры
@@ -52,7 +53,7 @@ export default function TopDogs() {
   const topSpeed = topSpeedData?.success ? (Array.isArray(topSpeedData.data) ? topSpeedData.data : (topSpeedData.data?.items || [])) : []
 
   const handleResetFilters = () => {
-    setFilterYear('')
+    setFilterYear('2026')
     setFilterBreed('')
     setFilterStartsFrom('')
     setFilterStartsTo('')
@@ -149,30 +150,30 @@ export default function TopDogs() {
       <div className="mb-4 flex gap-2 flex-wrap">
         <button
           onClick={() => setActiveTab('placement')}
-          className={`flex-1 min-w-[120px] px-4 py-3 rounded-xl font-bold transition-all duration-300 ${
+          className={`min-w-[120px] flex-1 rounded-xl px-4 py-3 font-bold transition-all duration-200 ${
             activeTab === 'placement' 
-              ? 'bg-camel-600 text-white shadow-lg' 
-              : 'bg-white border-2 border-cream-300 text-charcoal-700 hover:bg-cream-50'
+              ? 'bg-camel-600 dark:bg-camel-700 text-white shadow-md' 
+              : 'bg-white dark:bg-charcoal-800 border border-old-money-300 dark:border-charcoal-600 text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-50 dark:hover:bg-charcoal-700'
           }`}
         >
           По местам
         </button>
         <button
           onClick={() => setActiveTab('score')}
-          className={`flex-1 min-w-[120px] px-4 py-3 rounded-xl font-bold transition-all duration-300 ${
+          className={`min-w-[120px] flex-1 rounded-xl px-4 py-3 font-bold transition-all duration-200 ${
             activeTab === 'score' 
-              ? 'bg-camel-600 text-white shadow-lg' 
-              : 'bg-white border-2 border-cream-300 text-charcoal-700 hover:bg-cream-50'
+              ? 'bg-camel-600 text-white shadow-md' 
+              : 'bg-white border border-old-money-300 text-charcoal-700 hover:bg-cream-50'
           }`}
         >
           По очкам
         </button>
         <button
           onClick={() => setActiveTab('speed')}
-          className={`flex-1 min-w-[120px] px-4 py-3 rounded-xl font-bold transition-all duration-300 ${
+          className={`min-w-[120px] flex-1 rounded-xl px-4 py-3 font-bold transition-all duration-200 ${
             activeTab === 'speed' 
-              ? 'bg-camel-600 text-white shadow-lg' 
-              : 'bg-white border-2 border-cream-300 text-charcoal-700 hover:bg-cream-50'
+              ? 'bg-camel-600 text-white shadow-md' 
+              : 'bg-white border border-old-money-300 text-charcoal-700 hover:bg-cream-50'
           }`}
         >
           По скорости
@@ -186,7 +187,7 @@ export default function TopDogs() {
           placeholder="Поиск по кличке, породе или количеству участий..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="flex-1 h-12 px-5 py-3 bg-white border-2 border-old-money-300 rounded-xl text-old-money-800 focus:ring-2 focus:ring-gold-400 focus:border-transparent transition-all duration-300 shadow-sm"
+          className="h-12 flex-1 rounded-xl border border-old-money-300 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 px-5 py-3 text-charcoal-800 dark:text-charcoal-200 shadow-sm transition-all duration-200 focus:border-camel-500 focus:outline-none focus:ring-4 focus:ring-camel-100 dark:focus:ring-camel-900"
         />
 
         <div className="flex gap-3">
@@ -194,12 +195,12 @@ export default function TopDogs() {
             <select
               value={filterYear}
               onChange={(e) => setFilterYear(e.target.value)}
-              className="w-full h-12 px-4 py-3 bg-white border-2 border-old-money-300 rounded-xl text-old-money-800 focus:ring-2 focus:ring-gold-400 focus:border-transparent transition-all duration-300"
+              className="h-12 w-full rounded-xl border border-old-money-300 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 px-4 py-3 text-charcoal-800 dark:text-charcoal-200 shadow-sm transition-all duration-200 focus:border-camel-500 focus:outline-none focus:ring-4 focus:ring-camel-100 dark:focus:ring-camel-900"
               disabled={false}
             >
               <option value="">Все года</option>
               {yearValues.map((y) => (
-                <option key={y} value={y} className="text-gray-900">{y}</option>
+                <option key={y} value={y} className="text-gray-900 dark:text-gray-100">{y}</option>
               ))}
             </select>
           </div>
@@ -210,7 +211,7 @@ export default function TopDogs() {
                 <select
                   value={filterBreed}
                   onChange={(e) => setFilterBreed(e.target.value)}
-                  className="w-full h-12 px-4 py-3 bg-white border-2 border-old-money-300 rounded-xl text-old-money-800 focus:ring-2 focus:ring-gold-400 focus:border-transparent transition-all duration-300"
+                  className="h-12 w-full rounded-xl border border-old-money-300 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 px-4 py-3 text-charcoal-800 dark:text-charcoal-200 shadow-sm transition-all duration-200 focus:border-camel-500 focus:outline-none focus:ring-4 focus:ring-camel-100 dark:focus:ring-camel-900"
                 >
                   <option value="">Все породы</option>
                   {breedValues.map((b) => (
@@ -222,30 +223,30 @@ export default function TopDogs() {
 
           <div className="flex gap-3 items-center">
             <div className="flex-1">
-              <label className="block text-sm font-semibold text-old-money-700 mb-2">Участий от</label>
+              <label className="mb-2 block text-sm font-semibold text-charcoal-700 dark:text-charcoal-300">Участий от</label>
               <input
                 type="number"
                 value={filterStartsFrom}
                 onChange={(e) => setFilterStartsFrom(e.target.value.replace(/[^0-9]/g, ''))}
                 placeholder="От"
-                className="w-full h-12 px-4 py-3 bg-white border-2 border-old-money-300 rounded-xl text-old-money-800 focus:ring-2 focus:ring-gold-400 focus:border-transparent transition-all duration-300 [-moz-appearance:_textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                className="h-12 w-full rounded-xl border border-old-money-300 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 px-4 py-3 text-charcoal-800 dark:text-charcoal-200 shadow-sm transition-all duration-200 focus:border-camel-500 focus:outline-none focus:ring-4 focus:ring-camel-100 dark:focus:ring-camel-900 [-moz-appearance:_textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
               />
             </div>
 
             <div className="flex-1">
-              <label className="block text-sm font-semibold text-old-money-700 mb-2">Участий до</label>
+              <label className="mb-2 block text-sm font-semibold text-charcoal-700 dark:text-charcoal-300">Участий до</label>
               <input
                 type="number"
                 value={filterStartsTo}
                 onChange={(e) => setFilterStartsTo(e.target.value.replace(/[^0-9]/g, ''))}
                 placeholder="До"
-                className="w-full h-12 px-4 py-3 bg-white border-2 border-old-money-300 rounded-xl text-old-money-800 focus:ring-2 focus:ring-gold-400 focus:border-transparent transition-all duration-300 [-moz-appearance:_textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                className="h-12 w-full rounded-xl border border-old-money-300 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 px-4 py-3 text-charcoal-800 dark:text-charcoal-200 shadow-sm transition-all duration-200 focus:border-camel-500 focus:outline-none focus:ring-4 focus:ring-camel-100 dark:focus:ring-camel-900 [-moz-appearance:_textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
               />
             </div>
           </div>
 
-          <div className="border-t-2 border-old-money-200 pt-4">
-            <h3 className="text-sm font-bold text-charcoal-700 mb-3">Фильтры по очкам</h3>
+          <div className="border-t-2 border-old-money-200 dark:border-charcoal-600 pt-4">
+            <h3 className="mb-3 text-sm font-bold text-charcoal-800 dark:text-charcoal-200">Фильтры по очкам</h3>
             <div className="flex gap-3 items-center">
               <input
                 type="number"
@@ -253,7 +254,7 @@ export default function TopDogs() {
                 value={filterScoreFrom}
                 onChange={(e) => setFilterScoreFrom(e.target.value.replace(/[^0-9.]/g, ''))}
                 placeholder="От"
-                className="w-36 h-12 px-4 py-3 bg-white border-2 border-old-money-300 rounded-xl text-old-money-800 focus:ring-2 focus:ring-gold-400 focus:border-transparent transition-all duration-300 [-moz-appearance:_textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                className="h-12 w-36 rounded-xl border border-old-money-300 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 px-4 py-3 text-charcoal-800 dark:text-charcoal-200 shadow-sm transition-all duration-200 focus:border-camel-500 focus:outline-none focus:ring-4 focus:ring-camel-100 dark:focus:ring-camel-900 [-moz-appearance:_textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
               />
               <input
                 type="number"
@@ -261,12 +262,12 @@ export default function TopDogs() {
                 value={filterScoreTo}
                 onChange={(e) => setFilterScoreTo(e.target.value.replace(/[^0-9.]/g, ''))}
                 placeholder="До"
-                className="w-36 h-12 px-4 py-3 bg-white border-2 border-old-money-300 rounded-xl text-old-money-800 focus:ring-2 focus:ring-gold-400 focus:border-transparent transition-all duration-300 [-moz-appearance:_textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                className="h-12 w-36 rounded-xl border border-old-money-300 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 px-4 py-3 text-charcoal-800 dark:text-charcoal-200 shadow-sm transition-all duration-200 focus:border-camel-500 focus:outline-none focus:ring-4 focus:ring-camel-100 dark:focus:ring-camel-900 [-moz-appearance:_textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
               />
               <select
                 value={filterScoreType}
                 onChange={(e) => setFilterScoreType(e.target.value)}
-                className="flex-1 h-12 px-4 py-3 bg-white border-2 border-old-money-300 rounded-xl text-old-money-800 focus:ring-2 focus:ring-gold-400 focus:border-transparent transition-all duration-300"
+                className="h-12 flex-1 rounded-xl border border-old-money-300 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 px-4 py-3 text-charcoal-800 dark:text-charcoal-200 shadow-sm transition-all duration-200 focus:border-camel-500 focus:outline-none focus:ring-4 focus:ring-camel-100 dark:focus:ring-camel-900"
               >
                 <option value="best">Лучший</option>
                 <option value="avg">Средний</option>
@@ -274,8 +275,8 @@ export default function TopDogs() {
             </div>
           </div>
 
-          <div className="border-t-2 border-old-money-200 pt-4">
-            <h3 className="text-sm font-bold text-charcoal-700 mb-3">Фильтры по скорости</h3>
+          <div className="border-t-2 border-old-money-200 dark:border-charcoal-600 pt-4">
+            <h3 className="mb-3 text-sm font-bold text-charcoal-800 dark:text-charcoal-200">Фильтры по скорости</h3>
             <div className="flex gap-3 items-center">
               <input
                 type="number"
@@ -283,7 +284,7 @@ export default function TopDogs() {
                 value={filterSpeedFrom}
                 onChange={(e) => setFilterSpeedFrom(e.target.value.replace(/[^0-9.]/g, ''))}
                 placeholder="От"
-                className="w-36 h-12 px-4 py-3 bg-white border-2 border-old-money-300 rounded-xl text-old-money-800 focus:ring-2 focus:ring-gold-400 focus:border-transparent transition-all duration-300 [-moz-appearance:_textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                className="h-12 w-36 rounded-xl border border-old-money-300 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 px-4 py-3 text-charcoal-800 dark:text-charcoal-200 shadow-sm transition-all duration-200 focus:border-camel-500 focus:outline-none focus:ring-4 focus:ring-camel-100 dark:focus:ring-camel-900 [-moz-appearance:_textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
               />
               <input
                 type="number"
@@ -291,12 +292,12 @@ export default function TopDogs() {
                 value={filterSpeedTo}
                 onChange={(e) => setFilterSpeedTo(e.target.value.replace(/[^0-9.]/g, ''))}
                 placeholder="До"
-                className="w-36 h-12 px-4 py-3 bg-white border-2 border-old-money-300 rounded-xl text-old-money-800 focus:ring-2 focus:ring-gold-400 focus:border-transparent transition-all duration-300 [-moz-appearance:_textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                className="h-12 w-36 rounded-xl border border-old-money-300 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 px-4 py-3 text-charcoal-800 dark:text-charcoal-200 shadow-sm transition-all duration-200 focus:border-camel-500 focus:outline-none focus:ring-4 focus:ring-camel-100 dark:focus:ring-camel-900 [-moz-appearance:_textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
               />
               <select
                 value={filterSpeedType}
                 onChange={(e) => setFilterSpeedType(e.target.value)}
-                className="flex-1 h-12 px-4 py-3 bg-white border-2 border-old-money-300 rounded-xl text-old-money-800 focus:ring-2 focus:ring-gold-400 focus:border-transparent transition-all duration-300"
+                className="h-12 flex-1 rounded-xl border border-old-money-300 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 px-4 py-3 text-charcoal-800 dark:text-charcoal-200 shadow-sm transition-all duration-200 focus:border-camel-500 focus:outline-none focus:ring-4 focus:ring-camel-100 dark:focus:ring-camel-900"
               >
                 <option value="best">Лучшая</option>
                 <option value="avg">Средняя</option>
@@ -308,10 +309,10 @@ export default function TopDogs() {
       </div>
 
       {filteredPlacement.length === 0 && filteredScore.length === 0 && filteredSpeed.length === 0 ? (
-        <div className="text-center py-12 text-old-money-600">
-          <p className="text-xl">Нет данных для выбранных фильтров</p>
-          <p className="text-sm mt-2">Попробуйте изменить год или убрать фильтры</p>
-        </div>
+        <EmptyState
+          title="Нет данных для выбранных фильтров"
+          description="Попробуйте изменить год или убрать фильтры"
+        />
       ) : activeTab === 'placement' ? (
         <DogStatsTable key={`placement-${filterYear}-${filterBreed}`} data={filteredPlacement} type="placement" filterYear={filterYear} />
       ) : activeTab === 'score' ? (
