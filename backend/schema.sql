@@ -134,6 +134,7 @@ ORDER BY e.year DESC, best_score DESC;
 -- Таблица для хранения рекордов скорости из Google Sheets
 CREATE TABLE IF NOT EXISTS speed_records (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
+  dog_id INTEGER REFERENCES dogs(id),
   breed TEXT NOT NULL,
   sex TEXT NOT NULL,
   name TEXT NOT NULL,
@@ -147,3 +148,4 @@ CREATE TABLE IF NOT EXISTS speed_records (
 
 CREATE INDEX IF NOT EXISTS idx_speed_records_breed ON speed_records(breed);
 CREATE INDEX IF NOT EXISTS idx_speed_records_speed ON speed_records(speed_km_h DESC);
+CREATE INDEX IF NOT EXISTS idx_speed_records_dog_id ON speed_records(dog_id);

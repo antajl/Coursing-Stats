@@ -296,11 +296,30 @@ function esc(value) {
 function generateSQL(records) {
   const lines = ["-- speed_records", "-- Insert or update records (no DELETE)"];
 
+  // Сначала создаём записи в dogs если их нет
+  const dogsSet = new Set();
+  records.forEach(record => {
+    const key = `${record.name}_${record.breed}`;
+    if (!dogsSet.has(key)) {
+      dogsSet.add(key);
+      // Конвертируем пол: С -> F, К -> M
+      const sex = record.sex === 'С' ? 'F' : record.sex === 'К' ? 'M' : record.sex;
+      lines.push(`
+INSERT OR IGNORE INTO dogs (name_lat, breed, sex)
+VALUES (
+  ${esc(record.name)},
+  ${esc(record.breed)},
+  ${esc(sex)}
+);`);
+    }
+  });
+
+  // Затем вставляем speed_records с dog_id
   for (const record of records) {
     const historyJson = record.history && record.history.length > 0 ? JSON.stringify(record.history) : null;
     lines.push(`
-INSERT OR REPLACE INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)
-VALUES (
+INSERT OR REPLACE INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history, dog_id)
+SELECT
   ${esc(record.breed)},
   ${esc(record.sex)},
   ${esc(record.name)},
@@ -308,8 +327,10 @@ VALUES (
   ${esc(record.date)},
   ${record.screenshot_url ? esc(record.screenshot_url) : "NULL"},
   ${esc(record.status || 'normal')},
-  ${historyJson ? esc(historyJson) : "NULL"}
-);`);
+  ${historyJson ? esc(historyJson) : "NULL"},
+  id
+FROM dogs
+WHERE name_lat = ${esc(record.name)} AND breed = ${esc(record.breed)};`);
   }
 
   return lines.join("\n");
