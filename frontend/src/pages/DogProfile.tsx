@@ -423,7 +423,7 @@ export default function DogProfile() {
               </div>
             )}
 
-            {/* Статистика бегов борзых */}
+            {/* Статистика Беги борзых */}
             {hasCoursingRecords && (
               <div className="rounded-2xl border-2 border-camel-200 dark:border-camel-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
                 <h2 className="text-lg md:text-xl font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 mb-4">Беги борзых</h2>
