@@ -4,6 +4,7 @@ import { useTopPlacement, useTopScore, useTopSpeed, useBreeds, useYears } from '
 import DogStatsTable from '../components/DogStatsTable'
 import FiltersDropdown from '../components/FiltersDropdown'
 import EmptyState from '../components/EmptyState'
+import ErrorState from '../components/ErrorState'
 import SkeletonLoader from '../components/SkeletonLoader'
 
 export default function TopDogs() {

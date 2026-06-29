@@ -37,7 +37,7 @@ export default function DogProfile() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-cream-50 dark:bg-charcoal-800 p-6">
+      <div className="min-h-screen bg-cream-50 dark:bg-charcoal-900 p-6">
         <div className="max-w-4xl mx-auto">
           <SkeletonLoader variant="card" count={3} />
         </div>
