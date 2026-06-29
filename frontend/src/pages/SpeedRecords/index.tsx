@@ -506,7 +506,7 @@ function SpeedRecords() {
         )}
 
         {!loading && !error && filteredRecords.length > 0 && (
-          <div className="overflow-visible rounded-xl border border-old-money-200 dark:border-charcoal-600">
+          <div className="border border-old-money-200 dark:border-charcoal-600">
             {/* Mobile cards */}
             <div className="md:hidden space-y-3 p-3">
               {filteredRecords.map((record) => (
@@ -537,7 +537,7 @@ function SpeedRecords() {
             </div>
 
             {/* Desktop table */}
-            <div className="hidden md:block overflow-x-auto">
+            <div className="hidden md:block overflow-x-auto rounded-xl">
               <table className="w-full min-w-[700px]">
               <thead className="bg-cream-100 dark:bg-charcoal-700">
                 <tr>
@@ -728,7 +728,7 @@ function SpeedRecords() {
                 </div>
 
                 {/* Таблица бегов борзых */}
-                <div className="overflow-visible rounded-xl border border-old-money-200 dark:border-charcoal-600">
+                <div className="border border-old-money-200 dark:border-charcoal-600">
                   {/* Mobile cards */}
                   <div className="md:hidden space-y-3 p-3">
                     {filteredCoursingRecords.map((record) => (
@@ -749,7 +749,7 @@ function SpeedRecords() {
                   </div>
 
                   {/* Desktop table */}
-                  <div className="hidden md:block overflow-x-auto">
+                  <div className="hidden md:block overflow-x-auto rounded-xl">
                     <table className="w-full min-w-[600px]">
                       <thead className="bg-cream-100 dark:bg-charcoal-700">
                         <tr>
