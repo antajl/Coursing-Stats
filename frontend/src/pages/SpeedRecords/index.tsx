@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useMemo, useCallback } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, useNavigate } from 'react-router-dom';
 import { createPortal } from 'react-dom';
 import { useSpeedRecords, useCoursingRecords } from '../../hooks/useApi';
 import { toPng } from 'html-to-image';
@@ -7,6 +7,7 @@ import * as XLSX from 'xlsx';
 import SpeedRecordsStats from './Stats';
 
 function SpeedRecords() {
+  const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const [activeTab, setActiveTab] = useState(() => searchParams.get('tab') || 'table');
 
@@ -513,7 +514,18 @@ function SpeedRecords() {
                 <div key={record.id} className="bg-white dark:bg-charcoal-800 rounded-xl p-4 shadow-sm border border-cream-200 dark:border-charcoal-600">
                   <div className="flex justify-between items-start mb-2">
                     <div className="flex-1">
-                      <div className="font-bold text-charcoal-900 dark:text-charcoal-100 mb-1">{record.name}</div>
+                      <div 
+                        className={`font-bold text-charcoal-900 dark:text-charcoal-100 mb-1 cursor-pointer hover:text-camel-700 dark:hover:text-camel-400 transition-colors ${
+                          record.dog_id ? '' : 'cursor-default'
+                        }`}
+                        onClick={() => {
+                          if (record.dog_id) {
+                            navigate(`/dog/${record.dog_id}`);
+                          }
+                        }}
+                      >
+                        {record.name}
+                      </div>
                       <div className="text-xs text-old-money-600 dark:text-old-money-400">{record.breed} • {record.sex === 'С' ? 'Сука' : record.sex === 'К' ? 'Кабель' : record.sex}</div>
                       <div className="text-xs text-old-money-500 dark:text-old-money-400 mt-1">{record.date}</div>
                     </div>
@@ -582,8 +594,13 @@ function SpeedRecords() {
                         className={`font-semibold text-charcoal-900 dark:text-charcoal-100 transition-colors cursor-pointer ${
                           record.history && record.history.length > 0 
                             ? 'rounded-lg border border-camel-300 dark:border-camel-600 px-2 py-0.5 text-camel-700 dark:text-camel-400 hover:text-camel-800 dark:hover:text-camel-300' 
-                            : ''
+                            : 'hover:text-camel-700 dark:hover:text-camel-400'
                         }`}
+                        onClick={() => {
+                          if (record.dog_id) {
+                            navigate(`/dog/${record.dog_id}`);
+                          }
+                        }}
                         onMouseEnter={(e) => {
                           if (record.history && record.history.length > 0) {
                             const rect = e.target.getBoundingClientRect();
@@ -735,7 +752,18 @@ function SpeedRecords() {
                       <div key={record.id} className="bg-white dark:bg-charcoal-800 rounded-xl p-4 shadow-sm border border-cream-200 dark:border-charcoal-600">
                         <div className="flex justify-between items-start mb-2">
                           <div className="flex-1">
-                            <div className="font-bold text-charcoal-900 dark:text-charcoal-100 mb-1">{record.name}</div>
+                            <div 
+                              className={`font-bold text-charcoal-900 dark:text-charcoal-100 mb-1 cursor-pointer hover:text-camel-700 dark:hover:text-camel-400 transition-colors ${
+                                record.dog_id ? '' : 'cursor-default'
+                              }`}
+                              onClick={() => {
+                                if (record.dog_id) {
+                                  navigate(`/dog/${record.dog_id}`);
+                                }
+                              }}
+                            >
+                              {record.name}
+                            </div>
                             <div className="text-xs text-gray-600 dark:text-gray-400">{record.breed}</div>
                             <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">{record.date}</div>
                           </div>
@@ -767,8 +795,13 @@ function SpeedRecords() {
                                 className={`font-semibold text-charcoal-900 dark:text-charcoal-100 transition-colors cursor-pointer ${
                                   record.history && record.history.length > 0 
                                     ? 'rounded-lg border border-camel-300 dark:border-camel-600 px-2 py-0.5 text-camel-700 dark:text-camel-400 hover:text-camel-800 dark:hover:text-camel-300' 
-                                    : ''
+                                    : 'hover:text-camel-700 dark:hover:text-camel-400'
                                 }`}
+                                onClick={() => {
+                                  if (record.dog_id) {
+                                    navigate(`/dog/${record.dog_id}`);
+                                  }
+                                }}
                                 onMouseEnter={(e) => {
                                   if (record.history && record.history.length > 0) {
                                     const rect = e.target.getBoundingClientRect();
