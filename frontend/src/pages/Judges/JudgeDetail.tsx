@@ -145,11 +145,11 @@ export default function JudgeDetail() {
 
       {/* Общая статистика */}
       <div className="grid grid-cols-2 gap-4 mb-6">
-        <div className="rounded-2xl border-2 border-old-money-200 bg-white p-6 shadow-md">
+        <div className="rounded-2xl border-2 border-old-money-200 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 p-6 shadow-md">
           <div className="text-sm text-old-money-600 dark:text-old-money-400 mb-1">Всего оценок</div>
           <div className="text-3xl font-bold text-charcoal-800 dark:text-charcoal-100">{judgeData.total_evaluations || 0}</div>
         </div>
-        <div className="rounded-2xl border-2 border-old-money-200 bg-white p-6 shadow-md">
+        <div className="rounded-2xl border-2 border-old-money-200 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 p-6 shadow-md">
           <div className="text-sm text-old-money-600 dark:text-old-money-400 mb-1">Средняя оценка</div>
           <div className="text-3xl font-bold text-charcoal-800 dark:text-charcoal-100">{judgeData.avg_score ? judgeData.avg_score.toFixed(2) : '-'}</div>
         </div>
@@ -356,7 +356,7 @@ export default function JudgeDetail() {
       </div>
 
       {/* Статистика по критериям */}
-      <div className="rounded-2xl border-2 border-old-money-200 bg-white p-4 shadow-md md:p-6">
+      <div className="rounded-2xl border-2 border-old-money-200 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 p-4 shadow-md md:p-6">
         <h2 className="text-lg md:text-xl font-bold text-charcoal-800 dark:text-charcoal-100 mb-4">Статистика по критериям</h2>
         {sortedCriteria && sortedCriteria.length > 0 ? (
           <>
