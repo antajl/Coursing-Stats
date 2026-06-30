@@ -137,6 +137,19 @@ export default function DoninoDogProfile() {
                     <div className="text-2xl font-bold text-charcoal-900 dark:text-charcoal-100">{data.speedStats.total}</div>
                   </div>
 
+                  {data.speedStats.breedRank > 0 && (
+                    <div className="grid grid-cols-2 gap-4 mb-6">
+                      <div className="bg-gradient-to-br from-camel-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-camel-200 dark:border-charcoal-500">
+                        <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Рейтинг в породе</div>
+                        <div className="text-2xl font-bold text-camel-700 dark:text-camel-400">#{data.speedStats.breedRank} <span className="text-base font-normal text-charcoal-600 dark:text-charcoal-400">из {data.speedStats.breedTotal}</span></div>
+                      </div>
+                      <div className="bg-gradient-to-br from-camel-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-camel-200 dark:border-charcoal-500">
+                        <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Процентиль</div>
+                        <div className="text-2xl font-bold text-camel-700 dark:text-camel-400">Топ {100 - data.speedStats.percentile.toFixed(0)}%</div>
+                      </div>
+                    </div>
+                  )}
+
                   {/* График прогресса */}
                   <div className="mt-6 space-y-2">
                     {data.speedRecords.map((record, idx) => (
@@ -177,6 +190,19 @@ export default function DoninoDogProfile() {
                     <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Всего забегов</div>
                     <div className="text-2xl font-bold text-charcoal-900 dark:text-charcoal-100">{data.coursingStats.total}</div>
                   </div>
+
+                  {data.coursingStats.breedRank > 0 && (
+                    <div className="grid grid-cols-2 gap-4 mb-6">
+                      <div className="bg-gradient-to-br from-camel-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-camel-200 dark:border-charcoal-500">
+                        <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Рейтинг в породе</div>
+                        <div className="text-2xl font-bold text-camel-700 dark:text-camel-400">#{data.coursingStats.breedRank} <span className="text-base font-normal text-charcoal-600 dark:text-charcoal-400">из {data.coursingStats.breedTotal}</span></div>
+                      </div>
+                      <div className="bg-gradient-to-br from-camel-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-camel-200 dark:border-charcoal-500">
+                        <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Процентиль</div>
+                        <div className="text-2xl font-bold text-camel-700 dark:text-camel-400">Топ {100 - data.coursingStats.percentile.toFixed(0)}%</div>
+                      </div>
+                    </div>
+                  )}
 
                   {/* График прогресса */}
                   <div className="mt-6 space-y-2">
