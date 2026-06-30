@@ -8,6 +8,7 @@ import SpeedRecords from './pages/SpeedRecords/index'
 import Procoursing from './pages/Procoursing'
 import Judges from './pages/Judges/index'
 import JudgeDetail from './pages/Judges/JudgeDetail'
+import DoninoDogProfile from './pages/DoninoDogProfile'
 import { DogSilhouettes } from './components/DogSilhouettes'
 import { QueryProvider } from './lib/query-client'
 import ThemeToggle from './components/ThemeToggle'
@@ -228,6 +229,7 @@ function App() {
               <Route path="/dog/:id" element={<DogProfile />} />
               <Route path="/event/:id" element={<EventResults />} />
               <Route path="/speed-records" element={<SpeedRecords />} />
+              <Route path="/donino-dog/:name/:breed" element={<DoninoDogProfile />} />
               <Route path="/judges" element={<Judges />} />
               <Route path="/judges/:judgeId" element={<JudgeDetail />} />
             </Routes>
