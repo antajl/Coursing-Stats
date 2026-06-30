@@ -582,12 +582,10 @@ function SpeedRecords() {
                 {filteredRecords.map((record) => (
                   <tr key={record.id} className="hover:bg-cream-50 dark:hover:bg-charcoal-700 transition-colors">
                     <td className="px-6 py-4 text-center">
-                      <span 
+                      <span
                         className="font-semibold text-charcoal-900 dark:text-charcoal-100 transition-colors cursor-pointer hover:text-camel-700 dark:hover:text-camel-400"
                         onClick={() => {
-                          if (record.dog_id) {
-                            navigate(`/dog/${record.dog_id}`, { state: { from: 'speed-records' } });
-                          }
+                          navigate(`/donino-dog/${encodeURIComponent(record.name)}/${encodeURIComponent(record.breed)}`, { state: { from: 'speed-records' } });
                         }}
                       >
                         {record.name}
@@ -730,13 +728,9 @@ function SpeedRecords() {
                         <div className="flex justify-between items-start mb-2">
                           <div className="flex-1">
                             <div 
-                              className={`font-bold text-charcoal-900 dark:text-charcoal-100 mb-1 cursor-pointer hover:text-camel-700 dark:hover:text-camel-400 transition-colors ${
-                                record.dog_id ? '' : 'cursor-default'
-                              }`}
+                              className="font-bold text-charcoal-900 dark:text-charcoal-100 mb-1 cursor-pointer hover:text-camel-700 dark:hover:text-camel-400 transition-colors"
                               onClick={() => {
-                                if (record.dog_id) {
-                                  navigate(`/dog/${record.dog_id}`, { state: { from: 'coursing-records' } });
-                                }
+                                navigate(`/donino-dog/${encodeURIComponent(record.name)}/${encodeURIComponent(record.breed)}`, { state: { from: 'coursing-records' } });
                               }}
                             >
                               {record.name}
