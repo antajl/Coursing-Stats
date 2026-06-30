@@ -10,6 +10,7 @@ import Judges from './pages/Judges/index'
 import JudgeDetail from './pages/Judges/JudgeDetail'
 import { DogSilhouettes } from './components/DogSilhouettes'
 import { QueryProvider } from './lib/query-client'
+import ThemeToggle from './components/ThemeToggle'
 
 function Nav() {
   const location = useLocation();
@@ -47,8 +48,9 @@ function Nav() {
       </div>
 
       {/* Desktop navigation */}
-      <div className="hidden md:flex absolute right-0 top-0 h-16 items-center px-4 z-20">
-        <div 
+      <div className="hidden md:flex absolute right-0 top-0 h-16 items-center px-4 z-20 gap-3">
+        <ThemeToggle />
+        <div
           className="relative"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
@@ -93,20 +95,23 @@ function Nav() {
       </div>
 
       {/* Mobile header with logo and menu button */}
-      <div className="md:hidden flex items-center justify-between h-12 px-3">
+      <div className="md:hidden flex items-center justify-between h-12 px-3 gap-2">
         <img src="/assets/navbar-bg.svg" alt="Logo" className="h-10 opacity-80" style={{ objectFit: 'contain' }} />
-        <button
-          onClick={toggleMobileMenu}
-          className="w-9 h-9 border-2 border-old-money-300 rounded-lg bg-old-money-50 hover:bg-old-money-100 transition-colors flex items-center justify-center"
-        >
-          <svg className="w-5 h-5 text-old-money-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            {mobileMenuOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            )}
-          </svg>
-        </button>
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <button
+            onClick={toggleMobileMenu}
+            className="w-9 h-9 border-2 border-old-money-300 rounded-lg bg-old-money-50 hover:bg-old-money-100 transition-colors flex items-center justify-center"
+          >
+            <svg className="w-5 h-5 text-old-money-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {mobileMenuOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+        </div>
       </div>
 
       {/* Desktop links */}
