@@ -91,4 +91,56 @@ export function handleSpeed(app: Hono<{ Bindings: Env }>) {
     const { results } = await db.prepare(query).bind(...params).all();
     return c.json({ success: true, data: results });
   });
+
+  // GET /api/donino-dog/:name/:breed
+  app.get('/api/donino-dog/:name/:breed', async (c) => {
+    const db = c.env.DB;
+    const name = c.req.param('name');
+    const breed = c.req.param('breed');
+
+    if (!name || !breed) {
+      return c.json({ success: false, error: 'Name and breed are required' }, 400);
+    }
+
+    // Получаем записи скорости для собаки
+    const speedQuery = `
+      SELECT * FROM speed_records 
+      WHERE name = ? AND breed = ? 
+      ORDER BY speed_km_h DESC
+    `;
+    const { results: speedRecords } = await db.prepare(speedQuery).bind(name, breed).all();
+
+    // Получаем записи бегов для собаки
+    const coursingQuery = `
+      SELECT * FROM coursing_records 
+      WHERE name = ? AND breed = ? 
+      ORDER BY time_seconds ASC
+    `;
+    const { results: coursingRecords } = await db.prepare(coursingQuery).bind(name, breed).all();
+
+    // Вычисляем статистику
+    const speedStats = {
+      total: speedRecords.length,
+      bestSpeed: speedRecords.length > 0 ? Math.max(...speedRecords.map(r => r.speed_km_h)) : 0,
+      avgSpeed: speedRecords.length > 0 ? speedRecords.reduce((sum, r) => sum + r.speed_km_h, 0) / speedRecords.length : 0,
+    };
+
+    const coursingStats = {
+      total: coursingRecords.length,
+      bestTime: coursingRecords.length > 0 ? Math.min(...coursingRecords.map(r => r.time_seconds)) : 0,
+      avgTime: coursingRecords.length > 0 ? coursingRecords.reduce((sum, r) => sum + r.time_seconds, 0) / coursingRecords.length : 0,
+    };
+
+    return c.json({
+      success: true,
+      data: {
+        name,
+        breed,
+        speedRecords,
+        coursingRecords,
+        speedStats,
+        coursingStats,
+      },
+    });
+  });
 }
