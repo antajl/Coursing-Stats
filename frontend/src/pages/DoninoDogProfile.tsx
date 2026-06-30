@@ -1,5 +1,6 @@
-import { useParams, Link, useNavigate } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { useParams, useNavigate, useLocation } from 'react-router-dom'
+import { useState, useEffect, useRef } from 'react'
+import { DogSilhouettes, getSilhouetteType } from '../components/DogSilhouettes'
 import SkeletonLoader from '../components/SkeletonLoader'
 import ErrorState from '../components/ErrorState'
 
@@ -8,9 +9,16 @@ const API_URL = 'http://localhost:8787'
 export default function DoninoDogProfile() {
   const { name, breed } = useParams()
   const navigate = useNavigate()
+  const location = useLocation()
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
+  const exportRef = useRef(null)
+
+  const fromSpeedRecords = location.state?.from === 'speed-records'
+  const fromCoursingRecords = location.state?.from === 'coursing-records'
+
+  const silhouetteType = getSilhouetteType(breed)
 
   useEffect(() => {
     async function fetchDogData() {
@@ -58,128 +66,146 @@ export default function DoninoDogProfile() {
     )
   }
 
+  const hasSpeedRecords = data.speedStats.total > 0
+  const hasCoursingRecords = data.coursingStats.total > 0
+
   return (
-    <div className="min-h-screen bg-cream-50 dark:bg-charcoal-900 p-6">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="mb-6 flex items-center gap-4">
+    <div className="min-h-screen bg-cream-50 dark:bg-charcoal-900 p-4 md:p-6">
+      <DogSilhouettes />
+      <div className="max-w-4xl mx-auto">
+        <div className="flex items-center justify-between mb-4 md:mb-6 flex-wrap gap-2">
           <button
-            onClick={() => navigate('/speed-records')}
-            className="rounded-xl border-2 border-camel-300 dark:border-camel-600 bg-white dark:bg-charcoal-800 px-4 py-2 text-sm font-semibold text-camel-700 dark:text-camel-400 transition-all hover:bg-camel-50 dark:hover:bg-charcoal-700 hover:border-camel-400"
+            onClick={() => {
+              if (fromSpeedRecords) {
+                navigate('/speed-records')
+              } else if (fromCoursingRecords) {
+                navigate('/speed-records?tab=coursing')
+              } else {
+                navigate('/speed-records')
+              }
+            }}
+            className="font-medium text-camel-700 dark:text-camel-400 transition-colors hover:text-camel-800 dark:hover:text-camel-300"
           >
-            ← Назад к рекордам
+            <span className="md:hidden">← Назад</span>
+            <span className="hidden md:inline">← {fromSpeedRecords ? 'Назад к рекордам' : fromCoursingRecords ? 'Назад к бегам борзых' : 'Назад к рекордам'}</span>
           </button>
         </div>
 
-        {/* Dog Info */}
-        <div className="mb-6 rounded-2xl border-2 border-old-money-200 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
-          <h1 className="text-2xl md:text-3xl font-bold text-charcoal-900 dark:text-charcoal-100 mb-2">
-            {data.name}
-          </h1>
-          <p className="text-lg text-old-money-600 dark:text-old-money-400">{data.breed}</p>
+        <div ref={exportRef}>
+          {/* Шапка профиля */}
+          <div className="mb-6 rounded-2xl border-2 border-old-money-200 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-8">
+            <div className="flex flex-wrap items-center gap-5 md:gap-8">
+              <div className="flex h-20 w-20 flex-shrink-0 items-center justify-center rounded-2xl border-2 border-old-money-200 dark:border-charcoal-600 bg-cream-100 dark:bg-charcoal-700 md:h-24 md:w-24">
+                <svg className="w-12 h-12 md:w-16 md:h-16 text-old-money-500 dark:text-old-money-400">
+                  <use href={`#silhouette-${silhouetteType}`} />
+                </svg>
+              </div>
+              <div className="flex-1 min-w-0">
+                <div className="flex items-baseline gap-3 md:gap-4 flex-wrap">
+                  <h1 className="text-2xl font-bold tracking-tight text-charcoal-900 dark:text-charcoal-100 md:text-3xl">{data.name}</h1>
+                </div>
+                <div className="mt-3">
+                  <span className="inline-block rounded-full bg-cream-100 dark:bg-charcoal-700 px-4 py-1.5 text-sm font-semibold text-charcoal-700 dark:text-charcoal-300 border border-old-money-200 dark:border-charcoal-600">
+                    {data.breed}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Статистика Донино и Бега борзых */}
+          {(hasSpeedRecords || hasCoursingRecords) && (
+            <div className={`grid gap-4 md:gap-6 mb-6 ${hasSpeedRecords && hasCoursingRecords ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1'}`}>
+              {/* Статистика Донино */}
+              {hasSpeedRecords && (
+                <div className="rounded-2xl border-2 border-camel-200 dark:border-camel-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
+                  <h2 className="text-lg md:text-xl font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 mb-4">Замер скорости (350 метров)</h2>
+                  
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div className="bg-gradient-to-br from-camel-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-camel-200 dark:border-charcoal-500">
+                      <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Лучшая скорость</div>
+                      <div className="text-2xl font-bold text-camel-700 dark:text-camel-400">{data.speedStats.bestSpeed.toFixed(1)} <span className="text-sm font-normal text-charcoal-600 dark:text-charcoal-400">км/ч</span></div>
+                    </div>
+                    <div className="bg-gradient-to-br from-old-money-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-old-money-200 dark:border-charcoal-500">
+                      <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Средняя скорость</div>
+                      <div className="text-2xl font-bold text-charcoal-900 dark:text-charcoal-100">{data.speedStats.avgSpeed.toFixed(1)} <span className="text-sm font-normal text-charcoal-600 dark:text-charcoal-400">км/ч</span></div>
+                    </div>
+                  </div>
+
+                  <div className="bg-gradient-to-br from-old-money-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-old-money-200 dark:border-charcoal-500">
+                    <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Всего замеров</div>
+                    <div className="text-2xl font-bold text-charcoal-900 dark:text-charcoal-100">{data.speedStats.total}</div>
+                  </div>
+
+                  {/* График прогресса */}
+                  <div className="mt-6 space-y-2">
+                    {data.speedRecords.map((record, idx) => (
+                      <div key={idx} className="flex items-center gap-4">
+                        <div className="w-24 text-sm text-charcoal-700 dark:text-charcoal-300 text-right">{record.date}</div>
+                        <div className="flex-1 bg-cream-200 dark:bg-charcoal-600 rounded-full h-6 overflow-hidden relative">
+                          <div 
+                            className="bg-gradient-to-r from-camel-400 to-camel-600 h-full rounded-full transition-all duration-500"
+                            style={{ width: `${(record.speed_km_h / 80) * 100}%` }}
+                          />
+                          <div className="absolute inset-0 flex items-center justify-center text-sm font-bold text-charcoal-900 dark:text-charcoal-100">
+                            {record.speed_km_h.toFixed(1)} км/ч
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Статистика бегов борзых */}
+              {hasCoursingRecords && (
+                <div className="rounded-2xl border-2 border-camel-200 dark:border-camel-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
+                  <h2 className="text-lg md:text-xl font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 mb-4">Бега борзых (350 метров)</h2>
+                  
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div className="bg-gradient-to-br from-camel-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-camel-200 dark:border-charcoal-500">
+                      <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Лучшее время</div>
+                      <div className="text-2xl font-bold text-camel-700 dark:text-camel-400">{data.coursingStats.bestTime.toFixed(2)} <span className="text-sm font-normal text-charcoal-600 dark:text-charcoal-400">сек</span></div>
+                    </div>
+                    <div className="bg-gradient-to-br from-old-money-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-old-money-200 dark:border-charcoal-500">
+                      <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Среднее время</div>
+                      <div className="text-2xl font-bold text-charcoal-900 dark:text-charcoal-100">{data.coursingStats.avgTime.toFixed(2)} <span className="text-sm font-normal text-charcoal-600 dark:text-charcoal-400">сек</span></div>
+                    </div>
+                  </div>
+
+                  <div className="bg-gradient-to-br from-old-money-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-old-money-200 dark:border-charcoal-500">
+                    <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Всего забегов</div>
+                    <div className="text-2xl font-bold text-charcoal-900 dark:text-charcoal-100">{data.coursingStats.total}</div>
+                  </div>
+
+                  {/* График прогресса */}
+                  <div className="mt-6 space-y-2">
+                    {data.coursingRecords.map((record, idx) => (
+                      <div key={idx} className="flex items-center gap-4">
+                        <div className="w-24 text-sm text-charcoal-700 dark:text-charcoal-300 text-right">{record.date}</div>
+                        <div className="flex-1 bg-cream-200 dark:bg-charcoal-600 rounded-full h-6 overflow-hidden relative">
+                          <div 
+                            className="bg-gradient-to-r from-camel-400 to-camel-600 h-full rounded-full transition-all duration-500"
+                            style={{ width: `${(30 / record.time_seconds) * 100}%` }}
+                          />
+                          <div className="absolute inset-0 flex items-center justify-center text-sm font-bold text-charcoal-900 dark:text-charcoal-100">
+                            {record.time_seconds.toFixed(2)} сек
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+
+          {!hasSpeedRecords && !hasCoursingRecords && (
+            <div className="rounded-2xl border-2 border-old-money-200 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 p-6 text-center">
+              <p className="text-old-money-600 dark:text-old-money-400">Нет записей для этой собаки</p>
+            </div>
+          )}
         </div>
-
-        {/* Speed Records Stats */}
-        {data.speedStats.total > 0 && (
-          <div className="mb-6 rounded-2xl border-2 border-camel-200 dark:border-camel-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
-            <h2 className="text-lg md:text-xl font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 mb-4">Замер скорости (350 метров)</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-              <div className="bg-gradient-to-br from-camel-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-camel-200 dark:border-charcoal-500">
-                <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Лучшая скорость</div>
-                <div className="text-2xl font-bold text-camel-700 dark:text-camel-400">{data.speedStats.bestSpeed.toFixed(1)} <span className="text-sm font-normal text-charcoal-600 dark:text-charcoal-400">км/ч</span></div>
-              </div>
-              <div className="bg-gradient-to-br from-old-money-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-old-money-200 dark:border-charcoal-500">
-                <div className="text-xs font-medium text-old-money-600 mb-1 uppercase tracking-wide">Средняя скорость</div>
-                <div className="text-2xl font-bold text-charcoal-900 dark:text-charcoal-100">{data.speedStats.avgSpeed.toFixed(1)} <span className="text-sm font-normal text-charcoal-600 dark:text-charcoal-400">км/ч</span></div>
-              </div>
-              <div className="bg-gradient-to-br from-old-money-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-old-money-200 dark:border-charcoal-500">
-                <div className="text-xs font-medium text-old-money-600 mb-1 uppercase tracking-wide">Всего замеров</div>
-                <div className="text-2xl font-bold text-charcoal-900 dark:text-charcoal-100">{data.speedStats.total}</div>
-              </div>
-            </div>
-
-            {/* Speed Records Table */}
-            <div className="overflow-x-auto">
-              <table className="w-full text-xs min-w-[500px] md:min-w-[600px]">
-                <thead>
-                  <tr className="text-left text-old-money-600 dark:text-old-money-400">
-                    <th className="pb-1 pr-2">Дата</th>
-                    <th className="pb-1 pr-2">Скорость</th>
-                    <th className="pb-1 pr-2">Статус</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-old-money-200 dark:divide-charcoal-600">
-                  {data.speedRecords.map((record, idx) => (
-                    <tr key={idx} className="hover:bg-cream-50 dark:hover:bg-charcoal-700 transition-colors">
-                      <td className="px-2 py-2 text-old-money-800 dark:text-old-money-300">{record.date}</td>
-                      <td className="px-2 py-2 text-old-money-800 dark:text-old-money-300 font-semibold">{record.speed_km_h.toFixed(1)} км/ч</td>
-                      <td className="px-2 py-2">
-                        <span className={`inline-block px-2 py-1 rounded text-xs font-medium ${
-                          record.status === 'new' ? 'bg-green-100 text-green-800' :
-                          record.status === 'improved' ? 'bg-blue-100 text-blue-800' :
-                          'bg-gray-100 text-gray-800'
-                        }`}>
-                          {record.status === 'new' ? 'Новый' :
-                           record.status === 'improved' ? 'Улучшение' :
-                           'Обычный'}
-                        </span>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        )}
-
-        {/* Coursing Records Stats */}
-        {data.coursingStats.total > 0 && (
-          <div className="mb-6 rounded-2xl border-2 border-camel-200 dark:border-camel-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
-            <h2 className="text-lg md:text-xl font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 mb-4">Бега борзых (350 метров)</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-              <div className="bg-gradient-to-br from-camel-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-camel-200 dark:border-charcoal-500">
-                <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Лучшее время</div>
-                <div className="text-2xl font-bold text-camel-700 dark:text-camel-400">{data.coursingStats.bestTime.toFixed(2)} <span className="text-sm font-normal text-charcoal-600 dark:text-charcoal-400">сек</span></div>
-              </div>
-              <div className="bg-gradient-to-br from-old-money-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-old-money-200 dark:border-charcoal-500">
-                <div className="text-xs font-medium text-old-money-600 mb-1 uppercase tracking-wide">Среднее время</div>
-                <div className="text-2xl font-bold text-charcoal-900 dark:text-charcoal-100">{data.coursingStats.avgTime.toFixed(2)} <span className="text-sm font-normal text-charcoal-600 dark:text-charcoal-400">сек</span></div>
-              </div>
-              <div className="bg-gradient-to-br from-old-money-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-old-money-200 dark:border-charcoal-500">
-                <div className="text-xs font-medium text-old-money-600 mb-1 uppercase tracking-wide">Всего забегов</div>
-                <div className="text-2xl font-bold text-charcoal-900 dark:text-charcoal-100">{data.coursingStats.total}</div>
-              </div>
-            </div>
-
-            {/* Coursing Records Table */}
-            <div className="overflow-x-auto">
-              <table className="w-full text-xs min-w-[500px] md:min-w-[600px]">
-                <thead>
-                  <tr className="text-left text-old-money-600 dark:text-old-money-400">
-                    <th className="pb-1 pr-2">Дата</th>
-                    <th className="pb-1 pr-2">Время</th>
-                    <th className="pb-1 pr-2">Скорость</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-old-money-200 dark:divide-charcoal-600">
-                  {data.coursingRecords.map((record, idx) => (
-                    <tr key={idx} className="hover:bg-cream-50 dark:hover:bg-charcoal-700 transition-colors">
-                      <td className="px-2 py-2 text-old-money-800 dark:text-old-money-300">{record.date}</td>
-                      <td className="px-2 py-2 text-old-money-800 dark:text-old-money-300 font-semibold">{record.time_seconds.toFixed(2)} сек</td>
-                      <td className="px-2 py-2 text-old-money-800 dark:text-old-money-300">{record.speed_km_h.toFixed(1)} км/ч</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        )}
-
-        {data.speedStats.total === 0 && data.coursingStats.total === 0 && (
-          <div className="rounded-2xl border-2 border-old-money-200 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 p-6 text-center">
-            <p className="text-old-money-600 dark:text-old-money-400">Нет записей для этой собаки</p>
-          </div>
-        )}
       </div>
     </div>
   )
