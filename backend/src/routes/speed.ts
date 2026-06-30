@@ -118,18 +118,61 @@ export function handleSpeed(app: Hono<{ Bindings: Env }>) {
     `;
     const { results: coursingRecords } = await db.prepare(coursingQuery).bind(name, breed).all();
 
-    // Вычисляем статистику
+    // Вычисляем статистику скорости
     const speedStats = {
       total: speedRecords.length,
       bestSpeed: speedRecords.length > 0 ? Math.max(...speedRecords.map(r => r.speed_km_h)) : 0,
       avgSpeed: speedRecords.length > 0 ? speedRecords.reduce((sum, r) => sum + r.speed_km_h, 0) / speedRecords.length : 0,
     };
 
+    // Вычисляем статистику бегов
     const coursingStats = {
       total: coursingRecords.length,
       bestTime: coursingRecords.length > 0 ? Math.min(...coursingRecords.map(r => r.time_seconds)) : 0,
       avgTime: coursingRecords.length > 0 ? coursingRecords.reduce((sum, r) => sum + r.time_seconds, 0) / coursingRecords.length : 0,
     };
+
+    // Расчёт рейтинга по породе для скорости
+    let speedBreedRank = 0;
+    let speedBreedTotal = 0;
+    let speedPercentile = 0;
+
+    if (speedStats.bestSpeed > 0) {
+      const breedSpeedQuery = `
+        SELECT DISTINCT name, MAX(speed_km_h) as best_speed
+        FROM speed_records
+        WHERE breed = ? AND speed_km_h > 0
+        GROUP BY name
+        ORDER BY best_speed DESC
+      `;
+      const { results: breedSpeedDogs } = await db.prepare(breedSpeedQuery).bind(breed).all();
+      
+      speedBreedTotal = breedSpeedDogs.length;
+      const dogRank = breedSpeedDogs.findIndex(d => d.best_speed === speedStats.bestSpeed);
+      speedBreedRank = dogRank >= 0 ? dogRank + 1 : 0;
+      speedPercentile = speedBreedTotal > 0 ? ((speedBreedTotal - speedBreedRank) / speedBreedTotal) * 100 : 0;
+    }
+
+    // Расчёт рейтинга по породе для бегов
+    let coursingBreedRank = 0;
+    let coursingBreedTotal = 0;
+    let coursingPercentile = 0;
+
+    if (coursingStats.bestTime > 0) {
+      const breedCoursingQuery = `
+        SELECT DISTINCT name, MIN(time_seconds) as best_time
+        FROM coursing_records
+        WHERE breed = ? AND time_seconds > 0
+        GROUP BY name
+        ORDER BY best_time ASC
+      `;
+      const { results: breedCoursingDogs } = await db.prepare(breedCoursingQuery).bind(breed).all();
+      
+      coursingBreedTotal = breedCoursingDogs.length;
+      const dogRank = breedCoursingDogs.findIndex(d => d.best_time === coursingStats.bestTime);
+      coursingBreedRank = dogRank >= 0 ? dogRank + 1 : 0;
+      coursingPercentile = coursingBreedTotal > 0 ? ((coursingBreedTotal - coursingBreedRank) / coursingBreedTotal) * 100 : 0;
+    }
 
     return c.json({
       success: true,
@@ -138,8 +181,18 @@ export function handleSpeed(app: Hono<{ Bindings: Env }>) {
         breed,
         speedRecords,
         coursingRecords,
-        speedStats,
-        coursingStats,
+        speedStats: {
+          ...speedStats,
+          breedRank: speedBreedRank,
+          breedTotal: speedBreedTotal,
+          percentile: speedPercentile,
+        },
+        coursingStats: {
+          ...coursingStats,
+          breedRank: coursingBreedRank,
+          breedTotal: coursingBreedTotal,
+          percentile: coursingPercentile,
+        },
       },
     });
   });
