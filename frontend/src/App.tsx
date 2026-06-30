@@ -124,7 +124,7 @@ function Nav() {
                 isActive('/') ? 'text-camel-700' : 'text-charcoal-700 hover:text-charcoal-900'
               }`}
             >
-              <span className="relative z-10">Procoursing</span>
+              <span className="relative z-10">Соревнования</span>
               <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-camel-600 transition-transform duration-300 ${
                 isActive('/') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
               }`}></span>
@@ -155,7 +155,7 @@ function Nav() {
                 isActive('/') ? 'bg-camel-100 text-camel-700' : 'text-charcoal-700 hover:bg-old-money-50'
               }`}
             >
-              Procoursing
+              Соревнования
             </Link>
             <Link
               to="/speed-records"
