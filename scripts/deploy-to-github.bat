@@ -6,7 +6,7 @@ cd /d "%~dp0.."
 
 git add .
 git commit -m "Update: UI improvements and documentation"
-git push
+git push --force
 
 echo.
 echo Done! Site will be deployed automatically via GitHub Actions.
