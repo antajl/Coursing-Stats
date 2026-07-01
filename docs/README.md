@@ -82,13 +82,16 @@
   - Домены
 
 ### Дизайн
-- **[design/design.md](design/design.md)** — Дизайн-система
+- **[design/DESIGN-SYSTEM.md](design/DESIGN-SYSTEM.md)** — Дизайн-система
   - Цветовая палитра (light + dark mode)
-  - Оценка по направлениям
-  - План улучшения
-- **[design/changelog.md](design/changelog.md)** — История изменений дизайна
-  - Все визуальные изменения фронтенда
-  - Датированные записи
+  - Типографика
+  - Компоненты
+- **[design/DESIGN-ROADMAP.md](design/DESIGN-ROADMAP.md)** — Дизайн-роадмап
+  - Статус задач
+  - Приоритеты
+- **[design/EVENT-COLORS.md](design/EVENT-COLORS.md)** — Цвета календаря событий
+  - Система цветов дисциплин
+  - Реализация
 
 ### История
 - **[history/DECISIONS-LOG.md](history/DECISIONS-LOG.md)** — Лог архитектурных решений
@@ -124,5 +127,5 @@
 
 **Домены:**
 - Фронтенд: https://procoursing.antajl.ru
-- API: https://api.procoursing.antajl.ru
+- API: https://procoursing-stats.antajltube.workers.dev
 - GitHub: https://github.com/antajl/ProCoursing

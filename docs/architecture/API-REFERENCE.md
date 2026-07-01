@@ -4,7 +4,7 @@
 
 ## Base URL
 
-**Production:** `https://api.procoursing.antajl.ru`
+**Production:** `https://procoursing-stats.antajltube.workers.dev`
 **Development:** `http://127.0.0.1:8787`
 
 ## CORS

@@ -216,7 +216,7 @@
 - NS записи изменены на Cloudflare (raquel.ns.cloudflare.com, rohin.ns.cloudflare.com)
 - Настроены поддомены в Cloudflare:
   - `procoursing.antajl.ru` → Pages (фронтенд)
-  - `api.procoursing.antajl.ru` → Worker (API)
+  - `procoursing-stats.antajltube.workers.dev` → Worker (API)
 - После обновления DNS фронтенд будет делать запросы к собственному домену, uBlock не будет блокировать
 
 **Реализация:**

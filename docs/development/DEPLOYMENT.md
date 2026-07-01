@@ -11,7 +11,7 @@
 
 **Домены:**
 - Фронтенд: https://procoursing.antajl.ru
-- API: https://api.procoursing.antajl.ru
+- API: https://procoursing-stats.antajltube.workers.dev
 - GitHub: https://github.com/antajl/ProCoursing
 
 ---
@@ -219,7 +219,7 @@ npx wrangler d1 execute pc-db --local --file=script.sql
 
 ### API
 
-**Primary:** https://api.procoursing.antajl.ru
+**Primary:** https://procoursing-stats.antajltube.workers.dev
 
 **Cloudflare Worker default:** https://procoursing-stats.antajltube.workers.dev
 

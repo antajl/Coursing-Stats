@@ -8,7 +8,7 @@
 | Сервис | URL |
 |--------|-----|
 | Фронтенд | https://procoursing.antajl.ru |
-| API | https://api.procoursing.antajl.ru |
+| API | https://procoursing-stats.antajltube.workers.dev |
 | GitHub | https://github.com/antajl/ProCoursing |
 
 ## Технический стек

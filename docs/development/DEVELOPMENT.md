@@ -488,7 +488,7 @@ hover:bg-cream-50 dark:hover:bg-charcoal-700
 
 ## См. также
 
-- [05-PARSING.md](05-PARSING.md) — Парсинг данных
-- [06-DATABASE.md](06-DATABASE.md) — Работа с БД
-- [07-DEPLOYMENT.md](07-DEPLOYMENT.md) — Деплой и инфраструктура
-- [04-API-REFERENCE.md](04-API-REFERENCE.md) — Документация API
+- [data/PARSING.md](../data/PARSING.md) — Парсинг данных
+- [data/DATABASE.md](../data/DATABASE.md) — Работа с БД
+- [development/DEPLOYMENT.md](DEPLOYMENT.md) — Деплой и инфраструктура
+- [architecture/API-REFERENCE.md](../architecture/API-REFERENCE.md) — Документация API

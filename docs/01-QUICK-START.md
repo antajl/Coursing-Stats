@@ -130,6 +130,6 @@ npm test
 - **Фронтенд:** http://localhost:5173
 - **API:** http://127.0.0.1:8787
 - **Производственный фронтенд:** https://procoursing.antajl.ru
-- **Производственный API:** https://api.procoursing.antajl.ru
+- **Производственный API:** https://procoursing-stats.antajltube.workers.dev
 - **GitHub:** https://github.com/antajl/ProCoursing
 - **Источник данных:** http://procoursing.ru
