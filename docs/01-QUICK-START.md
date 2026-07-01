@@ -66,7 +66,7 @@ scripts\start-servers.bat
 
 ```bash
 cd backend
-node scripts/test/test-parser.mjs
+npx tsx scripts/test/test-parser.ts
 ```
 
 ## Структура проекта

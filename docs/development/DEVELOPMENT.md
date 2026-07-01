@@ -9,49 +9,50 @@
 ```
 backend/
 ├── src/
-│   ├── worker.js              # Cloudflare Worker entry point (~93 строки)
+│   ├── worker.ts              # Cloudflare Worker entry point (8-строчная обёртка, делегирует в app.ts)
+│   ├── app.ts                 # Hono application с роутингом
 │   └── routes/                # API endpoints
-│       ├── admin.js           # Admin endpoints (import-results, delete-results, recreate-views)
-│       ├── events.js           # Events & results (renamed from competitions.js)
-│       ├── dogs.js            # Dog profiles
-│       ├── judges.js          # Judges statistics
-│       ├── speed.js           # Speed records
-│       └── top.js             # Top ratings (placement, score, speed)
+│       ├── admin.ts           # Admin endpoints (import-results, delete-results, recreate-views)
+│       ├── events.ts           # Events & results (renamed from competitions.ts)
+│       ├── dogs.ts            # Dog profiles
+│       ├── judges.ts          # Judges statistics
+│       ├── speed.ts           # Speed records
+│       └── top.ts             # Top ratings (placement, score, speed)
 ├── parsers/                   # Data parsers
-│   ├── parse-results-coursing.mjs  # Coursing parser (~39 KB)
-│   ├── parse-results-bzmp.mjs      # BZMP parser (~30 KB)
-│   └── parse-results-racing.mjs    # Racing parser (~14 KB)
+│   ├── parse-results-coursing.ts  # Coursing parser (~39 KB)
+│   ├── parse-results-bzmp.ts      # BZMP parser (~30 KB)
+│   └── parse-results-racing.ts    # Racing parser (~14 KB)
 ├── scripts/                   # Data loading scripts (organized by folders)
 │   ├── scrape/                # Scraping scripts
-│   │   └── scrape-year-index.mjs
+│   │   └── scrape-year-index.ts
 │   ├── load/                  # Load scripts
-│   │   ├── load-events.mjs
-│   │   └── load-results.mjs
+│   │   ├── load-events.ts
+│   │   └── load-results.ts
 │   ├── reparse/               # Reparse scripts (after parser changes)
-│   │   ├── reparse-bzmp-events.mjs
-│   │   ├── reparse-coursing-events.mjs
-│   │   └── reparse-racing-events.mjs
+│   │   ├── reparse-bzmp-events.ts
+│   │   ├── reparse-coursing-events.ts
+│   │   └── reparse-racing-events.ts
 │   ├── migrate/               # Migration scripts
-│   │   └── migrate-normalize-dog-names.mjs
+│   │   └── migrate-normalize-dog-names.ts
 │   ├── sync/                  # Sync scripts (local ↔ remote)
-│   │   └── sync-local-to-remote.mjs
+│   │   └── sync-local-to-remote.ts
 │   ├── update/                # Update scripts
-│   │   ├── update-current-year.mjs
-│   │   └── merge-dogs.mjs
+│   │   ├── update-current-year.ts
+│   │   └── merge-dogs.ts
 │   ├── speed/                 # Speed records scripts
-│   │   ├── fetch-speed-records.mjs
+│   │   ├── sync-speed-records.ts
 │   │   └── fetch-speed-records-pdf.py
 │   ├── test/                  # Test scripts
-│   │   └── test-parser.mjs
+│   │   └── test-parser.ts
 │   ├── ci/                    # CI/CD scripts (GitHub Actions)
-│   │   └── ci-update-db.mjs
+│   │   └── ci-update-db.ts
 │   └── archive/               # One-time scripts (DO NOT REUSE)
 ├── lib/                       # Common modules
-│   ├── fetch-win1251.mjs      # Windows-1251 decoding
-│   └── dog-lookup.mjs         # Dog name normalization
+│   ├── fetch-win1251.ts      # Windows-1251 decoding
+│   └── dog-lookup.ts         # Dog name normalization
 ├── schema.sql                 # Database schema
 └── tests/                     # Tests
-    └── api.test.mjs
+    └── api.test.ts
 ```
 
 ### Frontend
@@ -59,32 +60,33 @@ backend/
 ```
 frontend/
 ├── src/
-│   ├── App.jsx                # Main component with navigation
-│   ├── main.jsx               # Entry point
-│   ├── constants.js           # Constants (colors, statuses)
+│   ├── App.tsx                # Main component with navigation
+│   ├── main.tsx               # Entry point
+│   ├── constants.ts           # Constants (colors, statuses)
 │   ├── components/            # React components
-│   │   ├── DogSilhouettes.jsx
-│   │   ├── DogStatsTable.jsx
-│   │   ├── DogTooltip.jsx
-│   │   ├── FilterSelect.jsx
-│   │   └── FiltersDropdown.jsx
+│   │   ├── DogSilhouettes.tsx
+│   │   ├── DogStatsTable.tsx
+│   │   ├── DogTooltip.tsx
+│   │   ├── FilterSelect.tsx
+│   │   └── FiltersDropdown.tsx
 │   ├── pages/                 # React pages
-│   │   ├── DogProfile.jsx
+│   │   ├── DogProfile.tsx
+│   │   ├── DoninoDogProfile.tsx # Donino dog profile with speed stats
 │   │   ├── Events/            # Events pages
-│   │   │   ├── index.jsx       # Events list (from Events.jsx)
-│   │   │   └── EventResults.jsx
+│   │   │   ├── index.tsx       # Events list (from Events.tsx)
+│   │   │   └── EventResults.tsx
 │   │   ├── Judges/            # Judges pages
-│   │   │   ├── index.jsx       # Judges list (from Judges.jsx)
-│   │   │   └── JudgeDetail.jsx
-│   │   ├── Procoursing.jsx
+│   │   │   ├── index.tsx       # Judges list (from Judges.tsx)
+│   │   │   └── JudgeDetail.tsx
+│   │   ├── Procoursing.tsx
 │   │   ├── SpeedRecords/      # Speed records pages
-│   │   │   ├── index.jsx       # Speed records table (from SpeedRecords.jsx)
-│   │   │   └── Stats.jsx       # Speed records stats (from SpeedRecordsStats.jsx)
-│   │   └── TopDogs.jsx
+│   │   │   ├── index.tsx       # Speed records table (from SpeedRecords.tsx)
+│   │   │   └── Stats.tsx       # Speed records stats (from SpeedRecordsStats.tsx)
+│   │   └── TopDogs.tsx
 │   ├── services/              # API client
-│   │   └── api.js
+│   │   └── api.ts
 │   └── data/                  # Mock data
-│       └── mockData.js
+│       └── mockData.ts
 ├── public/
 │   ├── _redirects             # SPA routing
 │   └── assets/                # Static assets
@@ -233,15 +235,15 @@ npm run dev
 ### Parser Testing
 
 ```bash
-node backend/scripts/test/test-parser.mjs
+npx tsx backend/scripts/test/test-parser.ts
 ```
 
 ### CLI Mode
 
 ```bash
-node backend/parsers/parse-results-coursing.mjs <url>
-node backend/parsers/parse-results-bzmp.mjs <url>
-node backend/parsers/parse-results-racing.mjs <url>
+npx tsx backend/parsers/parse-results-coursing.ts <url>
+npx tsx backend/parsers/parse-results-bzmp.ts <url>
+npx tsx backend/parsers/parse-results-racing.ts <url>
 ```
 
 ### API Testing
@@ -250,7 +252,7 @@ node backend/parsers/parse-results-racing.mjs <url>
 npm test
 ```
 
-**ВАЖНО:** Перед изменением парсера — прогони `node backend/scripts/test/test-parser.mjs`
+**ВАЖНО:** Перед изменением парсера — прогони `npx tsx backend/scripts/test/test-parser.ts`
 
 Текущий тест использует синтетические данные. ОБЯЗАТЕЛЬНО прогнать на 5-10 реальных страницах разных лет.
 

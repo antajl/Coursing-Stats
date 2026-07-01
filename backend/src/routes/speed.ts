@@ -106,7 +106,7 @@ export function handleSpeed(app: Hono<{ Bindings: Env }>) {
     const speedQuery = `
       SELECT * FROM speed_records 
       WHERE name = ? AND breed = ? 
-      ORDER BY speed_km_h DESC
+      ORDER BY date DESC
     `;
     const { results: speedRecords } = await db.prepare(speedQuery).bind(name, breed).all();
 
@@ -114,7 +114,7 @@ export function handleSpeed(app: Hono<{ Bindings: Env }>) {
     const coursingQuery = `
       SELECT * FROM coursing_records 
       WHERE name = ? AND breed = ? 
-      ORDER BY time_seconds ASC
+      ORDER BY date DESC
     `;
     const { results: coursingRecords } = await db.prepare(coursingQuery).bind(name, breed).all();
 

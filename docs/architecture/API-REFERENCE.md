@@ -288,6 +288,53 @@ GET /api/breeds
 }
 ```
 
+#### GET /api/donino-dog/:name/:breed
+Профиль собаки Донино с статистикой скорости и бегов.
+
+**Параметры:**
+- `name` — кличка собаки (латиница)
+- `breed` — порода собаки
+
+**Пример:**
+```
+GET /api/donino-dog/Тайга/Салюки
+```
+
+**Ответ:**
+```json
+{
+  "success": true,
+  "data": {
+    "name": "Тайга",
+    "breed": "Салюки",
+    "speedRecords": [
+      {
+        "speed_km_h": 58.5,
+        "date": "15.03.2026",
+        "screenshot_url": "https://..."
+      }
+    ],
+    "coursingRecords": [
+      {
+        "event_date": "15.03.2026",
+        "placement": 1,
+        "total_score": 95.5
+      }
+    ],
+    "speedStats": {
+      "total": 3,
+      "best": 58.5,
+      "avg": 56.2
+    },
+    "coursingStats": {
+      "total": 5,
+      "best_score": 95.5,
+      "avg_score": 82.3
+    }
+  }
+}
+```
+
 ### Competitions
 
 #### GET /api/competitions

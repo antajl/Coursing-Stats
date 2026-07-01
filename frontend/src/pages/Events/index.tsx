@@ -1,11 +1,32 @@
 import { useState, useEffect } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { useYears, useEvents } from '../../hooks/useApi'
-import { getDisciplineColor } from '../../constants'
+import { DISCIPLINE_COLORS } from '../../constants'
 import FiltersDropdown from '../../components/FiltersDropdown'
 import FilterSelect from '../../components/FilterSelect'
 import EmptyState from '../../components/EmptyState'
 import SkeletonLoader from '../../components/SkeletonLoader'
+
+function getDisciplineColor(eventType: string, isDark: boolean): { backgroundColor: string } {
+  const lightColors = {
+    coursing: '#aecbae',
+    bzmp: '#a8c8e0',
+    racing: '#e8b8a0',
+    other: '#c9a86a',
+    default: 'transparent'
+  }
+  
+  const darkColors = {
+    coursing: 'rgba(42, 90, 42, 0.25)',
+    bzmp: 'rgba(24, 104, 152, 0.35)',
+    racing: 'rgba(136, 64, 64, 0.25)',
+    other: 'rgba(90, 68, 0, 0.25)',
+    default: 'transparent'
+  }
+  
+  const colors = isDark ? darkColors : lightColors
+  return { backgroundColor: colors[eventType] || colors.default }
+}
 
 function formatDate(dateStr) {
   if (!dateStr) return ''
@@ -67,6 +88,18 @@ export default function Events() {
   const [sortField, setSortField] = useState(() => searchParams.get('sort') || 'date_start')
   const [sortDirection, setSortDirection] = useState(() => searchParams.get('dir') || 'asc')
   const [searchQuery, setSearchQuery] = useState(() => searchParams.get('search') || '')
+  const [isDark, setIsDark] = useState(false)
+
+  // Отслеживание dark mode
+  useEffect(() => {
+    const checkDarkMode = () => {
+      setIsDark(document.documentElement.classList.contains('dark'))
+    }
+    checkDarkMode()
+    const observer = new MutationObserver(checkDarkMode)
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] })
+    return () => observer.disconnect()
+  }, [])
 
   // React Query hooks
   const { data: yearsData } = useYears()
@@ -349,7 +382,7 @@ export default function Events() {
         {filteredEvents.length} из {events.length} событий
       </div>
 
-      <div className="overflow-hidden rounded-2xl border-2 border-old-money-200 dark:border-charcoal-700 bg-white dark:bg-charcoal-800 shadow-md">
+      <div className="overflow-hidden rounded-2xl border-2 border-old-money-200 dark:border-charcoal-700 bg-white dark:bg-charcoal-900 shadow-md">
         {filteredEvents.length === 0 ? (
           <EmptyState
             title="События не найдены"
@@ -357,11 +390,12 @@ export default function Events() {
           />
         ) : (
           <>
-        <div className="md:hidden space-y-3 p-3 min-w-[320px]">
+        <div className="md:hidden space-y-3 p-3 min-w-[320px] dark:bg-charcoal-800">
           {filteredEvents.map((event) => (
             <div 
               key={event.id} 
-              className={`${getDisciplineColor(event.event_type)} ${getImportantCompetitionStyle(event.competition_kind)} rounded-xl p-4 transition-all duration-300`}
+              style={getDisciplineColor(event.event_type, isDark)}
+              className={`${getImportantCompetitionStyle(event.competition_kind)} rounded-xl p-4 transition-all duration-300`}
             >
               <div className="flex justify-between items-start mb-2">
                 <div className="flex-1">
@@ -443,24 +477,24 @@ export default function Events() {
             {filteredEvents.map((event) => (
               <tr 
                 key={event.id} 
-                className={`${getDisciplineColor(event.event_type)} ${getImportantCompetitionStyle(event.competition_kind)} transition-all duration-300`}
+                className={`${getImportantCompetitionStyle(event.competition_kind)} transition-all duration-300`}
               >
-                <td className="px-3 py-3 text-sm text-old-money-800 dark:text-old-money-300 whitespace-nowrap">
+                <td style={getDisciplineColor(event.event_type, isDark)} className="px-3 py-3 text-sm text-old-money-800 dark:text-old-money-300 whitespace-nowrap">
                   {formatDateRange(event.date_start, event.date_end)}
                 </td>
-                <td className="px-3 py-3 text-center text-sm text-old-money-800 dark:text-old-money-300">
+                <td style={getDisciplineColor(event.event_type, isDark)} className="px-3 py-3 text-center text-sm text-old-money-800 dark:text-old-money-300">
                   {event.competition_kind || '-'}
                 </td>
-                <td className="px-3 py-3 text-center text-sm text-old-money-800 dark:text-old-money-300">
+                <td style={getDisciplineColor(event.event_type, isDark)} className="px-3 py-3 text-center text-sm text-old-money-800 dark:text-old-money-300 whitespace-nowrap">
                   {event.competition_type || '-'}
                 </td>
-                <td className="px-3 py-3 text-sm text-old-money-800 dark:text-old-money-300">
+                <td style={getDisciplineColor(event.event_type, isDark)} className="px-3 py-3 text-sm text-old-money-800 dark:text-old-money-300">
                   {event.location}
                 </td>
-                <td className="px-3 py-3 text-sm text-old-money-800 dark:text-old-money-300">
-                  {event.judges || '-'}
+                <td style={getDisciplineColor(event.event_type, isDark)} className="px-3 py-3 text-sm text-old-money-800 dark:text-old-money-300 whitespace-nowrap">
+                  {event.judges || ''}
                 </td>
-                <td className="px-3 py-3 text-sm">
+                <td style={getDisciplineColor(event.event_type, isDark)} className="px-3 py-3 text-sm text-center">
                   {event.results_url ? (
                     <Link
                       to={`/event/${event.id}`}
@@ -469,7 +503,7 @@ export default function Events() {
                       Открыть
                     </Link>
                   ) : (
-                    <span className="text-gray-400 text-xs italic">Ожидается</span>
+                    ''
                   )}
                 </td>
               </tr>

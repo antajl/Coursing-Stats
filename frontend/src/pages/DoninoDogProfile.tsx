@@ -20,6 +20,16 @@ export default function DoninoDogProfile() {
 
   const silhouetteType = getSilhouetteType(breed)
 
+  // Конвертация даты из YYYY-MM-DD в DD.MM.YYYY
+  const formatDate = (dateStr) => {
+    if (!dateStr) return ''
+    const parts = dateStr.split('-')
+    if (parts.length === 3) {
+      return `${parts[2]}.${parts[1]}.${parts[0]}`
+    }
+    return dateStr
+  }
+
   useEffect(() => {
     async function fetchDogData() {
       try {
@@ -132,29 +142,24 @@ export default function DoninoDogProfile() {
                     </div>
                   </div>
 
-                  <div className="bg-gradient-to-br from-old-money-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-old-money-200 dark:border-charcoal-500">
-                    <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Всего замеров</div>
-                    <div className="text-2xl font-bold text-charcoal-900 dark:text-charcoal-100">{data.speedStats.total}</div>
-                  </div>
-
-                  {data.speedStats.breedRank > 0 && (
-                    <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div className="bg-gradient-to-br from-old-money-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-old-money-200 dark:border-charcoal-500">
+                      <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Всего замеров</div>
+                      <div className="text-2xl font-bold text-charcoal-900 dark:text-charcoal-100">{data.speedStats.total}</div>
+                    </div>
+                    {data.speedStats.breedRank > 0 && (
                       <div className="bg-gradient-to-br from-camel-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-camel-200 dark:border-charcoal-500">
                         <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Рейтинг в породе</div>
                         <div className="text-2xl font-bold text-camel-700 dark:text-camel-400">#{data.speedStats.breedRank} <span className="text-base font-normal text-charcoal-600 dark:text-charcoal-400">из {data.speedStats.breedTotal}</span></div>
                       </div>
-                      <div className="bg-gradient-to-br from-camel-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-camel-200 dark:border-charcoal-500">
-                        <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Процентиль</div>
-                        <div className="text-2xl font-bold text-camel-700 dark:text-camel-400">Топ {100 - data.speedStats.percentile.toFixed(0)}%</div>
-                      </div>
-                    </div>
-                  )}
+                    )}
+                  </div>
 
                   {/* График прогресса */}
                   <div className="mt-6 space-y-2">
                     {data.speedRecords.map((record, idx) => (
                       <div key={idx} className="flex items-center gap-4">
-                        <div className="w-24 text-sm text-charcoal-700 dark:text-charcoal-300 text-right">{record.date}</div>
+                        <div className="w-24 text-sm text-charcoal-700 dark:text-charcoal-300 text-right">{formatDate(record.date)}</div>
                         <div className="flex-1 bg-cream-200 dark:bg-charcoal-600 rounded-full h-6 overflow-hidden relative">
                           <div 
                             className="bg-gradient-to-r from-camel-400 to-camel-600 h-full rounded-full transition-all duration-500"
@@ -186,29 +191,24 @@ export default function DoninoDogProfile() {
                     </div>
                   </div>
 
-                  <div className="bg-gradient-to-br from-old-money-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-old-money-200 dark:border-charcoal-500">
-                    <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Всего забегов</div>
-                    <div className="text-2xl font-bold text-charcoal-900 dark:text-charcoal-100">{data.coursingStats.total}</div>
-                  </div>
-
-                  {data.coursingStats.breedRank > 0 && (
-                    <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div className="bg-gradient-to-br from-old-money-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-old-money-200 dark:border-charcoal-500">
+                      <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Всего забегов</div>
+                      <div className="text-2xl font-bold text-charcoal-900 dark:text-charcoal-100">{data.coursingStats.total}</div>
+                    </div>
+                    {data.coursingStats.breedRank > 0 && (
                       <div className="bg-gradient-to-br from-camel-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-camel-200 dark:border-charcoal-500">
                         <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Рейтинг в породе</div>
                         <div className="text-2xl font-bold text-camel-700 dark:text-camel-400">#{data.coursingStats.breedRank} <span className="text-base font-normal text-charcoal-600 dark:text-charcoal-400">из {data.coursingStats.breedTotal}</span></div>
                       </div>
-                      <div className="bg-gradient-to-br from-camel-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-camel-200 dark:border-charcoal-500">
-                        <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Процентиль</div>
-                        <div className="text-2xl font-bold text-camel-700 dark:text-camel-400">Топ {100 - data.coursingStats.percentile.toFixed(0)}%</div>
-                      </div>
-                    </div>
-                  )}
+                    )}
+                  </div>
 
                   {/* График прогресса */}
                   <div className="mt-6 space-y-2">
                     {data.coursingRecords.map((record, idx) => (
                       <div key={idx} className="flex items-center gap-4">
-                        <div className="w-24 text-sm text-charcoal-700 dark:text-charcoal-300 text-right">{record.date}</div>
+                        <div className="w-24 text-sm text-charcoal-700 dark:text-charcoal-300 text-right">{formatDate(record.date)}</div>
                         <div className="flex-1 bg-cream-200 dark:bg-charcoal-600 rounded-full h-6 overflow-hidden relative">
                           <div 
                             className="bg-gradient-to-r from-camel-400 to-camel-600 h-full rounded-full transition-all duration-500"

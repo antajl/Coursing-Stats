@@ -32,14 +32,14 @@ Cloudflare Pages (фронтенд: React)
 
 | Script | Path | Purpose |
 |--------|------|---------|
-| `backend/scripts/scrape-year-index.mjs` | `backend/scripts/` | Парсит `s_{YEAR}.html`, получает список событий |
+| `backend/scripts/scrape/scrape-year-index.ts` | `backend/scripts/` | Парсит `s_{YEAR}.html`, получает список событий |
 | `backend/lib/fetch-win1251.mjs` | `backend/lib/` | Загрузка страниц с декодированием windows-1251 |
-| `backend/parsers/parse-results-coursing.mjs` | `backend/parsers/` | Парсер результатов курсинга |
-| `backend/parsers/parse-results-bzmp.mjs` | `backend/parsers/` | Парсер БЗМП |
-| `backend/parsers/parse-results-racing.mjs` | `backend/parsers/` | Парсер бега с извлечением данных о скорости |
-| `backend/scripts/load-events.mjs` | `backend/scripts/load/` | Загрузка событий в D1 |
-| `backend/scripts/load-results.mjs` | `backend/scripts/load/` | Загрузка результатов в D1 (через API или SQL) |
-| `backend/scripts/fetch-speed-records.mjs` | `backend/scripts/` | Загрузка рекордов Донино из Google Sheets |
+| `backend/parsers/parse-results-coursing.ts` | `backend/parsers/` | Парсер результатов курсинга |
+| `backend/parsers/parse-results-bzmp.ts` | `backend/parsers/` | Парсер БЗМП |
+| `backend/parsers/parse-results-racing.ts` | `backend/parsers/` | Парсер бега с извлечением данных о скорости |
+| `backend/scripts/load/load-events.ts` | `backend/scripts/load/` | Загрузка событий в D1 |
+| `backend/scripts/load/load-results.ts` | `backend/scripts/load/` | Загрузка результатов в D1 (через API или SQL) |
+| `backend/scripts/speed/sync-speed-records.ts` | `backend/scripts/speed/` | Загрузка рекордов Донино из Google Sheets |
 
 ### 2. Database (D1)
 

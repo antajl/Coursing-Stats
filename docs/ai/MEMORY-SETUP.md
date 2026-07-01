@@ -14,12 +14,12 @@
 **Title:** Структура проекта ProCoursing Stats
 **Content:**
 ```
-backend/src/worker.js — тонкий диспетчер (~93 строки), делегирует в routes/
-backend/src/routes/ — модули API (admin.js, events.js, dogs.js, judges.js, speed.js, top.js)
+backend/src/worker.ts — 8-строчная обёртка, делегирует в app.ts (Hono application)
+backend/src/routes/ — модули API (admin.ts, events.ts, dogs.ts, judges.ts, speed.ts, top.ts)
 backend/parsers/ — парсеры для coursing, BZMP, racing
 backend/scripts/ — скрипты загрузки данных (организованы по папкам: scrape/, load/, reparse/, migrate/, sync/, update/, speed/, test/, ci/)
 backend/scripts/archive/ — одноразовые скрипты (НЕ ПЕРЕИСПОЛЬЗОВАТЬ)
-backend/lib/ — общие модули (fetch-win1251.mjs, dog-lookup.mjs)
+backend/lib/ — общие модули (fetch-win1251.ts, dog-lookup.ts)
 frontend/src/ — React приложение (pages организованы по папкам: Events/, Judges/, SpeedRecords/, components, services)
 data/ — данные (организованы по папкам: events/, migrations/, exports/, imports/, updates/, temp/)
 docs/ — документация (README.md, 00-AI-MEMORY-SETUP.md, 00-PROJECT-MIGRATION-PLAN.md, 01-10.md, archive/)
@@ -75,7 +75,7 @@ GitHub: https://github.com/antajl/ProCoursing
 **Content:**
 ```
 База данных D1 (local и remote синхронизированы 2026-06-26):
-- events: 302
+- events: 219
 - dogs: ~1579
 - results: 4639
 - speed_records: данные из Google Sheets (автообновление)
@@ -107,7 +107,7 @@ HTML формат по годам:
 КРИТИЧЕСКИ ВАЖНО: Сайт procoursing.ru использует windows-1251 без charset в заголовках.
 - Использовать iconv-lite для декодирования
 - НЕ доверять fetch().text() — декодировать из байт вручную
-- Пример в backend/lib/fetch-win1251.mjs
+- Пример в backend/lib/fetch-win1251.ts
 
 Правила турниров курсинга:
 - Количество судей: 1, 2 или 3 (чаще 2)
@@ -115,7 +115,7 @@ HTML формат по годам:
 - Максимальная оценка: 1 судья=200, 2 судьи=400, 3 судьи=600
 - Нормализация total_score: НЕ делить на количество судей, сохраняется исходная grand_total (изменено в 2026)
 
-Перед изменением парсера — прогони node backend/scripts/test/test-parser.mjs
+Перед изменением парсера — прогони npx tsx backend/scripts/test/test-parser.ts
 
 БЗМП и бега (Racing) — отдельные форматы страниц, парсер для них уже написан. Не предполагать что формат курсинга подойдёт.
 
@@ -158,16 +158,16 @@ docs/archive/ — устаревшая документация
 **Title:** Парсеры и их особенности
 **Content:**
 ```
-backend/parsers/parse-results-coursing.mjs — парсер курсинга (~39 KB)
-backend/parsers/parse-results-bzmp.mjs — парсер БЗМП (~30 KB)
-backend/parsers/parse-results-racing.mjs — парсер рейсинга (~14 KB)
+backend/parsers/parse-results-coursing.ts — парсер курсинга (~39 KB)
+backend/parsers/parse-results-bzmp.ts — парсер БЗМП (~30 KB)
+backend/parsers/parse-results-racing.ts — парсер рейсинга (~14 KB)
 
 Особенности:
 - Coursing: 25 колонок, rowspan=2, судейские оценки, 2 забега
 - BZMP: 25 колонок, rowspan=2, судейские оценки, 2 забега, статусы "Отстранение"
 - Racing: 18 колонок, нет rowspan, время/скорость, до 3 забегов
 
-Тестовый скрипт: backend/scripts/test/test-parser.mjs (использует синтетические данные, ОБЯЗАТЕЛЬНО прогнать на 5-10 реальных страницах разных лет)
+Тестовый скрипт: backend/scripts/test/test-parser.ts (использует синтетические данные, ОБЯЗАТЕЛЬНО прогнать на 5-10 реальных страницах разных лет)
 ```
 **Tags:** parsing, details
 **Priority:** Important
@@ -180,12 +180,12 @@ backend/parsers/parse-results-racing.mjs — парсер рейсинга (~14 
 **Title:** API Routes
 **Content:**
 ```
-backend/src/routes/admin.js — admin endpoints с авторизацией
-backend/src/routes/events.js — события и результаты (переименован из competitions.js)
-backend/src/routes/dogs.js — профили собак
-backend/src/routes/judges.js — статистика судей
-backend/src/routes/speed.js — рекорды скорости
-backend/src/routes/top.js — рейтинги собак
+backend/src/routes/admin.ts — admin endpoints с авторизацией
+backend/src/routes/events.ts — события и результаты (переименован из competitions.ts)
+backend/src/routes/dogs.ts — профили собак
+backend/src/routes/judges.ts — статистика судей
+backend/src/routes/speed.ts — рекорды скорости
+backend/src/routes/top.ts — рейтинги собак
 
 Base URL:
 - Production: https://api.procoursing.antajl.ru
@@ -243,11 +243,11 @@ Secrets:
 **Title:** Frontend Components
 **Content:**
 ```
-frontend/src/components/DogSilhouettes.jsx — SVG силуэты пород
-frontend/src/components/DogStatsTable.jsx — таблица статистики (~12 KB)
-frontend/src/components/DogTooltip.jsx — tooltip с информацией (~15 KB)
-frontend/src/components/FilterSelect.jsx — селектор фильтров
-frontend/src/components/FiltersDropdown.jsx — dropdown фильтров
+frontend/src/components/DogSilhouettes.tsx — SVG силуэты пород
+frontend/src/components/DogStatsTable.tsx — таблица статистики (~12 KB)
+frontend/src/components/DogTooltip.tsx — tooltip с информацией (~15 KB)
+frontend/src/components/FilterSelect.tsx — селектор фильтров
+frontend/src/components/FiltersDropdown.tsx — dropdown фильтров
 ```
 **Tags:** frontend, components
 **Priority:** Optional
@@ -260,15 +260,16 @@ frontend/src/components/FiltersDropdown.jsx — dropdown фильтров
 **Title:** Frontend Pages
 **Content:**
 ```
-frontend/src/pages/DogProfile.jsx — профиль собаки (~15 KB)
-frontend/src/pages/EventResults.jsx — результаты события (~26 KB)
-frontend/src/pages/Events.jsx — календарь событий (~19 KB)
-frontend/src/pages/JudgeDetail.jsx — детальная страница судьи (~21 KB)
-frontend/src/pages/Judges.jsx — список судей (~10 KB)
-frontend/src/pages/Procoursing.jsx — навигация Procoursing (~2 KB)
-frontend/src/pages/SpeedRecords.jsx — рекорды Донино (~26 KB)
-frontend/src/pages/SpeedRecordsStats.jsx — статистика рекордов (~21 KB)
-frontend/src/pages/TopDogs.jsx — рейтинги собак (~19 KB)
+frontend/src/pages/DogProfile.tsx — профиль собаки (~15 KB)
+frontend/src/pages/DoninoDogProfile.tsx — профиль собаки Донино со статистикой скорости (~10 KB)
+frontend/src/pages/Events/EventResults.tsx — результаты события (~26 KB)
+frontend/src/pages/Events/index.tsx — календарь событий (~19 KB)
+frontend/src/pages/Judges/JudgeDetail.tsx — детальная страница судьи (~21 KB)
+frontend/src/pages/Judges/index.tsx — список судей (~10 KB)
+frontend/src/pages/Procoursing.tsx — навигация Procoursing (~2 KB)
+frontend/src/pages/SpeedRecords/index.tsx — рекорды Донино (~26 KB)
+frontend/src/pages/SpeedRecords/Stats.tsx — статистика рекордов (~21 KB)
+frontend/src/pages/TopDogs.tsx — рейтинги собак (~19 KB)
 ```
 **Tags:** frontend, pages
 **Priority:** Optional

@@ -5,6 +5,12 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  safelist: [
+    'bg-forest-400', 'hover:bg-forest-500', 'dark:bg-forest-900', 'dark:hover:bg-forest-800',
+    'bg-warm-blue-400', 'hover:bg-warm-blue-500', 'dark:bg-warm-blue-900', 'dark:hover:bg-warm-blue-800',
+    'bg-terracotta-400', 'hover:bg-terracotta-500', 'dark:bg-terracotta-900', 'dark:hover:bg-terracotta-800',
+    'bg-camel-400', 'hover:bg-camel-500', 'dark:bg-camel-900', 'dark:hover:bg-camel-800',
+  ],
   theme: {
     extend: {
       colors: {
@@ -44,6 +50,7 @@ export default {
           700: '#7a5a00',
           800: '#6b4f00',
           900: '#5a4400',
+          950: '#3a2e00',
         },
         'forest': {
           50: '#f0f5f0',
@@ -82,6 +89,7 @@ export default {
           700: '#a86060',
           800: '#985050',
           900: '#884040',
+          950: '#682020',
         },
         'warm-blue': {
           50: '#f0f4f8',
@@ -94,11 +102,48 @@ export default {
           700: '#3888b8',
           800: '#2878a8',
           900: '#186898',
+          950: '#084878',
+        },
+        // Semantic color tokens
+        'primary': {
+          DEFAULT: '#524a45',
+          dark: '#d0d0d0',
+        },
+        'secondary': {
+          DEFAULT: '#8a7f75',
+          dark: '#d9d0c3',
+        },
+        'muted': {
+          DEFAULT: '#b8ada0',
+          dark: '#c9bfb0',
+        },
+        'accent': {
+          DEFAULT: '#9a7200',
+          dark: '#c9a86a',
+        },
+        'surface': {
+          DEFAULT: '#ffffff',
+          dark: '#3a3a3a',
+        },
+        'surface-alt': {
+          DEFAULT: '#f8f6f3',
+          dark: '#4a4a4a',
+        },
+        'border': {
+          DEFAULT: '#e6dfd4',
+          dark: '#5a5a5a',
         },
       },
       fontFamily: {
         sans: ['Montserrat', 'sans-serif'],
         serif: ['Georgia', 'serif'],
+      },
+      boxShadow: {
+        'dark-sm': '0 1px 2px 0 rgba(0, 0, 0, 0.5)',
+        'dark': '0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.4)',
+        'dark-md': '0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.4)',
+        'dark-lg': '0 20px 25px -5px rgba(0, 0, 0, 0.6), 0 10px 10px -5px rgba(0, 0, 0, 0.5)',
+        'dark-xl': '0 25px 50px -12px rgba(0, 0, 0, 0.7)',
       },
     },
   },

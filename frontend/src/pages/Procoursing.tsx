@@ -17,36 +17,48 @@ function Procoursing() {
 
   return (
     <div className="space-y-6">
-      <div className="bg-cream-50/90 backdrop-blur-lg rounded-2xl shadow-xl border border-cream-300 p-4 md:p-8">
-        <div className="flex flex-col md:flex-row gap-2 md:gap-4 mb-4 md:mb-6 bg-old-money-100 p-1 rounded-xl">
+      <div className="bg-cream-50/90 dark:bg-charcoal-900/90 backdrop-blur-lg rounded-2xl shadow-xl border border-cream-300 dark:border-charcoal-700 p-4 md:p-8">
+        <div role="tablist" aria-label="Разделы" className="flex flex-col md:flex-row gap-2 md:gap-4 mb-4 md:mb-6 bg-old-money-100 dark:bg-charcoal-800 p-1 rounded-xl">
           <button
+            role="tab"
+            aria-selected={activeTab === 'calendar'}
+            aria-controls="tab-panel-calendar"
+            id="tab-calendar"
             onClick={() => handleTabChange('calendar')}
             className={`flex-1 px-4 py-3 rounded-lg font-semibold transition-all duration-300 ${
               activeTab === 'calendar'
-                ? 'bg-white text-charcoal-700 shadow-sm'
-                : 'text-charcoal-600 hover:text-charcoal-700'
+                ? 'bg-white dark:bg-charcoal-700 text-charcoal-700 dark:text-charcoal-100 shadow-sm'
+                : 'text-charcoal-600 dark:text-charcoal-400 hover:text-charcoal-700 dark:hover:text-charcoal-200'
             }`}
           >
             <span className="md:hidden">Календарь</span>
             <span className="hidden md:inline">Календарь событий</span>
           </button>
           <button
+            role="tab"
+            aria-selected={activeTab === 'ranking'}
+            aria-controls="tab-panel-ranking"
+            id="tab-ranking"
             onClick={() => handleTabChange('ranking')}
             className={`flex-1 px-4 py-3 rounded-lg font-semibold transition-all duration-300 ${
               activeTab === 'ranking'
-                ? 'bg-white text-charcoal-700 shadow-sm'
-                : 'text-charcoal-600 hover:text-charcoal-700'
+                ? 'bg-white dark:bg-charcoal-700 text-charcoal-700 dark:text-charcoal-100 shadow-sm'
+                : 'text-charcoal-600 dark:text-charcoal-400 hover:text-charcoal-700 dark:hover:text-charcoal-200'
             }`}
           >
             <span className="md:hidden">Рейтинг</span>
             <span className="hidden md:inline">Рейтинг собак</span>
           </button>
           <button
+            role="tab"
+            aria-selected={activeTab === 'judges'}
+            aria-controls="tab-panel-judges"
+            id="tab-judges"
             onClick={() => handleTabChange('judges')}
             className={`flex-1 px-4 py-3 rounded-lg font-semibold transition-all duration-300 ${
               activeTab === 'judges'
-                ? 'bg-white text-charcoal-700 shadow-sm'
-                : 'text-charcoal-600 hover:text-charcoal-700'
+                ? 'bg-white dark:bg-charcoal-700 text-charcoal-700 dark:text-charcoal-100 shadow-sm'
+                : 'text-charcoal-600 dark:text-charcoal-400 hover:text-charcoal-700 dark:hover:text-charcoal-200'
             }`}
           >
             <span className="md:hidden">Судьи</span>
@@ -55,9 +67,30 @@ function Procoursing() {
         </div>
 
         <div className="min-h-[400px]">
-          {activeTab === 'calendar' && <Events />}
-          {activeTab === 'ranking' && <TopDogs />}
-          {activeTab === 'judges' && <Judges />}
+          <div
+            id="tab-panel-calendar"
+            role="tabpanel"
+            aria-labelledby="tab-calendar"
+            className={activeTab === 'calendar' ? '' : 'hidden'}
+          >
+            {activeTab === 'calendar' && <Events />}
+          </div>
+          <div
+            id="tab-panel-ranking"
+            role="tabpanel"
+            aria-labelledby="tab-ranking"
+            className={activeTab === 'ranking' ? '' : 'hidden'}
+          >
+            {activeTab === 'ranking' && <TopDogs />}
+          </div>
+          <div
+            id="tab-panel-judges"
+            role="tabpanel"
+            aria-labelledby="tab-judges"
+            className={activeTab === 'judges' ? '' : 'hidden'}
+          >
+            {activeTab === 'judges' && <Judges />}
+          </div>
         </div>
       </div>
     </div>

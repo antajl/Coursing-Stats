@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom'
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Events from './pages/Events/index'
 import TopDogs from './pages/TopDogs'
 import DogProfile from './pages/DogProfile'
@@ -12,12 +12,14 @@ import DoninoDogProfile from './pages/DoninoDogProfile'
 import { DogSilhouettes } from './components/DogSilhouettes'
 import { QueryProvider } from './lib/query-client'
 import ThemeToggle from './components/ThemeToggle'
+import { useDarkMode } from './hooks/useDarkMode'
 
 function Nav() {
   const location = useLocation();
   const [sourcesOpen, setSourcesOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const timeoutRef = useRef(null);
+  const isDark = useDarkMode();
   const isActive = (path) => location.pathname === path || (path === '/' && location.pathname === '/procoursing');
 
   const handleMouseEnter = () => {
@@ -41,11 +43,24 @@ function Nav() {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === 'Escape') {
+        setMobileMenuOpen(false);
+        setSourcesOpen(false);
+      }
+    };
+    document.addEventListener('keydown', handleEsc);
+    return () => document.removeEventListener('keydown', handleEsc);
+  }, []);
+
   return (
-    <nav className="sticky top-0 z-50 bg-cream-50/90 backdrop-blur-xl border-b border-cream-300 shadow-md relative">
+    <nav className="sticky top-0 z-50 bg-cream-50/90 dark:bg-charcoal-900/90 backdrop-blur-xl border-b border-cream-300 dark:border-charcoal-700 shadow-md dark:shadow-dark-md relative">
       {/* Logo */}
       <div className="hidden md:flex absolute left-0 top-0 h-16 items-center px-4">
-        <img src="/assets/navbar-bg.svg" alt="Logo" className="h-[61px] opacity-80" style={{ objectFit: 'contain' }} />
+        <Link to="/procoursing">
+          <img src={isDark ? '/assets/navbar-bg-dark.svg' : '/assets/navbar-bg.svg'} alt="" className="h-[61px] opacity-80" style={{ objectFit: 'contain' }} />
+        </Link>
       </div>
 
       {/* Desktop navigation */}
@@ -57,20 +72,22 @@ function Nav() {
           onMouseLeave={handleMouseLeave}
         >
           <button
-            className="w-10 h-10 border-2 border-old-money-300 rounded-lg bg-old-money-50 hover:bg-old-money-100 transition-colors flex items-center justify-center"
+            aria-expanded={sourcesOpen}
+            aria-label="Источники данных"
+            className="w-11 h-11 border-2 border-old-money-300 dark:border-charcoal-600 rounded-lg bg-old-money-50 dark:bg-charcoal-800 hover:bg-old-money-100 dark:hover:bg-charcoal-700 transition-colors flex items-center justify-center"
             title="Источники данных"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-old-money-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-old-money-700 dark:text-charcoal-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
             </svg>
           </button>
           {sourcesOpen && (
-            <div className="absolute right-0 mt-1 w-64 bg-white rounded-xl shadow-xl border-2 border-old-money-200 overflow-hidden z-[100]">
+            <div className="absolute right-0 mt-1 w-64 bg-white dark:bg-charcoal-800 rounded-xl shadow-xl border-2 border-old-money-200 dark:border-charcoal-600 overflow-hidden z-[100]">
               <a
                 href="http://procoursing.ru"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block px-4 py-3 text-sm text-charcoal-700 hover:bg-old-money-50 transition-colors border-b border-old-money-100"
+                className="block px-4 py-3 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-700 transition-colors border-b border-old-money-100 dark:border-charcoal-600"
               >
                 Procoursing.ru
               </a>
@@ -78,7 +95,7 @@ function Nav() {
                 href="https://docs.google.com/spreadsheets/d/1NTiY3HXZIkXE8xTeXZESgMKaZsEXunmcWhTfhhkoKyE/edit?gid=1787526009#gid=1787526009"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block px-4 py-3 text-sm text-charcoal-700 hover:bg-old-money-50 transition-colors border-b border-old-money-100"
+                className="block px-4 py-3 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-700 transition-colors border-b border-old-money-100 dark:border-charcoal-600"
               >
                 Рекорды Донино (курсинг)
               </a>
@@ -86,7 +103,7 @@ function Nav() {
                 href="https://docs.google.com/spreadsheets/d/1hpdA8vlIfeECgpnPvuk5xfezPsdUh1EXULjeATAF9dw/edit?pli=1&gid=0#gid=0"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block px-4 py-3 text-sm text-charcoal-700 hover:bg-old-money-50 transition-colors"
+                className="block px-4 py-3 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-700 transition-colors"
               >
                 Рекорды Донино (бега борзых)
               </a>
@@ -97,14 +114,19 @@ function Nav() {
 
       {/* Mobile header with logo and menu button */}
       <div className="md:hidden flex items-center justify-between h-12 px-3 gap-2">
-        <img src="/assets/navbar-bg.svg" alt="Logo" className="h-10 opacity-80" style={{ objectFit: 'contain' }} />
+        <Link to="/procoursing">
+          <img src={isDark ? '/assets/navbar-bg-dark.svg' : '/assets/navbar-bg.svg'} alt="" className="h-10 opacity-80" style={{ objectFit: 'contain' }} />
+        </Link>
         <div className="flex items-center gap-2">
           <ThemeToggle />
           <button
             onClick={toggleMobileMenu}
-            className="w-9 h-9 border-2 border-old-money-300 rounded-lg bg-old-money-50 hover:bg-old-money-100 transition-colors flex items-center justify-center"
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-menu"
+            aria-label="Навигационное меню"
+            className="w-11 h-11 border-2 border-old-money-300 dark:border-charcoal-600 rounded-lg bg-old-money-50 dark:bg-charcoal-800 hover:bg-old-money-100 dark:hover:bg-charcoal-700 transition-colors flex items-center justify-center"
           >
-            <svg className="w-5 h-5 text-old-money-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 text-old-money-700 dark:text-charcoal-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {mobileMenuOpen ? (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               ) : (
@@ -147,13 +169,13 @@ function Nav() {
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-12 left-0 right-0 bg-white border-b border-old-money-200 shadow-lg z-50">
+        <div id="mobile-menu" className="md:hidden absolute top-12 left-0 right-0 bg-white dark:bg-charcoal-900 border-b border-old-money-200 dark:border-charcoal-700 shadow-lg z-50">
           <div className="px-4 py-3 space-y-2">
             <Link
               to="/procoursing"
               onClick={() => setMobileMenuOpen(false)}
               className={`block px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${
-                isActive('/') ? 'bg-camel-100 text-camel-700' : 'text-charcoal-700 hover:bg-old-money-50'
+                isActive('/') ? 'bg-camel-100 dark:bg-camel-900 text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800'
               }`}
             >
               Соревнования
@@ -162,15 +184,15 @@ function Nav() {
               to="/speed-records"
               onClick={() => setMobileMenuOpen(false)}
               className={`block px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${
-                isActive('/speed-records') ? 'bg-camel-100 text-camel-700' : 'text-charcoal-700 hover:bg-old-money-50'
+                isActive('/speed-records') ? 'bg-camel-100 dark:bg-camel-900 text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800'
               }`}
             >
               Рекорды Донино
             </Link>
-            <div className="border-t border-old-money-200 pt-2 mt-2">
+            <div className="border-t border-old-money-200 dark:border-charcoal-600 pt-2 mt-2">
               <button
                 onClick={toggleSources}
-                className="w-full flex items-center justify-between px-4 py-2 rounded-lg text-sm font-semibold text-charcoal-700 hover:bg-old-money-50 transition-colors"
+                className="w-full flex items-center justify-between px-4 py-2 rounded-lg text-sm font-semibold text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800 transition-colors"
               >
                 <span>Источники данных</span>
                 <svg className={`w-4 h-4 transition-transform ${sourcesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -183,7 +205,7 @@ function Nav() {
                     href="http://procoursing.ru"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block px-4 py-2 text-sm text-charcoal-700 hover:bg-old-money-50 rounded-lg transition-colors"
+                    className="block px-4 py-2 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800 rounded-lg transition-colors"
                   >
                     Procoursing.ru
                   </a>
@@ -191,7 +213,7 @@ function Nav() {
                     href="https://docs.google.com/spreadsheets/d/1NTiY3HXZIkXE8xTeXZESgMKaZsEXunmcWhTfhhkoKyE/edit?gid=1787526009#gid=1787526009"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block px-4 py-2 text-sm text-charcoal-700 hover:bg-old-money-50 rounded-lg transition-colors"
+                    className="block px-4 py-2 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800 rounded-lg transition-colors"
                   >
                     Рекорды Донино (курсинг)
                   </a>
@@ -199,7 +221,7 @@ function Nav() {
                     href="https://docs.google.com/spreadsheets/d/1hpdA8vlIfeECgpnPvuk5xfezPsdUh1EXULjeATAF9dw/edit?pli=1&gid=0#gid=0"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block px-4 py-2 text-sm text-charcoal-700 hover:bg-old-money-50 rounded-lg transition-colors"
+                    className="block px-4 py-2 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800 rounded-lg transition-colors"
                   >
                     Рекорды Донино (бега борзых)
                   </a>
@@ -218,10 +240,16 @@ function App() {
     <QueryProvider>
       <Router>
         <DogSilhouettes />
-        <div className="min-h-screen bg-gradient-to-br from-old-money-50 via-old-money-100 to-old-money-200">
+        <a href="#main-content"
+           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4
+                      focus:z-50 focus:px-4 focus:py-2 focus:bg-camel-600 focus:text-white
+                      focus:rounded-lg">
+          Перейти к содержимому
+        </a>
+        <div className="min-h-screen bg-gradient-to-br from-old-money-50 via-old-money-100 to-old-money-200 dark:from-charcoal-900 dark:via-charcoal-800 dark:to-charcoal-900">
           <Nav />
 
-          <main className="w-full md:max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 py-5">
+          <main id="main-content" className="w-full md:max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 py-5">
             <Routes>
               <Route path="/" element={<Procoursing />} />
               <Route path="/procoursing" element={<Procoursing />} />

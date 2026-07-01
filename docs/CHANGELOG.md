@@ -20,13 +20,33 @@
     - Judges/JudgeDetail.tsx
     - DogProfile.tsx
     - Shared components: EmptyState, ErrorState, FilterSelect, FiltersDropdown, SkeletonLoader, DogStatsTable
+- **Accessibility**: Улучшение доступности интерфейса
+  - Skip-link для keyboard navigation
+  - ARIA атрибуты для вкладок (role="tablist/tab/tabpanel")
+  - ARIA атрибуты для dropdowns (aria-expanded, aria-controls, aria-label)
+  - Escape для закрытия всех меню и dropdowns
+  - Увеличение touch targets с w-9/h-9 до w-11/h-11
+- **Semantic color tokens**: Добавление семантических цветов в tailwind.config.js
+  - primary, secondary, muted, accent, surface, surface-alt, border
+- **Dark shadows**: Переопределение теней для dark mode
+  - dark-sm, dark, dark-md, dark-lg, dark-xl с повышенной непрозрачностью
+- **SVG иконки**: Добавление SVG иконок в EmptyState и ErrorState
+- **useDarkMode hook**: Создание хука для определения текущей темы
+- **Logo переключение**: Логотип переключается в зависимости от темы (navbar-bg.svg / navbar-bg-dark.svg)
+- **Кликабельный логотип**: Логотип теперь ссылается на главную страницу
+- **Плавный переход темы**: Добавлен transition на html для background-color и color (200ms)
 - Реорганизация документации в папки по темам
 - Объединение SPEED_RECORDS.md и TROUBLESHOOTING_SPEED_RECORDS.md
 - Создание CONTRIBUTING.md
-- Создание design/changelog.md для истории дизайна
 - Упрощение Windows скриптов (start-servers.bat, deploy-to-github.bat)
+- Удаление дублирующего docs/design/changelog.md (интегрировано в общий CHANGELOG.md)
+- **Документация EVENT-COLORS.md**: Создание документации по системе цветов календаря событий
 
 ### Изменено
+- **Контрастность в dark mode**: Улучшение контраста текста
+  - old-money-600 → 700, old-money-400 → 300 в dark mode
+  - camel-400 → 300 в dark mode
+  - Применено в DogTooltip, EventResults, DogProfile
 - **Стилизация таблиц**: Унификация стилей таблиц в SpeedRecords с DogStatsTable
   - Добавлен dark mode для thead/th (bg-cream-100 dark:bg-charcoal-700)
   - Обновлены разделители tbody (divide-y divide-old-money-200 dark:divide-charcoal-600)
@@ -42,6 +62,22 @@
   - Единицы измерения "км/ч" и "сек" теперь имеют dark:text-charcoal-400
   - Проценты в статистике имеют правильные цвета для тёмной темы
   - Все таблицы статистики (по породам, полу, годам) обновлены
+- **ThemeToggle**: Исправлена логика иконок
+  - В тёмной теме показывается солнце (для переключения на светлую)
+  - В светлой теме показывается луна (для переключения на тёмную)
+- **Унификация рамок**: ThemeToggle теперь имеет ту же рамку, что и кнопки в шапке
+  - border-old-money-300 dark:border-charcoal-600, rounded-lg, w-11 h-11
+- **Dark mode для input[type="date"]**: Добавлен color-scheme для нативного календаря
+- **Цвета календаря событий**: Синхронизация цветов таблицы с легендой
+  - Переход на inline стили с hex/rgba цветами для надёжности
+  - Цвета в таблице теперь точно соответствуют кружочкам легенды
+  - Светлый режим: forest-300, warm-blue-300, terracotta-300, camel-300
+  - Тёмный режим: forest-900/25, warm-blue-900/35, terracotta-900/25, camel-900/25
+- **Таблица календаря событий**: Улучшение отображения данных
+  - Убраны прочерки из колонки "Судьи" (пусто если нет данных)
+  - Убран текст "Ожидается" из колонки "Результаты" (пусто если нет данных)
+  - Добавлено whitespace-nowrap для колонок "Судьи" и "Дисциплина" (текст не переносится)
+  - Колонка "Результаты" выровнена по центру
 - **Исправления багов**:
   - Исправлен фликер при смене фильтров в Judges/index.tsx (добавлен isInitialLoad)
   - Исправлен бесконечный цикл в TopDogs.tsx (добавлена проверка needsUpdate перед обновлением URL)

@@ -28,12 +28,25 @@ export default function FiltersDropdown({ children, onReset, label = 'Больш
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [])
 
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === 'Escape') {
+        setOpen(false)
+      }
+    }
+    document.addEventListener('keydown', handleEsc)
+    return () => document.removeEventListener('keydown', handleEsc)
+  }, [])
+
   return (
     <div className="relative" ref={ref}>
       <button
         onClick={() => setOpen(!open)}
-        className={`h-12 px-5 py-3 border-2 rounded-xl hover:bg-old-money-50 focus:ring-2 focus:ring-gold-400 focus:border-transparent transition-all duration-300 shadow-sm font-medium flex items-center gap-2 ${
-          open ? 'bg-camel-600 text-white border-camel-600' : 'bg-white border-old-money-300 text-old-money-800'
+        aria-expanded={open}
+        aria-controls="filters-panel"
+        aria-label="Расширенные фильтры"
+        className={`h-12 px-5 py-3 border-2 rounded-xl hover:bg-old-money-50 dark:hover:bg-charcoal-700 focus:ring-2 focus:ring-gold-400 focus:border-transparent transition-all duration-300 shadow-sm font-medium flex items-center gap-2 ${
+          open ? 'bg-camel-600 text-white border-camel-600' : 'bg-white dark:bg-charcoal-800 border-old-money-300 dark:border-charcoal-600 text-old-money-800 dark:text-charcoal-200'
         }`}
       >
         {label}
@@ -49,13 +62,13 @@ export default function FiltersDropdown({ children, onReset, label = 'Больш
       </button>
 
       {open && (
-        <div className="absolute right-0 mt-2 w-[320px] md:w-[600px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl border-2 border-old-money-200 z-50 overflow-visible">
+        <div id="filters-panel" className="absolute right-0 mt-2 w-[320px] md:w-[600px] max-w-[calc(100vw-2rem)] bg-white dark:bg-charcoal-800 rounded-2xl shadow-2xl border-2 border-old-money-200 dark:border-charcoal-600 z-50 overflow-visible">
           <div className="p-4 md:p-6 max-h-[80vh] overflow-y-auto">
             <div className="flex justify-between items-center mb-6">
-              <h2 className="text-xl font-bold text-charcoal-800">Фильтры</h2>
+              <h2 className="text-xl font-bold text-charcoal-800 dark:text-charcoal-100">Фильтры</h2>
               <button
                 onClick={() => setOpen(false)}
-                className="text-charcoal-500 hover:text-charcoal-700 transition-colors"
+                className="text-charcoal-500 dark:text-charcoal-400 hover:text-charcoal-700 dark:hover:text-charcoal-200 transition-colors"
                 aria-label="Закрыть фильтры"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -67,17 +80,17 @@ export default function FiltersDropdown({ children, onReset, label = 'Больш
             <div className="space-y-4">{children}</div>
           </div>
 
-          <div className="border-t-2 border-old-money-200 p-6">
+          <div className="border-t-2 border-old-money-200 dark:border-charcoal-600 p-6">
             <div className="flex gap-3">
               <button
                 onClick={onReset}
-                className="flex-1 h-12 px-4 py-3 bg-old-money-100 text-old-money-800 rounded-xl hover:bg-old-money-200 transition-colors font-medium"
+                className="flex-1 h-12 px-4 py-3 bg-old-money-100 dark:bg-charcoal-700 text-old-money-800 dark:text-charcoal-200 rounded-xl hover:bg-old-money-200 dark:hover:bg-charcoal-600 transition-colors font-medium"
               >
                 Сбросить
               </button>
               <button
                 onClick={() => setOpen(false)}
-                className="flex-1 h-12 px-4 py-3 bg-camel-600 text-white rounded-xl hover:bg-camel-700 transition-colors font-medium"
+                className="flex-1 h-12 px-4 py-3 bg-camel-600 dark:bg-camel-700 text-white rounded-xl hover:bg-camel-700 dark:hover:bg-camel-600 transition-colors font-medium"
               >
                 Применить
               </button>

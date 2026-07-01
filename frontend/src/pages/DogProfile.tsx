@@ -210,7 +210,7 @@ export default function DogProfile() {
                 navigate('/top')
               }
             }}
-            className="font-medium text-camel-700 dark:text-camel-400 transition-colors hover:text-camel-800 dark:hover:text-camel-300"
+            className="font-medium text-camel-700 dark:text-camel-300 transition-colors hover:text-camel-800 dark:hover:text-camel-200"
           >
             <span className="md:hidden">← Назад</span>
             <span className="hidden md:inline">← {fromSpeedRecords ? 'Назад к рекордам' : fromCoursingRecords ? 'Назад к бегам борзых' : 'Назад к топу'}</span>
@@ -218,7 +218,7 @@ export default function DogProfile() {
           <button
             onClick={handleExport}
             disabled={exporting}
-            className="rounded-xl border-2 border-camel-300 dark:border-camel-600 bg-white dark:bg-charcoal-800 px-4 py-2 text-sm font-semibold text-camel-700 dark:text-camel-400 transition-all hover:bg-camel-50 dark:hover:bg-charcoal-700 hover:border-camel-400 disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-camel-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-charcoal-900"
+            className="rounded-xl border-2 border-camel-300 dark:border-camel-600 bg-white dark:bg-charcoal-800 px-4 py-2 text-sm font-semibold text-camel-700 dark:text-camel-300 transition-all hover:bg-camel-50 dark:hover:bg-charcoal-700 hover:border-camel-400 disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-camel-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-charcoal-900"
           >
             {exporting ? 'Экспорт...' : 'Скачать карточку'}
           </button>
@@ -255,8 +255,8 @@ export default function DogProfile() {
           </div>
 
           {dog.owner && (
-            <div className="mt-4 pt-4 border-t border-old-money-100 dark:border-charcoal-600 text-sm text-old-money-600 dark:text-old-money-400">
-              <span className="font-semibold text-old-money-700 dark:text-old-money-300">Владелец:</span> {dog.owner}
+            <div className="mt-4 pt-4 border-t border-old-money-100 dark:border-charcoal-600 text-sm text-old-money-700 dark:text-old-money-300">
+              <span className="font-semibold text-old-money-800 dark:text-old-money-200">Владелец:</span> {dog.owner}
             </div>
           )}
         </div>
@@ -277,7 +277,7 @@ export default function DogProfile() {
                   className="group mb-4 block rounded-xl border-2 border-camel-200 dark:border-camel-600 bg-camel-50 dark:bg-charcoal-700 p-4 text-center transition-colors hover:bg-camel-100 dark:hover:bg-charcoal-600"
                 >
                   <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2 uppercase tracking-wide">Лучший результат</div>
-                  <div className="text-4xl font-bold tracking-tight text-camel-700 dark:text-camel-400 group-hover:text-camel-800 dark:group-hover:text-camel-300">
+                  <div className="text-4xl font-bold tracking-tight text-camel-700 dark:text-camel-300 group-hover:text-camel-800 dark:group-hover:text-camel-200">
                     {coursing.best_score ?? '—'}
                   </div>
                   <div className="mt-2 text-sm text-camel-600 dark:text-camel-500 opacity-0 transition-opacity group-hover:opacity-100 font-medium">
@@ -287,7 +287,7 @@ export default function DogProfile() {
               ) : (
                 <div className="mb-4 rounded-xl border-2 border-camel-200 dark:border-camel-600 bg-camel-50 dark:bg-charcoal-700 p-4 text-center">
                   <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2 uppercase tracking-wide">Лучший результат</div>
-                  <div className="text-4xl font-bold tracking-tight text-camel-700 dark:text-camel-400">
+                  <div className="text-4xl font-bold tracking-tight text-camel-700 dark:text-camel-300">
                     {coursing.best_score ?? '—'}
                   </div>
                 </div>

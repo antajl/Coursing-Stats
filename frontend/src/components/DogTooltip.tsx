@@ -149,7 +149,7 @@ export default function DogTooltip({ dogId, anchorRect, onClose }) {
           <div className="flex items-center gap-4 mb-4 pb-4 border-b border-old-money-100 dark:border-charcoal-600">
             {/* Силуэт */}
             <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-old-money-100 dark:from-charcoal-700 to-old-money-200 dark:to-charcoal-600 rounded-full flex items-center justify-center">
-              <svg className="w-10 h-10 text-old-money-600 dark:text-old-money-400">
+              <svg className="w-10 h-10 text-old-money-700 dark:text-old-money-300">
                 <use href={`#silhouette-${silhouetteType}`} />
               </svg>
             </div>
@@ -196,7 +196,7 @@ export default function DogTooltip({ dogId, anchorRect, onClose }) {
                     title="Открыть протокол соревнования"
                   >
                     <div className="text-[10px] text-gray-400 dark:text-gray-500 mb-1">Лучший результат</div>
-                    <div className="text-2xl font-bold text-camel-700 dark:text-camel-400 leading-none group-hover:text-camel-800 dark:group-hover:text-camel-300">
+                    <div className="text-2xl font-bold text-camel-700 dark:text-camel-300 leading-none group-hover:text-camel-800 dark:group-hover:text-camel-200">
                       {coursing.best_score ?? '—'}
                     </div>
                     <div className="mt-1 text-[10px] text-camel-700 dark:text-camel-500 opacity-0 transition-opacity group-hover:opacity-100">
@@ -206,7 +206,7 @@ export default function DogTooltip({ dogId, anchorRect, onClose }) {
                 ) : (
                   <div className="bg-white dark:bg-charcoal-800 rounded-lg p-3 shadow-sm mb-3 text-center">
                     <div className="text-[10px] text-gray-400 dark:text-gray-500 mb-1">Лучший результат</div>
-                    <div className="text-2xl font-bold text-camel-700 dark:text-camel-400 leading-none">
+                    <div className="text-2xl font-bold text-camel-700 dark:text-camel-300 leading-none">
                       {coursing.best_score ?? '—'}
                     </div>
                   </div>
@@ -228,7 +228,7 @@ export default function DogTooltip({ dogId, anchorRect, onClose }) {
                   <div className="flex gap-1.5">
                     {[
                       { emoji: '🥇', count: coursing.gold, color: 'text-camel-700 dark:text-camel-400' },
-                      { emoji: '🥈', count: coursing.silver, color: 'text-old-money-600 dark:text-old-money-400' },
+                      { emoji: '🥈', count: coursing.silver, color: 'text-old-money-700 dark:text-old-money-300' },
                       { emoji: '🥉', count: coursing.bronze, color: 'text-terracotta-600 dark:text-terracotta-400' },
                     ].map(({ emoji, count, color }) => (
                       <div key={emoji} className="flex-1 bg-white dark:bg-charcoal-800 rounded-lg py-1.5 shadow-sm text-center">

@@ -94,19 +94,32 @@ function parseXLSX(buffer) {
         // Конвертация даты
         let dateStr = dateValue;
         if (typeof dateStr === 'number') {
+          // Excel дата: 46156 = 2026-06-26, 45983 = 2025-11-22
           const excelDate = new Date(Math.round((dateStr - 25569) * 86400 * 1000));
-          const day = String(excelDate.getDate()).padStart(2, '0');
-          const month = String(excelDate.getMonth() + 1).padStart(2, '0');
           const year = excelDate.getFullYear();
-          dateStr = `${day}.${month}.${year}`;
+          const month = String(excelDate.getMonth() + 1).padStart(2, '0');
+          const day = String(excelDate.getDate()).padStart(2, '0');
+          dateStr = `${year}-${month}-${day}`;
+          console.log(`Converting Excel date ${dateValue} to ${dateStr}`);
         } else if (typeof dateStr === 'string') {
-          dateStr = dateStr.replace(/[;,\/\-]/g, '.');
-          const parts = dateStr.split('.');
-          if (parts.length === 3) {
-            const day = String(parts[0]).padStart(2, '0');
-            const month = String(parts[1]).padStart(2, '0');
-            const year = parts[2];
-            dateStr = `${day}.${month}.${year}`;
+          // Проверяем, если это уже конвертированная строка (числа)
+          if (/^\d{5}$/.test(dateStr)) {
+            const excelDate = new Date(Math.round((parseInt(dateStr) - 25569) * 86400 * 1000));
+            const year = excelDate.getFullYear();
+            const month = String(excelDate.getMonth() + 1).padStart(2, '0');
+            const day = String(excelDate.getDate()).padStart(2, '0');
+            dateStr = `${year}-${month}-${day}`;
+            console.log(`Converting string Excel date ${dateValue} to ${dateStr}`);
+          } else {
+            // Конвертируем из DD.MM.YYYY в YYYY-MM-DD
+            dateStr = dateStr.replace(/[;,\/\-]/g, '.');
+            const parts = dateStr.split('.');
+            if (parts.length === 3) {
+              const day = String(parts[0]).padStart(2, '0');
+              const month = String(parts[1]).padStart(2, '0');
+              const year = parts[2];
+              dateStr = `${year}-${month}-${day}`;
+            }
           }
         }
         

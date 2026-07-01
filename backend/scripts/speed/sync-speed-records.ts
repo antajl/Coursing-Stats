@@ -25,6 +25,37 @@ interface SpeedRecordsCache {
 const GOOGLE_SHEETS_URL = 'https://docs.google.com/spreadsheets/d/1NTiY3HXZIkXE8xTeXZESgMKaZsEXunmcWhTfhhkoKyE/export?format=xlsx';
 const CACHE_FILE = 'data/speed-records.json';
 
+// Helper function to convert Excel dates to YYYY-MM-DD
+function convertExcelDate(dateValue: any): string {
+  if (typeof dateValue === 'number') {
+    const excelDate = new Date(Math.round((dateValue - 25569) * 86400 * 1000));
+    const year = excelDate.getFullYear();
+    const month = String(excelDate.getMonth() + 1).padStart(2, '0');
+    const day = String(excelDate.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  } else if (typeof dateValue === 'string') {
+    // Check if it's a string representation of Excel date (5 digits)
+    if (/^\d{5}$/.test(dateValue)) {
+      const excelDate = new Date(Math.round((parseInt(dateValue) - 25569) * 86400 * 1000));
+      const year = excelDate.getFullYear();
+      const month = String(excelDate.getMonth() + 1).padStart(2, '0');
+      const day = String(excelDate.getDate()).padStart(2, '0');
+      return `${year}-${month}-${day}`;
+    } else {
+      // Normalize date format from DD.MM.YYYY to YYYY-MM-DD
+      dateValue = dateValue.replace(/[;,\/\-]/g, '.');
+      const parts = dateValue.split('.');
+      if (parts.length === 3) {
+        const day = String(parts[0]).padStart(2, '0');
+        const month = String(parts[1]).padStart(2, '0');
+        const year = parts[2];
+        return `${year}-${month}-${day}`;
+      }
+    }
+  }
+  return dateValue || '';
+}
+
 async function main() {
   console.log('Syncing speed records with Google Sheets...');
   
@@ -55,7 +86,7 @@ async function main() {
             sex: row[1] || '',
             name: row[2],
             speed_km_h: parseFloat(row[3]) || 0,
-            date: row[4] || '',
+            date: convertExcelDate(row[4]),
             screenshot_url: row[5] || '',
             status: 'old'
           };
@@ -91,7 +122,7 @@ async function main() {
         sex: row[sexIndex] || '',
         name: row[nameIndex] || '',
         speed_km_h: speedIndex !== -1 ? parseFloat(row[speedIndex]) || 0 : 0,
-        date: dateIndex !== -1 ? row[dateIndex] || '' : '',
+        date: dateIndex !== -1 ? convertExcelDate(row[dateIndex]) : '',
         screenshot_url: screenshotIndex !== -1 ? row[screenshotIndex] || '' : '',
         status: 'normal'
       };

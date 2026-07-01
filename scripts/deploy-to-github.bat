@@ -2,8 +2,10 @@
 echo Deploying to GitHub...
 echo.
 
+cd /d "%~dp0.."
+
 git add .
-git commit -m "Auto deploy"
+git commit -m "Update: UI improvements and documentation"
 git push
 
 echo.

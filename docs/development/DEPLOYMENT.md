@@ -168,7 +168,7 @@ npx wrangler d1 execute pc-db --local --file=script.sql
 - Cron: понедельник 02:00 UTC
 - Manual dispatch
 
-**Скрипт:** `backend/scripts/ci/ci-update-db.mjs`
+**Скрипт:** `backend/scripts/ci/ci-update-db.ts`
 
 **Процесс:**
 1. Checkout кода

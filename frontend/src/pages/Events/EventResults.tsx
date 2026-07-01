@@ -293,7 +293,7 @@ export default function EventResults() {
                                         {result.name_ru || result.name_lat}
                                       </span>
                                       {result.name_ru && result.name_lat && result.name_ru !== result.name_lat && (
-                                        <span className="text-xs md:text-sm text-old-money-600 dark:text-old-money-400 truncate">
+                                        <span className="text-xs md:text-sm text-old-money-700 dark:text-old-money-300 truncate">
                                           / {result.name_lat}
                                         </span>
                                       )}

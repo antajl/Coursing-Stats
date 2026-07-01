@@ -384,7 +384,7 @@ npx wrangler d1 execute pc-db --remote --command="SELECT name, breed, date, COUN
 
 ### Связанные файлы
 
-- **Скрипт бэкенда:** `backend/scripts/speed/fetch-speed-records.ts`
+- **Скрипт бэкенда:** `backend/scripts/speed/sync-speed-records.ts`
 - **Routes бэкенда:** `backend/src/routes/speed.ts`
 - **Компонент фронтенда:** `frontend/src/pages/SpeedRecords/index.tsx`
 - **API hook:** `frontend/src/hooks/useApi.ts`

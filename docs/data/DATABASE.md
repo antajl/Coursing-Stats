@@ -248,7 +248,7 @@ ALTER TABLE events ADD COLUMN track_schemes TEXT;
 ```
 
 **Нормализация кличек:**
-- Скрипт: `backend/scripts/migrate/migrate-normalize-dog-names.mjs`
+- Скрипт: `backend/scripts/migrate/migrate-normalize-dog-names.ts`
 
 **Нормализация total_score:**
 - Скрипт: `backend/scripts/archive/migrate-normalize-existing-scores.mjs`
@@ -263,7 +263,7 @@ ALTER TABLE events ADD COLUMN track_schemes TEXT;
 npm run load-events
 ```
 
-Скрипт: `backend/scripts/load-events.mjs`
+Скрипт: `backend/scripts/load/load-events.ts`
 
 ### Загрузка результатов
 
@@ -271,7 +271,7 @@ npm run load-events
 npm run load-results
 ```
 
-Скрипт: `backend/scripts/load-results.mjs`
+Скрипт: `backend/scripts/load/load-results.ts`
 
 ### Экспорт данных
 
@@ -304,7 +304,7 @@ npx wrangler d1 execute pc-db --file=../data/sync-local-to-remote.sql
 npm run sync-to-remote
 ```
 
-Скрипт: `backend/scripts/sync-local-to-remote.mjs`
+Скрипт: `backend/scripts/sync/sync-local-to-remote.ts`
 
 **Параметры:**
 - `--push` — push local → remote
