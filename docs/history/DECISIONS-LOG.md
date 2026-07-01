@@ -1161,3 +1161,18 @@
 - Вкладки "Породы/Года" в SpeedRecords/Stats.tsx переименованы в "Порода/Год"
 - Реорганизация файлов: удалён `/speed_records.json`, исправлен путь вывода в `reparse-bzmp-events.ts`, перемещён `update-judges-2026.ts` в `archive/`, добавлены комментарии в старые парсеры
 - Создан `docs/00-PROJECT-STATUS.md`
+
+## 2026-07-01: Прод показывал пустые данные — записи от 2026-06-29 (пункт 1) оказалась неверной
+
+**Проблема:** После деплоя на https://procoursing.antajl.ru не отображалось ни одного события/судьи/собаки, хотя локально всё работало.
+
+**Найдено:** Запись от 2026-06-29 «Старый URL API в продакшене» утверждала, что продакшн-домен `https://api.procoursing.antajl.ru` уже существует, и заменяла на него рабочий адрес воркера. **Это предположение не было проверено** — домен `api.procoursing.antajl.ru` никогда не существовал (DNS не резолвится, custom domain для Worker не настроен и требует платного плана Cloudflare — см. `DEPLOYMENT.md`). В проде код падал в этот несуществующий фолбэк, и все запросы к API молча проваливались.
+
+**Вторая причина:** переменная `VITE_API_URL`, заданная в Cloudflare Pages → Variables and secrets, не имела эффекта, так как сборку фронтенда (`npm run build`) выполняет GitHub Actions (`.github/workflows/deploy-frontend.yml`), а Cloudflare Pages лишь принимает готовый `frontend/dist` через `wrangler pages deploy`. Vite встраивает `VITE_*` переменные только на этапе сборки — а в GitHub Actions эта переменная нигде не была объявлена.
+
+**Исправления:**
+- `frontend/src/services/api.ts` — фолбэк-адрес для прода заменён обратно на рабочий `https://procoursing-stats.antajltube.workers.dev`
+- `.github/workflows/deploy-frontend.yml` — в шаг `Build frontend` добавлен `env: VITE_API_URL: https://procoursing-stats.antajltube.workers.dev`, чтобы адрес API реально встраивался в сборку
+- `docs/development/DEPLOYMENT.md` — исправлен пример переменной окружения и добавлено предупреждение, что раздел Environment variables в Cloudflare Pages сейчас не используется, пока сборка идёт через GitHub Actions
+
+**Урок на будущее:** не записывать в decisions log предположения о существовании доменов/инфраструктуры без проверки (`curl`/`dig`/`nslookup`). Если меняется адрес API — проверять, где реально происходит сборка (Cloudflare Pages build vs внешний CI), иначе переменные окружения из панели Pages создают ложное чувство, что всё настроено.

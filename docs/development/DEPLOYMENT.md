@@ -29,7 +29,9 @@
 - Build output directory: `frontend/dist`
 
 **Environment variables:**
-- `VITE_API_URL`: `https://api.procoursing.antajl.ru`
+- `VITE_API_URL`: `https://procoursing-stats.antajltube.workers.dev`
+
+> ⚠️ **Важно:** сборка фронтенда фактически выполняется в GitHub Actions (`npm run build`), а Cloudflare Pages только принимает уже готовый `frontend/dist` через `wrangler pages deploy`. Переменные окружения из этого раздела Cloudflare Pages **не участвуют** в сборке и ни на что не влияют, пока сборку делает GitHub Actions. Реальный источник `VITE_API_URL` для прод-сборки — переменная `env:` в шаге `Build frontend` файла `.github/workflows/deploy-frontend.yml`. Значение здесь оставлено только для справки/на случай ручной сборки через Cloudflare Pages.
 
 ### GitHub Actions
 
