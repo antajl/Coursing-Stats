@@ -77,7 +77,7 @@ function Nav() {
             className="w-11 h-11 border-2 border-old-money-300 dark:border-charcoal-600 rounded-lg bg-old-money-50 dark:bg-charcoal-800 hover:bg-old-money-100 dark:hover:bg-charcoal-700 transition-colors flex items-center justify-center"
             title="Источники данных"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-old-money-700 dark:text-charcoal-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-old-money-700 dark:text-camel-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
             </svg>
           </button>
@@ -126,7 +126,7 @@ function Nav() {
             aria-label="Навигационное меню"
             className="w-11 h-11 border-2 border-old-money-300 dark:border-charcoal-600 rounded-lg bg-old-money-50 dark:bg-charcoal-800 hover:bg-old-money-100 dark:hover:bg-charcoal-700 transition-colors flex items-center justify-center"
           >
-            <svg className="w-5 h-5 text-old-money-700 dark:text-charcoal-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 text-old-money-700 dark:text-camel-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {mobileMenuOpen ? (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               ) : (
@@ -144,7 +144,7 @@ function Nav() {
             <Link
               to="/procoursing"
               className={`group relative px-6 py-2 text-sm font-semibold transition-all duration-300 ${
-                isActive('/') ? 'text-camel-700' : 'text-charcoal-700 hover:text-charcoal-900'
+                isActive('/') ? 'text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200 hover:text-charcoal-900 dark:hover:text-charcoal-100'
               }`}
             >
               <span className="relative z-10">Соревнования</span>
@@ -155,7 +155,7 @@ function Nav() {
             <Link
               to="/speed-records"
               className={`group relative px-6 py-2 text-sm font-semibold transition-all duration-300 ${
-                isActive('/speed-records') ? 'text-camel-700' : 'text-charcoal-700 hover:text-charcoal-900'
+                isActive('/speed-records') ? 'text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200 hover:text-charcoal-900 dark:hover:text-charcoal-100'
               }`}
             >
               <span className="relative z-10">Рекорды Донино</span>
@@ -175,7 +175,7 @@ function Nav() {
               to="/procoursing"
               onClick={() => setMobileMenuOpen(false)}
               className={`block px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${
-                isActive('/') ? 'bg-camel-100 dark:bg-camel-900 text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800'
+                isActive('/') ? 'bg-camel-100 dark:bg-camel-900/30 text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800'
               }`}
             >
               Соревнования
@@ -184,7 +184,7 @@ function Nav() {
               to="/speed-records"
               onClick={() => setMobileMenuOpen(false)}
               className={`block px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${
-                isActive('/speed-records') ? 'bg-camel-100 dark:bg-camel-900 text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800'
+                isActive('/speed-records') ? 'bg-camel-100 dark:bg-camel-900/30 text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800'
               }`}
             >
               Рекорды Донино

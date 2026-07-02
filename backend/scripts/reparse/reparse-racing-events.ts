@@ -1,4 +1,4 @@
-import { parseRacingResultsPage } from "../../parsers/parse-results-racing";
+import { parseRacingResultsPage } from "../../parsers/racing/index";
 import { normalizeDogName, normalizeBreed } from "../../lib/dog-lookup";
 import { sleep } from "../../lib/fetch-win1251";
 
@@ -14,7 +14,7 @@ function sqlEscape(value) {
  */
 
 const RACING_EVENTS = [
-  // Добавьте сюда события рейсинга по необходимости
+  { id: 1316, url: "http://procoursing.ru/2026/2026-05-16_Complete_Results_Racing.html" },
 ];
 
 async function reparseRacingEvents() {
@@ -61,37 +61,26 @@ INSERT OR IGNORE INTO dogs (
         sqlStatements.push(dogSql);
         
         // Добавляем результат
+        const scoresJson = result.raw_scores_json || '{}';
+        
         const resultSql = `
 INSERT INTO results (
-  dog_id, event_id, placement, distance, 
-  heat1_num, heat1_bib, heat1_time, heat1_speed,
-  heat2_num, heat2_bib, heat2_time, heat2_speed,
-  heat3_num, heat3_bib, heat3_time, heat3_speed,
-  qualification, vc, status, raw_text, breed_class, status_reason, judges
+  dog_id, event_id, placement, total_score, judge_count,
+  raw_scores_json, qualification, vc, status, raw_text, breed_class, status_reason, judges
 ) VALUES (
   (SELECT id FROM dogs WHERE name_lat = '${sqlEscape(nameLat)}' AND breed = '${sqlEscape(breed)}'),
   ${event.id},
   ${result.placement || 'NULL'},
-  ${result.distance || 'NULL'},
-  ${result.heat1?.num || 'NULL'},
-  '${sqlEscape(result.heat1?.bib || '')}',
-  ${result.heat1?.time || 'NULL'},
-  ${result.heat1?.speed || 'NULL'},
-  ${result.heat2?.num || 'NULL'},
-  '${sqlEscape(result.heat2?.bib || '')}',
-  ${result.heat2?.time || 'NULL'},
-  ${result.heat2?.speed || 'NULL'},
-  ${result.heat3?.num || 'NULL'},
-  '${sqlEscape(result.heat3?.bib || '')}',
-  ${result.heat3?.time || 'NULL'},
-  ${result.heat3?.speed || 'NULL'},
-  '${sqlEscape(result.qualification || '')}',
-  '${sqlEscape(result.vc || '')}',
+  ${result.total_score || 'NULL'},
+  ${result.judge_count || 1},
+  '${scoresJson.replace(/'/g, "''")}',
+  '${(result.qualification || "").replace(/'/g, "''")}',
+  '${(result.vc || "").replace(/'/g, "''")}',
   '${result.status}',
   '${(result.raw_text || "").replace(/'/g, "''").replace(/\n/g, " ")}',
-  '${sqlEscape(result.breed_class || '')}',
-  '${sqlEscape(result.status_reason || '')}',
-  '${sqlEscape(result.judges || '')}'
+  '${(result.breed_class || "").replace(/'/g, "''")}',
+  '${(result.status_reason || "").replace(/'/g, "''")}',
+  '${(result.judges || "").replace(/'/g, "''")}'
 );`;
         sqlStatements.push(resultSql);
       }

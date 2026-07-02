@@ -51,7 +51,7 @@ export default function EventResults() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-cream-50 dark:bg-charcoal-800 p-6">
+      <div className="min-h-screen bg-cream-50 dark:bg-charcoal-900 p-6 border-t-2 border-x-2 border-b-2 border-old-money-200 dark:border-charcoal-600">
         <div className="max-w-4xl mx-auto">
           <SkeletonLoader variant="card" count={3} />
         </div>
@@ -61,7 +61,7 @@ export default function EventResults() {
 
   if (!event) {
     return (
-      <div className="min-h-screen bg-cream-50 dark:bg-charcoal-800 p-6">
+      <div className="min-h-screen bg-cream-50 dark:bg-charcoal-900 p-6 border-t-2 border-x-2 border-b-2 border-old-money-200 dark:border-charcoal-600">
         <div className="max-w-4xl mx-auto">
           <ErrorState
             title="Событие не найдено"
@@ -78,7 +78,7 @@ export default function EventResults() {
   }
 
   return (
-    <div className="min-h-screen bg-cream-50 dark:bg-charcoal-800 p-4 md:p-6">
+    <div className="min-h-screen bg-cream-50 dark:bg-charcoal-900 p-4 md:p-6 border-t-2 border-x-2 border-b-2 border-old-money-200 dark:border-charcoal-600">
       <div className="max-w-4xl mx-auto">
         {error && (
           <ErrorState
@@ -94,7 +94,7 @@ export default function EventResults() {
         </Link>
 
         {/* Информация о событии */}
-        <div className="mb-6 rounded-2xl border-2 border-old-money-200 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 p-4 shadow-md md:p-6">
+        <div className="mb-6 rounded-2xl bg-old-money-50 dark:bg-charcoal-700 p-4 md:p-6">
           <h1 className="mb-4 text-xl font-bold tracking-tight text-charcoal-900 dark:text-charcoal-100 md:text-2xl">
             {event.results_url ? (
               <a 
@@ -190,7 +190,7 @@ export default function EventResults() {
         </div>
 
         {/* Результаты */}
-        <div className="rounded-2xl border-2 border-old-money-200 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 p-4 shadow-md md:p-6">
+        <div className="rounded-2xl bg-old-money-50 dark:bg-charcoal-700 p-4 md:p-6">
           <h2 className="mb-4 text-lg font-bold tracking-tight text-charcoal-900 dark:text-charcoal-100 md:text-xl">Результаты</h2>
           
           {results.length === 0 ? (
@@ -206,35 +206,21 @@ export default function EventResults() {
                   return acc;
                 }, {});
                 
-                // Сортируем группы: Басенджи, Грейхаунд, остальные алфавитно, Неприбывшие участники в конце
+                // Сортируем группы в алфавитном порядке (Неприбывшие участники в конце)
                 const sortedGroups = Object.keys(grouped).sort((a, b) => {
                   // Неприбывшие участники всегда в конце
                   if (a === 'Неприбывшие участники') return 1;
                   if (b === 'Неприбывшие участники') return -1;
                   
-                  const breedOrder = ['Басенджи', 'Грейхаунд'];
-                  
-                  const getBreed = (group) => {
-                    const parts = group.split(' - ');
-                    return parts[0] || group;
-                  };
-                  
-                  const aBreed = getBreed(a);
-                  const bBreed = getBreed(b);
-                  
-                  const aIndex = breedOrder.indexOf(aBreed);
-                  const bIndex = breedOrder.indexOf(bBreed);
-                  
-                  if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
-                  if (aIndex !== -1) return -1;
-                  if (bIndex !== -1) return 1;
+                  // Остальные группы в алфавитном порядке
                   return a.localeCompare(b);
                 });
                 
                 return sortedGroups.map(groupKey => {
-                  const groupResults = grouped[groupKey].sort((a, b) => 
-                    (a.placement || 999) - (b.placement || 999)
-                  );
+                  const groupResults = grouped[groupKey].sort((a, b) => {
+                    // Сортируем по месту (placement)
+                    return (a.placement || 999) - (b.placement || 999);
+                  });
                   
                   // Извлекаем название породы из группы для скрытия в карточке
                   const breedName = groupKey.split(' - ')[0] || null;
@@ -288,15 +274,52 @@ export default function EventResults() {
                                   
                                   {/* Name */}
                                   <div className="flex-1 min-w-0">
-                                    <div className="flex items-baseline gap-2">
-                                      <span className="font-medium text-old-money-800 dark:text-old-money-300 truncate text-sm md:text-base">
-                                        {result.name_ru || result.name_lat}
-                                      </span>
-                                      {result.name_ru && result.name_lat && result.name_ru !== result.name_lat && (
-                                        <span className="text-xs md:text-sm text-old-money-700 dark:text-old-money-300 truncate">
-                                          / {result.name_lat}
-                                        </span>
-                                      )}
+                                    <div className="flex flex-col">
+                                      {(() => {
+                                        const name = result.name_ru || result.name_lat;
+                                        const parts = name.split('/');
+                                        
+                                        if (parts.length > 1) {
+                                          return (
+                                            <>
+                                              <div className="flex items-center gap-1">
+                                                <span className="font-medium text-old-money-800 dark:text-old-money-300 truncate text-sm md:text-base">
+                                                  {parts[0].trim()}
+                                                </span>
+                                                <Link 
+                                                  to={`/dog/${result.dog_id}`}
+                                                  className="flex-shrink-0"
+                                                  onClick={(e) => e.stopPropagation()}
+                                                >
+                                                  <svg className="w-3 h-3 text-old-money-400 dark:text-old-money-500 hover:text-camel-600 dark:hover:text-camel-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                                  </svg>
+                                                </Link>
+                                              </div>
+                                              <span className="text-xs text-old-money-600 dark:text-old-money-400 truncate">
+                                                {parts[1].trim()}
+                                              </span>
+                                            </>
+                                          );
+                                        }
+                                        
+                                        return (
+                                          <div className="flex items-center gap-1">
+                                            <span className="font-medium text-old-money-800 dark:text-old-money-300 truncate text-sm md:text-base">
+                                              {name}
+                                            </span>
+                                            <Link 
+                                              to={`/dog/${result.dog_id}`}
+                                              className="flex-shrink-0"
+                                              onClick={(e) => e.stopPropagation()}
+                                            >
+                                              <svg className="w-3 h-3 text-old-money-400 dark:text-old-money-500 hover:text-camel-600 dark:hover:text-camel-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                              </svg>
+                                            </Link>
+                                          </div>
+                                        );
+                                      })()}
                                     </div>
                                     {/* Title badges - only show if not disqualified */}
                                     {!isDisqualified && result.qualification && (
@@ -320,8 +343,11 @@ export default function EventResults() {
                                       </div>
                                     )}
                                     {/* Status reason on mobile */}
-                                    {isDisqualified && result.status_reason && (
+                                    {result.status === 'disqualified' && result.status_reason && (
                                       <div className="md:hidden text-xs text-red-600 dark:text-red-400 italic mt-1">{result.status_reason}</div>
+                                    )}
+                                    {result.status === 'dns' && (
+                                      <div className="md:hidden text-xs text-gray-600 dark:text-gray-400 italic mt-1">Неявка</div>
                                     )}
                                   </div>
                                   
@@ -337,8 +363,10 @@ export default function EventResults() {
                                           <div className="text-xs text-old-money-600 dark:text-old-money-400">баллов</div>
                                         </div>
                                       </div>
-                                    ) : result.status_reason ? (
+                                    ) : result.status === 'disqualified' && result.status_reason ? (
                                       <div className="text-xs md:text-sm text-red-600 dark:text-red-400 italic md:text-right text-left md:block hidden">{result.status_reason}</div>
+                                    ) : result.status === 'dns' ? (
+                                      <div className="text-xs md:text-sm text-gray-600 dark:text-gray-400 italic md:text-right text-left md:block hidden">Неявка</div>
                                     ) : null}
                                   </div>
                                   
@@ -356,7 +384,7 @@ export default function EventResults() {
                                 {rawScores && (rawScores.heats || rawScores.format === 'racing') && (
                                   <>
                                     {/* Racing format - time and speed */}
-                                    {(rawScores.format === 'racing' || rawScores.heats) ? (
+                                    {(rawScores.format === 'racing' || (rawScores.heats && rawScores.heats[0] && (rawScores.heats[0].time !== undefined || rawScores.heats[0].speed_kmh !== undefined))) ? (
                                       <>
                                         {/* Mobile cards */}
                                         <div className="md:hidden space-y-3">
@@ -478,7 +506,7 @@ export default function EventResults() {
                                               </div>
                                             ) : (
                                               <div className="space-y-2">
-                                                {heat.judges.map((judge, judgeIdx) => {
+                                                {heat.judges && heat.judges.map((judge, judgeIdx) => {
                                                   const judgeLabel = judgeIdx === 0 ? 'Главный судья' : `Судья ${judgeIdx}`;
                                                   const hasScores = judge.scores && judge.scores.some(s => s !== null);
                                                   
@@ -583,8 +611,10 @@ export default function EventResults() {
                                     </thead>
                                     <tbody>
                                       {(() => {
-                                        // Определяем количество судей по первому забегу
-                                        const judgesCount = rawScores.heats[0].judges.length;
+                                        // Определяем количество судей по первому забегу (только для coursing/bzmp)
+                                        const judgesCount = rawScores.heats[0]?.judges?.length || 0;
+                                        
+                                        if (judgesCount === 0) return null; // Racing format - no judges
                                         
                                         return Array.from({ length: judgesCount }).map((_, judgeIdx) => {
                                           const judgeLabel = judgeIdx === 0 ? 'Главный судья' : 'Судья';

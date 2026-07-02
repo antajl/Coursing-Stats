@@ -268,7 +268,10 @@ GET /api/dogs/1
   "racing_stats": {
     "total_starts": 5,
     "best_speed": "59.23",
-    "avg_speed": "55.12"
+    "avg_speed": "55.12",
+    "gold": 2,
+    "silver": 1,
+    "bronze": 1
   }
 }
 ```

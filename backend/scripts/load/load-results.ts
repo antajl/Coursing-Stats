@@ -1,7 +1,7 @@
 import fs from "node:fs/promises";
-import { parseCoursingResultsPage } from "../../parsers/parse-results-coursing";
-import { parseBZMPResultsPage } from "../../parsers/parse-results-bzmp";
-import { parseRacingResultsPage } from "../../parsers/parse-results-racing";
+import { parseCoursingResultsPage } from "../../parsers/coursing/index";
+import { parseBzmpResultsPage } from "../../parsers/bzmp/index";
+import { parseRacingResultsPage } from "../../parsers/racing/index";
 import { normalizeDogName, normalizeBreed } from "../../lib/dog-lookup";
 import { sleep } from "../../lib/fetch-win1251";
 
@@ -65,7 +65,7 @@ async function loadResults() {
         });
       }
     } else if (eventType === 'bzmp') {
-      const parsed = await parseBZMPResultsPage(event.results_url);
+      const parsed = await parseBzmpResultsPage(event.results_url);
       parsedResults = parsed.results;
       // Сохраняем judges и track_schemes для обновления события
       if (parsed.judges || parsed.track_schemes) {

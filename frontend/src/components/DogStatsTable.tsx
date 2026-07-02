@@ -100,15 +100,15 @@ export default function DogStatsTable({ data, type = 'placement', filterYear }) 
                   <>
                     <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center">
                       <div className="text-xs text-old-money-500 dark:text-old-money-400">1-е</div>
-                      <div className="font-bold text-old-money-800 dark:text-old-money-300">{dog.gold}</div>
+                      <div className="font-bold text-camel-700 dark:text-camel-400">{dog.gold}</div>
                     </div>
                     <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center">
                       <div className="text-xs text-old-money-500 dark:text-old-money-400">2-е</div>
-                      <div className="font-bold text-old-money-800 dark:text-old-money-300">{dog.silver}</div>
+                      <div className="font-bold text-charcoal-700 dark:text-charcoal-300">{dog.silver}</div>
                     </div>
                     <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center">
                       <div className="text-xs text-old-money-500 dark:text-old-money-400">3-е</div>
-                      <div className="font-bold text-old-money-800 dark:text-old-money-300">{dog.bronze}</div>
+                      <div className="font-bold text-terracotta-600 dark:text-terracotta-400">{dog.bronze}</div>
                     </div>
                     <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center">
                       <div className="text-old-money-500 dark:text-old-money-400">Участий</div>
@@ -269,17 +269,17 @@ export default function DogStatsTable({ data, type = 'placement', filterYear }) 
                 {type === 'placement' ? (
                   <>
                     <td className="px-6 py-4 text-center text-sm">
-                      <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500 text-white font-bold shadow-md">
+                      <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-camel-400 to-camel-500 text-white font-bold shadow-md">
                         {dog.gold}
                       </span>
                     </td>
                     <td className="px-6 py-4 text-center text-sm">
-                      <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-old-money-200 dark:bg-charcoal-500 border-2 border-old-money-300 dark:border-charcoal-400 text-old-money-700 dark:text-old-money-200 font-bold shadow-md">
+                      <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-charcoal-300 to-charcoal-400 border-2 border-charcoal-400 dark:border-charcoal-500 text-white font-bold shadow-md">
                         {dog.silver}
                       </span>
                     </td>
                     <td className="px-6 py-4 text-center text-sm">
-                      <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-orange-400 to-orange-500 text-white font-bold shadow-md">
+                      <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-terracotta-400 to-terracotta-500 text-white font-bold shadow-md">
                         {dog.bronze}
                       </span>
                     </td>

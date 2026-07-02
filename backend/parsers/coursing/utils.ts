@@ -41,6 +41,69 @@ export function normalizeDogName(name) {
     .trim();
 }
 
+export function extractDogNames($cell) {
+  const text = $cell.text().trim();
+  const html = $cell.html() || "";
+  
+  // Проверяем наличие разделителя / или <br>
+  if (text.includes('/') || html.includes('<br>')) {
+    // Разделяем по / или <br>
+    const parts = text.split(/\/|<br>/i).map(p => p.trim()).filter(p => p);
+    
+    if (parts.length >= 2) {
+      // Определяем, какая часть русская, какая латинская
+      const cyrillicPattern = /[а-яё]/i;
+      const latinPattern = /[a-z]/i;
+      
+      let nameRu = "";
+      let nameLat = "";
+      
+      parts.forEach(part => {
+        if (cyrillicPattern.test(part)) {
+          nameRu = part;
+        } else if (latinPattern.test(part)) {
+          nameLat = part;
+        }
+      });
+      
+      return {
+        name_ru: normalizeDogName(nameRu),
+        name_lat: normalizeDogName(nameLat)
+      };
+    }
+  }
+  
+  // Если разделителя нет, определяем язык по содержимому
+  const cyrillicPattern = /[а-яё]/i;
+  const latinPattern = /[a-z]/i;
+  
+  if (cyrillicPattern.test(text) && latinPattern.test(text)) {
+    // Если есть и кириллица, и латиница в одной строке - это проблема, возвращаем как есть
+    return {
+      name_ru: normalizeDogName(text),
+      name_lat: normalizeDogName(text)
+    };
+  } else if (cyrillicPattern.test(text)) {
+    // Только кириллица
+    return {
+      name_ru: normalizeDogName(text),
+      name_lat: ""
+    };
+  } else if (latinPattern.test(text)) {
+    // Только латиница
+    return {
+      name_ru: "",
+      name_lat: normalizeDogName(text)
+    };
+  }
+  
+  // Не удалось определить
+  return {
+    name_ru: normalizeDogName(text),
+    name_lat: ""
+  };
+}
+
 export function normalizeBreed(breed) {
   if (!breed) return "";
   return breed

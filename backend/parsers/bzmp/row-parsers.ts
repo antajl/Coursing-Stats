@@ -39,7 +39,7 @@ export function parseNonArrivedRow($, $row, breedClass) {
   };
 }
 
-export function parseDogRow($, $row, breedClass, allRows, rowIndex) {
+export function parseDogRow($, $row, breedClass, allRows, rowIndex, processedRows) {
   const $cells = $row.find("td");
   
   // Проверяем, что это строка с собакой (должна быть каталожный номер в <i>)
@@ -68,33 +68,176 @@ export function parseDogRow($, $row, breedClass, allRows, rowIndex) {
     return null;
   }
 
-  // БЗМП использует упрощенную структуру (23-25 ячеек)
-  // Парсим оценки и статусы
+  // БЗМП использует структуру с оценками судей (25 ячеек)
+  // Структура: Место, №, Порода, Класс, Пол, Кличка, Забег1, Оценки1(5), Сумма1, Забег2, Оценки2(5), Сумма2, Итого, ВС, Титул
+  // При 2 судьях: первая строка содержит оценки судьи 1, вторая строка содержит оценки судьи 2
   const cellCount = $cells.length;
   let totalScore = null;
   let qualification = null;
   let vc = null;
   let disqualificationReason = null;
 
-  // Пытаемся извлечь общую сумму
-  const totalScoreCell = $cells.eq(cellCount - 3);
-  totalScore = extractNumber(totalScoreCell.text());
-
-  // Пытаемся извлечь причину отстранения из ячейки с colspan=6
-  for (let i = 6; i < cellCount; i++) {
-    const cell = $cells.eq(i);
-    const colspan = cell.attr('colspan');
-    if (colspan && parseInt(colspan) >= 6) {
-      const cellText = cell.text().trim();
-      if (cellText && cellText.length < 100 && cellText.length > 2) {
-        const reason = extractReasonText(cellText, /отстран|снят|снята|снятие|ветеринар|владелец|дисквал|не\s*финиш|сош[еелла]*|сход|уход/);
-        if (reason) {
-          disqualificationReason = reason;
-          break;
-        }
-      }
+  // Определяем количество судей по наличию следующей строки с оценками
+  let judgeCount = 1;
+  if (rowIndex + 1 < allRows.length) {
+    const $row2 = $(allRows[rowIndex + 1]);
+    const $cells2 = $row2.find("td");
+    const cellCount2 = $cells2.length;
+    
+    // Если следующая строка имеет 12 ячеек (6 оценок + 6 оценок), это судья 2
+    if (cellCount2 === 12) {
+      judgeCount = 2;
     }
   }
+
+  // Парсим забег 1
+  const heat1Number = extractNumber($cells.eq(6).text());
+  let heat1Scores = [];
+  let heat1Sum = null;
+  let heat1Disqualified = false;
+  let heat1DisqualificationReason = null;
+  let heat1Judge2Scores = [];
+  let heat1Judge2Sum = null;
+
+  if (cellCount >= 13) {
+    // Проверяем disqualified для heat1 (colspan в ячейке 7)
+    const heat1FirstCell = $cells.eq(7);
+    const heat1Colspan = heat1FirstCell.attr('colspan');
+    
+    if (heat1Colspan && parseInt(heat1Colspan) >= 6) {
+      heat1Disqualified = true;
+      heat1DisqualificationReason = heat1FirstCell.text().trim();
+      heat1Scores = [null, null, null, null, null];
+    } else {
+      // Парсим оценки судьи 1 для забега 1 (ячейки 7-11)
+      for (let i = 7; i <= 11; i++) {
+        if (i < cellCount) {
+          const score = extractNumber($cells.eq(i).text());
+          heat1Scores.push((score !== null && score <= 20) ? score : null);
+        } else {
+          heat1Scores.push(null);
+        }
+      }
+      heat1Sum = (cellCount >= 13) ? extractNumber($cells.eq(12).text()) : null;
+    }
+  }
+
+  // Парсим забег 2
+  const heat2Number = extractNumber($cells.eq(14).text());
+  let heat2Scores = [];
+  let heat2Sum = null;
+  let heat2Disqualified = false;
+  let heat2DisqualificationReason = null;
+  let heat2Judge2Scores = [];
+  let heat2Judge2Sum = null;
+
+  if (cellCount >= 22) {
+    // Проверяем disqualified для heat2 (colspan в ячейке 15)
+    const heat2FirstCell = $cells.eq(15);
+    const heat2Colspan = heat2FirstCell.attr('colspan');
+    
+    if (heat2Colspan && parseInt(heat2Colspan) >= 6) {
+      heat2Disqualified = true;
+      heat2DisqualificationReason = heat2FirstCell.text().trim();
+      heat2Scores = [null, null, null, null, null];
+    } else {
+      // Парсим оценки судьи 1 для забега 2 (ячейки 15-19)
+      for (let i = 15; i <= 19; i++) {
+        if (i < cellCount) {
+          const score = extractNumber($cells.eq(i).text());
+          heat2Scores.push((score !== null && score <= 20) ? score : null);
+        } else {
+          heat2Scores.push(null);
+        }
+      }
+      heat2Sum = (cellCount >= 22) ? extractNumber($cells.eq(20).text()) : null;
+    }
+  }
+
+  // Если есть 2 судьи, парсим оценки судьи 2 из следующей строки
+  if (judgeCount === 2 && rowIndex + 1 < allRows.length) {
+    const $row2 = $(allRows[rowIndex + 1]);
+    const $cells2 = $row2.find("td");
+    const cellCount2 = $cells2.length;
+    
+    // Оценки судьи 2 для забега 1 (ячейки 0-4)
+    if (cellCount2 >= 6) {
+      for (let i = 0; i <= 4; i++) {
+        const score = extractNumber($cells2.eq(i).text());
+        heat1Judge2Scores.push((score !== null && score <= 20) ? score : null);
+      }
+      heat1Judge2Sum = extractNumber($cells2.eq(5).text());
+    }
+    
+    // Оценки судьи 2 для забега 2 (ячейки 6-10)
+    if (cellCount2 >= 12) {
+      for (let i = 6; i <= 10; i++) {
+        const score = extractNumber($cells2.eq(i).text());
+        heat2Judge2Scores.push((score !== null && score <= 20) ? score : null);
+      }
+      heat2Judge2Sum = extractNumber($cells2.eq(11).text());
+    }
+    
+    // Помечаем следующую строку как обработанную
+    if (processedRows) {
+      processedRows.add(rowIndex + 1);
+    }
+  }
+
+  // Формируем heats
+  const heats = [];
+  if (heat1Number !== null || heat1Scores.length > 0) {
+    const heat1Judges = [{
+      judge_number: 1,
+      scores: heat1Scores,
+      sum: heat1Sum
+    }];
+    
+    if (heat1Judge2Scores.length > 0) {
+      heat1Judges.push({
+        judge_number: 2,
+        scores: heat1Judge2Scores,
+        sum: heat1Judge2Sum
+      });
+    }
+    
+    heats.push({
+      heat_number: heat1Number || 1,
+      bib_number: heat1Number,
+      judges: heat1Judges,
+      total: heat1Sum,
+      disqualified: heat1Disqualified,
+      disqualification_reason: heat1DisqualificationReason
+    });
+  }
+  
+  if (heat2Number !== null || heat2Scores.length > 0) {
+    const heat2Judges = [{
+      judge_number: 1,
+      scores: heat2Scores,
+      sum: heat2Sum
+    }];
+    
+    if (heat2Judge2Scores.length > 0) {
+      heat2Judges.push({
+        judge_number: 2,
+        scores: heat2Judge2Scores,
+        sum: heat2Judge2Sum
+      });
+    }
+    
+    heats.push({
+      heat_number: heat2Number || 2,
+      bib_number: heat2Number,
+      judges: heat2Judges,
+      total: heat2Sum,
+      disqualified: heat2Disqualified,
+      disqualification_reason: heat2DisqualificationReason
+    });
+  }
+
+  // Общая сумма (ячейка 22, индекс 21)
+  totalScore = (cellCount >= 23) ? extractNumber($cells.eq(22).text()) : null;
 
   // ВС и титул в последних ячейках
   vc = cleanText($cells.eq(cellCount - 2).text());
@@ -119,13 +262,13 @@ export function parseDogRow($, $row, breedClass, allRows, rowIndex) {
     name,
     name_lat: name,
     total_score: totalScore,
-    judge_count: 1, // БЗМП обычно 1 судья
+    judge_count: judgeCount,
     qualification,
     vc,
     status,
     status_reason: statusReason,
     raw_scores_json: JSON.stringify({
-      heats: [],
+      heats: heats,
       grand_total: totalScore,
       normalized_score: totalScore,
       format: "bzmp"

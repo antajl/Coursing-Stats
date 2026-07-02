@@ -2,9 +2,9 @@
  * Парсеры строк для результатов курсинга
  */
 
-import { extractNumber, extractBoldNumber, extractItalicNumber, extractBibColor, cleanText, normalizeDogName, normalizeBreed, detectStatusFromText, extractReasonText } from './utils';
+import { extractNumber, extractBoldNumber, extractItalicNumber, extractBibColor, cleanText, normalizeDogName, normalizeBreed, detectStatusFromText, extractReasonText, extractDogNames } from './utils';
 
-export function parseDogRow1Judge($, $cells, cellCount, allRows, rowIndex, judgesText) {
+export function parseDogRow1Judge($, $cells, cellCount, allRows, rowIndex, judges, processedRows) {
   // Парсинг для формата с 1 судьей
   // Структура: все оценки в одной строке
   // 0: место, 1: каталожный номер, 2: порода, 3: класс, 4: пол, 5: кличка
@@ -75,7 +75,7 @@ export function parseDogRow1Judge($, $cells, cellCount, allRows, rowIndex, judge
     const heat2FirstCell = $cells.eq(15);
     const heat2Colspan = heat2FirstCell.attr('colspan');
     
-    if (heat2Colspan && parseInt(heat2Colspan) >= 7) {
+    if (heat2Colspan && parseInt(heat2Colspan) >= 6) {
       heat2Disqualified = true;
       heat2DisqualificationReason = heat2FirstCell.text().trim();
       heat2Judge1Scores = [null, null, null, null, null];
@@ -172,7 +172,7 @@ export function parseDogRow1Judge($, $cells, cellCount, allRows, rowIndex, judge
   };
 }
 
-export function parseDogRow2Judges($, $cells, cellCount, allRows, rowIndex, judgesText) {
+export function parseDogRow2Judges($, $cells, cellCount, allRows, rowIndex, judges, processedRows) {
   // Парсинг для формата с 2 судьями
   // Строка 1 содержит оценки судьи 1
   // Строка 2 содержит оценки судьи 2
@@ -192,11 +192,14 @@ export function parseDogRow2Judges($, $cells, cellCount, allRows, rowIndex, judg
   let heat1DisqualificationReason = null;
   let heat1Judge1Scores = [];
   
-  if (heat1Colspan && parseInt(heat1Colspan) >= 7) {
+  // Проверяем ячейку 7 для стандартного формата
+  if (heat1Colspan && parseInt(heat1Colspan) >= 6) {
     heat1Disqualified = true;
     heat1DisqualificationReason = heat1FirstCell.text().trim();
     heat1Judge1Scores = [null, null, null, null, null];
-  } else {
+  }
+  
+  if (!heat1Disqualified) {
     // Парсим оценки судьи 1 для забега 1
     for (let i = 7; i <= 11; i++) {
       if (i < cellCount) {
@@ -214,6 +217,8 @@ export function parseDogRow2Judges($, $cells, cellCount, allRows, rowIndex, judg
   // Получаем оценки судьи 2 из следующей строки
   let heat1Judge2Scores = [];
   let heat1Judge2Sum = null;
+  let heat2Judge2Scores = []; // Инициализируем пустым массивом
+  let heat2Judge2Sum = null;
   
   if (rowIndex + 1 < allRows.length) {
     const $row2 = $(allRows[rowIndex + 1]);
@@ -221,8 +226,9 @@ export function parseDogRow2Judges($, $cells, cellCount, allRows, rowIndex, judg
     const cellCount2 = $cells2.length;
     
     // Проверяем, что следующая строка содержит оценки (много чисел 0-20)
+    // Для строки с оценками судьи 2 они находятся в ячейках 0-11
     let hasJudgeScores = false;
-    for (let i = 7; i <= 19; i++) {
+    for (let i = 0; i <= 11; i++) {
       if (i < cellCount2) {
         const score = extractNumber($cells2.eq(i).text());
         if (score !== null && score <= 20) {
@@ -233,8 +239,8 @@ export function parseDogRow2Judges($, $cells, cellCount, allRows, rowIndex, judg
     }
     
     if (hasJudgeScores) {
-      // Оценки судьи 2 для забега 1 (ячейки 7-11)
-      for (let i = 7; i <= 11; i++) {
+      // Оценки судьи 2 для забега 1 (ячейки 0-4)
+      for (let i = 0; i <= 4; i++) {
         if (i < cellCount2) {
           const score = extractNumber($cells2.eq(i).text());
           heat1Judge2Scores.push((score !== null && score <= 20) ? score : null);
@@ -242,7 +248,26 @@ export function parseDogRow2Judges($, $cells, cellCount, allRows, rowIndex, judg
           heat1Judge2Scores.push(null);
         }
       }
-      heat1Judge2Sum = (cellCount2 > 12) ? extractBoldNumber($cells2.eq(12)) : null;
+      heat1Judge2Sum = (cellCount2 > 5) ? extractNumber($cells2.eq(5).text()) : null;
+      
+      // Оценки судьи 2 для забега 2 (ячейки 6-10, только 5 элементов)
+      if (cellCount2 >= 12) {
+        heat2Judge2Scores = []; // Очищаем перед заполнением
+        for (let i = 6; i <= 10; i++) {
+          const score = extractNumber($cells2.eq(i).text());
+          heat2Judge2Scores.push((score !== null && score <= 20) ? score : null);
+        }
+        heat2Judge2Sum = (cellCount2 >= 12) ? extractBoldNumber($cells2.eq(11)) : null;
+      } else {
+        // Если нет 12 ячеек, значит нет оценок судьи 2 для забега 2
+        heat2Judge2Scores = [];
+        heat2Judge2Sum = null;
+      }
+      
+      // Помечаем следующую строку как обработанную
+      if (processedRows) {
+        processedRows.add(rowIndex + 1);
+      }
     }
   }
   
@@ -262,14 +287,12 @@ export function parseDogRow2Judges($, $cells, cellCount, allRows, rowIndex, judg
   let heat2Judge1Scores = [];
   let heat2Judge1Sum = null;
   let heat2Total = null;
-  let heat2Judge2Scores = [];
-  let heat2Judge2Sum = null;
   
   if (cellCount > 15) {
     const heat2FirstCell = $cells.eq(15);
     const heat2Colspan = heat2FirstCell.attr('colspan');
     
-    if (heat2Colspan && parseInt(heat2Colspan) >= 7) {
+    if (heat2Colspan && parseInt(heat2Colspan) >= 6) {
       heat2Disqualified = true;
       heat2DisqualificationReason = heat2FirstCell.text().trim();
       heat2Judge1Scores = [null, null, null, null, null];
@@ -285,23 +308,6 @@ export function parseDogRow2Judges($, $cells, cellCount, allRows, rowIndex, judg
       }
       heat2Judge1Sum = (cellCount > 20) ? extractBoldNumber($cells.eq(20)) : null;
       heat2Total = (cellCount > 21) ? extractBoldNumber($cells.eq(21)) : null;
-      
-      // Получаем оценки судьи 2 для забега 2 из следующей строки
-      if (rowIndex + 1 < allRows.length) {
-        const $row2 = $(allRows[rowIndex + 1]);
-        const $cells2 = $row2.find("td");
-        const cellCount2 = $cells2.length;
-        
-        for (let i = 15; i <= 19; i++) {
-          if (i < cellCount2) {
-            const score = extractNumber($cells2.eq(i).text());
-            heat2Judge2Scores.push((score !== null && score <= 20) ? score : null);
-          } else {
-            heat2Judge2Scores.push(null);
-          }
-        }
-        heat2Judge2Sum = (cellCount2 > 20) ? extractBoldNumber($cells2.eq(20)) : null;
-      }
     }
   }
   
@@ -330,11 +336,13 @@ export function parseDogRow2Judges($, $cells, cellCount, allRows, rowIndex, judg
       judges: heat1Judges,
       total: heat1Total,
       disqualified: heat1Disqualified,
-      disqualification_reason: heat1DisqualificationReason
+      disqualification_reason: null // Причина отстранения только на верхнем уровне
     });
   }
   
-  if (heat2Number !== null) {
+  // Всегда добавляем второй забег, если есть первый забег
+  // Даже если собака отстранена, добавляем пустой второй забег для UI
+  if (heat1Number !== null) {
     const heat2Judges = [];
     if (heat2Judge1Scores.some(s => s !== null)) {
       heat2Judges.push({
@@ -343,22 +351,23 @@ export function parseDogRow2Judges($, $cells, cellCount, allRows, rowIndex, judg
         sum: heat2Judge1Sum
       });
     }
-    if (heat2Judge2Scores.some(s => s !== null)) {
+    // Добавляем судью 2 если есть сумма или оценки
+    if (heat2Judge2Sum !== null || (heat2Judge2Scores.length > 0 && heat2Judge2Scores.some(s => s !== null))) {
       heat2Judges.push({
         judge_number: 2,
-        scores: heat2Judge2Scores,
+        scores: heat2Judge2Scores.length > 0 ? heat2Judge2Scores.slice(0, 5) : [],
         sum: heat2Judge2Sum
       });
     }
     
     heats.push({
       heat_number: 2,
-      bib_number: heat2Number,
-      bib_color: heat2Color,
+      bib_number: heat2Number || null,
+      bib_color: heat2Color || null,
       judges: heat2Judges,
-      total: heat2Total,
-      disqualified: heat2Disqualified,
-      disqualification_reason: heat2DisqualificationReason
+      total: heat2Total || null,
+      disqualified: heat2Disqualified || false,
+      disqualification_reason: null // Причина отстранения только на верхнем уровне
     });
   }
   
@@ -397,7 +406,7 @@ export function parseDogRow2Judges($, $cells, cellCount, allRows, rowIndex, judg
   };
 }
 
-export function parseDogRow($, $row, breedClass, allRows, rowIndex, judgesText, extractJudgeCount) {
+export function parseDogRow($, $row, breedClass, allRows, rowIndex, judges, extractJudgeCount, processedRows) {
   const $cells = $row.find("td");
   
   // Проверяем количество ячеек
@@ -420,7 +429,9 @@ export function parseDogRow($, $row, breedClass, allRows, rowIndex, judgesText, 
   const sex = cleanText($cells.eq(4).text());
 
   // Кличка (с <br> между рус/лат)
-  const name = normalizeDogName($cells.eq(5).text());
+  const nameCell = $cells.eq(5);
+  const { name_ru: nameRu, name_lat: nameLat } = extractDogNames(nameCell);
+  const name = nameRu || nameLat; // Для совместимости со старым кодом
   
   // Filter out score/summary rows - if name is just a number, it's not a dog
   if (name && /^\d+$/.test(name)) {
@@ -434,7 +445,7 @@ export function parseDogRow($, $row, breedClass, allRows, rowIndex, judgesText, 
 
   // Определяем формат по количеству ячеек
   let totalScore, qualification, vc, rawScoresJson;
-  const judgeCount = extractJudgeCount(judgesText, $);
+  const judgeCount = extractJudgeCount(judges, $);
   let disqualificationReason = null;
   
   // Проверяем, есть ли данные о забегах (ячейка 6 с номером забега)
@@ -448,9 +459,9 @@ export function parseDogRow($, $row, breedClass, allRows, rowIndex, judgesText, 
     let scoresData;
     
     if (judgeCount === 1) {
-      scoresData = parseDogRow1Judge($, $cells, cellCount, allRows, rowIndex, judgesText);
+      scoresData = parseDogRow1Judge($, $cells, cellCount, allRows, rowIndex, judges, processedRows);
     } else {
-      scoresData = parseDogRow2Judges($, $cells, cellCount, allRows, rowIndex, judgesText);
+      scoresData = parseDogRow2Judges($, $cells, cellCount, allRows, rowIndex, judges, processedRows);
     }
     
     totalScore = scoresData.total_score;
@@ -496,16 +507,27 @@ export function parseDogRow($, $row, breedClass, allRows, rowIndex, judgesText, 
     }
 
     // Сохраняем базовую структуру в raw_scores_json с информацией о забеге
+    // Всегда добавляем второй пустой забег для UI
+    const heats = heatNumber ? [{
+      heat_number: 1,
+      bib_number: heatNumber,
+      bib_color: heatColor,
+      judges: [],
+      total: null,
+      disqualified: disqualificationReason ? true : false,
+      disqualification_reason: null // Причина отстранения только на верхнем уровне
+    }, {
+      heat_number: 2,
+      bib_number: null,
+      bib_color: null,
+      judges: [],
+      total: null,
+      disqualified: false,
+      disqualification_reason: null
+    }] : [];
+    
     rawScoresJson = JSON.stringify({
-      heats: heatNumber ? [{
-        heat_number: 1,
-        bib_number: heatNumber,
-        bib_color: heatColor,
-        judges: [],
-        total: null,
-        disqualified: disqualificationReason ? true : false,
-        disqualification_reason: disqualificationReason
-      }] : [],
+      heats,
       raw_total: rawTotalScore,
       judge_count: judgeCount,
       normalized_score: totalScore,
@@ -534,7 +556,8 @@ export function parseDogRow($, $row, breedClass, allRows, rowIndex, judgesText, 
     class: class_,
     sex,
     name,
-    name_lat: name,
+    name_ru: nameRu,
+    name_lat: nameLat,
     total_score: totalScore,
     judge_count: judgeCount,
     qualification,
@@ -543,7 +566,7 @@ export function parseDogRow($, $row, breedClass, allRows, rowIndex, judgesText, 
     status_reason: statusReason,
     raw_scores_json: rawScoresJson,
     raw_text: $row.html() || "",
-    judges: judgesText,
+    judges: judges,
   };
 }
 

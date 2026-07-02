@@ -43,11 +43,19 @@ export async function parseRacingHTML(html) {
     protocolLocation = locationMatch[1].trim();
   }
 
-  // Извлекаем судей из заголовка страницы
-  const judgesText = $('body').text();
-  const judgesMatch = judgesText.match(/(?:Главный\s+судья|Судья)[^:]*:\s*([^.\n]+)/i);
-  if (judgesMatch) {
-    judges = judgesMatch[1].trim();
+  // Извлекаем судей из ячейки с текстом "Судьи:"
+  const judgesCell = $('table tr').find('td').filter(function() {
+    return $(this).text().trim().startsWith('Судьи:');
+  });
+  
+  if (judgesCell.length > 0) {
+    const text = judgesCell.text().trim();
+    judges = text.replace(/^Судьи[:\s]+/i, '').trim();
+    
+    // Фильтруем примечания (например, "Номера забегов не отражены...")
+    if (judges.includes('Номера забегов') || judges.includes('не отражены') || judges.includes('отсутствием информации')) {
+      judges = null;
+    }
   }
 
   const allRows = $('table tr').toArray();
@@ -59,13 +67,15 @@ export async function parseRacingHTML(html) {
     const firstCellText = $cells.eq(0).text().trim();
     
     // Заголовок группы (порода - класс - пол)
-    if (bgColor === "#c0c0c0" || bgColor === "#C0C0C0") {
+    // Распознаём по цвету фона ИЛИ по содержимому (формат "Порода - Класс - Пол")
+    if (bgColor === "#c0c0c0" || bgColor === "#C0C0C0" || 
+        (firstCellText.includes(' - ') && (firstCellText.includes('Кобел') || firstCellText.includes('Сука') || firstCellText.includes('Кобели') || firstCellText.includes('Суки')))) {
       currentBreedClass = firstCellText;
       return;
     }
     
-    // Секция неприбывших (серый фон)
-    if (bgColor === "#eaeaea" || bgColor === "#EAEAEA") {
+    // Секция неприбывших (серый фон ИЛИ текст "Неприбывшие")
+    if (bgColor === "#eaeaea" || bgColor === "#EAEAEA" || firstCellText.includes('Неприбывш')) {
       const parsed = parseNonArrivedRow($, $rowEl, currentBreedClass);
       if (parsed) results.push(parsed);
       return;

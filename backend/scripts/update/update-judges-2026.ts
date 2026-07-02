@@ -1,6 +1,6 @@
-import { parseCoursingResultsPage } from "../../parsers/parse-results-coursing";
-import { parseBZMPResultsPage } from "../../parsers/parse-results-bzmp";
-import { parseRacingResultsPage } from "../../parsers/parse-results-racing";
+import { parseCoursingResultsPage } from "../../parsers/coursing/index";
+import { parseBzmpResultsPage } from "../../parsers/bzmp/index";
+import { parseRacingResultsPage } from "../../parsers/racing/index";
 import { sleep } from "../../lib/fetch-win1251";
 
 function sqlEscape(value) {
@@ -77,7 +77,7 @@ async function main() {
         parser = parseCoursingResultsPage;
         break;
       case 'bzmp':
-        parser = parseBZMPResultsPage;
+        parser = parseBzmpResultsPage;
         break;
       case 'racing':
         parser = parseRacingResultsPage;

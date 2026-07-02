@@ -44,7 +44,7 @@ export default function ThemeToggle() {
         // Sun icon (dark mode active, show sun to switch to light)
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-5 w-5"
+          className="h-5 w-5 text-camel-600 dark:text-camel-400"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -60,7 +60,7 @@ export default function ThemeToggle() {
         // Moon icon (light mode active, show moon to switch to dark)
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-5 w-5"
+          className="h-5 w-5 text-old-money-700 dark:text-charcoal-200"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"

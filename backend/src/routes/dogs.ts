@@ -14,14 +14,9 @@ export function handleDogs(app: Hono<{ Bindings: Env }>) {
     // Get dog basic info
     const dogQuery = `
       SELECT
-        d.id AS dog_id,
-        d.name_lat,
-        d.name_ru,
-        d.breed,
-        d.sex,
-        d.owner
-      FROM dogs d
-      WHERE d.id = ?
+        id, name_lat, name_ru, breed, sex, owner
+      FROM dogs
+      WHERE id = ?
     `;
 
     const { results } = await db.prepare(dogQuery).bind(dogId).all();
@@ -70,6 +65,9 @@ export function handleDogs(app: Hono<{ Bindings: Env }>) {
     const racingQuery = `
       SELECT
         COUNT(r.id) AS total_starts,
+        SUM(CASE WHEN r.placement = 1 THEN 1 ELSE 0 END) AS gold,
+        SUM(CASE WHEN r.placement = 2 THEN 1 ELSE 0 END) AS silver,
+        SUM(CASE WHEN r.placement = 3 THEN 1 ELSE 0 END) AS bronze,
         (
           SELECT e.results_url
           FROM results r2
@@ -90,6 +88,9 @@ export function handleDogs(app: Hono<{ Bindings: Env }>) {
     const { results: racingCountResults } = await db.prepare(racingQuery).bind(dogId, dogId).all();
     dogData.racing_stats = {
       total_starts: racingCountResults[0]?.total_starts || 0,
+      gold: racingCountResults[0]?.gold || 0,
+      silver: racingCountResults[0]?.silver || 0,
+      bronze: racingCountResults[0]?.bronze || 0,
       best_speed: null,
       avg_speed: null,
       best_speed_event_url: racingCountResults[0]?.best_speed_event_url || null
@@ -98,10 +99,10 @@ export function handleDogs(app: Hono<{ Bindings: Env }>) {
     // Get speed data from racing events
     if (dogData.racing_stats.total_starts > 0) {
       const speedQuery = `
-        SELECT r.raw_scores_json
-        FROM results r
-        JOIN events e ON r.event_id = e.id
-        WHERE r.dog_id = ? AND e.event_type = 'racing' AND r.raw_scores_json IS NOT NULL
+        SELECT raw_scores_json
+        FROM results
+        JOIN events ON results.event_id = events.id
+        WHERE results.dog_id = ? AND events.event_type = 'racing' AND results.raw_scores_json IS NOT NULL
       `;
 
       const { results: speedResults } = await db.prepare(speedQuery).bind(dogId).all();

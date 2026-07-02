@@ -1,4 +1,4 @@
-import { parseBZMPResultsPage } from "../../parsers/parse-results-bzmp";
+import { parseBzmpResultsPage } from "../../parsers/bzmp/index";
 import { normalizeDogName, normalizeBreed } from "../../lib/dog-lookup";
 import { sleep } from "../../lib/fetch-win1251";
 
@@ -14,12 +14,13 @@ function sqlEscape(value) {
  */
 
 const BZMP_EVENTS = [
-  { id: 1077, url: "http://procoursing.ru/2026/2026-04-04_Complete_Results_BZMP.html" },
-  { id: 1079, url: "http://procoursing.ru/2026/2026-04-12_Complete_Results_BZMP.html" },
-  { id: 1081, url: "http://procoursing.ru/2026/2026-04-18_Complete_Results_BZMP.html" },
-  { id: 1084, url: "http://procoursing.ru/2026/2026-04-19_Complete_Results_BZMP.html" },
-  { id: 1087, url: "http://procoursing.ru/2026/2026-04-25_Complete_Results_BZMP.html" },
-  { id: 1089, url: "http://procoursing.ru/2026/2026-05-02_Complete_Results_BZMP.html" },
+  { id: 1301, url: "http://procoursing.ru/2026/2026-04-04_Complete_Results_BZMP.html" },
+  { id: 1303, url: "http://procoursing.ru/2026/2026-04-12_Complete_Results_BZMP.html" },
+  { id: 1305, url: "http://procoursing.ru/2026/2026-04-18_Complete_Results_BZMP.html" },
+  { id: 1306, url: "http://procoursing.ru/2026/2026-04-18_Complete_Results_BZMP.html" },
+  { id: 1308, url: "http://procoursing.ru/2026/2026-04-19_Complete_Results_BZMP.html" },
+  { id: 1311, url: "http://procoursing.ru/2026/2026-04-25_Complete_Results_BZMP.html" },
+  { id: 1313, url: "http://procoursing.ru/2026/2026-05-02_Complete_Results_BZMP.html" },
 ];
 
 async function reparseBZMPEvents() {
@@ -33,7 +34,7 @@ async function reparseBZMPEvents() {
     await sleep(1000); // Пауза между запросами
     
     try {
-      const parsed = await parseBZMPResultsPage(event.url);
+      const parsed = await parseBzmpResultsPage(event.url);
       const results = parsed.results;
       const trackSchemes = parsed.track_schemes || [];
       const judges = parsed.judges || null;

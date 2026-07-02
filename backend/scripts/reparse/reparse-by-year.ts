@@ -1,8 +1,12 @@
-import { parseCoursingResultsPage } from "../../parsers/parse-results-coursing";
-import { parseBZMPResultsPage } from "../../parsers/parse-results-bzmp";
-import { parseRacingResultsPage } from "../../parsers/parse-results-racing";
+import { parseCoursingResultsPage } from "../../parsers/coursing/index";
+import { parseBzmpResultsPage } from "../../parsers/bzmp/index";
+import { parseRacingResultsPage } from "../../parsers/racing/index";
 import { normalizeDogName, normalizeBreed } from "../../lib/dog-lookup";
 import { sleep } from "../../lib/fetch-win1251";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 function sqlEscape(value) {
   return (value || "").replace(/'/g, "''");
@@ -24,15 +28,33 @@ if (!YEAR) {
   process.exit(1);
 }
 
-async function loadEvents(year) {
-  const fs = await import("node:fs/promises");
-  const filePath = `data/events/events-${year}.json`;
+async function loadEventsFromDb(year, eventType) {
+  const { execSync } = await import("node:child_process");
+  
+  let query = 'SELECT id, results_url, event_type FROM events WHERE results_url IS NOT NULL';
+  
+  if (year) {
+    query += ` AND date_start LIKE '${year}%'`;
+  }
+  
+  if (eventType) {
+    query += ` AND event_type = '${eventType}'`;
+  }
+  
+  // Используем wrangler для запроса к remote D1
+  const command = `npx wrangler d1 execute pc-db --remote --command="${query}" --json`;
   
   try {
-    const content = await fs.readFile(filePath, 'utf-8');
-    return JSON.parse(content);
+    const output = execSync(command, { cwd: process.cwd(), encoding: 'utf-8' });
+    const result = JSON.parse(output);
+    
+    if (result && result.length > 0 && result[0].results) {
+      return result[0].results;
+    }
+    
+    return [];
   } catch (error) {
-    console.error(`Ошибка чтения ${filePath}:`, error.message);
+    console.error("Ошибка при запросе к remote D1:", error.message);
     return [];
   }
 }
@@ -75,25 +97,15 @@ async function reparseByYear() {
     console.log(`Тип событий: ${EVENT_TYPE}`);
   }
   
-  const events = await loadEvents(YEAR);
+  const events = await loadEventsFromDb(YEAR, EVENT_TYPE);
   
-  // Фильтруем события по типу если указан
-  const filteredEvents = EVENT_TYPE 
-    ? events.filter(e => e.event_type === EVENT_TYPE)
-    : events;
-  
-  console.log(`Найдено ${filteredEvents.length} событий для обработки`);
+  console.log(`Найдено ${events.length} событий для обработки`);
   
   const sqlStatements = [];
   let successCount = 0;
   let errorCount = 0;
   
-  for (const event of filteredEvents) {
-    if (!event.results_url) {
-      console.log(`Пропуск события ${event.id}: нет results_url`);
-      continue;
-    }
-    
+  for (const event of events) {
     let parser;
     let parserName;
     
@@ -103,7 +115,7 @@ async function reparseByYear() {
         parserName = 'coursing';
         break;
       case 'bzmp':
-        parser = parseBZMPResultsPage;
+        parser = parseBzmpResultsPage;
         parserName = 'bzmp';
         break;
       case 'racing':

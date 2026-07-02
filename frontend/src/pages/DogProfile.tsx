@@ -83,6 +83,8 @@ export default function DogProfile() {
   const racing = dog.racing_stats || {}
   const hasCoursingData = coursing.total_starts > 0
   const hasRacingData = racing.total_starts > 0
+  const hasCourseMedals = (coursing.gold || 0) > 0 || (coursing.silver || 0) > 0 || (coursing.bronze || 0) > 0
+  const hasRacingMedals = (racing.gold || 0) > 0 || (racing.silver || 0) > 0 || (racing.bronze || 0) > 0
 
   // Статистика Донино
   const hasSpeedRecords = speedRecords.length > 0
@@ -186,7 +188,6 @@ export default function DogProfile() {
 
   const silhouetteType = getSilhouetteType(dog?.breed)
   const showRuName = dog.name_ru && dog.name_ru !== dog.name_lat
-  const hasCourseMedals = coursing.gold > 0 || coursing.silver > 0 || coursing.bronze > 0
 
   const formatScore = (v) =>
     v !== undefined && v !== null ? parseFloat(v).toFixed(2) : '—'
@@ -202,18 +203,12 @@ export default function DogProfile() {
         <div className="flex items-center justify-between mb-4 md:mb-6 flex-wrap gap-2">
           <button
             onClick={() => {
-              if (fromSpeedRecords) {
-                navigate('/speed-records')
-              } else if (fromCoursingRecords) {
-                navigate('/speed-records?tab=coursing')
-              } else {
-                navigate('/top')
-              }
+              navigate(-1)
             }}
             className="font-medium text-camel-700 dark:text-camel-300 transition-colors hover:text-camel-800 dark:hover:text-camel-200"
           >
             <span className="md:hidden">← Назад</span>
-            <span className="hidden md:inline">← {fromSpeedRecords ? 'Назад к рекордам' : fromCoursingRecords ? 'Назад к бегам борзых' : 'Назад к топу'}</span>
+            <span className="hidden md:inline">← Назад</span>
           </button>
           <button
             onClick={handleExport}
@@ -236,16 +231,53 @@ export default function DogProfile() {
             </div>
             <div className="flex-1 min-w-0">
               <div className="flex items-baseline gap-3 md:gap-4 flex-wrap">
-                <h1 className="text-2xl font-bold tracking-tight text-charcoal-900 dark:text-charcoal-100 md:text-3xl">{dog.name_lat}</h1>
-                {dog.sex && (
-                  <span className="text-lg font-medium text-gray-400 dark:text-gray-500">
-                    {dog.sex === 'M' ? '♂' : '♀'}
-                  </span>
-                )}
+                {(() => {
+                  const name = dog.name_lat || dog.name_ru;
+                  const parts = name.split('/');
+                  
+                  if (parts.length > 1) {
+                    return (
+                      <>
+                        <h1 className="text-2xl font-bold tracking-tight text-charcoal-900 dark:text-charcoal-100 md:text-3xl">{parts[0].trim()}</h1>
+                        {dog.sex && (
+                          <span className="text-lg font-medium text-gray-400 dark:text-gray-500">
+                            {dog.sex === 'M' ? '♂' : '♀'}
+                          </span>
+                        )}
+                      </>
+                    );
+                  }
+                  
+                  return (
+                    <>
+                      <h1 className="text-2xl font-bold tracking-tight text-charcoal-900 dark:text-charcoal-100 md:text-3xl">{name}</h1>
+                      {dog.sex && (
+                        <span className="text-lg font-medium text-gray-400 dark:text-gray-500">
+                          {dog.sex === 'M' ? '♂' : '♀'}
+                        </span>
+                      )}
+                    </>
+                  );
+                })()}
               </div>
-              {showRuName && (
-                <div className="text-base text-old-money-500 dark:text-old-money-400 mt-1 font-medium">{dog.name_ru}</div>
-              )}
+              {(() => {
+                const name = dog.name_lat || dog.name_ru;
+                const parts = name.split('/');
+                
+                if (parts.length > 1) {
+                  return (
+                    <div className="text-base text-old-money-500 dark:text-old-money-400 mt-1 font-medium">{parts[1].trim()}</div>
+                  );
+                }
+                
+                if (showRuName) {
+                  return (
+                    <div className="text-base text-old-money-500 dark:text-old-money-400 mt-1 font-medium">{dog.name_ru}</div>
+                  );
+                }
+                
+                return null;
+              })()}
               <div className="mt-3">
                 <span className="inline-block rounded-full bg-cream-100 dark:bg-charcoal-700 px-4 py-1.5 text-sm font-semibold text-charcoal-700 dark:text-charcoal-300 border border-old-money-200 dark:border-charcoal-600">
                   {dog.breed}
@@ -266,7 +298,7 @@ export default function DogProfile() {
           <div className={`grid gap-4 md:gap-6 mb-6 ${hasCoursingData && hasRacingData ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1'}`}>
           {/* Курсинг */}
           {hasCoursingData && (
-            <div className="rounded-2xl border-2 border-old-money-200 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
+            <div className="rounded-2xl border-2 border-forest-200 dark:border-forest-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
               <h2 className="text-lg md:text-xl font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 mb-4">Курсинг / БЗМП</h2>
 
               {bestScoreUrl ? (
@@ -274,31 +306,31 @@ export default function DogProfile() {
                   href={bestScoreUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group mb-4 block rounded-xl border-2 border-camel-200 dark:border-camel-600 bg-camel-50 dark:bg-charcoal-700 p-4 text-center transition-colors hover:bg-camel-100 dark:hover:bg-charcoal-600"
+                  className="group mb-4 block rounded-xl border-2 border-forest-200 dark:border-forest-600 bg-forest-50 dark:bg-charcoal-700 p-4 text-center transition-colors hover:bg-forest-100 dark:hover:bg-charcoal-600"
                 >
                   <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2 uppercase tracking-wide">Лучший результат</div>
-                  <div className="text-4xl font-bold tracking-tight text-camel-700 dark:text-camel-300 group-hover:text-camel-800 dark:group-hover:text-camel-200">
+                  <div className="text-4xl font-bold tracking-tight text-forest-700 dark:text-forest-300 group-hover:text-forest-800 dark:group-hover:text-forest-200">
                     {coursing.best_score ?? '—'}
                   </div>
-                  <div className="mt-2 text-sm text-camel-600 dark:text-camel-500 opacity-0 transition-opacity group-hover:opacity-100 font-medium">
+                  <div className="mt-2 text-sm text-forest-600 dark:text-forest-500 opacity-0 transition-opacity group-hover:opacity-100 font-medium">
                     открыть протокол →
                   </div>
                 </a>
               ) : (
-                <div className="mb-4 rounded-xl border-2 border-camel-200 dark:border-camel-600 bg-camel-50 dark:bg-charcoal-700 p-4 text-center">
+                <div className="mb-4 rounded-xl border-2 border-forest-200 dark:border-forest-600 bg-forest-50 dark:bg-charcoal-700 p-4 text-center">
                   <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2 uppercase tracking-wide">Лучший результат</div>
-                  <div className="text-4xl font-bold tracking-tight text-camel-700 dark:text-camel-300">
+                  <div className="text-4xl font-bold tracking-tight text-forest-700 dark:text-forest-300">
                     {coursing.best_score ?? '—'}
                   </div>
                 </div>
               )}
 
               <div className="grid grid-cols-2 gap-3 mb-4">
-                <div className="bg-cream-50 dark:bg-charcoal-700 rounded-xl p-4 text-center border border-old-money-200 dark:border-charcoal-600">
-                  <div className="text-xs font-semibold text-old-money-500 mb-1 uppercase tracking-wide">Участий</div>
+                <div className="bg-forest-50 dark:bg-charcoal-700 rounded-xl p-4 text-center border border-forest-200 dark:border-forest-600">
+                  <div className="text-xs font-semibold text-old-money-500 dark:text-old-money-400 mb-1 uppercase tracking-wide">Участий</div>
                   <div className="text-2xl font-bold text-charcoal-800 dark:text-charcoal-100">{coursing.total_starts}</div>
                 </div>
-                <div className="bg-cream-50 dark:bg-charcoal-700 rounded-xl p-4 text-center border border-old-money-200 dark:border-charcoal-600">
+                <div className="bg-forest-50 dark:bg-charcoal-700 rounded-xl p-4 text-center border border-forest-200 dark:border-forest-600">
                   <div className="text-xs font-semibold text-old-money-500 dark:text-old-money-400 mb-1 uppercase tracking-wide">Средний</div>
                   <div className="text-2xl font-bold text-charcoal-800 dark:text-charcoal-100">{formatScore(coursing.avg_score)}</div>
                 </div>
@@ -311,7 +343,7 @@ export default function DogProfile() {
                     { emoji: '🥈', count: coursing.silver, label: 'Серебро' },
                     { emoji: '🥉', count: coursing.bronze, label: 'Бронза' },
                   ].map(({ emoji, count, label }) => (
-                    <div key={emoji} className="flex-1 bg-cream-50 dark:bg-charcoal-700 rounded-xl p-3 text-center border border-old-money-200 dark:border-charcoal-600">
+                    <div key={emoji} className="flex-1 bg-forest-50 dark:bg-charcoal-700 rounded-xl p-3 text-center border border-forest-200 dark:border-forest-600">
                       <div className="text-xl mb-1">{emoji}</div>
                       <div className="text-xl font-bold text-charcoal-800 dark:text-charcoal-100">{count || 0}</div>
                       <div className="text-xs text-old-money-600 dark:text-old-money-400 font-medium">{label}</div>
@@ -353,7 +385,7 @@ export default function DogProfile() {
                 </div>
               )}
 
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-2 gap-3 mb-4">
                 <div className="rounded-xl bg-warm-blue-50 dark:bg-charcoal-700 p-4 text-center border border-warm-blue-100 dark:border-warm-blue-600">
                   <div className="text-xs font-semibold text-old-money-500 dark:text-old-money-400 mb-1 uppercase tracking-wide">Участий</div>
                   <div className="text-2xl font-bold text-warm-blue-900 dark:text-warm-blue-400">{racing.total_starts}</div>
@@ -368,10 +400,125 @@ export default function DogProfile() {
                   </div>
                 </div>
               </div>
+
+              {hasRacingMedals && (
+                <div className="flex gap-3">
+                  {[
+                    { emoji: '🥇', count: racing.gold, label: 'Золото' },
+                    { emoji: '🥈', count: racing.silver, label: 'Серебро' },
+                    { emoji: '🥉', count: racing.bronze, label: 'Бронза' },
+                  ].map(({ emoji, count, label }) => (
+                    <div key={emoji} className="flex-1 bg-warm-blue-50 dark:bg-charcoal-700 rounded-xl p-3 text-center border border-warm-blue-200 dark:border-warm-blue-600">
+                      <div className="text-xl mb-1">{emoji}</div>
+                      <div className="text-xl font-bold text-charcoal-800 dark:text-charcoal-100">{count || 0}</div>
+                      <div className="text-xs text-old-money-600 dark:text-old-money-400 font-medium">{label}</div>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           )}
         </div>
         )}
+
+        {/* История выступлений */}
+        {(() => {
+          const coursingEvents = events.filter(e => e.event_type === 'coursing' || e.event_type === 'bzmp');
+          const racingEvents = events.filter(e => e.event_type === 'racing');
+          if (coursingEvents.length === 0 && racingEvents.length === 0) return null;
+          return (
+            <div className={`grid gap-4 md:gap-6 mb-6 ${coursingEvents.length > 0 && racingEvents.length > 0 ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1'}`}>
+              {/* История курсинга */}
+              {coursingEvents.length > 0 && (
+                <div className="rounded-2xl border-2 border-forest-200 dark:border-forest-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
+                  <div className="space-y-3">
+                    {coursingEvents.map((event, idx) => (
+                      <div key={idx} className="bg-forest-50 dark:bg-charcoal-700 rounded-xl p-4 hover:bg-forest-100 dark:hover:bg-charcoal-600 transition-colors border border-forest-200 dark:border-forest-600">
+                        <div className="flex items-start justify-between gap-4">
+                          <div className="flex-1">
+                            {event.competition_kind && (
+                              <div className="mb-1 text-xs font-bold text-forest-700 dark:text-forest-400 uppercase tracking-wide">{event.competition_kind}</div>
+                            )}
+                            <div className="font-semibold text-charcoal-800 dark:text-charcoal-100 mb-1">{event.date_start}</div>
+                            <div className="text-gray-700 dark:text-gray-300 mb-2">{event.title}</div>
+                            {event.location && (
+                              <div className="text-sm text-old-money-600 dark:text-old-money-400">{event.location}</div>
+                            )}
+                          </div>
+                          <div className="flex flex-col items-end gap-2">
+                            <div className="text-xs font-medium px-2.5 py-1 rounded-full bg-white dark:bg-charcoal-800 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-charcoal-600">
+                              {event.event_type === 'coursing' ? 'Курсинг' : 'БЗМП'}
+                            </div>
+                            {event.placement && (
+                              <div className="text-lg font-bold text-forest-700 dark:text-forest-400">
+                                #{event.placement}
+                              </div>
+                            )}
+                            {event.total_score && (
+                              <div className="text-sm text-old-money-600 dark:text-old-money-400 font-medium">
+                                {event.total_score} баллов
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                        {event.results_url && (
+                          <Link
+                            to={`/event/${event.event_id}`}
+                            className="mt-3 inline-block text-sm text-forest-700 dark:text-forest-400 transition-colors hover:text-forest-800 dark:hover:text-forest-300 font-medium"
+                          >
+                            Результаты →
+                          </Link>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* История рейсинга */}
+              {racingEvents.length > 0 && (
+                <div className="rounded-2xl border-2 border-warm-blue-200 dark:border-warm-blue-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
+                  <div className="space-y-3">
+                    {racingEvents.map((event, idx) => (
+                      <div key={idx} className="bg-warm-blue-50 dark:bg-charcoal-700 rounded-xl p-4 hover:bg-warm-blue-100 dark:hover:bg-charcoal-600 transition-colors border border-warm-blue-200 dark:border-warm-blue-600">
+                        <div className="flex items-start justify-between gap-4">
+                          <div className="flex-1">
+                            {event.competition_kind && (
+                              <div className="mb-1 text-xs font-bold text-warm-blue-700 dark:text-warm-blue-400 uppercase tracking-wide">{event.competition_kind}</div>
+                            )}
+                            <div className="font-semibold text-charcoal-800 dark:text-charcoal-100 mb-1">{event.date_start}</div>
+                            <div className="text-gray-700 dark:text-gray-300 mb-2">{event.title}</div>
+                            {event.location && (
+                              <div className="text-sm text-old-money-600 dark:text-old-money-400">{event.location}</div>
+                            )}
+                          </div>
+                          <div className="flex flex-col items-end gap-2">
+                            <div className="text-xs font-medium px-2.5 py-1 rounded-full bg-white dark:bg-charcoal-800 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-charcoal-600">
+                              Рейсинг
+                            </div>
+                            {event.placement && (
+                              <div className="text-lg font-bold text-warm-blue-700 dark:text-warm-blue-400">
+                                #{event.placement}
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                        {event.results_url && (
+                          <Link
+                            to={`/event/${event.event_id}`}
+                            className="mt-3 inline-block text-sm text-warm-blue-700 dark:text-warm-blue-400 transition-colors hover:text-warm-blue-800 dark:hover:text-warm-blue-300 font-medium"
+                          >
+                            Результаты →
+                          </Link>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          );
+        })()}
 
         {/* Статистика Донино и Бега борзых */}
         {(hasSpeedRecords || hasCoursingRecords) && (
@@ -504,61 +651,6 @@ export default function DogProfile() {
           </div>
         )}
 
-        {/* История выступлений */}
-        {events.length > 0 && (
-          <div className="rounded-2xl border-2 border-old-money-200 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
-            <h2 className="text-lg md:text-xl font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 mb-4">История выступлений</h2>
-            
-            {eventsLoading ? (
-              <div className="flex items-center gap-3 text-old-money-500 dark:text-old-money-400">
-                <div className="h-4 w-4 animate-spin rounded-full border-2 border-old-money-300 border-t-camel-600" />
-                <span className="text-sm">Загрузка...</span>
-              </div>
-            ) : (
-              <div className="space-y-3">
-                {events.map((event, idx) => (
-                  <div key={idx} className="bg-cream-50 dark:bg-charcoal-700 rounded-xl p-4 hover:bg-cream-100 dark:hover:bg-charcoal-600 transition-colors border border-old-money-200 dark:border-charcoal-600">
-                    <div className="flex items-start justify-between gap-4">
-                      <div className="flex-1">
-                        {event.competition_kind && (
-                          <div className="mb-1 text-xs font-bold text-camel-700 dark:text-camel-400 uppercase tracking-wide">{event.competition_kind}</div>
-                        )}
-                        <div className="font-semibold text-charcoal-800 dark:text-charcoal-100 mb-1">{event.date_start}</div>
-                        <div className="text-gray-700 dark:text-gray-300 mb-2">{event.title}</div>
-                        {event.location && (
-                          <div className="text-sm text-old-money-600 dark:text-old-money-400">{event.location}</div>
-                        )}
-                      </div>
-                      <div className="flex flex-col items-end gap-2">
-                        <div className="text-xs font-medium px-2.5 py-1 rounded-full bg-white dark:bg-charcoal-800 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-charcoal-600">
-                          {event.event_type === 'coursing' ? 'Курсинг' : event.event_type === 'bzmp' ? 'БЗМП' : 'Рейсинг'}
-                        </div>
-                        {event.placement && (
-                          <div className="text-lg font-bold text-camel-700 dark:text-camel-400">
-                            #{event.placement}
-                          </div>
-                        )}
-                        {event.total_score && (
-                          <div className="text-sm text-old-money-600 dark:text-old-money-400 font-medium">
-                            {event.total_score} баллов
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                    {event.results_url && (
-                      <Link
-                        to={`/event/${event.event_id}`}
-                        className="mt-3 inline-block text-sm text-camel-700 dark:text-camel-400 transition-colors hover:text-camel-800 dark:hover:text-camel-300 font-medium"
-                      >
-                        Результаты →
-                      </Link>
-                    )}
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-        )}
         </div>
       </div>
     </div>

@@ -128,6 +128,7 @@ export default function DogTooltip({ dogId, anchorRect, onClose }) {
   const showRuName = dogData.name_ru && dogData.name_ru !== dogData.name_lat
 
   const hasCourseMedals = coursing.gold > 0 || coursing.silver > 0 || coursing.bronze > 0
+  const hasRacingMedals = racing.gold > 0 || racing.silver > 0 || racing.bronze > 0
 
   const formatScore = (v) =>
     v !== undefined && v !== null ? parseFloat(v).toFixed(2) : '—'
@@ -228,7 +229,7 @@ export default function DogTooltip({ dogId, anchorRect, onClose }) {
                   <div className="flex gap-1.5">
                     {[
                       { emoji: '🥇', count: coursing.gold, color: 'text-camel-700 dark:text-camel-400' },
-                      { emoji: '🥈', count: coursing.silver, color: 'text-old-money-700 dark:text-old-money-300' },
+                      { emoji: '🥈', count: coursing.silver, color: 'text-charcoal-700 dark:text-charcoal-300' },
                       { emoji: '🥉', count: coursing.bronze, color: 'text-terracotta-600 dark:text-terracotta-400' },
                     ].map(({ emoji, count, color }) => (
                       <div key={emoji} className="flex-1 bg-white dark:bg-charcoal-800 rounded-lg py-1.5 shadow-sm text-center">
@@ -291,6 +292,22 @@ export default function DogTooltip({ dogId, anchorRect, onClose }) {
                     </div>
                   </div>
                 </div>
+
+                {/* Медали */}
+                {hasRacingMedals && (
+                  <div className="flex gap-1.5 mt-3">
+                    {[
+                      { emoji: '🥇', count: racing.gold, color: 'text-camel-700 dark:text-camel-400' },
+                      { emoji: '🥈', count: racing.silver, color: 'text-charcoal-700 dark:text-charcoal-300' },
+                      { emoji: '🥉', count: racing.bronze, color: 'text-terracotta-600 dark:text-terracotta-400' },
+                    ].map(({ emoji, count, color }) => (
+                      <div key={emoji} className="flex-1 bg-white dark:bg-charcoal-800 rounded-lg py-1.5 shadow-sm text-center">
+                        <div className="text-sm">{emoji}</div>
+                        <div className={`text-xs font-bold ${color}`}>{count || 0}</div>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             )}
           </div>

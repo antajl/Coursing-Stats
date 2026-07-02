@@ -9,23 +9,56 @@ import SkeletonLoader from '../../components/SkeletonLoader'
 
 function getDisciplineColor(eventType: string, isDark: boolean): { backgroundColor: string } {
   const lightColors = {
-    coursing: '#aecbae',
-    bzmp: '#a8c8e0',
-    racing: '#e8b8a0',
-    other: '#c9a86a',
+    coursing: '#81c784',
+    bzmp: '#64b5f6',
+    racing: '#f8bbd0',
+    other: '#ffcc80',
     default: 'transparent'
   }
-  
+
   const darkColors = {
-    coursing: 'rgba(42, 90, 42, 0.25)',
-    bzmp: 'rgba(24, 104, 152, 0.35)',
-    racing: 'rgba(136, 64, 64, 0.25)',
-    other: 'rgba(90, 68, 0, 0.25)',
+    coursing: 'rgba(27, 94, 32, 0.4)',
+    bzmp: 'rgba(13, 71, 161, 0.45)',
+    racing: 'rgba(136, 14, 79, 0.5)',
+    other: 'rgba(121, 85, 72, 0.4)',
     default: 'transparent'
   }
-  
+
   const colors = isDark ? darkColors : lightColors
   return { backgroundColor: colors[eventType] || colors.default }
+}
+
+function getDisciplineBorderColor(eventType: string): string {
+  const borderColors = {
+    coursing: '#5a8a5a',
+    bzmp: '#4a7ab8',
+    racing: '#6a6a6a',
+    other: '#8a7a5a',
+    default: 'transparent'
+  }
+  return borderColors[eventType] || borderColors.default
+}
+
+function getDisciplineBadgeColor(eventType: string): { bg: string, text: string } {
+  const badgeColors = {
+    coursing: { bg: 'bg-forest-300 dark:bg-forest-800', text: 'text-forest-800 dark:text-forest-200' },
+    bzmp: { bg: 'bg-warm-blue-300 dark:bg-warm-blue-800', text: 'text-warm-blue-800 dark:text-warm-blue-200' },
+    racing: { bg: 'bg-rose-200 dark:bg-rose-800', text: 'text-rose-800 dark:text-rose-200' },
+    other: { bg: 'bg-amber-300 dark:bg-amber-800', text: 'text-amber-800 dark:text-amber-200' },
+    default: { bg: 'bg-gray-100 dark:bg-gray-700', text: 'text-gray-700 dark:text-gray-300' }
+  }
+  return badgeColors[eventType] || badgeColors.default
+}
+
+function getDisciplineGradient(eventType: string): string {
+  const gradients = {
+    coursing: 'from-forest-300/70 to-transparent dark:from-forest-800/40',
+    bzmp: 'from-warm-blue-300/70 to-transparent dark:from-warm-blue-800/45',
+    racing: 'from-rose-200/70 to-transparent dark:from-rose-800/50',
+    other: 'from-amber-300/70 to-transparent dark:from-amber-800/40',
+    default: ''
+  }
+  return gradients[eventType] || gradients.default
 }
 
 function formatDate(dateStr) {
@@ -70,9 +103,9 @@ function isImportantCompetition(competitionKind) {
 
 function getImportantCompetitionStyle(competitionKind) {
   if (isImportantCompetition(competitionKind)) {
-    return 'font-semibold'
+    return 'text-camel-600 dark:text-camel-400 drop-shadow-[0_0_8px_rgba(212,165,116,0.6)] dark:drop-shadow-[0_0_8px_rgba(212,165,116,0.4)] font-semibold'
   }
-  return ''
+  return 'text-old-money-700 dark:text-old-money-400'
 }
 
 
@@ -359,19 +392,19 @@ export default function Events() {
         <div className="flex flex-wrap items-center gap-3">
           <span className="font-medium">Дисциплины:</span>
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-forest-300 dark:bg-forest-900/25 border border-forest-400 dark:border-forest-700"></div>
+            <div className="w-3 h-3 rounded-full bg-forest-300 dark:bg-forest-800 border border-forest-400 dark:border-forest-700"></div>
             <span>Курсинг</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-warm-blue-300 dark:bg-warm-blue-900/35 border border-warm-blue-400 dark:border-warm-blue-700"></div>
+            <div className="w-3 h-3 rounded-full bg-warm-blue-300 dark:bg-warm-blue-800 border border-warm-blue-400 dark:border-warm-blue-700"></div>
             <span>БЗМП</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-terracotta-300 dark:bg-terracotta-900/25 border border-terracotta-400 dark:border-terracotta-700"></div>
+            <div className="w-3 h-3 rounded-full bg-rose-200 dark:bg-rose-800 border border-rose-300 dark:border-rose-700"></div>
             <span>Бега</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-camel-300 dark:bg-camel-900/25 border border-camel-400 dark:border-camel-700"></div>
+            <div className="w-3 h-3 rounded-full bg-amber-300 dark:bg-amber-800 border border-amber-400 dark:border-amber-700"></div>
             <span>Другие</span>
           </div>
         </div>
@@ -382,7 +415,7 @@ export default function Events() {
         {filteredEvents.length} из {events.length} событий
       </div>
 
-      <div className="overflow-hidden rounded-2xl border-2 border-old-money-200 dark:border-charcoal-700 bg-white dark:bg-charcoal-900 shadow-md">
+      <div className="overflow-hidden rounded-2xl border-2 border-old-money-200 dark:border-charcoal-700 bg-white dark:bg-charcoal-900 shadow-lg dark:shadow-2xl dark:shadow-charcoal-900/50">
         {filteredEvents.length === 0 ? (
           <EmptyState
             title="События не найдены"
@@ -392,18 +425,17 @@ export default function Events() {
           <>
         <div className="md:hidden space-y-3 p-3 min-w-[320px] dark:bg-charcoal-800">
           {filteredEvents.map((event) => (
-            <div 
-              key={event.id} 
-              style={getDisciplineColor(event.event_type, isDark)}
-              className={`${getImportantCompetitionStyle(event.competition_kind)} rounded-xl p-4 transition-all duration-300`}
+            <div
+              key={event.id}
+              className={`bg-gradient-to-r ${getDisciplineGradient(event.event_type)} bg-white dark:bg-charcoal-900 rounded-xl p-4 transition-all duration-300`}
             >
               <div className="flex justify-between items-start mb-2">
                 <div className="flex-1">
-                  <div className="mb-1 text-sm font-bold text-charcoal-900 dark:text-charcoal-100">
+                  <div className="mb-1 text-sm text-charcoal-900 dark:text-charcoal-100">
                     {formatDateRange(event.date_start, event.date_end)}
                   </div>
                   {event.competition_kind && (
-                    <div className="mb-1 text-xs font-medium text-camel-700 dark:text-camel-400">{event.competition_kind}</div>
+                    <div className={`mb-1 text-xs font-medium ${getImportantCompetitionStyle(event.competition_kind)}`}>{event.competition_kind}</div>
                   )}
                   {event.location && (
                     <div className="text-xs text-old-money-600 dark:text-old-money-400">{event.location}</div>
@@ -412,21 +444,25 @@ export default function Events() {
                 {event.results_url ? (
                   <Link
                     to={`/event/${event.id}`}
-                    className="ml-2 text-xs font-medium text-camel-700 dark:text-camel-400 transition-colors hover:text-camel-800 dark:hover:text-camel-300 hover:underline"
+                    className="inline-block px-3 py-1.5 text-xs font-semibold bg-camel-600 hover:bg-camel-700 text-white rounded-lg transition-colors"
                   >
-                    <span className="md:hidden">Открыть</span>
-                    <span className="hidden md:inline">Открыть →</span>
+                    Открыть
                   </Link>
                 ) : (
                   <span className="text-gray-400 text-xs italic ml-2">Ожидается</span>
                 )}
               </div>
               <div className="flex gap-2 text-xs text-old-money-700 dark:text-old-money-400">
+                {event.event_type && (
+                  <span className={`px-2 py-1 rounded font-medium ${getDisciplineBadgeColor(event.event_type).bg} ${getDisciplineBadgeColor(event.event_type).text}`}>
+                    {event.event_type === 'coursing' ? 'Курсинг' : event.event_type === 'bzmp' ? 'БЗМП' : event.event_type === 'racing' ? 'Бега' : 'Другие'}
+                  </span>
+                )}
                 {event.competition_type && (
-                  <span className="bg-white/50 px-2 py-1 rounded">{event.competition_type}</span>
+                  <span className="bg-old-money-100 dark:bg-charcoal-700 px-2 py-1 rounded">{event.competition_type}</span>
                 )}
                 {event.judges && (
-                  <span className="bg-white/50 px-2 py-1 rounded truncate">{event.judges}</span>
+                  <span className="bg-old-money-100 dark:bg-charcoal-700 px-2 py-1 rounded truncate">{event.judges}</span>
                 )}
               </div>
             </div>
@@ -438,31 +474,31 @@ export default function Events() {
           <table className="w-full divide-y-2 divide-old-money-200 dark:divide-charcoal-700 table-auto min-w-[800px]">
             <thead className="border-b border-old-money-300 dark:border-charcoal-600 bg-cream-100 dark:bg-charcoal-700">
             <tr>
-              <th 
+              <th
                 className="w-auto cursor-pointer px-3 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-200 dark:hover:bg-charcoal-600"
                 onClick={() => handleSort('date_start')}
               >
                 Дата {sortField === 'date_start' && (sortDirection === 'asc' ? '↑' : '↓')}
               </th>
-              <th 
+              <th
                 className="w-auto cursor-pointer px-3 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-200 dark:hover:bg-charcoal-600"
                 onClick={() => handleSort('competition_kind')}
               >
                 Вид {sortField === 'competition_kind' && (sortDirection === 'asc' ? '↑' : '↓')}
               </th>
-              <th 
+              <th
                 className="w-auto cursor-pointer px-3 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-200 dark:hover:bg-charcoal-600"
                 onClick={() => handleSort('competition_type')}
               >
                 Дисциплина {sortField === 'competition_type' && (sortDirection === 'asc' ? '↑' : '↓')}
               </th>
-              <th 
+              <th
                 className="cursor-pointer px-3 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-200 dark:hover:bg-charcoal-600"
                 onClick={() => handleSort('location')}
               >
                 Локация {sortField === 'location' && (sortDirection === 'asc' ? '↑' : '↓')}
               </th>
-              <th 
+              <th
                 className="cursor-pointer px-3 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-200 dark:hover:bg-charcoal-600"
                 onClick={() => handleSort('judges')}
               >
@@ -473,32 +509,45 @@ export default function Events() {
               </th>
             </tr>
           </thead>
-          <tbody className="divide-y-2 divide-old-money-200 dark:divide-charcoal-700">
+          <tbody className="divide-y divide-old-money-200 dark:divide-charcoal-700/50">
             {filteredEvents.map((event) => (
-              <tr 
-                key={event.id} 
-                className={`${getImportantCompetitionStyle(event.competition_kind)} transition-all duration-300`}
+              <tr
+                key={event.id}
+                className={`bg-gradient-to-r ${getDisciplineGradient(event.event_type)} transition-all duration-300 hover:bg-old-money-50 dark:hover:bg-charcoal-700/80`}
               >
-                <td style={getDisciplineColor(event.event_type, isDark)} className="px-3 py-3 text-sm text-old-money-800 dark:text-old-money-300 whitespace-nowrap">
+                <td className="px-4 py-4 text-sm text-old-money-800 dark:text-old-money-300 whitespace-nowrap">
                   {formatDateRange(event.date_start, event.date_end)}
                 </td>
-                <td style={getDisciplineColor(event.event_type, isDark)} className="px-3 py-3 text-center text-sm text-old-money-800 dark:text-old-money-300">
+                <td className={`px-4 py-4 text-center text-sm ${getImportantCompetitionStyle(event.competition_kind)}`}>
                   {event.competition_kind || '-'}
                 </td>
-                <td style={getDisciplineColor(event.event_type, isDark)} className="px-3 py-3 text-center text-sm text-old-money-800 dark:text-old-money-300 whitespace-nowrap">
-                  {event.competition_type || '-'}
+                <td className="px-4 py-4 text-center text-sm text-old-money-800 dark:text-old-money-300 whitespace-nowrap">
+                  {event.event_type && (
+                    <span className={`inline-block px-2 py-1 rounded font-medium text-xs ${getDisciplineBadgeColor(event.event_type).bg} ${getDisciplineBadgeColor(event.event_type).text}`}>
+                      {event.event_type === 'coursing' ? 'Курсинг' : event.event_type === 'bzmp' ? 'БЗМП' : event.event_type === 'racing' ? 'Бега' : 'Другие'}
+                    </span>
+                  )}
+                  {!event.event_type && (event.competition_type || '-')}
                 </td>
-                <td style={getDisciplineColor(event.event_type, isDark)} className="px-3 py-3 text-sm text-old-money-800 dark:text-old-money-300">
+                <td className="px-4 py-4 text-sm text-old-money-800 dark:text-old-money-300">
                   {event.location}
                 </td>
-                <td style={getDisciplineColor(event.event_type, isDark)} className="px-3 py-3 text-sm text-old-money-800 dark:text-old-money-300 whitespace-nowrap">
-                  {event.judges || ''}
+                <td className="px-4 py-4 text-sm text-old-money-700 dark:text-old-money-400">
+                  {event.judges ? (
+                    <div className="space-y-1">
+                      {event.judges.split(',').map((judge, idx) => (
+                        <div key={idx} className="whitespace-nowrap">
+                          {judge.trim()}
+                        </div>
+                      ))}
+                    </div>
+                  ) : ''}
                 </td>
-                <td style={getDisciplineColor(event.event_type, isDark)} className="px-3 py-3 text-sm text-center">
+                <td className="px-4 py-4 text-sm text-center">
                   {event.results_url ? (
                     <Link
                       to={`/event/${event.id}`}
-                      className="text-xs font-medium text-camel-700 dark:text-camel-400 transition-colors hover:text-camel-800 dark:hover:text-camel-300 hover:underline"
+                      className="inline-block px-3 py-1.5 text-xs font-semibold bg-camel-600 hover:bg-camel-700 text-white rounded-lg transition-colors"
                     >
                       Открыть
                     </Link>

@@ -1,4 +1,4 @@
-import { parseCoursingResultsPage } from "../../parsers/parse-results-coursing";
+import { parseCoursingResultsPage } from "../../parsers/coursing/index";
 import { normalizeDogName, normalizeBreed } from "../../lib/dog-lookup";
 import { sleep } from "../../lib/fetch-win1251";
 
@@ -14,15 +14,15 @@ function sqlEscape(value) {
  */
 
 const COURSING_EVENTS = [
-  { id: 1076, url: "http://procoursing.ru/2026/2026-04-04_Complete_Results_Coursing.html" },
-  { id: 1078, url: "http://procoursing.ru/2026/2026-04-12_Complete_Results_Coursing.html" },
-  { id: 1080, url: "http://procoursing.ru/2026/2026-04-18_Complete_Results_Coursing.html" },
-  { id: 1083, url: "http://procoursing.ru/2026/2026-04-19_Complete_Results_Coursing.html" },
-  { id: 1086, url: "http://procoursing.ru/2026/2026-04-25_Complete_Results_Coursing.html" },
-  { id: 1088, url: "http://procoursing.ru/2026/2026-05-02_Complete_Results_Coursing.html" },
-  { id: 1090, url: "http://procoursing.ru/2026/2026-05-03_Complete_Results_Coursing.html" },
-  { id: 1091, url: "http://procoursing.ru/2026/2026-05-10_Complete_Results_Coursing.html" },
-  { id: 1093, url: "http://procoursing.ru/2026/2026-05-23_Complete_Results_Coursing.html" },
+  { id: 1300, url: "http://procoursing.ru/2026/2026-04-04_Complete_Results_Coursing.html" },
+  { id: 1302, url: "http://procoursing.ru/2026/2026-04-12_Complete_Results_Coursing.html" },
+  { id: 1304, url: "http://procoursing.ru/2026/2026-04-18_Complete_Results_Coursing.html" },
+  { id: 1307, url: "http://procoursing.ru/2026/2026-04-19_Complete_Results_Coursing.html" },
+  { id: 1310, url: "http://procoursing.ru/2026/2026-04-25_Complete_Results_Coursing.html" },
+  { id: 1312, url: "http://procoursing.ru/2026/2026-05-02_Complete_Results_Coursing.html" },
+  { id: 1314, url: "http://procoursing.ru/2026/2026-05-03_Complete_Results_Coursing.html" },
+  { id: 1315, url: "http://procoursing.ru/2026/2026-05-10_Complete_Results_Coursing.html" },
+  { id: 1317, url: "http://procoursing.ru/2026/2026-05-23_Complete_Results_Coursing.html" },
 ];
 
 async function reparseCoursingEvents() {

@@ -12,7 +12,13 @@ export function handleCompetitions(app: Hono<{ Bindings: Env }>) {
     const breed = c.req.query('breed') || '';
     const year = c.req.query('year') || '';
 
-    let query = 'SELECT * FROM events WHERE 1=1';
+    let query = `
+      SELECT
+        id, year, date_start, date_end, rank_label, event_type,
+        competition_kind, competition_type, title, host_club,
+        region, location, catalog_url, results_url, confirmed
+      FROM events WHERE 1=1
+    `;
     const params = [];
 
     if (year) {
@@ -30,7 +36,14 @@ export function handleCompetitions(app: Hono<{ Bindings: Env }>) {
   app.get('/api/competitions/:id', async (c) => {
     const db = c.env.DB;
     const eventId = c.req.param('id');
-    const { results } = await db.prepare('SELECT * FROM events WHERE id = ?').bind(eventId).all();
+    const { results } = await db.prepare(`
+      SELECT
+        id, year, date_start, date_end, rank_label, event_type,
+        competition_kind, competition_type, title, host_club,
+        region, location, catalog_url, results_url, confirmed,
+        judges, track_schemes
+      FROM events WHERE id = ?
+    `).bind(eventId).all();
 
     if (results.length === 0) {
       return c.json({ success: false, error: 'Event not found' }, 404);
@@ -44,7 +57,11 @@ export function handleCompetitions(app: Hono<{ Bindings: Env }>) {
     const db = c.env.DB;
     const eventId = c.req.param('id');
     const { results } = await db.prepare(`
-      SELECT r.*, d.name_lat, d.name_ru, d.breed
+      SELECT
+        r.id, r.event_id, r.dog_id, r.breed_class, r.catalog_no,
+        r.placement, r.total_score, r.qualification, r.vc, r.status,
+        r.raw_scores_json, r.breed_class, r.status_reason, r.judges,
+        d.name_lat, d.name_ru, d.breed
       FROM results r
       JOIN dogs d ON d.id = r.dog_id
       WHERE r.event_id = ?
