@@ -120,21 +120,27 @@ export function extractBibColor($cell) {
   const style = $cell.attr('style');
   
   if (bgColor) {
-    // Convert hex or named colors to standard names
-    if (bgColor === '#FF0000' || bgColor === 'red' || bgColor === '#ff0000') return 'red';
-    if (bgColor === '#FFFFFF' || bgColor === 'white' || bgColor === '#ffffff') return 'white';
-    if (bgColor === '#0000FF' || bgColor === 'blue' || bgColor === '#0000ff') return 'blue';
+    const lower = bgColor.toLowerCase();
+    if (lower === '#ff0000' || lower === 'red') return 'red';
+    if (lower === '#ffffff' || lower === 'white') return 'white';
+    if (lower === '#0000ff' || lower === 'blue' || lower === '#00ccff' || lower === '#00ffff') return 'blue';
+    if (lower === '#000000' || lower === 'black' || lower === '#000') return 'black';
+    if (lower === '#00ff00' || lower === 'green' || lower === '#008000') return 'green';
+    if (lower === '#ffff00' || lower === 'yellow') return 'yellow';
     return bgColor;
   }
-  
+
   if (style) {
     const colorMatch = style.match(/background-color:\s*([^;]+)/i);
     if (colorMatch) {
-      const color = colorMatch[1].trim();
-      if (color === '#FF0000' || color === 'red' || color === '#ff0000') return 'red';
-      if (color === '#FFFFFF' || color === 'white' || color === '#ffffff') return 'white';
-      if (color === '#0000FF' || color === 'blue' || color === '#0000ff') return 'blue';
-      return color;
+      const color = colorMatch[1].trim().toLowerCase();
+      if (color === '#ff0000' || color === 'red') return 'red';
+      if (color === '#ffffff' || color === 'white') return 'white';
+      if (color === '#0000ff' || color === 'blue' || color === '#00ccff' || color === '#00ffff') return 'blue';
+      if (color === '#000000' || color === 'black' || color === '#000') return 'black';
+      if (color === '#00ff00' || color === 'green' || color === '#008000') return 'green';
+      if (color === '#ffff00' || color === 'yellow') return 'yellow';
+      return colorMatch[1].trim();
     }
   }
   

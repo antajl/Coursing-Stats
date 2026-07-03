@@ -1,4 +1,5 @@
 import { parseRacingResultsPage } from "../../parsers/parse-results-racing";
+import { buildRacingRawScoresJson } from "../../parsers/racing/build-raw-scores";
 import { normalizeDogName, normalizeBreed } from "../../lib/dog-lookup";
 import { sleep } from "../../lib/fetch-win1251";
 
@@ -73,40 +74,7 @@ async function reparseAllRacing() {
         const nameLat = normalizeDogName(result.name);
         const breed = normalizeBreed(result.breed);
         
-        // Конвертируем данные из формата heat1/heat2/heat3 в raw_scores_json с массивом heats
-        const heats = [];
-        if (result.heat1?.time || result.heat1?.speed) {
-          heats.push({
-            heat_number: 1,
-            time: result.heat1.time,
-            speed_kmh: result.heat1.speed
-          });
-        }
-        if (result.heat2?.time || result.heat2?.speed) {
-          heats.push({
-            heat_number: 2,
-            time: result.heat2.time,
-            speed_kmh: result.heat2.speed
-          });
-        }
-        if (result.heat3?.time || result.heat3?.speed) {
-          heats.push({
-            heat_number: 3,
-            time: result.heat3.time,
-            speed_kmh: result.heat3.speed
-          });
-        }
-        
-        // Определяем лучшее время (минимальное из всех забегов)
-        const allTimes = heats.filter(h => h.time).map(h => h.time);
-        const grandTotal = allTimes.length > 0 ? Math.min(...allTimes) : null;
-        
-        const rawScoresJson = JSON.stringify({
-          heats,
-          grand_total: grandTotal,
-          normalized_score: grandTotal,
-          format: "racing"
-        });
+        const rawScoresJson = buildRacingRawScoresJson(result);
         
         // Добавляем собаку если нет
         const dogSql = `

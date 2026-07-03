@@ -3,6 +3,7 @@
  */
 
 import { extractNumber, extractItalicNumber, cleanText, normalizeDogName, normalizeBreed, detectStatusFromText, extractReasonText } from '../coursing/utils';
+import { parseRacingHeatsFromRow, racingHeatsToRawScores } from './parse-heats';
 
 export function parseNonArrivedRow($, $row, breedClass) {
   const $cells = $row.find("td");
@@ -72,59 +73,21 @@ export function parseDogRow($, $row, breedClass, allRows, rowIndex) {
     return null;
   }
 
-  // Racing использует метрики времени и скорости
-  // Парсим забеги (обычно до 3 забегов)
-  const heats = [];
-  let totalScore = null;
-  let qualification = null;
-  let vc = null;
-  let disqualificationReason = null;
+  // Racing: 18 колонок (CC, 2025) или 21 (ВС, 2026)
+  const heats = parseRacingHeatsFromRow($, $cells, cellCount);
+  const rawScores = racingHeatsToRawScores(heats.filter((h) => !h.disqualified));
 
-  // Структура колонок:
-  // 0: Место, 1: №, 2: Порода, 3: Класс, 4: Пол, 5: Кличка, 6: Дистанция (м),
-  // 7: Забег 1, 8: Попона, 9: Время 1 + скорость,
-  // 10: Забег 2, 11: Попона, 12: Время 2 + скорость,
-  // 13: Забег 3, 14: Попона, 15: Время 3 + скорость,
-  // 16: ВС, 17: Титул(ы)
-  
-  // Парсим забеги из ячеек 9, 12, 15
-  // Формат: "21.88 с\n16.45 м/с\n59.232 км/ч"
-  for (let heatIndex = 0; heatIndex < 3; heatIndex++) {
-    const heatCellIndex = 9 + (heatIndex * 3);
-    if (heatCellIndex >= cellCount) break;
-    
-    const timeCell = $cells.eq(heatCellIndex);
-    const timeText = timeCell.text().trim();
-    
-    // Проверяем disqualified (colspan)
-    const colspan = timeCell.attr('colspan');
-    if (colspan && parseInt(colspan) >= 3) {
-      disqualificationReason = timeText;
-      continue;
-    }
-    
-    // Парсим время, скорость
-    const timeMatch = timeText.match(/(\d+\.?\d*)\s*с/);
-    const speedMatch = timeText.match(/(\d+\.?\d*)\s*км\/ч/);
-    
-    if (timeMatch || speedMatch) {
-      heats.push({
-        heat_number: heatIndex + 1,
-        time: timeMatch ? parseFloat(timeMatch[1]) : null,
-        speed_kmh: speedMatch ? parseFloat(speedMatch[1]) : null,
-      });
-    }
-  }
+  // ВС и титул — последние 2 ячейки
+  const vc = cleanText($cells.eq(cellCount - 2).text());
+  const qualification = cleanText($cells.eq(cellCount - 1).text());
 
-  // ВС и титул в последних ячейках (16 и 17)
-  vc = cleanText($cells.eq(16).text());
-  qualification = cleanText($cells.eq(17).text());
-
-  const statusResult = detectStatusFromText($row.text(), totalScore !== null && totalScore !== undefined);
+  const disqualificationReason = heats.find((h) => h.disqualified)?.disqualification_reason ?? null;
+  const hasTime = heats.some((h) => h.time !== null && !h.disqualified);
+  const statusResult = detectStatusFromText($row.text(), hasTime);
   const status = statusResult.status;
   const statusReason = disqualificationReason || statusResult.reason;
 
-  // Для disqualified и неявки не нормализуем total_score
+  let totalScore = rawScores.grand_total;
   if (status === 'disqualified' || status === 'dns' || status === 'withdrawn' || status === 'dnf') {
     totalScore = null;
   }
@@ -139,16 +102,14 @@ export function parseDogRow($, $row, breedClass, allRows, rowIndex) {
     name,
     name_lat: name,
     total_score: totalScore,
-    judge_count: 0, // Racing не использует судей
+    judge_count: 0,
     qualification,
     vc,
     status,
     status_reason: statusReason,
     raw_scores_json: JSON.stringify({
-      heats,
-      grand_total: totalScore,
-      normalized_score: totalScore,
-      format: "racing"
+      ...rawScores,
+      heats: heats.filter((h) => !h.disqualified),
     }),
     raw_text: $row.html() || "",
     judges: null,

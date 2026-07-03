@@ -67,7 +67,80 @@ export function compareRecordDates(
   return bDate.getTime() - aDate.getTime()
 }
 
-/** Ключ дедупликации замера скорости (как в sync-speed-records.ts). */
+export function normalizeRecordDateIso(value: string | number | null | undefined): string {
+  const date = parseRecordDate(value)
+  if (!date) return String(value ?? '').trim()
+  const day = String(date.getDate()).padStart(2, '0')
+  const month = String(date.getMonth() + 1).padStart(2, '0')
+  const year = date.getFullYear()
+  return `${year}-${month}-${day}`
+}
+
+/** Время на 350 м (сек) по скорости км/ч: 0.35 км / (v/3600) = 1260/v. */
+export function speedKmhToTime350(speedKmh: number): number {
+  return 1260 / speedKmh
+}
+
+export function avgTime350FromSpeeds(speeds: number[]): number | null {
+  const valid = speeds.filter((s) => s > 0)
+  if (!valid.length) return null
+  return valid.reduce((sum, s) => sum + speedKmhToTime350(s), 0) / valid.length
+}
+
+export function bestTime350FromSpeeds(speeds: number[]): number | null {
+  const valid = speeds.filter((s) => s > 0)
+  if (!valid.length) return null
+  return speedKmhToTime350(Math.max(...valid))
+}
+
+/** Скорость км/ч по времени на 350 м (сек): v = 1260/t. */
+export function time350ToSpeedKmh(timeSeconds: number): number {
+  return 1260 / timeSeconds
+}
+
+export function avgTimeFromCoursingTimes(times: number[]): number | null {
+  const valid = times.filter((t) => t > 0)
+  if (!valid.length) return null
+  return valid.reduce((sum, t) => sum + t, 0) / valid.length
+}
+
+export function bestTimeFromCoursingTimes(times: number[]): number | null {
+  const valid = times.filter((t) => t > 0)
+  if (!valid.length) return null
+  return Math.min(...valid)
+}
+
+export function avgSpeedFromCoursingTimes(times: number[]): number | null {
+  const valid = times.filter((t) => t > 0)
+  if (!valid.length) return null
+  const speeds = valid.map(time350ToSpeedKmh)
+  return speeds.reduce((sum, s) => sum + s, 0) / speeds.length
+}
+
+export function bestSpeedFromCoursingTimes(times: number[]): number | null {
+  const valid = times.filter((t) => t > 0)
+  if (!valid.length) return null
+  return time350ToSpeedKmh(Math.min(...valid))
+}
+
+export function coursingTimesToStats(times: number[]): {
+  avgSpeed: number
+  maxSpeed: number
+  avgTime350: number
+  bestTime350: number
+} | null {
+  const valid = times.filter((t) => t > 0)
+  if (!valid.length) return null
+  const speeds = valid.map(time350ToSpeedKmh)
+  return {
+    avgSpeed: speeds.reduce((sum, s) => sum + s, 0) / speeds.length,
+    maxSpeed: Math.max(...speeds),
+    avgTime350: valid.reduce((sum, t) => sum + t, 0) / valid.length,
+    bestTime350: Math.min(...valid),
+  }
+}
+
+/** Ключ дедупликации замера скорости (нормализованная дата). */
 export function speedRecordDedupeKey(record: {
   name: string
   breed: string
@@ -75,7 +148,7 @@ export function speedRecordDedupeKey(record: {
   date: string | number | null | undefined
   speed_km_h: string | number
 }): string {
-  return `${record.name}_${record.breed}_${record.sex}_${record.date}_${record.speed_km_h}`
+  return `${record.name}_${record.breed}_${record.sex}_${normalizeRecordDateIso(record.date)}_${record.speed_km_h}`
 }
 
 /** Убирает точные дубликаты замеров (та же собака, дата и скорость). */

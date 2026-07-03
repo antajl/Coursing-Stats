@@ -36,14 +36,20 @@ export default function ResultSummary({ result }: ResultSummaryProps) {
       <div className="flex-shrink-0 text-right md:text-right">
         {result.total_score ? (
           <div className="flex items-center justify-end gap-1 md:gap-2">
-            {result.vc === '+' && (
-              <span className="inline-block px-1 py-0.5 rounded text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">ВС</span>
+            {result.vc && result.vc.trim() && (
+              <span className="inline-block px-1.5 py-0.5 rounded text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">
+                {result.vc.trim()}
+              </span>
             )}
             <div>
               <div className="text-base font-bold text-camel-700 dark:text-camel-400 md:text-lg">{result.total_score}</div>
               <div className="text-xs text-old-money-600 dark:text-old-money-400">баллов</div>
             </div>
           </div>
+        ) : result.vc && result.vc.trim() ? (
+          <span className="inline-block px-1.5 py-0.5 rounded text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">
+            {result.vc.trim()}
+          </span>
         ) : result.status === 'disqualified' && statusLabel ? (
           <div className="text-xs md:text-sm text-red-600 dark:text-red-400 italic md:text-right text-left md:block hidden">{statusLabel}</div>
         ) : result.status === 'dns' ? (

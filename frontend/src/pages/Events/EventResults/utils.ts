@@ -48,15 +48,40 @@ export function isRacingFormat(rawScores: RawScores | null): boolean {
   )
 }
 
+export function normalizeBibColorName(bibColor: string | undefined): string | null {
+  const c = bibColor?.toLowerCase() ?? ''
+  if (c === 'red' || c === '#ff0000') return 'red'
+  if (c === 'white' || c === '#ffffff') return 'white'
+  if (c === 'blue' || c === '#0000ff' || c === '#00ccff' || c === '#00ffff') return 'blue'
+  if (c === 'black' || c === '#000000' || c === '#000') return 'black'
+  if (c === 'green' || c === '#00ff00' || c === '#008000') return 'green'
+  if (c === 'yellow' || c === '#ffff00') return 'yellow'
+  if (!c) return null
+  return bibColor!
+}
+
 export function bibColorStyle(bibColor: string | undefined): CSSProperties {
+  const normalized = normalizeBibColorName(bibColor)
+  const backgroundColor =
+    normalized === 'red' ? '#ef4444' :
+    normalized === 'white' ? '#ffffff' :
+    normalized === 'blue' ? '#3b82f6' :
+    normalized === 'black' ? '#111827' :
+    normalized === 'green' ? '#22c55e' :
+    normalized === 'yellow' ? '#eab308' :
+    bibColor?.startsWith('#') ? bibColor! :
+    '#9ca3af'
   return {
-    backgroundColor:
-      bibColor === 'red' ? '#ef4444' :
-      bibColor === 'white' ? '#ffffff' :
-      bibColor === 'blue' ? '#3b82f6' :
-      '#9ca3af',
-    border: bibColor === 'white' ? '1px solid #e5e7eb' : 'none',
+    backgroundColor,
+    border: normalized === 'white' ? '1px solid #d1d5db' : '1px solid rgba(0,0,0,0.15)',
   }
+}
+
+export function bibTextClass(bibColor: string | undefined): string {
+  const normalized = normalizeBibColorName(bibColor)
+  if (normalized === 'white' || normalized === 'yellow') return 'text-charcoal-900 dark:text-charcoal-100'
+  if (normalized === 'red' || normalized === 'blue' || normalized === 'black' || normalized === 'green') return 'text-white'
+  return 'text-charcoal-900 dark:text-charcoal-100'
 }
 
 export function hasDisplayableRawScores(rawScores: RawScores | null): boolean {

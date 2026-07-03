@@ -7,6 +7,8 @@ import { z } from 'zod';
 // Схема для забега в racing
 export const RacingHeatSchema = z.object({
   heat_number: z.number().int().positive(),
+  bib_number: z.number().nullable().optional(),
+  bib_color: z.string().nullable().optional(),
   time: z.number().nullable(),
   speed_kmh: z.number().nullable(),
 });

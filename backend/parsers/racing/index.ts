@@ -58,7 +58,7 @@ export async function parseRacingHTML(html) {
     // Распознаём по цвету фона ИЛИ по содержимому (формат "Порода - Класс - Пол")
     const normalizedBgColor = bgColor ? bgColor.toLowerCase() : '';
     if (normalizedBgColor === "#c0c0c0" ||
-        (firstCellText.includes(' - ') && (firstCellText.includes('Кобел') || firstCellText.includes('Сука') || firstCellText.includes('Кобели') || firstCellText.includes('Суки')))) {
+        (firstCellText.includes(' - ') && (firstCellText.includes('Кобел') || firstCellText.includes('Сука') || firstCellText.includes('Кобели') || firstCellText.includes('Суки') || firstCellText.includes('Микс')))) {
       currentBreedClass = firstCellText;
       return;
     }

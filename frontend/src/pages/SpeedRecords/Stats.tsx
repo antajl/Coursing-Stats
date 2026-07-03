@@ -1,10 +1,11 @@
 import { useState, useEffect, useRef } from 'react';
 import React from 'react';
 import { api } from '../../services/api';
-import { dedupeByRecordDate, dedupeSpeedRecords, formatRecordDate, getRecordYear } from '../../lib/recordDates';
+import { dedupeByRecordDate, dedupeSpeedRecords, formatRecordDate, getRecordYear, coursingTimesToStats, normalizeRecordDateIso, time350ToSpeedKmh } from '../../lib/recordDates';
 
 function SpeedRecordsStats() {
   const [records, setRecords] = useState([]);
+  const [coursingRecords, setCoursingRecords] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   
@@ -46,17 +47,25 @@ function SpeedRecordsStats() {
   async function loadRecords() {
     setLoading(true);
     setError(null);
-    const result = await api.getSpeedRecords('', '', 10000, '', '');
+    const [speedResult, coursingResult] = await Promise.all([
+      api.getSpeedRecords('', '', 10000, '', ''),
+      api.getCoursingRecords('', 10000, '', ''),
+    ]);
     
-    if (result.success) {
-      const dataArray = Array.isArray(result.data) ? result.data : [];
+    if (speedResult.success) {
+      const dataArray = Array.isArray(speedResult.data) ? speedResult.data : [];
       const recordsWithHistory = dataArray.map(record => ({
         ...record,
         history: record.history ? JSON.parse(record.history) : []
       }));
       setRecords(recordsWithHistory);
     } else {
-      setError(result.error);
+      setError(speedResult.error);
+    }
+
+    if (coursingResult.success) {
+      const coursingArray = Array.isArray(coursingResult.data) ? coursingResult.data : [];
+      setCoursingRecords(coursingArray);
     }
     setLoading(false);
   }
@@ -188,6 +197,85 @@ function SpeedRecordsStats() {
     return filtered;
   }
 
+  function dedupeCoursingRecords(data) {
+    const seen = new Map();
+    for (const record of data) {
+      const key = `${record.name}_${record.breed}_${record.time_seconds}_${normalizeRecordDateIso(record.date)}`;
+      if (!seen.has(key)) {
+        seen.set(key, record);
+      }
+    }
+    return [...seen.values()];
+  }
+
+  function buildSexByDogMap(speedData) {
+    const sexByDog = new Map();
+    for (const record of speedData) {
+      const key = `${record.name}_${record.breed}`;
+      if (!sexByDog.has(key)) {
+        sexByDog.set(key, record.sex);
+      }
+    }
+    return sexByDog;
+  }
+
+  function applyCoursingFilters(data, sexByDog) {
+    let filtered = data;
+
+    if (searchQuery) {
+      const query = searchQuery.toLowerCase();
+      filtered = filtered.filter(record => record.name.toLowerCase().includes(query));
+    }
+
+    if (filterYears.length > 0) {
+      filtered = filtered.filter(record =>
+        filterYears.includes(String(getRecordYear(record.date)))
+      );
+    }
+
+    if (filterBreeds.length > 0) {
+      filtered = filtered.filter(record => filterBreeds.includes(record.breed));
+    }
+
+    if (filterSexes.length > 0) {
+      filtered = filtered.filter(record => {
+        const sex = sexByDog.get(`${record.name}_${record.breed}`);
+        return sex && filterSexes.includes(sex);
+      });
+    }
+
+    if (filterMinSpeed) {
+      const minSpeed = parseFloat(filterMinSpeed);
+      filtered = filtered.filter(record => {
+        const speed = time350ToSpeedKmh(parseFloat(record.time_seconds));
+        return speed >= minSpeed;
+      });
+    }
+
+    if (filterMaxSpeed) {
+      const maxSpeed = parseFloat(filterMaxSpeed);
+      filtered = filtered.filter(record => {
+        const speed = time350ToSpeedKmh(parseFloat(record.time_seconds));
+        return speed <= maxSpeed;
+      });
+    }
+
+    return filtered;
+  }
+
+  function formatCoursingStats(times) {
+    const stats = coursingTimesToStats(times);
+    if (!stats) {
+      return { avgSpeed: 0, maxSpeed: 0, avgTime350: '-', bestTime350: '-' };
+    }
+    return {
+      avgSpeed: stats.avgSpeed,
+      maxSpeed: stats.maxSpeed,
+      avgTime350: stats.avgTime350.toFixed(2),
+      bestTime350: stats.bestTime350.toFixed(2),
+    };
+  }
+
   if (loading) {
     return (
       <div className="text-center py-12 text-charcoal-900 dark:text-charcoal-100">
@@ -208,96 +296,99 @@ function SpeedRecordsStats() {
   // Применяем фильтры к данным
   const filteredRecords = applyFilters(records);
   const uniqueMeasurements = dedupeSpeedRecords(filteredRecords);
+  const sexByDog = buildSexByDogMap(records);
+  const filteredCoursingRecords = applyCoursingFilters(coursingRecords, sexByDog);
+  const uniqueCoursingMeasurements = dedupeCoursingRecords(filteredCoursingRecords);
   
-  // Расчёт статистики обзора на уникальных замерах (как вкладки порода/пол/год)
+  // Расчёт статистики обзора на уникальных замерах скорости (км/ч)
   const totalRecords = uniqueMeasurements.length;
   const averageSpeed = totalRecords > 0 ? uniqueMeasurements.reduce((sum, r) => sum + parseFloat(r.speed_km_h), 0) / totalRecords : 0;
   const maxSpeed = totalRecords > 0 ? Math.max(...uniqueMeasurements.map(r => parseFloat(r.speed_km_h))) : 0;
   const minSpeed = totalRecords > 0 ? Math.min(...uniqueMeasurements.map(r => parseFloat(r.speed_km_h))) : 0;
   
-  const breeds = [...new Set(uniqueMeasurements.map(r => r.breed))];
+  const breeds = [...new Set(uniqueCoursingMeasurements.map(r => r.breed))];
   const breedStats = breeds.map(breed => {
-    const breedRecords = uniqueMeasurements.filter(r => r.breed === breed);
-    const avgSpeed = breedRecords.reduce((sum, r) => sum + parseFloat(r.speed_km_h), 0) / breedRecords.length;
-    const maxSpeed = Math.max(...breedRecords.map(r => parseFloat(r.speed_km_h)));
-    const avgTime350 = avgSpeed > 0 ? (1260 / avgSpeed).toFixed(2) : '-';
-    const bestTime350 = maxSpeed > 0 ? (1260 / maxSpeed).toFixed(2) : '-';
+    const breedRecords = uniqueCoursingMeasurements.filter(r => r.breed === breed);
+    const times = breedRecords.map((r) => parseFloat(String(r.time_seconds))).filter((t) => t > 0);
+    const { avgSpeed, maxSpeed, avgTime350, bestTime350 } = formatCoursingStats(times);
     const names = [...new Set(breedRecords.map(r => r.name))].sort().join(', ');
     return { breed, count: breedRecords.length, avgSpeed, maxSpeed, avgTime350, bestTime350, names };
   });
   const sortedBreedStats = sortData(breedStats, sortConfig.key);
 
-  // Карта породных средних для сравнения
+  // Карта породных средних для сравнения (курсинг 350 м)
   const breedAverageMap = new Map();
   breedStats.forEach(stat => {
     breedAverageMap.set(stat.breed, stat.avgSpeed);
   });
 
-  // Поиск конкретной собаки
-  const searchedDog = searchQuery ? filteredRecords.find(r => 
+  // Поиск конкретной собаки (по курсингу 350 м)
+  const searchedDog = searchQuery ? uniqueCoursingMeasurements.find(r => 
     r.name.toLowerCase() === searchQuery.toLowerCase()
   ) : null;
 
-  // Статистика найденной собаки
+  // Статистика найденной собаки (бега 350 м)
   const dogStats = searchedDog ? (() => {
-    const dogRecords = filteredRecords.filter(r => 
+    const dogRecords = uniqueCoursingMeasurements.filter(r => 
       r.name.toLowerCase() === searchedDog.name.toLowerCase() &&
-      r.breed === searchedDog.breed &&
-      r.sex === searchedDog.sex
+      r.breed === searchedDog.breed
     );
-    const bestSpeed = Math.max(...dogRecords.map(r => parseFloat(r.speed_km_h)));
-    const avgSpeed = dogRecords.reduce((sum, r) => sum + parseFloat(r.speed_km_h), 0) / dogRecords.length;
+    const times = dogRecords.map(r => parseFloat(r.time_seconds)).filter(t => t > 0);
+    const bestTime = Math.min(...times);
+    const avgTime = times.reduce((sum, t) => sum + t, 0) / times.length;
+    const bestSpeed = time350ToSpeedKmh(bestTime);
+    const avgSpeed = times.reduce((sum, t) => sum + time350ToSpeedKmh(t), 0) / times.length;
     const breedAvg = breedAverageMap.get(searchedDog.breed) || 0;
     const diffFromBreedAvg = breedAvg > 0 ? ((bestSpeed - breedAvg) / breedAvg * 100).toFixed(1) : 0;
     
-    // Процентиль в породе
-    const breedDogs = [...new Set(filteredRecords.filter(r => r.breed === searchedDog.breed).map(r => r.name))];
-    const breedBestSpeeds = breedDogs.map(name => {
-      const dogRecs = filteredRecords.filter(r => r.name === name && r.breed === searchedDog.breed);
-      return Math.max(...dogRecs.map(r => parseFloat(r.speed_km_h)));
-    }).sort((a, b) => b - a);
-    const percentile = breedBestSpeeds.length > 0 
-      ? ((breedBestSpeeds.findIndex(s => s <= bestSpeed) + 1) / breedBestSpeeds.length * 100).toFixed(0)
+    const breedDogs = [...new Set(uniqueCoursingMeasurements.filter(r => r.breed === searchedDog.breed).map(r => r.name))];
+    const breedBestTimes = breedDogs.map(name => {
+      const dogRecs = uniqueCoursingMeasurements.filter(r => r.name === name && r.breed === searchedDog.breed);
+      return Math.min(...dogRecs.map(r => parseFloat(r.time_seconds)));
+    }).sort((a, b) => a - b);
+    const percentile = breedBestTimes.length > 0 
+      ? ((breedBestTimes.findIndex(t => t >= bestTime) + 1) / breedBestTimes.length * 100).toFixed(0)
       : 0;
     
-    // Рейтинг в породе
-    const rank = breedBestSpeeds.findIndex(s => s === bestSpeed) + 1;
+    const rank = breedBestTimes.findIndex(t => t === bestTime) + 1;
     
     return {
       ...searchedDog,
-      bestSpeed,
+      bestSpeed: bestSpeed.toFixed(1),
       avgSpeed,
+      bestTime: bestTime.toFixed(2),
+      avgTime,
       breedAvg,
       diffFromBreedAvg,
       percentile,
       rank,
-      totalInBreed: breedBestSpeeds.length,
+      totalInBreed: breedBestTimes.length,
       history: dedupeByRecordDate(
         dogRecords,
-        (candidate, existing) => parseFloat(candidate.speed_km_h) > parseFloat(existing.speed_km_h)
+        (candidate, existing) => parseFloat(candidate.time_seconds) < parseFloat(existing.time_seconds)
       )
     };
   })() : null;
 
-  const sexes = [...new Set(uniqueMeasurements.map(r => r.sex))];
+  const sexes = [...new Set(
+    uniqueCoursingMeasurements
+      .map(r => sexByDog.get(`${r.name}_${r.breed}`))
+      .filter(Boolean)
+  )];
   const sexStats = sexes.map(sex => {
-    const sexRecords = uniqueMeasurements.filter(r => r.sex === sex);
-    const avgSpeed = sexRecords.reduce((sum, r) => sum + parseFloat(r.speed_km_h), 0) / sexRecords.length;
-    const maxSpeed = Math.max(...sexRecords.map(r => parseFloat(r.speed_km_h)));
-    const avgTime350 = avgSpeed > 0 ? (1260 / avgSpeed).toFixed(2) : '-';
-    const bestTime350 = maxSpeed > 0 ? (1260 / maxSpeed).toFixed(2) : '-';
+    const sexRecords = uniqueCoursingMeasurements.filter(r => sexByDog.get(`${r.name}_${r.breed}`) === sex);
+    const times = sexRecords.map((r) => parseFloat(String(r.time_seconds))).filter((t) => t > 0);
+    const { avgSpeed, maxSpeed, avgTime350, bestTime350 } = formatCoursingStats(times);
     const names = [...new Set(sexRecords.map(r => r.name))].sort().join(', ');
     return { sex: sex === 'С' ? 'Сука' : 'Кабель', count: sexRecords.length, avgSpeed, maxSpeed, avgTime350, bestTime350, names };
   });
   const sortedSexStats = sortData(sexStats, sortConfig.key);
 
-  const years = [...new Set(uniqueMeasurements.map(r => String(getRecordYear(r.date))).filter(Boolean))].sort();
+  const years = [...new Set(uniqueCoursingMeasurements.map(r => String(getRecordYear(r.date))).filter(Boolean))].sort();
   const yearStats = years.map(year => {
-    const yearRecords = uniqueMeasurements.filter(r => String(getRecordYear(r.date)) === year);
-    const avgSpeed = yearRecords.reduce((sum, r) => sum + parseFloat(r.speed_km_h), 0) / yearRecords.length;
-    const maxSpeed = Math.max(...yearRecords.map(r => parseFloat(r.speed_km_h)));
-    const avgTime350 = avgSpeed > 0 ? (1260 / avgSpeed).toFixed(2) : '-';
-    const bestTime350 = maxSpeed > 0 ? (1260 / maxSpeed).toFixed(2) : '-';
+    const yearRecords = uniqueCoursingMeasurements.filter(r => String(getRecordYear(r.date)) === year);
+    const times = yearRecords.map((r) => parseFloat(String(r.time_seconds))).filter((t) => t > 0);
+    const { avgSpeed, maxSpeed, avgTime350, bestTime350 } = formatCoursingStats(times);
     const names = [...new Set(yearRecords.map(r => r.name))].sort().join(', ');
     return { year, count: yearRecords.length, avgSpeed, maxSpeed, avgTime350, bestTime350, names };
   });
@@ -490,10 +581,18 @@ function SpeedRecordsStats() {
       {dogStats && (
         <div className="bg-white dark:bg-charcoal-800 rounded-2xl border-2 border-cream-300 dark:border-charcoal-600 p-6 shadow-md">
           <h2 className="text-xl lg:text-2xl font-bold text-charcoal-900 dark:text-charcoal-100 mb-4">
-            Статистика: {dogStats.name} ({dogStats.breed}, 350 метров)
+            Статистика: {dogStats.name} ({dogStats.breed}, бега 350 м)
           </h2>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+            <div className="bg-gradient-to-br from-camel-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-camel-200 dark:border-charcoal-500">
+              <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Лучшее время</div>
+              <div className="text-2xl font-bold text-camel-700 dark:text-camel-400">{dogStats.bestTime} <span className="text-sm font-normal text-charcoal-600 dark:text-charcoal-400">сек</span></div>
+            </div>
+            <div className="bg-gradient-to-br from-old-money-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-old-money-200 dark:border-charcoal-500">
+              <div className="text-xs font-medium text-old-money-600 mb-1 uppercase tracking-wide">Среднее время</div>
+              <div className="text-2xl font-bold text-charcoal-900 dark:text-charcoal-100">{dogStats.avgTime.toFixed(2)} <span className="text-sm font-normal text-charcoal-600 dark:text-charcoal-400">сек</span></div>
+            </div>
             <div className="bg-gradient-to-br from-camel-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-camel-200 dark:border-charcoal-500">
               <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Лучшая скорость</div>
               <div className="text-2xl font-bold text-camel-700 dark:text-camel-400">{dogStats.bestSpeed} <span className="text-sm font-normal text-charcoal-600 dark:text-charcoal-400">км/ч</span></div>
@@ -502,6 +601,9 @@ function SpeedRecordsStats() {
               <div className="text-xs font-medium text-old-money-600 mb-1 uppercase tracking-wide">Средняя скорость</div>
               <div className="text-2xl font-bold text-charcoal-900 dark:text-charcoal-100">{dogStats.avgSpeed.toFixed(1)} <span className="text-sm font-normal text-charcoal-600 dark:text-charcoal-400">км/ч</span></div>
             </div>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
             <div className="bg-gradient-to-br from-old-money-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-old-money-200 dark:border-charcoal-500">
               <div className="text-xs font-medium text-old-money-600 mb-1 uppercase tracking-wide">Среднее по породе</div>
               <div className="text-2xl font-bold text-charcoal-900 dark:text-charcoal-100">{dogStats.breedAvg.toFixed(1)} <span className="text-sm font-normal text-charcoal-600 dark:text-charcoal-400">км/ч</span></div>
@@ -512,9 +614,6 @@ function SpeedRecordsStats() {
                 {parseFloat(dogStats.diffFromBreedAvg) >= 0 ? '+' : ''}{dogStats.diffFromBreedAvg}%
               </div>
             </div>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-2 gap-4 mb-6">
             <div className="bg-gradient-to-br from-camel-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-camel-200 dark:border-charcoal-500">
               <div className="text-xs font-medium text-old-money-600 mb-1 uppercase tracking-wide">Рейтинг в породе</div>
               <div className="text-2xl font-bold text-camel-700 dark:text-camel-400">#{dogStats.rank} <span className="text-base font-normal text-charcoal-600 dark:text-charcoal-400">из {dogStats.totalInBreed}</span></div>
@@ -529,20 +628,23 @@ function SpeedRecordsStats() {
           <div>
             <h3 className="text-lg font-bold text-charcoal-900 dark:text-charcoal-100 mb-3">Прогресс во времени</h3>
             <div className="space-y-2">
-              {dogStats.history.map((record, idx) => (
+              {dogStats.history.map((record, idx) => {
+                const time = parseFloat(record.time_seconds);
+                const speed = time350ToSpeedKmh(time).toFixed(1);
+                return (
                 <div key={idx} className="flex items-center gap-4">
                   <div className="w-24 text-sm text-charcoal-700 dark:text-charcoal-300 text-right">{formatRecordDate(record.date)}</div>
                   <div className="flex-1 bg-cream-200 dark:bg-charcoal-600 rounded-full h-6 overflow-hidden relative">
                     <div 
                       className="bg-gradient-to-r from-camel-400 to-camel-600 h-full rounded-full transition-all duration-500"
-                      style={{ width: `${(parseFloat(record.speed_km_h) / 80) * 100}%` }}
+                      style={{ width: `${Math.min(100, (time350ToSpeedKmh(time) / 70) * 100)}%` }}
                     />
                     <div className="absolute inset-0 flex items-center justify-center text-sm font-bold text-charcoal-900 dark:text-charcoal-100">
-                      {record.speed_km_h} км/ч
+                      {time.toFixed(2)} сек ({speed} км/ч)
                     </div>
                   </div>
                 </div>
-              ))}
+              )})}
             </div>
           </div>
         </div>
@@ -623,7 +725,8 @@ function SpeedRecordsStats() {
 
       {statsTab === 'breeds' && (
         <div className="bg-white dark:bg-charcoal-800 rounded-2xl border-2 border-cream-300 dark:border-charcoal-600 p-6 shadow-md">
-          <h2 className="text-xl lg:text-2xl font-bold text-charcoal-900 dark:text-charcoal-100 mb-4">Статистика по породам</h2>
+          <h2 className="text-xl lg:text-2xl font-bold text-charcoal-900 dark:text-charcoal-100 mb-1">Статистика по породам</h2>
+          <p className="text-sm text-charcoal-600 dark:text-charcoal-400 mb-4">Бега борзых 350 м — зачёты из таблицы курсинга</p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[600px]">
               <thead>
@@ -676,7 +779,7 @@ function SpeedRecordsStats() {
                       <td className="px-4 py-3 font-semibold text-charcoal-900 dark:text-charcoal-100">{stat.breed}</td>
                       <td className="px-4 py-3 text-center text-charcoal-700 dark:text-charcoal-300">{stat.count}</td>
                       <td className="px-4 py-3 text-center text-camel-700 dark:text-camel-400 font-semibold whitespace-nowrap">{stat.avgSpeed.toFixed(1)} <span className="text-charcoal-600 dark:text-charcoal-400">км/ч</span></td>
-                      <td className="px-4 py-3 text-center text-camel-700 dark:text-camel-400 font-bold whitespace-nowrap">{stat.maxSpeed} <span className="text-charcoal-600 dark:text-charcoal-400">км/ч</span></td>
+                      <td className="px-4 py-3 text-center text-camel-700 dark:text-camel-400 font-bold whitespace-nowrap">{stat.maxSpeed.toFixed(1)} <span className="text-charcoal-600 dark:text-charcoal-400">км/ч</span></td>
                       <td className="px-4 py-3 text-center text-charcoal-700 dark:text-charcoal-300 whitespace-nowrap">{stat.avgTime350} <span className="text-charcoal-600 dark:text-charcoal-400">сек</span></td>
                       <td className="px-4 py-3 text-center text-camel-700 dark:text-camel-400 font-bold whitespace-nowrap">{stat.bestTime350} <span className="text-charcoal-600 dark:text-charcoal-400">сек</span></td>
                     </tr>
@@ -697,7 +800,8 @@ function SpeedRecordsStats() {
 
       {statsTab === 'sex' && (
         <div className="bg-white dark:bg-charcoal-800 rounded-2xl border-2 border-cream-300 dark:border-charcoal-600 p-6 shadow-md">
-          <h2 className="text-2xl font-bold text-charcoal-900 dark:text-charcoal-100 mb-4">Статистика по полу</h2>
+          <h2 className="text-2xl font-bold text-charcoal-900 dark:text-charcoal-100 mb-1">Статистика по полу</h2>
+          <p className="text-sm text-charcoal-600 dark:text-charcoal-400 mb-4">Бега борзых 350 м — зачёты из таблицы курсинга</p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[600px]">
               <thead>
@@ -750,7 +854,7 @@ function SpeedRecordsStats() {
                       <td className="px-4 py-3 font-semibold text-charcoal-900 dark:text-charcoal-100">{stat.sex}</td>
                       <td className="px-4 py-3 text-center text-charcoal-700 dark:text-charcoal-300">{stat.count}</td>
                       <td className="px-4 py-3 text-center text-camel-700 dark:text-camel-400 font-semibold whitespace-nowrap">{stat.avgSpeed.toFixed(1)} <span className="text-charcoal-600 dark:text-charcoal-400">км/ч</span></td>
-                      <td className="px-4 py-3 text-center text-camel-700 dark:text-camel-400 font-bold whitespace-nowrap">{stat.maxSpeed} <span className="text-charcoal-600 dark:text-charcoal-400">км/ч</span></td>
+                      <td className="px-4 py-3 text-center text-camel-700 dark:text-camel-400 font-bold whitespace-nowrap">{stat.maxSpeed.toFixed(1)} <span className="text-charcoal-600 dark:text-charcoal-400">км/ч</span></td>
                       <td className="px-4 py-3 text-center text-charcoal-700 dark:text-charcoal-300 whitespace-nowrap">{stat.avgTime350} <span className="text-charcoal-600 dark:text-charcoal-400">сек</span></td>
                       <td className="px-4 py-3 text-center text-camel-700 dark:text-camel-400 font-bold whitespace-nowrap">{stat.bestTime350} <span className="text-charcoal-600 dark:text-charcoal-400">сек</span></td>
                     </tr>
@@ -771,7 +875,8 @@ function SpeedRecordsStats() {
 
       {statsTab === 'years' && (
         <div className="bg-white dark:bg-charcoal-800 rounded-2xl border-2 border-cream-300 dark:border-charcoal-600 p-6 shadow-md">
-          <h2 className="text-xl lg:text-2xl font-bold text-charcoal-900 dark:text-charcoal-100 mb-4">Статистика по годам</h2>
+          <h2 className="text-xl lg:text-2xl font-bold text-charcoal-900 dark:text-charcoal-100 mb-1">Статистика по годам</h2>
+          <p className="text-sm text-charcoal-600 dark:text-charcoal-400 mb-4">Бега борзых 350 м — зачёты из таблицы курсинга</p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[600px]">
               <thead>
@@ -824,7 +929,7 @@ function SpeedRecordsStats() {
                       <td className="px-4 py-3 font-semibold text-charcoal-900 dark:text-charcoal-100">{stat.year}</td>
                       <td className="px-4 py-3 text-center text-charcoal-700 dark:text-charcoal-300">{stat.count}</td>
                       <td className="px-4 py-3 text-center text-camel-700 dark:text-camel-400 font-semibold whitespace-nowrap">{stat.avgSpeed.toFixed(1)} <span className="text-charcoal-600 dark:text-charcoal-400">км/ч</span></td>
-                      <td className="px-4 py-3 text-center text-camel-700 dark:text-camel-400 font-bold whitespace-nowrap">{stat.maxSpeed} <span className="text-charcoal-600 dark:text-charcoal-400">км/ч</span></td>
+                      <td className="px-4 py-3 text-center text-camel-700 dark:text-camel-400 font-bold whitespace-nowrap">{stat.maxSpeed.toFixed(1)} <span className="text-charcoal-600 dark:text-charcoal-400">км/ч</span></td>
                       <td className="px-4 py-3 text-center text-charcoal-700 dark:text-charcoal-300 whitespace-nowrap">{stat.avgTime350} <span className="text-charcoal-600 dark:text-charcoal-400">сек</span></td>
                       <td className="px-4 py-3 text-center text-camel-700 dark:text-camel-400 font-bold whitespace-nowrap">{stat.bestTime350} <span className="text-charcoal-600 dark:text-charcoal-400">сек</span></td>
                     </tr>

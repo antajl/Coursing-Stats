@@ -102,14 +102,23 @@ function parseXLSX(buffer) {
       timeSeconds = parseFloat(timeValue) || 0;
     }
     
-    // Конвертация Excel даты в DD.MM.YYYY
+    // Конвертация даты → YYYY-MM-DD
     let dateStr = record['Дата'] || record['дата'] || record['date'] || '';
-    if (typeof dateStr === 'number') {
-      const excelDate = new Date(Math.round((dateStr - 25569) * 86400 * 1000));
-      const day = String(excelDate.getDate()).padStart(2, '0');
-      const month = String(excelDate.getMonth() + 1).padStart(2, '0');
-      const year = excelDate.getFullYear();
-      dateStr = `${day}.${month}.${year}`;
+    if (typeof dateStr === 'number' || typeof dateStr === 'string') {
+      const excelDate = typeof dateStr === 'number'
+        ? new Date(Math.round((dateStr - 25569) * 86400 * 1000))
+        : /^\d{5}$/.test(dateStr)
+          ? new Date(Math.round((parseInt(dateStr, 10) - 25569) * 86400 * 1000))
+          : null;
+      if (excelDate) {
+        dateStr = `${excelDate.getFullYear()}-${String(excelDate.getMonth() + 1).padStart(2, '0')}-${String(excelDate.getDate()).padStart(2, '0')}`;
+      } else if (typeof dateStr === 'string') {
+        const normalized = dateStr.replace(/[;,\/\-]/g, '.');
+        const parts = normalized.split('.');
+        if (parts.length === 3) {
+          dateStr = `${parts[2]}-${String(parts[1]).padStart(2, '0')}-${String(parts[0]).padStart(2, '0')}`;
+        }
+      }
     }
     
     const coursingRecord = {

@@ -262,7 +262,7 @@ async function main() {
 }
 
 function generateSQL(records: SpeedRecord[]): string {
-  const lines = ['-- speed_records', '-- Insert or update records (no DELETE)'];
+  const lines = ['-- speed_records', '-- Delete old records and insert new with dog_id', 'DELETE FROM speed_records;'];
   
   records.forEach(record => {
     const historyJSON = record.history ? JSON.stringify(record.history).replace(/'/g, "''") : 'NULL';

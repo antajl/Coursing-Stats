@@ -1,7 +1,35 @@
 import type { RawScores } from '../types'
+import { bibColorStyle, bibTextClass, normalizeBibColorName } from '../utils'
 
 interface RacingDetailProps {
   rawScores: RawScores
+}
+
+const BIB_LABELS: Record<string, string> = {
+  red: 'красная',
+  white: 'белая',
+  blue: 'голубая',
+  black: 'чёрная',
+}
+
+/** Ячейка попоны как в протоколе: цветной фон + цифра */
+function PoponaCell({ number, color }: { number?: number | string | null; color?: string | null }) {
+  if (number == null && !color) {
+    return <span className="text-old-money-400">—</span>
+  }
+
+  const normalized = normalizeBibColorName(color ?? undefined)
+  const title = normalized ? (BIB_LABELS[normalized] || normalized) : undefined
+
+  return (
+    <span
+      className={`inline-flex min-h-[2rem] min-w-[2.25rem] items-center justify-center rounded text-sm font-bold shadow-sm ${normalized ? bibTextClass(normalized) : 'text-charcoal-900 dark:text-charcoal-100 border border-old-money-300'}`}
+      style={normalized ? bibColorStyle(normalized) : undefined}
+      title={title}
+    >
+      {number ?? '—'}
+    </span>
+  )
 }
 
 export default function RacingDetail({ rawScores }: RacingDetailProps) {
@@ -9,18 +37,29 @@ export default function RacingDetail({ rawScores }: RacingDetailProps) {
 
   return (
     <>
-      {/* Mobile cards */}
       <div className="md:hidden space-y-3">
         {heats.map((heat, heatIdx) => {
           const isHeatDisqualified = !heat.time && !heat.speed_kmh
 
           return (
             <div key={heatIdx} className="bg-white dark:bg-charcoal-800 rounded-xl p-3 border border-old-money-200 dark:border-charcoal-600">
-              <div className="flex items-center justify-center gap-2 mb-3 pb-2 border-b border-old-money-100 dark:border-charcoal-600">
-                <span className={`font-bold ${isHeatDisqualified ? 'text-red-600 dark:text-red-400' : 'text-camel-700 dark:text-camel-400'}`}>
-                  Забег {heat.heat_number || heatIdx + 1}
-                  {isHeatDisqualified && ' (отстранение)'}
-                </span>
+              <div className="grid grid-cols-3 gap-2 mb-3 pb-2 border-b border-old-money-100 dark:border-charcoal-600 text-center">
+                <div>
+                  <div className="text-[10px] text-old-money-500 mb-1">Забег</div>
+                  <div className={`font-bold ${isHeatDisqualified ? 'text-red-600' : 'text-camel-700 dark:text-camel-400'}`}>
+                    {heat.heat_number || '—'}
+                  </div>
+                </div>
+                <div>
+                  <div className="text-[10px] text-old-money-500 mb-1">Попона</div>
+                  <PoponaCell number={heat.bib_number} color={heat.bib_color} />
+                </div>
+                <div>
+                  <div className="text-[10px] text-old-money-500 mb-1">Время</div>
+                  <div className="font-bold text-charcoal-900 dark:text-charcoal-100">
+                    {heat.time ? `${heat.time} с` : '—'}
+                  </div>
+                </div>
               </div>
 
               {isHeatDisqualified ? (
@@ -28,19 +67,11 @@ export default function RacingDetail({ rawScores }: RacingDetailProps) {
                   Отстранение
                 </div>
               ) : (
-                <div className="space-y-2">
-                  <div className="bg-old-money-50 dark:bg-charcoal-700 rounded-lg p-2">
-                    <div className="text-xs text-gray-500 dark:text-gray-400 mb-1">Время</div>
-                    <div className="text-lg font-bold text-charcoal-900 dark:text-charcoal-100">
-                      {heat.time ? `${heat.time} сек` : '-'}
-                    </div>
-                  </div>
-                  <div className="bg-old-money-50 dark:bg-charcoal-700 rounded-lg p-2">
-                    <div className="text-xs text-gray-500 dark:text-gray-400 mb-1">Скорость</div>
-                    <div className="text-lg font-bold text-camel-700 dark:text-camel-400">
-                      {heat.speed_kmh ? `${heat.speed_kmh.toFixed(1)} км/ч` : '-'}
-                    </div>
-                  </div>
+                <div className="text-center text-sm">
+                  <span className="text-old-money-500">Скорость: </span>
+                  <span className="font-bold text-camel-700 dark:text-camel-400">
+                    {heat.speed_kmh ? `${heat.speed_kmh.toFixed(1)} км/ч` : '—'}
+                  </span>
                 </div>
               )}
             </div>
@@ -55,14 +86,14 @@ export default function RacingDetail({ rawScores }: RacingDetailProps) {
         )}
       </div>
 
-      {/* Desktop table */}
       <div className="hidden md:block overflow-x-auto">
-        <table className="w-full text-xs min-w-[400px]">
+        <table className="w-full text-xs min-w-[440px]">
           <thead>
             <tr className="text-left text-old-money-600 dark:text-old-money-400">
-              <th className="pb-1 pr-2">Забег</th>
-              <th className="pb-1 pr-2 text-center">Время</th>
-              <th className="pb-1 pr-2 text-center">Скорость</th>
+              <th className="pb-2 pr-2">Забег</th>
+              <th className="pb-2 pr-2 text-center">Попона</th>
+              <th className="pb-2 pr-2 text-center">Время</th>
+              <th className="pb-2 pr-2 text-center">Скорость</th>
             </tr>
           </thead>
           <tbody>
@@ -70,15 +101,18 @@ export default function RacingDetail({ rawScores }: RacingDetailProps) {
               const isHeatDisqualified = !heat.time && !heat.speed_kmh
 
               return (
-                <tr key={heatIdx} className={heatIdx > 0 ? "border-t border-old-money-200 dark:border-charcoal-600" : ""}>
-                  <td className="py-1 pr-2 text-charcoal-900 dark:text-charcoal-100">
-                    Забег {heat.heat_number || heatIdx + 1}
+                <tr key={heatIdx} className={heatIdx > 0 ? 'border-t border-old-money-200 dark:border-charcoal-600' : ''}>
+                  <td className="py-2 pr-2 font-semibold text-charcoal-900 dark:text-charcoal-100 align-middle">
+                    {heat.heat_number || '—'}
                     {isHeatDisqualified && ' (отстранение)'}
                   </td>
-                  <td className={`py-1 pr-2 text-center ${isHeatDisqualified ? 'text-red-600 dark:text-red-400 italic' : 'text-charcoal-900 dark:text-charcoal-100'}`}>
+                  <td className="py-2 pr-2 text-center align-middle">
+                    <PoponaCell number={heat.bib_number} color={heat.bib_color} />
+                  </td>
+                  <td className={`py-2 pr-2 text-center align-middle ${isHeatDisqualified ? 'text-red-600 dark:text-red-400 italic' : 'text-charcoal-900 dark:text-charcoal-100'}`}>
                     {heat.time ? `${heat.time} сек` : '-'}
                   </td>
-                  <td className={`py-1 pr-2 text-center ${isHeatDisqualified ? 'text-red-600 dark:text-red-400 italic' : 'text-camel-700 dark:text-camel-400 font-bold'}`}>
+                  <td className={`py-2 pr-2 text-center align-middle ${isHeatDisqualified ? 'text-red-600 dark:text-red-400 italic' : 'text-camel-700 dark:text-camel-400 font-bold'}`}>
                     {heat.speed_kmh ? `${heat.speed_kmh.toFixed(1)} км/ч` : '-'}
                   </td>
                 </tr>

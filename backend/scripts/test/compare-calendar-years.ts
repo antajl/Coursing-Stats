@@ -66,8 +66,7 @@ async function main() {
   console.log(`\nСравнение календаря procoursing.ru с ${dbLabel}\n`)
 
   const dbEvents = queryDb<DbEvent>(
-    `SELECT id, year, date_start, title, location, event_type, results_url, rank_label
-     FROM events WHERE year BETWEEN 2015 AND 2025 ORDER BY year, date_start`
+    'SELECT id, year, date_start, title, location, event_type, results_url, rank_label FROM events WHERE year BETWEEN 2015 AND 2025 ORDER BY year, date_start',
   )
 
   const summary: Array<{

@@ -276,7 +276,7 @@ export function parseRacingHTML(html) {
     const normalizedColspan = colspan ? String(colspan) : '';
     const hasBoldText = $firstCell.find("b").length > 0;
     
-    if (normalizedColspan === "25" && hasBoldText) {
+    if (normalizedColspan === "25" || normalizedColspan === "18") && hasBoldText) {
       const text = $firstCell.find("b").text();
       // Текст должен содержать дефис и не быть заголовком страницы
       if (text.includes('-') && !text.includes('Организатор') && !text.includes('Полные результаты') && !text.includes('Судья') && !text.includes('Состязания') && !text.includes('Схема трассы')) {
