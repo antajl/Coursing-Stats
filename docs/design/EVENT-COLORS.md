@@ -8,11 +8,44 @@
 - Цветные бейджи с названием дисциплины
 - Усиленный золотой градиент для важных соревнований (чемпионаты, кубки)
 
-## Реализация (обновлено 2026-07-01)
+## Реализация (обновлено 2026-07-03)
 
-### Файл: `frontend/src/pages/Events/index.tsx`
+### Файлы
 
-Цвета задаются через три функции:
+- `frontend/src/pages/Events/eventListUtils.ts` — константы цветов и хелперы
+- `frontend/src/pages/Events/EventListRow.tsx` — применение цветов к строке списка
+- `frontend/src/pages/Events/index.tsx` — легенда дисциплин в тулбаре
+
+### Дисциплины — левый бордер (`DISCIPLINE_BORDER`)
+
+| Дисциплина | Tailwind (светлая / тёмная) |
+|------------|----------------------------|
+| Курсинг | `border-l-forest-300` / `dark:border-l-forest-600` |
+| БЗМП | `border-l-blue-500` / `dark:border-l-blue-600` |
+| Бега | `border-l-rose-300` / `dark:border-l-rose-600` |
+| Другие | `border-l-amber-300` / `dark:border-l-amber-600` |
+
+Палитра `blue` добавлена в `frontend/tailwind.config.js` (ранее использовался несуществующий `warm-blue`).
+
+### Легенда (`LEGEND_DOT_COLOR`)
+
+Кружки в тулбаре календаря: coursing, bzmp, racing, other. Отдельного пункта для чемпионатов в легенде нет — они выделяются в строке (золотой градиент + иконка кубка).
+
+### Чемпионаты и кубки
+
+`isImportantCompetition(competition_kind)` → золотой градиент фона строки (`from-camel-100`), serif-заголовок, иконка кубка. **Левый бордер** остаётся цветом дисциплины.
+
+### Устаревшее (до 2026-07-03)
+
+Ранее цвета задавались inline-функциями в `Events/index.tsx` (градиент фона всей строки, бейдж дисциплины справа, desktop-таблица + mobile-карточки). Актуальный UI — единый `EventListRow` без бейджа дисциплины в строке.
+
+---
+
+## Архив: реализация 2026-07-01
+
+### Файл: `frontend/src/pages/Events/index.tsx` (устарело)
+
+Цвета задавались через три функции:
 
 ```typescript
 function getDisciplineColor(eventType: string, isDark: boolean): { backgroundColor: string } {

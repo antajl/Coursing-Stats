@@ -2,7 +2,7 @@
 
 Этот документ содержит инструкции для ИИ-агента по настройке памяти при первом анализе проекта ProCoursing Stats.
 
-**Инструкция для пользователя:** Когда начинаете работу с новым ИИ-агентом, скажите: "Проанализируй наш проект, начиная с папки docs. Сначала прочитай `docs/00-AI-MEMORY-SETUP.md` и добавь указанные memories."
+**Инструкция для пользователя:** Когда начинаете работу с новым ИИ-агентом, скажите: "Проанализируй наш проект, начиная с папки docs. Сначала прочитай `docs/ai/MEMORY-SETUP.md` и добавь указанные memories."
 
 ---
 
@@ -16,13 +16,19 @@
 ```
 backend/src/worker.ts — 8-строчная обёртка, делегирует в app.ts (Hono application)
 backend/src/routes/ — модули API (admin.ts, events.ts, dogs.ts, judges.ts, speed.ts, top.ts)
-backend/parsers/ — парсеры для coursing, BZMP, racing
-backend/scripts/ — скрипты загрузки данных (организованы по папкам: scrape/, load/, reparse/, migrate/, sync/, update/, speed/, test/, ci/)
+backend/parsers/ — v1: parse-results-*.ts (reparse); v2 модульные: coursing/, bzmp/, racing/, unique/ (целевые)
+backend/tests/fixtures/ — реальные HTML фикстуры для парсеров
+backend/scripts/test/ — test-parser.ts, test-parsers-fixtures.ts, download-fixtures.ts, smoke-api.ts, compare-parsers.ts
 backend/scripts/archive/ — одноразовые скрипты (НЕ ПЕРЕИСПОЛЬЗОВАТЬ)
 backend/lib/ — общие модули (fetch-win1251.ts, dog-lookup.ts)
-frontend/src/ — React приложение (pages организованы по папкам: Events/, Judges/, SpeedRecords/, components, services)
+frontend/src/App.tsx — shell; AppRoutes.tsx — lazy routes; Nav.tsx — шапка (.nav-glass, центр ссылок)
+frontend/src/lib/recordDates.ts — даты Донино (Excel serial, DD.MM.YYYY, dedupeByRecordDate)
+frontend/src/components/ui/ — кастомные UI (Button, Card, Badge), НЕ shadcn
+frontend/src/pages/Home.tsx — лендинг (WIP)
 data/ — данные (организованы по папкам: events/, migrations/, exports/, imports/, updates/, temp/)
-docs/ — документация (README.md, 00-PROJECT-STATUS.md, 01-QUICK-START.md, ai/, architecture/, data/, development/, design/, history/, plans/)
+docs/ — документация: README.md, 00-PROJECT-STATUS.md, 01-QUICK-START.md, ai/, architecture/, data/, development/ (вкл. FRONTEND-MAP.md), design/, history/, plans/
+Все скрипты .ts, запуск через npx tsx. Файлов .mjs нет.
+package-lock.json в репозитории (для npm ci в CI).
 scripts/ — batch/shell скрипты (start-servers.bat, deploy-to-github.bat)
 assets/ — статические ассеты (assets/logo.svg)
 ```
@@ -57,7 +63,7 @@ assets/ — статические ассеты (assets/logo.svg)
 **Content:**
 ```
 Backend: Cloudflare Worker (API), Cloudflare D1 (SQLite), Node.js (скраперы/парсеры)
-Frontend: React, Vite, TailwindCSS, shadcn/ui, Lucide, xlsx
+Frontend: React, Vite, TailwindCSS, кастомные components/ui/ (без shadcn), Lucide, xlsx
 Деплой: Cloudflare Pages (фронтенд), Cloudflare Workers (бэкенд), Cloudflare D1 (БД)
 Домены: procoursing.antajl.ru (фронтенд), procoursing-stats.antajltube.workers.dev (API)
 GitHub: https://github.com/antajl/ProCoursing
@@ -134,18 +140,20 @@ HTML формат по годам:
 **Title:** Структура документации
 **Content:**
 ```
-docs/README.md — оглавление с кратким обзором
-docs/01-QUICK-START.md — быстрый старт для новых разработчиков
-docs/02-AI-GUIDELINES.md — правила для ИИ-агента
-docs/03-ARCHITECTURE.md — архитектура системы
-docs/04-API-REFERENCE.md — документация API
-docs/05-PARSING.md — парсинг данных
-docs/06-DATABASE.md — работа с БД
-docs/07-DEPLOYMENT.md — деплой и инфраструктура
-docs/08-DEVELOPMENT.md — разработка
-docs/09-DECISIONS-LOG.md — история архитектурных решений
-docs/10-FUTURE-PLANS.md — планы на будущее
-docs/archive/ — устаревшая документация
+docs/README.md — оглавление
+docs/00-PROJECT-STATUS.md — актуальный статус (читать первым)
+docs/01-QUICK-START.md — быстрый старт
+docs/ai/GUIDELINES.md — правила для ИИ
+docs/ai/MEMORY-SETUP.md — этот файл
+docs/architecture/ARCHITECTURE.md — архитектура
+docs/architecture/API-REFERENCE.md — API
+docs/data/PARSING.md — парсинг
+docs/data/DATABASE.md — БД
+docs/development/DEVELOPMENT.md — разработка
+docs/development/FRONTEND-MAP.md — навигация фронтенда для ИИ
+docs/development/DEPLOYMENT.md — деплой
+docs/plans/FUTURE-PLANS.md — планы
+docs/history/DECISIONS-LOG.md — история решений
 ```
 **Tags:** documentation, structure
 **Priority:** Important
@@ -158,16 +166,16 @@ docs/archive/ — устаревшая документация
 **Title:** Парсеры и их особенности
 **Content:**
 ```
-backend/parsers/parse-results-coursing.ts — парсер курсинга (~39 KB)
-backend/parsers/parse-results-bzmp.ts — парсер БЗМП (~30 KB)
-backend/parsers/parse-results-racing.ts — парсер рейсинга (~14 KB)
+backend/parsers/parse-results-coursing.ts — v1, reparse (~39 KB)
+backend/parsers/parse-results-bzmp.ts — v1, reparse (~30 KB)
+backend/parsers/parse-results-racing.ts — v1, reparse (~14 KB)
+backend/parsers/coursing/index.ts — v2 модульный (целевой)
+backend/parsers/bzmp/index.ts — v2 модульный
+backend/parsers/racing/index.ts — v2 модульный
+backend/parsers/unique/ — общие утилиты v2
 
-Особенности:
-- Coursing: 25 колонок, rowspan=2, судейские оценки, 2 забега
-- BZMP: 25 колонок, rowspan=2, судейские оценки, 2 забега, статусы "Отстранение"
-- Racing: 18 колонок, нет rowspan, время/скорость, до 3 забегов
-
-Тестовый скрипт: backend/scripts/test/test-parser.ts (использует синтетические данные, ОБЯЗАТЕЛЬНО прогнать на 5-10 реальных страницах разных лет)
+Фикстуры: backend/tests/fixtures/{coursing,bzmp,racing}/
+Тесты: npm run test-parser (синтетика v1), npm run test-parser-fixtures (v2 на фикстурах)
 ```
 **Tags:** parsing, details
 **Priority:** Important
@@ -209,7 +217,11 @@ npm run load-results — загрузка результатов в D1
 npm run ci-update-db — инкремент текущего года → remote D1
 npm run sync-to-remote — полный синк локальной D1 → remote
 npm run migrate-dog-names — нормализация кличек в локальной D1
-npm test — запуск тестов
+npm run test-parser — синтетические тесты парсеров v1
+npm run test-parser-fixtures — v2 модульные парсеры на реальных фикстурах
+npm run download-fixtures — загрузка HTML фикстур с procoursing.ru
+npm run smoke-api — ручная проверка API (нужен npm run dev)
+npm test — vitest (api.test.ts сейчас describe.skip; планируется vitest@4 + @cloudflare/vitest-pool-workers)
 ```
 **Tags:** scripts, npm
 **Priority:** Important
@@ -244,14 +256,15 @@ Secrets:
 **Content:**
 ```
 frontend/src/components/DogSilhouettes.tsx — SVG силуэты пород
-frontend/src/components/DogStatsTable.tsx — таблица статистики
+frontend/src/components/DogStatsTable.tsx — таблица рейтинга (медали в заголовках колонок)
 frontend/src/components/DogTooltip.tsx — tooltip с информацией
 frontend/src/components/EmptyState.tsx — компонент пустого состояния
 frontend/src/components/ErrorState.tsx — компонент ошибки
-frontend/src/components/FilterSelect.tsx — селектор фильтров
+frontend/src/components/FilterSelect.tsx — селектор фильтров (allLabel + ariaLabel, без compactLabel)
 frontend/src/components/FiltersDropdown.tsx — dropdown фильтров
+frontend/src/components/Nav.tsx — .nav-glass, лого слева / ссылки по центру / тема справа
 frontend/src/components/SkeletonLoader.tsx — скелетон загрузки
-frontend/src/components/ThemeToggle.tsx — переключатель темы
+frontend/src/components/ThemeToggle.tsx — переключатель темы; по умолчанию light (localStorage.theme)
 ```
 **Tags:** frontend, components
 **Priority:** Optional
@@ -266,14 +279,13 @@ frontend/src/components/ThemeToggle.tsx — переключатель темы
 ```
 frontend/src/pages/DogProfile.tsx — профиль собаки
 frontend/src/pages/DoninoDogProfile.tsx — профиль собаки Донино со статистикой скорости
-frontend/src/pages/Events/EventResults.tsx — результаты события
+frontend/src/pages/Events/EventResults/ — результаты события (index с navigate(-1), EventHeader, PlacementBadge)
 frontend/src/pages/Events/index.tsx — календарь событий
 frontend/src/pages/Judges/JudgeDetail.tsx — детальная страница судьи
 frontend/src/pages/Judges/index.tsx — список судей
 frontend/src/pages/Procoursing.tsx — навигация Procoursing
-frontend/src/pages/SpeedRecords/index.tsx — рекорды Донино
-frontend/src/pages/SpeedRecords/Stats.tsx — статистика рекордов
-frontend/src/pages/TopDogs.tsx — рейтинги собак
+frontend/src/pages/SpeedRecords/ — рекорды Донино (Stats limit 10000; таблица limit 1000)
+frontend/src/pages/TopDogs/ — рейтинги собак (index, TopDogsFilters, TopDogsTabs)
 ```
 **Tags:** frontend, pages
 **Priority:** Optional
@@ -315,4 +327,4 @@ frontend/src/pages/TopDogs.tsx — рейтинги собак
 
 Если добавляются новые критически важные правила или меняется структура проекта, обнови этот документ и соответствующие memories.
 
-**Дата последнего обновления:** 2026-06-27
+**Дата последнего обновления:** 2026-07-03

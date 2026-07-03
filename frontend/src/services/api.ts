@@ -25,6 +25,8 @@ const API_URL = import.meta.env.VITE_API_URL ||
     ? 'https://procoursing-stats.antajltube.workers.dev'
     : 'http://127.0.0.1:8787');
 
+export { API_URL };
+
 const IS_DEV = import.meta.env.DEV;
 
 async function fetchAPI(url, timeout = 5000) {
@@ -81,7 +83,32 @@ function filterMockData(mockData, year, breed, minStarts) {
   return filtered;
 }
 
+function pickTopSpeedByBreed(records, limit) {
+  const bestByBreed = new Map();
+  for (const record of records) {
+    const speed = Number(record.speed_km_h);
+    const existing = bestByBreed.get(record.breed);
+    if (!existing || speed > Number(existing.speed_km_h)) {
+      bestByBreed.set(record.breed, record);
+    }
+  }
+  return [...bestByBreed.values()]
+    .sort((a, b) => Number(b.speed_km_h) - Number(a.speed_km_h))
+    .slice(0, limit);
+}
+
+const mockSpeedRecords = [
+  { name: 'Thunder Bolt', breed: 'Greyhound', speed_km_h: 68.2, date: '12.05.2025' },
+  { name: 'Swift Wind', breed: 'Whippet', speed_km_h: 62.4, date: '03.04.2025' },
+  { name: 'Desert Storm', breed: 'Saluki', speed_km_h: 59.1, date: '18.06.2025' },
+  { name: 'Fast Whippet', breed: 'Whippet', speed_km_h: 60.0, date: '01.01.2025' },
+];
+
 export const api = {
+  async getStats() {
+    return fetchAPI(`${API_URL}/api/stats`)
+  },
+
   async getTopPlacement(year = '', breed = '', minStarts = 0, limit = null, offset = 0) {
     const params = new URLSearchParams();
     if (year) params.append('year', year);
@@ -179,6 +206,13 @@ export const api = {
     return fetchWithFallback(url, []);
   },
 
+  async getSpeedRecordsTopByBreed(limit = 3) {
+    const params = new URLSearchParams();
+    params.append('limit', String(limit));
+    const url = `${API_URL}/api/speed-records/top-by-breed?${params}`;
+    return fetchWithFallback(url, pickTopSpeedByBreed(mockSpeedRecords, limit));
+  },
+
   async getCoursingRecords(breed = '', limit = 100, search = '', year = '', dogId = '') {
     const params = new URLSearchParams();
     if (breed) params.append('breed', breed);
@@ -204,5 +238,10 @@ export const api = {
     if (discipline) params.append('discipline', discipline);
     const url = `${API_URL}/api/judges/${encodeURIComponent(judgeId)}/details?${params}`;
     return fetchWithFallback(url, null);
-  }
+  },
+
+  async getDoninoDog(name: string, breed: string) {
+    const url = `${API_URL}/api/donino-dog/${encodeURIComponent(name)}/${encodeURIComponent(breed)}`;
+    return fetchAPI(url);
+  },
 };

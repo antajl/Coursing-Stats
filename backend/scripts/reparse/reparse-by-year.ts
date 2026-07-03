@@ -21,7 +21,8 @@ function sqlEscape(value) {
  */
 
 const YEAR = process.argv[2];
-const EVENT_TYPE = process.argv[3]; // coursing, bzmp, racing или undefined для всех
+const EVENT_TYPE = process.argv[3] && !process.argv[3].startsWith('--') ? process.argv[3] : undefined;
+const USE_LOCAL = process.argv.includes('--local');
 
 if (!YEAR) {
   console.error("Укажите год: node scripts/reparse/reparse-by-year.mjs 2026 [coursing|bzmp|racing]");
@@ -42,7 +43,7 @@ async function loadEventsFromDb(year, eventType) {
   }
   
   // Используем wrangler для запроса к remote D1
-  const command = `npx wrangler d1 execute pc-db --remote --command="${query}" --json`;
+  const command = `npx wrangler d1 execute pc-db ${USE_LOCAL ? '--local' : '--remote'} --command="${query}" --json`;
   
   try {
     const output = execSync(command, { cwd: process.cwd(), encoding: 'utf-8' });
@@ -182,7 +183,7 @@ INSERT INTO results (
   '${(resultItem.raw_text || "").replace(/'/g, "''").replace(/\n/g, " ")}',
   '${(resultItem.breed_class || "").replace(/'/g, "''")}',
   '${(resultItem.status_reason || "").replace(/'/g, "''")}',
-  '${(resultItem.judges || "").replace(/'/g, "''")}'
+  '${(resultItem.judges || result.judges || "").replace(/'/g, "''")}'
 );`;
         sqlStatements.push(resultSql);
       }
@@ -204,8 +205,8 @@ INSERT INTO results (
   console.log(`Успешно обработано: ${successCount}`);
   console.log(`Ошибок: ${errorCount}`);
   
-  console.log(`\nДля выполнения на remote D1:`);
-  console.log(`  wrangler d1 execute pc-db --remote --file=./${outputPath}`);
+  console.log(`\nДля выполнения на D1:`);
+  console.log(`  npx wrangler d1 execute pc-db ${USE_LOCAL ? '--local' : '--remote'} --file=./${outputPath}`);
 }
 
 reparseByYear().catch(console.error);

@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { useJudges } from '../../hooks/useApi'
 import EmptyState from '../../components/EmptyState'
 import SkeletonLoader from '../../components/SkeletonLoader'
 
 export default function Judges() {
+  const location = useLocation()
+  const isEmbedded = location.pathname === '/procoursing'
   const [filterBreed, setFilterBreed] = useState('')
   const [filterDiscipline, setFilterDiscipline] = useState('')
   const [sortField, setSortField] = useState('total_evaluations')
@@ -52,7 +54,7 @@ export default function Judges() {
   }
 
   return (
-    <div className="p-4">
+    <div className={isEmbedded ? 'px-4 pb-4 pt-0' : 'p-4'}>
       {/* Фильтры */}
       <div className="mb-6 rounded-2xl border-2 border-old-money-200 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 p-4 shadow-md md:p-6">
         <div className="flex gap-2 md:gap-4 items-center flex-wrap">

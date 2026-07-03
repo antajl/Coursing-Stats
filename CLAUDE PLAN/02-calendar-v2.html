@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ProCoursing Stats — Календарь v2 (плотный список)</title>
+<style>
+  :root{
+    --om-50:#faf8f4;--om-100:#f3ede4;--om-200:#e7ddcf;--om-300:#d9ccb8;--om-600:#98836a;--om-700:#796855;
+    --cream-50:#fcfaf7;--cream-100:#f7f2ea;
+    --camel-100:#f3e7d5;--camel-200:#e7d1ab;--camel-300:#d8b57a;--camel-400:#c79c56;--camel-500:#b68231;--camel-600:#9b6720;--camel-700:#7b511c;
+    --char-500:#81796e;--char-700:#4d4740;--char-800:#38342f;--char-900:#252320;
+    --forest-300:#aac7ab;--forest-700:#435d46;
+    --wb-300:#a8c0cf;--wb-700:#465c70;
+    --rose-300:#f48fb1;--rose-700:#ad1457;
+    --amber-300:#ffcc80;--amber-700:#946200;
+    --font-sans: Montserrat, "Segoe UI", Roboto, Arial, sans-serif;
+    --font-serif: Georgia, "Times New Roman", serif;
+    --font-mono: "JetBrains Mono", "Courier New", monospace;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:var(--font-sans);color:var(--char-900);
+    background:linear-gradient(160deg,var(--om-50),var(--om-100) 45%,var(--om-200));min-height:100vh;}
+  .wrap{max-width:920px;margin:0 auto;padding:24px 20px 80px;}
+  h1.page-title{font-family:var(--font-serif);font-size:28px;margin:0 0 4px;}
+  .sub{color:var(--char-500);font-size:13.5px;margin:0 0 18px;}
+
+  .filter-bar{
+    position:sticky; top:12px; z-index:20;
+    background:rgba(252,250,247,0.94); backdrop-filter:blur(10px);
+    border:1.5px solid var(--om-200); border-radius:16px; padding:12px 14px; margin-bottom:16px;
+    box-shadow:0 10px 26px -22px rgba(67,58,49,.5);
+  }
+  .filter-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
+  .search{flex:1;min-width:180px;display:flex;align-items:center;gap:7px;background:var(--cream-50);border:1.5px solid var(--om-200);border-radius:10px;padding:8px 11px;}
+  .search input{border:none;outline:none;background:transparent;font-size:12.5px;width:100%;font-family:var(--font-sans);}
+  .chip{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:999px;border:1.5px solid var(--om-200);background:var(--cream-50);font-size:12px;font-weight:600;color:var(--char-700);cursor:pointer;white-space:nowrap;}
+  .chip.active{background:var(--camel-500);border-color:var(--camel-500);color:#2c2314;}
+  .sort-btn{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:10px;border:1.5px solid var(--om-200);background:var(--cream-50);font-size:12px;font-weight:600;color:var(--char-700);cursor:pointer;margin-left:auto;}
+  .legend{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px;padding-top:10px;border-top:1px solid var(--om-200);}
+  .legend span{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--char-500);}
+  .dot{width:8px;height:8px;border-radius:2px;}
+
+  .month-group{margin-bottom:6px;}
+  .month-head{
+    position:sticky; top:74px; z-index:10;
+    display:flex; justify-content:space-between; align-items:baseline;
+    background:var(--om-100); padding:7px 14px; border-radius:10px; margin:14px 0 6px;
+    font-family:var(--font-serif); font-size:14px; font-weight:700; color:var(--om-700);
+  }
+  .month-head .cnt{font-family:var(--font-mono); font-size:11px; font-weight:400; color:var(--char-500);}
+
+  .row{
+    display:grid; grid-template-columns:64px 1fr auto auto; gap:12px; align-items:center;
+    background:var(--cream-50); border:1px solid var(--om-200); border-left:4px solid transparent;
+    border-radius:10px; padding:9px 12px; margin-bottom:5px;
+    transition:background .12s ease, transform .12s ease;
+  }
+  .row:hover{background:var(--camel-100); transform:translateX(2px);}
+  .row.c-coursing{border-left-color:var(--forest-300);}
+  .row.c-bzmp{border-left-color:var(--wb-300);}
+  .row.c-racing{border-left-color:var(--rose-300);}
+  .row.c-other{border-left-color:var(--amber-300);}
+  .row.important{border-left-color:var(--camel-500); background:linear-gradient(90deg, var(--camel-100), var(--cream-50) 60%);}
+  .row .date{font-family:var(--font-mono); font-size:12px; color:var(--om-700); white-space:nowrap;}
+  .row .title-block{min-width:0;}
+  .row .title-block .t{font-size:13.5px; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+  .row.important .title-block .t{font-family:var(--font-serif); color:var(--camel-700);}
+  .row .title-block .meta{font-size:11px; color:var(--char-500); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+  .disc-badge{
+    display:inline-flex; align-items:center; gap:4px; padding:3px 9px; border-radius:999px;
+    font-size:10px; font-weight:700; white-space:nowrap;
+  }
+  .b-coursing{background:#e3ede3;color:var(--forest-700);}
+  .b-bzmp{background:#e2ebf0;color:var(--wb-700);}
+  .b-racing{background:#fce4ec;color:var(--rose-700);}
+  .b-other{background:#fff3d6;color:var(--amber-700);}
+  .row .open{color:var(--camel-700); font-size:16px; text-decoration:none; padding:4px;}
+  .champ-star{color:var(--camel-500); flex-shrink:0;}
+
+  @media(max-width:640px){
+    .row{grid-template-columns:52px 1fr auto; }
+    .row .disc-badge{display:none;}
+    .month-head{top:64px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1 class="page-title">Календарь событий</h1>
+  <p class="sub">219 соревнований · плотный список, сгруппировано по месяцам — рассчитан на сотни строк без бесконечного скролла плиток</p>
+
+  <div class="filter-bar">
+    <div class="filter-row">
+      <div class="search">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input placeholder="Поиск по названию, клубу, региону…">
+      </div>
+      <span class="chip active">2026</span>
+      <span class="chip">Курсинг</span>
+      <span class="chip">БЗМП</span>
+      <span class="chip">Бега</span>
+      <span class="chip">🏆 Чемпионаты и кубки</span>
+      <button class="sort-btn">
+        Дата <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+    </div>
+    <div class="legend">
+      <span><span class="dot" style="background:var(--forest-300)"></span>Курсинг</span>
+      <span><span class="dot" style="background:var(--wb-300)"></span>БЗМП</span>
+      <span><span class="dot" style="background:var(--rose-300)"></span>Бега</span>
+      <span><span class="dot" style="background:var(--amber-300)"></span>Другие</span>
+      <span><span class="dot" style="background:var(--camel-500)"></span>Чемпионат / Кубок России</span>
+    </div>
+  </div>
+
+  <div class="month-group">
+    <div class="month-head"><span>Июль 2026</span><span class="cnt">4 события</span></div>
+
+    <div class="row important">
+      <div class="date">14 июл<br>вт</div>
+      <div class="title-block">
+        <div class="t">🏆 Чемпионат России по курсингу — 2026</div>
+        <div class="meta">Домодедово · Клуб «Стрела»</div>
+      </div>
+      <span class="disc-badge b-coursing">Курсинг</span>
+      <a class="open" href="#">→</a>
+    </div>
+
+    <div class="row c-bzmp">
+      <div class="date">21 июл<br>вт</div>
+      <div class="title-block">
+        <div class="t">Открытые состязания по БЗМП</div>
+        <div class="meta">Всеволожск · Клуб «Северная борзая»</div>
+      </div>
+      <span class="disc-badge b-bzmp">БЗМП</span>
+      <a class="open" href="#">→</a>
+    </div>
+
+    <div class="row c-racing">
+      <div class="date">28 июл<br>вт</div>
+      <div class="title-block">
+        <div class="t">Кубок клуба «Донино» — бега 480м</div>
+        <div class="meta">Москва, Донино · РКФ трасса №2</div>
+      </div>
+      <span class="disc-badge b-racing">Бега</span>
+      <a class="open" href="#">→</a>
+    </div>
+
+    <div class="row c-coursing">
+      <div class="date">30 июл<br>чт</div>
+      <div class="title-block">
+        <div class="t">Открытый курсинг — все породы</div>
+        <div class="meta">Калужская область · Клуб «Вихрь степей»</div>
+      </div>
+      <span class="disc-badge b-coursing">Курсинг</span>
+      <a class="open" href="#">→</a>
+    </div>
+  </div>
+
+  <div class="month-group">
+    <div class="month-head"><span>Август 2026</span><span class="cnt">6 событий</span></div>
+
+    <div class="row c-coursing">
+      <div class="date">03 авг<br>пн</div>
+      <div class="title-block">
+        <div class="t">Монопородный курсинг — салюки</div>
+        <div class="meta">Тульская область · НКП САЛЮКИ</div>
+      </div>
+      <span class="disc-badge b-coursing">Курсинг</span>
+      <a class="open" href="#">→</a>
+    </div>
+
+    <div class="row c-other">
+      <div class="date">10 авг<br>пн</div>
+      <div class="title-block">
+        <div class="t">Выставка + мини-курсинг</div>
+        <div class="meta">Владимирская область · Клуб «Вихрь»</div>
+      </div>
+      <span class="disc-badge b-other">Другие</span>
+      <a class="open" href="#">→</a>
+    </div>
+
+    <div class="row important">
+      <div class="date">15 авг<br>сб</div>
+      <div class="title-block">
+        <div class="t">🏆 Кубок России по бегам борзых</div>
+        <div class="meta">Санкт-Петербург · Клуб «Северный ветер»</div>
+      </div>
+      <span class="disc-badge b-racing">Бега</span>
+      <a class="open" href="#">→</a>
+    </div>
+
+    <div class="row c-coursing">
+      <div class="date">17 авг<br>пн</div>
+      <div class="title-block">
+        <div class="t">Открытый курсинг — все породы</div>
+        <div class="meta">Калужская область · Клуб «Вихрь степей»</div>
+      </div>
+      <span class="disc-badge b-coursing">Курсинг</span>
+      <a class="open" href="#">→</a>
+    </div>
+
+    <div class="row c-bzmp">
+      <div class="date">22 авг<br>сб</div>
+      <div class="title-block">
+        <div class="t">Осенние состязания БЗМП</div>
+        <div class="meta">Нижегородская область</div>
+      </div>
+      <span class="disc-badge b-bzmp">БЗМП</span>
+      <a class="open" href="#">→</a>
+    </div>
+
+    <div class="row c-racing">
+      <div class="date">29 авг<br>сб</div>
+      <div class="title-block">
+        <div class="t">Кубок «Донино» — бега 350м</div>
+        <div class="meta">Москва, Донино</div>
+      </div>
+      <span class="disc-badge b-racing">Бега</span>
+      <a class="open" href="#">→</a>
+    </div>
+  </div>
+
+  <p style="text-align:center;color:var(--char-500);font-size:12px;margin-top:20px;">
+    ⋯ ещё 209 событий ниже (виртуализация списка на реальных данных)
+  </p>
+</div>
+</body>
+</html>

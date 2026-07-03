@@ -13,15 +13,39 @@
 
 **Кодировка:** Windows-1251 (используется `fetchWin1251` для корректного декодирования)
 
-**ВАЖНО:** Сайт procoursing.ru использует windows-1251 без charset в заголовках. Использовать `iconv-lite` для декодирования. НЕ доверять `fetch().text()` — декодировать из байт вручную. Пример в `backend/lib/fetch-win1251.mjs`.
+**ВАЖНО:** Сайт procoursing.ru использует windows-1251 без charset в заголовках. Использовать `iconv-lite` для декодирования. НЕ доверять `fetch().text()` — декодировать из байт вручную. Пример в `backend/lib/fetch-win1251.ts`.
+
+---
+
+## Версии парсеров
+
+Все скрипты — `.ts`, запуск `npx tsx`. Файлов `.mjs` нет.
+
+| Версия | Путь | Назначение |
+|--------|------|------------|
+| v1 | `parse-results-coursing.ts`, `parse-results-bzmp.ts`, `parse-results-racing.ts` | CLI, legacy-скрипты (`reparse-coursing` и т.д.) |
+| v2 | `coursing/index.ts`, `bzmp/index.ts`, `racing/index.ts`, `unique/` | **`reparse-by-year.ts`**, `test-parser-fixtures` |
+
+**Фикстуры:** `backend/tests/fixtures/{coursing,bzmp,racing}/` — реальный HTML.
+
+**Racing фикстуры (исправлены 2026-07):**
+- `2026-05-16_Complete_Results_Racing.html`
+- `Complete_Results_2025-cc-sample.html`
 
 ---
 
 ## Парсинг календаря событий
 
+> **Полный workflow, заливка D1, ошибка `D1_RESET_DO`, батчи:** [`CALENDAR-AND-DB-UPDATE.md`](CALENDAR-AND-DB-UPDATE.md)
+
 ### Source Data
 - **URL:** http://procoursing.ru/s_{YEAR}.html (например, s_2026.html)
-- **Парсер:** `backend/scripts/scrape/scrape-year-index.mjs`
+- **Парсер:** `backend/parsers/calendar/scrape-year-page.ts` (модуль), CLI: `backend/scripts/scrape/scrape-year-index.ts`
+- **Тесты:** `backend/tests/calendar-scrape.test.ts`, фикстуры `backend/tests/fixtures/calendar/s_*.html`
+
+**Важно:** одна строка таблицы = одно событие; `rank_label` сохраняет переносы (`<br>`) для нескольких дисциплин в одной дате; `date_end` для диапазонов; `event_type` только из URL результатов (`_C_`, `_B_`, `_R_`), не из каталога; ссылки «Результаты состязания» и `_Complete_Results_` без `_by_*`; `[отменён]` в `rank_label`; `deriveUniqueTitle()` для уникального `title` в БД (UI заголовок — из `rank_label`).
+
+**Фикстуры календаря:** скачивать только через `npx tsx backend/scripts/test/download-calendar-fixtures.ts` (`fetchWin1251`). Не использовать curl без декодирования windows-1251.
 
 ### HTML Structure
 
@@ -353,36 +377,37 @@
 **ВАЖНО:** Нормализация total_score: НЕ делить на количество судей, сохраняется исходная grand_total.
 
 **Status Handling:**
-- Функция `detectStatusFromText` в `parse-results-coursing.mjs`
+- Функция `detectStatusFromText` в `parse-results-coursing.ts`
 - Маркеры: неявка, дисквалификац, снят, сошел, отстран, ветеринар
 - raw_text сохраняется всегда для отладки
 
 ### Coursing Titles Hierarchy
 
-**Иерархия титулов и сертификатов:**
+**Источник (официально):** [Правила проведения состязаний по бегам борзых и курсингу борзых](https://rkf.org.ru/wp-content/uploads/2020/07/pravila-provedenija-sostjazanij-po-begam-borzyh-i-kursingu-borzyh.pdf) (РКФ, 2020), раздел IV.
 
-**Высший уровень (Золотой акцент):**
-- Чемпион РКФ по рабочим качествам собак — национальный чемпион
-- International Race Champion (C.I.C.) — интернациональный чемпион по бегам/курсингу
-- International Beauty & Performance Champion — интернациональный чемпион по красоте и курсингу
+**Иерархия титулов и сертификатов** (от высшего к низшему — для сортировки в профиле собаки, `backend/src/lib/qualification-titles.ts`):
 
-**Средний уровень (Old-money акцент):**
-- CACL — кандидат в национальные чемпионы по бегам/курсингу
-- Присваивается на национальных сертификатных состязаниях
+| Ранг | Титул / сертификат | Уровень | В правилах РКФ 2020 |
+|------|-------------------|---------|---------------------|
+| 1 | Чемпион России по рабочим качествам | Победитель ЧР РКФ | п. 4.3.1.4 |
+| 2 | Чемпион РКФ по рабочим качествам | Победитель ЧРКФ | п. 4.3.1.2 |
+| 3 | Победитель Кубка России по рабочим качествам | Победитель КР РКФ | п. 4.3.1.3 |
+| 4 | CACIL, International Race Champion (C.I.C.) | Международный | п. 4.2.1 |
+| 5 | **CACL** | Национальный сертификат (состязания ранга CACL) | п. 4.3.1.1 |
+| 6 | **RegCACL** | Региональный (см. примечание ниже) | — |
+| 7 | Прочие рабочие сертификаты, сертификаты участия | Базовый | — |
 
-**Региональный уровень (Серый акцент):**
-- RegCACL — региональный CACL
-- Присваивается на региональных состязаниях
+**Примечание про RegCACL:** в PDF правил РКФ 2020 отдельного термина *RegCACL* нет — там только национальный **CACL** (п. 4.3) и международный **CACIL** (п. 4.2). Строка **RegCACL** встречается в протоколах procoursing.ru (колонка «титул») и сохраняется в `results.qualification` как есть. По смыслу это региональный аналог CACL; в UI и сортировке профиля он **ниже** национального CACL.
 
-**Базовый уровень (Нейтральный):**
-- Прочие рабочие сертификаты
-- Сертификаты участия
+Квалификационные состязания (п. 1.2.7 правил РКФ) титулы не присваивают.
 
 **Visual Display in UI:**
-- isChampion: `bg-gold-100 text-gold-700 border border-gold-400` (Золотой)
-- isCACL: `bg-old-money-100 text-old-money-700 border border-old-money-300` (Old-money)
-- isReg: `bg-gray-100 text-gray-600 border border-gray-300` (Серый)
-- default: `bg-gray-50 text-gray-500 border border-gray-200` (Нейтральный)
+- isChampion (Чемпион РКФ / Чемпион России): золотой/camel акцент
+- isCACL (национальный CACL): old-money
+- isReg (RegCACL): серый
+- default: нейтральный
+
+Компоненты: `QualificationBadges.tsx` (страница события), `DogProfile.tsx` (блок «Титулы»).
 
 ---
 
@@ -572,29 +597,34 @@ https://docs.google.com/spreadsheets/d/1NTiY3HXZIkXE8xTeXZESgMKaZsEXunmcWhTfhhko
 
 ### Скрипты
 
-- `backend/scripts/fetch-speed-records.mjs` — загрузка данных из Google Sheets
+- `backend/scripts/speed/fetch-speed-records.ts` — загрузка данных из Google Sheets
 - `backend/scripts/fetch-speed-records-pdf.py` — Python скрипт для PDF
 
 ---
 
 ## Тестирование парсеров
 
-### Тестовый скрипт
+### Синтетические тесты (v1)
 ```bash
-node backend/scripts/test-parser.mjs
+npm run test-parser
 ```
 
-### CLI Mode
+### Фикстуры (v2 модульные)
 ```bash
-node backend/parsers/parse-results-coursing.mjs <url>
-node backend/parsers/parse-results-bzmp.mjs <url>
-node backend/parsers/parse-results-racing.mjs <url>
+npm run test-parser-fixtures
+npm run download-fixtures
+npx tsx backend/scripts/test/compare-parsers.ts
+```
+
+### CLI Mode (v1)
+```bash
+npx tsx backend/parsers/parse-results-coursing.ts <url>
+npx tsx backend/parsers/parse-results-bzmp.ts <url>
+npx tsx backend/parsers/parse-results-racing.ts <url>
 ```
 
 ### ВАЖНО
-Перед изменением парсера — прогони `node backend/scripts/test-parser.mjs`
-
-Текущий тест использует синтетические данные. ОБЯЗАТЕЛЬНО прогнать на 5-10 реальных страницах разных лет.
+Перед изменением парсера — `npm run test-parser` и `npm run test-parser-fixtures`.
 
 ---
 
@@ -616,9 +646,11 @@ npm run reparse-2026-racing
 
 Или напрямую:
 ```bash
-node backend/scripts/reparse/reparse-by-year.mjs 2026
-node backend/scripts/reparse/reparse-by-year.mjs 2026 coursing
+npx tsx backend/scripts/reparse/reparse-by-year.ts 2026
+npx tsx backend/scripts/reparse/reparse-by-year.ts 2026 coursing
 ```
+
+**Парсеры:** `reparse-by-year.ts` использует **v2** модульные парсеры (`parsers/coursing|bzmp|racing/index.ts`).
 
 ### Специализированные скрипты (legacy)
 ```bash
@@ -674,8 +706,10 @@ wrangler d1 execute pc-db --remote --file=./data/updates/reparse-2026.sql
 ## Полезные ссылки
 
 - Источник данных: http://procoursing.ru
-- Парсер курсинга: `backend/parsers/parse-results-coursing.mjs`
-- Парсер БЗМП: `backend/parsers/parse-results-bzmp.mjs`
-- Парсер рейсинга: `backend/parsers/parse-results-racing.mjs`
-- Функция декодирования: `backend/lib/fetch-win1251.mjs`
-- Тестовый скрипт: `backend/scripts/test-parser.mjs`
+- Парсер курсинга: `backend/parsers/parse-results-coursing.ts`
+- Парсер БЗМП: `backend/parsers/parse-results-bzmp.ts`
+- Парсер рейсинга: `backend/parsers/parse-results-racing.ts`
+- Функция декодирования: `backend/lib/fetch-win1251.ts`
+- Тесты: `npm run test-parser`, `npm run test-parser-fixtures`
+- Фикстуры: `backend/tests/fixtures/`
+- v2 модульные: `backend/parsers/{coursing,bzmp,racing}/index.ts`

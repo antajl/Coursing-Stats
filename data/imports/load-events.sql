@@ -10,19 +10,22 @@ INSERT INTO events (
   'coursing',
   'CACL',
   'Курсинг борзых',
-  'Московская область, деревня Левково',
+  'CACL (Курсинг борзых)',
   '',
   'Московская область, деревня Левково',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2015-03-14/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -42,19 +45,22 @@ INSERT INTO events (
   'coursing',
   'CACL',
   'Курсинг борзых',
-  'Московская область, Сергиево-Посадский р-н',
+  'CACL (Курсинг борзых)',
   '',
   'Московская область, Сергиево-Посадский р-н',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2015-08-08/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -71,22 +77,25 @@ INSERT INTO events (
   '2015-08-08',
   '2015-08-09',
   'Дружественные забеги',
-  'unknown',
+  'coursing',
   '',
   '',
-  'Московская область, Сергиево-Посадский р-н',
+  'Дружественные забеги',
   '',
   'Московская область, Сергиево-Посадский р-н',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2015-08-08_F/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -106,19 +115,22 @@ INSERT INTO events (
   'coursing',
   'CACL',
   'Курсинг борзых',
-  'Московская область, Сергиево-Посадский р-н',
+  'CACL (Курсинг борзых)',
   '',
   'Московская область, Сергиево-Посадский р-н',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2016-02-27/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -138,19 +150,22 @@ INSERT INTO events (
   'coursing',
   'CACL',
   'Курсинг борзых',
-  'Московская область, Пушкинский р-н, д. Михайловское',
+  'CACL (Курсинг борзых)',
   '',
   'Московская область, Пушкинский р-н, д. Михайловское',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2016-08-06/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -167,22 +182,25 @@ INSERT INTO events (
   '2016-08-06',
   '2016-08-07',
   'Дружественные забеги',
-  'unknown',
+  'coursing',
   '',
   '',
-  'Московская область, деревня Михайловское',
+  'Дружественные забеги',
   '',
   'Московская область, деревня Михайловское',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2016-08-06_F/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -202,19 +220,22 @@ INSERT INTO events (
   'coursing',
   '',
   'Курсинг борзых',
-  'Московская область, деревня Михайловское',
+  'Чемпионат РКФ по курсингу "Мартовский Заяц - 2017"',
   '',
   'Московская область, деревня Михайловское',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2017-02-25/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -229,24 +250,27 @@ INSERT INTO events (
 ) VALUES (
   2017,
   '2017-05-21',
-  'null',
+  NULL,
   'Командное состязание "Тройка, птица тройка - 2017"',
   'other',
   '',
   'Командное состязание "Тройка, птица тройка - 2017"',
-  'Московская область, деревня Михайловское',
+  'Командное состязание "Тройка, птица тройка - 2017"',
   '',
   'Московская область, деревня Михайловское',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2017-05-21/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -261,24 +285,27 @@ INSERT INTO events (
 ) VALUES (
   2017,
   '2017-08-13',
-  'null',
+  NULL,
   'Региональные состязания по бегам борзых ранга CACL (рейсинг)',
-  'racing',
+  'coursing',
   'CACL',
-  'Бега борзых',
-  'Московская область, деревня Михайловское',
+  '',
+  'Региональные состязания по бегам борзых ранга CACL (рейсинг)',
   '',
   'Московская область, деревня Михайловское',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2017-08-13/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -293,24 +320,27 @@ INSERT INTO events (
 ) VALUES (
   2017,
   '2017-09-17',
-  'null',
+  NULL,
   'Чемпионат России по курсингу - 2017',
   'coursing',
   'Чемпионат России',
   'Курсинг борзых',
-  'Московская область, Новый Милет',
+  'Чемпионат России (Курсинг борзых)',
   '',
   'Московская область, Новый Милет',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2017-09-17_P/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -325,24 +355,27 @@ INSERT INTO events (
 ) VALUES (
   2017,
   '2017-10-29',
-  'null',
+  NULL,
   'Тройка, птица осенняя - 2017',
   'other',
   '',
   'Тройка, птица осенняя - 2017',
-  'Московская область, деревня Михайловское',
+  'Тройка, птица осенняя - 2017',
   '',
   'Московская область, деревня Михайловское',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2017-10-29/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -362,19 +395,22 @@ INSERT INTO events (
   'coursing',
   '',
   'Курсинг борзых',
-  'Московская область, деревня Михайловское',
+  'Чемпионат РКФ по курсингу "Мартовский Заяц - 2018"',
   '',
   'Московская область, деревня Михайловское',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2018-03-09/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -389,24 +425,27 @@ INSERT INTO events (
 ) VALUES (
   2018,
   '2018-06-03',
-  'null',
+  NULL,
   'Командное состязание "Тройка, птица весенняя - 2018"',
   'other',
   '',
   'Командное состязание "Тройка, птица весенняя - 2018"',
-  'Московская область, деревня Михайловское',
+  'Командное состязание "Тройка, птица весенняя - 2018"',
   '',
   'Московская область, деревня Михайловское',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2018-06-03/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -421,24 +460,27 @@ INSERT INTO events (
 ) VALUES (
   2018,
   '2018-06-11',
-  'null',
+  NULL,
   'Чемпионат России по бегам борзых за механическим зайцем (рейсинг)',
-  'racing',
+  'coursing',
   'Чемпионат России',
-  'Бега борзых',
-  'Московская область, Новый Милет',
+  '',
+  'Чемпионат России по бегам борзых за механическим зайцем (рейсинг)',
   '',
   'Московская область, Новый Милет',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2018-06-11_P/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -453,24 +495,27 @@ INSERT INTO events (
 ) VALUES (
   2018,
   '2018-08-12',
-  'null',
+  NULL,
   'Чемпионат РКФ по бегам борзых (рейсинг)',
-  'racing',
+  'coursing',
   '',
-  'Бега борзых',
-  'Московская область, деревня Михайловское',
+  '',
+  'Чемпионат РКФ по бегам борзых (рейсинг)',
   '',
   'Московская область, деревня Михайловское',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2018-08-12/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -486,23 +531,26 @@ INSERT INTO events (
   2018,
   '2018-08-25',
   '2018-08-26',
-  'Международный чемпионат по курсингу ранга CACIL & Чемпионат РКФ по курсингу',
+  'Международный чемпионат по курсингу ранга CACIL &amp; Чемпионат РКФ по курсингу',
   'coursing',
   'CAC',
   'Курсинг борзых',
-  'Московская область, Ленинский район, деревня Суханово',
+  'CAC (Курсинг борзых)',
   '',
   'Московская область, Ленинский район, деревня Суханово',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2018-08-26/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -517,24 +565,27 @@ INSERT INTO events (
 ) VALUES (
   2018,
   '2018-09-15',
-  'null',
+  NULL,
   'Чемпионат РКФ по бегам борзых за механическим зайцем (курсинг)',
   'coursing',
   '',
   'Курсинг борзых',
-  'Московская область, Новый Милет',
+  'Чемпионат РКФ по бегам борзых за механическим зайцем (курсинг)',
   '',
   'Московская область, Новый Милет',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2018-09-15/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -549,24 +600,27 @@ INSERT INTO events (
 ) VALUES (
   2018,
   '2018-09-30',
-  'null',
+  NULL,
   'Открытый чемпионат НКП "Русская псовая борзая" "Осенний Марафон - 2018"',
-  'unknown',
+  'coursing',
   '',
   '',
-  'Московская область, Новый Милет',
+  'Открытый чемпионат НКП "Русская псовая борзая" "Осенний Марафон - 2018"',
   '',
   'Московская область, Новый Милет',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2018-09-30_C/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -581,24 +635,27 @@ INSERT INTO events (
 ) VALUES (
   2018,
   '2018-10-21',
-  'null',
+  NULL,
   'Командное состязание "Тройка, птица осенняя - 2018"',
   'other',
   '',
   'Командное состязание "Тройка, птица осенняя - 2018"',
-  'Московская область, деревня Михайловское',
+  'Командное состязание "Тройка, птица осенняя - 2018"',
   '',
   'Московская область, деревня Михайловское',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2018-10-21/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -618,19 +675,22 @@ INSERT INTO events (
   'coursing',
   '',
   'Курсинг борзых',
-  'Московская область, деревня Михайловское',
+  'Чемпионат РКФ по курсингу "Мартовский заяц - 2019"',
   '',
   'Московская область, деревня Михайловское',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2019-03-02/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -645,24 +705,27 @@ INSERT INTO events (
 ) VALUES (
   2019,
   '2019-04-14',
-  'null',
+  NULL,
   'Командное состязание "Тройка, птица весенняя - 2019"',
   'other',
   '',
   'Командное состязание "Тройка, птица весенняя - 2019"',
-  'Московская область, деревня Михайловское',
+  'Командное состязание "Тройка, птица весенняя - 2019"',
   '',
   'Московская область, деревня Михайловское',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2019-04-14/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -678,23 +741,26 @@ INSERT INTO events (
   2019,
   '2019-04-27',
   '2019-04-28',
-  'Международный чемпионат по курсингу ранга CACIL & Чемпионат России по курсингу',
+  'Международный чемпионат по курсингу ранга CACIL &amp; Чемпионат России по курсингу',
   'coursing',
   'Чемпионат России',
   'Курсинг борзых',
-  'Московская область, Ленинский район, деревня Суханово',
+  'Чемпионат России (Курсинг борзых)',
   '',
   'Московская область, Ленинский район, деревня Суханово',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2019-04-27/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -709,24 +775,27 @@ INSERT INTO events (
 ) VALUES (
   2019,
   '2019-06-15',
-  'null',
+  NULL,
   'Чемпионат РКФ по бегам борзых (рейсинг)',
-  'racing',
+  'coursing',
   '',
-  'Бега борзых',
-  'Московская область, Новый Милет',
+  '',
+  'Чемпионат РКФ по бегам борзых (рейсинг)',
   '',
   'Московская область, Новый Милет',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2019-06-15/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -741,24 +810,27 @@ INSERT INTO events (
 ) VALUES (
   2019,
   '2019-08-11',
-  'null',
+  NULL,
   'Тестовое состязание по рейсингу',
-  'racing',
+  'coursing',
   '',
-  'Бега борзых',
-  'Московская область, город Раменское',
+  '',
+  'Тестовое состязание по рейсингу',
   '',
   'Московская область, город Раменское',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2019-08-11/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -778,19 +850,22 @@ INSERT INTO events (
   'coursing',
   '',
   'Курсинг борзых',
-  'Московская область, деревня Суханово',
+  'Чемпионат РКФ по курсингу',
   '',
   'Московская область, деревня Суханово',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2019-08-24/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -805,24 +880,27 @@ INSERT INTO events (
 ) VALUES (
   2019,
   '2019-09-01',
-  'null',
+  NULL,
   'Кубок России по бегам борзых (рейсинг)',
-  'racing',
+  'coursing',
   'Кубок России',
-  'Бега борзых',
-  'Московская область, деревня Михайловское',
+  '',
+  'Кубок России по бегам борзых (рейсинг)',
   '',
   'Московская область, деревня Михайловское',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2019-09-01/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -837,24 +915,27 @@ INSERT INTO events (
 ) VALUES (
   2019,
   '2019-09-08',
-  'null',
+  NULL,
   'Открытый чемпионат НКП "Русская псовая борзая" "Осенний Марафон - 2019"',
-  'unknown',
+  'coursing',
   '',
   '',
-  'Московская область, Новый Милет',
+  'Открытый чемпионат НКП "Русская псовая борзая" "Осенний Марафон - 2019"',
   '',
   'Московская область, Новый Милет',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2019-09-08_C/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -869,24 +950,27 @@ INSERT INTO events (
 ) VALUES (
   2019,
   '2019-09-15',
-  'null',
+  NULL,
   'Кубок России по бегам борзых (курсинг)',
   'coursing',
   'Кубок России',
   'Курсинг борзых',
-  'Московская область, Новый Милет',
+  'Кубок России (Курсинг борзых)',
   '',
   'Московская область, Новый Милет',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2019-09-15/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -901,24 +985,27 @@ INSERT INTO events (
 ) VALUES (
   2019,
   '2019-09-22',
-  'null',
+  NULL,
   'Национальные состязания по бегам борзых за механическим зайцем ранга CACL (рейсинг)',
-  'racing',
+  'coursing',
   'CACL',
-  'Бега борзых',
-  'Московская область, город Раменское',
+  '',
+  'Национальные состязания по бегам борзых за механическим зайцем ранга CACL (рейсинг)',
   '',
   'Московская область, город Раменское',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2019-09-22/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -934,23 +1021,26 @@ INSERT INTO events (
   2019,
   '2019-10-05',
   '2019-10-06',
-  'Международные состязания по курсингу ранга CACIL & Национальные состязания по курсингу ранга CACL',
+  'Международные состязания по курсингу ранга CACIL &amp; Национальные состязания по курсингу ранга CACL',
   'coursing',
   'CACL',
   'Курсинг борзых',
-  'Московская область, город Красноармейск, деревня Михайловское',
+  'CACL (Курсинг борзых)',
   '',
   'Московская область, город Красноармейск, деревня Михайловское',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2019-10-05_CACL/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -965,24 +1055,27 @@ INSERT INTO events (
 ) VALUES (
   2019,
   '2019-11-10',
-  'null',
+  NULL,
   'Командное состязание "Тройка, птица осенняя - 2019"',
   'other',
   '',
   'Командное состязание "Тройка, птица осенняя - 2019"',
-  'Московская область, деревня Михайловское',
+  'Командное состязание "Тройка, птица осенняя - 2019"',
   '',
   'Московская область, деревня Михайловское',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2019-11-10/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -1002,19 +1095,22 @@ INSERT INTO events (
   'coursing',
   '',
   'БЗМП',
-  'Ярославль, АТЦ "Левково"',
+  'Бега за механической приманкой (курсинг)',
   '',
   'Ярославль, АТЦ "Левково"',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2020-08-15_B_R/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -1034,19 +1130,22 @@ INSERT INTO events (
   'coursing',
   '',
   'Курсинг борзых',
-  'Ярославль, АТЦ "Левково"',
+  'Чемпионат РКФ по бегам борзых (курсинг)',
   '',
   'Ярославль, АТЦ "Левково"',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2020-08-15_C_R/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -1062,23 +1161,26 @@ INSERT INTO events (
   2020,
   '2020-08-22',
   '2020-08-23',
-  'Международный чемпионат по курсингу ранга CACIL & Чемпионат РКФ по курсингу',
+  'Международный чемпионат по курсингу ранга CACIL &amp; Чемпионат РКФ по курсингу',
   'coursing',
   'CAC',
   'Курсинг борзых',
-  'Московская область, деревня Суханово',
+  'CAC (Курсинг борзых)',
   '',
   'Московская область, деревня Суханово',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2020-08-22_R/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -1093,24 +1195,27 @@ INSERT INTO events (
 ) VALUES (
   2020,
   '2020-09-12',
-  'null',
+  NULL,
   'Чемпионат России по бегам борзых за механическим зайцем (рейсинг)',
-  'racing',
+  'coursing',
   'Чемпионат России',
-  'Бега борзых',
-  'Московская область, Новый Милет',
+  '',
+  'Чемпионат России по бегам борзых за механическим зайцем (рейсинг)',
   '',
   'Московская область, Новый Милет',
-  NULL,
-  NULL,
+  'http://procoursing.ru/results/2020-09-12/Catalog_2020-09-12_Racing_ChRussia.pdf',
+  'http://procoursing.ru/results/2020-09-12_R/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -1125,24 +1230,27 @@ INSERT INTO events (
 ) VALUES (
   2020,
   '2020-09-20',
-  'null',
+  NULL,
   'Кубок России по бегам борзых за механическим зайцем (рейсинг)',
-  'racing',
+  'coursing',
   'Кубок России',
-  'Бега борзых',
-  'Московская область, город Раменское',
+  '',
+  'Кубок России по бегам борзых за механическим зайцем (рейсинг)',
   '',
   'Московская область, город Раменское',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2020-09-20_R/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -1158,23 +1266,26 @@ INSERT INTO events (
   2020,
   '2020-10-03',
   '2020-10-04',
-  'Международный чемпионат по курсингу ранга CACIL & Чемпионат России по курсингу',
+  'Международный чемпионат по курсингу ранга CACIL &amp; Чемпионат России по курсингу',
   'coursing',
   'Чемпионат России',
   'Курсинг борзых',
-  'Московская область, деревня Михайловское',
+  'Чемпионат России (Курсинг борзых)',
   '',
   'Московская область, деревня Михайловское',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2020-10-03/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -1194,19 +1305,22 @@ INSERT INTO events (
   'coursing',
   '',
   'Курсинг борзых',
-  'Московская область, деревня Михайловское',
+  'Чемпионат РКФ по курсингу',
   '',
   'Московская область, деревня Михайловское',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2021-04-17_C_R/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -1221,24 +1335,27 @@ INSERT INTO events (
 ) VALUES (
   2021,
   '2021-04-18',
-  'null',
+  NULL,
   'Чемпионат России по бегам за механической приманкой (курсинг)',
   'coursing',
   'Чемпионат России',
   'Курсинг борзых',
-  'Московская область, деревня Михайловское',
+  'Чемпионат России (Курсинг борзых)',
   '',
   'Московская область, деревня Михайловское',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2021-04-18_B_R/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -1253,24 +1370,27 @@ INSERT INTO events (
 ) VALUES (
   2021,
   '2021-04-24',
-  'null',
+  NULL,
   'Чемпионат РКФ по курсингу',
   'coursing',
   '',
   'Курсинг борзых',
-  'Ярославль, АТЦ "Левково"',
+  'Чемпионат РКФ по курсингу',
   '',
   'Ярославль, АТЦ "Левково"',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2021-04-24_R/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -1285,24 +1405,27 @@ INSERT INTO events (
 ) VALUES (
   2021,
   '2021-05-02',
-  'null',
+  NULL,
   'Чемпионат РКФ по курсингу борзых',
   'coursing',
   '',
   'Курсинг борзых',
-  'Московская область, деревня Суханово',
+  'Чемпионат РКФ по курсингу борзых',
   '',
   'Московская область, деревня Суханово',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2021-05-02/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -1322,19 +1445,22 @@ INSERT INTO events (
   'coursing',
   '',
   'Курсинг борзых',
-  'Калужская область, б/о Головинка',
+  'Чемпионат РКФ по курсингу борзых "Зигзаг удачи в лютиках - 2021"',
   '',
   'Калужская область, б/о Головинка',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2021-05-22_R/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -1349,24 +1475,27 @@ INSERT INTO events (
 ) VALUES (
   2021,
   '2021-06-13',
-  'null',
+  NULL,
   'Чемпионат России по бегам борзых за механическим зайцем (рейсинг)',
-  'racing',
+  'coursing',
   'Чемпионат России',
-  'Бега борзых',
-  'Московская область, Новый Милет',
+  '',
+  'Чемпионат России по бегам борзых за механическим зайцем (рейсинг)',
   '',
   'Московская область, Новый Милет',
-  NULL,
-  NULL,
+  'http://procoursing.ru/results/2021-06-13/Catalog_2021-06-13.pdf',
+  'http://procoursing.ru/results/2021-06-13_R/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -1381,24 +1510,27 @@ INSERT INTO events (
 ) VALUES (
   2021,
   '2021-06-19',
-  'null',
+  NULL,
   'Чемпионат РКФ по бегам борзых (рейсинг)',
-  'racing',
+  'coursing',
   '',
-  'Бега борзых',
-  'Московская область, город Раменское',
+  '',
+  'Чемпионат РКФ по бегам борзых (рейсинг)',
   '',
   'Московская область, город Раменское',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2021-06-19_R/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -1413,24 +1545,27 @@ INSERT INTO events (
 ) VALUES (
   2021,
   '2021-08-07',
-  'null',
+  NULL,
   'Чемпионат РКФ по бегам борзых за механическим зайцем (рейсинг)',
-  'racing',
+  'coursing',
   '',
-  'Бега борзых',
-  'Ярославская область, город Любим',
+  '',
+  'Чемпионат РКФ по бегам борзых за механическим зайцем (рейсинг)',
   '',
   'Ярославская область, город Любим',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2021-08-07_R/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -1446,23 +1581,26 @@ INSERT INTO events (
   2021,
   '2021-08-21',
   '2021-08-22',
-  'Международные состязания по курсингу ранга CACIL & Чемпионат РКФ по курсингу',
+  'Международные состязания по курсингу ранга CACIL &amp; Чемпионат РКФ по курсингу',
   'coursing',
   'CAC',
   'Курсинг борзых',
-  'Московская область, деревня Суханово',
+  'CAC (Курсинг борзых)',
   '',
   'Московская область, деревня Суханово',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2021-08-21_R/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -1477,24 +1615,27 @@ INSERT INTO events (
 ) VALUES (
   2021,
   '2021-09-04',
-  'null',
+  NULL,
   'Национальные состязания по курсингу ранга CACL',
   'coursing',
   'CACL',
   'Курсинг борзых',
-  'Калужская область, б/о Головинка',
+  'CACL (Курсинг борзых)',
   '',
   'Калужская область, б/о Головинка',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2021-09-04_C/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -1509,24 +1650,27 @@ INSERT INTO events (
 ) VALUES (
   2021,
   '2021-09-04',
-  'null',
+  NULL,
   'Чемпионат РКФ по бегам за механической приманкой (курсинг)',
   'coursing',
   '',
   'Курсинг борзых',
-  'Калужская область, б/о Головинка',
+  'Чемпионат РКФ по бегам за механической приманкой (курсинг)',
   '',
   'Калужская область, б/о Головинка',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2021-09-04_B/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -1541,24 +1685,27 @@ INSERT INTO events (
 ) VALUES (
   2021,
   '2021-09-18',
-  'null',
+  NULL,
   'Кубок России по курсингу борзых',
   'coursing',
   'Кубок России',
   'Курсинг борзых',
-  'Московская область, Новый Милет',
+  'Кубок России (Курсинг борзых)',
   '',
   'Московская область, Новый Милет',
-  NULL,
-  NULL,
+  'http://procoursing.ru/results/2021-09-18/Catalog_2021-09-18_Coursing_Cup_Russia.pdf',
+  'http://procoursing.ru/results/2021-09-18/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -1573,24 +1720,27 @@ INSERT INTO events (
 ) VALUES (
   2021,
   '2021-09-19',
-  'null',
+  NULL,
   'Открытый чемпионат НКП "Русская псовая борзая" "Осенний Марафон - 2021"',
-  'unknown',
+  'coursing',
   '',
   '',
-  'Московская область, Новый Милет',
+  'Открытый чемпионат НКП "Русская псовая борзая" "Осенний Марафон - 2021"',
   '',
   'Московская область, Новый Милет',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2021-09-19_C/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -1606,23 +1756,26 @@ INSERT INTO events (
   2021,
   '2021-10-02',
   '2021-10-03',
-  'Международные состязания по курсингу ранга CACIL & Национальные состязания по курсингу ранга CACL "Зайчик-листопадничек - 2021"',
+  'Международные состязания по курсингу ранга CACIL &amp; Национальные состязания по курсингу ранга CACL "Зайчик-листопадничек - 2021"',
   'coursing',
   'CACL',
   'Курсинг борзых',
-  'Московская область, деревня Михайловское',
+  'CACL (Курсинг борзых)',
   '',
   'Московская область, деревня Михайловское',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2021-10-02_R/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -1637,24 +1790,27 @@ INSERT INTO events (
 ) VALUES (
   2021,
   '2021-10-10',
-  'null',
-  'Международные состязания по бегам борзых ранга CACIL & Чемпионат РКФ по бегам борзых (рейсинг)',
-  'racing',
+  NULL,
+  'Международные состязания по бегам борзых ранга CACIL &amp; Чемпионат РКФ по бегам борзых (рейсинг)',
+  'coursing',
   'CAC',
-  'Бега борзых',
-  'Московская область, город Раменское',
+  '',
+  'Международные состязания по бегам борзых ранга CACIL &amp; Чемпионат РКФ по бегам борзых (рейсинг)',
   '',
   'Московская область, город Раменское',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2021-10-10_R/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -1669,24 +1825,27 @@ INSERT INTO events (
 ) VALUES (
   2021,
   '2021-10-24',
-  'null',
+  NULL,
   'Командное состязание "Тройка, просто птица - 2021"',
   'other',
   '',
   'Командное состязание "Тройка, просто птица - 2021"',
-  'Московская область, деревня Михайловское',
+  'Командное состязание "Тройка, просто птица - 2021"',
   '',
   'Московская область, деревня Михайловское',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2021-10-24/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -1706,19 +1865,22 @@ INSERT INTO events (
   'coursing',
   '',
   'Курсинг борзых',
-  'Московская область, деревня Михайловское',
+  'Чемпионат РКФ по курсингу',
   '',
   'Московская область, деревня Михайловское',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2022-04-16_C/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -1733,24 +1895,27 @@ INSERT INTO events (
 ) VALUES (
   2022,
   '2022-04-17',
-  'null',
+  NULL,
   'Чемпионат РКФ по бегам за механической приманкой (курсинг)',
   'coursing',
   '',
   'Курсинг борзых',
-  'Московская область, деревня Михайловское',
+  'Чемпионат РКФ по бегам за механической приманкой (курсинг)',
   '',
   'Московская область, деревня Михайловское',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2022-04-17_B/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -1770,19 +1935,22 @@ INSERT INTO events (
   'coursing',
   'Чемпионат России',
   'Курсинг борзых',
-  'Московская область, деревня Суханово',
+  'Чемпионат России (Курсинг борзых)',
   '',
   'Московская область, деревня Суханово',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2022-05-02/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -1797,24 +1965,27 @@ INSERT INTO events (
 ) VALUES (
   2022,
   '2022-05-14',
-  'null',
+  NULL,
   'Чемпионат РКФ по курсингу борзых',
   'coursing',
   '',
   'Курсинг борзых',
-  'Ярославская область, село Великое',
+  'Чемпионат РКФ по курсингу борзых',
   '',
   'Ярославская область, село Великое',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2022-05-14_C_R/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -1829,24 +2000,27 @@ INSERT INTO events (
 ) VALUES (
   2022,
   '2022-05-14',
-  'null',
+  NULL,
   'Чемпионат РКФ по бегам за механической приманкой (курсинг)',
   'coursing',
   '',
   'Курсинг борзых',
-  'Ярославская область, село Великое',
+  'Чемпионат РКФ по бегам за механической приманкой (курсинг)',
   '',
   'Ярославская область, село Великое',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2022-05-14_B_R/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -1866,19 +2040,22 @@ INSERT INTO events (
   'coursing',
   '',
   'Курсинг борзых',
-  'Калужская область, б/о Головинка',
+  'Чемпионат РКФ по курсингу борзых',
   '',
   'Калужская область, б/о Головинка',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2022-05-28_C_R/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -1898,19 +2075,22 @@ INSERT INTO events (
   'coursing',
   '',
   'Курсинг борзых',
-  'Калужская область, б/о Головинка',
+  'Чемпионат РКФ по бегам за механической приманкой (курсинг)',
   '',
   'Калужская область, б/о Головинка',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2022-05-28_B_R/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -1925,24 +2105,27 @@ INSERT INTO events (
 ) VALUES (
   2022,
   '2022-06-12',
-  'null',
+  NULL,
   'Чемпионат РКФ по бегам борзых (рейсинг)',
-  'racing',
+  'coursing',
   '',
-  'Бега борзых',
-  'Московская область, деревня Михайловское',
+  '',
+  'Чемпионат РКФ по бегам борзых (рейсинг)',
   '',
   'Московская область, деревня Михайловское',
-  NULL,
-  NULL,
+  'http://procoursing.ru/results/2022-06-12/Catalog_2022-06-12.pdf',
+  'http://procoursing.ru/results/2022-06-12_R/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -1957,24 +2140,27 @@ INSERT INTO events (
 ) VALUES (
   2022,
   '2022-07-31',
-  'null',
+  NULL,
   'Кубок котейки Глюка (замеры скорости)',
-  'unknown',
+  'coursing',
   'Кубок',
   '',
-  'Московская область, деревня Михайловское',
+  'Кубок котейки Глюка (замеры скорости)',
   '',
   'Московская область, деревня Михайловское',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2022-07-31/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -1994,19 +2180,22 @@ INSERT INTO events (
   'coursing',
   '',
   'Курсинг борзых',
-  'Московская область, деревня Суханово',
+  'Чемпионат РКФ по курсингу борзых "Забавы борзых - 2022"',
   '',
   'Московская область, деревня Суханово',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2022-08-20_R/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -2026,19 +2215,22 @@ INSERT INTO events (
   'coursing',
   '',
   'Курсинг борзых',
-  'Калужская область, б/о Головинка',
+  'Чемпионат РКФ по курсингу "Осенний зигзаг удачи - 2022"',
   '',
   'Калужская область, б/о Головинка',
-  NULL,
-  NULL,
+  'http://procoursing.ru/results/2022-09-03_K_C/Catalog_Coursing_K_2022-09-03.pdf',
+  'http://procoursing.ru/results/2022-09-03_K_C_R/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -2053,24 +2245,27 @@ INSERT INTO events (
 ) VALUES (
   2022,
   '2022-09-03',
-  'null',
+  NULL,
   'Кубок России по бегам за механической приманкой "Осенний зигзаг удачи - 2022"',
-  'racing',
+  'coursing',
   'Кубок России',
   '',
-  'Калужская область, б/о Головинка',
+  'Кубок России по бегам за механической приманкой "Осенний зигзаг удачи - 2022"',
   '',
   'Калужская область, б/о Головинка',
-  NULL,
-  NULL,
+  'http://procoursing.ru/results/2022-09-03_K_B/Catalog_Bega_K_2022-09-03.pdf',
+  'http://procoursing.ru/results/2022-09-03_K_B_R/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -2085,24 +2280,27 @@ INSERT INTO events (
 ) VALUES (
   2022,
   '2022-09-03',
-  'null',
+  NULL,
   'Кубок России по рейсингу (бегам борзых) "Вологодские кружева - 2022"',
-  'racing',
+  'coursing',
   'Кубок России',
-  'Бега борзых',
-  'Вологодская область, г. Вологда',
+  '',
+  'Кубок России по рейсингу (бегам борзых) "Вологодские кружева - 2022"',
   '',
   'Вологодская область, г. Вологда',
-  NULL,
-  NULL,
+  'http://procoursing.ru/results/2022-09-03_V_R/Catalog_Regl_Racing_V_2022-09-03.pdf',
+  'http://procoursing.ru/results/2022-09-03_V_R_R/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -2117,24 +2315,27 @@ INSERT INTO events (
 ) VALUES (
   2022,
   '2022-09-04',
-  'null',
+  NULL,
   'Чемпионат РКФ по курсингу борзых "Вологодские кружева - 2022"',
   'coursing',
   '',
   'Курсинг борзых',
-  'Вологодская область, г. Вологда',
+  'Чемпионат РКФ по курсингу борзых "Вологодские кружева - 2022"',
   '',
   'Вологодская область, г. Вологда',
-  NULL,
-  NULL,
+  'http://procoursing.ru/results/2022-09-04_V_C/Catalog_Regl_Coursing_V_2022-09-04.pdf',
+  'http://procoursing.ru/results/2022-09-04_V_C_R/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -2149,24 +2350,27 @@ INSERT INTO events (
 ) VALUES (
   2022,
   '2022-09-11',
-  'null',
+  NULL,
   'Чемпионат РКФ по курсингу',
   'coursing',
   '',
   'Курсинг борзых',
-  'Свердловская область, Большое Седельниково',
+  'Чемпионат РКФ по курсингу',
   '',
   'Свердловская область, Большое Седельниково',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2022-09-11_C/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -2181,24 +2385,27 @@ INSERT INTO events (
 ) VALUES (
   2022,
   '2022-09-11',
-  'null',
+  NULL,
   'Чемпионат РКФ по бегам за механической приманкой',
-  'racing',
+  'coursing',
   '',
   '',
-  'Свердловская область, Большое Седельниково',
+  'Чемпионат РКФ по бегам за механической приманкой',
   '',
   'Свердловская область, Большое Седельниково',
   NULL,
-  NULL,
+  'http://procoursing.ru/results/2022-09-11_B/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -2213,24 +2420,27 @@ INSERT INTO events (
 ) VALUES (
   2022,
   '2022-09-18',
-  'null',
+  NULL,
   'Чемпионат РКФ - CACL по бегам борзых за механическим зайцем (круг)',
-  'racing',
+  'coursing',
   'CACL',
   '',
-  'Московская область, г. Раменское',
+  'Чемпионат РКФ - CACL по бегам борзых за механическим зайцем (круг)',
   '',
   'Московская область, г. Раменское',
-  NULL,
-  NULL,
+  'http://procoursing.ru/results/2022-09-18/Catalog_2022-09-18.pdf',
+  'http://procoursing.ru/results/2022-09-18_R/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -2245,24 +2455,27 @@ INSERT INTO events (
 ) VALUES (
   2022,
   '2022-09-24',
-  'null',
+  NULL,
   'Кубок России по курсингу',
   'coursing',
   'Кубок России',
   'Курсинг борзых',
-  'Санкт-Петербург',
+  'Кубок России (Курсинг борзых)',
   '',
   'Санкт-Петербург',
-  NULL,
-  NULL,
+  'http://procoursing.ru/results/2022-09-24/Catalog_2022-09-24.pdf',
+  'http://procoursing.ru/results/2022-09-24_R/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -2277,24 +2490,27 @@ INSERT INTO events (
 ) VALUES (
   2022,
   '2022-10-02',
-  'null',
+  NULL,
   'Чемпионат РКФ - CACL по курсингу "Зайчик-листопадничек - 2022"',
   'coursing',
   'CACL',
   'Курсинг борзых',
-  'Московская область, деревня Михайловское',
+  'CACL (Курсинг борзых)',
   '',
   'Московская область, деревня Михайловское',
-  NULL,
-  NULL,
+  'http://procoursing.ru/results/2022-10-02/Catalog_2022-10-01.pdf',
+  'http://procoursing.ru/results/2022-10-02_R/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -2309,24 +2525,27 @@ INSERT INTO events (
 ) VALUES (
   2022,
   '2022-10-08',
-  'null',
+  NULL,
   'Чемпионат РКФ по курсингу',
   'coursing',
   '',
   'Курсинг борзых',
-  'Ярославская область',
+  'Чемпионат РКФ по курсингу',
   '',
   'Ярославская область',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2022-10-08_C.pdf',
+  'http://procoursing.ru/Complete_Results_2022-10-08_C.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -2341,24 +2560,27 @@ INSERT INTO events (
 ) VALUES (
   2022,
   '2022-10-08',
-  'null',
+  NULL,
   'Чемпионат РКФ по бегам за механической приманкой (курсинг)',
   'coursing',
   '',
   'Курсинг борзых',
-  'Ярославская область',
+  'Чемпионат РКФ по бегам за механической приманкой (курсинг)',
   '',
   'Ярославская область',
-  NULL,
-  NULL,
+  'http://procoursing.ru/results/2022-10-08_B/Catalog_2022-10-08_B.pdf',
+  'http://procoursing.ru/results/2022-10-08_B/',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -2373,24 +2595,27 @@ INSERT INTO events (
 ) VALUES (
   2022,
   '2022-11-06',
-  'null',
+  NULL,
   'Состязание свор "Тройка - 2022"',
   'other',
   '',
   'Состязание свор "Тройка - 2022"',
-  'Московская область, деревня Михайловское',
+  'Состязание свор "Тройка - 2022"',
   '',
   'Московская область, деревня Михайловское',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2022-11-06.pdf',
+  'http://procoursing.ru/Complete_Results_2022-11-06.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -2410,19 +2635,22 @@ INSERT INTO events (
   'coursing',
   'CACL',
   'Курсинг борзых',
-  'Московская область, деревня Михайловское',
+  'CACL (Курсинг борзых)',
   '',
   'Московская область, деревня Михайловское',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2023-04-15_C.pdf',
+  'http://procoursing.ru/Complete_Results_2023-04-15_C.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -2437,24 +2665,27 @@ INSERT INTO events (
 ) VALUES (
   2023,
   '2023-04-15',
-  'null',
+  NULL,
   'Чемпионат РКФ по бегам за механической приманкой',
-  'racing',
+  'bzmp',
   '',
+  '',
+  'Чемпионат РКФ по бегам за механической приманкой',
   '',
   'Московская область, деревня Михайловское',
-  '',
-  'Московская область, деревня Михайловское',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2023-04-15_B.pdf',
+  'http://procoursing.ru/Complete_Results_2023-04-15_B.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -2469,24 +2700,27 @@ INSERT INTO events (
 ) VALUES (
   2023,
   '2023-04-22',
-  'null',
+  NULL,
   'Национальные монопородные состязания',
   'unknown',
   '',
   '',
-  'Московская область, Балашихинский район',
+  'Национальные монопородные состязания',
   '',
   'Московская область, Балашихинский район',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2023-04-22.pdf',
+  'http://procoursing.ru/Complete_Results_2023-04-22.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -2501,24 +2735,27 @@ INSERT INTO events (
 ) VALUES (
   2023,
   '2023-05-01',
-  'null',
+  NULL,
   'Чемпионат РКФ по бегам за механической приманкой',
-  'racing',
+  'bzmp',
   '',
+  '',
+  'Чемпионат РКФ по бегам за механической приманкой',
   '',
   'Московская область, г. Видное, д. Суханово',
-  '',
-  'Московская область, г. Видное, д. Суханово',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2023-05-01_B.pdf',
+  'http://procoursing.ru/Complete_Results_2023-05-01_B.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -2538,19 +2775,22 @@ INSERT INTO events (
   'coursing',
   'CACL',
   'Курсинг борзых',
-  'Калужская область, база отдыха Головинка',
+  'CACL (Курсинг борзых)',
   '',
   'Калужская область, база отдыха Головинка',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2023-05-27_C.pdf',
+  'http://procoursing.ru/Complete_Results_2023-05-27_C.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -2567,22 +2807,25 @@ INSERT INTO events (
   '2023-05-27',
   '2023-05-28',
   'Чемпионат РКФ по бегам за механической приманкой',
-  'racing',
+  'bzmp',
   '',
+  '',
+  'Чемпионат РКФ по бегам за механической приманкой',
   '',
   'Калужская область, база отдыха Головинка',
-  '',
-  'Калужская область, база отдыха Головинка',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2023-05-27_B.pdf',
+  'http://procoursing.ru/Complete_Results_2023-05-27_B.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -2597,24 +2840,27 @@ INSERT INTO events (
 ) VALUES (
   2023,
   '2023-06-10',
-  'null',
+  NULL,
   'Чемпионат РКФ - CACL по бегам борзых',
-  'racing',
+  'unknown',
   'CACL',
   '',
-  'Московская область, деревня Михайловское',
+  'Чемпионат РКФ - CACL по бегам борзых',
   '',
   'Московская область, деревня Михайловское',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2023-06-10.pdf',
+  'http://procoursing.ru/Complete_Results_2023-06-10.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -2629,24 +2875,27 @@ INSERT INTO events (
 ) VALUES (
   2023,
   '2023-07-01',
-  'null',
+  NULL,
   'Чемпионат РКФ Br по курсингу в породе Уиппет',
   'coursing',
   '',
   'Курсинг борзых',
-  'Московская область, г. Видное, д. Суханово',
+  'Чемпионат РКФ Br по курсингу в породе Уиппет',
   '',
   'Московская область, г. Видное, д. Суханово',
   NULL,
-  NULL,
+  'http://procoursing.ru/Complete_Results_2023-07-01.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -2661,24 +2910,27 @@ INSERT INTO events (
 ) VALUES (
   2023,
   '2023-07-08',
-  'null',
+  NULL,
   'Чемпионаты РКФ Br по курсингу в породах Салюки, Родезийский риджбек, Басенджи',
   'coursing',
   '',
   'Курсинг борзых',
-  'Московская область, г. Видное, д. Суханово',
+  'Чемпионаты РКФ Br по курсингу в породах Салюки, Родезийский риджбек, Басенджи',
   '',
   'Московская область, г. Видное, д. Суханово',
   NULL,
-  NULL,
+  'http://procoursing.ru/Complete_Results_2023-07-08.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -2693,24 +2945,27 @@ INSERT INTO events (
 ) VALUES (
   2023,
   '2023-07-16',
-  'null',
+  NULL,
   'Кубок котейки Глюка (замеры скорости)',
   'unknown',
   'Кубок',
   '',
-  'Московская область, д. Михайловское',
+  'Кубок котейки Глюка (замеры скорости)',
   '',
   'Московская область, д. Михайловское',
   NULL,
-  NULL,
+  'http://procoursing.ru/Complete_Results_2023-07-16.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -2725,24 +2980,27 @@ INSERT INTO events (
 ) VALUES (
   2023,
   '2023-08-05',
-  'null',
+  NULL,
   'Чемпионат РКФ - CACL по бегам борзых',
-  'racing',
+  'unknown',
   'CACL',
   '',
-  'Московская область, Новый Милет',
+  'Чемпионат РКФ - CACL по бегам борзых',
   '',
   'Московская область, Новый Милет',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2023-08-05.pdf',
+  'http://procoursing.ru/Complete_Results_2023-08-05.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -2757,24 +3015,27 @@ INSERT INTO events (
 ) VALUES (
   2023,
   '2023-08-19',
-  'null',
+  NULL,
   'Чемпионат РКФ - CACL по курсингу',
   'coursing',
   'CACL',
   'Курсинг борзых',
-  'Московская обл., г. Видное, д. Суханово',
+  'CACL (Курсинг борзых)',
   '',
   'Московская обл., г. Видное, д. Суханово',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2023-08-19.pdf',
+  'http://procoursing.ru/Complete_Results_2023-08-19.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -2789,24 +3050,27 @@ INSERT INTO events (
 ) VALUES (
   2023,
   '2023-09-02',
-  'null',
+  NULL,
   'Чемпионат РКФ - CACL по курсингу',
   'coursing',
   'CACL',
   'Курсинг борзых',
-  'Калужская обл., б/о Головинка',
+  'CACL (Курсинг борзых)',
   '',
   'Калужская обл., б/о Головинка',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2023-09-02_K.pdf',
+  'http://procoursing.ru/Complete_Results_2023-09-02_K.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -2821,24 +3085,27 @@ INSERT INTO events (
 ) VALUES (
   2023,
   '2023-09-02',
-  'null',
+  NULL,
   'Чемпионат России по бегам борзых (рейсингу)',
   'racing',
   'Чемпионат России',
-  'Бега борзых',
-  'Вологодская обл.',
+  '',
+  'Чемпионат России по бегам борзых (рейсингу)',
   '',
   'Вологодская обл.',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2023-09-02_V.pdf',
+  'http://procoursing.ru/Complete_Results_2023-09-02_V_R.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -2853,24 +3120,27 @@ INSERT INTO events (
 ) VALUES (
   2023,
   '2023-09-03',
-  'null',
+  NULL,
   'Чемпионат РКФ - CACL по курсингу',
   'coursing',
   'CACL',
   'Курсинг борзых',
-  'Вологодская обл.',
+  'CACL (Курсинг борзых)',
   '',
   'Вологодская обл.',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2023-09-03_V.pdf',
+  'http://procoursing.ru/Complete_Results_2023-09-03_V_C.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -2885,24 +3155,27 @@ INSERT INTO events (
 ) VALUES (
   2023,
   '2023-09-17',
-  'null',
+  NULL,
   'Кубок России по бегам за механической приманкой',
-  'racing',
+  'bzmp',
   'Кубок России',
   '',
-  'Московская обл., Ленинский р-н, д. Суханово',
+  'Кубок России по бегам за механической приманкой',
   '',
   'Московская обл., Ленинский р-н, д. Суханово',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2023-09-17.pdf',
+  'http://procoursing.ru/Complete_Results_2023-09-17.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -2917,24 +3190,27 @@ INSERT INTO events (
 ) VALUES (
   2023,
   '2023-09-23',
-  'null',
+  NULL,
   'Кубок России - CACL по бегам борзых за механическим зайцем (круг)',
-  'racing',
+  'unknown',
   'CACL',
   '',
-  'Московская обл., Раменский р-н, д. Донино',
+  'Кубок России - CACL по бегам борзых за механическим зайцем (круг)',
   '',
   'Московская обл., Раменский р-н, д. Донино',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2023-09-23.pdf',
+  'http://procoursing.ru/Complete_Results_2023-09-23.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -2949,24 +3225,27 @@ INSERT INTO events (
 ) VALUES (
   2023,
   '2023-09-24',
-  'null',
+  NULL,
   'Открытый чемпионат НКП "Русская псовая борзая" "Осенний Марафон - 2023"',
-  'unknown',
+  'racing',
   '',
   '',
-  'Московская область, Купавна',
+  'Открытый чемпионат НКП "Русская псовая борзая" "Осенний Марафон - 2023"',
   '',
   'Московская область, Купавна',
   NULL,
-  NULL,
+  'http://procoursing.ru/Complete_Results_2023-09-24_R.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -2986,19 +3265,22 @@ INSERT INTO events (
   'coursing',
   'Кубок России',
   'Курсинг борзых',
-  'Московская обл., д. Михайловское',
+  'Кубок России (Курсинг борзых)',
   '',
   'Московская обл., д. Михайловское',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2023-10-07.pdf',
+  'http://procoursing.ru/Complete_Results_2023-10-07.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -3013,24 +3295,27 @@ INSERT INTO events (
 ) VALUES (
   2023,
   '2023-10-22',
-  'null',
+  NULL,
   'Состязание по курсингу борзых ранга CACL',
   'coursing',
   'CACL',
   'Курсинг борзых',
-  'Г. Ставрополь',
+  'CACL (Курсинг борзых)',
   '',
   'Г. Ставрополь',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2023-10-22_C.pdf',
+  'http://procoursing.ru/Complete_Results_2023-10-22_C.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -3045,24 +3330,27 @@ INSERT INTO events (
 ) VALUES (
   2023,
   '2023-10-22',
-  'null',
+  NULL,
   'Чемпионат РКФ по бегам за механической приманкой',
-  'racing',
+  'bzmp',
   '',
+  '',
+  'Чемпионат РКФ по бегам за механической приманкой',
   '',
   'Г. Ставрополь',
-  '',
-  'Г. Ставрополь',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2023-10-22_B.pdf',
+  'http://procoursing.ru/Complete_Results_2023-10-22_B.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -3077,24 +3365,27 @@ INSERT INTO events (
 ) VALUES (
   2023,
   '2023-11-11',
-  'null',
+  NULL,
   'Состязание свор "Тройка - 2023"',
   'other',
   '',
   'Состязание свор "Тройка - 2023"',
-  'Московская область, деревня Михайловское',
+  'Состязание свор "Тройка - 2023"',
   '',
   'Московская область, деревня Михайловское',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2023-11-11.pdf',
+  'http://procoursing.ru/Complete_Results_2023-11-11.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -3109,24 +3400,27 @@ INSERT INTO events (
 ) VALUES (
   2024,
   '2024-04-07',
-  'null',
+  NULL,
   'Состязание по курсингу борзых ранга CACL',
   'coursing',
   'CACL',
   'Курсинг борзых',
-  'Г. Ставрополь',
+  'CACL (Курсинг борзых)',
   '',
   'Г. Ставрополь',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2024-04-07_C.pdf',
+  'http://procoursing.ru/Complete_Results_2024-04-07_C.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -3141,24 +3435,27 @@ INSERT INTO events (
 ) VALUES (
   2024,
   '2024-04-07',
-  'null',
+  NULL,
   'Чемпионат РКФ по бегам за механической приманкой',
-  'racing',
+  'bzmp',
   '',
+  '',
+  'Чемпионат РКФ по бегам за механической приманкой',
   '',
   'Г. Ставрополь',
-  '',
-  'Г. Ставрополь',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2024-04-07_B.pdf',
+  'http://procoursing.ru/Complete_Results_2024-04-07_B.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -3178,19 +3475,22 @@ INSERT INTO events (
   'coursing',
   'Чемпионат России',
   'Курсинг борзых',
-  'Московская обл., г. Видное, д. Суханово',
+  'Чемпионат России (Курсинг борзых)',
   '',
   'Московская обл., г. Видное, д. Суханово',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2024-04-29.pdf',
+  'http://procoursing.ru/Complete_Results_2024-04-29.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -3205,24 +3505,35 @@ INSERT INTO events (
 ) VALUES (
   2024,
   '2024-05-11',
-  'null',
-  'Монопородные чемпионаты РКФ по курсингу борзых в породах:БасенджиФараонова собакаЧирнеко дель ЭтнаРодезийский риджбекРусская псовая борзаяСалюкиУиппет',
+  NULL,
+  'Монопородные чемпионаты РКФ по курсингу борзых в породах:
+
+Басенджи
+Фараонова собака
+Чирнеко дель Этна
+Родезийский риджбек
+Русская псовая борзая
+Салюки
+Уиппет',
   'coursing',
   '',
   'Курсинг борзых',
-  'Московская обл., д. Михайловское',
+  'Монопородные чемпионаты РКФ по курсингу борзых в породах:',
   '',
   'Московская обл., д. Михайловское',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2024-05-11_C.pdf',
+  'http://procoursing.ru/Complete_Results_2024-05-11_C.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -3237,24 +3548,27 @@ INSERT INTO events (
 ) VALUES (
   2024,
   '2024-05-11',
-  'null',
+  NULL,
   'Чемпионат РКФ по бегам за механической приманкой',
-  'racing',
+  'bzmp',
   '',
+  '',
+  'Чемпионат РКФ по бегам за механической приманкой',
   '',
   'Московская обл., д. Михайловское',
-  '',
-  'Московская обл., д. Михайловское',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2024-05-11_B.pdf',
+  'http://procoursing.ru/Complete_Results_2024-05-11_B.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -3274,19 +3588,22 @@ INSERT INTO events (
   'coursing',
   'CACL',
   'Курсинг борзых',
-  'Калужская обл., Жуковский р-н, с. Спас-Прогнанье, база отдыха Иволга',
+  'CACL (Курсинг борзых)',
   '',
   'Калужская обл., Жуковский р-н, с. Спас-Прогнанье, база отдыха Иволга',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2024-05-25_C.pdf',
+  'http://procoursing.ru/Complete_Results_2024-05-25_C.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -3301,24 +3618,27 @@ INSERT INTO events (
 ) VALUES (
   2024,
   '2024-05-26',
-  'null',
+  NULL,
   'Чемпионат РКФ по бегам за механической приманкой',
-  'racing',
+  'bzmp',
   '',
+  '',
+  'Чемпионат РКФ по бегам за механической приманкой',
   '',
   'Калужская обл., Жуковский р-н, с. Спас-Прогнанье, база отдыха Иволга',
-  '',
-  'Калужская обл., Жуковский р-н, с. Спас-Прогнанье, база отдыха Иволга',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2024-05-26_B.pdf',
+  'http://procoursing.ru/Complete_Results_2024-05-26_B.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -3333,24 +3653,31 @@ INSERT INTO events (
 ) VALUES (
   2024,
   '2024-06-09',
-  'null',
-  'Монопородные чемпионаты РКФ по бегам борзых в породах:БасенджиРодезийский риджбекУиппет',
-  'racing',
+  NULL,
+  'Монопородные чемпионаты РКФ по бегам борзых в породах:
+
+Басенджи
+Родезийский риджбек
+Уиппет',
+  'unknown',
   '',
   '',
-  'Московская обл., д. Михайловское',
+  'Монопородные чемпионаты РКФ по бегам борзых в породах:',
   '',
   'Московская обл., д. Михайловское',
   NULL,
-  NULL,
+  'http://procoursing.ru/Complete_Results_2024-06-09.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -3365,24 +3692,27 @@ INSERT INTO events (
 ) VALUES (
   2024,
   '2024-06-15',
-  'null',
+  NULL,
   'Чемпионат РКФ - CACL по бегам борзых за механическим зайцем (круг)',
-  'racing',
+  'unknown',
   'CACL',
   '',
-  'Московская обл., г. Раменское, д. Донино',
+  'Чемпионат РКФ - CACL по бегам борзых за механическим зайцем (круг)',
   '',
   'Московская обл., г. Раменское, д. Донино',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2024-06-15.pdf',
+  'http://procoursing.ru/Complete_Results_2024-06-15.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -3397,24 +3727,27 @@ INSERT INTO events (
 ) VALUES (
   2024,
   '2024-06-16',
-  'null',
+  NULL,
   'Чемпионат РКФ - CACL по курсингу борзых',
   'coursing',
   'CACL',
   'Курсинг борзых',
-  'Московская обл., г. Раменское, д. Донино',
+  'CACL (Курсинг борзых)',
   '',
   'Московская обл., г. Раменское, д. Донино',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2024-06-16_C.pdf',
+  'http://procoursing.ru/Complete_Results_2024-06-16_C.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -3429,24 +3762,27 @@ INSERT INTO events (
 ) VALUES (
   2024,
   '2024-06-16',
-  'null',
+  NULL,
   'Чемпионат РКФ по бегам за механической приманкой',
-  'racing',
+  'bzmp',
   '',
+  '',
+  'Чемпионат РКФ по бегам за механической приманкой',
   '',
   'Московская обл., г. Раменское, д. Донино',
-  '',
-  'Московская обл., г. Раменское, д. Донино',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2024-06-16_B.pdf',
+  'http://procoursing.ru/Complete_Results_2024-06-16_B.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -3461,24 +3797,33 @@ INSERT INTO events (
 ) VALUES (
   2024,
   '2024-06-29',
-  'null',
-  'Монородные чемпионаты РКФ по курсингу борзых в породах:БасенджиРодезийский риджбекСалюкиУиппетЧирнеко дель Этна',
+  NULL,
+  'Монородные чемпионаты РКФ по курсингу борзых в породах:
+
+Басенджи
+Родезийский риджбек
+Салюки
+Уиппет
+Чирнеко дель Этна',
   'coursing',
   '',
   'Курсинг борзых',
-  'Московская обл., г. Видное, д. Суханово',
+  'Монородные чемпионаты РКФ по курсингу борзых в породах:',
   '',
   'Московская обл., г. Видное, д. Суханово',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2024-06-29.pdf',
+  'http://procoursing.ru/Complete_Results_2024-06-29.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -3493,24 +3838,31 @@ INSERT INTO events (
 ) VALUES (
   2024,
   '2024-08-03',
-  'null',
-  'Монородные чемпионаты РКФ по курсингу борзых в породах:БасенджиРодезийский риджбекУиппет',
+  NULL,
+  'Монородные чемпионаты РКФ по курсингу борзых в породах:
+
+Басенджи
+Родезийский риджбек
+Уиппет',
   'coursing',
   '',
   'Курсинг борзых',
-  'Калужская обл., Жуковский р-н, с. Спас-Прогнанье, база отдыха Иволга',
+  'Монородные чемпионаты РКФ по курсингу борзых в породах:',
   '',
   'Калужская обл., Жуковский р-н, с. Спас-Прогнанье, база отдыха Иволга',
   NULL,
-  NULL,
+  'http://procoursing.ru/Complete_Results_2024-08-03.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -3525,24 +3877,27 @@ INSERT INTO events (
 ) VALUES (
   2024,
   '2024-08-10',
-  'null',
+  NULL,
   'Чемпионат РКФ - CACL по бегам борзых',
-  'racing',
+  'unknown',
   'CACL',
   '',
-  'Московская обл., Богородский округ, д. Колонтаево',
+  'Чемпионат РКФ - CACL по бегам борзых',
   '',
   'Московская обл., Богородский округ, д. Колонтаево',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2024-08-10.pdf',
+  'http://procoursing.ru/Complete_Results_2024-08-10.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -3557,24 +3912,27 @@ INSERT INTO events (
 ) VALUES (
   2024,
   '2024-08-24',
-  'null',
+  NULL,
   'Чемпионат РКФ - CACL по курсингу борзых',
   'coursing',
   'CACL',
   'Курсинг борзых',
-  'Московская обл., г. Видное, д. Суханово',
+  'CACL (Курсинг борзых)',
   '',
   'Московская обл., г. Видное, д. Суханово',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2024-08-24_C.pdf',
+  'http://procoursing.ru/Complete_Results_2024-08-24_C.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -3589,24 +3947,27 @@ INSERT INTO events (
 ) VALUES (
   2024,
   '2024-08-24',
-  'null',
+  NULL,
   'Чемпионат РКФ по бегам за механической приманкой',
-  'racing',
+  'bzmp',
   '',
+  '',
+  'Чемпионат РКФ по бегам за механической приманкой',
   '',
   'Московская обл., г. Видное, д. Суханово',
-  '',
-  'Московская обл., г. Видное, д. Суханово',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2024-08-24_B.pdf',
+  'http://procoursing.ru/Complete_Results_2024-08-24_B.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -3621,24 +3982,27 @@ INSERT INTO events (
 ) VALUES (
   2024,
   '2024-08-31',
-  'null',
+  NULL,
   'Кубок России - CACL по бегам борзых',
   'racing',
   'CACL',
   '',
-  'Вологодская обл., г. Вологда',
+  'Кубок России - CACL по бегам борзых',
   '',
   'Вологодская обл., г. Вологда',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2024-08-31_R.pdf',
+  'http://procoursing.ru/Complete_Results_2024-08-31_R.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -3653,24 +4017,27 @@ INSERT INTO events (
 ) VALUES (
   2024,
   '2024-09-01',
-  'null',
+  NULL,
   'Кубок России - CACL по курсингу борзых',
   'coursing',
   'CACL',
   'Курсинг борзых',
-  'Вологодская обл., г. Вологда',
+  'CACL (Курсинг борзых)',
   '',
   'Вологодская обл., г. Вологда',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2024-09-01_C.pdf',
+  'http://procoursing.ru/Complete_Results_2024-09-01_C.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -3685,24 +4052,27 @@ INSERT INTO events (
 ) VALUES (
   2024,
   '2024-09-08',
-  'null',
+  NULL,
   'Чемпионат России - CACL по бегам борзых',
-  'racing',
+  'unknown',
   'Чемпионат России',
   '',
-  'Московская обл., д. Михайловское',
+  'Чемпионат России - CACL по бегам борзых',
   '',
   'Московская обл., д. Михайловское',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2024-09-08.pdf',
+  'http://procoursing.ru/Complete_Results_2024-09-08.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -3717,24 +4087,27 @@ INSERT INTO events (
 ) VALUES (
   2024,
   '2024-09-14',
-  'null',
+  NULL,
   'Чемпионат РКФ - CACL по курсингу борзых',
   'coursing',
   'CACL',
   'Курсинг борзых',
-  'Калужская обл., Жуковский р-н, с. Спас-Прогнанье, база отдыха Иволга',
+  'CACL (Курсинг борзых)',
   '',
   'Калужская обл., Жуковский р-н, с. Спас-Прогнанье, база отдыха Иволга',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2024-09-14.pdf',
+  'http://procoursing.ru/Complete_Results_2024-09-14.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -3749,24 +4122,31 @@ INSERT INTO events (
 ) VALUES (
   2024,
   '2024-09-21',
-  'null',
-  'Монопородные чемпионаты РКФ по бегам борзых в породах:БасенджиМалая итальянская борзаяУиппет',
-  'racing',
+  NULL,
+  'Монопородные чемпионаты РКФ по бегам борзых в породах:
+
+Басенджи
+Малая итальянская борзая
+Уиппет',
+  'unknown',
   '',
+  '',
+  'Монопородные чемпионаты РКФ по бегам борзых в породах:',
   '',
   'Московская обл., Раменский городской округ, д. Донино',
-  '',
-  'Московская обл., Раменский городской округ, д. Донино',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2024-09-21.pdf',
+  'http://procoursing.ru/Complete_Results_2024-09-21.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -3781,24 +4161,27 @@ INSERT INTO events (
 ) VALUES (
   2024,
   '2024-09-22',
-  'null',
+  NULL,
   'Чемпионат РКФ - CACL по курсингу борзых',
   'coursing',
   'CACL',
   'Курсинг борзых',
-  'Московская обл., Раменский городской округ, д. Донино',
+  'CACL (Курсинг борзых)',
   '',
   'Московская обл., Раменский городской округ, д. Донино',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2024-09-22_C.pdf',
+  'http://procoursing.ru/Complete_Results_2024-09-22_C.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -3813,24 +4196,27 @@ INSERT INTO events (
 ) VALUES (
   2024,
   '2024-09-22',
-  'null',
+  NULL,
   'Чемпионат РКФ по бегам за механической приманкой',
-  'racing',
+  'bzmp',
   '',
+  '',
+  'Чемпионат РКФ по бегам за механической приманкой',
   '',
   'Московская обл., Раменский городской округ, д. Донино',
-  '',
-  'Московская обл., Раменский городской округ, д. Донино',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2024-09-22_B.pdf',
+  'http://procoursing.ru/Complete_Results_2024-09-22_B.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -3845,24 +4231,27 @@ INSERT INTO events (
 ) VALUES (
   2024,
   '2024-09-29',
-  'null',
+  NULL,
   'Чемпионат России по бегам за механической приманкой',
-  'racing',
+  'bzmp',
   'Чемпионат России',
   '',
-  'Московская обл., д. Михайловское',
+  'Чемпионат России по бегам за механической приманкой',
   '',
   'Московская обл., д. Михайловское',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2024-09-29_BZMP.pdf',
+  'http://procoursing.ru/Complete_Results_2024-09-29_B.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -3877,24 +4266,35 @@ INSERT INTO events (
 ) VALUES (
   2024,
   '2024-09-29',
-  'null',
-  'Монопородные чемпионаты РКФ по курсингу борзых в породах:БасенджиРодезийский риджбекРусская псовая борзаяСалюкиУиппетФараонова собакаЧирнеко дель Этна',
+  NULL,
+  'Монопородные чемпионаты РКФ по курсингу борзых в породах:
+
+Басенджи
+Родезийский риджбек
+Русская псовая борзая
+Салюки
+Уиппет
+Фараонова собака
+Чирнеко дель Этна',
   'coursing',
   '',
   'Курсинг борзых',
-  'Московская обл., д. Михайловское',
+  'Монопородные чемпионаты РКФ по курсингу борзых в породах:',
   '',
   'Московская обл., д. Михайловское',
   NULL,
-  NULL,
+  'http://procoursing.ru/Complete_Results_2024-09-29_C.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -3909,24 +4309,27 @@ INSERT INTO events (
 ) VALUES (
   2024,
   '2024-10-27',
-  'null',
+  NULL,
   'Состязание по курсингу борзых ранга CACL',
   'coursing',
   'CACL',
   'Курсинг борзых',
-  'Ставрополь',
+  'CACL (Курсинг борзых)',
   '',
   'Ставрополь',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2024-10-27_C.pdf',
+  'http://procoursing.ru/Complete_Results_2024-10-27_C.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -3941,24 +4344,27 @@ INSERT INTO events (
 ) VALUES (
   2024,
   '2024-10-27',
-  'null',
+  NULL,
   'Кубок России по бегам за механической приманкой',
-  'racing',
+  'bzmp',
   'Кубок России',
   '',
-  'Ставрополь',
+  'Кубок России по бегам за механической приманкой',
   '',
   'Ставрополь',
-  NULL,
-  NULL,
+  'http://procoursing.ru/Catalog_2024-10-27_B.pdf',
+  'http://procoursing.ru/Complete_Results_2024-10-27_B.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -3973,12 +4379,13 @@ INSERT INTO events (
 ) VALUES (
   2025,
   '2025-03-08',
-  'null',
-  'ЧРКФ(Курсинг борзых)',
+  NULL,
+  'ЧРКФ
+(Курсинг борзых)',
   'coursing',
   'ЧРКФ',
   'Курсинг борзых',
-  'РОО "Союз охотников и рыболовов Свердловской области"',
+  'РОО "Союз охотников и рыболовов Свердловской области" — ЧРКФ (Курсинг борзых)',
   'РОО "Союз охотников и рыболовов Свердловской области"',
   'Свердловская область, с. Кадниково',
   'http://procoursing.ru/2025/Catalog_2025-03-08.pdf',
@@ -3986,11 +4393,14 @@ INSERT INTO events (
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -4006,11 +4416,12 @@ INSERT INTO events (
   2025,
   '2025-04-05',
   '2025-04-06',
-  'ЧРКФ(Курсинг борзых)',
+  'ЧРКФ
+(Курсинг борзых)',
   'coursing',
   'ЧРКФ',
   'Курсинг борзых',
-  'ОО "Ярославский Областной Клуб Спортивно-Прикладного Собаководства"',
+  'ОО "Ярославский Областной Клуб Спортивно-Прикладного Собаководства" — ЧРКФ (Курсинг борзых)',
   'ОО "Ярославский Областной Клуб Спортивно-Прикладного Собаководства"',
   'Ярославская область, с. Первитино',
   'http://procoursing.ru/2025/Catalog_2025-04-06_Coursing.pdf',
@@ -4018,11 +4429,14 @@ INSERT INTO events (
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -4038,11 +4452,12 @@ INSERT INTO events (
   2025,
   '2025-04-05',
   '2025-04-06',
-  'ЧРКФ(Бега за механической приманкой)',
-  'racing',
+  'ЧРКФ
+(Бега за механической приманкой)',
+  'bzmp',
   'ЧРКФ',
   'БЗМП',
-  'ОО "Ярославский Областной Клуб Спортивно-Прикладного Собаководства"',
+  'ОО "Ярославский Областной Клуб Спортивно-Прикладного Собаководства" — ЧРКФ (БЗМП)',
   'ОО "Ярославский Областной Клуб Спортивно-Прикладного Собаководства"',
   'Ярославская область, с. Первитино',
   'http://procoursing.ru/2025/Catalog_2025-04-05_BZMP.pdf',
@@ -4050,11 +4465,14 @@ INSERT INTO events (
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -4069,12 +4487,13 @@ INSERT INTO events (
 ) VALUES (
   2025,
   '2025-04-06',
-  'null',
-  'CACL(Курсинг борзых)',
+  NULL,
+  'CACL
+(Курсинг борзых)',
   'coursing',
   'CACL',
   'Курсинг борзых',
-  'ОО Региональное кинологическое общество Ставропольского края "Альянс"',
+  'ОО Региональное кинологическое общество Ставропольского края "Альянс" — CACL (Курсинг борзых)',
   'ОО Региональное кинологическое общество Ставропольского края "Альянс"',
   'Ставропольский край, Ставрополь',
   'http://procoursing.ru/2025/Catalog_2025-04-06_C.pdf',
@@ -4082,11 +4501,14 @@ INSERT INTO events (
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -4101,12 +4523,13 @@ INSERT INTO events (
 ) VALUES (
   2025,
   '2025-04-06',
-  'null',
-  'ЧРКФ(Бега за механической приманкой)',
-  'racing',
+  NULL,
+  'ЧРКФ
+(Бега за механической приманкой)',
+  'bzmp',
   'ЧРКФ',
   'БЗМП',
-  'ОО Региональное кинологическое общество Ставропольского края "Альянс"',
+  'ОО Региональное кинологическое общество Ставропольского края "Альянс" — ЧРКФ (БЗМП)',
   'ОО Региональное кинологическое общество Ставропольского края "Альянс"',
   'Ставропольский край, Ставрополь',
   'http://procoursing.ru/2025/Catalog_2025-04-06_B.pdf',
@@ -4114,11 +4537,14 @@ INSERT INTO events (
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -4133,12 +4559,13 @@ INSERT INTO events (
 ) VALUES (
   2025,
   '2025-04-19',
-  'null',
-  'Чемпионат России(Курсинг борзых)',
+  NULL,
+  'Чемпионат России
+(Курсинг борзых)',
   'coursing',
   'Чемпионат России',
   'Курсинг борзых',
-  'СПГОО "Общество любителей животных "Радонежье"',
+  'СПГОО "Общество любителей животных "Радонежье" — Чемпионат России (Курсинг борзых)',
   'СПГОО "Общество любителей животных "Радонежье"',
   'Московская область, с.п. Царёвское',
   'http://procoursing.ru/2025/Catalog_2025-04-19_C.pdf',
@@ -4146,11 +4573,14 @@ INSERT INTO events (
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -4165,12 +4595,13 @@ INSERT INTO events (
 ) VALUES (
   2025,
   '2025-04-19',
-  'null',
-  'ЧРКФ(Бега за механической приманкой)',
-  'racing',
+  NULL,
+  'ЧРКФ
+(Бега за механической приманкой)',
+  'bzmp',
   'ЧРКФ',
   'БЗМП',
-  'СПГОО "Общество любителей животных "Радонежье"',
+  'СПГОО "Общество любителей животных "Радонежье" — ЧРКФ (БЗМП)',
   'СПГОО "Общество любителей животных "Радонежье"',
   'Московская область, с.п. Царёвское',
   'http://procoursing.ru/2025/Catalog_2025-04-19_B.pdf',
@@ -4178,11 +4609,14 @@ INSERT INTO events (
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -4198,11 +4632,12 @@ INSERT INTO events (
   2025,
   '2025-04-19',
   '2025-04-20',
-  'ЧРКФ(Курсинг борзых)',
+  'ЧРКФ
+(Курсинг борзых)',
   'coursing',
   'ЧРКФ',
   'Курсинг борзых',
-  'РОО "Республиканский Клуб Собаководов и Охотников"',
+  'РОО "Республиканский Клуб Собаководов и Охотников" — ЧРКФ (Курсинг борзых)',
   'РОО "Республиканский Клуб Собаководов и Охотников"',
   'Республика Татарстан, пгт. Высокая Гора',
   'http://procoursing.ru/2025/Catalog_2025-04-20_C.pdf',
@@ -4210,11 +4645,14 @@ INSERT INTO events (
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -4230,11 +4668,12 @@ INSERT INTO events (
   2025,
   '2025-04-19',
   '2025-04-20',
-  'ЧРКФ(Бега за механической приманкой)',
-  'racing',
+  'ЧРКФ
+(Бега за механической приманкой)',
+  'bzmp',
   'ЧРКФ',
   'БЗМП',
-  'РОО "Республиканский Клуб Собаководов и Охотников"',
+  'РОО "Республиканский Клуб Собаководов и Охотников" — ЧРКФ (БЗМП)',
   'РОО "Республиканский Клуб Собаководов и Охотников"',
   'Республика Татарстан, пгт. Высокая Гора',
   'http://procoursing.ru/2025/Catalog_2025-04-20_B.pdf',
@@ -4242,11 +4681,14 @@ INSERT INTO events (
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -4262,11 +4704,12 @@ INSERT INTO events (
   2025,
   '2025-04-26',
   '2025-04-27',
-  'CACL(Курсинг борзых)',
+  'CACL
+(Курсинг борзых)',
   'coursing',
   'CACL',
   'Курсинг борзых',
-  'РСОО "Федерация спортивно-прикладного собаководства Пермского края"',
+  'РСОО "Федерация спортивно-прикладного собаководства Пермского края" — CACL (Курсинг борзых)',
   'РСОО "Федерация спортивно-прикладного собаководства Пермского края"',
   'Пермский край, Пермь',
   NULL,
@@ -4275,10 +4718,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -4294,11 +4740,12 @@ INSERT INTO events (
   2025,
   '2025-04-26',
   '2025-04-27',
-  'ЧРКФ(Бега за механической приманкой)',
-  'racing',
+  'ЧРКФ
+(Бега за механической приманкой)',
+  'bzmp',
   'ЧРКФ',
   'БЗМП',
-  'РСОО "Федерация спортивно-прикладного собаководства Пермского края"',
+  'РСОО "Федерация спортивно-прикладного собаководства Пермского края" — ЧРКФ (БЗМП)',
   'РСОО "Федерация спортивно-прикладного собаководства Пермского края"',
   'Пермский край, Пермь',
   NULL,
@@ -4307,10 +4754,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -4326,11 +4776,12 @@ INSERT INTO events (
   2025,
   '2025-05-01',
   '2025-05-04',
-  'ЧРКФ(Курсинг борзых)',
+  'ЧРКФ
+(Курсинг борзых)',
   'coursing',
   'ЧРКФ',
   'Курсинг борзых',
-  'ОО "Приморский краевой клуб служебного собаководства"',
+  'ОО "Приморский краевой клуб служебного собаководства" — ЧРКФ (Курсинг борзых)',
   'ОО "Приморский краевой клуб служебного собаководства"',
   'Приморский край, Владивосток',
   NULL,
@@ -4339,10 +4790,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -4358,11 +4812,12 @@ INSERT INTO events (
   2025,
   '2025-05-01',
   '2025-05-04',
-  'ЧРКФ(Бега за механической приманкой)',
-  'racing',
+  'ЧРКФ
+(Бега за механической приманкой)',
+  'bzmp',
   'ЧРКФ',
   'БЗМП',
-  'ОО "Приморский краевой клуб служебного собаководства"',
+  'ОО "Приморский краевой клуб служебного собаководства" — ЧРКФ (БЗМП)',
   'ОО "Приморский краевой клуб служебного собаководства"',
   'Приморский край, Владивосток',
   NULL,
@@ -4371,10 +4826,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -4389,12 +4847,13 @@ INSERT INTO events (
 ) VALUES (
   2025,
   '2025-05-03',
-  'null',
-  'ЧРКФ(Курсинг борзых)',
+  NULL,
+  'ЧРКФ
+(Курсинг борзых)',
   'coursing',
   'ЧРКФ',
   'Курсинг борзых',
-  'МОКО "Русский простор"',
+  'МОКО "Русский простор" — ЧРКФ (Курсинг борзых)',
   'МОКО "Русский простор"',
   'Московская область, д. Суханово',
   'http://procoursing.ru/2025/Catalog_2025-05-03.pdf',
@@ -4402,11 +4861,14 @@ INSERT INTO events (
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -4421,12 +4883,14 @@ INSERT INTO events (
 ) VALUES (
   2025,
   '2025-05-11',
-  'null',
-  'ПЧРКФЧирнеко дель этна, Малая итальянская борзая, Уиппет, Родезийский риджбек, Басенджи(Курсинг борзых)',
+  NULL,
+  'ПЧРКФ
+Чирнеко дель этна, Малая итальянская борзая, Уиппет, Родезийский риджбек, Басенджи
+(Курсинг борзых)',
   'coursing',
   'ПЧРКФ',
   'Курсинг борзых',
-  'СПГОО "Общество любителей животных "Радонежье"',
+  'СПГОО "Общество любителей животных "Радонежье" — ПЧРКФ (Курсинг борзых)',
   'СПГОО "Общество любителей животных "Радонежье"',
   'Московская область, д. Михайловское',
   'http://procoursing.ru/2025/Catalog_2025-05-11.pdf',
@@ -4434,11 +4898,14 @@ INSERT INTO events (
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -4454,11 +4921,12 @@ INSERT INTO events (
   2025,
   '2025-05-17',
   '2025-05-18',
-  'ЧРКФ(Курсинг борзых)',
+  'ЧРКФ
+(Курсинг борзых)',
   'coursing',
   'ЧРКФ',
   'Курсинг борзых',
-  'МОРОО "Федерация спортивно-прикладного собаководства"',
+  'МОРОО "Федерация спортивно-прикладного собаководства" — ЧРКФ (Курсинг борзых)',
   'МОРОО "Федерация спортивно-прикладного собаководства"',
   'Московская область, д. Донино',
   'http://procoursing.ru/2025/Catalog_2025-05-17_C.pdf',
@@ -4466,11 +4934,14 @@ INSERT INTO events (
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -4486,11 +4957,12 @@ INSERT INTO events (
   2025,
   '2025-05-17',
   '2025-05-18',
-  'Кубок России(Бега за механической приманкой)',
-  'racing',
+  'Кубок России
+(Бега за механической приманкой)',
+  'bzmp',
   'Кубок России',
   'БЗМП',
-  'МОРОО "Федерация спортивно-прикладного собаководства"',
+  'МОРОО "Федерация спортивно-прикладного собаководства" — Кубок России (БЗМП)',
   'МОРОО "Федерация спортивно-прикладного собаководства"',
   'Московская область, д. Донино',
   'http://procoursing.ru/2025/Catalog_2025-05-17_B.pdf',
@@ -4498,11 +4970,14 @@ INSERT INTO events (
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -4518,11 +4993,12 @@ INSERT INTO events (
   2025,
   '2025-05-17',
   '2025-05-18',
-  'ЧРКФ(Бега борзых)',
+  'ЧРКФ
+(Бега борзых)',
   'racing',
   'ЧРКФ',
   'Бега борзых',
-  'РОО "Союз охотников и рыболовов Свердловской области"',
+  'РОО "Союз охотников и рыболовов Свердловской области" — ЧРКФ (Бега борзых)',
   'РОО "Союз охотников и рыболовов Свердловской области"',
   'Свердловская область, с. Кадниково',
   NULL,
@@ -4531,10 +5007,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -4550,11 +5029,12 @@ INSERT INTO events (
   2025,
   '2025-05-24',
   '2025-05-25',
-  'ЧРКФ(Курсинг борзых)',
+  'ЧРКФ
+(Курсинг борзых)',
   'coursing',
   'ЧРКФ',
   'Курсинг борзых',
-  'РООКО Кинологический союз "Арта"',
+  'РООКО Кинологический союз "Арта" — ЧРКФ (Курсинг борзых)',
   'РООКО Кинологический союз "Арта"',
   'Калужская область, Жуковский р-н, БО Иволга',
   'http://procoursing.ru/2025/Catalog_2025-05-24_C.pdf',
@@ -4562,11 +5042,14 @@ INSERT INTO events (
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -4582,11 +5065,12 @@ INSERT INTO events (
   2025,
   '2025-05-24',
   '2025-05-25',
-  'ЧРКФ(Бега за механической приманкой)',
-  'racing',
+  'ЧРКФ
+(Бега за механической приманкой)',
+  'bzmp',
   'ЧРКФ',
   'БЗМП',
-  'РООКО Кинологический союз "Арта"',
+  'РООКО Кинологический союз "Арта" — ЧРКФ (БЗМП)',
   'РООКО Кинологический союз "Арта"',
   'Калужская область, Жуковский р-н, БО Иволга',
   'http://procoursing.ru/2025/Catalog_2025-05-24_B.pdf',
@@ -4594,11 +5078,14 @@ INSERT INTO events (
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -4613,12 +5100,13 @@ INSERT INTO events (
 ) VALUES (
   2025,
   '2025-05-31',
-  'null',
-  'ЧРКФ(Бега борзых)',
+  NULL,
+  'ЧРКФ
+(Бега борзых)',
   'racing',
   'ЧРКФ',
   'Бега борзых',
-  'МОКО "Кеннел-клуб Санкт-Петербурга"',
+  'МОКО "Кеннел-клуб Санкт-Петербурга" — ЧРКФ (Бега борзых)',
   'МОКО "Кеннел-клуб Санкт-Петербурга"',
   'Санкт-Петербург, г. Петергоф',
   'http://procoursing.ru/2025/Catalog_2025-05-31_R.pdf',
@@ -4626,11 +5114,14 @@ INSERT INTO events (
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -4645,12 +5136,13 @@ INSERT INTO events (
 ) VALUES (
   2025,
   '2025-06-01',
-  'null',
-  'ЧРКФ(Курсинг борзых)',
+  NULL,
+  'ЧРКФ
+(Курсинг борзых)',
   'coursing',
   'ЧРКФ',
   'Курсинг борзых',
-  'МОКО "Кеннел-клуб Санкт-Петербурга"',
+  'МОКО "Кеннел-клуб Санкт-Петербурга" — ЧРКФ (Курсинг борзых)',
   'МОКО "Кеннел-клуб Санкт-Петербурга"',
   'Санкт-Петербург, г. Петергоф',
   'http://procoursing.ru/2025/Catalog_2025-06-01_C.pdf',
@@ -4658,11 +5150,14 @@ INSERT INTO events (
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -4677,24 +5172,28 @@ INSERT INTO events (
 ) VALUES (
   2025,
   '2025-06-08',
-  'null',
-  'ЧРКФ(Бега борзых)',
+  NULL,
+  'ЧРКФ
+(Бега борзых)',
   'racing',
   'ЧРКФ',
   'Бега борзых',
-  'ОООК "Кинологический центр "Элита" (РАЛББ)',
+  'ОООК "Кинологический центр "Элита" (РАЛББ) — ЧРКФ (Бега борзых)',
   'ОООК "Кинологический центр "Элита" (РАЛББ)',
   'Московская область, д. Михайловское',
   'http://procoursing.ru/2025/Catalog_2025-06-08.pdf',
-  'http://procoursing.ru/2025/Complete_Results_2025-06-08.html',
+  'http://procoursing.ru/2025/Complete_Results_2025-06-08_Best_Time.pdf',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -4709,12 +5208,13 @@ INSERT INTO events (
 ) VALUES (
   2025,
   '2025-06-14',
-  'null',
-  'ЧРКФ(Курсинг борзых)',
+  NULL,
+  'ЧРКФ
+(Курсинг борзых)',
   'coursing',
   'ЧРКФ',
   'Курсинг борзых',
-  'МОО "Клуб Охотничьего Собаководства "Артемида"',
+  'МОО "Клуб Охотничьего Собаководства "Артемида" — ЧРКФ (Курсинг борзых)',
   'МОО "Клуб Охотничьего Собаководства "Артемида"',
   'Нижегородская область, Городецкий район, д. Курцево',
   'http://procoursing.ru/2025/Catalog_2025-06-14_C.pdf',
@@ -4722,11 +5222,14 @@ INSERT INTO events (
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -4741,12 +5244,13 @@ INSERT INTO events (
 ) VALUES (
   2025,
   '2025-06-14',
-  'null',
-  'ЧРКФ(Бега за механической приманкой)',
-  'racing',
+  NULL,
+  'ЧРКФ
+(Бега за механической приманкой)',
+  'bzmp',
   'ЧРКФ',
   'БЗМП',
-  'МОО "Клуб Охотничьего Собаководства "Артемида"',
+  'МОО "Клуб Охотничьего Собаководства "Артемида" — ЧРКФ (БЗМП)',
   'МОО "Клуб Охотничьего Собаководства "Артемида"',
   'Нижегородская область, Городецкий район, д. Курцево',
   'http://procoursing.ru/2025/Catalog_2025-06-14_B.pdf',
@@ -4754,11 +5258,14 @@ INSERT INTO events (
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -4773,12 +5280,14 @@ INSERT INTO events (
 ) VALUES (
   2025,
   '2025-06-29',
-  'null',
-  'ПЧРКФБасенджи, Родезийский риджбек, Русская псовая борзая, Салюки, Уиппет, Чирнеко дель Этна(Курсинг борзых)',
+  NULL,
+  'ПЧРКФ
+Басенджи, Родезийский риджбек, Русская псовая борзая, Салюки, Уиппет, Чирнеко дель Этна
+(Курсинг борзых)',
   'coursing',
   'ПЧРКФ',
   'Курсинг борзых',
-  'МОКО "Русский простор"',
+  'МОКО "Русский простор" — ПЧРКФ (Курсинг борзых)',
   'МОКО "Русский простор"',
   'Московская область, д. Суханово',
   'http://procoursing.ru/2025/Catalog_2025-06-29.pdf',
@@ -4786,11 +5295,14 @@ INSERT INTO events (
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -4805,12 +5317,12 @@ INSERT INTO events (
 ) VALUES (
   2025,
   '2025-07-06',
-  'null',
+  NULL,
   'Кубок Котейки Глюка',
   'other',
   'Кубок',
   'Кубок Котейки Глюка',
-  'Клуб "Курсинг на Ярославке"',
+  'Клуб "Курсинг на Ярославке" — Кубок (Кубок Котейки Глюка)',
   'Клуб "Курсинг на Ярославке"',
   'Московская область, д. Михайловское',
   NULL,
@@ -4818,11 +5330,14 @@ INSERT INTO events (
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -4838,11 +5353,12 @@ INSERT INTO events (
   2025,
   '2025-07-19',
   '2025-07-20',
-  'ЧРКФ(Бега борзых)',
+  'ЧРКФ
+(Бега борзых)',
   'racing',
   'ЧРКФ',
   'Бега борзых',
-  'СРОКО "Уральский беговой клуб"',
+  'СРОКО "Уральский беговой клуб" — ЧРКФ (Бега борзых)',
   'СРОКО "Уральский беговой клуб"',
   'Челябинская область, с. Воскресенское',
   NULL,
@@ -4851,10 +5367,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -4869,12 +5388,17 @@ INSERT INTO events (
 ) VALUES (
   2025,
   '2025-08-03',
-  'null',
-  'ПЧРКФПоденко Ибиценко, Родезийский риджбек, Уиппет, Фараонова собака(Курсинг борзых)Американский стаффордширский терьер(БЗМП)',
+  NULL,
+  'ПЧРКФ
+Поденко Ибиценко, Родезийский риджбек, Уиппет, Фараонова собака
+(Курсинг борзых)
+
+Американский стаффордширский терьер
+(БЗМП)',
   'coursing',
   'ПЧРКФ',
   'Курсинг борзых',
-  'МОРОО "Федерация спортивно-прикладного собаководства"',
+  'МОРОО "Федерация спортивно-прикладного собаководства" — ПЧРКФ (Курсинг борзых)',
   'МОРОО "Федерация спортивно-прикладного собаководства"',
   'Московская обл., д. Донино',
   'http://procoursing.ru/2025/Catalog_2025-08-03.pdf',
@@ -4882,11 +5406,14 @@ INSERT INTO events (
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -4902,11 +5429,12 @@ INSERT INTO events (
   2025,
   '2025-08-16',
   '2025-08-17',
-  'Кубок России(Бега борзых)',
+  'Кубок России
+(Бега борзых)',
   'racing',
   'Кубок России',
   'Бега борзых',
-  'СРОКО "Уральский беговой клуб"',
+  'СРОКО "Уральский беговой клуб" — Кубок России (Бега борзых)',
   'СРОКО "Уральский беговой клуб"',
   'Челябинская область, с. Воскресенское',
   NULL,
@@ -4915,10 +5443,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -4933,12 +5464,13 @@ INSERT INTO events (
 ) VALUES (
   2025,
   '2025-08-16',
-  'null',
-  'ЧРКФ(Курсинг борзых)',
+  NULL,
+  'ЧРКФ
+(Курсинг борзых)',
   'coursing',
   'ЧРКФ',
   'Курсинг борзых',
-  'РООКО Кинологический союз "Арта"',
+  'РООКО Кинологический союз "Арта" — ЧРКФ (Курсинг борзых)',
   'РООКО Кинологический союз "Арта"',
   'Калужская область, Жуковский р-н, БО Головинка',
   'http://procoursing.ru/2025/Catalog_2025-08-16_C.pdf',
@@ -4946,11 +5478,14 @@ INSERT INTO events (
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -4965,12 +5500,13 @@ INSERT INTO events (
 ) VALUES (
   2025,
   '2025-08-16',
-  'null',
-  'ЧРКФ(Бега за механической приманкой)',
-  'racing',
+  NULL,
+  'ЧРКФ
+(Бега за механической приманкой)',
+  'bzmp',
   'ЧРКФ',
   'БЗМП',
-  'РООКО Кинологический союз "Арта"',
+  'РООКО Кинологический союз "Арта" — ЧРКФ (БЗМП)',
   'РООКО Кинологический союз "Арта"',
   'Калужская область, Жуковский р-н, БО Иволга',
   'http://procoursing.ru/2025/Catalog_2025-08-16_B.pdf',
@@ -4978,11 +5514,14 @@ INSERT INTO events (
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -4997,12 +5536,13 @@ INSERT INTO events (
 ) VALUES (
   2025,
   '2025-08-23',
-  'null',
-  'ЧРКФ(Курсинг борзых)',
+  NULL,
+  'ЧРКФ
+(Курсинг борзых)',
   'coursing',
   'ЧРКФ',
   'Курсинг борзых',
-  'МОКО "Русский простор"',
+  'МОКО "Русский простор" — ЧРКФ (Курсинг борзых)',
   'МОКО "Русский простор"',
   'Московская область, д. Суханово',
   'http://procoursing.ru/2025/Catalog_2025-08-23.pdf',
@@ -5010,11 +5550,14 @@ INSERT INTO events (
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -5029,12 +5572,14 @@ INSERT INTO events (
 ) VALUES (
   2025,
   '2025-08-30',
-  'null',
-  'ПЧРКФУиппет, Русская псовая борзая, Родезийский риджбек, Басенджи [отменён](Бега борзых)',
+  NULL,
+  'ПЧРКФ
+Уиппет, Русская псовая борзая, Родезийский риджбек, Басенджи [отменён]
+(Бега борзых)',
   'racing',
   'ПЧРКФ',
   'Бега борзых',
-  'ВГОО - Клуб собаководства "Сириус"',
+  'ВГОО - Клуб собаководства "Сириус" — ПЧРКФ (Бега борзых)',
   'ВГОО - Клуб собаководства "Сириус"',
   'Вологодская область, Вологда',
   'http://procoursing.ru/2025/Catalog_2025-08-30_Whippet_R.pdf',
@@ -5042,11 +5587,14 @@ INSERT INTO events (
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -5061,12 +5609,14 @@ INSERT INTO events (
 ) VALUES (
   2025,
   '2025-08-31',
-  'null',
-  'ПЧРКФРодезийский риджбек, Русская псовая борзая, Уиппет, Басенджи [отменён](Курсинг борзых)',
+  NULL,
+  'ПЧРКФ
+Родезийский риджбек, Русская псовая борзая, Уиппет, Басенджи [отменён]
+(Курсинг борзых)',
   'coursing',
   'ПЧРКФ',
   'Курсинг борзых',
-  'ВГОО - Клуб собаководства "Сириус"',
+  'ВГОО - Клуб собаководства "Сириус" — ПЧРКФ (Курсинг борзых)',
   'ВГОО - Клуб собаководства "Сириус"',
   'Вологодская область, Вологда',
   'http://procoursing.ru/2025/Catalog_2025-08-31_Whippet_C.pdf',
@@ -5074,11 +5624,14 @@ INSERT INTO events (
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -5093,12 +5646,13 @@ INSERT INTO events (
 ) VALUES (
   2025,
   '2025-09-06',
-  'null',
-  'Чемпионат России(Бега борзых)',
+  NULL,
+  'Чемпионат России
+(Бега борзых)',
   'racing',
   'Чемпионат России',
   'Бега борзых',
-  'МОРОО "Федерация спортивно-прикладного собаководства"',
+  'МОРОО "Федерация спортивно-прикладного собаководства" — Чемпионат России (Бега борзых)',
   'МОРОО "Федерация спортивно-прикладного собаководства"',
   'Московская область, д. Донино',
   NULL,
@@ -5106,11 +5660,14 @@ INSERT INTO events (
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -5126,11 +5683,12 @@ INSERT INTO events (
   2025,
   '2025-09-13',
   '2025-09-14',
-  'Кубок России(Курсинг борзых)',
+  'Кубок России
+(Курсинг борзых)',
   'coursing',
   'Кубок России',
   'Курсинг борзых',
-  'РОО "Союз охотников и рыболовов Свердловской области"',
+  'РОО "Союз охотников и рыболовов Свердловской области" — Кубок России (Курсинг борзых)',
   'РОО "Союз охотников и рыболовов Свердловской области"',
   'Свердловская область, с. Кадниково',
   NULL,
@@ -5139,10 +5697,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -5157,12 +5718,14 @@ INSERT INTO events (
 ) VALUES (
   2025,
   '2025-09-13',
-  'null',
-  'ПЧРКФМалая итальянская борзая, Уиппет, Чирнеко дель Этна(Бега борзых)',
+  NULL,
+  'ПЧРКФ
+Малая итальянская борзая, Уиппет, Чирнеко дель Этна
+(Бега борзых)',
   'racing',
   'ПЧРКФ',
   'Бега борзых',
-  'ОООК "Кинологический центр "Элита" (РАЛББ)',
+  'ОООК "Кинологический центр "Элита" (РАЛББ) — ПЧРКФ (Бега борзых)',
   'ОООК "Кинологический центр "Элита" (РАЛББ)',
   'Московская область, д. Михайловское',
   NULL,
@@ -5170,11 +5733,14 @@ INSERT INTO events (
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -5190,11 +5756,12 @@ INSERT INTO events (
   2025,
   '2025-09-20',
   '2025-09-21',
-  'ЧРКФ(Курсинг борзых)',
+  'ЧРКФ
+(Курсинг борзых)',
   'coursing',
   'ЧРКФ',
   'Курсинг борзых',
-  'МОРОО "Федерация спортивно-прикладного собаководства"',
+  'МОРОО "Федерация спортивно-прикладного собаководства" — ЧРКФ (Курсинг борзых)',
   'МОРОО "Федерация спортивно-прикладного собаководства"',
   'Московская область, д. Донино',
   NULL,
@@ -5202,11 +5769,14 @@ INSERT INTO events (
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -5222,11 +5792,12 @@ INSERT INTO events (
   2025,
   '2025-09-20',
   '2025-09-21',
-  'ЧРКФ(Бега за механической приманкой)',
-  'racing',
+  'ЧРКФ
+(Бега за механической приманкой)',
+  'bzmp',
   'ЧРКФ',
   'БЗМП',
-  'МОРОО "Федерация спортивно-прикладного собаководства"',
+  'МОРОО "Федерация спортивно-прикладного собаководства" — ЧРКФ (БЗМП)',
   'МОРОО "Федерация спортивно-прикладного собаководства"',
   'Московская область, д. Донино',
   NULL,
@@ -5234,11 +5805,14 @@ INSERT INTO events (
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -5253,24 +5827,28 @@ INSERT INTO events (
 ) VALUES (
   2025,
   '2025-09-20',
-  'null',
-  'CACMB(Бега за механической приманкой)',
-  'racing',
+  NULL,
+  'CACMB
+(Бега за механической приманкой)',
+  'bzmp',
   'CACMB',
   'БЗМП',
-  'НГОО Клуб собаководства "Виннер"',
+  'НГОО Клуб собаководства "Виннер" — CACMB (БЗМП)',
   'НГОО Клуб собаководства "Виннер"',
   'Новосибирская область, п. Степной',
   NULL,
-  NULL,
+  'http://procoursing.ru/2025/Complete_Results_2025-09-20_B_NSB.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -5285,24 +5863,28 @@ INSERT INTO events (
 ) VALUES (
   2025,
   '2025-09-21',
-  'null',
-  'CACL(Курсинг борзых)',
+  NULL,
+  'CACL
+(Курсинг борзых)',
   'coursing',
   'CACL',
   'Курсинг борзых',
-  'НГОО Клуб собаководства "Виннер"',
+  'НГОО Клуб собаководства "Виннер" — CACL (Курсинг борзых)',
   'НГОО Клуб собаководства "Виннер"',
   'Новосибирская область, п. Степной',
   NULL,
-  NULL,
+  'http://procoursing.ru/2025/Complete_Results_2025-09-21_C_NSB.html',
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -5317,12 +5899,13 @@ INSERT INTO events (
 ) VALUES (
   2025,
   '2025-09-27',
-  'null',
-  'ЧРКФ(Курсинг борзых)',
+  NULL,
+  'ЧРКФ
+(Курсинг борзых)',
   'coursing',
   'ЧРКФ',
   'Курсинг борзых',
-  'ОО "Ярославский Областной Клуб Спортивно-Прикладного Собаководства"',
+  'ОО "Ярославский Областной Клуб Спортивно-Прикладного Собаководства" — ЧРКФ (Курсинг борзых)',
   'ОО "Ярославский Областной Клуб Спортивно-Прикладного Собаководства"',
   'Ярославская область, Большесельский р-н',
   NULL,
@@ -5330,11 +5913,14 @@ INSERT INTO events (
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -5349,12 +5935,13 @@ INSERT INTO events (
 ) VALUES (
   2025,
   '2025-09-27',
-  'null',
-  'ЧРКФ(Бега за механической приманкой)',
-  'racing',
+  NULL,
+  'ЧРКФ
+(Бега за механической приманкой)',
+  'bzmp',
   'ЧРКФ',
   'БЗМП',
-  'ОО "Ярославский Областной Клуб Спортивно-Прикладного Собаководства"',
+  'ОО "Ярославский Областной Клуб Спортивно-Прикладного Собаководства" — ЧРКФ (БЗМП)',
   'ОО "Ярославский Областной Клуб Спортивно-Прикладного Собаководства"',
   'Ярославская область, Большесельский р-н',
   NULL,
@@ -5362,11 +5949,14 @@ INSERT INTO events (
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -5382,11 +5972,12 @@ INSERT INTO events (
   2025,
   '2025-10-04',
   '2025-10-05',
-  'ЧРКФ(Курсинг борзых)',
+  'ЧРКФ
+(Курсинг борзых)',
   'coursing',
   'ЧРКФ',
   'Курсинг борзых',
-  'СПГОО "Общество любителей животных "Радонежье"',
+  'СПГОО "Общество любителей животных "Радонежье" — ЧРКФ (Курсинг борзых)',
   'СПГОО "Общество любителей животных "Радонежье"',
   'Московская область, д. Михайловское',
   NULL,
@@ -5394,11 +5985,14 @@ INSERT INTO events (
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -5413,12 +6007,13 @@ INSERT INTO events (
 ) VALUES (
   2025,
   '2025-10-04',
-  'null',
-  'ЧРКФ(Бега за механической приманкой)',
-  'racing',
+  NULL,
+  'ЧРКФ
+(Бега за механической приманкой)',
+  'bzmp',
   'ЧРКФ',
   'БЗМП',
-  'СПГОО "Общество любителей животных "Радонежье"',
+  'СПГОО "Общество любителей животных "Радонежье" — ЧРКФ (БЗМП)',
   'СПГОО "Общество любителей животных "Радонежье"',
   'Московская область, д. Михайловское',
   NULL,
@@ -5426,11 +6021,14 @@ INSERT INTO events (
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -5445,12 +6043,14 @@ INSERT INTO events (
 ) VALUES (
   2025,
   '2025-10-11',
-  'null',
-  'ПЧРКФРодезийский риджбек, Уиппет, Русская псовая борзая, Афганская борзая, Фараонова собака, Басенджи(Курсинг борзых)',
+  NULL,
+  'ПЧРКФ
+Родезийский риджбек, Уиппет, Русская псовая борзая, Афганская борзая, Фараонова собака, Басенджи
+(Курсинг борзых)',
   'coursing',
   'ПЧРКФ',
   'Курсинг борзых',
-  'РООКО Кинологический союз "Арта"',
+  'РООКО Кинологический союз "Арта" — ПЧРКФ (Курсинг борзых)',
   'РООКО Кинологический союз "Арта"',
   'Калужская обл., Жуковский р-н, c. Спас-Прогнанье, База отдыха Иволга',
   NULL,
@@ -5458,11 +6058,14 @@ INSERT INTO events (
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -5478,11 +6081,12 @@ INSERT INTO events (
   2025,
   '2025-10-25',
   '2025-10-26',
-  'ЧРКФ(Курсинг борзых)',
+  'ЧРКФ
+(Курсинг борзых)',
   'coursing',
   'ЧРКФ',
   'Курсинг борзых',
-  'ОО Региональное кинологическое общество Ставропольского края "Альянс"',
+  'ОО Региональное кинологическое общество Ставропольского края "Альянс" — ЧРКФ (Курсинг борзых)',
   'ОО Региональное кинологическое общество Ставропольского края "Альянс"',
   'Ставропольский край, Ставрополь',
   'http://procoursing.ru/2025/Catalog_2025-10-25_C.pdf',
@@ -5490,11 +6094,14 @@ INSERT INTO events (
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -5510,11 +6117,12 @@ INSERT INTO events (
   2025,
   '2025-10-25',
   '2025-10-26',
-  'Чемпионат России(Бега за механической приманкой)',
-  'racing',
+  'Чемпионат России
+(Бега за механической приманкой)',
+  'bzmp',
   'Чемпионат России',
   'БЗМП',
-  'ОО Региональное кинологическое общество Ставропольского края "Альянс"',
+  'ОО Региональное кинологическое общество Ставропольского края "Альянс" — Чемпионат России (БЗМП)',
   'ОО Региональное кинологическое общество Ставропольского края "Альянс"',
   'Ставропольский край, Ставрополь',
   'http://procoursing.ru/2025/Catalog_2025-10-26_B.pdf',
@@ -5522,11 +6130,14 @@ INSERT INTO events (
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -5541,7 +6152,7 @@ INSERT INTO events (
 ) VALUES (
   2025,
   '2025-11-08',
-  'null',
+  NULL,
   'Тройки - Состязания свор',
   'other',
   '',
@@ -5554,11 +6165,14 @@ INSERT INTO events (
   0,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -5573,12 +6187,13 @@ INSERT INTO events (
 ) VALUES (
   2026,
   '2026-04-04',
-  'null',
-  'ЧРКФ(Курсинг борзых)',
+  NULL,
+  'ЧРКФ
+(Курсинг борзых)',
   'coursing',
   'ЧРКФ',
   'Курсинг борзых',
-  'Курсинг Ярославль',
+  'Курсинг Ярославль — ЧРКФ (Курсинг борзых)',
   'ОО "Ярославский Областной Клуб Спортивно-Прикладного Собаководства"',
   'Ярославская область, Ярославль',
   'http://procoursing.ru/2026/2026-04-04_Catalog_Coursing.pdf',
@@ -5586,11 +6201,14 @@ INSERT INTO events (
   1,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -5605,12 +6223,13 @@ INSERT INTO events (
 ) VALUES (
   2026,
   '2026-04-04',
-  'null',
-  'ЧРКФ(БЗМП)',
+  NULL,
+  'ЧРКФ
+(БЗМП)',
   'bzmp',
   'ЧРКФ',
   'БЗМП',
-  'Курсинг Ярославль',
+  'Курсинг Ярославль — ЧРКФ (БЗМП)',
   'ОО "Ярославский Областной Клуб Спортивно-Прикладного Собаководства"',
   'Ярославская область, Ярославль',
   'http://procoursing.ru/2026/2026-04-04_Catalog_BZMP.pdf',
@@ -5618,11 +6237,14 @@ INSERT INTO events (
   1,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -5637,12 +6259,13 @@ INSERT INTO events (
 ) VALUES (
   2026,
   '2026-04-12',
-  'null',
-  'CACL(Курсинг борзых)',
+  NULL,
+  'CACL
+(Курсинг борзых)',
   'coursing',
   'CACL',
   'Курсинг борзых',
-  'Курсинг Ставрополь',
+  'Курсинг Ставрополь — CACL (Курсинг борзых)',
   'ОО Региональное кинологическое общество Ставропольского края "Альянс"',
   'Ставропольский край, Ставрополь',
   'http://procoursing.ru/2026/2026-04-12_Catalog_Coursing.pdf',
@@ -5650,11 +6273,14 @@ INSERT INTO events (
   1,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -5669,12 +6295,13 @@ INSERT INTO events (
 ) VALUES (
   2026,
   '2026-04-12',
-  'null',
-  'ЧРКФ(БЗМП)',
+  NULL,
+  'ЧРКФ
+(БЗМП)',
   'bzmp',
   'ЧРКФ',
   'БЗМП',
-  'Курсинг Ставрополь',
+  'Курсинг Ставрополь — ЧРКФ (БЗМП)',
   'ОО Региональное кинологическое общество Ставропольского края "Альянс"',
   'Ставропольский край, Ставрополь',
   'http://procoursing.ru/2026/2026-04-12_Catalog_BZMP.pdf',
@@ -5682,11 +6309,14 @@ INSERT INTO events (
   1,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -5702,11 +6332,12 @@ INSERT INTO events (
   2026,
   '2026-04-18',
   '2026-04-19',
-  'ЧРКФ(Курсинг борзых)',
+  'ЧРКФ
+(Курсинг борзых)',
   'coursing',
   'ЧРКФ',
   'Курсинг борзых',
-  'Курсинг Казань',
+  'Курсинг Казань — ЧРКФ (Курсинг борзых)',
   'РОО "Республиканский Клуб Собаководов и Охотников"',
   'Республика Татарстан, Зеленодольский район',
   'http://procoursing.ru/2026/2026-04-18_Catalog_Coursing.pdf',
@@ -5714,11 +6345,14 @@ INSERT INTO events (
   1,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -5734,11 +6368,12 @@ INSERT INTO events (
   2026,
   '2026-04-18',
   '2026-04-19',
-  'ЧРКФ(БЗМП)',
+  'ЧРКФ
+(БЗМП)',
   'bzmp',
   'ЧРКФ',
   'БЗМП',
-  'Курсинг Казань',
+  'Курсинг Казань — ЧРКФ (БЗМП)',
   'РОО "Республиканский Клуб Собаководов и Охотников"',
   'Республика Татарстан, Зеленодольский район',
   'http://procoursing.ru/2026/2026-04-18_Catalog_BZMP.pdf',
@@ -5746,11 +6381,14 @@ INSERT INTO events (
   1,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -5765,12 +6403,13 @@ INSERT INTO events (
 ) VALUES (
   2026,
   '2026-04-18',
-  'null',
-  'ЧРКФ(БЗМП)',
+  NULL,
+  'ЧРКФ
+(БЗМП)',
   'bzmp',
   'ЧРКФ',
   'БЗМП',
-  'Курсинг Владивосток',
+  'Курсинг Владивосток — ЧРКФ (БЗМП)',
   'РСОО "Федерация спортивно-прикладного собаководства Приморского края"',
   'Приморский край, Владивосток',
   NULL,
@@ -5779,10 +6418,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -5797,12 +6439,13 @@ INSERT INTO events (
 ) VALUES (
   2026,
   '2026-04-19',
-  'null',
-  'ЧРКФ(Курсинг борзых)',
+  NULL,
+  'ЧРКФ
+(Курсинг борзых)',
   'coursing',
   'ЧРКФ',
   'Курсинг борзых',
-  'Курсинг на Ярославке',
+  'Курсинг на Ярославке — ЧРКФ (Курсинг борзых)',
   'СПГОО "Общество любителей животных "Радонежье"',
   'Московская область, д. Михайловское',
   'http://procoursing.ru/2026/2026-04-19_Catalog_Coursing.pdf',
@@ -5810,11 +6453,14 @@ INSERT INTO events (
   1,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -5829,12 +6475,13 @@ INSERT INTO events (
 ) VALUES (
   2026,
   '2026-04-19',
-  'null',
-  'ЧРКФ(БЗМП)',
+  NULL,
+  'ЧРКФ
+(БЗМП)',
   'bzmp',
   'ЧРКФ',
   'БЗМП',
-  'Курсинг на Ярославке',
+  'Курсинг на Ярославке — ЧРКФ (БЗМП)',
   'СПГОО "Общество любителей животных "Радонежье"',
   'Московская область, д. Михайловское',
   'http://procoursing.ru/2026/2026-04-19_Catalog_BZMP.pdf',
@@ -5842,11 +6489,14 @@ INSERT INTO events (
   1,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -5861,12 +6511,13 @@ INSERT INTO events (
 ) VALUES (
   2026,
   '2026-04-19',
-  'null',
-  'ЧРКФ(Курсинг борзых)',
+  NULL,
+  'ЧРКФ
+(Курсинг борзых)',
   'coursing',
   'ЧРКФ',
   'Курсинг борзых',
-  'Курсинг Владивосток',
+  'Курсинг Владивосток — ЧРКФ (Курсинг борзых)',
   'РСОО "Федерация спортивно-прикладного собаководства Приморского края"',
   'Приморский край, Владивосток',
   NULL,
@@ -5875,10 +6526,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -5894,11 +6548,12 @@ INSERT INTO events (
   2026,
   '2026-04-25',
   '2026-04-26',
-  'ЧРКФ(Курсинг борзых)',
+  'ЧРКФ
+(Курсинг борзых)',
   'coursing',
   'ЧРКФ',
   'Курсинг борзых',
-  'Курсинг Донино',
+  'Курсинг Донино — ЧРКФ (Курсинг борзых)',
   'МОРОО "Федерация спортивно-прикладного собаководства"',
   'Московская область, д. Донино',
   'http://procoursing.ru/2026/2026-04-25_Catalog_Coursing.pdf',
@@ -5906,11 +6561,14 @@ INSERT INTO events (
   1,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -5926,11 +6584,12 @@ INSERT INTO events (
   2026,
   '2026-04-25',
   '2026-04-26',
-  'ЧРКФ(БЗМП)',
+  'ЧРКФ
+(БЗМП)',
   'bzmp',
   'ЧРКФ',
   'БЗМП',
-  'Курсинг Донино',
+  'Курсинг Донино — ЧРКФ (БЗМП)',
   'МОРОО "Федерация спортивно-прикладного собаководства"',
   'Московская область, д. Донино',
   'http://procoursing.ru/2026/2026-04-25_Catalog_BZMP.pdf',
@@ -5938,11 +6597,14 @@ INSERT INTO events (
   1,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -5957,12 +6619,13 @@ INSERT INTO events (
 ) VALUES (
   2026,
   '2026-05-02',
-  'null',
-  'ЧРКФ(Курсинг борзых)',
+  NULL,
+  'ЧРКФ
+(Курсинг борзых)',
   'coursing',
   'ЧРКФ',
   'Курсинг борзых',
-  'Курсинг Пермь',
+  'Курсинг Пермь — ЧРКФ (Курсинг борзых)',
   'РСОО "Федерация спортивно-прикладного собаководства Пермского края"',
   'Пермский край, Пермь',
   'http://procoursing.ru/2026/2026-05-02_Catalog_Coursing.pdf',
@@ -5970,11 +6633,14 @@ INSERT INTO events (
   1,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -5989,12 +6655,13 @@ INSERT INTO events (
 ) VALUES (
   2026,
   '2026-05-02',
-  'null',
-  'ЧРКФ(БЗМП)',
+  NULL,
+  'ЧРКФ
+(БЗМП)',
   'bzmp',
   'ЧРКФ',
   'БЗМП',
-  'Курсинг Пермь',
+  'Курсинг Пермь — ЧРКФ (БЗМП)',
   'РСОО "Федерация спортивно-прикладного собаководства Пермского края"',
   'Пермский край, Пермь',
   'http://procoursing.ru/2026/2026-05-02_Catalog_BZMP.pdf',
@@ -6002,11 +6669,14 @@ INSERT INTO events (
   1,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -6021,12 +6691,13 @@ INSERT INTO events (
 ) VALUES (
   2026,
   '2026-05-03',
-  'null',
-  'ЧРКФ(Курсинг борзых)',
+  NULL,
+  'ЧРКФ
+(Курсинг борзых)',
   'coursing',
   'ЧРКФ',
   'Курсинг борзых',
-  'Русский Простор',
+  'Русский Простор — ЧРКФ (Курсинг борзых)',
   'МОКО "Русский простор"',
   'Московская область, д. Суханово',
   'http://procoursing.ru/2026/2026-05-03_Catalog_Coursing.pdf',
@@ -6034,11 +6705,14 @@ INSERT INTO events (
   1,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -6053,12 +6727,19 @@ INSERT INTO events (
 ) VALUES (
   2026,
   '2026-05-10',
-  'null',
-  'ПЧРКФ(Курсинг борзых)Родезийский риджбекЧирнеко дель этнаРусская псовая борзаяУиппетБасенджиМалая итальянская борзая',
+  NULL,
+  'ПЧРКФ
+(Курсинг борзых)
+Родезийский риджбек
+Чирнеко дель этна
+Русская псовая борзая
+Уиппет
+Басенджи
+Малая итальянская борзая',
   'coursing',
   'ПЧРКФ',
   'Курсинг борзых',
-  'Курсинг на Ярославке',
+  'Курсинг на Ярославке — ПЧРКФ (Курсинг борзых)',
   'СПГОО "Общество любителей животных "Радонежье"',
   'Московская область, д. Михайловское',
   'http://procoursing.ru/2026/2026-05-10_Catalog_Coursing.pdf',
@@ -6066,11 +6747,14 @@ INSERT INTO events (
   1,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -6085,12 +6769,13 @@ INSERT INTO events (
 ) VALUES (
   2026,
   '2026-05-16',
-  'null',
-  'ЧРКФ(Бега борзых)',
+  NULL,
+  'ЧРКФ
+(Бега борзых)',
   'racing',
   'ЧРКФ',
   'Бега борзых',
-  'Уральский беговой клуб',
+  'Уральский беговой клуб — ЧРКФ (Бега борзых)',
   'РОО "Союз охотников и рыболовов Свердловской области"',
   'Свердловская область, д. Большое Седельниково',
   NULL,
@@ -6098,11 +6783,14 @@ INSERT INTO events (
   1,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -6118,11 +6806,12 @@ INSERT INTO events (
   2026,
   '2026-05-23',
   '2026-05-24',
-  'Чемпионат России(Курсинг борзых)',
+  'Чемпионат России
+(Курсинг борзых)',
   'coursing',
   'Чемпионат России',
   'Курсинг борзых',
-  'Беговой клуб "Раздолье"',
+  'Беговой клуб "Раздолье" — Чемпионат России (Курсинг борзых)',
   'РООКО Кинологический союз "Арта"',
   'Калужская область, Жуковский р-н, БО Иволга',
   'http://procoursing.ru/2026/2026-05-23_Catalog_Coursing.pdf',
@@ -6130,11 +6819,14 @@ INSERT INTO events (
   1,
   NULL
 )
-ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+ON CONFLICT(results_url) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -6150,11 +6842,17 @@ INSERT INTO events (
   2026,
   '2026-06-13',
   '2026-06-14',
-  'ПЧРКФ(Бега борзых)УиппетБасенджиМалая итальянская борзаяРодезийский риджбекЧирнеко дель Этна',
+  'ПЧРКФ
+(Бега борзых)
+Уиппет
+Басенджи
+Малая итальянская борзая
+Родезийский риджбек
+Чирнеко дель Этна',
   'racing',
   'ПЧРКФ',
   'Бега борзых',
-  'Курсинг на Ярославке',
+  'Курсинг на Ярославке — ПЧРКФ (Бега борзых)',
   'СПГОО "Общество любителей животных "Радонежье"',
   'Московская область, д. Михайловское',
   'http://procoursing.ru/2026/2026-06-13_Catalog_Racing.pdf',
@@ -6163,10 +6861,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -6182,11 +6883,15 @@ INSERT INTO events (
   2026,
   '2026-06-20',
   '2026-06-21',
-  'ПЧРКФ(Бега борзых)УиппетФараонова собакаБасенджи',
+  'ПЧРКФ
+(Бега борзых)
+Уиппет
+Фараонова собака
+Басенджи',
   'racing',
   'ПЧРКФ',
   'Бега борзых',
-  'Курсинг Донино',
+  'Курсинг Донино — ПЧРКФ (Бега борзых)',
   'МОРОО "Федерация спортивно-прикладного собаководства"',
   'Москва, Раменское(Московская область, д. Донино)',
   'http://procoursing.ru/2026/2026-06-20_Catalog_Racing.pdf',
@@ -6195,10 +6900,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -6214,11 +6922,17 @@ INSERT INTO events (
   2026,
   '2026-06-20',
   '2026-06-21',
-  'ПЧРКФ(Курсинг борзых)Фараонова собакаУиппетСалюкиБасенджиПоденко ибиценко',
+  'ПЧРКФ
+(Курсинг борзых)
+Фараонова собака
+Уиппет
+Салюки
+Басенджи
+Поденко ибиценко',
   'coursing',
   'ПЧРКФ',
   'Курсинг борзых',
-  'Курсинг Донино',
+  'Курсинг Донино — ПЧРКФ (Курсинг борзых)',
   'МОРОО "Федерация спортивно-прикладного собаководства"',
   'Москва, Раменское',
   'http://procoursing.ru/2026/2026-06-21_Catalog_Coursing.pdf',
@@ -6227,10 +6941,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -6246,11 +6963,17 @@ INSERT INTO events (
   2026,
   '2026-06-27',
   '2026-06-28',
-  'ПЧРКФ(Курсинг борзых)УиппетСалюкиБасенджиРодезийский риджбекЧирнеко дель Этна',
+  'ПЧРКФ
+(Курсинг борзых)
+Уиппет
+Салюки
+Басенджи
+Родезийский риджбек
+Чирнеко дель Этна',
   'coursing',
   'ПЧРКФ',
   'Курсинг борзых',
-  'Русский Простор',
+  'Русский Простор — ПЧРКФ (Курсинг борзых)',
   'МОКО "Русский простор"',
   'Московская область, д. Суханово',
   NULL,
@@ -6259,10 +6982,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -6277,12 +7003,13 @@ INSERT INTO events (
 ) VALUES (
   2026,
   '2026-06-28',
-  'null',
-  'ЧРКФ(Курсинг борзых)',
+  NULL,
+  'ЧРКФ
+(Курсинг борзых)',
   'coursing',
   'ЧРКФ',
   'Курсинг борзых',
-  'Курсинг в Нижегородской области',
+  'Курсинг в Нижегородской области — ЧРКФ (Курсинг борзых)',
   'МОО "Клуб Охотничьего Собаководства "Артемида"',
   'Нижегородская область, Нижний Новгород',
   NULL,
@@ -6291,10 +7018,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -6309,12 +7039,13 @@ INSERT INTO events (
 ) VALUES (
   2026,
   '2026-06-28',
-  'null',
-  'ЧРКФ(БЗМП)',
+  NULL,
+  'ЧРКФ
+(БЗМП)',
   'bzmp',
   'ЧРКФ',
   'БЗМП',
-  'Курсинг в Нижегородской области',
+  'Курсинг в Нижегородской области — ЧРКФ (БЗМП)',
   'МОО "Клуб Охотничьего Собаководства "Артемида"',
   'Нижегородская область, Нижний Новгород',
   NULL,
@@ -6323,10 +7054,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -6342,11 +7076,12 @@ INSERT INTO events (
   2026,
   '2026-07-18',
   '2026-07-19',
-  'ЧРКФ(Бега борзых)',
+  'ЧРКФ
+(Бега борзых)',
   'racing',
   'ЧРКФ',
   'Бега борзых',
-  'Уральский беговой клуб. Бега собак',
+  'Уральский беговой клуб. Бега собак — ЧРКФ (Бега борзых)',
   'СРОКО "Уральский беговой клуб"',
   'Челябинская область, с. Воскресенское',
   NULL,
@@ -6355,10 +7090,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -6374,11 +7112,15 @@ INSERT INTO events (
   2026,
   '2026-08-01',
   '2026-08-02',
-  'ПЧРКФ(Курсинг борзых)УиппетПоденко ибиценкоФараонова собака',
+  'ПЧРКФ
+(Курсинг борзых)
+Уиппет
+Поденко ибиценко
+Фараонова собака',
   'coursing',
   'ПЧРКФ',
   'Курсинг борзых',
-  'Курсинг Донино',
+  'Курсинг Донино — ПЧРКФ (Курсинг борзых)',
   'МОРОО "Федерация спортивно-прикладного собаководства"',
   'Московская область, д. Донино',
   NULL,
@@ -6387,10 +7129,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -6406,11 +7151,14 @@ INSERT INTO events (
   2026,
   '2026-08-01',
   '2026-08-02',
-  'ПЧРКФ(БЗМП)Немецкая овчаркаАмериканский стаффордширский терьер',
+  'ПЧРКФ
+(БЗМП)
+Немецкая овчарка
+Американский стаффордширский терьер',
   'bzmp',
   'ПЧРКФ',
   'БЗМП',
-  'Курсинг Донино',
+  'Курсинг Донино — ПЧРКФ (БЗМП)',
   'МОРОО "Федерация спортивно-прикладного собаководства"',
   'Московская область, д. Донино',
   NULL,
@@ -6419,10 +7167,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -6438,11 +7189,12 @@ INSERT INTO events (
   2026,
   '2026-08-08',
   '2026-08-09',
-  'ЧРКФ(Курсинг борзых)',
+  'ЧРКФ
+(Курсинг борзых)',
   'coursing',
   'ЧРКФ',
   'Курсинг борзых',
-  'Курсинг Казань',
+  'Курсинг Казань — ЧРКФ (Курсинг борзых)',
   'РОО "Республиканский Клуб Собаководов и Охотников"',
   'Республика Татарстан, Казань',
   NULL,
@@ -6451,10 +7203,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -6470,11 +7225,12 @@ INSERT INTO events (
   2026,
   '2026-08-08',
   '2026-08-09',
-  'ЧРКФ(БЗМП)',
+  'ЧРКФ
+(БЗМП)',
   'bzmp',
   'ЧРКФ',
   'БЗМП',
-  'Курсинг Казань',
+  'Курсинг Казань — ЧРКФ (БЗМП)',
   'РОО "Республиканский Клуб Собаководов и Охотников"',
   'Республика Татарстан, Казань',
   NULL,
@@ -6483,10 +7239,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -6502,11 +7261,12 @@ INSERT INTO events (
   2026,
   '2026-08-15',
   '2026-08-16',
-  'ЧРКФ(Курсинг борзых)',
+  'ЧРКФ
+(Курсинг борзых)',
   'coursing',
   'ЧРКФ',
   'Курсинг борзых',
-  'Беговой клуб "Раздолье"',
+  'Беговой клуб "Раздолье" — ЧРКФ (Курсинг борзых)',
   'РООКО Кинологический союз "Арта"',
   'Калужская область, Жуковский р-н, БО Иволга',
   NULL,
@@ -6515,10 +7275,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -6534,11 +7297,12 @@ INSERT INTO events (
   2026,
   '2026-08-15',
   '2026-08-16',
-  'Чемпионат России(БЗМП)',
+  'Чемпионат России
+(БЗМП)',
   'bzmp',
   'Чемпионат России',
   'БЗМП',
-  'Беговой клуб "Раздолье"',
+  'Беговой клуб "Раздолье" — Чемпионат России (БЗМП)',
   'РООКО Кинологический союз "Арта"',
   'Калужская область, Жуковский р-н, БО Иволга',
   NULL,
@@ -6547,10 +7311,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -6566,11 +7333,12 @@ INSERT INTO events (
   2026,
   '2026-08-15',
   '2026-08-16',
-  'Кубок России(Бега борзых)',
+  'Кубок России
+(Бега борзых)',
   'racing',
   'Кубок России',
   'Бега борзых',
-  'Уральский беговой клуб. Бега собак',
+  'Уральский беговой клуб. Бега собак — Кубок России (Бега борзых)',
   'СРОКО "Уральский беговой клуб"',
   'Челябинская область, с. Воскресенское',
   NULL,
@@ -6579,10 +7347,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -6598,11 +7369,12 @@ INSERT INTO events (
   2026,
   '2026-08-22',
   '2026-08-23',
-  'Кубок России(Курсинг борзых)',
+  'Кубок России
+(Курсинг борзых)',
   'coursing',
   'Кубок России',
   'Курсинг борзых',
-  'Русский Простор',
+  'Русский Простор — Кубок России (Курсинг борзых)',
   'МОКО "Русский простор"',
   'Московская область, д. Суханово',
   NULL,
@@ -6611,10 +7383,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -6629,12 +7404,13 @@ INSERT INTO events (
 ) VALUES (
   2026,
   '2026-08-29',
-  'null',
-  'ЧРКФ(Бега борзых)',
+  NULL,
+  'ЧРКФ
+(Бега борзых)',
   'racing',
   'ЧРКФ',
   'Бега борзых',
-  'Курсинг в Вологде',
+  'Курсинг в Вологде — ЧРКФ (Бега борзых)',
   'ВГОО - Клуб собаководства "Сириус"',
   'Вологодская область, Вологда',
   NULL,
@@ -6643,10 +7419,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -6662,11 +7441,12 @@ INSERT INTO events (
   2026,
   '2026-08-29',
   '2026-08-30',
-  'ЧРКФ(Бега борзых)',
+  'ЧРКФ
+(Бега борзых)',
   'racing',
   'ЧРКФ',
   'Бега борзых',
-  'Курсинг Пермь',
+  'Курсинг Пермь — ЧРКФ (Бега борзых)',
   'РСОО "Федерация спортивно-прикладного собаководства Пермского края"',
   'Пермский край, Пермь',
   NULL,
@@ -6675,10 +7455,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -6693,12 +7476,13 @@ INSERT INTO events (
 ) VALUES (
   2026,
   '2026-08-30',
-  'null',
-  'ЧРКФ(Курсинг борзых)',
+  NULL,
+  'ЧРКФ
+(Курсинг борзых)',
   'coursing',
   'ЧРКФ',
   'Курсинг борзых',
-  'Курсинг в Вологде',
+  'Курсинг в Вологде — ЧРКФ (Курсинг борзых)',
   'ВГОО - Клуб собаководства "Сириус"',
   'Вологодская область, Вологда',
   NULL,
@@ -6707,10 +7491,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -6726,11 +7513,12 @@ INSERT INTO events (
   2026,
   '2026-09-12',
   '2026-09-13',
-  'ЧРКФ(Курсинг борзых)',
+  'ЧРКФ
+(Курсинг борзых)',
   'coursing',
   'ЧРКФ',
   'Курсинг борзых',
-  'Курсинг и рейсинг Екатеринбург',
+  'Курсинг и рейсинг Екатеринбург — ЧРКФ (Курсинг борзых)',
   'РОО "Союз охотников и рыболовов Свердловской области"',
   'Свердловская область, д. Большое Седельниково',
   NULL,
@@ -6739,10 +7527,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -6758,11 +7549,12 @@ INSERT INTO events (
   2026,
   '2026-09-12',
   '2026-09-13',
-  'Чемпионат России(Бега борзых)',
+  'Чемпионат России
+(Бега борзых)',
   'racing',
   'Чемпионат России',
   'Бега борзых',
-  'Курсинг на Ярославке',
+  'Курсинг на Ярославке — Чемпионат России (Бега борзых)',
   'ОООК «Кинологический центр "Элита" (РАЛББ)',
   'Московская область, д. Михайловское',
   NULL,
@@ -6771,10 +7563,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -6790,11 +7585,17 @@ INSERT INTO events (
   2026,
   '2026-09-26',
   '2026-09-27',
-  'ПЧРКФ(Курсинг борзых)УиппетРодезийский риджбекБасенджиРусская псовая борзаяСалюки',
+  'ПЧРКФ
+(Курсинг борзых)
+Уиппет
+Родезийский риджбек
+Басенджи
+Русская псовая борзая
+Салюки',
   'coursing',
   'ПЧРКФ',
   'Курсинг борзых',
-  'Беговой клуб "Раздолье"',
+  'Беговой клуб "Раздолье" — ПЧРКФ (Курсинг борзых)',
   'РООКО Кинологический союз "Арта"',
   'Калужская область, Жуковский р-н, БО Иволга',
   NULL,
@@ -6803,10 +7604,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -6822,11 +7626,12 @@ INSERT INTO events (
   2026,
   '2026-09-26',
   '2026-09-27',
-  'ЧРКФ(БЗМП)',
+  'ЧРКФ
+(БЗМП)',
   'bzmp',
   'ЧРКФ',
   'БЗМП',
-  'Беговой клуб "Раздолье"',
+  'Беговой клуб "Раздолье" — ЧРКФ (БЗМП)',
   'РООКО Кинологический союз "Арта"',
   'Калужская область, Жуковский р-н, БО Иволга',
   NULL,
@@ -6835,10 +7640,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -6854,11 +7662,12 @@ INSERT INTO events (
   2026,
   '2026-09-26',
   '2026-09-27',
-  'ЧРКФ(Курсинг борзых)',
+  'ЧРКФ
+(Курсинг борзых)',
   'coursing',
   'ЧРКФ',
   'Курсинг борзых',
-  'Курсинг Ярославль',
+  'Курсинг Ярославль — ЧРКФ (Курсинг борзых)',
   'ОО "Ярославский Областной Клуб Спортивно-Прикладного Собаководства"',
   'Ярославская область, Ярославль',
   NULL,
@@ -6867,10 +7676,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -6886,11 +7698,12 @@ INSERT INTO events (
   2026,
   '2026-09-26',
   '2026-09-27',
-  'ЧРКФ(БЗМП)',
+  'ЧРКФ
+(БЗМП)',
   'bzmp',
   'ЧРКФ',
   'БЗМП',
-  'Курсинг Ярославль',
+  'Курсинг Ярославль — ЧРКФ (БЗМП)',
   'ОО "Ярославский Областной Клуб Спортивно-Прикладного Собаководства"',
   'Ярославская область, Ярославль',
   NULL,
@@ -6899,10 +7712,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -6918,11 +7734,12 @@ INSERT INTO events (
   2026,
   '2026-09-26',
   '2026-09-27',
-  'ЧРКФ(Курсинг борзых)',
+  'ЧРКФ
+(Курсинг борзых)',
   'coursing',
   'ЧРКФ',
   'Курсинг борзых',
-  'Курсинг Пермь',
+  'Курсинг Пермь — ЧРКФ (Курсинг борзых)',
   'РСОО "Федерация спортивно-прикладного собаководства Пермского края"',
   'Пермский край, Пермь',
   NULL,
@@ -6931,10 +7748,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -6950,11 +7770,12 @@ INSERT INTO events (
   2026,
   '2026-09-26',
   '2026-09-27',
-  'ЧРКФ(БЗМП)',
+  'ЧРКФ
+(БЗМП)',
   'bzmp',
   'ЧРКФ',
   'БЗМП',
-  'Курсинг Пермь',
+  'Курсинг Пермь — ЧРКФ (БЗМП)',
   'РСОО "Федерация спортивно-прикладного собаководства Пермского края"',
   'Пермский край, Пермь',
   NULL,
@@ -6963,10 +7784,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -6982,11 +7806,12 @@ INSERT INTO events (
   2026,
   '2026-09-26',
   '2026-09-27',
-  'CACL(Курсинг борзых)',
+  'CACL
+(Курсинг борзых)',
   'coursing',
   'CACL',
   'Курсинг борзых',
-  '',
+  'CACL (Курсинг борзых)',
   'ОО "Хабаровское городское общество охотников рыболовов"',
   'Хабаровский край, Хабаровск',
   NULL,
@@ -6995,10 +7820,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -7014,11 +7842,12 @@ INSERT INTO events (
   2026,
   '2026-09-26',
   '2026-09-27',
-  'ЧРКФ(БЗМП)',
+  'ЧРКФ
+(БЗМП)',
   'bzmp',
   'ЧРКФ',
   'БЗМП',
-  '',
+  'ЧРКФ (БЗМП)',
   'ОО "Хабаровское городское общество охотников рыболовов"',
   'Хабаровский край, Хабаровск',
   NULL,
@@ -7027,10 +7856,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -7046,11 +7878,12 @@ INSERT INTO events (
   2026,
   '2026-10-03',
   '2026-10-04',
-  'ЧРКФ(Курсинг борзых)',
+  'ЧРКФ
+(Курсинг борзых)',
   'coursing',
   'ЧРКФ',
   'Курсинг борзых',
-  'Курсинг на Ярославке',
+  'Курсинг на Ярославке — ЧРКФ (Курсинг борзых)',
   'СПГОО "Общество любителей животных "Радонежье"',
   'Московская область, д. Михайловское',
   NULL,
@@ -7059,10 +7892,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -7078,11 +7914,12 @@ INSERT INTO events (
   2026,
   '2026-10-03',
   '2026-10-04',
-  'Кубок России(БЗМП)',
+  'Кубок России
+(БЗМП)',
   'bzmp',
   'Кубок России',
   'БЗМП',
-  'Курсинг на Ярославке',
+  'Курсинг на Ярославке — Кубок России (БЗМП)',
   'СПГОО "Общество любителей животных «Радонежье"',
   'Московская область, д. Михайловское',
   NULL,
@@ -7091,10 +7928,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -7110,11 +7950,12 @@ INSERT INTO events (
   2026,
   '2026-10-03',
   '2026-10-04',
-  'ЧРКФ(БЗМП)',
+  'ЧРКФ
+(БЗМП)',
   'bzmp',
   'ЧРКФ',
   'БЗМП',
-  'Курсинг на Ярославке',
+  'Курсинг на Ярославке — ЧРКФ (БЗМП)',
   'СПГОО "Общество любителей животных «Радонежье"',
   'Московская область, д. Михайловское',
   NULL,
@@ -7123,10 +7964,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -7142,11 +7986,12 @@ INSERT INTO events (
   2026,
   '2026-10-17',
   '2026-10-18',
-  'ЧРКФ(Курсинг борзых)',
+  'ЧРКФ
+(Курсинг борзых)',
   'coursing',
   'ЧРКФ',
   'Курсинг борзых',
-  'Курсинг Ставрополь',
+  'Курсинг Ставрополь — ЧРКФ (Курсинг борзых)',
   'ОО Региональное кинологическое общество Ставропольского края "Альянс"',
   'Ставропольский край, Ставрополь',
   NULL,
@@ -7155,10 +8000,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,
@@ -7174,11 +8022,12 @@ INSERT INTO events (
   2026,
   '2026-10-17',
   '2026-10-18',
-  'ЧРКФ(БЗМП)',
+  'ЧРКФ
+(БЗМП)',
   'bzmp',
   'ЧРКФ',
   'БЗМП',
-  'Курсинг Ставрополь',
+  'Курсинг Ставрополь — ЧРКФ (БЗМП)',
   'ОО Региональное кинологическое общество Ставропольского края "Альянс"',
   'Ставропольский край, Ставрополь',
   NULL,
@@ -7187,10 +8036,13 @@ INSERT INTO events (
   NULL
 )
 ON CONFLICT(date_start, title, location, event_type) DO UPDATE SET
+  year = excluded.year,
+  date_start = excluded.date_start,
+  date_end = excluded.date_end,
+  rank_label = excluded.rank_label,
   event_type = excluded.event_type,
   competition_kind = excluded.competition_kind,
   competition_type = excluded.competition_type,
-  rank_label = excluded.rank_label,
   title = excluded.title,
   host_club = excluded.host_club,
   location = excluded.location,

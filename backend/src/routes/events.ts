@@ -14,16 +14,17 @@ export function handleCompetitions(app: Hono<{ Bindings: Env }>) {
 
     let query = `
       SELECT
-        id, year, date_start, date_end, rank_label, event_type,
-        competition_kind, competition_type, title, host_club,
-        region, location, catalog_url, results_url, confirmed
-      FROM events WHERE 1=1
+        e.id, e.year, e.date_start, e.date_end, e.rank_label, e.event_type,
+        e.competition_kind, e.competition_type, e.title, e.host_club,
+        e.region, e.location, e.catalog_url, e.results_url, e.confirmed, e.judges,
+        (SELECT COUNT(DISTINCT r.dog_id) FROM results r WHERE r.event_id = e.id) AS participants_count
+      FROM events e WHERE 1=1
     `;
     const params = [];
 
     if (year) {
-      query += ' AND year = ?';
-      params.push(year);
+      query += ' AND (year = ? OR substr(date_start, 1, 4) = ?)';
+      params.push(year, year);
     }
 
     query += ' ORDER BY date_start DESC';
@@ -69,5 +70,25 @@ export function handleCompetitions(app: Hono<{ Bindings: Env }>) {
     `).bind(eventId).all();
 
     return c.json({ success: true, data: results });
+  });
+
+  // GET /api/stats
+  app.get('/api/stats', async (c) => {
+    const db = c.env.DB;
+
+    const { results: eventCount } = await db.prepare('SELECT COUNT(*) as count FROM events').all();
+    const { results: dogCount } = await db.prepare('SELECT COUNT(*) as count FROM dogs').all();
+    const { results: resultCount } = await db.prepare('SELECT COUNT(*) as count FROM results').all();
+    const { results: breedCount } = await db.prepare('SELECT COUNT(DISTINCT breed) as count FROM dogs').all();
+
+    return c.json({
+      success: true,
+      data: {
+        events: eventCount[0]?.count || 0,
+        dogs: dogCount[0]?.count || 0,
+        results: resultCount[0]?.count || 0,
+        breeds: breedCount[0]?.count || 0,
+      }
+    });
   });
 }

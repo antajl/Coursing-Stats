@@ -35,7 +35,7 @@ npm run dev
 Или вручную:
 
 ```bash
-# Терминал 1: Backend (Worker)
+# Терминал 1: Backend (Worker) — remote D1 для актуальных events/judges
 cd backend
 npx wrangler dev --remote --port 8787
 # Запускается на http://127.0.0.1:8787
@@ -56,32 +56,43 @@ scripts\start-servers.bat
 
 ### 1. Проверка API
 
-Откройте http://127.0.0.1:8787/api/test в браузере — должны увидеть JSON ответ.
+С запущенным `npm run dev`:
+
+```bash
+npm run smoke-api
+```
+
+Или вручную: http://127.0.0.1:8787/api/years — JSON со списком годов.
+
+(Эндпоинта `/api/test` нет.)
 
 ### 2. Проверка фронтенда
 
 Откройте http://localhost:5173 в браузере — должны увидеть главную страницу.
 
-### 3. Тестирование парсера
+**Тема:** по умолчанию светлая. Тёмная — переключатель в шапке (сохраняется в `localStorage.theme`). После смены CSS/темы — жёсткое обновление (`Ctrl+Shift+R`).
+
+### 3. Тестирование парсеров
 
 ```bash
-cd backend
-npx tsx scripts/test/test-parser.ts
+npm run test-parser           # синтетика (v1)
+npm run test-parser-fixtures  # v2 модульные на реальных HTML фикстурах
 ```
 
 ## Структура проекта
 
 ```
 ProCoursing/
-├── backend/          # Backend (Worker API + парсеры)
-│   ├── src/          # Worker source
-│   ├── parsers/      # Парсеры (coursing, BZMP, racing)
-│   ├── scripts/      # Скрипты загрузки данных
-│   └── lib/          # Общие модули
-├── frontend/         # Frontend (React)
-│   └── src/          # React приложение
-├── docs/             # Документация
-└── data/             # Данные (JSON, SQL)
+├── backend/              # Worker API + парсеры + скрипты
+│   ├── src/              # worker.ts, app.ts, routes/
+│   ├── parsers/          # v1: parse-results-*.ts; v2: coursing/, bzmp/, racing/, unique/
+│   ├── scripts/          # Все .ts (npx tsx): scrape/, load/, reparse/, test/, …
+│   ├── tests/fixtures/   # Реальные HTML фикстуры парсеров
+│   └── lib/              # fetch-win1251.ts, dog-lookup.ts
+├── frontend/             # React (App.tsx, AppRoutes.tsx, Nav.tsx)
+│   └── src/
+├── docs/                 # Документация
+└── data/                 # Данные (JSON, SQL) — в .gitignore для events/
 ```
 
 ## Основные команды
@@ -107,6 +118,9 @@ npm run migrate-dog-names
 
 # Тесты
 npm test
+npm run smoke-api             # API smoke (нужен npm run dev)
+npm run test-parser
+npm run test-parser-fixtures
 ```
 
 ## Где что искать
@@ -114,7 +128,7 @@ npm test
 - **API endpoints:** `backend/src/routes/`
 - **Парсеры:** `backend/parsers/`
 - **Скрипты:** `backend/scripts/`
-- **React страницы:** `frontend/src/pages/`
+- **Фронтенд (маршруты):** `frontend/src/AppRoutes.tsx`, гид: `docs/development/FRONTEND-MAP.md`
 - **React компоненты:** `frontend/src/components/`
 - **Схема БД:** `backend/schema.sql`
 

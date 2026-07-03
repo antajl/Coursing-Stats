@@ -5,19 +5,19 @@
 
 ## Документация
 
-Полная документация проекта находится в папке `docs/`:
+Полная документация в папке **[docs/](docs/README.md)**:
 
-- **[docs/README.md](docs/README.md)** — Оглавление и краткий обзор
-- **[docs/01-QUICK-START.md](docs/01-QUICK-START.md)** — Быстрый старт для новых разработчиков
-- **[docs/02-AI-GUIDELINES.md](docs/02-AI-GUIDELINES.md)** — Правила для ИИ-агента
-- **[docs/03-ARCHITECTURE.md](docs/03-ARCHITECTURE.md)** — Архитектура системы
-- **[docs/04-API-REFERENCE.md](docs/04-API-REFERENCE.md)** — Документация API
-- **[docs/05-PARSING.md](docs/05-PARSING.md)** — Парсинг данных
-- **[docs/06-DATABASE.md](docs/06-DATABASE.md)** — Работа с БД
-- **[docs/07-DEPLOYMENT.md](docs/07-DEPLOYMENT.md)** — Деплой и инфраструктура
-- **[docs/08-DEVELOPMENT.md](docs/08-DEVELOPMENT.md)** — Разработка
-- **[docs/09-DECISIONS-LOG.md](docs/09-DECISIONS-LOG.md)** — История архитектурных решений
-- **[docs/10-FUTURE-PLANS.md](docs/10-FUTURE-PLANS.md)** — Планы на будущее
+| Раздел | Файл |
+|--------|------|
+| Статус проекта | [docs/00-PROJECT-STATUS.md](docs/00-PROJECT-STATUS.md) |
+| Быстрый старт | [docs/01-QUICK-START.md](docs/01-QUICK-START.md) |
+| ИИ-агент | [docs/ai/GUIDELINES.md](docs/ai/GUIDELINES.md), [docs/ai/MEMORY-SETUP.md](docs/ai/MEMORY-SETUP.md) |
+| Архитектура | [docs/architecture/ARCHITECTURE.md](docs/architecture/ARCHITECTURE.md), [API](docs/architecture/API-REFERENCE.md) |
+| Данные | [docs/data/PARSING.md](docs/data/PARSING.md), [docs/data/DATABASE.md](docs/data/DATABASE.md) |
+| Разработка | [docs/development/DEVELOPMENT.md](docs/development/DEVELOPMENT.md), [FRONTEND-MAP](docs/development/FRONTEND-MAP.md) |
+| Планы | [docs/plans/FUTURE-PLANS.md](docs/plans/FUTURE-PLANS.md) |
+
+Оглавление: **[docs/README.md](docs/README.md)**
 
 ## Быстрый старт
 
@@ -28,8 +28,9 @@ npm install
 # Локальная разработка (использует remote D1)
 npm run dev
 
-# Тестирование парсера
+# Тестирование парсеров
 npm run test-parser
+npm run test-parser-fixtures
 ```
 
 ## Деплой

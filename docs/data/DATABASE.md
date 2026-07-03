@@ -9,7 +9,7 @@
 Для загрузки результатов используется API эндпоинт `/api/admin/import-results`:
 
 ```bash
-node backend/scripts/load/load-results.mjs data/events/events.json http://127.0.0.1:8787/api/admin/import-results ADMIN_TOKEN
+npx tsx backend/scripts/load/load-results.ts data/events/events.json http://127.0.0.1:8787/api/admin/import-results ADMIN_TOKEN
 ```
 
 **Преимущества API подхода:**
@@ -260,12 +260,34 @@ ALTER TABLE events ADD COLUMN track_schemes TEXT;
 ### Загрузка событий
 
 ```bash
-npm run load-events
+npm run scrape-index    # procoursing.ru → data/events/events.json
+npm run load-events     # → data/imports/load-events.sql
+npx wrangler d1 execute pc-db --remote --file=./data/imports/load-events.sql
 ```
 
 Скрипт: `backend/scripts/load/load-events.ts`
 
-### Загрузка результатов
+**Upsert:**
+- С `results_url` → `ON CONFLICT(results_url) DO UPDATE`
+- Без `results_url` → `ON CONFLICT(date_start, title, location, event_type) DO UPDATE`
+- `date_end`: SQL `NULL`, не строка `'null'`
+
+**После смены `results_url`:** событие может получить новый `id` в D1. Перепарсинг SQL нужно генерировать **после** load-events и с **той же** БД (`--remote` / `--local`). Подробнее: [`CALENDAR-AND-DB-UPDATE.md`](CALENDAR-AND-DB-UPDATE.md).
+
+### Перепарсинг результатов (SQL-файлы)
+
+```bash
+npm run reparse-2025                              # remote D1 по умолчанию
+npx tsx backend/scripts/reparse/reparse-by-year.ts 2025 --local
+
+# Большие файлы — батчами на remote (см. CALENDAR-AND-DB-UPDATE.md)
+npx tsx backend/scripts/load/split-sql-batches.ts data/updates/reparse-2025.sql
+npx wrangler d1 execute pc-db --remote --file=./data/updates/reparse-2025-batches/batch-01.sql
+```
+
+**Ошибка `{"D1_RESET_DO":true}`** при `--file` на remote — файл слишком большой для одного import (~6 MB reparse). Решение: `split-sql-batches.ts`.
+
+### Загрузка результатов (legacy API)
 
 ```bash
 npm run load-results
@@ -314,7 +336,9 @@ npm run sync-to-remote
 
 ## Текущее состояние БД
 
-**Local и remote синхронизированы 2026-06-28:**
+**Календарь и reparse 2025 обновлены на remote 2026-07-03** (см. `docs/data/CALENDAR-AND-DB-UPDATE.md`).
+
+Ранее (2026-06-28):
 
 - **events:** 219
 - **dogs:** ~1579
@@ -419,6 +443,6 @@ Headers: X-Admin-Token: secret
 
 - Schema: `backend/schema.sql`
 - Миграции: `backend/data/migrations/` (если структурировано)
-- Скрипт синхронизации: `backend/scripts/sync-local-to-remote.mjs`
-- Скрипт загрузки событий: `backend/scripts/load-events.mjs`
-- Скрипт загрузки результатов: `backend/scripts/load-results.mjs`
+- Скрипт синхронизации: `backend/scripts/sync/sync-local-to-remote.ts`
+- Скрипт загрузки событий: `backend/scripts/load/load-events.ts`
+- Скрипт загрузки результатов: `backend/scripts/load/load-results.ts`

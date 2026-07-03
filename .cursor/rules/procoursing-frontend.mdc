@@ -1,0 +1,27 @@
+---
+description: Frontend ProCoursing — дизайн-система и UI-конвенции
+globs: frontend/src/**
+alwaysApply: false
+---
+
+# Frontend
+
+## Дизайн
+
+Палитра: `old-money`, `cream`, `camel` (акцент), `charcoal` (текст), `forest` (курсинг), `warm-blue` (рейсинг), `terracotta` (БЗМП). Dark mode: class-based в `tailwind.config.js`.
+
+- **Без эмодзи** в UI — SVG (Lucide) или текст
+- Touch targets ≥ 44px, `dark:` классы для всех новых компонентов
+- Дисциплины визуально разделены цветом (календарь, профиль собаки)
+
+## Страницы
+
+`frontend/src/pages/`: Events, TopDogs, Judges, SpeedRecords, DogProfile, Home.
+
+## Паттерны
+
+- React Query для данных, Zod для валидации
+- API через `frontend/src/services/api.ts` — base URL из env
+- Два топа — отдельные вкладки/маршруты, не объединять
+
+Подробнее: `docs/design/DESIGN-SYSTEM.md`, `docs/design/EVENT-COLORS.md`

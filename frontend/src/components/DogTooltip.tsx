@@ -1,37 +1,31 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { api } from '../services/api'
-import { DogSilhouettes, getSilhouetteType } from './DogSilhouettes'
+import { parseDogName } from '../lib/dogName'
 
-// Вычисляет позицию карточки так, чтобы она не выходила за границы экрана
-function computePosition(anchorRect, cardWidth, cardHeight) {
+// Позиция рядом с курсором, с удержанием в пределах экрана
+function computePosition(pointer, cardWidth, cardHeight) {
   const margin = 12
+  const offset = 14
   const vw = window.innerWidth
   const vh = window.innerHeight
 
-  let x = anchorRect.right + margin
-  let y = anchorRect.top
+  let x = pointer.x + offset
+  let y = pointer.y + offset
 
-  // Не помещается справа → открываем слева
   if (x + cardWidth > vw - margin) {
-    x = anchorRect.left - cardWidth - margin
+    x = pointer.x - cardWidth - offset
   }
-  // Не помещается слева тоже → прижимаем к правому краю
-  if (x < margin) {
-    x = vw - cardWidth - margin
-  }
-  // Не помещается снизу → сдвигаем вверх
   if (y + cardHeight > vh - margin) {
-    y = vh - cardHeight - margin
+    y = pointer.y - cardHeight - offset
   }
-  // Не уходим выше экрана
-  if (y < margin) {
-    y = margin
-  }
+
+  x = Math.max(margin, Math.min(x, vw - cardWidth - margin))
+  y = Math.max(margin, Math.min(y, vh - cardHeight - margin))
 
   return { x, y }
 }
 
-export default function DogTooltip({ dogId, anchorRect, onClose }) {
+export default function DogTooltip({ dogId, pointer, onClose }) {
   const [dogData, setDogData] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
@@ -41,11 +35,11 @@ export default function DogTooltip({ dogId, anchorRect, onClose }) {
 
   // Пересчитываем позицию когда карточка отрендерилась и мы знаем её размер
   useEffect(() => {
-    if (!anchorRect || !tooltipRef.current) return
+    if (!pointer || !tooltipRef.current) return
     const rect = tooltipRef.current.getBoundingClientRect()
-    const pos = computePosition(anchorRect, rect.width, rect.height)
+    const pos = computePosition(pointer, rect.width, rect.height)
     setPosition(pos)
-  }, [anchorRect, dogData])
+  }, [pointer, dogData])
 
   useEffect(() => {
     if (!dogId) return
@@ -81,7 +75,7 @@ export default function DogTooltip({ dogId, anchorRect, onClose }) {
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [handleClickOutside])
 
-  if (!anchorRect) return null
+  if (!pointer) return null
 
   const style = {
     position: 'fixed',
@@ -122,10 +116,7 @@ export default function DogTooltip({ dogId, anchorRect, onClose }) {
   const hasCoursingData = coursing.total_starts > 0
   const hasRacingData = racing.total_starts > 0
 
-  const silhouetteType = getSilhouetteType(dogData?.breed)
-
-  // Имя на русском показываем только если оно отличается от латинского
-  const showRuName = dogData.name_ru && dogData.name_ru !== dogData.name_lat
+  const { primary, secondary } = parseDogName(dogData.name_lat, dogData.name_ru)
 
   const hasCourseMedals = coursing.gold > 0 || coursing.silver > 0 || coursing.bronze > 0
   const hasRacingMedals = racing.gold > 0 || racing.silver > 0 || racing.bronze > 0
@@ -139,27 +130,17 @@ export default function DogTooltip({ dogId, anchorRect, onClose }) {
 
   // ── ПОЛНАЯ карточка (единственный режим) ─────────────────────────────────
   return (
-    <>
-      <DogSilhouettes />
       <div ref={tooltipRef} style={style}
         className="bg-white dark:bg-charcoal-800 rounded-2xl shadow-xl border border-old-money-200 dark:border-charcoal-600 w-[320px] md:w-[440px] animate-fade-in-scale">
 
         <div className="p-4 md:p-5 relative">
 
           {/* ── Шапка ─────────────────────────────────────────────────────── */}
-          <div className="flex items-center gap-4 mb-4 pb-4 border-b border-old-money-100 dark:border-charcoal-600">
-            {/* Силуэт */}
-            <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-old-money-100 dark:from-charcoal-700 to-old-money-200 dark:to-charcoal-600 rounded-full flex items-center justify-center">
-              <svg className="w-10 h-10 text-old-money-700 dark:text-old-money-300">
-                <use href={`#silhouette-${silhouetteType}`} />
-              </svg>
-            </div>
-
-            {/* Имя и порода — всё выровнено по левому краю силуэта */}
-            <div className="flex-1 min-w-0">
+          <div className="mb-4 pb-4 border-b border-old-money-100 dark:border-charcoal-600">
+            <div className="min-w-0">
               <div className="flex items-baseline gap-2 flex-wrap">
                 <h3 className="text-base font-bold font-serif text-charcoal-900 dark:text-charcoal-100 leading-tight">
-                  {dogData.name_lat}
+                  {primary}
                 </h3>
                 {dogData.sex && (
                   <span className="text-sm text-gray-400 dark:text-gray-500 flex-shrink-0">
@@ -167,8 +148,8 @@ export default function DogTooltip({ dogId, anchorRect, onClose }) {
                   </span>
                 )}
               </div>
-              {showRuName && (
-                <div className="text-xs text-old-money-500 dark:text-old-money-400 mt-0.5 truncate">{dogData.name_ru}</div>
+              {secondary && (
+                <div className="text-xs text-old-money-500 dark:text-old-money-400 mt-0.5 truncate">{secondary}</div>
               )}
               {/* Порода — под именем, не правее */}
               <div className="mt-1.5">
@@ -320,6 +301,5 @@ export default function DogTooltip({ dogId, anchorRect, onClose }) {
           )}
         </div>
       </div>
-    </>
   )
 }

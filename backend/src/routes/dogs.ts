@@ -1,4 +1,6 @@
 import { Hono } from 'hono';
+import { aggregateQualificationTitles } from '../lib/qualification-titles';
+import { RACING_EXCLUDED_STATUSES_SQL } from '../lib/racing-status';
 
 type Env = {
   DB: any;
@@ -73,6 +75,7 @@ export function handleDogs(app: Hono<{ Bindings: Env }>) {
           FROM results r2
           JOIN events e ON r2.event_id = e.id
           WHERE r2.dog_id = ? AND e.event_type = 'racing' AND r2.raw_scores_json IS NOT NULL
+            AND r2.status NOT IN ${RACING_EXCLUDED_STATUSES_SQL}
           ORDER BY (
             SELECT MAX(CAST(json_extract(h.value, '$.speed_kmh') AS REAL))
             FROM json_each(json_extract(r2.raw_scores_json, '$.heats')) AS h
@@ -82,7 +85,7 @@ export function handleDogs(app: Hono<{ Bindings: Env }>) {
         ) AS best_speed_event_url
       FROM results r
       JOIN events e ON r.event_id = e.id
-      WHERE r.dog_id = ? AND r.status = 'finished' AND e.event_type = 'racing'
+      WHERE r.dog_id = ? AND r.status NOT IN ${RACING_EXCLUDED_STATUSES_SQL} AND e.event_type = 'racing'
     `;
 
     const { results: racingCountResults } = await db.prepare(racingQuery).bind(dogId, dogId).all();
@@ -103,6 +106,7 @@ export function handleDogs(app: Hono<{ Bindings: Env }>) {
         FROM results
         JOIN events ON results.event_id = events.id
         WHERE results.dog_id = ? AND events.event_type = 'racing' AND results.raw_scores_json IS NOT NULL
+          AND results.status NOT IN ${RACING_EXCLUDED_STATUSES_SQL}
       `;
 
       const { results: speedResults } = await db.prepare(speedQuery).bind(dogId).all();
@@ -133,6 +137,15 @@ export function handleDogs(app: Hono<{ Bindings: Env }>) {
       }
     }
 
+    const { results: qualificationRows } = await db.prepare(`
+      SELECT qualification
+      FROM results
+      WHERE dog_id = ? AND status = 'finished'
+        AND qualification IS NOT NULL AND TRIM(qualification) != ''
+    `).bind(dogId).all();
+
+    dogData.titles = aggregateQualificationTitles(qualificationRows);
+
     return c.json({ success: true, data: dogData });
   });
 
@@ -156,7 +169,7 @@ export function handleDogs(app: Hono<{ Bindings: Env }>) {
         r.status
       FROM events e
       JOIN results r ON e.id = r.event_id
-      WHERE r.dog_id = ? AND r.status = 'finished'
+      WHERE r.dog_id = ? AND r.status NOT IN ${RACING_EXCLUDED_STATUSES_SQL}
       ORDER BY e.date_start DESC
     `;
 

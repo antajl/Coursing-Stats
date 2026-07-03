@@ -1,0 +1,30 @@
+---
+description: ProCoursing Stats — контекст проекта и зафиксированные решения
+alwaysApply: true
+---
+
+# ProCoursing Stats
+
+Агрегатор статистики собак с procoursing.ru (курсинг, БЗМП, бега). Стек: Cloudflare Pages + Worker (Hono) + D1, React + Vite + TailwindCSS.
+
+**Перед работой:** `docs/00-PROJECT-STATUS.md` → `docs/ai/GUIDELINES.md`
+
+**Домены:** фронт `procoursing.antajl.ru`, API `procoursing-stats.antajltube.workers.dev`
+
+## Не менять без явного запроса
+
+- Все породы, архив 2015–2026 (фильтры в UI)
+- **Два отдельных рейтинга:** по местам (медали) и по очкам — не сводить в одну формулу
+- Родословные — ссылка на внешний сайт, не парсим PDF
+- `total_score` = исходная `grand_total`, **не делить** на число судей
+- API пути: `/api/competitions`, **не** `/api/events` (блокируется uBlock)
+
+## Разработка
+
+```bash
+npm run dev          # Worker :8787 + Vite :5173
+npm test
+npx tsx backend/scripts/test/test-parser.ts   # перед изменением парсера
+```
+
+Коммиты — только по явной просьбе пользователя. При значимых изменениях обновляй `docs/00-PROJECT-STATUS.md`.

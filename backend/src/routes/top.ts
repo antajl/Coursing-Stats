@@ -1,4 +1,5 @@
 import { Hono } from 'hono';
+import { RACING_EXCLUDED_STATUSES_SQL } from '../lib/racing-status';
 
 type Env = {
   DB: any;
@@ -176,6 +177,7 @@ export function handleTop(app: Hono<{ Bindings: Env }>) {
         d.name_lat,
         d.name_ru,
         d.breed,
+        MAX(e.year) AS year,
         MAX(
           CASE
             WHEN json_extract(r.raw_scores_json, '$.format') = 'racing' THEN (
@@ -200,7 +202,8 @@ export function handleTop(app: Hono<{ Bindings: Env }>) {
       FROM results r
       JOIN dogs d ON d.id = r.dog_id
       JOIN events e ON r.event_id = e.id
-      WHERE r.status = 'finished' AND e.event_type = 'racing' AND r.raw_scores_json IS NOT NULL
+      WHERE r.status NOT IN ${RACING_EXCLUDED_STATUSES_SQL}
+        AND e.event_type = 'racing' AND r.raw_scores_json IS NOT NULL
     `;
 
     if (year) {
@@ -213,10 +216,10 @@ export function handleTop(app: Hono<{ Bindings: Env }>) {
       params.push(breed);
     }
 
-    query += ' GROUP BY d.id';
+    query += ' GROUP BY d.id HAVING best_speed IS NOT NULL';
 
     if (minStarts > 0) {
-      query += ' HAVING total_starts >= ?';
+      query += ' AND total_starts >= ?';
       params.push(minStarts);
     }
 

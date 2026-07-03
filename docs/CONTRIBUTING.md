@@ -31,7 +31,10 @@ npm run dev
 ### Тестирование
 
 ```bash
-npm test
+npm test                    # vitest (api.test.ts сейчас describe.skip)
+npm run smoke-api           # ручная проверка API (нужен npm run dev)
+npm run test-parser         # синтетические тесты парсеров v1
+npm run test-parser-fixtures # v2 модульные парсеры на реальных фикстурах
 ```
 
 ### Линтинг
@@ -55,7 +58,7 @@ npm run lint
 - Следуйте существующему стилю кода
 - Используйте TailwindCSS для стилей
 - Не используйте эмодзи в UI (используйте SVG иконки или текст)
-- Следуйте дизайн-системе (см. `docs/design/design.md`)
+- Следуйте дизайн-системе (см. `docs/design/DESIGN-SYSTEM.md`)
 
 ## Документация
 
@@ -63,7 +66,7 @@ npm run lint
 - Обновите `docs/00-PROJECT-STATUS.md`
 - Обновите `docs/README.md` если нужно
 - Добавьте документацию в соответствующий раздел docs/
-- Обновите `docs/design/changelog.md` для визуальных изменений
+- Обновите `docs/CHANGELOG.md` для визуальных изменений
 
 ## Commit сообщения
 

@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"npx wrangler dev backend/src/worker.ts --port 8787\" \"cd frontend && npm run dev\"",
+    "dev": "concurrently \"npx wrangler dev backend/src/worker.ts --remote --port 8787\" \"cd frontend && npm run dev\"",
     "scrape-index": "npx tsx backend/scripts/scrape/scrape-year-index.ts",
     "parse-coursing": "npx tsx backend/parsers/parse-results-coursing.ts",
     "parse-bzmp": "npx tsx backend/parsers/parse-results-bzmp.ts",
@@ -28,6 +28,9 @@
     "merge-dogs": "npx tsx backend/scripts/update/merge-dogs.ts",
     "fetch-speed-records": "npx tsx backend/scripts/speed/fetch-speed-records.ts",
     "test-parser": "npx tsx backend/scripts/test/test-parser.ts",
+    "test-parser-fixtures": "npx tsx backend/scripts/test/test-parsers-fixtures.ts",
+    "download-fixtures": "npx tsx backend/scripts/test/download-fixtures.ts",
+    "smoke-api": "npx tsx backend/scripts/test/smoke-api.ts",
     "test": "vitest run backend/tests/"
   },
   "dependencies": {

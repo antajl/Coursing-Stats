@@ -11,7 +11,7 @@ import Database from "better-sqlite3";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { normalizeDogName, normalizeBreed } from "../../lib/dog-lookup.mjs";
+import { normalizeDogName, normalizeBreed } from "../../lib/dog-lookup";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const sqlOnly = process.argv.includes("--sql");

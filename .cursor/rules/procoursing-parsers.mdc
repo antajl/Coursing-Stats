@@ -1,0 +1,36 @@
+---
+description: Парсеры procoursing.ru — кодировка, тесты, v1/v2
+globs: backend/parsers/**,backend/lib/**,backend/scripts/**/test*,backend/tests/**
+alwaysApply: false
+---
+
+# Парсеры
+
+## Кодировка (критично)
+
+procoursing.ru — **windows-1251** без charset. Используй `backend/lib/fetch-win1251.ts` + iconv-lite. Не доверяй `fetch().text()`.
+
+## Два набора парсеров
+
+| Набор | Путь | Статус |
+|-------|------|--------|
+| v1 | `parse-results-{coursing,bzmp,racing}.ts` | активен в reparse-скриптах |
+| v2 | `parsers/{coursing,bzmp,racing}/index.ts` | модульный, ещё не в продакшене |
+
+Перед переключением v2 → прод: прогнать фикстуры в `backend/tests/fixtures/`.
+
+## Правила парсинга
+
+- Сохраняй `raw_text` всегда
+- Coursing/BZMP/Racing — **разные форматы**, не копировать логику слепо
+- Заголовки групп: `colspan=25` + жирный текст (не только `bgcolor="#c0c0c0"`)
+- Racing: 18 ячеек (2025 CC) или 21 ячейка (2026 ВС)
+- Пауза между запросами при скрапинге
+
+## Workflow
+
+1. `npx tsx backend/scripts/test/test-parser.ts`
+2. При необходимости: `test-parsers-fixtures.ts` на реальных HTML
+3. После изменений — reparse + `wrangler d1 execute` (данные не обновляются сами)
+
+Подробнее: `docs/data/PARSING.md`, `docs/development/parser-fixtures-debugging.md`

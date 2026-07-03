@@ -18,41 +18,38 @@ backend/
 │       ├── judges.ts          # Judges statistics
 │       ├── speed.ts           # Speed records
 │       └── top.ts             # Top ratings (placement, score, speed)
-├── parsers/                   # Data parsers
-│   ├── parse-results-coursing.ts  # Coursing parser (~39 KB)
-│   ├── parse-results-bzmp.ts      # BZMP parser (~30 KB)
-│   └── parse-results-racing.ts    # Racing parser (~14 KB)
-├── scripts/                   # Data loading scripts (organized by folders)
-│   ├── scrape/                # Scraping scripts
+├── parsers/                   # Data parsers (v1 + v2 modular)
+│   ├── parse-results-coursing.ts  # v1 — reparse, CLI
+│   ├── parse-results-bzmp.ts      # v1
+│   ├── parse-results-racing.ts    # v1
+│   ├── coursing/index.ts          # v2 modular (target)
+│   ├── bzmp/index.ts              # v2 modular
+│   ├── racing/index.ts            # v2 modular
+│   ├── calendar/scrape-year-page.ts  # календарь s_{YEAR}.html
+│   └── unique/                    # v2 shared row/header parsers
+├── scripts/                   # All .ts, run via npx tsx
+│   ├── scrape/
 │   │   └── scrape-year-index.ts
-│   ├── load/                  # Load scripts
+│   ├── load/
 │   │   ├── load-events.ts
-│   │   └── load-results.ts
-│   ├── reparse/               # Reparse scripts (after parser changes)
-│   │   ├── reparse-bzmp-events.ts
-│   │   ├── reparse-coursing-events.ts
-│   │   └── reparse-racing-events.ts
-│   ├── migrate/               # Migration scripts
-│   │   └── migrate-normalize-dog-names.ts
-│   ├── sync/                  # Sync scripts (local ↔ remote)
-│   │   └── sync-local-to-remote.ts
-│   ├── update/                # Update scripts
-│   │   ├── update-current-year.ts
-│   │   └── merge-dogs.ts
-│   ├── speed/                 # Speed records scripts
-│   │   ├── sync-speed-records.ts
-│   │   └── fetch-speed-records-pdf.py
-│   ├── test/                  # Test scripts
-│   │   └── test-parser.ts
-│   ├── ci/                    # CI/CD scripts (GitHub Actions)
-│   │   └── ci-update-db.ts
+│   │   └── split-sql-batches.ts   # разбивка reparse SQL для remote D1
+│   ├── reparse/
+│   ├── migrate/
+│   ├── sync/
+│   ├── update/
+│   ├── speed/
+│   ├── test/                  # See test/README.md
+│   │   ├── test-parser.ts, test-parsers-fixtures.ts
+│   │   ├── download-fixtures.ts, smoke-api.ts, compare-parsers.ts
+│   │   └── debug/             # One-off investigation scripts
+│   ├── ci/
 │   └── archive/               # One-time scripts (DO NOT REUSE)
-├── lib/                       # Common modules
-│   ├── fetch-win1251.ts      # Windows-1251 decoding
-│   └── dog-lookup.ts         # Dog name normalization
-├── schema.sql                 # Database schema
-└── tests/                     # Tests
-    └── api.test.ts
+├── lib/
+│   ├── fetch-win1251.ts
+│   └── dog-lookup.ts
+├── tests/
+│   ├── api.test.ts            # describe.skip — use smoke-api.ts until vitest@4
+│   └── fixtures/              # Real HTML: coursing/, bzmp/, racing/
 ```
 
 ### Frontend
@@ -60,38 +57,35 @@ backend/
 ```
 frontend/
 ├── src/
-│   ├── App.tsx                # Main component with navigation
-│   ├── main.tsx               # Entry point
-│   ├── constants.ts           # Constants (colors, statuses)
-│   ├── components/            # React components
-│   │   ├── DogSilhouettes.tsx
+│   ├── App.tsx                # Shell: Nav + AppRoutes
+│   ├── AppRoutes.tsx          # Lazy routes (code-split pages)
+│   ├── main.tsx
+│   ├── components/
+│   │   ├── Nav.tsx            # Header: .nav-glass, centered links
+│   │   ├── PageLoader.tsx
+│   │   ├── ThemeToggle.tsx    # light default; localStorage.theme
+│   │   ├── ui/                # Custom Button, Card, Badge (NOT shadcn)
 │   │   ├── DogStatsTable.tsx
-│   │   ├── DogTooltip.tsx
-│   │   ├── FilterSelect.tsx
-│   │   └── FiltersDropdown.tsx
-│   ├── pages/                 # React pages
+│   │   ├── FiltersDropdown.tsx
+│   │   └── …
+│   ├── pages/
+│   │   ├── Home.tsx           # Landing (WIP)
+│   │   ├── Procoursing.tsx    # Tab hub: Events, TopDogs, Judges
+│   │   ├── TopDogs/           # index, TopDogsFilters, TopDogsTabs, filterUtils
 │   │   ├── DogProfile.tsx
-│   │   ├── DoninoDogProfile.tsx # Donino dog profile with speed stats
-│   │   ├── Events/            # Events pages
-│   │   │   ├── index.tsx       # Events list (from Events.tsx)
-│   │   │   └── EventResults.tsx
-│   │   ├── Judges/            # Judges pages
-│   │   │   ├── index.tsx       # Judges list (from Judges.tsx)
-│   │   │   └── JudgeDetail.tsx
-│   │   ├── Procoursing.tsx
-│   │   ├── SpeedRecords/      # Speed records pages
-│   │   │   ├── index.tsx       # Speed records table (from SpeedRecords.tsx)
-│   │   │   └── Stats.tsx       # Speed records stats (from SpeedRecordsStats.tsx)
-│   │   └── TopDogs.tsx
-│   ├── services/              # API client
-│   │   └── api.ts
-│   └── data/                  # Mock data
-│       └── mockData.ts
+│   │   ├── DoninoDogProfile.tsx
+│   │   ├── Events/
+│   │   │   ├── index.tsx      # Calendar
+│   │   │   └── EventResults/  # index, EventHeader, details/{Racing,Scoring}Detail
+│   │   ├── Judges/
+│   │   └── SpeedRecords/      # index, SpeedTableTab, CoursingTableTab, Stats
+│   ├── services/api.ts
+│   └── lib/
+│       ├── query-client.tsx, icons.ts
+│       └── recordDates.ts     # Donino dates (Excel serial, dedupe)
 ├── public/
-│   ├── _redirects             # SPA routing
-│   └── assets/                # Static assets
 ├── package.json
-├── vite.config.js
+├── vite.config.ts             # TypeScript; manualChunks for vendors
 └── tailwind.config.js
 ```
 
@@ -138,6 +132,7 @@ data/
 /
 ├── README.md
 ├── package.json
+├── package-lock.json          # В репозитории (npm ci в CI)
 ├── wrangler.toml
 ├── scripts/                   # Batch/Shell scripts
 │   ├── start-local.bat
@@ -158,14 +153,14 @@ npm run scrape-index           # Scrape event index
 npm run parse-coursing         # Parse coursing results
 npm run parse-bzmp             # Parse BZMP results
 npm run parse-racing           # Parse racing results
-npm run load-events            # Load events to D1
+npm run load-events            # events.json → data/imports/load-events.sql
 npm run load-results           # Load results to D1
 npm run reparse-bzmp           # Reparse BZMP events (legacy)
 npm run reparse-coursing       # Reparse coursing events (legacy)
 npm run reparse-racing         # Reparse racing events (legacy)
 npm run reparse-2023           # Reparse all 2023 events
 npm run reparse-2024           # Reparse all 2024 events
-npm run reparse-2025           # Reparse all 2025 events
+npm run reparse-2025           # Reparse 2025 → SQL (remote D1 by default; add --local for dev)
 npm run reparse-2026           # Reparse all 2026 events
 npm run reparse-2026-coursing  # Reparse 2026 coursing events only
 npm run reparse-2026-bzmp      # Reparse 2026 BZMP events only
@@ -176,8 +171,14 @@ npm run sync-to-remote         # Full sync local D1 → remote
 npm run update-current-year    # Update current year events
 npm run merge-dogs             # Merge duplicate dogs
 npm run fetch-speed-records    # Fetch speed records
-npm run test-parser            # Test parser
-npm test                       # Run tests
+npm run test-parser            # Synthetic parser tests (v1)
+npm run test-parser-fixtures   # v2 modular parsers on real HTML fixtures
+npm run download-fixtures      # Download fixtures from procoursing.ru
+npm run smoke-api              # Manual API smoke test (needs npm run dev)
+npm test                       # vitest (api.test.ts currently skipped; includes calendar-scrape.test.ts)
+# Calendar fixtures: npx tsx backend/scripts/test/download-calendar-fixtures.ts
+# Split large reparse SQL: npx tsx backend/scripts/load/split-sql-batches.ts data/updates/reparse-2025.sql
+# D1 workflow: docs/data/CALENDAR-AND-DB-UPDATE.md
 ```
 
 ### Frontend scripts
@@ -224,6 +225,10 @@ npm run dev
 
 **ВАЖНО:** Серверы МОЖНО запускать командами. Это разрешено и рекомендуется для разработки.
 
+`npm run dev` запускает Worker с **`--remote`** (актуальная D1) и Vite одновременно.
+
+**Тема UI:** светлая по умолчанию; тёмная — через переключатель в Nav (`localStorage.theme`).
+
 ### Использование remote D1
 
 Для локальной разработки используется remote D1 (--remote флаг). Это гарантирует работу с актуальными данными.
@@ -235,10 +240,13 @@ npm run dev
 ### Parser Testing
 
 ```bash
-npx tsx backend/scripts/test/test-parser.ts
+npm run test-parser              # v1 synthetic tests
+npm run test-parser-fixtures     # v2 modular on backend/tests/fixtures/
+npm run download-fixtures        # refresh fixtures from live URLs
+npx tsx backend/scripts/test/compare-parsers.ts  # v1 vs v2 comparison
 ```
 
-### CLI Mode
+### CLI Mode (v1 parsers)
 
 ```bash
 npx tsx backend/parsers/parse-results-coursing.ts <url>
@@ -249,62 +257,27 @@ npx tsx backend/parsers/parse-results-racing.ts <url>
 ### API Testing
 
 ```bash
-npm test
+npm test                         # vitest — api.test.ts is describe.skip
+npm run smoke-api                # manual check with dev server running
 ```
 
-**ВАЖНО:** Перед изменением парсера — прогони `npx tsx backend/scripts/test/test-parser.ts`
+In-process Worker tests planned: **vitest@4** + **@cloudflare/vitest-pool-workers**.
 
-Текущий тест использует синтетические данные. ОБЯЗАТЕЛЬНО прогнать на 5-10 реальных страницах разных лет.
+**ВАЖНО:** Перед изменением парсера — `npm run test-parser` и `npm run test-parser-fixtures`.
 
 ---
 
 ## Code Splitting
 
-### Проблема
+### Статус (2026-07): в процессе, основное сделано
 
-При сборке фронтенда появляется предупреждение:
-```
-dist/assets/index-B3yzHITO.js   652.47 kB │ gzip: 196.99 kB
-(!) Some chunks are larger than 500 kB after minification
-```
+- ✅ `AppRoutes.tsx` — все страницы через `React.lazy()` + `Suspense`
+- ✅ `Procoursing.tsx` — вложенный lazy для Events / TopDogs / Judges
+- ✅ `Nav.tsx` вынесен из `App.tsx`
+- ✅ `vite.config.ts` — `manualChunks` (vendor-react, vendor-router, vendor-query, vendor-xlsx, …)
+- 🔄 `Home.tsx` — лендинг в разработке
 
-### Решения
-
-**1. Code-splitting по страницам:**
-```javascript
-import { lazy, Suspense } from 'react'
-
-const Judges = lazy(() => import('./pages/Judges/index'))
-const JudgeDetail = lazy(() => import('./pages/Judges/JudgeDetail'))
-const SpeedRecords = lazy(() => import('./pages/SpeedRecords/index'))
-const SpeedRecordsStats = lazy(() => import('./pages/SpeedRecords/Stats'))
-// и т.д.
-```
-
-**2. Настройка rollupOptions:**
-```javascript
-// vite.config.js
-build: {
-  rollupOptions: {
-    output: {
-      manualChunks: {
-        'react-vendor': ['react', 'react-dom', 'react-router-dom'],
-        'ui-components': [...],
-        'pages-judges': ['./pages/Judges', './pages/JudgeDetail'],
-        'pages-speed': ['./pages/SpeedRecords', './pages/SpeedRecordsStats'],
-      }
-    }
-  }
-}
-```
-
-**3. Увеличение лимита:**
-```javascript
-// vite.config.js
-build: {
-  chunkSizeWarningLimit: 1000
-}
-```
+Подробнее о маршрутах: `docs/development/FRONTEND-MAP.md`
 
 ---
 
@@ -315,7 +288,7 @@ build: {
 
 ### Реализация
 
-**App.jsx:**
+**App.tsx:**
 - Мобильная шапка с лого слева и кнопкой меню справа
 - Контент на всю ширину экрана на мобильных
 - Убран футер
@@ -328,21 +301,21 @@ build: {
 - Поиск и фильтры на разных строках на мобильных
 - Легенда дисциплин скрыта на мобильных
 
-**Judges/index.jsx:**
+**Judges/index.tsx:**
 - Карточки с именем судьи и статистикой в grid 2x2 на мобильных
 
-**SpeedRecords/index.jsx:**
+**SpeedRecords/index.tsx:**
 - Карточки с кличкой, породой, полом, датой и скоростью на мобильных
 
-**DogStatsTable.jsx (TopDogs):**
+**DogStatsTable.tsx (TopDogs):**
 - Карточки с кличкой и статистикой в зависимости от типа (места/очки/скорость)
-- Медали в карточках отображаются в одну строку (grid-cols-4)
+- Медали в заголовках таблицы; в ячейках — числа (grid-cols-4 на мобильных)
 
-**DogProfile.jsx:**
+**DogProfile.tsx:**
 - Уменьшенные отступы и размеры на мобильных
 - Стрелочка "←" скрыта на мобильных
 
-**Procoursing.jsx:**
+**Procoursing.tsx:**
 - Табы с flex-wrap и min-width
 - Вкладки вертикальные с сокращёнными названиями на мобильных
 
@@ -480,7 +453,7 @@ hover:bg-cream-50 dark:hover:bg-charcoal-700
 - API routes: `backend/src/routes/`
 - React pages: `frontend/src/pages/`
 - React components: `frontend/src/components/`
-- API client: `frontend/src/services/api.js`
+- API client: `frontend/src/services/api.ts`
 - Schema: `backend/schema.sql`
 - Wrangler config: `wrangler.toml`
 
@@ -490,5 +463,6 @@ hover:bg-cream-50 dark:hover:bg-charcoal-700
 
 - [data/PARSING.md](../data/PARSING.md) — Парсинг данных
 - [data/DATABASE.md](../data/DATABASE.md) — Работа с БД
+- [development/FRONTEND-MAP.md](FRONTEND-MAP.md) — навигация фронтенда
 - [development/DEPLOYMENT.md](DEPLOYMENT.md) — Деплой и инфраструктура
 - [architecture/API-REFERENCE.md](../architecture/API-REFERENCE.md) — Документация API

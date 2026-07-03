@@ -62,26 +62,17 @@ export function handleAdmin(app: Hono<{ Bindings: Env }>) {
 
   // POST /api/admin/reparse-coursing
   app.post('/api/admin/reparse-coursing', async (c) => {
-    const db = c.env.DB;
     const env = c.env;
 
     if (!checkAdminToken(c, env)) {
       return c.json({ success: false, error: 'Unauthorized' }, 401);
     }
 
-    try {
-      const { reparseCoursingEvents } = await import('../scripts/reparse-coursing-events.mjs');
-      const result = await reparseCoursingEvents(db);
-
-      return c.json({
-        success: true,
-        message: 'Reparse completed',
-        result
-      });
-    } catch (err: any) {
-      console.error('Error reparse coursing events:', err);
-      return c.json({ success: false, error: err.message }, 500);
-    }
+    // Reparse runs as a Node CLI script (network + filesystem), not inside the Worker.
+    return c.json({
+      success: true,
+      message: 'Use CLI: npm run reparse-coursing, then wrangler d1 execute pc-db --remote --file=./data/updates/reparse-coursing.sql',
+    });
   });
 
   // POST /api/admin/delete-results/:id

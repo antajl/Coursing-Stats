@@ -85,7 +85,8 @@ const bodyText = `
 </tr>
 </table>`;
 
-const results = parseCoursingHTML(bodyText);
+async function run() {
+const { results } = await parseCoursingHTML(bodyText);
 
 assert.equal(results.length, 2, "должно получиться ровно 2 записи (а не 4 — строки-продолжения не должны стать отдельными собаками)");
 
@@ -94,7 +95,7 @@ const [first, second] = results;
 assert.equal(first.placement, 1);
 assert.equal(first.catalog_no, 2);
 assert.equal(first.qualification, "Чемпион РКФ, RegCACL");
-assert.equal(first.total_score, 159, "итог = 318/2 судьи = 159 (нормализованный балл)");
+assert.equal(first.total_score, 318, "итог = grand_total без деления на судей");
 
 assert.equal(second.placement, null, "без призового места — placement должен быть null");
 assert.equal(second.catalog_no, 7);
@@ -102,4 +103,10 @@ assert.ok(second.qualification === null || second.qualification === "", "qualifi
 // Дисквалификация может давать null total_score - это допустимо
 
 console.log("OK: все проверки прошли (2 записи, итоги/места/квалификации корректны)");
+}
+
+run().catch((err) => {
+  console.error(err);
+  process.exit(1);
+});
 

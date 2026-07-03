@@ -159,18 +159,37 @@ export function detectStatusFromText(text, hasScore = true) {
 
 export function extractReasonText(fullText, pattern) {
   if (!fullText) return null;
-  
-  // Сначала ищем текст, содержащий причину, обычно в скобках или отдельной ячейке
-  const match = fullText.match(/(?:отстранение|неявка|снят|снята|снятие|ветеринар|владелец|дисквал|не\s*финиш|сош[еелла]*|сход|уход)[^(]*\(([^)]+)\)/i);
-  if (match) {
-    return match[1].trim();
+
+  const reasonKeyword =
+    /(?:отстранение|неявка|снят|снята|снятие|ветеринар|владелец|дисквал|не\s*финиш|сош[еелла]*|сход|уход|отстранена|снята|неявка)/i;
+
+  const parenMatch = fullText.match(
+    /(?:отстранение|неявка|снят|снята|снятие|ветеринар|владелец|дисквал|не\s*финиш|сош[еелла]*|сход|уход)[^(]*\(([^)]+)\)/i,
+  );
+  if (parenMatch) {
+    return parenMatch[1].trim();
   }
-  
-  // Если не нашли в скобках, возвращаем весь текст как причину
-  const keywordMatch = fullText.match(/(?:отстранение|неявка|снят|снята|снятие|ветеринар|владелец|дисквал|не\s*финиш|сош[еелла]*|сход|уход|отстранена|снята|неявка)/i);
+
+  const lines = fullText.split(/\r?\n/).map((line) => cleanText(line)).filter(Boolean);
+
+  // Отдельная ячейка/строка с причиной (часто последняя в строке протокола)
+  for (let i = lines.length - 1; i >= 0; i--) {
+    const line = lines[i];
+    if (line.length <= 80 && reasonKeyword.test(line)) {
+      return line;
+    }
+  }
+
+  const trimmed = cleanText(fullText);
+  if (trimmed.length <= 80 && reasonKeyword.test(trimmed)) {
+    return trimmed;
+  }
+
+  const keywordMatch = trimmed.match(reasonKeyword);
   if (keywordMatch) {
-    return fullText.trim();
+    const word = keywordMatch[0];
+    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
   }
-  
+
   return null;
 }

@@ -1,16 +1,23 @@
 # Dependencies
 node_modules/
-package-lock.json
 
 # Cloudflare
 .wrangler/
+**/*.sqlite
 
-# Data files (generated)
-data/events-*.json
-data/events.json
-data/load-*.sql
-data/sync-*.sql
-data/migrate-normalize-dogs.sql
+# Generated / local data artifacts
+data/events/
+data/exports/
+data/backups/
+data/temp/
+data/updates/
+data/test-modular-parsers-results.json
+backend/data/
+speed_records.json
+
+# Planning / tooling (not shipped)
+.devin/
+"CLAUDE PLAN/"
 
 # Environment files
 .env

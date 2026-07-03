@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ProCoursing Stats — Рейтинг собак (макет)</title>
+<style>
+  :root{
+    --om-50:#faf8f4;--om-100:#f3ede4;--om-200:#e7ddcf;--om-300:#d9ccb8;--om-600:#98836a;--om-700:#796855;
+    --cream-50:#fcfaf7;--cream-100:#f7f2ea;
+    --camel-100:#f3e7d5;--camel-200:#e7d1ab;--camel-300:#d8b57a;--camel-400:#c79c56;--camel-500:#b68231;--camel-600:#9b6720;--camel-700:#7b511c;
+    --char-500:#81796e;--char-700:#4d4740;--char-800:#38342f;--char-900:#252320;
+    --forest-100:#e3ede3;--forest-600:#557658;--forest-700:#435d46;
+    --wb-100:#e2ebf0;--wb-600:#55738a;--wb-700:#465c70;
+    --terra-200:#efc8b4;--terra-500:#bb6148;--terra-600:#9d4c37;
+    --font-sans: Montserrat, "Segoe UI", Roboto, Arial, sans-serif;
+    --font-serif: Georgia, "Times New Roman", serif;
+    --font-mono: "JetBrains Mono", "Courier New", monospace;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:var(--font-sans);color:var(--char-900);
+    background:linear-gradient(160deg,var(--om-50),var(--om-100) 45%,var(--om-200));min-height:100vh;}
+  .wrap{max-width:1180px;margin:0 auto;padding:24px 20px 80px;}
+  h1.page-title{font-family:var(--font-serif);font-size:30px;margin:0 0 4px;}
+  .sub{color:var(--char-500);font-size:14px;margin:0 0 20px;}
+
+  .toggle-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:26px;}
+  .segmented{display:flex;background:var(--om-100);border-radius:12px;padding:4px;}
+  .segmented button{
+    border:none;background:none;padding:10px 18px;border-radius:9px;font-weight:700;font-size:13px;
+    color:var(--char-700);cursor:pointer;display:flex;align-items:center;gap:7px;
+  }
+  .segmented button.active{background:var(--cream-50);color:var(--char-900);box-shadow:0 2px 8px rgba(67,58,49,.12);}
+  .filters-mini{display:flex;gap:8px;margin-left:auto;flex-wrap:wrap;}
+  .select{
+    border:1.5px solid var(--om-200);background:var(--cream-50);border-radius:10px;padding:8px 12px;font-size:12.5px;font-weight:600;color:var(--char-700);
+  }
+
+  /* PODIUM */
+  .podium{display:grid; grid-template-columns:1fr 1.15fr 1fr; gap:16px; align-items:end; margin-bottom:34px;}
+  .pod{
+    background:var(--cream-50); border:1.5px solid var(--om-200); border-radius:22px; padding:22px 16px; text-align:center; position:relative;
+  }
+  .pod.gold{border-color:var(--camel-400); padding-top:30px; box-shadow:0 20px 40px -24px rgba(182,130,49,.55);}
+  .pod .silhouette{width:56px;height:56px;margin:0 auto 10px;color:var(--om-600);}
+  .pod.gold .silhouette{color:var(--camel-600); width:68px; height:68px;}
+  .medal{
+    width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    font-family:var(--font-mono);font-weight:700;font-size:13px;position:absolute;top:14px;left:14px;
+  }
+  .medal-1{background:var(--camel-400);color:#2c2314;}
+  .medal-2{background:var(--om-300);color:var(--char-800);}
+  .medal-3{background:var(--terra-200);color:var(--terra-600);}
+  .pod .lat{font-family:var(--font-serif);font-weight:700;font-size:17px;}
+  .pod .ru{font-size:12px;color:var(--char-500);margin-top:2px;}
+  .pod .breed{font-size:10.5px;color:var(--om-600);text-transform:uppercase;letter-spacing:.05em;margin-top:6px;}
+  .pod .tally{font-family:var(--font-mono);font-size:13px;margin-top:12px;color:var(--char-700);}
+
+  /* LIST OF CARDS */
+  .dog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
+  .dog-card{
+    display:flex; gap:14px; align-items:center;
+    background:var(--cream-50); border:1.5px solid var(--om-200); border-radius:18px; padding:14px 16px;
+    transition:transform .16s ease, box-shadow .16s ease;
+  }
+  .dog-card:hover{transform:translateY(-2px); box-shadow:0 14px 28px -22px rgba(67,58,49,.5); border-color:var(--camel-300);}
+  .rank-num{
+    font-family:var(--font-mono); font-weight:700; font-size:15px; color:var(--om-600); width:22px; text-align:center; flex-shrink:0;
+  }
+  .silh-circle{
+    width:48px;height:48px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;
+    background:var(--om-100);color:var(--om-600);
+  }
+  .dog-body{flex:1;min-width:0;}
+  .dog-body .lat{font-family:var(--font-serif);font-weight:700;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .dog-body .ru{font-size:11.5px;color:var(--char-500);}
+  .dog-stats{display:flex;gap:10px;margin-top:6px;flex-wrap:wrap;}
+  .mini-stat{font-family:var(--font-mono);font-size:11px;background:var(--om-100);color:var(--om-700);padding:2px 8px;border-radius:6px;}
+  .sparkline{width:64px;height:28px;flex-shrink:0;color:var(--camel-500);}
+  .score-big{font-family:var(--font-mono);font-weight:700;font-size:20px;color:var(--char-900);text-align:right;flex-shrink:0;min-width:56px;}
+  .score-big .unit{display:block;font-size:9px;color:var(--char-500);font-weight:600;}
+
+  @media(max-width:860px){.dog-grid{grid-template-columns:1fr;}.podium{grid-template-columns:1fr;}.filters-mini{margin-left:0;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1 class="page-title">Рейтинг собак</h1>
+  <p class="sub">Сезон 2026 · все породы · медальный зачёт и рейтинг по очкам ведутся раздельно</p>
+
+  <div class="toggle-row">
+    <div class="segmented">
+      <button class="active">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 6.8L21 11l-6.6 2.2L12 20l-2.4-6.8L3 11l6.6-2.2z"/></svg>
+        Медальный зачёт
+      </button>
+      <button>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V9M12 19V5M20 19v-7"/></svg>
+        По очкам
+      </button>
+    </div>
+    <div class="filters-mini">
+      <span class="select">Все породы ▾</span>
+      <span class="select">2026 ▾</span>
+      <span class="select">Мин. стартов: 3 ▾</span>
+    </div>
+  </div>
+
+  <!-- PODIUM TOP 3 -->
+  <div class="podium">
+    <div class="pod">
+      <div class="medal medal-2">2</div>
+      <svg class="silhouette" viewBox="0 0 100 100" fill="currentColor"><path d="M20 70 Q15 50 25 35 Q30 25 40 20 Q50 18 60 20 Q70 25 75 35 Q85 50 80 70 L75 75 Q70 80 60 82 L40 82 Q30 80 25 75 Z"/></svg>
+      <div class="lat">DESERT WIND</div>
+      <div class="ru">Пустынный Ветер</div>
+      <div class="breed">Салюки · сука</div>
+      <div class="tally">4 🥇 2 🥈 1 🥉 · 9 стартов</div>
+    </div>
+    <div class="pod gold">
+      <div class="medal medal-1">1</div>
+      <svg class="silhouette" viewBox="0 0 100 100" fill="currentColor"><path d="M20 70 Q15 50 25 35 Q30 25 40 20 Q50 18 60 20 Q70 25 75 35 Q85 50 80 70 L75 75 Q70 80 60 82 L40 82 Q30 80 25 75 Z"/><path d="M25 35 Q20 40 22 50 Q20 45 25 40M75 35 Q80 40 78 50 Q80 45 75 40"/></svg>
+      <div class="lat">EMUL DE GEPARD</div>
+      <div class="ru">Эмуль де Гепард</div>
+      <div class="breed">Салюки · кобель</div>
+      <div class="tally">7 🥇 1 🥈 0 🥉 · 11 стартов</div>
+    </div>
+    <div class="pod">
+      <div class="medal medal-3">3</div>
+      <svg class="silhouette" viewBox="0 0 100 100" fill="currentColor"><path d="M20 70 Q15 50 25 35 Q30 25 40 20 Q50 18 60 20 Q70 25 75 35 Q85 50 80 70 L75 75 Q70 80 60 82 L40 82 Q30 80 25 75 Z"/></svg>
+      <div class="lat">GOLDEN ARROW</div>
+      <div class="ru">Золотая Стрела</div>
+      <div class="breed">Афганская борзая · сука</div>
+      <div class="tally">3 🥇 3 🥈 2 🥉 · 10 стартов</div>
+    </div>
+  </div>
+
+  <!-- FULL LIST -->
+  <div class="dog-grid">
+    <div class="dog-card">
+      <span class="rank-num">4</span>
+      <div class="silh-circle"><svg width="26" height="26" viewBox="0 0 100 100" fill="currentColor"><path d="M20 70 Q15 50 25 35 Q30 25 40 20 Q50 18 60 20 Q70 25 75 35 Q85 50 80 70 L75 75 Q70 80 60 82 L40 82 Q30 80 25 75 Z"/></svg></div>
+      <div class="dog-body">
+        <div class="lat">SILVER SHADOW</div>
+        <div class="ru">Серебряная Тень</div>
+        <div class="dog-stats"><span class="mini-stat">8 стартов</span><span class="mini-stat">лучший 380</span></div>
+      </div>
+      <svg class="sparkline" viewBox="0 0 64 28" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20 L14 14 L26 18 L38 8 L50 12 L62 4"/></svg>
+      <div class="score-big">2🥇1🥈<span class="unit">медали</span></div>
+    </div>
+
+    <div class="dog-card">
+      <span class="rank-num">5</span>
+      <div class="silh-circle"><svg width="26" height="26" viewBox="0 0 100 100" fill="currentColor"><path d="M20 70 Q15 50 25 35 Q30 25 40 20 Q50 18 60 20 Q70 25 75 35 Q85 50 80 70 L75 75 Q70 80 60 82 L40 82 Q30 80 25 75 Z"/></svg></div>
+      <div class="dog-body">
+        <div class="lat">NORTHERN LIGHT</div>
+        <div class="ru">Северное Сияние</div>
+        <div class="dog-stats"><span class="mini-stat">6 стартов</span><span class="mini-stat">лучший 355</span></div>
+      </div>
+      <svg class="sparkline" viewBox="0 0 64 28" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 10 L14 16 L26 12 L38 20 L50 14 L62 18"/></svg>
+      <div class="score-big">1🥇2🥉<span class="unit">медали</span></div>
+    </div>
+
+    <div class="dog-card">
+      <span class="rank-num">6</span>
+      <div class="silh-circle"><svg width="26" height="26" viewBox="0 0 100 100" fill="currentColor"><circle cx="50" cy="50" r="30"/></svg></div>
+      <div class="dog-body">
+        <div class="lat">RED FOX</div>
+        <div class="ru">Рыжая Лиса</div>
+        <div class="dog-stats"><span class="mini-stat">5 стартов</span><span class="mini-stat">лучший 340</span></div>
+      </div>
+      <svg class="sparkline" viewBox="0 0 64 28" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 22 L14 18 L26 20 L38 10 L50 16 L62 6"/></svg>
+      <div class="score-big">1🥈2🥉<span class="unit">медали</span></div>
+    </div>
+
+    <div class="dog-card">
+      <span class="rank-num">7</span>
+      <div class="silh-circle"><svg width="26" height="26" viewBox="0 0 100 100" fill="currentColor"><path d="M20 70 Q15 50 25 35 Q30 25 40 20 Q50 18 60 20 Q70 25 75 35 Q85 50 80 70 L75 75 Q70 80 60 82 L40 82 Q30 80 25 75 Z"/></svg></div>
+      <div class="dog-body">
+        <div class="lat">MIDNIGHT RUN</div>
+        <div class="ru">Полуночный Бег</div>
+        <div class="dog-stats"><span class="mini-stat">4 старта</span><span class="mini-stat">лучший 330</span></div>
+      </div>
+      <svg class="sparkline" viewBox="0 0 64 28" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 18 L14 12 L26 16 L38 14 L50 8 L62 10"/></svg>
+      <div class="score-big">1🥇1🥉<span class="unit">медали</span></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

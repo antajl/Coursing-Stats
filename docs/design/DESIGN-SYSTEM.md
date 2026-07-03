@@ -109,14 +109,23 @@
 
 **Использование:** Курсинг (зелёный) - статистика и история выступлений в профиле собаки
 
-### Алиасы
+### Алиасы (Tailwind `theme.extend.colors`)
 
 - **Gold** → Camel (primary accent)
-- **Steel** → Warm Blue (secondary accent)
+- **Steel** → Warm Blue (`warm-blue` — полная палитра в `tailwind.config.js`; краткий алиас `wb`)
+- **Terracotta** → terra / медали (`terracotta-400`…`900` в config; CSS vars `--terra-*` в `index.css`)
+
+### Специальные классы (`index.css`)
+
+**`.nav-glass`** — sticky-шапка: ~8% белого / 12% чёрного + `blur(16px)`; fallback непрозрачный для браузеров без backdrop-filter.
+
+**`.placement-badge-bronze`** — круг 3-го места в `PlacementBadge` (`--terra-500` / `--terra-600`).
 
 ### Dark Mode принципы
 
-**Статус:** ✅ Полная реализация (class-based в tailwind.config.js)
+**Статус:** ✅ Полная реализация (class-based в `tailwind.config.js`)
+
+**Тема по умолчанию:** светлая. Класс `dark` на `<html>` только если `localStorage.theme === 'dark'`. Скрипт в `index.html` (до React) + `ThemeToggle.tsx`. Системная `prefers-color-scheme` **не** применяется автоматически.
 
 **Принципы адаптации:**
 1. Фоны: Инвертировать яркость, сохраняя насыщенность

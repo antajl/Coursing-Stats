@@ -25,6 +25,7 @@
 - **[CHANGELOG.md](CHANGELOG.md)** — История изменений проекта
   - Датированные записи
   - Добавления, изменения, удаления
+- **[CHANGES-2026-07-03.md](CHANGES-2026-07-03.md)** — Детальный отчёт за 2026-07-03 (рефакторинг, календарь, D1, UI polish)
 
 ### Для ИИ-агента
 - **[ai/MEMORY-SETUP.md](ai/MEMORY-SETUP.md)** — Настройка памяти ИИ-агента
@@ -56,6 +57,7 @@
   - Racing parsing
   - Статистика судей
   - Рекорды Донино
+- **[data/CALENDAR-AND-DB-UPDATE.md](data/CALENDAR-AND-DB-UPDATE.md)** — **Календарь и заливка D1** (workflow, `D1_RESET_DO`, батчи, подводные камни)
 - **[data/DATABASE.md](data/DATABASE.md)** — Работа с БД
   - Schema
   - Views
@@ -74,6 +76,8 @@
   - Local development
   - Testing
   - Code splitting
+- **[development/FRONTEND-MAP.md](development/FRONTEND-MAP.md)** — Навигация фронтенда для ИИ
+- **[development/parser-fixtures-debugging.md](development/parser-fixtures-debugging.md)** — Отладка парсеров на фикстурах
 - **[development/DEPLOYMENT.md](development/DEPLOYMENT.md)** — Деплой и инфраструктура
   - Cloudflare Pages
   - Cloudflare Worker
@@ -115,9 +119,10 @@
 **Статус:** Полностью рабочий, развернут на Cloudflare (Pages + Worker + D1).
 
 **Технический стек:**
-- Backend: Cloudflare Worker (API), Cloudflare D1 (SQLite), TypeScript, Node.js (скраперы/парсеры)
-- Frontend: React, Vite, TailwindCSS, shadcn/ui, Lucide, xlsx, TypeScript
+- Backend: Cloudflare Worker (API), Cloudflare D1 (SQLite), TypeScript (`npx tsx` для скриптов)
+- Frontend: React, Vite, TailwindCSS, кастомные `components/ui/` (без shadcn), Lucide, xlsx, TypeScript
 - Деплой: Cloudflare Pages (фронтенд), Cloudflare Workers (бэкенд), Cloudflare D1 (база данных)
+- CI: `package-lock.json` в репозитории для `npm ci`
 
 **Данные:**
 - events: 219 (2023-2026)

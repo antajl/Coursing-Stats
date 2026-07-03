@@ -1,12 +1,16 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import DogTooltip from './DogTooltip';
+import DogNameLines from './DogNameLines';
+import { parseDogName } from '../lib/dogName';
+import { MedalIcon } from './MedalTally';
 
 const PAGE_SIZE = 50;
 
 export default function DogStatsTable({ data, type = 'placement', filterYear }) {
+  const getRowYear = (dog) => dog.year ?? filterYear
   const [tooltipDog, setTooltipDog] = useState(null)
-  const [anchorRect, setAnchorRect] = useState(null)
+  const [pointer, setPointer] = useState(null)
   const [page, setPage] = useState(0)
   const navigate = useNavigate()
   const [sortConfig, setSortConfig] = useState({ key: null, direction: 'asc' })
@@ -32,8 +36,8 @@ export default function DogStatsTable({ data, type = 'placement', filterYear }) 
     
     // Handle nested properties
     if (sortConfig.key === 'name') {
-      aValue = a.name_lat
-      bValue = b.name_lat
+      aValue = parseDogName(a.name_lat, a.name_ru).primary
+      bValue = parseDogName(b.name_lat, b.name_ru).primary
     }
     
     if (aValue === null || aValue === undefined) return 1
@@ -54,13 +58,13 @@ export default function DogStatsTable({ data, type = 'placement', filterYear }) 
   const pageData = sortedData.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE)
 
   const handleMouseEnter = (e, dogId) => {
-    setAnchorRect(e.target.getBoundingClientRect())
+    setPointer({ x: e.clientX, y: e.clientY })
     setTooltipDog(dogId)
   }
 
   const handleMouseLeave = () => {
     setTooltipDog(null)
-    setAnchorRect(null)
+    setPointer(null)
   }
 
   const handleClick = (e, dogId) => {
@@ -70,7 +74,7 @@ export default function DogStatsTable({ data, type = 'placement', filterYear }) 
 
   const closeTooltip = () => {
     setTooltipDog(null)
-    setAnchorRect(null)
+    setPointer(null)
   }
 
   return (
@@ -85,34 +89,48 @@ export default function DogStatsTable({ data, type = 'placement', filterYear }) 
                   <div className="text-xs text-old-money-500 dark:text-old-money-400 mb-1">#{page * PAGE_SIZE + index + 1}</div>
                   <button
                     onClick={(e) => handleClick(e, dog.dog_id)}
-                    className="text-base font-bold text-camel-700 dark:text-camel-400 transition-colors hover:text-camel-800 dark:hover:text-camel-300"
+                    className="text-left transition-colors hover:text-camel-800 dark:hover:text-camel-300"
                   >
-                    {dog.name_lat}
+                    <DogNameLines
+                      name_lat={dog.name_lat}
+                      name_ru={dog.name_ru}
+                      primaryClassName="text-base font-bold text-camel-700 dark:text-camel-400"
+                    />
                   </button>
                   <div className="text-xs text-old-money-600 dark:text-old-money-400 mt-1">{dog.breed}</div>
                   {filterYear && (
-                    <div className="text-xs text-old-money-500 dark:text-old-money-400 mt-1">Год: {dog.year}</div>
+                    <div className="text-xs text-old-money-500 dark:text-old-money-400 mt-1">Год: {getRowYear(dog)}</div>
                   )}
                 </div>
               </div>
+              {type === 'placement' && (
+                <div className="grid grid-cols-4 gap-2 text-xs mb-1.5">
+                  <div className="flex justify-center" title="1-е место">
+                    <MedalIcon variant="gold" size="sm" />
+                  </div>
+                  <div className="flex justify-center" title="2-е место">
+                    <MedalIcon variant="silver" size="sm" />
+                  </div>
+                  <div className="flex justify-center" title="3-е место">
+                    <MedalIcon variant="bronze" size="sm" />
+                  </div>
+                  <div className="text-center text-old-money-500 dark:text-old-money-400">Участий</div>
+                </div>
+              )}
               <div className="grid grid-cols-4 gap-2 text-xs">
                 {type === 'placement' ? (
                   <>
                     <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center">
-                      <div className="text-xs text-old-money-500 dark:text-old-money-400">1-е</div>
-                      <div className="font-bold text-camel-700 dark:text-camel-400">{dog.gold}</div>
+                      <div className="font-bold tabular-nums text-old-money-800 dark:text-old-money-200">{dog.gold}</div>
                     </div>
                     <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center">
-                      <div className="text-xs text-old-money-500 dark:text-old-money-400">2-е</div>
-                      <div className="font-bold text-charcoal-700 dark:text-charcoal-300">{dog.silver}</div>
+                      <div className="font-bold tabular-nums text-old-money-800 dark:text-old-money-200">{dog.silver}</div>
                     </div>
                     <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center">
-                      <div className="text-xs text-old-money-500 dark:text-old-money-400">3-е</div>
-                      <div className="font-bold text-terracotta-600 dark:text-terracotta-400">{dog.bronze}</div>
+                      <div className="font-bold tabular-nums text-old-money-800 dark:text-old-money-200">{dog.bronze}</div>
                     </div>
                     <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center">
-                      <div className="text-old-money-500 dark:text-old-money-400">Участий</div>
-                      <div className="font-bold text-old-money-800 dark:text-old-money-200">{dog.total_starts}</div>
+                      <div className="font-bold tabular-nums text-old-money-800 dark:text-old-money-200">{dog.total_starts}</div>
                     </div>
                   </>
                 ) : type === 'speed' ? (
@@ -185,22 +203,37 @@ export default function DogStatsTable({ data, type = 'placement', filterYear }) 
               {type === 'placement' ? (
                 <>
                   <th 
-                    className="px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 cursor-pointer hover:bg-cream-200 dark:hover:bg-charcoal-600"
+                    className="px-6 py-4 text-center text-xs font-bold text-charcoal-700 dark:text-charcoal-200 cursor-pointer hover:bg-cream-200 dark:hover:bg-charcoal-600"
                     onClick={() => handleSort('gold')}
+                    title="1-е место"
+                    aria-label="1-е место"
                   >
-                    1-е {sortConfig.key === 'gold' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
+                    <span className="inline-flex items-center justify-center gap-1">
+                      <MedalIcon variant="gold" size="md" />
+                      {sortConfig.key === 'gold' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
+                    </span>
                   </th>
                   <th 
-                    className="px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 cursor-pointer hover:bg-cream-200 dark:hover:bg-charcoal-600"
+                    className="px-6 py-4 text-center text-xs font-bold text-charcoal-700 dark:text-charcoal-200 cursor-pointer hover:bg-cream-200 dark:hover:bg-charcoal-600"
                     onClick={() => handleSort('silver')}
+                    title="2-е место"
+                    aria-label="2-е место"
                   >
-                    2-е {sortConfig.key === 'silver' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
+                    <span className="inline-flex items-center justify-center gap-1">
+                      <MedalIcon variant="silver" size="md" />
+                      {sortConfig.key === 'silver' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
+                    </span>
                   </th>
                   <th 
-                    className="px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 cursor-pointer hover:bg-cream-200 dark:hover:bg-charcoal-600"
+                    className="px-6 py-4 text-center text-xs font-bold text-charcoal-700 dark:text-charcoal-200 cursor-pointer hover:bg-cream-200 dark:hover:bg-charcoal-600"
                     onClick={() => handleSort('bronze')}
+                    title="3-е место"
+                    aria-label="3-е место"
                   >
-                    3-е {sortConfig.key === 'bronze' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
+                    <span className="inline-flex items-center justify-center gap-1">
+                      <MedalIcon variant="bronze" size="md" />
+                      {sortConfig.key === 'bronze' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
+                    </span>
                   </th>
                 </>
               ) : type === 'speed' ? (
@@ -250,17 +283,21 @@ export default function DogStatsTable({ data, type = 'placement', filterYear }) 
                 </td>
                 {filterYear && (
                   <td className="px-6 py-4 text-sm text-old-money-800 dark:text-old-money-300">
-                    {dog.year}
+                    {getRowYear(dog)}
                   </td>
                 )}
                 <td className="px-6 py-4 text-sm text-old-money-800 dark:text-old-money-300">
                   <span 
-                    className="cursor-pointer font-medium text-camel-700 dark:text-camel-400 transition-colors hover:text-camel-800 dark:hover:text-camel-300"
+                    className="cursor-pointer transition-colors hover:text-camel-800 dark:hover:text-camel-300"
                     onMouseEnter={(e) => handleMouseEnter(e, dog.dog_id)}
                     onMouseLeave={handleMouseLeave}
                     onClick={(e) => handleClick(e, dog.dog_id)}
                   >
-                    {dog.name_lat}
+                    <DogNameLines
+                      name_lat={dog.name_lat}
+                      name_ru={dog.name_ru}
+                      primaryClassName="font-medium text-camel-700 dark:text-camel-400"
+                    />
                   </span>
                 </td>
                 <td className="px-6 py-4 text-sm text-old-money-800 dark:text-old-money-300">
@@ -268,20 +305,14 @@ export default function DogStatsTable({ data, type = 'placement', filterYear }) 
                 </td>
                 {type === 'placement' ? (
                   <>
-                    <td className="px-6 py-4 text-center text-sm">
-                      <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-camel-400 to-camel-500 text-white font-bold shadow-md">
-                        {dog.gold}
-                      </span>
+                    <td className="px-6 py-4 text-center text-sm font-semibold tabular-nums text-charcoal-800 dark:text-charcoal-100">
+                      {dog.gold}
                     </td>
-                    <td className="px-6 py-4 text-center text-sm">
-                      <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-charcoal-300 to-charcoal-400 border-2 border-charcoal-400 dark:border-charcoal-500 text-white font-bold shadow-md">
-                        {dog.silver}
-                      </span>
+                    <td className="px-6 py-4 text-center text-sm font-semibold tabular-nums text-charcoal-800 dark:text-charcoal-100">
+                      {dog.silver}
                     </td>
-                    <td className="px-6 py-4 text-center text-sm">
-                      <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-terracotta-400 to-terracotta-500 text-white font-bold shadow-md">
-                        {dog.bronze}
-                      </span>
+                    <td className="px-6 py-4 text-center text-sm font-semibold tabular-nums text-charcoal-800 dark:text-charcoal-100">
+                      {dog.bronze}
                     </td>
                   </>
                 ) : type === 'speed' ? (
@@ -342,10 +373,10 @@ export default function DogStatsTable({ data, type = 'placement', filterYear }) 
         </div>
       )}
       
-      {tooltipDog && anchorRect && (
+      {tooltipDog && pointer && (
         <DogTooltip
           dogId={tooltipDog}
-          anchorRect={anchorRect}
+          pointer={pointer}
           onClose={closeTooltip}
         />
       )}

@@ -1,5 +1,6 @@
 import * as cheerio from "cheerio";
 import { fetchWin1251 } from "../lib/fetch-win1251";
+import { extractJudgesFromPage } from "./shared/extract-judges";
 
 /**
  * Парсер результатов курсинга (v1 - HTML version).
@@ -165,20 +166,37 @@ export function detectStatusFromText(text, hasScore = true) {
 
 function extractReasonText(fullText, pattern) {
   if (!fullText) return null;
-  
-  // Сначала ищем текст, содержащий причину, обычно в скобках или отдельной ячейке
-  const match = fullText.match(/(?:отстранение|неявка|снят|снята|снятие|ветеринар|владелец|дисквал|не\s*финиш|сош[еелла]*|сход|уход)[^(]*\(([^)]+)\)/i);
-  if (match) {
-    return match[1].trim();
+
+  const reasonKeyword =
+    /(?:отстранение|неявка|снят|снята|снятие|ветеринар|владелец|дисквал|не\s*финиш|сош[еелла]*|сход|уход|отстранена|снята|неявка)/i;
+
+  const parenMatch = fullText.match(
+    /(?:отстранение|неявка|снят|снята|снятие|ветеринар|владелец|дисквал|не\s*финиш|сош[еелла]*|сход|уход)[^(]*\(([^)]+)\)/i,
+  );
+  if (parenMatch) {
+    return parenMatch[1].trim();
   }
-  
-  // Если не нашли в скобках, возвращаем весь текст как причину
-  // Это для случаев типа "Отстранена ветеринаром", "Неявка" и т.д.
-  const keywordMatch = fullText.match(/(?:отстранение|неявка|снят|снята|снятие|ветеринар|владелец|дисквал|не\s*финиш|сош[еелла]*|сход|уход|отстранена|снята|неявка)/i);
+
+  const lines = fullText.split(/\r?\n/).map((line) => cleanText(line)).filter(Boolean);
+
+  for (let i = lines.length - 1; i >= 0; i--) {
+    const line = lines[i];
+    if (line.length <= 80 && reasonKeyword.test(line)) {
+      return line;
+    }
+  }
+
+  const trimmed = cleanText(fullText);
+  if (trimmed.length <= 80 && reasonKeyword.test(trimmed)) {
+    return trimmed;
+  }
+
+  const keywordMatch = trimmed.match(reasonKeyword);
   if (keywordMatch) {
-    return fullText.trim();
+    const word = keywordMatch[0];
+    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
   }
-  
+
   return null;
 }
 
@@ -899,229 +917,7 @@ export async function parseCoursingHTML(html) {
   // Сортируем по номеру схемы
   finalTrackSchemes.sort((a, b) => a.number - b.number);
   
-  // Сначала ищем в строках таблицы с colspan=25 (это заголовочные строки)
-  $('table tr').each((_, row) => {
-    const $row = $(row);
-    const $firstCell = $row.find('td').first();
-    const colspan = $firstCell.attr('colspan');
-    
-    // Ищем строку с colspan=25, которая содержит "Судьи:"
-    if (colspan === '25') {
-      const cellText = $firstCell.text();
-      if (cellText.includes('Судьи:') || cellText.includes('Судьи')) {
-        // Пробуем многострочный формат внутри ячейки
-        const lines = cellText.split('\n');
-        for (let i = 0; i < lines.length; i++) {
-          const line = lines[i].trim();
-          if (line === 'Судьи:' || line === 'Судьи') {
-            // Берем следующую строку
-            if (i + 1 < lines.length) {
-              const nextLine = lines[i + 1].trim();
-              // Ищем паттерн с главным судьей и вторым судьей (и третьим если есть)
-              const judgeMatch = nextLine.match(/Главный\s+судья\s*[:\s-]+\s*([А-ЯЁ][а-яё]+(?:\s+[А-ЯЁ]\.[А-ЯЁ]\.)?)(?:\s*,\s*судья\s*[:\s-]+\s*([А-ЯЁ][а-яё]+(?:\s+[А-ЯЁ]\.[А-ЯЁ]\.)?))?/i);
-              if (judgeMatch) {
-                if (judgeMatch[1] && judgeMatch[2] && judgeMatch[3]) {
-                  judges = `${judgeMatch[1].trim()}, ${judgeMatch[2].trim()}, ${judgeMatch[3].trim()}`;
-                } else if (judgeMatch[1] && judgeMatch[2]) {
-                  judges = `${judgeMatch[1].trim()}, ${judgeMatch[2].trim()}`;
-                } else if (judgeMatch[1]) {
-                  judges = judgeMatch[1].trim();
-                }
-                if (judges && judges.length > 3) {
-                  return false; // Прерываем each
-                }
-              } else {
-                // Если строгий паттерн не сработал, пробуем очень гибкий - любые русские слова
-                const veryFlexibleMatch = nextLine.match(/Главный\s+судья\s*[:\s-]+\s*([А-ЯЁа-яё]+(?:\s+[А-ЯЁа-яё]+)*)(?:\s*,\s*судья\s*[:\s-]+\s*([А-ЯЁа-яё]+(?:\s+[А-ЯЁа-яё]+)*))?/i);
-                if (veryFlexibleMatch) {
-                  if (veryFlexibleMatch[1] && veryFlexibleMatch[2]) {
-                    judges = `${veryFlexibleMatch[1].trim()}, ${veryFlexibleMatch[2].trim()}`;
-                  } else if (veryFlexibleMatch[1]) {
-                    judges = veryFlexibleMatch[1].trim();
-                  }
-                  if (judges && judges.length > 3) {
-                    return false; // Прерываем each
-                  }
-                } else {
-                  // Если и это не сработало, пробуем извлечь всю строку и разбить по запятым
-                  const fullMatch = nextLine.match(/Главный\s+судья\s*[:\s-]+\s*(.+)/i);
-                  if (fullMatch) {
-                    const judgesText = fullMatch[1].trim();
-                    // Разбиваем по запятым и ищем части похожие на имена
-                    const parts = judgesText.split(',').map(p => p.trim());
-                    // Самый гибкий паттерн - любые русские слова
-                    const namePattern = /^[А-ЯЁа-яё]+(?:\s+[А-ЯЁа-яё]+)*$/;
-                    const validNames = parts.filter(p => namePattern.test(p) && p.length > 2);
-                    if (validNames.length > 0) {
-                      judges = validNames.join(', ');
-                      if (judges && judges.length > 3) {
-                        return false; // Прерываем each
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-        
-        // Если не нашли многострочный формат, пробуем однострочный в той же ячейке
-        if (!judges) {
-          // Проверяем однострочный формат: "Судьи:Главный судья - Серова Т.Г., судья - Козлова И.В."
-          // Извлекаем всех судей из строки
-          const judgesList = [];
-          
-          // Ищем главного судью
-          const mainJudgeMatch = cellText.match(/Главный\s+судья\s*[:\s-]+\s*([^,]+)/i);
-          if (mainJudgeMatch && mainJudgeMatch[1]) {
-            judgesList.push(mainJudgeMatch[1].trim());
-          }
-          
-          // Ищем всех остальных судей (паттерн "судья -" но не "Главный судья -")
-          const otherJudgesMatches = cellText.matchAll(/(?:,\s*)?(?!Главный)судья\s*[:\s-]+\s*([^,]+)/gi);
-          for (const match of otherJudgesMatches) {
-            if (match[1]) {
-              const judge = match[1].trim();
-              // Проверяем на дубликаты
-              if (!judgesList.includes(judge)) {
-                judgesList.push(judge);
-              }
-            }
-          }
-          
-          if (judgesList.length > 0) {
-            judges = judgesList.join(', ');
-            if (judges && judges.length > 3) {
-              return false; // Прерываем each
-            }
-          }
-        }
-        
-        // Если все еще не нашли, пробуем другие паттерны
-        if (!judges) {
-          const judgePatterns = [
-            /Главный\s+судья\s*[:\s-]+\s*([А-ЯЁ][а-яё]+(?:\s+[А-ЯЁ]\.[А-ЯЁ]\.)?)(?:\s*,\s*судья\s*[:\s-]+\s*([А-ЯЁ][а-яё]+(?:\s+[А-ЯЁ]\.[А-ЯЁ]\.)?))/i,
-            /Главный\s+судья\s*[:\s-]+\s*([^.]+?)(?:\s*,\s*судья\s*[:\s-]+\s*([^.]+))/i,
-            /Главный\s+судья\s*[:\s-]+\s*([^.]+)/i,
-            /Судьи[:\s]+([А-ЯЁ][а-яё]+(?:\s+[А-ЯЁ]\.[А-ЯЁ]\.)?(?:\s*,\s*[А-ЯЁ][а-яё]+(?:\s+[А-ЯЁ]\.[А-ЯЁ]\.)?)*)/i,
-            /Судьи[:\s]+([^.]+)/i,
-          ];
-          for (const pattern of judgePatterns) {
-            const match = cellText.match(pattern);
-            if (match) {
-              // Если паттерн с двумя группами (главный и второй судья)
-              if (match[1] && match[2]) {
-                judges = `${match[1].trim()}, ${match[2].trim()}`;
-              } else if (match[1]) {
-                judges = match[1].trim();
-                judges = judges.replace(/\s+/g, ' ').replace(/[,;]$/, '').trim();
-              }
-              
-              // Исключаем заголовки таблицы
-              if (judges && !judges.includes('Сумма') && !judges.includes('Забег') && 
-                  judges.length > 3 && !judges.match(/^\d+$/)) {
-                if (judges.startsWith('-')) {
-                  judges = judges.substring(1).trim();
-                }
-                return false; // Прерываем each
-              } else {
-                judges = null;
-              }
-            }
-          }
-        }
-      }
-    }
-  });
-  
-  // Если не нашли в таблице, ищем в тексте до таблицы
-  const $tables = $('table');
-  if ($tables.length > 0) {
-    // Получаем текст до первой таблицы
-    const firstTable = $tables.first();
-    const textBeforeTable = firstTable.prevAll().text();
-    
-    // Пробуем многострочный формат: "Судьи:" на одной строке, имена на следующей
-    const lines = textBeforeTable.split('\n');
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i].trim();
-      if (line === 'Судьи:' || line === 'Судьи') {
-        // Берем следующую строку
-        if (i + 1 < lines.length) {
-          const nextLine = lines[i + 1].trim();
-          // Ищем паттерн с главным судьей и вторым судьей
-          const judgeMatch = nextLine.match(/Главный\s+судья\s*[:\s-]+\s*([А-ЯЁ][а-яё]+(?:\s+[А-ЯЁ]\.[А-ЯЁ]\.)?)(?:\s*,\s*судья\s*[:\s-]+\s*([А-ЯЁ][а-яё]+(?:\s+[А-ЯЁ]\.[А-ЯЁ]\.)?))?/i);
-          if (judgeMatch) {
-            if (judgeMatch[1] && judgeMatch[2]) {
-              judges = `${judgeMatch[1].trim()}, ${judgeMatch[2].trim()}`;
-            } else if (judgeMatch[1]) {
-              judges = judgeMatch[1].trim();
-            }
-            if (judges && judges.length > 3) {
-              break;
-            }
-          }
-        }
-      }
-    }
-    
-    // Если не нашли многострочный формат, пробуем однострочный
-    if (!judges) {
-      const beforeTablePatterns = [
-        /Главный\s+судья\s*[:\s-]+\s*([А-ЯЁ][а-яё]+(?:\s+[А-ЯЁ]\.?[А-ЯЁ]\.?)?)(?:\s*,\s*судья\s*[:\s-]+\s*([А-ЯЁ][а-яё]+(?:\s+[А-ЯЁ]\.?[А-ЯЁ]\.?)?))?/i,
-        /Судьи[:\s]+([^.]+?)(?:\n|$)/i,
-        /Судьи[:\s]+([^.]+?)(?:Клуб|Организация|Место|Дата|Время|Таблица)/i,
-        /(?:Судья|Судьи)[:\s]+([^.]+?)(?:\n|$)/i,
-        /(?:Судья|Судьи)[:\s]+([^.]+?)(?:Клуб|Организация|Место|Дата|Время|Таблица)/i,
-      ];
-      
-      for (const pattern of beforeTablePatterns) {
-        const match = textBeforeTable.match(pattern);
-        if (match) {
-          // Если паттерн с двумя группами (главный и второй судья)
-          if (match[1] && match[2]) {
-            judges = `${match[1].trim()}, ${match[2].trim()}`;
-          } else if (match[1]) {
-            judges = match[1].trim();
-            judges = judges.replace(/\s+/g, ' ').replace(/[,;]$/, '').trim();
-          }
-          
-          // Проверяем, что это не просто число или короткая строка
-          if (judges && judges.length > 5 && !judges.match(/^\d+$/)) {
-            // Если начинается с дефиса, убираем его
-            if (judges.startsWith('-')) {
-              judges = judges.substring(1).trim();
-            }
-            break;
-          }
-        }
-      }
-    }
-  }
-  
-  // Если не нашли до таблицы, пробуем во всем тексте с более строгими паттернами
-  if (!judges) {
-    const strictPatterns = [
-      /Судьи[:\s]+([А-Яа-яЁёA-Za-z\s\.,-]+?)(?:\n|Клуб|Организация|Место|Дата|Время|Таблица)/i,
-      /(?:Судья|Судьи)[:\s]+([А-Яа-яЁёA-Za-z\s\.,-]+?)(?:\n|Клуб|Организация|Место|Дата|Время|Таблица)/i,
-      /Главный\s+судья[:\s]+([А-Яа-яЁёA-Za-z\s\.,-]+?)(?:\n|судья|Клуб|Организация)/i,
-    ];
-    
-    for (const pattern of strictPatterns) {
-      const match = bodyText.match(pattern);
-      if (match) {
-        judges = match[1].trim();
-        judges = judges.replace(/\s+/g, ' ').replace(/[,;]$/, '').trim();
-        if (judges && judges.length > 5 && !judges.match(/^\d+$/)) {
-          // Если начинается с дефиса, убираем его
-          if (judges.startsWith('-')) {
-            judges = judges.substring(1).trim();
-          }
-          break;
-        }
-      }
-    }
-  }
+  judges = extractJudgesFromPage($);
 
   // Извлекаем Telegram ссылку из шапки страницы
   $('a').each((_, a) => {
@@ -1143,13 +939,14 @@ export async function parseCoursingHTML(html) {
 
     // Заголовок группы породы (формат с colspan=25 и жирным текстом)
     const colspan = $firstCell.attr("colspan");
-    const hasColspan25 = colspan === "25" || colspan === 25;
+    const normalizedColspan = colspan ? String(colspan) : '';
+    const hasColspan25 = normalizedColspan === "25";
     const hasBoldText = $firstCell.find("b").length > 0;
     
     if (hasColspan25 && hasBoldText) {
       const text = $firstCell.find("b").text();
       // Более строгое условие: текст должен содержать дефис и не быть заголовком страницы
-      if (text.includes('-') && !text.includes('Организатор') && !text.includes('Полные результаты') && !text.includes('Судья') && !text.includes('Состязания')) {
+      if (text.includes('-') && !text.includes('Организатор') && !text.includes('Полные результаты') && !text.includes('Судья') && !text.includes('Состязания') && !text.includes('Схема трассы')) {
         currentBreedClass = cleanText(text);
         inNonArrivedSection = text.includes("Неприбывшие");
       }
@@ -1158,7 +955,8 @@ export async function parseCoursingHTML(html) {
 
     // Строка собаки (белый фон или без фона)
     const bgColor = $row.attr("bgcolor");
-    const isWhiteBg = bgColor === "#ffffff" || bgColor === "#ffffff" || bgColor === "#ffffff" || !bgColor;
+    const normalizedBgColor = bgColor ? bgColor.toLowerCase() : '';
+    const isWhiteBg = normalizedBgColor === "#ffffff" || !bgColor;
     
     if (isWhiteBg) {
       if (inNonArrivedSection) {
@@ -1168,7 +966,7 @@ export async function parseCoursingHTML(html) {
         const parsed = parseDogRow($, $row, currentBreedClass, allRows, rowIndex, judges);
         if (parsed) results.push(parsed);
       }
-    } else if (bgColor === "#eaeaea") {
+    } else if (normalizedBgColor === "#eaeaea") {
       // Строка неприбывших (серый фон) - только если не в белом фоне
       const parsed = parseNonArrivedRow($row);
       if (parsed) results.push(parsed);
@@ -1192,10 +990,10 @@ if (import.meta.url === `file://${process.argv[1]}` && process.argv[2]) {
   const url = process.argv[2];
   parseCoursingResultsPage(url).then((res) => {
     console.log(JSON.stringify(res, null, 2));
-    console.log(`\nВсего строк-результатов: ${res.length}`);
+    console.log(`\nВсего строк-результатов: ${res.results.length}`);
     console.log(
       `Из них с непонятным статусом (нужна ручная проверка raw_text): ${
-        res.filter((r) => r.status === "unknown_status_check_raw_text" || r.status === "unknown_status").length
+        res.results.filter((r) => r.status === "unknown_status_check_raw_text" || r.status === "unknown_status").length
       }`
     );
   });

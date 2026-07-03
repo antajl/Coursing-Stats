@@ -6,6 +6,26 @@ type Env = {
 };
 
 export function handleSpeed(app: Hono<{ Bindings: Env }>) {
+  // GET /api/speed-records/top-by-breed — лучший результат в каждой породе, затем топ-N пород
+  app.get('/api/speed-records/top-by-breed', async (c) => {
+    const db = c.env.DB;
+    const limit = Math.min(Math.max(parseInt(c.req.query('limit') || '3', 10) || 3, 1), 20);
+
+    const query = `
+      SELECT * FROM (
+        SELECT *,
+          ROW_NUMBER() OVER (PARTITION BY breed ORDER BY speed_km_h DESC, id ASC) AS rn
+        FROM speed_records
+      )
+      WHERE rn = 1
+      ORDER BY speed_km_h DESC
+      LIMIT ?
+    `;
+
+    const { results } = await db.prepare(query).bind(limit).all();
+    return c.json({ success: true, data: results });
+  });
+
   // GET /api/speed-records
   app.get('/api/speed-records', async (c) => {
     const db = c.env.DB;

@@ -1,6 +1,7 @@
 import * as cheerio from "cheerio";
 import { fetchWin1251 } from "../lib/fetch-win1251";
 import { normalizeDogName, normalizeBreed } from "./parse-results-coursing";
+import { extractJudgesFromPage } from "./shared/extract-judges";
 
 /**
  * АКТИВНО ИСПОЛЬЗУЕТСЯ скриптами перепарсинга:
@@ -264,123 +265,30 @@ export function parseRacingHTML(html) {
   const $ = cheerio.load(html);
   const results = [];
   let currentBreedClass = null;
-  let judges = null;
-
-  // Извлекаем информацию о судьях из строк таблицы с colspan=18
-  $('table tr').each((_, row) => {
-    const $row = $(row);
-    const $firstCell = $row.find('td').first();
-    const colspan = $firstCell.attr('colspan');
-    
-    // Ищем строку с colspan=18, которая содержит "Судьи:"
-    if (colspan === '18') {
-      const cellText = $firstCell.text();
-      if (cellText.includes('Судьи:') || cellText.includes('Судьи')) {
-        // Пробуем многострочный формат внутри ячейки
-        const lines = cellText.split('\n');
-        for (let i = 0; i < lines.length; i++) {
-          const line = lines[i].trim();
-          if (line === 'Судьи:' || line === 'Судьи') {
-            // Берем следующую строку
-            if (i + 1 < lines.length) {
-              const nextLine = lines[i + 1].trim();
-              // Ищем паттерн с главным судьей и вторым судьей (и третьим если есть)
-              const judgeMatch = nextLine.match(/Главный\s+судья\s*[:\s-]+\s*([А-ЯЁ][а-яё]+(?:\s+[А-ЯЁ]\.[А-ЯЁ]\.)?)(?:\s*,\s*судья\s*[:\s-]+\s*([А-ЯЁ][а-яё]+(?:\s+[А-ЯЁ]\.[А-ЯЁ]\.)?))(?:\s*,\s*судья\s*[:\s-]+\s*([А-ЯЁ][а-яё]+(?:\s+[А-ЯЁ]\.[А-ЯЁ]\.)?))?/i);
-              if (judgeMatch) {
-                if (judgeMatch[1] && judgeMatch[2] && judgeMatch[3]) {
-                  judges = `${judgeMatch[1].trim()}, ${judgeMatch[2].trim()}, ${judgeMatch[3].trim()}`;
-                } else if (judgeMatch[1] && judgeMatch[2]) {
-                  judges = `${judgeMatch[1].trim()}, ${judgeMatch[2].trim()}`;
-                } else if (judgeMatch[1]) {
-                  judges = judgeMatch[1].trim();
-                }
-                if (judges && judges.length > 3) {
-                  return false; // Прерываем each
-                }
-              } else {
-                // Если строгий паттерн не сработал, пробуем очень гибкий - любые русские слова
-                const veryFlexibleMatch = nextLine.match(/Главный\s+судья\s*[:\s-]+\s*([А-ЯЁа-яё]+(?:\s+[А-ЯЁа-яё]+)*)(?:\s*,\s*судья\s*[:\s-]+\s*([А-ЯЁа-яё]+(?:\s+[А-ЯЁа-яё]+)*))?/i);
-                if (veryFlexibleMatch) {
-                  if (veryFlexibleMatch[1] && veryFlexibleMatch[2]) {
-                    judges = `${veryFlexibleMatch[1].trim()}, ${veryFlexibleMatch[2].trim()}`;
-                  } else if (veryFlexibleMatch[1]) {
-                    judges = veryFlexibleMatch[1].trim();
-                  }
-                  if (judges && judges.length > 3) {
-                    return false; // Прерываем each
-                  }
-                } else {
-                  // Если и это не сработало, пробуем извлечь всю строку и разбить по запятым
-                  const fullMatch = nextLine.match(/Главный\s+судья\s*[:\s-]+\s*(.+)/i);
-                  if (fullMatch) {
-                    const judgesText = fullMatch[1].trim();
-                    // Разбиваем по запятым и ищем части похожие на имена
-                    const parts = judgesText.split(',').map(p => p.trim());
-                    // Самый гибкий паттерн - любые русские слова
-                    const namePattern = /^[А-ЯЁа-яё]+(?:\s+[А-ЯЁа-яё]+)*$/;
-                    const validNames = parts.filter(p => namePattern.test(p) && p.length > 2);
-                    if (validNames.length > 0) {
-                      judges = validNames.join(', ');
-                      if (judges && judges.length > 3) {
-                        return false; // Прерываем each
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-        
-        // Если не нашли многострочный формат, пробуем однострочный в той же ячейке
-        if (!judges) {
-          // Проверяем однострочный формат: "Судьи:Главный судья - Иванова Г.С., судья - Богаченко В.В."
-          // Извлекаем всех судей из строки
-          const judgesList = [];
-          
-          // Ищем главного судью
-          const mainJudgeMatch = cellText.match(/Главный\s+судья\s*[:\s-]+\s*([^,]+)/i);
-          if (mainJudgeMatch && mainJudgeMatch[1]) {
-            judgesList.push(mainJudgeMatch[1].trim());
-          }
-          
-          // Ищем всех остальных судей (паттерн "судья -" но не "Главный судья -")
-          const otherJudgesMatches = cellText.matchAll(/(?:,\s*)?(?!Главный)судья\s*[:\s-]+\s*([^,]+)/gi);
-          for (const match of otherJudgesMatches) {
-            if (match[1]) {
-              const judge = match[1].trim();
-              // Проверяем на дубликаты
-              if (!judgesList.includes(judge)) {
-                judgesList.push(judge);
-              }
-            }
-          }
-          
-          if (judgesList.length > 0) {
-            judges = judgesList.join(', ');
-            if (judges && judges.length > 3) {
-              return false; // Прерываем each
-            }
-          }
-        }
-      }
-    }
-  });
+  let judges = extractJudgesFromPage($, { colspans: ['18', '25'] });
 
   $("table tr").each((_, row) => {
     const $row = $(row);
     const $firstCell = $row.find("td").first();
 
-    // Заголовок группы породы (colspan=18 для CC, colspan=21 для ВС)
+    // Заголовок группы породы (colspan=25 для racing)
     const colspan = $firstCell.attr("colspan");
-    if ((colspan === "18" || colspan === "21") && $firstCell.attr("bgcolor") === "#c0c0c0") {
+    const normalizedColspan = colspan ? String(colspan) : '';
+    const hasBoldText = $firstCell.find("b").length > 0;
+    
+    if (normalizedColspan === "25" && hasBoldText) {
       const text = $firstCell.find("b").text();
-      currentBreedClass = cleanText(text);
+      // Текст должен содержать дефис и не быть заголовком страницы
+      if (text.includes('-') && !text.includes('Организатор') && !text.includes('Полные результаты') && !text.includes('Судья') && !text.includes('Состязания') && !text.includes('Схема трассы')) {
+        currentBreedClass = cleanText(text);
+      }
       return;
     }
 
     // Строка собаки (белый фон)
-    if ($row.attr("bgcolor") === "#ffffff" && currentBreedClass) {
+    const rowBgColor = $row.attr("bgcolor");
+    const normalizedRowBgColor = rowBgColor ? rowBgColor.toLowerCase() : '';
+    if (normalizedRowBgColor === "#ffffff" && currentBreedClass) {
       const parsed = parseDogRow($row, currentBreedClass);
       if (parsed) {
         parsed.judges = judges;

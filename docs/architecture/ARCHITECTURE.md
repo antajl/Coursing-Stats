@@ -33,10 +33,14 @@ Cloudflare Pages (фронтенд: React)
 | Script | Path | Purpose |
 |--------|------|---------|
 | `backend/scripts/scrape/scrape-year-index.ts` | `backend/scripts/` | Парсит `s_{YEAR}.html`, получает список событий |
-| `backend/lib/fetch-win1251.mjs` | `backend/lib/` | Загрузка страниц с декодированием windows-1251 |
-| `backend/parsers/parse-results-coursing.ts` | `backend/parsers/` | Парсер результатов курсинга |
-| `backend/parsers/parse-results-bzmp.ts` | `backend/parsers/` | Парсер БЗМП |
-| `backend/parsers/parse-results-racing.ts` | `backend/parsers/` | Парсер бега с извлечением данных о скорости |
+| `backend/lib/fetch-win1251.ts` | `backend/lib/` | Загрузка страниц с декодированием windows-1251 |
+| `backend/parsers/parse-results-coursing.ts` | `backend/parsers/` | Парсер курсинга (v1, reparse) |
+| `backend/parsers/parse-results-bzmp.ts` | `backend/parsers/` | Парсер БЗМП (v1, reparse) |
+| `backend/parsers/parse-results-racing.ts` | `backend/parsers/` | Парсер бега (v1, reparse) |
+| `backend/parsers/coursing/index.ts` | `backend/parsers/` | Модульный парсер курсинга (v2, целевой) |
+| `backend/parsers/bzmp/index.ts` | `backend/parsers/` | Модульный парсер БЗМП (v2) |
+| `backend/parsers/racing/index.ts` | `backend/parsers/` | Модульный парсер racing (v2) |
+| `backend/parsers/unique/` | `backend/parsers/` | Общие row/header parsers для v2 |
 | `backend/scripts/load/load-events.ts` | `backend/scripts/load/` | Загрузка событий в D1 |
 | `backend/scripts/load/load-results.ts` | `backend/scripts/load/` | Загрузка результатов в D1 (через API или SQL) |
 | `backend/scripts/speed/sync-speed-records.ts` | `backend/scripts/speed/` | Загрузка рекордов Донино из Google Sheets |
@@ -55,7 +59,7 @@ Cloudflare Pages (фронтенд: React)
 
 ### 3. Worker (API)
 
-**Entry point:** `backend/src/worker.js` (~93 строки)
+**Entry point:** `backend/src/worker.ts` (тонкая обёртка) → `backend/src/app.ts` (Hono application)
 
 **Architecture:**
 - Тонкий диспетчер, делегирует в `src/routes/`
@@ -113,25 +117,35 @@ POST /api/admin/recreate-views
 
 **Directory:** `frontend/src/`
 
-**Pages:**
-- `/` — главная страница с навигацией (Procoursing.jsx)
-- `/top/placement` — топ по местам (медальный зачёт)
-- `/top/score` — топ по очкам
-- `/events` — календарь событий
-- `/events/:id` — результаты события
-- `/dogs/:id` — профиль собаки
-- `/judges` — список судей
-- `/judges/:judgeId` — детальная страница судьи
-- `/speed-records` — рекорды Донино (таблица)
-- `/speed-records/stats` — статистика рекордов
+**Shell:** `App.tsx` (layout + `Nav`) → `AppRoutes.tsx` (lazy routes, code-split chunks)
+
+**Pages (lazy-loaded):**
+- `/` — `Home.tsx` (лендинг, WIP)
+- `/procoursing` — `Procoursing.tsx` (hub: Календарь, Рейтинг, Судьи)
+- `/top` — `TopDogs/index.tsx` (рейтинг: места / очки / скорость)
+- `/event/:id` — `Events/EventResults/` (модуль: racing vs scoring details)
+- `/dog/:id` — `DogProfile.tsx`
+- `/judges`, `/judges/:judgeId` — судьи
+- `/speed-records` — рекорды Донино (отдельный источник, не procoursing.ru)
+- `/donino-dog/:name/:breed` — профиль собаки из рекордов Донино
+
+**UI:** кастомные компоненты в `frontend/src/components/ui/` (Button, Card, Badge) — **не shadcn/ui**. Тема: светлая по умолчанию, class-based dark mode (`ThemeToggle` → `localStorage.theme`).
+
+**Навигация для ИИ:** `docs/development/FRONTEND-MAP.md`
 
 **Components:**
-- `frontend/src/components/DogTooltip.jsx` — tooltip с раздельной статистикой курсинга и бегов (сайд-бай-сайд layout)
-- `frontend/src/components/DogStatsTable.jsx` — таблица статистики собак с сортировкой
-- `frontend/src/App.jsx` — главный компонент с навигацией и кнопкой обновления
+- `frontend/src/components/Nav.tsx` — шапка `.nav-glass`, мобильное меню
+- `frontend/src/components/ThemeToggle.tsx` — переключатель темы
+- `frontend/src/components/DogTooltip.tsx` — tooltip со статистикой
+- `frontend/src/components/DogStatsTable.tsx` — таблица рейтинга (медали в заголовках)
+- `frontend/src/components/FilterSelect.tsx` — фильтры (`allLabel`, `ariaLabel`)
+- `frontend/src/components/FiltersDropdown.tsx` — расширенные фильтры
+
+**Lib:**
+- `frontend/src/lib/recordDates.ts` — даты рекордов Донино (Excel serial, dedupe для графиков)
 
 **Services:**
-- `frontend/src/services/api.js` — API сервис для общения с backend
+- `frontend/src/services/api.ts` — API client
 
 ## Database Schema
 
@@ -266,12 +280,13 @@ POST /api/admin/recreate-views
 - `path` — работа с путями файлов
 
 ### Frontend stack
-- React + Vite
+- React + Vite (`vite.config.ts`)
 - TailwindCSS (адаптивный дизайн с брейкпоинтами md:)
-- shadcn/ui
+- Кастомные UI-компоненты (`components/ui/`) — не shadcn
 - Lucide (иконки)
 - xlsx (Excel export)
 - html-to-image (скриншоты карточек)
+- React.lazy + manualChunks для code-splitting
 
 **Мобильная адаптивность:**
 - Полная адаптация всех страниц для мобильных устройств

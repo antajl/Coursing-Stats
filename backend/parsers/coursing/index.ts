@@ -9,6 +9,7 @@ import { normalizeDogName, normalizeBreed } from "./utils";
 import { parseDogRow, parseNonArrivedRow } from "./row-parsers";
 import { extractJudgeCount } from "./header-parsers";
 import { CoursingParseResultSchema } from "./schemas";
+import { extractJudgesFromPage } from "../shared/extract-judges";
 
 export async function parseCoursingHTML(html) {
   const $ = cheerio.load(html);
@@ -46,20 +47,7 @@ export async function parseCoursingHTML(html) {
     protocolLocation = locationMatch[1].trim();
   }
 
-  // Извлекаем судей из ячейки с текстом "Судьи:"
-  const judgesCell = $('table tr').find('td').filter(function() {
-    return $(this).text().trim().startsWith('Судьи:');
-  });
-  
-  if (judgesCell.length > 0) {
-    const text = judgesCell.text().trim();
-    judges = text.replace(/^Судьи[:\s]+/i, '').trim();
-    
-    // Фильтруем примечания (например, "Номера забегов не отражены...")
-    if (judges.includes('Номера забегов') || judges.includes('не отражены') || judges.includes('не получена')) {
-      judges = null;
-    }
-  }
+  judges = extractJudgesFromPage($);
 
   const allRows = $('table tr').toArray();
   const processedRows = new Set(); // Отслеживаем обработанные строки
@@ -77,7 +65,8 @@ export async function parseCoursingHTML(html) {
     
     // Заголовок группы (порода - класс - пол)
     // Распознаём по цвету фона ИЛИ по содержимому (формат "Порода - Класс - Пол")
-    if (bgColor === "#c0c0c0" || bgColor === "#C0C0C0" || 
+    const normalizedBgColor = bgColor ? bgColor.toLowerCase() : '';
+    if (normalizedBgColor === "#c0c0c0" ||
         (firstCellText.includes(' - ') && (firstCellText.includes('Кобел') || firstCellText.includes('Сука') || firstCellText.includes('Кобели') || firstCellText.includes('Суки') || firstCellText.includes('Микс')))) {
       currentBreedClass = firstCellText;
       inNonArrivedSection = false;
@@ -85,7 +74,7 @@ export async function parseCoursingHTML(html) {
     }
     
     // Секция неприбывших (серый фон ИЛИ текст "Неприбывшие")
-    if (bgColor === "#eaeaea" || bgColor === "#EAEAEA" || firstCellText.includes('Неприбывш')) {
+    if (normalizedBgColor === "#eaeaea" || firstCellText.includes('Неприбывш')) {
       inNonArrivedSection = true;
       const parsed = parseNonArrivedRow($rowEl);
       if (parsed) results.push(parsed);
@@ -93,7 +82,7 @@ export async function parseCoursingHTML(html) {
     }
     
     // Белый фон - строки собак
-    if (bgColor === "#ffffff" || bgColor === "#FFFFFF" || !bgColor) {
+    if (normalizedBgColor === "#ffffff" || !bgColor) {
       if (currentBreedClass) {
         const parsed = parseDogRow($, $rowEl, currentBreedClass, allRows, rowIndex, judges, extractJudgeCount, processedRows);
         if (parsed) {

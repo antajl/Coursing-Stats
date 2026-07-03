@@ -1,10 +1,9 @@
 import { useParams, useNavigate, useLocation } from 'react-router-dom'
 import { useState, useEffect, useRef } from 'react'
-import { DogSilhouettes, getSilhouetteType } from '../components/DogSilhouettes'
 import SkeletonLoader from '../components/SkeletonLoader'
 import ErrorState from '../components/ErrorState'
-
-const API_URL = 'http://localhost:8787'
+import { formatRecordDate, dedupeByRecordDate } from '../lib/recordDates'
+import { api } from '../services/api'
 
 export default function DoninoDogProfile() {
   const { name, breed } = useParams()
@@ -18,24 +17,11 @@ export default function DoninoDogProfile() {
   const fromSpeedRecords = location.state?.from === 'speed-records'
   const fromCoursingRecords = location.state?.from === 'coursing-records'
 
-  const silhouetteType = getSilhouetteType(breed)
-
-  // Конвертация даты из YYYY-MM-DD в DD.MM.YYYY
-  const formatDate = (dateStr) => {
-    if (!dateStr) return ''
-    const parts = dateStr.split('-')
-    if (parts.length === 3) {
-      return `${parts[2]}.${parts[1]}.${parts[0]}`
-    }
-    return dateStr
-  }
-
   useEffect(() => {
     async function fetchDogData() {
       try {
         setLoading(true)
-        const response = await fetch(`${API_URL}/api/donino-dog/${encodeURIComponent(name)}/${encodeURIComponent(breed)}`)
-        const result = await response.json()
+        const result = await api.getDoninoDog(name, breed)
         
         if (result.success) {
           setData(result.data)
@@ -78,10 +64,17 @@ export default function DoninoDogProfile() {
 
   const hasSpeedRecords = data.speedStats.total > 0
   const hasCoursingRecords = data.coursingStats.total > 0
+  const uniqueSpeedRecords = dedupeByRecordDate(
+    data.speedRecords,
+    (candidate, existing) => candidate.speed_km_h > existing.speed_km_h
+  )
+  const uniqueCoursingRecords = dedupeByRecordDate(
+    data.coursingRecords,
+    (candidate, existing) => candidate.time_seconds < existing.time_seconds
+  )
 
   return (
     <div className="min-h-screen bg-cream-50 dark:bg-charcoal-900 p-4 md:p-6">
-      <DogSilhouettes />
       <div className="max-w-4xl mx-auto">
         <div className="flex items-center justify-between mb-4 md:mb-6 flex-wrap gap-2">
           <button
@@ -104,21 +97,14 @@ export default function DoninoDogProfile() {
         <div ref={exportRef}>
           {/* Шапка профиля */}
           <div className="mb-6 rounded-2xl border-2 border-old-money-200 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-8">
-            <div className="flex flex-wrap items-center gap-5 md:gap-8">
-              <div className="flex h-20 w-20 flex-shrink-0 items-center justify-center rounded-2xl border-2 border-old-money-200 dark:border-charcoal-600 bg-cream-100 dark:bg-charcoal-700 md:h-24 md:w-24">
-                <svg className="w-12 h-12 md:w-16 md:h-16 text-old-money-500 dark:text-old-money-400">
-                  <use href={`#silhouette-${silhouetteType}`} />
-                </svg>
+            <div className="min-w-0">
+              <div className="flex items-baseline gap-3 md:gap-4 flex-wrap">
+                <h1 className="text-2xl font-bold tracking-tight text-charcoal-900 dark:text-charcoal-100 md:text-3xl">{data.name}</h1>
               </div>
-              <div className="flex-1 min-w-0">
-                <div className="flex items-baseline gap-3 md:gap-4 flex-wrap">
-                  <h1 className="text-2xl font-bold tracking-tight text-charcoal-900 dark:text-charcoal-100 md:text-3xl">{data.name}</h1>
-                </div>
-                <div className="mt-3">
-                  <span className="inline-block rounded-full bg-cream-100 dark:bg-charcoal-700 px-4 py-1.5 text-sm font-semibold text-charcoal-700 dark:text-charcoal-300 border border-old-money-200 dark:border-charcoal-600">
-                    {data.breed}
-                  </span>
-                </div>
+              <div className="mt-3">
+                <span className="inline-block rounded-full bg-cream-100 dark:bg-charcoal-700 px-4 py-1.5 text-sm font-semibold text-charcoal-700 dark:text-charcoal-300 border border-old-money-200 dark:border-charcoal-600">
+                  {data.breed}
+                </span>
               </div>
             </div>
           </div>
@@ -145,7 +131,7 @@ export default function DoninoDogProfile() {
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     <div className="bg-gradient-to-br from-old-money-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-old-money-200 dark:border-charcoal-500">
                       <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Всего замеров</div>
-                      <div className="text-2xl font-bold text-charcoal-900 dark:text-charcoal-100">{data.speedStats.total}</div>
+                      <div className="text-2xl font-bold text-charcoal-900 dark:text-charcoal-100">{uniqueSpeedRecords.length}</div>
                     </div>
                     {data.speedStats.breedRank > 0 && (
                       <div className="bg-gradient-to-br from-camel-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-camel-200 dark:border-charcoal-500">
@@ -157,9 +143,9 @@ export default function DoninoDogProfile() {
 
                   {/* График прогресса */}
                   <div className="mt-6 space-y-2">
-                    {data.speedRecords.map((record, idx) => (
+                    {uniqueSpeedRecords.map((record, idx) => (
                       <div key={idx} className="flex items-center gap-4">
-                        <div className="w-24 text-sm text-charcoal-700 dark:text-charcoal-300 text-right">{formatDate(record.date)}</div>
+                        <div className="w-24 text-sm text-charcoal-700 dark:text-charcoal-300 text-right">{formatRecordDate(record.date)}</div>
                         <div className="flex-1 bg-cream-200 dark:bg-charcoal-600 rounded-full h-6 overflow-hidden relative">
                           <div 
                             className="bg-gradient-to-r from-camel-400 to-camel-600 h-full rounded-full transition-all duration-500"
@@ -194,7 +180,7 @@ export default function DoninoDogProfile() {
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     <div className="bg-gradient-to-br from-old-money-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-old-money-200 dark:border-charcoal-500">
                       <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Всего забегов</div>
-                      <div className="text-2xl font-bold text-charcoal-900 dark:text-charcoal-100">{data.coursingStats.total}</div>
+                      <div className="text-2xl font-bold text-charcoal-900 dark:text-charcoal-100">{uniqueCoursingRecords.length}</div>
                     </div>
                     {data.coursingStats.breedRank > 0 && (
                       <div className="bg-gradient-to-br from-camel-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-camel-200 dark:border-charcoal-500">
@@ -206,9 +192,9 @@ export default function DoninoDogProfile() {
 
                   {/* График прогресса */}
                   <div className="mt-6 space-y-2">
-                    {data.coursingRecords.map((record, idx) => (
+                    {uniqueCoursingRecords.map((record, idx) => (
                       <div key={idx} className="flex items-center gap-4">
-                        <div className="w-24 text-sm text-charcoal-700 dark:text-charcoal-300 text-right">{formatDate(record.date)}</div>
+                        <div className="w-24 text-sm text-charcoal-700 dark:text-charcoal-300 text-right">{formatRecordDate(record.date)}</div>
                         <div className="flex-1 bg-cream-200 dark:bg-charcoal-600 rounded-full h-6 overflow-hidden relative">
                           <div 
                             className="bg-gradient-to-r from-camel-400 to-camel-600 h-full rounded-full transition-all duration-500"

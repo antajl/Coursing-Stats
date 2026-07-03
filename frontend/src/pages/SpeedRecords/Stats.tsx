@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import React from 'react';
 import { api } from '../../services/api';
+import { dedupeByRecordDate, dedupeSpeedRecords, formatRecordDate, getRecordYear } from '../../lib/recordDates';
 
 function SpeedRecordsStats() {
   const [records, setRecords] = useState([]);
@@ -45,7 +46,7 @@ function SpeedRecordsStats() {
   async function loadRecords() {
     setLoading(true);
     setError(null);
-    const result = await api.getSpeedRecords('', '', 100, '', '');
+    const result = await api.getSpeedRecords('', '', 10000, '', '');
     
     if (result.success) {
       const dataArray = Array.isArray(result.data) ? result.data : [];
@@ -158,7 +159,7 @@ function SpeedRecordsStats() {
     // Фильтр по годам
     if (filterYears.length > 0) {
       filtered = filtered.filter(record => 
-        filterYears.includes(record.date.split('.')[2])
+        filterYears.includes(String(getRecordYear(record.date)))
       );
     }
     
@@ -206,21 +207,22 @@ function SpeedRecordsStats() {
 
   // Применяем фильтры к данным
   const filteredRecords = applyFilters(records);
+  const uniqueMeasurements = dedupeSpeedRecords(filteredRecords);
   
-  // Расчёт статистики на отфильтрованных данных
-  const totalRecords = filteredRecords.length;
-  const averageSpeed = totalRecords > 0 ? filteredRecords.reduce((sum, r) => sum + parseFloat(r.speed_km_h), 0) / totalRecords : 0;
-  const maxSpeed = totalRecords > 0 ? Math.max(...filteredRecords.map(r => parseFloat(r.speed_km_h))) : 0;
-  const minSpeed = totalRecords > 0 ? Math.min(...filteredRecords.map(r => parseFloat(r.speed_km_h))) : 0;
+  // Расчёт статистики обзора на уникальных замерах (как вкладки порода/пол/год)
+  const totalRecords = uniqueMeasurements.length;
+  const averageSpeed = totalRecords > 0 ? uniqueMeasurements.reduce((sum, r) => sum + parseFloat(r.speed_km_h), 0) / totalRecords : 0;
+  const maxSpeed = totalRecords > 0 ? Math.max(...uniqueMeasurements.map(r => parseFloat(r.speed_km_h))) : 0;
+  const minSpeed = totalRecords > 0 ? Math.min(...uniqueMeasurements.map(r => parseFloat(r.speed_km_h))) : 0;
   
-  const breeds = [...new Set(filteredRecords.map(r => r.breed))];
+  const breeds = [...new Set(uniqueMeasurements.map(r => r.breed))];
   const breedStats = breeds.map(breed => {
-    const breedRecords = filteredRecords.filter(r => r.breed === breed);
+    const breedRecords = uniqueMeasurements.filter(r => r.breed === breed);
     const avgSpeed = breedRecords.reduce((sum, r) => sum + parseFloat(r.speed_km_h), 0) / breedRecords.length;
     const maxSpeed = Math.max(...breedRecords.map(r => parseFloat(r.speed_km_h)));
     const avgTime350 = avgSpeed > 0 ? (1260 / avgSpeed).toFixed(2) : '-';
     const bestTime350 = maxSpeed > 0 ? (1260 / maxSpeed).toFixed(2) : '-';
-    const names = breedRecords.map(r => r.name).sort().join(', ');
+    const names = [...new Set(breedRecords.map(r => r.name))].sort().join(', ');
     return { breed, count: breedRecords.length, avgSpeed, maxSpeed, avgTime350, bestTime350, names };
   });
   const sortedBreedStats = sortData(breedStats, sortConfig.key);
@@ -270,42 +272,39 @@ function SpeedRecordsStats() {
       percentile,
       rank,
       totalInBreed: breedBestSpeeds.length,
-      history: dogRecords.sort((a, b) => {
-        const parseDate = (d) => {
-          const parts = d.split('.');
-          return new Date(parts[2], parts[1] - 1, parts[0]);
-        };
-        return parseDate(b.date) - parseDate(a.date);
-      })
+      history: dedupeByRecordDate(
+        dogRecords,
+        (candidate, existing) => parseFloat(candidate.speed_km_h) > parseFloat(existing.speed_km_h)
+      )
     };
   })() : null;
 
-  const sexes = [...new Set(filteredRecords.map(r => r.sex))];
+  const sexes = [...new Set(uniqueMeasurements.map(r => r.sex))];
   const sexStats = sexes.map(sex => {
-    const sexRecords = filteredRecords.filter(r => r.sex === sex);
+    const sexRecords = uniqueMeasurements.filter(r => r.sex === sex);
     const avgSpeed = sexRecords.reduce((sum, r) => sum + parseFloat(r.speed_km_h), 0) / sexRecords.length;
     const maxSpeed = Math.max(...sexRecords.map(r => parseFloat(r.speed_km_h)));
     const avgTime350 = avgSpeed > 0 ? (1260 / avgSpeed).toFixed(2) : '-';
     const bestTime350 = maxSpeed > 0 ? (1260 / maxSpeed).toFixed(2) : '-';
-    const names = sexRecords.map(r => r.name).sort().join(', ');
+    const names = [...new Set(sexRecords.map(r => r.name))].sort().join(', ');
     return { sex: sex === 'С' ? 'Сука' : 'Кабель', count: sexRecords.length, avgSpeed, maxSpeed, avgTime350, bestTime350, names };
   });
   const sortedSexStats = sortData(sexStats, sortConfig.key);
 
-  const years = [...new Set(filteredRecords.map(r => r.date.split('.')[2]))].sort();
+  const years = [...new Set(uniqueMeasurements.map(r => String(getRecordYear(r.date))).filter(Boolean))].sort();
   const yearStats = years.map(year => {
-    const yearRecords = filteredRecords.filter(r => r.date.split('.')[2] === year);
+    const yearRecords = uniqueMeasurements.filter(r => String(getRecordYear(r.date)) === year);
     const avgSpeed = yearRecords.reduce((sum, r) => sum + parseFloat(r.speed_km_h), 0) / yearRecords.length;
     const maxSpeed = Math.max(...yearRecords.map(r => parseFloat(r.speed_km_h)));
     const avgTime350 = avgSpeed > 0 ? (1260 / avgSpeed).toFixed(2) : '-';
     const bestTime350 = maxSpeed > 0 ? (1260 / maxSpeed).toFixed(2) : '-';
-    const names = yearRecords.map(r => r.name).sort().join(', ');
+    const names = [...new Set(yearRecords.map(r => r.name))].sort().join(', ');
     return { year, count: yearRecords.length, avgSpeed, maxSpeed, avgTime350, bestTime350, names };
   });
   const sortedYearStats = sortData(yearStats, sortConfig.key);
 
   // Данные для dropdown menus
-  const allYears = [...new Set(records.map(r => r.date.split('.')[2]))].sort().reverse();
+  const allYears = [...new Set(records.map(r => String(getRecordYear(r.date))).filter(Boolean))].sort().reverse();
   const allBreeds = [...new Set(records.map(r => r.breed))].sort();
   const allSexes = [...new Set(records.map(r => r.sex))].sort();
   
@@ -532,7 +531,7 @@ function SpeedRecordsStats() {
             <div className="space-y-2">
               {dogStats.history.map((record, idx) => (
                 <div key={idx} className="flex items-center gap-4">
-                  <div className="w-24 text-sm text-charcoal-700 dark:text-charcoal-300 text-right">{record.date}</div>
+                  <div className="w-24 text-sm text-charcoal-700 dark:text-charcoal-300 text-right">{formatRecordDate(record.date)}</div>
                   <div className="flex-1 bg-cream-200 dark:bg-charcoal-600 rounded-full h-6 overflow-hidden relative">
                     <div 
                       className="bg-gradient-to-r from-camel-400 to-camel-600 h-full rounded-full transition-all duration-500"
@@ -588,14 +587,14 @@ function SpeedRecordsStats() {
                   { min: 70, max: 100, label: '70+ км/ч' },
                 ];
                 const maxCount = Math.max(...speedRanges.map(range => 
-                  filteredRecords.filter(r => {
+                  uniqueMeasurements.filter(r => {
                     const speed = parseFloat(r.speed_km_h);
                     return speed >= range.min && speed < range.max;
                   }).length
                 ));
                 
                 return speedRanges.map((range, idx) => {
-                  const count = filteredRecords.filter(r => {
+                  const count = uniqueMeasurements.filter(r => {
                     const speed = parseFloat(r.speed_km_h);
                     return speed >= range.min && speed < range.max;
                   }).length;

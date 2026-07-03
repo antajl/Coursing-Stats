@@ -1,0 +1,25 @@
+---
+description: Backend ProCoursing — API, Worker, D1
+globs: backend/src/**
+alwaysApply: false
+---
+
+# Backend API
+
+Entry: `backend/src/worker.ts` → `app.ts` (Hono). Routes: `admin`, `events` (эндпоинты `/api/competitions`), `dogs`, `judges`, `speed`, `top`.
+
+## SQL
+
+- Явные списки колонок в SELECT, не `SELECT *`
+- Фильтр результатов: `status = 'finished'` для статистики
+- Перед удалением данных — бекап в `data/backups/`
+
+## Admin
+
+`X-Admin-Token` для `/api/admin/*`. Секрет: `ADMIN_API_TOKEN` в Cloudflare.
+
+## D1
+
+БД `pc-db`. Local dev: `npx wrangler dev --remote --port 8787` или `npm run dev`.
+
+Схема: `backend/schema.sql`. Подробнее: `docs/architecture/API-REFERENCE.md`, `docs/data/DATABASE.md`
