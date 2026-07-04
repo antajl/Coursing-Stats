@@ -4,6 +4,32 @@
 
 ## [Unreleased]
 
+### 2026-07-04 — Админ-интерфейс, исправление TypeScript ошибок, OCR эксперимент
+
+- **Админ-интерфейс для исторических данных:**
+  - Создана страница `/admin` с авторизацией через `ADMIN_API_TOKEN`
+  - Проверка токена через API перед входом (защита от неверных токенов)
+  - Список событий до 2026 года с фильтром по году
+  - Страница редактирования `/admin/events/:id` с inline-редактированием результатов
+  - CRUD операции для результатов (создание, редактирование, удаление)
+  - Изменения сохраняются сразу в D1 базу данных
+  - Новые API endpoints: `/api/admin/events`, `/api/admin/events/:id/results`, `/api/admin/results/:id`
+- **Исправление TypeScript ошибок (42 → 0):**
+  - Создан `frontend/src/vite-env.d.ts` для Vite environment variables
+  - Исправлены типы в `FilterSelect`, `api.ts`, `useSpeedRecordsPage.ts`, `DogTooltip.tsx`, `MedalTally.tsx`
+  - Расширен generic тип в `dedupeByRecordDate` function
+  - Добавлены `Number()` casts в `DogProfile.tsx` и `DoninoDogProfile.tsx`
+- **Backend API:**
+  - Добавлен UTF-8 charset middleware для исправления кодировки в JSON ответах
+  - Исправлен `/api/dogs` маршрут (был SPA fallback)
+- **OCR эксперимент (не используется в продакшене):**
+  - Установлены `tesseract.js` и `sharp`
+  - Созданы скрипты для скачивания изображений 2015 года и OCR
+  - Результат: OCR качество недостаточно (~50% confidence), решено использовать ручной ввод
+- **Конфигурация:**
+  - Изменен Vite proxy target на локальный бэкенд (`http://127.0.0.1:8787`)
+  - Подробности: `docs/CHANGES-2026-07-04.md`
+
 ### 2026-07-03 — UI polish, календарь, Донино, тема
 
 - **Nav:** `.nav-glass` (прозрачность + blur 16px), лого слева / ссылки по центру viewport / тема и источники справа

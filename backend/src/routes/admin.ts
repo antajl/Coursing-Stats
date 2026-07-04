@@ -225,4 +225,239 @@ export function handleAdmin(app: Hono<{ Bindings: Env }>) {
       return c.json({ success: false, error: err.message }, 500);
     }
   });
+
+  // GET /api/admin/events - Get all events for admin
+  app.get('/api/admin/events', async (c) => {
+    const db = c.env.DB;
+    const env = c.env;
+
+    if (!checkAdminToken(c, env)) {
+      return c.json({ success: false, error: 'Unauthorized' }, 401);
+    }
+
+    try {
+      const year = c.req.query('year');
+      let query = `
+        SELECT id, year, date_start, date_end, rank_label, event_type,
+               competition_kind, competition_type, title, host_club,
+               region, location, catalog_url, results_url, confirmed, judges
+        FROM events
+        WHERE year < 2026
+      `;
+      const params = [];
+
+      if (year) {
+        query += ' AND year = ?';
+        params.push(year);
+      }
+
+      query += ' ORDER BY date_start ASC';
+
+      const { results } = await db.prepare(query).bind(...params).all();
+      return c.json({ success: true, data: results });
+    } catch (err: any) {
+      console.error('Error fetching events:', err);
+      return c.json({ success: false, error: err.message }, 500);
+    }
+  });
+
+  // GET /api/admin/events/:id/results - Get results for an event
+  app.get('/api/admin/events/:id/results', async (c) => {
+    const db = c.env.DB;
+    const env = c.env;
+    const eventId = c.req.param('id');
+
+    if (!checkAdminToken(c, env)) {
+      return c.json({ success: false, error: 'Unauthorized' }, 401);
+    }
+
+    try {
+      const { results } = await db.prepare(`
+        SELECT
+          r.id, r.event_id, r.dog_id, r.breed_class, r.catalog_no,
+          r.placement, r.total_score, r.qualification, r.vc, r.status,
+          r.raw_scores_json, r.breed_class, r.status_reason, r.judges,
+          d.name_lat, d.name_ru, d.breed
+        FROM results r
+        JOIN dogs d ON d.id = r.dog_id
+        WHERE r.event_id = ?
+        ORDER BY r.placement ASC
+      `).bind(eventId).all();
+
+      return c.json({ success: true, data: results });
+    } catch (err: any) {
+      console.error('Error fetching results:', err);
+      return c.json({ success: false, error: err.message }, 500);
+    }
+  });
+
+  // PUT /api/admin/events/:id - Update event (только переданные поля)
+  app.put('/api/admin/events/:id', async (c) => {
+    const db = c.env.DB;
+    const env = c.env;
+    const eventId = c.req.param('id');
+
+    if (!checkAdminToken(c, env)) {
+      return c.json({ success: false, error: 'Unauthorized' }, 401);
+    }
+
+    const EDITABLE_EVENT_FIELDS = [
+      'date_start',
+      'date_end',
+      'rank_label',
+      'location',
+      'host_club',
+      'title',
+      'full_title',
+      'protocol_location',
+      'event_date',
+      'judges',
+      'results_url',
+    ] as const;
+
+    try {
+      const body = await c.req.json();
+
+      const existing = await db
+        .prepare('SELECT id FROM events WHERE id = ?')
+        .bind(eventId)
+        .first();
+
+      if (!existing) {
+        return c.json({ success: false, error: 'Event not found' }, 404);
+      }
+
+      const sets: string[] = [];
+      const values: unknown[] = [];
+
+      for (const field of EDITABLE_EVENT_FIELDS) {
+        if (Object.prototype.hasOwnProperty.call(body, field)) {
+          sets.push(`${field} = ?`);
+          const val = body[field];
+          values.push(val === '' || val === undefined ? null : val);
+        }
+      }
+
+      if (sets.length === 0) {
+        return c.json({ success: false, error: 'No fields to update' }, 400);
+      }
+
+      await db
+        .prepare(`UPDATE events SET ${sets.join(', ')} WHERE id = ?`)
+        .bind(...values, eventId)
+        .run();
+
+      return c.json({ success: true, message: 'Event updated' });
+    } catch (err: any) {
+      console.error('Error updating event:', err);
+      return c.json({ success: false, error: err.message }, 500);
+    }
+  });
+
+  // PUT /api/admin/results/:id - Update result
+  app.put('/api/admin/results/:id', async (c) => {
+    const db = c.env.DB;
+    const env = c.env;
+    const resultId = c.req.param('id');
+
+    if (!checkAdminToken(c, env)) {
+      return c.json({ success: false, error: 'Unauthorized' }, 401);
+    }
+
+    const EDITABLE_RESULT_FIELDS = [
+      'breed_class',
+      'placement',
+      'total_score',
+      'qualification',
+      'vc',
+      'status',
+      'status_reason',
+      'raw_scores_json',
+    ] as const;
+
+    try {
+      const body = await c.req.json();
+
+      const existing = await db
+        .prepare('SELECT id FROM results WHERE id = ?')
+        .bind(resultId)
+        .first();
+
+      if (!existing) {
+        return c.json({ success: false, error: 'Result not found' }, 404);
+      }
+
+      const sets: string[] = [];
+      const values: unknown[] = [];
+
+      for (const field of EDITABLE_RESULT_FIELDS) {
+        if (Object.prototype.hasOwnProperty.call(body, field)) {
+          sets.push(`${field} = ?`);
+          let val = body[field];
+          if (field === 'raw_scores_json' && val !== null && typeof val === 'object') {
+            val = JSON.stringify(val);
+          }
+          values.push(val === '' || val === undefined ? null : val);
+        }
+      }
+
+      if (sets.length === 0) {
+        return c.json({ success: false, error: 'No fields to update' }, 400);
+      }
+
+      await db
+        .prepare(`UPDATE results SET ${sets.join(', ')} WHERE id = ?`)
+        .bind(...values, resultId)
+        .run();
+
+      return c.json({ success: true, message: 'Result updated' });
+    } catch (err: any) {
+      console.error('Error updating result:', err);
+      return c.json({ success: false, error: err.message }, 500);
+    }
+  });
+
+  // POST /api/admin/results - Create new result
+  app.post('/api/admin/results', async (c) => {
+    const db = c.env.DB;
+    const env = c.env;
+
+    if (!checkAdminToken(c, env)) {
+      return c.json({ success: false, error: 'Unauthorized' }, 401);
+    }
+
+    try {
+      const body = await c.req.json();
+      const { event_id, dog_id, breed_class, placement, total_score, qualification, vc, status } = body;
+
+      const result = await db.prepare(`
+        INSERT INTO results (event_id, dog_id, breed_class, placement, total_score, qualification, vc, status)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+      `).bind(event_id, dog_id, breed_class, placement, total_score, qualification, vc, status).run();
+
+      return c.json({ success: true, message: 'Result created', id: result.meta.last_row_id });
+    } catch (err: any) {
+      console.error('Error creating result:', err);
+      return c.json({ success: false, error: err.message }, 500);
+    }
+  });
+
+  // DELETE /api/admin/results/:id - Delete result
+  app.delete('/api/admin/results/:id', async (c) => {
+    const db = c.env.DB;
+    const env = c.env;
+    const resultId = c.req.param('id');
+
+    if (!checkAdminToken(c, env)) {
+      return c.json({ success: false, error: 'Unauthorized' }, 401);
+    }
+
+    try {
+      await db.prepare('DELETE FROM results WHERE id = ?').bind(resultId).run();
+      return c.json({ success: true, message: 'Result deleted' });
+    } catch (err: any) {
+      console.error('Error deleting result:', err);
+      return c.json({ success: false, error: err.message }, 500);
+    }
+  });
 }

@@ -8,7 +8,9 @@ const queryClient = new QueryClient({
       retry: 1,
     },
   },
-});
+})
+
+export { queryClient }
 
 export function QueryProvider({ children }: { children: React.ReactNode }) {
   return (

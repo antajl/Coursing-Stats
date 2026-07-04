@@ -28,7 +28,8 @@ export default function EventHeader({ event, results }: EventHeaderProps) {
 
       <div className="flex flex-wrap gap-x-4 md:gap-x-6 gap-y-2 text-sm text-old-money-800 dark:text-old-money-300 mb-4">
         <span>
-          <span className="text-old-money-500 dark:text-old-money-400">Дата:</span> {event.event_date || formatDate(event.date_start)}
+          <span className="text-old-money-500 dark:text-old-money-400">Дата:</span>{' '}
+          {formatDate(event.date_start) || event.event_date}
         </span>
         <span>
           <span className="text-old-money-500 dark:text-old-money-400">Локация:</span> {event.protocol_location || event.location}

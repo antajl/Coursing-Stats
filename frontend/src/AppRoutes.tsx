@@ -11,6 +11,8 @@ const SpeedRecords = lazy(() => import('./pages/SpeedRecords/index'));
 const DoninoDogProfile = lazy(() => import('./pages/DoninoDogProfile'));
 const Judges = lazy(() => import('./pages/Judges/index'));
 const JudgeDetail = lazy(() => import('./pages/Judges/JudgeDetail'));
+const Admin = lazy(() => import('./pages/Admin'));
+const EventEdit = lazy(() => import('./pages/Admin/EventEdit'));
 
 export default function AppRoutes() {
   return (
@@ -25,6 +27,8 @@ export default function AppRoutes() {
         <Route path="/donino-dog/:name/:breed" element={<DoninoDogProfile />} />
         <Route path="/judges" element={<Judges />} />
         <Route path="/judges/:judgeId" element={<JudgeDetail />} />
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/admin/events/:id" element={<EventEdit />} />
       </Routes>
     </Suspense>
   );

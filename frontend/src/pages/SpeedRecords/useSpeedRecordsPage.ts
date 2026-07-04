@@ -5,15 +5,59 @@ import { formatRecordDate, getRecordYear, parseRecordDate, parseRecordHistory } 
 
 export function useSpeedRecordsPage() {
   const [searchParams, setSearchParams] = useSearchParams()
-  const [activeTab, setActiveTab] = useState(() => searchParams.get('tab') || 'table')
+  const [activeTab, setActiveTab] = useState(() => {
+    const tab = searchParams.get('tab')
+    if (tab === 'stats') return 'table'
+    return tab || 'table'
+  })
+  const [view, setView] = useState<'table' | 'stats'>(() => {
+    if (searchParams.get('tab') === 'stats') return 'stats'
+    const v = searchParams.get('view')
+    return v === 'stats' ? 'stats' : 'table'
+  })
 
   const handleTabChange = useCallback(
     (tab: string) => {
       setActiveTab(tab)
-      setSearchParams({ tab })
+      const params = new URLSearchParams(searchParams)
+      params.set('tab', tab)
+      setSearchParams(params)
     },
-    [setSearchParams]
+    [searchParams, setSearchParams]
   )
+
+  const handleViewChange = useCallback(
+    (nextView: 'table' | 'stats') => {
+      setView(nextView)
+      const params = new URLSearchParams(searchParams)
+      if (searchParams.get('tab') === 'stats') {
+        params.set('tab', activeTab === 'coursing' ? 'coursing' : 'table')
+      }
+      if (nextView === 'stats') params.set('view', 'stats')
+      else params.delete('view')
+      params.delete('statsTab')
+      setSearchParams(params)
+    },
+    [searchParams, setSearchParams, activeTab]
+  )
+
+  useEffect(() => {
+    const rawTab = searchParams.get('tab') || 'table'
+    if (rawTab === 'stats') {
+      const params = new URLSearchParams(searchParams)
+      params.set('tab', 'table')
+      params.set('view', 'stats')
+      params.delete('statsTab')
+      setSearchParams(params, { replace: true })
+      setActiveTab('table')
+      setView('stats')
+      return
+    }
+    const validTabs = ['table', 'coursing']
+    setActiveTab(validTabs.includes(rawTab) ? rawTab : 'table')
+    const v = searchParams.get('view')
+    setView(v === 'stats' ? 'stats' : 'table')
+  }, [searchParams, setSearchParams])
 
   const speedRecordsQuery = useSpeedRecords('', '', 1000, '', '')
   const coursingRecordsQuery = useCoursingRecords('', 1000, '', '')
@@ -251,16 +295,18 @@ export function useSpeedRecordsPage() {
   const hasActiveFilters =
     filterYears.length > 0 || filterBreeds.length > 0 || filterSexes.length > 0 || !!searchQuery
 
-  const coursingYears = [...new Set(bestCoursingRecords.map(r => String(getRecordYear(r.date))).filter(Boolean))].sort().reverse()
-  const coursingBreeds = [...new Set(bestCoursingRecords.map(r => r.breed))].sort()
+  const coursingYears: string[] = [...new Set(bestCoursingRecords.map(r => String(getRecordYear(r.date))).filter(Boolean) as string[])].sort().reverse()
+  const coursingBreeds: string[] = [...new Set(bestCoursingRecords.map(r => r.breed) as string[])].sort()
 
-  const years = [...new Set(allRecords.map(r => String(getRecordYear(r.date))).filter(Boolean))].sort().reverse()
-  const breeds = [...new Set(allRecords.map(r => r.breed))].sort()
-  const sexes = [...new Set(allRecords.map(r => r.sex))].sort()
+  const years: string[] = [...new Set(allRecords.map(r => String(getRecordYear(r.date))).filter(Boolean) as string[])].sort().reverse()
+  const breeds: string[] = [...new Set(allRecords.map(r => r.breed) as string[])].sort()
+  const sexes: string[] = [...new Set(allRecords.map(r => r.sex) as string[])].sort()
 
   return {
     activeTab,
+    view,
     handleTabChange,
+    handleViewChange,
     searchQuery,
     setSearchQuery,
     filterYears,

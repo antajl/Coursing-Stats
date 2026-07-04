@@ -149,10 +149,10 @@ export default function DoninoDogProfile() {
                         <div className="flex-1 bg-cream-200 dark:bg-charcoal-600 rounded-full h-6 overflow-hidden relative">
                           <div 
                             className="bg-gradient-to-r from-camel-400 to-camel-600 h-full rounded-full transition-all duration-500"
-                            style={{ width: `${(record.speed_km_h / 80) * 100}%` }}
+                            style={{ width: `${(Number(record.speed_km_h) / 80) * 100}%` }}
                           />
                           <div className="absolute inset-0 flex items-center justify-center text-sm font-bold text-charcoal-900 dark:text-charcoal-100">
-                            {record.speed_km_h.toFixed(1)} км/ч
+                            {Number(record.speed_km_h).toFixed(1)} км/ч
                           </div>
                         </div>
                       </div>
@@ -198,10 +198,10 @@ export default function DoninoDogProfile() {
                         <div className="flex-1 bg-cream-200 dark:bg-charcoal-600 rounded-full h-6 overflow-hidden relative">
                           <div 
                             className="bg-gradient-to-r from-camel-400 to-camel-600 h-full rounded-full transition-all duration-500"
-                            style={{ width: `${(30 / record.time_seconds) * 100}%` }}
+                            style={{ width: `${(30 / Number(record.time_seconds)) * 100}%` }}
                           />
                           <div className="absolute inset-0 flex items-center justify-center text-sm font-bold text-charcoal-900 dark:text-charcoal-100">
-                            {record.time_seconds.toFixed(2)} сек
+                            {Number(record.time_seconds).toFixed(2)} сек
                           </div>
                         </div>
                       </div>

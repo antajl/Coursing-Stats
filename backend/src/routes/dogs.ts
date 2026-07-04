@@ -8,6 +8,28 @@ type Env = {
 };
 
 export function handleDogs(app: Hono<{ Bindings: Env }>) {
+  // GET /api/dogs — список собак (для админки; до маршрута /api/dogs/:id)
+  app.get('/api/dogs', async (c) => {
+    const db = c.env.DB;
+    const search = c.req.query('search') || '';
+    const limit = Math.min(Math.max(parseInt(c.req.query('limit') || '5000', 10) || 5000, 1), 10000);
+
+    let query = 'SELECT id, name_lat, name_ru, breed FROM dogs WHERE 1=1';
+    const params: (string | number)[] = [];
+
+    if (search) {
+      query += ' AND (name_lat LIKE ? OR name_ru LIKE ? OR breed LIKE ?)';
+      const pattern = `%${search}%`;
+      params.push(pattern, pattern, pattern);
+    }
+
+    query += ' ORDER BY name_lat ASC LIMIT ?';
+    params.push(limit);
+
+    const { results } = await db.prepare(query).bind(...params).all();
+    return c.json({ success: true, data: results });
+  });
+
   // GET /api/dogs/:id
   app.get('/api/dogs/:id', async (c) => {
     const db = c.env.DB;

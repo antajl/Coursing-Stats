@@ -71,9 +71,9 @@ export default function MedalTally({
   showZero = false,
 }: MedalTallyProps) {
   const items: { variant: MedalVariant; count: number }[] = [
-    { variant: 'gold', count: gold },
-    { variant: 'silver', count: silver },
-    { variant: 'bronze', count: bronze },
+    { variant: 'gold' as const, count: gold },
+    { variant: 'silver' as const, count: silver },
+    { variant: 'bronze' as const, count: bronze },
   ].filter((item) => showZero || item.count > 0)
 
   const styles = TALLY_STYLES[size]

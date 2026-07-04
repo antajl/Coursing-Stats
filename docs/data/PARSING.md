@@ -579,7 +579,20 @@
 
 ## Рекорды Донино
 
-### Google Sheets
+Подробное описание двух дисциплин, правил «не смешивать» и одной собаки в обоих листах — **`docs/data/SPEED_RECORDS.md`** (раздел «Два вида замеров»).
+
+### Два источника Google Sheets
+
+| Дисциплина | Spreadsheet ID | Таблица D1 | Скрипт |
+|------------|----------------|------------|--------|
+| **Замер скорости** (ошейник, км/ч на курсинге) | `1NTiY3HXZIkXE8xTeXZESgMKaZsEXunmcWhTfhhkoKyE` | `speed_records` | `fetch-speed-records.ts` |
+| **Бега борзых 350 м** (секундомер, ровная трасса) | `1hpdA8vlIfeECgpnPvuk5xfezPsdUh1EXULjeATAF9dw` | `coursing_records` | `fetch-coursing-records.ts` |
+
+Одна собака (`name` + `breed`) может иметь записи в **обеих** таблицах; статистика по дисциплинам на сайте остаётся раздельной.
+
+Статистика на сайте (`SpeedRecords/stats/`): **Замер → Статистика** — только `speed_records`; **Бега → Статистика** — только `coursing_records`.
+
+### Google Sheets — замер скорости
 
 **Spreadsheet ID:** `1NTiY3HXZIkXE8xTeXZESgMKaZsEXunmcWhTfhhkoKyE`
 
@@ -597,7 +610,8 @@ https://docs.google.com/spreadsheets/d/1NTiY3HXZIkXE8xTeXZESgMKaZsEXunmcWhTfhhko
 
 ### Скрипты
 
-- `backend/scripts/speed/fetch-speed-records.ts` — загрузка данных из Google Sheets
+- `backend/scripts/speed/fetch-speed-records.ts` — замер скорости → `speed_records`
+- `backend/scripts/speed/fetch-coursing-records.ts` — бега 350 м → `coursing_records`
 - `backend/scripts/fetch-speed-records-pdf.py` — Python скрипт для PDF
 
 ---

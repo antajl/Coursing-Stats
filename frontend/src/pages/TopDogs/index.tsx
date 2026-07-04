@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { useTopPlacement, useTopScore, useTopSpeed, useBreeds, useYears } from '../../hooks/useApi'
 import SkeletonLoader from '../../components/SkeletonLoader'
@@ -6,11 +6,39 @@ import TopDogsFilters from './TopDogsFilters'
 import TopDogsTabs from './TopDogsTabs'
 import { filterPlacement, filterScore, filterSpeed } from './filterUtils'
 
+const RANKING_TABS = ['placement', 'score', 'speed'] as const
+type RankingTab = (typeof RANKING_TABS)[number]
+
+function parseRankingTab(value: string | null): RankingTab {
+  return RANKING_TABS.includes(value as RankingTab) ? (value as RankingTab) : 'placement'
+}
+
 export default function TopDogs() {
-  const [searchParams] = useSearchParams()
+  const [searchParams, setSearchParams] = useSearchParams()
   const isStandalone = !searchParams.get('tab')
 
-  const [activeTab, setActiveTab] = useState(() => searchParams.get('rankingTab') || 'placement')
+  const [activeTab, setActiveTab] = useState<RankingTab>(() => parseRankingTab(searchParams.get('rankingTab')))
+
+  const handleTabChange = useCallback(
+    (tab: RankingTab) => {
+      setActiveTab(tab)
+      const params = new URLSearchParams(searchParams)
+      if (!isStandalone) {
+        params.set('tab', 'ranking')
+      }
+      if (tab === 'placement') {
+        params.delete('rankingTab')
+      } else {
+        params.set('rankingTab', tab)
+      }
+      setSearchParams(params)
+    },
+    [searchParams, setSearchParams, isStandalone]
+  )
+
+  useEffect(() => {
+    setActiveTab(parseRankingTab(searchParams.get('rankingTab')))
+  }, [searchParams])
   const [filterBreed, setFilterBreed] = useState(() => searchParams.get('breed') || '')
   const [filterYear, setFilterYear] = useState(() => searchParams.get('year') || '2026')
   const [searchQuery, setSearchQuery] = useState(() => searchParams.get('search') || '')
@@ -148,7 +176,7 @@ export default function TopDogs() {
 
       <TopDogsTabs
         activeTab={activeTab}
-        onTabChange={setActiveTab}
+        onTabChange={handleTabChange}
         filteredPlacement={filteredPlacement}
         filteredScore={filteredScore}
         filteredSpeed={filteredSpeed}

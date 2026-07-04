@@ -20,6 +20,171 @@ Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Ori
 
 ### Admin Endpoints
 
+#### GET /api/admin/events
+Список исторических событий (год < 2026) для редактирования.
+
+**Авторизация:** Требуется заголовок `X-Admin-Token`
+
+**Параметры:**
+- `year` (опционально) — фильтр по году
+
+**Пример:**
+```
+GET /api/admin/events?year=2015
+Headers: X-Admin-Token: secret
+```
+
+**Ответ:**
+```json
+{
+  "success": true,
+  "data": [
+    {
+      "id": 2500,
+      "year": 2015,
+      "date_start": "2015-08-08",
+      "date_end": "2015-08-09",
+      "title": "Дружественные забеги",
+      "location": "Московская область, Сергиево-Посадский р-н",
+      "event_type": "coursing",
+      "competition_kind": "",
+      "results_url": "http://procoursing.ru/results/2015-08-08_F/",
+      "judges": null
+    }
+  ]
+}
+```
+
+#### GET /api/admin/events/:id/results
+Результаты события для редактирования.
+
+**Авторизация:** Требуется заголовок `X-Admin-Token`
+
+**Пример:**
+```
+GET /api/admin/events/2500/results
+Headers: X-Admin-Token: secret
+```
+
+**Ответ:**
+```json
+{
+  "success": true,
+  "data": [
+    {
+      "id": 12345,
+      "event_id": 2500,
+      "dog_id": 1,
+      "name_lat": "DOG NAME",
+      "name_ru": "Кличка",
+      "breed": "САЛЮКИ",
+      "breed_class": "Стандартная - Сука",
+      "placement": 1,
+      "total_score": 95.5,
+      "qualification": "CACL",
+      "vc": null,
+      "status": "finished"
+    }
+  ]
+}
+```
+
+#### PUT /api/admin/events/:id
+Обновление данных события.
+
+**Авторизация:** Требуется заголовок `X-Admin-Token`
+
+**Тело запроса:**
+```json
+{
+  "title": "CACL (Курсинг борзых)",
+  "full_title": "Национальные сертификатные состязания…",
+  "location": "Новая локация",
+  "judges": "Иванов И.И., Петров П.П.",
+  "results_url": "http://procoursing.ru/results/..."
+}
+```
+
+**Ответ:**
+```json
+{
+  "success": true,
+  "message": "Event updated"
+}
+```
+
+#### PUT /api/admin/results/:id
+Обновление результата.
+
+**Авторизация:** Требуется заголовок `X-Admin-Token`
+
+**Тело запроса:**
+```json
+{
+  "placement": 1,
+  "total_score": 95.5,
+  "qualification": "CACL",
+  "vc": null,
+  "status": "finished",
+  "status_reason": null
+}
+```
+
+**Ответ:**
+```json
+{
+  "success": true,
+  "message": "Result updated"
+}
+```
+
+#### POST /api/admin/results
+Создание нового результата.
+
+**Авторизация:** Требуется заголовок `X-Admin-Token`
+
+**Тело запроса:**
+```json
+{
+  "event_id": 2500,
+  "dog_id": 1,
+  "breed_class": "Стандартная - Сука",
+  "placement": 1,
+  "total_score": 95.5,
+  "qualification": "CACL",
+  "vc": null,
+  "status": "finished"
+}
+```
+
+**Ответ:**
+```json
+{
+  "success": true,
+  "message": "Result created",
+  "id": 12346
+}
+```
+
+#### DELETE /api/admin/results/:id
+Удаление результата.
+
+**Авторизация:** Требуется заголовок `X-Admin-Token`
+
+**Пример:**
+```
+DELETE /api/admin/results/12345
+Headers: X-Admin-Token: secret
+```
+
+**Ответ:**
+```json
+{
+  "success": true,
+  "message": "Result deleted"
+}
+```
+
 #### POST /api/admin/import-results
 Загрузка результатов соревнований в базу данных.
 
@@ -473,7 +638,7 @@ GET /api/dogs/1/competitions
 **Параметры:**
 - `breed` (опционально) — фильтр по породе
 - `sex` (опционально) — фильтр по полу ('С' или 'К')
-- `limit` (опционально) — лимит записей (по умолчанию **1000**; клиенты: таблица Донино — 1000, `Stats.tsx` — 10000)
+- `limit` (опционально) — лимит записей (по умолчанию **1000**; клиенты: таблица «Замер скорости» — 1000; `stats/SpeedStatsView.tsx` — 10000)
 - `offset` (опционально) — смещение
 - `search` (опционально) — поиск по кличке
 - `year` (опционально) — фильтр по году
@@ -501,6 +666,42 @@ GET /api/speed-records?breed=САЛЮКИ&sex=С&limit=50&offset=0
   ]
 }
 ```
+
+#### GET /api/coursing-records
+Зачёты **бегов борзых 350 м** Донино (время в секундах из отдельного Google Sheet).
+
+**Параметры:**
+- `breed` (опционально) — фильтр по породе
+- `limit` (опционально) — лимит записей (по умолчанию **1000**; `stats/CoursingStatsView.tsx` — 10000)
+- `search` (опционально) — поиск по кличке, породе, дате
+- `year` (опционально) — фильтр по году
+- `dog_id` (опционально) — фильтр по ID собаки
+
+**Пример:**
+```
+GET /api/coursing-records?breed=Уиппет&limit=100
+```
+
+**Ответ:**
+```json
+{
+  "success": true,
+  "data": [
+    {
+      "id": 1,
+      "breed": "Уиппет",
+      "name": "Драм",
+      "time_seconds": 22.81,
+      "date": "2025-08-20",
+      "track_length": 350,
+      "history": null,
+      "dog_id": 123
+    }
+  ]
+}
+```
+
+**Использование во фронтенде:** вкладка «Бега борзых» (`CoursingTableTab.tsx`); статистика 350 м в `stats/CoursingStatsView.tsx`. Скорость для отображения: `1260 / time_seconds` км/ч.
 
 ### Judges
 

@@ -77,7 +77,7 @@ export default function DogTooltip({ dogId, pointer, onClose }) {
 
   if (!pointer) return null
 
-  const style = {
+  const style: React.CSSProperties = {
     position: 'fixed',
     left: `${position.x}px`,
     top: `${position.y}px`,

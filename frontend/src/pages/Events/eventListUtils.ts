@@ -8,6 +8,7 @@ export interface CalendarEvent {
   competition_kind?: string | null
   competition_type?: string | null
   title?: string | null
+  full_title?: string | null
   host_club?: string | null
   location?: string | null
   results_url?: string | null
@@ -198,6 +199,9 @@ export function getEventHeadline(event: CalendarEvent): string {
     const headline = headlineFromStructure(parseRankLabelStructure(label), event)
     if (headline) return headline
   }
+
+  const full = event.full_title?.trim()
+  if (full) return full
 
   return event.title || 'Соревнование'
 }

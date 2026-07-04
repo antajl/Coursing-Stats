@@ -20,7 +20,7 @@
 |------|-----------|----------|
 | `/` | `Home.tsx` | Лендинг (WIP): hero, счётчики, ближайшее событие |
 | `/procoursing` | `Procoursing.tsx` | Hub вкладок соревнований procoursing.ru |
-| `/top` | `TopDogs/index.tsx` | Прямой доступ к рейтингу (дублирует вкладку в Procoursing) |
+| `/top` | `TopDogs/index.tsx` | Прямой доступ к рейтингу (`?rankingTab=score` \| `speed`; дублирует вкладку в Procoursing) |
 | `/dog/:id` | `DogProfile.tsx` | Профиль собаки из БД соревнований |
 | `/event/:id` | `Events/EventResults/` | Результаты одного события (см. ниже) |
 | `/speed-records` | `SpeedRecords/index.tsx` | Рекорды Донино (отдельный источник данных) |
@@ -35,7 +35,7 @@
 | Вкладка (`?tab=`) | Lazy-компонент | Содержимое |
 |-------------------|----------------|------------|
 | `calendar` (default) | `Events/index.tsx` | Календарь событий |
-| `ranking` | `TopDogs/index.tsx` | Рейтинг: места / очки / скорость |
+| `ranking` | `TopDogs/index.tsx` | Рейтинг: места / очки / скорость (`?rankingTab=score` \| `speed`; default — места) |
 | `judges` | `Judges/index.tsx` | Судьи (тот же список, что `/judges`) |
 
 В `Nav.tsx` ссылка «Соревнования» ведёт на `/procoursing`.
@@ -118,12 +118,14 @@ frontend/src/pages/SpeedRecords/
   SpeedTableTab.tsx      — замер скорости (Donino)
   CoursingTableTab.tsx   — бега борзых (Donino coursing sheet)
   exportExcel.ts         — lazy xlsx export
-  Stats.tsx              — вкладка «Статистика Донино» (limit 10000; распределение по всем speed_records)
+  Stats.tsx              — (удалён) → stats/SpeedStatsView, stats/CoursingStatsView
 ```
 
-**Даты замеров:** `frontend/src/lib/recordDates.ts` — `formatRecordDate`, `parseRecordDate`, `dedupeByRecordDate` (Excel serial из Google Sheets).
+**Даты и статистика 350 м:** `frontend/src/lib/recordDates.ts` — даты замеров, `dedupeByRecordDate`, `coursingTimesToStats`, `time350ToSpeedKmh`.
 
-**Вкладка Stats vs таблица:** «Распределение скоростей» строится только по **замеру скорости** (`speed_records`, км/ч), не по «бегам борзых» (`coursing_records`). Таблица на вкладке «Замер скорости» грузит limit=1000 через `useSpeedRecordsPage.ts`.
+**Query params:** `?tab=table` | `coursing`; `?view=stats` — статистика внутри дисциплины (вариант A). `?groupBy=sex` | `year` на view=stats. Legacy `?tab=stats` → `?tab=table&view=stats`.
+
+**Статистика (вариант A):** внутри «Замер скорости» и «Бега борзых» — переключатель **Таблица | Статистика**. Отдельной верхней вкладки «Статистика Донино» нет. Модули: `stats/SpeedStatsView.tsx`, `stats/CoursingStatsView.tsx`.
 
 ## Ключевые папки
 

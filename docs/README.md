@@ -64,8 +64,9 @@
   - Migrations
   - Data import/export
   - Sync local ↔ remote
-- **[data/SPEED_RECORDS.md](data/SPEED_RECORDS.md)** — Рекорды скорости
-  - Google Sheets интеграция
+- **[data/SPEED_RECORDS.md](data/SPEED_RECORDS.md)** — Рекорды Донино (два Google Sheet: скорость + курсинг 350 м)
+  - Два источника: `speed_records` и `coursing_records`
+  - Статистика 350 м в `Stats.tsx` — только coursing
   - Data processing pipeline
   - Troubleshooting guide
 
@@ -128,7 +129,8 @@
 - events: 219 (2023-2026)
 - dogs: ~1579
 - results: 4639
-- speed_records: данные из Google Sheets (автообновление)
+- speed_records: замер скорости (Google Sheets)
+- coursing_records: бега борзых 350 м (отдельный Google Sheet)
 
 **Домены:**
 - Фронтенд: https://procoursing.antajl.ru

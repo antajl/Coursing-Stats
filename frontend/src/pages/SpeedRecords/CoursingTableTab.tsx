@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { formatRecordDate } from '../../lib/recordDates'
 import { exportCoursingToExcel } from './exportExcel'
+import ViewToggle from './stats/ViewToggle'
 
 interface CoursingRecord {
   id: string | number
@@ -13,6 +14,8 @@ interface CoursingRecord {
 }
 
 interface CoursingTableTabProps {
+  view: 'table' | 'stats'
+  onViewChange: (view: 'table' | 'stats') => void
   coursingLoading: boolean
   searchQuery: string
   onSearchChange: (value: string) => void
@@ -29,6 +32,8 @@ interface CoursingTableTabProps {
 }
 
 export default function CoursingTableTab({
+  view,
+  onViewChange,
   coursingLoading,
   searchQuery,
   onSearchChange,
@@ -133,6 +138,8 @@ export default function CoursingTableTab({
           </div>
         )}
       </div>
+
+      <ViewToggle view={view} onViewChange={onViewChange} />
 
       <div className="rounded-xl border border-old-money-200 dark:border-charcoal-600 overflow-hidden">
         <div className="md:hidden space-y-3 p-3">

@@ -14,10 +14,10 @@ Cloudflare Worker API
    ▼
 Cloudflare Pages (фронтенд: React)
 
-Google Sheets (рекорды Донино)
-   │  Скрипт загрузки (GitHub Actions)
+Google Sheets (рекорды Донино — два листа)
+   │  Скрипты загрузки (GitHub Actions / вручную)
    ▼
-Cloudflare D1 (speed_records)
+Cloudflare D1 (speed_records + coursing_records)
    │
    ▼
 Cloudflare Worker API
@@ -43,7 +43,8 @@ Cloudflare Pages (фронтенд: React)
 | `backend/parsers/unique/` | `backend/parsers/` | Общие row/header parsers для v2 |
 | `backend/scripts/load/load-events.ts` | `backend/scripts/load/` | Загрузка событий в D1 |
 | `backend/scripts/load/load-results.ts` | `backend/scripts/load/` | Загрузка результатов в D1 (через API или SQL) |
-| `backend/scripts/speed/sync-speed-records.ts` | `backend/scripts/speed/` | Загрузка рекордов Донино из Google Sheets |
+| `backend/scripts/speed/sync-speed-records.ts` | `backend/scripts/speed/` | Загрузка замеров скорости Донино |
+| `backend/scripts/speed/fetch-coursing-records.ts` | `backend/scripts/speed/` | Загрузка зачётов курсинга 350 м |
 
 ### 2. Database (D1)
 
@@ -51,7 +52,8 @@ Cloudflare Pages (фронтенд: React)
 - `events` — мероприятия (event_type: coursing, bzmp, racing)
 - `dogs` — собаки
 - `results` — результаты выступлений (raw_scores_json хранит детальные данные)
-- `speed_records` — рекорды скорости Донино (из Google Sheets)
+- `speed_records` — замер скорости Донино (км/ч, Google Sheet `1NTiY3HXZ…`)
+- `coursing_records` — бега борзых 350 м (время в сек, Google Sheet `1hpdA8vl…`)
 
 **Views (для топов):**
 - `v_top_by_placement` — медальный зачёт (курсинг + БЗМП)
@@ -80,6 +82,7 @@ GET /api/competitions/:id
 GET /api/competitions/:id/results
 GET /api/dogs/:id/competitions
 GET /api/speed-records?breed=&sex=&limit=&offset=
+GET /api/coursing-records?breed=&limit=&search=&year=
 GET /api/judges?breed=&discipline=
 GET /api/judges/:id/details
 POST /api/admin/import-results
@@ -142,7 +145,7 @@ POST /api/admin/recreate-views
 - `frontend/src/components/FiltersDropdown.tsx` — расширенные фильтры
 
 **Lib:**
-- `frontend/src/lib/recordDates.ts` — даты рекордов Донино (Excel serial, dedupe для графиков)
+- `frontend/src/lib/recordDates.ts` — даты рекордов Донино; статистика 350 м (`coursingTimesToStats`, `time350ToSpeedKmh`)
 
 **Services:**
 - `frontend/src/services/api.ts` — API client
@@ -229,6 +232,21 @@ POST /api/admin/recreate-views
 ]
 ```
 
+### coursing_records
+
+Зачёты **бегов борзых 350 м** (отдельный Google Sheet, не путать с `speed_records`).
+
+| Column | Type | Description |
+|--------|------|-------------|
+| id | INTEGER PK | |
+| breed | TEXT | Порода |
+| name | TEXT | Кличка |
+| time_seconds | REAL | Время на 350 м (сек) |
+| date | TEXT | Дата замера |
+| track_length | INTEGER | 350 |
+| history | TEXT | JSON с предыдущими результатами |
+| dog_id | INTEGER FK | Связь с `dogs` (опционально) |
+
 **raw_scores_json структура:**
 
 Для Coursing/БЗМП:
@@ -308,4 +326,5 @@ POST /api/admin/recreate-views
 - events: 219 (2023–2026)
 - dogs: ~1579
 - results: 4639
-- speed_records: данные из Google Sheets (автообновление)
+- speed_records: замер скорости из Google Sheets (~198 после дедупа)
+- coursing_records: бега 350 м из отдельного Google Sheet (~95+ зачётов)

@@ -4,7 +4,8 @@ import { useSpeedRecordsPage } from './useSpeedRecordsPage'
 import SpeedTableTab from './SpeedTableTab'
 import CoursingTableTab from './CoursingTableTab'
 
-const SpeedRecordsStats = lazy(() => import('./Stats'))
+const SpeedStatsView = lazy(() => import('./stats/SpeedStatsView'))
+const CoursingStatsView = lazy(() => import('./stats/CoursingStatsView'))
 
 function SpeedRecords() {
   const page = useSpeedRecordsPage()
@@ -28,14 +29,12 @@ function SpeedRecords() {
             <span className="md:hidden">Бега</span>
             <span className="hidden md:inline">Бега борзых</span>
           </button>
-          <button onClick={() => page.handleTabChange('stats')} className={tabClass('stats')}>
-            <span className="md:hidden">Статистика</span>
-            <span className="hidden md:inline">Статистика Донино</span>
-          </button>
         </div>
 
-        {page.activeTab === 'table' && (
+        {page.activeTab === 'table' && page.view === 'table' && (
           <SpeedTableTab
+            view={page.view}
+            onViewChange={page.handleViewChange}
             searchQuery={page.searchQuery}
             onSearchChange={page.setSearchQuery}
             filterYears={page.filterYears}
@@ -59,8 +58,16 @@ function SpeedRecords() {
           />
         )}
 
-        {page.activeTab === 'coursing' && (
+        {page.activeTab === 'table' && page.view === 'stats' && (
+          <Suspense fallback={<PageLoader />}>
+            <SpeedStatsView view={page.view} onViewChange={page.handleViewChange} />
+          </Suspense>
+        )}
+
+        {page.activeTab === 'coursing' && page.view === 'table' && (
           <CoursingTableTab
+            view={page.view}
+            onViewChange={page.handleViewChange}
             coursingLoading={page.coursingLoading}
             searchQuery={page.searchQuery}
             onSearchChange={page.setSearchQuery}
@@ -77,9 +84,9 @@ function SpeedRecords() {
           />
         )}
 
-        {page.activeTab === 'stats' && (
+        {page.activeTab === 'coursing' && page.view === 'stats' && (
           <Suspense fallback={<PageLoader />}>
-            <SpeedRecordsStats />
+            <CoursingStatsView view={page.view} onViewChange={page.handleViewChange} />
           </Suspense>
         )}
       </div>

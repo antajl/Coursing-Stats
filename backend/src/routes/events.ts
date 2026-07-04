@@ -15,7 +15,7 @@ export function handleCompetitions(app: Hono<{ Bindings: Env }>) {
     let query = `
       SELECT
         e.id, e.year, e.date_start, e.date_end, e.rank_label, e.event_type,
-        e.competition_kind, e.competition_type, e.title, e.host_club,
+        e.competition_kind, e.competition_type, e.title, e.full_title, e.host_club,
         e.region, e.location, e.catalog_url, e.results_url, e.confirmed, e.judges,
         (SELECT COUNT(DISTINCT r.dog_id) FROM results r WHERE r.event_id = e.id) AS participants_count
       FROM events e WHERE 1=1
@@ -40,9 +40,9 @@ export function handleCompetitions(app: Hono<{ Bindings: Env }>) {
     const { results } = await db.prepare(`
       SELECT
         id, year, date_start, date_end, rank_label, event_type,
-        competition_kind, competition_type, title, host_club,
+        competition_kind, competition_type, title, full_title, host_club,
         region, location, catalog_url, results_url, confirmed,
-        judges, track_schemes
+        judges, track_schemes, event_date, protocol_location, telegram_url
       FROM events WHERE id = ?
     `).bind(eventId).all();
 

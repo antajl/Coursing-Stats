@@ -19,6 +19,15 @@ export default function FilterSelect({
   allLabel,
   disabled = false,
   className = '',
+}: {
+  label?: string
+  ariaLabel?: string
+  value: string
+  onChange: (value: string) => void
+  options: { value: string; label: string }[]
+  allLabel: string
+  disabled?: boolean
+  className?: string
 }) {
   const id = useId()
   const screenReaderLabel = ariaLabel || label

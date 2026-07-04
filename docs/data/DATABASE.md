@@ -175,6 +175,27 @@ npx wrangler d1 execute pc-db --remote --file=data/exports/results.sql --yes
 - `idx_speed_records_breed` на `breed`
 - `idx_speed_records_speed` на `speed_km_h DESC`
 
+### coursing_records
+
+Зачёты **бегов борзых 350 м** из [отдельного Google Sheet](https://docs.google.com/spreadsheets/d/1hpdA8vlIfeECgpnPvuk5xfezPsdUh1EXULjeATAF9dw). Не путать с `speed_records`.
+
+| Column | Type | Description |
+|--------|------|-------------|
+| id | INTEGER PK | |
+| breed | TEXT | Порода |
+| name | TEXT | Кличка |
+| time_seconds | REAL | Время на 350 м (сек) |
+| date | TEXT | Дата (`YYYY-MM-DD` после синка) |
+| track_length | INTEGER | 350 |
+| history | TEXT | JSON предыдущих результатов |
+| dog_id | INTEGER FK | Связь с `dogs` (опционально) |
+
+**Скорость для UI:** `1260 / time_seconds` км/ч (`recordDates.ts`).
+
+**Indexes:**
+- `idx_coursing_records_breed` на `breed`
+- `idx_coursing_records_time` на `time_seconds ASC`
+
 ---
 
 ## Views

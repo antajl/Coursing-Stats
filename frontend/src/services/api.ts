@@ -23,7 +23,7 @@ import {
 const API_URL = import.meta.env.VITE_API_URL ||
   (import.meta.env.PROD
     ? 'https://procoursing-stats.antajltube.workers.dev'
-    : 'http://127.0.0.1:8787');
+    : ''); // dev: Vite proxy → wrangler :8787
 
 export { API_URL };
 
@@ -97,6 +97,29 @@ function pickTopSpeedByBreed(records, limit) {
     .slice(0, limit);
 }
 
+function pickTopCoursingByBreed(
+  records: { name: string; breed: string; time_seconds: number | string; date?: string }[],
+  limit: number
+) {
+  const bestByBreed = new Map<string, (typeof records)[number]>()
+  for (const record of records) {
+    const time = Number(record.time_seconds)
+    const existing = bestByBreed.get(record.breed)
+    if (!existing || time < Number(existing.time_seconds)) {
+      bestByBreed.set(record.breed, record)
+    }
+  }
+  return [...bestByBreed.values()]
+    .sort((a, b) => Number(a.time_seconds) - Number(b.time_seconds))
+    .slice(0, limit)
+}
+
+const mockCoursingRecords = [
+  { name: 'Swift Wind', breed: 'Whippet', time_seconds: 22.5, date: '03.04.2025' },
+  { name: 'Desert Storm', breed: 'Saluki', time_seconds: 23.1, date: '18.06.2025' },
+  { name: 'Thunder Bolt', breed: 'Greyhound', time_seconds: 21.8, date: '12.05.2025' },
+]
+
 const mockSpeedRecords = [
   { name: 'Thunder Bolt', breed: 'Greyhound', speed_km_h: 68.2, date: '12.05.2025' },
   { name: 'Swift Wind', breed: 'Whippet', speed_km_h: 62.4, date: '03.04.2025' },
@@ -113,10 +136,10 @@ export const api = {
     const params = new URLSearchParams();
     if (year) params.append('year', year);
     if (breed) params.append('breed', breed);
-    if (minStarts > 0) params.append('minStarts', minStarts);
+    if (minStarts > 0) params.append('minStarts', minStarts.toString());
     if (limit !== null) {
-      params.append('limit', limit);
-      params.append('offset', offset);
+      params.append('limit', limit.toString());
+      params.append('offset', offset.toString());
     }
 
     const url = `${API_URL}/api/top/placement?${params}`;
@@ -129,10 +152,10 @@ export const api = {
     const params = new URLSearchParams();
     if (year) params.append('year', year);
     if (breed) params.append('breed', breed);
-    if (minStarts > 0) params.append('minStarts', minStarts);
+    if (minStarts > 0) params.append('minStarts', minStarts.toString());
     if (limit !== null) {
-      params.append('limit', limit);
-      params.append('offset', offset);
+      params.append('limit', limit.toString());
+      params.append('offset', offset.toString());
     }
 
     const url = `${API_URL}/api/top/score?${params}`;
@@ -145,10 +168,10 @@ export const api = {
     const params = new URLSearchParams();
     if (year) params.append('year', year);
     if (breed) params.append('breed', breed);
-    if (minStarts > 0) params.append('minStarts', minStarts);
+    if (minStarts > 0) params.append('minStarts', minStarts.toString());
     if (limit !== null) {
-      params.append('limit', limit);
-      params.append('offset', offset);
+      params.append('limit', limit.toString());
+      params.append('offset', offset.toString());
     }
 
     const url = `${API_URL}/api/top/speed?${params}`;
@@ -201,7 +224,7 @@ export const api = {
     if (search) params.append('search', search);
     if (year) params.append('year', year);
     if (dogId) params.append('dog_id', dogId);
-    params.append('limit', limit);
+    params.append('limit', limit.toString());
     const url = `${API_URL}/api/speed-records?${params}`;
     return fetchWithFallback(url, []);
   },
@@ -219,9 +242,16 @@ export const api = {
     if (search) params.append('search', search);
     if (year) params.append('year', year);
     if (dogId) params.append('dog_id', dogId);
-    params.append('limit', limit);
+    params.append('limit', limit.toString());
     const url = `${API_URL}/api/coursing-records?${params}`;
     return fetchWithFallback(url, []);
+  },
+
+  async getCoursingRecordsTopByBreed(limit = 3) {
+    const params = new URLSearchParams();
+    params.append('limit', String(limit));
+    const url = `${API_URL}/api/coursing-records/top-by-breed?${params}`;
+    return fetchWithFallback(url, pickTopCoursingByBreed(mockCoursingRecords, limit));
   },
 
   async getJudges(breed = '', discipline = '') {

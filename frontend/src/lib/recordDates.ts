@@ -172,7 +172,7 @@ export function dedupeSpeedRecords<
 }
 
 /** Оставляет один результат на дату; при дублях выбирает лучший по isBetter(candidate, existing). */
-export function dedupeByRecordDate<T extends { date: string | number | null | undefined }>(
+export function dedupeByRecordDate<T extends { date: string | number | null | undefined } & Record<string, unknown>>(
   records: T[],
   isBetter: (candidate: T, existing: T) => boolean
 ): T[] {

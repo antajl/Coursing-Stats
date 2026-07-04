@@ -36,9 +36,9 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://procoursing-stats.antajltube.workers.dev',
+        target: 'http://127.0.0.1:8787',
         changeOrigin: true,
-        secure: true,
+        secure: false,
         configure: (proxy) => {
           proxy.on('proxyReq', (proxyReq) => {
             console.log('Proxying request to:', proxyReq.path)

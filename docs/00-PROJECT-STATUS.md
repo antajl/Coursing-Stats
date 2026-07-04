@@ -38,7 +38,7 @@
 
 ## Что работает
 
-- ✅ API на Cloudflare Worker (Hono): `/api/competitions`, `/api/dogs`, `/api/top/*`, `/api/judges`, `/api/speed-records`
+- ✅ API на Cloudflare Worker (Hono): `/api/competitions`, `/api/dogs`, `/api/top/*`, `/api/judges`, `/api/speed-records`, `/api/coursing-records`
 - ✅ Фронтенд на Cloudflare Pages с полной мобильной адаптацией
 - ✅ Разделы: Главная (WIP), Соревнования, Судьи, Рекорды Донино, Профиль собаки, Результаты события
 - ✅ Lazy routes + code-splitting (`AppRoutes.tsx`, `vite.config.ts` с `manualChunks`; крупные страницы разбиты на модули)
@@ -59,7 +59,7 @@
 - 🔄 Модульные парсеры v2 в продакшен-reparse (`reparse-by-year.ts`); v1 `parse-results-*.ts` — legacy/CLI
 - 🔄 In-process Worker-тесты — `api.test.ts` пропущен; планируется vitest@4 + `@cloudflare/vitest-pool-workers`; пока `npm run smoke-api` с dev-сервером
 - 🔄 `Home.tsx` — WIP лендинг (ждёт ревью `CLAUDE PLAN/`)
-- 🔄 Таблица «Замер скорости» грузит limit=1000 (в БД ~2300+ строк); статистика — limit=10000
+- 🔄 Таблица «Замер скорости» / «Бега борзых» — limit=1000; статистика внутри дисциплины (`?view=stats`) — limit=10000; замер — `speed_records`, 350 м — `coursing_records` (см. `SPEED_RECORDS.md`)
 - 📋 Подробнее: `docs/plans/FUTURE-PLANS.md`
 
 ## Парсеры — важно

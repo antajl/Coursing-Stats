@@ -21,6 +21,8 @@ interface TopDog {
   bronze?: number
   best_score?: number
   avg_score?: number
+  best_speed?: number
+  avg_speed?: number
   total_starts?: number
 }
 
@@ -32,7 +34,15 @@ interface SpeedRecord {
   date?: string
 }
 
-type RankingTab = 'placement' | 'score'
+interface CoursingRecord {
+  name: string
+  breed: string
+  time_seconds: number
+  date?: string
+}
+
+type RankingTab = 'placement' | 'score' | 'speed'
+type DoninoTab = 'speed' | 'coursing'
 
 const CURRENT_SEASON = new Date().getFullYear()
 
@@ -104,8 +114,37 @@ function podiumSlots<T>(items: T[]): { item: T; place: number; isGold: boolean }
   return items.map((item, i) => ({ item, place: i + 1, isGold: i === 0 }))
 }
 
-function rankSpeedRecords(records: SpeedRecord[]): SpeedRecord[] {
-  return [...records].sort((a, b) => b.speed_km_h - a.speed_km_h).slice(0, 3)
+function rankCoursingRecords(records: CoursingRecord[]): CoursingRecord[] {
+  return [...records].sort((a, b) => a.time_seconds - b.time_seconds).slice(0, 3)
+}
+
+function HomeMiniTabs<T extends string>({
+  tabs,
+  active,
+  onChange,
+  ariaLabel,
+}: {
+  tabs: { id: T; label: string }[]
+  active: T
+  onChange: (tab: T) => void
+  ariaLabel: string
+}) {
+  return (
+    <div className="home-ranking-tabs" role="tablist" aria-label={ariaLabel}>
+      {tabs.map((tab) => (
+        <button
+          key={tab.id}
+          type="button"
+          role="tab"
+          aria-selected={active === tab.id}
+          className={`home-ranking-tab ${active === tab.id ? 'active' : ''}`}
+          onClick={() => onChange(tab.id)}
+        >
+          {tab.label}
+        </button>
+      ))}
+    </div>
+  )
 }
 
 function formatStarts(n?: number | null): string | null {
@@ -145,26 +184,36 @@ function RankingTabs({
   onChange: (tab: RankingTab) => void
 }) {
   return (
-    <div className="home-ranking-tabs" role="tablist" aria-label="Тип рейтинга">
-      <button
-        type="button"
-        role="tab"
-        aria-selected={active === 'placement'}
-        className={`home-ranking-tab ${active === 'placement' ? 'active' : ''}`}
-        onClick={() => onChange('placement')}
-      >
-        Медали
-      </button>
-      <button
-        type="button"
-        role="tab"
-        aria-selected={active === 'score'}
-        className={`home-ranking-tab ${active === 'score' ? 'active' : ''}`}
-        onClick={() => onChange('score')}
-      >
-        Очки
-      </button>
-    </div>
+    <HomeMiniTabs
+      ariaLabel="Тип рейтинга"
+      active={active}
+      onChange={onChange}
+      tabs={[
+        { id: 'placement', label: 'Медали' },
+        { id: 'score', label: 'Очки' },
+        { id: 'speed', label: 'Скорость' },
+      ]}
+    />
+  )
+}
+
+function DoninoTabs({
+  active,
+  onChange,
+}: {
+  active: DoninoTab
+  onChange: (tab: DoninoTab) => void
+}) {
+  return (
+    <HomeMiniTabs
+      ariaLabel="Дисциплина Донино"
+      active={active}
+      onChange={onChange}
+      tabs={[
+        { id: 'speed', label: 'Замер' },
+        { id: 'coursing', label: 'Бега 350 м' },
+      ]}
+    />
   )
 }
 
@@ -173,24 +222,47 @@ function formatScore(value?: number | null): string {
   return Number(value).toFixed(1)
 }
 
+function formatSpeed(value?: number | string | null): string {
+  if (value == null || Number.isNaN(Number(value))) return '—'
+  return Number(value).toFixed(1)
+}
+
+function formatTime(value?: number | string | null): string {
+  if (value == null || Number.isNaN(Number(value))) return '—'
+  return Number(value).toFixed(2)
+}
+
 export default function Home() {
   const [stats, setStats] = useState<HeroStats | null>(null)
   const [featuredEvents, setFeaturedEvents] = useState<CalendarEvent[]>([])
   const [topPlacement, setTopPlacement] = useState<TopDog[]>([])
   const [topScore, setTopScore] = useState<TopDog[]>([])
-  const [speedRecords, setSpeedRecords] = useState<SpeedRecord[]>([])
+  const [topSpeed, setTopSpeed] = useState<TopDog[]>([])
+  const [doninoSpeedRecords, setDoninoSpeedRecords] = useState<SpeedRecord[]>([])
+  const [doninoCoursingRecords, setDoninoCoursingRecords] = useState<CoursingRecord[]>([])
   const [rankingTab, setRankingTab] = useState<RankingTab>('placement')
+  const [doninoTab, setDoninoTab] = useState<DoninoTab>('speed')
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const [statsData, eventsData, placementData, scoreData, speedData] = await Promise.all([
+        const [
+          statsData,
+          eventsData,
+          placementData,
+          scoreData,
+          seasonSpeedData,
+          doninoSpeedData,
+          doninoCoursingData,
+        ] = await Promise.all([
           api.getStats(),
           api.getEvents(),
           api.getTopPlacement(String(CURRENT_SEASON), '', 0, 3, 0),
           api.getTopScore(String(CURRENT_SEASON), '', 0, 3, 0),
+          api.getTopSpeed(String(CURRENT_SEASON), '', 0, 3, 0),
           api.getSpeedRecordsTopByBreed(3),
+          api.getCoursingRecordsTopByBreed(3),
         ])
 
         if (statsData.success) {
@@ -209,8 +281,16 @@ export default function Home() {
           setTopScore(extractTopDogs(scoreData.data).slice(0, 3))
         }
 
-        if (speedData.success && Array.isArray(speedData.data)) {
-          setSpeedRecords((speedData.data as SpeedRecord[]).slice(0, 3))
+        if (seasonSpeedData.success) {
+          setTopSpeed(extractTopDogs(seasonSpeedData.data).slice(0, 3))
+        }
+
+        if (doninoSpeedData.success && Array.isArray(doninoSpeedData.data)) {
+          setDoninoSpeedRecords(doninoSpeedData.data as SpeedRecord[])
+        }
+
+        if (doninoCoursingData.success && Array.isArray(doninoCoursingData.data)) {
+          setDoninoCoursingRecords(doninoCoursingData.data as CoursingRecord[])
         }
       } catch (error) {
         console.error('Failed to fetch home data:', error)
@@ -222,12 +302,14 @@ export default function Home() {
     fetchData()
   }, [])
 
-  const activeDogs = rankingTab === 'placement' ? topPlacement : topScore
-  const rankedSpeed = rankSpeedRecords(speedRecords)
-  const rankingLink =
-    rankingTab === 'placement'
-      ? `/procoursing?tab=ranking&year=${CURRENT_SEASON}`
-      : `/procoursing?tab=ranking&year=${CURRENT_SEASON}&rankingTab=score`
+  const activeDogs =
+    rankingTab === 'placement' ? topPlacement : rankingTab === 'score' ? topScore : topSpeed
+  const activeDoninoRecords =
+    doninoTab === 'speed' ? doninoSpeedRecords : rankCoursingRecords(doninoCoursingRecords)
+  const doninoLink =
+    doninoTab === 'speed' ? '/speed-records?tab=table' : '/speed-records?tab=coursing'
+  const showDoninoSection =
+    loading || doninoSpeedRecords.length > 0 || doninoCoursingRecords.length > 0
 
   return (
     <div className="wrap">
@@ -269,17 +351,7 @@ export default function Home() {
       <SectionDivider
         icon={Icons.medal}
         title={`Топ сезона ${CURRENT_SEASON}`}
-        action={
-          <div className="flex shrink-0 items-center gap-3">
-            <RankingTabs active={rankingTab} onChange={setRankingTab} />
-            <Link
-              to={rankingLink}
-              className="text-sm font-semibold text-camel-700 hover:text-camel-600 dark:text-camel-400 dark:hover:text-camel-300"
-            >
-              Весь рейтинг →
-            </Link>
-          </div>
-        }
+        action={<RankingTabs active={rankingTab} onChange={setRankingTab} />}
       />
 
       {loading ? (
@@ -316,7 +388,7 @@ export default function Home() {
                     <div className="pod-foot">{formatStarts(dog.total_starts)}</div>
                   )}
                 </>
-              ) : (
+              ) : rankingTab === 'score' ? (
                 <>
                   <div className="score">
                     {formatScore(dog.best_score)}
@@ -325,6 +397,21 @@ export default function Home() {
                   <div className="pod-foot">
                     {dog.avg_score != null && (
                       <span>средн. {formatScore(dog.avg_score)}</span>
+                    )}
+                    {formatStarts(dog.total_starts) && (
+                      <span>{formatStarts(dog.total_starts)}</span>
+                    )}
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="score">
+                    {formatSpeed(dog.best_speed)}
+                    <span className="score-unit">км/ч</span>
+                  </div>
+                  <div className="pod-foot">
+                    {dog.avg_speed != null && (
+                      <span>средн. {formatSpeed(dog.avg_speed)}</span>
                     )}
                     {formatStarts(dog.total_starts) && (
                       <span>{formatStarts(dog.total_starts)}</span>
@@ -347,45 +434,67 @@ export default function Home() {
         </p>
       )}
 
-      {(loading || rankedSpeed.length > 0) && (
+      {showDoninoSection && (
         <>
           <SectionDivider
             icon={Icons.speed}
             title="Рекорды Донино · лучшие по породам"
-            action={
-              <Link
-                to="/speed-records"
-                className="shrink-0 text-sm font-semibold text-camel-700 hover:text-camel-600 dark:text-camel-400 dark:hover:text-camel-300"
-              >
-                Все рекорды →
-              </Link>
-            }
+            action={<DoninoTabs active={doninoTab} onChange={setDoninoTab} />}
           />
           {loading ? (
             <PodiumSkeleton />
-          ) : (
+          ) : activeDoninoRecords.length > 0 ? (
             <div className="podium-preview">
-              {podiumSlots(rankedSpeed).map(({ item: record, place, isGold }) => (
-                  <Link
-                    key={`${record.breed}-${record.name}-${record.date ?? place}`}
-                    to={`/donino-dog/${encodeURIComponent(record.name)}/${encodeURIComponent(record.breed)}`}
-                    className={`pod-card flex flex-col items-center no-underline text-inherit ${isGold ? 'gold' : ''}`}
-                  >
-                    <PodiumRankMark place={place as PodiumPlace} size={isGold ? 'lg' : 'md'} />
-                    <div className="dog-lat">{record.name}</div>
-                    <div className="pod-sub">{record.breed}</div>
-                    <div className="score">
-                      {Number(record.speed_km_h).toFixed(2)}
-                      <span className="score-unit">км/ч</span>
-                    </div>
-                    <div className="pod-foot">
-                      {record.date && (
-                        <span className="pod-date">{formatRecordDate(record.date)}</span>
-                      )}
-                    </div>
-                  </Link>
-              ))}
+              {doninoTab === 'speed'
+                ? podiumSlots(activeDoninoRecords as SpeedRecord[]).map(({ item: record, place, isGold }) => (
+                    <Link
+                      key={`speed-${record.breed}-${record.name}-${record.date ?? place}`}
+                      to={`/donino-dog/${encodeURIComponent(record.name)}/${encodeURIComponent(record.breed)}`}
+                      className={`pod-card flex flex-col items-center no-underline text-inherit ${isGold ? 'gold' : ''}`}
+                    >
+                      <PodiumRankMark place={place as PodiumPlace} size={isGold ? 'lg' : 'md'} />
+                      <div className="dog-lat">{record.name}</div>
+                      <div className="pod-sub">{record.breed}</div>
+                      <div className="score">
+                        {formatSpeed(record.speed_km_h)}
+                        <span className="score-unit">км/ч</span>
+                      </div>
+                      <div className="pod-foot">
+                        {record.date && (
+                          <span className="pod-date">{formatRecordDate(record.date)}</span>
+                        )}
+                      </div>
+                    </Link>
+                  ))
+                : podiumSlots(activeDoninoRecords as CoursingRecord[]).map(({ item: record, place, isGold }) => (
+                    <Link
+                      key={`coursing-${record.breed}-${record.name}-${record.date ?? place}`}
+                      to={`/donino-dog/${encodeURIComponent(record.name)}/${encodeURIComponent(record.breed)}`}
+                      className={`pod-card flex flex-col items-center no-underline text-inherit ${isGold ? 'gold' : ''}`}
+                    >
+                      <PodiumRankMark place={place as PodiumPlace} size={isGold ? 'lg' : 'md'} />
+                      <div className="dog-lat">{record.name}</div>
+                      <div className="pod-sub">{record.breed}</div>
+                      <div className="score">
+                        {formatTime(record.time_seconds)}
+                        <span className="score-unit">сек</span>
+                      </div>
+                      <div className="pod-foot">
+                        {record.date && (
+                          <span className="pod-date">{formatRecordDate(record.date)}</span>
+                        )}
+                      </div>
+                    </Link>
+                  ))}
             </div>
+          ) : (
+            <p className="text-sm text-charcoal-500 dark:text-charcoal-400">
+              Пока нет данных по{' '}
+              {doninoTab === 'speed' ? 'замеру скорости' : 'бегам 350 м'}.{' '}
+              <Link to={doninoLink} className="font-semibold text-camel-700 hover:underline dark:text-camel-400">
+                Открыть рекорды
+              </Link>
+            </p>
           )}
         </>
       )}

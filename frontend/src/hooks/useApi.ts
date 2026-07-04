@@ -40,6 +40,8 @@ export function useEvents(year = '') {
   return useQuery({
     queryKey: ['events', year],
     queryFn: () => api.getEvents(year),
+    staleTime: 0,
+    refetchOnMount: 'always',
   });
 }
 
@@ -64,6 +66,8 @@ export function useEvent(eventId: string) {
     queryKey: ['event', eventId],
     queryFn: () => api.getEvent(eventId),
     enabled: !!eventId,
+    staleTime: 0,
+    refetchOnMount: 'always',
   });
 }
 
@@ -72,6 +76,8 @@ export function useEventResults(eventId: string) {
     queryKey: ['eventResults', eventId],
     queryFn: () => api.getEventResults(eventId),
     enabled: !!eventId,
+    staleTime: 0,
+    refetchOnMount: 'always',
   });
 }
 

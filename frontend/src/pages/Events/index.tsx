@@ -136,6 +136,7 @@ export default function Events() {
           const query = searchQuery.toLowerCase()
           const searchableFields = [
             event.title,
+            event.full_title,
             event.location,
             event.host_club,
             event.event_type,

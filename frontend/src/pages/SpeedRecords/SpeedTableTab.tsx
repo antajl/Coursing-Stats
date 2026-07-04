@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { formatRecordDate } from '../../lib/recordDates'
 import { exportToExcel } from './exportExcel'
+import ViewToggle from './stats/ViewToggle'
 
 interface SpeedRecord {
   id: string | number
@@ -16,6 +17,8 @@ interface SpeedRecord {
 }
 
 interface SpeedTableTabProps {
+  view: 'table' | 'stats'
+  onViewChange: (view: 'table' | 'stats') => void
   searchQuery: string
   onSearchChange: (value: string) => void
   filterYears: string[]
@@ -39,6 +42,8 @@ interface SpeedTableTabProps {
 }
 
 export default function SpeedTableTab({
+  view,
+  onViewChange,
   searchQuery,
   onSearchChange,
   filterYears,
@@ -162,6 +167,8 @@ export default function SpeedTableTab({
           </div>
         )}
       </div>
+
+      <ViewToggle view={view} onViewChange={onViewChange} />
 
       {loading && (
         <div className="text-center py-12">
