@@ -14,7 +14,6 @@ echo Commit message: %MSG%
 echo.
 
 git add -A
-git reset HEAD -- .cursor/ 2>nul
 
 git diff --cached --quiet
 if %errorlevel%==0 (

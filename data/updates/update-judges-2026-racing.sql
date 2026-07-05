@@ -1,1 +1,0 @@
-UPDATE events SET judges = 'Минина С.В., Табуева Т.А.' WHERE results_url = 'http://procoursing.ru/2026/2026-05-16_Complete_Results_Racing.html';

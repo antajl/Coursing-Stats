@@ -9,6 +9,8 @@ node_modules/
 data/events/
 data/exports/
 data/backups/
+data/backup/*
+!data/backup/README.md
 data/temp/
 data/updates/
 data/test-modular-parsers-results.json
@@ -17,7 +19,8 @@ speed_records.json
 
 # Planning / tooling (not shipped)
 .devin/
-"CLAUDE PLAN/"
+CLAUDE PLAN/
+.cursor/
 
 # Environment files
 .env
