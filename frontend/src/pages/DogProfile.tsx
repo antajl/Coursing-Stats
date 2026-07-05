@@ -6,6 +6,7 @@ import { formatTitleLine, titleBadgeClass, type DogTitle } from '../lib/qualific
 import { toPng } from 'html-to-image'
 import SkeletonLoader from '../components/SkeletonLoader'
 import ErrorState from '../components/ErrorState'
+import { SEO } from '../components/SEO'
 
 export default function DogProfile() {
   const { id } = useParams()
@@ -194,9 +195,22 @@ export default function DogProfile() {
   const bestScoreUrl = coursing.best_score_event_url || null
   const bestSpeedUrl = racing.best_speed_event_url || null
 
+  // SEO данные
+  const dogName = dog.name_lat || dog.name_ru || 'Собака'
+  const dogBreed = dog.breed || ''
+  const dogTitles = titles.map(t => t.title).join(', ')
+  const description = `Статистика собаки ${dogName} (${dogBreed}) по курсингу и бегам борзых. Результаты, достижения, титулы: ${dogTitles}. Количество стартов: ${coursing.total_starts + racing.total_starts}.`
+  const keywords = `${dogName}, ${dogBreed}, курсинг, бега борзых, статистика, ${dogTitles}, РКФ, соревнования, результаты`
+
 
   return (
-    <div className="min-h-screen bg-cream-50 dark:bg-charcoal-900 p-4 md:p-6">
+    <>
+      <SEO
+        title={`${dogName} - ${dogBreed}`}
+        description={description}
+        keywords={keywords}
+      />
+      <div className="min-h-screen bg-cream-50 dark:bg-charcoal-900 p-4 md:p-6">
       <div className="max-w-4xl mx-auto">
         <div className="flex items-center justify-between mb-4 md:mb-6 flex-wrap gap-2">
           <button
@@ -650,5 +664,6 @@ export default function DogProfile() {
         </div>
       </div>
     </div>
+    </>
   )
 }

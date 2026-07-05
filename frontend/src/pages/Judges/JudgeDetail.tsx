@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { useJudgeDetails } from '../../hooks/useApi'
 import React from 'react'
+import { SEO } from '../../components/SEO'
 
 export default function JudgeDetail() {
   const { judgeId } = useParams()
@@ -103,8 +104,19 @@ export default function JudgeDetail() {
     )
   }
 
+  // SEO данные
+  const judgeName = judgeData.judge_name || 'Судья'
+  const totalEvents = judgeData.breed_stats?.reduce((sum, b) => sum + (b.count || 0), 0) || 0
+  const description = `Статистика судьи ${judgeName} по курсингу и бегам борзых. ${totalEvents} соревнований, оценки по породам и критериям.`
+
   return (
-    <div className="p-4">
+    <>
+      <SEO
+        title={`${judgeName} - статистика судьи`}
+        description={description}
+        keywords={`${judgeName}, судья, курсинг, бега борзых, статистика, РКФ, оценки, соревнования`}
+      />
+      <div className="p-4">
       <div className="mb-6">
         <Link to="/judges" className="mb-4 inline-block text-camel-700 transition-colors hover:text-camel-800 hover:underline">
           <span className="md:hidden">Назад</span>
@@ -456,5 +468,6 @@ export default function JudgeDetail() {
         )}
       </div>
     </div>
+    </>
   )
 }

@@ -30,4 +30,10 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <!-- Динамический sitemap с собаками, событиями и судьями -->
+  <url>
+    <loc>https://api.coursing-stats.ru/sitemap.xml</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>

@@ -6,6 +6,7 @@ import { handleTop } from './routes/top';
 import { handleAdmin } from './routes/admin';
 import { handleSpeed } from './routes/speed';
 import { handleJudges } from './routes/judges';
+import { handleSitemap } from './routes/sitemap';
 
 type Env = {
   DB: any;
@@ -30,6 +31,7 @@ handleDogs(app);
 handleTop(app);
 handleJudges(app);
 handleAdmin(app);
+handleSitemap(app);
 
 // SPA fallback (не перехватывать несуществующие API-маршруты)
 app.all('*', async (c) => {

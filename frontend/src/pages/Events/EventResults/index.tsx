@@ -5,6 +5,7 @@ import ErrorState from '../../../components/ErrorState'
 import SkeletonLoader from '../../../components/SkeletonLoader'
 import EventHeader from './EventHeader'
 import ResultsSection from './ResultsSection'
+import { SEO } from '../../../components/SEO'
 import type { Event, Result } from './types'
 
 export default function EventResults() {
@@ -74,8 +75,20 @@ export default function EventResults() {
     )
   }
 
+  // SEO данные
+  const eventType = event.competition_kind === 'coursing' ? 'курсинг' : event.competition_kind === 'racing' ? 'бега борзых' : event.competition_kind === 'bzmp' ? 'БЗМП' : 'соревнования'
+  const eventDate = event.event_date ? new Date(event.event_date).toLocaleDateString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' }) : ''
+  const eventName = event.title || event.full_title || 'Соревнования'
+  const description = `Результаты соревнований по ${eventType} ${eventDate} в ${event.location || ''}. ${results.length} участников. Статистика и результаты.`
+
   return (
-    <div className="min-h-screen bg-cream-50 dark:bg-charcoal-900 p-4 md:p-6 border-t-2 border-x-2 border-b-2 border-old-money-200 dark:border-charcoal-600">
+    <>
+      <SEO
+        title={`${eventName} - ${eventDate}`}
+        description={description}
+        keywords={`${eventName}, ${eventType}, ${event.location}, результаты, статистика, РКФ, ${eventDate}`}
+      />
+      <div className="min-h-screen bg-cream-50 dark:bg-charcoal-900 p-4 md:p-6 border-t-2 border-x-2 border-b-2 border-old-money-200 dark:border-charcoal-600">
       <div className="max-w-4xl mx-auto">
         {error && (
           <ErrorState
@@ -89,5 +102,6 @@ export default function EventResults() {
         <ResultsSection results={results} />
       </div>
     </div>
+    </>
   )
 }
