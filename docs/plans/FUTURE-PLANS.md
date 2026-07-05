@@ -316,7 +316,7 @@
 
 **Документ:** [`FRONTEND-VISUAL-CONSISTENCY.md`](./FRONTEND-VISUAL-CONSISTENCY.md)
 
-**Суть:** три паттерна вкладок, два размера фильтров (календарь `h-9` vs legacy `h-12`), двойные обёртки Procoursing/SpeedRecords, drift палитры `old-money`/`om`/`charcoal`, отсутствие визуального языка Донино внутри `/speed-records`.
+**Суть:** три паттерна вкладок, два размера фильтров (календарь `h-9` vs legacy `h-12`), двойные обёртки Competitions/SpeedRecords, drift палитры `old-money`/`om`/`charcoal`, отсутствие визуального языка Донино внутри `/speed-records`.
 
 **Эталон:** календарь (`Events/index.tsx`) + главная (`Home.tsx`).
 

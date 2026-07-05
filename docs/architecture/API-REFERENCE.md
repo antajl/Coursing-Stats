@@ -1,10 +1,10 @@
 # API Reference — Документация API
 
-Полная документация API ProCoursing Stats.
+Полная документация API Coursing Stats.
 
 ## Base URL
 
-**Production:** `https://procoursing-stats.antajltube.workers.dev`
+**Production:** `https://api.coursing-stats.ru`
 **Development:** `http://127.0.0.1:8787`
 
 ## CORS

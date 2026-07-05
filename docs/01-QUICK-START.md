@@ -1,6 +1,6 @@
 # Quick Start — Быстрый старт
 
-Этот документ поможет вам быстро начать работу с проектом ProCoursing Stats.
+Этот документ поможет вам быстро начать работу с проектом Coursing Stats.
 
 ## Предварительные требования
 
@@ -13,8 +13,8 @@
 
 ```bash
 # Клонирование репозитория
-git clone https://github.com/antajl/ProCoursing.git
-cd ProCoursing
+git clone https://github.com/antajl/Coursing-Stats.git
+cd Coursing Stats
 
 # Установка зависимостей
 npm install
@@ -82,7 +82,7 @@ npm run test-parser-fixtures  # v2 модульные на реальных HTML
 ## Структура проекта
 
 ```
-ProCoursing/
+Coursing Stats/
 ├── backend/              # Worker API + парсеры + скрипты
 │   ├── src/              # worker.ts, app.ts, routes/
 │   ├── parsers/          # v1: parse-results-*.ts; v2: coursing/, bzmp/, racing/, unique/
@@ -143,7 +143,7 @@ npm run test-parser-fixtures
 
 - **Фронтенд:** http://localhost:5173
 - **API:** http://127.0.0.1:8787
-- **Производственный фронтенд:** https://procoursing.antajl.ru
-- **Производственный API:** https://procoursing-stats.antajltube.workers.dev
-- **GitHub:** https://github.com/antajl/ProCoursing
+- **Производственный фронтенд:** https://coursing-stats.ru
+- **Производственный API:** https://api.coursing-stats.ru
+- **GitHub:** https://github.com/antajl/Coursing-Stats
 - **Источник данных:** http://procoursing.ru

@@ -22,7 +22,7 @@ import {
 
 const API_URL = import.meta.env.VITE_API_URL ||
   (import.meta.env.PROD
-    ? 'https://procoursing-stats.antajltube.workers.dev'
+    ? 'https://api.coursing-stats.ru'
     : ''); // dev: Vite proxy → wrangler :8787
 
 export { API_URL };

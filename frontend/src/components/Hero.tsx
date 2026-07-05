@@ -28,11 +28,11 @@ export default function HeroIntro() {
       </p>
 
       <div className="cta-row">
-        <Link to="/procoursing?tab=calendar" className="btn btn-primary">
+        <Link to="/competitions?tab=calendar" className="btn btn-primary">
           <CalendarIcon className="h-4 w-4" strokeWidth={1.75} />
           Календарь
         </Link>
-        <Link to="/procoursing?tab=ranking" className="btn btn-ghost">
+        <Link to="/competitions?tab=ranking" className="btn btn-ghost">
           <MedalIcon className="h-4 w-4" strokeWidth={1.75} />
           Рейтинг
         </Link>

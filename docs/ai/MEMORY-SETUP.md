@@ -1,6 +1,6 @@
 # AI Memory Setup — Настройка памяти ИИ-агента
 
-Этот документ содержит инструкции для ИИ-агента по настройке памяти при первом анализе проекта ProCoursing Stats.
+Этот документ содержит инструкции для ИИ-агента по настройке памяти при первом анализе проекта Coursing Stats.
 
 **Инструкция для пользователя:** Когда начинаете работу с новым ИИ-агентом, скажите: "Проанализируй наш проект, начиная с папки docs. Сначала прочитай `docs/ai/MEMORY-SETUP.md` и добавь указанные memories."
 
@@ -11,7 +11,7 @@
 ### 1. Структура проекта
 
 **ID:** `project-structure`
-**Title:** Структура проекта ProCoursing Stats
+**Title:** Структура проекта Coursing Stats
 **Content:**
 ```
 backend/src/worker.ts — 8-строчная обёртка, делегирует в app.ts (Hono application)
@@ -65,8 +65,8 @@ assets/ — статические ассеты (assets/logo.svg)
 Backend: Cloudflare Worker (API), Cloudflare D1 (SQLite), Node.js (скраперы/парсеры)
 Frontend: React, Vite, TailwindCSS, кастомные components/ui/ (без shadcn), Lucide, xlsx
 Деплой: Cloudflare Pages (фронтенд), Cloudflare Workers (бэкенд), Cloudflare D1 (БД)
-Домены: procoursing.antajl.ru (фронтенд), procoursing-stats.antajltube.workers.dev (API)
-GitHub: https://github.com/antajl/ProCoursing
+Домены: coursing-stats.ru (фронтенд), api.coursing-stats.ru (API)
+GitHub: https://github.com/antajl/Coursing-Stats
 Автоматизация: GitHub Actions (обновление D1 каждый понедельник, деплой при push в main)
 ```
 **Tags:** tech_stack, deployment, infrastructure
@@ -196,7 +196,7 @@ backend/src/routes/speed.ts — рекорды скорости
 backend/src/routes/top.ts — рейтинги собак
 
 Base URL:
-- Production: https://procoursing-stats.antajltube.workers.dev
+- Production: https://api.coursing-stats.ru
 - Development: http://127.0.0.1:8787
 ```
 **Tags:** api, routes
@@ -283,7 +283,7 @@ frontend/src/pages/Events/EventResults/ — результаты события 
 frontend/src/pages/Events/index.tsx — календарь событий
 frontend/src/pages/Judges/JudgeDetail.tsx — детальная страница судьи
 frontend/src/pages/Judges/index.tsx — список судей
-frontend/src/pages/Procoursing.tsx — навигация Procoursing
+frontend/src/pages/Competitions.tsx — навигация Coursing Stats
 frontend/src/pages/SpeedRecords/ — рекорды Донино (Stats limit 10000; таблица limit 1000)
 frontend/src/pages/TopDogs/ — рейтинги собак (index, TopDogsFilters, TopDogsTabs)
 ```

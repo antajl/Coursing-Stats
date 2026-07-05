@@ -124,7 +124,7 @@ POST /api/admin/recreate-views
 
 **Pages (lazy-loaded):**
 - `/` — `Home.tsx` (лендинг, WIP)
-- `/procoursing` — `Procoursing.tsx` (hub: Календарь, Рейтинг, Судьи)
+- `/competitions` — `Competitions.tsx` (hub: Календарь, Рейтинг, Судьи)
 - `/top` — `TopDogs/index.tsx` (рейтинг: места / очки / скорость)
 - `/event/:id` — `Events/EventResults/` (модуль: racing vs scoring details)
 - `/dog/:id` — `DogProfile.tsx`
@@ -314,12 +314,12 @@ POST /api/admin/recreate-views
 
 ## Deployment State
 
-**GitHub:** https://github.com/antajl/ProCoursing
+**GitHub:** https://github.com/antajl/Coursing-Stats
 
-**Cloudflare Pages:** https://procoursing.pages.dev
+**Cloudflare Pages:** https://coursingstats.pages.dev
 - Автоматический деплой через GitHub Actions при push в main
 
-**Cloudflare Worker:** https://procoursing-stats.antajltube.workers.dev
+**Cloudflare Worker:** https://api.coursing-stats.ru
 - Активен, cron: понедельник 02:00 UTC
 
 **Cloudflare D1:** `pc-db` (~21 MB)

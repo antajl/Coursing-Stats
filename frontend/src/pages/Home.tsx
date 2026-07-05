@@ -318,7 +318,7 @@ export default function Home() {
         <div className="hero-events">
           <div className="hero-events-head">
             <h3>Ближайшие события</h3>
-            <Link to="/procoursing?tab=calendar" className="hero-events-link">
+            <Link to="/competitions?tab=calendar" className="hero-events-link">
               Весь календарь →
             </Link>
           </div>
@@ -426,7 +426,7 @@ export default function Home() {
         <p className="text-sm text-charcoal-500 dark:text-charcoal-400">
           Пока нет данных за {CURRENT_SEASON}.{' '}
           <Link
-            to="/procoursing?tab=ranking"
+            to="/competitions?tab=ranking"
             className="font-semibold text-camel-700 hover:underline dark:text-camel-400"
           >
             Открыть рейтинг

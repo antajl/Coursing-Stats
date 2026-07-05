@@ -1,11 +1,11 @@
 # Contributing — Вклад в проект
 
-Этот документ описывает, как внести вклад в проект ProCoursing Stats.
+Этот документ описывает, как внести вклад в проект Coursing Stats.
 
 ## Как начать
 
 1. Форкните репозиторий на GitHub
-2. Клонируйте ваш форк: `git clone https://github.com/YOUR_USERNAME/ProCoursing.git`
+2. Клонируйте ваш форк: `git clone https://github.com/YOUR_USERNAME/Coursing-Stats.git`
 3. Создайте ветку для вашей фичи: `git checkout -b feature/my-feature`
 4. Внесите изменения
 5. Запушьте в вашу ветку: `git push origin feature/my-feature`

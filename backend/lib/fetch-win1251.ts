@@ -13,7 +13,7 @@ export async function fetchWin1251(url) {
     headers: {
       // некоторые сайты отдают другой контент без UA браузера
       "User-Agent":
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) ProCoursingStatsBot/0.1 (non-commercial project)",
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) CoursingStatsBot/0.1 (non-commercial project)",
     },
   });
   if (!res.ok) {

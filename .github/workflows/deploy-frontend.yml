@@ -32,7 +32,7 @@ jobs:
         working-directory: ./frontend
         run: npm run build
         env:
-          VITE_API_URL: https://procoursing-stats.antajltube.workers.dev
+          VITE_API_URL: https://api.coursing-stats.ru
 
       - name: Deploy Worker
         uses: cloudflare/wrangler-action@v3
@@ -46,5 +46,5 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy frontend/dist --project-name=procoursing --branch=main --commit-dirty=true
+          command: pages deploy frontend/dist --project-name=coursingstats --branch=main --commit-dirty=true
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}

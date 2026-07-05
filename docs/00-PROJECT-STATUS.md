@@ -1,15 +1,17 @@
-# Project Status — Актуальное состояние ProCoursing Stats
+# Project Status — Coursing Stats
 
 > Обновлять этот файл при каждом значимом изменении.
-> **Последнее обновление:** 2026-07-03
+> **Последнее обновление:** 2026-07-05
 
 ## Домены
 
 | Сервис | URL |
 |--------|-----|
-| Фронтенд | https://procoursing.antajl.ru |
-| API | https://procoursing-stats.antajltube.workers.dev |
-| GitHub | https://github.com/antajl/ProCoursing |
+| Фронтенд | https://coursing-stats.ru |
+| API | https://api.coursing-stats.ru |
+| GitHub | https://github.com/antajl/Coursing-Stats |
+
+Справочник имён Cloudflare/Pages/Worker: **[docs/BRANDING-INFRA.md](BRANDING-INFRA.md)**
 
 ## Технический стек
 

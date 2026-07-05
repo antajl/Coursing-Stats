@@ -1,6 +1,6 @@
 # Development — Разработка
 
-Документация по разработке ProCoursing Stats.
+Документация по разработке Coursing Stats.
 
 ## File Structure
 
@@ -70,7 +70,7 @@ frontend/
 │   │   └── …
 │   ├── pages/
 │   │   ├── Home.tsx           # Landing (WIP)
-│   │   ├── Procoursing.tsx    # Tab hub: Events, TopDogs, Judges
+│   │   ├── Competitions.tsx    # Tab hub: Events, TopDogs, Judges
 │   │   ├── TopDogs/           # index, TopDogsFilters, TopDogsTabs, filterUtils
 │   │   ├── DogProfile.tsx
 │   │   ├── DoninoDogProfile.tsx
@@ -272,7 +272,7 @@ In-process Worker tests planned: **vitest@4** + **@cloudflare/vitest-pool-worker
 ### Статус (2026-07): в процессе, основное сделано
 
 - ✅ `AppRoutes.tsx` — все страницы через `React.lazy()` + `Suspense`
-- ✅ `Procoursing.tsx` — вложенный lazy для Events / TopDogs / Judges
+- ✅ `Competitions.tsx` — вложенный lazy для Events / TopDogs / Judges
 - ✅ `Nav.tsx` вынесен из `App.tsx`
 - ✅ `vite.config.ts` — `manualChunks` (vendor-react, vendor-router, vendor-query, vendor-xlsx, …)
 - 🔄 `Home.tsx` — лендинг в разработке
@@ -315,7 +315,7 @@ In-process Worker tests planned: **vitest@4** + **@cloudflare/vitest-pool-worker
 - Уменьшенные отступы и размеры на мобильных
 - Стрелочка "←" скрыта на мобильных
 
-**Procoursing.tsx:**
+**Competitions.tsx:**
 - Табы с flex-wrap и min-width
 - Вкладки вертикальные с сокращёнными названиями на мобильных
 

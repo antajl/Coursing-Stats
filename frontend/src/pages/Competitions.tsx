@@ -6,11 +6,11 @@ const Events = lazy(() => import('./Events'));
 const TopDogs = lazy(() => import('./TopDogs'));
 const Judges = lazy(() => import('./Judges'));
 
-function Procoursing() {
+function Competitions() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [activeTab, setActiveTab] = useState(() => searchParams.get('tab') || 'calendar');
 
-  const handleTabChange = useCallback((tab) => {
+  const handleTabChange = useCallback((tab: string) => {
     setActiveTab(tab);
     const params = new URLSearchParams(searchParams);
     params.set('tab', tab);
@@ -101,4 +101,4 @@ function Procoursing() {
   );
 }
 
-export default Procoursing;
+export default Competitions;

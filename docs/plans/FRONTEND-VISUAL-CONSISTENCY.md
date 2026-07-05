@@ -1,6 +1,6 @@
 # План: визуальная согласованность UI
 
-> Аудит интерфейса (2026-07-03): шапка, главная, вкладки Procoursing и Донино, подвкладки, фильтры, таблицы.
+> Аудит интерфейса (2026-07-03): шапка, главная, вкладки Competitions и Донино, подвкладки, фильтры, таблицы.
 > **Эталон плотности и форм:** `Events/index.tsx` (календарь) + обновлённая `Home.tsx`.
 
 ## Не в этом плане (быстрые правки «на ходу»)
@@ -9,7 +9,7 @@
 
 | Что | Где | Статус |
 |-----|-----|--------|
-| Лишний внутренний `p-4` | `Events`, `TopDogs`, `Judges` внутри `Procoursing.tsx` | ✅ убран верхний padding в hub |
+| Лишний внутренний `p-4` | `Events`, `TopDogs`, `Judges` внутри `Competitions.tsx` | ✅ убран верхний padding в hub |
 | Emoji в chip «Чемпионаты» | `Events/index.tsx` | ✅ `Icons.championship` |
 | Nav layout / glass | `Nav.tsx` | ✅ `.nav-glass`, центр ссылок, края лого/иконок |
 | FilterSelect подписи | `Events/index.tsx` | ✅ подсказки в `allLabel`, `ariaLabel` |
@@ -33,7 +33,7 @@
 | Паттерн | Где используется | Active | Inactive |
 |---------|------------------|--------|----------|
 | Подчёркивание | `Nav.tsx` | camel line снизу | серый текст |
-| Segmented (iOS) | `Procoursing.tsx`, `SpeedRecords/index.tsx` | белая «таблетка» в `old-money-100` ложе | приглушённый текст |
+| Segmented (iOS) | `Competitions.tsx`, `SpeedRecords/index.tsx` | белая «таблетка» в `old-money-100` ложе | приглушённый текст |
 | Camel pill | `TopDogsTabs.tsx`, `SpeedRecords/Stats.tsx`, `Home` ranking tabs | `bg-camel-600 text-white` | cream/charcoal кнопки |
 
 **Проблема:** пользователь на каждом уровне видит другой вид переключателя.
@@ -45,13 +45,13 @@
 
 **Решение (предложение):**
 
-- **Уровень 1–2** (Nav не трогаем; Procoursing, SpeedRecords, вложенные секции с 3+ пунктами): **segmented** — как сейчас в Procoursing.
+- **Уровень 1–2** (Nav не трогаем; Competitions, SpeedRecords, вложенные секции с 3+ пунктами): **segmented** — как сейчас в Competitions.
 - **Уровень 3** (переключатели данных: медали/очки, обзор/порода в Stats): **compact pills** (`home-ranking-tabs` стиль) — меньше, без второго «ложа».
 
 **Файлы:**
 
 - Создать `frontend/src/components/ui/TabBar.tsx` (variants: `segmented` | `pills`, sizes: `md` | `sm`)
-- Заменить дубли в: `Procoursing.tsx`, `SpeedRecords/index.tsx`, `TopDogsTabs.tsx`, `Home.tsx`, `SpeedRecords/Stats.tsx`
+- Заменить дубли в: `Competitions.tsx`, `SpeedRecords/index.tsx`, `TopDogsTabs.tsx`, `Home.tsx`, `SpeedRecords/Stats.tsx`
 
 **Критерий готовности:** один источник стилей вкладок; визуально одинаковое поведение active/hover/focus на всех экранах.
 
@@ -103,7 +103,7 @@
 
 ## Проблема №3: «матрёшка» контейнеров
 
-`Procoursing.tsx` и `SpeedRecords/index.tsx` оборачивают контент в:
+`Competitions.tsx` и `SpeedRecords/index.tsx` оборачивают контент в:
 
 ```
 bg-cream-50/90 rounded-2xl shadow-xl border p-4 md:p-8
@@ -114,7 +114,7 @@ bg-cream-50/90 rounded-2xl shadow-xl border p-4 md:p-8
 ### Задача 3.1 — Единая оболочка hub-страниц
 
 **Приоритет:** Средний  
-**Файлы:** `Procoursing.tsx`, `SpeedRecords/index.tsx`, дочерние `Events`, `TopDogs`, `Judges`
+**Файлы:** `Competitions.tsx`, `SpeedRecords/index.tsx`, дочерние `Events`, `TopDogs`, `Judges`
 
 **Варианты (выбрать один):**
 
@@ -147,7 +147,7 @@ bg-cream-50/90 rounded-2xl shadow-xl border p-4 md:p-8
 
 ## Проблема №5: Донино без визуального языка
 
-На главной блок Донино использует `wb-*` (голубой). Внутри `/speed-records` — generic cream/charcoal, как Procoursing.
+На главной блок Донино использует `wb-*` (голубой). Внутри `/speed-records` — generic cream/charcoal, как Competitions.
 
 ### Задача 5.1 — Вертикаль «Донино»
 

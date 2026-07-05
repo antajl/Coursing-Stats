@@ -1,6 +1,6 @@
 # Frontend Map — Навигация для ИИ-агентов
 
-Краткий гид по структуре React-приложения ProCoursing Stats (июль 2026).
+Краткий гид по структуре React-приложения Coursing Stats (июль 2026).
 
 ## Shell и маршрутизация
 
@@ -19,8 +19,8 @@
 | Path | Компонент | Описание |
 |------|-----------|----------|
 | `/` | `Home.tsx` | Лендинг (WIP): hero, счётчики, ближайшее событие |
-| `/procoursing` | `Procoursing.tsx` | Hub вкладок соревнований procoursing.ru |
-| `/top` | `TopDogs/index.tsx` | Прямой доступ к рейтингу (`?rankingTab=score` \| `speed`; дублирует вкладку в Procoursing) |
+| `/competitions` | `Competitions.tsx` | Hub вкладок соревнований procoursing.ru |
+| `/top` | `TopDogs/index.tsx` | Прямой доступ к рейтингу (`?rankingTab=score` \| `speed`; дублирует вкладку в `/competitions`) |
 | `/dog/:id` | `DogProfile.tsx` | Профиль собаки из БД соревнований |
 | `/event/:id` | `Events/EventResults/` | Результаты одного события (см. ниже) |
 | `/speed-records` | `SpeedRecords/index.tsx` | Рекорды Донино (отдельный источник данных) |
@@ -28,9 +28,9 @@
 | `/judges` | `Judges/index.tsx` | Список судей |
 | `/judges/:judgeId` | `Judges/JudgeDetail.tsx` | Детальная статистика судьи |
 
-## Procoursing = tab hub
+## Competitions = tab hub
 
-`Procoursing.tsx` — не отдельный раздел данных, а **контейнер вкладок** для всего, что приходит с procoursing.ru:
+`Competitions.tsx` — не отдельный раздел данных, а **контейнер вкладок** для всего, что приходит с procoursing.ru:
 
 | Вкладка (`?tab=`) | Lazy-компонент | Содержимое |
 |-------------------|----------------|------------|
@@ -38,7 +38,7 @@
 | `ranking` | `TopDogs/index.tsx` | Рейтинг: места / очки / скорость (`?rankingTab=score` \| `speed`; default — места) |
 | `judges` | `Judges/index.tsx` | Судьи (тот же список, что `/judges`) |
 
-В `Nav.tsx` ссылка «Соревнования» ведёт на `/procoursing`.
+В `Nav.tsx` ссылка «Соревнования» ведёт на `/competitions`.
 
 ## SpeedRecords ≠ competitions
 
@@ -138,7 +138,7 @@ frontend/src/
 │   ├── FiltersDropdown.tsx, DogStatsTable.tsx, …
 ├── pages/
 │   ├── Home.tsx           # WIP лендинг
-│   ├── Procoursing.tsx    # tab hub
+│   ├── Competitions.tsx    # tab hub
 │   ├── TopDogs/           # рейтинг
 │   ├── Events/
 │   │   ├── index.tsx      # календарь (фильтры + список)

@@ -6,7 +6,7 @@ import SkeletonLoader from '../../components/SkeletonLoader'
 
 export default function Judges() {
   const location = useLocation()
-  const isEmbedded = location.pathname === '/procoursing'
+  const isEmbedded = location.pathname === '/competitions'
   const [filterBreed, setFilterBreed] = useState('')
   const [filterDiscipline, setFilterDiscipline] = useState('')
   const [sortField, setSortField] = useState('total_evaluations')

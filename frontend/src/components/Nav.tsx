@@ -10,6 +10,8 @@ export default function Nav() {
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const isDark = useDarkMode();
   const isActive = (path: string) => location.pathname === path || (path === '/' && location.pathname === '/');
+  const isCompetitionsActive =
+    location.pathname === '/competitions' || location.pathname === '/procoursing';
 
   const handleMouseEnter = () => {
     if (timeoutRef.current) {
@@ -48,8 +50,8 @@ export default function Nav() {
       <div className="hidden md:flex relative h-16 w-full items-center justify-between pl-2 pr-2 sm:pl-3 sm:pr-3 lg:pl-4 lg:pr-4">
         <Link to="/" className="relative z-10 flex shrink-0 items-center">
           <img
-            src={isDark ? '/assets/navbar-bg-dark.svg' : '/assets/navbar-bg.svg'}
-            alt="ProCoursing"
+            src={isDark ? '/assets/logo-dark.svg' : '/assets/logo-light.svg'}
+            alt="Coursing Stats"
             className="h-[52px] lg:h-[61px] opacity-80"
             style={{ objectFit: 'contain' }}
           />
@@ -69,14 +71,14 @@ export default function Nav() {
               }`}></span>
             </Link>
             <Link
-              to="/procoursing"
+              to="/competitions"
               className={`group relative shrink-0 px-2.5 py-2 text-xs font-semibold whitespace-nowrap transition-all duration-300 lg:px-5 lg:text-sm ${
-                isActive('/procoursing') ? 'text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200 hover:text-charcoal-900 dark:hover:text-charcoal-100'
+                isCompetitionsActive ? 'text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200 hover:text-charcoal-900 dark:hover:text-charcoal-100'
               }`}
             >
               <span className="relative z-10">Соревнования</span>
               <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-camel-600 transition-transform duration-300 ${
-                isActive('/procoursing') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                isCompetitionsActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
               }`}></span>
             </Link>
             <Link
@@ -147,7 +149,7 @@ export default function Nav() {
 
       <div className="md:hidden flex items-center justify-between h-12 pl-2 pr-2 gap-2">
         <Link to="/">
-          <img src={isDark ? '/assets/navbar-bg-dark.svg' : '/assets/navbar-bg.svg'} alt="" className="h-10 opacity-80" style={{ objectFit: 'contain' }} />
+          <img src={isDark ? '/assets/logo-dark.svg' : '/assets/logo-light.svg'} alt="" className="h-10 opacity-80" style={{ objectFit: 'contain' }} />
         </Link>
         <div className="flex items-center gap-2">
           <ThemeToggle />
@@ -182,10 +184,10 @@ export default function Nav() {
               Главная
             </Link>
             <Link
-              to="/procoursing"
+              to="/competitions"
               onClick={() => setMobileMenuOpen(false)}
               className={`block px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${
-                isActive('/procoursing') ? 'bg-camel-100 dark:bg-camel-900/30 text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800'
+                isCompetitionsActive ? 'bg-camel-100 dark:bg-camel-900/30 text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800'
               }`}
             >
               Соревнования

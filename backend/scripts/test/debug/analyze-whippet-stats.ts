@@ -1,8 +1,12 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { execSync } from 'node:child_process';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../../../..');
 
 // Import parse by running fetch script output
-const out = execSync('npx tsx backend/scripts/speed/fetch-speed-records.ts', { cwd: 'D:/Site/Procoursing', encoding: 'utf8', maxBuffer: 10_000_000 });
+const out = execSync('npx tsx backend/scripts/speed/fetch-speed-records.ts', { cwd: repoRoot, encoding: 'utf8', maxBuffer: 10_000_000 });
 
 // Re-parse inline - duplicate minimal logic
 import * as XLSX from 'xlsx';
@@ -16,8 +20,6 @@ const buffer = await fetch(SPEED_SHEET_URL).then((r) => r.arrayBuffer());
 const { parseXLSX } = await import('../../speed/fetch-speed-records.ts').catch(() => ({ parseXLSX: null }));
 
 // parseXLSX not exported - inline call via eval alternative
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
 
 // Simple: load module and call main pieces
 const mod = await import('../../../scripts/speed/fetch-speed-records.ts').catch(() => null);

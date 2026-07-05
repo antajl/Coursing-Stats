@@ -1,5 +1,9 @@
 import { execSync } from 'node:child_process';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { parseRecordDate } from '../../../../frontend/src/lib/recordDates.ts';
+
+const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../../../..');
 
 function normDate(d: string): string {
   const p = parseRecordDate(d);
@@ -12,7 +16,7 @@ function normDate(d: string): string {
 
 const raw = execSync(
   `npx wrangler d1 execute pc-db --remote --command "SELECT name, sex, date, speed_km_h FROM speed_records WHERE breed='Уиппет'" --json`,
-  { cwd: 'D:/Site/Procoursing', encoding: 'utf8', maxBuffer: 20_000_000 }
+  { cwd: repoRoot, encoding: 'utf8', maxBuffer: 20_000_000 }
 );
 const parsed = JSON.parse(raw);
 const rows: { name: string; sex: string; date: string; speed_km_h: number }[] =

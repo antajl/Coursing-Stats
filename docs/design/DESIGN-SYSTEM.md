@@ -1,6 +1,6 @@
 # Design System SALUKI
 
-> Базовая информация о дизайн-системе ProCoursing
+> Базовая информация о дизайн-системе Coursing Stats
 
 ---
 

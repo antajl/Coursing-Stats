@@ -1,6 +1,6 @@
 # Deployment — Деплой и инфраструктура
 
-Документация по деплою и инфраструктуре ProCoursing Stats.
+Документация по деплою и инфраструктуре Coursing Stats.
 
 ## Обзор
 
@@ -10,9 +10,9 @@
 - Cloudflare D1 — база данных (SQLite)
 
 **Домены:**
-- Фронтенд: https://procoursing.antajl.ru
-- API: https://procoursing-stats.antajltube.workers.dev
-- GitHub: https://github.com/antajl/ProCoursing
+- Фронтенд: https://coursing-stats.ru
+- API: https://api.coursing-stats.ru
+- GitHub: https://github.com/antajl/Coursing-Stats
 
 ---
 
@@ -20,16 +20,16 @@
 
 ### Конфигурация
 
-**Проект:** ProCoursing Stats Frontend
+**Проект Pages:** `coursingstats`
 
-**Source:** GitHub repository `antajl/ProCoursing`
+**Source:** GitHub repository `antajl/Coursing-Stats`
 
 **Build settings:**
 - Build command: `cd frontend && npm run build`
 - Build output directory: `frontend/dist`
 
 **Environment variables:**
-- `VITE_API_URL`: `https://procoursing-stats.antajltube.workers.dev`
+- `VITE_API_URL`: `https://api.coursing-stats.ru`
 
 > ⚠️ **Важно:** сборка фронтенда фактически выполняется в GitHub Actions (`npm run build`), а Cloudflare Pages только принимает уже готовый `frontend/dist` через `wrangler pages deploy`. Переменные окружения из этого раздела Cloudflare Pages **не участвуют** в сборке и ни на что не влияют, пока сборку делает GitHub Actions. Реальный источник `VITE_API_URL` для прод-сборки — переменная `env:` в шаге `Build frontend` файла `.github/workflows/deploy-frontend.yml`. Значение здесь оставлено только для справки/на случай ручной сборки через Cloudflare Pages.
 
@@ -62,7 +62,7 @@
 
 ### Конфигурация
 
-**Worker name:** `procoursing-stats`
+**Worker name:** `coursingstatsworker`
 
 **Main:** `backend/src/worker.ts`
 
@@ -79,7 +79,7 @@
 ### wrangler.toml
 
 ```toml
-name = "procoursing-stats"
+name = "coursingstatsworker"
 main = "backend/src/worker.ts"
 compatibility_date = "2024-01-01"
 
@@ -215,15 +215,15 @@ npx wrangler d1 execute pc-db --local --file=script.sql
 
 ### Фронтенд
 
-**Primary:** https://procoursing.antajl.ru
+**Primary:** https://coursing-stats.ru
 
-**Cloudflare Pages default:** https://procoursing.pages.dev
+**Cloudflare Pages default:** https://coursingstats.pages.dev
 
 ### API
 
-**Primary:** https://procoursing-stats.antajltube.workers.dev
+**Primary:** https://api.coursing-stats.ru
 
-**Cloudflare Worker default:** https://procoursing-stats.antajltube.workers.dev
+**Cloudflare Worker default:** https://api.coursing-stats.ru
 
 **Примечание:** Custom domain для Worker требует платного плана Cloudflare.
 
@@ -268,7 +268,7 @@ npm run dev
 ### Worker Logs
 
 ```bash
-npx wrangler tail procoursing-stats
+npx wrangler tail coursingstatsworker
 ```
 
 ### D1 Queries
@@ -306,6 +306,6 @@ npx wrangler d1 execute pc-db --command="SELECT * FROM results" --output=results
 - Cloudflare Pages: https://dash.cloudflare.com/pages
 - Cloudflare Workers: https://dash.cloudflare.com/workers
 - Cloudflare D1: https://dash.cloudflare.com/d1
-- GitHub Repository: https://github.com/antajl/ProCoursing
+- GitHub Repository: https://github.com/antajl/Coursing-Stats
 - wrangler.toml: `wrangler.toml`
 - Worker source: `backend/src/worker.js`

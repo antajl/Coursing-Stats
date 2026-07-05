@@ -1,4 +1,4 @@
-# Design Roadmap ProCoursing — Полный план редизайна
+# Design Roadmap Coursing Stats — Полный план редизайна
 
 > Дата: 2026-06-30
 > Статус: Объединённый аудит (Claude + Devin)
@@ -191,10 +191,10 @@ className={`... ${open
 
 ---
 
-### 2. Procoursing.tsx вкладки — нет dark: (КРИТИЧНО)
+### 2. Competitions.tsx вкладки — нет dark: (КРИТИЧНО)
 
 ```tsx
-// frontend/src/pages/Procoursing.tsx — СЕЙЧАС:
+// frontend/src/pages/Competitions.tsx — СЕЙЧАС:
 <div className="bg-cream-50/90 backdrop-blur-lg rounded-2xl
                 shadow-xl border border-cream-300 p-4 md:p-8">
   <div className="bg-old-money-100 p-1 rounded-xl">
@@ -214,7 +214,7 @@ className={`... ${open
       : 'text-charcoal-600 dark:text-charcoal-400 hover:text-charcoal-700 dark:hover:text-charcoal-200'}>
 ```
 
-**Файл:** `frontend/src/pages/Procoursing.tsx`  
+**Файл:** `frontend/src/pages/Competitions.tsx`  
 **Время:** 15 мин  
 **Приоритет:** КРИТИЧЕСКИЙ
 
@@ -585,7 +585,7 @@ aria-expanded={open} aria-label="Расширенные фильтры"
 
 // 4. ThemeToggle (уже есть aria-label, отлично!)
 
-// 5. Вкладки Procoursing.tsx — добавить role:
+// 5. Вкладки Competitions.tsx — добавить role:
 <div role="tablist" aria-label="Разделы">
   <button role="tab" aria-selected={activeTab === 'calendar'}>
 <div role="tabpanel" aria-labelledby="tab-calendar">
@@ -601,7 +601,7 @@ aria-expanded={open} aria-label="Расширенные фильтры"
 <main id="main-content" ...>
 ```
 
-**Файлы:** `frontend/src/App.tsx`, `frontend/src/components/FiltersDropdown.tsx`, `frontend/src/pages/Procoursing.tsx`, `frontend/index.html`  
+**Файлы:** `frontend/src/App.tsx`, `frontend/src/components/FiltersDropdown.tsx`, `frontend/src/pages/Competitions.tsx`, `frontend/index.html`  
 **Время:** 30 мин  
 **Приоритет:** ВАЖНЫЙ
 
@@ -621,7 +621,7 @@ const DogProfile = lazy(() => import('./pages/DogProfile'))
 const EventResults = lazy(() => import('./pages/Events/EventResults'))
 const SpeedRecords = lazy(() => import('./pages/SpeedRecords/index'))
 const JudgeDetail = lazy(() => import('./pages/Judges/JudgeDetail'))
-// Оставить синхронными только "домашние" страницы: Procoursing, Events, TopDogs, Judges
+// Оставить синхронными только "домашние" страницы: Coursing Stats, Events, TopDogs, Judges
 
 // В Routes обернуть в Suspense:
 <Suspense fallback={<SkeletonLoader variant="card" count={4} />}>
@@ -687,7 +687,7 @@ export default function EmptyState({
 | # | Задача | Файл | Время | Статус |
 |---|--------|------|-------|--------|
 | 1 | FiltersDropdown — все dark: классы | FiltersDropdown.tsx | 20 мин | ✅ |
-| 2 | Procoursing.tsx — вкладки dark: | Procoursing.tsx | 15 мин | ✅ |
+| 2 | Competitions.tsx — вкладки dark: | Competitions.tsx | 15 мин | ✅ |
 | 3 | Nav mobile/sources — dark: | App.tsx | 20 мин | ✅ |
 | 4 | Logo переключение (useDarkMode хук) | App.tsx + hooks/useDarkMode.ts | 30 мин | ✅ |
 | 5 | input[type="date"] — dark color-scheme | App.css | 5 мин | ✅ |
@@ -704,7 +704,7 @@ export default function EmptyState({
 | # | Задача | Файл | Время | Статус |
 |---|--------|------|-------|--------|
 | 9 | aria-expanded на burger/sources/filters | App.tsx, FiltersDropdown.tsx | 20 мин | ✅ |
-| 10 | role="tablist/tab/tabpanel" | Procoursing.tsx | 15 мин | ✅ |
+| 10 | role="tablist/tab/tabpanel" | Competitions.tsx | 15 мин | ✅ |
 | 11 | Контраст: old-money-606 → 700, camel-400 → 300 в dark | все страницы | 45 мин | ✅ |
 | 12 | FiltersDropdown → bottom sheet на мобиле | FiltersDropdown.tsx | 60 мин | ⏭️ |
 | 13 | Escape для закрытия меню | App.tsx, FiltersDropdown.tsx | 15 мин | ✅ |

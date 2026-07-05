@@ -1,4 +1,4 @@
--- ProCoursing Stats — схема D1 (SQLite)
+-- Coursing Stats — схема D1 (SQLite)
 
 CREATE TABLE IF NOT EXISTS events (
   id            INTEGER PRIMARY KEY AUTOINCREMENT,

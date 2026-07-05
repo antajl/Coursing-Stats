@@ -1,4 +1,4 @@
-# ProCoursing Stats — промпт для Devin: редизайн UI
+# Coursing Stats — промпт для Devin: редизайн UI
 
 Скопируй этот документ целиком вместе с папкой `mockups/`:
 `01-home.html`, `02-calendar-v2.html`, `03-rating.html`,
@@ -245,7 +245,7 @@ camel-градиентный header детальной страницы (тот 
 
 | Страница | Файл(ы) React | Мокап |
 |---|---|---|
-| Главная | `pages/Procoursing.tsx` + новый `Hero.tsx` | `01-home.html` |
+| Главная | `pages/Home.tsx` + `Hero.tsx` | `01-home.html` |
 | Календарь | `pages/Events/index.tsx` | `02-calendar-v2.html` |
 | Рейтинг собак | `pages/TopDogs.tsx` | `03-rating.html` |
 | Профиль собаки | `pages/DogProfile.tsx` | `04-dog-profile-additions.html` |

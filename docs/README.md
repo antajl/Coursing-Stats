@@ -1,6 +1,6 @@
-# ProCoursing Stats — Документация
+# Coursing Stats — Документация
 
-Полная документация проекта ProCoursing Stats.
+Полная документация проекта Coursing Stats.
 
 ## Для ИИ-агентов
 
@@ -10,6 +10,7 @@
 
 ### Начало работы
 - **[00-PROJECT-STATUS.md](00-PROJECT-STATUS.md)** — Текущий статус проекта
+- **[BRANDING-INFRA.md](BRANDING-INFRA.md)** — Бренд, домены, Cloudflare, GitHub
 - **[01-QUICK-START.md](01-QUICK-START.md)** — Быстрый старт для новых разработчиков
   - Установка зависимостей
   - Запуск серверов
@@ -115,7 +116,7 @@
 
 ## Краткий обзор проекта
 
-**ProCoursing Stats** — агрегатор статистики собак по соревнованиям procoursing.ru (курсинг, БЗМП, бега) за 2015–2026 годы.
+**Coursing Stats** — агрегатор статистики собак по соревнованиям procoursing.ru (курсинг, БЗМП, бега) за 2015–2026 годы.
 
 **Статус:** Полностью рабочий, развернут на Cloudflare (Pages + Worker + D1).
 
@@ -133,6 +134,6 @@
 - coursing_records: бега борзых 350 м (отдельный Google Sheet)
 
 **Домены:**
-- Фронтенд: https://procoursing.antajl.ru
-- API: https://procoursing-stats.antajltube.workers.dev
-- GitHub: https://github.com/antajl/ProCoursing
+- Фронтенд: https://coursing-stats.ru
+- API: https://api.coursing-stats.ru
+- GitHub: https://github.com/antajl/Coursing-Stats

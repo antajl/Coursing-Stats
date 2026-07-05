@@ -265,10 +265,10 @@ npx tsx backend/scripts/speed/fetch-speed-records.ts --remote
 #### Команды фронтенда
 ```bash
 # Проверить ответ API
-curl "https://procoursing-stats.antajltube.workers.dev/api/speed-records"
+curl "https://api.coursing-stats.ru/api/speed-records"
 
 # Проверить ответ API с лимитом
-curl "https://procoursing-stats.antajltube.workers.dev/api/speed-records?limit=1000"
+curl "https://api.coursing-stats.ru/api/speed-records?limit=1000"
 ```
 
 ### Общие проблемы
@@ -381,7 +381,7 @@ useEffect(() => {
 
 **Проверка:**
 ```bash
-curl "https://procoursing-stats.antajltube.workers.dev/api/speed-records?limit=10000" | jq '.data | length'
+curl "https://api.coursing-stats.ru/api/speed-records?limit=10000" | jq '.data | length'
 ```
 
 #### Проблема 5: Отсутствует история для некоторых собак
@@ -452,7 +452,7 @@ npx wrangler d1 execute pc-db --remote --command="SELECT name, breed, date, COUN
 
 3. **Проверьте ответ API:**
    ```bash
-   curl "https://procoursing-stats.antajltube.workers.dev/api/speed-records" | jq '.data | length'
+   curl "https://api.coursing-stats.ru/api/speed-records" | jq '.data | length'
    ```
    - Должно вернуть 187 записей
    - Если 100, проверьте настройки LIMIT
