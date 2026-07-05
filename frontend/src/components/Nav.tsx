@@ -95,6 +95,17 @@ export default function Nav() {
                 isActive('/speed-records') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
               }`}></span>
             </Link>
+            <Link
+              to="/guide"
+              className={`group relative shrink-0 px-2.5 py-2 text-xs font-semibold whitespace-nowrap transition-all duration-300 lg:px-4 lg:text-sm ${
+                isActive('/guide') ? 'text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200 hover:text-charcoal-900 dark:hover:text-charcoal-100'
+              }`}
+            >
+              <span className="relative z-10">Справка</span>
+              <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-camel-600 transition-transform duration-300 ${
+                isActive('/guide') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+              }`}></span>
+            </Link>
           </div>
         </div>
 
@@ -124,6 +135,14 @@ export default function Nav() {
                   className="block px-4 py-3 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-700 transition-colors border-b border-old-money-100 dark:border-charcoal-600"
                 >
                   Procoursing.ru
+                </a>
+                <a
+                  href="https://runningdog.ru/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-4 py-3 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-700 transition-colors border-b border-old-money-100 dark:border-charcoal-600"
+                >
+                  Курсинг Донино
                 </a>
                 <a
                   href="https://docs.google.com/spreadsheets/d/1NTiY3HXZIkXE8xTeXZESgMKaZsEXunmcWhTfhhkoKyE/edit?gid=1787526009#gid=1787526009"
@@ -201,6 +220,15 @@ export default function Nav() {
             >
               Рекорды Донино
             </Link>
+            <Link
+              to="/guide"
+              onClick={() => setMobileMenuOpen(false)}
+              className={`block px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${
+                isActive('/guide') ? 'bg-camel-100 dark:bg-camel-900/30 text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800'
+              }`}
+            >
+              Справка
+            </Link>
             <div className="border-t border-old-money-200 dark:border-charcoal-600 pt-2 mt-2">
               <button
                 onClick={toggleSources}
@@ -220,6 +248,14 @@ export default function Nav() {
                     className="block px-4 py-2 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800 rounded-lg transition-colors"
                   >
                     Procoursing.ru
+                  </a>
+                  <a
+                    href="https://runningdog.ru/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-4 py-2 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800 rounded-lg transition-colors"
+                  >
+                    Курсинг Донино
                   </a>
                   <a
                     href="https://docs.google.com/spreadsheets/d/1NTiY3HXZIkXE8xTeXZESgMKaZsEXunmcWhTfhhkoKyE/edit?gid=1787526009#gid=1787526009"
