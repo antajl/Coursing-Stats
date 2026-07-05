@@ -14,6 +14,7 @@ const Judges = lazy(() => import('./pages/Judges/index'));
 const JudgeDetail = lazy(() => import('./pages/Judges/JudgeDetail'));
 const Admin = lazy(() => import('./pages/Admin'));
 const EventEdit = lazy(() => import('./pages/Admin/EventEdit'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 function LegacyProcoursingRedirect() {
   const location = useLocation();
@@ -37,6 +38,7 @@ export default function AppRoutes() {
         <Route path="/judges/:judgeId" element={<JudgeDetail />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/admin/events/:id" element={<EventEdit />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Suspense>
   );
