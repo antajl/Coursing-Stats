@@ -36,20 +36,6 @@ export default function NotFound() {
             Страница, которую вы ищете, не найдена. Возможно, она на другом участке трассы или уже завершила забег.
           </p>
 
-          {/* Интересные факты о курсинге */}
-          <div className="bg-white dark:bg-charcoal-800 rounded-2xl p-6 mb-8 shadow-lg border-2 border-old-money-200 dark:border-charcoal-600">
-            <p className="text-sm text-old-money-600 dark:text-old-money-400 mb-2">
-              🎯 Знаете ли вы, что в курсинге борзые оцениваются по 5 критериям?
-            </p>
-            <div className="flex flex-wrap justify-center gap-2 text-xs">
-              <span className="px-3 py-1 bg-camel-100 dark:bg-camel-900 text-camel-700 dark:text-camel-300 rounded-full">Маневренность</span>
-              <span className="px-3 py-1 bg-camel-100 dark:bg-camel-900 text-camel-700 dark:text-camel-300 rounded-full">Резвость</span>
-              <span className="px-3 py-1 bg-camel-100 dark:bg-camel-900 text-camel-700 dark:text-camel-300 rounded-full">Выносливость</span>
-              <span className="px-3 py-1 bg-camel-100 dark:bg-camel-900 text-camel-700 dark:text-camel-300 rounded-full">Преследование</span>
-              <span className="px-3 py-1 bg-camel-100 dark:bg-camel-900 text-camel-700 dark:text-camel-300 rounded-full">Энтузиазм</span>
-            </div>
-          </div>
-
           {/* Кнопки навигации */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -70,11 +56,6 @@ export default function NotFound() {
             >
               К собакам
             </Link>
-          </div>
-
-          {/* Декоративный элемент */}
-          <div className="mt-12 text-old-money-500 dark:text-old-money-400 text-sm">
-            <p>🏃‍♂️ Приманка всегда убегает вперёд — это суть курсинга!</p>
           </div>
         </div>
       </div>
