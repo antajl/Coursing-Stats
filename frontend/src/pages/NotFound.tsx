@@ -26,7 +26,7 @@ export default function NotFound() {
           </h2>
           
           <p className="text-lg text-old-money-600 dark:text-old-money-400 mb-8 max-w-md mx-auto">
-            Страница, которую вы ищете, не найдена. Возможно, она на другом участке трассы или уже завершила забег.
+            Страница, которую вы ищете, не найдена.
           </p>
 
           {/* Кнопки навигации */}
