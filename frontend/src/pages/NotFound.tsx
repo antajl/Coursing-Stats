@@ -28,28 +28,6 @@ export default function NotFound() {
           <p className="text-lg text-old-money-600 dark:text-old-money-400 mb-8 max-w-md mx-auto">
             Страница, которую вы ищете, не найдена.
           </p>
-
-          {/* Кнопки навигации */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/"
-              className="px-6 py-3 bg-camel-600 hover:bg-camel-700 text-white font-semibold rounded-xl transition-all shadow-lg hover:shadow-xl"
-            >
-              На главную
-            </Link>
-            <Link
-              to="/competitions"
-              className="px-6 py-3 bg-white dark:bg-charcoal-800 text-camel-700 dark:text-camel-300 font-semibold rounded-xl border-2 border-camel-300 dark:border-camel-600 hover:bg-camel-50 dark:hover:bg-charcoal-700 transition-all"
-            >
-              К соревнованиям
-            </Link>
-            <Link
-              to="/dogs"
-              className="px-6 py-3 bg-white dark:bg-charcoal-800 text-camel-700 dark:text-camel-300 font-semibold rounded-xl border-2 border-camel-300 dark:border-camel-600 hover:bg-camel-50 dark:hover:bg-charcoal-700 transition-all"
-            >
-              К собакам
-            </Link>
-          </div>
         </div>
       </div>
     </>
