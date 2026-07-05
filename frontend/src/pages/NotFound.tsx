@@ -8,8 +8,8 @@ export default function NotFound() {
         description="Страница не найдена."
         keywords="404, страница не найдена"
       />
-      <div className="flex flex-col items-center justify-center h-[calc(100vh-64px)] p-4 overflow-hidden">
-        <div className="w-full max-w-4xl mb-8 max-h-[60vh]">
+      <div className="flex flex-col items-center justify-center h-[calc(100vh-80px)] p-4 overflow-hidden">
+        <div className="w-full max-w-4xl mb-4 max-h-[55vh]">
           <img 
             src="/assets/404-dogs.svg" 
             alt="Силуэты борзых" 
