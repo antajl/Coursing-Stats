@@ -27,7 +27,7 @@ export default function PlacementBadge({ result }: PlacementBadgeProps) {
 
   if (result.placement === 1) {
     return (
-      <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-yellow-400 dark:bg-camel-700 border-2 border-yellow-500 dark:border-camel-600 flex items-center justify-center text-white font-bold text-xs md:text-sm">
+      <div className="placement-badge-gold w-8 h-8 md:w-10 md:h-10 rounded-full border-2 flex items-center justify-center font-bold text-xs md:text-sm">
         {result.placement}
       </div>
     )
@@ -35,7 +35,7 @@ export default function PlacementBadge({ result }: PlacementBadgeProps) {
 
   if (result.placement === 2) {
     return (
-      <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-old-money-200 dark:bg-charcoal-500 border-2 border-old-money-300 dark:border-charcoal-400 flex items-center justify-center text-old-money-700 dark:text-old-money-200 font-bold text-xs md:text-sm">
+      <div className="placement-badge-silver w-8 h-8 md:w-10 md:h-10 rounded-full border-2 flex items-center justify-center font-bold text-xs md:text-sm">
         {result.placement}
       </div>
     )

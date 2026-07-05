@@ -221,8 +221,12 @@ a.spotlight:hover{
 .dark .podium-rank-mark--1{--pr-face:#5d5144;--pr-rim:#d8b57a;--pr-inner:#9b6720;--pr-glyph:#f3e7d5;}
 .dark .podium-rank-mark--2{--pr-face:#4d4740;--pr-rim:#bcb7ad;--pr-inner:#81796e;--pr-glyph:#ecebe7;}
 .dark .podium-rank-mark--3{--pr-face:#4d4740;--pr-rim:#bb6148;--pr-inner:#9d4c37;--pr-glyph:#f7e4d9;}
-.placement-badge-bronze{background-color:var(--terra-500);border-color:var(--terra-600);color:#fff;}
-.dark .placement-badge-bronze{background-color:var(--terra-600);border-color:#7d3d2c;color:#fff;}
+.placement-badge-gold{background-color:var(--camel-400);border-color:var(--camel-600);color:#2c2314;}
+.placement-badge-silver{background-color:var(--om-400);border-color:var(--om-700);color:var(--char-800);}
+.placement-badge-bronze{background-color:var(--terra-200);border-color:var(--terra-600);color:#7b3d2a;}
+.dark .placement-badge-gold{background-color:var(--camel-600);border-color:var(--camel-300);color:var(--camel-100);}
+.dark .placement-badge-silver{background-color:var(--char-700);border-color:var(--char-300);color:var(--char-100);}
+.dark .placement-badge-bronze{background-color:var(--terra-600);border-color:#bb6148;color:var(--terra-200);}
 .pod-card .dog-lat{
   font-family:var(--font-serif); font-weight:700; font-size:14.5px; line-height:1.25;
   display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;

@@ -14,7 +14,7 @@
 ```bash
 # Клонирование репозитория
 git clone https://github.com/antajl/Coursing-Stats.git
-cd Coursing Stats
+cd Coursing-Stats
 
 # Установка зависимостей
 npm install

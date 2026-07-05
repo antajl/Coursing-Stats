@@ -85,16 +85,7 @@ export default function EventResults() {
           />
         )}
 
-        <button
-          type="button"
-          onClick={() => navigate(-1)}
-          className="mb-6 inline-block font-medium text-camel-700 dark:text-camel-400 transition-colors hover:text-camel-800 dark:hover:text-camel-300"
-        >
-          <span className="md:hidden">← Назад</span>
-          <span className="hidden md:inline">← Назад</span>
-        </button>
-
-        <EventHeader event={event} results={results} />
+        <EventHeader event={event} results={results} onBack={() => navigate(-1)} />
         <ResultsSection results={results} />
       </div>
     </div>

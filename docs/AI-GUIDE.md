@@ -2,7 +2,7 @@
 
 Этот документ содержит инструкции и правила для ИИ-агента при работе с проектом Coursing Stats.
 
-**Инструкция для пользователя:** Когда начинаете работу с новым ИИ-агентом, скажите: "Проанализируй наш проект, начиная с папки docs. Сначала прочитай `docs/AI-GUIDE.md` и добавь указанные memories."
+**Инструкция для пользователя:** Когда начинаете работу с новым ИИ-агентом, скажите: «Проанализируй проект, начни с `docs/`. Прочитай `docs/AI-GUIDE.md` и используй `.cursor/rules/` + skills.»
 
 ---
 
@@ -10,17 +10,12 @@
 
 При работе с новым ИИ-агентом:
 
-1. Попросите агента прочитать этот файл (`docs/AI-GUIDE.md`)
-2. Попросите агента создать memories в порядке приоритета:
-   - Сначала Critical (1-5)
-   - Потом Important (6-10)
-   - Потом Optional (11-12)
-3. Агент должен использовать create_memory tool для каждой memory
-4. Агент должен установить UserTriggered: false для всех memories (это автоматические memories)
-5. Агент должен использовать указанные теги для каждой memory
-6. После создания memories агент может продолжать анализ проекта
+1. Попросите прочитать `docs/GETTING-STARTED.md` и этот файл
+2. Контекст проекта уже в **`.cursor/rules/`** (alwaysApply + globs для парсеров и фронта)
+3. Skills: `.cursor/skills/coursing-stats-dev/`, `.cursor/skills/coursing-stats-parsers/`
+4. Разделы **Memories** ниже — справочник; при расхождении приоритет у `GETTING-STARTED.md` и `CHANGELOG.md`
 
-**Примечание:** Если какая-то memory уже существует (агент проверит по ID), он должен обновить её вместо создания новой.
+**Примечание:** Секция Memories обновляется вместе с правилами и skills при значимых изменениях проекта.
 
 ---
 
@@ -42,7 +37,7 @@ backend/lib/ — общие модули (fetch-win1251.ts, dog-lookup.ts)
 frontend/src/App.tsx — shell; AppRoutes.tsx — lazy routes; Nav.tsx — шапка (.nav-glass, центр ссылок)
 frontend/src/lib/recordDates.ts — даты Донино (Excel serial, DD.MM.YYYY, dedupeByRecordDate)
 frontend/src/components/ui/ — кастомные UI (Button, Card, Badge), НЕ shadcn
-frontend/src/pages/Home.tsx — лендинл (WIP)
+frontend/src/pages/Home.tsx — лендинг (WIP)
 data/ — данные (организованы по папкам: events/, migrations/, exports/, imports/, updates/, temp/)
 docs/ — документация: README.md, GETTING-STARTED.md, ARCHITECTURE.md, API-REFERENCE.md, PARSING.md, DATABASE.md, SPEED-RECORDS.md, DESIGN-SYSTEM.md, DEVELOPMENT.md, DECISIONS-LOG.md, FUTURE-PLANS.md, AI-GUIDE.md
 Все скрипты .ts, запуск через npx tsx. Файлов .mjs нет.
@@ -98,19 +93,18 @@ GitHub: https://github.com/antajl/Coursing-Stats
 **Title:** Состояние базы данных D1
 **Content:**
 ```
-База данных D1 (local и remote синхронизированы 2026-06-26):
-- events: 219
-- dogs: ~1579
-- results: 4639
-- speed_records: данные из Google Sheets (автообновление)
+База данных D1 (local и remote синхронизированы):
+- events: 225 (2015–2026, календарь)
+- dogs: 1619
+- results: 2966 (только 2025–2026)
+- speed_records: 198 (Google Sheets, автообновление)
+- coursing_records: 95 (Google Sheets 350 м, автообновление)
 - Remote D1: ~21 MB
 
-Распределение по годам:
-- 2023: 771 результатов (22 события)
-- 2024: 1086 результатов (27 событий)
-- 2025: 1971 результатов (50 событий)
-- 2026: 811 результатов (16 событий)
-- 2015-2022: НЕДОСТУПНЫ (хранятся как изображения, требуется OCR)
+Распределение results:
+- 2025: 2114 (50 событий)
+- 2026: 852 (51 событие)
+- 2015–2024: НЕДОСТУПНЫ как HTML (хранятся как изображения, требуется OCR)
 
 HTML формат по годам:
 - 2015-2022: Results stored as images (JPG) - NOT parseable without OCR
@@ -205,7 +199,7 @@ backend/parsers/unique/ — общие утилиты v2
 **Content:**
 ```
 backend/src/routes/admin.ts — admin endpoints с авторизацией
-backend/src/routes/events.ts — события и результаты (переименован из competitions.ts)
+backend/src/routes/events.ts — события и результаты; публичный путь /api/competitions (не /api/events)
 backend/src/routes/dogs.ts — профили собак
 backend/src/routes/judges.ts — статистика судей
 backend/src/routes/speed.ts — рекорды скорости
@@ -460,19 +454,17 @@ cd frontend && npm run dev
 
 ## Проверка
 
-После создания memories, проверь что:
+После обновления контекста агента:
 
-- [ ] Все Critical memories созданы (1-5)
-- [ ] Все Important memories созданы (6-10)
-- [ ] Optional memories созданы (11-12)
-- [ ] Все memories имеют правильные теги
-- [ ] Все memories имеют UserTriggered: false
-- [ ] Content соответствует этому документу
+- [ ] `.cursor/rules/coursing-stats-core.mdc` — актуальные цифры БД и ограничения
+- [ ] `.cursor/rules/coursing-stats-parsers.mdc` и `coursing-stats-frontend.mdc` — без устаревших путей
+- [ ] Skills `coursing-stats-dev` и `coursing-stats-parsers` — ссылки на `docs/` (плоская структура)
+- [ ] Memories в этом файле совпадают с `GETTING-STARTED.md`
 
 ---
 
 ## Обновление этого документа
 
-Если добавляются новые критически важные правила или меняется структура проекта, обнови этот документ и соответствующие memories.
+При новых критических правилах обновляй: этот файл → `.cursor/rules/` → skills → `GETTING-STARTED.md`.
 
 **Дата последнего обновления:** 2026-07-05
