@@ -9,14 +9,14 @@
 
 | Раздел | Файл |
 |--------|------|
-| Статус проекта | [docs/00-PROJECT-STATUS.md](docs/00-PROJECT-STATUS.md) |
-| Бренд и инфраструктура | [docs/BRANDING-INFRA.md](docs/BRANDING-INFRA.md) |
-| Быстрый старт | [docs/01-QUICK-START.md](docs/01-QUICK-START.md) |
-| ИИ-агент | [docs/ai/GUIDELINES.md](docs/ai/GUIDELINES.md), [docs/ai/MEMORY-SETUP.md](docs/ai/MEMORY-SETUP.md) |
-| Архитектура | [docs/architecture/ARCHITECTURE.md](docs/architecture/ARCHITECTURE.md), [API](docs/architecture/API-REFERENCE.md) |
-| Данные | [docs/data/PARSING.md](docs/data/PARSING.md), [docs/data/DATABASE.md](docs/data/DATABASE.md) |
-| Разработка | [docs/development/DEVELOPMENT.md](docs/development/DEVELOPMENT.md), [FRONTEND-MAP](docs/development/FRONTEND-MAP.md) |
-| Планы | [docs/plans/FUTURE-PLANS.md](docs/plans/FUTURE-PLANS.md) |
+| Быстрый старт | [docs/GETTING-STARTED.md](docs/GETTING-STARTED.md) |
+| ИИ-агент | [docs/AI-GUIDE.md](docs/AI-GUIDE.md) |
+| Архитектура | [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md), [docs/API-REFERENCE.md](docs/API-REFERENCE.md) |
+| Данные | [docs/PARSING.md](docs/PARSING.md), [docs/DATABASE.md](docs/DATABASE.md), [docs/SPEED-RECORDS.md](docs/SPEED-RECORDS.md) |
+| Разработка | [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md) |
+| Дизайн | [docs/DESIGN-SYSTEM.md](docs/DESIGN-SYSTEM.md) |
+| История | [docs/DECISIONS-LOG.md](docs/DECISIONS-LOG.md) |
+| Планы | [docs/FUTURE-PLANS.md](docs/FUTURE-PLANS.md) |
 
 Оглавление: **[docs/README.md](docs/README.md)**
 
@@ -37,7 +37,7 @@ npm run test-parser-fixtures
 | **API** | https://api.coursing-stats.ru |
 | **GitHub** | https://github.com/antajl/Coursing-Stats |
 
-Подробности: [docs/BRANDING-INFRA.md](docs/BRANDING-INFRA.md)
+Подробности: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
 
 ## Лицензия
 

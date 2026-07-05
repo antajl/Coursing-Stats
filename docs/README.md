@@ -4,17 +4,17 @@
 
 ## Для ИИ-агентов
 
-**Важно:** Если вы ИИ-агент и впервые анализируете этот проект, **сначала прочитайте [ai/MEMORY-SETUP.md](ai/MEMORY-SETUP.md)** и создайте указанные memories. Это критически важно для корректной работы с проектом.
+**Важно:** Если вы ИИ-агент и впервые анализируете этот проект, **сначала прочитайте [AI-GUIDE.md](AI-GUIDE.md)** и создайте указанные memories. Это критически важно для корректной работы с проектом.
 
 ## Структура документации
 
 ### Начало работы
-- **[00-PROJECT-STATUS.md](00-PROJECT-STATUS.md)** — Текущий статус проекта
-- **[BRANDING-INFRA.md](BRANDING-INFRA.md)** — Бренд, домены, Cloudflare, GitHub
-- **[01-QUICK-START.md](01-QUICK-START.md)** — Быстрый старт для новых разработчиков
+- **[GETTING-STARTED.md](GETTING-STARTED.md)** — Быстрый старт для новых разработчиков
   - Установка зависимостей
   - Запуск серверов
   - Первые шаги
+  - Технический стек
+  - Состояние базы данных
 
 ### Вклад в проект
 - **[CONTRIBUTING.md](CONTRIBUTING.md)** — Как внести вклад
@@ -25,32 +25,31 @@
 ### История изменений
 - **[CHANGELOG.md](CHANGELOG.md)** — История изменений проекта
   - Датированные записи
-  - Добавления, изменения, удаления
-- **[CHANGES-2026-07-03.md](CHANGES-2026-07-03.md)** — Детальный отчёт за 2026-07-03 (рефакторинг, календарь, D1, UI polish)
+  - Значимые изменения
 
 ### Для ИИ-агента
-- **[ai/MEMORY-SETUP.md](ai/MEMORY-SETUP.md)** — Настройка памяти ИИ-агента
+- **[AI-GUIDE.md](AI-GUIDE.md)** — Руководство для ИИ-агента
+  - Настройка памяти ИИ-агента
   - Критически важные memories
   - Правила работы с проектом
-- **[ai/GUIDELINES.md](ai/GUIDELINES.md)** — Правила для ИИ-агента
-  - Зафиксированные архитектурные решения
   - Правила турниров курсинга
   - Критически важное (кодировка windows-1251)
   - Рабочий процесс
 
 ### Архитектура
-- **[architecture/ARCHITECTURE.md](architecture/ARCHITECTURE.md)** — Архитектура системы
+- **[ARCHITECTURE.md](ARCHITECTURE.md)** — Архитектура системы
   - High-level architecture
   - Components (Scraper, Database, Worker, Frontend)
   - Deployment state
-- **[architecture/API-REFERENCE.md](architecture/API-REFERENCE.md)** — Документация API
+  - Бренд и инфраструктура
+- **[API-REFERENCE.md](API-REFERENCE.md)** — Документация API
   - Base URL
   - Endpoints с примерами
   - Response structures
   - Error handling
 
 ### Данные
-- **[data/PARSING.md](data/PARSING.md)** — Парсинг данных
+- **[PARSING.md](PARSING.md)** — Парсинг данных
   - Источник данных
   - HTML формат по годам
   - Coursing parsing
@@ -58,59 +57,56 @@
   - Racing parsing
   - Статистика судей
   - Рекорды Донино
-- **[data/CALENDAR-AND-DB-UPDATE.md](data/CALENDAR-AND-DB-UPDATE.md)** — **Календарь и заливка D1** (workflow, `D1_RESET_DO`, батчи, подводные камни)
-- **[data/DATABASE.md](data/DATABASE.md)** — Работа с БД
+- **[DATABASE.md](DATABASE.md)** — Работа с БД
   - Schema
   - Views
   - Migrations
   - Data import/export
   - Sync local ↔ remote
-- **[data/SPEED_RECORDS.md](data/SPEED_RECORDS.md)** — Рекорды Донино (два Google Sheet: скорость + курсинг 350 м)
+  - Календарь и заливка D1
+- **[SPEED-RECORDS.md](SPEED-RECORDS.md)** — Рекорды Донино (два Google Sheet: скорость + курсинг 350 м)
   - Два источника: `speed_records` и `coursing_records`
   - Статистика 350 м в `Stats.tsx` — только coursing
   - Data processing pipeline
   - Troubleshooting guide
 
 ### Разработка
-- **[development/DEVELOPMENT.md](development/DEVELOPMENT.md)** — Разработка
+- **[DEVELOPMENT.md](DEVELOPMENT.md)** — Разработка
   - File structure
   - NPM scripts
   - Local development
   - Testing
   - Code splitting
-- **[development/FRONTEND-MAP.md](development/FRONTEND-MAP.md)** — Навигация фронтенда для ИИ
-- **[development/parser-fixtures-debugging.md](development/parser-fixtures-debugging.md)** — Отладка парсеров на фикстурах
-- **[development/DEPLOYMENT.md](development/DEPLOYMENT.md)** — Деплой и инфраструктура
-  - Cloudflare Pages
-  - Cloudflare Worker
-  - Cloudflare D1
-  - GitHub Actions
-  - Домены
+  - Deployment и инфраструктура
+  - Frontend map — навигация для ИИ-агентов
+  - Отладка парсеров с фикстурами
 
 ### Дизайн
-- **[design/DESIGN-SYSTEM.md](design/DESIGN-SYSTEM.md)** — Дизайн-система
+- **[DESIGN-SYSTEM.md](DESIGN-SYSTEM.md)** — Дизайн-система
   - Цветовая палитра (light + dark mode)
   - Типографика
   - Компоненты
-- **[design/DESIGN-ROADMAP.md](design/DESIGN-ROADMAP.md)** — Дизайн-роадмап
-  - Статус задач
-  - Приоритеты
-- **[design/EVENT-COLORS.md](design/EVENT-COLORS.md)** — Цвета календаря событий
-  - Система цветов дисциплин
-  - Реализация
+  - Цветовая система календаря событий
+  - Правила dark mode
+  - Accessibility
+  - Чек-лист для новых компонентов
 
 ### История
-- **[history/DECISIONS-LOG.md](history/DECISIONS-LOG.md)** — Лог архитектурных решений
+- **[DECISIONS-LOG.md](DECISIONS-LOG.md)** — Лог архитектурных решений
   - Датированные записи
-  - Эксперименты и их результаты
-- **[history/MIGRATION-PLAN.md](history/MIGRATION-PLAN.md)** — План миграции
+  - Важные архитектурные решения и эксперименты
 
 ### Планы
-- **[plans/FUTURE-PLANS.md](plans/FUTURE-PLANS.md)** — Планы на будущее
+- **[FUTURE-PLANS.md](FUTURE-PLANS.md)** — Планы на будущее
   - Статистика судей
   - Оптимизация сборки
   - Парсинг результатов
   - Общие задачи
+  - UI / визуальная согласованность
+  - UI / Мобильная адаптация
+  - Компоненты
+  - Новые разделы
+  - Навигация
 
 ---
 
@@ -127,11 +123,11 @@
 - CI: `package-lock.json` в репозитории для `npm ci`
 
 **Данные:**
-- events: 219 (2023-2026)
-- dogs: ~1579
-- results: 4639
-- speed_records: замер скорости (Google Sheets)
-- coursing_records: бега борзых 350 м (отдельный Google Sheet)
+- events: 225 (2015-2026)
+- dogs: 1619
+- results: 2966 (2025-2026)
+- speed_records: замер скорости (Google Sheets, 198 записей)
+- coursing_records: бега борзых 350 м (отдельный Google Sheet, 95 записей)
 
 **Домены:**
 - Фронтенд: https://coursing-stats.ru
