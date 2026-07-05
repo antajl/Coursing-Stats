@@ -66,6 +66,14 @@
   - Data processing pipeline
   - Troubleshooting guide
 
+### SEO
+- **[SEO.md](SEO.md)** — Поисковая оптимизация
+  - Верификация поисковиков (Яндекс, Google)
+  - Sitemap (статический и динамический)
+  - Meta-теги и компонент SEO
+  - Правило для новых страниц
+  - Мониторинг индексации
+
 ### Разработка
 - **[DEVELOPMENT.md](DEVELOPMENT.md)** — Разработка
   - File structure

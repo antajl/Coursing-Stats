@@ -63,6 +63,12 @@ assets/ — статические ассеты (assets/logo.svg)
 - Стек: Cloudflare Pages + Worker + D1
 - Бэкафилл истории — разовый Node-скрипт локально, текущий год — инкремент по GitHub Actions
 - Нормализация total_score: НЕ делить на количество судей, сохраняется исходная grand_total (изменено в 2026)
+
+ОБЯЗАТЕЛЬНО ПРИ СОЗДАНИИ НОВЫХ СТРАНИЦ:
+- Добавить SEO meta-теги через компонент `SEO` из `frontend/src/components/SEO.tsx`
+- Обернуть return в JSX фрагмент и добавить `<SEO title="..." description="..." keywords="..." />`
+- Добавить страницу в динамический sitemap в `backend/src/routes/sitemap.ts`
+- Подробности в `docs/SEO.md`
 ```
 **Tags:** architecture, decisions, fixed_rules
 **Priority:** Critical
