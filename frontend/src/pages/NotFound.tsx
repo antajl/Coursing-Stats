@@ -11,16 +11,9 @@ export default function NotFound() {
       />
       <div className="min-h-screen bg-gradient-to-br from-old-money-50 via-old-money-100 to-old-money-200 dark:from-charcoal-900 dark:via-charcoal-800 dark:to-charcoal-900 flex items-center justify-center p-4">
         <div className="max-w-2xl mx-auto text-center">
-          {/* Анимированная приманка */}
-          <div className="mb-8 relative">
-            <div className="w-32 h-32 mx-auto relative">
-              <div className="absolute inset-0 bg-camel-400 rounded-full animate-ping opacity-75"></div>
-              <div className="absolute inset-2 bg-camel-500 rounded-full animate-pulse"></div>
-              <div className="absolute inset-4 bg-camel-600 rounded-full flex items-center justify-center">
-                <span className="text-4xl">🐕</span>
-              </div>
-            </div>
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 border-2 border-dashed border-camel-400 rounded-full animate-spin"></div>
+          {/* Эмодзи собаки */}
+          <div className="mb-8">
+            <div className="text-8xl">🐕</div>
           </div>
 
           {/* Заголовок */}
