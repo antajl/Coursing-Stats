@@ -2,8 +2,11 @@ name: Update D1 Database
 
 on:
   schedule:
-    # Каждый понедельник в 03:00 UTC (после cron Worker в 02:00)
-    - cron: "0 3 * * 1"
+    # 4 раза в день: 08:00, 14:00, 20:00, 23:30 МСК (UTC+3) — как Донино
+    - cron: "0 5 * * *"
+    - cron: "0 11 * * *"
+    - cron: "0 17 * * *"
+    - cron: "30 20 * * *"
   workflow_dispatch:
 
 jobs:

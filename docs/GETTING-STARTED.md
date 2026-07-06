@@ -151,7 +151,7 @@ npm run test-parser-fixtures
 - **Backend:** Cloudflare Worker (Hono) + D1 (SQLite) + Node.js/TypeScript (скрипты через `npx tsx`)
 - **Frontend:** React + Vite + TailwindCSS + React Query + Zod (кастомные `components/ui/`, без shadcn)
 - **Деплой:** Cloudflare Pages (фронт) + Workers (API) + D1 (БД)
-- **Автоматизация:** GitHub Actions (обновление D1 по понедельникам, рекорды скорости **4 раза в день**)
+- **Автоматизация:** GitHub Actions (обновление D1 и рекорды Донино **4 раза в день**: 08:00, 14:00, 20:00, 23:30 МСК)
 - **CI:** `package-lock.json` в репозитории (для `npm ci` в GitHub Actions)
 - **Локальная разработка:** `npm run dev` → Worker `--remote` + Vite (актуальная D1)
 
@@ -182,7 +182,7 @@ npm run test-parser-fixtures
 - ✅ UI polish: матовый `nav-glass`, светлая тема по умолчанию, календарь/рейтинг/Донино/результаты
 - ✅ Скрапер календаря: `backend/parsers/calendar/scrape-year-page.ts` — диапазоны дат, `[отменён]`, мультидисциплины в `rank_label`, корректные `results_url` (тесты `calendar-scrape.test.ts`)
 - ✅ Production D1: календарь и reparse 2025 обновлены
-- ✅ GitHub Actions: обновление D1 (понедельник 02:00 UTC), рекорды скорости (**4×/день**: 08:00, 14:00, 20:00, 23:30 МСК)
+- ✅ GitHub Actions: обновление D1 и рекорды скорости (**4×/день**: 08:00, 14:00, 20:00, 23:30 МСК)
 - ✅ Admin API с авторизацией через `X-Admin-Token` (секрет в Cloudflare)
 - ✅ TypeScript, React Query, Zod, Hono, Sentry (базовая интеграция)
 - ✅ Фикстуры парсеров: `backend/tests/fixtures/{coursing,bzmp,racing}/` с реальным HTML
