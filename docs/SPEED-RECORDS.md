@@ -78,7 +78,7 @@
 - **URL**: https://docs.google.com/spreadsheets/d/1NTiY3HXZIkXE8xTeXZESgMKaZsEXunmcWhTfhhkoKyE/export?format=xlsx
 - **Листы**: «2026», «2025», «2025 по породам», «Абсолютный зачёт», «старые личные рекорды»
 - **Колонки**: Порода, Пол, Кличка, Лучшая скорость (км/ч), Дата, Скриншот
-- **Скрипт**: `backend/scripts/speed/fetch-speed-records.ts`, `sync-speed-records.ts`
+- **Скрипт**: `backend/scripts/speed/parse-speed-xlsx.ts` (общий парсер), `fetch-speed-records.ts`, `sync-speed-records.ts`
 
 ## Источник: бега борзых 350 м (`coursing_records`)
 
@@ -96,10 +96,31 @@ npx tsx backend/scripts/speed/fetch-coursing-records.ts
 npx tsx backend/scripts/speed/fetch-coursing-records.ts --remote
 ```
 
+### Парсинг листа 350 м
+
+На листе **одна строка на собаку** (не несколько строк на кличку). История прежних рекордов хранится не в отдельных строках, а в **примечании ячейки колонки «Дата»** (при наведении в Google Sheets).
+
+- **Парсер**: `backend/scripts/speed/parse-coursing-xlsx.ts` — XLSX с `cellStyles: true`, абсолютные координаты колонок
+- **Статусы и примечания**: `backend/scripts/speed/coursing-sheet-status.ts`
+- **Формат примечания**: строки вида `23,36 - 31.05.2026` (время с запятой, дата `DD.MM.YYYY`) → JSON `history: [{ time_seconds, date }, …]`
+- **Анализ цветов/комментариев**: `npx tsx backend/scripts/speed/analyze-coursing-xlsx.ts`
+
+| Признак | Интерпретация в парсере |
+|---------|-------------------------|
+| Примечание в «Дата» | `history` из текста; `status` = `improved`; бейдж `upd` в UI |
+| Белая заливка `#FFFFFF`, без примечания | `status` = `new` (новая запись на листе) |
+| Серая `#CCCCCC`, без примечания | `status` = `normal` (большинство строк) |
+
+**Про серый цвет:** по данным XLSX (июль 2026) `#CCCCCC` — **фон по умолчанию** у ~79 из 107 строк, а не отдельный статус как зелёный/синий в листе замера скорости. Улучшенные рекорды (`improved`) встречаются **и на сером, и на белом** фоне — различие, вероятно, «давно обновлено» vs «недавно подсвечено белым», но это **не подтверждено** владельцем таблицы. Для UI достаточно примечания: есть `history` → `upd`.
+
+Пример **Драми**: в строке `23,03` от `28.06.2026`, в примечании `23,36 - 31.05.2026` и `23,19 - 06.06.2026` → `history` из двух прошлых результатов.
+
 ## Пайплайн обработки данных (speed)
 
 ### 1. Скрипт синхронизации
 - Скрипт: `backend/scripts/speed/sync-speed-records.ts`
+- Парсинг: `backend/scripts/speed/parse-speed-xlsx.ts` — чтение XLSX по **абсолютным координатам** листа (`cellStyles: true`), цвет заливки колонки «Кличка»
+- Статусы из цвета: `backend/scripts/speed/speed-sheet-status.ts` — `#B6D7A8` → `new`, `#9FC5E8` → `improved`, без цвета → `normal`; лист «старые личные рекорды» без цвета → `old`
 - Загружает XLSX файл из Google Sheets
 - Парсит все листы и извлекает записи
 - Сравнивает с локальным кэшем (`data/speed-records.json`)
@@ -151,7 +172,7 @@ npx tsx backend/scripts/speed/fetch-coursing-records.ts --remote
 
 | Компонент | limit | Источник | Назначение |
 |-----------|------:|----------|------------|
-| `useSpeedRecordsPage.ts` | 1000 | `speed_records` + `coursing_records` | Вкладки «Замер скорости» / «Бега борзых», таблицы |
+| `useSpeedRecordsPage.ts` | 1000 | `speed_records` + `coursing_records` | Вкладки «Замер скорости» / «Бега борзых», **список карточек** |
 | `stats/SpeedStatsView.tsx` | **10000** | `speed_records` | Статистика замера скорости |
 | `stats/CoursingStatsView.tsx` | **10000** | `coursing_records` | Статистика бегов 350 м |
 | `useDogSpeedRecords` | 1000 | `speed_records` | Профиль собаки `/dog/:id` |
@@ -170,13 +191,29 @@ npx tsx backend/scripts/speed/fetch-coursing-records.ts --remote
 - **Даты**: `frontend/src/lib/recordDates.ts` — Excel serial, `DD.MM.YYYY`, `DD;MM.YYYY`, `YYYY-MM-DD`; хелперы `coursingTimesToStats`, `time350ToSpeedKmh`
 - **Дедуп speed**: `dedupeSpeedRecords` — ключ `name+breed+sex+date+speed`
 - **Дедуп coursing**: `name+breed+time_seconds+date` (нормализованная дата)
+- **История coursing**: из примечания ячейки «Дата» в Google Sheet, не из нескольких строк на собаку
 - **Пол в статистике курсинга**: из `speed_records` по паре `name+breed` (в листе курсинга пола нет)
 - **Фильтры**: год, порода, пол (для курсинга — через маппинг пола), диапазон скорости (применяется к `1260/время` для coursing)
 
 **Важно:** колонки «Время за 350м» **не** считаются как `1260 / max(км/ч)` из таблицы замеров. Только реальные секунды из [листа курсинга](https://docs.google.com/spreadsheets/d/1hpdA8vlIfeECgpnPvuk5xfezPsdUh1EXULjeATAF9dw).
 
-- **Группировка таблицы speed**: `name + breed` (одна лучшая запись на собаку)
+- **Группировка списка speed**: `name + breed` (одна лучшая запись на собаку)
 - **Графики в профиле**: `dedupeByRecordDate` — один пункт на календарную дату (лучший замер)
+
+#### Список записей (режим «Таблица», с 2026-07)
+
+Вместо HTML-таблицы — **карточка на всю строку** (`SpeedRecordCard`, `CoursingRecordCard`):
+
+| Элемент | Поведение |
+|---------|-----------|
+| Клик по карточке | Профиль `/donino-dog/:name/:breed` |
+| Скорость / время | Справа, pill camel; сортировка — `RecordSortBar` (только замер скорости) |
+| Пол | Иконки ♀/♂ (`DogSexIcon`), не текст |
+| Скриншот | Иконка справа, отдельная ссылка (не ведёт в профиль) |
+| Бейджи `new` / `upd` | На pill скорости: `new` — зелёный, `upd` — синий (`status` = `improved`) |
+| История замеров | `SpeedHistorySparkline` в центре карточки, если в `history` есть прошлые замеры: линия + подписи км/ч, заливка, при 2 точках — бейдж `+N` |
+
+Поле `history` в API — JSON `[{speed_km_h, date}, …]` (остальные замеры той же собаки). На списке показывается **лучший** замер на собаку; sparkline строится из `history` + текущая запись.
 
 ## Ключевые концепции
 
@@ -195,8 +232,8 @@ npx tsx backend/scripts/speed/fetch-coursing-records.ts --remote
 |---------|----------|
 | Строк в `speed_records` (после дедупа) | ~198 |
 | Уникальных собак в speed (name+breed) | ~136 |
-| Строк в `coursing_records` | ~95+ |
-| Уникальных собак в coursing | ~94 |
+| Строк в `coursing_records` | ~107 |
+| Уникальных собак в coursing | ~107 |
 
 Пример **Уиппет** (курсинг 350 м): лучшее время **22,81 с** (~55 км/ч), не 19,69 с (то было бы из max 64 км/ч таблицы замеров).
 
@@ -225,8 +262,8 @@ npx tsx backend/scripts/speed/sync-speed-records.ts
 
 ### GitHub Actions
 - **Workflow**: `.github/workflows/update-speed-records.yml`
-- **Расписание**: Ежедневно в 04:00 UTC
-- **Действие**: Запускает скрипт синхронизации, коммитит обновлённый файл кэша в репозиторий
+- **Расписание**: 4 раза в день — 08:00, 14:00, 20:00, 23:30 МСК (cron UTC: 05:00, 11:00, 17:00, 20:30)
+- **Действие**: `sync-speed-records.ts` → D1; коммит `data/speed-records.json` только при изменении кэша
 
 ---
 
@@ -492,9 +529,10 @@ npx wrangler d1 execute pc-db --remote --command="SELECT name, breed, date, COUN
 
 ### Связанные файлы
 
-- **Speed:** `backend/scripts/speed/sync-speed-records.ts`, `fetch-speed-records.ts`
+- **Speed:** `backend/scripts/speed/parse-speed-xlsx.ts`, `sync-speed-records.ts`, `fetch-speed-records.ts`, `speed-sheet-status.ts`
 - **Coursing 350 м:** `backend/scripts/speed/fetch-coursing-records.ts`
 - **Routes:** `backend/src/routes/speed.ts` (`/api/speed-records`, `/api/coursing-records`)
-- **Фронтенд:** `frontend/src/pages/SpeedRecords/` (`useSpeedRecordsPage.ts`, `stats/SpeedStatsView.tsx`, `stats/CoursingStatsView.tsx`, `CoursingTableTab.tsx`)
+- **Фронтенд:** `frontend/src/pages/SpeedRecords/` (`SpeedRecordCard.tsx`, `CoursingRecordCard.tsx`, `useSpeedRecordsPage.ts`, `stats/…`)
+- **UI-компоненты:** `frontend/src/components/SpeedHistorySparkline.tsx`, `SpeedStatusBadge.tsx`, `DogSexIcon.tsx`
 - **Утилиты дат/статистики:** `frontend/src/lib/recordDates.ts`
 - **GitHub Actions:** `.github/workflows/update-speed-records.yml`

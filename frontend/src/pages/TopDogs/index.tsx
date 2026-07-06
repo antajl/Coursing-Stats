@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { useTopPlacement, useTopScore, useTopSpeed, useBreeds, useYears } from '../../hooks/useApi'
 import SkeletonLoader from '../../components/SkeletonLoader'
@@ -56,6 +56,7 @@ export default function TopDogs() {
   const [speedSortBy, setSpeedSortBy] = useState<'best_speed' | 'avg_speed'>(() =>
     (searchParams.get('speedSortBy') as 'best_speed' | 'avg_speed') || 'best_speed'
   )
+  const dropdownRef = useRef<HTMLDivElement>(null)
 
   const { data: breedsData, isLoading: breedsLoading } = useBreeds()
   const { data: yearsData, isLoading: yearsLoading } = useYears()
@@ -163,22 +164,23 @@ export default function TopDogs() {
         onSpeedFromChange={setFilterSpeedFrom}
         onResetFilters={handleResetFilters}
         activeTab={activeTab}
-      />
-
-      <TopDogsTabs
-        activeTab={activeTab}
         onTabChange={handleTabChange}
-        filteredPlacement={filteredPlacement}
-        filteredScore={filteredScore}
-        filteredSpeed={filteredSpeed}
-        filterYear={filterYear}
-        filterBreed={filterBreed}
         scoreSortBy={scoreSortBy}
         onScoreSortByChange={setScoreSortBy}
         placementSortBy={placementSortBy}
         onPlacementSortByChange={setPlacementSortBy}
         speedSortBy={speedSortBy}
         onSpeedSortByChange={setSpeedSortBy}
+        dropdownRef={dropdownRef}
+      />
+
+      <TopDogsTabs
+        activeTab={activeTab}
+        filteredPlacement={filteredPlacement}
+        filteredScore={filteredScore}
+        filteredSpeed={filteredSpeed}
+        filterYear={filterYear}
+        filterBreed={filterBreed}
       />
     </div>
   )

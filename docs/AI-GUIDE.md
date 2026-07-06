@@ -252,7 +252,7 @@ npm test — vitest (api.test.ts сейчас describe.skip; планирует�
 ```
 .github/workflows/deploy-frontend.yml — деплой фронтенда на Cloudflare Pages
 .github/workflows/update-db.yml — обновление D1 (каждый понедельник 02:00 UTC)
-.github/workflows/update-speed-records.yml — обновление рекордов скорости (каждый день 03:00 UTC)
+.github/workflows/update-speed-records.yml — обновление рекордов скорости (4 раза в день: 08:00, 14:00, 20:00, 23:30 МСК)
 
 Secrets:
 - CLOUDFLARE_API_TOKEN — API токен Cloudflare
@@ -300,7 +300,7 @@ frontend/src/pages/Events/index.tsx — календарь событий
 frontend/src/pages/Judges/JudgeDetail.tsx — детальная страница судьи
 frontend/src/pages/Judges/index.tsx — список судей
 frontend/src/pages/Competitions.tsx — навигация Coursing Stats
-frontend/src/pages/SpeedRecords/ — рекорды Донино (Stats limit 10000; таблица limit 1000)
+frontend/src/pages/SpeedRecords/ — рекорды Донино: карточный список (SpeedRecordCard, CoursingRecordCard), sparkline истории; Stats limit 10000; список limit 1000
 frontend/src/pages/TopDogs/ — рейтинги собак (index, TopDogsFilters, TopDogsTabs)
 ```
 **Tags:** frontend, pages

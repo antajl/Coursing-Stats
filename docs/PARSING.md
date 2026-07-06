@@ -610,7 +610,10 @@ https://docs.google.com/spreadsheets/d/1NTiY3HXZIkXE8xTeXZESgMKaZsEXunmcWhTfhhko
 
 ### Скрипты
 
+- `backend/scripts/speed/parse-speed-xlsx.ts` — общий парсер XLSX замеров (координаты ячеек, цвета)
+- `backend/scripts/speed/speed-sheet-status.ts` — маппинг RGB заливки клички → `status`
 - `backend/scripts/speed/fetch-speed-records.ts` — замер скорости → `speed_records`
+- `backend/scripts/speed/sync-speed-records.ts` — prod-синк (GitHub Actions) → D1 + `data/speed-records.json`
 - `backend/scripts/speed/fetch-coursing-records.ts` — бега 350 м → `coursing_records`
 - `backend/scripts/fetch-speed-records-pdf.py` — Python скрипт для PDF
 

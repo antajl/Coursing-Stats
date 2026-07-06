@@ -78,7 +78,7 @@ frontend/
 │   │   │   ├── index.tsx      # Calendar
 │   │   │   └── EventResults/  # index, EventHeader, details/{Racing,Scoring}Detail
 │   │   ├── Judges/
-│   │   └── SpeedRecords/      # index, SpeedTableTab, CoursingTableTab, Stats
+│   │   └── SpeedRecords/      # карточный список, Stats, exportExcel
 │   ├── services/api.ts
 │   └── lib/
 │       ├── query-client.tsx, icons.ts
@@ -305,7 +305,8 @@ In-process Worker tests planned: **vitest@4** + **@cloudflare/vitest-pool-worker
 - Карточки с именем судьи и статистикой в grid 2x2 на мобильных
 
 **SpeedRecords/index.tsx:**
-- Карточки с кличкой, породой, полом, датой и скоростью на мобильных
+- Вкладки «Замер скорости» / «Бега борзых»; внутри — **Таблица | Статистика** (`?view=stats`)
+- Список записей — карточки на всю строку (`SpeedRecordCard`, `CoursingRecordCard`), не HTML-таблица; sparkline истории скорости в центре карточки
 
 **DogStatsTable.tsx (TopDogs):**
 - Карточки с кличкой и статистикой в зависимости от типа (места/очки/скорость)
@@ -551,7 +552,7 @@ database_id = "a5d6d4ad-7fc5-41b4-a33b-05f4daa382d4"
 
 **deploy-frontend.yml:** Деплой фронтенда на Cloudflare Pages
 **update-db.yml:** Обновление D1 базы данных (cron: понедельник 02:00 UTC)
-**update-speed-records.yml:** Обновление рекордов скорости из Google Sheets (cron: ежедневно 03:00 UTC)
+**update-speed-records.yml:** Обновление рекордов скорости из Google Sheets (cron: **4×/день** — 05:00, 11:00, 17:00, 20:30 UTC ≈ 08:00, 14:00, 20:00, 23:30 МСК)
 
 **Secrets:**
 - `CLOUDFLARE_API_TOKEN` — API токен Cloudflare (с правами D1 и Workers)
@@ -682,10 +683,16 @@ frontend/src/pages/TopDogs/
 frontend/src/pages/SpeedRecords/
   index.tsx              — вкладки (shell)
   useSpeedRecordsPage.ts — state, memos, handlers
-  SpeedTableTab.tsx      — замер скорости (Donino)
-  CoursingTableTab.tsx   — бега борзых (Donino coursing sheet)
+  SpeedTableTab.tsx      — замер скорости: фильтры, сортировка, список карточек
+  SpeedRecordCard.tsx    — карточка замера (клик → профиль Донино, sparkline, бейджи)
+  CoursingTableTab.tsx   — бега 350 м: список карточек
+  CoursingRecordCard.tsx — карточка бега
+  RecordSortBar.tsx      — кнопки сортировки (замер скорости)
   exportExcel.ts         — lazy xlsx export
+  stats/                 — SpeedStatsView, CoursingStatsView, …
 ```
+
+**Общие компоненты:** `frontend/src/components/SpeedHistorySparkline.tsx`, `SpeedStatusBadge.tsx`, `DogSexIcon.tsx`
 
 **Даты и статистика 350 м:** `frontend/src/lib/recordDates.ts`
 

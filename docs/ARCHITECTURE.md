@@ -43,7 +43,8 @@ Cloudflare Pages (фронтенд: React)
 | `backend/parsers/unique/` | `backend/parsers/` | Общие row/header parsers для v2 |
 | `backend/scripts/load/load-events.ts` | `backend/scripts/load/` | Загрузка событий в D1 |
 | `backend/scripts/load/load-results.ts` | `backend/scripts/load/` | Загрузка результатов в D1 (через API или SQL) |
-| `backend/scripts/speed/sync-speed-records.ts` | `backend/scripts/speed/` | Загрузка замеров скорости Донино |
+| `backend/scripts/speed/parse-speed-xlsx.ts` | `backend/scripts/speed/` | Общий парсер XLSX замеров (координаты ячеек, цвета клички) |
+| `backend/scripts/speed/sync-speed-records.ts` | `backend/scripts/speed/` | Загрузка замеров скорости Донино (prod + GitHub Actions) |
 | `backend/scripts/speed/fetch-coursing-records.ts` | `backend/scripts/speed/` | Загрузка зачётов курсинга 350 м |
 
 ### 2. Database (D1)
@@ -219,7 +220,7 @@ POST /api/admin/recreate-views
 | date | TEXT | Дата в формате DD.MM.YYYY |
 | screenshot_url | TEXT | Ссылка на скриншот |
 | history | TEXT | JSON с предыдущими результатами |
-| status | TEXT | 'new', 'improved' или null |
+| status | TEXT | `new`, `improved`, `normal`, `old` (из цвета клички на листе; см. `speed-sheet-status.ts`) |
 | updated_at | TEXT | Время последнего обновления |
 
 **history структура:**
@@ -308,7 +309,7 @@ POST /api/admin/recreate-views
 
 **Мобильная адаптивность:**
 - Полная адаптация всех страниц для мобильных устройств
-- Таблицы заменены на карточки на мобильных
+- Рекорды Донино: карточный список на всех экранах (замер + бега 350 м); мобильная адаптация в остальных разделах
 - Фильтры адаптированы для touch-интерфейса
 - Контент использует responsive контейнеры
 

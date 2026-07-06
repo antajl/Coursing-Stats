@@ -1,53 +1,83 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import FilterSelect from '../../components/FilterSelect'
+import PageToolbar from '../../components/toolbar/PageToolbar'
+import RecordSortBar from '../SpeedRecords/RecordSortBar'
 import { useJudges } from '../../hooks/useApi'
 import EmptyState from '../../components/EmptyState'
 import SkeletonLoader from '../../components/SkeletonLoader'
+import { buildJudgesActiveFilterChips } from '../SpeedRecords/toolbarFilters'
+
+const SORT_OPTIONS = [
+  { field: 'total_evaluations_count', label: 'Оцениваний' },
+  { field: 'unique_events', label: 'Соревнований' },
+  { field: 'avg_score', label: 'Средняя' },
+  { field: 'name', label: 'Имя' },
+]
 
 export default function Judges() {
   const location = useLocation()
   const isEmbedded = location.pathname === '/competitions'
   const [filterBreed, setFilterBreed] = useState('')
   const [filterDiscipline, setFilterDiscipline] = useState('')
-  const [sortField, setSortField] = useState('total_evaluations')
+  const [sortField, setSortField] = useState('total_evaluations_count')
   const [sortDirection, setSortDirection] = useState('desc')
   const [isInitialLoad, setIsInitialLoad] = useState(true)
 
-  // React Query hook
   const { data: judgesData, isLoading: loading } = useJudges(filterBreed, filterDiscipline)
 
-  const judges = judgesData?.success ? (Array.isArray(judgesData.data?.judges) ? judgesData.data.judges : (Array.isArray(judgesData.data) ? judgesData.data : [])) : []
-  const availableBreeds = judgesData?.success ? (Array.isArray(judgesData.data?.available_breeds) ? judgesData.data.available_breeds : []) : []
+  const judges = judgesData?.success
+    ? Array.isArray(judgesData.data?.judges)
+      ? judgesData.data.judges
+      : Array.isArray(judgesData.data)
+        ? judgesData.data
+        : []
+    : []
+  const availableBreeds = judgesData?.success
+    ? Array.isArray(judgesData.data?.available_breeds)
+      ? judgesData.data.available_breeds
+      : []
+    : []
 
-  // Отслеживаем первую загрузку
   useEffect(() => {
     if (!loading && judges.length > 0) {
       setIsInitialLoad(false)
     }
   }, [loading, judges.length])
 
-  const handleSort = (field) => {
+  const handleSort = (field: string) => {
     if (sortField === field) {
       setSortDirection(sortDirection === 'asc' ? 'desc' : 'asc')
     } else {
       setSortField(field)
-      setSortDirection('desc')
+      setSortDirection(field === 'name' ? 'asc' : 'desc')
     }
   }
 
   const sortedJudges = [...judges].sort((a, b) => {
     let aVal = a[sortField]
     let bVal = b[sortField]
-    
+
     if (aVal === null || aVal === undefined) aVal = 0
     if (bVal === null || bVal === undefined) bVal = 0
-    
+
     if (sortDirection === 'asc') {
       return aVal > bVal ? 1 : -1
-    } else {
-      return aVal < bVal ? 1 : -1
     }
+    return aVal < bVal ? 1 : -1
   })
+
+  const hasActiveFilters = Boolean(filterBreed || filterDiscipline)
+
+  const activeFilterChips = useMemo(
+    () => buildJudgesActiveFilterChips(filterBreed, filterDiscipline, setFilterBreed, setFilterDiscipline),
+    [filterBreed, filterDiscipline]
+  )
+
+  const clearFilters = () => {
+    setFilterBreed('')
+    setFilterDiscipline('')
+  }
 
   if (isInitialLoad && loading) {
     return <SkeletonLoader variant="card" count={4} />
@@ -55,176 +85,180 @@ export default function Judges() {
 
   return (
     <div className={isEmbedded ? 'px-4 pb-4 pt-0' : 'p-4'}>
-      {/* Фильтры */}
-      <div className="mb-6 rounded-2xl border-2 border-old-money-200 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 p-4 shadow-md md:p-6">
-        <div className="flex gap-2 md:gap-4 items-center flex-wrap">
-          <div className="flex-1 min-w-[140px]">
-            <label className="mb-2 block text-sm font-semibold text-charcoal-700 dark:text-charcoal-300">Порода</label>
-            <select
-              value={filterBreed}
-              onChange={(e) => setFilterBreed(e.target.value)}
-              className="h-12 w-full rounded-xl border border-old-money-300 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 px-4 py-3 text-charcoal-800 dark:text-charcoal-200 shadow-sm transition-all duration-200 focus:border-camel-500 focus:outline-none focus:ring-4 focus:ring-camel-100 dark:focus:ring-camel-900 focus-visible:ring-2 focus-visible:ring-camel-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-charcoal-900"
-            >
-              <option value="">Все породы</option>
-              {availableBreeds.map(breed => (
-                <option key={breed} value={breed}>{breed}</option>
-              ))}
-            </select>
-          </div>
-          <div className="flex-1 min-w-[140px]">
-            <label className="mb-2 block text-sm font-semibold text-charcoal-700 dark:text-charcoal-300">Дисциплина</label>
-            <select
-              value={filterDiscipline}
-              onChange={(e) => setFilterDiscipline(e.target.value)}
-              className="h-12 w-full rounded-xl border border-old-money-300 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 px-4 py-3 text-charcoal-800 dark:text-charcoal-200 shadow-sm transition-all duration-200 focus:border-camel-500 focus:outline-none focus:ring-4 focus:ring-camel-100 dark:focus:ring-camel-900 focus-visible:ring-2 focus-visible:ring-camel-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-charcoal-900"
-            >
-              <option value="">Все дисциплины</option>
-              <option value="coursing">Курсинг</option>
-              <option value="bzmp">БЗМП</option>
-              <option value="racing">Бега</option>
-            </select>
-          </div>
-        </div>
+      <div className="mb-6">
+        <PageToolbar
+          activeFilterChips={activeFilterChips}
+          onClearAllFilters={hasActiveFilters ? clearFilters : undefined}
+          bottomRight={
+            sortedJudges.length > 0 ? (
+              <RecordSortBar
+                options={SORT_OPTIONS}
+                sortField={sortField}
+                sortDirection={sortDirection}
+                onSort={handleSort}
+              />
+            ) : undefined
+          }
+          filters={
+            <>
+              <FilterSelect
+                ariaLabel="Порода"
+                value={filterBreed}
+                onChange={setFilterBreed}
+                allLabel="Все породы"
+                options={availableBreeds.map((breed: string) => ({ value: breed, label: breed }))}
+                className="min-w-[140px]"
+              />
+              <FilterSelect
+                ariaLabel="Дисциплина"
+                value={filterDiscipline}
+                onChange={setFilterDiscipline}
+                allLabel="Все дисциплины"
+                options={[
+                  { value: 'coursing', label: 'Курсинг' },
+                  { value: 'bzmp', label: 'БЗМП' },
+                  { value: 'racing', label: 'Бега' },
+                ]}
+                className="min-w-[140px]"
+              />
+            </>
+          }
+        />
       </div>
 
-      {/* Список судей */}
       <div className="overflow-hidden rounded-2xl border-2 border-old-money-200 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 shadow-md">
         {sortedJudges.length === 0 ? (
-          <EmptyState
-            title="Судьи не найдены"
-            description="Попробуйте изменить фильтры"
-          />
+          <EmptyState title="Судьи не найдены" description="Попробуйте изменить фильтры" />
         ) : (
           <>
-        <div className="md:hidden space-y-3 p-3 min-w-[320px]">
-          {sortedJudges.map((judge) => (
-              <div 
-                key={judge.id} 
-                className="bg-old-money-50 dark:bg-charcoal-700 rounded-xl p-4 hover:bg-old-money-100 dark:hover:bg-charcoal-600 transition-colors"
-              >
-                <div className="flex justify-between items-start mb-3">
-                  <Link 
-                    to={`/judges/${encodeURIComponent(judge.id)}`} 
-                    className="text-base font-bold text-camel-700 dark:text-camel-400 transition-colors hover:text-camel-800 dark:hover:text-camel-300 hover:underline"
-                  >
-                    {judge.name}
-                  </Link>
-                </div>
-                <div className="grid grid-cols-2 gap-2 text-xs">
-                  <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2">
-                    <div className="text-old-money-500 dark:text-old-money-400">Оцениваний</div>
-                    <div className="font-bold text-old-money-800 dark:text-old-money-300">{judge.total_evaluations_count || 0}</div>
-                  </div>
-                  <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2">
-                    <div className="text-old-money-500 dark:text-old-money-400">Соревнований</div>
-                    <div className="font-bold text-old-money-800 dark:text-old-money-300">{judge.unique_events || 0}</div>
-                  </div>
-                  <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2">
-                    <div className="text-old-money-500 dark:text-old-money-400">Средняя</div>
-                    <div className="font-bold text-old-money-800 dark:text-old-money-300">{judge.avg_score ? judge.avg_score.toFixed(2) : '-'}</div>
-                  </div>
-                  <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2">
-                    <div className="text-old-money-500 dark:text-old-money-400">Пород</div>
-                    <div className="font-bold text-old-money-800 dark:text-old-money-300">{judge.unique_breeds || 0}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-        </div>
-
-        {/* Desktop table */}
-        <div className="hidden md:block overflow-x-auto">
-          <table className="w-full divide-y divide-old-money-200 table-auto min-w-[800px]">
-          <thead className="border-b border-old-money-300 dark:border-charcoal-600 bg-cream-100 dark:bg-charcoal-700">
-            <tr>
-              <th 
-                className="cursor-pointer px-4 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-200 dark:hover:bg-charcoal-600"
-                onClick={() => handleSort('name')}
-              >
-                Судья {sortField === 'name' && (sortDirection === 'asc' ? '↑' : '↓')}
-              </th>
-              <th 
-                className="cursor-pointer px-4 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-200 dark:hover:bg-charcoal-600"
-                onClick={() => handleSort('total_evaluations_count')}
-              >
-                Оцениваний {sortField === 'total_evaluations_count' && (sortDirection === 'asc' ? '↑' : '↓')}
-              </th>
-              <th 
-                className="cursor-pointer px-4 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-200 dark:hover:bg-charcoal-600"
-                onClick={() => handleSort('unique_events')}
-              >
-                Соревнований {sortField === 'unique_events' && (sortDirection === 'asc' ? '↑' : '↓')}
-              </th>
-              <th 
-                className="cursor-pointer px-4 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-200 dark:hover:bg-charcoal-600"
-                onClick={() => handleSort('avg_score')}
-              >
-                Средняя оценка {sortField === 'avg_score' && (sortDirection === 'asc' ? '↑' : '↓')}
-              </th>
-              <th 
-                className="cursor-pointer px-4 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-200 dark:hover:bg-charcoal-600"
-                onClick={() => handleSort('unique_breeds')}
-              >
-                Пород {sortField === 'unique_breeds' && (sortDirection === 'asc' ? '↑' : '↓')}
-              </th>
-              <th 
-                className="cursor-pointer px-4 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-200 dark:hover:bg-charcoal-600"
-                onClick={() => handleSort('unique_disciplines')}
-              >
-                Дисциплин {sortField === 'unique_disciplines' && (sortDirection === 'asc' ? '↑' : '↓')}
-              </th>
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-old-money-200 dark:divide-charcoal-600">
-            {judges.length === 0 ? (
-              <tr>
-                <td colSpan={6} className="px-4 py-8 text-center text-old-money-600 dark:text-old-money-400">
-                  Нет данных о судьях
-                </td>
-              </tr>
-            ) : (
-              sortedJudges.map((judge) => (
-                <tr 
-                  key={judge.id} 
-                  className="hover:bg-old-money-50 dark:hover:bg-charcoal-700 transition-colors cursor-pointer"
+            <div className="space-y-3 p-3 md:hidden">
+              {sortedJudges.map((judge) => (
+                <div
+                  key={judge.id}
+                  className="rounded-xl bg-old-money-50 p-4 transition-colors hover:bg-old-money-100 dark:bg-charcoal-700 dark:hover:bg-charcoal-600"
                 >
-                  <td className="px-4 py-4 text-sm text-old-money-800 dark:text-old-money-300 font-medium">
-                    <Link to={`/judges/${encodeURIComponent(judge.id)}`} className="block h-full w-full text-camel-700 dark:text-camel-400 transition-colors hover:text-camel-800 dark:hover:text-camel-300 hover:underline">
+                  <div className="mb-3 flex items-start justify-between">
+                    <Link
+                      to={`/judges/${encodeURIComponent(judge.id)}`}
+                      className="text-base font-bold text-camel-700 transition-colors hover:text-camel-800 hover:underline dark:text-camel-400 dark:hover:text-camel-300"
+                    >
                       {judge.name}
                     </Link>
-                  </td>
-                  <td className="px-4 py-4 text-center text-sm text-old-money-800 dark:text-old-money-300">
-                    <Link to={`/judges/${encodeURIComponent(judge.id)}`} className="block h-full w-full text-old-money-800 dark:text-old-money-300 transition-colors hover:text-camel-700 dark:hover:text-camel-400">
-                      {judge.total_evaluations_count || 0}
-                    </Link>
-                  </td>
-                  <td className="px-4 py-4 text-center text-sm text-old-money-800 dark:text-old-money-300">
-                    <Link to={`/judges/${encodeURIComponent(judge.id)}`} className="block h-full w-full text-old-money-800 dark:text-old-money-300 transition-colors hover:text-camel-700 dark:hover:text-camel-400">
-                      {judge.unique_events || 0}
-                    </Link>
-                  </td>
-                  <td className="px-4 py-4 text-center text-sm text-old-money-800 dark:text-old-money-300">
-                    <Link to={`/judges/${encodeURIComponent(judge.id)}`} className="block h-full w-full text-old-money-800 dark:text-old-money-300 transition-colors hover:text-camel-700 dark:hover:text-camel-400">
-                      {judge.avg_score ? judge.avg_score.toFixed(2) : '-'}
-                    </Link>
-                  </td>
-                  <td className="px-4 py-4 text-center text-sm text-old-money-800 dark:text-old-money-300">
-                    <Link to={`/judges/${encodeURIComponent(judge.id)}`} className="block h-full w-full text-old-money-800 dark:text-old-money-300 transition-colors hover:text-camel-700 dark:hover:text-camel-400">
-                      {judge.unique_breeds || 0}
-                    </Link>
-                  </td>
-                  <td className="px-4 py-4 text-center text-sm text-old-money-800 dark:text-old-money-300">
-                    <Link to={`/judges/${encodeURIComponent(judge.id)}`} className="block h-full w-full text-old-money-800 dark:text-old-money-300 transition-colors hover:text-camel-700 dark:hover:text-camel-400">
-                      {judge.unique_disciplines || 0}
-                    </Link>
-                  </td>
-                </tr>
-              ))
-            )}
-          </tbody>
-        </table>
-        </div>
-        </>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2 text-xs">
+                    <div className="rounded-lg bg-white p-2 dark:bg-charcoal-700">
+                      <div className="text-old-money-500 dark:text-old-money-400">Оцениваний</div>
+                      <div className="font-bold text-old-money-800 dark:text-old-money-300">
+                        {judge.total_evaluations_count || 0}
+                      </div>
+                    </div>
+                    <div className="rounded-lg bg-white p-2 dark:bg-charcoal-700">
+                      <div className="text-old-money-500 dark:text-old-money-400">Соревнований</div>
+                      <div className="font-bold text-old-money-800 dark:text-old-money-300">
+                        {judge.unique_events || 0}
+                      </div>
+                    </div>
+                    <div className="rounded-lg bg-white p-2 dark:bg-charcoal-700">
+                      <div className="text-old-money-500 dark:text-old-money-400">Средняя</div>
+                      <div className="font-bold text-old-money-800 dark:text-old-money-300">
+                        {judge.avg_score ? judge.avg_score.toFixed(2) : '-'}
+                      </div>
+                    </div>
+                    <div className="rounded-lg bg-white p-2 dark:bg-charcoal-700">
+                      <div className="text-old-money-500 dark:text-old-money-400">Пород</div>
+                      <div className="font-bold text-old-money-800 dark:text-old-money-300">
+                        {judge.unique_breeds || 0}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="hidden overflow-x-auto md:block">
+              <table className="w-full min-w-[800px] table-auto divide-y divide-old-money-200">
+                <thead className="border-b border-old-money-300 bg-cream-100 dark:border-charcoal-600 dark:bg-charcoal-700">
+                  <tr>
+                    <th className="px-4 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200">
+                      Судья
+                    </th>
+                    <th className="px-4 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200">
+                      Оцениваний
+                    </th>
+                    <th className="px-4 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200">
+                      Соревнований
+                    </th>
+                    <th className="px-4 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200">
+                      Средняя оценка
+                    </th>
+                    <th className="px-4 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200">
+                      Пород
+                    </th>
+                    <th className="px-4 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200">
+                      Дисциплин
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-old-money-200 dark:divide-charcoal-600">
+                  {sortedJudges.map((judge) => (
+                    <tr
+                      key={judge.id}
+                      className="cursor-pointer transition-colors hover:bg-old-money-50 dark:hover:bg-charcoal-700"
+                    >
+                      <td className="px-4 py-4 text-sm font-medium text-old-money-800 dark:text-old-money-300">
+                        <Link
+                          to={`/judges/${encodeURIComponent(judge.id)}`}
+                          className="block h-full w-full text-camel-700 transition-colors hover:text-camel-800 hover:underline dark:text-camel-400 dark:hover:text-camel-300"
+                        >
+                          {judge.name}
+                        </Link>
+                      </td>
+                      <td className="px-4 py-4 text-center text-sm text-old-money-800 dark:text-old-money-300">
+                        <Link
+                          to={`/judges/${encodeURIComponent(judge.id)}`}
+                          className="block h-full w-full text-old-money-800 transition-colors hover:text-camel-700 dark:text-old-money-300 dark:hover:text-camel-400"
+                        >
+                          {judge.total_evaluations_count || 0}
+                        </Link>
+                      </td>
+                      <td className="px-4 py-4 text-center text-sm text-old-money-800 dark:text-old-money-300">
+                        <Link
+                          to={`/judges/${encodeURIComponent(judge.id)}`}
+                          className="block h-full w-full text-old-money-800 transition-colors hover:text-camel-700 dark:text-old-money-300 dark:hover:text-camel-400"
+                        >
+                          {judge.unique_events || 0}
+                        </Link>
+                      </td>
+                      <td className="px-4 py-4 text-center text-sm text-old-money-800 dark:text-old-money-300">
+                        <Link
+                          to={`/judges/${encodeURIComponent(judge.id)}`}
+                          className="block h-full w-full text-old-money-800 transition-colors hover:text-camel-700 dark:text-old-money-300 dark:hover:text-camel-400"
+                        >
+                          {judge.avg_score ? judge.avg_score.toFixed(2) : '-'}
+                        </Link>
+                      </td>
+                      <td className="px-4 py-4 text-center text-sm text-old-money-800 dark:text-old-money-300">
+                        <Link
+                          to={`/judges/${encodeURIComponent(judge.id)}`}
+                          className="block h-full w-full text-old-money-800 transition-colors hover:text-camel-700 dark:text-old-money-300 dark:hover:text-camel-400"
+                        >
+                          {judge.unique_breeds || 0}
+                        </Link>
+                      </td>
+                      <td className="px-4 py-4 text-center text-sm text-old-money-800 dark:text-old-money-300">
+                        <Link
+                          to={`/judges/${encodeURIComponent(judge.id)}`}
+                          className="block h-full w-full text-old-money-800 transition-colors hover:text-camel-700 dark:text-old-money-300 dark:hover:text-camel-400"
+                        >
+                          {judge.unique_disciplines || 0}
+                        </Link>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </>
         )}
       </div>
     </div>

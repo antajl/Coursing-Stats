@@ -81,6 +81,9 @@ function SpeedRecords() {
             onToggleFilter={page.toggleFilter}
             onClearFilters={page.clearCoursingFilters}
             filteredCoursingRecords={page.filteredCoursingRecords}
+            sortField={page.coursingSortField}
+            sortDirection={page.coursingSortDirection}
+            onSort={page.handleCoursingSort}
           />
         )}
 

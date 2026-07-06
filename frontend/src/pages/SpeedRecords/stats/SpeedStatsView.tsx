@@ -1,11 +1,18 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
+import DogSexIcon from '../../../components/DogSexIcon'
+import MultiFilterDropdown from '../../../components/toolbar/MultiFilterDropdown'
+import PageToolbar from '../../../components/toolbar/PageToolbar'
+import ToolbarOptionBar from '../../../components/toolbar/ToolbarOptionBar'
+import ToolbarSearch from '../../../components/toolbar/ToolbarSearch'
+import ViewToggle from '../../../components/toolbar/ViewToggle'
+import { TOOLBAR_NUMBER_INPUT } from '../../../lib/toolbar'
 import { api } from '../../../services/api'
 import { dedupeSpeedRecords, getRecordYear } from '../../../lib/recordDates'
 import DogSearchCard from './DogSearchCard'
 import GroupedStatsTable from './GroupedStatsTable'
-import ViewToggle from './ViewToggle'
 import type { GroupBy } from './constants'
+import { GROUP_BY_OPTIONS } from './constants'
 import {
   buildSpeedGroupedStats,
   filterSpeedRecords,
@@ -17,7 +24,8 @@ import {
   type CoursingRecordRow,
   type SpeedRecordRow,
 } from './doninoStatsUtils'
-import { FilterDropdown, StatCard, DistributionChart } from './statsUi'
+import { StatCard, DistributionChart } from './statsUi'
+import { buildSpeedStatsActiveFilterChips } from '../toolbarFilters'
 
 interface SpeedStatsViewProps {
   view: 'table' | 'stats'
@@ -117,6 +125,48 @@ export default function SpeedStatsView({ view, onViewChange }: SpeedStatsViewPro
   const allBreeds = [...new Set(records.map((r) => r.breed))].sort()
   const allSexes = [...new Set(records.map((r) => r.sex))].sort()
 
+  const toggleYear = (year: string) =>
+    setFilterYears((prev) => (prev.includes(year) ? prev.filter((x) => x !== year) : [...prev, year]))
+  const toggleBreed = (breed: string) =>
+    setFilterBreeds((prev) => (prev.includes(breed) ? prev.filter((x) => x !== breed) : [...prev, breed]))
+  const toggleSex = (sex: string) =>
+    setFilterSexes((prev) => (prev.includes(sex) ? prev.filter((x) => x !== sex) : [...prev, sex]))
+
+  const clearFilters = () => {
+    setSearchQuery('')
+    setFilterYears([])
+    setFilterBreeds([])
+    setFilterSexes([])
+    setFilterMinSpeed('')
+    setFilterMaxSpeed('')
+  }
+
+  const hasActiveFilters = Boolean(
+    searchQuery || filterYears.length || filterBreeds.length || filterSexes.length || filterMinSpeed || filterMaxSpeed
+  )
+
+  const activeFilterChips = useMemo(
+    () =>
+      buildSpeedStatsActiveFilterChips(
+        searchQuery,
+        filterYears,
+        filterBreeds,
+        filterSexes,
+        filterMinSpeed,
+        filterMaxSpeed,
+        setSearchQuery,
+        toggleYear,
+        toggleBreed,
+        toggleSex,
+        setFilterMinSpeed,
+        setFilterMaxSpeed
+      ),
+    [searchQuery, filterYears, filterBreeds, filterSexes, filterMinSpeed, filterMaxSpeed]
+  )
+
+  const checkboxRowClass =
+    'flex cursor-pointer items-center gap-2 px-3 py-2 text-sm text-charcoal-700 hover:bg-cream-50 dark:text-charcoal-200 dark:hover:bg-charcoal-700'
+
   if (loading) {
     return (
       <div className="text-center py-12">
@@ -128,57 +178,82 @@ export default function SpeedStatsView({ view, onViewChange }: SpeedStatsViewPro
   if (error) return <div className="text-red-600 p-4">Ошибка: {error}</div>
 
   return (
-    <div className="space-y-6">
-      <div className="flex flex-wrap gap-2" ref={dropdownRef}>
-        <input
-          type="text"
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          placeholder="Поиск по кличке..."
-          className="flex-1 min-w-[200px] px-4 py-3 rounded-xl border-2 border-cream-300 dark:border-charcoal-600 bg-white dark:bg-charcoal-800"
-        />
-        <FilterDropdown
-          label={filterYears.length ? `Год: ${filterYears.length}` : 'Год'}
-          open={openDropdown === 'year'}
-          onToggle={() => setOpenDropdown(openDropdown === 'year' ? null : 'year')}
-          options={allYears}
-          selected={filterYears}
-          onChange={(v) => setFilterYears((prev) => (prev.includes(v) ? prev.filter((x) => x !== v) : [...prev, v]))}
-        />
-        <FilterDropdown
-          label={filterBreeds.length ? `Порода: ${filterBreeds.length}` : 'Порода'}
-          open={openDropdown === 'breed'}
-          onToggle={() => setOpenDropdown(openDropdown === 'breed' ? null : 'breed')}
-          options={allBreeds}
-          selected={filterBreeds}
-          onChange={(v) => setFilterBreeds((prev) => (prev.includes(v) ? prev.filter((x) => x !== v) : [...prev, v]))}
-        />
-        <FilterDropdown
-          label={filterSexes.length ? `Пол: ${filterSexes.length}` : 'Пол'}
-          open={openDropdown === 'sex'}
-          onToggle={() => setOpenDropdown(openDropdown === 'sex' ? null : 'sex')}
-          options={allSexes}
-          selected={filterSexes}
-          onChange={(v) => setFilterSexes((prev) => (prev.includes(v) ? prev.filter((x) => x !== v) : [...prev, v]))}
-          formatOption={(s) => (s === 'С' ? 'Сука' : s === 'К' ? 'Кабель' : s)}
-        />
-        <input
-          type="number"
-          value={filterMinSpeed}
-          onChange={(e) => setFilterMinSpeed(e.target.value)}
-          placeholder="Мин. км/ч"
-          className="w-28 px-3 py-3 rounded-xl border-2 border-cream-300 dark:border-charcoal-600 bg-white dark:bg-charcoal-800"
-        />
-        <input
-          type="number"
-          value={filterMaxSpeed}
-          onChange={(e) => setFilterMaxSpeed(e.target.value)}
-          placeholder="Макс. км/ч"
-          className="w-28 px-3 py-3 rounded-xl border-2 border-cream-300 dark:border-charcoal-600 bg-white dark:bg-charcoal-800"
+    <div className="space-y-4">
+      <div ref={dropdownRef}>
+        <PageToolbar
+          activeFilterChips={activeFilterChips}
+          onClearAllFilters={hasActiveFilters ? clearFilters : undefined}
+          bottomLeft={<ViewToggle view={view} onViewChange={onViewChange} />}
+          bottomRight={
+            <ToolbarOptionBar
+              label="Группировка"
+              options={GROUP_BY_OPTIONS.map((o) => ({ value: o.value, label: o.label }))}
+              value={groupBy}
+              onChange={(value) => setGroupBy(value as GroupBy)}
+            />
+          }
+          filters={
+            <>
+              <ToolbarSearch value={searchQuery} onChange={setSearchQuery} placeholder="Кличка, порода…" />
+              <MultiFilterDropdown
+                label="Год"
+                selectedCount={filterYears.length}
+                open={openDropdown === 'year'}
+                onToggle={() => setOpenDropdown(openDropdown === 'year' ? null : 'year')}
+              >
+                {allYears.map((year) => (
+                  <label key={year} className={checkboxRowClass}>
+                    <input type="checkbox" checked={filterYears.includes(year)} onChange={() => toggleYear(year)} />
+                    {year}
+                  </label>
+                ))}
+              </MultiFilterDropdown>
+              <MultiFilterDropdown
+                label="Порода"
+                selectedCount={filterBreeds.length}
+                open={openDropdown === 'breed'}
+                onToggle={() => setOpenDropdown(openDropdown === 'breed' ? null : 'breed')}
+                className="min-w-[120px]"
+              >
+                {allBreeds.map((breed) => (
+                  <label key={breed} className={checkboxRowClass}>
+                    <input type="checkbox" checked={filterBreeds.includes(breed)} onChange={() => toggleBreed(breed)} />
+                    <span className="truncate">{breed}</span>
+                  </label>
+                ))}
+              </MultiFilterDropdown>
+              <MultiFilterDropdown
+                label="Пол"
+                selectedCount={filterSexes.length}
+                open={openDropdown === 'sex'}
+                onToggle={() => setOpenDropdown(openDropdown === 'sex' ? null : 'sex')}
+              >
+                {allSexes.map((sex) => (
+                  <label key={sex} className={checkboxRowClass}>
+                    <input type="checkbox" checked={filterSexes.includes(sex)} onChange={() => toggleSex(sex)} />
+                    <DogSexIcon sex={sex} />
+                    <span>{sex === 'С' ? 'Сука' : sex === 'К' ? 'Кабель' : sex}</span>
+                  </label>
+                ))}
+              </MultiFilterDropdown>
+              <input
+                type="number"
+                value={filterMinSpeed}
+                onChange={(e) => setFilterMinSpeed(e.target.value)}
+                placeholder="Мин. км/ч"
+                className={TOOLBAR_NUMBER_INPUT}
+              />
+              <input
+                type="number"
+                value={filterMaxSpeed}
+                onChange={(e) => setFilterMaxSpeed(e.target.value)}
+                placeholder="Макс. км/ч"
+                className={TOOLBAR_NUMBER_INPUT}
+              />
+            </>
+          }
         />
       </div>
-
-      <ViewToggle view={view} onViewChange={onViewChange} />
 
       {exactName && (
         <DogSearchCard
@@ -216,7 +291,7 @@ export default function SpeedStatsView({ view, onViewChange }: SpeedStatsViewPro
         values={speeds}
       />
 
-      <GroupedStatsTable mode="speed" rows={grouped} groupBy={groupBy} onGroupByChange={setGroupBy} />
+      <GroupedStatsTable mode="speed" rows={grouped} groupBy={groupBy} />
     </div>
   )
 }

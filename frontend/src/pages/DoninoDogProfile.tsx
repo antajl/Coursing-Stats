@@ -2,7 +2,8 @@ import { useParams, useNavigate, useLocation } from 'react-router-dom'
 import { useState, useEffect, useRef } from 'react'
 import SkeletonLoader from '../components/SkeletonLoader'
 import ErrorState from '../components/ErrorState'
-import { formatRecordDate, dedupeByRecordDate } from '../lib/recordDates'
+import DogSexIcon from '../components/DogSexIcon'
+import { formatRecordDate, dedupeByRecordDate, expandCoursingTimeline } from '../lib/recordDates'
 import { api } from '../services/api'
 
 export default function DoninoDogProfile() {
@@ -72,6 +73,8 @@ export default function DoninoDogProfile() {
     data.coursingRecords,
     (candidate, existing) => candidate.time_seconds < existing.time_seconds
   )
+  const coursingTimeline = expandCoursingTimeline(data.coursingRecords)
+  const dogSex = data.sex || data.speedRecords?.find((r) => r.sex)?.sex || ''
 
   return (
     <div className="min-h-screen bg-cream-50 dark:bg-charcoal-900 p-4 md:p-6">
@@ -100,6 +103,7 @@ export default function DoninoDogProfile() {
             <div className="min-w-0">
               <div className="flex items-baseline gap-3 md:gap-4 flex-wrap">
                 <h1 className="text-2xl font-bold tracking-tight text-charcoal-900 dark:text-charcoal-100 md:text-3xl">{data.name}</h1>
+                {dogSex && <DogSexIcon sex={dogSex} size={22} className="mb-0.5" />}
               </div>
               <div className="mt-3">
                 <span className="inline-block rounded-full bg-cream-100 dark:bg-charcoal-700 px-4 py-1.5 text-sm font-semibold text-charcoal-700 dark:text-charcoal-300 border border-old-money-200 dark:border-charcoal-600">
@@ -180,7 +184,7 @@ export default function DoninoDogProfile() {
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     <div className="bg-gradient-to-br from-old-money-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-old-money-200 dark:border-charcoal-500">
                       <div className="text-xs font-medium text-old-money-600 dark:text-old-money-400 mb-1 uppercase tracking-wide">Всего забегов</div>
-                      <div className="text-2xl font-bold text-charcoal-900 dark:text-charcoal-100">{uniqueCoursingRecords.length}</div>
+                      <div className="text-2xl font-bold text-charcoal-900 dark:text-charcoal-100">{coursingTimeline.length || uniqueCoursingRecords.length}</div>
                     </div>
                     {data.coursingStats.breedRank > 0 && (
                       <div className="bg-gradient-to-br from-camel-50 dark:from-charcoal-700 to-cream-100 dark:to-charcoal-600 rounded-xl p-4 border border-camel-200 dark:border-charcoal-500">
@@ -192,7 +196,7 @@ export default function DoninoDogProfile() {
 
                   {/* График прогресса */}
                   <div className="mt-6 space-y-2">
-                    {uniqueCoursingRecords.map((record, idx) => (
+                    {(coursingTimeline.length > 0 ? coursingTimeline : uniqueCoursingRecords).map((record, idx) => (
                       <div key={idx} className="flex items-center gap-4">
                         <div className="w-24 text-sm text-charcoal-700 dark:text-charcoal-300 text-right">{formatRecordDate(record.date)}</div>
                         <div className="flex-1 bg-cream-200 dark:bg-charcoal-600 rounded-full h-6 overflow-hidden relative">

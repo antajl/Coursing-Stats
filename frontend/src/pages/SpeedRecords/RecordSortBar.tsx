@@ -1,3 +1,6 @@
+import { ArrowDown, ArrowUp } from 'lucide-react'
+import { TOOLBAR_SORT_ACTIVE, TOOLBAR_SORT_CHIP, TOOLBAR_SORT_IDLE } from '../../lib/toolbar'
+
 interface SortOption {
   field: string
   label: string
@@ -13,29 +16,25 @@ interface RecordSortBarProps {
 export default function RecordSortBar({ options, sortField, sortDirection, onSort }: RecordSortBarProps) {
   return (
     <div className="flex flex-wrap items-center gap-2">
-      <span className="text-xs font-semibold uppercase tracking-wide text-old-money-500 dark:text-old-money-400">
-        Сортировка
-      </span>
-      {options.map(({ field, label }) => {
-        const active = sortField === field
-        const arrow = active ? (sortDirection === 'desc' ? ' ↓' : ' ↑') : ''
+      <span className="text-xs font-medium text-old-money-500 dark:text-old-money-400">Сортировка</span>
+      <div className="inline-flex flex-wrap items-center gap-1.5">
+        {options.map(({ field, label }) => {
+          const active = sortField === field
+          const SortIcon = sortDirection === 'desc' ? ArrowDown : ArrowUp
 
-        return (
-          <button
-            key={field}
-            type="button"
-            onClick={() => onSort(field)}
-            className={`rounded-lg px-3 py-1.5 text-sm font-medium transition-colors ${
-              active
-                ? 'bg-camel-600 text-white shadow-sm'
-                : 'bg-cream-100 text-charcoal-700 hover:bg-cream-200 dark:bg-charcoal-700 dark:text-charcoal-200 dark:hover:bg-charcoal-600'
-            }`}
-          >
-            {label}
-            {arrow}
-          </button>
-        )
-      })}
+          return (
+            <button
+              key={field}
+              type="button"
+              onClick={() => onSort(field)}
+              className={`${TOOLBAR_SORT_CHIP} ${active ? TOOLBAR_SORT_ACTIVE : TOOLBAR_SORT_IDLE}`}
+            >
+              {label}
+              {active && <SortIcon className="h-3 w-3 shrink-0 opacity-80" strokeWidth={2.5} />}
+            </button>
+          )
+        })}
+      </div>
     </div>
   )
 }

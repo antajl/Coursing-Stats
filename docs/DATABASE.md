@@ -158,7 +158,7 @@ npx wrangler d1 execute pc-db --remote --file=data/exports/results.sql --yes
 | date | TEXT | Дата в формате DD.MM.YYYY |
 | screenshot_url | TEXT | Ссылка на скриншот |
 | history | TEXT | JSON с предыдущими результатами |
-| status | TEXT | 'new', 'improved' или null |
+| status | TEXT | `new`, `improved`, `normal`, `old` (цвет клички на листе; см. `speed-sheet-status.ts`) |
 | updated_at | TEXT | Время последнего обновления |
 
 **history структура:**

@@ -1,3 +1,5 @@
+import { TOOLBAR_FILTER_BTN, TOOLBAR_FILTER_PANEL } from '../../../lib/toolbar'
+
 export function StatCard({
   label,
   value,
@@ -40,22 +42,18 @@ export function FilterDropdown({
   formatOption?: (v: string) => string
 }) {
   return (
-    <div className="relative min-w-[120px]">
-      <button
-        type="button"
-        onClick={onToggle}
-        className="w-full px-4 py-3 rounded-xl border-2 border-cream-300 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 text-left"
-      >
-        {label}
+    <div className="relative min-w-[96px]">
+      <button type="button" onClick={onToggle} className={`${TOOLBAR_FILTER_BTN} w-full`}>
+        <span className="truncate">{label}</span>
       </button>
       {open && (
-        <div className="absolute z-10 mt-1 w-full max-h-60 overflow-y-auto rounded-xl border border-cream-300 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 shadow-xl">
+        <div className={`${TOOLBAR_FILTER_PANEL} w-full`}>
           {options.map((opt) => (
             <label
               key={opt}
-              className="flex items-center px-4 py-2 hover:bg-cream-50 dark:hover:bg-charcoal-700 cursor-pointer"
+              className="flex cursor-pointer items-center gap-2 px-3 py-2 text-sm hover:bg-cream-50 dark:hover:bg-charcoal-700"
             >
-              <input type="checkbox" checked={selected.includes(opt)} onChange={() => onChange(opt)} className="mr-2" />
+              <input type="checkbox" checked={selected.includes(opt)} onChange={() => onChange(opt)} />
               {formatOption ? formatOption(opt) : opt}
             </label>
           ))}

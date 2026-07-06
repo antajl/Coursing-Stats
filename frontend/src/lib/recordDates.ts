@@ -203,3 +203,50 @@ export function parseRecordHistory(history: unknown): unknown[] {
   }
   return []
 }
+
+function isCoursingHistoryEntry(value: unknown): value is { time_seconds: number; date: string } {
+  return (
+    typeof value === 'object' &&
+    value !== null &&
+    'time_seconds' in value &&
+    'date' in value &&
+    Number.isFinite(Number((value as { time_seconds: unknown }).time_seconds)) &&
+    (value as { date: unknown }).date != null
+  )
+}
+
+/** Собирает полную хронологию бегов: текущий рекорд + записи из примечаний (history). */
+export function expandCoursingTimeline(
+  records: Array<{ time_seconds: number | string; date: string | number; history?: unknown }>
+): Array<{ time_seconds: number; date: string }> {
+  const points: Array<{ time_seconds: number; date: string; ts: number }> = []
+
+  for (const record of records) {
+    for (const entry of parseRecordHistory(record.history)) {
+      if (!isCoursingHistoryEntry(entry)) continue
+      const ts = parseRecordDate(entry.date)?.getTime()
+      if (ts == null) continue
+      points.push({ time_seconds: Number(entry.time_seconds), date: String(entry.date), ts })
+    }
+
+    const time = Number(record.time_seconds)
+    const currentTs = parseRecordDate(record.date)?.getTime()
+    if (Number.isFinite(time) && time > 0 && currentTs != null) {
+      points.push({ time_seconds: time, date: String(record.date), ts: currentTs })
+    }
+  }
+
+  const byDate = new Map<string, { time_seconds: number; date: string }>()
+  for (const point of points.sort((a, b) => a.ts - b.ts)) {
+    const key = normalizeRecordDateIso(point.date)
+    const existing = byDate.get(key)
+    if (!existing || point.time_seconds < existing.time_seconds) {
+      byDate.set(key, { time_seconds: point.time_seconds, date: point.date })
+    }
+  }
+
+  return [...byDate.values()].sort(
+    (a, b) =>
+      (parseRecordDate(a.date)?.getTime() ?? 0) - (parseRecordDate(b.date)?.getTime() ?? 0)
+  )
+}

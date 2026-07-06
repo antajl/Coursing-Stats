@@ -30,11 +30,11 @@ const LEGEND = [
   { key: 'other', label: 'Другие' },
 ] as const
 
-const TOOLBAR_CHIP =
-  'h-9 items-center rounded-full border-[1.5px] px-3.5 text-xs font-semibold whitespace-nowrap transition-colors'
-const TOOLBAR_CHIP_IDLE =
-  'border-old-money-200 dark:border-charcoal-600 bg-cream-50 dark:bg-charcoal-800 text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-700'
-const TOOLBAR_CHIP_ACTIVE = 'border-camel-500 bg-camel-500 text-charcoal-900'
+import {
+  TOOLBAR_CHIP,
+  TOOLBAR_CHIP_ACTIVE,
+  TOOLBAR_CHIP_IDLE,
+} from '../../lib/toolbar'
 
 export default function Events() {
   const [searchParams, setSearchParams] = useSearchParams()

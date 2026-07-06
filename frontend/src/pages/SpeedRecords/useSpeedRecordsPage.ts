@@ -2,6 +2,7 @@ import { useState, useEffect, useRef, useMemo, useCallback } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { useSpeedRecords, useCoursingRecords } from '../../hooks/useApi'
 import { formatRecordDate, getRecordYear, parseRecordDate, parseRecordHistory } from '../../lib/recordDates'
+import { buildSexByDogMap } from './stats/doninoStatsUtils'
 
 export function useSpeedRecordsPage() {
   const [searchParams, setSearchParams] = useSearchParams()
@@ -77,6 +78,8 @@ export function useSpeedRecordsPage() {
   const [searchQuery, setSearchQuery] = useState(() => searchParams.get('search') || '')
   const [sortField, setSortField] = useState(() => searchParams.get('sort') || 'speed_km_h')
   const [sortDirection, setSortDirection] = useState(() => searchParams.get('dir') || 'desc')
+  const [coursingSortField, setCoursingSortField] = useState('time_seconds')
+  const [coursingSortDirection, setCoursingSortDirection] = useState('asc')
 
   const speedRecordsData = speedRecordsQuery.data?.success
     ? Array.isArray(speedRecordsQuery.data.data)
@@ -89,13 +92,19 @@ export function useSpeedRecordsPage() {
       : []
     : []
 
+  const sexByDog = useMemo(
+    () => buildSexByDogMap(speedRecordsData as { name: string; breed: string; sex: string }[]),
+    [speedRecordsData]
+  )
+
   const coursingRecords = useMemo(
     () =>
       coursingRecordsData.map(record => ({
         ...record,
         history: parseRecordHistory(record.history),
+        sex: sexByDog.get(`${record.name}_${record.breed}`) ?? '',
       })),
-    [coursingRecordsData]
+    [coursingRecordsData, sexByDog]
   )
 
   const bestCoursingRecords = useMemo(() => {
@@ -129,8 +138,28 @@ export function useSpeedRecordsPage() {
       filtered = filtered.filter(record => filterYears.includes(String(getRecordYear(record.date))))
     }
 
+    filtered = [...filtered].sort((a, b) => {
+      let aVal: string | number = a[coursingSortField as keyof typeof a] as string | number
+      let bVal: string | number = b[coursingSortField as keyof typeof b] as string | number
+
+      if (coursingSortField === 'time_seconds') {
+        aVal = parseFloat(String(aVal))
+        bVal = parseFloat(String(bVal))
+      }
+
+      if (coursingSortField === 'date') {
+        aVal = parseRecordDate(String(aVal))?.getTime() ?? 0
+        bVal = parseRecordDate(String(bVal))?.getTime() ?? 0
+      }
+
+      if (coursingSortDirection === 'desc') {
+        return aVal > bVal ? -1 : aVal < bVal ? 1 : 0
+      }
+      return aVal < bVal ? -1 : aVal > bVal ? 1 : 0
+    })
+
     return filtered
-  }, [bestCoursingRecords, searchQuery, filterBreeds, filterYears])
+  }, [bestCoursingRecords, searchQuery, filterBreeds, filterYears, coursingSortField, coursingSortDirection])
 
   const speedRecordsWithHistory = useMemo(
     () =>
@@ -279,6 +308,18 @@ export function useSpeedRecordsPage() {
     [sortField, sortDirection]
   )
 
+  const handleCoursingSort = useCallback(
+    (field: string) => {
+      if (coursingSortField === field) {
+        setCoursingSortDirection(coursingSortDirection === 'asc' ? 'desc' : 'asc')
+      } else {
+        setCoursingSortField(field)
+        setCoursingSortDirection(field === 'time_seconds' ? 'asc' : 'asc')
+      }
+    },
+    [coursingSortField, coursingSortDirection]
+  )
+
   const clearAllFilters = useCallback(() => {
     setFilterYears([])
     setFilterBreeds([])
@@ -314,6 +355,8 @@ export function useSpeedRecordsPage() {
     filterSexes,
     sortField,
     sortDirection,
+    coursingSortField,
+    coursingSortDirection,
     openDropdown,
     setOpenDropdown,
     dropdownRef,
@@ -324,6 +367,7 @@ export function useSpeedRecordsPage() {
     coursingLoading,
     toggleFilter,
     handleSort,
+    handleCoursingSort,
     clearAllFilters,
     clearCoursingFilters,
     hasActiveFilters,

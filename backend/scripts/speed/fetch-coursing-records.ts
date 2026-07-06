@@ -15,6 +15,7 @@ import { execSync } from "node:child_process";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import * as XLSX from 'xlsx';
+import { dedupeCoursingRecords, parseCoursingRecordsFromWorkbook } from './parse-coursing-xlsx';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "../../..");
@@ -39,154 +40,11 @@ async function fetchXLSX() {
   return buffer;
 }
 
-function parseXLSX(buffer) {
-  const workbook = XLSX.read(buffer);
-  const sheetName = workbook.SheetNames[0];
-  const worksheet = workbook.Sheets[sheetName];
-  
-  const range = XLSX.utils.decode_range(worksheet['!ref']);
-  const headers = [];
-  const records = [];
-  
-  // Находим строку с заголовками
-  let headerRowIndex = 0;
-  for (let row = range.s.r; row <= range.e.r; row++) {
-    let hasData = false;
-    for (let col = range.s.c; col <= range.e.c; col++) {
-      const cellAddress = XLSX.utils.encode_cell({ r: row, c: col });
-      const cell = worksheet[cellAddress];
-      if (cell && cell.v) {
-        hasData = true;
-        break;
-      }
-    }
-    if (hasData) {
-      headerRowIndex = row;
-      break;
-    }
-  }
-  
-  // Читаем заголовки
-  for (let col = range.s.c; col <= range.e.c; col++) {
-    const cellAddress = XLSX.utils.encode_cell({ r: headerRowIndex, c: col });
-    const cell = worksheet[cellAddress];
-    headers.push(cell ? cell.v : '');
-  }
-  
-  console.log(`Headers: ${headers.filter(h => h).join(', ')}`);
-  
-  // Читаем данные
-  for (let row = headerRowIndex + 1; row <= range.e.r; row++) {
-    const record = {};
-    let hasData = false;
-    
-    for (let col = range.s.c; col <= range.e.c; col++) {
-      const cellAddress = XLSX.utils.encode_cell({ r: row, c: col });
-      const cell = worksheet[cellAddress];
-      const header = headers[col - range.s.c];
-      
-      if (cell && cell.v !== undefined) {
-        record[header] = cell.v;
-        hasData = true;
-      }
-    }
-    
-    if (!hasData) continue;
-    
-    // Парсим время (может быть строкой "22,81" или числом)
-    let timeSeconds = 0;
-    const timeValue = record['Время'] || record['время'] || record['time'] || 0;
-    if (typeof timeValue === 'string') {
-      timeSeconds = parseFloat(timeValue.replace(',', '.')) || 0;
-    } else {
-      timeSeconds = parseFloat(timeValue) || 0;
-    }
-    
-    // Конвертация даты → YYYY-MM-DD
-    let dateStr = record['Дата'] || record['дата'] || record['date'] || '';
-    if (typeof dateStr === 'number' || typeof dateStr === 'string') {
-      const excelDate = typeof dateStr === 'number'
-        ? new Date(Math.round((dateStr - 25569) * 86400 * 1000))
-        : /^\d{5}$/.test(dateStr)
-          ? new Date(Math.round((parseInt(dateStr, 10) - 25569) * 86400 * 1000))
-          : null;
-      if (excelDate) {
-        dateStr = `${excelDate.getFullYear()}-${String(excelDate.getMonth() + 1).padStart(2, '0')}-${String(excelDate.getDate()).padStart(2, '0')}`;
-      } else if (typeof dateStr === 'string') {
-        const normalized = dateStr.replace(/[;,\/\-]/g, '.');
-        const parts = normalized.split('.');
-        if (parts.length === 3) {
-          dateStr = `${parts[2]}-${String(parts[1]).padStart(2, '0')}-${String(parts[0]).padStart(2, '0')}`;
-        }
-      }
-    }
-    
-    const coursingRecord = {
-      breed: record['Порода'] || record['breed'] || '',
-      name: record['Кличка'] || record['кличка'] || record['name'] || '',
-      time_seconds: timeSeconds,
-      date: dateStr,
-      track_length: 350  // фиксированная длина трассы для курсинга Донино
-    };
-
-    if (coursingRecord.breed && coursingRecord.name && timeSeconds > 0) {
-      records.push(coursingRecord);
-    }
-  }
-
-  console.log(`Parsed ${records.length} coursing records`);
-  
-  // Дедупликация записей по уникальному ключу
-  const uniqueRecords = [];
-  const seenKeys = new Set();
-  
-  for (const record of records) {
-    const key = `${record.name}_${record.breed}_${record.time_seconds}_${record.date}`;
-    if (!seenKeys.has(key)) {
-      seenKeys.add(key);
-      uniqueRecords.push(record);
-    }
-  }
-  
-  console.log(`After deduplication: ${uniqueRecords.length} unique records (removed ${records.length - uniqueRecords.length} duplicates)`);
-  
-  // Группируем записи по кличке и породе для формирования истории
-  const recordsByDog = {};
-  uniqueRecords.forEach(record => {
-    const key = `${record.name}_${record.breed}`;
-    if (!recordsByDog[key]) {
-      recordsByDog[key] = [];
-    }
-    recordsByDog[key].push(record);
-  });
-  
-  // Для каждой собаки сортируем результаты по дате и формируем историю
-  Object.keys(recordsByDog).forEach(key => {
-    const dogRecords = recordsByDog[key];
-    // Сортируем по дате (от старых к новым)
-    dogRecords.sort((a, b) => {
-      const parseDate = (d) => {
-        const parts = d.split('.');
-        return new Date(parts[2], parts[1] - 1, parts[0]);
-      };
-      return parseDate(a.date) - parseDate(b.date);
-    });
-    
-    // Для каждой записи (кроме последней) сохраняем историю предыдущих результатов
-    dogRecords.forEach((record, idx) => {
-      if (idx > 0) {
-        // Предыдущие результаты - все до текущего
-        record.history = dogRecords.slice(0, idx).map(r => ({
-          time_seconds: r.time_seconds,
-          date: r.date
-        }));
-      } else {
-        record.history = [];
-      }
-    });
-  });
-  
-  return uniqueRecords;
+function parseXLSX(buffer: ArrayBuffer) {
+  const workbook = XLSX.read(buffer, { cellStyles: true });
+  const records = dedupeCoursingRecords(parseCoursingRecordsFromWorkbook(workbook));
+  console.log(`Parsed ${records.length} unique coursing records`);
+  return records;
 }
 
 function esc(value) {

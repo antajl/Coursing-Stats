@@ -214,11 +214,14 @@ export function handleSpeed(app: Hono<{ Bindings: Env }>) {
       coursingPercentile = coursingBreedTotal > 0 ? ((coursingBreedTotal - coursingBreedRank) / coursingBreedTotal) * 100 : 0;
     }
 
+    const sex = speedRecords.find((r) => r.sex)?.sex ?? null;
+
     return c.json({
       success: true,
       data: {
         name,
         breed,
+        sex,
         speedRecords,
         coursingRecords,
         speedStats: {

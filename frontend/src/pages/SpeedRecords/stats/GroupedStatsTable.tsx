@@ -9,7 +9,6 @@ interface GroupedStatsTableProps {
   mode: 'speed' | 'coursing'
   rows: GroupedRow[]
   groupBy: GroupBy
-  onGroupByChange: (value: GroupBy) => void
 }
 
 function isSpeedDog(dog: DogSpeedSummary | DogCoursingSummary): dog is DogSpeedSummary {
@@ -20,30 +19,13 @@ export default function GroupedStatsTable({
   mode,
   rows,
   groupBy,
-  onGroupByChange,
 }: GroupedStatsTableProps) {
   const [expandedKey, setExpandedKey] = useState<string | null>(null)
   const isSpeed = mode === 'speed'
 
   return (
     <div className="bg-white dark:bg-charcoal-800 rounded-2xl border-2 border-cream-300 dark:border-charcoal-600 p-6 shadow-md space-y-4">
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <h2 className="text-xl font-bold text-charcoal-900 dark:text-charcoal-100">Срезы</h2>
-        <label className="flex items-center gap-2 text-sm text-charcoal-700 dark:text-charcoal-300">
-          Группировать по
-          <select
-            value={groupBy}
-            onChange={(e) => onGroupByChange(e.target.value as GroupBy)}
-            className="rounded-lg border border-cream-300 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 px-3 py-2"
-          >
-            {GROUP_BY_OPTIONS.map((o) => (
-              <option key={o.value} value={o.value}>
-                {o.label}
-              </option>
-            ))}
-          </select>
-        </label>
-      </div>
+      <h2 className="text-xl font-bold text-charcoal-900 dark:text-charcoal-100">Срезы</h2>
 
       <div className="overflow-x-auto">
         <table className="w-full min-w-[640px]">
