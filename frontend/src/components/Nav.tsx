@@ -191,7 +191,15 @@ export default function Nav() {
       </div>
 
       {mobileMenuOpen && (
-        <div id="mobile-menu" className="md:hidden absolute top-12 left-0 right-0 bg-white dark:bg-charcoal-900 border-b border-old-money-200 dark:border-charcoal-700 shadow-lg z-50">
+        <div
+          className="fixed inset-0 z-40 bg-black/40 md:hidden"
+          onClick={() => setMobileMenuOpen(false)}
+          aria-hidden
+        />
+      )}
+
+      {mobileMenuOpen && (
+        <div id="mobile-menu" className="md:hidden absolute top-12 left-0 right-0 z-50 bg-white dark:bg-charcoal-900 border-b border-old-money-200 dark:border-charcoal-700 shadow-lg">
           <div className="px-4 py-3 space-y-2">
             <Link
               to="/"

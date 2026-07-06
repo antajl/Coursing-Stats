@@ -49,7 +49,7 @@ export default function EventResults() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-cream-50 dark:bg-charcoal-900 p-6 border-t-2 border-x-2 border-b-2 border-old-money-200 dark:border-charcoal-600">
+      <div className="p-4 md:p-6">
         <div className="max-w-4xl mx-auto">
           <SkeletonLoader variant="card" count={3} />
         </div>
@@ -59,7 +59,7 @@ export default function EventResults() {
 
   if (!event) {
     return (
-      <div className="min-h-screen bg-cream-50 dark:bg-charcoal-900 p-6 border-t-2 border-x-2 border-b-2 border-old-money-200 dark:border-charcoal-600">
+      <div className="p-4 md:p-6">
         <div className="max-w-4xl mx-auto">
           <ErrorState
             title="Событие не найдено"
@@ -92,7 +92,7 @@ export default function EventResults() {
         description={description}
         keywords={`${eventName}, ${eventType}, ${event.location}, результаты, статистика, РКФ, ${eventDate}`}
       />
-      <div className="min-h-screen bg-cream-50 dark:bg-charcoal-900 p-4 md:p-6 border-t-2 border-x-2 border-b-2 border-old-money-200 dark:border-charcoal-600">
+      <div className="p-4 md:p-6">
       <div className="max-w-4xl mx-auto">
         {error && (
           <ErrorState

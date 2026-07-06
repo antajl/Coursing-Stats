@@ -31,9 +31,9 @@ export default function PageToolbar({
       <ToolbarActiveFilters chips={activeFilterChips} onClearAll={onClearAllFilters} />
 
       {showBottom && (
-        <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-old-money-200/60 pt-2.5 dark:border-charcoal-600/80">
+        <div className="flex flex-col gap-2 border-t border-old-money-200/60 pt-2.5 sm:flex-row sm:items-center sm:gap-x-4 dark:border-charcoal-600/80">
           {bottomLeft}
-          {bottomRight}
+          {bottomRight && <div className="sm:ml-auto">{bottomRight}</div>}
         </div>
       )}
     </div>

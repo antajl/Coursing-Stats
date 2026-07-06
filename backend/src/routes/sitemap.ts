@@ -17,6 +17,14 @@ export function handleSitemap(app: Hono<{ Bindings: Env }>) {
       const events = await db.prepare('SELECT id, title, event_date, competition_kind FROM events').all();
       // Получаем всех судей
       const judges = await db.prepare('SELECT id, judge_name FROM judges').all();
+      // Уникальные собаки Донино (name + breed из обеих таблиц)
+      const doninoDogs = await db.prepare(`
+        SELECT DISTINCT name, breed FROM (
+          SELECT name, breed FROM speed_records WHERE name IS NOT NULL AND breed IS NOT NULL
+          UNION
+          SELECT name, breed FROM coursing_records WHERE name IS NOT NULL AND breed IS NOT NULL
+        )
+      `).all();
       
       const baseUrl = 'https://coursing-stats.ru';
       const currentDate = new Date().toISOString().split('T')[0];
@@ -91,6 +99,18 @@ export function handleSitemap(app: Hono<{ Bindings: Env }>) {
         for (const judge of judges.results) {
           xml += `  <url>\n`;
           xml += `    <loc>${baseUrl}/judge/${judge.id}</loc>\n`;
+          xml += `    <changefreq>monthly</changefreq>\n`;
+          xml += `    <priority>0.5</priority>\n`;
+          xml += `  </url>\n`;
+        }
+      }
+
+      // Профили Донино (/donino-dog/:name/:breed)
+      if (doninoDogs.results) {
+        for (const doninoDog of doninoDogs.results) {
+          const doninoPath = `/donino-dog/${encodeURIComponent(doninoDog.name)}/${encodeURIComponent(doninoDog.breed)}`;
+          xml += `  <url>\n`;
+          xml += `    <loc>${baseUrl}${doninoPath}</loc>\n`;
           xml += `    <changefreq>monthly</changefreq>\n`;
           xml += `    <priority>0.5</priority>\n`;
           xml += `  </url>\n`;

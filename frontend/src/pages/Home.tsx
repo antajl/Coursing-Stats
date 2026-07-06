@@ -342,7 +342,7 @@ export default function Home() {
                 <Link
                   key={`${rankingTab}-${dog.dog_id}`}
                   to={`/dog/${dog.dog_id}`}
-                  className={`pod-card place-${place} flex flex-col items-center no-underline text-inherit ${isGold ? 'gold' : ''}`}
+                  className={`pod-card place-${place} flex flex-col items-center no-underline text-inherit ${isGold ? 'gold order-first sm:order-none' : ''}`}
                 >
                   <PodiumRankMark place={place as PodiumPlace} size={isGold ? 'lg' : 'md'} />
                   {(() => {

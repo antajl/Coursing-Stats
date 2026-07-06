@@ -18,10 +18,13 @@ function parseJudgeNames(judgesString: string) {
   let cleaned = judgesString
     .replace(/Главный\s+судья\s*[:\s-]+\s*/gi, '')
     .replace(/судья\s*[:\s-]+\s*/gi, '')
+    .replace(/^\d+\s*[-–]\s*/gm, '')
     .trim();
   
   // Разделяем по запятым
-  const names = cleaned.split(',').map(n => n.trim()).filter(n => n);
+  const names = cleaned.split(',')
+    .map(n => n.trim().replace(/^\d+\s*[-–]\s*/, ''))
+    .filter(n => n);
   
   // Если не получилось разделить, пробуем другие разделители
   if (names.length === 1 && cleaned.includes(' и ')) {

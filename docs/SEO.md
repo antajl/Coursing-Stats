@@ -66,6 +66,17 @@ Coursing Stats использует несколько стратегий для
 />
 ```
 
+#### Профили Донино (`frontend/src/pages/DoninoDogProfile.tsx`)
+```tsx
+<SEO
+  title={`${name} — ${breed}`}
+  description={`Рекорды Донино: ${name} (${breed}). лучшая скорость … км/ч; лучшее время 350 м: … с.`}
+  keywords={`${name}, ${breed}, рекорды Донино, замер скорости, бега борзых, 350 м`}
+/>
+```
+
+URL профилей Донино попадают в **динамический** sitemap (`backend/src/routes/sitemap.ts`): `UNION` уникальных `name, breed` из `speed_records` и `coursing_records` → `/donino-dog/…`. Sitemap пересобирается при каждом запросе к API; после деплоя Worker отдельная «загрузка» файла не нужна — достаточно, что в Вебмастере / Search Console уже указан `https://coursing-stats.ru/sitemap.xml` (он ссылается на API-sitemap).
+
 #### Страницы событий (`frontend/src/pages/Events/EventResults/index.tsx`)
 ```tsx
 <SEO

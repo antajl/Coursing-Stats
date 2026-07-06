@@ -40,13 +40,15 @@ export default function SpeedRecordCard({ record }: SpeedRecordCardProps) {
       <Link
         to={`/donino-dog/${encodeURIComponent(record.name)}/${encodeURIComponent(record.breed)}`}
         state={{ from: 'speed-records' }}
-        className="flex min-w-0 flex-1 flex-col gap-3 p-4 transition-colors group-hover:bg-cream-50 sm:grid sm:grid-cols-[minmax(180px,220px)_1fr_auto] sm:items-center sm:gap-4 dark:group-hover:bg-charcoal-700/40"
+        className="flex min-w-0 flex-1 flex-col gap-3 p-4 transition-colors group-hover:bg-cream-50 sm:grid sm:grid-cols-[minmax(0,1fr)_auto_auto] sm:items-center sm:gap-4 dark:group-hover:bg-charcoal-700/40"
       >
-        <div className="flex min-w-0 items-start justify-between gap-3 sm:contents">
+        <div className="flex min-w-0 flex-col gap-3 sm:contents">
           <div className="min-w-0 sm:col-start-1">
-            <div className="mb-1.5 flex items-center gap-2">
+            <div className="mb-1.5 flex flex-wrap items-center gap-x-2 gap-y-0.5">
               <OwnerCrownName name={record.name} breed={record.breed} kind="donino">
-                <h3 className="truncate text-base font-bold text-charcoal-900 dark:text-charcoal-100">{record.name}</h3>
+                <h3 className="break-words text-base font-bold leading-snug text-charcoal-900 line-clamp-2 dark:text-charcoal-100">
+                  {record.name}
+                </h3>
               </OwnerCrownName>
               <DogSexIcon sex={record.sex} />
             </div>
@@ -58,7 +60,7 @@ export default function SpeedRecordCard({ record }: SpeedRecordCardProps) {
               <span>{formatRecordDate(record.date)}</span>
             </div>
           </div>
-          <div className="flex shrink-0 items-center gap-2 sm:hidden">{speedBlock}</div>
+          <div className="flex shrink-0 items-center gap-2 sm:col-start-3 sm:row-start-1 sm:hidden">{speedBlock}</div>
         </div>
 
         {hasHistoryChart && (

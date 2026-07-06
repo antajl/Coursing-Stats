@@ -48,7 +48,7 @@ export default function DoninoHomeRecordRow({
       <div className="donino-home-row-main min-w-0 flex-1">
         <div className="flex min-w-0 items-center gap-2">
           <OwnerCrownName name={name} breed={breed} kind="donino">
-            <span className="truncate font-serif text-base font-bold text-charcoal-900 dark:text-charcoal-100">
+            <span className="break-words font-serif text-base font-bold leading-snug text-charcoal-900 line-clamp-2 dark:text-charcoal-100">
               {name}
             </span>
           </OwnerCrownName>

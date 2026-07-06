@@ -281,8 +281,6 @@ In-process Worker tests planned: **vitest@4** + **@cloudflare/vitest-pool-worker
 - ✅ `Competitions.tsx` — вложенный lazy для Events / TopDogs / Judges
 - ✅ `Nav.tsx` вынесен из `App.tsx`
 - ✅ `vite.config.ts` — `manualChunks` (vendor-react, vendor-router, vendor-query, vendor-xlsx, …)
-- 🔄 Hero-тексты на главной — при необходимости уточнить eyebrow (годы архива vs данные в БД)
-
 Подробнее о маршрутах: см. раздел «Frontend map — навигация для ИИ-агентов» в этом файле
 
 ---

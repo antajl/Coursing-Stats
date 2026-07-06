@@ -2,6 +2,7 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 import { Link } from 'react-router-dom'
 import { api } from '../services/api'
 import { parseDogName } from '../lib/dogName'
+import MedalTally from './MedalTally'
 
 // Позиция рядом с курсором, с удержанием в пределах экрана
 function computePosition(pointer, cardWidth, cardHeight) {
@@ -231,17 +232,13 @@ export default function DogTooltip({ dogId, pointer, onClose }) {
 
                 {/* Медали */}
                 {hasCourseMedals && (
-                  <div className="flex gap-1.5">
-                    {[
-                      { emoji: '🥇', count: coursing.gold, color: 'text-camel-700 dark:text-camel-400' },
-                      { emoji: '🥈', count: coursing.silver, color: 'text-charcoal-700 dark:text-charcoal-300' },
-                      { emoji: '🥉', count: coursing.bronze, color: 'text-terracotta-600 dark:text-terracotta-400' },
-                    ].map(({ emoji, count, color }) => (
-                      <div key={emoji} className="flex-1 bg-white dark:bg-charcoal-800 rounded-lg py-1.5 shadow-sm text-center">
-                        <div className="text-sm">{emoji}</div>
-                        <div className={`text-xs font-bold ${color}`}>{count || 0}</div>
-                      </div>
-                    ))}
+                  <div className="flex justify-center py-1">
+                    <MedalTally
+                      gold={coursing.gold}
+                      silver={coursing.silver}
+                      bronze={coursing.bronze}
+                      size="sm"
+                    />
                   </div>
                 )}
               </div>
@@ -308,17 +305,13 @@ export default function DogTooltip({ dogId, pointer, onClose }) {
 
                 {/* Медали */}
                 {hasRacingMedals && (
-                  <div className="flex gap-1.5 mt-3">
-                    {[
-                      { emoji: '🥇', count: racing.gold, color: 'text-camel-700 dark:text-camel-400' },
-                      { emoji: '🥈', count: racing.silver, color: 'text-charcoal-700 dark:text-charcoal-300' },
-                      { emoji: '🥉', count: racing.bronze, color: 'text-terracotta-600 dark:text-terracotta-400' },
-                    ].map(({ emoji, count, color }) => (
-                      <div key={emoji} className="flex-1 bg-white dark:bg-charcoal-800 rounded-lg py-1.5 shadow-sm text-center">
-                        <div className="text-sm">{emoji}</div>
-                        <div className={`text-xs font-bold ${color}`}>{count || 0}</div>
-                      </div>
-                    ))}
+                  <div className="flex justify-center py-1">
+                    <MedalTally
+                      gold={racing.gold}
+                      silver={racing.silver}
+                      bronze={racing.bronze}
+                      size="sm"
+                    />
                   </div>
                 )}
               </div>

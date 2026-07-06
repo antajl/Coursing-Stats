@@ -4,6 +4,19 @@
 
 ## [Unreleased]
 
+### 2026-07-06 — UI plan v2 (мобильный рейтинг, медали, судьи)
+- **DogCard:** двухстрочная вёрстка на мобиле, `MedalTally` вместо эмодзи
+- **DogProfile / DogTooltip:** `MedalTally`; история Донино сворачивается (5 + «показать все»); `items-start` в grid
+- **Competitions:** `ToolbarSegmentControl` вместо вертикальных вкладок
+- **Home:** золото первым на мобильном подиуме (`order-first`)
+- **judges.ts:** очистка префиксов `2 - ` в именах
+- **PageToolbar, Hero, Nav, StatCounter, DogNameLink:** мобильная полировка (см. `docs/cursor-ui-plan-v2.md`)
+
+### 2026-07-06 (продолжение) — SEO Донино, фон DogProfile
+- **DoninoDogProfile:** компонент `<SEO>` (title, description, keywords)
+- **Sitemap API:** URL `/donino-dog/:name/:breed` из `speed_records` ∪ `coursing_records`
+- **DogProfile:** убран лишний `bg-cream-50` — фон как у DoninoDogProfile
+
 ### 2026-07-06 — Главная, тулбары, профили Донино
 - **Главная (`Home.tsx`)**: hero-dashboard + ближайшие события; кликабельные счётчики; подиум топ-3 сезона (`ToolbarSegmentControl`: медали / очки / скорость); блок Донино — две колонки (замер | бега 350 м) без вкладок; `PodiumRankMark` (римские I / II / III полосками); медали на подиуме в одну строку (`MedalTally nowrap`)
 - **Единый тулбар** (`frontend/src/components/toolbar/`): `PageToolbar`, `ToolbarSegmentControl`, `ToolbarSearch`, `RecordsListToolbar`, `MultiFilterDropdown` — рейтинг, судьи, рекорды Донино, статистика

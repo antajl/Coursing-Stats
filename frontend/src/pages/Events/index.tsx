@@ -182,7 +182,7 @@ export default function Events() {
   }
 
   return (
-    <div className="px-2 sm:px-4 pb-2 sm:pb-4 max-w-full mx-auto">
+    <div className="max-w-full mx-auto pb-2 sm:pb-4">
       <div className="mb-4 flex max-w-full flex-col gap-2">
         <div className="flex w-full flex-wrap items-center gap-2">
             <div className="flex h-9 w-[280px] shrink-0 items-center gap-2 rounded-[10px] border-[1.5px] border-old-money-300 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 px-3">

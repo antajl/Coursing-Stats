@@ -146,7 +146,7 @@ export default function TopDogs() {
   }
 
   return (
-    <div className={isStandalone ? 'p-4' : 'px-4 pb-4 pt-0'}>
+    <div className={isStandalone ? 'p-4' : ''}>
       <TopDogsFilters
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}

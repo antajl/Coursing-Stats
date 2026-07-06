@@ -15,8 +15,12 @@ export default function HeroIntro() {
   return (
     <div className="hero-intro">
       <div className="eyebrow">
-        <Icons.achievement className="h-3.5 w-3.5" strokeWidth={1.75} />
-        <span>2015 — 2026 · курсинг · БЗМП · бега борзых</span>
+        <Icons.achievement className="h-3.5 w-3.5 shrink-0" strokeWidth={1.75} />
+        <span>
+          <span className="whitespace-nowrap">2015 — 2026</span>
+          {' · '}
+          <span className="whitespace-nowrap">курсинг · БЗМП · бега борзых</span>
+        </span>
       </div>
 
       <h1>

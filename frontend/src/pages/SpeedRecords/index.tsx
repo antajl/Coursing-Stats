@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react'
 import PageLoader from '../../components/PageLoader'
+import ToolbarSegmentControl from '../../components/toolbar/ToolbarSegmentControl'
 import { useSpeedRecordsPage } from './useSpeedRecordsPage'
 import SpeedTableTab from './SpeedTableTab'
 import CoursingTableTab from './CoursingTableTab'
@@ -7,28 +8,24 @@ import CoursingTableTab from './CoursingTableTab'
 const SpeedStatsView = lazy(() => import('./stats/SpeedStatsView'))
 const CoursingStatsView = lazy(() => import('./stats/CoursingStatsView'))
 
+const DONINO_SEGMENTS = [
+  { id: 'table', label: 'Замер' },
+  { id: 'coursing', label: 'Бега 350 м' },
+]
+
 function SpeedRecords() {
   const page = useSpeedRecordsPage()
-
-  const tabClass = (tab: string) =>
-    `flex-1 min-w-[100px] px-4 py-3 rounded-lg font-semibold transition-all duration-300 ${
-      page.activeTab === tab
-        ? 'bg-white dark:bg-charcoal-600 text-charcoal-700 dark:text-charcoal-200 shadow-sm'
-        : 'text-charcoal-600 dark:text-charcoal-300 hover:text-charcoal-700 dark:hover:text-charcoal-200'
-    }`
 
   return (
     <div className="space-y-6">
       <div className="bg-cream-50/90 dark:bg-charcoal-800/90 backdrop-blur-lg rounded-2xl shadow-xl border border-cream-300 dark:border-charcoal-700 p-4 md:p-8">
-        <div className="flex gap-2 md:gap-4 mb-4 md:mb-6 bg-old-money-100 dark:bg-charcoal-700 p-1 rounded-xl flex-wrap">
-          <button onClick={() => page.handleTabChange('table')} className={tabClass('table')}>
-            <span className="md:hidden">Скорость</span>
-            <span className="hidden md:inline">Замер скорости</span>
-          </button>
-          <button onClick={() => page.handleTabChange('coursing')} className={tabClass('coursing')}>
-            <span className="md:hidden">Бега</span>
-            <span className="hidden md:inline">Бега борзых</span>
-          </button>
+        <div className="mb-4 overflow-x-auto scrollbar-hide">
+          <ToolbarSegmentControl
+            segments={DONINO_SEGMENTS}
+            value={page.activeTab}
+            onChange={page.handleTabChange}
+            ariaLabel="Разделы рекордов Донино"
+          />
         </div>
 
         {page.activeTab === 'table' && page.view === 'table' && (

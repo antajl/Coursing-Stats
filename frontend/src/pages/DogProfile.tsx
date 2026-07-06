@@ -8,6 +8,7 @@ import { toPng } from 'html-to-image'
 import SkeletonLoader from '../components/SkeletonLoader'
 import ErrorState from '../components/ErrorState'
 import OwnerCrownName from '../components/OwnerCrownName'
+import MedalTally from '../components/MedalTally'
 import { SEO } from '../components/SEO'
 
 export default function DogProfile() {
@@ -15,6 +16,12 @@ export default function DogProfile() {
   const navigate = useNavigate()
   const location = useLocation()
   const [exporting, setExporting] = useState(false)
+  const [showAllSpeedHistory, setShowAllSpeedHistory] = useState(false)
+  const [showAllCoursingDoninoHistory, setShowAllCoursingDoninoHistory] = useState(false)
+  const [showAllCoursingEvents, setShowAllCoursingEvents] = useState(false)
+  const [showAllRacingEvents, setShowAllRacingEvents] = useState(false)
+
+  const HISTORY_DEFAULT = 5
 
   const exportRef = useRef(null)
 
@@ -62,7 +69,7 @@ export default function DogProfile() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-cream-50 dark:bg-charcoal-900 p-6">
+      <div className="p-4 md:p-6">
         <div className="max-w-4xl mx-auto">
           <SkeletonLoader variant="card" count={3} />
         </div>
@@ -72,7 +79,7 @@ export default function DogProfile() {
 
   if (!dog) {
     return (
-      <div className="min-h-screen bg-cream-50 dark:bg-charcoal-900 p-6">
+      <div className="p-4 md:p-6">
         <div className="max-w-4xl mx-auto">
           <ErrorState
             title="Собака не найдена"
@@ -212,6 +219,18 @@ export default function DogProfile() {
   const description = `Статистика собаки ${dogName} (${dogBreed}) по курсингу и бегам борзых. Результаты, достижения, титулы: ${dogTitles}. Количество стартов: ${coursing.total_starts + racing.total_starts}.`
   const keywords = `${dogName}, ${dogBreed}, курсинг, бега борзых, статистика, ${dogTitles}, РКФ, соревнования, результаты`
 
+  const visibleSpeedHistory = showAllSpeedHistory
+    ? (speedStats?.history ?? [])
+    : (speedStats?.history ?? []).slice(0, HISTORY_DEFAULT)
+  const visibleCoursingDoninoHistory = showAllCoursingDoninoHistory
+    ? (coursingStats?.history ?? [])
+    : (coursingStats?.history ?? []).slice(0, HISTORY_DEFAULT)
+  const visibleCoursingEvents = showAllCoursingEvents
+    ? coursingEvents
+    : coursingEvents.slice(0, HISTORY_DEFAULT)
+  const visibleRacingEvents = showAllRacingEvents
+    ? racingEvents
+    : racingEvents.slice(0, HISTORY_DEFAULT)
 
   return (
     <>
@@ -220,7 +239,7 @@ export default function DogProfile() {
         description={description}
         keywords={keywords}
       />
-      <div className="min-h-screen bg-cream-50 dark:bg-charcoal-900 p-4 md:p-6">
+      <div className="p-4 md:p-6">
       <div className="max-w-4xl mx-auto">
         <div ref={exportRef}>
 
@@ -343,7 +362,7 @@ export default function DogProfile() {
 
         {/* Статистика и история по дисциплинам */}
         {(showCoursingColumn || showRacingColumn) && (
-          <div className={`grid gap-4 md:gap-6 mb-6 ${showCoursingColumn && showRacingColumn ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1'}`}>
+          <div className={`mb-6 grid gap-4 md:gap-6 ${showCoursingColumn && showRacingColumn ? 'grid-cols-1 items-start md:grid-cols-2' : 'grid-cols-1'}`}>
             {showCoursingColumn && (
               <div className="flex flex-col gap-4">
                 {hasCoursingData && (
@@ -404,18 +423,14 @@ export default function DogProfile() {
                     </div>
 
                     {hasCourseMedals && (
-                      <div className="flex gap-3">
-                        {[
-                          { emoji: '🥇', count: coursing.gold, label: 'Золото' },
-                          { emoji: '🥈', count: coursing.silver, label: 'Серебро' },
-                          { emoji: '🥉', count: coursing.bronze, label: 'Бронза' },
-                        ].map(({ emoji, count, label }) => (
-                          <div key={emoji} className="flex-1 bg-forest-50 dark:bg-charcoal-700 rounded-xl p-3 text-center border border-forest-200 dark:border-forest-600">
-                            <div className="text-xl mb-1">{emoji}</div>
-                            <div className="text-xl font-bold text-charcoal-800 dark:text-charcoal-100">{count || 0}</div>
-                            <div className="text-xs text-old-money-600 dark:text-old-money-400 font-medium">{label}</div>
-                          </div>
-                        ))}
+                      <div className="flex justify-center py-1">
+                        <MedalTally
+                          gold={coursing.gold}
+                          silver={coursing.silver}
+                          bronze={coursing.bronze}
+                          size="xl"
+                          showZero
+                        />
                       </div>
                     )}
                   </div>
@@ -425,44 +440,68 @@ export default function DogProfile() {
                   <div className="rounded-2xl border-2 border-forest-200 dark:border-forest-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
                     <h3 className="text-base md:text-lg font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 mb-4">История</h3>
                     <div className="space-y-3">
-                      {coursingEvents.map((event, idx) => (
-                        <div key={idx} className="bg-forest-50 dark:bg-charcoal-700 rounded-xl p-3 hover:bg-forest-100 dark:hover:bg-charcoal-600 transition-colors border border-forest-200 dark:border-forest-600">
-                          <div className="flex items-center justify-between gap-2">
-                            {event.competition_kind ? (
-                              <div className="text-xs font-bold text-forest-700 dark:text-forest-400 uppercase tracking-wide">{event.competition_kind}</div>
-                            ) : (
-                              <span />
-                            )}
-                            <div className="text-xs font-medium px-2 py-0.5 rounded-full bg-white dark:bg-charcoal-800 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-charcoal-600 shrink-0">
-                              {event.event_type === 'coursing' ? 'Курсинг' : 'БЗМП'}
-                            </div>
-                          </div>
-                          <div className="mt-1 flex items-center justify-between gap-3">
-                            <div className="font-semibold text-charcoal-800 dark:text-charcoal-100">
-                              {event.date_start ? (() => {
-                                const [year, month, day] = event.date_start.split('-')
-                                return `${day}.${month}.${year}`
-                              })() : '—'}
-                            </div>
-                            <div className="flex items-baseline gap-2 shrink-0 text-right">
-                              {event.placement && (
-                                <span className="text-base font-bold text-forest-700 dark:text-forest-400">#{event.placement}</span>
+                      {visibleCoursingEvents.map((event, idx) => {
+                        const cardClass =
+                          'block rounded-xl border border-forest-200 bg-forest-50 p-3 transition-colors hover:bg-forest-100 dark:border-forest-600 dark:bg-charcoal-700 dark:hover:bg-charcoal-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-camel-500'
+                        const cardBody = (
+                          <>
+                            <div className="flex items-center justify-between gap-2">
+                              {event.competition_kind ? (
+                                <div className="text-xs font-bold uppercase tracking-wide text-forest-700 dark:text-forest-400">
+                                  {event.competition_kind}
+                                </div>
+                              ) : (
+                                <span />
                               )}
-                              {event.total_score && (
-                                <span className="text-sm text-old-money-600 dark:text-old-money-400 font-medium">{event.total_score} баллов</span>
-                              )}
+                              <div className="shrink-0 rounded-full border border-gray-200 bg-white px-2 py-0.5 text-xs font-medium text-gray-600 dark:border-charcoal-600 dark:bg-charcoal-800 dark:text-gray-300">
+                                {event.event_type === 'coursing' ? 'Курсинг' : 'БЗМП'}
+                              </div>
                             </div>
+                            <div className="mt-1 flex items-center justify-between gap-3">
+                              <div className="font-semibold text-charcoal-800 dark:text-charcoal-100">
+                                {event.date_start
+                                  ? (() => {
+                                      const [year, month, day] = event.date_start.split('-')
+                                      return `${day}.${month}.${year}`
+                                    })()
+                                  : '—'}
+                              </div>
+                              <div className="flex shrink-0 items-baseline gap-2 text-right">
+                                {event.placement && (
+                                  <span className="text-base font-bold text-forest-700 dark:text-forest-400">
+                                    #{event.placement}
+                                  </span>
+                                )}
+                                {event.total_score && (
+                                  <span className="text-sm font-medium text-old-money-600 dark:text-old-money-400">
+                                    {event.total_score} баллов
+                                  </span>
+                                )}
+                              </div>
+                            </div>
+                          </>
+                        )
+                        return event.event_id ? (
+                          <Link key={idx} to={`/event/${event.event_id}`} className={`${cardClass} text-inherit no-underline`}>
+                            {cardBody}
+                          </Link>
+                        ) : (
+                          <div key={idx} className={cardClass}>
+                            {cardBody}
                           </div>
-                          {event.results_url && (
-                            <Link
-                              to={`/event/${event.event_id}`}
-                              className="mt-2 inline-block text-sm text-forest-700 dark:text-forest-400 transition-colors hover:text-forest-800 dark:hover:text-forest-300 font-medium"
-                            >
-                              Результаты →
-                            </Link>
-                          )}
-                        </div>
-                      ))}
+                        )
+                      })}
+                      {coursingEvents.length > HISTORY_DEFAULT && (
+                        <button
+                          type="button"
+                          onClick={() => setShowAllCoursingEvents((v) => !v)}
+                          className="text-sm font-semibold text-camel-700 dark:text-camel-400"
+                        >
+                          {showAllCoursingEvents
+                            ? 'Свернуть'
+                            : `Показать все ${coursingEvents.length} стартов`}
+                        </button>
+                      )}
                     </div>
                   </div>
                 )}
@@ -531,18 +570,14 @@ export default function DogProfile() {
                     </div>
 
                     {hasRacingMedals && (
-                      <div className="flex gap-3">
-                        {[
-                          { emoji: '🥇', count: racing.gold, label: 'Золото' },
-                          { emoji: '🥈', count: racing.silver, label: 'Серебро' },
-                          { emoji: '🥉', count: racing.bronze, label: 'Бронза' },
-                        ].map(({ emoji, count, label }) => (
-                          <div key={emoji} className="flex-1 bg-warm-blue-50 dark:bg-charcoal-700 rounded-xl p-3 text-center border border-warm-blue-200 dark:border-warm-blue-600">
-                            <div className="text-xl mb-1">{emoji}</div>
-                            <div className="text-xl font-bold text-charcoal-800 dark:text-charcoal-100">{count || 0}</div>
-                            <div className="text-xs text-old-money-600 dark:text-old-money-400 font-medium">{label}</div>
-                          </div>
-                        ))}
+                      <div className="flex justify-center py-1">
+                        <MedalTally
+                          gold={racing.gold}
+                          silver={racing.silver}
+                          bronze={racing.bronze}
+                          size="xl"
+                          showZero
+                        />
                       </div>
                     )}
                   </div>
@@ -552,39 +587,61 @@ export default function DogProfile() {
                   <div className="rounded-2xl border-2 border-warm-blue-200 dark:border-warm-blue-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
                     <h3 className="text-base md:text-lg font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 mb-4">История</h3>
                     <div className="space-y-3">
-                      {racingEvents.map((event, idx) => (
-                        <div key={idx} className="bg-warm-blue-50 dark:bg-charcoal-700 rounded-xl p-3 hover:bg-warm-blue-100 dark:hover:bg-charcoal-600 transition-colors border border-warm-blue-200 dark:border-warm-blue-600">
-                          <div className="flex items-center justify-between gap-2">
-                            {event.competition_kind ? (
-                              <div className="text-xs font-bold text-warm-blue-700 dark:text-warm-blue-400 uppercase tracking-wide">{event.competition_kind}</div>
-                            ) : (
-                              <span />
-                            )}
-                            <div className="text-xs font-medium px-2 py-0.5 rounded-full bg-white dark:bg-charcoal-800 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-charcoal-600 shrink-0">
-                              Бега борзых
+                      {visibleRacingEvents.map((event, idx) => {
+                        const cardClass =
+                          'block rounded-xl border border-warm-blue-200 bg-warm-blue-50 p-3 transition-colors hover:bg-warm-blue-100 dark:border-warm-blue-600 dark:bg-charcoal-700 dark:hover:bg-charcoal-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-camel-500'
+                        const cardBody = (
+                          <>
+                            <div className="flex items-center justify-between gap-2">
+                              {event.competition_kind ? (
+                                <div className="text-xs font-bold uppercase tracking-wide text-warm-blue-700 dark:text-warm-blue-400">
+                                  {event.competition_kind}
+                                </div>
+                              ) : (
+                                <span />
+                              )}
+                              <div className="shrink-0 rounded-full border border-gray-200 bg-white px-2 py-0.5 text-xs font-medium text-gray-600 dark:border-charcoal-600 dark:bg-charcoal-800 dark:text-gray-300">
+                                Бега борзых
+                              </div>
                             </div>
-                          </div>
-                          <div className="mt-1 flex items-center justify-between gap-3">
-                            <div className="font-semibold text-charcoal-800 dark:text-charcoal-100">
-                              {event.date_start ? (() => {
-                                const [year, month, day] = event.date_start.split('-')
-                                return `${day}.${month}.${year}`
-                              })() : '—'}
+                            <div className="mt-1 flex items-center justify-between gap-3">
+                              <div className="font-semibold text-charcoal-800 dark:text-charcoal-100">
+                                {event.date_start
+                                  ? (() => {
+                                      const [year, month, day] = event.date_start.split('-')
+                                      return `${day}.${month}.${year}`
+                                    })()
+                                  : '—'}
+                              </div>
+                              {event.placement && (
+                                <span className="shrink-0 text-base font-bold text-warm-blue-700 dark:text-warm-blue-400">
+                                  #{event.placement}
+                                </span>
+                              )}
                             </div>
-                            {event.placement && (
-                              <span className="text-base font-bold text-warm-blue-700 dark:text-warm-blue-400 shrink-0">#{event.placement}</span>
-                            )}
+                          </>
+                        )
+                        return event.event_id ? (
+                          <Link key={idx} to={`/event/${event.event_id}`} className={`${cardClass} text-inherit no-underline`}>
+                            {cardBody}
+                          </Link>
+                        ) : (
+                          <div key={idx} className={cardClass}>
+                            {cardBody}
                           </div>
-                          {event.results_url && (
-                            <Link
-                              to={`/event/${event.event_id}`}
-                              className="mt-2 inline-block text-sm text-warm-blue-700 dark:text-warm-blue-400 transition-colors hover:text-warm-blue-800 dark:hover:text-warm-blue-300 font-medium"
-                            >
-                              Результаты →
-                            </Link>
-                          )}
-                        </div>
-                      ))}
+                        )
+                      })}
+                      {racingEvents.length > HISTORY_DEFAULT && (
+                        <button
+                          type="button"
+                          onClick={() => setShowAllRacingEvents((v) => !v)}
+                          className="text-sm font-semibold text-camel-700 dark:text-camel-400"
+                        >
+                          {showAllRacingEvents
+                            ? 'Свернуть'
+                            : `Показать все ${racingEvents.length} стартов`}
+                        </button>
+                      )}
                     </div>
                   </div>
                 )}
@@ -595,7 +652,7 @@ export default function DogProfile() {
 
         {/* Статистика Донино и Бега борзых */}
         {(hasSpeedRecords || hasCoursingRecords) && (
-          <div className={`grid gap-4 md:gap-6 mb-6 ${hasSpeedRecords && hasCoursingRecords ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1'}`}>
+          <div className={`mb-6 grid gap-4 md:gap-6 ${hasSpeedRecords && hasCoursingRecords ? 'grid-cols-1 items-start md:grid-cols-2' : 'grid-cols-1'}`}>
             {hasSpeedRecords && (
               <div className="flex flex-col gap-4">
                 <div className="rounded-2xl border-2 border-warm-blue-200 dark:border-warm-blue-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
@@ -651,7 +708,7 @@ export default function DogProfile() {
                   <div className="rounded-2xl border-2 border-warm-blue-200 dark:border-warm-blue-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
                     <h3 className="text-base md:text-lg font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 mb-4">История</h3>
                     <div className="space-y-2">
-                      {speedStats.history.map((record, idx) => (
+                      {visibleSpeedHistory.map((record, idx) => (
                         <div key={idx} className="flex items-center gap-4">
                           <div className="w-24 text-sm text-charcoal-700 dark:text-charcoal-300 text-right shrink-0">{formatRecordDate(record.date)}</div>
                           <div className="flex-1 bg-cream-200 dark:bg-charcoal-600 rounded-full h-6 overflow-hidden relative">
@@ -666,6 +723,17 @@ export default function DogProfile() {
                         </div>
                       ))}
                     </div>
+                    {speedStats.history.length > HISTORY_DEFAULT && (
+                      <button
+                        type="button"
+                        onClick={() => setShowAllSpeedHistory((v) => !v)}
+                        className="mt-3 text-sm font-semibold text-camel-700 dark:text-camel-400"
+                      >
+                        {showAllSpeedHistory
+                          ? 'Свернуть'
+                          : `Показать все ${speedStats.history.length} замеров`}
+                      </button>
+                    )}
                   </div>
                 )}
               </div>
@@ -712,7 +780,7 @@ export default function DogProfile() {
                   <div className="rounded-2xl border-2 border-forest-200 dark:border-forest-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
                     <h3 className="text-base md:text-lg font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 mb-4">История</h3>
                     <div className="space-y-2">
-                      {coursingStats.history.map((record, idx) => (
+                      {visibleCoursingDoninoHistory.map((record, idx) => (
                         <div key={idx} className="flex items-center gap-4">
                           <div className="w-24 text-sm text-charcoal-700 dark:text-charcoal-300 text-right shrink-0">{formatRecordDate(record.date)}</div>
                           <div className="flex-1 bg-cream-200 dark:bg-charcoal-600 rounded-full h-6 overflow-hidden relative">
@@ -727,6 +795,17 @@ export default function DogProfile() {
                         </div>
                       ))}
                     </div>
+                    {coursingStats.history.length > HISTORY_DEFAULT && (
+                      <button
+                        type="button"
+                        onClick={() => setShowAllCoursingDoninoHistory((v) => !v)}
+                        className="mt-3 text-sm font-semibold text-camel-700 dark:text-camel-400"
+                      >
+                        {showAllCoursingDoninoHistory
+                          ? 'Свернуть'
+                          : `Показать все ${coursingStats.history.length} забегов`}
+                      </button>
+                    )}
                   </div>
                 )}
               </div>

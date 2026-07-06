@@ -6,9 +6,10 @@ interface StatCounterProps {
 }
 
 export default function StatCounter({ value, className = '' }: StatCounterProps) {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(value)
   const [isVisible, setIsVisible] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
+  const hasSetInitial = useRef(false)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -32,13 +33,20 @@ export default function StatCounter({ value, className = '' }: StatCounterProps)
 
     if (value <= 0) {
       setCount(0)
+      hasSetInitial.current = true
+      return
+    }
+
+    if (!hasSetInitial.current) {
+      setCount(value)
+      hasSetInitial.current = true
       return
     }
 
     const duration = 1500
     const steps = 60
     const stepValue = value / steps
-    let current = 0
+    let current = count
 
     const timer = setInterval(() => {
       current += stepValue
@@ -55,7 +63,7 @@ export default function StatCounter({ value, className = '' }: StatCounterProps)
 
   return (
     <div ref={ref} className={className}>
-      {count.toLocaleString('ru-RU', { useGrouping: false })}
+      {count.toLocaleString('ru-RU')}
     </div>
   )
 }

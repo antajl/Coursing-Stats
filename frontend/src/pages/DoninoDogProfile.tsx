@@ -6,6 +6,7 @@ import ErrorState from '../components/ErrorState'
 import DogSexIcon from '../components/DogSexIcon'
 import OwnerCrownName from '../components/OwnerCrownName'
 import { formatRecordDate, dedupeByRecordDate, expandCoursingTimeline } from '../lib/recordDates'
+import { SEO } from '../components/SEO'
 import { api } from '../services/api'
 
 export default function DoninoDogProfile() {
@@ -94,7 +95,23 @@ export default function DoninoDogProfile() {
         )
   const dogSex = data.sex || data.speedRecords?.find((r) => r.sex)?.sex || ''
 
+  const seoTitle = `${data.name} — ${data.breed}`
+  const seoFacts: string[] = []
+  if (hasSpeedRecords) {
+    seoFacts.push(`лучшая скорость ${data.speedStats.bestSpeed.toFixed(1)} км/ч`)
+  }
+  if (hasCoursingRecords) {
+    seoFacts.push(`лучшее время 350 м: ${data.coursingStats.bestTime.toFixed(2)} с`)
+  }
+  const seoDescription =
+    seoFacts.length > 0
+      ? `Рекорды Донино: ${data.name} (${data.breed}). ${seoFacts.join('; ')}.`
+      : `Рекорды Донино: ${data.name} (${data.breed}). Замер скорости и бега борзых 350 м.`
+  const seoKeywords = `${data.name}, ${data.breed}, рекорды Донино, замер скорости, бега борзых, 350 м, курсинг`
+
   return (
+    <>
+      <SEO title={seoTitle} description={seoDescription} keywords={seoKeywords} />
     <div className="p-4 md:p-6">
       <div className="max-w-4xl mx-auto">
         <div ref={exportRef}>
@@ -260,5 +277,6 @@ export default function DoninoDogProfile() {
         </div>
       </div>
     </div>
+    </>
   )
 }

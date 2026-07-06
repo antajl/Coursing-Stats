@@ -84,7 +84,7 @@ export default function Judges() {
   }
 
   return (
-    <div className={isEmbedded ? 'px-4 pb-4 pt-0' : 'p-4'}>
+    <div className={isEmbedded ? '' : 'p-4'}>
       <div className="mb-6">
         <PageToolbar
           activeFilterChips={activeFilterChips}
