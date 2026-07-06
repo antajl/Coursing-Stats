@@ -1,5 +1,6 @@
 import { Hono } from 'hono';
 import { cors } from 'hono/cors';
+import { edgeCache } from './lib/edge-cache';
 import { handleCompetitions } from './routes/events';
 import { handleDogs } from './routes/dogs';
 import { handleTop } from './routes/top';
@@ -18,10 +19,15 @@ const app = new Hono<{ Bindings: Env }>();
 // CORS middleware
 app.use('*', cors());
 
-// Set UTF-8 encoding for all JSON responses
+// Edge cache для GET — снижает нагрузку на D1 (free tier)
+app.use('*', edgeCache);
+
+// UTF-8 для JSON API (не трогаем sitemap.xml и прочие не-JSON ответы)
 app.use('*', async (c, next) => {
   await next();
-  c.header('Content-Type', 'application/json; charset=utf-8');
+  if (c.req.path.startsWith('/api/') && !c.res.headers.get('Content-Type')) {
+    c.header('Content-Type', 'application/json; charset=utf-8');
+  }
 });
 
 // Register all Hono routes

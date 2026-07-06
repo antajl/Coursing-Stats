@@ -130,7 +130,7 @@ POST /api/admin/recreate-views
 - `/event/:id` — `Events/EventResults/` (модуль: racing vs scoring details)
 - `/dog/:id` — `DogProfile.tsx`
 - `/judges`, `/judges/:judgeId` — судьи
-- `/speed-records` — рекорды Донино (отдельный источник, не procoursing.ru)
+- `/speed-records` — рекорды Донино: две колонки (Замер | Бега 350 м), `?view=table|stats`, `?groupBy=breed|sex|year`
 - `/donino-dog/:name/:breed` — профиль собаки из рекордов Донино
 
 **UI:** кастомные компоненты в `frontend/src/components/ui/` (Button, Card, Badge) — **не shadcn/ui**. Тема: светлая по умолчанию, class-based dark mode (`ThemeToggle` → `localStorage.theme`).

@@ -2,6 +2,7 @@ import {
   ABBREVIATIONS,
   CH_RUSSIA_VARIANTS,
   COURSING_CERTIFICATES,
+  COURSING_CACL_QUALIFICATION,
   COURSING_REQUIREMENTS,
   CUMULATIVE_TITLES,
   EVENT_TITLES,
@@ -9,7 +10,7 @@ import {
   OFFICIAL_SOURCES,
   STATUS_EVENT_RULES,
 } from '../constants'
-import { ExternalHref, InfoCallout, RefTag, SectionCard, TitleBadge } from './GuideUi'
+import { AbbrTag, ExternalHref, InfoCallout, RefTag, SectionCard, TitleBadge } from './GuideUi'
 
 export default function TitlesTab() {
   return (
@@ -70,27 +71,20 @@ export default function TitlesTab() {
       </SectionCard>
 
       <SectionCard title="Сертификаты: бега и курсинг борзых">
-        <div className="overflow-x-auto">
-          <table className="w-full min-w-[320px] text-left text-sm">
-            <thead>
-              <tr className="border-b border-old-money-200 dark:border-charcoal-600">
-                <th className="pb-2 pr-3 font-semibold">Уровень</th>
-                <th className="pb-2 pr-3 font-semibold">Междунар.</th>
-                <th className="pb-2 pr-3 font-semibold">Национал.</th>
-                <th className="pb-2 font-semibold">Породный</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-old-money-100 dark:divide-charcoal-700">
-              {COURSING_CERTIFICATES.map((row) => (
-                <tr key={row.level}>
-                  <td className="py-2.5 pr-3 text-old-money-600 dark:text-old-money-400">{row.level}</td>
-                  <td className="py-2.5 pr-3">{row.intl !== '—' ? <TitleBadge title={row.intl} /> : '—'}</td>
-                  <td className="py-2.5 pr-3">{row.national !== '—' ? <TitleBadge title={row.national} /> : '—'}</td>
-                  <td className="py-2.5">{row.breed !== '—' ? <TitleBadge title={row.breed} /> : '—'}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <div className="grid gap-3 sm:grid-cols-3">
+          {COURSING_CERTIFICATES.map((item) => (
+            <div
+              key={item.code}
+              className="rounded-lg border border-old-money-200 bg-old-money-50/60 px-4 py-3 dark:border-charcoal-600 dark:bg-charcoal-800/50"
+            >
+              <div className="text-[10px] font-semibold uppercase tracking-wide text-old-money-500 dark:text-old-money-400">
+                {item.level}
+              </div>
+              <div className="mt-2">
+                <TitleBadge title={item.code} />
+              </div>
+            </div>
+          ))}
         </div>
         <RefTag>Положение о титулах, п. 1.4; правила курсинга, п. 4.2–4.3</RefTag>
       </SectionCard>
@@ -103,7 +97,7 @@ export default function TitlesTab() {
               className="rounded-lg border border-old-money-200 bg-old-money-50/60 p-3 dark:border-charcoal-600 dark:bg-charcoal-800/50"
             >
               <div className="flex flex-wrap items-center gap-2">
-                <span className="font-mono text-xs font-bold text-camel-700 dark:text-camel-400">{item.abbr}</span>
+                <AbbrTag abbr={item.abbr} title={item.title} />
                 <TitleBadge title={item.title} />
               </div>
               <p className="mt-2 text-sm">{item.condition}</p>
@@ -113,8 +107,8 @@ export default function TitlesTab() {
         </div>
         <InfoCallout>
           На квалификационных состязаниях (п. 1.2.7 правил) титулы <strong>не присваиваются</strong>. За 1 место на
-          ЧР / Кубке / ЧРКФ сертификат CACL не выдаётся — победитель получает титул ранга; CACL чаще идёт со 2-го
-          места при выполнении норм (положение о титулах, п. 3.4.2).
+          ЧР / Кубке / ЧРКФ сертификат CACL не выдаётся — победитель получает титул ранга. CACL идёт со 2-го места при{' '}
+          {COURSING_CACL_QUALIFICATION} (положение о титулах, п. 3.4.2; правила курсинга, п. 4.3.4).
         </InfoCallout>
       </SectionCard>
 
@@ -136,7 +130,12 @@ export default function TitlesTab() {
                   <td className="py-2.5 pr-3">
                     <TitleBadge title={row.first} />
                   </td>
-                  <td className="py-2.5 pr-3 text-xs">{row.second}</td>
+                  <td className="py-2.5 pr-3 text-xs">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <TitleBadge title={row.secondBadge} />
+                    </div>
+                    <p className="mt-1">{row.secondDetail}</p>
+                  </td>
                   <td className="py-2.5 text-xs">{row.breed}</td>
                 </tr>
               ))}
@@ -153,7 +152,7 @@ export default function TitlesTab() {
               key={item.abbr}
               className="rounded-lg border border-old-money-200 p-3 dark:border-charcoal-600"
             >
-              <span className="font-mono text-xs font-bold text-camel-700 dark:text-camel-400">{item.abbr}</span>
+              <AbbrTag abbr={item.abbr} title={item.title} />
               <p className="mt-1 font-medium text-charcoal-800 dark:text-charcoal-200">{item.title}</p>
               <p className="mt-1 text-xs">{item.summary}</p>
               <RefTag>{item.ref}</RefTag>
@@ -205,8 +204,8 @@ export default function TitlesTab() {
             <tbody className="divide-y divide-old-money-100 dark:divide-charcoal-700">
               {ABBREVIATIONS.map((row) => (
                 <tr key={row.abbr}>
-                  <td className="py-2 pr-4 font-mono text-xs font-bold text-camel-700 dark:text-camel-400 whitespace-nowrap">
-                    {row.abbr}
+                  <td className="py-2 pr-4 whitespace-nowrap">
+                    <AbbrTag abbr={row.abbr} title={row.full} />
                   </td>
                   <td className="py-2 text-charcoal-700 dark:text-charcoal-300">{row.full}</td>
                 </tr>
@@ -217,18 +216,6 @@ export default function TitlesTab() {
         <RefTag>Положение о титулах, разд. IV; презентация Донино</RefTag>
       </SectionCard>
 
-      <SectionCard title="На Coursing Stats">
-        <p>Колонка «титул» из протокола procoursing.ru показывается бейджами в карточке результата и в профиле собаки.</p>
-        <div className="flex flex-wrap gap-2 pt-1">
-          <TitleBadge title="Чемпион РКФ" />
-          <TitleBadge title="CACL" />
-          <TitleBadge title="RegCACL" />
-        </div>
-        <InfoCallout>
-          <strong>RegCACL</strong> — строка из протоколов procoursing.ru; в правилах РКФ 2020 отдельного термина нет.
-          По смыслу — региональный аналог CACL.
-        </InfoCallout>
-      </SectionCard>
     </div>
   )
 }

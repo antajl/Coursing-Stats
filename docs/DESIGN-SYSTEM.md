@@ -247,6 +247,20 @@ font-mono tabular-nums
 
 Панель фильтров: `rounded-xl border bg-cream-100/70 p-3` (`TOOLBAR_PANEL` в `lib/toolbar.ts`). Сегменты — `ToolbarSegmentControl` (pill внутри bordered group).
 
+**Где:** рейтинг, судьи, календарь (`Events/index.tsx`), рекорды Донино (`DoninoPageToolbar`).
+
+### Рекорды Донино — статистика
+
+Классы в `frontend/src/index.css`:
+
+| Класс | Назначение |
+|-------|------------|
+| `.donino-stats-column-header` | Шапка колонки: заголовок + число собак + строка метрик |
+| `.donino-group-card` | Карточка группы (порода / пол / год) в статистике |
+| `.donino-stats-chart` | Свёрнутый аккордеон гистограммы (`<details>`) |
+
+Список записей: `.donino-list-row`, `.donino-column-plaque` — режим «Записи».
+
 ---
 
 ## Правила dark mode

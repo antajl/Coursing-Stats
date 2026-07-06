@@ -62,7 +62,7 @@
   - Календарь и заливка D1
 - **[SPEED-RECORDS.md](SPEED-RECORDS.md)** — Рекорды Донино (два Google Sheet: скорость + курсинг 350 м)
   - Два источника: `speed_records` и `coursing_records`
-  - Статистика 350 м в `Stats.tsx` — только coursing
+  - UI: две колонки на одной странице; статистика — `DoninoStatsColumns`
   - Data processing pipeline
   - Профили `/donino-dog` и история бегов 350 м
   - Troubleshooting guide
@@ -84,7 +84,7 @@
   - Code splitting
   - Deployment и инфраструктура
   - Frontend map — навигация для ИИ-агентов
-  - PageToolbar, главная (`Home.tsx`), профили Донино
+  - PageToolbar, главная (`Home.tsx`), профили Донино, **рекорды Донино (двухколоночный hub)**
   - Отладка парсеров с фикстурами
 
 ### Дизайн

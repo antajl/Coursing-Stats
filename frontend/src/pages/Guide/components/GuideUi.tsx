@@ -1,6 +1,36 @@
 import type { ReactNode } from 'react'
 import { ExternalLink } from 'lucide-react'
+import HoverTooltip from '../../../components/ui/HoverTooltip'
 import { titleBadgeClass } from '../../../lib/qualificationTitles'
+import { ABBREVIATIONS } from '../constants'
+
+const ABBR_LOOKUP = Object.fromEntries(ABBREVIATIONS.map((row) => [row.abbr, row.full]))
+
+export function abbrExpansion(abbr: string): string | undefined {
+  return ABBR_LOOKUP[abbr]
+}
+
+const ABBR_CLASS = 'font-mono text-xs font-bold text-camel-700 dark:text-camel-400'
+
+export function AbbrTag({
+  abbr,
+  title,
+  className = '',
+}: {
+  abbr: string
+  title?: string
+  className?: string
+}) {
+  const expansion = title ?? abbrExpansion(abbr) ?? abbr
+
+  return (
+    <HoverTooltip label={expansion} placement="top">
+      <span className={`${ABBR_CLASS} ${className}`.trim()} tabIndex={0}>
+        {abbr}
+      </span>
+    </HoverTooltip>
+  )
+}
 
 export function SectionCard({ title, children }: { title: string; children: ReactNode }) {
   return (

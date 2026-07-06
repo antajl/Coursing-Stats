@@ -82,7 +82,7 @@ frontend/
 │   │   │   ├── index.tsx      # Calendar
 │   │   │   └── EventResults/  # index, EventHeader, details/{Racing,Scoring}Detail
 │   │   ├── Judges/
-│   │   └── SpeedRecords/      # карточный список, Stats, exportExcel
+│   │   └── SpeedRecords/      # Donino hub: две колонки, записи + статистика
 │   ├── services/api.ts
 │   └── lib/
 │       ├── query-client.tsx, icons.ts
@@ -277,8 +277,8 @@ In-process Worker tests planned: **vitest@4** + **@cloudflare/vitest-pool-worker
 
 ### Статус (2026-07): в процессе, основное сделано
 
-- ✅ `AppRoutes.tsx` — все страницы через `React.lazy()` + `Suspense`
-- ✅ `Competitions.tsx` — вложенный lazy для Events / TopDogs / Judges
+- ✅ `AppRoutes.tsx` — все top-level страницы через `React.lazy()` + `Suspense`
+- ✅ `Competitions.tsx` — вкладки Events / TopDogs / Judges (статический import, mount по `activeTab`)
 - ✅ `Nav.tsx` вынесен из `App.tsx`
 - ✅ `vite.config.ts` — `manualChunks` (vendor-react, vendor-router, vendor-query, vendor-xlsx, …)
 Подробнее о маршрутах: см. раздел «Frontend map — навигация для ИИ-агентов» в этом файле
@@ -299,7 +299,9 @@ In-process Worker tests planned: **vitest@4** + **@cloudflare/vitest-pool-worker
 | `RecordsListToolbar` | Тулбар списка рекордов (скорость / coursing) |
 | `MultiFilterDropdown` | Мультивыбор в dropdown; обёртка `w-fit shrink-0` (не растягивать строку) |
 
-**Где используется:** `TopDogsFilters`, `Judges/index`, `SpeedTableTab`, `CoursingTableTab`, `SpeedStatsView`, `CoursingStatsView`, главная (сегменты топа).
+**Где используется:** `TopDogsFilters`, `Judges/index`, `Events/index.tsx` (календарь), `DoninoPageToolbar` (рекорды Донино), главная (сегменты топа).
+
+Легаси (не в основном flow): `SpeedTableTab`, `CoursingTableTab`, `SpeedStatsView`, `CoursingStatsView`.
 
 **`FilterSelect`:** prop `className` — только на обёртке `<div>`; у `<select>` — `w-full min-w-0`. Для породы/года задавать фиксированную ширину обёртки (`w-[10.5rem]`, `w-[6.75rem]`), иначе нативный select растягивается по самой длинной опции.
 
@@ -345,18 +347,19 @@ In-process Worker tests planned: **vitest@4** + **@cloudflare/vitest-pool-worker
 
 **Страницы:**
 
-**Events/index.jsx:**
-- Карточки вместо таблицы на мобильных
-- Фильтр по годам вынесен из "больше фильтров"
-- Поиск и фильтры на разных строках на мобильных
-- Легенда дисциплин скрыта на мобильных
+**Events/index.tsx:**
+- `PageToolbar` — поиск, год, дисциплина, вид соревнования; пресеты; легенда
+- Список `EventListRow` (не таблица); группировка по месяцам
+- URL sync через `setSearchParams(prev => …)` — сохраняет `?tab=` и прочие параметры hub
 
-**Judges/index.tsx:**
-- Карточки с именем судьи и статистикой в grid 2x2 на мобильных
+**TopDogs/index.tsx:**
+- Тулбар виден при первой загрузке; скелетон только под списком
 
 **SpeedRecords/index.tsx:**
-- Вкладки «Замер скорости» / «Бега борзых»; внутри — **Таблица | Статистика** (`?view=stats`)
-- Список записей — карточки на всю строку (`SpeedRecordCard`, `CoursingRecordCard`), не HTML-таблица; sparkline истории скорости в центре карточки
+- Переключатель **Записи | Статистика** над тулбаром (`ViewToggle`)
+- Две колонки: Замер | Бега 350 м (на всех ширинах — стек на мобиле)
+- Записи: `DoninoListRecordRow`, infinite scroll; пол — только левая колонка
+- Статистика: общая группировка, карточки групп, свёрнутые графики
 
 **DogStatsTable.tsx (TopDogs):**
 - Карточки с кличкой и статистикой в зависимости от типа (места/очки/скорость)
@@ -367,14 +370,10 @@ In-process Worker tests planned: **vitest@4** + **@cloudflare/vitest-pool-worker
 - Стрелочка "←" скрыта на мобильных
 
 **Competitions.tsx:**
-- Табы с flex-wrap и min-width
-- Вкладки вертикальные с сокращёнными названиями на мобильных
+- `ToolbarSegmentControl` — Календарь | Рейтинг | Судьи
+- Вкладки монтируются только при выборе (`activeTab === 'ranking' && …`); статический import (без nested lazy)
 
-**SpeedRecords/Stats.jsx:**
-- Фильтры с flex-wrap
-- Grid 2x2 на мобильных
-
-**Judges/JudgeDetail.jsx:**
+**Judges/index.tsx:**
 - Адалтивные фильтры и таблицы с overflow-x-auto
 - Статистика по породам и критериям: карточки на мобильных, таблицы на десктопе
 - Стрелочки "←" скрыты на мобильных
@@ -672,19 +671,22 @@ npx wrangler d1 execute pc-db --command="EXPLAIN QUERY PLAN SELECT * FROM events
 
 ### Competitions = tab hub
 
-`Competitions.tsx` — контейнер вкладок для procoursing.ru:
+`Competitions.tsx` — контейнер вкладок для procoursing.ru (статический import дочерних страниц):
 
 | Вкладка (`?tab=`) | Компонент | Содержимое |
 |-------------------|-----------|------------|
-| `calendar` (default) | `Events/index.tsx` | Календарь событий |
+| `calendar` (default) | `Events/index.tsx` | Календарь: `PageToolbar`, `EventListRow` |
 | `ranking` | `TopDogs/index.tsx` | Рейтинг: места / очки / скорость |
 | `judges` | `Judges/index.tsx` | Судьи |
+
+`Events/index.tsx` при синхронизации фильтров в URL **не затирает** `tab` и параметры других вкладок (`setSearchParams` с функцией-updater).
 
 ### SpeedRecords ≠ competitions
 
 **Рекорды Донино** — отдельная вертикаль:
-- Данные: Google Sheets → D1 `speed_records`, не procoursing.ru
+- Данные: Google Sheets → D1 `speed_records` + `coursing_records`, не procoursing.ru
 - Маршрут: `/speed-records` (в Nav — «Рекорды Донино»)
+- Layout: **одна страница, две колонки**; `?view=stats` для статистики; `?groupBy=breed|sex|year`
 - Профили: `/donino-dog/:name/:breed` (кириллические клички из таблицы)
 - Не путать с `/dog/:id` (собаки из `dogs` + `results` соревнований)
 
@@ -733,22 +735,37 @@ frontend/src/pages/TopDogs/
 
 ```
 frontend/src/pages/SpeedRecords/
-  index.tsx              — вкладки (shell)
-  useSpeedRecordsPage.ts — state, memos, handlers
-  SpeedTableTab.tsx      — замер скорости: фильтры, сортировка, список карточек
-  SpeedRecordCard.tsx    — карточка замера (клик → профиль Донино, sparkline, бейджи)
-  CoursingTableTab.tsx   — бега 350 м: список карточек
-  CoursingRecordCard.tsx — карточка бега
-  RecordSortBar.tsx      — кнопки сортировки (замер скорости)
-  exportExcel.ts         — lazy xlsx export
-  stats/                 — SpeedStatsView, CoursingStatsView, …
+  index.tsx                 — shell: DoninoPageToolbar + Records | Stats
+  useSpeedRecordsPage.ts    — state, URL (?view, ?groupBy), API (limit 1000)
+  DoninoPageToolbar.tsx     — ViewToggle + PageToolbar + подсказки фильтров
+  DoninoRecordsColumns.tsx  — две колонки списка, сортировка, infinite scroll
+  DoninoListRecordRow.tsx   — строка списка (sparkline, скрин)
+  DoninoStatsColumns.tsx    — статистика: группировка, графики, карточки групп
+  DoninoColumnPlaque.tsx    — плашка колонки (записи)
+  stats/
+    DoninoStatsSummary.tsx  — шапка колонки в статистике (плашка + метрики)
+    DoninoGroupCard.tsx     — карточка группы (порода/пол/год)
+    DoninoGroupCardList.tsx
+    doninoStatsUtils.ts     — фильтры, группировка, дедуп
+    statsUi.tsx             — DistributionChart, CollapsibleDistributionChart
+    DogSearchCard.tsx
+  hooks/useInfiniteScroll.ts
+  exportExcel.ts            — Excel: листы «Замер» + «Бега 350 м»
+  toolbarFilters.ts
+  RecordSortBar.tsx
+
+Легаси (не в основном flow): SpeedTableTab, CoursingTableTab, SpeedRecordCard,
+  CoursingRecordCard, stats/SpeedStatsView, stats/CoursingStatsView, …
 ```
 
-**Общие компоненты:** `frontend/src/components/SpeedHistorySparkline.tsx`, `SpeedStatusBadge.tsx`, `DogSexIcon.tsx`
+**Общие компоненты:** `SpeedHistorySparkline.tsx`, `SpeedStatusBadge.tsx`, `DogSexIcon.tsx`
 
 **Даты и статистика 350 м:** `frontend/src/lib/recordDates.ts`
+- `formatDoninoSpeedKmh` — км/ч без лишнего `.0`
 - `dedupeByRecordDate` — один пункт на календарную дату (графики замера)
 - `expandCoursingTimeline` — для профиля: все забеги 350 м (текущая строка + `history` JSON)
+
+**CSS (статистика):** `index.css` — `.donino-stats-column-header`, `.donino-group-card`, `.donino-stats-chart`
 
 ---
 

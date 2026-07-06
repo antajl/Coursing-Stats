@@ -20,7 +20,7 @@ export default defineConfig({
           if (id.includes('node_modules/@tanstack/react-query')) {
             return 'vendor-query';
           }
-          if (id.includes('node_modules/xlsx')) {
+          if (id.includes('node_modules/xlsx-js-style') || id.includes('node_modules/xlsx')) {
             return 'vendor-xlsx';
           }
           if (id.includes('node_modules/html-to-image')) {

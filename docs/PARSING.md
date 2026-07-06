@@ -590,7 +590,7 @@
 
 Одна собака (`name` + `breed`) может иметь записи в **обеих** таблицах; статистика по дисциплинам на сайте остаётся раздельной.
 
-Статистика на сайте (`SpeedRecords/stats/`): **Замер → Статистика** — только `speed_records`; **Бега → Статистика** — только `coursing_records`.
+Статистика на сайте (`DoninoStatsColumns`, `stats/doninoStatsUtils.ts`): **Замер** — только `speed_records`; **Бега 350 м** — только `coursing_records`. Общая группировка `?groupBy=breed|sex|year`.
 
 ### Google Sheets — замер скорости
 

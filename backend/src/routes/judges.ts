@@ -1,38 +1,10 @@
 import { Hono } from 'hono';
+import { parseJudgeNames } from '../lib/judge-names';
 
 type Env = {
   DB: any;
   ADMIN_API_TOKEN: string;
 };
-
-// Функция для парсинга фамилий судей из строки
-function parseJudgeNames(judgesString: string) {
-  if (!judgesString) return [];
-  
-  // Форматы:
-  // "Лукина Д.М., Гродинская Т.Л."
-  // "Главный судья - Лукина Д.М., судья - Гродинская Т.Л."
-  // "Карелина Н"
-  
-  // Удаляем префиксы "Главный судья - ", "судья - "
-  let cleaned = judgesString
-    .replace(/Главный\s+судья\s*[:\s-]+\s*/gi, '')
-    .replace(/судья\s*[:\s-]+\s*/gi, '')
-    .replace(/^\d+\s*[-–]\s*/gm, '')
-    .trim();
-  
-  // Разделяем по запятым
-  const names = cleaned.split(',')
-    .map(n => n.trim().replace(/^\d+\s*[-–]\s*/, ''))
-    .filter(n => n);
-  
-  // Если не получилось разделить, пробуем другие разделители
-  if (names.length === 1 && cleaned.includes(' и ')) {
-    return cleaned.split(' и ').map(n => n.trim()).filter(n => n);
-  }
-  
-  return names;
-}
 
 export function handleJudges(app: Hono<{ Bindings: Env }>) {
   // GET /api/judges

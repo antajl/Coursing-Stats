@@ -646,7 +646,7 @@ GET /api/dogs/1/competitions
 **Параметры:**
 - `breed` (опционально) — фильтр по породе
 - `sex` (опционально) — фильтр по полу ('С' или 'К')
-- `limit` (опционально) — лимит записей (по умолчанию **1000**; клиенты: список «Замер скорости» — 1000; `stats/SpeedStatsView.tsx` — 10000)
+- `limit` (опционально) — лимит записей (по умолчанию **1000**; фронтенд `/speed-records`: `useSpeedRecordsPage.ts` — 1000)
 - `offset` (опционально) — смещение
 - `search` (опционально) — поиск по кличке
 - `year` (опционально) — фильтр по году
@@ -711,7 +711,7 @@ GET /api/coursing-records?breed=Уиппет&limit=100
 }
 ```
 
-**Использование во фронтенде:** вкладка «Бега борзых» (`CoursingTableTab.tsx`); статистика 350 м в `stats/CoursingStatsView.tsx`. Скорость для отображения: `1260 / time_seconds` км/ч.
+**Использование во фронтенде:** `/speed-records` — колонка «Бега 350 м» (`DoninoRecordsColumns`, `DoninoStatsColumns`). Скорость для отображения: `1260 / time_seconds` км/ч.
 
 ### Judges
 

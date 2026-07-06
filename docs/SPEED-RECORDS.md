@@ -15,7 +15,7 @@
 | **Google Sheet** | [1NTiY3HXZ…](https://docs.google.com/spreadsheets/d/1NTiY3HXZIkXE8xTeXZESgMKaZsEXunmcWhTfhhkoKyE) |
 | **D1** | `speed_records` |
 | **API** | `GET /api/speed-records` |
-| **UI** | Вкладка «Замер скорости» → переключатель **Таблица | Статистика** (`?view=stats`): км/ч, гистограмма, срезы |
+| **UI** | Переключатель **Записи | Статистика** (`?view=stats`) на `/speed-records`; колонка «Замер» в двухколоночном layout |
 
 ### 2. Бега борзых 350 м
 
@@ -28,7 +28,7 @@
 | **Google Sheet** | [1hpdA8vl…](https://docs.google.com/spreadsheets/d/1hpdA8vlIfeECgpnPvuk5xfezPsdUh1EXULjeATAF9dw) |
 | **D1** | `coursing_records` |
 | **API** | `GET /api/coursing-records` |
-| **UI** | Вкладка «Бега борзых» → переключатель **Таблица | Статистика** (`?view=stats`): время (сек), срезы |
+| **UI** | Та же страница, колонка «Бега 350 м»: время (сек), карточки групп в статистике |
 
 **Скорость км/ч в статистике 350 м** — только **вспомогательный пересчёт** для сравнения: `1260 / время_сек`. В таблице курсинга её нет как исходного поля.
 
@@ -170,50 +170,60 @@ npx tsx backend/scripts/speed/fetch-coursing-records.ts --remote
 
 ### 8. Отображение во фронтенде
 
-| Компонент | limit | Источник | Назначение |
-|-----------|------:|----------|------------|
-| `useSpeedRecordsPage.ts` | 1000 | `speed_records` + `coursing_records` | Вкладки «Замер скорости» / «Бега борзых», **список карточек** |
-| `stats/SpeedStatsView.tsx` | **10000** | `speed_records` | Статистика замера скорости |
-| `stats/CoursingStatsView.tsx` | **10000** | `coursing_records` | Статистика бегов 350 м |
-| `useDogSpeedRecords` | 1000 | `speed_records` | Профиль собаки `/dog/:id` |
+**Маршрут:** `/speed-records` — одна страница, **две колонки** (Замер | Бега 350 м). Отдельных вкладок дисциплин нет.
 
-**Статистика (вариант A, с 2026-07):** отдельной вкладки «Статистика Донино» нет. Внутри каждой дисциплины — **Таблица | Статистика** (`?view=stats`).
+**Переключатель режима** (над тулбаром): **Записи | Статистика** — URL `?view=stats` (по умолчанию записи).
 
-| Режим | Данные | Содержимое |
-|-------|--------|------------|
-| Замер → Статистика | `speed_records` | карточки, гистограмма км/ч, топ-10, срезы (группировка порода/пол/год) |
-| Бега → Статистика | `coursing_records` | карточки, гистограмма сек, топ-10, срезы по времени |
+| Компонент | limit API | Назначение |
+|-----------|----------:|------------|
+| `useSpeedRecordsPage.ts` | 1000 | Общий state, фильтры, сортировка по колонкам |
+| `DoninoRecordsColumns.tsx` | — | Список: `DoninoListRecordRow`, infinite scroll (30/страница) |
+| `DoninoStatsColumns.tsx` | — | Статистика: сводка, свёрнутые графики, карточки групп |
+| `useDogSpeedRecords` | 1000 | Профиль собаки `/dog/:id` |
 
-- Поиск точной клички показывает **два блока** (350 м и замер скорости), если собака есть в обоих листах.
-- **Группировка:** один селект «Группировать по», не три вкладки.
-- **Среднее** — только при ≥3 зачётах в группе («мало данных» иначе).
+**Тулбар** (`DoninoPageToolbar.tsx`): `PageToolbar` + `ViewToggle`; фильтры год / порода / пол; диапазоны км/ч и сек (в статистике); Excel — оба листа (`exportDoninoToExcel`).
+
+**Фильтры по колонкам (важно):**
+- **Пол** — только колонка «Замер» (подпись под тулбаром).
+- **км/ч** — только «Замер»; **сек** — только «Бега 350 м» (в режиме статистики).
+
+#### Режим «Записи» (`view=table` или без параметра)
+
+| Элемент | Поведение |
+|---------|-----------|
+| Плашки колонок | `DoninoColumnPlaque` — заголовок + число собак |
+| Сортировка | Отдельная `RecordSortBar` в каждой колонке |
+| Строка | `DoninoListRecordRow` — кличка, метрика справа, sparkline по центру (если есть `history`), ссылка «Скрин» |
+| Прокрутка | `hooks/useInfiniteScroll.ts` — IntersectionObserver, сброс при смене фильтров |
+| Профиль | Клик по кличке → `/donino-dog/:name/:breed` |
+
+Легаси-карточки `SpeedRecordCard.tsx` / `CoursingRecordCard.tsx` и вкладки `SpeedTableTab` / `CoursingTableTab` в основном flow **не используются** (остались в репозитории).
+
+#### Режим «Статистика» (`?view=stats`)
+
+| Элемент | Поведение |
+|---------|-----------|
+| Группировка | Одна панель **Порода | Пол | Год** над обеими колонками — URL `?groupBy=` (legacy: `speedGroupBy` / `coursingGroupBy`) |
+| Шапка колонки | `DoninoStatsSummary` — плашка + строка метрик в одном блоке (замеров/зачётов, среднее, лучшее) |
+| Графики | `CollapsibleDistributionChart` в `stats/statsUi.tsx` — свёрнуты по умолчанию |
+| Срезы | `DoninoGroupCard` + `DoninoGroupCardList` — карточки групп вместо таблицы; раскрытие синхронно в обеих колонках |
+| Поиск точной клички | `DogSearchCard` — сводка по обеим дисциплинам |
+
+**Утилиты:** `stats/doninoStatsUtils.ts` — фильтры, группировка, дедуп; `formatDoninoSpeedKmh` в `recordDates.ts` (64 без `.0`).
+
+**Среднее** в группе — только при ≥3 зачётах (`MIN_SAMPLES_FOR_AVG`); иначе бейдж «мало данных».
 
 - **Даты**: `frontend/src/lib/recordDates.ts` — Excel serial, `DD.MM.YYYY`, `DD;MM.YYYY`, `YYYY-MM-DD`; хелперы `coursingTimesToStats`, `time350ToSpeedKmh`
 - **Дедуп speed**: `dedupeSpeedRecords` — ключ `name+breed+sex+date+speed`
 - **Дедуп coursing**: `name+breed+time_seconds+date` (нормализованная дата)
 - **История coursing**: из примечания ячейки «Дата» в Google Sheet, не из нескольких строк на собаку
-- **Пол в статистике курсинга**: из `speed_records` по паре `name+breed` (в листе курсинга пола нет)
-- **Фильтры**: год, порода, пол (для курсинга — через маппинг пола), диапазон скорости (применяется к `1260/время` для coursing)
+- **Пол в статистике курсинга**: из `speed_records` по паре `name+breed` (в листе курсинга пола нет) — только для группировки «Пол»
+- **Фильтры статистики**: те же, что в тулбаре страницы; coursing не фильтруется по полу
 
 **Важно:** колонки «Время за 350м» **не** считаются как `1260 / max(км/ч)` из таблицы замеров. Только реальные секунды из [листа курсинга](https://docs.google.com/spreadsheets/d/1hpdA8vlIfeECgpnPvuk5xfezPsdUh1EXULjeATAF9dw).
 
 - **Группировка списка speed**: `name + breed` (одна лучшая запись на собаку)
 - **Графики в профиле**: `dedupeByRecordDate` — один пункт на календарную дату (лучший замер)
-
-#### Список записей (режим «Таблица», с 2026-07)
-
-Вместо HTML-таблицы — **карточка на всю строку** (`SpeedRecordCard`, `CoursingRecordCard`):
-
-| Элемент | Поведение |
-|---------|-----------|
-| Клик по карточке | Профиль `/donino-dog/:name/:breed` |
-| Скорость / время | Справа, pill camel; сортировка — `RecordSortBar` (только замер скорости) |
-| Пол | Иконки ♀/♂ (`DogSexIcon`), не текст |
-| Скриншот | Иконка справа, отдельная ссылка (не ведёт в профиль) |
-| Бейджи `new` / `upd` | На pill скорости: `new` — зелёный, `upd` — синий (`status` = `improved`) |
-| История замеров | `SpeedHistorySparkline` в центре карточки, если в `history` есть прошлые замеры: линия + подписи км/ч, заливка, при 2 точках — бейдж `+N` |
-
-Поле `history` в API — JSON `[{speed_km_h, date}, …]` (остальные замеры той же собаки). На списке показывается **лучший** замер на собаку; sparkline строится из `history` + текущая запись.
 
 ### Профили `/donino-dog/:name/:breed` (2026-07)
 
@@ -426,10 +436,10 @@ useEffect(() => {
 **Корневая причина:**
 `Stats.tsx` ранее вызывал `getSpeedRecords` с `limit=100`. Таблица использует `useSpeedRecordsPage` с `limit=1000`.
 
-**Решение (актуально с 2026-07-03):**
-- **Статистика:** `api.getSpeedRecords('', '', 10000, '', '')` в `stats/SpeedStatsView.tsx`; `getCoursingRecords` с limit 10000 в `stats/CoursingStatsView.tsx`
-- **Таблица:** `useSpeedRecords('', '', 1000, …)` в `useSpeedRecordsPage.ts`
-- При росте базы >10000 — увеличить limit в stats-вью или добавить отдельный endpoint без ORDER BY speed
+**Решение (актуально с 2026-07-06):**
+- Данные грузятся в `useSpeedRecordsPage.ts` с `limit=1000` для обоих API (достаточно для текущей базы ~200 speed / ~100 coursing).
+- Легаси-вью `stats/SpeedStatsView.tsx` / `CoursingStatsView.tsx` использовали `limit=10000` — в новом UI статистика в `DoninoStatsColumns.tsx` на тех же 1000 записях из page hook.
+- При росте базы >1000 — увеличить limit в `useSpeedRecordsPage.ts` или добавить отдельный stats-endpoint.
 
 **Проверка:**
 ```bash
@@ -547,7 +557,7 @@ npx wrangler d1 execute pc-db --remote --command="SELECT name, breed, date, COUN
 - **Speed:** `backend/scripts/speed/parse-speed-xlsx.ts`, `sync-speed-records.ts`, `fetch-speed-records.ts`, `speed-sheet-status.ts`
 - **Coursing 350 м:** `backend/scripts/speed/fetch-coursing-records.ts`
 - **Routes:** `backend/src/routes/speed.ts` (`/api/speed-records`, `/api/coursing-records`)
-- **Фронтенд:** `frontend/src/pages/SpeedRecords/` (`SpeedRecordCard.tsx`, `CoursingRecordCard.tsx`, `useSpeedRecordsPage.ts`, `stats/…`)
+- **Фронтенд:** `frontend/src/pages/SpeedRecords/` — актуально: `index.tsx`, `useSpeedRecordsPage.ts`, `DoninoPageToolbar.tsx`, `DoninoRecordsColumns.tsx`, `DoninoStatsColumns.tsx`, `DoninoListRecordRow.tsx`, `stats/doninoStatsUtils.ts`, `exportExcel.ts`. Легаси: `SpeedTableTab.tsx`, `SpeedRecordCard.tsx`, `stats/SpeedStatsView.tsx`, …
 - **UI-компоненты:** `frontend/src/components/SpeedHistorySparkline.tsx`, `SpeedStatusBadge.tsx`, `DogSexIcon.tsx`
 - **Утилиты дат/статистики:** `frontend/src/lib/recordDates.ts`
 - **GitHub Actions:** `.github/workflows/update-speed-records.yml`

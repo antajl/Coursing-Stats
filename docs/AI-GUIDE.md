@@ -173,6 +173,7 @@ docs/DEVELOPMENT.md — разработка
 docs/FUTURE-PLANS.md — планы
 docs/DECISIONS-LOG.md — история решений
 docs/AI-GUIDE.md — этот файл
+docs/cursor-ui-plan-v2.md — план UI-аудита v2 (статус задач)
 ```
 **Tags:** documentation, structure
 **Priority:** Important
@@ -302,11 +303,9 @@ frontend/src/pages/DogProfile.tsx — профиль собаки соревно
 frontend/src/pages/DoninoDogProfile.tsx — профиль Донино (warm-blue / forest), история через expandCoursingTimeline
 frontend/src/pages/Home.tsx — главная: hero-dashboard, топ сезона, рекорды Донино
 frontend/src/pages/Events/EventResults/ — результаты события (index с navigate(-1), EventHeader, PlacementBadge)
-frontend/src/pages/Events/index.tsx — календарь событий
-frontend/src/pages/Judges/JudgeDetail.tsx — детальная страница судьи
-frontend/src/pages/Judges/index.tsx — список судей
-frontend/src/pages/Competitions.tsx — навигация Coursing Stats
-frontend/src/pages/SpeedRecords/ — рекорды Донино: карточный список (SpeedRecordCard, CoursingRecordCard), sparkline истории; Stats limit 10000; список limit 1000
+frontend/src/pages/Competitions.tsx — hub: Календарь / Рейтинг / Судьи (`ToolbarSegmentControl`); вкладки монтируются по выбору (статический import)
+frontend/src/pages/Events/index.tsx — календарь: PageToolbar, EventListRow, URL sync с сохранением `?tab=`
+frontend/src/pages/SpeedRecords/ — Donino hub: DoninoPageToolbar, DoninoRecordsColumns, DoninoStatsColumns; ?view=stats, ?groupBy=
 frontend/src/pages/TopDogs/ — рейтинги собак (index, TopDogsFilters, TopDogsTabs)
 ```
 **Tags:** frontend, pages

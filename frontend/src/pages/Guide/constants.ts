@@ -24,9 +24,9 @@ export const OFFICIAL_SOURCES = [
 
 /** Бега и курсинг борзых — п. 1.4 Положения РКФ, таблица в презентации Донино */
 export const COURSING_CERTIFICATES = [
-  { level: 'Международный', intl: 'CACIL', national: '—', breed: '—' },
-  { level: 'Национальный', intl: '—', national: 'CACL', breed: '—' },
-  { level: 'Породный', intl: '—', national: '—', breed: 'CACLBr' },
+  { level: 'Международный', code: 'CACIL' },
+  { level: 'Национальный', code: 'CACL' },
+  { level: 'Породный', code: 'CACLBr' },
 ] as const
 
 /** Присваиваются на мероприятии (п. 1.2 Положения; п. 4.3.1 Правил курсинга) */
@@ -105,23 +105,30 @@ export const CH_RUSSIA_VARIANTS = [
   '2 × ПКР РК (2 судьи)',
 ] as const
 
+/** Курсинг: п. 4.3.4 правил; для CACL на статусных мероприятиях — п. 3.4.2 положения о титулах */
+export const COURSING_CACL_QUALIFICATION =
+  'не менее ⅔ от максимально возможной суммы баллов за оба забега'
+
 export const STATUS_EVENT_RULES = [
   {
     rank: 'Чемпионат России',
     first: 'ЧР РК',
-    second: 'CACL (при выполнении норм)',
-    breed: 'CACLBr — 1 место в породе',
+    secondBadge: 'CACL',
+    secondDetail: COURSING_CACL_QUALIFICATION,
+    breed: `CACLBr — 1-е в породе; ${COURSING_CACL_QUALIFICATION}`,
   },
   {
     rank: 'Кубок России',
     first: 'ПКР РК',
-    second: 'CACL',
-    breed: 'CACLBr — 1 место в породе',
+    secondBadge: 'CACL',
+    secondDetail: COURSING_CACL_QUALIFICATION,
+    breed: `CACLBr — 1-е в породе; ${COURSING_CACL_QUALIFICATION}`,
   },
   {
     rank: 'Чемпионат РКФ',
     first: 'ЧРКФ РК',
-    second: 'CACL',
+    secondBadge: 'CACL',
+    secondDetail: COURSING_CACL_QUALIFICATION,
     breed: 'Породные сертификаты не присваиваются',
   },
 ] as const

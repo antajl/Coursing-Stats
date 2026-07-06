@@ -25,25 +25,31 @@ cd ..
 
 ## Запуск серверов
 
-### Локальная разработка (использует remote D1)
+### Локальная разработка (локальная D1 — не расходует квоту remote)
 
 ```bash
-# Автоматический запуск обоих серверов
+# Первый раз: скачать копию прод-БД
+npm run sync-from-remote
+
+# Запуск Worker :8787 + Vite :5173
 npm run dev
 ```
 
 Или вручную:
 
 ```bash
-# Терминал 1: Backend (Worker) — remote D1 для актуальных events/judges
-cd backend
-npx wrangler dev --remote --port 8787
-# Запускается на http://127.0.0.1:8787
+# Терминал 1: Backend (Worker) — локальная D1 в .wrangler/
+npx wrangler dev backend/src/worker.ts --port 8787
 
 # Терминал 2: Frontend (Vite)
-cd frontend
-npm run dev
-# Запускается на http://localhost:5173
+cd frontend && npm run dev
+```
+
+**Актуальные прод-данные** (редко, когда нужна свежая remote БД):
+
+```bash
+npm run sync-from-remote   # обновить локальную копию
+npm run dev:remote         # dev с remote D1 (съедает дневную квоту!)
 ```
 
 ### Windows (batch файл)
@@ -169,7 +175,8 @@ npm run test-parser-fixtures
 - ✅ API на Cloudflare Worker (Hono): `/api/competitions`, `/api/dogs`, `/api/top/*`, `/api/judges`, `/api/speed-records`, `/api/coursing-records`
 - ✅ Фронтенд на Cloudflare Pages с полной мобильной адаптацией
 - ✅ Разделы: Главная (hero, топ сезона, рекорды Донино), Соревнования, Судьи, Рекорды Донино, Профиль собаки, Профиль Донино, Результаты события
-- ✅ Единый паттерн тулбара (`PageToolbar`) на рейтинге, судьях, рекордах Донино
+- ✅ Единый паттерн тулбара (`PageToolbar`) на рейтинге, судьях, рекордах Донино, **календаре** (`Events/index.tsx`)
+- ✅ **Рекорды Донино** (`/speed-records`): одна страница, две колонки (Замер | Бега 350 м), переключатель Записи | Статистика; общая группировка в статистике; infinite scroll в списке
 - ✅ Lazy routes + code-splitting (`AppRoutes.tsx`, `vite.config.ts` с `manualChunks`; крупные страницы разбиты на модули)
 - ✅ Календарь событий: единый список `EventListRow`, inline-фильтры, `participants_count` в API
 - ✅ UI polish: матовый `nav-glass`, светлая тема по умолчанию, календарь/рейтинг/Донино/результаты
@@ -188,7 +195,6 @@ npm run test-parser-fixtures
 - 🔄 Модульные парсеры v2 в продакшен-reparse (`reparse-by-year.ts`); v1 `parse-results-*.ts` — legacy/CLI
 - 🔄 In-process Worker-тесты — `api.test.ts` пропущен; планируется vitest@4 + `@cloudflare/vitest-pool-workers`; пока `npm run smoke-api` с dev-сервером
 - 🔄 Тексты hero на главной (eyebrow/заголовок) — при необходимости уточнить формулировки про годы архива vs результаты в БД
-- 🔄 Список «Замер скорости» / «Бега борзых» — карточки (не HTML-таблица), limit=1000; статистика (`?view=stats`) — limit=10000; см. `SPEED-RECORDS.md`
 - 📋 Подробнее: `FUTURE-PLANS.md`
 
 ## Парсеры — важно

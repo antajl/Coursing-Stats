@@ -83,18 +83,6 @@ export default function SiteTab() {
           Некоммерческий агрегатор статистики: результаты соревнований с procoursing.ru (курсинг, БЗМП, бега борзых)
           и рекорды полигона Донино. Проект не связан с ProCoursing и РКФ.
         </p>
-        <p className="text-sm text-old-money-600 dark:text-old-money-400">
-          Сайт делает{' '}
-          <a
-            href="https://github.com/antajl/Coursing-Stats"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-medium text-camel-700 underline decoration-camel-300 underline-offset-2 hover:text-camel-800 dark:text-camel-400 dark:hover:text-camel-300"
-          >
-            antajl
-          </a>
-          . Вопросы, ошибки в данных, идеи — пишите любым удобным способом.
-        </p>
       </SectionCard>
 
       <SectionCard title="Связь с автором">
@@ -103,20 +91,6 @@ export default function SiteTab() {
           <ContactLink label="Telegram" value="@antajl" href="https://t.me/antajl" icon={Send} external />
           <DiscordContact />
         </div>
-      </SectionCard>
-
-      <SectionCard title="Два отдельных рейтинга">
-        <div className="grid gap-3 sm:grid-cols-2">
-          <div className="rounded-lg border-2 border-camel-200 bg-camel-50/60 p-4 dark:border-camel-800 dark:bg-camel-950/20">
-            <div className="font-serif text-lg font-bold text-camel-800 dark:text-camel-300">По местам</div>
-            <p className="mt-1 text-sm">Медали за 1–3 места на финишах</p>
-          </div>
-          <div className="rounded-lg border-2 border-old-money-200 bg-old-money-50/60 p-4 dark:border-charcoal-600 dark:bg-charcoal-800/40">
-            <div className="font-serif text-lg font-bold text-charcoal-800 dark:text-charcoal-200">По очкам</div>
-            <p className="mt-1 text-sm">Сумма итоговых баллов из протоколов</p>
-          </div>
-        </div>
-        <p className="text-xs text-old-money-500">Таблицы независимы и не сводятся в одну формулу.</p>
       </SectionCard>
 
       <SectionCard title="Источники данных">

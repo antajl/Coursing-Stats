@@ -18,20 +18,18 @@ Coursing Stats использует несколько стратегий для
 
 ## Sitemap (Карта сайта)
 
-### Статический sitemap
-- **Файл**: `frontend/public/sitemap.xml`
+### Sitemap index (статика на Pages)
+- **Файл**: `frontend/public/sitemap.xml` — **sitemap index** (не urlset)
 - **URL**: `https://coursing-stats.ru/sitemap.xml`
-- **Содержит**: Основные страницы + ссылка на динамический sitemap
-- **Обновление**: При деплое фронтенда
+- **Указывает на**:
+  - `sitemap-pages.xml` — фиксированные страницы (`/`, `/competitions`, `/top`, …)
+  - `api.coursing-stats.ru/sitemap.xml` — собаки, события, судьи, Донино
 
 ### Динамический sitemap (API)
 - **Файл**: `backend/src/routes/sitemap.ts`
 - **URL**: `https://api.coursing-stats.ru/sitemap.xml`
-- **Содержит**: Все страницы из базы данных
-  - Собаки (~1600)
-  - События (~225)
-  - Судьи
-- **Обновление**: Автоматически при каждом запросе
+- **Содержит**: URL из БД (собаки, события, судьи по имени, профили Донино)
+- **Кэш**: 24 ч на edge (см. `backend/src/lib/edge-cache.ts`) — не бьёт D1 при каждом запросе бота
 
 ### Добавление sitemap в поисковики
 
