@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
+import { Link } from 'react-router-dom'
 import { api } from '../services/api'
 import { parseDogName } from '../lib/dogName'
 
@@ -124,9 +125,16 @@ export default function DogTooltip({ dogId, pointer, onClose }) {
   const formatScore = (v) =>
     v !== undefined && v !== null ? parseFloat(v).toFixed(2) : '—'
 
-  // Ссылка на лучшее соревнование
-  const bestScoreUrl = coursing.best_score_event_url || null
-  const bestSpeedUrl = racing.best_speed_event_url || null
+  const bestScoreEventId = coursing.best_score_event_id || null
+  const bestJudgeScoreEventId = coursing.best_judge_score_event_id || null
+  const avgJudgeScoreEventId = coursing.avg_judge_score_event_id || null
+  const bestSpeedEventId = racing.best_speed_event_id || null
+  const avgSpeedEventId = racing.avg_speed_event_id || null
+
+  const statCellClass = 'bg-white dark:bg-charcoal-800 rounded-lg p-2 shadow-sm text-center'
+  const statLabelClass = 'text-[10px] text-gray-400 dark:text-gray-500 mb-0.5'
+  const linkCellClass = `${statCellClass} block transition-colors hover:bg-camel-50 dark:hover:bg-charcoal-700`
+  const linkCellBlueClass = `${statCellClass} block transition-colors hover:bg-warm-blue-50 dark:hover:bg-charcoal-700`
 
   // ── ПОЛНАЯ карточка (единственный режим) ─────────────────────────────────
   return (
@@ -168,23 +176,21 @@ export default function DogTooltip({ dogId, pointer, onClose }) {
               <div className="bg-gradient-to-br from-old-money-50 dark:from-charcoal-700 to-old-money-100 dark:to-charcoal-600 rounded-xl p-3 border border-old-money-200 dark:border-charcoal-600">
                 <div className="text-xs font-bold text-old-money-700 dark:text-old-money-300 mb-3">Курсинг / БЗМП</div>
 
-                {/* Лучший результат — кликабельный если есть ссылка */}
-                {bestScoreUrl ? (
-                  <a
-                    href={bestScoreUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  className="group mb-3 block rounded-lg border border-camel-200 dark:border-camel-600 bg-white dark:bg-charcoal-800 p-3 text-center shadow-sm transition-colors hover:bg-camel-50 dark:hover:bg-charcoal-700"
-                    title="Открыть протокол соревнования"
+                {/* Лучший результат */}
+                {bestScoreEventId ? (
+                  <Link
+                    to={`/event/${bestScoreEventId}`}
+                    className="group mb-3 block rounded-lg border border-camel-200 dark:border-camel-600 bg-white dark:bg-charcoal-800 p-3 text-center shadow-sm transition-colors hover:bg-camel-50 dark:hover:bg-charcoal-700"
+                    title="Открыть результаты соревнования"
                   >
                     <div className="text-[10px] text-gray-400 dark:text-gray-500 mb-1">Лучший результат</div>
                     <div className="text-2xl font-bold text-camel-700 dark:text-camel-300 leading-none group-hover:text-camel-800 dark:group-hover:text-camel-200">
                       {coursing.best_score ?? '—'}
                     </div>
                     <div className="mt-1 text-[10px] text-camel-700 dark:text-camel-500 opacity-0 transition-opacity group-hover:opacity-100">
-                      открыть протокол →
+                      открыть результаты →
                     </div>
-                  </a>
+                  </Link>
                 ) : (
                   <div className="bg-white dark:bg-charcoal-800 rounded-lg p-3 shadow-sm mb-3 text-center">
                     <div className="text-[10px] text-gray-400 dark:text-gray-500 mb-1">Лучший результат</div>
@@ -194,15 +200,33 @@ export default function DogTooltip({ dogId, pointer, onClose }) {
                   </div>
                 )}
 
-                <div className="grid grid-cols-2 gap-2 mb-3">
-                  <div className="bg-white dark:bg-charcoal-800 rounded-lg p-2 shadow-sm text-center">
-                    <div className="text-[10px] text-gray-400 dark:text-gray-500 mb-0.5">Участия</div>
+                <div className="grid grid-cols-3 gap-2 mb-3">
+                  <div className={statCellClass}>
+                    <div className={statLabelClass}>Участия</div>
                     <div className="text-base font-bold text-old-money-800 dark:text-old-money-300">{coursing.total_starts}</div>
                   </div>
-                  <div className="bg-white dark:bg-charcoal-800 rounded-lg p-2 shadow-sm text-center">
-                    <div className="text-[10px] text-gray-400 dark:text-gray-500 mb-0.5">Средний</div>
-                    <div className="text-base font-bold text-old-money-800 dark:text-old-money-300">{formatScore(coursing.avg_score)}</div>
-                  </div>
+                  {bestJudgeScoreEventId ? (
+                    <Link to={`/event/${bestJudgeScoreEventId}`} className={linkCellClass} title="Открыть результаты соревнования">
+                      <div className={statLabelClass}>Лучшая оценка</div>
+                      <div className="text-base font-bold text-old-money-800 dark:text-old-money-300">{formatScore(coursing.best_judge_score)}</div>
+                    </Link>
+                  ) : (
+                    <div className={statCellClass}>
+                      <div className={statLabelClass}>Лучшая оценка</div>
+                      <div className="text-base font-bold text-old-money-800 dark:text-old-money-300">{formatScore(coursing.best_judge_score)}</div>
+                    </div>
+                  )}
+                  {avgJudgeScoreEventId ? (
+                    <Link to={`/event/${avgJudgeScoreEventId}`} className={linkCellClass} title="Открыть результаты соревнования">
+                      <div className={statLabelClass}>Средняя оценка</div>
+                      <div className="text-base font-bold text-old-money-800 dark:text-old-money-300">{formatScore(coursing.avg_judge_score)}</div>
+                    </Link>
+                  ) : (
+                    <div className={statCellClass}>
+                      <div className={statLabelClass}>Средняя оценка</div>
+                      <div className="text-base font-bold text-old-money-800 dark:text-old-money-300">{formatScore(coursing.avg_judge_score)}</div>
+                    </div>
+                  )}
                 </div>
 
                 {/* Медали */}
@@ -228,25 +252,22 @@ export default function DogTooltip({ dogId, pointer, onClose }) {
               <div className="rounded-xl border border-warm-blue-200 dark:border-warm-blue-600 bg-gradient-to-br from-warm-blue-50 dark:from-charcoal-700 to-warm-blue-100 dark:to-charcoal-600 p-3">
                 <div className="mb-3 text-xs font-bold text-warm-blue-800 dark:text-warm-blue-400">Рейсинг</div>
 
-                {/* Лучшая скорость — кликабельная если есть ссылка */}
-                {bestSpeedUrl ? (
-                  <a
-                    href={bestSpeedUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  className="group mb-3 block rounded-lg border border-warm-blue-200 dark:border-warm-blue-600 bg-white dark:bg-charcoal-800 p-3 text-center shadow-sm transition-colors hover:bg-warm-blue-50 dark:hover:bg-charcoal-700"
-                    title="Открыть протокол соревнования"
+                {/* Лучшая скорость */}
+                {bestSpeedEventId ? (
+                  <Link
+                    to={`/event/${bestSpeedEventId}`}
+                    className="group mb-3 block rounded-lg border border-warm-blue-200 dark:border-warm-blue-600 bg-white dark:bg-charcoal-800 p-3 text-center shadow-sm transition-colors hover:bg-warm-blue-50 dark:hover:bg-charcoal-700"
+                    title="Открыть результаты соревнования"
                   >
                     <div className="text-[10px] text-gray-400 dark:text-gray-500 mb-1">Лучшая скорость</div>
-                    {/* whitespace-nowrap не даёт км/ч переноситься */}
                     <div className="whitespace-nowrap text-2xl font-bold text-warm-blue-800 dark:text-warm-blue-400 leading-none group-hover:text-warm-blue-900 dark:group-hover:text-warm-blue-300">
                       {racing.best_speed ?? '—'}
                       {racing.best_speed && <span className="text-sm font-normal text-gray-400 ml-1">км/ч</span>}
                     </div>
                     <div className="mt-1 text-[10px] text-warm-blue-700 dark:text-warm-blue-500 opacity-0 transition-opacity group-hover:opacity-100">
-                      открыть протокол →
+                      открыть результаты →
                     </div>
-                  </a>
+                  </Link>
                 ) : (
                   <div className="bg-white dark:bg-charcoal-800 rounded-lg p-3 shadow-sm mb-3 text-center">
                     <div className="text-[10px] text-gray-400 dark:text-gray-500 mb-1">Лучшая скорость</div>
@@ -258,20 +279,31 @@ export default function DogTooltip({ dogId, pointer, onClose }) {
                 )}
 
                 <div className="grid grid-cols-2 gap-2">
-                  <div className="bg-white dark:bg-charcoal-800 rounded-lg p-2 shadow-sm text-center">
-                    <div className="text-[10px] text-gray-400 dark:text-gray-500 mb-0.5">Участия</div>
+                  <div className={statCellClass}>
+                    <div className={statLabelClass}>Участия</div>
                     <div className="text-base font-bold text-warm-blue-900 dark:text-warm-blue-400">{racing.total_starts}</div>
                   </div>
-                  <div className="bg-white dark:bg-charcoal-800 rounded-lg p-2 shadow-sm text-center">
-                    <div className="text-[10px] text-gray-400 dark:text-gray-500 mb-0.5">Средняя</div>
-                    {/* whitespace-nowrap предотвращает перенос "км/ч" на вторую строку */}
-                    <div className="whitespace-nowrap text-base font-bold text-warm-blue-900 dark:text-warm-blue-400">
-                      {racing.avg_speed
-                        ? <>{racing.avg_speed}<span className="text-[10px] font-normal text-gray-400 dark:text-gray-500 ml-0.5">км/ч</span></>
-                        : '—'
-                      }
+                  {avgSpeedEventId ? (
+                    <Link to={`/event/${avgSpeedEventId}`} className={linkCellBlueClass} title="Открыть результаты соревнования">
+                      <div className={statLabelClass}>Средняя</div>
+                      <div className="whitespace-nowrap text-base font-bold text-warm-blue-900 dark:text-warm-blue-400">
+                        {racing.avg_speed
+                          ? <>{racing.avg_speed}<span className="text-[10px] font-normal text-gray-400 dark:text-gray-500 ml-0.5">км/ч</span></>
+                          : '—'
+                        }
+                      </div>
+                    </Link>
+                  ) : (
+                    <div className={statCellClass}>
+                      <div className={statLabelClass}>Средняя</div>
+                      <div className="whitespace-nowrap text-base font-bold text-warm-blue-900 dark:text-warm-blue-400">
+                        {racing.avg_speed
+                          ? <>{racing.avg_speed}<span className="text-[10px] font-normal text-gray-400 dark:text-gray-500 ml-0.5">км/ч</span></>
+                          : '—'
+                        }
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </div>
 
                 {/* Медали */}

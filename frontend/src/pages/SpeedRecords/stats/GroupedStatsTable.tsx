@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import DoninoDogNameLink from '../../../components/DoninoDogNameLink'
 import type { GroupedRow } from './doninoStatsUtils'
 import type { DogCoursingSummary, DogSpeedSummary } from './doninoStatsUtils'
 import type { GroupBy } from './constants'
@@ -95,15 +95,12 @@ export default function GroupedStatsTable({
                   </td>
                   <td className="px-3 py-3">
                     {row.recordHolder ? (
-                      <Link
-                        to={`/donino-dog/${encodeURIComponent(row.recordHolder)}/${encodeURIComponent(
-                          groupBy === 'breed' ? row.label : row.dogs[0]?.breed ?? ''
-                        )}`}
-                        className="text-camel-700 dark:text-camel-400 hover:underline font-medium"
+                      <DoninoDogNameLink
+                        name={row.recordHolder}
+                        breed={groupBy === 'breed' ? row.label : row.dogs[0]?.breed ?? ''}
+                        className="font-medium"
                         onClick={(e) => e.stopPropagation()}
-                      >
-                        {row.recordHolder}
-                      </Link>
+                      />
                     ) : (
                       '—'
                     )}
@@ -125,12 +122,7 @@ export default function GroupedStatsTable({
                           {row.dogs.slice(0, 15).map((dog) => (
                             <tr key={`${dog.name}_${dog.breed}`} className="border-t border-cream-200 dark:border-charcoal-600">
                               <td className="py-1.5">
-                                <Link
-                                  to={`/donino-dog/${encodeURIComponent(dog.name)}/${encodeURIComponent(dog.breed)}`}
-                                  className="text-camel-700 dark:text-camel-400 hover:underline"
-                                >
-                                  {dog.name}
-                                </Link>
+                                <DoninoDogNameLink name={dog.name} breed={dog.breed} />
                               </td>
                               <td className="text-center py-1.5">{dog.runCount}</td>
                               <td className="text-center py-1.5 font-semibold text-camel-700 dark:text-camel-400">

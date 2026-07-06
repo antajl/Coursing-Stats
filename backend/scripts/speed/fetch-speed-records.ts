@@ -15,6 +15,7 @@ import { execSync } from "node:child_process";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import * as XLSX from 'xlsx';
+import { statusFromNameCell } from './speed-sheet-status';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "../../..");
@@ -68,7 +69,7 @@ async function fetchXLSX() {
 }
 
 function parseXLSX(buffer) {
-  const workbook = XLSX.read(buffer);
+  const workbook = XLSX.read(buffer, { cellStyles: true });
   const records = [];
   
   // Парсим все листы
@@ -100,24 +101,14 @@ function parseXLSX(buffer) {
         const dateValue = dateCell?.v || '';
         const screenshotUrl = screenshotCell?.v || null;
         
-        // Определяем статус и скорость
-        let status = 'normal';
         let speed_km_h = 0;
-        
         if (typeof speedValue === 'string') {
-          const speedLower = speedValue.toLowerCase();
-          if (speedLower === 'новый результат') {
-            status = 'new';
-            speed_km_h = 0;
-          } else if (speedLower === 'улучшение личного рекорда') {
-            status = 'improved';
-            speed_km_h = 0;
-          } else {
-            speed_km_h = parseFloat(speedValue) || 0;
-          }
+          speed_km_h = parseFloat(speedValue) || 0;
         } else {
           speed_km_h = parseFloat(speedValue) || 0;
         }
+        
+        const status = statusFromNameCell(nameCell, sheetName);
         
         // Конвертация даты → YYYY-MM-DD
         let dateStr = convertExcelDate(dateValue);
@@ -169,6 +160,10 @@ function parseXLSX(buffer) {
     
     console.log(`Sheet "${sheetName}": Headers: ${headers.filter(h => h).join(', ')}`);
     
+    const nameColOffset = headers.findIndex(
+      (h) => h === 'Кличка' || h === 'кличка' || h === 'name'
+    );
+    
     // Читаем данные
     for (let row = headerRowIndex + 1; row <= range.e.r; row++) {
       const record = {};
@@ -187,25 +182,20 @@ function parseXLSX(buffer) {
       
       if (!hasData) continue;
       
-      // Определяем статус и скорость по значению в колонке скорости
+      // Скорость и статус по заливке клички в Google Sheets
       const speedValue = record['Лучшая скорость (км/ч)'] || record['лучшая скорость (км/ч)'] || record['speed_km_h'] || 0;
-      let status = 'normal';
       let speed_km_h = 0;
-      
       if (typeof speedValue === 'string') {
-        const speedLower = speedValue.toLowerCase();
-        if (speedLower === 'новый результат') {
-          status = 'new';
-          speed_km_h = 0;
-        } else if (speedLower === 'улучшение личного рекорда') {
-          status = 'improved';
-          speed_km_h = 0;
-        } else {
-          speed_km_h = parseFloat(speedValue) || 0;
-        }
+        speed_km_h = parseFloat(speedValue) || 0;
       } else {
         speed_km_h = parseFloat(speedValue) || 0;
       }
+
+      const nameCell =
+        nameColOffset >= 0
+          ? worksheet[XLSX.utils.encode_cell({ r: row, c: range.s.c + nameColOffset })]
+          : undefined;
+      const status = statusFromNameCell(nameCell, sheetName);
       
       // Конвертация даты → YYYY-MM-DD
       let dateStr = convertExcelDate(record['Дата'] || record['дата'] || record['date'] || '');

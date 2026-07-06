@@ -20,7 +20,8 @@ interface TopDog {
   silver?: number
   bronze?: number
   best_score?: number
-  avg_score?: number
+  best_judge_score?: number
+  avg_judge_score?: number
   best_speed?: number
   avg_speed?: number
   total_starts?: number
@@ -258,9 +259,9 @@ export default function Home() {
         ] = await Promise.all([
           api.getStats(),
           api.getEvents(),
-          api.getTopPlacement(String(CURRENT_SEASON), '', 0, 3, 0),
-          api.getTopScore(String(CURRENT_SEASON), '', 0, 3, 0),
-          api.getTopSpeed(String(CURRENT_SEASON), '', 0, 3, 0),
+          api.getTopPlacement(String(CURRENT_SEASON), '', 0, 'gold', 3, 0),
+          api.getTopScore(String(CURRENT_SEASON), '', 0, 'best_score', 3, 0),
+          api.getTopSpeed(String(CURRENT_SEASON), '', 0, 'best_speed', 3, 0),
           api.getSpeedRecordsTopByBreed(3),
           api.getCoursingRecordsTopByBreed(3),
         ])
@@ -395,8 +396,8 @@ export default function Home() {
                     <span className="score-unit">баллов</span>
                   </div>
                   <div className="pod-foot">
-                    {dog.avg_score != null && (
-                      <span>средн. {formatScore(dog.avg_score)}</span>
+                    {dog.avg_judge_score != null && (
+                      <span>средн. оценка {formatScore(dog.avg_judge_score)}</span>
                     )}
                     {formatStarts(dog.total_starts) && (
                       <span>{formatStarts(dog.total_starts)}</span>

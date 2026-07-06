@@ -1,4 +1,5 @@
 import { Hono } from 'hono';
+import { appendBreedFilter } from '../lib/breed-mapping';
 import { RACING_EXCLUDED_STATUSES_SQL } from '../lib/racing-status';
 
 type Env = {
@@ -53,7 +54,7 @@ export function handleTop(app: Hono<{ Bindings: Env }>) {
     const sortBy = c.req.query('sortBy') || 'gold';
     const pagination = parsePagination(c);
 
-    const params = [];
+    let params: unknown[] = [];
 
     let query;
     let orderBy = 'gold DESC, silver DESC, bronze DESC';
@@ -66,12 +67,11 @@ export function handleTop(app: Hono<{ Bindings: Env }>) {
     }
 
     if (year) {
-      query = 'SELECT * FROM v_top_by_placement WHERE year = ?';
+      query = 'SELECT *, year AS year_from, year AS year_to FROM v_top_by_placement WHERE year = ?';
       params.push(year);
 
       if (breed) {
-        query += ' AND breed = ?';
-        params.push(breed);
+        ({ query, params } = appendBreedFilter(query, params, breed, 'breed'));
       }
       if (minStarts > 0) {
         query += ' AND total_starts >= ?';
@@ -85,6 +85,8 @@ export function handleTop(app: Hono<{ Bindings: Env }>) {
           d.name_lat,
           d.name_ru,
           d.breed,
+          CAST(strftime('%Y', MIN(e.date_start)) AS INTEGER) AS year_from,
+          CAST(strftime('%Y', MAX(e.date_start)) AS INTEGER) AS year_to,
           SUM(CASE WHEN r.placement = 1 THEN 1 ELSE 0 END) AS gold,
           SUM(CASE WHEN r.placement = 2 THEN 1 ELSE 0 END) AS silver,
           SUM(CASE WHEN r.placement = 3 THEN 1 ELSE 0 END) AS bronze,
@@ -92,12 +94,11 @@ export function handleTop(app: Hono<{ Bindings: Env }>) {
         FROM results r
         JOIN dogs d ON d.id = r.dog_id
         JOIN events e ON r.event_id = e.id
-        WHERE r.status = 'finished'
+        WHERE r.status = 'finished' AND e.event_type IN ('coursing', 'bzmp')
       `;
 
       if (breed) {
-        query += ' AND d.breed = ?';
-        params.push(breed);
+        ({ query, params } = appendBreedFilter(query, params, breed));
       }
 
       query += ' GROUP BY d.id';
@@ -123,7 +124,7 @@ export function handleTop(app: Hono<{ Bindings: Env }>) {
     const sortBy = c.req.query('sortBy') || 'best_score';
     const pagination = parsePagination(c);
 
-    const params = [];
+    let params: unknown[] = [];
 
     let query;
     let orderBy = 'best_score DESC';
@@ -134,12 +135,11 @@ export function handleTop(app: Hono<{ Bindings: Env }>) {
     }
 
     if (year) {
-      query = 'SELECT * FROM v_top_by_score WHERE year = ?';
+      query = 'SELECT *, year AS year_from, year AS year_to FROM v_top_by_score WHERE year = ?';
       params.push(year);
 
       if (breed) {
-        query += ' AND breed = ?';
-        params.push(breed);
+        ({ query, params } = appendBreedFilter(query, params, breed, 'breed'));
       }
       if (minStarts > 0) {
         query += ' AND total_starts >= ?';
@@ -153,6 +153,8 @@ export function handleTop(app: Hono<{ Bindings: Env }>) {
           d.name_lat,
           d.name_ru,
           d.breed,
+          CAST(strftime('%Y', MIN(e.date_start)) AS INTEGER) AS year_from,
+          CAST(strftime('%Y', MAX(e.date_start)) AS INTEGER) AS year_to,
           MAX(r.total_score) AS best_score,
           COUNT(*) AS total_starts,
           MAX(
@@ -174,8 +176,7 @@ export function handleTop(app: Hono<{ Bindings: Env }>) {
       `;
 
       if (breed) {
-        query += ' AND d.breed = ?';
-        params.push(breed);
+        ({ query, params } = appendBreedFilter(query, params, breed));
       }
 
       query += ' GROUP BY d.id';
@@ -201,7 +202,7 @@ export function handleTop(app: Hono<{ Bindings: Env }>) {
     const sortBy = c.req.query('sortBy') || 'best_speed';
     const pagination = parsePagination(c);
 
-    const params = [];
+    let params: unknown[] = [];
 
     let query = `
       SELECT
@@ -209,7 +210,8 @@ export function handleTop(app: Hono<{ Bindings: Env }>) {
         d.name_lat,
         d.name_ru,
         d.breed,
-        MAX(e.year) AS year,
+        CAST(strftime('%Y', MIN(e.date_start)) AS INTEGER) AS year_from,
+        CAST(strftime('%Y', MAX(e.date_start)) AS INTEGER) AS year_to,
         MAX(
           CASE
             WHEN json_extract(r.raw_scores_json, '$.format') = 'racing' THEN (
@@ -244,8 +246,7 @@ export function handleTop(app: Hono<{ Bindings: Env }>) {
     }
 
     if (breed) {
-      query += ' AND d.breed = ?';
-      params.push(breed);
+      ({ query, params } = appendBreedFilter(query, params, breed));
     }
 
     query += ' GROUP BY d.id HAVING best_speed IS NOT NULL';

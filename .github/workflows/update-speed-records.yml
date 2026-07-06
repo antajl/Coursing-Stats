@@ -2,9 +2,15 @@ name: Update Speed Records
 
 on:
   schedule:
-    # Каждый день в 04:00 UTC
-    - cron: "0 4 * * *"
+    # 4 раза в день: 08:00, 14:00, 20:00, 23:30 МСК (UTC+3)
+    - cron: "0 5 * * *"
+    - cron: "0 11 * * *"
+    - cron: "0 17 * * *"
+    - cron: "30 20 * * *"
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   update-speed-records:
@@ -35,5 +41,9 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add data/speed-records.json
-          git diff --staged --quiet || git commit -m "Update speed records cache [skip ci]"
-          git push
+          if git diff --staged --quiet; then
+            echo "No cache changes to commit"
+          else
+            git commit -m "Update speed records cache [skip ci]"
+            git push
+          fi

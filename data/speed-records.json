@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "last_updated": "2026-06-30T11:38:27.083Z",
-  "total_records": 191,
+  "last_updated": "2026-07-06T06:34:41.675Z",
+  "total_records": 213,
   "records": [
     {
       "breed": "Уиппет",
@@ -10,7 +10,7 @@
       "speed_km_h": 64,
       "date": "2026-05-11",
       "screenshot_url": "https://disk.yandex.ru/i/tD7nqeHjSTtLJg",
-      "status": "normal",
+      "status": "improved",
       "history": [
         {
           "speed_km_h": 63,
@@ -20,12 +20,22 @@
     },
     {
       "breed": "Уиппет",
+      "sex": "К",
+      "name": "Дункан",
+      "speed_km_h": 62,
+      "date": "2026-07-05",
+      "screenshot_url": "https://disk.yandex.ru/i/Fai9oNqUhIHY-w",
+      "status": "new",
+      "history": []
+    },
+    {
+      "breed": "Уиппет",
       "sex": "С",
       "name": "Зизи",
       "speed_km_h": 61,
       "date": "2026-05-14",
       "screenshot_url": "https://disk.yandex.ru/i/eedvi966A_DRpQ",
-      "status": "normal",
+      "status": "improved",
       "history": [
         {
           "speed_km_h": 60,
@@ -44,7 +54,7 @@
       "speed_km_h": 60,
       "date": "2026-05-27",
       "screenshot_url": "https://disk.yandex.ru/i/6vm328Pm2Q3ssw",
-      "status": "normal",
+      "status": "improved",
       "history": [
         {
           "speed_km_h": 55,
@@ -69,7 +79,7 @@
       "speed_km_h": 59,
       "date": "2026-06-20",
       "screenshot_url": "https://disk.yandex.ru/i/PmkzSj3f7EPYDw",
-      "status": "normal",
+      "status": "improved",
       "history": [
         {
           "speed_km_h": 57,
@@ -94,15 +104,15 @@
       "speed_km_h": 59,
       "date": "2026-06-28",
       "screenshot_url": "https://disk.yandex.ru/i/pDxXZaK18ChMvA",
-      "status": "normal",
+      "status": "improved",
       "history": [
-        {
-          "speed_km_h": 55,
-          "date": "2026-05-11"
-        },
         {
           "speed_km_h": 56,
           "date": "2026-06-25"
+        },
+        {
+          "speed_km_h": 55,
+          "date": "2026-05-11"
         }
       ]
     },
@@ -143,6 +153,16 @@
     },
     {
       "breed": "Уиппет",
+      "sex": "К",
+      "name": "Купидон",
+      "speed_km_h": 58,
+      "date": "2026-07-05",
+      "screenshot_url": "https://disk.yandex.ru/i/OOYqNEtFoiyfBA",
+      "status": "new",
+      "history": []
+    },
+    {
+      "breed": "Уиппет",
       "sex": "С",
       "name": "Энджи",
       "speed_km_h": 57,
@@ -153,6 +173,25 @@
         {
           "speed_km_h": 57,
           "date": "2025-07-17"
+        }
+      ]
+    },
+    {
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Астрид",
+      "speed_km_h": 57,
+      "date": "2026-07-04",
+      "screenshot_url": "https://disk.yandex.ru/i/EDzrtl2nf4yS_w",
+      "status": "improved",
+      "history": [
+        {
+          "speed_km_h": 54,
+          "date": "2026-07-01"
+        },
+        {
+          "speed_km_h": 53,
+          "date": "2026-06-25"
         }
       ]
     },
@@ -185,20 +224,20 @@
       "status": "normal",
       "history": [
         {
-          "speed_km_h": 56,
-          "date": "2025-11-22"
+          "speed_km_h": 55,
+          "date": "2026-05-11"
         },
         {
-          "speed_km_h": 51,
-          "date": "2025-07-06"
+          "speed_km_h": 56,
+          "date": "2025-11-22"
         },
         {
           "speed_km_h": 53,
           "date": "2025-11-08"
         },
         {
-          "speed_km_h": 55,
-          "date": "2026-05-11"
+          "speed_km_h": 51,
+          "date": "2025-07-06"
         }
       ]
     },
@@ -219,15 +258,15 @@
       "speed_km_h": 56,
       "date": "2026-06-17",
       "screenshot_url": "https://disk.yandex.ru/i/5G258DmN6u0img",
-      "status": "normal",
+      "status": "improved",
       "history": [
         {
           "speed_km_h": 54,
-          "date": "2025-11-29"
+          "date": "2026-04-08"
         },
         {
           "speed_km_h": 54,
-          "date": "2026-04-08"
+          "date": "2025-11-29"
         }
       ]
     },
@@ -242,13 +281,64 @@
       "history": []
     },
     {
+      "breed": "Уиппет",
+      "sex": "К",
+      "name": "Лаггар",
+      "speed_km_h": 56,
+      "date": "2026-07-04",
+      "screenshot_url": "https://disk.yandex.ru/i/7aajyiZQm31ePw",
+      "status": "new",
+      "history": []
+    },
+    {
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Антоша",
+      "speed_km_h": 56,
+      "date": "2026-07-05",
+      "screenshot_url": "https://disk.yandex.ru/d/zJLdVuLNfvEi7Q",
+      "status": "improved",
+      "history": [
+        {
+          "speed_km_h": 55,
+          "date": "2026-05-14"
+        },
+        {
+          "speed_km_h": 54,
+          "date": "2026-04-08"
+        },
+        {
+          "speed_km_h": 54,
+          "date": "2025-08-20"
+        },
+        {
+          "speed_km_h": 53,
+          "date": "2025-08-13"
+        },
+        {
+          "speed_km_h": 52,
+          "date": "2025-07-30"
+        }
+      ]
+    },
+    {
+      "breed": "Уиппет",
+      "sex": "К",
+      "name": "Барон",
+      "speed_km_h": 56,
+      "date": "2026-07-05",
+      "screenshot_url": "https://disk.yandex.ru/i/1uKFDWyInKQm5Q",
+      "status": "new",
+      "history": []
+    },
+    {
       "breed": "Салюки",
       "sex": "С",
       "name": "Тайга",
       "speed_km_h": 55,
       "date": "2026-05-11",
       "screenshot_url": "https://disk.yandex.ru/i/KUNTdVq6Zf128A",
-      "status": "normal",
+      "status": "improved",
       "history": [
         {
           "speed_km_h": 54,
@@ -257,33 +347,6 @@
         {
           "speed_km_h": 51,
           "date": "2025-07-06"
-        }
-      ]
-    },
-    {
-      "breed": "Уиппет",
-      "sex": "С",
-      "name": "Антоша",
-      "speed_km_h": 55,
-      "date": "2026-05-14",
-      "screenshot_url": "https://disk.yandex.ru/i/7pIwJ_njaydDHw",
-      "status": "normal",
-      "history": [
-        {
-          "speed_km_h": 54,
-          "date": "2025-08-20"
-        },
-        {
-          "speed_km_h": 52,
-          "date": "2025-07-30"
-        },
-        {
-          "speed_km_h": 53,
-          "date": "2025-08-13"
-        },
-        {
-          "speed_km_h": 54,
-          "date": "2026-04-08"
         }
       ]
     },
@@ -301,11 +364,15 @@
       "breed": "Уиппет",
       "sex": "С",
       "name": "Винни",
-      "speed_km_h": 54,
-      "date": "2026-05-27",
-      "screenshot_url": "https://disk.yandex.ru/i/e9lN_Q5S51VOUA",
-      "status": "normal",
+      "speed_km_h": 55,
+      "date": "2026-07-05",
+      "screenshot_url": "https://disk.yandex.ru/i/-md8yF9awNb2UA",
+      "status": "improved",
       "history": [
+        {
+          "speed_km_h": 54,
+          "date": "2026-05-27"
+        },
         {
           "speed_km_h": 54,
           "date": "2025-12-07"
@@ -329,13 +396,33 @@
       "speed_km_h": 54,
       "date": "2026-06-28",
       "screenshot_url": "https://disk.yandex.ru/i/s_vllE6M87JMRg",
-      "status": "normal",
+      "status": "improved",
       "history": [
         {
           "speed_km_h": 51,
           "date": "2025-11-08"
         }
       ]
+    },
+    {
+      "breed": "Уиппет",
+      "sex": "К",
+      "name": "Сильвер",
+      "speed_km_h": 54,
+      "date": "2026-07-01",
+      "screenshot_url": "https://disk.yandex.ru/i/xu4ai0H5TnR_7g",
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "Уиппет",
+      "sex": "К",
+      "name": "Дубай",
+      "speed_km_h": 54,
+      "date": "2026-07-04",
+      "screenshot_url": "https://disk.yandex.ru/i/SKfELf0I7BDmtw",
+      "status": "new",
+      "history": []
     },
     {
       "breed": "Малинуа",
@@ -351,16 +438,6 @@
           "date": "2025-08-13"
         }
       ]
-    },
-    {
-      "breed": "Уиппет",
-      "sex": "С",
-      "name": "Астрид",
-      "speed_km_h": 53,
-      "date": "2026-06-25",
-      "screenshot_url": "https://disk.yandex.ru/i/_Yi4iEEHeK4MYg",
-      "status": "normal",
-      "history": []
     },
     {
       "breed": "Уиппет",
@@ -381,6 +458,40 @@
       "screenshot_url": "https://disk.yandex.ru/i/xq3vjKW_oeXdVA",
       "status": "normal",
       "history": []
+    },
+    {
+      "breed": "Метис",
+      "sex": "С",
+      "name": "Латте",
+      "speed_km_h": 53,
+      "date": "2026-07-04",
+      "screenshot_url": "https://disk.yandex.ru/i/xSoOWvcc8mYYZQ",
+      "status": "improved",
+      "history": [
+        {
+          "speed_km_h": 51,
+          "date": "2025-09-24"
+        }
+      ]
+    },
+    {
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Стеша",
+      "speed_km_h": 53,
+      "date": "2026-07-04",
+      "screenshot_url": "https://disk.yandex.ru/i/qFeG2CxwV-3XgQ",
+      "status": "new",
+      "history": [
+        {
+          "speed_km_h": 55,
+          "date": "2025-11-29"
+        },
+        {
+          "speed_km_h": 54,
+          "date": "2025-11-23"
+        }
+      ]
     },
     {
       "breed": "Малинуа",
@@ -448,15 +559,15 @@
       "speed_km_h": 52,
       "date": "2026-06-25",
       "screenshot_url": "https://disk.yandex.ru/i/rYxSt2D1o46LrA",
-      "status": "normal",
+      "status": "improved",
       "history": [
-        {
-          "speed_km_h": 50,
-          "date": "2025-10-25"
-        },
         {
           "speed_km_h": 47,
           "date": "2026-05-11"
+        },
+        {
+          "speed_km_h": 50,
+          "date": "2025-10-25"
         }
       ]
     },
@@ -496,12 +607,32 @@
       "history": []
     },
     {
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Сара",
+      "speed_km_h": 51,
+      "date": "2026-07-05",
+      "screenshot_url": "https://disk.yandex.ru/i/Wk3oscRwVV9tnA",
+      "status": "new",
+      "history": []
+    },
+    {
       "breed": "Салюки",
       "sex": "С",
       "name": "Грейси",
       "speed_km_h": 51,
       "date": "2026-06-17",
       "screenshot_url": "https://disk.yandex.ru/i/D1AIz0xGslYwUg",
+      "status": "improved",
+      "history": []
+    },
+    {
+      "breed": "Русская псовая борзая",
+      "sex": "С",
+      "name": "Паприка",
+      "speed_km_h": 51,
+      "date": "2026-07-01",
+      "screenshot_url": "https://disk.yandex.ru/i/0Qfm5-MwY1Seng",
       "status": "normal",
       "history": []
     },
@@ -512,7 +643,7 @@
       "speed_km_h": 50,
       "date": "2026-06-28",
       "screenshot_url": "https://disk.yandex.ru/i/Lg2MiyjRVI2xqw",
-      "status": "normal",
+      "status": "improved",
       "history": [
         {
           "speed_km_h": 49,
@@ -527,7 +658,7 @@
       "speed_km_h": 50,
       "date": "2026-06-04",
       "screenshot_url": "https://disk.yandex.ru/i/Mr_N3B3U9MquFw",
-      "status": "normal",
+      "status": "improved",
       "history": [
         {
           "speed_km_h": 49,
@@ -546,6 +677,40 @@
       "history": []
     },
     {
+      "breed": "Родезийский риджбек",
+      "sex": "К",
+      "name": "Чу",
+      "speed_km_h": 50,
+      "date": "2026-07-01",
+      "screenshot_url": "https://disk.yandex.ru/i/MkPU7iQYSfbT-g",
+      "status": "normal",
+      "history": [
+        {
+          "speed_km_h": 51,
+          "date": "2025-07-13"
+        }
+      ]
+    },
+    {
+      "breed": "Фараонова собака",
+      "sex": "С",
+      "name": "Гела",
+      "speed_km_h": 50,
+      "date": "2026-07-05",
+      "screenshot_url": "https://disk.yandex.ru/i/wRzCjov4apsWyA",
+      "status": "normal",
+      "history": [
+        {
+          "speed_km_h": 51,
+          "date": "2025-12-07"
+        },
+        {
+          "speed_km_h": 48,
+          "date": "2025-07-23"
+        }
+      ]
+    },
+    {
       "breed": "Левретка",
       "sex": "К",
       "name": "Айвенго",
@@ -561,25 +726,6 @@
         {
           "speed_km_h": 48,
           "date": "2025-09-07"
-        }
-      ]
-    },
-    {
-      "breed": "Фараонова собака",
-      "sex": "С",
-      "name": "Гела",
-      "speed_km_h": 49,
-      "date": "2026-06-07",
-      "screenshot_url": "https://disk.yandex.ru/i/uCELazlb6QSUuQ",
-      "status": "normal",
-      "history": [
-        {
-          "speed_km_h": 51,
-          "date": "2025-12-07"
-        },
-        {
-          "speed_km_h": 48,
-          "date": "2025-07-23"
         }
       ]
     },
@@ -609,7 +755,7 @@
       "speed_km_h": 48,
       "date": "2026-05-11",
       "screenshot_url": "https://disk.yandex.ru/i/ADOCrRTILUiHtw",
-      "status": "normal",
+      "status": "improved",
       "history": [
         {
           "speed_km_h": 45,
@@ -626,6 +772,31 @@
       "screenshot_url": "https://disk.yandex.ru/i/yN9yVVPkwd9OYg",
       "status": "normal",
       "history": []
+    },
+    {
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Дени",
+      "speed_km_h": 48,
+      "date": "2026-07-01",
+      "screenshot_url": "https://disk.yandex.ru/i/CqLiCVvZeLzgOw",
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "АПБТ",
+      "sex": "К",
+      "name": "Эль",
+      "speed_km_h": 47,
+      "date": "2026-07-05",
+      "screenshot_url": "https://disk.yandex.ru/i/QHLRNhpdu5hung",
+      "status": "improved",
+      "history": [
+        {
+          "speed_km_h": 46,
+          "date": "2025-06-29"
+        }
+      ]
     },
     {
       "breed": "Метис",
@@ -732,6 +903,16 @@
       ]
     },
     {
+      "breed": "Левретка",
+      "sex": "К",
+      "name": "Юкос",
+      "speed_km_h": 44,
+      "date": "2026-07-05",
+      "screenshot_url": "https://disk.yandex.ru/i/ilxkUXrn2OoGKw",
+      "status": "new",
+      "history": []
+    },
+    {
       "breed": "Эрдельтерьер",
       "sex": "С",
       "name": "Дейзи",
@@ -740,6 +921,46 @@
       "screenshot_url": "https://disk.yandex.ru/i/LYeuHJ_cPikbIg",
       "status": "normal",
       "history": []
+    },
+    {
+      "breed": "Немецкая овчарка",
+      "sex": "С",
+      "name": "Виски",
+      "speed_km_h": 43,
+      "date": "2026-07-01",
+      "screenshot_url": "https://disk.yandex.ru/i/5mpCW_UL6pDakA",
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "Ирландский терьер",
+      "sex": "С",
+      "name": "Лода",
+      "speed_km_h": 43,
+      "date": "2026-07-01",
+      "screenshot_url": "https://disk.yandex.ru/i/ZZgAUrdeFAgBAw",
+      "status": "normal",
+      "history": [
+        {
+          "speed_km_h": 44,
+          "date": "2025-10-11"
+        }
+      ]
+    },
+    {
+      "breed": "АГТ",
+      "sex": "К",
+      "name": "Пайки",
+      "speed_km_h": 43,
+      "date": "2026-07-04",
+      "screenshot_url": "https://disk.yandex.ru/i/a5JakIFqrY3rOQ",
+      "status": "new",
+      "history": [
+        {
+          "speed_km_h": 44,
+          "date": "2025-09-24"
+        }
+      ]
     },
     {
       "breed": "Левретка",
@@ -765,6 +986,25 @@
       "screenshot_url": "https://disk.yandex.ru/i/UU6n6gCEYJCkEQ",
       "status": "normal",
       "history": []
+    },
+    {
+      "breed": "Немецкая овчарка",
+      "sex": "С",
+      "name": "Вирна",
+      "speed_km_h": 40,
+      "date": "2026-07-05",
+      "screenshot_url": "https://disk.yandex.ru/i/rkKtUDGahCZJQw",
+      "status": "new",
+      "history": [
+        {
+          "speed_km_h": 42,
+          "date": "2025-07-30"
+        },
+        {
+          "speed_km_h": 40,
+          "date": "2025-06-29"
+        }
+      ]
     },
     {
       "breed": "Веймаранер",
@@ -813,7 +1053,7 @@
       "speed_km_h": 63,
       "date": "2025-12-03",
       "screenshot_url": "https://disk.yandex.ru/i/fFO8hgLGKo8kfg",
-      "status": "normal",
+      "status": "improved",
       "history": [
         {
           "speed_km_h": 62,
@@ -828,7 +1068,7 @@
       "speed_km_h": 60,
       "date": "2025-08-20",
       "screenshot_url": "https://disk.yandex.ru/i/T1zY3nLlfA_n-A",
-      "status": "normal",
+      "status": "improved",
       "history": [
         {
           "speed_km_h": 61,
@@ -857,7 +1097,7 @@
       "speed_km_h": 58,
       "date": "2025-07-23",
       "screenshot_url": "https://disk.yandex.ru/i/eyJv9HWTX-Em_A",
-      "status": "normal",
+      "status": "improved",
       "history": [
         {
           "speed_km_h": 56,
@@ -916,7 +1156,7 @@
       "speed_km_h": 57,
       "date": "2025-09-24",
       "screenshot_url": "https://disk.yandex.ru/i/izdRpdV5NMrPeg",
-      "status": "normal",
+      "status": "improved",
       "history": [
         {
           "speed_km_h": 56,
@@ -961,23 +1201,23 @@
       "speed_km_h": 56,
       "date": "2025-11-22",
       "screenshot_url": "https://disk.yandex.ru/i/epyGng5kLTzxDw",
-      "status": "normal",
+      "status": "improved",
       "history": [
         {
           "speed_km_h": 56,
           "date": "2026-05-14"
         },
         {
-          "speed_km_h": 51,
-          "date": "2025-07-06"
+          "speed_km_h": 55,
+          "date": "2026-05-11"
         },
         {
           "speed_km_h": 53,
           "date": "2025-11-08"
         },
         {
-          "speed_km_h": 55,
-          "date": "2026-05-11"
+          "speed_km_h": 51,
+          "date": "2025-07-06"
         }
       ]
     },
@@ -1013,8 +1253,12 @@
       "speed_km_h": 55,
       "date": "2025-11-29",
       "screenshot_url": "https://disk.yandex.ru/i/VtDb9eXPWPqm_w",
-      "status": "normal",
+      "status": "improved",
       "history": [
+        {
+          "speed_km_h": 53,
+          "date": "2026-07-04"
+        },
         {
           "speed_km_h": 54,
           "date": "2025-11-23"
@@ -1052,29 +1296,67 @@
       "history": []
     },
     {
+      "breed": "Малинуа",
+      "sex": "С",
+      "name": "Барса",
+      "speed_km_h": 54,
+      "date": "2025-08-13",
+      "screenshot_url": "https://disk.yandex.ru/i/uQCf66xDKo989A",
+      "status": "normal",
+      "history": [
+        {
+          "speed_km_h": 53,
+          "date": "2026-05-17"
+        }
+      ]
+    },
+    {
       "breed": "Уиппет",
       "sex": "С",
       "name": "Антоша",
       "speed_km_h": 54,
       "date": "2025-08-20",
       "screenshot_url": "https://disk.yandex.ru/i/3StLt1KVotFWOQ",
-      "status": "normal",
+      "status": "improved",
       "history": [
+        {
+          "speed_km_h": 56,
+          "date": "2026-07-05"
+        },
         {
           "speed_km_h": 55,
           "date": "2026-05-14"
         },
         {
-          "speed_km_h": 52,
-          "date": "2025-07-30"
+          "speed_km_h": 54,
+          "date": "2026-04-08"
         },
         {
           "speed_km_h": 53,
           "date": "2025-08-13"
         },
         {
-          "speed_km_h": 54,
-          "date": "2026-04-08"
+          "speed_km_h": 52,
+          "date": "2025-07-30"
+        }
+      ]
+    },
+    {
+      "breed": "Салюки",
+      "sex": "С",
+      "name": "Тайга",
+      "speed_km_h": 54,
+      "date": "2025-11-29",
+      "screenshot_url": "https://disk.yandex.ru/i/-YaDdYuvhp2NWg",
+      "status": "improved",
+      "history": [
+        {
+          "speed_km_h": 55,
+          "date": "2026-05-11"
+        },
+        {
+          "speed_km_h": 51,
+          "date": "2025-07-06"
         }
       ]
     },
@@ -1087,6 +1369,10 @@
       "screenshot_url": "https://disk.yandex.ru/i/G9WYre-TKp7FlQ",
       "status": "normal",
       "history": [
+        {
+          "speed_km_h": 55,
+          "date": "2026-07-05"
+        },
         {
           "speed_km_h": 54,
           "date": "2026-05-27"
@@ -1113,6 +1399,36 @@
       ]
     },
     {
+      "breed": "Поденко ибиценко",
+      "sex": "К",
+      "name": "Йоши",
+      "speed_km_h": 53,
+      "date": "2025-07-06",
+      "screenshot_url": "https://disk.yandex.ru/i/8atxZ1-bqEMzkA",
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "Фараонова собака",
+      "sex": "С",
+      "name": "Юми",
+      "speed_km_h": 53,
+      "date": "2025-07-06",
+      "screenshot_url": "https://disk.yandex.ru/i/6_w8XlrAYxaBsw",
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "Родезийский риджбек",
+      "sex": "С",
+      "name": "Риша",
+      "speed_km_h": 53,
+      "date": "2025-07-13",
+      "screenshot_url": "https://disk.yandex.ru/i/GRPbLTKbaOGqeA",
+      "status": "normal",
+      "history": []
+    },
+    {
       "breed": "Уиппет",
       "sex": "К",
       "name": "Вольта",
@@ -1121,41 +1437,6 @@
       "screenshot_url": "https://disk.yandex.ru/i/1GSag5Mq3JVnRA",
       "status": "normal",
       "history": []
-    },
-    {
-      "breed": "Уиппет",
-      "sex": "С",
-      "name": "Арья",
-      "speed_km_h": 53,
-      "date": "2025-09-07",
-      "screenshot_url": "https://disk.yandex.ru/i/ySUxOtSCx9zXAw",
-      "status": "normal",
-      "history": []
-    },
-    {
-      "breed": "Уиппет",
-      "sex": "С",
-      "name": "Лия",
-      "speed_km_h": 51,
-      "date": "2025-07-13",
-      "screenshot_url": "https://disk.yandex.ru/i/y5KpPw1iceW4gQ",
-      "status": "normal",
-      "history": []
-    },
-    {
-      "breed": "Малинуа",
-      "sex": "С",
-      "name": "Барса",
-      "speed_km_h": 54,
-      "date": "2025-08-13",
-      "screenshot_url": "https://disk.yandex.ru/i/uQCf66xDKo989A",
-      "status": "normal",
-      "history": [
-        {
-          "speed_km_h": 53,
-          "date": "2026-05-17"
-        }
-      ]
     },
     {
       "breed": "Малинуа",
@@ -1173,95 +1454,12 @@
       ]
     },
     {
-      "breed": "Малинуа",
+      "breed": "Уиппет",
       "sex": "С",
-      "name": "Фрейя",
-      "speed_km_h": 47,
-      "date": "2025-07-17",
-      "screenshot_url": "https://disk.yandex.ru/i/s1oUIy2MB493SA",
-      "status": "normal",
-      "history": []
-    },
-    {
-      "breed": "Малинуа",
-      "sex": "С",
-      "name": "Весна",
-      "speed_km_h": 46,
-      "date": "2025-07-06",
-      "screenshot_url": "https://disk.yandex.ru/i/YACiXwd1nOyhUQ",
-      "status": "normal",
-      "history": []
-    },
-    {
-      "breed": "Салюки",
-      "sex": "С",
-      "name": "Тайга",
-      "speed_km_h": 54,
-      "date": "2025-11-29",
-      "screenshot_url": "https://disk.yandex.ru/i/-YaDdYuvhp2NWg",
-      "status": "normal",
-      "history": [
-        {
-          "speed_km_h": 55,
-          "date": "2026-05-11"
-        },
-        {
-          "speed_km_h": 51,
-          "date": "2025-07-06"
-        }
-      ]
-    },
-    {
-      "breed": "Салюки",
-      "sex": "С",
-      "name": "Тундра",
-      "speed_km_h": 50,
-      "date": "2025-10-25",
-      "screenshot_url": "https://disk.yandex.ru/i/WsS8LkDEMSctYw",
-      "status": "normal",
-      "history": [
-        {
-          "speed_km_h": 52,
-          "date": "2026-06-25"
-        },
-        {
-          "speed_km_h": 47,
-          "date": "2026-05-11"
-        }
-      ]
-    },
-    {
-      "breed": "Поденко ибиценко",
-      "sex": "К",
-      "name": "Йоши",
+      "name": "Арья",
       "speed_km_h": 53,
-      "date": "2025-07-06",
-      "screenshot_url": "https://disk.yandex.ru/i/8atxZ1-bqEMzkA",
-      "status": "normal",
-      "history": []
-    },
-    {
-      "breed": "Поденко ибиценко",
-      "sex": "С",
-      "name": "Иви",
-      "speed_km_h": 52,
-      "date": "2025-08-27",
-      "screenshot_url": "https://disk.yandex.ru/i/Pu6gHuzlg3zufg",
-      "status": "normal",
-      "history": [
-        {
-          "speed_km_h": 50,
-          "date": "2025-09-10"
-        }
-      ]
-    },
-    {
-      "breed": "Фараонова собака",
-      "sex": "С",
-      "name": "Юми",
-      "speed_km_h": 53,
-      "date": "2025-07-06",
-      "screenshot_url": "https://disk.yandex.ru/i/6_w8XlrAYxaBsw",
+      "date": "2025-09-07",
+      "screenshot_url": "https://disk.yandex.ru/i/ySUxOtSCx9zXAw",
       "status": "normal",
       "history": []
     },
@@ -1277,6 +1475,21 @@
         {
           "speed_km_h": 52,
           "date": "2026-06-28"
+        }
+      ]
+    },
+    {
+      "breed": "Поденко ибиценко",
+      "sex": "С",
+      "name": "Иви",
+      "speed_km_h": 52,
+      "date": "2025-08-27",
+      "screenshot_url": "https://disk.yandex.ru/i/Pu6gHuzlg3zufg",
+      "status": "improved",
+      "history": [
+        {
+          "speed_km_h": 50,
+          "date": "2025-09-10"
         }
       ]
     },
@@ -1302,7 +1515,7 @@
       "speed_km_h": 52,
       "date": "2025-11-22",
       "screenshot_url": "https://disk.yandex.ru/i/7PrV87uw8LtrLw",
-      "status": "normal",
+      "status": "improved",
       "history": [
         {
           "speed_km_h": 52,
@@ -1315,17 +1528,57 @@
       ]
     },
     {
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Лия",
+      "speed_km_h": 51,
+      "date": "2025-07-13",
+      "screenshot_url": "https://disk.yandex.ru/i/y5KpPw1iceW4gQ",
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "Родезийский риджбек",
+      "sex": "К",
+      "name": "Чу",
+      "speed_km_h": 51,
+      "date": "2025-07-13",
+      "screenshot_url": "https://disk.yandex.ru/i/eoLxYEve8P4uDw",
+      "status": "normal",
+      "history": [
+        {
+          "speed_km_h": 50,
+          "date": "2026-07-01"
+        }
+      ]
+    },
+    {
       "breed": "Фараонова собака",
       "sex": "К",
       "name": "Гоша",
       "speed_km_h": 51,
       "date": "2025-07-23",
       "screenshot_url": "https://disk.yandex.ru/i/8l7eotysQ-vwUA",
-      "status": "normal",
+      "status": "improved",
       "history": [
         {
           "speed_km_h": 50,
           "date": "2025-06-29"
+        }
+      ]
+    },
+    {
+      "breed": "Метис",
+      "sex": "С",
+      "name": "Латте",
+      "speed_km_h": 51,
+      "date": "2025-09-24",
+      "screenshot_url": "https://disk.yandex.ru/i/-GdVywsy9mTUpQ",
+      "status": "normal",
+      "history": [
+        {
+          "speed_km_h": 53,
+          "date": "2026-07-04"
         }
       ]
     },
@@ -1351,11 +1604,11 @@
       "speed_km_h": 51,
       "date": "2025-12-07",
       "screenshot_url": "https://disk.yandex.ru/i/6xW33C49HtMbRg",
-      "status": "normal",
+      "status": "improved",
       "history": [
         {
-          "speed_km_h": 49,
-          "date": "2026-06-07"
+          "speed_km_h": 50,
+          "date": "2026-07-05"
         },
         {
           "speed_km_h": 48,
@@ -1364,43 +1617,33 @@
       ]
     },
     {
-      "breed": "Фараонова собака",
-      "sex": "К",
-      "name": "Ларс",
+      "breed": "Русская псовая борзая",
+      "sex": "С",
+      "name": "Файза",
       "speed_km_h": 50,
-      "date": "2025-11-22",
-      "screenshot_url": "https://disk.yandex.ru/i/zKknbxevKz9AgQ",
+      "date": "2025-08-27",
+      "screenshot_url": "https://disk.yandex.ru/i/NjTbpX3PG2lAVQ",
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "Салюки",
+      "sex": "С",
+      "name": "Тундра",
+      "speed_km_h": 50,
+      "date": "2025-10-25",
+      "screenshot_url": "https://disk.yandex.ru/i/WsS8LkDEMSctYw",
       "status": "normal",
       "history": [
         {
-          "speed_km_h": 49,
-          "date": "2026-06-27"
+          "speed_km_h": 52,
+          "date": "2026-06-25"
         },
         {
-          "speed_km_h": 48,
-          "date": "2025-06-29"
+          "speed_km_h": 47,
+          "date": "2026-05-11"
         }
       ]
-    },
-    {
-      "breed": "Родезийский риджбек",
-      "sex": "С",
-      "name": "Риша",
-      "speed_km_h": 53,
-      "date": "2025-07-13",
-      "screenshot_url": "https://disk.yandex.ru/i/GRPbLTKbaOGqeA",
-      "status": "normal",
-      "history": []
-    },
-    {
-      "breed": "Родезийский риджбек",
-      "sex": "К",
-      "name": "Чу",
-      "speed_km_h": 51,
-      "date": "2025-07-13",
-      "screenshot_url": "https://disk.yandex.ru/i/eoLxYEve8P4uDw",
-      "status": "normal",
-      "history": []
     },
     {
       "breed": "Родезийский риджбек",
@@ -1413,94 +1656,23 @@
       "history": []
     },
     {
-      "breed": "Родезийский риджбек",
-      "sex": "С",
-      "name": "Скади",
-      "speed_km_h": 47,
-      "date": "2025-07-13",
-      "screenshot_url": "https://disk.yandex.ru/i/QVDT43popclQOA",
-      "status": "normal",
-      "history": []
-    },
-    {
-      "breed": "Родезийский риджбек",
-      "sex": "С",
-      "name": "Бриджит",
-      "speed_km_h": 44,
-      "date": "2025-08-10",
-      "screenshot_url": "https://disk.yandex.ru/i/x6dWPZLLaqdtoA",
-      "status": "normal",
-      "history": []
-    },
-    {
-      "breed": "Родезийский риджбек",
-      "sex": "С",
-      "name": "Багира",
-      "speed_km_h": 43,
-      "date": "2025-08-10",
-      "screenshot_url": "https://disk.yandex.ru/i/eRDZba1nDAopJA",
-      "status": "normal",
-      "history": []
-    },
-    {
-      "breed": "Родезийский риджбек",
-      "sex": "С",
-      "name": "Бэлла",
-      "speed_km_h": 42,
-      "date": "2025-08-10",
-      "screenshot_url": "https://disk.yandex.ru/i/1sslmAZlZO6YsQ",
-      "status": "normal",
-      "history": []
-    },
-    {
-      "breed": "Метис",
-      "sex": "С",
-      "name": "Латте",
-      "speed_km_h": 51,
-      "date": "2025-09-24",
-      "screenshot_url": "https://disk.yandex.ru/i/-GdVywsy9mTUpQ",
-      "status": "normal",
-      "history": []
-    },
-    {
-      "breed": "Метис",
-      "sex": "С",
-      "name": "Мира",
-      "speed_km_h": 49,
-      "date": "2025-09-10",
-      "screenshot_url": "https://disk.yandex.ru/i/huNJKBAz_OgCXg",
-      "status": "normal",
-      "history": []
-    },
-    {
-      "breed": "Метис",
-      "sex": "С",
-      "name": "Шейла",
-      "speed_km_h": 47,
-      "date": "2025-09-10",
-      "screenshot_url": "https://disk.yandex.ru/i/PBM6WivZTHpSvg",
-      "status": "normal",
-      "history": []
-    },
-    {
-      "breed": "Метис",
+      "breed": "Фараонова собака",
       "sex": "К",
-      "name": "Норд",
-      "speed_km_h": 47,
-      "date": "2025-11-29",
-      "screenshot_url": "https://disk.yandex.ru/i/Muw56bkgS-gzIA",
-      "status": "normal",
-      "history": []
-    },
-    {
-      "breed": "Русская псовая борзая",
-      "sex": "С",
-      "name": "Файза",
+      "name": "Ларс",
       "speed_km_h": 50,
-      "date": "2025-08-27",
-      "screenshot_url": "https://disk.yandex.ru/i/NjTbpX3PG2lAVQ",
-      "status": "normal",
-      "history": []
+      "date": "2025-11-22",
+      "screenshot_url": "https://disk.yandex.ru/i/zKknbxevKz9AgQ",
+      "status": "improved",
+      "history": [
+        {
+          "speed_km_h": 49,
+          "date": "2026-06-27"
+        },
+        {
+          "speed_km_h": 48,
+          "date": "2025-06-29"
+        }
+      ]
     },
     {
       "breed": "Немецкий дог",
@@ -1524,21 +1696,6 @@
         {
           "speed_km_h": 50,
           "date": "2026-06-28"
-        }
-      ]
-    },
-    {
-      "breed": "Чирнеко дель Этна",
-      "sex": "С",
-      "name": "Ева",
-      "speed_km_h": 49,
-      "date": "2025-09-07",
-      "screenshot_url": "https://disk.yandex.ru/i/LcOFU_coOoQXbg",
-      "status": "normal",
-      "history": [
-        {
-          "speed_km_h": 50,
-          "date": "2026-06-04"
         }
       ]
     },
@@ -1568,13 +1725,38 @@
       ]
     },
     {
+      "breed": "Чирнеко дель Этна",
+      "sex": "С",
+      "name": "Ева",
+      "speed_km_h": 49,
+      "date": "2025-09-07",
+      "screenshot_url": "https://disk.yandex.ru/i/LcOFU_coOoQXbg",
+      "status": "normal",
+      "history": [
+        {
+          "speed_km_h": 50,
+          "date": "2026-06-04"
+        }
+      ]
+    },
+    {
+      "breed": "Метис",
+      "sex": "С",
+      "name": "Мира",
+      "speed_km_h": 49,
+      "date": "2025-09-10",
+      "screenshot_url": "https://disk.yandex.ru/i/huNJKBAz_OgCXg",
+      "status": "normal",
+      "history": []
+    },
+    {
       "breed": "Левретка",
       "sex": "К",
       "name": "Айвенго",
       "speed_km_h": 49,
       "date": "2025-11-09",
       "screenshot_url": "https://disk.yandex.ru/i/iuQ18P1jpG8Nug",
-      "status": "normal",
+      "status": "improved",
       "history": [
         {
           "speed_km_h": 49,
@@ -1583,31 +1765,6 @@
         {
           "speed_km_h": 48,
           "date": "2025-09-07"
-        }
-      ]
-    },
-    {
-      "breed": "Левретка",
-      "sex": "К",
-      "name": "Хогвартс",
-      "speed_km_h": 44,
-      "date": "2025-07-13",
-      "screenshot_url": "https://disk.yandex.ru/i/GC0frdjIbl-Xsw",
-      "status": "normal",
-      "history": []
-    },
-    {
-      "breed": "Левретка",
-      "sex": "К",
-      "name": "Финик",
-      "speed_km_h": 43,
-      "date": "2025-10-11",
-      "screenshot_url": "https://disk.yandex.ru/i/6bcRdAaleG0PWA",
-      "status": "normal",
-      "history": [
-        {
-          "speed_km_h": 42,
-          "date": "2026-05-27"
         }
       ]
     },
@@ -1632,6 +1789,36 @@
       "history": []
     },
     {
+      "breed": "Родезийский риджбек",
+      "sex": "С",
+      "name": "Скади",
+      "speed_km_h": 47,
+      "date": "2025-07-13",
+      "screenshot_url": "https://disk.yandex.ru/i/QVDT43popclQOA",
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "Малинуа",
+      "sex": "С",
+      "name": "Фрейя",
+      "speed_km_h": 47,
+      "date": "2025-07-17",
+      "screenshot_url": "https://disk.yandex.ru/i/s1oUIy2MB493SA",
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "Метис",
+      "sex": "С",
+      "name": "Шейла",
+      "speed_km_h": 47,
+      "date": "2025-09-10",
+      "screenshot_url": "https://disk.yandex.ru/i/PBM6WivZTHpSvg",
+      "status": "normal",
+      "history": []
+    },
+    {
       "breed": "АСТ",
       "sex": "К",
       "name": "Лаки",
@@ -1642,82 +1829,12 @@
       "history": []
     },
     {
-      "breed": "АСТ",
-      "sex": "С",
-      "name": "Моника",
-      "speed_km_h": 46,
-      "date": "2025-12-10",
-      "screenshot_url": "https://disk.yandex.ru/i/i1eIlIAjJw75hQ",
-      "status": "normal",
-      "history": []
-    },
-    {
-      "breed": "АСТ",
-      "sex": "С",
-      "name": "Бася",
-      "speed_km_h": 45,
-      "date": "2025-12-03",
-      "screenshot_url": "https://disk.yandex.ru/i/Z0Dv2jcwZ7asHQ",
-      "status": "normal",
-      "history": []
-    },
-    {
-      "breed": "АСТ",
-      "sex": "С",
-      "name": "Харли",
-      "speed_km_h": 44,
-      "date": "2025-12-20",
-      "screenshot_url": "https://disk.yandex.ru/i/IjBionGkJ-R_BA",
-      "status": "normal",
-      "history": []
-    },
-    {
-      "breed": "АСТ",
-      "sex": "С",
-      "name": "Мисти",
-      "speed_km_h": 43,
-      "date": "2025-07-06",
-      "screenshot_url": "https://disk.yandex.ru/i/AfH6ALR0XCJY6A",
-      "status": "normal",
-      "history": []
-    },
-    {
-      "breed": "АСТ",
+      "breed": "Метис",
       "sex": "К",
-      "name": "Блейз",
-      "speed_km_h": 43,
-      "date": "2025-11-09",
-      "screenshot_url": "https://disk.yandex.ru/i/IZ2D3eOrw8bZGg",
-      "status": "normal",
-      "history": []
-    },
-    {
-      "breed": "АСТ",
-      "sex": "С",
-      "name": "Жасмин",
-      "speed_km_h": 43,
-      "date": "2025-12-10",
-      "screenshot_url": "https://disk.yandex.ru/i/6qD_9108tOQBew",
-      "status": "normal",
-      "history": []
-    },
-    {
-      "breed": "АСТ",
-      "sex": "С",
-      "name": "Monica Bellucci",
-      "speed_km_h": 42,
-      "date": "2025-07-20",
-      "screenshot_url": "https://disk.yandex.ru/d/tXWQMCT_azAoSQ",
-      "status": "normal",
-      "history": []
-    },
-    {
-      "breed": "АСТ",
-      "sex": "С",
-      "name": "Понка",
-      "speed_km_h": 39,
-      "date": "2025-11-23",
-      "screenshot_url": "https://disk.yandex.ru/i/GITIft3GbPdn_A",
+      "name": "Норд",
+      "speed_km_h": 47,
+      "date": "2025-11-29",
+      "screenshot_url": "https://disk.yandex.ru/i/Muw56bkgS-gzIA",
       "status": "normal",
       "history": []
     },
@@ -1728,6 +1845,21 @@
       "speed_km_h": 46,
       "date": "2025-06-29",
       "screenshot_url": "https://disk.yandex.ru/i/cpD1jwCztjayMA",
+      "status": "normal",
+      "history": [
+        {
+          "speed_km_h": 47,
+          "date": "2026-07-05"
+        }
+      ]
+    },
+    {
+      "breed": "Малинуа",
+      "sex": "С",
+      "name": "Весна",
+      "speed_km_h": 46,
+      "date": "2025-07-06",
+      "screenshot_url": "https://disk.yandex.ru/i/YACiXwd1nOyhUQ",
       "status": "normal",
       "history": []
     },
@@ -1767,6 +1899,16 @@
       "history": []
     },
     {
+      "breed": "АСТ",
+      "sex": "С",
+      "name": "Моника",
+      "speed_km_h": 46,
+      "date": "2025-12-10",
+      "screenshot_url": "https://disk.yandex.ru/i/i1eIlIAjJw75hQ",
+      "status": "normal",
+      "history": []
+    },
+    {
       "breed": "Бордер-колли",
       "sex": "С",
       "name": "Вега",
@@ -1788,7 +1930,7 @@
       "speed_km_h": 45,
       "date": "2025-12-03",
       "screenshot_url": "https://disk.yandex.ru/i/tsEfnOQd1JWIYw",
-      "status": "normal",
+      "status": "improved",
       "history": [
         {
           "speed_km_h": 45,
@@ -1801,12 +1943,32 @@
       ]
     },
     {
-      "breed": "Ирландский терьер",
+      "breed": "АСТ",
       "sex": "С",
-      "name": "Лода",
+      "name": "Бася",
+      "speed_km_h": 45,
+      "date": "2025-12-03",
+      "screenshot_url": "https://disk.yandex.ru/i/Z0Dv2jcwZ7asHQ",
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "Левретка",
+      "sex": "К",
+      "name": "Хогвартс",
       "speed_km_h": 44,
-      "date": "2025-10-11",
-      "screenshot_url": "https://disk.yandex.ru/i/z4kfFj2pdQ-Xrw",
+      "date": "2025-07-13",
+      "screenshot_url": "https://disk.yandex.ru/i/GC0frdjIbl-Xsw",
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "Родезийский риджбек",
+      "sex": "С",
+      "name": "Бриджит",
+      "speed_km_h": 44,
+      "date": "2025-08-10",
+      "screenshot_url": "https://disk.yandex.ru/i/x6dWPZLLaqdtoA",
       "status": "normal",
       "history": []
     },
@@ -1818,7 +1980,27 @@
       "date": "2025-09-24",
       "screenshot_url": "https://disk.yandex.ru/i/5bClBquNRPCqSA",
       "status": "normal",
-      "history": []
+      "history": [
+        {
+          "speed_km_h": 43,
+          "date": "2026-07-04"
+        }
+      ]
+    },
+    {
+      "breed": "Ирландский терьер",
+      "sex": "С",
+      "name": "Лода",
+      "speed_km_h": 44,
+      "date": "2025-10-11",
+      "screenshot_url": "https://disk.yandex.ru/i/z4kfFj2pdQ-Xrw",
+      "status": "normal",
+      "history": [
+        {
+          "speed_km_h": 43,
+          "date": "2026-07-01"
+        }
+      ]
     },
     {
       "breed": "Ризеншнауцер",
@@ -1831,12 +2013,77 @@
       "history": []
     },
     {
-      "breed": "Ризеншнауцер",
+      "breed": "АСТ",
+      "sex": "С",
+      "name": "Харли",
+      "speed_km_h": 44,
+      "date": "2025-12-20",
+      "screenshot_url": "https://disk.yandex.ru/i/IjBionGkJ-R_BA",
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "Родезийский риджбек",
+      "sex": "С",
+      "name": "Багира",
+      "speed_km_h": 43,
+      "date": "2025-08-10",
+      "screenshot_url": "https://disk.yandex.ru/i/eRDZba1nDAopJA",
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "АСТ",
+      "sex": "С",
+      "name": "Мисти",
+      "speed_km_h": 43,
+      "date": "2025-07-06",
+      "screenshot_url": "https://disk.yandex.ru/i/AfH6ALR0XCJY6A",
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "Левретка",
       "sex": "К",
-      "name": "Купер",
-      "speed_km_h": 41,
-      "date": "2025-07-04",
-      "screenshot_url": "https://disk.yandex.ru/i/cHQLtaUzT9NNGQ",
+      "name": "Финик",
+      "speed_km_h": 43,
+      "date": "2025-10-11",
+      "screenshot_url": "https://disk.yandex.ru/i/6bcRdAaleG0PWA",
+      "status": "normal",
+      "history": [
+        {
+          "speed_km_h": 42,
+          "date": "2026-05-27"
+        }
+      ]
+    },
+    {
+      "breed": "АСТ",
+      "sex": "К",
+      "name": "Блейз",
+      "speed_km_h": 43,
+      "date": "2025-11-09",
+      "screenshot_url": "https://disk.yandex.ru/i/IZ2D3eOrw8bZGg",
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "АСТ",
+      "sex": "С",
+      "name": "Жасмин",
+      "speed_km_h": 43,
+      "date": "2025-12-10",
+      "screenshot_url": "https://disk.yandex.ru/i/6qD_9108tOQBew",
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "АСТ",
+      "sex": "С",
+      "name": "Monica Bellucci",
+      "speed_km_h": 42,
+      "date": "2025-07-20",
+      "screenshot_url": "https://disk.yandex.ru/d/tXWQMCT_azAoSQ",
       "status": "normal",
       "history": []
     },
@@ -1847,16 +2094,6 @@
       "speed_km_h": 42,
       "date": "2025-07-17",
       "screenshot_url": "https://disk.yandex.ru/i/MLEA8HVBSuL-Eg",
-      "status": "normal",
-      "history": []
-    },
-    {
-      "breed": "Миттельшнауцер",
-      "sex": "С",
-      "name": "Черри",
-      "speed_km_h": 40,
-      "date": "2025-07-17",
-      "screenshot_url": "https://disk.yandex.ru/i/OZAZF8oNTGIueA",
       "status": "normal",
       "history": []
     },
@@ -1877,11 +2114,40 @@
       "speed_km_h": 42,
       "date": "2025-07-30",
       "screenshot_url": "https://disk.yandex.ru/i/zLg2DA3oAtU7uA",
-      "status": "normal",
+      "status": "improved",
       "history": [
         {
           "speed_km_h": 40,
+          "date": "2026-07-05"
+        },
+        {
+          "speed_km_h": 40,
           "date": "2025-06-29"
+        }
+      ]
+    },
+    {
+      "breed": "Родезийский риджбек",
+      "sex": "С",
+      "name": "Бэлла",
+      "speed_km_h": 42,
+      "date": "2025-08-10",
+      "screenshot_url": "https://disk.yandex.ru/i/1sslmAZlZO6YsQ",
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "Веймаранер",
+      "sex": "С",
+      "name": "Тень",
+      "speed_km_h": 42,
+      "date": "2025-08-13",
+      "screenshot_url": "https://disk.yandex.ru/i/_B0zAO1UwFgFGw",
+      "status": "normal",
+      "history": [
+        {
+          "speed_km_h": 39,
+          "date": "2026-06-25"
         }
       ]
     },
@@ -1906,6 +2172,26 @@
       "history": []
     },
     {
+      "breed": "Ризеншнауцер",
+      "sex": "К",
+      "name": "Купер",
+      "speed_km_h": 41,
+      "date": "2025-07-04",
+      "screenshot_url": "https://disk.yandex.ru/i/cHQLtaUzT9NNGQ",
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "Миттельшнауцер",
+      "sex": "С",
+      "name": "Черри",
+      "speed_km_h": 40,
+      "date": "2025-07-17",
+      "screenshot_url": "https://disk.yandex.ru/i/OZAZF8oNTGIueA",
+      "status": "normal",
+      "history": []
+    },
+    {
       "breed": "Немецкая овчарка",
       "sex": "С",
       "name": "Панда",
@@ -1914,36 +2200,6 @@
       "screenshot_url": "https://disk.yandex.ru/i/7XE7dXacU8D4Rw",
       "status": "normal",
       "history": []
-    },
-    {
-      "breed": "Немецкая овчарка",
-      "sex": "С",
-      "name": "Ая",
-      "speed_km_h": 39,
-      "date": "2025-07-30",
-      "screenshot_url": "https://disk.yandex.ru/i/Nbb0UoXGDcfYqw",
-      "status": "normal",
-      "history": [
-        {
-          "speed_km_h": 36,
-          "date": "2025-07-13"
-        }
-      ]
-    },
-    {
-      "breed": "Веймаранер",
-      "sex": "С",
-      "name": "Тень",
-      "speed_km_h": 42,
-      "date": "2025-08-13",
-      "screenshot_url": "https://disk.yandex.ru/i/_B0zAO1UwFgFGw",
-      "status": "normal",
-      "history": [
-        {
-          "speed_km_h": 39,
-          "date": "2026-06-25"
-        }
-      ]
     },
     {
       "breed": "Акита-ину",
@@ -1956,14 +2212,19 @@
       "history": []
     },
     {
-      "breed": "Акита-ину",
+      "breed": "Немецкая овчарка",
       "sex": "С",
-      "name": "Асуна",
-      "speed_km_h": 37,
-      "date": "2025-08-20",
-      "screenshot_url": "https://disk.yandex.ru/i/us2znT4P0sAXzw",
-      "status": "normal",
-      "history": []
+      "name": "Ая",
+      "speed_km_h": 39,
+      "date": "2025-07-30",
+      "screenshot_url": "https://disk.yandex.ru/i/Nbb0UoXGDcfYqw",
+      "status": "improved",
+      "history": [
+        {
+          "speed_km_h": 36,
+          "date": "2025-07-13"
+        }
+      ]
     },
     {
       "breed": "Поинтер",
@@ -1986,19 +2247,39 @@
       "history": []
     },
     {
+      "breed": "АСТ",
+      "sex": "С",
+      "name": "Понка",
+      "speed_km_h": 39,
+      "date": "2025-11-23",
+      "screenshot_url": "https://disk.yandex.ru/i/GITIft3GbPdn_A",
+      "status": "normal",
+      "history": []
+    },
+    {
       "breed": "Цвергпинчер",
       "sex": "К",
       "name": "Марвел",
       "speed_km_h": 39,
       "date": "2025-12-07",
       "screenshot_url": "https://disk.yandex.ru/i/NQMZmQfgKy8r7w",
-      "status": "normal",
+      "status": "improved",
       "history": [
         {
           "speed_km_h": 38,
           "date": "2025-09-07"
         }
       ]
+    },
+    {
+      "breed": "Акита-ину",
+      "sex": "С",
+      "name": "Асуна",
+      "speed_km_h": 37,
+      "date": "2025-08-20",
+      "screenshot_url": "https://disk.yandex.ru/i/us2znT4P0sAXzw",
+      "status": "normal",
+      "history": []
     },
     {
       "breed": "Французский бульдог",
@@ -2021,16 +2302,6 @@
       "history": []
     },
     {
-      "breed": "Джек-рассел-терьер",
-      "sex": "С",
-      "name": "Лора",
-      "speed_km_h": 31,
-      "date": "2025-06-29",
-      "screenshot_url": "https://disk.yandex.ru/i/sPxNjGc4ViPJBw",
-      "status": "normal",
-      "history": []
-    },
-    {
       "breed": "РЧТ",
       "sex": "К",
       "name": "Юджин",
@@ -2047,15 +2318,15 @@
       "speed_km_h": 36,
       "date": "2025-11-29",
       "screenshot_url": "https://disk.yandex.ru/i/UrPsTVGps1jVyw",
-      "status": "normal",
+      "status": "improved",
       "history": [
-        {
-          "speed_km_h": 32,
-          "date": "2025-07-13"
-        },
         {
           "speed_km_h": 34,
           "date": "2025-09-07"
+        },
+        {
+          "speed_km_h": 32,
+          "date": "2025-07-13"
         }
       ]
     },
@@ -2066,6 +2337,16 @@
       "speed_km_h": 35,
       "date": "2025-07-06",
       "screenshot_url": "https://disk.yandex.ru/i/eS9vS1_G3zc9Tw",
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "Джек-рассел-терьер",
+      "sex": "С",
+      "name": "Лора",
+      "speed_km_h": 31,
+      "date": "2025-06-29",
+      "screenshot_url": "https://disk.yandex.ru/i/sPxNjGc4ViPJBw",
       "status": "normal",
       "history": []
     },
@@ -2163,6 +2444,10 @@
       "status": "old",
       "history": [
         {
+          "speed_km_h": 40,
+          "date": "2026-07-05"
+        },
+        {
           "speed_km_h": 42,
           "date": "2025-07-30"
         }
@@ -2178,8 +2463,16 @@
       "status": "old",
       "history": [
         {
+          "speed_km_h": 56,
+          "date": "2026-07-05"
+        },
+        {
           "speed_km_h": 55,
           "date": "2026-05-14"
+        },
+        {
+          "speed_km_h": 54,
+          "date": "2026-04-08"
         },
         {
           "speed_km_h": 54,
@@ -2188,10 +2481,6 @@
         {
           "speed_km_h": 53,
           "date": "2025-08-13"
-        },
-        {
-          "speed_km_h": 54,
-          "date": "2026-04-08"
         }
       ]
     },
@@ -2221,11 +2510,19 @@
       "speed_km_h": 53,
       "date": "2025-08-13",
       "screenshot_url": "https://disk.yandex.ru/i/_NjzxKXes7lmbQ",
-      "status": "old",
+      "status": "improved",
       "history": [
+        {
+          "speed_km_h": 56,
+          "date": "2026-07-05"
+        },
         {
           "speed_km_h": 55,
           "date": "2026-05-14"
+        },
+        {
+          "speed_km_h": 54,
+          "date": "2026-04-08"
         },
         {
           "speed_km_h": 54,
@@ -2234,10 +2531,6 @@
         {
           "speed_km_h": 52,
           "date": "2025-07-30"
-        },
-        {
-          "speed_km_h": 54,
-          "date": "2026-04-08"
         }
       ]
     },
@@ -2304,16 +2597,16 @@
           "date": "2026-05-14"
         },
         {
+          "speed_km_h": 55,
+          "date": "2026-05-11"
+        },
+        {
           "speed_km_h": 56,
           "date": "2025-11-22"
         },
         {
           "speed_km_h": 53,
           "date": "2025-11-08"
-        },
-        {
-          "speed_km_h": 55,
-          "date": "2026-05-11"
         }
       ]
     },
@@ -2343,11 +2636,15 @@
       "speed_km_h": 53,
       "date": "2025-11-08",
       "screenshot_url": "https://disk.yandex.ru/i/GNEJiQ6UBgzjZA",
-      "status": "old",
+      "status": "improved",
       "history": [
         {
           "speed_km_h": 56,
           "date": "2026-05-14"
+        },
+        {
+          "speed_km_h": 55,
+          "date": "2026-05-11"
         },
         {
           "speed_km_h": 56,
@@ -2356,10 +2653,6 @@
         {
           "speed_km_h": 51,
           "date": "2025-07-06"
-        },
-        {
-          "speed_km_h": 55,
-          "date": "2026-05-11"
         }
       ]
     },
@@ -2408,7 +2701,7 @@
       "speed_km_h": 34,
       "date": "2025-09-07",
       "screenshot_url": "https://disk.yandex.ru/i/16HpATFHoeoLHw",
-      "status": "old",
+      "status": "improved",
       "history": [
         {
           "speed_km_h": 36,
@@ -2448,6 +2741,10 @@
       "screenshot_url": "https://disk.yandex.ru/i/Aw3YJWhes-uPKQ",
       "status": "old",
       "history": [
+        {
+          "speed_km_h": 53,
+          "date": "2026-07-04"
+        },
         {
           "speed_km_h": 55,
           "date": "2025-11-29"
@@ -2498,8 +2795,8 @@
       "status": "old",
       "history": [
         {
-          "speed_km_h": 49,
-          "date": "2026-06-07"
+          "speed_km_h": 50,
+          "date": "2026-07-05"
         },
         {
           "speed_km_h": 51,
@@ -2532,6 +2829,10 @@
       "status": "old",
       "history": [
         {
+          "speed_km_h": 56,
+          "date": "2026-07-05"
+        },
+        {
           "speed_km_h": 55,
           "date": "2026-05-14"
         },
@@ -2540,12 +2841,12 @@
           "date": "2025-08-20"
         },
         {
-          "speed_km_h": 52,
-          "date": "2025-07-30"
-        },
-        {
           "speed_km_h": 53,
           "date": "2025-08-13"
+        },
+        {
+          "speed_km_h": 52,
+          "date": "2025-07-30"
         }
       ]
     },
@@ -2567,12 +2868,12 @@
           "date": "2025-11-22"
         },
         {
-          "speed_km_h": 51,
-          "date": "2025-07-06"
-        },
-        {
           "speed_km_h": 53,
           "date": "2025-11-08"
+        },
+        {
+          "speed_km_h": 51,
+          "date": "2025-07-06"
         }
       ]
     },
@@ -2665,7 +2966,7 @@
       "speed_km_h": 56,
       "date": "2026-06-25",
       "screenshot_url": "https://disk.yandex.ru/i/qNjYob7WAmEu4A",
-      "status": "old",
+      "status": "improved",
       "history": [
         {
           "speed_km_h": 59,
@@ -2674,6 +2975,94 @@
         {
           "speed_km_h": 55,
           "date": "2026-05-11"
+        }
+      ]
+    },
+    {
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Астрид",
+      "speed_km_h": 53,
+      "date": "2026-06-25",
+      "screenshot_url": "https://disk.yandex.ru/i/_Yi4iEEHeK4MYg",
+      "status": "old",
+      "history": [
+        {
+          "speed_km_h": 57,
+          "date": "2026-07-04"
+        },
+        {
+          "speed_km_h": 54,
+          "date": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Астрид",
+      "speed_km_h": 54,
+      "date": "2026-07-01",
+      "screenshot_url": "https://disk.yandex.ru/i/8eMBGdqelr3GTQ",
+      "status": "improved",
+      "history": [
+        {
+          "speed_km_h": 57,
+          "date": "2026-07-04"
+        },
+        {
+          "speed_km_h": 53,
+          "date": "2026-06-25"
+        }
+      ]
+    },
+    {
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Антоша",
+      "speed_km_h": 55,
+      "date": "2026-05-14",
+      "screenshot_url": "https://disk.yandex.ru/i/7pIwJ_njaydDHw",
+      "status": "improved",
+      "history": [
+        {
+          "speed_km_h": 56,
+          "date": "2026-07-05"
+        },
+        {
+          "speed_km_h": 54,
+          "date": "2026-04-08"
+        },
+        {
+          "speed_km_h": 54,
+          "date": "2025-08-20"
+        },
+        {
+          "speed_km_h": 53,
+          "date": "2025-08-13"
+        },
+        {
+          "speed_km_h": 52,
+          "date": "2025-07-30"
+        }
+      ]
+    },
+    {
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Винни",
+      "speed_km_h": 54,
+      "date": "2026-05-27",
+      "screenshot_url": "https://disk.yandex.ru/i/e9lN_Q5S51VOUA",
+      "status": "old",
+      "history": [
+        {
+          "speed_km_h": 55,
+          "date": "2026-07-05"
+        },
+        {
+          "speed_km_h": 54,
+          "date": "2025-12-07"
         }
       ]
     }

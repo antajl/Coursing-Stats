@@ -1,18 +1,15 @@
 import * as XLSX from 'xlsx';
 import { readFileSync, writeFileSync, mkdirSync } from 'fs';
 import { execSync } from 'child_process';
-import { dirname } from 'path';
+import {
+  attachSpeedRecordHistory,
+  dedupeSpeedRecords,
+  parseSpeedRecordsFromWorkbook,
+  type ParsedSpeedRecord,
+} from './parse-speed-xlsx';
 
-interface SpeedRecord {
+interface SpeedRecord extends ParsedSpeedRecord {
   id?: number;
-  breed: string;
-  sex: string;
-  name: string;
-  speed_km_h: number | string;
-  date: string;
-  screenshot_url?: string;
-  status: string;
-  history?: { speed_km_h: number | string; date: string }[];
 }
 
 interface SpeedRecordsCache {
@@ -25,37 +22,6 @@ interface SpeedRecordsCache {
 const GOOGLE_SHEETS_URL = 'https://docs.google.com/spreadsheets/d/1NTiY3HXZIkXE8xTeXZESgMKaZsEXunmcWhTfhhkoKyE/export?format=xlsx';
 const CACHE_FILE = 'data/speed-records.json';
 
-// Helper function to convert Excel dates to YYYY-MM-DD
-function convertExcelDate(dateValue: any): string {
-  if (typeof dateValue === 'number') {
-    const excelDate = new Date(Math.round((dateValue - 25569) * 86400 * 1000));
-    const year = excelDate.getFullYear();
-    const month = String(excelDate.getMonth() + 1).padStart(2, '0');
-    const day = String(excelDate.getDate()).padStart(2, '0');
-    return `${year}-${month}-${day}`;
-  } else if (typeof dateValue === 'string') {
-    // Check if it's a string representation of Excel date (5 digits)
-    if (/^\d{5}$/.test(dateValue)) {
-      const excelDate = new Date(Math.round((parseInt(dateValue) - 25569) * 86400 * 1000));
-      const year = excelDate.getFullYear();
-      const month = String(excelDate.getMonth() + 1).padStart(2, '0');
-      const day = String(excelDate.getDate()).padStart(2, '0');
-      return `${year}-${month}-${day}`;
-    } else {
-      // Normalize date format from DD.MM.YYYY to YYYY-MM-DD
-      dateValue = dateValue.replace(/[;,\/\-]/g, '.');
-      const parts = dateValue.split('.');
-      if (parts.length === 3) {
-        const day = String(parts[0]).padStart(2, '0');
-        const month = String(parts[1]).padStart(2, '0');
-        const year = parts[2];
-        return `${year}-${month}-${day}`;
-      }
-    }
-  }
-  return dateValue || '';
-}
-
 async function main() {
   console.log('Syncing speed records with Google Sheets...');
   
@@ -67,124 +33,18 @@ async function main() {
   console.log(`XLSX fetched: ${buffer.length} bytes`);
   
   // 2. Parse XLSX
-  const workbook = XLSX.read(buffer, { type: 'buffer' });
-  const records: SpeedRecord[] = [];
-  
-  for (const sheetName of workbook.SheetNames) {
-    const worksheet = workbook.Sheets[sheetName];
-    const data = XLSX.utils.sheet_to_json(worksheet, { header: 1 }) as any[][];
-    
-    if (data.length === 0) continue;
-    
-    // Check if it's the "старые личные рекорды" sheet (no headers)
-    if (sheetName === 'старые личные рекорды') {
-      console.log(`  Parsing as old records (no headers)`);
-      for (const row of data) {
-        if (row.length >= 5 && row[0] && row[2]) {
-          const speedRecord: SpeedRecord = {
-            breed: row[0],
-            sex: row[1] || '',
-            name: row[2],
-            speed_km_h: parseFloat(row[3]) || 0,
-            date: convertExcelDate(row[4]),
-            screenshot_url: row[5] || '',
-            status: 'old'
-          };
-          if (speedRecord.breed && speedRecord.name) {
-            records.push(speedRecord);
-          }
-        }
-      }
-      console.log(`  Parsed ${records.filter(r => r.status === 'old').length} records from sheet "${sheetName}"`);
-      continue;
-    }
-    
-    // Parse sheets with headers
-    const headers = data[0] as string[];
-    console.log(`Sheet "${sheetName}": Headers: ${headers.join(', ')}`);
-    
-    const breedIndex = headers.indexOf('Порода');
-    const sexIndex = headers.indexOf('Пол');
-    const nameIndex = headers.indexOf('Кличка');
-    const speedIndex = headers.indexOf('Лучшая скорость (км/ч)');
-    const dateIndex = headers.indexOf('Дата');
-    const screenshotIndex = headers.indexOf('Скриншот');
-    
-    if (breedIndex === -1 || nameIndex === -1) {
-      console.log(`  Skipping sheet "${sheetName}" - missing required headers`);
-      continue;
-    }
-    
-    for (let i = 1; i < data.length; i++) {
-      const row = data[i];
-      const speedRecord: SpeedRecord = {
-        breed: row[breedIndex] || '',
-        sex: row[sexIndex] || '',
-        name: row[nameIndex] || '',
-        speed_km_h: speedIndex !== -1 ? parseFloat(row[speedIndex]) || 0 : 0,
-        date: dateIndex !== -1 ? convertExcelDate(row[dateIndex]) : '',
-        screenshot_url: screenshotIndex !== -1 ? row[screenshotIndex] || '' : '',
-        status: 'normal'
-      };
-      
-      if (speedRecord.breed && speedRecord.name) {
-        records.push(speedRecord);
-      }
-    }
-  }
-  
-  console.log(`Parsed ${records.length} speed records from ${workbook.SheetNames.length} sheets`);
-  
-  // 3. Deduplication
-  const uniqueRecords = [];
-  const seenKeys = new Set();
-  records.forEach(record => {
-    const key = `${record.name}_${record.breed}_${record.sex}_${record.date}_${record.speed_km_h}`;
-    if (!seenKeys.has(key)) {
-      seenKeys.add(key);
-      uniqueRecords.push(record);
-    }
-  });
-  
-  console.log(`After deduplication: ${uniqueRecords.length} records (removed ${records.length - uniqueRecords.length} duplicates)`);
-  
-  // 4. Grouping for history
-  const recordsByDog: Record<string, SpeedRecord[]> = {};
-  uniqueRecords.forEach(record => {
-    const key = `${record.name}_${record.breed}`;
-    if (!recordsByDog[key]) {
-      recordsByDog[key] = [];
-    }
-    recordsByDog[key].push(record);
-  });
-  
-  console.log(`Total unique dogs: ${Object.keys(recordsByDog).length}`);
-  
-  // 5. History formation
-  Object.keys(recordsByDog).forEach(key => {
-    const dogRecords = recordsByDog[key];
-    dogRecords.sort((a, b) => {
-      const parseDate = (d: string) => {
-        if (!d || typeof d !== 'string') return new Date(0);
-        const parts = d.split('.');
-        if (parts.length !== 3) return new Date(0);
-        return new Date(parseInt(parts[2]), parseInt(parts[1]) - 1, parseInt(parts[0]));
-      };
-      return parseDate(b.date).getTime() - parseDate(a.date).getTime();
-    });
-    
-    dogRecords.forEach((record, idx) => {
-      record.history = dogRecords.filter((_, i) => i !== idx).map(r => ({
-        speed_km_h: r.speed_km_h,
-        date: r.date
-      }));
-    });
-  });
-  
-  const recordsWithHistory = uniqueRecords.filter(r => r.history && r.history.length > 0);
-  console.log(`Records with history: ${recordsWithHistory.length}`);
-  
-  // 6. Load existing cache
+  const workbook = XLSX.read(buffer, { type: 'buffer', cellStyles: true });
+  const parsed = parseSpeedRecordsFromWorkbook(workbook);
+  const uniqueRecords = attachSpeedRecordHistory(dedupeSpeedRecords(parsed));
+
+  const statusCounts = uniqueRecords.reduce<Record<string, number>>((acc, r) => {
+    acc[r.status] = (acc[r.status] || 0) + 1;
+    return acc;
+  }, {});
+  console.log(`Status breakdown: ${JSON.stringify(statusCounts)}`);
+
+  console.log(`Parsed ${parsed.length} speed records from ${workbook.SheetNames.length} sheets`);
+  console.log(`After deduplication: ${uniqueRecords.length} records (removed ${parsed.length - uniqueRecords.length} duplicates)`);
   let existingCache: SpeedRecordsCache = {
     version: '1.0',
     last_updated: new Date().toISOString(),

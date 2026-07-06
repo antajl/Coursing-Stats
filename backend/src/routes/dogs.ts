@@ -1,4 +1,5 @@
 import { Hono } from 'hono';
+import { canonicalBreed } from '../lib/breed-mapping';
 import { aggregateQualificationTitles } from '../lib/qualification-titles';
 import { RACING_EXCLUDED_STATUSES_SQL } from '../lib/racing-status';
 
@@ -144,10 +145,11 @@ export function handleDogs(app: Hono<{ Bindings: Env }>) {
     dogData.coursing_stats = coursingResults[0] || {
       total_starts: 0,
       best_score: null,
-      avg_score: null,
+      best_judge_score: null,
+      avg_judge_score: null,
       gold: 0,
       silver: 0,
-      bronze: 0
+      bronze: 0,
     };
 
     // Get racing statistics
@@ -303,28 +305,8 @@ export function handleDogs(app: Hono<{ Bindings: Env }>) {
     const db = c.env.DB;
     const { results } = await db.prepare('SELECT DISTINCT breed FROM dogs ORDER BY breed').all();
 
-    // Карта объединения пород
-    const breedMapping: Record<string, string> = {
-      '18': 'БЕЗ ПОРОДЫ',
-      'НЕМЕЦКАЯ ОВЧАРКА (Д Ш, К Ш)': 'НЕМЕЦКАЯ ОВЧАРКА',
-      'НЕМЕЦКАЯ ОВЧАРКА (СТАНДАРТНАЯ)': 'НЕМЕЦКАЯ ОВЧАРКА',
-      'НЕМЕЦКАЯ ОВЧАРКА К Ш': 'НЕМЕЦКАЯ ОВЧАРКА',
-      'НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ': 'НЕМЕЦКАЯ ОВЧАРКА',
-      'ПОДЕНКО ИБИЦЕНКО (К Ш, Г Ш)': 'ПОДЕНКО ИБИЦЕНКО',
-      'ПОДЕНКО ИБИЦЕНКО Г Ш': 'ПОДЕНКО ИБИЦЕНКО',
-      'ТАКСА МИНИАТЮРНАЯ (Г Ш, Д Ш, Ж Ш)': 'ТАКСА МИНИАТЮРНАЯ',
-      'ТАКСА МИНИАТЮРНАЯ (Г Ш, Ж Ш)': 'ТАКСА МИНИАТЮРНАЯ',
-      'ТАКСА МИНИАТЮРНАЯ Ж Ш': 'ТАКСА МИНИАТЮРНАЯ',
-      'ВЕНГЕРСКАЯ ВЫЖЛА К Ш': 'ВЕНГЕРСКАЯ ВЫЖЛА',
-      'ВЕНГЕРСКАЯ ВЫЖЛА КОРОТКОШЕРСТНАЯ': 'ВЕНГЕРСКАЯ ВЫЖЛА',
-      'ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ ЛЕГАВАЯ': 'ВЕНГЕРСКАЯ ВЫЖЛА',
-      'ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ ЛЕГАВАЯ (ВЫЖЛА)': 'ВЕНГЕРСКАЯ ВЫЖЛА',
-      'МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)': 'МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ',
-    };
-
-    // Применяем объединение и убираем дубликаты
     const mappedBreeds = results.map((r: { breed: string }) => ({
-      breed: breedMapping[r.breed] || r.breed
+      breed: canonicalBreed(r.breed),
     }));
 
     const uniqueBreeds = Array.from(

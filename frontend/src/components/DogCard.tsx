@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { dogYearBadge } from '../lib/season'
 
 interface DogCardProps {
   dog: {
@@ -7,6 +8,8 @@ interface DogCardProps {
     name_ru?: string
     breed: string
     year?: number
+    year_from?: number
+    year_to?: number
     gold?: number
     silver?: number
     bronze?: number
@@ -62,6 +65,7 @@ export default function DogCard({ dog, type, filterYear }: DogCardProps) {
   }
 
   const stats = getStats()
+  const yearBadge = dogYearBadge(dog, filterYear)
 
   return (
     <Link
@@ -79,13 +83,16 @@ export default function DogCard({ dog, type, filterYear }: DogCardProps) {
             </span>
           )}
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 flex-wrap">
           <span className="px-1.5 py-0.5 rounded-md bg-cream-100 dark:bg-charcoal-700 text-[10px] font-medium text-charcoal-600 dark:text-charcoal-300 whitespace-nowrap">
             {dog.breed}
           </span>
-          {dog.year && (
-            <span className="text-[10px] text-charcoal-500 dark:text-charcoal-400">
-              {dog.year}
+          {yearBadge && (
+            <span
+              title={yearBadge.title}
+              className="px-1.5 py-0.5 rounded-md bg-camel-100 dark:bg-camel-900/40 text-[11px] font-semibold text-camel-800 dark:text-camel-300 whitespace-nowrap"
+            >
+              {yearBadge.label}
             </span>
           )}
         </div>
