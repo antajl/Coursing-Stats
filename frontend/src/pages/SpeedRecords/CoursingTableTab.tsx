@@ -149,7 +149,6 @@ export default function CoursingTableTab({
                 selectedCount={filterBreeds.length}
                 open={openDropdown === 'breed'}
                 onToggle={() => onOpenDropdownChange(openDropdown === 'breed' ? null : 'breed')}
-                className="min-w-[120px]"
               >
                 {coursingBreeds.map((breed) => (
                   <label key={breed} className={checkboxRowClass}>

@@ -107,7 +107,7 @@ export default function Judges() {
                 onChange={setFilterBreed}
                 allLabel="Все породы"
                 options={availableBreeds.map((breed: string) => ({ value: breed, label: breed }))}
-                className="min-w-[140px]"
+                className="w-[10.5rem] shrink-0"
               />
               <FilterSelect
                 ariaLabel="Дисциплина"
@@ -119,7 +119,7 @@ export default function Judges() {
                   { value: 'bzmp', label: 'БЗМП' },
                   { value: 'racing', label: 'Бега' },
                 ]}
-                className="min-w-[140px]"
+                className="w-[9.5rem] shrink-0"
               />
             </>
           }

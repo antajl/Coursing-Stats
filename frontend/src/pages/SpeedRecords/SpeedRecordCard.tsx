@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Image } from 'lucide-react'
 import DogSexIcon from '../../components/DogSexIcon'
+import OwnerCrownName from '../../components/OwnerCrownName'
 import SpeedHistorySparkline from '../../components/SpeedHistorySparkline'
 import SpeedStatusBadge from '../../components/SpeedStatusBadge'
 import { formatRecordDate } from '../../lib/recordDates'
@@ -44,7 +45,9 @@ export default function SpeedRecordCard({ record }: SpeedRecordCardProps) {
         <div className="flex min-w-0 items-start justify-between gap-3 sm:contents">
           <div className="min-w-0 sm:col-start-1">
             <div className="mb-1.5 flex items-center gap-2">
-              <h3 className="truncate text-base font-bold text-charcoal-900 dark:text-charcoal-100">{record.name}</h3>
+              <OwnerCrownName name={record.name} breed={record.breed} kind="donino">
+                <h3 className="truncate text-base font-bold text-charcoal-900 dark:text-charcoal-100">{record.name}</h3>
+              </OwnerCrownName>
               <DogSexIcon sex={record.sex} />
             </div>
             <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-old-money-600 dark:text-old-money-400">

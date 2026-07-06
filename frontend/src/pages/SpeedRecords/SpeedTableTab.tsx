@@ -151,7 +151,6 @@ export default function SpeedTableTab({
                 selectedCount={filterBreeds.length}
                 open={openDropdown === 'breed'}
                 onToggle={() => onOpenDropdownChange(openDropdown === 'breed' ? null : 'breed')}
-                className="min-w-[120px]"
               >
                 {breeds.map((breed) => (
                   <label key={breed} className={checkboxRowClass}>

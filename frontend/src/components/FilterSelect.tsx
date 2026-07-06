@@ -19,6 +19,7 @@ export default function FilterSelect({
   allLabel,
   disabled = false,
   className = '',
+  selectClassName = '',
 }: {
   label?: string
   ariaLabel?: string
@@ -28,9 +29,12 @@ export default function FilterSelect({
   allLabel?: string
   disabled?: boolean
   className?: string
+  selectClassName?: string
 }) {
   const id = useId()
   const screenReaderLabel = ariaLabel || label
+  const selectBase =
+    'h-9 w-full min-w-0 max-w-full px-3 bg-white dark:bg-charcoal-800 border-[1.5px] border-old-money-300 dark:border-charcoal-600 rounded-[10px] text-xs font-medium text-charcoal-700 dark:text-charcoal-200 focus:ring-2 focus:ring-gold-400 dark:focus:ring-camel-600 focus:border-transparent transition-colors dark:[color-scheme:dark]'
 
   return (
     <div className={className}>
@@ -52,7 +56,7 @@ export default function FilterSelect({
         value={value}
         onChange={(e) => onChange(e.target.value)}
         disabled={disabled}
-        className={`h-9 px-3 bg-white dark:bg-charcoal-800 border-[1.5px] border-old-money-300 dark:border-charcoal-600 rounded-[10px] text-xs font-medium text-charcoal-700 dark:text-charcoal-200 focus:ring-2 focus:ring-gold-400 dark:focus:ring-camel-600 focus:border-transparent transition-colors dark:[color-scheme:dark] ${className}`}
+        className={`${selectBase} ${selectClassName}`.trim()}
       >
         {allLabel && <option value="">{allLabel}</option>}
         {options.map((opt) => (

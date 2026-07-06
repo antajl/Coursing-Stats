@@ -1,5 +1,6 @@
 import type { MouseEvent } from 'react'
 import { Link } from 'react-router-dom'
+import OwnerCrownName from './OwnerCrownName'
 
 interface DoninoDogNameLinkProps {
   name: string
@@ -20,7 +21,9 @@ export default function DoninoDogNameLink({ name, breed, from, className = '', o
       className={`${baseClassName} ${className}`.trim()}
       onClick={onClick}
     >
-      {name}
+      <OwnerCrownName name={name} breed={breed} kind="donino">
+        {name}
+      </OwnerCrownName>
     </Link>
   )
 }

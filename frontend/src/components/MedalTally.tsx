@@ -60,6 +60,8 @@ interface MedalTallyProps {
   className?: string
   size?: keyof typeof MEDAL_SIZES
   showZero?: boolean
+  /** Одна строка — для подиума, чтобы карточки не разъезжались по высоте */
+  nowrap?: boolean
 }
 
 export default function MedalTally({
@@ -69,6 +71,7 @@ export default function MedalTally({
   className = '',
   size = 'md',
   showZero = false,
+  nowrap = false,
 }: MedalTallyProps) {
   const items: { variant: MedalVariant; count: number }[] = [
     { variant: 'gold' as const, count: gold },
@@ -84,7 +87,7 @@ export default function MedalTally({
 
   return (
     <div
-      className={`inline-flex flex-wrap items-center justify-center gap-y-1.5 ${styles.rowGap} ${className}`}
+      className={`inline-flex items-center justify-center ${nowrap ? 'flex-nowrap' : 'flex-wrap gap-y-1.5'} ${styles.rowGap} ${className}`}
     >
       {items.map(({ variant, count }) => (
         <span key={variant} className={`inline-flex items-center ${styles.itemGap}`}>

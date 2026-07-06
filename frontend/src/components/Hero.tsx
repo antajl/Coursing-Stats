@@ -38,7 +38,7 @@ export default function HeroIntro() {
         </Link>
         <Link to="/speed-records" className="btn btn-ghost">
           <Icons.speed className="h-4 w-4" strokeWidth={1.75} />
-          Донино
+          Курсинг Донино
         </Link>
       </div>
     </div>

@@ -23,8 +23,8 @@ export default function MultiFilterDropdown({
   const displayLabel = selectedCount > 0 ? `${label}: ${selectedCount}` : label
 
   return (
-    <div className={`relative ${className}`}>
-      <button type="button" onClick={onToggle} className={TOOLBAR_FILTER_BTN} aria-expanded={open}>
+    <div className={`relative w-fit shrink-0 text-left ${className}`}>
+      <button type="button" onClick={onToggle} className={`${TOOLBAR_FILTER_BTN} flex w-full`} aria-expanded={open}>
         <span className="truncate">{displayLabel}</span>
         <ChevronDown
           className={`h-3.5 w-3.5 shrink-0 text-charcoal-500 transition-transform ${open ? 'rotate-180' : ''}`}

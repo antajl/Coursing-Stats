@@ -80,6 +80,8 @@
 
 **Использование:** Racing данные, secondary actions, links
 
+**Профили Донино — замер скорости:** карточки и история с `border-warm-blue-*`, `bg-warm-blue-50`, градиент полос `from-warm-blue-400 to-warm-blue-600`
+
 #### Terracotta (терракотовые тона)
 - 50: `#fcf4ef` — очень светлый терракотовый
 - 100: `#f7e4d9` — светлый терракотовый
@@ -109,6 +111,10 @@
 
 **Использование:** Курсинг (зелёный) - статистика и история выступлений в профиле собаки
 
+**Профили Донино — бега 350 м:** карточки и история с `border-forest-*`, `bg-forest-50`, градиент полос `from-forest-400 to-forest-600`
+
+**Не путать:** warm-blue на профиле Донино = замер км/ч; forest = бега 350 м из Google Sheet. На профиле соревнований бега procoursing.ru — отдельные секции (не те же CSS-блоки).
+
 ### Алиасы (Tailwind `theme.extend.colors`)
 
 - **Gold** → Camel (primary accent)
@@ -120,6 +126,10 @@
 **`.nav-glass`** — sticky-шапка: ~8% белого / 12% чёрного + `blur(16px)`; fallback непрозрачный для браузеров без backdrop-filter.
 
 **`.placement-badge-bronze`** — круг 3-го места в `PlacementBadge` (`--terra-500` / `--terra-600`).
+
+**`.owner-crown-name`** — личная метка владельца сайта: корона слева от клички (`OwnerCrownName` + `ownerMarks.ts`).
+
+**Главная (`index.css`):** `.hero-dashboard`, `.podium-preview`, `.pod-card`, `.donino-home-columns`, `.stats-strip`, `.home-section-*` — часть лендинга в CSS, часть через Tailwind в компонентах.
 
 ### Dark Mode принципы
 
@@ -216,6 +226,26 @@ bg-white dark:bg-charcoal-800
 ```tsx
 font-mono tabular-nums
 ```
+
+### Шапка профиля собаки (`DogProfile`)
+
+Компактная одноэтажная компоновка (2026-07):
+
+```
+[←]  КЛИЧКА ♀                    [↓ скачать]
+     латинская часть (если есть)
+     [порода]
+
+────────────────────────────────────────────
+Титулы:  [Чемпион России X2] [CACL] …   ← flex-wrap чипы, не колонка справа
+```
+
+- Кнопки «назад» и «скачать» с `data-export-ignore` (не попадают в PNG-экспорт)
+- Титулы — `titleBadgeClass()` + `formatTitleLine()`, горизонтальный ряд
+
+### PageToolbar
+
+Панель фильтров: `rounded-xl border bg-cream-100/70 p-3` (`TOOLBAR_PANEL` в `lib/toolbar.ts`). Сегменты — `ToolbarSegmentControl` (pill внутри bordered group).
 
 ---
 

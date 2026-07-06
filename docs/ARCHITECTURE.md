@@ -124,7 +124,7 @@ POST /api/admin/recreate-views
 **Shell:** `App.tsx` (layout + `Nav`) → `AppRoutes.tsx` (lazy routes, code-split chunks)
 
 **Pages (lazy-loaded):**
-- `/` — `Home.tsx` (лендинг, WIP)
+- `/` — `Home.tsx` (лендинг: hero, топ сезона, рекорды Донино)
 - `/competitions` — `Competitions.tsx` (hub: Календарь, Рейтинг, Судьи)
 - `/top` — `TopDogs/index.tsx` (рейтинг: места / очки / скорость)
 - `/event/:id` — `Events/EventResults/` (модуль: racing vs scoring details)

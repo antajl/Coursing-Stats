@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { dogYearBadge } from '../lib/season'
+import OwnerCrownName from './OwnerCrownName'
 
 interface DogCardProps {
   dog: {
@@ -74,9 +75,15 @@ export default function DogCard({ dog, type, filterYear }: DogCardProps) {
     >
       <div className="flex-1 min-w-0">
         <div className="flex items-center gap-2 mb-1">
-          <h3 className="text-sm font-bold text-charcoal-800 dark:text-charcoal-100 truncate">
-            {displayName}
-          </h3>
+          <OwnerCrownName
+            name={displayName}
+            dogId={dog.dog_id}
+            kind="competition"
+          >
+            <h3 className="text-sm font-bold text-charcoal-800 dark:text-charcoal-100 truncate">
+              {displayName}
+            </h3>
+          </OwnerCrownName>
           {displayRuName && displayRuName !== displayName && (
             <span className="text-xs text-charcoal-500 dark:text-charcoal-400 truncate">
               ({displayRuName})

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import StatCounter from './StatCounter'
 import type { HeroStats } from './Hero'
 
@@ -6,24 +7,26 @@ interface StatsStripProps {
   loading?: boolean
 }
 
-export default function StatsStrip({ stats, loading = false }: StatsStripProps) {
-  const items = [
-    { value: stats?.events ?? 0, label: 'событий · 2023–2026' },
-    { value: stats?.dogs ?? 0, label: 'собак в базе' },
-    { value: stats?.results ?? 0, label: 'результатов' },
-    { value: stats?.breeds ?? 0, label: 'пород' },
-  ]
+const ITEMS = [
+  { key: 'events', label: 'событий', href: '/competitions?tab=calendar' },
+  { key: 'dogs', label: 'собак в базе', href: '/competitions?tab=ranking' },
+  { key: 'results', label: 'результатов', href: '/competitions?tab=ranking' },
+  { key: 'breeds', label: 'пород', href: '/guide' },
+] as const
 
+export default function StatsStrip({ stats, loading = false }: StatsStripProps) {
   return (
-    <div className="stats-strip">
-      {items.map(({ value, label }) => (
-        <div key={label} className="stat-chip">
-          <div className="stat-chip-num">
-            {loading ? '—' : <StatCounter value={value} />}
-          </div>
-          <div className="stat-chip-lbl">{label}</div>
-        </div>
-      ))}
+    <div className="stats-strip-wrap">
+      <div className="stats-strip">
+        {ITEMS.map(({ key, label, href }) => (
+          <Link key={key} to={href} className="stat-chip stat-chip-link">
+            <div className="stat-chip-num">
+              {loading ? '—' : <StatCounter value={stats?.[key] ?? 0} />}
+            </div>
+            <div className="stat-chip-lbl">{label}</div>
+          </Link>
+        ))}
+      </div>
     </div>
   )
 }

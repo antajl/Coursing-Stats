@@ -213,7 +213,6 @@ export default function CoursingStatsView({ view, onViewChange }: CoursingStatsV
                 selectedCount={filterBreeds.length}
                 open={openDropdown === 'breed'}
                 onToggle={() => setOpenDropdown(openDropdown === 'breed' ? null : 'breed')}
-                className="min-w-[120px]"
               >
                 {allBreeds.map((breed) => (
                   <label key={breed} className={checkboxRowClass}>

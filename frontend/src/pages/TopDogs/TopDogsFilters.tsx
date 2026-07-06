@@ -169,7 +169,7 @@ export default function TopDogsFilters({
               options={yearValues
                 .sort((a, b) => Number(b) - Number(a))
                 .map((y) => ({ value: String(y), label: String(y) }))}
-              className="min-w-[96px]"
+              className="w-[6.75rem] shrink-0"
             />
             <FilterSelect
               ariaLabel="Порода"
@@ -177,7 +177,7 @@ export default function TopDogsFilters({
               onChange={onBreedChange}
               allLabel="Все породы"
               options={breedValues.map((b) => ({ value: b, label: b }))}
-              className="hidden min-w-[120px] sm:block"
+              className="hidden w-[10.5rem] shrink-0 sm:block"
             />
             <input
               type="number"

@@ -64,12 +64,16 @@ frontend/
 │   │   ├── Nav.tsx            # Header: .nav-glass, centered links
 │   │   ├── PageLoader.tsx
 │   │   ├── ThemeToggle.tsx    # light default; localStorage.theme
+│   │   ├── toolbar/           # PageToolbar, ToolbarSegmentControl, RecordsListToolbar, …
+│   │   ├── OwnerCrownName.tsx
+│   │   ├── DoninoHomeRecordRow.tsx
+│   │   ├── PodiumRankMark.tsx, MedalTally.tsx, StatsStrip.tsx
 │   │   ├── ui/                # Custom Button, Card, Badge (NOT shadcn)
 │   │   ├── DogStatsTable.tsx
 │   │   ├── FiltersDropdown.tsx
 │   │   └── …
 │   ├── pages/
-│   │   ├── Home.tsx           # Landing (WIP)
+│   │   ├── Home.tsx           # Landing: hero, podium, Donino columns
 │   │   ├── Competitions.tsx    # Tab hub: Events, TopDogs, Judges
 │   │   ├── TopDogs/           # index, TopDogsFilters, TopDogsTabs, filterUtils
 │   │   ├── DogProfile.tsx
@@ -82,7 +86,9 @@ frontend/
 │   ├── services/api.ts
 │   └── lib/
 │       ├── query-client.tsx, icons.ts
-│       └── recordDates.ts     # Donino dates (Excel serial, dedupe)
+│       ├── toolbar.ts         # Tailwind class bundles for PageToolbar
+│       ├── ownerMarks.ts      # Owner crown marks (frontend-only)
+│       └── recordDates.ts     # Donino dates (Excel serial, dedupe, expandCoursingTimeline)
 ├── public/
 ├── package.json
 ├── vite.config.ts             # TypeScript; manualChunks for vendors
@@ -275,9 +281,55 @@ In-process Worker tests planned: **vitest@4** + **@cloudflare/vitest-pool-worker
 - ✅ `Competitions.tsx` — вложенный lazy для Events / TopDogs / Judges
 - ✅ `Nav.tsx` вынесен из `App.tsx`
 - ✅ `vite.config.ts` — `manualChunks` (vendor-react, vendor-router, vendor-query, vendor-xlsx, …)
-- 🔄 `Home.tsx` — лендинг в разработке
+- 🔄 Hero-тексты на главной — при необходимости уточнить eyebrow (годы архива vs данные в БД)
 
 Подробнее о маршрутах: см. раздел «Frontend map — навигация для ИИ-агентов» в этом файле
+
+---
+
+## PageToolbar — единый паттерн фильтров (2026-07)
+
+**Файлы:** `frontend/src/components/toolbar/`, стили в `frontend/src/lib/toolbar.ts`
+
+| Компонент | Назначение |
+|-----------|------------|
+| `PageToolbar` | Обёртка: строка фильтров, активные чипы, нижний ряд (сегменты / сортировка) |
+| `ToolbarSegmentControl` | Переключатель вкладок (медали/очки/скорость, замер/статистика, …) |
+| `ToolbarSearch` | Поиск в тулбаре |
+| `ToolbarOptionBar` | Сортировка чипами |
+| `ToolbarActiveFilters` | Сбрасываемые чипы активных фильтров |
+| `RecordsListToolbar` | Тулбар списка рекордов (скорость / coursing) |
+| `MultiFilterDropdown` | Мультивыбор в dropdown; обёртка `w-fit shrink-0` (не растягивать строку) |
+
+**Где используется:** `TopDogsFilters`, `Judges/index`, `SpeedTableTab`, `CoursingTableTab`, `SpeedStatsView`, `CoursingStatsView`, главная (сегменты топа).
+
+**`FilterSelect`:** prop `className` — только на обёртке `<div>`; у `<select>` — `w-full min-w-0`. Для породы/года задавать фиксированную ширину обёртки (`w-[10.5rem]`, `w-[6.75rem]`), иначе нативный select растягивается по самой длинной опции.
+
+---
+
+## Главная страница (`Home.tsx`)
+
+- **Hero:** `hero-dashboard` — intro + ближайшие события (`HomeEventRow`)
+- **StatsStrip:** кликабельные чипы → календарь / рейтинг / справочник
+- **Топ сезона:** `ToolbarSegmentControl` + подиум (`podium-preview`, `PodiumRankMark`, `MedalTally nowrap`)
+- **Донино:** две колонки (`donino-home-columns`) — замер и бега 350 м; строки `DoninoHomeRecordRow`
+- **Стили:** часть в `frontend/src/index.css` (`.hero-dashboard`, `.pod-card`, `.donino-home-*`, `.owner-crown-name`)
+
+---
+
+## Профили собак — соревнования vs Донино
+
+| | `/dog/:id` | `/donino-dog/:name/:breed` |
+|---|------------|----------------------------|
+| Данные | `dogs` + `results` | `speed_records` + `coursing_records` |
+| Шапка | Имя, титулы-чипы, экспорт PNG | Имя, порода, назад |
+| Дисциплины на странице | Курсинг/БЗМП, бега procoursing | Замер (warm-blue), бега 350 м (forest) |
+| История бегов 350 м | `expandCoursingTimeline(coursingRecords)` | то же |
+| Процентиль в UI | убран из блоков Донино | убран |
+
+**Важно:** у одной собаки может быть много замеров скорости и один забег 350 м в БД — это нормально (разные источники). История бегов показывает все точки из `history` JSON + текущая строка.
+
+**Owner marks:** `frontend/src/lib/ownerMarks.ts` — список кличек для короны; не связывает Донино и соревнования в D1. Редактировать только по явной просьбе владельца сайта.
 
 ---
 
@@ -610,7 +662,7 @@ npx wrangler d1 execute pc-db --command="EXPLAIN QUERY PLAN SELECT * FROM events
 
 | Path | Компонент | Описание |
 |------|-----------|----------|
-| `/` | `Home.tsx` | Лендинг (WIP): hero, счётчики, ближайшее событие |
+| `/` | `Home.tsx` | Лендинг: hero, счётчики, топ сезона, рекорды Донино |
 | `/competitions` | `Competitions.tsx` | Hub вкладок соревнований procoursing.ru |
 | `/top` | `TopDogs/index.tsx` | Прямой доступ к рейтингу (`?rankingTab=score` \| `speed`) |
 | `/dog/:id` | `DogProfile.tsx` | Профиль собаки из БД соревнований |
@@ -672,10 +724,12 @@ npx wrangler d1 execute pc-db --command="EXPLAIN QUERY PLAN SELECT * FROM events
 ```
 frontend/src/pages/TopDogs/
   index.tsx           — hooks, API, filtered data
-  TopDogsFilters.tsx  — поиск, год, FiltersDropdown
+  TopDogsFilters.tsx  — PageToolbar: поиск, год, порода, сегмент рейтинга, сортировка
   TopDogsTabs.tsx     — вкладки + DogStatsTable
   filterUtils.ts      — filterPlacement/Score/Speed
 ```
+
+Активные фильтры и сброс: `frontend/src/pages/SpeedRecords/toolbarFilters.ts` (`buildTopDogsActiveFilterChips`, …)
 
 ### SpeedRecords
 
@@ -695,6 +749,8 @@ frontend/src/pages/SpeedRecords/
 **Общие компоненты:** `frontend/src/components/SpeedHistorySparkline.tsx`, `SpeedStatusBadge.tsx`, `DogSexIcon.tsx`
 
 **Даты и статистика 350 м:** `frontend/src/lib/recordDates.ts`
+- `dedupeByRecordDate` — один пункт на календарную дату (графики замера)
+- `expandCoursingTimeline` — для профиля: все забеги 350 м (текущая строка + `history` JSON)
 
 ---
 

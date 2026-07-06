@@ -41,13 +41,35 @@ function RomanPaths({ place }: { place: PodiumPlace }) {
     )
   }
 
-  return (
-    <>
-      <path d="M15 17h18" fill="none" stroke="var(--pr-glyph)" strokeWidth={sw} strokeLinecap={cap} />
-      <path d="M15 24h18" fill="none" stroke="var(--pr-glyph)" strokeWidth={sw} strokeLinecap={cap} />
-      <path d="M15 31h18" fill="none" stroke="var(--pr-glyph)" strokeWidth={sw} strokeLinecap={cap} />
-    </>
-  )
+  if (place === 3) {
+    return (
+      <>
+        <path
+          d="M17 14.5v19"
+          fill="none"
+          stroke="var(--pr-glyph)"
+          strokeWidth={sw}
+          strokeLinecap={cap}
+        />
+        <path
+          d="M24 14.5v19"
+          fill="none"
+          stroke="var(--pr-glyph)"
+          strokeWidth={sw}
+          strokeLinecap={cap}
+        />
+        <path
+          d="M31 14.5v19"
+          fill="none"
+          stroke="var(--pr-glyph)"
+          strokeWidth={sw}
+          strokeLinecap={cap}
+        />
+      </>
+    )
+  }
+
+  return null
 }
 
 export default function PodiumRankMark({

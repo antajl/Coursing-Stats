@@ -168,7 +168,8 @@ npm run test-parser-fixtures
 
 - ✅ API на Cloudflare Worker (Hono): `/api/competitions`, `/api/dogs`, `/api/top/*`, `/api/judges`, `/api/speed-records`, `/api/coursing-records`
 - ✅ Фронтенд на Cloudflare Pages с полной мобильной адаптацией
-- ✅ Разделы: Главная (WIP), Соревнования, Судьи, Рекорды Донино, Профиль собаки, Результаты события
+- ✅ Разделы: Главная (hero, топ сезона, рекорды Донино), Соревнования, Судьи, Рекорды Донино, Профиль собаки, Профиль Донино, Результаты события
+- ✅ Единый паттерн тулбара (`PageToolbar`) на рейтинге, судьях, рекордах Донино
 - ✅ Lazy routes + code-splitting (`AppRoutes.tsx`, `vite.config.ts` с `manualChunks`; крупные страницы разбиты на модули)
 - ✅ Календарь событий: единый список `EventListRow`, inline-фильтры, `participants_count` в API
 - ✅ UI polish: матовый `nav-glass`, светлая тема по умолчанию, календарь/рейтинг/Донино/результаты
@@ -186,7 +187,7 @@ npm run test-parser-fixtures
 - ❌ Sentry DSN не настроен (конфигурация создана, проект в Sentry не создан)
 - 🔄 Модульные парсеры v2 в продакшен-reparse (`reparse-by-year.ts`); v1 `parse-results-*.ts` — legacy/CLI
 - 🔄 In-process Worker-тесты — `api.test.ts` пропущен; планируется vitest@4 + `@cloudflare/vitest-pool-workers`; пока `npm run smoke-api` с dev-сервером
-- 🔄 `Home.tsx` — WIP лендинг
+- 🔄 Тексты hero на главной (eyebrow/заголовок) — при необходимости уточнить формулировки про годы архива vs результаты в БД
 - 🔄 Список «Замер скорости» / «Бега борзых» — карточки (не HTML-таблица), limit=1000; статистика (`?view=stats`) — limit=10000; см. `SPEED-RECORDS.md`
 - 📋 Подробнее: `FUTURE-PLANS.md`
 
