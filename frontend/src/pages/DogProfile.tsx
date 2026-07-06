@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react'
 import { useParams, Link, useNavigate, useLocation } from 'react-router-dom'
+import { ChevronLeft } from 'lucide-react'
 import { useDogProfile, useDogEvents, useDogSpeedRecords, useSpeedRecordsByBreed, useDogCoursingRecords, useCoursingRecordsByBreed } from '../hooks/useApi'
 import { formatRecordDate, dedupeByRecordDate } from '../lib/recordDates'
 import { formatTitleLine, titleBadgeClass, type DogTitle } from '../lib/qualificationTitles'
@@ -192,8 +193,11 @@ export default function DogProfile() {
   const formatScore = (v) =>
     v !== undefined && v !== null ? parseFloat(v).toFixed(2) : '—'
 
-  const bestScoreUrl = coursing.best_score_event_url || null
-  const bestSpeedUrl = racing.best_speed_event_url || null
+  const bestScoreEventId = coursing.best_score_event_id || null
+  const bestJudgeScoreEventId = coursing.best_judge_score_event_id || null
+  const avgJudgeScoreEventId = coursing.avg_judge_score_event_id || null
+  const bestSpeedEventId = racing.best_speed_event_id || null
+  const avgSpeedEventId = racing.avg_speed_event_id || null
 
   // SEO данные
   const dogName = dog.name_lat || dog.name_ru || 'Собака'
@@ -214,13 +218,12 @@ export default function DogProfile() {
       <div className="max-w-4xl mx-auto">
         <div className="flex items-center justify-between mb-4 md:mb-6 flex-wrap gap-2">
           <button
-            onClick={() => {
-              navigate(-1)
-            }}
-            className="font-medium text-camel-700 dark:text-camel-300 transition-colors hover:text-camel-800 dark:hover:text-camel-200"
+            type="button"
+            onClick={() => navigate(-1)}
+            className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-old-money-200 bg-white/90 text-old-money-600 shadow-sm transition-colors hover:border-old-money-300 hover:bg-old-money-50 hover:text-camel-700 dark:border-charcoal-600 dark:bg-charcoal-800 dark:text-old-money-400 dark:hover:border-charcoal-500 dark:hover:bg-charcoal-700 dark:hover:text-camel-400"
+            aria-label="Назад"
           >
-            <span className="md:hidden">← Назад</span>
-            <span className="hidden md:inline">← Назад</span>
+            <ChevronLeft className="h-4 w-4" aria-hidden />
           </button>
           <button
             onClick={handleExport}
@@ -328,11 +331,9 @@ export default function DogProfile() {
                   <div className="rounded-2xl border-2 border-forest-200 dark:border-forest-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
                     <h2 className="text-lg md:text-xl font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 mb-4">Курсинг / БЗМП</h2>
 
-                    {bestScoreUrl ? (
-                      <a
-                        href={bestScoreUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    {bestScoreEventId ? (
+                      <Link
+                        to={`/event/${bestScoreEventId}`}
                         className="group mb-4 block rounded-xl border-2 border-forest-200 dark:border-forest-600 bg-forest-50 dark:bg-charcoal-700 p-4 text-center transition-colors hover:bg-forest-100 dark:hover:bg-charcoal-600"
                       >
                         <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2 uppercase tracking-wide">Лучший результат</div>
@@ -340,9 +341,9 @@ export default function DogProfile() {
                           {coursing.best_score ?? '—'}
                         </div>
                         <div className="mt-2 text-sm text-forest-600 dark:text-forest-500 opacity-0 transition-opacity group-hover:opacity-100 font-medium">
-                          открыть протокол →
+                          открыть результаты →
                         </div>
-                      </a>
+                      </Link>
                     ) : (
                       <div className="mb-4 rounded-xl border-2 border-forest-200 dark:border-forest-600 bg-forest-50 dark:bg-charcoal-700 p-4 text-center">
                         <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2 uppercase tracking-wide">Лучший результат</div>
@@ -352,15 +353,35 @@ export default function DogProfile() {
                       </div>
                     )}
 
-                    <div className="grid grid-cols-2 gap-3 mb-4">
-                      <div className="bg-forest-50 dark:bg-charcoal-700 rounded-xl p-4 text-center border border-forest-200 dark:border-forest-600">
-                        <div className="text-xs font-semibold text-old-money-500 dark:text-old-money-400 mb-1 uppercase tracking-wide">Участий</div>
-                        <div className="text-2xl font-bold text-charcoal-800 dark:text-charcoal-100">{coursing.total_starts}</div>
-                      </div>
-                      <div className="bg-forest-50 dark:bg-charcoal-700 rounded-xl p-4 text-center border border-forest-200 dark:border-forest-600">
-                        <div className="text-xs font-semibold text-old-money-500 dark:text-old-money-400 mb-1 uppercase tracking-wide">Средний</div>
-                        <div className="text-2xl font-bold text-charcoal-800 dark:text-charcoal-100">{formatScore(coursing.avg_score)}</div>
-                      </div>
+                    <div className="grid grid-cols-3 gap-3 mb-4">
+                      {bestJudgeScoreEventId ? (
+                        <Link
+                          to={`/event/${bestJudgeScoreEventId}`}
+                          className="group bg-forest-50 dark:bg-charcoal-700 rounded-xl p-4 text-center border border-forest-200 dark:border-forest-600 hover:bg-forest-100 dark:hover:bg-charcoal-600 transition-colors"
+                        >
+                          <div className="text-xs font-semibold text-old-money-500 dark:text-old-money-400 mb-1 uppercase tracking-wide">Лучшая оценка</div>
+                          <div className="text-2xl font-bold text-charcoal-800 dark:text-charcoal-100 group-hover:text-forest-700 dark:group-hover:text-forest-300">{formatScore(coursing.best_judge_score)}</div>
+                        </Link>
+                      ) : (
+                        <div className="bg-forest-50 dark:bg-charcoal-700 rounded-xl p-4 text-center border border-forest-200 dark:border-forest-600">
+                          <div className="text-xs font-semibold text-old-money-500 dark:text-old-money-400 mb-1 uppercase tracking-wide">Лучшая оценка</div>
+                          <div className="text-2xl font-bold text-charcoal-800 dark:text-charcoal-100">{formatScore(coursing.best_judge_score)}</div>
+                        </div>
+                      )}
+                      {avgJudgeScoreEventId ? (
+                        <Link
+                          to={`/event/${avgJudgeScoreEventId}`}
+                          className="group bg-forest-50 dark:bg-charcoal-700 rounded-xl p-4 text-center border border-forest-200 dark:border-forest-600 hover:bg-forest-100 dark:hover:bg-charcoal-600 transition-colors"
+                        >
+                          <div className="text-xs font-semibold text-old-money-500 dark:text-old-money-400 mb-1 uppercase tracking-wide">Средняя оценка</div>
+                          <div className="text-2xl font-bold text-charcoal-800 dark:text-charcoal-100 group-hover:text-forest-700 dark:group-hover:text-forest-300">{formatScore(coursing.avg_judge_score)}</div>
+                        </Link>
+                      ) : (
+                        <div className="bg-forest-50 dark:bg-charcoal-700 rounded-xl p-4 text-center border border-forest-200 dark:border-forest-600">
+                          <div className="text-xs font-semibold text-old-money-500 dark:text-old-money-400 mb-1 uppercase tracking-wide">Средняя оценка</div>
+                          <div className="text-2xl font-bold text-charcoal-800 dark:text-charcoal-100">{formatScore(coursing.avg_judge_score)}</div>
+                        </div>
+                      )}
                     </div>
 
                     {hasCourseMedals && (
@@ -398,7 +419,12 @@ export default function DogProfile() {
                             </div>
                           </div>
                           <div className="mt-1 flex items-center justify-between gap-3">
-                            <div className="font-semibold text-charcoal-800 dark:text-charcoal-100">{event.date_start}</div>
+                            <div className="font-semibold text-charcoal-800 dark:text-charcoal-100">
+                              {event.date_start ? (() => {
+                                const [year, month, day] = event.date_start.split('-')
+                                return `${day}.${month}.${year}`
+                              })() : '—'}
+                            </div>
                             <div className="flex items-baseline gap-2 shrink-0 text-right">
                               {event.placement && (
                                 <span className="text-base font-bold text-forest-700 dark:text-forest-400">#{event.placement}</span>
@@ -430,11 +456,9 @@ export default function DogProfile() {
                   <div className="rounded-2xl border-2 border-warm-blue-200 dark:border-warm-blue-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
                     <h2 className="mb-4 text-lg font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 md:text-xl">Бега борзых</h2>
 
-                    {bestSpeedUrl ? (
-                      <a
-                        href={bestSpeedUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    {bestSpeedEventId ? (
+                      <Link
+                        to={`/event/${bestSpeedEventId}`}
                         className="group mb-4 block rounded-xl border-2 border-warm-blue-200 dark:border-warm-blue-600 bg-warm-blue-50 dark:bg-charcoal-700 p-4 text-center transition-colors hover:bg-warm-blue-100 dark:hover:bg-charcoal-600"
                       >
                         <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2 uppercase tracking-wide">Лучшая скорость</div>
@@ -443,9 +467,9 @@ export default function DogProfile() {
                           {racing.best_speed && <span className="text-base font-normal text-gray-400 dark:text-gray-500 ml-2">км/ч</span>}
                         </div>
                         <div className="mt-2 text-sm text-warm-blue-600 opacity-0 transition-opacity group-hover:opacity-100 font-medium">
-                          открыть протокол →
+                          открыть результаты →
                         </div>
-                      </a>
+                      </Link>
                     ) : (
                       <div className="mb-4 rounded-xl border-2 border-warm-blue-200 dark:border-warm-blue-600 bg-warm-blue-50 dark:bg-charcoal-700 p-4 text-center">
                         <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2 uppercase tracking-wide">Лучшая скорость</div>
@@ -461,15 +485,30 @@ export default function DogProfile() {
                         <div className="text-xs font-semibold text-old-money-500 dark:text-old-money-400 mb-1 uppercase tracking-wide">Участий</div>
                         <div className="text-2xl font-bold text-warm-blue-900 dark:text-warm-blue-400">{racing.total_starts}</div>
                       </div>
-                      <div className="rounded-xl bg-warm-blue-50 dark:bg-charcoal-700 p-4 text-center border border-warm-blue-200 dark:border-warm-blue-600">
-                        <div className="text-xs font-semibold text-old-money-500 dark:text-old-money-400 mb-1 uppercase tracking-wide">Средняя</div>
-                        <div className="whitespace-nowrap text-2xl font-bold text-warm-blue-900 dark:text-warm-blue-400">
-                          {racing.avg_speed
-                            ? <>{racing.avg_speed}<span className="text-sm font-normal text-gray-400 dark:text-gray-500 ml-1">км/ч</span></>
-                            : '—'
-                          }
+                      {avgSpeedEventId ? (
+                        <Link
+                          to={`/event/${avgSpeedEventId}`}
+                          className="group rounded-xl bg-warm-blue-50 dark:bg-charcoal-700 p-4 text-center border border-warm-blue-200 dark:border-warm-blue-600 hover:bg-warm-blue-100 dark:hover:bg-charcoal-600 transition-colors"
+                        >
+                          <div className="text-xs font-semibold text-old-money-500 dark:text-old-money-400 mb-1 uppercase tracking-wide">Средняя</div>
+                          <div className="whitespace-nowrap text-2xl font-bold text-warm-blue-900 dark:text-warm-blue-400 group-hover:text-warm-blue-800 dark:group-hover:text-warm-blue-300">
+                            {racing.avg_speed
+                              ? <>{racing.avg_speed}<span className="text-sm font-normal text-gray-400 dark:text-gray-500 ml-1">км/ч</span></>
+                              : '—'
+                            }
+                          </div>
+                        </Link>
+                      ) : (
+                        <div className="rounded-xl bg-warm-blue-50 dark:bg-charcoal-700 p-4 text-center border border-warm-blue-200 dark:border-warm-blue-600">
+                          <div className="text-xs font-semibold text-old-money-500 dark:text-old-money-400 mb-1 uppercase tracking-wide">Средняя</div>
+                          <div className="whitespace-nowrap text-2xl font-bold text-warm-blue-900 dark:text-warm-blue-400">
+                            {racing.avg_speed
+                              ? <>{racing.avg_speed}<span className="text-sm font-normal text-gray-400 dark:text-gray-500 ml-1">км/ч</span></>
+                              : '—'
+                            }
+                          </div>
                         </div>
-                      </div>
+                      )}
                     </div>
 
                     {hasRacingMedals && (
@@ -507,7 +546,12 @@ export default function DogProfile() {
                             </div>
                           </div>
                           <div className="mt-1 flex items-center justify-between gap-3">
-                            <div className="font-semibold text-charcoal-800 dark:text-charcoal-100">{event.date_start}</div>
+                            <div className="font-semibold text-charcoal-800 dark:text-charcoal-100">
+                              {event.date_start ? (() => {
+                                const [year, month, day] = event.date_start.split('-')
+                                return `${day}.${month}.${year}`
+                              })() : '—'}
+                            </div>
                             {event.placement && (
                               <span className="text-base font-bold text-warm-blue-700 dark:text-warm-blue-400 shrink-0">#{event.placement}</span>
                             )}

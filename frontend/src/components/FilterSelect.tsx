@@ -25,7 +25,7 @@ export default function FilterSelect({
   value: string
   onChange: (value: string) => void
   options: { value: string; label: string }[]
-  allLabel: string
+  allLabel?: string
   disabled?: boolean
   className?: string
 }) {
@@ -52,9 +52,9 @@ export default function FilterSelect({
         value={value}
         onChange={(e) => onChange(e.target.value)}
         disabled={disabled}
-        className="w-full h-9 px-3 bg-white dark:bg-charcoal-800 border-[1.5px] border-old-money-300 dark:border-charcoal-600 rounded-[10px] text-xs font-medium text-charcoal-700 dark:text-charcoal-200 focus:ring-2 focus:ring-gold-400 dark:focus:ring-camel-600 focus:border-transparent transition-colors dark:[color-scheme:dark]"
+        className={`h-9 px-3 bg-white dark:bg-charcoal-800 border-[1.5px] border-old-money-300 dark:border-charcoal-600 rounded-[10px] text-xs font-medium text-charcoal-700 dark:text-charcoal-200 focus:ring-2 focus:ring-gold-400 dark:focus:ring-camel-600 focus:border-transparent transition-colors dark:[color-scheme:dark] ${className}`}
       >
-        <option value="">{allLabel}</option>
+        {allLabel && <option value="">{allLabel}</option>}
         {options.map((opt) => (
           <option key={opt.value} value={opt.value}>
             {opt.label}

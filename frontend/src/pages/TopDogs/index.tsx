@@ -40,39 +40,46 @@ export default function TopDogs() {
     setActiveTab(parseRankingTab(searchParams.get('rankingTab')))
   }, [searchParams])
   const [filterBreed, setFilterBreed] = useState(() => searchParams.get('breed') || '')
-  const [filterYear, setFilterYear] = useState(() => searchParams.get('year') || '2026')
+  const [filterYear, setFilterYear] = useState(() => searchParams.get('year') || '')
   const [searchQuery, setSearchQuery] = useState(() => searchParams.get('search') || '')
   const [isInitialLoad, setIsInitialLoad] = useState(true)
 
-  const [filterStartsFrom, setFilterStartsFrom] = useState(() => searchParams.get('startsFrom') || '')
-  const [filterStartsTo, setFilterStartsTo] = useState(() => searchParams.get('startsTo') || '')
+  const [filterMinStarts, setFilterMinStarts] = useState(() => searchParams.get('minStarts') || '')
   const [filterScoreFrom, setFilterScoreFrom] = useState(() => searchParams.get('scoreFrom') || '')
-  const [filterScoreTo, setFilterScoreTo] = useState(() => searchParams.get('scoreTo') || '')
-  const [filterScoreType, setFilterScoreType] = useState(() => searchParams.get('scoreType') || 'best')
   const [filterSpeedFrom, setFilterSpeedFrom] = useState(() => searchParams.get('speedFrom') || '')
-  const [filterSpeedTo, setFilterSpeedTo] = useState(() => searchParams.get('speedTo') || '')
-  const [filterSpeedType, setFilterSpeedType] = useState(() => searchParams.get('speedType') || 'best')
+  const [scoreSortBy, setScoreSortBy] = useState<'best_score' | 'best_judge_score' | 'avg_judge_score'>(() =>
+    (searchParams.get('scoreSortBy') as 'best_score' | 'best_judge_score' | 'avg_judge_score') || 'best_score'
+  )
+  const [placementSortBy, setPlacementSortBy] = useState<'gold' | 'silver' | 'bronze' | 'total'>(() =>
+    (searchParams.get('placementSortBy') as 'gold' | 'silver' | 'bronze' | 'total') || 'gold'
+  )
+  const [speedSortBy, setSpeedSortBy] = useState<'best_speed' | 'avg_speed'>(() =>
+    (searchParams.get('speedSortBy') as 'best_speed' | 'avg_speed') || 'best_speed'
+  )
 
   const { data: breedsData, isLoading: breedsLoading } = useBreeds()
   const { data: yearsData, isLoading: yearsLoading } = useYears()
   const { data: topPlacementData, isLoading: placementLoading } = useTopPlacement(
     filterYear,
     filterBreed,
-    parseInt(filterStartsFrom) || 0,
+    parseInt(filterMinStarts) || 0,
+    placementSortBy,
     null,
     0
   )
   const { data: topScoreData, isLoading: scoreLoading } = useTopScore(
     filterYear,
     filterBreed,
-    parseInt(filterStartsFrom) || 0,
+    parseInt(filterMinStarts) || 0,
+    scoreSortBy,
     null,
     0
   )
   const { data: topSpeedData, isLoading: speedLoading } = useTopSpeed(
     filterYear,
     filterBreed,
-    parseInt(filterStartsFrom) || 0,
+    parseInt(filterMinStarts) || 0,
+    speedSortBy,
     null,
     0
   )
@@ -117,14 +124,9 @@ export default function TopDogs() {
 
   const filterParams = {
     searchQuery,
-    filterStartsFrom,
-    filterStartsTo,
+    filterMinStarts,
     filterScoreFrom,
-    filterScoreTo,
-    filterScoreType,
     filterSpeedFrom,
-    filterSpeedTo,
-    filterSpeedType,
   }
 
   const filteredPlacement = filterPlacement(topPlacement, filterParams)
@@ -134,14 +136,12 @@ export default function TopDogs() {
   const handleResetFilters = () => {
     setFilterYear('2026')
     setFilterBreed('')
-    setFilterStartsFrom('')
-    setFilterStartsTo('')
+    setFilterMinStarts('')
     setFilterScoreFrom('')
-    setFilterScoreTo('')
-    setFilterScoreType('best')
     setFilterSpeedFrom('')
-    setFilterSpeedTo('')
-    setFilterSpeedType('best')
+    setScoreSortBy('best_score')
+    setPlacementSortBy('gold')
+    setSpeedSortBy('best_speed')
   }
 
   return (
@@ -155,23 +155,14 @@ export default function TopDogs() {
         filterBreed={filterBreed}
         onBreedChange={setFilterBreed}
         breedValues={breedValues}
-        filterStartsFrom={filterStartsFrom}
-        onStartsFromChange={setFilterStartsFrom}
-        filterStartsTo={filterStartsTo}
-        onStartsToChange={setFilterStartsTo}
+        filterMinStarts={filterMinStarts}
+        onMinStartsChange={setFilterMinStarts}
         filterScoreFrom={filterScoreFrom}
         onScoreFromChange={setFilterScoreFrom}
-        filterScoreTo={filterScoreTo}
-        onScoreToChange={setFilterScoreTo}
-        filterScoreType={filterScoreType}
-        onScoreTypeChange={setFilterScoreType}
         filterSpeedFrom={filterSpeedFrom}
         onSpeedFromChange={setFilterSpeedFrom}
-        filterSpeedTo={filterSpeedTo}
-        onSpeedToChange={setFilterSpeedTo}
-        filterSpeedType={filterSpeedType}
-        onSpeedTypeChange={setFilterSpeedType}
         onResetFilters={handleResetFilters}
+        activeTab={activeTab}
       />
 
       <TopDogsTabs
@@ -182,6 +173,12 @@ export default function TopDogs() {
         filteredSpeed={filteredSpeed}
         filterYear={filterYear}
         filterBreed={filterBreed}
+        scoreSortBy={scoreSortBy}
+        onScoreSortByChange={setScoreSortBy}
+        placementSortBy={placementSortBy}
+        onPlacementSortByChange={setPlacementSortBy}
+        speedSortBy={speedSortBy}
+        onSpeedSortByChange={setSpeedSortBy}
       />
     </div>
   )

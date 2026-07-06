@@ -119,8 +119,19 @@ SELECT
   d.breed,
   e.year,
   MAX(r.total_score) AS best_score,
-  ROUND(AVG(r.total_score), 2) AS avg_score,
-  COUNT(*) AS total_starts
+  COUNT(*) AS total_starts,
+  MAX(
+    (SELECT MAX(CAST(json_extract(j.value, '$.sum') AS REAL))
+     FROM json_each(json_extract(r.raw_scores_json, '$.heats')) AS h,
+          json_each(json_extract(h.value, '$.judges')) AS j
+     WHERE json_extract(j.value, '$.sum') IS NOT NULL)
+  ) AS best_judge_score,
+  ROUND(
+    (SELECT AVG(CAST(json_extract(j.value, '$.sum') AS REAL))
+     FROM json_each(json_extract(r.raw_scores_json, '$.heats')) AS h,
+          json_each(json_extract(h.value, '$.judges')) AS j
+     WHERE json_extract(j.value, '$.sum') IS NOT NULL)
+  , 2) AS avg_judge_score
 FROM results r
 JOIN dogs d ON d.id = r.dog_id
 JOIN events e ON r.event_id = e.id

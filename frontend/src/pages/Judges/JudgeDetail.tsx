@@ -156,15 +156,9 @@ export default function JudgeDetail() {
       </div>
 
       {/* Общая статистика */}
-      <div className="grid grid-cols-2 gap-4 mb-6">
-        <div className="rounded-2xl border-2 border-old-money-200 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 p-6 shadow-md">
-          <div className="text-sm text-old-money-600 dark:text-old-money-400 mb-1">Всего оценок</div>
-          <div className="text-3xl font-bold text-charcoal-800 dark:text-charcoal-100">{judgeData.total_evaluations || 0}</div>
-        </div>
-        <div className="rounded-2xl border-2 border-old-money-200 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 p-6 shadow-md">
-          <div className="text-sm text-old-money-600 dark:text-old-money-400 mb-1">Средняя оценка</div>
-          <div className="text-3xl font-bold text-charcoal-800 dark:text-charcoal-100">{judgeData.avg_score ? judgeData.avg_score.toFixed(2) : '-'}</div>
-        </div>
+      <div className="rounded-2xl border-2 border-old-money-200 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 p-6 shadow-md mb-6">
+        <div className="text-sm text-old-money-600 dark:text-old-money-400 mb-1">Средняя оценка</div>
+        <div className="text-3xl font-bold text-charcoal-800 dark:text-charcoal-100">{judgeData.avg_score ? judgeData.avg_score.toFixed(2) : '-'}</div>
       </div>
 
       {/* Статистика по породам */}
@@ -183,14 +177,10 @@ export default function JudgeDetail() {
                     <div className="font-bold text-old-money-800 dark:text-old-money-300">{stat.breed}</div>
                     <div className="text-camel-700 dark:text-camel-400">{expandedBreed === stat.breed ? '▼' : '▶'}</div>
                   </div>
-                  <div className="grid grid-cols-3 gap-2 text-xs mb-2">
+                  <div className="grid grid-cols-2 gap-2 text-xs mb-2">
                     <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center">
                       <div className="text-old-money-500 dark:text-old-money-400">Оцениваний</div>
                       <div className="font-bold text-old-money-800 dark:text-old-money-300">{stat.evaluations_count || 0}</div>
-                    </div>
-                    <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center">
-                      <div className="text-old-money-500 dark:text-old-money-400">Оценок</div>
-                      <div className="font-bold text-old-money-800 dark:text-old-money-300">{stat.count}</div>
                     </div>
                     <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center">
                       <div className="text-old-money-500 dark:text-old-money-400">Средняя</div>
@@ -243,12 +233,6 @@ export default function JudgeDetail() {
                 </th>
                 <th 
                   className="cursor-pointer px-3 py-2 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-100 dark:hover:bg-charcoal-600"
-                  onClick={() => handleBreedSort('count')}
-                >
-                  Оценок {breedSortField === 'count' && (breedSortDirection === 'asc' ? '↑' : '↓')}
-                </th>
-                <th 
-                  className="cursor-pointer px-3 py-2 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-100 dark:hover:bg-charcoal-600"
                   onClick={() => handleBreedSort('avg_score')}
                 >
                   Средняя {breedSortField === 'avg_score' && (breedSortDirection === 'asc' ? '↑' : '↓')}
@@ -279,14 +263,13 @@ export default function JudgeDetail() {
                       {expandedBreed === stat.breed ? ' ▼' : ' ▶'}
                     </td>
                     <td className="px-3 py-2 text-center text-sm text-old-money-800 dark:text-old-money-300">{stat.evaluations_count || 0}</td>
-                    <td className="px-3 py-2 text-center text-sm text-old-money-800 dark:text-old-money-300">{stat.count}</td>
                     <td className="px-3 py-2 text-center text-sm text-old-money-800 dark:text-old-money-300">{stat.avg_score ? stat.avg_score.toFixed(2) : '-'}</td>
                     <td className="px-3 py-2 text-center text-sm text-old-money-800 dark:text-old-money-300">{stat.min_score || '-'}</td>
                     <td className="px-3 py-2 text-center text-sm text-old-money-800 dark:text-old-money-300">{stat.max_score || '-'}</td>
                   </tr>
                   {expandedBreed === stat.breed && (
                     <tr className="hover:bg-old-money-50 dark:hover:bg-charcoal-700 transition-colors">
-                      <td colSpan={6} className="px-3 py-4 bg-old-money-50 dark:bg-charcoal-700">
+                      <td colSpan={4} className="px-3 py-4 bg-old-money-50 dark:bg-charcoal-700">
                         {stat.dogs && stat.dogs.length > 0 ? (
                           <table className="w-full divide-y divide-old-money-200">
                             <thead>
@@ -377,14 +360,10 @@ export default function JudgeDetail() {
               {sortedCriteria.map((stat, idx) => (
                 <div key={idx} className="bg-old-money-50 dark:bg-charcoal-700 rounded-xl p-4">
                   <div className="font-bold text-old-money-800 dark:text-old-money-300 mb-3">{stat.name}</div>
-                  <div className="grid grid-cols-3 gap-2 text-xs">
+                  <div className="grid grid-cols-2 gap-2 text-xs">
                     <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center">
                       <div className="text-old-money-500 dark:text-old-money-400">Оцениваний</div>
                       <div className="font-bold text-old-money-800 dark:text-old-money-300">{stat.evaluations_count || 0}</div>
-                    </div>
-                    <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center">
-                      <div className="text-old-money-500 dark:text-old-money-400">Оценок</div>
-                      <div className="font-bold text-old-money-800 dark:text-old-money-300">{stat.count}</div>
                     </div>
                     <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center">
                       <div className="text-old-money-500 dark:text-old-money-400">Средняя</div>
@@ -424,12 +403,6 @@ export default function JudgeDetail() {
                 </th>
                 <th 
                   className="cursor-pointer px-3 py-2 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-100 dark:hover:bg-charcoal-600"
-                  onClick={() => handleCriteriaSort('count')}
-                >
-                  Оценок {criteriaSortField === 'count' && (criteriaSortDirection === 'asc' ? '↑' : '↓')}
-                </th>
-                <th 
-                  className="cursor-pointer px-3 py-2 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-100 dark:hover:bg-charcoal-600"
                   onClick={() => handleCriteriaSort('avg_score')}
                 >
                   Средняя {criteriaSortField === 'avg_score' && (criteriaSortDirection === 'asc' ? '↑' : '↓')}
@@ -453,7 +426,6 @@ export default function JudgeDetail() {
                 <tr key={idx}>
                   <td className="px-3 py-2 text-sm text-old-money-800 dark:text-old-money-300">{stat.name}</td>
                   <td className="px-3 py-2 text-center text-sm text-old-money-800 dark:text-old-money-300">{stat.evaluations_count || 0}</td>
-                  <td className="px-3 py-2 text-center text-sm text-old-money-800 dark:text-old-money-300">{stat.count}</td>
                   <td className="px-3 py-2 text-center text-sm text-old-money-800 dark:text-old-money-300">{stat.avg_score ? stat.avg_score.toFixed(2) : '-'}</td>
                   <td className="px-3 py-2 text-center text-sm text-old-money-800 dark:text-old-money-300">{stat.min_score || '-'}</td>
                   <td className="px-3 py-2 text-center text-sm text-old-money-800 dark:text-old-money-300">{stat.max_score || '-'}</td>

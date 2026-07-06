@@ -77,7 +77,11 @@ export default function EventResults() {
 
   // SEO данные
   const eventType = event.competition_kind === 'coursing' ? 'курсинг' : event.competition_kind === 'racing' ? 'бега борзых' : event.competition_kind === 'bzmp' ? 'БЗМП' : 'соревнования'
-  const eventDate = event.event_date ? new Date(event.event_date).toLocaleDateString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' }) : ''
+  const eventDate = event.event_date ? (() => {
+    const [year, month, day] = event.event_date.split('-')
+    const date = new Date(parseInt(year), parseInt(month) - 1, parseInt(day))
+    return date.toLocaleDateString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' })
+  })() : ''
   const eventName = event.title || event.full_title || 'Соревнования'
   const description = `Результаты соревнований по ${eventType} ${eventDate} в ${event.location || ''}. ${results.length} участников. Статистика и результаты.`
 

@@ -7,6 +7,13 @@ export function formatDate(dateStr: string | null | undefined): string {
   return `${day}.${month}.${year}`
 }
 
+export function formatDateLong(dateStr: string | null | undefined): string {
+  if (!dateStr) return ''
+  const [year, month, day] = dateStr.split('-')
+  const date = new Date(parseInt(year), parseInt(month) - 1, parseInt(day))
+  return date.toLocaleDateString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' })
+}
+
 export function groupResultsByBreedClass(results: Result[]): {
   grouped: Record<string, Result[]>
   sortedGroups: string[]

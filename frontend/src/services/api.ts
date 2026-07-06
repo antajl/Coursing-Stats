@@ -132,11 +132,12 @@ export const api = {
     return fetchAPI(`${API_URL}/api/stats`)
   },
 
-  async getTopPlacement(year = '', breed = '', minStarts = 0, limit = null, offset = 0) {
+  async getTopPlacement(year = '', breed = '', minStarts = 0, sortBy = 'gold', limit = null, offset = 0) {
     const params = new URLSearchParams();
     if (year) params.append('year', year);
     if (breed) params.append('breed', breed);
     if (minStarts > 0) params.append('minStarts', minStarts.toString());
+    if (sortBy) params.append('sortBy', sortBy);
     if (limit !== null) {
       params.append('limit', limit.toString());
       params.append('offset', offset.toString());
@@ -148,11 +149,12 @@ export const api = {
     return fetchWithFallback(url, mockData);
   },
 
-  async getTopScore(year = '', breed = '', minStarts = 0, limit = null, offset = 0) {
+  async getTopScore(year = '', breed = '', minStarts = 0, sortBy = 'best_score', limit = null, offset = 0) {
     const params = new URLSearchParams();
     if (year) params.append('year', year);
     if (breed) params.append('breed', breed);
     if (minStarts > 0) params.append('minStarts', minStarts.toString());
+    if (sortBy) params.append('sortBy', sortBy);
     if (limit !== null) {
       params.append('limit', limit.toString());
       params.append('offset', offset.toString());
@@ -164,11 +166,12 @@ export const api = {
     return fetchWithFallback(url, mockData);
   },
 
-  async getTopSpeed(year = '', breed = '', minStarts = 0, limit = null, offset = 0) {
+  async getTopSpeed(year = '', breed = '', minStarts = 0, sortBy = 'best_speed', limit = null, offset = 0) {
     const params = new URLSearchParams();
     if (year) params.append('year', year);
     if (breed) params.append('breed', breed);
     if (minStarts > 0) params.append('minStarts', minStarts.toString());
+    if (sortBy) params.append('sortBy', sortBy);
     if (limit !== null) {
       params.append('limit', limit.toString());
       params.append('offset', offset.toString());

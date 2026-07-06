@@ -44,17 +44,27 @@ async function queryWithPagination(db: any, query: string, params: any[], pagina
 }
 
 export function handleTop(app: Hono<{ Bindings: Env }>) {
-  // GET /api/top/placement?breed=&year=&minStarts=&limit=&offset=
+  // GET /api/top/placement?breed=&year=&minStarts=&sortBy=&limit=&offset=
   app.get('/api/top/placement', async (c) => {
     const db = c.env.DB;
     const breed = c.req.query('breed') || '';
     const year = c.req.query('year') || '';
     const minStarts = parseInt(c.req.query('minStarts')) || 0;
+    const sortBy = c.req.query('sortBy') || 'gold';
     const pagination = parsePagination(c);
 
     const params = [];
 
     let query;
+    let orderBy = 'gold DESC, silver DESC, bronze DESC';
+    if (sortBy === 'silver') {
+      orderBy = 'silver DESC, gold DESC, bronze DESC';
+    } else if (sortBy === 'bronze') {
+      orderBy = 'bronze DESC, gold DESC, silver DESC';
+    } else if (sortBy === 'total') {
+      orderBy = '(gold + silver + bronze) DESC, gold DESC, silver DESC, bronze DESC';
+    }
+
     if (year) {
       query = 'SELECT * FROM v_top_by_placement WHERE year = ?';
       params.push(year);
@@ -67,6 +77,7 @@ export function handleTop(app: Hono<{ Bindings: Env }>) {
         query += ' AND total_starts >= ?';
         params.push(minStarts);
       }
+      query += ` ORDER BY ${orderBy}`;
     } else {
       query = `
         SELECT
@@ -81,7 +92,7 @@ export function handleTop(app: Hono<{ Bindings: Env }>) {
         FROM results r
         JOIN dogs d ON d.id = r.dog_id
         JOIN events e ON r.event_id = e.id
-        WHERE r.status = 'finished' AND e.event_type IN ('coursing', 'bzmp')
+        WHERE r.status = 'finished'
       `;
 
       if (breed) {
@@ -96,24 +107,32 @@ export function handleTop(app: Hono<{ Bindings: Env }>) {
         params.push(minStarts);
       }
 
-      query += ' ORDER BY gold DESC, silver DESC, bronze DESC';
+      query += ` ORDER BY ${orderBy}`;
     }
 
     const result = await queryWithPagination(db, query, params, pagination);
     return c.json(result);
   });
 
-  // GET /api/top/score?breed=&year=&minStarts=&limit=&offset=
+  // GET /api/top/score?breed=&year=&minStarts=&sortBy=&limit=&offset=
   app.get('/api/top/score', async (c) => {
     const db = c.env.DB;
     const breed = c.req.query('breed') || '';
     const year = c.req.query('year') || '';
     const minStarts = parseInt(c.req.query('minStarts')) || 0;
+    const sortBy = c.req.query('sortBy') || 'best_score';
     const pagination = parsePagination(c);
 
     const params = [];
 
     let query;
+    let orderBy = 'best_score DESC';
+    if (sortBy === 'best_judge_score') {
+      orderBy = 'best_judge_score DESC';
+    } else if (sortBy === 'avg_judge_score') {
+      orderBy = 'avg_judge_score DESC';
+    }
+
     if (year) {
       query = 'SELECT * FROM v_top_by_score WHERE year = ?';
       params.push(year);
@@ -126,6 +145,7 @@ export function handleTop(app: Hono<{ Bindings: Env }>) {
         query += ' AND total_starts >= ?';
         params.push(minStarts);
       }
+      query += ` ORDER BY ${orderBy}`;
     } else {
       query = `
         SELECT
@@ -134,8 +154,19 @@ export function handleTop(app: Hono<{ Bindings: Env }>) {
           d.name_ru,
           d.breed,
           MAX(r.total_score) AS best_score,
-          ROUND(AVG(r.total_score), 2) AS avg_score,
-          COUNT(*) AS total_starts
+          COUNT(*) AS total_starts,
+          MAX(
+            (SELECT MAX(CAST(json_extract(j.value, '$.sum') AS REAL))
+             FROM json_each(json_extract(r.raw_scores_json, '$.heats')) AS h,
+                  json_each(json_extract(h.value, '$.judges')) AS j
+             WHERE json_extract(j.value, '$.sum') IS NOT NULL)
+          ) AS best_judge_score,
+          ROUND(
+            (SELECT AVG(CAST(json_extract(j.value, '$.sum') AS REAL))
+             FROM json_each(json_extract(r.raw_scores_json, '$.heats')) AS h,
+                  json_each(json_extract(h.value, '$.judges')) AS j
+             WHERE json_extract(j.value, '$.sum') IS NOT NULL)
+          , 2) AS avg_judge_score
         FROM results r
         JOIN dogs d ON d.id = r.dog_id
         JOIN events e ON r.event_id = e.id
@@ -154,19 +185,20 @@ export function handleTop(app: Hono<{ Bindings: Env }>) {
         params.push(minStarts);
       }
 
-      query += ' ORDER BY best_score DESC';
+      query += ` ORDER BY ${orderBy}`;
     }
 
     const result = await queryWithPagination(db, query, params, pagination);
     return c.json(result);
   });
 
-  // GET /api/top/speed?breed=&year=&minStarts=&limit=&offset=
+  // GET /api/top/speed?breed=&year=&minStarts=&sortBy=&limit=&offset=
   app.get('/api/top/speed', async (c) => {
     const db = c.env.DB;
     const breed = c.req.query('breed') || '';
     const year = c.req.query('year') || '';
     const minStarts = parseInt(c.req.query('minStarts')) || 0;
+    const sortBy = c.req.query('sortBy') || 'best_speed';
     const pagination = parsePagination(c);
 
     const params = [];
@@ -223,7 +255,12 @@ export function handleTop(app: Hono<{ Bindings: Env }>) {
       params.push(minStarts);
     }
 
-    query += ' ORDER BY best_speed DESC';
+    let orderBy = 'best_speed DESC';
+    if (sortBy === 'avg_speed') {
+      orderBy = 'avg_speed DESC, best_speed DESC';
+    }
+
+    query += ` ORDER BY ${orderBy}`;
 
     const result = await queryWithPagination(db, query, params, pagination);
     return c.json(result);

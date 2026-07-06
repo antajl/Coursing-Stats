@@ -56,26 +56,91 @@ export function handleDogs(app: Hono<{ Bindings: Env }>) {
       SELECT
         COUNT(r.id) AS total_starts,
         MAX(r.total_score) AS best_score,
-        ROUND(AVG(r.total_score), 2) AS avg_score,
+        MAX(
+          (SELECT MAX(CAST(json_extract(j.value, '$.sum') AS REAL))
+           FROM json_each(json_extract(r.raw_scores_json, '$.heats')) AS h,
+                json_each(json_extract(h.value, '$.judges')) AS j
+           WHERE json_extract(j.value, '$.sum') IS NOT NULL)
+        ) AS best_judge_score,
+        ROUND(
+          (SELECT AVG(CAST(json_extract(j.value, '$.sum') AS REAL))
+           FROM json_each(json_extract(r.raw_scores_json, '$.heats')) AS h,
+                json_each(json_extract(h.value, '$.judges')) AS j
+           WHERE json_extract(j.value, '$.sum') IS NOT NULL)
+        , 2) AS avg_judge_score,
         SUM(CASE WHEN r.placement = 1 THEN 1 ELSE 0 END) AS gold,
         SUM(CASE WHEN r.placement = 2 THEN 1 ELSE 0 END) AS silver,
         SUM(CASE WHEN r.placement = 3 THEN 1 ELSE 0 END) AS bronze,
         (
-          SELECT e.results_url
+          SELECT r2.event_id
           FROM results r2
-          JOIN events e ON r2.event_id = e.id
           WHERE r2.dog_id = ? AND r2.status = 'finished'
-            AND e.event_type IN ('coursing', 'bzmp')
-          ORDER BY r2.total_score DESC
+            AND r2.total_score = (
+              SELECT MAX(r3.total_score)
+              FROM results r3
+              JOIN events e3 ON r3.event_id = e3.id
+              WHERE r3.dog_id = ? AND r3.status = 'finished'
+                AND e3.event_type IN ('coursing', 'bzmp')
+            )
           LIMIT 1
-        ) AS best_score_event_url
+        ) AS best_score_event_id,
+        (
+          SELECT r4.event_id
+          FROM results r4
+          JOIN events e4 ON r4.event_id = e4.id
+          WHERE r4.dog_id = ? AND r4.status = 'finished'
+            AND e4.event_type IN ('coursing', 'bzmp')
+            AND (
+              SELECT MAX(CAST(json_extract(j.value, '$.sum') AS REAL))
+              FROM json_each(json_extract(r4.raw_scores_json, '$.heats')) AS h,
+                   json_each(json_extract(h.value, '$.judges')) AS j
+              WHERE json_extract(j.value, '$.sum') IS NOT NULL
+            ) = (
+              SELECT MAX(
+                (SELECT MAX(CAST(json_extract(j.value, '$.sum') AS REAL))
+                 FROM json_each(json_extract(r5.raw_scores_json, '$.heats')) AS h,
+                      json_each(json_extract(h.value, '$.judges')) AS j
+                 WHERE json_extract(j.value, '$.sum') IS NOT NULL)
+              )
+              FROM results r5
+              JOIN events e5 ON r5.event_id = e5.id
+              WHERE r5.dog_id = ? AND r5.status = 'finished'
+                AND e5.event_type IN ('coursing', 'bzmp')
+            )
+          LIMIT 1
+        ) AS best_judge_score_event_id,
+        (
+          SELECT r6.event_id
+          FROM results r6
+          JOIN events e6 ON r6.event_id = e6.id
+          WHERE r6.dog_id = ? AND r6.status = 'finished'
+            AND e6.event_type IN ('coursing', 'bzmp')
+            AND (
+              SELECT ROUND(AVG(CAST(json_extract(j.value, '$.sum') AS REAL)), 2)
+              FROM json_each(json_extract(r6.raw_scores_json, '$.heats')) AS h,
+                   json_each(json_extract(h.value, '$.judges')) AS j
+              WHERE json_extract(j.value, '$.sum') IS NOT NULL
+            ) = (
+              SELECT MAX(
+                (SELECT ROUND(AVG(CAST(json_extract(j.value, '$.sum') AS REAL)), 2)
+                 FROM json_each(json_extract(r7.raw_scores_json, '$.heats')) AS h,
+                      json_each(json_extract(h.value, '$.judges')) AS j
+                 WHERE json_extract(j.value, '$.sum') IS NOT NULL)
+              )
+              FROM results r7
+              JOIN events e7 ON r7.event_id = e7.id
+              WHERE r7.dog_id = ? AND r7.status = 'finished'
+                AND e7.event_type IN ('coursing', 'bzmp')
+            )
+          LIMIT 1
+        ) AS avg_judge_score_event_id
       FROM results r
       JOIN events e ON r.event_id = e.id
       WHERE r.dog_id = ? AND r.status = 'finished'
         AND e.event_type IN ('coursing', 'bzmp')
     `;
 
-    const { results: coursingResults } = await db.prepare(coursingQuery).bind(dogId, dogId).all();
+    const { results: coursingResults } = await db.prepare(coursingQuery).bind(dogId, dogId, dogId, dogId, dogId, dogId, dogId).all();
     dogData.coursing_stats = coursingResults[0] || {
       total_starts: 0,
       best_score: null,
@@ -93,24 +158,57 @@ export function handleDogs(app: Hono<{ Bindings: Env }>) {
         SUM(CASE WHEN r.placement = 2 THEN 1 ELSE 0 END) AS silver,
         SUM(CASE WHEN r.placement = 3 THEN 1 ELSE 0 END) AS bronze,
         (
-          SELECT e.results_url
+          SELECT r2.event_id
           FROM results r2
           JOIN events e ON r2.event_id = e.id
           WHERE r2.dog_id = ? AND e.event_type = 'racing' AND r2.raw_scores_json IS NOT NULL
             AND r2.status NOT IN ${RACING_EXCLUDED_STATUSES_SQL}
-          ORDER BY (
-            SELECT MAX(CAST(json_extract(h.value, '$.speed_kmh') AS REAL))
-            FROM json_each(json_extract(r2.raw_scores_json, '$.heats')) AS h
-            WHERE json_extract(h.value, '$.speed_kmh') IS NOT NULL
-          ) DESC
+            AND (
+              SELECT MAX(CAST(json_extract(h.value, '$.speed_kmh') AS REAL))
+              FROM json_each(json_extract(r2.raw_scores_json, '$.heats')) AS h
+              WHERE json_extract(h.value, '$.speed_kmh') IS NOT NULL
+            ) = (
+              SELECT MAX(
+                (SELECT MAX(CAST(json_extract(h.value, '$.speed_kmh') AS REAL))
+                 FROM json_each(json_extract(r3.raw_scores_json, '$.heats')) AS h
+                 WHERE json_extract(h.value, '$.speed_kmh') IS NOT NULL)
+              )
+              FROM results r3
+              JOIN events e3 ON r3.event_id = e3.id
+              WHERE r3.dog_id = ? AND e3.event_type = 'racing' AND r3.raw_scores_json IS NOT NULL
+                AND r3.status NOT IN ${RACING_EXCLUDED_STATUSES_SQL}
+            )
           LIMIT 1
-        ) AS best_speed_event_url
+        ) AS best_speed_event_id,
+        (
+          SELECT r4.event_id
+          FROM results r4
+          JOIN events e4 ON r4.event_id = e4.id
+          WHERE r4.dog_id = ? AND e4.event_type = 'racing' AND r4.raw_scores_json IS NOT NULL
+            AND r4.status NOT IN ${RACING_EXCLUDED_STATUSES_SQL}
+            AND (
+              SELECT ROUND(AVG(CAST(json_extract(h.value, '$.speed_kmh') AS REAL)), 2)
+              FROM json_each(json_extract(r4.raw_scores_json, '$.heats')) AS h
+              WHERE json_extract(h.value, '$.speed_kmh') IS NOT NULL
+            ) = (
+              SELECT MAX(
+                (SELECT ROUND(AVG(CAST(json_extract(h.value, '$.speed_kmh') AS REAL)), 2)
+                 FROM json_each(json_extract(r5.raw_scores_json, '$.heats')) AS h
+                 WHERE json_extract(h.value, '$.speed_kmh') IS NOT NULL)
+              )
+              FROM results r5
+              JOIN events e5 ON r5.event_id = e5.id
+              WHERE r5.dog_id = ? AND e5.event_type = 'racing' AND r5.raw_scores_json IS NOT NULL
+                AND r5.status NOT IN ${RACING_EXCLUDED_STATUSES_SQL}
+            )
+          LIMIT 1
+        ) AS avg_speed_event_id
       FROM results r
       JOIN events e ON r.event_id = e.id
       WHERE r.dog_id = ? AND r.status NOT IN ${RACING_EXCLUDED_STATUSES_SQL} AND e.event_type = 'racing'
     `;
 
-    const { results: racingCountResults } = await db.prepare(racingQuery).bind(dogId, dogId).all();
+    const { results: racingCountResults } = await db.prepare(racingQuery).bind(dogId, dogId, dogId, dogId, dogId).all();
     dogData.racing_stats = {
       total_starts: racingCountResults[0]?.total_starts || 0,
       gold: racingCountResults[0]?.gold || 0,
@@ -118,7 +216,8 @@ export function handleDogs(app: Hono<{ Bindings: Env }>) {
       bronze: racingCountResults[0]?.bronze || 0,
       best_speed: null,
       avg_speed: null,
-      best_speed_event_url: racingCountResults[0]?.best_speed_event_url || null
+      best_speed_event_id: racingCountResults[0]?.best_speed_event_id || null,
+      avg_speed_event_id: racingCountResults[0]?.avg_speed_event_id || null
     };
 
     // Get speed data from racing events
@@ -203,6 +302,35 @@ export function handleDogs(app: Hono<{ Bindings: Env }>) {
   app.get('/api/breeds', async (c) => {
     const db = c.env.DB;
     const { results } = await db.prepare('SELECT DISTINCT breed FROM dogs ORDER BY breed').all();
-    return c.json({ success: true, data: results });
+
+    // Карта объединения пород
+    const breedMapping: Record<string, string> = {
+      '18': 'БЕЗ ПОРОДЫ',
+      'НЕМЕЦКАЯ ОВЧАРКА (Д Ш, К Ш)': 'НЕМЕЦКАЯ ОВЧАРКА',
+      'НЕМЕЦКАЯ ОВЧАРКА (СТАНДАРТНАЯ)': 'НЕМЕЦКАЯ ОВЧАРКА',
+      'НЕМЕЦКАЯ ОВЧАРКА К Ш': 'НЕМЕЦКАЯ ОВЧАРКА',
+      'НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ': 'НЕМЕЦКАЯ ОВЧАРКА',
+      'ПОДЕНКО ИБИЦЕНКО (К Ш, Г Ш)': 'ПОДЕНКО ИБИЦЕНКО',
+      'ПОДЕНКО ИБИЦЕНКО Г Ш': 'ПОДЕНКО ИБИЦЕНКО',
+      'ТАКСА МИНИАТЮРНАЯ (Г Ш, Д Ш, Ж Ш)': 'ТАКСА МИНИАТЮРНАЯ',
+      'ТАКСА МИНИАТЮРНАЯ (Г Ш, Ж Ш)': 'ТАКСА МИНИАТЮРНАЯ',
+      'ТАКСА МИНИАТЮРНАЯ Ж Ш': 'ТАКСА МИНИАТЮРНАЯ',
+      'ВЕНГЕРСКАЯ ВЫЖЛА К Ш': 'ВЕНГЕРСКАЯ ВЫЖЛА',
+      'ВЕНГЕРСКАЯ ВЫЖЛА КОРОТКОШЕРСТНАЯ': 'ВЕНГЕРСКАЯ ВЫЖЛА',
+      'ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ ЛЕГАВАЯ': 'ВЕНГЕРСКАЯ ВЫЖЛА',
+      'ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ ЛЕГАВАЯ (ВЫЖЛА)': 'ВЕНГЕРСКАЯ ВЫЖЛА',
+      'МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)': 'МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ',
+    };
+
+    // Применяем объединение и убираем дубликаты
+    const mappedBreeds = results.map((r: { breed: string }) => ({
+      breed: breedMapping[r.breed] || r.breed
+    }));
+
+    const uniqueBreeds = Array.from(
+      new Set(mappedBreeds.map((b: { breed: string }) => b.breed))
+    ).sort().map((breed) => ({ breed }));
+
+    return c.json({ success: true, data: uniqueBreeds });
   });
 }

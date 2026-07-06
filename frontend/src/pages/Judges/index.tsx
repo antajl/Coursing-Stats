@@ -116,8 +116,8 @@ export default function Judges() {
                     <div className="font-bold text-old-money-800 dark:text-old-money-300">{judge.total_evaluations_count || 0}</div>
                   </div>
                   <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2">
-                    <div className="text-old-money-500 dark:text-old-money-400">Всего оценок</div>
-                    <div className="font-bold text-old-money-800 dark:text-old-money-300">{judge.total_evaluations || 0}</div>
+                    <div className="text-old-money-500 dark:text-old-money-400">Соревнований</div>
+                    <div className="font-bold text-old-money-800 dark:text-old-money-300">{judge.unique_events || 0}</div>
                   </div>
                   <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2">
                     <div className="text-old-money-500 dark:text-old-money-400">Средняя</div>
@@ -151,9 +151,9 @@ export default function Judges() {
               </th>
               <th 
                 className="cursor-pointer px-4 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-200 dark:hover:bg-charcoal-600"
-                onClick={() => handleSort('total_evaluations')}
+                onClick={() => handleSort('unique_events')}
               >
-                Всего оценок {sortField === 'total_evaluations' && (sortDirection === 'asc' ? '↑' : '↓')}
+                Соревнований {sortField === 'unique_events' && (sortDirection === 'asc' ? '↑' : '↓')}
               </th>
               <th 
                 className="cursor-pointer px-4 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-200 dark:hover:bg-charcoal-600"
@@ -200,7 +200,7 @@ export default function Judges() {
                   </td>
                   <td className="px-4 py-4 text-center text-sm text-old-money-800 dark:text-old-money-300">
                     <Link to={`/judges/${encodeURIComponent(judge.id)}`} className="block h-full w-full text-old-money-800 dark:text-old-money-300 transition-colors hover:text-camel-700 dark:hover:text-camel-400">
-                      {judge.total_evaluations || 0}
+                      {judge.unique_events || 0}
                     </Link>
                   </td>
                   <td className="px-4 py-4 text-center text-sm text-old-money-800 dark:text-old-money-300">

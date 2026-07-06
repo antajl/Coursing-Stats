@@ -1,13 +1,8 @@
 export interface TopDogsFilterParams {
   searchQuery: string
-  filterStartsFrom: string
-  filterStartsTo: string
+  filterMinStarts: string
   filterScoreFrom: string
-  filterScoreTo: string
-  filterScoreType: string
   filterSpeedFrom: string
-  filterSpeedTo: string
-  filterSpeedType: string
 }
 
 import { dogNameSearchText } from '../../lib/dogName'
@@ -24,23 +19,21 @@ function matchesSearch(
   return !!(nameMatch || breedMatch || startsMatch)
 }
 
-function matchesStartsFilter(
+function matchesMinStartsFilter(
   dog: { total_starts?: number },
-  filterStartsFrom: string,
-  filterStartsTo: string
+  filterMinStarts: string
 ): boolean {
-  if (filterStartsFrom && (dog.total_starts ?? 0) < parseInt(filterStartsFrom)) return false
-  if (filterStartsTo && (dog.total_starts ?? 0) > parseInt(filterStartsTo)) return false
+  if (filterMinStarts && (dog.total_starts ?? 0) < parseInt(filterMinStarts)) return false
   return true
 }
 
 export function filterPlacement<T extends { name_lat?: string; name_ru?: string; breed?: string; total_starts?: number }>(
   dogs: T[],
-  params: Pick<TopDogsFilterParams, 'searchQuery' | 'filterStartsFrom' | 'filterStartsTo'>
+  params: Pick<TopDogsFilterParams, 'searchQuery' | 'filterMinStarts'>
 ): T[] {
   return dogs.filter(dog => {
     if (!matchesSearch(dog, params.searchQuery)) return false
-    if (!matchesStartsFilter(dog, params.filterStartsFrom, params.filterStartsTo)) return false
+    if (!matchesMinStartsFilter(dog, params.filterMinStarts)) return false
     return true
   })
 }
@@ -57,12 +50,11 @@ export function filterScore<
 >(dogs: T[], params: TopDogsFilterParams): T[] {
   return dogs.filter(dog => {
     if (!matchesSearch(dog, params.searchQuery)) return false
-    if (!matchesStartsFilter(dog, params.filterStartsFrom, params.filterStartsTo)) return false
+    if (!matchesMinStartsFilter(dog, params.filterMinStarts)) return false
 
-    if (params.filterScoreFrom || params.filterScoreTo) {
-      const scoreValue = params.filterScoreType === 'best' ? dog.best_score : dog.avg_score
-      if (params.filterScoreFrom && (scoreValue ?? 0) < parseFloat(params.filterScoreFrom)) return false
-      if (params.filterScoreTo && (scoreValue ?? 0) > parseFloat(params.filterScoreTo)) return false
+    if (params.filterScoreFrom) {
+      const scoreValue = dog.best_score
+      if (scoreValue && scoreValue < parseFloat(params.filterScoreFrom)) return false
     }
 
     return true
@@ -81,12 +73,11 @@ export function filterSpeed<
 >(dogs: T[], params: TopDogsFilterParams): T[] {
   return dogs.filter(dog => {
     if (!matchesSearch(dog, params.searchQuery)) return false
-    if (!matchesStartsFilter(dog, params.filterStartsFrom, params.filterStartsTo)) return false
+    if (!matchesMinStartsFilter(dog, params.filterMinStarts)) return false
 
-    if (params.filterSpeedFrom || params.filterSpeedTo) {
-      const speedValue = params.filterSpeedType === 'best' ? dog.best_speed : dog.avg_speed
-      if (params.filterSpeedFrom && (speedValue ?? 0) < parseFloat(params.filterSpeedFrom)) return false
-      if (params.filterSpeedTo && (speedValue ?? 0) > parseFloat(params.filterSpeedTo)) return false
+    if (params.filterSpeedFrom) {
+      const speedValue = dog.best_speed
+      if (speedValue && speedValue < parseFloat(params.filterSpeedFrom)) return false
     }
 
     return true

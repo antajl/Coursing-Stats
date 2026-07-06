@@ -1,24 +1,24 @@
 import { useQuery } from '@tanstack/react-query';
 import { api } from '../services/api';
 
-export function useTopPlacement(year = '', breed = '', minStarts = 0, limit = null, offset = 0) {
+export function useTopPlacement(year = '', breed = '', minStarts = 0, sortBy = 'gold', limit = null, offset = 0) {
   return useQuery({
-    queryKey: ['topPlacement', year, breed, minStarts, limit, offset],
-    queryFn: () => api.getTopPlacement(year, breed, minStarts, limit, offset),
+    queryKey: ['topPlacement', year, breed, minStarts, sortBy, limit, offset],
+    queryFn: () => api.getTopPlacement(year, breed, minStarts, sortBy, limit, offset),
   });
 }
 
-export function useTopScore(year = '', breed = '', minStarts = 0, limit = null, offset = 0) {
+export function useTopScore(year = '', breed = '', minStarts = 0, sortBy = 'best_score', limit = null, offset = 0) {
   return useQuery({
-    queryKey: ['topScore', year, breed, minStarts, limit, offset],
-    queryFn: () => api.getTopScore(year, breed, minStarts, limit, offset),
+    queryKey: ['topScore', year, breed, minStarts, sortBy, limit, offset],
+    queryFn: () => api.getTopScore(year, breed, minStarts, sortBy, limit, offset),
   });
 }
 
-export function useTopSpeed(year = '', breed = '', minStarts = 0, limit = null, offset = 0) {
+export function useTopSpeed(year = '', breed = '', minStarts = 0, sortBy = 'best_speed', limit = null, offset = 0) {
   return useQuery({
-    queryKey: ['topSpeed', year, breed, minStarts, limit, offset],
-    queryFn: () => api.getTopSpeed(year, breed, minStarts, limit, offset),
+    queryKey: ['topSpeed', year, breed, minStarts, sortBy, limit, offset],
+    queryFn: () => api.getTopSpeed(year, breed, minStarts, sortBy, limit, offset),
   });
 }
 
