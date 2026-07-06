@@ -97,9 +97,10 @@ export default function SpeedRecordCard({ record }: SpeedRecordCardProps) {
           rel="noopener noreferrer"
           aria-label="Открыть скриншот"
           title="Скриншот"
-          className="flex shrink-0 items-center justify-center border-l border-old-money-200 px-4 text-old-money-500 transition-colors hover:bg-camel-50 hover:text-camel-700 dark:border-charcoal-600 dark:text-old-money-400 dark:hover:bg-charcoal-700 dark:hover:text-camel-400"
+          className="flex shrink-0 flex-col items-center justify-center gap-1 self-stretch border-l border-old-money-200 px-2.5 py-3 text-xs font-semibold text-old-money-600 transition-colors hover:bg-camel-50 hover:text-camel-700 sm:px-3 dark:border-charcoal-600 dark:text-old-money-400 dark:hover:bg-charcoal-700 dark:hover:text-camel-400"
         >
-          <Image size={18} strokeWidth={2} />
+          <Image size={16} strokeWidth={2} className="shrink-0" aria-hidden />
+          <span>Скрин</span>
         </a>
       )}
     </div>

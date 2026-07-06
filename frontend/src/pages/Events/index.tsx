@@ -2,6 +2,9 @@ import { useState, useEffect, useMemo } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { useYears, useEvents } from '../../hooks/useApi'
 import FilterSelect from '../../components/FilterSelect'
+import PageToolbar from '../../components/toolbar/PageToolbar'
+import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
+import type { ActiveFilterChip } from '../../components/toolbar/ToolbarActiveFilters'
 import EmptyState from '../../components/EmptyState'
 import SkeletonLoader from '../../components/SkeletonLoader'
 import { Icons } from '../../lib/icons'
@@ -69,13 +72,23 @@ export default function Events() {
   }
 
   useEffect(() => {
-    const params = new URLSearchParams()
-    if (filterYear !== '2026') params.set('year', filterYear)
-    if (filterDiscipline) params.set('discipline', filterDiscipline)
-    if (filterCompetitionKind) params.set('kind', filterCompetitionKind)
-    if (filterChampionshipsOnly) params.set('championships', '1')
-    if (searchQuery) params.set('search', searchQuery)
-    setSearchParams(params)
+    setSearchParams(
+      (prev) => {
+        const params = new URLSearchParams(prev)
+        if (filterYear !== '2026') params.set('year', filterYear)
+        else params.delete('year')
+        if (filterDiscipline) params.set('discipline', filterDiscipline)
+        else params.delete('discipline')
+        if (filterCompetitionKind) params.set('kind', filterCompetitionKind)
+        else params.delete('kind')
+        if (filterChampionshipsOnly) params.set('championships', '1')
+        else params.delete('championships')
+        if (searchQuery) params.set('search', searchQuery)
+        else params.delete('search')
+        return params
+      },
+      { replace: true },
+    )
   }, [
     filterYear,
     filterDiscipline,
@@ -173,122 +186,266 @@ export default function Events() {
 
   const monthGroups = useMemo(() => groupEventsByMonth(filteredEvents), [filteredEvents])
 
-  const SearchIcon = Icons.search
   const disciplineLabel =
     DISCIPLINE_OPTIONS.find((d) => d.value === filterDiscipline)?.label || 'Дисциплина'
 
+  const hasActiveFilters = Boolean(
+    filterDiscipline ||
+      filterCompetitionKind ||
+      filterChampionshipsOnly ||
+      quickPreset ||
+      searchQuery ||
+      filterYear !== '2026'
+  )
+
+  const activeFilterChips = useMemo((): ActiveFilterChip[] => {
+    const chips: ActiveFilterChip[] = []
+
+    if (searchQuery.trim()) {
+      chips.push({
+        key: 'search',
+        label: `«${searchQuery.trim()}»`,
+        onRemove: () => setSearchQuery(''),
+      })
+    }
+    if (filterYear !== '2026') {
+      chips.push({
+        key: 'year',
+        label: filterYear,
+        onRemove: () => setFilterYear('2026'),
+      })
+    }
+    if (filterDiscipline) {
+      chips.push({
+        key: 'discipline',
+        label: disciplineLabel,
+        onRemove: () => setFilterDiscipline(''),
+      })
+    }
+    if (filterCompetitionKind) {
+      chips.push({
+        key: 'kind',
+        label: filterCompetitionKind,
+        onRemove: () => setFilterCompetitionKind(''),
+      })
+    }
+    if (quickPreset === 'upcoming30') {
+      chips.push({
+        key: 'preset-30',
+        label: 'Ближайшие 30 дней',
+        onRemove: () => setQuickPreset(null),
+      })
+    }
+    if (quickPreset === 'championships' || filterChampionshipsOnly) {
+      chips.push({
+        key: 'championships',
+        label: 'Чемпионаты и кубки',
+        onRemove: () => {
+          setQuickPreset(null)
+          setFilterChampionshipsOnly(false)
+        },
+      })
+    }
+
+    return chips
+  }, [
+    searchQuery,
+    filterYear,
+    filterDiscipline,
+    filterCompetitionKind,
+    filterChampionshipsOnly,
+    quickPreset,
+    disciplineLabel,
+  ])
+
   if (eventsLoading) {
-    return <SkeletonLoader variant="card" count={6} />
+    return (
+      <div className="max-w-full mx-auto pb-2 sm:pb-4">
+        <div className="mb-4">
+          <PageToolbar
+            activeFilterChips={activeFilterChips}
+            onClearAllFilters={hasActiveFilters ? handleResetFilters : undefined}
+            filters={
+              <>
+                <ToolbarSearch
+                  value={searchQuery}
+                  onChange={setSearchQuery}
+                  placeholder="Название, клуб, регион…"
+                />
+                <FilterSelect
+                  ariaLabel="Год"
+                  value={filterYear}
+                  onChange={(v) => {
+                    setFilterYear(v)
+                    setQuickPreset(null)
+                  }}
+                  allLabel="Все года"
+                  options={allYears
+                    .sort((a, b) => Number(b) - Number(a))
+                    .map((y) => ({ value: String(y), label: String(y) }))}
+                  className="min-w-[96px]"
+                />
+                <FilterSelect
+                  ariaLabel="Дисциплина"
+                  value={filterDiscipline}
+                  onChange={(v) => {
+                    setFilterDiscipline(v)
+                    setQuickPreset(null)
+                  }}
+                  allLabel="Все дисциплины"
+                  options={DISCIPLINE_OPTIONS.map((d) => ({ value: d.value, label: d.label }))}
+                  className="min-w-[140px] hidden sm:block"
+                />
+                <FilterSelect
+                  ariaLabel="Вид соревнования"
+                  value={filterCompetitionKind}
+                  onChange={setFilterCompetitionKind}
+                  allLabel="Все соревнования"
+                  options={allCompetitionKinds.map((k) => ({ value: k!, label: k! }))}
+                  className="min-w-[168px] hidden lg:block"
+                />
+              </>
+            }
+            bottomLeft={
+              <div className="flex flex-wrap items-center gap-2">
+                <button
+                  type="button"
+                  onClick={() => applyQuickPreset('upcoming30')}
+                  className={`inline-flex ${TOOLBAR_CHIP} ${
+                    quickPreset === 'upcoming30' ? TOOLBAR_CHIP_ACTIVE : TOOLBAR_CHIP_IDLE
+                  }`}
+                >
+                  Ближайшие 30 дней
+                </button>
+                <button
+                  type="button"
+                  onClick={() => applyQuickPreset('championships')}
+                  className={`inline-flex gap-1 ${TOOLBAR_CHIP} ${
+                    quickPreset === 'championships' ? TOOLBAR_CHIP_ACTIVE : TOOLBAR_CHIP_IDLE
+                  }`}
+                >
+                  <Icons.championship className="h-3.5 w-3.5 shrink-0" strokeWidth={1.75} />
+                  Чемпионаты и кубки
+                </button>
+              </div>
+            }
+            bottomRight={
+              <div className="flex flex-col items-end gap-1">
+                <div className="flex flex-wrap items-center justify-end gap-x-3.5 gap-y-1">
+                  {LEGEND.map(({ key, label }) => (
+                    <span
+                      key={key}
+                      className="inline-flex items-center gap-1.5 text-xs text-charcoal-500 dark:text-charcoal-300"
+                    >
+                      <span className={`h-2 w-2 rounded-sm ${LEGEND_DOT_COLOR[key]}`} />
+                      {label}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            }
+          />
+        </div>
+        <SkeletonLoader variant="card" count={6} />
+      </div>
+    )
   }
 
   return (
     <div className="max-w-full mx-auto pb-2 sm:pb-4">
-      <div className="mb-4 flex max-w-full flex-col gap-2">
-        <div className="flex w-full flex-wrap items-center gap-2">
-            <div className="flex h-9 w-[280px] shrink-0 items-center gap-2 rounded-[10px] border-[1.5px] border-old-money-300 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 px-3">
-              <SearchIcon className="h-3.5 w-3.5 shrink-0 text-charcoal-500" strokeWidth={1.75} />
-              <input
-                type="text"
-                placeholder="Название, клуб, регион…"
+      <div className="mb-4">
+        <PageToolbar
+          activeFilterChips={activeFilterChips}
+          onClearAllFilters={hasActiveFilters ? handleResetFilters : undefined}
+          filters={
+            <>
+              <ToolbarSearch
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full min-w-0 border-none bg-transparent text-xs font-medium text-charcoal-800 dark:text-charcoal-200 outline-none placeholder:text-charcoal-400"
+                onChange={setSearchQuery}
+                placeholder="Название, клуб, регион…"
               />
-            </div>
 
-            <FilterSelect
-              ariaLabel="Год"
-              value={filterYear}
-              onChange={(v) => {
-                setFilterYear(v)
-                setQuickPreset(null)
-              }}
-              allLabel="Все года"
-              options={allYears
-                .sort((a, b) => Number(b) - Number(a))
-                .map((y) => ({ value: String(y), label: String(y) }))}
-              className="min-w-[96px]"
-            />
+              <FilterSelect
+                ariaLabel="Год"
+                value={filterYear}
+                onChange={(v) => {
+                  setFilterYear(v)
+                  setQuickPreset(null)
+                }}
+                allLabel="Все года"
+                options={allYears
+                  .sort((a, b) => Number(b) - Number(a))
+                  .map((y) => ({ value: String(y), label: String(y) }))}
+                className="min-w-[96px]"
+              />
 
-            <FilterSelect
-              ariaLabel="Дисциплина"
-              value={filterDiscipline}
-              onChange={(v) => {
-                setFilterDiscipline(v)
-                setQuickPreset(null)
-              }}
-              allLabel="Все дисциплины"
-              options={DISCIPLINE_OPTIONS.map((d) => ({ value: d.value, label: d.label }))}
-              className="min-w-[140px] hidden sm:block"
-            />
+              <FilterSelect
+                ariaLabel="Дисциплина"
+                value={filterDiscipline}
+                onChange={(v) => {
+                  setFilterDiscipline(v)
+                  setQuickPreset(null)
+                }}
+                allLabel="Все дисциплины"
+                options={DISCIPLINE_OPTIONS.map((d) => ({ value: d.value, label: d.label }))}
+                className="min-w-[140px] hidden sm:block"
+              />
 
-            <FilterSelect
-              ariaLabel="Вид соревнования"
-              value={filterCompetitionKind}
-              onChange={setFilterCompetitionKind}
-              allLabel="Все соревнования"
-              options={allCompetitionKinds.map((k) => ({ value: k!, label: k! }))}
-              className="min-w-[168px] hidden lg:block"
-            />
-
-            {(filterDiscipline ||
-              filterCompetitionKind ||
-              filterChampionshipsOnly ||
-              quickPreset ||
-              searchQuery) && (
+              <FilterSelect
+                ariaLabel="Вид соревнования"
+                value={filterCompetitionKind}
+                onChange={setFilterCompetitionKind}
+                allLabel="Все соревнования"
+                options={allCompetitionKinds.map((k) => ({ value: k!, label: k! }))}
+                className="min-w-[168px] hidden lg:block"
+              />
+            </>
+          }
+          bottomLeft={
+            <div className="flex flex-wrap items-center gap-2">
               <button
                 type="button"
-                onClick={handleResetFilters}
-                className="h-9 shrink-0 px-1 text-xs font-medium text-charcoal-500 underline-offset-2 hover:text-camel-700 hover:underline dark:text-charcoal-400 dark:hover:text-camel-400"
+                onClick={() => applyQuickPreset('upcoming30')}
+                className={`inline-flex ${TOOLBAR_CHIP} ${
+                  quickPreset === 'upcoming30' ? TOOLBAR_CHIP_ACTIVE : TOOLBAR_CHIP_IDLE
+                }`}
               >
-                Сбросить
+                Ближайшие 30 дней
               </button>
-            )}
-        </div>
-
-        <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
-          <div className="flex flex-wrap items-center gap-2">
-            <button
-              type="button"
-              onClick={() => applyQuickPreset('upcoming30')}
-              className={`inline-flex ${TOOLBAR_CHIP} ${
-                quickPreset === 'upcoming30' ? TOOLBAR_CHIP_ACTIVE : TOOLBAR_CHIP_IDLE
-              }`}
-            >
-              Ближайшие 30 дней
-            </button>
-            <button
-              type="button"
-              onClick={() => applyQuickPreset('championships')}
-              className={`inline-flex gap-1 ${TOOLBAR_CHIP} ${
-                quickPreset === 'championships' ? TOOLBAR_CHIP_ACTIVE : TOOLBAR_CHIP_IDLE
-              }`}
-            >
-              <Icons.championship className="h-3.5 w-3.5 shrink-0" strokeWidth={1.75} />
-              Чемпионаты и кубки
-            </button>
-          </div>
-
-          <div className="flex flex-col items-end gap-1">
-            <div className="flex flex-wrap items-center justify-end gap-x-3.5 gap-y-1">
-              {LEGEND.map(({ key, label }) => (
-                <span
-                  key={key}
-                  className="inline-flex items-center gap-1.5 text-xs text-charcoal-500 dark:text-charcoal-300"
-                >
-                  <span className={`h-2 w-2 rounded-sm ${LEGEND_DOT_COLOR[key]}`} />
-                  {label}
-                </span>
-              ))}
+              <button
+                type="button"
+                onClick={() => applyQuickPreset('championships')}
+                className={`inline-flex gap-1 ${TOOLBAR_CHIP} ${
+                  quickPreset === 'championships' ? TOOLBAR_CHIP_ACTIVE : TOOLBAR_CHIP_IDLE
+                }`}
+              >
+                <Icons.championship className="h-3.5 w-3.5 shrink-0" strokeWidth={1.75} />
+                Чемпионаты и кубки
+              </button>
             </div>
-            <p className="text-xs text-charcoal-500 dark:text-charcoal-300">
-              Всего событий: {events.length} · отфильтровано: {filteredEvents.length}
-              {filterDiscipline && (
-                <span className="hidden sm:inline"> · {disciplineLabel}</span>
-              )}
-            </p>
-          </div>
-        </div>
+          }
+          bottomRight={
+            <div className="flex flex-col items-end gap-1">
+              <div className="flex flex-wrap items-center justify-end gap-x-3.5 gap-y-1">
+                {LEGEND.map(({ key, label }) => (
+                  <span
+                    key={key}
+                    className="inline-flex items-center gap-1.5 text-xs text-charcoal-500 dark:text-charcoal-300"
+                  >
+                    <span className={`h-2 w-2 rounded-sm ${LEGEND_DOT_COLOR[key]}`} />
+                    {label}
+                  </span>
+                ))}
+              </div>
+              <p className="text-xs text-charcoal-500 dark:text-charcoal-300">
+                Всего событий: {events.length} · отфильтровано: {filteredEvents.length}
+                {filterDiscipline && (
+                  <span className="hidden sm:inline"> · {disciplineLabel}</span>
+                )}
+              </p>
+            </div>
+          }
+        />
       </div>
 
       {filteredEvents.length === 0 ? (

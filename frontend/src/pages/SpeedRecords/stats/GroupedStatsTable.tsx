@@ -9,6 +9,7 @@ interface GroupedStatsTableProps {
   mode: 'speed' | 'coursing'
   rows: GroupedRow[]
   groupBy: GroupBy
+  compact?: boolean
 }
 
 function isSpeedDog(dog: DogSpeedSummary | DogCoursingSummary): dog is DogSpeedSummary {
@@ -19,16 +20,23 @@ export default function GroupedStatsTable({
   mode,
   rows,
   groupBy,
+  compact = false,
 }: GroupedStatsTableProps) {
   const [expandedKey, setExpandedKey] = useState<string | null>(null)
   const isSpeed = mode === 'speed'
 
   return (
-    <div className="bg-white dark:bg-charcoal-800 rounded-2xl border-2 border-cream-300 dark:border-charcoal-600 p-6 shadow-md space-y-4">
-      <h2 className="text-xl font-bold text-charcoal-900 dark:text-charcoal-100">Срезы</h2>
+    <div
+      className={`bg-white dark:bg-charcoal-800 rounded-2xl border-2 border-cream-300 dark:border-charcoal-600 shadow-md space-y-4 ${
+        compact ? 'p-3 md:p-4' : 'p-6'
+      }`}
+    >
+      <h2 className={`font-bold text-charcoal-900 dark:text-charcoal-100 ${compact ? 'text-base' : 'text-xl'}`}>
+        Срезы
+      </h2>
 
       <div className="overflow-x-auto">
-        <table className="w-full min-w-[640px]">
+        <table className={`w-full ${compact ? 'min-w-[480px]' : 'min-w-[640px]'}`}>
           <thead>
             <tr className="border-b-2 border-cream-300 dark:border-charcoal-600">
               <th className="px-3 py-3 text-left font-semibold">

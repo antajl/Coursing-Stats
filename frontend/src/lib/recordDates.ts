@@ -250,3 +250,12 @@ export function expandCoursingTimeline(
       (parseRecordDate(a.date)?.getTime() ?? 0) - (parseRecordDate(b.date)?.getTime() ?? 0)
   )
 }
+
+/** км/ч: 64 → «64», 64.5 → «64.5» (без лишнего .0) */
+export function formatDoninoSpeedKmh(value: number | string | null | undefined): string {
+  if (value == null || value === '') return '—'
+  const n = Number(value)
+  if (Number.isNaN(n)) return '—'
+  const rounded = Math.round(n * 10) / 10
+  return Number.isInteger(rounded) ? String(rounded) : rounded.toFixed(1)
+}

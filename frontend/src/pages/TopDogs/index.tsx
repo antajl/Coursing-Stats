@@ -119,10 +119,6 @@ export default function TopDogs() {
       : topSpeedData.data?.items || []
     : []
 
-  if (isInitialLoad && loading) {
-    return <SkeletonLoader variant="card" count={4} />
-  }
-
   const filterParams = {
     searchQuery,
     filterMinStarts,
@@ -145,8 +141,10 @@ export default function TopDogs() {
     setSpeedSortBy('best_speed')
   }
 
+  const showListSkeleton = isInitialLoad && loading
+
   return (
-    <div className={isStandalone ? 'p-4' : ''}>
+    <div className={isStandalone ? 'p-4' : 'max-w-full mx-auto pb-2 sm:pb-4'}>
       <TopDogsFilters
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
@@ -174,14 +172,20 @@ export default function TopDogs() {
         dropdownRef={dropdownRef}
       />
 
-      <TopDogsTabs
-        activeTab={activeTab}
-        filteredPlacement={filteredPlacement}
-        filteredScore={filteredScore}
-        filteredSpeed={filteredSpeed}
-        filterYear={filterYear}
-        filterBreed={filterBreed}
-      />
+      {showListSkeleton ? (
+        <div className="min-h-[360px]">
+          <SkeletonLoader variant="card" count={6} />
+        </div>
+      ) : (
+        <TopDogsTabs
+          activeTab={activeTab}
+          filteredPlacement={filteredPlacement}
+          filteredScore={filteredScore}
+          filteredSpeed={filteredSpeed}
+          filterYear={filterYear}
+          filterBreed={filterBreed}
+        />
+      )}
     </div>
   )
 }

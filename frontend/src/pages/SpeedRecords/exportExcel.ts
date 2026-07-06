@@ -52,3 +52,31 @@ export async function exportCoursingToExcel(records: CoursingRecordExport[]) {
   XLSX.utils.book_append_sheet(workbook, worksheet, 'Беги борзых')
   XLSX.writeFile(workbook, `беги-борзых-${new Date().toISOString().split('T')[0]}.xlsx`)
 }
+
+export async function exportDoninoToExcel(
+  speedRecords: SpeedRecordExport[],
+  coursingRecords: CoursingRecordExport[]
+) {
+  const XLSX = await loadXlsx()
+
+  const speedData = speedRecords.map((record) => ({
+    Кличка: record.name,
+    Пол: record.sex === 'С' ? 'Сука' : record.sex === 'К' ? 'Кабель' : record.sex,
+    Порода: record.breed,
+    'Скорость (км/ч)': record.speed_km_h,
+    Дата: formatRecordDate(record.date),
+    Скриншот: record.screenshot_url || '',
+  }))
+
+  const coursingData = coursingRecords.map((record) => ({
+    Кличка: record.name,
+    Порода: record.breed,
+    'Время (сек)': record.time_seconds,
+    Дата: formatRecordDate(record.date),
+  }))
+
+  const workbook = XLSX.utils.book_new()
+  XLSX.utils.book_append_sheet(workbook, XLSX.utils.json_to_sheet(speedData), 'Замер')
+  XLSX.utils.book_append_sheet(workbook, XLSX.utils.json_to_sheet(coursingData), 'Бега 350 м')
+  XLSX.writeFile(workbook, `рекорды-донино-${new Date().toISOString().split('T')[0]}.xlsx`)
+}

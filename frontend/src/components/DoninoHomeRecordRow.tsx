@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import DogSexIcon from './DogSexIcon'
 import OwnerCrownName from './OwnerCrownName'
 import SpeedStatusBadge from './SpeedStatusBadge'
-import { formatRecordDate, parseRecordHistory } from '../lib/recordDates'
+import { formatRecordDate, formatDoninoSpeedKmh, parseRecordHistory } from '../lib/recordDates'
 
 interface DoninoHomeRecordRowProps {
   mode: 'speed' | 'coursing'
@@ -14,10 +14,6 @@ interface DoninoHomeRecordRowProps {
   history?: unknown
   speedKmh?: number
   timeSeconds?: number
-}
-
-function formatSpeed(value: number): string {
-  return Number(value).toFixed(1)
 }
 
 function formatTime(value: number): string {
@@ -64,7 +60,7 @@ export default function DoninoHomeRecordRow({
       </div>
       <div className="relative shrink-0">
         <span className="donino-home-metric">
-          {mode === 'speed' ? `${formatSpeed(speedKmh ?? 0)} км/ч` : `${formatTime(timeSeconds ?? 0)} сек`}
+          {mode === 'speed' ? `${formatDoninoSpeedKmh(speedKmh)} км/ч` : `${formatTime(timeSeconds ?? 0)} сек`}
         </span>
         {showNew && <SpeedStatusBadge variant="new" />}
         {showUpd && !showNew && <SpeedStatusBadge variant="upd" />}

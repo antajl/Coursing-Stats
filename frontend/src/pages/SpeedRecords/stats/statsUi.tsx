@@ -1,3 +1,4 @@
+import { ChevronDown } from 'lucide-react'
 import { TOOLBAR_FILTER_BTN, TOOLBAR_FILTER_PANEL } from '../../../lib/toolbar'
 
 export function StatCard({
@@ -67,10 +68,16 @@ export function DistributionChart({
   title,
   ranges,
   values,
+  compact = false,
+  hideTitle = false,
+  bare = false,
 }: {
   title: string
   ranges: { min: number; max: number; label: string }[]
   values: number[]
+  compact?: boolean
+  hideTitle?: boolean
+  bare?: boolean
 }) {
   const maxCount = Math.max(
     ...ranges.map((range) => values.filter((v) => v >= range.min && v < range.max).length),
@@ -79,28 +86,73 @@ export function DistributionChart({
   const total = values.length
 
   return (
-    <div className="bg-white dark:bg-charcoal-800 rounded-2xl border-2 border-cream-300 dark:border-charcoal-600 p-6 shadow-md">
-      <h2 className="text-xl font-bold text-charcoal-900 dark:text-charcoal-100 mb-4">{title}</h2>
+    <div
+      className={
+        bare
+          ? ''
+          : `bg-white dark:bg-charcoal-800 rounded-2xl border-2 border-cream-300 dark:border-charcoal-600 shadow-md ${
+              compact ? 'p-3 md:p-4' : 'p-6'
+            }`
+      }
+    >
+      {!hideTitle && (
+        <h2
+          className={`font-bold text-charcoal-900 dark:text-charcoal-100 mb-4 ${
+            compact ? 'text-base' : 'text-xl'
+          }`}
+        >
+          {title}
+        </h2>
+      )}
       <div className="space-y-2">
         {ranges.map((range) => {
           const count = values.filter((v) => v >= range.min && v < range.max).length
           const pct = total > 0 ? (count / total) * 100 : 0
           return (
-            <div key={range.label} className="flex items-center gap-4">
-              <div className="w-28 text-sm text-right text-charcoal-700 dark:text-charcoal-300">{range.label}</div>
-              <div className="flex-1 bg-cream-200 dark:bg-charcoal-600 rounded-full h-6 overflow-hidden">
+            <div key={range.label} className="flex items-center gap-2 md:gap-4">
+              <div
+                className={`shrink-0 text-right text-charcoal-700 dark:text-charcoal-300 ${
+                  compact ? 'w-14 text-xs' : 'w-28 text-sm'
+                }`}
+              >
+                {range.label}
+              </div>
+              <div className="flex-1 bg-cream-200 dark:bg-charcoal-600 rounded-full h-5 md:h-6 overflow-hidden">
                 <div
                   className="bg-gradient-to-r from-camel-400 to-camel-600 h-full rounded-full"
                   style={{ width: `${(count / maxCount) * 100}%` }}
                 />
               </div>
-              <div className="w-24 text-sm font-semibold">
-                {count} <span className="text-charcoal-500 font-normal">({pct.toFixed(1)}%)</span>
+              <div className={`shrink-0 font-semibold ${compact ? 'w-16 text-xs' : 'w-24 text-sm'}`}>
+                {count}{' '}
+                <span className="text-charcoal-500 font-normal">({pct.toFixed(1)}%)</span>
               </div>
             </div>
           )
         })}
       </div>
     </div>
+  )
+}
+
+export function CollapsibleDistributionChart({
+  title,
+  ranges,
+  values,
+}: {
+  title: string
+  ranges: { min: number; max: number; label: string }[]
+  values: number[]
+}) {
+  return (
+    <details className="donino-stats-chart mb-4">
+      <summary className="donino-stats-chart__summary">
+        <span>{title}</span>
+        <ChevronDown className="donino-stats-chart__chevron" strokeWidth={2} aria-hidden />
+      </summary>
+      <div className="donino-stats-chart__body">
+        <DistributionChart title={title} ranges={ranges} values={values} compact hideTitle bare />
+      </div>
+    </details>
   )
 }

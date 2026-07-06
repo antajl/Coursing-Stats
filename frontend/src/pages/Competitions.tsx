@@ -1,11 +1,9 @@
-import { useState, useCallback, lazy, Suspense } from 'react';
+import { useState, useCallback } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import PageLoader from '../components/PageLoader';
 import ToolbarSegmentControl from '../components/toolbar/ToolbarSegmentControl';
-
-const Events = lazy(() => import('./Events'));
-const TopDogs = lazy(() => import('./TopDogs'));
-const Judges = lazy(() => import('./Judges'));
+import Events from './Events';
+import TopDogs from './TopDogs';
+import Judges from './Judges';
 
 const COMPETITION_SEGMENTS = [
   { id: 'calendar', label: 'Календарь' },
@@ -36,33 +34,34 @@ function Competitions() {
           />
         </div>
 
-        <div className="min-h-[400px]">
-          <Suspense fallback={<PageLoader />}>
-          <div
-            id="tab-panel-calendar"
-            role="tabpanel"
-            aria-labelledby="tab-calendar"
-            className={activeTab === 'calendar' ? '' : 'hidden'}
-          >
-            {activeTab === 'calendar' && <Events />}
-          </div>
-          <div
-            id="tab-panel-ranking"
-            role="tabpanel"
-            aria-labelledby="tab-ranking"
-            className={activeTab === 'ranking' ? '' : 'hidden'}
-          >
-            {activeTab === 'ranking' && <TopDogs />}
-          </div>
-          <div
-            id="tab-panel-judges"
-            role="tabpanel"
-            aria-labelledby="tab-judges"
-            className={activeTab === 'judges' ? '' : 'hidden'}
-          >
-            {activeTab === 'judges' && <Judges />}
-          </div>
-          </Suspense>
+        <div className="min-h-[480px]">
+          {activeTab === 'calendar' && (
+            <div
+              id="tab-panel-calendar"
+              role="tabpanel"
+              aria-labelledby="tab-calendar"
+            >
+              <Events />
+            </div>
+          )}
+          {activeTab === 'ranking' && (
+            <div
+              id="tab-panel-ranking"
+              role="tabpanel"
+              aria-labelledby="tab-ranking"
+            >
+              <TopDogs />
+            </div>
+          )}
+          {activeTab === 'judges' && (
+            <div
+              id="tab-panel-judges"
+              role="tabpanel"
+              aria-labelledby="tab-judges"
+            >
+              <Judges />
+            </div>
+          )}
         </div>
       </div>
     </div>
