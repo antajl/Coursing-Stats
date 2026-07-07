@@ -1,0 +1,39 @@
+{
+  "dog_key": "бонни--уиппет",
+  "records": [
+    {
+      "id": 1793,
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Бонни",
+      "speed_km_h": 60,
+      "date": "2026-05-27",
+      "screenshot_url": "https://disk.yandex.ru/i/6vm328Pm2Q3ssw",
+      "status": "normal",
+      "updated_at": "2026-06-30 11:38:42",
+      "history": [
+        {
+          "speed_km_h": 55,
+          "date": "2025-11-23"
+        }
+      ]
+    },
+    {
+      "id": 1861,
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Бонни",
+      "speed_km_h": 55,
+      "date": "2025-11-23",
+      "screenshot_url": "https://disk.yandex.ru/i/z0tVYG1Mq8cuXA",
+      "status": "normal",
+      "updated_at": "2026-06-30 11:38:42",
+      "history": [
+        {
+          "speed_km_h": 60,
+          "date": "2026-05-27"
+        }
+      ]
+    }
+  ]
+}

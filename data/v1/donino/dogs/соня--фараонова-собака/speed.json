@@ -1,0 +1,39 @@
+{
+  "dog_key": "соня--фараонова-собака",
+  "records": [
+    {
+      "id": 1812,
+      "breed": "Фараонова собака",
+      "sex": "С",
+      "name": "Соня",
+      "speed_km_h": 54,
+      "date": "2026-06-28",
+      "screenshot_url": "https://disk.yandex.ru/i/s_vllE6M87JMRg",
+      "status": "normal",
+      "updated_at": "2026-06-30 11:38:42",
+      "history": [
+        {
+          "speed_km_h": 51,
+          "date": "2025-11-08"
+        }
+      ]
+    },
+    {
+      "id": 1885,
+      "breed": "Фараонова собака",
+      "sex": "С",
+      "name": "Соня",
+      "speed_km_h": 51,
+      "date": "2025-11-08",
+      "screenshot_url": "https://disk.yandex.ru/i/muQHJfQbWu6BKQ",
+      "status": "normal",
+      "updated_at": "2026-06-30 11:38:42",
+      "history": [
+        {
+          "speed_km_h": 54,
+          "date": "2026-06-28"
+        }
+      ]
+    }
+  ]
+}

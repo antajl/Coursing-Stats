@@ -38,6 +38,15 @@ export const edgeCache: MiddlewareHandler = async (c, next) => {
     return next();
   }
 
+  // Node local dev (@hono/node-server) — нет Workers Cache API
+  if (typeof caches === 'undefined') {
+    await next();
+    if (c.res.status === 200) {
+      c.header('Cache-Control', `public, max-age=${maxAge}`);
+    }
+    return;
+  }
+
   const cache = caches.default;
   const cacheKey = new Request(url.toString(), { method: 'GET' });
   const cached = await cache.match(cacheKey);

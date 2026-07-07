@@ -4,6 +4,27 @@
 
 ---
 
+## 2026-07-07 — Переход runtime на файлы `data/v1/` (без R2)
+
+### Решение
+- **Prod и dev API** читают данные из файлов, не из D1 в runtime
+- Канонический каталог: `data/v1/` (JSON); Worker загружает `pc-db.sqlite` (~12 МБ) со **статики Pages**
+- **R2 отклонён** — платный после trial; снимок на `coursing-stats.ru/data/v1/pc-db.sqlite`
+- D1 (`pc-db`) остаётся для **импорта**: парсеры, `export-local-data`, cron (пока не переведён)
+
+### Реализация
+- `backend/lib/local-data/` — JSON → SQLite (better-sqlite3 dev, sql.js prod)
+- `local-dev-server.ts` — `npm run dev` без D1
+- `build-data-snapshot` + CI копирует в `frontend/public/data/v1/`
+- Админка: persist локально в `pc-db.sqlite`; прод — read-only до git push
+
+### Обновление прода
+`export-local-data` / правка JSON → `build-data-snapshot` → git push → deploy
+
+Документация: `docs/LOCAL-DATA.md`
+
+---
+
 ## 2026-07-07 — Edge cache, файловый архив, workflow, SEO
 
 ### Edge cache API

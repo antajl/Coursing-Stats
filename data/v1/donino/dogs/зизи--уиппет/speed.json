@@ -1,0 +1,68 @@
+{
+  "dog_key": "зизи--уиппет",
+  "records": [
+    {
+      "id": 1792,
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Зизи",
+      "speed_km_h": 61,
+      "date": "2026-05-14",
+      "screenshot_url": "https://disk.yandex.ru/i/eedvi966A_DRpQ",
+      "status": "normal",
+      "updated_at": "2026-06-30 11:38:42",
+      "history": [
+        {
+          "speed_km_h": 60,
+          "date": "2025-08-20"
+        },
+        {
+          "speed_km_h": 59,
+          "date": "2025-06-29"
+        }
+      ]
+    },
+    {
+      "id": 1849,
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Зизи",
+      "speed_km_h": 60,
+      "date": "2025-08-20",
+      "screenshot_url": "https://disk.yandex.ru/i/T1zY3nLlfA_n-A",
+      "status": "normal",
+      "updated_at": "2026-06-30 11:38:42",
+      "history": [
+        {
+          "speed_km_h": 61,
+          "date": "2026-05-14"
+        },
+        {
+          "speed_km_h": 59,
+          "date": "2025-06-29"
+        }
+      ]
+    },
+    {
+      "id": 1957,
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Зизи",
+      "speed_km_h": 59,
+      "date": "2025-06-29",
+      "screenshot_url": "https://disk.yandex.ru/i/S7i6jKrJ7txvIw",
+      "status": "old",
+      "updated_at": "2026-06-30 11:38:42",
+      "history": [
+        {
+          "speed_km_h": 61,
+          "date": "2026-05-14"
+        },
+        {
+          "speed_km_h": 60,
+          "date": "2025-08-20"
+        }
+      ]
+    }
+  ]
+}

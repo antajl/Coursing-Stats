@@ -1,0 +1,27 @@
+{
+  "schema": "coursing-stats/local-data-manifest-v1",
+  "exported_at": "2026-07-07T13:48:00.415Z",
+  "source": "d1-pc-db-local",
+  "counts": {
+    "events": 389,
+    "events_with_results": 56,
+    "dogs": 1532,
+    "results": 2958,
+    "donino_speed": 191,
+    "donino_coursing": 107,
+    "breeds": 86
+  },
+  "paths": {
+    "calendar": "calendar/{year}.json",
+    "competitions": "competitions/{year}/{month}/{id}-{slug}.json",
+    "dogs": "dogs/by-id/{id}.json | dogs/by-key/{dog_key}.json",
+    "donino": "donino/speed_records.json | donino/coursing_records.json",
+    "indexes": "indexes/*.json"
+  },
+  "workflow": {
+    "manual_edit": "Правьте JSON напрямую; один турнир = один файл competitions/",
+    "calendar_link": "calendar/*.json → results_file указывает на competitions/",
+    "donino_update": "Скажите агенту «обнови Донино» → npm run export-local-data -- --fetch-donino или правка donino/*.json вручную",
+    "site_phase": "Фаза 2: API читает data/v1/ вместо D1 (см. docs/LOCAL-DATA-PLAN.md)"
+  }
+}

@@ -45,18 +45,9 @@
   - Error handling
 
 ### Данные
-- **[PARSING.md](PARSING.md)** — Парсинг данных
-  - Источник данных
-  - HTML формат по годам
-  - Coursing parsing
-  - BZMP parsing
-  - Racing parsing
-  - Статистика судей
-  - Рекорды Донино
-- **[DATA-ARCHIVE.md](DATA-ARCHIVE.md)** — Файловый архив БД
-  - `npm run export-archive`
-  - Снимки в `data/archive/snapshots/`
-  - Будущая схема v1
+- **[LOCAL-DATA.md](LOCAL-DATA.md)** — **главный документ:** файловая БД `data/v1/`, dev и prod без D1 в runtime
+- **[LOCAL-DATA-PLAN.md](LOCAL-DATA-PLAN.md)** — чеклист миграции (исторический)
+- **[DATA-ARCHIVE.md](DATA-ARCHIVE.md)** — снимки D1 в `data/archive/snapshots/` (бэкап)
 - **[GUIDE.md](GUIDE.md)** — Справочник `/guide`
   - Правила РКФ, протоколы, титулы
   - `frontend/src/pages/Guide/constants.ts`
@@ -121,20 +112,13 @@
 
 **Coursing Stats** — агрегатор статистики собак по соревнованиям procoursing.ru (курсинг, БЗМП, бега) за 2015–2026 годы.
 
-**Статус:** Полностью рабочий, развернут на Cloudflare (Pages + Worker + D1).
+**Статус:** Развёрнут на Cloudflare. **Runtime на файлах `data/v1/`** (prod + dev); D1 — импорт.
 
 **Технический стек:**
-- Backend: Cloudflare Worker (API), Cloudflare D1 (SQLite), TypeScript (`npx tsx` для скриптов)
-- Frontend: React, Vite, TailwindCSS, кастомные `components/ui/` (без shadcn), Lucide, xlsx, TypeScript
-- Деплой: Cloudflare Pages (фронтенд), Cloudflare Workers (бэкенд), Cloudflare D1 (база данных)
-- CI: `package-lock.json` в репозитории для `npm ci`
-
-**Данные:**
-- events: 225 (2015-2026)
-- dogs: 1628
-- results: 2966 (2025-2026)
-- speed_records: замер скорости (Google Sheets, 213 записей)
-- coursing_records: бега борзых 350 м (отдельный Google Sheet, 107 записей)
+- Backend: Cloudflare Worker (API, sql.js + снимок с Pages), TypeScript
+- Frontend: React, Vite, TailwindCSS
+- Данные runtime: `data/v1/` → `pc-db.sqlite` на Pages
+- Импорт: Cloudflare D1, парсеры, `export-local-data`
 
 **Домены:**
 - Фронтенд: https://coursing-stats.ru

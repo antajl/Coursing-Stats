@@ -11,9 +11,12 @@ data/exports/
 data/backups/
 data/backup/*
 !data/backup/README.md
-data/archive/snapshots/
+data/v1/pc-db.sqlite
+frontend/public/data/v1/
 data/temp/
 data/updates/
+data/archive/snapshots/
+data/competitions/
 data/test-modular-parsers-results.json
 backend/data/
 speed_records.json

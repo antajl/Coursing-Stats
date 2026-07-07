@@ -1,0 +1,68 @@
+{
+  "dog_key": "билли--фокстерьер",
+  "records": [
+    {
+      "id": 1947,
+      "breed": "Фокстерьер",
+      "sex": "К",
+      "name": "Билли",
+      "speed_km_h": 36,
+      "date": "2025-11-29",
+      "screenshot_url": "https://disk.yandex.ru/i/UrPsTVGps1jVyw",
+      "status": "normal",
+      "updated_at": "2026-06-30 11:38:42",
+      "history": [
+        {
+          "speed_km_h": 32,
+          "date": "2025-07-13"
+        },
+        {
+          "speed_km_h": 34,
+          "date": "2025-09-07"
+        }
+      ]
+    },
+    {
+      "id": 1967,
+      "breed": "Фокстерьер",
+      "sex": "К",
+      "name": "Билли",
+      "speed_km_h": 34,
+      "date": "2025-09-07",
+      "screenshot_url": "https://disk.yandex.ru/i/16HpATFHoeoLHw",
+      "status": "old",
+      "updated_at": "2026-06-30 11:38:42",
+      "history": [
+        {
+          "speed_km_h": 36,
+          "date": "2025-11-29"
+        },
+        {
+          "speed_km_h": 32,
+          "date": "2025-07-13"
+        }
+      ]
+    },
+    {
+      "id": 1960,
+      "breed": "Фокстерьер",
+      "sex": "К",
+      "name": "Билли",
+      "speed_km_h": 32,
+      "date": "2025-07-13",
+      "screenshot_url": "https://disk.yandex.ru/i/u8Le5k7AwtdbVA",
+      "status": "old",
+      "updated_at": "2026-06-30 11:38:42",
+      "history": [
+        {
+          "speed_km_h": 36,
+          "date": "2025-11-29"
+        },
+        {
+          "speed_km_h": 34,
+          "date": "2025-09-07"
+        }
+      ]
+    }
+  ]
+}

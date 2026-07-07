@@ -1,29 +1,31 @@
 # Architecture — Архитектура проекта
 
-## High-Level Architecture
+## High-Level Architecture (2026-07)
+
+```
+Источник (procoursing.ru, Google Sheets)
+        │
+        ▼
+   D1 (импорт) ──export-local-data──► data/v1/*.json
+        │                                    │
+        │                                    ▼ build-data-snapshot
+        │                              pc-db.sqlite
+        │                                    │
+        ├─ dev:d1 (legacy)                   ├─ npm run dev (Node, память)
+        │                                    └─ Pages static → Worker sql.js (prod)
+        ▼
+   api.coursing-stats.ru → coursing-stats.ru
+```
+
+> Runtime **не использует D1**. Подробно: `docs/LOCAL-DATA.md`.
+
+### Legacy diagram (импорт)
 
 ```
 Источник данных (procoursing.ru)
    │  Скрапер/парсер (Node.js)
    ▼
-Cloudflare D1 (events, dogs, results)
-   │
-   ▼
-Cloudflare Worker API
-   │
-   ▼
-Cloudflare Pages (фронтенд: React)
-
-Google Sheets (рекорды Донино — два листа)
-   │  Скрипты загрузки (GitHub Actions / вручную)
-   ▼
-Cloudflare D1 (speed_records + coursing_records)
-   │
-   ▼
-Cloudflare Worker API
-   │
-   ▼
-Cloudflare Pages (фронтенд: React)
+Cloudflare D1 (events, dogs, results)  ← скрипты импорта
 ```
 
 ## Components

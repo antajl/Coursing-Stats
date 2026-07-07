@@ -275,12 +275,18 @@ export function handleAdminResults(app: Hono<{ Bindings: Env }>) {
       const body = await c.req.json();
       const { event_id, dog_id, breed_class, placement, total_score, qualification, vc, status } = body;
 
-      const result = await db.prepare(`
+      const runResult = (await db.prepare(`
         INSERT INTO results (event_id, dog_id, breed_class, placement, total_score, qualification, vc, status)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-      `).bind(event_id, dog_id, breed_class, placement, total_score, qualification, vc, status).run();
+      `).bind(event_id, dog_id, breed_class, placement, total_score, qualification, vc, status).run()) as {
+        meta?: { last_row_id?: number };
+      };
 
-      return c.json({ success: true, message: 'Result created', id: result.meta.last_row_id });
+      return c.json({
+        success: true,
+        message: 'Result created',
+        id: runResult.meta?.last_row_id,
+      });
     } catch (err: any) {
       console.error('Error creating result:', err);
       return c.json({ success: false, error: err.message }, 500);

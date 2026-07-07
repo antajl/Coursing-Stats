@@ -4,6 +4,16 @@
 
 ## [Unreleased]
 
+### 2026-07-07 — Runtime на файлах `data/v1/` (prod + dev)
+- **Локальные данные:** `data/v1/` — канонический каталог (календарь, competitions, dogs, donino, indexes)
+- **Dev:** `npm run dev` → `local-dev-server.ts`, D1 не нужна
+- **Prod:** Worker (sql.js) читает `pc-db.sqlite` со статики Pages; **без R2**
+- **Скрипты:** `export-local-data`, `build-data-snapshot`, `export-competitions` (legacy)
+- **CI:** deploy собирает snapshot → `public/data/v1/` → Pages + Worker
+- **Админка:** сохранение локально; прод обновляется через git push
+- **Документация:** `docs/LOCAL-DATA.md`, rule `.cursor/rules/local-data.mdc`
+- **Fix:** `edge-cache.ts` — no-op без `caches` API в Node dev
+
 ### 2026-07-07 — UI стандартизация по аудиту
 - **Толщина рамок (P4):** стандартизирована по правилу — строки списков/мелкие элементы → `border` (1px), карточки/тулбар → `border` (1px), шапки профилей → `border-2`
 - **Nav active-стиль (P6):** унифицирован — mobile теперь использует подчёркивание `scale-x` как desktop

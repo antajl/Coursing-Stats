@@ -1,0 +1,39 @@
+{
+  "dog_key": "вирна--немецкая-овчарка",
+  "records": [
+    {
+      "id": 1932,
+      "breed": "Немецкая овчарка",
+      "sex": "С",
+      "name": "Вирна",
+      "speed_km_h": 42,
+      "date": "2025-07-30",
+      "screenshot_url": "https://disk.yandex.ru/i/zLg2DA3oAtU7uA",
+      "status": "normal",
+      "updated_at": "2026-06-30 11:38:42",
+      "history": [
+        {
+          "speed_km_h": 40,
+          "date": "2025-06-29"
+        }
+      ]
+    },
+    {
+      "id": 1955,
+      "breed": "Немецкая овчарка",
+      "sex": "С",
+      "name": "Вирна",
+      "speed_km_h": 40,
+      "date": "2025-06-29",
+      "screenshot_url": "https://disk.yandex.ru/i/FwYb0OYC68mQHA",
+      "status": "old",
+      "updated_at": "2026-06-30 11:38:42",
+      "history": [
+        {
+          "speed_km_h": 42,
+          "date": "2025-07-30"
+        }
+      ]
+    }
+  ]
+}

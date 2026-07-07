@@ -1,0 +1,68 @@
+{
+  "dog_key": "душечка--ирландскии-терьер",
+  "records": [
+    {
+      "id": 1838,
+      "breed": "Ирландский терьер",
+      "sex": "С",
+      "name": "Душечка",
+      "speed_km_h": 45,
+      "date": "2026-05-31",
+      "screenshot_url": "https://disk.yandex.ru/i/bSl1B14oF-oddg",
+      "status": "normal",
+      "updated_at": "2026-06-30 11:38:42",
+      "history": [
+        {
+          "speed_km_h": 45,
+          "date": "2025-12-03"
+        },
+        {
+          "speed_km_h": 44,
+          "date": "2025-07-06"
+        }
+      ]
+    },
+    {
+      "id": 1924,
+      "breed": "Ирландский терьер",
+      "sex": "С",
+      "name": "Душечка",
+      "speed_km_h": 45,
+      "date": "2025-12-03",
+      "screenshot_url": "https://disk.yandex.ru/i/tsEfnOQd1JWIYw",
+      "status": "normal",
+      "updated_at": "2026-06-30 11:38:42",
+      "history": [
+        {
+          "speed_km_h": 45,
+          "date": "2026-05-31"
+        },
+        {
+          "speed_km_h": 44,
+          "date": "2025-07-06"
+        }
+      ]
+    },
+    {
+      "id": 1970,
+      "breed": "Ирландский терьер",
+      "sex": "С",
+      "name": "Душечка",
+      "speed_km_h": 44,
+      "date": "2025-07-06",
+      "screenshot_url": "https://disk.yandex.ru/i/ZKdJ9a2bZHrE1w",
+      "status": "old",
+      "updated_at": "2026-06-30 11:38:42",
+      "history": [
+        {
+          "speed_km_h": 45,
+          "date": "2026-05-31"
+        },
+        {
+          "speed_km_h": 45,
+          "date": "2025-12-03"
+        }
+      ]
+    }
+  ]
+}

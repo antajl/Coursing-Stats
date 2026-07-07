@@ -8,18 +8,14 @@ import { handleAdmin } from './routes/admin';
 import { handleSpeed } from './routes/speed';
 import { handleJudges } from './routes/judges';
 import { handleSitemap } from './routes/sitemap';
+import type { DataStoreEnv } from '../lib/local-data/types';
 
-type Env = {
-  DB: any;
-  ADMIN_API_TOKEN: string;
-};
-
-const app = new Hono<{ Bindings: Env }>();
+const app = new Hono<{ Bindings: DataStoreEnv }>();
 
 // CORS middleware
 app.use('*', cors());
 
-// Edge cache для GET — снижает нагрузку на D1 (free tier)
+// Edge cache для GET — на проде Cloudflare; локально no-op без caches API
 app.use('*', edgeCache);
 
 // UTF-8 для JSON API (не трогаем sitemap.xml и прочие не-JSON ответы)

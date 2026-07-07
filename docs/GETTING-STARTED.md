@@ -25,21 +25,24 @@ cd ..
 
 ## Запуск серверов
 
-### Локальная разработка (локальная D1 — не расходует квоту remote)
+### Локальная разработка (файлы `data/v1/` — D1 не нужна)
 
 ```bash
-# Первый раз: скачать копию прод-БД
-npm run sync-from-remote
+# Первый раз: выгрузить данные в data/v1/ (из локальной или remote D1)
+npm run sync-from-remote          # опционально: свежая копия D1
+npm run export-local-data -- --local
 
-# Запуск Worker :8787 + Vite :5173
+# Запуск API :8787 (читает data/v1/) + Vite :5173
 npm run dev
 ```
+
+Старый режим с локальной D1: `npm run dev:d1` (нужен `sync-from-remote`).
 
 Или вручную:
 
 ```bash
-# Терминал 1: Backend (Worker) — локальная D1 в .wrangler/
-npx wrangler dev backend/src/worker.ts --port 8787
+# Терминал 1: Backend (файловые данные)
+npx tsx backend/src/local-dev-server.ts
 
 # Терминал 2: Frontend (Vite)
 cd frontend && npm run dev
@@ -48,7 +51,8 @@ cd frontend && npm run dev
 **Актуальные прод-данные** (редко, когда нужна свежая remote БД):
 
 ```bash
-npm run sync-from-remote   # обновить локальную копию
+npm run sync-from-remote   # обновить локальную копию D1
+npm run export-local-data -- --local
 npm run dev:remote         # dev с remote D1 (съедает дневную квоту!)
 ```
 
@@ -97,8 +101,9 @@ Coursing Stats/
 │   └── lib/              # fetch-win1251.ts, dog-lookup.ts
 ├── frontend/             # React (App.tsx, AppRoutes.tsx, Nav.tsx)
 │   └── src/
-├── docs/                 # Документация
-└── data/                 # Данные (JSON, SQL) — в .gitignore для events/
+├── docs/                 # Документация (см. LOCAL-DATA.md)
+└── data/
+    └── v1/               # Каноническая файловая БД (runtime)
 ```
 
 ## Основные команды
@@ -148,30 +153,29 @@ npm run test-parser-fixtures
 
 ## Технический стек
 
-- **Backend:** Cloudflare Worker (Hono) + D1 (SQLite) + Node.js/TypeScript (скрипты через `npx tsx`)
-- **Frontend:** React + Vite + TailwindCSS + React Query + Zod (кастомные `components/ui/`, без shadcn)
-- **Деплой:** Cloudflare Pages (фронт) + Workers (API) + D1 (БД)
-- **Автоматизация:** GitHub Actions (обновление D1 и рекорды Донино **4 раза в день**: 08:00, 14:00, 20:00, 23:30 МСК)
-- **CI:** `package-lock.json` в репозитории (для `npm ci` в GitHub Actions)
-- **Локальная разработка:** `npm run dev` → **локальная D1** (не расходует квоту remote). Свежие prod-данные: `npm run sync-from-remote`, затем при необходимости `npm run dev:remote`
+- **Runtime data:** `data/v1/` (JSON + `pc-db.sqlite` на Pages) — см. `docs/LOCAL-DATA.md`
+- **Backend:** Cloudflare Worker (Hono, sql.js) + Node dev server (`local-dev-server.ts`)
+- **Импорт:** Cloudflare D1 + Node скрипты (`export-local-data`, парсеры)
+- **Frontend:** React + Vite + TailwindCSS + React Query + Zod
+- **Деплой:** push `main` → GitHub Actions → Pages + Worker
+- **Локально:** `npm run dev` (без D1); legacy: `npm run dev:d1`
 
-## Состояние базы данных (local = remote)
+## Состояние данных (`data/v1/`, 2026-07-07)
 
-| Таблица | Записей |
-|---------|---------|
-| events | 225 (2015-2026) |
-| dogs | 1628 |
-| results | 2966 (2025-2026) |
-| speed_records | 213 (Google Sheets) |
-| coursing_records | 107 (Google Sheets 350 м) |
+| Сущность | Количество |
+|----------|------------|
+| events (календарь) | 389 |
+| competitions с results | 56 |
+| dogs | 1532 |
+| results | 2958 |
+| speed_records (Донино) | 191 |
+| coursing_records (Донино 350 м) | 107 |
 
-**Распределение results по годам:**
-- 2025: 2114 (50 событий)
-- 2026: 852 (51 событие)
-- 2015–2024: недоступны (изображения, нужен OCR)
+D1 remote может отличаться — источник для re-export: `sync-from-remote` → `export-local-data`.
 
 ## Что работает
 
+- ✅ **Runtime на файлах** `data/v1/` (dev; prod после deploy с Pages snapshot)
 - ✅ API на Cloudflare Worker (Hono): `/api/competitions`, `/api/dogs`, `/api/top/*`, `/api/judges`, `/api/speed-records`, `/api/coursing-records`
 - ✅ Фронтенд на Cloudflare Pages с полной мобильной адаптацией
 - ✅ Разделы: Главная (hero, топ сезона, рекорды Донино), Соревнования, Судьи, Рекорды Донино, Профиль собаки, Профиль Донино, Результаты события
@@ -185,7 +189,8 @@ npm run test-parser-fixtures
 - ✅ GitHub Actions: обновление D1 (**4×/день**) и рекорды Donino (**4×/день**: 08:00, 14:00, 20:00, 23:30 МСК)
 - ✅ Admin API с авторизацией через `X-Admin-Token` (секрет в Cloudflare)
 - ✅ TypeScript, React Query, Zod, Hono, Sentry (базовая интеграция)
-- ✅ Edge cache API (снижение нагрузки на D1 free tier)
+- ✅ **Runtime на файлах `data/v1/`** (dev + prod Worker через Pages static)
+- ✅ Edge cache API (no-op в Node dev; кэш на Cloudflare edge в prod)
 - ✅ Файловый архив: `npm run export-archive` → `data/archive/snapshots/`
 - ✅ Sitemap + favicon.ico для поисковиков
 - ✅ Страница `/guide` (справочник правил и протоколов)
@@ -250,7 +255,7 @@ npm run test-parser-fixtures
 - Прочитайте `ARCHITECTURE.md` для понимания архитектуры
 - Прочитайте `API-REFERENCE.md` для работы с API
 - Прочитайте `PARSING.md` для понимания парсинга
-- Прочитайте `DATA-ARCHIVE.md` для файлового бэкапа и будущей схемы данных
+- Прочитайте `LOCAL-DATA.md` для файловой БД и обновления прода
 - Прочитайте `DATABASE.md` для работы с БД (календарь, заливка, лимиты D1)
 - Прочитайте `GUIDE.md` если правите справочник `/guide`
 - Прочитайте `TESTING.md` перед добавлением тестов

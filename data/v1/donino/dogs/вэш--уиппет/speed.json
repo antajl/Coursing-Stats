@@ -1,0 +1,39 @@
+{
+  "dog_key": "вэш--уиппет",
+  "records": [
+    {
+      "id": 1855,
+      "breed": "Уиппет",
+      "sex": "К",
+      "name": "Вэш",
+      "speed_km_h": 57,
+      "date": "2025-09-24",
+      "screenshot_url": "https://disk.yandex.ru/i/izdRpdV5NMrPeg",
+      "status": "normal",
+      "updated_at": "2026-06-30 11:38:42",
+      "history": [
+        {
+          "speed_km_h": 56,
+          "date": "2025-09-04"
+        }
+      ]
+    },
+    {
+      "id": 1961,
+      "breed": "Уиппет",
+      "sex": "К",
+      "name": "Вэш",
+      "speed_km_h": 56,
+      "date": "2025-09-04",
+      "screenshot_url": "https://disk.yandex.ru/i/MU4CCJunPohkZQ",
+      "status": "old",
+      "updated_at": "2026-06-30 11:38:42",
+      "history": [
+        {
+          "speed_km_h": 57,
+          "date": "2025-09-24"
+        }
+      ]
+    }
+  ]
+}
