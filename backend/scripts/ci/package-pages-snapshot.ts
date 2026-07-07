@@ -47,10 +47,13 @@ function main(): void {
   gzipFile(SNAPSHOT, versionedGz);
 
   copyIfExists(path.join(ROOT, 'data/v1/manifest.json'), path.join(OUT_DIR, 'manifest.json'));
-  copyIfExists(
-    path.join(ROOT, 'data/v1/donino/speed_records.json'),
-    path.join(OUT_DIR, 'donino/speed_records.json'),
-  );
+  const speedSrc = path.join(ROOT, 'data/v1/donino/speed_records.json');
+  if (!fs.existsSync(speedSrc)) {
+    throw new Error(
+      'Missing data/v1/donino/speed_records.json — run export-local-data or check .gitignore',
+    );
+  }
+  copyIfExists(speedSrc, path.join(OUT_DIR, 'donino/speed_records.json'));
   const coursingSrc = path.join(ROOT, 'data/v1/donino/coursing_records.json');
   if (fs.existsSync(coursingSrc)) {
     copyIfExists(coursingSrc, path.join(OUT_DIR, 'donino/coursing_records.json'));
