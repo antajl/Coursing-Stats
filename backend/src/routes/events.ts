@@ -1,4 +1,5 @@
 import { Hono } from 'hono';
+import { tryStaticCompetition, tryStaticManifestStats } from '../lib/static-api';
 
 type Env = {
   DB: any;
@@ -35,8 +36,14 @@ export function handleCompetitions(app: Hono<{ Bindings: Env }>) {
 
   // GET /api/competitions/:id
   app.get('/api/competitions/:id', async (c) => {
-    const db = c.env.DB;
     const eventId = c.req.param('id');
+
+    const staticComp = await tryStaticCompetition(eventId);
+    if (staticComp) {
+      return c.json({ success: true, data: staticComp.event });
+    }
+
+    const db = c.env.DB;
     const { results } = await db.prepare(`
       SELECT
         id, year, date_start, date_end, rank_label, event_type,
@@ -55,8 +62,14 @@ export function handleCompetitions(app: Hono<{ Bindings: Env }>) {
 
   // GET /api/competitions/:id/results
   app.get('/api/competitions/:id/results', async (c) => {
-    const db = c.env.DB;
     const eventId = c.req.param('id');
+
+    const staticComp = await tryStaticCompetition(eventId);
+    if (staticComp) {
+      return c.json({ success: true, data: staticComp.results });
+    }
+
+    const db = c.env.DB;
     const { results } = await db.prepare(`
       SELECT
         r.id, r.event_id, r.dog_id, r.breed_class, r.catalog_no,
@@ -74,6 +87,11 @@ export function handleCompetitions(app: Hono<{ Bindings: Env }>) {
 
   // GET /api/stats
   app.get('/api/stats', async (c) => {
+    const staticStats = await tryStaticManifestStats();
+    if (staticStats) {
+      return c.json({ success: true, data: staticStats });
+    }
+
     const store = c.env.DATA_STORE;
     if (store?.stats) {
       const { results: breedCount } = await c.env.DB

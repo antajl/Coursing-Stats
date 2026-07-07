@@ -214,6 +214,7 @@ async function main() {
       const eventId = Number(e.id);
       const hasResults = eventIdsWithResults.has(eventId);
       const resultsFile = hasResults ? competitionFiles.get(eventId) ?? null : null;
+      const eventResultsRows = resultsByEvent.get(String(eventId)) ?? [];
       const entry = {
         id: eventId,
         year: Number(e.year ?? year),
@@ -225,13 +226,20 @@ async function main() {
         rank_label: e.rank_label,
         event_type: e.event_type,
         competition_kind: e.competition_kind,
+        competition_type: e.competition_type,
+        host_club: e.host_club,
+        region: e.region,
         location: e.location,
         results_url: e.results_url,
         catalog_url: e.catalog_url,
         confirmed: e.confirmed,
+        judges: e.judges,
         has_results: hasResults,
         results_file: resultsFile,
-        result_count: hasResults ? (resultsByEvent.get(String(eventId))?.length ?? 0) : 0,
+        result_count: eventResultsRows.length,
+        participants_count: hasResults
+          ? new Set(eventResultsRows.map((r) => r.dog_id)).size
+          : 0,
       };
       calendarManifest.push({
         ...entry,

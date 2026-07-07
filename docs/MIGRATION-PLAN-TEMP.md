@@ -9,6 +9,15 @@
 **Приоритеты:** стабильность > полнота данных > скорость cold start.  
 Переключения на сайте (год, порода, вкладки) — без лагов.
 
+## Обновление (2026-07-07): Worker убран для публичного сайта
+
+Публичные посетители больше **не ходят в Worker** — React SPA читает `/data/v1/*.json` напрямую с Pages CDN
+(`frontend/src/lib/staticData.ts`). Все данные, которые раньше требовали SQL в Worker (профили собак, судьи
+с фильтрами, все топы), теперь предвычислены в CI (`build-derived-indexes.ts`) в `data/v1/indexes/`.
+Worker/D1 остаются только для локальной админки (`npm run dev`, `local-dev-server.ts` на `:8787`).
+`.github/workflows/deploy-frontend.yml` больше не деплоит Worker в прод (шаг закомментирован).
+Подробности — раздел «Архитектура (2026-07)» в `LOCAL-DATA.md`.
+
 ---
 
 ## Выбранная архитектура (2026-07-07)
@@ -57,8 +66,11 @@ git push main
 - [ ] `top-speed-{year}.json`
 - [ ] Тесты parity indexes vs SQL
 
-### Фаза 3 — Упростить Worker (долгосрочно)
-- [ ] Убрать sql.js: routes читают JSON напрямую
+### Фаза 3 — Убрать Worker для публичного сайта ✅
+- [x] Публичный фронт читает `/data/v1/*.json` с Pages CDN напрямую (`frontend/src/lib/staticData.ts`)
+- [x] Precomputed `dog-profiles/{id}.json`, `judge-details/*.json`, `top-*-all.json`, `years.json`, `sitemap.xml`
+- [x] Vite dev-плагин отдаёт `data/v1/` на `/data/v1/` для dev без Worker
+- [x] CI (`deploy-frontend.yml`) не деплоит Worker в прод (админка — только локально)
 - [ ] Cron coursing → data/v1
 - [ ] Опционально R2 для data-only deploy
 

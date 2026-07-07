@@ -1,6 +1,6 @@
 import { Hono } from 'hono';
 import { parseJudgeNames } from '../lib/judge-names';
-import { tryStaticJudgesSummary } from '../lib/static-api';
+import { tryStaticJudgesSummary, tryStaticJudgeDetails } from '../lib/static-api';
 import {
   aggregateJudgeStats,
   formatJudgesData,
@@ -100,10 +100,18 @@ export function handleJudges(app: Hono<{ Bindings: Env }>) {
 
   // GET /api/judges/:id/details
   app.get('/api/judges/:id/details', async (c) => {
-    const db = c.env.DB;
     const judgeName = decodeURIComponent(c.req.param('id'));
     const breed = c.req.query('breed') || '';
     const discipline = c.req.query('discipline') || '';
+
+    if (!breed && !discipline) {
+      const staticDetail = await tryStaticJudgeDetails(judgeName);
+      if (staticDetail) {
+        return c.json({ success: true, data: staticDetail });
+      }
+    }
+
+    const db = c.env.DB;
     
     let query = `
       SELECT

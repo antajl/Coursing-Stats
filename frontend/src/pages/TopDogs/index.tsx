@@ -13,6 +13,8 @@ function parseRankingTab(value: string | null): RankingTab {
   return RANKING_TABS.includes(value as RankingTab) ? (value as RankingTab) : 'placement'
 }
 
+const CURRENT_SEASON = String(new Date().getFullYear())
+
 export default function TopDogs() {
   const [searchParams, setSearchParams] = useSearchParams()
   const isStandalone = !searchParams.get('tab')
@@ -40,7 +42,7 @@ export default function TopDogs() {
     setActiveTab(parseRankingTab(searchParams.get('rankingTab')))
   }, [searchParams])
   const [filterBreed, setFilterBreed] = useState(() => searchParams.get('breed') || '')
-  const [filterYear, setFilterYear] = useState(() => searchParams.get('year') || '')
+  const [filterYear, setFilterYear] = useState(() => searchParams.get('year') || CURRENT_SEASON)
   const [searchQuery, setSearchQuery] = useState(() => searchParams.get('search') || '')
   const [isInitialLoad, setIsInitialLoad] = useState(true)
 
@@ -131,7 +133,7 @@ export default function TopDogs() {
   const filteredSpeed = filterSpeed(topSpeed, filterParams)
 
   const handleResetFilters = () => {
-    setFilterYear('2026')
+    setFilterYear(CURRENT_SEASON)
     setFilterBreed('')
     setFilterMinStarts('')
     setFilterScoreFrom('')

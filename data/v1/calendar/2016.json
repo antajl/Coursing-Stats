@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/calendar-v1",
   "year": 2016,
-  "exported_at": "2026-07-07T13:48:00.415Z",
+  "exported_at": "2026-07-07T17:16:29.219Z",
   "event_count": 6,
   "with_results": 0,
   "events": [
@@ -16,13 +16,18 @@
       "rank_label": "Национальные сертификатные состязания по курсингу ранга CACL \"Мартовский Заяц - 2016\"",
       "event_type": "coursing",
       "competition_kind": "CACL",
+      "competition_type": "Курсинг борзых",
+      "host_club": "",
+      "region": null,
       "location": "Московская область, Сергиево-Посадский р-н",
       "results_url": "http://procoursing.ru/results/2016-02-27/",
       "catalog_url": null,
       "confirmed": 0,
+      "judges": null,
       "has_results": false,
       "results_file": null,
-      "result_count": 0
+      "result_count": 0,
+      "participants_count": 0
     },
     {
       "id": 1129,
@@ -35,13 +40,18 @@
       "rank_label": "Национальные сертификатные состязания по курсингу ранга CACL \"Мартовский Заяц - 2016\"",
       "event_type": "coursing",
       "competition_kind": "CACL",
+      "competition_type": "Курсинг борзых",
+      "host_club": "",
+      "region": null,
       "location": "Московская область, Сергиево-Посадский р-н",
       "results_url": null,
       "catalog_url": null,
       "confirmed": 0,
+      "judges": null,
       "has_results": false,
       "results_file": null,
-      "result_count": 0
+      "result_count": 0,
+      "participants_count": 0
     },
     {
       "id": 1355,
@@ -54,13 +64,18 @@
       "rank_label": "Региональные состязания по курсингу ранга CACL \"Заяц на Ярославке - 2016\"",
       "event_type": "coursing",
       "competition_kind": "CACL",
+      "competition_type": "Курсинг борзых",
+      "host_club": "",
+      "region": null,
       "location": "Московская область, Пушкинский р-н, д. Михайловское",
       "results_url": "http://procoursing.ru/results/2016-08-06/",
       "catalog_url": null,
       "confirmed": 0,
+      "judges": null,
       "has_results": false,
       "results_file": null,
-      "result_count": 0
+      "result_count": 0,
+      "participants_count": 0
     },
     {
       "id": 1356,
@@ -73,13 +88,18 @@
       "rank_label": "Дружественные забеги",
       "event_type": "coursing",
       "competition_kind": "",
+      "competition_type": "",
+      "host_club": "",
+      "region": null,
       "location": "Московская область, деревня Михайловское",
       "results_url": "http://procoursing.ru/results/2016-08-06_F/",
       "catalog_url": null,
       "confirmed": 0,
+      "judges": null,
       "has_results": false,
       "results_file": null,
-      "result_count": 0
+      "result_count": 0,
+      "participants_count": 0
     },
     {
       "id": 1130,
@@ -92,13 +112,18 @@
       "rank_label": "Региональные состязания по курсингу ранга CACL \"Заяц на Ярославке - 2016\"",
       "event_type": "coursing",
       "competition_kind": "CACL",
+      "competition_type": "Курсинг борзых",
+      "host_club": "",
+      "region": null,
       "location": "Московская область, Пушкинский р-н, д. Михайловское",
       "results_url": null,
       "catalog_url": null,
       "confirmed": 0,
+      "judges": null,
       "has_results": false,
       "results_file": null,
-      "result_count": 0
+      "result_count": 0,
+      "participants_count": 0
     },
     {
       "id": 1131,
@@ -111,13 +136,18 @@
       "rank_label": "Дружественные забеги",
       "event_type": "unknown",
       "competition_kind": "",
+      "competition_type": "",
+      "host_club": "",
+      "region": null,
       "location": "Московская область, деревня Михайловское",
       "results_url": null,
       "catalog_url": null,
       "confirmed": 0,
+      "judges": null,
       "has_results": false,
       "results_file": null,
-      "result_count": 0
+      "result_count": 0,
+      "participants_count": 0
     }
   ]
 }

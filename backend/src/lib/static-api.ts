@@ -88,3 +88,63 @@ export async function tryStaticJudgesSummary(): Promise<{
     availableBreeds: index.availableBreeds ?? [],
   };
 }
+
+export function judgeDetailKey(name: string): string {
+  const bytes = new TextEncoder().encode(name);
+  let binary = '';
+  for (const b of bytes) binary += String.fromCharCode(b);
+  return btoa(binary).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+}
+
+export async function tryStaticJudgeDetails(judgeName: string): Promise<Record<string, unknown> | null> {
+  const key = judgeDetailKey(judgeName);
+  return loadStaticDataJson<Record<string, unknown>>(`indexes/judge-details/${key}.json`);
+}
+
+type EventsByIdEntry = {
+  results_file?: string | null;
+  date_start?: string;
+  title?: string;
+  has_results?: boolean;
+};
+
+type CompetitionFile = {
+  event?: Record<string, unknown>;
+  results?: Array<Record<string, unknown> & { dog?: Record<string, unknown> }>;
+};
+
+export async function tryStaticCompetition(eventId: string): Promise<{
+  event: Record<string, unknown>;
+  results: Record<string, unknown>[];
+} | null> {
+  const index = await loadStaticDataJson<Record<string, EventsByIdEntry>>('indexes/events-by-id.json');
+  const entry = index?.[eventId];
+  if (!entry?.results_file) return null;
+
+  const comp = await loadStaticDataJson<CompetitionFile>(entry.results_file);
+  if (!comp?.event) return null;
+
+  const results = (comp.results ?? []).map((r) => ({
+    ...r,
+    name_lat: r.dog?.name_lat ?? r.name_lat,
+    name_ru: r.dog?.name_ru ?? r.name_ru,
+    breed: r.dog?.breed ?? r.breed,
+  }));
+
+  return { event: comp.event, results };
+}
+
+export async function tryStaticManifestStats(): Promise<Record<string, unknown> | null> {
+  const manifest = await loadStaticDataJson<{
+    counts?: Record<string, number>;
+    exported_at?: string;
+  }>('manifest.json');
+  if (!manifest?.counts) return null;
+  return {
+    ...manifest.counts,
+    breeds: manifest.counts.breeds ?? 0,
+    speed_records: manifest.counts.donino_speed ?? 0,
+    coursing_records: manifest.counts.donino_coursing ?? 0,
+    data_source: 'data/v1/manifest.json',
+  };
+}

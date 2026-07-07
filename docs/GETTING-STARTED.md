@@ -148,17 +148,18 @@ npm run test-parser-fixtures
 | Сервис | URL |
 |--------|-----|
 | Фронтенд | https://coursing-stats.ru |
-| API | https://api.coursing-stats.ru |
+| API | https://api.coursing-stats.ru (не деплоится в CI с 2026-07; публичный сайт его не использует) |
 | GitHub | https://github.com/antajl/Coursing-Stats |
 
 ## Технический стек
 
-- **Runtime data:** `data/v1/` (JSON + `pc-db.sqlite` на Pages) — см. `docs/LOCAL-DATA.md`
-- **Backend:** Cloudflare Worker (Hono, sql.js) + Node dev server (`local-dev-server.ts`)
+- **Runtime data:** `data/v1/` (JSON + precomputed `indexes/`) на Pages CDN — см. `docs/LOCAL-DATA.md`
+- **Публичный сайт (прод):** React SPA читает `/data/v1/*.json` напрямую с CDN, **без Worker** (`frontend/src/lib/staticData.ts`)
+- **Backend:** Cloudflare Worker (Hono, sql.js) — только для локальной админки; Node dev server (`local-dev-server.ts`)
 - **Импорт:** Cloudflare D1 + Node скрипты (`export-local-data`, парсеры)
 - **Frontend:** React + Vite + TailwindCSS + React Query + Zod
-- **Деплой:** push `main` → GitHub Actions → Pages + Worker
-- **Локально:** `npm run dev` (без D1); legacy: `npm run dev:d1`
+- **Деплой:** push `main` → GitHub Actions → Deploy Pages (Worker в прод не деплоится)
+- **Локально:** `npm run dev` (без D1, админка на `:8787`); legacy: `npm run dev:d1`
 
 ## Состояние данных (`data/v1/`, 2026-07-07)
 
