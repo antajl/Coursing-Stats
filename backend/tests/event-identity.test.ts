@@ -1,5 +1,10 @@
 import { describe, expect, it } from 'vitest'
-import { eventCompetitionName, eventDedupeKey, eventDiscipline } from '../lib/event-identity'
+import {
+  dedupeCalendarEvents,
+  eventCompetitionName,
+  eventDedupeKey,
+  eventDiscipline,
+} from '../lib/event-identity'
 
 describe('eventDedupeKey', () => {
   it('merges legacy and new import of same event (1351 / 1126)', () => {
@@ -36,7 +41,7 @@ describe('eventDedupeKey', () => {
     expect(eventDedupeKey(a)).toBe(eventDedupeKey(b))
   })
 
-  it('merges unknown vs coursing discipline for friendly runs (1353 / 1128)', () => {
+  it('dedupes unknown vs coursing discipline for friendly runs (1353 / 1128)', () => {
     const a = {
       date_start: '2015-08-08',
       location: 'Московская область, Сергиево-Посадский р-н',
@@ -75,6 +80,14 @@ describe('eventDedupeKey', () => {
       competition_type: 'Курсинг борзых',
       rank_label: 'ignored',
     })).toBe('cacl|курсинг борзых')
+  })
+
+  it('dedupes calendar event list', () => {
+    const events = [
+      { id: 1351, date_start: '2015-03-14', location: 'Левково', rank_label: 'CACL', event_type: 'coursing', competition_kind: 'CACL', competition_type: 'Курсинг борзых' },
+      { id: 1126, date_start: '2015-03-14', location: 'Левково', rank_label: 'CACL', event_type: 'coursing', competition_kind: 'CACL', competition_type: 'Курсинг борзых', title: 'old' },
+    ]
+    expect(dedupeCalendarEvents(events).map((e) => e.id)).toEqual([1351])
   })
 
   it('normalizes discipline from competition_type', () => {

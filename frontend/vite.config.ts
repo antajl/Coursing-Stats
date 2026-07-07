@@ -38,6 +38,7 @@ function serveDataV1(): Plugin {
 
   return {
     name: 'serve-data-v1',
+    enforce: 'pre',
     configureServer(server) {
       server.middlewares.use(middleware)
     },

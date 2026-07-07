@@ -19,6 +19,7 @@ import {
   formatJudgesData,
   type JudgeRawRow,
 } from './judgeStats'
+import { dedupeCalendarEvents } from '../../../backend/lib/event-identity'
 
 export const DATA_BASE = '/data/v1'
 
@@ -173,11 +174,13 @@ export async function getEvents(year = ''): Promise<ApiResult<Record<string, unk
   if (year) {
     const file = await fetchJson<CalendarFile>(`calendar/${year}.json`)
     if (!file?.events) return { success: true, data: [] }
-    return { success: true, data: sortByDateDesc(file.events) }
+    const events = dedupeCalendarEvents(file.events as Array<Record<string, unknown> & { id: number }>)
+    return { success: true, data: sortByDateDesc(events) }
   }
   const all = await fetchJson<Record<string, unknown>[]>('indexes/calendar-index.json')
   if (!all) return { success: false, error: 'calendar index unavailable' }
-  return { success: true, data: sortByDateDesc(all) }
+  const events = dedupeCalendarEvents(all as Array<Record<string, unknown> & { id: number }>)
+  return { success: true, data: sortByDateDesc(events) }
 }
 
 interface EventsByIdEntry {

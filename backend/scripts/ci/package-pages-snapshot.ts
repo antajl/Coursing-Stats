@@ -5,6 +5,7 @@
  * Usage: npx tsx backend/scripts/ci/package-pages-snapshot.ts
  */
 import crypto from 'node:crypto';
+import { execSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
 import zlib from 'node:zlib';
@@ -52,6 +53,9 @@ function main(): void {
     console.error('Snapshot not found. Run: npm run build-data-snapshot');
     process.exit(1);
   }
+
+  // Синхронизировать indexes/calendar из data/v1 (после dedupe-calendar)
+  execSync('npx tsx backend/scripts/rebuild-calendar-index.ts', { cwd: ROOT, stdio: 'inherit' });
 
   fs.mkdirSync(path.join(OUT_DIR, 'donino'), { recursive: true });
 

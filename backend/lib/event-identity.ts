@@ -66,3 +66,22 @@ export function scoreCanonicalEvent(event: EventIdentityFields): number {
   if (event.id) score += event.id / 1_000_000
   return score
 }
+
+/** Убрать дубли из списка событий календаря (одна дата + локация + дисциплина + название). */
+export function dedupeCalendarEvents<T extends EventIdentityFields & { id: number }>(events: T[]): T[] {
+  const groups = new Map<string, T[]>()
+  for (const event of events) {
+    const key = eventDedupeKey(event)
+    if (!groups.has(key)) groups.set(key, [])
+    groups.get(key)!.push(event)
+  }
+
+  const kept: T[] = []
+  for (const group of groups.values()) {
+    kept.push(
+      [...group].sort((a, b) => scoreCanonicalEvent(b) - scoreCanonicalEvent(a))[0],
+    )
+  }
+
+  return kept
+}
