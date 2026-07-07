@@ -4,6 +4,12 @@
 
 ## [Unreleased]
 
+### 2026-07-07 — UI стандартизация по аудиту
+- **Толщина рамок (P4):** стандартизирована по правилу — строки списков/мелкие элементы → `border` (1px), карточки/тулбар → `border` (1px), шапки профилей → `border-2`
+- **Nav active-стиль (P6):** унифицирован — mobile теперь использует подчёркивание `scale-x` как desktop
+- **Цветовые токены (P1):** сокращённые токены заменены на полные в TSX файлах (`om-` → `old-money-` в Admin компонентах)
+- **Файлы:** `frontend/src/lib/toolbar.ts`, `frontend/src/index.css`, `frontend/src/components/Nav.tsx`, `frontend/src/pages/Admin/*.tsx`
+
 ### 2026-07-07 — D1, архив данных, SEO, docs
 - **Edge cache** (`backend/src/lib/edge-cache.ts`): кэш GET на Cloudflare edge — снижение reads D1 (free tier 5M/день)
 - **Local dev:** `npm run dev` → локальная D1; `sync-from-remote`, `dev:remote` для prod-копии
