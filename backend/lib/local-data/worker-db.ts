@@ -18,6 +18,7 @@ export const DEFAULT_SNAPSHOT_URL = 'https://coursing-stats.ru/data/v1/pc-db.sql
 
 let cached: WorkerDataStore | null = null;
 let loading: Promise<WorkerDataStore> | null = null;
+let cachedSnapshotUrl: string | null = null;
 let sqlJsStatic: import('sql.js').SqlJsStatic | null = null;
 
 async function initSqlJs(): Promise<import('sql.js').SqlJsStatic> {
@@ -44,9 +45,27 @@ async function initSqlJs(): Promise<import('sql.js').SqlJsStatic> {
   return sqlJsStatic;
 }
 
+async function resolveSnapshotUrl(env: WorkerDataEnv): Promise<string> {
+  if (env.DATA_SNAPSHOT_URL) return env.DATA_SNAPSHOT_URL;
+
+  try {
+    const manifestRes = await fetch('https://coursing-stats.ru/data/v1/manifest.json');
+    if (manifestRes.ok) {
+      const manifest = (await manifestRes.json()) as { exported_at?: string };
+      if (manifest.exported_at) {
+        return `${DEFAULT_SNAPSHOT_URL}?v=${encodeURIComponent(manifest.exported_at)}`;
+      }
+    }
+  } catch {
+    /* manifest optional */
+  }
+
+  return DEFAULT_SNAPSHOT_URL;
+}
+
 async function loadSnapshotBytes(env: WorkerDataEnv): Promise<ArrayBuffer> {
-  const url = env.DATA_SNAPSHOT_URL || DEFAULT_SNAPSHOT_URL;
-  const res = await fetch(url);
+  const url = await resolveSnapshotUrl(env);
+  const res = await fetch(url, { cf: { cacheTtl: 300 } } as RequestInit);
   if (!res.ok) {
     throw new Error(`Data snapshot not found at ${url} (${res.status})`);
   }
@@ -68,14 +87,19 @@ function readStats(db: import('sql.js').Database): LocalDataStats {
 }
 
 export async function getWorkerDataStore(env: WorkerDataEnv = {}): Promise<WorkerDataStore> {
-  if (cached) return cached;
+  const snapshotUrl = env.DATA_SNAPSHOT_URL ?? (await resolveSnapshotUrl(env));
+
+  if (cached && cachedSnapshotUrl === snapshotUrl) return cached;
+  if (cachedSnapshotUrl !== snapshotUrl) resetWorkerDataStore();
+
   if (loading) return loading;
 
   loading = (async () => {
     const SQL = await initSqlJs();
-    const bytes = await loadSnapshotBytes(env);
+    const bytes = await loadSnapshotBytes({ ...env, DATA_SNAPSHOT_URL: snapshotUrl });
     const sqlDb = new SQL.Database(new Uint8Array(bytes));
     const stats = readStats(sqlDb);
+    cachedSnapshotUrl = snapshotUrl;
     cached = { db: createSqlJsShim(sqlDb), stats, sqlJsDb: sqlDb };
     return cached;
   })();
@@ -87,4 +111,5 @@ export function resetWorkerDataStore() {
   cached?.sqlJsDb?.close();
   cached = null;
   loading = null;
+  cachedSnapshotUrl = null;
 }

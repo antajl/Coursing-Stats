@@ -30,6 +30,12 @@ jobs:
       - name: Build data snapshot from data/v1
         run: npm run build-data-snapshot
 
+      - name: Snapshot version for Worker cache bust
+        id: snapshot
+        run: |
+          VERSION=$(sha256sum data/v1/pc-db.sqlite | awk '{print substr($1,1,16)}')
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+
       - name: Install frontend dependencies
         working-directory: ./frontend
         run: npm install
@@ -38,6 +44,7 @@ jobs:
         run: |
           mkdir -p frontend/public/data/v1 frontend/public/assets
           cp data/v1/pc-db.sqlite frontend/public/data/v1/
+          cp data/v1/manifest.json frontend/public/data/v1/
           cp backend/assets/sql-wasm.wasm frontend/public/assets/
 
       - name: Build frontend
@@ -46,14 +53,7 @@ jobs:
         env:
           VITE_API_URL: https://api.coursing-stats.ru
 
-      - name: Deploy Worker
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: deploy --config wrangler.toml
-
-      # wrangler pages deploy (не Git-интеграция Pages) — смотреть Deployments в CF, не Builds
+      # Pages first — Worker загружает pc-db.sqlite с coursing-stats.ru
       - name: Deploy Frontend to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
@@ -61,3 +61,10 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy frontend/dist --project-name=coursingstats --branch=main --commit-dirty=true
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Deploy Worker
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: deploy --config wrangler.toml --var DATA_SNAPSHOT_URL:https://coursing-stats.ru/data/v1/pc-db.sqlite?v=${{ steps.snapshot.outputs.version }}

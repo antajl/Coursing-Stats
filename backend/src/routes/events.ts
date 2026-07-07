@@ -80,6 +80,8 @@ export function handleCompetitions(app: Hono<{ Bindings: Env }>) {
     const { results: dogCount } = await db.prepare('SELECT COUNT(*) as count FROM dogs').all();
     const { results: resultCount } = await db.prepare('SELECT COUNT(*) as count FROM results').all();
     const { results: breedCount } = await db.prepare('SELECT COUNT(DISTINCT breed) as count FROM dogs').all();
+    const { results: speedCount } = await db.prepare('SELECT COUNT(*) as count FROM speed_records').all();
+    const { results: coursingCount } = await db.prepare('SELECT COUNT(*) as count FROM coursing_records').all();
 
     return c.json({
       success: true,
@@ -88,6 +90,8 @@ export function handleCompetitions(app: Hono<{ Bindings: Env }>) {
         dogs: dogCount[0]?.count || 0,
         results: resultCount[0]?.count || 0,
         breeds: breedCount[0]?.count || 0,
+        speed_records: speedCount[0]?.count || 0,
+        coursing_records: coursingCount[0]?.count || 0,
       }
     });
   });
