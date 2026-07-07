@@ -18,5 +18,3 @@ export function applyWorkerPolyfills(baseUrl = 'https://coursing-stats.ru/'): vo
     }
   }
 }
-
-applyWorkerPolyfills();

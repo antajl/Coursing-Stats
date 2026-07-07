@@ -26,7 +26,7 @@
 | Среда | Источник | Команда |
 |-------|----------|---------|
 | **Dev** | `data/v1/` на диске | `npm run dev` |
-| **Prod API** | `https://coursing-stats.ru/data/v1/pc-db.sqlite` | deploy (CI) |
+| **Prod API** | `https://coursing-stats.ru/data/v1/pc-db.sqlite` (sql.js в Worker) | deploy (CI) |
 | **Импорт** | D1 remote/local | `export-local-data`, парсеры |
 
 **R2 не используется** — снимок отдаётся бесплатно через Cloudflare Pages.
@@ -99,7 +99,7 @@ npm run smoke-api
 |------|------------|
 | `backend/lib/local-data/` | загрузка JSON/SQLite, D1-shim, sql.js |
 | `backend/src/local-dev-server.ts` | dev API :8787 |
-| `backend/src/worker.ts` | prod: fetch снимка с Pages |
+| `backend/src/worker.ts` | prod: sql.js + fetch снимка с Pages |
 | `backend/scripts/export/export-local-data-v1.ts` | D1 → data/v1/ |
 | `backend/scripts/build-data-snapshot.ts` | JSON → pc-db.sqlite |
 

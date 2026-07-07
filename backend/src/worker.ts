@@ -1,4 +1,3 @@
-import '../lib/local-data/worker-polyfills';
 import app from './app';
 import { getWorkerDataStore } from '../lib/local-data/worker-db';
 import type { DataStoreEnv } from '../lib/local-data/types';

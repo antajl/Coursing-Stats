@@ -1,5 +1,6 @@
+import wasmModule from '../../assets/sql-wasm.wasm';
 import type { LocalDataStats } from './stats';
-import './worker-polyfills';
+import { applyWorkerPolyfills } from './worker-polyfills';
 import { createSqlJsShim } from './sqljs-shim';
 import type { DataDb } from './types';
 
@@ -11,44 +12,36 @@ export type WorkerDataStore = {
 
 export type WorkerDataEnv = {
   DATA_SNAPSHOT_URL?: string;
-  SQL_WASM_URL?: string;
 };
 
 export const DEFAULT_SNAPSHOT_URL = 'https://coursing-stats.ru/data/v1/pc-db.sqlite';
-export const DEFAULT_WASM_URL = 'https://coursing-stats.ru/assets/sql-wasm.wasm';
 
 let cached: WorkerDataStore | null = null;
 let loading: Promise<WorkerDataStore> | null = null;
+let sqlJsStatic: import('sql.js').SqlJsStatic | null = null;
 
-async function loadWasmBinary(env: WorkerDataEnv): Promise<ArrayBuffer> {
-  const url = env.SQL_WASM_URL || DEFAULT_WASM_URL;
-  const res = await fetch(url);
-  if (!res.ok) {
-    throw new Error(`sql-wasm.wasm not found at ${url} (${res.status})`);
-  }
-  return res.arrayBuffer();
-}
+async function initSqlJs(): Promise<import('sql.js').SqlJsStatic> {
+  if (sqlJsStatic) return sqlJsStatic;
 
-async function initSqlJs(env: WorkerDataEnv) {
+  applyWorkerPolyfills();
+
   const initSqlJsModule = await import('sql.js/dist/sql-wasm.js');
   const initSqlJs = initSqlJsModule.default as (config?: {
-    wasmBinary?: ArrayBuffer;
     instantiateWasm?: (
       imports: WebAssembly.Imports,
       successCallback: (instance: WebAssembly.Instance) => void,
     ) => WebAssembly.Exports | Record<string, never>;
   }) => Promise<import('sql.js').SqlJsStatic>;
 
-  const wasmBinary = await loadWasmBinary(env);
-  return initSqlJs({
-    wasmBinary,
+  sqlJsStatic = await initSqlJs({
     instantiateWasm(imports, successCallback) {
-      void WebAssembly.instantiate(wasmBinary, imports).then(({ instance }) => {
-        successCallback(instance);
-      });
-      return {};
+      const instance = new WebAssembly.Instance(wasmModule, imports);
+      successCallback(instance);
+      return instance.exports;
     },
   });
+
+  return sqlJsStatic;
 }
 
 async function loadSnapshotBytes(env: WorkerDataEnv): Promise<ArrayBuffer> {
@@ -79,7 +72,7 @@ export async function getWorkerDataStore(env: WorkerDataEnv = {}): Promise<Worke
   if (loading) return loading;
 
   loading = (async () => {
-    const SQL = await initSqlJs(env);
+    const SQL = await initSqlJs();
     const bytes = await loadSnapshotBytes(env);
     const sqlDb = new SQL.Database(new Uint8Array(bytes));
     const stats = readStats(sqlDb);

@@ -53,6 +53,7 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: deploy --config wrangler.toml
 
+      # wrangler pages deploy (не Git-интеграция Pages) — смотреть Deployments в CF, не Builds
       - name: Deploy Frontend to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
