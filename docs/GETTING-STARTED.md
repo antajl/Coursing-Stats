@@ -93,7 +93,7 @@ npm run test-parser-fixtures  # v2 модульные на реальных HTML
 
 ```
 Coursing Stats/
-├── backend/              # Worker API + парсеры + скрипты
+├── backend/              # local-dev API, парсеры, скрипты сборки data/v1
 │   ├── src/              # worker.ts, app.ts, routes/
 │   ├── parsers/          # v1: parse-results-*.ts; v2: coursing/, bzmp/, racing/, unique/
 │   ├── scripts/          # Все .ts (npx tsx): scrape/, load/, reparse/, test/, …
@@ -148,14 +148,15 @@ npm run test-parser-fixtures
 | Сервис | URL |
 |--------|-----|
 | Фронтенд | https://coursing-stats.ru |
-| API | https://api.coursing-stats.ru (не деплоится в CI с 2026-07; публичный сайт его не использует) |
+| Данные (CDN) | https://coursing-stats.ru/data/v1/ |
+| API (только локально) | http://127.0.0.1:8787 (`npm run dev`) |
 | GitHub | https://github.com/antajl/Coursing-Stats |
 
 ## Технический стек
 
 - **Runtime data:** `data/v1/` (JSON + precomputed `indexes/`) на Pages CDN — см. `docs/LOCAL-DATA.md`
-- **Публичный сайт (прод):** React SPA читает `/data/v1/*.json` напрямую с CDN, **без Worker** (`frontend/src/lib/staticData.ts`)
-- **Backend:** Cloudflare Worker (Hono, sql.js) — только для локальной админки; Node dev server (`local-dev-server.ts`)
+- **Публичный сайт (прод):** React SPA → `/data/v1/*.json` на Pages CDN (`frontend/src/lib/staticData.ts`), без Worker
+- **Локальная админка:** `local-dev-server.ts` на `:8787` (Hono + better-sqlite3 из `data/v1/`)
 - **Импорт:** Cloudflare D1 + Node скрипты (`export-local-data`, парсеры)
 - **Frontend:** React + Vite + TailwindCSS + React Query + Zod
 - **Деплой:** push `main` → GitHub Actions → Deploy Pages (Worker в прод не деплоится)
@@ -171,13 +172,14 @@ npm run test-parser-fixtures
 | results | 2958 |
 | speed_records (Донино) | 191 |
 | coursing_records (Донино 350 м) | 107 |
+| breeds | 86 |
 
 D1 remote может отличаться — источник для re-export: `sync-from-remote` → `export-local-data`.
 
 ## Что работает
 
-- ✅ **Runtime на файлах** `data/v1/` (dev; prod после deploy с Pages snapshot)
-- ✅ API на Cloudflare Worker (Hono): `/api/competitions`, `/api/dogs`, `/api/top/*`, `/api/judges`, `/api/speed-records`, `/api/coursing-records`
+- ✅ **Публичный прод:** статика `/data/v1/` на CDN — без Worker, без cold start
+- ✅ **Локальная админка:** `/api` на `:8787` (события, результаты, sync → `data/v1/`)
 - ✅ Фронтенд на Cloudflare Pages с полной мобильной адаптацией
 - ✅ Разделы: Главная (hero, топ сезона, рекорды Донино), Соревнования, Судьи, Рекорды Донино, Профиль собаки, Профиль Донино, Результаты события
 - ✅ Единый паттерн тулбара (`PageToolbar`) на рейтинге, судьях, рекордах Донино, **календаре** (`Events/index.tsx`)
@@ -191,8 +193,7 @@ D1 remote может отличаться — источник для re-export:
 - ✅ GitHub Actions: обновление D1 — **вручную** (`update-db.yml`, `workflow_dispatch`)
 - ✅ Admin API с авторизацией через `X-Admin-Token` (секрет в Cloudflare)
 - ✅ TypeScript, React Query, Zod, Hono, Sentry (базовая интеграция)
-- ✅ **Runtime на файлах `data/v1/`** (dev + prod Worker через Pages static)
-- ✅ Edge cache API (no-op в Node dev; кэш на Cloudflare edge в prod)
+- ✅ Sitemap (`/sitemap.xml`) и precomputed indexes в CI
 - ✅ Файловый архив: `npm run export-archive` → `data/archive/snapshots/`
 - ✅ Sitemap + favicon.ico для поисковиков
 - ✅ Страница `/guide` (справочник правил и протоколов)
@@ -204,7 +205,7 @@ D1 remote может отличаться — источник для re-export:
 - ❌ OCR для результатов 2015–2022 (хранятся как изображения)
 - ❌ Sentry DSN не настроен (конфигурация создана, проект в Sentry не создан)
 - 🔄 Модульные парсеры v2 в продакшен-reparse (`reparse-by-year.ts`); v1 `parse-results-*.ts` — legacy/CLI
-- 🔄 In-process Worker-тесты — `api.test.ts` пропущен; планируется vitest@4 + `@cloudflare/vitest-pool-workers`; пока `npm run smoke-api` с dev-сервером
+- 🔄 In-process Worker-тесты — `api.test.ts` пропущен; пока `npm run smoke-api` с `npm run dev`
 - 🔄 Тексты hero на главной (eyebrow/заголовок) — при необходимости уточнить формулировки про годы архива vs результаты в БД
 - 📋 Подробнее: `FUTURE-PLANS.md`
 
@@ -244,10 +245,9 @@ D1 remote может отличаться — источник для re-export:
 
 ## Полезные ссылки
 
-- **Фронтенд:** http://localhost:5173
-- **API:** http://127.0.0.1:8787
-- **Производственный фронтенд:** https://coursing-stats.ru
-- **Производственный API:** https://api.coursing-stats.ru
+- **Фронтенд:** http://localhost:5173 (данные: `/data/v1/` с диска через Vite)
+- **API (админка):** http://127.0.0.1:8787
+- **Продакшн:** https://coursing-stats.ru
 - **GitHub:** https://github.com/antajl/Coursing-Stats
 - **Источник данных:** http://procoursing.ru
 

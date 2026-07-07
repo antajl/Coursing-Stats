@@ -54,12 +54,13 @@ JSON-поля (`raw_scores_json`, `history`, `track_schemes`) разворачи
 
 | Сущность | Количество | Примечание |
 |----------|------------|------------|
-| events | 225 | календарь 2015–2026 |
+| events | 389 | календарь 2015–2026 |
 | competitions с results | 56 | протоколы в БД |
-| dogs | 1628 | |
-| results | 2966 | в основном 2025–2026 |
-| speed_records | 213 | Google Sheets |
+| dogs | 1532 | |
+| results | 2958 | в основном 2025–2026 |
+| speed_records | 191 | Google Sheets |
 | coursing_records | 107 | Google Sheets 350 м |
+| breeds | 86 | |
 | judges (таблица) | 0 на remote | судьи в `events.judges`, API `/api/judges` |
 
 **2015–2024:** события в календаре есть; детальные `results` в БД **нет** (на procoursing — JPG, OCR не делали).

@@ -18,18 +18,18 @@ Coursing Stats использует несколько стратегий для
 
 ## Sitemap (Карта сайта)
 
-### Sitemap index (статика на Pages)
-- **Файл**: `frontend/public/sitemap.xml` — **sitemap index** (не urlset)
-- **URL**: `https://coursing-stats.ru/sitemap.xml`
-- **Указывает на**:
-  - `sitemap-pages.xml` — фиксированные страницы (`/`, `/competitions`, `/top`, …)
-  - `api.coursing-stats.ru/sitemap.xml` — собаки, события, судьи, Донино
+### Статический sitemap (прод, CI)
 
-### Динамический sitemap (API)
-- **Файл**: `backend/src/routes/sitemap.ts`
-- **URL**: `https://api.coursing-stats.ru/sitemap.xml`
-- **Содержит**: URL из БД (собаки, события, судьи по имени, профили Донино)
-- **Кэш**: 24 ч на edge (см. `backend/src/lib/edge-cache.ts`) — не бьёт D1 при каждом запросе бота
+- **Генерация:** `backend/scripts/build-derived-indexes.ts` → `frontend/public/sitemap.xml`
+- **URL:** `https://coursing-stats.ru/sitemap.xml`
+- **Содержит:** все публичные URL (страницы, собаки, события, судьи, Донино) из `data/v1/indexes/sitemap-urls.json`
+- **Обновление:** автоматически при `git push main` (CI `build-all-data`)
+
+### Legacy: динамический sitemap на Worker
+
+- **Файл:** `backend/src/routes/sitemap.ts` (только `npm run dev` / `dev:d1`)
+- **URL:** `https://api.coursing-stats.ru/sitemap.xml` — Worker не деплоится в CI с 2026-07-07
+- Для поисковиков используйте **`https://coursing-stats.ru/sitemap.xml`**
 
 ### Добавление sitemap в поисковики
 
@@ -183,7 +183,7 @@ if (items.results) {
 ### Cloudflare блокировка в России
 - Проблема: Cloudflare заблокирован в РФ с 2022 года
 - Решение: DNS верификация (работает)
-- Динамический sitemap доступен через API (api.coursing-stats.ru)
+- Sitemap: статический `https://coursing-stats.ru/sitemap.xml` (генерируется в CI)
 
 ### SPA (Single Page Application)
 - Проблема: Поисковики могут плохо индексировать динамические страницы
@@ -197,9 +197,9 @@ if (items.results) {
 - Не требует исправления, если аудитория — вся Россия
 
 ### Sitemap
-- В Вебмастере указать: `https://coursing-stats.ru/sitemap.xml` (index)
-- Index ссылается на `sitemap-pages.xml` (~7 URL) и `api.coursing-stats.ru/sitemap.xml` (~2096 URL из D1)
-- После деплоя Worker отдельная загрузка API-sitemap не нужна — index подтягивает его автоматически
+- В Вебмастере указать: `https://coursing-stats.ru/sitemap.xml`
+- Генерируется в CI (`build-derived-indexes`) — собаки, события, судьи, Донино
+- После `git push main` роботы подхватывают обновления автоматически
 
 ### Favicon
 - `frontend/public/favicon.ico` + `favicon-48.png` — для краулеров и вкладок

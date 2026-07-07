@@ -84,12 +84,12 @@ assets/ — статические ассеты (assets/logo.svg)
 **Title:** Технический стек и деплой
 **Content:**
 ```
-Backend: Cloudflare Worker (API), Cloudflare D1 (SQLite), Node.js (скраперы/парсеры)
-Frontend: React, Vite, TailwindCSS, кастомные components/ui/ (без shadcn), Lucide, xlsx
-Деплой: Cloudflare Pages (фронтенд), Cloudflare Workers (бэкенд), Cloudflare D1 (БД)
-Домены: coursing-stats.ru (фронтенд), api.coursing-stats.ru (API)
+Backend: Node.js (парсеры, local-dev-server для админки), Cloudflare D1 (импорт)
+Frontend: React, Vite, TailwindCSS — публичный прод читает /data/v1/ с CDN (staticData.ts), без Worker
+Деплой: Cloudflare Pages (фронт + data/v1/); Worker не деплоится в CI
+Домены: coursing-stats.ru (сайт и данные /data/v1/)
 GitHub: https://github.com/antajl/Coursing-Stats
-Автоматизация: GitHub Actions (обновление D1 4×/день — 05:00, 11:00, 17:00, 20:30 UTC; деплой при push в main)
+Автоматизация: GitHub Actions (Donino cron → data/v1/; deploy Pages при push в main)
 ```
 **Tags:** tech_stack, deployment, infrastructure
 **Priority:** Critical
@@ -103,11 +103,12 @@ GitHub: https://github.com/antajl/Coursing-Stats
 **Content:**
 ```
 База данных D1 (local и remote синхронизированы):
-- events: 225 (2015–2026, календарь)
-- dogs: 1628
-- results: 2966 (только 2025–2026)
-- speed_records: 213 (Google Sheets, автообновление)
+- events: 389 (2015–2026, календарь)
+- dogs: 1532
+- results: 2958 (только 2025–2026)
+- speed_records: 191 (Google Sheets, автообновление)
 - coursing_records: 107 (Google Sheets 350 м, автообновление)
+- breeds: 86
 - Remote D1: ~21 MB
 
 Распределение results:
@@ -219,9 +220,9 @@ backend/src/routes/judges.ts — статистика судей
 backend/src/routes/speed.ts — рекорды скорости
 backend/src/routes/top.ts — рейтинги собак
 
-Base URL:
-- Production: https://api.coursing-stats.ru
+Base URL (локальная админка / dev):
 - Development: http://127.0.0.1:8787
+- Публичный прод: `/data/v1/` на coursing-stats.ru (не API)
 ```
 **Tags:** api, routes
 **Priority:** Important

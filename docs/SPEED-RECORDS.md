@@ -325,13 +325,13 @@ npx tsx backend/scripts/speed/fetch-speed-records.ts
 npx tsx backend/scripts/speed/fetch-speed-records.ts --remote
 ```
 
-#### Команды фронтенда
+#### Команды проверки (прод — статика CDN)
 ```bash
-# Проверить ответ API
-curl "https://api.coursing-stats.ru/api/speed-records"
+# Проверить данные Донино на CDN
+curl "https://coursing-stats.ru/data/v1/donino/speed_records.json" | head -c 500
 
-# Проверить ответ API с лимитом
-curl "https://api.coursing-stats.ru/api/speed-records?limit=1000"
+# Локально (нужен npm run dev для API)
+curl "http://127.0.0.1:8787/api/speed-records?limit=10"
 ```
 
 ### Общие проблемы
@@ -444,7 +444,7 @@ useEffect(() => {
 
 **Проверка:**
 ```bash
-curl "https://api.coursing-stats.ru/api/speed-records?limit=10000" | jq '.data | length'
+curl "https://coursing-stats.ru/data/v1/donino/speed_records.json" | jq '.records | length'
 ```
 
 #### Проблема 5: Отсутствует история для некоторых собак
@@ -515,7 +515,7 @@ npx wrangler d1 execute pc-db --remote --command="SELECT name, breed, date, COUN
 
 3. **Проверьте ответ API:**
    ```bash
-   curl "https://api.coursing-stats.ru/api/speed-records" | jq '.data | length'
+   curl "https://coursing-stats.ru/data/v1/donino/speed_records.json" | jq '.records | length'
    ```
    - Должно вернуть 187 записей
    - Если 100, проверьте настройки LIMIT

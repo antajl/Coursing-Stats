@@ -551,14 +551,13 @@ hover:bg-cream-50 dark:hover:bg-charcoal-700
 
 ### Обзор
 
-**Стек:**
-- Cloudflare Pages — фронтенд
-- Cloudflare Worker — бэкенд (API)
-- Cloudflare D1 — база данных (SQLite)
+**Стек (прод):**
+- Cloudflare Pages — фронтенд + статика `data/v1/` на CDN
+- Локальная админка — `local-dev-server.ts` (`npm run dev`)
+- Cloudflare D1 — импорт (парсеры, cron), не runtime публичного сайта
 
 **Домены:**
-- Фронтенд: https://coursing-stats.ru
-- API: https://api.coursing-stats.ru
+- Сайт и данные: https://coursing-stats.ru (`/data/v1/`)
 - GitHub: https://github.com/antajl/Coursing-Stats
 
 ### Cloudflare Pages
@@ -571,10 +570,7 @@ hover:bg-cream-50 dark:hover:bg-charcoal-700
 - Build command: `cd frontend && npm run build`
 - Build output directory: `frontend/dist`
 
-**Environment variables:**
-- `VITE_API_URL`: `https://api.coursing-stats.ru`
-
-> ⚠️ **Важно:** сборка фронтенда фактически выполняется в GitHub Actions (`npm run build`), а Cloudflare Pages только принимает уже готовый `frontend/dist` через `wrangler pages deploy`. Переменные окружения из этого раздела Cloudflare Pages **не участвуют** в сборке и ни на что не влияют, пока сборку делает GitHub Actions. Реальный источник `VITE_API_URL` для прод-сборки — переменная `env:` в шаге `Build frontend` файла `.github/workflows/deploy-frontend.yml`. Значение здесь оставлено только для справки/на случай ручной сборки через Cloudflare Pages.
+**Environment variables:** не требуются для прод-сборки (данные с `/data/v1/` на том же домене).
 
 ### GitHub Actions
 
@@ -586,9 +582,13 @@ hover:bg-cream-50 dark:hover:bg-charcoal-700
 
 **Процесс:**
 1. Checkout кода
-2. Установка зависимостей
+2. `npm run build-all-data` (indexes + package `data/v1/`)
 3. Build фронтенда
-4. Деплой на Cloudflare Pages
+4. Deploy на Cloudflare Pages (Worker **не** деплоится)
+
+### Cloudflare Worker (legacy)
+
+Код в `backend/src/worker.ts` — для `npm run dev:d1`. **Не деплоится в CI** с 2026-07-07. См. `docs/LOCAL-DATA.md`.
 
 ### SPA Routing
 
@@ -598,34 +598,6 @@ hover:bg-cream-50 dark:hover:bg-charcoal-700
 ```
 
 Это обеспечивает корректную работу React Router на Cloudflare Pages.
-
-### Cloudflare Worker
-
-**Worker name:** `coursingstatsworker`
-
-**Main:** `backend/src/worker.ts`
-
-**Compatibility date:** 2024-01-01
-
-**D1 Binding:**
-- Database name: `pc-db`
-- Database ID: `a5d6d4ad-7fc5-41b4-a33b-05f4daa382d4`
-- Binding name: `DB`
-
-**wrangler.toml:**
-```toml
-name = "coursingstatsworker"
-main = "backend/src/worker.ts"
-compatibility_date = "2024-01-01"
-
-[[d1_databases]]
-binding = "DB"
-database_name = "pc-db"
-database_id = "a5d6d4ad-7fc5-41b4-a33b-05f4daa382d4"
-```
-
-**Secrets:**
-- `ADMIN_API_TOKEN` — токен для авторизации admin endpoints
 
 ### GitHub Actions Workflows
 

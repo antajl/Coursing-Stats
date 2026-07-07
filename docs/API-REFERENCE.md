@@ -1,11 +1,14 @@
 # API Reference — Документация API
 
-Полная документация API Coursing Stats.
+Полная документация **локального dev API** (админка и отладка).
+
+> **Публичный прод** не использует этот API. Сайт читает JSON с CDN: `/data/v1/` (`frontend/src/lib/staticData.ts`). См. `docs/LOCAL-DATA.md`.
 
 ## Base URL
 
-**Production:** `https://api.coursing-stats.ru`
-**Development:** `http://127.0.0.1:8787`
+**Локальная админка / dev:** `http://127.0.0.1:8787` (`npm run dev`)
+
+**Legacy (не вызывается фронтом с 2026-07-07):** `https://api.coursing-stats.ru`
 
 ## CORS
 

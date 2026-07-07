@@ -4,22 +4,44 @@
 
 ---
 
+## 2026-07-07 — Публичный прод без Worker (статика CDN)
+
+### Решение
+- **Публичный сайт** не вызывает `api.coursing-stats.ru` — React читает precomputed JSON с `/data/v1/` (Pages CDN)
+- **Worker не деплоится** в CI (`.github/workflows/deploy-frontend.yml`)
+- Тяжёлые агрегации (топы, судьи, профили собак) — в CI: `build-derived-indexes.ts` → `data/v1/indexes/`
+- **Админка** только локально: `npm run dev` → `local-dev-server.ts` `:8787`
+
+### Причина
+Cold start Worker + sql.js давал пустые экраны и таймауты у посетителей. Данные уже лежали на Pages — Worker был лишней прокладкой.
+
+### Реализация
+- `frontend/src/lib/staticData.ts` + порты `breedMapping.ts`, `judgeStats.ts`
+- Vite `serveDataV1` plugin для dev-паритета с продом
+- `indexes/dog-profiles/{id}.json`, `judge-details/`, `sitemap.xml`
+
+Документация: `docs/LOCAL-DATA.md`, `docs/ARCHITECTURE.md`
+
+---
+
 ## 2026-07-07 — Переход runtime на файлы `data/v1/` (без R2)
 
 ### Решение
-- **Prod и dev API** читают данные из файлов, не из D1 в runtime
-- Канонический каталог: `data/v1/` (JSON); Worker загружает `pc-db.sqlite` (~12 МБ) со **статики Pages**
-- **R2 отклонён** — платный после trial; снимок на `coursing-stats.ru/data/v1/pc-db.sqlite`
-- D1 (`pc-db`) остаётся для **импорта**: парсеры, `export-local-data`, cron (пока не переведён)
+- **Dev и импорт** работают с файлами, не с D1 в runtime публичного сайта
+- Канонический каталог: `data/v1/` (JSON)
+- **R2 отклонён** — данные на `coursing-stats.ru/data/v1/`
+- D1 (`pc-db`) остаётся для **импорта**: парсеры, `export-local-data`, cron
+
+> **Примечание (вечер 2026-07-07):** prod Worker + sql.js заменён статикой CDN — см. запись выше.
 
 ### Реализация
-- `backend/lib/local-data/` — JSON → SQLite (better-sqlite3 dev, sql.js prod)
+- `backend/lib/local-data/` — JSON → SQLite (better-sqlite3 dev admin)
 - `local-dev-server.ts` — `npm run dev` без D1
-- `build-data-snapshot` + CI копирует в `frontend/public/data/v1/`
-- Админка: persist локально в `pc-db.sqlite`; прод — read-only до git push
+- `build-all-data` + CI копирует в `frontend/public/data/v1/`
+- Админка: persist локально → `sync-sqlite-to-v1` → git push
 
 ### Обновление прода
-`export-local-data` / правка JSON → `build-data-snapshot` → git push → deploy
+`export-local-data` / правка JSON → `build-all-data` → git push → deploy Pages
 
 Документация: `docs/LOCAL-DATA.md`
 

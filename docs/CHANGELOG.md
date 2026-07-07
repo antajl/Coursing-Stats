@@ -4,14 +4,23 @@
 
 ## [Unreleased]
 
+### 2026-07-07 — Публичный сайт на статике CDN (без Worker)
+
+- **Прод:** посетители читают `/data/v1/*.json` с Cloudflare Pages CDN (`frontend/src/lib/staticData.ts`) — мгновенно, без cold start
+- **CI:** `build-derived-indexes` генерирует `dog-profiles/`, `judge-details/`, `top-*-all`, `years.json`, `sitemap.xml`
+- **Деплой:** GitHub Actions деплоит только Pages; шаг Deploy Worker закомментирован
+- **Dev:** Vite plugin `serveDataV1` отдаёт repo `data/v1/` на `/data/v1/`; админка — `local-dev-server` `:8787`
+- **Тесты:** `backend/tests/static-indexes.test.ts`
+- **Документация:** синхронизированы `ARCHITECTURE.md`, `GETTING-STARTED.md`, `LOCAL-DATA.md`; удалены временные планы миграции
+
 ### 2026-07-07 — Runtime на файлах `data/v1/` (prod + dev)
 - **Локальные данные:** `data/v1/` — канонический каталог (календарь, competitions, dogs, donino, indexes)
 - **Dev:** `npm run dev` → `local-dev-server.ts`, D1 не нужна
-- **Prod:** Worker (sql.js) читает `pc-db.sqlite` со статики Pages; **без R2**
-- **Скрипты:** `export-local-data`, `build-data-snapshot`, `export-competitions` (legacy)
-- **CI:** deploy собирает snapshot → `public/data/v1/` → Pages + Worker
-- **Админка:** сохранение локально; прод обновляется через git push
-- **Документация:** `docs/LOCAL-DATA.md`, rule `.cursor/rules/local-data.mdc`
+- **Prod (устарело с вечера 2026-07-07):** ~~Worker (sql.js)~~ → заменено статикой CDN (см. запись выше)
+- **Скрипты:** `export-local-data`, `build-data-snapshot`, `build-all-data`, `build-derived-indexes`
+- **CI:** deploy собирает snapshot → `public/data/v1/` → Pages
+- **Админка:** только локально; прод обновляется через git push
+- **Документация:** `docs/LOCAL-DATA.md`
 - **Fix:** `edge-cache.ts` — no-op без `caches` API в Node dev
 
 ### 2026-07-07 — UI стандартизация по аудиту

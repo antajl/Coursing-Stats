@@ -45,8 +45,7 @@
   - Error handling
 
 ### Данные
-- **[LOCAL-DATA.md](LOCAL-DATA.md)** — **главный документ:** файловая БД `data/v1/`, dev и prod без D1 в runtime
-- **[LOCAL-DATA-PLAN.md](LOCAL-DATA-PLAN.md)** — чеклист миграции (исторический)
+- **[LOCAL-DATA.md](LOCAL-DATA.md)** — **главный документ:** `data/v1/`, CDN на проде, локальная админка
 - **[DATA-ARCHIVE.md](DATA-ARCHIVE.md)** — снимки D1 в `data/archive/snapshots/` (бэкап)
 - **[GUIDE.md](GUIDE.md)** — Справочник `/guide`
   - Правила РКФ, протоколы, титулы
@@ -112,15 +111,14 @@
 
 **Coursing Stats** — агрегатор статистики собак по соревнованиям procoursing.ru (курсинг, БЗМП, бега) за 2015–2026 годы.
 
-**Статус:** Развёрнут на Cloudflare. **Runtime на файлах `data/v1/`** (prod + dev); D1 — импорт.
+**Статус:** Развёрнут на Cloudflare Pages. **Публичный runtime — статика `/data/v1/` на CDN**; D1 — импорт; админка — локально.
 
 **Технический стек:**
-- Backend: Cloudflare Worker (API, sql.js + снимок с Pages), TypeScript
-- Frontend: React, Vite, TailwindCSS
-- Данные runtime: `data/v1/` → `pc-db.sqlite` на Pages
-- Импорт: Cloudflare D1, парсеры, `export-local-data`
+- Frontend: React, Vite, TailwindCSS → `staticData.ts` читает `/data/v1/` с CDN
+- Локальная админка: Hono + better-sqlite3 (`local-dev-server.ts`)
+- Импорт: Cloudflare D1, парсеры, `export-local-data`, `build-all-data`
 
 **Домены:**
-- Фронтенд: https://coursing-stats.ru
-- API: https://api.coursing-stats.ru
+- Сайт: https://coursing-stats.ru
+- Данные: https://coursing-stats.ru/data/v1/
 - GitHub: https://github.com/antajl/Coursing-Stats

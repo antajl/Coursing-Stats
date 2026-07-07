@@ -6,18 +6,24 @@
 Источник (procoursing.ru, Google Sheets)
         │
         ▼
-   D1 (импорт) ──export-local-data──► data/v1/*.json
+   D1 (импорт) ──export-local-data──► data/v1/*.json  (git — источник правды)
         │                                    │
-        │                                    ▼ build-data-snapshot
-        │                              pc-db.sqlite
+        │                                    ├─ build-derived-indexes → indexes/
         │                                    │
-        ├─ dev:d1 (legacy)                   ├─ npm run dev (Node, память)
-        │                                    └─ Pages static → Worker sql.js (prod)
-        ▼
-   api.coursing-stats.ru → coursing-stats.ru
+        │                                    ▼  CI: build-all-data
+        │                              frontend/public/data/v1/
+        │                                    │
+        ├─ npm run dev (админка)             ▼
+        │   local-dev-server :8787     Cloudflare Pages CDN
+        │   better-sqlite3 in-memory         │
+        └─ dev:d1 (legacy, опционально)      ▼
+                                    coursing-stats.ru
+                                    React SPA → fetch /data/v1/*.json
+                                    (frontend/src/lib/staticData.ts)
+                                    (без Worker)
 ```
 
-> Runtime **не использует D1**. Подробно: `docs/LOCAL-DATA.md`.
+> **Публичный прод не использует D1 и не деплоит Worker.** Подробно: `docs/LOCAL-DATA.md`.
 
 ### Legacy diagram (импорт)
 
@@ -62,15 +68,28 @@ Cloudflare D1 (events, dogs, results)  ← скрипты импорта
 - `v_top_by_placement` — медальный зачёт (курсинг + БЗМП)
 - `v_top_by_score` — топ по очкам (курсинг + БЗМП)
 
-### 3. Worker (API)
+### 3. Публичный runtime (статика на Pages)
 
-**Entry point:** `backend/src/worker.ts` (тонкая обёртка) → `backend/src/app.ts` (Hono application)
+**Клиент:** `frontend/src/lib/staticData.ts` — все публичные страницы читают JSON с `/data/v1/` (CDN).
+
+**Precomputed indexes** (`backend/scripts/build-derived-indexes.ts` → `data/v1/indexes/`):
+- топы (`top-placement-*`, `top-score-*`, `top-speed-*`)
+- судьи (`judges-summary.json`, `judge-details/`, `judges-raw-rows.json`)
+- профили собак (`dog-profiles/{id}.json`)
+- `years.json`, `events-by-id.json`, `sitemap.xml`
+
+Клиентская фильтрация/сортировка: `frontend/src/lib/breedMapping.ts`, `judgeStats.ts`.
+
+### 4. Local Dev API (Hono, только локально)
+
+**Entry point:** `backend/src/local-dev-server.ts` → `backend/src/app.ts`
+
+Код `backend/src/worker.ts` оставлен для опционального `npm run dev:d1`; **в CI не деплоится**.
 
 **Architecture:**
-- Тонкий диспетчер, делегирует в `src/routes/`
-- CORS с wildcard для всех запросов
-- Логирование всех запросов
-- Обработка OPTIONS для CORS preflight
+- Делегирует в `src/routes/`
+- CORS с wildcard
+- Админка: POST/PUT/DELETE → persist sqlite → `sync-sqlite-to-v1`
 
 **Routes:**
 ```javascript
@@ -319,16 +338,16 @@ POST /api/admin/recreate-views
 
 **GitHub:** https://github.com/antajl/Coursing-Stats
 
-**Cloudflare Pages:** https://coursingstats.pages.dev
-- Автоматический деплой через GitHub Actions при push в main
+**Cloudflare Pages:** https://coursing-stats.ru (проект `coursingstats`)
+- Push в `main` → GitHub Actions → `build-all-data` → `pages deploy`
+- Статика: React SPA + `data/v1/*.json` + `sitemap.xml`
 
-**Cloudflare Worker:** https://api.coursing-stats.ru
-- Активен; edge cache на API (см. `backend/src/lib/edge-cache.ts`)
+**Cloudflare Worker:** `coursingstatsworker` — **не деплоится в CI** с 2026-07-07. Старый URL `api.coursing-stats.ru` может ещё отвечать, публичный сайт его не вызывает.
 
 **Cloudflare D1:** `pc-db` — только импорт/cron (runtime prod **не** читает D1)
 
-> Актуальные runtime-счётчики — в `data/v1/manifest.json` и `/api/stats` после deploy.
-> D1 remote (~225 events) может отставать от `data/v1/` (389 events).
+> Актуальные runtime-счётчики — в `data/v1/manifest.json` (`https://coursing-stats.ru/data/v1/manifest.json`).
+> D1 remote может отставать от `data/v1/`.
 
 ---
 
@@ -350,8 +369,8 @@ POST /api/admin/recreate-views
 |------|-----|
 | **Сайт** | https://coursing-stats.ru |
 | **Сайт (www)** | https://www.coursing-stats.ru |
-| **API** | https://api.coursing-stats.ru |
-| **API (fallback Worker)** | https://coursingstatsworker.antajltube.workers.dev |
+| **Данные (CDN)** | https://coursing-stats.ru/data/v1/ |
+| **API (legacy, не используется сайтом)** | https://api.coursing-stats.ru |
 
 DNS зона `coursing-stats.ru` — в **Cloudflare** (NS с reg.ru на Cloudflare).
 
@@ -360,15 +379,15 @@ DNS зона `coursing-stats.ru` — в **Cloudflare** (NS с reg.ru на Cloudf
 | Ресурс | Имя в дашборде |
 |--------|----------------|
 | **Pages** (фронт) | `coursingstats` |
-| **Worker** (API) | `coursingstatsworker` |
+| **Worker** (legacy, не в CI) | `coursingstatsworker` |
 | **D1** | `pc-db` (binding `DB`, id в `wrangler.toml`) |
 
 ### Деплой
 
 - **GitHub Actions:** `.github/workflows/deploy-frontend.yml`
-  - `VITE_API_URL=https://api.coursing-stats.ru`
+  - `npm run build-all-data`
   - `wrangler pages deploy ... --project-name=coursingstats`
-  - `wrangler deploy` (Worker из `wrangler.toml`)
+  - Worker deploy закомментирован (админка только локально)
 
 ### GitHub
 
@@ -383,7 +402,8 @@ DNS зона `coursing-stats.ru` — в **Cloudflare** (NS с reg.ru на Cloudf
 |------|------------|
 | `wrangler.toml` | `name = "coursingstatsworker"` |
 | `package.json` | `"name": "coursing-stats"` |
-| `frontend/src/services/api.ts` | прод API URL |
+| `frontend/src/lib/staticData.ts` | прод: fetch `/data/v1/` с CDN |
+| `frontend/src/services/api.ts` | обёртка над staticData; dev admin → `/api` |
 | `frontend/index.html` | `<title>Coursing Stats</title>` |
 | `frontend/src/AppRoutes.tsx` | маршрут `/competitions`, редирект `/procoursing` |
 

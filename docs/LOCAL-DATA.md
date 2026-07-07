@@ -112,5 +112,5 @@ npm run smoke-api
 
 ## Связанные документы
 
-- `docs/MIGRATION-PLAN-TEMP.md` — план фаз (временный)
+- `docs/DECISIONS-LOG.md` — история миграции на `data/v1/` и отказ от Worker на проде
 - `docs/DATABASE.md` — D1 для импорта
