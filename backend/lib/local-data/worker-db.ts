@@ -10,46 +10,48 @@ export type WorkerDataStore = {
 };
 
 export type WorkerDataEnv = {
-  /** Переопределение URL снимка (по умолчанию — статика Pages) */
   DATA_SNAPSHOT_URL?: string;
+  SQL_WASM_URL?: string;
 };
 
-/** Публичный снимок на Pages (бесплатно, без R2) */
 export const DEFAULT_SNAPSHOT_URL = 'https://coursing-stats.ru/data/v1/pc-db.sqlite';
+export const DEFAULT_WASM_URL = 'https://coursing-stats.ru/assets/sql-wasm.wasm';
 
 let cached: WorkerDataStore | null = null;
 let loading: Promise<WorkerDataStore> | null = null;
 
-async function initSqlJs() {
+async function loadWasmBinary(env: WorkerDataEnv): Promise<ArrayBuffer> {
+  try {
+    const wasm = await import('../../assets/sql-wasm.wasm');
+    const buf = (wasm as { default: ArrayBuffer }).default;
+    if (buf?.byteLength) return buf;
+  } catch {
+    /* bundle import unavailable in some builds */
+  }
+
+  const url = env.SQL_WASM_URL || DEFAULT_WASM_URL;
+  const res = await fetch(url);
+  if (!res.ok) {
+    throw new Error(`sql-wasm.wasm not found at ${url} (${res.status})`);
+  }
+  return res.arrayBuffer();
+}
+
+async function initSqlJs(env: WorkerDataEnv) {
   const initSqlJsModule = await import('sql.js/dist/sql-wasm.js');
   const initSqlJs = initSqlJsModule.default as (config?: {
     wasmBinary?: ArrayBuffer;
-    locateFile?: (file: string) => string;
   }) => Promise<import('sql.js').SqlJsStatic>;
 
-  let wasmBinary: ArrayBuffer | undefined;
-  try {
-    const wasm = await import('../../assets/sql-wasm.wasm');
-    wasmBinary = (wasm as { default: ArrayBuffer }).default;
-  } catch {
-    /* wrangler dev */
-  }
-
-  return initSqlJs(
-    wasmBinary
-      ? { wasmBinary }
-      : { locateFile: (file) => `https://coursing-stats.ru/assets/${file}` },
-  );
+  const wasmBinary = await loadWasmBinary(env);
+  return initSqlJs({ wasmBinary });
 }
 
 async function loadSnapshotBytes(env: WorkerDataEnv): Promise<ArrayBuffer> {
   const url = env.DATA_SNAPSHOT_URL || DEFAULT_SNAPSHOT_URL;
-  const res = await fetch(url, { cf: { cacheTtl: 300 } } as RequestInit);
+  const res = await fetch(url);
   if (!res.ok) {
-    throw new Error(
-      `Data snapshot not found at ${url} (${res.status}). ` +
-        `Run: npm run build-data-snapshot, deploy Pages with public/data/v1/${SNAPSHOT_KEY}`,
-    );
+    throw new Error(`Data snapshot not found at ${url} (${res.status})`);
   }
   return res.arrayBuffer();
 }
@@ -73,7 +75,7 @@ export async function getWorkerDataStore(env: WorkerDataEnv = {}): Promise<Worke
   if (loading) return loading;
 
   loading = (async () => {
-    const SQL = await initSqlJs();
+    const SQL = await initSqlJs(env);
     const bytes = await loadSnapshotBytes(env);
     const sqlDb = new SQL.Database(new Uint8Array(bytes));
     const stats = readStats(sqlDb);
