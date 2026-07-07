@@ -66,6 +66,10 @@ async function main() {
   }
 
   console.log("\n✓ CI database update completed");
+
+  console.log("\nExporting D1 → data/v1/...");
+  run("npx tsx backend/scripts/export/export-local-data-v1.ts");
+  console.log("\n✓ data/v1 export completed — commit and push data/v1/ to deploy");
 }
 
 main().catch((err) => {

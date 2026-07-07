@@ -27,31 +27,9 @@ jobs:
       - name: Install root dependencies
         run: npm install
 
-      - name: Build data snapshot from data/v1
-        run: npm run build-data-snapshot
-
-      - name: Package snapshot for Pages (versioned gzip)
+      - name: Build and package data for Pages
         id: snapshot
-        run: |
-          HASH=$(sha256sum data/v1/pc-db.sqlite | awk '{print substr($1,1,16)}')
-          mkdir -p frontend/public/data/v1
-          gzip -c -f data/v1/pc-db.sqlite > "frontend/public/data/v1/pc-db-${HASH}.sqlite.gz"
-          gzip -c -f data/v1/pc-db.sqlite > frontend/public/data/v1/pc-db.sqlite.gz
-          cp data/v1/manifest.json frontend/public/data/v1/
-          mkdir -p frontend/public/data/v1/donino
-          cp data/v1/donino/speed_records.json frontend/public/data/v1/donino/
-          node <<EOF
-          const fs = require('fs');
-          const hash = '${HASH}';
-          const manifest = require('./data/v1/manifest.json');
-          fs.writeFileSync('frontend/public/data/v1/snapshot-latest.json', JSON.stringify({
-            hash,
-            exported_at: manifest.exported_at,
-            counts: manifest.counts,
-            gzip_bytes: fs.statSync('frontend/public/data/v1/pc-db.sqlite.gz').size,
-          }));
-          EOF
-          echo "hash=$HASH" >> "$GITHUB_OUTPUT"
+        run: npm run build-all-data
 
       - name: Install frontend dependencies
         working-directory: ./frontend

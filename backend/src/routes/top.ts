@@ -1,6 +1,7 @@
 import { Hono } from 'hono';
 import { appendBreedFilter } from '../lib/breed-mapping';
 import { RACING_EXCLUDED_STATUSES_SQL } from '../lib/racing-status';
+import { tryStaticTopPlacement, tryStaticTopScore } from '../lib/static-api';
 
 type Env = {
   DB: any;
@@ -67,6 +68,11 @@ export function handleTop(app: Hono<{ Bindings: Env }>) {
     }
 
     if (year) {
+      if (!breed && minStarts === 0) {
+        const staticResult = await tryStaticTopPlacement(year, sortBy, pagination);
+        if (staticResult) return c.json(staticResult);
+      }
+
       query = 'SELECT *, year AS year_from, year AS year_to FROM v_top_by_placement WHERE year = ?';
       params.push(year);
 
@@ -135,6 +141,11 @@ export function handleTop(app: Hono<{ Bindings: Env }>) {
     }
 
     if (year) {
+      if (!breed && minStarts === 0) {
+        const staticResult = await tryStaticTopScore(year, sortBy, pagination);
+        if (staticResult) return c.json(staticResult);
+      }
+
       query = 'SELECT *, year AS year_from, year AS year_to FROM v_top_by_score WHERE year = ?';
       params.push(year);
 

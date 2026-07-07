@@ -1,5 +1,6 @@
 import { Hono } from 'hono';
 import { parseJudgeNames } from '../lib/judge-names';
+import { tryStaticJudgesSummary } from '../lib/static-api';
 import {
   aggregateJudgeStats,
   formatJudgesData,
@@ -21,6 +22,19 @@ export function handleJudges(app: Hono<{ Bindings: Env }>) {
     const db = c.env.DB;
     const breed = c.req.query('breed') || '';
     const discipline = c.req.query('discipline') || '';
+
+    if (!breed && !discipline) {
+      const staticSummary = await tryStaticJudgesSummary();
+      if (staticSummary) {
+        return c.json({
+          success: true,
+          data: {
+            judges: staticSummary.judges,
+            availableBreeds: staticSummary.availableBreeds,
+          },
+        });
+      }
+    }
     
     // Извлекаем статистику судей из raw_scores_json и связываем с фамилиями из events.judges
     let query = `

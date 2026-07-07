@@ -69,9 +69,10 @@
 
 Система использует гибридный подход:
 1. **Google Sheets** — основной источник
-2. **Локальный JSON кэш** — `data/speed-records.json` (только speed; для контроля версий)
-3. **База данных D1** — продакшен для API
-4. **Скрипты синхронизации** — парсинг XLSX → SQL → D1
+2. **Локальный JSON кэш** — `data/speed-records.json` (legacy; для контроля версий)
+3. **data/v1/** — `donino/speed_records.json` (runtime; попадает в `pc-db.sqlite` и на Pages)
+4. **База данных D1** — импорт/cron (не prod runtime)
+5. **Скрипты синхронизации** — парсинг XLSX → SQL → D1 → export в data/v1
 
 ## Источник: замер скорости (`speed_records`)
 
@@ -288,7 +289,7 @@ npx tsx backend/scripts/speed/sync-speed-records.ts
 ### GitHub Actions
 - **Workflow**: `.github/workflows/update-speed-records.yml`
 - **Расписание**: 4 раза в день — 08:00, 14:00, 20:00, 23:30 МСК (cron UTC: 05:00, 11:00, 17:00, 20:30)
-- **Действие**: `sync-speed-records.ts` → D1; коммит `data/speed-records.json` только при изменении кэша
+- **Действие**: `sync-speed-records.ts` → D1; `export-donino-speed-v1.ts` → `data/v1/donino/speed_records.json`; коммит `data/speed-records.json` + `data/v1/donino/speed_records.json` при изменении (`[skip ci]` — деплой не запускается)
 
 ---
 

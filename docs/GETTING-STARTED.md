@@ -186,7 +186,8 @@ D1 remote может отличаться — источник для re-export:
 - ✅ UI polish: матовый `nav-glass`, светлая тема по умолчанию, календарь/рейтинг/Донино/результаты
 - ✅ Скрапер календаря: `backend/parsers/calendar/scrape-year-page.ts` — диапазоны дат, `[отменён]`, мультидисциплины в `rank_label`, корректные `results_url` (тесты `calendar-scrape.test.ts`)
 - ✅ Production D1: календарь и reparse 2025 обновлены
-- ✅ GitHub Actions: обновление D1 (**4×/день**) и рекорды Donino (**4×/день**: 08:00, 14:00, 20:00, 23:30 МСК)
+- ✅ GitHub Actions: рекорды Donino (**4×/день**: 08:00, 14:00, 20:00, 23:30 МСК) → D1 + `data/v1/donino/speed_records.json`
+- ✅ GitHub Actions: обновление D1 — **вручную** (`update-db.yml`, `workflow_dispatch`)
 - ✅ Admin API с авторизацией через `X-Admin-Token` (секрет в Cloudflare)
 - ✅ TypeScript, React Query, Zod, Hono, Sentry (базовая интеграция)
 - ✅ **Runtime на файлах `data/v1/`** (dev + prod Worker через Pages static)

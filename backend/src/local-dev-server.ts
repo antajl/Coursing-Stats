@@ -6,6 +6,7 @@ import { serve } from '@hono/node-server';
 import { Hono } from 'hono';
 import app from './app';
 import { createNodeDataStore, persistNodeDataStore } from '../lib/local-data/node-data-store';
+import { syncSqliteToV1 } from '../scripts/sync/sync-sqlite-to-v1';
 
 const PORT = Number(process.env.PORT || 8787);
 
@@ -30,6 +31,12 @@ wrapper.use('*', async (c, next) => {
     c.env.DATA_STORE?.nodeDb
   ) {
     persistNodeDataStore();
+    try {
+      const synced = syncSqliteToV1(c.env.DATA_STORE.nodeDb);
+      console.log('Admin sync → data/v1:', synced);
+    } catch (err) {
+      console.error('Admin sync to data/v1 failed:', err);
+    }
   }
 });
 wrapper.route('/', app);

@@ -3,6 +3,7 @@ import { createD1Shim } from './d1-shim';
 import { loadLocalDataSqlite } from './load-sqlite';
 import type { LocalDataStats } from './stats';
 import { loadBetterSqliteFromSnapshot, saveBetterSqliteSnapshot, SNAPSHOT_PATH } from './snapshot';
+import { isSnapshotStale } from './snapshot-freshness';
 import { assertDataV1Exists } from './paths';
 import type { DataDb } from './types';
 
@@ -19,7 +20,8 @@ export function createNodeDataStore(): NodeDataStore {
 
   assertDataV1Exists();
 
-  const snapshot = loadBetterSqliteFromSnapshot();
+  const forceRebuild = process.env.FORCE_REBUILD_DATA === '1';
+  const snapshot = !forceRebuild && !isSnapshotStale() ? loadBetterSqliteFromSnapshot() : null;
   if (snapshot) {
     const db = new Database(snapshot);
     const stats = readStats(db);

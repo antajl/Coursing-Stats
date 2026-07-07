@@ -9,7 +9,8 @@
 - [x] Фаза 1: `export-local-data` → `data/v1/`
 - [x] Фаза 2: `npm run dev` без D1
 - [x] Фаза 3: prod Worker читает снимок с Pages (без R2)
-- [ ] Cron `update-db.yml` → перевести на export + deploy (опционально)
+- [ ] Cron `update-db.yml` → export-local-data + deploy (опционально; сейчас только `workflow_dispatch` → D1)
+- [ ] Cron speed: после обновления `data/v1/` — автодеплой или отдельный pipeline
 
 ## Осталось по желанию
 

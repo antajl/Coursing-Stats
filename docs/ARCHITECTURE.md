@@ -325,12 +325,10 @@ POST /api/admin/recreate-views
 **Cloudflare Worker:** https://api.coursing-stats.ru
 - Активен; edge cache на API (см. `backend/src/lib/edge-cache.ts`)
 
-**Cloudflare D1:** `pc-db` (~21 MB)
-- events: 225 (2015–2026)
-- dogs: 1628
-- results: 2966 (2025–2026)
-- speed_records: замер скорости из Google Sheets (213 записей)
-- coursing_records: бега 350 м из отдельного Google Sheet (107 записей)
+**Cloudflare D1:** `pc-db` — только импорт/cron (runtime prod **не** читает D1)
+
+> Актуальные runtime-счётчики — в `data/v1/manifest.json` и `/api/stats` после deploy.
+> D1 remote (~225 events) может отставать от `data/v1/` (389 events).
 
 ---
 

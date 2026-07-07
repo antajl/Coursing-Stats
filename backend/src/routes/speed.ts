@@ -1,9 +1,56 @@
 import { Hono } from 'hono';
+import { loadDoninoCoursingRecords, loadDoninoSpeedRecords } from '../lib/static-api';
 
 type Env = {
   DB: any;
   ADMIN_API_TOKEN: string;
 };
+
+function filterDoninoRecords(
+  records: Record<string, unknown>[],
+  opts: {
+    breed?: string;
+    sex?: string;
+    search?: string;
+    year?: string;
+    dogId?: string;
+    limit: number;
+    sortKey: string;
+    sortAsc?: boolean;
+  },
+): Record<string, unknown>[] {
+  let rows = records;
+
+  if (opts.dogId) {
+    rows = rows.filter((r) => String(r.dog_id ?? '') === opts.dogId);
+  }
+  if (opts.breed) {
+    rows = rows.filter((r) => r.breed === opts.breed);
+  }
+  if (opts.sex) {
+    rows = rows.filter((r) => r.sex === opts.sex);
+  }
+  if (opts.year) {
+    rows = rows.filter((r) => String(r.date ?? '').includes(`.${opts.year}`));
+  }
+  if (opts.search) {
+    const q = opts.search.toLowerCase();
+    rows = rows.filter(
+      (r) =>
+        String(r.name ?? '').toLowerCase().includes(q) ||
+        String(r.breed ?? '').toLowerCase().includes(q) ||
+        String(r.date ?? '').toLowerCase().includes(q),
+    );
+  }
+
+  rows.sort((a, b) => {
+    const av = Number(a[opts.sortKey] ?? 0);
+    const bv = Number(b[opts.sortKey] ?? 0);
+    return opts.sortAsc ? av - bv : bv - av;
+  });
+
+  return rows.slice(0, opts.limit);
+}
 
 export function handleSpeed(app: Hono<{ Bindings: Env }>) {
   // GET /api/speed-records/top-by-breed — лучший результат в каждой породе, затем топ-N пород
@@ -53,8 +100,22 @@ export function handleSpeed(app: Hono<{ Bindings: Env }>) {
     const sex = c.req.query('sex') || '';
     const search = c.req.query('search') || '';
     const year = c.req.query('year') || '';
-    const limit = c.req.query('limit') || '1000';
+    const limit = parseInt(c.req.query('limit') || '1000', 10);
     const dogId = c.req.query('dog_id') || '';
+
+    const staticRecords = await loadDoninoSpeedRecords();
+    if (staticRecords?.length) {
+      const filtered = filterDoninoRecords(staticRecords, {
+        breed,
+        sex,
+        search,
+        year,
+        dogId,
+        limit,
+        sortKey: 'speed_km_h',
+      });
+      return c.json({ success: true, data: filtered });
+    }
 
     let query = 'SELECT * FROM speed_records WHERE 1=1';
     const params = [];
@@ -98,8 +159,22 @@ export function handleSpeed(app: Hono<{ Bindings: Env }>) {
     const breed = c.req.query('breed') || '';
     const search = c.req.query('search') || '';
     const year = c.req.query('year') || '';
-    const limit = c.req.query('limit') || '1000';
+    const limit = parseInt(c.req.query('limit') || '1000', 10);
     const dogId = c.req.query('dog_id') || '';
+
+    const staticRecords = await loadDoninoCoursingRecords();
+    if (staticRecords?.length) {
+      const filtered = filterDoninoRecords(staticRecords, {
+        breed,
+        search,
+        year,
+        dogId,
+        limit,
+        sortKey: 'time_seconds',
+        sortAsc: true,
+      });
+      return c.json({ success: true, data: filtered });
+    }
 
     let query = 'SELECT * FROM coursing_records WHERE 1=1';
     const params = [];

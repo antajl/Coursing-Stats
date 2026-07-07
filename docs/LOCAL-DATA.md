@@ -26,7 +26,7 @@
 | Среда | Источник | Команда |
 |-------|----------|---------|
 | **Dev** | `data/v1/` на диске | `npm run dev` |
-| **Prod API** | `https://coursing-stats.ru/data/v1/pc-db.sqlite` (sql.js в Worker) | deploy (CI) |
+| **Prod API** | `https://coursing-stats.ru/data/v1/pc-db-{hash}.sqlite.gz` (sql.js в Worker) | deploy (CI) |
 | **Импорт** | D1 remote/local | `export-local-data`, парсеры |
 
 **R2 не используется** — снимок отдаётся бесплатно через Cloudflare Pages.
@@ -84,7 +84,19 @@ npm run smoke-api
 1. Правка JSON в `data/v1/` (или `export-local-data`)
 2. `npm run build-data-snapshot`
 3. `git commit` + `push` в `main`
-4. CI (`deploy-frontend.yml`): snapshot → `frontend/public/data/v1/` → Pages + Worker
+4. CI (`deploy-frontend.yml`): `build-data-snapshot` → `package-pages-snapshot` → `frontend/public/data/v1/` → Pages + Worker
+
+CI кладёт на Pages:
+- `pc-db.sqlite.gz` и `pc-db-{hash}.sqlite.gz` (версионированный URL для Worker)
+- `snapshot-latest.json` — `{ hash, exported_at, counts, gzip_bytes }`
+- `manifest.json`, `donino/speed_records.json`
+
+Worker читает снимок по `DATA_SNAPSHOT_HASH` (из CI) или `snapshot-latest.json`.
+
+### Cron Донино (speed)
+
+`update-speed-records.yml` (4×/день): Google Sheets → D1 → `data/speed-records.json` + `data/v1/donino/speed_records.json`.
+Коммит с `[skip ci]` — **деплой не запускается**; для прода нужен отдельный push в `main` (или убрать `[skip ci]` и настроить path filters).
 
 ## Админка
 
@@ -102,6 +114,7 @@ npm run smoke-api
 | `backend/src/worker.ts` | prod: sql.js + fetch снимка с Pages |
 | `backend/scripts/export/export-local-data-v1.ts` | D1 → data/v1/ |
 | `backend/scripts/build-data-snapshot.ts` | JSON → pc-db.sqlite |
+| `backend/scripts/ci/package-pages-snapshot.ts` | gzip + snapshot-latest.json для Pages (CI) |
 
 ## Связанные документы
 
