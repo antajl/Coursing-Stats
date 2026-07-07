@@ -1,5 +1,5 @@
 import type { LocalDataStats } from './stats';
-import { SNAPSHOT_KEY } from './constants';
+import { applyWorkerPolyfills } from './worker-polyfills';
 import { createSqlJsShim } from './sqljs-shim';
 import type { DataDb } from './types';
 
@@ -19,16 +19,9 @@ export const DEFAULT_WASM_URL = 'https://coursing-stats.ru/assets/sql-wasm.wasm'
 
 let cached: WorkerDataStore | null = null;
 let loading: Promise<WorkerDataStore> | null = null;
+let polyfillsApplied = false;
 
 async function loadWasmBinary(env: WorkerDataEnv): Promise<ArrayBuffer> {
-  try {
-    const wasm = await import('../../assets/sql-wasm.wasm');
-    const buf = (wasm as { default: ArrayBuffer }).default;
-    if (buf?.byteLength) return buf;
-  } catch {
-    /* bundle import unavailable in some builds */
-  }
-
   const url = env.SQL_WASM_URL || DEFAULT_WASM_URL;
   const res = await fetch(url);
   if (!res.ok) {
@@ -38,13 +31,30 @@ async function loadWasmBinary(env: WorkerDataEnv): Promise<ArrayBuffer> {
 }
 
 async function initSqlJs(env: WorkerDataEnv) {
+  if (!polyfillsApplied) {
+    applyWorkerPolyfills();
+    polyfillsApplied = true;
+  }
+
   const initSqlJsModule = await import('sql.js/dist/sql-wasm.js');
   const initSqlJs = initSqlJsModule.default as (config?: {
     wasmBinary?: ArrayBuffer;
+    instantiateWasm?: (
+      imports: WebAssembly.Imports,
+      successCallback: (instance: WebAssembly.Instance) => void,
+    ) => WebAssembly.Exports | Record<string, never>;
   }) => Promise<import('sql.js').SqlJsStatic>;
 
   const wasmBinary = await loadWasmBinary(env);
-  return initSqlJs({ wasmBinary });
+  return initSqlJs({
+    wasmBinary,
+    instantiateWasm(imports, successCallback) {
+      void WebAssembly.instantiate(wasmBinary, imports).then(({ instance }) => {
+        successCallback(instance);
+      });
+      return {};
+    },
+  });
 }
 
 async function loadSnapshotBytes(env: WorkerDataEnv): Promise<ArrayBuffer> {

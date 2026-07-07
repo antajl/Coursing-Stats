@@ -1,9 +1,10 @@
-import app from './app';
-import { getWorkerDataStore } from '../lib/local-data/worker-db';
+import { applyWorkerPolyfills } from '../lib/local-data/worker-polyfills';
+import app from './app';import { getWorkerDataStore } from '../lib/local-data/worker-db';
 import type { DataStoreEnv } from '../lib/local-data/types';
 
 export default {
   async fetch(request: Request, env: DataStoreEnv, ctx: ExecutionContext) {
+    applyWorkerPolyfills();
     try {
       const store = await getWorkerDataStore(env);
       return app.fetch(
