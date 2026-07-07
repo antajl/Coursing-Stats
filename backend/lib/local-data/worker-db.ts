@@ -2,7 +2,24 @@ import wasmModule from '../../assets/sql-wasm.wasm';
 import type { LocalDataStats } from './stats';
 import { applyWorkerPolyfills } from './worker-polyfills';
 import { createSqlJsShim } from './sqljs-shim';
+import { pickRow, toSqlValue } from './sql-value';
 import type { DataDb } from './types';
+
+const SPEED_COLUMNS = [
+  'id',
+  'dog_id',
+  'breed',
+  'sex',
+  'name',
+  'speed_km_h',
+  'date',
+  'screenshot_url',
+  'status',
+  'history',
+  'updated_at',
+] as const;
+
+const DONINO_SPEED_JSON_URL = 'https://coursing-stats.ru/data/v1/donino/speed_records.json';
 
 export type WorkerDataStore = {
   db: DataDb;
@@ -99,6 +116,34 @@ function readStats(db: import('sql.js').Database): LocalDataStats {
   };
 }
 
+function insertSpeedRow(db: import('sql.js').Database, source: Record<string, unknown>) {
+  const row = pickRow(source, [...SPEED_COLUMNS]);
+  const keys = Object.keys(row);
+  if (!keys.length) return;
+  const placeholders = keys.map(() => '?').join(', ');
+  const sql = `INSERT OR REPLACE INTO speed_records (${keys.join(', ')}) VALUES (${placeholders})`;
+  const stmt = db.prepare(sql);
+  const values = keys.map((key) => toSqlValue(row[key]));
+  if (values.length) stmt.bind(values);
+  stmt.step();
+  stmt.free();
+}
+
+/** Prod sqlite may lack speed_records (stale cache); JSON on Pages is source of truth. */
+async function hydrateDoninoSpeedIfEmpty(db: import('sql.js').Database): Promise<void> {
+  if (readStats(db).speed_records > 0) return;
+
+  const res = await fetch(DONINO_SPEED_JSON_URL);
+  if (!res.ok) {
+    throw new Error(`Donino speed JSON not found (${res.status})`);
+  }
+
+  const data = (await res.json()) as { records?: Record<string, unknown>[] };
+  for (const record of data.records ?? []) {
+    insertSpeedRow(db, record);
+  }
+}
+
 export async function getWorkerDataStore(env: WorkerDataEnv = {}): Promise<WorkerDataStore> {
   const snapshotUrl = env.DATA_SNAPSHOT_HASH
     ? buildSnapshotUrl(env.DATA_SNAPSHOT_HASH)
@@ -113,6 +158,7 @@ export async function getWorkerDataStore(env: WorkerDataEnv = {}): Promise<Worke
     const SQL = await initSqlJs();
     const bytes = await loadSnapshotBytes({ ...env, DATA_SNAPSHOT_URL: snapshotUrl });
     const sqlDb = new SQL.Database(new Uint8Array(bytes));
+    await hydrateDoninoSpeedIfEmpty(sqlDb);
     const stats = readStats(sqlDb);
     cachedSnapshotUrl = snapshotUrl;
     cached = {

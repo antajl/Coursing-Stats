@@ -38,6 +38,8 @@ jobs:
           gzip -c -f data/v1/pc-db.sqlite > "frontend/public/data/v1/pc-db-${HASH}.sqlite.gz"
           gzip -c -f data/v1/pc-db.sqlite > frontend/public/data/v1/pc-db.sqlite.gz
           cp data/v1/manifest.json frontend/public/data/v1/
+          mkdir -p frontend/public/data/v1/donino
+          cp data/v1/donino/speed_records.json frontend/public/data/v1/donino/
           node <<EOF
           const fs = require('fs');
           const hash = '${HASH}';
