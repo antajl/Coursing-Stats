@@ -25,11 +25,14 @@ cd ..
 ### Запуск локально
 
 ```bash
-npm run sync-from-remote   # первый раз: копия prod D1 → local
-npm run dev                # Worker :8787 (local D1) + Vite :5173
+# Первый раз: выгрузить data/v1/ (из D1 или уже есть в репо)
+npm run export-local-data -- --local   # если нужен re-export из D1
+
+npm run dev                # local-dev-server :8787 + Vite :5173 (data/v1/, без D1)
 ```
 
-`npm run dev` по умолчанию использует **локальную D1** — не расходует квоту remote. Свежие prod-данные: `sync-from-remote`. Live remote: `npm run dev:remote`.
+Legacy с D1: `npm run dev:d1` (локальная D1) или `npm run dev:remote` (remote D1, жрёт квоту).  
+Свежие prod-данные в D1: `npm run sync-from-remote` → `export-local-data`.
 
 Файловый бэкап: `npm run export-archive` — см. `DATA-ARCHIVE.md`.
 
@@ -66,7 +69,7 @@ npm run lint
 - Следуйте существующему стилю кода
 - Используйте TailwindCSS для стилей
 - Не используйте эмодзи в UI (используйте SVG иконки или текст)
-- Следуйте дизайн-системе (см. `docs/design/DESIGN-SYSTEM.md`)
+- Следуйте дизайн-системе (см. `docs/DESIGN-SYSTEM.md`)
 
 ## Документация
 

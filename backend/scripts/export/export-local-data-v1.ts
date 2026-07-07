@@ -303,7 +303,7 @@ async function main() {
       calendar_link: 'calendar/*.json → results_file указывает на competitions/',
       donino_update:
         'Скажите агенту «обнови Донино» → npm run export-local-data -- --fetch-donino или правка donino/*.json вручную',
-      site_phase: 'Фаза 2: API читает data/v1/ вместо D1 (см. docs/LOCAL-DATA-PLAN.md)',
+      site_phase: 'Публичный сайт читает data/v1/ с CDN (см. docs/DATA.md)',
     },
   };
 

@@ -14,6 +14,7 @@ interface DoninoHomeRecordRowProps {
   history?: unknown
   speedKmh?: number
   timeSeconds?: number
+  rise?: boolean
 }
 
 function formatTime(value: number): string {
@@ -30,6 +31,7 @@ export default function DoninoHomeRecordRow({
   history,
   speedKmh,
   timeSeconds,
+  rise = false,
 }: DoninoHomeRecordRowProps) {
   const historyItems = parseRecordHistory(history)
   const showUpd = historyItems.length > 0 || status === 'improved'
@@ -40,6 +42,7 @@ export default function DoninoHomeRecordRow({
       to={`/donino-dog/${encodeURIComponent(name)}/${encodeURIComponent(breed)}`}
       state={{ from: mode === 'speed' ? 'speed-records' : 'coursing-records' }}
       className="donino-home-row group"
+      {...(rise ? { 'data-rise': true } : {})}
     >
       <div className="donino-home-row-main min-w-0 flex-1">
         <div className="flex min-w-0 items-center gap-2">

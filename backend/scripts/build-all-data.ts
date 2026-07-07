@@ -15,6 +15,7 @@ function run(cmd: string) {
   execSync(cmd, { cwd: ROOT, stdio: 'inherit' });
 }
 
+run('npx tsx backend/scripts/rebuild-calendar-index.ts');
 run('npm run build-data-snapshot');
 
 const derivedIndexes = path.join(ROOT, 'backend/scripts/build-derived-indexes.ts');

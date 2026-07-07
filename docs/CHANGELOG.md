@@ -4,14 +4,20 @@
 
 ## [Unreleased]
 
-### 2026-07-07 — Публичный сайт на статике CDN (без Worker)
+### 2026-07-07 (ночь) — Реструктуризация документации (AI-first)
+- **`docs/DATA.md`** — канонический гид по `data/v1/` (runtime, workflow, что редактировать)
+- **`docs/README.md`** — AI-first индекс с порядком чтения и картой задач
+- **`docs/AI-GUIDE.md`** — сжатый гид для агентов
+- **`docs/LOCAL-DATA.md`** — stub-редирект на `DATA.md`
+- Ссылки `LOCAL-DATA.md` → `DATA.md` по репозиторию; баннеры навигации в ключевых docs
 
-- **Прод:** посетители читают `/data/v1/*.json` с Cloudflare Pages CDN (`frontend/src/lib/staticData.ts`) — мгновенно, без cold start
-- **CI:** `build-derived-indexes` генерирует `dog-profiles/`, `judge-details/`, `top-*-all`, `years.json`, `sitemap.xml`
-- **Деплой:** GitHub Actions деплоит только Pages; шаг Deploy Worker закомментирован
-- **Dev:** Vite plugin `serveDataV1` отдаёт repo `data/v1/` на `/data/v1/`; админка — `local-dev-server` `:8787`
+### 2026-07-07 (вечер) — Публичный сайт на статике CDN + docs sync
+- **Прод:** посетители читают `/data/v1/*.json` с Cloudflare Pages CDN (`frontend/src/lib/staticData.ts`) — без cold start
+- **CI:** `build-derived-indexes` → `dog-profiles/`, `judge-details/`, `top-*-all`, `years.json`, `sitemap.xml`
+- **Деплой:** только Pages; Worker закомментирован в CI
+- **Dev:** Vite `serveDataV1` + `local-dev-server` `:8787`
 - **Тесты:** `backend/tests/static-indexes.test.ts`
-- **Документация:** синхронизированы `ARCHITECTURE.md`, `GETTING-STARTED.md`, `LOCAL-DATA.md`; удалены временные планы миграции
+- **Docs:** полная синхронизация (dev = data/v1/, update-db вручную, sitemap из CI); удалены `MIGRATION-PLAN-TEMP`, `LOCAL-DATA-PLAN`
 
 ### 2026-07-07 — Runtime на файлах `data/v1/` (prod + dev)
 - **Локальные данные:** `data/v1/` — канонический каталог (календарь, competitions, dogs, donino, indexes)
@@ -20,7 +26,7 @@
 - **Скрипты:** `export-local-data`, `build-data-snapshot`, `build-all-data`, `build-derived-indexes`
 - **CI:** deploy собирает snapshot → `public/data/v1/` → Pages
 - **Админка:** только локально; прод обновляется через git push
-- **Документация:** `docs/LOCAL-DATA.md`
+- **Документация:** `docs/DATA.md` (ранее `LOCAL-DATA.md`)
 - **Fix:** `edge-cache.ts` — no-op без `caches` API в Node dev
 
 ### 2026-07-07 — UI стандартизация по аудиту
@@ -31,10 +37,10 @@
 
 ### 2026-07-07 — D1, архив данных, SEO, docs
 - **Edge cache** (`backend/src/lib/edge-cache.ts`): кэш GET на Cloudflare edge — снижение reads D1 (free tier 5M/день)
-- **Local dev:** `npm run dev` → локальная D1; `sync-from-remote`, `dev:remote` для prod-копии
+- **Local dev:** `npm run dev` → `data/v1/`; `dev:d1` / `dev:remote` — legacy Worker+D1
 - **Sitemap:** fix API 500 (`judges` из events), sitemap index, URL `/judges/`, `/top`; кэш 24 ч
 - **Favicon:** `favicon.ico` + `favicon-48.png` для Google; `npm run generate-favicon`
-- **Workflow:** `update-db.yml` 4×/день (как Donino), не только понедельник
+- **Workflow:** `update-speed-records.yml` 4×/день; `update-db.yml` — только вручную (с 2026-07 вечера)
 - **Архив данных:** `npm run export-archive` → `data/archive/snapshots/`; docs `DATA-ARCHIVE.md`
 - **Судьи UI:** таблица заменена на `JudgeCard` (карточки)
 - **Guide (`/guide`):** полировка контента, `AbbrTag`, docs `GUIDE.md`
@@ -117,7 +123,7 @@
 ### 2026-06-27 — Admin API
 - POST /api/admin/import-results для пакетной загрузки результатов
 - Валидация данных на сервере и логирование ошибок
-- ADMIN_TOKEN для авторизации admin endpoints
+- ADMIN_API_TOKEN для локальной админки
 
 ### 2026-06-26 — Технологические изменения
 - React Query для кэширования данных

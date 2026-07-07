@@ -1,8 +1,10 @@
 # API Reference — Документация API
 
+> **ИИ:** карта задач — [README.md](README.md). Runtime данные — [DATA.md](DATA.md).
+
 Полная документация **локального dev API** (админка и отладка).
 
-> **Публичный прод** не использует этот API. Сайт читает JSON с CDN: `/data/v1/` (`frontend/src/lib/staticData.ts`). См. `docs/LOCAL-DATA.md`.
+> **Публичный прод** не использует этот API. Сайт читает JSON с CDN: `/data/v1/` (`frontend/src/lib/staticData.ts`). См. `docs/DATA.md`.
 
 ## Base URL
 
@@ -191,7 +193,7 @@ Headers: X-Admin-Token: secret
 #### POST /api/admin/import-results
 Загрузка результатов соревнований в базу данных.
 
-**Авторизация:** Требуется заголовок `X-Admin-Token` со значением ADMIN_API_TOKEN (хранится как секрет в Cloudflare)
+**Авторизация:** заголовок `X-Admin-Token` = `ADMIN_API_TOKEN` (локально, env)
 
 **Тело запроса:**
 ```json
@@ -836,4 +838,8 @@ Headers: X-Admin-Token: secret
 
 ## Admin Token
 
-Для admin endpoints требуется заголовок `X-Admin-Token`. Токен настраивается через переменную окружения `ADMIN_TOKEN` в Cloudflare Worker.
+Для admin endpoints (только **локально**, `npm run dev`) требуется заголовок `X-Admin-Token`.
+
+- Переменная окружения: `ADMIN_API_TOKEN` (см. `backend/src/local-dev-server.ts`)
+- Если не задана — доступ разрешён (предупреждение в консоли)
+- На проде админка не деплоится

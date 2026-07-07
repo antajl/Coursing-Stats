@@ -1,124 +1,82 @@
-# Coursing Stats — Документация
+# Документация Coursing Stats
 
-Полная документация проекта Coursing Stats.
+Агрегатор статистики собак с [procoursing.ru](https://procoursing.ru) (курсинг, БЗМП, бега), 2015–2026.
 
-## Для ИИ-агентов
-
-**Важно:** Если вы ИИ-агент и впервые анализируете этот проект, **сначала прочитайте [AI-GUIDE.md](AI-GUIDE.md)** и создайте указанные memories. Это критически важно для корректной работы с проектом.
-
-## Структура документации
-
-### Начало работы
-- **[GETTING-STARTED.md](GETTING-STARTED.md)** — Быстрый старт для новых разработчиков
-  - Установка зависимостей
-  - Запуск серверов
-  - Первые шаги
-  - Технический стек
-  - Состояние базы данных
-
-### Вклад в проект
-- **[CONTRIBUTING.md](CONTRIBUTING.md)** — Как внести вклад
-  - Как начать
-  - Стандарты кода
-  - Pull Requests
-
-### История изменений
-- **[CHANGELOG.md](CHANGELOG.md)** — История изменений проекта
-  - Датированные записи
-  - Значимые изменения
-
-### Для ИИ-агента
-- **[AI-GUIDE.md](AI-GUIDE.md)** — Руководство для ИИ-агента
-  - Контекст в `.cursor/rules/` и `.cursor/skills/`
-  - Критически важные правила и workflow
-
-### Архитектура
-- **[ARCHITECTURE.md](ARCHITECTURE.md)** — Архитектура системы
-  - High-level architecture
-  - Components (Scraper, Database, Worker, Frontend)
-  - Deployment state
-  - Бренд и инфраструктура
-- **[API-REFERENCE.md](API-REFERENCE.md)** — Документация API
-  - Base URL
-  - Endpoints с примерами
-  - Response structures
-  - Error handling
-
-### Данные
-- **[LOCAL-DATA.md](LOCAL-DATA.md)** — **главный документ:** `data/v1/`, CDN на проде, локальная админка
-- **[DATA-ARCHIVE.md](DATA-ARCHIVE.md)** — снимки D1 в `data/archive/snapshots/` (бэкап)
-- **[GUIDE.md](GUIDE.md)** — Справочник `/guide`
-  - Правила РКФ, протоколы, титулы
-  - `frontend/src/pages/Guide/constants.ts`
-- **[DATABASE.md](DATABASE.md)** — Работа с БД
-  - Schema, migrations, sync local ↔ remote
-  - Календарь и заливка D1
-  - D1 Free tier и edge cache
-- **[SPEED-RECORDS.md](SPEED-RECORDS.md)** — Рекорды Донино (два Google Sheet: скорость + курсинг 350 м)
-  - Два источника: `speed_records` и `coursing_records`
-  - UI: две колонки на одной странице; статистика — `DoninoStatsColumns`
-  - Data processing pipeline
-  - Профили `/donino-dog` и история бегов 350 м
-  - Troubleshooting guide
-
-### SEO
-- **[SEO.md](SEO.md)** — Поисковая оптимизация
-  - Верификация поисковиков (Яндекс, Google)
-  - Sitemap (статический и динамический)
-  - Meta-теги и компонент SEO
-  - Правило для новых страниц
-  - Мониторинг индексации
-
-### Разработка
-- **[DEVELOPMENT.md](DEVELOPMENT.md)** — Разработка
-  - File structure
-  - NPM scripts
-  - Local development
-  - Testing (кратко; подробно — `TESTING.md`)
-  - Code splitting
-  - Deployment и инфраструктура
-  - Frontend map — навигация для ИИ-агентов
-  - PageToolbar, главная (`Home.tsx`), профили Донино, **рекорды Донино (двухколоночный hub)**
-  - Отладка парсеров с фикстурами
-- **[TESTING.md](TESTING.md)** — Тестирование
-  - Unit: парсеры, vitest, smoke-api
-  - E2E: Playwright (`npm run test:e2e`)
-  - Фикстуры и добавление новых тестов
-
-### Дизайн
-- **[DESIGN-SYSTEM.md](DESIGN-SYSTEM.md)** — Дизайн-система
-  - Цветовая палитра (light + dark mode)
-  - Типографика
-  - Компоненты
-  - PageToolbar и шапка профиля собаки
-  - Цветовая система календаря событий
-  - Правила dark mode
-  - Accessibility
-  - Чек-лист для новых компонентов
-
-### История
-- **[DECISIONS-LOG.md](DECISIONS-LOG.md)** — Лог архитектурных решений
-  - Датированные записи
-  - Важные архитектурные решения и эксперименты
-
-### Планы
-- **[FUTURE-PLANS.md](FUTURE-PLANS.md)** — Планы на будущее
-  - Выполненное — в `docs/_archive/FUTURE-PLANS-COMPLETED.md`
+**Прод:** https://coursing-stats.ru · **Данные:** `/data/v1/` на CDN · **GitHub:** https://github.com/antajl/Coursing-Stats
 
 ---
 
-## Краткий обзор проекта
+## 🤖 Для ИИ-агентов — порядок чтения
 
-**Coursing Stats** — агрегатор статистики собак по соревнованиям procoursing.ru (курсинг, БЗМП, бега) за 2015–2026 годы.
+Читай **в этом порядке** перед любой работой:
 
-**Статус:** Развёрнут на Cloudflare Pages. **Публичный runtime — статика `/data/v1/` на CDN**; D1 — импорт; админка — локально.
+| # | Файл | Зачем |
+|---|------|-------|
+| 1 | **[AI-GUIDE.md](AI-GUIDE.md)** | Правила, запреты, куда смотреть |
+| 2 | **[DATA.md](DATA.md)** | Где лежат данные, что редактировать, workflow |
+| 3 | **[ARCHITECTURE.md](ARCHITECTURE.md)** | Компоненты, деплой, стек |
+| 4 | *по задаче* | см. таблицу ниже |
 
-**Технический стек:**
-- Frontend: React, Vite, TailwindCSS → `staticData.ts` читает `/data/v1/` с CDN
-- Локальная админка: Hono + better-sqlite3 (`local-dev-server.ts`)
-- Импорт: Cloudflare D1, парсеры, `export-local-data`, `build-all-data`
+Также: `.cursor/rules/` (alwaysApply) и skills `.cursor/skills/coursing-stats-{dev,parsers}/`.
 
-**Домены:**
-- Сайт: https://coursing-stats.ru
-- Данные: https://coursing-stats.ru/data/v1/
-- GitHub: https://github.com/antajl/Coursing-Stats
+**Не читай всё подряд** — открой только нужный раздел.
+
+---
+
+## Карта документов по задаче
+
+| Задача | Документ |
+|--------|----------|
+| Запуск, npm, деплой | [GETTING-STARTED.md](GETTING-STARTED.md), [DEVELOPMENT.md](DEVELOPMENT.md) |
+| Архитектура, стек, CI | [ARCHITECTURE.md](ARCHITECTURE.md) |
+| Данные, админка, `data/v1/` | **[DATA.md](DATA.md)** |
+| D1, импорт, миграции | [DATABASE.md](DATABASE.md) |
+| Парсеры windows-1251 | [PARSING.md](PARSING.md) |
+| Локальный API (админка) | [API-REFERENCE.md](API-REFERENCE.md) |
+| Донино, рекорды | [SPEED-RECORDS.md](SPEED-RECORDS.md) |
+| Фронтенд, компоненты | [DEVELOPMENT.md](DEVELOPMENT.md) → Frontend map |
+| UI, цвета, тёмная тема | [DESIGN-SYSTEM.md](DESIGN-SYSTEM.md) |
+| SEO, sitemap | [SEO.md](SEO.md) |
+| Тесты | [TESTING.md](TESTING.md) |
+| Справочник `/guide` (РКФ) | [GUIDE.md](GUIDE.md) |
+| Бэкап D1 | [DATA-ARCHIVE.md](DATA-ARCHIVE.md) |
+| История решений | [DECISIONS-LOG.md](DECISIONS-LOG.md) |
+| Планы | [FUTURE-PLANS.md](FUTURE-PLANS.md) |
+| Changelog | [CHANGELOG.md](CHANGELOG.md) |
+
+---
+
+## Для людей — быстрый старт
+
+```bash
+npm install && cd frontend && npm install && cd ..
+npm run dev                    # localhost:5173 + админка
+```
+
+Первый раз без данных: `npm run export-local-data -- --local`  
+Подробно: [GETTING-STARTED.md](GETTING-STARTED.md)
+
+---
+
+## Структура репозитория (кратко)
+
+```
+backend/          # API, парсеры, скрипты, local-dev-server
+frontend/         # React SPA (staticData.ts → /data/v1/)
+data/v1/          # ★ runtime данные в git
+docs/             # эта папка
+scripts/          # start-servers.bat, deploy-to-github.bat
+.cursor/rules/    # правила для Cursor
+```
+
+---
+
+## Архив (не для повседневной работы)
+
+`docs/_archive/` — старые планы и аудиты UI. Не использовать как источник правды.
+
+---
+
+## Вклад в проект
+
+[CONTRIBUTING.md](CONTRIBUTING.md)

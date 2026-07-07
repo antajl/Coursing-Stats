@@ -1,5 +1,7 @@
 # Architecture — Архитектура проекта
 
+> **ИИ:** порядок чтения — [README.md](README.md) → [AI-GUIDE.md](AI-GUIDE.md) → [DATA.md](DATA.md). Данные runtime — в DATA.md.
+
 ## High-Level Architecture (2026-07)
 
 ```
@@ -23,7 +25,7 @@
                                     (без Worker)
 ```
 
-> **Публичный прод не использует D1 и не деплоит Worker.** Подробно: `docs/LOCAL-DATA.md`.
+> **Публичный прод не использует D1 и не деплоит Worker.** Подробно: `docs/DATA.md`.
 
 ### Legacy diagram (импорт)
 
@@ -91,7 +93,7 @@ Cloudflare D1 (events, dogs, results)  ← скрипты импорта
 - CORS с wildcard
 - Админка: POST/PUT/DELETE → persist sqlite → `sync-sqlite-to-v1`
 
-**Routes:**
+**Routes (локальный dev API / legacy Worker — не публичный прод):**
 ```javascript
 GET /api/top/placement?breed=&year=&minStarts=
 GET /api/top/score?breed=&year=&minStarts=
@@ -138,7 +140,7 @@ POST /api/admin/recreate-views
 }
 ```
 
-### 4. Frontend (Pages + React)
+### 5. Frontend (Pages + React)
 
 **Directory:** `frontend/src/`
 
@@ -170,7 +172,8 @@ POST /api/admin/recreate-views
 - `frontend/src/lib/recordDates.ts` — даты рекордов Донино; статистика 350 м (`coursingTimesToStats`, `time350ToSpeedKmh`)
 
 **Services:**
-- `frontend/src/services/api.ts` — API client
+- `frontend/src/lib/staticData.ts` — публичный прод: fetch `/data/v1/` с CDN
+- `frontend/src/services/api.ts` — обёртка над staticData; mock fallback в dev
 
 ## Database Schema
 

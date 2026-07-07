@@ -22,23 +22,22 @@ npm run smoke-api
 
 ## E2E тесты (Playwright)
 
-### Подготовка данных
+### E2E с проверкой реальных профилей/событий
 
-E2E с проверкой реальных профилей/событий требуют **локальную D1 с данными**:
+Нужны файлы в `data/v1/` (обычно уже в репозитории после clone):
 
 ```bash
-npm run sync-from-remote   # один раз (или перед CI)
 npm run test:e2e
 ```
 
-Без данных тесты на «дым» (title, 404, навигация) проходят; тесты с `test.skip(!testData…)` пропускаются.
+Без данных в `data/v1/` тесты на «дым» (title, 404, навигация) проходят; тесты с `test.skip(!testData…)` пропускаются.
 
 ### Запуск
 
 ```bash
 npm run test:e2e
 ```
-Автоматически запускает `npm run dev` (Worker :8787 + Vite :5173).
+Автоматически запускает `npm run dev` (local-dev-server :8787 + Vite :5173, `data/v1/`).
 
 ```bash
 npm run test:e2e:ui

@@ -171,11 +171,17 @@ body {
 }
 .home-section-link:hover{color:var(--camel-600); text-decoration:underline;}
 
-@keyframes homeFadeIn{
-  from{opacity:0; transform:translateY(6px);}
-  to{opacity:1; transform:translateY(0);}
+/* Скрыто до GSAP riseIn (только opacity — transform задаёт GSAP, иначе после clearProps элемент «падает») */
+[data-rise],
+[data-podium]{
+  opacity:0;
 }
-.home-content-fade{animation:homeFadeIn .28s ease-out;}
+@media (prefers-reduced-motion: reduce){
+  [data-rise],
+  [data-podium]{
+    opacity:1;
+  }
+}
 
 .owner-crown-name{
   display:inline-flex; align-items:center; gap:0.35em;
@@ -412,13 +418,20 @@ a.spotlight:hover{
   box-shadow:0 16px 32px -18px rgba(67,58,49,0.35);
 }
 .pod-card.place-1{min-height:196px;}
-.pod-card.place-2{min-height:172px;margin-bottom:6px;}
-.pod-card.place-3{min-height:160px;margin-bottom:12px;}
+.pod-card.place-2,
+.pod-card.place-3{
+  min-height:168px;
+  margin-bottom:0;
+}
 .pod-card.place-2 .dog-lat,
 .pod-card.place-3 .dog-lat{
   font-size:13px;
+  line-height:1.3;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
   -webkit-line-clamp:3;
   line-clamp:3;
+  overflow:hidden;
   overflow-wrap:anywhere;
 }
 .pod-card .pod-medals{flex-shrink:0;min-height:28px;}
@@ -433,7 +446,7 @@ a.spotlight:hover{
   transform:translateY(-6px);
 }
 .pod-card.gold .dog-lat{font-size:16px;}
-.pod-card.gold.place-1{min-height:212px;margin-bottom:0;}
+.pod-card.gold.place-1{min-height:212px;margin-bottom:20px;}
 .podium-rank-mark{display:block; margin:0 auto 8px;}
 .podium-rank-mark--1{--pr-face:#e7d1ab;--pr-rim:#9b6720;--pr-inner:#c79c56;--pr-glyph:#2c2314;}
 .podium-rank-mark--2{--pr-face:#e7ddcf;--pr-rim:#796855;--pr-inner:#c7b79e;--pr-glyph:#38342f;}
@@ -537,7 +550,7 @@ footer{margin-top:60px; text-align:center; font-size:12px; color:var(--om-600);}
   .hero-intro h1{font-size:28px; line-height:1.18;}
   .stats-strip{grid-template-columns:repeat(2,1fr);}
   .section-grid{grid-template-columns:1fr;} .podium-preview{grid-template-columns:1fr;}
-  .pod-card.place-2,.pod-card.place-3{margin-bottom:0;}
+  .pod-card.gold.place-1{margin-bottom:0;}
   .spotlight{grid-template-columns:1fr;text-align:left;}
   .divider{flex-wrap:wrap;}
   .home-divider .line{display:none;}

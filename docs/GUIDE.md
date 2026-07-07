@@ -40,7 +40,7 @@
 
 ## SEO
 
-Маршрут `/guide` в sitemap (`sitemap-pages.xml` + динамический API sitemap).
+Маршрут `/guide` в sitemap — генерируется в CI (`build-derived-indexes` → `sitemap.xml`).
 
 ## См. также
 

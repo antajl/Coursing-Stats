@@ -1,4 +1,4 @@
-import { useEffect, useState, type ReactNode } from 'react'
+import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import { Icons } from '../lib/icons'
 import HeroIntro, { type HeroStats } from '../components/Hero'
@@ -12,6 +12,8 @@ import ToolbarSegmentControl from '../components/toolbar/ToolbarSegmentControl'
 import { parseDogName } from '../lib/dogName'
 import { api } from '../services/api'
 import { type CalendarEvent } from './Events/eventListUtils'
+import { useGsapRiseIn } from '../hooks/useGsapRiseIn'
+import { fadeInPodium, riseInPodium, useGSAP } from '../lib/motion'
 
 interface TopDog {
   dog_id: number
@@ -203,6 +205,8 @@ function formatSpeed(value?: number | string | null): string {
 }
 
 export default function Home() {
+  const pageRef = useRef<HTMLDivElement>(null)
+  const podiumReady = useRef(false)
   const [stats, setStats] = useState<HeroStats | null>(null)
   const [featuredEvents, setFeaturedEvents] = useState<CalendarEvent[]>([])
   const [topPlacement, setTopPlacement] = useState<TopDog[]>([])
@@ -278,11 +282,58 @@ export default function Home() {
     loading || doninoSpeedRecords.length > 0 || doninoCoursingRecords.length > 0
   const rankingLink = `/competitions?tab=ranking&rankingTab=${rankingTab}`
 
+  useGsapRiseIn({
+    scope: pageRef,
+    selector: '.hero-events[data-rise]',
+    delay: 0.12,
+  })
+
+  useGsapRiseIn({
+    scope: pageRef,
+    selector: '.hero-events-list [data-rise]',
+    enabled: !loading && featuredEvents.length > 0,
+    delay: 0.22,
+    stagger: 0.075,
+    dependencies: [loading, featuredEvents.length],
+  })
+
+  useGsapRiseIn({
+    scope: pageRef,
+    selector: '.home-section-head',
+    delay: 0.56,
+    stagger: 0.12,
+    mode: 'subtle',
+  })
+
+  useGSAP(
+    () => {
+      if (!pageRef.current || loading || activeDogs.length === 0) return
+      const podium = pageRef.current.querySelector('.podium-preview')
+      if (!podium) return
+      if (!podiumReady.current) {
+        podiumReady.current = true
+        riseInPodium(podium)
+        return
+      }
+      fadeInPodium(podium)
+    },
+    { scope: pageRef, dependencies: [loading, activeDogs.length, rankingTab], revertOnUpdate: false },
+  )
+
+  useGsapRiseIn({
+    scope: pageRef,
+    selector: '.donino-home-list [data-rise]',
+    enabled: !loading && (doninoSpeedRecords.length > 0 || doninoCoursingRanked.length > 0),
+    delay: 0.78,
+    stagger: 0.07,
+    dependencies: [loading, doninoSpeedRecords.length, doninoCoursingRanked.length],
+  })
+
   return (
-    <div className="wrap">
+    <div className="wrap" ref={pageRef}>
       <section className="hero-dashboard">
         <HeroIntro />
-        <div className="hero-events">
+        <div className="hero-events" data-rise>
           <div className="hero-events-head">
             <h3>Ближайшие события</h3>
             <Link to="/competitions?tab=calendar" className="hero-events-link">
@@ -304,7 +355,9 @@ export default function Home() {
               </>
             ) : featuredEvents.length > 0 ? (
               featuredEvents.map((event) => (
-                <HomeEventRow key={event.id} event={event} compact />
+                <div key={event.id} data-rise>
+                  <HomeEventRow event={event} compact />
+                </div>
               ))
             ) : (
               <p className="hero-events-empty">Нет событий в календаре</p>
@@ -336,12 +389,13 @@ export default function Home() {
         <PodiumSkeleton />
       ) : activeDogs.length > 0 ? (
         <>
-          <div key={rankingTab} className="home-content-fade">
+          <div key={rankingTab}>
             <div className="podium-preview">
               {podiumSlots(activeDogs).map(({ item: dog, place, isGold }) => (
                 <Link
                   key={`${rankingTab}-${dog.dog_id}`}
                   to={`/dog/${dog.dog_id}`}
+                  data-podium
                   className={`pod-card place-${place} flex flex-col items-center no-underline text-inherit ${isGold ? 'gold order-first sm:order-none' : ''}`}
                 >
                   <PodiumRankMark place={place as PodiumPlace} size={isGold ? 'lg' : 'md'} />
@@ -354,7 +408,7 @@ export default function Home() {
                           dogId={dog.dog_id}
                           kind="competition"
                         >
-                          <div className="dog-lat">{primary}</div>
+                          <div className="dog-lat" title={primary}>{primary}</div>
                         </OwnerCrownName>
                         {secondary && <div className="dog-ru">{secondary}</div>}
                       </>
@@ -431,7 +485,7 @@ export default function Home() {
             <DoninoListSkeleton />
           ) : doninoSpeedRecords.length > 0 || doninoCoursingRanked.length > 0 ? (
             <>
-              <div className="home-content-fade">
+              <div>
                 <div className="donino-home-columns">
                   <div className="donino-home-col">
                     <div className="donino-home-col-title">Замер</div>
@@ -440,6 +494,7 @@ export default function Home() {
                         doninoSpeedRecords.map((record) => (
                           <DoninoHomeRecordRow
                             key={`speed-${record.breed}-${record.name}`}
+                            rise
                             mode="speed"
                             name={record.name}
                             breed={record.breed}
@@ -462,6 +517,7 @@ export default function Home() {
                         doninoCoursingRanked.map((record) => (
                           <DoninoHomeRecordRow
                             key={`coursing-${record.breed}-${record.name}`}
+                            rise
                             mode="coursing"
                             name={record.name}
                             breed={record.breed}

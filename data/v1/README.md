@@ -1,19 +1,22 @@
 # Локальная база v1
 
-Каноническое хранилище для сайта без D1 в runtime.
+Каноническое хранилище для сайта. **Публичный прод** читает эти файлы с CDN (`/data/v1/`).
 
-**Сборка:** `npm run export-local-data` (см. `docs/LOCAL-DATA-PLAN.md`).  
-**Локальный dev:** `npm run dev` загружает эти файлы в память (~0.5 с) и отдаёт тот же API.
+**Экспорт из D1:** `npm run export-local-data -- --local` (см. `docs/DATA.md`).  
+**Пересборка индексов:** `npm run build-all-data`.  
+**Локальный dev:** `npm run dev` — Vite отдаёт `/data/v1/` с диска; админка на `:8787`.
 
 | Путь | Содержимое |
 |------|------------|
 | `manifest.json` | версия, дата, счётчики |
 | `calendar/{year}.json` | события года; `results_file` → competitions |
 | `competitions/...` | один JSON на турнир с `event` + `results[]` |
-| `dogs/by-id/`, `dogs/by-key/` | профили собак |
+| `dogs/by-id/`, `dogs/by-key/` | карточки собак (ссылки на турниры) |
 | `donino/` | рекорды Донино (отдельно от procoursing) |
-| `indexes/` | быстрый поиск для UI и ИИ |
+| `indexes/` | precomputed: топы, судьи, `dog-profiles/`, `years.json` |
 
 Правка одного турнира = один файл в `competitions/`, без затрагивания остальных.
 
-**Прод:** `npm run build-data-snapshot` → `pc-db.sqlite` копируется на Pages → Worker читает по URL (без R2).
+Новые собаки появляются автоматически при `export-local-data` или sync из админки.
+
+**Прод:** `git push main` → CI `build-all-data` → Cloudflare Pages.

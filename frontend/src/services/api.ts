@@ -12,12 +12,9 @@ import {
   mockEvents,
 } from '../data/mockData'
 
-/** Используется только админкой (adminApi.ts) — прод admin ходит на Worker, если он развёрнут. */
+/** Legacy export для adminApi; публичный сайт API не использует. */
 const API_URL =
-  import.meta.env.VITE_API_URL ||
-  (import.meta.env.PROD
-    ? 'https://api.coursing-stats.ru'
-    : '') // dev: Vite proxy → local-dev-server :8787
+  import.meta.env.VITE_API_URL || ''
 
 export { API_URL }
 

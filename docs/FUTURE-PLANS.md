@@ -33,7 +33,7 @@
 ### Тестирование
 - ✅ Фикстуры парсеров в `backend/tests/fixtures/` + `npm run test-parser-fixtures`
 - ✅ E2E тесты (Playwright) для базовых страниц — `npm run test:e2e`
-- ✅ CI workflow `.github/workflows/e2e.yml` (sync D1 + Playwright)
+- ✅ CI workflow `.github/workflows/e2e.yml` (Playwright на `npm run dev` + `data/v1/`)
 - ✅ Ручная проверка API: `npm run smoke-api` (с запущенным `npm run dev`)
 - 🔄 In-process Worker-тесты: `api.test.ts` пропущен; планируется vitest@4 + `@cloudflare/vitest-pool-workers`
 - Расширить E2E тесты для критического функционала

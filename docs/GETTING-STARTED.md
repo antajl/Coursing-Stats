@@ -1,10 +1,12 @@
 # Getting Started — Быстрый старт
 
+> **Карта документации:** [README.md](README.md). Данные и workflow: [DATA.md](DATA.md). Для ИИ: README → AI-GUIDE → DATA.
+
 Этот документ поможет вам быстро начать работу с проектом Coursing Stats.
 
 ## Предварительные требования
 
-- Node.js 18+
+- Node.js 22+ (CI; локально обычно 18+)
 - npm или yarn
 - Git
 - Учетная запись Cloudflare (для деплоя)
@@ -48,13 +50,7 @@ npx tsx backend/src/local-dev-server.ts
 cd frontend && npm run dev
 ```
 
-**Актуальные прод-данные** (редко, когда нужна свежая remote БД):
-
-```bash
-npm run sync-from-remote   # обновить локальную копию D1
-npm run export-local-data -- --local
-npm run dev:remote         # dev с remote D1 (съедает дневную квоту!)
-```
+**Свежий импорт из remote D1** (редко): см. [DATA.md](DATA.md) — `sync-from-remote` → `export-local-data`.
 
 ### Windows (batch файл)
 
@@ -101,7 +97,7 @@ Coursing Stats/
 │   └── lib/              # fetch-win1251.ts, dog-lookup.ts
 ├── frontend/             # React (App.tsx, AppRoutes.tsx, Nav.tsx)
 │   └── src/
-├── docs/                 # Документация (см. LOCAL-DATA.md)
+├── docs/                 # Документация (см. README.md, DATA.md)
 └── data/
     └── v1/               # Каноническая файловая БД (runtime)
 ```
@@ -154,27 +150,18 @@ npm run test-parser-fixtures
 
 ## Технический стек
 
-- **Runtime data:** `data/v1/` (JSON + precomputed `indexes/`) на Pages CDN — см. `docs/LOCAL-DATA.md`
-- **Публичный сайт (прод):** React SPA → `/data/v1/*.json` на Pages CDN (`frontend/src/lib/staticData.ts`), без Worker
-- **Локальная админка:** `local-dev-server.ts` на `:8787` (Hono + better-sqlite3 из `data/v1/`)
-- **Импорт:** Cloudflare D1 + Node скрипты (`export-local-data`, парсеры)
 - **Frontend:** React + Vite + TailwindCSS + React Query + Zod
-- **Деплой:** push `main` → GitHub Actions → Deploy Pages (Worker в прод не деплоится)
-- **Локально:** `npm run dev` (без D1, админка на `:8787`); legacy: `npm run dev:d1`
+- **Runtime data:** `data/v1/` на Pages CDN — подробно: [DATA.md](DATA.md)
+- **Локально:** `npm run dev` (Vite `:5173` + админка `:8787`); legacy: `npm run dev:d1`
 
-## Состояние данных (`data/v1/`, 2026-07-07)
+## Деплой
 
-| Сущность | Количество |
-|----------|------------|
-| events (календарь) | 389 |
-| competitions с results | 56 |
-| dogs | 1532 |
-| results | 2958 |
-| speed_records (Донино) | 191 |
-| coursing_records (Донино 350 м) | 107 |
-| breeds | 86 |
+```bash
+npm run build-all-data   # опционально локально; CI сделает сам
+git push origin main     # или scripts\deploy-to-github.bat
+```
 
-D1 remote может отличаться — источник для re-export: `sync-from-remote` → `export-local-data`.
+Push в `main` → GitHub Actions → Cloudflare Pages. Worker в прод не деплоится. Подробно: [DATA.md](DATA.md), [DEVELOPMENT.md](DEVELOPMENT.md).
 
 ## Что работает
 
@@ -191,7 +178,7 @@ D1 remote может отличаться — источник для re-export:
 - ✅ Production D1: календарь и reparse 2025 обновлены
 - ✅ GitHub Actions: рекорды Donino (**4×/день**: 08:00, 14:00, 20:00, 23:30 МСК) → D1 + `data/v1/donino/speed_records.json`
 - ✅ GitHub Actions: обновление D1 — **вручную** (`update-db.yml`, `workflow_dispatch`)
-- ✅ Admin API с авторизацией через `X-Admin-Token` (секрет в Cloudflare)
+- ✅ Admin API с `X-Admin-Token` — **только локально** (`npm run dev`, env `ADMIN_API_TOKEN`)
 - ✅ TypeScript, React Query, Zod, Hono, Sentry (базовая интеграция)
 - ✅ Sitemap (`/sitemap.xml`) и precomputed indexes в CI
 - ✅ Файловый архив: `npm run export-archive` → `data/archive/snapshots/`
@@ -257,7 +244,7 @@ D1 remote может отличаться — источник для re-export:
 - Прочитайте `ARCHITECTURE.md` для понимания архитектуры
 - Прочитайте `API-REFERENCE.md` для работы с API
 - Прочитайте `PARSING.md` для понимания парсинга
-- Прочитайте `LOCAL-DATA.md` для файловой БД и обновления прода
+- Прочитайте `DATA.md` для файловой БД и обновления прода
 - Прочитайте `DATABASE.md` для работы с БД (календарь, заливка, лимиты D1)
 - Прочитайте `GUIDE.md` если правите справочник `/guide`
 - Прочитайте `TESTING.md` перед добавлением тестов

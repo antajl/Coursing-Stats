@@ -1,6 +1,10 @@
 # Database — Работа с БД
 
-Документация по базе данных Cloudflare D1 (SQLite).
+> **ИИ:** runtime данные — [DATA.md](DATA.md); этот файл — **D1** (импорт, парсеры, cron).
+
+Документация по **Cloudflare D1** (импорт, парсеры, cron) и связи с **`data/v1/`** (runtime сайта).
+
+> **Runtime публичного сайта** — `data/v1/` в git → CDN. D1 remote может отставать. Актуальные счётчики для сайта: `data/v1/manifest.json`. Подробно: `docs/DATA.md`.
 
 ## Загрузка результатов
 
@@ -9,7 +13,7 @@
 Для загрузки результатов используется API эндпоинт `/api/admin/import-results`:
 
 ```bash
-npx tsx backend/scripts/load/load-results.ts data/events/events.json http://127.0.0.1:8787/api/admin/import-results ADMIN_TOKEN
+npx tsx backend/scripts/load/load-results.ts data/events/events.json http://127.0.0.1:8787/api/admin/import-results YOUR_ADMIN_API_TOKEN
 ```
 
 **Преимущества API подхода:**
@@ -355,36 +359,54 @@ npm run sync-to-remote
 
 ---
 
-## Текущее состояние БД
+## Текущее состояние
 
-**Календарь и reparse 2025 обновлены на remote 2026-07-03** (см. секцию «Календарь и обновление D1» в этом файле).
+### Runtime (`data/v1/`, 2026-07-07) — источник для сайта
 
-**Актуальное состояние (2026-07-07):**
+| Сущность | Количество |
+|----------|------------|
+| events (календарь) | 389 |
+| competitions с results | 56 |
+| dogs | 1532 |
+| results | 2958 |
+| donino_speed | 191 |
+| donino_coursing | 107 |
+| breeds | 86 |
 
-- **events:** 225 (2015-2026)
-- **dogs:** 1628
-- **results:** 2966 (2025-2026)
-- **speed_records:** 213 (из Google Sheets, автообновление)
-- **coursing_records:** 107 (из Google Sheets, автообновление)
+Файл: `data/v1/manifest.json`
+
+### Remote D1 (`pc-db`) — импорт, может отличаться
+
+**Календарь и reparse 2025 обновлены на remote 2026-07-03** (см. секцию «Календарь и обновление D1»).
+
+Ориентировочно на remote (не синхронизировано с `data/v1/` автоматически):
+
+- **events:** ~225 (календарь в D1)
+- **dogs:** ~1628
+- **results:** ~2966 (2025–2026)
+- **speed_records:** ~213
+- **coursing_records:** 107
 - **Remote D1:** ~21 MB
 
-**Распределение results по годам:**
+**Распределение results по годам (D1):**
 - 2025: 2114 результатов (50 событий)
 - 2026: 852 результатов (51 событие)
-- 2015-2024: НЕДОСТУПНЫ (хранятся как изображения, требуется OCR)
+- 2015–2024: НЕДОСТУПНЫ (хранятся как изображения, требуется OCR)
+
+После правок в D1: `npm run export-local-data` → `build-all-data` → git push.
 
 ---
 
-## D1 Free tier и edge cache
+## D1 Free tier (импорт / dev:d1)
 
-**Лимит Cloudflare D1 (Free):** ~5M **rows read** в сутки на аккаунт. При превышении API возвращает ошибки до 00:00 UTC.
+**Лимит Cloudflare D1 (Free):** ~5M **rows read** в сутки на аккаунт.
 
-**Снижение нагрузки (2026-07):**
-- `backend/src/lib/edge-cache.ts` — Cache API + TTL по endpoint (sitemap 24 ч, judges 6 ч, top 1 ч, …)
-- `executionCtx.waitUntil` в Worker для записи кэша
-- React Query `staleTime` на фронте (`frontend/src/hooks/useApi.ts`) — меньше повторных запросов
+**Снижение нагрузки при работе с D1:**
+- `npm run dev` — **не использует D1** (читает `data/v1/`)
+- `npm run dev:d1` / `dev:remote` — Worker + D1 (legacy)
+- `backend/src/lib/edge-cache.ts` — кэш GET на Worker (актуален только для `dev:d1` / legacy prod API)
 
-**Локальная разработка:** `npm run dev` → **локальная D1** (не расходует remote reads). Свежие данные: `npm run sync-from-remote`.
+**Локальная разработка (обычная):** `npm run dev` → `data/v1/` на диске. D1: `sync-from-remote` → `export-local-data` при необходимости импорта.
 
 **Файловый бэкап:** `npm run export-archive` — см. `DATA-ARCHIVE.md`.
 

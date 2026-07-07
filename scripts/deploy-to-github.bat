@@ -42,6 +42,6 @@ if errorlevel 1 (
 echo.
 echo Done! Site will be deployed automatically via GitHub Actions.
 echo Frontend: https://coursing-stats.ru
-echo API: https://api.coursing-stats.ru
+echo Data CDN: https://coursing-stats.ru/data/v1/
 echo.
 pause

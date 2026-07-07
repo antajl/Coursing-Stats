@@ -1,5 +1,7 @@
 # Parsing — Парсинг данных
 
+> **ИИ:** карта задач — [README.md](README.md). Заливка D1 и календарь — [DATABASE.md](DATABASE.md).
+
 Документация по парсингу данных с procoursing.ru.
 
 ## Источник данных

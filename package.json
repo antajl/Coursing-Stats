@@ -17,6 +17,8 @@
     "sync-sqlite-to-v1": "npx tsx backend/scripts/sync/sync-sqlite-to-v1-cli.ts",
     "sync-from-remote": "npx wrangler d1 export pc-db --remote --output=data/backups/local-dev.sql && npx wrangler d1 execute pc-db --local --file=data/backups/local-dev.sql --yes",
     "scrape-index": "npx tsx backend/scripts/scrape/scrape-year-index.ts",
+    "dedupe-calendar": "npx tsx backend/scripts/migrate/dedupe-calendar-v1.ts",
+    "rebuild-calendar-index": "npx tsx backend/scripts/rebuild-calendar-index.ts",
     "parse-coursing": "npx tsx backend/parsers/parse-results-coursing.ts",
     "parse-bzmp": "npx tsx backend/parsers/parse-results-bzmp.ts",
     "parse-racing": "npx tsx backend/parsers/parse-results-racing.ts",

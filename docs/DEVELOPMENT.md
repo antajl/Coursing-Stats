@@ -1,5 +1,7 @@
 # Development — Разработка
 
+> **ИИ:** начни с [README.md](README.md) → [AI-GUIDE.md](AI-GUIDE.md) → [DATA.md](DATA.md). Этот файл — фронтенд, скрипты, деплой.
+
 Документация по разработке Coursing Stats.
 
 ## File Structure
@@ -9,7 +11,8 @@
 ```
 backend/
 ├── src/
-│   ├── worker.ts              # Cloudflare Worker entry point (8-строчная обёртка, делегирует в app.ts)
+│   ├── worker.ts              # Legacy Worker entry (dev:d1; не деплоится в CI)
+│   ├── local-dev-server.ts    # Dev API :8787 (data/v1/, админка)
 │   ├── app.ts                 # Hono application с роутингом
 │   └── routes/                # API endpoints
 │       ├── admin.ts           # Admin endpoints (import-results, delete-results, recreate-views)
@@ -154,7 +157,7 @@ data/
 ### Root scripts
 
 ```bash
-npm run dev                    # Start both servers (Worker + Vite)
+npm run dev                    # local-dev-server + Vite (data/v1/)
 npm run scrape-index           # Scrape event index
 npm run parse-coursing         # Parse coursing results
 npm run parse-bzmp             # Parse BZMP results
@@ -217,17 +220,17 @@ npm run dev
 scripts\start-servers.bat
 ```
 
-**Первый запуск (или раз в неделю для свежих данных):**
+**Первый запуск (или после sync D1):**
 ```bash
-npm run sync-from-remote
+npm run export-local-data -- --local   # при необходимости
 npm run dev
 ```
 
-**Вручную (локальная D1):**
+**Вручную (рекомендуется — data/v1/):**
 
 Терминал 1:
 ```bash
-npx wrangler dev backend/src/worker.ts --port 8787
+npx tsx backend/src/local-dev-server.ts
 # http://127.0.0.1:8787
 ```
 
@@ -237,12 +240,18 @@ cd frontend && npm run dev
 # http://localhost:5173
 ```
 
-**Prod-данные напрямую (осторожно — квота D1 reads):**
+**Legacy (Worker + локальная D1):**
+```bash
+npx wrangler dev backend/src/worker.ts --port 8787
+cd frontend && npm run dev
+```
+
+**Remote D1 (осторожно — квота reads):**
 ```bash
 npm run dev:remote
 ```
 
-`npm run dev` по умолчанию использует **локальную D1** в `.wrangler/` — не расходует дневной лимит remote.
+`npm run dev` по умолчанию читает **data/v1/** с диска — D1 не нужна.
 
 **Тема UI:** светлая по умолчанию; тёмная — через переключатель в Nav (`localStorage.theme`).
 
@@ -256,7 +265,7 @@ npm run export-archive
 
 ### React Query (frontend)
 
-`frontend/src/hooks/useApi.ts` — `staleTime` 5–60 мин на prod-запросах (меньше дублей к API). События больше не refetch на каждый mount.
+`frontend/src/hooks/useApi.ts` — `staleTime` на prod (меньше дублей к `/data/v1/`). События не refetch на каждый mount.
 
 ---
 
@@ -588,7 +597,7 @@ hover:bg-cream-50 dark:hover:bg-charcoal-700
 
 ### Cloudflare Worker (legacy)
 
-Код в `backend/src/worker.ts` — для `npm run dev:d1`. **Не деплоится в CI** с 2026-07-07. См. `docs/LOCAL-DATA.md`.
+Код в `backend/src/worker.ts` — для `npm run dev:d1`. **Не деплоится в CI** с 2026-07-07. См. `docs/DATA.md`.
 
 ### SPA Routing
 
@@ -602,8 +611,8 @@ hover:bg-cream-50 dark:hover:bg-charcoal-700
 ### GitHub Actions Workflows
 
 **deploy-frontend.yml:** Деплой фронтенда на Cloudflare Pages
-**update-db.yml:** Обновление D1 (cron: **4×/день** — 05:00, 11:00, 17:00, 20:30 UTC ≈ 08:00, 14:00, 20:00, 23:30 МСК)
-**update-speed-records.yml:** Обновление рекордов скорости из Google Sheets (cron: **4×/день** — 05:00, 11:00, 17:00, 20:30 UTC ≈ 08:00, 14:00, 20:00, 23:30 МСК)
+**update-db.yml:** Обновление D1 — **только вручную** (`workflow_dispatch`)
+**update-speed-records.yml:** Donino speed → D1 + `data/v1/` (cron **4×/день** — 05:00, 11:00, 17:00, 20:30 UTC ≈ 08:00, 14:00, 20:00, 23:30 МСК); push триггерит deploy
 
 **Secrets:**
 - `CLOUDFLARE_API_TOKEN` — API токен Cloudflare (с правами D1 и Workers)
@@ -631,7 +640,7 @@ npx wrangler d1 execute pc-db --local --file=script.sql
 
 ### Мониторинг
 
-**Worker Logs:**
+**Legacy Worker logs** (если снова задеплоите Worker):
 ```bash
 npx wrangler tail coursingstatsworker
 ```

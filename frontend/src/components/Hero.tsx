@@ -1,5 +1,7 @@
+import { useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { Icons } from '../lib/icons'
+import { useGsapRiseIn } from '../hooks/useGsapRiseIn'
 
 export interface HeroStats {
   events: number
@@ -9,12 +11,19 @@ export interface HeroStats {
 }
 
 export default function HeroIntro() {
+  const scope = useRef<HTMLDivElement>(null)
   const CalendarIcon = Icons.calendar
   const MedalIcon = Icons.medal
 
+  useGsapRiseIn({
+    scope,
+    selector: '[data-rise]',
+    stagger: 0.07,
+  })
+
   return (
-    <div className="hero-intro">
-      <div className="eyebrow">
+    <div className="hero-intro" ref={scope}>
+      <div className="eyebrow" data-rise>
         <Icons.achievement className="h-3.5 w-3.5 shrink-0" strokeWidth={1.75} />
         <span>
           <span>2015 — 2026</span>
@@ -23,15 +32,15 @@ export default function HeroIntro() {
         </span>
       </div>
 
-      <h1>
+      <h1 data-rise>
         Статистика курсинга и <em>бегов борзых</em> в одном месте
       </h1>
 
-      <p className="lead">
+      <p className="lead" data-rise>
         Результаты procoursing.ru и рекорды Донино — по собакам, судьям и соревнованиям.
       </p>
 
-      <div className="cta-row">
+      <div className="cta-row" data-rise>
         <Link to="/competitions?tab=calendar" className="btn btn-primary">
           <CalendarIcon className="h-4 w-4" strokeWidth={1.75} />
           Календарь

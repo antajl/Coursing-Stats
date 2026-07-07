@@ -73,7 +73,7 @@ Coursing Stats использует несколько стратегий для
 />
 ```
 
-URL профилей Донино попадают в **динамический** sitemap (`backend/src/routes/sitemap.ts`): `UNION` уникальных `name, breed` из `speed_records` и `coursing_records` → `/donino-dog/…`. Sitemap пересобирается при каждом запросе к API; после деплоя Worker отдельная «загрузка» файла не нужна — достаточно, что в Вебмастере / Search Console уже указан `https://coursing-stats.ru/sitemap.xml` (он ссылается на API-sitemap).
+URL профилей Донино попадают в **статический** sitemap: CI (`build-derived-indexes.ts`) → `frontend/public/sitemap.xml` → `/donino-dog/…` на проде.
 
 #### Страницы событий (`frontend/src/pages/Events/EventResults/index.tsx`)
 ```tsx
@@ -130,22 +130,9 @@ return (
 )
 ```
 
-3. **Добавь страницу в динамический sitemap** (`backend/src/routes/sitemap.ts`):
-```tsx
-// Добавь запрос к базе данных
-const items = await db.prepare('SELECT id, name FROM items').all();
+3. **Добавь URL в sitemap** — в `backend/scripts/build-derived-indexes.ts` (функция `buildSitemapUrls` / запись в `sitemap-urls.json`). После `npm run build-all-data` URL попадёт в `frontend/public/sitemap.xml` на проде.
 
-// Добавь в sitemap
-if (items.results) {
-  for (const item of items.results) {
-    xml += `  <url>\n`;
-    xml += `    <loc>${baseUrl}/item/${item.id}</loc>\n`;
-    xml += `    <changefreq>monthly</changefreq>\n`;
-    xml += `    <priority>0.6</priority>\n`;
-    xml += `  </url>\n`;
-  }
-}
-```
+   Для локального dev API (legacy) можно дублировать в `backend/src/routes/sitemap.ts` — на публичный прод это не влияет.
 
 ## Ключевые слова
 
@@ -211,10 +198,13 @@ if (items.results) {
 
 ## История изменений
 
-### 2026-07-07
-- Sitemap index + edge cache 24 ч на API sitemap
+### 2026-07-07 (вечер)
+- Публичный sitemap — статический из CI (`build-derived-indexes`), один файл на Pages
+- Legacy: динамический sitemap на Worker (`sitemap.ts`) — только dev:d1
+
+### 2026-07-07 (утро)
 - Favicon.ico для индексации
-- Заметки по региону и двум sitemap в Вебмастере
+- Заметки по региону в Вебмастере
 
 ### 2026-07-05
 - Добавлен `react-helmet-async` для динамических meta-тегов
