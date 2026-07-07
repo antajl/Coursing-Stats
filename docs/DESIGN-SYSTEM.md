@@ -194,6 +194,8 @@ shadow-md p-4
 hover:shadow-lg hover:scale-[1.01] transition-all duration-200 cursor-pointer
 ```
 
+**`JudgeCard`** (`frontend/src/components/JudgeCard.tsx`) — список судей на `/judges`: grid карточек вместо таблицы; имя, число оцениваний, ссылка на `/judges/{name}`.
+
 ### Кнопки
 
 **Primary:**

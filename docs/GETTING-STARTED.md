@@ -153,17 +153,17 @@ npm run test-parser-fixtures
 - **Деплой:** Cloudflare Pages (фронт) + Workers (API) + D1 (БД)
 - **Автоматизация:** GitHub Actions (обновление D1 и рекорды Донино **4 раза в день**: 08:00, 14:00, 20:00, 23:30 МСК)
 - **CI:** `package-lock.json` в репозитории (для `npm ci` в GitHub Actions)
-- **Локальная разработка:** `npm run dev` → Worker `--remote` + Vite (актуальная D1)
+- **Локальная разработка:** `npm run dev` → **локальная D1** (не расходует квоту remote). Свежие prod-данные: `npm run sync-from-remote`, затем при необходимости `npm run dev:remote`
 
 ## Состояние базы данных (local = remote)
 
 | Таблица | Записей |
 |---------|---------|
 | events | 225 (2015-2026) |
-| dogs | 1619 |
+| dogs | 1628 |
 | results | 2966 (2025-2026) |
-| speed_records | 198 (из Google Sheets, автообновление) |
-| coursing_records | 95 (из Google Sheets, автообновление) |
+| speed_records | 213 (Google Sheets) |
+| coursing_records | 107 (Google Sheets 350 м) |
 
 **Распределение results по годам:**
 - 2025: 2114 (50 событий)
@@ -182,11 +182,15 @@ npm run test-parser-fixtures
 - ✅ UI polish: матовый `nav-glass`, светлая тема по умолчанию, календарь/рейтинг/Донино/результаты
 - ✅ Скрапер календаря: `backend/parsers/calendar/scrape-year-page.ts` — диапазоны дат, `[отменён]`, мультидисциплины в `rank_label`, корректные `results_url` (тесты `calendar-scrape.test.ts`)
 - ✅ Production D1: календарь и reparse 2025 обновлены
-- ✅ GitHub Actions: обновление D1 и рекорды скорости (**4×/день**: 08:00, 14:00, 20:00, 23:30 МСК)
+- ✅ GitHub Actions: обновление D1 (**4×/день**) и рекорды Donino (**4×/день**: 08:00, 14:00, 20:00, 23:30 МСК)
 - ✅ Admin API с авторизацией через `X-Admin-Token` (секрет в Cloudflare)
 - ✅ TypeScript, React Query, Zod, Hono, Sentry (базовая интеграция)
-- ✅ Фикстуры парсеров: `backend/tests/fixtures/{coursing,bzmp,racing}/` с реальным HTML
+- ✅ Edge cache API (снижение нагрузки на D1 free tier)
+- ✅ Файловый архив: `npm run export-archive` → `data/archive/snapshots/`
+- ✅ Sitemap + favicon.ico для поисковиков
+- ✅ Страница `/guide` (справочник правил и протоколов)
 - ✅ Тесты парсеров: `npm run test-parser` (синтетика), `npm run test-parser-fixtures` (v2 модульные парсеры на фикстурах)
+- ✅ E2E (Playwright): `npm run test:e2e` — см. `TESTING.md`
 
 ## Что не сделано / в планах
 
@@ -246,4 +250,7 @@ npm run test-parser-fixtures
 - Прочитайте `ARCHITECTURE.md` для понимания архитектуры
 - Прочитайте `API-REFERENCE.md` для работы с API
 - Прочитайте `PARSING.md` для понимания парсинга
-- Прочитайте `DATABASE.md` для работы с БД (включая календарь и заливку D1)
+- Прочитайте `DATA-ARCHIVE.md` для файлового бэкапа и будущей схемы данных
+- Прочитайте `DATABASE.md` для работы с БД (календарь, заливка, лимиты D1)
+- Прочитайте `GUIDE.md` если правите справочник `/guide`
+- Прочитайте `TESTING.md` перед добавлением тестов

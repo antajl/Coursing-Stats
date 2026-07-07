@@ -4,6 +4,7 @@ import { ChevronLeft, Download } from 'lucide-react'
 import { useDogProfile, useDogEvents, useDogSpeedRecords, useSpeedRecordsByBreed, useDogCoursingRecords, useCoursingRecordsByBreed } from '../hooks/useApi'
 import { formatRecordDate, dedupeByRecordDate, expandCoursingTimeline } from '../lib/recordDates'
 import { formatTitleLine, titleBadgeClass, type DogTitle } from '../lib/qualificationTitles'
+import { parseDogName } from '../lib/dogName'
 import { toPng } from 'html-to-image'
 import SkeletonLoader from '../components/SkeletonLoader'
 import ErrorState from '../components/ErrorState'
@@ -244,7 +245,7 @@ export default function DogProfile() {
         <div ref={exportRef}>
 
         {/* Шапка профиля */}
-        <div className="mb-6 rounded-2xl border-2 border-old-money-200 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-8">
+        <div className="mb-6 rounded-xl border border-old-money-200/80 dark:border-charcoal-600 bg-cream-100/70 dark:bg-charcoal-800/50 p-5 md:p-8">
           <div className="flex items-start gap-2">
             <button
               type="button"
@@ -258,35 +259,17 @@ export default function DogProfile() {
             <div className="min-w-0 flex-1">
               <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
                 {(() => {
-                  const name = dog.name_lat || dog.name_ru
-                  const parts = name.split('/')
-
-                  if (parts.length > 1) {
-                    return (
-                      <>
-                        <OwnerCrownName name={parts[0].trim()} dogId={dog.id} kind="competition">
-                          <h1 className="text-2xl font-bold tracking-tight text-charcoal-900 dark:text-charcoal-100 md:text-3xl">
-                            {parts[0].trim()}
-                          </h1>
-                        </OwnerCrownName>
-                        {dog.sex && (
-                          <span className="text-lg font-medium text-gray-400 dark:text-gray-500">
-                            {dog.sex === 'M' ? '♂' : '♀'}
-                          </span>
-                        )}
-                      </>
-                    )
-                  }
+                  const { primary, secondary } = parseDogName(dog.name_lat, dog.name_ru)
 
                   return (
                     <>
-                      <OwnerCrownName name={name} dogId={dog.id} kind="competition">
+                      <OwnerCrownName name={primary} dogId={dog.id} kind="competition">
                         <h1 className="text-2xl font-bold tracking-tight text-charcoal-900 dark:text-charcoal-100 md:text-3xl">
-                          {name}
+                          {primary}
                         </h1>
                       </OwnerCrownName>
                       {dog.sex && (
-                        <span className="text-lg font-medium text-gray-400 dark:text-gray-500">
+                        <span className="text-lg font-medium text-charcoal-400 dark:text-charcoal-500">
                           {dog.sex === 'M' ? '♂' : '♀'}
                         </span>
                       )}
@@ -295,13 +278,12 @@ export default function DogProfile() {
                 })()}
               </div>
               {(() => {
-                const name = dog.name_lat || dog.name_ru
-                const parts = name.split('/')
+                const { secondary } = parseDogName(dog.name_lat, dog.name_ru)
 
-                if (parts.length > 1) {
+                if (secondary) {
                   return (
                     <div className="mt-1 text-base font-medium text-old-money-500 dark:text-old-money-400">
-                      {parts[1].trim()}
+                      {secondary}
                     </div>
                   )
                 }
@@ -366,7 +348,7 @@ export default function DogProfile() {
             {showCoursingColumn && (
               <div className="flex flex-col gap-4">
                 {hasCoursingData && (
-                  <div className="rounded-2xl border-2 border-forest-200 dark:border-forest-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
+                  <div className="rounded-xl border border-forest-200 dark:border-forest-700 bg-white dark:bg-charcoal-800 p-5 md:p-6">
                     <h2 className="text-lg md:text-xl font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 mb-4">Курсинг / БЗМП</h2>
 
                     {bestScoreEventId ? (
@@ -374,7 +356,7 @@ export default function DogProfile() {
                         to={`/event/${bestScoreEventId}`}
                         className="group mb-4 block rounded-xl border-2 border-forest-200 dark:border-forest-600 bg-forest-50 dark:bg-charcoal-700 p-4 text-center transition-colors hover:bg-forest-100 dark:hover:bg-charcoal-600"
                       >
-                        <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2 uppercase tracking-wide">Лучший результат</div>
+                        <div className="text-xs font-semibold text-charcoal-500 dark:text-charcoal-400 mb-2 uppercase tracking-wide">Лучший результат</div>
                         <div className="text-4xl font-bold tracking-tight text-forest-700 dark:text-forest-300 group-hover:text-forest-800 dark:group-hover:text-forest-200">
                           {coursing.best_score ?? '—'}
                         </div>
@@ -384,7 +366,7 @@ export default function DogProfile() {
                       </Link>
                     ) : (
                       <div className="mb-4 rounded-xl border-2 border-forest-200 dark:border-forest-600 bg-forest-50 dark:bg-charcoal-700 p-4 text-center">
-                        <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2 uppercase tracking-wide">Лучший результат</div>
+                        <div className="text-xs font-semibold text-charcoal-500 dark:text-charcoal-400 mb-2 uppercase tracking-wide">Лучший результат</div>
                         <div className="text-4xl font-bold tracking-tight text-forest-700 dark:text-forest-300">
                           {coursing.best_score ?? '—'}
                         </div>
@@ -437,7 +419,7 @@ export default function DogProfile() {
                 )}
 
                 {coursingEvents.length > 0 && (
-                  <div className="rounded-2xl border-2 border-forest-200 dark:border-forest-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
+                  <div className="rounded-xl border border-forest-200 dark:border-forest-700 bg-white dark:bg-charcoal-800 p-5 md:p-6">
                     <h3 className="text-base md:text-lg font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 mb-4">История</h3>
                     <div className="space-y-3">
                       {visibleCoursingEvents.map((event, idx) => {
@@ -453,7 +435,7 @@ export default function DogProfile() {
                               ) : (
                                 <span />
                               )}
-                              <div className="shrink-0 rounded-full border border-gray-200 bg-white px-2 py-0.5 text-xs font-medium text-gray-600 dark:border-charcoal-600 dark:bg-charcoal-800 dark:text-gray-300">
+                              <div className="shrink-0 rounded-full border border-old-money-200 bg-white px-2 py-0.5 text-xs font-medium text-charcoal-600 dark:border-charcoal-600 dark:bg-charcoal-800 dark:text-charcoal-300">
                                 {event.event_type === 'coursing' ? 'Курсинг' : 'БЗМП'}
                               </div>
                             </div>
@@ -511,7 +493,7 @@ export default function DogProfile() {
             {showRacingColumn && (
               <div className="flex flex-col gap-4">
                 {hasRacingData && (
-                  <div className="rounded-2xl border-2 border-warm-blue-200 dark:border-warm-blue-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
+                  <div className="rounded-xl border border-warm-blue-200 dark:border-warm-blue-700 bg-white dark:bg-charcoal-800 p-5 md:p-6">
                     <h2 className="mb-4 text-lg font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 md:text-xl">Бега борзых</h2>
 
                     {bestSpeedEventId ? (
@@ -519,10 +501,10 @@ export default function DogProfile() {
                         to={`/event/${bestSpeedEventId}`}
                         className="group mb-4 block rounded-xl border-2 border-warm-blue-200 dark:border-warm-blue-600 bg-warm-blue-50 dark:bg-charcoal-700 p-4 text-center transition-colors hover:bg-warm-blue-100 dark:hover:bg-charcoal-600"
                       >
-                        <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2 uppercase tracking-wide">Лучшая скорость</div>
+                        <div className="text-xs font-semibold text-charcoal-500 dark:text-charcoal-400 mb-2 uppercase tracking-wide">Лучшая скорость</div>
                         <div className="whitespace-nowrap text-4xl font-bold tracking-tight text-warm-blue-800 dark:text-warm-blue-400 group-hover:text-warm-blue-900 dark:group-hover:text-warm-blue-300">
                           {racing.best_speed ?? '—'}
-                          {racing.best_speed && <span className="text-base font-normal text-gray-400 dark:text-gray-500 ml-2">км/ч</span>}
+                          {racing.best_speed && <span className="text-base font-normal text-charcoal-400 dark:text-charcoal-500 ml-2">км/ч</span>}
                         </div>
                         <div className="mt-2 text-sm text-warm-blue-600 opacity-0 transition-opacity group-hover:opacity-100 font-medium">
                           открыть результаты →
@@ -530,10 +512,10 @@ export default function DogProfile() {
                       </Link>
                     ) : (
                       <div className="mb-4 rounded-xl border-2 border-warm-blue-200 dark:border-warm-blue-600 bg-warm-blue-50 dark:bg-charcoal-700 p-4 text-center">
-                        <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2 uppercase tracking-wide">Лучшая скорость</div>
+                        <div className="text-xs font-semibold text-charcoal-500 dark:text-charcoal-400 mb-2 uppercase tracking-wide">Лучшая скорость</div>
                         <div className="whitespace-nowrap text-4xl font-bold tracking-tight text-warm-blue-800 dark:text-warm-blue-400">
                           {racing.best_speed ?? '—'}
-                          {racing.best_speed && <span className="text-base font-normal text-gray-400 dark:text-gray-500 ml-2">км/ч</span>}
+                          {racing.best_speed && <span className="text-base font-normal text-charcoal-400 dark:text-charcoal-500 ml-2">км/ч</span>}
                         </div>
                       </div>
                     )}
@@ -551,7 +533,7 @@ export default function DogProfile() {
                           <div className="text-xs font-semibold text-old-money-500 dark:text-old-money-400 mb-1 uppercase tracking-wide">Средняя</div>
                           <div className="whitespace-nowrap text-2xl font-bold text-warm-blue-900 dark:text-warm-blue-400 group-hover:text-warm-blue-800 dark:group-hover:text-warm-blue-300">
                             {racing.avg_speed
-                              ? <>{racing.avg_speed}<span className="text-sm font-normal text-gray-400 dark:text-gray-500 ml-1">км/ч</span></>
+                              ? <>{racing.avg_speed}<span className="text-sm font-normal text-charcoal-400 dark:text-charcoal-500 ml-1">км/ч</span></>
                               : '—'
                             }
                           </div>
@@ -561,7 +543,7 @@ export default function DogProfile() {
                           <div className="text-xs font-semibold text-old-money-500 dark:text-old-money-400 mb-1 uppercase tracking-wide">Средняя</div>
                           <div className="whitespace-nowrap text-2xl font-bold text-warm-blue-900 dark:text-warm-blue-400">
                             {racing.avg_speed
-                              ? <>{racing.avg_speed}<span className="text-sm font-normal text-gray-400 dark:text-gray-500 ml-1">км/ч</span></>
+                              ? <>{racing.avg_speed}<span className="text-sm font-normal text-charcoal-400 dark:text-charcoal-500 ml-1">км/ч</span></>
                               : '—'
                             }
                           </div>
@@ -584,7 +566,7 @@ export default function DogProfile() {
                 )}
 
                 {racingEvents.length > 0 && (
-                  <div className="rounded-2xl border-2 border-warm-blue-200 dark:border-warm-blue-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
+                  <div className="rounded-xl border border-warm-blue-200 dark:border-warm-blue-700 bg-white dark:bg-charcoal-800 p-5 md:p-6">
                     <h3 className="text-base md:text-lg font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 mb-4">История</h3>
                     <div className="space-y-3">
                       {visibleRacingEvents.map((event, idx) => {
@@ -600,7 +582,7 @@ export default function DogProfile() {
                               ) : (
                                 <span />
                               )}
-                              <div className="shrink-0 rounded-full border border-gray-200 bg-white px-2 py-0.5 text-xs font-medium text-gray-600 dark:border-charcoal-600 dark:bg-charcoal-800 dark:text-gray-300">
+                              <div className="shrink-0 rounded-full border border-old-money-200 bg-white px-2 py-0.5 text-xs font-medium text-charcoal-600 dark:border-charcoal-600 dark:bg-charcoal-800 dark:text-charcoal-300">
                                 Бега борзых
                               </div>
                             </div>
@@ -655,14 +637,14 @@ export default function DogProfile() {
           <div className={`mb-6 grid gap-4 md:gap-6 ${hasSpeedRecords && hasCoursingRecords ? 'grid-cols-1 items-start md:grid-cols-2' : 'grid-cols-1'}`}>
             {hasSpeedRecords && (
               <div className="flex flex-col gap-4">
-                <div className="rounded-2xl border-2 border-warm-blue-200 dark:border-warm-blue-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
+                <div className="rounded-xl border border-warm-blue-200 dark:border-warm-blue-700 bg-white dark:bg-charcoal-800 p-5 md:p-6">
                   <h2 className="mb-4 text-lg font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 md:text-xl">Замер скорости</h2>
 
                   <div className="mb-4 rounded-xl border-2 border-warm-blue-200 dark:border-warm-blue-600 bg-warm-blue-50 dark:bg-charcoal-700 p-4 text-center">
-                    <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2 uppercase tracking-wide">Лучшая скорость</div>
+                    <div className="text-xs font-semibold text-charcoal-500 dark:text-charcoal-400 mb-2 uppercase tracking-wide">Лучшая скорость</div>
                     <div className="whitespace-nowrap text-4xl font-bold tracking-tight text-warm-blue-800 dark:text-warm-blue-400">
                       {speedStats.bestSpeed}
-                      <span className="text-base font-normal text-gray-400 dark:text-gray-500 ml-2">км/ч</span>
+                      <span className="text-base font-normal text-charcoal-400 dark:text-charcoal-500 ml-2">км/ч</span>
                     </div>
                   </div>
 
@@ -671,7 +653,7 @@ export default function DogProfile() {
                       <div className="text-xs font-semibold text-old-money-500 dark:text-old-money-400 mb-1 uppercase tracking-wide">Средняя</div>
                       <div className="whitespace-nowrap text-2xl font-bold text-warm-blue-900 dark:text-warm-blue-400">
                         {speedStats.avgSpeed.toFixed(1)}
-                        <span className="text-sm font-normal text-gray-400 dark:text-gray-500 ml-1">км/ч</span>
+                        <span className="text-sm font-normal text-charcoal-400 dark:text-charcoal-500 ml-1">км/ч</span>
                       </div>
                     </div>
                     <div className="rounded-xl bg-warm-blue-50 dark:bg-charcoal-700 p-4 text-center border border-warm-blue-200 dark:border-warm-blue-600">
@@ -683,7 +665,7 @@ export default function DogProfile() {
                         <div className="text-xs font-semibold text-old-money-500 dark:text-old-money-400 mb-1 uppercase tracking-wide">Рейтинг в породе</div>
                         <div className="text-2xl font-bold text-charcoal-800 dark:text-charcoal-100">
                           #{speedStats.breedRank}
-                          <span className="text-sm font-normal text-gray-400 dark:text-gray-500 ml-1">из {speedStats.breedTotal}</span>
+                          <span className="text-sm font-normal text-charcoal-400 dark:text-charcoal-500 ml-1">из {speedStats.breedTotal}</span>
                         </div>
                       </div>
                     )}
@@ -705,7 +687,7 @@ export default function DogProfile() {
                 </div>
 
                 {speedStats.history.length > 0 && (
-                  <div className="rounded-2xl border-2 border-warm-blue-200 dark:border-warm-blue-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
+                  <div className="rounded-xl border border-warm-blue-200 dark:border-warm-blue-700 bg-white dark:bg-charcoal-800 p-5 md:p-6">
                     <h3 className="text-base md:text-lg font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 mb-4">История</h3>
                     <div className="space-y-2">
                       {visibleSpeedHistory.map((record, idx) => (
@@ -741,14 +723,14 @@ export default function DogProfile() {
 
             {hasCoursingRecords && (
               <div className="flex flex-col gap-4">
-                <div className="rounded-2xl border-2 border-forest-200 dark:border-forest-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
+                <div className="rounded-xl border border-forest-200 dark:border-forest-700 bg-white dark:bg-charcoal-800 p-5 md:p-6">
                   <h2 className="text-lg md:text-xl font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 mb-4">Бега борзых (350 м)</h2>
 
                   <div className="mb-4 rounded-xl border-2 border-forest-200 dark:border-forest-600 bg-forest-50 dark:bg-charcoal-700 p-4 text-center">
-                    <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2 uppercase tracking-wide">Лучшее время</div>
+                    <div className="text-xs font-semibold text-charcoal-500 dark:text-charcoal-400 mb-2 uppercase tracking-wide">Лучшее время</div>
                     <div className="whitespace-nowrap text-4xl font-bold tracking-tight text-forest-700 dark:text-forest-300">
                       {coursingStats.bestTime}
-                      <span className="text-base font-normal text-gray-400 dark:text-gray-500 ml-2">сек</span>
+                      <span className="text-base font-normal text-charcoal-400 dark:text-charcoal-500 ml-2">сек</span>
                     </div>
                   </div>
 
@@ -757,7 +739,7 @@ export default function DogProfile() {
                       <div className="text-xs font-semibold text-old-money-500 dark:text-old-money-400 mb-1 uppercase tracking-wide">Среднее</div>
                       <div className="whitespace-nowrap text-2xl font-bold text-charcoal-800 dark:text-charcoal-100">
                         {coursingStats.avgTime.toFixed(2)}
-                        <span className="text-sm font-normal text-gray-400 dark:text-gray-500 ml-1">сек</span>
+                        <span className="text-sm font-normal text-charcoal-400 dark:text-charcoal-500 ml-1">сек</span>
                       </div>
                     </div>
                     <div className="bg-forest-50 dark:bg-charcoal-700 rounded-xl p-4 text-center border border-forest-200 dark:border-forest-600">
@@ -769,7 +751,7 @@ export default function DogProfile() {
                         <div className="text-xs font-semibold text-old-money-500 dark:text-old-money-400 mb-1 uppercase tracking-wide">Рейтинг в породе</div>
                         <div className="text-2xl font-bold text-charcoal-800 dark:text-charcoal-100">
                           #{coursingStats.breedRank}
-                          <span className="text-sm font-normal text-gray-400 dark:text-gray-500 ml-1">из {coursingStats.breedTotal}</span>
+                          <span className="text-sm font-normal text-charcoal-400 dark:text-charcoal-500 ml-1">из {coursingStats.breedTotal}</span>
                         </div>
                       </div>
                     )}
@@ -777,7 +759,7 @@ export default function DogProfile() {
                 </div>
 
                 {coursingStats.history.length > 0 && (
-                  <div className="rounded-2xl border-2 border-forest-200 dark:border-forest-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-6">
+                  <div className="rounded-xl border border-forest-200 dark:border-forest-700 bg-white dark:bg-charcoal-800 p-5 md:p-6">
                     <h3 className="text-base md:text-lg font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 mb-4">История</h3>
                     <div className="space-y-2">
                       {visibleCoursingDoninoHistory.map((record, idx) => (

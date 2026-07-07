@@ -218,7 +218,7 @@ export default function Admin() {
                 type="password"
                 value={adminToken}
                 onChange={(e) => setAdminToken(e.target.value)}
-                className="w-full px-4 py-2 border border-om-200 rounded-lg focus:ring-2 focus:ring-camel-500 focus:border-transparent dark:bg-charcoal-800 dark:border-charcoal-600 dark:text-charcoal-100"
+                className="w-full px-4 py-2 border border-old-money-200 rounded-lg focus:ring-2 focus:ring-camel-500 focus:border-transparent dark:bg-charcoal-800 dark:border-charcoal-600 dark:text-charcoal-100"
                 placeholder="Введите токен"
                 autoFocus
               />
@@ -257,7 +257,7 @@ export default function Admin() {
           <select
             value={selectedYear}
             onChange={(e) => setSelectedYear(e.target.value)}
-            className="px-4 py-2 border border-om-200 rounded-lg focus:ring-2 focus:ring-camel-500 focus:border-transparent dark:bg-charcoal-800 dark:border-charcoal-600 dark:text-charcoal-100"
+            className="px-4 py-2 border border-old-money-200 rounded-lg focus:ring-2 focus:ring-camel-500 focus:border-transparent dark:bg-charcoal-800 dark:border-charcoal-600 dark:text-charcoal-100"
           >
             <option value="">Все годы (&lt; 2026)</option>
             {yearOptions.map((year) => (
@@ -285,7 +285,7 @@ export default function Admin() {
             {events.map((event) => (
               <div
                 key={event.id}
-                className="bg-white dark:bg-charcoal-800 rounded-xl shadow-sm border border-om-200 dark:border-charcoal-700 overflow-hidden"
+                className="bg-white dark:bg-charcoal-800 rounded-xl shadow-sm border border-old-money-200 dark:border-charcoal-700 overflow-hidden"
               >
                 <AdminCalendarForm
                   event={event}

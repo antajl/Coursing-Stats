@@ -175,12 +175,17 @@ export function buildTopDogsActiveFilterChips(
 }
 
 export function buildJudgesActiveFilterChips(
+  searchQuery: string,
   filterBreed: string,
   filterDiscipline: string,
+  onSearchChange: (value: string) => void,
   onBreedChange: (value: string) => void,
   onDisciplineChange: (value: string) => void
 ): ActiveFilterChip[] {
   const chips: ActiveFilterChip[] = []
+  if (searchQuery.trim()) {
+    chips.push({ key: 'search', label: `«${searchQuery.trim()}»`, onRemove: () => onSearchChange('') })
+  }
   if (filterBreed) {
     chips.push({ key: 'breed', label: filterBreed, onRemove: () => onBreedChange('') })
   }

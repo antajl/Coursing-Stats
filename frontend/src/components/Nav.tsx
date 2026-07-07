@@ -204,38 +204,58 @@ export default function Nav() {
             <Link
               to="/"
               onClick={() => setMobileMenuOpen(false)}
-              className={`block px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${
-                isActive('/') ? 'bg-camel-100 dark:bg-camel-900/30 text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800'
+              className={`block px-4 py-2 text-sm font-semibold transition-colors ${
+                isActive('/') ? 'text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200'
               }`}
             >
-              Главная
+              <span className="relative inline-block">
+                Главная
+                <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-camel-600 transition-transform duration-300 ${
+                  isActive('/') ? 'scale-x-100' : 'scale-x-0'
+                }`}></span>
+              </span>
             </Link>
             <Link
               to="/competitions"
               onClick={() => setMobileMenuOpen(false)}
-              className={`block px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${
-                isCompetitionsActive ? 'bg-camel-100 dark:bg-camel-900/30 text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800'
+              className={`block px-4 py-2 text-sm font-semibold transition-colors ${
+                isCompetitionsActive ? 'text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200'
               }`}
             >
-              Соревнования
+              <span className="relative inline-block">
+                Соревнования
+                <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-camel-600 transition-transform duration-300 ${
+                  isCompetitionsActive ? 'scale-x-100' : 'scale-x-0'
+                }`}></span>
+              </span>
             </Link>
             <Link
               to="/speed-records"
               onClick={() => setMobileMenuOpen(false)}
-              className={`block px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${
-                isActive('/speed-records') ? 'bg-camel-100 dark:bg-camel-900/30 text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800'
+              className={`block px-4 py-2 text-sm font-semibold transition-colors ${
+                isActive('/speed-records') ? 'text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200'
               }`}
             >
-              Рекорды Донино
+              <span className="relative inline-block">
+                Рекорды Донино
+                <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-camel-600 transition-transform duration-300 ${
+                  isActive('/speed-records') ? 'scale-x-100' : 'scale-x-0'
+                }`}></span>
+              </span>
             </Link>
             <Link
               to="/guide"
               onClick={() => setMobileMenuOpen(false)}
-              className={`block px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${
-                isActive('/guide') ? 'bg-camel-100 dark:bg-camel-900/30 text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800'
+              className={`block px-4 py-2 text-sm font-semibold transition-colors ${
+                isActive('/guide') ? 'text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200'
               }`}
             >
-              Справка
+              <span className="relative inline-block">
+                Справка
+                <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-camel-600 transition-transform duration-300 ${
+                  isActive('/guide') ? 'scale-x-100' : 'scale-x-0'
+                }`}></span>
+              </span>
             </Link>
             <div className="border-t border-old-money-200 dark:border-charcoal-600 pt-2 mt-2">
               <button

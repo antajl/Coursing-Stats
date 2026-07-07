@@ -57,20 +57,23 @@ body {
 
 /* HERO DASHBOARD */
 .hero-dashboard{
-  display:grid; grid-template-columns:1fr 1fr; gap:28px; align-items:start;
+  display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:28px; align-items:start;
   margin-top:28px; padding:32px 36px; border-radius:22px;
   border:1.5px solid var(--om-200); background:var(--cream-50);
   box-shadow:0 18px 40px -28px rgba(67,58,49,0.25);
+  width:100%; max-width:100%; min-width:0; box-sizing:border-box;
 }
-.hero-intro{min-width:0;}
+.hero-intro{min-width:0; max-width:100%;}
 .hero-intro .eyebrow{
   font-family:var(--font-mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase;
   color:var(--camel-600); margin-bottom:14px; display:flex; align-items:center; gap:8px;
+  flex-wrap:wrap;
 }
 .hero-intro h1{
   font-family:var(--font-serif); font-weight:700; font-size:36px; line-height:1.12; margin:0 0 16px;
   color:var(--char-900); letter-spacing:-0.01em;
-  overflow-wrap:break-word;
+  overflow-wrap:break-word; word-break:break-word;
+  max-width:100%;
   text-wrap:balance;
 }
 .hero-intro h1 em{font-style:normal;color:var(--camel-600);}
@@ -86,12 +89,14 @@ body {
 .btn-ghost:hover{border-color:var(--camel-400);color:var(--camel-700);}
 
 .hero-events{
-  border:1.5px solid var(--om-200); border-radius:16px; background:var(--om-50);
+  border:1px solid var(--om-200); border-radius:16px; background:var(--om-50);
   padding:16px 14px; min-height:100%;
+  min-width:0; max-width:100%;
 }
 .hero-events-head{
   display:flex; align-items:center; justify-content:space-between; gap:12px;
   margin-bottom:12px; padding:0 4px;
+  flex-wrap:wrap;
 }
 .hero-events-head h3{
   font-family:var(--font-serif); font-size:16px; margin:0; color:var(--char-900);
@@ -112,6 +117,7 @@ body {
   border-bottom:1px solid var(--om-200);
   text-decoration:none; color:inherit;
   transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease;
+  min-width:0; max-width:100%;
 }
 .home-event-row:hover{
   transform:translateY(-1px);
@@ -134,7 +140,7 @@ body {
   display:grid; grid-template-columns:repeat(4,1fr); gap:12px;
 }
 .stat-chip{
-  border-radius:14px; border:1.5px solid var(--om-200); background:var(--cream-50);
+  border-radius:14px; border:1px solid var(--om-200); background:var(--cream-50);
   padding:14px 16px;
 }
 .stat-chip-link{
@@ -195,7 +201,7 @@ body {
 }
 .donino-home-empty{
   margin:0; padding:12px 14px; font-size:13px; color:var(--char-500);
-  border:1.5px dashed var(--om-200); border-radius:14px; text-align:center;
+  border:1px dashed var(--om-200); border-radius:14px; text-align:center;
 }
 .donino-home-list{
   display:flex; flex-direction:column; gap:10px;
@@ -203,7 +209,7 @@ body {
 .donino-home-row{
   display:flex; align-items:center; gap:14px;
   padding:14px 16px; border-radius:16px;
-  border:1.5px solid var(--om-200); background:var(--cream-50);
+  border:1px solid var(--om-200); background:var(--cream-50);
   text-decoration:none; color:inherit;
   transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease;
 }
@@ -227,7 +233,7 @@ body {
 /* DONINO LIST (speed-records page) */
 .donino-list-row{
   display:flex; align-items:stretch; overflow:hidden;
-  border-radius:16px; border:1.5px solid var(--om-200); background:var(--cream-50);
+  border-radius:16px; border:1px solid var(--om-200); background:var(--cream-50);
   transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease;
 }
 .donino-list-row:hover{
@@ -249,7 +255,7 @@ body {
 .donino-list-row-chart{min-width:0;}
 .donino-list-row-screen{
   display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px;
-  border-left:1.5px solid var(--om-200); padding:8px 10px;
+  border-left:1px solid var(--om-200); padding:8px 10px;
   font-size:10px; font-weight:600; color:var(--om-600); text-decoration:none;
   transition:background .15s ease, color .15s ease;
 }
@@ -257,7 +263,7 @@ body {
 
 .donino-stats-summary__sep{margin:0 .35rem; color:var(--om-400);}
 .donino-stats-column-header{
-  border:1.5px solid var(--om-200); border-radius:12px;
+  border:1px solid var(--om-200); border-radius:12px;
   background:var(--cream-100); padding:10px 14px;
 }
 .donino-stats-column-header__top{
@@ -276,7 +282,7 @@ body {
 }
 .donino-stats-column-header__stats--empty{color:var(--char-500);}
 .donino-stats-chart{
-  border:1.5px solid var(--om-200); border-radius:14px;
+  border:1px solid var(--om-200); border-radius:14px;
   background:var(--white); overflow:hidden;
 }
 .donino-stats-chart__summary{
@@ -296,7 +302,7 @@ body {
 }
 .donino-group-list__items{display:flex; flex-direction:column; gap:8px;}
 .donino-group-card{
-  border:1.5px solid var(--om-200); border-radius:12px;
+  border:1px solid var(--om-200); border-radius:12px;
   background:var(--white); overflow:hidden;
   transition:border-color .15s ease, box-shadow .15s ease;
 }
@@ -340,16 +346,6 @@ body {
 .donino-group-card__table td{padding:5px 6px; border-top:1px solid var(--om-200);}
 .donino-group-card__more{margin:8px 0 0; font-size:11px; color:var(--char-500);}
 
-.home-ranking-tabs{display:flex; gap:4px;}
-.home-ranking-tabs--compact .home-ranking-tab{padding:6px 10px; font-size:12px;}
-.home-ranking-tab{
-  border:none; border-radius:999px; padding:5px 12px;
-  font-size:12px; font-weight:600; cursor:pointer;
-  background:var(--om-100); color:var(--char-700);
-}
-.home-ranking-tab.active{background:var(--camel-500); color:var(--char-900);}
-.home-ranking-tab:hover:not(.active){background:var(--om-200);}
-
 /* SIGNATURE DIVIDER */
 .divider{
   display:flex; align-items:center; gap:16px; margin:36px 0 24px; color:var(--om-600);
@@ -362,7 +358,7 @@ body {
 .spotlight{
   display:grid; grid-template-columns:140px 1fr; gap:24px; align-items:center;
   background:linear-gradient(120deg, var(--camel-100), var(--cream-50));
-  border:1.5px solid var(--camel-300); border-radius:22px; padding:22px 26px;
+  border:1px solid var(--camel-300); border-radius:22px; padding:22px 26px;
   box-shadow:0 0 0 1px rgba(182,130,49,0.08), 0 18px 40px -22px rgba(155,103,32,0.55);
 }
 a.spotlight:hover{
@@ -386,7 +382,7 @@ a.spotlight:hover{
 /* GRID CARDS: quick sections */
 .section-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:8px;}
 .nav-card{
-  background:var(--cream-50); border:1.5px solid var(--om-200); border-radius:20px; padding:22px;
+  background:var(--cream-50); border:1px solid var(--om-200); border-radius:20px; padding:22px;
   transition:transform .18s ease, box-shadow .18s ease; cursor:pointer; text-decoration:none; color:inherit; display:block;
 }
 .nav-card:hover{transform:translateY(-3px); box-shadow:0 16px 30px -20px rgba(67,58,49,0.4); border-color:var(--camel-300);}
@@ -490,8 +486,6 @@ footer{margin-top:60px; text-align:center; font-size:12px; color:var(--om-600);}
 }
 .dark .stat-chip{background:var(--char-800);border-color:var(--char-700);}
 .dark .stat-chip-lbl{color:var(--char-300);}
-.dark .home-ranking-tab{background:var(--char-700);color:var(--cream-50);}
-.dark .home-ranking-tab.active{background:var(--camel-600);color:var(--char-900);}
 .dark .nav-card{background:var(--char-800);border-color:var(--char-700);}
 .dark .nav-card:hover{border-color:var(--camel-600);}
 .dark .nav-card h3{color:var(--cream-50);}
@@ -539,7 +533,7 @@ footer{margin-top:60px; text-align:center; font-size:12px; color:var(--om-600);}
 .dark footer{color:var(--char-500);}
 
 @media(max-width:860px){
-  .hero-dashboard{grid-template-columns:1fr; padding:24px 20px;}
+  .hero-dashboard{grid-template-columns:minmax(0,1fr); padding:24px 16px; gap:20px;}
   .hero-intro h1{font-size:28px; line-height:1.18;}
   .stats-strip{grid-template-columns:repeat(2,1fr);}
   .section-grid{grid-template-columns:1fr;} .podium-preview{grid-template-columns:1fr;}
@@ -552,7 +546,11 @@ footer{margin-top:60px; text-align:center; font-size:12px; color:var(--om-600);}
 }
 
 @media(max-width:480px){
+  .wrap{padding:0 12px 64px;}
+  .hero-dashboard{padding:20px 14px; margin-top:16px; border-radius:18px;}
+  .hero-intro .eyebrow{font-size:10px; letter-spacing:.08em; gap:6px;}
   .hero-intro h1{font-size:23px; line-height:1.22; letter-spacing:0;}
+  .hero-events{padding:14px 10px;}
 }
 
 @keyframes fadeIn {

@@ -7,6 +7,8 @@
     "dev": "concurrently \"npx wrangler dev backend/src/worker.ts --port 8787\" \"cd frontend && npm run dev\"",
     "dev:remote": "concurrently \"npx wrangler dev backend/src/worker.ts --remote --port 8787\" \"cd frontend && npm run dev\"",
     "generate-favicon": "npx tsx backend/scripts/generate-favicon.ts",
+    "export-archive": "npx tsx backend/scripts/export/export-data-archive.ts",
+    "sync-from-remote": "npx wrangler d1 export pc-db --remote --output=data/backups/local-dev.sql && npx wrangler d1 execute pc-db --local --file=data/backups/local-dev.sql --yes",
     "scrape-index": "npx tsx backend/scripts/scrape/scrape-year-index.ts",
     "parse-coursing": "npx tsx backend/parsers/parse-results-coursing.ts",
     "parse-bzmp": "npx tsx backend/parsers/parse-results-bzmp.ts",
@@ -33,7 +35,9 @@
     "test-parser-fixtures": "npx tsx backend/scripts/test/test-parsers-fixtures.ts",
     "download-fixtures": "npx tsx backend/scripts/test/download-fixtures.ts",
     "smoke-api": "npx tsx backend/scripts/test/smoke-api.ts",
-    "test": "vitest run backend/tests/"
+    "test": "vitest run backend/tests/",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui"
   },
   "dependencies": {
     "@sentry/cloudflare": "^10.62.0",
@@ -47,6 +51,7 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
+    "@playwright/test": "^1.61.1",
     "@types/node": "^26.0.1",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",

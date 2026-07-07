@@ -32,7 +32,7 @@ if errorlevel 1 (
   exit /b 1
 )
 
-git push --force
+git push
 if errorlevel 1 (
   echo Push failed.
   pause

@@ -255,7 +255,7 @@ npx tsx backend/scripts/speed/fetch-coursing-records.ts --remote
 
 | Метрика | Значение |
 |---------|----------|
-| Строк в `speed_records` (после дедупа) | ~198 |
+| Строк в `speed_records` (после дедупа) | ~213 |
 | Уникальных собак в speed (name+breed) | ~136 |
 | Строк в `coursing_records` | ~107 |
 | Уникальных собак в coursing | ~107 |

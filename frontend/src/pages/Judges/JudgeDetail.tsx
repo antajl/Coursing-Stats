@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom'
 import { useJudgeDetails } from '../../hooks/useApi'
 import React from 'react'
 import { SEO } from '../../components/SEO'
+import { handleSortToggle, sortArray, type SortState } from '../../lib/judgeSortUtils'
 
 export default function JudgeDetail() {
   const { judgeId } = useParams()
@@ -10,77 +11,29 @@ export default function JudgeDetail() {
   const [filterDiscipline, setFilterDiscipline] = useState('')
   const [expandedBreed, setExpandedBreed] = useState(null)
   const [expandedDog, setExpandedDog] = useState(null)
-  const [breedSortField, setBreedSortField] = useState('count')
-  const [breedSortDirection, setBreedSortDirection] = useState('desc')
-  const [criteriaSortField, setCriteriaSortField] = useState('count')
-  const [criteriaSortDirection, setCriteriaSortDirection] = useState('desc')
+  const [breedSort, setBreedSort] = useState<SortState>({ field: 'count', direction: 'desc' })
+  const [criteriaSort, setCriteriaSort] = useState<SortState>({ field: 'count', direction: 'desc' })
 
   // React Query hook
   const { data: judgeDataResult, isLoading: loading } = useJudgeDetails(judgeId, filterBreed, filterDiscipline)
 
   const judgeData = judgeDataResult?.success ? judgeDataResult.data : null
 
-  const handleBreedSort = (field) => {
-    if (breedSortField === field) {
-      setBreedSortDirection(breedSortDirection === 'asc' ? 'desc' : 'asc')
-    } else {
-      setBreedSortField(field)
-      setBreedSortDirection('desc')
-    }
+  const handleBreedSort = (field: string) => {
+    setBreedSort(handleSortToggle(field, breedSort))
   }
 
-  const handleCriteriaSort = (field) => {
-    if (criteriaSortField === field) {
-      setCriteriaSortDirection(criteriaSortDirection === 'asc' ? 'desc' : 'asc')
-    } else {
-      setCriteriaSortField(field)
-      setCriteriaSortDirection('desc')
-    }
+  const handleCriteriaSort = (field: string) => {
+    setCriteriaSort(handleSortToggle(field, criteriaSort))
   }
 
-  const sortedBreeds = judgeData?.breed_stats ? [...judgeData.breed_stats].sort((a, b) => {
-    let aVal = a[breedSortField]
-    let bVal = b[breedSortField]
-    
-    if (aVal === null || aVal === undefined) aVal = 0
-    if (bVal === null || bVal === undefined) bVal = 0
-    
-    if (breedSortField === 'breed') {
-      if (breedSortDirection === 'asc') {
-        return aVal > bVal ? 1 : -1
-      } else {
-        return aVal < bVal ? 1 : -1
-      }
-    } else {
-      if (breedSortDirection === 'asc') {
-        return aVal > bVal ? 1 : -1
-      } else {
-        return aVal < bVal ? 1 : -1
-      }
-    }
-  }) : []
+  const sortedBreeds = judgeData?.breed_stats
+    ? sortArray(judgeData.breed_stats, breedSort.field, breedSort.direction, breedSort.field === 'breed')
+    : []
 
-  const sortedCriteria = judgeData?.criteria_stats ? [...judgeData.criteria_stats].sort((a, b) => {
-    let aVal = a[criteriaSortField]
-    let bVal = b[criteriaSortField]
-    
-    if (aVal === null || aVal === undefined) aVal = 0
-    if (bVal === null || bVal === undefined) bVal = 0
-    
-    if (criteriaSortField === 'name') {
-      if (criteriaSortDirection === 'asc') {
-        return aVal > bVal ? 1 : -1
-      } else {
-        return aVal < bVal ? 1 : -1
-      }
-    } else {
-      if (criteriaSortDirection === 'asc') {
-        return aVal > bVal ? 1 : -1
-      } else {
-        return aVal < bVal ? 1 : -1
-      }
-    }
-  }) : []
+  const sortedCriteria = judgeData?.criteria_stats
+    ? sortArray(judgeData.criteria_stats, criteriaSort.field, criteriaSort.direction, criteriaSort.field === 'name')
+    : []
 
   if (loading) {
     return (
@@ -219,35 +172,35 @@ export default function JudgeDetail() {
               <table className="w-full divide-y divide-old-money-200 dark:divide-charcoal-600 min-w-[700px]">
             <thead>
               <tr>
-                <th 
+                <th
                   className="cursor-pointer px-3 py-2 text-left text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-100 dark:hover:bg-charcoal-600"
                   onClick={() => handleBreedSort('breed')}
                 >
-                  Порода {breedSortField === 'breed' && (breedSortDirection === 'asc' ? '↑' : '↓')}
+                  Порода {breedSort.field === 'breed' && (breedSort.direction === 'asc' ? '↑' : '↓')}
                 </th>
-                <th 
+                <th
                   className="cursor-pointer px-3 py-2 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-100 dark:hover:bg-charcoal-600"
                   onClick={() => handleBreedSort('evaluations_count')}
                 >
-                  Оцениваний {breedSortField === 'evaluations_count' && (breedSortDirection === 'asc' ? '↑' : '↓')}
+                  Оцениваний {breedSort.field === 'evaluations_count' && (breedSort.direction === 'asc' ? '↑' : '↓')}
                 </th>
-                <th 
+                <th
                   className="cursor-pointer px-3 py-2 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-100 dark:hover:bg-charcoal-600"
                   onClick={() => handleBreedSort('avg_score')}
                 >
-                  Средняя {breedSortField === 'avg_score' && (breedSortDirection === 'asc' ? '↑' : '↓')}
+                  Средняя {breedSort.field === 'avg_score' && (breedSort.direction === 'asc' ? '↑' : '↓')}
                 </th>
-                <th 
+                <th
                   className="cursor-pointer px-3 py-2 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-100 dark:hover:bg-charcoal-600"
                   onClick={() => handleBreedSort('min_score')}
                 >
-                  Мин {breedSortField === 'min_score' && (breedSortDirection === 'asc' ? '↑' : '↓')}
+                  Мин {breedSort.field === 'min_score' && (breedSort.direction === 'asc' ? '↑' : '↓')}
                 </th>
-                <th 
+                <th
                   className="cursor-pointer px-3 py-2 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-100 dark:hover:bg-charcoal-600"
                   onClick={() => handleBreedSort('max_score')}
                 >
-                  Макс {breedSortField === 'max_score' && (breedSortDirection === 'asc' ? '↑' : '↓')}
+                  Макс {breedSort.field === 'max_score' && (breedSort.direction === 'asc' ? '↑' : '↓')}
                 </th>
               </tr>
             </thead>
@@ -389,35 +342,35 @@ export default function JudgeDetail() {
               <table className="w-full divide-y divide-old-money-200 dark:divide-charcoal-600 min-w-[700px]">
             <thead>
               <tr>
-                <th 
+                <th
                   className="cursor-pointer px-3 py-2 text-left text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-100 dark:hover:bg-charcoal-600"
                   onClick={() => handleCriteriaSort('name')}
                 >
-                  Критерий {criteriaSortField === 'name' && (criteriaSortDirection === 'asc' ? '↑' : '↓')}
+                  Критерий {criteriaSort.field === 'name' && (criteriaSort.direction === 'asc' ? '↑' : '↓')}
                 </th>
-                <th 
+                <th
                   className="cursor-pointer px-3 py-2 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-100 dark:hover:bg-charcoal-600"
                   onClick={() => handleCriteriaSort('evaluations_count')}
                 >
-                  Оцениваний {criteriaSortField === 'evaluations_count' && (criteriaSortDirection === 'asc' ? '↑' : '↓')}
+                  Оцениваний {criteriaSort.field === 'evaluations_count' && (criteriaSort.direction === 'asc' ? '↑' : '↓')}
                 </th>
-                <th 
+                <th
                   className="cursor-pointer px-3 py-2 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-100 dark:hover:bg-charcoal-600"
                   onClick={() => handleCriteriaSort('avg_score')}
                 >
-                  Средняя {criteriaSortField === 'avg_score' && (criteriaSortDirection === 'asc' ? '↑' : '↓')}
+                  Средняя {criteriaSort.field === 'avg_score' && (criteriaSort.direction === 'asc' ? '↑' : '↓')}
                 </th>
-                <th 
+                <th
                   className="cursor-pointer px-3 py-2 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-100 dark:hover:bg-charcoal-600"
                   onClick={() => handleCriteriaSort('min_score')}
                 >
-                  Мин {criteriaSortField === 'min_score' && (criteriaSortDirection === 'asc' ? '↑' : '↓')}
+                  Мин {criteriaSort.field === 'min_score' && (criteriaSort.direction === 'asc' ? '↑' : '↓')}
                 </th>
-                <th 
+                <th
                   className="cursor-pointer px-3 py-2 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 hover:bg-cream-100 dark:hover:bg-charcoal-600"
                   onClick={() => handleCriteriaSort('max_score')}
                 >
-                  Макс {criteriaSortField === 'max_score' && (criteriaSortDirection === 'asc' ? '↑' : '↓')}
+                  Макс {criteriaSort.field === 'max_score' && (criteriaSort.direction === 'asc' ? '↑' : '↓')}
                 </th>
               </tr>
             </thead>

@@ -359,19 +359,36 @@ npm run sync-to-remote
 
 **Календарь и reparse 2025 обновлены на remote 2026-07-03** (см. секцию «Календарь и обновление D1» в этом файле).
 
-**Актуальное состояние (2026-07-06):**
+**Актуальное состояние (2026-07-07):**
 
 - **events:** 225 (2015-2026)
-- **dogs:** 1619
+- **dogs:** 1628
 - **results:** 2966 (2025-2026)
-- **speed_records:** 198 (из Google Sheets, автообновление)
-- **coursing_records:** 95 (из Google Sheets, автообновление)
+- **speed_records:** 213 (из Google Sheets, автообновление)
+- **coursing_records:** 107 (из Google Sheets, автообновление)
 - **Remote D1:** ~21 MB
 
 **Распределение results по годам:**
 - 2025: 2114 результатов (50 событий)
 - 2026: 852 результатов (51 событие)
 - 2015-2024: НЕДОСТУПНЫ (хранятся как изображения, требуется OCR)
+
+---
+
+## D1 Free tier и edge cache
+
+**Лимит Cloudflare D1 (Free):** ~5M **rows read** в сутки на аккаунт. При превышении API возвращает ошибки до 00:00 UTC.
+
+**Снижение нагрузки (2026-07):**
+- `backend/src/lib/edge-cache.ts` — Cache API + TTL по endpoint (sitemap 24 ч, judges 6 ч, top 1 ч, …)
+- `executionCtx.waitUntil` в Worker для записи кэша
+- React Query `staleTime` на фронте (`frontend/src/hooks/useApi.ts`) — меньше повторных запросов
+
+**Локальная разработка:** `npm run dev` → **локальная D1** (не расходует remote reads). Свежие данные: `npm run sync-from-remote`.
+
+**Файловый бэкап:** `npm run export-archive` — см. `DATA-ARCHIVE.md`.
+
+**Таблица `judges`:** на remote **отсутствует**; статистика судей агрегируется из `events.judges` и `results.raw_scores`. Отдельная materialized-таблица — в планах (`FUTURE-PLANS.md`).
 
 ---
 

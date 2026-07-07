@@ -190,7 +190,31 @@ if (items.results) {
 - Решение: Динамический sitemap + meta-теги
 - Будущее: Рассмотреть SSR (Server-Side Rendering) для критичных страниц
 
+## Яндекс.Вебмастер — практические заметки
+
+### Регион
+- «Нет региона» — **нормально** для всероссийского агрегатора без привязки к одному городу
+- Не требует исправления, если аудитория — вся Россия
+
+### Sitemap
+- В Вебмастере указать: `https://coursing-stats.ru/sitemap.xml` (index)
+- Index ссылается на `sitemap-pages.xml` (~7 URL) и `api.coursing-stats.ru/sitemap.xml` (~2096 URL из D1)
+- После деплоя Worker отдельная загрузка API-sitemap не нужна — index подтягивает его автоматически
+
+### Favicon
+- `frontend/public/favicon.ico` + `favicon-48.png` — для краулеров и вкладок
+- Генерация: `npm run generate-favicon`
+
+### HTTPS и Business
+- HTTPS через Cloudflare — OK
+- Яндекс Business — опционально; для статистического сайта не обязателен
+
 ## История изменений
+
+### 2026-07-07
+- Sitemap index + edge cache 24 ч на API sitemap
+- Favicon.ico для индексации
+- Заметки по региону и двум sitemap в Вебмастере
 
 ### 2026-07-05
 - Добавлен `react-helmet-async` для динамических meta-тегов

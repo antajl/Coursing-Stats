@@ -141,8 +141,8 @@ data/
 ├── package-lock.json          # В репозитории (npm ci в CI)
 ├── wrangler.toml
 ├── scripts/                   # Batch/Shell scripts
-│   ├── start-local.bat
-│   └── push-github.bat
+│   ├── start-servers.bat
+│   └── deploy-to-github.bat
 └── assets/                    # Static assets
     └── logo.svg (renamed from 2.svg)
 ```
@@ -173,6 +173,10 @@ npm run reparse-2026-bzmp      # Reparse 2026 BZMP events only
 npm run reparse-2026-racing    # Reparse 2026 racing events only
 npm run ci-update-db           # Increment current year → remote D1
 npm run migrate-dog-names      # Normalize dog names in local D1
+npm run sync-from-remote         # remote D1 → local (перед первым dev)
+npm run dev:remote               # dev с remote D1 (жрёт квоту reads!)
+npm run export-archive           # полный файловый архив → data/archive/snapshots/
+npm run generate-favicon         # favicon.ico из favicon.svg
 npm run sync-to-remote         # Full sync local D1 → remote
 npm run update-current-year    # Update current year events
 npm run merge-dogs             # Merge duplicate dogs
@@ -210,38 +214,55 @@ npm run dev
 
 **Windows batch:**
 ```bash
-scripts/start-local.bat
+scripts\start-servers.bat
 ```
 
-**Вручную:**
+**Первый запуск (или раз в неделю для свежих данных):**
+```bash
+npm run sync-from-remote
+npm run dev
+```
+
+**Вручную (локальная D1):**
 
 Терминал 1:
 ```bash
-cd backend
-npx wrangler dev --remote --port 8787
-# Запускается на http://127.0.0.1:8787
+npx wrangler dev backend/src/worker.ts --port 8787
+# http://127.0.0.1:8787
 ```
 
 Терминал 2:
 ```bash
-cd frontend
-npm run dev
-# Запускается на http://localhost:5173
+cd frontend && npm run dev
+# http://localhost:5173
 ```
 
-**ВАЖНО:** Серверы МОЖНО запускать командами. Это разрешено и рекомендуется для разработки.
+**Prod-данные напрямую (осторожно — квота D1 reads):**
+```bash
+npm run dev:remote
+```
 
-`npm run dev` запускает Worker с **`--remote`** (актуальная D1) и Vite одновременно.
+`npm run dev` по умолчанию использует **локальную D1** в `.wrangler/` — не расходует дневной лимит remote.
 
 **Тема UI:** светлая по умолчанию; тёмная — через переключатель в Nav (`localStorage.theme`).
 
-### Использование remote D1
+### Файловый архив
 
-Для локальной разработки используется remote D1 (--remote флаг). Это гарантирует работу с актуальными данными.
+```bash
+npm run export-archive
+```
+
+См. `DATA-ARCHIVE.md`.
+
+### React Query (frontend)
+
+`frontend/src/hooks/useApi.ts` — `staleTime` 5–60 мин на prod-запросах (меньше дублей к API). События больше не refetch на каждый mount.
 
 ---
 
 ## Testing
+
+Подробно: **`TESTING.md`**.
 
 ### Parser Testing
 
@@ -266,6 +287,15 @@ npx tsx backend/parsers/parse-results-racing.ts <url>
 npm test                         # vitest — api.test.ts is describe.skip
 npm run smoke-api                # manual check with dev server running
 ```
+
+### E2E (Playwright)
+
+```bash
+npm run test:e2e                 # поднимает npm run dev автоматически
+npm run test:e2e:ui              # интерактивный UI
+```
+
+Список spec-файлов — в `TESTING.md`.
 
 In-process Worker tests planned: **vitest@4** + **@cloudflare/vitest-pool-workers**.
 
@@ -600,7 +630,7 @@ database_id = "a5d6d4ad-7fc5-41b4-a33b-05f4daa382d4"
 ### GitHub Actions Workflows
 
 **deploy-frontend.yml:** Деплой фронтенда на Cloudflare Pages
-**update-db.yml:** Обновление D1 базы данных (cron: понедельник 02:00 UTC)
+**update-db.yml:** Обновление D1 (cron: **4×/день** — 05:00, 11:00, 17:00, 20:30 UTC ≈ 08:00, 14:00, 20:00, 23:30 МСК)
 **update-speed-records.yml:** Обновление рекордов скорости из Google Sheets (cron: **4×/день** — 05:00, 11:00, 17:00, 20:30 UTC ≈ 08:00, 14:00, 20:00, 23:30 МСК)
 
 **Secrets:**

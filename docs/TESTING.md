@@ -1,0 +1,96 @@
+# Testing — Тестирование
+
+## Unit тесты
+
+### Парсеры
+```bash
+npm run test-parser-fixtures
+```
+Тестирует парсеры на фикстурах из `backend/tests/fixtures/`.
+
+### Backend API
+```bash
+npm run test
+```
+Запускает vitest тесты из `backend/tests/`.
+
+### Ручная проверка API
+```bash
+npm run smoke-api
+```
+Проверяет основные endpoints API (требует запущенный `npm run dev`).
+
+## E2E тесты (Playwright)
+
+### Подготовка данных
+
+E2E с проверкой реальных профилей/событий требуют **локальную D1 с данными**:
+
+```bash
+npm run sync-from-remote   # один раз (или перед CI)
+npm run test:e2e
+```
+
+Без данных тесты на «дым» (title, 404, навигация) проходят; тесты с `test.skip(!testData…)` пропускаются.
+
+### Запуск
+
+```bash
+npm run test:e2e
+```
+Автоматически запускает `npm run dev` (Worker :8787 + Vite :5173).
+
+```bash
+npm run test:e2e:ui
+```
+Интерактивный Playwright UI.
+
+### Структура
+
+| Файл | Покрытие |
+|------|----------|
+| `e2e/helpers.ts` | Общие проверки (404, overflow, сегменты) |
+| `e2e/fixtures.ts` | ID события/собаки/судьи из API `127.0.0.1:8787` |
+| `e2e/home.spec.ts` | Hero, ближайшие события, overflow 375px |
+| `e2e/guide.spec.ts` | `/guide`, вкладки справочника |
+| `e2e/navigation.spec.ts` | Навигация по разделам |
+| `e2e/competitions.spec.ts` | Вкладки календарь / рейтинг / судьи |
+| `e2e/top-dogs.spec.ts` | `/top`, карточки собак |
+| `e2e/judges.spec.ts` | Поиск, карточки, детальная страница |
+| `e2e/speed-records.spec.ts` | Донино: колонки, режим статистики |
+| `e2e/dog-profile.spec.ts` | Профиль собаки, error state |
+| `e2e/event-results.spec.ts` | Результаты события `/event/:id` |
+| `e2e/mobile.spec.ts` | 375px, overflow, бургер-меню |
+| `e2e/dark-theme.spec.ts` | Переключатель темы (desktop + mobile) |
+
+### CI
+
+Workflow `.github/workflows/e2e.yml`:
+- `npm ci` + Playwright chromium
+- `npm run sync-from-remote` (secrets Cloudflare)
+- `npm run test:e2e` с `CI=true`
+
+### Добавление новых тестов
+
+```typescript
+import { test, expect } from '@playwright/test'
+import { expectNotNotFoundPage } from './helpers'
+
+test.describe('Page Name', () => {
+  test('example', async ({ page }) => {
+    await page.goto('/your-page')
+    await expectNotNotFoundPage(page)
+    // содержимое, не только title
+  })
+})
+```
+
+**Не полагайтесь только на** `toHaveTitle(/Coursing Stats/)` — 404 и error state тоже содержат этот title.
+
+## Фикстуры парсеров
+
+```bash
+npm run download-fixtures
+```
+
+Структура: `backend/tests/fixtures/{coursing,bzmp,racing}/`

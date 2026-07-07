@@ -14,8 +14,12 @@ interface DogSearchSelectProps {
   required?: boolean
 }
 
+import { parseDogName } from '../../lib/dogName'
+
 function formatDogLabel(dog: DogOption): string {
-  return `${dog.name_lat} (${dog.name_ru}) — ${dog.breed}`
+  const { primary, secondary } = parseDogName(dog.name_lat, dog.name_ru)
+  const namePart = secondary ? `${primary} / ${secondary}` : primary
+  return `${namePart} — ${dog.breed}`
 }
 
 export default function DogSearchSelect({ value, onChange, required }: DogSearchSelectProps) {

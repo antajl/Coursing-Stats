@@ -143,7 +143,7 @@ export default function EventHeader({ event, results, onBack }: EventHeaderProps
                 href={event.telegram_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block rounded-lg border border-camel-200 bg-camel-50 px-2.5 py-1 text-camel-800 transition-colors hover:border-camel-300 hover:bg-camel-100 dark:border-camel-700 dark:bg-camel-950/40 dark:text-camel-300 dark:hover:bg-camel-900/50"
+                className="inline-block rounded-lg border border-camel-200 bg-camel-50 px-2.5 py-1 text-camel-700 transition-colors hover:border-camel-300 hover:bg-camel-100 dark:border-camel-600 dark:bg-charcoal-700 dark:text-camel-400 dark:hover:bg-charcoal-600"
               >
                 {clubTitle}
               </a>
@@ -152,7 +152,7 @@ export default function EventHeader({ event, results, onBack }: EventHeaderProps
                 href={event.results_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block rounded-lg border border-camel-200 bg-camel-50 px-2.5 py-1 text-camel-800 transition-colors hover:border-camel-300 hover:bg-camel-100 dark:border-camel-700 dark:bg-camel-950/40 dark:text-camel-300 dark:hover:bg-camel-900/50"
+                className="inline-block rounded-lg border border-camel-200 bg-camel-50 px-2.5 py-1 text-camel-700 transition-colors hover:border-camel-300 hover:bg-camel-100 dark:border-camel-600 dark:bg-charcoal-700 dark:text-camel-400 dark:hover:bg-charcoal-600"
               >
                 {clubTitle}
               </a>

@@ -39,9 +39,9 @@ interface Event {
 
 const adminLabel = 'block text-xs font-medium text-charcoal-600 dark:text-charcoal-400 mb-1'
 const adminInput =
-  'w-full px-3 py-1.5 text-sm border border-om-200 rounded-lg focus:ring-2 focus:ring-camel-500 dark:bg-charcoal-800 dark:border-charcoal-600 dark:text-charcoal-100'
+  'w-full px-3 py-1.5 text-sm border border-old-money-200 rounded-lg focus:ring-2 focus:ring-camel-500 dark:bg-charcoal-800 dark:border-charcoal-600 dark:text-charcoal-100'
 const adminCard =
-  'bg-white dark:bg-charcoal-800 rounded-xl shadow-sm border border-om-200 dark:border-charcoal-700 p-4 mb-5'
+  'bg-white dark:bg-charcoal-800 rounded-xl shadow-sm border border-old-money-200 dark:border-charcoal-700 p-4 mb-5'
 const adminSaveBtn =
   'px-4 py-1.5 text-sm bg-camel-600 text-white rounded-lg hover:bg-camel-700 transition-colors disabled:opacity-50 shrink-0'
 
@@ -382,8 +382,8 @@ export default function EventEdit() {
         </div>
 
         {/* Results Table */}
-        <div className="bg-white dark:bg-charcoal-800 rounded-xl shadow-sm border border-om-200 dark:border-charcoal-700 overflow-hidden">
-          <div className="p-6 border-b border-om-200 dark:border-charcoal-700 flex items-center justify-between">
+        <div className="bg-white dark:bg-charcoal-800 rounded-xl shadow-sm border border-old-money-200 dark:border-charcoal-700 overflow-hidden">
+          <div className="p-6 border-b border-old-money-200 dark:border-charcoal-700 flex items-center justify-between">
             <h2 className="text-xl font-semibold text-charcoal-900 dark:text-charcoal-100">
               Результаты ({results.length})
             </h2>
@@ -410,7 +410,7 @@ export default function EventEdit() {
         {showAddResult && (
           <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
             <div className="bg-white dark:bg-charcoal-800 rounded-xl shadow-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
-              <div className="p-6 border-b border-om-200 dark:border-charcoal-700 flex items-center justify-between">
+              <div className="p-6 border-b border-old-money-200 dark:border-charcoal-700 flex items-center justify-between">
                 <h3 className="text-xl font-semibold text-charcoal-900 dark:text-charcoal-100">
                   Добавить результат
                 </h3>
@@ -440,7 +440,7 @@ export default function EventEdit() {
                     type="text"
                     value={newResult.breed_class}
                     onChange={(e) => setNewResult({ ...newResult, breed_class: e.target.value })}
-                    className="w-full px-4 py-2 border border-om-200 rounded-lg focus:ring-2 focus:ring-camel-500 focus:border-transparent dark:bg-charcoal-800 dark:border-charcoal-600 dark:text-charcoal-100"
+                    className="w-full px-4 py-2 border border-old-money-200 rounded-lg focus:ring-2 focus:ring-camel-500 focus:border-transparent dark:bg-charcoal-800 dark:border-charcoal-600 dark:text-charcoal-100"
                     placeholder="Стандартная - Сука"
                   />
                 </div>
@@ -453,7 +453,7 @@ export default function EventEdit() {
                       type="number"
                       value={newResult.placement}
                       onChange={(e) => setNewResult({ ...newResult, placement: parseInt(e.target.value) })}
-                      className="w-full px-4 py-2 border border-om-200 rounded-lg focus:ring-2 focus:ring-camel-500 focus:border-transparent dark:bg-charcoal-800 dark:border-charcoal-600 dark:text-charcoal-100"
+                      className="w-full px-4 py-2 border border-old-money-200 rounded-lg focus:ring-2 focus:ring-camel-500 focus:border-transparent dark:bg-charcoal-800 dark:border-charcoal-600 dark:text-charcoal-100"
                       min="1"
                     />
                   </div>
@@ -465,7 +465,7 @@ export default function EventEdit() {
                       type="number"
                       value={newResult.total_score}
                       onChange={(e) => setNewResult({ ...newResult, total_score: parseFloat(e.target.value) })}
-                      className="w-full px-4 py-2 border border-om-200 rounded-lg focus:ring-2 focus:ring-camel-500 focus:border-transparent dark:bg-charcoal-800 dark:border-charcoal-600 dark:text-charcoal-100"
+                      className="w-full px-4 py-2 border border-old-money-200 rounded-lg focus:ring-2 focus:ring-camel-500 focus:border-transparent dark:bg-charcoal-800 dark:border-charcoal-600 dark:text-charcoal-100"
                       step="0.1"
                     />
                   </div>
@@ -478,7 +478,7 @@ export default function EventEdit() {
                     type="text"
                     value={newResult.qualification}
                     onChange={(e) => setNewResult({ ...newResult, qualification: e.target.value })}
-                    className="w-full px-4 py-2 border border-om-200 rounded-lg focus:ring-2 focus:ring-camel-500 focus:border-transparent dark:bg-charcoal-800 dark:border-charcoal-600 dark:text-charcoal-100"
+                    className="w-full px-4 py-2 border border-old-money-200 rounded-lg focus:ring-2 focus:ring-camel-500 focus:border-transparent dark:bg-charcoal-800 dark:border-charcoal-600 dark:text-charcoal-100"
                     placeholder="CACL, RegCACL"
                   />
                 </div>
@@ -490,7 +490,7 @@ export default function EventEdit() {
                     type="text"
                     value={newResult.vc}
                     onChange={(e) => setNewResult({ ...newResult, vc: e.target.value })}
-                    className="w-full px-4 py-2 border border-om-200 rounded-lg focus:ring-2 focus:ring-camel-500 focus:border-transparent dark:bg-charcoal-800 dark:border-charcoal-600 dark:text-charcoal-100"
+                    className="w-full px-4 py-2 border border-old-money-200 rounded-lg focus:ring-2 focus:ring-camel-500 focus:border-transparent dark:bg-charcoal-800 dark:border-charcoal-600 dark:text-charcoal-100"
                   />
                 </div>
                 <div>
@@ -500,7 +500,7 @@ export default function EventEdit() {
                   <select
                     value={newResult.status}
                     onChange={(e) => setNewResult({ ...newResult, status: e.target.value })}
-                    className="w-full px-4 py-2 border border-om-200 rounded-lg focus:ring-2 focus:ring-camel-500 focus:border-transparent dark:bg-charcoal-800 dark:border-charcoal-600 dark:text-charcoal-100"
+                    className="w-full px-4 py-2 border border-old-money-200 rounded-lg focus:ring-2 focus:ring-camel-500 focus:border-transparent dark:bg-charcoal-800 dark:border-charcoal-600 dark:text-charcoal-100"
                   >
                     <option value="finished">Завершено</option>
                     <option value="dns">Не явился</option>

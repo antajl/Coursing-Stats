@@ -13,14 +13,14 @@ export function StatCard({
   highlight?: boolean
 }) {
   return (
-    <div className="bg-white dark:bg-charcoal-800 rounded-2xl border-2 border-cream-300 dark:border-charcoal-600 p-5 shadow-md">
-      <div className="text-xs uppercase tracking-wide text-old-money-600 mb-2">{label}</div>
+    <div className="bg-white dark:bg-charcoal-800 rounded-xl border border-cream-300 dark:border-charcoal-600 p-5">
+      <div className="text-xs uppercase tracking-wide text-old-money-600 dark:text-old-money-400 mb-2">{label}</div>
       <div
         className={`text-2xl font-bold ${highlight ? 'text-camel-700 dark:text-camel-400' : 'text-charcoal-900 dark:text-charcoal-100'}`}
       >
         {value}
       </div>
-      {sub && <div className="text-sm text-charcoal-500 mt-1">{sub}</div>}
+      {sub && <div className="text-sm text-charcoal-500 dark:text-charcoal-400 mt-1">{sub}</div>}
     </div>
   )
 }
@@ -90,7 +90,7 @@ export function DistributionChart({
       className={
         bare
           ? ''
-          : `bg-white dark:bg-charcoal-800 rounded-2xl border-2 border-cream-300 dark:border-charcoal-600 shadow-md ${
+          : `bg-white dark:bg-charcoal-800 rounded-xl border border-cream-300 dark:border-charcoal-600 ${
               compact ? 'p-3 md:p-4' : 'p-6'
             }`
       }
@@ -123,9 +123,9 @@ export function DistributionChart({
                   style={{ width: `${(count / maxCount) * 100}%` }}
                 />
               </div>
-              <div className={`shrink-0 font-semibold ${compact ? 'w-16 text-xs' : 'w-24 text-sm'}`}>
+              <div className={`shrink-0 font-semibold text-charcoal-800 dark:text-charcoal-200 ${compact ? 'w-16 text-xs' : 'w-24 text-sm'}`}>
                 {count}{' '}
-                <span className="text-charcoal-500 font-normal">({pct.toFixed(1)}%)</span>
+                <span className="text-charcoal-500 dark:text-charcoal-400 font-normal">({pct.toFixed(1)}%)</span>
               </div>
             </div>
           )

@@ -25,8 +25,13 @@ cd ..
 ### Запуск локально
 
 ```bash
-npm run dev
+npm run sync-from-remote   # первый раз: копия prod D1 → local
+npm run dev                # Worker :8787 (local D1) + Vite :5173
 ```
+
+`npm run dev` по умолчанию использует **локальную D1** — не расходует квоту remote. Свежие prod-данные: `sync-from-remote`. Live remote: `npm run dev:remote`.
+
+Файловый бэкап: `npm run export-archive` — см. `DATA-ARCHIVE.md`.
 
 ### Тестирование
 
@@ -35,7 +40,10 @@ npm test                    # vitest (api.test.ts сейчас describe.skip)
 npm run smoke-api           # ручная проверка API (нужен npm run dev)
 npm run test-parser         # синтетические тесты парсеров v1
 npm run test-parser-fixtures # v2 модульные парсеры на реальных фикстурах
+npm run test:e2e             # Playwright E2E (поднимает dev-сервер)
 ```
+
+Подробнее: `TESTING.md`.
 
 ### Линтинг
 

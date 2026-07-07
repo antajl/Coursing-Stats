@@ -21,12 +21,12 @@ export default function QualificationBadges({ qualification }: QualificationBadg
           'inline-block max-w-full rounded px-1.5 py-0.5 text-xs font-medium',
           isLong ? 'truncate md:max-w-[220px]' : '',
           isChampion
-            ? 'border border-camel-300 bg-camel-100 text-camel-800 dark:border-camel-600 dark:bg-camel-900 dark:text-camel-300'
-            : isCACL
-              ? 'border border-camel-200 bg-camel-50 text-camel-800 dark:border-camel-700 dark:bg-camel-950/40 dark:text-camel-300'
+            ? 'border border-camel-300 dark:border-camel-600 bg-camel-100 dark:bg-camel-700/40 text-camel-800 dark:text-camel-200'
+            : isCACL && !isReg
+              ? 'border border-old-money-300 dark:border-charcoal-500 bg-old-money-100 dark:bg-charcoal-700 text-old-money-800 dark:text-old-money-200'
               : isReg
-                ? 'border border-old-money-300 bg-old-money-100 text-old-money-700 dark:border-charcoal-500 dark:bg-charcoal-700 dark:text-old-money-300'
-                : 'border border-gray-200 bg-gray-50 text-gray-500 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400',
+                ? 'border border-old-money-200 dark:border-charcoal-600 bg-cream-100 dark:bg-charcoal-800 text-charcoal-600 dark:text-charcoal-300'
+                : 'border border-old-money-200 dark:border-charcoal-600 bg-cream-50 dark:bg-charcoal-800 text-charcoal-500 dark:text-charcoal-400',
         ].filter(Boolean).join(' ')
 
         const badge = <span className={badgeClass}>{trimmed}</span>

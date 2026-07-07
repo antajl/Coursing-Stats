@@ -96,7 +96,7 @@ export default function DogCard({ dog, type, filterYear }: DogCardProps) {
   return (
     <Link
       to={`/dog/${dog.dog_id}`}
-      className="flex flex-col gap-2 rounded-xl border-2 border-old-money-200 bg-white p-3 shadow-sm transition-all duration-200 hover:border-camel-300 hover:shadow-md dark:border-charcoal-600 dark:bg-charcoal-800 dark:hover:border-camel-700 sm:flex-row sm:items-center sm:gap-3"
+      className="flex flex-col gap-2 rounded-xl border border-old-money-200 bg-white p-3 shadow-sm transition-all duration-200 hover:border-camel-300 hover:shadow-md dark:border-charcoal-600 dark:bg-charcoal-800 dark:hover:border-camel-700 sm:flex-row sm:items-center sm:gap-3"
     >
       <div className="min-w-0 flex-1">
         <div className="mb-1 flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
@@ -118,7 +118,7 @@ export default function DogCard({ dog, type, filterYear }: DogCardProps) {
           {yearBadge && (
             <span
               title={yearBadge.title}
-              className="whitespace-nowrap rounded-md bg-camel-100 px-1.5 py-0.5 text-[11px] font-semibold text-camel-800 dark:bg-camel-900/40 dark:text-camel-300"
+              className="whitespace-nowrap rounded-md bg-camel-100 px-1.5 py-0.5 text-[11px] font-semibold text-camel-700 dark:bg-charcoal-700 dark:text-camel-400"
             >
               {yearBadge.label}
             </span>

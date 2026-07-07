@@ -27,7 +27,7 @@ export default function GroupedStatsTable({
 
   return (
     <div
-      className={`bg-white dark:bg-charcoal-800 rounded-2xl border-2 border-cream-300 dark:border-charcoal-600 shadow-md space-y-4 ${
+      className={`bg-white dark:bg-charcoal-800 rounded-xl border border-cream-300 dark:border-charcoal-600 space-y-4 ${
         compact ? 'p-3 md:p-4' : 'p-6'
       }`}
     >
@@ -64,7 +64,7 @@ export default function GroupedStatsTable({
                     <span className="mr-2 text-charcoal-400">{expandedKey === row.key ? '▼' : '▶'}</span>
                     {row.label}
                     {row.lowSample && (
-                      <span className="ml-2 text-xs text-charcoal-500 font-normal">мало данных</span>
+                      <span className="ml-2 text-xs text-charcoal-500 dark:text-charcoal-400 font-normal">мало данных</span>
                     )}
                   </td>
                   <td className="px-3 py-3 text-center">{row.runCount}</td>
@@ -130,7 +130,7 @@ export default function GroupedStatsTable({
                         </tbody>
                       </table>
                       {row.dogs.length > 15 && (
-                        <p className="text-xs text-charcoal-500 mt-2">и ещё {row.dogs.length - 15}…</p>
+                        <p className="text-xs text-charcoal-500 dark:text-charcoal-400 mt-2">и ещё {row.dogs.length - 15}…</p>
                       )}
                     </td>
                   </tr>

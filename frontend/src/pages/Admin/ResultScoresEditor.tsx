@@ -78,13 +78,13 @@ interface ResultScoresEditorProps {
 }
 
 const fieldInput =
-  'px-1.5 py-0.5 border border-om-200 rounded dark:bg-charcoal-800 dark:border-charcoal-600 dark:text-charcoal-100 text-sm'
+  'px-1.5 py-0.5 border border-old-money-200 rounded dark:bg-charcoal-800 dark:border-charcoal-600 dark:text-charcoal-100 text-sm'
 
 const scoreInput =
   `${fieldInput} w-11 min-w-[2.75rem] text-center tabular-nums [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none`
 
 const iconBtn =
-  'shrink-0 w-6 h-6 flex items-center justify-center rounded border border-om-200 dark:border-charcoal-600 text-sm leading-none hover:bg-om-100 dark:hover:bg-charcoal-700 disabled:opacity-40 disabled:pointer-events-none'
+  'shrink-0 w-6 h-6 flex items-center justify-center rounded border border-old-money-200 dark:border-charcoal-600 text-sm leading-none hover:bg-old-money-100 dark:hover:bg-charcoal-700 disabled:opacity-40 disabled:pointer-events-none'
 
 export default function ResultScoresEditor({
   rawScoresJson,
@@ -184,7 +184,7 @@ export default function ResultScoresEditor({
 
   const wrapperClass = compact
     ? 'pt-1.5 space-y-2'
-    : 'mt-3 rounded-lg border border-om-200 dark:border-charcoal-600 bg-cream-50 dark:bg-charcoal-900/40 p-4 space-y-4'
+    : 'mt-3 rounded-lg border border-old-money-200 dark:border-charcoal-600 bg-cream-50 dark:bg-charcoal-900/40 p-4 space-y-4'
 
   return (
     <div className={wrapperClass}>
@@ -209,8 +209,8 @@ export default function ResultScoresEditor({
             key={heatIdx}
             className={
               compact
-                ? 'rounded border border-om-200/80 dark:border-charcoal-600/80 bg-white/80 dark:bg-charcoal-800/80 px-2 py-1.5'
-                : 'rounded-lg border border-om-200 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 p-3 space-y-3'
+                ? 'rounded border border-old-money-200/80 dark:border-charcoal-600/80 bg-white/80 dark:bg-charcoal-800/80 px-2 py-1.5'
+                : 'rounded-lg border border-old-money-200 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 p-3 space-y-3'
             }
           >
             <div className="flex flex-wrap items-end gap-x-3 gap-y-1">

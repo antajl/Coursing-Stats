@@ -321,14 +321,14 @@ POST /api/admin/recreate-views
 - Автоматический деплой через GitHub Actions при push в main
 
 **Cloudflare Worker:** https://api.coursing-stats.ru
-- Активен, cron: понедельник 02:00 UTC
+- Активен; edge cache на API (см. `backend/src/lib/edge-cache.ts`)
 
 **Cloudflare D1:** `pc-db` (~21 MB)
 - events: 225 (2015–2026)
-- dogs: 1619
+- dogs: 1628
 - results: 2966 (2025–2026)
-- speed_records: замер скорости из Google Sheets (198 записей)
-- coursing_records: бега 350 м из отдельного Google Sheet (95 записей)
+- speed_records: замер скорости из Google Sheets (213 записей)
+- coursing_records: бега 350 м из отдельного Google Sheet (107 записей)
 
 ---
 

@@ -53,13 +53,17 @@
   - Racing parsing
   - Статистика судей
   - Рекорды Донино
+- **[DATA-ARCHIVE.md](DATA-ARCHIVE.md)** — Файловый архив БД
+  - `npm run export-archive`
+  - Снимки в `data/archive/snapshots/`
+  - Будущая схема v1
+- **[GUIDE.md](GUIDE.md)** — Справочник `/guide`
+  - Правила РКФ, протоколы, титулы
+  - `frontend/src/pages/Guide/constants.ts`
 - **[DATABASE.md](DATABASE.md)** — Работа с БД
-  - Schema
-  - Views
-  - Migrations
-  - Data import/export
-  - Sync local ↔ remote
+  - Schema, migrations, sync local ↔ remote
   - Календарь и заливка D1
+  - D1 Free tier и edge cache
 - **[SPEED-RECORDS.md](SPEED-RECORDS.md)** — Рекорды Донино (два Google Sheet: скорость + курсинг 350 м)
   - Два источника: `speed_records` и `coursing_records`
   - UI: две колонки на одной странице; статистика — `DoninoStatsColumns`
@@ -80,12 +84,16 @@
   - File structure
   - NPM scripts
   - Local development
-  - Testing
+  - Testing (кратко; подробно — `TESTING.md`)
   - Code splitting
   - Deployment и инфраструктура
   - Frontend map — навигация для ИИ-агентов
   - PageToolbar, главная (`Home.tsx`), профили Донино, **рекорды Донино (двухколоночный hub)**
   - Отладка парсеров с фикстурами
+- **[TESTING.md](TESTING.md)** — Тестирование
+  - Unit: парсеры, vitest, smoke-api
+  - E2E: Playwright (`npm run test:e2e`)
+  - Фикстуры и добавление новых тестов
 
 ### Дизайн
 - **[DESIGN-SYSTEM.md](DESIGN-SYSTEM.md)** — Дизайн-система
@@ -105,16 +113,7 @@
 
 ### Планы
 - **[FUTURE-PLANS.md](FUTURE-PLANS.md)** — Планы на будущее
-  - Статистика судей
-  - Оптимизация сборки
-  - Парсинг результатов
-  - Общие задачи
-  - UI / визуальная согласованность
-  - Главная и профили Донино (hero, SEO, PNG-экспорт)
-  - UI / Мобильная адаптация
-  - Компоненты
-  - Новые разделы
-  - Навигация
+  - Выполненное — в `docs/_archive/FUTURE-PLANS-COMPLETED.md`
 
 ---
 
@@ -132,10 +131,10 @@
 
 **Данные:**
 - events: 225 (2015-2026)
-- dogs: 1619
+- dogs: 1628
 - results: 2966 (2025-2026)
-- speed_records: замер скорости (Google Sheets, 198 записей)
-- coursing_records: бега борзых 350 м (отдельный Google Sheet, 95 записей)
+- speed_records: замер скорости (Google Sheets, 213 записей)
+- coursing_records: бега борзых 350 м (отдельный Google Sheet, 107 записей)
 
 **Домены:**
 - Фронтенд: https://coursing-stats.ru

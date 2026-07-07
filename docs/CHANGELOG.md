@@ -4,6 +4,19 @@
 
 ## [Unreleased]
 
+### 2026-07-07 — D1, архив данных, SEO, docs
+- **Edge cache** (`backend/src/lib/edge-cache.ts`): кэш GET на Cloudflare edge — снижение reads D1 (free tier 5M/день)
+- **Local dev:** `npm run dev` → локальная D1; `sync-from-remote`, `dev:remote` для prod-копии
+- **Sitemap:** fix API 500 (`judges` из events), sitemap index, URL `/judges/`, `/top`; кэш 24 ч
+- **Favicon:** `favicon.ico` + `favicon-48.png` для Google; `npm run generate-favicon`
+- **Workflow:** `update-db.yml` 4×/день (как Donino), не только понедельник
+- **Архив данных:** `npm run export-archive` → `data/archive/snapshots/`; docs `DATA-ARCHIVE.md`
+- **Судьи UI:** таблица заменена на `JudgeCard` (карточки)
+- **Guide (`/guide`):** полировка контента, `AbbrTag`, docs `GUIDE.md`
+- **Документация:** синхронизация dev/cron/цифр БД по всем docs
+- **TESTING.md:** unit + E2E (Playwright); архив планов в `docs/_archive/`; CI `e2e.yml`
+- **E2E:** helpers, fixtures из API, home/guide/mobile/dark-theme; исправлены URL `/top`, `/event/:id`
+
 ### 2026-07-06 — Рекорды Донино: единая двухколоночная страница
 - **`/speed-records`:** одна страница — колонки «Замер» и «Бега 350 м»; переключатель **Записи | Статистика** (`?view=stats`) над `PageToolbar`
 - **Записи:** `DoninoRecordsColumns`, `DoninoListRecordRow`, infinite scroll (30), отдельная сортировка по колонкам; фильтр по полу — только «Замер»
@@ -22,7 +35,7 @@
 - **Competitions:** `ToolbarSegmentControl` вместо вертикальных вкладок
 - **Home:** золото первым на мобильном подиуме (`order-first`)
 - **judges.ts:** очистка префиксов `2 - ` в именах
-- **PageToolbar, Hero, Nav, StatCounter, DogNameLink:** мобильная полировка (см. `docs/cursor-ui-plan-v2.md`)
+- **PageToolbar, Hero, Nav, StatCounter, DogNameLink:** мобильная полировка (см. `docs/_archive/cursor-ui-plan-v2.md`)
 
 ### 2026-07-06 (продолжение) — SEO Донино, фон DogProfile
 - **DoninoDogProfile:** компонент `<SEO>` (title, description, keywords)

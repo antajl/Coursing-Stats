@@ -46,7 +46,7 @@ export default function EventListRow({ event }: EventListRowProps) {
       to={`/event/${event.id}`}
       className={`grid grid-cols-[4.5rem_minmax(0,1fr)] ${
         showJudgesColumn ? 'sm:grid-cols-[5rem_minmax(0,1fr)_9.5rem]' : 'sm:grid-cols-[5rem_minmax(0,1fr)]'
-      } items-center gap-3 sm:gap-4 rounded-[10px] border border-old-money-200 dark:border-charcoal-600 border-l-4 ${borderClass} bg-cream-50 dark:bg-charcoal-800 px-3 py-2.5 sm:px-3 sm:py-2.5 mb-1.5 transition-colors hover:bg-camel-100 dark:hover:bg-charcoal-700 hover:translate-x-0.5 ${
+      } items-center gap-3 sm:gap-4 rounded-lg border border-old-money-200 dark:border-charcoal-600 border-l-4 ${borderClass} bg-cream-50 dark:bg-charcoal-800 px-3 py-2.5 sm:px-3 sm:py-2.5 mb-1.5 transition-colors hover:bg-camel-100 dark:hover:bg-charcoal-700 hover:translate-x-0.5 ${
         cancelled ? 'opacity-70' : ''
       } ${
         important

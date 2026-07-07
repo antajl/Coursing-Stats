@@ -20,10 +20,10 @@ export default function DogSearchCard({
   speedRank,
 }: DogSearchCardProps) {
   return (
-    <div className="bg-white dark:bg-charcoal-800 rounded-2xl border-2 border-cream-300 dark:border-charcoal-600 p-6 shadow-md space-y-4">
+    <div className="bg-white dark:bg-charcoal-800 rounded-xl border border-cream-300 dark:border-charcoal-600 p-6 space-y-4">
       <div className="flex flex-wrap items-center justify-between gap-2">
         <h2 className="text-xl font-bold text-charcoal-900 dark:text-charcoal-100">
-          {name} <span className="text-charcoal-500 font-normal">({breed})</span>
+          {name} <span className="text-charcoal-500 dark:text-charcoal-400 font-normal">({breed})</span>
         </h2>
         <Link
           to={`/donino-dog/${encodeURIComponent(name)}/${encodeURIComponent(breed)}`}
@@ -41,30 +41,30 @@ export default function DogSearchCard({
           {coursing ? (
             <div className="grid grid-cols-2 gap-3 text-sm">
               <div>
-                <div className="text-charcoal-500">Лучшее</div>
+                <div className="text-charcoal-500 dark:text-charcoal-400">Лучшее</div>
                 <div className="text-2xl font-bold text-camel-700 dark:text-camel-400">
                   {coursing.bestTime.toFixed(2)} <span className="text-sm font-normal">сек</span>
                 </div>
               </div>
               <div>
-                <div className="text-charcoal-500">Среднее</div>
-                <div className="text-xl font-semibold">{coursing.avgTime.toFixed(2)} сек</div>
+                <div className="text-charcoal-500 dark:text-charcoal-400">Среднее</div>
+                <div className="text-xl font-semibold text-charcoal-800 dark:text-charcoal-100">{coursing.avgTime.toFixed(2)} сек</div>
               </div>
               <div>
-                <div className="text-charcoal-500">Зачётов</div>
-                <div className="font-semibold">{coursing.runCount}</div>
+                <div className="text-charcoal-500 dark:text-charcoal-400">Зачётов</div>
+                <div className="font-semibold text-charcoal-800 dark:text-charcoal-100">{coursing.runCount}</div>
               </div>
               {coursingRank && (
                 <div>
-                  <div className="text-charcoal-500">В породе</div>
-                  <div className="font-semibold">
+                  <div className="text-charcoal-500 dark:text-charcoal-400">В породе</div>
+                  <div className="font-semibold text-charcoal-800 dark:text-charcoal-100">
                     #{coursingRank.rank} из {coursingRank.total}
                   </div>
                 </div>
               )}
             </div>
           ) : (
-            <p className="text-charcoal-500 text-sm">Нет зачётов на 350 м</p>
+            <p className="text-charcoal-500 dark:text-charcoal-400 text-sm">Нет зачётов на 350 м</p>
           )}
         </div>
 
@@ -75,30 +75,30 @@ export default function DogSearchCard({
           {speed ? (
             <div className="grid grid-cols-2 gap-3 text-sm">
               <div>
-                <div className="text-charcoal-500">Лучшая</div>
+                <div className="text-charcoal-500 dark:text-charcoal-400">Лучшая</div>
                 <div className="text-2xl font-bold text-camel-700 dark:text-camel-400">
                   {speed.bestSpeed.toFixed(1)} <span className="text-sm font-normal">км/ч</span>
                 </div>
               </div>
               <div>
-                <div className="text-charcoal-500">Средняя</div>
-                <div className="text-xl font-semibold">{speed.avgSpeed.toFixed(1)} км/ч</div>
+                <div className="text-charcoal-500 dark:text-charcoal-400">Средняя</div>
+                <div className="text-xl font-semibold text-charcoal-800 dark:text-charcoal-100">{speed.avgSpeed.toFixed(1)} км/ч</div>
               </div>
               <div>
-                <div className="text-charcoal-500">Замеров</div>
-                <div className="font-semibold">{speed.runCount}</div>
+                <div className="text-charcoal-500 dark:text-charcoal-400">Замеров</div>
+                <div className="font-semibold text-charcoal-800 dark:text-charcoal-100">{speed.runCount}</div>
               </div>
               {speedRank && (
                 <div>
-                  <div className="text-charcoal-500">В породе</div>
-                  <div className="font-semibold">
+                  <div className="text-charcoal-500 dark:text-charcoal-400">В породе</div>
+                  <div className="font-semibold text-charcoal-800 dark:text-charcoal-100">
                     #{speedRank.rank} из {speedRank.total}
                   </div>
                 </div>
               )}
             </div>
           ) : (
-            <p className="text-charcoal-500 text-sm">Нет замеров скорости</p>
+            <p className="text-charcoal-500 dark:text-charcoal-400 text-sm">Нет замеров скорости</p>
           )}
         </div>
       </div>

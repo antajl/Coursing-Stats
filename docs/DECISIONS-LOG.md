@@ -4,7 +4,37 @@
 
 ---
 
-## 2026-07-06 — Рекорды Донино: единая страница, календарь в PageToolbar
+## 2026-07-07 — Edge cache, файловый архив, workflow, SEO
+
+### Edge cache API
+- **Решение:** Cache API на Worker с TTL по endpoint (`edge-cache.ts`)
+- **Причина:** D1 Free tier — лимит 5M rows read/день; sitemap и judges давали пики
+- Sitemap 24 ч, judges 6 ч, top/events/dogs — 1 ч и др.
+
+### Локальная разработка
+- `npm run dev` → **локальная D1** (не жрёт remote quota)
+- `npm run sync-from-remote` — копия prod перед работой
+- `npm run dev:remote` — только когда нужны live-данные
+
+### Файловый архив
+- `npm run export-archive` → `data/archive/snapshots/`
+- Независимость от procoursing.ru; будущая миграция на схему v1 (`data/archive/_schema/v1/`)
+
+### GitHub Actions
+- `update-db.yml`: **4×/день** (05:00, 11:00, 17:00, 20:30 UTC), не только понедельник
+
+### UI судей
+- Таблица заменена на **карточки** (`JudgeCard.tsx`, grid на `/judges`)
+
+### SEO / Yandex
+- Sitemap index на Pages + dynamic API sitemap (~2096 URL)
+- `favicon.ico` для краулеров
+- Регион «Нет региона» в Вебмастере — нормально для всероссийского агрегатора
+
+### Справочник `/guide`
+- Аудит правил РКФ в `Guide/constants.ts`; документация в `GUIDE.md`
+
+---
 
 ### Донино hub (`/speed-records`)
 - **Решение:** одна страница, две колонки (Замер | Бега 350 м) вместо вкладок дисциплин

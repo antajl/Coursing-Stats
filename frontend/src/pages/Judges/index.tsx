@@ -1,8 +1,10 @@
 import { useState, useEffect, useMemo } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import FilterSelect from '../../components/FilterSelect'
+import JudgeCard from '../../components/JudgeCard'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import RecordSortBar from '../SpeedRecords/RecordSortBar'
+import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
 import { useJudges } from '../../hooks/useApi'
 import EmptyState from '../../components/EmptyState'
 import SkeletonLoader from '../../components/SkeletonLoader'
@@ -18,6 +20,7 @@ const SORT_OPTIONS = [
 export default function Judges() {
   const location = useLocation()
   const isEmbedded = location.pathname === '/competitions'
+  const [searchQuery, setSearchQuery] = useState('')
   const [filterBreed, setFilterBreed] = useState('')
   const [filterDiscipline, setFilterDiscipline] = useState('')
   const [sortField, setSortField] = useState('total_evaluations_count')
@@ -54,7 +57,13 @@ export default function Judges() {
     }
   }
 
-  const sortedJudges = [...judges].sort((a, b) => {
+  const filteredJudges = judges.filter((judge) => {
+    if (!searchQuery.trim()) return true
+    const query = searchQuery.toLowerCase()
+    return judge.name?.toLowerCase().includes(query)
+  })
+
+  const sortedJudges = [...filteredJudges].sort((a, b) => {
     let aVal = a[sortField]
     let bVal = b[sortField]
 
@@ -67,20 +76,21 @@ export default function Judges() {
     return aVal < bVal ? 1 : -1
   })
 
-  const hasActiveFilters = Boolean(filterBreed || filterDiscipline)
+  const hasActiveFilters = Boolean(filterBreed || filterDiscipline || searchQuery)
 
   const activeFilterChips = useMemo(
-    () => buildJudgesActiveFilterChips(filterBreed, filterDiscipline, setFilterBreed, setFilterDiscipline),
-    [filterBreed, filterDiscipline]
+    () => buildJudgesActiveFilterChips(searchQuery, filterBreed, filterDiscipline, setSearchQuery, setFilterBreed, setFilterDiscipline),
+    [searchQuery, filterBreed, filterDiscipline]
   )
 
   const clearFilters = () => {
+    setSearchQuery('')
     setFilterBreed('')
     setFilterDiscipline('')
   }
 
   if (isInitialLoad && loading) {
-    return <SkeletonLoader variant="card" count={4} />
+    return <SkeletonLoader variant="card" count={6} />
   }
 
   return (
@@ -101,6 +111,7 @@ export default function Judges() {
           }
           filters={
             <>
+              <ToolbarSearch value={searchQuery} onChange={setSearchQuery} placeholder="Фамилия судьи…" />
               <FilterSelect
                 ariaLabel="Порода"
                 value={filterBreed}
@@ -126,141 +137,17 @@ export default function Judges() {
         />
       </div>
 
-      <div className="overflow-hidden rounded-2xl border-2 border-old-money-200 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 shadow-md">
-        {sortedJudges.length === 0 ? (
+      {sortedJudges.length === 0 ? (
+        <div className="overflow-hidden rounded-xl border border-old-money-200 bg-white dark:border-charcoal-600 dark:bg-charcoal-800">
           <EmptyState title="Судьи не найдены" description="Попробуйте изменить фильтры" />
-        ) : (
-          <>
-            <div className="space-y-3 p-3 md:hidden">
-              {sortedJudges.map((judge) => (
-                <div
-                  key={judge.id}
-                  className="rounded-xl bg-old-money-50 p-4 transition-colors hover:bg-old-money-100 dark:bg-charcoal-700 dark:hover:bg-charcoal-600"
-                >
-                  <div className="mb-3 flex items-start justify-between">
-                    <Link
-                      to={`/judges/${encodeURIComponent(judge.id)}`}
-                      className="text-base font-bold text-camel-700 transition-colors hover:text-camel-800 hover:underline dark:text-camel-400 dark:hover:text-camel-300"
-                    >
-                      {judge.name}
-                    </Link>
-                  </div>
-                  <div className="grid grid-cols-2 gap-2 text-xs">
-                    <div className="rounded-lg bg-white p-2 dark:bg-charcoal-700">
-                      <div className="text-old-money-500 dark:text-old-money-400">Оцениваний</div>
-                      <div className="font-bold text-old-money-800 dark:text-old-money-300">
-                        {judge.total_evaluations_count || 0}
-                      </div>
-                    </div>
-                    <div className="rounded-lg bg-white p-2 dark:bg-charcoal-700">
-                      <div className="text-old-money-500 dark:text-old-money-400">Соревнований</div>
-                      <div className="font-bold text-old-money-800 dark:text-old-money-300">
-                        {judge.unique_events || 0}
-                      </div>
-                    </div>
-                    <div className="rounded-lg bg-white p-2 dark:bg-charcoal-700">
-                      <div className="text-old-money-500 dark:text-old-money-400">Средняя</div>
-                      <div className="font-bold text-old-money-800 dark:text-old-money-300">
-                        {judge.avg_score ? judge.avg_score.toFixed(2) : '-'}
-                      </div>
-                    </div>
-                    <div className="rounded-lg bg-white p-2 dark:bg-charcoal-700">
-                      <div className="text-old-money-500 dark:text-old-money-400">Пород</div>
-                      <div className="font-bold text-old-money-800 dark:text-old-money-300">
-                        {judge.unique_breeds || 0}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="hidden overflow-x-auto md:block">
-              <table className="w-full min-w-[800px] table-auto divide-y divide-old-money-200">
-                <thead className="border-b border-old-money-300 bg-cream-100 dark:border-charcoal-600 dark:bg-charcoal-700">
-                  <tr>
-                    <th className="px-4 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200">
-                      Судья
-                    </th>
-                    <th className="px-4 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200">
-                      Оцениваний
-                    </th>
-                    <th className="px-4 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200">
-                      Соревнований
-                    </th>
-                    <th className="px-4 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200">
-                      Средняя оценка
-                    </th>
-                    <th className="px-4 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200">
-                      Пород
-                    </th>
-                    <th className="px-4 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200">
-                      Дисциплин
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-old-money-200 dark:divide-charcoal-600">
-                  {sortedJudges.map((judge) => (
-                    <tr
-                      key={judge.id}
-                      className="cursor-pointer transition-colors hover:bg-old-money-50 dark:hover:bg-charcoal-700"
-                    >
-                      <td className="px-4 py-4 text-sm font-medium text-old-money-800 dark:text-old-money-300">
-                        <Link
-                          to={`/judges/${encodeURIComponent(judge.id)}`}
-                          className="block h-full w-full text-camel-700 transition-colors hover:text-camel-800 hover:underline dark:text-camel-400 dark:hover:text-camel-300"
-                        >
-                          {judge.name}
-                        </Link>
-                      </td>
-                      <td className="px-4 py-4 text-center text-sm text-old-money-800 dark:text-old-money-300">
-                        <Link
-                          to={`/judges/${encodeURIComponent(judge.id)}`}
-                          className="block h-full w-full text-old-money-800 transition-colors hover:text-camel-700 dark:text-old-money-300 dark:hover:text-camel-400"
-                        >
-                          {judge.total_evaluations_count || 0}
-                        </Link>
-                      </td>
-                      <td className="px-4 py-4 text-center text-sm text-old-money-800 dark:text-old-money-300">
-                        <Link
-                          to={`/judges/${encodeURIComponent(judge.id)}`}
-                          className="block h-full w-full text-old-money-800 transition-colors hover:text-camel-700 dark:text-old-money-300 dark:hover:text-camel-400"
-                        >
-                          {judge.unique_events || 0}
-                        </Link>
-                      </td>
-                      <td className="px-4 py-4 text-center text-sm text-old-money-800 dark:text-old-money-300">
-                        <Link
-                          to={`/judges/${encodeURIComponent(judge.id)}`}
-                          className="block h-full w-full text-old-money-800 transition-colors hover:text-camel-700 dark:text-old-money-300 dark:hover:text-camel-400"
-                        >
-                          {judge.avg_score ? judge.avg_score.toFixed(2) : '-'}
-                        </Link>
-                      </td>
-                      <td className="px-4 py-4 text-center text-sm text-old-money-800 dark:text-old-money-300">
-                        <Link
-                          to={`/judges/${encodeURIComponent(judge.id)}`}
-                          className="block h-full w-full text-old-money-800 transition-colors hover:text-camel-700 dark:text-old-money-300 dark:hover:text-camel-400"
-                        >
-                          {judge.unique_breeds || 0}
-                        </Link>
-                      </td>
-                      <td className="px-4 py-4 text-center text-sm text-old-money-800 dark:text-old-money-300">
-                        <Link
-                          to={`/judges/${encodeURIComponent(judge.id)}`}
-                          className="block h-full w-full text-old-money-800 transition-colors hover:text-camel-700 dark:text-old-money-300 dark:hover:text-camel-400"
-                        >
-                          {judge.unique_disciplines || 0}
-                        </Link>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </>
-        )}
-      </div>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 gap-2">
+          {sortedJudges.map((judge) => (
+            <JudgeCard key={judge.id} judge={judge} />
+          ))}
+        </div>
+      )}
     </div>
   )
 }
