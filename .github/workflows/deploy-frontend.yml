@@ -30,21 +30,34 @@ jobs:
       - name: Build data snapshot from data/v1
         run: npm run build-data-snapshot
 
-      - name: Snapshot version for Worker cache bust
+      - name: Package snapshot for Pages (versioned gzip)
         id: snapshot
         run: |
-          VERSION=$(sha256sum data/v1/pc-db.sqlite | awk '{print substr($1,1,16)}')
-          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          HASH=$(sha256sum data/v1/pc-db.sqlite | awk '{print substr($1,1,16)}')
+          mkdir -p frontend/public/data/v1
+          gzip -c -f data/v1/pc-db.sqlite > "frontend/public/data/v1/pc-db-${HASH}.sqlite.gz"
+          gzip -c -f data/v1/pc-db.sqlite > frontend/public/data/v1/pc-db.sqlite.gz
+          cp data/v1/manifest.json frontend/public/data/v1/
+          node <<EOF
+          const fs = require('fs');
+          const hash = '${HASH}';
+          const manifest = require('./data/v1/manifest.json');
+          fs.writeFileSync('frontend/public/data/v1/snapshot-latest.json', JSON.stringify({
+            hash,
+            exported_at: manifest.exported_at,
+            counts: manifest.counts,
+            gzip_bytes: fs.statSync('frontend/public/data/v1/pc-db.sqlite.gz').size,
+          }));
+          EOF
+          echo "hash=$HASH" >> "$GITHUB_OUTPUT"
 
       - name: Install frontend dependencies
         working-directory: ./frontend
         run: npm install
 
-      - name: Copy snapshot for Pages static fallback
+      - name: Copy wasm for Pages
         run: |
-          mkdir -p frontend/public/data/v1 frontend/public/assets
-          cp data/v1/pc-db.sqlite frontend/public/data/v1/
-          cp data/v1/manifest.json frontend/public/data/v1/
+          mkdir -p frontend/public/assets
           cp backend/assets/sql-wasm.wasm frontend/public/assets/
 
       - name: Build frontend
@@ -53,7 +66,6 @@ jobs:
         env:
           VITE_API_URL: https://api.coursing-stats.ru
 
-      # Pages first — Worker загружает pc-db.sqlite с coursing-stats.ru
       - name: Deploy Frontend to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
@@ -67,4 +79,4 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: deploy --config wrangler.toml --var DATA_SNAPSHOT_URL:https://coursing-stats.ru/data/v1/pc-db.sqlite?v=${{ steps.snapshot.outputs.version }}
+          command: deploy --config wrangler.toml --var DATA_SNAPSHOT_HASH:${{ steps.snapshot.outputs.hash }}

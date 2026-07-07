@@ -74,6 +74,22 @@ export function handleCompetitions(app: Hono<{ Bindings: Env }>) {
 
   // GET /api/stats
   app.get('/api/stats', async (c) => {
+    const store = c.env.DATA_STORE;
+    if (store?.stats) {
+      const { results: breedCount } = await c.env.DB
+        .prepare('SELECT COUNT(DISTINCT breed) as count FROM dogs')
+        .all();
+      return c.json({
+        success: true,
+        data: {
+          ...store.stats,
+          breeds: breedCount[0]?.count || 0,
+          data_source: 'data/v1',
+          snapshot_hash: store.snapshotHash ?? null,
+        },
+      });
+    }
+
     const db = c.env.DB;
 
     const { results: eventCount } = await db.prepare('SELECT COUNT(*) as count FROM events').all();

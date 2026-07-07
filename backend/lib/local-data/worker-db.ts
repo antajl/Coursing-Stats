@@ -8,10 +8,12 @@ export type WorkerDataStore = {
   db: DataDb;
   stats: LocalDataStats;
   sqlJsDb: import('sql.js').Database;
+  snapshotHash?: string;
 };
 
 export type WorkerDataEnv = {
   DATA_SNAPSHOT_URL?: string;
+  DATA_SNAPSHOT_HASH?: string;
 };
 
 export const DEFAULT_SNAPSHOT_URL = 'https://coursing-stats.ru/data/v1/pc-db.sqlite';
@@ -45,30 +47,41 @@ async function initSqlJs(): Promise<import('sql.js').SqlJsStatic> {
   return sqlJsStatic;
 }
 
+function buildSnapshotUrl(hash: string, gzip = true): string {
+  const base = `https://coursing-stats.ru/data/v1/pc-db-${hash}.sqlite`;
+  return gzip ? `${base}.gz` : base;
+}
+
 async function resolveSnapshotUrl(env: WorkerDataEnv): Promise<string> {
+  if (env.DATA_SNAPSHOT_HASH) return buildSnapshotUrl(env.DATA_SNAPSHOT_HASH);
   if (env.DATA_SNAPSHOT_URL) return env.DATA_SNAPSHOT_URL;
 
   try {
-    const manifestRes = await fetch('https://coursing-stats.ru/data/v1/manifest.json');
-    if (manifestRes.ok) {
-      const manifest = (await manifestRes.json()) as { exported_at?: string };
-      if (manifest.exported_at) {
-        return `${DEFAULT_SNAPSHOT_URL}?v=${encodeURIComponent(manifest.exported_at)}`;
-      }
+    const res = await fetch('https://coursing-stats.ru/data/v1/snapshot-latest.json');
+    if (res.ok) {
+      const latest = (await res.json()) as { hash?: string };
+      if (latest.hash) return buildSnapshotUrl(latest.hash);
     }
   } catch {
-    /* manifest optional */
+    /* optional */
   }
 
-  return DEFAULT_SNAPSHOT_URL;
+  return `${DEFAULT_SNAPSHOT_URL}.gz`;
 }
 
 async function loadSnapshotBytes(env: WorkerDataEnv): Promise<ArrayBuffer> {
   const url = await resolveSnapshotUrl(env);
-  const res = await fetch(url, { cf: { cacheTtl: 300 } } as RequestInit);
+  const res = await fetch(url, { cf: { cacheTtl: 3600 } } as RequestInit);
   if (!res.ok) {
     throw new Error(`Data snapshot not found at ${url} (${res.status})`);
   }
+
+  if (url.endsWith('.gz')) {
+    if (!res.body) throw new Error(`Empty snapshot body at ${url}`);
+    const stream = res.body.pipeThrough(new DecompressionStream('gzip'));
+    return new Response(stream).arrayBuffer();
+  }
+
   return res.arrayBuffer();
 }
 
@@ -87,7 +100,9 @@ function readStats(db: import('sql.js').Database): LocalDataStats {
 }
 
 export async function getWorkerDataStore(env: WorkerDataEnv = {}): Promise<WorkerDataStore> {
-  const snapshotUrl = env.DATA_SNAPSHOT_URL ?? (await resolveSnapshotUrl(env));
+  const snapshotUrl = env.DATA_SNAPSHOT_HASH
+    ? buildSnapshotUrl(env.DATA_SNAPSHOT_HASH)
+    : env.DATA_SNAPSHOT_URL ?? (await resolveSnapshotUrl(env));
 
   if (cached && cachedSnapshotUrl === snapshotUrl) return cached;
   if (cachedSnapshotUrl !== snapshotUrl) resetWorkerDataStore();
@@ -100,7 +115,12 @@ export async function getWorkerDataStore(env: WorkerDataEnv = {}): Promise<Worke
     const sqlDb = new SQL.Database(new Uint8Array(bytes));
     const stats = readStats(sqlDb);
     cachedSnapshotUrl = snapshotUrl;
-    cached = { db: createSqlJsShim(sqlDb), stats, sqlJsDb: sqlDb };
+    cached = {
+      db: createSqlJsShim(sqlDb),
+      stats,
+      sqlJsDb: sqlDb,
+      snapshotHash: env.DATA_SNAPSHOT_HASH,
+    };
     return cached;
   })();
 
