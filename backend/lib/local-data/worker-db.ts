@@ -50,6 +50,16 @@ async function initSqlJs(): Promise<import('sql.js').SqlJsStatic> {
 
 async function resolveSnapshotUrl(env: WorkerDataEnv): Promise<string> {
   if (env.DATA_SNAPSHOT_URL) return env.DATA_SNAPSHOT_URL;
+
+  try {
+    const meta = await loadSnapshotMeta();
+    if (meta?.hash) {
+      return `${STATIC_DATA_BASE}/pc-db-${meta.hash}.sqlite.gz`;
+    }
+  } catch {
+    /* fallback */
+  }
+
   return DEFAULT_SNAPSHOT_GZ_URL;
 }
 
