@@ -1,123 +1,92 @@
 # Локальная файловая база (`data/v1/`)
 
-Каноническое хранилище для **runtime** сайта (dev и prod). Cloudflare D1 остаётся только для **скриптов импорта** (парсеры, cron, reparse).
+Каноническое хранилище для **runtime** сайта (dev и prod). Cloudflare D1 — только **импорт** (парсеры, cron).
 
-## Архитектура
+## Архитектура (упрощённая, 2026-07)
 
 ```
-                    ┌─────────────────────────────────────┐
-  procoursing.ru    │  Скрипты (D1): scrape, reparse,     │
-  Google Sheets     │  export-local-data, ci-update-db    │
-        │           └──────────────┬──────────────────────┘
-        ▼                          ▼
-   D1 (pc-db)              data/v1/*.json
-   импорт/legacy                   │
-        │                          │ npm run build-data-snapshot
-        │                          ▼
-        │                   pc-db.sqlite (~12 МБ)
-        │                          │
-   dev:d1 (legacy)                 ├── npm run dev → память (Node)
-        │                          │
-        │                          └── Pages static → Worker fetch (prod)
+  data/v1/*.json  (git — единственный источник правды)
+        │
+        │  npm run build-all-data  (CI при push в main)
         ▼
-   api.coursing-stats.ru
+  frontend/public/data/v1/
+        ├── manifest.json, calendar/, competitions/, dogs/, donino/
+        ├── indexes/          (топы, судьи — precomputed)
+        ├── pc-db.sqlite.gz   (derived: собран из JSON для API-запросов)
+        └── snapshot-latest.json
+        │
+        ▼
+  Cloudflare Pages (CDN)  ──fetch──►  Worker (api.coursing-stats.ru)
 ```
 
-| Среда | Источник | Команда |
-|-------|----------|---------|
-| **Dev** | `data/v1/` на диске | `npm run dev` |
-| **Prod API** | `https://coursing-stats.ru/data/v1/pc-db-{hash}.sqlite.gz` (sql.js в Worker) | deploy (CI) |
-| **Импорт** | D1 remote/local | `export-local-data`, парсеры |
+| Среда | Как читает данные |
+|-------|-------------------|
+| **Dev** | `npm run dev` → JSON с диска → better-sqlite3 в памяти |
+| **Prod API** | Worker: gzip-снимок с Pages + Donino/топы/судьи из static JSON |
+| **Импорт** | D1 → `export-local-data` → `data/v1/` |
 
-**R2 не используется** — снимок отдаётся бесплатно через Cloudflare Pages.
+**R2 не используется.**
+
+### Почему на проде всё ещё есть sqlite.gz?
+
+Routes написаны на SQL (профиль собаки, фильтры). Полный рефакторинг на чистый JSON — в плане.
+Сейчас CI **собирает** sqlite из JSON (как локальный `build-data-snapshot`) и кладёт на Pages.
+Worker при cold start скачивает **один** `pc-db.sqlite.gz` — не нужен `DATA_SNAPSHOT_HASH` в wrangler.
+
+Donino (замеры/350м), топы по году, список судей — читаются напрямую из JSON на CDN (быстрее).
+
+## Ваш workflow
+
+```
+1. npm run dev                    # правки локально
+2. git commit && git push main    # CI: build-all-data → Pages + Worker
+3. сайт обновлён
+```
+
+Первый запрос после деплоя может быть чуть медленнее (cold start Worker). Переключения на сайте — из кэша и indexes.
 
 ## Структура `data/v1/`
 
 ```
 data/v1/
-  manifest.json           # счётчики, дата сборки
+  manifest.json
   breeds.json
-  calendar/{year}.json    # has_results, results_file → competitions/
+  calendar/{year}.json
   competitions/{year}/{month}/{id}-{slug}.json
   dogs/by-id/{id}.json
-  dogs/by-key/{dog_key}.json
-  donino/speed_records.json
+  donino/speed_records.json      # отдельно от coursing_records.json
   donino/coursing_records.json
-  donino/dogs/{dog_key}/speed.json | coursing.json
-  indexes/calendar-index.json, dogs-index.json, events-by-id.json
-  pc-db.sqlite              # генерируется, в .gitignore
+  indexes/top-placement-{year}.json
+  indexes/judges-summary.json
+  pc-db.sqlite                   # генерируется, в .gitignore
 ```
-
-`dog_key` = `slug(name_lat)--slug(breed)`.
-
-### Поиск для ИИ
-
-| Задача | Файл |
-|--------|------|
-| Оглавление | `manifest.json` |
-| Турнир по id | `indexes/events-by-id.json` → `competitions/...` |
-| Собака | `indexes/dogs-index.json` → `dogs/by-key/` |
-| Календарь года | `calendar/2026.json` |
-| Донино скорость / 350 м | `donino/speed_records.json` / `coursing_records.json` — **не смешивать** |
 
 ## Команды
 
 ```bash
-# Выгрузка D1 → JSON (+ snapshot)
-npm run sync-from-remote              # опционально
+npm run dev                       # локально, без D1
+npm run build-all-data            # как CI: snapshot + indexes + package
 npm run export-local-data -- --local
-npm run export-local-data -- --fetch-donino   # + Google Sheets → D1 → v1
-
-# Снимок для Worker
-npm run build-data-snapshot
-
-# Dev
-npm run dev                           # файлы, без D1
-npm run dev:d1                        # legacy: wrangler + D1
-
-# Проверка
 npm run smoke-api
 ```
 
 ## Обновление прода
 
 1. Правка JSON в `data/v1/` (или `export-local-data`)
-2. `npm run build-data-snapshot`
-3. `git commit` + `push` в `main`
-4. CI (`deploy-frontend.yml`): `build-data-snapshot` → `package-pages-snapshot` → `frontend/public/data/v1/` → Pages + Worker
-
-CI кладёт на Pages:
-- `pc-db.sqlite.gz` и `pc-db-{hash}.sqlite.gz` (версионированный URL для Worker)
-- `snapshot-latest.json` — `{ hash, exported_at, counts, gzip_bytes }`
-- `manifest.json`, `donino/speed_records.json`
-
-Worker читает снимок по `DATA_SNAPSHOT_HASH` (из CI) или `snapshot-latest.json`.
-
-### Cron Донино (speed)
-
-`update-speed-records.yml` (4×/день): Google Sheets → D1 → `data/speed-records.json` + `data/v1/donino/speed_records.json`.
-Коммит с `[skip ci]` — **деплой не запускается**; для прода нужен отдельный push в `main` (или убрать `[skip ci]` и настроить path filters).
-
-## Админка
-
-| Среда | Сохранение |
-|-------|------------|
-| Локально (`npm run dev`) | `data/v1/pc-db.sqlite` после POST/PUT/DELETE |
-| Прод | только чтение; правки → локально → git push |
+2. `git commit` + `push` в `main`
+3. CI (`deploy-frontend.yml`) — автоматически
 
 ## Код
 
 | Путь | Назначение |
 |------|------------|
-| `backend/lib/local-data/` | загрузка JSON/SQLite, D1-shim, sql.js |
+| `backend/lib/local-data/` | загрузка JSON, shims |
 | `backend/src/local-dev-server.ts` | dev API :8787 |
-| `backend/src/worker.ts` | prod: sql.js + fetch снимка с Pages |
-| `backend/scripts/export/export-local-data-v1.ts` | D1 → data/v1/ |
-| `backend/scripts/build-data-snapshot.ts` | JSON → pc-db.sqlite |
-| `backend/scripts/ci/package-pages-snapshot.ts` | gzip + snapshot-latest.json для Pages (CI) |
+| `backend/src/worker.ts` | prod: fetch с Pages |
+| `backend/scripts/build-all-data.ts` | полный CI pipeline |
+| `backend/scripts/ci/package-pages-snapshot.ts` | JSON + gzip на Pages |
 
 ## Связанные документы
 
-- `docs/LOCAL-DATA-PLAN.md` — чеклист миграции (исторический)
-- `docs/DATA-ARCHIVE.md` — снимки D1 в `data/archive/snapshots/` (бэкап)
+- `docs/MIGRATION-PLAN-TEMP.md` — план фаз (временный)
 - `docs/DATABASE.md` — D1 для импорта

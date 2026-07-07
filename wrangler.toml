@@ -2,8 +2,9 @@ name = "coursingstatsworker"
 main = "backend/src/worker.ts"
 compatibility_date = "2024-01-01"
 
-# Prod API: sql.js + снимок SQLite на Pages (data/v1/pc-db.sqlite)
-# Сборка: npm run build-data-snapshot → CI копирует в frontend/public/
+# Prod API: sql.js + pc-db.sqlite.gz на Pages (собран из data/v1 JSON в CI)
+# Worker fetch: https://coursing-stats.ru/data/v1/pc-db.sqlite.gz
+# Donino/топы/судьи: static JSON с Pages (см. docs/LOCAL-DATA.md)
 
 [[rules]]
 type = "CompiledWasm"

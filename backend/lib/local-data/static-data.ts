@@ -1,33 +1,13 @@
-import fs from 'node:fs';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
-
-const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../..');
-const LOCAL_V1 = path.join(ROOT, 'data/v1');
-const STATIC_BASE = 'https://coursing-stats.ru/data/v1';
-
-function localPath(rel: string): string {
-  return path.join(LOCAL_V1, rel);
-}
-
-function isNodeRuntime(): boolean {
-  return typeof process !== 'undefined' && !!process.versions?.node;
-}
+/** Fetch-only static JSON loader (Worker + dev API fallback via SQL). */
+export const STATIC_DATA_BASE = 'https://coursing-stats.ru/data/v1';
 
 /**
- * Load a precomputed JSON file from data/v1 (dev) or Pages CDN (prod Worker).
+ * Load a JSON file from Pages CDN. Returns null if missing or offline.
+ * Dev API routes fall back to SQL when this returns null.
  */
 export async function loadStaticDataJson<T>(relativePath: string): Promise<T | null> {
-  if (isNodeRuntime()) {
-    const file = localPath(relativePath);
-    if (fs.existsSync(file)) {
-      return JSON.parse(fs.readFileSync(file, 'utf-8')) as T;
-    }
-    return null;
-  }
-
   try {
-    const res = await fetch(`${STATIC_BASE}/${relativePath}`, {
+    const res = await fetch(`${STATIC_DATA_BASE}/${relativePath}`, {
       cf: { cacheTtl: 3600 },
     } as RequestInit);
     if (!res.ok) return null;

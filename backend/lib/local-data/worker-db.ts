@@ -2,24 +2,8 @@ import wasmModule from '../../assets/sql-wasm.wasm';
 import type { LocalDataStats } from './stats';
 import { applyWorkerPolyfills } from './worker-polyfills';
 import { createSqlJsShim } from './sqljs-shim';
-import { pickRow, toSqlValue } from './sql-value';
+import { STATIC_DATA_BASE } from './static-data';
 import type { DataDb } from './types';
-
-const SPEED_COLUMNS = [
-  'id',
-  'dog_id',
-  'breed',
-  'sex',
-  'name',
-  'speed_km_h',
-  'date',
-  'screenshot_url',
-  'status',
-  'history',
-  'updated_at',
-] as const;
-
-const DONINO_SPEED_JSON_URL = 'https://coursing-stats.ru/data/v1/donino/speed_records.json';
 
 export type WorkerDataStore = {
   db: DataDb;
@@ -30,10 +14,10 @@ export type WorkerDataStore = {
 
 export type WorkerDataEnv = {
   DATA_SNAPSHOT_URL?: string;
-  DATA_SNAPSHOT_HASH?: string;
 };
 
-export const DEFAULT_SNAPSHOT_URL = 'https://coursing-stats.ru/data/v1/pc-db.sqlite';
+/** Stable URL — CI always publishes pc-db.sqlite.gz + snapshot-latest.json */
+export const DEFAULT_SNAPSHOT_GZ_URL = `${STATIC_DATA_BASE}/pc-db.sqlite.gz`;
 
 let cached: WorkerDataStore | null = null;
 let loading: Promise<WorkerDataStore> | null = null;
@@ -64,30 +48,24 @@ async function initSqlJs(): Promise<import('sql.js').SqlJsStatic> {
   return sqlJsStatic;
 }
 
-function buildSnapshotUrl(hash: string, gzip = true): string {
-  const base = `https://coursing-stats.ru/data/v1/pc-db-${hash}.sqlite`;
-  return gzip ? `${base}.gz` : base;
-}
-
 async function resolveSnapshotUrl(env: WorkerDataEnv): Promise<string> {
-  if (env.DATA_SNAPSHOT_HASH) return buildSnapshotUrl(env.DATA_SNAPSHOT_HASH);
   if (env.DATA_SNAPSHOT_URL) return env.DATA_SNAPSHOT_URL;
-
-  try {
-    const res = await fetch('https://coursing-stats.ru/data/v1/snapshot-latest.json');
-    if (res.ok) {
-      const latest = (await res.json()) as { hash?: string };
-      if (latest.hash) return buildSnapshotUrl(latest.hash);
-    }
-  } catch {
-    /* optional */
-  }
-
-  return `${DEFAULT_SNAPSHOT_URL}.gz`;
+  return DEFAULT_SNAPSHOT_GZ_URL;
 }
 
-async function loadSnapshotBytes(env: WorkerDataEnv): Promise<ArrayBuffer> {
-  const url = await resolveSnapshotUrl(env);
+async function loadSnapshotMeta(): Promise<{ hash?: string; counts?: LocalDataStats } | null> {
+  try {
+    const res = await fetch(`${STATIC_DATA_BASE}/snapshot-latest.json`, {
+      cf: { cacheTtl: 300 },
+    } as RequestInit);
+    if (!res.ok) return null;
+    return (await res.json()) as { hash?: string; counts?: LocalDataStats };
+  } catch {
+    return null;
+  }
+}
+
+async function loadSnapshotBytes(url: string): Promise<ArrayBuffer> {
   const res = await fetch(url, { cf: { cacheTtl: 3600 } } as RequestInit);
   if (!res.ok) {
     throw new Error(`Data snapshot not found at ${url} (${res.status})`);
@@ -116,38 +94,8 @@ function readStats(db: import('sql.js').Database): LocalDataStats {
   };
 }
 
-function insertSpeedRow(db: import('sql.js').Database, source: Record<string, unknown>) {
-  const row = pickRow(source, [...SPEED_COLUMNS]);
-  const keys = Object.keys(row);
-  if (!keys.length) return;
-  const placeholders = keys.map(() => '?').join(', ');
-  const sql = `INSERT OR REPLACE INTO speed_records (${keys.join(', ')}) VALUES (${placeholders})`;
-  const stmt = db.prepare(sql);
-  const values = keys.map((key) => toSqlValue(row[key]));
-  if (values.length) stmt.bind(values);
-  stmt.step();
-  stmt.free();
-}
-
-/** Prod sqlite may lack speed_records (stale cache); JSON on Pages is source of truth. */
-async function hydrateDoninoSpeedIfEmpty(db: import('sql.js').Database): Promise<void> {
-  if (readStats(db).speed_records > 0) return;
-
-  const res = await fetch(DONINO_SPEED_JSON_URL);
-  if (!res.ok) {
-    throw new Error(`Donino speed JSON not found (${res.status})`);
-  }
-
-  const data = (await res.json()) as { records?: Record<string, unknown>[] };
-  for (const record of data.records ?? []) {
-    insertSpeedRow(db, record);
-  }
-}
-
 export async function getWorkerDataStore(env: WorkerDataEnv = {}): Promise<WorkerDataStore> {
-  const snapshotUrl = env.DATA_SNAPSHOT_HASH
-    ? buildSnapshotUrl(env.DATA_SNAPSHOT_HASH)
-    : env.DATA_SNAPSHOT_URL ?? (await resolveSnapshotUrl(env));
+  const snapshotUrl = await resolveSnapshotUrl(env);
 
   if (cached && cachedSnapshotUrl === snapshotUrl) return cached;
   if (cachedSnapshotUrl !== snapshotUrl) resetWorkerDataStore();
@@ -155,17 +103,17 @@ export async function getWorkerDataStore(env: WorkerDataEnv = {}): Promise<Worke
   if (loading) return loading;
 
   loading = (async () => {
+    const meta = await loadSnapshotMeta();
     const SQL = await initSqlJs();
-    const bytes = await loadSnapshotBytes({ ...env, DATA_SNAPSHOT_URL: snapshotUrl });
+    const bytes = await loadSnapshotBytes(snapshotUrl);
     const sqlDb = new SQL.Database(new Uint8Array(bytes));
-    await hydrateDoninoSpeedIfEmpty(sqlDb);
     const stats = readStats(sqlDb);
     cachedSnapshotUrl = snapshotUrl;
     cached = {
       db: createSqlJsShim(sqlDb),
       stats,
       sqlJsDb: sqlDb,
-      snapshotHash: env.DATA_SNAPSHOT_HASH,
+      snapshotHash: meta?.hash,
     };
     return cached;
   })();

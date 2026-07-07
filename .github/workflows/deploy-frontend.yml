@@ -28,17 +28,11 @@ jobs:
         run: npm install
 
       - name: Build and package data for Pages
-        id: snapshot
         run: npm run build-all-data
 
       - name: Install frontend dependencies
         working-directory: ./frontend
         run: npm install
-
-      - name: Copy wasm for Pages
-        run: |
-          mkdir -p frontend/public/assets
-          cp backend/assets/sql-wasm.wasm frontend/public/assets/
 
       - name: Build frontend
         working-directory: ./frontend
@@ -59,4 +53,4 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: deploy --config wrangler.toml --var DATA_SNAPSHOT_HASH:${{ steps.snapshot.outputs.hash }}
+          command: deploy --config wrangler.toml

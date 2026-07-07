@@ -7,7 +7,6 @@ export type DataStoreEnv = {
   DB: DataDb;
   ADMIN_API_TOKEN: string;
   DATA_SNAPSHOT_URL?: string;
-  DATA_SNAPSHOT_HASH?: string;
   DATA_STORE?: {
     nodeDb?: unknown;
     sqlJsDb?: import('sql.js').Database;

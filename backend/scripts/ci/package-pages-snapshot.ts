@@ -31,6 +31,22 @@ function copyIfExists(src: string, dest: string): void {
   fs.copyFileSync(src, dest);
 }
 
+function copyJsonTree(srcDir: string, destDir: string, skipNames = new Set(['pc-db.sqlite', 'pc-db.sqlite.gz'])) {
+  if (!fs.existsSync(srcDir)) return;
+  fs.mkdirSync(destDir, { recursive: true });
+  for (const entry of fs.readdirSync(srcDir, { withFileTypes: true })) {
+    if (skipNames.has(entry.name)) continue;
+    const src = path.join(srcDir, entry.name);
+    const dest = path.join(destDir, entry.name);
+    if (entry.isDirectory()) {
+      copyJsonTree(src, dest, skipNames);
+    } else if (entry.name.endsWith('.json')) {
+      fs.mkdirSync(path.dirname(dest), { recursive: true });
+      fs.copyFileSync(src, dest);
+    }
+  }
+}
+
 function main(): void {
   if (!fs.existsSync(SNAPSHOT)) {
     console.error('Snapshot not found. Run: npm run build-data-snapshot');
@@ -83,6 +99,9 @@ function main(): void {
   };
 
   fs.writeFileSync(path.join(OUT_DIR, 'snapshot-latest.json'), JSON.stringify(snapshotLatest));
+
+  console.log('Copying data/v1 JSON tree to Pages...');
+  copyJsonTree(path.join(ROOT, 'data/v1'), OUT_DIR);
 
   console.log('Packaged Pages snapshot:', {
     hash,
