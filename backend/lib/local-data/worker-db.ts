@@ -1,5 +1,5 @@
 import type { LocalDataStats } from './stats';
-import { applyWorkerPolyfills } from './worker-polyfills';
+import './worker-polyfills';
 import { createSqlJsShim } from './sqljs-shim';
 import type { DataDb } from './types';
 
@@ -19,7 +19,6 @@ export const DEFAULT_WASM_URL = 'https://coursing-stats.ru/assets/sql-wasm.wasm'
 
 let cached: WorkerDataStore | null = null;
 let loading: Promise<WorkerDataStore> | null = null;
-let polyfillsApplied = false;
 
 async function loadWasmBinary(env: WorkerDataEnv): Promise<ArrayBuffer> {
   const url = env.SQL_WASM_URL || DEFAULT_WASM_URL;
@@ -31,11 +30,6 @@ async function loadWasmBinary(env: WorkerDataEnv): Promise<ArrayBuffer> {
 }
 
 async function initSqlJs(env: WorkerDataEnv) {
-  if (!polyfillsApplied) {
-    applyWorkerPolyfills();
-    polyfillsApplied = true;
-  }
-
   const initSqlJsModule = await import('sql.js/dist/sql-wasm.js');
   const initSqlJs = initSqlJsModule.default as (config?: {
     wasmBinary?: ArrayBuffer;

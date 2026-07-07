@@ -1,12 +1,22 @@
 /**
- * sql.js (emscripten) assumes `self.location.href` exists in WorkerGlobalScope.
+ * sql.js (emscripten) reads `self.location.href` in WorkerGlobalScope.
  * Cloudflare Workers have no `location` — init crashes with "reading 'href'".
  */
 export function applyWorkerPolyfills(baseUrl = 'https://coursing-stats.ru/'): void {
-  if (typeof WorkerGlobalScope === 'undefined') return;
+  const href = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
+  const location = { href };
 
   const g = globalThis as typeof globalThis & { location?: { href: string } };
   if (!g.location?.href) {
-    g.location = { href: baseUrl };
+    g.location = location;
+  }
+
+  if (typeof self !== 'undefined') {
+    const s = self as typeof self & { location?: { href: string } };
+    if (!s.location?.href) {
+      s.location = location;
+    }
   }
 }
+
+applyWorkerPolyfills();
