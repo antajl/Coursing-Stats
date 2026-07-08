@@ -25,4 +25,7 @@ if (fs.existsSync(derivedIndexes)) {
 
 run('npm run package-pages-snapshot');
 
+// Also copy data for local preview (frontend/public/data/v1/)
+run('node frontend/scripts/copy-data.js');
+
 console.log('\n✓ build-all-data complete');
