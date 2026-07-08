@@ -50,6 +50,17 @@ export async function getTestData(request: APIRequestContext): Promise<TestData>
     request.get(`${API_BASE}/api/judges`),
   ])
 
+  // Fallback: use static data if API fails
+  if (!dogsRes.ok()) {
+    const staticRes = await request.get('http://localhost:5173/data/v1/indexes/dog-profiles/1.json')
+    if (staticRes.ok()) {
+      const staticData = await staticRes.json()
+      if (staticData.dog?.id) {
+        data.dogId = staticData.dog.id
+      }
+    }
+  }
+
   if (!competitionsRes.ok() && !dogsRes.ok()) {
     cached = empty
     return empty
