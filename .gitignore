@@ -11,7 +11,6 @@ data/exports/
 data/backups/
 data/backup/*
 !data/backup/README.md
-data/v1/pc-db.sqlite
 data/v1/pc-db.sqlite.gz
 data/temp/
 data/updates/
@@ -22,9 +21,6 @@ data/competitions/
 data/test-modular-parsers-results.json
 backend/data/
 data/speed-records.json
-
-# Planning / tooling (not shipped)
-CLAUDE PLAN/
 
 # Environment files
 .env
@@ -50,3 +46,8 @@ yarn-error.log*
 # Build output
 dist/
 build/
+frontend/dist/
+
+# Test artifacts
+playwright-report/
+test-results/
