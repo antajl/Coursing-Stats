@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useMemo, useCallback } from 'react'
 import { useSearchParams } from 'react-router-dom'
-import { useSpeedRecords, useCoursingRecords } from '../../hooks/useApi'
+import { useSpeedRecords, useCoursingRecords } from '../../hooks/useStaticData'
 import { formatRecordDate, getRecordYear, parseRecordDate, parseRecordHistory } from '../../lib/recordDates'
 import { buildSexByDogMap } from './stats/doninoStatsUtils'
 import type { GroupBy } from './stats/constants'
@@ -101,13 +101,13 @@ export function useSpeedRecordsPage() {
   )
 
   const speedRecordsData = speedRecordsQuery.data?.success
-    ? Array.isArray(speedRecordsQuery.data.data)
-      ? speedRecordsQuery.data.data
+    ? Array.isArray(speedRecordsQuery.data.data?.records)
+      ? speedRecordsQuery.data.data.records
       : []
     : []
   const coursingRecordsData = coursingRecordsQuery.data?.success
-    ? Array.isArray(coursingRecordsQuery.data.data)
-      ? coursingRecordsQuery.data.data
+    ? Array.isArray(coursingRecordsQuery.data.data?.records)
+      ? coursingRecordsQuery.data.data.records
       : []
     : []
 

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { useJudgeDetails } from '../../hooks/useApi'
+import { useJudgeDetails } from '../../hooks/useStaticData'
 import React from 'react'
 import { SEO } from '../../components/SEO'
 import { handleSortToggle, sortArray, type SortState } from '../../lib/judgeSortUtils'

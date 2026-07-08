@@ -5,7 +5,7 @@ import JudgeCard from '../../components/JudgeCard'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import RecordSortBar from '../SpeedRecords/RecordSortBar'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
-import { useJudges } from '../../hooks/useApi'
+import { useJudges } from '../../hooks/useStaticData'
 import EmptyState from '../../components/EmptyState'
 import SkeletonLoader from '../../components/SkeletonLoader'
 import { buildJudgesActiveFilterChips } from '../SpeedRecords/toolbarFilters'
@@ -36,11 +36,16 @@ export default function Judges() {
         ? judgesData.data
         : []
     : []
-  const availableBreeds = judgesData?.success
-    ? Array.isArray(judgesData.data?.available_breeds)
-      ? judgesData.data.available_breeds
-      : []
-    : []
+
+  const availableBreeds = useMemo(() => {
+    const breeds = new Set<string>()
+    judges.forEach((judge) => {
+      if (judge.unique_breeds && Array.isArray(judge.unique_breeds)) {
+        judge.unique_breeds.forEach((breed: string) => breeds.add(breed))
+      }
+    })
+    return Array.from(breeds).sort()
+  }, [judges])
 
   useEffect(() => {
     if (!loading && judges.length > 0) {
