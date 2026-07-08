@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 const SOURCE_DIR = path.resolve(ROOT, '../data/v1');
-const TARGET_DIR = path.resolve(ROOT, 'public/data');
+const TARGET_DIR = path.resolve(ROOT, 'public/data/v1');
 
 function copyDirectory(src, dest) {
   if (!fs.existsSync(dest)) {
