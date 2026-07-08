@@ -21,7 +21,7 @@
         └─ dev:d1 (legacy, опционально)      ▼
                                     coursing-stats.ru
                                     React SPA → fetch /data/v1/*.json
-                                    (frontend/src/lib/staticData.ts)
+                                    (frontend/src/hooks/useStaticData.ts)
                                     (без Worker)
 ```
 
@@ -72,13 +72,18 @@ Cloudflare D1 (events, dogs, results)  ← скрипты импорта
 
 ### 3. Публичный runtime (статика на Pages)
 
-**Клиент:** `frontend/src/lib/staticData.ts` — все публичные страницы читают JSON с `/data/v1/` (CDN).
+**Клиент:** `frontend/src/hooks/useStaticData.ts` — все публичные страницы читают JSON с `/data/v1/` (CDN).
 
 **Precomputed indexes** (`backend/scripts/build-derived-indexes.ts` → `data/v1/indexes/`):
 - топы (`top-placement-*`, `top-score-*`, `top-speed-*`)
 - судьи (`judges-summary.json`, `judge-details/`, `judges-raw-rows.json`)
 - профили собак (`dog-profiles/{id}.json`)
 - `years.json`, `events-by-id.json`, `sitemap.xml`
+
+**Build process:**
+- `frontend/scripts/copy-data.js` — копирует `data/v1/` в `frontend/public/data/v1/` перед билдом
+- `frontend/package.json` — `"build": "node scripts/copy-data.js && vite build"`
+- Cloudflare Pages включает `public/data/v1/` в деплой
 
 Клиентская фильтрация/сортировка: `frontend/src/lib/breedMapping.ts`, `judgeStats.ts`.
 

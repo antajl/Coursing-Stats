@@ -31,7 +31,7 @@ procoursing.ru / Google Sheets
 | **Админка (dev)** | `/api` → proxy → `local-dev-server.ts` :8787 |
 | **Импорт** | D1 → `npm run export-local-data` → `data/v1/` |
 
-Код публичного слоя: `frontend/src/lib/staticData.ts`.
+Код публичного слоя: `frontend/src/hooks/useStaticData.ts`.
 
 ---
 
@@ -146,13 +146,14 @@ git commit && push
 
 | Путь | Роль |
 |------|------|
-| `frontend/src/lib/staticData.ts` | Публичный сайт: fetch `/data/v1/` |
+| `frontend/src/hooks/useStaticData.ts` | Публичный сайт: fetch `/data/v1/` |
 | `frontend/vite.config.ts` | Dev: plugin `serveDataV1` |
+| `frontend/scripts/copy-data.js` | Копирует `data/v1/` в `public/data/v1/` перед билдом |
+| `frontend/package.json` | Build: `"build": "node scripts/copy-data.js && vite build"` |
 | `backend/lib/local-data/` | Загрузка JSON для админки |
 | `backend/src/local-dev-server.ts` | Dev API :8787 |
 | `backend/scripts/build-all-data.ts` | CI pipeline |
 | `backend/scripts/build-derived-indexes.ts` | `indexes/*`, sitemap |
-| `backend/scripts/ci/package-pages-snapshot.ts` | Копия в `frontend/public/data/v1/` |
 | `backend/scripts/sync/sync-sqlite-to-v1.ts` | Админка → JSON на диск |
 
 Worker (`backend/src/worker.ts`) **не деплоится в CI** — legacy для `npm run dev:d1`.
