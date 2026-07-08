@@ -25,6 +25,7 @@ interface SpeedRecord {
   screenshot_url?: string
   status?: string
   history?: unknown[]
+  track_type?: string | null
 }
 
 interface CoursingRecord {
@@ -102,6 +103,7 @@ export default function DoninoRecordsColumns({
                   history={record.history}
                   speedKmh={record.speed_km_h}
                   screenshotUrl={record.screenshot_url}
+                  trackType={record.track_type}
                 />
               ))
             ) : (

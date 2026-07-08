@@ -123,11 +123,12 @@ async function main() {
 
 function generateSQL(records: SpeedRecord[]): string {
   const lines = ['-- speed_records', '-- Delete old records and insert new with dog_id', 'DELETE FROM speed_records;'];
-  
+
   records.forEach(record => {
     const historyJSON = record.history ? JSON.stringify(record.history).replace(/'/g, "''") : 'NULL';
     const speed = typeof record.speed_km_h === 'number' ? record.speed_km_h : parseFloat(record.speed_km_h as any) || 0;
-    lines.push(`INSERT OR REPLACE INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history)`);
+    const trackType = record.track_type ? `'${record.track_type}'` : 'NULL';
+    lines.push(`INSERT OR REPLACE INTO speed_records (breed, sex, name, speed_km_h, date, screenshot_url, status, history, track_type)`);
     lines.push(`VALUES (`);
     lines.push(`  '${record.breed}',`);
     lines.push(`  '${record.sex}',`);
@@ -136,10 +137,11 @@ function generateSQL(records: SpeedRecord[]): string {
     lines.push(`  '${record.date}',`);
     lines.push(`  ${record.screenshot_url ? `'${record.screenshot_url}'` : 'NULL'},`);
     lines.push(`  '${record.status}',`);
-    lines.push(`  '${historyJSON}'`);
+    lines.push(`  '${historyJSON}',`);
+    lines.push(`  ${trackType}`);
     lines.push(`);`);
   });
-  
+
   return lines.join('\n');
 }
 

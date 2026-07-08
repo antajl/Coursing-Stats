@@ -25,7 +25,7 @@ export default function Admin() {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
   const [isCheckingToken, setIsCheckingToken] = useState(true)
 
-  const yearOptions = Array.from({ length: 11 }, (_, i) => 2025 - i)
+  const yearOptions = [2026, 2025, 2024, 2023, 2022]
 
   useEffect(() => {
     const token = localStorage.getItem('admin_token')
@@ -259,7 +259,7 @@ export default function Admin() {
             onChange={(e) => setSelectedYear(e.target.value)}
             className="px-4 py-2 border border-old-money-200 rounded-lg focus:ring-2 focus:ring-camel-500 focus:border-transparent dark:bg-charcoal-800 dark:border-charcoal-600 dark:text-charcoal-100"
           >
-            <option value="">Все годы (&lt; 2026)</option>
+            <option value="">Все годы</option>
             {yearOptions.map((year) => (
               <option key={year} value={year}>{year}</option>
             ))}

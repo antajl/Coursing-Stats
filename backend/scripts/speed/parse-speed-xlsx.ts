@@ -9,7 +9,8 @@ export interface ParsedSpeedRecord {
   date: string;
   screenshot_url?: string | null;
   status: string;
-  history?: { speed_km_h: number | string; date: string }[];
+  track_type?: string | null;
+  history?: { speed_km_h: number | string; date: string; track_type?: string | null }[];
 }
 
 export function convertExcelDate(dateValue: unknown): string {
@@ -117,6 +118,7 @@ export function parseSpeedRecordsFromWorkbook(workbook: XLSX.WorkBook): ParsedSp
     const speedOffset = headerIndex(headers, 'Лучшая скорость (км/ч)', 'лучшая скорость (км/ч)', 'speed_km_h');
     const dateOffset = headerIndex(headers, 'Дата', 'дата', 'date');
     const screenshotOffset = headerIndex(headers, 'Скриншот', 'скриншот', 'screenshot_url');
+    const trackTypeOffset = headerIndex(headers, 'Тип трассы', 'тип трассы', 'track_type');
 
     if (breedOffset === -1 || nameOffset === -1) continue;
 
@@ -144,6 +146,10 @@ export function parseSpeedRecordsFromWorkbook(workbook: XLSX.WorkBook): ParsedSp
         screenshotOffset >= 0
           ? worksheet[XLSX.utils.encode_cell({ r: row, c: range.s.c + screenshotOffset })]
           : undefined;
+      const trackTypeCell =
+        trackTypeOffset >= 0
+          ? worksheet[XLSX.utils.encode_cell({ r: row, c: range.s.c + trackTypeOffset })]
+          : undefined;
 
       records.push({
         breed: String(breedCell.v),
@@ -153,6 +159,7 @@ export function parseSpeedRecordsFromWorkbook(workbook: XLSX.WorkBook): ParsedSp
         date: convertExcelDate(dateCell?.v),
         screenshot_url: screenshotCell?.v ? String(screenshotCell.v) : '',
         status: statusFromNameCell(nameCell, sheetName),
+        track_type: trackTypeCell?.v ? String(trackTypeCell.v) : null,
       });
     }
   }
@@ -198,7 +205,7 @@ export function attachSpeedRecordHistory(records: ParsedSpeedRecord[]): ParsedSp
     dogRecords.forEach((record, idx) => {
       record.history = dogRecords
         .filter((_, i) => i !== idx)
-        .map((r) => ({ speed_km_h: r.speed_km_h, date: r.date }));
+        .map((r) => ({ speed_km_h: r.speed_km_h, date: r.date, track_type: r.track_type }));
     });
   }
 

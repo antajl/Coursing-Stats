@@ -105,7 +105,7 @@ export function handleAdminEvents(app: Hono<{ Bindings: Env }>) {
       
       const filtered = year 
         ? events.filter((e: any) => String(e.year) === year)
-        : events.filter((e: any) => e.year < 2026);
+        : events;
       
       const mapped = filtered.map((e: any) => ({
         id: e.id,
@@ -135,6 +135,30 @@ export function handleAdminEvents(app: Hono<{ Bindings: Env }>) {
       return c.json({ success: true, data: mapped });
     } catch (err: any) {
       console.error('Error fetching events:', err);
+      return c.json({ success: false, error: err.message }, 500);
+    }
+  });
+
+  // GET /api/admin/events/:id - Get single event for admin
+  app.get('/api/admin/events/:id', async (c) => {
+    const env = c.env;
+    const eventId = Number(c.req.param('id'));
+
+    if (!checkAdminToken(c, env)) {
+      return c.json({ success: false, error: 'Unauthorized' }, 401);
+    }
+
+    try {
+      const eventFile = await findEventFile(eventId);
+
+      if (!eventFile) {
+        return c.json({ success: false, error: 'Event not found' }, 404);
+      }
+
+      const { data } = eventFile;
+      return c.json({ success: true, data });
+    } catch (err: any) {
+      console.error('Error fetching event:', err);
       return c.json({ success: false, error: err.message }, 500);
     }
   });
