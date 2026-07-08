@@ -1,0 +1,39 @@
+{
+  "dog_key": "марвел--цвергпинчер",
+  "records": [
+    {
+      "id": 1942,
+      "breed": "Цвергпинчер",
+      "sex": "К",
+      "name": "Марвел",
+      "speed_km_h": 39,
+      "date": "2025-12-07",
+      "screenshot_url": "https://disk.yandex.ru/i/NQMZmQfgKy8r7w",
+      "status": "normal",
+      "updated_at": "2026-06-30 11:38:42",
+      "history": [
+        {
+          "speed_km_h": 38,
+          "date": "2025-09-07"
+        }
+      ]
+    },
+    {
+      "id": 1973,
+      "breed": "Цвергпинчер",
+      "sex": "К",
+      "name": "Марвел",
+      "speed_km_h": 38,
+      "date": "2025-09-07",
+      "screenshot_url": "https://disk.yandex.ru/i/_keEYxMsfehtxQ",
+      "status": "old",
+      "updated_at": "2026-06-30 11:38:42",
+      "history": [
+        {
+          "speed_km_h": 39,
+          "date": "2025-12-07"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2440 @@
+{
+  "schema": "coursing-stats/competition-v1",
+  "exported_at": "2026-07-08T00:31:32.188Z",
+  "source": "sqlite-admin-sync",
+  "event_id": 1297,
+  "event": {
+    "id": 1297,
+    "year": 2025,
+    "date_start": "2025-10-25",
+    "date_end": "2025-10-26",
+    "rank_label": "ЧРКФ\n(Курсинг борзых)",
+    "event_type": "coursing",
+    "competition_kind": "ЧРКФ",
+    "competition_type": "Курсинг борзых",
+    "title": "ОО Региональное кинологическое общество Ставропольского края \"Альянс\" — ЧРКФ (Курсинг борзых)",
+    "host_club": "ОО Региональное кинологическое общество Ставропольского края \"Альянс\"",
+    "region": null,
+    "location": "Ставропольский край, Ставрополь",
+    "catalog_url": "http://procoursing.ru/2025/Catalog_2025-10-25_C.pdf",
+    "results_url": "http://procoursing.ru/2025/Complete_Results_2025-10-25_C.html",
+    "confirmed": 0,
+    "last_modified": null,
+    "scraped_at": "2026-06-27 20:19:37",
+    "telegram_url": null,
+    "full_title": null,
+    "event_date": null,
+    "protocol_location": null,
+    "judges": "Главный судья - Карелина Н.В., судья - Лукина Д.М.",
+    "track_schemes": []
+  },
+  "result_count": 28,
+  "results": [
+    {
+      "id": 9872,
+      "event_id": 1297,
+      "dog_id": 5747,
+      "breed_class": "Ирландский вольфхаунд - Стандартный - Суки",
+      "catalog_no": null,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 15,
+            "bib_color": "red",
+            "judges": [],
+            "total": null,
+            "disqualified": true,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>7</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Ирландский вольфхаунд</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ДЕВУШКА В ИРЛАНДСКОЙ ЮБКЕ /<br>DEVUSHKA V IRLANDSKOY YUBKE</font></td> <td bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>15</i></font></td> <td colspan=\"7\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Отстранение (Сход с трассы)</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i></i></font></td> <td colspan=\"7\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b></b></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "Главный судья - Карелина Н.В., судья - Лукина Д.М.",
+      "status_reason": "Сход с трассы",
+      "dog_key": "девушка-в-ирландскои-юбке--ирландскии-вольфхаунд",
+      "dog": {
+        "id": 5747,
+        "dog_key": "девушка-в-ирландскои-юбке--ирландскии-вольфхаунд",
+        "name_lat": "ДЕВУШКА В ИРЛАНДСКОЙ ЮБКЕ",
+        "name_ru": "ДЕВУШКА В ИРЛАНДСКОЙ ЮБКЕ",
+        "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 9885,
+      "event_id": 1297,
+      "dog_id": 635,
+      "breed_class": "Русская псовая борзая - Стандартный - Суки",
+      "catalog_no": null,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 7,
+            "bib_color": "red",
+            "judges": [],
+            "total": null,
+            "disqualified": true,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>19</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">LUNNAJA RADUGA CZARSTVENNAYA OSOBA</font></td> <td bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>7</i></font></td> <td colspan=\"7\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Отстранение (Не ушла со старта)</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i></i></font></td> <td colspan=\"7\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b></b></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "Главный судья - Карелина Н.В., судья - Лукина Д.М.",
+      "status_reason": "Не ушла со старта",
+      "dog_key": "lunnaja-raduga-czarstvennaya-osoba--русская-псовая-борзая",
+      "dog": {
+        "id": 635,
+        "dog_key": "lunnaja-raduga-czarstvennaya-osoba--русская-псовая-борзая",
+        "name_lat": "LUNNAJA RADUGA CZARSTVENNAYA OSOBA",
+        "name_ru": "LUNNAJA RADUGA CZARSTVENNAYA OSOBA",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 9896,
+      "event_id": 1297,
+      "dog_id": 636,
+      "breed_class": "Неприбывшие участники",
+      "catalog_no": null,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 3,
+      "qualification": "",
+      "vc": "",
+      "status": "dns",
+      "raw_scores_json": {},
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>16</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Юниоры</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ЛУННАЯ РАДУГА ЗАГОВОРЕННАЯ НА УДАЧУ</font></td> <td colspan=\"19\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Неявка</font></td> ",
+      "judges": "",
+      "status_reason": "",
+      "dog_key": "лунная-радуга-заговоренная-на-удачу--русская-псовая-борзая",
+      "dog": {
+        "id": 636,
+        "dog_key": "лунная-радуга-заговоренная-на-удачу--русская-псовая-борзая",
+        "name_lat": "ЛУННАЯ РАДУГА ЗАГОВОРЕННАЯ НА УДАЧУ",
+        "name_ru": "ЛУННАЯ РАДУГА ЗАГОВОРЕННАЯ НА УДАЧУ",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 9897,
+      "event_id": 1297,
+      "dog_id": 637,
+      "breed_class": "Неприбывшие участники",
+      "catalog_no": null,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 3,
+      "qualification": "",
+      "vc": "",
+      "status": "dns",
+      "raw_scores_json": {},
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>20</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ЛУННАЯ РАДУГА ГОРЧИЦА /<br>LUNNAJA RADUGA GORCHITZA</font></td> <td colspan=\"19\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Неявка</font></td> ",
+      "judges": "",
+      "status_reason": "",
+      "dog_key": "лунная-радуга-горчица-lunnaja-raduga-gor--русская-псовая-борзая",
+      "dog": {
+        "id": 637,
+        "dog_key": "лунная-радуга-горчица-lunnaja-raduga-gor--русская-псовая-борзая",
+        "name_lat": "ЛУННАЯ РАДУГА ГОРЧИЦА /LUNNAJA RADUGA GORCHITZA",
+        "name_ru": "ЛУННАЯ РАДУГА ГОРЧИЦА /LUNNAJA RADUGA GORCHITZA",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 9870,
+      "event_id": 1297,
+      "dog_id": 5746,
+      "breed_class": "Ирландский вольфхаунд - Стандартный - Суки",
+      "catalog_no": null,
+      "placement": 1,
+      "total_score": 340,
+      "judge_count": 2,
+      "qualification": "Чемпион РКФ",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 14,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  16,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 84
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 169,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 24,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 86
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 171,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
+      "raw_text": " <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>8</i></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Ирландский вольфхаунд</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ЕЛАНЬ ЛАНЬ БЫСТРАЯ /<br>ELAN LAN BYSTRAYA</font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>14</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>84</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>169</b></font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>24</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>86</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>171</b></font></td> <td rowspan=\"2\"><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b>340</b></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Чемпион РКФ</font></td> ",
+      "judges": "Главный судья - Карелина Н.В., судья - Лукина Д.М.",
+      "status_reason": "",
+      "dog_key": "елань-лань-быстрая--ирландскии-вольфхаунд",
+      "dog": {
+        "id": 5746,
+        "dog_key": "елань-лань-быстрая--ирландскии-вольфхаунд",
+        "name_lat": "ЕЛАНЬ ЛАНЬ БЫСТРАЯ",
+        "name_ru": "ЕЛАНЬ ЛАНЬ БЫСТРАЯ",
+        "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 9873,
+      "event_id": 1297,
+      "dog_id": 5756,
+      "breed_class": "Родезийский риджбек - Стандартный - Кобели",
+      "catalog_no": null,
+      "placement": 1,
+      "total_score": 339,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 16,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 83
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 167,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 25,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  16,
+                  18
+                ],
+                "sum": 86
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 172,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
+      "raw_text": " <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>5</i></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Родезийский риджбек</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">РИДЖЕ’С СТАР ВИНСЕНТ /<br>VINCENT</font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>16</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>83</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>167</b></font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>25</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>86</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>172</b></font></td> <td rowspan=\"2\"><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b>339</b></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "Главный судья - Карелина Н.В., судья - Лукина Д.М.",
+      "status_reason": "",
+      "dog_key": "риджес-стар-винсент--родезиискии-риджбек",
+      "dog": {
+        "id": 5756,
+        "dog_key": "риджес-стар-винсент--родезиискии-риджбек",
+        "name_lat": "РИДЖЕС СТАР ВИНСЕНТ",
+        "name_ru": "РИДЖЕ’С СТАР ВИНСЕНТ",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 9874,
+      "event_id": 1297,
+      "dog_id": 628,
+      "breed_class": "Русская псовая борзая - Юниоры - Микс",
+      "catalog_no": null,
+      "placement": 1,
+      "total_score": 340,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 1,
+            "bib_color": "#f0ffff",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 86
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 171,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 8,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  18,
+                  16
+                ],
+                "sum": 84
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 169,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
+      "raw_text": " <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>10</i></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Юниоры</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ЛУННАЯ РАДУГА ЖАКАН ВЕРНЫЙ</font></td> <td rowspan=\"2\" bgcolor=\"#f0ffff\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>1</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>86</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>171</b></font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>8</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>84</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>169</b></font></td> <td rowspan=\"2\"><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b>340</b></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "Главный судья - Карелина Н.В., судья - Лукина Д.М.",
+      "status_reason": "",
+      "dog_key": "лунная-радуга-жакан-верныи--русская-псовая-борзая",
+      "dog": {
+        "id": 628,
+        "dog_key": "лунная-радуга-жакан-верныи--русская-псовая-борзая",
+        "name_lat": "ЛУННАЯ РАДУГА ЖАКАН ВЕРНЫЙ",
+        "name_ru": "ЛУННАЯ РАДУГА ЖАКАН ВЕРНЫЙ",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 9877,
+      "event_id": 1297,
+      "dog_id": 631,
+      "breed_class": "Русская псовая борзая - Стандартный - Кобели",
+      "catalog_no": null,
+      "placement": 1,
+      "total_score": 336,
+      "judge_count": 2,
+      "qualification": "Чемпион РКФ",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 4,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  17,
+                  17
+                ],
+                "sum": 86
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  16,
+                  16
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 167,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 11,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 169,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
+      "raw_text": " <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>11</i></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ZADOR IZ SEVERNOI OHOTY</font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>4</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>86</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>167</b></font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>11</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>85</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>169</b></font></td> <td rowspan=\"2\"><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b>336</b></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Чемпион РКФ</font></td> ",
+      "judges": "Главный судья - Карелина Н.В., судья - Лукина Д.М.",
+      "status_reason": "",
+      "dog_key": "zador-iz-severnoi-ohoty--русская-псовая-борзая",
+      "dog": {
+        "id": 631,
+        "dog_key": "zador-iz-severnoi-ohoty--русская-псовая-борзая",
+        "name_lat": "ZADOR IZ SEVERNOI OHOTY",
+        "name_ru": "ZADOR IZ SEVERNOI OHOTY",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 9881,
+      "event_id": 1297,
+      "dog_id": 9023,
+      "breed_class": "Русская псовая борзая - Стандартный - Суки",
+      "catalog_no": null,
+      "placement": 1,
+      "total_score": 349,
+      "judge_count": 2,
+      "qualification": "Чемпион РКФ",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 5,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 174,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 13,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 175,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
+      "raw_text": " <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>18</i></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ЛУННАЯ РАДУГА ДИНАСТИЯ /<br>LUNNAJA RADUGA DINASTIYA</font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>5</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>89</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>174</b></font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>13</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>88</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>175</b></font></td> <td rowspan=\"2\" bgcolor=\"#c0c0c0\"><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b><abbr title=\"Второй результат состязания\">349</abbr></b></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Чемпион РКФ</font></td> ",
+      "judges": "Главный судья - Карелина Н.В., судья - Лукина Д.М.",
+      "status_reason": "",
+      "dog_key": "лунная-радуга-династия--русская-псовая-борзая",
+      "dog": {
+        "id": 9023,
+        "dog_key": "лунная-радуга-династия--русская-псовая-борзая",
+        "name_lat": "ЛУННАЯ РАДУГА ДИНАСТИЯ",
+        "name_ru": "ЛУННАЯ РАДУГА ДИНАСТИЯ",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 9886,
+      "event_id": 1297,
+      "dog_id": 7802,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": null,
+      "placement": 1,
+      "total_score": 339,
+      "judge_count": 2,
+      "qualification": "Чемпион РКФ",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 17,
+            "bib_color": "#f0ffff",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  16,
+                  17,
+                  15,
+                  18
+                ],
+                "sum": 81
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 166,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 27,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  16,
+                  18
+                ],
+                "sum": 85
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 173,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
+      "raw_text": " <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>25</i></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ВИЗАВИ АНГЕЛ НА ЛАДОШКЕ /<br>VIZAVI ANGEL NA LADOSHKE</font></td> <td rowspan=\"2\" bgcolor=\"#f0ffff\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>17</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>81</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>166</b></font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>27</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>85</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>173</b></font></td> <td rowspan=\"2\"><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b>339</b></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Чемпион РКФ</font></td> ",
+      "judges": "Главный судья - Карелина Н.В., судья - Лукина Д.М.",
+      "status_reason": "",
+      "dog_key": "визави-ангел-на-ладошке--уиппет",
+      "dog": {
+        "id": 7802,
+        "dog_key": "визави-ангел-на-ладошке--уиппет",
+        "name_lat": "ВИЗАВИ АНГЕЛ НА ЛАДОШКЕ",
+        "name_ru": "ВИЗАВИ АНГЕЛ НА ЛАДОШКЕ",
+        "breed": "УИППЕТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 9889,
+      "event_id": 1297,
+      "dog_id": 5658,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Микс",
+      "catalog_no": null,
+      "placement": 1,
+      "total_score": 341,
+      "judge_count": 2,
+      "qualification": "Чемпион РКФ",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 19,
+            "bib_color": "#f0ffff",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 87
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 170,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 29,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 85
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 171,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
+      "raw_text": " <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>27</i></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный-спринтеры</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ВАРВАР КОНАН БЕССТРАШНЫЙ /<br>VARVAR KONAN BESSTRASHNYI</font></td> <td rowspan=\"2\" bgcolor=\"#f0ffff\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>19</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>87</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>170</b></font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>29</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>85</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>171</b></font></td> <td rowspan=\"2\"><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b>341</b></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Чемпион РКФ</font></td> ",
+      "judges": "Главный судья - Карелина Н.В., судья - Лукина Д.М.",
+      "status_reason": "",
+      "dog_key": "варвар-конан-бесстрашныи--уиппет",
+      "dog": {
+        "id": 5658,
+        "dog_key": "варвар-конан-бесстрашныи--уиппет",
+        "name_lat": "ВАРВАР КОНАН БЕССТРАШНЫЙ",
+        "name_ru": "ВАРВАР КОНАН БЕССТРАШНЫЙ",
+        "breed": "УИППЕТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 9892,
+      "event_id": 1297,
+      "dog_id": 129,
+      "breed_class": "Чирнеко дель Этна - Стандартный - Микс",
+      "catalog_no": null,
+      "placement": 1,
+      "total_score": 347,
+      "judge_count": 2,
+      "qualification": "Чемпион РКФ",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 21,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 86
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 171,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 30,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 176,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
+      "raw_text": " <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>1</i></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Чирнеко дель Этна</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">COLISTO'S GASPARO</font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>21</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>86</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>171</b></font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>30</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>88</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>176</b></font></td> <td rowspan=\"2\" bgcolor=\"#cd7f32\"><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b><abbr title=\"Третий результат состязания\">347</abbr></b></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Чемпион РКФ</font></td> ",
+      "judges": "Главный судья - Карелина Н.В., судья - Лукина Д.М.",
+      "status_reason": "",
+      "dog_key": "colistos-gasparo--чирнеко-дель-этна",
+      "dog": {
+        "id": 129,
+        "dog_key": "colistos-gasparo--чирнеко-дель-этна",
+        "name_lat": "COLISTOS GASPARO",
+        "name_ru": "COLISTOS GASPARO",
+        "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 9895,
+      "event_id": 1297,
+      "dog_id": 282,
+      "breed_class": "Чирнеко дель Этна - Ветераны - Кобели",
+      "catalog_no": null,
+      "placement": 1,
+      "total_score": 354,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 23,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 172,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 32,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  20,
+                  20
+                ],
+                "sum": 91
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  20,
+                  20
+                ],
+                "sum": 91
+              }
+            ],
+            "total": 182,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
+      "raw_text": " <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>2</i></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Чирнеко дель Этна</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Ветераны</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">TESORO SOLARE DOMENICO</font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>23</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>89</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>172</b></font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>32</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">20</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">20</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>91</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>182</b></font></td> <td rowspan=\"2\" bgcolor=\"#ffd700\"><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b><abbr title=\"Лучший результат состязания\">354</abbr></b></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "Главный судья - Карелина Н.В., судья - Лукина Д.М.",
+      "status_reason": "",
+      "dog_key": "tesoro-solare-domenico--чирнеко-дель-этна",
+      "dog": {
+        "id": 282,
+        "dog_key": "tesoro-solare-domenico--чирнеко-дель-этна",
+        "name_lat": "TESORO SOLARE DOMENICO",
+        "name_ru": "TESORO SOLARE DOMENICO",
+        "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 9871,
+      "event_id": 1297,
+      "dog_id": 5745,
+      "breed_class": "Ирландский вольфхаунд - Стандартный - Суки",
+      "catalog_no": null,
+      "placement": 2,
+      "total_score": 331,
+      "judge_count": 2,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 14,
+            "bib_color": "#f0ffff",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  16,
+                  16,
+                  16,
+                  17
+                ],
+                "sum": 81
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 164,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 24,
+            "bib_color": "#f0ffff",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  18,
+                  16,
+                  16,
+                  18
+                ],
+                "sum": 84
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 167,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
+      "raw_text": " <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>6</i></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Ирландский вольфхаунд</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ДЭЙРИНГ КАПИТАН ОРЛИКОВА /<br>DARING CAPITAN ORLIKOVA</font></td> <td rowspan=\"2\" bgcolor=\"#f0ffff\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>14</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>81</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>164</b></font></td> <td rowspan=\"2\" bgcolor=\"#f0ffff\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>24</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>84</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>167</b></font></td> <td rowspan=\"2\"><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b>331</b></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CACL</font></td> ",
+      "judges": "Главный судья - Карелина Н.В., судья - Лукина Д.М.",
+      "status_reason": "",
+      "dog_key": "дэиринг-капитан-орликова--ирландскии-вольфхаунд",
+      "dog": {
+        "id": 5745,
+        "dog_key": "дэиринг-капитан-орликова--ирландскии-вольфхаунд",
+        "name_lat": "ДЭЙРИНГ КАПИТАН ОРЛИКОВА",
+        "name_ru": "ДЭЙРИНГ КАПИТАН ОРЛИКОВА",
+        "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 9875,
+      "event_id": 1297,
+      "dog_id": 629,
+      "breed_class": "Русская псовая борзая - Юниоры - Микс",
+      "catalog_no": null,
+      "placement": 2,
+      "total_score": 331,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 1,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  14,
+                  17
+                ],
+                "sum": 82
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 166,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 9,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  17,
+                  15,
+                  17,
+                  17
+                ],
+                "sum": 82
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  16,
+                  17
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 165,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
+      "raw_text": " <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>9</i></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Юниоры</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БОРЗЫЕ-СЕНАВИАН РАТИБОР</font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>1</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>82</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>166</b></font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>9</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>82</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>165</b></font></td> <td rowspan=\"2\"><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b>331</b></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "Главный судья - Карелина Н.В., судья - Лукина Д.М.",
+      "status_reason": "",
+      "dog_key": "борзые-сенавиан-ратибор--русская-псовая-борзая",
+      "dog": {
+        "id": 629,
+        "dog_key": "борзые-сенавиан-ратибор--русская-псовая-борзая",
+        "name_lat": "БОРЗЫЕ СЕНАВИАН РАТИБОР",
+        "name_ru": "БОРЗЫЕ СЕНАВИАН РАТИБОР",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 9878,
+      "event_id": 1297,
+      "dog_id": 131,
+      "breed_class": "Русская псовая борзая - Стандартный - Кобели",
+      "catalog_no": null,
+      "placement": 2,
+      "total_score": 332,
+      "judge_count": 2,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 4,
+            "bib_color": "#f0ffff",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  14,
+                  17,
+                  16,
+                  15,
+                  16
+                ],
+                "sum": 78
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 161,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 10,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  16,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 84
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 171,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
+      "raw_text": " <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>14</i></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ELESSAR KORROLIOV</font></td> <td rowspan=\"2\" bgcolor=\"#f0ffff\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>4</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>78</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>161</b></font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>10</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>84</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>171</b></font></td> <td rowspan=\"2\"><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b>332</b></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CACL</font></td> ",
+      "judges": "Главный судья - Карелина Н.В., судья - Лукина Д.М.",
+      "status_reason": "",
+      "dog_key": "elessar-korroliov--русская-псовая-борзая",
+      "dog": {
+        "id": 131,
+        "dog_key": "elessar-korroliov--русская-псовая-борзая",
+        "name_lat": "ELESSAR KORROLIOV",
+        "name_ru": "ELESSAR KORROLIOV",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 9882,
+      "event_id": 1297,
+      "dog_id": 5765,
+      "breed_class": "Русская псовая борзая - Стандартный - Суки",
+      "catalog_no": null,
+      "placement": 2,
+      "total_score": 330,
+      "judge_count": 2,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 5,
+            "bib_color": "#f0ffff",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  17,
+                  16,
+                  16,
+                  16
+                ],
+                "sum": 80
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 163,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 12,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  17,
+                  17,
+                  16,
+                  18
+                ],
+                "sum": 83
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 167,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
+      "raw_text": " <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>21</i></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ЛУННАЯ РАДУГА ЯСМИН /<br>LUNNAJA RADUGA YASMIN</font></td> <td rowspan=\"2\" bgcolor=\"#f0ffff\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>5</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>80</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>163</b></font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>12</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>83</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>167</b></font></td> <td rowspan=\"2\"><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b>330</b></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CACL</font></td> ",
+      "judges": "Главный судья - Карелина Н.В., судья - Лукина Д.М.",
+      "status_reason": "",
+      "dog_key": "лунная-радуга-ясмин--русская-псовая-борзая",
+      "dog": {
+        "id": 5765,
+        "dog_key": "лунная-радуга-ясмин--русская-псовая-борзая",
+        "name_lat": "ЛУННАЯ РАДУГА ЯСМИН",
+        "name_ru": "ЛУННАЯ РАДУГА ЯСМИН",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 9887,
+      "event_id": 1297,
+      "dog_id": 136,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": null,
+      "placement": 2,
+      "total_score": 338,
+      "judge_count": 2,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 17,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  16,
+                  18
+                ],
+                "sum": 84
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 167,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 26,
+            "bib_color": "#f0ffff",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 85
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 171,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
+      "raw_text": " <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>23</i></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">KASTRA</font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>17</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>84</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>167</b></font></td> <td rowspan=\"2\" bgcolor=\"#f0ffff\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>26</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>85</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>171</b></font></td> <td rowspan=\"2\"><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b>338</b></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CACL</font></td> ",
+      "judges": "Главный судья - Карелина Н.В., судья - Лукина Д.М.",
+      "status_reason": "",
+      "dog_key": "kastra--уиппет",
+      "dog": {
+        "id": 136,
+        "dog_key": "kastra--уиппет",
+        "name_lat": "KASTRA",
+        "name_ru": "KASTRA",
+        "breed": "УИППЕТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 9890,
+      "event_id": 1297,
+      "dog_id": 5801,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Микс",
+      "catalog_no": null,
+      "placement": 2,
+      "total_score": 341,
+      "judge_count": 2,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 19,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 86
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 171,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 28,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  18,
+                  18,
+                  15,
+                  17
+                ],
+                "sum": 83
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 170,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
+      "raw_text": " <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>28</i></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный-спринтеры</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ДИВА РАЛЛИ ЧАРУЮЩАЯ /<br>DIVA RALLI CHARUYUSHCHAYA</font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>19</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>86</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>171</b></font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>28</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>83</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>170</b></font></td> <td rowspan=\"2\"><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b>341</b></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CACL</font></td> ",
+      "judges": "Главный судья - Карелина Н.В., судья - Лукина Д.М.",
+      "status_reason": "",
+      "dog_key": "дива-ралли-чарующая--уиппет",
+      "dog": {
+        "id": 5801,
+        "dog_key": "дива-ралли-чарующая--уиппет",
+        "name_lat": "ДИВА РАЛЛИ ЧАРУЮЩАЯ",
+        "name_ru": "ДИВА РАЛЛИ ЧАРУЮЩАЯ",
+        "breed": "УИППЕТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 9893,
+      "event_id": 1297,
+      "dog_id": 6036,
+      "breed_class": "Чирнеко дель Этна - Стандартный - Микс",
+      "catalog_no": null,
+      "placement": 2,
+      "total_score": 338,
+      "judge_count": 2,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 22,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  16,
+                  18
+                ],
+                "sum": 83
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 169,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 30,
+            "bib_color": "#f0ffff",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  18,
+                  18,
+                  14,
+                  18
+                ],
+                "sum": 83
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  16,
+                  17,
+                  18
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 169,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
+      "raw_text": " <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>3</i></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Чирнеко дель Этна</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ИРКИСС РАЦЦО КЬЯНТИ /<br>IRKISS RAZZO CHIANTI</font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>22</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>83</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>169</b></font></td> <td rowspan=\"2\" bgcolor=\"#f0ffff\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>30</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>83</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>169</b></font></td> <td rowspan=\"2\"><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b>338</b></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CACL</font></td> ",
+      "judges": "Главный судья - Карелина Н.В., судья - Лукина Д.М.",
+      "status_reason": "",
+      "dog_key": "иркисс-раццо-кьянти--чирнеко-дель-этна",
+      "dog": {
+        "id": 6036,
+        "dog_key": "иркисс-раццо-кьянти--чирнеко-дель-этна",
+        "name_lat": "ИРКИСС РАЦЦО КЬЯНТИ",
+        "name_ru": "ИРКИСС РАЦЦО КЬЯНТИ",
+        "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 9876,
+      "event_id": 1297,
+      "dog_id": 630,
+      "breed_class": "Русская псовая борзая - Юниоры - Микс",
+      "catalog_no": null,
+      "placement": 3,
+      "total_score": 331,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 2,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  14,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 84
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 167,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 8,
+            "bib_color": "#f0ffff",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  16,
+                  16,
+                  17,
+                  18
+                ],
+                "sum": 82
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  16,
+                  17
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 164,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
+      "raw_text": " <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>15</i></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Юниоры</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">LUNNAJA RADUGA KIRILLITSA</font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>2</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>84</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>167</b></font></td> <td rowspan=\"2\" bgcolor=\"#f0ffff\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>8</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>82</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>164</b></font></td> <td rowspan=\"2\"><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b>331</b></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "Главный судья - Карелина Н.В., судья - Лукина Д.М.",
+      "status_reason": "",
+      "dog_key": "lunnaja-raduga-kirillitsa--русская-псовая-борзая",
+      "dog": {
+        "id": 630,
+        "dog_key": "lunnaja-raduga-kirillitsa--русская-псовая-борзая",
+        "name_lat": "LUNNAJA RADUGA KIRILLITSA",
+        "name_ru": "LUNNAJA RADUGA KIRILLITSA",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 9879,
+      "event_id": 1297,
+      "dog_id": 132,
+      "breed_class": "Русская псовая борзая - Стандартный - Кобели",
+      "catalog_no": null,
+      "placement": 3,
+      "total_score": 325,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 3,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  16,
+                  16,
+                  14,
+                  16
+                ],
+                "sum": 77
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 160,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 11,
+            "bib_color": "#f0ffff",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  17,
+                  15,
+                  17,
+                  17
+                ],
+                "sum": 82
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 165,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
+      "raw_text": " <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>13</i></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ALV</font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>3</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>77</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>160</b></font></td> <td rowspan=\"2\" bgcolor=\"#f0ffff\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>11</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>82</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>165</b></font></td> <td rowspan=\"2\"><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b>325</b></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "Главный судья - Карелина Н.В., судья - Лукина Д.М.",
+      "status_reason": "",
+      "dog_key": "alv--русская-псовая-борзая",
+      "dog": {
+        "id": 132,
+        "dog_key": "alv--русская-псовая-борзая",
+        "name_lat": "ALV",
+        "name_ru": "ALV",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 9883,
+      "event_id": 1297,
+      "dog_id": 634,
+      "breed_class": "Русская псовая борзая - Стандартный - Суки",
+      "catalog_no": null,
+      "placement": 3,
+      "total_score": 285,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 6,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  16,
+                  15,
+                  17,
+                  17
+                ],
+                "sum": 80
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 163,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 12,
+            "bib_color": "#f0ffff",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  14,
+                  14,
+                  14,
+                  12,
+                  12
+                ],
+                "sum": 66
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  10,
+                  16,
+                  10,
+                  8,
+                  12
+                ],
+                "sum": 56
+              }
+            ],
+            "total": 122,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
+      "raw_text": " <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>17</i></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ZABAVA IZ SEVERNOI OHOTY</font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>6</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>80</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>163</b></font></td> <td rowspan=\"2\" bgcolor=\"#f0ffff\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>12</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>66</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>122</b></font></td> <td rowspan=\"2\"><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b>285</b></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "Главный судья - Карелина Н.В., судья - Лукина Д.М.",
+      "status_reason": "",
+      "dog_key": "zabava-iz-severnoi-ohoty--русская-псовая-борзая",
+      "dog": {
+        "id": 634,
+        "dog_key": "zabava-iz-severnoi-ohoty--русская-псовая-борзая",
+        "name_lat": "ZABAVA IZ SEVERNOI OHOTY",
+        "name_ru": "ZABAVA IZ SEVERNOI OHOTY",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 9888,
+      "event_id": 1297,
+      "dog_id": 377,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": null,
+      "placement": 3,
+      "total_score": 331,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 18,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  16,
+                  18
+                ],
+                "sum": 85
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 168,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 26,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  14,
+                  16,
+                  16,
+                  14,
+                  18
+                ],
+                "sum": 78
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  15,
+                  19
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 163,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
+      "raw_text": " <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>24</i></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">KINGDOM FLY GRAMMY GRUNGERY</font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>18</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>85</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>168</b></font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>26</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>78</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>163</b></font></td> <td rowspan=\"2\"><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b>331</b></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "Главный судья - Карелина Н.В., судья - Лукина Д.М.",
+      "status_reason": "",
+      "dog_key": "kingdom-fly-grammy-grungery--уиппет",
+      "dog": {
+        "id": 377,
+        "dog_key": "kingdom-fly-grammy-grungery--уиппет",
+        "name_lat": "KINGDOM FLY GRAMMY GRUNGERY",
+        "name_ru": "KINGDOM FLY GRAMMY GRUNGERY",
+        "breed": "УИППЕТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 9891,
+      "event_id": 1297,
+      "dog_id": 5656,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Микс",
+      "catalog_no": null,
+      "placement": 3,
+      "total_score": 340,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 20,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  18,
+                  18,
+                  15,
+                  18
+                ],
+                "sum": 84
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 169,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 28,
+            "bib_color": "#f0ffff",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  15,
+                  18
+                ],
+                "sum": 85
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  16,
+                  18
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 171,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
+      "raw_text": " <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>26</i></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный-спринтеры</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">УРАЛ СПИРИТ САЛАМАНДР /<br>URAL SPIRIT SALAMANDER</font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>20</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>84</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>169</b></font></td> <td rowspan=\"2\" bgcolor=\"#f0ffff\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>28</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>85</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>171</b></font></td> <td rowspan=\"2\"><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b>340</b></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "Главный судья - Карелина Н.В., судья - Лукина Д.М.",
+      "status_reason": "",
+      "dog_key": "урал-спирит-саламандр--уиппет",
+      "dog": {
+        "id": 5656,
+        "dog_key": "урал-спирит-саламандр--уиппет",
+        "name_lat": "УРАЛ СПИРИТ САЛАМАНДР",
+        "name_ru": "УРАЛ СПИРИТ САЛАМАНДР",
+        "breed": "УИППЕТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 9894,
+      "event_id": 1297,
+      "dog_id": 7120,
+      "breed_class": "Чирнеко дель Этна - Стандартный - Микс",
+      "catalog_no": null,
+      "placement": 3,
+      "total_score": 327,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 21,
+            "bib_color": "#f0ffff",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  16,
+                  15,
+                  17,
+                  14
+                ],
+                "sum": 77
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  16,
+                  15,
+                  15,
+                  16
+                ],
+                "sum": 78
+              }
+            ],
+            "total": 155,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 31,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 86
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 172,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
+      "raw_text": " <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>4</i></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Чирнеко дель Этна</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">РОССО БОРЕАЛЕ ВИТТОРИЯ СИДА /<br>ROSSO BOREALE VITTORIYA SIDA</font></td> <td rowspan=\"2\" bgcolor=\"#f0ffff\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>21</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>77</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>155</b></font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>31</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>86</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>172</b></font></td> <td rowspan=\"2\"><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b>327</b></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "Главный судья - Карелина Н.В., судья - Лукина Д.М.",
+      "status_reason": "",
+      "dog_key": "россо-бореале-виттория-сида--чирнеко-дель-этна",
+      "dog": {
+        "id": 7120,
+        "dog_key": "россо-бореале-виттория-сида--чирнеко-дель-этна",
+        "name_lat": "РОССО БОРЕАЛЕ ВИТТОРИЯ СИДА",
+        "name_ru": "РОССО БОРЕАЛЕ ВИТТОРИЯ СИДА",
+        "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 9880,
+      "event_id": 1297,
+      "dog_id": 632,
+      "breed_class": "Русская псовая борзая - Стандартный - Кобели",
+      "catalog_no": null,
+      "placement": 4,
+      "total_score": 309,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 3,
+            "bib_color": "#f0ffff",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  14,
+                  16,
+                  16,
+                  15,
+                  16
+                ],
+                "sum": 77
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  16,
+                  17
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 159,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 10,
+            "bib_color": "#f0ffff",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  14,
+                  14,
+                  14,
+                  14,
+                  13
+                ],
+                "sum": 69
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  16,
+                  16,
+                  16,
+                  17
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 150,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
+      "raw_text": " <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">4</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>12</i></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">СОЛО ЛЮБИМОГО МИЗГИРЬ</font></td> <td rowspan=\"2\" bgcolor=\"#f0ffff\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>3</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>77</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>159</b></font></td> <td rowspan=\"2\" bgcolor=\"#f0ffff\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>10</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>69</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>150</b></font></td> <td rowspan=\"2\"><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b>309</b></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "Главный судья - Карелина Н.В., судья - Лукина Д.М.",
+      "status_reason": "",
+      "dog_key": "соло-любимого-мизгирь--русская-псовая-борзая",
+      "dog": {
+        "id": 632,
+        "dog_key": "соло-любимого-мизгирь--русская-псовая-борзая",
+        "name_lat": "СОЛО ЛЮБИМОГО МИЗГИРЬ",
+        "name_ru": "СОЛО ЛЮБИМОГО МИЗГИРЬ",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 9884,
+      "event_id": 1297,
+      "dog_id": 7950,
+      "breed_class": "Русская псовая борзая - Стандартный - Суки",
+      "catalog_no": null,
+      "placement": 4,
+      "total_score": 267,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 6,
+            "bib_color": "#f0ffff",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 88
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 173,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 13,
+            "bib_color": "#f0ffff",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  10,
+                  10,
+                  10,
+                  8,
+                  8
+                ],
+                "sum": 46
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  10,
+                  12,
+                  10,
+                  6,
+                  10
+                ],
+                "sum": 48
+              }
+            ],
+            "total": 94,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
+      "raw_text": " <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">4</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>22</i></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ЛУННАЯ РАДУГА ЮВЕЛИРНАЯ РАБОТА /<br>LUNNAJA RADUGA YUVELIRNAYA RABOTA</font></td> <td rowspan=\"2\" bgcolor=\"#f0ffff\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>6</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>88</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>173</b></font></td> <td rowspan=\"2\" bgcolor=\"#f0ffff\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>13</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">10</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">10</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">10</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">8</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">8</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>46</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>94</b></font></td> <td rowspan=\"2\"><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b>267</b></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "Главный судья - Карелина Н.В., судья - Лукина Д.М.",
+      "status_reason": "",
+      "dog_key": "лунная-радуга-ювелирная-работа--русская-псовая-борзая",
+      "dog": {
+        "id": 7950,
+        "dog_key": "лунная-радуга-ювелирная-работа--русская-псовая-борзая",
+        "name_lat": "ЛУННАЯ РАДУГА ЮВЕЛИРНАЯ РАБОТА",
+        "name_ru": "ЛУННАЯ РАДУГА ЮВЕЛИРНАЯ РАБОТА",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    }
+  ]
+}

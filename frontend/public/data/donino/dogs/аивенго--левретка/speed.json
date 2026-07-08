@@ -1,0 +1,68 @@
+{
+  "dog_key": "аивенго--левретка",
+  "records": [
+    {
+      "id": 1829,
+      "breed": "Левретка",
+      "sex": "К",
+      "name": "Айвенго",
+      "speed_km_h": 49,
+      "date": "2026-05-27",
+      "screenshot_url": "https://disk.yandex.ru/i/nHoMJVf_vSnEOA",
+      "status": "normal",
+      "updated_at": "2026-06-30 11:38:42",
+      "history": [
+        {
+          "speed_km_h": 49,
+          "date": "2025-11-09"
+        },
+        {
+          "speed_km_h": 48,
+          "date": "2025-09-07"
+        }
+      ]
+    },
+    {
+      "id": 1905,
+      "breed": "Левретка",
+      "sex": "К",
+      "name": "Айвенго",
+      "speed_km_h": 49,
+      "date": "2025-11-09",
+      "screenshot_url": "https://disk.yandex.ru/i/iuQ18P1jpG8Nug",
+      "status": "normal",
+      "updated_at": "2026-06-30 11:38:42",
+      "history": [
+        {
+          "speed_km_h": 49,
+          "date": "2026-05-27"
+        },
+        {
+          "speed_km_h": 48,
+          "date": "2025-09-07"
+        }
+      ]
+    },
+    {
+      "id": 1963,
+      "breed": "Левретка",
+      "sex": "К",
+      "name": "Айвенго",
+      "speed_km_h": 48,
+      "date": "2025-09-07",
+      "screenshot_url": "https://disk.yandex.ru/i/elM6vROzdd9HtQ",
+      "status": "old",
+      "updated_at": "2026-06-30 11:38:42",
+      "history": [
+        {
+          "speed_km_h": 49,
+          "date": "2026-05-27"
+        },
+        {
+          "speed_km_h": 49,
+          "date": "2025-11-09"
+        }
+      ]
+    }
+  ]
+}

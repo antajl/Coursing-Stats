@@ -1,0 +1,39 @@
+{
+  "dog_key": "ая--немецкая-овчарка",
+  "records": [
+    {
+      "id": 1936,
+      "breed": "Немецкая овчарка",
+      "sex": "С",
+      "name": "Ая",
+      "speed_km_h": 39,
+      "date": "2025-07-30",
+      "screenshot_url": "https://disk.yandex.ru/i/Nbb0UoXGDcfYqw",
+      "status": "normal",
+      "updated_at": "2026-06-30 11:38:42",
+      "history": [
+        {
+          "speed_km_h": 36,
+          "date": "2025-07-13"
+        }
+      ]
+    },
+    {
+      "id": 1954,
+      "breed": "Немецкая овчарка",
+      "sex": "С",
+      "name": "Ая",
+      "speed_km_h": 36,
+      "date": "2025-07-13",
+      "screenshot_url": "https://disk.yandex.ru/i/j9_-0EbBw5bQHw",
+      "status": "old",
+      "updated_at": "2026-06-30 11:38:42",
+      "history": [
+        {
+          "speed_km_h": 39,
+          "date": "2025-07-30"
+        }
+      ]
+    }
+  ]
+}

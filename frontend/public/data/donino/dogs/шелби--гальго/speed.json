@@ -1,0 +1,68 @@
+{
+  "dog_key": "шелби--гальго",
+  "records": [
+    {
+      "id": 1797,
+      "breed": "Гальго",
+      "sex": "С",
+      "name": "Шелби",
+      "speed_km_h": 59,
+      "date": "2026-06-28",
+      "screenshot_url": "https://disk.yandex.ru/i/pDxXZaK18ChMvA",
+      "status": "normal",
+      "updated_at": "2026-06-30 11:38:42",
+      "history": [
+        {
+          "speed_km_h": 55,
+          "date": "2026-05-11"
+        },
+        {
+          "speed_km_h": 56,
+          "date": "2026-06-25"
+        }
+      ]
+    },
+    {
+      "id": 1981,
+      "breed": "Гальго",
+      "sex": "С",
+      "name": "Шелби",
+      "speed_km_h": 56,
+      "date": "2026-06-25",
+      "screenshot_url": "https://disk.yandex.ru/i/qNjYob7WAmEu4A",
+      "status": "old",
+      "updated_at": "2026-06-30 11:38:42",
+      "history": [
+        {
+          "speed_km_h": 59,
+          "date": "2026-06-28"
+        },
+        {
+          "speed_km_h": 55,
+          "date": "2026-05-11"
+        }
+      ]
+    },
+    {
+      "id": 1980,
+      "breed": "Гальго",
+      "sex": "С",
+      "name": "Шелби",
+      "speed_km_h": 55,
+      "date": "2026-05-11",
+      "screenshot_url": "https://disk.yandex.ru/i/Tju0_76AXBNsKg",
+      "status": "old",
+      "updated_at": "2026-06-30 11:38:42",
+      "history": [
+        {
+          "speed_km_h": 59,
+          "date": "2026-06-28"
+        },
+        {
+          "speed_km_h": 56,
+          "date": "2026-06-25"
+        }
+      ]
+    }
+  ]
+}

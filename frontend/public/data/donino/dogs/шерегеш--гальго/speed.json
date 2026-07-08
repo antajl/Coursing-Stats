@@ -1,0 +1,39 @@
+{
+  "dog_key": "шерегеш--гальго",
+  "records": [
+    {
+      "id": 1795,
+      "breed": "Гальго",
+      "sex": "К",
+      "name": "Шерегеш",
+      "speed_km_h": 59,
+      "date": "2026-06-20",
+      "screenshot_url": "https://disk.yandex.ru/i/PmkzSj3f7EPYDw",
+      "status": "normal",
+      "updated_at": "2026-06-30 11:38:42",
+      "history": [
+        {
+          "speed_km_h": 57,
+          "date": "2026-05-31"
+        }
+      ]
+    },
+    {
+      "id": 1978,
+      "breed": "Гальго",
+      "sex": "К",
+      "name": "Шерегеш",
+      "speed_km_h": 57,
+      "date": "2026-05-31",
+      "screenshot_url": "https://disk.yandex.ru/i/_C3ux38PCk_hHA",
+      "status": "old",
+      "updated_at": "2026-06-30 11:38:42",
+      "history": [
+        {
+          "speed_km_h": 59,
+          "date": "2026-06-20"
+        }
+      ]
+    }
+  ]
+}

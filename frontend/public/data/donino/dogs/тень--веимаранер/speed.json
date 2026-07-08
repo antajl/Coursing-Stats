@@ -1,0 +1,39 @@
+{
+  "dog_key": "тень--веимаранер",
+  "records": [
+    {
+      "id": 1845,
+      "breed": "Веймаранер",
+      "sex": "С",
+      "name": "Тень",
+      "speed_km_h": 39,
+      "date": "2026-06-25",
+      "screenshot_url": "https://disk.yandex.ru/i/okKgtjunZAf7RQ",
+      "status": "normal",
+      "updated_at": "2026-06-30 11:38:42",
+      "history": [
+        {
+          "speed_km_h": 42,
+          "date": "2025-08-13"
+        }
+      ]
+    },
+    {
+      "id": 1937,
+      "breed": "Веймаранер",
+      "sex": "С",
+      "name": "Тень",
+      "speed_km_h": 42,
+      "date": "2025-08-13",
+      "screenshot_url": "https://disk.yandex.ru/i/_B0zAO1UwFgFGw",
+      "status": "normal",
+      "updated_at": "2026-06-30 11:38:42",
+      "history": [
+        {
+          "speed_km_h": 39,
+          "date": "2026-06-25"
+        }
+      ]
+    }
+  ]
+}

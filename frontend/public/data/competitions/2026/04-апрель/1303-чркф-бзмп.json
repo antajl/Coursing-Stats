@@ -1,0 +1,930 @@
+{
+  "schema": "coursing-stats/competition-v1",
+  "exported_at": "2026-07-08T00:31:32.188Z",
+  "source": "sqlite-admin-sync",
+  "event_id": 1303,
+  "event": {
+    "id": 1303,
+    "year": 2026,
+    "date_start": "2026-04-12",
+    "date_end": null,
+    "rank_label": "ЧРКФ\n(БЗМП)",
+    "event_type": "bzmp",
+    "competition_kind": "ЧРКФ",
+    "competition_type": "БЗМП",
+    "title": "Курсинг Ставрополь — ЧРКФ (БЗМП)",
+    "host_club": "ОО Региональное кинологическое общество Ставропольского края \"Альянс\"",
+    "region": null,
+    "location": "Ставропольский край, Ставрополь",
+    "catalog_url": "http://procoursing.ru/2026/2026-04-12_Catalog_BZMP.pdf",
+    "results_url": "http://procoursing.ru/2026/2026-04-12_Complete_Results_BZMP.html",
+    "confirmed": 1,
+    "last_modified": null,
+    "scraped_at": "2026-06-27 20:19:37",
+    "telegram_url": null,
+    "full_title": null,
+    "event_date": null,
+    "protocol_location": null,
+    "judges": "Карелина Н.В.",
+    "track_schemes": []
+  },
+  "result_count": 14,
+  "results": [
+    {
+      "id": 6335,
+      "event_id": 1303,
+      "dog_id": 676,
+      "breed_class": "Американский голый терьер - Стандартный - Суки",
+      "catalog_no": null,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dns",
+      "raw_scores_json": {
+        "heats": [],
+        "grand_total": null,
+        "normalized_score": null
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>4</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Бигль</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Юниоры</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ОСКАР /<br>OSKAR</font></td> <td colspan=\"19\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Неявка</font></td> ",
+      "judges": "",
+      "status_reason": "",
+      "dog_key": "оскар-oskar--бигль",
+      "dog": {
+        "id": 676,
+        "dog_key": "оскар-oskar--бигль",
+        "name_lat": "ОСКАР /OSKAR",
+        "name_ru": "ОСКАР /OSKAR",
+        "breed": "БИГЛЬ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 6336,
+      "event_id": 1303,
+      "dog_id": 677,
+      "breed_class": "Американский голый терьер - Стандартный - Суки",
+      "catalog_no": null,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dns",
+      "raw_scores_json": {
+        "heats": [],
+        "grand_total": null,
+        "normalized_score": null
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>7</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Американский голый терьер</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Юниоры</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">СЕВЕРИН СВОРА АДЫГЕИ</font></td> <td colspan=\"19\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Неявка</font></td> ",
+      "judges": "",
+      "status_reason": "",
+      "dog_key": "северин-свора-адыгеи--американскии-голыи-терье",
+      "dog": {
+        "id": 677,
+        "dog_key": "северин-свора-адыгеи--американскии-голыи-терье",
+        "name_lat": "СЕВЕРИН СВОРА АДЫГЕИ",
+        "name_ru": "СЕВЕРИН СВОРА АДЫГЕИ",
+        "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 6337,
+      "event_id": 1303,
+      "dog_id": 678,
+      "breed_class": "Американский голый терьер - Стандартный - Суки",
+      "catalog_no": null,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dns",
+      "raw_scores_json": {
+        "heats": [],
+        "grand_total": null,
+        "normalized_score": null
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>11</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Американский голый терьер</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">АМБЕР МУН</font></td> <td colspan=\"19\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Неявка</font></td> ",
+      "judges": "",
+      "status_reason": "",
+      "dog_key": "амбер-мун--американскии-голыи-терье",
+      "dog": {
+        "id": 678,
+        "dog_key": "амбер-мун--американскии-голыи-терье",
+        "name_lat": "АМБЕР МУН",
+        "name_ru": "АМБЕР МУН",
+        "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 6324,
+      "event_id": 1303,
+      "dog_id": 665,
+      "breed_class": "Белая швейцарская овчарка - Стандартный - Кобели",
+      "catalog_no": null,
+      "placement": 1,
+      "total_score": 142,
+      "judge_count": 1,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 29,
+            "bib_number": 29,
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  14,
+                  14,
+                  13,
+                  15,
+                  16
+                ],
+                "sum": 72
+              }
+            ],
+            "total": 72,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 32,
+            "bib_number": 32,
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  13,
+                  14,
+                  12,
+                  15,
+                  16
+                ],
+                "sum": 70
+              }
+            ],
+            "total": 70,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 142,
+        "normalized_score": 142,
+        "format": "bzmp"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>1</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Белая швейцарская овчарка</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ZHE TEM KASPER</font></td> <td bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>29</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>72</b></font></td> <td><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>72</b></font></td> <td bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>32</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>70</b></font></td> <td><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>70</b></font></td> <td><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b>142</b></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": "",
+      "dog_key": "zhe-tem-kasper--белая-швеицарская-овчарк",
+      "dog": {
+        "id": 665,
+        "dog_key": "zhe-tem-kasper--белая-швеицарская-овчарк",
+        "name_lat": "ZHE TEM KASPER",
+        "name_ru": "ZHE TEM KASPER",
+        "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 6325,
+      "event_id": 1303,
+      "dog_id": 666,
+      "breed_class": "Немецкая овчарка стандартная - Стандартный - Суки",
+      "catalog_no": null,
+      "placement": 1,
+      "total_score": 173,
+      "judge_count": 1,
+      "qualification": "",
+      "vc": "+",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 30,
+            "bib_number": 30,
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  16,
+                  18
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 86,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 33,
+            "bib_number": 33,
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 87,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 173,
+        "normalized_score": 173,
+        "format": "bzmp"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>2</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Немецкая овчарка стандартная</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">PARMA VON AVERSWALD</font></td> <td bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>30</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>86</b></font></td> <td><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>86</b></font></td> <td bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>33</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>87</b></font></td> <td><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>87</b></font></td> <td bgcolor=\"#c0c0c0\"><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b><abbr title=\"Второй результат состязания\">173</abbr></b></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">+</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": "",
+      "dog_key": "parma-von-averswald--немецкая-овчарка-стандар",
+      "dog": {
+        "id": 666,
+        "dog_key": "parma-von-averswald--немецкая-овчарка-стандар",
+        "name_lat": "PARMA VON AVERSWALD",
+        "name_ru": "PARMA VON AVERSWALD",
+        "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 6326,
+      "event_id": 1303,
+      "dog_id": 667,
+      "breed_class": "Бигль - Стандартный - Кобели",
+      "catalog_no": null,
+      "placement": 1,
+      "total_score": 164,
+      "judge_count": 1,
+      "qualification": "",
+      "vc": "+",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 28,
+            "bib_number": 28,
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 83,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 31,
+            "bib_number": 31,
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  14,
+                  17,
+                  17,
+                  15,
+                  18
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 81,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 164,
+        "normalized_score": 164,
+        "format": "bzmp"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>3</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Бигль</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ONIKS PERSEY</font></td> <td bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>28</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>83</b></font></td> <td><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>83</b></font></td> <td bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>31</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>81</b></font></td> <td><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>81</b></font></td> <td bgcolor=\"#cd7f32\"><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b><abbr title=\"Третий результат состязания\">164</abbr></b></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">+</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": "",
+      "dog_key": "oniks-persey--бигль",
+      "dog": {
+        "id": 667,
+        "dog_key": "oniks-persey--бигль",
+        "name_lat": "ONIKS PERSEY",
+        "name_ru": "ONIKS PERSEY",
+        "breed": "БИГЛЬ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 6327,
+      "event_id": 1303,
+      "dog_id": 668,
+      "breed_class": "Венгерская короткошёрстная легавая (Выжла) - Стандартный - Суки",
+      "catalog_no": null,
+      "placement": 1,
+      "total_score": 176,
+      "judge_count": 1,
+      "qualification": "",
+      "vc": "+",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 30,
+            "bib_number": 30,
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 88,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 33,
+            "bib_number": 33,
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 88,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 176,
+        "normalized_score": 176,
+        "format": "bzmp"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>5</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Венгерская короткошёрстная легавая (Выжла)</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">GOLDEN APPLE</font></td> <td bgcolor=\"#f0ffff\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>30</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>88</b></font></td> <td><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>88</b></font></td> <td bgcolor=\"#f0ffff\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>33</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>88</b></font></td> <td><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>88</b></font></td> <td bgcolor=\"#ffd700\"><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b><abbr title=\"Лучший результат состязания\">176</abbr></b></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">+</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": "",
+      "dog_key": "golden-apple--венгерская-короткошерстн",
+      "dog": {
+        "id": 668,
+        "dog_key": "golden-apple--венгерская-короткошерстн",
+        "name_lat": "GOLDEN APPLE",
+        "name_ru": "GOLDEN APPLE",
+        "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ ЛЕГАВАЯ (ВЫЖЛА)",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 6328,
+      "event_id": 1303,
+      "dog_id": 669,
+      "breed_class": "Американский голый терьер - Юниоры - Кобели",
+      "catalog_no": null,
+      "placement": 1,
+      "total_score": 158,
+      "judge_count": 1,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 19,
+            "bib_number": 19,
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  14,
+                  16,
+                  16,
+                  16,
+                  16
+                ],
+                "sum": 78
+              }
+            ],
+            "total": 78,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 24,
+            "bib_number": 24,
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  16,
+                  15,
+                  17,
+                  17
+                ],
+                "sum": 80
+              }
+            ],
+            "total": 80,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 158,
+        "normalized_score": 158,
+        "format": "bzmp"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>6</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Американский голый терьер</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Юниоры</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">SEVAN</font></td> <td bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>19</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>78</b></font></td> <td><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>78</b></font></td> <td bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>24</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>80</b></font></td> <td><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>80</b></font></td> <td><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b>158</b></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": "",
+      "dog_key": "sevan--американскии-голыи-терье",
+      "dog": {
+        "id": 669,
+        "dog_key": "sevan--американскии-голыи-терье",
+        "name_lat": "SEVAN",
+        "name_ru": "SEVAN",
+        "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 6329,
+      "event_id": 1303,
+      "dog_id": 670,
+      "breed_class": "Американский голый терьер - Стандартный - Кобели",
+      "catalog_no": null,
+      "placement": 1,
+      "total_score": 162,
+      "judge_count": 1,
+      "qualification": "Чемпион РКФ, RegCACMB",
+      "vc": "+",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 21,
+            "bib_number": 21,
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  17,
+                  17,
+                  15,
+                  17
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 81,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 25,
+            "bib_number": 25,
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  16,
+                  16,
+                  16,
+                  17
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 81,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 162,
+        "normalized_score": 162,
+        "format": "bzmp"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>10</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Американский голый терьер</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ФАБИАН ДОМИНЕРИНГ</font></td> <td bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>21</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>81</b></font></td> <td><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>81</b></font></td> <td bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>25</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>81</b></font></td> <td><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>81</b></font></td> <td><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b>162</b></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">+</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Чемпион РКФ, RegCACMB</font></td> ",
+      "judges": "",
+      "status_reason": "",
+      "dog_key": "фабиан-доминеринг--американскии-голыи-терье",
+      "dog": {
+        "id": 670,
+        "dog_key": "фабиан-доминеринг--американскии-голыи-терье",
+        "name_lat": "ФАБИАН ДОМИНЕРИНГ",
+        "name_ru": "ФАБИАН ДОМИНЕРИНГ",
+        "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 6332,
+      "event_id": 1303,
+      "dog_id": 673,
+      "breed_class": "Американский голый терьер - Стандартный - Суки",
+      "catalog_no": null,
+      "placement": 1,
+      "total_score": 162,
+      "judge_count": 1,
+      "qualification": "Чемпион РКФ, RegCACMB",
+      "vc": "+",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 23,
+            "bib_number": 23,
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  16,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 82,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 27,
+            "bib_number": 27,
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  16,
+                  16,
+                  16,
+                  16
+                ],
+                "sum": 80
+              }
+            ],
+            "total": 80,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 162,
+        "normalized_score": 162,
+        "format": "bzmp"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>12</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Американский голый терьер</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">DAKOTA SOUL QUEEN</font></td> <td bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>23</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>82</b></font></td> <td><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>82</b></font></td> <td bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>27</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>80</b></font></td> <td><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>80</b></font></td> <td><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b>162</b></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">+</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Чемпион РКФ, RegCACMB</font></td> ",
+      "judges": "",
+      "status_reason": "",
+      "dog_key": "dakota-soul-queen--американскии-голыи-терье",
+      "dog": {
+        "id": 673,
+        "dog_key": "dakota-soul-queen--американскии-голыи-терье",
+        "name_lat": "DAKOTA SOUL QUEEN",
+        "name_ru": "DAKOTA SOUL QUEEN",
+        "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 6330,
+      "event_id": 1303,
+      "dog_id": 671,
+      "breed_class": "Американский голый терьер - Стандартный - Кобели",
+      "catalog_no": null,
+      "placement": 2,
+      "total_score": 152,
+      "judge_count": 1,
+      "qualification": "CACMB, RegCACMB",
+      "vc": "+",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 20,
+            "bib_number": 20,
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  14,
+                  17,
+                  17,
+                  15,
+                  17
+                ],
+                "sum": 80
+              }
+            ],
+            "total": 80,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 25,
+            "bib_number": 25,
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  13,
+                  15,
+                  15,
+                  13,
+                  16
+                ],
+                "sum": 72
+              }
+            ],
+            "total": 72,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 152,
+        "normalized_score": 152,
+        "format": "bzmp"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>8</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Американский голый терьер</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">FIDEL DEFT</font></td> <td bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>20</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>80</b></font></td> <td><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>80</b></font></td> <td bgcolor=\"#f0ffff\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>25</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>72</b></font></td> <td><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>72</b></font></td> <td><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b>152</b></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">+</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CACMB, RegCACMB</font></td> ",
+      "judges": "",
+      "status_reason": "",
+      "dog_key": "fidel-deft--американскии-голыи-терье",
+      "dog": {
+        "id": 671,
+        "dog_key": "fidel-deft--американскии-голыи-терье",
+        "name_lat": "FIDEL DEFT",
+        "name_ru": "FIDEL DEFT",
+        "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 6333,
+      "event_id": 1303,
+      "dog_id": 674,
+      "breed_class": "Американский голый терьер - Стандартный - Суки",
+      "catalog_no": null,
+      "placement": 2,
+      "total_score": 160,
+      "judge_count": 1,
+      "qualification": "CACMB, RegCACMB",
+      "vc": "+",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 22,
+            "bib_number": 22,
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  15,
+                  16,
+                  16,
+                  17
+                ],
+                "sum": 79
+              }
+            ],
+            "total": 79,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 27,
+            "bib_number": 27,
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  15,
+                  16
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 81,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 160,
+        "normalized_score": 160,
+        "format": "bzmp"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>14</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Американский голый терьер</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ФУРИЯ ШРЕЛЛ</font></td> <td bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>22</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>79</b></font></td> <td><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>79</b></font></td> <td bgcolor=\"#f0ffff\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>27</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>81</b></font></td> <td><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>81</b></font></td> <td><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b>160</b></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">+</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CACMB, RegCACMB</font></td> ",
+      "judges": "",
+      "status_reason": "",
+      "dog_key": "фурия-шрелл--американскии-голыи-терье",
+      "dog": {
+        "id": 674,
+        "dog_key": "фурия-шрелл--американскии-голыи-терье",
+        "name_lat": "ФУРИЯ ШРЕЛЛ",
+        "name_ru": "ФУРИЯ ШРЕЛЛ",
+        "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 6331,
+      "event_id": 1303,
+      "dog_id": 672,
+      "breed_class": "Американский голый терьер - Стандартный - Кобели",
+      "catalog_no": null,
+      "placement": 3,
+      "total_score": 145,
+      "judge_count": 1,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 20,
+            "bib_number": 20,
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  10,
+                  16,
+                  16,
+                  12,
+                  16
+                ],
+                "sum": 70
+              }
+            ],
+            "total": 70,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 26,
+            "bib_number": 26,
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  13,
+                  16,
+                  16,
+                  13,
+                  17
+                ],
+                "sum": 75
+              }
+            ],
+            "total": 75,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 145,
+        "normalized_score": 145,
+        "format": "bzmp"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>9</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Американский голый терьер</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ДОДЖ ВОРТИ КОНТЕНДЕР</font></td> <td bgcolor=\"#f0ffff\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>20</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">10</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>70</b></font></td> <td><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>70</b></font></td> <td bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>26</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>75</b></font></td> <td><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>75</b></font></td> <td><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b>145</b></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": "",
+      "dog_key": "додж-ворти-контендер--американскии-голыи-терье",
+      "dog": {
+        "id": 672,
+        "dog_key": "додж-ворти-контендер--американскии-голыи-терье",
+        "name_lat": "ДОДЖ ВОРТИ КОНТЕНДЕР",
+        "name_ru": "ДОДЖ ВОРТИ КОНТЕНДЕР",
+        "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 6334,
+      "event_id": 1303,
+      "dog_id": 675,
+      "breed_class": "Американский голый терьер - Стандартный - Суки",
+      "catalog_no": null,
+      "placement": 3,
+      "total_score": 149,
+      "judge_count": 1,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 22,
+            "bib_number": 22,
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  14,
+                  13,
+                  13,
+                  15,
+                  17
+                ],
+                "sum": 72
+              }
+            ],
+            "total": 72,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 26,
+            "bib_number": 26,
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  14,
+                  13,
+                  17,
+                  17
+                ],
+                "sum": 77
+              }
+            ],
+            "total": 77,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 149,
+        "normalized_score": 149,
+        "format": "bzmp"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>13</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Американский голый терьер</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">KAYLA</font></td> <td bgcolor=\"#f0ffff\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>22</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>72</b></font></td> <td><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>72</b></font></td> <td bgcolor=\"#f0ffff\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>26</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>77</b></font></td> <td><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>77</b></font></td> <td><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b>149</b></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": "",
+      "dog_key": "kayla--американскии-голыи-терье",
+      "dog": {
+        "id": 675,
+        "dog_key": "kayla--американскии-голыи-терье",
+        "name_lat": "KAYLA",
+        "name_ru": "KAYLA",
+        "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
+        "sex": null,
+        "owner": null
+      }
+    }
+  ]
+}

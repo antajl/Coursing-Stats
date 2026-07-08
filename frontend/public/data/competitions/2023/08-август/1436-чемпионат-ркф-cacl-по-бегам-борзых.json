@@ -1,0 +1,2933 @@
+{
+  "schema": "coursing-stats/competition-v1",
+  "exported_at": "2026-07-08T00:31:32.188Z",
+  "source": "sqlite-admin-sync",
+  "event_id": 1436,
+  "event": {
+    "id": 1436,
+    "year": 2023,
+    "date_start": "2023-08-05",
+    "date_end": null,
+    "rank_label": "ЧРКФ - CACL по рейсингу",
+    "event_type": "unknown",
+    "competition_kind": "CACL",
+    "competition_type": "",
+    "title": "ЧРКФ - CACL по рейсингу",
+    "host_club": "",
+    "region": null,
+    "location": "Московская область, Новый Милет",
+    "catalog_url": "http://procoursing.ru/Catalog_2023-08-05.pdf",
+    "results_url": "http://procoursing.ru/Complete_Results_2023-08-05.html",
+    "confirmed": 0,
+    "last_modified": null,
+    "scraped_at": "2026-07-07 23:44:35",
+    "telegram_url": null,
+    "full_title": "Чемпионат РКФ - CACL по бегам борзых",
+    "event_date": null,
+    "protocol_location": null,
+    "judges": "Куликова Г.В., Яковлева Т.С.",
+    "track_schemes": [],
+    "rank_code": "ЧРКФ",
+    "discipline_code": "racing"
+  },
+  "result_count": 66,
+  "results": [
+    {
+      "id": 17840,
+      "event_id": 1436,
+      "dog_id": 9358,
+      "breed_class": "Басенджи - Стандартный - Суки",
+      "catalog_no": 7,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "heats": [],
+        "grand_total": null,
+        "normalized_score": null,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">7</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Басенджи</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">GLAZUR S KNJAZHESKOGO DVORA</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">38</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Дисквалификация (Агрессия)</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": "Агрессия",
+      "dog_key": "glazur-s-knjazheskogo-dvora--басенджи",
+      "dog": {
+        "id": 9358,
+        "dog_key": "glazur-s-knjazheskogo-dvora--басенджи",
+        "name_lat": "GLAZUR S KNJAZHESKOGO DVORA",
+        "name_ru": "GLAZUR S KNJAZHESKOGO DVORA",
+        "breed": "БАСЕНДЖИ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17846,
+      "event_id": 1436,
+      "dog_id": 7194,
+      "breed_class": "Малая итальянская борзая (Левретка) - Стандартный-спринтеры - Микс",
+      "catalog_no": 11,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "heats": [],
+        "grand_total": null,
+        "normalized_score": null,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">11</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Малая итальянская борзая (Левретка)</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный-спринтеры</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">АГОТИ АДАМАНТЕ ДЕЛ ЕСПАЦИО</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">45</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Снят (Вход в круг)</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": "Вход в круг",
+      "dog_key": "аготи-адаманте-дел-еспацио--малая-итальянская-борзая",
+      "dog": {
+        "id": 7194,
+        "dog_key": "аготи-адаманте-дел-еспацио--малая-итальянская-борзая",
+        "name_lat": "АГОТИ АДАМАНТЕ ДЕЛ ЕСПАЦИО",
+        "name_ru": "АГОТИ АДАМАНТЕ ДЕЛ ЕСПАЦИО",
+        "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17847,
+      "event_id": 1436,
+      "dog_id": 7195,
+      "breed_class": "Малая итальянская борзая (Левретка) - Стандартный-спринтеры - Микс",
+      "catalog_no": 13,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "heats": [],
+        "grand_total": null,
+        "normalized_score": null,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Малая итальянская борзая (Левретка)</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный-спринтеры</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ПЕРМЬ ВЕЛИКАЯ ЗЕФИР</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">45</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Снят (Вход в круг)</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": "Вход в круг",
+      "dog_key": "пермь-великая-зефир--малая-итальянская-борзая",
+      "dog": {
+        "id": 7195,
+        "dog_key": "пермь-великая-зефир--малая-итальянская-борзая",
+        "name_lat": "ПЕРМЬ ВЕЛИКАЯ ЗЕФИР",
+        "name_ru": "ПЕРМЬ ВЕЛИКАЯ ЗЕФИР",
+        "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17848,
+      "event_id": 1436,
+      "dog_id": 9248,
+      "breed_class": "Родезийский риджбек - Ветераны - Кобели",
+      "catalog_no": 18,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "unknown_status_check_raw_text",
+      "raw_scores_json": {
+        "heats": [],
+        "grand_total": null,
+        "normalized_score": null,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Родезийский риджбек</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Ветераны</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ARIES KHAN MARLON BRANDO</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Зацеп</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">27</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сход</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "aries-khan-marlon-brando--родезиискии-риджбек",
+      "dog": {
+        "id": 9248,
+        "dog_key": "aries-khan-marlon-brando--родезиискии-риджбек",
+        "name_lat": "ARIES KHAN MARLON BRANDO",
+        "name_ru": "ARIES KHAN MARLON BRANDO",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17851,
+      "event_id": 1436,
+      "dog_id": 9367,
+      "breed_class": "Родезийский риджбек - Стандартный - Кобели",
+      "catalog_no": 19,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "heats": [],
+        "grand_total": null,
+        "normalized_score": null,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">19</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Родезийский риджбек</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">АРИЕС ХАН РЕГУЛУС РЭДКЛИФФ /<br>ARIES KHAN REGULUS RADCLIFFE</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">480</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">8</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Дисквалификация (Агрессия)</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": "Агрессия",
+      "dog_key": "ариес-хан-регулус-рэдклифф-aries-khan-re--родезиискии-риджбек",
+      "dog": {
+        "id": 9367,
+        "dog_key": "ариес-хан-регулус-рэдклифф-aries-khan-re--родезиискии-риджбек",
+        "name_lat": "АРИЕС ХАН РЕГУЛУС РЭДКЛИФФ /ARIES KHAN REGULUS RADCLIFFE",
+        "name_ru": "АРИЕС ХАН РЕГУЛУС РЭДКЛИФФ /ARIES KHAN REGULUS RADCLIFFE",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17852,
+      "event_id": 1436,
+      "dog_id": 180,
+      "breed_class": "Родезийский риджбек - Стандартный - Кобели",
+      "catalog_no": 20,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "heats": [],
+        "grand_total": null,
+        "normalized_score": null,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">20</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Родезийский риджбек</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ГРАНД КОРТЕЖ НЕМБУС ЗЕ БРАЙТЕСТ</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">480</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">8</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Снят (Вход в круг)</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": "Вход в круг",
+      "dog_key": "гранд-кортеж-нембус-зе-браитест--родезиискии-риджбек",
+      "dog": {
+        "id": 180,
+        "dog_key": "гранд-кортеж-нембус-зе-браитест--родезиискии-риджбек",
+        "name_lat": "ГРАНД КОРТЕЖ НЕМБУС ЗЕ БРАЙТЕСТ",
+        "name_ru": "ГРАНД КОРТЕЖ НЕМБУС ЗЕ БРАЙТЕСТ",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17857,
+      "event_id": 1436,
+      "dog_id": 183,
+      "breed_class": "Родезийский риджбек - Стандартный - Суки",
+      "catalog_no": 27,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "heats": [],
+        "grand_total": null,
+        "normalized_score": null,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">27</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Родезийский риджбек</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ТИНА ТРЕЙДИНГ НИККИ ФРАНЦИСКА /<br>TINA TRADING NIKKI FRANCISKA</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">480</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">10</font></td> <td bgcolor=\"#f0ffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Снят (Вход в круг)</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": "Вход в круг",
+      "dog_key": "тина-треидинг-никки-франциска-tina-tradi--родезиискии-риджбек",
+      "dog": {
+        "id": 183,
+        "dog_key": "тина-треидинг-никки-франциска-tina-tradi--родезиискии-риджбек",
+        "name_lat": "ТИНА ТРЕЙДИНГ НИККИ ФРАНЦИСКА /TINA TRADING NIKKI FRANCISKA",
+        "name_ru": "ТИНА ТРЕЙДИНГ НИККИ ФРАНЦИСКА /TINA TRADING NIKKI FRANCISKA",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17860,
+      "event_id": 1436,
+      "dog_id": 9370,
+      "breed_class": "Русская псовая борзая - Стандартный - Кобели",
+      "catalog_no": 30,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 35.45,
+            "speed_kmh": 48.745
+          }
+        ],
+        "grand_total": 35.45,
+        "normalized_score": 35.45,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">30</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БОРЗЫЕ-СЕНАВИАН БУРАН /<br>BORZIE-SENAVIAN BURAN</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">480</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">35.45 с<br>13.54 м/с<br>48.745 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">19</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Снят (Остался в боксе)</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": "Остался в боксе",
+      "dog_key": "борзые-сенавиан-буран-borzie-senavian-bu--русская-псовая-борзая",
+      "dog": {
+        "id": 9370,
+        "dog_key": "борзые-сенавиан-буран-borzie-senavian-bu--русская-псовая-борзая",
+        "name_lat": "БОРЗЫЕ СЕНАВИАН БУРАН /BORZIE SENAVIAN BURAN",
+        "name_ru": "БОРЗЫЕ СЕНАВИАН БУРАН /BORZIE SENAVIAN BURAN",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17861,
+      "event_id": 1436,
+      "dog_id": 9302,
+      "breed_class": "Русская псовая борзая - Стандартный - Кобели",
+      "catalog_no": 28,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 2,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 37.24,
+            "speed_kmh": 46.402
+          }
+        ],
+        "grand_total": 37.24,
+        "normalized_score": 37.24,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">28</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">APRIORI LUXURY MASTER</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">480</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">37.24 с<br>12.89 м/с<br>46.402 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Снят (Вход в круг)</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": "Вход в круг",
+      "dog_key": "apriori-luxury-master--русская-псовая-борзая",
+      "dog": {
+        "id": 9302,
+        "dog_key": "apriori-luxury-master--русская-псовая-борзая",
+        "name_lat": "APRIORI LUXURY MASTER",
+        "name_ru": "APRIORI LUXURY MASTER",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17866,
+      "event_id": 1436,
+      "dog_id": 9373,
+      "breed_class": "Русская псовая борзая - Стандартный - Суки",
+      "catalog_no": 32,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "heats": [],
+        "grand_total": null,
+        "normalized_score": null,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">32</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">DERZY VETER SENSATION</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">480</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">4</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Дисквалификация (Агрессия)</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": "Агрессия",
+      "dog_key": "derzy-veter-sensation--русская-псовая-борзая",
+      "dog": {
+        "id": 9373,
+        "dog_key": "derzy-veter-sensation--русская-псовая-борзая",
+        "name_lat": "DERZY VETER SENSATION",
+        "name_ru": "DERZY VETER SENSATION",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17867,
+      "event_id": 1436,
+      "dog_id": 9374,
+      "breed_class": "Русская псовая борзая - Стандартный - Суки",
+      "catalog_no": 36,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "heats": [],
+        "grand_total": null,
+        "normalized_score": null,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">36</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">КУПАВА ЯСНАЯ</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">480</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">4</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Дисквалификация (Агрессия)</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": "Агрессия",
+      "dog_key": "купава-ясная--русская-псовая-борзая",
+      "dog": {
+        "id": 9374,
+        "dog_key": "купава-ясная--русская-псовая-борзая",
+        "name_lat": "КУПАВА ЯСНАЯ",
+        "name_ru": "КУПАВА ЯСНАЯ",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17870,
+      "event_id": 1436,
+      "dog_id": 5774,
+      "breed_class": "Русская псовая борзая - Юниоры - Микс",
+      "catalog_no": 42,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 6,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 34.39,
+            "speed_kmh": 50.247
+          },
+          {
+            "heat_number": 22,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 36.15,
+            "speed_kmh": 47.801
+          }
+        ],
+        "grand_total": 34.39,
+        "normalized_score": 34.39,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">42</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Юниоры</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БОРЗЫЕ-СЕНАВИАН ДОРА</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">480</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">6</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">34.39 с<br>13.96 м/с<br>50.247 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">22</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">36.15 с<br>13.28 м/с<br>47.801 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">35</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Дисквалификация (Агрессия)</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": "Агрессия",
+      "dog_key": "борзые-сенавиан-дора--русская-псовая-борзая",
+      "dog": {
+        "id": 5774,
+        "dog_key": "борзые-сенавиан-дора--русская-псовая-борзая",
+        "name_lat": "БОРЗЫЕ СЕНАВИАН ДОРА",
+        "name_ru": "БОРЗЫЕ СЕНАВИАН ДОРА",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17871,
+      "event_id": 1436,
+      "dog_id": 5764,
+      "breed_class": "Русская псовая борзая - Юниоры - Микс",
+      "catalog_no": 39,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 7,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 34.6,
+            "speed_kmh": 49.942
+          }
+        ],
+        "grand_total": 34.6,
+        "normalized_score": 34.6,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">39</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Юниоры</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БОРЗЫЕ-СЕНАВИАН ЕГОР</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">480</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">7</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">34.60 с<br>13.87 м/с<br>49.942 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">23</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Дисквалификация Агрессия)</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": "Дисквалификация Агрессия)",
+      "dog_key": "борзые-сенавиан-егор--русская-псовая-борзая",
+      "dog": {
+        "id": 5764,
+        "dog_key": "борзые-сенавиан-егор--русская-псовая-борзая",
+        "name_lat": "БОРЗЫЕ СЕНАВИАН ЕГОР",
+        "name_ru": "БОРЗЫЕ СЕНАВИАН ЕГОР",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17872,
+      "event_id": 1436,
+      "dog_id": 9377,
+      "breed_class": "Русская псовая борзая - Юниоры - Микс",
+      "catalog_no": 40,
+      "placement": null,
+      "total_score": 37.78,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 5,
+            "bib_number": 3,
+            "bib_color": "#f0ffff",
+            "time": 37.78,
+            "speed_kmh": 45.738
+          }
+        ],
+        "grand_total": 37.78,
+        "normalized_score": 37.78,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">40</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Юниоры</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">АЗАРТНАЯ ОХОТА ГРЕЗА</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">480</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">5</font></td> <td bgcolor=\"#f0ffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">37.78 с<br>12.71 м/с<br>45.738 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">22</font></td> <td bgcolor=\"#ffffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сход</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "азартная-охота-греза--русская-псовая-борзая",
+      "dog": {
+        "id": 9377,
+        "dog_key": "азартная-охота-греза--русская-псовая-борзая",
+        "name_lat": "АЗАРТНАЯ ОХОТА ГРЕЗА",
+        "name_ru": "АЗАРТНАЯ ОХОТА ГРЕЗА",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17873,
+      "event_id": 1436,
+      "dog_id": 9378,
+      "breed_class": "Русская псовая борзая - Юниоры - Микс",
+      "catalog_no": 38,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "heats": [],
+        "grand_total": null,
+        "normalized_score": null,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">38</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Юниоры</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БОРЗЫЕ-СЕНАВИАН ДАВИЛО II</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">480</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">7</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Снят (Вход в круг)</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": "Вход в круг",
+      "dog_key": "борзые-сенавиан-давило-ii--русская-псовая-борзая",
+      "dog": {
+        "id": 9378,
+        "dog_key": "борзые-сенавиан-давило-ii--русская-псовая-борзая",
+        "name_lat": "БОРЗЫЕ СЕНАВИАН ДАВИЛО II",
+        "name_ru": "БОРЗЫЕ СЕНАВИАН ДАВИЛО II",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17874,
+      "event_id": 1436,
+      "dog_id": 9379,
+      "breed_class": "Русская псовая борзая - Юниоры - Микс",
+      "catalog_no": 43,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "heats": [],
+        "grand_total": null,
+        "normalized_score": null,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">43</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Юниоры</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ПРЕЛЕСТА</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">480</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">5</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Дисквалификация (Агрессия)</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": "Агрессия",
+      "dog_key": "прелеста--русская-псовая-борзая",
+      "dog": {
+        "id": 9379,
+        "dog_key": "прелеста--русская-псовая-борзая",
+        "name_lat": "ПРЕЛЕСТА",
+        "name_ru": "ПРЕЛЕСТА",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17876,
+      "event_id": 1436,
+      "dog_id": 9381,
+      "breed_class": "Салюки - Стандартный - Суки",
+      "catalog_no": 46,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "heats": [],
+        "grand_total": null,
+        "normalized_score": null,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">46</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Салюки</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">САЛГРЕЙ'С ТЭЙК МАЙ БРЕФ ЭВЕЙ /<br>SALGREY'S TAKE MY BREATH AWAY</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">480</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Снят (Вход в круг)</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": "Вход в круг",
+      "dog_key": "салгреис-тэик-маи-бреф-эвеи-salgreys-tak--салюки",
+      "dog": {
+        "id": 9381,
+        "dog_key": "салгреис-тэик-маи-бреф-эвеи-salgreys-tak--салюки",
+        "name_lat": "САЛГРЕЙС ТЭЙК МАЙ БРЕФ ЭВЕЙ /SALGREYS TAKE MY BREATH AWAY",
+        "name_ru": "САЛГРЕЙС ТЭЙК МАЙ БРЕФ ЭВЕЙ /SALGREYS TAKE MY BREATH AWAY",
+        "breed": "САЛЮКИ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17878,
+      "event_id": 1436,
+      "dog_id": 416,
+      "breed_class": "Слюги - Стандартный - Кобели",
+      "catalog_no": 47,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "heats": [],
+        "grand_total": null,
+        "normalized_score": null,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">47</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Слюги</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">BORZOMIR BARKHAN ALI</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">480</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сошёл</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": "Сошёл",
+      "dog_key": "borzomir-barkhan-ali--слюги",
+      "dog": {
+        "id": 416,
+        "dog_key": "borzomir-barkhan-ali--слюги",
+        "name_lat": "BORZOMIR BARKHAN ALI",
+        "name_ru": "BORZOMIR BARKHAN ALI",
+        "breed": "СЛЮГИ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17879,
+      "event_id": 1436,
+      "dog_id": 9383,
+      "breed_class": "Слюги - Стандартный - Кобели",
+      "catalog_no": 48,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "heats": [],
+        "grand_total": null,
+        "normalized_score": null,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">48</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Слюги</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">BORZOMIR BASEL AKMAL</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">480</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сошёл</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": "Сошёл",
+      "dog_key": "borzomir-basel-akmal--слюги",
+      "dog": {
+        "id": 9383,
+        "dog_key": "borzomir-basel-akmal--слюги",
+        "name_lat": "BORZOMIR BASEL AKMAL",
+        "name_ru": "BORZOMIR BASEL AKMAL",
+        "breed": "СЛЮГИ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17881,
+      "event_id": 1436,
+      "dog_id": 9385,
+      "breed_class": "Тазы - Стандартный - Микс",
+      "catalog_no": 50,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 17,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 38.01,
+            "speed_kmh": 45.462
+          }
+        ],
+        "grand_total": 38.01,
+        "normalized_score": 38.01,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">50</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Тазы</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">BORZOMIR AMIR</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">480</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">38.01 с<br>12.63 м/с<br>45.462 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">32</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Снят владельцем</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": "Снят владельцем",
+      "dog_key": "borzomir-amir--тазы",
+      "dog": {
+        "id": 9385,
+        "dog_key": "borzomir-amir--тазы",
+        "name_lat": "BORZOMIR AMIR",
+        "name_ru": "BORZOMIR AMIR",
+        "breed": "ТАЗЫ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17882,
+      "event_id": 1436,
+      "dog_id": 9386,
+      "breed_class": "Тазы - Стандартный - Микс",
+      "catalog_no": 52,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "heats": [],
+        "grand_total": null,
+        "normalized_score": null,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">52</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Тазы</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">МАТИЛЬДА ДЛЯ БОРЗОМИР</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">480</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Снят (Вход в круг)</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": "Вход в круг",
+      "dog_key": "матильда-для-борзомир--тазы",
+      "dog": {
+        "id": 9386,
+        "dog_key": "матильда-для-борзомир--тазы",
+        "name_lat": "МАТИЛЬДА ДЛЯ БОРЗОМИР",
+        "name_ru": "МАТИЛЬДА ДЛЯ БОРЗОМИР",
+        "breed": "ТАЗЫ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17885,
+      "event_id": 1436,
+      "dog_id": 9345,
+      "breed_class": "Уиппет - Стандартный - Микс",
+      "catalog_no": 62,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 43,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 25.67,
+            "speed_kmh": 50.487
+          },
+          {
+            "heat_number": 50,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 26.19,
+            "speed_kmh": 49.485
+          }
+        ],
+        "grand_total": 25.67,
+        "normalized_score": 25.67,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">62</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ЩИТ ПОБЕДЫ ИЗ ПОЛЕТА МЕЧТЫ /<br>SHCHIT POBEDY IZ POLETA MECHTI</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">43</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">25.67 с<br>14.02 м/с<br>50.487 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">50</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">26.19 с<br>13.75 м/с<br>49.485 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">59</font></td> <td bgcolor=\"#f0ffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Дисквалификация (Агрессия)</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": "Агрессия",
+      "dog_key": "щит-победы-из-полета-мечты-shchit-pobedy--уиппет",
+      "dog": {
+        "id": 9345,
+        "dog_key": "щит-победы-из-полета-мечты-shchit-pobedy--уиппет",
+        "name_lat": "ЩИТ ПОБЕДЫ ИЗ ПОЛЕТА МЕЧТЫ /SHCHIT POBEDY IZ POLETA MECHTI",
+        "name_ru": "ЩИТ ПОБЕДЫ ИЗ ПОЛЕТА МЕЧТЫ /SHCHIT POBEDY IZ POLETA MECHTI",
+        "breed": "УИППЕТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17887,
+      "event_id": 1436,
+      "dog_id": 255,
+      "breed_class": "Уиппет - Стандартный - Микс",
+      "catalog_no": 60,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "heats": [],
+        "grand_total": null,
+        "normalized_score": null,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">60</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ЕАГЛЕ БЛАЦК /<br>EAGLE BLACK</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">43</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Снят (Вход в круг)</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": "Вход в круг",
+      "dog_key": "еагле-блацк-eagle-black--уиппет",
+      "dog": {
+        "id": 255,
+        "dog_key": "еагле-блацк-eagle-black--уиппет",
+        "name_lat": "ЕАГЛЕ БЛАЦК /EAGLE BLACK",
+        "name_ru": "ЕАГЛЕ БЛАЦК /EAGLE BLACK",
+        "breed": "УИППЕТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17831,
+      "event_id": 1436,
+      "dog_id": 8950,
+      "breed_class": "Афганская борзая - Стандартный - Микс",
+      "catalog_no": 3,
+      "placement": 1,
+      "total_score": 43.95,
+      "judge_count": 0,
+      "qualification": "Чемпион РКФ",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 13,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 44.91,
+            "speed_kmh": 38.477
+          },
+          {
+            "heat_number": 28,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 43.95,
+            "speed_kmh": 39.317
+          }
+        ],
+        "grand_total": 43.95,
+        "normalized_score": 43.95,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Афганская борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">САЛАМ ИСФАХАН ФАРИДА</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">480</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">44.91 с<br>10.69 м/с<br>38.477 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">28</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">43.95 с<br>10.92 м/с<br>39.317 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Чемпион РКФ</font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "салам-исфахан-фарида--афганская-борзая",
+      "dog": {
+        "id": 8950,
+        "dog_key": "салам-исфахан-фарида--афганская-борзая",
+        "name_lat": "САЛАМ ИСФАХАН ФАРИДА",
+        "name_ru": "САЛАМ ИСФАХАН ФАРИДА",
+        "breed": "АФГАНСКАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17834,
+      "event_id": 1436,
+      "dog_id": 5828,
+      "breed_class": "Басенджи - Стандартный - Кобели",
+      "catalog_no": 6,
+      "placement": 1,
+      "total_score": 30.53,
+      "judge_count": 0,
+      "qualification": "Чемпион РКФ",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 37,
+            "bib_number": 3,
+            "bib_color": "#f0ffff",
+            "time": 30.87,
+            "speed_kmh": 41.983
+          },
+          {
+            "heat_number": 51,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 30.53,
+            "speed_kmh": 42.45
+          }
+        ],
+        "grand_total": 30.53,
+        "normalized_score": 30.53,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">6</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Басенджи</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ЭЛЕН ВЛАДХИНС ФИНВЕСТ ДИК ДЭЛЬ ТОРРО</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">37</font></td> <td bgcolor=\"#f0ffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">30.87 с<br>11.66 м/с<br>41.983 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">51</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">30.53 с<br>11.79 м/с<br>42.450 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Чемпион РКФ</font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "элен-владхинс-финвест-дик-дэль-торро--басенджи",
+      "dog": {
+        "id": 5828,
+        "dog_key": "элен-владхинс-финвест-дик-дэль-торро--басенджи",
+        "name_lat": "ЭЛЕН ВЛАДХИНС ФИНВЕСТ ДИК ДЭЛЬ ТОРРО",
+        "name_ru": "ЭЛЕН ВЛАДХИНС ФИНВЕСТ ДИК ДЭЛЬ ТОРРО",
+        "breed": "БАСЕНДЖИ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17837,
+      "event_id": 1436,
+      "dog_id": 47,
+      "breed_class": "Басенджи - Стандартный - Суки",
+      "catalog_no": 10,
+      "placement": 1,
+      "total_score": 32.38,
+      "judge_count": 0,
+      "qualification": "Чемпион РКФ",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 39,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 33.15,
+            "speed_kmh": 39.095
+          },
+          {
+            "heat_number": 52,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 32.38,
+            "speed_kmh": 40.025
+          }
+        ],
+        "grand_total": 32.38,
+        "normalized_score": 32.38,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">10</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Басенджи</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ЗЕНДЕЯ ЛЕЯ ФОН ГРИЗЗЛИ СТАЙЛ /<br>ZENDEYA LEYA VON GRIZZLY STYLE</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">39</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">33.15 с<br>10.86 м/с<br>39.095 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">52</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">32.38 с<br>11.12 м/с<br>40.025 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Чемпион РКФ</font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "зендея-лея-фон-гриззли-стаил-zendeya-ley--басенджи",
+      "dog": {
+        "id": 47,
+        "dog_key": "зендея-лея-фон-гриззли-стаил-zendeya-ley--басенджи",
+        "name_lat": "ЗЕНДЕЯ ЛЕЯ ФОН ГРИЗЗЛИ СТАЙЛ /ZENDEYA LEYA VON GRIZZLY STYLE",
+        "name_ru": "ЗЕНДЕЯ ЛЕЯ ФОН ГРИЗЗЛИ СТАЙЛ /ZENDEYA LEYA VON GRIZZLY STYLE",
+        "breed": "БАСЕНДЖИ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17841,
+      "event_id": 1436,
+      "dog_id": 540,
+      "breed_class": "Малая итальянская борзая (Левретка) - Стандартный - Микс",
+      "catalog_no": 17,
+      "placement": 1,
+      "total_score": 30.15,
+      "judge_count": 0,
+      "qualification": "Чемпион РКФ",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 47,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 30.15,
+            "speed_kmh": 42.985
+          },
+          {
+            "heat_number": 57,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 30.52,
+            "speed_kmh": 42.464
+          }
+        ],
+        "grand_total": 30.15,
+        "normalized_score": 30.15,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Малая итальянская борзая (Левретка)</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">GRACE HAUND ELIZABETH HER EXCELLENCE</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">47</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">30.15 с<br>11.94 м/с<br>42.985 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">57</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">30.52 с<br>11.80 м/с<br>42.464 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Чемпион РКФ</font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "grace-haund-elizabeth-her-excellence--малая-итальянская-борзая",
+      "dog": {
+        "id": 540,
+        "dog_key": "grace-haund-elizabeth-her-excellence--малая-итальянская-борзая",
+        "name_lat": "GRACE HAUND ELIZABETH HER EXCELLENCE",
+        "name_ru": "GRACE HAUND ELIZABETH HER EXCELLENCE",
+        "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17844,
+      "event_id": 1436,
+      "dog_id": 9364,
+      "breed_class": "Малая итальянская борзая (Левретка) - Стандартный-спринтеры - Микс",
+      "catalog_no": 12,
+      "placement": 1,
+      "total_score": 30.38,
+      "judge_count": 0,
+      "qualification": "Чемпион РКФ",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 46,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 30.38,
+            "speed_kmh": 42.66
+          },
+          {
+            "heat_number": 56,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 30.44,
+            "speed_kmh": 42.576
+          }
+        ],
+        "grand_total": 30.38,
+        "normalized_score": 30.38,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Малая итальянская борзая (Левретка)</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный-спринтеры</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">АНЖЕЛО ЧЕЛЕСТЕ АНТОНИО ВЕРДИ</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">46</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">30.38 с<br>11.85 м/с<br>42.660 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">56</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">30.44 с<br>11.83 м/с<br>42.576 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Чемпион РКФ</font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "анжело-челесте-антонио-верди--малая-итальянская-борзая",
+      "dog": {
+        "id": 9364,
+        "dog_key": "анжело-челесте-антонио-верди--малая-итальянская-борзая",
+        "name_lat": "АНЖЕЛО ЧЕЛЕСТЕ АНТОНИО ВЕРДИ",
+        "name_ru": "АНЖЕЛО ЧЕЛЕСТЕ АНТОНИО ВЕРДИ",
+        "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17849,
+      "event_id": 1436,
+      "dog_id": 9333,
+      "breed_class": "Родезийский риджбек - Стандартный - Кобели",
+      "catalog_no": 22,
+      "placement": 1,
+      "total_score": 42.11,
+      "judge_count": 0,
+      "qualification": "Чемпион РКФ",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 9,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 42.11,
+            "speed_kmh": 41.035
+          },
+          {
+            "heat_number": 26,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 42.93,
+            "speed_kmh": 40.252
+          }
+        ],
+        "grand_total": 42.11,
+        "normalized_score": 42.11,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">22</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Родезийский риджбек</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ТИНА ТРЕЙДИНГ ПОТТЕР НАЙТ /<br>TINA TRADING POTTER NIGHT</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">480</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">9</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">42.11 с<br>11.40 м/с<br>41.035 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">26</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">42.93 с<br>11.18 м/с<br>40.252 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Чемпион РКФ</font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "тина-треидинг-поттер-наит-tina-trading-p--родезиискии-риджбек",
+      "dog": {
+        "id": 9333,
+        "dog_key": "тина-треидинг-поттер-наит-tina-trading-p--родезиискии-риджбек",
+        "name_lat": "ТИНА ТРЕЙДИНГ ПОТТЕР НАЙТ /TINA TRADING POTTER NIGHT",
+        "name_ru": "ТИНА ТРЕЙДИНГ ПОТТЕР НАЙТ /TINA TRADING POTTER NIGHT",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17853,
+      "event_id": 1436,
+      "dog_id": 9253,
+      "breed_class": "Родезийский риджбек - Стандартный - Суки",
+      "catalog_no": 26,
+      "placement": 1,
+      "total_score": 37.76,
+      "judge_count": 0,
+      "qualification": "Чемпион РКФ",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 11,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 39.48,
+            "speed_kmh": 43.769
+          },
+          {
+            "heat_number": 25,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 38.2,
+            "speed_kmh": 45.236
+          },
+          {
+            "heat_number": 36,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 37.76,
+            "speed_kmh": 45.763
+          }
+        ],
+        "grand_total": 37.76,
+        "normalized_score": 37.76,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">26</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Родезийский риджбек</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">СОЛАР СПИРИТ БАГИРА</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">480</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">11</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">39.48 с<br>12.16 м/с<br>43.769 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">25</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">38.20 с<br>12.57 м/с<br>45.236 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">36</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">37.76 с<br>12.71 м/с<br>45.763 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Чемпион РКФ</font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "солар-спирит-багира--родезиискии-риджбек",
+      "dog": {
+        "id": 9253,
+        "dog_key": "солар-спирит-багира--родезиискии-риджбек",
+        "name_lat": "СОЛАР СПИРИТ БАГИРА",
+        "name_ru": "СОЛАР СПИРИТ БАГИРА",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17858,
+      "event_id": 1436,
+      "dog_id": 450,
+      "breed_class": "Русская псовая борзая - Стандартный - Кобели",
+      "catalog_no": 31,
+      "placement": 1,
+      "total_score": 35.1,
+      "judge_count": 0,
+      "qualification": "Чемпион РКФ",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 2,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 35.97,
+            "speed_kmh": 48.04
+          },
+          {
+            "heat_number": 19,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 35.1,
+            "speed_kmh": 49.231
+          },
+          {
+            "heat_number": 33,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 35.49,
+            "speed_kmh": 48.69
+          }
+        ],
+        "grand_total": 35.1,
+        "normalized_score": 35.1,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">31</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БОРЗЫЕ-СЕНАВИАН ГРАНАТ</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">480</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">35.97 с<br>13.34 м/с<br>48.040 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">19</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">35.10 с<br>13.68 м/с<br>49.231 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">33</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">35.49 с<br>13.52 м/с<br>48.690 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Чемпион РКФ</font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "борзые-сенавиан-гранат--русская-псовая-борзая",
+      "dog": {
+        "id": 450,
+        "dog_key": "борзые-сенавиан-гранат--русская-псовая-борзая",
+        "name_lat": "БОРЗЫЕ СЕНАВИАН ГРАНАТ",
+        "name_ru": "БОРЗЫЕ СЕНАВИАН ГРАНАТ",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17862,
+      "event_id": 1436,
+      "dog_id": 570,
+      "breed_class": "Русская псовая борзая - Стандартный - Суки",
+      "catalog_no": 34,
+      "placement": 1,
+      "total_score": 33.99,
+      "judge_count": 0,
+      "qualification": "Чемпион РКФ",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 3,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 34.76,
+            "speed_kmh": 49.712
+          },
+          {
+            "heat_number": 20,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 34.54,
+            "speed_kmh": 50.029
+          },
+          {
+            "heat_number": 34,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 33.99,
+            "speed_kmh": 50.838
+          }
+        ],
+        "grand_total": 33.99,
+        "normalized_score": 33.99,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">34</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БОРЗЫЕ-СЕНАВИАН БАРРАКУДА /<br>BORZIE-SENAVIAN BARRAKUDA</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">480</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">34.76 с<br>13.81 м/с<br>49.712 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">20</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">34.54 с<br>13.90 м/с<br>50.029 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">34</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">33.99 с<br>14.12 м/с<br>50.838 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Чемпион РКФ</font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "борзые-сенавиан-барракуда-borzie-senavia--русская-псовая-борзая",
+      "dog": {
+        "id": 570,
+        "dog_key": "борзые-сенавиан-барракуда-borzie-senavia--русская-псовая-борзая",
+        "name_lat": "БОРЗЫЕ СЕНАВИАН БАРРАКУДА /BORZIE SENAVIAN BARRAKUDA",
+        "name_ru": "БОРЗЫЕ СЕНАВИАН БАРРАКУДА /BORZIE SENAVIAN BARRAKUDA",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17868,
+      "event_id": 1436,
+      "dog_id": 9375,
+      "breed_class": "Русская псовая борзая - Юниоры - Микс",
+      "catalog_no": 41,
+      "placement": 1,
+      "total_score": 35.1,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 5,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 36.83,
+            "speed_kmh": 46.918
+          },
+          {
+            "heat_number": 22,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 35.1,
+            "speed_kmh": 49.231
+          },
+          {
+            "heat_number": 35,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 36.3,
+            "speed_kmh": 47.603
+          }
+        ],
+        "grand_total": 35.1,
+        "normalized_score": 35.1,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">41</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Юниоры</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БОРЗЫЕ-СЕНАВИАН ДАНАРА</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">480</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">5</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">36.83 с<br>13.03 м/с<br>46.918 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">22</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">35.10 с<br>13.68 м/с<br>49.231 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">35</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">36.30 с<br>13.22 м/с<br>47.603 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "борзые-сенавиан-данара--русская-псовая-борзая",
+      "dog": {
+        "id": 9375,
+        "dog_key": "борзые-сенавиан-данара--русская-псовая-борзая",
+        "name_lat": "БОРЗЫЕ СЕНАВИАН ДАНАРА",
+        "name_ru": "БОРЗЫЕ СЕНАВИАН ДАНАРА",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17875,
+      "event_id": 1436,
+      "dog_id": 9380,
+      "breed_class": "Салюки - Стандартный - Суки",
+      "catalog_no": 45,
+      "placement": 1,
+      "total_score": 37.23,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 15,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 37.71,
+            "speed_kmh": 45.823
+          },
+          {
+            "heat_number": 30,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 37.23,
+            "speed_kmh": 46.414
+          }
+        ],
+        "grand_total": 37.23,
+        "normalized_score": 37.23,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">45</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Салюки</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">WHITEHEADS DELILAH</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">480</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">37.71 с<br>12.73 м/с<br>45.823 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">30</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">37.23 с<br>12.89 м/с<br>46.414 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "whiteheads-delilah--салюки",
+      "dog": {
+        "id": 9380,
+        "dog_key": "whiteheads-delilah--салюки",
+        "name_lat": "WHITEHEADS DELILAH",
+        "name_ru": "WHITEHEADS DELILAH",
+        "breed": "САЛЮКИ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17877,
+      "event_id": 1436,
+      "dog_id": 9382,
+      "breed_class": "Слюги - Стандартный - Кобели",
+      "catalog_no": 49,
+      "placement": 1,
+      "total_score": 36.35,
+      "judge_count": 0,
+      "qualification": "Чемпион РКФ",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 14,
+            "bib_number": 3,
+            "bib_color": "#f0ffff",
+            "time": 36.35,
+            "speed_kmh": 47.538
+          },
+          {
+            "heat_number": 29,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 40.11,
+            "speed_kmh": 43.082
+          }
+        ],
+        "grand_total": 36.35,
+        "normalized_score": 36.35,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">49</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Слюги</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">АМИН ВАИЛЬ ДЛЯ БОРЗОМИР</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">480</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td bgcolor=\"#f0ffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">36.35 с<br>13.20 м/с<br>47.538 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">29</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">40.11 с<br>11.97 м/с<br>43.082 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Чемпион РКФ</font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "амин-ваиль-для-борзомир--слюги",
+      "dog": {
+        "id": 9382,
+        "dog_key": "амин-ваиль-для-борзомир--слюги",
+        "name_lat": "АМИН ВАИЛЬ ДЛЯ БОРЗОМИР",
+        "name_ru": "АМИН ВАИЛЬ ДЛЯ БОРЗОМИР",
+        "breed": "СЛЮГИ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17880,
+      "event_id": 1436,
+      "dog_id": 9384,
+      "breed_class": "Тазы - Стандартный - Микс",
+      "catalog_no": 51,
+      "placement": 1,
+      "total_score": 38.58,
+      "judge_count": 0,
+      "qualification": "Чемпион РКФ",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 17,
+            "bib_number": 3,
+            "bib_color": "#f0ffff",
+            "time": 38.58,
+            "speed_kmh": 44.79
+          },
+          {
+            "heat_number": 32,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 42.08,
+            "speed_kmh": 41.065
+          }
+        ],
+        "grand_total": 38.58,
+        "normalized_score": 38.58,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">51</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Тазы</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ЗИРИ ДЛЯ БОРЗОМИР</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">480</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td bgcolor=\"#f0ffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">38.58 с<br>12.44 м/с<br>44.790 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">32</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">42.08 с<br>11.41 м/с<br>41.065 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Чемпион РКФ</font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "зири-для-борзомир--тазы",
+      "dog": {
+        "id": 9384,
+        "dog_key": "зири-для-борзомир--тазы",
+        "name_lat": "ЗИРИ ДЛЯ БОРЗОМИР",
+        "name_ru": "ЗИРИ ДЛЯ БОРЗОМИР",
+        "breed": "ТАЗЫ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17883,
+      "event_id": 1436,
+      "dog_id": 122,
+      "breed_class": "Уиппет - Стандартный - Микс",
+      "catalog_no": 61,
+      "placement": 1,
+      "total_score": 24.12,
+      "judge_count": 0,
+      "qualification": "Чемпион РКФ",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 42,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 24.36,
+            "speed_kmh": 53.202
+          },
+          {
+            "heat_number": 49,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 24.12,
+            "speed_kmh": 53.731
+          },
+          {
+            "heat_number": 59,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 24.44,
+            "speed_kmh": 53.028
+          }
+        ],
+        "grand_total": 24.12,
+        "normalized_score": 24.12,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">61</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">СТАНГЕРС ЛАНД ВЕРСАЛЬ ШАРМАН /<br>STANGERS LAND VERSAILLES CHARMAN</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">42</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">24.36 с<br>14.78 м/с<br>53.202 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">49</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">24.12 с<br>14.93 м/с<br>53.731 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">59</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">24.44 с<br>14.73 м/с<br>53.028 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Чемпион РКФ</font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "стангерс-ланд-версаль-шарман-stangers-la--уиппет",
+      "dog": {
+        "id": 122,
+        "dog_key": "стангерс-ланд-версаль-шарман-stangers-la--уиппет",
+        "name_lat": "СТАНГЕРС ЛАНД ВЕРСАЛЬ ШАРМАН /STANGERS LAND VERSAILLES CHARMAN",
+        "name_ru": "СТАНГЕРС ЛАНД ВЕРСАЛЬ ШАРМАН /STANGERS LAND VERSAILLES CHARMAN",
+        "breed": "УИППЕТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17888,
+      "event_id": 1436,
+      "dog_id": 488,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобели",
+      "catalog_no": 54,
+      "placement": 1,
+      "total_score": 24.54,
+      "judge_count": 0,
+      "qualification": "Чемпион РКФ",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 40,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 24.87,
+            "speed_kmh": 52.111
+          },
+          {
+            "heat_number": 53,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 24.54,
+            "speed_kmh": 52.812
+          }
+        ],
+        "grand_total": 24.54,
+        "normalized_score": 24.54,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">54</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный-спринтеры</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">VARLOK YARKAYA MOLNIYA</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">40</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">24.87 с<br>14.48 м/с<br>52.111 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">53</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">24.54 с<br>14.67 м/с<br>52.812 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Чемпион РКФ</font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "varlok-yarkaya-molniya--уиппет",
+      "dog": {
+        "id": 488,
+        "dog_key": "varlok-yarkaya-molniya--уиппет",
+        "name_lat": "VARLOK YARKAYA MOLNIYA",
+        "name_ru": "VARLOK YARKAYA MOLNIYA",
+        "breed": "УИППЕТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17891,
+      "event_id": 1436,
+      "dog_id": 9387,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Суки",
+      "catalog_no": 58,
+      "placement": 1,
+      "total_score": 23.59,
+      "judge_count": 0,
+      "qualification": "Чемпион РКФ",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 41,
+            "bib_number": 3,
+            "bib_color": "#f0ffff",
+            "time": 23.92,
+            "speed_kmh": 54.181
+          },
+          {
+            "heat_number": 54,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 23.59,
+            "speed_kmh": 54.939
+          }
+        ],
+        "grand_total": 23.59,
+        "normalized_score": 23.59,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">58</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный-спринтеры</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">АМАЗОНКА ДОЧЬ ЧАРОДЕЯ</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">41</font></td> <td bgcolor=\"#f0ffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">23.92 с<br>15.05 м/с<br>54.181 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">54</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">23.59 с<br>15.26 м/с<br>54.939 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Чемпион РКФ</font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "амазонка-дочь-чародея--уиппет",
+      "dog": {
+        "id": 9387,
+        "dog_key": "амазонка-дочь-чародея--уиппет",
+        "name_lat": "АМАЗОНКА ДОЧЬ ЧАРОДЕЯ",
+        "name_ru": "АМАЗОНКА ДОЧЬ ЧАРОДЕЯ",
+        "breed": "УИППЕТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17894,
+      "event_id": 1436,
+      "dog_id": 245,
+      "breed_class": "Уиппет - Юниоры - Суки",
+      "catalog_no": 64,
+      "placement": 1,
+      "total_score": 24.66,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 44,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 25.31,
+            "speed_kmh": 51.205
+          },
+          {
+            "heat_number": 55,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 24.66,
+            "speed_kmh": 52.555
+          }
+        ],
+        "grand_total": 24.66,
+        "normalized_score": 24.66,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">64</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Юниоры</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">MY WILD ON THE GO</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">44</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">25.31 с<br>14.22 м/с<br>51.205 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">55</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">24.66 с<br>14.60 м/с<br>52.555 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "my-wild-on-the-go--уиппет",
+      "dog": {
+        "id": 245,
+        "dog_key": "my-wild-on-the-go--уиппет",
+        "name_lat": "MY WILD ON THE GO",
+        "name_ru": "MY WILD ON THE GO",
+        "breed": "УИППЕТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17895,
+      "event_id": 1436,
+      "dog_id": 9390,
+      "breed_class": "Фараонова собака - Юниоры - Суки",
+      "catalog_no": 65,
+      "placement": 1,
+      "total_score": 40.49,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 16,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 40.49,
+            "speed_kmh": 42.677
+          },
+          {
+            "heat_number": 31,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 40.61,
+            "speed_kmh": 42.551
+          }
+        ],
+        "grand_total": 40.49,
+        "normalized_score": 40.49,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">65</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Фараонова собака</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Юниоры</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БЛЭКСИ ШАЙН АНУКЕТ АЙРИ /<br>BLACKSEA SHINE ANUKET AIRY</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">480</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">40.49 с<br>11.85 м/с<br>42.677 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">31</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">40.61 с<br>11.82 м/с<br>42.551 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "блэкси-шаин-анукет-аири-blacksea-shine-a--фараонова-собака",
+      "dog": {
+        "id": 9390,
+        "dog_key": "блэкси-шаин-анукет-аири-blacksea-shine-a--фараонова-собака",
+        "name_lat": "БЛЭКСИ ШАЙН АНУКЕТ АЙРИ /BLACKSEA SHINE ANUKET AIRY",
+        "name_ru": "БЛЭКСИ ШАЙН АНУКЕТ АЙРИ /BLACKSEA SHINE ANUKET AIRY",
+        "breed": "ФАРАОНОВА СОБАКА",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17896,
+      "event_id": 1436,
+      "dog_id": 283,
+      "breed_class": "Чирнеко дель Этна - Стандартный - Кобели",
+      "catalog_no": 66,
+      "placement": 1,
+      "total_score": 26.9,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 48,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 27.79,
+            "speed_kmh": 46.635
+          },
+          {
+            "heat_number": 58,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 26.9,
+            "speed_kmh": 48.178
+          }
+        ],
+        "grand_total": 26.9,
+        "normalized_score": 26.9,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">66</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Чирнеко дель Этна</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CARUSO COCCIO DEI VIGNAZZI</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">48</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">27.79 с<br>12.95 м/с<br>46.635 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">58</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">26.90 с<br>13.38 м/с<br>48.178 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "caruso-coccio-dei-vignazzi--чирнеко-дель-этна",
+      "dog": {
+        "id": 283,
+        "dog_key": "caruso-coccio-dei-vignazzi--чирнеко-дель-этна",
+        "name_lat": "CARUSO COCCIO DEI VIGNAZZI",
+        "name_ru": "CARUSO COCCIO DEI VIGNAZZI",
+        "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17832,
+      "event_id": 1436,
+      "dog_id": 622,
+      "breed_class": "Афганская борзая - Стандартный - Микс",
+      "catalog_no": 1,
+      "placement": 2,
+      "total_score": 44.14,
+      "judge_count": 0,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 13,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 44.14,
+            "speed_kmh": 39.148
+          },
+          {
+            "heat_number": 28,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 44.24,
+            "speed_kmh": 39.06
+          }
+        ],
+        "grand_total": 44.14,
+        "normalized_score": 44.14,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Афганская борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">САЛАМ ИСФАХАН ФАРИД /<br>SALAM ISFAHAN FARID</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">480</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">44.14 с<br>10.87 м/с<br>39.148 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">28</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">44.24 с<br>10.85 м/с<br>39.060 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CACL</font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "салам-исфахан-фарид-salam-isfahan-farid--афганская-борзая",
+      "dog": {
+        "id": 622,
+        "dog_key": "салам-исфахан-фарид-salam-isfahan-farid--афганская-борзая",
+        "name_lat": "САЛАМ ИСФАХАН ФАРИД /SALAM ISFAHAN FARID",
+        "name_ru": "САЛАМ ИСФАХАН ФАРИД /SALAM ISFAHAN FARID",
+        "breed": "АФГАНСКАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17835,
+      "event_id": 1436,
+      "dog_id": 143,
+      "breed_class": "Басенджи - Стандартный - Кобели",
+      "catalog_no": 5,
+      "placement": 2,
+      "total_score": 30.97,
+      "judge_count": 0,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 37,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 31.69,
+            "speed_kmh": 40.896
+          },
+          {
+            "heat_number": 51,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 30.97,
+            "speed_kmh": 41.847
+          }
+        ],
+        "grand_total": 30.97,
+        "normalized_score": 30.97,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">5</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Басенджи</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ДЖАНА-ДЖАН ГЕНРИ МОРГАН /<br>DZHANA-DZHAN GENRI MORGAN</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">37</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">31.69 с<br>11.36 м/с<br>40.896 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">51</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">30.97 с<br>11.62 м/с<br>41.847 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CACL</font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "джана-джан-генри-морган-dzhana-dzhan-gen--басенджи",
+      "dog": {
+        "id": 143,
+        "dog_key": "джана-джан-генри-морган-dzhana-dzhan-gen--басенджи",
+        "name_lat": "ДЖАНА ДЖАН ГЕНРИ МОРГАН /DZHANA DZHAN GENRI MORGAN",
+        "name_ru": "ДЖАНА ДЖАН ГЕНРИ МОРГАН /DZHANA DZHAN GENRI MORGAN",
+        "breed": "БАСЕНДЖИ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17838,
+      "event_id": 1436,
+      "dog_id": 49,
+      "breed_class": "Басенджи - Стандартный - Суки",
+      "catalog_no": 8,
+      "placement": 2,
+      "total_score": 32.64,
+      "judge_count": 0,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 38,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 36.09,
+            "speed_kmh": 35.91
+          },
+          {
+            "heat_number": 52,
+            "bib_number": 3,
+            "bib_color": "#f0ffff",
+            "time": 32.64,
+            "speed_kmh": 39.706
+          }
+        ],
+        "grand_total": 32.64,
+        "normalized_score": 32.64,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">8</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Басенджи</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">PATI GIRL VON GRIZZLY STYLE</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">38</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">36.09 с<br>9.98 м/с<br>35.910 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">52</font></td> <td bgcolor=\"#f0ffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">32.64 с<br>11.03 м/с<br>39.706 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CACL</font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "pati-girl-von-grizzly-style--басенджи",
+      "dog": {
+        "id": 49,
+        "dog_key": "pati-girl-von-grizzly-style--басенджи",
+        "name_lat": "PATI GIRL VON GRIZZLY STYLE",
+        "name_ru": "PATI GIRL VON GRIZZLY STYLE",
+        "breed": "БАСЕНДЖИ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17842,
+      "event_id": 1436,
+      "dog_id": 9247,
+      "breed_class": "Малая итальянская борзая (Левретка) - Стандартный - Микс",
+      "catalog_no": 15,
+      "placement": 2,
+      "total_score": 31.34,
+      "judge_count": 0,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 47,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 31.53,
+            "speed_kmh": 41.104
+          },
+          {
+            "heat_number": 57,
+            "bib_number": 3,
+            "bib_color": "#f0ffff",
+            "time": 31.34,
+            "speed_kmh": 41.353
+          }
+        ],
+        "grand_total": 31.34,
+        "normalized_score": 31.34,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Малая итальянская борзая (Левретка)</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">АЙЛЕНСТИЛЬ ЕВРИСФЕЙ ФОТИС</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">47</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">31.53 с<br>11.42 м/с<br>41.104 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">57</font></td> <td bgcolor=\"#f0ffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">31.34 с<br>11.49 м/с<br>41.353 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CACL</font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "аиленстиль-еврисфеи-фотис--малая-итальянская-борзая",
+      "dog": {
+        "id": 9247,
+        "dog_key": "аиленстиль-еврисфеи-фотис--малая-итальянская-борзая",
+        "name_lat": "АЙЛЕНСТИЛЬ ЕВРИСФЕЙ ФОТИС",
+        "name_ru": "АЙЛЕНСТИЛЬ ЕВРИСФЕЙ ФОТИС",
+        "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17845,
+      "event_id": 1436,
+      "dog_id": 9365,
+      "breed_class": "Малая итальянская борзая (Левретка) - Стандартный-спринтеры - Микс",
+      "catalog_no": 14,
+      "placement": 2,
+      "total_score": 33.16,
+      "judge_count": 0,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 46,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 33.16,
+            "speed_kmh": 39.083
+          },
+          {
+            "heat_number": 56,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 43.19,
+            "speed_kmh": 30.007
+          }
+        ],
+        "grand_total": 33.16,
+        "normalized_score": 33.16,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Малая итальянская борзая (Левретка)</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный-спринтеры</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ВАЛЬС ВАЛЕНТО ЮЛИСА /<br>VALS VALENTO YULISA</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">46</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">33.16 с<br>10.86 м/с<br>39.083 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">56</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">43.19 с<br>8.34 м/с<br>30.007 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CACL</font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "вальс-валенто-юлиса-vals-valento-yulisa--малая-итальянская-борзая",
+      "dog": {
+        "id": 9365,
+        "dog_key": "вальс-валенто-юлиса-vals-valento-yulisa--малая-итальянская-борзая",
+        "name_lat": "ВАЛЬС ВАЛЕНТО ЮЛИСА /VALS VALENTO YULISA",
+        "name_ru": "ВАЛЬС ВАЛЕНТО ЮЛИСА /VALS VALENTO YULISA",
+        "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17850,
+      "event_id": 1436,
+      "dog_id": 9366,
+      "breed_class": "Родезийский риджбек - Стандартный - Кобели",
+      "catalog_no": 21,
+      "placement": 2,
+      "total_score": 43.17,
+      "judge_count": 0,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 9,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 44.41,
+            "speed_kmh": 38.91
+          },
+          {
+            "heat_number": 26,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 43.17,
+            "speed_kmh": 40.028
+          }
+        ],
+        "grand_total": 43.17,
+        "normalized_score": 43.17,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">21</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Родезийский риджбек</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ТИНА ТРЕЙДИНГ ПЕРСЕЙ ПРАЙД /<br>TINA TRADING PERSEUS PRIDE</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">480</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">9</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">44.41 с<br>10.81 м/с<br>38.910 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">26</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">43.17 с<br>11.12 м/с<br>40.028 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CACL</font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "тина-треидинг-персеи-праид-tina-trading---родезиискии-риджбек",
+      "dog": {
+        "id": 9366,
+        "dog_key": "тина-треидинг-персеи-праид-tina-trading---родезиискии-риджбек",
+        "name_lat": "ТИНА ТРЕЙДИНГ ПЕРСЕЙ ПРАЙД /TINA TRADING PERSEUS PRIDE",
+        "name_ru": "ТИНА ТРЕЙДИНГ ПЕРСЕЙ ПРАЙД /TINA TRADING PERSEUS PRIDE",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17854,
+      "event_id": 1436,
+      "dog_id": 184,
+      "breed_class": "Родезийский риджбек - Стандартный - Суки",
+      "catalog_no": 24,
+      "placement": 2,
+      "total_score": 37.55,
+      "judge_count": 0,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 11,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 37.55,
+            "speed_kmh": 46.019
+          },
+          {
+            "heat_number": 24,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 38.18,
+            "speed_kmh": 45.259
+          },
+          {
+            "heat_number": 36,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 38.02,
+            "speed_kmh": 45.45
+          }
+        ],
+        "grand_total": 37.55,
+        "normalized_score": 37.55,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">24</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Родезийский риджбек</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">АРИЕС ХАН РИВЬЕРА АЛЬ РИША САНГРИЭЛЬ /<br>ARIES KHAN RIVIERA AL RISHA SANGREAL</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">480</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">11</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">37.55 с<br>12.78 м/с<br>46.019 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">24</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">38.18 с<br>12.57 м/с<br>45.259 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">36</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">38.02 с<br>12.62 м/с<br>45.450 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CACL</font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "ариес-хан-ривьера-аль-риша-сангриэль-ari--родезиискии-риджбек",
+      "dog": {
+        "id": 184,
+        "dog_key": "ариес-хан-ривьера-аль-риша-сангриэль-ari--родезиискии-риджбек",
+        "name_lat": "АРИЕС ХАН РИВЬЕРА АЛЬ РИША САНГРИЭЛЬ /ARIES KHAN RIVIERA AL RISHA SANGREAL",
+        "name_ru": "АРИЕС ХАН РИВЬЕРА АЛЬ РИША САНГРИЭЛЬ /ARIES KHAN RIVIERA AL RISHA SANGREAL",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17859,
+      "event_id": 1436,
+      "dog_id": 9369,
+      "breed_class": "Русская псовая борзая - Стандартный - Кобели",
+      "catalog_no": 29,
+      "placement": 2,
+      "total_score": 35.03,
+      "judge_count": 0,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 35.03,
+            "speed_kmh": 49.329
+          },
+          {
+            "heat_number": 18,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 39.96,
+            "speed_kmh": 43.243
+          },
+          {
+            "heat_number": 33,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 38.01,
+            "speed_kmh": 45.462
+          }
+        ],
+        "grand_total": 35.03,
+        "normalized_score": 35.03,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">29</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БОРЗЫЕ-СЕНАВИАН БИРЮК /<br>BORZIE-SENAVIAN BIRYUK</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">480</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">35.03 с<br>13.70 м/с<br>49.329 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">39.96 с<br>12.01 м/с<br>43.243 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">33</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">38.01 с<br>12.63 м/с<br>45.462 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CACL</font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "борзые-сенавиан-бирюк-borzie-senavian-bi--русская-псовая-борзая",
+      "dog": {
+        "id": 9369,
+        "dog_key": "борзые-сенавиан-бирюк-borzie-senavian-bi--русская-псовая-борзая",
+        "name_lat": "БОРЗЫЕ СЕНАВИАН БИРЮК /BORZIE SENAVIAN BIRYUK",
+        "name_ru": "БОРЗЫЕ СЕНАВИАН БИРЮК /BORZIE SENAVIAN BIRYUK",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17863,
+      "event_id": 1436,
+      "dog_id": 9371,
+      "breed_class": "Русская псовая борзая - Стандартный - Суки",
+      "catalog_no": 35,
+      "placement": 2,
+      "total_score": 34.56,
+      "judge_count": 0,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 4,
+            "bib_number": 3,
+            "bib_color": "#f0ffff",
+            "time": 35.19,
+            "speed_kmh": 49.105
+          },
+          {
+            "heat_number": 34,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 34.56,
+            "speed_kmh": 50
+          }
+        ],
+        "grand_total": 34.56,
+        "normalized_score": 34.56,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">35</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БОРЗЫЕ-СЕНАВИАН ГЮРЗА</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">480</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">4</font></td> <td bgcolor=\"#f0ffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">35.19 с<br>13.64 м/с<br>49.105 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">21</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Зацеп</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">34</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">34.56 с<br>13.89 м/с<br>50.000 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CACL</font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "борзые-сенавиан-гюрза--русская-псовая-борзая",
+      "dog": {
+        "id": 9371,
+        "dog_key": "борзые-сенавиан-гюрза--русская-псовая-борзая",
+        "name_lat": "БОРЗЫЕ СЕНАВИАН ГЮРЗА",
+        "name_ru": "БОРЗЫЕ СЕНАВИАН ГЮРЗА",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17869,
+      "event_id": 1436,
+      "dog_id": 9376,
+      "breed_class": "Русская псовая борзая - Юниоры - Микс",
+      "catalog_no": 44,
+      "placement": 2,
+      "total_score": 35.61,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 6,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 35.61,
+            "speed_kmh": 48.526
+          },
+          {
+            "heat_number": 23,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 35.69,
+            "speed_kmh": 48.417
+          },
+          {
+            "heat_number": 35,
+            "bib_number": 3,
+            "bib_color": "#f0ffff",
+            "time": 36.99,
+            "speed_kmh": 46.715
+          }
+        ],
+        "grand_total": 35.61,
+        "normalized_score": 35.61,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">44</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Юниоры</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ФУРИЯ ИЗ КРЫЛАТОЙ ЛЕГЕНДЫ</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">480</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">6</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">35.61 с<br>13.48 м/с<br>48.526 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">23</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">35.69 с<br>13.45 м/с<br>48.417 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">35</font></td> <td bgcolor=\"#f0ffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">36.99 с<br>12.98 м/с<br>46.715 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "фурия-из-крылатои-легенды--русская-псовая-борзая",
+      "dog": {
+        "id": 9376,
+        "dog_key": "фурия-из-крылатои-легенды--русская-псовая-борзая",
+        "name_lat": "ФУРИЯ ИЗ КРЫЛАТОЙ ЛЕГЕНДЫ",
+        "name_ru": "ФУРИЯ ИЗ КРЫЛАТОЙ ЛЕГЕНДЫ",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17884,
+      "event_id": 1436,
+      "dog_id": 9338,
+      "breed_class": "Уиппет - Стандартный - Микс",
+      "catalog_no": 63,
+      "placement": 2,
+      "total_score": 25.57,
+      "judge_count": 0,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 42,
+            "bib_number": 3,
+            "bib_color": "#f0ffff",
+            "time": 25.57,
+            "speed_kmh": 50.684
+          },
+          {
+            "heat_number": 50,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 25.72,
+            "speed_kmh": 50.389
+          },
+          {
+            "heat_number": 59,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 27.82,
+            "speed_kmh": 46.585
+          }
+        ],
+        "grand_total": 25.57,
+        "normalized_score": 25.57,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">63</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ДЕЙТОНА МИСТИК ДРАЙВ /<br>DAYTONA MYSTIC DRIVE</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">42</font></td> <td bgcolor=\"#f0ffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">25.57 с<br>14.08 м/с<br>50.684 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">50</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">25.72 с<br>14.00 м/с<br>50.389 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">59</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">27.82 с<br>12.94 м/с<br>46.585 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CACL</font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "деитона-мистик-драив-daytona-mystic-driv--уиппет",
+      "dog": {
+        "id": 9338,
+        "dog_key": "деитона-мистик-драив-daytona-mystic-driv--уиппет",
+        "name_lat": "ДЕЙТОНА МИСТИК ДРАЙВ /DAYTONA MYSTIC DRIVE",
+        "name_ru": "ДЕЙТОНА МИСТИК ДРАЙВ /DAYTONA MYSTIC DRIVE",
+        "breed": "УИППЕТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17889,
+      "event_id": 1436,
+      "dog_id": 98,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобели",
+      "catalog_no": 55,
+      "placement": 2,
+      "total_score": 24.76,
+      "judge_count": 0,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 40,
+            "bib_number": 3,
+            "bib_color": "#f0ffff",
+            "time": 25.25,
+            "speed_kmh": 51.327
+          },
+          {
+            "heat_number": 53,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 24.76,
+            "speed_kmh": 52.342
+          }
+        ],
+        "grand_total": 24.76,
+        "normalized_score": 24.76,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">55</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный-спринтеры</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ВАРВАР КОНАН БЕССТРАШНЫЙ /<br>VARVAR KONAN BESSTRASHNYI</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">40</font></td> <td bgcolor=\"#f0ffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">25.25 с<br>14.26 м/с<br>51.327 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">53</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">24.76 с<br>14.54 м/с<br>52.342 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CACL</font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "варвар-конан-бесстрашныи-varvar-konan-be--уиппет",
+      "dog": {
+        "id": 98,
+        "dog_key": "варвар-конан-бесстрашныи-varvar-konan-be--уиппет",
+        "name_lat": "ВАРВАР КОНАН БЕССТРАШНЫЙ /VARVAR KONAN BESSTRASHNYI",
+        "name_ru": "ВАРВАР КОНАН БЕССТРАШНЫЙ /VARVAR KONAN BESSTRASHNYI",
+        "breed": "УИППЕТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17892,
+      "event_id": 1436,
+      "dog_id": 9388,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Суки",
+      "catalog_no": 56,
+      "placement": 2,
+      "total_score": 24.83,
+      "judge_count": 0,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 41,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 25.15,
+            "speed_kmh": 51.531
+          },
+          {
+            "heat_number": 54,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 24.83,
+            "speed_kmh": 52.195
+          }
+        ],
+        "grand_total": 24.83,
+        "normalized_score": 24.83,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">56</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный-спринтеры</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ENTAYLI YOZ</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">41</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">25.15 с<br>14.31 м/с<br>51.531 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">54</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">24.83 с<br>14.50 м/с<br>52.195 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CACL</font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "entayli-yoz--уиппет",
+      "dog": {
+        "id": 9388,
+        "dog_key": "entayli-yoz--уиппет",
+        "name_lat": "ENTAYLI YOZ",
+        "name_ru": "ENTAYLI YOZ",
+        "breed": "УИППЕТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17833,
+      "event_id": 1436,
+      "dog_id": 623,
+      "breed_class": "Афганская борзая - Стандартный - Микс",
+      "catalog_no": 2,
+      "placement": 3,
+      "total_score": 45.12,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 13,
+            "bib_number": 3,
+            "bib_color": "#f0ffff",
+            "time": 45.23,
+            "speed_kmh": 38.205
+          },
+          {
+            "heat_number": 28,
+            "bib_number": 3,
+            "bib_color": "#f0ffff",
+            "time": 45.12,
+            "speed_kmh": 38.298
+          }
+        ],
+        "grand_total": 45.12,
+        "normalized_score": 45.12,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Афганская борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">САЛАМ ИСФАХАН ФОРВАРД /<br>SALAM ISFAHAN FORWARD</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">480</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13</font></td> <td bgcolor=\"#f0ffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">45.23 с<br>10.61 м/с<br>38.205 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">28</font></td> <td bgcolor=\"#f0ffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">45.12 с<br>10.64 м/с<br>38.298 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "салам-исфахан-форвард-salam-isfahan-forw--афганская-борзая",
+      "dog": {
+        "id": 623,
+        "dog_key": "салам-исфахан-форвард-salam-isfahan-forw--афганская-борзая",
+        "name_lat": "САЛАМ ИСФАХАН ФОРВАРД /SALAM ISFAHAN FORWARD",
+        "name_ru": "САЛАМ ИСФАХАН ФОРВАРД /SALAM ISFAHAN FORWARD",
+        "breed": "АФГАНСКАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17836,
+      "event_id": 1436,
+      "dog_id": 9362,
+      "breed_class": "Басенджи - Стандартный - Кобели",
+      "catalog_no": 4,
+      "placement": 3,
+      "total_score": 32.72,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 37,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 33.01,
+            "speed_kmh": 39.261
+          },
+          {
+            "heat_number": 51,
+            "bib_number": 3,
+            "bib_color": "#f0ffff",
+            "time": 32.72,
+            "speed_kmh": 39.609
+          }
+        ],
+        "grand_total": 32.72,
+        "normalized_score": 32.72,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">4</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Басенджи</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">LIDER S KNJAZHESKOGO DVORA</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">37</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">33.01 с<br>10.91 м/с<br>39.261 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">51</font></td> <td bgcolor=\"#f0ffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">32.72 с<br>11.00 м/с<br>39.609 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "lider-s-knjazheskogo-dvora--басенджи",
+      "dog": {
+        "id": 9362,
+        "dog_key": "lider-s-knjazheskogo-dvora--басенджи",
+        "name_lat": "LIDER S KNJAZHESKOGO DVORA",
+        "name_ru": "LIDER S KNJAZHESKOGO DVORA",
+        "breed": "БАСЕНДЖИ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17839,
+      "event_id": 1436,
+      "dog_id": 9363,
+      "breed_class": "Басенджи - Стандартный - Суки",
+      "catalog_no": 9,
+      "placement": 3,
+      "total_score": 34.14,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 39,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 35.03,
+            "speed_kmh": 36.997
+          },
+          {
+            "heat_number": 52,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 34.14,
+            "speed_kmh": 37.961
+          }
+        ],
+        "grand_total": 34.14,
+        "normalized_score": 34.14,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">9</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Басенджи</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ЗАНДА ЗАКУЗА ФОН ГРИЗЗЛИ СТАЙЛ</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">39</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">35.03 с<br>10.28 м/с<br>36.997 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">52</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">34.14 с<br>10.54 м/с<br>37.961 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "занда-закуза-фон-гриззли-стаил--басенджи",
+      "dog": {
+        "id": 9363,
+        "dog_key": "занда-закуза-фон-гриззли-стаил--басенджи",
+        "name_lat": "ЗАНДА ЗАКУЗА ФОН ГРИЗЗЛИ СТАЙЛ",
+        "name_ru": "ЗАНДА ЗАКУЗА ФОН ГРИЗЗЛИ СТАЙЛ",
+        "breed": "БАСЕНДЖИ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17843,
+      "event_id": 1436,
+      "dog_id": 541,
+      "breed_class": "Малая итальянская борзая (Левретка) - Стандартный - Микс",
+      "catalog_no": 16,
+      "placement": 3,
+      "total_score": 31.52,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 47,
+            "bib_number": 3,
+            "bib_color": "#f0ffff",
+            "time": 31.52,
+            "speed_kmh": 41.117
+          },
+          {
+            "heat_number": 57,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 31.54,
+            "speed_kmh": 41.091
+          }
+        ],
+        "grand_total": 31.52,
+        "normalized_score": 31.52,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Малая итальянская борзая (Левретка)</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">АПРИОРИ СТАР СИРИУС СУННИ БОЙ /<br>APRIORI STAR SIRIUS SUNNI BOY</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">47</font></td> <td bgcolor=\"#f0ffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">31.52 с<br>11.42 м/с<br>41.117 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">57</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">31.54 с<br>11.41 м/с<br>41.091 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "априори-стар-сириус-сунни-бои-apriori-st--малая-итальянская-борзая",
+      "dog": {
+        "id": 541,
+        "dog_key": "априори-стар-сириус-сунни-бои-apriori-st--малая-итальянская-борзая",
+        "name_lat": "АПРИОРИ СТАР СИРИУС СУННИ БОЙ /APRIORI STAR SIRIUS SUNNI BOY",
+        "name_ru": "АПРИОРИ СТАР СИРИУС СУННИ БОЙ /APRIORI STAR SIRIUS SUNNI BOY",
+        "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17855,
+      "event_id": 1436,
+      "dog_id": 9335,
+      "breed_class": "Родезийский риджбек - Стандартный - Суки",
+      "catalog_no": 25,
+      "placement": 3,
+      "total_score": 38.97,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 10,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 39.48,
+            "speed_kmh": 43.769
+          },
+          {
+            "heat_number": 25,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 38.97,
+            "speed_kmh": 44.342
+          },
+          {
+            "heat_number": 36,
+            "bib_number": 3,
+            "bib_color": "#f0ffff",
+            "time": 39.1,
+            "speed_kmh": 44.194
+          }
+        ],
+        "grand_total": 38.97,
+        "normalized_score": 38.97,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">25</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Родезийский риджбек</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">СОЛАР СПИРИТ АНДРОМЕДА /<br>SOLAR SPIRIT ANDROMEDA</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">480</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">10</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">39.48 с<br>12.16 м/с<br>43.769 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">25</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">38.97 с<br>12.32 м/с<br>44.342 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">36</font></td> <td bgcolor=\"#f0ffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">39.10 с<br>12.28 м/с<br>44.194 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "солар-спирит-андромеда-solar-spirit-andr--родезиискии-риджбек",
+      "dog": {
+        "id": 9335,
+        "dog_key": "солар-спирит-андромеда-solar-spirit-andr--родезиискии-риджбек",
+        "name_lat": "СОЛАР СПИРИТ АНДРОМЕДА /SOLAR SPIRIT ANDROMEDA",
+        "name_ru": "СОЛАР СПИРИТ АНДРОМЕДА /SOLAR SPIRIT ANDROMEDA",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17864,
+      "event_id": 1436,
+      "dog_id": 9372,
+      "breed_class": "Русская псовая борзая - Стандартный - Суки",
+      "catalog_no": 33,
+      "placement": 3,
+      "total_score": 35.3,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 3,
+            "bib_number": 3,
+            "bib_color": "#f0ffff",
+            "time": 35.55,
+            "speed_kmh": 48.608
+          },
+          {
+            "heat_number": 34,
+            "bib_number": 3,
+            "bib_color": "#f0ffff",
+            "time": 35.3,
+            "speed_kmh": 48.952
+          }
+        ],
+        "grand_total": 35.3,
+        "normalized_score": 35.3,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">33</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">АПРИОРИ ЛЮКСУРИ ФОКСХАНТЕР /<br>APRIORI LUXURY FOKSKHANTER</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">480</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td> <td bgcolor=\"#f0ffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">35.55 с<br>13.50 м/с<br>48.608 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">21</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Зацеп</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">34</font></td> <td bgcolor=\"#f0ffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">35.30 с<br>13.60 м/с<br>48.952 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "априори-люксури-фоксхантер-apriori-luxur--русская-псовая-борзая",
+      "dog": {
+        "id": 9372,
+        "dog_key": "априори-люксури-фоксхантер-apriori-luxur--русская-псовая-борзая",
+        "name_lat": "АПРИОРИ ЛЮКСУРИ ФОКСХАНТЕР /APRIORI LUXURY FOKSKHANTER",
+        "name_ru": "АПРИОРИ ЛЮКСУРИ ФОКСХАНТЕР /APRIORI LUXURY FOKSKHANTER",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17890,
+      "event_id": 1436,
+      "dog_id": 9283,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобели",
+      "catalog_no": 53,
+      "placement": 3,
+      "total_score": 25.57,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 40,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 25.71,
+            "speed_kmh": 50.408
+          },
+          {
+            "heat_number": 53,
+            "bib_number": 3,
+            "bib_color": "#f0ffff",
+            "time": 25.57,
+            "speed_kmh": 50.684
+          }
+        ],
+        "grand_total": 25.57,
+        "normalized_score": 25.57,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">53</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный-спринтеры</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">BATMAN NIGHT SHADOW</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">40</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">25.71 с<br>14.00 м/с<br>50.408 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">53</font></td> <td bgcolor=\"#f0ffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">25.57 с<br>14.08 м/с<br>50.684 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "batman-night-shadow--уиппет",
+      "dog": {
+        "id": 9283,
+        "dog_key": "batman-night-shadow--уиппет",
+        "name_lat": "BATMAN NIGHT SHADOW",
+        "name_ru": "BATMAN NIGHT SHADOW",
+        "breed": "УИППЕТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17893,
+      "event_id": 1436,
+      "dog_id": 9389,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Суки",
+      "catalog_no": 57,
+      "placement": 3,
+      "total_score": 25.34,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 41,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 25.53,
+            "speed_kmh": 50.764
+          },
+          {
+            "heat_number": 54,
+            "bib_number": 3,
+            "bib_color": "#f0ffff",
+            "time": 25.34,
+            "speed_kmh": 51.144
+          }
+        ],
+        "grand_total": 25.34,
+        "normalized_score": 25.34,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">57</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный-спринтеры</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">WISE DESIRE SHOW FORMAT /<br>WISE DESIRE SHOW FORMAT</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">41</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">25.53 с<br>14.10 м/с<br>50.764 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">54</font></td> <td bgcolor=\"#f0ffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">25.34 с<br>14.21 м/с<br>51.144 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "wise-desire-show-format-wise-desire-show--уиппет",
+      "dog": {
+        "id": 9389,
+        "dog_key": "wise-desire-show-format-wise-desire-show--уиппет",
+        "name_lat": "WISE DESIRE SHOW FORMAT /WISE DESIRE SHOW FORMAT",
+        "name_ru": "WISE DESIRE SHOW FORMAT /WISE DESIRE SHOW FORMAT",
+        "breed": "УИППЕТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17856,
+      "event_id": 1436,
+      "dog_id": 9368,
+      "breed_class": "Родезийский риджбек - Стандартный - Суки",
+      "catalog_no": 23,
+      "placement": 4,
+      "total_score": 42.8,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 10,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 42.8,
+            "speed_kmh": 40.374
+          },
+          {
+            "heat_number": 24,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 45.4,
+            "speed_kmh": 38.062
+          }
+        ],
+        "grand_total": 42.8,
+        "normalized_score": 42.8,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">4</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">23</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Родезийский риджбек</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">АРИЕС ХАН ОРЭ ОРХИДЕА</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">480</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">10</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">42.80 с<br>11.21 м/с<br>40.374 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">24</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">45.40 с<br>10.57 м/с<br>38.062 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "ариес-хан-орэ-орхидеа--родезиискии-риджбек",
+      "dog": {
+        "id": 9368,
+        "dog_key": "ариес-хан-орэ-орхидеа--родезиискии-риджбек",
+        "name_lat": "АРИЕС ХАН ОРЭ ОРХИДЕА",
+        "name_ru": "АРИЕС ХАН ОРЭ ОРХИДЕА",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17865,
+      "event_id": 1436,
+      "dog_id": 481,
+      "breed_class": "Русская псовая борзая - Стандартный - Суки",
+      "catalog_no": 37,
+      "placement": 4,
+      "total_score": 35.93,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 3,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 36.75,
+            "speed_kmh": 47.02
+          },
+          {
+            "heat_number": 20,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 35.93,
+            "speed_kmh": 48.094
+          }
+        ],
+        "grand_total": 35.93,
+        "normalized_score": 35.93,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">4</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">37</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">СИМПЛЕ ОБСЕССИОН ЧАПТЕР ОФ МАЙ ЛАЙФ /<br>SIMPLE OBSESSION CHAPTER OF MY LIFE</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">480</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">36.75 с<br>13.06 м/с<br>47.020 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">20</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">35.93 с<br>13.36 м/с<br>48.094 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "симпле-обсессион-чаптер-оф-маи-лаиф-simp--русская-псовая-борзая",
+      "dog": {
+        "id": 481,
+        "dog_key": "симпле-обсессион-чаптер-оф-маи-лаиф-simp--русская-псовая-борзая",
+        "name_lat": "СИМПЛЕ ОБСЕССИОН ЧАПТЕР ОФ МАЙ ЛАЙФ /SIMPLE OBSESSION CHAPTER OF MY LIFE",
+        "name_ru": "СИМПЛЕ ОБСЕССИОН ЧАПТЕР ОФ МАЙ ЛАЙФ /SIMPLE OBSESSION CHAPTER OF MY LIFE",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17886,
+      "event_id": 1436,
+      "dog_id": 9336,
+      "breed_class": "Уиппет - Стандартный - Микс",
+      "catalog_no": 59,
+      "placement": 4,
+      "total_score": 25.92,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 42,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 25.92,
+            "speed_kmh": 50
+          },
+          {
+            "heat_number": 49,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 26.1,
+            "speed_kmh": 49.655
+          }
+        ],
+        "grand_total": 25.92,
+        "normalized_score": 25.92,
+        "format": "racing"
+      },
+      "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">4</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">59</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">GORDEY</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">42</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">25.92 с<br>13.89 м/с<br>50.000 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">49</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">26.10 с<br>13.79 м/с<br>49.655 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "gordey--уиппет",
+      "dog": {
+        "id": 9336,
+        "dog_key": "gordey--уиппет",
+        "name_lat": "GORDEY",
+        "name_ru": "GORDEY",
+        "breed": "УИППЕТ",
+        "sex": null,
+        "owner": null
+      }
+    }
+  ]
+}
