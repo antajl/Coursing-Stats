@@ -91,3 +91,67 @@ export function useCoursingRecords(breed: string, limit: number, search: string,
     staleTime: STALE_MS,
   });
 }
+
+export function useDogProfile(dogId: string) {
+  return useQuery({
+    queryKey: ['dogProfile', dogId],
+    queryFn: async () => {
+      const result = await fetchStaticData<any>(`/data/v1/indexes/dog-profiles/${dogId}.json`);
+      if (result.success && result.data?.dog) {
+        return { success: true, data: result.data.dog };
+      }
+      return result;
+    },
+    enabled: !!dogId,
+    staleTime: STALE_MS,
+  });
+}
+
+export function useDogEvents(dogId: string) {
+  return useQuery({
+    queryKey: ['dogEvents', dogId],
+    queryFn: async () => {
+      const result = await fetchStaticData<any>(`/data/v1/indexes/dog-profiles/${dogId}.json`);
+      if (result.success && result.data?.competitions) {
+        return { success: true, data: result.data.competitions };
+      }
+      return result;
+    },
+    enabled: !!dogId,
+    staleTime: STALE_MS,
+  });
+}
+
+export function useDogSpeedRecords(dogId: string) {
+  return useQuery({
+    queryKey: ['dogSpeedRecords', dogId],
+    queryFn: () => fetchStaticData<{ records: any[]; count: number }>('/data/v1/donino/speed_records.json'),
+    enabled: !!dogId,
+    staleTime: STALE_MS,
+  });
+}
+
+export function useSpeedRecordsByBreed(breed: string) {
+  return useQuery({
+    queryKey: ['speedRecordsByBreed', breed],
+    queryFn: () => fetchStaticData<{ records: any[]; count: number }>('/data/v1/donino/speed_records.json'),
+    staleTime: STALE_MS,
+  });
+}
+
+export function useDogCoursingRecords(dogId: string) {
+  return useQuery({
+    queryKey: ['dogCoursingRecords', dogId],
+    queryFn: () => fetchStaticData<{ records: any[]; count: number }>('/data/v1/donino/coursing_records.json'),
+    enabled: !!dogId,
+    staleTime: STALE_MS,
+  });
+}
+
+export function useCoursingRecordsByBreed(breed: string) {
+  return useQuery({
+    queryKey: ['coursingRecordsByBreed', breed],
+    queryFn: () => fetchStaticData<{ records: any[]; count: number }>('/data/v1/donino/coursing_records.json'),
+    staleTime: STALE_MS,
+  });
+}

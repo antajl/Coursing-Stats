@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react'
 import { useParams, Link, useNavigate, useLocation } from 'react-router-dom'
 import { ChevronLeft, Download } from 'lucide-react'
-import { useDogProfile, useDogEvents, useDogSpeedRecords, useSpeedRecordsByBreed, useDogCoursingRecords, useCoursingRecordsByBreed } from '../hooks/useApi'
+import { useDogProfile, useDogEvents, useDogSpeedRecords, useSpeedRecordsByBreed, useDogCoursingRecords, useCoursingRecordsByBreed } from '../hooks/useStaticData'
 import { formatRecordDate, dedupeByRecordDate, expandCoursingTimeline } from '../lib/recordDates'
 import { formatTitleLine, titleBadgeClass, type DogTitle } from '../lib/qualificationTitles'
 import { parseDogName } from '../lib/dogName'
