@@ -4,6 +4,31 @@
 
 ---
 
+## 2026-07-09 — Пустые индексы на проде (CI затирал `indexes/`)
+
+### Симптом
+Локально рейтинг, судьи и данные в `data/v1/indexes/` полные; на **coursing-stats.ru** — пустые списки. CDN отдавал `200` и JSON вида `"count": 0`, `"judges": []`.
+
+### Причина
+`npm run build-all-data` в CI:
+1. `build-data-snapshot` → `loadLocalDataSqlite()` собирал sqlite из JSON
+2. В `load-sqlite.ts` функция `loadCompetitions()` **не загружала** `results[]` из `competitions/*.json` (временный skip)
+3. `build-derived-indexes` строил топы/судей из пустой таблицы `results`
+4. `package-pages-snapshot` деплоил пустые `indexes/` поверх хороших файлов из git
+
+Локальный dev не страдал: Vite читает `data/v1/` с диска, часто с уже собранными индексами.
+
+### Решение
+- **`load-sqlite.ts`:** загрузка `results` из `competitions/`; `event_id` из файла; `dog` из вложенного объекта; `PRAGMA foreign_keys = OFF` при сборке snapshot
+- **`build-all-data.ts`:** fatal, если `top-placement-all` или `judges-summary` пустые после пересборки
+- **CI:** `vitest run backend/tests/static-indexes.test.ts` после `build-all-data`
+- **Документация:** `docs/DATA.md` → «Диагностика: локально есть данные, на проде пусто»; skill `coursing-stats-dev/data-build-pipeline.md`
+
+### Урок
+После перехода на статику CDN **индексы = runtime** для рейтинга и судей. Любое изменение `load-sqlite` / `build-derived-indexes` проверять через `build-all-data` + `static-indexes.test.ts`, не только `npm run dev`.
+
+---
+
 ## 2026-07-07 — Публичный прод без Worker (статика CDN)
 
 ### Решение

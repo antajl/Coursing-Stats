@@ -4,6 +4,12 @@
 
 ## [Unreleased]
 
+### 2026-07-09 — Фикс пустых индексов на проде (рейтинг, судьи)
+- **Проблема:** CI `build-all-data` перезаписывал `data/v1/indexes/*` пустыми файлами (`count: 0`) — локально данные были, на coursing-stats.ru рейтинг и судьи пустые
+- **Причина:** `load-sqlite.ts` не загружал `results` из `competitions/*.json` в snapshot → `build-derived-indexes` без данных
+- **Исправление:** загрузка results в `loadCompetitions()`; валидация в `build-all-data.ts`; тест `static-indexes.test.ts` в `deploy-frontend.yml`
+- **Документация:** `docs/DATA.md` (диагностика), `docs/DECISIONS-LOG.md`, skill `data-build-pipeline.md`
+
 ### 2026-07-08 — Web Archive Integration (исторические данные 2022–2024)
 - **Интеграция данных из web.archive.org:** восстановлены результаты 2022–2024 годов
 - **Добавленные данные:** 49 событий, 2689 результатов (2022: 1 событие/33 результата, 2023: 22 события/1233 результата, 2024: 26 событий/1423 результата)

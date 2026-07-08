@@ -3,6 +3,11 @@ import { useQuery } from '@tanstack/react-query';
 const STALE_MS = 5 * 60 * 1000;
 const STALE_LONG_MS = 60 * 60 * 1000;
 
+function topIndexFileName(prefix: string, year: string): string {
+  const key = !year || year === 'all' ? 'all' : year;
+  return `${prefix}-${key}.json`;
+}
+
 async function fetchStaticData<T>(path: string): Promise<{ success: true; data: T }> {
   console.log(`[DEBUG] Fetching: ${path}`);
   const response = await fetch(path);
@@ -17,27 +22,27 @@ async function fetchStaticData<T>(path: string): Promise<{ success: true; data: 
 }
 
 export function useTopPlacement(year: string) {
-  const fileName = year === 'all' ? 'top-placement-all.json' : `top-placement-${year}.json`;
+  const fileName = topIndexFileName('top-placement', year);
   return useQuery({
-    queryKey: ['topPlacement', year],
+    queryKey: ['topPlacement', year || 'all'],
     queryFn: () => fetchStaticData<{ items: any[]; count: number }>(`/data/v1/indexes/${fileName}`),
     staleTime: STALE_MS,
   });
 }
 
 export function useTopScore(year: string) {
-  const fileName = year === 'all' ? 'top-score-all.json' : `top-score-${year}.json`;
+  const fileName = topIndexFileName('top-score', year);
   return useQuery({
-    queryKey: ['topScore', year],
+    queryKey: ['topScore', year || 'all'],
     queryFn: () => fetchStaticData<{ items: any[]; count: number }>(`/data/v1/indexes/${fileName}`),
     staleTime: STALE_MS,
   });
 }
 
 export function useTopSpeed(year: string) {
-  const fileName = year === 'all' ? 'top-speed-all.json' : `top-speed-${year}.json`;
+  const fileName = topIndexFileName('top-speed', year);
   return useQuery({
-    queryKey: ['topSpeed', year],
+    queryKey: ['topSpeed', year || 'all'],
     queryFn: () => fetchStaticData<{ items: any[]; count: number }>(`/data/v1/indexes/${fileName}`),
     staleTime: STALE_MS,
   });

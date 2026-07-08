@@ -196,6 +196,26 @@ npx tsx backend/scripts/build-derived-indexes.ts
 - После изменения логики расчёта рейтингов
 - Перед деплоем в прод
 
+**Откуда берёт данные:** sqlite из `data/v1/pc-db.sqlite` (см. `build-data-snapshot`). Таблица `results` должна заполняться из `competitions/*.json` в `load-sqlite.ts` — иначе индексы на проде будут пустыми.
+
+### `build-data-snapshot.ts`
+**Назначение:** Собрать `data/v1/pc-db.sqlite` из JSON (`backend/lib/local-data/load-sqlite.ts`).
+
+```bash
+npm run build-data-snapshot
+```
+
+**Проверка:** в логе `results` должен быть **> 0**. Если `results: 0` — не деплоить.
+
+### `build-all-data.ts`
+**Назначение:** Полный CI-пайплайн: calendar-index → snapshot → derived indexes → package Pages.
+
+```bash
+npm run build-all-data
+```
+
+Валидирует непустые `top-placement-all` и `judges-summary`. В CI: `static-indexes.test.ts`.
+
 ### `rebuild-calendar-index.ts`
 **Назначение:** Перестройка индекса календаря.
 

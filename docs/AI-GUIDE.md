@@ -19,7 +19,7 @@
 2. **`data/v1/` в git** — источник правды для прода.
 3. **D1** — импорт: парсеры → D1 → `export-local-data` → `data/v1/`.
 4. **Админка** — только локально: UI `localhost:5173/admin`, API `:8787`, пишет в `data/v1/` через sqlite.
-5. **`build-all-data`** — пересобирает `indexes/`, sitemap; CI запускает при push.
+5. **`build-all-data`** — пересобирает `indexes/`, sitemap; CI запускает при push. **Проверка:** snapshot должен содержать `results > 0`, иначе индексы на проде будут пустыми (см. `docs/DATA.md` → «Диагностика»).
 6. **Два топа** — медали и очки, **не смешивать**.
 7. **`total_score`** = `grand_total` как есть, **не делить** на число судей.
 8. **API путь** `/api/competitions`, не `/api/events` (uBlock).
@@ -47,6 +47,7 @@
 | Правка UI главной | `frontend/src/pages/Home.tsx` |
 | Парсер | `backend/parsers/`, `docs/PARSING.md`, `npm run test-parser` |
 | Деплой | `git push main`, `docs/DATA.md`, skill `coursing-stats-dev` |
+| Пустой рейтинг/судьи на проде | `docs/DATA.md` → «Диагностика», skill `data-build-pipeline.md` |
 | Новая страница | `AppRoutes.tsx`, `SEO.tsx`, `build-derived-indexes.ts` (sitemap) |
 | Донино | `docs/SPEED-RECORDS.md`, `donino/*.json` |
 | Где лежит папка / архив HTML | `docs/REPOSITORY-STRUCTURE.md`, `data/archive/README.md` |

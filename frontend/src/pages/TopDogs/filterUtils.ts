@@ -6,7 +6,7 @@ export interface TopDogsFilterParams {
   filterBreed: string
 }
 
-import { dogNameSearchText } from '../../lib/dogName'
+import { dogNameMatchesQuery } from '../../lib/dogName'
 
 function matchesSearch(
   dog: { name_lat?: string; name_ru?: string; breed?: string; total_starts?: number },
@@ -14,9 +14,9 @@ function matchesSearch(
 ): boolean {
   if (!searchQuery) return true
   const query = searchQuery.toLowerCase()
-  const nameMatch = dogNameSearchText(dog.name_lat, dog.name_ru).toLowerCase().includes(query)
+  const nameMatch = dogNameMatchesQuery(dog.name_lat, dog.name_ru, searchQuery)
   const breedMatch = dog.breed && dog.breed.toLowerCase().includes(query)
-  const startsMatch = dog.total_starts && dog.total_starts.toString().includes(query)
+  const startsMatch = dog.total_starts && dog.total_starts.toString().includes(searchQuery)
   return !!(nameMatch || breedMatch || startsMatch)
 }
 

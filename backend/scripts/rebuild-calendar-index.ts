@@ -21,6 +21,18 @@ interface CalendarEvent {
   [key: string]: unknown
 }
 
+/** Путь относительно data/v1/ для fetchJson на фронте. */
+export function resolveResultsFilePath(
+  resultsFile: string | null | undefined,
+  year: number,
+  month: string,
+): string | null {
+  if (!resultsFile) return null
+  const rf = String(resultsFile)
+  if (rf.startsWith('competitions/')) return rf
+  return `competitions/${year}/${month}/${rf}`
+}
+
 export function rebuildCalendarIndexes(): { total: number; years: number } {
   const files = fs
     .readdirSync(CALENDAR_DIR)
@@ -58,7 +70,7 @@ export function rebuildCalendarIndexes(): { total: number; years: number } {
       calendarManifest.map((e) => [
         String(e.id),
         {
-          results_file: e.results_file ?? null,
+          results_file: resolveResultsFilePath(e.results_file, e.year, e.month),
           date_start: e.date_start,
           title: e.title ?? null,
           has_results: Boolean(e.has_results),

@@ -69,6 +69,9 @@ Workflow `.github/workflows/e2e.yml`:
 - `npm run sync-from-remote` (secrets Cloudflare)
 - `npm run test:e2e` с `CI=true`
 
+Workflow `.github/workflows/deploy-frontend.yml` (после `build-all-data`):
+- `npx vitest run backend/tests/static-indexes.test.ts` — индексы не пустые (рейтинг, судьи)
+
 ### Добавление новых тестов
 
 ```typescript

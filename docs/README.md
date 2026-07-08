@@ -28,6 +28,7 @@
 | Запуск, npm, деплой | [GETTING-STARTED.md](GETTING-STARTED.md), [DEVELOPMENT.md](DEVELOPMENT.md) |
 | Архитектура, стек, CI | [ARCHITECTURE.md](ARCHITECTURE.md) |
 | Данные, админка, `data/v1/` | **[DATA.md](DATA.md)** |
+| Пустой рейтинг/судьи на проде | [DATA.md](DATA.md) → «Диагностика» |
 | D1, импорт, миграции | [DATABASE.md](DATABASE.md) |
 | Парсеры windows-1251 | [PARSING.md](PARSING.md) |
 | Локальный API (админка) | [API-REFERENCE.md](API-REFERENCE.md) |
