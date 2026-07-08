@@ -4,11 +4,15 @@ const STALE_MS = 5 * 60 * 1000;
 const STALE_LONG_MS = 60 * 60 * 1000;
 
 async function fetchStaticData<T>(path: string): Promise<{ success: true; data: T }> {
+  console.log(`[DEBUG] Fetching: ${path}`);
   const response = await fetch(path);
+  console.log(`[DEBUG] Response status: ${response.status} ${response.statusText}`);
   if (!response.ok) {
+    console.error(`[DEBUG] Failed to fetch ${path}: ${response.statusText}`);
     throw new Error(`Failed to fetch ${path}: ${response.statusText}`);
   }
   const data = await response.json();
+  console.log(`[DEBUG] Data received for ${path}:`, data);
   return { success: true, data };
 }
 
