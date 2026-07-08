@@ -3,6 +3,7 @@ export interface TopDogsFilterParams {
   filterMinStarts: string
   filterScoreFrom: string
   filterSpeedFrom: string
+  filterBreed: string
 }
 
 import { dogNameSearchText } from '../../lib/dogName'
@@ -27,13 +28,22 @@ function matchesMinStartsFilter(
   return true
 }
 
+function matchesBreedFilter(
+  dog: { breed?: string },
+  filterBreed: string
+): boolean {
+  if (!filterBreed) return true
+  return dog.breed === filterBreed
+}
+
 export function filterPlacement<T extends { name_lat?: string; name_ru?: string; breed?: string; total_starts?: number }>(
   dogs: T[],
-  params: Pick<TopDogsFilterParams, 'searchQuery' | 'filterMinStarts'>
+  params: Pick<TopDogsFilterParams, 'searchQuery' | 'filterMinStarts' | 'filterBreed'>
 ): T[] {
   return dogs.filter(dog => {
     if (!matchesSearch(dog, params.searchQuery)) return false
     if (!matchesMinStartsFilter(dog, params.filterMinStarts)) return false
+    if (!matchesBreedFilter(dog, params.filterBreed)) return false
     return true
   })
 }
@@ -51,6 +61,7 @@ export function filterScore<
   return dogs.filter(dog => {
     if (!matchesSearch(dog, params.searchQuery)) return false
     if (!matchesMinStartsFilter(dog, params.filterMinStarts)) return false
+    if (!matchesBreedFilter(dog, params.filterBreed)) return false
 
     if (params.filterScoreFrom) {
       const scoreValue = dog.best_score
@@ -74,6 +85,7 @@ export function filterSpeed<
   return dogs.filter(dog => {
     if (!matchesSearch(dog, params.searchQuery)) return false
     if (!matchesMinStartsFilter(dog, params.filterMinStarts)) return false
+    if (!matchesBreedFilter(dog, params.filterBreed)) return false
 
     if (params.filterSpeedFrom) {
       const speedValue = dog.best_speed

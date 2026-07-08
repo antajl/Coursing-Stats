@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { useSearchParams } from 'react-router-dom'
-import { useTopPlacement, useTopScore, useTopSpeed, useBreeds, useYears } from '../../hooks/useApi'
+import { useTopPlacement, useTopScore, useTopSpeed, useBreeds, useYears } from '../../hooks/useStaticData'
 import SkeletonLoader from '../../components/SkeletonLoader'
 import TopDogsFilters from './TopDogsFilters'
 import TopDogsTabs from './TopDogsTabs'
@@ -62,30 +62,9 @@ export default function TopDogs() {
 
   const { data: breedsData, isLoading: breedsLoading } = useBreeds()
   const { data: yearsData, isLoading: yearsLoading } = useYears()
-  const { data: topPlacementData, isLoading: placementLoading } = useTopPlacement(
-    filterYear,
-    filterBreed,
-    parseInt(filterMinStarts) || 0,
-    placementSortBy,
-    null,
-    0
-  )
-  const { data: topScoreData, isLoading: scoreLoading } = useTopScore(
-    filterYear,
-    filterBreed,
-    parseInt(filterMinStarts) || 0,
-    scoreSortBy,
-    null,
-    0
-  )
-  const { data: topSpeedData, isLoading: speedLoading } = useTopSpeed(
-    filterYear,
-    filterBreed,
-    parseInt(filterMinStarts) || 0,
-    speedSortBy,
-    null,
-    0
-  )
+  const { data: topPlacementData, isLoading: placementLoading } = useTopPlacement(filterYear)
+  const { data: topScoreData, isLoading: scoreLoading } = useTopScore(filterYear)
+  const { data: topSpeedData, isLoading: speedLoading } = useTopSpeed(filterYear)
 
   const loading = breedsLoading || yearsLoading || placementLoading || scoreLoading || speedLoading
 
@@ -95,37 +74,22 @@ export default function TopDogs() {
     }
   }, [loading])
 
-  const breeds = breedsData?.success ? (Array.isArray(breedsData.data) ? breedsData.data : []) : []
-  const years = yearsData?.success ? (Array.isArray(yearsData.data) ? yearsData.data : []) : []
+  const breeds = breedsData?.success ? (breedsData.data?.breeds || []) : []
+  const years = yearsData?.success ? (yearsData.data?.years || []) : []
 
-  const breedValues = breeds.map((b: { breed?: string } | string) =>
-    typeof b === 'object' ? b.breed : b
-  ) as string[]
-  const yearValues = years.map((y: { year?: string | number } | string | number) =>
-    typeof y === 'object' ? y.year : y
-  )
+  const breedValues = breeds
+  const yearValues = years.map(String)
 
-  const topPlacement = topPlacementData?.success
-    ? Array.isArray(topPlacementData.data)
-      ? topPlacementData.data
-      : topPlacementData.data?.items || []
-    : []
-  const topScore = topScoreData?.success
-    ? Array.isArray(topScoreData.data)
-      ? topScoreData.data
-      : topScoreData.data?.items || []
-    : []
-  const topSpeed = topSpeedData?.success
-    ? Array.isArray(topSpeedData.data)
-      ? topSpeedData.data
-      : topSpeedData.data?.items || []
-    : []
+  const topPlacement = topPlacementData?.success ? (topPlacementData.data?.items || []) : []
+  const topScore = topScoreData?.success ? (topScoreData.data?.items || []) : []
+  const topSpeed = topSpeedData?.success ? (topSpeedData.data?.items || []) : []
 
   const filterParams = {
     searchQuery,
     filterMinStarts,
     filterScoreFrom,
     filterSpeedFrom,
+    filterBreed,
   }
 
   const filteredPlacement = filterPlacement(topPlacement, filterParams)
