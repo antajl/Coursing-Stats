@@ -41,7 +41,7 @@ function copyJsonTree(srcDir: string, destDir: string, skipNames = new Set(['pc-
     const dest = path.join(destDir, entry.name);
     if (entry.isDirectory()) {
       copyJsonTree(src, dest, skipNames);
-    } else if (entry.name.endsWith('.json')) {
+    } else {
       fs.mkdirSync(path.dirname(dest), { recursive: true });
       fs.copyFileSync(src, dest);
     }
