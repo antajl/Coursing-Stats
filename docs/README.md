@@ -17,8 +17,6 @@
 | 3 | **[ARCHITECTURE.md](ARCHITECTURE.md)** | Компоненты, деплой, стек |
 | 4 | *по задаче* | см. таблицу ниже |
 
-Также: `.cursor/rules/` (alwaysApply) и skills `.cursor/skills/coursing-stats-{dev,parsers}/`.
-
 **Не читай всё подряд** — открой только нужный раздел.
 
 ---
@@ -64,9 +62,9 @@ npm run dev                    # localhost:5173 + админка
 backend/          # API, парсеры, скрипты, local-dev-server
 frontend/         # React SPA (staticData.ts → /data/v1/)
 data/v1/          # ★ runtime данные в git
+data/archive/     # снимки D1, HTML протоколов (results/)
 docs/             # эта папка
 scripts/          # start-servers.bat, deploy-to-github.bat
-.cursor/rules/    # правила для Cursor
 ```
 
 ---

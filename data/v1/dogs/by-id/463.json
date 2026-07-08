@@ -1,6 +1,6 @@
 {
   "schema": "coursing-stats/dog-v1",
-  "exported_at": "2026-07-07T17:16:29.219Z",
+  "exported_at": "2026-07-08T00:31:32.188Z",
   "id": 463,
   "dog_key": "лакшери-випп-оникс-luxury-whipp-oniks--уиппет",
   "name_lat": "ЛАКШЕРИ ВИПП ОНИКС /LUXURY WHIPP ONIKS",
@@ -9,9 +9,15 @@
   "sex": null,
   "owner": null,
   "competition_ids": [
-    1272
+    1272,
+    1432,
+    1455,
+    1456
   ],
   "competition_files": [
-    "competitions/2025/06-июнь/1272-чркф-бега-борзых.json"
+    "competitions/2025/06-июнь/1272-чркф-бега-борзых.json",
+    "competitions/2023/06-июнь/1432-чемпионат-ркф-cacl-по-бегам-борзых.json",
+    "competitions/2024/06-июнь/1455-монопородные-чемпионаты-ркф-по-бегам-борзых-в-по.json",
+    "competitions/2024/06-июнь/1456-чемпионат-ркф-cacl-по-бегам-борзых-за-механическ.json"
   ]
 }

@@ -126,7 +126,7 @@ export function extractBibColor($cell) {
     if (lower === '#0000ff' || lower === 'blue' || lower === '#00ccff' || lower === '#00ffff') return 'blue';
     if (lower === '#000000' || lower === 'black' || lower === '#000') return 'black';
     if (lower === '#00ff00' || lower === 'green' || lower === '#008000') return 'green';
-    if (lower === '#ffff00' || lower === 'yellow') return 'yellow';
+    if (lower === '#efe4b0' || lower === '#fff8dc') return 'yellow';
     return bgColor;
   }
 

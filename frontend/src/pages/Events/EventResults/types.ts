@@ -1,6 +1,7 @@
 export interface Event {
   results_url?: string | null
   full_title?: string | null
+  rank_label?: string | null
   competition_kind?: string | null
   competition_type?: string | null
   event_date?: string | null

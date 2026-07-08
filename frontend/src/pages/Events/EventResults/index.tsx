@@ -6,6 +6,7 @@ import SkeletonLoader from '../../../components/SkeletonLoader'
 import EventHeader from './EventHeader'
 import ResultsSection from './ResultsSection'
 import { SEO } from '../../../components/SEO'
+import { getEventHeadline } from '../eventListUtils'
 import type { Event, Result } from './types'
 
 export default function EventResults() {
@@ -82,7 +83,15 @@ export default function EventResults() {
     const date = new Date(parseInt(year), parseInt(month) - 1, parseInt(day))
     return date.toLocaleDateString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' })
   })() : ''
-  const eventName = event.title || event.full_title || 'Соревнования'
+  const eventName = getEventHeadline({
+    id: Number(id) || 0,
+    date_start: event.date_start || '',
+    rank_label: event.rank_label,
+    title: event.title,
+    full_title: event.full_title,
+    competition_kind: event.competition_kind,
+    competition_type: event.competition_type,
+  })
   const description = `Результаты соревнований по ${eventType} ${eventDate} в ${event.location || ''}. ${results.length} участников. Статистика и результаты.`
 
   return (

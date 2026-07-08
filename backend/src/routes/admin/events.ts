@@ -1,7 +1,13 @@
 import { Hono } from 'hono';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const ROOT = path.resolve(__dirname, '../../../..');
+const COMPETITIONS_ROOT = path.join(ROOT, 'data/v1/competitions');
 
 type Env = {
-  DB: any;
   ADMIN_API_TOKEN: string;
 };
 
@@ -17,10 +23,76 @@ function checkAdminToken(c: any, env: Env) {
   return authHeader === adminToken;
 }
 
+async function getCompetitionFiles() {
+  const years = await fs.readdir(COMPETITIONS_ROOT);
+  const events: any[] = [];
+  
+  for (const year of years) {
+    const yearPath = path.join(COMPETITIONS_ROOT, year);
+    const stat = await fs.stat(yearPath);
+    if (!stat.isDirectory()) continue;
+    
+    try {
+      const months = await fs.readdir(yearPath);
+      for (const month of months) {
+        const monthPath = path.join(yearPath, month);
+        const monthStat = await fs.stat(monthPath);
+        if (!monthStat.isDirectory()) continue;
+        
+        const files = await fs.readdir(monthPath);
+        for (const file of files) {
+          if (!file.endsWith('.json')) continue;
+          const filePath = path.join(monthPath, file);
+          const content = await fs.readFile(filePath, 'utf-8');
+          const data = JSON.parse(content);
+          events.push(data.event);
+        }
+      }
+    } catch (e) {
+      // Skip if can't read
+    }
+  }
+  
+  return events;
+}
+
+async function findEventFile(eventId: number): Promise<{ filePath: string; data: any } | null> {
+  const years = await fs.readdir(COMPETITIONS_ROOT);
+  
+  for (const year of years) {
+    const yearPath = path.join(COMPETITIONS_ROOT, year);
+    const stat = await fs.stat(yearPath);
+    if (!stat.isDirectory()) continue;
+    
+    try {
+      const months = await fs.readdir(yearPath);
+      for (const month of months) {
+        const monthPath = path.join(yearPath, month);
+        const monthStat = await fs.stat(monthPath);
+        if (!monthStat.isDirectory()) continue;
+        
+        const files = await fs.readdir(monthPath);
+        for (const file of files) {
+          if (!file.endsWith('.json')) continue;
+          if (!file.startsWith(`${eventId}-`)) continue;
+          
+          const filePath = path.join(monthPath, file);
+          const content = await fs.readFile(filePath, 'utf-8');
+          const data = JSON.parse(content);
+          return { filePath, data };
+        }
+      }
+    } catch (e) {
+      // Skip if can't read
+    }
+  }
+  
+  return null;
+}
+
 export function handleAdminEvents(app: Hono<{ Bindings: Env }>) {
   // GET /api/admin/events - Get all events for admin
   app.get('/api/admin/events', async (c) => {
-    const db = c.env.DB;
     const env = c.env;
 
     if (!checkAdminToken(c, env)) {
@@ -29,24 +101,38 @@ export function handleAdminEvents(app: Hono<{ Bindings: Env }>) {
 
     try {
       const year = c.req.query('year');
-      let query = `
-        SELECT id, year, date_start, date_end, rank_label, event_type,
-               competition_kind, competition_type, title, host_club,
-               region, location, catalog_url, results_url, confirmed, judges
-        FROM events
-        WHERE year < 2026
-      `;
-      const params = [];
-
-      if (year) {
-        query += ' AND year = ?';
-        params.push(year);
-      }
-
-      query += ' ORDER BY date_start ASC';
-
-      const { results } = await db.prepare(query).bind(...params).all();
-      return c.json({ success: true, data: results });
+      const events = await getCompetitionFiles();
+      
+      const filtered = year 
+        ? events.filter((e: any) => String(e.year) === year)
+        : events.filter((e: any) => e.year < 2026);
+      
+      const mapped = filtered.map((e: any) => ({
+        id: e.id,
+        year: e.year,
+        date_start: e.date_start,
+        date_end: e.date_end,
+        rank_label: e.rank_label,
+        event_type: e.event_type,
+        competition_kind: e.competition_kind,
+        competition_type: e.competition_type,
+        title: e.title,
+        host_club: e.host_club,
+        region: e.region,
+        location: e.location,
+        catalog_url: e.catalog_url,
+        results_url: e.results_url,
+        confirmed: e.confirmed,
+        judges: e.judges
+      }));
+      
+      mapped.sort((a: any, b: any) => {
+        const aDate = a.date_start || '';
+        const bDate = b.date_start || '';
+        return aDate.localeCompare(bDate);
+      });
+      
+      return c.json({ success: true, data: mapped });
     } catch (err: any) {
       console.error('Error fetching events:', err);
       return c.json({ success: false, error: err.message }, 500);
@@ -55,9 +141,8 @@ export function handleAdminEvents(app: Hono<{ Bindings: Env }>) {
 
   // PUT /api/admin/events/:id - Update event (только переданные поля)
   app.put('/api/admin/events/:id', async (c) => {
-    const db = c.env.DB;
     const env = c.env;
-    const eventId = c.req.param('id');
+    const eventId = Number(c.req.param('id'));
 
     if (!checkAdminToken(c, env)) {
       return c.json({ success: false, error: 'Unauthorized' }, 401);
@@ -79,35 +164,27 @@ export function handleAdminEvents(app: Hono<{ Bindings: Env }>) {
 
     try {
       const body = await c.req.json();
+      const eventFile = await findEventFile(eventId);
 
-      const existing = await db
-        .prepare('SELECT id FROM events WHERE id = ?')
-        .bind(eventId)
-        .first();
-
-      if (!existing) {
+      if (!eventFile) {
         return c.json({ success: false, error: 'Event not found' }, 404);
       }
 
-      const sets: string[] = [];
-      const values: unknown[] = [];
-
+      const { filePath, data } = eventFile;
+      
+      // Update event fields
       for (const field of EDITABLE_EVENT_FIELDS) {
         if (Object.prototype.hasOwnProperty.call(body, field)) {
-          sets.push(`${field} = ?`);
           const val = body[field];
-          values.push(val === '' || val === undefined ? null : val);
+          data.event[field] = val === '' || val === undefined ? null : val;
         }
       }
+      
+      // Update exported_at timestamp
+      data.exported_at = new Date().toISOString();
 
-      if (sets.length === 0) {
-        return c.json({ success: false, error: 'No fields to update' }, 400);
-      }
-
-      await db
-        .prepare(`UPDATE events SET ${sets.join(', ')} WHERE id = ?`)
-        .bind(...values, eventId)
-        .run();
+      // Write back to file
+      await fs.writeFile(filePath, JSON.stringify(data, null, 2), 'utf-8');
 
       return c.json({ success: true, message: 'Event updated' });
     } catch (err: any) {

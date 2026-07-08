@@ -1,6 +1,6 @@
 {
   "schema": "coursing-stats/dog-v1",
-  "exported_at": "2026-07-07T17:16:29.219Z",
+  "exported_at": "2026-07-08T00:31:32.188Z",
   "id": 575,
   "dog_key": "атомик-штарке-винд-atomic-starke-wind--уиппет",
   "name_lat": "АТОМИК ШТАРКЕ ВИНД /ATOMIC STARKE WIND",
@@ -10,10 +10,12 @@
   "owner": null,
   "competition_ids": [
     1285,
-    1316
+    1316,
+    1466
   ],
   "competition_files": [
     "competitions/2025/09-сентябрь/1285-чемпионат-россии-бега-борзых.json",
-    "competitions/2026/05-май/1316-чркф-бега-борзых.json"
+    "competitions/2026/05-май/1316-чркф-бега-борзых.json",
+    "competitions/2024/09-сентябрь/1466-чемпионат-россии-cacl-по-бегам-борзых.json"
   ]
 }

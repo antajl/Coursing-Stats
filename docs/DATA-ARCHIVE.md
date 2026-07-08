@@ -50,20 +50,54 @@ data/archive/snapshots/YYYY-MM-DDTHH-mm-ss/
 
 JSON-поля (`raw_scores_json`, `history`, `track_schemes`) разворачиваются в объекты, где возможно.
 
-## Покрытие данных (актуально на 2026-07-07)
+## Покрытие данных (актуально на 2026-07-08)
 
 | Сущность | Количество | Примечание |
 |----------|------------|------------|
-| events | 389 | календарь 2015–2026 |
-| competitions с results | 56 | протоколы в БД |
-| dogs | 1532 | |
-| results | 2958 | в основном 2025–2026 |
+| events | 320+ | календарь 2015–2026 |
+| competitions с results | 105+ | протоколы в БД + web-archive |
+| dogs | 1500+ | |
+| results | 5600+ | в основном 2022–2026 (включая web-archive) |
 | speed_records | 191 | Google Sheets |
 | coursing_records | 107 | Google Sheets 350 м |
 | breeds | 86 | |
 | judges (таблица) | 0 на remote | судьи в `events.judges`, API `/api/judges` |
 
-**2015–2024:** события в календаре есть; детальные `results` в БД **нет** (на procoursing — JPG, OCR не делали).
+**2015–2024:** события в календаре есть; детальные `results` для 2022–2024 добавлены из web-archive (web.archive.org). 2015–2021 — только события без результатов (на procoursing — JPG, OCR не делали).
+
+## Web Archive Integration (2026-07-08)
+
+В июле 2026 года выполнена интеграция данных из web.archive.org для восстановления исторических результатов 2022–2024 годов.
+
+**Источники:**
+- Календари: `WebArchiveResults/calendars-cleaned/*.html` (очищенные от баннеров web.archive.org)
+- Результаты: `WebArchiveResults/cleaned/{year}/` (очищенные HTML страниц результатов)
+- Парсинг: существующие парсеры (coursing, bzmp, racing) с windows-1251 декодированием
+
+**Добавленные данные:**
+- **2022:** 1 событие, 33 результата
+- **2023:** 22 события, 1233 результата
+- **2024:** 26 событий, 1423 результата
+
+**Итого:** 49 событий, 2689 результатов из web-archive
+
+**Процесс интеграции:**
+1. Скачаны календари и страницы результатов с web.archive.org
+2. Удалены баннеры и скрипты web.archive.org из HTML
+3. Протестированы существующие парсеры на очищенных файлах
+4. Распарсены результаты и экспортированы в JSON по годам
+5. Интегрированы в `data/v1/calendar/{year}.json` и `data/v1/competitions/{year}/{month}/`
+6. Пересобраны индексы (calendar-index, top-placement/score/speed, dog-profiles)
+
+**Скрипты интеграции:**
+- `backend/scripts/web-archive/extract-results-urls.ts` — извлечение ссылок результатов из календарей
+- `backend/scripts/web-archive/download-results.ts` — скачивание страниц результатов
+- `backend/scripts/web-archive/clean-web-archive-html.ts` — очистка HTML от баннеров
+- `backend/scripts/web-archive/test-parsers-on-web-archive.ts` — тестирование парсеров
+- `backend/scripts/web-archive/parse-and-export.ts` — парсинг и экспорт в JSON
+- `backend/scripts/web-archive/cleanup-2024-calendar.ts` — очистка календаря от дубликатов
+- `backend/scripts/web-archive/add-missing-2024-events.ts` — добавление недостающих событий
+- `backend/scripts/web-archive/clean-calendar-html.ts` — очистка календарей от баннеров
 
 ## Восстановление из SQL
 

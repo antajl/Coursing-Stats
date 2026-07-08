@@ -165,12 +165,14 @@ Worker (`backend/src/worker.ts`) **не деплоится в CI** — legacy д
 
 | Сущность | ~кол-во |
 |----------|---------|
-| events (календарь) | 389 |
-| competitions с results | 56 |
-| dogs | 1532 |
-| results | 2958 |
+| events (календарь) | 224 |
+| events с results | 94 |
+| dogs | 2034 |
+| results (в competitions) | ~3000 |
 | donino speed / coursing | 191 / 107 |
 | breeds | 86 |
+
+Архивные HTML протоколы: `WebArchiveResults/pages/{year}/` (2022: 2 файла, 2023: 42 файла, 2024: 56 файлов).
 
 D1 remote может отличаться — только для импорта.
 
@@ -180,6 +182,7 @@ D1 remote может отличаться — только для импорта
 
 | Документ | Когда читать |
 |----------|--------------|
+| `docs/REPOSITORY-STRUCTURE.md` | Все папки `data/`, `backend/scripts/`, архив |
 | `docs/ARCHITECTURE.md` | Общая архитектура, компоненты |
 | `docs/DATABASE.md` | Схема D1, миграции, sync |
 | `docs/PARSING.md` | Парсеры procoursing.ru |

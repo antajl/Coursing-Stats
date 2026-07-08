@@ -3,7 +3,7 @@
  */
 
 import { extractNumber, extractBoldNumber, extractItalicNumber, extractBibColor, cleanText, normalizeDogName, normalizeBreed, detectStatusFromText, extractReasonText, extractDogNames } from './utils';
-
+import { parseMultiJudgeCompact, isCompactMultiJudgeRow } from '../shared/multi-judge-compact';
 export function parseDogRow1Judge($, $cells, cellCount, allRows, rowIndex, judges, processedRows) {
   // Парсинг для формата с 1 судьей
   // Структура: все оценки в одной строке
@@ -176,6 +176,11 @@ export function parseDogRow2Judges($, $cells, cellCount, allRows, rowIndex, judg
   // Парсинг для формата с 2 судьями
   // Строка 1 содержит оценки судьи 1
   // Строка 2 содержит оценки судьи 2
+
+  // Компактный формат 2023–2024: 23 ячейки, суммы забегов без столбцов «Сум.» у каждого судьи
+  if (cellCount >= 20 && cellCount < 24) {
+    return parseMultiJudgeCompact($, $cells, cellCount, allRows, rowIndex, 2, processedRows)
+  }
   
   const heats = [];
   
@@ -460,6 +465,8 @@ export function parseDogRow($, $row, breedClass, allRows, rowIndex, judges, extr
     
     if (judgeCount === 1) {
       scoresData = parseDogRow1Judge($, $cells, cellCount, allRows, rowIndex, judges, processedRows);
+    } else if (isCompactMultiJudgeRow(cellCount, hasHeatData)) {
+      scoresData = parseMultiJudgeCompact($, $cells, cellCount, allRows, rowIndex, judgeCount, processedRows);
     } else {
       scoresData = parseDogRow2Judges($, $cells, cellCount, allRows, rowIndex, judges, processedRows);
     }
@@ -574,7 +581,7 @@ export function parseNonArrivedRow($row) {
   const $cells = $row.find("td");
   
   // Каталожный номер
-  const catalogNo = extractItalicNumber($cells.eq(1));
+  const catalogNo = extractItalicNumber($cells.eq(1)) ?? extractNumber($cells.eq(1).text());
   if (!catalogNo) return null;
 
   // Порода, класс, пол
@@ -583,7 +590,8 @@ export function parseNonArrivedRow($row) {
   const sex = cleanText($cells.eq(4).text());
 
   // Кличка
-  const name = normalizeDogName($cells.eq(5).text());
+  const { name_ru: nameRu, name_lat: nameLat } = extractDogNames($cells.eq(5));
+  const name = nameRu || nameLat;
 
   // Статус (колонка 6 с colspan=19)
   const statusText = cleanText($cells.eq(6).text());
@@ -596,10 +604,12 @@ export function parseNonArrivedRow($row) {
     class: class_,
     sex,
     name,
+    name_ru: nameRu,
+    name_lat: nameLat,
     total_score: null,
     qualification: null,
     vc: null,
-    status: statusText === "Неявка" ? "dns" : "unknown_status",
+    status: /неявка/i.test(statusText) ? "dns" : "unknown_status",
     raw_text: $row.html() || "",
   };
 }

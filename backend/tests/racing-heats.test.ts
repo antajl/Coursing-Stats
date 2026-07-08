@@ -13,8 +13,8 @@ describe('racing heat bib numbers', () => {
       .then((buf) => new TextDecoder('windows-1251').decode(buf))
       .catch(() => null);
 
-    if (!html) {
-      // offline — пропускаем live fetch
+    if (!html || html.includes('Ошибка 404') || !html.includes('<table')) {
+      // offline или 404 — пропускаем live fetch
       return;
     }
 
@@ -52,7 +52,7 @@ describe('racing heat bib numbers', () => {
       .then((buf) => new TextDecoder('windows-1251').decode(buf))
       .catch(() => null);
 
-    if (!html) return;
+    if (!html || html.includes('Ошибка 404') || !html.includes('<table')) return;
 
     const { results } = await parseRacingHTML(html);
     const classes = [...new Set(results.map((r) => r.breed_class))];

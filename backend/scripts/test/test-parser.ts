@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { parseCoursingHTML } from "../../parsers/parse-results-coursing";
+import { parseCoursingHTML } from "../../parsers/coursing/index";
 
 /**
  * Регресс-тест на синтетическом тексте, повторяющем РЕАЛЬНУЮ структуру
@@ -15,7 +15,7 @@ import { parseCoursingHTML } from "../../parsers/parse-results-coursing";
 
 const bodyText = `
 <table>
-<tr><td colspan="25"><b>Группа - Класс - Пол</b></td></tr>
+<tr><td colspan="25" bgcolor="#c0c0c0"><b>Тестовая порода - Класс - Кобели</b></td></tr>
 <tr>
 <td rowspan="2"><font style="font-size:10pt" face="Arial" color="#000000">1</font></td>
 <td rowspan="2"><font style="font-size:10pt" face="Arial" color="#000000"><i>2</i></font></td>

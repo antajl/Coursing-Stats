@@ -22,23 +22,8 @@ const env = {
 };
 
 const wrapper = new Hono();
-wrapper.use('*', async (c, next) => {
-  await next();
-  if (
-    c.req.path.startsWith('/api/admin') &&
-    c.req.method !== 'GET' &&
-    c.res.status < 400 &&
-    c.env.DATA_STORE?.nodeDb
-  ) {
-    persistNodeDataStore();
-    try {
-      const synced = syncSqliteToV1(c.env.DATA_STORE.nodeDb);
-      console.log('Admin sync → data/v1:', synced);
-    } catch (err) {
-      console.error('Admin sync to data/v1 failed:', err);
-    }
-  }
-});
+// Note: Admin sync disabled - admin routes now write directly to JSON files
+// The sync mechanism is only needed for legacy D1 import workflow
 wrapper.route('/', app);
 
 serve(

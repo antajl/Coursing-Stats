@@ -18,5 +18,5 @@ export function formatAdminEventDate(dateStart: string, dateEnd?: string | null)
 }
 
 export function sortAdminEventsByDateAsc<T extends AdminListEvent>(events: T[]): T[] {
-  return [...events].sort((a, b) => a.date_start.localeCompare(b.date_start))
+  return [...events].sort((a, b) => String(a.date_start ?? '').localeCompare(String(b.date_start ?? '')))
 }

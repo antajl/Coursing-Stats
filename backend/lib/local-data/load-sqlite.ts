@@ -135,10 +135,9 @@ function loadCompetitions(db: Database.Database) {
       insertRow(db, 'events', pickRow(data.event, [...EVENT_COLUMNS]));
     }
 
-    for (const result of data.results ?? []) {
-      const { dog_key: _dk, dog: _dog, ...rest } = result;
-      insertRow(db, 'results', pickRow(rest, [...RESULT_COLUMNS]));
-    }
+    // Skip loading results from competition files for now
+    // The public site reads competition results directly from JSON files
+    // and these files don't have dog_id in the expected format for SQLite
   }
 }
 
@@ -159,14 +158,6 @@ function loadDonino(db: Database.Database) {
     }
   }
 }
-
-export type LocalDataStats = {
-  events: number;
-  dogs: number;
-  results: number;
-  speed_records: number;
-  coursing_records: number;
-};
 
 function countTable(db: Database.Database, table: string): number {
   const row = db.prepare(`SELECT COUNT(*) AS c FROM ${table}`).get() as { c: number };

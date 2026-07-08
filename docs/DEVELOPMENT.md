@@ -31,22 +31,23 @@ backend/
 │   ├── calendar/scrape-year-page.ts  # календарь s_{YEAR}.html
 │   └── unique/                    # v2 shared row/header parsers
 ├── scripts/                   # All .ts, run via npx tsx
-│   ├── scrape/
+│   ├── scrape/                # Скрапинг индекса событий с procoursing.ru
 │   │   └── scrape-year-index.ts
-│   ├── load/
-│   │   ├── load-events.ts
-│   │   └── split-sql-batches.ts   # разбивка reparse SQL для remote D1
-│   ├── reparse/
-│   ├── migrate/
-│   ├── sync/
-│   ├── update/
-│   ├── speed/
-│   ├── test/                  # See test/README.md
+│   ├── load/                  # Загрузка данных в D1
+│   │   ├── load-events.ts     # Загрузка событий
+│   │   └── split-sql-batches.ts   # Разбивка reparse SQL для remote D1
+│   ├── reparse/               # Перепарсинг данных (7 скриптов)
+│   ├── migrate/               # Миграции данных (4 скрипта)
+│   ├── sync/                  # Синхронизация данных (4 скрипта)
+│   ├── update/                # Обновление данных (3 скрипта)
+│   ├── speed/                 # Скрипты для Донино (9 скриптов)
+│   ├── test/                  # Тестовые скрипты (35 скриптов)
 │   │   ├── test-parser.ts, test-parsers-fixtures.ts
 │   │   ├── download-fixtures.ts, smoke-api.ts, compare-parsers.ts
 │   │   └── debug/             # One-off investigation scripts
-│   ├── ci/
-│   └── archive/               # One-time scripts (DO NOT REUSE)
+│   ├── ci/                    # CI скрипты (3 скрипта)
+│   ├── export/                # Экспорт данных (4 скрипта)
+│   └── archive/               # One-time scripts (18 скриптов, DO NOT REUSE)
 ├── lib/
 │   ├── fetch-win1251.ts
 │   └── dog-lookup.ts
@@ -85,13 +86,38 @@ frontend/
 │   │   │   ├── index.tsx      # Calendar
 │   │   │   └── EventResults/  # index, EventHeader, details/{Racing,Scoring}Detail
 │   │   ├── Judges/
-│   │   └── SpeedRecords/      # Donino hub: две колонки, записи + статистика
+│   │   ├── SpeedRecords/      # Donino hub: две колонки, записи + статистика
+│   │   └── Admin/             # Admin UI for editing data
+│   │       ├── index.tsx      # Admin dashboard
+│   │       ├── EventEdit.tsx  # Event editing form
+│   │       ├── AdminResultsSection.tsx # Results editing
+│   │       ├── ResultScoresEditor.tsx # Score editing
+│   │       ├── DogSearchSelect.tsx # Dog search
+│   │       ├── AdminCalendarForm.tsx # Calendar editing
+│   │       ├── adminApi.ts     # Admin API calls
+│   │       └── adminEventUtils.ts # Event utilities
 │   ├── services/api.ts
+│   ├── hooks/                 # React hooks
+│   │   ├── useApi.ts          # API data fetching hooks
+│   │   ├── useDarkMode.ts     # Dark mode toggle
+│   │   ├── useGsapFadeIn.ts   # GSAP fade-in animation
+│   │   ├── useGsapRiseIn.ts   # GSAP rise-in animation
+│   │   └── useInfiniteScroll.ts # Infinite scroll pagination
 │   └── lib/
-│       ├── query-client.tsx, icons.ts
+│       ├── staticData.ts      # Prod data loader (fetch JSON from /data/v1/ CDN)
+│       ├── query-client.tsx   # React Query client
+│       ├── icons.ts           # Icon components
 │       ├── toolbar.ts         # Tailwind class bundles for PageToolbar
 │       ├── ownerMarks.ts      # Owner crown marks (frontend-only)
-│       └── recordDates.ts     # Donino dates (Excel serial, dedupe, expandCoursingTimeline)
+│       ├── recordDates.ts     # Donino dates (Excel serial, dedupe, expandCoursingTimeline)
+│       ├── breedMapping.ts    # Breed name mapping
+│       ├── dogName.ts         # Dog name utilities
+│       ├── judgeSortUtils.ts  # Judge sorting utilities
+│       ├── judgeStats.ts      # Judge statistics calculations
+│       ├── motion.ts          # Motion/animation utilities
+│       ├── qualificationTitles.ts # Qualification titles constants
+│       ├── season.ts          # Season utilities
+│       └── statusReason.ts    # Status reason utilities
 ├── public/
 ├── package.json
 ├── vite.config.ts             # TypeScript; manualChunks for vendors
@@ -100,40 +126,12 @@ frontend/
 
 ### Data Directory
 
-```
-data/
-├── events/                    # JSON event files
-│   ├── events-2023.json
-│   ├── events-2024.json
-│   ├── events-2025.json
-│   ├── events-2026.json
-│   ├── events-historical.json
-│   └── events.json
-├── migrations/                # SQL migrations
-│   ├── migrate-add-judges.sql
-│   ├── migrate-add-track-schemes.sql
-│   ├── migrate-normalize-dogs.sql
-│   ├── migrate-normalize-total-score.sql
-│   ├── migrate-remote-schema.sql
-│   ├── migrate-simplify-statuses.sql
-│   └── migrate-speed-records-history.sql
-├── exports/                   # SQL exports (for sync)
-│   ├── sync-events.sql
-│   ├── sync-results.sql
-│   └── sync-dogs.sql
-├── imports/                   # SQL imports (for load)
-│   ├── load-events.sql
-│   ├── load-results.sql
-│   └── speed-records.sql
-├── updates/                   # SQL updates
-│   ├── update-judges.sql
-│   ├── update-missing-bib-numbers.sql
-│   ├── update-raw-scores.sql
-│   ├── update-status-reasons.sql
-│   └── update-track-schemes.sql
-└── temp/                      # Temporary files
-    └── sync-local-to-remote.sql
-```
+Кратко:
+- **`data/v1/`** — runtime сайта (git)
+- **`data/archive/`** — снимки D1 + HTML протоколов (`results/`)
+- **`data/tmp/`** — календари web.archive для сверки
+- **`data/imports/`, `data/migrations/`** — SQL для D1
+- **`data/backup/`** — отчёты миграций (не в git)
 
 ### Root Directory
 
@@ -146,8 +144,12 @@ data/
 ├── scripts/                   # Batch/Shell scripts
 │   ├── start-servers.bat
 │   └── deploy-to-github.bat
-└── assets/                    # Static assets
-    └── logo.svg (renamed from 2.svg)
+├── assets/                    # Static assets
+│   └── logo.svg (renamed from 2.svg)
+└── .devin/                    # Devin AI agent configuration
+    ├── rules/                 # Rules for Devin (coursing-stats-core.mdc, coursing-stats-parsers.mdc)
+    ├── skills/                # Skills for Devin (coursing-stats-dev/, coursing-stats-parsers/)
+    └── workflows/             # Workflows for Devin (review.md)
 ```
 
 ---

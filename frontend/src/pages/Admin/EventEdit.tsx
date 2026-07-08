@@ -65,6 +65,17 @@ export default function EventEdit() {
     vc: '',
     status: 'finished'
   })
+  const [verificationMode, setVerificationMode] = useState(false)
+  const [originalResults, setOriginalResults] = useState<Result[]>([])
+  const [loadingOriginal, setLoadingOriginal] = useState(false)
+  const [originalError, setOriginalError] = useState<string | null>(null)
+  const [customUrl, setCustomUrl] = useState('')
+  const [htmlFile, setHtmlFile] = useState<File | null>(null)
+  const [warehouseInfo, setWarehouseInfo] = useState<{
+    has_html: boolean
+    html_path: string | null
+  } | null>(null)
+  const [savingWarehouse, setSavingWarehouse] = useState(false)
 
   useEffect(() => {
     loadEventData()
@@ -109,6 +120,82 @@ export default function EventEdit() {
       console.error(err)
     } finally {
       setLoading(false)
+    }
+  }
+
+  const loadWarehouseInfo = async () => {
+    if (!id) return
+    try {
+      const response = await adminFetch(`/api/admin/source/procoursing/${id}`)
+      const parsed = await parseAdminResponse(response)
+      if (!parsed.ok) return
+      const data = (parsed.data?.data as any) || {}
+      setWarehouseInfo({
+        has_html: Boolean(data.has_html),
+        html_path: data.html_path ?? null,
+      })
+    } catch {
+      // ignore
+    }
+  }
+
+  const saveHtmlToWarehouse = async () => {
+    if (!id || !htmlFile) return
+    setSavingWarehouse(true)
+    setOriginalError(null)
+    try {
+      const htmlContent = await htmlFile.text()
+      const response = await adminFetch(`/api/admin/source/procoursing/${id}/html`, {
+        method: 'POST',
+        body: JSON.stringify({ html: htmlContent, note: 'uploaded via admin' }),
+      })
+      const parsed = await parseAdminResponse(response)
+      if (!parsed.ok) throw new Error(parsed.error || 'Ошибка сохранения в склад')
+      await loadWarehouseInfo()
+      setSaveMessage('HTML сохранён в склад')
+    } catch (err) {
+      setOriginalError(err instanceof Error ? err.message : 'Ошибка сохранения')
+    } finally {
+      setSavingWarehouse(false)
+    }
+  }
+
+  const loadOriginalResults = async (mode: 'auto' | 'warehouse' = 'auto') => {
+    setLoadingOriginal(true)
+    setOriginalError(null)
+
+    try {
+      let body: any = {}
+
+      if (mode === 'warehouse') {
+        body.from_warehouse = true
+      } else if (htmlFile) {
+        const htmlContent = await htmlFile.text()
+        body.html = htmlContent
+      } else if (customUrl) {
+        body.url = customUrl
+      } else if (event?.results_url) {
+        body.url = event.results_url
+      } else {
+        setOriginalError('Нет URL/HTML. Загрузите HTML или используйте склад.')
+        setLoadingOriginal(false)
+        return
+      }
+
+      const response = await adminFetch(`/api/admin/verify-results/${id}`, {
+        method: 'POST',
+        body: JSON.stringify(body),
+      })
+      const parsed = await parseAdminResponse(response)
+      if (!parsed.ok) {
+        throw new Error(parsed.error || 'Ошибка загрузки оригинальных данных')
+      }
+      setOriginalResults((parsed.data?.data as Result[]) || [])
+    } catch (err) {
+      setOriginalError(err instanceof Error ? err.message : 'Ошибка загрузки')
+      console.error(err)
+    } finally {
+      setLoadingOriginal(false)
     }
   }
 
@@ -165,7 +252,7 @@ export default function EventEdit() {
     try {
       const response = await adminFetch(`/api/admin/results/${resultId}`, {
         method: 'PUT',
-        body: JSON.stringify({ [field]: value }),
+        body: JSON.stringify({ event_id: event?.id, [field]: value }),
       })
       const parsed = await parseAdminResponse(response)
       if (!parsed.ok) {
@@ -193,7 +280,7 @@ export default function EventEdit() {
     for (const r of affected) {
       const response = await adminFetch(`/api/admin/results/${r.id}`, {
         method: 'PUT',
-        body: JSON.stringify({ breed_class: newGroupKey }),
+        body: JSON.stringify({ event_id: event?.id, breed_class: newGroupKey }),
       })
       const parsed = await parseAdminResponse(response)
       if (!parsed.ok) {
@@ -212,7 +299,7 @@ export default function EventEdit() {
     if (!confirm('Удалить этот результат?')) return
 
     try {
-      const response = await adminFetch(`/api/admin/results/${resultId}`, {
+      const response = await adminFetch(`/api/admin/results/${resultId}?event_id=${event?.id}`, {
         method: 'DELETE',
       })
       const parsed = await parseAdminResponse(response)
@@ -384,9 +471,27 @@ export default function EventEdit() {
         {/* Results Table */}
         <div className="bg-white dark:bg-charcoal-800 rounded-xl shadow-sm border border-old-money-200 dark:border-charcoal-700 overflow-hidden">
           <div className="p-6 border-b border-old-money-200 dark:border-charcoal-700 flex items-center justify-between">
-            <h2 className="text-xl font-semibold text-charcoal-900 dark:text-charcoal-100">
-              Результаты ({results.length})
-            </h2>
+            <div className="flex items-center gap-4">
+              <h2 className="text-xl font-semibold text-charcoal-900 dark:text-charcoal-100">
+                Результаты ({results.length})
+              </h2>
+              <button
+                onClick={() => {
+                  setVerificationMode(!verificationMode)
+                  if (!verificationMode) {
+                    loadWarehouseInfo()
+                    loadOriginalResults('warehouse')
+                  }
+                }}
+                className={`px-3 py-1.5 text-sm rounded-lg transition-colors ${
+                  verificationMode
+                    ? 'bg-forest-600 text-white hover:bg-forest-700'
+                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-charcoal-700 dark:text-gray-300'
+                }`}
+              >
+                {verificationMode ? '✓ Режим проверки' : 'Проверить с оригиналом'}
+              </button>
+            </div>
             <button
               onClick={() => setShowAddResult(true)}
               className="px-4 py-2 bg-camel-600 text-white rounded-lg hover:bg-camel-700 transition-colors text-sm"
@@ -395,8 +500,91 @@ export default function EventEdit() {
             </button>
           </div>
           <div className="overflow-x-auto">
+            {verificationMode && (
+              <div className="p-4 bg-cream-50 dark:bg-charcoal-900/30 border border-om-200 dark:border-charcoal-600 rounded-lg mb-4">
+                <div className="space-y-3">
+                  <div className="flex flex-wrap items-center gap-2 text-xs text-charcoal-600 dark:text-charcoal-400">
+                    <span className="font-medium">Склад:</span>
+                    {warehouseInfo ? (
+                      warehouseInfo.has_html ? (
+                        <span className="rounded bg-forest-100 dark:bg-forest-900/30 px-2 py-0.5 text-forest-700 dark:text-forest-300">
+                          найден `results.html`
+                        </span>
+                      ) : (
+                        <span className="rounded bg-amber-100 dark:bg-amber-900/30 px-2 py-0.5 text-amber-700 dark:text-amber-300">
+                          нет `results.html`
+                        </span>
+                      )
+                    ) : (
+                      <span>…</span>
+                    )}
+                    <button
+                      type="button"
+                      onClick={() => loadOriginalResults('warehouse')}
+                      disabled={loadingOriginal}
+                      className="ml-auto px-3 py-1.5 text-sm rounded-lg bg-forest-600 text-white hover:bg-forest-700 disabled:opacity-50"
+                    >
+                      {loadingOriginal ? 'Загрузка…' : 'Сравнить со складом'}
+                    </button>
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-medium text-charcoal-600 dark:text-charcoal-400 mb-1">
+                      URL оригинала (опционально)
+                    </label>
+                    <input
+                      type="url"
+                      value={customUrl}
+                      onChange={(e) => setCustomUrl(e.target.value)}
+                      placeholder="(если есть альтернативный источник)"
+                      className="w-full px-3 py-1.5 text-sm border border-om-200 rounded-lg dark:bg-charcoal-800 dark:border-charcoal-600 dark:text-charcoal-100"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-medium text-charcoal-600 dark:text-charcoal-400 mb-1">
+                      Или загрузите HTML файл
+                    </label>
+                    <input
+                      type="file"
+                      accept=".html,.htm"
+                      onChange={(e) => setHtmlFile(e.target.files?.[0] || null)}
+                      className="w-full text-sm text-charcoal-600 dark:text-charcoal-400 file:mr-4 file:py-1 file:px-3 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-om-100 file:text-charcoal-700 hover:file:bg-om-200 dark:file:bg-charcoal-700 dark:file:text-charcoal-300"
+                    />
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    <button
+                      type="button"
+                      onClick={() => loadOriginalResults('auto')}
+                      disabled={loadingOriginal}
+                      className="px-4 py-2 bg-forest-600 text-white rounded-lg hover:bg-forest-700 transition-colors text-sm disabled:opacity-50"
+                    >
+                      {loadingOriginal ? 'Загрузка...' : 'Загрузить для сравнения'}
+                    </button>
+                    <button
+                      type="button"
+                      onClick={saveHtmlToWarehouse}
+                      disabled={!htmlFile || savingWarehouse}
+                      className="px-4 py-2 bg-camel-600 text-white rounded-lg hover:bg-camel-700 transition-colors text-sm disabled:opacity-50"
+                    >
+                      {savingWarehouse ? 'Сохранение…' : 'Сохранить HTML в склад'}
+                    </button>
+                  </div>
+                  {originalError && (
+                    <p className="text-red-600 dark:text-red-400 text-sm">{originalError}</p>
+                  )}
+                </div>
+              </div>
+            )}
+            {verificationMode && originalResults.length > 0 && (
+              <div className="p-3 bg-forest-50 dark:bg-forest-900/20 border border-forest-200 dark:border-forest-800 rounded-lg mb-4">
+                <p className="text-forest-700 dark:text-forest-400 text-sm">
+                  Загружено {originalResults.length} результатов из оригинала. Сравните с текущими данными ниже.
+                </p>
+              </div>
+            )}
             <AdminResultsSection
               results={results}
+              originalResults={verificationMode ? originalResults : undefined}
               savingResultId={savingResultId}
               onUpdate={handleResultUpdate}
               onUpdateRawScores={handleUpdateRawScores}

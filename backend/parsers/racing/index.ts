@@ -8,11 +8,15 @@ import { fetchWin1251 } from "../../lib/fetch-win1251";
 import { parseDogRow, parseNonArrivedRow } from "./row-parsers";
 import { RacingParseResultSchema } from "./schemas";
 import { extractJudgesFromPage } from "../shared/extract-judges";
+import { parseBreedClassHeader } from "../shared/breed-class-header";
+import { normalizeProtocolPageTitle } from "../shared/protocol-title";
+import { isNonArrivedSectionHeader, isNonArrivedDataRow } from "../shared/non-arrived-section";
 
 export async function parseRacingHTML(html) {
   const $ = cheerio.load(html);
   const results = [];
   let currentBreedClass = null;
+  let inNonArrivedSection = false;
   let telegramUrl = null;
   let fullTitle = null;
   let eventDate = null;
@@ -22,7 +26,7 @@ export async function parseRacingHTML(html) {
   // Извлекаем полный заголовок из title тега
   const pageTitle = $('title').text();
   if (pageTitle) {
-    fullTitle = pageTitle.trim();
+    fullTitle = normalizeProtocolPageTitle(pageTitle.trim());
   }
 
   // Извлекаем дату события из заголовка
@@ -57,14 +61,20 @@ export async function parseRacingHTML(html) {
     // Заголовок группы (порода - класс - пол)
     // Распознаём по цвету фона ИЛИ по содержимому (формат "Порода - Класс - Пол")
     const normalizedBgColor = bgColor ? bgColor.toLowerCase() : '';
-    if (normalizedBgColor === "#c0c0c0" ||
-        (firstCellText.includes(' - ') && (firstCellText.includes('Кобел') || firstCellText.includes('Сука') || firstCellText.includes('Кобели') || firstCellText.includes('Суки') || firstCellText.includes('Микс')))) {
-      currentBreedClass = firstCellText;
+    const breedClassHeader = parseBreedClassHeader(firstCellText, bgColor);
+    if (breedClassHeader) {
+      currentBreedClass = breedClassHeader;
+      inNonArrivedSection = false;
       return;
     }
-    
-    // Секция неприбывших (серый фон ИЛИ текст "Неприбывшие")
-    if (normalizedBgColor === "#eaeaea" || firstCellText.includes('Неприбывш')) {
+
+    if (isNonArrivedSectionHeader(firstCellText)) {
+      inNonArrivedSection = true;
+      currentBreedClass = null;
+      return;
+    }
+
+    if (isNonArrivedDataRow($rowEl.text(), bgColor, inNonArrivedSection)) {
       const parsed = parseNonArrivedRow($, $rowEl, currentBreedClass);
       if (parsed) results.push(parsed);
       return;

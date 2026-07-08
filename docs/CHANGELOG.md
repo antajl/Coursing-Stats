@@ -4,6 +4,14 @@
 
 ## [Unreleased]
 
+### 2026-07-08 — Web Archive Integration (исторические данные 2022–2024)
+- **Интеграция данных из web.archive.org:** восстановлены результаты 2022–2024 годов
+- **Добавленные данные:** 49 событий, 2689 результатов (2022: 1 событие/33 результата, 2023: 22 события/1233 результата, 2024: 26 событий/1423 результата)
+- **Процесс:** скачаны календари и страницы результатов, очищены от баннеров web.archive.org, протестированы существующие парсеры, распарсены и интегрированы в `data/v1/`
+- **Скрипты интеграции:** `backend/scripts/web-archive/extract-results-urls.ts`, `download-results.ts`, `clean-web-archive-html.ts`, `test-parsers-on-web-archive.ts`, `parse-and-export.ts`, `cleanup-2024-calendar.ts`, `add-missing-2024-events.ts`, `clean-calendar-html.ts`
+- **Индексы:** пересобраны calendar-index (277 событий), top-placement/score/speed, dog-profiles (2034 файла), sitemap.xml
+- **Документация:** обновлен `docs/DATA-ARCHIVE.md` с разделом Web Archive Integration
+
 ### 2026-07-07 (ночь) — Реструктуризация документации (AI-first)
 - **`docs/DATA.md`** — канонический гид по `data/v1/` (runtime, workflow, что редактировать)
 - **`docs/README.md`** — AI-first индекс с порядком чтения и картой задач

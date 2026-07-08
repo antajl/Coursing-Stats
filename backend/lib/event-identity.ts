@@ -20,7 +20,9 @@ function collapseWhitespace(value: string): string {
 }
 
 function normalizeRankLabel(label: string | null | undefined): string {
-  return collapseWhitespace((label || '').replace(/\n/g, ' ')).toLowerCase()
+  return collapseWhitespace((label || '').replace(/\n/g, ' '))
+    .replace(/\s+\(/g, '(')
+    .toLowerCase()
 }
 
 /** Дисциплина: coursing | bzmp | racing | other */
@@ -36,12 +38,16 @@ export function eventDiscipline(event: EventIdentityFields): string {
   return 'coursing'
 }
 
-/** Название соревнования (без клуба и локации в title). */
+/** Название соревнования (как в UI — rank_label, не title с локацией). */
 export function eventCompetitionName(event: EventIdentityFields): string {
+  const rank = normalizeRankLabel(event.rank_label)
+  if (rank) return rank
+
   const kind = collapseWhitespace(event.competition_kind || '')
   const type = collapseWhitespace(event.competition_type || '')
   if (kind && type) return `${kind}|${type}`.toLowerCase()
-  return normalizeRankLabel(event.rank_label)
+  if (kind) return kind.toLowerCase()
+  return ''
 }
 
 /** Одно соревнование = дата + локация + дисциплина + название. */

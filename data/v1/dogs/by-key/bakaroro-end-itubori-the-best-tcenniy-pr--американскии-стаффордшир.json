@@ -1,6 +1,6 @@
 {
   "schema": "coursing-stats/dog-v1",
-  "exported_at": "2026-07-07T17:16:29.219Z",
+  "exported_at": "2026-07-08T00:31:32.188Z",
   "id": 507,
   "dog_key": "bakaroro-end-itubori-the-best-tcenniy-pr--американскии-стаффордшир",
   "name_lat": "BAKARORO END ITUBORI THE BEST TCENNIY PRIZE",
@@ -9,11 +9,17 @@
   "sex": null,
   "owner": null,
   "competition_ids": [
+    1227,
+    1233,
+    1245,
     1266,
     1278,
     1308
   ],
   "competition_files": [
+    "competitions/2024/05-май/1227-чемпионат-ркф-по-бегам-за-механическои-приманкои.json",
+    "competitions/2024/06-июнь/1233-чемпионат-ркф-по-бегам-за-механическои-приманкои.json",
+    "competitions/2024/09-сентябрь/1245-чемпионат-ркф-по-бегам-за-механическои-приманкои.json",
     "competitions/2025/05-май/1266-кубок-россии-бега-за-механическои-приманкои.json",
     "competitions/2025/08-август/1278-пчркф-поденко-ибиценко-родезиискии-риджбек-уиппе.json",
     "competitions/2026/04-апрель/1308-чркф-бзмп.json"

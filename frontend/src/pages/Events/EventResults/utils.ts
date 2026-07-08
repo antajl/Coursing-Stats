@@ -38,8 +38,9 @@ export function groupResultsByBreedClass(results: Result[]): {
   return { grouped, sortedGroups }
 }
 
-export function parseRawScores(rawScoresJson: string | null | undefined): RawScores | null {
+export function parseRawScores(rawScoresJson: string | RawScores | null | undefined): RawScores | null {
   if (!rawScoresJson) return null
+  if (typeof rawScoresJson === 'object') return rawScoresJson as RawScores
   try {
     return JSON.parse(rawScoresJson) as RawScores
   } catch {
@@ -62,7 +63,7 @@ export function normalizeBibColorName(bibColor: string | undefined): string | nu
   if (c === 'blue' || c === '#0000ff' || c === '#00ccff' || c === '#00ffff') return 'blue'
   if (c === 'black' || c === '#000000' || c === '#000') return 'black'
   if (c === 'green' || c === '#00ff00' || c === '#008000') return 'green'
-  if (c === 'yellow' || c === '#ffff00') return 'yellow'
+  if (c === 'yellow' || c === '#ffff00' || c === '#efe4b0' || c === '#fff8dc') return 'yellow'
   if (!c) return null
   return bibColor!
 }

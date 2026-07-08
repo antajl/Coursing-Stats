@@ -11,9 +11,6 @@
 3. `docs/ARCHITECTURE.md` — архитектура  
 4. По задаче: `PARSING.md` | `DEVELOPMENT.md` | `DATABASE.md` | …
 
-Skills: `.cursor/skills/coursing-stats-dev/`, `coursing-stats-parsers/`  
-Правила: `.cursor/rules/coursing-stats-core.mdc` (alwaysApply)
-
 ---
 
 ## Ментальная модель проекта
@@ -52,6 +49,7 @@ Skills: `.cursor/skills/coursing-stats-dev/`, `coursing-stats-parsers/`
 | Деплой | `git push main`, `docs/DATA.md`, skill `coursing-stats-dev` |
 | Новая страница | `AppRoutes.tsx`, `SEO.tsx`, `build-derived-indexes.ts` (sitemap) |
 | Донино | `docs/SPEED-RECORDS.md`, `donino/*.json` |
+| Где лежит папка / архив HTML | `docs/REPOSITORY-STRUCTURE.md`, `data/archive/README.md` |
 
 ---
 

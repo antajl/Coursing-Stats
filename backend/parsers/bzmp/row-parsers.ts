@@ -2,7 +2,9 @@
  * Парсеры строк для результатов БЗМП
  */
 
-import { extractNumber, extractItalicNumber, cleanText, normalizeDogName, normalizeBreed, detectStatusFromText, extractReasonText } from '../coursing/utils';
+import { extractNumber, extractItalicNumber, extractBoldNumber, extractBibColor, cleanText, normalizeDogName, normalizeBreed, detectStatusFromText, extractReasonText, extractDogNames } from '../coursing/utils';
+import { extractJudgeCount } from '../coursing/header-parsers';
+import { parseMultiJudgeCompact, isCompactMultiJudgeRow } from '../shared/multi-judge-compact';
 
 export function parseNonArrivedRow($, $row, breedClass) {
   const $cells = $row.find("td");
@@ -39,12 +41,11 @@ export function parseNonArrivedRow($, $row, breedClass) {
   };
 }
 
-export function parseDogRow($, $row, breedClass, allRows, rowIndex, processedRows) {
+export function parseDogRow($, $row, breedClass, allRows, rowIndex, processedRows, judges) {
   const $cells = $row.find("td");
   
-  // Проверяем, что это строка с собакой (должна быть каталожный номер в <i>)
   const catalogNoCell = $cells.eq(1);
-  const catalogNo = extractItalicNumber(catalogNoCell);
+  const catalogNo = extractItalicNumber(catalogNoCell) ?? extractNumber(catalogNoCell.text());
   if (!catalogNo) return null;
 
   // Место (первая ячейка)
@@ -72,26 +73,58 @@ export function parseDogRow($, $row, breedClass, allRows, rowIndex, processedRow
   // Структура: Место, №, Порода, Класс, Пол, Кличка, Забег1, Оценки1(5), Сумма1, Забег2, Оценки2(5), Сумма2, Итого, ВС, Титул
   // При 2 судьях: первая строка содержит оценки судьи 1, вторая строка содержит оценки судьи 2
   const cellCount = $cells.length;
+  const judgeCount = extractJudgeCount(judges, $);
+  const heat1Number = extractItalicNumber($cells.eq(6)) ?? extractNumber($cells.eq(6).text());
+  const hasHeatData = heat1Number !== null;
+
+  if (isCompactMultiJudgeRow(cellCount, hasHeatData)) {
+    const scoresData = parseMultiJudgeCompact(
+      $, $cells, cellCount, allRows, rowIndex, Math.max(judgeCount, 2), processedRows,
+    );
+    const statusResult = detectStatusFromText($row.text(), scoresData.total_score != null);
+    let totalScore = scoresData.total_score;
+    if (['disqualified', 'dns', 'withdrawn', 'dnf'].includes(statusResult.status)) {
+      totalScore = null;
+    }
+    return {
+      breed_class: breedClass,
+      placement,
+      catalog_no: catalogNo,
+      breed,
+      class: class_,
+      sex,
+      name,
+      name_lat: name,
+      total_score: totalScore,
+      judge_count: scoresData.judge_count,
+      qualification: scoresData.qualification,
+      vc: scoresData.vc,
+      status: statusResult.status,
+      status_reason: statusResult.reason,
+      raw_scores_json: scoresData.raw_scores_json,
+      raw_text: $row.html() || "",
+      judges: judges,
+    };
+  }
+
   let totalScore = null;
   let qualification = null;
   let vc = null;
   let disqualificationReason = null;
 
-  // Определяем количество судей по наличию следующей строки с оценками
-  let judgeCount = 1;
+  // Определяем количество судей по наличию следующей строки с оценками (расширенный формат)
+  let legacyJudgeCount = judgeCount;
   if (rowIndex + 1 < allRows.length) {
     const $row2 = $(allRows[rowIndex + 1]);
     const $cells2 = $row2.find("td");
     const cellCount2 = $cells2.length;
     
-    // Если следующая строка имеет 12 ячеек (6 оценок + 6 оценок), это судья 2
     if (cellCount2 === 12) {
-      judgeCount = 2;
+      legacyJudgeCount = Math.max(legacyJudgeCount, 2);
     }
   }
 
   // Парсим забег 1
-  const heat1Number = extractNumber($cells.eq(6).text());
   let heat1Scores = [];
   let heat1Sum = null;
   let heat1Disqualified = false;
@@ -155,7 +188,7 @@ export function parseDogRow($, $row, breedClass, allRows, rowIndex, processedRow
   }
 
   // Если есть 2 судьи, парсим оценки судьи 2 из следующей строки
-  if (judgeCount === 2 && rowIndex + 1 < allRows.length) {
+  if (legacyJudgeCount === 2 && rowIndex + 1 < allRows.length) {
     const $row2 = $(allRows[rowIndex + 1]);
     const $cells2 = $row2.find("td");
     const cellCount2 = $cells2.length;
@@ -262,7 +295,7 @@ export function parseDogRow($, $row, breedClass, allRows, rowIndex, processedRow
     name,
     name_lat: name,
     total_score: totalScore,
-    judge_count: judgeCount,
+    judge_count: legacyJudgeCount,
     qualification,
     vc,
     status,

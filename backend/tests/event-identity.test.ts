@@ -74,12 +74,37 @@ describe('eventDedupeKey', () => {
     expect(eventDedupeKey(coursing)).not.toBe(eventDedupeKey(racing))
   })
 
-  it('uses competition kind/type as name when present', () => {
+  it('prefers rank_label over kind/type for competition name', () => {
     expect(eventCompetitionName({
       competition_kind: 'CACL',
       competition_type: 'Курсинг борзых',
-      rank_label: 'ignored',
+      rank_label: 'CACL (Курсинг борзых)',
+    })).toBe('cacl(курсинг борзых)')
+  })
+
+  it('falls back to kind|type when rank_label empty', () => {
+    expect(eventCompetitionName({
+      competition_kind: 'CACL',
+      competition_type: 'Курсинг борзых',
+      rank_label: '',
     })).toBe('cacl|курсинг борзых')
+  })
+
+  it('merges when competition_type missing on one row (1214 / 1439)', () => {
+    const a = {
+      date_start: '2023-09-02',
+      location: 'Вологодская обл.',
+      rank_label: 'Чемпионат России по бегам борзых (рейсингу)',
+      event_type: 'racing',
+      competition_kind: 'Чемпионат России',
+      competition_type: 'Бега борзых',
+    }
+    const b = {
+      ...a,
+      competition_type: '',
+      title: 'Чемпионат России по бегам борзых (рейсингу)',
+    }
+    expect(eventDedupeKey(a)).toBe(eventDedupeKey(b))
   })
 
   it('dedupes calendar event list', () => {

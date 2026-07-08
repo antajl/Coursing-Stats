@@ -1,6 +1,6 @@
 {
   "schema": "coursing-stats/dog-v1",
-  "exported_at": "2026-07-07T17:16:29.219Z",
+  "exported_at": "2026-07-08T00:31:32.188Z",
   "id": 338,
   "dog_key": "аина-тандаив-греит-стар-aina-tandaiv-gre--родезиискии-риджбек",
   "name_lat": "АЙНА ТАНДАЙВ ГРЕЙТ СТАР /AINA TANDAIV GREIT STAR",
@@ -11,11 +11,15 @@
   "competition_ids": [
     1270,
     1272,
-    1285
+    1285,
+    1461,
+    1464
   ],
   "competition_files": [
     "competitions/2025/05-май/1270-чркф-бега-борзых.json",
     "competitions/2025/06-июнь/1272-чркф-бега-борзых.json",
-    "competitions/2025/09-сентябрь/1285-чемпионат-россии-бега-борзых.json"
+    "competitions/2025/09-сентябрь/1285-чемпионат-россии-бега-борзых.json",
+    "competitions/2024/08-август/1461-чемпионат-ркф-cacl-по-бегам-борзых.json",
+    "competitions/2024/08-август/1464-кубок-россии-cacl-по-бегам-борзых.json"
   ]
 }

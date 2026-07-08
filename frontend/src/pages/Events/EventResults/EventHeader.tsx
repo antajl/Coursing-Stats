@@ -2,7 +2,9 @@ import type { ReactNode } from 'react'
 import { ChevronLeft, ExternalLink } from 'lucide-react'
 import BreedGroupDivider from './components/BreedGroupDivider'
 import HoverTooltip from '../../../components/ui/HoverTooltip'
+import { toProcoursingArchiveUrl } from '../../../lib/procoursingArchive'
 import { formatDate } from './utils'
+import { getEventHeadline } from '../eventListUtils'
 import type { Event, Result, TrackScheme } from './types'
 
 interface EventHeaderProps {
@@ -51,18 +53,22 @@ function DetailField({ label, children }: { label: string; children: ReactNode }
   )
 }
 
-function cleanClubTitle(title: string): string {
-  return title.replace(/Курсинг\d{4}/i, '').trim()
-}
-
 export default function EventHeader({ event, results, onBack }: EventHeaderProps) {
   const trackSchemes: TrackScheme[] = event.track_schemes ? JSON.parse(event.track_schemes) : []
-  const title = event.full_title || `${event.competition_kind} ${event.competition_type}`
+  const title = getEventHeadline({
+    id: 0,
+    date_start: event.date_start || '',
+    rank_label: event.rank_label,
+    title: event.title,
+    full_title: event.full_title,
+    competition_kind: event.competition_kind,
+    competition_type: event.competition_type,
+  })
+  const archiveResultsUrl = toProcoursingArchiveUrl(event.results_url)
   const dateText = formatDate(event.date_start) || event.event_date || '—'
   const locationText = event.protocol_location || event.location || '—'
   const participantsCount = new Set(results.map(r => r.dog_id)).size
   const breedsCount = new Set(results.map(r => r.breed)).size
-  const clubTitle = event.title ? cleanClubTitle(event.title) : null
 
   return (
     <div className="mb-6 rounded-xl border border-old-money-200 bg-cream-50 p-4 dark:border-charcoal-600 dark:bg-charcoal-800/40 md:p-6">
@@ -81,9 +87,9 @@ export default function EventHeader({ event, results, onBack }: EventHeaderProps
         <div className="min-w-0 flex-1">
           <div className="flex items-start justify-between gap-2">
             <h1 className="min-w-0 font-serif text-xl font-bold leading-tight tracking-tight text-charcoal-900 dark:text-charcoal-100 md:text-2xl">
-              {event.results_url ? (
+              {archiveResultsUrl ? (
                 <a
-                  href={event.results_url}
+                  href={archiveResultsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="transition-colors hover:text-camel-700 dark:hover:text-camel-400"
@@ -94,13 +100,13 @@ export default function EventHeader({ event, results, onBack }: EventHeaderProps
                 title
               )}
             </h1>
-            {event.results_url && (
+            {archiveResultsUrl && (
               <a
-                href={event.results_url}
+                href={archiveResultsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-1 flex-shrink-0 rounded-full p-1 text-old-money-400 transition-colors hover:bg-old-money-100 hover:text-camel-600 dark:text-old-money-500 dark:hover:bg-charcoal-700 dark:hover:text-camel-400"
-                aria-label="Открыть протокол на procoursing.ru"
+                aria-label="Открыть протокол в web.archive.org"
               >
                 <ExternalLink className="h-4 w-4 md:h-5 md:w-5" />
               </a>
@@ -133,33 +139,7 @@ export default function EventHeader({ event, results, onBack }: EventHeaderProps
 
       <div className="grid gap-4 border-t border-old-money-200 pt-4 dark:border-charcoal-600 md:grid-cols-2">
         {event.host_club && (
-          <DetailField label="Организация">{event.host_club}</DetailField>
-        )}
-
-        {clubTitle && (
-          <DetailField label="Клуб-организатор">
-            {event.telegram_url ? (
-              <a
-                href={event.telegram_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block rounded-lg border border-camel-200 bg-camel-50 px-2.5 py-1 text-camel-700 transition-colors hover:border-camel-300 hover:bg-camel-100 dark:border-camel-600 dark:bg-charcoal-700 dark:text-camel-400 dark:hover:bg-charcoal-600"
-              >
-                {clubTitle}
-              </a>
-            ) : event.results_url ? (
-              <a
-                href={event.results_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block rounded-lg border border-camel-200 bg-camel-50 px-2.5 py-1 text-camel-700 transition-colors hover:border-camel-300 hover:bg-camel-100 dark:border-camel-600 dark:bg-charcoal-700 dark:text-camel-400 dark:hover:bg-charcoal-600"
-              >
-                {clubTitle}
-              </a>
-            ) : (
-              clubTitle
-            )}
-          </DetailField>
+          <DetailField label="Клуб-организатор">{event.host_club}</DetailField>
         )}
 
         {event.judges && (

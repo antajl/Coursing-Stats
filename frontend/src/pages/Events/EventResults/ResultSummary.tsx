@@ -13,24 +13,24 @@ function hasHighestQualification(vc: Result['vc']): boolean {
   return Boolean(vc?.trim())
 }
 
-export function VcBadge({ corner = false }: { corner?: boolean }) {
+export function VcBadge({ vc, corner = false }: { vc: string; corner?: boolean }) {
   const badgeClass = corner
     ? 'inline-block cursor-help rounded border border-camel-200 bg-camel-100 px-1 py-px text-[10px] font-semibold leading-tight text-camel-800 shadow-sm dark:border-camel-700 dark:bg-camel-900/50 dark:text-camel-300'
     : 'inline-block cursor-help rounded border border-camel-200 bg-camel-100 px-1.5 py-0.5 text-xs font-semibold text-camel-800 dark:border-camel-700 dark:bg-camel-900/50 dark:text-camel-300'
 
   return (
     <HoverTooltip label="Высшая квалификация" placement={corner ? 'bottom' : 'top'}>
-      <span className={badgeClass}>ВС</span>
+      <span className={badgeClass}>{vc}</span>
     </HoverTooltip>
   )
 }
 
-export function Scoreboard({ score, showVc }: { score: number | string; showVc: boolean }) {
+export function Scoreboard({ score, showVc, vc }: { score: number | string; showVc: boolean; vc: string }) {
   return (
     <div className="relative">
       {showVc && (
         <div className="absolute -right-1.5 -top-1.5 z-10">
-          <VcBadge corner />
+          <VcBadge vc={vc} corner />
         </div>
       )}
       <div className="flex min-w-[4.25rem] flex-col items-end rounded-lg border border-old-money-200 bg-white/90 px-2.5 py-1.5 dark:border-charcoal-500 dark:bg-charcoal-800/90">
@@ -51,9 +51,9 @@ export function ResultScorePanel({ result }: { result: Result }) {
   const showVc = hasHighestQualification(result.vc)
 
   if (result.total_score) {
-    return <Scoreboard score={result.total_score} showVc={showVc} />
+    return <Scoreboard score={result.total_score} showVc={showVc} vc={result.vc || 'СС'} />
   }
-  if (showVc) return <VcBadge />
+  if (showVc) return <VcBadge vc={result.vc || 'СС'} />
   if (result.status === 'disqualified' && statusLabel) {
     return (
       <div className="max-w-[8rem] text-right text-xs italic text-red-600 dark:text-red-400 md:text-sm">

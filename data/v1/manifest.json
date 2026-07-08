@@ -1,12 +1,12 @@
 {
   "schema": "coursing-stats/local-data-manifest-v1",
-  "exported_at": "2026-07-07T19:20:00.000Z",
-  "source": "calendar-dedupe",
+  "exported_at": "2026-07-08T00:31:32.188Z",
+  "source": "sqlite-admin-sync",
   "counts": {
-    "events": 269,
-    "events_with_results": 56,
-    "dogs": 1532,
-    "results": 2958,
+    "events": 228,
+    "events_with_results": 92,
+    "dogs": 2034,
+    "results": 4886,
     "donino_speed": 191,
     "donino_coursing": 107,
     "breeds": 86

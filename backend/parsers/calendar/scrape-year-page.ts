@@ -22,13 +22,34 @@ export interface ScrapedCalendarEvent {
 }
 
 export function parseDateRange(text: string): { date_start: string | null; date_end: string | null } {
-  const m = text.trim().match(/^(\d{1,2})(?:-(\d{1,2}))?\.(\d{2})\.(\d{4})$/);
+  // Поддержка форматов: DD.MM.YYYY, DD-DD.MM.YYYY, DD.MM-DD.MM.YYYY
+  const m = text.trim().match(/^(\d{1,2})(?:\.(\d{1,2}))?(?:-(\d{1,2})(?:\.(\d{1,2}))?)?\.(\d{4})$/);
   if (!m) return { date_start: null, date_end: null };
-  const [, d1, d2, mm, yyyy] = m;
+  
+  const [, d1, m1, d2, m2, yyyy] = m;
   const pad = (n: string) => String(n).padStart(2, '0');
-  const date_start = `${yyyy}-${pad(mm)}-${pad(d1)}`;
-  const date_end = d2 ? `${yyyy}-${pad(mm)}-${pad(d2)}` : null;
-  return { date_start, date_end };
+  
+  // Определяем месяц для первой даты
+  let mm1 = m1;
+  if (!mm1 && d2 && m2) {
+    // Если формат DD-DD.MM.YYYY, используем месяц из второй даты
+    mm1 = m2;
+  }
+  
+  const date_start = mm1 ? `${yyyy}-${pad(mm1)}-${pad(d1)}` : null;
+  
+  // Если есть вторая дата
+  if (d2) {
+    const mm2 = m2 || mm1; // Если месяц не указан во второй дате, используем месяц первой
+    const date_end = `${yyyy}-${pad(mm2)}-${pad(d2)}`;
+    return { date_start, date_end };
+  }
+  
+  if (mm1) {
+    return { date_start, date_end: null };
+  }
+  
+  return { date_start: null, date_end: null };
 }
 
 export function typeFromHref(href: string): string | null {
