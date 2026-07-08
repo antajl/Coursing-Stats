@@ -129,15 +129,27 @@ function loadCompetitions(db: Database.Database) {
     const data = readJson<{
       event?: Record<string, unknown>;
       results?: Record<string, unknown>[];
+      event_id?: number;
     }>(file);
+
+    const eventId = data.event_id ?? data.event?.id;
 
     if (data.event) {
       insertRow(db, 'events', pickRow(data.event, [...EVENT_COLUMNS]));
     }
 
-    // Skip loading results from competition files for now
-    // The public site reads competition results directly from JSON files
-    // and these files don't have dog_id in the expected format for SQLite
+    for (const result of data.results ?? []) {
+      const dog = result.dog as Record<string, unknown> | null | undefined;
+      if (dog?.id != null) {
+        insertRow(db, 'dogs', pickRow(dog, [...DOG_COLUMNS]));
+      }
+
+      const row = pickRow(result, [...RESULT_COLUMNS]);
+      if (eventId != null) row.event_id = eventId;
+      if (row.dog_id == null && dog?.id != null) row.dog_id = dog.id;
+      if (row.event_id == null || row.dog_id == null) continue;
+      insertRow(db, 'results', row);
+    }
   }
 }
 
@@ -169,6 +181,7 @@ export function loadLocalDataSqlite(): { db: Database.Database; stats: LocalData
 
   const db = new Database(':memory:');
   db.pragma('journal_mode = MEMORY');
+  db.pragma('foreign_keys = OFF');
 
   loadSchema(db);
   loadDogs(db);

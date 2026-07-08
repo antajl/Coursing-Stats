@@ -15,12 +15,30 @@ function run(cmd: string) {
   execSync(cmd, { cwd: ROOT, stdio: 'inherit' });
 }
 
+function assertNonEmptyIndex(relPath: string, arrayKey: string, label: string) {
+  const filePath = path.join(ROOT, relPath);
+  if (!fs.existsSync(filePath)) {
+    console.error(`FATAL: missing ${relPath}`);
+    process.exit(1);
+  }
+  const doc = JSON.parse(fs.readFileSync(filePath, 'utf-8')) as Record<string, unknown>;
+  const items = doc[arrayKey];
+  if (!Array.isArray(items) || items.length === 0) {
+    console.error(`FATAL: ${label} is empty in ${relPath} — check load-sqlite / competitions results`);
+    process.exit(1);
+  }
+  console.log(`  ✓ ${label}: ${items.length}`);
+}
+
 run('npx tsx backend/scripts/rebuild-calendar-index.ts');
 run('npm run build-data-snapshot');
 
 const derivedIndexes = path.join(ROOT, 'backend/scripts/build-derived-indexes.ts');
 if (fs.existsSync(derivedIndexes)) {
   run('npx tsx backend/scripts/build-derived-indexes.ts');
+  console.log('\nValidating derived indexes…');
+  assertNonEmptyIndex('data/v1/indexes/top-placement-all.json', 'items', 'top-placement-all');
+  assertNonEmptyIndex('data/v1/indexes/judges-summary.json', 'judges', 'judges-summary');
 }
 
 run('npm run package-pages-snapshot');

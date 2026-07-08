@@ -30,6 +30,9 @@ jobs:
       - name: Build and package data for Pages
         run: npm run build-all-data
 
+      - name: Verify static indexes are non-empty
+        run: npx vitest run backend/tests/static-indexes.test.ts
+
       - name: Install frontend dependencies
         working-directory: ./frontend
         run: npm install
