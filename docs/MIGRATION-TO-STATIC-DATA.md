@@ -9,7 +9,12 @@
 - В проде Cloudflare Pages не имел доступа к этим файлам (не были в git)
 - Фронтенд пытался загрузить данные из API Worker, который не был деплоин
 
-**Решение:** Полный переход на статические JSON файлы без зависимости от D1 API.
+**Дополнительная проблема (обнаружена позже):**
+- Скрипт `package-pages-snapshot.ts` копировал только `.json` файлы из `indexes/`
+- Подкаталоги (`judge-details/`, `dog-profiles/`) не копировались
+- Поэтому на сайте не было данных судей и профилей собак
+
+**Решение:** Полный переход на статические JSON файлы без зависимости от D1 API + исправление скрипта копирования.
 
 ---
 
@@ -62,7 +67,29 @@ const SOURCE_DIR = path.resolve(ROOT, '../data/v1');
 const TARGET_DIR = path.resolve(ROOT, 'public/data/v1');
 ```
 
-### 4. Обновлён билд-процесс
+### 4. Исправление скрипта CI
+
+**Файл:** `backend/scripts/ci/package-pages-snapshot.ts`
+
+**Проблема:** Функция `copyJsonTree` копировала только `.json` файлы, пропуская подкаталоги.
+
+**Исправление:** Убрана проверка `.endsWith('.json')`, теперь копируются все файлы рекурсивно.
+
+```javascript
+// Было:
+else if (entry.name.endsWith('.json')) {
+  fs.mkdirSync(path.dirname(dest), { recursive: true });
+  fs.copyFileSync(src, dest);
+}
+
+// Стало:
+else {
+  fs.mkdirSync(path.dirname(dest), { recursive: true });
+  fs.copyFileSync(src, dest);
+}
+```
+
+### 5. Обновлён билд-процесс
 
 **Файл:** `frontend/package.json`
 
@@ -76,7 +103,7 @@ const TARGET_DIR = path.resolve(ROOT, 'public/data/v1');
 
 Теперь при каждом билде данные автоматически копируются в `public/data/v1/`.
 
-### 5. Данные добавлены в git
+### 6. Данные добавлены в git
 
 Все файлы из `data/v1/` скопированы в `frontend/public/data/v1/` и добавлены в git:
 - `indexes/` — топы, судьи, профили собак
