@@ -29,10 +29,18 @@ interface DogCardProps {
 export default function DogCard({ dog, type, filterYear }: DogCardProps) {
   const getDisplayName = (name: string | undefined) => {
     if (!name) return ''
-    return name.trim()
+    const parts = name.split('/')
+    return parts[0].trim()
+  }
+
+  const getSecondPart = (name: string | undefined) => {
+    if (!name) return ''
+    const parts = name.split('/')
+    return parts.length > 1 ? parts[1].trim() : ''
   }
 
   const displayName = getDisplayName(dog.name_lat)
+  const displaySecondPart = getSecondPart(dog.name_lat)
   const displayRuName = dog.name_ru ? getDisplayName(dog.name_ru) : ''
 
   const getStats = () => {
@@ -104,7 +112,12 @@ export default function DogCard({ dog, type, filterYear }: DogCardProps) {
               {displayName}
             </h3>
           </OwnerCrownName>
-          {displayRuName && (
+          {displaySecondPart && (
+            <span className="break-words text-xs text-charcoal-500 dark:text-charcoal-400">
+              /{displaySecondPart}
+            </span>
+          )}
+          {displayRuName && displayRuName !== displayName && (
             <span className="break-words text-xs text-charcoal-500 dark:text-charcoal-400">
               ({displayRuName})
             </span>
