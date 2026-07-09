@@ -183,3 +183,44 @@ export async function exportDoninoToExcel(
 
   XLSX.writeFile(workbook, doninoFilename())
 }
+
+export async function exportDoninoStatsToExcel(
+  speedStats: { breed: string; count: number; bestSpeed: number; avgSpeed: number }[],
+  coursingStats: { breed: string; count: number; bestTime: number; avgTime: number }[],
+) {
+  const XLSX = await loadXlsx()
+  const workbook = XLSX.utils.book_new()
+
+  const SPEED_STATS_HEADERS = ['Порода', 'Количество', 'Лучшая скорость (км/ч)', 'Средняя скорость (км/ч)'] as const
+  const SPEED_STATS_COL_WIDTHS = [{ wch: 20 }, { wch: 12 }, { wch: 18 }, { wch: 18 }]
+
+  const COURSING_STATS_HEADERS = ['Порода', 'Количество', 'Лучшее время (сек)', 'Среднее время (сек)'] as const
+  const COURSING_STATS_COL_WIDTHS = [{ wch: 20 }, { wch: 12 }, { wch: 16 }, { wch: 16 }]
+
+  const speedStatsRows = speedStats.map((stat) => ({
+    Порода: stat.breed,
+    Количество: stat.count,
+    'Лучшая скорость (км/ч)': stat.bestSpeed.toFixed(1),
+    'Средняя скорость (км/ч)': stat.avgSpeed.toFixed(1),
+  }))
+
+  const coursingStatsRows = coursingStats.map((stat) => ({
+    Порода: stat.breed,
+    Количество: stat.count,
+    'Лучшее время (сек)': stat.bestTime.toFixed(2),
+    'Среднее время (сек)': stat.avgTime.toFixed(2),
+  }))
+
+  XLSX.utils.book_append_sheet(
+    workbook,
+    createStyledSheet(XLSX, speedStatsRows, SPEED_STATS_HEADERS, SPEED_STATS_COL_WIDTHS),
+    'Статистика замера',
+  )
+  XLSX.utils.book_append_sheet(
+    workbook,
+    createStyledSheet(XLSX, coursingStatsRows, COURSING_STATS_HEADERS, COURSING_STATS_COL_WIDTHS),
+    'Статистика бегов',
+  )
+
+  XLSX.writeFile(workbook, `статистика-донино-${new Date().toISOString().split('T')[0]}.xlsx`)
+}
