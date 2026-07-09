@@ -113,8 +113,8 @@ export default function DogCard({ dog, type, filterYear }: DogCardProps) {
             </h3>
           </OwnerCrownName>
           {displaySecondPart && (
-            <span className="break-words text-xs text-charcoal-500 dark:text-charcoal-400">
-              /{displaySecondPart}
+            <span className="break-words text-xs text-charcoal-400 dark:text-charcoal-500">
+              {displaySecondPart}
             </span>
           )}
           {displayRuName && displayRuName !== displayName && (
