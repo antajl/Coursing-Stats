@@ -1,5 +1,5 @@
-import { useMemo } from 'react'
-import { Download } from 'lucide-react'
+import { useMemo, useState, useEffect, useRef } from 'react'
+import { Download, ChevronDown } from 'lucide-react'
 import DogSexIcon from '../../components/DogSexIcon'
 import MultiFilterDropdown from '../../components/toolbar/MultiFilterDropdown'
 import PageToolbar from '../../components/toolbar/PageToolbar'
@@ -7,7 +7,7 @@ import ViewToggle from '../../components/toolbar/ViewToggle'
 import ToolbarChip from '../../components/toolbar/ToolbarChip'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
 import { TOOLBAR_NUMBER_INPUT } from '../../lib/toolbar'
-import { exportDoninoToExcel } from './exportExcel'
+import { exportDoninoToExcel, exportDoninoStatsToExcel } from './exportExcel'
 import { buildSpeedActiveFilterChips } from './toolbarFilters'
 
 interface DoninoPageToolbarProps {
@@ -37,6 +37,8 @@ interface DoninoPageToolbarProps {
   hasActiveFilters: boolean
   speedRecords: { name: string; sex: string; breed: string; speed_km_h: number; date: string; screenshot_url?: string }[]
   coursingRecords: { name: string; breed: string; time_seconds: number; date: string }[]
+  speedStats?: { breed: string; count: number; bestSpeed: number; avgSpeed: number }[]
+  coursingStats?: { breed: string; count: number; bestTime: number; avgTime: number }[]
 }
 
 const checkboxRowClass =
@@ -69,7 +71,24 @@ export default function DoninoPageToolbar({
   hasActiveFilters,
   speedRecords,
   coursingRecords,
+  speedStats,
+  coursingStats,
 }: DoninoPageToolbarProps) {
+  const [exportDropdownOpen, setExportDropdownOpen] = useState(false)
+  const exportDropdownRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (exportDropdownRef.current && !exportDropdownRef.current.contains(event.target as Node)) {
+        setExportDropdownOpen(false)
+      }
+    }
+    if (exportDropdownOpen) {
+      document.addEventListener('mousedown', handleClickOutside)
+    }
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [exportDropdownOpen])
+
   const activeFilterChips = useMemo(() => {
     const chips = buildSpeedActiveFilterChips(
       searchQuery,
@@ -135,10 +154,37 @@ export default function DoninoPageToolbar({
         activeFilterChips={activeFilterChips}
         onClearAllFilters={hasActiveFilters ? onClearFilters : undefined}
         exportAction={
-          <ToolbarChip onClick={() => exportDoninoToExcel(speedRecords, coursingRecords)}>
-            <Download className="h-3.5 w-3.5" strokeWidth={2} />
-            Excel
-          </ToolbarChip>
+          <div className="relative" ref={exportDropdownRef}>
+            <ToolbarChip onClick={() => setExportDropdownOpen(!exportDropdownOpen)}>
+              <Download className="h-3.5 w-3.5" strokeWidth={2} />
+              Excel
+              <ChevronDown className="h-3.5 w-3.5 ml-1" strokeWidth={2} />
+            </ToolbarChip>
+            {exportDropdownOpen && (
+              <div className="absolute right-0 top-full mt-1 z-50 min-w-[160px] rounded-lg border border-old-money-200 bg-white shadow-lg dark:border-charcoal-600 dark:bg-charcoal-800">
+                <button
+                  onClick={() => {
+                    exportDoninoToExcel(speedRecords, coursingRecords)
+                    setExportDropdownOpen(false)
+                  }}
+                  className="w-full px-4 py-2 text-left text-sm text-charcoal-700 hover:bg-cream-50 dark:text-charcoal-200 dark:hover:bg-charcoal-700"
+                >
+                  Записи
+                </button>
+                {view === 'stats' && speedStats && coursingStats && (
+                  <button
+                    onClick={() => {
+                      exportDoninoStatsToExcel(speedStats, coursingStats)
+                      setExportDropdownOpen(false)
+                    }}
+                    className="w-full px-4 py-2 text-left text-sm text-charcoal-700 hover:bg-cream-50 dark:text-charcoal-200 dark:hover:bg-charcoal-700"
+                  >
+                    Статистика
+                  </button>
+                )}
+              </div>
+            )}
+          </div>
         }
         filters={
           <>
