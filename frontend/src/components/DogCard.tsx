@@ -29,8 +29,7 @@ interface DogCardProps {
 export default function DogCard({ dog, type, filterYear }: DogCardProps) {
   const getDisplayName = (name: string | undefined) => {
     if (!name) return ''
-    const parts = name.split('/')
-    return parts[0].trim()
+    return name.trim()
   }
 
   const displayName = getDisplayName(dog.name_lat)
@@ -105,7 +104,7 @@ export default function DogCard({ dog, type, filterYear }: DogCardProps) {
               {displayName}
             </h3>
           </OwnerCrownName>
-          {displayRuName && displayRuName !== displayName && (
+          {displayRuName && (
             <span className="break-words text-xs text-charcoal-500 dark:text-charcoal-400">
               ({displayRuName})
             </span>
