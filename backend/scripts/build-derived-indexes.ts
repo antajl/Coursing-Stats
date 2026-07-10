@@ -622,10 +622,6 @@ function xmlEscape(value: string): string {
 
 function buildSitemap(db: Database.Database) {
   const dogs = db.prepare('SELECT id FROM dogs ORDER BY id').all() as { id: number }[];
-  const events = db.prepare('SELECT id, date_start FROM events ORDER BY id').all() as {
-    id: number;
-    date_start: string | null;
-  }[];
   const judgeRows = db.prepare(`SELECT judges FROM events WHERE judges IS NOT NULL AND judges != ''`).all() as {
     judges: string;
   }[];
@@ -647,12 +643,11 @@ function buildSitemap(db: Database.Database) {
   writeIndex('sitemap-urls.json', {
     schema: 'coursing-stats/index-sitemap-v1',
     dogs: dogs.map((d) => `/dog/${d.id}`),
-    events: events.map((e) => `/event/${e.id}`),
+    events: [],
     judges: [...judgeNames].map((name) => `/judges/${encodeURIComponent(name)}`),
     donino_dogs: doninoDogs.map((d) => `/donino-dog/${encodeURIComponent(d.name)}/${encodeURIComponent(d.breed)}`),
   });
 
-  const currentDate = new Date().toISOString().split('T')[0];
   const staticPages = [
     { loc: '/', priority: '1.0', changefreq: 'daily' },
     { loc: '/competitions', priority: '0.9', changefreq: 'daily' },
@@ -678,16 +673,6 @@ function buildSitemap(db: Database.Database) {
     xml += `    <loc>${SITE_BASE_URL}/dog/${dog.id}</loc>\n`;
     xml += '    <changefreq>monthly</changefreq>\n';
     xml += '    <priority>0.6</priority>\n';
-    xml += '  </url>\n';
-  }
-
-  for (const event of events) {
-    const lastmod = event.date_start || currentDate;
-    xml += '  <url>\n';
-    xml += `    <loc>${SITE_BASE_URL}/event/${event.id}</loc>\n`;
-    xml += `    <lastmod>${lastmod}</lastmod>\n`;
-    xml += '    <changefreq>monthly</changefreq>\n';
-    xml += '    <priority>0.7</priority>\n';
     xml += '  </url>\n';
   }
 

@@ -7,17 +7,15 @@ test.describe('Competitions Page', () => {
     await expectNotNotFoundPage(page)
   })
 
-  test('page loads with calendar tab by default', async ({ page }) => {
+  test('page loads with ranking tab by default', async ({ page }) => {
     await expect(page).toHaveTitle(/Coursing Stats/)
-    await expect(competitionsSegment(page).getByRole('button', { name: 'Календарь' })).toBeVisible()
-    await expect(page.locator('#tab-panel-calendar')).toBeVisible()
-  })
-
-  test('switches to ranking tab', async ({ page }) => {
-    await competitionsSegment(page).getByRole('button', { name: 'Рейтинг' }).click()
-    await expect(page).toHaveURL(/tab=ranking/)
+    await expect(competitionsSegment(page).getByRole('button', { name: 'Рейтинг' })).toBeVisible()
     await expect(page.locator('#tab-panel-ranking')).toBeVisible()
     await expect(page.getByRole('group', { name: 'Тип рейтинга' })).toBeVisible()
+  })
+
+  test('does not show calendar tab', async ({ page }) => {
+    await expect(competitionsSegment(page).getByRole('button', { name: 'Календарь' })).toHaveCount(0)
   })
 
   test('switches to judges tab', async ({ page }) => {
@@ -25,5 +23,11 @@ test.describe('Competitions Page', () => {
     await expect(page).toHaveURL(/tab=judges/)
     await expect(page.locator('#tab-panel-judges')).toBeVisible()
     await expect(page.getByPlaceholder(/фамилия/i)).toBeVisible()
+  })
+
+  test('legacy calendar tab URL opens ranking', async ({ page }) => {
+    await page.goto('/competitions?tab=calendar')
+    await expect(page.locator('#tab-panel-ranking')).toBeVisible()
+    await expect(page.locator('#tab-panel-calendar')).toHaveCount(0)
   })
 })

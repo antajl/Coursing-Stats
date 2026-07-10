@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { parseDogName } from '../../../../lib/dogName'
 import type { Result } from '../types'
 
 interface DogNameLinkProps {
@@ -6,15 +7,14 @@ interface DogNameLinkProps {
 }
 
 export default function DogNameLink({ result }: DogNameLinkProps) {
-  const name = result.name_ru || result.name_lat || ''
-  const parts = name.split('/')
+  const { primary, secondary } = parseDogName(result.name_lat, result.name_ru)
 
-  if (parts.length > 1) {
+  if (secondary) {
     return (
       <>
         <div className="flex items-center gap-1">
           <span className="min-w-0 break-words text-sm font-medium text-old-money-800 dark:text-old-money-300 md:text-base">
-            {parts[0].trim()}
+            {primary}
           </span>
           <Link
             to={`/dog/${result.dog_id}`}
@@ -26,8 +26,8 @@ export default function DogNameLink({ result }: DogNameLinkProps) {
             </svg>
           </Link>
         </div>
-        <span className="break-words text-xs text-old-money-600 dark:text-old-money-400">
-          {parts[1].trim()}
+        <span className="break-words text-xs text-charcoal-400 dark:text-charcoal-500">
+          {secondary}
         </span>
       </>
     )
@@ -36,7 +36,7 @@ export default function DogNameLink({ result }: DogNameLinkProps) {
   return (
     <div className="flex items-center gap-1">
       <span className="min-w-0 break-words text-sm font-medium text-old-money-800 dark:text-old-money-300 md:text-base">
-        {name}
+        {primary}
       </span>
       <Link
         to={`/dog/${result.dog_id}`}

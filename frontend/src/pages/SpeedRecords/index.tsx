@@ -1,10 +1,13 @@
 import { useMemo } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { useSpeedRecordsPage } from './useSpeedRecordsPage'
 import DoninoPageToolbar from './DoninoPageToolbar'
 import DoninoRecordsColumns from './DoninoRecordsColumns'
 import DoninoStatsColumns from './DoninoStatsColumns'
 
 function SpeedRecords() {
+  const [searchParams] = useSearchParams()
+  const view = searchParams.get('view') === 'stats' ? 'stats' : 'table'
   const page = useSpeedRecordsPage()
 
   const scrollResetKey = useMemo(
@@ -35,8 +38,7 @@ function SpeedRecords() {
     <div className="space-y-6">
       <div className="bg-cream-50/90 dark:bg-charcoal-800/90 backdrop-blur-lg rounded-2xl shadow-xl border border-cream-300 dark:border-charcoal-700 p-4 md:p-8">
         <DoninoPageToolbar
-          view={page.view}
-          onViewChange={page.handleViewChange}
+          view={view}
           searchQuery={page.searchQuery}
           onSearchChange={page.setSearchQuery}
           filterYears={page.filterYears}
@@ -77,7 +79,7 @@ function SpeedRecords() {
             </div>
           )}
 
-          {!page.loading && !page.error && page.view === 'table' && (
+          {!page.loading && !page.error && view === 'table' && (
             <DoninoRecordsColumns
               speedRecords={page.filteredRecords}
               coursingRecords={page.filteredCoursingRecords}
@@ -91,7 +93,7 @@ function SpeedRecords() {
             />
           )}
 
-          {!page.loading && !page.error && page.view === 'stats' && (
+          {!page.loading && !page.error && view === 'stats' && (
             <DoninoStatsColumns
               speedRecords={page.speedRecordsWithHistory}
               coursingRecords={page.coursingRecords}

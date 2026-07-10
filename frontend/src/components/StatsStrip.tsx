@@ -10,7 +10,7 @@ interface StatsStripProps {
 }
 
 const ITEMS = [
-  { key: 'events', label: 'событий', href: '/competitions?tab=calendar' },
+  { key: 'events', label: 'событий', href: '/competitions?tab=ranking' },
   { key: 'dogs', label: 'собак в базе', href: '/competitions?tab=ranking' },
   { key: 'results', label: 'результатов', href: '/competitions?tab=ranking' },
   { key: 'breeds', label: 'пород', href: '/guide' },

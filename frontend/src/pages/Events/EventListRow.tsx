@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Icons } from '../../lib/icons'
+import { localEventPath } from '../../lib/env'
 import {
   type CalendarEvent,
   DISCIPLINE_BORDER,
@@ -41,20 +42,18 @@ export default function EventListRow({ event }: EventListRowProps) {
       </span>
     ) : null
 
-  return (
-    <Link
-      to={`/event/${event.id}`}
-      className={`grid grid-cols-[4.5rem_minmax(0,1fr)] ${
-        showJudgesColumn ? 'sm:grid-cols-[5rem_minmax(0,1fr)_9.5rem]' : 'sm:grid-cols-[5rem_minmax(0,1fr)]'
-      } items-center gap-3 sm:gap-4 rounded-lg border border-old-money-200 dark:border-charcoal-600 border-l-4 ${borderClass} bg-cream-50 dark:bg-charcoal-800 px-3 py-2.5 sm:px-3 sm:py-2.5 mb-1.5 transition-colors hover:bg-camel-100 dark:hover:bg-charcoal-700 hover:translate-x-0.5 ${
-        cancelled ? 'opacity-70' : ''
-      } ${
-        important
-          ? 'bg-gradient-to-r from-camel-100 to-cream-50 dark:from-camel-600/10 dark:to-charcoal-800 dark:hover:from-camel-600/15'
-          : ''
-      }`}
-      aria-label="Открыть результаты"
-    >
+  const rowClassName = `grid grid-cols-[4.5rem_minmax(0,1fr)] ${
+    showJudgesColumn ? 'sm:grid-cols-[5rem_minmax(0,1fr)_9.5rem]' : 'sm:grid-cols-[5rem_minmax(0,1fr)]'
+  } items-center gap-3 sm:gap-4 rounded-lg border border-old-money-200 dark:border-charcoal-600 border-l-4 ${borderClass} bg-cream-50 dark:bg-charcoal-800 px-3 py-2.5 sm:px-3 sm:py-2.5 mb-1.5 transition-colors hover:bg-camel-100 dark:hover:bg-charcoal-700 hover:translate-x-0.5 ${
+    cancelled ? 'opacity-70' : ''
+  } ${
+    important
+      ? 'bg-gradient-to-r from-camel-100 to-cream-50 dark:from-camel-600/10 dark:to-charcoal-800 dark:hover:from-camel-600/15'
+      : ''
+  }`
+
+  const rowContent = (
+    <>
       <div className="w-[4.75rem] shrink-0 text-sm leading-tight text-charcoal-800 dark:text-charcoal-100 sm:w-[5rem]">
         {dateParts ? (
           <>
@@ -110,6 +109,14 @@ export default function EventListRow({ event }: EventListRowProps) {
           )}
         </div>
       )}
+    </>
+  )
+
+  if (!localEventPath) return null
+
+  return (
+    <Link to={`${localEventPath}/${event.id}`} className={rowClassName} aria-label="Открыть результаты">
+      {rowContent}
     </Link>
   )
 }

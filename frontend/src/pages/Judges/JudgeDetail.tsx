@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom'
 import { useJudgeDetails } from '../../hooks/useStaticData'
 import React from 'react'
 import { SEO } from '../../components/SEO'
+import ProcoursingAttribution from '../../components/ProcoursingAttribution'
 import { handleSortToggle, sortArray, type SortState } from '../../lib/judgeSortUtils'
 
 export default function JudgeDetail() {
@@ -392,6 +393,8 @@ export default function JudgeDetail() {
           <p className="text-old-money-600 dark:text-old-money-400 text-sm">Нет данных</p>
         )}
       </div>
+
+      <ProcoursingAttribution className="mt-8" />
     </div>
     </>
   )

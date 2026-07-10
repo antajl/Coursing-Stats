@@ -4,6 +4,7 @@ import { useTopPlacement, useTopScore, useTopSpeed, useBreeds, useYears } from '
 import SkeletonLoader from '../../components/SkeletonLoader'
 import TopDogsFilters from './TopDogsFilters'
 import TopDogsTabs from './TopDogsTabs'
+import ProcoursingAttribution from '../../components/ProcoursingAttribution'
 import { filterPlacement, filterScore, filterSpeed } from './filterUtils'
 
 const RANKING_TABS = ['placement', 'score', 'speed'] as const
@@ -152,6 +153,8 @@ export default function TopDogs() {
           filterBreed={filterBreed}
         />
       )}
+
+      {isStandalone && <ProcoursingAttribution className="mt-6" />}
     </div>
   )
 }

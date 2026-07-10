@@ -12,7 +12,6 @@ export function handleSitemap(app: Hono<{ Bindings: Env }>) {
 
     try {
       const dogs = await db.prepare('SELECT id FROM dogs').all();
-      const events = await db.prepare('SELECT id, date_start FROM events').all();
       const judgeRows = await db
         .prepare(`SELECT judges FROM events WHERE judges IS NOT NULL AND judges != ''`)
         .all();
@@ -34,7 +33,6 @@ export function handleSitemap(app: Hono<{ Bindings: Env }>) {
       }
 
       const baseUrl = 'https://coursing-stats.ru';
-      const currentDate = new Date().toISOString().split('T')[0];
 
       let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
       xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
@@ -62,18 +60,6 @@ export function handleSitemap(app: Hono<{ Bindings: Env }>) {
           xml += `    <loc>${baseUrl}/dog/${dog.id}</loc>\n`;
           xml += '    <changefreq>monthly</changefreq>\n';
           xml += '    <priority>0.6</priority>\n';
-          xml += '  </url>\n';
-        }
-      }
-
-      if (events.results) {
-        for (const event of events.results) {
-          const lastmod = event.date_start || currentDate;
-          xml += '  <url>\n';
-          xml += `    <loc>${baseUrl}/event/${event.id}</loc>\n`;
-          xml += `    <lastmod>${lastmod}</lastmod>\n`;
-          xml += '    <changefreq>monthly</changefreq>\n';
-          xml += '    <priority>0.7</priority>\n';
           xml += '  </url>\n';
         }
       }

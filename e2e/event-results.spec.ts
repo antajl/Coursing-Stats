@@ -9,8 +9,14 @@ test.describe('Event Results Page', () => {
     testData = await getTestData(request)
   })
 
-  test('missing event shows error state', async ({ page }) => {
+  test('public /event URL redirects to statistics', async ({ page }) => {
     await page.goto('/event/999999999')
+    await expect(page).toHaveURL(/\/competitions\?tab=ranking/)
+    await expectNotNotFoundPage(page)
+  })
+
+  test('missing admin event shows error state', async ({ page }) => {
+    await page.goto('/admin/event/999999999')
     await expectNotNotFoundPage(page)
     await expect(page.getByRole('heading', { name: 'Событие не найдено', level: 3 })).toBeVisible()
   })
@@ -18,7 +24,7 @@ test.describe('Event Results Page', () => {
   test('loads event with results when data exists', async ({ page }) => {
     test.skip(!testData.eventId, 'No events in local D1 — run npm run sync-from-remote')
 
-    await page.goto(`/event/${testData.eventId}`)
+    await page.goto(`/admin/event/${testData.eventId}`)
     await expectNotNotFoundPage(page)
     await expectNoErrorTitle(page, 'Событие не найдено')
 

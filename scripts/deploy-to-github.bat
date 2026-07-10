@@ -32,7 +32,15 @@ if errorlevel 1 (
   exit /b 1
 )
 
-git push --force
+echo Pulling latest changes from GitHub...
+git pull --rebase
+if errorlevel 1 (
+  echo Pull failed. Please resolve conflicts manually.
+  pause
+  exit /b 1
+)
+
+git push
 if errorlevel 1 (
   echo Push failed.
   pause

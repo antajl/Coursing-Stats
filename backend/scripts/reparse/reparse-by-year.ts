@@ -148,7 +148,8 @@ async function reparseByYear() {
       
       // Добавляем новые результаты
       for (const resultItem of result.results) {
-        const nameLat = normalizeDogName(resultItem.name);
+        const nameLat = normalizeDogName(resultItem.name_lat || resultItem.name);
+        const nameRu = normalizeDogName(resultItem.name_ru || '');
         const breed = normalizeBreed(resultItem.breed);
         
         // Добавляем собаку если нет
@@ -158,7 +159,7 @@ INSERT OR IGNORE INTO dogs (
 ) VALUES (
   '${sqlEscape(nameLat)}',
   '${sqlEscape(breed)}',
-  '${sqlEscape(resultItem.name_ru || resultItem.name)}',
+  '${sqlEscape(nameRu)}',
   NULL
 );`;
         sqlStatements.push(dogSql);

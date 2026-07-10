@@ -100,7 +100,8 @@ async function loadResults() {
     
     // Сначала собираем собак
     for (const result of parsedResults) {
-      const nameLat = normalizeDogName(result.name);
+      const nameLat = normalizeDogName(result.name_lat || result.name);
+      const nameRu = normalizeDogName(result.name_ru || '');
       const breed = normalizeBreed(result.breed);
       const dogKey = `${nameLat}|${breed}`;
 
@@ -108,7 +109,7 @@ async function loadResults() {
         dogs.push({
           name_lat: nameLat,
           breed: breed,
-          name_ru: result.name_ru || result.name,
+          name_ru: nameRu || null,
           pedigree_url: null
         });
         dogsMap.set(dogKey, true);
@@ -117,7 +118,7 @@ async function loadResults() {
     
     // Затем собираем результаты
     for (const result of parsedResults) {
-      const nameLat = normalizeDogName(result.name);
+      const nameLat = normalizeDogName(result.name_lat || result.name);
       const breed = normalizeBreed(result.breed);
 
       results.push({

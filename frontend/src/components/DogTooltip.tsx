@@ -1,7 +1,8 @@
-import { useState, useEffect, useRef, useCallback } from 'react'
-import { Link } from 'react-router-dom'
+import { useState, useEffect, useRef, useCallback, useMemo } from 'react'
 import { api } from '../services/api'
 import { parseDogName } from '../lib/dogName'
+import { buildEventResultsUrlMap, procoursingUrlForEventId } from '../lib/procoursingLinks'
+import ProcoursingEventLink from './ProcoursingEventLink'
 import MedalTally from './MedalTally'
 
 // Позиция рядом с курсором, с удержанием в пределах экрана
@@ -29,11 +30,13 @@ function computePosition(pointer, cardWidth, cardHeight) {
 
 export default function DogTooltip({ dogId, pointer, onClose }) {
   const [dogData, setDogData] = useState(null)
+  const [dogEvents, setDogEvents] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
   const [position, setPosition] = useState({ x: -9999, y: -9999 })
 
   const tooltipRef = useRef(null)
+  const eventResultsUrls = useMemo(() => buildEventResultsUrlMap(dogEvents), [dogEvents])
 
   // Пересчитываем позицию когда карточка отрендерилась и мы знаем её размер
   useEffect(() => {
@@ -49,11 +52,19 @@ export default function DogTooltip({ dogId, pointer, onClose }) {
       try {
         setLoading(true)
         setError(null)
-        const result = await api.getDogProfile(dogId)
-        if (result.data) {
-          setDogData(result.data)
+        const [profileResult, eventsResult] = await Promise.all([
+          api.getDogProfile(dogId),
+          api.getDogEvents(dogId),
+        ])
+        if (profileResult.data) {
+          setDogData(profileResult.data)
         } else {
           setError('Не удалось загрузить данные')
+        }
+        if (eventsResult?.success && Array.isArray(eventsResult.data)) {
+          setDogEvents(eventsResult.data)
+        } else {
+          setDogEvents([])
         }
       } catch (err) {
         setError('Ошибка загрузки')
@@ -179,8 +190,9 @@ export default function DogTooltip({ dogId, pointer, onClose }) {
 
                 {/* Лучший результат */}
                 {bestScoreEventId ? (
-                  <Link
-                    to={`/event/${bestScoreEventId}`}
+                  <ProcoursingEventLink
+                    eventId={bestScoreEventId}
+                    procoursingUrl={procoursingUrlForEventId(eventResultsUrls, bestScoreEventId)}
                     className="group mb-3 block rounded-lg border border-camel-200 dark:border-camel-600 bg-white dark:bg-charcoal-800 p-3 text-center shadow-sm transition-colors hover:bg-camel-50 dark:hover:bg-charcoal-700"
                     title="Открыть результаты соревнования"
                   >
@@ -191,7 +203,7 @@ export default function DogTooltip({ dogId, pointer, onClose }) {
                     <div className="mt-1 text-[10px] text-camel-700 dark:text-camel-500 opacity-0 transition-opacity group-hover:opacity-100">
                       открыть результаты →
                     </div>
-                  </Link>
+                  </ProcoursingEventLink>
                 ) : (
                   <div className="bg-white dark:bg-charcoal-800 rounded-lg p-3 shadow-sm mb-3 text-center">
                     <div className="text-[10px] text-gray-400 dark:text-gray-500 mb-1">Лучший результат</div>
@@ -207,10 +219,15 @@ export default function DogTooltip({ dogId, pointer, onClose }) {
                     <div className="text-base font-bold text-old-money-800 dark:text-old-money-300">{coursing.total_starts}</div>
                   </div>
                   {bestJudgeScoreEventId ? (
-                    <Link to={`/event/${bestJudgeScoreEventId}`} className={linkCellClass} title="Открыть результаты соревнования">
+                    <ProcoursingEventLink
+                      eventId={bestJudgeScoreEventId}
+                      procoursingUrl={procoursingUrlForEventId(eventResultsUrls, bestJudgeScoreEventId)}
+                      className={linkCellClass}
+                      title="Открыть результаты соревнования"
+                    >
                       <div className={statLabelClass}>Лучшая оценка</div>
                       <div className="text-base font-bold text-old-money-800 dark:text-old-money-300">{formatScore(coursing.best_judge_score)}</div>
-                    </Link>
+                    </ProcoursingEventLink>
                   ) : (
                     <div className={statCellClass}>
                       <div className={statLabelClass}>Лучшая оценка</div>
@@ -218,10 +235,15 @@ export default function DogTooltip({ dogId, pointer, onClose }) {
                     </div>
                   )}
                   {avgJudgeScoreEventId ? (
-                    <Link to={`/event/${avgJudgeScoreEventId}`} className={linkCellClass} title="Открыть результаты соревнования">
+                    <ProcoursingEventLink
+                      eventId={avgJudgeScoreEventId}
+                      procoursingUrl={procoursingUrlForEventId(eventResultsUrls, avgJudgeScoreEventId)}
+                      className={linkCellClass}
+                      title="Открыть результаты соревнования"
+                    >
                       <div className={statLabelClass}>Средняя оценка</div>
                       <div className="text-base font-bold text-old-money-800 dark:text-old-money-300">{formatScore(coursing.avg_judge_score)}</div>
-                    </Link>
+                    </ProcoursingEventLink>
                   ) : (
                     <div className={statCellClass}>
                       <div className={statLabelClass}>Средняя оценка</div>
@@ -251,8 +273,9 @@ export default function DogTooltip({ dogId, pointer, onClose }) {
 
                 {/* Лучшая скорость */}
                 {bestSpeedEventId ? (
-                  <Link
-                    to={`/event/${bestSpeedEventId}`}
+                  <ProcoursingEventLink
+                    eventId={bestSpeedEventId}
+                    procoursingUrl={procoursingUrlForEventId(eventResultsUrls, bestSpeedEventId)}
                     className="group mb-3 block rounded-lg border border-warm-blue-200 dark:border-warm-blue-600 bg-white dark:bg-charcoal-800 p-3 text-center shadow-sm transition-colors hover:bg-warm-blue-50 dark:hover:bg-charcoal-700"
                     title="Открыть результаты соревнования"
                   >
@@ -264,7 +287,7 @@ export default function DogTooltip({ dogId, pointer, onClose }) {
                     <div className="mt-1 text-[10px] text-warm-blue-700 dark:text-warm-blue-500 opacity-0 transition-opacity group-hover:opacity-100">
                       открыть результаты →
                     </div>
-                  </Link>
+                  </ProcoursingEventLink>
                 ) : (
                   <div className="bg-white dark:bg-charcoal-800 rounded-lg p-3 shadow-sm mb-3 text-center">
                     <div className="text-[10px] text-gray-400 dark:text-gray-500 mb-1">Лучшая скорость</div>
@@ -281,7 +304,12 @@ export default function DogTooltip({ dogId, pointer, onClose }) {
                     <div className="text-base font-bold text-warm-blue-900 dark:text-warm-blue-400">{racing.total_starts}</div>
                   </div>
                   {avgSpeedEventId ? (
-                    <Link to={`/event/${avgSpeedEventId}`} className={linkCellBlueClass} title="Открыть результаты соревнования">
+                    <ProcoursingEventLink
+                      eventId={avgSpeedEventId}
+                      procoursingUrl={procoursingUrlForEventId(eventResultsUrls, avgSpeedEventId)}
+                      className={linkCellBlueClass}
+                      title="Открыть результаты соревнования"
+                    >
                       <div className={statLabelClass}>Средняя</div>
                       <div className="whitespace-nowrap text-base font-bold text-warm-blue-900 dark:text-warm-blue-400">
                         {racing.avg_speed
@@ -289,7 +317,7 @@ export default function DogTooltip({ dogId, pointer, onClose }) {
                           : '—'
                         }
                       </div>
-                    </Link>
+                    </ProcoursingEventLink>
                   ) : (
                     <div className={statCellClass}>
                       <div className={statLabelClass}>Средняя</div>

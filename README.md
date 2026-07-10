@@ -5,18 +5,20 @@
 
 ## Документация
 
+⚠️ **Для ИИ-агентов:** Сначала прочитайте [.devin/rules/](.devin/rules/) и [.devin/skills/](.devin/skills/), затем docs/. См. [.devin/README.md](.devin/README.md).
+
 Полная документация в папке **[docs/](docs/README.md)**:
 
 | Раздел | Файл |
 |--------|------|
-| Быстрый старт | [docs/GETTING-STARTED.md](docs/GETTING-STARTED.md) |
-| ИИ-агент | [docs/README.md](docs/README.md) → [docs/AI-GUIDE.md](docs/AI-GUIDE.md) |
-| Архитектура | [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md), [docs/API-REFERENCE.md](docs/API-REFERENCE.md) |
-| Данные | [docs/DATA.md](docs/DATA.md), [docs/DATABASE.md](docs/DATABASE.md), [docs/PARSING.md](docs/PARSING.md) |
-| Разработка | [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md) |
-| Дизайн | [docs/DESIGN-SYSTEM.md](docs/DESIGN-SYSTEM.md) |
-| История | [docs/DECISIONS-LOG.md](docs/DECISIONS-LOG.md) |
-| Планы | [docs/FUTURE-PLANS.md](docs/FUTURE-PLANS.md) |
+| Быстрый старт | [docs/01-GETTING-STARTED.md](docs/01-GETTING-STARTED.md) |
+| ИИ-агент | [.devin/README.md](.devin/README.md) → [docs/00-AI-GUIDE.md](docs/00-AI-GUIDE.md) |
+| Архитектура | [docs/02-ARCHITECTURE.md](docs/02-ARCHITECTURE.md), [docs/05-API-REFERENCE.md](docs/05-API-REFERENCE.md) |
+| Данные | [docs/03-DATA.md](docs/03-DATA.md), [docs/12-DATABASE-SCHEMA.md](docs/12-DATABASE-SCHEMA.md), [docs/14-PARSING-RULES.md](docs/14-PARSING-RULES.md) |
+| Разработка | [docs/04-DEVELOPMENT.md](docs/04-DEVELOPMENT.md) |
+| Дизайн | [docs/06-DESIGN-SYSTEM.md](docs/06-DESIGN-SYSTEM.md) |
+| История | [docs/19-HISTORY.md](docs/19-HISTORY.md) |
+| Планы | [docs/11-FUTURE-PLANS.md](docs/11-FUTURE-PLANS.md) |
 
 Оглавление: **[docs/README.md](docs/README.md)**
 

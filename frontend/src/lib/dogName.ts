@@ -95,21 +95,32 @@ export function parseDogName(
   nameLat?: string | null,
   nameRu?: string | null,
 ): ParsedDogName {
-  const name = nameLat || nameRu || ''
-  if (!name) return { primary: '', secondary: null }
-
-  const slashParts = name.split('/')
-  if (slashParts.length > 1) {
+  // Если есть слеш в name_lat - разделяем (русская часть основная, английская secondary)
+  if (nameLat && nameLat.includes('/')) {
+    const slashParts = nameLat.split('/')
     return {
       primary: slashParts[0].trim(),
       secondary: slashParts.slice(1).join('/').trim() || null,
     }
   }
 
-  if (nameRu && nameRu !== nameLat) {
-    return { primary: nameLat || name, secondary: nameRu }
+  // Если есть только name_ru
+  if (nameRu && !nameLat) {
+    return { primary: nameRu, secondary: null }
   }
 
+  // Если есть только name_lat
+  if (nameLat && !nameRu) {
+    return { primary: nameLat, secondary: null }
+  }
+
+  // Если есть оба поля и они отличаются - name_ru основная, name_lat secondary
+  if (nameLat && nameRu && nameLat !== nameRu) {
+    return { primary: nameRu, secondary: nameLat }
+  }
+
+  // Иначе - используем что есть
+  const name = nameLat || nameRu || ''
   return { primary: name, secondary: null }
 }
 

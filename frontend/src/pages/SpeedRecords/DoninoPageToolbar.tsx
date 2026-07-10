@@ -3,7 +3,6 @@ import { Download, ChevronDown } from 'lucide-react'
 import DogSexIcon from '../../components/DogSexIcon'
 import MultiFilterDropdown from '../../components/toolbar/MultiFilterDropdown'
 import PageToolbar from '../../components/toolbar/PageToolbar'
-import ViewToggle from '../../components/toolbar/ViewToggle'
 import ToolbarChip from '../../components/toolbar/ToolbarChip'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
 import { TOOLBAR_NUMBER_INPUT } from '../../lib/toolbar'
@@ -12,7 +11,6 @@ import { buildSpeedActiveFilterChips } from './toolbarFilters'
 
 interface DoninoPageToolbarProps {
   view: 'table' | 'stats'
-  onViewChange: (view: 'table' | 'stats') => void
   searchQuery: string
   onSearchChange: (value: string) => void
   filterYears: string[]
@@ -46,7 +44,6 @@ const checkboxRowClass =
 
 export default function DoninoPageToolbar({
   view,
-  onViewChange,
   searchQuery,
   onSearchChange,
   filterYears,
@@ -146,10 +143,6 @@ export default function DoninoPageToolbar({
 
   return (
     <div ref={dropdownRef}>
-      <div className="mb-4 overflow-x-auto scrollbar-hide">
-        <ViewToggle view={view} onViewChange={onViewChange} />
-      </div>
-
       <PageToolbar
         activeFilterChips={activeFilterChips}
         onClearAllFilters={hasActiveFilters ? onClearFilters : undefined}

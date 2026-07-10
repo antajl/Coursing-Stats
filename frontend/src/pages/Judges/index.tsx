@@ -9,6 +9,7 @@ import { useJudges } from '../../hooks/useStaticData'
 import EmptyState from '../../components/EmptyState'
 import SkeletonLoader from '../../components/SkeletonLoader'
 import { buildJudgesActiveFilterChips } from '../SpeedRecords/toolbarFilters'
+import ProcoursingAttribution from '../../components/ProcoursingAttribution'
 
 const SORT_OPTIONS = [
   { field: 'total_evaluations_count', label: 'Оцениваний' },
@@ -153,6 +154,8 @@ export default function Judges() {
           ))}
         </div>
       )}
+
+      {!isEmbedded && <ProcoursingAttribution className="mt-6" />}
     </div>
   )
 }

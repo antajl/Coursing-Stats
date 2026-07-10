@@ -12,9 +12,9 @@
 
 | # | Файл | Зачем |
 |---|------|-------|
-| 1 | **[AI-GUIDE.md](AI-GUIDE.md)** | Правила, запреты, куда смотреть |
-| 2 | **[DATA.md](DATA.md)** | Где лежат данные, что редактировать, workflow |
-| 3 | **[ARCHITECTURE.md](ARCHITECTURE.md)** | Компоненты, деплой, стек |
+| 1 | **[00-AI-GUIDE.md](00-AI-GUIDE.md)** | Правила, запреты, куда смотреть |
+| 2 | **[03-DATA.md](03-DATA.md)** | Где лежат данные, что редактировать, workflow |
+| 3 | **[02-ARCHITECTURE.md](02-ARCHITECTURE.md)** | Компоненты, деплой, стек |
 | 4 | *по задаче* | см. таблицу ниже |
 
 **Не читай всё подряд** — открой только нужный раздел.
@@ -23,25 +23,37 @@
 
 ## Карта документов по задаче
 
+### Основное (00-11)
 | Задача | Документ |
 |--------|----------|
-| Запуск, npm, деплой | [GETTING-STARTED.md](GETTING-STARTED.md), [DEVELOPMENT.md](DEVELOPMENT.md) |
-| Архитектура, стек, CI | [ARCHITECTURE.md](ARCHITECTURE.md) |
-| Данные, админка, `data/v1/` | **[DATA.md](DATA.md)** |
-| Пустой рейтинг/судьи на проде | [DATA.md](DATA.md) → «Диагностика» |
-| D1, импорт, миграции | [DATABASE.md](DATABASE.md) |
-| Парсеры windows-1251 | [PARSING.md](PARSING.md) |
-| Локальный API (админка) | [API-REFERENCE.md](API-REFERENCE.md) |
-| Донино, рекорды | [SPEED-RECORDS.md](SPEED-RECORDS.md) |
-| Фронтенд, компоненты | [DEVELOPMENT.md](DEVELOPMENT.md) → Frontend map |
-| UI, цвета, тёмная тема | [DESIGN-SYSTEM.md](DESIGN-SYSTEM.md) |
-| SEO, sitemap | [SEO.md](SEO.md) |
-| Тесты | [TESTING.md](TESTING.md) |
-| Справочник `/guide` (РКФ) | [GUIDE.md](GUIDE.md) |
-| Бэкап D1 | [DATA-ARCHIVE.md](DATA-ARCHIVE.md) |
-| История решений | [DECISIONS-LOG.md](DECISIONS-LOG.md) |
-| Планы | [FUTURE-PLANS.md](FUTURE-PLANS.md) |
-| Changelog | [CHANGELOG.md](CHANGELOG.md) |
+| Запуск, npm, деплой | [01-GETTING-STARTED.md](01-GETTING-STARTED.md), [04-DEVELOPMENT.md](04-DEVELOPMENT.md) |
+| Архитектура, стек, CI | [02-ARCHITECTURE.md](02-ARCHITECTURE.md) |
+| Данные, админка, `data/v1/` | **[03-DATA.md](03-DATA.md)** |
+| Пустой рейтинг/судьи на проде | [03-DATA.md](03-DATA.md) → «Диагностика» или [16-TROUBLESHOOTING.md](16-TROUBLESHOOTING.md) |
+| Фронтенд, компоненты | [04-DEVELOPMENT.md](04-DEVELOPMENT.md) → Frontend map |
+| Локальный API (админка) | [05-API-REFERENCE.md](05-API-REFERENCE.md) |
+| UI, цвета, тёмная тема | [06-DESIGN-SYSTEM.md](06-DESIGN-SYSTEM.md) |
+| SEO, sitemap | [07-SEO.md](07-SEO.md) |
+| Тесты | [08-TESTING.md](08-TESTING.md) |
+| Донино, рекорды | [09-SPEED-RECORDS.md](09-SPEED-RECORDS.md) |
+| Справочник `/guide` (РКФ) | [10-GUIDE.md](10-GUIDE.md) |
+| Планы | [11-FUTURE-PLANS.md](11-FUTURE-PLANS.md) |
+
+### Техническое (12-18)
+| Задача | Документ |
+|--------|----------|
+| D1 схема (таблицы, views) | [12-DATABASE-SCHEMA.md](12-DATABASE-SCHEMA.md) |
+| D1 workflow (импорт, sync) | [13-DATABASE-WORKFLOW.md](13-DATABASE-WORKFLOW.md) |
+| Парсеры windows-1251 (правила) | [14-PARSING-RULES.md](14-PARSING-RULES.md) |
+| Парсеры (детали реализации) | [15-PARSING-IMPLEMENTATION.md](15-PARSING-IMPLEMENTATION.md) |
+| Решение проблем | [16-TROUBLESHOOTING.md](16-TROUBLESHOOTING.md) |
+| Админка workflow | [17-ADMIN-WORKFLOW.md](17-ADMIN-WORKFLOW.md) |
+| Паттерны кода | [18-CODE-PATTERNS.md](18-CODE-PATTERNS.md) |
+
+### История (19)
+| Задача | Документ |
+|--------|----------|
+| История изменений и решений | [19-HISTORY.md](19-HISTORY.md) |
 
 ---
 
@@ -53,7 +65,7 @@ npm run dev                    # localhost:5173 + админка
 ```
 
 Первый раз без данных: `npm run export-local-data -- --local`  
-Подробно: [GETTING-STARTED.md](GETTING-STARTED.md)
+Подробно: [01-GETTING-STARTED.md](01-GETTING-STARTED.md)
 
 ---
 
@@ -72,10 +84,10 @@ scripts/          # start-servers.bat, deploy-to-github.bat
 
 ## Архив (не для повседневной работы)
 
-`docs/_archive/` — старые планы и аудиты UI. Не использовать как источник правды.
+`archive/` — исторические документы. Не использовать как источник правды.
 
 ---
 
 ## Вклад в проект
 
-[CONTRIBUTING.md](CONTRIBUTING.md)
+См. раздел "Вклад в проект" в [01-GETTING-STARTED.md](01-GETTING-STARTED.md)

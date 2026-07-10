@@ -12,8 +12,7 @@ export interface HeroStats {
 
 export default function HeroIntro() {
   const scope = useRef<HTMLDivElement>(null)
-  const CalendarIcon = Icons.calendar
-  const MedalIcon = Icons.medal
+  const StatsIcon = Icons.achievement
 
   useGsapRiseIn({
     scope,
@@ -41,13 +40,13 @@ export default function HeroIntro() {
       </p>
 
       <div className="cta-row" data-rise>
-        <Link to="/competitions?tab=calendar" className="btn btn-primary">
-          <CalendarIcon className="h-4 w-4" strokeWidth={1.75} />
-          Календарь
+        <Link to="/competitions?tab=ranking" className="btn btn-primary">
+          <StatsIcon className="h-4 w-4" strokeWidth={1.75} />
+          Статистика
         </Link>
-        <Link to="/competitions?tab=ranking" className="btn btn-ghost">
-          <MedalIcon className="h-4 w-4" strokeWidth={1.75} />
-          Рейтинг
+        <Link to="/competitions?tab=judges" className="btn btn-ghost">
+          <Icons.award className="h-4 w-4" strokeWidth={1.75} />
+          Судьи
         </Link>
         <Link to="/speed-records" className="btn btn-ghost">
           <Icons.speed className="h-4 w-4" strokeWidth={1.75} />

@@ -8,6 +8,7 @@ import DoninoHomeRecordRow from '../components/DoninoHomeRecordRow'
 import MedalTally from '../components/MedalTally'
 import OwnerCrownName from '../components/OwnerCrownName'
 import PodiumRankMark, { type PodiumPlace } from '../components/PodiumRankMark'
+import ProcoursingAttribution from '../components/ProcoursingAttribution'
 import ToolbarSegmentControl from '../components/toolbar/ToolbarSegmentControl'
 import { parseDogName } from '../lib/dogName'
 import { api } from '../services/api'
@@ -336,9 +337,14 @@ export default function Home() {
         <div className="hero-events" data-rise>
           <div className="hero-events-head">
             <h3>Ближайшие события</h3>
-            <Link to="/competitions?tab=calendar" className="hero-events-link">
-              Весь календарь →
-            </Link>
+            <a
+              href="http://procoursing.ru/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hero-events-link"
+            >
+              Календарь на procoursing.ru →
+            </a>
           </div>
           <div className="hero-events-list">
             {loading ? (
@@ -410,7 +416,7 @@ export default function Home() {
                         >
                           <div className="dog-lat" title={primary}>{primary}</div>
                         </OwnerCrownName>
-                        {secondary && <div className="dog-ru">{secondary}</div>}
+                        {secondary && <div className="dog-ru text-charcoal-400 dark:text-charcoal-500">{secondary}</div>}
                       </>
                     )
                   })()}
@@ -465,6 +471,7 @@ export default function Home() {
             </div>
           </div>
           <SectionFooter to={rankingLink} label="Весь рейтинг" />
+          <ProcoursingAttribution className="mt-4" />
         </>
       ) : (
         <p className="text-sm text-charcoal-500 dark:text-charcoal-400">

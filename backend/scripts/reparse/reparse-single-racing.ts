@@ -50,7 +50,8 @@ async function reparseSingleRacing() {
     
     // Добавляем новые результаты
     for (const result of results) {
-      const nameLat = normalizeDogName(result.name);
+      const nameLat = normalizeDogName(result.name_lat || result.name);
+      const nameRu = normalizeDogName(result.name_ru || '');
       const breed = normalizeBreed(result.breed);
       
       const rawScoresJson = buildRacingRawScoresJson(result);
@@ -62,7 +63,7 @@ INSERT OR IGNORE INTO dogs (
 ) VALUES (
   '${sqlEscape(nameLat)}',
   '${sqlEscape(breed)}',
-  '${sqlEscape(result.name_ru || result.name)}',
+  '${sqlEscape(nameRu)}',
   NULL
 );`;
       sqlStatements.push(dogSql);

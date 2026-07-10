@@ -273,7 +273,8 @@ async function main() {
 
       const competitionResults = []
       for (const row of parsed.results) {
-        const nameLat = normalizeDogName(String(row.name ?? ''))
+        const nameLat = normalizeDogName(String(row.name_lat ?? row.name ?? ''))
+        const nameRu = normalizeDogName(String(row.name_ru ?? ''))
         const breed = normalizeBreed(String(row.breed ?? ''))
         const dk = dogKey(nameLat, breed)
 
@@ -284,7 +285,7 @@ async function main() {
             id: nextDogId,
             dog_key: dk,
             name_lat: nameLat,
-            name_ru: (row.name_ru as string) || String(row.name ?? nameLat),
+            name_ru: nameRu || null,
             breed,
             sex: null,
             owner: null,

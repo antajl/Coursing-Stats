@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { dogYearBadge } from '../lib/season'
+import { parseDogName } from '../lib/dogName'
 import MedalTally from './MedalTally'
 import OwnerCrownName from './OwnerCrownName'
 
@@ -27,21 +28,7 @@ interface DogCardProps {
 }
 
 export default function DogCard({ dog, type, filterYear }: DogCardProps) {
-  const getDisplayName = (name: string | undefined) => {
-    if (!name) return ''
-    const parts = name.split('/')
-    return parts[0].trim()
-  }
-
-  const getSecondPart = (name: string | undefined) => {
-    if (!name) return ''
-    const parts = name.split('/')
-    return parts.length > 1 ? parts[1].trim() : ''
-  }
-
-  const displayName = getDisplayName(dog.name_lat)
-  const displaySecondPart = getSecondPart(dog.name_lat)
-  const displayRuName = dog.name_ru ? getDisplayName(dog.name_ru) : ''
+  const { primary, secondary } = parseDogName(dog.name_lat, dog.name_ru)
 
   const getStats = () => {
     switch (type) {
@@ -107,19 +94,14 @@ export default function DogCard({ dog, type, filterYear }: DogCardProps) {
     >
       <div className="min-w-0 flex-1">
         <div className="mb-1 flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
-          <OwnerCrownName name={displayName} dogId={dog.dog_id} kind="competition">
+          <OwnerCrownName name={primary} dogId={dog.dog_id} kind="competition">
             <h3 className="break-words text-sm font-bold leading-snug text-charcoal-800 line-clamp-2 dark:text-charcoal-100">
-              {displayName}
+              {primary}
             </h3>
           </OwnerCrownName>
-          {displaySecondPart && (
+          {secondary && (
             <span className="break-words text-xs text-charcoal-400 dark:text-charcoal-500">
-              {displaySecondPart}
-            </span>
-          )}
-          {displayRuName && displayRuName !== displayName && (
-            <span className="break-words text-xs text-charcoal-500 dark:text-charcoal-400">
-              ({displayRuName})
+              {secondary}
             </span>
           )}
         </div>

@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom'
 import { Icons } from '../lib/icons'
+import { normalizeProcoursingUrl } from '../lib/procoursingLinks'
 import {
   type CalendarEvent,
   DISCIPLINE_BORDER,
@@ -19,14 +19,14 @@ export default function HomeEventRow({ event, compact = false }: HomeEventRowPro
   const dateParts = formatRowDateParts(event.date_start, event.date_end)
   const important = isImportantCompetition(event.competition_kind)
   const TrophyIcon = Icons.championship
+  const procoursingUrl = normalizeProcoursingUrl(event.results_url)
 
-  return (
-    <Link
-      to={`/event/${event.id}`}
-      className={`home-event-row border-l-4 ${borderClass} ${
-        important ? 'home-event-row--champ' : ''
-      } ${compact ? 'home-event-row--compact' : ''}`}
-    >
+  const className = `home-event-row border-l-4 ${borderClass} ${
+    important ? 'home-event-row--champ' : ''
+  } ${compact ? 'home-event-row--compact' : ''} ${procoursingUrl ? '' : 'cursor-default'}`
+
+  const content = (
+    <>
       <div className="home-event-row-date shrink-0 text-sm leading-tight text-charcoal-900 dark:text-charcoal-100">
         {dateParts ? (
           <>
@@ -56,6 +56,22 @@ export default function HomeEventRow({ event, compact = false }: HomeEventRowPro
           </p>
         )}
       </div>
-    </Link>
+    </>
   )
+
+  if (procoursingUrl) {
+    return (
+      <a
+        href={procoursingUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={className}
+        title="Результаты на procoursing.ru"
+      >
+        {content}
+      </a>
+    )
+  }
+
+  return <div className={className}>{content}</div>
 }

@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useMemo } from 'react'
 import { useParams, Link, useNavigate, useLocation } from 'react-router-dom'
 import { ChevronLeft, Download } from 'lucide-react'
 import { useDogProfile, useDogEvents, useDogSpeedRecords, useSpeedRecordsByBreed, useDogCoursingRecords, useCoursingRecordsByBreed } from '../hooks/useStaticData'
@@ -11,6 +11,9 @@ import ErrorState from '../components/ErrorState'
 import OwnerCrownName from '../components/OwnerCrownName'
 import MedalTally from '../components/MedalTally'
 import { SEO } from '../components/SEO'
+import ProcoursingEventLink from '../components/ProcoursingEventLink'
+import ProcoursingAttribution from '../components/ProcoursingAttribution'
+import { buildEventResultsUrlMap, procoursingUrlForEventId } from '../lib/procoursingLinks'
 
 export default function DogProfile() {
   const { id } = useParams()
@@ -38,6 +41,7 @@ export default function DogProfile() {
 
   const dog = dogDataResult?.success ? dogDataResult.data : null
   const events = eventsData?.success ? (Array.isArray(eventsData.data) ? eventsData.data : []) : []
+  const eventResultsUrls = useMemo(() => buildEventResultsUrlMap(events), [events])
   const speedRecords = speedRecordsData?.success ? (Array.isArray(speedRecordsData.data) ? speedRecordsData.data : []) : []
   const coursingRecords = coursingRecordsData?.success ? (Array.isArray(coursingRecordsData.data) ? coursingRecordsData.data : []) : []
   
@@ -245,7 +249,7 @@ export default function DogProfile() {
         <div ref={exportRef}>
 
         {/* Шапка профиля */}
-        <div className="mb-6 rounded-xl border border-old-money-200/80 dark:border-charcoal-600 bg-cream-100/70 dark:bg-charcoal-800/50 p-5 md:p-8">
+        <div className="mb-6 rounded-xl border border-old-money-200/80 dark:border-charcoal-600 bg-white dark:bg-charcoal-800/50 p-5 md:p-8">
           <div className="flex items-start gap-2">
             <button
               type="button"
@@ -282,7 +286,7 @@ export default function DogProfile() {
 
                 if (secondary) {
                   return (
-                    <div className="mt-1 text-base font-medium text-old-money-500 dark:text-old-money-400">
+                    <div className="mt-1 text-base font-medium text-charcoal-400 dark:text-charcoal-500">
                       {secondary}
                     </div>
                   )
@@ -352,8 +356,9 @@ export default function DogProfile() {
                     <h2 className="text-lg md:text-xl font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 mb-4">Курсинг / БЗМП</h2>
 
                     {bestScoreEventId ? (
-                      <Link
-                        to={`/event/${bestScoreEventId}`}
+                      <ProcoursingEventLink
+                        eventId={bestScoreEventId}
+                        procoursingUrl={procoursingUrlForEventId(eventResultsUrls, bestScoreEventId)}
                         className="group mb-4 block rounded-xl border-2 border-forest-200 dark:border-forest-600 bg-forest-50 dark:bg-charcoal-700 p-4 text-center transition-colors hover:bg-forest-100 dark:hover:bg-charcoal-600"
                       >
                         <div className="text-xs font-semibold text-charcoal-500 dark:text-charcoal-400 mb-2 uppercase tracking-wide">Лучший результат</div>
@@ -363,7 +368,7 @@ export default function DogProfile() {
                         <div className="mt-2 text-sm text-forest-600 dark:text-forest-500 opacity-0 transition-opacity group-hover:opacity-100 font-medium">
                           открыть результаты →
                         </div>
-                      </Link>
+                      </ProcoursingEventLink>
                     ) : (
                       <div className="mb-4 rounded-xl border-2 border-forest-200 dark:border-forest-600 bg-forest-50 dark:bg-charcoal-700 p-4 text-center">
                         <div className="text-xs font-semibold text-charcoal-500 dark:text-charcoal-400 mb-2 uppercase tracking-wide">Лучший результат</div>
@@ -375,13 +380,14 @@ export default function DogProfile() {
 
                     <div className="grid grid-cols-2 gap-3 mb-4">
                       {bestJudgeScoreEventId ? (
-                        <Link
-                          to={`/event/${bestJudgeScoreEventId}`}
+                        <ProcoursingEventLink
+                          eventId={bestJudgeScoreEventId}
+                          procoursingUrl={procoursingUrlForEventId(eventResultsUrls, bestJudgeScoreEventId)}
                           className="group bg-forest-50 dark:bg-charcoal-700 rounded-xl p-4 text-center border border-forest-200 dark:border-forest-600 hover:bg-forest-100 dark:hover:bg-charcoal-600 transition-colors"
                         >
                           <div className="text-xs font-semibold text-old-money-500 dark:text-old-money-400 mb-1 uppercase tracking-wide">Лучшая оценка</div>
                           <div className="text-2xl font-bold text-charcoal-800 dark:text-charcoal-100 group-hover:text-forest-700 dark:group-hover:text-forest-300">{formatScore(coursing.best_judge_score)}</div>
-                        </Link>
+                        </ProcoursingEventLink>
                       ) : (
                         <div className="bg-forest-50 dark:bg-charcoal-700 rounded-xl p-4 text-center border border-forest-200 dark:border-forest-600">
                           <div className="text-xs font-semibold text-old-money-500 dark:text-old-money-400 mb-1 uppercase tracking-wide">Лучшая оценка</div>
@@ -389,13 +395,14 @@ export default function DogProfile() {
                         </div>
                       )}
                       {avgJudgeScoreEventId ? (
-                        <Link
-                          to={`/event/${avgJudgeScoreEventId}`}
+                        <ProcoursingEventLink
+                          eventId={avgJudgeScoreEventId}
+                          procoursingUrl={procoursingUrlForEventId(eventResultsUrls, avgJudgeScoreEventId)}
                           className="group bg-forest-50 dark:bg-charcoal-700 rounded-xl p-4 text-center border border-forest-200 dark:border-forest-600 hover:bg-forest-100 dark:hover:bg-charcoal-600 transition-colors"
                         >
                           <div className="text-xs font-semibold text-old-money-500 dark:text-old-money-400 mb-1 uppercase tracking-wide">Средняя оценка</div>
                           <div className="text-2xl font-bold text-charcoal-800 dark:text-charcoal-100 group-hover:text-forest-700 dark:group-hover:text-forest-300">{formatScore(coursing.avg_judge_score)}</div>
-                        </Link>
+                        </ProcoursingEventLink>
                       ) : (
                         <div className="bg-forest-50 dark:bg-charcoal-700 rounded-xl p-4 text-center border border-forest-200 dark:border-forest-600">
                           <div className="text-xs font-semibold text-old-money-500 dark:text-old-money-400 mb-1 uppercase tracking-wide">Средняя оценка</div>
@@ -464,9 +471,14 @@ export default function DogProfile() {
                           </>
                         )
                         return event.event_id ? (
-                          <Link key={idx} to={`/event/${event.event_id}`} className={`${cardClass} text-inherit no-underline`}>
+                          <ProcoursingEventLink
+                            key={idx}
+                            eventId={event.event_id}
+                            procoursingUrl={procoursingUrlForEventId(eventResultsUrls, event.event_id)}
+                            className={`${cardClass} text-inherit no-underline`}
+                          >
                             {cardBody}
-                          </Link>
+                          </ProcoursingEventLink>
                         ) : (
                           <div key={idx} className={cardClass}>
                             {cardBody}
@@ -497,8 +509,9 @@ export default function DogProfile() {
                     <h2 className="mb-4 text-lg font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 md:text-xl">Бега борзых</h2>
 
                     {bestSpeedEventId ? (
-                      <Link
-                        to={`/event/${bestSpeedEventId}`}
+                      <ProcoursingEventLink
+                        eventId={bestSpeedEventId}
+                        procoursingUrl={procoursingUrlForEventId(eventResultsUrls, bestSpeedEventId)}
                         className="group mb-4 block rounded-xl border-2 border-warm-blue-200 dark:border-warm-blue-600 bg-warm-blue-50 dark:bg-charcoal-700 p-4 text-center transition-colors hover:bg-warm-blue-100 dark:hover:bg-charcoal-600"
                       >
                         <div className="text-xs font-semibold text-charcoal-500 dark:text-charcoal-400 mb-2 uppercase tracking-wide">Лучшая скорость</div>
@@ -509,7 +522,7 @@ export default function DogProfile() {
                         <div className="mt-2 text-sm text-warm-blue-600 opacity-0 transition-opacity group-hover:opacity-100 font-medium">
                           открыть результаты →
                         </div>
-                      </Link>
+                      </ProcoursingEventLink>
                     ) : (
                       <div className="mb-4 rounded-xl border-2 border-warm-blue-200 dark:border-warm-blue-600 bg-warm-blue-50 dark:bg-charcoal-700 p-4 text-center">
                         <div className="text-xs font-semibold text-charcoal-500 dark:text-charcoal-400 mb-2 uppercase tracking-wide">Лучшая скорость</div>
@@ -526,8 +539,9 @@ export default function DogProfile() {
                         <div className="text-2xl font-bold text-warm-blue-900 dark:text-warm-blue-400">{racing.total_starts}</div>
                       </div>
                       {avgSpeedEventId ? (
-                        <Link
-                          to={`/event/${avgSpeedEventId}`}
+                        <ProcoursingEventLink
+                          eventId={avgSpeedEventId}
+                          procoursingUrl={procoursingUrlForEventId(eventResultsUrls, avgSpeedEventId)}
                           className="group rounded-xl bg-warm-blue-50 dark:bg-charcoal-700 p-4 text-center border border-warm-blue-200 dark:border-warm-blue-600 hover:bg-warm-blue-100 dark:hover:bg-charcoal-600 transition-colors"
                         >
                           <div className="text-xs font-semibold text-old-money-500 dark:text-old-money-400 mb-1 uppercase tracking-wide">Средняя</div>
@@ -537,7 +551,7 @@ export default function DogProfile() {
                               : '—'
                             }
                           </div>
-                        </Link>
+                        </ProcoursingEventLink>
                       ) : (
                         <div className="rounded-xl bg-warm-blue-50 dark:bg-charcoal-700 p-4 text-center border border-warm-blue-200 dark:border-warm-blue-600">
                           <div className="text-xs font-semibold text-old-money-500 dark:text-old-money-400 mb-1 uppercase tracking-wide">Средняя</div>
@@ -604,9 +618,14 @@ export default function DogProfile() {
                           </>
                         )
                         return event.event_id ? (
-                          <Link key={idx} to={`/event/${event.event_id}`} className={`${cardClass} text-inherit no-underline`}>
+                          <ProcoursingEventLink
+                            key={idx}
+                            eventId={event.event_id}
+                            procoursingUrl={procoursingUrlForEventId(eventResultsUrls, event.event_id)}
+                            className={`${cardClass} text-inherit no-underline`}
+                          >
                             {cardBody}
-                          </Link>
+                          </ProcoursingEventLink>
                         ) : (
                           <div key={idx} className={cardClass}>
                             {cardBody}
@@ -793,6 +812,10 @@ export default function DogProfile() {
               </div>
             )}
           </div>
+        )}
+
+        {(showCoursingColumn || showRacingColumn) && (
+          <ProcoursingAttribution className="mt-6" />
         )}
 
         </div>

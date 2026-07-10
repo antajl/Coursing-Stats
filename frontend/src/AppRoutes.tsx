@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import PageLoader from './components/PageLoader';
+import { isLocalDev } from './lib/env';
 
 const Home = lazy(() => import('./pages/Home'));
 const Competitions = lazy(() => import('./pages/Competitions'));
@@ -13,6 +14,7 @@ const Guide = lazy(() => import('./pages/Guide'));
 const Judges = lazy(() => import('./pages/Judges/index'));
 const JudgeDetail = lazy(() => import('./pages/Judges/JudgeDetail'));
 const Admin = lazy(() => import('./pages/Admin'));
+const AdminCalendar = lazy(() => import('./pages/Admin/AdminCalendar'));
 const EventEdit = lazy(() => import('./pages/Admin/EventEdit'));
 const Debug = lazy(() => import('./pages/Debug'));
 const NotFound = lazy(() => import('./pages/NotFound'));
@@ -31,13 +33,19 @@ export default function AppRoutes() {
         <Route path="/procoursing" element={<LegacyProcoursingRedirect />} />
         <Route path="/top" element={<TopDogs />} />
         <Route path="/dog/:id" element={<DogProfile />} />
-        <Route path="/event/:id" element={<EventResults />} />
+        <Route path="/event/:id" element={<Navigate to="/competitions?tab=ranking" replace />} />
         <Route path="/speed-records" element={<SpeedRecords />} />
         <Route path="/guide" element={<Guide />} />
         <Route path="/donino-dog/:name/:breed" element={<DoninoDogProfile />} />
         <Route path="/judges" element={<Judges />} />
         <Route path="/judges/:judgeId" element={<JudgeDetail />} />
         <Route path="/admin" element={<Admin />} />
+        {isLocalDev && (
+          <>
+            <Route path="/admin/calendar" element={<AdminCalendar />} />
+            <Route path="/admin/event/:id" element={<EventResults />} />
+          </>
+        )}
         <Route path="/admin/events/:id" element={<EventEdit />} />
         <Route path="/debug" element={<Debug />} />
         <Route path="*" element={<NotFound />} />

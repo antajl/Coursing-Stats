@@ -391,11 +391,11 @@ export default function EventEdit() {
         </h1>
         <p className="text-sm text-charcoal-500 dark:text-charcoal-400 mb-6">
           Проверка на сайте:{' '}
-          <Link to={`/competitions?year=${event.year}`} className="text-camel-600 hover:underline">
-            календарь {event.year}
+          <Link to="/admin/calendar" className="text-camel-600 hover:underline">
+            календарь
           </Link>
           {' · '}
-          <Link to={`/event/${event.id}`} className="text-camel-600 hover:underline">
+          <Link to={`/admin/event/${event.id}`} className="text-camel-600 hover:underline">
             страница результатов
           </Link>
         </p>

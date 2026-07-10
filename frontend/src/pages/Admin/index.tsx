@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import AdminCalendarForm, { type AdminCalendarFields } from './AdminCalendarForm'
 import { adminFetch, invalidatePublicEventCaches, parseAdminResponse } from './adminApi'
+import { isLocalDev } from '../../lib/env'
 import { sortAdminEventsByDateAsc } from './adminEventUtils'
 
 interface AdminEvent extends AdminCalendarFields {
@@ -249,6 +250,17 @@ export default function Admin() {
             Выйти
           </button>
         </div>
+
+        {isLocalDev && (
+          <div className="mb-6">
+            <Link
+              to="/admin/calendar"
+              className="text-camel-600 hover:text-camel-700 dark:text-camel-400 dark:hover:text-camel-300"
+            >
+              Календарь и протоколы (локально)
+            </Link>
+          </div>
+        )}
 
         <div className="mb-6 flex items-center gap-4">
           <label className="text-sm font-medium text-charcoal-700 dark:text-charcoal-300">

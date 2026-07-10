@@ -17,7 +17,7 @@ test.describe('Navigation', () => {
 
   test('can navigate to competitions page', async ({ page }) => {
     await page.goto('/')
-    await page.getByRole('link', { name: /соревнования/i }).first().click()
+    await page.getByRole('link', { name: /статистика/i }).first().click()
     await expect(page).toHaveURL('/competitions')
     await expect(competitionsSegment(page)).toBeVisible()
   })
