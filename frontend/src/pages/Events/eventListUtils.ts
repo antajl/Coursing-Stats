@@ -55,10 +55,24 @@ export const LEGEND_DOT_COLOR: Record<string, string> = {
   championship: 'bg-camel-500',
 }
 
+/** Короткие названия месяцев без точки — единый формат для hero и календаря. */
+const MONTH_SHORT_RU = [
+  'янв', 'фев', 'мар', 'апр', 'май', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек',
+] as const
+
 export function parseDate(dateStr: string | null | undefined): Date | null {
   if (!dateStr) return null
+  const iso = /^(\d{4})-(\d{2})-(\d{2})/.exec(dateStr.trim())
+  if (iso) {
+    const d = new Date(Number(iso[1]), Number(iso[2]) - 1, Number(iso[3]))
+    return Number.isNaN(d.getTime()) ? null : d
+  }
   const d = new Date(dateStr)
   return Number.isNaN(d.getTime()) ? null : d
+}
+
+function formatMonthShortRu(monthIndex: number): string {
+  return MONTH_SHORT_RU[monthIndex] ?? ''
 }
 
 export function formatDateRange(dateStart: string, dateEnd?: string | null): string {
@@ -87,7 +101,7 @@ export function formatRowDateParts(
   const d = parseDate(dateStart)
   if (!d) return null
 
-  const month = d.toLocaleDateString('ru-RU', { month: 'short' }).replace('.', '')
+  const month = formatMonthShortRu(d.getMonth())
   const weekday = d.toLocaleDateString('ru-RU', { weekday: 'short' })
   const end = dateEnd ? parseDate(dateEnd) : null
   const dayEnd =

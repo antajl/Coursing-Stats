@@ -124,16 +124,27 @@ interface ManifestFile {
   counts?: Record<string, number>
 }
 
+interface JudgesSummaryFile {
+  count?: number
+}
+
 export async function getStats(): Promise<ApiResult<Record<string, unknown>>> {
-  const manifest = await fetchJson<ManifestFile>('manifest.json')
+  const [manifest, judgesSummary] = await Promise.all([
+    fetchJson<ManifestFile>('manifest.json'),
+    fetchJson<JudgesSummaryFile>('indexes/judges-summary.json'),
+  ])
   if (!manifest?.counts) return { success: false, error: 'manifest.json unavailable' }
+  const doninoSpeed = manifest.counts.donino_speed ?? 0
+  const doninoCoursing = manifest.counts.donino_coursing ?? 0
   return {
     success: true,
     data: {
       ...manifest.counts,
       breeds: manifest.counts.breeds ?? 0,
-      speed_records: manifest.counts.donino_speed ?? 0,
-      coursing_records: manifest.counts.donino_coursing ?? 0,
+      judges: judgesSummary?.count ?? 0,
+      donino_records: doninoSpeed + doninoCoursing,
+      speed_records: doninoSpeed,
+      coursing_records: doninoCoursing,
       data_source: 'data/v1/manifest.json',
     },
   }

@@ -31,7 +31,11 @@ export default function HomeEventRow({ event, compact = false }: HomeEventRowPro
         {dateParts ? (
           <>
             <span className="block whitespace-nowrap font-semibold tabular-nums">{dateParts.dayLine}</span>
-            {!compact && (
+            {compact ? (
+              <span className="block whitespace-nowrap text-[11px] text-charcoal-500 dark:text-charcoal-400">
+                {dateParts.month}
+              </span>
+            ) : (
               <span className="block whitespace-nowrap text-[11px] text-charcoal-500 dark:text-charcoal-400">
                 {dateParts.metaLine}
               </span>

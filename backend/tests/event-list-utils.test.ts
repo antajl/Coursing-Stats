@@ -53,5 +53,11 @@ describe('calendar display utils', () => {
     const parts = formatRowDateParts('2026-04-26', '2026-04-27')
     expect(parts?.dayLine).toBe('26–27')
     expect(parts?.metaLine).toMatch(/–/)
+    expect(parts?.month).toBe('апр')
+  })
+
+  it('short month labels are consistent (no mixed long/short)', () => {
+    expect(formatRowDateParts('2026-07-18', '2026-07-19')?.month).toBe('июл')
+    expect(formatRowDateParts('2026-08-01', '2026-08-02')?.month).toBe('авг')
   })
 })
