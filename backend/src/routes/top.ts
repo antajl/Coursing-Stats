@@ -127,17 +127,17 @@ export function handleTop(app: Hono<{ Bindings: Env }>) {
     const breed = c.req.query('breed') || '';
     const year = c.req.query('year') || '';
     const minStarts = parseInt(c.req.query('minStarts')) || 0;
-    const sortBy = c.req.query('sortBy') || 'best_score';
+    const sortBy = c.req.query('sortBy') || 'best_judge_score';
     const pagination = parsePagination(c);
 
     let params: unknown[] = [];
 
     let query;
-    let orderBy = 'best_score DESC';
-    if (sortBy === 'best_judge_score') {
-      orderBy = 'best_judge_score DESC';
+    let orderBy = 'best_judge_score DESC, avg_judge_score DESC, total_starts DESC, best_score DESC';
+    if (sortBy === 'best_score') {
+      orderBy = 'best_score DESC, best_judge_score DESC, avg_judge_score DESC, total_starts DESC';
     } else if (sortBy === 'avg_judge_score') {
-      orderBy = 'avg_judge_score DESC';
+      orderBy = 'avg_judge_score DESC, best_judge_score DESC, total_starts DESC, best_score DESC';
     }
 
     if (year) {

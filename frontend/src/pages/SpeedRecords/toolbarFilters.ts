@@ -143,8 +143,6 @@ export function buildTopDogsActiveFilterChips(
   filterMinStarts: string,
   filterScoreFrom: string,
   filterSpeedFrom: string,
-  activeTab: string,
-  defaultYear: string,
   onSearchChange: (value: string) => void,
   onYearChange: (value: string) => void,
   onBreedChange: (value: string) => void,
@@ -157,10 +155,8 @@ export function buildTopDogsActiveFilterChips(
   if (searchQuery.trim()) {
     chips.push({ key: 'search', label: `«${searchQuery.trim()}»`, onRemove: () => onSearchChange('') })
   }
-  if (filterYear === '') {
-    chips.push({ key: 'year', label: 'Все годы', onRemove: () => onYearChange(defaultYear) })
-  } else if (filterYear !== defaultYear) {
-    chips.push({ key: 'year', label: filterYear, onRemove: () => onYearChange(defaultYear) })
+  if (filterYear) {
+    chips.push({ key: 'year', label: filterYear, onRemove: () => onYearChange('') })
   }
   if (filterBreed) {
     chips.push({ key: 'breed', label: filterBreed, onRemove: () => onBreedChange('') })
@@ -168,10 +164,10 @@ export function buildTopDogsActiveFilterChips(
   if (filterMinStarts) {
     chips.push({ key: 'min-starts', label: `от ${filterMinStarts} стартов`, onRemove: () => onMinStartsChange('') })
   }
-  if (activeTab === 'score' && filterScoreFrom) {
-    chips.push({ key: 'min-score', label: `от ${filterScoreFrom} очк.`, onRemove: () => onScoreFromChange('') })
+  if (filterScoreFrom) {
+    chips.push({ key: 'min-score', label: `оценка от ${filterScoreFrom}`, onRemove: () => onScoreFromChange('') })
   }
-  if (activeTab === 'speed' && filterSpeedFrom) {
+  if (filterSpeedFrom) {
     chips.push({ key: 'min-speed', label: `от ${filterSpeedFrom} км/ч`, onRemove: () => onSpeedFromChange('') })
   }
   return chips
@@ -179,15 +175,20 @@ export function buildTopDogsActiveFilterChips(
 
 export function buildJudgesActiveFilterChips(
   searchQuery: string,
+  filterYear: string,
   filterBreed: string,
   filterDiscipline: string,
   onSearchChange: (value: string) => void,
+  onYearChange: (value: string) => void,
   onBreedChange: (value: string) => void,
   onDisciplineChange: (value: string) => void
 ): ActiveFilterChip[] {
   const chips: ActiveFilterChip[] = []
   if (searchQuery.trim()) {
     chips.push({ key: 'search', label: `«${searchQuery.trim()}»`, onRemove: () => onSearchChange('') })
+  }
+  if (filterYear) {
+    chips.push({ key: 'year', label: filterYear, onRemove: () => onYearChange('') })
   }
   if (filterBreed) {
     chips.push({ key: 'breed', label: filterBreed, onRemove: () => onBreedChange('') })

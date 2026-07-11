@@ -17,6 +17,7 @@ import {
   formatBreedData,
   formatCriteriaData,
   formatJudgesData,
+  filterJudgeRawRows,
   type JudgeRawRow,
 } from './judgeStats'
 import { dedupeCalendarEvents } from '../../../backend/lib/event-identity'
@@ -74,11 +75,41 @@ export function sortPlacementItems(
   return copy
 }
 
-export function sortScoreItems(items: Record<string, unknown>[], sortBy: string): Record<string, unknown>[] {
+export function compareScoreItems(
+  a: Record<string, unknown>,
+  b: Record<string, unknown>,
+  sortBy = 'best_judge_score',
+): number {
+  const primaryKey =
+    sortBy === 'avg_judge_score'
+      ? 'avg_judge_score'
+      : sortBy === 'best_score'
+        ? 'best_score'
+        : 'best_judge_score'
+  const primary = Number(b[primaryKey] ?? 0) - Number(a[primaryKey] ?? 0)
+  if (primary !== 0) return primary
+
+  if (sortBy === 'avg_judge_score') {
+    const bj = Number(b.best_judge_score ?? 0) - Number(a.best_judge_score ?? 0)
+    if (bj !== 0) return bj
+  } else if (sortBy === 'best_score') {
+    const bj = Number(b.best_judge_score ?? 0) - Number(a.best_judge_score ?? 0)
+    if (bj !== 0) return bj
+    const avg = Number(b.avg_judge_score ?? 0) - Number(a.avg_judge_score ?? 0)
+    if (avg !== 0) return avg
+    return Number(b.total_starts ?? 0) - Number(a.total_starts ?? 0)
+  }
+
+  const avg = Number(b.avg_judge_score ?? 0) - Number(a.avg_judge_score ?? 0)
+  if (avg !== 0) return avg
+  const starts = Number(b.total_starts ?? 0) - Number(a.total_starts ?? 0)
+  if (starts !== 0) return starts
+  return Number(b.best_score ?? 0) - Number(a.best_score ?? 0)
+}
+
+export function sortScoreItems(items: Record<string, unknown>[], sortBy = 'best_judge_score'): Record<string, unknown>[] {
   const copy = [...items]
-  const key =
-    sortBy === 'best_judge_score' ? 'best_judge_score' : sortBy === 'avg_judge_score' ? 'avg_judge_score' : 'best_score'
-  copy.sort((a, b) => Number(b[key] ?? 0) - Number(a[key] ?? 0))
+  copy.sort((a, b) => compareScoreItems(a, b, sortBy))
   return copy
 }
 
@@ -329,7 +360,7 @@ export async function getTopScore(
   year = '',
   breed = '',
   minStarts = 0,
-  sortBy = 'best_score',
+  sortBy = 'best_judge_score',
   limit: number | null = null,
   offset = 0,
 ): Promise<ApiResult<unknown>> {
@@ -570,10 +601,14 @@ async function loadJudgesRawRows(): Promise<JudgeRawRow[]> {
   return rows ?? []
 }
 
-export async function getJudges(breed = '', discipline = ''): Promise<ApiResult<Record<string, unknown>>> {
+export async function getJudges(
+  breed = '',
+  discipline = '',
+  year = '',
+): Promise<ApiResult<Record<string, unknown>>> {
   const availableBreeds = await loadAvailableBreeds()
 
-  if (!breed && !discipline) {
+  if (!breed && !discipline && !year) {
     const summary = await fetchJson<JudgesSummaryFile>('indexes/judges-summary.json')
     if (summary?.judges) {
       return { success: true, data: { judges: summary.judges, available_breeds: availableBreeds } }
@@ -581,7 +616,7 @@ export async function getJudges(breed = '', discipline = ''): Promise<ApiResult<
   }
 
   const rows = await loadJudgesRawRows()
-  const filtered = rows.filter((r) => (!breed || r.breed === breed) && (!discipline || r.event_type === discipline))
+  const filtered = filterJudgeRawRows(rows, { breed, discipline, year })
   const judgesData = formatJudgesData(aggregateJudgeStats(filtered))
 
   return { success: true, data: { judges: judgesData, available_breeds: availableBreeds } }
@@ -608,7 +643,7 @@ export async function getJudgeDetails(
   }
 
   const rows = await loadJudgesRawRows()
-  const filtered = rows.filter((r) => (!breed || r.breed === breed) && (!discipline || r.event_type === discipline))
+  const filtered = filterJudgeRawRows(rows, { breed, discipline })
 
   const breedStatsMap = aggregateBreedStats(filtered, judgeName)
   const breedData = formatBreedData(breedStatsMap, filtered, judgeName)

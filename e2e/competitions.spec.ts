@@ -11,7 +11,7 @@ test.describe('Competitions Page', () => {
     await expect(page).toHaveTitle(/Coursing Stats/)
     await expect(competitionsSegment(page).getByRole('button', { name: 'Рейтинг' })).toBeVisible()
     await expect(page.locator('#tab-panel-ranking')).toBeVisible()
-    await expect(page.getByRole('group', { name: 'Тип рейтинга' })).toBeVisible()
+    await expect(page.getByRole('group', { name: 'Рейтинг курсинга' })).toBeVisible()
   })
 
   test('does not show calendar tab', async ({ page }) => {

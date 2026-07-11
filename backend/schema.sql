@@ -137,7 +137,7 @@ JOIN dogs d ON d.id = r.dog_id
 JOIN events e ON r.event_id = e.id
 WHERE r.status = 'finished' AND r.total_score IS NOT NULL AND e.event_type IN ('coursing', 'bzmp')
 GROUP BY d.id, e.year
-ORDER BY e.year DESC, best_score DESC;
+ORDER BY e.year DESC, best_judge_score DESC, avg_judge_score DESC, total_starts DESC, best_score DESC;
 
 -- ===========================================================================
 -- РЕКОРДЫ СКОРОСТИ

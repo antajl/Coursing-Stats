@@ -50,6 +50,18 @@ interface JudgeStatsAcc {
   events: Set<number>
 }
 
+export function filterJudgeRawRows(
+  rows: JudgeRawRow[],
+  opts: { breed?: string; discipline?: string; year?: string },
+): JudgeRawRow[] {
+  return rows.filter((row) => {
+    if (opts.breed && row.breed !== opts.breed) return false
+    if (opts.discipline && row.event_type !== opts.discipline) return false
+    if (opts.year && !(row.date_start ?? '').startsWith(`${opts.year}-`)) return false
+    return true
+  })
+}
+
 export function aggregateJudgeStats(rows: JudgeRawRow[]): Map<string, JudgeStatsAcc> {
   const judgeStats = new Map<string, JudgeStatsAcc>()
 

@@ -83,19 +83,24 @@ const SCORE_ALL_YEARS_SQL = `
   JOIN events e ON r.event_id = e.id
   WHERE r.status = 'finished' AND r.total_score IS NOT NULL AND e.event_type IN ('coursing', 'bzmp')
   GROUP BY d.id
-  ORDER BY best_score DESC
+  ORDER BY best_judge_score DESC, total_starts DESC, best_score DESC
 `;
 
-/** avg_judge_score «по всем годам» — честное среднее по всем оценкам судей, не воспроизводит SQLite-баг v_top_by_score (см. docs). */
-function attachAvgJudgeScoreAllYears(db: Database.Database, scoreRows: Record<string, unknown>[]) {
+/** avg_judge_score — честное среднее по всем оценкам судей; не воспроизводит SQLite-баг v_top_by_score (см. docs). */
+function attachAvgJudgeScore(
+  db: Database.Database,
+  scoreRows: Record<string, unknown>[],
+  year?: number,
+) {
   const rows = db
     .prepare(
       `SELECT r.dog_id, r.raw_scores_json
        FROM results r
        JOIN events e ON r.event_id = e.id
-       WHERE r.status = 'finished' AND r.total_score IS NOT NULL AND e.event_type IN ('coursing', 'bzmp')`,
+       WHERE r.status = 'finished' AND r.total_score IS NOT NULL AND e.event_type IN ('coursing', 'bzmp')
+       ${year != null ? 'AND e.year = ?' : ''}`,
     )
-    .all() as { dog_id: number; raw_scores_json: string | null }[];
+    .all(...(year != null ? [year] : [])) as { dog_id: number; raw_scores_json: string | null }[];
 
   const sumsByDog = new Map<number, number[]>();
   for (const row of rows) {
@@ -123,6 +128,18 @@ function attachAvgJudgeScoreAllYears(db: Database.Database, scoreRows: Record<st
   }
 }
 
+function sortScoreIndexRows(rows: Record<string, unknown>[]) {
+  rows.sort((a, b) => {
+    const bj = Number(b.best_judge_score ?? 0) - Number(a.best_judge_score ?? 0);
+    if (bj !== 0) return bj;
+    const avg = Number(b.avg_judge_score ?? 0) - Number(a.avg_judge_score ?? 0);
+    if (avg !== 0) return avg;
+    const starts = Number(b.total_starts ?? 0) - Number(a.total_starts ?? 0);
+    if (starts !== 0) return starts;
+    return Number(b.best_score ?? 0) - Number(a.best_score ?? 0);
+  });
+}
+
 function buildTopIndexes(db: Database.Database) {
   const years = (db.prepare('SELECT DISTINCT year FROM events ORDER BY year').all() as { year: number }[])
     .map((r) => r.year)
@@ -147,10 +164,11 @@ function buildTopIndexes(db: Database.Database) {
     const score = db
       .prepare(
         `SELECT *, year AS year_from, year AS year_to
-         FROM v_top_by_score WHERE year = ?
-         ORDER BY best_score DESC`,
+         FROM v_top_by_score WHERE year = ?`,
       )
-      .all(year);
+      .all(year) as Record<string, unknown>[];
+    attachAvgJudgeScore(db, score, year);
+    sortScoreIndexRows(score);
 
     writeIndex(`top-score-${year}.json`, {
       schema: 'coursing-stats/index-top-score-v1',
@@ -169,7 +187,8 @@ function buildTopIndexes(db: Database.Database) {
   });
 
   const scoreAll = db.prepare(SCORE_ALL_YEARS_SQL).all() as Record<string, unknown>[];
-  attachAvgJudgeScoreAllYears(db, scoreAll);
+  attachAvgJudgeScore(db, scoreAll);
+  sortScoreIndexRows(scoreAll);
   writeIndex('top-score-all.json', {
     schema: 'coursing-stats/index-top-score-v1',
     year: null,

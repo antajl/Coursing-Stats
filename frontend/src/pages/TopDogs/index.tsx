@@ -3,15 +3,17 @@ import { useSearchParams } from 'react-router-dom'
 import { useTopPlacement, useTopScore, useTopSpeed, useCompetingBreeds, useYears } from '../../hooks/useStaticData'
 import SkeletonLoader from '../../components/SkeletonLoader'
 import TopDogsFilters from './TopDogsFilters'
-import TopDogsTabs from './TopDogsTabs'
+import TopDogsColumns from './TopDogsColumns'
 import ProcoursingAttribution from '../../components/ProcoursingAttribution'
 import { filterPlacement, filterScore, filterSpeed } from './filterUtils'
+import { sortScoreItems } from '../../lib/staticData'
 
-const RANKING_TABS = ['placement', 'score', 'speed'] as const
-type RankingTab = (typeof RANKING_TABS)[number]
+const COURSING_TABS = ['placement', 'score'] as const
+type CoursingTab = (typeof COURSING_TABS)[number]
 
-function parseRankingTab(value: string | null): RankingTab {
-  return RANKING_TABS.includes(value as RankingTab) ? (value as RankingTab) : 'placement'
+function parseCoursingTab(value: string | null): CoursingTab {
+  if (value === 'score') return 'score'
+  return 'placement'
 }
 
 const CURRENT_SEASON = String(new Date().getFullYear())
@@ -20,11 +22,13 @@ export default function TopDogs() {
   const [searchParams, setSearchParams] = useSearchParams()
   const isStandalone = !searchParams.get('tab')
 
-  const [activeTab, setActiveTab] = useState<RankingTab>(() => parseRankingTab(searchParams.get('rankingTab')))
+  const [coursingTab, setCoursingTab] = useState<CoursingTab>(() =>
+    parseCoursingTab(searchParams.get('rankingTab'))
+  )
 
-  const handleTabChange = useCallback(
-    (tab: RankingTab) => {
-      setActiveTab(tab)
+  const handleCoursingTabChange = useCallback(
+    (tab: CoursingTab) => {
+      setCoursingTab(tab)
       const params = new URLSearchParams(searchParams)
       if (!isStandalone) {
         params.set('tab', 'ranking')
@@ -40,10 +44,11 @@ export default function TopDogs() {
   )
 
   useEffect(() => {
-    setActiveTab(parseRankingTab(searchParams.get('rankingTab')))
+    setCoursingTab(parseCoursingTab(searchParams.get('rankingTab')))
   }, [searchParams])
+
   const [filterBreed, setFilterBreed] = useState(() => searchParams.get('breed') || '')
-  const [filterYear, setFilterYear] = useState(() => searchParams.get('year') || CURRENT_SEASON)
+  const [filterYear, setFilterYear] = useState(() => searchParams.get('year') ?? '')
   const [searchQuery, setSearchQuery] = useState(() => searchParams.get('search') || '')
   const [isInitialLoad, setIsInitialLoad] = useState(true)
 
@@ -85,11 +90,14 @@ export default function TopDogs() {
   }
 
   const filteredPlacement = filterPlacement(topPlacement, filterParams)
-  const filteredScore = filterScore(topScore, filterParams)
+  const filteredScore = sortScoreItems(
+    filterScore(topScore, filterParams) as Record<string, unknown>[],
+    'best_judge_score',
+  )
   const filteredSpeed = filterSpeed(topSpeed, filterParams)
 
   const handleResetFilters = () => {
-    setFilterYear(CURRENT_SEASON)
+    setFilterYear('')
     setFilterBreed('')
     setSearchQuery('')
     setFilterMinStarts('')
@@ -98,7 +106,7 @@ export default function TopDogs() {
   }
 
   const handleResetPanelFilters = () => {
-    setFilterYear(CURRENT_SEASON)
+    setFilterYear('')
     setFilterBreed('')
     setFilterMinStarts('')
     setFilterScoreFrom('')
@@ -114,7 +122,7 @@ export default function TopDogs() {
         onSearchChange={setSearchQuery}
         filterYear={filterYear}
         onYearChange={setFilterYear}
-        defaultYear={CURRENT_SEASON}
+        currentSeason={CURRENT_SEASON}
         yearValues={yearValues}
         filterBreed={filterBreed}
         onBreedChange={setFilterBreed}
@@ -127,8 +135,6 @@ export default function TopDogs() {
         onSpeedFromChange={setFilterSpeedFrom}
         onResetFilters={handleResetFilters}
         onResetPanelFilters={handleResetPanelFilters}
-        activeTab={activeTab}
-        onTabChange={handleTabChange}
         dropdownRef={dropdownRef}
       />
 
@@ -137,13 +143,13 @@ export default function TopDogs() {
           <SkeletonLoader variant="card" count={6} />
         </div>
       ) : (
-        <TopDogsTabs
-          activeTab={activeTab}
+        <TopDogsColumns
+          coursingTab={coursingTab}
+          onCoursingTabChange={handleCoursingTabChange}
           filteredPlacement={filteredPlacement}
           filteredScore={filteredScore}
           filteredSpeed={filteredSpeed}
           filterYear={filterYear}
-          filterBreed={filterBreed}
         />
       )}
 

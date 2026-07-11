@@ -26,7 +26,7 @@ test.describe('Navigation', () => {
     await page.goto('/competitions')
     await competitionsSegment(page).getByRole('button', { name: 'Рейтинг' }).click()
     await expect(page).toHaveURL(/tab=ranking/)
-    await expect(page.getByRole('group', { name: 'Тип рейтинга' })).toBeVisible()
+    await expect(page.getByRole('group', { name: 'Рейтинг курсинга' })).toBeVisible()
   })
 
   test('can navigate to judges page', async ({ page }) => {

@@ -13,7 +13,7 @@ test.describe('TopDogs Ranking', () => {
     await page.goto('/top')
     await expect(page).toHaveTitle(/Coursing Stats/)
     await expectNotNotFoundPage(page)
-    await expect(page.getByRole('group', { name: 'Тип рейтинга' })).toBeVisible()
+    await expect(page.getByRole('group', { name: 'Рейтинг курсинга' })).toBeVisible()
   })
 
   test('shows dog cards when data exists', async ({ page }) => {

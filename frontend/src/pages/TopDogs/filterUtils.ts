@@ -55,6 +55,7 @@ export function filterScore<
     breed?: string
     total_starts?: number
     best_score?: number
+    best_judge_score?: number
     avg_score?: number
   }
 >(dogs: T[], params: TopDogsFilterParams): T[] {
@@ -64,8 +65,8 @@ export function filterScore<
     if (!matchesBreedFilter(dog, params.filterBreed)) return false
 
     if (params.filterScoreFrom) {
-      const scoreValue = dog.best_score
-      if (scoreValue && scoreValue < parseFloat(params.filterScoreFrom)) return false
+      const scoreValue = dog.best_judge_score
+      if (scoreValue == null || scoreValue < parseFloat(params.filterScoreFrom)) return false
     }
 
     return true

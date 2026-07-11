@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { deriveCompetingBreeds, type DogsIndexEntry } from '../lib/competingBreeds';
-import { getJudgeDetails } from '../lib/staticData';
+import { getJudges, getJudgeDetails } from '../lib/staticData';
 
 const STALE_MS = 5 * 60 * 1000;
 const STALE_LONG_MS = 60 * 60 * 1000;
@@ -79,10 +79,10 @@ export function useYears() {
   });
 }
 
-export function useJudges(breed: string, discipline: string) {
+export function useJudges(breed: string, discipline: string, year = '') {
   return useQuery({
-    queryKey: ['judges', breed, discipline],
-    queryFn: () => fetchStaticData<{ judges: any[]; count: number }>('/data/v1/indexes/judges-summary.json'),
+    queryKey: ['judges', breed, discipline, year],
+    queryFn: () => getJudges(breed, discipline, year),
     staleTime: STALE_MS,
   });
 }

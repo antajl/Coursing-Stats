@@ -66,7 +66,7 @@ export const api = {
     return withDevFallback(result, filterMockData(mockTopPlacementData, year, breed, minStarts))
   },
 
-  async getTopScore(year = '', breed = '', minStarts = 0, sortBy = 'best_score', limit: number | null = null, offset = 0): Promise<any> {
+  async getTopScore(year = '', breed = '', minStarts = 0, sortBy = 'best_judge_score', limit: number | null = null, offset = 0): Promise<any> {
     const result = await staticData.getTopScore(year, breed, minStarts, sortBy, limit, offset)
     return withDevFallback(result, filterMockData(mockTopScoreData, year, breed, minStarts))
   },

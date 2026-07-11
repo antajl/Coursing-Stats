@@ -54,17 +54,43 @@ export function sortPlacementItems(
   return copy;
 }
 
+export function compareScoreItems(
+  a: Record<string, unknown>,
+  b: Record<string, unknown>,
+  sortBy = 'best_judge_score',
+): number {
+  const primaryKey =
+    sortBy === 'avg_judge_score'
+      ? 'avg_judge_score'
+      : sortBy === 'best_score'
+        ? 'best_score'
+        : 'best_judge_score';
+  const primary = Number(b[primaryKey] ?? 0) - Number(a[primaryKey] ?? 0);
+  if (primary !== 0) return primary;
+
+  if (sortBy === 'avg_judge_score') {
+    const bj = Number(b.best_judge_score ?? 0) - Number(a.best_judge_score ?? 0);
+    if (bj !== 0) return bj;
+  } else if (sortBy === 'best_score') {
+    const bj = Number(b.best_judge_score ?? 0) - Number(a.best_judge_score ?? 0);
+    if (bj !== 0) return bj;
+    const avg = Number(b.avg_judge_score ?? 0) - Number(a.avg_judge_score ?? 0);
+    if (avg !== 0) return avg;
+    return Number(b.total_starts ?? 0) - Number(a.total_starts ?? 0);
+  }
+
+  const avg = Number(b.avg_judge_score ?? 0) - Number(a.avg_judge_score ?? 0);
+  if (avg !== 0) return avg;
+  const starts = Number(b.total_starts ?? 0) - Number(a.total_starts ?? 0);
+  if (starts !== 0) return starts;
+  return Number(b.best_score ?? 0) - Number(a.best_score ?? 0);
+}
+
 export function sortScoreItems(
   items: Record<string, unknown>[],
-  sortBy: string,
+  sortBy = 'best_judge_score',
 ): Record<string, unknown>[] {
   const copy = [...items];
-  const key =
-    sortBy === 'best_judge_score'
-      ? 'best_judge_score'
-      : sortBy === 'avg_judge_score'
-        ? 'avg_judge_score'
-        : 'best_score';
-  copy.sort((a, b) => Number(b[key] ?? 0) - Number(a[key] ?? 0));
+  copy.sort((a, b) => compareScoreItems(a, b, sortBy));
   return copy;
 }
