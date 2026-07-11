@@ -1,13 +1,20 @@
 {
   "schema": "coursing-stats/dog-v1",
-  "exported_at": "2026-07-08T00:31:32.188Z",
-  "id": 229,
+  "exported_at": "2026-07-11T10:55:51.099Z",
+  "id": 870,
   "dog_key": "дархан-darkhan--тазы",
   "name_lat": "ДАРХАН /DARKHAN",
   "name_ru": "ДАРХАН /DARKHAN",
   "breed": "ТАЗЫ",
   "sex": null,
   "owner": null,
-  "competition_ids": [],
-  "competition_files": []
+  "pedigree_url": null,
+  "competition_ids": [
+    1255,
+    1317
+  ],
+  "competition_files": [
+    "competitions/2025/04-апрель/1255-чемпионат-россии-курсинг-борзых.json",
+    "competitions/2026/05-май/1317-чемпионат-россии-курсинг-борзых.json"
+  ]
 }

@@ -1,13 +1,20 @@
 {
   "schema": "coursing-stats/dog-v1",
-  "exported_at": "2026-07-08T00:31:32.188Z",
-  "id": 818,
+  "exported_at": "2026-07-11T10:55:51.099Z",
+  "id": 5947,
   "dog_key": "дон-дю-руа-женева-don-du-rua-jeneve--ирландскии-вольфхаунд",
   "name_lat": "ДОН ДЮ РУА ЖЕНЕВА /DON DU RUA JENEVE",
   "name_ru": "ДОН ДЮ РУА ЖЕНЕВА /DON DU RUA JENEVE",
   "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
   "sex": null,
   "owner": null,
-  "competition_ids": [],
-  "competition_files": []
+  "pedigree_url": null,
+  "competition_ids": [
+    1314,
+    1317
+  ],
+  "competition_files": [
+    "competitions/2026/05-май/1314-чркф-курсинг-борзых.json",
+    "competitions/2026/05-май/1317-чемпионат-россии-курсинг-борзых.json"
+  ]
 }

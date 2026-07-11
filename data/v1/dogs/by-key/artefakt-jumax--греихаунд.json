@@ -1,1 +1,24 @@
-{"schema":"coursing-stats/dog-v1","exported_at":"2026-07-08T00:31:32.188Z","id":6121,"dog_key":"artefakt-jumax--греихаунд","name_lat":"ARTEFAKT JUMAX","name_ru":"АРТЕФАКТ ЮМАКС","breed":"ГРЕЙХАУНД","sex":null,"owner":null,"competition_ids":[1317],"competition_files":["competitions/2026/05-май/1317-чемпионат-россии-курсинг-борзых.json"],"pedigree_url":"https://greyhound.breedarchive.com/animal/view/artefakt-jumax-4a021c10-975f-497f-95fc-3bfd04ebe864"}
+{
+  "schema": "coursing-stats/dog-v1",
+  "exported_at": "2026-07-11T10:55:51.099Z",
+  "id": 393,
+  "dog_key": "artefakt-jumax--греихаунд",
+  "name_lat": "ARTEFAKT JUMAX",
+  "name_ru": "ARTEFAKT JUMAX",
+  "breed": "ГРЕЙХАУНД",
+  "sex": null,
+  "owner": null,
+  "pedigree_url": "https://greyhound.breedarchive.com/animal/view/artefakt-jumax-4a021c10-975f-497f-95fc-3bfd04ebe864",
+  "competition_ids": [
+    1270,
+    1271,
+    1285,
+    1317
+  ],
+  "competition_files": [
+    "competitions/2025/05-май/1270-чркф-бега-борзых.json",
+    "competitions/2025/06-июнь/1271-чркф-курсинг-борзых.json",
+    "competitions/2025/09-сентябрь/1285-чемпионат-россии-бега-борзых.json",
+    "competitions/2026/05-май/1317-чемпионат-россии-курсинг-борзых.json"
+  ]
+}

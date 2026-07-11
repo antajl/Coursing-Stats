@@ -1,19 +1,24 @@
 {
   "schema": "coursing-stats/dog-v1",
-  "exported_at": "2026-07-08T00:31:32.188Z",
-  "id": 8947,
+  "exported_at": "2026-07-11T10:55:51.099Z",
+  "id": 622,
   "dog_key": "salam-isfahan-farid--афганская-борзая",
   "name_lat": "SALAM ISFAHAN FARID",
   "name_ru": "САЛАМ ИСФАХАН ФАРИД",
   "breed": "АФГАНСКАЯ БОРЗАЯ",
   "sex": null,
   "owner": null,
+  "pedigree_url": null,
   "competition_ids": [
+    1217,
     1296,
-    1465
+    1436,
+    1461
   ],
   "competition_files": [
-    "competitions/2025/10-октябрь/1296-пчркф-родезиискии-риджбек-уиппет-русская-псовая-.json",
-    "competitions/2024/09-сентябрь/1465-кубок-россии-cacl-по-курсингу-борзых.json"
+    "competitions/2023/08-август/1436-чемпионат-ркф-cacl-по-бегам-борзых.json",
+    "competitions/2023/09-сентябрь/1217-кубок-россии-cacl-по-бегам-борзых-за-механически.json",
+    "competitions/2024/08-август/1461-чемпионат-ркф-cacl-по-бегам-борзых.json",
+    "competitions/2025/10-октябрь/1296-пчркф-родезиискии-риджбек-уиппет-русская-псовая-.json"
   ]
 }

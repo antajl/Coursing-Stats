@@ -1,6 +1,6 @@
 {
   "schema": "coursing-stats/dog-v1",
-  "exported_at": "2026-07-08T00:31:32.188Z",
+  "exported_at": "2026-07-11T10:55:51.099Z",
   "id": 5770,
   "dog_key": "zabava-znati--русская-псовая-борзая",
   "name_lat": "ZABAVA ZNATI",
@@ -8,15 +8,18 @@
   "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
   "sex": null,
   "owner": null,
+  "pedigree_url": null,
   "competition_ids": [
     1255,
     1263,
+    1273,
     1307,
     1314
   ],
   "competition_files": [
     "competitions/2025/04-апрель/1255-чемпионат-россии-курсинг-борзых.json",
     "competitions/2025/05-май/1263-чркф-курсинг-борзых.json",
+    "competitions/2025/06-июнь/1273-чркф-курсинг-борзых.json",
     "competitions/2026/04-апрель/1307-чркф-курсинг-борзых.json",
     "competitions/2026/05-май/1314-чркф-курсинг-борзых.json"
   ]

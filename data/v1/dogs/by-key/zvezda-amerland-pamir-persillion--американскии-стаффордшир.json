@@ -1,17 +1,22 @@
 {
   "schema": "coursing-stats/dog-v1",
-  "exported_at": "2026-07-08T00:31:32.188Z",
-  "id": 505,
+  "exported_at": "2026-07-11T10:55:51.099Z",
+  "id": 7384,
   "dog_key": "zvezda-amerland-pamir-persillion--американскии-стаффордшир",
   "name_lat": "ZVEZDA AMERLAND PAMIR PERSILLION",
   "name_ru": "ЗВЕЗДА АМЕРЛАНД ПАМИР ПЕРСИЛЬОН",
   "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
   "sex": null,
   "owner": null,
+  "pedigree_url": null,
   "competition_ids": [
+    1256,
+    1278,
     1308
   ],
   "competition_files": [
+    "competitions/2025/04-апрель/1256-чркф-бега-за-механическои-приманкои.json",
+    "competitions/2025/08-август/1278-пчркф-поденко-ибиценко-родезиискии-риджбек-уиппе.json",
     "competitions/2026/04-апрель/1308-чркф-бзмп.json"
   ]
 }

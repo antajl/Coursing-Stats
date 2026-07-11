@@ -1,24 +1,21 @@
 {
   "schema": "coursing-stats/dog-v1",
-  "exported_at": "2026-07-08T00:31:32.188Z",
+  "exported_at": "2026-07-11T10:55:51.099Z",
   "id": 7167,
-  "dog_key": "itury-puzzle-izyum-v-chocolade--басенджи",
-  "name_lat": "ITURY PUZZLE IZYUM V CHOCOLADE",
-  "name_ru": "ИТУРИ ПАЗЗЛ ИЗЮМ В ШОКОЛАДЕ",
+  "dog_key": "итури-паззл-изюм-в-шоколаде-itury-puzzle--басенджи",
+  "name_lat": "ИТУРИ ПАЗЗЛ ИЗЮМ В ШОКОЛАДЕ /ITURY PUZZLE IZYUM V CHOCOLADE",
+  "name_ru": "ИТУРИ ПАЗЗЛ ИЗЮМ В ШОКОЛАДЕ /ITURY PUZZLE IZYUM V CHOCOLADE",
   "breed": "БАСЕНДЖИ",
   "sex": null,
   "owner": null,
+  "pedigree_url": null,
   "competition_ids": [
     1255,
     1263,
     1265,
     1275,
     1282,
-    1288,
-    1426,
-    1434,
-    1437,
-    1457
+    1288
   ],
   "competition_files": [
     "competitions/2025/04-апрель/1255-чемпионат-россии-курсинг-борзых.json",
@@ -26,10 +23,6 @@
     "competitions/2025/05-май/1265-чркф-курсинг-борзых.json",
     "competitions/2025/06-июнь/1275-пчркф-басенджи-родезиискии-риджбек-русская-псова.json",
     "competitions/2025/08-август/1282-чркф-курсинг-борзых.json",
-    "competitions/2025/09-сентябрь/1288-чркф-курсинг-борзых.json",
-    "competitions/2023/04-апрель/1426-чемпионат-ркф-cacl-по-курсингу.json",
-    "competitions/2023/07-июль/1434-чемпионаты-ркф-br-по-курсингу-в-породах-салюки-р.json",
-    "competitions/2023/08-август/1437-чемпионат-ркф-cacl-по-курсингу.json",
-    "competitions/2024/06-июнь/1457-чемпионат-ркф-cacl-по-курсингу-борзых.json"
+    "competitions/2025/09-сентябрь/1288-чркф-курсинг-борзых.json"
   ]
 }

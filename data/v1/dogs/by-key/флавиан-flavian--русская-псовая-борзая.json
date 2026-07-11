@@ -1,13 +1,18 @@
 {
   "schema": "coursing-stats/dog-v1",
-  "exported_at": "2026-07-08T00:31:32.188Z",
-  "id": 821,
+  "exported_at": "2026-07-11T10:55:51.099Z",
+  "id": 5966,
   "dog_key": "флавиан-flavian--русская-псовая-борзая",
   "name_lat": "ФЛАВИАН /FLAVIAN",
   "name_ru": "ФЛАВИАН /FLAVIAN",
   "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
   "sex": null,
   "owner": null,
-  "competition_ids": [],
-  "competition_files": []
+  "pedigree_url": "https://borzoi.breedarchive.com/animal/view/flavian-0e0d6f8c-8ee5-49cb-96c3-87bdc2bcac42",
+  "competition_ids": [
+    1314
+  ],
+  "competition_files": [
+    "competitions/2026/05-май/1314-чркф-курсинг-борзых.json"
+  ]
 }

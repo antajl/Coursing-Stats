@@ -1,13 +1,26 @@
 {
   "schema": "coursing-stats/dog-v1",
-  "exported_at": "2026-07-08T00:31:32.188Z",
-  "id": 161,
+  "exported_at": "2026-07-11T10:55:51.099Z",
+  "id": 7194,
   "dog_key": "аготи-адаманте-дел-еспацио-agoti-adamant--малая-итальянская-борзая",
   "name_lat": "АГОТИ АДАМАНТЕ ДЕЛ ЕСПАЦИО /AGOTI ADAMANTE DEL ESPACIO",
   "name_ru": "АГОТИ АДАМАНТЕ ДЕЛ ЕСПАЦИО /AGOTI ADAMANTE DEL ESPACIO",
   "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
   "sex": null,
   "owner": null,
-  "competition_ids": [],
-  "competition_files": []
+  "pedigree_url": "https://italiangreyhound.breedarchive.com/animal/view/agoti-adamante-del-espacio-aa43a7ff-11b7-4fb8-acd1-1a9b768852e3",
+  "competition_ids": [
+    1217,
+    1255,
+    1264,
+    1432,
+    1436
+  ],
+  "competition_files": [
+    "competitions/2023/06-июнь/1432-чемпионат-ркф-cacl-по-бегам-борзых.json",
+    "competitions/2023/08-август/1436-чемпионат-ркф-cacl-по-бегам-борзых.json",
+    "competitions/2023/09-сентябрь/1217-кубок-россии-cacl-по-бегам-борзых-за-механически.json",
+    "competitions/2025/04-апрель/1255-чемпионат-россии-курсинг-борзых.json",
+    "competitions/2025/05-май/1264-пчркф-чирнеко-дель-этна-малая-итальянская-борзая.json"
+  ]
 }

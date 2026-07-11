@@ -1,13 +1,34 @@
 {
   "schema": "coursing-stats/dog-v1",
-  "exported_at": "2026-07-08T00:31:32.188Z",
-  "id": 354,
+  "exported_at": "2026-07-11T10:55:51.099Z",
+  "id": 5872,
   "dog_key": "богемиан-рапсоди-bohemian-rhapsody--уиппет",
   "name_lat": "БОГЕМИАН РАПСОДИ /BOHEMIAN RHAPSODY",
   "name_ru": "БОГЕМИАН РАПСОДИ /BOHEMIAN RHAPSODY",
   "breed": "УИППЕТ",
   "sex": null,
   "owner": null,
-  "competition_ids": [],
-  "competition_files": []
+  "pedigree_url": null,
+  "competition_ids": [
+    1264,
+    1265,
+    1278,
+    1280,
+    1288,
+    1294,
+    1296,
+    1310,
+    1317
+  ],
+  "competition_files": [
+    "competitions/2025/05-май/1264-пчркф-чирнеко-дель-этна-малая-итальянская-борзая.json",
+    "competitions/2025/05-май/1265-чркф-курсинг-борзых.json",
+    "competitions/2025/08-август/1278-пчркф-поденко-ибиценко-родезиискии-риджбек-уиппе.json",
+    "competitions/2025/08-август/1280-чркф-курсинг-борзых.json",
+    "competitions/2025/09-сентябрь/1288-чркф-курсинг-борзых.json",
+    "competitions/2025/10-октябрь/1294-чркф-курсинг-борзых.json",
+    "competitions/2025/10-октябрь/1296-пчркф-родезиискии-риджбек-уиппет-русская-псовая-.json",
+    "competitions/2026/04-апрель/1310-чркф-курсинг-борзых.json",
+    "competitions/2026/05-май/1317-чемпионат-россии-курсинг-борзых.json"
+  ]
 }

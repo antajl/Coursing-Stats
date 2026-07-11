@@ -1,13 +1,36 @@
 {
   "schema": "coursing-stats/dog-v1",
-  "exported_at": "2026-07-08T00:31:32.188Z",
-  "id": 467,
+  "exported_at": "2026-07-11T10:55:51.099Z",
+  "id": 42,
   "dog_key": "хаус-зе-реинбоу-узочи-зикимо-house-the-r--басенджи",
   "name_lat": "ХАУС ЗЕ РЕЙНБОУ УЗОЧИ ЗИКИМО /HOUSE THE RAINBOW UZOCHI ZIKIMO",
   "name_ru": "ХАУС ЗЕ РЕЙНБОУ УЗОЧИ ЗИКИМО /HOUSE THE RAINBOW UZOCHI ZIKIMO",
   "breed": "БАСЕНДЖИ",
   "sex": null,
   "owner": null,
-  "competition_ids": [],
-  "competition_files": []
+  "pedigree_url": null,
+  "competition_ids": [
+    1217,
+    1251,
+    1255,
+    1273,
+    1280,
+    1304,
+    1315,
+    1432,
+    1455,
+    1456
+  ],
+  "competition_files": [
+    "competitions/2023/06-июнь/1432-чемпионат-ркф-cacl-по-бегам-борзых.json",
+    "competitions/2023/09-сентябрь/1217-кубок-россии-cacl-по-бегам-борзых-за-механически.json",
+    "competitions/2024/06-июнь/1455-монопородные-чемпионаты-ркф-по-бегам-борзых-в-по.json",
+    "competitions/2024/06-июнь/1456-чемпионат-ркф-cacl-по-бегам-борзых-за-механическ.json",
+    "competitions/2025/04-апрель/1251-чркф-курсинг-борзых.json",
+    "competitions/2025/04-апрель/1255-чемпионат-россии-курсинг-борзых.json",
+    "competitions/2025/06-июнь/1273-чркф-курсинг-борзых.json",
+    "competitions/2025/08-август/1280-чркф-курсинг-борзых.json",
+    "competitions/2026/04-апрель/1304-чркф-курсинг-борзых.json",
+    "competitions/2026/05-май/1315-пчркф-курсинг-борзых-родезиискии-риджбек-чирнеко.json"
+  ]
 }

@@ -1,19 +1,22 @@
 {
   "schema": "coursing-stats/dog-v1",
-  "exported_at": "2026-07-08T00:31:32.188Z",
+  "exported_at": "2026-07-11T10:55:51.099Z",
   "id": 9371,
-  "dog_key": "борзые-сенавиан-гюрза--русская-псовая-борзая",
-  "name_lat": "БОРЗЫЕ СЕНАВИАН ГЮРЗА",
+  "dog_key": "borzie-senavian-gyurza--русская-псовая-борзая",
+  "name_lat": "BORZIE SENAVIAN GYURZA",
   "name_ru": "БОРЗЫЕ СЕНАВИАН ГЮРЗА",
   "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
   "sex": null,
   "owner": null,
+  "pedigree_url": null,
   "competition_ids": [
+    1272,
     1436,
     1461
   ],
   "competition_files": [
     "competitions/2023/08-август/1436-чемпионат-ркф-cacl-по-бегам-борзых.json",
-    "competitions/2024/08-август/1461-чемпионат-ркф-cacl-по-бегам-борзых.json"
+    "competitions/2024/08-август/1461-чемпионат-ркф-cacl-по-бегам-борзых.json",
+    "competitions/2025/06-июнь/1272-чркф-бега-борзых.json"
   ]
 }

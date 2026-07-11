@@ -1,13 +1,36 @@
 {
   "schema": "coursing-stats/dog-v1",
-  "exported_at": "2026-07-08T00:31:32.188Z",
-  "id": 154,
+  "exported_at": "2026-07-11T10:55:51.099Z",
+  "id": 372,
   "dog_key": "ее-величество-ee-velitchestvo--басенджи",
   "name_lat": "ЕЕ ВЕЛИЧЕСТВО /EE VELITCHESTVO",
   "name_ru": "ЕЕ ВЕЛИЧЕСТВО /EE VELITCHESTVO",
   "breed": "БАСЕНДЖИ",
   "sex": null,
   "owner": null,
-  "competition_ids": [],
-  "competition_files": []
+  "pedigree_url": null,
+  "competition_ids": [
+    1255,
+    1268,
+    1275,
+    1288,
+    1294,
+    1296,
+    1307,
+    1310,
+    1315,
+    1317
+  ],
+  "competition_files": [
+    "competitions/2025/04-апрель/1255-чемпионат-россии-курсинг-борзых.json",
+    "competitions/2025/05-май/1268-чркф-курсинг-борзых.json",
+    "competitions/2025/06-июнь/1275-пчркф-басенджи-родезиискии-риджбек-русская-псова.json",
+    "competitions/2025/09-сентябрь/1288-чркф-курсинг-борзых.json",
+    "competitions/2025/10-октябрь/1294-чркф-курсинг-борзых.json",
+    "competitions/2025/10-октябрь/1296-пчркф-родезиискии-риджбек-уиппет-русская-псовая-.json",
+    "competitions/2026/04-апрель/1307-чркф-курсинг-борзых.json",
+    "competitions/2026/04-апрель/1310-чркф-курсинг-борзых.json",
+    "competitions/2026/05-май/1315-пчркф-курсинг-борзых-родезиискии-риджбек-чирнеко.json",
+    "competitions/2026/05-май/1317-чемпионат-россии-курсинг-борзых.json"
+  ]
 }

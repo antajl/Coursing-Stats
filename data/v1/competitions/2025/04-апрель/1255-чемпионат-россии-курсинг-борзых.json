@@ -33,7 +33,7 @@
     {
       "id": 8036,
       "event_id": 1255,
-      "dog_id": 5683,
+      "dog_id": 42,
       "breed_class": "Басенджи - Стандартный - Кобели",
       "catalog_no": null,
       "placement": null,
@@ -90,12 +90,12 @@
       "raw_text": " <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>14</i></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Басенджи</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ХАУС ЗЭ РЭЙНБОУ УЗОЧИ ЗИКИМО /<br>HOUSE THE RAINBOW UZOCHI ZIKIMO</font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>163</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>88</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>176</b></font></td> <td rowspan=\"2\" bgcolor=\"#f0ffff\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>207</i></font></td> <td colspan=\"7\" rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Снятие (Агрессия)</font></td> <td rowspan=\"2\"><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b>176</b></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
       "judges": "",
       "status_reason": "Агрессия",
-      "dog_key": "house-the-rainbow-uzochi-zikimo--басенджи",
+      "dog_key": "хаус-зе-реинбоу-узочи-зикимо-house-the-r--басенджи",
       "dog": {
-        "id": 5683,
-        "dog_key": "хаус-зэ-рэинбоу-узочи-зикимо--басенджи",
-        "name_lat": "HOUSE THE RAINBOW UZOCHI ZIKIMO",
-        "name_ru": "ХАУС ЗЭ РЭЙНБОУ УЗОЧИ ЗИКИМО",
+        "id": 42,
+        "dog_key": "хаус-зе-реинбоу-узочи-зикимо-house-the-r--басенджи",
+        "name_lat": "ХАУС ЗЕ РЕЙНБОУ УЗОЧИ ЗИКИМО /HOUSE THE RAINBOW UZOCHI ZIKIMO",
+        "name_ru": "ХАУС ЗЕ РЕЙНБОУ УЗОЧИ ЗИКИМО /HOUSE THE RAINBOW UZOCHI ZIKIMO",
         "breed": "БАСЕНДЖИ",
         "sex": null,
         "owner": null
@@ -861,7 +861,7 @@
     {
       "id": 8228,
       "event_id": 1255,
-      "dog_id": 291,
+      "dog_id": 7480,
       "breed_class": "Неприбывшие участники",
       "catalog_no": null,
       "placement": null,
@@ -876,8 +876,8 @@
       "status_reason": "",
       "dog_key": "miliy-zver-marcas--ирландскии-вольфхаунд",
       "dog": {
-        "id": 291,
-        "dog_key": "милыи-зверь-маркас-miliy-zver-marcas--ирландскии-вольфхаунд",
+        "id": 7480,
+        "dog_key": "miliy-zver-marcas--ирландскии-вольфхаунд",
         "name_lat": "MILIY ZVER MARCAS",
         "name_ru": "МИЛЫЙ ЗВЕРЬ МАРКАС",
         "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
@@ -969,7 +969,7 @@
     {
       "id": 8232,
       "event_id": 1255,
-      "dog_id": 295,
+      "dog_id": 5784,
       "breed_class": "Неприбывшие участники",
       "catalog_no": null,
       "placement": null,
@@ -984,8 +984,8 @@
       "status_reason": "",
       "dog_key": "al-nafiseh-hiba--салюки",
       "dog": {
-        "id": 295,
-        "dog_key": "аль-нафисэх-хиба-al-nafiseh-hiba--салюки",
+        "id": 5784,
+        "dog_key": "al-nafiseh-hiba--салюки",
         "name_lat": "AL NAFISEH HIBA",
         "name_ru": "АЛЬ НАФИСЭХ ХИБА",
         "breed": "САЛЮКИ",
@@ -1023,7 +1023,7 @@
     {
       "id": 8234,
       "event_id": 1255,
-      "dog_id": 297,
+      "dog_id": 6200,
       "breed_class": "Неприбывшие участники",
       "catalog_no": null,
       "placement": null,
@@ -1038,10 +1038,10 @@
       "status_reason": "",
       "dog_key": "shawati-prada--салюки",
       "dog": {
-        "id": 297,
-        "dog_key": "шавати-прада-shawati-prada--салюки",
+        "id": 6200,
+        "dog_key": "shawati-prada--салюки",
         "name_lat": "SHAWATI PRADA",
-        "name_ru": "ШАВАТИ ПРАДА",
+        "name_ru": "SHAWATI PRADA",
         "breed": "САЛЮКИ",
         "sex": null,
         "owner": null
@@ -1104,7 +1104,7 @@
     {
       "id": 8237,
       "event_id": 1255,
-      "dog_id": 90,
+      "dog_id": 5874,
       "breed_class": "Неприбывшие участники",
       "catalog_no": null,
       "placement": null,
@@ -1119,10 +1119,10 @@
       "status_reason": "",
       "dog_key": "witch-of-sherwood--уиппет",
       "dog": {
-        "id": 90,
-        "dog_key": "уитч-фо-шервуд-witch-of-sherwood--уиппет",
+        "id": 5874,
+        "dog_key": "witch-of-sherwood--уиппет",
         "name_lat": "WITCH OF SHERWOOD",
-        "name_ru": "УИТЧ ФО ШЕРВУД",
+        "name_ru": "WITCH OF SHERWOOD",
         "breed": "УИППЕТ",
         "sex": null,
         "owner": null
@@ -1131,7 +1131,7 @@
     {
       "id": 8238,
       "event_id": 1255,
-      "dog_id": 300,
+      "dog_id": 5650,
       "breed_class": "Неприбывшие участники",
       "catalog_no": null,
       "placement": null,
@@ -1146,8 +1146,8 @@
       "status_reason": "",
       "dog_key": "brave-heart-simba--уиппет",
       "dog": {
-        "id": 300,
-        "dog_key": "бреив-харт-симба-brave-heart-simba--уиппет",
+        "id": 5650,
+        "dog_key": "brave-heart-simba--уиппет",
         "name_lat": "BRAVE HEART SIMBA",
         "name_ru": "БРЕЙВ ХАРТ СИМБА",
         "breed": "УИППЕТ",
@@ -2662,7 +2662,7 @@
     {
       "id": 8104,
       "event_id": 1255,
-      "dog_id": 7246,
+      "dog_id": 404,
       "breed_class": "Русская псовая борзая - Юниоры - Микс",
       "catalog_no": null,
       "placement": 1,
@@ -2742,12 +2742,12 @@
       "raw_text": " <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>89</i></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Юниоры</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">МАГИЯ /<br>MAGIYA</font></td> <td rowspan=\"2\" bgcolor=\"#f0ffff\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>32</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>84</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>166</b></font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>60</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">19</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>89</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>181</b></font></td> <td rowspan=\"2\"><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b>347</b></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
       "judges": "",
       "status_reason": "",
-      "dog_key": "magiya--русская-псовая-борзая",
+      "dog_key": "магия-magiya--русская-псовая-борзая",
       "dog": {
-        "id": 7246,
-        "dog_key": "магия--русская-псовая-борзая",
-        "name_lat": "MAGIYA",
-        "name_ru": "МАГИЯ",
+        "id": 404,
+        "dog_key": "магия-magiya--русская-псовая-борзая",
+        "name_lat": "МАГИЯ /MAGIYA",
+        "name_ru": "МАГИЯ /MAGIYA",
         "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
         "sex": null,
         "owner": null
@@ -3038,7 +3038,7 @@
     {
       "id": 8122,
       "event_id": 1255,
-      "dog_id": 7264,
+      "dog_id": 226,
       "breed_class": "Слюги - Стандартный - Микс",
       "catalog_no": null,
       "placement": 1,
@@ -3120,8 +3120,8 @@
       "status_reason": "",
       "dog_key": "borzomir-galija-basma--слюги",
       "dog": {
-        "id": 7264,
-        "dog_key": "борзомир-галия-басма--слюги",
+        "id": 226,
+        "dog_key": "borzomir-galija-basma--слюги",
         "name_lat": "BORZOMIR GALIJA BASMA",
         "name_ru": "БОРЗОМИР ГАЛИЯ БАСМА",
         "breed": "СЛЮГИ",
@@ -5388,7 +5388,7 @@
     {
       "id": 8090,
       "event_id": 1255,
-      "dog_id": 7232,
+      "dog_id": 412,
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": null,
       "placement": 2,
@@ -5468,12 +5468,12 @@
       "raw_text": " <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>83</i></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ОТРАДА ДУШИ /<br>OTRADA DUSHI</font></td> <td rowspan=\"2\" bgcolor=\"#f0ffff\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>28</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>86</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>169</b></font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>58</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>85</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>178</b></font></td> <td rowspan=\"2\"><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b>347</b></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CACL</font></td> ",
       "judges": "",
       "status_reason": "",
-      "dog_key": "otrada-dushi--русская-псовая-борзая",
+      "dog_key": "отрада-души-otrada-dushi--русская-псовая-борзая",
       "dog": {
-        "id": 7232,
-        "dog_key": "отрада-души--русская-псовая-борзая",
-        "name_lat": "OTRADA DUSHI",
-        "name_ru": "ОТРАДА ДУШИ",
+        "id": 412,
+        "dog_key": "отрада-души-otrada-dushi--русская-псовая-борзая",
+        "name_lat": "ОТРАДА ДУШИ /OTRADA DUSHI",
+        "name_ru": "ОТРАДА ДУШИ /OTRADA DUSHI",
         "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
         "sex": null,
         "owner": null
@@ -5576,7 +5576,7 @@
     {
       "id": 8110,
       "event_id": 1255,
-      "dog_id": 7252,
+      "dog_id": 216,
       "breed_class": "Салюки - Стандартный - Кобели",
       "catalog_no": null,
       "placement": 2,
@@ -5658,10 +5658,10 @@
       "status_reason": "",
       "dog_key": "salgreys-universe--салюки",
       "dog": {
-        "id": 7252,
-        "dog_key": "салгреис-универс--салюки",
+        "id": 216,
+        "dog_key": "salgreys-universe--салюки",
         "name_lat": "SALGREYS UNIVERSE",
-        "name_ru": "САЛГРЕЙС УНИВЕРС",
+        "name_ru": "SALGREYS UNIVERSE",
         "breed": "САЛЮКИ",
         "sex": null,
         "owner": null
@@ -8114,7 +8114,7 @@
     {
       "id": 8127,
       "event_id": 1255,
-      "dog_id": 7269,
+      "dog_id": 231,
       "breed_class": "Тазы - Стандартный - Микс",
       "catalog_no": null,
       "placement": 3,
@@ -8196,8 +8196,8 @@
       "status_reason": "",
       "dog_key": "sehra-el-men-lelap--тазы",
       "dog": {
-        "id": 7269,
-        "dog_key": "сэхра-эль-мен-лелап--тазы",
+        "id": 231,
+        "dog_key": "sehra-el-men-lelap--тазы",
         "name_lat": "SEHRA EL MEN LELAP",
         "name_ru": "СЭХРА ЭЛЬ МЕН ЛЕЛАП",
         "breed": "ТАЗЫ",
@@ -10370,7 +10370,7 @@
     {
       "id": 8188,
       "event_id": 1255,
-      "dog_id": 264,
+      "dog_id": 5810,
       "breed_class": "Уиппет - Стандартный - Суки",
       "catalog_no": null,
       "placement": 4,
@@ -10450,12 +10450,12 @@
       "raw_text": " <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">4</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>174</i></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CHUDESNAYA CZELITELNICZA IZ POLETA MECHTI</font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>84</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">19</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>91</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>180</b></font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>118</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>79</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>165</b></font></td> <td rowspan=\"2\"><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b>345</b></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
       "judges": "",
       "status_reason": "",
-      "dog_key": "chudesnaya-czelitelnicza-iz-poleta-mecht--уиппет",
+      "dog_key": "чудесная-целительница-из-полета-мечты-ch--уиппет",
       "dog": {
-        "id": 264,
-        "dog_key": "chudesnaya-czelitelnicza-iz-poleta-mecht--уиппет",
-        "name_lat": "CHUDESNAYA CZELITELNICZA IZ POLETA MECHTI",
-        "name_ru": "CHUDESNAYA CZELITELNICZA IZ POLETA MECHTI",
+        "id": 5810,
+        "dog_key": "чудесная-целительница-из-полета-мечты-ch--уиппет",
+        "name_lat": "ЧУДЕСНАЯ ЦЕЛИТЕЛЬНИЦА ИЗ ПОЛЕТА МЕЧТЫ /CHUDESNAYA CZELITELNICZA IZ POLETA MECHTI",
+        "name_ru": "ЧУДЕСНАЯ ЦЕЛИТЕЛЬНИЦА ИЗ ПОЛЕТА МЕЧТЫ /CHUDESNAYA CZELITELNICZA IZ POLETA MECHTI",
         "breed": "УИППЕТ",
         "sex": null,
         "owner": null
@@ -11122,7 +11122,7 @@
     {
       "id": 8085,
       "event_id": 1255,
-      "dog_id": 7227,
+      "dog_id": 409,
       "breed_class": "Русская псовая борзая - Стандартный - Кобели",
       "catalog_no": null,
       "placement": 5,
@@ -11202,12 +11202,12 @@
       "raw_text": " <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">5</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>71</i></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ОГОНЬ /<br>OGON'</font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>19</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>71</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>150</b></font></td> <td rowspan=\"2\" bgcolor=\"#f0ffff\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>50</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>82</b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>169</b></font></td> <td rowspan=\"2\"><font style=\"font-size:12pt\" face=\"Arial\" color=\"#000000\"><b>319</b></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
       "judges": "",
       "status_reason": "",
-      "dog_key": "ogon--русская-псовая-борзая",
+      "dog_key": "огонь-ogon--русская-псовая-борзая",
       "dog": {
-        "id": 7227,
-        "dog_key": "огонь--русская-псовая-борзая",
-        "name_lat": "OGON",
-        "name_ru": "ОГОНЬ",
+        "id": 409,
+        "dog_key": "огонь-ogon--русская-псовая-борзая",
+        "name_lat": "ОГОНЬ /OGON",
+        "name_ru": "ОГОНЬ /OGON",
         "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
         "sex": null,
         "owner": null
@@ -11686,7 +11686,7 @@
     {
       "id": 8154,
       "event_id": 1255,
-      "dog_id": 7296,
+      "dog_id": 248,
       "breed_class": "Уиппет - Стандартный-спринтеры - Суки",
       "catalog_no": null,
       "placement": 5,
@@ -11768,8 +11768,8 @@
       "status_reason": "",
       "dog_key": "luxury-whipp-omega--уиппет",
       "dog": {
-        "id": 7296,
-        "dog_key": "лакшери-випп-омега--уиппет",
+        "id": 248,
+        "dog_key": "luxury-whipp-omega--уиппет",
         "name_lat": "LUXURY WHIPP OMEGA",
         "name_ru": "ЛАКШЕРИ ВИПП ОМЕГА",
         "breed": "УИППЕТ",
@@ -12720,7 +12720,7 @@
     {
       "id": 8130,
       "event_id": 1255,
-      "dog_id": 7272,
+      "dog_id": 234,
       "breed_class": "Тазы - Стандартный - Микс",
       "catalog_no": null,
       "placement": 6,
@@ -12802,8 +12802,8 @@
       "status_reason": "",
       "dog_key": "borzomir-duna--тазы",
       "dog": {
-        "id": 7272,
-        "dog_key": "борзомир-дюна--тазы",
+        "id": 234,
+        "dog_key": "borzomir-duna--тазы",
         "name_lat": "BORZOMIR DUNA",
         "name_ru": "БОРЗОМИР ДЮНА",
         "breed": "ТАЗЫ",
@@ -13002,7 +13002,7 @@
     {
       "id": 8166,
       "event_id": 1255,
-      "dog_id": 7308,
+      "dog_id": 255,
       "breed_class": "Уиппет - Стандартный - Кобели",
       "catalog_no": null,
       "placement": 6,
@@ -13084,8 +13084,8 @@
       "status_reason": "",
       "dog_key": "eagle-black--уиппет",
       "dog": {
-        "id": 7308,
-        "dog_key": "еагле-блацк--уиппет",
+        "id": 255,
+        "dog_key": "eagle-black--уиппет",
         "name_lat": "EAGLE BLACK",
         "name_ru": "ЕАГЛЕ БЛАЦК",
         "breed": "УИППЕТ",
@@ -13378,7 +13378,7 @@
     {
       "id": 8043,
       "event_id": 1255,
-      "dog_id": 7049,
+      "dog_id": 47,
       "breed_class": "Басенджи - Стандартный - Суки",
       "catalog_no": null,
       "placement": 7,
@@ -13460,8 +13460,8 @@
       "status_reason": "",
       "dog_key": "zendeya-leya-von-grizzly-style--басенджи",
       "dog": {
-        "id": 7049,
-        "dog_key": "зендея-лея-фон-гриззли-стаил--басенджи",
+        "id": 47,
+        "dog_key": "zendeya-leya-von-grizzly-style--басенджи",
         "name_lat": "ZENDEYA LEYA VON GRIZZLY STYLE",
         "name_ru": "ЗЕНДЕЯ ЛЕЯ ФОН ГРИЗЗЛИ СТАЙЛ",
         "breed": "БАСЕНДЖИ",
@@ -13942,7 +13942,7 @@
     {
       "id": 8156,
       "event_id": 1255,
-      "dog_id": 7298,
+      "dog_id": 249,
       "breed_class": "Уиппет - Стандартный-спринтеры - Суки",
       "catalog_no": null,
       "placement": 7,
@@ -14024,8 +14024,8 @@
       "status_reason": "",
       "dog_key": "luxury-whipp-new-belle--уиппет",
       "dog": {
-        "id": 7298,
-        "dog_key": "лакшери-випп-нью-белле--уиппет",
+        "id": 249,
+        "dog_key": "luxury-whipp-new-belle--уиппет",
         "name_lat": "LUXURY WHIPP NEW BELLE",
         "name_ru": "ЛАКШЕРИ ВИПП НЬЮ БЕЛЛЕ",
         "breed": "УИППЕТ",
@@ -16950,7 +16950,7 @@
     {
       "id": 8144,
       "event_id": 1255,
-      "dog_id": 7099,
+      "dog_id": 95,
       "breed_class": "Уиппет - Стандартный-спринтеры - Кобели",
       "catalog_no": null,
       "placement": 13,
@@ -17032,8 +17032,8 @@
       "status_reason": "",
       "dog_key": "stangers-land-zador--уиппет",
       "dog": {
-        "id": 7099,
-        "dog_key": "стангерс-ланд-задор--уиппет",
+        "id": 95,
+        "dog_key": "stangers-land-zador--уиппет",
         "name_lat": "STANGERS LAND ZADOR",
         "name_ru": "СТАНГЕРС ЛАНД ЗАДОР",
         "breed": "УИППЕТ",
@@ -17984,7 +17984,7 @@
     {
       "id": 8200,
       "event_id": 1255,
-      "dog_id": 6228,
+      "dog_id": 269,
       "breed_class": "Уиппет - Стандартный - Суки",
       "catalog_no": null,
       "placement": 16,
@@ -18066,8 +18066,8 @@
       "status_reason": "",
       "dog_key": "stangers-land-daring-greatly--уиппет",
       "dog": {
-        "id": 6228,
-        "dog_key": "стангерс-ланд-даринг-греитли--уиппет",
+        "id": 269,
+        "dog_key": "stangers-land-daring-greatly--уиппет",
         "name_lat": "STANGERS LAND DARING GREATLY",
         "name_ru": "СТАНГЕРС ЛАНД ДАРИНГ ГРЕЙТЛИ",
         "breed": "УИППЕТ",
@@ -18172,7 +18172,7 @@
     {
       "id": 8177,
       "event_id": 1255,
-      "dog_id": 5864,
+      "dog_id": 122,
       "breed_class": "Уиппет - Стандартный - Кобели",
       "catalog_no": null,
       "placement": 17,
@@ -18254,8 +18254,8 @@
       "status_reason": "",
       "dog_key": "stangers-land-versailles-charman--уиппет",
       "dog": {
-        "id": 5864,
-        "dog_key": "стангерс-ланд-версаль-шарман--уиппет",
+        "id": 122,
+        "dog_key": "stangers-land-versailles-charman--уиппет",
         "name_lat": "STANGERS LAND VERSAILLES CHARMAN",
         "name_ru": "СТАНГЕРС ЛАНД ВЕРСАЛЬ ШАРМАН",
         "breed": "УИППЕТ",

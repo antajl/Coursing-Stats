@@ -119,23 +119,23 @@ npm run build-all-data
 
 Флаги: `--dry-run`, `--dog-id N`, `--force`, `--limit N`. Задержка между запросами ~180 ms.
 
-### Сборка `dog-profiles`
+### Сборка `dog-profiles` и рейтинга
 
 ```
-dogs/by-id/{id}.json  (pedigree_url, name_lat, …)
+dogs/by-id/{id}.json  (все ~2034 id)
         │
-        ├─ build-data-snapshot → pc-db.sqlite (dogs: UNIQUE(name_lat, breed) — ~1766 строк)
+        ├─ build-data-snapshot → in-memory sqlite (без UNIQUE(name_lat, breed) — все id сохраняются)
         │
-        └─ build-derived-indexes → buildDogProfiles()
-              • loadDogMetadataFromById() — все ~2034 id
-              • stats из results по dog_id
-              • pedigree_url из by-id (приоритет над sqlite)
-              • удаление устаревших dog-profiles/*.json
+        └─ build-derived-indexes
+              • buildDogProfiles() — metadata из by-id, stats из results
+              • top-placement-* / top-score-* — JOIN dogs.id = results.dog_id
 ```
 
-**Почему так:** дубли id с одной кличкой+породой (разные `competition_ids`, один `dog_key`) при `INSERT OR REPLACE` в sqlite оставляют одну строку. Профиль `/dog/5782` должен показывать ссылку из `by-id/5782.json`, даже если в sqlite «выиграл» id 596.
+**Дубли id:** одна собака может иметь несколько `dogs/by-id/{id}.json` с пересекающимися частями клички (RU / LAT). Если **порода совпадает** и **одна из частей** имени совпадает — скорее всего **одна собака** (`backend/lib/dog-name-parts.ts`, `dogNamesLikelySame`). Склейка дублей в `data/v1/` — отдельная задача; рейтинг не должен терять id из‑за sqlite.
 
-**Симптом бага (исправлен 2026-07-11):** `by-id/5782.json` содержит `pedigree_url`, а `indexes/dog-profiles/5782.json` — `null` (stale index или данные только из sqlite).
+**Пример:** id **5782** (4 старта, 3 золота) и **596** (та же кличка) — одна собака; результаты на **5782**, профиль `/dog/5782`.
+
+**Профиль:** `pedigree_url` и поля из `by-id/{id}.json` (приоритет над sqlite).
 
 ### UI
 

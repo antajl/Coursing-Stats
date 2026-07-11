@@ -1,6 +1,6 @@
 {
   "schema": "coursing-stats/dog-v1",
-  "exported_at": "2026-07-08T00:31:32.188Z",
+  "exported_at": "2026-07-11T10:55:51.099Z",
   "id": 451,
   "dog_key": "agata-skazka--русская-псовая-борзая",
   "name_lat": "AGATA SKAZKA",
@@ -8,11 +8,16 @@
   "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
   "sex": null,
   "owner": null,
+  "pedigree_url": null,
   "competition_ids": [
+    1270,
+    1271,
     1272,
     1285
   ],
   "competition_files": [
+    "competitions/2025/05-май/1270-чркф-бега-борзых.json",
+    "competitions/2025/06-июнь/1271-чркф-курсинг-борзых.json",
     "competitions/2025/06-июнь/1272-чркф-бега-борзых.json",
     "competitions/2025/09-сентябрь/1285-чемпионат-россии-бега-борзых.json"
   ]

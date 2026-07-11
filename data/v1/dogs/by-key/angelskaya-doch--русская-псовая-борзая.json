@@ -1,17 +1,22 @@
 {
   "schema": "coursing-stats/dog-v1",
-  "exported_at": "2026-07-08T00:31:32.188Z",
-  "id": 342,
+  "exported_at": "2026-07-11T10:55:51.099Z",
+  "id": 7503,
   "dog_key": "angelskaya-doch--русская-псовая-борзая",
   "name_lat": "ANGELSKAYA DOCH",
   "name_ru": "АНГЕЛЬСКАЯ ДОЧЬ",
   "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
   "sex": null,
   "owner": null,
+  "pedigree_url": null,
   "competition_ids": [
+    1263,
+    1265,
     1273
   ],
   "competition_files": [
+    "competitions/2025/05-май/1263-чркф-курсинг-борзых.json",
+    "competitions/2025/05-май/1265-чркф-курсинг-борзых.json",
     "competitions/2025/06-июнь/1273-чркф-курсинг-борзых.json"
   ]
 }

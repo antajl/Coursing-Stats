@@ -1,13 +1,22 @@
 {
   "schema": "coursing-stats/dog-v1",
-  "exported_at": "2026-07-08T00:31:32.188Z",
-  "id": 597,
+  "exported_at": "2026-07-11T10:55:51.099Z",
+  "id": 217,
   "dog_key": "шавати-каилан-shawati-kaylan--салюки",
   "name_lat": "ШАВАТИ КАЙЛАН /SHAWATI KAYLAN",
   "name_ru": "ШАВАТИ КАЙЛАН /SHAWATI KAYLAN",
   "breed": "САЛЮКИ",
   "sex": null,
   "owner": null,
-  "competition_ids": [],
-  "competition_files": []
+  "pedigree_url": "https://saluki.breedarchive.com/animal/view/shawati-kaylan-7e9cade9-4724-43fe-8764-3d4de97d5fc6",
+  "competition_ids": [
+    1255,
+    1288,
+    1428
+  ],
+  "competition_files": [
+    "competitions/2023/04-апрель/1428-национальные-монопородные-состязания.json",
+    "competitions/2025/04-апрель/1255-чемпионат-россии-курсинг-борзых.json",
+    "competitions/2025/09-сентябрь/1288-чркф-курсинг-борзых.json"
+  ]
 }

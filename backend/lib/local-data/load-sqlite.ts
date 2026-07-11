@@ -101,7 +101,11 @@ function readJson<T>(filePath: string): T {
 }
 
 function loadSchema(db: Database.Database) {
-  const schema = fs.readFileSync(SCHEMA_PATH, 'utf-8');
+  let schema = fs.readFileSync(SCHEMA_PATH, 'utf-8');
+  // In-memory snapshot: keep every dogs/by-id/{id}.json as its own row.
+  // Remote D1 keeps UNIQUE(name_lat, breed); without dropping it here, INSERT OR REPLACE
+  // collapses duplicate name+breed to one id and orphans results (rating/judges empty).
+  schema = schema.replace(/,\s*UNIQUE\s*\(\s*name_lat\s*,\s*breed\s*\)/i, '');
   db.exec(schema);
 }
 

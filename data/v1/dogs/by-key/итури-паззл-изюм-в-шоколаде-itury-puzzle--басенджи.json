@@ -1,13 +1,28 @@
 {
   "schema": "coursing-stats/dog-v1",
-  "exported_at": "2026-07-08T00:31:32.188Z",
-  "id": 141,
+  "exported_at": "2026-07-11T10:55:51.099Z",
+  "id": 7167,
   "dog_key": "итури-паззл-изюм-в-шоколаде-itury-puzzle--басенджи",
   "name_lat": "ИТУРИ ПАЗЗЛ ИЗЮМ В ШОКОЛАДЕ /ITURY PUZZLE IZYUM V CHOCOLADE",
   "name_ru": "ИТУРИ ПАЗЗЛ ИЗЮМ В ШОКОЛАДЕ /ITURY PUZZLE IZYUM V CHOCOLADE",
   "breed": "БАСЕНДЖИ",
   "sex": null,
   "owner": null,
-  "competition_ids": [],
-  "competition_files": []
+  "pedigree_url": null,
+  "competition_ids": [
+    1255,
+    1263,
+    1265,
+    1275,
+    1282,
+    1288
+  ],
+  "competition_files": [
+    "competitions/2025/04-апрель/1255-чемпионат-россии-курсинг-борзых.json",
+    "competitions/2025/05-май/1263-чркф-курсинг-борзых.json",
+    "competitions/2025/05-май/1265-чркф-курсинг-борзых.json",
+    "competitions/2025/06-июнь/1275-пчркф-басенджи-родезиискии-риджбек-русская-псова.json",
+    "competitions/2025/08-август/1282-чркф-курсинг-борзых.json",
+    "competitions/2025/09-сентябрь/1288-чркф-курсинг-борзых.json"
+  ]
 }

@@ -1,1 +1,38 @@
-{"schema":"coursing-stats/dog-v1","exported_at":"2026-07-08T00:31:32.188Z","id":358,"dog_key":"agoti-adamante-del-espacio--малая-итальянская-борзая","name_lat":"AGOTI ADAMANTE DEL ESPACIO","name_ru":"АГОТИ АДАМАНТЕ ДЕЛ ЕСПАЦИО","breed":"МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ","sex":null,"owner":null,"competition_ids":[1270,1272,1285,1456,1461,1464,1466],"competition_files":["competitions/2025/05-май/1270-чркф-бега-борзых.json","competitions/2025/06-июнь/1272-чркф-бега-борзых.json","competitions/2025/09-сентябрь/1285-чемпионат-россии-бега-борзых.json","competitions/2024/06-июнь/1456-чемпионат-ркф-cacl-по-бегам-борзых-за-механическ.json","competitions/2024/08-август/1461-чемпионат-ркф-cacl-по-бегам-борзых.json","competitions/2024/08-август/1464-кубок-россии-cacl-по-бегам-борзых.json","competitions/2024/09-сентябрь/1466-чемпионат-россии-cacl-по-бегам-борзых.json"],"pedigree_url":"https://italiangreyhound.breedarchive.com/animal/view/agoti-adamante-del-espacio-aa43a7ff-11b7-4fb8-acd1-1a9b768852e3"}
+{
+  "schema": "coursing-stats/dog-v1",
+  "exported_at": "2026-07-11T10:55:51.099Z",
+  "id": 358,
+  "dog_key": "agoti-adamante-del-espacio--малая-итальянская-борзая",
+  "name_lat": "AGOTI ADAMANTE DEL ESPACIO",
+  "name_ru": "АГОТИ АДАМАНТЕ ДЕЛ ЕСПАЦИО",
+  "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
+  "sex": null,
+  "owner": null,
+  "pedigree_url": "https://italiangreyhound.breedarchive.com/animal/view/agoti-adamante-del-espacio-aa43a7ff-11b7-4fb8-acd1-1a9b768852e3",
+  "competition_ids": [
+    1265,
+    1270,
+    1272,
+    1285,
+    1288,
+    1294,
+    1310,
+    1317,
+    1456,
+    1461,
+    1466
+  ],
+  "competition_files": [
+    "competitions/2024/06-июнь/1456-чемпионат-ркф-cacl-по-бегам-борзых-за-механическ.json",
+    "competitions/2024/08-август/1461-чемпионат-ркф-cacl-по-бегам-борзых.json",
+    "competitions/2024/09-сентябрь/1466-чемпионат-россии-cacl-по-бегам-борзых.json",
+    "competitions/2025/05-май/1265-чркф-курсинг-борзых.json",
+    "competitions/2025/05-май/1270-чркф-бега-борзых.json",
+    "competitions/2025/06-июнь/1272-чркф-бега-борзых.json",
+    "competitions/2025/09-сентябрь/1285-чемпионат-россии-бега-борзых.json",
+    "competitions/2025/09-сентябрь/1288-чркф-курсинг-борзых.json",
+    "competitions/2025/10-октябрь/1294-чркф-курсинг-борзых.json",
+    "competitions/2026/04-апрель/1310-чркф-курсинг-борзых.json",
+    "competitions/2026/05-май/1317-чемпионат-россии-курсинг-борзых.json"
+  ]
+}

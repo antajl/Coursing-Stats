@@ -18,6 +18,7 @@
     "sync-from-remote": "npx wrangler d1 export pc-db --remote --output=data/backups/local-dev.sql && npx wrangler d1 execute pc-db --local --file=data/backups/local-dev.sql --yes",
     "scrape-index": "npx tsx backend/scripts/scrape/scrape-year-index.ts",
     "dedupe-calendar": "npx tsx backend/scripts/migrate/dedupe-calendar-v1.ts",
+    "merge-duplicate-dogs-v1": "npx tsx backend/scripts/migrate/merge-duplicate-dogs-v1.ts",
     "remove-archive-extra-ids": "npx tsx backend/scripts/migrate/remove-archive-extra-ids.ts",
     "import-archive-results": "npx tsx backend/scripts/import/import-calendar-results-from-archive.ts",
     "import-archive-results-local": "npx tsx backend/scripts/import/import-archive-results-from-local.ts",

@@ -1,13 +1,20 @@
 {
   "schema": "coursing-stats/dog-v1",
-  "exported_at": "2026-07-08T00:31:32.188Z",
-  "id": 139,
+  "exported_at": "2026-07-11T10:55:51.099Z",
+  "id": 854,
   "dog_key": "зита-zita--афганская-аборигенная-бо",
   "name_lat": "ЗИТА /ZITA",
   "name_ru": "ЗИТА /ZITA",
   "breed": "АФГАНСКАЯ АБОРИГЕННАЯ БОРЗАЯ",
   "sex": null,
   "owner": null,
-  "competition_ids": [],
-  "competition_files": []
+  "pedigree_url": null,
+  "competition_ids": [
+    1255,
+    1317
+  ],
+  "competition_files": [
+    "competitions/2025/04-апрель/1255-чемпионат-россии-курсинг-борзых.json",
+    "competitions/2026/05-май/1317-чемпионат-россии-курсинг-борзых.json"
+  ]
 }

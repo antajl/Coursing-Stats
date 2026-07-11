@@ -1,1 +1,24 @@
-{"schema":"coursing-stats/dog-v1","exported_at":"2026-07-08T00:31:32.188Z","id":7320,"dog_key":"dakar-dezert-chary-monte--уиппет","name_lat":"DAKAR DEZERT CHARY MONTE","name_ru":"ДАКАР ДЕЗЕРТ ЧАРЫ МОНТЕ","breed":"УИППЕТ","sex":null,"owner":null,"competition_ids":[1255,1264,1268,1288],"competition_files":["competitions/2025/04-апрель/1255-чемпионат-россии-курсинг-борзых.json","competitions/2025/05-май/1264-пчркф-чирнеко-дель-этна-малая-итальянская-борзая.json","competitions/2025/05-май/1268-чркф-курсинг-борзых.json","competitions/2025/09-сентябрь/1288-чркф-курсинг-борзых.json"],"pedigree_url":"https://whippet.breedarchive.com/animal/view/dakar-dezert-chary-monte-cc81dd77-bc13-4468-bc3c-41e966cace2e"}
+{
+  "schema": "coursing-stats/dog-v1",
+  "exported_at": "2026-07-11T10:55:51.099Z",
+  "id": 7320,
+  "dog_key": "дакар-дезерт-чары-монте-dakar-dezert-cha--уиппет",
+  "name_lat": "ДАКАР ДЕЗЕРТ ЧАРЫ МОНТЕ /DAKAR DEZERT CHARY MONTE",
+  "name_ru": "ДАКАР ДЕЗЕРТ ЧАРЫ МОНТЕ /DAKAR DEZERT CHARY MONTE",
+  "breed": "УИППЕТ",
+  "sex": null,
+  "owner": null,
+  "pedigree_url": "https://whippet.breedarchive.com/animal/view/dakar-dezert-chary-monte-cc81dd77-bc13-4468-bc3c-41e966cace2e",
+  "competition_ids": [
+    1255,
+    1264,
+    1268,
+    1288
+  ],
+  "competition_files": [
+    "competitions/2025/04-апрель/1255-чемпионат-россии-курсинг-борзых.json",
+    "competitions/2025/05-май/1264-пчркф-чирнеко-дель-этна-малая-итальянская-борзая.json",
+    "competitions/2025/05-май/1268-чркф-курсинг-борзых.json",
+    "competitions/2025/09-сентябрь/1288-чркф-курсинг-борзых.json"
+  ]
+}

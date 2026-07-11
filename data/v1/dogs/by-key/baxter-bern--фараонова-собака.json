@@ -1,1 +1,30 @@
-{"schema":"coursing-stats/dog-v1","exported_at":"2026-07-08T00:31:32.188Z","id":5901,"dog_key":"baxter-bern--фараонова-собака","name_lat":"BAXTER BERN","name_ru":"БАКСТЕР БЕРН","breed":"ФАРАОНОВА СОБАКА","sex":null,"owner":null,"competition_ids":[1265,1278,1310,1317,1457,1465],"competition_files":["competitions/2025/05-май/1265-чркф-курсинг-борзых.json","competitions/2025/08-август/1278-пчркф-поденко-ибиценко-родезиискии-риджбек-уиппе.json","competitions/2026/04-апрель/1310-чркф-курсинг-борзых.json","competitions/2026/05-май/1317-чемпионат-россии-курсинг-борзых.json","competitions/2024/06-июнь/1457-чемпионат-ркф-cacl-по-курсингу-борзых.json","competitions/2024/09-сентябрь/1465-кубок-россии-cacl-по-курсингу-борзых.json"],"pedigree_url":"https://pharaohhound.breedarchive.com/animal/view/baxter-bern-3429e681-7434-4d81-b6dc-849fffb4967a"}
+{
+  "schema": "coursing-stats/dog-v1",
+  "exported_at": "2026-07-11T10:55:51.099Z",
+  "id": 5901,
+  "dog_key": "baxter-bern--фараонова-собака",
+  "name_lat": "BAXTER BERN",
+  "name_ru": "БАКСТЕР БЕРН",
+  "breed": "ФАРАОНОВА СОБАКА",
+  "sex": null,
+  "owner": null,
+  "pedigree_url": "https://pharaohhound.breedarchive.com/animal/view/baxter-bern-3429e681-7434-4d81-b6dc-849fffb4967a",
+  "competition_ids": [
+    1265,
+    1272,
+    1278,
+    1285,
+    1310,
+    1317,
+    1456
+  ],
+  "competition_files": [
+    "competitions/2024/06-июнь/1456-чемпионат-ркф-cacl-по-бегам-борзых-за-механическ.json",
+    "competitions/2025/05-май/1265-чркф-курсинг-борзых.json",
+    "competitions/2025/06-июнь/1272-чркф-бега-борзых.json",
+    "competitions/2025/08-август/1278-пчркф-поденко-ибиценко-родезиискии-риджбек-уиппе.json",
+    "competitions/2025/09-сентябрь/1285-чемпионат-россии-бега-борзых.json",
+    "competitions/2026/04-апрель/1310-чркф-курсинг-борзых.json",
+    "competitions/2026/05-май/1317-чемпионат-россии-курсинг-борзых.json"
+  ]
+}

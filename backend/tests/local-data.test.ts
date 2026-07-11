@@ -20,4 +20,28 @@ describe('local data loader', () => {
     expect(stats.speed_records).toBe(manifest.counts.donino_speed);
     expect(stats.coursing_records).toBe(manifest.counts.donino_coursing);
   });
+
+  it.skipIf(!fs.existsSync(manifestPath))(
+    'keeps all dog ids for rating (no orphan results after snapshot load)',
+    () => {
+      const { db } = loadLocalDataSqlite();
+      const orphan = db
+        .prepare(
+          `SELECT COUNT(DISTINCT r.dog_id) AS c
+           FROM results r
+           LEFT JOIN dogs d ON d.id = r.dog_id
+           WHERE d.id IS NULL`,
+        )
+        .get() as { c: number };
+      expect(orphan.c).toBe(0);
+
+      const emul = db
+        .prepare(
+          `SELECT dog_id, gold FROM v_top_by_placement
+           WHERE dog_id = 5782 AND year = 2025`,
+        )
+        .get() as { dog_id: number; gold: number } | undefined;
+      expect(emul?.gold).toBeGreaterThanOrEqual(2);
+    },
+  );
 });

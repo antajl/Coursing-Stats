@@ -1,1 +1,34 @@
-{"schema":"coursing-stats/dog-v1","exported_at":"2026-07-08T00:31:32.188Z","id":5810,"dog_key":"chudesnaya-czelitelnicza-iz-poleta-mecht--уиппет","name_lat":"CHUDESNAYA CZELITELNICZA IZ POLETA MECHTI","name_ru":"ЧУДЕСНАЯ ЦЕЛИТЕЛЬНИЦА ИЗ ПОЛЕТА МЕЧТЫ","breed":"УИППЕТ","sex":null,"owner":null,"competition_ids":[1268,1280,1288,1296,1307,1317],"competition_files":["competitions/2025/05-май/1268-чркф-курсинг-борзых.json","competitions/2025/08-август/1280-чркф-курсинг-борзых.json","competitions/2025/09-сентябрь/1288-чркф-курсинг-борзых.json","competitions/2025/10-октябрь/1296-пчркф-родезиискии-риджбек-уиппет-русская-псовая-.json","competitions/2026/04-апрель/1307-чркф-курсинг-борзых.json","competitions/2026/05-май/1317-чемпионат-россии-курсинг-борзых.json"],"pedigree_url":"https://whippet.breedarchive.com/animal/view/chudesnaya-czelitelnicza-iz-poleta-mechti-7060bba3-20d3-4843-804b-946943d322f6"}
+{
+  "schema": "coursing-stats/dog-v1",
+  "exported_at": "2026-07-11T10:55:51.099Z",
+  "id": 5810,
+  "dog_key": "чудесная-целительница-из-полета-мечты-ch--уиппет",
+  "name_lat": "ЧУДЕСНАЯ ЦЕЛИТЕЛЬНИЦА ИЗ ПОЛЕТА МЕЧТЫ /CHUDESNAYA CZELITELNICZA IZ POLETA MECHTI",
+  "name_ru": "ЧУДЕСНАЯ ЦЕЛИТЕЛЬНИЦА ИЗ ПОЛЕТА МЕЧТЫ /CHUDESNAYA CZELITELNICZA IZ POLETA MECHTI",
+  "breed": "УИППЕТ",
+  "sex": null,
+  "owner": null,
+  "pedigree_url": "https://whippet.breedarchive.com/animal/view/chudesnaya-czelitelnicza-iz-poleta-mechti-7060bba3-20d3-4843-804b-946943d322f6",
+  "competition_ids": [
+    1217,
+    1255,
+    1268,
+    1280,
+    1288,
+    1296,
+    1307,
+    1317,
+    1456
+  ],
+  "competition_files": [
+    "competitions/2023/09-сентябрь/1217-кубок-россии-cacl-по-бегам-борзых-за-механически.json",
+    "competitions/2024/06-июнь/1456-чемпионат-ркф-cacl-по-бегам-борзых-за-механическ.json",
+    "competitions/2025/04-апрель/1255-чемпионат-россии-курсинг-борзых.json",
+    "competitions/2025/05-май/1268-чркф-курсинг-борзых.json",
+    "competitions/2025/08-август/1280-чркф-курсинг-борзых.json",
+    "competitions/2025/09-сентябрь/1288-чркф-курсинг-борзых.json",
+    "competitions/2025/10-октябрь/1296-пчркф-родезиискии-риджбек-уиппет-русская-псовая-.json",
+    "competitions/2026/04-апрель/1307-чркф-курсинг-борзых.json",
+    "competitions/2026/05-май/1317-чемпионат-россии-курсинг-борзых.json"
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "schema": "coursing-stats/dog-v1",
-  "exported_at": "2026-07-08T00:31:32.188Z",
+  "exported_at": "2026-07-11T10:55:51.099Z",
   "id": 6198,
   "dog_key": "salgreys-veiled-moon--салюки",
   "name_lat": "SALGREYS VEILED MOON",
@@ -8,15 +8,18 @@
   "breed": "САЛЮКИ",
   "sex": null,
   "owner": null,
+  "pedigree_url": null,
   "competition_ids": [
     1263,
     1268,
+    1275,
     1280,
     1317
   ],
   "competition_files": [
     "competitions/2025/05-май/1263-чркф-курсинг-борзых.json",
     "competitions/2025/05-май/1268-чркф-курсинг-борзых.json",
+    "competitions/2025/06-июнь/1275-пчркф-басенджи-родезиискии-риджбек-русская-псова.json",
     "competitions/2025/08-август/1280-чркф-курсинг-борзых.json",
     "competitions/2026/05-май/1317-чемпионат-россии-курсинг-борзых.json"
   ]

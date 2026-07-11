@@ -1,1 +1,28 @@
-{"schema":"coursing-stats/dog-v1","exported_at":"2026-07-08T00:31:32.188Z","id":7195,"dog_key":"perm-velikaya-zefir--малая-итальянская-борзая","name_lat":"PERM VELIKAYA ZEFIR","name_ru":"ПЕРМЬ ВЕЛИКАЯ ЗЕФИР","breed":"МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)","sex":null,"owner":null,"competition_ids":[1255,1264,1436,1440,1444,1457,1465,1469],"competition_files":["competitions/2025/04-апрель/1255-чемпионат-россии-курсинг-борзых.json","competitions/2025/05-май/1264-пчркф-чирнеко-дель-этна-малая-итальянская-борзая.json","competitions/2023/08-август/1436-чемпионат-ркф-cacl-по-бегам-борзых.json","competitions/2023/09-сентябрь/1440-чемпионат-ркф-cacl-по-курсингу.json","competitions/2023/10-октябрь/1444-кубок-россии-по-курсингу.json","competitions/2024/06-июнь/1457-чемпионат-ркф-cacl-по-курсингу-борзых.json","competitions/2024/09-сентябрь/1465-кубок-россии-cacl-по-курсингу-борзых.json","competitions/2024/09-сентябрь/1469-чемпионат-ркф-cacl-по-курсингу-борзых.json"],"pedigree_url":"https://italiangreyhound.breedarchive.com/animal/view/perm-velikaya-zefir-3db4d7d8-a9e5-4b5d-9125-f65e7083aca2"}
+{
+  "schema": "coursing-stats/dog-v1",
+  "exported_at": "2026-07-11T10:55:51.099Z",
+  "id": 7195,
+  "dog_key": "perm-velikaya-zefir--малая-итальянская-борзая",
+  "name_lat": "PERM VELIKAYA ZEFIR",
+  "name_ru": "ПЕРМЬ ВЕЛИКАЯ ЗЕФИР",
+  "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
+  "sex": null,
+  "owner": null,
+  "pedigree_url": "https://italiangreyhound.breedarchive.com/animal/view/perm-velikaya-zefir-3db4d7d8-a9e5-4b5d-9125-f65e7083aca2",
+  "competition_ids": [
+    1217,
+    1255,
+    1264,
+    1436,
+    1456,
+    1461
+  ],
+  "competition_files": [
+    "competitions/2023/08-август/1436-чемпионат-ркф-cacl-по-бегам-борзых.json",
+    "competitions/2023/09-сентябрь/1217-кубок-россии-cacl-по-бегам-борзых-за-механически.json",
+    "competitions/2024/06-июнь/1456-чемпионат-ркф-cacl-по-бегам-борзых-за-механическ.json",
+    "competitions/2024/08-август/1461-чемпионат-ркф-cacl-по-бегам-борзых.json",
+    "competitions/2025/04-апрель/1255-чемпионат-россии-курсинг-борзых.json",
+    "competitions/2025/05-май/1264-пчркф-чирнеко-дель-этна-малая-итальянская-борзая.json"
+  ]
+}

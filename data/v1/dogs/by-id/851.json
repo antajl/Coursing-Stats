@@ -1,17 +1,20 @@
 {
   "schema": "coursing-stats/dog-v1",
-  "exported_at": "2026-07-08T00:31:32.188Z",
+  "exported_at": "2026-07-11T10:55:51.099Z",
   "id": 851,
   "dog_key": "naslediye-etera-uinston-dzhejms-setler--басенджи",
   "name_lat": "NASLEDIYE ETERA UINSTON DZHEJMS SETLER",
-  "name_ru": "НАСЛЕДИЕ ЕТЕРА УИНСТОН ДЖЕЙМС СЕТЛЕР",
+  "name_ru": "НАСЛЕДНИЕ ЕТЕРА УИНСТОН ДЖЕЙМС СЕТЛЕР",
   "breed": "БАСЕНДЖИ",
   "sex": null,
   "owner": null,
+  "pedigree_url": null,
   "competition_ids": [
+    1285,
     1316
   ],
   "competition_files": [
+    "competitions/2025/09-сентябрь/1285-чемпионат-россии-бега-борзых.json",
     "competitions/2026/05-май/1316-чркф-бега-борзых.json"
   ]
 }

@@ -1,17 +1,20 @@
 {
   "schema": "coursing-stats/dog-v1",
-  "exported_at": "2026-07-08T00:31:32.188Z",
-  "id": 7731,
+  "exported_at": "2026-07-11T10:55:51.099Z",
+  "id": 9448,
   "dog_key": "isla-savanna-djordjiya--бигль",
   "name_lat": "ISLA SAVANNA DJORDJIYA",
   "name_ru": "ИСЛА САВАННА ДЖОРДЖИЯ",
   "breed": "БИГЛЬ",
   "sex": null,
   "owner": null,
+  "pedigree_url": null,
   "competition_ids": [
+    1216,
     1266
   ],
   "competition_files": [
+    "competitions/2023/09-сентябрь/1216-кубок-россии-по-бегам-за-механическои-приманкои.json",
     "competitions/2025/05-май/1266-кубок-россии-бега-за-механическои-приманкои.json"
   ]
 }

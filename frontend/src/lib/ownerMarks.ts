@@ -10,7 +10,7 @@ function primaryName(name: string): string {
 const OWNER_DONINO = [{ name: 'ТАЙГА', breed: 'САЛЮКИ' }]
 
 /** Соревнования: dog_id и/или начало официальной клички */
-const OWNER_COMPETITION_DOG_IDS = new Set([187])
+const OWNER_COMPETITION_DOG_IDS = new Set([5782])
 const OWNER_COMPETITION_NAMES = ['ЭМУЛЬ ДЭ ГЕПАРД ГЕЛИЛА АЛЬ РАВДА']
 
 export function isOwnerDoninoMark(name: string, breed: string): boolean {
