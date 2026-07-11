@@ -16,13 +16,15 @@ procoursing.ru / Google Sheets
         │                                    ├─ build-derived-indexes → indexes/
         │                                    │
         │                                    ▼  CI: npm run build-all-data
-        │                              frontend/public/data/v1/
+        │                              frontend/public/data/v1/ (generated, not in git)
         │                                    │
         ├─ npm run dev (админка)             ▼
         │   localhost:5173/admin             Cloudflare Pages CDN
         │   → API :8787                      coursing-stats.ru
         └─ dev:d1 (legacy)                   React → fetch /data/v1/*.json
 ```
+
+**Важно:** `frontend/public/data/v1/` не в git (в .gitignore), генерируется автоматически при билде. Единственный источник правды - `data/v1/`.
 
 | Кто читает | Откуда |
 |------------|--------|
@@ -196,7 +198,7 @@ git commit && push
 | Путь | Роль |
 |------|------|
 | `frontend/src/hooks/useStaticData.ts` | Публичный сайт: fetch `/data/v1/` |
-| `frontend/vite.config.ts` | Dev: plugin `serveDataV1` |
+| `frontend/vite.config.ts` | Dev: plugin `serveDataV1` (читает из `data/v1/`) |
 | `frontend/scripts/copy-data.js` | Копирует `data/v1/` в `public/data/v1/` перед билдом |
 | `frontend/package.json` | Build: `"build": "node scripts/copy-data.js && vite build"` |
 | `backend/lib/local-data/` | Загрузка JSON для админки |
@@ -206,6 +208,8 @@ git commit && push
 | `backend/scripts/sync/sync-sqlite-to-v1.ts` | Админка → JSON на диск |
 
 Worker (`backend/src/worker.ts`) **не деплоится в CI** — legacy для `npm run dev:d1`.
+
+**Важно:** `frontend/public/data/v1/` не в git (в .gitignore), генерируется автоматически при билде через `npm run build-all-data`. Единственный источник правды для данных - `data/v1/`.
 
 ---
 

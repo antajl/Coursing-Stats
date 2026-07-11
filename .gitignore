@@ -48,6 +48,9 @@ dist/
 build/
 frontend/dist/
 
+# Frontend public data (copied from data/v1 during build)
+frontend/public/data/v1/
+
 # Test artifacts
 playwright-report/
 test-results/
