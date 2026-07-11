@@ -51,6 +51,7 @@
 | Локальный API (админка) | [05-API-REFERENCE.md](05-API-REFERENCE.md) |
 | UI, цвета, тёмная тема | [06-DESIGN-SYSTEM.md](06-DESIGN-SYSTEM.md) |
 | Фильтры рейтинга | [03-DATA.md](03-DATA.md) → «Породы в UI», [18-CODE-PATTERNS.md](18-CODE-PATTERNS.md) |
+| Индекс CS («по очкам») | [03-DATA.md](03-DATA.md) → «top-score», [18-CODE-PATTERNS.md](18-CODE-PATTERNS.md), `/guide` → «О сайте» |
 | SEO, sitemap | [07-SEO.md](07-SEO.md) |
 | Тесты | [08-TESTING.md](08-TESTING.md) |
 | Донино, рекорды | [09-SPEED-RECORDS.md](09-SPEED-RECORDS.md) |

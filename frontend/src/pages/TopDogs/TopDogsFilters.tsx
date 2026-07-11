@@ -176,7 +176,7 @@ export default function TopDogsFilters({
                   <input
                     type="number"
                     step="0.1"
-                    placeholder="Мин. лучшая оценка"
+                    placeholder="Мин. индекс CS"
                     value={filterScoreFrom}
                     onChange={(e) => onScoreFromChange(e.target.value.replace(/[^0-9.]/g, ''))}
                     className={`${TOOLBAR_NUMBER_INPUT} w-full`}

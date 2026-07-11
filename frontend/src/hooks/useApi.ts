@@ -13,7 +13,7 @@ export function useTopPlacement(year = '', breed = '', minStarts = 0, sortBy = '
   });
 }
 
-export function useTopScore(year = '', breed = '', minStarts = 0, sortBy = 'best_judge_score', limit = null, offset = 0) {
+export function useTopScore(year = '', breed = '', minStarts = 0, sortBy = 'rating_score', limit = null, offset = 0) {
   return useQuery({
     queryKey: ['topScore', year, breed, minStarts, sortBy, limit, offset],
     queryFn: () => api.getTopScore(year, breed, minStarts, sortBy, limit, offset),

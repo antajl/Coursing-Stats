@@ -123,6 +123,45 @@ const breedValues = data?.success ? data.data.breeds : [];
 
 ---
 
+## Индекс CS (рейтинг «по очкам»)
+
+### Описание
+Вкладка **«очки»** (курсинг + БЗМП) сортирует собак по **`rating_score`**, а не по сумме протокола. Два рейтинга (медали / очки) **не сводятся** в одну формулу с вкладкой «места».
+
+### Реализация
+| Файл | Роль |
+|------|------|
+| `backend/lib/rating/coursing-rating-score.ts` | Формула, `computeCoursingRatingScore`, `ratingScoreFromRow` |
+| `backend/scripts/build-derived-indexes.ts` | `attachScoreMetrics`, поле `rating_score` в `top-score-*.json` |
+| `frontend/src/lib/staticData.ts` | `sortScoreItems(..., 'rating_score')` |
+| `frontend/src/pages/TopDogs/CoursingRatingHint.tsx` | ⓘ у переключателя «очки» |
+| `frontend/src/components/DogCard.tsx` | Карточка: средняя / лучш. оценка / сумма протокола |
+
+### Поля карточки vs сортировка
+- **Сортировка:** `rating_score` (индекс CS)
+- **На карточке:** `avg_judge_score`, `best_judge_score`, `best_score` (протокол — справка)
+- **Фильтр порога:** `filterScoreFrom` → мин. индекс CS
+
+### Полная формула
+
+Переменные: μ = `avg_judge_score`, n = `judge_eval_count`, B = `best_judge_score`, S = `total_starts`.
+
+| Шаг | Формула | Константы |
+|-----|---------|-----------|
+| Сглаженная средняя μ̃ | `(μ × n + prior × k) / (n + k)` | prior = 85, k = 12 |
+| Бонус пика P | `0,15 × min(B − μ̃, 4)` только если B > μ̃, иначе 0 | макс. +0,6 |
+| Бонус стартов E | `min(2, 0,5 × log₂(S + 1))` | макс. +2 |
+| Индекс CS | `round(μ̃ + P + E, 2)` → `rating_score` | |
+
+**prior=85** — округлённый ориентир верхней части типичных средних (≈68-й перцентиль; p75 ≈ 85,7). **k=12** — shrinkage. **CS v1** — константы в коде, не авто-пересчёт при сборке. Курсинг и БЗМП — одна шкала `judge.sum` (&lt;1 балла смещения). **Пример:** μ=87, n=64, B=97, S=16 → **CS=89,28** (`top-score-all.json`).
+
+**Тултип ⓘ:** `CoursingRatingHint.tsx` — простой текст для пользователя; числа +0,6/+2 из `coursing-rating-score.ts`. Техническая формула — `/guide` → «О сайте».
+
+**UI**
+Две колонки: `TopDogsColumns.tsx` — курсинг/БЗМП | рейсинг; переключатель «места / очки» в плашке `DoninoColumnPlaque`.
+
+---
+
 ## ProcoursingAttribution Pattern
 
 ### Описание

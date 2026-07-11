@@ -264,6 +264,8 @@ font-mono tabular-nums
 
 **Рейтинг — секция «Порода»:** только породы с выступлениями (`useCompetingBreeds`, ~66); без `18` и прочего числового мусора из `breeds.json`.
 
+**Рейтинг — «по очкам»:** подсказка ⓘ — `CoursingRatingHint.tsx`: **простой язык** для пользователя (средняя + лучший + старты; без prior/μ̃); полная формула — `/guide` → «О сайте». `HoverTooltip` `variant="site"`, `interactive` для ссылки.
+
 **Где:** рейтинг (`TopDogsFilters`), судьи (`Judges/index`), рекорды Донино (`DoninoPageToolbar`), календарь (`Events/index.tsx` — framed).
 
 ### Рекорды Донино — статистика

@@ -68,7 +68,7 @@ Cloudflare D1 (events, dogs, results)  ← скрипты импорта
 
 **Views (для топов):**
 - `v_top_by_placement` — медальный зачёт (курсинг + БЗМП)
-- `v_top_by_score` — топ по очкам (курсинг + БЗМП)
+- `v_top_by_score` — агрегаты по очкам; CDN-индекс дополняет `rating_score` (индекс CS)
 
 ### 3. Публичный runtime (статика на Pages)
 

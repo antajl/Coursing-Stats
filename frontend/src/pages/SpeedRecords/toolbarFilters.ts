@@ -165,7 +165,7 @@ export function buildTopDogsActiveFilterChips(
     chips.push({ key: 'min-starts', label: `от ${filterMinStarts} стартов`, onRemove: () => onMinStartsChange('') })
   }
   if (filterScoreFrom) {
-    chips.push({ key: 'min-score', label: `оценка от ${filterScoreFrom}`, onRemove: () => onScoreFromChange('') })
+    chips.push({ key: 'min-score', label: `индекс CS от ${filterScoreFrom}`, onRemove: () => onScoreFromChange('') })
   }
   if (filterSpeedFrom) {
     chips.push({ key: 'min-speed', label: `от ${filterSpeedFrom} км/ч`, onRemove: () => onSpeedFromChange('') })

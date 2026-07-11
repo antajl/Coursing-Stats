@@ -343,12 +343,13 @@ GET /api/top/placement?breed=САЛЮКИ&year=2025&minStarts=5&limit=10&offset=
 ```
 
 #### GET /api/top/score
-Топ по очкам.
+Топ по очкам (курсинг + БЗМП). **Сортировка по умолчанию:** `sortBy=rating_score` (индекс CS).
 
 **Параметры:**
 - `breed` (опционально) — фильтр по породе
 - `year` (опционально) — фильтр по году
 - `minStarts` (опционально) — минимальное количество стартов
+- `sortBy` (опционально) — `rating_score` (default), `avg_judge_score`, `best_judge_score`, `best_score`
 - `limit` (опционально) — лимит записей
 - `offset` (опционально) — смещение
 
@@ -367,9 +368,12 @@ GET /api/top/score?breed=САЛЮКИ&year=2025&minStarts=5&limit=10&offset=0
       "name_ru": "Кличка",
       "breed": "САЛЮКИ",
       "year": 2025,
-      "best_score": 95.5,
-      "avg_score": 82.3,
-      "total_starts": 10
+      "best_score": 370,
+      "best_judge_score": 97,
+      "avg_judge_score": 87,
+      "judge_eval_count": 64,
+      "rating_score": 89.28,
+      "total_starts": 16
     }
   ]
 }

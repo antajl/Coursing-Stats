@@ -7,6 +7,7 @@ export interface TopDogsFilterParams {
 }
 
 import { dogNameMatchesQuery } from '../../lib/dogName'
+import { ratingScoreFromRow } from '../../../../backend/lib/rating/coursing-rating-score'
 
 function matchesSearch(
   dog: { name_lat?: string; name_ru?: string; breed?: string; total_starts?: number },
@@ -56,7 +57,7 @@ export function filterScore<
     total_starts?: number
     best_score?: number
     best_judge_score?: number
-    avg_score?: number
+    avg_judge_score?: number
   }
 >(dogs: T[], params: TopDogsFilterParams): T[] {
   return dogs.filter(dog => {
@@ -65,8 +66,9 @@ export function filterScore<
     if (!matchesBreedFilter(dog, params.filterBreed)) return false
 
     if (params.filterScoreFrom) {
-      const scoreValue = dog.best_judge_score
-      if (scoreValue == null || scoreValue < parseFloat(params.filterScoreFrom)) return false
+      const threshold = parseFloat(params.filterScoreFrom)
+      const scoreValue = ratingScoreFromRow(dog as Record<string, unknown>)
+      if (!scoreValue || scoreValue < threshold) return false
     }
 
     return true

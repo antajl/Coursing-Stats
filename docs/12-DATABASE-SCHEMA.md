@@ -193,25 +193,19 @@ ORDER BY e.year DESC, gold DESC, silver DESC, bronze DESC;
 
 ### v_top_by_score
 
-Топ по очкам — лучший результат, средний балл и число стартов вместе.
+Базовые агрегаты по очкам (курсинг + БЗМП). В CDN-индексах `top-score-*.json` дополнительно считаются `avg_judge_score`, `judge_eval_count`, **`rating_score`** (индекс CS) — см. `attachScoreMetrics` в `build-derived-indexes.ts`.
 
 ```sql
 SELECT
   d.id AS dog_id,
-  d.name_lat,
-  d.name_ru,
-  d.breed,
-  e.year,
+  ...
   MAX(r.total_score) AS best_score,
-  ROUND(AVG(r.total_score), 2) AS avg_score,
-  COUNT(*) AS total_starts
-FROM results r
-JOIN dogs d ON d.id = r.dog_id
-JOIN events e ON r.event_id = e.id
-WHERE r.status = 'finished' AND r.total_score IS NOT NULL AND e.event_type IN ('coursing', 'bzmp')
-GROUP BY d.id, e.year
-ORDER BY e.year DESC, best_score DESC;
+  COUNT(*) AS total_starts,
+  MAX(...) AS best_judge_score,
+  ...
 ```
+
+**Сортировка на сайте:** `rating_score DESC`, не `best_score`. `total_score` = `grand_total` без деления на судей.
 
 ---
 

@@ -57,7 +57,7 @@
 3. **D1** — импорт: парсеры → D1 → `export-local-data` → `data/v1/`.
 4. **Админка** — только локально: UI `:5173/admin`, API `:8787`.
 5. **`build-all-data`** — пересобирает `indexes/`, sitemap; CI при push. Snapshot: **`results > 0`**, иначе пустой рейтинг на проде → [`03-DATA.md`](03-DATA.md) → «Диагностика», [`20-OPERATIONS.md`](20-OPERATIONS.md).
-6. **Два топа** — медали и очки, **не смешивать**.
+6. **Два топа** — медали и очки, **не смешивать**. Очки: сортировка по **`rating_score` (индекс CS)**, не по `best_score`.
 7. **`total_score`** = `grand_total` как есть, **не делить** на число судей.
 8. **API путь** `/api/competitions`, не `/api/events` (uBlock).
 9. **Донино:** `speed_records` (км/ч) и `coursing_records` (сек) — разные источники.

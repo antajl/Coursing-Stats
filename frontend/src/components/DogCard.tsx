@@ -68,19 +68,19 @@ export default function DogCard({ dog, type, filterYear }: DogCardProps) {
         return {
           scoreStats: [
             {
-              label: 'Лучш. оценка',
-              value: dog.best_judge_score
-                ? Number.isInteger(dog.best_judge_score)
-                  ? String(dog.best_judge_score)
-                  : dog.best_judge_score.toFixed(1)
-                : '-',
-            },
-            {
               label: 'Средняя',
               value: dog.avg_judge_score
                 ? Number.isInteger(dog.avg_judge_score)
                   ? String(dog.avg_judge_score)
                   : dog.avg_judge_score.toFixed(1)
+                : '-',
+            },
+            {
+              label: 'Лучш. оценка',
+              value: dog.best_judge_score
+                ? Number.isInteger(dog.best_judge_score)
+                  ? String(dog.best_judge_score)
+                  : dog.best_judge_score.toFixed(1)
                 : '-',
             },
             {

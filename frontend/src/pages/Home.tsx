@@ -24,6 +24,7 @@ interface TopDog {
   bronze?: number
   best_score?: number
   best_judge_score?: number
+  rating_score?: number
   avg_judge_score?: number
   best_speed?: number
   avg_speed?: number
@@ -221,7 +222,7 @@ export default function Home() {
           api.getStats(),
           api.getEvents(),
           api.getTopPlacement(String(CURRENT_SEASON), '', 0, 'gold', 3, 0),
-          api.getTopScore(String(CURRENT_SEASON), '', 0, 'best_judge_score', 3, 0),
+          api.getTopScore(String(CURRENT_SEASON), '', 0, 'rating_score', 3, 0),
           api.getTopSpeed(String(CURRENT_SEASON), '', 0, 'best_speed', 3, 0),
           api.getSpeedRecordsTopByBreed(3),
           api.getCoursingRecordsTopByBreed(3),
@@ -382,12 +383,15 @@ export default function Home() {
                 ) : rankingTab === 'score' ? (
                   <>
                     <div className="score">
-                      {formatScore(dog.best_judge_score)}
-                      <span className="score-unit">баллов</span>
+                      {formatScore(dog.rating_score ?? dog.avg_judge_score)}
+                      <span className="score-unit">индекс</span>
                     </div>
                     <div className="pod-foot">
                       {dog.avg_judge_score != null && (
                         <span>средн. {formatScore(dog.avg_judge_score)}</span>
+                      )}
+                      {dog.best_judge_score != null && (
+                        <span>лучш. {formatScore(dog.best_judge_score)}</span>
                       )}
                       {formatStarts(dog.total_starts) && (
                         <span>{formatStarts(dog.total_starts)}</span>

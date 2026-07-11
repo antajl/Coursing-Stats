@@ -21,6 +21,7 @@ import {
   type JudgeRawRow,
 } from './judgeStats'
 import { dedupeCalendarEvents } from '../../../backend/lib/event-identity'
+import { ratingScoreFromRow } from '../../../backend/lib/rating/coursing-rating-score'
 
 export const DATA_BASE = '/data/v1'
 
@@ -78,21 +79,38 @@ export function sortPlacementItems(
 export function compareScoreItems(
   a: Record<string, unknown>,
   b: Record<string, unknown>,
-  sortBy = 'best_judge_score',
+  sortBy = 'rating_score',
 ): number {
+  if (sortBy === 'rating_score') {
+    const rating = ratingScoreFromRow(b) - ratingScoreFromRow(a)
+    if (rating !== 0) return rating
+    const avg = Number(b.avg_judge_score ?? 0) - Number(a.avg_judge_score ?? 0)
+    if (avg !== 0) return avg
+    const starts = Number(b.total_starts ?? 0) - Number(a.total_starts ?? 0)
+    if (starts !== 0) return starts
+    const bj = Number(b.best_judge_score ?? 0) - Number(a.best_judge_score ?? 0)
+    if (bj !== 0) return bj
+    return Number(b.best_score ?? 0) - Number(a.best_score ?? 0)
+  }
+
   const primaryKey =
-    sortBy === 'avg_judge_score'
-      ? 'avg_judge_score'
+    sortBy === 'best_judge_score'
+      ? 'best_judge_score'
       : sortBy === 'best_score'
         ? 'best_score'
-        : 'best_judge_score'
+        : 'avg_judge_score'
   const primary = Number(b[primaryKey] ?? 0) - Number(a[primaryKey] ?? 0)
   if (primary !== 0) return primary
 
-  if (sortBy === 'avg_judge_score') {
-    const bj = Number(b.best_judge_score ?? 0) - Number(a.best_judge_score ?? 0)
-    if (bj !== 0) return bj
-  } else if (sortBy === 'best_score') {
+  if (sortBy === 'best_judge_score') {
+    const avg = Number(b.avg_judge_score ?? 0) - Number(a.avg_judge_score ?? 0)
+    if (avg !== 0) return avg
+    const starts = Number(b.total_starts ?? 0) - Number(a.total_starts ?? 0)
+    if (starts !== 0) return starts
+    return Number(b.best_score ?? 0) - Number(a.best_score ?? 0)
+  }
+
+  if (sortBy === 'best_score') {
     const bj = Number(b.best_judge_score ?? 0) - Number(a.best_judge_score ?? 0)
     if (bj !== 0) return bj
     const avg = Number(b.avg_judge_score ?? 0) - Number(a.avg_judge_score ?? 0)
@@ -100,14 +118,14 @@ export function compareScoreItems(
     return Number(b.total_starts ?? 0) - Number(a.total_starts ?? 0)
   }
 
-  const avg = Number(b.avg_judge_score ?? 0) - Number(a.avg_judge_score ?? 0)
-  if (avg !== 0) return avg
   const starts = Number(b.total_starts ?? 0) - Number(a.total_starts ?? 0)
   if (starts !== 0) return starts
+  const bj = Number(b.best_judge_score ?? 0) - Number(a.best_judge_score ?? 0)
+  if (bj !== 0) return bj
   return Number(b.best_score ?? 0) - Number(a.best_score ?? 0)
 }
 
-export function sortScoreItems(items: Record<string, unknown>[], sortBy = 'best_judge_score'): Record<string, unknown>[] {
+export function sortScoreItems(items: Record<string, unknown>[], sortBy = 'rating_score'): Record<string, unknown>[] {
   const copy = [...items]
   copy.sort((a, b) => compareScoreItems(a, b, sortBy))
   return copy
@@ -360,7 +378,7 @@ export async function getTopScore(
   year = '',
   breed = '',
   minStarts = 0,
-  sortBy = 'best_judge_score',
+  sortBy = 'rating_score',
   limit: number | null = null,
   offset = 0,
 ): Promise<ApiResult<unknown>> {

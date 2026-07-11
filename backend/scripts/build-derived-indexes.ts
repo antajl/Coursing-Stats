@@ -23,6 +23,7 @@ import { judgeDetailKey } from '../src/lib/static-api';
 import { parseJudgeNames } from '../src/lib/judge-names';
 import { aggregateQualificationTitles } from '../src/lib/qualification-titles';
 import { RACING_EXCLUDED_STATUSES_SQL } from '../src/lib/racing-status';
+import { computeCoursingRatingScore } from '../lib/rating/coursing-rating-score';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const INDEXES_DIR = path.join(ROOT, 'data/v1/indexes');
@@ -83,11 +84,10 @@ const SCORE_ALL_YEARS_SQL = `
   JOIN events e ON r.event_id = e.id
   WHERE r.status = 'finished' AND r.total_score IS NOT NULL AND e.event_type IN ('coursing', 'bzmp')
   GROUP BY d.id
-  ORDER BY best_judge_score DESC, total_starts DESC, best_score DESC
 `;
 
-/** avg_judge_score — честное среднее по всем оценкам судей; не воспроизводит SQLite-баг v_top_by_score (см. docs). */
-function attachAvgJudgeScore(
+/** Метрики очков: avg, judge_eval_count, rating_score (индекс CS). */
+function attachScoreMetrics(
   db: Database.Database,
   scoreRows: Record<string, unknown>[],
   year?: number,
@@ -123,19 +123,33 @@ function attachAvgJudgeScore(
 
   for (const item of scoreRows) {
     const sums = sumsByDog.get(item.dog_id as number);
-    (item as Record<string, unknown>).avg_judge_score =
-      sums && sums.length > 0 ? Math.round((sums.reduce((a, b) => a + b, 0) / sums.length) * 100) / 100 : null;
+    const evalCount = sums?.length ?? 0;
+    const avg =
+      sums && evalCount > 0
+        ? Math.round((sums.reduce((a, b) => a + b, 0) / evalCount) * 100) / 100
+        : null;
+    const row = item as Record<string, unknown>;
+    row.avg_judge_score = avg;
+    row.judge_eval_count = evalCount;
+    row.rating_score = computeCoursingRatingScore({
+      avg_judge_score: avg,
+      best_judge_score: row.best_judge_score as number | null,
+      total_starts: row.total_starts as number,
+      judge_eval_count: evalCount,
+    });
   }
 }
 
 function sortScoreIndexRows(rows: Record<string, unknown>[]) {
   rows.sort((a, b) => {
-    const bj = Number(b.best_judge_score ?? 0) - Number(a.best_judge_score ?? 0);
-    if (bj !== 0) return bj;
+    const rating = Number(b.rating_score ?? 0) - Number(a.rating_score ?? 0);
+    if (rating !== 0) return rating;
     const avg = Number(b.avg_judge_score ?? 0) - Number(a.avg_judge_score ?? 0);
     if (avg !== 0) return avg;
     const starts = Number(b.total_starts ?? 0) - Number(a.total_starts ?? 0);
     if (starts !== 0) return starts;
+    const bj = Number(b.best_judge_score ?? 0) - Number(a.best_judge_score ?? 0);
+    if (bj !== 0) return bj;
     return Number(b.best_score ?? 0) - Number(a.best_score ?? 0);
   });
 }
@@ -167,7 +181,7 @@ function buildTopIndexes(db: Database.Database) {
          FROM v_top_by_score WHERE year = ?`,
       )
       .all(year) as Record<string, unknown>[];
-    attachAvgJudgeScore(db, score, year);
+    attachScoreMetrics(db, score, year);
     sortScoreIndexRows(score);
 
     writeIndex(`top-score-${year}.json`, {
@@ -187,7 +201,7 @@ function buildTopIndexes(db: Database.Database) {
   });
 
   const scoreAll = db.prepare(SCORE_ALL_YEARS_SQL).all() as Record<string, unknown>[];
-  attachAvgJudgeScore(db, scoreAll);
+  attachScoreMetrics(db, scoreAll);
   sortScoreIndexRows(scoreAll);
   writeIndex('top-score-all.json', {
     schema: 'coursing-stats/index-top-score-v1',
