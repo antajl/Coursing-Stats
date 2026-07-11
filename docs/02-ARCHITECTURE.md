@@ -13,7 +13,7 @@
         │                                    ├─ build-derived-indexes → indexes/
         │                                    │
         │                                    ▼  CI: build-all-data
-        │                              frontend/public/data/v1/
+        │                              frontend/public/data/v1/ (generated, not in git)
         │                                    │
         ├─ npm run dev (админка)             ▼
         │   local-dev-server :8787     Cloudflare Pages CDN
@@ -84,6 +84,7 @@ Cloudflare D1 (events, dogs, results)  ← скрипты импорта
 - `frontend/scripts/copy-data.js` — копирует `data/v1/` в `frontend/public/data/v1/` перед билдом
 - `frontend/package.json` — `"build": "node scripts/copy-data.js && vite build"`
 - Cloudflare Pages включает `public/data/v1/` в деплой
+- **Важно:** `frontend/public/data/v1/` не в git (в .gitignore), генерируется автоматически при билде
 
 Клиентская фильтрация/сортировка: `frontend/src/lib/breedMapping.ts`, `judgeStats.ts`.
 

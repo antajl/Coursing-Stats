@@ -187,6 +187,7 @@ npx tsx backend/scripts/speed/fetch-coursing-records.ts
 - Подготавливает данные для деплоя на Cloudflare Pages
 
 **Важно:** Исправлено в 2026-07-09 — теперь копирует все файлы рекурсивно, включая подкаталоги (`judge-details/`, `dog-profiles/`), которые ранее пропускались.
+**Важно (2026-07-11):** `frontend/public/data/v1/` не в git (в .gitignore), генерируется автоматически при билде. Единственный источник правды - `data/v1/`.
 
 ### Тестовые скрипты (`backend/scripts/test/`)
 
