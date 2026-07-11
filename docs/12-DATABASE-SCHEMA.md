@@ -58,7 +58,7 @@
 | pedigree_no | TEXT | Номер родословной |
 | microchip | TEXT | Микрошильд |
 | owner | TEXT | Владелец |
-| pedigree_url | TEXT | Ссылка на внешний архив родословных |
+| pedigree_url | TEXT | Ссылка на карточку на [breedarchive.com](https://breedarchive.com) (enrich: `npm run enrich-breedarchive-urls`) |
 | merged_into_dog_id | INTEGER FK | Для ручной склейки дублей |
 | created_at | TEXT | Время создания |
 

@@ -1,6 +1,6 @@
 # Code Patterns — Паттерны кода
 
-> **ИИ:** архитектура — [02-ARCHITECTURE.md](02-ARCHITECTURE.md). Разработка — [04-DEVELOPMENT.md](04-DEVELOPMENT.md).
+> **ИИ:** архитектура — [02-ARCHITECTURE.md](02-ARCHITECTURE.md). Фронтенд — [04-FRONTEND.md](04-FRONTEND.md). Backend — [04-DEVELOPMENT.md](04-DEVELOPMENT.md).
 
 Повторяющиеся паттерны в коде Coursing Stats. Используйте эти паттерны для понимания кода и создания новых компонентов.
 
@@ -46,38 +46,95 @@ const top2026 = getTopPlacement(2026, { breed: 'САЛЮКИ' });
 ## PageToolbar Pattern
 
 ### Описание
-Единый паттерн для toolbar на страницах с фильтрами, сортировкой и действиями.
+Единый паттерн для toolbar на страницах с фильтрами и переключением режимов. С 2026-07-11: **`PageToolbar bare`** — одна строка без framed panel; фильтры в **`ToolbarFiltersDropdown`** с секциями и чекбоксами.
 
-### Реализация
-**Компоненты:**
-- `PageToolbar` — основной контейнер
-- `ToolbarSegmentControl` — переключатель режимов
-- `ToolbarFilter` — фильтры
-- `ToolbarAction` — кнопки действий
+### Компоненты
+| Компонент | Роль |
+|-----------|------|
+| `PageToolbar` | Контейнер; prop `bare` — без `TOOLBAR_PANEL` |
+| `ToolbarSearch` | Поиск (`flex-1 max-w-lg`) |
+| `ToolbarFiltersDropdown` | Панель «Фильтры» (`#toolbar-filters-panel`) |
+| `ToolbarSegmentControl` | Вкладки справа (рейтинг) |
+| `ViewToggle` | Записи / Статистика (Донино) |
+| `ToolbarActiveFilters` | Чипы под строкой |
+
+Стили секций: `TOOLBAR_FILTER_SECTION_LABEL`, `TOOLBAR_FILTER_CHECKBOX_ROW` в `lib/toolbar.ts`.
 
 ### Пример структуры
-```typescript
-<PageToolbar>
-  <ToolbarSegmentControl
-    segments={['placement', 'score']}
-    value={viewMode}
-    onChange={setViewMode}
-  />
-  <ToolbarFilter>
-    <YearSelect value={year} onChange={setYear} />
-    <BreedSelect value={breed} onChange={setBreed} />
-  </ToolbarFilter>
-  <ToolbarAction>
-    <Button onClick={exportData}>Export</Button>
-  </ToolbarAction>
-</PageToolbar>
+```tsx
+<PageToolbar bare filters={
+  <>
+    <ToolbarSearch className="!w-auto min-w-[200px] flex-1 max-w-lg" … />
+    <ToolbarFiltersDropdown active={hasPanelFilters} onReset={clearPanelFilters}>
+      <div>
+        <p className={TOOLBAR_FILTER_SECTION_LABEL}>Год</p>
+        {/* чекбоксы, max-h-36 overflow-y-auto */}
+      </div>
+    </ToolbarFiltersDropdown>
+    <div className="ml-auto shrink-0">
+      <ToolbarSegmentControl … />
+    </div>
+  </>
+} />
 ```
 
+**Сброс:** `onReset` в dropdown — только панель; `onClearAllFilters` на `PageToolbar` — всё включая поиск.
+
+**Чипы:** `frontend/src/pages/SpeedRecords/toolbarFilters.ts`.
+
+**Рейтинг — год:** checkbox toggle; снятие выбранного года → `filterYear = ''` (индекс `top-*-all`); chip «Все годы»; сброс → `CURRENT_SEASON`.
+
+**Рейтинг — порода:** `useCompetingBreeds()` + `deriveCompetingBreeds()` (`lib/competingBreeds.ts`), источник `indexes/dogs-index.json` (не `breeds.json`).
+
 **Используется на:**
-- Страница рейтингов (/top)
-- Страница событий (/events)
-- Страница судей (/judges)
-- Страница рекордов Донино (/speed-records)
+- Рейтинг: `TopDogs/TopDogsFilters.tsx` (`/competitions?tab=ranking`, `/top`)
+- Судьи: `Judges/index.tsx`
+- Донино: `SpeedRecords/DoninoPageToolbar.tsx`
+- Календарь (dev, **без** `bare`): `Events/index.tsx`
+
+---
+
+## Competing Breeds Pattern (фильтр пород в рейтинге)
+
+### Описание
+Выпадающий список пород на **рейтинге** показывает только породы, у которых есть реальные результаты соревнований. Не путать с `breeds.json` (полный список из D1, включая мусор).
+
+### Реализация
+| Файл | Роль |
+|------|------|
+| `frontend/src/lib/competingBreeds.ts` | `deriveCompetingBreeds(dogsIndex[])` |
+| `frontend/src/hooks/useStaticData.ts` | `useCompetingBreeds()` → fetch `/data/v1/indexes/dogs-index.json` |
+| `frontend/src/pages/TopDogs/index.tsx` | `breedValues` из hook |
+
+### Правила фильтрации
+```typescript
+// competition_count > 0
+// breed не пустой
+// не /^\d+$/  (ошибки парсера, напр. "18")
+```
+
+### Пример
+```typescript
+const { data } = useCompetingBreeds();
+const breedValues = data?.success ? data.data.breeds : [];
+```
+
+**Судьи:** породы из `judges-summary` (`unique_breeds`), этот паттерн не используется.
+
+---
+
+## ProcoursingAttribution Pattern
+
+### Описание
+Указание источника данных procoursing.ru (договорённость 2026-07-10). Ссылка **кликабельна** в тексте.
+
+**Компонент:** `frontend/src/components/ProcoursingAttribution.tsx`
+
+| Маршрут | Позиция |
+|---------|---------|
+| `/competitions` | Вверху карточки (`Competitions.tsx`) |
+| `/top`, `/judges`, профили | Внизу страницы |
+| `/speed-records` | Нет (Google Sheets) |
 
 ---
 
@@ -260,6 +317,42 @@ export function parseCoursingHTMLWithValidation(html: string) {
 - Парсеры (v2)
 - API endpoints
 - Data build pipeline
+
+---
+
+## Dog Profile Index Pattern
+
+### Описание
+Публичный профиль собаки (`/dog/:id`) читает **`data/v1/indexes/dog-profiles/{id}.json`**, не `dogs/by-id/` напрямую. Индекс собирает статистику из `results` (sqlite snapshot) и метаданные собаки.
+
+### Реализация
+**Файл:** `backend/scripts/build-derived-indexes.ts` → `buildDogProfiles()`
+
+**Источники:**
+| Данные | Откуда |
+|--------|--------|
+| `coursing_stats`, `racing_stats`, `titles`, `competitions[]` | SQL по `results` + `events` |
+| `name_lat`, `name_ru`, `breed`, `pedigree_url`, … | **`dogs/by-id/{id}.json`** (приоритет), fallback — строка `dogs` в sqlite |
+
+**Почему by-id приоритетнее sqlite:** в схеме `UNIQUE(name_lat, breed)` — дубли с разными `id` схлопываются при `load-sqlite.ts` (~1766 строк vs ~2034 файла). Профиль `/dog/5782` должен брать `pedigree_url` из `by-id/5782.json`.
+
+**Список id для профилей:** union ключей `by-id`, `results.dog_id`, sqlite `dogs.id`. После сборки — удаление лишних JSON в `indexes/dog-profiles/`.
+
+### Breed Archive enrich
+```bash
+npm run enrich-breedarchive-urls   # → dogs/by-id + by-key
+npm run build-all-data             # → dog-profiles
+```
+
+**Lib:** `backend/lib/breedarchive.ts` — `breedArchiveSubdomain(breed)`, `resolveBreedArchiveUrl(name_lat, breed)`.
+
+### Frontend
+```typescript
+// hooks/useStaticData.ts
+useDogProfile(id) → fetch `/data/v1/indexes/dog-profiles/${id}.json` → data.dog
+```
+
+**UI:** `DogProfile.tsx` — chip «Breed Archive» при `dog.pedigree_url`.
 
 ---
 

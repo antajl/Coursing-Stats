@@ -388,6 +388,16 @@ export function useSpeedRecordsPage() {
     setFilterMaxTime('')
   }, [])
 
+  const clearPanelFilters = useCallback(() => {
+    setFilterYears([])
+    setFilterBreeds([])
+    setFilterSexes([])
+    setFilterMinSpeed('')
+    setFilterMaxSpeed('')
+    setFilterMinTime('')
+    setFilterMaxTime('')
+  }, [])
+
   const hasActiveFilters = Boolean(
     filterYears.length > 0 ||
       filterBreeds.length > 0 ||
@@ -456,6 +466,7 @@ export function useSpeedRecordsPage() {
     handleSort,
     handleCoursingSort,
     clearAllFilters,
+    clearPanelFilters,
     hasActiveFilters,
     years,
     breeds,

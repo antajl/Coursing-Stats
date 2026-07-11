@@ -42,7 +42,7 @@ procoursing.ru / Google Sheets
 ```
 data/v1/
 ├── manifest.json              # счётчики (частично обновляется админкой)
-├── breeds.json                # список пород
+├── breeds.json                # все уникальные breed из dogs (legacy/справочник; ~86)
 ├── calendar/{year}.json       # календарь года (без results)
 ├── competitions/{year}/{month}/{id}-{slug}.json   # турнир + results[]
 ├── dogs/
@@ -57,6 +57,7 @@ data/v1/
 │   ├── judges-summary.json, judges-raw-rows.json
 │   ├── judge-details/{key}.json
 │   ├── dog-profiles/{id}.json
+│   ├── dogs-index.json        # индекс собак (id, breed, competition_count) — фильтр пород в рейтинге
 │   └── events-by-id.json
 └── pc-db.sqlite               # для dev-админки; не источник правды для прода
 ```
@@ -89,6 +90,75 @@ data/v1/
 | `frontend/public/sitemap.xml` | `build-derived-indexes` |
 
 После правки `competitions/` или `dogs/` **обязательно** `npm run build-all-data` — иначе профили, топы, судьи на сайте устареют.
+
+---
+
+## Breed Archive и `pedigree_url`
+
+Внешняя ссылка на карточку собаки на [breedarchive.com](https://breedarchive.com). **Не парсим PDF** — только URL в JSON.
+
+### Где хранится
+
+| Слой | Поле | Путь |
+|------|------|------|
+| Канон (git) | `pedigree_url` | `dogs/by-id/{id}.json`, `dogs/by-key/{dog_key}.json` |
+| D1 / sqlite | `pedigree_url` | таблица `dogs` |
+| Публичный UI | `dog.pedigree_url` | `indexes/dog-profiles/{id}.json` |
+
+Сайт читает профиль из **`indexes/dog-profiles/`**, не из `dogs/by-id/` напрямую.
+
+### Заполнение ссылок
+
+```bash
+npm run enrich-breedarchive-urls
+npm run build-all-data
+```
+
+Скрипт: `backend/scripts/enrich/enrich-breedarchive-urls.ts`  
+Логика поиска: `backend/lib/breedarchive.ts` (маппинг порода → `{subdomain}.breedarchive.com`, exact match по `nameLower`).
+
+Флаги: `--dry-run`, `--dog-id N`, `--force`, `--limit N`. Задержка между запросами ~180 ms.
+
+### Сборка `dog-profiles`
+
+```
+dogs/by-id/{id}.json  (pedigree_url, name_lat, …)
+        │
+        ├─ build-data-snapshot → pc-db.sqlite (dogs: UNIQUE(name_lat, breed) — ~1766 строк)
+        │
+        └─ build-derived-indexes → buildDogProfiles()
+              • loadDogMetadataFromById() — все ~2034 id
+              • stats из results по dog_id
+              • pedigree_url из by-id (приоритет над sqlite)
+              • удаление устаревших dog-profiles/*.json
+```
+
+**Почему так:** дубли id с одной кличкой+породой (разные `competition_ids`, один `dog_key`) при `INSERT OR REPLACE` в sqlite оставляют одну строку. Профиль `/dog/5782` должен показывать ссылку из `by-id/5782.json`, даже если в sqlite «выиграл» id 596.
+
+**Симптом бага (исправлен 2026-07-11):** `by-id/5782.json` содержит `pedigree_url`, а `indexes/dog-profiles/5782.json` — `null` (stale index или данные только из sqlite).
+
+### UI
+
+`frontend/src/pages/DogProfile.tsx` — chip «Breed Archive» рядом с породой, если `pedigree_url` задан. Стили: `docs/06-DESIGN-SYSTEM.md`.
+
+---
+
+## Породы в UI: `breeds.json` vs `dogs-index.json`
+
+| Файл | Содержимое | Кто читает |
+|------|------------|------------|
+| `breeds.json` | Все уникальные `breed` из таблицы `dogs` (~86), в т.ч. опечатки и мусор парсера | Legacy API `getBreeds()`, export из D1 |
+| `indexes/dogs-index.json` | Массив `{ id, breed, competition_count, … }` | **`useCompetingBreeds()`** — фильтр пород на **рейтинге** |
+
+**Рейтинг (`/top`, `/competitions` → Рейтинг)** не использует `breeds.json` для выпадающего списка пород. Hook **`useCompetingBreeds`** (`frontend/src/lib/competingBreeds.ts`):
+
+- берёт породу из `dogs-index.json`;
+- только записи с **`competition_count > 0`** (есть хотя бы один результат);
+- отбрасывает «породы» из одних цифр (напр. **`18`** — ошибка парсера, в `breed` попал номер каталога у собаки id 602).
+
+Итог в UI: **~66 пород** вместо 86. Судьи по-прежнему строят список пород из **`judges-summary`** (уникальные `unique_breeds`).
+
+**Сброс «Фильтры»** на рейтинге возвращает год к текущему сезону (`CURRENT_SEASON`), породу — к «все породы».
 
 ---
 
@@ -137,7 +207,7 @@ npx vitest run backend/tests/static-indexes.test.ts
 - `build-all-data.ts` — `assertNonEmptyIndex` для `top-placement-all` и `judges-summary`
 - `.github/workflows/deploy-frontend.yml` — `static-indexes.test.ts` после `build-all-data`
 
-Подробнее: `docs/DECISIONS-LOG.md` (2026-07-09), skill `.cursor/skills/coursing-stats-dev/data-build-pipeline.md`.
+Подробнее: [`19-HISTORY.md`](19-HISTORY.md) (2026-07-09), skill `.cursor/skills/coursing-stats-dev/data-build-pipeline.md` (или `.devin/skills/coursing-stats-dev/SKILL.md`).
 
 ---
 
@@ -206,6 +276,9 @@ git commit && push
 | `backend/scripts/build-all-data.ts` | CI pipeline |
 | `backend/scripts/build-derived-indexes.ts` | `indexes/*`, sitemap |
 | `backend/scripts/sync/sync-sqlite-to-v1.ts` | Админка → JSON на диск |
+| `backend/lib/breedarchive.ts` | Поиск URL на breedarchive.com |
+| `backend/scripts/enrich/enrich-breedarchive-urls.ts` | Заполнение `pedigree_url` в `dogs/` |
+| `frontend/src/lib/competingBreeds.ts` | Список пород для фильтра рейтинга (`deriveCompetingBreeds`) |
 
 Worker (`backend/src/worker.ts`) **не деплоится в CI** — legacy для `npm run dev:d1`.
 

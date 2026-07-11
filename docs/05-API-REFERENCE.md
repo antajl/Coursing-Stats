@@ -1,10 +1,10 @@
 # API Reference — Документация API
 
-> **ИИ:** карта задач — [README.md](README.md). Runtime данные — [DATA.md](DATA.md).
+> **ИИ:** карта задач — [README.md](README.md). Runtime данные — [03-DATA.md](03-DATA.md).
 
 Полная документация **локального dev API** (админка и отладка).
 
-> **Публичный прод** не использует этот API. Сайт читает JSON с CDN: `/data/v1/` (`frontend/src/lib/staticData.ts`). См. `docs/DATA.md`.
+> **Публичный прод** не использует этот API. Сайт читает JSON с CDN: `/data/v1/` (`frontend/src/lib/staticData.ts`). См. [`03-DATA.md`](03-DATA.md).
 
 ## Base URL
 

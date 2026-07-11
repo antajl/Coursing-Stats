@@ -5,20 +5,19 @@
 
 ## Документация
 
-⚠️ **Для ИИ-агентов:** Сначала прочитайте [.devin/rules/](.devin/rules/) и [.devin/skills/](.devin/skills/), затем docs/. См. [.devin/README.md](.devin/README.md).
+⚠️ **Для ИИ-агентов:** rules/skills своей среды (`.devin/` или `.cursor/`), затем [docs/00-AI-GUIDE.md](docs/00-AI-GUIDE.md) и [docs/README.md](docs/README.md).
 
 Полная документация в папке **[docs/](docs/README.md)**:
 
 | Раздел | Файл |
 |--------|------|
-| Быстрый старт | [docs/01-GETTING-STARTED.md](docs/01-GETTING-STARTED.md) |
-| ИИ-агент | [.devin/README.md](.devin/README.md) → [docs/00-AI-GUIDE.md](docs/00-AI-GUIDE.md) |
-| Архитектура | [docs/02-ARCHITECTURE.md](docs/02-ARCHITECTURE.md), [docs/05-API-REFERENCE.md](docs/05-API-REFERENCE.md) |
-| Данные | [docs/03-DATA.md](docs/03-DATA.md), [docs/12-DATABASE-SCHEMA.md](docs/12-DATABASE-SCHEMA.md), [docs/14-PARSING-RULES.md](docs/14-PARSING-RULES.md) |
-| Разработка | [docs/04-DEVELOPMENT.md](docs/04-DEVELOPMENT.md) |
-| Дизайн | [docs/06-DESIGN-SYSTEM.md](docs/06-DESIGN-SYSTEM.md) |
-| История | [docs/19-HISTORY.md](docs/19-HISTORY.md) |
-| Планы | [docs/11-FUTURE-PLANS.md](docs/11-FUTURE-PLANS.md) |
+| Быстрый старт / runbook | [docs/01-GETTING-STARTED.md](docs/01-GETTING-STARTED.md), [docs/20-OPERATIONS.md](docs/20-OPERATIONS.md) |
+| ИИ-агент | [docs/00-AI-GUIDE.md](docs/00-AI-GUIDE.md) (`.devin/` или `.cursor/`) |
+| Архитектура | [docs/02-ARCHITECTURE.md](docs/02-ARCHITECTURE.md) |
+| Данные | [docs/03-DATA.md](docs/03-DATA.md) |
+| Backend / CI | [docs/04-DEVELOPMENT.md](docs/04-DEVELOPMENT.md) |
+| Фронтенд | [docs/04-FRONTEND.md](docs/04-FRONTEND.md) |
+| История / changelog | [docs/19-HISTORY.md](docs/19-HISTORY.md), [docs/19-CHANGELOG.md](docs/19-CHANGELOG.md) |
 
 Оглавление: **[docs/README.md](docs/README.md)**
 

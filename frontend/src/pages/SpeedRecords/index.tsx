@@ -36,9 +36,10 @@ function SpeedRecords() {
 
   return (
     <div className="space-y-6">
-      <div className="bg-cream-50/90 dark:bg-charcoal-800/90 backdrop-blur-lg rounded-2xl shadow-xl border border-cream-300 dark:border-charcoal-700 p-4 md:p-8">
+      <div className="bg-cream-50/90 dark:bg-charcoal-800/90 backdrop-blur-lg rounded-2xl shadow-xl border border-cream-300 dark:border-charcoal-700 px-4 py-3 md:px-6 md:py-4">
         <DoninoPageToolbar
           view={view}
+          onViewChange={page.handleViewChange}
           searchQuery={page.searchQuery}
           onSearchChange={page.setSearchQuery}
           filterYears={page.filterYears}
@@ -52,14 +53,15 @@ function SpeedRecords() {
           onFilterMaxSpeedChange={page.setFilterMaxSpeed}
           onFilterMinTimeChange={page.setFilterMinTime}
           onFilterMaxTimeChange={page.setFilterMaxTime}
-          openDropdown={page.openDropdown}
-          onOpenDropdownChange={page.setOpenDropdown}
+          statsGroupBy={page.statsGroupBy}
+          onStatsGroupByChange={page.setStatsGroupBy}
           dropdownRef={page.dropdownRef}
           years={page.years}
           breeds={page.breeds}
           sexes={page.sexes}
           onToggleFilter={page.toggleFilter}
           onClearFilters={page.clearAllFilters}
+          onClearPanelFilters={page.clearPanelFilters}
           hasActiveFilters={page.hasActiveFilters}
           speedRecords={page.filteredRecords}
           coursingRecords={page.filteredCoursingRecords}
@@ -106,7 +108,6 @@ function SpeedRecords() {
               filterMinTime={page.filterMinTime}
               filterMaxTime={page.filterMaxTime}
               statsGroupBy={page.statsGroupBy}
-              onStatsGroupByChange={page.setStatsGroupBy}
             />
           )}
         </div>

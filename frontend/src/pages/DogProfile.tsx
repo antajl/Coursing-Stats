@@ -1,6 +1,6 @@
 import { useState, useRef, useMemo } from 'react'
 import { useParams, Link, useNavigate, useLocation } from 'react-router-dom'
-import { ChevronLeft, Download } from 'lucide-react'
+import { ChevronLeft, Download, ExternalLink } from 'lucide-react'
 import { useDogProfile, useDogEvents, useDogSpeedRecords, useSpeedRecordsByBreed, useDogCoursingRecords, useCoursingRecordsByBreed } from '../hooks/useStaticData'
 import { formatRecordDate, dedupeByRecordDate, expandCoursingTimeline } from '../lib/recordDates'
 import { formatTitleLine, titleBadgeClass, type DogTitle } from '../lib/qualificationTitles'
@@ -302,10 +302,21 @@ export default function DogProfile() {
 
                 return null
               })()}
-              <div className="mt-2.5">
+              <div className="mt-2.5 flex flex-wrap items-center gap-2">
                 <span className="inline-block rounded-full border border-old-money-200 bg-cream-100 px-4 py-1.5 text-sm font-semibold text-charcoal-700 dark:border-charcoal-600 dark:bg-charcoal-700 dark:text-charcoal-300">
                   {dog.breed}
                 </span>
+                {dog.pedigree_url && (
+                  <a
+                    href={dog.pedigree_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 rounded-full border border-old-money-200 bg-white px-3 py-1.5 text-xs font-semibold text-camel-700 transition-colors hover:border-camel-400 hover:bg-camel-50 dark:border-charcoal-600 dark:bg-charcoal-800 dark:text-camel-400 dark:hover:border-camel-600 dark:hover:bg-charcoal-700"
+                  >
+                    <ExternalLink className="h-3.5 w-3.5 shrink-0" aria-hidden />
+                    Breed Archive
+                  </a>
+                )}
               </div>
             </div>
             <button

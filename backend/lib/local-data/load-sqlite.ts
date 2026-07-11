@@ -187,6 +187,7 @@ export function loadLocalDataSqlite(): { db: Database.Database; stats: LocalData
   loadDogs(db);
   loadCalendarEvents(db);
   loadCompetitions(db);
+  loadDogs(db); // by-id wins over embedded competition dog stubs (pedigree_url, etc.)
   loadDonino(db);
 
   const stats: LocalDataStats = {

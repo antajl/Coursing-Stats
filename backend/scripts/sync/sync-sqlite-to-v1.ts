@@ -104,6 +104,7 @@ export function syncSqliteToV1(db: Database.Database): { competitions: number; d
       breed: d.breed,
       sex: d.sex,
       owner: d.owner,
+      pedigree_url: d.pedigree_url ?? null,
       competition_ids: compIds,
       competition_files: compIds.map((eid) => competitionFiles.get(eid)).filter(Boolean),
     };

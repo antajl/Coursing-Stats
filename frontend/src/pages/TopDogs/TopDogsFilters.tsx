@@ -1,10 +1,13 @@
-import { useMemo, useRef } from 'react'
-import FilterSelect from '../../components/FilterSelect'
+import { useMemo } from 'react'
 import PageToolbar from '../../components/toolbar/PageToolbar'
-import ToolbarOptionBar from '../../components/toolbar/ToolbarOptionBar'
+import ToolbarFiltersDropdown from '../../components/toolbar/ToolbarFiltersDropdown'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
 import ToolbarSegmentControl from '../../components/toolbar/ToolbarSegmentControl'
-import { TOOLBAR_NUMBER_INPUT } from '../../lib/toolbar'
+import {
+  TOOLBAR_FILTER_CHECKBOX_ROW,
+  TOOLBAR_FILTER_SECTION_LABEL,
+  TOOLBAR_NUMBER_INPUT,
+} from '../../lib/toolbar'
 import { buildTopDogsActiveFilterChips } from '../SpeedRecords/toolbarFilters'
 
 const RANKING_SEGMENTS = [
@@ -18,6 +21,7 @@ interface TopDogsFiltersProps {
   onSearchChange: (value: string) => void
   filterYear: string
   onYearChange: (value: string) => void
+  defaultYear: string
   yearValues: (string | number)[]
   filterBreed: string
   onBreedChange: (value: string) => void
@@ -29,14 +33,9 @@ interface TopDogsFiltersProps {
   filterSpeedFrom: string
   onSpeedFromChange: (value: string) => void
   onResetFilters: () => void
+  onResetPanelFilters: () => void
   activeTab: string
   onTabChange: (tab: string) => void
-  scoreSortBy: 'best_score' | 'best_judge_score' | 'avg_judge_score'
-  onScoreSortByChange: (value: 'best_score' | 'best_judge_score' | 'avg_judge_score') => void
-  placementSortBy: 'gold' | 'silver' | 'bronze' | 'total'
-  onPlacementSortByChange: (value: 'gold' | 'silver' | 'bronze' | 'total') => void
-  speedSortBy: 'best_speed' | 'avg_speed'
-  onSpeedSortByChange: (value: 'best_speed' | 'avg_speed') => void
   dropdownRef?: React.RefObject<HTMLDivElement>
 }
 
@@ -45,6 +44,7 @@ export default function TopDogsFilters({
   onSearchChange,
   filterYear,
   onYearChange,
+  defaultYear,
   yearValues,
   filterBreed,
   onBreedChange,
@@ -56,20 +56,27 @@ export default function TopDogsFilters({
   filterSpeedFrom,
   onSpeedFromChange,
   onResetFilters,
+  onResetPanelFilters,
   activeTab,
   onTabChange,
-  scoreSortBy,
-  onScoreSortByChange,
-  placementSortBy,
-  onPlacementSortByChange,
-  speedSortBy,
-  onSpeedSortByChange,
   dropdownRef,
 }: TopDogsFiltersProps) {
+  const sortedYears = useMemo(
+    () => [...yearValues].map(String).sort((a, b) => Number(b) - Number(a)),
+    [yearValues]
+  )
+
   const hasActiveFilters =
-    (filterYear && filterYear !== '2026') ||
+    filterYear !== defaultYear ||
     filterBreed ||
     searchQuery ||
+    filterMinStarts ||
+    (activeTab === 'score' && filterScoreFrom) ||
+    (activeTab === 'speed' && filterSpeedFrom)
+
+  const hasPanelFilters =
+    filterYear !== defaultYear ||
+    filterBreed ||
     filterMinStarts ||
     (activeTab === 'score' && filterScoreFrom) ||
     (activeTab === 'speed' && filterSpeedFrom)
@@ -84,6 +91,7 @@ export default function TopDogsFilters({
         filterScoreFrom,
         filterSpeedFrom,
         activeTab,
+        defaultYear,
         onSearchChange,
         onYearChange,
         onBreedChange,
@@ -105,107 +113,108 @@ export default function TopDogsFilters({
       onMinStartsChange,
       onScoreFromChange,
       onSpeedFromChange,
+      defaultYear,
     ]
   )
 
-  const sortBar =
-    activeTab === 'placement' ? (
-      <ToolbarOptionBar
-        label="Сортировка"
-        value={placementSortBy}
-        onChange={(v) => onPlacementSortByChange(v as typeof placementSortBy)}
-        options={[
-          { value: 'gold', label: 'Золото' },
-          { value: 'silver', label: 'Серебро' },
-          { value: 'bronze', label: 'Бронза' },
-          { value: 'total', label: 'Всего' },
-        ]}
-      />
-    ) : activeTab === 'score' ? (
-      <ToolbarOptionBar
-        label="Сортировка"
-        value={scoreSortBy}
-        onChange={(v) => onScoreSortByChange(v as typeof scoreSortBy)}
-        options={[
-          { value: 'best_score', label: 'Лучший результат' },
-          { value: 'best_judge_score', label: 'Лучшая оценка' },
-          { value: 'avg_judge_score', label: 'Средняя оценка' },
-        ]}
-      />
-    ) : (
-      <ToolbarOptionBar
-        label="Сортировка"
-        value={speedSortBy}
-        onChange={(v) => onSpeedSortByChange(v as typeof speedSortBy)}
-        options={[
-          { value: 'best_speed', label: 'Лучшая скорость' },
-          { value: 'avg_speed', label: 'Средняя скорость' },
-        ]}
-      />
-    )
+  const handleYearToggle = (year: string) => {
+    onYearChange(filterYear === year ? '' : year)
+  }
+
+  const handleBreedToggle = (breed: string) => {
+    onBreedChange(filterBreed === breed ? '' : breed)
+  }
 
   return (
     <div className="mb-4" ref={dropdownRef}>
       <PageToolbar
+        bare
         activeFilterChips={activeFilterChips}
         onClearAllFilters={hasActiveFilters ? onResetFilters : undefined}
-        bottomLeft={
-          <ToolbarSegmentControl
-            segments={RANKING_SEGMENTS}
-            value={activeTab}
-            onChange={onTabChange}
-            ariaLabel="Тип рейтинга"
-          />
-        }
-        bottomRight={sortBar}
         filters={
           <>
-            <ToolbarSearch value={searchQuery} onChange={onSearchChange} placeholder="Кличка, порода…" />
-            <FilterSelect
-              ariaLabel="Год"
-              value={filterYear}
-              onChange={onYearChange}
-              allLabel="Все года"
-              options={yearValues
-                .sort((a, b) => Number(b) - Number(a))
-                .map((y) => ({ value: String(y), label: String(y) }))}
-              className="w-[6.75rem] shrink-0"
+            <ToolbarSearch
+              value={searchQuery}
+              onChange={onSearchChange}
+              placeholder="Кличка, порода…"
+              className="!w-auto min-w-[200px] flex-1 max-w-lg"
             />
-            <FilterSelect
-              ariaLabel="Порода"
-              value={filterBreed}
-              onChange={onBreedChange}
-              allLabel="Все породы"
-              options={breedValues.map((b) => ({ value: b, label: b }))}
-              className="hidden w-[10.5rem] shrink-0 sm:block"
-            />
-            <input
-              type="number"
-              placeholder="Мин. старты"
-              value={filterMinStarts}
-              onChange={(e) => onMinStartsChange(e.target.value.replace(/[^0-9]/g, ''))}
-              className={`${TOOLBAR_NUMBER_INPUT} w-28`}
-            />
-            {activeTab === 'score' && (
-              <input
-                type="number"
-                step="0.1"
-                placeholder="Мин. очки"
-                value={filterScoreFrom}
-                onChange={(e) => onScoreFromChange(e.target.value.replace(/[^0-9.]/g, ''))}
-                className={`${TOOLBAR_NUMBER_INPUT} w-28`}
+            <ToolbarFiltersDropdown
+              active={hasPanelFilters}
+              onReset={onResetPanelFilters}
+              label="Фильтры"
+            >
+              <div>
+                <p className={TOOLBAR_FILTER_SECTION_LABEL}>Год</p>
+                <div className="max-h-36 space-y-0.5 overflow-y-auto">
+                  {sortedYears.map((year) => (
+                    <label key={year} className={TOOLBAR_FILTER_CHECKBOX_ROW}>
+                      <input
+                        type="checkbox"
+                        checked={filterYear === year}
+                        onChange={() => handleYearToggle(year)}
+                      />
+                      {year}
+                    </label>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <p className={TOOLBAR_FILTER_SECTION_LABEL}>Порода</p>
+                <div className="max-h-36 space-y-0.5 overflow-y-auto">
+                  {breedValues.map((breed) => (
+                    <label key={breed} className={TOOLBAR_FILTER_CHECKBOX_ROW}>
+                      <input
+                        type="checkbox"
+                        checked={filterBreed === breed}
+                        onChange={() => handleBreedToggle(breed)}
+                      />
+                      <span className="truncate">{breed}</span>
+                    </label>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <p className={TOOLBAR_FILTER_SECTION_LABEL}>Пороги</p>
+                <div className="space-y-2">
+                  <input
+                    type="number"
+                    placeholder="Мин. старты"
+                    value={filterMinStarts}
+                    onChange={(e) => onMinStartsChange(e.target.value.replace(/[^0-9]/g, ''))}
+                    className={`${TOOLBAR_NUMBER_INPUT} w-full`}
+                  />
+                  {activeTab === 'score' && (
+                    <input
+                      type="number"
+                      step="0.1"
+                      placeholder="Мин. очки"
+                      value={filterScoreFrom}
+                      onChange={(e) => onScoreFromChange(e.target.value.replace(/[^0-9.]/g, ''))}
+                      className={`${TOOLBAR_NUMBER_INPUT} w-full`}
+                    />
+                  )}
+                  {activeTab === 'speed' && (
+                    <input
+                      type="number"
+                      step="0.1"
+                      placeholder="Мин. скорость"
+                      value={filterSpeedFrom}
+                      onChange={(e) => onSpeedFromChange(e.target.value.replace(/[^0-9.]/g, ''))}
+                      className={`${TOOLBAR_NUMBER_INPUT} w-full`}
+                    />
+                  )}
+                </div>
+              </div>
+            </ToolbarFiltersDropdown>
+            <div className="ml-auto shrink-0">
+              <ToolbarSegmentControl
+                segments={RANKING_SEGMENTS}
+                value={activeTab}
+                onChange={onTabChange}
+                ariaLabel="Тип рейтинга"
               />
-            )}
-            {activeTab === 'speed' && (
-              <input
-                type="number"
-                step="0.1"
-                placeholder="Мин. скорость"
-                value={filterSpeedFrom}
-                onChange={(e) => onSpeedFromChange(e.target.value.replace(/[^0-9.]/g, ''))}
-                className={`${TOOLBAR_NUMBER_INPUT} w-32`}
-              />
-            )}
+            </div>
           </>
         }
       />

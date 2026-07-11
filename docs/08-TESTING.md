@@ -71,6 +71,7 @@ Workflow `.github/workflows/e2e.yml`:
 
 Workflow `.github/workflows/deploy-frontend.yml` (после `build-all-data`):
 - `npx vitest run backend/tests/static-indexes.test.ts` — индексы не пустые (рейтинг, судьи)
+- `npx vitest run backend/tests/breedarchive.test.ts` — маппинг пород, URL builder, exact match поиска (mock fetch)
 
 ### Добавление новых тестов
 

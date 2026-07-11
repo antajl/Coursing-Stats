@@ -44,6 +44,7 @@
     "sync-to-remote": "npx tsx backend/scripts/sync/sync-local-to-remote.ts --push",
     "update-current-year": "npx tsx backend/scripts/update/update-current-year.ts",
     "merge-dogs": "npx tsx backend/scripts/update/merge-dogs.ts",
+    "enrich-breedarchive-urls": "npx tsx backend/scripts/enrich/enrich-breedarchive-urls.ts",
     "fetch-speed-records": "npx tsx backend/scripts/speed/fetch-speed-records.ts",
     "test-parser": "npx tsx backend/scripts/test/test-parser.ts",
     "test-parser-fixtures": "npx tsx backend/scripts/test/test-parsers-fixtures.ts",

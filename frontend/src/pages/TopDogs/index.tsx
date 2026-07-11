@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { useSearchParams } from 'react-router-dom'
-import { useTopPlacement, useTopScore, useTopSpeed, useBreeds, useYears } from '../../hooks/useStaticData'
+import { useTopPlacement, useTopScore, useTopSpeed, useCompetingBreeds, useYears } from '../../hooks/useStaticData'
 import SkeletonLoader from '../../components/SkeletonLoader'
 import TopDogsFilters from './TopDogsFilters'
 import TopDogsTabs from './TopDogsTabs'
@@ -50,18 +50,9 @@ export default function TopDogs() {
   const [filterMinStarts, setFilterMinStarts] = useState(() => searchParams.get('minStarts') || '')
   const [filterScoreFrom, setFilterScoreFrom] = useState(() => searchParams.get('scoreFrom') || '')
   const [filterSpeedFrom, setFilterSpeedFrom] = useState(() => searchParams.get('speedFrom') || '')
-  const [scoreSortBy, setScoreSortBy] = useState<'best_score' | 'best_judge_score' | 'avg_judge_score'>(() =>
-    (searchParams.get('scoreSortBy') as 'best_score' | 'best_judge_score' | 'avg_judge_score') || 'best_score'
-  )
-  const [placementSortBy, setPlacementSortBy] = useState<'gold' | 'silver' | 'bronze' | 'total'>(() =>
-    (searchParams.get('placementSortBy') as 'gold' | 'silver' | 'bronze' | 'total') || 'gold'
-  )
-  const [speedSortBy, setSpeedSortBy] = useState<'best_speed' | 'avg_speed'>(() =>
-    (searchParams.get('speedSortBy') as 'best_speed' | 'avg_speed') || 'best_speed'
-  )
   const dropdownRef = useRef<HTMLDivElement>(null)
 
-  const { data: breedsData, isLoading: breedsLoading } = useBreeds()
+  const { data: breedsData, isLoading: breedsLoading } = useCompetingBreeds()
   const { data: yearsData, isLoading: yearsLoading } = useYears()
   const { data: topPlacementData, isLoading: placementLoading } = useTopPlacement(filterYear)
   const { data: topScoreData, isLoading: scoreLoading } = useTopScore(filterYear)
@@ -100,23 +91,30 @@ export default function TopDogs() {
   const handleResetFilters = () => {
     setFilterYear(CURRENT_SEASON)
     setFilterBreed('')
+    setSearchQuery('')
     setFilterMinStarts('')
     setFilterScoreFrom('')
     setFilterSpeedFrom('')
-    setScoreSortBy('best_score')
-    setPlacementSortBy('gold')
-    setSpeedSortBy('best_speed')
+  }
+
+  const handleResetPanelFilters = () => {
+    setFilterYear(CURRENT_SEASON)
+    setFilterBreed('')
+    setFilterMinStarts('')
+    setFilterScoreFrom('')
+    setFilterSpeedFrom('')
   }
 
   const showListSkeleton = isInitialLoad && loading
 
   return (
-    <div className={isStandalone ? 'p-4' : 'max-w-full mx-auto pb-2 sm:pb-4'}>
+    <div className={isStandalone ? 'px-4 pb-4' : 'max-w-full mx-auto pb-2 sm:pb-4'}>
       <TopDogsFilters
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
         filterYear={filterYear}
         onYearChange={setFilterYear}
+        defaultYear={CURRENT_SEASON}
         yearValues={yearValues}
         filterBreed={filterBreed}
         onBreedChange={setFilterBreed}
@@ -128,14 +126,9 @@ export default function TopDogs() {
         filterSpeedFrom={filterSpeedFrom}
         onSpeedFromChange={setFilterSpeedFrom}
         onResetFilters={handleResetFilters}
+        onResetPanelFilters={handleResetPanelFilters}
         activeTab={activeTab}
         onTabChange={handleTabChange}
-        scoreSortBy={scoreSortBy}
-        onScoreSortByChange={setScoreSortBy}
-        placementSortBy={placementSortBy}
-        onPlacementSortByChange={setPlacementSortBy}
-        speedSortBy={speedSortBy}
-        onSpeedSortByChange={setSpeedSortBy}
         dropdownRef={dropdownRef}
       />
 

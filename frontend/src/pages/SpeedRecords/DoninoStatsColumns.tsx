@@ -1,9 +1,8 @@
-import { useMemo, useState } from 'react'
-import ToolbarSegmentControl from '../../components/toolbar/ToolbarSegmentControl'
+import { useMemo, useState, useEffect } from 'react'
 import DogSearchCard from './stats/DogSearchCard'
 import DoninoGroupCardList from './stats/DoninoGroupCardList'
 import DoninoStatsSummary from './stats/DoninoStatsSummary'
-import { GROUP_BY_OPTIONS, type GroupBy } from './stats/constants'
+import type { GroupBy } from './stats/constants'
 import { CollapsibleDistributionChart } from './stats/statsUi'
 import {
   buildCoursingGroupedStats,
@@ -34,7 +33,6 @@ interface DoninoStatsColumnsProps {
   filterMinTime: string
   filterMaxTime: string
   statsGroupBy: GroupBy
-  onStatsGroupByChange: (value: GroupBy) => void
 }
 
 const SPEED_RANGES = [
@@ -68,9 +66,12 @@ export default function DoninoStatsColumns({
   filterMinTime,
   filterMaxTime,
   statsGroupBy,
-  onStatsGroupByChange,
 }: DoninoStatsColumnsProps) {
   const [expandedKey, setExpandedKey] = useState<string | null>(null)
+
+  useEffect(() => {
+    setExpandedKey(null)
+  }, [statsGroupBy])
 
   const sexByDog = useMemo(() => buildSexByDogMap(speedRecords), [speedRecords])
 
@@ -145,11 +146,6 @@ export default function DoninoStatsColumns({
         })()
       : null
 
-  const handleGroupByChange = (value: string) => {
-    setExpandedKey(null)
-    onStatsGroupByChange(value as GroupBy)
-  }
-
   const handleToggleGroup = (key: string) => {
     setExpandedKey((prev) => (prev === key ? null : key))
   }
@@ -166,15 +162,6 @@ export default function DoninoStatsColumns({
           coursingRank={coursingRank}
         />
       )}
-
-      <div>
-        <ToolbarSegmentControl
-          segments={GROUP_BY_OPTIONS.map((o) => ({ id: o.value, label: o.label }))}
-          value={statsGroupBy}
-          onChange={handleGroupByChange}
-          ariaLabel="Группировка статистики"
-        />
-      </div>
 
       <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-2 lg:gap-8">
         <section className="min-w-0">

@@ -1,6 +1,6 @@
 # Документация по рекордам Донино
 
-> **ИИ:** карта задач — [README.md](README.md). Файлы данных — [DATA.md](DATA.md) (`donino/`).
+> **ИИ:** карта задач — [README.md](README.md). Файлы данных — [03-DATA.md](03-DATA.md) (`donino/`).
 
 ## Два вида замеров (не пересекаются)
 
@@ -175,7 +175,7 @@ npx tsx backend/scripts/speed/fetch-coursing-records.ts --remote
 
 **Маршрут:** `/speed-records` — одна страница, **две колонки** (Замер | Бега 350 м). Отдельных вкладок дисциплин нет.
 
-**Переключатель режима** (над тулбаром): **Записи | Статистика** — URL `?view=stats` (по умолчанию записи).
+**Переключатель режима** (в тулбаре справа): **Записи | Статистика** — URL `?view=stats` (по умолчанию записи). Компонент `ViewToggle` в `DoninoPageToolbar`.
 
 | Компонент | limit API | Назначение |
 |-----------|----------:|------------|
@@ -184,7 +184,7 @@ npx tsx backend/scripts/speed/fetch-coursing-records.ts --remote
 | `DoninoStatsColumns.tsx` | — | Статистика: сводка, свёрнутые графики, карточки групп |
 | `useDogSpeedRecords` | 1000 | Профиль собаки `/dog/:id` |
 
-**Тулбар** (`DoninoPageToolbar.tsx`): `PageToolbar` + `ViewToggle`; фильтры год / порода / пол; диапазоны км/ч и сек (в статистике); Excel — оба листа (`exportDoninoToExcel`).
+**Тулбар** (`DoninoPageToolbar.tsx`): `PageToolbar bare` + `ToolbarFiltersDropdown` (год / порода / пол — чекбоксы; в stats — группировка и диапазоны); `ViewToggle` справа; Excel — выпадающий экспорт (`exportDoninoToExcel`).
 
 **Фильтры по колонкам (важно):**
 - **Пол** — только колонка «Замер» (подпись под тулбаром).
@@ -206,7 +206,7 @@ npx tsx backend/scripts/speed/fetch-coursing-records.ts --remote
 
 | Элемент | Поведение |
 |---------|-----------|
-| Группировка | Одна панель **Порода | Пол | Год** над обеими колонками — URL `?groupBy=` (legacy: `speedGroupBy` / `coursingGroupBy`) |
+| Группировка | В панели «Фильтры» тулбара (`FilterSelect` группировки) — URL `?groupBy=` (legacy: `speedGroupBy` / `coursingGroupBy`). Не отдельная строка над колонками |
 | Шапка колонки | `DoninoStatsSummary` — плашка + строка метрик в одном блоке (замеров/зачётов, среднее, лучшее) |
 | Графики | `CollapsibleDistributionChart` в `stats/statsUi.tsx` — свёрнуты по умолчанию |
 | Срезы | `DoninoGroupCard` + `DoninoGroupCardList` — карточки групп вместо таблицы; раскрытие синхронно в обеих колонках |

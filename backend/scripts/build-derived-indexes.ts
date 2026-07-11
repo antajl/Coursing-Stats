@@ -9,6 +9,7 @@ import { fileURLToPath } from 'node:url';
 import Database from 'better-sqlite3';
 import { loadBetterSqliteFromSnapshot, SNAPSHOT_PATH } from '../lib/local-data/snapshot';
 import { loadLocalDataSqlite } from '../lib/local-data/load-sqlite';
+import { dataV1Path, listJsonFiles } from '../lib/local-data/paths';
 import {
   aggregateJudgeStats,
   formatJudgesData,
@@ -500,15 +501,40 @@ function buildRacingStats(medalRows: RacingMedalRow[], speedRows: RacingSpeedRow
   };
 }
 
+type DogProfileMeta = {
+  id: number;
+  name_lat: string | null;
+  name_ru: string | null;
+  breed: string | null;
+  sex: string | null;
+  owner: string | null;
+  pedigree_url: string | null;
+};
+
+/** Canonical dog fields from data/v1/dogs/by-id (survives sqlite UNIQUE(name_lat, breed) dedup). */
+function loadDogMetadataFromById(): Map<number, DogProfileMeta> {
+  const map = new Map<number, DogProfileMeta>();
+  for (const file of listJsonFiles(dataV1Path('dogs/by-id'))) {
+    const data = JSON.parse(fs.readFileSync(file, 'utf-8')) as Record<string, unknown>;
+    const id = data.id;
+    if (typeof id !== 'number') continue;
+    map.set(id, {
+      id,
+      name_lat: (data.name_lat as string | null | undefined) ?? null,
+      name_ru: (data.name_ru as string | null | undefined) ?? null,
+      breed: (data.breed as string | null | undefined) ?? null,
+      sex: (data.sex as string | null | undefined) ?? null,
+      owner: (data.owner as string | null | undefined) ?? null,
+      pedigree_url: (data.pedigree_url as string | null | undefined) ?? null,
+    });
+  }
+  return map;
+}
+
 function buildDogProfiles(db: Database.Database) {
-  const dogs = db.prepare('SELECT id, name_lat, name_ru, breed, sex, owner FROM dogs ORDER BY id').all() as {
-    id: number;
-    name_lat: string | null;
-    name_ru: string | null;
-    breed: string | null;
-    sex: string | null;
-    owner: string | null;
-  }[];
+  const dogs = db.prepare('SELECT id, name_lat, name_ru, breed, sex, owner, pedigree_url FROM dogs ORDER BY id').all() as DogProfileMeta[];
+  const dogsById = new Map(dogs.map((dog) => [dog.id, dog]));
+  const metadataById = loadDogMetadataFromById();
 
   const coursingRows = db
     .prepare(
@@ -573,12 +599,33 @@ function buildDogProfiles(db: Database.Database) {
   const outDir = path.join(INDEXES_DIR, 'dog-profiles');
   fs.mkdirSync(outDir, { recursive: true });
 
-  for (const dog of dogs) {
-    const coursing_stats = buildCoursingStats(coursingByDog.get(dog.id) ?? []);
-    const racing_stats = buildRacingStats(racingMedalsByDog.get(dog.id) ?? [], racingSpeedByDog.get(dog.id) ?? []);
-    const titles = aggregateQualificationTitles(qualificationsByDog.get(dog.id) ?? []);
+  const allDogIds = new Set<number>([
+    ...metadataById.keys(),
+    ...dogsById.keys(),
+    ...coursingByDog.keys(),
+    ...racingMedalsByDog.keys(),
+    ...competitionsByDog.keys(),
+  ]);
+  const sortedDogIds = [...allDogIds].sort((a, b) => a - b);
 
-    const competitions = (competitionsByDog.get(dog.id) ?? []).map((row) => ({
+  for (const dogId of sortedDogIds) {
+    const fromFile = metadataById.get(dogId);
+    const fromDb = dogsById.get(dogId);
+    const dog: DogProfileMeta = {
+      id: dogId,
+      name_lat: fromFile?.name_lat ?? fromDb?.name_lat ?? null,
+      name_ru: fromFile?.name_ru ?? fromDb?.name_ru ?? null,
+      breed: fromFile?.breed ?? fromDb?.breed ?? null,
+      sex: fromFile?.sex ?? fromDb?.sex ?? null,
+      owner: fromFile?.owner ?? fromDb?.owner ?? null,
+      pedigree_url: fromFile?.pedigree_url ?? fromDb?.pedigree_url ?? null,
+    };
+
+    const coursing_stats = buildCoursingStats(coursingByDog.get(dogId) ?? []);
+    const racing_stats = buildRacingStats(racingMedalsByDog.get(dogId) ?? [], racingSpeedByDog.get(dogId) ?? []);
+    const titles = aggregateQualificationTitles(qualificationsByDog.get(dogId) ?? []);
+
+    const competitions = (competitionsByDog.get(dogId) ?? []).map((row) => ({
       event_id: row.event_id,
       date_start: row.date_start,
       date_end: row.date_end,
@@ -601,6 +648,7 @@ function buildDogProfiles(db: Database.Database) {
         breed: dog.breed,
         sex: dog.sex,
         owner: dog.owner,
+        pedigree_url: dog.pedigree_url,
         coursing_stats,
         racing_stats,
         titles,
@@ -608,10 +656,17 @@ function buildDogProfiles(db: Database.Database) {
       competitions,
     };
 
-    fs.writeFileSync(path.join(outDir, `${dog.id}.json`), JSON.stringify(payload), 'utf-8');
+    fs.writeFileSync(path.join(outDir, `${dogId}.json`), JSON.stringify(payload), 'utf-8');
   }
 
-  console.log(`  → dog-profiles/ (${dogs.length} files)`);
+  const keepIds = new Set(sortedDogIds.map(String));
+  for (const entry of fs.readdirSync(outDir)) {
+    if (!entry.endsWith('.json')) continue;
+    const id = entry.slice(0, -'.json'.length);
+    if (!keepIds.has(id)) fs.unlinkSync(path.join(outDir, entry));
+  }
+
+  console.log(`  → dog-profiles/ (${sortedDogIds.length} files)`);
 }
 
 // ── Sitemap ──────────────────────────────────────────────────────────────

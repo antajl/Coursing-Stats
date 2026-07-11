@@ -1,0 +1,164 @@
+# Operations — Runbook
+
+Единая точка входа: локальная разработка, сборка данных, деплой, диагностика «локально ок — на проде нет».
+
+**Канон по данным:** [`03-DATA.md`](03-DATA.md) · **Симптомы:** [`16-TROUBLESHOOTING.md`](16-TROUBLESHOOTING.md)
+
+---
+
+## Быстрый старт
+
+```bash
+npm install && cd frontend && npm install && cd ..
+npm run dev                    # :5173 + admin API :8787
+```
+
+Первый раз без `data/v1/`: `npm run export-local-data -- --local`
+
+Подробнее: [`01-GETTING-STARTED.md`](01-GETTING-STARTED.md)
+
+---
+
+## Ежедневный workflow
+
+```
+1. npm run dev
+2. Правки (админка / файлы data/v1/ / код)
+3. npm run build-all-data          # обязательно после правок data/v1/
+4. Проверка на http://localhost:5173
+5. git commit && git push main     # только по просьбе пользователя
+   → CI: build-all-data → Pages deploy
+```
+
+---
+
+## Перед push (чеклист)
+
+```bash
+npm run build-data-snapshot        # в логе: results > 0
+npm run build-all-data             # не падает; индексы не пустые
+npx vitest run backend/tests/static-indexes.test.ts
+```
+
+Если `results: 0` или `top-placement-all.json` с `"count": 0` — **не пушить** до исправления. См. «Пустой рейтинг на проде» ниже.
+
+---
+
+## Деплой
+
+| Что | Как |
+|-----|-----|
+| Прод-сайт | Push в `main` → `.github/workflows/deploy-frontend.yml` |
+| Хостинг | Cloudflare Pages `coursingstats` |
+| Данные на CDN | `frontend/public/data/v1/` (генерируется CI, не в git) |
+| Worker | **Не деплоится** в CI (legacy) |
+| Donino cron | `update-speed-records.yml` — 4×/день |
+
+Windows: `scripts/deploy-to-github.bat`
+
+Подробнее: [`04-DEVELOPMENT.md`](04-DEVELOPMENT.md) → Deployment
+
+---
+
+## build-all-data
+
+```bash
+npm run build-all-data
+```
+
+- Пересобирает `data/v1/indexes/`, sitemap
+- CI запускает при каждом deploy
+- **Fatal**, если `top-placement-all` или `judges-summary` пустые
+
+Skill (Cursor): `.cursor/skills/coursing-stats-dev/data-build-pipeline.md`  
+Skill (Devin): `.devin/skills/coursing-stats-dev/SKILL.md`
+
+---
+
+## Breed Archive (pedigree_url)
+
+```bash
+npm run enrich-breedarchive-urls              # все без ссылки
+npm run enrich-breedarchive-urls -- --dry-run
+npm run enrich-breedarchive-urls -- --dog-id 5652
+npm run build-all-data                        # обязательно
+```
+
+Прод показывает ссылку только если:
+1. `pedigree_url` в `indexes/dog-profiles/{id}.json`
+2. Задеплоены фронт (`DogProfile.tsx`) и данные
+
+Канон: [`03-DATA.md`](03-DATA.md) → «Breed Archive и pedigree_url»
+
+---
+
+## Пустой рейтинг / судьи на проде
+
+### Симптом
+Локально рейтинг и судьи есть; на **coursing-stats.ru** — пусто. CDN может отдавать `200` с `"count": 0`.
+
+### Быстрая диагностика
+
+```bash
+# Локально
+cat data/v1/indexes/top-placement-all.json | head -c 200
+cat data/v1/indexes/judges-summary.json | head -c 200
+
+npm run build-data-snapshot    # results должно быть > 0
+npm run build-all-data
+npx vitest run backend/tests/static-indexes.test.ts
+```
+
+На проде (браузер/curl):  
+`https://coursing-stats.ru/data/v1/indexes/top-placement-all.json` — поле `count` > 0.
+
+### Типичная причина
+CI `build-all-data` собрал пустые indexes (часто `loadCompetitions()` не загрузил `results[]` из `competitions/*.json`).
+
+### Решение
+1. Исправить pipeline (`load-sqlite.ts`, см. [`19-HISTORY.md`](19-HISTORY.md) 2026-07-09)
+2. Локально `build-all-data` + тесты
+3. Push с корректными `data/v1/` и кодом
+
+**Полная процедура:** [`03-DATA.md`](03-DATA.md) → «Диагностика: локально есть данные, на проде пусто»
+
+---
+
+## Локально ок, на проде старый UI / фильтры
+
+- Проверить, что изменения **закоммичены и запушены**
+- Фронт деплоится отдельно от локального `npm run dev`
+- Hard refresh / инкognito (кэш CDN)
+
+---
+
+## Импорт из remote D1 (редко)
+
+```bash
+npm run sync-from-remote
+npm run export-local-data -- --local
+npm run build-all-data
+```
+
+Подробнее: [`13-DATABASE-WORKFLOW.md`](13-DATABASE-WORKFLOW.md)
+
+---
+
+## Бэкап D1 / архив
+
+```bash
+npm run export-archive
+```
+
+Снимки: `data/archive/snapshots/`. История миграции: [`archive/02-MIGRATION-TO-STATIC-DATA.md`](archive/02-MIGRATION-TO-STATIC-DATA.md)
+
+---
+
+## Связанные документы
+
+| Задача | Документ |
+|--------|----------|
+| npm-скрипты, backend scripts | [`04-DEVELOPMENT.md`](04-DEVELOPMENT.md) |
+| Админка | [`17-ADMIN-WORKFLOW.md`](17-ADMIN-WORKFLOW.md) |
+| Парсеры | [`14-PARSING-RULES.md`](14-PARSING-RULES.md) |
+| Тесты | [`08-TESTING.md`](08-TESTING.md) |

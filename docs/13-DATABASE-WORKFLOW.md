@@ -216,7 +216,21 @@ npm run sync-to-remote
 
 **Локальная разработка (обычная):** `npm run dev` → `data/v1/` на диске. D1: `sync-from-remote` → `export-local-data` при необходимости импорта.
 
-**Файловый бэкап:** `npm run export-archive` — см. `DATA-ARCHIVE.md`.
+### Enrich: Breed Archive (`pedigree_url`)
+
+**D1 не нужен.** Скрипт пишет напрямую в `data/v1/dogs/by-id/` и синхронизирует `by-key/`:
+
+```bash
+npm run enrich-breedarchive-urls
+npm run build-all-data
+git commit   # dogs/ + indexes/dog-profiles/
+```
+
+Подробно: [`03-DATA.md`](03-DATA.md) → «Breed Archive и pedigree_url». Changelog: [`19-CHANGELOG.md`](19-CHANGELOG.md) (2026-07-11).
+
+**Файлы:** `backend/lib/breedarchive.ts`, `backend/scripts/enrich/enrich-breedarchive-urls.ts`.
+
+**Файловый бэкап:** `npm run export-archive` — см. [`03-DATA.md`](03-DATA.md), [`archive/02-MIGRATION-TO-STATIC-DATA.md`](archive/02-MIGRATION-TO-STATIC-DATA.md).
 
 **Таблица `judges`:** на remote **отсутствует**; статистика судей агрегируется из `events.judges` и `results.raw_scores`. Отдельная materialized-таблица — в планах (`FUTURE-PLANS.md`).
 

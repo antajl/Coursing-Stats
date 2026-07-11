@@ -144,6 +144,7 @@ export function buildTopDogsActiveFilterChips(
   filterScoreFrom: string,
   filterSpeedFrom: string,
   activeTab: string,
+  defaultYear: string,
   onSearchChange: (value: string) => void,
   onYearChange: (value: string) => void,
   onBreedChange: (value: string) => void,
@@ -156,8 +157,10 @@ export function buildTopDogsActiveFilterChips(
   if (searchQuery.trim()) {
     chips.push({ key: 'search', label: `«${searchQuery.trim()}»`, onRemove: () => onSearchChange('') })
   }
-  if (filterYear && filterYear !== '2026') {
-    chips.push({ key: 'year', label: filterYear, onRemove: () => onYearChange('2026') })
+  if (filterYear === '') {
+    chips.push({ key: 'year', label: 'Все годы', onRemove: () => onYearChange(defaultYear) })
+  } else if (filterYear !== defaultYear) {
+    chips.push({ key: 'year', label: filterYear, onRemove: () => onYearChange(defaultYear) })
   }
   if (filterBreed) {
     chips.push({ key: 'breed', label: filterBreed, onRemove: () => onBreedChange('') })

@@ -2,7 +2,7 @@
 
 Каноническое хранилище для сайта. **Публичный прод** читает эти файлы с CDN (`/data/v1/`).
 
-**Экспорт из D1:** `npm run export-local-data -- --local` (см. `docs/DATA.md`).  
+**Экспорт из D1:** `npm run export-local-data -- --local` (см. [docs/03-DATA.md](../../docs/03-DATA.md)).  
 **Пересборка индексов:** `npm run build-all-data`.  
 **Локальный dev:** `npm run dev` — Vite отдаёт `/data/v1/` с диска; админка на `:8787`.
 

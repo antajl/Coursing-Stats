@@ -1,8 +1,24 @@
 # Development — Разработка
 
-> **ИИ:** начни с [README.md](README.md) → [AI-GUIDE.md](AI-GUIDE.md) → [DATA.md](DATA.md). Этот файл — фронтенд, скрипты, деплой.
+> **ИИ:** [README.md](README.md) → [00-AI-GUIDE.md](00-AI-GUIDE.md) → [03-DATA.md](03-DATA.md). **UI и маршруты:** [04-FRONTEND.md](04-FRONTEND.md).
 
-Документация по разработке Coursing Stats.
+Документация по разработке: backend scripts, npm, тесты, деплой.
+
+## Содержание
+
+- [File Structure](#file-structure)
+- [Backend Scripts](#backend-scripts)
+- [NPM Scripts](#npm-scripts)
+- [Local Development](#local-development)
+- [Testing](#testing)
+- [Tools and Libraries](#tools-and-libraries)
+- [Best Practices](#best-practices--лучшие-практики)
+- [Deployment](#deployment--деплой-и-инфраструктура)
+- [Отладка парсеров с фикстурами](#отладка-парсеров-с-фикстурами)
+
+**Frontend map, PageToolbar, мобильная вёрстка:** [`04-FRONTEND.md`](04-FRONTEND.md)
+
+---
 
 ## File Structure
 
@@ -315,10 +331,8 @@ frontend/
 │   └── deploy-to-github.bat
 ├── assets/                    # Static assets
 │   └── logo.svg (renamed from 2.svg)
-└── .devin/                    # Devin AI agent configuration
-    ├── rules/                 # Rules for Devin (coursing-stats-core.mdc, coursing-stats-parsers.mdc)
-    ├── skills/                # Skills for Devin (coursing-stats-dev/, coursing-stats-parsers/)
-    └── workflows/             # Workflows for Devin (review.md)
+├── .devin/                    # Devin / Cascade: rules, skills, workflows
+└── .cursor/                   # Cursor: rules, skills
 ```
 
 ---
@@ -354,6 +368,7 @@ npm run generate-favicon         # favicon.ico из favicon.svg
 npm run sync-to-remote         # Full sync local D1 → remote
 npm run update-current-year    # Update current year events
 npm run merge-dogs             # Merge duplicate dogs
+npm run enrich-breedarchive-urls  # Заполнить pedigree_url из breedarchive.com → dogs/by-id
 npm run fetch-speed-records    # Fetch speed records
 npm run test-parser            # Synthetic parser tests (v1)
 npm run test-parser-fixtures   # v2 modular parsers on real HTML fixtures
@@ -432,7 +447,7 @@ npm run dev:remote
 npm run export-archive
 ```
 
-См. `DATA-ARCHIVE.md`.
+См. [`03-DATA.md`](03-DATA.md) и [`archive/02-MIGRATION-TO-STATIC-DATA.md`](archive/02-MIGRATION-TO-STATIC-DATA.md).
 
 ### React Query (frontend)
 
@@ -442,7 +457,7 @@ npm run export-archive
 
 ## Testing
 
-Подробно: **`TESTING.md`**.
+Подробно: [`08-TESTING.md`](08-TESTING.md).
 
 ### Parser Testing
 
@@ -475,7 +490,7 @@ npm run test:e2e                 # поднимает npm run dev автомат
 npm run test:e2e:ui              # интерактивный UI
 ```
 
-Список spec-файлов — в `TESTING.md`.
+Список spec-файлов — в [`08-TESTING.md`](08-TESTING.md).
 
 In-process Worker tests planned: **vitest@4** + **@cloudflare/vitest-pool-workers**.
 
@@ -483,128 +498,9 @@ In-process Worker tests planned: **vitest@4** + **@cloudflare/vitest-pool-worker
 
 ---
 
-## Code Splitting
+## Frontend (UI)
 
-### Статус (2026-07): в процессе, основное сделано
-
-- ✅ `AppRoutes.tsx` — все top-level страницы через `React.lazy()` + `Suspense`
-- ✅ `Competitions.tsx` — вкладки Events / TopDogs / Judges (статический import, mount по `activeTab`)
-- ✅ `Nav.tsx` вынесен из `App.tsx`
-- ✅ `vite.config.ts` — `manualChunks` (vendor-react, vendor-router, vendor-query, vendor-xlsx, …)
-Подробнее о маршрутах: см. раздел «Frontend map — навигация для ИИ-агентов» в этом файле
-
----
-
-## PageToolbar — единый паттерн фильтров (2026-07)
-
-**Файлы:** `frontend/src/components/toolbar/`, стили в `frontend/src/lib/toolbar.ts`
-
-| Компонент | Назначение |
-|-----------|------------|
-| `PageToolbar` | Обёртка: строка фильтров, активные чипы, нижний ряд (сегменты / сортировка) |
-| `ToolbarSegmentControl` | Переключатель вкладок (медали/очки/скорость, замер/статистика, …) |
-| `ToolbarSearch` | Поиск в тулбаре |
-| `ToolbarOptionBar` | Сортировка чипами |
-| `ToolbarActiveFilters` | Сбрасываемые чипы активных фильтров |
-| `RecordsListToolbar` | Тулбар списка рекордов (скорость / coursing) |
-| `MultiFilterDropdown` | Мультивыбор в dropdown; обёртка `w-fit shrink-0` (не растягивать строку) |
-
-**Где используется:** `TopDogsFilters`, `Judges/index`, `Events/index.tsx` (календарь), `DoninoPageToolbar` (рекорды Донино), главная (сегменты топа).
-
-Легаси (не в основном flow): `SpeedTableTab`, `CoursingTableTab`, `SpeedStatsView`, `CoursingStatsView`.
-
-**`FilterSelect`:** prop `className` — только на обёртке `<div>`; у `<select>` — `w-full min-w-0`. Для породы/года задавать фиксированную ширину обёртки (`w-[10.5rem]`, `w-[6.75rem]`), иначе нативный select растягивается по самой длинной опции.
-
----
-
-## Главная страница (`Home.tsx`)
-
-- **Hero:** `hero-dashboard` — intro + ближайшие события (`HomeEventRow`)
-- **StatsStrip:** кликабельные чипы → календарь / рейтинг / справочник
-- **Топ сезона:** `ToolbarSegmentControl` + подиум (`podium-preview`, `PodiumRankMark`, `MedalTally nowrap`)
-- **Донино:** две колонки (`donino-home-columns`) — замер и бега 350 м; строки `DoninoHomeRecordRow`
-- **Стили:** часть в `frontend/src/index.css` (`.hero-dashboard`, `.pod-card`, `.donino-home-*`, `.owner-crown-name`)
-
----
-
-## Профили собак — соревнования vs Донино
-
-| | `/dog/:id` | `/donino-dog/:name/:breed` |
-|---|------------|----------------------------|
-| Данные | `dogs` + `results` | `speed_records` + `coursing_records` |
-| Шапка | Имя, титулы-чипы, экспорт PNG | Имя, порода, назад |
-| Дисциплины на странице | Курсинг/БЗМП, бега procoursing | Замер (warm-blue), бега 350 м (forest) |
-| История бегов 350 м | `expandCoursingTimeline(coursingRecords)` | то же |
-| Процентиль в UI | убран из блоков Донино | убран |
-
-**Важно:** у одной собаки может быть много замеров скорости и один забег 350 м в БД — это нормально (разные источники). История бегов показывает все точки из `history` JSON + текущая строка.
-
-**Owner marks:** `frontend/src/lib/ownerMarks.ts` — список кличек для короны; не связывает Донино и соревнования в D1. Редактировать только по явной просьбе владельца сайта.
-
----
-
-## Мобильная адаптивность
-
-### Обзор
-Сайт полностью адаптирован для мобильных устройств с использованием TailwindCSS брейкпоинтов (`md:`).
-
-### Реализация
-
-**App.tsx:**
-- Мобильная шапка с лого слева и кнопкой меню справа
-- Контент на всю ширину экрана на мобильных
-- Убран футер
-
-**Страницы:**
-
-**Events/index.tsx:**
-- `PageToolbar` — поиск, год, дисциплина, вид соревнования; пресеты; легенда
-- Список `EventListRow` (не таблица); группировка по месяцам
-- URL sync через `setSearchParams(prev => …)` — сохраняет `?tab=` и прочие параметры hub
-
-**TopDogs/index.tsx:**
-- Тулбар виден при первой загрузке; скелетон только под списком
-
-**SpeedRecords/index.tsx:**
-- Переключатель **Записи | Статистика** над тулбаром (`ViewToggle`)
-- Две колонки: Замер | Бега 350 м (на всех ширинах — стек на мобиле)
-- Записи: `DoninoListRecordRow`, infinite scroll; пол — только левая колонка
-- Статистика: общая группировка, карточки групп, свёрнутые графики
-
-**DogStatsTable.tsx (TopDogs):**
-- Карточки с кличкой и статистикой в зависимости от типа (места/очки/скорость)
-- Медали в заголовках таблицы; в ячейках — числа (grid-cols-4 на мобильных)
-
-**DogProfile.tsx:**
-- Уменьшенные отступы и размеры на мобильных
-- Стрелочка "←" скрыта на мобильных
-
-**Competitions.tsx:**
-- `ToolbarSegmentControl` — Календарь | Рейтинг | Судьи
-- Вкладки монтируются только при выборе (`activeTab === 'ranking' && …`); статический import (без nested lazy)
-
-**Judges/index.tsx:**
-- Адалтивные фильтры и таблицы с overflow-x-auto
-- Статистика по породам и критериям: карточки на мобильных, таблицы на десктопе
-- Стрелочки "←" скрыты на мобильных
-
-**Events/EventResults.jsx:**
-- Детальные оценки: карточки для каждого забега на мобильных
-- Причины отстранения под именем на мобильных, справа на десктопе
-- Стрелочка "←" скрыта на мобильных
-
-**DogTooltip.jsx:**
-- Ширина 320px на мобильных, 440px на десктопе
-
-**FiltersDropdown.jsx:**
-- Ширина 320px на мобильных, 600px на десктопе
-
-### Технические детали
-
-- Все изменения используют Tailwind брейкпоинты (`md:`) для сохранения десктопного вида
-- Таблицы на мобильных заменены на карточки с `md:hidden` / `hidden md:block`
-- Фильтры используют `flex-wrap` и `min-w-*` для адаптивности
-- Контент использует `w-full md:max-w-7xl` и `px-2 sm:px-4 md:px-6 lg:px-8`
+Карта страниц, компонентов, PageToolbar, мобильная вёрстка — **[`04-FRONTEND.md`](04-FRONTEND.md)**.
 
 ---
 
@@ -721,6 +617,8 @@ hover:bg-cream-50 dark:hover:bg-charcoal-700
 
 ## См. также
 
+- [04-FRONTEND.md](04-FRONTEND.md) — UI, маршруты, PageToolbar
+- [20-OPERATIONS.md](20-OPERATIONS.md) — runbook деплоя и диагностики
 - [14-PARSING-RULES.md](14-PARSING-RULES.md) — Правила парсинга данных
 - [15-PARSING-IMPLEMENTATION.md](15-PARSING-IMPLEMENTATION.md) — Детали парсеров
 - [12-DATABASE-SCHEMA.md](12-DATABASE-SCHEMA.md) — Схема БД
@@ -770,7 +668,7 @@ hover:bg-cream-50 dark:hover:bg-charcoal-700
 
 ### Cloudflare Worker (legacy)
 
-Код в `backend/src/worker.ts` — для `npm run dev:d1`. **Не деплоится в CI** с 2026-07-07. См. `docs/DATA.md`.
+Код в `backend/src/worker.ts` — для `npm run dev:d1`. **Не деплоится в CI** с 2026-07-07. См. [`03-DATA.md`](03-DATA.md).
 
 ### SPA Routing
 
@@ -825,136 +723,9 @@ npx wrangler d1 execute pc-db --command="EXPLAIN QUERY PLAN SELECT * FROM events
 
 ---
 
-## Frontend Map — Навигация для ИИ-агентов
+## Frontend Map
 
-### Shell и маршрутизация
-
-| Файл | Роль |
-|------|------|
-| `frontend/src/App.tsx` | Shell: `QueryProvider`, `Router`, `Nav`, `AppRoutes`, skip-link, layout |
-| `frontend/src/AppRoutes.tsx` | Все top-level маршруты через `React.lazy()` + `Suspense` + `PageLoader` |
-| `frontend/src/components/Nav.tsx` | Шапка: `.nav-glass`, лого слева / ссылки по центру экрана / тема+источники справа, мобильное меню |
-| `frontend/src/components/ThemeToggle.tsx` | Переключатель темы; по умолчанию light |
-| `frontend/vite.config.ts` | Vite (TypeScript); `manualChunks` для vendor и code-splitting |
-
-**Нет shadcn/ui** — UI в `frontend/src/components/ui/` (`Button`, `Card`, `Badge` и др.).
-
-### Маршруты (`AppRoutes.tsx`)
-
-| Path | Компонент | Описание |
-|------|-----------|----------|
-| `/` | `Home.tsx` | Лендинг: hero, счётчики, топ сезона, рекорды Донино |
-| `/competitions` | `Competitions.tsx` | Hub «Статистика»: рейтинг и судьи (procoursing.ru) |
-| `/top` | `TopDogs/index.tsx` | Прямой доступ к рейтингу (`?rankingTab=score` \| `speed`) |
-| `/dog/:id` | `DogProfile.tsx` | Профиль собаки из БД соревнований |
-| `/event/:id` | — | Редирект → `/competitions?tab=ranking` |
-| `/admin/calendar` | `Admin/AdminCalendar.tsx` | Календарь (**только dev**) |
-| `/admin/event/:id` | `Events/EventResults/` | Протокол события (**только dev**) |
-| `/speed-records` | `SpeedRecords/index.tsx` | Рекорды Донино (отдельный источник данных) |
-| `/donino-dog/:name/:breed` | `DoninoDogProfile.tsx` | Профиль собаки из рекордов Донино |
-| `/judges` | `Judges/index.tsx` | Список судей |
-| `/judges/:judgeId` | `Judges/JudgeDetail.tsx` | Детальная статистика судьи |
-
-### Competitions = tab hub
-
-`Competitions.tsx` — контейнер вкладок раздела «Статистика» (статический import дочерних страниц):
-
-| Вкладка (`?tab=`) | Компонент | Содержимое |
-|-------------------|-----------|------------|
-| `ranking` (default) | `TopDogs/index.tsx` | Рейтинг: места / очки / скорость |
-| `judges` | `Judges/index.tsx` | Судьи |
-
-Календарь и просмотр протоколов — **только локально:** `/admin/calendar`, `/admin/event/:id` (`isLocalDev` в `AppRoutes.tsx`). На проде ссылки на протоколы ведут на procoursing.ru (`ProcoursingEventLink`, `results_url`).
-
-Атрибуция источника: компонент `ProcoursingAttribution` на страницах расчётов.
-
-`Events/index.tsx` (календарь) при синхронизации фильтров в URL **не затирает** `tab` и параметры других вкладок (`setSearchParams` с функцией-updater).
-
-### SpeedRecords ≠ competitions
-
-**Рекорды Донино** — отдельная вертикаль:
-- Данные: Google Sheets → D1 `speed_records` + `coursing_records`, не procoursing.ru
-- Маршрут: `/speed-records` (в Nav — «Рекорды Донино»)
-- Layout: **одна страница, две колонки**; `?view=stats` для статистики; `?groupBy=breed|sex|year`
-- Профили: `/donino-dog/:name/:breed` (кириллические клички из таблицы)
-- Не путать с `/dog/:id` (собаки из `dogs` + `results` соревнований)
-
-### Два соглашения об именах собак
-
-**Соревнования (procoursing.ru):**
-- `name_lat` — латиница (основное в таблицах)
-- `name_ru` — кириллица (подпись вторым рядом, если есть)
-
-**Донино (speed_records):**
-- Одно поле `name` — преимущественно кириллица
-- Порода и пол в формате таблицы Google Sheets (`С`/`К`)
-
-### Календарь событий (`Events/`)
-
-| Файл | Роль |
-|------|------|
-| `index.tsx` | Фильтры, группировка по месяцам, список |
-| `EventListRow.tsx` | Одна строка события (клик → `/event/:id`) |
-| `eventListUtils.ts` | Цвета дисциплин, `getEventHeadline`, `parseJudgeNames`, `groupEventsByMonth`, `getEventYear` |
-
-### EventResults — разбивка по дисциплинам
-
-Папка `frontend/src/pages/Events/EventResults/`:
-- `index.tsx` — Загрузка event + results, layout
-- `EventHeader.tsx` — Шапка события (судьи, схемы трасс)
-- `ResultsSection.tsx` — Группы по `breed_class`
-- `ResultCard.tsx` — `<details>` на одну собаку
-- `ResultSummary.tsx` — Строка summary (место, кличка, баллы)
-- `details/RacingDetail.tsx` — Бега борзых (время и скорость)
-- `details/ScoringDetail.tsx` — Курсинг + БЗМП (общий UI оценок судей)
-
-### TopDogs
-
-```
-frontend/src/pages/TopDogs/
-  index.tsx           — hooks, API, filtered data
-  TopDogsFilters.tsx  — PageToolbar: поиск, год, порода, сегмент рейтинга, сортировка
-  TopDogsTabs.tsx     — вкладки + DogStatsTable
-  filterUtils.ts      — filterPlacement/Score/Speed
-```
-
-Активные фильтры и сброс: `frontend/src/pages/SpeedRecords/toolbarFilters.ts` (`buildTopDogsActiveFilterChips`, …)
-
-### SpeedRecords
-
-```
-frontend/src/pages/SpeedRecords/
-  index.tsx                 — shell: DoninoPageToolbar + Records | Stats
-  useSpeedRecordsPage.ts    — state, URL (?view, ?groupBy), API (limit 1000)
-  DoninoPageToolbar.tsx     — ViewToggle + PageToolbar + подсказки фильтров
-  DoninoRecordsColumns.tsx  — две колонки списка, сортировка, infinite scroll
-  DoninoListRecordRow.tsx   — строка списка (sparkline, скрин)
-  DoninoStatsColumns.tsx    — статистика: группировка, графики, карточки групп
-  DoninoColumnPlaque.tsx    — плашка колонки (записи)
-  stats/
-    DoninoStatsSummary.tsx  — шапка колонки в статистике (плашка + метрики)
-    DoninoGroupCard.tsx     — карточка группы (порода/пол/год)
-    DoninoGroupCardList.tsx
-    doninoStatsUtils.ts     — фильтры, группировка, дедуп
-    statsUi.tsx             — DistributionChart, CollapsibleDistributionChart
-    DogSearchCard.tsx
-  hooks/useInfiniteScroll.ts
-  exportExcel.ts            — Excel: листы «Замер» + «Бега 350 м»
-  toolbarFilters.ts
-  RecordSortBar.tsx
-
-Легаси (не в основном flow): SpeedTableTab, CoursingTableTab, SpeedRecordCard,
-  CoursingRecordCard, stats/SpeedStatsView, stats/CoursingStatsView, …
-```
-
-**Общие компоненты:** `SpeedHistorySparkline.tsx`, `SpeedStatusBadge.tsx`, `DogSexIcon.tsx`
-
-**Даты и статистика 350 м:** `frontend/src/lib/recordDates.ts`
-- `formatDoninoSpeedKmh` — км/ч без лишнего `.0`
-- `dedupeByRecordDate` — один пункт на календарную дату (графики замера)
-- `expandCoursingTimeline` — для профиля: все забеги 350 м (текущая строка + `history` JSON)
-
-**CSS (статистика):** `index.css` — `.donino-stats-column-header`, `.donino-group-card`, `.donino-stats-chart`
+Полная карта маршрутов, страниц и компонентов — **[`04-FRONTEND.md`](04-FRONTEND.md)**.
 
 ---
 

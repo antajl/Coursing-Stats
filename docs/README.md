@@ -12,40 +12,58 @@
 
 | # | Файл | Зачем |
 |---|------|-------|
-| 1 | **[00-AI-GUIDE.md](00-AI-GUIDE.md)** | Правила, запреты, куда смотреть |
-| 2 | **[03-DATA.md](03-DATA.md)** | Где лежат данные, что редактировать, workflow |
+| 1 | **[00-AI-GUIDE.md](00-AI-GUIDE.md)** | Правила, запреты, `.devin/` или `.cursor/` |
+| 2 | **[03-DATA.md](03-DATA.md)** | Где лежат данные, workflow, диагностика |
 | 3 | **[02-ARCHITECTURE.md](02-ARCHITECTURE.md)** | Компоненты, деплой, стек |
 | 4 | *по задаче* | см. таблицу ниже |
 
 **Не читай всё подряд** — открой только нужный раздел.
 
+**Runbook:** [20-OPERATIONS.md](20-OPERATIONS.md) (деплой, прод сломан, enrich)
+
+---
+
+## Правило документирования (без дублей)
+
+| Тип | Канон | В остальных файлах |
+|-----|-------|---------------------|
+| Данные, indexes, enrich | **03-DATA.md** | ссылка |
+| Деплой, чеклисты | **20-OPERATIONS.md** | ссылка |
+| UI, маршруты | **04-FRONTEND.md** | ссылка |
+| Решения (почему) | **19-HISTORY.md** | ссылка |
+| Changelog (когда) | **19-CHANGELOG.md** | дата + ссылка |
+| Симптом → fix | **16-TROUBLESHOOTING.md** | кратко + ссылка на канон |
+
 ---
 
 ## Карта документов по задаче
 
-### Основное (00-11)
+### Основное (00–11, 20)
 | Задача | Документ |
 |--------|----------|
-| Запуск, npm, деплой | [01-GETTING-STARTED.md](01-GETTING-STARTED.md), [04-DEVELOPMENT.md](04-DEVELOPMENT.md) |
-| Архитектура, стек, CI | [02-ARCHITECTURE.md](02-ARCHITECTURE.md) |
+| Запуск, npm | [01-GETTING-STARTED.md](01-GETTING-STARTED.md), [20-OPERATIONS.md](20-OPERATIONS.md) |
+| Backend scripts, CI, деплой | [04-DEVELOPMENT.md](04-DEVELOPMENT.md) |
+| Фронтенд, компоненты, маршруты | **[04-FRONTEND.md](04-FRONTEND.md)** |
+| Архитектура, стек | [02-ARCHITECTURE.md](02-ARCHITECTURE.md) |
 | Данные, админка, `data/v1/` | **[03-DATA.md](03-DATA.md)** |
-| Пустой рейтинг/судьи на проде | [03-DATA.md](03-DATA.md) → «Диагностика» или [16-TROUBLESHOOTING.md](16-TROUBLESHOOTING.md) |
-| Фронтенд, компоненты | [04-DEVELOPMENT.md](04-DEVELOPMENT.md) → Frontend map |
+| Breed Archive / `pedigree_url` | [03-DATA.md](03-DATA.md) → «Breed Archive» |
+| Пустой рейтинг/судьи на проде | [20-OPERATIONS.md](20-OPERATIONS.md), [03-DATA.md](03-DATA.md) → «Диагностика» |
 | Локальный API (админка) | [05-API-REFERENCE.md](05-API-REFERENCE.md) |
 | UI, цвета, тёмная тема | [06-DESIGN-SYSTEM.md](06-DESIGN-SYSTEM.md) |
+| Фильтры рейтинга | [03-DATA.md](03-DATA.md) → «Породы в UI», [18-CODE-PATTERNS.md](18-CODE-PATTERNS.md) |
 | SEO, sitemap | [07-SEO.md](07-SEO.md) |
 | Тесты | [08-TESTING.md](08-TESTING.md) |
 | Донино, рекорды | [09-SPEED-RECORDS.md](09-SPEED-RECORDS.md) |
 | Справочник `/guide` (РКФ) | [10-GUIDE.md](10-GUIDE.md) |
 | Планы | [11-FUTURE-PLANS.md](11-FUTURE-PLANS.md) |
 
-### Техническое (12-18)
+### Техническое (12–18)
 | Задача | Документ |
 |--------|----------|
-| D1 схема (таблицы, views) | [12-DATABASE-SCHEMA.md](12-DATABASE-SCHEMA.md) |
-| D1 workflow (импорт, sync) | [13-DATABASE-WORKFLOW.md](13-DATABASE-WORKFLOW.md) |
-| Парсеры windows-1251 (правила) | [14-PARSING-RULES.md](14-PARSING-RULES.md) |
-| Парсеры (детали реализации) | [15-PARSING-IMPLEMENTATION.md](15-PARSING-IMPLEMENTATION.md) |
+| D1 схема | [12-DATABASE-SCHEMA.md](12-DATABASE-SCHEMA.md) |
+| D1 workflow | [13-DATABASE-WORKFLOW.md](13-DATABASE-WORKFLOW.md) |
+| Парсеры (правила) | [14-PARSING-RULES.md](14-PARSING-RULES.md) |
+| Парсеры (детали) | [15-PARSING-IMPLEMENTATION.md](15-PARSING-IMPLEMENTATION.md) |
 | Решение проблем | [16-TROUBLESHOOTING.md](16-TROUBLESHOOTING.md) |
 | Админка workflow | [17-ADMIN-WORKFLOW.md](17-ADMIN-WORKFLOW.md) |
 | Паттерны кода | [18-CODE-PATTERNS.md](18-CODE-PATTERNS.md) |
@@ -53,7 +71,8 @@
 ### История (19)
 | Задача | Документ |
 |--------|----------|
-| История изменений и решений | [19-HISTORY.md](19-HISTORY.md) |
+| Архитектурные решения (ADR) | [19-HISTORY.md](19-HISTORY.md) |
+| Changelog | [19-CHANGELOG.md](19-CHANGELOG.md) |
 
 ---
 
@@ -65,7 +84,7 @@ npm run dev                    # localhost:5173 + админка
 ```
 
 Первый раз без данных: `npm run export-local-data -- --local`  
-Подробно: [01-GETTING-STARTED.md](01-GETTING-STARTED.md)
+Подробно: [01-GETTING-STARTED.md](01-GETTING-STARTED.md) · [20-OPERATIONS.md](20-OPERATIONS.md)
 
 ---
 
@@ -77,6 +96,8 @@ frontend/         # React SPA (staticData.ts → /data/v1/)
 data/v1/          # ★ runtime данные в git
 data/archive/     # снимки D1, HTML протоколов (results/)
 docs/             # эта папка
+.devin/           # rules/skills для Devin
+.cursor/          # rules/skills для Cursor
 scripts/          # start-servers.bat, deploy-to-github.bat
 ```
 
@@ -84,10 +105,10 @@ scripts/          # start-servers.bat, deploy-to-github.bat
 
 ## Архив (не для повседневной работы)
 
-`archive/` — исторические документы. Не использовать как источник правды.
+[`archive/`](archive/) — исторические документы. Не использовать как источник правды.
 
 ---
 
 ## Вклад в проект
 
-См. раздел "Вклад в проект" в [01-GETTING-STARTED.md](01-GETTING-STARTED.md)
+См. раздел «Вклад в проект» в [01-GETTING-STARTED.md](01-GETTING-STARTED.md)

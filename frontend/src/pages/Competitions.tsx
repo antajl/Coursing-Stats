@@ -12,7 +12,8 @@ function Competitions() {
 
   return (
     <div className="space-y-6">
-      <div className="bg-cream-50/90 dark:bg-charcoal-900/90 backdrop-blur-lg rounded-2xl shadow-xl border border-cream-300 dark:border-charcoal-700 p-4 md:p-8">
+      <div className="bg-cream-50/90 dark:bg-charcoal-900/90 backdrop-blur-lg rounded-2xl shadow-xl border border-cream-300 dark:border-charcoal-700 px-4 py-3 md:px-6 md:py-4">
+        <ProcoursingAttribution className="mb-3 border-b border-cream-300/80 pb-2.5 dark:border-charcoal-700" />
         <div className="min-h-[480px]">
           {activeTab === 'ranking' && (
             <div
@@ -33,8 +34,6 @@ function Competitions() {
             </div>
           )}
         </div>
-
-        <ProcoursingAttribution className="mt-6 pt-4 border-t border-cream-300 dark:border-charcoal-700" />
       </div>
     </div>
   );

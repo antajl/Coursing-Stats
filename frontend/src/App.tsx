@@ -19,7 +19,7 @@ function App() {
           </a>
           <div className="min-h-screen bg-gradient-to-br from-old-money-50 via-old-money-100 to-old-money-200 dark:from-charcoal-900 dark:via-charcoal-800 dark:to-charcoal-900">
             <Nav />
-            <main id="main-content" className="w-full md:max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 py-5 flex-1">
+            <main id="main-content" className="w-full md:max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 pt-3 pb-5 md:pt-4 flex-1">
               <AppRoutes />
             </main>
           </div>

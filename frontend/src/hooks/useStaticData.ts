@@ -1,4 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
+import { deriveCompetingBreeds, type DogsIndexEntry } from '../lib/competingBreeds';
+import { getJudgeDetails } from '../lib/staticData';
 
 const STALE_MS = 5 * 60 * 1000;
 const STALE_LONG_MS = 60 * 60 * 1000;
@@ -56,6 +58,19 @@ export function useBreeds() {
   });
 }
 
+/** Породы с реальными выступлениями (dogs-index, competition_count > 0). */
+export function useCompetingBreeds() {
+  return useQuery({
+    queryKey: ['competingBreeds'],
+    queryFn: async () => {
+      const result = await fetchStaticData<DogsIndexEntry[]>('/data/v1/indexes/dogs-index.json');
+      const breeds = deriveCompetingBreeds(result.data);
+      return { success: true as const, data: { breeds, count: breeds.length } };
+    },
+    staleTime: STALE_LONG_MS,
+  });
+}
+
 export function useYears() {
   return useQuery({
     queryKey: ['years'],
@@ -72,10 +87,10 @@ export function useJudges(breed: string, discipline: string) {
   });
 }
 
-export function useJudgeDetails(judgeId: string, breed: string, discipline: string) {
+export function useJudgeDetails(judgeId: string | undefined, breed: string, discipline: string) {
   return useQuery({
     queryKey: ['judgeDetails', judgeId, breed, discipline],
-    queryFn: () => fetchStaticData<any>(`/data/v1/indexes/judge-details/${judgeId}.json`),
+    queryFn: () => getJudgeDetails(judgeId!, breed, discipline),
     enabled: !!judgeId,
     staleTime: STALE_MS,
   });

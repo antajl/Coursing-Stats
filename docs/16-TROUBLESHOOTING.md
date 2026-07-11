@@ -9,33 +9,61 @@
 ## Пустой рейтинг/судьи на проде
 
 ### Симптом
-Локально рейтинг, судьи и данные в `data/v1/indexes/` полные; на **coursing-stats.ru** — пустые списки. CDN отдавал `200` и JSON вида `"count": 0`, `"judges": []`.
+Локально рейтинг и судьи полные; на **coursing-stats.ru** — пустые списки (`"count": 0`).
 
-### Причина
-`npm run build-all-data` в CI:
-1. `build-data-snapshot` → `loadLocalDataSqlite()` собирал sqlite из JSON
-2. В `load-sqlite.ts` функция `loadCompetitions()` **не загружала** `results[]` из `competitions/*.json` (временный skip)
-3. `build-derived-indexes` строил топы/судей из пустой таблицы `results`
-4. `package-pages-snapshot` деплоил пустые `indexes/` поверх хороших файлов из git
+### Что делать
+
+1. **Runbook:** [`20-OPERATIONS.md`](20-OPERATIONS.md) → «Пустой рейтинг / судьи на проде»
+2. **Канон и причины:** [`03-DATA.md`](03-DATA.md) → «Диагностика: локально есть данные, на проде пусто»
+3. **ADR:** [`19-HISTORY.md`](19-HISTORY.md) → 2026-07-09
+
+```bash
+npm run build-data-snapshot    # results > 0
+npm run build-all-data
+npx vitest run backend/tests/static-indexes.test.ts
+```
+
+---
+
+## Нет кнопки «Breed Archive» в профиле собаки
+
+### Симптом
+В `dogs/by-id/{id}.json` есть `pedigree_url`, на `/dog/{id}` chip не показывается.
+
+### Причина (типичная)
+Публичный UI читает **`indexes/dog-profiles/{id}.json`**, не `dogs/by-id/` напрямую. Индекс мог быть устаревшим или собран только из sqlite (где дубли `UNIQUE(name_lat, breed)` «съедают» часть id).
 
 ### Решение
-- **`load-sqlite.ts`:** загрузка `results` из `competitions/`; `event_id` из файла; `dog` из вложенного объекта; `PRAGMA foreign_keys = OFF` при сборке snapshot
-- **`build-all-data.ts`:** fatal, если `top-placement-all` или `judges-summary` пустые после пересборки
-- **CI:** `vitest run backend/tests/static-indexes.test.ts` после `build-all-data`
-- **Документация:** `docs/03-DATA.md` → «Диагностика: локально есть данные, на проде пусто»
-
-### Диагностика
 ```bash
-# Проверить локальные индексы
-cat data/v1/indexes/top-placement-all.json
-cat data/v1/indexes/judges-summary.json
-
-# Пересобрать индексы
 npm run build-all-data
-
-# Проверить после пересборки
-cat data/v1/indexes/top-placement-all.json
+# проверка
+node -e "console.log(JSON.parse(require('fs').readFileSync('data/v1/indexes/dog-profiles/5782.json')).dog.pedigree_url)"
 ```
+
+Если в `by-id` ссылки нет — сначала enrich:
+```bash
+npm run enrich-breedarchive-urls -- --dog-id 5782
+npm run build-all-data
+```
+
+Подробнее: `docs/03-DATA.md` → «Breed Archive и pedigree_url».
+
+---
+
+## В списке пород рейтинга «18» или лишние породы
+
+### Симптом
+В фильтре **Порода** на рейтинге есть `18`, дубли написания или породы без собак в таблице.
+
+### Причина
+Старый UI читал **`breeds.json`** (все `breed` из D1). Значение **`18`** — не порода, а ошибка парсера (номер каталога в поле `breed` у собаки id 602).
+
+### Решение (с 2026-07-11)
+Рейтинг использует **`useCompetingBreeds()`** → `indexes/dogs-index.json`, `deriveCompetingBreeds()` — только `competition_count > 0`, без `/^\d+$/`.
+
+Если на проде всё ещё старый список — не задеплоен фронт. `breeds.json` в git можно не трогать; он для legacy API.
+
+Подробнее: `docs/03-DATA.md` → «Породы в UI».
 
 ---
 
@@ -189,7 +217,8 @@ Playwright тесты failing
 
 ## См. также
 
-- [03-DATA.md](03-DATA.md) — Диагностика данных
+- [20-OPERATIONS.md](20-OPERATIONS.md) — Runbook деплоя и диагностики
+- [03-DATA.md](03-DATA.md) — Диагностика данных (канон)
 - [13-DATABASE-WORKFLOW.md](13-DATABASE-WORKFLOW.md) — Workflow D1
 - [14-PARSING-RULES.md](14-PARSING-RULES.md) — Правила парсинга
 - [08-TESTING.md](08-TESTING.md) — Тестирование

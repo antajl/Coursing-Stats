@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/index-top-score-v1",
   "year": 2026,
-  "count": 364,
+  "count": 317,
   "items": [
     {
       "dog_id": 788,
@@ -121,6 +121,19 @@
       "year_to": 2026
     },
     {
+      "dog_id": 748,
+      "name_lat": "MONANNA REPUBLIC HIDAN",
+      "name_ru": "MONANNA REPUBLIC HIDAN",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
+      "year": 2026,
+      "best_score": 358,
+      "total_starts": 2,
+      "best_judge_score": 96,
+      "avg_judge_score": 89.5,
+      "year_from": 2026,
+      "year_to": 2026
+    },
+    {
       "dog_id": 653,
       "name_lat": "SNEZHNOE OCHAROVANIE ZHASMIN PRINCZESS",
       "name_ru": "СНЕЖНОЕ ОЧАРОВАНИЕ ЖАСМИН ПРИНЦЕСС",
@@ -186,32 +199,6 @@
       "year_to": 2026
     },
     {
-      "dog_id": 5646,
-      "name_lat": "STANGERS LAND VALENCIA",
-      "name_ru": "СТАНГЕРС ЛАНД ВАЛЕНСИЯ",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 356,
-      "total_starts": 5,
-      "best_judge_score": 98,
-      "avg_judge_score": 89,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
-      "dog_id": 5658,
-      "name_lat": "VARVAR KONAN BESSTRASHNYI",
-      "name_ru": "ВАРВАР КОНАН БЕССТРАШНЫЙ",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 355,
-      "total_starts": 5,
-      "best_judge_score": 97,
-      "avg_judge_score": 88.75,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
       "dog_id": 5653,
       "name_lat": "SAGITA VOLAT GERO POST TE",
       "name_ru": "САДЖИТЕЙ ВОЛЕЙТ ГЕРО ПОСТ ТЕ",
@@ -220,32 +207,6 @@
       "best_score": 355,
       "total_starts": 4,
       "best_judge_score": 95,
-      "avg_judge_score": 88.75,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
-      "dog_id": 5647,
-      "name_lat": "STANGERS LAND EGOZA",
-      "name_ru": "СТАНГЕРС ЛАНД ЕГОЗА",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 355,
-      "total_starts": 2,
-      "best_judge_score": 89,
-      "avg_judge_score": 88.75,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
-      "dog_id": 5638,
-      "name_lat": "STANGERS LAND DAKAR RALLY",
-      "name_ru": "СТАНГЕРС ЛАНД ДАКАР РАЛЛИ",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 355,
-      "total_starts": 4,
-      "best_judge_score": 98,
       "avg_judge_score": 88.75,
       "year_from": 2026,
       "year_to": 2026
@@ -316,19 +277,6 @@
       "year_to": 2026
     },
     {
-      "dog_id": 5805,
-      "name_lat": "KETLIN DARCY",
-      "name_ru": "КЕТЛИН ДАРСИ",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 353,
-      "total_starts": 2,
-      "best_judge_score": 98,
-      "avg_judge_score": 88.25,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
       "dog_id": 5803,
       "name_lat": "YARYJ VETER IZ POLETA MECHTI",
       "name_ru": "ЯРЫЙ ВЕТЕР ИЗ ПОЛЕТА МЕЧТЫ",
@@ -350,19 +298,6 @@
       "best_score": 353,
       "total_starts": 1,
       "best_judge_score": 94,
-      "avg_judge_score": 88.25,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
-      "dog_id": 5683,
-      "name_lat": "HOUSE THE RAINBOW UZOCHI ZIKIMO",
-      "name_ru": "ХАУС ЗЭ РЭЙНБОУ УЗОЧИ ЗИКИМО",
-      "breed": "БАСЕНДЖИ",
-      "year": 2026,
-      "best_score": 353,
-      "total_starts": 2,
-      "best_judge_score": 90,
       "avg_judge_score": 88.25,
       "year_from": 2026,
       "year_to": 2026
@@ -467,19 +402,6 @@
       "best_score": 352,
       "total_starts": 2,
       "best_judge_score": 95,
-      "avg_judge_score": 88,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
-      "dog_id": 5727,
-      "name_lat": "STANGERS LAND ZODIAK",
-      "name_ru": "СТАНГЕРС ЛАНД ЗОДИАК",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 352,
-      "total_starts": 3,
-      "best_judge_score": 90,
       "avg_judge_score": 88,
       "year_from": 2026,
       "year_to": 2026
@@ -732,45 +654,6 @@
       "year_to": 2026
     },
     {
-      "dog_id": 263,
-      "name_lat": "STANGERS LAND INGRID ELEGANT",
-      "name_ru": "СТАНГЕРС ЛАНД ИНГРИД ЭЛЕГАНТ",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 349,
-      "total_starts": 5,
-      "best_judge_score": 90,
-      "avg_judge_score": 87.25,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
-      "dog_id": 5876,
-      "name_lat": "DIAMANT TOP KRISTAL",
-      "name_ru": "ДИАМАНТ ТОП КРИСТАЛ",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 348,
-      "total_starts": 3,
-      "best_judge_score": 93,
-      "avg_judge_score": 87,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
-      "dog_id": 5874,
-      "name_lat": "WITCH OF SHERWOOD",
-      "name_ru": "УИТЧ ФО ШЕРВУД",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 348,
-      "total_starts": 3,
-      "best_judge_score": 91,
-      "avg_judge_score": 87,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
       "dog_id": 5750,
       "name_lat": "GRACE HAUND JASMINE NOIR",
       "name_ru": "ГРЭЙС ХАУНД ЖАСМИН НУАР",
@@ -797,19 +680,6 @@
       "year_to": 2026
     },
     {
-      "dog_id": 5643,
-      "name_lat": "STANGERS LAND E LAN",
-      "name_ru": "СТАНГЕРС ЛАНД Е ЛАНЬ",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 348,
-      "total_starts": 5,
-      "best_judge_score": 90,
-      "avg_judge_score": 86.75,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
       "dog_id": 5622,
       "name_lat": "VETLUGA HALVA RACEDOG",
       "name_ru": "ВЕТЛУГА ХАЛВА РЕЙСДОГ",
@@ -818,19 +688,6 @@
       "best_score": 348,
       "total_starts": 4,
       "best_judge_score": 90,
-      "avg_judge_score": 87,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
-      "dog_id": 311,
-      "name_lat": "SANJAR SABIKA DAZZLING",
-      "name_ru": "САНДЖАР САБИКА ДАЗЗЛИНГ",
-      "breed": "БАСЕНДЖИ",
-      "year": 2026,
-      "best_score": 348,
-      "total_starts": 2,
-      "best_judge_score": 89,
       "avg_judge_score": 87,
       "year_from": 2026,
       "year_to": 2026
@@ -966,19 +823,6 @@
       "year_to": 2026
     },
     {
-      "dog_id": 5782,
-      "name_lat": "EMUL DE GEPARD GELILA AL RAWDA",
-      "name_ru": "ЭМУЛЬ ДЭ ГЕПАРД ГЕЛИЛА АЛЬ РАВДА",
-      "breed": "САЛЮКИ",
-      "year": 2026,
-      "best_score": 346,
-      "total_starts": 2,
-      "best_judge_score": 93,
-      "avg_judge_score": 86.5,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
       "dog_id": 5712,
       "name_lat": "AYSARA",
       "name_ru": "АЙСАРА",
@@ -1078,32 +922,6 @@
       "best_score": 345,
       "total_starts": 2,
       "best_judge_score": 88,
-      "avg_judge_score": 86.25,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
-      "dog_id": 5880,
-      "name_lat": "GARDA",
-      "name_ru": "ГАРДА",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 345,
-      "total_starts": 1,
-      "best_judge_score": 90,
-      "avg_judge_score": 86.25,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
-      "dog_id": 5879,
-      "name_lat": "STANGERS LAND ISLANDIYA FLARING ICE",
-      "name_ru": "СТАНГЕРС ЛАНД ИСЛАНДИЯ ФЛЭРИНГ АЙС",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 345,
-      "total_starts": 3,
-      "best_judge_score": 92,
       "avg_judge_score": 86.25,
       "year_from": 2026,
       "year_to": 2026
@@ -1318,7 +1136,7 @@
     },
     {
       "dog_id": 36,
-      "name_lat": "РЭЙ",
+      "name_lat": "RAY",
       "name_ru": "РЭЙ",
       "breed": "БАСЕНДЖИ",
       "year": 2026,
@@ -1365,19 +1183,6 @@
       "total_starts": 2,
       "best_judge_score": 90,
       "avg_judge_score": 85.5,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
-      "dog_id": 5632,
-      "name_lat": "STANGERS LAND ERMAK",
-      "name_ru": "СТАНГЕРС ЛАНД ЕРМАК",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 342,
-      "total_starts": 3,
-      "best_judge_score": 89,
-      "avg_judge_score": 81.25,
       "year_from": 2026,
       "year_to": 2026
     },
@@ -1469,19 +1274,6 @@
       "total_starts": 2,
       "best_judge_score": 88,
       "avg_judge_score": 85.5,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
-      "dog_id": 5633,
-      "name_lat": "YUVENTUS SKORYJ",
-      "name_ru": "ЮВЕНТУС СКОРЫЙ",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 341,
-      "total_starts": 3,
-      "best_judge_score": 87,
-      "avg_judge_score": 85.25,
       "year_from": 2026,
       "year_to": 2026
     },
@@ -1642,19 +1434,6 @@
       "year_to": 2026
     },
     {
-      "dog_id": 5656,
-      "name_lat": "URAL SPIRIT SALAMANDER",
-      "name_ru": "УРАЛ СПИРИТ САЛАМАНДР",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 339,
-      "total_starts": 4,
-      "best_judge_score": 91,
-      "avg_judge_score": 84.75,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
       "dog_id": 796,
       "name_lat": "РУБИ",
       "name_ru": "РУБИ",
@@ -1733,32 +1512,6 @@
       "year_to": 2026
     },
     {
-      "dog_id": 5635,
-      "name_lat": "YUNION SVETLYJ",
-      "name_ru": "ЮНИОН СВЕТЛЫЙ",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 338,
-      "total_starts": 2,
-      "best_judge_score": 86,
-      "avg_judge_score": 84.5,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
-      "dog_id": 5617,
-      "name_lat": "RUS DOGMA PARKER",
-      "name_ru": "РУС ДОГМА ПАРКЕР",
-      "breed": "БАСЕНДЖИ",
-      "year": 2026,
-      "best_score": 338,
-      "total_starts": 4,
-      "best_judge_score": 87,
-      "avg_judge_score": 84.5,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
       "dog_id": 828,
       "name_lat": "МИКЕЛЕ АНГЕЛО ДЕЛЬ СОЛЕ",
       "name_ru": "МИКЕЛЕ АНГЕЛО ДЕЛЬ СОЛЕ",
@@ -1793,19 +1546,6 @@
       "best_score": 338,
       "total_starts": 1,
       "best_judge_score": 87,
-      "avg_judge_score": 84.5,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
-      "dog_id": 309,
-      "name_lat": "DUNDEE CROCODILE HUNTER",
-      "name_ru": "ДАНДИ КРОКОДАЙЛ ХАНТЕР",
-      "breed": "БАСЕНДЖИ",
-      "year": 2026,
-      "best_score": 338,
-      "total_starts": 2,
-      "best_judge_score": 89,
       "avg_judge_score": 84.5,
       "year_from": 2026,
       "year_to": 2026
@@ -1858,19 +1598,6 @@
       "best_score": 337,
       "total_starts": 2,
       "best_judge_score": 87,
-      "avg_judge_score": 84.25,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
-      "dog_id": 5655,
-      "name_lat": "GOLDI KRAUND IONSI BIRGINSON",
-      "name_ru": "ГОЛДИ КРАУНД ИОНСИ БИРГИНСОН",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 337,
-      "total_starts": 4,
-      "best_judge_score": 91,
       "avg_judge_score": 84.25,
       "year_from": 2026,
       "year_to": 2026
@@ -2007,7 +1734,7 @@
     },
     {
       "dog_id": 836,
-      "name_lat": "СКОТЛАНД ВЕЙР ДИСТАНТ СТАР",
+      "name_lat": "SCOTLAND WEYR DISTANT STAR",
       "name_ru": "СКОТЛАНД ВЕЙР ДИСТАНТ СТАР",
       "breed": "ФАРАОНОВА СОБАКА",
       "year": 2026,
@@ -2028,19 +1755,6 @@
       "total_starts": 3,
       "best_judge_score": 89,
       "avg_judge_score": 75.75,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
-      "dog_id": 513,
-      "name_lat": "DENVERS ELITE SHAPE MY IMPREZA SOUL",
-      "name_ru": "ДЕНВЕРС ЭЛИТ ШЕЙП МАЙ ИМПРЕЗА СОУЛ",
-      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "year": 2026,
-      "best_score": 336,
-      "total_starts": 1,
-      "best_judge_score": 88,
-      "avg_judge_score": 84,
       "year_from": 2026,
       "year_to": 2026
     },
@@ -2149,6 +1863,19 @@
       "year_to": 2026
     },
     {
+      "dog_id": 38,
+      "name_lat": "WINNER TIME GERMIONA",
+      "name_ru": "ВИННЕР ТАЙМ ГЕРМИОНА",
+      "breed": "БАСЕНДЖИ",
+      "year": 2026,
+      "best_score": 335,
+      "total_starts": 2,
+      "best_judge_score": 85,
+      "avg_judge_score": 83.75,
+      "year_from": 2026,
+      "year_to": 2026
+    },
+    {
       "dog_id": 5841,
       "name_lat": "VIN KOD NIKI BLIZARA STAJ FAJTER TAMERLAN",
       "name_ru": "ВИН КОД НИКИ БЛИЗАРА СТАЙ ФАЙТЕР ТАМЕРЛАН",
@@ -2201,6 +1928,19 @@
       "year_to": 2026
     },
     {
+      "dog_id": 751,
+      "name_lat": "SIMPLE OBSESSION DREAM ON",
+      "name_ru": "SIMPLE OBSESSION DREAM ON",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year": 2026,
+      "best_score": 334,
+      "total_starts": 1,
+      "best_judge_score": 87,
+      "avg_judge_score": 83.5,
+      "year_from": 2026,
+      "year_to": 2026
+    },
+    {
       "dog_id": 654,
       "name_lat": "TSESVIL GARDEN IRINUS GOLD BREIN",
       "name_ru": "ЦЕСВИЛЬ ГАРДЕН ИРИНУС ГОЛД БРЕЙН",
@@ -2236,19 +1976,6 @@
       "total_starts": 4,
       "best_judge_score": 88,
       "avg_judge_score": 82.75,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
-      "dog_id": 5868,
-      "name_lat": "GORDEY",
-      "name_ru": "ГОРДЕЙ",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 333,
-      "total_starts": 1,
-      "best_judge_score": 87,
-      "avg_judge_score": 83.25,
       "year_from": 2026,
       "year_to": 2026
     },
@@ -2332,7 +2059,7 @@
     },
     {
       "dog_id": 5763,
-      "name_lat": "BORZIE SENAVIAN OSMAN",
+      "name_lat": "BORZYE SENAVIAN OSMAN",
       "name_ru": "БОРЗЫЕ СЕНАВИАН ОСМАН",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "year": 2026,
@@ -2344,21 +2071,8 @@
       "year_to": 2026
     },
     {
-      "dog_id": 5636,
-      "name_lat": "STANGERS LAND VINCENT",
-      "name_ru": "СТАНГЕРС ЛАНД ВИНСЕНТ",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 332,
-      "total_starts": 4,
-      "best_judge_score": 85,
-      "avg_judge_score": 83,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
       "dog_id": 878,
-      "name_lat": "ИРКИСС НЭНСИ",
+      "name_lat": "IRKISS NANCY",
       "name_ru": "ИРКИСС НЭНСИ",
       "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
       "year": 2026,
@@ -2513,19 +2227,6 @@
       "year_to": 2026
     },
     {
-      "dog_id": 6073,
-      "name_lat": "STORM RISE",
-      "name_ru": "СТОРМ РАЙС",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 330,
-      "total_starts": 1,
-      "best_judge_score": 85,
-      "avg_judge_score": 82.5,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
       "dog_id": 6027,
       "name_lat": "GRACE CANDY",
       "name_ru": "ГРЕЙС КЭНДИ",
@@ -2552,32 +2253,6 @@
       "year_to": 2026
     },
     {
-      "dog_id": 5889,
-      "name_lat": "WALKING WELSH ROUTES",
-      "name_ru": "УОКИНГ УЭЛШ РУТС",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 330,
-      "total_starts": 2,
-      "best_judge_score": 86,
-      "avg_judge_score": 82.5,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
-      "dog_id": 5764,
-      "name_lat": "BORZIE SENAVIAN EGOR",
-      "name_ru": "БОРЗЫЕ СЕНАВИАН ЕГОР",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "year": 2026,
-      "best_score": 330,
-      "total_starts": 2,
-      "best_judge_score": 85,
-      "avg_judge_score": 82.5,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
       "dog_id": 5659,
       "name_lat": "KETLIN MARZIPAN",
       "name_ru": "КЕТЛИН МАРЦИПАН",
@@ -2585,19 +2260,6 @@
       "year": 2026,
       "best_score": 330,
       "total_starts": 2,
-      "best_judge_score": 84,
-      "avg_judge_score": 82.5,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
-      "dog_id": 694,
-      "name_lat": "BEL ETUAL FILOMENA",
-      "name_ru": "BEL ETUAL FILOMENA",
-      "breed": "САЛЮКИ",
-      "year": 2026,
-      "best_score": 330,
-      "total_starts": 1,
       "best_judge_score": 84,
       "avg_judge_score": 82.5,
       "year_from": 2026,
@@ -2682,19 +2344,6 @@
       "year_to": 2026
     },
     {
-      "dog_id": 503,
-      "name_lat": "SANSARA SHERVUD SHOTER GRAN PRI",
-      "name_ru": "САНСАРА ШЕРВУД ШОТЕР ГРАН ПРИ",
-      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "year": 2026,
-      "best_score": 329,
-      "total_starts": 2,
-      "best_judge_score": 85,
-      "avg_judge_score": 76.5,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
       "dog_id": 308,
       "name_lat": "ТИМ СПИРИТ ЗЕФИР",
       "name_ru": "ТИМ СПИРИТ ЗЕФИР",
@@ -2704,19 +2353,6 @@
       "total_starts": 1,
       "best_judge_score": 84,
       "avg_judge_score": 82.25,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
-      "dog_id": 5968,
-      "name_lat": "OBEREG RUSI IRIS",
-      "name_ru": "ОБЕРЕГ РУСИ ИРИС",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "year": 2026,
-      "best_score": 328,
-      "total_starts": 2,
-      "best_judge_score": 85,
-      "avg_judge_score": 82,
       "year_from": 2026,
       "year_to": 2026
     },
@@ -2761,7 +2397,7 @@
     },
     {
       "dog_id": 877,
-      "name_lat": "ДИАПЕНСИЯ ЛАППОНИКА",
+      "name_lat": "DIAPENSIA LAPPONICA",
       "name_ru": "ДИАПЕНСИЯ ЛАППОНИКА",
       "breed": "УИППЕТ",
       "year": 2026,
@@ -2825,19 +2461,6 @@
       "year_to": 2026
     },
     {
-      "dog_id": 510,
-      "name_lat": "GLAD TO BE GREAT IZ SOZVEZDIYA STAFF",
-      "name_ru": "ГЛЕД ТУ БИ ГРЕЙТ ИЗ СОЗВЕЗДИЯ СТАФФ",
-      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "year": 2026,
-      "best_score": 328,
-      "total_starts": 2,
-      "best_judge_score": 87,
-      "avg_judge_score": 81.5,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
       "dog_id": 372,
       "name_lat": "EE VELITCHESTVO",
       "name_ru": "ЕЕ ВЕЛИЧЕСТВО",
@@ -2847,32 +2470,6 @@
       "total_starts": 4,
       "best_judge_score": 84,
       "avg_judge_score": 79.5,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
-      "dog_id": 6055,
-      "name_lat": "MONANNA REPUBLIC HIDAN",
-      "name_ru": "МОНАННА РЕПАБЛИК ХИДАН",
-      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
-      "year": 2026,
-      "best_score": 327,
-      "total_starts": 1,
-      "best_judge_score": 87,
-      "avg_judge_score": 81.75,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
-      "dog_id": 5769,
-      "name_lat": "SIMPLE OBSESSION DREAM ON",
-      "name_ru": "СИМПЛЕ ОБСЕССИОН ДРИМ ОН",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "year": 2026,
-      "best_score": 327,
-      "total_starts": 2,
-      "best_judge_score": 84,
-      "avg_judge_score": 81.75,
       "year_from": 2026,
       "year_to": 2026
     },
@@ -2942,6 +2539,19 @@
       "year_to": 2026
     },
     {
+      "dog_id": 5897,
+      "name_lat": "ENOLA MAD RUSH",
+      "name_ru": "ЭНОЛА МЭД РАШ",
+      "breed": "УИППЕТ",
+      "year": 2026,
+      "best_score": 326,
+      "total_starts": 2,
+      "best_judge_score": 88,
+      "avg_judge_score": 82.5,
+      "year_from": 2026,
+      "year_to": 2026
+    },
+    {
       "dog_id": 5624,
       "name_lat": "MEDOVYY DAR",
       "name_ru": "МЕДОВЫЙ ДАР",
@@ -2951,32 +2561,6 @@
       "total_starts": 1,
       "best_judge_score": 83,
       "avg_judge_score": 81.5,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
-      "dog_id": 5639,
-      "name_lat": "DOGONI VETER NEBESNYI ETUDE",
-      "name_ru": "ДОГОНИ ВЕТЕР НЕБЕСНЫЙ ЭТЮД",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 325,
-      "total_starts": 2,
-      "best_judge_score": 84,
-      "avg_judge_score": 76.5,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
-      "dog_id": 762,
-      "name_lat": "SCOTLAND WEYR DISTANT STAR",
-      "name_ru": "SCOTLAND WEYR DISTANT STAR",
-      "breed": "ФАРАОНОВА СОБАКА",
-      "year": 2026,
-      "best_score": 325,
-      "total_starts": 1,
-      "best_judge_score": 85,
-      "avg_judge_score": 81.25,
       "year_from": 2026,
       "year_to": 2026
     },
@@ -3054,32 +2638,6 @@
       "best_score": 324,
       "total_starts": 1,
       "best_judge_score": 82,
-      "avg_judge_score": 81,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
-      "dog_id": 5973,
-      "name_lat": "OBEREG RUSI ITIL",
-      "name_ru": "ОБЕРЕГ РУСИ ИТИЛЬ",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "year": 2026,
-      "best_score": 324,
-      "total_starts": 1,
-      "best_judge_score": 84,
-      "avg_judge_score": 81,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
-      "dog_id": 5742,
-      "name_lat": "RUBI",
-      "name_ru": "РУБИ",
-      "breed": "БАСЕНДЖИ",
-      "year": 2026,
-      "best_score": 324,
-      "total_starts": 2,
-      "best_judge_score": 83,
       "avg_judge_score": 81,
       "year_from": 2026,
       "year_to": 2026
@@ -3216,7 +2774,7 @@
     },
     {
       "dog_id": 854,
-      "name_lat": "ЗИТА",
+      "name_lat": "ZITA",
       "name_ru": "ЗИТА",
       "breed": "АФГАНСКАЯ АБОРИГЕННАЯ БОРЗАЯ",
       "year": 2026,
@@ -3249,6 +2807,19 @@
       "best_score": 322,
       "total_starts": 1,
       "best_judge_score": 83,
+      "avg_judge_score": 80.5,
+      "year_from": 2026,
+      "year_to": 2026
+    },
+    {
+      "dog_id": 5937,
+      "name_lat": "DRIM NEISHN ARISTOKRATIYA",
+      "name_ru": "ДРИМ НЕЙШН АРИСТОКРАТИЯ",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
+      "year": 2026,
+      "best_score": 322,
+      "total_starts": 1,
+      "best_judge_score": 82,
       "avg_judge_score": 80.5,
       "year_from": 2026,
       "year_to": 2026
@@ -3293,19 +2864,6 @@
       "year_to": 2026
     },
     {
-      "dog_id": 5757,
-      "name_lat": "KEYOD",
-      "name_ru": "КЭЙОД",
-      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
-      "year": 2026,
-      "best_score": 322,
-      "total_starts": 3,
-      "best_judge_score": 85,
-      "avg_judge_score": 80.5,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
       "dog_id": 5736,
       "name_lat": "NEVERITA’S RENUAR",
       "name_ru": "НЕВЕРИТА’С РЕНУАР",
@@ -3320,7 +2878,7 @@
     },
     {
       "dog_id": 402,
-      "name_lat": "EL TORI SAPPHIRE",
+      "name_lat": "EL TORI SAPFIR",
       "name_ru": "ЭЛЬ ТОРИ САПФИР",
       "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
       "year": 2026,
@@ -3358,14 +2916,14 @@
       "year_to": 2026
     },
     {
-      "dog_id": 5969,
-      "name_lat": "OBEREG RUSI IRIJ",
-      "name_ru": "ОБЕРЕГ РУСИ ИРИЙ",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "dog_id": 6048,
+      "name_lat": "SHAMIKA IZ DIVNOGO SADA",
+      "name_ru": "ШАМИКА ИЗ ДИВНОГО САДА",
+      "breed": "БАСЕНДЖИ",
       "year": 2026,
       "best_score": 320,
-      "total_starts": 2,
-      "best_judge_score": 82,
+      "total_starts": 1,
+      "best_judge_score": 83,
       "avg_judge_score": 80,
       "year_from": 2026,
       "year_to": 2026
@@ -3484,19 +3042,6 @@
       "total_starts": 2,
       "best_judge_score": 82,
       "avg_judge_score": 79.25,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
-      "dog_id": 5743,
-      "name_lat": "BOSKO BOKARI TSARONA WONDERLAKE",
-      "name_ru": "БОСКО БОКАРИ ЦАРОНА ВОНДЕРЛАЙК",
-      "breed": "БАСЕНДЖИ",
-      "year": 2026,
-      "best_score": 316,
-      "total_starts": 3,
-      "best_judge_score": 81,
-      "avg_judge_score": 79,
       "year_from": 2026,
       "year_to": 2026
     },
@@ -3657,19 +3202,6 @@
       "year_to": 2026
     },
     {
-      "dog_id": 5977,
-      "name_lat": "LUNNAJA RADUGA ARIJA",
-      "name_ru": "ЛУННАЯ РАДУГА АРИЯ",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "year": 2026,
-      "best_score": 310,
-      "total_starts": 1,
-      "best_judge_score": 80,
-      "avg_judge_score": 77.5,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
       "dog_id": 5964,
       "name_lat": "ARIES KHAN SKADI SARAMA FAST & FURIOUS",
       "name_ru": "АРИЕС ХАН СКАДИ САРАМА ФАСТ & ФЬЮРИОС",
@@ -3700,19 +3232,6 @@
       "name_lat": "ELVIN",
       "name_ru": "ЭЛВИН",
       "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
-      "year": 2026,
-      "best_score": 309,
-      "total_starts": 1,
-      "best_judge_score": 82,
-      "avg_judge_score": 77.25,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
-      "dog_id": 5629,
-      "name_lat": "BEL ETUAL VERMONT",
-      "name_ru": "БЕЛЬ ЭТУАЛЬ ВЕРМОНТ",
-      "breed": "САЛЮКИ",
       "year": 2026,
       "best_score": 309,
       "total_starts": 1,
@@ -3756,19 +3275,6 @@
       "best_score": 308,
       "total_starts": 1,
       "best_judge_score": 79,
-      "avg_judge_score": 77,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
-      "dog_id": 5938,
-      "name_lat": "SHOU GERAT RONALDO",
-      "name_ru": "ШОУ ГЕРАТ РОНАЛДО",
-      "breed": "АФГАНСКАЯ БОРЗАЯ",
-      "year": 2026,
-      "best_score": 308,
-      "total_starts": 1,
-      "best_judge_score": 78,
       "avg_judge_score": 77,
       "year_from": 2026,
       "year_to": 2026
@@ -3861,19 +3367,6 @@
       "total_starts": 2,
       "best_judge_score": 86,
       "avg_judge_score": 80.67,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
-      "dog_id": 6220,
-      "name_lat": "STANGERS LAND ZLATAN",
-      "name_ru": "СТАНГЕРС ЛАНД ЗЛАТАН",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 306,
-      "total_starts": 1,
-      "best_judge_score": 82,
-      "avg_judge_score": 76.5,
       "year_from": 2026,
       "year_to": 2026
     },
@@ -3982,19 +3475,6 @@
       "year_to": 2026
     },
     {
-      "dog_id": 504,
-      "name_lat": "TIP TOP PURE GOLD IZ DOMA ZIDANA",
-      "name_ru": "ТИП ТОП ПУР ГОЛД ИЗ ДОМА ЗИДАНА",
-      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "year": 2026,
-      "best_score": 302,
-      "total_starts": 1,
-      "best_judge_score": 83,
-      "avg_judge_score": 75.5,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
       "dog_id": 6222,
       "name_lat": "CHEREZ TERNII K ZVYOZDAM IZ POLETA MECHTI",
       "name_ru": "ЧЕРЕЗ ТЕРНИИ К ЗВЕЗДАМ ИЗ ПОЛЕТА МЕЧТЫ",
@@ -4030,32 +3510,6 @@
       "total_starts": 1,
       "best_judge_score": 90,
       "avg_judge_score": 75.25,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
-      "dog_id": 516,
-      "name_lat": "TISSA LUNA GOLUBOJ RODNIK KREDO",
-      "name_ru": "ТИССА ЛУНА ГОЛУБОЙ РОДНИК КРЕДО",
-      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "year": 2026,
-      "best_score": 300,
-      "total_starts": 2,
-      "best_judge_score": 82,
-      "avg_judge_score": 75,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
-      "dog_id": 6223,
-      "name_lat": "BUMERANG DOBRA",
-      "name_ru": "БУМЕРАНГ ДОБРА",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 299,
-      "total_starts": 1,
-      "best_judge_score": 78,
-      "avg_judge_score": 74.75,
       "year_from": 2026,
       "year_to": 2026
     },
@@ -4121,19 +3575,6 @@
       "total_starts": 1,
       "best_judge_score": 80,
       "avg_judge_score": 72.75,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
-      "dog_id": 6148,
-      "name_lat": "ARESVUMA OCHING ONGA",
-      "name_ru": "АРЕСВУМА ОЧИНГ ОНГА",
-      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
-      "year": 2026,
-      "best_score": 290,
-      "total_starts": 1,
-      "best_judge_score": 78,
-      "avg_judge_score": 72.5,
       "year_from": 2026,
       "year_to": 2026
     },
@@ -4242,19 +3683,6 @@
       "year_to": 2026
     },
     {
-      "dog_id": 5774,
-      "name_lat": "BORZIE SENAVIAN DORA",
-      "name_ru": "БОРЗЫЕ СЕНАВИАН ДОРА",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "year": 2026,
-      "best_score": 283,
-      "total_starts": 1,
-      "best_judge_score": 89,
-      "avg_judge_score": 70.75,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
       "dog_id": 866,
       "name_lat": "NASLEDNITSA SEREBRYANAYA",
       "name_ru": "NASLEDNITSA SEREBRYANAYA",
@@ -4307,45 +3735,6 @@
       "year_to": 2026
     },
     {
-      "dog_id": 5979,
-      "name_lat": "LUNNAJA RADUGA KIRILLITSA",
-      "name_ru": "ЛУННАЯ РАДУГА КИРИЛЛИЦА",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "year": 2026,
-      "best_score": 276,
-      "total_starts": 1,
-      "best_judge_score": 78,
-      "avg_judge_score": 69,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
-      "dog_id": 505,
-      "name_lat": "ZVEZDA AMERLAND PAMIR PERSILLION",
-      "name_ru": "ЗВЕЗДА АМЕРЛАНД ПАМИР ПЕРСИЛЬОН",
-      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "year": 2026,
-      "best_score": 271,
-      "total_starts": 1,
-      "best_judge_score": 74,
-      "avg_judge_score": 67.75,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
-      "dog_id": 6200,
-      "name_lat": "SHAWATI PRADA",
-      "name_ru": "ШАВАТИ ПРАДА",
-      "breed": "САЛЮКИ",
-      "year": 2026,
-      "best_score": 261,
-      "total_starts": 1,
-      "best_judge_score": 80,
-      "avg_judge_score": 65.25,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
       "dog_id": 680,
       "name_lat": "ГОЛДИ ГОЛДЕН ДАЛЕН",
       "name_ru": "ГОЛДИ ГОЛДЕН ДАЛЕН",
@@ -4355,32 +3744,6 @@
       "total_starts": 2,
       "best_judge_score": 87,
       "avg_judge_score": 64.5,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
-      "dog_id": 507,
-      "name_lat": "BAKARORO END ITUBORI THE BEST TCENNIY PRIZE",
-      "name_ru": "BAKARORO END ITUBORI THE BEST TCENNIY PRIZE",
-      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "year": 2026,
-      "best_score": 261,
-      "total_starts": 1,
-      "best_judge_score": 74,
-      "avg_judge_score": 65.25,
-      "year_from": 2026,
-      "year_to": 2026
-    },
-    {
-      "dog_id": 6292,
-      "name_lat": "IRKISS SID",
-      "name_ru": "ИРКИСС СИД",
-      "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
-      "year": 2026,
-      "best_score": 255,
-      "total_starts": 1,
-      "best_judge_score": 74,
-      "avg_judge_score": 63.75,
       "year_from": 2026,
       "year_to": 2026
     },
@@ -4567,6 +3930,19 @@
       "year_to": 2026
     },
     {
+      "dog_id": 657,
+      "name_lat": "OBEREG RUSI ITIL",
+      "name_ru": "OBEREG RUSI ITIL",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year": 2026,
+      "best_score": 172,
+      "total_starts": 1,
+      "best_judge_score": 87,
+      "avg_judge_score": 86,
+      "year_from": 2026,
+      "year_to": 2026
+    },
+    {
       "dog_id": 129,
       "name_lat": "COLISTOS GASPARO",
       "name_ru": "COLISTOS GASPARO",
@@ -4706,6 +4082,19 @@
       "total_starts": 1,
       "best_judge_score": 72,
       "avg_judge_score": 71,
+      "year_from": 2026,
+      "year_to": 2026
+    },
+    {
+      "dog_id": 658,
+      "name_lat": "OBEREG RUSI IRIS",
+      "name_ru": "OBEREG RUSI IRIS",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year": 2026,
+      "best_score": 139,
+      "total_starts": 1,
+      "best_judge_score": 79,
+      "avg_judge_score": 73.5,
       "year_from": 2026,
       "year_to": 2026
     },

@@ -236,20 +236,35 @@ font-mono tabular-nums
 ```
 [←]  КЛИЧКА ♀                    [↓ скачать]
      латинская часть (если есть)
-     [порода]
+     [порода]  [Breed Archive ↗]   ← только если pedigree_url
 
 ────────────────────────────────────────────
 Титулы:  [Чемпион России X2] [CACL] …   ← flex-wrap чипы, не колонка справа
 ```
+
+- Chip **Breed Archive:** `rounded-full`, border `old-money-200`, иконка `ExternalLink`, открывается в новой вкладке
 
 - Кнопки «назад» и «скачать» с `data-export-ignore` (не попадают в PNG-экспорт)
 - Титулы — `titleBadgeClass()` + `formatTitleLine()`, горизонтальный ряд
 
 ### PageToolbar
 
-Панель фильтров: `rounded-xl border bg-cream-100/70 p-3` (`TOOLBAR_PANEL` в `lib/toolbar.ts`). Сегменты — `ToolbarSegmentControl` (pill внутри bordered group).
+Два режима:
 
-**Где:** рейтинг, судьи, календарь (`Events/index.tsx`), рекорды Донино (`DoninoPageToolbar`).
+| Режим | Класс | Где |
+|-------|-------|-----|
+| **bare** | только `space-y-2.5`, без рамки | рейтинг, судьи, Донино |
+| **panel** | `TOOLBAR_PANEL` (`rounded-xl border bg-cream-100/70 p-3`) | календарь (dev) |
+
+Сегменты — `ToolbarSegmentControl` или `ViewToggle` (pill внутри bordered group).
+
+**Панель «Фильтры»:** `ToolbarFiltersDropdown` — белая карточка `rounded-xl`, секции с `TOOLBAR_FILTER_SECTION_LABEL`, строки `TOOLBAR_FILTER_CHECKBOX_ROW`, футер «Сбросить» / «Готово».
+
+**Рейтинг — секция «Год»:** один выбранный год или ни одного (все годы). Повторный клик по отмеченному году снимает галку; chip под тулбаром — «Все годы».
+
+**Рейтинг — секция «Порода»:** только породы с выступлениями (`useCompetingBreeds`, ~66); без `18` и прочего числового мусора из `breeds.json`.
+
+**Где:** рейтинг (`TopDogsFilters`), судьи (`Judges/index`), рекорды Донино (`DoninoPageToolbar`), календарь (`Events/index.tsx` — framed).
 
 ### Рекорды Донино — статистика
 

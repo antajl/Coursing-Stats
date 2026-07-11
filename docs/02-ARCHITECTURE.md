@@ -1,6 +1,6 @@
 # Architecture — Архитектура проекта
 
-> **ИИ:** порядок чтения — [README.md](README.md) → [AI-GUIDE.md](AI-GUIDE.md) → [DATA.md](DATA.md). Данные runtime — в DATA.md.
+> **ИИ:** порядок чтения — [README.md](README.md) → [00-AI-GUIDE.md](00-AI-GUIDE.md) → [03-DATA.md](03-DATA.md). Данные runtime — в [03-DATA.md](03-DATA.md).
 
 ## High-Level Architecture (2026-07)
 
@@ -25,7 +25,7 @@
                                     (без Worker)
 ```
 
-> **Публичный прод не использует D1 и не деплоит Worker.** Подробно: `docs/DATA.md`.
+> **Публичный прод не использует D1 и не деплоит Worker.** Подробно: [`03-DATA.md`](03-DATA.md).
 
 ### Legacy diagram (импорт)
 
@@ -447,7 +447,7 @@ DNS зона `coursing-stats.ru` — в **Cloudflare** (NS с reg.ru на Cloudf
 ## Структура репозитория
 
 Карта папок проекта: что где лежит и зачем.  
-**Runtime сайта** — только `data/v1/` (см. [DATA.md](DATA.md)). Остальное — код, вспомогательные данные, черновики.
+**Runtime сайта** — только `data/v1/` (см. [03-DATA.md](03-DATA.md)). Остальное — код, вспомогательные данные, черновики.
 
 ### Корень репозитория
 
@@ -538,13 +538,13 @@ DNS зона `coursing-stats.ru` — в **Cloudflare** (NS с reg.ru на Cloudf
 
 #### ★ `data/v1/` — источник правды для сайта
 
-Подробно: [DATA.md](DATA.md), кратко: [data/v1/README.md](../data/v1/README.md).
+Подробно: [03-DATA.md](03-DATA.md), кратко: [data/v1/README.md](../data/v1/README.md).
 
 В git. После правок competitions/dogs — `npm run build-all-data`.
 
 #### `data/archive/` — долгоживущий архив
 
-Подробно: [DATA-ARCHIVE.md](DATA-ARCHIVE.md), [data/archive/README.md](../data/archive/README.md).
+Подробно: [03-DATA.md](03-DATA.md) → архив, [data/archive/README.md](../data/archive/README.md).
 
 | Путь | Назначение | В git |
 |------|------------|-------|
@@ -610,9 +610,9 @@ SQL-дампы `wrangler d1 export` перед опасными операция
 | Путь | Назначение |
 |------|------------|
 | `README.md` | Оглавление |
-| `AI-GUIDE.md` | Инструкция для ИИ-агентов |
-| `DATA.md` | Канон по `data/v1/` |
-| `_archive/` | Старые планы — **не источник правды** |
+| `00-AI-GUIDE.md` | Инструкция для ИИ-агентов |
+| `03-DATA.md` | Канон по `data/v1/` |
+| `archive/` | Старые планы — **не источник правды** |
 
 ### Быстрая схема потоков данных
 

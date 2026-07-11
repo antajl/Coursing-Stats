@@ -9,6 +9,7 @@ interface PageToolbarProps {
   onClearAllFilters?: () => void
   bottomLeft?: ReactNode
   bottomRight?: ReactNode
+  bare?: boolean
 }
 
 export default function PageToolbar({
@@ -18,11 +19,12 @@ export default function PageToolbar({
   onClearAllFilters,
   bottomLeft,
   bottomRight,
+  bare = false,
 }: PageToolbarProps) {
   const showBottom = Boolean(bottomLeft || bottomRight)
 
   return (
-    <div className={`${TOOLBAR_PANEL} space-y-2.5`}>
+    <div className={bare ? 'space-y-2.5' : `${TOOLBAR_PANEL} space-y-2.5`}>
       <div className="flex flex-wrap items-center justify-between gap-2">
         <div className="flex min-w-0 flex-1 flex-wrap items-center gap-2">{filters}</div>
         {exportAction && <div className="flex shrink-0 items-center gap-2">{exportAction}</div>}

@@ -44,5 +44,5 @@
 
 ## См. также
 
-- `DECISIONS-LOG.md` — запись 2026-07-05/06 про верификацию RKF и правки Guide
+- [`19-CHANGELOG.md`](19-CHANGELOG.md) — запись 2026-07-05 про верификацию RKF и правки Guide
 - `DESIGN-SYSTEM.md` — общие паттерны UI

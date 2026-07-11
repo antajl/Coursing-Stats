@@ -44,3 +44,9 @@ export const TOOLBAR_RESET_LINK =
 
 export const TOOLBAR_NUMBER_INPUT =
   'h-9 w-24 rounded-lg border border-old-money-300 bg-white px-3 text-xs font-medium text-charcoal-800 outline-none placeholder:text-charcoal-400 dark:border-charcoal-600 dark:bg-charcoal-800 dark:text-charcoal-200 [-moz-appearance:_textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none'
+
+export const TOOLBAR_FILTER_SECTION_LABEL =
+  'mb-1.5 text-xs font-semibold uppercase tracking-wide text-old-money-500 dark:text-old-money-400'
+
+export const TOOLBAR_FILTER_CHECKBOX_ROW =
+  'flex cursor-pointer items-center gap-2 rounded-md px-2 py-1.5 text-sm text-charcoal-700 hover:bg-cream-50 dark:text-charcoal-200 dark:hover:bg-charcoal-700'
