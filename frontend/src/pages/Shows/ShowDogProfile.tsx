@@ -40,6 +40,7 @@ export default function ShowDogProfile() {
       }
 
       setLoading(true)
+      // Load all-time ranking to find the dog (since we don't know which year the dog is in)
       const result = await getShowDogRanking()
       if (result.success && result.data) {
         const foundDog = result.data.find(

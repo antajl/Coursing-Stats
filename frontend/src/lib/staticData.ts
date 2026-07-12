@@ -728,9 +728,16 @@ interface ShowDog {
   }
 }
 
-export async function getShowDogRanking(): Promise<ApiResult<ShowDog[]>> {
+export async function getShowDogRanking(year = ''): Promise<ApiResult<ShowDog[]>> {
+  if (year) {
+    const ranking = await fetchJson<ShowDog[]>(`shows/indexes/dog-ranking-${year}.json`)
+    if (!ranking) return { success: false, error: `Dog ranking for year ${year} unavailable` }
+    return { success: true, data: ranking }
+  }
+  
+  // For all-time ranking, try to load but it may be excluded from deployment
   const ranking = await fetchJson<ShowDog[]>('shows/indexes/dog-ranking.json')
-  if (!ranking) return { success: false, error: 'Dog ranking unavailable' }
+  if (!ranking) return { success: false, error: 'All-time dog ranking unavailable (too large for CDN)' }
   return { success: true, data: ranking }
 }
 

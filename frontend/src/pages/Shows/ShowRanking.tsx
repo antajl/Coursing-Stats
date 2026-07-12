@@ -23,14 +23,14 @@ export default function ShowRanking() {
   useEffect(() => {
     const loadData = async () => {
       setLoading(true)
-      const result = await getShowDogRanking()
+      const result = await getShowDogRanking(filterYear)
       if (result.success && result.data) {
         setAllDogs(result.data)
       }
       setLoading(false)
     }
     loadData()
-  }, [])
+  }, [filterYear])
 
   useEffect(() => {
     if (!loading) {
@@ -40,7 +40,7 @@ export default function ShowRanking() {
 
   // Extract unique breeds, years, and groups from data
   const breeds = Array.from(new Set(allDogs.map(d => d.breed))).sort()
-  const years = Array.from(new Set(['2025', '2026'])).sort((a, b) => Number(b) - Number(a))
+  const years = Array.from(new Set(['2017', '2018', '2019', '2021', '2022', '2023', '2024', '2025', '2026'])).sort((a, b) => Number(b) - Number(a))
   const groups = Array.from(new Set(allDogs.map(d => d.breed_group).filter(Boolean) as string[])).sort()
 
   // Filter dogs (order from index / rank_score)

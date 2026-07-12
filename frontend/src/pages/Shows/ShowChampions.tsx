@@ -134,17 +134,17 @@ export default function ShowChampions() {
   useEffect(() => {
     const loadData = async () => {
       setLoading(true)
-      const result = await getShowDogRanking()
+      const result = await getShowDogRanking(filterYear)
       if (result.success && result.data) {
         setAllDogs(result.data)
       }
       setLoading(false)
     }
     loadData()
-  }, [])
+  }, [filterYear])
 
   const breeds = useMemo(() => Array.from(new Set(allDogs.map((d) => d.breed))).sort(), [allDogs])
-  const years = ['2025', '2026']
+  const years = ['2017', '2018', '2019', '2021', '2022', '2023', '2024', '2025', '2026']
   const groups = useMemo(
     () => Array.from(new Set(allDogs.map((d) => d.breed_group).filter(Boolean) as string[])).sort(),
     [allDogs]

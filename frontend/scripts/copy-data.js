@@ -9,7 +9,7 @@ const TARGET_DIR = path.resolve(ROOT, 'public/data/v1');
 
 // Files/directories to exclude from public deployment (too large or admin-only)
 const EXCLUDE_PATTERNS = [
-  'shows/indexes/dog-ranking.json', // 73.7 MiB - exceeds Cloudflare Pages 25 MiB limit
+  'shows/indexes/dog-ranking.json', // 73.7 MiB - exceeds Cloudflare Pages 25 MiB limit (use year-specific files instead)
 ];
 
 function shouldExclude(relativePath) {

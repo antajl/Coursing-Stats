@@ -71,6 +71,13 @@ function parseDogName(dogName: string): { name_lat: string; name_ru: string; id:
   }
 }
 
+function extractYear(date: string): string {
+  if (!date) return 'unknown'
+  const parts = date.split('.')
+  if (parts.length >= 3) return parts[2]
+  return 'unknown'
+}
+
 function buildDogRanking(exhibitions: ShowExhibition[]): ShowDog[] {
   const dogMap = new Map<string, ShowDog>()
 
@@ -118,6 +125,27 @@ function buildDogRanking(exhibitions: ShowExhibition[]): ShowDog[] {
   }))
 
   return dogs.sort(compareShowDogs)
+}
+
+function buildDogRankingByYear(exhibitions: ShowExhibition[]): Map<string, ShowDog[]> {
+  const yearMap = new Map<string, ShowExhibition[]>()
+
+  // Group exhibitions by year
+  for (const exhibition of exhibitions) {
+    const year = extractYear(exhibition.date)
+    const yearExhibitions = yearMap.get(year) || []
+    yearExhibitions.push(exhibition)
+    yearMap.set(year, yearExhibitions)
+  }
+
+  // Build ranking for each year
+  const rankingByYear = new Map<string, ShowDog[]>()
+  for (const [year, yearExhibitions] of yearMap) {
+    const dogs = buildDogRanking(yearExhibitions)
+    rankingByYear.set(year, dogs)
+  }
+
+  return rankingByYear
 }
 
 function buildJudgesIndex(exhibitions: ShowExhibition[]): string[] {
@@ -181,8 +209,21 @@ async function main() {
   console.log(`Unique exhibitions: ${exhibitions.length}`)
 
   const dogs = buildDogRanking(exhibitions)
-  console.log(`Built ranking for ${dogs.length} dogs`)
+  console.log(`Built ranking for ${dogs.length} dogs (all time)`)
 
+  // Build ranking by year
+  const rankingByYear = buildDogRankingByYear(exhibitions)
+  console.log(`Built rankings for ${rankingByYear.size} years`)
+
+  // Save individual year files
+  for (const [year, yearDogs] of rankingByYear) {
+    const fileName = `dog-ranking-${year}.json`
+    const filePath = path.join(INDEXES_DIR, fileName)
+    fs.writeFileSync(filePath, JSON.stringify(yearDogs, null, 2))
+    console.log(`  Saved ${fileName} (${yearDogs.length} dogs)`)
+  }
+
+  // Also save all-time ranking (but exclude from deployment)
   fs.writeFileSync(path.join(INDEXES_DIR, 'dog-ranking.json'), JSON.stringify(dogs, null, 2))
 
   const judges = buildJudgesIndex(exhibitions)
