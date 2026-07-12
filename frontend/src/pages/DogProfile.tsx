@@ -272,8 +272,8 @@ export default function DogProfile() {
         keywords={keywords}
       />
       <div className="p-4 md:p-6">
-      <div className="max-w-4xl mx-auto">
-        <div ref={exportRef}>
+        <div className="max-w-4xl mx-auto">
+          <div ref={exportRef}>
 
         {/* Кнопка назад */}
         <button
@@ -863,7 +863,7 @@ export default function DogProfile() {
         )}
         </div>
       </div>
-    </div>
+      </div>
     </>
   )
 }
