@@ -208,13 +208,6 @@ export default function Events() {
   const activeFilterChips = useMemo((): ActiveFilterChip[] => {
     const chips: ActiveFilterChip[] = []
 
-    if (searchQuery.trim()) {
-      chips.push({
-        key: 'search',
-        label: `«${searchQuery.trim()}»`,
-        onRemove: () => setSearchQuery(''),
-      })
-    }
     if (filterYear !== '2026') {
       chips.push({
         key: 'year',

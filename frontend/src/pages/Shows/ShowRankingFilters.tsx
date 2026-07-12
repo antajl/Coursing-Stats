@@ -54,60 +54,32 @@ export default function ShowRankingFilters({
   const activeFilterChips = useMemo(() => {
     const chips = []
 
-    if (searchQuery) {
-      chips.push(
-        <button
-          key="search"
-          type="button"
-          onClick={() => onSearchChange('')}
-          className={TOOLBAR_CHIP_ACTIVE}
-        >
-          Поиск: {searchQuery}
-        </button>
-      )
-    }
-
     if (filterYear) {
-      chips.push(
-        <button
-          key="year"
-          type="button"
-          onClick={() => onYearChange('')}
-          className={TOOLBAR_CHIP_ACTIVE}
-        >
-          {filterYear}
-        </button>
-      )
+      chips.push({
+        key: 'year',
+        label: filterYear,
+        onRemove: () => onYearChange(''),
+      })
     }
 
     if (filterBreed) {
-      chips.push(
-        <button
-          key="breed"
-          type="button"
-          onClick={() => onBreedChange('')}
-          className={TOOLBAR_CHIP_ACTIVE}
-        >
-          {filterBreed}
-        </button>
-      )
+      chips.push({
+        key: 'breed',
+        label: filterBreed,
+        onRemove: () => onBreedChange(''),
+      })
     }
 
     if (filterGroup) {
-      chips.push(
-        <button
-          key="group"
-          type="button"
-          onClick={() => onGroupChange('')}
-          className={TOOLBAR_CHIP_ACTIVE}
-        >
-          {filterGroup}
-        </button>
-      )
+      chips.push({
+        key: 'group',
+        label: filterGroup,
+        onRemove: () => onGroupChange(''),
+      })
     }
 
     return chips
-  }, [searchQuery, filterYear, filterBreed, filterGroup, onSearchChange, onYearChange, onBreedChange, onGroupChange])
+  }, [filterYear, filterBreed, filterGroup, onYearChange, onBreedChange, onGroupChange])
 
   const handleYearToggle = (year: string) => {
     onYearChange(filterYear === year ? '' : year)

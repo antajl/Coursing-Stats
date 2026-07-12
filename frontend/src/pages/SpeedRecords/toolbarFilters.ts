@@ -10,14 +10,6 @@ export function buildSpeedActiveFilterChips(
 ): ActiveFilterChip[] {
   const chips: ActiveFilterChip[] = []
 
-  if (searchQuery.trim()) {
-    chips.push({
-      key: 'search',
-      label: `«${searchQuery.trim()}»`,
-      onRemove: () => onSearchChange(''),
-    })
-  }
-
   for (const year of filterYears) {
     chips.push({
       key: `year-${year}`,
@@ -53,14 +45,6 @@ export function buildCoursingActiveFilterChips(
   onToggleFilter: (type: string, value: string) => void
 ): ActiveFilterChip[] {
   const chips: ActiveFilterChip[] = []
-
-  if (searchQuery.trim()) {
-    chips.push({
-      key: 'search',
-      label: `«${searchQuery.trim()}»`,
-      onRemove: () => onSearchChange(''),
-    })
-  }
 
   for (const year of filterYears) {
     chips.push({
@@ -152,9 +136,6 @@ export function buildTopDogsActiveFilterChips(
 ): ActiveFilterChip[] {
   const chips: ActiveFilterChip[] = []
 
-  if (searchQuery.trim()) {
-    chips.push({ key: 'search', label: `«${searchQuery.trim()}»`, onRemove: () => onSearchChange('') })
-  }
   if (filterYear) {
     chips.push({ key: 'year', label: filterYear, onRemove: () => onYearChange('') })
   }
@@ -184,9 +165,6 @@ export function buildJudgesActiveFilterChips(
   onDisciplineChange: (value: string) => void
 ): ActiveFilterChip[] {
   const chips: ActiveFilterChip[] = []
-  if (searchQuery.trim()) {
-    chips.push({ key: 'search', label: `«${searchQuery.trim()}»`, onRemove: () => onSearchChange('') })
-  }
   if (filterYear) {
     chips.push({ key: 'year', label: filterYear, onRemove: () => onYearChange('') })
   }
