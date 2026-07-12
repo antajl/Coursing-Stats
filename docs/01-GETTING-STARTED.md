@@ -55,26 +55,19 @@ cd frontend && npm run dev
 ### Windows (batch файл)
 
 ```bash
-scripts\start-servers.bat
+scripts/start-servers.bat  # local only, not in git
 ```
 
-### scripts/ — Windows Batch Scripts
+### scripts/ — Shell Scripts
 
-Директория содержит вспомогательные batch скрипты для Windows:
+Директория содержит вспомогательные скрипты:
 
 ```
 scripts/
-├── README.md              # Краткая справка по скриптам
-├── start-servers.bat      # Запуск локальных серверов (npm run dev)
-└── deploy-to-github.bat   # Деплой в GitHub (git push)
+└── README.md              # Краткая справка по скриптам
 ```
 
-**Использование:**
-
-- `start-servers.bat` — альтернатива `npm run dev` для Windows, запускает backend API :8787 и frontend Vite :5173
-- `deploy-to-github.bat` — альтернатива ручному `git push`, выполняет commit и push в GitHub
-
-Эти скрипты удобны для быстрого запуска на Windows без ввода команд в терминал.
+**Примечание:** Windows batch скрипты (start-servers.bat, deploy-to-github.bat) удалены из GitHub и доступны только локально.
 
 ## Первые шаги
 
@@ -176,7 +169,7 @@ npm run test-parser-fixtures
 
 ```bash
 npm run build-all-data   # опционально локально; CI сделает сам
-git push origin main     # или scripts\deploy-to-github.bat
+git push origin main
 ```
 
 Перед push после правок `competitions/` или `data/v1/`: см. чеклист в [20-OPERATIONS.md](20-OPERATIONS.md). Канон: [03-DATA.md](03-DATA.md) → «Диагностика».

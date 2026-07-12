@@ -272,15 +272,9 @@ frontend/
 │   │   │   └── EventResults/  # index, EventHeader, details/{Racing,Scoring}Detail
 │   │   ├── Judges/
 │   │   ├── SpeedRecords/      # Donino hub: две колонки, записи + статистика
-│   │   └── Admin/             # Admin UI for editing data
-│   │       ├── index.tsx      # Admin dashboard
-│   │       ├── EventEdit.tsx  # Event editing form
-│   │       ├── AdminResultsSection.tsx # Results editing
-│   │       ├── ResultScoresEditor.tsx # Score editing
-│   │       ├── DogSearchSelect.tsx # Dog search
-│   │       ├── AdminCalendarForm.tsx # Calendar editing
-│   │       ├── adminApi.ts     # Admin API calls
-│   │       └── adminEventUtils.ts # Event utilities
+│   │   ├── Shows/             # Shows pages
+│   │   ├── Guide/             # Guide pages
+│   │   └── NotFound.tsx
 │   ├── services/api.ts
 │   ├── hooks/                 # React hooks
 │   │   ├── useApi.ts          # API data fetching hooks
@@ -326,9 +320,8 @@ frontend/
 ├── package.json
 ├── package-lock.json          # В репозитории (npm ci в CI)
 ├── wrangler.toml
-├── scripts/                   # Batch/Shell scripts
-│   ├── start-servers.bat
-│   └── deploy-to-github.bat
+├── scripts/                   # Shell scripts
+│   └── README.md
 ├── assets/                    # Static assets
 │   └── logo.svg (renamed from 2.svg)
 ├── .devin/                    # Devin / Cascade: rules, skills, workflows
@@ -403,7 +396,7 @@ npm run dev
 
 **Windows batch:**
 ```bash
-scripts\start-servers.bat
+scripts/start-servers.bat  # local only, not in git
 ```
 
 **Первый запуск (или после sync D1):**
