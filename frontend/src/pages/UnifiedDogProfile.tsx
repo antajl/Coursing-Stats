@@ -39,11 +39,8 @@ export default function UnifiedDogProfile() {
         if (result.success && result.data) {
           let found = null
 
-          // Try to find show dog by ID first (competition ID may match show ID)
-          found = result.data.find((d) => d.id === id || d.id === String(id))
-
-          // If not found by ID, try to find by matching name AND breed
-          if (!found && competitionDog) {
+          // Only find by matching name AND breed (IDs from different systems won't match)
+          if (competitionDog) {
             const normalizedCompName = normalizeDogName(competitionDog.name_lat)
             const normalizedCompBreed = normalizeBreedName(competitionDog.breed)
 
@@ -109,10 +106,27 @@ export default function UnifiedDogProfile() {
         handleTabChange('shows')
       } else if (!hasShows && hasCompetitions) {
         handleTabChange('competitions')
+      } else if (hasShows && hasCompetitions) {
+        // If both available, keep current or default to competitions
+        if (activeTab === 'shows' || activeTab === 'competitions') {
+          // Keep current tab
+        } else {
+          handleTabChange('competitions')
+        }
       }
-      // If both available, keep current or default to competitions
     }
   }, [loading, hasShows, hasCompetitions])
+
+  // Redirect if trying to access unavailable tab
+  useEffect(() => {
+    if (!loading) {
+      if (activeTab === 'shows' && !hasShows) {
+        handleTabChange('competitions')
+      } else if (activeTab === 'competitions' && !hasCompetitions) {
+        handleTabChange('shows')
+      }
+    }
+  }, [loading, activeTab, hasShows, hasCompetitions])
 
   if (loading) {
     return (
@@ -142,8 +156,28 @@ export default function UnifiedDogProfile() {
     )
   }
 
+  // Validate that show dog actually matches competition dog before showing
+  const isValidShowDog = showDog && competitionDog && (() => {
+    const normalizedCompName = normalizeDogName(competitionDog.name_lat)
+    const normalizedCompBreed = normalizeBreedName(competitionDog.breed)
+    const normalizedShowName = normalizeDogName(showDog.name_lat)
+    const normalizedShowBreed = normalizeBreedName(showDog.breed)
+    return normalizedShowName === normalizedCompName && normalizedShowBreed === normalizedCompBreed
+  })()
+
+  // Only show shows tab if the dog actually matches
+  const shouldShowShowsTab = isValidShowDog
+
   // Determine which tabs to show
-  const showTabs = hasShows && hasCompetitions
+  const showTabs = shouldShowShowsTab && hasCompetitions
+
+  // Redirect immediately if trying to access unavailable tab
+  if (!loading && activeTab === 'shows' && !shouldShowShowsTab) {
+    handleTabChange('competitions')
+  }
+  if (!loading && activeTab === 'competitions' && !hasCompetitions && shouldShowShowsTab) {
+    handleTabChange('shows')
+  }
 
   return (
     <div className="p-4 md:p-6">
@@ -181,7 +215,7 @@ export default function UnifiedDogProfile() {
           <DogProfile />
         )}
 
-        {activeTab === 'shows' && showDog && (
+        {activeTab === 'shows' && hasShows && showDog && (
           <ShowDogProfile dogData={showDog} />
         )}
 
@@ -203,7 +237,7 @@ export default function UnifiedDogProfile() {
           </div>
         )}
 
-        {activeTab === 'shows' && !showDog && (
+        {activeTab === 'shows' && (!hasShows || !showDog) && (
           <div className="rounded-xl border border-old-money-200 bg-cream-50 p-6 text-center dark:border-charcoal-600 dark:bg-charcoal-800/40">
             <p className="text-sm text-old-money-500 dark:text-old-money-400">
               Нет данных о выставках для этой собаки
