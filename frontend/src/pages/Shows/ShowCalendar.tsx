@@ -159,13 +159,6 @@ export default function ShowCalendar() {
 
   const activeFilterChips = useMemo(() => {
     const chips = []
-    if (searchQuery) {
-      chips.push({
-        key: 'search',
-        label: searchQuery,
-        onRemove: () => setSearchQuery(''),
-      })
-    }
     if (filterYear) {
       chips.push({
         key: 'year',
@@ -174,7 +167,7 @@ export default function ShowCalendar() {
       })
     }
     return chips
-  }, [searchQuery, filterYear])
+  }, [filterYear])
 
   const handleResetFilters = () => {
     setFilterYear('')
