@@ -82,7 +82,16 @@ export default function ShowCalendar() {
   const [filterYear, setFilterYear] = useState(() => searchParams.get('year') || '')
   const [searchQuery, setSearchQuery] = useState(() => searchParams.get('search') || '')
 
-  const years = ['2025', '2026']
+  const years = useMemo(() => {
+    const yearSet = new Set<string>()
+    exhibitions.forEach((exhibition) => {
+      const date = parseShowDate(exhibition.date)
+      if (date) {
+        yearSet.add(String(date.getFullYear()))
+      }
+    })
+    return Array.from(yearSet).sort((a, b) => Number(b) - Number(a))
+  }, [exhibitions])
 
   useEffect(() => {
     const loadData = async () => {
@@ -112,6 +121,15 @@ export default function ShowCalendar() {
 
   const filteredExhibitions = useMemo(() => {
     return exhibitions.filter((exhibition) => {
+      // Year filter
+      if (filterYear) {
+        const date = parseShowDate(exhibition.date)
+        if (!date) return false
+        const exhibitionYear = String(date.getFullYear())
+        if (exhibitionYear !== filterYear) return false
+      }
+
+      // Search filter
       if (searchQuery) {
         const query = searchQuery.toLowerCase()
         const searchableFields = [
@@ -120,6 +138,7 @@ export default function ShowCalendar() {
           exhibition.club,
           exhibition.type,
           exhibition.rank,
+          ...exhibition.judges,
         ]
         if (!searchableFields.some((f) => f && f.toLowerCase().includes(query))) {
           return false
@@ -132,7 +151,7 @@ export default function ShowCalendar() {
       if (!dateA || !dateB) return 0
       return dateB.getTime() - dateA.getTime()
     })
-  }, [exhibitions, searchQuery])
+  }, [exhibitions, searchQuery, filterYear])
 
   const monthGroups = useMemo(() => groupExhibitionsByMonth(filteredExhibitions), [filteredExhibitions])
 
@@ -249,8 +268,9 @@ export default function ShowCalendar() {
                 const rkfUrl = `https://lc.rkfshow.ru/RKF/ExhibitionResults/ExhibitionResultListView?exhibitionId=${exhibition.id}`
                 
                 return (
-                  <div
+                  <Link
                     key={exhibition.id}
+                    to={`/shows/exhibition/${exhibition.id}`}
                     className="grid grid-cols-[4.5rem_minmax(0,1fr)] sm:grid-cols-[5rem_minmax(0,1fr)_6rem] items-center gap-3 sm:gap-4 rounded-lg border border-old-money-200 dark:border-charcoal-600 border-l-4 border-l-camel-500 bg-cream-50 dark:bg-charcoal-800 px-3 py-2.5 sm:px-3 sm:py-2.5 mb-1.5 transition-colors hover:bg-camel-100 dark:hover:bg-charcoal-700 hover:translate-x-0.5"
                   >
                     <div className="w-[4.75rem] shrink-0 text-sm leading-tight text-charcoal-800 dark:text-charcoal-100 sm:w-[5rem]">
@@ -268,26 +288,19 @@ export default function ShowCalendar() {
 
                     <div className="min-w-0">
                       <div className="flex items-center gap-1.5 text-[13.5px] font-semibold text-charcoal-900 dark:text-charcoal-100">
-                        <Link
-                          to={`/shows/exhibition/${exhibition.id}`}
-                          className="line-clamp-2 min-w-0 flex-1 hover:text-camel-700 dark:hover:text-camel-400 transition-colors"
-                        >
+                        <span className="line-clamp-2 min-h-[2.6em] leading-[1.3em] min-w-0 flex-1 hover:text-camel-700 dark:hover:text-camel-400 transition-colors">
                           {exhibition.title}
-                        </Link>
+                        </span>
                         <a
                           href={rkfUrl}
                           target="_blank"
                           rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
                           className="flex-shrink-0 rounded-full p-1 text-old-money-400 transition-colors hover:bg-old-money-100 hover:text-camel-600 dark:text-old-money-500 dark:hover:bg-charcoal-700 dark:hover:text-camel-400"
                           aria-label="Открыть на lc.rkfshow.ru"
                         >
                           <ExternalLink className="h-3.5 w-3.5" />
                         </a>
-                        {hasResults && (
-                          <span className="hidden sm:inline-flex h-5 w-14 shrink-0 items-center justify-center gap-1 rounded-md bg-old-money-100/90 px-1 font-mono text-xs font-semibold tabular-nums text-charcoal-600 dark:bg-charcoal-700/90 dark:text-charcoal-200">
-                            {exhibition.results.length}
-                          </span>
-                        )}
                       </div>
                       <div className="text-xs text-charcoal-500 dark:text-charcoal-300 truncate mt-0.5">
                         {exhibition.location}
@@ -306,7 +319,7 @@ export default function ShowCalendar() {
                         </span>
                       )}
                     </div>
-                  </div>
+                  </Link>
                 )
               })}
             </div>
