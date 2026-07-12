@@ -1,9 +1,9 @@
-import { useState, useRef, useMemo } from 'react'
+import { useState, useRef, useMemo, useEffect } from 'react'
 import { useParams, Link, useNavigate, useLocation } from 'react-router-dom'
 import { ChevronLeft, Download, ExternalLink } from 'lucide-react'
 import { useDogProfile, useDogEvents, useDogSpeedRecords, useSpeedRecordsByBreed, useDogCoursingRecords, useCoursingRecordsByBreed } from '../hooks/useStaticData'
 import { formatRecordDate, dedupeByRecordDate, expandCoursingTimeline } from '../lib/recordDates'
-import { formatTitleLine, titleBadgeClass, type DogTitle } from '../lib/qualificationTitles'
+import { formatTitleLine, parseQualificationTitles, titleBadgeClass, type DogTitle } from '../lib/qualificationTitles'
 import { parseDogName } from '../lib/dogName'
 import { toPng } from 'html-to-image'
 import SkeletonLoader from '../components/SkeletonLoader'
@@ -11,9 +11,28 @@ import ErrorState from '../components/ErrorState'
 import OwnerCrownName from '../components/OwnerCrownName'
 import MedalTally from '../components/MedalTally'
 import { SEO } from '../components/SEO'
+import { useYandexGoal } from '../components/YandexMetrica'
 import ProcoursingEventLink from '../components/ProcoursingEventLink'
 import ProcoursingAttribution from '../components/ProcoursingAttribution'
 import { buildEventResultsUrlMap, procoursingUrlForEventId } from '../lib/procoursingLinks'
+
+function EventQualificationChips({ qualification }: { qualification?: string | null }) {
+  const titles = parseQualificationTitles(qualification)
+  if (titles.length === 0) return null
+
+  return (
+    <div className="mt-1.5 flex flex-wrap gap-1">
+      {titles.map((title) => (
+        <span
+          key={title}
+          className={`inline-flex rounded px-1.5 py-0.5 text-[10px] font-semibold whitespace-nowrap ${titleBadgeClass(title)}`}
+        >
+          {title}
+        </span>
+      ))}
+    </div>
+  )
+}
 
 export default function DogProfile() {
   const { id } = useParams()
@@ -28,6 +47,7 @@ export default function DogProfile() {
   const HISTORY_DEFAULT = 5
 
   const exportRef = useRef(null)
+  const { reachGoal } = useYandexGoal()
 
   // Определяем источник навигации
   const fromSpeedRecords = location.state?.from === 'speed-records'
@@ -50,6 +70,13 @@ export default function DogProfile() {
   
   const { data: breedCoursingRecordsData } = useCoursingRecordsByBreed(dog?.breed || '')
   const breedCoursingRecords = breedCoursingRecordsData?.success ? (Array.isArray(breedCoursingRecordsData.data) ? breedCoursingRecordsData.data : []) : []
+
+  // Отслеживание просмотра профиля собаки
+  useEffect(() => {
+    if (dog) {
+      reachGoal('dog_profile_view')
+    }
+  }, [dog, reachGoal])
 
   const handleExport = async () => {
     if (!exportRef.current || exporting) return
@@ -249,17 +276,18 @@ export default function DogProfile() {
         <div ref={exportRef}>
 
         {/* Шапка профиля */}
-        <div className="mb-6 rounded-xl border border-old-money-200/80 dark:border-charcoal-600 bg-white dark:bg-charcoal-800/50 p-5 md:p-8">
+        <div className="mb-6 flex items-start gap-1 md:gap-2">
+          <button
+            type="button"
+            onClick={() => navigate(-1)}
+            className="mt-5 flex-shrink-0 rounded-sm p-1 text-old-money-500 transition-colors hover:text-camel-700 md:mt-8 dark:text-old-money-400 dark:hover:text-camel-400"
+            aria-label="Назад"
+            data-export-ignore
+          >
+            <ChevronLeft className="h-5 w-5" aria-hidden />
+          </button>
+          <div className="min-w-0 flex-1 rounded-xl border border-old-money-200/80 bg-white p-5 dark:border-charcoal-600 dark:bg-charcoal-800/50 md:p-8">
           <div className="flex items-start gap-2">
-            <button
-              type="button"
-              onClick={() => navigate(-1)}
-              className="mt-1 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-old-money-200 bg-white/90 text-old-money-600 shadow-sm transition-colors hover:border-old-money-300 hover:bg-old-money-50 hover:text-camel-700 dark:border-charcoal-600 dark:bg-charcoal-800 dark:text-old-money-400 dark:hover:border-charcoal-500 dark:hover:bg-charcoal-700 dark:hover:text-camel-400"
-              aria-label="Назад"
-              data-export-ignore
-            >
-              <ChevronLeft className="h-4 w-4" aria-hidden />
-            </button>
             <div className="min-w-0 flex-1">
               <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
                 {(() => {
@@ -355,6 +383,7 @@ export default function DogProfile() {
               <span className="font-semibold text-old-money-800 dark:text-old-money-200">Владелец:</span> {dog.owner}
             </div>
           )}
+          </div>
         </div>
 
         {/* Статистика и история по дисциплинам */}
@@ -479,6 +508,7 @@ export default function DogProfile() {
                                 )}
                               </div>
                             </div>
+                            <EventQualificationChips qualification={event.qualification as string | null | undefined} />
                           </>
                         )
                         return event.event_id ? (
@@ -626,6 +656,7 @@ export default function DogProfile() {
                                 </span>
                               )}
                             </div>
+                            <EventQualificationChips qualification={event.qualification as string | null | undefined} />
                           </>
                         )
                         return event.event_id ? (

@@ -59,7 +59,7 @@ npm run build-all-data
 Старый UI читал **`breeds.json`** (все `breed` из D1). Значение **`18`** — не порода, а ошибка парсера (номер каталога в поле `breed` у собаки id 602).
 
 ### Решение (с 2026-07-11)
-Рейтинг использует **`useCompetingBreeds()`** → `indexes/dogs-index.json`, `deriveCompetingBreeds()` — только `competition_count > 0`, без `/^\d+$/`.
+Рейтинг использует **`useCompetingBreeds()`** → `indexes/dogs-index.json`, `deriveCompetingBreeds()` — только `competition_count > 0`, без `/^\d+$/`, список **отсортирован по числу собак в породе**.
 
 Если на проде всё ещё старый список — не задеплоен фронт. `breeds.json` в git можно не трогать; он для legacy API.
 

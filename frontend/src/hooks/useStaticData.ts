@@ -1,6 +1,11 @@
 import { useQuery } from '@tanstack/react-query';
 import { deriveCompetingBreeds, type DogsIndexEntry } from '../lib/competingBreeds';
-import { getJudges, getJudgeDetails } from '../lib/staticData';
+import {
+  getCoursingRecords,
+  getJudges,
+  getJudgeDetails,
+  getSpeedRecords,
+} from '../lib/staticData';
 
 const STALE_MS = 5 * 60 * 1000;
 const STALE_LONG_MS = 60 * 60 * 1000;
@@ -11,15 +16,11 @@ function topIndexFileName(prefix: string, year: string): string {
 }
 
 async function fetchStaticData<T>(path: string): Promise<{ success: true; data: T }> {
-  console.log(`[DEBUG] Fetching: ${path}`);
   const response = await fetch(path);
-  console.log(`[DEBUG] Response status: ${response.status} ${response.statusText}`);
   if (!response.ok) {
-    console.error(`[DEBUG] Failed to fetch ${path}: ${response.statusText}`);
     throw new Error(`Failed to fetch ${path}: ${response.statusText}`);
   }
   const data = await response.json();
-  console.log(`[DEBUG] Data received for ${path}:`, data);
   return { success: true, data };
 }
 
@@ -99,7 +100,7 @@ export function useJudgeDetails(judgeId: string | undefined, breed: string, disc
 export function useSpeedRecords(breed: string, sex: string, limit: number, search: string, year: string) {
   return useQuery({
     queryKey: ['speedRecords', breed, sex, limit, search, year],
-    queryFn: () => fetchStaticData<{ records: any[]; count: number }>('/data/v1/donino/speed_records.json'),
+    queryFn: () => getSpeedRecords(breed, sex, limit, search, year),
     staleTime: STALE_MS,
   });
 }
@@ -107,7 +108,7 @@ export function useSpeedRecords(breed: string, sex: string, limit: number, searc
 export function useCoursingRecords(breed: string, limit: number, search: string, year: string) {
   return useQuery({
     queryKey: ['coursingRecords', breed, limit, search, year],
-    queryFn: () => fetchStaticData<{ records: any[]; count: number }>('/data/v1/donino/coursing_records.json'),
+    queryFn: () => getCoursingRecords(breed, limit, search, year),
     staleTime: STALE_MS,
   });
 }
@@ -145,7 +146,7 @@ export function useDogEvents(dogId: string) {
 export function useDogSpeedRecords(dogId: string) {
   return useQuery({
     queryKey: ['dogSpeedRecords', dogId],
-    queryFn: () => fetchStaticData<{ records: any[]; count: number }>('/data/v1/donino/speed_records.json'),
+    queryFn: () => getSpeedRecords('', '', 1000, '', '', dogId),
     enabled: !!dogId,
     staleTime: STALE_MS,
   });
@@ -154,7 +155,8 @@ export function useDogSpeedRecords(dogId: string) {
 export function useSpeedRecordsByBreed(breed: string) {
   return useQuery({
     queryKey: ['speedRecordsByBreed', breed],
-    queryFn: () => fetchStaticData<{ records: any[]; count: number }>('/data/v1/donino/speed_records.json'),
+    queryFn: () => getSpeedRecords(breed, '', 1000, '', ''),
+    enabled: !!breed,
     staleTime: STALE_MS,
   });
 }
@@ -162,7 +164,7 @@ export function useSpeedRecordsByBreed(breed: string) {
 export function useDogCoursingRecords(dogId: string) {
   return useQuery({
     queryKey: ['dogCoursingRecords', dogId],
-    queryFn: () => fetchStaticData<{ records: any[]; count: number }>('/data/v1/donino/coursing_records.json'),
+    queryFn: () => getCoursingRecords('', 1000, '', '', dogId),
     enabled: !!dogId,
     staleTime: STALE_MS,
   });
@@ -171,7 +173,8 @@ export function useDogCoursingRecords(dogId: string) {
 export function useCoursingRecordsByBreed(breed: string) {
   return useQuery({
     queryKey: ['coursingRecordsByBreed', breed],
-    queryFn: () => fetchStaticData<{ records: any[]; count: number }>('/data/v1/donino/coursing_records.json'),
+    queryFn: () => getCoursingRecords(breed, 1000, '', ''),
+    enabled: !!breed,
     staleTime: STALE_MS,
   });
 }

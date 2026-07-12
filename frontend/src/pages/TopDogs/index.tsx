@@ -1,5 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { useSearchParams } from 'react-router-dom'
+import { SEO } from '../../components/SEO'
+import { useYandexGoal } from '../../components/YandexMetrica'
 import { useTopPlacement, useTopScore, useTopSpeed, useCompetingBreeds, useYears } from '../../hooks/useStaticData'
 import SkeletonLoader from '../../components/SkeletonLoader'
 import TopDogsFilters from './TopDogsFilters'
@@ -21,6 +23,7 @@ const CURRENT_SEASON = String(new Date().getFullYear())
 export default function TopDogs() {
   const [searchParams, setSearchParams] = useSearchParams()
   const isStandalone = !searchParams.get('tab')
+  const { reachGoal } = useYandexGoal()
 
   const [coursingTab, setCoursingTab] = useState<CoursingTab>(() =>
     parseCoursingTab(searchParams.get('rankingTab'))
@@ -55,6 +58,20 @@ export default function TopDogs() {
   const [filterMinStarts, setFilterMinStarts] = useState(() => searchParams.get('minStarts') || '')
   const [filterScoreFrom, setFilterScoreFrom] = useState(() => searchParams.get('scoreFrom') || '')
   const [filterSpeedFrom, setFilterSpeedFrom] = useState(() => searchParams.get('speedFrom') || '')
+
+  // Отслеживание использования фильтров
+  useEffect(() => {
+    if (filterYear || filterBreed || searchQuery || filterMinStarts || filterScoreFrom || filterSpeedFrom) {
+      reachGoal('filter_used')
+    }
+  }, [filterYear, filterBreed, searchQuery, filterMinStarts, filterScoreFrom, filterSpeedFrom, reachGoal])
+
+  // Отслеживание использования поиска
+  useEffect(() => {
+    if (searchQuery) {
+      reachGoal('search_used')
+    }
+  }, [searchQuery, reachGoal])
   const dropdownRef = useRef<HTMLDivElement>(null)
 
   const { data: breedsData, isLoading: breedsLoading } = useCompetingBreeds()
@@ -117,6 +134,13 @@ export default function TopDogs() {
 
   return (
     <div className={isStandalone ? 'px-4 pb-4' : 'max-w-full mx-auto pb-2 sm:pb-4'}>
+      {isStandalone && (
+        <SEO
+          title="Рейтинг собак"
+          description="Рейтинг собак по курсингу и бегам борзых. Топ собак по медалям и очкам, фильтрация по породе, году и количеству стартов. Статистика выступлений 2015-2026."
+          canonicalUrl="https://coursing-stats.ru/top"
+        />
+      )}
       <TopDogsFilters
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}

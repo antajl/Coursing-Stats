@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { useYears, useEvents } from '../../hooks/useApi'
+import { useYandexGoal } from '../../components/YandexMetrica'
 import FilterSelect from '../../components/FilterSelect'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
@@ -41,6 +42,7 @@ import {
 
 export default function Events() {
   const [searchParams, setSearchParams] = useSearchParams()
+  const { reachGoal } = useYandexGoal()
   const [filterYear, setFilterYear] = useState(() => searchParams.get('year') || '2026')
   const [filterDiscipline, setFilterDiscipline] = useState(() => searchParams.get('discipline') || '')
   const [filterCompetitionKind, setFilterCompetitionKind] = useState(() => searchParams.get('kind') || '')
@@ -49,6 +51,11 @@ export default function Events() {
   )
   const [searchQuery, setSearchQuery] = useState(() => searchParams.get('search') || '')
   const [quickPreset, setQuickPreset] = useState<QuickPreset>(null)
+
+  // Отслеживание просмотра соревнований
+  useEffect(() => {
+    reachGoal('competition_view')
+  }, [reachGoal])
 
   const { data: yearsData } = useYears()
   const { data: eventsData, isLoading: eventsLoading } = useEvents(filterYear)

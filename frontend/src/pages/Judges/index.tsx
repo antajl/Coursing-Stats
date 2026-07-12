@@ -1,5 +1,7 @@
 import { useState, useEffect, useMemo } from 'react'
 import { useLocation } from 'react-router-dom'
+import { SEO } from '../../components/SEO'
+import { useYandexGoal } from '../../components/YandexMetrica'
 import JudgeCard from '../../components/JudgeCard'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarFiltersDropdown from '../../components/toolbar/ToolbarFiltersDropdown'
@@ -22,11 +24,19 @@ const DISCIPLINE_OPTIONS = [
 export default function Judges() {
   const location = useLocation()
   const isEmbedded = location.pathname === '/competitions'
+  const { reachGoal } = useYandexGoal()
   const [searchQuery, setSearchQuery] = useState('')
   const [filterYear, setFilterYear] = useState('')
   const [filterBreed, setFilterBreed] = useState('')
   const [filterDiscipline, setFilterDiscipline] = useState('')
   const [isInitialLoad, setIsInitialLoad] = useState(true)
+
+  // Отслеживание просмотра судей
+  useEffect(() => {
+    if (!isEmbedded) {
+      reachGoal('judges_view')
+    }
+  }, [isEmbedded, reachGoal])
 
   const { data: judgesData, isLoading: loading } = useJudges(filterBreed, filterDiscipline, filterYear)
 
@@ -101,6 +111,13 @@ export default function Judges() {
 
   return (
     <div className={isEmbedded ? '' : 'px-4 pb-4'}>
+      {!isEmbedded && (
+        <SEO
+          title="Судьи"
+          description="Статистика судей по курсингу и бегам борзых. Рейтинг судей по количеству оценок, фильтрация по дисциплине, породе и году. Экспертная оценка и судейство соревнований."
+          canonicalUrl="https://coursing-stats.ru/judges"
+        />
+      )}
       <div className="mb-4">
         <PageToolbar
           bare

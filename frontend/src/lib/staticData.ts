@@ -21,7 +21,7 @@ import {
   type JudgeRawRow,
 } from './judgeStats'
 import { dedupeCalendarEvents } from '../../../backend/lib/event-identity'
-import { ratingScoreFromRow } from '../../../backend/lib/rating/coursing-rating-score'
+import { sortPlacementItems, sortScoreItems } from '../../../backend/lib/data-logic/sort-top'
 
 export const DATA_BASE = '/data/v1'
 
@@ -42,7 +42,9 @@ export function fetchJson<T>(relativePath: string): Promise<T | null> {
   return jsonCache.get(relativePath) as Promise<T | null>
 }
 
-// ── Сортировка / пагинация (порт backend/lib/local-data/static-data.ts) ────
+// ── Сортировка / пагинация (shared backend/lib/data-logic/sort-top.ts) ────
+
+export { sortPlacementItems, sortScoreItems } from '../../../backend/lib/data-logic/sort-top'
 
 export function paginateItems<T>(
   items: T[],
@@ -52,83 +54,6 @@ export function paginateItems<T>(
   if (limit === null) return items
   const total = items.length
   return { items: items.slice(offset, offset + limit), total }
-}
-
-export function sortPlacementItems(
-  items: Record<string, unknown>[],
-  sortBy: string,
-): Record<string, unknown>[] {
-  const copy = [...items]
-  const cmp = (a: Record<string, unknown>, b: Record<string, unknown>) => {
-    const gold = Number(b.gold ?? 0) - Number(a.gold ?? 0)
-    const silver = Number(b.silver ?? 0) - Number(a.silver ?? 0)
-    const bronze = Number(b.bronze ?? 0) - Number(a.bronze ?? 0)
-    if (sortBy === 'silver') return silver || gold || bronze
-    if (sortBy === 'bronze') return bronze || gold || silver
-    if (sortBy === 'total') {
-      const ta = Number(a.gold ?? 0) + Number(a.silver ?? 0) + Number(a.bronze ?? 0)
-      const tb = Number(b.gold ?? 0) + Number(b.silver ?? 0) + Number(b.bronze ?? 0)
-      return tb - ta || gold || silver || bronze
-    }
-    return gold || silver || bronze
-  }
-  copy.sort(cmp)
-  return copy
-}
-
-export function compareScoreItems(
-  a: Record<string, unknown>,
-  b: Record<string, unknown>,
-  sortBy = 'rating_score',
-): number {
-  if (sortBy === 'rating_score') {
-    const rating = ratingScoreFromRow(b) - ratingScoreFromRow(a)
-    if (rating !== 0) return rating
-    const avg = Number(b.avg_judge_score ?? 0) - Number(a.avg_judge_score ?? 0)
-    if (avg !== 0) return avg
-    const starts = Number(b.total_starts ?? 0) - Number(a.total_starts ?? 0)
-    if (starts !== 0) return starts
-    const bj = Number(b.best_judge_score ?? 0) - Number(a.best_judge_score ?? 0)
-    if (bj !== 0) return bj
-    return Number(b.best_score ?? 0) - Number(a.best_score ?? 0)
-  }
-
-  const primaryKey =
-    sortBy === 'best_judge_score'
-      ? 'best_judge_score'
-      : sortBy === 'best_score'
-        ? 'best_score'
-        : 'avg_judge_score'
-  const primary = Number(b[primaryKey] ?? 0) - Number(a[primaryKey] ?? 0)
-  if (primary !== 0) return primary
-
-  if (sortBy === 'best_judge_score') {
-    const avg = Number(b.avg_judge_score ?? 0) - Number(a.avg_judge_score ?? 0)
-    if (avg !== 0) return avg
-    const starts = Number(b.total_starts ?? 0) - Number(a.total_starts ?? 0)
-    if (starts !== 0) return starts
-    return Number(b.best_score ?? 0) - Number(a.best_score ?? 0)
-  }
-
-  if (sortBy === 'best_score') {
-    const bj = Number(b.best_judge_score ?? 0) - Number(a.best_judge_score ?? 0)
-    if (bj !== 0) return bj
-    const avg = Number(b.avg_judge_score ?? 0) - Number(a.avg_judge_score ?? 0)
-    if (avg !== 0) return avg
-    return Number(b.total_starts ?? 0) - Number(a.total_starts ?? 0)
-  }
-
-  const starts = Number(b.total_starts ?? 0) - Number(a.total_starts ?? 0)
-  if (starts !== 0) return starts
-  const bj = Number(b.best_judge_score ?? 0) - Number(a.best_judge_score ?? 0)
-  if (bj !== 0) return bj
-  return Number(b.best_score ?? 0) - Number(a.best_score ?? 0)
-}
-
-export function sortScoreItems(items: Record<string, unknown>[], sortBy = 'rating_score'): Record<string, unknown>[] {
-  const copy = [...items]
-  copy.sort((a, b) => compareScoreItems(a, b, sortBy))
-  return copy
 }
 
 function sortSpeedItems(items: Record<string, unknown>[], sortBy: string): Record<string, unknown>[] {
@@ -698,4 +623,120 @@ export async function getDogProfile(dogId: string): Promise<ApiResult<Record<str
 export async function getDogEvents(dogId: string): Promise<ApiResult<Record<string, unknown>[]>> {
   const file = await fetchJson<DogProfileFile>(`indexes/dog-profiles/${dogId}.json`)
   return { success: true, data: file?.competitions ?? [] }
+}
+
+// ── Выставки (RKF Shows) ─────────────────────────────────────────────────────
+
+interface ShowResult {
+  breed: string
+  breed_group?: string
+  breed_judge?: string
+  breed_count?: number
+  dog_breed_id?: number
+  sex?: string
+  class: string
+  placement: number
+  grade?: string
+  title: string
+  dog_name: string
+  owner: string
+  judge: string
+  sex?: string
+  ring_number?: number
+  points: number
+}
+
+interface ShowExhibition {
+  id: number
+  date: string
+  title: string
+  location: string
+  rank: string
+  type: string
+  club: string
+  judges: string[]
+  breed_catalog?: Array<{
+    dog_breed_id: number
+    breed: string
+    breed_en: string
+    breed_group: string
+    breed_group_en?: string
+    breed_judge: string
+    breed_count: number
+    titles?: Array<{
+      title_code: string
+      ring_number: number
+      dog_name: string
+      owner: string
+    }>
+  }>
+  results: ShowResult[]
+}
+
+interface ShowCalendarFile {
+  exhibitions?: ShowExhibition[]
+}
+
+export async function getShowCalendar(year = ''): Promise<ApiResult<ShowExhibition[]>> {
+  // Load all exhibitions from exhibitions directory
+  const index = await fetchJson<Record<string, string>>('shows/index.json')
+  if (!index) return { success: false, error: 'Shows index unavailable' }
+  
+  // Load each exhibition file
+  const exhibitions: ShowExhibition[] = []
+  for (const [id, filePath] of Object.entries(index)) {
+    const exhibition = await fetchJson<ShowExhibition>(`shows/${filePath}`)
+    if (exhibition) {
+      exhibitions.push(exhibition)
+    }
+  }
+  
+  // Sort by date
+  const sorted = exhibitions.sort((a, b) => 
+    String(b.date || '').localeCompare(String(a.date || ''))
+  )
+  
+  return { success: true, data: sorted }
+}
+
+export async function getShowExhibition(exhibitionId: string): Promise<ApiResult<ShowExhibition>> {
+  const index = await fetchJson<Record<string, string>>('shows/index.json')
+  if (!index) return { success: false, error: 'Shows index unavailable' }
+  
+  const filePath = index[exhibitionId]
+  if (!filePath) return { success: false, error: 'Exhibition not found in index' }
+  
+  const exhibition = await fetchJson<ShowExhibition>(`shows/${filePath}`)
+  if (!exhibition) return { success: false, error: 'Exhibition file not found' }
+  return { success: true, data: exhibition }
+}
+
+interface ShowDog {
+  id: string
+  name_lat: string
+  name_ru: string
+  breed: string
+  sex: string
+  total_shows: number
+  best_placement?: number
+  rank_score?: number
+  best_award?: string | null
+  titles: {
+    CAC: number
+    CACIB: number
+    BOB: number
+    BIS: number
+  }
+}
+
+export async function getShowDogRanking(): Promise<ApiResult<ShowDog[]>> {
+  const ranking = await fetchJson<ShowDog[]>('shows/indexes/dog-ranking.json')
+  if (!ranking) return { success: false, error: 'Dog ranking unavailable' }
+  return { success: true, data: ranking }
+}
+
+export async function getShowJudges(): Promise<ApiResult<string[]>> {
+  const judges = await fetchJson<string[]>('shows/indexes/judges.json')
+  if (!judges) return { success: false, error: 'Show judges unavailable' }
+  return { success: true, data: judges }
 }

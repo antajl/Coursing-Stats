@@ -2,7 +2,6 @@ import { Hono } from 'hono';
 import { loadDoninoCoursingRecords, loadDoninoSpeedRecords } from '../lib/static-api';
 
 type Env = {
-  DB: any;
   ADMIN_API_TOKEN: string;
 };
 
@@ -55,47 +54,56 @@ function filterDoninoRecords(
 export function handleSpeed(app: Hono<{ Bindings: Env }>) {
   // GET /api/speed-records/top-by-breed — лучший результат в каждой породе, затем топ-N пород
   app.get('/api/speed-records/top-by-breed', async (c) => {
-    const db = c.env.DB;
     const limit = Math.min(Math.max(parseInt(c.req.query('limit') || '3', 10) || 3, 1), 20);
 
-    const query = `
-      SELECT * FROM (
-        SELECT *,
-          ROW_NUMBER() OVER (PARTITION BY breed ORDER BY speed_km_h DESC, id ASC) AS rn
-        FROM speed_records
-      )
-      WHERE rn = 1
-      ORDER BY speed_km_h DESC
-      LIMIT ?
-    `;
+    const staticRecords = await loadDoninoSpeedRecords();
+    if (!staticRecords?.length) {
+      return c.json({ success: false, error: 'Speed records not found' }, 404);
+    }
 
-    const { results } = await db.prepare(query).bind(limit).all();
-    return c.json({ success: true, data: results });
+    // Group by breed and get best from each
+    const breedMap = new Map<string, any>();
+    for (const record of staticRecords) {
+      const breed = String(record.breed);
+      if (!breedMap.has(breed) || Number(record.speed_km_h) > Number(breedMap.get(breed).speed_km_h)) {
+        breedMap.set(breed, record);
+      }
+    }
+
+    const topBreeds = Array.from(breedMap.values())
+      .sort((a, b) => b.speed_km_h - a.speed_km_h)
+      .slice(0, limit);
+
+    return c.json({ success: true, data: topBreeds });
   });
 
   // GET /api/coursing-records/top-by-breed — лучшее время в каждой породе, затем топ-N пород
   app.get('/api/coursing-records/top-by-breed', async (c) => {
-    const db = c.env.DB;
     const limit = Math.min(Math.max(parseInt(c.req.query('limit') || '3', 10) || 3, 1), 20);
 
-    const query = `
-      SELECT * FROM (
-        SELECT *,
-          ROW_NUMBER() OVER (PARTITION BY breed ORDER BY time_seconds ASC, id ASC) AS rn
-        FROM coursing_records
-      )
-      WHERE rn = 1
-      ORDER BY time_seconds ASC
-      LIMIT ?
-    `;
+    const staticRecords = await loadDoninoCoursingRecords();
+    if (!staticRecords?.length) {
+      return c.json({ success: false, error: 'Coursing records not found' }, 404);
+    }
 
-    const { results } = await db.prepare(query).bind(limit).all();
-    return c.json({ success: true, data: results });
+    // Group by breed and get best from each
+    const breedMap = new Map<string, any>();
+    for (const record of staticRecords) {
+      const breed = String(record.breed);
+      if (!breedMap.has(breed) || Number(record.time_seconds) < Number(breedMap.get(breed).time_seconds)) {
+        breedMap.set(breed, record);
+      }
+    }
+
+    const topBreeds = Array.from(breedMap.values())
+      .sort((a, b) => a.time_seconds - b.time_seconds)
+      .slice(0, limit);
+
+    return c.json({ success: true, data: topBreeds });
   });
 
   // GET /api/speed-records
   app.get('/api/speed-records', async (c) => {
-    const db = c.env.DB;
     const breed = c.req.query('breed') || '';
     const sex = c.req.query('sex') || '';
     const search = c.req.query('search') || '';
@@ -104,58 +112,24 @@ export function handleSpeed(app: Hono<{ Bindings: Env }>) {
     const dogId = c.req.query('dog_id') || '';
 
     const staticRecords = await loadDoninoSpeedRecords();
-    if (staticRecords?.length) {
-      const filtered = filterDoninoRecords(staticRecords, {
-        breed,
-        sex,
-        search,
-        year,
-        dogId,
-        limit,
-        sortKey: 'speed_km_h',
-      });
-      return c.json({ success: true, data: filtered });
+    if (!staticRecords?.length) {
+      return c.json({ success: false, error: 'Speed records not found' }, 404);
     }
 
-    let query = 'SELECT * FROM speed_records WHERE 1=1';
-    const params = [];
-
-    if (dogId) {
-      query += ' AND dog_id = ?';
-      params.push(dogId);
-    }
-
-    if (breed) {
-      query += ' AND breed = ?';
-      params.push(breed);
-    }
-
-    if (sex) {
-      query += ' AND sex = ?';
-      params.push(sex);
-    }
-
-    if (year) {
-      query += ' AND date LIKE ?';
-      params.push(`%.${year}`);
-    }
-
-    if (search) {
-      query += ' AND (name LIKE ? OR breed LIKE ? OR date LIKE ?)';
-      const searchPattern = `%${search}%`;
-      params.push(searchPattern, searchPattern, searchPattern);
-    }
-
-    query += ' ORDER BY speed_km_h DESC LIMIT ?';
-    params.push(parseInt(limit));
-
-    const { results } = await db.prepare(query).bind(...params).all();
-    return c.json({ success: true, data: results });
+    const filtered = filterDoninoRecords(staticRecords, {
+      breed,
+      sex,
+      search,
+      year,
+      dogId,
+      limit,
+      sortKey: 'speed_km_h',
+    });
+    return c.json({ success: true, data: filtered });
   });
 
   // GET /api/coursing-records
   app.get('/api/coursing-records', async (c) => {
-    const db = c.env.DB;
     const breed = c.req.query('breed') || '';
     const search = c.req.query('search') || '';
     const year = c.req.query('year') || '';
@@ -163,53 +137,24 @@ export function handleSpeed(app: Hono<{ Bindings: Env }>) {
     const dogId = c.req.query('dog_id') || '';
 
     const staticRecords = await loadDoninoCoursingRecords();
-    if (staticRecords?.length) {
-      const filtered = filterDoninoRecords(staticRecords, {
-        breed,
-        search,
-        year,
-        dogId,
-        limit,
-        sortKey: 'time_seconds',
-        sortAsc: true,
-      });
-      return c.json({ success: true, data: filtered });
+    if (!staticRecords?.length) {
+      return c.json({ success: false, error: 'Coursing records not found' }, 404);
     }
 
-    let query = 'SELECT * FROM coursing_records WHERE 1=1';
-    const params = [];
-
-    if (dogId) {
-      query += ' AND dog_id = ?';
-      params.push(dogId);
-    }
-
-    if (breed) {
-      query += ' AND breed = ?';
-      params.push(breed);
-    }
-
-    if (year) {
-      query += ' AND date LIKE ?';
-      params.push(`%.${year}`);
-    }
-
-    if (search) {
-      query += ' AND (name LIKE ? OR breed LIKE ? OR date LIKE ?)';
-      const searchPattern = `%${search}%`;
-      params.push(searchPattern, searchPattern, searchPattern);
-    }
-
-    query += ' ORDER BY time_seconds ASC LIMIT ?';
-    params.push(parseInt(limit));
-
-    const { results } = await db.prepare(query).bind(...params).all();
-    return c.json({ success: true, data: results });
+    const filtered = filterDoninoRecords(staticRecords, {
+      breed,
+      search,
+      year,
+      dogId,
+      limit,
+      sortKey: 'time_seconds',
+      sortAsc: true,
+    });
+    return c.json({ success: true, data: filtered });
   });
 
   // GET /api/donino-dog/:name/:breed
   app.get('/api/donino-dog/:name/:breed', async (c) => {
-    const db = c.env.DB;
     const name = c.req.param('name');
     const breed = c.req.param('breed');
 
@@ -217,34 +162,28 @@ export function handleSpeed(app: Hono<{ Bindings: Env }>) {
       return c.json({ success: false, error: 'Name and breed are required' }, 400);
     }
 
-    // Получаем записи скорости для собаки
-    const speedQuery = `
-      SELECT * FROM speed_records 
-      WHERE name = ? AND breed = ? 
-      ORDER BY date DESC
-    `;
-    const { results: speedRecords } = await db.prepare(speedQuery).bind(name, breed).all();
+    const speedRecords = await loadDoninoSpeedRecords();
+    const coursingRecords = await loadDoninoCoursingRecords();
 
-    // Получаем записи бегов для собаки
-    const coursingQuery = `
-      SELECT * FROM coursing_records 
-      WHERE name = ? AND breed = ? 
-      ORDER BY date DESC
-    `;
-    const { results: coursingRecords } = await db.prepare(coursingQuery).bind(name, breed).all();
+    if (!speedRecords?.length || !coursingRecords?.length) {
+      return c.json({ success: false, error: 'Records not found' }, 404);
+    }
+
+    const dogSpeedRecords = speedRecords.filter((r: any) => r.name === name && r.breed === breed);
+    const dogCoursingRecords = coursingRecords.filter((r: any) => r.name === name && r.breed === breed);
 
     // Вычисляем статистику скорости
     const speedStats = {
-      total: speedRecords.length,
-      bestSpeed: speedRecords.length > 0 ? Math.max(...speedRecords.map(r => r.speed_km_h)) : 0,
-      avgSpeed: speedRecords.length > 0 ? speedRecords.reduce((sum, r) => sum + r.speed_km_h, 0) / speedRecords.length : 0,
+      total: dogSpeedRecords.length,
+      bestSpeed: dogSpeedRecords.length > 0 ? Math.max(...dogSpeedRecords.map((r: any) => r.speed_km_h)) : 0,
+      avgSpeed: dogSpeedRecords.length > 0 ? dogSpeedRecords.reduce((sum: number, r: any) => sum + r.speed_km_h, 0) / dogSpeedRecords.length : 0,
     };
 
     // Вычисляем статистику бегов
     const coursingStats = {
-      total: coursingRecords.length,
-      bestTime: coursingRecords.length > 0 ? Math.min(...coursingRecords.map(r => r.time_seconds)) : 0,
-      avgTime: coursingRecords.length > 0 ? coursingRecords.reduce((sum, r) => sum + r.time_seconds, 0) / coursingRecords.length : 0,
+      total: dogCoursingRecords.length,
+      bestTime: dogCoursingRecords.length > 0 ? Math.min(...dogCoursingRecords.map((r: any) => r.time_seconds)) : 0,
+      avgTime: dogCoursingRecords.length > 0 ? dogCoursingRecords.reduce((sum: number, r: any) => sum + r.time_seconds, 0) / dogCoursingRecords.length : 0,
     };
 
     // Расчёт рейтинга по породе для скорости
@@ -253,17 +192,17 @@ export function handleSpeed(app: Hono<{ Bindings: Env }>) {
     let speedPercentile = 0;
 
     if (speedStats.bestSpeed > 0) {
-      const breedSpeedQuery = `
-        SELECT DISTINCT name, MAX(speed_km_h) as best_speed
-        FROM speed_records
-        WHERE breed = ? AND speed_km_h > 0
-        GROUP BY name
-        ORDER BY best_speed DESC
-      `;
-      const { results: breedSpeedDogs } = await db.prepare(breedSpeedQuery).bind(breed).all();
+      const breedSpeedDogs = speedRecords
+        .filter((r: any) => r.breed === breed && r.speed_km_h > 0)
+        .reduce((acc: Map<string, number>, r: any) => {
+          const current = acc.get(r.name) || 0;
+          acc.set(r.name, Math.max(current, r.speed_km_h));
+          return acc;
+        }, new Map());
       
-      speedBreedTotal = breedSpeedDogs.length;
-      const dogRank = breedSpeedDogs.findIndex(d => d.best_speed === speedStats.bestSpeed);
+      const sortedBreedSpeeds = Array.from(breedSpeedDogs.entries()).sort((a, b) => b[1] - a[1]);
+      speedBreedTotal = sortedBreedSpeeds.length;
+      const dogRank = sortedBreedSpeeds.findIndex(([n, s]) => s === speedStats.bestSpeed);
       speedBreedRank = dogRank >= 0 ? dogRank + 1 : 0;
       speedPercentile = speedBreedTotal > 0 ? ((speedBreedTotal - speedBreedRank) / speedBreedTotal) * 100 : 0;
     }
@@ -274,22 +213,22 @@ export function handleSpeed(app: Hono<{ Bindings: Env }>) {
     let coursingPercentile = 0;
 
     if (coursingStats.bestTime > 0) {
-      const breedCoursingQuery = `
-        SELECT DISTINCT name, MIN(time_seconds) as best_time
-        FROM coursing_records
-        WHERE breed = ? AND time_seconds > 0
-        GROUP BY name
-        ORDER BY best_time ASC
-      `;
-      const { results: breedCoursingDogs } = await db.prepare(breedCoursingQuery).bind(breed).all();
+      const breedCoursingDogs = coursingRecords
+        .filter((r: any) => r.breed === breed && r.time_seconds > 0)
+        .reduce((acc: Map<string, number>, r: any) => {
+          const current = acc.get(r.name) || Infinity;
+          acc.set(r.name, Math.min(current, r.time_seconds));
+          return acc;
+        }, new Map());
       
-      coursingBreedTotal = breedCoursingDogs.length;
-      const dogRank = breedCoursingDogs.findIndex(d => d.best_time === coursingStats.bestTime);
+      const sortedBreedCoursing = Array.from(breedCoursingDogs.entries()).sort((a, b) => a[1] - b[1]);
+      coursingBreedTotal = sortedBreedCoursing.length;
+      const dogRank = sortedBreedCoursing.findIndex(([n, t]) => t === coursingStats.bestTime);
       coursingBreedRank = dogRank >= 0 ? dogRank + 1 : 0;
       coursingPercentile = coursingBreedTotal > 0 ? ((coursingBreedTotal - coursingBreedRank) / coursingBreedTotal) * 100 : 0;
     }
 
-    const sex = speedRecords.find((r) => r.sex)?.sex ?? null;
+    const sex = dogSpeedRecords.find((r: any) => r.sex)?.sex ?? null;
 
     return c.json({
       success: true,
@@ -297,8 +236,8 @@ export function handleSpeed(app: Hono<{ Bindings: Env }>) {
         name,
         breed,
         sex,
-        speedRecords,
-        coursingRecords,
+        speedRecords: dogSpeedRecords,
+        coursingRecords: dogCoursingRecords,
         speedStats: {
           ...speedStats,
           breedRank: speedBreedRank,

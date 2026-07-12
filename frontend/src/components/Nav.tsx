@@ -1,20 +1,62 @@
 import { Link, useLocation } from 'react-router-dom'
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, useCallback } from 'react'
 import ThemeToggle from './ThemeToggle'
 import { useDarkMode } from '../hooks/useDarkMode'
+import { NavMenuDropdown } from './NavMenuDropdown'
+import { Icons } from '../lib/icons'
+
+type OpenMenuId = 'competitions' | 'shows' | 'donino' | null
+
+function competitionTabActive(tab: string) {
+  return (pathname: string, search: string) => {
+    if (pathname !== '/competitions' && pathname !== '/procoursing') return false
+    const current = new URLSearchParams(search).get('tab') || 'ranking'
+    return current === tab
+  }
+}
+
+function showTabActive(tab: string) {
+  return (pathname: string, search: string) => {
+    if (pathname !== '/shows') return false
+    const current = new URLSearchParams(search).get('tab') || 'ranking'
+    return current === tab
+  }
+}
+
+function doninoViewActive(view: 'table' | 'stats') {
+  return (pathname: string, search: string) => {
+    if (pathname !== '/speed-records') return false
+    const current = new URLSearchParams(search).get('view')
+    if (view === 'table') return current !== 'stats'
+    return current === 'stats'
+  }
+}
 
 export default function Nav() {
   const location = useLocation();
   const [sourcesOpen, setSourcesOpen] = useState(false);
+  const [openMenu, setOpenMenu] = useState<OpenMenuId>(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [statisticsOpen, setStatisticsOpen] = useState(false);
   const [doninoOpen, setDoninoOpen] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showsOpen, setShowsOpen] = useState(false);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const isDark = useDarkMode();
   const isActive = (path: string) => location.pathname === path || (path === '/' && location.pathname === '/');
   const isCompetitionsActive =
     location.pathname === '/competitions' || location.pathname === '/procoursing';
   const isSpeedRecordsActive = location.pathname === '/speed-records';
+  const isShowsActive = location.pathname === '/shows';
+
+  const setMenuOpen = useCallback((id: Exclude<OpenMenuId, null>) => {
+    return (open: boolean) => {
+      setOpenMenu((current) => {
+        if (open) return id
+        if (current === id) return null
+        return current
+      })
+    }
+  }, [])
 
   const handleMouseEnter = () => {
     if (timeoutRef.current) {
@@ -23,37 +65,9 @@ export default function Nav() {
     setSourcesOpen(true);
   };
 
-  const handleStatisticsEnter = () => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
-    setDoninoOpen(false);
-    setStatisticsOpen(true);
-  };
-
-  const handleDoninoEnter = () => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
-    setStatisticsOpen(false);
-    setDoninoOpen(true);
-  };
-
   const handleMouseLeave = () => {
     timeoutRef.current = setTimeout(() => {
       setSourcesOpen(false);
-    }, 200);
-  };
-
-  const handleStatisticsLeave = () => {
-    timeoutRef.current = setTimeout(() => {
-      setStatisticsOpen(false);
-    }, 200);
-  };
-
-  const handleDoninoLeave = () => {
-    timeoutRef.current = setTimeout(() => {
-      setDoninoOpen(false);
     }, 200);
   };
 
@@ -69,17 +83,27 @@ export default function Nav() {
     setDoninoOpen(!doninoOpen);
   };
 
+  const toggleShows = () => {
+    setShowsOpen(!showsOpen);
+  };
+
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
+
+  useEffect(() => {
+    setOpenMenu(null);
+  }, [location.pathname, location.search]);
 
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         setMobileMenuOpen(false);
         setSourcesOpen(false);
+        setOpenMenu(null);
         setStatisticsOpen(false);
         setDoninoOpen(false);
+        setShowsOpen(false);
       }
     };
     document.addEventListener('keydown', handleEsc);
@@ -111,75 +135,100 @@ export default function Nav() {
                 isActive('/') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
               }`}></span>
             </Link>
-            <div
-              className="relative"
-              onMouseEnter={handleStatisticsEnter}
-              onMouseLeave={handleStatisticsLeave}
-            >
-              <Link
-                to="/competitions?tab=ranking"
-                className={`group relative shrink-0 px-2.5 py-2 text-xs font-semibold whitespace-nowrap transition-all duration-300 lg:px-5 lg:text-sm ${
-                  isCompetitionsActive ? 'text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200 hover:text-charcoal-900 dark:hover:text-charcoal-100'
-                }`}
-              >
-                <span className="relative z-10">Статистика</span>
-                <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-camel-600 transition-transform duration-300 ${
-                  isCompetitionsActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
-                }`}></span>
-              </Link>
-              {statisticsOpen && (
-                <div className="absolute left-1/2 -translate-x-1/2 mt-1 w-48 bg-white dark:bg-charcoal-800 rounded-xl shadow-xl border-2 border-old-money-200 dark:border-charcoal-600 overflow-hidden z-[100]">
-                  <Link
-                    to="/competitions?tab=ranking"
-                    className="block px-4 py-3 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-700 transition-colors border-b border-old-money-100 dark:border-charcoal-600"
-                  >
-                    Рейтинг
-                  </Link>
-                  <Link
-                    to="/competitions?tab=judges"
-                    className="block px-4 py-3 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-700 transition-colors"
-                  >
-                    Судьи
-                  </Link>
-                </div>
-              )}
-            </div>
-            <div
-              className="relative"
-              onMouseEnter={handleDoninoEnter}
-              onMouseLeave={handleDoninoLeave}
-            >
-              <Link
-                to="/speed-records?view=table"
-                className={`group relative shrink-0 px-2.5 py-2 text-xs font-semibold whitespace-nowrap transition-all duration-300 lg:px-5 lg:text-sm ${
-                  isSpeedRecordsActive ? 'text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200 hover:text-charcoal-900 dark:hover:text-charcoal-100'
-                }`}
-              >
-                <span className="relative z-10">
+            <NavMenuDropdown
+              open={openMenu === 'competitions'}
+              onOpenChange={setMenuOpen('competitions')}
+              defaultTo="/competitions?tab=ranking"
+              title="Рейтинг собак и судьи: курсинг, БЗМП, бега борзых"
+              isSectionActive={isCompetitionsActive}
+              menuHint="курсинг · БЗМП · бега"
+              chevronLabel="Меню раздела Соревнования"
+              label={
+                <>
+                  <span className="lg:hidden">Соревн.</span>
+                  <span className="hidden lg:inline">Соревнования</span>
+                </>
+              }
+              items={[
+                {
+                  to: '/competitions?tab=ranking',
+                  label: 'Рейтинг',
+                  icon: Icons.medal,
+                  isActive: competitionTabActive('ranking'),
+                },
+                {
+                  to: '/competitions?tab=judges',
+                  label: 'Судьи',
+                  icon: Icons.club,
+                  isActive: competitionTabActive('judges'),
+                },
+              ]}
+            />
+            <NavMenuDropdown
+              open={openMenu === 'shows'}
+              onOpenChange={setMenuOpen('shows')}
+              defaultTo="/shows?tab=ranking"
+              title="Рейтинг собак и судьи на выставках"
+              isSectionActive={isShowsActive}
+              menuHint="выставки · шоу"
+              chevronLabel="Меню раздела Выставки"
+              label="Выставки"
+              items={[
+                {
+                  to: '/shows?tab=ranking',
+                  label: 'Рейтинг',
+                  icon: Icons.medal,
+                  isActive: showTabActive('ranking'),
+                },
+                {
+                  to: '/shows?tab=calendar',
+                  label: 'Календарь',
+                  icon: Icons.calendar,
+                  isActive: showTabActive('calendar'),
+                },
+                {
+                  to: '/shows?tab=champions',
+                  label: 'Чемпионы',
+                  icon: Icons.championship,
+                  isActive: showTabActive('champions'),
+                },
+                {
+                  to: '/shows?tab=judges',
+                  label: 'Судьи',
+                  icon: Icons.club,
+                  isActive: showTabActive('judges'),
+                },
+              ]}
+            />
+            <NavMenuDropdown
+              open={openMenu === 'donino'}
+              onOpenChange={setMenuOpen('donino')}
+              defaultTo="/speed-records?view=table"
+              title="Рекорды полигона Курсинг Донино"
+              isSectionActive={isSpeedRecordsActive}
+              menuHint="замер · бега 350 м"
+              chevronLabel="Меню раздела Курсинг Донино"
+              label={
+                <>
                   <span className="lg:hidden">Донино</span>
-                  <span className="hidden lg:inline">Рекорды Донино</span>
-                </span>
-                <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-camel-600 transition-transform duration-300 ${
-                  isSpeedRecordsActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
-                }`}></span>
-              </Link>
-              {doninoOpen && (
-                <div className="absolute left-1/2 -translate-x-1/2 mt-1 w-48 bg-white dark:bg-charcoal-800 rounded-xl shadow-xl border-2 border-old-money-200 dark:border-charcoal-600 overflow-hidden z-[100]">
-                  <Link
-                    to="/speed-records?view=table"
-                    className="block px-4 py-3 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-700 transition-colors border-b border-old-money-100 dark:border-charcoal-600"
-                  >
-                    Записи
-                  </Link>
-                  <Link
-                    to="/speed-records?view=stats"
-                    className="block px-4 py-3 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-700 transition-colors"
-                  >
-                    Статистика
-                  </Link>
-                </div>
-              )}
-            </div>
+                  <span className="hidden lg:inline">Курсинг Донино</span>
+                </>
+              }
+              items={[
+                {
+                  to: '/speed-records?view=table',
+                  label: 'Записи',
+                  icon: Icons.speed,
+                  isActive: doninoViewActive('table'),
+                },
+                {
+                  to: '/speed-records?view=stats',
+                  label: 'Статистика',
+                  icon: Icons.trend,
+                  isActive: doninoViewActive('stats'),
+                },
+              ]}
+            />
             <Link
               to="/guide"
               className={`group relative shrink-0 px-2.5 py-2 text-xs font-semibold whitespace-nowrap transition-all duration-300 lg:px-4 lg:text-sm ${
@@ -308,7 +357,7 @@ export default function Nav() {
                 }`}
               >
                 <span className="relative inline-block">
-                  Статистика
+                  Соревнования
                   <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-camel-600 transition-transform duration-300 ${
                     isCompetitionsActive ? 'scale-x-100' : 'scale-x-0'
                   }`}></span>
@@ -338,13 +387,63 @@ export default function Nav() {
             </div>
             <div>
               <button
+                onClick={toggleShows}
+                className={`w-full flex items-center justify-between px-4 py-2 text-sm font-semibold transition-colors ${
+                  isShowsActive ? 'text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200'
+                }`}
+              >
+                <span className="relative inline-block">
+                  Выставки
+                  <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-camel-600 transition-transform duration-300 ${
+                    isShowsActive ? 'scale-x-100' : 'scale-x-0'
+                  }`}></span>
+                </span>
+                <svg className={`w-4 h-4 transition-transform ${showsOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {showsOpen && (
+                <div className="mt-2 space-y-1 pl-4">
+                  <Link
+                    to="/shows?tab=ranking"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block px-4 py-2 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800 rounded-lg transition-colors"
+                  >
+                    Рейтинг
+                  </Link>
+                  <Link
+                    to="/shows?tab=calendar"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block px-4 py-2 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800 rounded-lg transition-colors"
+                  >
+                    Календарь
+                  </Link>
+                  <Link
+                    to="/shows?tab=champions"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block px-4 py-2 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800 rounded-lg transition-colors"
+                  >
+                    Чемпионы
+                  </Link>
+                  <Link
+                    to="/shows?tab=judges"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block px-4 py-2 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800 rounded-lg transition-colors"
+                  >
+                    Судьи
+                  </Link>
+                </div>
+              )}
+            </div>
+            <div>
+              <button
                 onClick={toggleDonino}
                 className={`w-full flex items-center justify-between px-4 py-2 text-sm font-semibold transition-colors ${
                   isSpeedRecordsActive ? 'text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200'
                 }`}
               >
                 <span className="relative inline-block">
-                  Рекорды Донино
+                  Курсинг Донино
                   <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-camel-600 transition-transform duration-300 ${
                     isSpeedRecordsActive ? 'scale-x-100' : 'scale-x-0'
                   }`}></span>

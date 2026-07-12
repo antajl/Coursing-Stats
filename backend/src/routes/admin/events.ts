@@ -1,11 +1,8 @@
 import { Hono } from 'hono';
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const ROOT = path.resolve(__dirname, '../../../..');
-const COMPETITIONS_ROOT = path.join(ROOT, 'data/v1/competitions');
+import { findEventFile } from '../../../lib/local-data/find-event-file';
+import { dataV1Path } from '../../../lib/local-data/paths';
 
 type Env = {
   ADMIN_API_TOKEN: string;
@@ -24,11 +21,12 @@ function checkAdminToken(c: any, env: Env) {
 }
 
 async function getCompetitionFiles() {
-  const years = await fs.readdir(COMPETITIONS_ROOT);
+  const competitionsRoot = dataV1Path('competitions');
+  const years = await fs.readdir(competitionsRoot);
   const events: any[] = [];
   
   for (const year of years) {
-    const yearPath = path.join(COMPETITIONS_ROOT, year);
+    const yearPath = path.join(competitionsRoot, year);
     const stat = await fs.stat(yearPath);
     if (!stat.isDirectory()) continue;
     
@@ -54,40 +52,6 @@ async function getCompetitionFiles() {
   }
   
   return events;
-}
-
-async function findEventFile(eventId: number): Promise<{ filePath: string; data: any } | null> {
-  const years = await fs.readdir(COMPETITIONS_ROOT);
-  
-  for (const year of years) {
-    const yearPath = path.join(COMPETITIONS_ROOT, year);
-    const stat = await fs.stat(yearPath);
-    if (!stat.isDirectory()) continue;
-    
-    try {
-      const months = await fs.readdir(yearPath);
-      for (const month of months) {
-        const monthPath = path.join(yearPath, month);
-        const monthStat = await fs.stat(monthPath);
-        if (!monthStat.isDirectory()) continue;
-        
-        const files = await fs.readdir(monthPath);
-        for (const file of files) {
-          if (!file.endsWith('.json')) continue;
-          if (!file.startsWith(`${eventId}-`)) continue;
-          
-          const filePath = path.join(monthPath, file);
-          const content = await fs.readFile(filePath, 'utf-8');
-          const data = JSON.parse(content);
-          return { filePath, data };
-        }
-      }
-    } catch (e) {
-      // Skip if can't read
-    }
-  }
-  
-  return null;
 }
 
 export function handleAdminEvents(app: Hono<{ Bindings: Env }>) {

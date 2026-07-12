@@ -206,7 +206,7 @@ Push в `main` → GitHub Actions → Cloudflare Pages. Worker в прод не 
 - ✅ Sitemap (`/sitemap.xml`) и precomputed indexes в CI
 - ✅ Файловый архив: `npm run export-archive` → `data/archive/snapshots/`
 - ✅ Sitemap + favicon.ico для поисковиков
-- ✅ Страница `/guide` (справочник правил и протоколов)
+- ✅ Страница `/guide` (справочник: соревнования, выставки, протоколы, рейтинг CS)
 - ✅ Тесты парсеров: `npm run test-parser` (синтетика), `npm run test-parser-fixtures` (v2 модульные парсеры на фикстурах)
 - ✅ E2E (Playwright): `npm run test:e2e` — см. [08-TESTING.md](08-TESTING.md)
 

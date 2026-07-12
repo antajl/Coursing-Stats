@@ -12,6 +12,12 @@ test.describe('Guide Page', () => {
     await expect(page.getByText('Официальные источники')).toBeVisible()
   })
 
+  test('switches to shows tab', async ({ page }) => {
+    await guideSegment(page).getByRole('button', { name: 'Выставки' }).click()
+    await expect(page).toHaveURL(/tab=shows/)
+    await expect(page.getByText('Иерархия: от сертификата к интернациональному чемпиону')).toBeVisible()
+  })
+
   test('switches to protocol tab', async ({ page }) => {
     await guideSegment(page).getByRole('button', { name: 'Протоколы' }).click()
     await expect(page).toHaveURL(/tab=protocol/)

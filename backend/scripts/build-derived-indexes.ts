@@ -23,7 +23,8 @@ import { judgeDetailKey } from '../src/lib/static-api';
 import { parseJudgeNames } from '../src/lib/judge-names';
 import { aggregateQualificationTitles } from '../src/lib/qualification-titles';
 import { RACING_EXCLUDED_STATUSES_SQL } from '../src/lib/racing-status';
-import { computeCoursingRatingScore } from '../lib/rating/coursing-rating-score';
+import { attachScoreMetrics } from '../lib/data-logic/attach-score-metrics';
+import { sortScoreItems } from '../lib/data-logic/sort-top';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const INDEXES_DIR = path.join(ROOT, 'data/v1/indexes');
@@ -86,74 +87,6 @@ const SCORE_ALL_YEARS_SQL = `
   GROUP BY d.id
 `;
 
-/** Метрики очков: avg, judge_eval_count, rating_score (индекс CS). */
-function attachScoreMetrics(
-  db: Database.Database,
-  scoreRows: Record<string, unknown>[],
-  year?: number,
-) {
-  const rows = db
-    .prepare(
-      `SELECT r.dog_id, r.raw_scores_json
-       FROM results r
-       JOIN events e ON r.event_id = e.id
-       WHERE r.status = 'finished' AND r.total_score IS NOT NULL AND e.event_type IN ('coursing', 'bzmp')
-       ${year != null ? 'AND e.year = ?' : ''}`,
-    )
-    .all(...(year != null ? [year] : [])) as { dog_id: number; raw_scores_json: string | null }[];
-
-  const sumsByDog = new Map<number, number[]>();
-  for (const row of rows) {
-    if (!row.raw_scores_json) continue;
-    try {
-      const parsed = JSON.parse(row.raw_scores_json);
-      for (const heat of parsed.heats ?? []) {
-        for (const judge of heat.judges ?? []) {
-          if (typeof judge.sum === 'number' && !Number.isNaN(judge.sum)) {
-            const arr = sumsByDog.get(row.dog_id) ?? [];
-            arr.push(judge.sum);
-            sumsByDog.set(row.dog_id, arr);
-          }
-        }
-      }
-    } catch {
-      /* skip malformed row */
-    }
-  }
-
-  for (const item of scoreRows) {
-    const sums = sumsByDog.get(item.dog_id as number);
-    const evalCount = sums?.length ?? 0;
-    const avg =
-      sums && evalCount > 0
-        ? Math.round((sums.reduce((a, b) => a + b, 0) / evalCount) * 100) / 100
-        : null;
-    const row = item as Record<string, unknown>;
-    row.avg_judge_score = avg;
-    row.judge_eval_count = evalCount;
-    row.rating_score = computeCoursingRatingScore({
-      avg_judge_score: avg,
-      best_judge_score: row.best_judge_score as number | null,
-      total_starts: row.total_starts as number,
-      judge_eval_count: evalCount,
-    });
-  }
-}
-
-function sortScoreIndexRows(rows: Record<string, unknown>[]) {
-  rows.sort((a, b) => {
-    const rating = Number(b.rating_score ?? 0) - Number(a.rating_score ?? 0);
-    if (rating !== 0) return rating;
-    const avg = Number(b.avg_judge_score ?? 0) - Number(a.avg_judge_score ?? 0);
-    if (avg !== 0) return avg;
-    const starts = Number(b.total_starts ?? 0) - Number(a.total_starts ?? 0);
-    if (starts !== 0) return starts;
-    const bj = Number(b.best_judge_score ?? 0) - Number(a.best_judge_score ?? 0);
-    if (bj !== 0) return bj;
-    return Number(b.best_score ?? 0) - Number(a.best_score ?? 0);
-  });
-}
-
 function buildTopIndexes(db: Database.Database) {
   const years = (db.prepare('SELECT DISTINCT year FROM events ORDER BY year').all() as { year: number }[])
     .map((r) => r.year)
@@ -182,7 +115,7 @@ function buildTopIndexes(db: Database.Database) {
       )
       .all(year) as Record<string, unknown>[];
     attachScoreMetrics(db, score, year);
-    sortScoreIndexRows(score);
+    sortScoreItems(score);
 
     writeIndex(`top-score-${year}.json`, {
       schema: 'coursing-stats/index-top-score-v1',
@@ -202,7 +135,7 @@ function buildTopIndexes(db: Database.Database) {
 
   const scoreAll = db.prepare(SCORE_ALL_YEARS_SQL).all() as Record<string, unknown>[];
   attachScoreMetrics(db, scoreAll);
-  sortScoreIndexRows(scoreAll);
+  sortScoreItems(scoreAll);
   writeIndex('top-score-all.json', {
     schema: 'coursing-stats/index-top-score-v1',
     year: null,
@@ -388,6 +321,7 @@ type CompetitionHistoryRow = {
   dog_id: number;
   placement: number | null;
   total_score: number | null;
+  qualification: string | null;
   status: string | null;
 };
 
@@ -605,7 +539,7 @@ function buildDogProfiles(db: Database.Database) {
     .prepare(
       `SELECT
         e.id AS event_id, e.date_start, e.date_end, e.title, e.event_type, e.competition_kind,
-        e.results_url, e.location, r.dog_id, r.placement, r.total_score, r.status
+        e.results_url, e.location, r.dog_id, r.placement, r.total_score, r.qualification, r.status
        FROM events e
        JOIN results r ON e.id = r.event_id
        WHERE r.status NOT IN ${RACING_EXCLUDED_STATUSES_SQL}
@@ -669,6 +603,7 @@ function buildDogProfiles(db: Database.Database) {
       location: row.location,
       placement: row.placement,
       total_score: row.total_score,
+      qualification: row.qualification?.trim() ? row.qualification.trim() : null,
       status: row.status,
     }));
 

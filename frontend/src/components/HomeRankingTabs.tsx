@@ -1,8 +1,8 @@
 export type HomeRankingTab = 'placement' | 'score' | 'speed'
 
 const SEGMENTS: { id: HomeRankingTab; label: string }[] = [
-  { id: 'placement', label: 'Медали' },
   { id: 'score', label: 'Очки' },
+  { id: 'placement', label: 'Медали' },
   { id: 'speed', label: 'Скорость' },
 ]
 

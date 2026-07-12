@@ -84,7 +84,7 @@ const top2026 = getTopPlacement(2026, { breed: 'САЛЮКИ' });
 
 **Рейтинг — год:** checkbox toggle; снятие выбранного года → `filterYear = ''` (индекс `top-*-all`); chip «Все годы»; сброс → `CURRENT_SEASON`.
 
-**Рейтинг — порода:** `useCompetingBreeds()` + `deriveCompetingBreeds()` (`lib/competingBreeds.ts`), источник `indexes/dogs-index.json` (не `breeds.json`).
+**Рейтинг — порода:** `useCompetingBreeds()` + `deriveCompetingBreeds()` — источник `dogs-index.json`; сортировка **по числу собак в породе** (↓), затем по алфавиту.
 
 **Используется на:**
 - Рейтинг: `TopDogs/TopDogsFilters.tsx` (`/competitions?tab=ranking`, `/top`)
@@ -106,11 +106,12 @@ const top2026 = getTopPlacement(2026, { breed: 'САЛЮКИ' });
 | `frontend/src/hooks/useStaticData.ts` | `useCompetingBreeds()` → fetch `/data/v1/indexes/dogs-index.json` |
 | `frontend/src/pages/TopDogs/index.tsx` | `breedValues` из hook |
 
-### Правила фильтрации
+### Правила фильтрации и сортировки
 ```typescript
 // competition_count > 0
 // breed не пустой
 // не /^\d+$/  (ошибки парсера, напр. "18")
+// порядок: count(dogs per breed) DESC, localeCompare('ru')
 ```
 
 ### Пример
@@ -139,7 +140,7 @@ const breedValues = data?.success ? data.data.breeds : [];
 
 ### Поля карточки vs сортировка
 - **Сортировка:** `rating_score` (индекс CS)
-- **На карточке:** `avg_judge_score`, `best_judge_score`, `best_score` (протокол — справка)
+- **На карточке:** индекс CS крупно + ср./лучш./Σ/старты мелким текстом (как на подиуме главной); `rating_score` из индекса
 - **Фильтр порога:** `filterScoreFrom` → мин. индекс CS
 
 ### Полная формула
@@ -155,10 +156,14 @@ const breedValues = data?.success ? data.data.breeds : [];
 
 **prior=85** — округлённый ориентир верхней части типичных средних (≈68-й перцентиль; p75 ≈ 85,7). **k=12** — shrinkage. **CS v1** — константы в коде, не авто-пересчёт при сборке. Курсинг и БЗМП — одна шкала `judge.sum` (&lt;1 балла смещения). **Пример:** μ=87, n=64, B=97, S=16 → **CS=89,28** (`top-score-all.json`).
 
-**Тултип ⓘ:** `CoursingRatingHint.tsx` — простой текст для пользователя; числа +0,6/+2 из `coursing-rating-score.ts`. Техническая формула — `/guide` → «О сайте».
+**Тултип ⓘ:** простой текст; полная формула — `/guide?tab=rating`.
 
 **UI**
-Две колонки: `TopDogsColumns.tsx` — курсинг/БЗМП | рейсинг; переключатель «места / очки» в плашке `DoninoColumnPlaque`.
+- Две колонки: `TopDogsColumns.tsx` — курсинг/БЗМП | рейсинг.
+- Переключатель в плашке: **очки** (default, слева) | **места**; ⓘ внутри сегмента «очки».
+- URL: без `rankingTab` = очки; `?rankingTab=placement` = медали.
+- Главная: подиум «Топ сезона» — табы **Очки → Медали → Скорость** (default «Очки»); `HomePodiumSectionHead`, `index.css` → `.home-podium-*`.
+- `DogCard` (score): индекс CS крупно, детали строкой (как подиум).
 
 ---
 

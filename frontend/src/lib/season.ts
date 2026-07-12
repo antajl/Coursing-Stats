@@ -5,7 +5,7 @@ export function dogYearBadge(
   if (filterYear) {
     return {
       label: filterYear,
-      title: `Статистика за ${filterYear} год`,
+      title: `Соревнования за ${filterYear} год`,
     }
   }
 

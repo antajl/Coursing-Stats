@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { dogYearBadge } from '../lib/season'
 import { parseDogName } from '../lib/dogName'
+import { ratingScoreFromRow } from '../../../backend/lib/rating/coursing-rating-score'
 import { MedalIcon, type MedalVariant } from './MedalTally'
 import OwnerCrownName from './OwnerCrownName'
 
@@ -23,6 +24,8 @@ interface DogCardProps {
     best_score?: number
     avg_judge_score?: number
     best_judge_score?: number
+    rating_score?: number
+    judge_eval_count?: number
     best_speed?: number
     avg_speed?: number
   }
@@ -39,6 +42,62 @@ function StatBox({ label, value }: { label: string; value: string | number }) {
         {label}
       </p>
       <p className="truncate text-sm font-bold tabular-nums text-camel-700 dark:text-camel-400">{value}</p>
+    </div>
+  )
+}
+
+function formatJudgeScore(value?: number | null): string {
+  if (value == null || Number.isNaN(value)) return '—'
+  return Number.isInteger(value) ? String(value) : value.toFixed(1)
+}
+
+function formatIndexScore(dog: DogCardProps['dog']): string {
+  const raw = dog.rating_score ?? ratingScoreFromRow(dog as Record<string, unknown>)
+  if (raw == null || Number.isNaN(raw) || raw === 0) return '—'
+  return Number(raw).toFixed(2)
+}
+
+function ScoreStatsRow({ dog }: { dog: DogCardProps['dog'] }) {
+  const starts = dog.total_starts || 0
+  return (
+    <div className="flex h-14 shrink-0 flex-col justify-center gap-1 rounded-lg bg-cream-100 px-2 py-1.5 dark:bg-charcoal-700">
+      <div className="flex items-baseline justify-center gap-1 leading-none">
+        <span className="text-lg font-bold tabular-nums text-camel-700 dark:text-camel-400">
+          {formatIndexScore(dog)}
+        </span>
+        <span className="text-[8px] font-semibold uppercase tracking-wide text-charcoal-500 dark:text-charcoal-400">
+          индекс
+        </span>
+      </div>
+      <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-0 text-[9px] leading-tight text-charcoal-500 dark:text-charcoal-400">
+        <span>
+          ср. <span className="font-semibold tabular-nums text-charcoal-700 dark:text-charcoal-200">{formatJudgeScore(dog.avg_judge_score)}</span>
+        </span>
+        <span className="text-old-money-300 dark:text-charcoal-500" aria-hidden>
+          ·
+        </span>
+        <span>
+          лучш.{' '}
+          <span className="font-semibold tabular-nums text-charcoal-700 dark:text-charcoal-200">
+            {formatJudgeScore(dog.best_judge_score)}
+          </span>
+        </span>
+        <span className="text-old-money-300 dark:text-charcoal-500" aria-hidden>
+          ·
+        </span>
+        <span>
+          Σ{' '}
+          <span className="font-semibold tabular-nums text-charcoal-700 dark:text-charcoal-200">
+            {formatJudgeScore(dog.best_score)}
+          </span>
+        </span>
+        <span className="text-old-money-300 dark:text-charcoal-500" aria-hidden>
+          ·
+        </span>
+        <span>
+          <span className="font-semibold tabular-nums text-charcoal-700 dark:text-charcoal-200">{starts}</span> ст.
+        </span>
+      </div>
     </div>
   )
 }
@@ -66,32 +125,7 @@ export default function DogCard({ dog, type, filterYear }: DogCardProps) {
         }
       case 'score':
         return {
-          scoreStats: [
-            {
-              label: 'Средняя',
-              value: dog.avg_judge_score
-                ? Number.isInteger(dog.avg_judge_score)
-                  ? String(dog.avg_judge_score)
-                  : dog.avg_judge_score.toFixed(1)
-                : '-',
-            },
-            {
-              label: 'Лучш. оценка',
-              value: dog.best_judge_score
-                ? Number.isInteger(dog.best_judge_score)
-                  ? String(dog.best_judge_score)
-                  : dog.best_judge_score.toFixed(1)
-                : '-',
-            },
-            {
-              label: 'Сумма (протокол)',
-              value: dog.best_score
-                ? Number.isInteger(dog.best_score)
-                  ? String(dog.best_score)
-                  : dog.best_score.toFixed(1)
-                : '-',
-            },
-          ],
+          scoreStats: [] as { label: string; value: string }[],
           starts: dog.total_starts || 0,
         }
       case 'speed':
@@ -115,7 +149,7 @@ export default function DogCard({ dog, type, filterYear }: DogCardProps) {
   const yearBadge = dogYearBadge(dog, filterYear)
 
   const statsGridClass =
-    type === 'speed' ? `${STAT_ROW_CLASS} grid-cols-3` : `${STAT_ROW_CLASS} grid-cols-4`
+    type === 'speed' ? `${STAT_ROW_CLASS} grid-cols-3` : type === 'placement' ? `${STAT_ROW_CLASS} grid-cols-4` : ''
 
   return (
     <Link
@@ -146,21 +180,25 @@ export default function DogCard({ dog, type, filterYear }: DogCardProps) {
         </div>
       </div>
 
-      <div className={`${statsGridClass} relative z-[1]`}>
-        {type === 'placement' && (
-          <>
-            <MedalStatBox variant="gold" value={dog.gold} />
-            <MedalStatBox variant="silver" value={dog.silver} />
-            <MedalStatBox variant="bronze" value={dog.bronze} />
-            <StatBox label="Старты" value={stats.starts} />
-          </>
-        )}
-        {type !== 'placement' &&
-          stats.scoreStats.map((stat, idx) => (
-            <StatBox key={idx} label={stat.label} value={stat.value} />
-          ))}
-        {type !== 'placement' && <StatBox label="Старты" value={stats.starts} />}
-      </div>
+      {type === 'score' ? (
+        <ScoreStatsRow dog={dog} />
+      ) : (
+        <div className={`${statsGridClass} relative z-[1]`}>
+          {type === 'placement' && (
+            <>
+              <MedalStatBox variant="gold" value={dog.gold} />
+              <MedalStatBox variant="silver" value={dog.silver} />
+              <MedalStatBox variant="bronze" value={dog.bronze} />
+              <StatBox label="Старты" value={stats.starts} />
+            </>
+          )}
+          {type === 'speed' &&
+            stats.scoreStats.map((stat, idx) => (
+              <StatBox key={idx} label={stat.label} value={stat.value} />
+            ))}
+          {type === 'speed' && <StatBox label="Старты" value={stats.starts} />}
+        </div>
+      )}
     </Link>
   )
 }

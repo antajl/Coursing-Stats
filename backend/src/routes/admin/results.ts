@@ -9,10 +9,9 @@ import { parseCoursingHTML } from '../../../parsers/coursing/index';
 import { parseBzmpHTML } from '../../../parsers/bzmp/index';
 import { parseRacingHTML } from '../../../parsers/racing/index';
 import { extractDogNames, normalizeDogName, normalizeBreed } from '../../../parsers/coursing/utils';
+import { findEventFile } from '../../../lib/local-data/find-event-file';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const ROOT = path.resolve(__dirname, '../../../..');
-const COMPETITIONS_ROOT = path.join(ROOT, 'data/v1/competitions');
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../../..');
 const DOGS_INDEX_PATH = path.join(ROOT, 'data/v1/indexes/dogs-index.json');
 const WAREHOUSE_EVENTS_ROOT = path.join(ROOT, 'data/source/procoursing/events');
 
@@ -48,40 +47,6 @@ function checkAdminToken(c: any, env: Env) {
   }
 
   return authHeader === adminToken;
-}
-
-async function findEventFile(eventId: number): Promise<{ filePath: string; data: any } | null> {
-  const years = await fs.readdir(COMPETITIONS_ROOT);
-  
-  for (const year of years) {
-    const yearPath = path.join(COMPETITIONS_ROOT, year);
-    const stat = await fs.stat(yearPath);
-    if (!stat.isDirectory()) continue;
-    
-    try {
-      const months = await fs.readdir(yearPath);
-      for (const month of months) {
-        const monthPath = path.join(yearPath, month);
-        const monthStat = await fs.stat(monthPath);
-        if (!monthStat.isDirectory()) continue;
-        
-        const files = await fs.readdir(monthPath);
-        for (const file of files) {
-          if (!file.endsWith('.json')) continue;
-          if (!file.startsWith(`${eventId}-`)) continue;
-          
-          const filePath = path.join(monthPath, file);
-          const content = await fs.readFile(filePath, 'utf-8');
-          const data = JSON.parse(content);
-          return { filePath, data };
-        }
-      }
-    } catch (e) {
-      // Skip if can't read
-    }
-  }
-  
-  return null;
 }
 
 function warehouseEventDir(eventId: number): string {

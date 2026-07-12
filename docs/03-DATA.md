@@ -11,7 +11,7 @@
 procoursing.ru / Google Sheets
         │
         ▼
-   D1 (импорт) ──export-local-data──► data/v1/*.json  ◄── git, источник правды
+   D1 (импорт) ──► data/v1/*.json  ◄── git, источник правды
         │                                    │
         │                                    ├─ build-derived-indexes → indexes/
         │                                    │
@@ -21,7 +21,8 @@ procoursing.ru / Google Sheets
         ├─ npm run dev (админка)             ▼
         │   localhost:5173/admin             Cloudflare Pages CDN
         │   → API :8787                      coursing-stats.ru
-        └─ dev:d1 (legacy)                   React → fetch /data/v1/*.json
+        └────────────────────────────────────┘
+                                    React → fetch /data/v1/*.json
 ```
 
 **Важно:** `frontend/public/data/v1/` не в git (в .gitignore), генерируется автоматически при билде. Единственный источник правды - `data/v1/`.
@@ -31,7 +32,7 @@ procoursing.ru / Google Sheets
 | **Посетитель (prod)** | `https://coursing-stats.ru/data/v1/` — без Worker, без D1 |
 | **Посетитель (dev)** | Vite отдаёт `data/v1/` с диска на `/data/v1/*` |
 | **Админка (dev)** | `/api` → proxy → `local-dev-server.ts` :8787 |
-| **Импорт** | D1 → `npm run export-local-data` → `data/v1/` |
+| **Импорт** | D1 → data/v1/ (через скрипты импорта) |
 
 Код публичного слоя: `frontend/src/hooks/useStaticData.ts`.
 
@@ -86,7 +87,7 @@ data/v1/
 | Путь | Команда |
 |------|---------|
 | `indexes/*` | `npm run build-all-data` |
-| `manifest.json` (полностью) | `build-all-data` / `export-local-data` |
+| `manifest.json` (полностью) | `build-all-data` |
 | `frontend/public/sitemap.xml` | `build-derived-indexes` |
 
 После правки `competitions/` или `dogs/` **обязательно** `npm run build-all-data` — иначе профили, топы, судьи на сайте устареют.
@@ -153,7 +154,7 @@ E   = min(2, 0,5 × log₂(S + 1))                 # бонус стартов (
 CS  = round(μ̃ + P + E, 2)                   # rating_score
 ```
 
-**prior=85** — округлённый ориентир верхней части типичных средних (≈68-й перцентиль поля; p75 ≈ 85,7 на момент CS v1; не grand_total). **k=12** — shrinkage. **Константы CS v1** фиксированы в коде, не пересчитываются при `build-all-data`. **Курсинг + БЗМП** — одна протокольная шкала `judge.sum`, объединяются в μ (смещение дисциплин &lt; 1 балла). **n** — число оценок судей (см. `/guide`).
+**prior=85** — округлённый ориентир верхней части типичных средних (≈68-й перцентиль поля; p75 ≈ 85,7 на момент CS v1; не grand_total). **k=12** — shrinkage. **Константы CS v1** фиксированы в коде, не пересчитываются при `build-all-data`. **Курсинг + БЗМП** — одна протокольная шкала `judge.sum`, объединяются в μ (смещение дисциплин &lt; 1 балла). **n** — число оценок судей (см. `/guide?tab=rating`).
 
 **Эмпирика CS v1 (2026-07):** 16 549 оценок судей, 728 собак в `top-score-all`; median карьерной μ = 83,4; prior=85 ≈ 68-й перцентиль; 93% стартов с 4 оценками судей; mean оценки — курсинг 83,9 / БЗМП 82,7.
 
@@ -163,7 +164,7 @@ CS  = round(μ̃ + P + E, 2)                   # rating_score
 
 **Известное ограничение:** n растёт с числом судей на событии (обычно ~4 оценки/старт в coursing). В данных max S≈19; cap E=2 защищает от доминирования ветеранов при росте базы.
 
-Справка для пользователей: `/guide` → «О сайте».
+Справка для пользователей: `/guide?tab=rating`.
 
 **Дубли id:** одна собака может иметь несколько `dogs/by-id/{id}.json` с пересекающимися частями клички (RU / LAT). Если **порода совпадает** и **одна из частей** имени совпадает — скорее всего **одна собака** (`backend/lib/dog-name-parts.ts`, `dogNamesLikelySame`). Склейка дублей в `data/v1/` — отдельная задача; рейтинг не должен терять id из‑за sqlite.
 
@@ -188,7 +189,8 @@ CS  = round(μ̃ + P + E, 2)                   # rating_score
 
 - берёт породу из `dogs-index.json`;
 - только записи с **`competition_count > 0`** (есть хотя бы один результат);
-- отбрасывает «породы» из одних цифр (напр. **`18`** — ошибка парсера, в `breed` попал номер каталога у собаки id 602).
+- отбрасывает «породы» из одних цифр (напр. **`18`** — ошибка парсера, в `breed` попал номер каталога у собаки id 602);
+- **сортировка:** по числу собак в породе (убывание), при равенстве — по алфавиту (`ru`).
 
 Итог в UI: **~66 пород** вместо 86. Судьи по-прежнему строят список пород из **`judges-summary`** (уникальные `unique_breeds`).
 
@@ -268,7 +270,7 @@ npx vitest run backend/tests/static-indexes.test.ts
 - счётчики в `manifest.json`
 
 **Не обновляет автоматически:** `calendar/`, `indexes/`, `breeds.json`.  
-Для календаря после правки метаданных турнира — обновите `calendar/*.json` отдельно или `export-local-data`.
+Для календаря после правки метаданных турнира — обновите `calendar/*.json` отдельно.
 
 ### Админка
 
@@ -283,11 +285,11 @@ D1 в рантайме админки **не используется** — sqli
 
 ---
 
-## Workflow: импорт из D1
+## Workflow: импорт данных
 
-```
-npm run sync-from-remote              # опционально: свежая remote D1
-npm run export-local-data -- --local  # D1 → data/v1/
+Скрипты импорта (парсеры) пишут напрямую в `data/v1/`. После импорта:
+
+```bash
 npm run build-all-data
 git commit && push
 ```
@@ -312,7 +314,7 @@ git commit && push
 | `backend/scripts/sync/sync-sqlite-to-v1.ts` | Админка → JSON на диск |
 | `backend/lib/breedarchive.ts` | Поиск URL на breedarchive.com |
 | `backend/scripts/enrich/enrich-breedarchive-urls.ts` | Заполнение `pedigree_url` в `dogs/` |
-| `frontend/src/lib/competingBreeds.ts` | Список пород для фильтра рейтинга (`deriveCompetingBreeds`) |
+| `frontend/src/lib/competingBreeds.ts` | Список пород для фильтра рейтинга (`deriveCompetingBreeds`, сортировка по числу собак) |
 
 Worker (`backend/src/worker.ts`) **не деплоится в CI** — legacy для `npm run dev:d1`.
 

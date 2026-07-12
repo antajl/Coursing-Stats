@@ -151,11 +151,37 @@ Tailwind `md:` брейкпоинты. `App.tsx`: `pt-3 pb-5 md:pt-4`, `px-2 sm:
 ### TopDogs
 
 ```
-TopDogs/index.tsx, TopDogsFilters.tsx, TopDogsTabs.tsx, filterUtils.ts
-lib/competingBreeds.ts  — deriveCompetingBreeds (dogs-index)
+TopDogs/index.tsx, TopDogsFilters.tsx, TopDogsColumns.tsx, filterUtils.ts
+lib/competingBreeds.ts  — deriveCompetingBreeds (dogs-index, sort by dog count)
+CoursingRatingHint.tsx  — ⓘ в сегменте «очки»
 ```
 
-Фильтр пород: `useCompetingBreeds()`. Год: `''` = все годы → `top-*-all.json`.
+Фильтр пород: `useCompetingBreeds()`, порядок по числу собак. Год: `''` = все годы → `top-*-all.json`. Default вкладка рейтинга: **очки** (`ratingTab` в URL только для «места»).
+
+### Home (подиум)
+
+```
+Home.tsx, HomePodiumSectionHead.tsx, HomePodiumTabsRail.tsx, HomeRankingTabs.tsx
+```
+
+Топ сезона: default **Очки**; индекс CS на подиуме (2 знака), метрики в `.pod-foot--grouped`. Стили: `index.css` → `.home-podium-*`, `.pod-foot-*`.
+
+### Guide
+
+```
+Guide/index.tsx     — titles | shows | protocol | rating | site
+constants.ts        — соревнования (курсинг/бега)
+showConstants.ts    — выставки (conformation)
+components/
+  TitlesTab.tsx     — вкладка «Соревнования»
+  ShowsTab.tsx      — вкладка «Выставки»
+  ProtocolTab.tsx   — протоколы
+  RatingTab.tsx     — формула CS (кратко)
+  SiteTab.tsx       — о проекте
+  GuideUi.tsx       — общие SectionCard, иерархия, сетки, AbbrTag
+```
+
+Канон структуры и правил редактирования: [`10-GUIDE.md`](10-GUIDE.md).
 
 ### SpeedRecords
 

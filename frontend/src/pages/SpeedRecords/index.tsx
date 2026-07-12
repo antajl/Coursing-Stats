@@ -1,5 +1,7 @@
-import { useMemo } from 'react'
+import { useMemo, useEffect } from 'react'
 import { useSearchParams } from 'react-router-dom'
+import { SEO } from '../../components/SEO'
+import { useYandexGoal } from '../../components/YandexMetrica'
 import { useSpeedRecordsPage } from './useSpeedRecordsPage'
 import DoninoPageToolbar from './DoninoPageToolbar'
 import DoninoRecordsColumns from './DoninoRecordsColumns'
@@ -9,6 +11,12 @@ function SpeedRecords() {
   const [searchParams] = useSearchParams()
   const view = searchParams.get('view') === 'stats' ? 'stats' : 'table'
   const page = useSpeedRecordsPage()
+  const { reachGoal } = useYandexGoal()
+
+  // Отслеживание просмотра рекордов скорости
+  useEffect(() => {
+    reachGoal('speed_records_view')
+  }, [reachGoal])
 
   const scrollResetKey = useMemo(
     () =>
@@ -36,6 +44,11 @@ function SpeedRecords() {
 
   return (
     <div className="space-y-6">
+      <SEO
+        title="Рекорды скорости"
+        description="Рекорды скорости Донино: замер скорости во время курсинга и бега борзых на 350 метров. Таблица рекордов по породам, статистика по годам, история достижений."
+        canonicalUrl="https://coursing-stats.ru/speed-records"
+      />
       <div className="bg-cream-50/90 dark:bg-charcoal-800/90 backdrop-blur-lg rounded-2xl shadow-xl border border-cream-300 dark:border-charcoal-700 px-4 py-3 md:px-6 md:py-4">
         <DoninoPageToolbar
           view={view}

@@ -10,101 +10,74 @@ import {
   OFFICIAL_SOURCES,
   STATUS_EVENT_RULES,
 } from '../constants'
-import { AbbrTag, ExternalHref, InfoCallout, RefTag, SectionCard, TitleBadge } from './GuideUi'
+import {
+  AbbrTag,
+  AbbreviationsTable,
+  CertificateLevelsGrid,
+  CumulativeTitlesGrid,
+  EventTitlesGrid,
+  FeatureNotesGrid,
+  InfoCallout,
+  OfficialSourcesList,
+  RefTag,
+  SectionCard,
+  TitleBadge,
+  TitleHierarchySection,
+} from './GuideUi'
 
 export default function TitlesTab() {
   return (
     <div className="space-y-4">
       <SectionCard title="Официальные источники">
         <p>
-          Ниже — выжимка по <strong className="font-semibold text-charcoal-800 dark:text-charcoal-200">курсингу и бегам борзых</strong>{' '}
-          из документов РКФ. При расхождении с протоколом или при оформлении диплома ориентируйтесь на полные
-          тексты.
+          Ниже — выжимка по{' '}
+          <strong className="font-semibold text-charcoal-800 dark:text-charcoal-200">курсингу и бегам борзых</strong>{' '}
+          из документов РКФ. Это <strong>отдельная</strong> дисциплина от выставок (см. вкладку «Выставки»). При
+          расхождении с протоколом или при оформлении диплома ориентируйтесь на полные тексты.
         </p>
-        <ul className="space-y-3">
-          {OFFICIAL_SOURCES.map((src) => (
-            <li
-              key={src.href}
-              className={`rounded-lg border px-3 py-2.5 ${
-                src.supplementary
-                  ? 'border-old-money-200 bg-old-money-50/50 dark:border-charcoal-600 dark:bg-charcoal-800/40'
-                  : 'border-camel-200 bg-white dark:border-camel-900/50 dark:bg-charcoal-800/60'
-              }`}
-            >
-              <ExternalHref href={src.href}>{src.label}</ExternalHref>
-              <p className="mt-1 text-xs text-old-money-600 dark:text-old-money-400">{src.note}</p>
-            </li>
-          ))}
-        </ul>
+        <OfficialSourcesList sources={OFFICIAL_SOURCES} />
       </SectionCard>
 
-      <SectionCard title="Иерархия: от сертификата к гранд-чемпиону">
-        <div className="space-y-2">
-          <div className="rounded-lg border-2 border-old-money-300 bg-old-money-50 px-4 py-3 dark:border-charcoal-500 dark:bg-charcoal-800/80">
-            <div className="text-[10px] font-semibold uppercase tracking-wide text-old-money-500">На мероприятии</div>
-            <div className="mt-2 flex flex-wrap gap-2">
-              <TitleBadge title="CACL" />
-              <TitleBadge title="CACIL" />
-              <TitleBadge title="CACLBr" />
-            </div>
-            <p className="mt-2 text-xs">Титульные сертификаты в колонке «титул» протокола</p>
-          </div>
-          <div className="ml-4 border-l-2 border-camel-300 pl-4 dark:border-camel-700">
-            <div className="rounded-lg border border-camel-200 bg-camel-50/80 px-4 py-3 dark:border-camel-800 dark:bg-camel-950/20">
-              <div className="text-[10px] font-semibold uppercase tracking-wide text-camel-700 dark:text-camel-400">
-                Титулы старта
-              </div>
-              <div className="mt-2 flex flex-wrap gap-2">
-                <TitleBadge title="Чемпион России" />
-                <TitleBadge title="Победитель Кубка России" />
-                <TitleBadge title="Чемпион РКФ" />
-              </div>
-            </div>
-          </div>
-          <div className="ml-8 border-l-2 border-old-money-200 pl-4 dark:border-charcoal-600">
-            <div className="rounded-lg border border-old-money-200 bg-white px-4 py-3 dark:border-charcoal-600 dark:bg-charcoal-800/60">
-              <div className="text-[10px] font-semibold uppercase tracking-wide text-old-money-500">Кумулятивные</div>
-              <p className="mt-1 text-xs">НЧ РК, ПЧ РК, ГЧР РК, ГЧРКФ РК — оформляются в РКФ по набору талонов</p>
-            </div>
-          </div>
-        </div>
+      <TitleHierarchySection
+        title="Иерархия: от сертификата к гранд-чемпиону"
+        levels={[
+          {
+            tier: 'root',
+            label: 'На мероприятии',
+            badges: ['CACL', 'CACIL', 'CACLBr'],
+            note: 'Титульные сертификаты в колонке «титул» протокола',
+          },
+          {
+            tier: 'mid',
+            label: 'Титулы старта',
+            badges: ['Чемпион России', 'Победитель Кубка России', 'Чемпион РКФ'],
+          },
+          {
+            tier: 'leaf',
+            label: 'Кумулятивные',
+            note: 'НЧ РК, ПЧ РК, ГЧР РК, ГЧРКФ РК — оформляются в РКФ по набору талонов',
+          },
+        ]}
+      />
+
+      <SectionCard title="Раздел «Соревнования» на сайте">
+        <p>
+          В шапке: <strong>Соревнования → Рейтинг / Судьи</strong>. В карточке собаки — медали (1–3 место), очки, титулы
+          из протокола (<AbbrTag abbr="CACL" />, <AbbrTag abbr="ЧР РК" /> и др.), число стартов и лучший результат.
+        </p>
+        <InfoCallout>
+          На сайте <strong>два независимых рейтинга</strong>: по местам (медали) и по очкам — они не смешиваются. Подробнее
+          — во вкладке «Рейтинг» этого справочника.
+        </InfoCallout>
       </SectionCard>
 
       <SectionCard title="Сертификаты: бега и курсинг борзых">
-        <div className="grid gap-3 sm:grid-cols-3">
-          {COURSING_CERTIFICATES.map((item) => (
-            <div
-              key={item.code}
-              className="rounded-lg border border-old-money-200 bg-old-money-50/60 px-4 py-3 dark:border-charcoal-600 dark:bg-charcoal-800/50"
-            >
-              <div className="text-[10px] font-semibold uppercase tracking-wide text-old-money-500 dark:text-old-money-400">
-                {item.level}
-              </div>
-              <div className="mt-2">
-                <TitleBadge title={item.code} />
-              </div>
-            </div>
-          ))}
-        </div>
+        <CertificateLevelsGrid items={COURSING_CERTIFICATES} />
         <RefTag>Положение о титулах, п. 1.4; правила курсинга, п. 4.2–4.3</RefTag>
       </SectionCard>
 
       <SectionCard title="Титулы, присваиваемые на мероприятии">
-        <div className="grid gap-3 sm:grid-cols-2">
-          {EVENT_TITLES.map((item) => (
-            <div
-              key={item.abbr}
-              className="rounded-lg border border-old-money-200 bg-old-money-50/60 p-3 dark:border-charcoal-600 dark:bg-charcoal-800/50"
-            >
-              <div className="flex flex-wrap items-center gap-2">
-                <AbbrTag abbr={item.abbr} title={item.title} />
-                <TitleBadge title={item.title} />
-              </div>
-              <p className="mt-2 text-sm">{item.condition}</p>
-              <RefTag>{item.ref}</RefTag>
-            </div>
-          ))}
-        </div>
+        <EventTitlesGrid items={EVENT_TITLES} />
         <InfoCallout>
           На квалификационных состязаниях (п. 1.2.7 правил) титулы <strong>не присваиваются</strong>. За 1 место на
           ЧР / Кубке / ЧРКФ сертификат CACL не выдаётся — победитель получает титул ранга. CACL идёт со 2-го места при{' '}
@@ -146,19 +119,10 @@ export default function TitlesTab() {
       </SectionCard>
 
       <SectionCard title="Кумулятивные титулы">
-        <div className="grid gap-3 md:grid-cols-2">
-          {CUMULATIVE_TITLES.map((item) => (
-            <div
-              key={item.abbr}
-              className="rounded-lg border border-old-money-200 p-3 dark:border-charcoal-600"
-            >
-              <AbbrTag abbr={item.abbr} title={item.title} />
-              <p className="mt-1 font-medium text-charcoal-800 dark:text-charcoal-200">{item.title}</p>
-              <p className="mt-1 text-xs">{item.summary}</p>
-              <RefTag>{item.ref}</RefTag>
-            </div>
-          ))}
-        </div>
+        <p className="text-xs text-old-money-600 dark:text-old-money-400">
+          Оформляются в РКФ по набору талонов — не путать с титулами одного дня.
+        </p>
+        <CumulativeTitlesGrid items={CUMULATIVE_TITLES} />
       </SectionCard>
 
       <SectionCard title="Варианты оформления «Национальный чемпион» (НЧ РК)">
@@ -184,38 +148,15 @@ export default function TitlesTab() {
       </SectionCard>
 
       <SectionCard title="Особенности курсинга">
-        <div className="grid gap-2 sm:grid-cols-2">
-          {COURSING_REQUIREMENTS.map((req) => (
-            <div
-              key={req.label}
-              className="rounded-lg border border-old-money-200 bg-old-money-50/50 px-3 py-2.5 dark:border-charcoal-600 dark:bg-charcoal-800/40"
-            >
-              <div className="text-xs font-semibold uppercase tracking-wide text-old-money-500">{req.label}</div>
-              <p className="mt-1">{req.text}</p>
-              <RefTag>{req.ref}</RefTag>
-            </div>
-          ))}
-        </div>
+        <FeatureNotesGrid items={COURSING_REQUIREMENTS} />
       </SectionCard>
 
       <SectionCard title="Сокращения">
-        <div className="overflow-x-auto">
-          <table className="w-full min-w-[280px] text-sm">
-            <tbody className="divide-y divide-old-money-100 dark:divide-charcoal-700">
-              {ABBREVIATIONS.map((row) => (
-                <tr key={row.abbr}>
-                  <td className="py-2 pr-4 whitespace-nowrap">
-                    <AbbrTag abbr={row.abbr} title={row.full} />
-                  </td>
-                  <td className="py-2 text-charcoal-700 dark:text-charcoal-300">{row.full}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <RefTag>Положение о титулах, разд. IV; презентация Донино</RefTag>
+        <AbbreviationsTable
+          rows={ABBREVIATIONS}
+          refTag={<RefTag>Положение о титулах, разд. IV; презентация Донино</RefTag>}
+        />
       </SectionCard>
-
     </div>
   )
 }

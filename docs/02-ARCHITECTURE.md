@@ -8,7 +8,7 @@
 Источник (procoursing.ru, Google Sheets)
         │
         ▼
-   D1 (импорт) ──export-local-data──► data/v1/*.json  (git — источник правды)
+   D1 (импорт) ──► data/v1/*.json  (git — источник правды)
         │                                    │
         │                                    ├─ build-derived-indexes → indexes/
         │                                    │
@@ -18,11 +18,11 @@
         ├─ npm run dev (админка)             ▼
         │   local-dev-server :8787     Cloudflare Pages CDN
         │   better-sqlite3 in-memory         │
-        └─ dev:d1 (legacy, опционально)      ▼
+        └────────────────────────────────────┘
                                     coursing-stats.ru
                                     React SPA → fetch /data/v1/*.json
                                     (frontend/src/hooks/useStaticData.ts)
-                                    (без Worker)
+                                    (без Worker, без D1 runtime)
 ```
 
 > **Публичный прод не использует D1 и не деплоит Worker.** Подробно: [`03-DATA.md`](03-DATA.md).
@@ -92,12 +92,11 @@ Cloudflare D1 (events, dogs, results)  ← скрипты импорта
 
 **Entry point:** `backend/src/local-dev-server.ts` → `backend/src/app.ts`
 
-Код `backend/src/worker.ts` оставлен для опционального `npm run dev:d1`; **в CI не деплоится**.
-
 **Architecture:**
 - Делегирует в `src/routes/`
 - CORS с wildcard
 - Админка: POST/PUT/DELETE → persist sqlite → `sync-sqlite-to-v1`
+- Все API routes читают из JSON файлов в `data/v1/` через `static-api.ts`
 
 **Routes (локальный dev API / legacy Worker — не публичный прод):**
 ```javascript
@@ -155,7 +154,7 @@ POST /api/admin/recreate-views
 **Pages (lazy-loaded):**
 - `/` — `Home.tsx` (лендинг: hero, топ сезона, рекорды Донино)
 - `/competitions` — `Competitions.tsx` (hub: Календарь, Рейтинг, Судьи)
-- `/top` — `TopDogs/index.tsx` (рейтинг: места / очки / скорость)
+- `/top` — `TopDogs/index.tsx` (рейтинг: **очки** default | места; рейсинг отдельная колонка)
 - `/event/:id` — `Events/EventResults/` (модуль: racing vs scoring details)
 - `/dog/:id` — `DogProfile.tsx`
 - `/judges`, `/judges/:judgeId` — судьи
@@ -488,18 +487,17 @@ DNS зона `coursing-stats.ru` — в **Cloudflare** (NS с reg.ru на Cloudf
 
 #### `backend/scripts/` — группы скриптов
 
-| Папка | Назначение | Примеры |
+| Путь | Назначение | Примеры |
 |-------|------------|---------|
 | `archive/` | Скрап календаря с procoursing и web.archive | `scrape-year-index.ts`, `backfill-*.ts` |
 | `web-archive/` | Парсинг календарей и результатов из web.archive | `parse-calendar-*.ts`, `add-missing-*.ts` |
 | `load/` | Загрузка в D1 (SQL / API) | `load-events.ts`, `load-results.ts` |
-| `export/` | D1 → файлы | `export-local-data-v1.ts`, `export-data-archive.ts` |
+| `export/` | D1 → файлы | `export-data-archive.ts` |
 | `import/` | Внешние источники → файлы | `download-archive-results.ts` |
 | `reparse/` | Перепарсинг протоколов в D1 | `reparse-by-year.ts` |
 | `migrate/` | Разовые миграции `data/v1` | `dedupe-calendar-v1.ts`, `remove-archive-extra-ids.ts` |
-| `sync/` | Синхронизация sqlite ↔ v1, D1 local ↔ remote | `sync-sqlite-to-v1.ts` |
+| `sync/` | Синхронизация sqlite ↔ v1 | `sync-sqlite-to-v1.ts` |
 | `speed/` | Донино (Google Sheets → D1 / JSON) | `fetch-speed-records.ts` |
-| `ci/` | Сборка для GitHub Actions / Pages | `package-pages-snapshot.ts` |
 | `test/` | Ручные проверки парсеров и API | см. `test/README.md` |
 | `update/` | Обновление данных | `update-current-year.ts` |
 | корень | Оркестрация и утилиты | `build-all-data.ts`, `build-derived-indexes.ts`, `rebuild-calendar-index.ts`, `build-events-by-id-index.ts`, `fix-event-*.ts`, `free-dev-port.ts`, `generate-favicon.ts`, `build-data-snapshot.ts` |
@@ -621,13 +619,13 @@ procoursing.ru / web.archive.org
         │
         ├─ parsers + scripts ──► D1 (импорт)
         │                              │
-        │                              ▼ export-local-data
+        │                              ▼
         ├─ download-archive-results ──► data/archive/results/
         │                              │
         └──────────────────────────────┼──► data/v1/  ◄── git, CDN
                                        │         │
                                        │         ├─ build-derived-indexes → indexes/
-                                       │         └─ package-pages-snapshot → frontend/public/
+                                       │         └─ build-all-data → frontend/public/
                                        ▼
                               data/backup/ (отчёты)
                               data/archive/snapshots/ (D1 dump)

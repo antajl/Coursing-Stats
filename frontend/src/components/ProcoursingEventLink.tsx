@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import { localEventPath } from '../lib/env'
+import { useYandexGoal } from './YandexMetrica'
 
 interface ProcoursingEventLinkProps {
   eventId: number | string
@@ -18,6 +19,14 @@ export default function ProcoursingEventLink({
   title,
   children,
 }: ProcoursingEventLinkProps) {
+  const { reachGoal } = useYandexGoal()
+
+  const handleClick = () => {
+    if (procoursingUrl && !localEventPath) {
+      reachGoal('procoursing_link')
+    }
+  }
+
   if (localEventPath) {
     return (
       <Link to={`${localEventPath}/${eventId}`} className={className} title={title}>
@@ -34,6 +43,7 @@ export default function ProcoursingEventLink({
         rel="noopener noreferrer"
         className={className}
         title={title ?? 'Результаты на procoursing.ru'}
+        onClick={handleClick}
       >
         {children}
       </a>

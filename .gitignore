@@ -22,6 +22,16 @@ data/test-modular-parsers-results.json
 backend/data/
 data/speed-records.json
 
+# by-key index is only needed locally for import scripts; public site reads by-id only
+data/v1/dogs/by-key/
+
+# donino/dogs per-dog export — not used by public site (reads speed_records.json directly)
+data/v1/donino/dogs/
+
+# Shows scraper runtime files
+data/v1/shows/scrape-*.log
+data/v1/shows/scrape-*.json
+
 # Environment files
 .env
 .env.local

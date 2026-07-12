@@ -63,10 +63,10 @@ const TOOLTIP_CONTENT = (
     <p className="border-t border-old-money-200/80 pt-2 text-[10px] leading-snug text-charcoal-500 dark:border-charcoal-600 dark:text-charcoal-400">
       Сумма из протокола на место в списке не влияет.{' '}
       <Link
-        to="/guide"
+        to="/guide?tab=rating"
         className="font-medium text-camel-700 underline decoration-camel-400/60 underline-offset-2 hover:text-camel-800 dark:text-camel-400 dark:hover:text-camel-300"
       >
-        Формула в Справочнике
+        Формула в Справочнике →
       </Link>
     </p>
   </div>

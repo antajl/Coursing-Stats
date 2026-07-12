@@ -1,6 +1,7 @@
 import { BrowserRouter as Router } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import { DogSilhouettes } from './components/DogSilhouettes'
+import { YandexMetrica } from './components/YandexMetrica'
 import { QueryProvider } from './lib/query-client'
 import Nav from './components/Nav'
 import AppRoutes from './AppRoutes'
@@ -10,6 +11,7 @@ function App() {
     <HelmetProvider>
       <QueryProvider>
         <Router>
+          <YandexMetrica />
           <DogSilhouettes />
           <a href="#main-content"
              className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4

@@ -5,6 +5,15 @@ import { formatRecordDate, getRecordYear, parseRecordDate, parseRecordHistory } 
 import { buildSexByDogMap } from './stats/doninoStatsUtils'
 import type { GroupBy } from './stats/constants'
 
+function doninoRecordsFromQuery(
+  result: { success: boolean; data?: unknown } | undefined,
+): Record<string, unknown>[] {
+  if (!result?.success || result.data == null) return []
+  if (Array.isArray(result.data)) return result.data
+  const wrapped = result.data as { records?: unknown }
+  return Array.isArray(wrapped.records) ? wrapped.records : []
+}
+
 export function useSpeedRecordsPage() {
   const [searchParams, setSearchParams] = useSearchParams()
   const [view, setView] = useState<'table' | 'stats'>(() => {
@@ -46,8 +55,8 @@ export function useSpeedRecordsPage() {
     setView(v === 'stats' ? 'stats' : 'table')
   }, [searchParams, setSearchParams])
 
-  const speedRecordsQuery = useSpeedRecords('', '', 1000, '', '')
-  const coursingRecordsQuery = useCoursingRecords('', 1000, '', '')
+  const speedRecordsQuery = useSpeedRecords('', '', 10000, '', '')
+  const coursingRecordsQuery = useCoursingRecords('', 10000, '', '')
 
   const [filterYears, setFilterYears] = useState(() => {
     const years = searchParams.get('years')
@@ -100,16 +109,8 @@ export function useSpeedRecordsPage() {
     [setSearchParams]
   )
 
-  const speedRecordsData = speedRecordsQuery.data?.success
-    ? Array.isArray(speedRecordsQuery.data.data?.records)
-      ? speedRecordsQuery.data.data.records
-      : []
-    : []
-  const coursingRecordsData = coursingRecordsQuery.data?.success
-    ? Array.isArray(coursingRecordsQuery.data.data?.records)
-      ? coursingRecordsQuery.data.data.records
-      : []
-    : []
+  const speedRecordsData = doninoRecordsFromQuery(speedRecordsQuery.data)
+  const coursingRecordsData = doninoRecordsFromQuery(coursingRecordsQuery.data)
 
   const sexByDog = useMemo(
     () => buildSexByDogMap(speedRecordsData as { name: string; breed: string; sex: string }[]),

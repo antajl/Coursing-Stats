@@ -129,7 +129,9 @@
 
 **`.owner-crown-name`** — личная метка владельца сайта: корона слева от клички (`OwnerCrownName` + `ownerMarks.ts`).
 
-**Главная (`index.css`):** `.hero-dashboard`, `.podium-preview`, `.pod-card`, `.donino-home-columns`, `.stats-strip`, `.home-section-*` — часть лендинга в CSS, часть через Tailwind в компонентах.
+**Главная (`index.css`):** `.hero-dashboard`, `.podium-preview`, `.pod-card`, `.home-podium-*` (заголовок + центрированные табы с gradient-lines), `.donino-home-columns`, `.home-section-*`. Подиум: `.pod-foot--grouped`, разделители метрик.
+
+**Справочник `/guide`:** пять вкладок — **соревнования** (`TitlesTab`), **выставки** (`ShowsTab`), протоколы, **рейтинг** (`RatingTab.tsx`), **о сайте** (`SiteTab.tsx`). Формула CS — только во вкладке «Рейтинг». Единая структура дисциплинных вкладок — [`10-GUIDE.md`](10-GUIDE.md).
 
 ### Dark Mode принципы
 
@@ -264,7 +266,7 @@ font-mono tabular-nums
 
 **Рейтинг — секция «Порода»:** только породы с выступлениями (`useCompetingBreeds`, ~66); без `18` и прочего числового мусора из `breeds.json`.
 
-**Рейтинг — «по очкам»:** подсказка ⓘ — `CoursingRatingHint.tsx`: **простой язык** для пользователя (средняя + лучший + старты; без prior/μ̃); полная формула — `/guide` → «О сайте». `HoverTooltip` `variant="site"`, `interactive` для ссылки.
+**Рейтинг — «по очкам»:** подсказка ⓘ внутри сегмента «очки» — `CoursingRatingHint.tsx` (простой язык); формула — `/guide?tab=rating`. `HoverTooltip` `variant="site"`, `interactive`.
 
 **Где:** рейтинг (`TopDogsFilters`), судьи (`Judges/index`), рекорды Донино (`DoninoPageToolbar`), календарь (`Events/index.tsx` — framed).
 

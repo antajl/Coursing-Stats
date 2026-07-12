@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Icons } from '../lib/icons'
+import { SEO } from '../components/SEO'
+import { JsonLd, organizationSchema, webSiteSchema } from '../components/JsonLd'
 import HeroIntro, { HeroStatsBar, type HeroStats } from '../components/Hero'
 import HomeEventRow from '../components/HomeEventRow'
 import DoninoHomeRecordRow from '../components/DoninoHomeRecordRow'
@@ -190,6 +192,11 @@ function formatScore(value?: number | null): string {
   return Number(value).toFixed(1)
 }
 
+function formatIndex(value?: number | null): string {
+  if (value == null || Number.isNaN(Number(value))) return '—'
+  return Number(value).toFixed(2)
+}
+
 function formatSpeed(value?: number | string | null): string {
   if (value == null || Number.isNaN(Number(value))) return '—'
   return Number(value).toFixed(1)
@@ -204,7 +211,7 @@ export default function Home() {
   const [topSpeed, setTopSpeed] = useState<TopDog[]>([])
   const [doninoSpeedRecords, setDoninoSpeedRecords] = useState<SpeedRecord[]>([])
   const [doninoCoursingRecords, setDoninoCoursingRecords] = useState<CoursingRecord[]>([])
-  const [rankingTab, setRankingTab] = useState<RankingTab>('placement')
+  const [rankingTab, setRankingTab] = useState<RankingTab>('score')
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -292,6 +299,13 @@ export default function Home() {
 
   return (
     <div className="wrap" ref={pageRef}>
+      <SEO
+        title="Главная"
+        description="Coursing Stats — статистика соревнований по курсингу и бегам борзых в России. Календарь событий, результаты, рейтинги собак, рекорды скорости, статистика судей. Полная база данных соревнований 2015-2026."
+        canonicalUrl="https://coursing-stats.ru/"
+      />
+      <JsonLd data={organizationSchema} />
+      <JsonLd data={webSiteSchema} />
       <section className="hero-dashboard">
         <HeroIntro />
         <div className="hero-events" data-rise>
@@ -383,18 +397,28 @@ export default function Home() {
                 ) : rankingTab === 'score' ? (
                   <>
                     <div className="score">
-                      {formatScore(dog.rating_score ?? dog.avg_judge_score)}
+                      {formatIndex(dog.rating_score ?? dog.avg_judge_score)}
                       <span className="score-unit">индекс</span>
                     </div>
-                    <div className="pod-foot">
-                      {dog.avg_judge_score != null && (
-                        <span>средн. {formatScore(dog.avg_judge_score)}</span>
-                      )}
-                      {dog.best_judge_score != null && (
-                        <span>лучш. {formatScore(dog.best_judge_score)}</span>
+                    <div className="pod-foot pod-foot--grouped">
+                      {(dog.avg_judge_score != null || dog.best_judge_score != null) && (
+                        <span className="pod-foot-group">
+                          {dog.avg_judge_score != null && (
+                            <span>средн. <b>{formatScore(dog.avg_judge_score)}</b></span>
+                          )}
+                          {dog.avg_judge_score != null && dog.best_judge_score != null && (
+                            <span className="pod-foot-dot">·</span>
+                          )}
+                          {dog.best_judge_score != null && (
+                            <span>лучш. <b>{formatScore(dog.best_judge_score)}</b></span>
+                          )}
+                        </span>
                       )}
                       {formatStarts(dog.total_starts) && (
-                        <span>{formatStarts(dog.total_starts)}</span>
+                        <>
+                          <span className="pod-foot-divider" aria-hidden="true" />
+                          <span>старты <b>{dog.total_starts}</b></span>
+                        </>
                       )}
                     </div>
                   </>
@@ -404,12 +428,15 @@ export default function Home() {
                       {formatSpeed(dog.best_speed)}
                       <span className="score-unit">км/ч</span>
                     </div>
-                    <div className="pod-foot">
+                    <div className="pod-foot pod-foot--grouped">
                       {dog.avg_speed != null && (
-                        <span>средн. {formatSpeed(dog.avg_speed)}</span>
+                        <span>средн. <b>{formatSpeed(dog.avg_speed)}</b></span>
                       )}
                       {formatStarts(dog.total_starts) && (
-                        <span>{formatStarts(dog.total_starts)}</span>
+                        <>
+                          {dog.avg_speed != null && <span className="pod-foot-divider" aria-hidden="true" />}
+                          <span>старты <b>{dog.total_starts}</b></span>
+                        </>
                       )}
                     </div>
                   </>

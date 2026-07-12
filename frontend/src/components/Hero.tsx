@@ -42,11 +42,11 @@ export default function HeroIntro() {
       <div className="cta-row" data-rise>
         <Link to="/competitions?tab=ranking" className="btn btn-primary">
           <Icons.medal className="h-4 w-4" strokeWidth={1.75} />
-          Статистика
+          Соревнования
         </Link>
         <Link to="/speed-records" className="btn btn-ghost">
           <Icons.speed className="h-4 w-4" strokeWidth={1.75} />
-          Рекорды Донино
+          Курсинг Донино
         </Link>
       </div>
     </div>

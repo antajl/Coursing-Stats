@@ -17,7 +17,7 @@ test.describe('Navigation', () => {
 
   test('can navigate to competitions page', async ({ page }) => {
     await page.goto('/')
-    await page.getByRole('link', { name: /статистика/i }).first().click()
+    await page.getByRole('link', { name: /соревнован/i }).first().click()
     await expect(page).toHaveURL('/competitions')
     await expect(competitionsSegment(page)).toBeVisible()
   })
@@ -37,7 +37,7 @@ test.describe('Navigation', () => {
 
   test('can navigate to speed records page', async ({ page }) => {
     await page.goto('/')
-    await page.getByRole('link', { name: /рекорды/i }).first().click()
+    await page.getByRole('link', { name: /курсинг донино|донино/i }).first().click()
     await expect(page).toHaveURL('/speed-records')
     await expect(page.getByText('Замер', { exact: true }).first()).toBeVisible()
   })

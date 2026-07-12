@@ -30,8 +30,6 @@
 | Данные, indexes, enrich | **03-DATA.md** | ссылка |
 | Деплой, чеклисты | **20-OPERATIONS.md** | ссылка |
 | UI, маршруты | **04-FRONTEND.md** | ссылка |
-| Решения (почему) | **19-HISTORY.md** | ссылка |
-| Changelog (когда) | **19-CHANGELOG.md** | дата + ссылка |
 | Симптом → fix | **16-TROUBLESHOOTING.md** | кратко + ссылка на канон |
 
 ---
@@ -51,12 +49,11 @@
 | Локальный API (админка) | [05-API-REFERENCE.md](05-API-REFERENCE.md) |
 | UI, цвета, тёмная тема | [06-DESIGN-SYSTEM.md](06-DESIGN-SYSTEM.md) |
 | Фильтры рейтинга | [03-DATA.md](03-DATA.md) → «Породы в UI», [18-CODE-PATTERNS.md](18-CODE-PATTERNS.md) |
-| Индекс CS («по очкам») | [03-DATA.md](03-DATA.md) → «top-score», [18-CODE-PATTERNS.md](18-CODE-PATTERNS.md), `/guide` → «О сайте» |
+| Индекс CS («по очкам») | [03-DATA.md](03-DATA.md) → «top-score», [18-CODE-PATTERNS.md](18-CODE-PATTERNS.md), `/guide?tab=rating` |
 | SEO, sitemap | [07-SEO.md](07-SEO.md) |
 | Тесты | [08-TESTING.md](08-TESTING.md) |
 | Донино, рекорды | [09-SPEED-RECORDS.md](09-SPEED-RECORDS.md) |
-| Справочник `/guide` (РКФ) | [10-GUIDE.md](10-GUIDE.md) |
-| Планы | [11-FUTURE-PLANS.md](11-FUTURE-PLANS.md) |
+| Справочник `/guide` (РКФ) | [10-GUIDE.md](10-GUIDE.md) — соревнования + выставки |
 
 ### Техническое (12–18)
 | Задача | Документ |
@@ -68,12 +65,6 @@
 | Решение проблем | [16-TROUBLESHOOTING.md](16-TROUBLESHOOTING.md) |
 | Админка workflow | [17-ADMIN-WORKFLOW.md](17-ADMIN-WORKFLOW.md) |
 | Паттерны кода | [18-CODE-PATTERNS.md](18-CODE-PATTERNS.md) |
-
-### История (19)
-| Задача | Документ |
-|--------|----------|
-| Архитектурные решения (ADR) | [19-HISTORY.md](19-HISTORY.md) |
-| Changelog | [19-CHANGELOG.md](19-CHANGELOG.md) |
 
 ---
 
@@ -101,12 +92,6 @@ docs/             # эта папка
 .cursor/          # rules/skills для Cursor
 scripts/          # start-servers.bat, deploy-to-github.bat
 ```
-
----
-
-## Архив (не для повседневной работы)
-
-[`archive/`](archive/) — исторические документы. Не использовать как источник правды.
 
 ---
 

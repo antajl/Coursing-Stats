@@ -3,15 +3,9 @@ main = "backend/src/worker.ts"
 compatibility_date = "2024-01-01"
 
 # Prod: Worker не деплоится в CI (публичный сайт — статика /data/v1/ на Pages).
-# Код оставлен для npm run dev:d1. См. docs/DATA.md
+# Код оставлен для локального dev. См. docs/DATA.md
 
 [[rules]]
 type = "CompiledWasm"
 globs = ["**/*.wasm"]
 fallthrough = true
-
-# D1 — только скрипты импорта / dev:d1 (прод-Worker не использует)
-[[d1_databases]]
-binding = "DB"
-database_name = "pc-db"
-database_id = "a5d6d4ad-7fc5-41b4-a33b-05f4daa382d4"

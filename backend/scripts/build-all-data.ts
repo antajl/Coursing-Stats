@@ -41,6 +41,13 @@ if (fs.existsSync(derivedIndexes)) {
   assertNonEmptyIndex('data/v1/indexes/judges-summary.json', 'judges', 'judges-summary');
 }
 
+// Build show indexes (dog ranking, judges)
+const showIndexes = path.join(ROOT, 'backend/scripts/build-show-indexes.ts');
+if (fs.existsSync(showIndexes)) {
+  run('npx tsx backend/scripts/build-show-indexes.ts');
+  console.log('  ✓ show indexes built');
+}
+
 run('npm run package-pages-snapshot');
 
 // Also copy data for local preview (frontend/public/data/v1/)
