@@ -863,7 +863,6 @@ export default function DogProfile() {
         )}
         </div>
       </div>
-    </div>
     </>
   )
 }
