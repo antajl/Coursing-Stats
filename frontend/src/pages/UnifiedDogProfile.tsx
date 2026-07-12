@@ -175,7 +175,7 @@ export default function UnifiedDogProfile() {
         )}
 
         {activeTab === 'shows' && showDog && (
-          <ShowDogProfile />
+          <ShowDogProfile dogData={showDog} />
         )}
 
         {/* Show message if tab is selected but data is not available */}

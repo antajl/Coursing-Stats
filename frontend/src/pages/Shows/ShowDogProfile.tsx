@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react'
-import { useParams, Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { ChevronLeft, Download, Trophy, Calendar, ExternalLink } from 'lucide-react'
 import SkeletonLoader from '../../components/SkeletonLoader'
 import ErrorState from '../../components/ErrorState'
@@ -11,6 +11,12 @@ import {
   type ShowAwardKey,
   type ShowTitleCounts,
 } from '../../../../backend/lib/show-award-ranking'
+
+interface ShowDogProfileProps {
+  dogId?: string
+  breed?: string
+  dogData?: ShowDogCardData | null
+}
 
 interface ShowExhibition {
   id: number
@@ -24,15 +30,22 @@ interface ShowExhibition {
   results: any[]
 }
 
-export default function ShowDogProfile() {
-  const { dogId, breed } = useParams<{ dogId: string; breed: string }>()
+export default function ShowDogProfile({ dogId, breed, dogData }: ShowDogProfileProps) {
   const navigate = useNavigate()
   const [loading, setLoading] = useState(true)
-  const [dog, setDog] = useState<ShowDogCardData | null>(null)
+  const [dog, setDog] = useState<ShowDogCardData | null>(dogData || null)
   const [exhibitions, setExhibitions] = useState<ShowExhibition[]>([])
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
+    // If dogData is provided, use it directly
+    if (dogData) {
+      setDog(dogData)
+      setLoading(false)
+      return
+    }
+
+    // Otherwise, load from ranking
     const loadData = async () => {
       if (!dogId || !breed) {
         setError('ID собаки или порода не указаны')
@@ -58,7 +71,7 @@ export default function ShowDogProfile() {
       setLoading(false)
     }
     loadData()
-  }, [dogId, breed])
+  }, [dogId, breed, dogData])
 
   useEffect(() => {
     const loadExhibitions = async () => {
