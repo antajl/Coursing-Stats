@@ -121,44 +121,45 @@ export default function ShowDogProfile({ dogId, breed, dogData }: ShowDogProfile
   return (
     <div className="p-4 md:p-6">
       <div className="max-w-4xl mx-auto">
+        {/* Кнопка назад */}
+        <button
+          type="button"
+          onClick={() => navigate(-1)}
+          className="mb-4 flex items-center gap-2 text-sm font-medium text-old-money-500 transition-colors hover:text-camel-700 dark:text-old-money-400 dark:hover:text-camel-400"
+          aria-label="Назад"
+        >
+          <ChevronLeft className="h-4 w-4" aria-hidden />
+          Назад
+        </button>
+
         {/* Шапка профиля */}
-        <div className="mb-6 flex items-start gap-1 md:gap-2">
-          <button
-            type="button"
-            onClick={() => navigate(-1)}
-            className="mt-5 flex-shrink-0 rounded-sm p-1 text-old-money-500 transition-colors hover:text-camel-700 md:mt-8 dark:text-old-money-400 dark:hover:text-camel-400"
-            aria-label="Назад"
-          >
-            <ChevronLeft className="h-5 w-5" aria-hidden />
-          </button>
-          <div className="min-w-0 flex-1 rounded-xl border border-old-money-200/80 bg-white p-5 dark:border-charcoal-600 dark:bg-charcoal-800/50 md:p-8">
-            <div className="flex items-start gap-2">
-              <div className="min-w-0 flex-1">
-                <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-                  <h1 className="text-2xl font-bold tracking-tight text-charcoal-900 dark:text-charcoal-100 md:text-3xl">
-                    {dog.name_lat}
-                  </h1>
-                  {dog.sex && (
-                    <span className="text-lg font-medium text-charcoal-400 dark:text-charcoal-500">
-                      {dog.sex === 'M' ? '♂' : '♀'}
-                    </span>
-                  )}
-                </div>
-                {dog.name_ru && (
-                  <div className="mt-1 text-base font-medium text-old-money-500 dark:text-old-money-400">
-                    {dog.name_ru}
-                  </div>
-                )}
-                <div className="mt-2.5 flex flex-wrap items-center gap-2">
-                  <span className="inline-block rounded-full border border-old-money-200 bg-cream-100 px-4 py-1.5 text-sm font-semibold text-charcoal-700 dark:border-charcoal-600 dark:bg-charcoal-700 dark:text-charcoal-300">
-                    {dog.breed}
+        <div className="mb-6 rounded-xl border border-old-money-200/80 bg-white p-5 dark:border-charcoal-600 dark:bg-charcoal-800/50 md:p-8">
+          <div className="flex items-start gap-2">
+            <div className="min-w-0 flex-1">
+              <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                <h1 className="text-2xl font-bold tracking-tight text-charcoal-900 dark:text-charcoal-100 md:text-3xl">
+                  {dog.name_lat}
+                </h1>
+                {dog.sex && (
+                  <span className="text-lg font-medium text-charcoal-400 dark:text-charcoal-500">
+                    {dog.sex === 'M' ? '♂' : '♀'}
                   </span>
-                  {dog.breed_group && (
-                    <span className="inline-block rounded-full border border-old-money-200 bg-white px-3 py-1.5 text-xs font-semibold text-camel-700 dark:border-charcoal-600 dark:bg-charcoal-800 dark:text-camel-400">
-                      {dog.breed_group}
-                    </span>
-                  )}
+                )}
+              </div>
+              {dog.name_ru && (
+                <div className="mt-1 text-base font-medium text-old-money-500 dark:text-old-money-400">
+                  {dog.name_ru}
                 </div>
+              )}
+              <div className="mt-2.5 flex flex-wrap items-center gap-2">
+                <span className="inline-block rounded-full border border-old-money-200 bg-cream-100 px-4 py-1.5 text-sm font-semibold text-charcoal-700 dark:border-charcoal-600 dark:bg-charcoal-700 dark:text-charcoal-300">
+                  {dog.breed}
+                </span>
+                {dog.breed_group && (
+                  <span className="inline-block rounded-full border border-old-money-200 bg-white px-3 py-1.5 text-xs font-semibold text-camel-700 dark:border-charcoal-600 dark:bg-charcoal-800 dark:text-camel-400">
+                    {dog.breed_group}
+                  </span>
+                )}
               </div>
             </div>
           </div>
