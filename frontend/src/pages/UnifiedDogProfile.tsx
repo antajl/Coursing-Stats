@@ -56,15 +56,19 @@ export default function UnifiedDogProfile() {
             })
           }
 
+          // Only set show dog if found, otherwise don't show shows tab
           if (found) {
             setShowDog(found)
             setHasShows(true)
           } else {
+            setShowDog(null)
             setHasShows(false)
           }
         }
       } catch (err) {
         console.error('Failed to load show data:', err)
+        setShowDog(null)
+        setHasShows(false)
       }
     }
 
