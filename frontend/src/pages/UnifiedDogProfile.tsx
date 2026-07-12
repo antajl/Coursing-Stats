@@ -4,7 +4,7 @@ import SkeletonLoader from '../components/SkeletonLoader'
 import ErrorState from '../components/ErrorState'
 import { useDogProfile, useDogEvents } from '../hooks/useStaticData'
 import { getShowDogRanking } from '../lib/staticData'
-import { findMatchingCompetitionDog, findMatchingShowDog, normalizeDogName } from '../lib/dogNameMatching'
+import { findMatchingCompetitionDog, findMatchingShowDog, normalizeDogName, normalizeBreedName } from '../lib/dogNameMatching'
 import type { ShowDogCardData } from './Shows/ShowDogCard'
 import ShowDogProfile from './Shows/ShowDogProfile'
 import DogProfile from './DogProfile'
@@ -37,20 +37,23 @@ export default function UnifiedDogProfile() {
       try {
         const result = await getShowDogRanking()
         if (result.success && result.data) {
-          // Try to find show dog by ID first
-          let found = result.data.find((d) => d.id === id)
-          
-          // If not found by ID, try to find by matching name
+          let found = null
+
+          // Try to find show dog by ID first (competition ID may match show ID)
+          found = result.data.find((d) => d.id === id || d.id === String(id))
+
+          // If not found by ID, try to find by matching name AND breed
           if (!found && competitionDog) {
-            found = findMatchingShowDog(
-              {
-                id: String(competitionDog.id),
-                name_lat: competitionDog.name_lat,
-                name_ru: competitionDog.name_ru || competitionDog.name_lat,
-                breed: competitionDog.breed,
-              },
-              result.data
-            )
+            const normalizedCompName = normalizeDogName(competitionDog.name_lat)
+            const normalizedCompBreed = normalizeBreedName(competitionDog.breed)
+
+            found = result.data.find((dog) => {
+              const normalizedShowName = normalizeDogName(dog.name_lat)
+              const normalizedShowBreed = normalizeBreedName(dog.breed)
+
+              // Match by normalized name AND breed
+              return normalizedShowName === normalizedCompName && normalizedShowBreed === normalizedCompBreed
+            })
           }
 
           if (found) {
