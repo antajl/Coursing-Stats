@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from 'react'
-import { useParams, Link } from 'react-router-dom'
-import { ChevronLeft, ExternalLink, Trophy, Calendar } from 'lucide-react'
+import { useParams, Link, useNavigate } from 'react-router-dom'
+import { ChevronLeft, Download, Trophy, Calendar, ExternalLink } from 'lucide-react'
 import SkeletonLoader from '../../components/SkeletonLoader'
 import ErrorState from '../../components/ErrorState'
 import { getShowDogRanking } from '../../lib/staticData'
@@ -26,6 +26,7 @@ interface ShowExhibition {
 
 export default function ShowDogProfile() {
   const { dogId, breed } = useParams<{ dogId: string; breed: string }>()
+  const navigate = useNavigate()
   const [loading, setLoading] = useState(true)
   const [dog, setDog] = useState<ShowDogCardData | null>(null)
   const [exhibitions, setExhibitions] = useState<ShowExhibition[]>([])
@@ -102,100 +103,113 @@ export default function ShowDogProfile() {
   }
 
   const awardKeys = SHOW_AWARD_ORDER.filter((key) => dog.titles[key] > 0)
+  const totalAwards = awardKeys.reduce((sum, key) => sum + dog.titles[key], 0)
 
   return (
     <div className="p-4 md:p-6">
       <div className="max-w-4xl mx-auto">
-        {/* Header */}
-        <div className="mb-6 rounded-xl border border-old-money-200 bg-cream-50 p-4 dark:border-charcoal-600 dark:bg-charcoal-800/40 md:p-6">
-          <div className="flex items-start gap-2 md:gap-3">
-            <Link
-              to="/shows?tab=ranking"
-              className="mt-0.5 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-old-money-200 bg-white/90 text-old-money-600 shadow-sm transition-colors hover:border-old-money-300 hover:bg-old-money-50 hover:text-camel-700 dark:border-charcoal-600 dark:bg-charcoal-800 dark:text-old-money-400 dark:hover:border-charcoal-500 dark:hover:bg-charcoal-700 dark:hover:text-camel-400"
-              aria-label="Назад"
-            >
-              <ChevronLeft className="h-4 w-4" aria-hidden />
-            </Link>
-
-            <div className="min-w-0 flex-1">
-              <h1 className="min-w-0 font-serif text-xl font-bold leading-tight tracking-tight text-charcoal-900 dark:text-charcoal-100 md:text-2xl">
-                {dog.name_lat}
-              </h1>
-              {dog.name_ru && (
-                <p className="mt-1 text-sm text-charcoal-600 dark:text-charcoal-400">
-                  {dog.name_ru}
-                </p>
-              )}
-              <div className="mt-2 flex flex-wrap items-center gap-2">
-                <span className="inline-block rounded-md bg-cream-100 px-2 py-1 text-xs font-medium text-charcoal-600 dark:bg-charcoal-700 dark:text-charcoal-300">
-                  {dog.breed}
-                </span>
-                {dog.breed_group && (
-                  <span className="inline-block rounded-md bg-camel-50 px-2 py-1 text-xs font-medium text-camel-800 dark:bg-camel-900/20 dark:text-camel-300">
-                    {dog.breed_group}
-                  </span>
+        {/* Шапка профиля */}
+        <div className="mb-6 flex items-start gap-1 md:gap-2">
+          <button
+            type="button"
+            onClick={() => navigate(-1)}
+            className="mt-5 flex-shrink-0 rounded-sm p-1 text-old-money-500 transition-colors hover:text-camel-700 md:mt-8 dark:text-old-money-400 dark:hover:text-camel-400"
+            aria-label="Назад"
+          >
+            <ChevronLeft className="h-5 w-5" aria-hidden />
+          </button>
+          <div className="min-w-0 flex-1 rounded-xl border border-old-money-200/80 bg-white p-5 dark:border-charcoal-600 dark:bg-charcoal-800/50 md:p-8">
+            <div className="flex items-start gap-2">
+              <div className="min-w-0 flex-1">
+                <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                  <h1 className="text-2xl font-bold tracking-tight text-charcoal-900 dark:text-charcoal-100 md:text-3xl">
+                    {dog.name_lat}
+                  </h1>
+                  {dog.sex && (
+                    <span className="text-lg font-medium text-charcoal-400 dark:text-charcoal-500">
+                      {dog.sex === 'M' ? '♂' : '♀'}
+                    </span>
+                  )}
+                </div>
+                {dog.name_ru && (
+                  <div className="mt-1 text-base font-medium text-old-money-500 dark:text-old-money-400">
+                    {dog.name_ru}
+                  </div>
                 )}
+                <div className="mt-2.5 flex flex-wrap items-center gap-2">
+                  <span className="inline-block rounded-full border border-old-money-200 bg-cream-100 px-4 py-1.5 text-sm font-semibold text-charcoal-700 dark:border-charcoal-600 dark:bg-charcoal-700 dark:text-charcoal-300">
+                    {dog.breed}
+                  </span>
+                  {dog.breed_group && (
+                    <span className="inline-block rounded-full border border-old-money-200 bg-white px-3 py-1.5 text-xs font-semibold text-camel-700 dark:border-charcoal-600 dark:bg-charcoal-800 dark:text-camel-400">
+                      {dog.breed_group}
+                    </span>
+                  )}
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Stats */}
+        {/* Статистика */}
         <div className="mb-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
-          <div className="rounded-lg border border-old-money-200 bg-white/80 px-3 py-3 dark:border-charcoal-600 dark:bg-charcoal-800/60">
-            <div className="font-serif font-bold tabular-nums text-lg text-charcoal-900 dark:text-charcoal-100">
+          <div className="rounded-xl border border-old-money-200 bg-white/80 px-4 py-4 dark:border-charcoal-600 dark:bg-charcoal-800/60">
+            <div className="font-serif font-bold tabular-nums text-2xl text-charcoal-900 dark:text-charcoal-100">
               {dog.total_shows}
             </div>
-            <div className="mt-0.5 text-[10px] font-medium uppercase tracking-wide text-old-money-500 dark:text-old-money-400">
+            <div className="mt-1 text-xs font-semibold uppercase tracking-wide text-old-money-500 dark:text-old-money-400">
               Выставок
             </div>
           </div>
-          <div className="rounded-lg border border-old-money-200 bg-white/80 px-3 py-3 dark:border-charcoal-600 dark:bg-charcoal-800/60">
-            <div className="font-serif font-bold tabular-nums text-lg text-charcoal-900 dark:text-charcoal-100">
+          <div className="rounded-xl border border-old-money-200 bg-white/80 px-4 py-4 dark:border-charcoal-600 dark:bg-charcoal-800/60">
+            <div className="font-serif font-bold tabular-nums text-2xl text-charcoal-900 dark:text-charcoal-100">
               {dog.best_placement || '—'}
             </div>
-            <div className="mt-0.5 text-[10px] font-medium uppercase tracking-wide text-old-money-500 dark:text-old-money-400">
+            <div className="mt-1 text-xs font-semibold uppercase tracking-wide text-old-money-500 dark:text-old-money-400">
               Лучшее место
             </div>
           </div>
-          <div className="rounded-lg border border-old-money-200 bg-white/80 px-3 py-3 dark:border-charcoal-600 dark:bg-charcoal-800/60">
-            <div className="font-serif font-bold tabular-nums text-lg text-charcoal-900 dark:text-charcoal-100">
+          <div className="rounded-xl border border-old-money-200 bg-white/80 px-4 py-4 dark:border-charcoal-600 dark:bg-charcoal-800/60">
+            <div className="font-serif font-bold tabular-nums text-2xl text-charcoal-900 dark:text-charcoal-100">
               {dog.rank_score}
             </div>
-            <div className="mt-0.5 text-[10px] font-medium uppercase tracking-wide text-old-money-500 dark:text-old-money-400">
+            <div className="mt-1 text-xs font-semibold uppercase tracking-wide text-old-money-500 dark:text-old-money-400">
               Рейтинг
             </div>
           </div>
-          <div className="rounded-lg border border-old-money-200 bg-white/80 px-3 py-3 dark:border-charcoal-600 dark:bg-charcoal-800/60">
-            <div className="font-serif font-bold text-lg text-charcoal-900 dark:text-charcoal-100">
+          <div className="rounded-xl border border-old-money-200 bg-white/80 px-4 py-4 dark:border-charcoal-600 dark:bg-charcoal-800/60">
+            <div className="font-serif font-bold text-2xl text-charcoal-900 dark:text-charcoal-100">
               {dog.best_award || '—'}
             </div>
-            <div className="mt-0.5 text-[10px] font-medium uppercase tracking-wide text-old-money-500 dark:text-old-money-400">
+            <div className="mt-1 text-xs font-semibold uppercase tracking-wide text-old-money-500 dark:text-old-money-400">
               Лучшая награда
             </div>
           </div>
         </div>
 
-        {/* Awards */}
+        {/* Награды */}
         <div className="mb-6 rounded-xl border border-old-money-200 bg-white/70 dark:border-charcoal-600 dark:bg-charcoal-800/30">
-          <div className="border-b border-old-money-200 px-4 py-3 dark:border-charcoal-600">
-            <h2 className="font-serif text-base font-bold text-charcoal-900 dark:text-charcoal-100 flex items-center gap-2">
+          <div className="border-b border-old-money-200 px-5 py-4 dark:border-charcoal-600">
+            <h2 className="font-serif text-lg font-bold text-charcoal-900 dark:text-charcoal-100 flex items-center gap-2">
               <Trophy className="h-5 w-5" />
               Награды
+              <span className="ml-2 text-sm font-normal text-old-money-500 dark:text-old-money-400">
+                ({totalAwards})
+              </span>
             </h2>
           </div>
-          <div className="p-4">
+          <div className="p-5">
             {awardKeys.length > 0 ? (
               <div className="grid gap-3 sm:grid-cols-2">
                 {awardKeys.map((key) => (
                   <div
                     key={key}
-                    className="flex items-center justify-between rounded-lg bg-cream-50 px-3 py-2 dark:bg-charcoal-800/40"
+                    className="flex items-center justify-between rounded-xl bg-cream-50 px-4 py-3 dark:bg-charcoal-800/40"
                   >
-                    <span className="text-sm font-medium text-charcoal-800 dark:text-charcoal-200">
+                    <span className="text-sm font-semibold text-charcoal-800 dark:text-charcoal-200">
                       {SHOW_AWARD_LABELS[key]}
                     </span>
-                    <span className="font-mono text-sm font-bold text-camel-700 dark:text-camel-400">
+                    <span className="font-mono text-lg font-bold text-camel-700 dark:text-camel-400">
                       ×{dog.titles[key]}
                     </span>
                   </div>
@@ -209,15 +223,15 @@ export default function ShowDogProfile() {
           </div>
         </div>
 
-        {/* History */}
+        {/* История */}
         <div className="rounded-xl border border-old-money-200 bg-white/70 dark:border-charcoal-600 dark:bg-charcoal-800/30">
-          <div className="border-b border-old-money-200 px-4 py-3 dark:border-charcoal-600">
-            <h2 className="font-serif text-base font-bold text-charcoal-900 dark:text-charcoal-100 flex items-center gap-2">
+          <div className="border-b border-old-money-200 px-5 py-4 dark:border-charcoal-600">
+            <h2 className="font-serif text-lg font-bold text-charcoal-900 dark:text-charcoal-100 flex items-center gap-2">
               <Calendar className="h-5 w-5" />
               История выступлений
             </h2>
           </div>
-          <div className="p-4">
+          <div className="p-5">
             <p className="text-sm text-old-money-500 dark:text-old-money-400">
               История выступлений в разработке. Скоро здесь появится список выставок с результатами.
             </p>

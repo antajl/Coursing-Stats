@@ -68,7 +68,7 @@ export default function ShowDogCard({ dog, rank }: ShowDogCardProps) {
   const activeAwards = SHOW_AWARD_ORDER.filter((key) => dog.titles[key] > 0)
 
   return (
-    <Link to={`/shows/dog/${dog.id}/${encodeURIComponent(dog.breed)}`} className="block">
+    <Link to={`/dog/${dog.id}?tab=shows`} className="block">
       <article className="flex gap-3 rounded-xl border border-cream-200 bg-white p-3 shadow-sm transition-all hover:shadow-md hover:border-camel-300 dark:border-charcoal-700 dark:bg-charcoal-800 dark:hover:border-camel-600 sm:gap-4 sm:p-4">
         <RankMark rank={rank} />
 

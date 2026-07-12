@@ -6,7 +6,7 @@ const Home = lazy(() => import('./pages/Home'));
 const Competitions = lazy(() => import('./pages/Competitions'));
 const Shows = lazy(() => import('./pages/Shows'));
 const TopDogs = lazy(() => import('./pages/TopDogs'));
-const DogProfile = lazy(() => import('./pages/DogProfile'));
+const UnifiedDogProfile = lazy(() => import('./pages/UnifiedDogProfile'));
 const EventResults = lazy(() => import('./pages/Events/EventResults'));
 const SpeedRecords = lazy(() => import('./pages/SpeedRecords/index'));
 const DoninoDogProfile = lazy(() => import('./pages/DoninoDogProfile'));
@@ -28,6 +28,11 @@ function LegacyExhibitionRedirect() {
   return <Navigate to={`/shows/exhibition/${id}`} replace />;
 }
 
+function LegacyShowDogRedirect() {
+  const { dogId, breed } = useParams<{ dogId: string; breed: string }>();
+  return <Navigate to={`/dog/${dogId}?tab=shows`} replace />;
+}
+
 export default function AppRoutes() {
   return (
     <Suspense fallback={<PageLoader />}>
@@ -38,10 +43,10 @@ export default function AppRoutes() {
         <Route path="/shows" element={<Shows />} />
         <Route path="/shows/exhibition/:id" element={<ShowExhibitionDetail />} />
         <Route path="/shows/champions" element={<ShowChampions />} />
-        <Route path="/shows/dog/:dogId/:breed" element={<ShowDogProfile />} />
+        <Route path="/shows/dog/:dogId/:breed" element={<LegacyShowDogRedirect />} />
         <Route path="/exhibition/:id" element={<LegacyExhibitionRedirect />} />
         <Route path="/top" element={<TopDogs />} />
-        <Route path="/dog/:id" element={<DogProfile />} />
+        <Route path="/dog/:id" element={<UnifiedDogProfile />} />
         <Route path="/event/:id" element={<Navigate to="/competitions?tab=ranking" replace />} />
         <Route path="/speed-records" element={<SpeedRecords />} />
         <Route path="/guide" element={<Guide />} />
