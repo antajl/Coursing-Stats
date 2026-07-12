@@ -38,9 +38,19 @@ data/v1/shows/indexes/dog-ranking.json
 # Backend parsers v1 (legacy) - not used by CI
 backend/backend/
 
+# Test fixtures with images - local only, not needed for CI
+backend/tests/fixtures/2015/
+
 # Frontend admin pages - not needed for production
 frontend/src/pages/Admin/
 frontend/src/data/mockData.js
+
+# Debug pages - not needed for production
+frontend/src/pages/Debug.tsx
+backend/parsers/shows/breed-view-debug.html
+
+# Python scripts - local only
+backend/scripts/speed/fetch-speed-records-pdf.py
 
 # Windows batch scripts - local development only
 scripts/*.bat
