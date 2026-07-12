@@ -4,13 +4,6 @@
  * она ходит напрямую в локальный dev-server (`pages/Admin/adminApi.ts`).
  */
 import * as staticData from '../lib/staticData'
-import {
-  mockTopPlacementData,
-  mockTopScoreData,
-  mockBreeds,
-  mockYears,
-  mockEvents,
-} from '../data/mockData'
 
 /** Legacy export для adminApi; публичный сайт API не использует. */
 const API_URL =
@@ -20,37 +13,16 @@ export { API_URL }
 
 const IS_DEV = import.meta.env.DEV
 
-function filterMockData(mockData: Record<string, unknown>[], year: string, breed: string, minStarts: number) {
-  let filtered = mockData
-  if (year) filtered = filtered.filter((d) => d.year === parseInt(year, 10))
-  if (breed) filtered = filtered.filter((d) => d.breed === breed)
-  if (minStarts > 0) filtered = filtered.filter((d) => Number(d.total_starts ?? 0) >= minStarts)
-  return filtered
-}
-
-const mockCoursingRecords = [
-  { name: 'Swift Wind', breed: 'Whippet', time_seconds: 22.5, date: '03.04.2025' },
-  { name: 'Desert Storm', breed: 'Saluki', time_seconds: 23.1, date: '18.06.2025' },
-  { name: 'Thunder Bolt', breed: 'Greyhound', time_seconds: 21.8, date: '12.05.2025' },
-]
-
-const mockSpeedRecords = [
-  { name: 'Thunder Bolt', breed: 'Greyhound', speed_km_h: 68.2, date: '12.05.2025' },
-  { name: 'Swift Wind', breed: 'Whippet', speed_km_h: 62.4, date: '03.04.2025' },
-  { name: 'Desert Storm', breed: 'Saluki', speed_km_h: 59.1, date: '18.06.2025' },
-  { name: 'Fast Whippet', breed: 'Whippet', speed_km_h: 60.0, date: '01.01.2025' },
-]
-
-/** В DEV подменяет неудачный ответ статики моком, чтобы страница не падала до `build-all-data`. В PROD отдаёт ошибку как есть. */
+/** В DEV подменяет неудачный ответ статики пустым массивом, чтобы страница не падала до `build-all-data`. В PROD отдаёт ошибку как есть. */
 async function withDevFallback<T>(
   result: staticData.ApiResult<T>,
-  mockData: T,
+  fallbackData: T,
 ): Promise<staticData.ApiResult<T>> {
   if (result.success) return result
   if (!IS_DEV) return result
   const error = (result as { error: string }).error
-  console.warn(`[DEV FALLBACK] Using mock data: ${error}`)
-  return { success: true, data: mockData, source: 'mock' }
+  console.warn(`[DEV FALLBACK] Using fallback data: ${error}`)
+  return { success: true, data: fallbackData, source: 'fallback' }
 }
 
 // Возвращаемые типы намеренно ослаблены до `Promise<any>` (как и в исходном
@@ -63,36 +35,30 @@ export const api = {
 
   async getTopPlacement(year = '', breed = '', minStarts = 0, sortBy = 'gold', limit: number | null = null, offset = 0): Promise<any> {
     const result = await staticData.getTopPlacement(year, breed, minStarts, sortBy, limit, offset)
-    return withDevFallback(result, filterMockData(mockTopPlacementData, year, breed, minStarts))
+    return withDevFallback(result, [])
   },
 
   async getTopScore(year = '', breed = '', minStarts = 0, sortBy = 'rating_score', limit: number | null = null, offset = 0): Promise<any> {
     const result = await staticData.getTopScore(year, breed, minStarts, sortBy, limit, offset)
-    return withDevFallback(result, filterMockData(mockTopScoreData, year, breed, minStarts))
+    return withDevFallback(result, [])
   },
 
   async getTopSpeed(year = '', breed = '', minStarts = 0, sortBy = 'best_speed', limit: number | null = null, offset = 0): Promise<any> {
     const result = await staticData.getTopSpeed(year, breed, minStarts, sortBy, limit, offset)
-    const mockData = filterMockData(mockTopScoreData, year, breed, minStarts).map((d) => ({
-      ...d,
-      best_speed: (Math.random() * 20 + 40).toFixed(2),
-      avg_speed: (Math.random() * 15 + 35).toFixed(2),
-    }))
-    return withDevFallback(result, mockData)
+    return withDevFallback(result, [])
   },
 
   async getBreeds(): Promise<any> {
-    return withDevFallback(await staticData.getBreeds(), mockBreeds)
+    return withDevFallback(await staticData.getBreeds(), [])
   },
 
   async getYears(): Promise<any> {
-    return withDevFallback(await staticData.getYears(), mockYears)
+    return withDevFallback(await staticData.getYears(), [])
   },
 
   async getEvents(year = ''): Promise<any> {
     const result = await staticData.getEvents(year)
-    const mockData = year ? mockEvents.filter((e) => e.year === parseInt(year, 10)) : mockEvents
-    return withDevFallback(result, mockData)
+    return withDevFallback(result, [])
   },
 
   async getDogProfile(dogId: string): Promise<any> {
@@ -117,7 +83,7 @@ export const api = {
 
   async getSpeedRecordsTopByBreed(limit = 3): Promise<any> {
     const result = await staticData.getSpeedRecordsTopByBreed(limit)
-    return withDevFallback(result, staticDataPickTopSpeedByBreedFallback(limit))
+    return withDevFallback(result, [])
   },
 
   async getCoursingRecords(breed = '', limit = 100, search = '', year = '', dogId = ''): Promise<any> {
@@ -126,7 +92,7 @@ export const api = {
 
   async getCoursingRecordsTopByBreed(limit = 3): Promise<any> {
     const result = await staticData.getCoursingRecordsTopByBreed(limit)
-    return withDevFallback(result, staticDataPickTopCoursingByBreedFallback(limit))
+    return withDevFallback(result, [])
   },
 
   async getJudges(breed = '', discipline = ''): Promise<any> {
@@ -140,22 +106,4 @@ export const api = {
   async getDoninoDog(name: string, breed: string): Promise<any> {
     return staticData.getDoninoDog(name, breed)
   },
-}
-
-function staticDataPickTopSpeedByBreedFallback(limit: number) {
-  const bestByBreed = new Map<string, (typeof mockSpeedRecords)[number]>()
-  for (const record of mockSpeedRecords) {
-    const existing = bestByBreed.get(record.breed)
-    if (!existing || record.speed_km_h > existing.speed_km_h) bestByBreed.set(record.breed, record)
-  }
-  return [...bestByBreed.values()].sort((a, b) => b.speed_km_h - a.speed_km_h).slice(0, limit)
-}
-
-function staticDataPickTopCoursingByBreedFallback(limit: number) {
-  const bestByBreed = new Map<string, (typeof mockCoursingRecords)[number]>()
-  for (const record of mockCoursingRecords) {
-    const existing = bestByBreed.get(record.breed)
-    if (!existing || record.time_seconds < existing.time_seconds) bestByBreed.set(record.breed, record)
-  }
-  return [...bestByBreed.values()].sort((a, b) => a.time_seconds - b.time_seconds).slice(0, limit)
 }
