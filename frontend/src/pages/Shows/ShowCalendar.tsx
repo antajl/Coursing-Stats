@@ -96,14 +96,14 @@ export default function ShowCalendar() {
   useEffect(() => {
     const loadData = async () => {
       setLoading(true)
-      const result = await getShowCalendar(filterYear)
+      const result = await getShowCalendar()
       if (result.success && result.data) {
         setExhibitions(result.data)
       }
       setLoading(false)
     }
     loadData()
-  }, [filterYear])
+  }, [])
 
   useEffect(() => {
     setSearchParams(

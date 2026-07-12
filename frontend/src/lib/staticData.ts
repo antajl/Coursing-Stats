@@ -676,7 +676,7 @@ interface ShowCalendarFile {
   exhibitions?: ShowExhibition[]
 }
 
-export async function getShowCalendar(year = ''): Promise<ApiResult<ShowExhibition[]>> {
+export async function getShowCalendar(): Promise<ApiResult<ShowExhibition[]>> {
   // Load all exhibitions from exhibitions directory
   const index = await fetchJson<Record<string, string>>('shows/index.json')
   if (!index) return { success: false, error: 'Shows index unavailable' }
