@@ -50,9 +50,7 @@ export default function ShowJudges() {
     setFilterYear('2026')
   }
 
-  const activeFilterChips: ActiveFilterChip[] = searchQuery
-    ? [{ key: 'search', label: `Поиск: ${searchQuery}`, onRemove: () => setSearchQuery('') }]
-    : []
+  const activeFilterChips: ActiveFilterChip[] = []
 
   if (loading) {
     return (

@@ -208,9 +208,6 @@ export default function ShowChampions() {
   }, [filteredDogs])
 
   const activeFilterChips: ActiveFilterChip[] = []
-  if (searchQuery) {
-    activeFilterChips.push({ key: 'search', label: searchQuery, onRemove: () => setSearchQuery('') })
-  }
   if (filterYear) {
     activeFilterChips.push({ key: 'year', label: filterYear, onRemove: () => setFilterYear('') })
   }
