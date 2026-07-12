@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import Database from 'better-sqlite3';
-import { createD1Shim } from './d1-shim';
+import { createSqlJsShim } from './sqljs-shim';
 import { assertDataV1Exists, dataV1Path, listJsonFiles, SCHEMA_PATH } from './paths';
 import { pickRow, toSqlValue } from './sql-value';
 import type { LocalDataStats } from './stats';
@@ -205,14 +205,14 @@ export function loadLocalDataSqlite(): { db: Database.Database; stats: LocalData
   return { db, stats };
 }
 
-let cached: ReturnType<typeof createD1Shim> | null = null;
+let cached: ReturnType<typeof createSqlJsShim> | null = null;
 let cachedStats: LocalDataStats | null = null;
 
 export function createLocalDataDb() {
   if (cached) return cached;
 
   const { db, stats } = loadLocalDataSqlite();
-  cached = createD1Shim(db);
+  cached = createSqlJsShim(db);
   cachedStats = stats;
   return cached;
 }

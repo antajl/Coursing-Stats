@@ -48,8 +48,6 @@ if (fs.existsSync(showIndexes)) {
   console.log('  ✓ show indexes built');
 }
 
-run('npm run package-pages-snapshot');
-
 // Also copy data for local preview (frontend/public/data/v1/)
 run('node frontend/scripts/copy-data.js');
 
