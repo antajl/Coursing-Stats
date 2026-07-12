@@ -60,6 +60,12 @@ data/v1/
 │   ├── dog-profiles/{id}.json
 │   ├── dogs-index.json        # индекс собак (id, breed, competition_count) — фильтр пород в рейтинге
 │   └── events-by-id.json
+└── shows/
+    ├── exhibitions/           # файлы выставок (breed_catalog, results)
+    └── indexes/               # ⚠️ генерируется, не править вручную
+        ├── dog-ranking-{year}.json  # рейтинг собак по годам (2017-2026, unknown)
+        ├── dog-ranking.json          # all-time рейтинг (исключён из деплоя, >25 MB)
+        └── judges.json                # индекс судей выставок
 └── pc-db.sqlite               # для dev-админки; не источник правды для прода
 ```
 
@@ -87,10 +93,73 @@ data/v1/
 | Путь | Команда |
 |------|---------|
 | `indexes/*` | `npm run build-all-data` |
+| `shows/indexes/*` | `npm run build-all-data` |
 | `manifest.json` (полностью) | `build-all-data` |
 | `frontend/public/sitemap.xml` | `build-derived-indexes` |
 
 После правки `competitions/` или `dogs/` **обязательно** `npm run build-all-data` — иначе профили, топы, судьи на сайте устареют.
+
+---
+
+## Выставки (Shows) — RKF Shows
+
+Данные выставок хранятся в `data/v1/shows/` и отделены от данных курсинга.
+
+### Структура
+
+```
+shows/
+├── exhibitions/              # файлы выставок (breed_catalog, results)
+│   └── {date}-{id}-{title}.json
+└── indexes/                  # ⚠️ генерируется, не править вручную
+    ├── dog-ranking-{year}.json  # рейтинг собак по годам (2017-2026, unknown)
+    ├── dog-ranking.json          # all-time рейтинг (исключён из деплоя, >25 MB)
+    └── judges.json                # индекс судей выставок
+```
+
+### Файл выставки
+
+Каждый файл выставки содержит:
+- Метаданные: `id`, `date`, `title`, `location`, `rank`, `type`, `club`, `judges[]`
+- `breed_catalog[]`: каталог пород с титулами (BOB, ЛК, ЛС и т.д.)
+- `results[]`: детальные результаты всех собак (класс, место, оценка, судья, очки)
+
+### Рейтинг собак
+
+**Проблема:** `dog-ranking.json` (all-time) ~73.7 MB превышает лимит Cloudflare Pages 25 MB.
+
+**Решение:** Разделение по годам
+
+| Файл | Размер | Описание |
+|-------|--------|----------|
+| `dog-ranking-2017.json` | 6.4 MB | Рейтинг за 2017 год |
+| `dog-ranking-2018.json` | 8.4 MB | Рейтинг за 2018 год |
+| `dog-ranking-2019.json` | 8.3 MB | Рейтинг за 2019 год |
+| `dog-ranking-2021.json` | 5.6 MB | Рейтинг за 2021 год |
+| `dog-ranking-2022.json` | 5.8 MB | Рейтинг за 2022 год |
+| `dog-ranking-2023.json` | 7.0 MB | Рейтинг за 2023 год |
+| `dog-ranking-2024.json` | 7.8 MB | Рейтинг за 2024 год |
+| `dog-ranking-2025.json` | 7.3 MB | Рейтинг за 2025 год |
+| `dog-ranking-2026.json` | 3.4 MB | Рейтинг за 2026 год |
+| `dog-ranking-unknown.json` | 21.6 MB | Выставки без даты или некорректным форматом даты |
+| `dog-ranking.json` | 73.7 MB | All-time рейтинг (исключён из деплоя) |
+
+**Unknown:** Выставки без даты или с некорректным форматом даты (функция `extractYear()` не смогла распознать год из поля `date`).
+
+### Генерация
+
+```bash
+npm run build-all-data  # запускает build-show-indexes.ts
+```
+
+Скрипт: `backend/scripts/build-show-indexes.ts`
+
+### Фронтенд
+
+- `getShowDogRanking(year)` — загружает рейтинг по году
+- `ShowRanking.tsx` — фильтр по году в UI
+- `ShowChampions.tsx` — фильтр по году в UI
+- `ShowDogProfile.tsx` — загружает all-time для поиска собаки
 
 ---
 
