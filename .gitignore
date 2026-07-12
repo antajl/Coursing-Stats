@@ -32,6 +32,19 @@ data/v1/donino/dogs/
 data/v1/shows/scrape-*.log
 data/v1/shows/scrape-*.json
 
+# Large files not needed for production
+data/v1/shows/indexes/dog-ranking.json
+
+# Backend parsers v1 (legacy) - not used by CI
+backend/backend/
+
+# Frontend admin pages - not needed for production
+frontend/src/pages/Admin/
+frontend/src/data/mockData.js
+
+# Windows batch scripts - local development only
+scripts/*.bat
+
 # Environment files
 .env
 .env.local
