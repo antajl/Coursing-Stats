@@ -130,8 +130,10 @@ function buildJudgesIndex(exhibitions: ShowExhibition[]): string[] {
       }
     }
 
-    for (const result of exhibition.results) {
-      if (result.judge) judgesSet.add(result.judge)
+    if (exhibition.results && Array.isArray(exhibition.results)) {
+      for (const result of exhibition.results) {
+        if (result.judge) judgesSet.add(result.judge)
+      }
     }
   }
 

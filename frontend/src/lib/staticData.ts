@@ -633,7 +633,6 @@ interface ShowResult {
   breed_judge?: string
   breed_count?: number
   dog_breed_id?: number
-  sex?: string
   class: string
   placement: number
   grade?: string
