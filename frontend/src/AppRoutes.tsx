@@ -1,7 +1,6 @@
 import { lazy, Suspense } from 'react';
 import { Routes, Route, Navigate, useLocation, useParams } from 'react-router-dom';
 import PageLoader from './components/PageLoader';
-import { isLocalDev } from './lib/env';
 
 const Home = lazy(() => import('./pages/Home'));
 const Competitions = lazy(() => import('./pages/Competitions'));
@@ -17,10 +16,6 @@ const JudgeDetail = lazy(() => import('./pages/Judges/JudgeDetail'));
 const ShowExhibitionDetail = lazy(() => import('./pages/Shows/ShowExhibitionDetail'));
 const ShowChampions = lazy(() => import('./pages/Shows/ShowChampions'));
 const ShowDogProfile = lazy(() => import('./pages/Shows/ShowDogProfile'));
-const Admin = lazy(() => import('./pages/Admin'));
-const AdminCalendar = lazy(() => import('./pages/Admin/AdminCalendar'));
-const EventEdit = lazy(() => import('./pages/Admin/EventEdit'));
-const Debug = lazy(() => import('./pages/Debug'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 function LegacyProcoursingRedirect() {
@@ -53,15 +48,6 @@ export default function AppRoutes() {
         <Route path="/donino-dog/:name/:breed" element={<DoninoDogProfile />} />
         <Route path="/judges" element={<Judges />} />
         <Route path="/judges/:judgeId" element={<JudgeDetail />} />
-        <Route path="/admin" element={<Admin />} />
-        {isLocalDev && (
-          <>
-            <Route path="/admin/calendar" element={<AdminCalendar />} />
-            <Route path="/admin/event/:id" element={<EventResults />} />
-          </>
-        )}
-        <Route path="/admin/events/:id" element={<EventEdit />} />
-        <Route path="/debug" element={<Debug />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Suspense>
