@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/donino-speed-v1",
   "source": "google-sheets",
-  "count": 219,
+  "count": 224,
   "records": [
     {
       "breed": "Уиппет",
@@ -74,6 +74,30 @@
       ]
     },
     {
+      "breed": "Гальго",
+      "sex": "С",
+      "name": "Шелби",
+      "speed_km_h": 60,
+      "date": "2026-07-14",
+      "screenshot_url": "https://disk.yandex.ru/i/_mLcS-Rf9Kvytw",
+      "status": "improved",
+      "track_type": "прямая",
+      "history": [
+        {
+          "speed_km_h": 59,
+          "date": "2026-06-28"
+        },
+        {
+          "speed_km_h": 56,
+          "date": "2026-06-25"
+        },
+        {
+          "speed_km_h": 55,
+          "date": "2026-05-11"
+        }
+      ]
+    },
+    {
       "breed": "Уиппет",
       "sex": "К",
       "name": "Марс",
@@ -110,26 +134,6 @@
       "status": "normal",
       "track_type": "круг",
       "history": []
-    },
-    {
-      "breed": "Гальго",
-      "sex": "С",
-      "name": "Шелби",
-      "speed_km_h": 59,
-      "date": "2026-06-28",
-      "screenshot_url": "https://disk.yandex.ru/i/pDxXZaK18ChMvA",
-      "status": "improved",
-      "track_type": "круг",
-      "history": [
-        {
-          "speed_km_h": 56,
-          "date": "2026-06-25"
-        },
-        {
-          "speed_km_h": 55,
-          "date": "2026-05-11"
-        }
-      ]
     },
     {
       "breed": "Уиппет",
@@ -367,6 +371,22 @@
       "history": []
     },
     {
+      "breed": "Уиппет",
+      "sex": "К",
+      "name": "Сильвер",
+      "speed_km_h": 56,
+      "date": "2026-07-14",
+      "screenshot_url": "https://disk.yandex.ru/i/XYLCa5yhXcbM0Q",
+      "status": "improved",
+      "track_type": "прямая",
+      "history": [
+        {
+          "speed_km_h": 54,
+          "date": "2026-07-01"
+        }
+      ]
+    },
+    {
       "breed": "Салюки",
       "sex": "С",
       "name": "Тайга",
@@ -450,17 +470,6 @@
     {
       "breed": "Уиппет",
       "sex": "К",
-      "name": "Сильвер",
-      "speed_km_h": 54,
-      "date": "2026-07-01",
-      "screenshot_url": "https://disk.yandex.ru/i/xu4ai0H5TnR_7g",
-      "status": "normal",
-      "track_type": "прямая",
-      "history": []
-    },
-    {
-      "breed": "Уиппет",
-      "sex": "К",
       "name": "Дубай",
       "speed_km_h": 54,
       "date": "2026-07-04",
@@ -476,7 +485,7 @@
       "speed_km_h": 54,
       "date": "2026-07-08",
       "screenshot_url": "https://disk.yandex.ru/i/4myvZbaa2CHnNw",
-      "status": "new",
+      "status": "normal",
       "track_type": "прямая",
       "history": []
     },
@@ -881,6 +890,23 @@
       "history": []
     },
     {
+      "breed": "Метис",
+      "sex": "К",
+      "name": "Норд",
+      "speed_km_h": 48,
+      "date": "2026-07-14",
+      "screenshot_url": "https://disk.yandex.ru/i/9INn8H9GS2pxIQ",
+      "status": "improved",
+      "track_type": "курсинг",
+      "history": [
+        {
+          "speed_km_h": 47,
+          "date": "2025-11-29",
+          "track_type": null
+        }
+      ]
+    },
+    {
       "breed": "АПБТ",
       "sex": "К",
       "name": "Эль",
@@ -938,6 +964,23 @@
         {
           "speed_km_h": 46,
           "date": "2025-06-10",
+          "track_type": null
+        }
+      ]
+    },
+    {
+      "breed": "Немецкий дог",
+      "sex": "К",
+      "name": "Зуня",
+      "speed_km_h": 46,
+      "date": "2026-06-14",
+      "screenshot_url": "https://disk.yandex.ru/i/beNtbEo-Re8gww",
+      "status": "new",
+      "track_type": "прямая",
+      "history": [
+        {
+          "speed_km_h": 49,
+          "date": "2025-06-29",
           "track_type": null
         }
       ]
@@ -1031,7 +1074,7 @@
       "speed_km_h": 44,
       "date": "2026-07-08",
       "screenshot_url": "https://disk.yandex.ru/i/1cDY4Q1YMcSs5Q",
-      "status": "new",
+      "status": "normal",
       "track_type": "курсинг",
       "history": [
         {
@@ -1153,7 +1196,7 @@
       "speed_km_h": 40,
       "date": "2026-07-08",
       "screenshot_url": "https://disk.yandex.ru/i/DtoyF8lEHdxhkg",
-      "status": "new",
+      "status": "normal",
       "track_type": "курсинг",
       "history": [
         {
@@ -1170,7 +1213,7 @@
       "speed_km_h": 40,
       "date": "2026-07-08",
       "screenshot_url": "https://disk.yandex.ru/i/lHqV2J3aLH3r1w",
-      "status": "new",
+      "status": "normal",
       "track_type": "курсинг",
       "history": [
         {
@@ -1215,8 +1258,19 @@
       "speed_km_h": 38,
       "date": "2026-07-08",
       "screenshot_url": "https://disk.yandex.ru/i/ngL4KshRPemnAg",
-      "status": "new",
+      "status": "normal",
       "track_type": "курсинг",
+      "history": []
+    },
+    {
+      "breed": "Немецкая овчарка",
+      "sex": "С",
+      "name": "Ника",
+      "speed_km_h": 38,
+      "date": "2026-07-14",
+      "screenshot_url": "https://disk.yandex.ru/i/DH29YAugvGv7cw",
+      "status": "new",
+      "track_type": "прямая",
       "history": []
     },
     {
@@ -1942,7 +1996,13 @@
       "screenshot_url": "https://disk.yandex.ru/i/jSznKrxzxb-9eQ",
       "status": "normal",
       "track_type": null,
-      "history": []
+      "history": [
+        {
+          "speed_km_h": 46,
+          "date": "2026-06-14",
+          "track_type": "прямая"
+        }
+      ]
     },
     {
       "breed": "Чирнеко дель Этна",
@@ -2113,7 +2173,13 @@
       "screenshot_url": "https://disk.yandex.ru/i/Muw56bkgS-gzIA",
       "status": "normal",
       "track_type": null,
-      "history": []
+      "history": [
+        {
+          "speed_km_h": 48,
+          "date": "2026-07-14",
+          "track_type": "курсинг"
+        }
+      ]
     },
     {
       "breed": "АПБТ",
@@ -3351,9 +3417,13 @@
       "status": "old",
       "history": [
         {
+          "speed_km_h": 60,
+          "date": "2026-07-14",
+          "track_type": "прямая"
+        },
+        {
           "speed_km_h": 59,
-          "date": "2026-06-28",
-          "track_type": "круг"
+          "date": "2026-06-28"
         },
         {
           "speed_km_h": 56,
@@ -3371,9 +3441,13 @@
       "status": "improved",
       "history": [
         {
+          "speed_km_h": 60,
+          "date": "2026-07-14",
+          "track_type": "прямая"
+        },
+        {
           "speed_km_h": 59,
-          "date": "2026-06-28",
-          "track_type": "круг"
+          "date": "2026-06-28"
         },
         {
           "speed_km_h": 55,
@@ -3497,6 +3571,46 @@
         {
           "speed_km_h": 59,
           "date": "2025-06-29"
+        }
+      ]
+    },
+    {
+      "breed": "Гальго",
+      "sex": "С",
+      "name": "Шелби",
+      "speed_km_h": 59,
+      "date": "2026-06-28",
+      "screenshot_url": "https://disk.yandex.ru/i/pDxXZaK18ChMvA",
+      "status": "improved",
+      "history": [
+        {
+          "speed_km_h": 60,
+          "date": "2026-07-14",
+          "track_type": "прямая"
+        },
+        {
+          "speed_km_h": 56,
+          "date": "2026-06-25"
+        },
+        {
+          "speed_km_h": 55,
+          "date": "2026-05-11"
+        }
+      ]
+    },
+    {
+      "breed": "Уиппет",
+      "sex": "К",
+      "name": "Сильвер",
+      "speed_km_h": 54,
+      "date": "2026-07-01",
+      "screenshot_url": "https://disk.yandex.ru/i/xu4ai0H5TnR_7g",
+      "status": "old",
+      "history": [
+        {
+          "speed_km_h": 56,
+          "date": "2026-07-14",
+          "track_type": "прямая"
         }
       ]
     }
