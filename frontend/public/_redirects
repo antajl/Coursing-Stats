@@ -1,1 +1,6 @@
-/* /index.html 200
+# Missing hashed assets must 404 (not SPA HTML). Otherwise CF/browser can
+# cache index.html under /assets/*.js with immutable max-age and break the site.
+/assets/*  /404.html  404
+
+# Client-side routes (React Router)
+/*  /index.html  200

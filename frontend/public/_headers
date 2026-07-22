@@ -4,9 +4,12 @@
   Pragma: no-cache
   Expires: 0
 
-# Long-term caching only for hashed build assets (/assets/*-[hash].*)
+# Hashed build assets — long cache only when the real file exists.
+# Do NOT rely on this for missing files: _redirects must 404 /assets/* (not SPA HTML),
+# otherwise HTML can be cached as immutable under a .js URL and white-screen the site.
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
+  X-Content-Type-Options: nosniff
 
 # Long-term caching for static images and fonts in public/
 /*.svg
