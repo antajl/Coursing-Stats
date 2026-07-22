@@ -29,6 +29,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&subset=cyrillic&display=swap" rel="stylesheet">
     <script>
+      // Если сам entry /assets/index-*.js не загрузился (MIME/HTML после деплоя) — один reload.
+      (function () {
+        var KEY = 'cs:asset-reload';
+        function reloadOnce() {
+          try {
+            var now = Date.now();
+            var prev = Number(sessionStorage.getItem(KEY) || 0);
+            if (prev && now - prev < 15000) return;
+            sessionStorage.setItem(KEY, String(now));
+          } catch (e) {}
+          location.reload();
+        }
+        window.addEventListener('error', function (e) {
+          var t = e && e.target;
+          if (!t || t.tagName !== 'SCRIPT') return;
+          var src = t.src || '';
+          if (src.indexOf('/assets/') !== -1) reloadOnce();
+        }, true);
+      })();
+    </script>
+    <script>
       (function() {
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme === 'dark') {
