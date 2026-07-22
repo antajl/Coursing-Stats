@@ -22,7 +22,7 @@ test.describe('Event Results Page', () => {
   })
 
   test('loads event with results when data exists', async ({ page }) => {
-    test.skip(!testData.eventId, 'No events in local D1 — run npm run sync-from-remote')
+    test.skip(!testData.eventId, 'Нет событий в data/v1')
 
     await page.goto(`/admin/event/${testData.eventId}`)
     await expectNotNotFoundPage(page)

@@ -1,4 +1,4 @@
-import { normalizeDogName, normalizeBreed } from "../parsers/parse-results-coursing";
+import { normalizeDogName, normalizeBreed } from "../parsers/coursing/utils";
 
 export { normalizeDogName, normalizeBreed };
 

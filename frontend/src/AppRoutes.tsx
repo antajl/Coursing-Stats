@@ -5,22 +5,33 @@ import PageLoader from './components/PageLoader';
 const Home = lazy(() => import('./pages/Home'));
 const Competitions = lazy(() => import('./pages/Competitions'));
 const Shows = lazy(() => import('./pages/Shows'));
-const TopDogs = lazy(() => import('./pages/TopDogs'));
 const UnifiedDogProfile = lazy(() => import('./pages/UnifiedDogProfile'));
-const EventResults = lazy(() => import('./pages/Events/EventResults'));
 const SpeedRecords = lazy(() => import('./pages/SpeedRecords/index'));
 const DoninoDogProfile = lazy(() => import('./pages/DoninoDogProfile'));
 const Guide = lazy(() => import('./pages/Guide'));
-const Judges = lazy(() => import('./pages/Judges/index'));
 const JudgeDetail = lazy(() => import('./pages/Judges/JudgeDetail'));
 const ShowExhibitionDetail = lazy(() => import('./pages/Shows/ShowExhibitionDetail'));
 const ShowChampions = lazy(() => import('./pages/Shows/ShowChampions'));
-const ShowDogProfile = lazy(() => import('./pages/Shows/ShowDogProfile'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 function LegacyProcoursingRedirect() {
   const location = useLocation();
   return <Navigate to={`/competitions${location.search}`} replace />;
+}
+
+function LegacyTopRedirect() {
+  const location = useLocation();
+  const params = new URLSearchParams(location.search);
+  params.set('tab', 'ranking');
+  const qs = params.toString();
+  return <Navigate to={qs ? `/competitions?${qs}` : '/competitions?tab=ranking'} replace />;
+}
+
+function LegacyJudgesListRedirect() {
+  const location = useLocation();
+  const params = new URLSearchParams(location.search);
+  params.set('tab', 'judges');
+  return <Navigate to={`/competitions?${params.toString()}`} replace />;
 }
 
 function LegacyExhibitionRedirect() {
@@ -29,7 +40,7 @@ function LegacyExhibitionRedirect() {
 }
 
 function LegacyShowDogRedirect() {
-  const { dogId, breed } = useParams<{ dogId: string; breed: string }>();
+  const { dogId } = useParams<{ dogId: string; breed: string }>();
   return <Navigate to={`/dog/${dogId}?tab=shows`} replace />;
 }
 
@@ -45,13 +56,13 @@ export default function AppRoutes() {
         <Route path="/shows/champions" element={<ShowChampions />} />
         <Route path="/shows/dog/:dogId/:breed" element={<LegacyShowDogRedirect />} />
         <Route path="/exhibition/:id" element={<LegacyExhibitionRedirect />} />
-        <Route path="/top" element={<TopDogs />} />
+        <Route path="/top" element={<LegacyTopRedirect />} />
         <Route path="/dog/:id" element={<UnifiedDogProfile />} />
         <Route path="/event/:id" element={<Navigate to="/competitions?tab=ranking" replace />} />
         <Route path="/speed-records" element={<SpeedRecords />} />
         <Route path="/guide" element={<Guide />} />
         <Route path="/donino-dog/:name/:breed" element={<DoninoDogProfile />} />
-        <Route path="/judges" element={<Judges />} />
+        <Route path="/judges" element={<LegacyJudgesListRedirect />} />
         <Route path="/judges/:judgeId" element={<JudgeDetail />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

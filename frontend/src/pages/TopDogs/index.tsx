@@ -1,12 +1,11 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
-import { useSearchParams } from 'react-router-dom'
+import { useSearchParams, useLocation } from 'react-router-dom'
 import { SEO } from '../../components/SEO'
 import { useYandexGoal } from '../../components/YandexMetrica'
 import { useTopPlacement, useTopScore, useTopSpeed, useCompetingBreeds, useYears } from '../../hooks/useStaticData'
 import SkeletonLoader from '../../components/SkeletonLoader'
 import TopDogsFilters from './TopDogsFilters'
 import TopDogsColumns from './TopDogsColumns'
-import ProcoursingAttribution from '../../components/ProcoursingAttribution'
 import { filterPlacement, filterScore, filterSpeed } from './filterUtils'
 import { sortScoreItems } from '../../lib/staticData'
 
@@ -21,8 +20,9 @@ function parseCoursingTab(value: string | null): CoursingTab {
 const CURRENT_SEASON = String(new Date().getFullYear())
 
 export default function TopDogs() {
+  const location = useLocation()
   const [searchParams, setSearchParams] = useSearchParams()
-  const isStandalone = !searchParams.get('tab')
+  const isEmbedded = location.pathname === '/competitions'
   const { reachGoal } = useYandexGoal()
 
   const [coursingTab, setCoursingTab] = useState<CoursingTab>(() =>
@@ -33,7 +33,7 @@ export default function TopDogs() {
     (tab: CoursingTab) => {
       setCoursingTab(tab)
       const params = new URLSearchParams(searchParams)
-      if (!isStandalone) {
+      if (isEmbedded) {
         params.set('tab', 'ranking')
       }
       if (tab === 'score') {
@@ -43,7 +43,7 @@ export default function TopDogs() {
       }
       setSearchParams(params)
     },
-    [searchParams, setSearchParams, isStandalone]
+    [searchParams, setSearchParams, isEmbedded]
   )
 
   useEffect(() => {
@@ -133,12 +133,12 @@ export default function TopDogs() {
   const showListSkeleton = isInitialLoad && loading
 
   return (
-    <div className={isStandalone ? 'px-4 pb-4' : 'max-w-full mx-auto pb-2 sm:pb-4'}>
-      {isStandalone && (
+    <div className={isEmbedded ? 'max-w-full mx-auto pb-2 sm:pb-4' : 'px-4 pb-4'}>
+      {!isEmbedded && (
         <SEO
           title="Рейтинг собак"
-          description="Рейтинг собак по курсингу и бегам борзых. Топ собак по медалям и очкам, фильтрация по породе, году и количеству стартов. Статистика выступлений 2015-2026."
-          canonicalUrl="https://coursing-stats.ru/top"
+          description="Рейтинги собак по курсингу и бегам борзых. Топ собак по медалям и очкам, фильтрация по породе, году и количеству стартов. Статистика выступлений 2015-2026."
+          canonicalUrl="https://coursing-stats.ru/competitions?tab=ranking"
         />
       )}
       <TopDogsFilters
@@ -176,8 +176,6 @@ export default function TopDogs() {
           filterYear={filterYear}
         />
       )}
-
-      {isStandalone && <ProcoursingAttribution className="mt-6" />}
     </div>
   )
 }

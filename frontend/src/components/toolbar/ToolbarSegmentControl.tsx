@@ -28,6 +28,7 @@ export default function ToolbarSegmentControl({
       {segments.map((segment) => (
         <button
           key={segment.id}
+          id={`tab-${segment.id}`}
           type="button"
           onClick={() => onChange(segment.id)}
           className={`${TOOLBAR_SEGMENT} ${value === segment.id ? TOOLBAR_SEGMENT_ACTIVE : TOOLBAR_SEGMENT_IDLE}`}

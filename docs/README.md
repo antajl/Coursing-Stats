@@ -58,8 +58,8 @@
 ### Техническое (12–18)
 | Задача | Документ |
 |--------|----------|
-| D1 схема | [12-DATABASE-SCHEMA.md](12-DATABASE-SCHEMA.md) |
-| D1 workflow | [13-DATABASE-WORKFLOW.md](13-DATABASE-WORKFLOW.md) |
+| Схема таблиц (legacy D1 / SQLite) | [12-DATABASE-SCHEMA.md](12-DATABASE-SCHEMA.md) |
+| Legacy D1 workflow | [13-DATABASE-WORKFLOW.md](13-DATABASE-WORKFLOW.md) |
 | Парсеры (правила) | [14-PARSING-RULES.md](14-PARSING-RULES.md) |
 | Парсеры (детали) | [15-PARSING-IMPLEMENTATION.md](15-PARSING-IMPLEMENTATION.md) |
 | Решение проблем | [16-TROUBLESHOOTING.md](16-TROUBLESHOOTING.md) |
@@ -75,7 +75,7 @@ npm install && cd frontend && npm install && cd ..
 npm run dev                    # localhost:5173 + админка
 ```
 
-Первый раз без данных: `npm run export-local-data -- --local`  
+Первый раз: `data/v1/` уже в git. При необходимости: `npm run build-all-data`  
 Подробно: [01-GETTING-STARTED.md](01-GETTING-STARTED.md) · [20-OPERATIONS.md](20-OPERATIONS.md)
 
 ---

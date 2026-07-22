@@ -11,7 +11,7 @@ export function assertDataV1Exists(): void {
   const manifest = path.join(DATA_V1_ROOT, 'manifest.json');
   if (!fs.existsSync(manifest)) {
     throw new Error(
-      'data/v1/manifest.json not found. Run: npm run export-local-data -- --local',
+      'data/v1/manifest.json not found. Ensure data/v1/ is present (git checkout) or run npm run sync-sqlite-to-v1 + build-all-data',
     );
   }
 }

@@ -50,7 +50,7 @@ export default function JudgeDetail() {
         <div className="mb-4 p-4 bg-amber-50 dark:bg-amber-900 border border-amber-200 dark:border-amber-700 rounded-xl text-amber-800 dark:text-amber-300">
           <p className="font-medium">⚠️ Судья не найден</p>
         </div>
-        <Link to="/judges" className="text-camel-700 dark:text-camel-400 transition-colors hover:text-camel-800 dark:hover:text-camel-300 hover:underline">
+        <Link to="/competitions?tab=judges" className="text-camel-700 dark:text-camel-400 transition-colors hover:text-camel-800 dark:hover:text-camel-300 hover:underline">
           <span className="md:hidden">Назад</span>
           <span className="hidden md:inline">← Вернуться к списку судей</span>
         </Link>
@@ -72,7 +72,7 @@ export default function JudgeDetail() {
       />
       <div className="p-4">
       <div className="mb-6">
-        <Link to="/judges" className="mb-4 inline-block text-camel-700 transition-colors hover:text-camel-800 hover:underline">
+        <Link to="/competitions?tab=judges" className="mb-4 inline-block text-camel-700 transition-colors hover:text-camel-800 hover:underline">
           <span className="md:hidden">Назад</span>
           <span className="hidden md:inline">← Вернуться к списку судей</span>
         </Link>

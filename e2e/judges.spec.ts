@@ -10,12 +10,18 @@ test.describe('Judges Page', () => {
   })
 
   test.beforeEach(async ({ page }) => {
-    await page.goto('/judges')
+    await page.goto('/competitions?tab=judges')
     await expectNotNotFoundPage(page)
   })
 
   test('page loads successfully', async ({ page }) => {
     await expect(page).toHaveTitle(/Coursing Stats/)
+  })
+
+  test('legacy /judges redirects to competitions judges tab', async ({ page }) => {
+    await page.goto('/judges')
+    await expect(page).toHaveURL(/\/competitions\?tab=judges/)
+    await expect(page.getByPlaceholder(/фамилия/i)).toBeVisible()
   })
 
   test('search input is present and functional', async ({ page }) => {
@@ -27,12 +33,12 @@ test.describe('Judges Page', () => {
   })
 
   test('shows judge cards when data exists', async ({ page }) => {
-    test.skip(!testData.judgeId, 'No judges in local D1 — run npm run sync-from-remote')
+    test.skip(!testData.judgeId, 'Нет судей в data/v1')
     await expect(page.locator('a[href^="/judges/"]').first()).toBeVisible({ timeout: 15000 })
   })
 
   test('can open judge detail page', async ({ page }) => {
-    test.skip(!testData.judgeId, 'No judges in local D1')
+    test.skip(!testData.judgeId, 'Нет судей в data/v1')
 
     await expect(page.locator(`a[href="/judges/${encodeURIComponent(testData.judgeId!)}"]`).first()).toBeVisible({
       timeout: 15000,

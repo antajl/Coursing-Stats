@@ -6,7 +6,7 @@ test.describe('Mobile Viewport', () => {
 
   const pages = [
     { path: '/', name: 'home' },
-    { path: '/judges', name: 'judges' },
+    { path: '/competitions?tab=judges', name: 'judges' },
     { path: '/speed-records', name: 'speed-records' },
     { path: '/competitions', name: 'competitions' },
     { path: '/guide', name: 'guide' },

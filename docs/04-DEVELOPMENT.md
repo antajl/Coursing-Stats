@@ -37,32 +37,31 @@ backend/
 │       ├── judges.ts          # Judges statistics
 │       ├── speed.ts           # Speed records
 │       └── top.ts             # Top ratings (placement, score, speed)
-├── parsers/                   # Data parsers (v1 + v2 modular)
-│   ├── parse-results-coursing.ts  # v1 — reparse, CLI
-│   ├── parse-results-bzmp.ts      # v1
-│   ├── parse-results-racing.ts    # v1
-│   ├── coursing/index.ts          # v2 modular (target)
-│   ├── bzmp/index.ts              # v2 modular
-│   ├── racing/index.ts            # v2 modular
-│   ├── calendar/scrape-year-page.ts  # календарь s_{YEAR}.html
-│   └── unique/                    # v2 shared row/header parsers
+├── parsers/                   # Data parsers (coursing/bzmp/racing/…)
+│   ├── coursing/index.ts
+│   ├── bzmp/index.ts
+│   ├── racing/index.ts
+│   ├── unique/
+│   ├── shared/
+│   ├── calendar/scrape-year-page.ts
+│   └── shows/
 ├── scripts/                   # All .ts, run via npx tsx
 │   ├── scrape/                # Скрапинг индекса событий с procoursing.ru
 │   │   └── scrape-year-index.ts
-│   ├── load/                  # Загрузка данных в D1
-│   │   ├── load-events.ts     # Загрузка событий
-│   │   └── split-sql-batches.ts   # Разбивка reparse SQL для remote D1
-│   ├── reparse/               # Перепарсинг данных (7 скриптов)
-│   ├── migrate/               # Миграции данных (4 скрипта)
-│   ├── sync/                  # Синхронизация данных (4 скрипта)
-│   ├── update/                # Обновление данных (3 скрипта)
-│   ├── speed/                 # Скрипты для Донино (9 скриптов)
-│   ├── test/                  # Тестовые скрипты (35 скриптов)
+│   ├── load/                  # Загрузка данных
+│   │   ├── load-events.ts
+│   │   └── split-sql-batches.ts
+│   ├── reparse/               # Перепарсинг данных
+│   ├── migrate/               # Миграции данных
+│   ├── sync/                  # Синхронизация (sync-sqlite-to-v1)
+│   ├── update/                # Обновление данных
+│   ├── speed/                 # Скрипты для Донино
+│   ├── test/                  # Тестовые скрипты
 │   │   ├── test-parser.ts, test-parsers-fixtures.ts
-│   │   ├── download-fixtures.ts, smoke-api.ts, compare-parsers.ts
+│   │   ├── download-fixtures.ts, smoke-api.ts
 │   │   └── debug/             # One-off investigation scripts
-│   ├── ci/                    # CI скрипты (3 скрипта)
-│   ├── export/                # Экспорт данных (4 скрипта)
+│   ├── ci/                    # CI скрипты
+│   ├── export/                # Экспорт данных
 │   └── archive/               # One-time scripts (18 скриптов, DO NOT REUSE)
 ├── lib/
 │   ├── fetch-win1251.ts
@@ -253,7 +252,7 @@ frontend/
 │   │   ├── Nav.tsx            # Header: .nav-glass, centered links
 │   │   ├── PageLoader.tsx
 │   │   ├── ThemeToggle.tsx    # light default; localStorage.theme
-│   │   ├── toolbar/           # PageToolbar, ToolbarSegmentControl, RecordsListToolbar, …
+│   │   ├── toolbar/           # PageToolbar, ToolbarSegmentControl, ToolbarFiltersDropdown, …
 │   │   ├── OwnerCrownName.tsx
 │   │   ├── DoninoHomeRecordRow.tsx
 │   │   ├── PodiumRankMark.tsx, MedalTally.tsx, StatsStrip.tsx
@@ -354,7 +353,7 @@ npm run reparse-2026-bzmp      # Reparse 2026 BZMP events only
 npm run reparse-2026-racing    # Reparse 2026 racing events only
 npm run ci-update-db           # Increment current year → remote D1
 npm run migrate-dog-names      # Normalize dog names in local D1
-npm run sync-from-remote         # remote D1 → local (перед первым dev)
+npm run sync-from-remote         # remote D1 → local (legacy; скрипта может не быть в package.json)
 npm run dev:remote               # dev с remote D1 (жрёт квоту reads!)
 npm run export-archive           # полный файловый архив → data/archive/snapshots/
 npm run generate-favicon         # favicon.ico из favicon.svg
@@ -399,9 +398,9 @@ npm run dev
 scripts/start-servers.bat  # local only, not in git
 ```
 
-**Первый запуск (или после sync D1):**
+**Первый запуск:**
 ```bash
-npm run export-local-data -- --local   # при необходимости
+npm run build-all-data   # при необходимости пересобрать indexes
 npm run dev
 ```
 
@@ -455,18 +454,17 @@ npm run export-archive
 ### Parser Testing
 
 ```bash
-npm run test-parser              # v1 synthetic tests
-npm run test-parser-fixtures     # v2 modular on backend/tests/fixtures/
+npm run test-parser              # synthetic HTML
+npm run test-parser-fixtures     # fixtures in backend/tests/fixtures/
 npm run download-fixtures        # refresh fixtures from live URLs
-npx tsx backend/scripts/test/compare-parsers.ts  # v1 vs v2 comparison
 ```
 
-### CLI Mode (v1 parsers)
+### CLI Mode
 
 ```bash
-npx tsx backend/parsers/parse-results-coursing.ts <url>
-npx tsx backend/parsers/parse-results-bzmp.ts <url>
-npx tsx backend/parsers/parse-results-racing.ts <url>
+npm run parse-coursing -- <url>
+npm run parse-bzmp -- <url>
+npm run parse-racing -- <url>
 ```
 
 ### API Testing

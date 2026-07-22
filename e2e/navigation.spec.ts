@@ -31,7 +31,7 @@ test.describe('Navigation', () => {
 
   test('can navigate to judges page', async ({ page }) => {
     await page.goto('/judges')
-    await expect(page).toHaveURL('/judges')
+    await expect(page).toHaveURL(/\/competitions\?tab=judges/)
     await expect(page.getByPlaceholder(/фамилия/i)).toBeVisible()
   })
 

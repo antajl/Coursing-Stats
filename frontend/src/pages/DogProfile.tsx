@@ -117,8 +117,8 @@ export default function DogProfile() {
             title="Собака не найдена"
             message={`ID: ${id}`}
             action={
-              <Link to="/top" className="rounded-xl border-2 border-camel-300 dark:border-camel-600 bg-white dark:bg-charcoal-800 px-4 py-2 text-sm font-semibold text-camel-700 dark:text-camel-400 transition-all hover:bg-camel-50 dark:hover:bg-charcoal-700 hover:border-camel-400">
-                К топу
+              <Link to="/competitions?tab=ranking" className="rounded-xl border-2 border-camel-300 dark:border-camel-600 bg-white dark:bg-charcoal-800 px-4 py-2 text-sm font-semibold text-camel-700 dark:text-camel-400 transition-all hover:bg-camel-50 dark:hover:bg-charcoal-700 hover:border-camel-400">
+                К рейтингу
               </Link>
             }
           />
@@ -272,23 +272,21 @@ export default function DogProfile() {
         keywords={keywords}
       />
       <div className="p-4 md:p-6">
-        <div className="max-w-4xl mx-auto">
-          <div ref={exportRef}>
-
-        {/* Кнопка назад */}
-        <button
-          type="button"
-          onClick={() => navigate(-1)}
-          className="mb-4 flex items-center gap-2 text-sm font-medium text-old-money-500 transition-colors hover:text-camel-700 dark:text-old-money-400 dark:hover:text-camel-400"
-          aria-label="Назад"
-          data-export-ignore
-        >
-          <ChevronLeft className="h-4 w-4" aria-hidden />
-          Назад
-        </button>
+      <div className="max-w-4xl mx-auto">
+        <div ref={exportRef}>
 
         {/* Шапка профиля */}
-        <div className="mb-6 rounded-xl border border-old-money-200/80 bg-white p-5 dark:border-charcoal-600 dark:bg-charcoal-800/50 md:p-8">
+        <div className="mb-6 flex items-start gap-1 md:gap-2">
+          <button
+            type="button"
+            onClick={() => navigate(-1)}
+            className="mt-5 flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-lg text-old-money-500 transition-colors hover:bg-old-money-50 hover:text-camel-700 md:mt-8 dark:text-old-money-400 dark:hover:bg-charcoal-700 dark:hover:text-camel-400"
+            aria-label="Назад"
+            data-export-ignore
+          >
+            <ChevronLeft className="h-5 w-5" aria-hidden />
+          </button>
+          <div className="min-w-0 flex-1 rounded-xl border border-old-money-200/80 bg-white p-5 dark:border-charcoal-600 dark:bg-charcoal-800/50 md:p-8">
           <div className="flex items-start gap-2">
             <div className="min-w-0 flex-1">
               <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
@@ -353,7 +351,7 @@ export default function DogProfile() {
               type="button"
               onClick={handleExport}
               disabled={exporting}
-              className="mt-1 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-camel-300 bg-white text-camel-700 shadow-sm transition-colors hover:border-camel-400 hover:bg-camel-50 disabled:cursor-not-allowed disabled:opacity-50 dark:border-camel-600 dark:bg-charcoal-800 dark:text-camel-300 dark:hover:bg-charcoal-700"
+              className="mt-1 flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full border border-camel-300 bg-white text-camel-700 shadow-sm transition-colors hover:border-camel-400 hover:bg-camel-50 disabled:cursor-not-allowed disabled:opacity-50 dark:border-camel-600 dark:bg-charcoal-800 dark:text-camel-300 dark:hover:bg-charcoal-700"
               aria-label={exporting ? 'Экспорт…' : 'Скачать карточку'}
               title={exporting ? 'Экспорт…' : 'Скачать карточку'}
               data-export-ignore
@@ -401,7 +399,7 @@ export default function DogProfile() {
                       <ProcoursingEventLink
                         eventId={bestScoreEventId}
                         procoursingUrl={procoursingUrlForEventId(eventResultsUrls, bestScoreEventId)}
-                        className="group mb-4 block rounded-xl border-2 border-forest-200 dark:border-forest-600 bg-forest-50 dark:bg-charcoal-700 p-4 text-center transition-colors hover:bg-forest-100 dark:hover:bg-charcoal-600"
+                        className="group mb-4 block rounded-lg border border-forest-200 dark:border-forest-600 bg-forest-50/80 dark:bg-charcoal-700/80 p-4 text-center transition-colors hover:bg-forest-100 dark:hover:bg-charcoal-600"
                       >
                         <div className="text-xs font-semibold text-charcoal-500 dark:text-charcoal-400 mb-2 uppercase tracking-wide">Лучший результат</div>
                         <div className="text-4xl font-bold tracking-tight text-forest-700 dark:text-forest-300 group-hover:text-forest-800 dark:group-hover:text-forest-200">
@@ -412,7 +410,7 @@ export default function DogProfile() {
                         </div>
                       </ProcoursingEventLink>
                     ) : (
-                      <div className="mb-4 rounded-xl border-2 border-forest-200 dark:border-forest-600 bg-forest-50 dark:bg-charcoal-700 p-4 text-center">
+                      <div className="mb-4 rounded-lg border border-forest-200 dark:border-forest-600 bg-forest-50/80 dark:bg-charcoal-700/80 p-4 text-center">
                         <div className="text-xs font-semibold text-charcoal-500 dark:text-charcoal-400 mb-2 uppercase tracking-wide">Лучший результат</div>
                         <div className="text-4xl font-bold tracking-tight text-forest-700 dark:text-forest-300">
                           {coursing.best_score ?? '—'}
@@ -470,10 +468,10 @@ export default function DogProfile() {
                 {coursingEvents.length > 0 && (
                   <div className="rounded-xl border border-forest-200 dark:border-forest-700 bg-white dark:bg-charcoal-800 p-5 md:p-6">
                     <h3 className="text-base md:text-lg font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 mb-4">История</h3>
-                    <div className="space-y-3">
+                    <div className="divide-y-0">
                       {visibleCoursingEvents.map((event, idx) => {
                         const cardClass =
-                          'block rounded-xl border border-forest-200 bg-forest-50 p-3 transition-colors hover:bg-forest-100 dark:border-forest-600 dark:bg-charcoal-700 dark:hover:bg-charcoal-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-camel-500'
+                          'block border-b border-forest-200/80 py-3 transition-colors last:border-b-0 hover:bg-forest-50/60 dark:border-forest-700/60 dark:hover:bg-charcoal-700/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-camel-500'
                         const cardBody = (
                           <>
                             <div className="flex items-center justify-between gap-2">
@@ -555,7 +553,7 @@ export default function DogProfile() {
                       <ProcoursingEventLink
                         eventId={bestSpeedEventId}
                         procoursingUrl={procoursingUrlForEventId(eventResultsUrls, bestSpeedEventId)}
-                        className="group mb-4 block rounded-xl border-2 border-warm-blue-200 dark:border-warm-blue-600 bg-warm-blue-50 dark:bg-charcoal-700 p-4 text-center transition-colors hover:bg-warm-blue-100 dark:hover:bg-charcoal-600"
+                        className="group mb-4 block rounded-lg border border-warm-blue-200 dark:border-warm-blue-600 bg-warm-blue-50/80 dark:bg-charcoal-700/80 p-4 text-center transition-colors hover:bg-warm-blue-100 dark:hover:bg-charcoal-600"
                       >
                         <div className="text-xs font-semibold text-charcoal-500 dark:text-charcoal-400 mb-2 uppercase tracking-wide">Лучшая скорость</div>
                         <div className="whitespace-nowrap text-4xl font-bold tracking-tight text-warm-blue-800 dark:text-warm-blue-400 group-hover:text-warm-blue-900 dark:group-hover:text-warm-blue-300">
@@ -567,7 +565,7 @@ export default function DogProfile() {
                         </div>
                       </ProcoursingEventLink>
                     ) : (
-                      <div className="mb-4 rounded-xl border-2 border-warm-blue-200 dark:border-warm-blue-600 bg-warm-blue-50 dark:bg-charcoal-700 p-4 text-center">
+                      <div className="mb-4 rounded-lg border border-warm-blue-200 dark:border-warm-blue-600 bg-warm-blue-50/80 dark:bg-charcoal-700/80 p-4 text-center">
                         <div className="text-xs font-semibold text-charcoal-500 dark:text-charcoal-400 mb-2 uppercase tracking-wide">Лучшая скорость</div>
                         <div className="whitespace-nowrap text-4xl font-bold tracking-tight text-warm-blue-800 dark:text-warm-blue-400">
                           {racing.best_speed ?? '—'}
@@ -625,10 +623,10 @@ export default function DogProfile() {
                 {racingEvents.length > 0 && (
                   <div className="rounded-xl border border-warm-blue-200 dark:border-warm-blue-700 bg-white dark:bg-charcoal-800 p-5 md:p-6">
                     <h3 className="text-base md:text-lg font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 mb-4">История</h3>
-                    <div className="space-y-3">
+                    <div className="divide-y-0">
                       {visibleRacingEvents.map((event, idx) => {
                         const cardClass =
-                          'block rounded-xl border border-warm-blue-200 bg-warm-blue-50 p-3 transition-colors hover:bg-warm-blue-100 dark:border-warm-blue-600 dark:bg-charcoal-700 dark:hover:bg-charcoal-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-camel-500'
+                          'block border-b border-warm-blue-200/80 py-3 transition-colors last:border-b-0 hover:bg-warm-blue-50/60 dark:border-warm-blue-700/60 dark:hover:bg-charcoal-700/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-camel-500'
                         const cardBody = (
                           <>
                             <div className="flex items-center justify-between gap-2">
@@ -703,7 +701,7 @@ export default function DogProfile() {
                 <div className="rounded-xl border border-warm-blue-200 dark:border-warm-blue-700 bg-white dark:bg-charcoal-800 p-5 md:p-6">
                   <h2 className="mb-4 text-lg font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 md:text-xl">Замер скорости</h2>
 
-                  <div className="mb-4 rounded-xl border-2 border-warm-blue-200 dark:border-warm-blue-600 bg-warm-blue-50 dark:bg-charcoal-700 p-4 text-center">
+                  <div className="mb-4 rounded-lg border border-warm-blue-200 dark:border-warm-blue-600 bg-warm-blue-50/80 dark:bg-charcoal-700/80 p-4 text-center">
                     <div className="text-xs font-semibold text-charcoal-500 dark:text-charcoal-400 mb-2 uppercase tracking-wide">Лучшая скорость</div>
                     <div className="whitespace-nowrap text-4xl font-bold tracking-tight text-warm-blue-800 dark:text-warm-blue-400">
                       {speedStats.bestSpeed}
@@ -789,7 +787,7 @@ export default function DogProfile() {
                 <div className="rounded-xl border border-forest-200 dark:border-forest-700 bg-white dark:bg-charcoal-800 p-5 md:p-6">
                   <h2 className="text-lg md:text-xl font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 mb-4">Бега борзых (350 м)</h2>
 
-                  <div className="mb-4 rounded-xl border-2 border-forest-200 dark:border-forest-600 bg-forest-50 dark:bg-charcoal-700 p-4 text-center">
+                  <div className="mb-4 rounded-lg border border-forest-200 dark:border-forest-600 bg-forest-50/80 dark:bg-charcoal-700/80 p-4 text-center">
                     <div className="text-xs font-semibold text-charcoal-500 dark:text-charcoal-400 mb-2 uppercase tracking-wide">Лучшее время</div>
                     <div className="whitespace-nowrap text-4xl font-bold tracking-tight text-forest-700 dark:text-forest-300">
                       {coursingStats.bestTime}
@@ -861,6 +859,7 @@ export default function DogProfile() {
         {(showCoursingColumn || showRacingColumn) && (
           <ProcoursingAttribution className="mt-6" />
         )}
+
         </div>
       </div>
     </div>

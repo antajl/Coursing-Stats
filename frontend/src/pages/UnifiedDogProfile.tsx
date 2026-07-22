@@ -1,15 +1,21 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { useParams, useSearchParams, Link } from 'react-router-dom'
 import SkeletonLoader from '../components/SkeletonLoader'
 import ErrorState from '../components/ErrorState'
+import ToolbarSegmentControl from '../components/toolbar/ToolbarSegmentControl'
 import { useDogProfile, useDogEvents } from '../hooks/useStaticData'
 import { getShowDogRanking } from '../lib/staticData'
-import { findMatchingCompetitionDog, findMatchingShowDog, normalizeDogName, normalizeBreedName } from '../lib/dogNameMatching'
+import { normalizeDogName, normalizeBreedName } from '../lib/dogNameMatching'
 import type { ShowDogCardData } from './Shows/ShowDogCard'
 import ShowDogProfile from './Shows/ShowDogProfile'
 import DogProfile from './DogProfile'
 
 type TabType = 'shows' | 'competitions'
+
+const PROFILE_SEGMENTS = [
+  { id: 'competitions', label: 'Соревнования' },
+  { id: 'shows', label: 'Выставки' },
+] as const
 
 export default function UnifiedDogProfile() {
   const { id } = useParams<{ id: string }>()
@@ -23,13 +29,10 @@ export default function UnifiedDogProfile() {
   const [competitionDog, setCompetitionDog] = useState<any>(null)
   const [hasShows, setHasShows] = useState(false)
   const [hasCompetitions, setHasCompetitions] = useState(false)
-  const [error, setError] = useState<string | null>(null)
 
-  // Load competition dog data
   const { data: dogDataResult, isLoading: compLoading } = useDogProfile(id)
   const { data: eventsData } = useDogEvents(id)
 
-  // Load show dog data
   useEffect(() => {
     const loadShowData = async () => {
       if (!id) return
@@ -39,7 +42,6 @@ export default function UnifiedDogProfile() {
         if (result.success && result.data) {
           let found = null
 
-          // Only find by matching name AND breed (IDs from different systems won't match)
           if (competitionDog) {
             const normalizedCompName = normalizeDogName(competitionDog.name_lat)
             const normalizedCompBreed = normalizeBreedName(competitionDog.breed)
@@ -47,13 +49,10 @@ export default function UnifiedDogProfile() {
             found = result.data.find((dog) => {
               const normalizedShowName = normalizeDogName(dog.name_lat)
               const normalizedShowBreed = normalizeBreedName(dog.breed)
-
-              // Match by normalized name AND breed
               return normalizedShowName === normalizedCompName && normalizedShowBreed === normalizedCompBreed
             })
           }
 
-          // Only set show dog if found, otherwise don't show shows tab
           if (found) {
             setShowDog(found)
             setHasShows(true)
@@ -72,61 +71,67 @@ export default function UnifiedDogProfile() {
     loadShowData()
   }, [id, competitionDog])
 
-  // Process competition dog data
   useEffect(() => {
     if (dogDataResult?.success && dogDataResult.data) {
       setCompetitionDog(dogDataResult.data)
-      
-      const hasCompData = 
+
+      const hasCompData =
         (dogDataResult.data.coursing_stats?.total_starts || 0) > 0 ||
         (dogDataResult.data.racing_stats?.total_starts || 0) > 0 ||
         (eventsData?.success && Array.isArray(eventsData.data) && eventsData.data.length > 0)
-      
+
       setHasCompetitions(hasCompData)
     }
   }, [dogDataResult, eventsData])
 
-  // Set loading state
   useEffect(() => {
     if (!compLoading) {
       setLoading(false)
     }
   }, [compLoading])
 
-  // Update URL when tab changes
-  const handleTabChange = (tab: TabType) => {
-    setActiveTab(tab)
-    setSearchParams({ tab })
-  }
+  const handleTabChange = useCallback(
+    (tab: string) => {
+      const next = tab as TabType
+      setActiveTab(next)
+      setSearchParams({ tab: next }, { replace: true })
+    },
+    [setSearchParams]
+  )
 
-  // Auto-select tab based on available data
   useEffect(() => {
-    if (!loading) {
-      if (hasShows && !hasCompetitions) {
-        handleTabChange('shows')
-      } else if (!hasShows && hasCompetitions) {
-        handleTabChange('competitions')
-      } else if (hasShows && hasCompetitions) {
-        // If both available, keep current or default to competitions
-        if (activeTab === 'shows' || activeTab === 'competitions') {
-          // Keep current tab
-        } else {
-          handleTabChange('competitions')
-        }
-      }
+    const urlTab = searchParams.get('tab') as TabType | null
+    if (urlTab === 'shows' || urlTab === 'competitions') {
+      setActiveTab(urlTab)
     }
-  }, [loading, hasShows, hasCompetitions])
+  }, [searchParams])
 
-  // Redirect if trying to access unavailable tab
+  const isValidShowDog = Boolean(
+    showDog &&
+      competitionDog &&
+      normalizeDogName(competitionDog.name_lat) === normalizeDogName(showDog.name_lat) &&
+      normalizeBreedName(competitionDog.breed) === normalizeBreedName(showDog.breed)
+  )
+  const shouldShowShowsTab = isValidShowDog
+  const showTabs = shouldShowShowsTab && hasCompetitions
+
   useEffect(() => {
-    if (!loading) {
-      if (activeTab === 'shows' && !hasShows) {
-        handleTabChange('competitions')
-      } else if (activeTab === 'competitions' && !hasCompetitions) {
-        handleTabChange('shows')
-      }
+    if (loading) return
+
+    if (activeTab === 'shows' && !shouldShowShowsTab && hasCompetitions) {
+      handleTabChange('competitions')
+      return
     }
-  }, [loading, activeTab, hasShows, hasCompetitions])
+    if (activeTab === 'competitions' && !hasCompetitions && shouldShowShowsTab) {
+      handleTabChange('shows')
+      return
+    }
+    if (shouldShowShowsTab && !hasCompetitions && activeTab !== 'shows') {
+      handleTabChange('shows')
+    } else if (!shouldShowShowsTab && hasCompetitions && activeTab === 'shows') {
+      handleTabChange('competitions')
+    }
+  }, [loading, activeTab, shouldShowShowsTab, hasCompetitions, handleTabChange])
 
   if (loading) {
     return (
@@ -146,8 +151,11 @@ export default function UnifiedDogProfile() {
             title="Собака не найдена"
             message={`ID: ${id}`}
             action={
-              <Link to="/top" className="rounded-xl border-2 border-camel-300 dark:border-camel-600 bg-white dark:bg-charcoal-800 px-4 py-2 text-sm font-semibold text-camel-700 dark:text-camel-400 transition-all hover:bg-camel-50 dark:hover:bg-charcoal-700 hover:border-camel-400">
-                К топу
+              <Link
+                to="/competitions?tab=ranking"
+                className="rounded-xl border-2 border-camel-300 dark:border-camel-600 bg-white dark:bg-charcoal-800 px-4 py-2 text-sm font-semibold text-camel-700 dark:text-camel-400 transition-all hover:bg-camel-50 dark:hover:bg-charcoal-700 hover:border-camel-400"
+              >
+                К рейтингу
               </Link>
             }
           />
@@ -156,70 +164,24 @@ export default function UnifiedDogProfile() {
     )
   }
 
-  // Validate that show dog actually matches competition dog before showing
-  const isValidShowDog = showDog && competitionDog && (() => {
-    const normalizedCompName = normalizeDogName(competitionDog.name_lat)
-    const normalizedCompBreed = normalizeBreedName(competitionDog.breed)
-    const normalizedShowName = normalizeDogName(showDog.name_lat)
-    const normalizedShowBreed = normalizeBreedName(showDog.breed)
-    return normalizedShowName === normalizedCompName && normalizedShowBreed === normalizedCompBreed
-  })()
-
-  // Only show shows tab if the dog actually matches
-  const shouldShowShowsTab = isValidShowDog
-
-  // Determine which tabs to show
-  const showTabs = shouldShowShowsTab && hasCompetitions
-
-  // Redirect immediately if trying to access unavailable tab
-  if (!loading && activeTab === 'shows' && !shouldShowShowsTab) {
-    handleTabChange('competitions')
-  }
-  if (!loading && activeTab === 'competitions' && !hasCompetitions && shouldShowShowsTab) {
-    handleTabChange('shows')
-  }
-
   return (
     <div className="p-4 md:p-6">
       <div className="max-w-4xl mx-auto">
-        {/* Tab switcher */}
         {showTabs && (
-          <div className="mb-6 flex gap-2 border-b border-old-money-200 dark:border-charcoal-600">
-            <button
-              type="button"
-              onClick={() => handleTabChange('competitions')}
-              className={`px-4 py-2 text-sm font-medium transition-colors border-b-2 -mb-px ${
-                activeTab === 'competitions'
-                  ? 'border-camel-600 text-camel-700 dark:border-camel-400 dark:text-camel-300'
-                  : 'border-transparent text-old-money-500 hover:text-camel-700 dark:text-old-money-400 dark:hover:text-camel-300'
-              }`}
-            >
-              Соревнования
-            </button>
-            <button
-              type="button"
-              onClick={() => handleTabChange('shows')}
-              className={`px-4 py-2 text-sm font-medium transition-colors border-b-2 -mb-px ${
-                activeTab === 'shows'
-                  ? 'border-camel-600 text-camel-700 dark:border-camel-400 dark:text-camel-300'
-                  : 'border-transparent text-old-money-500 hover:text-camel-700 dark:text-old-money-400 dark:hover:text-camel-300'
-              }`}
-            >
-              Выставки
-            </button>
+          <div className="mb-6 overflow-x-auto scrollbar-hide">
+            <ToolbarSegmentControl
+              segments={[...PROFILE_SEGMENTS]}
+              value={activeTab}
+              onChange={handleTabChange}
+              ariaLabel="Разделы профиля собаки"
+            />
           </div>
         )}
 
-        {/* Render active tab */}
-        {activeTab === 'competitions' && competitionDog && (
-          <DogProfile />
-        )}
+        {activeTab === 'competitions' && competitionDog && <DogProfile />}
 
-        {activeTab === 'shows' && hasShows && showDog && (
-          <ShowDogProfile dogData={showDog} />
-        )}
+        {activeTab === 'shows' && hasShows && showDog && <ShowDogProfile dogData={showDog} />}
 
-        {/* Show message if tab is selected but data is not available */}
         {activeTab === 'competitions' && !competitionDog && (
           <div className="rounded-xl border border-old-money-200 bg-cream-50 p-6 text-center dark:border-charcoal-600 dark:bg-charcoal-800/40">
             <p className="text-sm text-old-money-500 dark:text-old-money-400">

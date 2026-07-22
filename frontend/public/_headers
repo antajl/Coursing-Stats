@@ -35,3 +35,7 @@
 # CSP for iframe embedding
 /*
   Content-Security-Policy: frame-ancestors 'self' http://procoursing.ru https://procoursing.ru http://www.procoursing.ru https://www.procoursing.ru
+
+# HSTS - Force HTTPS for 1 year, include subdomains
+/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains

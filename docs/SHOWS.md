@@ -11,24 +11,25 @@
 - Список выставок: ~100 выставок (2019-2026)
 - Проблема: использует Telerik Data Grid с AJAX, возвращает HTML/JavaScript шаблоны
 
-### Текущий статус
+### Текущий статус (2026-07-12)
 
-**Скрапинг lc.rkfshow.ru сложен из-за:**
-1. Использует Telerik Data Grid с AJAX загрузкой
-2. API возвращает HTML/JavaScript шаблоны, а не чистый JSON
-3. Требует выбора породы для просмотра результатов
-4. Динамический контент с сложной структурой
+**Скрапинг lc.rkfshow.ru реализован:**
+- Playwright с locale 'ru-RU' для корректного получения русских названий пород и групп FCI
+- Параллельные запросы для ускорения (~5 минут на выставку)
+- Pipeline: ExhibitionResultListView → breed_catalog → BreedView × N пород → attachCatalogToResults
+- ~90 выставок спарсены (2025-2026), ~174,487 собак в рейтинге
 
 **Реализовано:**
-- Скрипт скрапинга `backend/parsers/shows/scrape-show-results.ts`
-- Frontend компоненты (ShowRanking, ShowJudges, ShowCalendar)
+- Скрипты скрапинга `backend/parsers/shows/` и `backend/scripts/enrich-show-*.ts`
+- Frontend компоненты (ShowRanking, ShowJudges, ShowCalendar, ShowDogProfile)
 - Структура данных в `data/v1/shows/`
+- Индексы рейтинга по годам (dog-ranking-{year}.json)
 - Документация
 
-**Требуется:**
-- Дополнительная настройка скрапера для работы с Telerik Data Grid
-- Анализ структуры AJAX ответов
-- Возможная альтернатива: ручной ввод данных или другой источник
+**Проблемы:**
+- **Профиль собаки в выставках (ShowDogProfile.tsx) пишет "Собака не найдена"** - требуется исправление
+- Профиль в соревнованиях (DogProfile.tsx) работает корректно
+- Требуется унификация дизайна профиля выставок под профиль соревнований
 
 ### Структура данных
 

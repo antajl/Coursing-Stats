@@ -39,7 +39,7 @@ export const webSiteSchema = {
   description: 'Статистика соревнований по курсингу и бегам борзых в России',
   potentialAction: {
     '@type': 'SearchAction',
-    target: 'https://coursing-stats.ru/top?search={search_term_string}',
+    target: 'https://coursing-stats.ru/competitions?tab=ranking&search={search_term_string}',
     'query-input': 'required name=search_term_string'
   }
 }

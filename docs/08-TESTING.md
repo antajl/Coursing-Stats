@@ -6,7 +6,12 @@
 ```bash
 npm run test-parser-fixtures
 ```
-Тестирует парсеры на фикстурах из `backend/tests/fixtures/`.
+Smoke-скрипт на фикстурах из `backend/tests/fixtures/`.
+
+Golden assertions (scores / judges / counts) — в vitest:
+```bash
+npx vitest run backend/tests/parser-fixtures.test.ts
+```
 
 ### Backend API
 ```bash
@@ -66,8 +71,7 @@ npm run test:e2e:ui
 
 Workflow `.github/workflows/e2e.yml`:
 - `npm ci` + Playwright chromium
-- `npm run sync-from-remote` (secrets Cloudflare)
-- `npm run test:e2e` с `CI=true`
+- `npm run test:e2e` с `CI=true` (данные из checkout `data/v1/`)
 
 Workflow `.github/workflows/deploy-frontend.yml` (после `build-all-data`):
 - `npx vitest run backend/tests/static-indexes.test.ts` — индексы не пустые (рейтинг, судьи)

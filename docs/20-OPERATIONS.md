@@ -13,7 +13,7 @@ npm install && cd frontend && npm install && cd ..
 npm run dev                    # :5173 + admin API :8787
 ```
 
-Первый раз без `data/v1/`: `npm run export-local-data -- --local`
+Первый раз: `data/v1/` уже в git. При необходимости: `npm run build-all-data`
 
 Подробнее: [`01-GETTING-STARTED.md`](01-GETTING-STARTED.md)
 
@@ -132,15 +132,12 @@ CI `build-all-data` собрал пустые indexes (часто `loadCompetiti
 
 ---
 
-## Импорт из remote D1 (редко)
+## Импорт из remote D1 (legacy, редко)
 
-```bash
-npm run sync-from-remote
-npm run export-local-data -- --local
-npm run build-all-data
-```
+Скрипты `sync-from-remote` / `export-local-data` в текущем `package.json` **отсутствуют**.
+Актуальный путь: правки `data/v1/` или `npm run sync-sqlite-to-v1` после локального парсинга → `npm run build-all-data`.
 
-Подробнее: [`13-DATABASE-WORKFLOW.md`](13-DATABASE-WORKFLOW.md)
+Исторический D1 workflow: [`13-DATABASE-WORKFLOW.md`](13-DATABASE-WORKFLOW.md) (частично устарел).
 
 ---
 

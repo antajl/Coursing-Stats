@@ -385,7 +385,7 @@ git commit && push
 | `backend/scripts/enrich/enrich-breedarchive-urls.ts` | Заполнение `pedigree_url` в `dogs/` |
 | `frontend/src/lib/competingBreeds.ts` | Список пород для фильтра рейтинга (`deriveCompetingBreeds`, сортировка по числу собак) |
 
-Worker (`backend/src/worker.ts`) **не деплоится в CI** — legacy для `npm run dev:d1`.
+Worker (`backend/src/worker.ts`) **не деплоится в CI** — legacy local entry, не runtime прода.
 
 **Важно:** `frontend/public/data/v1/` не в git (в .gitignore), генерируется автоматически при билде через `npm run build-all-data`. Единственный источник правды для данных - `data/v1/`.
 

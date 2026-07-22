@@ -1,8 +1,9 @@
-# Database Schema — Схема D1
+# Database Schema — Схема (legacy D1 / локальная SQLite)
 
-> **ИИ:** workflow и импорт — [13-DATABASE-WORKFLOW.md](13-DATABASE-WORKFLOW.md). Runtime данные — [03-DATA.md](03-DATA.md).
+> **Устарело как runtime-источник.** Публичный сайт читает только [`03-DATA.md`](03-DATA.md) → `data/v1/`.  
+> Этот файл описывает таблицы, которые всё ещё полезны для понимания модели при импорте/парсинге. Workflow: [13-DATABASE-WORKFLOW.md](13-DATABASE-WORKFLOW.md).
 
-Полная схема Cloudflare D1 для импорта данных и парсеров. Файл схемы: `backend/schema.sql`.
+Полная схема (исторически Cloudflare D1, локально better-sqlite3). Файл схемы: `backend/schema.sql`.
 
 ---
 

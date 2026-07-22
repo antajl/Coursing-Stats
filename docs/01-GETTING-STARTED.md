@@ -30,15 +30,16 @@ cd ..
 ### Локальная разработка (файлы `data/v1/` — D1 не нужна)
 
 ```bash
-# Первый раз: выгрузить данные в data/v1/ (из локальной или remote D1)
-npm run sync-from-remote          # опционально: свежая копия D1
-npm run export-local-data -- --local
+# data/v1/ уже в git после clone. При необходимости пересобрать indexes:
+npm run build-all-data
 
 # Запуск API :8787 (читает data/v1/) + Vite :5173
 npm run dev
 ```
 
-Старый режим с локальной D1: `npm run dev:d1` (нужен `sync-from-remote`).
+После парсинга в локальную SQLite: `npm run sync-sqlite-to-v1`, затем `npm run build-all-data`.
+
+Документы `12-DATABASE-SCHEMA.md` / `13-DATABASE-WORKFLOW.md` описывают legacy D1 — ориентируйтесь на код и [`03-DATA.md`](03-DATA.md).
 
 Или вручную:
 
@@ -49,8 +50,6 @@ npx tsx backend/src/local-dev-server.ts
 # Терминал 2: Frontend (Vite)
 cd frontend && npm run dev
 ```
-
-**Свежий импорт из remote D1** (редко): см. [03-DATA.md](03-DATA.md) — `sync-from-remote` → `export-local-data`.
 
 ### Windows (batch файл)
 
@@ -102,7 +101,7 @@ npm run test-parser-fixtures  # v2 модульные на реальных HTML
 Coursing Stats/
 ├── backend/              # local-dev API, парсеры, скрипты сборки data/v1
 │   ├── src/              # worker.ts, app.ts, routes/
-│   ├── parsers/          # v1: parse-results-*.ts; v2: coursing/, bzmp/, racing/, unique/
+│   ├── parsers/          # coursing/, bzmp/, racing/, unique/, shared/, calendar/, shows/
 │   ├── scripts/          # Все .ts (npx tsx): scrape/, load/, reparse/, test/, …
 │   ├── tests/fixtures/   # Реальные HTML фикстуры парсеров
 │   └── lib/              # fetch-win1251.ts, dog-lookup.ts
@@ -200,34 +199,30 @@ Push в `main` → GitHub Actions → Cloudflare Pages. Worker в прод не 
 - ✅ Файловый архив: `npm run export-archive` → `data/archive/snapshots/`
 - ✅ Sitemap + favicon.ico для поисковиков
 - ✅ Страница `/guide` (справочник: соревнования, выставки, протоколы, рейтинг CS)
-- ✅ Тесты парсеров: `npm run test-parser` (синтетика), `npm run test-parser-fixtures` (v2 модульные парсеры на фикстурах)
+- ✅ Тесты парсеров: `npm run test-parser` (синтетика), `npm run test-parser-fixtures` (парсеры на фикстурах)
 - ✅ E2E (Playwright): `npm run test:e2e` — см. [08-TESTING.md](08-TESTING.md)
 
 ## Что не сделано / в планах
 
 - ❌ OCR для результатов 2015–2022 (хранятся как изображения)
 - ❌ Sentry DSN не настроен (конфигурация создана, проект в Sentry не создан)
-- 🔄 Модульные парсеры v2 в продакшен-reparse (`reparse-by-year.ts`); v1 `parse-results-*.ts` — legacy/CLI
+- ✅ Парсеры `coursing/` / `bzmp/` / `racing/` — единственный путь (v1 `parse-results-*.ts` удалён)
 - 🔄 In-process Worker-тесты — `api.test.ts` пропущен; пока `npm run smoke-api` с `npm run dev`
 - 🔄 Тексты hero на главной (eyebrow/заголовок) — при необходимости уточнить формулировки про годы архива vs результаты в БД
 - 📋 Подробнее: `FUTURE-PLANS.md`
 
 ## Парсеры — важно
 
-Все скрипты — `.ts`, запуск через `npx tsx`. Файлов `.mjs` в проекте нет.
+Все скрипты — `.ts`, запуск через `npx tsx`. Файлов `.mjs` и v1 `parse-results-*.ts` в проекте нет.
 
-Два набора парсеров сосуществуют:
-
-| Путь | Версия | Используется |
-|------|--------|-------------|
-| `backend/parsers/parse-results-coursing.ts` | v1 | CLI, legacy |
-| `backend/parsers/parse-results-bzmp.ts` | v1 | CLI, legacy |
-| `backend/parsers/parse-results-racing.ts` | v1 | CLI, legacy |
-| `backend/parsers/coursing/index.ts` | v2 модульный | `reparse-by-year`, `test-parser-fixtures` |
-| `backend/parsers/bzmp/index.ts` | v2 модульный | `reparse-by-year`, `test-parser-fixtures` |
-| `backend/parsers/racing/index.ts` | v2 модульный | `reparse-by-year`, `test-parser-fixtures` |
-| `backend/parsers/calendar/scrape-year-page.ts` | календарь | `scrape-index`, `update-current-year`, тесты |
-| `backend/parsers/unique/` | v2 общие утилиты | shared row/header parsers |
+| Путь | Используется |
+|------|-------------|
+| `backend/parsers/coursing/index.ts` | `reparse-by-year`, `parse-coursing`, fixtures |
+| `backend/parsers/bzmp/index.ts` | `reparse-by-year`, `parse-bzmp`, fixtures |
+| `backend/parsers/racing/index.ts` | `reparse-by-year`, `parse-racing`, fixtures |
+| `backend/parsers/calendar/scrape-year-page.ts` | `scrape-index`, `update-current-year`, тесты |
+| `backend/parsers/unique/` | экспериментальный |
+| `backend/parsers/shared/` | общие хелперы |
 
 **Фикстуры:** `backend/tests/fixtures/` — реальный HTML с procoursing.ru. Racing: `2026-05-16_Complete_Results_Racing.html`, `Complete_Results_2025-cc-sample.html` (ранее ошибочно лежали BZMP-файлы с суффиксом `_B`).
 

@@ -16,7 +16,7 @@ test.describe('Dog Profile Page', () => {
   })
 
   test('loads real dog profile when data exists', async ({ page }) => {
-    test.skip(!testData.dogId, 'No dogs in local D1 — run npm run sync-from-remote')
+    test.skip(!testData.dogId, 'Нет собак в data/v1')
 
     await page.goto(`/dog/${testData.dogId}`)
     await expectNotNotFoundPage(page)

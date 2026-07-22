@@ -38,8 +38,7 @@
 | `ViewToggle` | Записи \| Статистика (Донино) |
 | `ToolbarSearch` | Поиск в тулбаре |
 | `ToolbarActiveFilters` | Сбрасываемые чипы |
-| `MultiFilterDropdown` | Легаси |
-| `RecordsListToolbar` | Легаси |
+| `ToolbarFiltersDropdown` | Панель фильтров |
 
 **Стили:** `TOOLBAR_FILTER_SECTION_LABEL`, `TOOLBAR_FILTER_CHECKBOX_ROW`, `TOOLBAR_NUMBER_INPUT` в `lib/toolbar.ts`.
 
@@ -119,16 +118,16 @@ Tailwind `md:` брейкпоинты. `App.tsx`: `pt-3 pb-5 md:pt-4`, `px-2 sm:
 | Path | Компонент | Описание |
 |------|-----------|----------|
 | `/` | `Home.tsx` | Лендинг |
-| `/competitions` | `Competitions.tsx` | Hub «Статистика» |
-| `/top` | `TopDogs/index.tsx` | Прямой рейтинг |
-| `/dog/:id` | `DogProfile.tsx` | Профиль собаки |
+| `/competitions` | `Competitions.tsx` | Hub: рейтинг + судьи (`?tab=`) |
+| `/top` | → redirect | legacy → `/competitions?tab=ranking` |
+| `/judges` | → redirect | legacy → `/competitions?tab=judges` |
+| `/judges/:judgeId` | `JudgeDetail.tsx` | Детали судьи |
+| `/dog/:id` | `UnifiedDogProfile.tsx` | Профиль собаки |
 | `/event/:id` | — | Redirect → рейтинг |
 | `/admin/calendar` | `AdminCalendar.tsx` | Dev only |
 | `/admin/event/:id` | `EventResults/` | Dev only |
 | `/speed-records` | `SpeedRecords/index.tsx` | Донино |
 | `/donino-dog/:name/:breed` | `DoninoDogProfile.tsx` | Профиль Донино |
-| `/judges` | `Judges/index.tsx` | Судьи |
-| `/judges/:judgeId` | `JudgeDetail.tsx` | Детали судьи |
 
 ### Competitions = tab hub
 

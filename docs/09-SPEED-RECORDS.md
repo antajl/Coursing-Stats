@@ -200,7 +200,7 @@ npx tsx backend/scripts/speed/fetch-coursing-records.ts --remote
 | Прокрутка | `hooks/useInfiniteScroll.ts` — IntersectionObserver, сброс при смене фильтров |
 | Профиль | Клик по кличке → `/donino-dog/:name/:breed` |
 
-Легаси-карточки `SpeedRecordCard.tsx` / `CoursingRecordCard.tsx` и вкладки `SpeedTableTab` / `CoursingTableTab` в основном flow **не используются** (остались в репозитории).
+Легаси-карточки `SpeedRecordCard.tsx` / `CoursingRecordCard.tsx` в основном flow **не используются** (могут остаться в репозитории).
 
 #### Режим «Статистика» (`?view=stats`)
 
@@ -441,7 +441,7 @@ useEffect(() => {
 
 **Решение (актуально с 2026-07-06):**
 - Данные грузятся в `useSpeedRecordsPage.ts` с `limit=1000` для обоих API (достаточно для текущей базы ~200 speed / ~100 coursing).
-- Легаси-вью `stats/SpeedStatsView.tsx` / `CoursingStatsView.tsx` использовали `limit=10000` — в новом UI статистика в `DoninoStatsColumns.tsx` на тех же 1000 записях из page hook.
+- Статистика в `DoninoStatsColumns.tsx` на тех же ~1000 записях из page hook.
 - При росте базы >1000 — увеличить limit в `useSpeedRecordsPage.ts` или добавить отдельный stats-endpoint.
 
 **Проверка:**
@@ -560,7 +560,7 @@ npx wrangler d1 execute pc-db --remote --command="SELECT name, breed, date, COUN
 - **Speed:** `backend/scripts/speed/parse-speed-xlsx.ts`, `sync-speed-records.ts`, `fetch-speed-records.ts`, `speed-sheet-status.ts`
 - **Coursing 350 м:** `backend/scripts/speed/fetch-coursing-records.ts`
 - **Routes:** `backend/src/routes/speed.ts` (`/api/speed-records`, `/api/coursing-records`)
-- **Фронтенд:** `frontend/src/pages/SpeedRecords/` — актуально: `index.tsx`, `useSpeedRecordsPage.ts`, `DoninoPageToolbar.tsx`, `DoninoRecordsColumns.tsx`, `DoninoStatsColumns.tsx`, `DoninoListRecordRow.tsx`, `stats/doninoStatsUtils.ts`, `exportExcel.ts`. Легаси: `SpeedTableTab.tsx`, `SpeedRecordCard.tsx`, `stats/SpeedStatsView.tsx`, …
+- **Фронтенд:** `frontend/src/pages/SpeedRecords/` — актуально: `index.tsx`, `useSpeedRecordsPage.ts`, `DoninoPageToolbar.tsx`, `DoninoRecordsColumns.tsx`, `DoninoStatsColumns.tsx`, `DoninoListRecordRow.tsx`, `stats/doninoStatsUtils.ts`, `exportExcel.ts`.
 - **UI-компоненты:** `frontend/src/components/SpeedHistorySparkline.tsx`, `SpeedStatusBadge.tsx`, `DogSexIcon.tsx`
 - **Утилиты дат/статистики:** `frontend/src/lib/recordDates.ts`
 - **GitHub Actions:** `.github/workflows/update-speed-records.yml`

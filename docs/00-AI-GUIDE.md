@@ -52,7 +52,7 @@
 
 1. **Публичный сайт** читает только `data/v1/*.json` с CDN — `frontend/src/lib/staticData.ts`, **без Worker и без D1**.
 2. **`data/v1/` в git** — источник правды для прода.
-3. **D1** — импорт: парсеры → D1 → `export-local-data` → `data/v1/`.
+3. **Импорт данных:** парсеры → локальная SQLite (`node-data-store`) → `npm run sync-sqlite-to-v1` → `data/v1/` → `npm run build-all-data`. D1 в runtime **не используется**.
 4. **Админка** — только локально: UI `:5173/admin`, API `:8787`.
 5. **`build-all-data`** — пересобирает `indexes/`, sitemap; CI при push. Snapshot: **`results > 0`**, иначе пустой рейтинг на проде → [`03-DATA.md`](03-DATA.md) → «Диагностика», [`20-OPERATIONS.md`](20-OPERATIONS.md).
 6. **Два топа** — медали и очки, **не смешивать**. Очки: сортировка по **`rating_score` (индекс CS)**, не по `best_score`.
@@ -104,9 +104,9 @@
 
 ```bash
 npm run dev                 # Vite :5173 + admin :8787
-npm run build-all-data      # indexes + package для Pages
+npm run build-all-data      # indexes + copy в frontend/public/data/v1
+npm run sync-sqlite-to-v1   # локальная SQLite → data/v1/ (после парсинга)
 npm run enrich-breedarchive-urls  # pedigree_url → dogs/by-id (затем build-all-data)
-npm run export-local-data -- --local
 npm run smoke-api           # нужен dev
 npm run test-parser-fixtures
 npm test

@@ -1,4 +1,4 @@
-import { parseRacingResultsPage } from "../../parsers/parse-results-racing";
+import { parseRacingResultsPage } from "../../parsers/racing/index";
 import { buildRacingRawScoresJson } from "../../parsers/racing/build-raw-scores";
 import { normalizeDogName, normalizeBreed } from "../../lib/dog-lookup";
 import { sleep } from "../../lib/fetch-win1251";

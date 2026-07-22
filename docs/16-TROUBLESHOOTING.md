@@ -210,7 +210,7 @@ Playwright тесты failing
 
 ### Решение
 1. Проверить `npm run dev` запускается
-2. Запустить `npm run export-local-data -- --local`
+2. Убедиться, что в репозитории есть `data/v1/` (после clone) или выполнить `npm run build-all-data`
 3. Увеличить таймауты в playwright.config.ts
 
 ---

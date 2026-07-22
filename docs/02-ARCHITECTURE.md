@@ -44,15 +44,12 @@ Cloudflare D1 (events, dogs, results)  ← скрипты импорта
 |--------|------|---------|
 | `backend/scripts/scrape/scrape-year-index.ts` | `backend/scripts/` | Парсит `s_{YEAR}.html`, получает список событий |
 | `backend/lib/fetch-win1251.ts` | `backend/lib/` | Загрузка страниц с декодированием windows-1251 |
-| `backend/parsers/parse-results-coursing.ts` | `backend/parsers/` | Парсер курсинга (v1, reparse) |
-| `backend/parsers/parse-results-bzmp.ts` | `backend/parsers/` | Парсер БЗМП (v1, reparse) |
-| `backend/parsers/parse-results-racing.ts` | `backend/parsers/` | Парсер бега (v1, reparse) |
-| `backend/parsers/coursing/index.ts` | `backend/parsers/` | Модульный парсер курсинга (v2, целевой) |
-| `backend/parsers/bzmp/index.ts` | `backend/parsers/` | Модульный парсер БЗМП (v2) |
-| `backend/parsers/racing/index.ts` | `backend/parsers/` | Модульный парсер racing (v2) |
-| `backend/parsers/unique/` | `backend/parsers/` | Общие row/header parsers для v2 |
-| `backend/scripts/load/load-events.ts` | `backend/scripts/load/` | Загрузка событий в D1 |
-| `backend/scripts/load/load-results.ts` | `backend/scripts/load/` | Загрузка результатов в D1 (через API или SQL) |
+| `backend/parsers/coursing/index.ts` | `backend/parsers/` | Парсер курсинга |
+| `backend/parsers/bzmp/index.ts` | `backend/parsers/` | Парсер БЗМП |
+| `backend/parsers/racing/index.ts` | `backend/parsers/` | Парсер бега |
+| `backend/parsers/unique/` | `backend/parsers/` | Экспериментальный парсер |
+| `backend/scripts/load/load-events.ts` | `backend/scripts/load/` | Загрузка событий |
+| `backend/scripts/load/load-results.ts` | `backend/scripts/load/` | Загрузка результатов |
 | `backend/scripts/speed/parse-speed-xlsx.ts` | `backend/scripts/speed/` | Общий парсер XLSX замеров (координаты ячеек, цвета клички) |
 | `backend/scripts/speed/sync-speed-records.ts` | `backend/scripts/speed/` | Загрузка замеров скорости Донино (prod + GitHub Actions) |
 | `backend/scripts/speed/fetch-coursing-records.ts` | `backend/scripts/speed/` | Загрузка зачётов курсинга 350 м |
@@ -510,7 +507,7 @@ DNS зона `coursing-stats.ru` — в **Cloudflare** (NS с reg.ru на Cloudf
 | `src/lib/` | Утилиты (breedMapping, judgeStats, qualificationTitles, recordDates, etc.) |
 | `src/pages/` | Страницы: Home, Events, DogProfile, SpeedRecords, Judges, Admin, Guide, TopDogs, Competitions, NotFound |
 | `src/pages/Events/EventResults/` | Компоненты страницы результатов (EventHeader, ResultCard, ResultsSection, details, utils) |
-| `src/pages/SpeedRecords/stats/` | Компоненты статистики Донино (SpeedStatsView, CoursingStatsView, DoninoStatsSummary) |
+| `src/pages/SpeedRecords/stats/` | Утилиты и панели статистики Донино (`doninoStatsUtils`, `DoninoStatsSummary`, …) |
 | `src/components/` | UI-компоненты (toolbar, cards, badges, etc.) |
 | `src/hooks/` | React hooks (useApi, useDarkMode, useGsap*, useInfiniteScroll) |
 | `src/services/` | API сервисы (api.ts) |

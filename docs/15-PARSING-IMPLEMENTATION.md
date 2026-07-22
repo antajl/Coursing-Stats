@@ -6,14 +6,17 @@
 
 ---
 
-## Версии парсеров
+## Парсеры (актуально)
 
-Все скрипты — `.ts`, запуск `npx tsx`. Файлов `.mjs` нет.
+Все скрипты — `.ts`, запуск `npx tsx`. Файлов `.mjs` и **v1 `parse-results-*.ts` больше нет**.
 
-| Версия | Путь | Назначение |
-|--------|------|------------|
-| v1 | `backend/parsers/parse-results-coursing.ts`, `backend/parsers/parse-results-bzmp.ts`, `backend/parsers/parse-results-racing.ts` | CLI, legacy-скрипты (`reparse-coursing` и т.д.) |
-| v2 | `backend/parsers/coursing/index.ts`, `backend/parsers/bzmp/index.ts`, `backend/parsers/racing/index.ts`, `backend/parsers/unique/` | **`reparse-by-year.ts`**, `test-parser-fixtures` |
+| Путь | Назначение |
+|------|------------|
+| `backend/parsers/coursing/index.ts` | Курсинг — reparse, `npm run parse-coursing`, fixtures |
+| `backend/parsers/bzmp/index.ts` | БЗМП |
+| `backend/parsers/racing/index.ts` | Бега |
+| `backend/parsers/unique/` | Экспериментальный / не в hot path |
+| `backend/parsers/shared/` | Общие хелперы (судьи, title, non-arrived) |
 
 **Фикстуры:** `backend/tests/fixtures/{coursing,bzmp,racing}/` — реальный HTML.
 
@@ -28,7 +31,7 @@
 ### Source Data
 - **URL:** http://procoursing.ru/2026/[date]_Complete_Results_Coursing.html
 - **Парсер:** `backend/parsers/coursing/index.ts` (модульная версия)
-- **Fallback:** `backend/parsers/parse-results-coursing.ts` (старая версия)
+- **Fallback:** нет (v1 удалён)
 
 ### Модульная структура
 
@@ -222,7 +225,7 @@
 ### Source Data
 - **URL:** http://procoursing.ru/2026/[date]_Complete_Results_BZMP.html
 - **Парсер:** `backend/parsers/bzmp/index.ts` (модульная версия)
-- **Fallback:** `backend/parsers/parse-results-bzmp.ts` (старая версия)
+- **Fallback:** нет (v1 удалён)
 
 ### Модульная структура
 
@@ -271,7 +274,7 @@
 ### Source Data
 - **URL:** http://procoursing.ru/2026/[date]_Complete_Results_Racing.html
 - **Парсер:** `backend/parsers/racing/index.ts` (модульная версия)
-- **Fallback:** `backend/parsers/parse-results-racing.ts` (старая версия)
+- **Fallback:** нет (v1 удалён)
 
 ### Модульная структура
 
@@ -366,18 +369,17 @@
 npm run test-parser
 ```
 
-### Тестирование на фикстурах (v2 модульные)
+### Тестирование на фикстурах
 ```bash
 npm run test-parser-fixtures
 npm run download-fixtures
-npx tsx backend/scripts/test/compare-parsers.ts
 ```
 
-### CLI Mode (v1)
+### CLI
 ```bash
-npx tsx backend/parsers/parse-results-coursing.ts <url>
-npx tsx backend/parsers/parse-results-bzmp.ts <url>
-npx tsx backend/parsers/parse-results-racing.ts <url>
+npm run parse-coursing -- <url>
+npm run parse-bzmp -- <url>
+npm run parse-racing -- <url>
 ```
 
 ---

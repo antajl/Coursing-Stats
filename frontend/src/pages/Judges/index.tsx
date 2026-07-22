@@ -115,7 +115,7 @@ export default function Judges() {
         <SEO
           title="Судьи"
           description="Статистика судей по курсингу и бегам борзых. Рейтинг судей по количеству оценок, фильтрация по дисциплине, породе и году. Экспертная оценка и судейство соревнований."
-          canonicalUrl="https://coursing-stats.ru/judges"
+          canonicalUrl="https://coursing-stats.ru/competitions?tab=judges"
         />
       )}
       <div className="mb-4">

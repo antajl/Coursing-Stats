@@ -2,7 +2,8 @@
 
 Каноническое хранилище для сайта. **Публичный прод** читает эти файлы с CDN (`/data/v1/`).
 
-**Экспорт из D1:** `npm run export-local-data -- --local` (см. [docs/03-DATA.md](../../docs/03-DATA.md)).  
+**Источник правды:** эти файлы в git.  
+**После парсинга в локальную SQLite:** `npm run sync-sqlite-to-v1`.  
 **Пересборка индексов:** `npm run build-all-data`.  
 **Локальный dev:** `npm run dev` — Vite отдаёт `/data/v1/` с диска; админка на `:8787`.
 
@@ -17,6 +18,6 @@
 
 Правка одного турнира = один файл в `competitions/`, без затрагивания остальных.
 
-Новые собаки появляются автоматически при `export-local-data` или sync из админки.
+Новые собаки появляются при `sync-sqlite-to-v1` или правке `dogs/` вручную, затем `build-all-data`.
 
 **Прод:** `git push main` → CI `build-all-data` → Cloudflare Pages.
