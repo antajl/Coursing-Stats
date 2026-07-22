@@ -6,7 +6,7 @@ import App from './App'
 import { initSentry } from './sentry'
 
 // Меняет content-hash entry при каждом намеренном bust деплоя (не убирать зря).
-void 'cs-asset-bust-2026-07-22c'
+void 'cs-asset-bust-2026-07-22d'
 
 initSentry()
 
