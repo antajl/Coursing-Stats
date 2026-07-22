@@ -34,12 +34,27 @@ if errorlevel 1 (
   git commit -m "%MSG%"
   if errorlevel 1 goto :fail
 ) else (
-  echo Нет новых изменений для коммита — пушу текущую ветку как есть.
+  echo Нет новых изменений для коммита.
+)
+
+echo.
+echo Синхронизация с origin ^(rebase^)...
+echo Локальные коммиты поверх remote; при конфликте в donino не бери устаревший remote.
+git pull --rebase origin main
+if errorlevel 1 (
+  echo.
+  echo [ERROR] rebase не прошёл. Если конфликт в data\v1\donino\:
+  echo   1^) scripts\update-donino.bat   ^(свежие Sheets^)
+  echo   2^) git add data\v1\donino\
+  echo   3^) git rebase --continue
+  echo   4^) снова scripts\deploy-to-github.bat
+  echo Не делай git push --force.
+  goto :fail
 )
 
 echo.
 echo Push...
-git push
+git push origin main
 if errorlevel 1 goto :fail
 
 echo.
