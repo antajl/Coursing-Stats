@@ -47,11 +47,30 @@ Coursing Stats использует несколько стратегий для
 - **Файл**: `frontend/src/components/SEO.tsx`
 - **Библиотека**: `react-helmet-async`
 - **Функции**:
-  - Динамический title
-  - Description
-  - Keywords (для старых систем)
-  - Open Graph (Facebook, соцсети)
-  - Twitter Cards
+  - Динамический title / description / keywords
+  - Open Graph, Twitter Cards
+  - Канонические URL
+  - Опциональный `noindex`
+
+```tsx
+<SEO
+  title="Заголовок страницы"
+  description="Описание страницы"
+  canonicalUrl="https://coursing-stats.ru/page"
+/>
+```
+
+### JSON-LD
+- **Файл:** `frontend/src/components/JsonLd.tsx`
+- Схемы: **Organization**, **WebSite** (поиск)
+
+### OG Image
+- **Файл:** `frontend/public/og-image.svg` (на базе logo-light)
+
+### Канонические URL (основные)
+- `/`, `/competitions`, `/speed-records`, `/guide`
+- Legacy редиректы: `/top`, `/judges` → hub `/competitions?tab=…`
+- Динамика: `/dog/:id`, `/donino-dog/…`, `/judges/:id` (если публичны)
 
 ### Реализация на страницах
 
@@ -136,22 +155,38 @@ return (
 
 ## Ключевые слова
 
-Сайт оптимизирован под следующие запросы:
+В `SEO.tsx` — расширенный набор (основные термины, породы, организации РКФ/FCI, рекорды, судьи). Для страниц — дополнять конкретными именами (собака, судья, событие).
 
-### Основные
-- курсинг
-- бега борзых
-- статистика
-- соревнования
-- РКФ
+### Типовые запросы
+- курсинг, бега борзых, статистика, РКФ
+- [Имя собаки] + [порода]; [судья] + статистика; рекорды скорости / Донино
 
-### Специфические
-- [Имя собаки] + [порода]
-- [Название соревнования] + [дата]
-- [Имя судьи] + статистика
-- рекорды скорости
-- рейтинги собак
-- результаты соревнований
+## Яндекс.Метрика
+
+- **Счётчик:** `110619327`
+- **Файлы:** `frontend/src/components/YandexMetrica.tsx`, `frontend/src/types/yandex-metrica.d.ts`
+- **Вкл.:** вебвизор, карта скролла, точные отскоки, отслеживание ссылок, SSR-friendly init
+- **Не нужно:** e-commerce, контентная аналитика, тег-менеджер
+
+### Цели (`reachGoal`)
+
+| Цель | Смысл |
+|------|--------|
+| `dog_profile_view` | профиль собаки |
+| `search_used` | поиск |
+| `filter_used` | фильтры |
+| `procoursing_link` | переход на procoursing.ru |
+| `competition_view` | соревнование |
+| `speed_records_view` | Донино |
+| `judges_view` | судьи |
+| `guide_view` | справочник |
+
+```tsx
+const { reachGoal } = useYandexGoal()
+useEffect(() => { reachGoal('dog_profile_view') }, [reachGoal])
+```
+
+Подключение: `App.tsx` → `<YandexMetrica />` внутри `HelmetProvider` / `Router`.
 
 ## Мониторинг
 
@@ -196,7 +231,26 @@ return (
 - HTTPS через Cloudflare — OK
 - Яндекс Business — опционально; для статистического сайта не обязателен
 
+## FAQ (кратко)
+
+| Вопрос | Ответ |
+|--------|--------|
+| Цели Метрики вручную? | В коде уже есть; в интерфейсе можно создать JS-события с теми же id или включить автоцели |
+| Favicon в Вебмастере? | Иногда нужна ручная загрузка: Настройки → Иконка сайта |
+| Тег-менеджер? | Не нужен — одного счётчика Метрики достаточно |
+| Как проверить SEO? | F12 → Head (meta); sitemap/robots; Метрика через 24–48 ч; индексация — через несколько дней |
+
+## Связанные файлы
+
+- `frontend/src/components/SEO.tsx`, `JsonLd.tsx`, `YandexMetrica.tsx`
+- `frontend/src/types/yandex-metrica.d.ts`
+- `frontend/public/og-image.svg`, `robots.txt`, `sitemap.xml` (генерируется CI)
+- `backend/scripts/build-derived-indexes.ts` — URL для sitemap
+
 ## История изменений
+
+### 2026-07-22
+- Канон SEO: этот файл; устаревший дубль `SEO.md` удалён (контент Метрики/JsonLd/OG смержен сюда)
 
 ### 2026-07-07 (вечер)
 - Публичный sitemap — статический из CI (`build-derived-indexes`), один файл на Pages
@@ -207,9 +261,5 @@ return (
 - Заметки по региону в Вебмастере
 
 ### 2026-07-05
-- Добавлен `react-helmet-async` для динамических meta-тегов
-- Создан компонент `SEO.tsx`
-- Добавлены meta-теги на страницы собак, событий, судей
-- Создан динамический sitemap API endpoint
-- Подтверждена верификация в Яндекс и Google
-- Создан `robots.txt` и статический `sitemap.xml`
+- `react-helmet-async`, `SEO.tsx`, meta на ключевых страницах
+- Верификация Яндекс/Google; `robots.txt` + sitemap

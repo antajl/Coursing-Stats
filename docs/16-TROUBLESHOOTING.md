@@ -14,8 +14,7 @@
 ### Что делать
 
 1. **Runbook:** [`20-OPERATIONS.md`](20-OPERATIONS.md) → «Пустой рейтинг / судьи на проде»
-2. **Канон и причины:** [`03-DATA.md`](03-DATA.md) → «Диагностика: локально есть данные, на проде пусто»
-3. **ADR:** [`19-HISTORY.md`](19-HISTORY.md) → 2026-07-09
+2. **Канон и причины:** [`03a-DATA-DIAGNOSTICS.md`](03a-DATA-DIAGNOSTICS.md)
 
 ```bash
 npm run build-data-snapshot    # results > 0
@@ -44,7 +43,8 @@ npx vitest run backend/tests/static-indexes.test.ts
 
 Если кэш уже отравлен: после деплоя с новым stamp хэши vendor-чанков сменятся сами; при залипании — инкогнито один раз.
 
-Канон: [`20-OPERATIONS.md`](20-OPERATIONS.md) → «Кэш фронта», [`04-DEVELOPMENT.md`](04-DEVELOPMENT.md) → SPA / Vite.
+Канон: [`20-OPERATIONS.md`](20-OPERATIONS.md) → «Кэш фронта», [`16-TROUBLESHOOTING.md`](16-TROUBLESHOOTING.md) (этот файл).
+
 
 ---
 
@@ -69,7 +69,8 @@ scripts\deploy-to-github.bat       # commit + pull --rebase + push → CI Pages
 
 Сверить: `count` в локальном файле vs `https://coursing-stats.ru/data/v1/donino/speed_records.json`.
 
-Канон: [`09-SPEED-RECORDS.md`](09-SPEED-RECORDS.md) → «Локальное обновление», [`20-OPERATIONS.md`](20-OPERATIONS.md).
+Канон: [`09a-DONINO-PIPELINE.md`](09a-DONINO-PIPELINE.md), [`09-SPEED-RECORDS.md`](09-SPEED-RECORDS.md), [`20-OPERATIONS.md`](20-OPERATIONS.md).
+
 
 ---
 
@@ -79,7 +80,8 @@ scripts\deploy-to-github.bat       # commit + pull --rebase + push → CI Pages
 - All-time `dog-ranking.json` > **25 MB** — лимит файла Cloudflare Pages; на CDN его нет (SPA HTML). UI по умолчанию грузит **год**, «все года» — склейка `dog-ranking-{year}.json`.
 - Старый календарь последовательно качал ~90 полных `exhibitions/*.json` — медленно на CDN. Сейчас — лёгкие `shows/calendar/{year}.json`.
 
-Канон: [`03-DATA.md`](03-DATA.md) → «Выставки», [`SHOWS.md`](SHOWS.md).
+Канон: [`SHOWS.md`](SHOWS.md), кратко [`03-DATA.md`](03-DATA.md) → «Выставки».
+
 
 ---
 
@@ -276,7 +278,8 @@ Playwright тесты failing
 ## См. также
 
 - [20-OPERATIONS.md](20-OPERATIONS.md) — Runbook деплоя и диагностики
-- [03-DATA.md](03-DATA.md) — Диагностика данных (канон)
-- [13-DATABASE-WORKFLOW.md](13-DATABASE-WORKFLOW.md) — Workflow D1
+- [03a-DATA-DIAGNOSTICS.md](03a-DATA-DIAGNOSTICS.md) — Пустой рейтинг/судьи на проде
+- [03-DATA.md](03-DATA.md) — Runtime данные
+- [13-DATABASE-WORKFLOW.md](13-DATABASE-WORKFLOW.md) — Workflow D1 (legacy)
 - [14-PARSING-RULES.md](14-PARSING-RULES.md) — Правила парсинга
 - [08-TESTING.md](08-TESTING.md) — Тестирование

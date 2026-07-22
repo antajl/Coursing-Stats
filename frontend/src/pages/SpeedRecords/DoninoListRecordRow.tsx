@@ -21,6 +21,8 @@ interface DoninoListRecordRowProps {
   timeSeconds?: number
   screenshotUrl?: string
   trackType?: string | null
+  /** Flat row inside DoninoColumnShell (default true — only used there). */
+  embedded?: boolean
 }
 
 function formatTime(value: number): string {
@@ -62,10 +64,12 @@ export default function DoninoListRecordRow({
   timeSeconds,
   screenshotUrl,
   trackType,
+  embedded = true,
 }: DoninoListRecordRowProps) {
   const historyItems = parseRecordHistory(history)
   const showUpd = historyItems.length > 0 || status === 'improved'
   const showNew = status === 'new'
+  const rowClass = embedded ? 'donino-list-row donino-list-row--embedded' : 'donino-list-row'
 
   const hasSparkline =
     mode === 'speed'
@@ -133,11 +137,11 @@ export default function DoninoListRecordRow({
   )
 
   if (!screenshotUrl) {
-    return <div className="donino-list-row">{profileLink}</div>
+    return <div className={rowClass}>{profileLink}</div>
   }
 
   return (
-    <div className="donino-list-row donino-list-row--with-screen">
+    <div className={`${rowClass} donino-list-row--with-screen`}>
       {profileLink}
       <a
         href={screenshotUrl}

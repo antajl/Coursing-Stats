@@ -13,8 +13,8 @@
 | # | Файл | Зачем |
 |---|------|-------|
 | 1 | **[00-AI-GUIDE.md](00-AI-GUIDE.md)** | Правила, запреты, `.devin/` или `.cursor/` |
-| 2 | **[03-DATA.md](03-DATA.md)** | Где лежат данные, workflow, диагностика |
-| 3 | **[02-ARCHITECTURE.md](02-ARCHITECTURE.md)** | Компоненты, деплой, стек |
+| 2 | **[03-DATA.md](03-DATA.md)** | Где лежат данные, workflow |
+| 3 | **[02-ARCHITECTURE.md](02-ARCHITECTURE.md)** | Компоненты, стек (high-level) |
 | 4 | *по задаче* | см. таблицу ниже |
 
 **Не читай всё подряд** — открой только нужный раздел.
@@ -28,8 +28,13 @@
 | Тип | Канон | В остальных файлах |
 |-----|-------|---------------------|
 | Данные, indexes, enrich | **03-DATA.md** | ссылка |
+| Диагностика пустого рейтинга | **03a-DATA-DIAGNOSTICS.md** | ссылка |
 | Деплой, чеклисты | **20-OPERATIONS.md** | ссылка |
 | UI, маршруты | **04-FRONTEND.md** | ссылка |
+| SEO / sitemap | **07-SEO.md** | ссылка |
+| Донино модель/UI | **09-SPEED-RECORDS.md** | ссылка |
+| Донино пайплайн | **09a-DONINO-PIPELINE.md** | ссылка |
+| Выставки CDN/парсинг | **SHOWS.md** | кратко в 03-DATA |
 | Симптом → fix | **16-TROUBLESHOOTING.md** | кратко + ссылка на канон |
 
 ---
@@ -40,34 +45,35 @@
 | Задача | Документ |
 |--------|----------|
 | Запуск, npm | [01-GETTING-STARTED.md](01-GETTING-STARTED.md), [20-OPERATIONS.md](20-OPERATIONS.md) |
-| Backend scripts, CI, деплой | [04-DEVELOPMENT.md](04-DEVELOPMENT.md) |
+| Backend scripts, локальная разработка | [04-DEVELOPMENT.md](04-DEVELOPMENT.md) |
 | Фронтенд, компоненты, маршруты | **[04-FRONTEND.md](04-FRONTEND.md)** |
 | Архитектура, стек | [02-ARCHITECTURE.md](02-ARCHITECTURE.md) |
 | Данные, админка, `data/v1/` | **[03-DATA.md](03-DATA.md)** |
 | Breed Archive / `pedigree_url` | [03-DATA.md](03-DATA.md) → «Breed Archive» |
-| Пустой рейтинг/судьи на проде | [20-OPERATIONS.md](20-OPERATIONS.md), [03-DATA.md](03-DATA.md) → «Диагностика» |
+| Пустой рейтинг/судьи на проде | [03a-DATA-DIAGNOSTICS.md](03a-DATA-DIAGNOSTICS.md), [20-OPERATIONS.md](20-OPERATIONS.md) |
 | Белый экран / MIME JS после деплоя | [16-TROUBLESHOOTING.md](16-TROUBLESHOOTING.md), [20-OPERATIONS.md](20-OPERATIONS.md) → «Кэш фронта» |
-| Донино локально ≠ прод | [16-TROUBLESHOOTING.md](16-TROUBLESHOOTING.md), [09-SPEED-RECORDS.md](09-SPEED-RECORDS.md) → «Локальное обновление» |
-| Выставки: лимит 25 MB / медленный календарь | [03-DATA.md](03-DATA.md) → «Выставки», [SHOWS.md](SHOWS.md) |
+| Донино локально ≠ прод | [16-TROUBLESHOOTING.md](16-TROUBLESHOOTING.md), [09a-DONINO-PIPELINE.md](09a-DONINO-PIPELINE.md) |
+| Выставки: лимит 25 MB / шарды | **[SHOWS.md](SHOWS.md)**, кратко [03-DATA.md](03-DATA.md) → «Выставки» |
 | Локальный API (админка) | [05-API-REFERENCE.md](05-API-REFERENCE.md) |
 | UI, цвета, тёмная тема | [06-DESIGN-SYSTEM.md](06-DESIGN-SYSTEM.md) |
 | Фильтры рейтинга | [03-DATA.md](03-DATA.md) → «Породы в UI», [18-CODE-PATTERNS.md](18-CODE-PATTERNS.md) |
 | Индекс CS («по очкам») | [03-DATA.md](03-DATA.md) → «top-score», [18-CODE-PATTERNS.md](18-CODE-PATTERNS.md), `/guide?tab=rating` |
-| SEO, sitemap | [07-SEO.md](07-SEO.md) |
+| SEO, sitemap, Метрика | **[07-SEO.md](07-SEO.md)** |
 | Тесты | [08-TESTING.md](08-TESTING.md) |
-| Донино, рекорды | [09-SPEED-RECORDS.md](09-SPEED-RECORDS.md) |
+| Донино: модель и UI | [09-SPEED-RECORDS.md](09-SPEED-RECORDS.md) |
+| Донино: Sheets → CDN / CI | [09a-DONINO-PIPELINE.md](09a-DONINO-PIPELINE.md) |
 | Справочник `/guide` (РКФ) | [10-GUIDE.md](10-GUIDE.md) — соревнования + выставки |
 
 ### Техническое (12–18)
 | Задача | Документ |
 |--------|----------|
-| Схема таблиц (legacy D1 / SQLite) | [12-DATABASE-SCHEMA.md](12-DATABASE-SCHEMA.md) |
-| Legacy D1 workflow | [13-DATABASE-WORKFLOW.md](13-DATABASE-WORKFLOW.md) |
+| Схема таблиц (**LEGACY** D1 / SQLite, только импорт) | [12-DATABASE-SCHEMA.md](12-DATABASE-SCHEMA.md) |
+| **LEGACY** D1 workflow (только импорт) | [13-DATABASE-WORKFLOW.md](13-DATABASE-WORKFLOW.md) |
 | Парсеры (правила) | [14-PARSING-RULES.md](14-PARSING-RULES.md) |
 | Парсеры (детали) | [15-PARSING-IMPLEMENTATION.md](15-PARSING-IMPLEMENTATION.md) |
 | Решение проблем | [16-TROUBLESHOOTING.md](16-TROUBLESHOOTING.md) |
 | Админка workflow | [17-ADMIN-WORKFLOW.md](17-ADMIN-WORKFLOW.md) |
-| Паттерны кода | [18-CODE-PATTERNS.md](18-CODE-PATTERNS.md) |
+| Паттерны кода / React pitfalls | [18-CODE-PATTERNS.md](18-CODE-PATTERNS.md) |
 
 ---
 

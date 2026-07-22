@@ -1,4 +1,5 @@
 import { useMemo } from 'react'
+import ProcoursingAttribution from '../../components/ProcoursingAttribution'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarFiltersDropdown from '../../components/toolbar/ToolbarFiltersDropdown'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
@@ -117,6 +118,7 @@ export default function TopDogsFilters({
     <div className="mb-4" ref={dropdownRef}>
       <PageToolbar
         bare
+        trailing={<ProcoursingAttribution />}
         activeFilterChips={activeFilterChips}
         onClearAllFilters={hasActiveFilters ? onResetFilters : undefined}
         filters={

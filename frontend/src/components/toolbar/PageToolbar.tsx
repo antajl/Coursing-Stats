@@ -5,6 +5,8 @@ import ToolbarActiveFilters, { type ActiveFilterChip } from './ToolbarActiveFilt
 interface PageToolbarProps {
   filters: ReactNode
   exportAction?: ReactNode
+  /** Справа в первой строке (источник данных и т.п.) */
+  trailing?: ReactNode
   activeFilterChips?: ActiveFilterChip[]
   onClearAllFilters?: () => void
   bottomLeft?: ReactNode
@@ -15,6 +17,7 @@ interface PageToolbarProps {
 export default function PageToolbar({
   filters,
   exportAction,
+  trailing,
   activeFilterChips = [],
   onClearAllFilters,
   bottomLeft,
@@ -22,12 +25,18 @@ export default function PageToolbar({
   bare = false,
 }: PageToolbarProps) {
   const showBottom = Boolean(bottomLeft || bottomRight)
+  const showEnd = Boolean(exportAction || trailing)
 
   return (
     <div className={bare ? 'space-y-2.5' : `${TOOLBAR_PANEL} space-y-2.5`}>
       <div className="flex flex-wrap items-center justify-between gap-2">
         <div className="flex min-w-0 flex-1 flex-wrap items-center gap-2">{filters}</div>
-        {exportAction && <div className="flex shrink-0 items-center gap-2">{exportAction}</div>}
+        {showEnd && (
+          <div className="flex shrink-0 items-center gap-2">
+            {exportAction}
+            {trailing}
+          </div>
+        )}
       </div>
 
       <ToolbarActiveFilters chips={activeFilterChips} onClearAll={onClearAllFilters} />

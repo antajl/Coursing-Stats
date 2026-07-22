@@ -20,7 +20,6 @@ type NavMenuDropdownProps = {
   defaultTo: string
   title?: string
   isSectionActive: boolean
-  menuHint: string
   items: NavMenuItem[]
   chevronLabel: string
 }
@@ -32,7 +31,6 @@ export function NavMenuDropdown({
   defaultTo,
   title,
   isSectionActive,
-  menuHint,
   items,
   chevronLabel,
 }: NavMenuDropdownProps) {
@@ -138,9 +136,6 @@ export function NavMenuDropdown({
       {open && (
         <div className="absolute left-1/2 top-full z-[100] w-56 -translate-x-1/2 pt-2">
           <div className="nav-dropdown-panel overflow-hidden rounded-xl border-2 border-old-money-200 bg-white shadow-xl dark:border-charcoal-600 dark:bg-charcoal-800">
-            <p className="border-b border-old-money-100 px-4 py-2.5 text-[10px] font-semibold uppercase tracking-wide text-charcoal-500 dark:border-charcoal-600 dark:text-charcoal-400">
-              {menuHint}
-            </p>
             <ul className="py-1">
               {items.map((item) => {
                 const active = item.isActive?.(location.pathname, location.search) ?? false

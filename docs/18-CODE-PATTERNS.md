@@ -12,9 +12,19 @@
 Фронтенд читает данные из `data/v1/` через единый слой абстракции. Это позволяет легко переключаться между dev (Vite plugin) и prod (CDN).
 
 ### Реализация
-**Файл:** `frontend/src/lib/staticData.ts`
+**Импорт:** `from '../lib/staticData'` (barrel → `frontend/src/lib/staticData/`).
 
-**Функции:**
+| Модуль | Ответственность |
+|--------|-----------------|
+| `core.ts` | `fetchJson`, кэш, `ApiResult`, пагинация, `judgeDetailKey` |
+| `competitions.ts` | manifest/breeds/years, календарь, событие + results |
+| `rankings.ts` | top-placement / top-score / top-speed |
+| `donino.ts` | speed_records, coursing_records, профиль Донино |
+| `judges.ts` | summary + detail (и фильтрованный raw) |
+| `dogs.ts` | dog-profiles |
+| `shows.ts` | календарь/рейтинг/судьи выставок |
+
+**Функции (публичный API тот же):**
 - `getEvents()` — Все события с фильтрацией/сортировкой
 - `getEvent(id)` — Одно событие по ID
 - `getTopPlacement(year, filters)` — Рейтинг по местам
@@ -473,8 +483,57 @@ try {
 
 ---
 
+## React UI pitfalls
+
+Перенесено из `04-DEVELOPMENT.md` (канон здесь).
+
+### useEffect ↔ URL: без бесконечных циклов
+
+Перед `setSearchParams` проверяйте, что значения реально изменились:
+
+```javascript
+// ❌ ПЛОХО
+useEffect(() => {
+  const params = new URLSearchParams(searchParams)
+  if (filterBreed) params.set('breed', filterBreed)
+  setSearchParams(params)
+}, [filterBreed, setSearchParams, searchParams])
+
+// ✅ ХОРОШО
+useEffect(() => {
+  const params = new URLSearchParams(searchParams)
+  const needsUpdate = filterBreed !== params.get('breed')
+  if (!needsUpdate) return
+  const newParams = new URLSearchParams()
+  if (filterBreed) newParams.set('breed', filterBreed)
+  setSearchParams(newParams)
+}, [filterBreed, setSearchParams, searchParams])
+```
+
+### Skeleton только при первой загрузке
+
+```javascript
+const [isInitialLoad, setIsInitialLoad] = useState(true)
+const { data, isLoading } = useApi(params)
+
+useEffect(() => {
+  if (!isLoading && data?.length > 0) setIsInitialLoad(false)
+}, [isLoading, data?.length])
+
+if (isInitialLoad && isLoading) {
+  return <SkeletonLoader variant="card" count={4} />
+}
+```
+
+### Dark mode
+
+Новые компоненты — сразу с `dark:` вариантами (`bg-white dark:bg-charcoal-800`, текст, borders, hover). Токены: [`06-DESIGN-SYSTEM.md`](06-DESIGN-SYSTEM.md).
+
+---
+
 ## См. также
 
 - [02-ARCHITECTURE.md](02-ARCHITECTURE.md) — Архитектура проекта
-- [04-DEVELOPMENT.md](04-DEVELOPMENT.md) — Разработка
-- [15-PARSING-IMPLEMENTATION.md](15-PARSING-IMPLEMENTATION.md) — Реализация парсеров
+- [04-DEVELOPMENT.md](04-DEVELOPMENT.md) — npm, backend scripts
+- [04-FRONTEND.md](04-FRONTEND.md) — UI и маршруты
+- [06-DESIGN-SYSTEM.md](06-DESIGN-SYSTEM.md) — тема и токены

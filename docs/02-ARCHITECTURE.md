@@ -160,7 +160,7 @@ POST /api/admin/recreate-views
 
 **UI:** кастомные компоненты в `frontend/src/components/ui/` (Button, Card, Badge) — **не shadcn/ui**. Тема: светлая по умолчанию, class-based dark mode (`ThemeToggle` → `localStorage.theme`).
 
-**Навигация для ИИ:** `04-DEVELOPMENT.md`
+**Навигация для ИИ:** [`04-FRONTEND.md`](04-FRONTEND.md)
 
 **Components:**
 - `frontend/src/components/Nav.tsx` — шапка `.nav-glass`, мобильное меню
@@ -179,140 +179,12 @@ POST /api/admin/recreate-views
 
 ## Database Schema
 
-### events
+Полные таблицы (`events`, `dogs`, `results`, `speed_records`, `coursing_records`) и структура `raw_scores_json` — **[`12-DATABASE-SCHEMA.md`](12-DATABASE-SCHEMA.md)** (LEGACY, только для импорта/парсинга).
 
-| Column | Type | Description |
-|--------|------|-------------|
-| id | INTEGER PK | |
-| year | INTEGER | Год события |
-| date_start | TEXT | Дата начала (ISO 'YYYY-MM-DD') |
-| date_end | TEXT | Дата окончания (для многодневных) |
-| rank_label | TEXT | Ранг ('ЧРКФ', 'CACL', 'РКФ' и т.п.) |
-| event_type | TEXT | 'coursing' \| 'bzmp' \| 'racing' |
-| title | TEXT | Название состязания |
-| host_club | TEXT | Принимающая организация |
-| region | TEXT | Регион |
-| location | TEXT | Место проведения |
-| catalog_url | TEXT | Ссылка на каталог PDF |
-| results_url | TEXT UNIQUE | Ссылка на результаты (естественный ключ) |
-| confirmed | INTEGER | Флаг подтверждения ('+') |
-| scraped_at | TEXT | Время скрапинга |
-
-### dogs
-
-| Column | Type | Description |
-|--------|------|-------------|
-| id | INTEGER PK | |
-| name_lat | TEXT | Каноническое имя латиницей |
-| name_ru | TEXT | Имя на русском |
-| breed | TEXT | Порода |
-| sex | TEXT | 'M' \| 'F' |
-| pedigree_no | TEXT | Номер родословной |
-| microchip | TEXT | Микрошильд |
-| owner | TEXT | Владелец |
-| pedigree_url | TEXT | Ссылка на внешний архив родословных |
-| merged_into_dog_id | INTEGER FK | Для ручной склейки дублей |
-| created_at | TEXT | Время создания |
-
-**UNIQUE:** `(name_lat, breed)`
-
-### results
-
-| Column | Type | Description |
-|--------|------|-------------|
-| id | INTEGER PK | |
-| event_id | INTEGER FK | Ссылка на events |
-| dog_id | INTEGER FK | Ссылка на dogs |
-| breed_class | TEXT | Заголовок группы ('Афганская - Стандартная - Сука') |
-| catalog_no | INTEGER | Каталожный номер |
-| placement | INTEGER | Место (NULL если не финишировал) |
-| total_score | REAL | Нормализованный итоговый балл (для coursing/bzmp) |
-| qualification | TEXT | 'CACL, RegCACL' и т.п. |
-| status | TEXT | 'finished' \| 'disqualified' \| 'withdrawn' \| 'dns' |
-| raw_scores_json | TEXT | JSON с детальными данными (баллы или скорость) |
-| raw_text | TEXT | Исходная строка для отладки |
-
-**UNIQUE:** `(event_id, dog_id, breed_class)`
-
-### speed_records
-
-| Column | Type | Description |
-|--------|------|-------------|
-| id | INTEGER PK | |
-| breed | TEXT | Порода |
-| sex | TEXT | 'С' (сука) или 'К' (кабель) |
-| name | TEXT | Кличка |
-| speed_km_h | REAL | Скорость в км/ч |
-| date | TEXT | Дата в формате DD.MM.YYYY |
-| screenshot_url | TEXT | Ссылка на скриншот |
-| history | TEXT | JSON с предыдущими результатами |
-| status | TEXT | `new`, `improved`, `normal`, `old` (из цвета клички на листе; см. `speed-sheet-status.ts`) |
-| updated_at | TEXT | Время последнего обновления |
-
-**history структура:**
-```json
-[
-  {
-    "speed_km_h": 58.5,
-    "date": "15.03.2025"
-  }
-]
-```
-
-### coursing_records
-
-Зачёты **бегов борзых 350 м** (отдельный Google Sheet, не путать с `speed_records`).
-
-| Column | Type | Description |
-|--------|------|-------------|
-| id | INTEGER PK | |
-| breed | TEXT | Порода |
-| name | TEXT | Кличка |
-| time_seconds | REAL | Время на 350 м (сек) |
-| date | TEXT | Дата замера |
-| track_length | INTEGER | 350 |
-| history | TEXT | JSON с предыдущими результатами |
-| dog_id | INTEGER FK | Связь с `dogs` (опционально) |
-
-**raw_scores_json структура:**
-
-Для Coursing/БЗМП:
-```json
-{
-  "heats": [
-    {
-      "heat_number": 1,
-      "bib_number": 30,
-      "bib_color": "red",
-      "judges": [
-        {
-          "judge_number": 1,
-          "scores": [15, 16, 16, 15, 15],
-          "sum": 77
-        }
-      ],
-      "total": 156
-    }
-  ],
-  "grand_total": 318
-}
-```
-
-Для Racing:
-```json
-{
-  "heat1": {
-    "num": 1,
-    "bib": "red",
-    "time": 21.88,
-    "speed": 16.45
-  },
-  "heat2": { ... },
-  "heat3": { ... },
-  "distance": 480
-}
-```
-Скорость в м/с, конвертируется в км/ч в API (×3.6).
+Кратко для runtime-мышления:
+- Runtime сайта — **`data/v1/`**, не D1
+- `speed_records` (км/ч) ≠ `coursing_records` (350 м, сек) — см. [`09-SPEED-RECORDS.md`](09-SPEED-RECORDS.md)
+- Views топов: `v_top_by_placement`, `v_top_by_score` (+ `rating_score` / индекс CS в CDN)
 
 ## Tools and Libraries
 
@@ -341,18 +213,11 @@ POST /api/admin/recreate-views
 
 ## Deployment State
 
-**GitHub:** https://github.com/antajl/Coursing-Stats
+Кратко: Pages `coursingstats` ← push `main` → CI `build-all-data` → deploy. Worker **не** в CI. D1 — только импорт.
 
-**Cloudflare Pages:** https://coursing-stats.ru (проект `coursingstats`)
-- Push в `main` → GitHub Actions → `build-all-data` → `pages deploy`
-- Статика: React SPA + `data/v1/*.json` + `sitemap.xml`
+**Полный runbook:** [`20-OPERATIONS.md`](20-OPERATIONS.md). Кэш/SPA: [`16-TROUBLESHOOTING.md`](16-TROUBLESHOOTING.md).
 
-**Cloudflare Worker:** `coursingstatsworker` — **не деплоится в CI** с 2026-07-07. Старый URL `api.coursing-stats.ru` может ещё отвечать, публичный сайт его не вызывает.
-
-**Cloudflare D1:** `pc-db` — только импорт/cron (runtime prod **не** читает D1)
-
-> Актуальные runtime-счётчики — в `data/v1/manifest.json` (`https://coursing-stats.ru/data/v1/manifest.json`).
-> D1 remote может отставать от `data/v1/`.
+Актуальные счётчики: `data/v1/manifest.json`.
 
 ---
 
@@ -377,22 +242,19 @@ POST /api/admin/recreate-views
 | **Данные (CDN)** | https://coursing-stats.ru/data/v1/ |
 | **API (legacy, не используется сайтом)** | https://api.coursing-stats.ru |
 
-DNS зона `coursing-stats.ru` — в **Cloudflare** (NS с reg.ru на Cloudflare).
+DNS зона `coursing-stats.ru` — в **Cloudflare**.
 
 ### Cloudflare
 
-| Ресурс | Имя в дашборде |
-|--------|----------------|
-| **Pages** (фронт) | `coursingstats` |
-| **Worker** (legacy, не в CI) | `coursingstatsworker` |
-| **D1** | `pc-db` (binding `DB`, id в `wrangler.toml`) |
+| Ресурс | Имя |
+|--------|-----|
+| **Pages** | `coursingstats` |
+| **Worker** (legacy) | `coursingstatsworker` |
+| **D1** | `pc-db` |
 
 ### Деплой
 
-- **GitHub Actions:** `.github/workflows/deploy-frontend.yml`
-  - `npm run build-all-data`
-  - `wrangler pages deploy ... --project-name=coursingstats`
-  - Worker deploy закомментирован (админка только локально)
+См. [`20-OPERATIONS.md`](20-OPERATIONS.md). Workflow: `.github/workflows/deploy-frontend.yml`.
 
 ### GitHub
 
@@ -405,225 +267,53 @@ DNS зона `coursing-stats.ru` — в **Cloudflare** (NS с reg.ru на Cloudf
 
 | Файл | Назначение |
 |------|------------|
-| `wrangler.toml` | `name = "coursingstatsworker"` |
-| `package.json` | `"name": "coursing-stats"` |
-| `frontend/src/lib/staticData.ts` | прод: fetch `/data/v1/` с CDN |
-| `frontend/src/services/api.ts` | обёртка над staticData; dev admin → `/api` |
-| `frontend/index.html` | `<title>Coursing Stats</title>` |
-| `frontend/src/AppRoutes.tsx` | `/competitions`, редиректы `/procoursing` и `/event/:id`; dev: `/admin/calendar`, `/admin/event/:id` |
-| `frontend/public/_headers` | CSP `frame-ancestors` для iframe на procoursing.ru |
+| `wrangler.toml` | Worker/D1 config (legacy runtime) |
+| `frontend/src/lib/staticData.ts` | Публичный fetch `/data/v1/` |
+| `backend/scripts/build-all-data.ts` | Indexes + package для Pages |
 
-### Маршруты фронтенда
-
-| Путь | Страница |
-|------|----------|
-| `/` | Главная |
-| `/competitions` | Рейтинг и судьи — раздел «Статистика» (бывш. `/procoursing`; календарь только локально) |
-| `/procoursing` | → редирект на `/competitions` |
-| `/event/:id` | → редирект на `/competitions?tab=ranking` (протоколы: `/admin/event/:id` в dev) |
-| `/admin/calendar` | Календарь и протоколы (**только `npm run dev`**) |
-| `/speed-records` | Рекорды Донино |
-| `/admin` | Админка |
+Карта маршрутов UI: [`04-FRONTEND.md`](04-FRONTEND.md).
 
 ### Легаси (не использовать для новых ссылок)
 
-| Было | Статус |
-|------|--------|
-| procoursing.antajl.ru | редирект на coursing-stats.ru (настроить в Cloudflare) |
-| procoursing-stats Worker | переименован в coursingstatsworker |
-| antajl/ProCoursing | переименован в Coursing-Stats |
-| ProCoursing Stats | Coursing Stats |
+- `api.coursing-stats.ru` — Worker не деплоится
+- Публичный календарь / `/event/:id` на проде — вариант A; админка только локально
 
 ### User-Agent скрапера
 
-`CoursingStatsBot/0.1` — в `backend/lib/fetch-win1251.ts`
+См. парсеры / `fetch-win1251.ts`.
 
 ---
 
 ## Структура репозитория
 
-Карта папок проекта: что где лежит и зачем.  
-**Runtime сайта** — только `data/v1/` (см. [03-DATA.md](03-DATA.md)). Остальное — код, вспомогательные данные, черновики.
-
-### Корень репозитория
-
-| Папка / файл | Назначение | В git |
-|--------------|------------|-------|
-| `backend/` | API (локальный dev), парсеры procoursing.ru, npm-скрипты данных | да |
-| `frontend/` | React SPA (Vite), публичный UI | да |
-| `data/` | Все JSON/SQL/HTML артефакты данных | частично (см. ниже) |
-| `docs/` | Документация для людей и ИИ | да |
-| `scripts/` | Windows `.bat`: запуск dev, push на GitHub | да |
-| `e2e/` | Playwright end-to-end тесты | да |
-| `.cursor/` | Правила и skills для Cursor (`rules/`, `skills/`) | да |
-| `.github/workflows/` | CI: тесты, `build-all-data`, деплой Pages | да |
-| `.wrangler/` | Локальный кэш Wrangler (D1 dev) | нет |
-| `node_modules/` | Зависимости npm | нет |
-| `playwright-report/`, `test-results/` | Отчёты тестов | нет |
-
-### `backend/` — сервер, парсеры, скрипты
+Карта папок (high-level). **Runtime сайта** — только `data/v1/` ([03-DATA.md](03-DATA.md)).
 
 | Путь | Назначение |
 |------|------------|
-| `src/local-dev-server.ts` | Dev API `:8787` — админка, чтение/запись `data/v1/` |
-| `src/worker.ts` | Legacy Cloudflare Worker (`npm run dev:d1`), **не деплоится в CI** |
-| `src/routes/` | Hono-роуты: `events.ts` → `/api/competitions`, admin, top, judges |
-| `src/lib/` | Общая логика API (рейтинги, судьи, кэш) |
-| `lib/fetch-win1251.ts` | Загрузка procoursing.ru с декодированием windows-1251 |
-| `lib/fetch-archive-win1251.ts` | То же из web.archive.org (сырой снимок `id_/`) |
-| `lib/local-data/` | Загрузка `data/v1/*.json` в sqlite для админки |
-| `lib/event-identity.ts` | Ключ дедупликации событий календаря |
-| `lib/rank-discipline-mapping.ts` | Маппинг и нормализация rank_code, discipline_code, event titles |
-| `lib/dog-lookup.ts` | Поиск собак по имени и породе |
-| `parsers/coursing/`, `bzmp/`, `racing/` | Модульные парсеры результатов (v2, целевые) |
-| `parsers/calendar/` | Парсер страниц `s_{YEAR}.html` календаря |
-| `parsers/shared/`, `unique/` | Общие куски парсеров |
-| `tests/` | Vitest; `fixtures/` — эталонный HTML для парсеров |
-| `schema.sql` | Схема D1 (импорт, не runtime прод) |
-| `migrations/` | SQL миграции для D1 |
+| `backend/` | Dev API, парсеры, scripts (`build-all-data`, speed, load, …) |
+| `frontend/` | React SPA; `lib/staticData.ts` → `/data/v1/` |
+| `data/v1/` | ★ источник правды (git → CDN) |
+| `data/archive/` | Снимки D1, HTML протоколов (не runtime) |
+| `docs/` | Документация ([README.md](README.md)) |
+| `scripts/` | `.bat`: start-servers, deploy-to-github, update-donino |
+| `e2e/` | Playwright |
+| `.cursor/` / `.devin/` | Rules + skills |
+| `.github/workflows/` | CI Pages, update-speed-records |
 
-#### `backend/scripts/` — группы скриптов
-
-| Путь | Назначение | Примеры |
-|-------|------------|---------|
-| `archive/` | Скрап календаря с procoursing и web.archive | `scrape-year-index.ts`, `backfill-*.ts` |
-| `web-archive/` | Парсинг календарей и результатов из web.archive | `parse-calendar-*.ts`, `add-missing-*.ts` |
-| `load/` | Загрузка в D1 (SQL / API) | `load-events.ts`, `load-results.ts` |
-| `export/` | D1 → файлы | `export-data-archive.ts` |
-| `import/` | Внешние источники → файлы | `download-archive-results.ts` |
-| `reparse/` | Перепарсинг протоколов в D1 | `reparse-by-year.ts` |
-| `migrate/` | Разовые миграции `data/v1` | `dedupe-calendar-v1.ts`, `remove-archive-extra-ids.ts` |
-| `sync/` | Синхронизация sqlite ↔ v1 | `sync-sqlite-to-v1.ts` |
-| `speed/` | Донино (Google Sheets → D1 / JSON) | `fetch-speed-records.ts` |
-| `test/` | Ручные проверки парсеров и API | см. `test/README.md` |
-| `update/` | Обновление данных | `update-current-year.ts` |
-| корень | Оркестрация и утилиты | `build-all-data.ts`, `build-derived-indexes.ts`, `rebuild-calendar-index.ts`, `build-events-by-id-index.ts`, `fix-event-*.ts`, `free-dev-port.ts`, `generate-favicon.ts`, `build-data-snapshot.ts` |
-
-### `frontend/` — клиент
-
-| Путь | Назначение |
-|------|------------|
-| `src/lib/staticData.ts` | **Публичный сайт:** `fetch('/data/v1/...')` |
-| `src/lib/` | Утилиты (breedMapping, judgeStats, qualificationTitles, recordDates, etc.) |
-| `src/pages/` | Страницы: Home, Events, DogProfile, SpeedRecords, Judges, Admin, Guide, TopDogs, Competitions, NotFound |
-| `src/pages/Events/EventResults/` | Компоненты страницы результатов (EventHeader, ResultCard, ResultsSection, details, utils) |
-| `src/pages/SpeedRecords/stats/` | Утилиты и панели статистики Донино (`doninoStatsUtils`, `DoninoStatsSummary`, …) |
-| `src/components/` | UI-компоненты (toolbar, cards, badges, etc.) |
-| `src/hooks/` | React hooks (useApi, useDarkMode, useGsap*, useInfiniteScroll) |
-| `src/services/` | API сервисы (api.ts) |
-| `src/schemas/` | TypeScript схемы для валидации |
-| `src/data/` | Mock данные для dev |
-| `vite.config.ts` | Dev: отдаёт `../data/v1` по `/data/v1/*` |
-| `public/` | Статика (favicon, assets); `public/data/v1/` — **копия для prod**, генерируется CI |
-| `tailwind.config.js` | Tailwind CSS конфигурация |
-| `postcss.config.js` | PostCSS конфигурация |
-| `eslint.config.js` | ESLint конфигурация |
-
-### `WebArchiveResults/` — web.archive.org данные
-
-| Путь | Назначение | В git |
-|------|------------|-------|
-| `calendars/` | HTML календари с web.archive.org (2015-2024) | да |
-| `pages/{year}/` | HTML протоколы соревнований с web.archive.org (2022-2024) | да |
-| `result-links.json` | Индекс ссылок на результаты | да |
-
-Используется для парсинга исторических данных. Источник правды для парсинга, но не для runtime сайта.
-
-### `data/` — данные
-
-#### ★ `data/v1/` — источник правды для сайта
-
-Подробно: [03-DATA.md](03-DATA.md), кратко: [data/v1/README.md](../data/v1/README.md).
-
-В git. После правок competitions/dogs — `npm run build-all-data`.
-
-#### `data/archive/` — долгоживущий архив
-
-Подробно: [03-DATA.md](03-DATA.md) → архив, [data/archive/README.md](../data/archive/README.md).
-
-| Путь | Назначение | В git |
-|------|------------|-------|
-| `snapshots/` | Снимки D1 (`npm run export-archive`): SQL + JSON по таблицам | нет |
-| `results/` | HTML протоколов соревнований с web.archive.org (2023–2024) | нет* |
-| `results/manifest.json` | Индекс: URL, `event_id`, статус скачивания | нет* |
-| `_schema/v1/` | Черновик **будущей** файловой схемы (не текущий v1) | да |
-
-\*Папку можно коммитить по желанию; по умолчанию не отслеживается — пересобирается `npm run download-archive-results`.
-
-**Workflow архивных результатов:**
-1. `npm run download-archive-results` → `data/archive/results/{year}/*.html`
-2. (позже) парсинг → `data/v1/competitions/`
-
-#### `data/tmp/` — временные рабочие файлы
-
-| Путь | Назначение | В git |
-|------|------------|-------|
-| `tmp/archive/s_{YEAR}.html` | Снимки календаря procoursing с web.archive.org (для сверки, дедупа) | нет |
-
-Не источник правды. Можно удалить и скачать заново скриптами сравнения календаря.
-
-#### `data/backup/` — отчёты разовых операций
-
-| Путь | Назначение | В git |
-|------|------------|-------|
-| `{дата}-calendar-dedupe/` | Отчёт `dedupe-calendar-v1` (что удалено, id remap) | нет |
-| `{дата}-archive-extra-ids/` | Отчёт удаления лишних id календаря | нет |
-| `{дата}-archive-results-import/` | (будущее) отчёт импорта протоколов | нет |
-
-Только JSON-отчёты для аудита. В git остаётся только `data/backup/README.md`.
-
-#### `data/backups/` — ручные бэкапы D1
-
-SQL-дампы `wrangler d1 export` перед опасными операциями. См. [13-DATABASE-WORKFLOW.md](13-DATABASE-WORKFLOW.md). **Не в git.**
-
-#### `data/imports/` — пакетная загрузка в D1
-
-| Файл | Назначение |
-|------|------------|
-| `load-events.sql` | INSERT событий из скрапа |
-| `load-results.sql` | INSERT результатов |
-| `speed-records.sql`, `coursing-records.sql` | Донино |
-
-Генерируются скриптами `load/`; применяются через `wrangler d1 execute`.
-
-#### `data/migrations/` — миграции схемы D1
-
-Исторические `ALTER TABLE`, индексы, нормализация. Применяются вручную на local/remote D1. Не связаны с `data/v1/` напрямую.
-
-#### Устаревшие / генерируемые пути (не использовать как v1)
-
-| Путь | Статус |
-|------|--------|
-| `data/events/` | Промежуточный JSON скрапа календаря → D1. В `.gitignore` |
-| `data/competitions/` | Старый экспорт (до `data/v1/competitions/`). В `.gitignore` |
-| `data/exports/` | SQL для sync local→remote. В `.gitignore` |
-| `data/updates/` | Пакеты SQL reparse. В `.gitignore` |
-| `data/temp/` | В `.gitignore` |
-
-### `docs/`
-
-| Путь | Назначение |
-|------|------------|
-| `README.md` | Оглавление |
-| `00-AI-GUIDE.md` | Инструкция для ИИ-агентов |
-| `03-DATA.md` | Канон по `data/v1/` |
-| `archive/` | Старые планы — **не источник правды** |
+Детали скриптов: [`04-DEVELOPMENT.md`](04-DEVELOPMENT.md). Дерево `data/`: [`03-DATA.md`](03-DATA.md).
 
 ### Быстрая схема потоков данных
 
 ```
-procoursing.ru / web.archive.org
+procoursing.ru / Sheets / web.archive
         │
-        ├─ parsers + scripts ──► D1 (импорт)
+        ├─ parsers + scripts ──► (D1 импорт, опционально)
         │                              │
-        │                              ▼
-        ├─ download-archive-results ──► data/archive/results/
-        │                              │
-        └──────────────────────────────┼──► data/v1/  ◄── git, CDN
-                                       │         │
-                                       │         ├─ build-derived-indexes → indexes/
-                                       │         └─ build-all-data → frontend/public/
-                                       ▼
-                              data/backup/ (отчёты)
-                              data/archive/snapshots/ (D1 dump)
+        └──────────────────────────────▼
+                                 data/v1/  ◄── git
+                                       │
+                                       ├─ build-derived-indexes → indexes/
+                                       └─ CI build-all-data → Pages CDN
 ```
+
+См. также: [`03-DATA.md`](03-DATA.md), [`20-OPERATIONS.md`](20-OPERATIONS.md), [`12-DATABASE-SCHEMA.md`](12-DATABASE-SCHEMA.md) (legacy).

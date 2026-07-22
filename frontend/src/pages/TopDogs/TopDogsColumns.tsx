@@ -1,7 +1,6 @@
-import type { ReactNode } from 'react'
 import DogCard, { DOG_CARD_HEIGHT_CLASS } from '../../components/DogCard'
 import EmptyState from '../../components/EmptyState'
-import DoninoColumnPlaque from '../SpeedRecords/DoninoColumnPlaque'
+import DoninoColumnPlaque, { DoninoColumnShell } from '../SpeedRecords/DoninoColumnPlaque'
 import CoursingRatingHint from './CoursingRatingHint'
 import { useInfiniteScroll } from '../../hooks/useInfiniteScroll'
 
@@ -77,7 +76,7 @@ function DogCardPlaceholder({ slotKey }: { slotKey: string }) {
   return (
     <div
       key={slotKey}
-      className={`${DOG_CARD_HEIGHT_CLASS} rounded-xl border border-transparent`}
+      className={`${DOG_CARD_HEIGHT_CLASS} bg-transparent`}
       aria-hidden
     />
   )
@@ -113,7 +112,6 @@ export default function TopDogsColumns({
 
   const visibleCoursing = coursingData.slice(0, visibleCount)
   const visibleSpeed = filteredSpeed.slice(0, visibleCount)
-  const rowCount = Math.max(visibleCoursing.length, visibleSpeed.length)
 
   const emptyBoth = coursingData.length === 0 && filteredSpeed.length === 0
 
@@ -128,80 +126,69 @@ export default function TopDogsColumns({
 
   const coursingPlaque = (
     <DoninoColumnPlaque
+      asHeader
       title="Курсинг/БЗМП"
       count={coursingData.length}
       action={<CoursingRankingToggle value={coursingTab} onChange={onCoursingTabChange} />}
     />
   )
 
-  const racingPlaque = <DoninoColumnPlaque title="Рейсинг" count={filteredSpeed.length} />
+  const racingPlaque = <DoninoColumnPlaque asHeader title="Рейсинг" count={filteredSpeed.length} />
 
-  const renderCoursingCard = (dog: { dog_id: number } | undefined, slotKey: string) =>
+  const renderCoursingCard = (
+    dog: { dog_id: number; rank?: number } | undefined,
+    slotKey: string,
+  ) =>
     dog ? (
-      <DogCard key={dog.dog_id} dog={dog} type={coursingType} filterYear={filterYear} />
+      <DogCard
+        key={dog.dog_id}
+        dog={dog}
+        type={coursingType}
+        filterYear={filterYear}
+        rank={dog.rank}
+        variant="embedded"
+      />
     ) : (
       <DogCardPlaceholder slotKey={slotKey} />
     )
 
-  const renderSpeedCard = (dog: { dog_id: number } | undefined, slotKey: string) =>
+  const renderSpeedCard = (dog: { dog_id: number; rank?: number } | undefined, slotKey: string) =>
     dog ? (
-      <DogCard key={dog.dog_id} dog={dog} type="speed" filterYear={filterYear} />
+      <DogCard
+        key={dog.dog_id}
+        dog={dog}
+        type="speed"
+        filterYear={filterYear}
+        rank={dog.rank}
+        variant="embedded"
+      />
     ) : (
       <DogCardPlaceholder slotKey={slotKey} />
+    )
+
+  const coursingList =
+    visibleCoursing.length > 0 ? (
+      visibleCoursing.map((dog: { dog_id: number; rank?: number }) =>
+        renderCoursingCard(dog, `coursing-${dog.dog_id}`),
+      )
+    ) : (
+      <p className="py-6 text-center text-sm text-charcoal-500 dark:text-charcoal-400">Нет данных</p>
+    )
+
+  const speedList =
+    visibleSpeed.length > 0 ? (
+      visibleSpeed.map((dog: { dog_id: number; rank?: number }) =>
+        renderSpeedCard(dog, `speed-${dog.dog_id}`),
+      )
+    ) : (
+      <p className="py-6 text-center text-sm text-charcoal-500 dark:text-charcoal-400">Нет данных</p>
     )
 
   return (
     <div className="space-y-4">
-      {/* Мобила: две колонки друг под другом */}
-      <div className="space-y-6 lg:hidden">
-        <section className="min-w-0">
-          {coursingPlaque}
-          <div className="flex flex-col gap-2">
-            {visibleCoursing.length > 0 ? (
-              visibleCoursing.map((dog: { dog_id: number }) =>
-                renderCoursingCard(dog, `coursing-${dog.dog_id}`)
-              )
-            ) : (
-              <p className="py-6 text-center text-sm text-charcoal-500 dark:text-charcoal-400">Нет данных</p>
-            )}
-          </div>
-        </section>
-        <section className="min-w-0">
-          {racingPlaque}
-          <div className="flex flex-col gap-2">
-            {visibleSpeed.length > 0 ? (
-              visibleSpeed.map((dog: { dog_id: number }) => renderSpeedCard(dog, `speed-${dog.dog_id}`))
-            ) : (
-              <p className="py-6 text-center text-sm text-charcoal-500 dark:text-charcoal-400">Нет данных</p>
-            )}
-          </div>
-        </section>
-      </div>
-
-      {/* Десктоп: плашки и строки карточек в одной сетке — одинаковая высота строк */}
-      <div className="hidden lg:block">
-        <div className="mb-3 grid grid-cols-2 gap-8">
-          {coursingPlaque}
-          {racingPlaque}
-        </div>
-        <div className="flex flex-col gap-2">
-          {rowCount > 0 ? (
-            Array.from({ length: rowCount }, (_, index) => (
-              <div key={index} className="grid grid-cols-2 gap-8">
-                {renderCoursingCard(
-                  visibleCoursing[index] as { dog_id: number } | undefined,
-                  `coursing-row-${index}`
-                )}
-                {renderSpeedCard(
-                  visibleSpeed[index] as { dog_id: number } | undefined,
-                  `speed-row-${index}`
-                )}
-              </div>
-            ))
-          ) : (
-            <p className="py-6 text-center text-sm text-charcoal-500 dark:text-charcoal-400">Нет данных</p>
-          )}
-        </div>
+      <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-2 lg:gap-8">
+        <DoninoColumnShell plaque={coursingPlaque}>{coursingList}</DoninoColumnShell>
+        <DoninoColumnShell plaque={racingPlaque}>{speedList}</DoninoColumnShell>
       </div>
 
       {hasMore && (

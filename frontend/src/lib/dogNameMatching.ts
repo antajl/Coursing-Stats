@@ -1,7 +1,20 @@
 /**
- * Утилиты для сопоставления собак между shows и competitions
+ * Сопоставление собак shows ↔ competitions.
+ * ID из разных систем НЕ сравниваем — только кличка + порода (RU/EN).
  */
+export {
+  collectDogNameParts,
+  namesOverlap,
+  breedsEquivalent,
+  dogsLikelySame,
+  findUniqueMatch,
+  addBreedAliasPair,
+  breedKeys,
+  type DogIdentityFields,
+  type BreedAliasMap,
+} from '../../../backend/lib/dog-identity-match'
 
+/** @deprecated use collectDogNameParts / dogsLikelySame */
 export function normalizeDogName(name: string): string {
   return name
     .toUpperCase()
@@ -10,6 +23,7 @@ export function normalizeDogName(name: string): string {
     .trim()
 }
 
+/** @deprecated use breedsEquivalent */
 export function normalizeBreedName(breed: string): string {
   return breed
     .toUpperCase()
@@ -23,13 +37,15 @@ export interface ShowDog {
   name_lat: string
   name_ru: string
   breed: string
+  breed_en?: string
   breed_group?: string
   sex: string
   total_shows: number
   best_placement?: number
   best_award?: string | null
   rank_score?: number
-  titles: any
+  titles: unknown
+  competition_dog_id?: number | null
 }
 
 export interface CompetitionDog {
@@ -44,57 +60,36 @@ export interface DogForMatching {
   name_lat: string
   name_ru?: string
   breed: string
+  breed_en?: string
 }
 
-/**
- * Находит соответствующую собаку в competitions для собаки из shows
- */
+import { findUniqueMatch } from '../../../backend/lib/dog-identity-match'
+
 export function findMatchingCompetitionDog(
   showDog: ShowDog,
-  competitionDogs: CompetitionDog[]
+  competitionDogs: CompetitionDog[],
 ): CompetitionDog | null {
-  const normalizedShowName = normalizeDogName(showDog.name_lat)
-  const normalizedShowBreed = normalizeBreedName(showDog.breed)
-
-  // Сначала точное совпадение по кличке
-  const exactMatch = competitionDogs.find(
-    (dog) => normalizeDogName(dog.name_lat) === normalizedShowName
-  )
-
-  if (exactMatch) {
-    // Проверяем породу (если есть различия в названиях пород)
-    const normalizedCompBreed = normalizeBreedName(exactMatch.breed)
-    if (normalizedShowBreed === normalizedCompBreed) {
-      return exactMatch
-    }
-    // Если породы не совпадают, всё равно возвращаем - это может быть разное написание
-    return exactMatch
-  }
-
-  return null
+  return findUniqueMatch(showDog, competitionDogs)
 }
 
-/**
- * Находит соответствующую собаку в shows для собаки из competitions
- */
 export function findMatchingShowDog(
   competitionDog: DogForMatching,
-  showDogs: ShowDog[]
+  showDogs: ShowDog[],
 ): ShowDog | null {
-  const normalizedCompName = normalizeDogName(competitionDog.name_lat)
-  const normalizedCompBreed = normalizeBreedName(competitionDog.breed)
-
-  const exactMatch = showDogs.find(
-    (dog) => normalizeDogName(dog.name_lat) === normalizedCompName
-  )
-
-  if (exactMatch) {
-    const normalizedShowBreed = normalizeBreedName(exactMatch.breed)
-    if (normalizedCompBreed === normalizedShowBreed) {
-      return exactMatch
-    }
-    return exactMatch
+  // Prefer precomputed link — merge all shards for the same competition dog
+  const byLink = showDogs.filter((s) => s.competition_dog_id === Number(competitionDog.id))
+  if (byLink.length === 1) return byLink[0]
+  if (byLink.length > 1) {
+    const sorted = [...byLink].sort((a, b) => (b.total_shows || 0) - (a.total_shows || 0))
+    const primary = { ...sorted[0], titles: { ...(sorted[0].titles as object) } } as ShowDog
+    const history = sorted
+      .flatMap((s) => (s as ShowDog & { history?: unknown[] }).history ?? [])
+      .sort((a: { date?: string }, b: { date?: string }) =>
+        String(b.date || '').localeCompare(String(a.date || '')),
+      )
+    ;(primary as ShowDog & { history: unknown[] }).history = history
+    primary.total_shows = sorted.reduce((sum, s) => sum + (s.total_shows || 0), 0)
+    return primary
   }
-
-  return null
+  return findUniqueMatch(competitionDog, showDogs)
 }

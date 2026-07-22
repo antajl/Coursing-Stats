@@ -1,36 +1,9 @@
-import { Link, useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import { useState, useRef, useEffect, useCallback } from 'react'
-import ThemeToggle from './ThemeToggle'
 import { useDarkMode } from '../hooks/useDarkMode'
-import { NavMenuDropdown } from './NavMenuDropdown'
-import { Icons } from '../lib/icons'
-
-type OpenMenuId = 'competitions' | 'shows' | 'donino' | null
-
-function competitionTabActive(tab: string) {
-  return (pathname: string, search: string) => {
-    if (pathname !== '/competitions' && pathname !== '/procoursing') return false
-    const current = new URLSearchParams(search).get('tab') || 'ranking'
-    return current === tab
-  }
-}
-
-function showTabActive(tab: string) {
-  return (pathname: string, search: string) => {
-    if (pathname !== '/shows') return false
-    const current = new URLSearchParams(search).get('tab') || 'ranking'
-    return current === tab
-  }
-}
-
-function doninoViewActive(view: 'table' | 'stats') {
-  return (pathname: string, search: string) => {
-    if (pathname !== '/speed-records') return false
-    const current = new URLSearchParams(search).get('view')
-    if (view === 'table') return current !== 'stats'
-    return current === 'stats'
-  }
-}
+import { NavDesktop } from './nav/NavDesktop'
+import { NavMobile } from './nav/NavMobile'
+import type { OpenMenuId } from './nav/navLinks'
 
 export default function Nav() {
   const location = useLocation();
@@ -40,6 +13,7 @@ export default function Nav() {
   const [statisticsOpen, setStatisticsOpen] = useState(false);
   const [doninoOpen, setDoninoOpen] = useState(false);
   const [showsOpen, setShowsOpen] = useState(false);
+  const [guideOpen, setGuideOpen] = useState(false);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const isDark = useDarkMode();
   const isActive = (path: string) => location.pathname === path || (path === '/' && location.pathname === '/');
@@ -47,6 +21,7 @@ export default function Nav() {
     location.pathname === '/competitions' || location.pathname === '/procoursing';
   const isSpeedRecordsActive = location.pathname === '/speed-records';
   const isShowsActive = location.pathname === '/shows';
+  const isGuideActive = location.pathname === '/guide';
 
   const setMenuOpen = useCallback((id: Exclude<OpenMenuId, null>) => {
     return (open: boolean) => {
@@ -87,6 +62,10 @@ export default function Nav() {
     setShowsOpen(!showsOpen);
   };
 
+  const toggleGuide = () => {
+    setGuideOpen(!guideOpen);
+  };
+
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
@@ -104,6 +83,7 @@ export default function Nav() {
         setStatisticsOpen(false);
         setDoninoOpen(false);
         setShowsOpen(false);
+        setGuideOpen(false);
       }
     };
     document.addEventListener('keydown', handleEsc);
@@ -112,429 +92,40 @@ export default function Nav() {
 
   return (
     <nav className="nav-glass sticky top-0 z-50 relative border-b border-cream-300/20 dark:border-charcoal-700/30 shadow-[0_4px_7px_-2px_rgba(43,37,32,0.34)] dark:shadow-[0_4px_8px_-2px_rgba(0,0,0,0.72)]">
-      <div className="hidden md:flex relative h-16 w-full items-center justify-between pl-2 pr-2 sm:pl-3 sm:pr-3 lg:pl-4 lg:pr-4">
-        <Link to="/" className="relative z-10 flex shrink-0 items-center">
-          <img
-            src={isDark ? '/assets/logo-dark.svg' : '/assets/logo-light.svg'}
-            alt="Coursing Stats"
-            className="h-[52px] lg:h-[61px] opacity-80"
-            style={{ objectFit: 'contain' }}
-          />
-        </Link>
-
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-          <div className="flex items-center gap-0.5 lg:gap-1">
-            <Link
-              to="/"
-              className={`group relative shrink-0 px-2.5 py-2 text-xs font-semibold whitespace-nowrap transition-all duration-300 lg:px-5 lg:text-sm ${
-                isActive('/') ? 'text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200 hover:text-charcoal-900 dark:hover:text-charcoal-100'
-              }`}
-            >
-              <span className="relative z-10">Главная</span>
-              <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-camel-600 transition-transform duration-300 ${
-                isActive('/') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
-              }`}></span>
-            </Link>
-            <NavMenuDropdown
-              open={openMenu === 'competitions'}
-              onOpenChange={setMenuOpen('competitions')}
-              defaultTo="/competitions?tab=ranking"
-              title="Рейтинг собак и судьи: курсинг, БЗМП, бега борзых"
-              isSectionActive={isCompetitionsActive}
-              menuHint="курсинг · БЗМП · бега"
-              chevronLabel="Меню раздела Соревнования"
-              label={
-                <>
-                  <span className="lg:hidden">Соревн.</span>
-                  <span className="hidden lg:inline">Соревнования</span>
-                </>
-              }
-              items={[
-                {
-                  to: '/competitions?tab=ranking',
-                  label: 'Рейтинг',
-                  icon: Icons.medal,
-                  isActive: competitionTabActive('ranking'),
-                },
-                {
-                  to: '/competitions?tab=judges',
-                  label: 'Судьи',
-                  icon: Icons.club,
-                  isActive: competitionTabActive('judges'),
-                },
-              ]}
-            />
-            <NavMenuDropdown
-              open={openMenu === 'shows'}
-              onOpenChange={setMenuOpen('shows')}
-              defaultTo="/shows?tab=ranking"
-              title="Рейтинг собак и судьи на выставках"
-              isSectionActive={isShowsActive}
-              menuHint="выставки · шоу"
-              chevronLabel="Меню раздела Выставки"
-              label="Выставки"
-              items={[
-                {
-                  to: '/shows?tab=ranking',
-                  label: 'Рейтинг',
-                  icon: Icons.medal,
-                  isActive: showTabActive('ranking'),
-                },
-                {
-                  to: '/shows?tab=calendar',
-                  label: 'Календарь',
-                  icon: Icons.calendar,
-                  isActive: showTabActive('calendar'),
-                },
-                {
-                  to: '/shows?tab=champions',
-                  label: 'Чемпионы',
-                  icon: Icons.championship,
-                  isActive: showTabActive('champions'),
-                },
-                {
-                  to: '/shows?tab=judges',
-                  label: 'Судьи',
-                  icon: Icons.club,
-                  isActive: showTabActive('judges'),
-                },
-              ]}
-            />
-            <NavMenuDropdown
-              open={openMenu === 'donino'}
-              onOpenChange={setMenuOpen('donino')}
-              defaultTo="/speed-records?view=table"
-              title="Рекорды полигона Курсинг Донино"
-              isSectionActive={isSpeedRecordsActive}
-              menuHint="замер · бега 350 м"
-              chevronLabel="Меню раздела Курсинг Донино"
-              label={
-                <>
-                  <span className="lg:hidden">Донино</span>
-                  <span className="hidden lg:inline">Курсинг Донино</span>
-                </>
-              }
-              items={[
-                {
-                  to: '/speed-records?view=table',
-                  label: 'Записи',
-                  icon: Icons.speed,
-                  isActive: doninoViewActive('table'),
-                },
-                {
-                  to: '/speed-records?view=stats',
-                  label: 'Статистика',
-                  icon: Icons.trend,
-                  isActive: doninoViewActive('stats'),
-                },
-              ]}
-            />
-            <Link
-              to="/guide"
-              className={`group relative shrink-0 px-2.5 py-2 text-xs font-semibold whitespace-nowrap transition-all duration-300 lg:px-4 lg:text-sm ${
-                isActive('/guide') ? 'text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200 hover:text-charcoal-900 dark:hover:text-charcoal-100'
-              }`}
-            >
-              <span className="relative z-10">Справка</span>
-              <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-camel-600 transition-transform duration-300 ${
-                isActive('/guide') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
-              }`}></span>
-            </Link>
-          </div>
-        </div>
-
-        <div className="relative z-10 flex shrink-0 items-center gap-3">
-          <ThemeToggle />
-          <div
-            className="relative"
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-          >
-            <button
-              aria-expanded={sourcesOpen}
-              aria-label="Источники данных"
-              className="w-11 h-11 border-2 border-old-money-300 dark:border-charcoal-600 rounded-lg bg-old-money-50 dark:bg-charcoal-800 hover:bg-old-money-100 dark:hover:bg-charcoal-700 transition-colors flex items-center justify-center"
-              title="Источники данных"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-old-money-700 dark:text-camel-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
-              </svg>
-            </button>
-            {sourcesOpen && (
-              <div className="absolute right-0 mt-1 w-64 bg-white dark:bg-charcoal-800 rounded-xl shadow-xl border-2 border-old-money-200 dark:border-charcoal-600 overflow-hidden z-[100]">
-                <a
-                  href="http://procoursing.ru"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-3 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-700 transition-colors border-b border-old-money-100 dark:border-charcoal-600"
-                >
-                  Procoursing.ru
-                </a>
-                <a
-                  href="https://runningdog.ru/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-3 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-700 transition-colors border-b border-old-money-100 dark:border-charcoal-600"
-                >
-                  Курсинг Донино
-                </a>
-                <a
-                  href="https://docs.google.com/spreadsheets/d/1NTiY3HXZIkXE8xTeXZESgMKaZsEXunmcWhTfhhkoKyE/edit?gid=1787526009#gid=1787526009"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-3 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-700 transition-colors border-b border-old-money-100 dark:border-charcoal-600"
-                >
-                  Рекорды Донино (курсинг)
-                </a>
-                <a
-                  href="https://docs.google.com/spreadsheets/d/1hpdA8vlIfeECgpnPvuk5xfezPsdUh1EXULjeATAF9dw/edit?pli=1&gid=0#gid=0"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-3 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-700 transition-colors"
-                >
-                  Рекорды Донино (бега борзых)
-                </a>
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
-
-      <div className="md:hidden flex items-center justify-between h-12 pl-2 pr-2 gap-2">
-        <Link to="/">
-          <img src={isDark ? '/assets/logo-dark.svg' : '/assets/logo-light.svg'} alt="" className="h-10 opacity-80" style={{ objectFit: 'contain' }} />
-        </Link>
-        <div className="flex items-center gap-2">
-          <ThemeToggle />
-          <button
-            onClick={toggleMobileMenu}
-            aria-expanded={mobileMenuOpen}
-            aria-controls="mobile-menu"
-            aria-label="Навигационное меню"
-            className="w-11 h-11 border-2 border-old-money-300 dark:border-charcoal-600 rounded-lg bg-old-money-50 dark:bg-charcoal-800 hover:bg-old-money-100 dark:hover:bg-charcoal-700 transition-colors flex items-center justify-center"
-          >
-            <svg className="w-5 h-5 text-old-money-700 dark:text-camel-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {mobileMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      {mobileMenuOpen && (
-        <div
-          className="fixed inset-0 z-40 bg-black/40 md:hidden"
-          onClick={() => setMobileMenuOpen(false)}
-          aria-hidden
-        />
-      )}
-
-      {mobileMenuOpen && (
-        <div id="mobile-menu" className="md:hidden absolute top-12 left-0 right-0 z-50 bg-white dark:bg-charcoal-900 border-b border-old-money-200 dark:border-charcoal-700 shadow-lg">
-          <div className="px-4 py-3 space-y-2">
-            <Link
-              to="/"
-              onClick={() => setMobileMenuOpen(false)}
-              className={`block px-4 py-2 text-sm font-semibold transition-colors ${
-                isActive('/') ? 'text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200'
-              }`}
-            >
-              <span className="relative inline-block">
-                Главная
-                <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-camel-600 transition-transform duration-300 ${
-                  isActive('/') ? 'scale-x-100' : 'scale-x-0'
-                }`}></span>
-              </span>
-            </Link>
-            <div>
-              <button
-                onClick={toggleStatistics}
-                className={`w-full flex items-center justify-between px-4 py-2 text-sm font-semibold transition-colors ${
-                  isCompetitionsActive ? 'text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200'
-                }`}
-              >
-                <span className="relative inline-block">
-                  Соревнования
-                  <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-camel-600 transition-transform duration-300 ${
-                    isCompetitionsActive ? 'scale-x-100' : 'scale-x-0'
-                  }`}></span>
-                </span>
-                <svg className={`w-4 h-4 transition-transform ${statisticsOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              {statisticsOpen && (
-                <div className="mt-2 space-y-1 pl-4">
-                  <Link
-                    to="/competitions?tab=ranking"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block px-4 py-2 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800 rounded-lg transition-colors"
-                  >
-                    Рейтинг
-                  </Link>
-                  <Link
-                    to="/competitions?tab=judges"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block px-4 py-2 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800 rounded-lg transition-colors"
-                  >
-                    Судьи
-                  </Link>
-                </div>
-              )}
-            </div>
-            <div>
-              <button
-                onClick={toggleShows}
-                className={`w-full flex items-center justify-between px-4 py-2 text-sm font-semibold transition-colors ${
-                  isShowsActive ? 'text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200'
-                }`}
-              >
-                <span className="relative inline-block">
-                  Выставки
-                  <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-camel-600 transition-transform duration-300 ${
-                    isShowsActive ? 'scale-x-100' : 'scale-x-0'
-                  }`}></span>
-                </span>
-                <svg className={`w-4 h-4 transition-transform ${showsOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              {showsOpen && (
-                <div className="mt-2 space-y-1 pl-4">
-                  <Link
-                    to="/shows?tab=ranking"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block px-4 py-2 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800 rounded-lg transition-colors"
-                  >
-                    Рейтинг
-                  </Link>
-                  <Link
-                    to="/shows?tab=calendar"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block px-4 py-2 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800 rounded-lg transition-colors"
-                  >
-                    Календарь
-                  </Link>
-                  <Link
-                    to="/shows?tab=champions"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block px-4 py-2 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800 rounded-lg transition-colors"
-                  >
-                    Чемпионы
-                  </Link>
-                  <Link
-                    to="/shows?tab=judges"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block px-4 py-2 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800 rounded-lg transition-colors"
-                  >
-                    Судьи
-                  </Link>
-                </div>
-              )}
-            </div>
-            <div>
-              <button
-                onClick={toggleDonino}
-                className={`w-full flex items-center justify-between px-4 py-2 text-sm font-semibold transition-colors ${
-                  isSpeedRecordsActive ? 'text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200'
-                }`}
-              >
-                <span className="relative inline-block">
-                  Курсинг Донино
-                  <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-camel-600 transition-transform duration-300 ${
-                    isSpeedRecordsActive ? 'scale-x-100' : 'scale-x-0'
-                  }`}></span>
-                </span>
-                <svg className={`w-4 h-4 transition-transform ${doninoOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              {doninoOpen && (
-                <div className="mt-2 space-y-1 pl-4">
-                  <Link
-                    to="/speed-records?view=table"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block px-4 py-2 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800 rounded-lg transition-colors"
-                  >
-                    Записи
-                  </Link>
-                  <Link
-                    to="/speed-records?view=stats"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block px-4 py-2 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800 rounded-lg transition-colors"
-                  >
-                    Статистика
-                  </Link>
-                </div>
-              )}
-            </div>
-            <Link
-              to="/guide"
-              onClick={() => setMobileMenuOpen(false)}
-              className={`block px-4 py-2 text-sm font-semibold transition-colors ${
-                isActive('/guide') ? 'text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200'
-              }`}
-            >
-              <span className="relative inline-block">
-                Справка
-                <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-camel-600 transition-transform duration-300 ${
-                  isActive('/guide') ? 'scale-x-100' : 'scale-x-0'
-                }`}></span>
-              </span>
-            </Link>
-            <div className="border-t border-old-money-200 dark:border-charcoal-600 pt-2 mt-2">
-              <button
-                onClick={toggleSources}
-                className="w-full flex items-center justify-between px-4 py-2 rounded-lg text-sm font-semibold text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800 transition-colors"
-              >
-                <span>Источники данных</span>
-                <svg className={`w-4 h-4 transition-transform ${sourcesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              {sourcesOpen && (
-                <div className="mt-2 space-y-1 pl-4">
-                  <a
-                    href="http://procoursing.ru"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block px-4 py-2 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800 rounded-lg transition-colors"
-                  >
-                    Procoursing.ru
-                  </a>
-                  <a
-                    href="https://runningdog.ru/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block px-4 py-2 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800 rounded-lg transition-colors"
-                  >
-                    Курсинг Донино
-                  </a>
-                  <a
-                    href="https://docs.google.com/spreadsheets/d/1NTiY3HXZIkXE8xTeXZESgMKaZsEXunmcWhTfhhkoKyE/edit?gid=1787526009#gid=1787526009"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block px-4 py-2 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800 rounded-lg transition-colors"
-                  >
-                    Рекорды Донино (курсинг)
-                  </a>
-                  <a
-                    href="https://docs.google.com/spreadsheets/d/1hpdA8vlIfeECgpnPvuk5xfezPsdUh1EXULjeATAF9dw/edit?pli=1&gid=0#gid=0"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block px-4 py-2 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800 rounded-lg transition-colors"
-                  >
-                    Рекорды Донино (бега борзых)
-                  </a>
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
-      )}
+      <NavDesktop
+        isDark={isDark}
+        isActive={isActive}
+        isCompetitionsActive={isCompetitionsActive}
+        isShowsActive={isShowsActive}
+        isSpeedRecordsActive={isSpeedRecordsActive}
+        isGuideActive={isGuideActive}
+        openMenu={openMenu}
+        setMenuOpen={setMenuOpen}
+        sourcesOpen={sourcesOpen}
+        onSourcesMouseEnter={handleMouseEnter}
+        onSourcesMouseLeave={handleMouseLeave}
+      />
+      <NavMobile
+        isDark={isDark}
+        isActive={isActive}
+        isCompetitionsActive={isCompetitionsActive}
+        isShowsActive={isShowsActive}
+        isSpeedRecordsActive={isSpeedRecordsActive}
+        isGuideActive={isGuideActive}
+        mobileMenuOpen={mobileMenuOpen}
+        statisticsOpen={statisticsOpen}
+        showsOpen={showsOpen}
+        doninoOpen={doninoOpen}
+        guideOpen={guideOpen}
+        sourcesOpen={sourcesOpen}
+        onToggleMobileMenu={toggleMobileMenu}
+        onCloseMobileMenu={() => setMobileMenuOpen(false)}
+        onToggleStatistics={toggleStatistics}
+        onToggleShows={toggleShows}
+        onToggleDonino={toggleDonino}
+        onToggleGuide={toggleGuide}
+        onToggleSources={toggleSources}
+      />
     </nav>
   );
 }

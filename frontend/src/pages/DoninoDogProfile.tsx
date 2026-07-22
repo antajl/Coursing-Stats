@@ -404,7 +404,7 @@ export default function DoninoDogProfile() {
             </div>
           )}
 
-          <DoninoAttribution className="mt-6" />
+          <DoninoAttribution className="mt-6 text-center" />
         </div>
       </div>
     </div>

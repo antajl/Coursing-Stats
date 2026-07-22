@@ -108,7 +108,8 @@ type HierarchyLevel = {
   label: string
   badges?: string[]
   note?: ReactNode
-  tier: 'root' | 'mid' | 'leaf'
+  /** Порядок сверху вниз: prestige → certificate → diploma → cumulative */
+  tier: 'prestige' | 'certificate' | 'diploma' | 'cumulative'
 }
 
 export function TitleHierarchySection({
@@ -121,19 +122,26 @@ export function TitleHierarchySection({
   refTag?: ReactNode
 }) {
   const tierClass = {
-    root: 'rounded-lg border-2 border-old-money-300 bg-old-money-50 px-4 py-3 dark:border-charcoal-500 dark:bg-charcoal-800/80',
-    mid: 'rounded-lg border border-camel-200 bg-camel-50/80 px-4 py-3 dark:border-camel-800 dark:bg-camel-950/20',
-    leaf: 'rounded-lg border border-old-money-200 bg-white px-4 py-3 dark:border-charcoal-600 dark:bg-charcoal-800/60',
+    prestige:
+      'rounded-lg border-2 border-camel-400 bg-camel-50 px-4 py-3 dark:border-camel-500 dark:bg-camel-950/30',
+    certificate:
+      'rounded-lg border border-old-money-400 bg-old-money-50 px-4 py-3 dark:border-charcoal-500 dark:bg-charcoal-800/80',
+    diploma:
+      'rounded-lg border border-camel-300 bg-camel-50/70 px-4 py-3 dark:border-camel-800 dark:bg-camel-950/20',
+    cumulative:
+      'rounded-lg border-2 border-camel-500 bg-cream-50 px-4 py-3 dark:border-camel-400 dark:bg-charcoal-800/60',
   }
   const labelClass = {
-    root: 'text-[10px] font-semibold uppercase tracking-wide text-old-money-500',
-    mid: 'text-[10px] font-semibold uppercase tracking-wide text-camel-700 dark:text-camel-400',
-    leaf: 'text-[10px] font-semibold uppercase tracking-wide text-old-money-500',
+    prestige: 'text-[10px] font-semibold uppercase tracking-wide text-camel-800 dark:text-camel-300',
+    certificate: 'text-[10px] font-semibold uppercase tracking-wide text-old-money-600 dark:text-old-money-400',
+    diploma: 'text-[10px] font-semibold uppercase tracking-wide text-camel-700 dark:text-camel-400',
+    cumulative: 'text-[10px] font-semibold uppercase tracking-wide text-camel-800 dark:text-camel-300',
   }
   const wrapClass = {
-    root: '',
-    mid: 'ml-4 border-l-2 border-camel-300 pl-4 dark:border-camel-700',
-    leaf: 'ml-8 border-l-2 border-old-money-200 pl-4 dark:border-charcoal-600',
+    prestige: '',
+    certificate: 'ml-3 border-l-2 border-old-money-300 pl-4 dark:border-charcoal-600',
+    diploma: 'ml-6 border-l-2 border-camel-300 pl-4 dark:border-camel-700',
+    cumulative: 'ml-9 border-l-2 border-camel-400 pl-4 dark:border-camel-600',
   }
 
   return (
@@ -164,7 +172,7 @@ type CertificateLevel = { level: string; code: string }
 
 export function CertificateLevelsGrid({ items }: { items: readonly CertificateLevel[] }) {
   return (
-    <div className="grid gap-3 sm:grid-cols-3">
+    <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
       {items.map((item) => (
         <div
           key={item.code}

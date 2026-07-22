@@ -4,21 +4,85 @@ import { ChevronLeft, ChevronRight, ExternalLink, UserRound } from 'lucide-react
 import SkeletonLoader from '../../components/SkeletonLoader'
 import ErrorState from '../../components/ErrorState'
 import { getShowExhibition } from '../../lib/staticData'
+import { titleBadgeClass } from '../../lib/qualificationTitles'
+import {
+  classifyCompetitionTitle,
+  classifyShowCumulativeTitle,
+  groupItemsByCategory,
+} from '../../lib/awardCategories'
+import { matchShowAwardToken, SHOW_AWARD_CATEGORY } from '../../../../backend/lib/show-award-ranking'
 import {
   buildGroupMap,
   buildResultsByBreedId,
-  formatBreedTitleLine,
   formatGradeLine,
-  formatTitleLine,
   groupResultsBySexAndClass,
   localizeShowClass,
   resultsForBreed,
+  splitShowTitleTokens,
+  splitDogNameDisplay,
   titleHighlights,
   type BreedCatalogRow,
   type BreedTitleRow,
   type ClassResultGroup,
   type ShowResultRow,
 } from './showExhibitionUtils'
+
+function classifyShowToken(token: string) {
+  const key = matchShowAwardToken(token)
+  if (key) return SHOW_AWARD_CATEGORY[key]
+  return classifyShowCumulativeTitle(token) ?? classifyCompetitionTitle(token)
+}
+
+function TitleChips({ title }: { title: string }) {
+  const tokens = splitShowTitleTokens(title)
+  if (tokens.length === 0) return <span className="text-charcoal-400 dark:text-charcoal-500">—</span>
+  const groups = groupItemsByCategory(tokens, classifyShowToken)
+  return (
+    <div className="flex flex-wrap items-center gap-1">
+      {groups.map((group, gi) => (
+        <span key={group.category} className="inline-flex flex-wrap items-center gap-1">
+          {gi > 0 ? (
+            <span
+              className="mx-0.5 h-3 w-px shrink-0 self-center bg-old-money-300 dark:bg-charcoal-500"
+              aria-hidden
+            />
+          ) : null}
+          {group.items.map((token, i) => (
+            <span
+              key={`${token}-${i}`}
+              className={`inline-flex rounded-md px-1.5 py-0.5 text-[11px] font-semibold ${titleBadgeClass(token)}`}
+            >
+              {token}
+            </span>
+          ))}
+        </span>
+      ))}
+    </div>
+  )
+}
+
+function BreedTitleRowView({ row }: { row: BreedTitleRow }) {
+  return (
+    <li className="rounded-md bg-camel-50/80 px-2.5 py-2 text-sm dark:bg-camel-900/20">
+      <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+        <span className="inline-flex rounded-md border border-camel-300 bg-white px-2 py-0.5 text-xs font-bold text-camel-800 dark:border-camel-600 dark:bg-charcoal-800 dark:text-camel-300">
+          {row.title_code}
+        </span>
+        {row.ring_number > 0 ? (
+          <span className="font-mono text-xs tabular-nums text-charcoal-500 dark:text-charcoal-400">
+            ({row.ring_number})
+          </span>
+        ) : null}
+        <span className="font-semibold text-charcoal-900 dark:text-charcoal-100">{row.dog_name}</span>
+      </div>
+      {row.owner?.trim() ? (
+        <div className="mt-1 text-xs text-charcoal-500 dark:text-charcoal-400">
+          Судья: {row.owner.trim()}
+        </div>
+      ) : null}
+    </li>
+  )
+}
 
 interface ShowExhibition {
   id: number
@@ -145,9 +209,6 @@ function ExhibitionHeader({ exhibition, onBack }: { exhibition: ShowExhibition; 
         {exhibition.club && <DetailField label="Клуб-организатор">{exhibition.club}</DetailField>}
         {exhibition.rank && <DetailField label="Ранг выставки">{exhibition.rank}</DetailField>}
         {exhibition.type && <DetailField label="Тип выставки">{exhibition.type}</DetailField>}
-        {exhibition.judges && exhibition.judges.length > 0 && (
-          <DetailField label="Судьи (Specialty)">{exhibition.judges.join(', ')}</DetailField>
-        )}
       </div>
     </div>
   )
@@ -197,7 +258,21 @@ function ClassResultsTable({ classes }: { classes: ClassResultGroup[] }) {
                     {localizeShowClass(group.className)}
                   </td>
                 )}
-                <td className="px-3 py-2.5 font-medium text-charcoal-900 dark:text-charcoal-100">{row.dog_name}</td>
+                <td className="px-3 py-2.5 font-medium text-charcoal-900 dark:text-charcoal-100">
+                  {(() => {
+                    const { ring, name } = splitDogNameDisplay(row.dog_name)
+                    return (
+                      <>
+                        {ring ? (
+                          <span className="mr-1.5 font-mono text-xs tabular-nums text-charcoal-500 dark:text-charcoal-400">
+                            ({ring})
+                          </span>
+                        ) : null}
+                        <span>{name}</span>
+                      </>
+                    )
+                  })()}
+                </td>
                 <td
                   className={`w-12 px-2 py-2.5 text-center tabular-nums ${placementClass(row.placement)}`}
                 >
@@ -207,7 +282,7 @@ function ClassResultsTable({ classes }: { classes: ClassResultGroup[] }) {
                   {formatGradeLine(row.grade) || '—'}
                 </td>
                 <td className="px-3 py-2.5 text-xs font-medium text-camel-800 dark:text-camel-300">
-                  {formatTitleLine(row.title)}
+                  <TitleChips title={row.title} />
                 </td>
               </tr>
             ))
@@ -245,23 +320,22 @@ function BreedResultsPanel({
           <ul className="space-y-1.5">
             {titleRows
               ? titleRows.map((row, idx) => (
-                  <li
-                    key={`${row.title_code}-${row.ring_number}-${idx}`}
-                    className="rounded-md bg-camel-50/80 px-2.5 py-1.5 text-sm font-medium text-charcoal-800 dark:bg-camel-900/20 dark:text-charcoal-100"
-                  >
-                    {formatBreedTitleLine(row)}
-                  </li>
+                  <BreedTitleRowView key={`${row.title_code}-${row.ring_number}-${idx}`} row={row} />
                 ))
               : fallbackHighlights.map((row, idx) => (
                   <li
                     key={`${row.dog_name}-${idx}`}
-                    className="rounded-md bg-camel-50/80 px-2.5 py-1.5 text-sm dark:bg-camel-900/20"
+                    className="rounded-md bg-camel-50/80 px-2.5 py-2 text-sm dark:bg-camel-900/20"
                   >
-                    <span className="font-medium text-camel-800 dark:text-camel-300">{formatTitleLine(row.title)}</span>
-                    <span className="text-charcoal-700 dark:text-charcoal-300"> · {row.dog_name}</span>
-                    {row.owner && (
-                      <span className="text-charcoal-500 dark:text-charcoal-400"> · {row.owner}</span>
-                    )}
+                    <TitleChips title={row.title} />
+                    <div className="mt-1 font-semibold text-charcoal-800 dark:text-charcoal-100">
+                      {row.dog_name}
+                    </div>
+                    {row.owner ? (
+                      <div className="mt-0.5 text-xs text-charcoal-500 dark:text-charcoal-400">
+                        Судья: {row.owner}
+                      </div>
+                    ) : null}
                   </li>
                 ))}
           </ul>

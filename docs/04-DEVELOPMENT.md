@@ -1,8 +1,8 @@
-# Development — Разработка
+﻿# Development — Разработка
 
 > **ИИ:** [README.md](README.md) → [00-AI-GUIDE.md](00-AI-GUIDE.md) → [03-DATA.md](03-DATA.md). **UI и маршруты:** [04-FRONTEND.md](04-FRONTEND.md).
 
-Документация по разработке: backend scripts, npm, тесты, деплой.
+Документация по разработке: backend scripts, npm, тесты. Деплой — [`20-OPERATIONS.md`](20-OPERATIONS.md).
 
 ## Содержание
 
@@ -12,8 +12,8 @@
 - [Local Development](#local-development)
 - [Testing](#testing)
 - [Tools and Libraries](#tools-and-libraries)
-- [Best Practices](#best-practices--лучшие-практики)
-- [Deployment](#deployment--деплой-и-инфраструктура)
+- [Best Practices](#best-practices--лучшие-практики) → [`18-CODE-PATTERNS.md`](18-CODE-PATTERNS.md)
+- [Deployment](#deployment--деплой) → [`20-OPERATIONS.md`](20-OPERATIONS.md)
 - [Отладка парсеров с фикстурами](#отладка-парсеров-с-фикстурами)
 
 **Frontend map, PageToolbar, мобильная вёрстка:** [`04-FRONTEND.md`](04-FRONTEND.md)
@@ -439,7 +439,7 @@ npm run dev:remote
 npm run export-archive
 ```
 
-См. [`03-DATA.md`](03-DATA.md) и [`archive/02-MIGRATION-TO-STATIC-DATA.md`](archive/02-MIGRATION-TO-STATIC-DATA.md).
+См. [`03-DATA.md`](03-DATA.md) → «Data Archive».
 
 ### React Query (frontend)
 
@@ -516,81 +516,11 @@ In-process Worker tests planned: **vitest@4** + **@cloudflare/vitest-pool-worker
 
 ---
 
+
 ## Best Practices — Лучшие практики
 
-### Предотвращение бесконечных циклов в useEffect
-
-При синхронизации состояния с URL параметрами всегда проверяйте, действительно ли значения изменились перед обновлением URL:
-
-```javascript
-// ❌ ПЛОХО — вызывает бесконечный цикл
-useEffect(() => {
-  const params = new URLSearchParams(searchParams)
-  if (filterBreed) params.set('breed', filterBreed)
-  if (filterYear) params.set('year', filterYear)
-  setSearchParams(params)
-}, [filterBreed, filterYear, setSearchParams, searchParams])
-```
-
-```javascript
-// ✅ ХОРОШО — проверяет изменения перед обновлением
-useEffect(() => {
-  const params = new URLSearchParams(searchParams)
-  
-  // Проверяем, нужно ли обновлять URL
-  const needsUpdate = 
-    (filterBreed !== params.get('breed')) ||
-    (filterYear !== params.get('year'))
-  
-  if (!needsUpdate) return
-  
-  // Обновляем только если значения изменились
-  const newParams = new URLSearchParams()
-  if (filterBreed) newParams.set('breed', filterBreed)
-  if (filterYear) newParams.set('year', filterYear)
-  setSearchParams(newParams)
-}, [filterBreed, filterYear, setSearchParams, searchParams])
-```
-
-### Предотвращение фликера при загрузке данных
-
-Используйте `isInitialLoad` состояние для показа SkeletonLoader только при первой загрузке:
-
-```javascript
-const [isInitialLoad, setIsInitialLoad] = useState(true)
-
-const { data, isLoading } = useApi(params)
-
-useEffect(() => {
-  if (!isLoading && data?.length > 0) {
-    setIsInitialLoad(false)
-  }
-}, [isLoading, data?.length])
-
-if (isInitialLoad && isLoading) {
-  return <SkeletonLoader variant="card" count={4} />
-}
-```
-
-### Dark Mode для компонентов
-
-При добавлении новых компонентов всегда добавляйте dark mode варианты:
-
-```javascript
-// Фоны
-bg-white dark:bg-charcoal-800
-bg-cream-50 dark:bg-charcoal-900
-
-// Границы
-border-old-money-200 dark:border-charcoal-600
-
-// Текст
-text-charcoal-900 dark:text-charcoal-100
-text-old-money-800 dark:text-old-money-300
-
-// Hover состояния
-hover:bg-cream-50 dark:hover:bg-charcoal-700
-```
+React UI pitfalls (useEffect/URL, skeleton flicker, dark mode) — **[`18-CODE-PATTERNS.md`](18-CODE-PATTERNS.md)** → «React UI pitfalls».  
+UI/маршруты: [`04-FRONTEND.md`](04-FRONTEND.md). Тема: [`06-DESIGN-SYSTEM.md`](06-DESIGN-SYSTEM.md).
 
 ---
 
@@ -599,167 +529,46 @@ hover:bg-cream-50 dark:hover:bg-charcoal-700
 - Парсеры: `backend/parsers/`
 - API routes: `backend/src/routes/`
 - React pages: `frontend/src/pages/`
-- React components: `frontend/src/components/`
 - API client: `frontend/src/services/api.ts`
 - Schema: `backend/schema.sql`
-- Wrangler config: `wrangler.toml`
 
 ---
 
 ## См. также
 
 - [04-FRONTEND.md](04-FRONTEND.md) — UI, маршруты, PageToolbar
+- [18-CODE-PATTERNS.md](18-CODE-PATTERNS.md) — паттерны + React pitfalls
 - [20-OPERATIONS.md](20-OPERATIONS.md) — runbook деплоя и диагностики
-- [14-PARSING-RULES.md](14-PARSING-RULES.md) — Правила парсинга данных
-- [15-PARSING-IMPLEMENTATION.md](15-PARSING-IMPLEMENTATION.md) — Детали парсеров
-- [12-DATABASE-SCHEMA.md](12-DATABASE-SCHEMA.md) — Схема БД
-- [13-DATABASE-WORKFLOW.md](13-DATABASE-WORKFLOW.md) — Workflow БД
-- [05-API-REFERENCE.md](05-API-REFERENCE.md) — Документация API
+- [16-TROUBLESHOOTING.md](16-TROUBLESHOOTING.md) — симптом → fix (кэш SPA и др.)
+- [14-PARSING-RULES.md](14-PARSING-RULES.md) / [15-PARSING-IMPLEMENTATION.md](15-PARSING-IMPLEMENTATION.md)
+- [12-DATABASE-SCHEMA.md](12-DATABASE-SCHEMA.md) / [13-DATABASE-WORKFLOW.md](13-DATABASE-WORKFLOW.md) — **LEGACY**, только D1/импорт
+- [05-API-REFERENCE.md](05-API-REFERENCE.md)
 
 ---
 
-## Deployment — Деплой и инфраструктура
+## Deployment — Деплой
 
-### Обзор
+Канон: **[`20-OPERATIONS.md`](20-OPERATIONS.md)**. Симптомы белого экрана / MIME: **[`16-TROUBLESHOOTING.md`](16-TROUBLESHOOTING.md)**.
 
-**Стек (прод):**
-- Cloudflare Pages — фронтенд + статика `data/v1/` на CDN
-- Локальная админка — `local-dev-server.ts` (`npm run dev`)
-- Cloudflare D1 — импорт (парсеры, cron), не runtime публичного сайта
+Кратко:
+- Прод: Cloudflare Pages (`coursingstats`) + `data/v1/` на CDN; Worker **не** в CI
+- Push `main` → `build-all-data` → Pages deploy (`.github/workflows/deploy-frontend.yml`)
+- SPA: `_redirects` → `/* /index.html 200`; hashed `assets/[name]-[hash].js`; HTML no-cache
+- Донино cron: только speed — [`09a-DONINO-PIPELINE.md`](09a-DONINO-PIPELINE.md)
 
-**Домены:**
-- Сайт и данные: https://coursing-stats.ru (`/data/v1/`)
-- GitHub: https://github.com/antajl/Coursing-Stats
-
-### Cloudflare Pages
-
-**Проект Pages:** `coursingstats`
-
-**Source:** GitHub repository `antajl/Coursing-Stats`
-
-**Build settings:**
-- Build command: `cd frontend && npm run build`
-- Build output directory: `frontend/dist`
-
-**Environment variables:** не требуются для прод-сборки (данные с `/data/v1/` на том же домене).
-
-### GitHub Actions
-
-**Workflow:** `.github/workflows/deploy-frontend.yml`
-
-**Триггеры:**
-- Push в ветку `main`
-- Manual dispatch
-
-**Процесс:**
-1. Checkout кода
-2. `npm run build-all-data` (indexes + package `data/v1/`)
-3. Build фронтенда
-4. Deploy на Cloudflare Pages (Worker **не** деплоится)
-
-### Cloudflare Worker (legacy)
-
-Код в `backend/src/worker.ts` — для `npm run dev:d1`. **Не деплоится в CI** с 2026-07-07. См. [`03-DATA.md`](03-DATA.md).
-
-### SPA Routing и кэш ассетов
-
-`frontend/public/_redirects`:
-```
-/*    /index.html   200
-```
-
-**Критично:** не класть корневой `404.html` в `public/` — Cloudflare Pages тогда **отключает SPA-режим**, и `/competitions`, `/shows`, … отдают 404. Не использовать rewrite `/assets/* … 404` в `_redirects` (status 404 на Pages **не поддерживается**).
-
-Vite: `assets/[name]-[hash].js` + `banner` с build stamp (новые хэши каждый CI deploy).
-
-HTML no-cache + авто-reload: [`20-OPERATIONS.md`](20-OPERATIONS.md) → «Кэш фронта».
-
-### GitHub Actions Workflows
-
-**deploy-frontend.yml:** Деплой фронтенда на Cloudflare Pages
-**update-db.yml:** Обновление D1 — **только вручную** (`workflow_dispatch`)
-**update-speed-records.yml:** только `data/v1/donino/speed_records.json` (cron **4×/день**); **не** обновляет бега 350 м. Полный Донино: `scripts/update-donino.bat` + deploy.
-
-**Secrets:**
-- `CLOUDFLARE_API_TOKEN` — API токен Cloudflare (с правами D1 и Workers)
-- `CLOUDFLARE_ACCOUNT_ID` — ID аккаунта Cloudflare
-
-### Cloudflare D1
-
-**Local Development:**
-```bash
-cd backend
-npx wrangler d1 execute pc-db --local --command="SELECT * FROM events LIMIT 5"
-```
-
-**Remote Development:**
-```bash
-cd backend
-npx wrangler d1 execute pc-db --command="SELECT * FROM events LIMIT 5"
-```
-
-**Import/Export:**
-```bash
-npx wrangler d1 execute pc-db --file=script.sql
-npx wrangler d1 execute pc-db --local --file=script.sql
-```
-
-### Мониторинг
-
-**Legacy Worker logs** (если снова задеплоите Worker):
-```bash
-npx wrangler tail coursingstatsworker
-```
-
-**D1 Queries:**
-```bash
-npx wrangler d1 execute pc-db --command="EXPLAIN QUERY PLAN SELECT * FROM events"
-```
+D1 CLI / local wrangler — только для импорта: [`13-DATABASE-WORKFLOW.md`](13-DATABASE-WORKFLOW.md).
 
 ---
 
 ## Frontend Map
 
-Полная карта маршрутов, страниц и компонентов — **[`04-FRONTEND.md`](04-FRONTEND.md)**.
+Полная карта — **[`04-FRONTEND.md`](04-FRONTEND.md)**.
 
 ---
 
 ## Отладка парсеров с фикстурами
 
-### Задача
-Исправить парсеры результатов (coursing, BZMP, racing) для работы с реальными HTML страницами procoursing.ru.
+Перед правкой парсера: `npm run test-parser` + `npm run test-parser-fixtures`.  
+Фикстуры: `backend/tests/fixtures/{coursing,bzmp,racing}/`. Кодировка: windows-1251 через `fetch-win1251.ts`.
 
-### Проблема
-Парсеры не могли распознать структуру HTML таблиц в реальных фикстурах и возвращали 0 результатов.
-
-### Выполненные работы
-
-**1. Создание структуры для фикстур**
-- Папки: `backend/tests/fixtures/{coursing,bzmp,racing}`
-- Скрипт `download-fixtures.ts` для загрузки реальных HTML страниц
-
-**2. Загруженные фикстуры**
-
-**Coursing:** `Complete_Results_2025-03-08.html`, `Complete_Results_2025-04-05_C.html`, `Complete_Results_2025-04-06_C.html`
-
-**BZMP:** `Complete_Results_2025-03-08.html`, `Complete_Results_2025-04-05_B.html`, `Complete_Results_2025-04-06_B.html`
-
-**Racing:** `2026-05-16_Complete_Results_Racing.html`, `Complete_Results_2025-cc-sample.html`
-
-**3. Исправления в парсерах**
-
-Убрана проверка `bgcolor="#c0c0c0"` для заголовков групп. Заголовки теперь распознаются по `colspan=25` и наличию жирного текста.
-
-**4. Команды**
-```bash
-npm run test-parser-fixtures
-npm run download-fixtures
-```
-
-### Технические детали
-
-**Кодировка:** Сайт procoursing.ru использует windows-1251 без charset. Все парсеры используют `fetchWin1251`.
-
-**Структура HTML:**
-- Coursing/BZMP: 25 колонок, rowspan=2, судейские оценки
-- Racing: 18 колонок, нет rowspan, время/скорость
+Подробно: [`14-PARSING-RULES.md`](14-PARSING-RULES.md), [`15-PARSING-IMPLEMENTATION.md`](15-PARSING-IMPLEMENTATION.md), [`08-TESTING.md`](08-TESTING.md).

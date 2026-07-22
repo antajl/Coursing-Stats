@@ -60,7 +60,8 @@
 
 **`bare`:** `TopDogsFilters`, `Judges/index`, `DoninoPageToolbar`. **Framed:** `Events/index.tsx` (календарь, dev).
 
-Канон паттернов: [`18-CODE-PATTERNS.md`](18-CODE-PATTERNS.md) · Changelog: [`19-CHANGELOG.md`](19-CHANGELOG.md)
+Канон паттернов: [`18-CODE-PATTERNS.md`](18-CODE-PATTERNS.md)
+
 
 ---
 
@@ -82,7 +83,7 @@
 | Дисциплины | Курсинг/БЗМП, бега | Замер (warm-blue), 350 м (forest) |
 | Breed Archive | chip при `pedigree_url` | — |
 
-**Owner marks:** `ownerMarks.ts` — только фронтенд; см. ADR в [`19-HISTORY.md`](19-HISTORY.md).
+**Owner marks:** `ownerMarks.ts` — только фронтенд (локальные пометки владельца, не в CDN).
 
 ---
 
@@ -122,7 +123,7 @@ Tailwind `md:` брейкпоинты. `App.tsx`: `pt-3 pb-5 md:pt-4`, `px-2 sm:
 | `/top` | → redirect | legacy → `/competitions?tab=ranking` |
 | `/judges` | → redirect | legacy → `/competitions?tab=judges` |
 | `/judges/:judgeId` | `JudgeDetail.tsx` | Детали судьи |
-| `/dog/:id` | `UnifiedDogProfile.tsx` | Профиль собаки |
+| `/dog/:id` | `DogProfile/` (через `UnifiedDogProfile`) | Единый профиль: курсинг / бега / выставки (3 колонки) |
 | `/event/:id` | — | Redirect → рейтинг |
 | `/admin/calendar` | `AdminCalendar.tsx` | Dev only |
 | `/admin/event/:id` | `EventResults/` | Dev only |
@@ -156,6 +157,8 @@ CoursingRatingHint.tsx  — ⓘ в сегменте «очки»
 ```
 
 Фильтр пород: `useCompetingBreeds()`, порядок по числу собак. Год: `''` = все годы → `top-*-all.json`. Default вкладка рейтинга: **очки** (`ratingTab` в URL только для «места»).
+
+**Отображение породы:** `displayBreed()` из `lib/breedMapping.ts` (`primary` / опционально `secondary`) — `DogCard`, `ShowDogCard`, шапка профиля. Канон фильтров — UPPERCASE; UI — sentence case. Подробнее: [`03-DATA.md`](03-DATA.md) → «Канон и отображение».
 
 ### Home (подиум)
 

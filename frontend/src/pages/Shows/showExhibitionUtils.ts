@@ -67,6 +67,13 @@ export function extractRingNumber(row: ShowResultRow): number {
   return match ? parseInt(match[1], 10) : 0
 }
 
+/** Разбор `(4456) NAME` для UI: номер серым, кличка отдельно. */
+export function splitDogNameDisplay(dogName: string): { ring: string | null; name: string } {
+  const match = dogName.trim().match(/^\((\d+)\)\s*(.+)$/)
+  if (!match) return { ring: null, name: dogName.trim() }
+  return { ring: match[1], name: match[2].trim() }
+}
+
 /** Дополняет пустые class из предыдущей строки (legacy-данные). */
 export function normalizeShowResults(rows: ShowResultRow[]): ShowResultRow[] {
   const sorted = [...rows].sort((a, b) => extractRingNumber(a) - extractRingNumber(b))
@@ -170,6 +177,15 @@ export function buildGroupMap(catalog: BreedCatalogRow[]): Map<string, BreedCata
 
 export function formatTitleLine(title: string): string {
   return title.replace(/\s+/g, ' ').replace(/ ,/g, ',').trim()
+}
+
+/** Разбивка колонки наград протокола на отдельные токены. */
+export function splitShowTitleTokens(title: string | null | undefined): string[] {
+  if (!title?.trim()) return []
+  return title
+    .split(',')
+    .map((part) => part.replace(/\s+/g, ' ').trim())
+    .filter(Boolean)
 }
 
 export function formatGradeLine(grade: string | undefined): string {

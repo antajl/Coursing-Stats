@@ -1,9 +1,10 @@
 import { useState, useEffect, useMemo } from 'react'
 import { useSearchParams, Link } from 'react-router-dom'
 import { ExternalLink } from 'lucide-react'
+import FilterSelect from '../../components/FilterSelect'
+import RKFAttribution from '../../components/RKFAttribution'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
-import FilterSelect from '../../components/FilterSelect'
 import EmptyState from '../../components/EmptyState'
 import SkeletonLoader from '../../components/SkeletonLoader'
 import { getShowCalendar } from '../../lib/staticData'
@@ -180,6 +181,7 @@ export default function ShowCalendar() {
         <div className="mb-4">
           <PageToolbar
             bare
+            trailing={<RKFAttribution />}
             activeFilterChips={activeFilterChips}
             onClearAllFilters={hasActiveFilters ? handleResetFilters : undefined}
             filters={
@@ -214,6 +216,7 @@ export default function ShowCalendar() {
       <div className="mb-4">
         <PageToolbar
           bare
+          trailing={<RKFAttribution />}
           activeFilterChips={activeFilterChips}
           onClearAllFilters={hasActiveFilters ? handleResetFilters : undefined}
           filters={

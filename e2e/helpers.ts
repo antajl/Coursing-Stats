@@ -23,10 +23,6 @@ export function competitionsSegment(page: Page) {
   return page.getByRole('group', { name: 'Разделы соревнований' })
 }
 
-export function guideSegment(page: Page) {
-  return page.getByRole('group', { name: 'Разделы справочника' })
-}
-
 export function themeToggle(page: Page) {
   return page.getByRole('button', {
     name: /переключить на (светлую|тёмную) тему/i,

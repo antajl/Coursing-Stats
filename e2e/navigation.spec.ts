@@ -44,8 +44,8 @@ test.describe('Navigation', () => {
 
   test('can navigate to guide from nav', async ({ page }) => {
     await page.goto('/')
-    await page.getByRole('link', { name: /справка/i }).click()
-    await expect(page).toHaveURL('/guide')
-    await expect(page.getByRole('heading', { name: 'Справочник' })).toBeVisible()
+    await page.getByRole('link', { name: /справка/i }).first().click()
+    await expect(page).toHaveURL(/\/guide/)
+    await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
   })
 })

@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useRef } from 'react'
+import { useState, useEffect, useCallback, useRef, useMemo } from 'react'
 import { useSearchParams, useLocation } from 'react-router-dom'
 import { SEO } from '../../components/SEO'
 import { useYandexGoal } from '../../components/YandexMetrica'
@@ -106,12 +106,26 @@ export default function TopDogs() {
     filterBreed,
   }
 
-  const filteredPlacement = filterPlacement(topPlacement, filterParams)
-  const filteredScore = sortScoreItems(
-    filterScore(topScore, filterParams) as Record<string, unknown>[],
-    'rating_score',
+  const rankedPlacement = useMemo(
+    () => topPlacement.map((dog, i) => ({ ...dog, rank: i + 1 })),
+    [topPlacement],
   )
-  const filteredSpeed = filterSpeed(topSpeed, filterParams)
+  const rankedScore = useMemo(
+    () =>
+      sortScoreItems(topScore as Record<string, unknown>[], 'rating_score').map((dog, i) => ({
+        ...dog,
+        rank: i + 1,
+      })),
+    [topScore],
+  )
+  const rankedSpeed = useMemo(
+    () => topSpeed.map((dog, i) => ({ ...dog, rank: i + 1 })),
+    [topSpeed],
+  )
+
+  const filteredPlacement = filterPlacement(rankedPlacement, filterParams)
+  const filteredScore = filterScore(rankedScore, filterParams)
+  const filteredSpeed = filterSpeed(rankedSpeed, filterParams)
 
   const handleResetFilters = () => {
     setFilterYear('')

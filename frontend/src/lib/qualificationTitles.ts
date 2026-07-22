@@ -1,3 +1,16 @@
+import {
+  categoryBadgeClass,
+  classifyCompetitionTitle,
+  classifyShowCumulativeTitle,
+  type AwardCategory,
+} from './awardCategories'
+import {
+  SHOW_AWARD_BADGE,
+  SHOW_AWARD_CATEGORY,
+  type ShowAwardKey,
+  matchShowAwardToken,
+} from '../../../backend/lib/show-award-ranking'
+
 export type DogTitle = {
   title: string
   count: number
@@ -15,34 +28,31 @@ export function parseQualificationTitles(qualification: string | null | undefine
     .filter(Boolean)
 }
 
-export function titleBadgeClass(title: string): string {
-  const titleLower = title.toLowerCase()
-  const upper = title.toUpperCase()
-  const isChampion = titleLower.includes('чемпион') || titleLower.includes('champion')
-  const isCACL = titleLower.includes('cacl')
-  const isReg = titleLower.includes('reg')
+function categoryForTitleString(title: string): AwardCategory {
+  const showKey = matchShowAwardToken(title)
+  if (showKey) return SHOW_AWARD_CATEGORY[showKey]
 
-  if (upper === 'BIS') {
-    return 'border-2 border-camel-400 dark:border-camel-500 bg-camel-100 dark:bg-camel-900/40 text-camel-900 dark:text-camel-100'
-  }
-  if (upper === 'BOB') {
-    return 'border border-camel-300 dark:border-camel-600 bg-camel-50 dark:bg-camel-950/30 text-camel-800 dark:text-camel-200'
-  }
-  if (upper === 'CACIB') {
-    return 'border border-old-money-400 dark:border-charcoal-500 bg-old-money-100 dark:bg-charcoal-700 text-old-money-900 dark:text-old-money-100'
-  }
-  if (upper === 'CAC') {
-    return 'border border-old-money-300 dark:border-charcoal-600 bg-cream-100 dark:bg-charcoal-800 text-charcoal-700 dark:text-charcoal-200'
-  }
+  const cum = classifyShowCumulativeTitle(title)
+  if (cum) return cum
 
-  if (isChampion) {
-    return 'border border-camel-300 dark:border-camel-600 bg-camel-100 dark:bg-camel-700/40 text-camel-800 dark:text-camel-200'
-  }
-  if (isCACL && !isReg) {
-    return 'border border-old-money-300 dark:border-charcoal-500 bg-old-money-100 dark:bg-charcoal-700 text-old-money-800 dark:text-old-money-200'
-  }
-  if (isReg) {
-    return 'border border-old-money-200 dark:border-charcoal-600 bg-cream-100 dark:bg-charcoal-800 text-charcoal-600 dark:text-charcoal-300'
-  }
-  return 'border border-old-money-200 dark:border-charcoal-600 bg-cream-50 dark:bg-charcoal-800 text-charcoal-500 dark:text-charcoal-400'
+  return classifyCompetitionTitle(title)
 }
+
+/** Класс бейджа по строке титула (протокол, профиль, справка). */
+export function titleBadgeClass(title: string): string {
+  const upper = title.trim().toUpperCase()
+  const category = categoryForTitleString(title)
+  const topPrestige = upper === 'BIS' || upper.startsWith('BEST IN SHOW')
+  return categoryBadgeClass(category, { topPrestige })
+}
+
+/** Класс бейджа по ключу выставочной награды. */
+export function showAwardBadgeClass(key: ShowAwardKey): string {
+  return categoryBadgeClass(SHOW_AWARD_CATEGORY[key], { topPrestige: key === 'BIS' })
+}
+
+export function titleBadgeClassForCategory(category: AwardCategory, topPrestige = false): string {
+  return categoryBadgeClass(category, { topPrestige })
+}
+
+export { SHOW_AWARD_BADGE }

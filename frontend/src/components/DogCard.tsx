@@ -1,12 +1,15 @@
 import { Link } from 'react-router-dom'
 import { dogYearBadge } from '../lib/season'
 import { parseDogName } from '../lib/dogName'
+import { displayBreed } from '../lib/breedMapping'
 import { ratingScoreFromRow } from '../../../backend/lib/rating/coursing-rating-score'
 import { MedalIcon, type MedalVariant } from './MedalTally'
 import OwnerCrownName from './OwnerCrownName'
 
 /** Единая высота карточки в двухколоночном рейтинге (строки выравниваются попарно). */
 export const DOG_CARD_HEIGHT_CLASS = 'h-[9rem]'
+
+export type DogCardVariant = 'card' | 'embedded'
 
 interface DogCardProps {
   dog: {
@@ -31,6 +34,13 @@ interface DogCardProps {
   }
   type: 'placement' | 'score' | 'speed'
   filterYear: string
+  /** Место в полном рейтинге среза (не позиция в фильтре). */
+  rank?: number
+  /**
+   * `card` — standalone bordered tile (default).
+   * `embedded` — flat row inside DoninoColumnShell (no nested card chrome).
+   */
+  variant?: DogCardVariant
 }
 
 const STAT_ROW_CLASS = 'grid h-14 shrink-0 gap-2'
@@ -113,8 +123,15 @@ function MedalStatBox({ variant, value }: { variant: MedalVariant; value?: numbe
   )
 }
 
-export default function DogCard({ dog, type, filterYear }: DogCardProps) {
+const CARD_SHELL =
+  `relative grid ${DOG_CARD_HEIGHT_CLASS} grid-rows-[minmax(0,1fr)_3.5rem] gap-2 overflow-hidden rounded-xl border border-old-money-200 bg-white p-3 shadow-sm transition-all duration-200 hover:border-camel-300 hover:shadow-md dark:border-charcoal-600 dark:bg-charcoal-800 dark:hover:border-camel-700`
+
+const EMBEDDED_SHELL =
+  `relative grid ${DOG_CARD_HEIGHT_CLASS} grid-rows-[minmax(0,1fr)_3.5rem] gap-2 overflow-hidden border-0 bg-transparent px-3.5 py-3 shadow-none transition-colors duration-150 hover:bg-cream-100/90 dark:hover:bg-charcoal-700/45`
+
+export default function DogCard({ dog, type, filterYear, rank, variant = 'card' }: DogCardProps) {
   const { primary, secondary } = parseDogName(dog.name_lat, dog.name_ru)
+  const breedDisplay = displayBreed(dog.breed)
 
   const getStats = () => {
     switch (type) {
@@ -154,21 +171,45 @@ export default function DogCard({ dog, type, filterYear }: DogCardProps) {
   return (
     <Link
       to={`/dog/${dog.dog_id}`}
-      className={`grid ${DOG_CARD_HEIGHT_CLASS} grid-rows-[minmax(0,1fr)_3.5rem] gap-2 overflow-hidden rounded-xl border border-old-money-200 bg-white p-3 shadow-sm transition-all duration-200 hover:border-camel-300 hover:shadow-md dark:border-charcoal-600 dark:bg-charcoal-800 dark:hover:border-camel-700`}
+      className={variant === 'embedded' ? EMBEDDED_SHELL : CARD_SHELL}
     >
       <div className="flex min-h-0 flex-col justify-end gap-1 overflow-hidden">
-        <OwnerCrownName name={primary} dogId={dog.dog_id} kind="competition">
-          <h3
-            className="line-clamp-2 text-sm font-bold leading-snug text-charcoal-800 dark:text-charcoal-100"
-            title={secondary ? `${primary} / ${secondary}` : primary}
-          >
-            {primary}
-          </h3>
-        </OwnerCrownName>
-        <div className="flex shrink-0 items-center gap-1.5 overflow-hidden">
-          <span className="max-w-full truncate rounded-md bg-cream-100 px-1.5 py-0.5 text-[10px] font-medium text-charcoal-600 dark:bg-charcoal-700 dark:text-charcoal-300">
-            {dog.breed}
-          </span>
+        <div className="flex items-start justify-between gap-3">
+          <OwnerCrownName name={primary} dogId={dog.dog_id} kind="competition">
+            <h3
+              className="line-clamp-2 text-sm font-bold leading-snug text-charcoal-800 dark:text-charcoal-100"
+              title={secondary ? `${primary} / ${secondary}` : primary}
+            >
+              {primary}
+            </h3>
+          </OwnerCrownName>
+          {rank != null && rank > 0 ? (
+            <span
+              className="shrink-0 pt-0.5 text-sm font-bold leading-snug tabular-nums text-charcoal-400 dark:text-charcoal-500"
+              aria-label={`Место ${rank}`}
+            >
+              #{rank}
+            </span>
+          ) : null}
+        </div>
+        <div className="flex min-w-0 shrink-0 items-start gap-1.5 overflow-hidden">
+          <div className="min-w-0 max-w-full">
+            <span
+              className="inline-block max-w-full truncate rounded-md bg-cream-100 px-1.5 py-0.5 text-[10px] font-medium text-charcoal-600 dark:bg-charcoal-700 dark:text-charcoal-300"
+              title={
+                breedDisplay.secondary
+                  ? `${breedDisplay.primary} — ${breedDisplay.secondary}`
+                  : breedDisplay.primary
+              }
+            >
+              {breedDisplay.primary}
+            </span>
+            {breedDisplay.secondary ? (
+              <div className="mt-0.5 truncate text-[9px] font-medium leading-tight text-charcoal-400 dark:text-charcoal-500">
+                {breedDisplay.secondary}
+              </div>
+            ) : null}
+          </div>
           {yearBadge && (
             <span
               title={yearBadge.title}

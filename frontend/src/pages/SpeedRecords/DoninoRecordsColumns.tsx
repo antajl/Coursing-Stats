@@ -1,5 +1,5 @@
 import DoninoListRecordRow from './DoninoListRecordRow'
-import DoninoColumnPlaque from './DoninoColumnPlaque'
+import DoninoColumnPlaque, { DoninoColumnShell } from './DoninoColumnPlaque'
 import { useInfiniteScroll } from '../../hooks/useInfiniteScroll'
 import RecordSortBar from './RecordSortBar'
 
@@ -77,8 +77,8 @@ export default function DoninoRecordsColumns({
   return (
     <div className="space-y-4">
       <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-2 lg:gap-8">
-        <section className="min-w-0">
-          <div className="mb-3 min-h-8">
+        <div className="min-w-0 space-y-3">
+          <div className="min-h-8">
             <RecordSortBar
               options={SPEED_SORT_OPTIONS}
               sortField={speedSortField}
@@ -86,8 +86,9 @@ export default function DoninoRecordsColumns({
               onSort={onSpeedSort}
             />
           </div>
-          <DoninoColumnPlaque title="Замер" count={speedRecords.length} />
-          <div className="flex flex-col gap-2.5">
+          <DoninoColumnShell
+            plaque={<DoninoColumnPlaque asHeader title="Замер" count={speedRecords.length} />}
+          >
             {visibleSpeed.length > 0 ? (
               visibleSpeed.map((record) => (
                 <DoninoListRecordRow
@@ -107,11 +108,11 @@ export default function DoninoRecordsColumns({
             ) : (
               <p className="donino-home-empty">Нет данных</p>
             )}
-          </div>
-        </section>
+          </DoninoColumnShell>
+        </div>
 
-        <section className="min-w-0">
-          <div className="mb-3 min-h-8">
+        <div className="min-w-0 space-y-3">
+          <div className="min-h-8">
             <RecordSortBar
               options={COURSING_SORT_OPTIONS}
               sortField={coursingSortField}
@@ -119,8 +120,11 @@ export default function DoninoRecordsColumns({
               onSort={onCoursingSort}
             />
           </div>
-          <DoninoColumnPlaque title="Бега 350 м" count={coursingRecords.length} />
-          <div className="flex flex-col gap-2.5">
+          <DoninoColumnShell
+            plaque={
+              <DoninoColumnPlaque asHeader title="Бега 350 м" count={coursingRecords.length} />
+            }
+          >
             {visibleCoursing.length > 0 ? (
               visibleCoursing.map((record) => (
                 <DoninoListRecordRow
@@ -138,8 +142,8 @@ export default function DoninoRecordsColumns({
             ) : (
               <p className="donino-home-empty">Нет данных</p>
             )}
-          </div>
-        </section>
+          </DoninoColumnShell>
+        </div>
       </div>
 
       {hasMore && (

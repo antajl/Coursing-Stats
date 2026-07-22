@@ -103,59 +103,15 @@ data/v1/
 
 ## Выставки (Shows) — RKF Shows
 
-Данные выставок хранятся в `data/v1/shows/` и отделены от данных курсинга.
+Данные в `data/v1/shows/`, отдельно от курсинга.
 
-### Структура
+**Ключевые факты:**
+- Лимит Cloudflare Pages **25 MB** на файл → all-time `dog-ranking.json` **не на CDN** (и не копируется `copy-data.js`)
+- На CDN: шарды `dog-ranking-{year}.json`; «все года» — склейка в `getShowDogRanking('')`
+- Календарь UI: `shows/calendar/{year}.json` (лёгкий список); полные протоколы — `exhibitions/*.json`
+- Сборка: `build-show-indexes.ts` (из `npm run build-all-data`)
 
-```
-shows/
-├── exhibitions/              # файлы выставок (breed_catalog, results)
-│   └── {date}-{id}-{title}.json
-└── indexes/                  # ⚠️ генерируется, не править вручную
-    ├── dog-ranking-{year}.json  # рейтинг собак по годам (2017-2026, unknown)
-    ├── dog-ranking.json          # all-time рейтинг (исключён из деплоя, >25 MB)
-    └── judges.json                # индекс судей выставок
-```
-
-### Файл выставки
-
-Каждый файл выставки содержит:
-- Метаданные: `id`, `date`, `title`, `location`, `rank`, `type`, `club`, `judges[]`
-- `breed_catalog[]`: каталог пород с титулами (BOB, ЛК, ЛС и т.д.)
-- `results[]`: детальные результаты всех собак (класс, место, оценка, судья, очки)
-
-### Рейтинг собак
-
-**Проблема:** `dog-ranking.json` (all-time) ~73.7 MB превышает лимит Cloudflare Pages 25 MB.
-
-**Решение:** Разделение по годам
-
-| Файл | Размер | Описание |
-|-------|--------|----------|
-| `dog-ranking-{year}.json` | ~2–6 MB (compact) | Рейтинг за год — **основной формат на CDN** |
-| `dog-ranking-unknown.json` | ~14 MB | Выставки без распознанной даты |
-| `dog-ranking.json` | ~60+ MB | All-time: только локально / сборка; **не в git и не на Pages** (>25 MB лимит файла) |
-| `calendar/{year}.json` | малый | Список выставок для UI календаря (не полные протоколы) |
-
-Сборка: `build-show-indexes.ts` пишет compact JSON + обогащённый календарь (`location`, `judges`, `results_count`, …).
-
-**Unknown:** Выставки без даты или с некорректным форматом даты (функция `extractYear()` не смогла распознать год из поля `date`).
-
-### Генерация
-
-```bash
-npm run build-all-data  # запускает build-show-indexes.ts
-```
-
-Скрипт: `backend/scripts/build-show-indexes.ts`
-
-### Фронтенд
-
-- `getShowDogRanking(year)` — год → `dog-ranking-{year}.json`; без года → склейка годовых шардов (all-time файл на CDN нет)
-- UI по умолчанию: текущий сезон (как у судей)
-- `getShowCalendar()` — параллельно `shows/calendar/{year}.json` (лёгкий список); полный протокол только на `/shows/exhibition/:id`
-- `copy-data.js` исключает `shows/indexes/dog-ranking.json` из Pages
-- `ShowDogProfile.tsx` — поиск по годовым/склеенным индексам
+Канон (структура, парсинг lc.rkfshow.ru, CDN/UI, скрипты): **[`SHOWS.md`](SHOWS.md)**.
 
 ---
 
@@ -261,54 +217,34 @@ CS  = round(μ̃ + P + E, 2)                   # rating_score
 
 **Сброс «Фильтры»** на рейтинге возвращает год к текущему сезону (`CURRENT_SEASON`), породу — к «все породы».
 
----
+### Канон и отображение (`breedMapping`)
+
+Код: `frontend/src/lib/breedMapping.ts`. Алиасы и `canonicalBreed` — синхронно в `backend/src/lib/breed-mapping.ts` (индексы/фильтры). **`displayBreed` — только фронт** (UI).
+
+| Функция | Назначение |
+|---------|------------|
+| `breedAliasKey` / `canonicalBreed` | Нормализованный **UPPERCASE**-канон для фильтров и сравнения (регистр/ё/«К Ш»→«К-Ш») |
+| `displayBreed` | UI: `{ primary, secondary? }` — sentence case + обиходные подписи (`DogCard`, `ShowDogCard`, шапка профиля) |
+| `matchesBreedFilter` | Сравнение через канон, не через сырой ALL CAPS из протокола |
+
+**Правила (не путать с синонимами написания):**
+
+- Склеиваем только разное написание одной породы (левретка ↔ малая итальянская борзая и т.п.).
+- **Не** склеиваем тип шерсти / размер / окрас, если в РКФ/FCI это разные ринги (выжла К-Ш ≠ Ж-Ш, НО К-Ш ≠ Д-Ш, папийон ≠ фален…).
+- Без типа шерсти: `Выжла` / `Венгерская выжла` → канон `… (ТИП НЕ УКАЗАН)` (**не** в К-Ш); то же для голой `Немецкая овчарка`. Комбинированный `НЕМЕЦКАЯ ОВЧАРКА (Д-Ш, К-Ш)` — отдельный канон.
+- UI: sentence case, не капс РКФ. Паттерн «Левретка» + мелкая официальная подпись — также малинуа, кане-корсо, гальго.
+- Справочник `/guide?tab=shows` → «Особенности» → «Названия пород на сайте».
+
+Выставки: склейка «порода+судья» в сырых `exhibitions/*.json` чистится при сборке индексов — см. [`SHOWS.md`](SHOWS.md) → Build Pipeline.
 
 ## Диагностика: локально есть данные, на проде пусто
 
-**Симптом:** календарь и события на [coursing-stats.ru](https://coursing-stats.ru) работают, а **рейтинг**, **судьи** и иногда кажется, что **Донино** — пустые. Локально (`npm run dev`) всё в порядке.
+**Симптом:** рейтинг/судьи пустые на проде при живом календаре; локально всё ок.  
+**Типичная причина:** snapshot `pc-db.sqlite` с `results: 0` → пустые indexes на CDN (`count: 0`, HTTP 200).
 
-**Причина (типичная):** CI при деплое запускает `build-all-data` → `build-derived-indexes`, который читает **`data/v1/pc-db.sqlite`**. Если в snapshot **нет строк в `results`**, индексы (`indexes/top-*`, `judges-summary`, `dog-profiles/`) перезаписываются **пустыми** и уезжают на CDN — при этом HTTP 200 и валидный JSON с `"count": 0`.
+Полная процедура (цепочка сборки, curl, CI, `loadCompetitions`): **[`03a-DATA-DIAGNOSTICS.md`](03a-DATA-DIAGNOSTICS.md)**.
 
-Публичный сайт читает именно **индексы**, не `competitions/*.json` напрямую (рейтинг/судьи). Донино читает `donino/*.json` — они не зависят от `results` в sqlite; если Донино пусто, проверьте отдельно файл на CDN.
-
-### Цепочка сборки (важно для ИИ)
-
-```
-data/v1/competitions/*.json  (results[] внутри файлов)
-        │
-        ▼  build-data-snapshot  →  load-sqlite.ts  →  pc-db.sqlite
-        │
-        ▼  build-derived-indexes.ts  (SQL по results)
-        │
-        ▼  data/v1/indexes/*.json  →  CI  →  coursing-stats.ru/data/v1/
-```
-
-**Критично:** `backend/lib/local-data/load-sqlite.ts` → `loadCompetitions()` должен загружать **`results`** из каждого `competitions/...json` (поля `dog_id`, `event_id`, вложенный `dog`). Без этого snapshot на CI имеет `results: 0`.
-
-### Быстрая проверка прода
-
-```bash
-# PowerShell / curl — смотреть count, не только HTTP 200
-curl -s https://coursing-stats.ru/data/v1/indexes/judges-summary.json | head -c 200
-curl -s https://coursing-stats.ru/data/v1/indexes/top-placement-2026.json | head -c 200
-```
-
-Ожидается `"count"` > 0 и непустые массивы `judges` / `items`.
-
-### Быстрая проверка локально перед push
-
-```bash
-npm run build-data-snapshot    # в логе: results: > 0 (ориентир ~3000+)
-npm run build-all-data         # падает, если индексы пустые
-npx vitest run backend/tests/static-indexes.test.ts
-```
-
-### Защита в CI
-
-- `build-all-data.ts` — `assertNonEmptyIndex` для `top-placement-all` и `judges-summary`
-- `.github/workflows/deploy-frontend.yml` — `static-indexes.test.ts` после `build-all-data`
-
-Подробнее: [`19-HISTORY.md`](19-HISTORY.md) (2026-07-09), skill `.cursor/skills/coursing-stats-dev/data-build-pipeline.md` (или `.devin/skills/coursing-stats-dev/SKILL.md`).
+Кратко перед push: `npm run build-data-snapshot` (`results > 0`) → `npm run build-all-data` → `static-indexes.test.ts`.
 
 ---
 
@@ -360,7 +296,7 @@ git commit && push
 ```
 
 Подробно про D1: `docs/12-DATABASE-SCHEMA.md` (схема) и `docs/13-DATABASE-WORKFLOW.md` (workflow).  
-Бэкап-снимки D1: `docs/archive/02-MIGRATION-TO-STATIC-DATA.md` (`npm run export-archive`).
+Бэкап-снимки D1: раздел «Data Archive» ниже (`npm run export-archive`).
 
 ---
 
@@ -445,13 +381,15 @@ D1 remote может отличаться — только для импорта
 | Документ | Когда читать |
 |----------|--------------|
 | `docs/02-ARCHITECTURE.md` | Общая архитектура, компоненты |
-| `docs/12-DATABASE-SCHEMA.md` | Схема D1 |
-| `docs/13-DATABASE-WORKFLOW.md` | Миграции, sync |
+| `docs/03a-DATA-DIAGNOSTICS.md` | Пустой рейтинг/судьи на проде |
+| `docs/12-DATABASE-SCHEMA.md` | Legacy схема D1 (только импорт) |
+| `docs/13-DATABASE-WORKFLOW.md` | Legacy D1 workflow (только импорт) |
 | `docs/14-PARSING-RULES.md` | Правила парсеров procoursing.ru |
 | `docs/15-PARSING-IMPLEMENTATION.md` | Детали парсеров |
 | `docs/05-API-REFERENCE.md` | Эндпоинты локального API |
-| `docs/09-SPEED-RECORDS.md` | Донино, Google Sheets |
-| `docs/19-HISTORY.md` | Почему CDN, не Worker |
+| `docs/09-SPEED-RECORDS.md` | Донино: модель и UI |
+| `docs/09a-DONINO-PIPELINE.md` | Донино: Sheets → CDN |
+| `docs/SHOWS.md` | Выставки CDN/UI/парсинг |
 
 ---
 

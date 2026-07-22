@@ -1,4 +1,5 @@
 import { useMemo } from 'react'
+import RKFAttribution from '../../components/RKFAttribution'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarFiltersDropdown from '../../components/toolbar/ToolbarFiltersDropdown'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
@@ -8,13 +9,22 @@ import {
   TOOLBAR_CHIP_IDLE,
   TOOLBAR_FILTER_CHECKBOX_ROW,
   TOOLBAR_FILTER_SECTION_LABEL,
+  TOOLBAR_NUMBER_INPUT,
 } from '../../lib/toolbar'
+import {
+  SHOW_AWARD_BADGE,
+  SHOW_FILTER_AWARD_KEYS,
+  type ShowAwardKey,
+} from '../../../../backend/lib/show-award-ranking'
+
+export type ShowAwardMinFilters = Partial<Record<ShowAwardKey, string>>
 
 interface ShowRankingFiltersProps {
   searchQuery: string
   onSearchChange: (value: string) => void
   filterYear: string
   onYearChange: (value: string) => void
+  currentSeason: string
   yearValues: string[]
   filterBreed: string
   onBreedChange: (value: string) => void
@@ -22,6 +32,8 @@ interface ShowRankingFiltersProps {
   filterGroup: string
   onGroupChange: (value: string) => void
   groupValues: string[]
+  awardMins: ShowAwardMinFilters
+  onAwardMinChange: (key: ShowAwardKey, value: string) => void
   onResetFilters: () => void
   onResetPanelFilters: () => void
   dropdownRef?: React.RefObject<HTMLDivElement>
@@ -32,6 +44,7 @@ export default function ShowRankingFilters({
   onSearchChange,
   filterYear,
   onYearChange,
+  currentSeason,
   yearValues,
   filterBreed,
   onBreedChange,
@@ -39,17 +52,21 @@ export default function ShowRankingFilters({
   filterGroup,
   onGroupChange,
   groupValues,
+  awardMins,
+  onAwardMinChange,
   onResetFilters,
   onResetPanelFilters,
   dropdownRef,
 }: ShowRankingFiltersProps) {
   const sortedYears = useMemo(
     () => [...yearValues].sort((a, b) => Number(b) - Number(a)),
-    [yearValues]
+    [yearValues],
   )
 
-  const hasActiveFilters = Boolean(filterYear) || filterBreed || filterGroup || searchQuery
-  const hasPanelFilters = Boolean(filterYear || filterBreed || filterGroup)
+  const hasAwardMins = SHOW_FILTER_AWARD_KEYS.some((key) => Boolean(awardMins[key]))
+  const hasActiveFilters =
+    Boolean(filterYear) || filterBreed || filterGroup || searchQuery || hasAwardMins
+  const hasPanelFilters = Boolean(filterYear || filterBreed || filterGroup || hasAwardMins)
 
   const activeFilterChips = useMemo(() => {
     const chips = []
@@ -78,8 +95,26 @@ export default function ShowRankingFilters({
       })
     }
 
+    for (const key of SHOW_FILTER_AWARD_KEYS) {
+      if (!awardMins[key]) continue
+      chips.push({
+        key: `min-${key}`,
+        label: `${SHOW_AWARD_BADGE[key]} ≥ ${awardMins[key]}`,
+        onRemove: () => onAwardMinChange(key, ''),
+      })
+    }
+
     return chips
-  }, [filterYear, filterBreed, filterGroup, onYearChange, onBreedChange, onGroupChange])
+  }, [
+    filterYear,
+    filterBreed,
+    filterGroup,
+    awardMins,
+    onYearChange,
+    onBreedChange,
+    onGroupChange,
+    onAwardMinChange,
+  ])
 
   const handleYearToggle = (year: string) => {
     onYearChange(filterYear === year ? '' : year)
@@ -97,6 +132,7 @@ export default function ShowRankingFilters({
     <div className="mb-4" ref={dropdownRef}>
       <PageToolbar
         bare
+        trailing={<RKFAttribution />}
         activeFilterChips={activeFilterChips}
         onClearAllFilters={hasActiveFilters ? onResetFilters : undefined}
         filters={
@@ -158,7 +194,34 @@ export default function ShowRankingFilters({
                     ))}
                   </div>
                 </div>
+                <div>
+                  <p className={TOOLBAR_FILTER_SECTION_LABEL}>Награды (минимум)</p>
+                  <div className="space-y-2">
+                    {SHOW_FILTER_AWARD_KEYS.map((key) => (
+                      <input
+                        key={key}
+                        type="number"
+                        min={0}
+                        inputMode="numeric"
+                        placeholder={`Мин. ${SHOW_AWARD_BADGE[key]}`}
+                        value={awardMins[key] || ''}
+                        onChange={(e) =>
+                          onAwardMinChange(key, e.target.value.replace(/[^0-9]/g, ''))
+                        }
+                        className={`${TOOLBAR_NUMBER_INPUT} w-full`}
+                      />
+                    ))}
+                  </div>
+                </div>
               </ToolbarFiltersDropdown>
+              <button
+                type="button"
+                onClick={() => onYearChange(filterYear === currentSeason ? '' : currentSeason)}
+                aria-pressed={filterYear === currentSeason}
+                className={`${TOOLBAR_CHIP} ${filterYear === currentSeason ? TOOLBAR_CHIP_ACTIVE : TOOLBAR_CHIP_IDLE}`}
+              >
+                Сезон {currentSeason}
+              </button>
             </div>
           </>
         }

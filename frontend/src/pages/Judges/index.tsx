@@ -121,6 +121,7 @@ export default function Judges() {
       <div className="mb-4">
         <PageToolbar
           bare
+          trailing={<ProcoursingAttribution />}
           activeFilterChips={activeFilterChips}
           onClearAllFilters={hasActiveFilters ? clearFilters : undefined}
           filters={
@@ -191,8 +192,6 @@ export default function Judges() {
           ))}
         </div>
       )}
-
-      {!isEmbedded && <ProcoursingAttribution className="mt-6" />}
     </div>
   )
 }

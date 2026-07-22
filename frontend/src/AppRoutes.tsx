@@ -5,13 +5,13 @@ import PageLoader from './components/PageLoader';
 const Home = lazy(() => import('./pages/Home'));
 const Competitions = lazy(() => import('./pages/Competitions'));
 const Shows = lazy(() => import('./pages/Shows'));
+const ShowDogProfile = lazy(() => import('./pages/Shows/ShowDogProfile'));
 const UnifiedDogProfile = lazy(() => import('./pages/UnifiedDogProfile'));
 const SpeedRecords = lazy(() => import('./pages/SpeedRecords/index'));
 const DoninoDogProfile = lazy(() => import('./pages/DoninoDogProfile'));
 const Guide = lazy(() => import('./pages/Guide'));
 const JudgeDetail = lazy(() => import('./pages/Judges/JudgeDetail'));
 const ShowExhibitionDetail = lazy(() => import('./pages/Shows/ShowExhibitionDetail'));
-const ShowChampions = lazy(() => import('./pages/Shows/ShowChampions'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 function LegacyProcoursingRedirect() {
@@ -39,11 +39,6 @@ function LegacyExhibitionRedirect() {
   return <Navigate to={`/shows/exhibition/${id}`} replace />;
 }
 
-function LegacyShowDogRedirect() {
-  const { dogId } = useParams<{ dogId: string; breed: string }>();
-  return <Navigate to={`/dog/${dogId}?tab=shows`} replace />;
-}
-
 export default function AppRoutes() {
   return (
     <Suspense fallback={<PageLoader />}>
@@ -53,8 +48,8 @@ export default function AppRoutes() {
         <Route path="/procoursing" element={<LegacyProcoursingRedirect />} />
         <Route path="/shows" element={<Shows />} />
         <Route path="/shows/exhibition/:id" element={<ShowExhibitionDetail />} />
-        <Route path="/shows/champions" element={<ShowChampions />} />
-        <Route path="/shows/dog/:dogId/:breed" element={<LegacyShowDogRedirect />} />
+        <Route path="/shows/champions" element={<Navigate to="/shows?tab=ranking" replace />} />
+        <Route path="/shows/dog/:dogId/:breed" element={<ShowDogProfile />} />
         <Route path="/exhibition/:id" element={<LegacyExhibitionRedirect />} />
         <Route path="/top" element={<LegacyTopRedirect />} />
         <Route path="/dog/:id" element={<UnifiedDogProfile />} />

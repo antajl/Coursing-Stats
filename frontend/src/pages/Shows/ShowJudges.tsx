@@ -1,53 +1,40 @@
-import { useState, useEffect } from 'react'
-import { useSearchParams } from 'react-router-dom'
+import { useState, useEffect, useMemo } from 'react'
 import SkeletonLoader from '../../components/SkeletonLoader'
+import RKFAttribution from '../../components/RKFAttribution'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
-import { getShowJudges } from '../../lib/staticData'
+import { getShowJudges, type ShowJudge } from '../../lib/staticData'
 import type { ActiveFilterChip } from '../../components/toolbar/ToolbarActiveFilters'
 
-interface ShowJudge {
-  name: string
-  total_judged: number
-  breeds: string[]
-}
-
 export default function ShowJudges() {
-  const [searchParams, setSearchParams] = useSearchParams()
   const [loading, setLoading] = useState(true)
   const [judges, setJudges] = useState<ShowJudge[]>([])
-  const [searchQuery, setSearchQuery] = useState(() => searchParams.get('search') || '')
-  const [filterYear, setFilterYear] = useState(() => searchParams.get('year') || '2026')
+  const [searchQuery, setSearchQuery] = useState('')
 
   useEffect(() => {
     const loadData = async () => {
       setLoading(true)
       const result = await getShowJudges()
       if (result.success && result.data) {
-        // Convert string array to ShowJudge format
-        const judgesData = result.data.map(name => ({
-          name,
-          total_judged: 0,
-          breeds: []
-        }))
-        setJudges(judgesData)
+        setJudges(result.data)
       }
       setLoading(false)
     }
     loadData()
   }, [])
 
-  const filteredJudges = judges.filter(judge => {
-    if (searchQuery) {
-      const query = searchQuery.toLowerCase()
-      return judge.name.toLowerCase().includes(query)
-    }
-    return true
-  })
+  const filteredJudges = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase()
+    if (!q) return judges
+    return judges.filter(
+      (judge) =>
+        judge.name.toLowerCase().includes(q) ||
+        judge.breeds.some((b) => b.toLowerCase().includes(q)),
+    )
+  }, [judges, searchQuery])
 
   const handleResetFilters = () => {
     setSearchQuery('')
-    setFilterYear('2026')
   }
 
   const activeFilterChips: ActiveFilterChip[] = []
@@ -61,16 +48,17 @@ export default function ShowJudges() {
   }
 
   return (
-    <div className="max-w-full mx-auto pb-2 sm:pb-4">
+    <div className="max-w-full mx-auto space-y-4 pb-2 sm:pb-4">
       <PageToolbar
         bare
+        trailing={<RKFAttribution />}
         activeFilterChips={activeFilterChips}
         onClearAllFilters={searchQuery ? handleResetFilters : undefined}
         filters={
           <ToolbarSearch
             value={searchQuery}
             onChange={setSearchQuery}
-            placeholder="Судья…"
+            placeholder="Судья, порода…"
             className="!w-auto min-w-[200px] flex-1 max-w-lg"
           />
         }
@@ -104,7 +92,7 @@ export default function ShowJudges() {
             <tbody>
               {filteredJudges.map((judge, index) => (
                 <tr
-                  key={index}
+                  key={judge.name}
                   className="border-b border-cream-200 dark:border-charcoal-700 hover:bg-old-money-50 dark:hover:bg-charcoal-700 transition-colors"
                 >
                   <td className="px-4 py-3 text-sm text-charcoal-900 dark:text-charcoal-100 font-semibold">
@@ -113,11 +101,19 @@ export default function ShowJudges() {
                   <td className="px-4 py-3 text-sm text-charcoal-900 dark:text-charcoal-100">
                     {judge.name}
                   </td>
-                  <td className="px-4 py-3 text-sm text-center text-charcoal-900 dark:text-charcoal-100">
+                  <td className="px-4 py-3 text-sm text-center tabular-nums text-charcoal-900 dark:text-charcoal-100">
                     {judge.total_judged}
                   </td>
                   <td className="px-4 py-3 text-sm text-charcoal-700 dark:text-charcoal-300">
-                    {judge.breeds.join(', ')}
+                    {judge.breeds.length > 0 ? (
+                      <span title={judge.breeds.join(', ')}>
+                        {judge.breeds.length <= 4
+                          ? judge.breeds.join(', ')
+                          : `${judge.breeds.slice(0, 3).join(', ')} +${judge.breeds.length - 3}`}
+                      </span>
+                    ) : (
+                      <span className="text-charcoal-400 dark:text-charcoal-500">—</span>
+                    )}
                   </td>
                 </tr>
               ))}

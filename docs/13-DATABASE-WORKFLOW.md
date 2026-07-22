@@ -1,6 +1,7 @@
 # Database Workflow — Импорт и legacy D1
 
-> **Runtime:** только [`03-DATA.md`](03-DATA.md) (`data/v1/`). D1 / `dev:d1` / `export-local-data` / `sync-from-remote` — **legacy**; многих npm-скриптов уже нет в `package.json`.  
+> **LEGACY — читать только для задач D1 / импорта.**  
+> Runtime: [`03-DATA.md`](03-DATA.md) (`data/v1/`). D1 / `dev:d1` / `export-local-data` / `sync-from-remote` — **legacy**; многих npm-скриптов уже нет в `package.json`.  
 > Схема таблиц: [12-DATABASE-SCHEMA.md](12-DATABASE-SCHEMA.md).
 
 Актуальный локальный путь: парсеры → SQLite → `npm run sync-sqlite-to-v1` → `npm run build-all-data`.
@@ -227,11 +228,12 @@ npm run build-all-data
 git commit   # dogs/ + indexes/dog-profiles/
 ```
 
-Подробно: [`03-DATA.md`](03-DATA.md) → «Breed Archive и pedigree_url». Changelog: [`19-CHANGELOG.md`](19-CHANGELOG.md) (2026-07-11).
+Подробно: [`03-DATA.md`](03-DATA.md) → «Breed Archive и pedigree_url».
+
 
 **Файлы:** `backend/lib/breedarchive.ts`, `backend/scripts/enrich/enrich-breedarchive-urls.ts`.
 
-**Файловый бэкап:** `npm run export-archive` — см. [`03-DATA.md`](03-DATA.md), [`archive/02-MIGRATION-TO-STATIC-DATA.md`](archive/02-MIGRATION-TO-STATIC-DATA.md).
+**Файловый бэкап:** `npm run export-archive` — см. [`03-DATA.md`](03-DATA.md) → «Data Archive».
 
 **Таблица `judges`:** на remote **отсутствует**; статистика судей агрегируется из `events.judges` и `results.raw_scores`. Отдельная materialized-таблица — в планах (`FUTURE-PLANS.md`).
 

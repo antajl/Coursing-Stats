@@ -27,11 +27,13 @@
 
 1. **`docs/README.md`** — карта документов по задаче
 2. **`docs/00-AI-GUIDE.md`** — этот файл
-3. **`docs/03-DATA.md`** — runtime `data/v1/`, workflow, диагностика
+3. **`docs/03-DATA.md`** — runtime `data/v1/`, workflow
 4. **`docs/02-ARCHITECTURE.md`** — компоненты и стек (при архитектурных вопросах)
 5. **По задаче** — один файл из таблицы в README (не все подряд)
 
-**Runbook (деплой, прод сломан):** [`20-OPERATIONS.md`](20-OPERATIONS.md)
+**Runbook (деплой, прод сломан):** [`20-OPERATIONS.md`](20-OPERATIONS.md)  
+**Пустой рейтинг на проде:** [`03a-DATA-DIAGNOSTICS.md`](03a-DATA-DIAGNOSTICS.md)  
+**Донино пайплайн:** [`09a-DONINO-PIPELINE.md`](09a-DONINO-PIPELINE.md)
 
 ---
 
@@ -40,11 +42,17 @@
 | Тип информации | Канонический файл | В других файлах |
 |----------------|-------------------|-----------------|
 | Данные, enrich, indexes | `03-DATA.md` | 1–3 строки + ссылка |
+| Диагностика пустых indexes | `03a-DATA-DIAGNOSTICS.md` | ссылка |
 | Деплой, чеклисты | `20-OPERATIONS.md` | ссылка |
+| SEO | `07-SEO.md` | ссылка |
+| Донино модель/UI | `09-SPEED-RECORDS.md` | ссылка |
+| Донино Sheets→CDN | `09a-DONINO-PIPELINE.md` | ссылка |
+| Выставки | `SHOWS.md` | кратко в `03-DATA.md` |
 | UI-паттерны | `18-CODE-PATTERNS.md`, `04-FRONTEND.md` | ссылка |
 | Симптом → fix | `16-TROUBLESHOOTING.md` | процедура в каноне, здесь кратко |
+| D1 схема/workflow | `12` / `13` — **LEGACY**, только импорт | |
 
-При значимых изменениях обновляй **канон**, в HISTORY/CHANGELOG — запись со ссылкой, не копируй абзацы.
+При значимых изменениях обновляй **канон**, не копируй абзацы.
 
 ---
 
@@ -54,13 +62,13 @@
 2. **`data/v1/` в git** — источник правды для прода.
 3. **Импорт данных:** парсеры → локальная SQLite (`node-data-store`) → `npm run sync-sqlite-to-v1` → `data/v1/` → `npm run build-all-data`. D1 в runtime **не используется**.
 4. **Админка** — только локально: UI `:5173/admin`, API `:8787`.
-5. **`build-all-data`** — пересобирает `indexes/`, sitemap; CI при push. Snapshot: **`results > 0`**, иначе пустой рейтинг на проде → [`03-DATA.md`](03-DATA.md) → «Диагностика», [`20-OPERATIONS.md`](20-OPERATIONS.md).
+5. **`build-all-data`** — пересобирает `indexes/`, sitemap; CI при push. Snapshot: **`results > 0`**, иначе пустой рейтинг на проде → [`03a-DATA-DIAGNOSTICS.md`](03a-DATA-DIAGNOSTICS.md), [`20-OPERATIONS.md`](20-OPERATIONS.md).
 6. **Два топа** — медали и очки, **не смешивать**. Очки: сортировка по **`rating_score` (индекс CS)**, не по `best_score`.
 7. **`total_score`** = `grand_total` как есть, **не делить** на число судей.
 8. **API путь** `/api/competitions`, не `/api/events` (uBlock).
-9. **Донино:** `speed_records` (км/ч) и `coursing_records` (сек) — разные источники.
+9. **Донино:** `speed_records` (км/ч) и `coursing_records` (сек) — разные источники. Модель: [`09-SPEED-RECORDS.md`](09-SPEED-RECORDS.md); пайплайн: [`09a-DONINO-PIPELINE.md`](09a-DONINO-PIPELINE.md).
 10. **procoursing.ru** — windows-1251, `fetch-win1251.ts`.
-11. **Публичный UI (вариант A):** на проде нет календаря и `/event/:id` — только рейтинг/судьи/профили; протоколы → procoursing.ru; локально `/admin/calendar`, `/admin/event/:id`. См. [`19-HISTORY.md`](19-HISTORY.md).
+11. **Публичный UI (вариант A):** на проде нет календаря и `/event/:id` — только рейтинг/судьи/профили; протоколы → procoursing.ru; локально `/admin/calendar`, `/admin/event/:id`.
 
 ---
 
@@ -85,18 +93,17 @@
 | Парсер (детали) | `15-PARSING-IMPLEMENTATION.md` |
 | Тест парсера | `npm run test-parser-fixtures` |
 | Деплой / прод сломан | [`20-OPERATIONS.md`](20-OPERATIONS.md) |
-| Пустой рейтинг/судьи | `03-DATA.md` → «Диагностика»; `16-TROUBLESHOOTING.md` |
-| D1 схема | `12-DATABASE-SCHEMA.md` |
-| D1 workflow | `13-DATABASE-WORKFLOW.md` |
-| Новая страница | `04-FRONTEND.md`; `AppRoutes.tsx`, `SEO.tsx`, `build-derived-indexes.ts` |
-| Донино | `09-SPEED-RECORDS.md`, `donino/*.json` |
+| Пустой рейтинг/судьи | [`03a-DATA-DIAGNOSTICS.md`](03a-DATA-DIAGNOSTICS.md); `16-TROUBLESHOOTING.md` |
+| D1 схема (legacy) | `12-DATABASE-SCHEMA.md` |
+| D1 workflow (legacy) | `13-DATABASE-WORKFLOW.md` |
+| Новая страница | `04-FRONTEND.md`; `AppRoutes.tsx`, `SEO.tsx`, `build-derived-indexes.ts`; SEO: `07-SEO.md` |
+| Донино | `09-SPEED-RECORDS.md`, `09a-DONINO-PIPELINE.md`, `donino/*.json` |
+| Выставки | `SHOWS.md` |
 | Breed Archive | `03-DATA.md` → «Breed Archive»; `npm run enrich-breedarchive-urls` |
 | Фильтр пород в рейтинге | `03-DATA.md` → «Породы в UI»; `useCompetingBreeds` |
 | Карта фронтенда | [`04-FRONTEND.md`](04-FRONTEND.md) |
-| Скрипты, npm, CI | [`04-DEVELOPMENT.md`](04-DEVELOPMENT.md) |
+| Скрипты, npm | [`04-DEVELOPMENT.md`](04-DEVELOPMENT.md) |
 | Паттерны кода | `18-CODE-PATTERNS.md` |
-| Решения (ADR) | `19-HISTORY.md` |
-| Changelog | `19-CHANGELOG.md` |
 
 ---
 
@@ -112,7 +119,7 @@ npm run test-parser-fixtures
 npm test
 ```
 
-Windows: `scripts/start-servers.bat`, `scripts/deploy-to-github.bat`
+Windows: `scripts/start-servers.bat`, `scripts/deploy-to-github.bat`, `scripts/update-donino.bat`
 
 ---
 

@@ -1,53 +1,25 @@
+import { useLayoutEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import HoverTooltip from '../../components/ui/HoverTooltip'
-import { titleBadgeClass } from '../../lib/qualificationTitles'
+import OwnerCrownName from '../../components/OwnerCrownName'
+import { DOG_CARD_HEIGHT_CLASS } from '../../components/DogCard'
+import { parseDogName } from '../../lib/dogName'
+import { displayBreed } from '../../lib/breedMapping'
+import { showYearBadge } from '../../lib/season'
+import { renderShowAwardChips } from '../../lib/awardChipRender'
 import {
-  SHOW_AWARD_LABELS,
-  SHOW_AWARD_ORDER,
-  type ShowAwardKey,
+  groupShowAwardsByCategory,
+  presentShowAwards,
+  SHOW_AWARD_BADGE,
+  SHOW_AWARD_CATEGORY,
   type ShowTitleCounts,
 } from '../../../../backend/lib/show-award-ranking'
-
-function RankMark({ rank }: { rank: number }) {
-  const top =
-    rank === 1
-      ? 'bg-camel-200 text-camel-900 ring-2 ring-camel-400 dark:bg-camel-800 dark:text-camel-100 dark:ring-camel-500'
-      : rank === 2
-        ? 'bg-old-money-200 text-charcoal-800 ring-1 ring-old-money-400 dark:bg-charcoal-600 dark:text-charcoal-100'
-        : rank === 3
-          ? 'bg-terra-100 text-terra-900 ring-1 ring-terra-300 dark:bg-terra-950/50 dark:text-terra-200'
-          : 'bg-cream-100 text-charcoal-600 dark:bg-charcoal-700 dark:text-charcoal-300'
-
-  return (
-    <div
-      className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-sm font-bold tabular-nums ${top}`}
-      aria-label={`Место ${rank}`}
-    >
-      {rank}
-    </div>
-  )
-}
-
-function ShowAwardChip({ abbr, count }: { abbr: ShowAwardKey; count: number }) {
-  const label = SHOW_AWARD_LABELS[abbr]
-  return (
-    <HoverTooltip label={label} placement="top">
-      <span
-        className={`inline-flex items-center gap-1 rounded-md px-2.5 py-1 text-sm font-semibold tabular-nums ${titleBadgeClass(abbr)}`}
-        tabIndex={0}
-      >
-        {abbr}
-        <span className="text-[11px] font-bold opacity-80">×{count}</span>
-      </span>
-    </HoverTooltip>
-  )
-}
 
 export interface ShowDogCardData {
   id: string
   name_lat: string
   name_ru: string
   breed: string
+  breed_en?: string
   breed_group?: string
   sex: string
   total_shows: number
@@ -55,62 +27,195 @@ export interface ShowDogCardData {
   best_award?: string | null
   rank_score?: number
   titles: ShowTitleCounts
+  competition_dog_id?: number | null
+  history?: Array<{
+    date: string
+    exhibition_id: number
+    exhibition_title?: string
+    placement: number
+    title?: string
+  }>
 }
 
 interface ShowDogCardProps {
   dog: ShowDogCardData
-  rank: number
+  /** Место в полном рейтинге среза (не позиция в фильтре). */
+  rank?: number
+  /**
+   * Год среза рейтинга (как у DogCard.filterYear).
+   * Пусто = все годы → бейдж из history / year_*.
+   */
+  filterYear?: string
 }
 
-export default function ShowDogCard({ dog, rank }: ShowDogCardProps) {
-  const bestKey = (dog.best_award as ShowAwardKey | null) ?? null
-  const bestLabel = bestKey ? SHOW_AWARD_LABELS[bestKey] : null
-  const activeAwards = SHOW_AWARD_ORDER.filter((key) => dog.titles[key] > 0)
+/** Оценка ширины чипа «BADGE ×N» + gap. */
+function estimateChipWidth(badge: string, count: number): number {
+  const label = `${badge}×${count}`
+  // Чуть с запасом: text-[10px] + padding + gap
+  return Math.ceil(label.length * 6.6 + 16 + 4)
+}
+
+function maxAwardsForWidth(
+  width: number,
+  titles: ShowTitleCounts,
+  awards: ReturnType<typeof presentShowAwards>,
+): number {
+  if (awards.length === 0 || width <= 0) return awards.length
+  const groups = groupShowAwardsByCategory(awards)
+  const flat = groups.flatMap((g) => g.keys)
+  const sepW = 8
+  const plusW = 36
+  const budget = width
+
+  let used = 0
+  let count = 0
+  let prevCat: string | null = null
+  for (const key of flat) {
+    const cat = SHOW_AWARD_CATEGORY[key]
+    const chip = estimateChipWidth(SHOW_AWARD_BADGE[key], titles[key] || 0)
+    const sep = prevCat && prevCat !== cat ? sepW : 0
+    const next = used + sep + chip
+    const remaining = flat.length - count - 1
+    if (remaining > 0 && next + plusW > budget) break
+    if (remaining === 0 && next > budget) break
+    used = next
+    prevCat = cat
+    count++
+  }
+  return Math.max(count, Math.min(2, flat.length))
+}
+
+function ShowAwardsRow({
+  titles,
+  totalShows,
+}: {
+  titles: ShowTitleCounts
+  totalShows: number
+}) {
+  const awards = presentShowAwards(titles)
+  const rowRef = useRef<HTMLDivElement>(null)
+  const statsRef = useRef<HTMLDivElement>(null)
+  // 0 до первого measure — иначе все чипы раздувают карточку и RO видит «бесконечную» ширину
+  const [maxVisible, setMaxVisible] = useState(0)
+
+  const awardKey = awards.join(',')
+
+  useLayoutEffect(() => {
+    const row = rowRef.current
+    if (!row || awards.length === 0) {
+      setMaxVisible(0)
+      return
+    }
+
+    const update = () => {
+      const statsW = statsRef.current?.offsetWidth ?? 64
+      // row padding (px-2.5×2) + gap между чипами и колонкой
+      const budget = Math.max(0, row.clientWidth - statsW - 20 - 8)
+      setMaxVisible(maxAwardsForWidth(budget, titles, awards))
+    }
+
+    update()
+    const ro = new ResizeObserver(update)
+    ro.observe(row)
+    return () => ro.disconnect()
+    // awardKey стабилизирует список ключей без новой ссылки на массив каждый рендер
+  }, [awardKey, titles])
 
   return (
-    <Link to={`/dog/${dog.id}?tab=shows`} className="block">
-      <article className="flex gap-3 rounded-xl border border-cream-200 bg-white p-3 shadow-sm transition-all hover:shadow-md hover:border-camel-300 dark:border-charcoal-700 dark:bg-charcoal-800 dark:hover:border-camel-600 sm:gap-4 sm:p-4">
-        <RankMark rank={rank} />
+    <div
+      ref={rowRef}
+      className="flex h-14 min-w-0 w-full max-w-full shrink-0 items-center gap-2 overflow-hidden rounded-lg bg-cream-100 px-2.5 py-1.5 dark:bg-charcoal-700"
+    >
+      <div className="flex min-h-0 min-w-0 flex-1 flex-nowrap items-center gap-1 overflow-hidden">
+        {awards.length > 0 ? (
+          renderShowAwardChips({ titles, maxVisible, nowrap: true })
+        ) : (
+          <span className="text-[10px] text-charcoal-400 dark:text-charcoal-500">Нет наград</span>
+        )}
+      </div>
+      <div
+        ref={statsRef}
+        className="shrink-0 border-l border-old-money-200 pl-2.5 text-right dark:border-charcoal-600"
+      >
+        <p className="text-[9px] uppercase tracking-wide text-charcoal-500 dark:text-charcoal-400">
+          Выставки
+        </p>
+        <p className="text-sm font-bold tabular-nums text-camel-700 dark:text-camel-400">
+          {totalShows || 0}
+        </p>
+      </div>
+    </div>
+  )
+}
 
-        <div className="flex min-w-0 flex-1 flex-col justify-between gap-2">
-          <div className="min-w-0">
+export default function ShowDogCard({ dog, rank, filterYear = '' }: ShowDogCardProps) {
+  const { primary, secondary } = parseDogName(dog.name_lat, dog.name_ru)
+  const breedDisplay = displayBreed(dog.breed)
+  const yearBadge = showYearBadge(dog, filterYear)
+
+  const href =
+    dog.competition_dog_id != null
+      ? `/dog/${dog.competition_dog_id}`
+      : `/shows/dog/${dog.id}/${encodeURIComponent(dog.breed)}`
+
+  return (
+    <Link
+      to={href}
+      className={`relative grid min-w-0 w-full ${DOG_CARD_HEIGHT_CLASS} grid-rows-[minmax(0,1fr)_3.5rem] gap-2 overflow-hidden rounded-xl border border-old-money-200 bg-white p-3 shadow-sm transition-all duration-200 hover:border-camel-300 hover:shadow-md dark:border-charcoal-600 dark:bg-charcoal-800 dark:hover:border-camel-700`}
+    >
+      <div className="flex min-h-0 flex-col justify-end gap-1 overflow-hidden">
+        <div className="flex items-start justify-between gap-3">
+          <OwnerCrownName
+            name={primary}
+            dogId={dog.competition_dog_id ?? null}
+            kind="competition"
+          >
             <h3
-              className="line-clamp-2 text-sm font-bold leading-snug text-charcoal-900 dark:text-charcoal-100 sm:text-base"
-              title={dog.name_lat}
+              className="line-clamp-2 text-sm font-bold leading-snug text-charcoal-800 dark:text-charcoal-100"
+              title={secondary ? `${primary} / ${secondary}` : primary}
             >
-              {dog.name_lat}
+              {primary}
             </h3>
-            {dog.name_ru && (
-              <p className="truncate text-xs text-charcoal-500 dark:text-charcoal-400 sm:text-sm">{dog.name_ru}</p>
-            )}
-            <span className="mt-1 inline-block max-w-full truncate rounded-md bg-cream-100 px-1.5 py-0.5 text-[10px] font-medium text-charcoal-600 dark:bg-charcoal-700 dark:text-charcoal-300">
-              {dog.breed}
+          </OwnerCrownName>
+          {rank != null && rank > 0 ? (
+            <span
+              className="shrink-0 pt-0.5 text-sm font-bold leading-snug tabular-nums text-charcoal-400 dark:text-charcoal-500"
+              aria-label={`Место ${rank}`}
+            >
+              #{rank}
             </span>
-          </div>
-
-          <p className="text-[11px] leading-snug text-charcoal-500 dark:text-charcoal-400">
-            <span className="font-semibold tabular-nums text-charcoal-700 dark:text-charcoal-300">{dog.total_shows}</span>{' '}
-            {dog.total_shows === 1 ? 'выставка' : dog.total_shows < 5 ? 'выставки' : 'выставок'}
-            {bestLabel && (
-              <>
-                {' '}
-                · лучшая:{' '}
-                <span className="font-semibold text-camel-700 dark:text-camel-400">{dog.best_award}</span>
-              </>
-            )}
-          </p>
+          ) : null}
         </div>
-
-        <div className="flex shrink-0 flex-col items-end justify-center gap-1.5">
-          <div className="flex max-w-[11rem] flex-wrap justify-end gap-1.5 sm:max-w-none">
-            {activeAwards.length > 0 ? (
-              activeAwards.map((key) => <ShowAwardChip key={key} abbr={key} count={dog.titles[key]} />)
-            ) : (
-              <span className="text-xs text-charcoal-400 dark:text-charcoal-500">—</span>
-            )}
+        <div className="flex min-w-0 shrink-0 items-start gap-1.5 overflow-hidden">
+          <div className="min-w-0 max-w-full">
+            <span
+              className="inline-block max-w-full truncate rounded-md bg-cream-100 px-1.5 py-0.5 text-[10px] font-medium text-charcoal-600 dark:bg-charcoal-700 dark:text-charcoal-300"
+              title={
+                breedDisplay.secondary
+                  ? `${breedDisplay.primary} — ${breedDisplay.secondary}`
+                  : breedDisplay.primary
+              }
+            >
+              {breedDisplay.primary}
+            </span>
+            {breedDisplay.secondary ? (
+              <div className="mt-0.5 truncate text-[9px] font-medium leading-tight text-charcoal-400 dark:text-charcoal-500">
+                {breedDisplay.secondary}
+              </div>
+            ) : null}
           </div>
+          {yearBadge && (
+            <span
+              title={yearBadge.title}
+              className="shrink-0 whitespace-nowrap rounded-md bg-camel-100 px-1.5 py-0.5 text-[11px] font-semibold text-camel-700 dark:bg-charcoal-700 dark:text-camel-400"
+            >
+              {yearBadge.label}
+            </span>
+          )}
         </div>
-      </article>
+      </div>
+
+      <ShowAwardsRow titles={dog.titles} totalShows={dog.total_shows} />
     </Link>
   )
 }

@@ -394,7 +394,7 @@ export default function JudgeDetail() {
         )}
       </div>
 
-      <ProcoursingAttribution className="mt-8" />
+      <ProcoursingAttribution className="mt-8 text-center" />
     </div>
     </>
   )

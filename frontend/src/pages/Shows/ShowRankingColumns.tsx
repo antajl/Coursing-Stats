@@ -2,9 +2,17 @@ import { useInfiniteScroll } from '../../hooks/useInfiniteScroll'
 import EmptyState from '../../components/EmptyState'
 import ShowDogCard, { type ShowDogCardData } from './ShowDogCard'
 
+export type RankedShowDog = ShowDogCardData & { rank: number }
+
 interface ShowRankingColumnsProps {
-  dogs: ShowDogCardData[]
+  dogs: RankedShowDog[]
   filterYear: string
+}
+
+function dogListKey(dog: ShowDogCardData): string {
+  // RKF ring id не уникален — ключ по кличке + породе + id
+  const name = (dog.name_lat || dog.name_ru || '').toUpperCase().replace(/\s+/g, ' ').trim()
+  return `${name}|${dog.breed}|${dog.id}`
 }
 
 export default function ShowRankingColumns({ dogs, filterYear }: ShowRankingColumnsProps) {
@@ -26,9 +34,9 @@ export default function ShowRankingColumns({ dogs, filterYear }: ShowRankingColu
 
   return (
     <div className="space-y-4">
-      <div className="flex flex-col gap-2">
-        {visibleDogs.map((dog, index) => (
-          <ShowDogCard key={`${dog.id}-${dog.breed}`} dog={dog} rank={index + 1} />
+      <div className="grid min-w-0 grid-cols-1 gap-2">
+        {visibleDogs.map((dog) => (
+          <ShowDogCard key={dogListKey(dog)} dog={dog} rank={dog.rank} filterYear={filterYear} />
         ))}
       </div>
 
