@@ -52,8 +52,11 @@ backend/parsers/shows/breed-view-debug.html
 # Python scripts - local only
 backend/scripts/speed/fetch-speed-records-pdf.py
 
-# Windows batch scripts - local development only
+# Windows batch scripts — keep shared helpers in git; ignore ad-hoc local bats
 scripts/*.bat
+!scripts/update-donino.bat
+!scripts/deploy-to-github.bat
+!scripts/start-servers.bat
 
 # Environment files
 .env
