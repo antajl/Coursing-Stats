@@ -215,21 +215,56 @@ async function main() {
   const rankingByYear = buildDogRankingByYear(exhibitions)
   console.log(`Built rankings for ${rankingByYear.size} years`)
 
-  // Save individual year files
+  // Годовые шарды на CDN (compact JSON — быстрее и меньше лимита 25 MB)
   for (const [year, yearDogs] of rankingByYear) {
     const fileName = `dog-ranking-${year}.json`
     const filePath = path.join(INDEXES_DIR, fileName)
-    fs.writeFileSync(filePath, JSON.stringify(yearDogs, null, 2))
-    console.log(`  Saved ${fileName} (${yearDogs.length} dogs)`)
+    fs.writeFileSync(filePath, JSON.stringify(yearDogs))
+    const mb = (Buffer.byteLength(JSON.stringify(yearDogs)) / (1024 * 1024)).toFixed(1)
+    console.log(`  Saved ${fileName} (${yearDogs.length} dogs, ${mb} MB)`)
   }
 
-  // Also save all-time ranking (but exclude from deployment)
-  fs.writeFileSync(path.join(INDEXES_DIR, 'dog-ranking.json'), JSON.stringify(dogs, null, 2))
+  // All-time только локально / для отладки — copy-data.js не кладёт на Pages (>25 MB)
+  fs.writeFileSync(path.join(INDEXES_DIR, 'dog-ranking.json'), JSON.stringify(dogs))
+  console.log(
+    `  Saved dog-ranking.json all-time (${dogs.length} dogs, local only, excluded from CDN)`,
+  )
 
   const judges = buildJudgesIndex(exhibitions)
   console.log(`Built index for ${judges.length} judges`)
+  fs.writeFileSync(path.join(INDEXES_DIR, 'judges.json'), JSON.stringify(judges))
 
-  fs.writeFileSync(path.join(INDEXES_DIR, 'judges.json'), JSON.stringify(judges, null, 2))
+  // Лёгкий календарь для списка выставок (не полные exhibitions/*.json)
+  const calendarDir = path.join(SHOWS_DIR, 'calendar')
+  if (!fs.existsSync(calendarDir)) fs.mkdirSync(calendarDir, { recursive: true })
+
+  const calendarByYear = new Map<string, Array<Record<string, unknown>>>()
+  for (const exhibition of exhibitions) {
+    const year = extractYear(exhibition.date)
+    const resultsCount = Array.isArray(exhibition.results) ? exhibition.results.length : 0
+    const entry = {
+      id: exhibition.id,
+      date: exhibition.date,
+      title: exhibition.title,
+      location: exhibition.location || '',
+      rank: exhibition.rank || '',
+      type: exhibition.type || '',
+      club: exhibition.club || '',
+      judges: Array.isArray(exhibition.judges) ? exhibition.judges : [],
+      has_results: resultsCount > 0,
+      results_count: resultsCount,
+    }
+    const list = calendarByYear.get(year) || []
+    list.push(entry)
+    calendarByYear.set(year, list)
+  }
+
+  for (const [year, entries] of calendarByYear) {
+    entries.sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')))
+    const filePath = path.join(calendarDir, `${year}.json`)
+    fs.writeFileSync(filePath, JSON.stringify({ year, exhibitions: entries }))
+    console.log(`  Saved calendar/${year}.json (${entries.length} exhibitions)`)
+  }
 
   console.log('Show indexes built successfully!')
 }

@@ -15,7 +15,7 @@ export default function ShowRanking() {
   const [loading, setLoading] = useState(true)
   const [allDogs, setAllDogs] = useState<ShowDogCardData[]>([])
   const [searchQuery, setSearchQuery] = useState(() => searchParams.get('search') || '')
-  const [filterYear, setFilterYear] = useState(() => searchParams.get('year') ?? '')
+  const [filterYear, setFilterYear] = useState(() => searchParams.get('year') ?? CURRENT_SEASON)
   const [filterBreed, setFilterBreed] = useState(() => searchParams.get('breed') || '')
   const [filterGroup, setFilterGroup] = useState(() => searchParams.get('group') || '')
   const [isInitialLoad, setIsInitialLoad] = useState(true)

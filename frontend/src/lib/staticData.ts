@@ -22,6 +22,13 @@ import {
 } from './judgeStats'
 import { dedupeCalendarEvents } from '../../../backend/lib/event-identity'
 import { sortPlacementItems, sortScoreItems } from '../../../backend/lib/data-logic/sort-top'
+import {
+  bestShowAward,
+  compareShowDogs,
+  mergeShowTitles,
+  showRankScore,
+  type ShowTitleCounts,
+} from '../../../backend/lib/show-award-ranking'
 
 export const DATA_BASE = '/data/v1'
 
@@ -35,7 +42,13 @@ const jsonCache = new Map<string, Promise<unknown>>()
 export function fetchJson<T>(relativePath: string): Promise<T | null> {
   if (!jsonCache.has(relativePath)) {
     const promise = fetch(`${DATA_BASE}/${relativePath}`)
-      .then((res) => (res.ok ? (res.json() as Promise<T>) : null))
+      .then(async (res) => {
+        if (!res.ok) return null
+        // SPA fallback на Pages отдаёт index.html с 200 — не парсим как JSON
+        const ct = res.headers.get('content-type') || ''
+        if (!ct.includes('application/json') && !ct.includes('text/json')) return null
+        return res.json() as Promise<T>
+      })
       .catch(() => null)
     jsonCache.set(relativePath, promise)
   }
@@ -672,29 +685,78 @@ interface ShowExhibition {
   results: ShowResult[]
 }
 
+/** Лёгкие годовые календари (не полные exhibitions/*.json). */
+const SHOW_CALENDAR_YEARS = [
+  '2017',
+  '2018',
+  '2019',
+  '2021',
+  '2022',
+  '2023',
+  '2024',
+  '2025',
+  '2026',
+] as const
+
+/** Годовые индексы рейтинга на CDN; all-time dog-ranking.json >25 MB и не деплоится. */
+const SHOW_RANKING_YEARS = SHOW_CALENDAR_YEARS
+
+interface ShowCalendarEntry {
+  id: number
+  date: string
+  title: string
+  location?: string
+  rank?: string
+  type?: string
+  club?: string
+  judges?: string[]
+  has_results?: boolean
+  results_count?: number
+}
+
 interface ShowCalendarFile {
-  exhibitions?: ShowExhibition[]
+  year?: string
+  exhibitions?: ShowCalendarEntry[]
 }
 
 export async function getShowCalendar(): Promise<ApiResult<ShowExhibition[]>> {
-  // Load all exhibitions from exhibitions directory
-  const index = await fetchJson<Record<string, string>>('shows/index.json')
-  if (!index) return { success: false, error: 'Shows index unavailable' }
-  
-  // Load each exhibition file
+  // Параллельно грузим лёгкие calendar/{year}.json (~KB), а не ~90 полных exhibitions
+  const parts = await Promise.all(
+    SHOW_CALENDAR_YEARS.map((year) => fetchJson<ShowCalendarFile>(`shows/calendar/${year}.json`)),
+  )
+
   const exhibitions: ShowExhibition[] = []
-  for (const [id, filePath] of Object.entries(index)) {
-    const exhibition = await fetchJson<ShowExhibition>(`shows/${filePath}`)
-    if (exhibition) {
-      exhibitions.push(exhibition)
+  for (const part of parts) {
+    for (const entry of part?.exhibitions ?? []) {
+      const resultsCount =
+        typeof entry.results_count === 'number'
+          ? entry.results_count
+          : entry.has_results
+            ? 1
+            : 0
+      exhibitions.push({
+        id: entry.id,
+        date: entry.date,
+        title: entry.title,
+        location: entry.location ?? '',
+        rank: entry.rank ?? '',
+        type: entry.type ?? '',
+        club: entry.club ?? '',
+        judges: entry.judges ?? [],
+        // Длина нужна UI для бейджа; полный протокол — на странице выставки
+        results: resultsCount > 0 ? Array.from({ length: resultsCount }, () => ({} as ShowResult)) : [],
+      })
     }
   }
-  
-  // Sort by date
-  const sorted = exhibitions.sort((a, b) => 
-    String(b.date || '').localeCompare(String(a.date || ''))
+
+  if (exhibitions.length === 0) {
+    return { success: false, error: 'Shows calendar unavailable' }
+  }
+
+  const sorted = exhibitions.sort((a, b) =>
+    String(b.date || '').localeCompare(String(a.date || '')),
   )
-  
+
   return { success: true, data: sorted }
 }
 
@@ -715,17 +777,57 @@ interface ShowDog {
   name_lat: string
   name_ru: string
   breed: string
+  breed_group?: string
   sex: string
   total_shows: number
   best_placement?: number
   rank_score?: number
   best_award?: string | null
-  titles: {
-    CAC: number
-    CACIB: number
-    BOB: number
-    BIS: number
+  titles: ShowTitleCounts
+}
+
+function mergeShowDogRankings(parts: ShowDog[][]): ShowDog[] {
+  const dogMap = new Map<string, ShowDog>()
+
+  for (const list of parts) {
+    for (const dog of list) {
+      const key = `${dog.id}-${dog.breed}`
+      const existing = dogMap.get(key)
+      if (!existing) {
+        dogMap.set(key, {
+          ...dog,
+          titles: { ...dog.titles },
+        })
+        continue
+      }
+
+      existing.total_shows += dog.total_shows
+      existing.titles = mergeShowTitles(existing.titles, dog.titles)
+      existing.rank_score = showRankScore(existing.titles)
+      existing.best_award = bestShowAward(existing.titles)
+
+      const placement = dog.best_placement ?? 0
+      if (
+        placement > 0 &&
+        (existing.best_placement == null ||
+          existing.best_placement === 0 ||
+          placement < existing.best_placement)
+      ) {
+        existing.best_placement = placement
+      }
+      if (dog.breed_group && !existing.breed_group) {
+        existing.breed_group = dog.breed_group
+      }
+      if (dog.name_ru && !existing.name_ru) {
+        existing.name_ru = dog.name_ru
+      }
+      if (dog.sex && !existing.sex) {
+        existing.sex = dog.sex
+      }
+    }
   }
+
+  return [...dogMap.values()].sort(compareShowDogs)
 }
 
 export async function getShowDogRanking(year = ''): Promise<ApiResult<ShowDog[]>> {
@@ -734,11 +836,21 @@ export async function getShowDogRanking(year = ''): Promise<ApiResult<ShowDog[]>
     if (!ranking) return { success: false, error: `Dog ranking for year ${year} unavailable` }
     return { success: true, data: ranking }
   }
-  
-  // For all-time ranking, try to load but it may be excluded from deployment
-  const ranking = await fetchJson<ShowDog[]>('shows/indexes/dog-ranking.json')
-  if (!ranking) return { success: false, error: 'All-time dog ranking unavailable (too large for CDN)' }
-  return { success: true, data: ranking }
+
+  // Локально может быть all-time файл; на CDN он >25 MB и отсутствует (SPA HTML 200)
+  const allTime = await fetchJson<ShowDog[]>('shows/indexes/dog-ranking.json')
+  if (allTime && Array.isArray(allTime) && allTime.length > 0) {
+    return { success: true, data: allTime }
+  }
+
+  const parts = await Promise.all(
+    SHOW_RANKING_YEARS.map((y) => fetchJson<ShowDog[]>(`shows/indexes/dog-ranking-${y}.json`)),
+  )
+  const merged = mergeShowDogRankings(parts.filter((p): p is ShowDog[] => Array.isArray(p)))
+  if (merged.length === 0) {
+    return { success: false, error: 'Show dog ranking unavailable' }
+  }
+  return { success: true, data: merged }
 }
 
 export async function getShowJudges(): Promise<ApiResult<string[]>> {

@@ -18,4 +18,4 @@ test.describe('Speed Records Page', () => {
     await expect(page).toHaveURL(/view=stats/)
     await expectNotNotFoundPage(page)
   })
-}
+})

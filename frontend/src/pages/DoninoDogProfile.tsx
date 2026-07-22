@@ -7,6 +7,7 @@ import DogSexIcon from '../components/DogSexIcon'
 import OwnerCrownName from '../components/OwnerCrownName'
 import { formatRecordDate, dedupeByRecordDate, expandCoursingTimeline } from '../lib/recordDates'
 import { SEO } from '../components/SEO'
+import DoninoAttribution from '../components/DoninoAttribution'
 import { api } from '../services/api'
 import HoverTooltip from '../components/ui/HoverTooltip'
 
@@ -402,6 +403,8 @@ export default function DoninoDogProfile() {
               <p className="text-old-money-600 dark:text-old-money-400">Нет записей для этой собаки</p>
             </div>
           )}
+
+          <DoninoAttribution className="mt-6" />
         </div>
       </div>
     </div>

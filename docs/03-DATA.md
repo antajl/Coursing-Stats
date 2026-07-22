@@ -156,10 +156,11 @@ npm run build-all-data  # запускает build-show-indexes.ts
 
 ### Фронтенд
 
-- `getShowDogRanking(year)` — загружает рейтинг по году
-- `ShowRanking.tsx` — фильтр по году в UI
-- `ShowChampions.tsx` — фильтр по году в UI
-- `ShowDogProfile.tsx` — загружает all-time для поиска собаки
+- `getShowDogRanking(year)` — год → `dog-ranking-{year}.json`; без года → склейка годовых шардов (all-time файл на CDN нет)
+- UI по умолчанию: текущий сезон (как у судей)
+- `getShowCalendar()` — параллельно `shows/calendar/{year}.json` (лёгкий список); полный протокол только на `/shows/exhibition/:id`
+- `copy-data.js` исключает `shows/indexes/dog-ranking.json` из Pages
+- `ShowDogProfile.tsx` — поиск по годовым/склеенным индексам
 
 ---
 

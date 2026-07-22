@@ -257,7 +257,11 @@ export default function ShowCalendar() {
               </div>
               {group.events.map((exhibition) => {
                 const dateParts = formatShowDate(exhibition.date)
-                const hasResults = exhibition.results && exhibition.results.length > 0
+                const resultsCount = exhibition.results?.length ?? 0
+                const hasResults = resultsCount > 0
+                // В calendar/{year}.json нет точного числа протоколов — только флаг
+                const resultsLabel =
+                  resultsCount > 1 ? `${resultsCount} рез.` : hasResults ? 'Есть рез.' : 'Нет рез.'
                 const rkfUrl = `https://lc.rkfshow.ru/RKF/ExhibitionResults/ExhibitionResultListView?exhibitionId=${exhibition.id}`
                 
                 return (
@@ -302,15 +306,15 @@ export default function ShowCalendar() {
                     </div>
 
                     <div className="hidden sm:flex w-[6rem] shrink-0 flex-col items-end justify-center gap-0.5 self-stretch pl-3 border-l border-old-money-200/80 dark:border-charcoal-600/80">
-                      {hasResults ? (
-                        <span className="w-full whitespace-nowrap text-right text-[11px] leading-tight text-charcoal-500 dark:text-charcoal-400">
-                          {exhibition.results.length} рез.
-                        </span>
-                      ) : (
-                        <span className="w-full whitespace-nowrap text-right text-[11px] leading-tight text-charcoal-400 dark:text-charcoal-500">
-                          Нет рез.
-                        </span>
-                      )}
+                      <span
+                        className={`w-full whitespace-nowrap text-right text-[11px] leading-tight ${
+                          hasResults
+                            ? 'text-charcoal-500 dark:text-charcoal-400'
+                            : 'text-charcoal-400 dark:text-charcoal-500'
+                        }`}
+                      >
+                        {resultsLabel}
+                      </span>
                     </div>
                   </Link>
                 )

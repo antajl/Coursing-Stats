@@ -127,7 +127,7 @@ export default function ShowChampions() {
   const [loading, setLoading] = useState(true)
   const [allDogs, setAllDogs] = useState<ShowDogCardData[]>([])
   const [searchQuery, setSearchQuery] = useState('')
-  const [filterYear, setFilterYear] = useState('')
+  const [filterYear, setFilterYear] = useState(String(new Date().getFullYear()))
   const [filterBreed, setFilterBreed] = useState('')
   const [filterGroup, setFilterGroup] = useState('')
 
