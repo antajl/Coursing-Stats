@@ -1,4 +1,5 @@
 import { Icons } from '../../lib/icons'
+import { isLocalDev } from '../../lib/env'
 import type { NavMenuItem } from '../NavMenuDropdown'
 
 export type OpenMenuId = 'competitions' | 'shows' | 'donino' | 'guide' | null
@@ -36,6 +37,13 @@ export function guideTabActive(tab: string) {
   }
 }
 
+const COMPETITIONS_CALENDAR_ITEM: NavMenuItem = {
+  to: '/competitions?tab=calendar',
+  label: 'Календарь',
+  icon: Icons.calendar,
+  isActive: competitionTabActive('calendar'),
+}
+
 export const COMPETITIONS_MENU_ITEMS: NavMenuItem[] = [
   {
     to: '/competitions?tab=ranking',
@@ -43,6 +51,7 @@ export const COMPETITIONS_MENU_ITEMS: NavMenuItem[] = [
     icon: Icons.medal,
     isActive: competitionTabActive('ranking'),
   },
+  ...(isLocalDev ? [COMPETITIONS_CALENDAR_ITEM] : []),
   {
     to: '/competitions?tab=judges',
     label: 'Судьи',
@@ -51,6 +60,13 @@ export const COMPETITIONS_MENU_ITEMS: NavMenuItem[] = [
   },
 ]
 
+const SHOWS_CALENDAR_ITEM: NavMenuItem = {
+  to: '/shows?tab=calendar',
+  label: 'Календарь',
+  icon: Icons.calendar,
+  isActive: showTabActive('calendar'),
+}
+
 export const SHOWS_MENU_ITEMS: NavMenuItem[] = [
   {
     to: '/shows?tab=ranking',
@@ -58,12 +74,7 @@ export const SHOWS_MENU_ITEMS: NavMenuItem[] = [
     icon: Icons.medal,
     isActive: showTabActive('ranking'),
   },
-  {
-    to: '/shows?tab=calendar',
-    label: 'Календарь',
-    icon: Icons.calendar,
-    isActive: showTabActive('calendar'),
-  },
+  ...(isLocalDev ? [SHOWS_CALENDAR_ITEM] : []),
   {
     to: '/shows?tab=judges',
     label: 'Судьи',

@@ -1,6 +1,5 @@
 import { test, expect } from '@playwright/test'
 import {
-  competitionsSegment,
   expectNoErrorTitle,
   expectNoHorizontalOverflow,
   expectNotNotFoundPage,
@@ -18,13 +17,12 @@ test.describe('Navigation', () => {
   test('can navigate to competitions page', async ({ page }) => {
     await page.goto('/')
     await page.getByRole('link', { name: /соревнован/i }).first().click()
-    await expect(page).toHaveURL('/competitions')
-    await expect(competitionsSegment(page)).toBeVisible()
+    await expect(page).toHaveURL(/\/competitions/)
+    await expect(page.locator('#tab-panel-ranking')).toBeVisible()
   })
 
   test('can open ranking tab on competitions', async ({ page }) => {
-    await page.goto('/competitions')
-    await competitionsSegment(page).getByRole('button', { name: 'Рейтинг' }).click()
+    await page.goto('/competitions?tab=ranking')
     await expect(page).toHaveURL(/tab=ranking/)
     await expect(page.getByRole('group', { name: 'Рейтинг курсинга' })).toBeVisible()
   })

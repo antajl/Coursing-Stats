@@ -276,7 +276,7 @@ DNS зона `coursing-stats.ru` — в **Cloudflare**.
 ### Легаси (не использовать для новых ссылок)
 
 - `api.coursing-stats.ru` — Worker не деплоится
-- Публичный календарь / `/event/:id` на проде — вариант A; админка только локально
+- Публичный календарь / протоколы на проде — вариант A; локально (`isLocalDev` = `import.meta.env.DEV`) — вкладки «Календарь» в nav и `/event/:id`, `/shows/exhibition/:id`
 
 ### User-Agent скрапера
 

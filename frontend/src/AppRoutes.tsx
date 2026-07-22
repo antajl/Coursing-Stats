@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react';
 import { Routes, Route, Navigate, useLocation, useParams } from 'react-router-dom';
 import PageLoader from './components/PageLoader';
+import { isLocalDev } from './lib/env';
 
 const Home = lazy(() => import('./pages/Home'));
 const Competitions = lazy(() => import('./pages/Competitions'));
@@ -12,6 +13,7 @@ const DoninoDogProfile = lazy(() => import('./pages/DoninoDogProfile'));
 const Guide = lazy(() => import('./pages/Guide'));
 const JudgeDetail = lazy(() => import('./pages/Judges/JudgeDetail'));
 const ShowExhibitionDetail = lazy(() => import('./pages/Shows/ShowExhibitionDetail'));
+const EventResults = lazy(() => import('./pages/Events/EventResults'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 function LegacyProcoursingRedirect() {
@@ -36,7 +38,14 @@ function LegacyJudgesListRedirect() {
 
 function LegacyExhibitionRedirect() {
   const { id } = useParams<{ id: string }>();
+  if (!isLocalDev) return <Navigate to="/shows" replace />;
   return <Navigate to={`/shows/exhibition/${id}`} replace />;
+}
+
+function LegacyAdminEventRedirect() {
+  const { id } = useParams<{ id: string }>();
+  if (!isLocalDev) return <Navigate to="/competitions?tab=ranking" replace />;
+  return <Navigate to={`/event/${id}`} replace />;
 }
 
 export default function AppRoutes() {
@@ -47,13 +56,32 @@ export default function AppRoutes() {
         <Route path="/competitions" element={<Competitions />} />
         <Route path="/procoursing" element={<LegacyProcoursingRedirect />} />
         <Route path="/shows" element={<Shows />} />
-        <Route path="/shows/exhibition/:id" element={<ShowExhibitionDetail />} />
+        <Route
+          path="/shows/exhibition/:id"
+          element={isLocalDev ? <ShowExhibitionDetail /> : <Navigate to="/shows" replace />}
+        />
         <Route path="/shows/champions" element={<Navigate to="/shows?tab=ranking" replace />} />
         <Route path="/shows/dog/:dogId/:breed" element={<ShowDogProfile />} />
         <Route path="/exhibition/:id" element={<LegacyExhibitionRedirect />} />
         <Route path="/top" element={<LegacyTopRedirect />} />
         <Route path="/dog/:id" element={<UnifiedDogProfile />} />
-        <Route path="/event/:id" element={<Navigate to="/competitions?tab=ranking" replace />} />
+        <Route
+          path="/event/:id"
+          element={
+            isLocalDev ? <EventResults /> : <Navigate to="/competitions?tab=ranking" replace />
+          }
+        />
+        {/* Legacy admin aliases → public-but-DEV routes (or hub on prod) */}
+        <Route
+          path="/admin/calendar"
+          element={
+            <Navigate
+              to={isLocalDev ? '/competitions?tab=calendar' : '/competitions?tab=ranking'}
+              replace
+            />
+          }
+        />
+        <Route path="/admin/event/:id" element={<LegacyAdminEventRedirect />} />
         <Route path="/speed-records" element={<SpeedRecords />} />
         <Route path="/guide" element={<Guide />} />
         <Route path="/donino-dog/:name/:breed" element={<DoninoDogProfile />} />

@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test'
-import { competitionsSegment, expectNotNotFoundPage } from './helpers'
+import { expectNotNotFoundPage } from './helpers'
 
 test.describe('Competitions Page', () => {
   test.beforeEach(async ({ page }) => {
@@ -9,25 +9,35 @@ test.describe('Competitions Page', () => {
 
   test('page loads with ranking tab by default', async ({ page }) => {
     await expect(page).toHaveTitle(/Coursing Stats/)
-    await expect(competitionsSegment(page).getByRole('button', { name: 'Рейтинг' })).toBeVisible()
     await expect(page.locator('#tab-panel-ranking')).toBeVisible()
     await expect(page.getByRole('group', { name: 'Рейтинг курсинга' })).toBeVisible()
   })
 
-  test('does not show calendar tab', async ({ page }) => {
-    await expect(competitionsSegment(page).getByRole('button', { name: 'Календарь' })).toHaveCount(0)
+  test('calendar tab is available in local nav', async ({ page }) => {
+    await page.goto('/')
+    await page.getByRole('button', { name: 'Меню раздела Соревнования' }).click()
+    await expect(page.getByRole('link', { name: 'Календарь' }).first()).toBeVisible()
   })
 
-  test('switches to judges tab', async ({ page }) => {
-    await competitionsSegment(page).getByRole('button', { name: 'Судьи' }).click()
+  test('calendar hub segment is visible on competitions page in local dev', async ({ page }) => {
+    await page.goto('/competitions?tab=ranking')
+    await expect(page.getByRole('group', { name: 'Разделы соревнований' })).toBeVisible()
+    await expect(page.locator('#tab-calendar')).toBeVisible()
+    await page.locator('#tab-calendar').click()
+    await expect(page).toHaveURL(/tab=calendar/)
+    await expect(page.locator('#tab-panel-calendar')).toBeVisible()
+  })
+
+  test('switches to judges tab via URL', async ({ page }) => {
+    await page.goto('/competitions?tab=judges')
     await expect(page).toHaveURL(/tab=judges/)
     await expect(page.locator('#tab-panel-judges')).toBeVisible()
     await expect(page.getByPlaceholder(/фамилия/i)).toBeVisible()
   })
 
-  test('legacy calendar tab URL opens ranking', async ({ page }) => {
+  test('calendar tab URL opens calendar in local dev', async ({ page }) => {
     await page.goto('/competitions?tab=calendar')
-    await expect(page.locator('#tab-panel-ranking')).toBeVisible()
-    await expect(page.locator('#tab-panel-calendar')).toHaveCount(0)
+    await expect(page.locator('#tab-panel-calendar')).toBeVisible()
+    await expect(page.locator('#tab-panel-ranking')).toHaveCount(0)
   })
 })

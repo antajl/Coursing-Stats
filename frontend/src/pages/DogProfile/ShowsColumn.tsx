@@ -18,6 +18,8 @@ import {
   classifyShowCumulativeTitle,
   groupItemsByCategory,
 } from '../../lib/awardCategories'
+import { localExhibitionPath } from '../../lib/env'
+import { rkfExhibitionResultsUrl } from '../../lib/rkfLinks'
 import { HISTORY_DEFAULT } from './dogProfileStats'
 import {
   DisciplineColumnShell,
@@ -119,12 +121,11 @@ export function ShowsColumn({ dog }: ShowsColumnProps) {
           <div>
             {visible.map((entry, idx) => {
               const tokens = splitShowTitleTokens(entry.title)
-              return (
-                <Link
-                  key={`${entry.exhibition_id}-${idx}`}
-                  to={`/shows/exhibition/${entry.exhibition_id}`}
-                  className="block border-b border-camel-200/80 py-3 text-inherit no-underline transition-colors last:border-b-0 hover:bg-camel-50/60 dark:border-camel-700/60 dark:hover:bg-charcoal-700/40"
-                >
+              const rowKey = `${entry.exhibition_id}-${idx}`
+              const rowClass =
+                'block border-b border-camel-200/80 py-3 text-inherit no-underline transition-colors last:border-b-0 hover:bg-camel-50/60 dark:border-camel-700/60 dark:hover:bg-charcoal-700/40'
+              const rowBody = (
+                <>
                   <div className="min-w-0 break-words text-xs font-bold uppercase tracking-wide text-camel-700 dark:text-camel-400">
                     {entry.exhibition_title || 'Выставка'}
                   </div>
@@ -166,7 +167,38 @@ export function ShowsColumn({ dog }: ShowsColumnProps) {
                       </span>
                     )}
                   </div>
-                </Link>
+                </>
+              )
+              if (localExhibitionPath) {
+                return (
+                  <Link
+                    key={rowKey}
+                    to={`${localExhibitionPath}/${entry.exhibition_id}`}
+                    className={rowClass}
+                  >
+                    {rowBody}
+                  </Link>
+                )
+              }
+              const rkfUrl = rkfExhibitionResultsUrl(entry.exhibition_id)
+              if (rkfUrl) {
+                return (
+                  <a
+                    key={rowKey}
+                    href={rkfUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={rowClass}
+                    title="Результаты на lc.rkfshow.ru"
+                  >
+                    {rowBody}
+                  </a>
+                )
+              }
+              return (
+                <div key={rowKey} className={rowClass}>
+                  {rowBody}
+                </div>
               )
             })}
             {history.length > HISTORY_DEFAULT && (

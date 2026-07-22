@@ -68,7 +68,7 @@
 8. **API путь** `/api/competitions`, не `/api/events` (uBlock).
 9. **Донино:** `speed_records` (км/ч) и `coursing_records` (сек) — разные источники. Модель: [`09-SPEED-RECORDS.md`](09-SPEED-RECORDS.md); пайплайн: [`09a-DONINO-PIPELINE.md`](09a-DONINO-PIPELINE.md).
 10. **procoursing.ru** — windows-1251, `fetch-win1251.ts`.
-11. **Публичный UI (вариант A):** на проде нет календаря и `/event/:id` — только рейтинг/судьи/профили; протоколы → procoursing.ru; локально `/admin/calendar`, `/admin/event/:id`.
+11. **Публичный UI (вариант A):** на проде нет календаря и протоколов — только рейтинг/судьи/профили; протоколы → procoursing.ru / lc.rkfshow.ru. Локально (`npm run dev`, `import.meta.env.DEV`): календарь в nav → `/competitions?tab=calendar`, `/shows?tab=calendar`; протоколы → `/event/:id`, `/shows/exhibition/:id`. Legacy `/admin/calendar`, `/admin/event/:id` редиректят на эти пути.
 
 ---
 

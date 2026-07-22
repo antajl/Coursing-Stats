@@ -58,12 +58,12 @@ npm run test:e2e:ui
 | `e2e/home.spec.ts` | Hero, ближайшие события, overflow 375px |
 | `e2e/guide.spec.ts` | `/guide`, вкладки справочника |
 | `e2e/navigation.spec.ts` | Навигация по разделам |
-| `e2e/competitions.spec.ts` | Раздел «Статистика»: рейтинг (default) и судьи, без календаря |
+| `e2e/competitions.spec.ts` | Hub соревнований: рейтинг/судьи; календарь доступен в local DEV |
+| `e2e/event-results.spec.ts` | Local DEV: `/event/:id`; legacy `/admin/event` → `/event`; на prod build `/event` → ranking |
 | `e2e/top-dogs.spec.ts` | `/top`, карточки собак |
 | `e2e/judges.spec.ts` | Поиск, карточки, детальная страница |
 | `e2e/speed-records.spec.ts` | Донино: колонки, режим статистики |
 | `e2e/dog-profile.spec.ts` | Профиль собаки, error state |
-| `e2e/event-results.spec.ts` | Редирект `/event/:id`; протоколы на `/admin/event/:id` (dev) |
 | `e2e/mobile.spec.ts` | 375px, overflow, бургер-меню |
 | `e2e/dark-theme.spec.ts` | Переключатель темы (desktop + mobile) |
 

@@ -9,22 +9,22 @@ test.describe('Event Results Page', () => {
     testData = await getTestData(request)
   })
 
-  test('public /event URL redirects to statistics', async ({ page }) => {
+  test('public /event URL works in local dev (redirects on prod build)', async ({ page }) => {
     await page.goto('/event/999999999')
-    await expect(page).toHaveURL(/\/competitions\?tab=ranking/)
     await expectNotNotFoundPage(page)
+    await expect(page.getByRole('heading', { name: 'Событие не найдено', level: 3 })).toBeVisible()
   })
 
-  test('missing admin event shows error state', async ({ page }) => {
+  test('legacy admin event URL redirects to /event', async ({ page }) => {
     await page.goto('/admin/event/999999999')
-    await expectNotNotFoundPage(page)
+    await expect(page).toHaveURL(/\/event\/999999999/)
     await expect(page.getByRole('heading', { name: 'Событие не найдено', level: 3 })).toBeVisible()
   })
 
   test('loads event with results when data exists', async ({ page }) => {
     test.skip(!testData.eventId, 'Нет событий в data/v1')
 
-    await page.goto(`/admin/event/${testData.eventId}`)
+    await page.goto(`/event/${testData.eventId}`)
     await expectNotNotFoundPage(page)
     await expectNoErrorTitle(page, 'Событие не найдено')
 

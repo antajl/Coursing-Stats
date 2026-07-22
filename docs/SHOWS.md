@@ -38,6 +38,7 @@
 **URL профиля:**
 - `/dog/{competition_dog_id}` — канонический профиль (есть связь с procoursing).
 - `/shows/dog/{rkfId}/{breed}` — только выставки (нет уникального матча с соревнованиями). UI тот же `DogProfile`: колонки курсинг/беги пустые («данных нет»), выставки заполнены. При появлении `competition_dog_id` — редирект на `/dog/...`.
+- История выставок в профиле ведёт на lc.rkfshow.ru (`ExhibitionResultListView?exhibitionId=` из `history[].exhibition_id`), не на `/shows/exhibition/...`.
 
 Правила (см. `backend/lib/dog-identity-match.ts`, сборка `build-show-indexes.ts`):
 
@@ -80,11 +81,11 @@ data/v1/shows/
 - `/shows` - hub страница
 - `/shows?tab=ranking` - рейтинг
 - `/shows?tab=judges` - судьи
-- `/shows?tab=calendar` - календарь
-- `/shows?tab=ranking` — рейтинг (одна колонка)
-- `/shows?tab=calendar` — календарь
-- `/shows?tab=judges` — судьи
+- `/shows?tab=calendar` — календарь (**только локальный Vite DEV**, `isLocalDev`; на проде вкладка скрыта, URL → ranking)
+- `/shows/exhibition/:id` — протокол выставки (**только DEV**; на проде → `/shows`)
 - `/shows?tab=champions` и `/shows/champions` → редирект на рейтинг (вкладка снята: дублировала рейтинг)
+
+Gate: `frontend/src/lib/env.ts` → `isLocalDev = import.meta.env.DEV` (false в production Pages build). Sitemap не включает calendar/exhibition URL.
 
 ## Справочник на сайте
 

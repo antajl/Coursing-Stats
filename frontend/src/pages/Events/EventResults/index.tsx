@@ -66,8 +66,8 @@ export default function EventResults() {
             title="Событие не найдено"
             message={`ID: ${id}`}
             action={
-              <Link to="/" className="rounded-xl border-2 border-camel-300 dark:border-camel-600 bg-white dark:bg-charcoal-800 px-4 py-2 text-sm font-semibold text-camel-700 dark:text-camel-400 transition-all hover:bg-camel-50 dark:hover:bg-charcoal-700 hover:border-camel-400">
-                На главную
+              <Link to="/competitions?tab=calendar" className="rounded-xl border-2 border-camel-300 dark:border-camel-600 bg-white dark:bg-charcoal-800 px-4 py-2 text-sm font-semibold text-camel-700 dark:text-camel-400 transition-all hover:bg-camel-50 dark:hover:bg-charcoal-700 hover:border-camel-400">
+                К календарю
               </Link>
             }
           />

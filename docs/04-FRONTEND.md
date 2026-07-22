@@ -58,7 +58,7 @@
 } />
 ```
 
-**`bare`:** `TopDogsFilters`, `Judges/index`, `DoninoPageToolbar`. **Framed:** `Events/index.tsx` (календарь, dev).
+**`bare`:** `TopDogsFilters`, `Judges/index`, `DoninoPageToolbar`. **Framed:** `Events/index.tsx` (календарь соревнований, local DEV only).
 
 Канон паттернов: [`18-CODE-PATTERNS.md`](18-CODE-PATTERNS.md)
 
@@ -124,9 +124,11 @@ Tailwind `md:` брейкпоинты. `App.tsx`: `pt-3 pb-5 md:pt-4`, `px-2 sm:
 | `/judges` | → redirect | legacy → `/competitions?tab=judges` |
 | `/judges/:judgeId` | `JudgeDetail.tsx` | Детали судьи |
 | `/dog/:id` | `DogProfile/` (через `UnifiedDogProfile`) | Единый профиль: курсинг / бега / выставки (3 колонки) |
-| `/event/:id` | — | Redirect → рейтинг |
-| `/admin/calendar` | `AdminCalendar.tsx` | Dev only |
-| `/admin/event/:id` | `EventResults/` | Dev only |
+| `/event/:id` | `Events/EventResults/` | **Только Vite DEV** (`isLocalDev`); на проде → `/competitions?tab=ranking` |
+| `/competitions?tab=calendar` | `Events/index.tsx` | **Только Vite DEV** — в nav «Соревнования → Календарь» |
+| `/shows?tab=calendar` | `Shows/ShowCalendar.tsx` | **Только Vite DEV** — в nav «Выставки → Календарь» |
+| `/shows/exhibition/:id` | `Shows/ShowExhibitionDetail.tsx` | **Только Vite DEV**; на проде → `/shows` |
+| `/admin/calendar`, `/admin/event/:id` | redirect | Legacy → calendar / `/event/:id` (DEV) или hub (prod) |
 | `/speed-records` | `SpeedRecords/index.tsx` | Донино |
 | `/donino-dog/:name/:breed` | `DoninoDogProfile.tsx` | Профиль Донино |
 
@@ -136,6 +138,7 @@ Tailwind `md:` брейкпоинты. `App.tsx`: `pt-3 pb-5 md:pt-4`, `px-2 sm:
 |---------|-----------|
 | `ranking` | `TopDogs/index.tsx` |
 | `judges` | `Judges/index.tsx` |
+| `calendar` | `Events/index.tsx` (**только local DEV**) |
 
 `ProcoursingAttribution` — на `/competitions` вверху карточки.
 

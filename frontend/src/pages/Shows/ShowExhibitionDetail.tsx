@@ -548,10 +548,10 @@ export default function ShowExhibitionDetail() {
             message={error || `ID: ${id}`}
             action={
               <Link
-                to="/shows?tab=calendar"
+                to="/shows?tab=ranking"
                 className="rounded-xl border-2 border-camel-300 bg-white px-4 py-2 text-sm font-semibold text-camel-700 transition-all hover:border-camel-400 hover:bg-camel-50 dark:border-camel-600 dark:bg-charcoal-800 dark:text-camel-400 dark:hover:bg-charcoal-700"
               >
-                Вернуться к календарю
+                К рейтингу выставок
               </Link>
             }
           />

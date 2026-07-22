@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import ThemeToggle from '../ThemeToggle'
+import { isLocalDev } from '../../lib/env'
 import { DATA_SOURCE_LINKS, GUIDE_MENU_ITEMS } from './navLinks'
 
 type NavMobileProps = {
@@ -122,6 +123,15 @@ export function NavMobile({
                   >
                     Рейтинг
                   </Link>
+                  {isLocalDev && (
+                    <Link
+                      to="/competitions?tab=calendar"
+                      onClick={onCloseMobileMenu}
+                      className="block px-4 py-2 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800 rounded-lg transition-colors"
+                    >
+                      Календарь
+                    </Link>
+                  )}
                   <Link
                     to="/competitions?tab=judges"
                     onClick={onCloseMobileMenu}
@@ -158,13 +168,15 @@ export function NavMobile({
                   >
                     Рейтинг
                   </Link>
-                  <Link
-                    to="/shows?tab=calendar"
-                    onClick={onCloseMobileMenu}
-                    className="block px-4 py-2 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800 rounded-lg transition-colors"
-                  >
-                    Календарь
-                  </Link>
+                  {isLocalDev && (
+                    <Link
+                      to="/shows?tab=calendar"
+                      onClick={onCloseMobileMenu}
+                      className="block px-4 py-2 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800 rounded-lg transition-colors"
+                    >
+                      Календарь
+                    </Link>
+                  )}
                   <Link
                     to="/shows?tab=judges"
                     onClick={onCloseMobileMenu}

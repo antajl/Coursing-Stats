@@ -1,6 +1,7 @@
 import { useLocation } from 'react-router-dom'
 import { useState, useRef, useEffect, useCallback } from 'react'
 import { useDarkMode } from '../hooks/useDarkMode'
+import { isLocalDev } from '../lib/env'
 import { NavDesktop } from './nav/NavDesktop'
 import { NavMobile } from './nav/NavMobile'
 import type { OpenMenuId } from './nav/navLinks'
@@ -18,9 +19,12 @@ export default function Nav() {
   const isDark = useDarkMode();
   const isActive = (path: string) => location.pathname === path || (path === '/' && location.pathname === '/');
   const isCompetitionsActive =
-    location.pathname === '/competitions' || location.pathname === '/procoursing';
+    location.pathname === '/competitions' ||
+    location.pathname === '/procoursing' ||
+    (isLocalDev && location.pathname.startsWith('/event/'))
   const isSpeedRecordsActive = location.pathname === '/speed-records';
-  const isShowsActive = location.pathname === '/shows';
+  const isShowsActive =
+    location.pathname === '/shows' || location.pathname.startsWith('/shows/')
   const isGuideActive = location.pathname === '/guide';
 
   const setMenuOpen = useCallback((id: Exclude<OpenMenuId, null>) => {

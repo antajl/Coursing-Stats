@@ -506,5 +506,5 @@ npx wrangler d1 execute pc-db --local --file=data/archive/snapshots/.../snapshot
 | Показ сайта из архива / D1 | **Нет** — данные локальные |
 | Обновление новых соревнований | **Да** — пока парсер ходит на procoursing |
 | Полная история 2015–2024 в таблицах | **Нет** — не распарсено |
-| Публичный UI календаря и протоколов | **Нет** (с 2026-07-10) — агрегаты на coursing-stats.ru; первичные протоколы на procoursing.ru |
+| Публичный UI календаря и протоколов | **Нет на проде** (вариант A) — агрегаты на coursing-stats.ru; протоколы → procoursing.ru / RKF. Локально (`npm run dev`): `/competitions?tab=calendar`, `/shows?tab=calendar`, `/event/:id` |
 | Встраивание в iframe | **Да** — `frontend/public/_headers`, `frame-ancestors` для procoursing.ru |

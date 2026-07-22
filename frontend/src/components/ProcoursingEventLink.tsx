@@ -11,7 +11,7 @@ interface ProcoursingEventLinkProps {
   children: ReactNode
 }
 
-/** Ссылка на протокол: procoursing.ru на проде, /admin/event в dev. */
+/** Ссылка на протокол: procoursing.ru на проде, `/event/:id` в локальном Vite DEV. */
 export default function ProcoursingEventLink({
   eventId,
   procoursingUrl,
