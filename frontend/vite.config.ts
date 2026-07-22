@@ -14,11 +14,14 @@ const CONTENT_TYPES: Record<string, string> = {
 
 /**
  * В dev/preview отдаёт repo `data/v1` по пути `/data/v1/*`, как это делает
- * Cloudflare Pages в проде (см. package-pages-snapshot.ts). Так фронтенд
- * читает JSON напрямую, без Worker/D1, в обоих окружениях одинаково.
+ * Cloudflare Pages в проде. Так фронтенд читает JSON напрямую, без Worker/D1.
  */
 function serveDataV1(): Plugin {
-  const middleware = (req: import('node:http').IncomingMessage, res: import('node:http').ServerResponse, next: () => void) => {
+  const middleware = (
+    req: import('node:http').IncomingMessage,
+    res: import('node:http').ServerResponse,
+    next: () => void,
+  ) => {
     const url = req.url?.split('?')[0] ?? ''
     if (!url.startsWith('/data/v1/')) return next()
 
@@ -49,39 +52,17 @@ function serveDataV1(): Plugin {
 }
 
 // https://vite.dev/config/
-const buildStamp = process.env.GITHUB_SHA?.slice(0, 8) || String(Date.now())
-
+//
+// Не использовать manualChunks для react-router/lucide: на Vite 8/rolldown
+// это давало битый граф (vendor-router импортировал vendor-icons) → белый экран.
 export default defineConfig({
   plugins: [react(), serveDataV1()],
   build: {
-    // Меняет хэш всех чанков при каждом CI-деплое → бросаем отравленный immutable-кэш
-    // (HTML, ошибочно сохранённый как /assets/*.js).
     rollupOptions: {
       output: {
-        banner: `/* cs-build ${buildStamp} */`,
         entryFileNames: 'assets/[name]-[hash].js',
         chunkFileNames: 'assets/[name]-[hash].js',
         assetFileNames: 'assets/[name]-[hash][extname]',
-        manualChunks(id) {
-          if (id.includes('node_modules/react-dom') || id.includes('node_modules/react/')) {
-            return 'vendor-react';
-          }
-          if (id.includes('node_modules/react-router')) {
-            return 'vendor-router';
-          }
-          if (id.includes('node_modules/@tanstack/react-query')) {
-            return 'vendor-query';
-          }
-          if (id.includes('node_modules/xlsx-js-style') || id.includes('node_modules/xlsx')) {
-            return 'vendor-xlsx';
-          }
-          if (id.includes('node_modules/html-to-image')) {
-            return 'vendor-html-to-image';
-          }
-          if (id.includes('node_modules/lucide-react')) {
-            return 'vendor-icons';
-          }
-        },
       },
     },
   },
@@ -95,8 +76,8 @@ export default defineConfig({
           proxy.on('proxyReq', (proxyReq) => {
             console.log('Proxying request to:', proxyReq.path)
           })
-        }
-      }
-    }
-  }
+        },
+      },
+    },
+  },
 })

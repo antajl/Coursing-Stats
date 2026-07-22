@@ -9,10 +9,11 @@
   Pragma: no-cache
   Expires: 0
 
-# Hashed build assets — long cache only when the real file exists.
-# Missing /assets/* must 404 (_redirects), never SPA HTML + immutable.
+# Hashed build assets. Без immutable: после инцидента с MIME/HTML в кэше
+# браузеры должны иметь возможность перепроверить файл (ETag), а не держать
+# отравленный ответ год. Имена всё равно с [hash].
 /assets/*
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=3600, must-revalidate
   X-Content-Type-Options: nosniff
 
 # Long-term caching for static images and fonts in public/
