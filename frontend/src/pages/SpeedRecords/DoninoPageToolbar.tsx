@@ -6,7 +6,6 @@ import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarChip from '../../components/toolbar/ToolbarChip'
 import ToolbarFiltersDropdown from '../../components/toolbar/ToolbarFiltersDropdown'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
-import ViewToggle from '../../components/toolbar/ViewToggle'
 import {
   TOOLBAR_FILTER_CHECKBOX_ROW,
   TOOLBAR_FILTER_SECTION_LABEL,
@@ -18,7 +17,6 @@ import { buildSpeedActiveFilterChips } from './toolbarFilters'
 
 interface DoninoPageToolbarProps {
   view: 'table' | 'stats'
-  onViewChange: (view: 'table' | 'stats') => void
   searchQuery: string
   onSearchChange: (value: string) => void
   filterYears: string[]
@@ -50,7 +48,6 @@ interface DoninoPageToolbarProps {
 
 export default function DoninoPageToolbar({
   view,
-  onViewChange,
   searchQuery,
   onSearchChange,
   filterYears,
@@ -299,9 +296,6 @@ export default function DoninoPageToolbar({
                   )}
                 </div>
               )}
-            </div>
-            <div className="ml-auto shrink-0">
-              <ViewToggle view={view} onViewChange={onViewChange} />
             </div>
           </>
         }

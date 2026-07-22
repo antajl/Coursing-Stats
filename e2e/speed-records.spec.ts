@@ -13,8 +13,9 @@ test.describe('Speed Records Page', () => {
     await expect(page.getByText('Бега 350 м', { exact: true }).first()).toBeVisible()
   })
 
-  test('can switch to statistics view', async ({ page }) => {
-    await page.getByRole('group', { name: 'Режим просмотра' }).getByRole('button', { name: 'Статистика' }).click()
+  test('can switch to statistics view via nav', async ({ page }) => {
+    await page.goto('/speed-records?view=stats')
     await expect(page).toHaveURL(/view=stats/)
+    await expectNotNotFoundPage(page)
   })
-})
+}

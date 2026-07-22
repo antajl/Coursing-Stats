@@ -78,16 +78,14 @@ export default function DoninoRecordsColumns({
     <div className="space-y-4">
       <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-2 lg:gap-8">
         <section className="min-w-0">
-          {speedRecords.length > 0 && (
-            <div className="mb-3">
-              <RecordSortBar
-                options={SPEED_SORT_OPTIONS}
-                sortField={speedSortField}
-                sortDirection={speedSortDirection}
-                onSort={onSpeedSort}
-              />
-            </div>
-          )}
+          <div className="mb-3 min-h-8">
+            <RecordSortBar
+              options={SPEED_SORT_OPTIONS}
+              sortField={speedSortField}
+              sortDirection={speedSortDirection}
+              onSort={onSpeedSort}
+            />
+          </div>
           <DoninoColumnPlaque title="Замер" count={speedRecords.length} />
           <div className="flex flex-col gap-2.5">
             {visibleSpeed.length > 0 ? (
@@ -113,16 +111,14 @@ export default function DoninoRecordsColumns({
         </section>
 
         <section className="min-w-0">
-          {coursingRecords.length > 0 && (
-            <div className="mb-3">
-              <RecordSortBar
-                options={COURSING_SORT_OPTIONS}
-                sortField={coursingSortField}
-                sortDirection={coursingSortDirection}
-                onSort={onCoursingSort}
-              />
-            </div>
-          )}
+          <div className="mb-3 min-h-8">
+            <RecordSortBar
+              options={COURSING_SORT_OPTIONS}
+              sortField={coursingSortField}
+              sortDirection={coursingSortDirection}
+              onSort={onCoursingSort}
+            />
+          </div>
           <DoninoColumnPlaque title="Бега 350 м" count={coursingRecords.length} />
           <div className="flex flex-col gap-2.5">
             {visibleCoursing.length > 0 ? (

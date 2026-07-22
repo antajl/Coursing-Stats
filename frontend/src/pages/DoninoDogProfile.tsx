@@ -229,49 +229,47 @@ export default function DoninoDogProfile() {
     <div className="p-4 md:p-6">
       <div className="max-w-4xl mx-auto">
         <div ref={exportRef}>
-          {/* Шапка профиля */}
-          <div className="mb-6 rounded-2xl border-2 border-old-money-200 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 p-5 shadow-md md:p-8">
-            <div className="flex items-start gap-2">
-              <button
-                type="button"
-                onClick={handleBack}
-                className="mt-1.5 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-old-money-200 bg-white/90 text-old-money-600 shadow-sm transition-colors hover:border-old-money-300 hover:bg-old-money-50 hover:text-camel-700 dark:border-charcoal-600 dark:bg-charcoal-800 dark:text-old-money-400 dark:hover:border-charcoal-500 dark:hover:bg-charcoal-700 dark:hover:text-camel-400"
-                aria-label="Назад"
-              >
-                <ChevronLeft className="h-4 w-4" aria-hidden />
-              </button>
-              <div className="min-w-0 flex-1">
-                <div className="flex flex-col md:flex-row md:divide-x divide-old-money-200 dark:divide-charcoal-600 gap-4 md:gap-6">
-                  <div className="w-full md:w-1/2">
-                    <div className="flex items-baseline gap-3 md:gap-4 flex-wrap">
-                      <OwnerCrownName name={data?.name} breed={data?.breed} kind="donino">
-                        <h1 className="text-2xl font-bold tracking-tight text-charcoal-900 dark:text-charcoal-100 md:text-3xl">{data?.name}</h1>
-                      </OwnerCrownName>
-                      {dogSex && <DogSexIcon sex={dogSex} size={22} className="mb-0.5" />}
-                    </div>
-                    <div className="mt-3">
-                      <span className="inline-block rounded-full bg-cream-100 dark:bg-charcoal-700 px-4 py-1.5 text-sm font-semibold text-charcoal-700 dark:text-charcoal-300 border border-old-money-200 dark:border-charcoal-600">
-                        {data?.breed}
-                      </span>
-                    </div>
+          {/* Шапка профиля — кнопка «назад» вне потока, слева от карточки */}
+          <div className="relative mb-6">
+            <button
+              type="button"
+              onClick={handleBack}
+              className="absolute right-full top-5 z-10 mr-0.5 flex h-11 w-11 items-center justify-center rounded-lg text-old-money-500 transition-colors hover:bg-old-money-50 hover:text-camel-700 md:top-8 dark:text-old-money-400 dark:hover:bg-charcoal-700 dark:hover:text-camel-400"
+              aria-label="Назад"
+              data-export-ignore
+            >
+              <ChevronLeft className="h-5 w-5" aria-hidden />
+            </button>
+            <div className="rounded-2xl border-2 border-old-money-200 bg-white p-5 shadow-md dark:border-charcoal-600 dark:bg-charcoal-800 md:p-8">
+              <div className="flex flex-col gap-4 md:flex-row md:gap-6 md:divide-x md:divide-old-money-200 dark:md:divide-charcoal-600">
+                <div className="w-full md:w-1/2">
+                  <div className="flex flex-wrap items-baseline gap-3 md:gap-4">
+                    <OwnerCrownName name={data?.name} breed={data?.breed} kind="donino">
+                      <h1 className="text-2xl font-bold tracking-tight text-charcoal-900 dark:text-charcoal-100 md:text-3xl">{data?.name}</h1>
+                    </OwnerCrownName>
+                    {dogSex && <DogSexIcon sex={dogSex} size={22} className="mb-0.5" />}
                   </div>
-                  {achievements.length > 0 && (
-                    <div className="w-full md:w-1/2 flex flex-wrap gap-2 items-start md:pl-6 justify-end">
-                      {achievements.map((badge, idx) => (
-                        <HoverTooltip key={idx} label={badge.tooltip}>
-                          <div className={`flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold ${badge.color} shrink-0`}>
-                            {badge.icon}
-                            {badge.label}
-                          </div>
-                        </HoverTooltip>
-                      ))}
-                    </div>
-                  )}
+                  <div className="mt-3">
+                    <span className="inline-block rounded-full border border-old-money-200 bg-cream-100 px-4 py-1.5 text-sm font-semibold text-charcoal-700 dark:border-charcoal-600 dark:bg-charcoal-700 dark:text-charcoal-300">
+                      {data?.breed}
+                    </span>
+                  </div>
                 </div>
+                {achievements.length > 0 && (
+                  <div className="flex w-full flex-wrap items-start justify-end gap-2 md:w-1/2 md:pl-6">
+                    {achievements.map((badge, idx) => (
+                      <HoverTooltip key={idx} label={badge.tooltip}>
+                        <div className={`flex shrink-0 items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold ${badge.color}`}>
+                          {badge.icon}
+                          {badge.label}
+                        </div>
+                      </HoverTooltip>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           </div>
-
           {/* Статистика и история */}
           {(hasSpeedRecords || hasCoursingRecords) && (
             <div className={`grid gap-4 md:gap-6 mb-6 ${hasSpeedRecords && hasCoursingRecords ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1'}`}>

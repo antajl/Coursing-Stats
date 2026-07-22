@@ -17,7 +17,7 @@
 | **Google Sheet** | [1NTiY3HXZ…](https://docs.google.com/spreadsheets/d/1NTiY3HXZIkXE8xTeXZESgMKaZsEXunmcWhTfhhkoKyE) |
 | **D1** | `speed_records` |
 | **API** | `GET /api/speed-records` |
-| **UI** | Переключатель **Записи | Статистика** (`?view=stats`) на `/speed-records`; колонка «Замер» в двухколоночном layout |
+| **UI** | Колонка «Замер» на `/speed-records`; режим **Записи / Статистика** — в меню «Донино» (`?view=stats`) |
 
 ### 2. Бега борзых 350 м
 
@@ -175,7 +175,7 @@ npx tsx backend/scripts/speed/fetch-coursing-records.ts --remote
 
 **Маршрут:** `/speed-records` — одна страница, **две колонки** (Замер | Бега 350 м). Отдельных вкладок дисциплин нет.
 
-**Переключатель режима** (в тулбаре справа): **Записи | Статистика** — URL `?view=stats` (по умолчанию записи). Компонент `ViewToggle` в `DoninoPageToolbar`.
+**Режим** **Записи | Статистика** — в шапке «Донино» (не в тулбаре). URL `?view=stats` (по умолчанию записи).
 
 | Компонент | limit API | Назначение |
 |-----------|----------:|------------|
@@ -184,7 +184,7 @@ npx tsx backend/scripts/speed/fetch-coursing-records.ts --remote
 | `DoninoStatsColumns.tsx` | — | Статистика: сводка, свёрнутые графики, карточки групп |
 | `useDogSpeedRecords` | 1000 | Профиль собаки `/dog/:id` |
 
-**Тулбар** (`DoninoPageToolbar.tsx`): `PageToolbar bare` + `ToolbarFiltersDropdown` (год / порода / пол — чекбоксы; в stats — группировка и диапазоны); `ViewToggle` справа; Excel — выпадающий экспорт (`exportDoninoToExcel`).
+**Тулбар** (`DoninoPageToolbar.tsx`): `PageToolbar bare` + `ToolbarFiltersDropdown` (год / порода / пол — чекбоксы; в stats — группировка и диапазоны); Excel — выпадающий экспорт (`exportDoninoToExcel`).
 
 **Фильтры по колонкам (важно):**
 - **Пол** — только колонка «Замер» (подпись под тулбаром).

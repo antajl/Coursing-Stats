@@ -22,19 +22,6 @@ export function useSpeedRecordsPage() {
     return v === 'stats' ? 'stats' : 'table'
   })
 
-  const handleViewChange = useCallback(
-    (nextView: 'table' | 'stats') => {
-      setView(nextView)
-      const params = new URLSearchParams(searchParams)
-      if (nextView === 'stats') params.set('view', 'stats')
-      else params.delete('view')
-      params.delete('tab')
-      params.delete('statsTab')
-      setSearchParams(params)
-    },
-    [searchParams, setSearchParams]
-  )
-
   useEffect(() => {
     const rawTab = searchParams.get('tab')
     if (rawTab === 'stats') {
@@ -434,7 +421,6 @@ export function useSpeedRecordsPage() {
 
   return {
     view,
-    handleViewChange,
     searchQuery,
     setSearchQuery,
     filterYears,

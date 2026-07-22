@@ -52,7 +52,6 @@ function SpeedRecords() {
       <div className="bg-cream-50/90 dark:bg-charcoal-800/90 backdrop-blur-lg rounded-2xl shadow-xl border border-cream-300 dark:border-charcoal-700 px-4 py-3 md:px-6 md:py-4">
         <DoninoPageToolbar
           view={view}
-          onViewChange={page.handleViewChange}
           searchQuery={page.searchQuery}
           onSearchChange={page.setSearchQuery}
           filterYears={page.filterYears}

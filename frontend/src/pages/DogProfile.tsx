@@ -275,18 +275,18 @@ export default function DogProfile() {
       <div className="max-w-4xl mx-auto">
         <div ref={exportRef}>
 
-        {/* Шапка профиля */}
-        <div className="mb-6 flex items-start gap-1 md:gap-2">
+        {/* Шапка профиля — кнопка «назад» вне потока, слева от карточки */}
+        <div className="relative mb-6">
           <button
             type="button"
             onClick={() => navigate(-1)}
-            className="mt-5 flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-lg text-old-money-500 transition-colors hover:bg-old-money-50 hover:text-camel-700 md:mt-8 dark:text-old-money-400 dark:hover:bg-charcoal-700 dark:hover:text-camel-400"
+            className="absolute right-full top-5 z-10 mr-0.5 flex h-11 w-11 items-center justify-center rounded-lg text-old-money-500 transition-colors hover:bg-old-money-50 hover:text-camel-700 md:top-8 dark:text-old-money-400 dark:hover:bg-charcoal-700 dark:hover:text-camel-400"
             aria-label="Назад"
             data-export-ignore
           >
             <ChevronLeft className="h-5 w-5" aria-hidden />
           </button>
-          <div className="min-w-0 flex-1 rounded-xl border border-old-money-200/80 bg-white p-5 dark:border-charcoal-600 dark:bg-charcoal-800/50 md:p-8">
+          <div className="min-w-0 rounded-xl border border-old-money-200/80 bg-white p-5 dark:border-charcoal-600 dark:bg-charcoal-800/50 md:p-8">
           <div className="flex items-start gap-2">
             <div className="min-w-0 flex-1">
               <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">

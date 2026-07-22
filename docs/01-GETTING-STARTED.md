@@ -185,7 +185,7 @@ Push в `main` → GitHub Actions → Cloudflare Pages. Worker в прод не 
 - ✅ **Публично без календаря и протоколов** (вариант A, договорённость с procoursing.ru): протоколы → ссылки на procoursing.ru; локально — `/admin/calendar`, `/admin/event/:id`
 - ✅ Атрибуция «Расчёты на основе данных [procoursing.ru](http://procoursing.ru/)» на страницах расчётов; на `/competitions` — **вверху карточки**; iframe: `frame-ancestors` в `frontend/public/_headers`
 - ✅ Единый паттерн тулбара (`PageToolbar bare` + `ToolbarFiltersDropdown`): рейтинг, судьи, рекорды Донино — одна строка, секции фильтров с чекбоксами; **рейтинг:** породы из `dogs-index` (с выступлениями), год можно снять → «все годы»; календарь — framed panel, только dev
-- ✅ **Рекорды Донино** (`/speed-records`): одна страница, две колонки (Замер | Бега 350 м); переключатель **Записи | Статистика** в тулбаре справа (`ViewToggle`); группировка в статистике — в панели «Фильтры»; infinite scroll в списке
+- ✅ **Рекорды Донино** (`/speed-records`): одна страница, две колонки (Замер | Бега 350 м); **Записи | Статистика** в меню «Донино»; группировка в статистике — в панели «Фильтры»; infinite scroll в списке
 - ✅ Lazy routes + code-splitting (`AppRoutes.tsx`, `vite.config.ts` с `manualChunks`; крупные страницы разбиты на модули)
 - ✅ Календарь событий (локально): `EventListRow`, inline-фильтры — `/admin/calendar` в dev
 - ✅ UI polish: матовый `nav-glass`, светлая тема по умолчанию, рейтинг/Донино

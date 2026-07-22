@@ -35,7 +35,7 @@
 | `PageToolbar` | Обёртка: строка фильтров, активные чипы; prop **`bare`** — без `TOOLBAR_PANEL` |
 | `ToolbarFiltersDropdown` | Кнопка «Фильтры», панель, «Сбросить» / «Готово» |
 | `ToolbarSegmentControl` | Переключатель вкладок (медали/очки/скорость) |
-| `ViewToggle` | Записи \| Статистика (Донино) |
+| `ViewToggle` | Записи \| Статистика (Донино) — компонент есть; переключение сейчас в `Nav` |
 | `ToolbarSearch` | Поиск в тулбаре |
 | `ToolbarActiveFilters` | Сбрасываемые чипы |
 | `ToolbarFiltersDropdown` | Панель фильтров |
