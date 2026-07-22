@@ -50,12 +50,6 @@ jobs:
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
 
       # Worker больше не нужен для публичного сайта — фронтенд читает
-      # /data/v1/*.json прямо с Pages CDN (см. docs/DATA.md). Админка
+      # /data/v1/*.json прямо с Pages CDN (см. docs/03-DATA.md). Админка
       # работает только локально через `npm run dev` (local-dev-server :8787).
-      # Если понадобится вернуть Worker (например, для dev:d1), раскомментируйте:
-      # - name: Deploy Worker
-      #   uses: cloudflare/wrangler-action@v3
-      #   with:
-      #     apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-      #     accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-      #     command: deploy --config wrangler.toml
+      # Worker deploy в CI намеренно отключён.
