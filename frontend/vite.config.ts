@@ -55,11 +55,16 @@ function serveDataV1(): Plugin {
 //
 // Не использовать manualChunks для react-router/lucide: на Vite 8/rolldown
 // это давало битый граф (vendor-router импортировал vendor-icons) → белый экран.
+// build-stamp в banner меняет хэш всех чанков на каждый CI → сброс отравленного
+// immutable/HTML-кэша под /assets/*.js (см. docs/16-TROUBLESHOOTING.md).
+const buildStamp = process.env.GITHUB_SHA?.slice(0, 8) || String(Date.now())
+
 export default defineConfig({
   plugins: [react(), serveDataV1()],
   build: {
     rollupOptions: {
       output: {
+        banner: `/* cs-build ${buildStamp} */`,
         entryFileNames: 'assets/[name]-[hash].js',
         chunkFileNames: 'assets/[name]-[hash].js',
         assetFileNames: 'assets/[name]-[hash][extname]',
