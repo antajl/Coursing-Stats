@@ -25,6 +25,64 @@ npx vitest run backend/tests/static-indexes.test.ts
 
 ---
 
+## Белый экран после деплоя (JS MIME / chunk error)
+
+### Симптом
+Консоль: `Expected a JavaScript module… MIME type of "text/html"` или `Failed to fetch dynamically imported module` → белый экран.
+
+### Причина
+1. Во время деплоя `/assets/*.js` ещё нет → SPA `_redirects` отдавал `index.html` с **200**.
+2. `_headers` ставил на `/assets/*` **immutable** на год → браузер кэшировал HTML как «JS».
+3. Раньше чанки без хэша в имени (`MedalTally.js`) смешивались между деплоями.
+
+### Защита (с 2026-07-22, уточнено)
+
+- Vite: `assets/[name]-[hash].js` + build-stamp banner (новые имена после каждого CI)
+- `_redirects`: только `/* /index.html 200` — **без** корневого `404.html` (иначе Pages отключает SPA и `/competitions` = 404)
+- Не использовать `/assets/* → 404` в `_redirects` (на Pages rewrite со статусом 404 не поддерживается)
+- HTML: `no-cache`; авто-reload при ошибке чанка
+
+Если кэш уже отравлен: после деплоя с новым stamp хэши vendor-чанков сменятся сами; при залипании — инкогнито один раз.
+
+Канон: [`20-OPERATIONS.md`](20-OPERATIONS.md) → «Кэш фронта», [`04-DEVELOPMENT.md`](04-DEVELOPMENT.md) → SPA / Vite.
+
+---
+
+## Донино: локально новые собаки, на проде старые
+
+### Симптом
+После `scripts/update-donino.bat` / `npm run export-donino` на `localhost` видны свежие записи, на **coursing-stats.ru** — прежние.
+
+### Причина
+Экспорт пишет только в **локальный** `data/v1/donino/*.json`. Прод читает **CDN** с последнего успешного **Pages deploy** (push в `main` → CI). Пока JSON не в git и не задеплоен — прод не меняется.
+
+Дополнительно:
+- Cron `update-speed-records.yml` обновляет **только** `speed_records.json` (замер), **не** `coursing_records.json` (350 м).
+- React Query / вкладка браузера может держать старый JSON несколько минут.
+
+### Решение
+```bash
+scripts\update-donino.bat          # обе таблицы
+# проверить data/v1/donino/speed_records.json и coursing_records.json
+scripts\deploy-to-github.bat       # commit + pull --rebase + push → CI Pages
+```
+
+Сверить: `count` в локальном файле vs `https://coursing-stats.ru/data/v1/donino/speed_records.json`.
+
+Канон: [`09-SPEED-RECORDS.md`](09-SPEED-RECORDS.md) → «Локальное обновление», [`20-OPERATIONS.md`](20-OPERATIONS.md).
+
+---
+
+## Выставки: пустой рейтинг / чемпионы на проде, календарь тормозит
+
+### Причина
+- All-time `dog-ranking.json` > **25 MB** — лимит файла Cloudflare Pages; на CDN его нет (SPA HTML). UI по умолчанию грузит **год**, «все года» — склейка `dog-ranking-{year}.json`.
+- Старый календарь последовательно качал ~90 полных `exhibitions/*.json` — медленно на CDN. Сейчас — лёгкие `shows/calendar/{year}.json`.
+
+Канон: [`03-DATA.md`](03-DATA.md) → «Выставки», [`SHOWS.md`](SHOWS.md).
+
+---
+
 ## Нет кнопки «Breed Archive» в профиле собаки
 
 ### Симптом

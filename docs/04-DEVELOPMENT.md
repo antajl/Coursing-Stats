@@ -661,20 +661,24 @@ hover:bg-cream-50 dark:hover:bg-charcoal-700
 
 Код в `backend/src/worker.ts` — для `npm run dev:d1`. **Не деплоится в CI** с 2026-07-07. См. [`03-DATA.md`](03-DATA.md).
 
-### SPA Routing
+### SPA Routing и кэш ассетов
 
-Файл `frontend/public/_redirects`:
+`frontend/public/_redirects`:
 ```
-/* /index.html 200
+/*    /index.html   200
 ```
 
-Это обеспечивает корректную работу React Router на Cloudflare Pages.
+**Критично:** не класть корневой `404.html` в `public/` — Cloudflare Pages тогда **отключает SPA-режим**, и `/competitions`, `/shows`, … отдают 404. Не использовать rewrite `/assets/* … 404` в `_redirects` (status 404 на Pages **не поддерживается**).
+
+Vite: `assets/[name]-[hash].js` + `banner` с build stamp (новые хэши каждый CI deploy).
+
+HTML no-cache + авто-reload: [`20-OPERATIONS.md`](20-OPERATIONS.md) → «Кэш фронта».
 
 ### GitHub Actions Workflows
 
 **deploy-frontend.yml:** Деплой фронтенда на Cloudflare Pages
 **update-db.yml:** Обновление D1 — **только вручную** (`workflow_dispatch`)
-**update-speed-records.yml:** Donino speed → D1 + `data/v1/` (cron **4×/день** — 05:00, 11:00, 17:00, 20:30 UTC ≈ 08:00, 14:00, 20:00, 23:30 МСК); push триггерит deploy
+**update-speed-records.yml:** только `data/v1/donino/speed_records.json` (cron **4×/день**); **не** обновляет бега 350 м. Полный Донино: `scripts/update-donino.bat` + deploy.
 
 **Secrets:**
 - `CLOUDFLARE_API_TOKEN` — API токен Cloudflare (с правами D1 и Workers)

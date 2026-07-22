@@ -49,13 +49,16 @@ function serveDataV1(): Plugin {
 }
 
 // https://vite.dev/config/
+const buildStamp = process.env.GITHUB_SHA?.slice(0, 8) || String(Date.now())
+
 export default defineConfig({
   plugins: [react(), serveDataV1()],
   build: {
+    // Меняет хэш всех чанков при каждом CI-деплое → бросаем отравленный immutable-кэш
+    // (HTML, ошибочно сохранённый как /assets/*.js).
     rollupOptions: {
       output: {
-        // Content hash обязателен: иначе CF/браузер кэшируют assets/*.js как immutable
-        // на год, а после деплоя новый Competitions.js тянет старый MedalTally.js → белый экран.
+        banner: `/* cs-build ${buildStamp} */`,
         entryFileNames: 'assets/[name]-[hash].js',
         chunkFileNames: 'assets/[name]-[hash].js',
         assetFileNames: 'assets/[name]-[hash][extname]',

@@ -46,6 +46,9 @@
 | Данные, админка, `data/v1/` | **[03-DATA.md](03-DATA.md)** |
 | Breed Archive / `pedigree_url` | [03-DATA.md](03-DATA.md) → «Breed Archive» |
 | Пустой рейтинг/судьи на проде | [20-OPERATIONS.md](20-OPERATIONS.md), [03-DATA.md](03-DATA.md) → «Диагностика» |
+| Белый экран / MIME JS после деплоя | [16-TROUBLESHOOTING.md](16-TROUBLESHOOTING.md), [20-OPERATIONS.md](20-OPERATIONS.md) → «Кэш фронта» |
+| Донино локально ≠ прод | [16-TROUBLESHOOTING.md](16-TROUBLESHOOTING.md), [09-SPEED-RECORDS.md](09-SPEED-RECORDS.md) → «Локальное обновление» |
+| Выставки: лимит 25 MB / медленный календарь | [03-DATA.md](03-DATA.md) → «Выставки», [SHOWS.md](SHOWS.md) |
 | Локальный API (админка) | [05-API-REFERENCE.md](05-API-REFERENCE.md) |
 | UI, цвета, тёмная тема | [06-DESIGN-SYSTEM.md](06-DESIGN-SYSTEM.md) |
 | Фильтры рейтинга | [03-DATA.md](03-DATA.md) → «Породы в UI», [18-CODE-PATTERNS.md](18-CODE-PATTERNS.md) |

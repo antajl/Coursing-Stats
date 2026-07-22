@@ -52,11 +52,39 @@ npx vitest run backend/tests/static-indexes.test.ts
 | Хостинг | Cloudflare Pages `coursingstats` |
 | Данные на CDN | `frontend/public/data/v1/` (генерируется CI, не в git) |
 | Worker | **Не деплоится** в CI (legacy) |
-| Donino cron | `update-speed-records.yml` — 4×/день |
+| Donino cron | `update-speed-records.yml` — 4×/день, **только** `speed_records.json` |
 
-Windows: `scripts/deploy-to-github.bat`
+Windows: `scripts/deploy-to-github.bat` (перед push: `git pull --rebase`; при конфликте в `donino/` — предпочитать локальный/свежий Sheets, не remote CI).
+
+**Коммиты и push — только по явной просьбе пользователя.**
 
 Подробнее: [`04-DEVELOPMENT.md`](04-DEVELOPMENT.md) → Deployment
+
+---
+
+## Донино: локальный экспорт → прод
+
+```bash
+scripts\update-donino.bat     # speed + coursing 350 м → data/v1/donino/
+scripts\deploy-to-github.bat  # иначе прод не увидит изменения
+```
+
+`npm run export-donino` = обе таблицы. Cron обновляет только замер скорости.
+
+Симптом «локально новые, на проде старые»: [`16-TROUBLESHOOTING.md`](16-TROUBLESHOOTING.md).
+
+---
+
+## Кэш фронта (без Ctrl+F5 у пользователей)
+
+| Слой | Политика |
+|------|----------|
+| HTML (`/`, `/index.html`) | `no-cache` — всегда свежий shell с новыми хэшами JS |
+| `/assets/*-[hash].*` | `immutable` год; имена с content-hash |
+| Missing `/assets/*` | Не SPA-HTML 200 желательно; на Pages **нельзя** rewrite 404 в `_redirects`. Не добавлять корневой `404.html` (ломает SPA). |
+| Сбой чанка после деплоя | авто-`reload` + **build-stamp** в Vite banner → новые хэши vendor на каждый CI |
+
+Не возвращать unhashed имена чанков (`MedalTally.js`) и не ставить SPA-fallback на `/assets/*`.
 
 ---
 

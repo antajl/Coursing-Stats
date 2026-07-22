@@ -132,17 +132,12 @@ shows/
 
 | Файл | Размер | Описание |
 |-------|--------|----------|
-| `dog-ranking-2017.json` | 6.4 MB | Рейтинг за 2017 год |
-| `dog-ranking-2018.json` | 8.4 MB | Рейтинг за 2018 год |
-| `dog-ranking-2019.json` | 8.3 MB | Рейтинг за 2019 год |
-| `dog-ranking-2021.json` | 5.6 MB | Рейтинг за 2021 год |
-| `dog-ranking-2022.json` | 5.8 MB | Рейтинг за 2022 год |
-| `dog-ranking-2023.json` | 7.0 MB | Рейтинг за 2023 год |
-| `dog-ranking-2024.json` | 7.8 MB | Рейтинг за 2024 год |
-| `dog-ranking-2025.json` | 7.3 MB | Рейтинг за 2025 год |
-| `dog-ranking-2026.json` | 3.4 MB | Рейтинг за 2026 год |
-| `dog-ranking-unknown.json` | 21.6 MB | Выставки без даты или некорректным форматом даты |
-| `dog-ranking.json` | 73.7 MB | All-time рейтинг (исключён из деплоя) |
+| `dog-ranking-{year}.json` | ~2–6 MB (compact) | Рейтинг за год — **основной формат на CDN** |
+| `dog-ranking-unknown.json` | ~14 MB | Выставки без распознанной даты |
+| `dog-ranking.json` | ~60+ MB | All-time: только локально / сборка; **не в git и не на Pages** (>25 MB лимит файла) |
+| `calendar/{year}.json` | малый | Список выставок для UI календаря (не полные протоколы) |
+
+Сборка: `build-show-indexes.ts` пишет compact JSON + обогащённый календарь (`location`, `judges`, `results_count`, …).
 
 **Unknown:** Выставки без даты или с некорректным форматом даты (функция `extractYear()` не смогла распознать год из поля `date`).
 

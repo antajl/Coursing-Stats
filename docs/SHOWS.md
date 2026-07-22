@@ -72,13 +72,14 @@ data/v1/shows/
 
 ### Индекс рейтинга собак
 
-- **Файл:** `data/v1/shows/indexes/dog-ranking.json`
-- **Сборка:** `cd backend && npx tsx scripts/build-show-indexes.ts`
-- **Логика:** `backend/lib/show-award-ranking.ts` — веса BIS (10k) → BOB (2k) → CACIB (500) → CAC (100), `best_award`, исправленный парсинг CAC/CACIB
-- **UI:** `ShowDogCard.tsx` — номер места, крупные бейджи наград, подпись «лучшая: BOB»
+- **CDN:** `dog-ranking-{year}.json` (compact); UI по умолчанию — текущий год; «все года» — склейка шардов в `getShowDogRanking('')`
+- **Не на CDN:** `dog-ranking.json` all-time (>25 MB лимит Pages) — исключён из git/`copy-data.js`
+- **Календарь UI:** `shows/calendar/{year}.json` (лёгкий список); полный протокол — `exhibitions/*.json` на странице выставки
+- **Сборка:** `npx tsx backend/scripts/build-show-indexes.ts` (из `build-all-data`)
+- **Логика:** `backend/lib/show-award-ranking.ts` — веса BIS (10k) → BOB (2k) → CACIB (500) → CAC (100)
 - **Тест:** `backend/tests/show-award-ranking.test.ts`
 
-Канон весов и иерархии: [`10-GUIDE.md`](10-GUIDE.md).
+Канон размеров и фронта: [`03-DATA.md`](03-DATA.md) → «Выставки».
 
 ### Пайплайн парсера (канон)
 

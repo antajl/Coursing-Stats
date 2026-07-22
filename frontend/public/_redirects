@@ -1,6 +1,6 @@
-# Missing hashed assets must 404 (not SPA HTML). Otherwise CF/browser can
-# cache index.html under /assets/*.js with immutable max-age and break the site.
-/assets/*  /404.html  404
-
-# Client-side routes (React Router)
-/*  /index.html  200
+# SPA: все клиентские маршруты → index.html.
+# НЕ добавлять /404.html в public — иначе Cloudflare Pages отключает SPA-режим
+# и /competitions|/shows|… отдают 404 (см. docs/16-TROUBLESHOOTING.md).
+# НЕ ставить rewrite /assets/* → 404: на Pages status 404 в _redirects не поддерживается
+# и может сломать разбор файла.
+/*    /index.html   200

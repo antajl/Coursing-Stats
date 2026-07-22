@@ -254,6 +254,34 @@ npx tsx backend/scripts/speed/fetch-coursing-records.ts --remote
 - **Формирование истории**: `name + breed` (шире, позволяет записи той же собаки с разным полом)
 - **Отображение во фронтенде**: `name + breed` (одна запись на уникальную собаку, соответствует логике истории бэкенда)
 
+## Локальное обновление Донино → прод (канон)
+
+Обе дисциплины из Google Sheets:
+
+```bash
+scripts\update-donino.bat
+# = npm run export-donino
+#   1) export-speed-from-sheets.ts  → data/v1/donino/speed_records.json
+#   2) export-coursing-from-sheets.ts → data/v1/donino/coursing_records.json
+```
+
+На **прод** данные попадут только после commit + push в `main` (CI Pages):
+
+```bash
+scripts\deploy-to-github.bat
+```
+
+| Источник | speed (км/ч) | coursing 350 м |
+|----------|--------------|----------------|
+| `update-donino.bat` / `export-donino` | да | да |
+| Cron `update-speed-records.yml` (4×/день) | да | **нет** |
+
+Локальный Vite читает `data/v1/` с диска сразу после экспорта. Прод — только CDN после деплоя. См. [`16-TROUBLESHOOTING.md`](16-TROUBLESHOOTING.md) → «Донино: локально новые…».
+
+Атрибуция на UI: `DoninoAttribution` → [runningdog.ru](https://runningdog.ru/).
+
+---
+
 ## Статистика (ориентир, production D1, 2026-07)
 
 | Метрика | Значение |
