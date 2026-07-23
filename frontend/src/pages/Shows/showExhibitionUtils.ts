@@ -1,10 +1,40 @@
 import {
   matchShowAwardToken,
+  splitShowTitleTokens,
   SHOW_AWARD_ORDER,
   type ShowAwardKey,
 } from '../../../../backend/lib/show-award-ranking'
+import {
+  formatShowGradeDisplay,
+  formatShowGradeBadge,
+  recoverInterleavedClassAndGrade,
+  recoverWrappedPuppyClassAndGrade,
+} from '../../../../backend/lib/show-grades'
+import { dogNameMatchesQuery as dogNameMatchesQueryLib } from '../../lib/dogName'
 
 export type { ShowAwardKey }
+export { splitShowTitleTokens }
+
+const CLASS_ABBREV_RU: Record<string, string> = {
+  БЕБ: 'Беби',
+  Б: 'Беби',
+  ЩЕН: 'Щенки',
+  ЮН: 'Юниоры',
+  ПРМ: 'Промежуточный',
+  ОТК: 'Открытый',
+  РАБ: 'Рабочий',
+  ЧЕМ: 'Чемпионы',
+  'ЧЕМ НКП': 'Чемпионы НКП',
+  ЧНКП: 'Чемпионы НКП',
+  ПОЧ: 'Победители',
+  'ПОЧ НКП': 'Победители НКП',
+  ВЕТ: 'Ветераны',
+}
+
+function localizeClassAbbrev(c: string): string {
+  const key = c.toUpperCase().replace(/\s+/g, ' ').trim()
+  return CLASS_ABBREV_RU[key] || c
+}
 
 export interface ShowResultRow {
   breed: string
@@ -82,14 +112,38 @@ export function splitDogNameDisplay(dogName: string): { ring: string | null; nam
   return { ring: match[1], name: match[2].trim() }
 }
 
-/** Дополняет пустые class из предыдущей строки (legacy-данные). */
+/** Дополняет пустые class из предыдущей строки; чинит PDF-перенос «ЩЕ ОП Н» и «ПР ОТ М Л». */
 export function normalizeShowResults(rows: ShowResultRow[]): ShowResultRow[] {
   const sorted = [...rows].sort((a, b) => extractRingNumber(a) - extractRingNumber(b))
   let lastClass = ''
   return sorted.map((row) => {
+    const interleaved = recoverInterleavedClassAndGrade(row.class ?? '', row.grade ?? '')
+    if (interleaved) {
+      const cls = localizeClassAbbrev(interleaved.dogClass)
+      lastClass = cls
+      return {
+        ...row,
+        class: cls,
+        grade: formatShowGradeDisplay(interleaved.grade),
+      }
+    }
+    const recovered = recoverWrappedPuppyClassAndGrade(row.class ?? '', row.grade ?? '')
+    if (recovered) {
+      const cls = 'Щенки'
+      lastClass = cls
+      return {
+        ...row,
+        class: cls,
+        grade: formatShowGradeDisplay(recovered.grade),
+      }
+    }
     const cls = row.class?.trim() || lastClass
     if (row.class?.trim()) lastClass = row.class.trim()
-    return { ...row, class: cls }
+    return {
+      ...row,
+      class: cls,
+      grade: row.grade ? formatShowGradeDisplay(row.grade) : row.grade,
+    }
   })
 }
 
@@ -172,8 +226,9 @@ export function buildResultsByBreedId(results: ShowResultRow[]): Map<number, Sho
 
 export function buildGroupMap(catalog: BreedCatalogRow[]): Map<string, BreedCatalogRow[]> {
   const map = new Map<string, BreedCatalogRow[]>()
+  const hasFciGroups = catalog.some((row) => Boolean(row.breed_group?.trim()))
   for (const row of catalog) {
-    const key = row.breed_group || 'Прочие породы'
+    const key = hasFciGroups ? row.breed_group?.trim() || 'Прочие породы' : ''
     if (!map.has(key)) map.set(key, [])
     map.get(key)!.push(row)
   }
@@ -183,17 +238,13 @@ export function buildGroupMap(catalog: BreedCatalogRow[]): Map<string, BreedCata
   return new Map([...map.entries()].sort(([a], [b]) => a.localeCompare(b, 'ru')))
 }
 
-export function formatTitleLine(title: string): string {
-  return title.replace(/\s+/g, ' ').replace(/ ,/g, ',').trim()
+/** Есть ли реальные группы FCI (иначе «Прочие породы» — лишняя обёртка). */
+export function catalogHasFciGroups(catalog: BreedCatalogRow[]): boolean {
+  return catalog.some((row) => Boolean(row.breed_group?.trim()))
 }
 
-/** Разбивка колонки наград протокола на отдельные токены. */
-export function splitShowTitleTokens(title: string | null | undefined): string[] {
-  if (!title?.trim()) return []
-  return title
-    .split(',')
-    .map((part) => part.replace(/\s+/g, ' ').trim())
-    .filter(Boolean)
+export function formatTitleLine(title: string): string {
+  return title.replace(/\s+/g, ' ').replace(/ ,/g, ',').trim()
 }
 
 /** Канонические награды, встречающиеся в результатах выставки (порядок SHOW_AWARD_ORDER). */
@@ -217,13 +268,13 @@ export function titleRowHasAward(row: BreedTitleRow, awardKey: ShowAwardKey): bo
 }
 
 export function formatGradeLine(grade: string | undefined): string {
-  if (!grade) return ''
-  const trimmed = grade.replace(/\s+/g, ' ').trim()
-  const withoutEnglish = trimmed.replace(/\s*\([^)]*\)\s*$/, '').trim()
-  if (CYRILLIC_RE.test(withoutEnglish)) return withoutEnglish
-  const cyrillicParts = trimmed.match(/[А-Яа-яЁё][А-Яа-яЁё\s,-]*/g)
-  if (cyrillicParts?.length) return cyrillicParts.join(' ').replace(/\s+/g, ' ').trim()
-  return trimmed
+  return formatShowGradeDisplay(grade)
+}
+
+export function formatGradeBadge(
+  grade: string | undefined,
+): { badge: string; label: string } | null {
+  return formatShowGradeBadge(grade)
 }
 
 function normalizeSearchText(value: string | undefined | null): string {
@@ -235,8 +286,8 @@ export function dogNameMatchesQuery(dogName: string, query: string): boolean {
   const q = normalizeSearchText(query)
   if (!q) return true
   const { name } = splitDogNameDisplay(dogName)
-  const haystack = normalizeSearchText(`${dogName} ${name}`)
-  return haystack.includes(q)
+  // name_lat/name_ru часто склеены в dog_name — bilingual match через общий хелпер
+  return dogNameMatchesQueryLib(dogName, name, query)
 }
 
 /** Совпадение породы (RU/EN) с запросом. */
@@ -253,39 +304,71 @@ export function breedMatchesQuery(
   )
 }
 
+/**
+ * Единый поиск по выставке: кличка или порода (OR), плюс опциональный фильтр награды.
+ * Порода в каталоге показывается, если совпала порода или есть совпавшая собака.
+ */
 export function catalogBreedMatchesFilters(
   catalog: BreedCatalogRow,
-  breedQuery: string,
-  dogQuery: string,
+  searchQuery: string,
   resultsByBreedId: Map<number, ShowResultRow[]>,
   allResults: ShowResultRow[],
   awardKey?: ShowAwardKey | null
 ): boolean {
-  if (!breedMatchesQuery(catalog.breed, catalog.breed_en, breedQuery)) return false
-  const q = normalizeSearchText(dogQuery)
-  if (!q && !awardKey) return true
+  const q = normalizeSearchText(searchQuery)
   const rows =
     resultsByBreedId.get(catalog.dog_breed_id) ??
     resultsForBreed(allResults, catalog.dog_breed_id, catalog.breed_en)
-  return rows.some(
-    (row) =>
-      dogNameMatchesQuery(row.dog_name, dogQuery) &&
-      (!awardKey || resultHasAward(row, awardKey))
-  )
+
+  const breedHit = !q || breedMatchesQuery(catalog.breed, catalog.breed_en, searchQuery)
+  const dogHit =
+    !q || rows.some((row) => dogNameMatchesQuery(row.dog_name, searchQuery))
+
+  if (!breedHit && !dogHit) return false
+
+  if (awardKey) {
+    return rows.some(
+      (row) =>
+        resultHasAward(row, awardKey) &&
+        (!q || breedHit || dogNameMatchesQuery(row.dog_name, searchQuery)),
+    )
+  }
+
+  return true
 }
 
+/** Строки протокола: кличка или порода (OR) + награда. */
 export function filterResultsByDogAndBreed(
   results: ShowResultRow[],
-  dogQuery: string,
-  breedQuery: string,
+  searchQuery: string,
   awardKey?: ShowAwardKey | null
 ): ShowResultRow[] {
-  return results.filter(
-    (row) =>
-      breedMatchesQuery(row.breed, row.breed_en, breedQuery) &&
-      dogNameMatchesQuery(row.dog_name, dogQuery) &&
-      (!awardKey || resultHasAward(row, awardKey))
-  )
+  const q = normalizeSearchText(searchQuery)
+  return results.filter((row) => {
+    if (awardKey && !resultHasAward(row, awardKey)) return false
+    if (!q) return true
+    return (
+      breedMatchesQuery(row.breed, row.breed_en, searchQuery) ||
+      dogNameMatchesQuery(row.dog_name, searchQuery)
+    )
+  })
+}
+
+/** Фильтр строк внутри породы при едином поиске. */
+export function filterBreedRowsBySearch(
+  rows: ShowResultRow[],
+  catalog: Pick<BreedCatalogRow, 'breed' | 'breed_en'>,
+  searchQuery: string,
+  awardKey?: ShowAwardKey | null,
+): ShowResultRow[] {
+  const q = normalizeSearchText(searchQuery)
+  const breedHit = !q || breedMatchesQuery(catalog.breed, catalog.breed_en, searchQuery)
+  return rows.filter((row) => {
+    if (awardKey && !resultHasAward(row, awardKey)) return false
+    if (!q) return true
+    if (breedHit) return true
+    return dogNameMatchesQuery(row.dog_name, searchQuery)
+  })
 }
 
 /** Формат как на lc.rkfshow.ru. */

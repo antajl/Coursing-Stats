@@ -41,6 +41,9 @@ jobs:
         working-directory: ./frontend
         run: npm run build
 
+      - name: Prerender SEO HTML
+        run: npm run prerender-seo
+
       - name: Deploy Frontend to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:

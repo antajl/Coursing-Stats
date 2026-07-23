@@ -53,6 +53,7 @@ export default function AppRoutes() {
     <Suspense fallback={<PageLoader />}>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/preview/home" element={<Navigate to="/" replace />} />
         <Route path="/competitions" element={<Competitions />} />
         <Route path="/procoursing" element={<LegacyProcoursingRedirect />} />
         <Route path="/shows" element={<Shows />} />

@@ -7,7 +7,7 @@ interface RKFAttributionProps {
 const FOOTNOTE_CHIP =
   'inline-flex items-center gap-1.5 rounded-tr-2xl rounded-bl-md border border-t-0 border-r-0 border-old-money-200/80 bg-cream-100/95 px-2.5 py-1 text-[10px] leading-tight text-charcoal-500 shadow-sm dark:border-charcoal-600 dark:bg-charcoal-800/80 dark:text-charcoal-400'
 
-/** Указание источника данных lc.rkfshow.ru на страницах выставок. */
+/** Указание источника данных выставок (rkf.online) на страницах рейтинга. */
 export default function RKFAttribution({
   className = '',
   variant = 'inline',
@@ -21,7 +21,7 @@ export default function RKFAttribution({
     <p className={`${base} ${className}`.trim()}>
       <span>Источник:</span>
       <a
-        href="https://lc.rkfshow.ru/"
+        href="https://rkf.online/"
         target="_blank"
         rel="noopener noreferrer"
         className="font-medium text-camel-700 underline-offset-2 hover:text-camel-800 hover:underline dark:text-camel-400 dark:hover:text-camel-300"

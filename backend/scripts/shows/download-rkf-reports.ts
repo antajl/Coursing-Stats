@@ -114,6 +114,9 @@ async function downloadWithRetry(url: string, attempts = 5): Promise<Buffer> {
       return await downloadOnce(url)
     } catch (err) {
       last = err
+      const msg = err instanceof Error ? err.message : String(err)
+      // JPEG/HTML masquerading as report URL — no point retrying
+      if (msg.startsWith('Not a PDF')) throw err
       const status = (err as { status?: number })?.status
       const wait = status === 429 ? i * 4000 : i * 1200
       console.warn(`  retry ${i}/${attempts} ${url}:`, err)

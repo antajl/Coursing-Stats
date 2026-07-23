@@ -67,11 +67,25 @@
 
 ## Главная страница (`Home.tsx`)
 
-- **Hero:** `hero-dashboard` — intro + ближайшие события (`HomeEventRow`)
-- **StatsStrip:** кликабельные чипы
-- **Топ сезона:** `ToolbarSegmentControl` + подиум
-- **Донино:** две колонки (`donino-home-columns`)
-- **Стили:** `index.css` (`.hero-dashboard`, `.pod-card`, `.donino-home-*`)
+Редизайн 2026-07 (классы `.home-v2*` в `index.css`). **Не** `hero-dashboard` / старый `HeroIntro` на `/`.
+
+| Блок | Что |
+|------|-----|
+| **Hero** | `HomeHeroStage` — full-bleed фото (`frontend/public/images/home/`, манифест `lib/homePhotos.ts`), авто-слайдшоу ~7 с, без галереи-карточек |
+| **Settle** | Старт: текст внизу ~100vh; первый скролл вниз **или** фокус поиска → компактный hero (`requestHomeHeroSettle`); к полноэкранному старту нельзя вернуться |
+| **Поиск** | `HomeDogSearch` → `dogs-index.json`; bilingual RU/LAT (`dogNameMatchesQuery`); только id с живым `dog-profiles/{id}.json`; дедуп дублей |
+| **Разделы** | `.home-v2-entries` — якорные/ссылки на блоки |
+| **События** | две колонки: соревнования (`HomeEventRow`) + выставки (`HomeShowEventRow`); месяц — `formatMonthShortRu` (3 буквы) |
+| **Масштаб** | компактные счётчики + `StatCounter` |
+| **Топ сезона** | две колонки: соревнования (табы Очки/Медали/Скорость) + выставки (`home-top-{year}.json`) |
+| **Донино** | Замер \| Бега 350 м (`DoninoHomeRecordRow`) |
+| **Футер** | дисклеймер + email `antajl@yandex.ru` |
+
+**Исходники фото:** папка `/фото/` в корне (gitignore) → копии в `frontend/public/images/home/` (`bzmp-*`, `show-*`, `race-*`). Не коммитить сырой dump.
+
+**Поиск кличек (везде):** канон `frontend/src/lib/dogName.ts` — `dogNameMatchesQuery` / `dogNameSearchText` (транслит + V↔W). Использовать и в рейтинге выставок (`ShowRanking.tsx`), не сырой `includes` по одной раскладке.
+
+Стили: `index.css` → `.home-v2*`, `.donino-home-*`, `.home-ranking-tabs`. На `/` у `main` сброшен горизонтальный inset (`main:has(.home-v2)`).
 
 ---
 
@@ -89,9 +103,9 @@
 
 ## Мобильная адаптивность
 
-Tailwind `md:` брейкпоинты. `App.tsx`: `pt-3 pb-5 md:pt-4`, `px-2 sm:px-4 md:px-6 lg:px-8`.
+Tailwind `md:` брейкпоинты. `App.tsx`: `pt-3 pb-5 md:pt-4`, `px-2 sm:px-4 md:px-6 lg:px-8` — **на `/` сброшено** через `main:has(.home-v2)` (full-bleed hero).
 
-Ключевые страницы: `Events/index`, `TopDogs`, `SpeedRecords`, `DogProfile`, `Judges`, `Competitions`.
+Ключевые страницы: `Home`, `Events/index`, `TopDogs`, `SpeedRecords`, `DogProfile`, `Judges`, `Competitions`.
 
 - Таблицы → карточки на мобиле (`md:hidden` / `hidden md:block`)
 - `DogProfile`: chip «Breed Archive» при `pedigree_url`
@@ -161,15 +175,21 @@ CoursingRatingHint.tsx  — ⓘ в сегменте «очки»
 
 Фильтр пород: `useCompetingBreeds()`, порядок по числу собак. Год: `''` = все годы → `top-*-all.json`. Default вкладка рейтинга: **очки** (`ratingTab` в URL только для «места»).
 
-**Отображение породы:** `displayBreed()` из `lib/breedMapping.ts` (`primary` / опционально `secondary`) — `DogCard`, `ShowDogCard`, шапка профиля. Канон фильтров — UPPERCASE; UI — sentence case. Подробнее: [`03-DATA.md`](03-DATA.md) → «Канон и отображение».
+**Отображение породы:** `displayBreed()` из `lib/breedMapping.ts` — в UI **только чип** (`primary`); полное/официальное имя — в `title` при наведении (`secondary`). Канон фильтров — UPPERCASE; UI — sentence case. Подробнее: [`03-DATA.md`](03-DATA.md) → «Канон и отображение».
 
-### Home (подиум)
+### Home
 
 ```
-Home.tsx, HomePodiumSectionHead.tsx, HomePodiumTabsRail.tsx, HomeRankingTabs.tsx
+Home.tsx
+HomeHeroStage.tsx      — фон-фото + settle + слайдшоу
+HomeDogSearch.tsx      — typeahead (dogs-index + проверка profile)
+HomeShowEventRow.tsx   — выставки в блоке событий
+HomeSeasonTopRow.tsx, HomeRankingTabs.tsx
+lib/homePhotos.ts      — манифест landscape/portrait
+lib/dogName.ts         — bilingual поиск кличек
 ```
 
-Топ сезона: default **Очки**; индекс CS на подиуме (2 знака), метрики в `.pod-foot--grouped`. Стили: `index.css` → `.home-podium-*`, `.pod-foot-*`.
+Две колонки топа: соревнования (табы **Очки → Медали → Скорость**, default «Очки») и выставки (`shows/indexes/home-top-{year}.json`). Стили: `.home-v2*`, `.donino-home-*`.
 
 ### Guide
 

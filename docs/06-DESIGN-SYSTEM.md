@@ -241,7 +241,7 @@ font-mono tabular-nums
      [порода]  [Breed Archive ↗]   ← только если pedigree_url
 
 ────────────────────────────────────────────
-Титулы:  [Чемпион России X2] [CACL] …   ← flex-wrap чипы, не колонка справа
+Титулы:  [Чемпион России X2] [CACL] …   ← flex-wrap чипы по крутости, не колонка справа
 ```
 
 - Chip **Breed Archive:** `rounded-full`, border `old-money-200`, иконка `ExternalLink`, открывается в новой вкладке

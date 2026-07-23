@@ -4,12 +4,14 @@ import { fileURLToPath } from 'url'
 import {
   bestShowAward,
   compareShowDogs,
+  compactShowTitles,
   mergeShowTitles,
   parseShowTitles,
+  showDogDetailShard,
   showRankScore,
   type ShowTitleCounts,
 } from '../lib/show-award-ranking'
-import { bestShowGradeLabel } from '../lib/show-grades'
+import { bestShowGradeLabel, isShowAbsenceGrade } from '../lib/show-grades'
 import { stableShowProfileId, SHOW_PROFILE_ID_BASE } from '../lib/show-dog-profile-id'
 import {
   addBreedAliasPair,
@@ -23,6 +25,15 @@ import {
   collectJudgeNamesForBreedClean,
   sanitizeExhibitionBreeds,
 } from '../lib/show-breed-judge-clean'
+import {
+  isBreedFragment,
+  isPlausibleJudgeName,
+} from '../parsers/shows/parse-rkf-certificate-pdf'
+import {
+  collapseShowDogsByExactName,
+  collapseShowDogsByNamePrefix,
+  linkShowDogsByUniqueName,
+} from '../lib/show-dog-dedupe'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -179,6 +190,9 @@ function buildDogRanking(exhibitions: ShowExhibition[]): ShowDog[] {
 
   for (const exhibition of exhibitions) {
     for (const result of exhibition.results) {
+      // Неявка — заявка без старта: не в рейтинг и не в историю профиля
+      if (isShowAbsenceGrade(result.grade)) continue
+
       const parsed = parseDogName(result.dog_name)
       const nameLat = parsed.name_lat
       if (!nameLat) continue
@@ -458,6 +472,7 @@ function buildJudgesIndex(exhibitions: ShowExhibition[]): ShowJudgeEntry[] {
   const touch = (raw: string | undefined | null, exhibitionId: number, breed?: string) => {
     const name = (raw || '').replace(/[\u00a0\s]+/g, ' ').trim()
     if (!name) return
+    if (!isPlausibleJudgeName(name)) return
     const key = normalizeJudgeKey(name)
     let acc = byKey.get(key)
     if (!acc) {
@@ -467,7 +482,8 @@ function buildJudgesIndex(exhibitions: ShowExhibition[]): ShowJudgeEntry[] {
     acc.exhibitions.add(exhibitionId)
     acc.nameCounts.set(name, (acc.nameCounts.get(name) || 0) + 1)
     const b = (breed || '').trim()
-    if (b) acc.breeds.add(b)
+    // Skip colour/variety fragments that leaked from wrapped PDF breed cells
+    if (b && !isBreedFragment(b)) acc.breeds.add(b)
   }
 
   for (const exhibition of exhibitions) {
@@ -546,17 +562,30 @@ async function main() {
   console.log(`Unique exhibitions: ${exhibitions.length}`)
 
   // Post-processing: specialty headers often glue judge into breed (breed_judge empty).
-  // Prefer fixing in the show parser later; keep indexes clean for now.
-  const judgeNames = collectJudgeNamesForBreedClean(exhibitions)
+  // Skip RKF PDF exports — breeds are clean; scanning 80k×judges hangs the build.
+  const lcForSanitize = exhibitions.filter(
+    (e) => (e as ShowExhibition & { source?: string }).source !== 'rkf-pdf',
+  )
+  console.log(
+    `Collecting judge names for breed clean (${lcForSanitize.length} LC, skip ${exhibitions.length - lcForSanitize.length} rkf-pdf)…`,
+  )
+  const judgeNames = collectJudgeNamesForBreedClean(lcForSanitize)
+  console.log(`Judge corpus: ${judgeNames.length}`)
   let breedJudgeStripped = 0
-  for (const exhibition of exhibitions) {
+  let sanitizedEx = 0
+  for (const exhibition of lcForSanitize) {
     breedJudgeStripped += sanitizeExhibitionBreeds(exhibition, judgeNames)
+    sanitizedEx++
+    if (sanitizedEx % 200 === 0) {
+      console.log(`  Sanitized ${sanitizedEx} LC exhibitions…`)
+    }
   }
   console.log(
-    `Sanitized breed+judge glue: ${breedJudgeStripped} fields (judge corpus ${judgeNames.length})`,
+    `Sanitized breed+judge glue: ${breedJudgeStripped} fields on ${sanitizedEx} LC shows`,
   )
 
-  const dogs = buildDogRanking(exhibitions)
+  console.log('Building dog ranking (all-time)…')
+  let dogs = buildDogRanking(exhibitions)
   console.log(`Built ranking for ${dogs.length} dogs (all time)`)
 
   const aliasMap = buildBreedAliasMap(exhibitions)
@@ -565,6 +594,22 @@ async function main() {
   console.log(
     `Linked show→competition: ${linkStats.linked} unique, ${linkStats.ambiguous} ambiguous (skipped), of ${competitionDogs.length} competition dogs`,
   )
+  const nameLink = linkShowDogsByUniqueName(dogs, competitionDogs)
+  console.log(`Linked show→competition by unique name (breed fix): ${nameLink.linked}`)
+
+  const collapsedAll = collapseShowDogsByExactName(dogs)
+  const collapsedPrefix = collapseShowDogsByNamePrefix(collapsedAll.dogs)
+  dogs = collapsedPrefix.dogs.sort(compareShowDogs)
+  console.log(
+    `Collapsed same-name multi-breed cards: ${collapsedAll.collapsedGroups} groups, −${collapsedAll.removedCards} cards`,
+  )
+  if (collapsedPrefix.removedCards > 0) {
+    console.log(
+      `Collapsed truncated-name prefixes: ${collapsedPrefix.collapsedGroups} groups, −${collapsedPrefix.removedCards} cards → ${dogs.length} dogs`,
+    )
+  } else {
+    console.log(`Dogs after name collapse: ${dogs.length}`)
+  }
 
   const idByKey = assignStableProfileIds(dogs)
   const showOnlyCount = dogs.filter((d) => d.competition_dog_id == null).length
@@ -576,24 +621,190 @@ async function main() {
   const rankingByYear = buildDogRankingByYear(exhibitions)
   console.log(`Built rankings for ${rankingByYear.size} years`)
 
-  for (const [, yearDogs] of rankingByYear) {
-    linkShowDogsToCompetitions(yearDogs, competitionDogs, aliasMap)
+  for (const [year, yearDogsRaw] of rankingByYear) {
+    linkShowDogsToCompetitions(yearDogsRaw, competitionDogs, aliasMap)
+    linkShowDogsByUniqueName(yearDogsRaw, competitionDogs)
+    const yearCollapsed = collapseShowDogsByExactName(yearDogsRaw)
+    const yearPrefix = collapseShowDogsByNamePrefix(yearCollapsed.dogs)
+    const yearDogs = yearPrefix.dogs.sort(compareShowDogs)
+    rankingByYear.set(year, yearDogs)
     applyStableProfileIds(yearDogs, idByKey)
+    const removed = yearCollapsed.removedCards + yearPrefix.removedCards
+    if (removed > 0) {
+      console.log(
+        `  ${year}: collapsed ${yearCollapsed.collapsedGroups + yearPrefix.collapsedGroups} name groups (−${removed} cards)`,
+      )
+    }
   }
 
-  // Годовые шарды на CDN (compact JSON — быстрее и меньше лимита 25 MB)
+  // Годовые файлы на CDN (lean JSON). Если год > ~24 MB — режем на части по месту в рейтинге.
+  const PAGES_LIMIT_BYTES = 25 * 1024 * 1024
+  const SHARD_IF_OVER_BYTES = 24 * 1024 * 1024
+  const TARGET_SHARD_BYTES = 18 * 1024 * 1024
+
+  const toLeanRankingDog = (dog: ShowDog) => {
+    const lean: Record<string, unknown> = {
+      id: dog.id,
+      name_lat: dog.name_lat,
+      breed: dog.breed || '',
+      total_shows: dog.total_shows || 0,
+      rank_score: dog.rank_score ?? 0,
+      titles: compactShowTitles(dog.titles),
+    }
+    if (dog.name_ru) lean.name_ru = dog.name_ru
+    if (dog.sex) lean.sex = dog.sex
+    if (dog.best_award) lean.best_award = dog.best_award
+    if (dog.best_grade) lean.best_grade = dog.best_grade
+    if (dog.breed_group) lean.breed_group = dog.breed_group
+    if (dog.competition_dog_id != null) lean.competition_dog_id = dog.competition_dog_id
+    return lean
+  }
+
+  const clearYearRankingShards = (year: string) => {
+    const prefix = `dog-ranking-${year}-`
+    for (const name of fs.readdirSync(INDEXES_DIR)) {
+      if (name.startsWith(prefix) && name.endsWith('.json')) {
+        fs.unlinkSync(path.join(INDEXES_DIR, name))
+      }
+    }
+  }
+
   for (const [year, yearDogs] of rankingByYear) {
     const fileName = `dog-ranking-${year}.json`
     const filePath = path.join(INDEXES_DIR, fileName)
-    // unknown-год огромный: без history, иначе близко к лимиту Pages 25 MB
-    const payload =
-      year === 'unknown'
-        ? yearDogs.map(({ history: _h, ...rest }) => ({ ...rest, history: [] as ShowHistoryEntry[] }))
-        : yearDogs
-    fs.writeFileSync(filePath, JSON.stringify(payload))
-    const mb = (Buffer.byteLength(JSON.stringify(payload)) / (1024 * 1024)).toFixed(1)
-    console.log(`  Saved ${fileName} (${yearDogs.length} dogs, ${mb} MB)`)
+    clearYearRankingShards(year)
+
+    const payload = yearDogs.map(toLeanRankingDog)
+    const bytes = Buffer.byteLength(JSON.stringify(payload))
+    const mb = (bytes / (1024 * 1024)).toFixed(1)
+
+    if (bytes <= SHARD_IF_OVER_BYTES) {
+      fs.writeFileSync(filePath, JSON.stringify(payload))
+      if (bytes > PAGES_LIMIT_BYTES) {
+        console.warn(`  WARNING ${fileName} is ${mb} MB (>25 MB Pages limit)`)
+      }
+      console.log(`  Saved ${fileName} (${yearDogs.length} dogs, ${mb} MB, lean)`)
+    } else {
+      const nShards = Math.max(2, Math.ceil(bytes / TARGET_SHARD_BYTES))
+      const chunkSize = Math.ceil(payload.length / nShards)
+      const shardFiles: string[] = []
+      for (let i = 0; i < nShards; i++) {
+        const slice = payload.slice(i * chunkSize, (i + 1) * chunkSize)
+        if (slice.length === 0) continue
+        const letter = String.fromCharCode(97 + i) // a, b, c…
+        const shardName = `dog-ranking-${year}-${letter}.json`
+        const shardBody = JSON.stringify(slice)
+        fs.writeFileSync(path.join(INDEXES_DIR, shardName), shardBody)
+        shardFiles.push(shardName)
+        console.log(
+          `  Saved ${shardName} (${slice.length} dogs, ${(Buffer.byteLength(shardBody) / (1024 * 1024)).toFixed(1)} MB)`,
+        )
+      }
+      fs.writeFileSync(
+        filePath,
+        `${JSON.stringify(
+          {
+            schema: 'coursing-stats/show-dog-ranking-manifest-v1',
+            year,
+            count: payload.length,
+            shards: shardFiles,
+          },
+          null,
+          2,
+        )}\n`,
+      )
+      console.log(
+        `  Saved ${fileName} manifest (${payload.length} dogs, ${mb} MB lean → ${shardFiles.length} shards)`,
+      )
+    }
+
+    if (year !== 'unknown') {
+      const homeTop = {
+        schema: 'coursing-stats/show-home-top-v1',
+        year,
+        dogs: yearDogs.slice(0, 3).map((d) => ({
+          id: d.id,
+          name_lat: d.name_lat,
+          name_ru: d.name_ru || '',
+          breed: d.breed || '',
+          sex: d.sex || '',
+          total_shows: d.total_shows || 0,
+          best_award: d.best_award ?? null,
+          rank_score: d.rank_score ?? 0,
+          titles: compactShowTitles(d.titles),
+          competition_dog_id: d.competition_dog_id ?? null,
+        })),
+        updated_at: new Date().toISOString().slice(0, 10),
+      }
+      const homeTopName = `home-top-${year}.json`
+      fs.writeFileSync(path.join(INDEXES_DIR, homeTopName), `${JSON.stringify(homeTop, null, 2)}\n`)
+      console.log(`  Saved ${homeTopName} (top ${homeTop.dogs.length})`)
+    }
   }
+
+  // Подробности (history + titles) — шарды dog-details/{000-255}.json, не в lean ranking
+  const DETAILS_DIR = path.join(INDEXES_DIR, 'dog-details')
+  if (fs.existsSync(DETAILS_DIR)) {
+    for (const name of fs.readdirSync(DETAILS_DIR)) {
+      fs.unlinkSync(path.join(DETAILS_DIR, name))
+    }
+  } else {
+    fs.mkdirSync(DETAILS_DIR, { recursive: true })
+  }
+  const detailShards = new Map<string, Record<string, unknown>>()
+  const byCompetitionId: Record<string, string> = {}
+  const byNameBreed: Record<string, string> = {}
+  for (const dog of dogs) {
+    const shard = showDogDetailShard(dog.id)
+    let pack = detailShards.get(shard)
+    if (!pack) {
+      pack = {}
+      detailShards.set(shard, pack)
+    }
+    pack[dog.id] = {
+      id: dog.id,
+      name_lat: dog.name_lat,
+      name_ru: dog.name_ru || '',
+      breed: dog.breed || '',
+      breed_en: dog.breed_en || '',
+      breed_group: dog.breed_group || '',
+      sex: dog.sex || '',
+      total_shows: dog.total_shows || 0,
+      rank_score: dog.rank_score ?? 0,
+      best_award: dog.best_award ?? null,
+      best_grade: dog.best_grade ?? null,
+      titles: compactShowTitles(dog.titles),
+      competition_dog_id: dog.competition_dog_id ?? null,
+      catalog_id: dog.catalog_id || '',
+      history: dog.history.map(({ url: _u, reports_link: _r, ...h }) => h),
+    }
+    if (dog.competition_dog_id != null) {
+      byCompetitionId[String(dog.competition_dog_id)] = dog.id
+    }
+    const nameKey = (dog.name_lat || dog.name_ru || '').toUpperCase().replace(/\s+/g, ' ').trim()
+    const breedKey = (dog.breed || '').toUpperCase().replace(/\s+/g, ' ').trim()
+    if (nameKey && breedKey) byNameBreed[`${nameKey}|${breedKey}`] = dog.id
+  }
+  let detailBytes = 0
+  for (const [shard, pack] of detailShards) {
+    const body = JSON.stringify(pack)
+    detailBytes += Buffer.byteLength(body)
+    fs.writeFileSync(path.join(DETAILS_DIR, `${shard}.json`), body)
+  }
+  console.log(
+    `  Saved dog-details/ (${detailShards.size} shards, ${dogs.length} dogs, ${(detailBytes / (1024 * 1024)).toFixed(1)} MB total)`,
+  )
+  fs.writeFileSync(
+    path.join(INDEXES_DIR, 'show-dog-lookup.json'),
+    JSON.stringify({
+      schema: 'coursing-stats/show-dog-lookup-v1',
+      byCompetitionId,
+      byNameBreed,
+    }),
+  )
+  console.log(
+    `  Saved show-dog-lookup.json (${Object.keys(byCompetitionId).length} competition links, ${Object.keys(byNameBreed).length} name keys)`,
+  )
 
   // All-time только локально / для отладки — copy-data.js не кладёт на Pages (>25 MB)
   fs.writeFileSync(path.join(INDEXES_DIR, 'dog-ranking.json'), JSON.stringify(dogs))
@@ -619,6 +830,38 @@ async function main() {
   const judges = buildJudgesIndex(exhibitions)
   console.log(`Built index for ${judges.length} judges`)
   fs.writeFileSync(path.join(INDEXES_DIR, 'judges.json'), JSON.stringify(judges))
+
+  // Лёгкие счётчики для главной (CDN; не тянуть dog-ranking.json)
+  let appearances = 0
+  for (const d of dogs) appearances += Number(d.total_shows) || 0
+  let exhibitionsCount = 0
+  const rkfManifestPath = path.join(SHOWS_DIR, 'calendar-rkf', 'manifest.json')
+  if (fs.existsSync(rkfManifestPath)) {
+    try {
+      const m = JSON.parse(fs.readFileSync(rkfManifestPath, 'utf8')) as { count?: number }
+      exhibitionsCount = Number(m.count) || 0
+    } catch {
+      exhibitionsCount = 0
+    }
+  }
+  const showBreeds = new Set<string>()
+  for (const d of dogs) {
+    const breed = String((d as { breed?: string }).breed || '').trim()
+    if (breed) showBreeds.add(breed)
+  }
+  const heroStats = {
+    schema: 'coursing-stats/show-hero-stats-v1',
+    exhibitions: exhibitionsCount,
+    appearances,
+    dogs: dogs.length,
+    judges: judges.length,
+    breeds: showBreeds.size,
+    updated_at: new Date().toISOString().slice(0, 10),
+  }
+  fs.writeFileSync(path.join(INDEXES_DIR, 'hero-stats.json'), `${JSON.stringify(heroStats, null, 2)}\n`)
+  console.log(
+    `  Saved hero-stats.json (exhibitions=${heroStats.exhibitions}, dogs=${heroStats.dogs}, judges=${heroStats.judges}, breeds=${heroStats.breeds})`,
+  )
 
   // Лёгкий календарь для списка выставок (не полные exhibitions/*.json)
   const calendarDir = path.join(SHOWS_DIR, 'calendar')
@@ -656,23 +899,29 @@ async function main() {
   const publicSitemap = path.join(ROOT, 'frontend/public/sitemap.xml')
   if (fs.existsSync(publicSitemap)) {
     let xml = fs.readFileSync(publicSitemap, 'utf-8')
-    const showOnly = dogs.filter((d) => d.competition_dog_id == null && Number(d.id) >= SHOW_PROFILE_ID_BASE)
-    let added = 0
+    const existingLocs = new Set(
+      [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]),
+    )
+    const showOnly = dogs.filter(
+      (d) => d.competition_dog_id == null && Number(d.id) >= SHOW_PROFILE_ID_BASE,
+    )
+    const additions: string[] = []
     for (const dog of showOnly) {
       const loc = `https://coursing-stats.ru/dog/${dog.id}`
-      if (xml.includes(`<loc>${loc}</loc>`)) continue
-      const entry =
+      if (existingLocs.has(loc)) continue
+      existingLocs.add(loc)
+      additions.push(
         `  <url>\n` +
-        `    <loc>${loc}</loc>\n` +
-        `    <changefreq>monthly</changefreq>\n` +
-        `    <priority>0.55</priority>\n` +
-        `  </url>\n`
-      xml = xml.replace('</urlset>', `${entry}</urlset>`)
-      added++
+          `    <loc>${loc}</loc>\n` +
+          `    <changefreq>monthly</changefreq>\n` +
+          `    <priority>0.55</priority>\n` +
+          `  </url>\n`,
+      )
     }
-    if (added > 0) {
+    if (additions.length > 0) {
+      xml = xml.replace('</urlset>', `${additions.join('')}</urlset>`)
       fs.writeFileSync(publicSitemap, xml)
-      console.log(`  Appended ${added} show-only /dog/{id} URLs to frontend/public/sitemap.xml`)
+      console.log(`  Appended ${additions.length} show-only /dog/{id} URLs to frontend/public/sitemap.xml`)
     }
   }
 

@@ -1,0 +1,66 @@
+{
+  "schema": "coursing-stats/show-home-top-v1",
+  "year": "2019",
+  "dogs": [
+    {
+      "id": "372966918",
+      "name_lat": "ALDIA BILLI BOM",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ВАНДЕЙСКИЙ БАССЕТ ГРИФФОН",
+      "sex": "",
+      "total_shows": 5,
+      "best_award": "BOB",
+      "rank_score": 12790,
+      "titles": {
+        "BOB": 5,
+        "CACIB": 4,
+        "CAC": 5,
+        "CHRKF": 4,
+        "P_MOSCOW": 1
+      },
+      "competition_dog_id": null
+    },
+    {
+      "id": "824902663",
+      "name_lat": "USHAN SCHURU-ESCH-SCHAMS",
+      "name_ru": "",
+      "breed": "СЛЮГИ",
+      "sex": "",
+      "total_shows": 5,
+      "best_award": "BOB",
+      "rank_score": 12230,
+      "titles": {
+        "BOB": 4,
+        "BOS": 1,
+        "CACIB": 4,
+        "CAC": 5,
+        "CHRKF": 3,
+        "P_MOSCOW": 1
+      },
+      "competition_dog_id": null
+    },
+    {
+      "id": "41190317",
+      "name_lat": "TERHAKAN PUUSTERI",
+      "name_ru": "",
+      "breed": "ФИНСКИЙ ЛАППХУНД",
+      "sex": "",
+      "total_shows": 4,
+      "best_award": "BOB",
+      "rank_score": 10865,
+      "titles": {
+        "BOB": 3,
+        "BOS": 1,
+        "LYU": 2,
+        "CACIB": 2,
+        "CAC": 2,
+        "JCAC": 2,
+        "CHRKF": 2,
+        "P_MOSCOW": 1,
+        "KCHP": 1
+      },
+      "competition_dog_id": null
+    }
+  ],
+  "updated_at": "2026-07-23"
+}

@@ -3,8 +3,8 @@ import { useEffect, useRef, type MouseEvent, type ReactNode } from 'react'
 import type { LucideIcon } from 'lucide-react'
 import { Icons } from '../lib/icons'
 
-const OPEN_DELAY_MS = 250
-const CLOSE_DELAY_MS = 200
+const OPEN_DELAY_MS = 70
+const CLOSE_DELAY_MS = 120
 
 export type NavMenuItem = {
   to: string
@@ -134,7 +134,7 @@ export function NavMenuDropdown({
       </div>
 
       {open && (
-        <div className="absolute left-1/2 top-full z-[100] w-56 -translate-x-1/2 pt-2">
+        <div className="nav-dropdown absolute left-1/2 top-full z-[100] w-max min-w-[9.5rem] -translate-x-1/2 pt-2">
           <div className="nav-dropdown-panel overflow-hidden rounded-xl border-2 border-old-money-200 bg-white shadow-xl dark:border-charcoal-600 dark:bg-charcoal-800">
             <ul className="py-1">
               {items.map((item) => {
@@ -148,7 +148,7 @@ export function NavMenuDropdown({
                         pinnedRef.current = false
                         onOpenChange(false)
                       }}
-                      className={`flex items-center gap-2.5 px-4 py-2.5 text-sm transition-colors ${
+                      className={`flex items-center gap-2.5 whitespace-nowrap px-4 py-2.5 text-sm transition-colors ${
                         active
                           ? 'bg-camel-50 font-semibold text-camel-800 dark:bg-camel-950/30 dark:text-camel-300'
                           : 'text-charcoal-700 hover:bg-old-money-50 dark:text-charcoal-200 dark:hover:bg-charcoal-700'

@@ -2,7 +2,7 @@
 
 Универсальный вход для **любого** ИИ-агента (Cursor, Devin/Cascade, Claude Code и др.). Не читай всю папку `docs/` подряд — только то, что нужно по задаче.
 
-**Дата:** 2026-07-22
+**Дата:** 2026-07-24
 
 ---
 
@@ -69,7 +69,7 @@
 9. **Донино:** `speed_records` (км/ч) и `coursing_records` (сек) — разные источники. Модель: [`09-SPEED-RECORDS.md`](09-SPEED-RECORDS.md); пайплайн: [`09a-DONINO-PIPELINE.md`](09a-DONINO-PIPELINE.md).
 10. **procoursing.ru** — windows-1251, `fetch-win1251.ts`.
 11. **Публичный UI (вариант A):** на проде нет календаря и протоколов — только рейтинг/судьи/профили. Соревнования: протоколы → procoursing.ru. Выставки: история → `rkf.online` + PDF отчёт (`reports_link`), не `/shows/exhibition/...`. Локально (`npm run dev`): календари в nav; протоколы → `/event/:id`, `/shows/exhibition/:id` (LC + распарсенные RKF PDF из `data/local/`). PDF-кэш **не** в git/CDN — см. [`SHOWS.md`](SHOWS.md).
-12. **Выставки RKF PDF:** `ingest-rkf-calendar` → `download-rkf-reports` → `parse-rkf-reports` → `build-show-indexes`; годы с 2026 вниз; ~74k PDF на 2019–2026.
+12. **Выставки RKF PDF:** `ingest-rkf-calendar` → `download-rkf-reports` → `parse-rkf-reports` → `build-show-indexes`; годы с **2026 вниз**; column-aware парсер (`parse-rkf-certificate-pdf.ts`); type3 главный ринг — только 2025–2026 (`main_ring`, бейджи BIS/BIG…); часть type3 даёт пустой `main_ring` (layout); type1-embedded BIS без type3 — ещё не парсим. Детали и долги — [`SHOWS.md`](SHOWS.md). ~74k PDF на 2019–2026.
 ---
 
 ## 5. Не менять без явного запроса
@@ -88,7 +88,7 @@
 | Задача | Файлы / docs |
 |--------|----------------|
 | Правка результатов | `17-ADMIN-WORKFLOW.md`; `routes/admin/results.ts` |
-| Правка UI главной | `04-FRONTEND.md` → Home; `frontend/src/pages/Home.tsx` |
+| Правка UI главной | `04-FRONTEND.md` → Home; `Home.tsx`, `HomeHeroStage`, `HomeDogSearch`, `lib/homePhotos.ts`, `lib/dogName.ts` |
 | Парсер (правила) | `14-PARSING-RULES.md`, `backend/parsers/` |
 | Парсер (детали) | `15-PARSING-IMPLEMENTATION.md` |
 | Тест парсера | `npm run test-parser-fixtures` |

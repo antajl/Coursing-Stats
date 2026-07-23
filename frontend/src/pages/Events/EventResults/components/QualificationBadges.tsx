@@ -1,10 +1,10 @@
 import HoverTooltip from '../../../../components/ui/HoverTooltip'
-import { titleBadgeClass } from '../../../../lib/qualificationTitles'
 import {
+  categoryBadgeClass,
   classifyCompetitionTitle,
-  classifyShowCumulativeTitle,
   groupItemsByCategory,
 } from '../../../../lib/awardCategories'
+import { compareCompetitionTitles } from '../../../../../../backend/lib/competition-titles'
 
 interface QualificationBadgesProps {
   qualification: string
@@ -12,16 +12,13 @@ interface QualificationBadgesProps {
 
 const LONG_TITLE_THRESHOLD = 28
 
-function classify(title: string) {
-  return classifyShowCumulativeTitle(title) ?? classifyCompetitionTitle(title)
-}
-
 export default function QualificationBadges({ qualification }: QualificationBadgesProps) {
-  const parts = qualification
-    .split(',')
+  const parts = [...qualification.split(',')]
     .map((t) => t.trim())
     .filter(Boolean)
-  const groups = groupItemsByCategory(parts, classify)
+    .sort(compareCompetitionTitles)
+
+  const groups = groupItemsByCategory(parts, classifyCompetitionTitle)
 
   return (
     <div className="mt-1 flex flex-wrap items-center gap-1">
@@ -40,7 +37,7 @@ export default function QualificationBadges({ qualification }: QualificationBadg
                 className={[
                   'inline-block max-w-full rounded px-1.5 py-0.5 text-xs font-medium',
                   isLong ? 'truncate md:max-w-[220px]' : '',
-                  titleBadgeClass(trimmed),
+                  categoryBadgeClass(group.category),
                 ]
                   .filter(Boolean)
                   .join(' ')}

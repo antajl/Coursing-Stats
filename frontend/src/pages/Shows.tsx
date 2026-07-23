@@ -23,17 +23,13 @@ function Shows() {
   return (
     <div className="space-y-6">
       <SEO
-        title="Выставки"
-        description="Рейтинг выставочных собак и судьи по данным lc.rkfshow.ru."
+        title="Рейтинг выставочных собак РКФ"
+        description="Рейтинг собак по выставкам РКФ: награды дня (CAC, BOB, ЧРКФ и др.), профили и статистика судей. Ссылки на оригиналы rkf.online."
         canonicalUrl="https://coursing-stats.ru/shows"
+        keywords="рейтинг выставок, выставки собак, РКФ, CAC, BOB, ЧРКФ, судьи выставок"
       />
       <div className="relative rounded-2xl border border-cream-300 bg-cream-50/90 shadow-xl backdrop-blur-lg dark:border-charcoal-700 dark:bg-charcoal-900/90">
-        {isLocalDev && activeTab === 'calendar' && (
-          <RKFAttribution
-            variant="footnote"
-            className="absolute right-0 top-0 z-10"
-          />
-        )}
+        <RKFAttribution variant="footnote" className="absolute right-0 top-0 z-10" />
         <div className="min-h-[480px] px-4 py-3 md:px-6 md:py-4">
           {activeTab === 'ranking' && (
             <div id="tab-panel-ranking" role="tabpanel" aria-labelledby="tab-ranking">

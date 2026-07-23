@@ -1,91 +1,198 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { useParams, Link, useNavigate } from 'react-router-dom'
-import { ChevronDown, ChevronLeft, ChevronRight, ExternalLink, UserRound } from 'lucide-react'
+import { ChevronLeft, ChevronRight, UserRound } from 'lucide-react'
 import SkeletonLoader from '../../components/SkeletonLoader'
 import ErrorState from '../../components/ErrorState'
 import RKFAttribution from '../../components/RKFAttribution'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarChip from '../../components/toolbar/ToolbarChip'
+import ToolbarFiltersDropdown from '../../components/toolbar/ToolbarFiltersDropdown'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
 import type { ActiveFilterChip } from '../../components/toolbar/ToolbarActiveFilters'
 import { getShowExhibition } from '../../lib/staticData'
-import { TOOLBAR_CHIP, TOOLBAR_CHIP_ACTIVE, TOOLBAR_CHIP_IDLE, TOOLBAR_FILTER_PANEL } from '../../lib/toolbar'
-import { titleBadgeClass } from '../../lib/qualificationTitles'
+import { resolveRkfOnlineExhibitionUrl, rkfExhibitionResultsUrl } from '../../lib/rkfLinks'
+import { stableShowProfileId } from '../../lib/showDogProfilePath'
+import HoverTooltip from '../../components/ui/HoverTooltip'
+import BreedGroupDivider from '../Events/EventResults/components/BreedGroupDivider'
+import { awardTooltipForToken, awardTooltipList } from '../../lib/awardTooltip'
+import { ShowGradeChip, SHOW_AWARD_CHIP_CLASS } from '../../lib/ShowGradeChip'
 import {
-  classifyCompetitionTitle,
-  classifyShowCumulativeTitle,
-  groupItemsByCategory,
-} from '../../lib/awardCategories'
-import {
+  displayShowAwardToken,
   matchShowAwardToken,
   SHOW_AWARD_BADGE,
-  SHOW_AWARD_CATEGORY,
+  SHOW_AWARD_WEIGHTS,
   type ShowAwardKey,
 } from '../../../../backend/lib/show-award-ranking'
 import {
   buildGroupMap,
   buildResultsByBreedId,
   catalogBreedMatchesFilters,
+  catalogHasFciGroups,
   collectExhibitionAwardKeys,
   dogNameMatchesQuery,
+  filterBreedRowsBySearch,
   filterResultsByDogAndBreed,
-  formatGradeLine,
   groupResultsBySexAndClass,
   localizeShowClass,
-  resultHasAward,
   resultsForBreed,
   splitShowTitleTokens,
   splitDogNameDisplay,
   titleHighlights,
   titleRowHasAward,
+  breedMatchesQuery,
   type BreedCatalogRow,
   type BreedTitleRow,
   type ClassResultGroup,
   type ShowResultRow,
 } from './showExhibitionUtils'
 
-/** Сколько наград показывать пилюлями; остальные — в выпадающем списке. */
-const AWARD_PILL_CAP = 8
-
-function classifyShowToken(token: string) {
-  const key = matchShowAwardToken(token)
-  if (key) return SHOW_AWARD_CATEGORY[key]
-  return classifyShowCumulativeTitle(token) ?? classifyCompetitionTitle(token)
-}
-
+/** В таблице: один бейдж + «хвостик» следующего; hover — прокрутка ряда. */
 function TitleChips({ title }: { title: string }) {
+  const trackRef = useRef<HTMLDivElement>(null)
+  const viewportRef = useRef<HTMLDivElement>(null)
+  const [offset, setOffset] = useState(0)
+
   const tokens = splitShowTitleTokens(title)
-  if (tokens.length === 0) return <span className="text-charcoal-400 dark:text-charcoal-500">—</span>
-  const groups = groupItemsByCategory(tokens, classifyShowToken)
-  return (
-    <div className="flex flex-wrap items-center gap-1">
-      {groups.map((group, gi) => (
-        <span key={group.category} className="inline-flex flex-wrap items-center gap-1">
-          {gi > 0 ? (
-            <span
-              className="mx-0.5 h-3 w-px shrink-0 self-center bg-old-money-300 dark:bg-charcoal-500"
-              aria-hidden
-            />
-          ) : null}
-          {group.items.map((token, i) => (
-            <span
-              key={`${token}-${i}`}
-              className={`inline-flex rounded-md px-1.5 py-0.5 text-[11px] font-semibold ${titleBadgeClass(token)}`}
-            >
-              {token}
-            </span>
-          ))}
+  if (tokens.length === 0) return null
+
+  const ranked = [...tokens].sort((a, b) => {
+    const ka = matchShowAwardToken(a)
+    const kb = matchShowAwardToken(b)
+    const wa = ka ? SHOW_AWARD_WEIGHTS[ka] : 0
+    const wb = kb ? SHOW_AWARD_WEIGHTS[kb] : 0
+    return wb - wa
+  })
+
+  const scrollToEnd = () => {
+    const track = trackRef.current
+    const viewport = viewportRef.current
+    if (!track || !viewport) return
+    setOffset(Math.max(0, track.scrollWidth - viewport.clientWidth))
+  }
+
+  const scrollHome = () => setOffset(0)
+
+  const chips = (
+    <div
+      ref={trackRef}
+      className="flex w-max flex-nowrap items-center gap-1 transition-transform duration-700 ease-out"
+      style={{ transform: `translateX(-${offset}px)` }}
+    >
+      {ranked.map((token, i) => (
+        <span
+          key={`${token}-${i}`}
+          className={SHOW_AWARD_CHIP_CLASS}
+        >
+          {displayShowAwardToken(token)}
         </span>
       ))}
     </div>
   )
+
+  if (ranked.length === 1) {
+    return (
+      <HoverTooltip
+        label={awardTooltipForToken(ranked[0]!)}
+        placement="top"
+        variant="site"
+        delayMs={0}
+        portal
+      >
+        <span className="inline-flex" tabIndex={0}>
+          {chips}
+        </span>
+      </HoverTooltip>
+    )
+  }
+
+  return (
+    <HoverTooltip
+      label={awardTooltipList(ranked.map((token) => ({ token })))}
+      placement="top"
+      variant="site"
+      delayMs={120}
+      portal
+      className="block w-full min-w-0 max-w-full"
+    >
+      <div
+        ref={viewportRef}
+        className="relative w-full min-w-0 overflow-hidden"
+        tabIndex={0}
+        onMouseEnter={scrollToEnd}
+        onMouseLeave={scrollHome}
+        onFocus={scrollToEnd}
+        onBlur={scrollHome}
+      >
+        {chips}
+        <div
+          className="pointer-events-none absolute inset-y-0 right-0 w-4 bg-gradient-to-l from-white to-transparent dark:from-charcoal-800"
+          aria-hidden
+        />
+      </div>
+    </HoverTooltip>
+  )
 }
 
-function BreedTitleRowView({ row }: { row: BreedTitleRow }) {
+function exhibitionDogProfilePath(dogName: string, breed: string): string | null {
+  const name = splitDogNameDisplay(dogName).name.trim()
+  const breedTrim = breed.trim()
+  if (!name || !breedTrim) return null
+  return `/dog/${stableShowProfileId(name, breedTrim)}`
+}
+
+function ExhibitionDogNameLink({
+  dogName,
+  breed,
+  catalogNumber,
+  className = '',
+}: {
+  dogName: string
+  breed: string
+  catalogNumber?: number
+  className?: string
+}) {
+  const { ring, name } = splitDogNameDisplay(dogName)
+  const href = exhibitionDogProfilePath(dogName, breed)
+  const ringLabel =
+    catalogNumber != null && catalogNumber > 0
+      ? String(catalogNumber)
+      : ring
+
+  const content = (
+    <>
+      {ringLabel ? (
+        <span className="mr-1.5 font-mono text-xs tabular-nums text-charcoal-500 dark:text-charcoal-400">
+          ({ringLabel})
+        </span>
+      ) : null}
+      {name || dogName || '—'}
+    </>
+  )
+
+  if (!href) {
+    return (
+      <span className={`block truncate ${className}`} title={name || dogName}>
+        {content}
+      </span>
+    )
+  }
+
+  return (
+    <Link
+      to={href}
+      className={`block truncate transition-colors hover:text-camel-700 hover:underline hover:underline-offset-2 dark:hover:text-camel-400 ${className}`}
+      title={name || dogName}
+    >
+      {content}
+    </Link>
+  )
+}
+
+function BreedTitleRowView({ row, breed }: { row: BreedTitleRow; breed: string }) {
   return (
     <li className="rounded-md bg-camel-50/80 px-2.5 py-2 text-sm dark:bg-camel-900/20">
       <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
-        <span className="inline-flex rounded-md border border-camel-300 bg-white px-2 py-0.5 text-xs font-bold text-camel-800 dark:border-camel-600 dark:bg-charcoal-800 dark:text-camel-300">
+        <span className={SHOW_AWARD_CHIP_CLASS}>
           {row.title_code}
         </span>
         {row.ring_number > 0 ? (
@@ -93,7 +200,16 @@ function BreedTitleRowView({ row }: { row: BreedTitleRow }) {
             ({row.ring_number})
           </span>
         ) : null}
-        <span className="font-semibold text-charcoal-900 dark:text-charcoal-100">{row.dog_name}</span>
+        {exhibitionDogProfilePath(row.dog_name, breed) ? (
+          <Link
+            to={exhibitionDogProfilePath(row.dog_name, breed)!}
+            className="font-semibold text-charcoal-900 transition-colors hover:text-camel-700 hover:underline hover:underline-offset-2 dark:text-charcoal-100 dark:hover:text-camel-400"
+          >
+            {row.dog_name}
+          </Link>
+        ) : (
+          <span className="font-semibold text-charcoal-900 dark:text-charcoal-100">{row.dog_name}</span>
+        )}
       </div>
       {row.owner?.trim() ? (
         <div className="mt-1 text-xs text-charcoal-500 dark:text-charcoal-400">
@@ -101,6 +217,243 @@ function BreedTitleRowView({ row }: { row: BreedTitleRow }) {
         </div>
       ) : null}
     </li>
+  )
+}
+
+interface MainRingRow {
+  competition_key: string
+  competition_label: string
+  group: number | null
+  place: number
+  breed: string
+  catalog_number: number
+  dog_name: string
+  pedigree?: string
+  award_badge?: string
+}
+
+type MainRingTab = {
+  id: string
+  label: string
+  shortLabel: string
+  rows: MainRingRow[]
+}
+
+const MAIN_RING_KEY_ORDER: Record<string, number> = {
+  BIS: 0,
+  BIS_BABY: 1,
+  BIS_PUPPY: 2,
+  BIS_JUNIOR: 3,
+  BIS_VETERAN: 4,
+  BIG: 5,
+  OTHER: 6,
+}
+
+function mainRingTabShortLabel(rows: MainRingRow[]): string {
+  const sample = rows[0]
+  if (!sample) return '—'
+  const key = sample.competition_key
+  if (key === 'BIG') {
+    return sample.group != null ? `BIG ${sample.group}` : 'BIG'
+  }
+  const fromPlace1 = rows.find((r) => r.place === 1 && r.award_badge)?.award_badge
+  if (fromPlace1) return fromPlace1
+  if (key === 'BIS') return SHOW_AWARD_BADGE.BIS
+  if (key === 'BIS_BABY') return SHOW_AWARD_BADGE.BIS_BABY
+  if (key === 'BIS_PUPPY') return SHOW_AWARD_BADGE.BIS_PUPPY
+  if (key === 'BIS_JUNIOR') return SHOW_AWARD_BADGE.BIS_JUNIOR
+  if (key === 'BIS_VETERAN') return SHOW_AWARD_BADGE.BIS_VETERAN
+  return sample.competition_label.slice(0, 24) || key
+}
+
+/** Группы главного ринга: BIS → возраст → BIG по номеру FCI. */
+function groupMainRing(rows: MainRingRow[]): MainRingTab[] {
+  const byId = new Map<string, MainRingRow[]>()
+  for (const row of rows) {
+    const id = `${row.competition_key}:${row.group ?? ''}:${row.competition_label || row.competition_key}`
+    if (!byId.has(id)) byId.set(id, [])
+    byId.get(id)!.push(row)
+  }
+
+  const tabs: MainRingTab[] = [...byId.entries()].map(([id, list]) => {
+    const sorted = list.slice().sort((a, b) => a.place - b.place)
+    return {
+      id,
+      label: sorted[0]?.competition_label || sorted[0]?.competition_key || id,
+      shortLabel: mainRingTabShortLabel(sorted),
+      rows: sorted,
+    }
+  })
+
+  tabs.sort((a, b) => {
+    const ka = a.rows[0]?.competition_key || 'OTHER'
+    const kb = b.rows[0]?.competition_key || 'OTHER'
+    const oa = MAIN_RING_KEY_ORDER[ka] ?? 9
+    const ob = MAIN_RING_KEY_ORDER[kb] ?? 9
+    if (oa !== ob) return oa - ob
+    const ga = a.rows[0]?.group
+    const gb = b.rows[0]?.group
+    if (ga != null && gb != null && ga !== gb) return ga - gb
+    return a.label.localeCompare(b.label, 'ru')
+  })
+
+  return tabs
+}
+
+function MainRingResultsTable({ rows }: { rows: MainRingRow[] }) {
+  const placementClass = (place: number) => {
+    if (place === 1) return 'font-bold text-camel-700 dark:text-camel-400'
+    if (place === 2 || place === 3) return 'font-semibold text-charcoal-800 dark:text-charcoal-200'
+    return 'text-charcoal-600 dark:text-charcoal-400'
+  }
+
+  return (
+    <div className="overflow-x-auto">
+      <table className="w-full table-fixed divide-y divide-old-money-200 text-sm dark:divide-charcoal-600">
+        <thead>
+          <tr className="border-b border-old-money-200 dark:border-charcoal-600">
+            <th className="w-16 px-1.5 py-2 text-center text-xs font-bold uppercase tracking-wide text-charcoal-700 dark:text-charcoal-200">
+              Место
+            </th>
+            <th className="px-2.5 py-2 text-left text-xs font-bold uppercase tracking-wide text-charcoal-700 dark:text-charcoal-200">
+              Собака
+            </th>
+            <th className="w-[38%] px-2.5 py-2 text-left text-xs font-bold uppercase tracking-wide text-charcoal-700 dark:text-charcoal-200">
+              Порода
+            </th>
+            <th className="w-[6.5rem] px-2 py-2 text-left text-xs font-bold uppercase tracking-wide text-charcoal-700 dark:text-charcoal-200">
+              Награды
+            </th>
+          </tr>
+        </thead>
+        <tbody className="divide-y divide-old-money-100 dark:divide-charcoal-700">
+          {rows.map((row) => (
+            <tr
+              key={`${row.place}-${row.catalog_number}-${row.dog_name}`}
+              className="transition-colors hover:bg-old-money-50/80 dark:hover:bg-charcoal-700/40"
+            >
+              <td className={`px-1.5 py-2.5 text-center tabular-nums ${placementClass(row.place)}`}>
+                {row.place > 0 ? row.place : ''}
+              </td>
+              <td className="min-w-0 px-2.5 py-2.5 font-medium text-charcoal-900 dark:text-charcoal-100">
+                <ExhibitionDogNameLink
+                  dogName={row.dog_name}
+                  breed={row.breed}
+                  catalogNumber={row.catalog_number}
+                />
+              </td>
+              <td className="px-2.5 py-2.5 text-xs leading-snug text-charcoal-600 dark:text-charcoal-400">
+                <span className="block truncate" title={row.breed || undefined}>
+                  {row.breed || '—'}
+                </span>
+              </td>
+              <td className="px-2 py-2.5 text-xs font-medium text-camel-800 dark:text-camel-300">
+                {row.award_badge ? (
+                  <HoverTooltip
+                    label={awardTooltipForToken(row.award_badge)}
+                    placement="top"
+                    variant="site"
+                    delayMs={0}
+                    portal
+                  >
+                    <span className={SHOW_AWARD_CHIP_CLASS} tabIndex={0}>
+                      {row.award_badge}
+                    </span>
+                  </HoverTooltip>
+                ) : null}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  )
+}
+
+function MainRingSection({
+  rows,
+  bisUrl,
+}: {
+  rows: MainRingRow[]
+  bisUrl?: string | null
+}) {
+  const tabs = useMemo(() => groupMainRing(rows), [rows])
+  const [activeId, setActiveId] = useState(() => tabs[0]?.id ?? '')
+
+  useEffect(() => {
+    if (tabs.length === 0) {
+      setActiveId('')
+      return
+    }
+    if (!tabs.some((t) => t.id === activeId)) {
+      setActiveId(tabs[0]!.id)
+    }
+  }, [tabs, activeId])
+
+  if (rows.length === 0) {
+    if (!bisUrl) return null
+    return (
+      <section className="mb-4 rounded-xl border border-old-money-200 bg-cream-50/80 p-3 dark:border-charcoal-600 dark:bg-charcoal-800/40">
+        <h2 className="font-serif text-base font-bold text-charcoal-900 dark:text-charcoal-100">
+          Главный ринг
+        </h2>
+        <p className="mt-1 text-sm text-charcoal-600 dark:text-charcoal-400">
+          Ведомость ещё не разобрана.{' '}
+          <a
+            href={bisUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-camel-700 underline-offset-2 hover:underline dark:text-camel-400"
+          >
+            PDF на tables.rkf.org.ru
+          </a>
+        </p>
+      </section>
+    )
+  }
+
+  const active = tabs.find((t) => t.id === activeId) ?? tabs[0]
+
+  return (
+    <section className="mb-4 rounded-xl border border-old-money-200 bg-cream-50/80 p-3 dark:border-charcoal-600 dark:bg-charcoal-800/40">
+      <div className="mb-3 flex flex-wrap items-baseline justify-between gap-2">
+        <h2 className="font-serif text-base font-bold text-charcoal-900 dark:text-charcoal-100 md:text-lg">
+          Главный ринг
+        </h2>
+        {bisUrl ? (
+          <a
+            href={bisUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs font-medium text-camel-700 underline-offset-2 hover:underline dark:text-camel-400"
+          >
+            PDF ведомости
+          </a>
+        ) : null}
+      </div>
+
+      <div className="-mx-0.5 mb-3 flex gap-1.5 overflow-x-auto px-0.5 pb-0.5">
+        {tabs.map((tab) => (
+          <ToolbarChip
+            key={tab.id}
+            active={tab.id === active?.id}
+            onClick={() => setActiveId(tab.id)}
+            className="shrink-0"
+          >
+            <span title={tab.label}>{tab.shortLabel}</span>
+          </ToolbarChip>
+        ))}
+      </div>
+
+      {active ? (
+        <>
+          <h3 className="mb-2 font-serif text-sm font-bold leading-snug text-charcoal-900 dark:text-charcoal-100 md:text-base">
+            {active.label}
+          </h3>
+          <MainRingResultsTable rows={active.rows} />
+        </>
+      ) : null}
+    </section>
   )
 }
 
@@ -113,8 +466,13 @@ interface ShowExhibition {
   type: string
   club: string
   judges: string[]
+  url?: string
+  source?: string
+  reports_link?: string | null
+  bis_reports_link?: string | null
   breed_catalog?: BreedCatalogRow[]
   results: ShowResultRow[]
+  main_ring?: MainRingRow[]
 }
 
 function StatPill({
@@ -144,44 +502,39 @@ function StatPill({
   )
 }
 
-function DetailField({ label, children }: { label: string; children: React.ReactNode }) {
-  return (
-    <div>
-      <div className="text-[10px] font-medium uppercase tracking-wide text-old-money-500 dark:text-old-money-400">
-        {label}
-      </div>
-      <div className="mt-1 text-sm font-medium leading-snug text-charcoal-800 dark:text-charcoal-200">
-        {children}
-      </div>
-    </div>
-  )
-}
-
 function ExhibitionHeader({ exhibition, onBack }: { exhibition: ShowExhibition; onBack: () => void }) {
   const resultsCount = exhibition.results.length
   const breedsCount =
     exhibition.breed_catalog?.length ?? new Set(exhibition.results.map((r) => r.breed)).size
-  const groupsCount = new Set(
-    (exhibition.breed_catalog?.map((b) => b.breed_group) ??
-      exhibition.results.map((r) => r.breed_group).filter(Boolean)) as string[]
-  ).size
-  const rkfUrl = `https://lc.rkfshow.ru/RKF/ExhibitionResults/ExhibitionResultListView?exhibitionId=${exhibition.id}`
+  const rkfUrl =
+    resolveRkfOnlineExhibitionUrl(exhibition.url, exhibition.id) ??
+    (exhibition.source === 'rkf-pdf' || exhibition.id >= 10_000
+      ? resolveRkfOnlineExhibitionUrl(null, exhibition.id)
+      : rkfExhibitionResultsUrl(exhibition.id))
+  const externalLabel =
+    exhibition.source === 'rkf-pdf' || exhibition.id >= 10_000
+      ? 'Открыть на rkf.online'
+      : 'Открыть на lc.rkfshow.ru'
+  const metaLine = [exhibition.club, exhibition.rank, exhibition.type]
+    .map((v) => (typeof v === 'string' ? v.trim() : ''))
+    .filter(Boolean)
+    .join(' · ')
 
   return (
-    <div className="mb-6 rounded-xl border border-old-money-200 bg-cream-50 p-4 dark:border-charcoal-600 dark:bg-charcoal-800/40 md:p-6">
-      <div className="flex items-start gap-2 md:gap-3">
-        <button
-          type="button"
-          onClick={onBack}
-          className="mt-0.5 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-old-money-200 bg-white/90 text-old-money-600 shadow-sm transition-colors hover:border-old-money-300 hover:bg-old-money-50 hover:text-camel-700 dark:border-charcoal-600 dark:bg-charcoal-800 dark:text-old-money-400 dark:hover:border-charcoal-500 dark:hover:bg-charcoal-700 dark:hover:text-camel-400"
-          aria-label="Назад"
-        >
-          <ChevronLeft className="h-4 w-4" aria-hidden />
-        </button>
+    <div className="relative mb-6">
+      <button
+        type="button"
+        onClick={onBack}
+        className="absolute right-full top-5 z-10 mr-0.5 flex h-11 w-11 items-center justify-center rounded-lg text-old-money-500 transition-colors hover:bg-old-money-50 hover:text-camel-700 md:top-8 dark:text-old-money-400 dark:hover:bg-charcoal-700 dark:hover:text-camel-400"
+        aria-label="Назад"
+      >
+        <ChevronLeft className="h-5 w-5" aria-hidden />
+      </button>
 
-        <div className="min-w-0 flex-1">
-          <div className="flex items-start justify-between gap-2">
-            <h1 className="min-w-0 font-serif text-xl font-bold leading-tight tracking-tight text-charcoal-900 dark:text-charcoal-100 md:text-2xl">
+      <div className="min-w-0 rounded-xl border border-old-money-200 bg-cream-50 p-3 dark:border-charcoal-600 dark:bg-charcoal-800/40 md:p-4">
+        <div className="flex items-start justify-between gap-2">
+          <h1 className="min-w-0 font-serif text-xl font-bold leading-tight tracking-tight text-charcoal-900 dark:text-charcoal-100 md:text-2xl">
+            {rkfUrl ? (
               <a
                 href={rkfUrl}
                 target="_blank"
@@ -190,75 +543,76 @@ function ExhibitionHeader({ exhibition, onBack }: { exhibition: ShowExhibition; 
               >
                 {exhibition.title}
               </a>
-            </h1>
+            ) : (
+              exhibition.title
+            )}
+          </h1>
+          {rkfUrl ? (
             <a
               href={rkfUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-1 flex-shrink-0 rounded-full p-1 text-old-money-400 transition-colors hover:bg-old-money-100 hover:text-camel-600 dark:text-old-money-500 dark:hover:bg-charcoal-700 dark:hover:text-camel-400"
-              aria-label="Открыть на lc.rkfshow.ru"
+              className="mt-0.5 inline-flex flex-shrink-0 items-center gap-1.5 rounded-full border border-old-money-200 bg-white/90 py-1 pl-1 pr-2.5 text-xs font-semibold text-camel-700 shadow-sm transition-colors hover:border-camel-400 hover:bg-camel-50 hover:text-camel-800 dark:border-charcoal-600 dark:bg-charcoal-800 dark:text-camel-400 dark:hover:border-camel-600 dark:hover:bg-charcoal-700 dark:hover:text-camel-300"
+              aria-label={externalLabel}
+              title={externalLabel}
             >
-              <ExternalLink className="h-4 w-4 md:h-5 md:w-5" />
+              <img
+                src="/assets/rkf-online-favicon.svg"
+                alt=""
+                className="h-5 w-5 rounded-full"
+                width={20}
+                height={20}
+                decoding="async"
+              />
+              <span>РКФ</span>
             </a>
-          </div>
+          ) : null}
         </div>
-      </div>
 
-      <div className="my-4 h-px border-t border-old-money-200 dark:border-charcoal-600" />
+        <BreedGroupDivider />
 
-      <div className="mb-4 grid grid-cols-2 gap-2 sm:grid-cols-5">
-        <StatPill value={exhibition.date || '—'} label="дата" />
-        <StatPill value={resultsCount} label="результатов" />
-        <StatPill value={breedsCount} label="пород" />
-        <StatPill value={groupsCount || '—'} label="групп FCI" />
-        <StatPill
-          value={
-            exhibition.location ? (
-              <span className="line-clamp-2 text-sm leading-snug md:text-base">{exhibition.location}</span>
-            ) : (
-              '—'
-            )
-          }
-          label="место"
-          valueClassName="text-sm md:text-base"
-          className="col-span-2 sm:col-span-1"
-        />
-      </div>
+        <div className="mb-2 grid grid-cols-2 gap-2 sm:grid-cols-4 md:mb-3">
+          <StatPill value={exhibition.date || '—'} label="дата" />
+          <StatPill value={resultsCount} label="результатов" />
+          <StatPill value={breedsCount} label="пород" />
+          <StatPill
+            value={
+              exhibition.location ? (
+                <span className="line-clamp-2 text-sm leading-snug md:text-base">{exhibition.location}</span>
+              ) : (
+                '—'
+              )
+            }
+            label="место"
+            valueClassName="text-sm md:text-base"
+            className="col-span-2 sm:col-span-1"
+          />
+        </div>
 
-      <div className="grid gap-4 border-t border-old-money-200 pt-4 dark:border-charcoal-600 md:grid-cols-2">
-        {exhibition.club && <DetailField label="Клуб-организатор">{exhibition.club}</DetailField>}
-        {exhibition.rank && <DetailField label="Ранг выставки">{exhibition.rank}</DetailField>}
-        {exhibition.type && <DetailField label="Тип выставки">{exhibition.type}</DetailField>}
+        {metaLine ? (
+          <p className="text-sm leading-snug text-charcoal-600 dark:text-charcoal-300">{metaLine}</p>
+        ) : null}
       </div>
     </div>
   )
 }
 
 function ClassResultsTable({ classes }: { classes: ClassResultGroup[] }) {
-  const placementClass = (placement: number) => {
-    if (placement === 1) return 'font-bold text-camel-700 dark:text-camel-400'
-    if (placement === 2 || placement === 3) return 'font-semibold text-charcoal-800 dark:text-charcoal-200'
-    return 'text-charcoal-600 dark:text-charcoal-400'
-  }
-
   return (
-    <div className="overflow-x-auto rounded-xl border border-old-money-200 bg-white/70 dark:border-charcoal-600 dark:bg-charcoal-800/30">
-      <table className="w-full min-w-[640px] divide-y divide-old-money-200 text-sm dark:divide-charcoal-600">
+    <div className="min-w-0 w-full">
+      <table className="w-full table-fixed divide-y divide-old-money-200 text-sm dark:divide-charcoal-600">
         <thead>
-          <tr className="bg-cream-50/90 dark:bg-charcoal-800/50">
-            <th className="px-3 py-2 text-left text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200">
+          <tr className="border-b border-old-money-200 dark:border-charcoal-600">
+            <th className="w-[6.5rem] px-2 py-2 text-left text-xs font-bold uppercase tracking-wide text-charcoal-700 dark:text-charcoal-200">
               Класс
             </th>
-            <th className="px-3 py-2 text-left text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200">
+            <th className="min-w-0 px-2.5 py-2 text-left text-xs font-bold uppercase tracking-wide text-charcoal-700 dark:text-charcoal-200">
               Собака
             </th>
-            <th className="w-12 px-2 py-2 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200">
-              Место
-            </th>
-            <th className="px-3 py-2 text-left text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200">
+            <th className="w-[4.75rem] px-1.5 py-2 text-left text-xs font-bold uppercase tracking-wide text-charcoal-700 dark:text-charcoal-200">
               Оценка
             </th>
-            <th className="px-3 py-2 text-left text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200">
+            <th className="w-[9rem] px-2 py-2 text-left text-xs font-bold uppercase tracking-wide text-charcoal-700 dark:text-charcoal-200">
               Награды
             </th>
           </tr>
@@ -273,35 +627,18 @@ function ClassResultsTable({ classes }: { classes: ClassResultGroup[] }) {
                 {idx === 0 && (
                   <td
                     rowSpan={group.rows.length}
-                    className="w-[9.5rem] align-top border-r border-old-money-100 bg-cream-100/60 px-3 py-2.5 text-xs font-semibold leading-snug text-charcoal-800 dark:border-charcoal-700 dark:bg-charcoal-800/40 dark:text-charcoal-100"
+                    className="min-w-0 overflow-hidden align-top border-r border-old-money-100 bg-cream-100/60 px-2 py-2.5 text-xs font-semibold leading-snug text-charcoal-800 dark:border-charcoal-700 dark:bg-charcoal-800/40 dark:text-charcoal-100"
                   >
-                    {localizeShowClass(group.className)}
+                    <span className="block break-words">{localizeShowClass(group.className)}</span>
                   </td>
                 )}
-                <td className="px-3 py-2.5 font-medium text-charcoal-900 dark:text-charcoal-100">
-                  {(() => {
-                    const { ring, name } = splitDogNameDisplay(row.dog_name)
-                    return (
-                      <>
-                        {ring ? (
-                          <span className="mr-1.5 font-mono text-xs tabular-nums text-charcoal-500 dark:text-charcoal-400">
-                            ({ring})
-                          </span>
-                        ) : null}
-                        <span>{name}</span>
-                      </>
-                    )
-                  })()}
+                <td className="min-w-0 overflow-hidden px-2.5 py-2.5 font-medium text-charcoal-900 dark:text-charcoal-100">
+                  <ExhibitionDogNameLink dogName={row.dog_name} breed={row.breed} />
                 </td>
-                <td
-                  className={`w-12 px-2 py-2.5 text-center tabular-nums ${placementClass(row.placement)}`}
-                >
-                  {row.placement > 0 ? row.placement : ''}
+                <td className="px-1.5 py-2.5">
+                  <ShowGradeChip grade={row.grade} />
                 </td>
-                <td className="px-3 py-2.5 text-xs leading-snug text-charcoal-600 dark:text-charcoal-400">
-                  {formatGradeLine(row.grade) || '—'}
-                </td>
-                <td className="px-3 py-2.5 text-xs font-medium text-camel-800 dark:text-camel-300">
+                <td className="min-w-0 overflow-hidden px-2 py-2.5 text-xs font-medium text-camel-800 dark:text-camel-300">
                   <TitleChips title={row.title} />
                 </td>
               </tr>
@@ -316,9 +653,11 @@ function ClassResultsTable({ classes }: { classes: ClassResultGroup[] }) {
 function BreedResultsPanel({
   results,
   titles,
+  breed,
 }: {
   results: ShowResultRow[]
   titles?: BreedTitleRow[]
+  breed: string
 }) {
   const fallbackHighlights = titleHighlights(results)
   const sexSections = groupResultsBySexAndClass(results)
@@ -341,7 +680,11 @@ function BreedResultsPanel({
           <ul className="space-y-1.5">
             {titleRows
               ? titleRows.map((row, idx) => (
-                  <BreedTitleRowView key={`${row.title_code}-${row.ring_number}-${idx}`} row={row} />
+                  <BreedTitleRowView
+                    key={`${row.title_code}-${row.ring_number}-${idx}`}
+                    row={row}
+                    breed={breed}
+                  />
                 ))
               : fallbackHighlights.map((row, idx) => (
                   <li
@@ -350,7 +693,7 @@ function BreedResultsPanel({
                   >
                     <TitleChips title={row.title} />
                     <div className="mt-1 font-semibold text-charcoal-800 dark:text-charcoal-100">
-                      {row.dog_name}
+                      <ExhibitionDogNameLink dogName={row.dog_name} breed={row.breed || breed} />
                     </div>
                     {row.owner ? (
                       <div className="mt-0.5 text-xs text-charcoal-500 dark:text-charcoal-400">
@@ -384,81 +727,28 @@ function ExhibitionAwardFilter({
   value: ShowAwardKey | null
   onChange: (key: ShowAwardKey | null) => void
 }) {
-  const [moreOpen, setMoreOpen] = useState(false)
-  const moreRef = useRef<HTMLDivElement>(null)
-  const visible = awards.slice(0, AWARD_PILL_CAP)
-  const overflow = awards.slice(AWARD_PILL_CAP)
-  const overflowSelected = value != null && overflow.includes(value)
-
-  useEffect(() => {
-    if (!moreOpen) return
-    function handleClickOutside(event: MouseEvent) {
-      if (moreRef.current && !moreRef.current.contains(event.target as Node)) {
-        setMoreOpen(false)
-      }
-    }
-    function handleEsc(event: KeyboardEvent) {
-      if (event.key === 'Escape') setMoreOpen(false)
-    }
-    document.addEventListener('mousedown', handleClickOutside)
-    document.addEventListener('keydown', handleEsc)
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside)
-      document.removeEventListener('keydown', handleEsc)
-    }
-  }, [moreOpen])
-
-  if (awards.length === 0) return null
+  if (awards.length === 0) {
+    return (
+      <p className="text-xs text-old-money-500 dark:text-old-money-400">Нет наград в протоколе</p>
+    )
+  }
 
   const toggle = (key: ShowAwardKey) => {
     onChange(value === key ? null : key)
   }
 
   return (
-    <div className="flex w-full flex-wrap items-center gap-1.5">
-      {visible.map((key) => (
-        <ToolbarChip key={key} active={value === key} onClick={() => toggle(key)}>
-          {SHOW_AWARD_BADGE[key]}
-        </ToolbarChip>
-      ))}
-      {overflow.length > 0 && (
-        <div className="relative shrink-0" ref={moreRef}>
-          <button
-            type="button"
-            onClick={() => setMoreOpen((open) => !open)}
-            aria-expanded={moreOpen}
-            aria-label="Другие награды"
-            className={`${TOOLBAR_CHIP} gap-1 ${moreOpen || overflowSelected ? TOOLBAR_CHIP_ACTIVE : TOOLBAR_CHIP_IDLE}`}
-          >
-            {overflowSelected ? SHOW_AWARD_BADGE[value!] : 'Ещё'}
-            <ChevronDown
-              className={`h-3.5 w-3.5 transition-transform ${moreOpen ? 'rotate-180' : ''}`}
-              strokeWidth={2}
-            />
-          </button>
-          {moreOpen && (
-            <div className={`${TOOLBAR_FILTER_PANEL} right-0 w-44`}>
-              {overflow.map((key) => (
-                <button
-                  key={key}
-                  type="button"
-                  onClick={() => {
-                    toggle(key)
-                    setMoreOpen(false)
-                  }}
-                  className={`flex w-full items-center px-3 py-2 text-left text-xs font-medium transition-colors ${
-                    value === key
-                      ? 'bg-camel-50 text-camel-900 dark:bg-camel-700/40 dark:text-camel-100'
-                      : 'text-charcoal-700 hover:bg-cream-50 dark:text-charcoal-200 dark:hover:bg-charcoal-700'
-                  }`}
-                >
-                  {SHOW_AWARD_BADGE[key]}
-                </button>
-              ))}
-            </div>
-          )}
-        </div>
-      )}
+    <div>
+      <div className="mb-2 text-[10px] font-semibold uppercase tracking-wide text-old-money-500 dark:text-old-money-400">
+        Награда
+      </div>
+      <div className="flex flex-wrap gap-1.5">
+        {awards.map((key) => (
+          <ToolbarChip key={key} active={value === key} onClick={() => toggle(key)}>
+            {SHOW_AWARD_BADGE[key]}
+          </ToolbarChip>
+        ))}
+      </div>
     </div>
   )
 }
@@ -467,14 +757,14 @@ function BreedAccordionItem({
   catalog,
   resultsByBreedId,
   allResults,
-  dogQuery,
+  searchQuery,
   awardKey = null,
   forceOpen = false,
 }: {
   catalog: BreedCatalogRow
   resultsByBreedId: Map<number, ShowResultRow[]>
   allResults: ShowResultRow[]
-  dogQuery: string
+  searchQuery: string
   awardKey?: ShowAwardKey | null
   forceOpen?: boolean
 }) {
@@ -489,24 +779,22 @@ function BreedAccordionItem({
     const rows =
       resultsByBreedId.get(catalog.dog_breed_id) ??
       resultsForBreed(allResults, catalog.dog_breed_id, catalog.breed_en)
-    return rows.filter(
-      (row) =>
-        dogNameMatchesQuery(row.dog_name, dogQuery) &&
-        (!awardKey || resultHasAward(row, awardKey))
-    )
-  }, [open, catalog, resultsByBreedId, allResults, dogQuery, awardKey])
+    return filterBreedRowsBySearch(rows, catalog, searchQuery, awardKey)
+  }, [open, catalog, resultsByBreedId, allResults, searchQuery, awardKey])
 
   const filteredTitles = useMemo(() => {
     const titles = catalog.titles
     if (!titles?.length) return titles
-    return titles.filter(
-      (row) =>
-        dogNameMatchesQuery(row.dog_name, dogQuery) &&
-        (!awardKey || titleRowHasAward(row, awardKey))
-    )
-  }, [catalog.titles, dogQuery, awardKey])
+    const breedHit = breedMatchesQuery(catalog.breed, catalog.breed_en, searchQuery)
+    return titles.filter((row) => {
+      if (awardKey && !titleRowHasAward(row, awardKey)) return false
+      if (!searchQuery.trim()) return true
+      if (breedHit) return true
+      return dogNameMatchesQuery(row.dog_name, searchQuery)
+    })
+  }, [catalog.titles, catalog.breed, catalog.breed_en, searchQuery, awardKey])
 
-  const hasRowFilter = Boolean(dogQuery.trim() || awardKey)
+  const hasRowFilter = Boolean(searchQuery.trim() || awardKey)
   const countLabel =
     catalog.breed_count > 0 && !hasRowFilter
       ? `${catalog.breed_count} на ринге`
@@ -516,7 +804,7 @@ function BreedAccordionItem({
 
   return (
     <details
-      className="group/breed rounded-lg border border-old-money-200 bg-white/60 dark:border-charcoal-600 dark:bg-charcoal-800/30"
+      className="group/breed rounded-lg border border-old-money-200 bg-white/70 dark:border-charcoal-600 dark:bg-charcoal-800/40"
       open={forceOpen || open}
       onToggle={(e) => setOpen((e.currentTarget as HTMLDetailsElement).open)}
     >
@@ -540,7 +828,13 @@ function BreedAccordionItem({
           </span>
         )}
       </summary>
-      {open && <BreedResultsPanel results={breedResults} titles={filteredTitles} />}
+      {open && (
+        <BreedResultsPanel
+          results={breedResults}
+          titles={filteredTitles}
+          breed={catalog.breed}
+        />
+      )}
     </details>
   )
 }
@@ -548,26 +842,26 @@ function BreedAccordionItem({
 function CatalogResultsSection({
   catalog,
   results,
-  dogQuery,
-  breedQuery,
+  searchQuery,
   awardKey = null,
 }: {
   catalog: BreedCatalogRow[]
   results: ShowResultRow[]
-  dogQuery: string
-  breedQuery: string
+  searchQuery: string
   awardKey?: ShowAwardKey | null
 }) {
   const resultsByBreedId = useMemo(() => buildResultsByBreedId(results), [results])
   const filteredCatalog = useMemo(
     () =>
       catalog.filter((entry) =>
-        catalogBreedMatchesFilters(entry, breedQuery, dogQuery, resultsByBreedId, results, awardKey)
+        catalogBreedMatchesFilters(entry, searchQuery, resultsByBreedId, results, awardKey),
       ),
-    [catalog, breedQuery, dogQuery, resultsByBreedId, results, awardKey]
+    [catalog, searchQuery, resultsByBreedId, results, awardKey],
   )
   const groupMap = useMemo(() => buildGroupMap(filteredCatalog), [filteredCatalog])
-  const forceOpen = Boolean(dogQuery.trim() || breedQuery.trim() || awardKey)
+  const hasFciGroups = useMemo(() => catalogHasFciGroups(filteredCatalog), [filteredCatalog])
+  const forceOpen = Boolean(searchQuery.trim() || awardKey)
+  const autoOpenBreed = forceOpen || filteredCatalog.length === 1
 
   if (filteredCatalog.length === 0) {
     return (
@@ -577,8 +871,28 @@ function CatalogResultsSection({
     )
   }
 
+  const breedList = (breeds: BreedCatalogRow[]) => (
+    <div className="space-y-2">
+      {breeds.map((breed) => (
+        <BreedAccordionItem
+          key={breed.dog_breed_id}
+          catalog={breed}
+          resultsByBreedId={resultsByBreedId}
+          allResults={results}
+          searchQuery={searchQuery}
+          awardKey={awardKey}
+          forceOpen={autoOpenBreed}
+        />
+      ))}
+    </div>
+  )
+
+  if (!hasFciGroups) {
+    return breedList(filteredCatalog)
+  }
+
   return (
-    <div className="space-y-4">
+    <div className="space-y-3">
       {[...groupMap.entries()].map(([groupName, breeds]) => (
         <details
           key={groupName}
@@ -598,17 +912,7 @@ function CatalogResultsSection({
             </span>
           </summary>
           <div className="space-y-2 border-t border-old-money-200 px-3 pb-3 pt-2 dark:border-charcoal-600">
-            {breeds.map((breed) => (
-              <BreedAccordionItem
-                key={breed.dog_breed_id}
-                catalog={breed}
-                resultsByBreedId={resultsByBreedId}
-                allResults={results}
-                dogQuery={dogQuery}
-                awardKey={awardKey}
-                forceOpen={forceOpen}
-              />
-            ))}
+            {breedList(breeds)}
           </div>
         </details>
       ))}
@@ -618,31 +922,30 @@ function CatalogResultsSection({
 
 function LegacyResultsSection({
   results,
-  dogQuery,
-  breedQuery,
+  searchQuery,
   awardKey = null,
 }: {
   results: ShowResultRow[]
-  dogQuery: string
-  breedQuery: string
+  searchQuery: string
   awardKey?: ShowAwardKey | null
 }) {
   const filtered = useMemo(
-    () => filterResultsByDogAndBreed(results, dogQuery, breedQuery, awardKey),
-    [results, dogQuery, breedQuery, awardKey]
+    () => filterResultsByDogAndBreed(results, searchQuery, awardKey),
+    [results, searchQuery, awardKey],
   )
-  const forceOpen = Boolean(dogQuery.trim() || breedQuery.trim() || awardKey)
+  const forceOpen = Boolean(searchQuery.trim() || awardKey)
 
-  const groupMap = useMemo(() => {
-    const byGroup = new Map<string, Map<string, ShowResultRow[]>>()
+  const { byGroup, hasFciGroups } = useMemo(() => {
+    const map = new Map<string, Map<string, ShowResultRow[]>>()
+    const hasGroups = filtered.some((row) => Boolean(row.breed_group?.trim()))
     for (const row of filtered) {
-      const groupKey = row.breed_group?.trim() || 'Прочие породы'
-      if (!byGroup.has(groupKey)) byGroup.set(groupKey, new Map())
-      const breeds = byGroup.get(groupKey)!
+      const groupKey = hasGroups ? row.breed_group?.trim() || 'Прочие породы' : ''
+      if (!map.has(groupKey)) map.set(groupKey, new Map())
+      const breeds = map.get(groupKey)!
       if (!breeds.has(row.breed)) breeds.set(row.breed, [])
       breeds.get(row.breed)!.push(row)
     }
-    return byGroup
+    return { byGroup: map, hasFciGroups: hasGroups }
   }, [filtered])
 
   if (filtered.length === 0) {
@@ -653,9 +956,30 @@ function LegacyResultsSection({
     )
   }
 
+  const renderBreeds = (breedsMap: Map<string, ShowResultRow[]>) =>
+    [...breedsMap.entries()]
+      .sort(([a], [b]) => a.localeCompare(b, 'ru'))
+      .map(([breed, breedResults]) => (
+        <details
+          key={breed}
+          className="group/breed rounded-lg border border-old-money-200 bg-white/70 dark:border-charcoal-600 dark:bg-charcoal-800/40"
+          open={forceOpen || breedsMap.size === 1 || undefined}
+        >
+          <summary className="cursor-pointer list-none px-3 py-2 font-semibold marker:content-none">
+            {breed}
+          </summary>
+          <BreedResultsPanel results={breedResults} breed={breed} />
+        </details>
+      ))
+
+  if (!hasFciGroups) {
+    const only = [...byGroup.values()][0] ?? new Map()
+    return <div className="space-y-2">{renderBreeds(only)}</div>
+  }
+
   return (
-    <div className="space-y-4">
-      {[...groupMap.entries()]
+    <div className="space-y-3">
+      {[...byGroup.entries()]
         .sort(([a], [b]) => a.localeCompare(b, 'ru'))
         .map(([groupName, breedsMap]) => (
           <details
@@ -668,20 +992,7 @@ function LegacyResultsSection({
               <h2 className="font-serif text-base font-bold text-charcoal-900 md:text-lg">{groupName}</h2>
             </summary>
             <div className="space-y-2 border-t border-old-money-200 px-3 pb-3 pt-2 dark:border-charcoal-600">
-              {[...breedsMap.entries()]
-                .sort(([a], [b]) => a.localeCompare(b, 'ru'))
-                .map(([breed, breedResults]) => (
-                  <details
-                    key={breed}
-                    className="group/breed rounded-lg border border-old-money-200 bg-white/60"
-                    open={forceOpen || undefined}
-                  >
-                    <summary className="cursor-pointer list-none px-3 py-2 font-semibold marker:content-none">
-                      {breed}
-                    </summary>
-                    <BreedResultsPanel results={breedResults} />
-                  </details>
-                ))}
+              {renderBreeds(breedsMap)}
             </div>
           </details>
         ))}
@@ -695,8 +1006,7 @@ export default function ShowExhibitionDetail() {
   const [loading, setLoading] = useState(true)
   const [exhibition, setExhibition] = useState<ShowExhibition | null>(null)
   const [error, setError] = useState<string | null>(null)
-  const [dogQuery, setDogQuery] = useState('')
-  const [breedQuery, setBreedQuery] = useState('')
+  const [searchQuery, setSearchQuery] = useState('')
   const [awardKey, setAwardKey] = useState<ShowAwardKey | null>(null)
 
   useEffect(() => {
@@ -725,14 +1035,11 @@ export default function ShowExhibitionDetail() {
     [exhibition]
   )
 
-  const hasActiveFilters = Boolean(dogQuery.trim() || breedQuery.trim() || awardKey)
+  const hasActiveFilters = Boolean(searchQuery.trim() || awardKey)
   const activeFilterChips: ActiveFilterChip[] = useMemo(() => {
     const chips: ActiveFilterChip[] = []
-    if (dogQuery.trim()) {
-      chips.push({ key: 'dog', label: dogQuery.trim(), onRemove: () => setDogQuery('') })
-    }
-    if (breedQuery.trim()) {
-      chips.push({ key: 'breed', label: breedQuery.trim(), onRemove: () => setBreedQuery('') })
+    if (searchQuery.trim()) {
+      chips.push({ key: 'search', label: searchQuery.trim(), onRemove: () => setSearchQuery('') })
     }
     if (awardKey) {
       chips.push({
@@ -742,7 +1049,7 @@ export default function ShowExhibitionDetail() {
       })
     }
     return chips
-  }, [dogQuery, breedQuery, awardKey])
+  }, [searchQuery, awardKey])
 
   if (loading) {
     return (
@@ -791,8 +1098,7 @@ export default function ShowExhibitionDetail() {
               onClearAllFilters={
                 hasActiveFilters
                   ? () => {
-                      setDogQuery('')
-                      setBreedQuery('')
+                      setSearchQuery('')
                       setAwardKey(null)
                     }
                   : undefined
@@ -800,41 +1106,46 @@ export default function ShowExhibitionDetail() {
               filters={
                 <>
                   <ToolbarSearch
-                    value={dogQuery}
-                    onChange={setDogQuery}
-                    placeholder="Кличка…"
-                    className="!w-auto min-w-[160px] flex-1 max-w-xs"
+                    value={searchQuery}
+                    onChange={setSearchQuery}
+                    placeholder="Кличка или порода…"
+                    className="!w-auto min-w-[180px] flex-1 max-w-md"
                   />
-                  <ToolbarSearch
-                    value={breedQuery}
-                    onChange={setBreedQuery}
-                    placeholder="Порода…"
-                    className="!w-auto min-w-[160px] flex-1 max-w-xs"
-                  />
-                  <ExhibitionAwardFilter
-                    awards={availableAwards}
-                    value={awardKey}
-                    onChange={setAwardKey}
-                  />
+                  {availableAwards.length > 0 ? (
+                    <ToolbarFiltersDropdown
+                      active={Boolean(awardKey)}
+                      onReset={() => setAwardKey(null)}
+                      label="Фильтры"
+                    >
+                      <ExhibitionAwardFilter
+                        awards={availableAwards}
+                        value={awardKey}
+                        onChange={setAwardKey}
+                      />
+                    </ToolbarFiltersDropdown>
+                  ) : null}
                 </>
               }
             />
           </div>
         ) : null}
 
+        <MainRingSection
+          rows={exhibition.main_ring ?? []}
+          bisUrl={exhibition.bis_reports_link}
+        />
+
         {hasCatalog ? (
           <CatalogResultsSection
             catalog={exhibition.breed_catalog!}
             results={exhibition.results}
-            dogQuery={dogQuery}
-            breedQuery={breedQuery}
+            searchQuery={searchQuery}
             awardKey={awardKey}
           />
         ) : exhibition.results.length > 0 ? (
           <LegacyResultsSection
             results={exhibition.results}
-            dogQuery={dogQuery}
-            breedQuery={breedQuery}
+            searchQuery={searchQuery}
             awardKey={awardKey}
           />
         ) : (

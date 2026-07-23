@@ -13,6 +13,13 @@ Golden assertions (scores / judges / counts) — в vitest:
 npx vitest run backend/tests/parser-fixtures.test.ts
 ```
 
+### Выставки RKF PDF
+```bash
+npx vitest run backend/tests/parse-rkf-certificate-pdf.test.ts
+npx vitest run backend/tests/show-award-ranking.test.ts
+```
+Column-aware парсер type1 (`100397`, `100404`, …) — нужны локальные PDF в `data/local/rkf-reports/2026/` (gitignore); без файлов тесты `skipIf`. Канон: [`SHOWS.md`](SHOWS.md).
+
 ### Backend API
 ```bash
 npm run test

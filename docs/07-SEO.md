@@ -2,7 +2,11 @@
 
 ## Обзор
 
-Coursing Stats использует несколько стратегий для поисковой оптимизации (SEO) в Яндекс и Google.
+Coursing Stats использует meta (Helmet), статический sitemap, JSON-LD, prerender HTML для краулеров и Метрику для Яндекс и Google.
+
+**Публичный прод (вариант A):** рейтинги соревнований, выставки, Донино, профили собак и судьи. **Календаря и полных протоколов на проде нет** — не обещать их в meta/description. Календари доступны только локально (`npm run dev`).
+
+**Краулеры:** после Vite build CI запускает `npm run prerender-seo` — path-specific HTML с реальными title/description/canonical и контентом в `#root` (React заменяет `#root` при JS; без JS краулер видит текст).
 
 ## Верификация поисковиков
 
@@ -22,7 +26,7 @@ Coursing Stats использует несколько стратегий для
 
 - **Генерация:** `backend/scripts/build-derived-indexes.ts` → `frontend/public/sitemap.xml`
 - **URL:** `https://coursing-stats.ru/sitemap.xml`
-- **Содержит:** все публичные URL (страницы, собаки, события, судьи, Донино) из `data/v1/indexes/sitemap-urls.json`
+- **Содержит:** хабы `/`, `/competitions`, `/shows`, `/speed-records`, `/guide`; legacy `/top`, `/judges`; `/dog/:id`, судьи, Донино-профили. Источник списка динамики — `data/v1/indexes/sitemap-urls.json`
 - **Обновление:** автоматически при `git push main` (CI `build-all-data`)
 
 ### Legacy: динамический sitemap на Worker
@@ -62,24 +66,79 @@ Coursing Stats использует несколько стратегий для
 
 ### JSON-LD
 - **Файл:** `frontend/src/components/JsonLd.tsx`
-- Схемы: **Organization**, **WebSite** (поиск)
+- Схемы: **Organization**, **WebSite** (поиск), `breadcrumbListSchema`, `faqPageSchema`
+- Профиль собаки: BreadcrumbList (Главная → Рейтинг → кличка)
+- Справочник `/guide`: FAQPage (общие вопросы по рейтингу, Донино, выставкам, календарю, источникам)
+
+### Внутренние ссылки (фаза C)
+- **Home / профиль:** видимые дубли шапки убраны; навигация — в общей шапке сайта. JSON-LD BreadcrumbList на профиле остаётся (для поисковиков, без UI)
+- **Guide:** видимые FAQ на вкладках Рейтинг / Выставки / О сайте
 
 ### OG Image
 - **Файл:** `frontend/public/og-image.svg` (на базе logo-light)
 
+### Prerender HTML (фаза B)
+
+После `cd frontend && npm run build` CI (и локально) запускает:
+
+```bash
+npm run prerender-seo
+```
+
+- **Хелперы:** `backend/scripts/seo/prerender-html.ts`
+- **CLI:** `backend/scripts/seo/prerender-pages.ts`
+- **CI:** `.github/workflows/deploy-frontend.yml` → шаг `Prerender SEO HTML` после `Build frontend`
+- **Кэш:** `frontend/public/_headers` — no-cache для `/competitions`, `/shows`, `/speed-records`, `/guide`, `/dog/*` (как у `/` и `/index.html`)
+
+Пишет:
+| Путь | Файл |
+|------|------|
+| `/` | патч `frontend/dist/index.html` |
+| `/competitions` | `frontend/dist/competitions/index.html` |
+| `/shows` | `frontend/dist/shows/index.html` |
+| `/speed-records` | `frontend/dist/speed-records/index.html` |
+| `/guide` | `frontend/dist/guide/index.html` |
+| `/dog/:id` | `frontend/dist/dog/{id}/index.html` |
+
+Источники собак: `frontend/dist/data/v1/indexes/dog-profiles/*.json` (fallback `data/v1/...`). Show-only из `dog-ranking-*.json` **выключены по умолчанию** (полный дамп ≫ лимита файлов Cloudflare Pages); опционально: `PRERENDER_SHOW_ONLY=1` и `PRERENDER_SHOW_ONLY_MAX` (дефолт 2000).
+
+**Cloudflare Pages:** `_redirects` остаётся `/* /index.html 200`. Статические `…/index.html` обслуживаются раньше catch-all. Не добавлять `404.html`. Hashed `/assets/*` в клоне shell не трогать.
+
+**Проверка (после prerender):**
+
+```bash
+# title / description / canonical в первом HTML
+curl -sS https://coursing-stats.ru/dog/263 | findstr /i "title description canonical"
+# локально после build + prerender:
+curl -sS http://127.0.0.1:4173/dog/1 | head
+# или: Select-String -Path frontend/dist/dog/1/index.html -Pattern '<title>|canonical|#root'
+```
+
+Юнит-тесты хелперов (без Vite build): `npx vitest run backend/tests/prerender-seo.test.ts`
+
 ### Канонические URL (основные)
-- `/`, `/competitions`, `/speed-records`, `/guide`
+- `/`, `/competitions`, `/shows`, `/speed-records`, `/guide?tab=…`
 - Legacy редиректы: `/top`, `/judges` → hub `/competitions?tab=…`
-- Динамика: `/dog/:id`, `/donino-dog/…`, `/judges/:id` (если публичны)
+- Динамика: `/dog/:id` (с `canonicalUrl`), `/donino-dog/…`, `/judges/:id` (если публичны)
+
+### Хабы (title / смысл)
+| URL | Title (смысл) |
+|-----|----------------|
+| `/` | Статистика курсинга, бегов и выставок собак |
+| `/competitions` | Рейтинг собак: курсинг и бега борзых |
+| `/shows` | Рейтинг выставочных собак РКФ |
+| `/speed-records` | Рекорды Донино: замер скорости и бега 350 м |
+| `/guide?tab=…` | Справочник — вкладка (титулы / выставки / протоколы / рейтинг / о сайте) |
 
 ### Реализация на страницах
 
-#### Страницы собак (`frontend/src/pages/DogProfile.tsx`)
+#### Страницы собак (`frontend/src/pages/DogProfile/index.tsx`)
 ```tsx
 <SEO
-  title={`${dogName} - ${dogBreed}`}
-  description={`Статистика собаки ${dogName} (${dogBreed}) по курсингу и бегам борзых...`}
-  keywords={`${dogName}, ${dogBreed}, курсинг, бега борзых, статистика, ${dogTitles}...`}
+  title={`${dogName} (${dogBreed}) — статистика курсинг, бега, выставки`}
+  description={`${dogName} (${dogBreed}): курсинг N стартов; … Статистика на Coursing Stats.`}
+  keywords={`${dogName}, ${dogBreed}, курсинг, …`}
+  canonicalUrl={`https://coursing-stats.ru/dog/${id}`}
 />
 ```
 
@@ -89,6 +148,7 @@ Coursing Stats использует несколько стратегий для
   title={`${name} — ${breed}`}
   description={`Рекорды Донино: ${name} (${breed}). лучшая скорость … км/ч; лучшее время 350 м: … с.`}
   keywords={`${name}, ${breed}, рекорды Донино, замер скорости, бега борзых, 350 м`}
+  canonicalUrl={`https://coursing-stats.ru/donino-dog/${encodeURIComponent(name)}/${encodeURIComponent(breed)}`}
 />
 ```
 
@@ -155,11 +215,11 @@ return (
 
 ## Ключевые слова
 
-В `SEO.tsx` — расширенный набор (основные термины, породы, организации РКФ/FCI, рекорды, судьи). Для страниц — дополнять конкретными именами (собака, судья, событие).
+В `SEO.tsx` — **короткий** дефолт под RU-нишу (курсинг, бега, рейтинг, Донино, выставки, РКФ). На страницах — точечные keywords (кличка, порода, дисциплина). Meta keywords почти не влияет на Google; не раздувать списком EN/US терминов.
 
 ### Типовые запросы
-- курсинг, бега борзых, статистика, РКФ
-- [Имя собаки] + [порода]; [судья] + статистика; рекорды скорости / Донино
+- статистика / рейтинг курсинга; рекорды Донино; рейтинг выставок РКФ
+- [Имя собаки] + [порода]; [судья] + статистика
 
 ## Яндекс.Метрика
 
@@ -208,9 +268,9 @@ useEffect(() => { reachGoal('dog_profile_view') }, [reachGoal])
 - Sitemap: статический `https://coursing-stats.ru/sitemap.xml` (генерируется в CI)
 
 ### SPA (Single Page Application)
-- Проблема: Поисковики могут плохо индексировать динамические страницы
-- Решение: Динамический sitemap + meta-теги
-- Будущее: Рассмотреть SSR (Server-Side Rendering) для критичных страниц
+- Базовый `index.html` — общий shell; для хабов и `/dog/:id` CI делает **prerender** (фаза B) с уникальными meta и текстом в `#root`
+- React при загрузке JS гидратирует/заменяет `#root`; краулеры без JS видят prerender-контент
+- Sitemap + Helmet meta остаются обязательными; prerender усиливает первый HTML
 
 ## Яндекс.Вебмастер — практические заметки
 
@@ -244,10 +304,29 @@ useEffect(() => { reachGoal('dog_profile_view') }, [reachGoal])
 
 - `frontend/src/components/SEO.tsx`, `JsonLd.tsx`, `YandexMetrica.tsx`
 - `frontend/src/types/yandex-metrica.d.ts`
-- `frontend/public/og-image.svg`, `robots.txt`, `sitemap.xml` (генерируется CI)
+- `frontend/public/og-image.svg`, `robots.txt`, `sitemap.xml` (генерируется CI), `_headers`
 - `backend/scripts/build-derived-indexes.ts` — URL для sitemap
+- `backend/scripts/seo/prerender-html.ts`, `prerender-pages.ts` — prerender Phase B
+- `backend/tests/prerender-seo.test.ts`
 
 ## История изменений
+
+### 2026-07-23
+- Фаза A: честные meta без «календаря» на проде; сильные title хабов; `/shows` в sitemap; короткий `DEFAULT_KEYWORDS`; `canonicalUrl` и фактовое description у `/dog/:id` и Донино; SEO guide по вкладкам
+- Фаза B: prerender HTML хабов и `/dog/:id` после Vite build (`prerender-seo` в CI); no-cache для prerender-путей в `_headers`
+- Фаза C: FAQ + FAQPage на Guide; BreadcrumbList JSON-LD на профиле (без дублей шапки в UI)
+- Тексты: слоган и H1 на главной; «Кому полезен» + обновлённый FAQ/рейтинг в справке; угловая атрибуция источника на рейтингах и Донино
+- Главная: две строки hero-stats (соревнования + выставки); «Топ сезона» двумя колонками; титулы соревнований — отдельный CACLBr и сортировка по крутости
+
+### Что дальше (фаза D — в основном вне кода)
+
+| Задача | Зачем |
+|--------|--------|
+| Проверить покрытие в GSC / Яндекс.Вебмастер после деплоя с prerender | Убедиться, что хабы и `/dog/:id` индексируются с правильным title |
+| Внешние ссылки (форумы РКФ, клубы, соцсети, упоминания) | Ссылочный вес; код сам по себе не даст |
+| Не раздувать prerender show-only (~127k) без лимита Pages | Уже off by default; включать точечно (`PRERENDER_SHOW_ONLY`) |
+| Уникальные lead/FAQ только там, где реально помогают людям | Уже на Guide; не плодить тонкий SEO-текст на каждой вкладке |
+| Следить за дублями протоколов в `competitions/` | Дубль стартов искажает CS и сниппеты профилей |
 
 ### 2026-07-22
 - Канон SEO: этот файл; устаревший дубль `SEO.md` удалён (контент Метрики/JsonLd/OG смержен сюда)

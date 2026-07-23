@@ -11,7 +11,6 @@ import { useJudges } from '../../hooks/useStaticData'
 import EmptyState from '../../components/EmptyState'
 import SkeletonLoader from '../../components/SkeletonLoader'
 import { buildJudgesActiveFilterChips } from '../SpeedRecords/toolbarFilters'
-import ProcoursingAttribution from '../../components/ProcoursingAttribution'
 
 const CURRENT_SEASON = String(new Date().getFullYear())
 
@@ -121,7 +120,7 @@ export default function Judges() {
       <div className="mb-4">
         <PageToolbar
           bare
-          trailing={<ProcoursingAttribution />}
+          topRowClassName="pr-28 md:pr-32"
           activeFilterChips={activeFilterChips}
           onClearAllFilters={hasActiveFilters ? clearFilters : undefined}
           filters={

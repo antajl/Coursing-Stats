@@ -1,7 +1,6 @@
 import { useMemo, useState, useEffect, useRef } from 'react'
 import { Download, ChevronDown } from 'lucide-react'
 import DogSexIcon from '../../components/DogSexIcon'
-import DoninoAttribution from '../../components/DoninoAttribution'
 import FilterSelect from '../../components/FilterSelect'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarChip from '../../components/toolbar/ToolbarChip'
@@ -161,7 +160,7 @@ export default function DoninoPageToolbar({
     <div ref={dropdownRef}>
       <PageToolbar
         bare
-        trailing={<DoninoAttribution />}
+        topRowClassName="pr-28 md:pr-32"
         activeFilterChips={activeFilterChips}
         onClearAllFilters={hasActiveFilters ? onClearFilters : undefined}
         filters={

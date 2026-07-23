@@ -204,11 +204,6 @@ export default function DogCard({ dog, type, filterYear, rank, variant = 'card' 
             >
               {breedDisplay.primary}
             </span>
-            {breedDisplay.secondary ? (
-              <div className="mt-0.5 truncate text-[9px] font-medium leading-tight text-charcoal-400 dark:text-charcoal-500">
-                {breedDisplay.secondary}
-              </div>
-            ) : null}
           </div>
           {yearBadge && (
             <span

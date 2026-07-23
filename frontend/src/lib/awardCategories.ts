@@ -88,19 +88,15 @@ export function classifyCompetitionTitle(raw: string): AwardCategory {
     return 'cumulative'
   }
 
-  // Крутые титулы старта
+  // Крутые титулы старта (ранг мероприятия / рабочие качества)
   if (
     /^(ЧР|ПКР|ЧРКФ|ПЧРКФ)(\s+РК)?$/.test(compact) ||
     compact.startsWith('ЧЕМПИОН РОССИИ') ||
     compact.startsWith('ПОБЕДИТЕЛЬ КУБКА РОССИИ') ||
     compact.startsWith('ЧЕМПИОН РКФ') ||
-    compact.includes('ПЧРКФ')
+    compact.includes('ПЧРКФ') ||
+    compact.includes('ПО РАБОЧИМ КАЧЕСТВАМ')
   ) {
-    // «Чемпион РКФ» без «РК» в выставочном смысле не сюда — для соревнований обычно с РК
-    if (compact === 'ЧРКФ' || compact === 'ЧЕМПИОН РКФ') {
-      // без суффикса РК — скорее выставка; в competition profile редкость
-      return 'diploma'
-    }
     return 'prestige'
   }
 
@@ -125,10 +121,11 @@ export function classifyShowCumulativeTitle(raw: string): AwardCategory | null {
     u.includes('C.I.B') ||
     u.includes('CIB') ||
     u.includes('ИНТЕРНАЦИОНАЛЬН') ||
-    u.includes('ЧЕМПИОН РОССИИ') ||
+    // Beauty «Чемпион России» — не путать с рабочим «…по рабочим качествам»
+    (u.includes('ЧЕМПИОН РОССИИ') && !u.includes('РАБОЧ')) ||
     u.includes('ЮНЫЙ ЧЕМПИОН') ||
     u.includes('ЮНЫЙ ЧЕМПИОН РОССИИ') ||
-    (u.includes('ЧЕМПИОН РКФ') && !u.includes(' РК')) ||
+    (u.includes('ЧЕМПИОН РКФ') && !u.includes(' РК') && !u.includes('РАБОЧ')) ||
     (u.includes('ВЕТЕРАН') && u.includes('ЧЕМПИОН'))
   ) {
     return 'cumulative'

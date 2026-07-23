@@ -62,10 +62,12 @@ data/v1/
 │   └── events-by-id.json
 └── shows/
     ├── exhibitions/           # файлы выставок (breed_catalog, results)
-    └── indexes/               # ⚠️ генерируется, не править вручную
-        ├── dog-ranking-{year}.json  # рейтинг собак по годам (2017-2026, unknown)
-        ├── dog-ranking.json          # all-time рейтинг (исключён из деплоя, >25 MB)
-        └── judges.json                # индекс судей выставок
+        └── indexes/               # ⚠️ генерируется, не править вручную
+            ├── dog-ranking-{year}.json  # рейтинг собак по годам (2017-2026, unknown)
+            ├── dog-ranking.json          # all-time рейтинг (исключён из деплоя, >25 MB)
+            ├── home-top-{year}.json      # топ-3 для главной (+ titles для метрики)
+            ├── hero-stats.json           # счётчики выставок на главной
+            └── judges.json                # индекс судей выставок
 └── pc-db.sqlite               # для dev-админки; не источник правды для прода
 ```
 
@@ -106,14 +108,15 @@ data/v1/
 Данные в `data/v1/shows/`, отдельно от курсинга.
 
 **Ключевые факты:**
-- Лимит Cloudflare Pages **25 MB** на файл → all-time `dog-ranking.json` **не на CDN** (и не копируется `copy-data.js`)
-- На CDN: шарды `dog-ranking-{year}.json`; «все года» — склейка в `getShowDogRanking('')`
+- Лимит Cloudflare Pages **25 MB** на файл → all-time `dog-ranking.json` **не на CDN**; годовые файлы — **lean** (без history, compact titles); подробности в `dog-details/{shard}.json`
+- На CDN: lean `dog-ranking-{year}.json`, `dog-details/*`, `show-dog-lookup.json`, `home-top-{year}.json`, `judges.json`; UI по умолчанию — **текущий сезон**
 - Календарь UI (DEV): `shows/calendar-rkf/{year}.json` (rkf.online CategoryId=1, ~62k с 2019); fallback — `shows/calendar/{year}.json` (LC); протоколы DEV — LC `exhibitions/` + локальные RKF PDF `data/local/shows/exhibitions-rkf/`
-- Ингест: `npm run ingest-rkf-calendar` → `reports_link` + `bis_reports_link`; PDF-пайплайн: `download-rkf-reports` / `parse-rkf-reports` (не в git; ~74k PDF на весь архив)
+- Ингест: `npm run ingest-rkf-calendar` → `reports_link` + `bis_reports_link`; PDF-пайплайн: `download-rkf-reports` / `parse-rkf-reports` (не в git; ~74k PDF на весь архив; годы с 2026 вниз)
 - `build-show-indexes.ts` читает LC **и** локальные RKF JSON → индексы; на проде история → rkf.online / PDF, не внутренний протокол
 - UI-склейка календаря: кавычки в названии игнорируются (`normalizeMergeText`); ранги/НКП — дети одной карточки
 
 Канон: **[`SHOWS.md`](SHOWS.md)**.
+
 ---
 
 ## Breed Archive и `pedigree_url`
@@ -225,7 +228,7 @@ CS  = round(μ̃ + P + E, 2)                   # rating_score
 | Функция | Назначение |
 |---------|------------|
 | `breedAliasKey` / `canonicalBreed` | Нормализованный **UPPERCASE**-канон для фильтров и сравнения (регистр/ё/«К Ш»→«К-Ш») |
-| `displayBreed` | UI: `{ primary, secondary? }` — sentence case + обиходные подписи (`DogCard`, `ShowDogCard`, шапка профиля) |
+| `displayBreed` | UI: `{ primary, secondary? }` — sentence case + обиходные подписи; **на карточках/шапке рендерится только `primary`** (чип), `secondary` — в `title` при hover |
 | `matchesBreedFilter` | Сравнение через канон, не через сырой ALL CAPS из протокола |
 
 **Правила (не путать с синонимами написания):**
@@ -233,8 +236,15 @@ CS  = round(μ̃ + P + E, 2)                   # rating_score
 - Склеиваем только разное написание одной породы (левретка ↔ малая итальянская борзая и т.п.).
 - **Не** склеиваем тип шерсти / размер / окрас, если в РКФ/FCI это разные ринги (выжла К-Ш ≠ Ж-Ш, НО К-Ш ≠ Д-Ш, папийон ≠ фален…).
 - Без типа шерсти: `Выжла` / `Венгерская выжла` → канон `… (ТИП НЕ УКАЗАН)` (**не** в К-Ш); то же для голой `Немецкая овчарка`. Комбинированный `НЕМЕЦКАЯ ОВЧАРКА (Д-Ш, К-Ш)` — отдельный канон.
-- UI: sentence case, не капс РКФ. Паттерн «Левретка» + мелкая официальная подпись — также малинуа, кане-корсо, гальго.
+- UI: sentence case, не капс РКФ. Обиходный чип («Малинуа», «Левретка»…) без второй строки под ним — полное имя в tooltip.
 - Справочник `/guide?tab=shows` → «Особенности» → «Названия пород на сайте».
+
+### Титулы соревнований (`qualification`)
+
+- Агрегация профиля: `backend/lib/competition-titles.ts` → `aggregateQualificationTitles` (в `dog-profiles` при `build-derived-indexes`).
+- **CACLBr ≠ CACL** (отдельный ключ и счётчик).
+- Чипы в шапке профиля и в истории старта сортируются **по крутости** (ЧР / ЧРКФ → CACIL/CACL → CACLBr → RegCACL…): `compareCompetitionTitles` + категории в `awardCategories.ts` / `awardChipRender.tsx`.
+- Дубль одного протокола на два `event_id` (одинаковые собаки/места/баллы) **задваивает** старты и индекс CS — такие пары нужно удалять из `competitions/` + `calendar/` и пересобирать indexes. Пример: 2026-04-18 Казань БЗМП `1305` (оставить) / `1306` (удалён как копия).
 
 Выставки: склейка «порода+судья» в сырых `exhibitions/*.json` чистится при сборке индексов — см. [`SHOWS.md`](SHOWS.md) → Build Pipeline.
 

@@ -72,7 +72,7 @@ export function parseDate(dateStr: string | null | undefined): Date | null {
   return Number.isNaN(d.getTime()) ? null : d
 }
 
-function formatMonthShortRu(monthIndex: number): string {
+export function formatMonthShortRu(monthIndex: number): string {
   return MONTH_SHORT_RU[monthIndex] ?? ''
 }
 

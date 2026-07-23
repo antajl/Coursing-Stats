@@ -8,13 +8,17 @@ import {
   useDogCoursingRecords,
   useCoursingRecordsByBreed,
 } from '../../hooks/useStaticData'
-import { getShowDogRanking } from '../../lib/staticData'
-import { findMatchingShowDog } from '../../lib/dogNameMatching'
-import { type DogTitle } from '../../lib/qualificationTitles'
+import { resolveShowDogDetail } from '../../lib/staticData'
+import {
+  isShowOnlyProfileId,
+  showDogProfilePath,
+} from '../../lib/showDogProfilePath'
+import { mergeDogProfileTitles } from '../../lib/qualificationTitles'
 import { toPng } from 'html-to-image'
 import SkeletonLoader from '../../components/SkeletonLoader'
 import ErrorState from '../../components/ErrorState'
 import { SEO } from '../../components/SEO'
+import { JsonLd, breadcrumbListSchema } from '../../components/JsonLd'
 import { useYandexGoal } from '../../components/YandexMetrica'
 import { buildEventResultsUrlMap } from '../../lib/procoursingLinks'
 import type { ShowDogCardData } from '../Shows/ShowDogCard'
@@ -99,46 +103,22 @@ export default function DogProfile() {
     if (dog || showDog) reachGoal('dog_profile_view')
   }, [dog, showDog, reachGoal])
 
-  // Выставки: матч к competition dog, либо по стабильному /dog/:id, либо legacy breed route
+  // Выставки: detail-шард по id / competition / кличка+порода (не тянем весь ranking)
   useEffect(() => {
     let cancelled = false
     const loadShows = async () => {
       setShowsLoading(true)
       try {
-        const result = await getShowDogRanking()
-        if (!result.success || !result.data || cancelled) {
-          if (!cancelled) setShowDog(null)
-          return
+        const result = await resolveShowDogDetail({
+          profileId: profileId || (isLegacyShowRoute ? showRouteDogId : null),
+          competitionId: dog?.id ?? competitionId,
+          nameLat: dog?.name_lat,
+          nameRu: dog?.name_ru,
+          breed: dog?.breed || showRouteBreed,
+        })
+        if (!cancelled) {
+          setShowDog(result.success && result.data ? result.data : null)
         }
-
-        let found: ShowDogCardData | null = null
-        if (dog) {
-          found = findMatchingShowDog(
-            {
-              id: dog.id,
-              name_lat: dog.name_lat,
-              name_ru: dog.name_ru,
-              breed: dog.breed,
-            },
-            result.data,
-          )
-        } else if (profileId) {
-          found =
-            result.data.find((d) => String(d.id) === String(profileId)) ??
-            result.data.find((d) => String(d.competition_dog_id) === String(profileId)) ??
-            null
-        } else if (showRouteDogId && showRouteBreed) {
-          found =
-            result.data.find(
-              (d) =>
-                d.breed === showRouteBreed &&
-                (String(d.catalog_id) === String(showRouteDogId) ||
-                  String(d.id) === String(showRouteDogId)),
-            ) ??
-            result.data.find((d) => String(d.id) === String(showRouteDogId)) ??
-            null
-        }
-        if (!cancelled) setShowDog(found)
       } catch {
         if (!cancelled) setShowDog(null)
       } finally {
@@ -151,6 +131,16 @@ export default function DogProfile() {
     }
   }, [competitionId, dog, loading, showRouteDogId, showRouteBreed, isLegacyShowRoute, profileId])
 
+  // До любых early return — иначе нарушаются Rules of Hooks
+  const titles = useMemo(
+    () =>
+      mergeDogProfileTitles(
+        Array.isArray(dog?.titles) ? dog.titles : [],
+        showDog?.titles,
+      ),
+    [dog?.titles, showDog?.titles],
+  )
+
   // Linked show dog on legacy URL → canonical /dog/{competition_id}
   if (
     !showsLoading &&
@@ -161,9 +151,15 @@ export default function DogProfile() {
     return <Navigate to={`/dog/${showDog.competition_dog_id}`} replace />
   }
 
-  // Legacy /shows/dog/{…}/{breed} → /dog/{stableId}
-  if (!showsLoading && isLegacyShowRoute && showDog?.id) {
-    return <Navigate to={`/dog/${showDog.id}`} replace />
+  // Legacy /shows/dog/{catalog}/{breed} → /dog/{stableId} (never catalog #)
+  if (!showsLoading && isLegacyShowRoute && showDog) {
+    const canonical = showDogProfilePath(showDog)
+    if (canonical.startsWith('/dog/') && isShowOnlyProfileId(canonical.slice('/dog/'.length))) {
+      return <Navigate to={canonical} replace />
+    }
+    if (canonical !== location.pathname) {
+      return <Navigate to={canonical} replace />
+    }
   }
 
   const handleExport = async () => {
@@ -229,7 +225,6 @@ export default function DogProfile() {
 
   const coursing = dog?.coursing_stats || {}
   const racing = dog?.racing_stats || {}
-  const titles: DogTitle[] = Array.isArray(dog?.titles) ? dog.titles : []
   const hasCoursingData = (coursing.total_starts || 0) > 0
   const hasRacingData = (racing.total_starts || 0) > 0
   const hasCourseMedals =
@@ -262,8 +257,42 @@ export default function DogProfile() {
   const dogName = headerDog.name_lat || headerDog.name_ru || 'Собака'
   const dogBreed = headerDog.breed || headerBreed || ''
   const dogTitles = titles.map((t) => t.title).join(', ')
-  const description = `Статистика собаки ${dogName} (${dogBreed}): курсинг, бега борзых и выставки.`
-  const keywords = `${dogName}, ${dogBreed}, курсинг, бега борзых, выставки, статистика, ${dogTitles}, РКФ`
+
+  const profilePath = dog
+    ? `/dog/${dog.id}`
+    : showDog
+      ? showDogProfilePath(showDog)
+      : competitionId
+        ? `/dog/${competitionId}`
+        : '/'
+  const canonicalUrl = `https://coursing-stats.ru${profilePath}`
+
+  const seoFacts: string[] = []
+  if (hasCoursingData) {
+    seoFacts.push(`курсинг ${coursing.total_starts || 0} стартов`)
+  }
+  if (hasRacingData) {
+    seoFacts.push(`беги ${racing.total_starts || 0} стартов`)
+  }
+  if (showDog && (showDog.total_shows || 0) > 0) {
+    seoFacts.push(`выставки: ${showDog.total_shows}`)
+  }
+  if (hasSpeedRecords && speedStats?.bestSpeed != null) {
+    seoFacts.push(`Донино ${speedStats.bestSpeed.toFixed(1)} км/ч`)
+  }
+  if (hasCoursingRecords && coursingStats?.bestTime != null) {
+    seoFacts.push(`350 м ${coursingStats.bestTime.toFixed(2)} с`)
+  }
+  const description =
+    seoFacts.length > 0
+      ? `${dogName} (${dogBreed}): ${seoFacts.join('; ')}. Статистика на Coursing Stats.`
+      : `Статистика собаки ${dogName} (${dogBreed}): курсинг, бега борзых, выставки и Донино.`
+  const keywords = [dogName, dogBreed, 'курсинг', 'бега борзых', 'выставки', 'Донино', 'статистика', dogTitles, 'РКФ']
+    .filter(Boolean)
+    .join(', ')
+  const seoTitle = dogBreed
+    ? `${dogName} (${dogBreed}) — статистика курсинг, бега, выставки`
+    : `${dogName} — статистика курсинг, бега, выставки`
 
   const visibleSpeedHistory = showAllSpeedHistory
     ? (speedStats?.history ?? [])
@@ -283,7 +312,19 @@ export default function DogProfile() {
 
   return (
     <>
-      <SEO title={`${dogName} - ${dogBreed}`} description={description} keywords={keywords} />
+      <SEO
+        title={seoTitle}
+        description={description}
+        keywords={keywords}
+        canonicalUrl={canonicalUrl}
+      />
+      <JsonLd
+        data={breadcrumbListSchema([
+          { name: 'Главная', url: '/' },
+          { name: 'Рейтинг', url: '/competitions?tab=ranking' },
+          { name: dogName, url: profilePath },
+        ])}
+      />
       <div className="p-4 md:p-6">
         <div className="mx-auto max-w-full">
           <div ref={exportRef}>

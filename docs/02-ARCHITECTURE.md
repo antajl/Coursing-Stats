@@ -149,7 +149,7 @@ POST /api/admin/recreate-views
 **Shell:** `App.tsx` (layout + `Nav`) → `AppRoutes.tsx` (lazy routes, code-split chunks)
 
 **Pages (lazy-loaded):** полная карта — [`04-FRONTEND.md`](04-FRONTEND.md). Кратко:
-- `/` — `Home.tsx` (лендинг: hero, топ сезона, рекорды Донино)
+- `/` — `Home.tsx` (hero с фото-фоном + settle, поиск собаки, события, топ сезона, Донино)
 - `/competitions` — `Competitions.tsx` (hub: **Рейтинг + Судьи**; `?tab=calendar` только Vite DEV / `isLocalDev`)
 - `/shows` — `Shows.tsx` (hub: рейтинг + судьи; календарь / `/shows/exhibition/:id` — только DEV)
 - `/top`, `/judges` — legacy redirect → `/competitions?tab=…`

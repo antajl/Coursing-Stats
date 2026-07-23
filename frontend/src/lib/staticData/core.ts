@@ -11,10 +11,17 @@ export type ApiResult<T> =
 
 const jsonCache = new Map<string, Promise<unknown>>()
 
-/** Загружает JSON с /data/v1 (кэшируется по пути в рамках сессии страницы). */
+/** Сброс кэша JSON (после локального rebuild индексов — иначе SPA держит старые titles). */
+export function clearStaticJsonCache(): void {
+  jsonCache.clear()
+}
+
+/** Загружает JSON с /data/v1 (в prod кэш на сессию; в DEV — всегда свежий диск). */
 export function fetchJson<T>(relativePath: string): Promise<T | null> {
-  if (!jsonCache.has(relativePath)) {
-    const promise = fetch(`${DATA_BASE}/${relativePath}`)
+  const load = () =>
+    fetch(`${DATA_BASE}/${relativePath}`, {
+      cache: import.meta.env.DEV ? 'no-store' : 'default',
+    })
       .then(async (res) => {
         if (!res.ok) return null
         // SPA fallback на Pages отдаёт index.html с 200 — не парсим как JSON
@@ -23,7 +30,12 @@ export function fetchJson<T>(relativePath: string): Promise<T | null> {
         return res.json() as Promise<T>
       })
       .catch(() => null)
-    jsonCache.set(relativePath, promise)
+
+  // В DEV не кэшируем в памяти: build-show-indexes / parse часто обновляют JSON на диске.
+  if (import.meta.env.DEV) return load()
+
+  if (!jsonCache.has(relativePath)) {
+    jsonCache.set(relativePath, load())
   }
   return jsonCache.get(relativePath) as Promise<T | null>
 }

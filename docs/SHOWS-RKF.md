@@ -1,4 +1,7 @@
-# RKF Exhibition Data Scraping
+# RKF Exhibition Data Scraping (LC rkfshow.ru)
+
+> **Канон выставок для агента:** [`SHOWS.md`](SHOWS.md) (PDF RKF, CDN indexes, UI).  
+> Этот файл — **детали LC-скрапа** (`lc.rkfshow.ru` / Playwright), не дублировать сюда PDF-пайплайн.
 
 ## Overview
 RKF (Российская Кинологическая Федерация) exhibition data is available at https://lc.rkfshow.ru

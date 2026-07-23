@@ -78,6 +78,58 @@ export function transliterateCyrillicToLatin(text: string): string {
     .join('')
 }
 
+/**
+ * Варианты латинского написания: V↔W (РАВДА → RAVDA / RAWDA),
+ * и пара J↔Y в типичных местах после транслита.
+ */
+export function expandLatinSearchVariants(text: string): string[] {
+  const base = normalizeNameForSearch(text)
+  if (!base) return []
+  const out = new Set<string>([base])
+
+  const swapPositions = [...base]
+    .map((ch, i) => (ch === 'V' || ch === 'W' ? i : -1))
+    .filter((i) => i >= 0)
+
+  if (swapPositions.length > 0 && swapPositions.length <= 6) {
+    const n = 1 << swapPositions.length
+    for (let mask = 0; mask < n; mask += 1) {
+      const chars = [...base]
+      swapPositions.forEach((pos, bit) => {
+        chars[pos] = mask & (1 << bit) ? 'W' : 'V'
+      })
+      out.add(chars.join(''))
+    }
+  } else if (swapPositions.length > 6) {
+    out.add(base.replace(/V/g, 'W'))
+    out.add(base.replace(/W/g, 'V'))
+  }
+
+  // Лёгкие доп. варианты после транслита
+  for (const s of [...out]) {
+    if (s.includes('YU')) out.add(s.replace(/YU/g, 'IU'))
+    if (s.includes('IU')) out.add(s.replace(/IU/g, 'YU'))
+    if (s.includes('YA')) out.add(s.replace(/YA/g, 'IA'))
+    if (s.includes('IA')) out.add(s.replace(/IA/g, 'YA'))
+    if (s.includes('KH')) out.add(s.replace(/KH/g, 'H'))
+    if (s.includes('TS')) out.add(s.replace(/TS/g, 'C'))
+  }
+
+  return [...out]
+}
+
+/** Все нормализованные формы запроса для сопоставления с кличкой. */
+export function dogQuerySearchTokens(query: string): string[] {
+  const q = normalizeNameForSearch(query)
+  if (!q) return []
+  const seeds = [q, homoglyphCyrillicToLatin(q), transliterateCyrillicToLatin(q)]
+  const tokens = new Set<string>()
+  for (const seed of seeds) {
+    for (const v of expandLatinSearchVariants(seed)) tokens.add(v)
+  }
+  return [...tokens]
+}
+
 function splitRawNameParts(raw?: string | null): string[] {
   if (!raw) return []
   const normalized = raw.replace(/<br\s*\/?>/gi, '/')
@@ -130,24 +182,26 @@ export function dogNameSearchText(
 ): string {
   const parts = new Set<string>()
 
-  for (const raw of [nameLat, nameRu]) {
-    for (const chunk of splitRawNameParts(raw)) {
-      const normalized = normalizeNameForSearch(chunk)
-      if (normalized) {
-        parts.add(normalized)
-        parts.add(homoglyphCyrillicToLatin(normalized))
-        parts.add(transliterateCyrillicToLatin(normalized))
-      }
+  const addChunk = (chunk: string) => {
+    const normalized = normalizeNameForSearch(chunk)
+    if (!normalized) return
+    parts.add(normalized)
+    parts.add(homoglyphCyrillicToLatin(normalized))
+    for (const v of expandLatinSearchVariants(transliterateCyrillicToLatin(normalized))) {
+      parts.add(v)
     }
+    for (const v of expandLatinSearchVariants(normalized)) {
+      parts.add(v)
+    }
+  }
+
+  for (const raw of [nameLat, nameRu]) {
+    for (const chunk of splitRawNameParts(raw)) addChunk(chunk)
   }
 
   const { primary, secondary } = parseDogName(nameLat, nameRu)
   for (const chunk of [primary, secondary]) {
-    if (!chunk) continue
-    const normalized = normalizeNameForSearch(chunk)
-    parts.add(normalized)
-    parts.add(homoglyphCyrillicToLatin(normalized))
-    parts.add(transliterateCyrillicToLatin(normalized))
+    if (chunk) addChunk(chunk)
   }
 
   return [...parts].filter(Boolean).join(' ')
@@ -160,9 +214,7 @@ export function dogNameMatchesQuery(
 ): boolean {
   if (!query?.trim()) return true
 
-  const q = normalizeNameForSearch(query)
   const haystack = dogNameSearchText(nameLat, nameRu)
-  const tokens = [q, homoglyphCyrillicToLatin(q), transliterateCyrillicToLatin(q)].filter(Boolean)
-
+  const tokens = dogQuerySearchTokens(query)
   return tokens.some((token) => haystack.includes(token))
 }

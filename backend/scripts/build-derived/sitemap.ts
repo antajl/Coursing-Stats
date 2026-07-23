@@ -39,10 +39,12 @@ export function buildSitemap(db: Database.Database) {
   const staticPages = [
     { loc: '/', priority: '1.0', changefreq: 'daily' },
     { loc: '/competitions', priority: '0.9', changefreq: 'daily' },
-    { loc: '/top', priority: '0.8', changefreq: 'weekly' },
-    { loc: '/judges', priority: '0.7', changefreq: 'weekly' },
+    { loc: '/shows', priority: '0.9', changefreq: 'daily' },
     { loc: '/speed-records', priority: '0.8', changefreq: 'daily' },
     { loc: '/guide', priority: '0.6', changefreq: 'monthly' },
+    // Legacy redirects → /competitions?tab=… (оставлены для уже проиндексированных URL)
+    { loc: '/top', priority: '0.5', changefreq: 'weekly' },
+    { loc: '/judges', priority: '0.5', changefreq: 'weekly' },
   ];
 
   let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';

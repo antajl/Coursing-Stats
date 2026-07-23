@@ -1,14 +1,13 @@
 {
   "schema": "coursing-stats/dog-v1",
-  "exported_at": "2026-07-11T10:55:51.099Z",
+  "exported_at": "2026-07-08T00:31:32.188Z",
   "id": 5888,
-  "dog_key": "солар-винд-solar-wind--уиппет",
-  "name_lat": "СОЛАР ВИНД /SOLAR WIND",
-  "name_ru": "СОЛАР ВИНД /SOLAR WIND",
+  "dog_key": "solar-wind--уиппет",
+  "name_lat": "SOLAR WIND",
+  "name_ru": "СОЛАР ВИНД",
   "breed": "УИППЕТ",
   "sex": null,
   "owner": null,
-  "pedigree_url": null,
   "competition_ids": [
     1255,
     1263,
@@ -17,7 +16,8 @@
     1278,
     1294,
     1310,
-    1314
+    1314,
+    1545
   ],
   "competition_files": [
     "competitions/2025/04-апрель/1255-чемпионат-россии-курсинг-борзых.json",
@@ -27,6 +27,7 @@
     "competitions/2025/08-август/1278-пчркф-поденко-ибиценко-родезиискии-риджбек-уиппе.json",
     "competitions/2025/10-октябрь/1294-чркф-курсинг-борзых.json",
     "competitions/2026/04-апрель/1310-чркф-курсинг-борзых.json",
-    "competitions/2026/05-май/1314-чркф-курсинг-борзых.json"
+    "competitions/2026/05-май/1314-чркф-курсинг-борзых.json",
+    "competitions/2026/06-июнь/1545-пчркф-курсинг-борзых-фараонова-собака-уиппет-сал.json"
   ]
 }

@@ -1,27 +1,20 @@
 import { useLayoutEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import {
+  parseShowTitles,
   presentShowAwards,
   SHOW_AWARD_BADGE,
   SHOW_AWARD_LABELS,
-  SHOW_AWARD_CATEGORY,
-  matchShowAwardToken,
   type ShowAwardKey,
 } from '../../../../backend/lib/show-award-ranking'
 import { bestShowGradeLabel } from '../../../../backend/lib/show-grades'
+import { ShowGradeChip } from '../../lib/ShowGradeChip'
 import type { ShowDogCardData } from '../Shows/ShowDogCard'
 import { maxShowAwardsForWidth } from '../Shows/ShowDogCard'
-import { splitShowTitleTokens } from '../Shows/showExhibitionUtils'
-import { titleBadgeClass } from '../../lib/qualificationTitles'
 import { renderShowAwardChips } from '../../lib/awardChipRender'
 import HoverTooltip from '../../components/ui/HoverTooltip'
-import {
-  classifyCompetitionTitle,
-  classifyShowCumulativeTitle,
-  groupItemsByCategory,
-} from '../../lib/awardCategories'
 import { localExhibitionPath } from '../../lib/env'
-import { rkfOnlineExhibitionUrl } from '../../lib/rkfLinks'
+import { rkfExhibitionResultsUrl, rkfOnlineExhibitionUrl } from '../../lib/rkfLinks'
 import { HISTORY_DEFAULT } from './dogProfileStats'
 import {
   DisciplineColumnShell,
@@ -102,6 +95,54 @@ function ProfileShowAwardsFooter({ titles }: { titles: ShowDogCardData['titles']
   )
 }
 
+/** Награды одной выставки в истории — по ширине строки (без ×N). */
+function HistoryShowAwardsRow({
+  titles,
+}: {
+  titles: ReturnType<typeof parseShowTitles>
+}) {
+  const awards = presentShowAwards(titles)
+  const rowRef = useRef<HTMLDivElement>(null)
+  const [maxVisible, setMaxVisible] = useState(0)
+  const awardKey = awards.join(',')
+
+  useLayoutEffect(() => {
+    const row = rowRef.current
+    if (!row || awards.length === 0) {
+      setMaxVisible(0)
+      return
+    }
+
+    const update = () => {
+      setMaxVisible(
+        maxShowAwardsForWidth(row.clientWidth, titles, awards, { showCounts: false }),
+      )
+    }
+
+    update()
+    const ro = new ResizeObserver(update)
+    ro.observe(row)
+    return () => ro.disconnect()
+  }, [awardKey, titles])
+
+  if (awards.length === 0) return null
+
+  return (
+    <div
+      ref={rowRef}
+      className="mt-1.5 flex min-w-0 w-full flex-nowrap items-center gap-1 overflow-hidden"
+    >
+      {renderShowAwardChips({
+        titles,
+        size: 'sm',
+        showCounts: false,
+        maxVisible,
+        nowrap: true,
+      })}
+    </div>
+  )
+}
+
 /** Колонка выставок — тот же каркас, что Курсинг / Бега. */
 export function ShowsColumn({ dog }: ShowsColumnProps) {
   const t = disciplineTheme(THEME)
@@ -147,13 +188,8 @@ export function ShowsColumn({ dog }: ShowsColumnProps) {
             <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-old-money-500 dark:text-old-money-400">
               Лучшая оценка
             </div>
-            <div
-              className={`font-bold text-charcoal-800 dark:text-charcoal-100 ${
-                bestGrade && bestGrade.length > 10 ? 'text-lg leading-snug' : 'text-2xl'
-              }`}
-              title={bestGrade ?? undefined}
-            >
-              {bestGrade || '—'}
+            <div className="flex justify-center pt-1">
+              <ShowGradeChip grade={bestGrade} size="md" />
             </div>
           </div>
         </div>
@@ -167,7 +203,7 @@ export function ShowsColumn({ dog }: ShowsColumnProps) {
         <DisciplineHistoryCard theme={THEME}>
           <div>
             {visible.map((entry, idx) => {
-              const tokens = splitShowTitleTokens(entry.title)
+              const entryTitles = parseShowTitles(entry.title || '')
               const rowKey = `${entry.exhibition_id}-${idx}`
               const rowClass =
                 'block border-b border-camel-200/80 py-3 text-inherit no-underline transition-colors last:border-b-0 hover:bg-camel-50/60 dark:border-camel-700/60 dark:hover:bg-charcoal-700/40'
@@ -176,34 +212,10 @@ export function ShowsColumn({ dog }: ShowsColumnProps) {
                   <div className="min-w-0 break-words text-xs font-bold uppercase tracking-wide text-camel-700 dark:text-camel-400">
                     {entry.exhibition_title || 'Выставка'}
                   </div>
-                  {tokens.length > 0 ? (
-                    <div className="mt-1.5 flex flex-wrap items-center gap-1">
-                      {groupItemsByCategory(tokens, (token) => {
-                        const key = matchShowAwardToken(token)
-                        if (key) return SHOW_AWARD_CATEGORY[key]
-                        const cum = classifyShowCumulativeTitle(token)
-                        if (cum) return cum
-                        return classifyCompetitionTitle(token)
-                      }).map((group, gi) => (
-                        <span key={group.category} className="inline-flex flex-wrap items-center gap-1">
-                          {gi > 0 ? (
-                            <span
-                              className="mx-0.5 h-3 w-px shrink-0 self-center bg-old-money-300 dark:bg-charcoal-500"
-                              aria-hidden
-                            />
-                          ) : null}
-                          {group.items.map((token, i) => (
-                            <span
-                              key={`${token}-${i}`}
-                              className={`inline-flex rounded-md px-1.5 py-0.5 text-[10px] font-semibold ${titleBadgeClass(token)}`}
-                            >
-                              {token}
-                            </span>
-                          ))}
-                        </span>
-                      ))}
-                    </div>
-                  ) : null}
+                  <HistoryShowAwardsRow titles={entryTitles} />
+                  <div className="mt-1 flex flex-wrap items-center gap-2">
+                    <ShowGradeChip grade={entry.grade} />
+                  </div>
                   <div className="mt-1 flex items-center justify-between gap-3">
                     <div className="font-semibold text-charcoal-800 dark:text-charcoal-100">
                       {entry.date || '—'}
@@ -230,7 +242,10 @@ export function ShowsColumn({ dog }: ShowsColumnProps) {
               const externalUrl =
                 entry.reports_link?.trim() ||
                 entry.url?.trim() ||
-                rkfOnlineExhibitionUrl(entry.exhibition_id)
+                // RKF catalog ids are large; LC scraped shows use small ids (≤~1e4).
+                (entry.exhibition_id >= 10_000
+                  ? rkfOnlineExhibitionUrl(entry.exhibition_id)
+                  : rkfExhibitionResultsUrl(entry.exhibition_id))
               if (externalUrl) {
                 return (
                   <a
@@ -242,7 +257,9 @@ export function ShowsColumn({ dog }: ShowsColumnProps) {
                     title={
                       entry.reports_link
                         ? 'Оригинальный отчёт (PDF)'
-                        : 'Страница мероприятия на rkf.online'
+                        : entry.exhibition_id >= 10_000
+                          ? 'Страница мероприятия на rkf.online'
+                          : 'Результаты на lc.rkfshow.ru'
                     }
                   >
                     {rowBody}

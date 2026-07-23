@@ -1,5 +1,4 @@
 import { useMemo } from 'react'
-import ProcoursingAttribution from '../../components/ProcoursingAttribution'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarFiltersDropdown from '../../components/toolbar/ToolbarFiltersDropdown'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
@@ -60,7 +59,7 @@ export default function TopDogsFilters({
   )
 
   const hasActiveFilters =
-    Boolean(filterYear) ||
+    (Boolean(filterYear) && filterYear !== currentSeason) ||
     filterBreed ||
     searchQuery ||
     filterMinStarts ||
@@ -68,7 +67,7 @@ export default function TopDogsFilters({
     filterSpeedFrom
 
   const hasPanelFilters =
-    Boolean(filterYear) ||
+    (Boolean(filterYear) && filterYear !== currentSeason) ||
     filterBreed ||
     filterMinStarts ||
     filterScoreFrom ||
@@ -88,7 +87,8 @@ export default function TopDogsFilters({
         onBreedChange,
         onMinStartsChange,
         onScoreFromChange,
-        onSpeedFromChange
+        onSpeedFromChange,
+        currentSeason,
       ),
     [
       searchQuery,
@@ -103,6 +103,7 @@ export default function TopDogsFilters({
       onMinStartsChange,
       onScoreFromChange,
       onSpeedFromChange,
+      currentSeason,
     ]
   )
 
@@ -118,7 +119,7 @@ export default function TopDogsFilters({
     <div className="mb-4" ref={dropdownRef}>
       <PageToolbar
         bare
-        trailing={<ProcoursingAttribution />}
+        topRowClassName="pr-28 md:pr-32"
         activeFilterChips={activeFilterChips}
         onClearAllFilters={hasActiveFilters ? onResetFilters : undefined}
         filters={

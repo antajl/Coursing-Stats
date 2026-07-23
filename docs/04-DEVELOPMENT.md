@@ -261,7 +261,7 @@ frontend/
 │   │   ├── FiltersDropdown.tsx
 │   │   └── …
 │   ├── pages/
-│   │   ├── Home.tsx           # Landing: hero, podium, Donino columns
+│   │   ├── Home.tsx           # Landing: HomeHeroStage, search, events, season top, Donino
 │   │   ├── Competitions.tsx    # Tab hub: Events, TopDogs, Judges
 │   │   ├── TopDogs/           # index, TopDogsFilters, TopDogsColumns, CoursingRatingHint, filterUtils
 │   │   ├── DogProfile.tsx

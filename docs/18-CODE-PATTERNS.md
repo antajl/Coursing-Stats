@@ -172,8 +172,8 @@ const breedValues = data?.success ? data.data.breeds : [];
 - Две колонки: `TopDogsColumns.tsx` — курсинг/БЗМП | рейсинг.
 - Переключатель в плашке: **очки** (default, слева) | **места**; ⓘ внутри сегмента «очки».
 - URL: без `rankingTab` = очки; `?rankingTab=placement` = медали.
-- Главная: подиум «Топ сезона» — табы **Очки → Медали → Скорость** (default «Очки»); `HomePodiumSectionHead`, `index.css` → `.home-podium-*`.
-- `DogCard` (score): индекс CS крупно, детали строкой (как подиум).
+- Главная: «Топ сезона» — две колонки (соревнования | выставки); табы **Очки → Медали → Скорость**; `HomeSeasonTopRow`; hero — `HomeHeroStage` (не галерея). Поиск кличек: `dogNameMatchesQuery` (`lib/dogName.ts`), не `includes` по одной раскладке.
+- `DogCard` (score): индекс CS крупно, детали строкой.
 
 ---
 

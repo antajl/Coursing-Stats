@@ -33,6 +33,10 @@ export const api = {
     return staticData.getStats()
   },
 
+  async getShowHeroStats(): Promise<any> {
+    return staticData.getShowHeroStats()
+  },
+
   async getTopPlacement(year = '', breed = '', minStarts = 0, sortBy = 'gold', limit: number | null = null, offset = 0): Promise<any> {
     const result = await staticData.getTopPlacement(year, breed, minStarts, sortBy, limit, offset)
     return withDevFallback(result, [])

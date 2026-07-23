@@ -115,7 +115,7 @@ export default function HoverTooltip({
   return (
     <span
       ref={triggerRef}
-      className={`group/tip relative inline-flex ${className}`}
+      className={`group/tip relative ${className || 'inline-flex'}`}
       onMouseEnter={useCssOnly ? undefined : show}
       onMouseLeave={useCssOnly ? undefined : hide}
       onFocus={useCssOnly ? undefined : show}

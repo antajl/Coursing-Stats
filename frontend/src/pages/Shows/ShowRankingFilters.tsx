@@ -1,5 +1,4 @@
 import { useMemo } from 'react'
-import RKFAttribution from '../../components/RKFAttribution'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarFiltersDropdown from '../../components/toolbar/ToolbarFiltersDropdown'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
@@ -64,14 +63,15 @@ export default function ShowRankingFilters({
   )
 
   const hasAwardMins = SHOW_FILTER_AWARD_KEYS.some((key) => Boolean(awardMins[key]))
+  const yearIsNonDefault = Boolean(filterYear) && filterYear !== currentSeason
   const hasActiveFilters =
-    Boolean(filterYear) || filterBreed || filterGroup || searchQuery || hasAwardMins
-  const hasPanelFilters = Boolean(filterYear || filterBreed || filterGroup || hasAwardMins)
+    yearIsNonDefault || filterBreed || filterGroup || searchQuery || hasAwardMins
+  const hasPanelFilters = Boolean(yearIsNonDefault || filterBreed || filterGroup || hasAwardMins)
 
   const activeFilterChips = useMemo(() => {
     const chips = []
 
-    if (filterYear) {
+    if (yearIsNonDefault) {
       chips.push({
         key: 'year',
         label: filterYear,
@@ -106,6 +106,7 @@ export default function ShowRankingFilters({
 
     return chips
   }, [
+    yearIsNonDefault,
     filterYear,
     filterBreed,
     filterGroup,
@@ -132,7 +133,7 @@ export default function ShowRankingFilters({
     <div className="mb-4" ref={dropdownRef}>
       <PageToolbar
         bare
-        trailing={<RKFAttribution />}
+        topRowClassName="pr-28 md:pr-32"
         activeFilterChips={activeFilterChips}
         onClearAllFilters={hasActiveFilters ? onResetFilters : undefined}
         filters={

@@ -1,7 +1,9 @@
 import {
   bestShowAward,
   compareShowDogs,
+  expandShowTitles,
   mergeShowTitles,
+  showDogDetailShard,
   showRankScore,
   type ShowTitleCounts,
 } from '../../../../backend/lib/show-award-ranking'
@@ -307,6 +309,7 @@ interface ShowDog {
   name_lat: string
   name_ru: string
   breed: string
+  breed_en?: string
   breed_group?: string
   sex: string
   total_shows: number
@@ -316,6 +319,7 @@ interface ShowDog {
   best_grade?: string | null
   titles: ShowTitleCounts
   competition_dog_id?: number | null
+  catalog_id?: string
   history?: Array<{
     date: string
     exhibition_id: number
@@ -326,6 +330,16 @@ interface ShowDog {
     url?: string
     reports_link?: string
   }>
+}
+
+function hydrateShowDog(raw: ShowDog & { titles?: Partial<ShowTitleCounts> }): ShowDog {
+  return {
+    ...raw,
+    name_ru: raw.name_ru || '',
+    sex: raw.sex || '',
+    titles: expandShowTitles(raw.titles),
+    history: Array.isArray(raw.history) ? raw.history : [],
+  }
 }
 
 function mergeShowDogRankings(parts: ShowDog[][]): ShowDog[] {
@@ -384,26 +398,102 @@ function mergeShowDogRankings(parts: ShowDog[][]): ShowDog[] {
   return [...dogMap.values()].sort(compareShowDogs)
 }
 
+async function loadShowDogRankingYear(year: string): Promise<ShowDog[] | null> {
+  const file = await fetchJson<
+    ShowDog[] | { schema?: string; shards?: string[]; count?: number }
+  >(`shows/indexes/dog-ranking-${year}.json`)
+  if (!file) return null
+  if (Array.isArray(file)) return file.map(hydrateShowDog)
+  if (Array.isArray(file.shards) && file.shards.length > 0) {
+    const parts = await Promise.all(
+      file.shards.map((name) => fetchJson<ShowDog[]>(`shows/indexes/${name}`)),
+    )
+    const dogs: ShowDog[] = []
+    for (const part of parts) {
+      if (!Array.isArray(part)) continue
+      for (const dog of part) dogs.push(hydrateShowDog(dog))
+    }
+    return dogs.length > 0 ? dogs : null
+  }
+  return null
+}
+
 export async function getShowDogRanking(year = ''): Promise<ApiResult<ShowDog[]>> {
   if (year) {
-    const ranking = await fetchJson<ShowDog[]>(`shows/indexes/dog-ranking-${year}.json`)
+    const ranking = await loadShowDogRankingYear(year)
     if (!ranking) return { success: false, error: `Dog ranking for year ${year} unavailable` }
     return { success: true, data: ranking }
   }
 
   const allTime = await fetchJson<ShowDog[]>('shows/indexes/dog-ranking.json')
   if (allTime && Array.isArray(allTime) && allTime.length > 0) {
-    return { success: true, data: allTime }
+    return { success: true, data: allTime.map(hydrateShowDog) }
   }
 
-  const parts = await Promise.all(
-    SHOW_RANKING_YEARS.map((y) => fetchJson<ShowDog[]>(`shows/indexes/dog-ranking-${y}.json`)),
-  )
-  const merged = mergeShowDogRankings(parts.filter((p): p is ShowDog[] => Array.isArray(p)))
-  if (merged.length === 0) {
-    return { success: false, error: 'Show dog ranking unavailable' }
+  const parts = await Promise.all(SHOW_RANKING_YEARS.map((y) => loadShowDogRankingYear(y)))
+  const lists = parts.filter((p): p is ShowDog[] => Array.isArray(p) && p.length > 0)
+  if (lists.length === 0) return { success: false, error: 'Dog ranking unavailable' }
+  return { success: true, data: mergeShowDogRankings(lists) }
+}
+
+type ShowDogLookup = {
+  byCompetitionId?: Record<string, string>
+  byNameBreed?: Record<string, string>
+}
+
+let showDogLookupCache: ShowDogLookup | null | undefined
+
+async function getShowDogLookup(): Promise<ShowDogLookup | null> {
+  // DEV: не кэшируем lookup — иначе после rebuild виден старый competition→show id
+  if (import.meta.env.DEV) {
+    const file = await fetchJson<ShowDogLookup>('shows/indexes/show-dog-lookup.json')
+    return file || null
   }
-  return { success: true, data: merged }
+  if (showDogLookupCache !== undefined) return showDogLookupCache
+  const file = await fetchJson<ShowDogLookup>('shows/indexes/show-dog-lookup.json')
+  showDogLookupCache = file || null
+  return showDogLookupCache
+}
+
+/** Полная карточка выставочной собаки (titles + history) из шарда dog-details/. */
+export async function getShowDogDetail(id: string): Promise<ApiResult<ShowDog>> {
+  const shard = showDogDetailShard(id)
+  const pack = await fetchJson<Record<string, ShowDog>>(`shows/indexes/dog-details/${shard}.json`)
+  const raw = pack?.[id]
+  if (!raw) return { success: false, error: `Show dog ${id} not found` }
+  return { success: true, data: hydrateShowDog(raw) }
+}
+
+/** Найти id выставочной собаки по competition id или кличке+породе, затем загрузить detail. */
+export async function resolveShowDogDetail(opts: {
+  profileId?: string | null
+  competitionId?: number | string | null
+  nameLat?: string | null
+  nameRu?: string | null
+  breed?: string | null
+}): Promise<ApiResult<ShowDog>> {
+  if (opts.profileId) {
+    const direct = await getShowDogDetail(String(opts.profileId))
+    if (direct.success) return direct
+  }
+
+  const lookup = await getShowDogLookup()
+  if (opts.competitionId != null && lookup?.byCompetitionId) {
+    const id = lookup.byCompetitionId[String(opts.competitionId)]
+    if (id) return getShowDogDetail(id)
+  }
+
+  if (lookup?.byNameBreed && opts.breed) {
+    const breedKey = opts.breed.toUpperCase().replace(/\s+/g, ' ').trim()
+    for (const name of [opts.nameLat, opts.nameRu]) {
+      if (!name) continue
+      const nameKey = name.toUpperCase().replace(/\s+/g, ' ').trim()
+      const id = lookup.byNameBreed[`${nameKey}|${breedKey}`]
+      if (id) return getShowDogDetail(id)
+    }
+  }
+
+  return { success: false, error: 'Show dog not found' }
 }
 
 export interface ShowJudge {
@@ -425,4 +515,55 @@ export async function getShowJudges(): Promise<ApiResult<ShowJudge[]>> {
     }
   }
   return { success: true, data: judges as ShowJudge[] }
+}
+
+export type ShowHeroStats = {
+  exhibitions: number
+  appearances: number
+  dogs: number
+  judges: number
+  breeds: number
+}
+
+export type ShowHomeTopDog = {
+  id: string
+  name_lat: string
+  name_ru?: string
+  breed: string
+  sex?: string
+  total_shows: number
+  best_award?: string | null
+  rank_score?: number
+  /** Ненулевые счётчики титулов — причина места в рейтинге. */
+  titles?: Partial<Record<string, number>>
+  competition_dog_id?: number | null
+}
+
+/** Топ-3 выставочного рейтинга за год для главной (shows/indexes/home-top-{year}.json). */
+export async function getShowHomeTop(year: string): Promise<ApiResult<ShowHomeTopDog[]>> {
+  const file = await fetchJson<{ dogs?: ShowHomeTopDog[] }>(`shows/indexes/home-top-${year}.json`)
+  if (!file?.dogs?.length) return { success: false, error: `Show home top for ${year} unavailable` }
+  return { success: true, data: file.dogs.slice(0, 3) }
+}
+
+/** Лёгкие счётчики выставок для главной (shows/indexes/hero-stats.json). */
+export async function getShowHeroStats(): Promise<ApiResult<ShowHeroStats>> {
+  const file = await fetchJson<{
+    exhibitions?: number
+    appearances?: number
+    dogs?: number
+    judges?: number
+    breeds?: number
+  }>('shows/indexes/hero-stats.json')
+  if (!file) return { success: false, error: 'Show hero stats unavailable' }
+  return {
+    success: true,
+    data: {
+      exhibitions: Number(file.exhibitions) || 0,
+      appearances: Number(file.appearances) || 0,
+      dogs: Number(file.dogs) || 0,
+      judges: Number(file.judges) || 0,
+      breeds: Number(file.breeds) || 0,
+    },
+  }
 }

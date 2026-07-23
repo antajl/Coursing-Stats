@@ -11,25 +11,48 @@
 - Список выставок: ~100 выставок (2019-2026)
 - Проблема: использует Telerik Data Grid с AJAX, возвращает HTML/JavaScript шаблоны
 
-### Текущий статус (2026-07-12)
+### Текущий статус (2026-07-23)
 
-**Скрапинг lc.rkfshow.ru реализован:**
-- Playwright с locale 'ru-RU' для корректного получения русских названий пород и групп FCI
-- Параллельные запросы для ускорения (~5 минут на выставку)
-- Pipeline: ExhibitionResultListView → breed_catalog → BreedView × N пород → attachCatalogToResults
-- ~90 выставок спарсены (2025-2026), ~174,487 собак в рейтинге
+**Основной источник рейтинга 2026 — PDF «Итоговый отчет» с rkf.online** (не LC scrape):
 
-**Реализовано:**
-- Скрипты скрапинга `backend/parsers/shows/` и `backend/scripts/enrich-show-*.ts`
-- Frontend компоненты (ShowRanking, ShowJudges, ShowCalendar, ShowDogProfile)
-- Структура данных в `data/v1/shows/`
-- Индексы рейтинга по годам (dog-ranking-{year}.json)
-- Документация
+| | 2026 |
+|--|------|
+| Каталог `calendar-rkf` | ~9723 выставки |
+| С type1 PDF (`reports_link`) | ~4007 |
+| Скачано / распарсено type1 | **3973** OK, ~162k строк собак |
+| Судьи в `judges.json` | **730** (FIO; мусор вроде «ЛПП /» отфильтрован) |
+| `dog-ranking-2026.json` | ~110k собак, **~24 MB lean** (без history; titles только ненулевые) |
 
-**Проблемы:**
-- **Профиль собаки в выставках (ShowDogProfile.tsx) пишет "Собака не найдена"** - требуется исправление
-- Профиль в соревнованиях (DogProfile.tsx) работает корректно
-- Требуется унификация дизайна профиля выставок под профиль соревнований
+**Парсер PDF** (`parse-rkf-certificate-pdf.ts`):
+- Column-aware по X (порода / судья / каталог / кличка…) — wrapped Appendix №5 и Excel-отчёты
+- Многострочная **ячейка породы** (ПУДЕЛЬ + МИНИАТЮРНЫЙ + окрасы) собирается блоками; soft-hyphen («ВОСТОЧНОЕВРОПЕЙСКА»+«Я ОВЧАРКА»); ALLCAPS+запятая = новый заголовок породы (не continuation)
+- Перенос класса щенков «ЩЕ»+«Н» вокруг оценки (`ЩЕ ОП Н`) → `recoverWrappedPuppyClassAndGrade` / `disentangleClassAndGrade`; разорванная «Неявка» (`Нея вка`) → `normalizeSplitNeyavka` (UI + парсер)
+- Остановка перед «ВЕДОМОСТЬ ГЛАВНОГО РИНГА» в type1 (`has_main_ring_sheet`)
+- **Type3** (`bis_reports_link`): `parseMainRingPdf` → `main_ring[]` в JSON; place=1 → бейджи `BIS` / `BIG` / `BIS-Ю` / `BIS-Щ` / `BIS-Б` / `BIS-В` в `results.title`. Парсим type3 **только для 2025–2026**. Не путать BIS-Ю с ЛЮ породы и с ЮЧР (JCAC).
+- UI DEV `/shows/exhibition/:id`: блок «Главный ринг» (вкладки BIS/возраст/BIG) над каталогом пород; клички → `/dog/{stableId}`; шапка — StatPill + одна мета-строка `клуб · ранг · тип`; оценки/неявки через `formatShowGradeDisplay`; награды — чипы с прокруткой при hover
+- Тесты: `backend/tests/parse-rkf-certificate-pdf.test.ts`, `backend/tests/show-grades.test.ts` (фикстуры + PDF 100397, 100404, 94395, 100051, 89105, 100552, 90943)
+
+**UI (рейтинг / судьи / главная):**
+- «Сезон YYYY» **включён по умолчанию** (соревнования и выставки); снять кнопку — весь срез; бейджик года в ActiveFilters **не** дублирует дефолтный сезон
+- На главной в колонке «Выставки» метрика — **причина места** (`BOB ×18 · VCAC ×27`), не голый `best_award`; данные в `indexes/home-top-{year}.json` (+ `titles`)
+- Протокол `/shows/exhibition/:id` — **только DEV**
+
+**Ещё не идеально / долги:**
+- `dog-ranking-2026` ранее ~72 MB — **lean ~24 MB** (см. `dog-details/` для history)
+- **Дубли одной клички с разными породами** (сбой колонки породы в PDF): при сборке индексов `linkShowDogsByUniqueName` + `collapseShowDogsByExactName` / `collapseShowDogsByNamePrefix` (`backend/lib/show-dog-dedupe.ts`). Найти оставшиеся: `npx tsx backend/scripts/shows/scan-show-dog-duplicates.ts --year=2026`
+- **Неявка (НЯ):** не входит в рейтинг и историю профиля (`isShowAbsenceGrade`) — заявка без старта; дисквал по-прежнему учитывается
+- Парсер PDF: wrap «…ИТАЛЬЯНСКАЯ»+«БОРЗАЯ (ЛЕВРЕТКА)» + порода↔каталог по Y; после правки — повторный `parse-rkf-reports` (PDF на диске)
+- **Главный ринг / type3 (2025–2026):** `parseMainRingPdf` якорит колонки по заголовкам (`МЕСТО`/`ПОРОДА`/…) — layouts с place≈252 / ≈272 / ≈297; конкурсы режет Voronoi-полосами (заголовок часто на 1–2-й строке блока, не выше всех мест). После фикса (2026-07) нужна **batch-перепарсировка** type3, иначе в JSON останутся старые `main_ring=[]`. Ориентир до перепарса: ~851 пустых при ссылке (2025), ~274 (2026). Type1 с встроенной ведомостью без type3 — ещё не извлекаем. Type3 до 2024 — вне скоупа
+- После правок парсера class/grade wrap — нужен **batch reparse** (или UI-слой `normalizeShowResults` уже чинит отображение старых JSON)
+- LC scrape (~90 выставок) остаётся как legacy-источник рядом с PDF
+
+**Другие годы (2019–2025):** пайплайн тот же (`--year=YYYY`), идти **с 2026 вниз**. На каждый год: download → parse → sync → `build-show-indexes`. Объём PDF см. таблицу ниже (~74k файлов суммарно). Полный 2025 ≫ частичный 2026 по объёму отчётов; lean ranking режется на шарды автоматически при > ~24 MB.
+
+---
+
+### Legacy: LC scrape (кратко)
+
+**lc.rkfshow.ru** — ~90 выставок с полным HTML-протоколом (2019–2026). Playwright `locale: 'ru-RU'`. Не заменяет PDF-покрытие 2026.
 
 ### Связь с профилем соревнований (важно)
 
@@ -49,7 +72,7 @@
 3. Совпадение shows↔competitions только по **кличке** (части RU/EN через `/`) **и породе** (RU↔EN через `breed_catalog` / `breed-aliases.json`).
 4. При неоднозначности — не линкуем.
 5. После линка: `id` в индексе = `competition_dog_id` или `stableShowProfileId(name, breed)` (≥1e6).
-**Поиск в `/shows?tab=ranking`:** по умолчанию все годы; кнопка «Сезон YYYY» как в рейтинге соревнований. При поиске по кличке тоже грузятся все годы (если выбран год сезона — он для поиска не режет выдачу).
+**Поиск в `/shows?tab=ranking`:** по умолчанию **текущий сезон** (кнопка «Сезон YYYY» нажата); снять — все годы. При поиске по кличке грузятся все годы (фильтр сезона для поиска не режет выдачу).
 
 ---
 
@@ -122,18 +145,24 @@ Gate: `frontend/src/lib/env.ts` → `isLocalDev = import.meta.env.DEV` (false in
 
 | Файл | На CDN? | Описание |
 |------|---------|----------|
-| `indexes/dog-ranking-{year}.json` | да | ~2–6 MB compact — основной формат |
-| `indexes/dog-ranking-unknown.json` | да* | выставки без распознанной даты (`extractYear`) |
-| `indexes/dog-ranking.json` | **нет** | all-time; только локально/сборка; исключён `copy-data.js` |
+| `indexes/dog-ranking-{year}.json` | да* | lean список **или** manifest `{ shards: [...] }`, если год > ~24 MB |
+| `indexes/dog-ranking-{year}-a.json`… | да* | куски по месту в рейтинге (только толстые годы, напр. полный 2025) |
+| `indexes/dog-details/{000–255}.json` | да | подробности + history; профиль грузит один шард по id |
+| `indexes/show-dog-lookup.json` | да | competition id / кличка+порода → show id |
+| `indexes/home-top-{year}.json` | да | топ-3 для главной (+ компактные `titles`) |
+| `indexes/judges.json` | да | судьи выставок |
+| `indexes/dog-ranking-unknown.json` | да* | lean, выставки без даты |
+| `indexes/dog-ranking.json` | **нет** | all-time полный; только локально/сборка |
 | `calendar/{year}.json` | да | лёгкий LC scraped список (~90) |
 | `calendar-rkf/{year}.json` | да* | каталог rkf.online CategoryId=1 (~3–3.5 MB/год); UI только DEV |
 
-- **UI:** `getShowDogRanking(year)` → шард года; без года → склейка шардов (файла all-time на CDN нет); по умолчанию — текущий сезон
+- **UI:** `getShowDogRanking(year)` → lean файл или manifest+шарды `dog-ranking-{year}-a.json…` (склейка по порядку рейтинга); без года → склейка шардов годов; **по умолчанию — текущий сезон**
+- Полный календарный год (2025 и т.п.) после PDF-парса почти наверняка больше частичного 2026: lean + **авто-нарезка** в `build-show-indexes`, если файл > ~24 MB (куски ~18 MB).
 - **Календарь UI:** `getShowCalendar()` предпочитает `shows/calendar-rkf/{year}.json` (каталог rkf.online CategoryId=1); fallback — `shows/calendar/{year}.json` (LC scraped). Полный протокол — `exhibitions/*.json` (LC) или `exhibitions-rkf` (PDF) на `/shows/exhibition/:id` (**только DEV**)
 - **Ингест rkf.online:** `npm run ingest-rkf-calendar` → `backend/scripts/shows/ingest-rkf-calendar.ts` (метаданные, без PDF). Lean-поля: `ranks`, `national_breed_club_name`, `breeds`, `reports_link` (PDF type 1 «Итоговый отчет»), `bis_reports_link` (PDF type 3 BIS). LC-подсветка: `reports_links` с `exhibitionId` на lc.rkfshow.ru|rkfshow.ru, id ∈ `source-index.json`
-- **Сборка индексов:** `npx tsx backend/scripts/build-show-indexes.ts` (из `build-all-data`) — читает LC `exhibitions/` **и** локальные `data/local/shows/exhibitions-rkf/` → `indexes/dog-ranking-*.json`. Переписывает `calendar/{year}.json`, **не** трогает `calendar-rkf/`
+- **Сборка индексов:** `npx tsx backend/scripts/build-show-indexes.ts` (из `build-all-data`) — читает LC `exhibitions/` **и** локальные `data/local/shows/exhibitions-rkf/` → `indexes/dog-ranking-*.json`, `home-top-*.json`, `judges.json`. Переписывает `calendar/{year}.json`, **не** трогает `calendar-rkf/`. Хвост append sitemap может долго висеть — индексы к тому моменту уже записаны
 - **Прод:** только рейтинг + профили из индексов. История собаки ведёт на `url` (rkf.online / LC) и при наличии на `reports_link` (PDF). Полные протоколы и PDF **не** на CDN.
-- **Логика:** `backend/lib/show-award-ranking.ts` — полный реестр токенов протокола (BIS…СС), веса `rank_score`, алиасы ЛПП/ЛППП → BOB/BOS; категории UI `SHOW_AWARD_CATEGORY` (prestige / certificate / diploma)
+- **Логика:** `backend/lib/show-award-ranking.ts` — полный реестр токенов протокола (BIS…СС), веса `rank_score`, алиасы ЛПП/ЛППП → BOB/BOS; `formatShowRankingReason` / `compactShowTitles` для главной
 - В UI протокола: блок титулов породы разделён (код / № / кличка / **судья**); награды в таблице — чипы по категориям; Specialty-список судей в шапке скрыт
 - Рейтинг собак: **одна колонка на всю ширину**; `#место` внутри карточки (справа сверху) — место в полном рейтинге среза по порядку сортировки (не `id` кольца: он не уникален у RKF); бейджи с разделителями категорий (`awardChipRender`)
 - **Тест:** `backend/tests/show-award-ranking.test.ts`, `backend/tests/parse-rkf-certificate-pdf.test.ts`
@@ -160,7 +189,7 @@ npx tsx backend/scripts/build-show-indexes.ts
 
 Инкремент: повторный `download-rkf-reports` пропускает файлы с тем же размером/sha256 в `download-manifest.json`.
 
-Парсер: `backend/parsers/shows/parse-rkf-certificate-pdf.ts` (итоговый отчёт + best-effort BIS).
+Парсер: `backend/parsers/shows/parse-rkf-certificate-pdf.ts` — column-aware итоговый отчёт; блоки пород; stop before главный ринг; `isPlausibleJudgeName` / `isBreedFragment` для индексов. Type3 BIS — best-effort отдельно.
 
 Краткий указатель в дереве данных: [`03-DATA.md`](03-DATA.md) → «Выставки».
 
@@ -245,13 +274,13 @@ cd backend && npx tsx scripts/build-show-indexes.ts
 ```
 
 **Что делает:**
-- Строит шарды `data/v1/shows/indexes/dog-ranking-{year}.json` (+ локальный all-time `dog-ranking.json`, **не** на CDN — см. лимит 25 MB)
+- Строит lean `dog-ranking-{year}.json`; если lean > ~24 MB — manifest + куски `dog-ranking-{year}-a.json…` (фронт склеивает). Подробности — `dog-details/`. All-time `dog-ranking.json` локально, не на CDN.
 - Строит `judges.json`, `breed-aliases.json`
 - **Post-processing пород** (`backend/lib/show-breed-judge-clean.ts`): при пустом `breed_judge` отрезает судью, вклеенного в `breed` (напр. «БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА Горан ГЛАДИЧ») — по списку судей выставок + повторяющимся person-like хвостам; recovered judge → `breed_judge`. Сырые `exhibitions/*.json` **не** переписываются; идеальный фикс — в HTML-парсере. После чистки polluted breed+judge в индексах → 0
 - Используется после добавления новых выставок
 
 **Тест чистки:** `backend/tests/show-breed-judge-clean.test.ts`
 
-**Отображение пород в UI:** sentence case / `displayBreed` (primary + secondary) / «тип не указан» для выжлы и НО без маркера шерсти — [`03-DATA.md`](03-DATA.md) → «Канон и отображение». Guide: `/guide?tab=shows`.
+**Отображение пород в UI:** sentence case / `displayBreed` (чип `primary`; полное имя в tooltip) / «тип не указан» для выжлы и НО без маркера шерсти — [`03-DATA.md`](03-DATA.md) → «Канон и отображение». Guide: `/guide?tab=shows`.
 
 **Интеграция:** часть `npm run build-all-data`.

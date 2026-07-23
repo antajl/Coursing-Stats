@@ -1,8 +1,83 @@
 {
   "schema": "coursing-stats/index-top-score-v1",
   "year": 2026,
-  "count": 369,
+  "count": 373,
   "items": [
+    {
+      "dog_id": 5635,
+      "name_lat": "YUNION SVETLYJ",
+      "name_ru": "YUNION SVETLYJ",
+      "breed": "УИППЕТ",
+      "year": 2026,
+      "best_score": 369,
+      "total_starts": 3,
+      "best_judge_score": 97,
+      "avg_judge_score": 86.58,
+      "year_from": 2026,
+      "year_to": 2026,
+      "judge_eval_count": 12,
+      "rating_score": 87.39
+    },
+    {
+      "dog_id": 263,
+      "name_lat": "STANGERS LAND INGRID ELEGANT",
+      "name_ru": "СТАНГЕРС ЛАНД ИНГРИД ЭЛЕГАНТ",
+      "breed": "УИППЕТ",
+      "year": 2026,
+      "best_score": 364,
+      "total_starts": 6,
+      "best_judge_score": 96,
+      "avg_judge_score": 86.58,
+      "year_from": 2026,
+      "year_to": 2026,
+      "judge_eval_count": 24,
+      "rating_score": 88.06
+    },
+    {
+      "dog_id": 122,
+      "name_lat": "STANGERS LAND VERSAILLES CHARMAN",
+      "name_ru": "СТАНГЕРС ЛАНД ВЕРСАЛЬ ШАРМАН",
+      "breed": "УИППЕТ",
+      "year": 2026,
+      "best_score": 364,
+      "total_starts": 4,
+      "best_judge_score": 94,
+      "avg_judge_score": 85.69,
+      "year_from": 2026,
+      "year_to": 2026,
+      "judge_eval_count": 16,
+      "rating_score": 87.16
+    },
+    {
+      "dog_id": 5881,
+      "name_lat": "AFRICAN PASSION",
+      "name_ru": "АФРИКАН ПЕЙШН",
+      "breed": "УИППЕТ",
+      "year": 2026,
+      "best_score": 363,
+      "total_starts": 2,
+      "best_judge_score": 97,
+      "avg_judge_score": 88.5,
+      "year_from": 2026,
+      "year_to": 2026,
+      "judge_eval_count": 8,
+      "rating_score": 87.79
+    },
+    {
+      "dog_id": 5727,
+      "name_lat": "STANGERS LAND ZODIAK",
+      "name_ru": "СТАНГЕРС ЛАНД ЗОДИАК",
+      "breed": "УИППЕТ",
+      "year": 2026,
+      "best_score": 363,
+      "total_starts": 4,
+      "best_judge_score": 94,
+      "avg_judge_score": 87.53,
+      "year_from": 2026,
+      "year_to": 2026,
+      "judge_eval_count": 15,
+      "rating_score": 88.17
+    },
     {
       "dog_id": 5645,
       "name_lat": "СТАНГЕРС ЛАНД КАТАЛИНА /STANGERS LAND KATALINA",
@@ -17,6 +92,21 @@
       "year_to": 2026,
       "judge_eval_count": 24,
       "rating_score": 87.45
+    },
+    {
+      "dog_id": 5634,
+      "name_lat": "STANGERS LAND ZENIT",
+      "name_ru": "СТАНГЕРС ЛАНД ЗЕНИТ",
+      "breed": "УИППЕТ",
+      "year": 2026,
+      "best_score": 361,
+      "total_starts": 4,
+      "best_judge_score": 92,
+      "avg_judge_score": 85.63,
+      "year_from": 2026,
+      "year_to": 2026,
+      "judge_eval_count": 16,
+      "rating_score": 87.12
     },
     {
       "dog_id": 771,
@@ -55,13 +145,28 @@
       "breed": "БИГЛЬ",
       "year": 2026,
       "best_score": 360,
-      "total_starts": 3,
+      "total_starts": 2,
       "best_judge_score": 91,
-      "avg_judge_score": 83.58,
+      "avg_judge_score": 80.38,
+      "year_from": 2026,
+      "year_to": 2026,
+      "judge_eval_count": 8,
+      "rating_score": 84.54
+    },
+    {
+      "dog_id": 5906,
+      "name_lat": "HEIDI SOTIS DELIMARA MINTAKA",
+      "name_ru": "ХЕЙДИ СОТИС ДЕЛИМАРА МИНТАКА",
+      "breed": "ФАРАОНОВА СОБАКА",
+      "year": 2026,
+      "best_score": 359,
+      "total_starts": 3,
+      "best_judge_score": 92,
+      "avg_judge_score": 84.25,
       "year_from": 2026,
       "year_to": 2026,
       "judge_eval_count": 12,
-      "rating_score": 85.89
+      "rating_score": 86.23
     },
     {
       "dog_id": 706,
@@ -70,13 +175,13 @@
       "breed": "БЕЗ ПОРОДЫ",
       "year": 2026,
       "best_score": 359,
-      "total_starts": 2,
+      "total_starts": 1,
       "best_judge_score": 91,
       "avg_judge_score": 89.75,
       "year_from": 2026,
       "year_to": 2026,
-      "judge_eval_count": 8,
-      "rating_score": 88.29
+      "judge_eval_count": 4,
+      "rating_score": 87.29
     },
     {
       "dog_id": 720,
@@ -85,18 +190,18 @@
       "breed": "ЦВЕРГПИНЧЕР",
       "year": 2026,
       "best_score": 359,
-      "total_starts": 2,
+      "total_starts": 1,
       "best_judge_score": 91,
       "avg_judge_score": 89.75,
       "year_from": 2026,
       "year_to": 2026,
-      "judge_eval_count": 8,
-      "rating_score": 88.29
+      "judge_eval_count": 4,
+      "rating_score": 87.29
     },
     {
       "dog_id": 5652,
-      "name_lat": "ИСТОРИЯ ЛЮБВИ ИЗУМРУД /ISTORIYA LUBVI IZUMRUD",
-      "name_ru": "ИСТОРИЯ ЛЮБВИ ИЗУМРУД /ISTORIYA LUBVI IZUMRUD",
+      "name_lat": "ISTORIYA LUBVI IZUMRUD",
+      "name_ru": "ИСТОРИЯ ЛЮБВИ ИЗУМРУД",
       "breed": "УИППЕТ",
       "year": 2026,
       "best_score": 358,
@@ -125,18 +230,18 @@
     },
     {
       "dog_id": 5711,
-      "name_lat": "ЫГДЫР СО ШКОДНОГО ДВОРА /YGDYR SO SHKODNOGO DVORA",
-      "name_ru": "ЫГДЫР СО ШКОДНОГО ДВОРА /YGDYR SO SHKODNOGO DVORA",
+      "name_lat": "YGDYR SO SHKODNOGO DVORA",
+      "name_ru": "ЫГДЫР СО ШКОДНОГО ДВОРА",
       "breed": "САЛЮКИ",
       "year": 2026,
       "best_score": 358,
-      "total_starts": 2,
+      "total_starts": 3,
       "best_judge_score": 92,
-      "avg_judge_score": 83.63,
+      "avg_judge_score": 84.58,
       "year_from": 2026,
       "year_to": 2026,
-      "judge_eval_count": 8,
-      "rating_score": 85.84
+      "judge_eval_count": 12,
+      "rating_score": 86.39
     },
     {
       "dog_id": 653,
@@ -155,18 +260,18 @@
     },
     {
       "dog_id": 5651,
-      "name_lat": "ИСТОРИЯ ЛЮБВИ ЛАНДЫШ СЕРЕБРИСТЫЙ /ISTORIYA LYUBVI LANDYSH SEREBRISTYY",
-      "name_ru": "ИСТОРИЯ ЛЮБВИ ЛАНДЫШ СЕРЕБРИСТЫЙ /ISTORIYA LYUBVI LANDYSH SEREBRISTYY",
+      "name_lat": "ISTORIYA LYUBVI LANDYSH SEREBRISTYY",
+      "name_ru": "ИСТОРИЯ ЛЮБВИ ЛАНДЫШ СЕРЕБРИСТЫЙ",
       "breed": "УИППЕТ",
       "year": 2026,
       "best_score": 357,
-      "total_starts": 5,
+      "total_starts": 6,
       "best_judge_score": 97,
-      "avg_judge_score": 84.74,
+      "avg_judge_score": 82.87,
       "year_from": 2026,
       "year_to": 2026,
-      "judge_eval_count": 19,
-      "rating_score": 86.73
+      "judge_eval_count": 23,
+      "rating_score": 85.6
     },
     {
       "dog_id": 5797,
@@ -184,19 +289,64 @@
       "rating_score": 86.5
     },
     {
+      "dog_id": 5782,
+      "name_lat": "EMUL DE GEPARD GELILA AL RAWDA",
+      "name_ru": "ЭМУЛЬ ДЭ ГЕПАРД ГЕЛИЛА АЛЬ РАВДА",
+      "breed": "САЛЮКИ",
+      "year": 2026,
+      "best_score": 357,
+      "total_starts": 3,
+      "best_judge_score": 94,
+      "avg_judge_score": 84.92,
+      "year_from": 2026,
+      "year_to": 2026,
+      "judge_eval_count": 12,
+      "rating_score": 86.56
+    },
+    {
+      "dog_id": 6026,
+      "name_lat": "DOGONI VETER OPUISSANTE SAMSARA",
+      "name_ru": "ДОГОНИ ВЕТЕР ОПЮИСАНТ САМСАРА",
+      "breed": "УИППЕТ",
+      "year": 2026,
+      "best_score": 357,
+      "total_starts": 2,
+      "best_judge_score": 92,
+      "avg_judge_score": 85.88,
+      "year_from": 2026,
+      "year_to": 2026,
+      "judge_eval_count": 8,
+      "rating_score": 86.74
+    },
+    {
+      "dog_id": 5903,
+      "name_lat": "HEIDI SOTIS DJED ATUM",
+      "name_ru": "ХЕЙДИ СОТИС ДЖЕД АТУМ",
+      "breed": "ФАРАОНОВА СОБАКА",
+      "year": 2026,
+      "best_score": 357,
+      "total_starts": 2,
+      "best_judge_score": 91,
+      "avg_judge_score": 85.75,
+      "year_from": 2026,
+      "year_to": 2026,
+      "judge_eval_count": 8,
+      "rating_score": 86.69
+    },
+    {
       "dog_id": 716,
       "name_lat": "РОЯЛ АЙСИНГ ФАРТИ",
       "name_ru": "РОЯЛ АЙСИНГ ФАРТИ",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "year": 2026,
       "best_score": 357,
-      "total_starts": 2,
+      "total_starts": 1,
       "best_judge_score": 91,
       "avg_judge_score": 89.25,
       "year_from": 2026,
       "year_to": 2026,
-      "judge_eval_count": 8,
-      "rating_score": 88.09
+      "judge_eval_count": 4,
+      "rating_score": 87.16
     },
     {
       "dog_id": 709,
@@ -205,13 +355,13 @@
       "breed": "БЕЗ ПОРОДЫ",
       "year": 2026,
       "best_score": 357,
-      "total_starts": 2,
+      "total_starts": 1,
       "best_judge_score": 90,
       "avg_judge_score": 89.25,
       "year_from": 2026,
       "year_to": 2026,
-      "judge_eval_count": 8,
-      "rating_score": 87.99
+      "judge_eval_count": 4,
+      "rating_score": 87.15
     },
     {
       "dog_id": 5646,
@@ -219,14 +369,29 @@
       "name_ru": "СТАНГЕРС ЛАНД ВАЛЕНСИЯ",
       "breed": "УИППЕТ",
       "year": 2026,
-      "best_score": 356,
-      "total_starts": 5,
+      "best_score": 357,
+      "total_starts": 6,
       "best_judge_score": 98,
-      "avg_judge_score": 84.9,
+      "avg_judge_score": 85.63,
       "year_from": 2026,
       "year_to": 2026,
-      "judge_eval_count": 20,
-      "rating_score": 86.83
+      "judge_eval_count": 24,
+      "rating_score": 87.42
+    },
+    {
+      "dog_id": 5643,
+      "name_lat": "STANGERS LAND E LAN",
+      "name_ru": "СТАНГЕРС ЛАНД Е ЛАНЬ",
+      "breed": "УИППЕТ",
+      "year": 2026,
+      "best_score": 356,
+      "total_starts": 6,
+      "best_judge_score": 94,
+      "avg_judge_score": 84.67,
+      "year_from": 2026,
+      "year_to": 2026,
+      "judge_eval_count": 24,
+      "rating_score": 86.78
     },
     {
       "dog_id": 5658,
@@ -235,13 +400,13 @@
       "breed": "УИППЕТ",
       "year": 2026,
       "best_score": 355,
-      "total_starts": 5,
+      "total_starts": 6,
       "best_judge_score": 97,
-      "avg_judge_score": 83.94,
+      "avg_judge_score": 81.95,
       "year_from": 2026,
       "year_to": 2026,
-      "judge_eval_count": 18,
-      "rating_score": 86.26
+      "judge_eval_count": 22,
+      "rating_score": 85.03
     },
     {
       "dog_id": 5638,
@@ -274,6 +439,21 @@
       "rating_score": 86.94
     },
     {
+      "dog_id": 5908,
+      "name_lat": "HEIDI SOTIS DJGANTIYA MUT",
+      "name_ru": "ХЕЙДИ СОТИС ДЖГАНТИЯ МУТ",
+      "breed": "ФАРАОНОВА СОБАКА",
+      "year": 2026,
+      "best_score": 355,
+      "total_starts": 2,
+      "best_judge_score": 93,
+      "avg_judge_score": 85.88,
+      "year_from": 2026,
+      "year_to": 2026,
+      "judge_eval_count": 8,
+      "rating_score": 86.74
+    },
+    {
       "dog_id": 5647,
       "name_lat": "STANGERS LAND EGOZA",
       "name_ru": "СТАНГЕРС ЛАНД ЕГОЗА",
@@ -304,6 +484,21 @@
       "rating_score": 86.12
     },
     {
+      "dog_id": 5633,
+      "name_lat": "YUVENTUS SKORYJ",
+      "name_ru": "YUVENTUS SKORYJ",
+      "breed": "УИППЕТ",
+      "year": 2026,
+      "best_score": 353,
+      "total_starts": 4,
+      "best_judge_score": 91,
+      "avg_judge_score": 83.06,
+      "year_from": 2026,
+      "year_to": 2026,
+      "judge_eval_count": 16,
+      "rating_score": 85.65
+    },
+    {
       "dog_id": 5834,
       "name_lat": "АПРИОРИ СТАР ЮКОС /APRIORI STAR YUKOS",
       "name_ru": "АПРИОРИ СТАР ЮКОС /APRIORI STAR YUKOS",
@@ -317,21 +512,6 @@
       "year_to": 2026,
       "judge_eval_count": 12,
       "rating_score": 86.27
-    },
-    {
-      "dog_id": 5634,
-      "name_lat": "STANGERS LAND ZENIT",
-      "name_ru": "СТАНГЕРС ЛАНД ЗЕНИТ",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 354,
-      "total_starts": 3,
-      "best_judge_score": 91,
-      "avg_judge_score": 84.08,
-      "year_from": 2026,
-      "year_to": 2026,
-      "judge_eval_count": 12,
-      "rating_score": 86.14
     },
     {
       "dog_id": 747,
@@ -379,6 +559,36 @@
       "rating_score": 86.45
     },
     {
+      "dog_id": 5636,
+      "name_lat": "STANGERS LAND VINCENT",
+      "name_ru": "СТАНГЕРС ЛАНД ВИНСЕНТ",
+      "breed": "УИППЕТ",
+      "year": 2026,
+      "best_score": 354,
+      "total_starts": 5,
+      "best_judge_score": 90,
+      "avg_judge_score": 83.3,
+      "year_from": 2026,
+      "year_to": 2026,
+      "judge_eval_count": 20,
+      "rating_score": 85.83
+    },
+    {
+      "dog_id": 5804,
+      "name_lat": "METEL AVGUSTA DAZZLING DAGGER",
+      "name_ru": "МЕТЕЛЬ АВГУСТА ДАЗЗЛИНГ ДАГГЕР",
+      "breed": "УИППЕТ",
+      "year": 2026,
+      "best_score": 353,
+      "total_starts": 4,
+      "best_judge_score": 98,
+      "avg_judge_score": 83.69,
+      "year_from": 2026,
+      "year_to": 2026,
+      "judge_eval_count": 16,
+      "rating_score": 86.01
+    },
+    {
       "dog_id": 488,
       "name_lat": "VARLOK YARKAYA MOLNIYA",
       "name_ru": "VARLOK YARKAYA MOLNIYA",
@@ -407,21 +617,6 @@
       "year_to": 2026,
       "judge_eval_count": 12,
       "rating_score": 86.48
-    },
-    {
-      "dog_id": 5804,
-      "name_lat": "МЕТЕЛЬ АВГУСТА ДАЗЗЛИНГ ДАГГЕР /METEL AVGUSTA DAZZLING DAGGER",
-      "name_ru": "МЕТЕЛЬ АВГУСТА ДАЗЗЛИНГ ДАГГЕР /METEL AVGUSTA DAZZLING DAGGER",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 353,
-      "total_starts": 3,
-      "best_judge_score": 98,
-      "avg_judge_score": 82.58,
-      "year_from": 2026,
-      "year_to": 2026,
-      "judge_eval_count": 12,
-      "rating_score": 85.39
     },
     {
       "dog_id": 5620,
@@ -484,21 +679,6 @@
       "rating_score": 85.84
     },
     {
-      "dog_id": 707,
-      "name_lat": "АКСЕЛЬ",
-      "name_ru": "АКСЕЛЬ",
-      "breed": "БЕЗ ПОРОДЫ",
-      "year": 2026,
-      "best_score": 353,
-      "total_starts": 2,
-      "best_judge_score": 91,
-      "avg_judge_score": 88.25,
-      "year_from": 2026,
-      "year_to": 2026,
-      "judge_eval_count": 8,
-      "rating_score": 87.69
-    },
-    {
       "dog_id": 42,
       "name_lat": "ХАУС ЗЕ РЕЙНБОУ УЗОЧИ ЗИКИМО /HOUSE THE RAINBOW UZOCHI ZIKIMO",
       "name_ru": "ХАУС ЗЕ РЕЙНБОУ УЗОЧИ ЗИКИМО /HOUSE THE RAINBOW UZOCHI ZIKIMO",
@@ -512,21 +692,6 @@
       "year_to": 2026,
       "judge_eval_count": 8,
       "rating_score": 86.04
-    },
-    {
-      "dog_id": 710,
-      "name_lat": "СИЛЬВИ",
-      "name_ru": "СИЛЬВИ",
-      "breed": "БЕЗ ПОРОДЫ",
-      "year": 2026,
-      "best_score": 353,
-      "total_starts": 2,
-      "best_judge_score": 90,
-      "avg_judge_score": 88.25,
-      "year_from": 2026,
-      "year_to": 2026,
-      "judge_eval_count": 8,
-      "rating_score": 87.65
     },
     {
       "dog_id": 5789,
@@ -544,19 +709,79 @@
       "rating_score": 86.91
     },
     {
+      "dog_id": 707,
+      "name_lat": "АКСЕЛЬ",
+      "name_ru": "АКСЕЛЬ",
+      "breed": "БЕЗ ПОРОДЫ",
+      "year": 2026,
+      "best_score": 353,
+      "total_starts": 1,
+      "best_judge_score": 91,
+      "avg_judge_score": 88.25,
+      "year_from": 2026,
+      "year_to": 2026,
+      "judge_eval_count": 4,
+      "rating_score": 86.91
+    },
+    {
+      "dog_id": 9746,
+      "name_lat": "АНГЕЛИК ВИНГС",
+      "name_ru": "АНГЕЛИК ВИНГС",
+      "breed": "УИППЕТ",
+      "year": 2026,
+      "best_score": 354,
+      "total_starts": 1,
+      "best_judge_score": 90,
+      "avg_judge_score": 88.25,
+      "year_from": 2026,
+      "year_to": 2026,
+      "judge_eval_count": 4,
+      "rating_score": 86.91
+    },
+    {
+      "dog_id": 710,
+      "name_lat": "СИЛЬВИ",
+      "name_ru": "СИЛЬВИ",
+      "breed": "БЕЗ ПОРОДЫ",
+      "year": 2026,
+      "best_score": 353,
+      "total_starts": 1,
+      "best_judge_score": 90,
+      "avg_judge_score": 88.25,
+      "year_from": 2026,
+      "year_to": 2026,
+      "judge_eval_count": 4,
+      "rating_score": 86.91
+    },
+    {
+      "dog_id": 5626,
+      "name_lat": "BEL ETUAL AMBASSADOR II",
+      "name_ru": "БЕЛЬ ЭТУАЛЬ АМБАССАДОР ІІ",
+      "breed": "САЛЮКИ",
+      "year": 2026,
+      "best_score": 351,
+      "total_starts": 6,
+      "best_judge_score": 94,
+      "avg_judge_score": 83.46,
+      "year_from": 2026,
+      "year_to": 2026,
+      "judge_eval_count": 24,
+      "rating_score": 85.98
+    },
+    {
       "dog_id": 5657,
-      "name_lat": "ЛЕВИАФАН ДРАГОН ОФ ЛОВЕ /LEVIATHAN DRAGON OF LOVE",
-      "name_ru": "ЛЕВИАФАН ДРАГОН ОФ ЛОВЕ /LEVIATHAN DRAGON OF LOVE",
+      "name_lat": "LEVIATHAN DRAGON OF LOVE",
+      "name_ru": "ЛЕВИАФАН ДРАГОН ОФ ЛОВЕ",
       "breed": "УИППЕТ",
       "year": 2026,
       "best_score": 352,
-      "total_starts": 5,
+      "total_starts": 6,
       "best_judge_score": 93,
-      "avg_judge_score": 82.16,
+      "avg_judge_score": 82.7,
       "year_from": 2026,
       "year_to": 2026,
-      "judge_eval_count": 19,
-      "rating_score": 85.15
+      "judge_eval_count": 23,
+      "rating_score": 85.49
     },
     {
       "dog_id": 5661,
@@ -574,49 +799,34 @@
       "rating_score": 86.76
     },
     {
-      "dog_id": 5727,
-      "name_lat": "STANGERS LAND ZODIAK",
-      "name_ru": "СТАНГЕРС ЛАНД ЗОДИАК",
+      "dog_id": 5798,
+      "name_lat": "STANGERS LAND KOMETA",
+      "name_ru": "СТАНГЕРС ЛАНД КОМЕТА",
       "breed": "УИППЕТ",
       "year": 2026,
       "best_score": 352,
       "total_starts": 3,
-      "best_judge_score": 90,
-      "avg_judge_score": 86.36,
+      "best_judge_score": 95,
+      "avg_judge_score": 86.42,
       "year_from": 2026,
       "year_to": 2026,
-      "judge_eval_count": 11,
-      "rating_score": 87.25
+      "judge_eval_count": 12,
+      "rating_score": 87.31
     },
     {
-      "dog_id": 5798,
-      "name_lat": "СТАНГЕРС ЛАНД КОМЕТА /STANGERS LAND KOMETA",
-      "name_ru": "СТАНГЕРС ЛАНД КОМЕТА /STANGERS LAND KOMETA",
+      "dog_id": 6240,
+      "name_lat": "ANTIQUE GODDESS",
+      "name_ru": "АНТИК ГОДДЕС",
       "breed": "УИППЕТ",
       "year": 2026,
-      "best_score": 352,
-      "total_starts": 2,
-      "best_judge_score": 95,
-      "avg_judge_score": 85.75,
-      "year_from": 2026,
-      "year_to": 2026,
-      "judge_eval_count": 8,
-      "rating_score": 86.69
-    },
-    {
-      "dog_id": 717,
-      "name_lat": "МИДНАЙТ БИС ЛАГУНА",
-      "name_ru": "МИДНАЙТ БИС ЛАГУНА",
-      "breed": "ТАКСА МИНИАТЮРНАЯ (Г Ш, Д Ш, Ж Ш)",
-      "year": 2026,
-      "best_score": 352,
-      "total_starts": 2,
-      "best_judge_score": 89,
+      "best_score": 363,
+      "total_starts": 1,
+      "best_judge_score": 92,
       "avg_judge_score": 88,
       "year_from": 2026,
       "year_to": 2026,
-      "judge_eval_count": 8,
-      "rating_score": 87.41
+      "judge_eval_count": 4,
+      "rating_score": 86.85
     },
     {
       "dog_id": 5700,
@@ -632,6 +842,21 @@
       "year_to": 2026,
       "judge_eval_count": 4,
       "rating_score": 86.85
+    },
+    {
+      "dog_id": 717,
+      "name_lat": "МИДНАЙТ БИС ЛАГУНА",
+      "name_ru": "МИДНАЙТ БИС ЛАГУНА",
+      "breed": "ТАКСА МИНИАТЮРНАЯ (Г Ш, Д Ш, Ж Ш)",
+      "year": 2026,
+      "best_score": 352,
+      "total_starts": 1,
+      "best_judge_score": 89,
+      "avg_judge_score": 88,
+      "year_from": 2026,
+      "year_to": 2026,
+      "judge_eval_count": 4,
+      "rating_score": 86.74
     },
     {
       "dog_id": 668,
@@ -679,19 +904,34 @@
       "rating_score": 86.48
     },
     {
+      "dog_id": 27,
+      "name_lat": "RIDER OF ROHAN BRODWINEK",
+      "name_ru": "RIDER OF ROHAN BRODWINEK",
+      "breed": "УИППЕТ",
+      "year": 2026,
+      "best_score": 351,
+      "total_starts": 1,
+      "best_judge_score": 90,
+      "avg_judge_score": 87.75,
+      "year_from": 2026,
+      "year_to": 2026,
+      "judge_eval_count": 4,
+      "rating_score": 86.79
+    },
+    {
       "dog_id": 708,
       "name_lat": "YO TE AMO CROWLEY PIT MUST SURVIVE",
       "name_ru": "YO TE AMO CROWLEY PIT MUST SURVIVE",
       "breed": "БЕЗ ПОРОДЫ",
       "year": 2026,
       "best_score": 351,
-      "total_starts": 2,
+      "total_starts": 1,
       "best_judge_score": 89,
       "avg_judge_score": 87.75,
       "year_from": 2026,
       "year_to": 2026,
-      "judge_eval_count": 8,
-      "rating_score": 87.33
+      "judge_eval_count": 4,
+      "rating_score": 86.68
     },
     {
       "dog_id": 5663,
@@ -700,13 +940,13 @@
       "breed": "УИППЕТ",
       "year": 2026,
       "best_score": 350,
-      "total_starts": 6,
+      "total_starts": 7,
       "best_judge_score": 94,
-      "avg_judge_score": 83.87,
+      "avg_judge_score": 83.81,
       "year_from": 2026,
       "year_to": 2026,
-      "judge_eval_count": 23,
-      "rating_score": 86.26
+      "judge_eval_count": 27,
+      "rating_score": 86.28
     },
     {
       "dog_id": 5749,
@@ -769,6 +1009,21 @@
       "rating_score": 87.02
     },
     {
+      "dog_id": 831,
+      "name_lat": "TIMIRIAZEVSKIJ PARK OLIVIA",
+      "name_ru": "TIMIRIAZEVSKIJ PARK OLIVIA",
+      "breed": "УИППЕТ",
+      "year": 2026,
+      "best_score": 350,
+      "total_starts": 2,
+      "best_judge_score": 90,
+      "avg_judge_score": 85.88,
+      "year_from": 2026,
+      "year_to": 2026,
+      "judge_eval_count": 8,
+      "rating_score": 86.74
+    },
+    {
       "dog_id": 5716,
       "name_lat": "КИНГДОМ ФЛАЙ ЧЕЗАРЕ ЛА ВИВА /KINGDOM FLY CESARE LA VIVA",
       "name_ru": "КИНГДОМ ФЛАЙ ЧЕЗАРЕ ЛА ВИВА /KINGDOM FLY CESARE LA VIVA",
@@ -799,19 +1054,34 @@
       "rating_score": 86.73
     },
     {
-      "dog_id": 263,
-      "name_lat": "STANGERS LAND INGRID ELEGANT",
-      "name_ru": "СТАНГЕРС ЛАНД ИНГРИД ЭЛЕГАНТ",
+      "dog_id": 5872,
+      "name_lat": "BOHEMIAN RHAPSODY",
+      "name_ru": "БОГЕМИАН РАПСОДИ",
       "breed": "УИППЕТ",
       "year": 2026,
       "best_score": 349,
-      "total_starts": 5,
+      "total_starts": 3,
       "best_judge_score": 90,
-      "avg_judge_score": 85.7,
+      "avg_judge_score": 84.83,
       "year_from": 2026,
       "year_to": 2026,
-      "judge_eval_count": 20,
-      "rating_score": 87.33
+      "judge_eval_count": 12,
+      "rating_score": 86.52
+    },
+    {
+      "dog_id": 5650,
+      "name_lat": "BRAVE HEART SIMBA",
+      "name_ru": "БРЕЙВ ХАРТ СИМБА",
+      "breed": "УИППЕТ",
+      "year": 2026,
+      "best_score": 349,
+      "total_starts": 3,
+      "best_judge_score": 88,
+      "avg_judge_score": 86,
+      "year_from": 2026,
+      "year_to": 2026,
+      "judge_eval_count": 12,
+      "rating_score": 86.88
     },
     {
       "dog_id": 745,
@@ -827,21 +1097,6 @@
       "year_to": 2026,
       "judge_eval_count": 8,
       "rating_score": 86.84
-    },
-    {
-      "dog_id": 5872,
-      "name_lat": "БОГЕМИАН РАПСОДИ /BOHEMIAN RHAPSODY",
-      "name_ru": "БОГЕМИАН РАПСОДИ /BOHEMIAN RHAPSODY",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 349,
-      "total_starts": 2,
-      "best_judge_score": 90,
-      "avg_judge_score": 83.63,
-      "year_from": 2026,
-      "year_to": 2026,
-      "judge_eval_count": 8,
-      "rating_score": 85.84
     },
     {
       "dog_id": 859,
@@ -979,24 +1234,9 @@
       "rating_score": 85.39
     },
     {
-      "dog_id": 5643,
-      "name_lat": "STANGERS LAND E LAN",
-      "name_ru": "СТАНГЕРС ЛАНД Е ЛАНЬ",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 348,
-      "total_starts": 5,
-      "best_judge_score": 90,
-      "avg_judge_score": 83.8,
-      "year_from": 2026,
-      "year_to": 2026,
-      "judge_eval_count": 20,
-      "rating_score": 86.14
-    },
-    {
       "dog_id": 756,
-      "name_lat": "WILDABOUT DOUBLE ATOMIC RACE /WILDABOUT DOUBLE ATOMIC RACE",
-      "name_ru": "WILDABOUT DOUBLE ATOMIC RACE /WILDABOUT DOUBLE ATOMIC RACE",
+      "name_lat": "WILDABOUT DOUBLE ATOMIC RACE",
+      "name_ru": "WILDABOUT DOUBLE ATOMIC RACE",
       "breed": "УИППЕТ",
       "year": 2026,
       "best_score": 347,
@@ -1024,36 +1264,6 @@
       "rating_score": 83.98
     },
     {
-      "dog_id": 5878,
-      "name_lat": "WHOLE WORLD IN HER EYES",
-      "name_ru": "УХОУЛ УОРЛД ИН ХЕ АЙЗ",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 347,
-      "total_starts": 3,
-      "best_judge_score": 90,
-      "avg_judge_score": 84.67,
-      "year_from": 2026,
-      "year_to": 2026,
-      "judge_eval_count": 12,
-      "rating_score": 86.43
-    },
-    {
-      "dog_id": 711,
-      "name_lat": "ЧАРА",
-      "name_ru": "ЧАРА",
-      "breed": "БЕЗ ПОРОДЫ",
-      "year": 2026,
-      "best_score": 347,
-      "total_starts": 3,
-      "best_judge_score": 89,
-      "avg_judge_score": 85.25,
-      "year_from": 2026,
-      "year_to": 2026,
-      "judge_eval_count": 12,
-      "rating_score": 86.71
-    },
-    {
       "dog_id": 5810,
       "name_lat": "ЧУДЕСНАЯ ЦЕЛИТЕЛЬНИЦА ИЗ ПОЛЕТА МЕЧТЫ /CHUDESNAYA CZELITELNICZA IZ POLETA MECHTI",
       "name_ru": "ЧУДЕСНАЯ ЦЕЛИТЕЛЬНИЦА ИЗ ПОЛЕТА МЕЧТЫ /CHUDESNAYA CZELITELNICZA IZ POLETA MECHTI",
@@ -1067,21 +1277,6 @@
       "year_to": 2026,
       "judge_eval_count": 8,
       "rating_score": 82.79
-    },
-    {
-      "dog_id": 718,
-      "name_lat": "FORMULA USPEHA PION",
-      "name_ru": "ФОРМУЛА УСПЕХА ПИОН",
-      "breed": "ТАКСА МИНИАТЮРНАЯ (Г Ш, Д Ш, Ж Ш)",
-      "year": 2026,
-      "best_score": 347,
-      "total_starts": 2,
-      "best_judge_score": 90,
-      "avg_judge_score": 86.75,
-      "year_from": 2026,
-      "year_to": 2026,
-      "judge_eval_count": 8,
-      "rating_score": 87.09
     },
     {
       "dog_id": 726,
@@ -1099,19 +1294,34 @@
       "rating_score": 86.24
     },
     {
-      "dog_id": 719,
-      "name_lat": "SIBIRSKIY LEGION LIPOVYJ CZVET",
-      "name_ru": "СИБИРСКИЙ ЛЕГИОН ЛИПОВЫЙ ЦВЕТ",
-      "breed": "ТАКСА МИНИАТЮРНАЯ (Г Ш, Д Ш, Ж Ш)",
+      "dog_id": 711,
+      "name_lat": "ЧАРА",
+      "name_ru": "ЧАРА",
+      "breed": "БЕЗ ПОРОДЫ",
       "year": 2026,
       "best_score": 347,
       "total_starts": 2,
       "best_judge_score": 89,
-      "avg_judge_score": 86.75,
+      "avg_judge_score": 84.5,
       "year_from": 2026,
       "year_to": 2026,
       "judge_eval_count": 8,
-      "rating_score": 86.99
+      "rating_score": 86.19
+    },
+    {
+      "dog_id": 718,
+      "name_lat": "FORMULA USPEHA PION",
+      "name_ru": "ФОРМУЛА УСПЕХА ПИОН",
+      "breed": "ТАКСА МИНИАТЮРНАЯ (Г Ш, Д Ш, Ж Ш)",
+      "year": 2026,
+      "best_score": 347,
+      "total_starts": 1,
+      "best_judge_score": 90,
+      "avg_judge_score": 86.75,
+      "year_from": 2026,
+      "year_to": 2026,
+      "judge_eval_count": 4,
+      "rating_score": 86.54
     },
     {
       "dog_id": 799,
@@ -1129,6 +1339,21 @@
       "rating_score": 86.54
     },
     {
+      "dog_id": 719,
+      "name_lat": "SIBIRSKIY LEGION LIPOVYJ CZVET",
+      "name_ru": "СИБИРСКИЙ ЛЕГИОН ЛИПОВЫЙ ЦВЕТ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ (Г Ш, Д Ш, Ж Ш)",
+      "year": 2026,
+      "best_score": 347,
+      "total_starts": 1,
+      "best_judge_score": 89,
+      "avg_judge_score": 86.75,
+      "year_from": 2026,
+      "year_to": 2026,
+      "judge_eval_count": 4,
+      "rating_score": 86.47
+    },
+    {
       "dog_id": 5628,
       "name_lat": "БЕЛЬ ЭТУАЛЬ МАЖОР /BEL ETUAL MAJOR",
       "name_ru": "БЕЛЬ ЭТУАЛЬ МАЖОР /BEL ETUAL MAJOR",
@@ -1142,6 +1367,21 @@
       "year_to": 2026,
       "judge_eval_count": 20,
       "rating_score": 84.99
+    },
+    {
+      "dog_id": 5878,
+      "name_lat": "WHOLE WORLD IN HER EYES",
+      "name_ru": "УХОУЛ УОРЛД ИН ХЕ АЙЗ",
+      "breed": "УИППЕТ",
+      "year": 2026,
+      "best_score": 347,
+      "total_starts": 4,
+      "best_judge_score": 93,
+      "avg_judge_score": 85.13,
+      "year_from": 2026,
+      "year_to": 2026,
+      "judge_eval_count": 16,
+      "rating_score": 86.84
     },
     {
       "dog_id": 697,
@@ -1159,19 +1399,34 @@
       "rating_score": 85.48
     },
     {
-      "dog_id": 5782,
-      "name_lat": "EMUL DE GEPARD GELILA AL RAWDA",
-      "name_ru": "ЭМУЛЬ ДЭ ГЕПАРД ГЕЛИЛА АЛЬ РАВДА",
-      "breed": "САЛЮКИ",
+      "dog_id": 873,
+      "name_lat": "ARGENTEA STELLA",
+      "name_ru": "ARGENTEA STELLA",
+      "breed": "УИППЕТ",
       "year": 2026,
-      "best_score": 346,
+      "best_score": 324.6,
       "total_starts": 2,
       "best_judge_score": 93,
-      "avg_judge_score": 82.75,
+      "avg_judge_score": 78.88,
       "year_from": 2026,
       "year_to": 2026,
       "judge_eval_count": 8,
-      "rating_score": 85.49
+      "rating_score": 83.94
+    },
+    {
+      "dog_id": 6273,
+      "name_lat": "MELODIYA IZ SAGI O GARDARIKE",
+      "name_ru": "МЕЛОДИЯ ИЗ САГИ О ГАРДАРИКЕ",
+      "breed": "УИППЕТ",
+      "year": 2026,
+      "best_score": 347,
+      "total_starts": 2,
+      "best_judge_score": 92,
+      "avg_judge_score": 82.29,
+      "year_from": 2026,
+      "year_to": 2026,
+      "judge_eval_count": 7,
+      "rating_score": 85.39
     },
     {
       "dog_id": 152,
@@ -1292,21 +1547,6 @@
       "year_to": 2026,
       "judge_eval_count": 11,
       "rating_score": 85.82
-    },
-    {
-      "dog_id": 122,
-      "name_lat": "STANGERS LAND VERSAILLES CHARMAN",
-      "name_ru": "СТАНГЕРС ЛАНД ВЕРСАЛЬ ШАРМАН",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 345,
-      "total_starts": 3,
-      "best_judge_score": 89,
-      "avg_judge_score": 83.92,
-      "year_from": 2026,
-      "year_to": 2026,
-      "judge_eval_count": 12,
-      "rating_score": 86.06
     },
     {
       "dog_id": 5815,
@@ -1444,6 +1684,21 @@
       "rating_score": 86.08
     },
     {
+      "dog_id": 5907,
+      "name_lat": "AMENEMHET ANDORA TA MALTA",
+      "name_ru": "АМЕНЕМХЕТ АНДОРА ТА МАЛЬТА",
+      "breed": "ФАРАОНОВА СОБАКА",
+      "year": 2026,
+      "best_score": 344,
+      "total_starts": 3,
+      "best_judge_score": 92,
+      "avg_judge_score": 83.25,
+      "year_from": 2026,
+      "year_to": 2026,
+      "judge_eval_count": 12,
+      "rating_score": 85.73
+    },
+    {
       "dog_id": 5858,
       "name_lat": "БЕЛЬ ЭТУАЛЬ ЧООСЕ МЕ /BEL ETUAL CHOOSE ME",
       "name_ru": "БЕЛЬ ЭТУАЛЬ ЧООСЕ МЕ /BEL ETUAL CHOOSE ME",
@@ -1489,21 +1744,6 @@
       "rating_score": 85.43
     },
     {
-      "dog_id": 5881,
-      "name_lat": "АФРИКАН ПЕЙШН /AFRICAN PASSION",
-      "name_ru": "АФРИКАН ПЕЙШН /AFRICAN PASSION",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 344,
-      "total_starts": 1,
-      "best_judge_score": 89,
-      "avg_judge_score": 86,
-      "year_from": 2026,
-      "year_to": 2026,
-      "judge_eval_count": 4,
-      "rating_score": 86.31
-    },
-    {
       "dog_id": 800,
       "name_lat": "ЯШМА",
       "name_ru": "ЯШМА",
@@ -1519,19 +1759,34 @@
       "rating_score": 86.16
     },
     {
+      "dog_id": 5896,
+      "name_lat": "BARCELONA ENCANTADORA",
+      "name_ru": "БАРСЕЛОНА ЭНКАНТАДОРА",
+      "breed": "УИППЕТ",
+      "year": 2026,
+      "best_score": 343,
+      "total_starts": 3,
+      "best_judge_score": 92,
+      "avg_judge_score": 84.08,
+      "year_from": 2026,
+      "year_to": 2026,
+      "judge_eval_count": 12,
+      "rating_score": 86.14
+    },
+    {
       "dog_id": 713,
       "name_lat": "АКВАТА",
       "name_ru": "АКВАТА",
       "breed": "БИГЛЬ",
       "year": 2026,
       "best_score": 343,
-      "total_starts": 3,
+      "total_starts": 2,
       "best_judge_score": 88,
-      "avg_judge_score": 83.5,
+      "avg_judge_score": 82.38,
       "year_from": 2026,
       "year_to": 2026,
-      "judge_eval_count": 12,
-      "rating_score": 85.81
+      "judge_eval_count": 8,
+      "rating_score": 85.34
     },
     {
       "dog_id": 5631,
@@ -1549,21 +1804,6 @@
       "rating_score": 86.12
     },
     {
-      "dog_id": 5650,
-      "name_lat": "BRAVE HEART SIMBA",
-      "name_ru": "БРЕЙВ ХАРТ СИМБА",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 343,
-      "total_starts": 2,
-      "best_judge_score": 87,
-      "avg_judge_score": 85.38,
-      "year_from": 2026,
-      "year_to": 2026,
-      "judge_eval_count": 8,
-      "rating_score": 86.22
-    },
-    {
       "dog_id": 36,
       "name_lat": "РЭЙ /RAY",
       "name_ru": "РЭЙ /RAY",
@@ -1579,34 +1819,34 @@
       "rating_score": 86.11
     },
     {
-      "dog_id": 5626,
-      "name_lat": "БЕЛЬ ЭТУАЛЬ АМБАССАДОР ІІ /BEL ETUAL AMBASSADOR II",
-      "name_ru": "БЕЛЬ ЭТУАЛЬ АМБАССАДОР ІІ /BEL ETUAL AMBASSADOR II",
+      "dog_id": 5783,
+      "name_lat": "BEL ETUAL ALTER EGO",
+      "name_ru": "БЕЛЬ ЭТУАЛЬ АЛТЕР ЭГО",
       "breed": "САЛЮКИ",
       "year": 2026,
       "best_score": 342,
       "total_starts": 5,
-      "best_judge_score": 88,
-      "avg_judge_score": 82.55,
+      "best_judge_score": 91,
+      "avg_judge_score": 83.25,
       "year_from": 2026,
       "year_to": 2026,
       "judge_eval_count": 20,
-      "rating_score": 85.36
+      "rating_score": 85.8
     },
     {
-      "dog_id": 5783,
-      "name_lat": "БЕЛЬ ЭТУАЛЬ АЛТЕР ЭГО /BEL ETUAL ALTER EGO",
-      "name_ru": "БЕЛЬ ЭТУАЛЬ АЛТЕР ЭГО /BEL ETUAL ALTER EGO",
-      "breed": "САЛЮКИ",
+      "dog_id": 5901,
+      "name_lat": "BAXTER BERN",
+      "name_ru": "БАКСТЕР БЕРН",
+      "breed": "ФАРАОНОВА СОБАКА",
       "year": 2026,
       "best_score": 342,
-      "total_starts": 4,
-      "best_judge_score": 91,
-      "avg_judge_score": 83.94,
+      "total_starts": 3,
+      "best_judge_score": 88,
+      "avg_judge_score": 83.33,
       "year_from": 2026,
       "year_to": 2026,
-      "judge_eval_count": 16,
-      "rating_score": 86.16
+      "judge_eval_count": 12,
+      "rating_score": 85.74
     },
     {
       "dog_id": 5662,
@@ -1729,21 +1969,6 @@
       "rating_score": 85.85
     },
     {
-      "dog_id": 5633,
-      "name_lat": "YUVENTUS SKORYJ",
-      "name_ru": "YUVENTUS SKORYJ",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 341,
-      "total_starts": 3,
-      "best_judge_score": 87,
-      "avg_judge_score": 81.25,
-      "year_from": 2026,
-      "year_to": 2026,
-      "judge_eval_count": 12,
-      "rating_score": 84.71
-    },
-    {
       "dog_id": 685,
       "name_lat": "БОНТАНА ГВЕН СТЕФАНИ",
       "name_ru": "БОНТАНА ГВЕН СТЕФАНИ",
@@ -1795,28 +2020,28 @@
       "breed": "САЛЮКИ",
       "year": 2026,
       "best_score": 340,
-      "total_starts": 5,
+      "total_starts": 6,
       "best_judge_score": 92,
-      "avg_judge_score": 83.5,
+      "avg_judge_score": 83.04,
       "year_from": 2026,
       "year_to": 2026,
-      "judge_eval_count": 20,
-      "rating_score": 85.95
+      "judge_eval_count": 24,
+      "rating_score": 85.7
     },
     {
-      "dog_id": 5906,
-      "name_lat": "HEIDI SOTIS DELIMARA MINTAKA",
-      "name_ru": "ХЕЙДИ СОТИС ДЕЛИМАРА МИНТАКА",
-      "breed": "ФАРАОНОВА СОБАКА",
+      "dog_id": 5641,
+      "name_lat": "BLAZE OF GLORY",
+      "name_ru": "БЛЭЙЗ ОФ ГЛОРИ",
+      "breed": "УИППЕТ",
       "year": 2026,
       "best_score": 340,
-      "total_starts": 2,
-      "best_judge_score": 90,
-      "avg_judge_score": 81.5,
+      "total_starts": 3,
+      "best_judge_score": 87,
+      "avg_judge_score": 80.58,
       "year_from": 2026,
       "year_to": 2026,
-      "judge_eval_count": 8,
-      "rating_score": 84.99
+      "judge_eval_count": 12,
+      "rating_score": 84.39
     },
     {
       "dog_id": 643,
@@ -1832,21 +2057,6 @@
       "year_to": 2026,
       "judge_eval_count": 8,
       "rating_score": 86.29
-    },
-    {
-      "dog_id": 5900,
-      "name_lat": "КОР ОРИОН ЭЛЕКСИР ОФ ЛАЙФ /COR ORION ELEKSIR OF LAYF",
-      "name_ru": "КОР ОРИОН ЭЛЕКСИР ОФ ЛАЙФ /COR ORION ELEKSIR OF LAYF",
-      "breed": "ФАРАОНОВА СОБАКА",
-      "year": 2026,
-      "best_score": 340,
-      "total_starts": 2,
-      "best_judge_score": 87,
-      "avg_judge_score": 82,
-      "year_from": 2026,
-      "year_to": 2026,
-      "judge_eval_count": 8,
-      "rating_score": 85.07
     },
     {
       "dog_id": 768,
@@ -1892,21 +2102,6 @@
       "year_to": 2026,
       "judge_eval_count": 14,
       "rating_score": 85.15
-    },
-    {
-      "dog_id": 5907,
-      "name_lat": "AMENEMHET ANDORA TA MALTA",
-      "name_ru": "АМЕНЕМХЕТ АНДОРА ТА МАЛЬТА",
-      "breed": "ФАРАОНОВА СОБАКА",
-      "year": 2026,
-      "best_score": 339,
-      "total_starts": 2,
-      "best_judge_score": 87,
-      "avg_judge_score": 81.88,
-      "year_from": 2026,
-      "year_to": 2026,
-      "judge_eval_count": 8,
-      "rating_score": 85.03
     },
     {
       "dog_id": 796,
@@ -1997,21 +2192,6 @@
       "year_to": 2026,
       "judge_eval_count": 8,
       "rating_score": 85.33
-    },
-    {
-      "dog_id": 5635,
-      "name_lat": "YUNION SVETLYJ",
-      "name_ru": "YUNION SVETLYJ",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 338,
-      "total_starts": 2,
-      "best_judge_score": 86,
-      "avg_judge_score": 83.75,
-      "year_from": 2026,
-      "year_to": 2026,
-      "judge_eval_count": 8,
-      "rating_score": 85.52
     },
     {
       "dog_id": 5696,
@@ -2134,19 +2314,19 @@
       "rating_score": 84.56
     },
     {
-      "dog_id": 5896,
-      "name_lat": "BARCELONA ENCANTADORA",
-      "name_ru": "БАРСЕЛОНА ЭНКАНТАДОРА",
+      "dog_id": 5888,
+      "name_lat": "SOLAR WIND",
+      "name_ru": "СОЛАР ВИНД",
       "breed": "УИППЕТ",
       "year": 2026,
       "best_score": 337,
-      "total_starts": 2,
-      "best_judge_score": 88,
-      "avg_judge_score": 83.25,
+      "total_starts": 3,
+      "best_judge_score": 87,
+      "avg_judge_score": 82.17,
       "year_from": 2026,
       "year_to": 2026,
-      "judge_eval_count": 8,
-      "rating_score": 85.65
+      "judge_eval_count": 12,
+      "rating_score": 85.1
     },
     {
       "dog_id": 5762,
@@ -2162,21 +2342,6 @@
       "year_to": 2026,
       "judge_eval_count": 8,
       "rating_score": 85.41
-    },
-    {
-      "dog_id": 5888,
-      "name_lat": "СОЛАР ВИНД /SOLAR WIND",
-      "name_ru": "СОЛАР ВИНД /SOLAR WIND",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 337,
-      "total_starts": 2,
-      "best_judge_score": 87,
-      "avg_judge_score": 83.13,
-      "year_from": 2026,
-      "year_to": 2026,
-      "judge_eval_count": 8,
-      "rating_score": 85.46
     },
     {
       "dog_id": 136,
@@ -2224,21 +2389,6 @@
       "rating_score": 85.34
     },
     {
-      "dog_id": 831,
-      "name_lat": "TIMIRIAZEVSKIJ PARK OLIVIA",
-      "name_ru": "TIMIRIAZEVSKIJ PARK OLIVIA",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 337,
-      "total_starts": 1,
-      "best_judge_score": 85,
-      "avg_judge_score": 84.25,
-      "year_from": 2026,
-      "year_to": 2026,
-      "judge_eval_count": 4,
-      "rating_score": 85.34
-    },
-    {
       "dog_id": 5738,
       "name_lat": "ЯГОДНАЯ КАРАМЕЛЬКА /YAGODNAYA KARAMELKA",
       "name_ru": "ЯГОДНАЯ КАРАМЕЛЬКА /YAGODNAYA KARAMELKA",
@@ -2252,6 +2402,21 @@
       "year_to": 2026,
       "judge_eval_count": 12,
       "rating_score": 84.93
+    },
+    {
+      "dog_id": 5900,
+      "name_lat": "COR ORION ELEKSIR OF LAYF",
+      "name_ru": "КОР ОРИОН ЭЛЕКСИР ОФ ЛАЙФ",
+      "breed": "ФАРАОНОВА СОБАКА",
+      "year": 2026,
+      "best_score": 340,
+      "total_starts": 3,
+      "best_judge_score": 88,
+      "avg_judge_score": 82.67,
+      "year_from": 2026,
+      "year_to": 2026,
+      "judge_eval_count": 12,
+      "rating_score": 85.43
     },
     {
       "dog_id": 5761,
@@ -2349,14 +2514,14 @@
       "name_ru": "САЛГРЕЙС ВЕЛАР",
       "breed": "САЛЮКИ",
       "year": 2026,
-      "best_score": 340,
-      "total_starts": 4,
+      "best_score": 341,
+      "total_starts": 5,
       "best_judge_score": 95,
-      "avg_judge_score": 84,
+      "avg_judge_score": 84.25,
       "year_from": 2026,
       "year_to": 2026,
-      "judge_eval_count": 16,
-      "rating_score": 86.19
+      "judge_eval_count": 20,
+      "rating_score": 86.42
     },
     {
       "dog_id": 5781,
@@ -2365,13 +2530,13 @@
       "breed": "САЛЮКИ",
       "year": 2026,
       "best_score": 335,
-      "total_starts": 4,
+      "total_starts": 5,
       "best_judge_score": 89,
-      "avg_judge_score": 80.81,
+      "avg_judge_score": 78.05,
       "year_from": 2026,
       "year_to": 2026,
-      "judge_eval_count": 16,
-      "rating_score": 84.37
+      "judge_eval_count": 20,
+      "rating_score": 82.55
     },
     {
       "dog_id": 5619,
@@ -2387,6 +2552,21 @@
       "year_to": 2026,
       "judge_eval_count": 12,
       "rating_score": 84.59
+    },
+    {
+      "dog_id": 6068,
+      "name_lat": "STANGERS LAND IRTYSH TERRIFIC",
+      "name_ru": "СТАНГЕРС ЛАНД ИРТЫШ ТЕРРИФИК",
+      "breed": "УИППЕТ",
+      "year": 2026,
+      "best_score": 335,
+      "total_starts": 2,
+      "best_judge_score": 87,
+      "avg_judge_score": 83.5,
+      "year_from": 2026,
+      "year_to": 2026,
+      "judge_eval_count": 8,
+      "rating_score": 85.58
     },
     {
       "dog_id": 38,
@@ -2432,21 +2612,6 @@
       "year_to": 2026,
       "judge_eval_count": 4,
       "rating_score": 85.68
-    },
-    {
-      "dog_id": 6068,
-      "name_lat": "СТАНГЕРС ЛАНД ИРТЫШ ТЕРРИФИК /STANGERS LAND IRTYSH TERRIFIC",
-      "name_ru": "СТАНГЕРС ЛАНД ИРТЫШ ТЕРРИФИК /STANGERS LAND IRTYSH TERRIFIC",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 335,
-      "total_starts": 1,
-      "best_judge_score": 87,
-      "avg_judge_score": 83.75,
-      "year_from": 2026,
-      "year_to": 2026,
-      "judge_eval_count": 4,
-      "rating_score": 85.53
     },
     {
       "dog_id": 40,
@@ -2522,6 +2687,21 @@
       "year_to": 2026,
       "judge_eval_count": 12,
       "rating_score": 82.95
+    },
+    {
+      "dog_id": 6220,
+      "name_lat": "STANGERS LAND ZLATAN",
+      "name_ru": "СТАНГЕРС ЛАНД ЗЛАТАН",
+      "breed": "УИППЕТ",
+      "year": 2026,
+      "best_score": 334,
+      "total_starts": 2,
+      "best_judge_score": 88,
+      "avg_judge_score": 80,
+      "year_from": 2026,
+      "year_to": 2026,
+      "judge_eval_count": 8,
+      "rating_score": 84.39
     },
     {
       "dog_id": 41,
@@ -2629,21 +2809,6 @@
       "rating_score": 85.13
     },
     {
-      "dog_id": 5636,
-      "name_lat": "STANGERS LAND VINCENT",
-      "name_ru": "СТАНГЕРС ЛАНД ВИНСЕНТ",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 332,
-      "total_starts": 4,
-      "best_judge_score": 85,
-      "avg_judge_score": 82.06,
-      "year_from": 2026,
-      "year_to": 2026,
-      "judge_eval_count": 16,
-      "rating_score": 84.73
-    },
-    {
       "dog_id": 878,
       "name_lat": "ИРКИСС НЭНСИ /IRKISS NANCY",
       "name_ru": "ИРКИСС НЭНСИ /IRKISS NANCY",
@@ -2717,21 +2882,6 @@
       "year_to": 2026,
       "judge_eval_count": 7,
       "rating_score": 84.91
-    },
-    {
-      "dog_id": 5908,
-      "name_lat": "ХЕЙДИ СОТИС ДЖГАНТИЯ МУТ /HEIDI SOTIS DJGANTIYA MUT",
-      "name_ru": "ХЕЙДИ СОТИС ДЖГАНТИЯ МУТ /HEIDI SOTIS DJGANTIYA MUT",
-      "breed": "ФАРАОНОВА СОБАКА",
-      "year": 2026,
-      "best_score": 332,
-      "total_starts": 1,
-      "best_judge_score": 88,
-      "avg_judge_score": 83,
-      "year_from": 2026,
-      "year_to": 2026,
-      "judge_eval_count": 4,
-      "rating_score": 85.53
     },
     {
       "dog_id": 700,
@@ -2854,21 +3004,6 @@
       "rating_score": 84.19
     },
     {
-      "dog_id": 5901,
-      "name_lat": "BAXTER BERN",
-      "name_ru": "БАКСТЕР БЕРН",
-      "breed": "ФАРАОНОВА СОБАКА",
-      "year": 2026,
-      "best_score": 331,
-      "total_starts": 2,
-      "best_judge_score": 86,
-      "avg_judge_score": 82.25,
-      "year_from": 2026,
-      "year_to": 2026,
-      "judge_eval_count": 8,
-      "rating_score": 85.01
-    },
-    {
       "dog_id": 652,
       "name_lat": "BRENA",
       "name_ru": "БРЭНА",
@@ -2915,8 +3050,8 @@
     },
     {
       "dog_id": 5902,
-      "name_lat": "ХЕЙДИ СОТИС ДИШРЕТ ГЕБ /HEIDI SOTIS DESHRET GEB",
-      "name_ru": "ХЕЙДИ СОТИС ДИШРЕТ ГЕБ /HEIDI SOTIS DESHRET GEB",
+      "name_lat": "HEIDI SOTIS DESHRET GEB",
+      "name_ru": "ХЕЙДИ СОТИС ДИШРЕТ ГЕБ",
       "breed": "ФАРАОНОВА СОБАКА",
       "year": 2026,
       "best_score": 331,
@@ -3002,21 +3137,6 @@
       "year_to": 2026,
       "judge_eval_count": 4,
       "rating_score": 84.97
-    },
-    {
-      "dog_id": 6026,
-      "name_lat": "ДОГОНИ ВЕТЕР ОПЮИСАНТ САМСАРА /DOGONI VETER OPUISSANTE SAMSARA",
-      "name_ru": "ДОГОНИ ВЕТЕР ОПЮИСАНТ САМСАРА /DOGONI VETER OPUISSANTE SAMSARA",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 330,
-      "total_starts": 1,
-      "best_judge_score": 84,
-      "avg_judge_score": 82.5,
-      "year_from": 2026,
-      "year_to": 2026,
-      "judge_eval_count": 4,
-      "rating_score": 84.88
     },
     {
       "dog_id": 7259,
@@ -3113,21 +3233,6 @@
       "name_lat": "FORTUNA NUMA SOUL OF AFRIKA",
       "name_ru": "FORTUNA NUMA SOUL OF AFRIKA",
       "breed": "БАСЕНДЖИ",
-      "year": 2026,
-      "best_score": 329,
-      "total_starts": 1,
-      "best_judge_score": 85,
-      "avg_judge_score": 82.25,
-      "year_from": 2026,
-      "year_to": 2026,
-      "judge_eval_count": 4,
-      "rating_score": 84.92
-    },
-    {
-      "dog_id": 5903,
-      "name_lat": "HEIDI SOTIS DJED ATUM",
-      "name_ru": "ХЕЙДИ СОТИС ДЖЕД АТУМ",
-      "breed": "ФАРАОНОВА СОБАКА",
       "year": 2026,
       "best_score": 329,
       "total_starts": 1,
@@ -3439,19 +3544,19 @@
       "rating_score": 83.82
     },
     {
-      "dog_id": 753,
-      "name_lat": "NOWRUZ NARCISSUS IBN MALA OD VJETRA /NOWRUZ NARCISSUS IBN MALA OD VJETRA",
-      "name_ru": "NOWRUZ NARCISSUS IBN MALA OD VJETRA /NOWRUZ NARCISSUS IBN MALA OD VJETRA",
-      "breed": "САЛЮКИ",
+      "dog_id": 7294,
+      "name_lat": "CHIA ESSI TUATARA STRAYKER",
+      "name_ru": "CHIA ESSI TUATARA STRAYKER",
+      "breed": "УИППЕТ",
       "year": 2026,
       "best_score": 325,
-      "total_starts": 2,
+      "total_starts": 1,
       "best_judge_score": 84,
       "avg_judge_score": 81.25,
       "year_from": 2026,
       "year_to": 2026,
-      "judge_eval_count": 8,
-      "rating_score": 84.37
+      "judge_eval_count": 4,
+      "rating_score": 84.56
     },
     {
       "dog_id": 5649,
@@ -4099,21 +4204,6 @@
       "rating_score": 82.58
     },
     {
-      "dog_id": 5641,
-      "name_lat": "БЛЭЙЗ ОФ ГЛОРИ /BLAZE OF GLORY",
-      "name_ru": "БЛЭЙЗ ОФ ГЛОРИ /BLAZE OF GLORY",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 317,
-      "total_starts": 2,
-      "best_judge_score": 80,
-      "avg_judge_score": 78.38,
-      "year_from": 2026,
-      "year_to": 2026,
-      "judge_eval_count": 8,
-      "rating_score": 83.14
-    },
-    {
       "dog_id": 5743,
       "name_lat": "БОСКО БОКАРИ ЦАРОНА ВОНДЕРЛАЙК /BOSKO BOKARI TSARONA WONDERLAKE",
       "name_ru": "БОСКО БОКАРИ ЦАРОНА ВОНДЕРЛАЙК /BOSKO BOKARI TSARONA WONDERLAKE",
@@ -4519,21 +4609,6 @@
       "rating_score": 83.44
     },
     {
-      "dog_id": 6273,
-      "name_lat": "МЕЛОДИЯ ИЗ САГИ О ГАРДАРИКЕ /MELODIYA IZ SAGI O GARDARIKE",
-      "name_ru": "МЕЛОДИЯ ИЗ САГИ О ГАРДАРИКЕ /MELODIYA IZ SAGI O GARDARIKE",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 230,
-      "total_starts": 1,
-      "best_judge_score": 84,
-      "avg_judge_score": 76.67,
-      "year_from": 2026,
-      "year_to": 2026,
-      "judge_eval_count": 3,
-      "rating_score": 83.93
-    },
-    {
       "dog_id": 503,
       "name_lat": "SANSARA SHERVUD SHOTER GRAN PRI",
       "name_ru": "САНСАРА ШЕРВУД ШОТЕР ГРАН ПРИ",
@@ -4577,21 +4652,6 @@
       "year_to": 2026,
       "judge_eval_count": 4,
       "rating_score": 83.54
-    },
-    {
-      "dog_id": 6220,
-      "name_lat": "STANGERS LAND ZLATAN",
-      "name_ru": "СТАНГЕРС ЛАНД ЗЛАТАН",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 306,
-      "total_starts": 1,
-      "best_judge_score": 82,
-      "avg_judge_score": 76.5,
-      "year_from": 2026,
-      "year_to": 2026,
-      "judge_eval_count": 4,
-      "rating_score": 83.38
     },
     {
       "dog_id": 861,
@@ -5014,21 +5074,6 @@
       "rating_score": 82.73
     },
     {
-      "dog_id": 873,
-      "name_lat": "ARGENTEA STELLA",
-      "name_ru": "ARGENTEA STELLA",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "best_score": 285,
-      "total_starts": 1,
-      "best_judge_score": 84,
-      "avg_judge_score": 71.25,
-      "year_from": 2026,
-      "year_to": 2026,
-      "judge_eval_count": 4,
-      "rating_score": 82.43
-    },
-    {
       "dog_id": 808,
       "name_lat": "АРАНИ",
       "name_ru": "АРАНИ",
@@ -5132,6 +5177,21 @@
       "year_to": 2026,
       "judge_eval_count": 4,
       "rating_score": 81.81
+    },
+    {
+      "dog_id": 753,
+      "name_lat": "NOWRUZ NARCISSUS IBN MALA OD VJETRA",
+      "name_ru": "NOWRUZ NARCISSUS IBN MALA OD VJETRA",
+      "breed": "САЛЮКИ",
+      "year": 2026,
+      "best_score": 325,
+      "total_starts": 3,
+      "best_judge_score": 88,
+      "avg_judge_score": 77.17,
+      "year_from": 2026,
+      "year_to": 2026,
+      "judge_eval_count": 12,
+      "rating_score": 82.68
     },
     {
       "dog_id": 5979,

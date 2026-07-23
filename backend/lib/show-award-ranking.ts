@@ -8,6 +8,10 @@
 export const SHOW_AWARD_ORDER = [
   'BIS',
   'BIG',
+  'BIS_JUNIOR',
+  'BIS_VETERAN',
+  'BIS_PUPPY',
+  'BIS_BABY',
   'BOB',
   'BOS',
   'LYU',
@@ -51,6 +55,7 @@ export type ShowTitleCounts = Record<ShowAwardKey, number>
 export const SHOW_FILTER_AWARD_KEYS: ShowAwardKey[] = [
   'BIS',
   'BIG',
+  'BIS_JUNIOR',
   'BOB',
   'BOS',
   'CACIB',
@@ -66,6 +71,10 @@ export const SHOW_FILTER_AWARD_KEYS: ShowAwardKey[] = [
 export const SHOW_AWARD_WEIGHTS: Record<ShowAwardKey, number> = {
   BIS: 10_000,
   BIG: 5_000,
+  BIS_JUNIOR: 3_500,
+  BIS_VETERAN: 3_200,
+  BIS_PUPPY: 2_800,
+  BIS_BABY: 2_500,
   BOB: 2_000,
   BOS: 1_500,
   LB: 800,
@@ -101,12 +110,19 @@ export const SHOW_AWARD_WEIGHTS: Record<ShowAwardKey, number> = {
   VSS: 12,
 }
 
-/** Подпись на бейдже (как в протоколах / RU+EN). */
+/**
+ * Короткая подпись на бейдже — как привыкли в РФ (ЛПП, не «BOB/ЛПП»).
+ * Латиница остаётся там, где её так и говорят: BIS, BIG, CAC…
+ */
 export const SHOW_AWARD_BADGE: Record<ShowAwardKey, string> = {
   BIS: 'BIS',
   BIG: 'BIG',
-  BOB: 'BOB',
-  BOS: 'BOS',
+  BIS_JUNIOR: 'BIS-Ю',
+  BIS_VETERAN: 'BIS-В',
+  BIS_PUPPY: 'BIS-Щ',
+  BIS_BABY: 'BIS-Б',
+  BOB: 'ЛПП',
+  BOS: 'ЛППП',
   LB: 'ЛБ',
   LSH: 'ЛЩ',
   LYU: 'ЛЮ',
@@ -141,19 +157,23 @@ export const SHOW_AWARD_BADGE: Record<ShowAwardKey, string> = {
 }
 
 export const SHOW_AWARD_LABELS: Record<ShowAwardKey, string> = {
-  BIS: 'Best in Show — лучшая собака выставки',
-  BIG: 'Best in Group — лучшая в группе FCI',
-  BOB: 'Best of Breed / ЛПП — лучший представитель породы',
-  BOS: 'Best of Opposite Sex / ЛППП — лучший представитель противоположного пола',
-  LB: 'ЛБ — лучший беби породы',
-  LSH: 'ЛЩ — лучший щенок породы',
-  LYU: 'ЛЮ — лучший юниор породы',
-  LV: 'ЛВ — лучший ветеран породы',
-  CACIB: 'CACIB — сертификат кандидата в интернациональные чемпионы красоты (FCI)',
-  CAC: 'CAC — сертификат кандидата в чемпионы России по красоте',
-  JCAC: 'JCAC — сертификат кандидата в юные чемпионы России по красоте',
-  VCAC: 'VCAC — сертификат кандидата в чемпионы-ветераны по красоте',
-  CW: 'CW — Class Winner, победитель класса',
+  BIS: 'Лучшая собака выставки (Best in Show)',
+  BIG: 'Лучшая в группе FCI (Best in Group)',
+  BIS_JUNIOR: 'Лучший юниор выставки (BIS Junior) — главный ринг, не ЛЮ породы',
+  BIS_VETERAN: 'Лучший ветеран выставки (BIS Veteran) — главный ринг, не ЛВ породы',
+  BIS_PUPPY: 'Лучший щенок выставки (BIS Puppy) — главный ринг, не ЛЩ породы',
+  BIS_BABY: 'Лучший беби выставки (BIS Baby) — главный ринг, не ЛБ породы',
+  BOB: 'Лучший представитель породы (ЛПП / BOB)',
+  BOS: 'Лучший противоположного пола (ЛППП / BOS)',
+  LB: 'Лучший беби породы (ЛБ)',
+  LSH: 'Лучший щенок породы (ЛЩ)',
+  LYU: 'Лучший юниор породы (ЛЮ)',
+  LV: 'Лучший ветеран породы (ЛВ)',
+  CACIB: 'CACIB — кандидат в интернациональные чемпионы красоты (FCI)',
+  CAC: 'CAC — кандидат в чемпионы России по красоте',
+  JCAC: 'JCAC — кандидат в юные чемпионы России по красоте',
+  VCAC: 'VCAC — кандидат в чемпионы-ветераны по красоте',
+  CW: 'CW — победитель класса',
   R_CACIB: 'R.CACIB — резервный CACIB',
   R_CAC: 'R.CAC — резервный CAC',
   R_JCAC: 'R.JCAC — резервный JCAC',
@@ -196,6 +216,10 @@ export const SHOW_AWARD_CATEGORY_LABEL: Record<ShowAwardCategory, string> = {
 export const SHOW_AWARD_CATEGORY: Record<ShowAwardKey, ShowAwardCategory> = {
   BIS: 'prestige',
   BIG: 'prestige',
+  BIS_JUNIOR: 'prestige',
+  BIS_VETERAN: 'prestige',
+  BIS_PUPPY: 'prestige',
+  BIS_BABY: 'prestige',
   BOB: 'prestige',
   BOS: 'prestige',
   LB: 'prestige',
@@ -243,11 +267,76 @@ function normalizeTitleToken(raw: string): string {
     .trim()
 }
 
+/**
+ * RKF PDF/Excel: CAC family often in Cyrillic lookalikes («САС») or mixed («CАС»).
+ * Latin «CAC» is unchanged. Russian diplomas (ЧФ, КЧК) are not rewritten.
+ */
+export function normalizeCertLookalikes(tok: string): string {
+  const u = tok.toUpperCase().replace(/\s+/g, '')
+  const lat = u
+    .replace(/С/g, 'C')
+    .replace(/А/g, 'A')
+    .replace(/В/g, 'B')
+    .replace(/Е/g, 'E')
+    .replace(/О/g, 'O')
+    .replace(/Р/g, 'P')
+    .replace(/К/g, 'K')
+    .replace(/М/g, 'M')
+    .replace(/Т/g, 'T')
+    .replace(/Н/g, 'H')
+    .replace(/Х/g, 'X')
+  if (/^(R\.)?(J|V)?CAC(IB)?$/.test(lat)) return lat
+  if (/^(J)?BOB$/.test(lat) || /^BOS$/.test(lat)) return lat
+  return tok
+}
+
+/**
+ * Узкий PDF рвёт титул: «ЮКЧ»+«К»→ЮКЧК, «ВКЧ»+«П»→ВКЧП, «КЧ»+«К»→КЧК.
+ * Не трогает легитимные многословные («П России»).
+ */
+export function glueWrappedTitleAbbrev(raw: string): string | null {
+  const spaced = normalizeTitleToken(raw)
+  if (!spaced || !/\s/.test(spaced)) return null
+  // Уже узнаваемый титул с пробелом — не схлопывать
+  if (matchShowAwardToken(spaced)) return null
+
+  const compact = spaced
+    .toUpperCase()
+    .replace(/Ё/g, 'Е')
+    .replace(/[\s./\-]/g, '')
+  if (compact.length < 3 || compact.length > 14) return null
+
+  const key = matchShowAwardToken(compact)
+  if (!key) return null
+  return SHOW_AWARD_BADGE[key]
+}
+
+/** Склеить соседние куски колонки титулов PDF («ЮКЧ»,«К»→«ЮКЧК»). */
+export function glueWrappedTitleParts(parts: string[]): string[] {
+  const out: string[] = []
+  for (let i = 0; i < parts.length; i++) {
+    const a = parts[i]!
+    const b = parts[i + 1]
+    if (b) {
+      const glued = glueWrappedTitleAbbrev(`${a} ${b}`)
+      if (glued) {
+        out.push(glued)
+        i++
+        continue
+      }
+    }
+    out.push(a)
+  }
+  return out
+}
+
 /** Сопоставление одного фрагмента протокола → канонический ключ. */
 export function matchShowAwardToken(raw: string): ShowAwardKey | null {
   const t = normalizeTitleToken(raw)
   if (!t) return null
-  const u = t.toUpperCase()
+  // Prefer Latin CAC/JCAC/… when token was Cyrillic/mixed lookalikes
+  const lookalike = normalizeCertLookalikes(t)
+  const u = (lookalike !== t ? lookalike : t).toUpperCase()
 
   // Точные совпадения (кириллица: \b в JS не работает с буквами Unicode)
   const exact: Record<string, ShowAwardKey> = {
@@ -256,6 +345,10 @@ export function matchShowAwardToken(raw: string): ShowAwardKey | null {
     BOB: 'BOB',
     BOS: 'BOS',
     ВОВ: 'BOB',
+    'BOB/ЛПП': 'BOB',
+    'BOB / ЛПП': 'BOB',
+    'BOS/ЛПС': 'BOS',
+    'BOS / ЛПС': 'BOS',
     CW: 'CW',
     CACIB: 'CACIB',
     CAC: 'CAC',
@@ -301,8 +394,52 @@ export function matchShowAwardToken(raw: string): ShowAwardKey | null {
   }
   if (exact[u]) return exact[u]
 
-  if (u === 'BEST IN SHOW') return 'BIS'
-  if (u === 'BEST IN GROUP') return 'BIG'
+  // Главный ринг (до breed-level BEST JUNIOR → LYU)
+  if (
+    u === 'BEST IN SHOW' ||
+    u === 'ЛУЧШАЯ СОБАКА ВЫСТАВКИ' ||
+    /^ЛУЧШАЯ\s+СОБАКА\s+ВЫСТАВКИ/.test(u) ||
+    /^BIS(?:\s*1)?$/.test(u)
+  ) {
+    return 'BIS'
+  }
+  if (
+    /BEST\s+IN\s+SHOW\s+JUNIOR/.test(u) ||
+    /ЛУЧШИЙ\s+ЮНИОР\s*\/\s*BEST\s+IN\s+SHOW/.test(u) ||
+    /^BIS[-\s]?J(?:UNIOR)?$/.test(u) ||
+    /^BIS-Ю$/.test(u)
+  ) {
+    return 'BIS_JUNIOR'
+  }
+  if (
+    /BEST\s+IN\s+SHOW\s+PUPPY/.test(u) ||
+    /ЛУЧШИЙ\s+ЩЕНОК\s*\/\s*BEST\s+IN\s+SHOW/.test(u) ||
+    /^BIS[-\s]?P(?:UPPY)?$/.test(u) ||
+    /^BIS-Щ$/.test(u)
+  ) {
+    return 'BIS_PUPPY'
+  }
+  if (
+    /BEST\s+IN\s+SHOW\s+BABY/.test(u) ||
+    /ЛУЧШИЙ\s+БЕБИ\s*\/\s*BEST\s+IN\s+SHOW/.test(u) ||
+    /^BIS[-\s]?B(?:ABY)?$/.test(u) ||
+    /^BIS-Б$/.test(u)
+  ) {
+    return 'BIS_BABY'
+  }
+  if (
+    /BEST\s+IN\s+SHOW\s+VETERAN/.test(u) ||
+    /ЛУЧШИЙ\s+ВЕТЕРАН\s*\/\s*BEST\s+IN\s+SHOW/.test(u) ||
+    /^BIS[-\s]?V(?:ETERAN)?$/.test(u) ||
+    /^BIS-В$/.test(u)
+  ) {
+    return 'BIS_VETERAN'
+  }
+  if (u === 'BEST IN GROUP' || /^BEST\s+IN\s+GROUP/.test(u) || /\bГРУППА\s+FCI\b/.test(u)) {
+    return 'BIG'
+  }
+
+  // Breed-level (не главный ринг)
   if (u.startsWith('BEST OF OPPOSITE')) return 'BOS'
   if (u.startsWith('BEST OF BREED')) return 'BOB'
   if (u.startsWith('BEST BABY')) return 'LB'
@@ -321,6 +458,8 @@ export function matchShowAwardToken(raw: string): ShowAwardKey | null {
 
   if (/^ЛППП\s*\(\s*BOS\s*\)$/.test(u)) return 'BOS'
   if (/^ЛПП\s*\(\s*BOB\s*\)$/.test(u)) return 'BOB'
+  if (/^BOB\s*\/\s*ЛПП$/i.test(u)) return 'BOB'
+  if (/^BOS\s*\/\s*ЛПС$/i.test(u)) return 'BOS'
 
   if (/^П\s*"РОССИИ"$/.test(u) || /^П\s*РОССИИ$/.test(u)) return 'P_RUSSIA'
   if (/^П\s*МОСКВЫ$/.test(u)) return 'P_MOSCOW'
@@ -332,12 +471,63 @@ export function matchShowAwardToken(raw: string): ShowAwardKey | null {
   return null
 }
 
+/** Разбивка колонки наград: запятые и пробелы; «CAC BOB/ЛПП» → два токена. */
+export function splitShowTitleTokens(title: string | null | undefined): string[] {
+  if (!title?.trim()) return []
+  const normalized = title.replace(/\s+/g, ' ').trim()
+  const commaParts = normalized
+    .split(',')
+    .map((part) => part.trim())
+    .filter(Boolean)
+  const out: string[] = []
+
+  for (const part of commaParts) {
+    const gluedPart = glueWrappedTitleAbbrev(part)
+    if (gluedPart) {
+      out.push(gluedPart)
+      continue
+    }
+    if (matchShowAwardToken(part)) {
+      out.push(part)
+      continue
+    }
+    const words = part.split(' ')
+    let i = 0
+    while (i < words.length) {
+      let matched = false
+      // Сначала пара слов: «ЮКЧ К» → ЮКЧК
+      if (i + 1 < words.length) {
+        const pairGlue = glueWrappedTitleAbbrev(`${words[i]} ${words[i + 1]}`)
+        if (pairGlue) {
+          out.push(pairGlue)
+          i += 2
+          continue
+        }
+      }
+      for (let n = Math.min(4, words.length - i); n >= 1; n--) {
+        const cand = words.slice(i, i + n).join(' ')
+        if (matchShowAwardToken(cand)) {
+          out.push(cand)
+          i += n
+          matched = true
+          break
+        }
+      }
+      if (!matched) {
+        out.push(words[i]!)
+        i++
+      }
+    }
+  }
+  return out
+}
+
 /** Парсинг колонки «титул» протокола; CACIB/JCAC/R.CAC не дают лишний CAC. */
 export function parseShowTitles(title: string): ShowTitleCounts {
   const counts = { ...EMPTY_SHOW_TITLES }
   if (!title?.trim()) return counts
 
-  for (const part of title.split(',')) {
+  for (const part of splitShowTitleTokens(title)) {
     const key = matchShowAwardToken(part)
     if (key) counts[key]++
   }
@@ -383,6 +573,55 @@ export function compareShowDogs(
 /** Ненулевые ключи в порядке приоритета. */
 export function presentShowAwards(titles: ShowTitleCounts): ShowAwardKey[] {
   return SHOW_AWARD_ORDER.filter((key) => (titles[key] || 0) > 0)
+}
+
+/** Развернуть компактные titles (только ненулевые) в полный объект со всеми ключами. */
+export function expandShowTitles(
+  partial?: Partial<ShowTitleCounts> | ShowTitleCounts | null,
+): ShowTitleCounts {
+  if (!partial) return { ...EMPTY_SHOW_TITLES }
+  return { ...EMPTY_SHOW_TITLES, ...partial }
+}
+
+/** Каноническая подпись бейджа для сырого токена протокола («BOB/ЛПП» → «ЛПП»). */
+export function displayShowAwardToken(raw: string): string {
+  const key = matchShowAwardToken(raw)
+  return key ? SHOW_AWARD_BADGE[key] : raw.trim()
+}
+
+/**
+ * Краткая «причина» места в рейтинге для главной / компактных списков:
+ * «ЛПП ×18 · VCAC ×27» (до max самых весомых титулов с ненулевым счётчиком).
+ */
+export function formatShowRankingReason(
+  titles: Partial<ShowTitleCounts> | ShowTitleCounts | null | undefined,
+  max = 2,
+): string {
+  if (!titles) return ''
+  const parts: string[] = []
+  for (const key of SHOW_AWARD_ORDER) {
+    const n = titles[key] || 0
+    if (n <= 0) continue
+    parts.push(n > 1 ? `${SHOW_AWARD_BADGE[key]} ×${n}` : SHOW_AWARD_BADGE[key])
+    if (parts.length >= max) break
+  }
+  return parts.join(' · ')
+}
+
+/** Только ненулевые счётчики — для лёгких home-top / ranking JSON. */
+export function compactShowTitles(titles: ShowTitleCounts): Partial<ShowTitleCounts> {
+  const out: Partial<ShowTitleCounts> = {}
+  for (const key of SHOW_AWARD_ORDER) {
+    const n = titles[key] || 0
+    if (n > 0) out[key] = n
+  }
+  return out
+}
+
+/** Шард файла подробностей: shows/indexes/dog-details/{shard}.json */
+export function showDogDetailShard(id: string | number, shardCount = 256): string {
+  const n = Math.abs(Number(id)) || 0
+  return String(n % shardCount).padStart(3, '0')
 }
 
 /** Ключи, сгруппированные по категории (prestige → certificate → diploma). */

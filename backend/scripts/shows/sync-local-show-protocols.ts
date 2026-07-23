@@ -1,6 +1,9 @@
 /**
- * Copy data/local/shows/exhibitions-rkf → frontend/public/data/v1/shows/exhibitions-rkf
- * so Vite DEV can open /shows/exhibition/:rkfId.
+ * Copy data/local/shows/exhibitions-rkf → data/v1/shows/exhibitions-rkf
+ * so Vite DEV (`serveDataV1` → repo data/v1) can open /shows/exhibition/:rkfId.
+ *
+ * Also mirrors to frontend/public for completeness (Pages must NOT ship this —
+ * path is gitignored).
  *
  * Usage: npm run sync-local-show-protocols
  */
@@ -12,7 +15,8 @@ import { fileURLToPath } from 'node:url'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT = path.resolve(__dirname, '../../..')
 const SRC = path.join(ROOT, 'data/local/shows/exhibitions-rkf')
-const DEST = path.join(ROOT, 'frontend/public/data/v1/shows/exhibitions-rkf')
+const DEST_V1 = path.join(ROOT, 'data/v1/shows/exhibitions-rkf')
+const DEST_PUBLIC = path.join(ROOT, 'frontend/public/data/v1/shows/exhibitions-rkf')
 
 function copyRecursive(src: string, dest: string) {
   if (!fs.existsSync(src)) return 0
@@ -36,5 +40,8 @@ if (!fs.existsSync(SRC)) {
   process.exit(1)
 }
 
-const count = copyRecursive(SRC, DEST)
-console.log(`Synced ${count} files → ${DEST}`)
+const n1 = copyRecursive(SRC, DEST_V1)
+const n2 = copyRecursive(SRC, DEST_PUBLIC)
+console.log(`Synced ${n1} files → ${DEST_V1}`)
+console.log(`Synced ${n2} files → ${DEST_PUBLIC}`)
+console.log('Restart or refresh npm run dev, then open a 2026 show with «Отчёт» from the calendar.')

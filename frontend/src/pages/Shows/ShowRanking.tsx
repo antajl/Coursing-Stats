@@ -11,6 +11,7 @@ import ShowRankingFilters, { type ShowAwardMinFilters } from './ShowRankingFilte
 import ShowRankingColumns from './ShowRankingColumns'
 import type { ShowDogCardData } from './ShowDogCard'
 import { useDebounce } from '../../hooks/useDebounce'
+import { dogNameMatchesQuery } from '../../lib/dogName'
 
 const CURRENT_SEASON = String(new Date().getFullYear())
 
@@ -23,7 +24,10 @@ export default function ShowRanking() {
   const [loading, setLoading] = useState(true)
   const [allDogs, setAllDogs] = useState<ShowDogCardData[]>([])
   const [searchQuery, setSearchQuery] = useState(() => searchParams.get('search') || '')
-  const [filterYear, setFilterYear] = useState(() => searchParams.get('year') ?? '')
+  const [filterYear, setFilterYear] = useState(() => {
+    const fromUrl = searchParams.get('year')
+    return fromUrl === null ? CURRENT_SEASON : fromUrl
+  })
   const [filterBreed, setFilterBreed] = useState(() => searchParams.get('breed') || '')
   const [filterGroup, setFilterGroup] = useState(() => searchParams.get('group') || '')
   const [awardMins, setAwardMins] = useState<ShowAwardMinFilters>(() => ({
@@ -89,9 +93,7 @@ export default function ShowRanking() {
       }
       if (debouncedSearchQuery) {
         const query = debouncedSearchQuery.toLowerCase()
-        const nameMatch =
-          dog.name_lat.toLowerCase().includes(query) ||
-          (dog.name_ru && dog.name_ru.toLowerCase().includes(query))
+        const nameMatch = dogNameMatchesQuery(dog.name_lat, dog.name_ru, debouncedSearchQuery)
         const breedMatch = dog.breed.toLowerCase().includes(query)
         if (!nameMatch && !breedMatch) return false
       }
@@ -106,7 +108,7 @@ export default function ShowRanking() {
   }, [])
 
   const handleResetFilters = () => {
-    setFilterYear('')
+    setFilterYear(CURRENT_SEASON)
     setFilterBreed('')
     setFilterGroup('')
     setAwardMins({ ...EMPTY_AWARD_MINS })
@@ -114,7 +116,7 @@ export default function ShowRanking() {
   }
 
   const handleResetPanelFilters = () => {
-    setFilterYear('')
+    setFilterYear(CURRENT_SEASON)
     setFilterBreed('')
     setFilterGroup('')
     setAwardMins({ ...EMPTY_AWARD_MINS })

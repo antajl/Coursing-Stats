@@ -24,6 +24,8 @@
 - `2026-05-16_Complete_Results_Racing.html`
 - `Complete_Results_2025-cc-sample.html`
 
+**Одноразовый PDF→HTML для event 1545** (нет Complete_Results на procoursing): см. [14-PARSING-RULES.md](14-PARSING-RULES.md) → «Одноразовый PDF (event 1545)», скрипт `backend/scripts/import/import-1545-donino-pdf.ts`.
+
 ---
 
 ## Coursing Parsing Implementation

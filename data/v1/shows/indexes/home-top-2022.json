@@ -1,0 +1,75 @@
+{
+  "schema": "coursing-stats/show-home-top-v1",
+  "year": "2022",
+  "dogs": [
+    {
+      "id": "903110774",
+      "name_lat": "MATTHIAS REX VAKHUR",
+      "name_ru": "",
+      "breed": "ПУЛИ ДРУГИЕ ОКРАСЫ",
+      "sex": "",
+      "total_shows": 5,
+      "best_award": "BOB",
+      "rank_score": 12613,
+      "titles": {
+        "BOB": 5,
+        "LV": 2,
+        "CAC": 2,
+        "VCAC": 2,
+        "CHRKF": 2,
+        "VCHRKF": 2,
+        "VP_RUSSIA": 2,
+        "VP_MOSCOW": 1,
+        "KCHK": 3,
+        "VKCHK": 2,
+        "CW": 2
+      },
+      "competition_dog_id": null
+    },
+    {
+      "id": "573401683",
+      "name_lat": "BELAJA VOROZHEJA EVDOHA",
+      "name_ru": "",
+      "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
+      "sex": "",
+      "total_shows": 5,
+      "best_award": "BOB",
+      "rank_score": 11155,
+      "titles": {
+        "BOB": 5,
+        "CAC": 5,
+        "CHRKF": 4,
+        "P_RUSSIA": 2,
+        "P_MOSCOW": 1,
+        "KCHK": 5,
+        "CW": 2
+      },
+      "competition_dog_id": null
+    },
+    {
+      "id": "201318782",
+      "name_lat": "SAREDON PROUD FAVOURITE",
+      "name_ru": "",
+      "breed": "ЛЕЙКЛЕНД ТЕРЬЕР",
+      "sex": "",
+      "total_shows": 4,
+      "best_award": "BOB",
+      "rank_score": 10750,
+      "titles": {
+        "BOB": 4,
+        "LYU": 2,
+        "CAC": 2,
+        "JCAC": 2,
+        "CHRKF": 2,
+        "YCHRKF": 2,
+        "P_RUSSIA": 2,
+        "P_MOSCOW": 1,
+        "KCHK": 2,
+        "YKCHK": 2,
+        "CW": 2
+      },
+      "competition_dog_id": null
+    }
+  ],
+  "updated_at": "2026-07-23"
+}

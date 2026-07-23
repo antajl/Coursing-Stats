@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { ChevronLeft, ExternalLink } from 'lucide-react'
+import { ChevronLeft } from 'lucide-react'
 import BreedGroupDivider from './components/BreedGroupDivider'
 import HoverTooltip from '../../../components/ui/HoverTooltip'
 import { toProcoursingArchiveUrl } from '../../../lib/procoursingArchive'
@@ -71,107 +71,114 @@ export default function EventHeader({ event, results, onBack }: EventHeaderProps
   const breedsCount = new Set(results.map(r => r.breed)).size
 
   return (
-    <div className="mb-6 rounded-xl border border-old-money-200 bg-cream-50 p-4 dark:border-charcoal-600 dark:bg-charcoal-800/40 md:p-6">
-      <div className="flex items-start gap-2 md:gap-3">
-        {onBack && (
-          <button
-            type="button"
-            onClick={onBack}
-            className="mt-0.5 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-old-money-200 bg-white/90 text-old-money-600 shadow-sm transition-colors hover:border-old-money-300 hover:bg-old-money-50 hover:text-camel-700 dark:border-charcoal-600 dark:bg-charcoal-800 dark:text-old-money-400 dark:hover:border-charcoal-500 dark:hover:bg-charcoal-700 dark:hover:text-camel-400"
-            aria-label="Назад"
-          >
-            <ChevronLeft className="h-4 w-4" aria-hidden />
-          </button>
-        )}
+    <div className="relative mb-6">
+      {onBack && (
+        <button
+          type="button"
+          onClick={onBack}
+          className="absolute right-full top-5 z-10 mr-0.5 flex h-11 w-11 items-center justify-center rounded-lg text-old-money-500 transition-colors hover:bg-old-money-50 hover:text-camel-700 md:top-8 dark:text-old-money-400 dark:hover:bg-charcoal-700 dark:hover:text-camel-400"
+          aria-label="Назад"
+        >
+          <ChevronLeft className="h-5 w-5" aria-hidden />
+        </button>
+      )}
 
-        <div className="min-w-0 flex-1">
-          <div className="flex items-start justify-between gap-2">
-            <h1 className="min-w-0 font-serif text-xl font-bold leading-tight tracking-tight text-charcoal-900 dark:text-charcoal-100 md:text-2xl">
-              {archiveResultsUrl ? (
-                <a
-                  href={archiveResultsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="transition-colors hover:text-camel-700 dark:hover:text-camel-400"
-                >
-                  {title}
-                </a>
-              ) : (
-                title
-              )}
-            </h1>
-            {archiveResultsUrl && (
+      <div className="min-w-0 rounded-xl border border-old-money-200 bg-cream-50 p-4 dark:border-charcoal-600 dark:bg-charcoal-800/40 md:p-6">
+        <div className="flex items-start justify-between gap-2">
+          <h1 className="min-w-0 font-serif text-xl font-bold leading-tight tracking-tight text-charcoal-900 dark:text-charcoal-100 md:text-2xl">
+            {archiveResultsUrl ? (
               <a
                 href={archiveResultsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-1 flex-shrink-0 rounded-full p-1 text-old-money-400 transition-colors hover:bg-old-money-100 hover:text-camel-600 dark:text-old-money-500 dark:hover:bg-charcoal-700 dark:hover:text-camel-400"
-                aria-label="Открыть протокол в web.archive.org"
+                className="transition-colors hover:text-camel-700 dark:hover:text-camel-400"
               >
-                <ExternalLink className="h-4 w-4 md:h-5 md:w-5" />
+                {title}
               </a>
-            )}
-          </div>
-        </div>
-      </div>
-
-      <BreedGroupDivider />
-
-      <div className="mb-4 grid grid-cols-2 gap-2 sm:grid-cols-4">
-        <StatPill value={dateText} label="дата" />
-        <StatPill value={participantsCount} label="собак" />
-        <StatPill value={breedsCount} label="пород" />
-        <StatPill
-          value={
-            locationText.length > 40 ? (
-              <HoverTooltip label={locationText} placement="bottom">
-                <span className="line-clamp-2 cursor-help text-sm leading-snug md:text-base">{locationText}</span>
-              </HoverTooltip>
             ) : (
-              <span className="text-sm leading-snug md:text-base">{locationText}</span>
-            )
-          }
-          label="место"
-          valueClassName="text-sm md:text-base"
-          className="col-span-2 sm:col-span-1"
-        />
-      </div>
+              title
+            )}
+          </h1>
+          {archiveResultsUrl && (
+            <a
+              href={archiveResultsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-0.5 inline-flex flex-shrink-0 items-center gap-1.5 rounded-full border border-old-money-200 bg-white/90 py-1 pl-1 pr-2.5 text-xs font-semibold text-camel-700 shadow-sm transition-colors hover:border-camel-400 hover:bg-camel-50 hover:text-camel-800 dark:border-charcoal-600 dark:bg-charcoal-800 dark:text-camel-400 dark:hover:border-camel-600 dark:hover:bg-charcoal-700 dark:hover:text-camel-300"
+              aria-label="Открыть протокол в web.archive.org"
+              title="Открыть протокол в web.archive.org"
+            >
+              <img
+                src="/assets/web-archive-favicon.ico"
+                alt=""
+                className="h-5 w-5 rounded-full"
+                width={20}
+                height={20}
+                decoding="async"
+              />
+              <span>Archive</span>
+            </a>
+          )}
+        </div>
 
-      <div className="grid gap-4 border-t border-old-money-200 pt-4 dark:border-charcoal-600 md:grid-cols-2">
-        {event.host_club && (
-          <DetailField label="Клуб-организатор">{event.host_club}</DetailField>
-        )}
+        <BreedGroupDivider />
 
-        {event.judges && (
-          <DetailField label="Судьи">{event.judges}</DetailField>
-        )}
+        <div className="mb-4 grid grid-cols-2 gap-2 sm:grid-cols-4">
+          <StatPill value={dateText} label="дата" />
+          <StatPill value={participantsCount} label="собак" />
+          <StatPill value={breedsCount} label="пород" />
+          <StatPill
+            value={
+              locationText.length > 40 ? (
+                <HoverTooltip label={locationText} placement="bottom">
+                  <span className="line-clamp-2 cursor-help text-sm leading-snug md:text-base">{locationText}</span>
+                </HoverTooltip>
+              ) : (
+                <span className="text-sm leading-snug md:text-base">{locationText}</span>
+              )
+            }
+            label="место"
+            valueClassName="text-sm md:text-base"
+            className="col-span-2 sm:col-span-1"
+          />
+        </div>
 
-        {trackSchemes.length > 0 && (
-          <DetailField label="Схемы трасс">
-            <div className="flex flex-wrap gap-2">
-              {trackSchemes.map((scheme, index) => (
-                <span key={index} className="group relative inline-block">
-                  <span className="inline-block cursor-pointer rounded-lg border border-old-money-200 bg-white px-2.5 py-1 text-xs font-medium text-camel-800 transition-colors hover:border-camel-300 hover:bg-camel-50 dark:border-charcoal-500 dark:bg-charcoal-700 dark:text-camel-300 dark:hover:border-camel-700">
-                    {scheme.name}
-                    {scheme.length && ` (${scheme.length})`}
+        <div className="grid gap-4 border-t border-old-money-200 pt-4 dark:border-charcoal-600 md:grid-cols-2">
+          {event.host_club && (
+            <DetailField label="Клуб-организатор">{event.host_club}</DetailField>
+          )}
+
+          {event.judges && (
+            <DetailField label="Судьи">{event.judges}</DetailField>
+          )}
+
+          {trackSchemes.length > 0 && (
+            <DetailField label="Схемы трасс">
+              <div className="flex flex-wrap gap-2">
+                {trackSchemes.map((scheme, index) => (
+                  <span key={index} className="group relative inline-block">
+                    <span className="inline-block cursor-pointer rounded-lg border border-old-money-200 bg-white px-2.5 py-1 text-xs font-medium text-camel-800 transition-colors hover:border-camel-300 hover:bg-camel-50 dark:border-charcoal-500 dark:bg-charcoal-700 dark:text-camel-300 dark:hover:border-camel-700">
+                      {scheme.name}
+                      {scheme.length && ` (${scheme.length})`}
+                    </span>
+                    {scheme.url && (
+                      <div className="absolute left-0 top-full z-50 mt-2 hidden w-max max-w-[90vw] rounded-lg border border-old-money-200 bg-white p-2 shadow-xl group-hover:block dark:border-charcoal-600 dark:bg-charcoal-800 md:max-w-md">
+                        <img
+                          src={scheme.url}
+                          alt={scheme.name}
+                          className="max-h-96 max-w-[90vw] object-contain md:max-w-md"
+                          onError={(e) => {
+                            (e.target as HTMLImageElement).style.display = 'none'
+                          }}
+                        />
+                      </div>
+                    )}
                   </span>
-                  {scheme.url && (
-                    <div className="absolute left-0 top-full z-50 mt-2 hidden w-max max-w-[90vw] rounded-lg border border-old-money-200 bg-white p-2 shadow-xl group-hover:block dark:border-charcoal-600 dark:bg-charcoal-800 md:max-w-md">
-                      <img
-                        src={scheme.url}
-                        alt={scheme.name}
-                        className="max-h-96 max-w-[90vw] object-contain md:max-w-md"
-                        onError={(e) => {
-                          (e.target as HTMLImageElement).style.display = 'none'
-                        }}
-                      />
-                    </div>
-                  )}
-                </span>
-              ))}
-            </div>
-          </DetailField>
-        )}
+                ))}
+              </div>
+            </DetailField>
+          )}
+        </div>
       </div>
     </div>
   )

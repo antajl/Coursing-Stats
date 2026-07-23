@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Check, Copy, Mail, MessageCircle, Send } from 'lucide-react'
+import { GUIDE_SITE_FAQS } from '../guideFaqs'
 import { ExternalHref, SectionCard } from './GuideUi'
 
 function ContactLink({
@@ -75,18 +76,49 @@ function DiscordContact() {
   )
 }
 
+const AUDIENCE = [
+  {
+    title: 'Владельцам и заводчикам',
+    text: 'Сводка по собаке: старты, оценки, медали, выставочные награды и рекорды Донино — в одном профиле со ссылками на исходные протоколы.',
+  },
+  {
+    title: 'Клубам и секциям',
+    text: 'Рейтинги сезона и карьеры, статистика судей, сравнение пород — без ручной сводки таблиц из разрозненных HTML.',
+  },
+  {
+    title: 'Судьям и аналитикам',
+    text: 'История оценок и дисциплины в цифрах; справочник по титулам, протоколам и формуле индекса CS.',
+  },
+] as const
+
 export default function SiteTab() {
   return (
     <div className="space-y-4">
       <SectionCard title="Что такое Coursing Stats">
         <p>
-          Некоммерческий агрегатор статистики: результаты соревнований с procoursing.ru (курсинг, БЗМП, бега борзых)
-          и рекорды полигона Донино. Проект не связан с ProCoursing и РКФ.
+          Некоммерческий агрегатор статистики: результаты соревнований с procoursing.ru (курсинг, БЗМП, бега борзых),
+          выставки РКФ и рекорды полигона Донино. Проект не связан с ProCoursing и РКФ.
         </p>
         <p className="text-[13px] text-charcoal-600 dark:text-charcoal-300">
-          Данные обновляются из открытых протоколов; рейтинг и формула индекса CS — во вкладке{' '}
-          <strong>«Рейтинг»</strong> этого справочника.
+          Данные из открытых протоколов; как устроен рейтинг и индекс CS — во вкладке <strong>«Рейтинг»</strong>.
+          Календарь соревнований — на procoursing.ru, выставок — на rkf.online.
         </p>
+      </SectionCard>
+
+      <SectionCard title="Кому полезен сайт">
+        <div className="grid gap-2 md:grid-cols-3">
+          {AUDIENCE.map((item) => (
+            <div
+              key={item.title}
+              className="rounded-lg border border-old-money-200 bg-old-money-50/60 px-4 py-3 dark:border-charcoal-600 dark:bg-charcoal-800/50"
+            >
+              <p className="text-[10px] font-semibold uppercase tracking-wide text-old-money-500 dark:text-old-money-400">
+                {item.title}
+              </p>
+              <p className="mt-1.5 text-[13px] leading-snug text-charcoal-700 dark:text-charcoal-200">{item.text}</p>
+            </div>
+          ))}
+        </div>
       </SectionCard>
 
       <SectionCard title="Связь с автором">
@@ -119,6 +151,17 @@ export default function SiteTab() {
             <ExternalHref href="https://rkf.org.ru/dressirovka-i-sport/polozhenija/">Положения РКФ</ExternalHref>
           </li>
         </ul>
+      </SectionCard>
+
+      <SectionCard title="Частые вопросы">
+        <dl className="space-y-4">
+          {GUIDE_SITE_FAQS.map((faq) => (
+            <div key={faq.question}>
+              <dt className="font-semibold text-charcoal-900 dark:text-charcoal-100">{faq.question}</dt>
+              <dd className="mt-1 text-[13px] text-charcoal-600 dark:text-charcoal-300">{faq.answer}</dd>
+            </div>
+          ))}
+        </dl>
       </SectionCard>
     </div>
   )

@@ -4,11 +4,6 @@ import DoninoColumnPlaque, { DoninoColumnShell } from '../SpeedRecords/DoninoCol
 import CoursingRatingHint from './CoursingRatingHint'
 import { useInfiniteScroll } from '../../hooks/useInfiniteScroll'
 
-const COURSING_RANKING_OPTIONS = [
-  { value: 'score', label: 'очки' },
-  { value: 'placement', label: 'места' },
-] as const
-
 function CoursingRankingToggle({
   value,
   onChange,
@@ -17,6 +12,7 @@ function CoursingRankingToggle({
   onChange: (tab: 'placement' | 'score') => void
 }) {
   const scoreActive = value === 'score'
+  const placementActive = value === 'placement'
 
   return (
     <div
@@ -24,50 +20,43 @@ function CoursingRankingToggle({
       aria-label="Рейтинг курсинга"
       className="inline-flex rounded-md bg-old-money-200/45 p-0.5 dark:bg-charcoal-700/70"
     >
-      {COURSING_RANKING_OPTIONS.map((option) =>
-        option.value === 'score' ? (
-          <span
-            key={option.value}
-            className={
-              scoreActive
-                ? 'inline-flex items-center gap-0.5 rounded bg-cream-50/90 pl-2.5 pr-0.5 py-0.5 dark:bg-charcoal-600'
-                : 'inline-flex items-center gap-0.5 rounded pl-2.5 pr-0.5 py-0.5'
-            }
-          >
-            <button
-              type="button"
-              aria-pressed={scoreActive}
-              onClick={() => onChange('score')}
-              className={
-                scoreActive
-                  ? 'text-[11px] font-semibold lowercase text-charcoal-800 dark:text-charcoal-100'
-                  : 'text-[11px] font-medium lowercase text-old-money-600 transition-colors hover:text-charcoal-700 dark:text-charcoal-400 dark:hover:text-charcoal-200'
-              }
-            >
-              {option.label}
-            </button>
-            <span
-              className="mx-0.5 h-3 w-px shrink-0 bg-old-money-300/70 dark:bg-charcoal-500"
-              aria-hidden
-            />
-            <CoursingRatingHint embedded />
-          </span>
-        ) : (
-          <button
-            key={option.value}
-            type="button"
-            aria-pressed={value === option.value}
-            onClick={() => onChange(option.value)}
-            className={
-              value === option.value
-                ? 'rounded px-2.5 py-0.5 text-[11px] font-semibold lowercase text-charcoal-800 bg-cream-50/90 dark:bg-charcoal-600 dark:text-charcoal-100'
-                : 'rounded px-2.5 py-0.5 text-[11px] font-medium lowercase text-old-money-600 transition-colors hover:text-charcoal-700 dark:text-charcoal-400 dark:hover:text-charcoal-200'
-            }
-          >
-            {option.label}
-          </button>
-        ),
-      )}
+      <span
+        className={
+          scoreActive
+            ? 'inline-flex items-center gap-0.5 rounded bg-cream-50/90 pl-2.5 pr-0.5 py-0.5 dark:bg-charcoal-600'
+            : 'inline-flex items-center gap-0.5 rounded pl-2.5 pr-0.5 py-0.5'
+        }
+      >
+        <button
+          type="button"
+          aria-pressed={scoreActive}
+          onClick={() => onChange('score')}
+          className={
+            scoreActive
+              ? 'text-[11px] font-semibold lowercase text-charcoal-800 dark:text-charcoal-100'
+              : 'text-[11px] font-medium lowercase text-old-money-600 transition-colors hover:text-charcoal-700 dark:text-charcoal-400 dark:hover:text-charcoal-200'
+          }
+        >
+          очки
+        </button>
+        <span
+          className="mx-0.5 h-3 w-px shrink-0 bg-old-money-300/70 dark:bg-charcoal-500"
+          aria-hidden
+        />
+        <CoursingRatingHint embedded />
+      </span>
+      <button
+        type="button"
+        aria-pressed={placementActive}
+        onClick={() => onChange('placement')}
+        className={
+          placementActive
+            ? 'rounded px-2.5 py-0.5 text-[11px] font-semibold lowercase text-charcoal-800 bg-cream-50/90 dark:bg-charcoal-600 dark:text-charcoal-100'
+            : 'rounded px-2.5 py-0.5 text-[11px] font-medium lowercase text-old-money-600 transition-colors hover:text-charcoal-700 dark:text-charcoal-400 dark:hover:text-charcoal-200'
+        }
+      >
+        места
+      </button>
     </div>
   )
 }

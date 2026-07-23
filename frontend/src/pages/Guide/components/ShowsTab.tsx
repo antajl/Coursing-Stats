@@ -9,6 +9,7 @@ import {
   SHOW_OFFICIAL_SOURCES,
   SHOW_RANKS,
 } from '../showConstants'
+import { GUIDE_SHOWS_FAQS } from '../guideFaqs'
 import {
   AbbrTag,
   AbbreviationsTable,
@@ -48,11 +49,12 @@ export default function ShowsTab() {
           {
             tier: 'prestige',
             label: 'Крутые (ринг)',
-            badges: ['BIS', 'BIG', 'BOB', 'BOS', 'ЛЮ', 'ЛВ'],
+            badges: ['BIS', 'BIG', 'BIS-Ю', 'ЛПП', 'ЛППП', 'ЛЮ', 'ЛВ'],
             note: (
               <>
-                <ShowAbbr abbr="BIS" /> / <ShowAbbr abbr="BIG" /> / <ShowAbbr abbr="BOB" /> (ЛПП) /{' '}
-                <ShowAbbr abbr="BOS" /> (ЛППП) и лучшие в возрастной группе (ЛБ/ЛЩ/ЛЮ/ЛВ)
+                Главный ринг: <ShowAbbr abbr="BIS" /> / <ShowAbbr abbr="BIG" /> / <ShowAbbr abbr="BIS-Ю" />…
+                ; порода: <ShowAbbr abbr="ЛПП" /> / <ShowAbbr abbr="ЛППП" /> и ЛБ/ЛЩ/ЛЮ/ЛВ. BIS-Ю ≠ ЛЮ и ≠ ЮЧР
+                (для ЮЧР нужен JCAC).
               </>
             ),
           },
@@ -83,25 +85,41 @@ export default function ShowsTab() {
       <SectionCard title="Раздел «Выставки» на сайте">
         <p>
           В шапке: <strong>Выставки → Рейтинг / Судьи</strong>
-          (локально ещё <strong>Календарь</strong>). В карточке собаки — счётчики наград
-          по категориям, число выставок и место в рейтинге.
+          (локально ещё <strong>Календарь</strong> и страницы протоколов). В карточке собаки — счётчики наград
+          по категориям, число выставок и место в рейтинге. По умолчанию включён фильтр{' '}
+          <strong>текущего сезона</strong> (кнопка «Сезон YYYY»); снять её — рейтинг по всем загруженным годам.
+          При поиске по кличке сезон не режет выдачу.
+        </p>
+        <p className="text-[13px] text-charcoal-600 dark:text-charcoal-300">
+          На главной в колонке «Выставки» справа — не один ярлык вроде «BOB», а краткая причина места (например{' '}
+          <strong className="font-semibold text-charcoal-800 dark:text-charcoal-200">BOB ×18 · VCAC ×27</strong>
+          ): самые весомые награды сезона со счётчиками.
+        </p>
+        <p className="text-[13px] text-charcoal-600 dark:text-charcoal-300">
+          Локально на странице выставки: шапка (дата / счётчики / место + строка клуб · ранг · тип), блок{' '}
+          <strong>Главный ринг</strong> (вкладки BIS / возраст / BIG), каталог по породам. Клик по кличке открывает
+          профиль собаки. Оценки и «Неявка» нормализуются из PDF (в т.ч. переносы вроде «ЩЕ ОП Н», «Нея вка»).
+          Награды в таблице — чипы; при переполнении — прокрутка при наведении.
+        </p>
+        <p>
           В истории выставок в профиле ссылки ведут на{' '}
-          <ExternalHref href="https://lc.rkfshow.ru/">lc.rkfshow.ru</ExternalHref>
-          {' '}(на проде нет внутренних страниц протоколов выставок).
+          <ExternalHref href="https://rkf.online/">rkf.online</ExternalHref>
+          {' '}и PDF-отчёт при наличии; на проде нет внутренних страниц протоколов выставок.
         </p>
         <InfoCallout>
           Сертификаты <ShowAbbr abbr="CAC" /> и <ShowAbbr abbr="CACIB" /> — шаг к оформлению титулов в РКФ, но не
           равны титулу «Чемпион». <ShowAbbr abbr="BOB" /> и <ShowAbbr abbr="BIS" /> — награды конкретной выставки.
           На сайте рейтинг считает все распознанные токены протокола (CW, JCAC, ЧРКФ, КЧП, П «России»…) с весами из{' '}
           <code className="text-[11px]">show-award-ranking.ts</code>; кумулятивные титулы (C.I.B., Чемпион России)
-          оформляются в РКФ отдельно и в счётчиках одного дня не смешиваются.
+          оформляются в РКФ отдельно и в счётчиках одного дня не смешиваются. Бейджи главного ринга (
+          <ShowAbbr abbr="BIS" />, <ShowAbbr abbr="BIG" />, <ShowAbbr abbr="BIS-Ю" />…) попадают в рейтинг/профиль
+          только если распарсена ведомость type3 (сейчас 2025–2026; покрытие ещё не полное).
         </InfoCallout>
         <InfoCallout>
-          Породы в карточках — в обычном регистре (не капс РКФ). Где обиходное имя привычнее официального, показываем
-          оба: например <strong className="font-semibold text-charcoal-800 dark:text-charcoal-200">Левретка</strong>{' '}
-          и подпись «малая итальянская борзая» (то же для малинуа, кане-корсо, гальго). Разные типы шерсти и размеры
-          не склеиваем; если в протоколе тип не указан (голая «выжла» / «немецкая овчарка»), помечаем «тип не указан»,
-          а не относим к К-Ш.
+          Породы в карточках — в обычном регистре (не капс РКФ). Для привычных коротких имён показываем чип
+          («Левретка», «Малинуа», «Кане-корсо», «Гальго»); полное официальное название — в подсказке при наведении.
+          Разные типы шерсти и размеры не склеиваем; если в протоколе тип не указан (голая «выжла» / «немецкая
+          овчарка»), помечаем «тип не указан», а не относим к К-Ш.
         </InfoCallout>
       </SectionCard>
 
@@ -177,6 +195,17 @@ export default function ShowsTab() {
           abbrLookup={SHOW_ABBR_LOOKUP}
           refTag={<RefTag>Положение о сертификатных выставках РКФ; Положение о титулах РКФ</RefTag>}
         />
+      </SectionCard>
+
+      <SectionCard title="Частые вопросы">
+        <dl className="space-y-4">
+          {GUIDE_SHOWS_FAQS.map((faq) => (
+            <div key={faq.question}>
+              <dt className="font-semibold text-charcoal-900 dark:text-charcoal-100">{faq.question}</dt>
+              <dd className="mt-1 text-[13px] text-charcoal-600 dark:text-charcoal-300">{faq.answer}</dd>
+            </div>
+          ))}
+        </dl>
       </SectionCard>
     </div>
   )

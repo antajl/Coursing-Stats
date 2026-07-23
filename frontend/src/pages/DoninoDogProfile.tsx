@@ -195,7 +195,14 @@ export default function DoninoDogProfile() {
     }
     return `Рекорды Донино: ${data?.name} (${data?.breed}). Замер скорости и бега борзых 350 м.`
   }, [seoFacts, data?.name, data?.breed])
-  const seoKeywords = useMemo(() => `${data?.name}, ${data?.breed}, рекорды Донино, замер скорости, бега борзых, 350 м, курсинг`, [data?.name, data?.breed])
+  const seoKeywords = useMemo(
+    () => `${data?.name}, ${data?.breed}, рекорды Донино, замер скорости, бега борзых, 350 м, курсинг`,
+    [data?.name, data?.breed],
+  )
+  const seoCanonical = useMemo(() => {
+    if (!name || !breed) return undefined
+    return `https://coursing-stats.ru/donino-dog/${encodeURIComponent(name)}/${encodeURIComponent(breed)}`
+  }, [name, breed])
 
   // Early returns (must be after all hooks)
   if (loading) {
@@ -226,7 +233,7 @@ export default function DoninoDogProfile() {
 
   return (
     <>
-      <SEO title={seoTitle} description={seoDescription} keywords={seoKeywords} />
+      <SEO title={seoTitle} description={seoDescription} keywords={seoKeywords} canonicalUrl={seoCanonical} />
     <div className="p-4 md:p-6">
       <div className="max-w-4xl mx-auto">
         <div ref={exportRef}>

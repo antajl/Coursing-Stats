@@ -30,7 +30,7 @@
 | Данные, indexes, enrich | **03-DATA.md** | ссылка |
 | Диагностика пустого рейтинга | **03a-DATA-DIAGNOSTICS.md** | ссылка |
 | Деплой, чеклисты | **20-OPERATIONS.md** | ссылка |
-| UI, маршруты | **04-FRONTEND.md** | ссылка |
+| UI, маршруты, **главная v2** | **04-FRONTEND.md** | ссылка |
 | SEO / sitemap | **07-SEO.md** | ссылка |
 | Донино модель/UI | **09-SPEED-RECORDS.md** | ссылка |
 | Донино пайплайн | **09a-DONINO-PIPELINE.md** | ссылка |
@@ -46,14 +46,15 @@
 |--------|----------|
 | Запуск, npm | [01-GETTING-STARTED.md](01-GETTING-STARTED.md), [20-OPERATIONS.md](20-OPERATIONS.md) |
 | Backend scripts, локальная разработка | [04-DEVELOPMENT.md](04-DEVELOPMENT.md) |
-| Фронтенд, компоненты, маршруты | **[04-FRONTEND.md](04-FRONTEND.md)** |
+| Фронтенд, компоненты, маршруты, главная | **[04-FRONTEND.md](04-FRONTEND.md)** |
 | Архитектура, стек | [02-ARCHITECTURE.md](02-ARCHITECTURE.md) |
 | Данные, админка, `data/v1/` | **[03-DATA.md](03-DATA.md)** |
 | Breed Archive / `pedigree_url` | [03-DATA.md](03-DATA.md) → «Breed Archive» |
 | Пустой рейтинг/судьи на проде | [03a-DATA-DIAGNOSTICS.md](03a-DATA-DIAGNOSTICS.md), [20-OPERATIONS.md](20-OPERATIONS.md) |
 | Белый экран / MIME JS после деплоя | [16-TROUBLESHOOTING.md](16-TROUBLESHOOTING.md), [20-OPERATIONS.md](20-OPERATIONS.md) → «Кэш фронта» |
 | Донино локально ≠ прод | [16-TROUBLESHOOTING.md](16-TROUBLESHOOTING.md), [09a-DONINO-PIPELINE.md](09a-DONINO-PIPELINE.md) |
-| Выставки: лимит 25 MB / шарды | **[SHOWS.md](SHOWS.md)**, кратко [03-DATA.md](03-DATA.md) → «Выставки» |
+| Выставки: PDF / CDN / UI | **[SHOWS.md](SHOWS.md)** |
+| Выставки: LC scrape (Playwright) | [SHOWS-RKF.md](SHOWS-RKF.md) → группы: [SHOWS-RKF-BREED-GROUPS.md](SHOWS-RKF-BREED-GROUPS.md) |
 | Локальный API (админка) | [05-API-REFERENCE.md](05-API-REFERENCE.md) |
 | UI, цвета, тёмная тема | [06-DESIGN-SYSTEM.md](06-DESIGN-SYSTEM.md) |
 | Фильтры рейтинга | [03-DATA.md](03-DATA.md) → «Породы в UI», [18-CODE-PATTERNS.md](18-CODE-PATTERNS.md) |

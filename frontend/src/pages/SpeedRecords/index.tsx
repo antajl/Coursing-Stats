@@ -1,6 +1,7 @@
 import { useMemo, useEffect } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { SEO } from '../../components/SEO'
+import DoninoAttribution from '../../components/DoninoAttribution'
 import { useYandexGoal } from '../../components/YandexMetrica'
 import { useSpeedRecordsPage } from './useSpeedRecordsPage'
 import DoninoPageToolbar from './DoninoPageToolbar'
@@ -45,11 +46,13 @@ function SpeedRecords() {
   return (
     <div className="space-y-6">
       <SEO
-        title="Рекорды скорости"
-        description="Рекорды скорости Донино: замер скорости во время курсинга и бега борзых на 350 метров. Таблица рекордов по породам, статистика по годам, история достижений."
+        title="Рекорды Донино: замер скорости и бега 350 м"
+        description="Рекорды полигона Курсинг Донино: замер скорости (км/ч) и бега борзых на 350 м (сек). Таблицы по породам, статистика и история."
         canonicalUrl="https://coursing-stats.ru/speed-records"
+        keywords="рекорды Донино, замер скорости, бега 350 м, курсинг Донино, скорость собаки"
       />
-      <div className="rounded-2xl border border-cream-300 bg-cream-50/90 px-4 py-3 shadow-xl backdrop-blur-lg dark:border-charcoal-700 dark:bg-charcoal-800/90 md:px-6 md:py-4">
+      <div className="relative rounded-2xl border border-cream-300 bg-cream-50/90 px-4 py-3 shadow-xl backdrop-blur-lg dark:border-charcoal-700 dark:bg-charcoal-800/90 md:px-6 md:py-4">
+        <DoninoAttribution variant="footnote" className="absolute right-0 top-0 z-10" />
         <DoninoPageToolbar
           view={view}
           searchQuery={page.searchQuery}

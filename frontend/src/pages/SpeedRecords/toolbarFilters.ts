@@ -132,11 +132,13 @@ export function buildTopDogsActiveFilterChips(
   onBreedChange: (value: string) => void,
   onMinStartsChange: (value: string) => void,
   onScoreFromChange: (value: string) => void,
-  onSpeedFromChange: (value: string) => void
+  onSpeedFromChange: (value: string) => void,
+  /** Current season chip is shown via the toolbar button — skip badge when it is the default. */
+  currentSeason?: string,
 ): ActiveFilterChip[] {
   const chips: ActiveFilterChip[] = []
 
-  if (filterYear) {
+  if (filterYear && filterYear !== currentSeason) {
     chips.push({ key: 'year', label: filterYear, onRemove: () => onYearChange('') })
   }
   if (filterBreed) {

@@ -1,6 +1,5 @@
 import { useState, useEffect, useMemo } from 'react'
 import SkeletonLoader from '../../components/SkeletonLoader'
-import RKFAttribution from '../../components/RKFAttribution'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
 import { getShowJudges, type ShowJudge } from '../../lib/staticData'
@@ -51,7 +50,7 @@ export default function ShowJudges() {
     <div className="max-w-full mx-auto space-y-4 pb-2 sm:pb-4">
       <PageToolbar
         bare
-        trailing={<RKFAttribution />}
+        topRowClassName="pr-28 md:pr-32"
         activeFilterChips={activeFilterChips}
         onClearAllFilters={searchQuery ? handleResetFilters : undefined}
         filters={

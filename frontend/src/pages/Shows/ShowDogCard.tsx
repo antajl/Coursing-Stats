@@ -5,6 +5,7 @@ import { DOG_CARD_HEIGHT_CLASS } from '../../components/DogCard'
 import { parseDogName } from '../../lib/dogName'
 import { displayBreed } from '../../lib/breedMapping'
 import { showYearBadge } from '../../lib/season'
+import { showDogProfilePath } from '../../lib/showDogProfilePath'
 import { renderShowAwardChips } from '../../lib/awardChipRender'
 import {
   groupShowAwardsByCategory,
@@ -53,9 +54,13 @@ interface ShowDogCardProps {
   filterYear?: string
 }
 
-/** Оценка ширины чипа «BADGE ×N» + gap. */
-export function estimateShowAwardChipWidth(badge: string, count: number): number {
-  const label = `${badge}×${count}`
+/** Оценка ширины чипа «BADGE» / «BADGE ×N» + gap. */
+export function estimateShowAwardChipWidth(
+  badge: string,
+  count: number,
+  showCounts = true,
+): number {
+  const label = showCounts ? `${badge}×${count}` : badge
   // Чуть с запасом: text-[10px] + padding + gap
   return Math.ceil(label.length * 6.6 + 16 + 4)
 }
@@ -65,8 +70,10 @@ export function maxShowAwardsForWidth(
   width: number,
   titles: ShowTitleCounts,
   awards: ReturnType<typeof presentShowAwards>,
+  opts?: { showCounts?: boolean },
 ): number {
   if (awards.length === 0 || width <= 0) return awards.length
+  const showCounts = opts?.showCounts !== false
   const groups = groupShowAwardsByCategory(awards)
   const flat = groups.flatMap((g) => g.keys)
   const sepW = 8
@@ -78,7 +85,11 @@ export function maxShowAwardsForWidth(
   let prevCat: string | null = null
   for (const key of flat) {
     const cat = SHOW_AWARD_CATEGORY[key]
-    const chip = estimateShowAwardChipWidth(SHOW_AWARD_BADGE[key], titles[key] || 0)
+    const chip = estimateShowAwardChipWidth(
+      SHOW_AWARD_BADGE[key],
+      titles[key] || 0,
+      showCounts,
+    )
     const sep = prevCat && prevCat !== cat ? sepW : 0
     const next = used + sep + chip
     const remaining = flat.length - count - 1
@@ -159,8 +170,7 @@ export default function ShowDogCard({ dog, rank, filterYear = '' }: ShowDogCardP
   const breedDisplay = displayBreed(dog.breed)
   const yearBadge = showYearBadge(dog, filterYear)
 
-  const href =
-    dog.competition_dog_id != null ? `/dog/${dog.competition_dog_id}` : `/dog/${dog.id}`
+  const href = showDogProfilePath(dog)
 
   return (
     <Link
@@ -202,11 +212,6 @@ export default function ShowDogCard({ dog, rank, filterYear = '' }: ShowDogCardP
             >
               {breedDisplay.primary}
             </span>
-            {breedDisplay.secondary ? (
-              <div className="mt-0.5 truncate text-[9px] font-medium leading-tight text-charcoal-400 dark:text-charcoal-500">
-                {breedDisplay.secondary}
-              </div>
-            ) : null}
           </div>
           {yearBadge && (
             <span

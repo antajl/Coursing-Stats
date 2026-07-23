@@ -1,20 +1,30 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import { Icons } from '../lib/icons'
 import { SEO } from '../components/SEO'
 import { JsonLd, organizationSchema, webSiteSchema } from '../components/JsonLd'
-import HeroIntro, { HeroStatsBar, type HeroStats } from '../components/Hero'
+import type { HeroStats, HeroShowStats } from '../components/Hero'
 import HomeEventRow from '../components/HomeEventRow'
 import DoninoHomeRecordRow from '../components/DoninoHomeRecordRow'
+import HomeSeasonTopRow from '../components/HomeSeasonTopRow'
 import MedalTally from '../components/MedalTally'
-import OwnerCrownName from '../components/OwnerCrownName'
-import PodiumRankMark, { type PodiumPlace } from '../components/PodiumRankMark'
-import HomePodiumSectionHead from '../components/HomePodiumSectionHead'
-import { type HomeRankingTab } from '../components/HomeRankingTabs'
+import HomeRankingTabs, { type HomeRankingTab } from '../components/HomeRankingTabs'
+import HomeDogSearch from '../components/HomeDogSearch'
+import HomeHeroStage from '../components/HomeHeroStage'
+import HomeShowEventRow, { pickFeaturedShows } from '../components/HomeShowEventRow'
 import { parseDogName } from '../lib/dogName'
+import { showDogProfilePath } from '../lib/showDogProfilePath'
 import { api } from '../services/api'
+import {
+  getShowCalendar,
+  getShowHomeTop,
+  type ShowHomeTopDog,
+  type ShowRkfCalendarEntry,
+} from '../lib/staticData'
+import { formatShowRankingReason } from '../../../backend/lib/show-award-ranking'
 import { type CalendarEvent } from './Events/eventListUtils'
 import { useGsapRiseIn } from '../hooks/useGsapRiseIn'
+import StatCounter from '../components/StatCounter'
 
 interface TopDog {
   dog_id: number
@@ -56,6 +66,9 @@ interface CoursingRecord {
 type RankingTab = HomeRankingTab
 
 const CURRENT_SEASON = new Date().getFullYear()
+const CONTACT_EMAIL = 'antajl@yandex.ru'
+const DISCLAIMER =
+  'Независимая статистика по открытым протоколам. Не является официальным рейтингом РКФ.'
 
 function normalizeStats(raw: Record<string, unknown> | null | undefined): HeroStats | null {
   if (!raw) return null
@@ -97,39 +110,30 @@ function pickFeaturedEvents(events: CalendarEvent[], count = 3): CalendarEvent[]
   return combined.slice(0, count)
 }
 
-function SectionDivider({
+function SectionHead({
   icon: Icon,
   title,
+  href,
+  linkLabel,
 }: {
   icon: typeof Icons.calendar
   title: string
+  href?: string
+  linkLabel?: string
 }) {
   return (
-    <div className="home-section-head" data-rise>
-      <div className="divider home-divider">
+    <div className="home-v2-section-head" data-rise>
+      <div className="home-v2-section-title">
         <Icon className="h-5 w-5 shrink-0 text-camel-500" strokeWidth={1.75} />
-        <div className="home-divider-text">
-          <h2>{title}</h2>
-        </div>
-        <div className="line" />
+        <h2>{title}</h2>
       </div>
+      {href && linkLabel ? (
+        <Link to={href} className="home-v2-section-link">
+          {linkLabel}
+        </Link>
+      ) : null}
     </div>
   )
-}
-
-function podiumSlots<T>(items: T[]): { item: T; place: number; isGold: boolean }[] {
-  if (items.length >= 3) {
-    return [
-      { item: items[1], place: 2, isGold: false },
-      { item: items[0], place: 1, isGold: true },
-      { item: items[2], place: 3, isGold: false },
-    ]
-  }
-  return items.map((item, i) => ({ item, place: i + 1, isGold: i === 0 }))
-}
-
-function rankCoursingRecords(records: CoursingRecord[]): CoursingRecord[] {
-  return [...records].sort((a, b) => a.time_seconds - b.time_seconds).slice(0, 3)
 }
 
 function formatStarts(n?: number | null): string | null {
@@ -140,51 +144,6 @@ function formatStarts(n?: number | null): string | null {
   if (mod10 === 1) return `${n} старт`
   if (mod10 >= 2 && mod10 <= 4) return `${n} старта`
   return `${n} стартов`
-}
-
-function PodiumSkeleton() {
-  return (
-    <div className="podium-preview">
-      {[2, 1, 3].map((place) => (
-        <div
-          key={place}
-          className={`pod-card animate-pulse place-${place} ${place === 1 ? 'gold' : ''}`}
-          aria-hidden
-        >
-          <PodiumRankMark place={place as PodiumPlace} size={place === 1 ? 'lg' : 'md'} muted />
-          <div className="mx-auto mt-2 h-4 w-3/4 rounded bg-old-money-200 dark:bg-charcoal-600" />
-          <div className="mx-auto mt-2 h-3 w-1/2 rounded bg-old-money-100 dark:bg-charcoal-700" />
-          <div className="mx-auto mt-3 h-3 w-2/3 rounded bg-old-money-100 dark:bg-charcoal-700" />
-        </div>
-      ))}
-    </div>
-  )
-}
-
-function DoninoListSkeleton() {
-  return (
-    <div className="donino-home-columns">
-      {['Замер', 'Бега 350 м'].map((title) => (
-        <div key={title} className="donino-home-col">
-          <div className="donino-home-col-panel">
-            <div className="donino-home-col-title">{title}</div>
-            <div className="donino-home-list">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="donino-home-row donino-home-row--skeleton animate-pulse" aria-hidden>
-                <div className="h-5 w-12 rounded bg-old-money-200 dark:bg-charcoal-600" />
-                <div className="flex-1 space-y-1.5">
-                  <div className="h-4 w-2/3 rounded bg-old-money-200 dark:bg-charcoal-600" />
-                  <div className="h-3 w-1/3 rounded bg-old-money-100 dark:bg-charcoal-700" />
-                </div>
-                <div className="h-7 w-16 rounded-full bg-old-money-200 dark:bg-charcoal-600" />
-              </div>
-            ))}
-          </div>
-          </div>
-        </div>
-      ))}
-    </div>
-  )
 }
 
 function formatScore(value?: number | null): string {
@@ -202,15 +161,59 @@ function formatSpeed(value?: number | string | null): string {
   return Number(value).toFixed(1)
 }
 
+function rankCoursingRecords(records: CoursingRecord[]): CoursingRecord[] {
+  return [...records].sort((a, b) => a.time_seconds - b.time_seconds).slice(0, 3)
+}
+
+function competitionMetric(dog: TopDog, tab: RankingTab): ReactNode {
+  if (tab === 'placement') {
+    return (
+      <MedalTally size="sm" nowrap gold={dog.gold} silver={dog.silver} bronze={dog.bronze} />
+    )
+  }
+  if (tab === 'speed') {
+    return `${formatSpeed(dog.best_speed)} км/ч`
+  }
+  return (
+    <>
+      {formatIndex(dog.rating_score ?? dog.avg_judge_score)}
+      <span className="donino-home-metric-unit"> индекс</span>
+    </>
+  )
+}
+
+function competitionMeta(dog: TopDog, tab: RankingTab): string | undefined {
+  if (tab === 'placement') return formatStarts(dog.total_starts) || undefined
+  if (tab === 'speed') {
+    const parts: string[] = []
+    if (dog.avg_speed != null) parts.push(`средн. ${formatSpeed(dog.avg_speed)}`)
+    const starts = formatStarts(dog.total_starts)
+    if (starts) parts.push(starts)
+    return parts.length ? parts.join(' · ') : undefined
+  }
+  const parts: string[] = []
+  if (dog.avg_judge_score != null) parts.push(`средн. ${formatScore(dog.avg_judge_score)}`)
+  const starts = formatStarts(dog.total_starts)
+  if (starts) parts.push(starts)
+  return parts.length ? parts.join(' · ') : undefined
+}
+
+function showHomeMetric(dog: ShowHomeTopDog): string {
+  return formatShowRankingReason(dog.titles, 2) || dog.best_award || '—'
+}
+
 export default function Home() {
   const pageRef = useRef<HTMLDivElement>(null)
   const [stats, setStats] = useState<HeroStats | null>(null)
+  const [showStats, setShowStats] = useState<HeroShowStats | null>(null)
   const [featuredEvents, setFeaturedEvents] = useState<CalendarEvent[]>([])
+  const [featuredShows, setFeaturedShows] = useState<ShowRkfCalendarEntry[]>([])
   const [topPlacement, setTopPlacement] = useState<TopDog[]>([])
   const [topScore, setTopScore] = useState<TopDog[]>([])
   const [topSpeed, setTopSpeed] = useState<TopDog[]>([])
   const [doninoSpeedRecords, setDoninoSpeedRecords] = useState<SpeedRecord[]>([])
   const [doninoCoursingRecords, setDoninoCoursingRecords] = useState<CoursingRecord[]>([])
+  const [topShowDogs, setTopShowDogs] = useState<ShowHomeTopDog[]>([])
   const [rankingTab, setRankingTab] = useState<RankingTab>('score')
   const [loading, setLoading] = useState(true)
 
@@ -219,18 +222,24 @@ export default function Home() {
       try {
         const [
           statsData,
+          showStatsData,
           eventsData,
+          showsCalData,
           placementData,
           scoreData,
           seasonSpeedData,
+          showHomeTopData,
           doninoSpeedData,
           doninoCoursingData,
         ] = await Promise.all([
           api.getStats(),
+          api.getShowHeroStats(),
           api.getEvents(),
+          getShowCalendar(String(CURRENT_SEASON)),
           api.getTopPlacement(String(CURRENT_SEASON), '', 0, 'gold', 3, 0),
           api.getTopScore(String(CURRENT_SEASON), '', 0, 'rating_score', 3, 0),
           api.getTopSpeed(String(CURRENT_SEASON), '', 0, 'best_speed', 3, 0),
+          getShowHomeTop(String(CURRENT_SEASON)),
           api.getSpeedRecordsTopByBreed(3),
           api.getCoursingRecordsTopByBreed(3),
         ])
@@ -238,37 +247,46 @@ export default function Home() {
         if (statsData.success) {
           setStats(normalizeStats(statsData.data as Record<string, unknown>))
         }
-
+        if (showStatsData.success && showStatsData.data) {
+          const s = showStatsData.data as HeroShowStats
+          setShowStats({
+            exhibitions: Number(s.exhibitions) || 0,
+            appearances: Number(s.appearances) || 0,
+            dogs: Number(s.dogs) || 0,
+            judges: Number(s.judges) || 0,
+            breeds: Number(s.breeds) || 0,
+          })
+        }
         if (eventsData.success && Array.isArray(eventsData.data)) {
           setFeaturedEvents(pickFeaturedEvents(eventsData.data as CalendarEvent[]))
         }
-
+        if (showsCalData.success && Array.isArray(showsCalData.data)) {
+          setFeaturedShows(pickFeaturedShows(showsCalData.data, 3))
+        }
         if (placementData.success) {
           setTopPlacement(extractTopDogs(placementData.data).slice(0, 3))
         }
-
         if (scoreData.success) {
           setTopScore(extractTopDogs(scoreData.data).slice(0, 3))
         }
-
         if (seasonSpeedData.success) {
           setTopSpeed(extractTopDogs(seasonSpeedData.data).slice(0, 3))
         }
-
+        if (showHomeTopData.success && Array.isArray(showHomeTopData.data)) {
+          setTopShowDogs(showHomeTopData.data.slice(0, 3))
+        }
         if (doninoSpeedData.success && Array.isArray(doninoSpeedData.data)) {
           setDoninoSpeedRecords(doninoSpeedData.data as SpeedRecord[])
         }
-
         if (doninoCoursingData.success && Array.isArray(doninoCoursingData.data)) {
           setDoninoCoursingRecords(doninoCoursingData.data as CoursingRecord[])
         }
       } catch (error) {
-        console.error('Failed to fetch home data:', error)
+        console.error('Failed to fetch home preview data:', error)
       } finally {
         setLoading(false)
       }
     }
-
     fetchData()
   }, [])
 
@@ -277,259 +295,339 @@ export default function Home() {
   const doninoCoursingRanked = rankCoursingRecords(doninoCoursingRecords)
   const showDoninoSection =
     loading || doninoSpeedRecords.length > 0 || doninoCoursingRecords.length > 0
+  const showSeasonSection = loading || activeDogs.length > 0 || topShowDogs.length > 0
 
-  // Wave 1: hero block on mount (eyebrow → CTA → events)
   useGsapRiseIn({
     scope: pageRef,
-    selector: '.hero-dashboard [data-rise]',
-    stagger: 0.055,
-    duration: 0.36,
-  })
-
-  // Wave 2: sections below once data is ready (single pass, no re-run on tab switch)
-  useGsapRiseIn({
-    scope: pageRef,
-    selector: '.home-below-fold [data-rise]',
-    enabled: !loading,
-    delay: 0.08,
+    selector: '.home-v2 [data-rise]',
     stagger: 0.05,
     duration: 0.36,
+    enabled: !loading,
+    delay: 0.06,
     dependencies: [loading],
   })
 
   return (
-    <div className="wrap" ref={pageRef}>
+    <div className="home-v2" ref={pageRef}>
       <SEO
-        title="Главная"
-        description="Coursing Stats — статистика соревнований по курсингу и бегам борзых в России. Календарь событий, результаты, рейтинги собак, рекорды скорости, статистика судей. Полная база данных соревнований 2015-2026."
+        title="Статистика курсинга, бегов и выставок собак"
+        description="Coursing Stats — вся карьера вашей собаки в одном месте: выступления, награды, рейтинги и экспертные оценки. Курсинг, бега и выставки с 2015 года."
         canonicalUrl="https://coursing-stats.ru/"
+        keywords="курсинг, бега борзых, статистика курсинга, рейтинг собак, выставки РКФ"
       />
       <JsonLd data={organizationSchema} />
       <JsonLd data={webSiteSchema} />
-      <section className="hero-dashboard">
-        <HeroIntro />
-        <div className="hero-events" data-rise>
-          <div className="hero-events-head">
-            <h3>Ближайшие события</h3>
-            <a
-              href="http://procoursing.ru/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hero-events-link"
-            >
-              Календарь на procoursing.ru →
-            </a>
-          </div>
-          <div className="hero-events-list">
-            {loading ? (
-              <>
-                {[1, 2, 3].map((i) => (
-                  <div key={i} className="home-event-row home-event-row--skeleton animate-pulse" aria-hidden>
+
+      <HomeHeroStage>
+        <div className="home-v2-hero-copy" data-rise>
+          <p className="home-v2-eyebrow">
+            <span>2015 — {CURRENT_SEASON}</span>
+            <span className="home-v2-eyebrow-sep" aria-hidden>
+              ·
+            </span>
+            <span>курсинг · БЗМП · бега · выставки</span>
+          </p>
+          <h1>
+            Статистика курсинга, бегов и <em>выставок</em>
+          </h1>
+          <p className="home-v2-lead">
+            Вся карьера вашей собаки — в одном месте. История выступлений, награды, рейтинги и
+            оценки судей.
+          </p>
+          <HomeDogSearch />
+        </div>
+      </HomeHeroStage>
+
+      <div className="wrap home-v2-body">
+      {/* Goal entries */}
+      <nav className="home-v2-entries" aria-label="Разделы" data-rise>
+        <a href="#home-v2-events" className="home-v2-entry">
+          <span className="home-v2-entry-num">01</span>
+          <span className="home-v2-entry-body">
+            <strong>Ближайшие старты</strong>
+            <span>Что будет на выходных</span>
+          </span>
+        </a>
+        <Link to="/competitions?tab=ranking" className="home-v2-entry">
+          <span className="home-v2-entry-num">02</span>
+          <span className="home-v2-entry-body">
+            <strong>Рейтинг соревнований</strong>
+            <span>Очки, места и скорость</span>
+          </span>
+        </Link>
+        <Link to="/shows" className="home-v2-entry">
+          <span className="home-v2-entry-num">03</span>
+          <span className="home-v2-entry-body">
+            <strong>Выставки</strong>
+            <span>Каталоги и титулы РКФ</span>
+          </span>
+        </Link>
+        <Link to="/speed-records" className="home-v2-entry">
+          <span className="home-v2-entry-num">04</span>
+          <span className="home-v2-entry-body">
+            <strong>Курсинг Донино</strong>
+            <span>Замер и бега 350 м</span>
+          </span>
+        </Link>
+      </nav>
+
+      {/* 4. Events: competitions + shows */}
+      <section id="home-v2-events" className="home-v2-block">
+        <SectionHead icon={Icons.calendar} title="Ближайшие события" />
+        <div className="home-v2-events-grid" data-rise>
+          <div className="home-v2-events-col">
+            <div className="home-v2-col-head">Соревнования</div>
+            <div className="home-v2-events">
+              {loading ? (
+                [1, 2, 3].map((i) => (
+                  <div
+                    key={i}
+                    className="home-event-row home-event-row--skeleton animate-pulse"
+                    aria-hidden
+                  >
                     <div className="h-8 w-10 rounded bg-old-money-200 dark:bg-charcoal-600" />
                     <div className="flex-1 space-y-1.5">
                       <div className="h-3 w-4/5 rounded bg-old-money-200 dark:bg-charcoal-600" />
                       <div className="h-2.5 w-1/2 rounded bg-old-money-100 dark:bg-charcoal-700" />
                     </div>
                   </div>
-                ))}
-              </>
-            ) : featuredEvents.length > 0 ? (
-              featuredEvents.map((event) => (
-                <HomeEventRow key={event.id} event={event} compact />
-              ))
-            ) : (
-              <p className="hero-events-empty">Нет событий в календаре</p>
-            )}
+                ))
+              ) : featuredEvents.length > 0 ? (
+                featuredEvents.map((event) => (
+                  <HomeEventRow key={event.id} event={event} compact />
+                ))
+              ) : (
+                <p className="home-v2-empty">Нет событий в календаре</p>
+              )}
+              <a
+                href="http://procoursing.ru/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="home-v2-external"
+              >
+                Календарь на procoursing.ru →
+              </a>
+            </div>
+          </div>
+          <div className="home-v2-events-col">
+            <div className="home-v2-col-head">Выставки</div>
+            <div className="home-v2-events">
+              {loading ? (
+                [1, 2, 3].map((i) => (
+                  <div
+                    key={`s${i}`}
+                    className="home-event-row home-event-row--skeleton animate-pulse"
+                    aria-hidden
+                  >
+                    <div className="h-8 w-10 rounded bg-old-money-200 dark:bg-charcoal-600" />
+                    <div className="flex-1 space-y-1.5">
+                      <div className="h-3 w-4/5 rounded bg-old-money-200 dark:bg-charcoal-600" />
+                      <div className="h-2.5 w-1/2 rounded bg-old-money-100 dark:bg-charcoal-700" />
+                    </div>
+                  </div>
+                ))
+              ) : featuredShows.length > 0 ? (
+                featuredShows.map((ex) => (
+                  <HomeShowEventRow key={ex.id} exhibition={ex} />
+                ))
+              ) : (
+                <p className="home-v2-empty">Нет ближайших выставок</p>
+              )}
+              <Link to="/shows?tab=calendar" className="home-v2-external">
+                Календарь выставок →
+              </Link>
+            </div>
           </div>
         </div>
-        <HeroStatsBar stats={stats} loading={loading} />
       </section>
 
-      <div className="home-below-fold">
-      <HomePodiumSectionHead
-        title={`Топ сезона ${CURRENT_SEASON}`}
-        value={rankingTab}
-        onChange={setRankingTab}
-      />
-
-      {loading ? (
-        <PodiumSkeleton />
-      ) : activeDogs.length > 0 ? (
-        <>
-          <div className="podium-preview" data-rise>
-            {podiumSlots(activeDogs).map(({ item: dog, place, isGold }) => (
-              <Link
-                key={dog.dog_id}
-                to={`/dog/${dog.dog_id}`}
-                className={`pod-card place-${place} flex flex-col items-center no-underline text-inherit ${isGold ? 'gold order-first sm:order-none' : ''}`}
-              >
-                <PodiumRankMark place={place as PodiumPlace} size={isGold ? 'lg' : 'md'} />
-                {(() => {
-                  const { primary, secondary } = parseDogName(dog.name_lat, dog.name_ru)
-                  return (
-                    <>
-                      <OwnerCrownName
-                        name={primary}
-                        dogId={dog.dog_id}
-                        kind="competition"
-                      >
-                        <div className="dog-lat" title={primary}>{primary}</div>
-                      </OwnerCrownName>
-                      {secondary && <div className="dog-ru text-charcoal-400 dark:text-charcoal-500">{secondary}</div>}
-                    </>
-                  )
-                })()}
-                {dog.breed && <div className="pod-sub">{dog.breed}</div>}
-                {rankingTab === 'placement' ? (
-                  <>
-                    <MedalTally
-                      className="score pod-medals"
-                      size="xl"
-                      nowrap
-                      gold={dog.gold}
-                      silver={dog.silver}
-                      bronze={dog.bronze}
-                    />
-                    {formatStarts(dog.total_starts) && (
-                      <div className="pod-foot">{formatStarts(dog.total_starts)}</div>
-                    )}
-                  </>
-                ) : rankingTab === 'score' ? (
-                  <>
-                    <div className="score">
-                      {formatIndex(dog.rating_score ?? dog.avg_judge_score)}
-                      <span className="score-unit">индекс</span>
-                    </div>
-                    <div className="pod-foot pod-foot--grouped">
-                      {(dog.avg_judge_score != null || dog.best_judge_score != null) && (
-                        <span className="pod-foot-group">
-                          {dog.avg_judge_score != null && (
-                            <span>средн. <b>{formatScore(dog.avg_judge_score)}</b></span>
-                          )}
-                          {dog.avg_judge_score != null && dog.best_judge_score != null && (
-                            <span className="pod-foot-dot">·</span>
-                          )}
-                          {dog.best_judge_score != null && (
-                            <span>лучш. <b>{formatScore(dog.best_judge_score)}</b></span>
-                          )}
-                        </span>
-                      )}
-                      {formatStarts(dog.total_starts) && (
-                        <>
-                          <span className="pod-foot-divider" aria-hidden="true" />
-                          <span>старты <b>{dog.total_starts}</b></span>
-                        </>
-                      )}
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    <div className="score">
-                      {formatSpeed(dog.best_speed)}
-                      <span className="score-unit">км/ч</span>
-                    </div>
-                    <div className="pod-foot pod-foot--grouped">
-                      {dog.avg_speed != null && (
-                        <span>средн. <b>{formatSpeed(dog.avg_speed)}</b></span>
-                      )}
-                      {formatStarts(dog.total_starts) && (
-                        <>
-                          {dog.avg_speed != null && <span className="pod-foot-divider" aria-hidden="true" />}
-                          <span>старты <b>{dog.total_starts}</b></span>
-                        </>
-                      )}
-                    </div>
-                  </>
-                )}
-              </Link>
-            ))}
+      {/* 5. Compact scale */}
+      <section className="home-v2-scale" aria-label="Масштаб базы" data-rise>
+        <div className="home-v2-scale-primary">
+          <div className="home-v2-scale-item">
+            <div className="home-v2-scale-num">
+              {loading ? '—' : <StatCounter value={stats?.events ?? 0} />}
+            </div>
+            <div className="home-v2-scale-lbl">соревнований</div>
           </div>
-        </>
-      ) : (
-        <p className="text-sm text-charcoal-500 dark:text-charcoal-400">
-          Пока нет данных за {CURRENT_SEASON}.{' '}
-          <Link
-            to="/competitions?tab=ranking"
-            className="font-semibold text-camel-700 hover:underline dark:text-camel-400"
-          >
-            Открыть рейтинг
-          </Link>
-        </p>
-      )}
-
-      {showDoninoSection && (
-        <>
-          <SectionDivider icon={Icons.speed} title="Рекорды Донино" />
-          {loading ? (
-            <DoninoListSkeleton />
-          ) : doninoSpeedRecords.length > 0 || doninoCoursingRanked.length > 0 ? (
+          <div className="home-v2-scale-item">
+            <div className="home-v2-scale-num">
+              {loading ? '—' : <StatCounter value={showStats?.exhibitions ?? 0} />}
+            </div>
+            <div className="home-v2-scale-lbl">выставок</div>
+          </div>
+        </div>
+        <p className="home-v2-scale-secondary">
+          {!loading && stats ? (
             <>
-              <div>
-                <div className="donino-home-columns" data-rise>
-                  <div className="donino-home-col">
-                    <div className="donino-home-col-panel">
-                      <div className="donino-home-col-title">Замер</div>
-                      <div className="donino-home-list">
-                      {doninoSpeedRecords.length > 0 ? (
-                        doninoSpeedRecords.map((record) => (
-                          <DoninoHomeRecordRow
-                            key={`speed-${record.breed}-${record.name}`}
-                            mode="speed"
-                            name={record.name}
-                            breed={record.breed}
-                            sex={record.sex}
-                            date={record.date}
-                            status={record.status}
-                            history={record.history}
-                            speedKmh={record.speed_km_h}
-                          />
-                        ))
-                      ) : (
-                        <p className="donino-home-empty">Нет данных</p>
-                      )}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="donino-home-col">
-                    <div className="donino-home-col-panel">
-                      <div className="donino-home-col-title">Бега 350 м</div>
-                      <div className="donino-home-list">
-                      {doninoCoursingRanked.length > 0 ? (
-                        doninoCoursingRanked.map((record) => (
-                          <DoninoHomeRecordRow
-                            key={`coursing-${record.breed}-${record.name}`}
-                            mode="coursing"
-                            name={record.name}
-                            breed={record.breed}
-                            sex={record.sex}
-                            date={record.date}
-                            status={record.status}
-                            history={record.history}
-                            timeSeconds={record.time_seconds}
-                          />
-                        ))
-                      ) : (
-                        <p className="donino-home-empty">Нет данных</p>
-                      )}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              {stats.results.toLocaleString('ru-RU')} результатов ·{' '}
+              {stats.dogs.toLocaleString('ru-RU')} собак · {stats.breeds} пород ·{' '}
+              {stats.judges} судей
+              {showStats
+                ? ` · ${showStats.appearances.toLocaleString('ru-RU')} выставочных записей`
+                : ''}
             </>
           ) : (
-            <p className="text-sm text-charcoal-500 dark:text-charcoal-400">
-              Пока нет данных по рекордам Донино.{' '}
-              <Link
-                to="/speed-records"
-                className="font-semibold text-camel-700 hover:underline dark:text-camel-400"
-              >
-                Открыть рекорды
-              </Link>
+            'Загрузка…'
+          )}
+        </p>
+      </section>
+
+      {/* 6. Season top */}
+      {showSeasonSection ? (
+        <section className="home-v2-block">
+          <SectionHead
+            icon={Icons.medal}
+            title={`Топ сезона ${CURRENT_SEASON}`}
+            href="/competitions?tab=ranking"
+            linkLabel="Весь рейтинг →"
+          />
+          {loading ? (
+            <p className="home-v2-empty">Загрузка…</p>
+          ) : activeDogs.length > 0 || topShowDogs.length > 0 ? (
+            <div className="home-v2-columns" data-rise>
+              <div className="home-v2-col">
+                <div className="home-v2-col-head home-v2-col-head--tabs">
+                  <span>Соревнования</span>
+                  <HomeRankingTabs value={rankingTab} onChange={setRankingTab} />
+                </div>
+                <div className="donino-home-list">
+                  {activeDogs.length > 0 ? (
+                    activeDogs.map((dog) => {
+                      const { primary } = parseDogName(dog.name_lat, dog.name_ru)
+                      return (
+                        <HomeSeasonTopRow
+                          key={`comp-${dog.dog_id}`}
+                          to={`/dog/${dog.dog_id}`}
+                          name={primary}
+                          breed={dog.breed}
+                          dogId={dog.dog_id}
+                          meta={competitionMeta(dog, rankingTab)}
+                          metric={competitionMetric(dog, rankingTab)}
+                        />
+                      )
+                    })
+                  ) : (
+                    <p className="donino-home-empty">Нет данных</p>
+                  )}
+                </div>
+              </div>
+              <div className="home-v2-col">
+                <div className="home-v2-col-head">Выставки</div>
+                <div className="donino-home-list">
+                  {topShowDogs.length > 0 ? (
+                    topShowDogs.map((dog) => {
+                      const { primary } = parseDogName(dog.name_lat, dog.name_ru)
+                      const shows =
+                        dog.total_shows > 0
+                          ? `${dog.total_shows} ${dog.total_shows === 1 ? 'выставка' : dog.total_shows < 5 ? 'выставки' : 'выставок'}`
+                          : undefined
+                      return (
+                        <HomeSeasonTopRow
+                          key={`show-${dog.id}-${dog.breed}`}
+                          to={showDogProfilePath(dog)}
+                          name={primary}
+                          breed={dog.breed}
+                          sex={dog.sex}
+                          dogId={dog.competition_dog_id}
+                          meta={shows}
+                          metric={showHomeMetric(dog)}
+                        />
+                      )
+                    })
+                  ) : (
+                    <p className="donino-home-empty">Нет данных</p>
+                  )}
+                </div>
+              </div>
+            </div>
+          ) : (
+            <p className="home-v2-empty">
+              Пока нет данных за {CURRENT_SEASON}.{' '}
+              <Link to="/competitions?tab=ranking">Открыть рейтинг</Link>
             </p>
           )}
-        </>
+        </section>
+      ) : null}
+
+      {/* 7. Donino */}
+      {showDoninoSection && (
+        <section className="home-v2-block">
+          <SectionHead
+            icon={Icons.speed}
+            title="Рекорды Донино"
+            href="/speed-records"
+            linkLabel="Все рекорды →"
+          />
+          {loading ? (
+            <p className="home-v2-empty">Загрузка…</p>
+          ) : doninoSpeedRecords.length > 0 || doninoCoursingRanked.length > 0 ? (
+            <div className="home-v2-columns" data-rise>
+              <div className="home-v2-col">
+                <div className="home-v2-col-head">Замер</div>
+                <div className="donino-home-list">
+                  {doninoSpeedRecords.length > 0 ? (
+                    doninoSpeedRecords.map((record) => (
+                      <DoninoHomeRecordRow
+                        key={`speed-${record.breed}-${record.name}`}
+                        mode="speed"
+                        name={record.name}
+                        breed={record.breed}
+                        sex={record.sex}
+                        date={record.date}
+                        status={record.status}
+                        history={record.history}
+                        speedKmh={record.speed_km_h}
+                      />
+                    ))
+                  ) : (
+                    <p className="donino-home-empty">Нет данных</p>
+                  )}
+                </div>
+              </div>
+              <div className="home-v2-col">
+                <div className="home-v2-col-head">Бега 350 м</div>
+                <div className="donino-home-list">
+                  {doninoCoursingRanked.length > 0 ? (
+                    doninoCoursingRanked.map((record) => (
+                      <DoninoHomeRecordRow
+                        key={`coursing-${record.breed}-${record.name}`}
+                        mode="coursing"
+                        name={record.name}
+                        breed={record.breed}
+                        sex={record.sex}
+                        date={record.date}
+                        status={record.status}
+                        history={record.history}
+                        timeSeconds={record.time_seconds}
+                      />
+                    ))
+                  ) : (
+                    <p className="donino-home-empty">Нет данных</p>
+                  )}
+                </div>
+              </div>
+            </div>
+          ) : (
+            <p className="home-v2-empty">
+              Пока нет данных.{' '}
+              <Link to="/speed-records">Открыть рекорды</Link>
+            </p>
+          )}
+        </section>
       )}
+
+      {/* 8. Footer contact */}
+      <footer className="home-v2-foot" data-rise>
+        <p className="home-v2-disclaimer">{DISCLAIMER}</p>
+        <p className="home-v2-contact">
+          Вопросы и правки данных:{' '}
+          <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+        </p>
+        <p className="home-v2-sources">
+          Источники: протоколы соревнований (procoursing.ru), отчёты выставок РКФ, Донино.
+        </p>
+      </footer>
       </div>
     </div>
   )

@@ -1,0 +1,65 @@
+{
+  "schema": "coursing-stats/show-home-top-v1",
+  "year": "2021",
+  "dogs": [
+    {
+      "id": "89088821",
+      "name_lat": "NORDEN LIHT LISA",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ  Г-Ш",
+      "sex": "",
+      "total_shows": 5,
+      "best_award": "BOB",
+      "rank_score": 12915,
+      "titles": {
+        "BOB": 5,
+        "CACIB": 4,
+        "CAC": 4,
+        "CHRKF": 4,
+        "P_MOSCOW": 2,
+        "KCHK": 5
+      },
+      "competition_dog_id": null
+    },
+    {
+      "id": "786319180",
+      "name_lat": "OHOTNICHYI AZART ELEKTRA",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
+      "sex": "",
+      "total_shows": 5,
+      "best_award": "BOB",
+      "rank_score": 12415,
+      "titles": {
+        "BOB": 4,
+        "BOS": 1,
+        "CACIB": 4,
+        "CAC": 4,
+        "CHRKF": 4,
+        "P_MOSCOW": 2,
+        "KCHK": 5
+      },
+      "competition_dog_id": null
+    },
+    {
+      "id": "1588387588",
+      "name_lat": "L'END SHOW MASTERPIECE FOR ALL TIMES",
+      "name_ru": "",
+      "breed": "БЕДЛИНГТОН ТЕРЬЕР",
+      "sex": "",
+      "total_shows": 4,
+      "best_award": "BOB",
+      "rank_score": 10880,
+      "titles": {
+        "BOB": 4,
+        "CACIB": 4,
+        "CAC": 4,
+        "CHRKF": 4,
+        "P_MOSCOW": 2,
+        "KCHP": 4
+      },
+      "competition_dog_id": null
+    }
+  ],
+  "updated_at": "2026-07-23"
+}

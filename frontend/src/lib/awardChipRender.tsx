@@ -2,28 +2,44 @@ import type { ReactNode } from 'react'
 import HoverTooltip from '../components/ui/HoverTooltip'
 import {
   AWARD_CATEGORY_LABEL,
+  categoryBadgeClass,
   classifyCompetitionTitle,
-  classifyShowCumulativeTitle,
   groupItemsByCategory,
   type AwardCategory,
 } from './awardCategories'
 import {
   groupShowAwardsByCategory,
+  matchShowAwardToken,
   presentShowAwards,
   SHOW_AWARD_BADGE,
-  SHOW_AWARD_LABELS,
   type ShowAwardKey,
   type ShowTitleCounts,
 } from '../../../backend/lib/show-award-ranking'
-import { formatTitleLine, showAwardBadgeClass, titleBadgeClass, type DogTitle } from './qualificationTitles'
+import { compareCompetitionTitles } from '../../../backend/lib/competition-titles'
+import {
+  classifyDogProfileTitle,
+  compareDogProfileTitles,
+  formatTitleLine,
+  showAwardBadgeClass,
+  titleBadgeClass,
+  type DogTitle,
+} from './qualificationTitles'
+import { awardTooltipForKey, awardTooltipList } from './awardTooltip'
 
 const SEPARATOR_CLASS =
   'mx-0.5 h-3 w-px shrink-0 self-center bg-old-money-300 dark:bg-charcoal-500'
 
-function classifyProfileTitle(title: string): AwardCategory {
-  const cum = classifyShowCumulativeTitle(title)
-  if (cum) return cum
+/** Квалификация события / история — только competition. */
+function classifyEventTitle(title: string): AwardCategory {
   return classifyCompetitionTitle(title)
+}
+
+function sortTitlesByCoolness(titles: string[]): string[] {
+  return [...titles].sort(compareCompetitionTitles)
+}
+
+function sortDogTitlesByCoolness(titles: DogTitle[]): DogTitle[] {
+  return [...titles].sort((a, b) => compareDogProfileTitles(a.title, b.title))
 }
 
 /** Рендер чипов выставочных наград с разделителями категорий. */
@@ -33,6 +49,7 @@ export function renderShowAwardChips({
   maxVisible,
   size = 'sm',
   nowrap = false,
+  showCounts = true,
 }: {
   titles: ShowTitleCounts
   keys?: ShowAwardKey[]
@@ -40,6 +57,8 @@ export function renderShowAwardChips({
   size?: 'sm' | 'md'
   /** Одна строка без переноса (карточка рейтинга). */
   nowrap?: boolean
+  /** ×N на бейдже; выкл. для одной выставки в истории. */
+  showCounts?: boolean
 }): ReactNode {
   const allKeys = keys ?? presentShowAwards(titles)
   if (allKeys.length === 0) return null
@@ -67,8 +86,9 @@ export function renderShowAwardChips({
           {group.keys.map((key) => (
             <HoverTooltip
               key={key}
-              label={SHOW_AWARD_LABELS[key]}
+              label={awardTooltipForKey(key, showCounts ? titles[key] : undefined)}
               placement="top"
+              variant="site"
               delayMs={0}
               portal
             >
@@ -77,7 +97,7 @@ export function renderShowAwardChips({
                 tabIndex={0}
               >
                 {SHOW_AWARD_BADGE[key]}
-                <span className="opacity-80">×{titles[key]}</span>
+                {showCounts ? <span className="opacity-80">×{titles[key]}</span> : null}
               </span>
             </HoverTooltip>
           ))}
@@ -87,10 +107,14 @@ export function renderShowAwardChips({
         <>
           <span className={`${SEPARATOR_CLASS} shrink-0`} aria-hidden />
           <HoverTooltip
-            label={hiddenKeys
-              .map((key) => `${SHOW_AWARD_BADGE[key]} ×${titles[key]} — ${SHOW_AWARD_LABELS[key]}`)
-              .join('\n')}
+            label={awardTooltipList(
+              hiddenKeys.map((key) => ({
+                key,
+                count: showCounts ? titles[key] : undefined,
+              })),
+            )}
             placement="top"
+            variant="site"
             delayMs={0}
             portal
           >
@@ -107,47 +131,60 @@ export function renderShowAwardChips({
   )
 }
 
-/** Рендер титулов профиля соревнований с группировкой по категориям. */
+/** Рендер титулов профиля (курсинг / бега / выставки) с группировкой по категориям. */
 export function renderGroupedDogTitles(titles: DogTitle[]): ReactNode {
   if (titles.length === 0) return null
 
-  const groups = groupItemsByCategory(titles, (item) => classifyProfileTitle(item.title))
+  const sorted = sortDogTitlesByCoolness(titles)
+  const groups = groupItemsByCategory(sorted, (item) => classifyDogProfileTitle(item.title))
 
   return (
     <>
       {groups.map((group, gi) => (
         <span key={group.category} className="inline-flex flex-wrap items-center gap-1.5">
           {gi > 0 ? <span className={SEPARATOR_CLASS} aria-hidden /> : null}
-          {group.items.map((item) => (
-            <HoverTooltip
-              key={item.title}
-              label={AWARD_CATEGORY_LABEL[group.category]}
-              placement="top"
-            >
-              <span
-                className={`inline-flex rounded px-2.5 py-1 text-xs font-semibold whitespace-nowrap ${titleBadgeClass(item.title)}`}
-                tabIndex={0}
+          {group.items.map((item) => {
+            const showKey = matchShowAwardToken(item.title)
+            return (
+              <HoverTooltip
+                key={item.title}
+                label={
+                  showKey
+                    ? awardTooltipForKey(showKey, item.count)
+                    : AWARD_CATEGORY_LABEL[group.category]
+                }
+                placement="top"
+                variant={showKey ? 'site' : 'default'}
+                delayMs={showKey ? 0 : undefined}
+                portal={Boolean(showKey)}
               >
-                {formatTitleLine(item)}
-              </span>
-            </HoverTooltip>
-          ))}
+                <span
+                  className={`inline-flex rounded px-2.5 py-1 text-xs font-semibold whitespace-nowrap ${titleBadgeClass(item.title)}`}
+                  tabIndex={0}
+                >
+                  {formatTitleLine(item)}
+                </span>
+              </HoverTooltip>
+            )
+          })}
         </span>
       ))}
     </>
   )
 }
 
-/** Чипы квалификации события (через запятую) с категориями. */
+/** Чипы квалификации события (через запятую) с категориями и сортировкой по крутости. */
 export function renderQualificationChips(qualification: string | null | undefined): ReactNode {
   if (!qualification?.trim()) return null
-  const parts = qualification
-    .split(',')
-    .map((p) => p.trim())
-    .filter(Boolean)
+  const parts = sortTitlesByCoolness(
+    qualification
+      .split(',')
+      .map((p) => p.trim())
+      .filter(Boolean),
+  )
   if (parts.length === 0) return null
 
-  const groups = groupItemsByCategory(parts, (title) => classifyProfileTitle(title))
+  const groups = groupItemsByCategory(parts, (title) => classifyEventTitle(title))
 
   return (
     <>
@@ -157,7 +194,7 @@ export function renderQualificationChips(qualification: string | null | undefine
           {group.items.map((title) => (
             <span
               key={title}
-              className={`inline-flex rounded px-1.5 py-0.5 text-[10px] font-semibold whitespace-nowrap ${titleBadgeClass(title)}`}
+              className={`inline-flex rounded px-1.5 py-0.5 text-[10px] font-semibold whitespace-nowrap ${categoryBadgeClass(classifyEventTitle(title))}`}
             >
               {title}
             </span>

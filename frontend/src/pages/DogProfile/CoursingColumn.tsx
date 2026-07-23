@@ -173,9 +173,6 @@ export function CoursingColumn({
                         {event.competition_kind}
                       </div>
                     ) : null}
-                    <div className="mt-1 inline-flex rounded-full border border-old-money-200 bg-white px-2 py-0.5 text-xs font-medium text-charcoal-600 dark:border-charcoal-600 dark:bg-charcoal-800 dark:text-charcoal-300">
-                      {event.event_type === 'coursing' ? 'Курсинг' : 'БЗМП'}
-                    </div>
                   </div>
                   <div className="mt-1 flex items-center justify-between gap-3">
                     <div className="font-semibold text-charcoal-800 dark:text-charcoal-100">

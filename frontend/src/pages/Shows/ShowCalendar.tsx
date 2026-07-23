@@ -23,6 +23,7 @@ import {
 import { resolveRkfOnlineExhibitionUrl } from '../../lib/rkfLinks'
 import { isLocalDev } from '../../lib/env'
 import { fetchJson } from '../../lib/staticData/core'
+import { formatMonthShortRu } from '../Events/eventListUtils'
 import {
   collectGroupRanks,
   formatNkpDisplay,
@@ -57,7 +58,7 @@ function formatShowDate(dateStr: string): string | null {
   const date = parseShowDate(dateStr)
   if (!date) return null
   const day = date.getDate()
-  const month = date.toLocaleDateString('ru-RU', { month: 'short' })
+  const month = formatMonthShortRu(date.getMonth())
   return `${day} ${month}`
 }
 

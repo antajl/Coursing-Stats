@@ -157,6 +157,35 @@ const html = await response.text(); // БИТАЯ КИРИЛЛИЦА
 - Категория "other" с оригинальным названием
 - Парсер: `backend/parsers/unique/index.ts`
 
+### Одноразовый PDF (event 1545)
+
+Штатные парсеры курсинга/БЗМП/бегов читают **HTML** (`*_Complete_Results_*.html`). PDF выставок РКФ — отдельный пайплайн (`docs/SHOWS.md`), не курсинг.
+
+**Исключение (2026-07):** у события **1545** (Донино ПЧРКФ курсинг, 20–21.06.2026) на procoursing.ru нет HTML (сайт/архив без протокола). Есть текстовый PDF с той же таблицей, что HTML:
+
+- файл: `2026-06-21_Coursing_BreedChRKF_Donino.pdf`
+- локальный кэш: `data/local/coursing-pdf/` (gitignore)
+- скрипт: `backend/scripts/import/import-1545-donino-pdf.ts`
+- цвета попон: `extract-1545-bib-colors.py` (red / `#f0ffff`, как в HTML)
+
+Скрипт: PDF → синтетический HTML (25 `<td>`, 2 судьи, `bgcolor` попон) → штатный `parseCoursingHTML` → `data/v1/competitions/.../1545-*.json` + календарь.
+
+**Неявки / DQ:** не из эвристики PDF-текста (ломает клички), а из `manualNonFinishDogs()` в скрипте — сверять с блоками «Неприбывшие» / «Отстранение» в PDF. DQ в синтетическом HTML — `rowspan=2` + пустая строка судьи 2 (иначе следующая собака с каталогом ≤20 съедается как оценки).
+
+Колонки протокола (как в HTML):
+- **CC** → поле `vc` (`"CC"`) — сертификат, **не** титул
+- **Титул** → поле `qualification` (`"ПЧРКФ РК"`, `CACLBr`, …)
+
+```bash
+npx tsx backend/scripts/import/import-1545-donino-pdf.ts
+npx tsx backend/scripts/import/import-1545-donino-pdf.ts --pdf "D:\path\to.pdf"
+npx tsx backend/scripts/import/import-1545-donino-pdf.ts --dry-run
+# затем
+npm run build-all-data
+```
+
+**Не обобщать** в постоянный PDF-парсер курсинга без явного запроса. Если появится HTML на procoursing — предпочтительно переимпортировать обычным путём и удалить/пометить one-off.
+
 ---
 
 ## Правила сохранения данных

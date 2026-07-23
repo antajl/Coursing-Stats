@@ -1,36 +1,50 @@
+import { GUIDE_RATING_FAQS } from '../guideFaqs'
 import { InfoCallout, SectionCard } from './GuideUi'
 
 export default function RatingTab() {
   return (
     <div className="space-y-4">
-      <SectionCard title="Как устроен рейтинг">
+      <SectionCard title="Что такое индекс CS">
         <p>
-          В <strong>Статистике → Рейтинг</strong> — две колонки: курсинг/БЗМП и рейсинг. В левой колонке переключатель{' '}
-          <strong>очки</strong> (по умолчанию) и <strong>места</strong>. Это <strong>разные</strong> рейтинги, формулы
-          не смешиваются.
+          <strong>CS (Coursing Stats)</strong> — индекс для рейтинга «по очкам» на курсинге и БЗМП. Он отвечает на
+          вопрос: насколько стабильно собака получает высокие оценки судей, а не «сколько баллов суммой за все годы».
+        </p>
+        <p className="text-[13px] text-charcoal-600 dark:text-charcoal-300">
+          На карточке крупно — индекс CS; мелко — среднее и лучшее за старт, число стартов. Рейтинг «по местам»
+          (медали) считается отдельно и с CS не смешивается.
+        </p>
+      </SectionCard>
+
+      <SectionCard title="Как устроен рейтинг на сайте">
+        <p>
+          В <strong>Статистика → Рейтинг</strong> две колонки: курсинг/БЗМП и рейсинг. В левой — переключатель{' '}
+          <strong>очки</strong> (по умолчанию) и <strong>места</strong>.
         </p>
         <ul className="list-inside list-disc space-y-1 pl-1 text-[13px]">
           <li>
-            <strong>Очки</strong> — порядок по индексу CS (оценки судей, курсинг + БЗМП вместе).
+            <strong>Очки</strong> — порядок по индексу CS (оценки судей; курсинг и БЗМП на одной шкале).
           </li>
           <li>
-            <strong>Места</strong> — медали за сезон или карьеру.
+            <strong>Места</strong> — медали (золото / серебро / бронза) за сезон или карьеру.
           </li>
           <li>
-            <strong>Рейсинг</strong> — скорость, км/ч.
+            <strong>Рейсинг</strong> — скорость из протоколов бегов, км/ч (без CS).
           </li>
         </ul>
         <InfoCallout>
-          Краткая подсказка — ⓘ у переключателя «очки» на странице рейтинга. Сумма из протокола procoursing.ru на
-          место в списке «по очкам» не влияет.
+          Подсказка ⓘ у переключателя «очки» на странице рейтинга. Сумма <em>grand total</em> из протокола
+          procoursing.ru на место в списке «по очкам» не влияет.
         </InfoCallout>
+        <p className="text-[13px] text-charcoal-600 dark:text-charcoal-300">
+          И в соревнованиях, и в выставках по умолчанию включён фильтр <strong>текущего сезона</strong> (кнопка
+          «Сезон YYYY»). Снять кнопку — смотреть карьеру / все загруженные годы.
+        </p>
       </SectionCard>
 
-      <SectionCard title="Индекс CS (версия v1)">
+      <SectionCard title="Формула CS (версия v1)">
         <p className="text-[13px]">
-          Составной показатель: <strong>средняя оценка одного судьи</strong> (с лёгким сглаживанием при малом числе
-          выездов) + до <strong>0,6</strong> за лучший результат + до <strong>2</strong> за число стартов. На карточке
-          крупно — индекс, мелко — ср., лучш., Σ и старты.
+          В расчёт входят: сглаженная средняя оценка одного судьи (чтобы один-два старта не доминировали), бонус до{' '}
+          <strong>0,6</strong> за лучший результат выше среднего и бонус до <strong>2</strong> за число стартов.
         </p>
 
         <div className="rounded-lg border border-old-money-200 bg-old-money-50/50 px-3 py-2.5 font-mono text-[11px] leading-relaxed text-charcoal-800 dark:border-charcoal-600 dark:bg-charcoal-900/40 dark:text-charcoal-100">
@@ -46,10 +60,23 @@ export default function RatingTab() {
         </p>
 
         <ul className="list-inside list-disc space-y-1 pl-1 text-[13px] text-charcoal-600 dark:text-charcoal-300">
-          <li>Константы prior=85 и k=12 зафиксированы в коде — индекс не «плывёт» без новых стартов собаки.</li>
-          <li>Курсинг и БЗМП — одна шкала оценок судей (различие в данных &lt; 1 балла).</li>
-          <li>Подробности для разработчиков — <code>backend/lib/rating/coursing-rating-score.ts</code>.</li>
+          <li>Константы prior=85 и k=12 зафиксированы — индекс не «плывёт» без новых стартов собаки.</li>
+          <li>Курсинг и БЗМП используют одну шкалу оценок судей.</li>
         </ul>
+      </SectionCard>
+
+      <SectionCard title="Частые вопросы">
+        <dl className="space-y-4">
+          {GUIDE_RATING_FAQS.map((faq) => (
+            <div key={faq.question}>
+              <dt className="font-semibold text-charcoal-900 dark:text-charcoal-100">{faq.question}</dt>
+              <dd className="mt-1 text-[13px] text-charcoal-600 dark:text-charcoal-300">{faq.answer}</dd>
+            </div>
+          ))}
+        </dl>
+        <p className="text-[13px] text-charcoal-600 dark:text-charcoal-300">
+          Выставки — вкладка <strong>«Выставки»</strong>; источники и контакты — <strong>«О сайте»</strong>.
+        </p>
       </SectionCard>
     </div>
   )

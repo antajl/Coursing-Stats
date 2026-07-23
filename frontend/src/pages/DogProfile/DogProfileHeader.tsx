@@ -74,11 +74,6 @@ export function DogProfileHeader({
                 >
                   {breedDisplay.primary}
                 </span>
-                {breedDisplay.secondary ? (
-                  <div className="mt-1 text-sm font-medium text-charcoal-400 dark:text-charcoal-500">
-                    {breedDisplay.secondary}
-                  </div>
-                ) : null}
               </div>
               {dog.pedigree_url && (
                 <a

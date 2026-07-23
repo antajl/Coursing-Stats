@@ -6,23 +6,34 @@
  *   npx tsx backend/scripts/shows/parse-rkf-reports.ts --year=2026
  *   npx tsx backend/scripts/shows/parse-rkf-reports.ts --year=2026 --limit=10
  *   npx tsx backend/scripts/shows/parse-rkf-reports.ts --year=2026 --id=89105
+ *   npx tsx backend/scripts/shows/parse-rkf-reports.ts --year=2026 --ids-file=data/local/shows/audit-wrap-ids.json
+ *
+ * Type3 главный ринг (main_ring) парсится только для 2025 и 2026.
  */
 
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import {
-  parseBisPdf,
+  parseMainRingPdf,
   parseCertificatePdf,
   type ParsedCertDog,
+  type MainRingRow,
+  isPlausibleJudgeName,
 } from '../../parsers/shows/parse-rkf-certificate-pdf'
+import { formatShowGradeDisplay } from '../../lib/show-grades'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT = path.resolve(__dirname, '../../..')
 const CAL_DIR = path.join(ROOT, 'data/v1/shows/calendar-rkf')
 const PDF_DIR = path.join(ROOT, 'data/local/rkf-reports')
 const OUT_DIR = path.join(ROOT, 'data/local/shows/exhibitions-rkf')
+/** Vite serves repo data/v1 — not frontend/public — in npm run dev. */
+const DEV_SYNC = path.join(ROOT, 'data/v1/shows/exhibitions-rkf')
 const PUBLIC_SYNC = path.join(ROOT, 'frontend/public/data/v1/shows/exhibitions-rkf')
+
+/** Главный ринг type3 — только эти годы. */
+const MAIN_RING_YEARS = new Set(['2025', '2026'])
 
 interface CalendarEntry {
   id: number
@@ -45,37 +56,56 @@ function parseArgs(argv: string[]) {
   let year = String(new Date().getFullYear())
   let limit = 0
   let onlyId = 0
+  let idsFile = ''
   let syncPublic = true
   for (const arg of argv) {
     if (arg.startsWith('--year=')) year = arg.slice('--year='.length)
     if (arg.startsWith('--limit=')) limit = Number(arg.slice('--limit='.length)) || 0
     if (arg.startsWith('--id=')) onlyId = Number(arg.slice('--id='.length)) || 0
+    if (arg.startsWith('--ids-file=')) idsFile = arg.slice('--ids-file='.length)
     if (arg === '--no-sync') syncPublic = false
   }
-  return { year, limit, onlyId, syncPublic }
+  return { year, limit, onlyId, idsFile, syncPublic }
 }
 
 function localizeClass(c: string): string {
+  const key = c.toUpperCase().replace(/\s+/g, ' ').trim()
   const map: Record<string, string> = {
     БЕБ: 'Беби',
+    Б: 'Беби',
     ЩЕН: 'Щенки',
     ЮН: 'Юниоры',
     ПРМ: 'Промежуточный',
     ОТК: 'Открытый',
     РАБ: 'Рабочий',
     ЧЕМ: 'Чемпионы',
+    'ЧЕМ НКП': 'Чемпионы НКП',
+    ЧНКП: 'Чемпионы НКП',
     ПОЧ: 'Победители',
+    'ПОЧ НКП': 'Победители НКП',
     ВЕТ: 'Ветераны',
   }
-  return map[c.toUpperCase()] || c
+  return map[key] || c
+}
+
+function appendAward(title: string, badge: string): string {
+  if (!badge) return title
+  const parts = title
+    .split(',')
+    .map((p) => p.trim())
+    .filter(Boolean)
+  if (parts.some((p) => p.toUpperCase() === badge.toUpperCase())) return title
+  return [...parts, badge].join(', ')
 }
 
 function toExhibitionJson(
   entry: CalendarEntry,
   dogs: ParsedCertDog[],
-  bisPlaces: Array<{ place: number; dog_name: string }>,
+  mainRing: MainRingRow[],
 ) {
-  const judges = [...new Set(dogs.map((d) => d.judge).filter(Boolean))]
+  const judges = [
+    ...new Set(dogs.map((d) => d.judge).filter((j) => isPlausibleJudgeName(j))),
+  ]
   const breedMap = new Map<
     string,
     { breed: string; breed_judge: string; count: number; dog_breed_id: number }
@@ -97,20 +127,28 @@ function toExhibitionJson(
     if (!b.breed_judge && dog.judge) b.breed_judge = dog.judge
   }
 
-  // Attach BIS titles onto matching dogs by name (best-effort)
-  const bisByName = new Map<string, number>()
-  for (const row of bisPlaces) {
-    bisByName.set(row.dog_name.toUpperCase().replace(/\s+/g, ' ').trim(), row.place)
+  // place=1 главного ринга → бейдж по № каталога (и fallback по кличке)
+  const awardsByCatalog = new Map<number, Set<string>>()
+  const awardsByName = new Map<string, Set<string>>()
+  for (const row of mainRing) {
+    if (!row.award_badge) continue
+    if (!awardsByCatalog.has(row.catalog_number)) {
+      awardsByCatalog.set(row.catalog_number, new Set())
+    }
+    awardsByCatalog.get(row.catalog_number)!.add(row.award_badge)
+    const nk = row.dog_name.toUpperCase().replace(/\s+/g, ' ').trim()
+    if (!awardsByName.has(nk)) awardsByName.set(nk, new Set())
+    awardsByName.get(nk)!.add(row.award_badge)
   }
 
   const results = dogs.map((dog) => {
     const breedMeta = breedMap.get(dog.breed)!
-    const nameKey = dog.dog_name.toUpperCase().replace(/\s+/g, ' ').trim()
-    const bisPlace = bisByName.get(nameKey)
     let title = dog.title
-    if (bisPlace === 1 && !/BIS/i.test(title)) title = [title, 'BIS'].filter(Boolean).join(' ')
-    else if (bisPlace && bisPlace > 1 && !new RegExp(`BIS\\s*${bisPlace}`, 'i').test(title)) {
-      title = [title, `BIS ${bisPlace}`].filter(Boolean).join(' ')
+    const fromCat = awardsByCatalog.get(dog.catalog_number)
+    const fromName = awardsByName.get(dog.dog_name.toUpperCase().replace(/\s+/g, ' ').trim())
+    const badges = new Set<string>([...(fromCat || []), ...(fromName || [])])
+    for (const badge of badges) {
+      title = appendAward(title, badge)
     }
 
     return {
@@ -120,9 +158,8 @@ function toExhibitionJson(
       breed_judge: dog.judge,
       dog_breed_id: breedMeta.dog_breed_id,
       class: localizeClass(dog.class),
-      // Catalog # is not class place — ranking uses awards/grades.
       placement: 0,
-      grade: dog.grade,
+      grade: formatShowGradeDisplay(dog.grade),
       title,
       dog_name: `(${dog.catalog_number}) ${dog.dog_name}`,
       owner: '',
@@ -145,7 +182,7 @@ function toExhibitionJson(
   }))
 
   return {
-    schema: 'coursing-stats/show-exhibition-rkf-pdf-v1',
+    schema: 'coursing-stats/show-exhibition-rkf-pdf-v2',
     source: 'rkf-pdf',
     id: entry.id,
     date: entry.date,
@@ -160,7 +197,7 @@ function toExhibitionJson(
     bis_reports_link: entry.bis_reports_link || null,
     breed_catalog,
     results,
-    bis: bisPlaces,
+    main_ring: mainRing,
   }
 }
 
@@ -168,25 +205,36 @@ function syncToPublic(year: string) {
   const srcYear = path.join(OUT_DIR, year)
   const srcIndex = path.join(OUT_DIR, 'index.json')
   if (!fs.existsSync(srcIndex)) return
-  fs.mkdirSync(PUBLIC_SYNC, { recursive: true })
-  fs.copyFileSync(srcIndex, path.join(PUBLIC_SYNC, 'index.json'))
-  const destYear = path.join(PUBLIC_SYNC, year)
-  fs.mkdirSync(destYear, { recursive: true })
-  for (const name of fs.readdirSync(srcYear)) {
-    if (!name.endsWith('.json')) continue
-    fs.copyFileSync(path.join(srcYear, name), path.join(destYear, name))
+
+  for (const destRoot of [DEV_SYNC, PUBLIC_SYNC]) {
+    fs.mkdirSync(destRoot, { recursive: true })
+    fs.copyFileSync(srcIndex, path.join(destRoot, 'index.json'))
+    const destYear = path.join(destRoot, year)
+    fs.mkdirSync(destYear, { recursive: true })
+    for (const name of fs.readdirSync(srcYear)) {
+      if (!name.endsWith('.json')) continue
+      fs.copyFileSync(path.join(srcYear, name), path.join(destYear, name))
+    }
+    console.log(`Synced to ${destRoot}`)
   }
-  console.log(`Synced to ${PUBLIC_SYNC}`)
 }
 
 async function main() {
-  const { year, limit, onlyId, syncPublic } = parseArgs(process.argv.slice(2))
+  const { year, limit, onlyId, idsFile, syncPublic } = parseArgs(process.argv.slice(2))
   const calPath = path.join(CAL_DIR, `${year}.json`)
   if (!fs.existsSync(calPath)) throw new Error(`Missing ${calPath}`)
 
   const cal = JSON.parse(fs.readFileSync(calPath, 'utf8')) as CalendarFile
   let entries = cal.exhibitions ?? []
   if (onlyId) entries = entries.filter((e) => e.id === onlyId)
+  if (idsFile) {
+    const abs = path.isAbsolute(idsFile) ? idsFile : path.join(ROOT, idsFile)
+    const raw = JSON.parse(fs.readFileSync(abs, 'utf8')) as {
+      ids?: Record<string, number[]>
+    }
+    const want = new Set((raw.ids?.[year] || []).map(Number))
+    entries = entries.filter((e) => want.has(e.id))
+  }
 
   const pdfYearDir = path.join(PDF_DIR, year)
   const withPdf = entries.filter((e) => fs.existsSync(path.join(pdfYearDir, `${e.id}-type1.pdf`)))
@@ -200,32 +248,39 @@ async function main() {
     ? (JSON.parse(fs.readFileSync(indexPath, 'utf8')) as Record<string, string>)
     : {}
 
-  console.log(`Parse RKF PDFs year=${year}: ${selected.length} exhibitions with type1 PDF`)
+  const parseMainRing = MAIN_RING_YEARS.has(year)
+  console.log(
+    `Parse RKF PDFs year=${year}: ${selected.length} exhibitions with type1 PDF` +
+      (parseMainRing ? ' (+ type3 main ring)' : ' (main ring skipped)'),
+  )
 
   let ok = 0
   let fail = 0
   let dogTotal = 0
+  let mainRingRows = 0
 
   for (const entry of selected) {
     const certPath = path.join(pdfYearDir, `${entry.id}-type1.pdf`)
     const bisPath = path.join(pdfYearDir, `${entry.id}-type3.pdf`)
     try {
       const parsed = await parseCertificatePdf(certPath)
-      let bisPlaces: Array<{ place: number; dog_name: string }> = []
-      if (fs.existsSync(bisPath)) {
+      let mainRing: MainRingRow[] = []
+      if (parseMainRing && fs.existsSync(bisPath)) {
         try {
-          bisPlaces = await parseBisPdf(bisPath)
+          mainRing = await parseMainRingPdf(bisPath)
+          mainRingRows += mainRing.length
         } catch (err) {
-          console.warn(`  BIS parse skip ${entry.id}:`, err)
+          console.warn(`  main_ring skip ${entry.id}:`, err)
         }
       }
-      const exhibition = toExhibitionJson(entry, parsed.dogs, bisPlaces)
+      const exhibition = toExhibitionJson(entry, parsed.dogs, mainRing)
       const rel = `${year}/${entry.id}.json`
       fs.writeFileSync(path.join(OUT_DIR, rel), JSON.stringify(exhibition))
       index[String(entry.id)] = rel
       ok++
       dogTotal += parsed.dogs.length
-      console.log(`  OK ${entry.id}: ${parsed.dogs.length} dogs, ${parsed.page_count} pages`)
+      const mr = mainRing.length ? `, main_ring=${mainRing.length}` : ''
+      console.log(`  OK ${entry.id}: ${parsed.dogs.length} dogs, ${parsed.page_count} pages${mr}`)
     } catch (err) {
       fail++
       console.error(`  FAIL ${entry.id}:`, err)
@@ -235,7 +290,9 @@ async function main() {
   fs.writeFileSync(indexPath, JSON.stringify(index, null, 2))
   if (syncPublic) syncToPublic(year)
 
-  console.log(`Done: ok=${ok} fail=${fail} dogs=${dogTotal} → ${OUT_DIR}`)
+  console.log(
+    `Done: ok=${ok} fail=${fail} dogs=${dogTotal} main_ring_rows=${mainRingRows} → ${OUT_DIR}`,
+  )
 }
 
 main().catch((err) => {

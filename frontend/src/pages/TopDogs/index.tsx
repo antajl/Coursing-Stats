@@ -19,6 +19,12 @@ function parseCoursingTab(value: string | null): CoursingTab {
 
 const CURRENT_SEASON = String(new Date().getFullYear())
 
+function initialYearFilter(searchParams: URLSearchParams): string {
+  const fromUrl = searchParams.get('year')
+  if (fromUrl === null) return CURRENT_SEASON
+  return fromUrl
+}
+
 export default function TopDogs() {
   const location = useLocation()
   const [searchParams, setSearchParams] = useSearchParams()
@@ -51,7 +57,7 @@ export default function TopDogs() {
   }, [searchParams])
 
   const [filterBreed, setFilterBreed] = useState(() => searchParams.get('breed') || '')
-  const [filterYear, setFilterYear] = useState(() => searchParams.get('year') ?? '')
+  const [filterYear, setFilterYear] = useState(() => initialYearFilter(searchParams))
   const [searchQuery, setSearchQuery] = useState(() => searchParams.get('search') || '')
   const [isInitialLoad, setIsInitialLoad] = useState(true)
 
@@ -128,7 +134,7 @@ export default function TopDogs() {
   const filteredSpeed = filterSpeed(rankedSpeed, filterParams)
 
   const handleResetFilters = () => {
-    setFilterYear('')
+    setFilterYear(CURRENT_SEASON)
     setFilterBreed('')
     setSearchQuery('')
     setFilterMinStarts('')
@@ -137,7 +143,7 @@ export default function TopDogs() {
   }
 
   const handleResetPanelFilters = () => {
-    setFilterYear('')
+    setFilterYear(CURRENT_SEASON)
     setFilterBreed('')
     setFilterMinStarts('')
     setFilterScoreFrom('')

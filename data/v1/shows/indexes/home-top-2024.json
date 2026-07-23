@@ -1,0 +1,72 @@
+{
+  "schema": "coursing-stats/show-home-top-v1",
+  "year": "2024",
+  "dogs": [
+    {
+      "id": "1902102476",
+      "name_lat": "GRAN VENCEDOR AFRIKA",
+      "name_ru": "",
+      "breed": "АЗАВАК",
+      "sex": "",
+      "total_shows": 4,
+      "best_award": "BOB",
+      "rank_score": 12485,
+      "titles": {
+        "BOB": 4,
+        "LYU": 4,
+        "JCAC": 4,
+        "YCHRKF": 4,
+        "YP_RUSSIA": 1,
+        "YP_MOSCOW": 1,
+        "YKCHP": 4,
+        "CW": 4
+      },
+      "competition_dog_id": null
+    },
+    {
+      "id": "143708046",
+      "name_lat": "MALAGRIS BONECA BONITA",
+      "name_ru": "",
+      "breed": "ПОРТУГАЛЬСКИЙ ПОДЕНГУ ДЛИННАЯ И ЖЕСТКАЯ ШЕРСТЬ (МАЛЫЙ)",
+      "sex": "",
+      "total_shows": 5,
+      "best_award": "BOS",
+      "rank_score": 11195,
+      "titles": {
+        "BOS": 5,
+        "LYU": 3,
+        "CAC": 2,
+        "JCAC": 2,
+        "CHRKF": 2,
+        "YCHRKF": 2,
+        "YP_RUSSIA": 1,
+        "YP_MOSCOW": 1,
+        "KCHP": 2,
+        "YKCHP": 2,
+        "CW": 5
+      },
+      "competition_dog_id": null
+    },
+    {
+      "id": "1437613263",
+      "name_lat": "SANDAURI YURAI HEEPP",
+      "name_ru": "",
+      "breed": "БОРОДАТЫЙ КОЛЛИ",
+      "sex": "",
+      "total_shows": 5,
+      "best_award": "BOB",
+      "rank_score": 11120,
+      "titles": {
+        "BOB": 5,
+        "CAC": 4,
+        "CHRKF": 4,
+        "P_RUSSIA": 1,
+        "P_MOSCOW": 1,
+        "KCHP": 5,
+        "CW": 5
+      },
+      "competition_dog_id": null
+    }
+  ],
+  "updated_at": "2026-07-23"
+}

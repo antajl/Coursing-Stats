@@ -1,0 +1,70 @@
+{
+  "schema": "coursing-stats/show-home-top-v1",
+  "year": "2026",
+  "dogs": [
+    {
+      "id": "1957462966",
+      "name_lat": "EMEREI HUGO BOSS",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "sex": "",
+      "total_shows": 33,
+      "best_award": "BIS",
+      "rank_score": 201995,
+      "titles": {
+        "BIS": 5,
+        "BIG": 18,
+        "BOB": 29,
+        "CAC": 30,
+        "CHRKF": 13,
+        "KCHK": 5,
+        "CW": 1
+      },
+      "competition_dog_id": null
+    },
+    {
+      "id": "1755853863",
+      "name_lat": "PIRS BROSNAN IZ BELYKH GYAUROV",
+      "name_ru": "",
+      "breed": "АФГАНСКАЯ ИРЛАНДСКИЙ",
+      "sex": "",
+      "total_shows": 25,
+      "best_award": "BIS",
+      "rank_score": 188555,
+      "titles": {
+        "BIS": 7,
+        "BIG": 13,
+        "BOB": 25,
+        "CAC": 25,
+        "CHRKF": 17,
+        "KCHK": 1
+      },
+      "competition_dog_id": null
+    },
+    {
+      "id": "1232448273",
+      "name_lat": "DIAMOND EAST EL'F MY FAVORITE",
+      "name_ru": "",
+      "breed": "ПЕКИНЕС",
+      "sex": "",
+      "total_shows": 27,
+      "best_award": "BIS",
+      "rank_score": 121175,
+      "titles": {
+        "BIS": 4,
+        "BIG": 4,
+        "BIS_JUNIOR": 7,
+        "BOB": 17,
+        "CAC": 7,
+        "JCAC": 14,
+        "CHRKF": 4,
+        "YCHRKF": 5,
+        "KCHK": 3,
+        "YKCHK": 6,
+        "R_CAC": 2
+      },
+      "competition_dog_id": null
+    }
+  ],
+  "updated_at": "2026-07-23"
+}
