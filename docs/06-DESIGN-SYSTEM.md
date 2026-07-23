@@ -268,7 +268,7 @@ font-mono tabular-nums
 
 **Рейтинг — «по очкам»:** подсказка ⓘ внутри сегмента «очки» — `CoursingRatingHint.tsx` (простой язык); формула — `/guide?tab=rating`. `HoverTooltip` `variant="site"`, `interactive`.
 
-**Где:** рейтинг (`TopDogsFilters`), судьи (`Judges/index`), рекорды Донино (`DoninoPageToolbar`), календарь (`Events/index.tsx` — framed).
+**Где:** рейтинг (`TopDogsFilters`), судьи (`Judges/index`), рекорды Донино (`DoninoPageToolbar`), календарь соревнований (`Events/index.tsx` — framed, **только local DEV**).
 
 ### Рекорды Донино — статистика
 

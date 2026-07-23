@@ -1,31 +1,51 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { useParams, Link, useNavigate } from 'react-router-dom'
-import { ChevronLeft, ChevronRight, ExternalLink, UserRound } from 'lucide-react'
+import { ChevronDown, ChevronLeft, ChevronRight, ExternalLink, UserRound } from 'lucide-react'
 import SkeletonLoader from '../../components/SkeletonLoader'
 import ErrorState from '../../components/ErrorState'
+import RKFAttribution from '../../components/RKFAttribution'
+import PageToolbar from '../../components/toolbar/PageToolbar'
+import ToolbarChip from '../../components/toolbar/ToolbarChip'
+import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
+import type { ActiveFilterChip } from '../../components/toolbar/ToolbarActiveFilters'
 import { getShowExhibition } from '../../lib/staticData'
+import { TOOLBAR_CHIP, TOOLBAR_CHIP_ACTIVE, TOOLBAR_CHIP_IDLE, TOOLBAR_FILTER_PANEL } from '../../lib/toolbar'
 import { titleBadgeClass } from '../../lib/qualificationTitles'
 import {
   classifyCompetitionTitle,
   classifyShowCumulativeTitle,
   groupItemsByCategory,
 } from '../../lib/awardCategories'
-import { matchShowAwardToken, SHOW_AWARD_CATEGORY } from '../../../../backend/lib/show-award-ranking'
+import {
+  matchShowAwardToken,
+  SHOW_AWARD_BADGE,
+  SHOW_AWARD_CATEGORY,
+  type ShowAwardKey,
+} from '../../../../backend/lib/show-award-ranking'
 import {
   buildGroupMap,
   buildResultsByBreedId,
+  catalogBreedMatchesFilters,
+  collectExhibitionAwardKeys,
+  dogNameMatchesQuery,
+  filterResultsByDogAndBreed,
   formatGradeLine,
   groupResultsBySexAndClass,
   localizeShowClass,
+  resultHasAward,
   resultsForBreed,
   splitShowTitleTokens,
   splitDogNameDisplay,
   titleHighlights,
+  titleRowHasAward,
   type BreedCatalogRow,
   type BreedTitleRow,
   type ClassResultGroup,
   type ShowResultRow,
 } from './showExhibitionUtils'
+
+/** Сколько наград показывать пилюлями; остальные — в выпадающем списке. */
+const AWARD_PILL_CAP = 8
 
 function classifyShowToken(token: string) {
   const key = matchShowAwardToken(token)
@@ -302,9 +322,10 @@ function BreedResultsPanel({
 }) {
   const fallbackHighlights = titleHighlights(results)
   const sexSections = groupResultsBySexAndClass(results)
-  const titleRows = titles?.length ? titles : null
+  const hasCatalogTitles = Array.isArray(titles)
+  const titleRows = hasCatalogTitles ? titles : null
 
-  if (results.length === 0 && !titleRows?.length) {
+  if (results.length === 0 && !(titleRows?.length)) {
     return (
       <p className="px-2 py-3 text-sm text-old-money-500 dark:text-old-money-400">Нет результатов по этой породе</p>
     )
@@ -312,7 +333,7 @@ function BreedResultsPanel({
 
   return (
     <div className="space-y-4 border-t border-old-money-200 px-2 pb-3 pt-3 dark:border-charcoal-600">
-      {(titleRows?.length || fallbackHighlights.length > 0) && (
+      {((titleRows && titleRows.length > 0) || (!hasCatalogTitles && fallbackHighlights.length > 0)) && (
         <section>
           <h4 className="mb-2 text-xs font-semibold uppercase tracking-wide text-old-money-600 dark:text-old-money-400">
             Титулы
@@ -354,27 +375,140 @@ function BreedResultsPanel({
   )
 }
 
+function ExhibitionAwardFilter({
+  awards,
+  value,
+  onChange,
+}: {
+  awards: ShowAwardKey[]
+  value: ShowAwardKey | null
+  onChange: (key: ShowAwardKey | null) => void
+}) {
+  const [moreOpen, setMoreOpen] = useState(false)
+  const moreRef = useRef<HTMLDivElement>(null)
+  const visible = awards.slice(0, AWARD_PILL_CAP)
+  const overflow = awards.slice(AWARD_PILL_CAP)
+  const overflowSelected = value != null && overflow.includes(value)
+
+  useEffect(() => {
+    if (!moreOpen) return
+    function handleClickOutside(event: MouseEvent) {
+      if (moreRef.current && !moreRef.current.contains(event.target as Node)) {
+        setMoreOpen(false)
+      }
+    }
+    function handleEsc(event: KeyboardEvent) {
+      if (event.key === 'Escape') setMoreOpen(false)
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    document.addEventListener('keydown', handleEsc)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+      document.removeEventListener('keydown', handleEsc)
+    }
+  }, [moreOpen])
+
+  if (awards.length === 0) return null
+
+  const toggle = (key: ShowAwardKey) => {
+    onChange(value === key ? null : key)
+  }
+
+  return (
+    <div className="flex w-full flex-wrap items-center gap-1.5">
+      {visible.map((key) => (
+        <ToolbarChip key={key} active={value === key} onClick={() => toggle(key)}>
+          {SHOW_AWARD_BADGE[key]}
+        </ToolbarChip>
+      ))}
+      {overflow.length > 0 && (
+        <div className="relative shrink-0" ref={moreRef}>
+          <button
+            type="button"
+            onClick={() => setMoreOpen((open) => !open)}
+            aria-expanded={moreOpen}
+            aria-label="Другие награды"
+            className={`${TOOLBAR_CHIP} gap-1 ${moreOpen || overflowSelected ? TOOLBAR_CHIP_ACTIVE : TOOLBAR_CHIP_IDLE}`}
+          >
+            {overflowSelected ? SHOW_AWARD_BADGE[value!] : 'Ещё'}
+            <ChevronDown
+              className={`h-3.5 w-3.5 transition-transform ${moreOpen ? 'rotate-180' : ''}`}
+              strokeWidth={2}
+            />
+          </button>
+          {moreOpen && (
+            <div className={`${TOOLBAR_FILTER_PANEL} right-0 w-44`}>
+              {overflow.map((key) => (
+                <button
+                  key={key}
+                  type="button"
+                  onClick={() => {
+                    toggle(key)
+                    setMoreOpen(false)
+                  }}
+                  className={`flex w-full items-center px-3 py-2 text-left text-xs font-medium transition-colors ${
+                    value === key
+                      ? 'bg-camel-50 text-camel-900 dark:bg-camel-700/40 dark:text-camel-100'
+                      : 'text-charcoal-700 hover:bg-cream-50 dark:text-charcoal-200 dark:hover:bg-charcoal-700'
+                  }`}
+                >
+                  {SHOW_AWARD_BADGE[key]}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  )
+}
+
 function BreedAccordionItem({
   catalog,
   resultsByBreedId,
   allResults,
+  dogQuery,
+  awardKey = null,
+  forceOpen = false,
 }: {
   catalog: BreedCatalogRow
   resultsByBreedId: Map<number, ShowResultRow[]>
   allResults: ShowResultRow[]
+  dogQuery: string
+  awardKey?: ShowAwardKey | null
+  forceOpen?: boolean
 }) {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(forceOpen)
+
+  useEffect(() => {
+    if (forceOpen) setOpen(true)
+  }, [forceOpen])
 
   const breedResults = useMemo(() => {
     if (!open) return []
-    return (
+    const rows =
       resultsByBreedId.get(catalog.dog_breed_id) ??
       resultsForBreed(allResults, catalog.dog_breed_id, catalog.breed_en)
+    return rows.filter(
+      (row) =>
+        dogNameMatchesQuery(row.dog_name, dogQuery) &&
+        (!awardKey || resultHasAward(row, awardKey))
     )
-  }, [open, catalog, resultsByBreedId, allResults])
+  }, [open, catalog, resultsByBreedId, allResults, dogQuery, awardKey])
 
+  const filteredTitles = useMemo(() => {
+    const titles = catalog.titles
+    if (!titles?.length) return titles
+    return titles.filter(
+      (row) =>
+        dogNameMatchesQuery(row.dog_name, dogQuery) &&
+        (!awardKey || titleRowHasAward(row, awardKey))
+    )
+  }, [catalog.titles, dogQuery, awardKey])
+
+  const hasRowFilter = Boolean(dogQuery.trim() || awardKey)
   const countLabel =
-    catalog.breed_count > 0
+    catalog.breed_count > 0 && !hasRowFilter
       ? `${catalog.breed_count} на ринге`
       : breedResults.length > 0
         ? `${breedResults.length} результатов`
@@ -383,6 +517,7 @@ function BreedAccordionItem({
   return (
     <details
       className="group/breed rounded-lg border border-old-money-200 bg-white/60 dark:border-charcoal-600 dark:bg-charcoal-800/30"
+      open={forceOpen || open}
       onToggle={(e) => setOpen((e.currentTarget as HTMLDetailsElement).open)}
     >
       <summary className="flex cursor-pointer list-none items-center gap-2 px-3 py-2.5 marker:content-none [&::-webkit-details-marker]:hidden">
@@ -405,7 +540,7 @@ function BreedAccordionItem({
           </span>
         )}
       </summary>
-      {open && <BreedResultsPanel results={breedResults} titles={catalog.titles} />}
+      {open && <BreedResultsPanel results={breedResults} titles={filteredTitles} />}
     </details>
   )
 }
@@ -413,22 +548,42 @@ function BreedAccordionItem({
 function CatalogResultsSection({
   catalog,
   results,
+  dogQuery,
+  breedQuery,
+  awardKey = null,
 }: {
   catalog: BreedCatalogRow[]
   results: ShowResultRow[]
+  dogQuery: string
+  breedQuery: string
+  awardKey?: ShowAwardKey | null
 }) {
-  const groupMap = useMemo(() => buildGroupMap(catalog), [catalog])
   const resultsByBreedId = useMemo(() => buildResultsByBreedId(results), [results])
+  const filteredCatalog = useMemo(
+    () =>
+      catalog.filter((entry) =>
+        catalogBreedMatchesFilters(entry, breedQuery, dogQuery, resultsByBreedId, results, awardKey)
+      ),
+    [catalog, breedQuery, dogQuery, resultsByBreedId, results, awardKey]
+  )
+  const groupMap = useMemo(() => buildGroupMap(filteredCatalog), [filteredCatalog])
+  const forceOpen = Boolean(dogQuery.trim() || breedQuery.trim() || awardKey)
+
+  if (filteredCatalog.length === 0) {
+    return (
+      <p className="rounded-xl border border-old-money-200 bg-cream-50 px-4 py-6 text-center text-sm text-old-money-500 dark:border-charcoal-600 dark:bg-charcoal-800/40 dark:text-old-money-400">
+        Ничего не найдено по заданным фильтрам
+      </p>
+    )
+  }
 
   return (
     <div className="space-y-4">
-      <p className="text-sm text-charcoal-600 dark:text-charcoal-400">
-        Выберите группу FCI, затем породу — как на сайте РКФ. Результаты показываются при раскрытии.
-      </p>
       {[...groupMap.entries()].map(([groupName, breeds]) => (
         <details
           key={groupName}
           className="group/fci rounded-xl border border-old-money-200 bg-cream-50/80 dark:border-charcoal-600 dark:bg-charcoal-800/40"
+          open={forceOpen || undefined}
         >
           <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 marker:content-none [&::-webkit-details-marker]:hidden">
             <ChevronRight
@@ -449,6 +604,9 @@ function CatalogResultsSection({
                 catalog={breed}
                 resultsByBreedId={resultsByBreedId}
                 allResults={results}
+                dogQuery={dogQuery}
+                awardKey={awardKey}
+                forceOpen={forceOpen}
               />
             ))}
           </div>
@@ -458,10 +616,26 @@ function CatalogResultsSection({
   )
 }
 
-function LegacyResultsSection({ results }: { results: ShowResultRow[] }) {
+function LegacyResultsSection({
+  results,
+  dogQuery,
+  breedQuery,
+  awardKey = null,
+}: {
+  results: ShowResultRow[]
+  dogQuery: string
+  breedQuery: string
+  awardKey?: ShowAwardKey | null
+}) {
+  const filtered = useMemo(
+    () => filterResultsByDogAndBreed(results, dogQuery, breedQuery, awardKey),
+    [results, dogQuery, breedQuery, awardKey]
+  )
+  const forceOpen = Boolean(dogQuery.trim() || breedQuery.trim() || awardKey)
+
   const groupMap = useMemo(() => {
     const byGroup = new Map<string, Map<string, ShowResultRow[]>>()
-    for (const row of results) {
+    for (const row of filtered) {
       const groupKey = row.breed_group?.trim() || 'Прочие породы'
       if (!byGroup.has(groupKey)) byGroup.set(groupKey, new Map())
       const breeds = byGroup.get(groupKey)!
@@ -469,7 +643,15 @@ function LegacyResultsSection({ results }: { results: ShowResultRow[] }) {
       breeds.get(row.breed)!.push(row)
     }
     return byGroup
-  }, [results])
+  }, [filtered])
+
+  if (filtered.length === 0) {
+    return (
+      <p className="rounded-xl border border-old-money-200 bg-cream-50 px-4 py-6 text-center text-sm text-old-money-500 dark:border-charcoal-600 dark:bg-charcoal-800/40 dark:text-old-money-400">
+        Ничего не найдено по заданным фильтрам
+      </p>
+    )
+  }
 
   return (
     <div className="space-y-4">
@@ -479,6 +661,7 @@ function LegacyResultsSection({ results }: { results: ShowResultRow[] }) {
           <details
             key={groupName}
             className="group/fci rounded-xl border border-old-money-200 bg-cream-50/80 dark:border-charcoal-600 dark:bg-charcoal-800/40"
+            open={forceOpen || undefined}
           >
             <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 marker:content-none [&::-webkit-details-marker]:hidden">
               <ChevronRight className="h-5 w-5 shrink-0 text-camel-600 transition-transform group-open/fci:rotate-90" />
@@ -488,7 +671,11 @@ function LegacyResultsSection({ results }: { results: ShowResultRow[] }) {
               {[...breedsMap.entries()]
                 .sort(([a], [b]) => a.localeCompare(b, 'ru'))
                 .map(([breed, breedResults]) => (
-                  <details key={breed} className="group/breed rounded-lg border border-old-money-200 bg-white/60">
+                  <details
+                    key={breed}
+                    className="group/breed rounded-lg border border-old-money-200 bg-white/60"
+                    open={forceOpen || undefined}
+                  >
                     <summary className="cursor-pointer list-none px-3 py-2 font-semibold marker:content-none">
                       {breed}
                     </summary>
@@ -508,6 +695,9 @@ export default function ShowExhibitionDetail() {
   const [loading, setLoading] = useState(true)
   const [exhibition, setExhibition] = useState<ShowExhibition | null>(null)
   const [error, setError] = useState<string | null>(null)
+  const [dogQuery, setDogQuery] = useState('')
+  const [breedQuery, setBreedQuery] = useState('')
+  const [awardKey, setAwardKey] = useState<ShowAwardKey | null>(null)
 
   useEffect(() => {
     const loadData = async () => {
@@ -521,6 +711,7 @@ export default function ShowExhibitionDetail() {
       const result = await getShowExhibition(id)
       if (result.success && result.data) {
         setExhibition(result.data as ShowExhibition)
+        setAwardKey(null)
       } else {
         setError('Не удалось загрузить данные выставки')
       }
@@ -528,6 +719,30 @@ export default function ShowExhibitionDetail() {
     }
     void loadData()
   }, [id])
+
+  const availableAwards = useMemo(
+    () => (exhibition ? collectExhibitionAwardKeys(exhibition.results) : []),
+    [exhibition]
+  )
+
+  const hasActiveFilters = Boolean(dogQuery.trim() || breedQuery.trim() || awardKey)
+  const activeFilterChips: ActiveFilterChip[] = useMemo(() => {
+    const chips: ActiveFilterChip[] = []
+    if (dogQuery.trim()) {
+      chips.push({ key: 'dog', label: dogQuery.trim(), onRemove: () => setDogQuery('') })
+    }
+    if (breedQuery.trim()) {
+      chips.push({ key: 'breed', label: breedQuery.trim(), onRemove: () => setBreedQuery('') })
+    }
+    if (awardKey) {
+      chips.push({
+        key: 'award',
+        label: SHOW_AWARD_BADGE[awardKey],
+        onRemove: () => setAwardKey(null),
+      })
+    }
+    return chips
+  }, [dogQuery, breedQuery, awardKey])
 
   if (loading) {
     return (
@@ -566,10 +781,62 @@ export default function ShowExhibitionDetail() {
     <div className="p-4 md:p-6">
       <div className="mx-auto max-w-4xl">
         <ExhibitionHeader exhibition={exhibition} onBack={() => navigate(-1)} />
+
+        {exhibition.results.length > 0 || hasCatalog ? (
+          <div className="mb-4">
+            <PageToolbar
+              bare
+              trailing={<RKFAttribution />}
+              activeFilterChips={activeFilterChips}
+              onClearAllFilters={
+                hasActiveFilters
+                  ? () => {
+                      setDogQuery('')
+                      setBreedQuery('')
+                      setAwardKey(null)
+                    }
+                  : undefined
+              }
+              filters={
+                <>
+                  <ToolbarSearch
+                    value={dogQuery}
+                    onChange={setDogQuery}
+                    placeholder="Кличка…"
+                    className="!w-auto min-w-[160px] flex-1 max-w-xs"
+                  />
+                  <ToolbarSearch
+                    value={breedQuery}
+                    onChange={setBreedQuery}
+                    placeholder="Порода…"
+                    className="!w-auto min-w-[160px] flex-1 max-w-xs"
+                  />
+                  <ExhibitionAwardFilter
+                    awards={availableAwards}
+                    value={awardKey}
+                    onChange={setAwardKey}
+                  />
+                </>
+              }
+            />
+          </div>
+        ) : null}
+
         {hasCatalog ? (
-          <CatalogResultsSection catalog={exhibition.breed_catalog!} results={exhibition.results} />
+          <CatalogResultsSection
+            catalog={exhibition.breed_catalog!}
+            results={exhibition.results}
+            dogQuery={dogQuery}
+            breedQuery={breedQuery}
+            awardKey={awardKey}
+          />
         ) : exhibition.results.length > 0 ? (
-          <LegacyResultsSection results={exhibition.results} />
+          <LegacyResultsSection
+            results={exhibition.results}
+            dogQuery={dogQuery}
+            breedQuery={breedQuery}
+            awardKey={awardKey}
+          />
         ) : (
           <div className="rounded-xl border border-old-money-200 bg-cream-50 p-4 dark:border-charcoal-600 dark:bg-charcoal-800/40">
             <div className="text-sm text-old-money-500 dark:text-old-money-400">Нет данных о результатах</div>

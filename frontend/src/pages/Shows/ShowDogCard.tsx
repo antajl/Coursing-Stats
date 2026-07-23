@@ -25,15 +25,20 @@ export interface ShowDogCardData {
   total_shows: number
   best_placement?: number
   best_award?: string | null
+  /** Лучшая оценка FCI/РКФ (RU), если есть в индексе. */
+  best_grade?: string | null
   rank_score?: number
   titles: ShowTitleCounts
   competition_dog_id?: number | null
+  /** Catalog/ring # for legacy /shows/dog/{catalog}/{breed} URLs. */
+  catalog_id?: string
   history?: Array<{
     date: string
     exhibition_id: number
     exhibition_title?: string
     placement: number
     title?: string
+    grade?: string
   }>
 }
 
@@ -49,13 +54,14 @@ interface ShowDogCardProps {
 }
 
 /** Оценка ширины чипа «BADGE ×N» + gap. */
-function estimateChipWidth(badge: string, count: number): number {
+export function estimateShowAwardChipWidth(badge: string, count: number): number {
   const label = `${badge}×${count}`
   // Чуть с запасом: text-[10px] + padding + gap
   return Math.ceil(label.length * 6.6 + 16 + 4)
 }
 
-function maxAwardsForWidth(
+/** Сколько наград влезает в budget px (с учётом `+N`). */
+export function maxShowAwardsForWidth(
   width: number,
   titles: ShowTitleCounts,
   awards: ReturnType<typeof presentShowAwards>,
@@ -72,7 +78,7 @@ function maxAwardsForWidth(
   let prevCat: string | null = null
   for (const key of flat) {
     const cat = SHOW_AWARD_CATEGORY[key]
-    const chip = estimateChipWidth(SHOW_AWARD_BADGE[key], titles[key] || 0)
+    const chip = estimateShowAwardChipWidth(SHOW_AWARD_BADGE[key], titles[key] || 0)
     const sep = prevCat && prevCat !== cat ? sepW : 0
     const next = used + sep + chip
     const remaining = flat.length - count - 1
@@ -111,7 +117,7 @@ function ShowAwardsRow({
       const statsW = statsRef.current?.offsetWidth ?? 64
       // row padding (px-2.5×2) + gap между чипами и колонкой
       const budget = Math.max(0, row.clientWidth - statsW - 20 - 8)
-      setMaxVisible(maxAwardsForWidth(budget, titles, awards))
+      setMaxVisible(maxShowAwardsForWidth(budget, titles, awards))
     }
 
     update()
@@ -154,9 +160,7 @@ export default function ShowDogCard({ dog, rank, filterYear = '' }: ShowDogCardP
   const yearBadge = showYearBadge(dog, filterYear)
 
   const href =
-    dog.competition_dog_id != null
-      ? `/dog/${dog.competition_dog_id}`
-      : `/shows/dog/${dog.id}/${encodeURIComponent(dog.breed)}`
+    dog.competition_dog_id != null ? `/dog/${dog.competition_dog_id}` : `/dog/${dog.id}`
 
   return (
     <Link

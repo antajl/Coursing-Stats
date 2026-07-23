@@ -153,7 +153,7 @@ export function DisciplineStatCell({
 
 export function DisciplineFooterRow({ children }: { children?: ReactNode }) {
   return (
-    <div className="mt-auto flex h-[2.75rem] max-h-[4.5rem] w-full shrink-0 items-center justify-center overflow-hidden py-1">
+    <div className="mt-auto flex h-[2.75rem] max-h-[4.5rem] w-full min-w-0 shrink-0 items-center justify-center overflow-hidden py-1">
       {children ?? null}
     </div>
   )

@@ -108,11 +108,12 @@ data/v1/
 **Ключевые факты:**
 - Лимит Cloudflare Pages **25 MB** на файл → all-time `dog-ranking.json` **не на CDN** (и не копируется `copy-data.js`)
 - На CDN: шарды `dog-ranking-{year}.json`; «все года» — склейка в `getShowDogRanking('')`
-- Календарь UI: `shows/calendar/{year}.json` (лёгкий список); полные протоколы — `exhibitions/*.json`
-- Сборка: `build-show-indexes.ts` (из `npm run build-all-data`)
+- Календарь UI (DEV): `shows/calendar-rkf/{year}.json` (rkf.online CategoryId=1, ~62k с 2019); fallback — `shows/calendar/{year}.json` (LC); протоколы DEV — LC `exhibitions/` + локальные RKF PDF `data/local/shows/exhibitions-rkf/`
+- Ингест: `npm run ingest-rkf-calendar` → `reports_link` + `bis_reports_link`; PDF-пайплайн: `download-rkf-reports` / `parse-rkf-reports` (не в git; ~74k PDF на весь архив)
+- `build-show-indexes.ts` читает LC **и** локальные RKF JSON → индексы; на проде история → rkf.online / PDF, не внутренний протокол
+- UI-склейка календаря: кавычки в названии игнорируются (`normalizeMergeText`); ранги/НКП — дети одной карточки
 
-Канон (структура, парсинг lc.rkfshow.ru, CDN/UI, скрипты): **[`SHOWS.md`](SHOWS.md)**.
-
+Канон: **[`SHOWS.md`](SHOWS.md)**.
 ---
 
 ## Breed Archive и `pedigree_url`

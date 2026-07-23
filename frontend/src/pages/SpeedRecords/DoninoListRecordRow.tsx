@@ -45,7 +45,7 @@ function TrackTypeBadge({ trackType }: { trackType: string | null | undefined })
   if (!trackType) return null
   const icon = getTrackTypeIcon(trackType)
   return (
-    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-camel-100 dark:bg-camel-900/30 text-camel-700 dark:text-camel-300 text-xs font-medium">
+    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-camel-100 dark:bg-camel-900 text-camel-700 dark:text-camel-200 text-xs font-medium">
       {icon}
       {trackType}
     </span>

@@ -19,10 +19,6 @@ export async function expectNoHorizontalOverflow(page: Page) {
   expect(hasOverflow).toBe(false)
 }
 
-export function competitionsSegment(page: Page) {
-  return page.getByRole('group', { name: 'Разделы соревнований' })
-}
-
 export function themeToggle(page: Page) {
   return page.getByRole('button', {
     name: /переключить на (светлую|тёмную) тему/i,

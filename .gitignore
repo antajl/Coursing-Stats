@@ -32,6 +32,10 @@ data/v1/donino/dogs/
 data/v1/shows/scrape-*.log
 data/v1/shows/scrape-*.json
 
+# Local RKF PDF cache + parsed protocols (not for CDN / git)
+data/local/
+data/tmp-sample-rkf.pdf
+
 # Large files not needed for production
 data/v1/shows/indexes/dog-ranking.json
 

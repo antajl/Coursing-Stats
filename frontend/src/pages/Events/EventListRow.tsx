@@ -21,6 +21,12 @@ export default function EventListRow({ event }: EventListRowProps) {
   const eventType = event.event_type || 'other'
   const borderClass = DISCIPLINE_BORDER[eventType] || DISCIPLINE_BORDER.default
   const dateParts = formatRowDateParts(event.date_start, event.date_end)
+  // Как на ShowCalendar: «4 апр.» / «26–27 апр.» (короткий месяц с точкой)
+  const dayLineWithMonth = dateParts
+    ? dateParts.dayEnd
+      ? `${dateParts.day}–${dateParts.dayEnd} ${dateParts.month}.`
+      : `${dateParts.day} ${dateParts.month}.`
+    : null
   const judgeNames = parseJudgeNames(event.judges)
   const participants = event.participants_count ?? 0
   const visibleJudges = judgeNames.slice(0, 4)
@@ -42,8 +48,8 @@ export default function EventListRow({ event }: EventListRowProps) {
       </span>
     ) : null
 
-  const rowClassName = `grid grid-cols-[4.5rem_minmax(0,1fr)] ${
-    showJudgesColumn ? 'sm:grid-cols-[5rem_minmax(0,1fr)_9.5rem]' : 'sm:grid-cols-[5rem_minmax(0,1fr)]'
+  const rowClassName = `grid grid-cols-[5.5rem_minmax(0,1fr)] ${
+    showJudgesColumn ? 'sm:grid-cols-[6rem_minmax(0,1fr)_9.5rem]' : 'sm:grid-cols-[6rem_minmax(0,1fr)]'
   } items-center gap-3 sm:gap-4 rounded-lg border border-old-money-200 dark:border-charcoal-600 border-l-4 ${borderClass} bg-cream-50 dark:bg-charcoal-800 px-3 py-2.5 sm:px-3 sm:py-2.5 mb-1.5 transition-colors hover:bg-camel-100 dark:hover:bg-charcoal-700 hover:translate-x-0.5 ${
     cancelled ? 'opacity-70' : ''
   } ${
@@ -54,10 +60,10 @@ export default function EventListRow({ event }: EventListRowProps) {
 
   const rowContent = (
     <>
-      <div className="w-[4.75rem] shrink-0 text-sm leading-tight text-charcoal-800 dark:text-charcoal-100 sm:w-[5rem]">
-        {dateParts ? (
+      <div className="w-[5.5rem] shrink-0 text-sm leading-tight text-charcoal-800 dark:text-charcoal-100 sm:w-[6rem]">
+        {dayLineWithMonth && dateParts ? (
           <>
-            <span className="block whitespace-nowrap font-semibold tabular-nums">{dateParts.dayLine}</span>
+            <span className="block whitespace-nowrap font-semibold tabular-nums">{dayLineWithMonth}</span>
             <span className="block whitespace-nowrap text-xs text-charcoal-500 dark:text-charcoal-400">
               {dateParts.metaLine}
             </span>

@@ -148,15 +148,14 @@ POST /api/admin/recreate-views
 
 **Shell:** `App.tsx` (layout + `Nav`) → `AppRoutes.tsx` (lazy routes, code-split chunks)
 
-**Pages (lazy-loaded):**
+**Pages (lazy-loaded):** полная карта — [`04-FRONTEND.md`](04-FRONTEND.md). Кратко:
 - `/` — `Home.tsx` (лендинг: hero, топ сезона, рекорды Донино)
-- `/competitions` — `Competitions.tsx` (hub: Календарь, Рейтинг, Судьи)
-- `/top` — `TopDogs/index.tsx` (рейтинг: **очки** default | места; рейсинг отдельная колонка)
-- `/event/:id` — `Events/EventResults/` (модуль: racing vs scoring details)
-- `/dog/:id` — `DogProfile.tsx`
-- `/judges`, `/judges/:judgeId` — судьи
-- `/speed-records` — рекорды Донино: две колонки (Замер | Бега 350 м), `?view=table|stats`, `?groupBy=breed|sex|year`
-- `/donino-dog/:name/:breed` — профиль собаки из рекордов Донино
+- `/competitions` — `Competitions.tsx` (hub: **Рейтинг + Судьи**; `?tab=calendar` только Vite DEV / `isLocalDev`)
+- `/shows` — `Shows.tsx` (hub: рейтинг + судьи; календарь / `/shows/exhibition/:id` — только DEV)
+- `/top`, `/judges` — legacy redirect → `/competitions?tab=…`
+- `/event/:id` — протоколы соревнований (**только DEV**; на проде → hub)
+- `/dog/:id` — единый профиль; `/judges/:judgeId` — судья
+- `/speed-records`, `/donino-dog/:name/:breed` — Донино
 
 **UI:** кастомные компоненты в `frontend/src/components/ui/` (Button, Card, Badge) — **не shadcn/ui**. Тема: светлая по умолчанию, class-based dark mode (`ThemeToggle` → `localStorage.theme`).
 

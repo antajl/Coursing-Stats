@@ -53,7 +53,7 @@ npm run test:e2e:ui
 
 | Файл | Покрытие |
 |------|----------|
-| `e2e/helpers.ts` | Общие проверки (404, overflow, сегменты) |
+| `e2e/helpers.ts` | Общие проверки (404, overflow, theme toggle) |
 | `e2e/fixtures.ts` | ID события/собаки/судьи из API `127.0.0.1:8787` |
 | `e2e/home.spec.ts` | Hero, ближайшие события, overflow 375px |
 | `e2e/guide.spec.ts` | `/guide`, вкладки справочника |

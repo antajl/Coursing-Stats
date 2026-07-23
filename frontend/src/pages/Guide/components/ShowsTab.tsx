@@ -16,6 +16,7 @@ import {
   CumulativeTitlesGrid,
   EventTitlesGrid,
   FeatureNotesGrid,
+  ExternalHref,
   InfoCallout,
   OfficialSourcesList,
   PriorityAwardsList,
@@ -84,6 +85,9 @@ export default function ShowsTab() {
           В шапке: <strong>Выставки → Рейтинг / Судьи</strong>
           (локально ещё <strong>Календарь</strong>). В карточке собаки — счётчики наград
           по категориям, число выставок и место в рейтинге.
+          В истории выставок в профиле ссылки ведут на{' '}
+          <ExternalHref href="https://lc.rkfshow.ru/">lc.rkfshow.ru</ExternalHref>
+          {' '}(на проде нет внутренних страниц протоколов выставок).
         </p>
         <InfoCallout>
           Сертификаты <ShowAbbr abbr="CAC" /> и <ShowAbbr abbr="CACIB" /> — шаг к оформлению титулов в РКФ, но не

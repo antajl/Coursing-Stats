@@ -68,8 +68,8 @@
 8. **API путь** `/api/competitions`, не `/api/events` (uBlock).
 9. **Донино:** `speed_records` (км/ч) и `coursing_records` (сек) — разные источники. Модель: [`09-SPEED-RECORDS.md`](09-SPEED-RECORDS.md); пайплайн: [`09a-DONINO-PIPELINE.md`](09a-DONINO-PIPELINE.md).
 10. **procoursing.ru** — windows-1251, `fetch-win1251.ts`.
-11. **Публичный UI (вариант A):** на проде нет календаря и протоколов — только рейтинг/судьи/профили; протоколы → procoursing.ru / lc.rkfshow.ru. Локально (`npm run dev`, `import.meta.env.DEV`): календарь в nav → `/competitions?tab=calendar`, `/shows?tab=calendar`; протоколы → `/event/:id`, `/shows/exhibition/:id`. Legacy `/admin/calendar`, `/admin/event/:id` редиректят на эти пути.
-
+11. **Публичный UI (вариант A):** на проде нет календаря и протоколов — только рейтинг/судьи/профили. Соревнования: протоколы → procoursing.ru. Выставки: история → `rkf.online` + PDF отчёт (`reports_link`), не `/shows/exhibition/...`. Локально (`npm run dev`): календари в nav; протоколы → `/event/:id`, `/shows/exhibition/:id` (LC + распарсенные RKF PDF из `data/local/`). PDF-кэш **не** в git/CDN — см. [`SHOWS.md`](SHOWS.md).
+12. **Выставки RKF PDF:** `ingest-rkf-calendar` → `download-rkf-reports` → `parse-rkf-reports` → `build-show-indexes`; годы с 2026 вниз; ~74k PDF на 2019–2026.
 ---
 
 ## 5. Не менять без явного запроса

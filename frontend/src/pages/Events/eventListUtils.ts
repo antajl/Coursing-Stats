@@ -12,6 +12,7 @@ export interface CalendarEvent {
   host_club?: string | null
   location?: string | null
   results_url?: string | null
+  has_results?: boolean
   judges?: string | null
   participants_count?: number
 }

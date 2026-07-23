@@ -1,3 +1,11 @@
+import {
+  matchShowAwardToken,
+  SHOW_AWARD_ORDER,
+  type ShowAwardKey,
+} from '../../../../backend/lib/show-award-ranking'
+
+export type { ShowAwardKey }
+
 export interface ShowResultRow {
   breed: string
   breed_en?: string
@@ -188,6 +196,26 @@ export function splitShowTitleTokens(title: string | null | undefined): string[]
     .filter(Boolean)
 }
 
+/** Канонические награды, встречающиеся в результатах выставки (порядок SHOW_AWARD_ORDER). */
+export function collectExhibitionAwardKeys(results: ShowResultRow[]): ShowAwardKey[] {
+  const present = new Set<ShowAwardKey>()
+  for (const row of results) {
+    for (const token of splitShowTitleTokens(row.title)) {
+      const key = matchShowAwardToken(token)
+      if (key) present.add(key)
+    }
+  }
+  return SHOW_AWARD_ORDER.filter((key) => present.has(key))
+}
+
+export function resultHasAward(row: ShowResultRow, awardKey: ShowAwardKey): boolean {
+  return splitShowTitleTokens(row.title).some((token) => matchShowAwardToken(token) === awardKey)
+}
+
+export function titleRowHasAward(row: BreedTitleRow, awardKey: ShowAwardKey): boolean {
+  return matchShowAwardToken(row.title_code) === awardKey
+}
+
 export function formatGradeLine(grade: string | undefined): string {
   if (!grade) return ''
   const trimmed = grade.replace(/\s+/g, ' ').trim()
@@ -196,6 +224,68 @@ export function formatGradeLine(grade: string | undefined): string {
   const cyrillicParts = trimmed.match(/[А-Яа-яЁё][А-Яа-яЁё\s,-]*/g)
   if (cyrillicParts?.length) return cyrillicParts.join(' ').replace(/\s+/g, ' ').trim()
   return trimmed
+}
+
+function normalizeSearchText(value: string | undefined | null): string {
+  return (value ?? '').toLowerCase().replace(/\s+/g, ' ').trim()
+}
+
+/** Совпадение клички с запросом (номер ринга игнорируется при поиске по имени). */
+export function dogNameMatchesQuery(dogName: string, query: string): boolean {
+  const q = normalizeSearchText(query)
+  if (!q) return true
+  const { name } = splitDogNameDisplay(dogName)
+  const haystack = normalizeSearchText(`${dogName} ${name}`)
+  return haystack.includes(q)
+}
+
+/** Совпадение породы (RU/EN) с запросом. */
+export function breedMatchesQuery(
+  breed: string,
+  breedEn: string | undefined,
+  query: string
+): boolean {
+  const q = normalizeSearchText(query)
+  if (!q) return true
+  return (
+    normalizeSearchText(breed).includes(q) ||
+    normalizeSearchText(breedEn).includes(q)
+  )
+}
+
+export function catalogBreedMatchesFilters(
+  catalog: BreedCatalogRow,
+  breedQuery: string,
+  dogQuery: string,
+  resultsByBreedId: Map<number, ShowResultRow[]>,
+  allResults: ShowResultRow[],
+  awardKey?: ShowAwardKey | null
+): boolean {
+  if (!breedMatchesQuery(catalog.breed, catalog.breed_en, breedQuery)) return false
+  const q = normalizeSearchText(dogQuery)
+  if (!q && !awardKey) return true
+  const rows =
+    resultsByBreedId.get(catalog.dog_breed_id) ??
+    resultsForBreed(allResults, catalog.dog_breed_id, catalog.breed_en)
+  return rows.some(
+    (row) =>
+      dogNameMatchesQuery(row.dog_name, dogQuery) &&
+      (!awardKey || resultHasAward(row, awardKey))
+  )
+}
+
+export function filterResultsByDogAndBreed(
+  results: ShowResultRow[],
+  dogQuery: string,
+  breedQuery: string,
+  awardKey?: ShowAwardKey | null
+): ShowResultRow[] {
+  return results.filter(
+    (row) =>
+      breedMatchesQuery(row.breed, row.breed_en, breedQuery) &&
+      dogNameMatchesQuery(row.dog_name, dogQuery) &&
+      (!awardKey || resultHasAward(row, awardKey))
+  )
 }
 
 /** Формат как на lc.rkfshow.ru. */

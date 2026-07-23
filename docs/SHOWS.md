@@ -36,18 +36,19 @@
 **RKF show `id` ≠ procoursing dog `id`.** Числовые совпадения случайны (пример: show id `24` = DREAM MEADOW'S SPELLBOUND, competition id `24` = АТРЕЙО СИЛЬВЕР СВИФТ).
 
 **URL профиля:**
-- `/dog/{competition_dog_id}` — канонический профиль (есть связь с procoursing).
-- `/shows/dog/{rkfId}/{breed}` — только выставки (нет уникального матча с соревнованиями). UI тот же `DogProfile`: колонки курсинг/беги пустые («данных нет»), выставки заполнены. При появлении `competition_dog_id` — редирект на `/dog/...`.
-- История выставок в профиле ведёт на lc.rkfshow.ru (`ExhibitionResultListView?exhibitionId=` из `history[].exhibition_id`), не на `/shows/exhibition/...`.
+- `/dog/{id}` — единый канонический профиль.
+  - Связь с procoursing → `id = competition_dog_id` (как раньше, напр. `/dog/5711`).
+  - Только выставки → стабильный hash **≥ 1 000 000** (напр. `/dog/1004829173`), без породы в URL.
+- Legacy `/shows/dog/{catalog}/{breed}` → редирект на `/dog/{id}`.
+- История на проде → rkf.online / PDF (`history.url`, `reports_link`), не внутренний протокол.
 
-Правила (см. `backend/lib/dog-identity-match.ts`, сборка `build-show-indexes.ts`):
+Правила (см. `backend/lib/dog-identity-match.ts`, `show-dog-profile-id.ts`, сборка `build-show-indexes.ts`):
 
-1. **Никогда** не сопоставлять по числовому id между системами (RKF ≠ procoursing).
-2. **Номер в каталоге выставки `(5538)` — не id собаки:** на разных выставках один номер бывает у разных псов. Агрегация рейтинга только по **полной кличке + породе**.
+1. **Никогда** не сопоставлять по числовому id между системами (RKF catalog ≠ procoursing).
+2. **Номер в каталоге выставки `(5538)` — не id собаки:** на разных выставках один номер бывает у разных псов. Агрегация рейтинга только по **полной кличке + породе**. Поле `catalog_id` — только для legacy URL.
 3. Совпадение shows↔competitions только по **кличке** (части RU/EN через `/`) **и породе** (RU↔EN через `breed_catalog` / `breed-aliases.json`).
 4. При неоднозначности — не линкуем.
-5. В индексе рейтинга поле `competition_dog_id`: ссылка на `/dog/{id}` только если линк уникален; иначе `/shows/dog/{showId}/{breed}`.
-
+5. После линка: `id` в индексе = `competition_dog_id` или `stableShowProfileId(name, breed)` (≥1e6).
 **Поиск в `/shows?tab=ranking`:** по умолчанию все годы; кнопка «Сезон YYYY» как в рейтинге соревнований. При поиске по кличке тоже грузятся все годы (если выбран год сезона — он для поиска не режет выдачу).
 
 ---
@@ -62,7 +63,13 @@ data/v1/shows/
 │   ├── results: [{ breed, class, placement, title, dog_name, owner, judge }]
 │   └── raw_text: string
 ├── calendar/{year}.json
-│   └── exhibitions: [{ id, date, title, location, has_results }]
+│   └── exhibitions: [{ id, date, title, location, has_results }]  # LC scraped (~90)
+├── calendar-rkf/{year}.json + manifest.json
+│   └── schema: coursing-stats/show-calendar-rkf-v1
+│   └── exhibitions: [{ id, date, title, city, club, ranks,
+│                       national_breed_club_name, breeds, url,
+│                       has_report_link, reports_link, has_lc_protocol,
+│                       lc_exhibition_id, lc_url }]
 └── indexes/
     ├── dog-ranking-{year}.json
     ├── judges.json          # [{ name, total_judged, breeds[] }]
@@ -85,8 +92,23 @@ data/v1/shows/
 - `/shows/exhibition/:id` — протокол выставки (**только DEV**; на проде → `/shows`)
 - `/shows?tab=champions` и `/shows/champions` → редирект на рейтинг (вкладка снята: дублировала рейтинг)
 
-Gate: `frontend/src/lib/env.ts` → `isLocalDev = import.meta.env.DEV` (false в production Pages build). Sitemap не включает calendar/exhibition URL.
+Gate: `frontend/src/lib/env.ts` → `isLocalDev = import.meta.env.DEV` (false in production Pages build). Sitemap не включает calendar/exhibition URL.
 
+**Прод vs локально (выставки):** на проде — рейтинг + профили из `indexes/`; история собаки → `rkf.online/exhibitions/{id}` и PDF (`reports_link`), не наш `/shows/exhibition/...`. Календарь и полные протоколы — **только DEV**. PDF и `exhibitions-rkf` в git/CDN **не** кладём (`data/local/`, gitignore).
+
+### Объём PDF (по `calendar-rkf`, type1+type3)
+
+Считается локально без API: `reports_link` + `bis_reports_link`. Ориентир на ~2026-07:
+
+| Год | Выставок | PDF файлов |
+|-----|----------|------------|
+| 2019 | 3710 | ~2630 |
+| 2020 | 6728 | ~8690 |
+| 2021–2025 | ~8–9k/год | ~10.5–12.5k/год |
+| 2026 | 9723 | ~5050 (год ещё идёт — меньше отчётов) |
+| **Итого 2019–2026** | **~62k** | **~74.5k PDF** |
+
+Пайплайн: `download-rkf-reports` → `parse-rkf-reports` → `sync-local-show-protocols` → `build-show-indexes`. Годы с 2026 вниз.
 ## Справочник на сайте
 
 Пользовательская расшифровка титулов и сертификатов выставок — **не здесь**, а на странице справочника:
@@ -103,15 +125,42 @@ Gate: `frontend/src/lib/env.ts` → `isLocalDev = import.meta.env.DEV` (false в
 | `indexes/dog-ranking-{year}.json` | да | ~2–6 MB compact — основной формат |
 | `indexes/dog-ranking-unknown.json` | да* | выставки без распознанной даты (`extractYear`) |
 | `indexes/dog-ranking.json` | **нет** | all-time; только локально/сборка; исключён `copy-data.js` |
-| `calendar/{year}.json` | да | лёгкий список для UI календаря |
+| `calendar/{year}.json` | да | лёгкий LC scraped список (~90) |
+| `calendar-rkf/{year}.json` | да* | каталог rkf.online CategoryId=1 (~3–3.5 MB/год); UI только DEV |
 
 - **UI:** `getShowDogRanking(year)` → шард года; без года → склейка шардов (файла all-time на CDN нет); по умолчанию — текущий сезон
-- **Календарь:** `getShowCalendar()` читает `shows/calendar/{year}.json`; полный протокол — `exhibitions/*.json` на `/shows/exhibition/:id`
-- **Сборка:** `npx tsx backend/scripts/build-show-indexes.ts` (из `build-all-data`)
+- **Календарь UI:** `getShowCalendar()` предпочитает `shows/calendar-rkf/{year}.json` (каталог rkf.online CategoryId=1); fallback — `shows/calendar/{year}.json` (LC scraped). Полный протокол — `exhibitions/*.json` (LC) или `exhibitions-rkf` (PDF) на `/shows/exhibition/:id` (**только DEV**)
+- **Ингест rkf.online:** `npm run ingest-rkf-calendar` → `backend/scripts/shows/ingest-rkf-calendar.ts` (метаданные, без PDF). Lean-поля: `ranks`, `national_breed_club_name`, `breeds`, `reports_link` (PDF type 1 «Итоговый отчет»), `bis_reports_link` (PDF type 3 BIS). LC-подсветка: `reports_links` с `exhibitionId` на lc.rkfshow.ru|rkfshow.ru, id ∈ `source-index.json`
+- **Сборка индексов:** `npx tsx backend/scripts/build-show-indexes.ts` (из `build-all-data`) — читает LC `exhibitions/` **и** локальные `data/local/shows/exhibitions-rkf/` → `indexes/dog-ranking-*.json`. Переписывает `calendar/{year}.json`, **не** трогает `calendar-rkf/`
+- **Прод:** только рейтинг + профили из индексов. История собаки ведёт на `url` (rkf.online / LC) и при наличии на `reports_link` (PDF). Полные протоколы и PDF **не** на CDN.
 - **Логика:** `backend/lib/show-award-ranking.ts` — полный реестр токенов протокола (BIS…СС), веса `rank_score`, алиасы ЛПП/ЛППП → BOB/BOS; категории UI `SHOW_AWARD_CATEGORY` (prestige / certificate / diploma)
 - В UI протокола: блок титулов породы разделён (код / № / кличка / **судья**); награды в таблице — чипы по категориям; Specialty-список судей в шапке скрыт
 - Рейтинг собак: **одна колонка на всю ширину**; `#место` внутри карточки (справа сверху) — место в полном рейтинге среза по порядку сортировки (не `id` кольца: он не уникален у RKF); бейджи с разделителями категорий (`awardChipRender`)
-- **Тест:** `backend/tests/show-award-ranking.test.ts`
+- **Тест:** `backend/tests/show-award-ranking.test.ts`, `backend/tests/parse-rkf-certificate-pdf.test.ts`
+
+### Локальные PDF-протоколы (не в git / не на CDN)
+
+| Путь | Назначение |
+|------|------------|
+| `data/local/rkf-reports/{year}/{id}-type{1\|3}.pdf` | Кэш PDF (gitignore) |
+| `data/local/shows/exhibitions-rkf/{year}/{id}.json` | Распарсенные lean-протоколы |
+| `data/local/shows/exhibitions-rkf/index.json` | id → относительный путь |
+| `frontend/public/data/v1/shows/exhibitions-rkf/` | DEV-копия (`npm run sync-local-show-protocols`) |
+
+Пайплайн по годам (с 2026 вниз):
+
+```bash
+npm run ingest-rkf-calendar
+npm run download-rkf-reports -- --year=2026
+npm run parse-rkf-reports -- --year=2026
+npm run sync-local-show-protocols
+npx tsx backend/scripts/build-show-indexes.ts
+# затем при необходимости build-all-data; в git — только indexes + calendar-rkf
+```
+
+Инкремент: повторный `download-rkf-reports` пропускает файлы с тем же размером/sha256 в `download-manifest.json`.
+
+Парсер: `backend/parsers/shows/parse-rkf-certificate-pdf.ts` (итоговый отчёт + best-effort BIS).
 
 Краткий указатель в дереве данных: [`03-DATA.md`](03-DATA.md) → «Выставки».
 
@@ -173,7 +222,19 @@ lc.rkfshow.ru использует:
 1. **Ручной ввод данных** - создать админ-интерфейс для ввода
 2. **Другой источник данных** - найти другой источник выставочных данных
 3. **Углубленный анализ Telerik** - разобраться в структуре AJAX ответов
-4. **API РКФ** - проверить доступность официального API
+4. **API РКФ** — публичный каталог: `GET https://rkf.online/api/Exhibitions/exhibition/public?CategoryId=1&DateFrom=&DateTo=&sortType=4&StartElement=&ElementCount=` (до 1000/страница)
+
+### Календарь rkf.online (метаданные)
+
+```bash
+npm run ingest-rkf-calendar
+# опционально:
+npx tsx backend/scripts/shows/ingest-rkf-calendar.ts --from=2025-01-01 --to=2025-12-31
+```
+
+Пишет `data/v1/shows/calendar-rkf/{year}.json` + `manifest.json`. Пагинация по **годовым окнам** (API отдаёт HTTP 500 при `StartElement ≥ 10000`). UI календаря (только `isLocalDev`) подсвечивает строки с `has_lc_protocol` (warm-blue), ссылка на rkf.online **`/exhibitions/{id}`** (мн. число; `/exhibition/{id}` — client 404); при наличии LC — вторичная ссылка на протокол / локальный `/shows/exhibition/:lcId`.
+
+**Группировка mono в UI** (`ShowCalendar.tsx` + `showCalendarGroup.ts`): варианты с одним `date+title+ranks+city+club` и разными НКП схлопываются в одну строку (аккордеон); счётчик месяца считает **группы**, не сырые карточки. «КЧК» и «КЧК в каждом классе» не сливаются (ranks в ключе).
 
 ## Build Pipeline
 

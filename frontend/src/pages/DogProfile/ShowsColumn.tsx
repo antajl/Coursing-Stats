@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useLayoutEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import {
   presentShowAwards,
@@ -8,7 +8,9 @@ import {
   matchShowAwardToken,
   type ShowAwardKey,
 } from '../../../../backend/lib/show-award-ranking'
+import { bestShowGradeLabel } from '../../../../backend/lib/show-grades'
 import type { ShowDogCardData } from '../Shows/ShowDogCard'
+import { maxShowAwardsForWidth } from '../Shows/ShowDogCard'
 import { splitShowTitleTokens } from '../Shows/showExhibitionUtils'
 import { titleBadgeClass } from '../../lib/qualificationTitles'
 import { renderShowAwardChips } from '../../lib/awardChipRender'
@@ -19,7 +21,7 @@ import {
   groupItemsByCategory,
 } from '../../lib/awardCategories'
 import { localExhibitionPath } from '../../lib/env'
-import { rkfExhibitionResultsUrl } from '../../lib/rkfLinks'
+import { rkfOnlineExhibitionUrl } from '../../lib/rkfLinks'
 import { HISTORY_DEFAULT } from './dogProfileStats'
 import {
   DisciplineColumnShell,
@@ -30,15 +32,17 @@ import {
   disciplineTheme,
 } from './DisciplineColumnShell'
 
-/** Сколько чипов влезает в одну строку футера карточки профиля. */
-const PROFILE_AWARD_MAX_VISIBLE = 5
-
 export type ShowHistoryEntry = {
   date: string
   exhibition_id: number
   exhibition_title?: string
   placement: number
   title?: string
+  grade?: string
+  /** Original event page (rkf.online / LC). */
+  url?: string
+  /** Original PDF report when available. */
+  reports_link?: string
 }
 
 type ShowsColumnProps = {
@@ -47,18 +51,69 @@ type ShowsColumnProps = {
 
 const THEME = 'camel' as const
 
+function resolveBestGradeLabel(dog: ShowsColumnProps['dog']): string | null {
+  if (dog.best_grade?.trim()) return dog.best_grade.trim()
+  const history = Array.isArray(dog.history) ? dog.history : []
+  return bestShowGradeLabel(history.map((h) => h.grade))
+}
+
+function ProfileShowAwardsFooter({ titles }: { titles: ShowDogCardData['titles'] }) {
+  const awards = presentShowAwards(titles)
+  const rowRef = useRef<HTMLDivElement>(null)
+  // 0 до measure — иначе чипы раздувают ширину и RO видит «бесконечный» budget
+  const [maxVisible, setMaxVisible] = useState(0)
+  const awardKey = awards.join(',')
+
+  useLayoutEffect(() => {
+    const row = rowRef.current
+    if (!row || awards.length === 0) {
+      setMaxVisible(0)
+      return
+    }
+
+    const update = () => {
+      setMaxVisible(maxShowAwardsForWidth(row.clientWidth, titles, awards))
+    }
+
+    update()
+    const ro = new ResizeObserver(update)
+    ro.observe(row)
+    return () => ro.disconnect()
+  }, [awardKey, titles])
+
+  if (awards.length === 0) {
+    return (
+      <span className="text-sm text-old-money-500 dark:text-old-money-400">Нет наград</span>
+    )
+  }
+
+  return (
+    <div
+      ref={rowRef}
+      className="flex min-w-0 w-full max-w-full flex-nowrap items-center justify-center gap-1 overflow-hidden"
+    >
+      {renderShowAwardChips({
+        titles,
+        size: 'sm',
+        maxVisible,
+        nowrap: true,
+      })}
+    </div>
+  )
+}
+
 /** Колонка выставок — тот же каркас, что Курсинг / Бега. */
 export function ShowsColumn({ dog }: ShowsColumnProps) {
   const t = disciplineTheme(THEME)
   const [showAll, setShowAll] = useState(false)
-  const awardKeys = presentShowAwards(dog.titles)
   const bestKey = (dog.best_award as ShowAwardKey | null) ?? null
   const bestLabel = bestKey ? SHOW_AWARD_LABELS[bestKey] : null
   const bestBadge = bestKey ? SHOW_AWARD_BADGE[bestKey] : null
   const history = Array.isArray(dog.history) ? dog.history : []
   const visible = showAll ? history : history.slice(0, HISTORY_DEFAULT)
+  const bestGrade = resolveBestGradeLabel(dog)
 
-  const cellClass = `min-h-[5.5rem] rounded-xl border p-4 text-center ${t.cellBorder} ${t.cellBg}`
+  const cellClass = `min-h-[5.5rem] min-w-0 rounded-xl border p-4 text-center ${t.cellBorder} ${t.cellBg}`
 
   return (
     <DisciplineColumnShell>
@@ -90,29 +145,21 @@ export function ShowsColumn({ dog }: ShowsColumnProps) {
           </div>
           <div className={cellClass}>
             <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-old-money-500 dark:text-old-money-400">
-              Лучшее место
+              Лучшая оценка
             </div>
-            <div className="text-2xl font-bold tabular-nums text-charcoal-800 dark:text-charcoal-100">
-              {dog.best_placement || '—'}
+            <div
+              className={`font-bold text-charcoal-800 dark:text-charcoal-100 ${
+                bestGrade && bestGrade.length > 10 ? 'text-lg leading-snug' : 'text-2xl'
+              }`}
+              title={bestGrade ?? undefined}
+            >
+              {bestGrade || '—'}
             </div>
           </div>
         </div>
 
         <DisciplineFooterRow>
-          {awardKeys.length > 0 ? (
-            <div className="flex w-full max-w-full flex-nowrap items-center justify-center gap-1 overflow-hidden">
-              {renderShowAwardChips({
-                titles: dog.titles,
-                size: 'sm',
-                maxVisible: PROFILE_AWARD_MAX_VISIBLE,
-                nowrap: true,
-              })}
-            </div>
-          ) : (
-            <span className="text-sm text-old-money-500 dark:text-old-money-400">
-              Рейтинг: {dog.rank_score ?? '—'}
-            </span>
-          )}
+          <ProfileShowAwardsFooter titles={dog.titles} />
         </DisciplineFooterRow>
       </DisciplineStatsCard>
 
@@ -180,16 +227,23 @@ export function ShowsColumn({ dog }: ShowsColumnProps) {
                   </Link>
                 )
               }
-              const rkfUrl = rkfExhibitionResultsUrl(entry.exhibition_id)
-              if (rkfUrl) {
+              const externalUrl =
+                entry.reports_link?.trim() ||
+                entry.url?.trim() ||
+                rkfOnlineExhibitionUrl(entry.exhibition_id)
+              if (externalUrl) {
                 return (
                   <a
                     key={rowKey}
-                    href={rkfUrl}
+                    href={externalUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={rowClass}
-                    title="Результаты на lc.rkfshow.ru"
+                    title={
+                      entry.reports_link
+                        ? 'Оригинальный отчёт (PDF)'
+                        : 'Страница мероприятия на rkf.online'
+                    }
                   >
                     {rowBody}
                   </a>

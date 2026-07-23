@@ -32,15 +32,17 @@ import {
 } from './dogProfileStats'
 
 /**
- * Единый профиль: `/dog/:id` (соревнования ± выставки) и
- * `/shows/dog/:dogId/:breed` (только выставки, без связи с procoursing).
+ * Единый профиль `/dog/:id`:
+ * — id из соревнований (procoursing);
+ * — id ≥ 1e6 — только выставки (стабильный hash);
+ * — legacy `/shows/dog/:dogId/:breed` → редирект на `/dog/{id}`.
  */
 export default function DogProfile() {
   const params = useParams<{ id?: string; dogId?: string; breed?: string }>()
   const competitionId = params.id
   const showRouteDogId = params.dogId
   const showRouteBreed = params.breed ? decodeURIComponent(params.breed) : undefined
-  const isShowOnlyRoute = Boolean(showRouteDogId && showRouteBreed)
+  const isLegacyShowRoute = Boolean(showRouteDogId && showRouteBreed)
 
   const navigate = useNavigate()
   const location = useLocation()
@@ -97,7 +99,7 @@ export default function DogProfile() {
     if (dog || showDog) reachGoal('dog_profile_view')
   }, [dog, showDog, reachGoal])
 
-  // Выставки: по кличке+породе / competition_dog_id, либо по RKF id+breed из /shows/dog/...
+  // Выставки: матч к competition dog, либо по стабильному /dog/:id, либо legacy breed route
   useEffect(() => {
     let cancelled = false
     const loadShows = async () => {
@@ -120,10 +122,20 @@ export default function DogProfile() {
             },
             result.data,
           )
+        } else if (profileId) {
+          found =
+            result.data.find((d) => String(d.id) === String(profileId)) ??
+            result.data.find((d) => String(d.competition_dog_id) === String(profileId)) ??
+            null
         } else if (showRouteDogId && showRouteBreed) {
           found =
-            result.data.find((d) => d.id === showRouteDogId && d.breed === showRouteBreed) ??
-            result.data.find((d) => d.id === showRouteDogId) ??
+            result.data.find(
+              (d) =>
+                d.breed === showRouteBreed &&
+                (String(d.catalog_id) === String(showRouteDogId) ||
+                  String(d.id) === String(showRouteDogId)),
+            ) ??
+            result.data.find((d) => String(d.id) === String(showRouteDogId)) ??
             null
         }
         if (!cancelled) setShowDog(found)
@@ -133,20 +145,25 @@ export default function DogProfile() {
         if (!cancelled) setShowsLoading(false)
       }
     }
-    if (isShowOnlyRoute || !loading) loadShows()
+    if (isLegacyShowRoute || !loading) loadShows()
     return () => {
       cancelled = true
     }
-  }, [competitionId, dog, loading, showRouteDogId, showRouteBreed, isShowOnlyRoute])
+  }, [competitionId, dog, loading, showRouteDogId, showRouteBreed, isLegacyShowRoute, profileId])
 
-  // Есть связь с procoursing — канонический URL /dog/:id
+  // Linked show dog on legacy URL → canonical /dog/{competition_id}
   if (
     !showsLoading &&
-    isShowOnlyRoute &&
+    isLegacyShowRoute &&
     showDog?.competition_dog_id != null &&
     Number.isFinite(Number(showDog.competition_dog_id))
   ) {
     return <Navigate to={`/dog/${showDog.competition_dog_id}`} replace />
+  }
+
+  // Legacy /shows/dog/{…}/{breed} → /dog/{stableId}
+  if (!showsLoading && isLegacyShowRoute && showDog?.id) {
+    return <Navigate to={`/dog/${showDog.id}`} replace />
   }
 
   const handleExport = async () => {
@@ -190,7 +207,7 @@ export default function DogProfile() {
             message={`ID: ${competitionId || showRouteDogId || '—'}`}
             action={
               <Link
-                to={isShowOnlyRoute ? '/shows?tab=ranking' : '/competitions?tab=ranking'}
+                to={isLegacyShowRoute || !dog ? '/shows?tab=ranking' : '/competitions?tab=ranking'}
                 className="rounded-xl border-2 border-camel-300 bg-white px-4 py-2 text-sm font-semibold text-camel-700 transition-all hover:border-camel-400 hover:bg-camel-50 dark:border-camel-600 dark:bg-charcoal-800 dark:text-camel-400 dark:hover:bg-charcoal-700"
               >
                 К рейтингу

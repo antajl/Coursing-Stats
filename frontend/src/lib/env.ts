@@ -9,6 +9,6 @@ export const localEventPath = isLocalDev ? '/event' : null
 
 /**
  * Базовый путь к локальному просмотру протокола выставки.
- * На проде null — ссылки ведут на lc.rkfshow.ru (см. rkfLinks).
+ * На проде null — ссылки ведут на rkf.online / PDF отчёт (см. rkfLinks, history.url).
  */
 export const localExhibitionPath = isLocalDev ? '/shows/exhibition' : null

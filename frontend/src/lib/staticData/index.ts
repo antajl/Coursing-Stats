@@ -43,8 +43,11 @@ export { getDogProfile, getDogEvents } from './dogs'
 
 export {
   getShowCalendar,
+  getShowRkfCalendar,
+  getShowRkfCalendarYears,
   getShowExhibition,
   getShowDogRanking,
   getShowJudges,
   type ShowJudge,
+  type ShowRkfCalendarEntry,
 } from './shows'

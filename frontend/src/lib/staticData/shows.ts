@@ -5,6 +5,7 @@ import {
   showRankScore,
   type ShowTitleCounts,
 } from '../../../../backend/lib/show-award-ranking'
+import { bestShowGradeLabel } from '../../../../backend/lib/show-grades'
 import { type ApiResult, fetchJson } from './core'
 
 interface ShowResult {
@@ -52,7 +53,7 @@ interface ShowExhibition {
   results: ShowResult[]
 }
 
-/** Лёгкие годовые календари (не полные exhibitions/*.json). */
+/** Лёгкие годовые календари LC-протоколов (не полные exhibitions/*.json). */
 const SHOW_CALENDAR_YEARS = [
   '2017',
   '2018',
@@ -67,6 +68,19 @@ const SHOW_CALENDAR_YEARS = [
 
 /** Годовые индексы рейтинга на CDN; all-time dog-ranking.json >25 MB и не деплоится. */
 const SHOW_RANKING_YEARS = SHOW_CALENDAR_YEARS
+
+/** Годы rkf.online CategoryId=1 (если нет manifest — fallback). */
+const SHOW_RKF_CALENDAR_YEARS_FALLBACK = [
+  '2019',
+  '2020',
+  '2021',
+  '2022',
+  '2023',
+  '2024',
+  '2025',
+  '2026',
+  '2027',
+] as const
 
 interface ShowCalendarEntry {
   id: number
@@ -86,7 +100,107 @@ interface ShowCalendarFile {
   exhibitions?: ShowCalendarEntry[]
 }
 
-export async function getShowCalendar(): Promise<ApiResult<ShowExhibition[]>> {
+/** Запись календаря rkf.online (schema show-calendar-rkf-v1). */
+export interface ShowRkfCalendarEntry {
+  id: number
+  date: string
+  date_end?: string
+  title: string
+  city?: string
+  club?: string
+  ranks?: string
+  /** НКП / национальный клуб породы (mono). */
+  national_breed_club_name?: string
+  /** Породы через запятую — fallback подзаголовка. */
+  breeds?: string
+  type?: string
+  url?: string
+  has_report_link?: boolean
+  /** PDF «Итоговый отчет» (tables.rkf.org.ru). */
+  reports_link?: string | null
+  /** PDF «Ведомость главного ринга / BIS», если есть. */
+  bis_reports_link?: string | null
+  has_lc_protocol?: boolean
+  lc_exhibition_id?: number | null
+  lc_url?: string | null
+  /** Совместимость с UI: location = city */
+  location?: string
+  rank?: string
+  judges?: string[]
+  results?: ShowResult[]
+  source?: 'rkf' | 'lc'
+}
+
+interface ShowRkfCalendarFile {
+  schema?: string
+  year?: string
+  exhibitions?: ShowRkfCalendarEntry[]
+}
+
+interface ShowRkfCalendarManifest {
+  years?: Array<{ year: string; count?: number }>
+}
+
+function compareRuDatesDesc(a: string, b: string): number {
+  const toIso = (d: string) => {
+    const [dd, mm, yyyy] = d.split('.')
+    if (!yyyy || !mm || !dd) return d
+    return `${yyyy}-${mm}-${dd}`
+  }
+  return toIso(b).localeCompare(toIso(a))
+}
+
+/** Календарь rkf.online CategoryId=1. Без year — все шарды; с year — один файл. */
+export async function getShowRkfCalendar(
+  year?: string,
+): Promise<ApiResult<ShowRkfCalendarEntry[]>> {
+  const manifest = await fetchJson<ShowRkfCalendarManifest>('shows/calendar-rkf/manifest.json')
+  const years =
+    year
+      ? [year]
+      : (manifest?.years?.map((y) => y.year).filter(Boolean) ??
+        [...SHOW_RKF_CALENDAR_YEARS_FALLBACK])
+
+  const parts = await Promise.all(
+    years.map((y) => fetchJson<ShowRkfCalendarFile>(`shows/calendar-rkf/${y}.json`)),
+  )
+
+  const exhibitions: ShowRkfCalendarEntry[] = []
+  for (const part of parts) {
+    for (const entry of part?.exhibitions ?? []) {
+      exhibitions.push({
+        ...entry,
+        location: entry.city ?? entry.location ?? '',
+        rank: entry.ranks ?? entry.rank ?? '',
+        club: entry.club ?? '',
+        type: entry.type ?? '',
+        judges: entry.judges ?? [],
+        results: [],
+        source: 'rkf',
+      })
+    }
+  }
+
+  if (exhibitions.length === 0) {
+    return { success: false, error: 'RKF shows calendar unavailable' }
+  }
+
+  exhibitions.sort(
+    (a, b) => compareRuDatesDesc(a.date, b.date) || (b.id ?? 0) - (a.id ?? 0),
+  )
+  return { success: true, data: exhibitions }
+}
+
+export async function getShowRkfCalendarYears(): Promise<string[]> {
+  const manifest = await fetchJson<ShowRkfCalendarManifest>('shows/calendar-rkf/manifest.json')
+  if (manifest?.years?.length) {
+    return manifest.years.map((y) => y.year).filter(Boolean).sort((a, b) => Number(b) - Number(a))
+  }
+  return [...SHOW_RKF_CALENDAR_YEARS_FALLBACK].sort((a, b) => Number(b) - Number(a))
+}
+
+/** Legacy LC calendar из scraped exhibitions (мало записей). */
+export async function getShowLcCalendar(): Promise<ApiResult<ShowExhibition[]>> {
   const parts = await Promise.all(
     SHOW_CALENDAR_YEARS.map((year) => fetchJson<ShowCalendarFile>(`shows/calendar/${year}.json`)),
   )
@@ -118,21 +232,74 @@ export async function getShowCalendar(): Promise<ApiResult<ShowExhibition[]>> {
     return { success: false, error: 'Shows calendar unavailable' }
   }
 
-  const sorted = exhibitions.sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')))
-
+  const sorted = exhibitions.sort((a, b) => compareRuDatesDesc(a.date || '', b.date || ''))
   return { success: true, data: sorted }
+}
+
+/** UI календаря: rkf.online (по году) если есть, иначе legacy LC calendar. */
+export async function getShowCalendar(
+  year?: string,
+): Promise<ApiResult<ShowRkfCalendarEntry[]>> {
+  const rkf = await getShowRkfCalendar(year || undefined)
+  if (rkf.success && rkf.data && rkf.data.length > 0) return rkf
+
+  // Без шарда rkf — fallback на весь LC-календарь (с фильтром года на клиенте)
+  const lc = await getShowLcCalendar()
+  if (!lc.success || !lc.data) {
+    return { success: false, error: lc.error || 'Shows calendar unavailable' }
+  }
+
+  let data = lc.data.map((e) => ({
+    id: e.id,
+    date: e.date,
+    title: e.title,
+    city: e.location,
+    location: e.location,
+    club: e.club,
+    ranks: e.rank,
+    rank: e.rank,
+    type: e.type,
+    judges: e.judges,
+    results: e.results,
+    url: `https://lc.rkfshow.ru/RKF/ExhibitionResults/ExhibitionResultListView?exhibitionId=${e.id}`,
+    has_report_link: (e.results?.length ?? 0) > 0,
+    has_lc_protocol: true,
+    lc_exhibition_id: e.id,
+    lc_url: `https://lc.rkfshow.ru/RKF/ExhibitionResults/ExhibitionResultListView?exhibitionId=${e.id}`,
+    source: 'lc' as const,
+  }))
+
+  if (year) {
+    data = data.filter((e) => e.date.endsWith(`.${year}`) || e.date.includes(`.${year}`))
+  }
+
+  if (data.length === 0) {
+    return { success: false, error: 'Shows calendar unavailable' }
+  }
+
+  return { success: true, data }
 }
 
 export async function getShowExhibition(exhibitionId: string): Promise<ApiResult<ShowExhibition>> {
   const index = await fetchJson<Record<string, string>>('shows/index.json')
-  if (!index) return { success: false, error: 'Shows index unavailable' }
+  const filePath = index?.[exhibitionId]
+  if (filePath) {
+    const exhibition = await fetchJson<ShowExhibition>(`shows/${filePath}`)
+    if (exhibition) return { success: true, data: exhibition }
+  }
 
-  const filePath = index[exhibitionId]
-  if (!filePath) return { success: false, error: 'Exhibition not found in index' }
+  // Local RKF PDF protocols (DEV sync → public/data/v1/shows/exhibitions-rkf/)
+  const rkfIndex = await fetchJson<Record<string, string>>('shows/exhibitions-rkf/index.json')
+  const rkfPath = rkfIndex?.[exhibitionId]
+  if (rkfPath) {
+    const exhibition = await fetchJson<ShowExhibition>(`shows/exhibitions-rkf/${rkfPath}`)
+    if (exhibition) return { success: true, data: exhibition }
+  }
 
-  const exhibition = await fetchJson<ShowExhibition>(`shows/${filePath}`)
-  if (!exhibition) return { success: false, error: 'Exhibition file not found' }
-  return { success: true, data: exhibition }
+  return {
+    success: false,
+    error: index ? 'Exhibition not found in index' : 'Shows index unavailable',
+  }
 }
 
 interface ShowDog {
@@ -146,6 +313,7 @@ interface ShowDog {
   best_placement?: number
   rank_score?: number
   best_award?: string | null
+  best_grade?: string | null
   titles: ShowTitleCounts
   competition_dog_id?: number | null
   history?: Array<{
@@ -154,6 +322,9 @@ interface ShowDog {
     exhibition_title?: string
     placement: number
     title?: string
+    grade?: string
+    url?: string
+    reports_link?: string
   }>
 }
 
@@ -183,6 +354,7 @@ function mergeShowDogRankings(parts: ShowDog[][]): ShowDog[] {
       existing.history = [...(existing.history ?? []), ...(dog.history ?? [])].sort((a, b) =>
         String(b.date || '').localeCompare(String(a.date || '')),
       )
+      existing.best_grade = bestShowGradeLabel(existing.history.map((h) => h.grade))
 
       const placement = dog.best_placement ?? 0
       if (

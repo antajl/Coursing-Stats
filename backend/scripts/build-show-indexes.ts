@@ -9,6 +9,8 @@ import {
   showRankScore,
   type ShowTitleCounts,
 } from '../lib/show-award-ranking'
+import { bestShowGradeLabel } from '../lib/show-grades'
+import { stableShowProfileId, SHOW_PROFILE_ID_BASE } from '../lib/show-dog-profile-id'
 import {
   addBreedAliasPair,
   breedKeys,
@@ -28,6 +30,7 @@ const __dirname = path.dirname(__filename)
 const ROOT = path.join(__dirname, '../..')
 const SHOWS_DIR = path.join(ROOT, 'data/v1/shows')
 const EXHIBITIONS_DIR = path.join(SHOWS_DIR, 'exhibitions')
+const RKF_EXHIBITIONS_DIR = path.join(ROOT, 'data/local/shows/exhibitions-rkf')
 const INDEXES_DIR = path.join(SHOWS_DIR, 'indexes')
 const DOGS_BY_ID_DIR = path.join(ROOT, 'data/v1/dogs/by-id')
 
@@ -37,6 +40,7 @@ interface ShowResult {
   breed_group?: string
   class: string
   placement: number
+  grade?: string
   title: string
   dog_name: string
   owner: string
@@ -54,6 +58,10 @@ interface ShowExhibition {
   club: string
   judges: string[]
   results: ShowResult[]
+  url?: string
+  reports_link?: string | null
+  bis_reports_link?: string | null
+  source?: string
 }
 
 interface ShowHistoryEntry {
@@ -62,6 +70,11 @@ interface ShowHistoryEntry {
   exhibition_title: string
   placement: number
   title: string
+  grade?: string
+  /** Original event page (rkf.online or LC results). */
+  url?: string
+  /** Original PDF report when available. */
+  reports_link?: string
 }
 
 interface ShowDog {
@@ -76,10 +89,64 @@ interface ShowDog {
   best_placement: number
   rank_score: number
   best_award: string | null
+  /** Лучшая оценка FCI/РКФ (RU), из history.grade. */
+  best_grade: string | null
   titles: ShowTitleCounts
-  /** Linked procoursing dog id — only when unique name+breed match. Never = show RKF id. */
+  /** Linked procoursing dog id — only when unique name+breed match. Never = catalog ring #. */
   competition_dog_id: number | null
+  /** Original catalog/ring # (for legacy /shows/dog/{catalog}/{breed} redirects). */
+  catalog_id?: string
   history: ShowHistoryEntry[]
+}
+
+/**
+ * After competition linking: `id` becomes the public profile id for `/dog/{id}`.
+ * Linked dogs → competition_dog_id; others → stable hash ≥ 1_000_000.
+ */
+function assignStableProfileIds(dogs: ShowDog[]): Map<string, string> {
+  for (const dog of dogs) {
+    if (/^\d+$/.test(dog.id) && Number(dog.id) < SHOW_PROFILE_ID_BASE) {
+      dog.catalog_id = dog.id
+    }
+  }
+  const sorted = [...dogs].sort((a, b) => showDogMergeKey(a).localeCompare(showDogMergeKey(b)))
+  const used = new Set<number>()
+  for (const dog of sorted) {
+    if (dog.competition_dog_id != null) used.add(dog.competition_dog_id)
+  }
+  const idByKey = new Map<string, string>()
+  for (const dog of sorted) {
+    const key = showDogMergeKey(dog)
+    if (dog.competition_dog_id != null) {
+      dog.id = String(dog.competition_dog_id)
+      idByKey.set(key, dog.id)
+      continue
+    }
+    let n = stableShowProfileId(dog.name_lat, dog.breed)
+    while (used.has(n)) n += 1
+    used.add(n)
+    dog.id = String(n)
+    idByKey.set(key, dog.id)
+  }
+  return idByKey
+}
+
+function applyStableProfileIds(dogs: ShowDog[], idByKey: Map<string, string>) {
+  for (const dog of dogs) {
+    if (/^\d+$/.test(dog.id) && Number(dog.id) < SHOW_PROFILE_ID_BASE) {
+      dog.catalog_id = dog.catalog_id || dog.id
+    }
+    if (dog.competition_dog_id != null) {
+      dog.id = String(dog.competition_dog_id)
+      continue
+    }
+    const fromAll = idByKey.get(showDogMergeKey(dog))
+    if (fromAll) {
+      dog.id = fromAll
+      continue
+    }
+    dog.id = String(stableShowProfileId(dog.name_lat, dog.breed))
+  }
 }
 
 function parseDogName(dogName: string): { name_lat: string; name_ru: string; id: string } {
@@ -127,12 +194,23 @@ function buildDogRanking(exhibitions: ShowExhibition[]): ShowDog[] {
       const existing = dogMap.get(key)
       const titles = parseShowTitles(result.title)
 
+      const grade = (result.grade || '').replace(/\s+/g, ' ').trim()
+      const sourceUrl =
+        (exhibition.url || '').trim() ||
+        (exhibition.source === 'rkf-pdf'
+          ? `https://rkf.online/exhibitions/${exhibition.id}`
+          : `https://lc.rkfshow.ru/RKF/ExhibitionResults/ExhibitionResultListView?exhibitionId=${exhibition.id}`)
+      const reportUrl =
+        (exhibition.reports_link || exhibition.bis_reports_link || '').trim() || undefined
       const historyEntry: ShowHistoryEntry = {
         date: exhibition.date || '',
         exhibition_id: exhibition.id,
         exhibition_title: exhibition.title || '',
         placement: result.placement || 0,
         title: (result.title || '').trim(),
+        ...(grade ? { grade } : {}),
+        url: sourceUrl,
+        ...(reportUrl ? { reports_link: reportUrl } : {}),
       }
 
       if (existing) {
@@ -165,6 +243,7 @@ function buildDogRanking(exhibitions: ShowExhibition[]): ShowDog[] {
           best_placement: result.placement || 0,
           rank_score: 0,
           best_award: null,
+          best_grade: null,
           titles,
           competition_dog_id: null,
           history: [historyEntry],
@@ -179,6 +258,7 @@ function buildDogRanking(exhibitions: ShowExhibition[]): ShowDog[] {
       ...dog,
       rank_score: showRankScore(dog.titles),
       best_award: bestShowAward(dog.titles),
+      best_grade: bestShowGradeLabel(dog.history.map((h) => h.grade)),
     }
   })
 
@@ -218,6 +298,7 @@ function mergeShowDogsByNameBreed(dogs: ShowDog[]): ShowDog[] {
     existing.history = [...existing.history, ...dog.history].sort((a, b) =>
       String(b.date || '').localeCompare(String(a.date || '')),
     )
+    existing.best_grade = bestShowGradeLabel(existing.history.map((h) => h.grade))
     if (
       dog.best_placement > 0 &&
       (existing.best_placement === 0 || dog.best_placement < existing.best_placement)
@@ -434,17 +515,25 @@ async function main() {
     fs.mkdirSync(INDEXES_DIR, { recursive: true })
   }
 
-  const exhibitionFiles = listExhibitionJsonFiles(EXHIBITIONS_DIR)
+  const exhibitionFiles = [
+    ...listExhibitionJsonFiles(EXHIBITIONS_DIR),
+    ...listExhibitionJsonFiles(RKF_EXHIBITIONS_DIR).filter(
+      (p) => !path.basename(p).startsWith('index'),
+    ),
+  ]
 
   const exhibitions: ShowExhibition[] = []
 
   for (const filePath of exhibitionFiles) {
+    if (path.basename(filePath) === 'index.json') continue
     const content = fs.readFileSync(filePath, 'utf-8')
     const exhibition = JSON.parse(content) as ShowExhibition
     exhibitions.push(exhibition)
   }
 
-  console.log(`Loaded ${exhibitionFiles.length} exhibition files`)
+  console.log(
+    `Loaded ${exhibitionFiles.length} exhibition files (LC + local RKF PDF)`,
+  )
 
   const byId = new Map<number, ShowExhibition>()
   for (const exhibition of exhibitions) {
@@ -477,12 +566,19 @@ async function main() {
     `Linked show→competition: ${linkStats.linked} unique, ${linkStats.ambiguous} ambiguous (skipped), of ${competitionDogs.length} competition dogs`,
   )
 
+  const idByKey = assignStableProfileIds(dogs)
+  const showOnlyCount = dogs.filter((d) => d.competition_dog_id == null).length
+  console.log(
+    `Assigned stable /dog/{id} profile ids (${showOnlyCount} show-only ≥1e6, ${dogs.length - showOnlyCount} linked)`,
+  )
+
   // Build ranking by year
   const rankingByYear = buildDogRankingByYear(exhibitions)
   console.log(`Built rankings for ${rankingByYear.size} years`)
 
   for (const [, yearDogs] of rankingByYear) {
     linkShowDogsToCompetitions(yearDogs, competitionDogs, aliasMap)
+    applyStableProfileIds(yearDogs, idByKey)
   }
 
   // Годовые шарды на CDN (compact JSON — быстрее и меньше лимита 25 MB)
@@ -554,6 +650,30 @@ async function main() {
     const filePath = path.join(calendarDir, `${year}.json`)
     fs.writeFileSync(filePath, JSON.stringify({ year, exhibitions: entries }))
     console.log(`  Saved calendar/${year}.json (${entries.length} exhibitions)`)
+  }
+
+  // Append show-only /dog/{id≥1e6} to public sitemap (derived sitemap runs earlier in build-all-data).
+  const publicSitemap = path.join(ROOT, 'frontend/public/sitemap.xml')
+  if (fs.existsSync(publicSitemap)) {
+    let xml = fs.readFileSync(publicSitemap, 'utf-8')
+    const showOnly = dogs.filter((d) => d.competition_dog_id == null && Number(d.id) >= SHOW_PROFILE_ID_BASE)
+    let added = 0
+    for (const dog of showOnly) {
+      const loc = `https://coursing-stats.ru/dog/${dog.id}`
+      if (xml.includes(`<loc>${loc}</loc>`)) continue
+      const entry =
+        `  <url>\n` +
+        `    <loc>${loc}</loc>\n` +
+        `    <changefreq>monthly</changefreq>\n` +
+        `    <priority>0.55</priority>\n` +
+        `  </url>\n`
+      xml = xml.replace('</urlset>', `${entry}</urlset>`)
+      added++
+    }
+    if (added > 0) {
+      fs.writeFileSync(publicSitemap, xml)
+      console.log(`  Appended ${added} show-only /dog/{id} URLs to frontend/public/sitemap.xml`)
+    }
   }
 
   console.log('Show indexes built successfully!')

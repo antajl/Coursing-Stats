@@ -1,0 +1,54 @@
+{
+  "schema": "coursing-stats/show-calendar-rkf-v1",
+  "source": "rkf.online",
+  "category_id": 1,
+  "date_from": "2019-01-01",
+  "date_to": "2027-12-31",
+  "fetched_at": "2026-07-23T11:20:19.078Z",
+  "count": 62088,
+  "api_count": 62088,
+  "lc_protocol_count": 196,
+  "known_lc_ids": 92,
+  "years": [
+    {
+      "year": "2019",
+      "count": 3710,
+      "lc_protocol_count": 10
+    },
+    {
+      "year": "2020",
+      "count": 6728,
+      "lc_protocol_count": 0
+    },
+    {
+      "year": "2021",
+      "count": 8177,
+      "lc_protocol_count": 23
+    },
+    {
+      "year": "2022",
+      "count": 8091,
+      "lc_protocol_count": 23
+    },
+    {
+      "year": "2023",
+      "count": 7721,
+      "lc_protocol_count": 34
+    },
+    {
+      "year": "2024",
+      "count": 8592,
+      "lc_protocol_count": 29
+    },
+    {
+      "year": "2025",
+      "count": 9346,
+      "lc_protocol_count": 43
+    },
+    {
+      "year": "2026",
+      "count": 9723,
+      "lc_protocol_count": 34
+    }
+  ]
+}

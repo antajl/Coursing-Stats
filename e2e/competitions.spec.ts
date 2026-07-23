@@ -13,19 +13,12 @@ test.describe('Competitions Page', () => {
     await expect(page.getByRole('group', { name: 'Рейтинг курсинга' })).toBeVisible()
   })
 
-  test('calendar tab is available in local nav', async ({ page }) => {
+  test('calendar tab is available in local nav dropdown only', async ({ page }) => {
     await page.goto('/')
     await page.getByRole('button', { name: 'Меню раздела Соревнования' }).click()
     await expect(page.getByRole('link', { name: 'Календарь' }).first()).toBeVisible()
-  })
-
-  test('calendar hub segment is visible on competitions page in local dev', async ({ page }) => {
     await page.goto('/competitions?tab=ranking')
-    await expect(page.getByRole('group', { name: 'Разделы соревнований' })).toBeVisible()
-    await expect(page.locator('#tab-calendar')).toBeVisible()
-    await page.locator('#tab-calendar').click()
-    await expect(page).toHaveURL(/tab=calendar/)
-    await expect(page.locator('#tab-panel-calendar')).toBeVisible()
+    await expect(page.getByRole('group', { name: 'Разделы соревнований' })).toHaveCount(0)
   })
 
   test('switches to judges tab via URL', async ({ page }) => {
