@@ -3,6 +3,7 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { defineConfig, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
+import { homePhotosPlugin } from './vite-plugin-home-photos'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const DATA_V1_ROOT = path.resolve(__dirname, '../data/v1')
@@ -61,7 +62,14 @@ function serveDataV1(): Plugin {
 const buildStamp = process.env.GITHUB_SHA?.slice(0, 8) || String(Date.now())
 
 export default defineConfig({
-  plugins: [react(), serveDataV1()],
+  plugins: [
+    react(),
+    serveDataV1(),
+    homePhotosPlugin({
+      publicHomeDir: path.resolve(__dirname, 'public/images/home'),
+      outFile: path.resolve(__dirname, 'src/lib/homePhotos.generated.ts'),
+    }),
+  ],
   build: {
     rollupOptions: {
       output: {

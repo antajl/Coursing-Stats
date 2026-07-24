@@ -1,0 +1,9 @@
+{
+  "schema": "coursing-stats/ui-flags-v1",
+  "updated_at": "2026-07-24",
+  "publicCalendars": {
+    "competitions": true,
+    "shows": true
+  },
+  "notes": "Локально (npm run dev) календари всегда видны. На проде — только если true. Переключение: scripts/show-calendar-*.bat / hide-calendar-*.bat, затем deploy-to-github.bat. Протоколы /event и /shows/exhibition этим флагом не открываются."
+}

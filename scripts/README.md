@@ -18,6 +18,29 @@ scripts\update-donino.bat
 
 После обновления локально смотри `npm run dev`. На прод — `deploy-to-github.bat`.
 
+## Календари на проде (show / hide)
+
+Флаги в `data/v1/ui-flags.json`. Локально (`npm run dev`) календари **всегда** видны. На проде — только если флаг `true`. Протоколы `/event` и `/shows/exhibition` этими скриптами **не** открываются.
+
+| Скрипт | Действие |
+|--------|----------|
+| `show-calendar-competitions.bat` | Показать календарь соревнований на проде |
+| `hide-calendar-competitions.bat` | Скрыть (только локалка) |
+| `show-calendar-shows.bat` | Показать календарь выставок на проде |
+| `hide-calendar-shows.bat` | Скрыть (только локалка) |
+
+После bat:
+
+```bat
+scripts\deploy-to-github.bat "ui: show competitions calendar"
+```
+
+Статус без изменений:
+
+```bat
+npx tsx scripts/set-public-calendar.ts status
+```
+
 ## deploy-to-github.bat
 
 Коммит и push в GitHub — CI задеплоит сайт на Cloudflare Pages.

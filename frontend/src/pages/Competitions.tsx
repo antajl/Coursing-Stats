@@ -1,24 +1,24 @@
 import { Navigate, useSearchParams } from 'react-router-dom'
 import ProcoursingAttribution from '../components/ProcoursingAttribution'
 import { SEO } from '../components/SEO'
-import { isLocalDev } from '../lib/env'
+import { usePublicCalendarVisible } from '../hooks/useStaticData'
 import TopDogs from './TopDogs'
 import Judges from './Judges'
 import Events from './Events'
 
-const VALID_TABS = isLocalDev
-  ? new Set(['ranking', 'judges', 'calendar'])
-  : new Set(['ranking', 'judges'])
-
 function Competitions() {
   const [searchParams] = useSearchParams()
   const tab = searchParams.get('tab') || 'ranking'
+  const calendarVisible = usePublicCalendarVisible('competitions')
 
-  if (!isLocalDev && tab === 'calendar') {
+  if (!calendarVisible && tab === 'calendar') {
     return <Navigate to="/competitions?tab=ranking" replace />
   }
 
-  const activeTab = VALID_TABS.has(tab) ? tab : 'ranking'
+  const activeTab =
+    tab === 'judges' || tab === 'ranking' || (calendarVisible && tab === 'calendar')
+      ? tab
+      : 'ranking'
 
   return (
     <div className="space-y-6">
@@ -41,7 +41,7 @@ function Competitions() {
               <Judges />
             </div>
           )}
-          {isLocalDev && activeTab === 'calendar' && (
+          {calendarVisible && activeTab === 'calendar' && (
             <div id="tab-panel-calendar" role="tabpanel" aria-labelledby="tab-calendar">
               <Events />
             </div>

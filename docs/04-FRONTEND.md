@@ -71,17 +71,16 @@
 
 | Блок | Что |
 |------|-----|
-| **Hero** | `HomeHeroStage` — full-bleed фото (`frontend/public/images/home/`, манифест `lib/homePhotos.ts`), авто-слайдшоу ~7 с, без галереи-карточек |
-| **Settle** | Старт: текст внизу ~100vh; первый скролл вниз **или** фокус поиска → компактный hero (`requestHomeHeroSettle`); к полноэкранному старту нельзя вернуться |
+| **Hero** | `HomeHeroStage` — full-bleed фото из `frontend/public/images/home/**` (скан Vite-плагином → `homePhotos.generated.ts`), shuffle + слайдшоу ~7 с |
+| **Settle** | Старт: ровно 1 экран под nav (`home-hero-locked`, body скрыт); первый скролл/стрелка/фокус поиска → сжатие высоты stage. Около середины settle (~48%) — `home-v2--revealed` и каскад блоков (`data-home-reveal`); скролл разблокируется в конце. Шов фото→контент: короткая маска + `::after` цветом `--home-fade` (light `#faf8f4`, dark `#2a2a2a`) |
 | **Поиск** | `HomeDogSearch` → `dogs-index.json`; bilingual RU/LAT (`dogNameMatchesQuery`); только id с живым `dog-profiles/{id}.json`; дедуп дублей |
-| **Разделы** | `.home-v2-entries` — якорные/ссылки на блоки |
 | **События** | две колонки: соревнования (`HomeEventRow`) + выставки (`HomeShowEventRow`); месяц — `formatMonthShortRu` (3 буквы) |
 | **Масштаб** | компактные счётчики + `StatCounter` |
 | **Топ сезона** | две колонки: соревнования (табы Очки/Медали/Скорость) + выставки (`home-top-{year}.json`) |
 | **Донино** | Замер \| Бега 350 м (`DoninoHomeRecordRow`) |
 | **Футер** | дисклеймер + email `antajl@yandex.ru` |
 
-**Исходники фото:** папка `/фото/` в корне (gitignore) → копии в `frontend/public/images/home/` (`bzmp-*`, `show-*`, `race-*`). Не коммитить сырой dump.
+**Фото hero:** клади файлы в `frontend/public/images/home/` или в любые подпапки (`bzmp/`, `show/`, …). Vite-плагин `vite-plugin-home-photos.ts` сканирует jpg/png/webp/avif при `dev`/`build` → `src/lib/homePhotos.generated.ts`. Имена файлов не хардкодить. Не коммитить сырой dump `/фото/`.
 
 **Поиск кличек (везде):** канон `frontend/src/lib/dogName.ts` — `dogNameMatchesQuery` / `dogNameSearchText` (транслит + V↔W). Использовать и в рейтинге выставок (`ShowRanking.tsx`), не сырой `includes` по одной раскладке.
 
@@ -185,7 +184,8 @@ HomeHeroStage.tsx      — фон-фото + settle + слайдшоу
 HomeDogSearch.tsx      — typeahead (dogs-index + проверка profile)
 HomeShowEventRow.tsx   — выставки в блоке событий
 HomeSeasonTopRow.tsx, HomeRankingTabs.tsx
-lib/homePhotos.ts      — манифест landscape/portrait
+lib/homePhotos.ts      — re-export + shuffle; список из homePhotos.generated.ts
+lib/homePhotos.generated.ts — AUTO (vite-plugin-home-photos), скан public/images/home/**
 lib/dogName.ts         — bilingual поиск кличек
 ```
 

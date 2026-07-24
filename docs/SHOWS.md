@@ -111,13 +111,15 @@ data/v1/shows/
 - `/shows` - hub страница
 - `/shows?tab=ranking` - рейтинг
 - `/shows?tab=judges` - судьи
-- `/shows?tab=calendar` — календарь (**только локальный Vite DEV**, `isLocalDev`; на проде вкладка скрыта, URL → ranking)
+- `/shows?tab=calendar` — календарь (локально всегда; на проде — `ui-flags.json` → `publicCalendars.shows`, скрипты `scripts/show-calendar-shows.bat` / `hide-calendar-shows.bat`)
 - `/shows/exhibition/:id` — протокол выставки (**только DEV**; на проде → `/shows`)
 - `/shows?tab=champions` и `/shows/champions` → редирект на рейтинг (вкладка снята: дублировала рейтинг)
 
-Gate: `frontend/src/lib/env.ts` → `isLocalDev = import.meta.env.DEV` (false in production Pages build). Sitemap не включает calendar/exhibition URL.
+Gate календаря: `usePublicCalendarVisible` ← `data/v1/ui-flags.json` (+ всегда `isLocalDev`). Протоколы: `isLocalDev` only. Sitemap не включает calendar/exhibition URL.
 
-**Прод vs локально (выставки):** на проде — рейтинг + профили из `indexes/`; история собаки → `rkf.online/exhibitions/{id}` и PDF (`reports_link`), не наш `/shows/exhibition/...`. Календарь и полные протоколы — **только DEV**. PDF и `exhibitions-rkf` в git/CDN **не** кладём (`data/local/`, gitignore).
+**Временный календарь выставок на проде:** пока procoursing.ru недоступен, `publicCalendars.shows` может быть `true`. На `/shows?tab=calendar` под шапкой — закрываемая плашка `TemporaryShowsCalendarBanner` (dismiss → `localStorage` ключ `cs-dismiss-shows-calendar-temp-notice`).
+
+**Прод vs локально (выставки):** на проде — рейтинг + профили из `indexes/`; история собаки → `rkf.online/exhibitions/{id}` и PDF (`reports_link`), не наш `/shows/exhibition/...`. Полные протоколы `/shows/exhibition/...` — **только DEV**. Календарь на проде — по флагу `ui-flags.json`. PDF и `exhibitions-rkf` в git/CDN **не** кладём (`data/local/`, gitignore).
 
 ### Объём PDF (по `calendar-rkf`, type1+type3)
 

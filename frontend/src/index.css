@@ -231,12 +231,14 @@ body {
 
 /* Скрыто до GSAP riseIn (только opacity — transform задаёт GSAP, иначе после clearProps элемент «падает») */
 [data-rise],
-[data-podium]{
+[data-podium],
+[data-home-reveal]{
   opacity:0;
 }
 @media (prefers-reduced-motion: reduce){
   [data-rise],
-  [data-podium]{
+  [data-podium],
+  [data-home-reveal]{
     opacity:1;
   }
 }
@@ -731,64 +733,139 @@ select {
 }
 
 /* ========== Home v2 ========== */
-/* Главная на всю ширину viewport — контент центрирует .wrap, без двойного inset main */
-main:has(.home-v2) {
-  max-width: none;
-  padding-top: 0;
-  padding-left: 0;
-  padding-right: 0;
+:root {
+  --cs-nav-offset: 3rem; /* NavMobile h-12 */
 }
+@media (min-width: 768px) {
+  :root {
+    --cs-nav-offset: 4rem; /* NavDesktop h-16 */
+  }
+}
+
+/* Пока intro не снят — страница не скроллится */
+html.home-hero-locked,
+html.home-hero-locked body {
+  overflow: hidden !important;
+  overscroll-behavior: none;
+  height: 100%;
+}
+/* Резерв под скроллбар — иначе после unlock контент сдвигается по X */
+html {
+  scrollbar-gutter: stable;
+}
+
+/* Главная на всю ширину viewport — контент центрирует .wrap */
+main:has(.home-v2) {
+  max-width: none !important;
+  width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-top: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-bottom: 0 !important;
+}
+/* Фон как у App (old-money градиент) — без отдельного «бежевого» оверрайда,
+   иначе при settle виден один цвет, а после появления body — другой. */
 .home-v2 {
   padding-top: 0;
   padding-bottom: 80px;
+  width: 100%;
+  /* как from-old-money-50 у оболочки страницы — не «белый» frosted */
+  --home-fade: #faf8f4;
+}
+.dark .home-v2 {
+  /* как dark:from-charcoal-900 у оболочки страницы */
+  --home-fade: #2a2a2a;
+}
+/* Intro: только один экран, низ страницы не занимает место */
+.home-v2:not(.home-v2--revealed) {
+  padding-bottom: 0;
+  height: calc(100dvh - var(--cs-nav-offset));
+  max-height: calc(100dvh - var(--cs-nav-offset));
+  overflow: hidden;
+}
+/* Settle/settled: не возвращать 100dvh до React --revealed (иначе скачок на весь экран) */
+.home-v2:not(.home-v2--revealed):has(.home-v2-stage--settling),
+.home-v2:not(.home-v2--revealed):has(.home-v2-stage--settled) {
+  height: auto;
+  max-height: none;
 }
 .home-v2-body {
   position: relative;
   z-index: 6;
   padding-top: 12px;
 }
+.home-v2:not(.home-v2--revealed) .home-v2-body {
+  display: none;
+}
+.home-v2--revealed .home-v2-body {
+  display: block;
+}
 
-/* Full-bleed photo stage — стартовый экран ~100vh; после скролла — компактный */
+/* Full-bleed photo stage */
 .home-v2-stage {
   position: relative;
   width: 100%;
   min-height: min(100dvh, 920px);
   display: flex;
-  align-items: flex-end;
-  overflow: hidden;
-  /* Одинаковый overlap до/после settle — иначе прыгает блок ниже */
+  flex-direction: column;
+  justify-content: flex-end;
+  /* visible: мягкий шов ::after рисуется ПОД нижним краем, не клипается */
+  overflow: visible;
   margin-bottom: -48px;
   padding-bottom: 96px;
-  isolation: isolate;
   box-sizing: border-box;
+  background: transparent;
+}
+/* Intro: ровно высота под nav (не во время/после settle — иначе ломает анимацию) */
+.home-v2:not(.home-v2--revealed) .home-v2-stage:not(.home-v2-stage--settling):not(.home-v2-stage--settled) {
+  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  margin-bottom: 0;
+  /* padding как у settled: flex-end — смена padTop не двигает текст; место под стрелку */
+  padding-top: 28px;
+  padding-bottom: max(56px, env(safe-area-inset-bottom, 0px));
 }
 .home-v2-stage--settling {
   pointer-events: none;
+  max-height: none !important;
+  margin-bottom: 0;
 }
 .home-v2-stage--settled {
-  min-height: 0;
-  /* flex-end оставляем — смена на flex-start в конце анимации давала прыжок */
+  min-height: 0 !important;
+  height: auto !important;
+  max-height: none !important;
   padding-top: 28px;
   padding-bottom: 56px;
   margin-bottom: -48px;
 }
 .home-v2-stage-media {
   position: absolute;
-  inset: -6% -6% -18% -6%;
+  inset: 0;
   z-index: 0;
-  will-change: transform;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transform: translateZ(0);
+  /* Мягкий низ фото — чуть длиннее, без резкого обреза */
   -webkit-mask-image: linear-gradient(
     to bottom,
     #000 0%,
-    #000 58%,
-    rgba(0, 0, 0, 0.55) 78%,
+    #000 78%,
+    rgba(0, 0, 0, 0.7) 88%,
+    rgba(0, 0, 0, 0.35) 94%,
+    rgba(0, 0, 0, 0.1) 98%,
     transparent 100%
   );
   mask-image: linear-gradient(
     to bottom,
     #000 0%,
-    #000 58%,
-    rgba(0, 0, 0, 0.55) 78%,
+    #000 78%,
+    rgba(0, 0, 0, 0.7) 88%,
+    rgba(0, 0, 0, 0.35) 94%,
+    rgba(0, 0, 0, 0.1) 98%,
     transparent 100%
   );
 }
@@ -804,55 +881,115 @@ main:has(.home-v2) {
   pointer-events: none;
   filter: saturate(0.94) contrast(1.04);
 }
-/* Читаемость текста + мягкий уход фото в cream страницы */
 .home-v2-stage-veil {
   position: absolute;
   inset: 0;
   z-index: 3;
   pointer-events: none;
-  background:
-    linear-gradient(
-      105deg,
-      rgba(252, 250, 247, 0.92) 0%,
-      rgba(252, 250, 247, 0.7) 36%,
-      rgba(252, 250, 247, 0.28) 62%,
-      rgba(252, 250, 247, 0.08) 100%
-    ),
-    linear-gradient(
-      to top,
-      var(--om-50) 0%,
-      rgba(250, 248, 244, 0.97) 16%,
-      rgba(250, 248, 244, 0.7) 36%,
-      rgba(250, 248, 244, 0.25) 56%,
-      transparent 74%
-    );
+  background: linear-gradient(
+    100deg,
+    color-mix(in srgb, var(--home-fade) 88%, transparent) 0%,
+    color-mix(in srgb, var(--home-fade) 48%, transparent) 32%,
+    color-mix(in srgb, var(--home-fade) 12%, transparent) 52%,
+    transparent 70%
+  );
 }
-.dark .home-v2-stage-veil {
-  background:
-    linear-gradient(
-      105deg,
-      rgba(23, 21, 19, 0.9) 0%,
-      rgba(23, 21, 19, 0.68) 38%,
-      rgba(23, 21, 19, 0.28) 64%,
-      rgba(23, 21, 19, 0.1) 100%
-    ),
-    linear-gradient(
-      to top,
-      var(--char-900) 0%,
-      rgba(23, 21, 19, 0.96) 14%,
-      rgba(23, 21, 19, 0.7) 34%,
-      rgba(23, 21, 19, 0.28) 54%,
-      transparent 74%
-    );
+/*
+ * Шов на границе: размазаннее (~72px), без плотной «полки» в центре.
+ * z-index ниже body — не перекрывает заголовки.
+ */
+.home-v2-stage::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% - 40px);
+  z-index: 4;
+  height: 72px;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    color-mix(in srgb, var(--home-fade) 22%, transparent) 18%,
+    color-mix(in srgb, var(--home-fade) 55%, transparent) 36%,
+    color-mix(in srgb, var(--home-fade) 82%, transparent) 48%,
+    color-mix(in srgb, var(--home-fade) 82%, transparent) 56%,
+    color-mix(in srgb, var(--home-fade) 45%, transparent) 72%,
+    color-mix(in srgb, var(--home-fade) 15%, transparent) 88%,
+    transparent 100%
+  );
 }
+/* Intro на весь экран — шов не нужен */
+.home-v2:not(.home-v2--revealed) .home-v2-stage:not(.home-v2-stage--settling)::after {
+  opacity: 0;
+}
+
+.home-v2-scroll-cue {
+  position: absolute;
+  left: 50%;
+  bottom: max(8px, env(safe-area-inset-bottom, 0px));
+  z-index: 7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  margin: 0;
+  padding: 8px 16px;
+  border: 0;
+  background: transparent;
+  color: var(--camel-700);
+  cursor: pointer;
+  transform: translateX(-50%);
+  animation: home-v2-scroll-pulse 1.6s ease-in-out infinite;
+}
+.dark .home-v2-scroll-cue { color: var(--camel-400); }
+.home-v2-scroll-cue svg {
+  width: 36px;
+  height: 36px;
+  stroke-width: 2.25;
+}
+.home-v2-scroll-cue-chevron {
+  display: block;
+  margin-top: -16px;
+  opacity: 0.55;
+}
+.home-v2-scroll-cue:hover { color: var(--camel-800); }
+.dark .home-v2-scroll-cue:hover { color: var(--camel-300); }
+/* Не display:none — иначе flex/высота дёргаются в момент settle */
+.home-v2-stage--settling .home-v2-scroll-cue,
+.home-v2-stage--settled .home-v2-scroll-cue {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  animation: none;
+}
+@keyframes home-v2-scroll-pulse {
+  0%, 100% {
+    opacity: 0.35;
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(8px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-v2-scroll-cue {
+    animation: none;
+    opacity: 0.75;
+  }
+}
+
 .home-v2-stage-copy {
   position: relative;
   z-index: 5;
   width: 100%;
-  padding-top: 80px;
-  padding-bottom: 28px;
+  padding-top: 8px;
+  padding-bottom: 4px;
   pointer-events: none;
   will-change: transform, opacity;
+  flex: 0 1 auto;
+  min-height: 0;
 }
 .home-v2-stage-copy .home-v2-hero-copy,
 .home-v2-stage-copy .home-v2-search,
@@ -863,7 +1000,26 @@ main:has(.home-v2) {
 }
 
 .home-v2-hero-copy {
+  position: relative;
   max-width: 38rem;
+  isolation: isolate;
+}
+/* Мягкая подложка под текст — не карточка, чтобы читалось на любом фото */
+.home-v2-hero-copy::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: -32px -48px -24px -40px;
+  border-radius: 32px;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse 75% 65% at 28% 42%,
+    color-mix(in srgb, var(--home-fade) 88%, transparent) 0%,
+    color-mix(in srgb, var(--home-fade) 52%, transparent) 42%,
+    color-mix(in srgb, var(--home-fade) 12%, transparent) 68%,
+    transparent 82%
+  );
+  filter: blur(14px);
 }
 .home-v2-eyebrow {
   font-family: var(--font-mono);
@@ -876,24 +1032,26 @@ main:has(.home-v2) {
   flex-wrap: wrap;
   align-items: center;
   gap: 6px;
+  text-shadow: 0 1px 10px color-mix(in srgb, var(--home-fade) 80%, transparent);
 }
 .dark .home-v2-eyebrow { color: var(--camel-400); }
 .home-v2-eyebrow-sep { opacity: 0.55; }
 .home-v2-hero-copy h1 {
   font-family: var(--font-serif);
   font-weight: 700;
-  font-size: clamp(2.15rem, 5.2vw, 3.35rem);
+  font-size: clamp(1.65rem, 4.6vw + 0.4rem, 3.35rem);
   line-height: 1.08;
   margin: 0 0 16px;
   color: var(--char-900);
   letter-spacing: -0.02em;
   text-wrap: balance;
+  text-shadow: 0 1px 14px color-mix(in srgb, var(--home-fade) 85%, transparent);
 }
 .home-v2-hero-copy h1 em {
   font-style: italic;
   color: var(--camel-700);
 }
-.dark .home-v2-hero-copy h1 { color: var(--char-50); }
+.dark .home-v2-hero-copy h1 { color: var(--cream-50); }
 .dark .home-v2-hero-copy h1 em { color: var(--camel-400); }
 .home-v2-lead {
   margin: 0 0 22px;
@@ -901,8 +1059,9 @@ main:has(.home-v2) {
   line-height: 1.55;
   color: var(--char-700);
   max-width: 34rem;
+  text-shadow: 0 1px 12px color-mix(in srgb, var(--home-fade) 80%, transparent);
 }
-.dark .home-v2-lead { color: var(--char-200); }
+.dark .home-v2-lead { color: var(--char-300); }
 .home-v2-disclaimer {
   margin: 0 0 10px;
   font-size: 12px;
@@ -910,14 +1069,20 @@ main:has(.home-v2) {
   color: var(--char-500);
   max-width: 36rem;
 }
-.dark .home-v2-disclaimer { color: var(--char-400); }
+.dark .home-v2-disclaimer { color: var(--char-300); }
+/* В dark text-shadow от --home-fade бесполезен — нужен тёмный ореол под светлым текстом */
+.dark .home-v2-eyebrow,
+.dark .home-v2-hero-copy h1,
+.dark .home-v2-lead {
+  text-shadow: 0 1px 16px rgba(0, 0, 0, 0.72);
+}
 
 /* Search on stage — slightly stronger field */
 .home-v2-stage .home-v2-search-field {
   background: rgba(252, 250, 247, 0.72);
   border-bottom-color: var(--om-300);
   backdrop-filter: blur(8px);
-  border-radius: 8px 8px 0 0;
+  border-radius: 8px;
   padding-left: 12px;
   padding-right: 12px;
 }
@@ -955,7 +1120,11 @@ main:has(.home-v2) {
   width: 18px;
   height: 18px;
   flex-shrink: 0;
-  color: var(--char-400);
+  color: var(--char-500);
+}
+.dark .home-v2-search-icon {
+  color: var(--cream-50);
+  stroke: currentColor;
 }
 .home-v2-search-field input {
   flex: 1;
@@ -967,9 +1136,14 @@ main:has(.home-v2) {
   color: var(--char-900);
   padding: 12px 0;
 }
-.dark .home-v2-search-field input { color: var(--char-100); }
+.dark .home-v2-search-field input {
+  color: var(--char-100);
+}
 .home-v2-search-field input::placeholder {
-  color: var(--char-400);
+  color: var(--char-500);
+}
+.dark .home-v2-search-field input::placeholder {
+  color: var(--char-300);
 }
 .home-v2-search-list {
   position: absolute;
@@ -1026,55 +1200,6 @@ main:has(.home-v2) {
   margin: 8px 0 0;
   font-size: 12px;
   color: var(--char-500);
-}
-
-/* Goal entries — no card frames */
-.home-v2-entries {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 8px 24px;
-  margin: 0 0 56px;
-  padding: 8px 0 28px;
-  border-top: 1px solid var(--om-200);
-  border-bottom: 1px solid var(--om-200);
-}
-.dark .home-v2-entries {
-  border-color: var(--char-700);
-}
-.home-v2-entry {
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
-  padding: 12px 0;
-  text-decoration: none;
-  color: inherit;
-  min-width: 0;
-  transition: opacity 0.15s;
-}
-.home-v2-entry:hover { opacity: 0.85; }
-.home-v2-entry-num {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  color: var(--camel-600);
-  padding-top: 3px;
-}
-.home-v2-entry-body {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  min-width: 0;
-}
-.home-v2-entry-body strong {
-  font-family: var(--font-serif);
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--char-900);
-}
-.dark .home-v2-entry-body strong { color: var(--char-100); }
-.home-v2-entry-body span {
-  font-size: 13px;
-  color: var(--char-500);
-  line-height: 1.35;
 }
 
 .home-v2-block {
@@ -1197,7 +1322,7 @@ main:has(.home-v2) {
   border-bottom: 1px solid var(--om-200);
 }
 .dark .home-v2-col-head {
-  color: var(--char-200);
+  color: var(--char-100);
   border-color: var(--char-700);
 }
 .home-v2-col-head--tabs {
@@ -1224,13 +1349,15 @@ main:has(.home-v2) {
 }
 .dark .home-v2-foot { border-color: var(--char-700); }
 .home-v2-foot .home-v2-disclaimer {
-  margin-bottom: 10px;
+  margin: 0 auto 10px;
   max-width: 42rem;
+  text-align: center;
 }
 .home-v2-contact {
-  margin: 0 0 8px;
+  margin: 0;
   font-size: 14px;
   color: var(--char-700);
+  text-align: center;
 }
 .dark .home-v2-contact { color: var(--char-300); }
 .home-v2-contact a {
@@ -1240,39 +1367,84 @@ main:has(.home-v2) {
 }
 .home-v2-contact a:hover { text-decoration: underline; }
 .dark .home-v2-contact a { color: var(--camel-400); }
-.home-v2-sources {
-  margin: 0;
-  font-size: 12px;
-  color: var(--char-500);
-  line-height: 1.45;
-}
 
 @media (max-width: 860px) {
-  .home-v2-stage {
+  .home-v2--revealed .home-v2-stage {
     min-height: min(88dvh, 760px);
   }
   .home-v2-stage--settled {
     min-height: 0;
-  }
-  .home-v2-entries {
-    grid-template-columns: 1fr 1fr;
   }
   .home-v2-columns,
   .home-v2-events-grid {
     grid-template-columns: 1fr;
     gap: 28px;
   }
+  .home-v2-search {
+    max-width: none;
+    width: 100%;
+  }
+  .home-v2-hero-copy {
+    max-width: none;
+  }
+  .home-v2-section-title h2 {
+    font-size: 1.22rem;
+  }
+  .home-v2-block {
+    margin-bottom: 40px;
+  }
+  .home-v2-scale {
+    margin-bottom: 40px;
+    padding: 22px 0;
+  }
 }
+
+/* Низкие окна / landscape phone — сжимаем intro, чтобы всё осталось в кадре */
+@media (max-height: 720px) {
+  .home-v2:not(.home-v2--revealed) .home-v2-eyebrow {
+    margin-bottom: 8px;
+    font-size: 10px;
+  }
+  .home-v2:not(.home-v2--revealed) .home-v2-hero-copy h1 {
+    font-size: clamp(1.35rem, 5.5vh, 2.1rem);
+    margin-bottom: 8px;
+  }
+  .home-v2:not(.home-v2--revealed) .home-v2-lead {
+    font-size: 0.92rem;
+    line-height: 1.35;
+    margin-bottom: 12px;
+  }
+  .home-v2:not(.home-v2--revealed) .home-v2-hero-copy::before {
+    inset: -16px -24px -12px -20px;
+    filter: blur(10px);
+  }
+  .home-v2:not(.home-v2--revealed) .home-v2-scroll-cue svg {
+    width: 28px;
+    height: 28px;
+  }
+  .home-v2:not(.home-v2--revealed) .home-v2-scroll-cue-chevron {
+    margin-top: -12px;
+  }
+}
+@media (max-height: 520px) {
+  .home-v2:not(.home-v2--revealed) .home-v2-hero-copy h1 {
+    font-size: clamp(1.15rem, 5vh, 1.55rem);
+    margin-bottom: 6px;
+  }
+  .home-v2:not(.home-v2--revealed) .home-v2-lead {
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .home-v2-stage-media,
   .home-v2-stage-layer,
   .home-v2-stage-copy {
     transform: none !important;
-  }
-}
-
-@media (max-width: 520px) {
-  .home-v2-entries {
-    grid-template-columns: 1fr;
   }
 }

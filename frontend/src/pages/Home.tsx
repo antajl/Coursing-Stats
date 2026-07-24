@@ -23,8 +23,9 @@ import {
 } from '../lib/staticData'
 import { formatShowRankingReason } from '../../../backend/lib/show-award-ranking'
 import { type CalendarEvent } from './Events/eventListUtils'
-import { useGsapRiseIn } from '../hooks/useGsapRiseIn'
 import StatCounter from '../components/StatCounter'
+import { usePublicCalendarVisible } from '../hooks/useStaticData'
+import { prefersReducedMotion, riseIn, useGSAP } from '../lib/motion'
 
 interface TopDog {
   dog_id: number
@@ -122,7 +123,7 @@ function SectionHead({
   linkLabel?: string
 }) {
   return (
-    <div className="home-v2-section-head" data-rise>
+    <div className="home-v2-section-head">
       <div className="home-v2-section-title">
         <Icon className="h-5 w-5 shrink-0 text-camel-500" strokeWidth={1.75} />
         <h2>{title}</h2>
@@ -216,6 +217,25 @@ export default function Home() {
   const [topShowDogs, setTopShowDogs] = useState<ShowHomeTopDog[]>([])
   const [rankingTab, setRankingTab] = useState<RankingTab>('score')
   const [loading, setLoading] = useState(true)
+  const [bodyReady, setBodyReady] = useState(() => prefersReducedMotion())
+  const showsCalendarVisible = usePublicCalendarVisible('shows')
+
+  const revealBody = () => setBodyReady(true)
+
+  useEffect(() => {
+    const root = document.documentElement
+    if (bodyReady) {
+      // Скролл разблокирует HomeHeroStage в конце settle;
+      // при reduced-motion — сразу.
+      if (prefersReducedMotion()) {
+        root.classList.remove('home-hero-locked')
+      }
+      return
+    }
+    root.classList.add('home-hero-locked')
+    window.scrollTo(0, 0)
+    return () => root.classList.remove('home-hero-locked')
+  }, [bodyReady])
 
   useEffect(() => {
     async function fetchData() {
@@ -297,18 +317,30 @@ export default function Home() {
     loading || doninoSpeedRecords.length > 0 || doninoCoursingRecords.length > 0
   const showSeasonSection = loading || activeDogs.length > 0 || topShowDogs.length > 0
 
-  useGsapRiseIn({
-    scope: pageRef,
-    selector: '.home-v2 [data-rise]',
-    stagger: 0.05,
-    duration: 0.36,
-    enabled: !loading,
-    delay: 0.06,
-    dependencies: [loading],
-  })
+  useGSAP(
+    () => {
+      if (!bodyReady || !pageRef.current) return
+      const sections = Array.from(
+        pageRef.current.querySelectorAll<HTMLElement>('[data-home-reveal]'),
+      ).filter((el) => el.dataset.homeAnimated !== '1')
+      if (!sections.length) return
+      sections.forEach((el) => {
+        el.dataset.homeAnimated = '1'
+      })
+
+      riseIn(sections, {
+        y: 28,
+        duration: 0.55,
+        stagger: 0.11,
+        delay: 0,
+        ease: 'power2.out',
+      })
+    },
+    { scope: pageRef, dependencies: [bodyReady, loading, showSeasonSection, showDoninoSection] },
+  )
 
   return (
-    <div className="home-v2" ref={pageRef}>
+    <div className={`home-v2${bodyReady ? ' home-v2--revealed' : ''}`} ref={pageRef}>
       <SEO
         title="Статистика курсинга, бегов и выставок собак"
         description="Coursing Stats — вся карьера вашей собаки в одном месте: выступления, награды, рейтинги и экспертные оценки. Курсинг, бега и выставки с 2015 года."
@@ -318,8 +350,8 @@ export default function Home() {
       <JsonLd data={organizationSchema} />
       <JsonLd data={webSiteSchema} />
 
-      <HomeHeroStage>
-        <div className="home-v2-hero-copy" data-rise>
+      <HomeHeroStage onSettleStart={revealBody}>
+        <div className="home-v2-hero-copy">
           <p className="home-v2-eyebrow">
             <span>2015 — {CURRENT_SEASON}</span>
             <span className="home-v2-eyebrow-sep" aria-hidden>
@@ -338,43 +370,11 @@ export default function Home() {
         </div>
       </HomeHeroStage>
 
-      <div className="wrap home-v2-body">
-      {/* Goal entries */}
-      <nav className="home-v2-entries" aria-label="Разделы" data-rise>
-        <a href="#home-v2-events" className="home-v2-entry">
-          <span className="home-v2-entry-num">01</span>
-          <span className="home-v2-entry-body">
-            <strong>Ближайшие старты</strong>
-            <span>Что будет на выходных</span>
-          </span>
-        </a>
-        <Link to="/competitions?tab=ranking" className="home-v2-entry">
-          <span className="home-v2-entry-num">02</span>
-          <span className="home-v2-entry-body">
-            <strong>Рейтинг соревнований</strong>
-            <span>Очки, места и скорость</span>
-          </span>
-        </Link>
-        <Link to="/shows" className="home-v2-entry">
-          <span className="home-v2-entry-num">03</span>
-          <span className="home-v2-entry-body">
-            <strong>Выставки</strong>
-            <span>Каталоги и титулы РКФ</span>
-          </span>
-        </Link>
-        <Link to="/speed-records" className="home-v2-entry">
-          <span className="home-v2-entry-num">04</span>
-          <span className="home-v2-entry-body">
-            <strong>Курсинг Донино</strong>
-            <span>Замер и бега 350 м</span>
-          </span>
-        </Link>
-      </nav>
-
+      <div className="wrap home-v2-body" aria-hidden={!bodyReady}>
       {/* 4. Events: competitions + shows */}
-      <section id="home-v2-events" className="home-v2-block">
+      <section id="home-v2-events" className="home-v2-block" data-home-reveal>
         <SectionHead icon={Icons.calendar} title="Ближайшие события" />
-        <div className="home-v2-events-grid" data-rise>
+        <div className="home-v2-events-grid">
           <div className="home-v2-events-col">
             <div className="home-v2-col-head">Соревнования</div>
             <div className="home-v2-events">
@@ -433,16 +433,27 @@ export default function Home() {
               ) : (
                 <p className="home-v2-empty">Нет ближайших выставок</p>
               )}
-              <Link to="/shows?tab=calendar" className="home-v2-external">
-                Календарь выставок →
-              </Link>
+              {showsCalendarVisible ? (
+                <Link to="/shows?tab=calendar" className="home-v2-external">
+                  Календарь выставок →
+                </Link>
+              ) : (
+                <a
+                  href="https://rkf.online/exhibitions"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="home-v2-external"
+                >
+                  Календарь на rkf.online →
+                </a>
+              )}
             </div>
           </div>
         </div>
       </section>
 
       {/* 5. Compact scale */}
-      <section className="home-v2-scale" aria-label="Масштаб базы" data-rise>
+      <section className="home-v2-scale" aria-label="Масштаб базы" data-home-reveal>
         <div className="home-v2-scale-primary">
           <div className="home-v2-scale-item">
             <div className="home-v2-scale-num">
@@ -475,7 +486,7 @@ export default function Home() {
 
       {/* 6. Season top */}
       {showSeasonSection ? (
-        <section className="home-v2-block">
+        <section className="home-v2-block" data-home-reveal>
           <SectionHead
             icon={Icons.medal}
             title={`Топ сезона ${CURRENT_SEASON}`}
@@ -485,7 +496,7 @@ export default function Home() {
           {loading ? (
             <p className="home-v2-empty">Загрузка…</p>
           ) : activeDogs.length > 0 || topShowDogs.length > 0 ? (
-            <div className="home-v2-columns" data-rise>
+            <div className="home-v2-columns">
               <div className="home-v2-col">
                 <div className="home-v2-col-head home-v2-col-head--tabs">
                   <span>Соревнования</span>
@@ -552,7 +563,7 @@ export default function Home() {
 
       {/* 7. Donino */}
       {showDoninoSection && (
-        <section className="home-v2-block">
+        <section className="home-v2-block" data-home-reveal>
           <SectionHead
             icon={Icons.speed}
             title="Рекорды Донино"
@@ -562,7 +573,7 @@ export default function Home() {
           {loading ? (
             <p className="home-v2-empty">Загрузка…</p>
           ) : doninoSpeedRecords.length > 0 || doninoCoursingRanked.length > 0 ? (
-            <div className="home-v2-columns" data-rise>
+            <div className="home-v2-columns">
               <div className="home-v2-col">
                 <div className="home-v2-col-head">Замер</div>
                 <div className="donino-home-list">
@@ -618,14 +629,11 @@ export default function Home() {
       )}
 
       {/* 8. Footer contact */}
-      <footer className="home-v2-foot" data-rise>
+      <footer className="home-v2-foot" data-home-reveal>
         <p className="home-v2-disclaimer">{DISCLAIMER}</p>
         <p className="home-v2-contact">
           Вопросы и правки данных:{' '}
           <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
-        </p>
-        <p className="home-v2-sources">
-          Источники: протоколы соревнований (procoursing.ru), отчёты выставок РКФ, Донино.
         </p>
       </footer>
       </div>

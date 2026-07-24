@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import ThemeToggle from '../ThemeToggle'
-import { isLocalDev } from '../../lib/env'
+import { usePublicCalendarVisible } from '../../hooks/useStaticData'
 import { DATA_SOURCE_LINKS, GUIDE_MENU_ITEMS } from './navLinks'
 
 type NavMobileProps = {
@@ -46,6 +46,8 @@ export function NavMobile({
   onToggleGuide,
   onToggleSources,
 }: NavMobileProps) {
+  const competitionsCalendar = usePublicCalendarVisible('competitions')
+  const showsCalendar = usePublicCalendarVisible('shows')
   return (
     <>
       <div className="md:hidden flex items-center justify-between h-12 pl-2 pr-2 gap-2">
@@ -123,7 +125,7 @@ export function NavMobile({
                   >
                     Рейтинг
                   </Link>
-                  {isLocalDev && (
+                  {competitionsCalendar && (
                     <Link
                       to="/competitions?tab=calendar"
                       onClick={onCloseMobileMenu}
@@ -168,7 +170,7 @@ export function NavMobile({
                   >
                     Рейтинг
                   </Link>
-                  {isLocalDev && (
+                  {showsCalendar && (
                     <Link
                       to="/shows?tab=calendar"
                       onClick={onCloseMobileMenu}

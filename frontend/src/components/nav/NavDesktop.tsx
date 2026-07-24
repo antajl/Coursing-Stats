@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import ThemeToggle from '../ThemeToggle'
 import { NavMenuDropdown } from '../NavMenuDropdown'
+import { usePublicCalendarVisible } from '../../hooks/useStaticData'
 import {
-  COMPETITIONS_MENU_ITEMS,
+  competitionsMenuItems,
   DONINO_MENU_ITEMS,
   DATA_SOURCE_LINKS,
   GUIDE_MENU_ITEMS,
-  SHOWS_MENU_ITEMS,
+  showsMenuItems,
   type OpenMenuId,
 } from './navLinks'
 
@@ -37,6 +38,10 @@ export function NavDesktop({
   onSourcesMouseEnter,
   onSourcesMouseLeave,
 }: NavDesktopProps) {
+  const competitionsCalendar = usePublicCalendarVisible('competitions')
+  const showsCalendar = usePublicCalendarVisible('shows')
+  const competitionsItems = competitionsMenuItems(competitionsCalendar)
+  const showsItems = showsMenuItems(showsCalendar)
   return (
     <div className="hidden md:flex relative h-16 w-full items-center justify-between pl-2 pr-2 sm:pl-3 sm:pr-3 lg:pl-4 lg:pr-4">
       <Link to="/" className="relative z-10 flex shrink-0 items-center">
@@ -74,7 +79,7 @@ export function NavDesktop({
                 <span className="hidden lg:inline">Соревнования</span>
               </>
             }
-            items={COMPETITIONS_MENU_ITEMS}
+            items={competitionsItems}
           />
           <NavMenuDropdown
             open={openMenu === 'shows'}
@@ -84,7 +89,7 @@ export function NavDesktop({
             isSectionActive={isShowsActive}
             chevronLabel="Меню раздела Выставки"
             label="Выставки"
-            items={SHOWS_MENU_ITEMS}
+            items={showsItems}
           />
           <NavMenuDropdown
             open={openMenu === 'donino'}

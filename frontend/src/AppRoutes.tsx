@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react';
 import { Routes, Route, Navigate, useLocation, useParams } from 'react-router-dom';
 import PageLoader from './components/PageLoader';
 import { isLocalDev } from './lib/env';
+import { usePublicCalendarVisible } from './hooks/useStaticData';
 
 const Home = lazy(() => import('./pages/Home'));
 const Competitions = lazy(() => import('./pages/Competitions'));
@@ -48,6 +49,16 @@ function LegacyAdminEventRedirect() {
   return <Navigate to={`/event/${id}`} replace />;
 }
 
+function AdminCalendarRedirect() {
+  const calendarVisible = usePublicCalendarVisible('competitions');
+  return (
+    <Navigate
+      to={calendarVisible ? '/competitions?tab=calendar' : '/competitions?tab=ranking'}
+      replace
+    />
+  );
+}
+
 export default function AppRoutes() {
   return (
     <Suspense fallback={<PageLoader />}>
@@ -72,16 +83,7 @@ export default function AppRoutes() {
             isLocalDev ? <EventResults /> : <Navigate to="/competitions?tab=ranking" replace />
           }
         />
-        {/* Legacy admin aliases → public-but-DEV routes (or hub on prod) */}
-        <Route
-          path="/admin/calendar"
-          element={
-            <Navigate
-              to={isLocalDev ? '/competitions?tab=calendar' : '/competitions?tab=ranking'}
-              replace
-            />
-          }
-        />
+        <Route path="/admin/calendar" element={<AdminCalendarRedirect />} />
         <Route path="/admin/event/:id" element={<LegacyAdminEventRedirect />} />
         <Route path="/speed-records" element={<SpeedRecords />} />
         <Route path="/guide" element={<Guide />} />

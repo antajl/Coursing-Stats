@@ -4,6 +4,7 @@ import { DogSilhouettes } from './components/DogSilhouettes'
 import { YandexMetrica } from './components/YandexMetrica'
 import { QueryProvider } from './lib/query-client'
 import Nav from './components/Nav'
+import TemporaryShowsCalendarBanner from './components/TemporaryShowsCalendarBanner'
 import AppRoutes from './AppRoutes'
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           </a>
           <div className="min-h-screen bg-gradient-to-br from-old-money-50 via-old-money-100 to-old-money-200 dark:from-charcoal-900 dark:via-charcoal-800 dark:to-charcoal-900">
             <Nav />
+            <TemporaryShowsCalendarBanner />
             <main id="main-content" className="w-full md:max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 pt-3 pb-5 md:pt-4 flex-1">
               <AppRoutes />
             </main>

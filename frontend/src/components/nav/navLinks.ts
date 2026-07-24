@@ -1,5 +1,4 @@
 import { Icons } from '../../lib/icons'
-import { isLocalDev } from '../../lib/env'
 import type { NavMenuItem } from '../NavMenuDropdown'
 
 export type OpenMenuId = 'competitions' | 'shows' | 'donino' | 'guide' | null
@@ -44,21 +43,23 @@ const COMPETITIONS_CALENDAR_ITEM: NavMenuItem = {
   isActive: competitionTabActive('calendar'),
 }
 
-export const COMPETITIONS_MENU_ITEMS: NavMenuItem[] = [
-  {
-    to: '/competitions?tab=ranking',
-    label: 'Рейтинг',
-    icon: Icons.medal,
-    isActive: competitionTabActive('ranking'),
-  },
-  ...(isLocalDev ? [COMPETITIONS_CALENDAR_ITEM] : []),
-  {
-    to: '/competitions?tab=judges',
-    label: 'Судьи',
-    icon: Icons.club,
-    isActive: competitionTabActive('judges'),
-  },
-]
+export function competitionsMenuItems(calendarVisible: boolean): NavMenuItem[] {
+  return [
+    {
+      to: '/competitions?tab=ranking',
+      label: 'Рейтинг',
+      icon: Icons.medal,
+      isActive: competitionTabActive('ranking'),
+    },
+    ...(calendarVisible ? [COMPETITIONS_CALENDAR_ITEM] : []),
+    {
+      to: '/competitions?tab=judges',
+      label: 'Судьи',
+      icon: Icons.club,
+      isActive: competitionTabActive('judges'),
+    },
+  ]
+}
 
 const SHOWS_CALENDAR_ITEM: NavMenuItem = {
   to: '/shows?tab=calendar',
@@ -67,21 +68,23 @@ const SHOWS_CALENDAR_ITEM: NavMenuItem = {
   isActive: showTabActive('calendar'),
 }
 
-export const SHOWS_MENU_ITEMS: NavMenuItem[] = [
-  {
-    to: '/shows?tab=ranking',
-    label: 'Рейтинг',
-    icon: Icons.medal,
-    isActive: showTabActive('ranking'),
-  },
-  ...(isLocalDev ? [SHOWS_CALENDAR_ITEM] : []),
-  {
-    to: '/shows?tab=judges',
-    label: 'Судьи',
-    icon: Icons.club,
-    isActive: showTabActive('judges'),
-  },
-]
+export function showsMenuItems(calendarVisible: boolean): NavMenuItem[] {
+  return [
+    {
+      to: '/shows?tab=ranking',
+      label: 'Рейтинг',
+      icon: Icons.medal,
+      isActive: showTabActive('ranking'),
+    },
+    ...(calendarVisible ? [SHOWS_CALENDAR_ITEM] : []),
+    {
+      to: '/shows?tab=judges',
+      label: 'Судьи',
+      icon: Icons.club,
+      isActive: showTabActive('judges'),
+    },
+  ]
+}
 
 export const DONINO_MENU_ITEMS: NavMenuItem[] = [
   {

@@ -1,24 +1,24 @@
 import { Navigate, useSearchParams } from 'react-router-dom'
 import RKFAttribution from '../components/RKFAttribution'
 import { SEO } from '../components/SEO'
-import { isLocalDev } from '../lib/env'
+import { usePublicCalendarVisible } from '../hooks/useStaticData'
 import ShowRanking from './Shows/ShowRanking'
 import ShowJudges from './Shows/ShowJudges'
 import ShowCalendar from './Shows/ShowCalendar'
 
-const VALID_TABS = isLocalDev
-  ? new Set(['ranking', 'calendar', 'judges'])
-  : new Set(['ranking', 'judges'])
-
 function Shows() {
   const [searchParams] = useSearchParams()
   const tab = searchParams.get('tab') || 'ranking'
+  const calendarVisible = usePublicCalendarVisible('shows')
 
-  if (tab === 'champions' || (!isLocalDev && tab === 'calendar')) {
+  if (tab === 'champions' || (!calendarVisible && tab === 'calendar')) {
     return <Navigate to="/shows?tab=ranking" replace />
   }
 
-  const activeTab = VALID_TABS.has(tab) ? tab : 'ranking'
+  const activeTab =
+    tab === 'judges' || tab === 'ranking' || (calendarVisible && tab === 'calendar')
+      ? tab
+      : 'ranking'
 
   return (
     <div className="space-y-6">
@@ -36,7 +36,7 @@ function Shows() {
               <ShowRanking />
             </div>
           )}
-          {isLocalDev && activeTab === 'calendar' && (
+          {calendarVisible && activeTab === 'calendar' && (
             <div id="tab-panel-calendar" role="tabpanel" aria-labelledby="tab-calendar">
               <ShowCalendar />
             </div>

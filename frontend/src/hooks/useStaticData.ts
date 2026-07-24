@@ -6,6 +6,11 @@ import {
   getJudgeDetails,
   getSpeedRecords,
 } from '../lib/staticData';
+import {
+  calendarVisibleFromFlags,
+  getUiFlags,
+  type PublicCalendarKind,
+} from '../lib/uiFlags';
 
 const STALE_MS = 5 * 60 * 1000;
 const STALE_LONG_MS = 60 * 60 * 1000;
@@ -177,4 +182,18 @@ export function useCoursingRecordsByBreed(breed: string) {
     enabled: !!breed,
     staleTime: STALE_MS,
   });
+}
+
+export function useUiFlags() {
+  return useQuery({
+    queryKey: ['uiFlags'],
+    queryFn: getUiFlags,
+    staleTime: STALE_MS,
+  })
+}
+
+/** Локально всегда true; на проде — data/v1/ui-flags.json. */
+export function usePublicCalendarVisible(kind: PublicCalendarKind): boolean {
+  const { data } = useUiFlags()
+  return calendarVisibleFromFlags(kind, data)
 }

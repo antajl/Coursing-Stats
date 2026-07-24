@@ -2,6 +2,12 @@
 export const isLocalDev = import.meta.env.DEV
 
 /**
+ * Публичные вкладки «Календарь» на проде — не через DEV, а через `data/v1/ui-flags.json`
+ * (scripts/show-calendar-*.bat / hide-calendar-*.bat). Локально календари всегда видны.
+ * Протоколы `/event/:id` и `/shows/exhibition/:id` по-прежнему только DEV.
+ */
+
+/**
  * Базовый путь к локальному просмотру протокола соревнования.
  * На проде null — ссылки ведут на procoursing.ru (см. ProcoursingEventLink).
  */

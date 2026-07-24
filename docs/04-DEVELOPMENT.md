@@ -1,4 +1,4 @@
-﻿# Development — Разработка
+# Development — Разработка
 
 > **ИИ:** [README.md](README.md) → [00-AI-GUIDE.md](00-AI-GUIDE.md) → [03-DATA.md](03-DATA.md). **UI и маршруты:** [04-FRONTEND.md](04-FRONTEND.md).
 

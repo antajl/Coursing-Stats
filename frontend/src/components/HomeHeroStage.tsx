@@ -1,11 +1,14 @@
 import { useEffect, useMemo, useRef, type ReactNode } from 'react'
 import gsap from 'gsap'
 import { prefersReducedMotion, useGSAP } from '../lib/motion'
-import { HOME_LANDSCAPES, type HomePhoto } from '../lib/homePhotos'
+import { shuffleHomePhotos } from '../lib/homePhotos'
+import { Icons } from '../lib/icons'
 
 const SLIDE_MS = 7000
 const FADE_S = 1.15
 const SETTLE_S = 0.72
+/** Доля settle, с которой показываем body и каскад блоков */
+const SETTLE_REVEAL_AT = 0.48
 export const HOME_HERO_SETTLE_EVENT = 'cs-home-hero-settle'
 
 export function requestHomeHeroSettle(): void {
@@ -13,17 +16,10 @@ export function requestHomeHeroSettle(): void {
   window.dispatchEvent(new Event(HOME_HERO_SETTLE_EVENT))
 }
 
-function shufflePhotos(pool: readonly HomePhoto[]): HomePhoto[] {
-  const next = [...pool]
-  for (let i = next.length - 1; i > 0; i -= 1) {
-    const j = Math.floor(Math.random() * (i + 1))
-    ;[next[i], next[j]] = [next[j], next[i]]
-  }
-  return next
-}
-
 interface HomeHeroStageProps {
   children: ReactNode
+  /** Вызывается один раз при первом settle (скролл / поиск). */
+  onSettleStart?: () => void
 }
 
 /**
@@ -31,7 +27,7 @@ interface HomeHeroStageProps {
  * Первый скролл вниз — hero сжимается, текст остаётся «наверху»;
  * к полноэкранному старту вернуться нельзя.
  */
-export default function HomeHeroStage({ children }: HomeHeroStageProps) {
+export default function HomeHeroStage({ children, onSettleStart }: HomeHeroStageProps) {
   const rootRef = useRef<HTMLElement>(null)
   const mediaRef = useRef<HTMLDivElement>(null)
   const layersRef = useRef<(HTMLImageElement | null)[]>([])
@@ -39,29 +35,35 @@ export default function HomeHeroStage({ children }: HomeHeroStageProps) {
   const indexRef = useRef(0)
   const settledRef = useRef(false)
   const settlingRef = useRef(false)
+  const onSettleStartRef = useRef(onSettleStart)
+  onSettleStartRef.current = onSettleStart
 
-  const photos = useMemo(() => shufflePhotos(HOME_LANDSCAPES), [])
+  const photos = useMemo(() => shuffleHomePhotos(), [])
 
   useGSAP(
     () => {
       const media = mediaRef.current
       const copy = copyRef.current
       const layers = layersRef.current.filter(Boolean) as HTMLImageElement[]
-      if (!media || layers.length === 0) return
+      if (!media) return
 
-      gsap.set(layers, { autoAlpha: 0, scale: 1.06 })
-      gsap.set(layers[0], { autoAlpha: 1, scale: 1 })
+      if (layers.length > 0) {
+        gsap.set(layers, { autoAlpha: 0, scale: 1.06 })
+        gsap.set(layers[0], { autoAlpha: 1, scale: 1 })
+      }
 
       if (prefersReducedMotion()) {
         if (copy) gsap.set(copy, { clearProps: 'all' })
         return
       }
 
-      gsap.fromTo(
-        media,
-        { scale: 1.12, autoAlpha: 0.6 },
-        { scale: 1, autoAlpha: 1, duration: 1.2, ease: 'power3.out' },
-      )
+      if (layers.length > 0) {
+        gsap.fromTo(
+          media,
+          { scale: 1.12, autoAlpha: 0.6 },
+          { scale: 1, autoAlpha: 1, duration: 1.2, ease: 'power3.out' },
+        )
+      }
       if (copy) {
         gsap.fromTo(
           copy,
@@ -81,6 +83,8 @@ export default function HomeHeroStage({ children }: HomeHeroStageProps) {
     if (prefersReducedMotion()) {
       settledRef.current = true
       root.classList.add('home-v2-stage--settled')
+      document.documentElement.classList.remove('home-hero-locked')
+      onSettleStartRef.current?.()
       return
     }
 
@@ -91,51 +95,71 @@ export default function HomeHeroStage({ children }: HomeHeroStageProps) {
       const startH = root.getBoundingClientRect().height
       const padTop = 28
       const padBot = 56
-      // + overlap с body уже учтён одинаковым margin-bottom
-      const endH = Math.ceil(copy.offsetHeight + padTop + padBot)
+      const homeRoot = root.closest('.home-v2')
+      let bodyRevealed = false
+
+      const revealBody = () => {
+        if (bodyRevealed) return
+        bodyRevealed = true
+        homeRoot?.classList.add('home-v2--revealed')
+        // Подтянуть body под низ фото, пока высота ещё анимируется
+        gsap.set(root, { marginBottom: -48 })
+        onSettleStartRef.current?.()
+      }
+
+      const contentH = copy.getBoundingClientRect().height
+      const endH = Math.max(Math.ceil(contentH + padTop + padBot), 160)
+
+      gsap.set(root, {
+        height: startH,
+        minHeight: startH,
+        maxHeight: 'none',
+        paddingTop: padTop,
+        paddingBottom: padBot,
+        marginBottom: 0,
+      })
+      root.classList.add('home-v2-stage--settling')
 
       window.scrollTo(0, 0)
 
-      root.classList.add('home-v2-stage--settling')
+      gsap.to(root, {
+        height: endH,
+        minHeight: endH,
+        duration: SETTLE_S,
+        ease: 'power3.inOut',
+        overwrite: true,
+        onUpdate() {
+          if (this.progress() >= SETTLE_REVEAL_AT) revealBody()
+        },
+        onComplete: () => {
+          settledRef.current = true
+          settlingRef.current = false
+          revealBody()
 
-      gsap
-        .timeline({
-          defaults: { ease: 'power3.inOut' },
-          onComplete: () => {
-            settledRef.current = true
-            settlingRef.current = false
-            root.classList.remove('home-v2-stage--settling')
-            root.classList.add('home-v2-stage--settled')
-            // Не трогаем margin — он стабилен в CSS
-            gsap.set(root, { clearProps: 'height,minHeight,paddingTop,paddingBottom' })
-            gsap.set(mediaRef.current, { clearProps: 'scale' })
-          },
-        })
-        .fromTo(
-          root,
-          { height: startH, minHeight: startH },
-          {
-            height: endH,
-            minHeight: endH,
+          document.documentElement.classList.remove('home-hero-locked')
+          root.classList.remove('home-v2-stage--settling')
+          root.classList.add('home-v2-stage--settled')
+
+          gsap.set(root, {
+            height: 'auto',
+            minHeight: 0,
+            maxHeight: 'none',
             paddingTop: padTop,
             paddingBottom: padBot,
-            duration: SETTLE_S,
-          },
-          0,
-        )
-        .to(mediaRef.current, { scale: 1.04, duration: SETTLE_S }, 0)
+            marginBottom: -48,
+          })
+          gsap.set(root, {
+            clearProps: 'height,minHeight,maxHeight,paddingTop,paddingBottom,marginBottom',
+          })
+        },
+      })
     }
 
     const onWheel = (e: WheelEvent) => {
       if (settledRef.current) return
-      if (settlingRef.current) {
-        e.preventDefault()
-        return
-      }
-      if (e.deltaY > 6) {
-        e.preventDefault()
-        settle()
-      }
+      e.preventDefault()
+      if (settlingRef.current) return
+      if (e.deltaY > 6) settle()
     }
 
     let touchY: number | null = null
@@ -158,13 +182,25 @@ export default function HomeHeroStage({ children }: HomeHeroStageProps) {
 
     const onScroll = () => {
       if (settledRef.current || settlingRef.current) return
-      if (window.scrollY > 4) settle()
+      if (window.scrollY > 0) {
+        window.scrollTo(0, 0)
+        settle()
+      }
+    }
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (settledRef.current || settlingRef.current) return
+      const keys = ['ArrowDown', 'PageDown', ' ', 'Spacebar', 'End']
+      if (!keys.includes(e.key)) return
+      e.preventDefault()
+      settle()
     }
 
     window.addEventListener('wheel', onWheel, { passive: false })
     window.addEventListener('touchstart', onTouchStart, { passive: true })
     window.addEventListener('touchmove', onTouchMove, { passive: false })
     window.addEventListener('scroll', onScroll, { passive: true })
+    window.addEventListener('keydown', onKeyDown)
     window.addEventListener(HOME_HERO_SETTLE_EVENT, settle)
 
     return () => {
@@ -172,6 +208,7 @@ export default function HomeHeroStage({ children }: HomeHeroStageProps) {
       window.removeEventListener('touchstart', onTouchStart)
       window.removeEventListener('touchmove', onTouchMove)
       window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('keydown', onKeyDown)
       window.removeEventListener(HOME_HERO_SETTLE_EVENT, settle)
     }
   }, [])
@@ -223,6 +260,16 @@ export default function HomeHeroStage({ children }: HomeHeroStageProps) {
       <div ref={copyRef} className="home-v2-stage-copy wrap">
         {children}
       </div>
+
+      <button
+        type="button"
+        className="home-v2-scroll-cue"
+        aria-label="Прокрутить вниз"
+        onClick={() => requestHomeHeroSettle()}
+      >
+        <Icons.chevronDown aria-hidden />
+        <Icons.chevronDown className="home-v2-scroll-cue-chevron" aria-hidden />
+      </button>
     </section>
   )
 }
