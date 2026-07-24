@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom'
 import { Icons } from '../../lib/icons'
-import { localEventPath } from '../../lib/env'
+import ProcoursingEventLink from '../../components/ProcoursingEventLink'
+import { normalizeProcoursingUrl } from '../../lib/procoursingLinks'
 import {
   type CalendarEvent,
   DISCIPLINE_BORDER,
@@ -34,6 +34,7 @@ export default function EventListRow({ event }: EventListRowProps) {
   const cancelled = isEventCancelled(event)
   const TrophyIcon = Icons.championship
   const PawIcon = Icons.paw
+  const procoursingUrl = normalizeProcoursingUrl(event.results_url)
 
   const showJudgesColumn = visibleJudges.length > 0
 
@@ -118,11 +119,14 @@ export default function EventListRow({ event }: EventListRowProps) {
     </>
   )
 
-  if (!localEventPath) return null
-
   return (
-    <Link to={`${localEventPath}/${event.id}`} className={rowClassName} aria-label="Открыть результаты">
+    <ProcoursingEventLink
+      eventId={event.id}
+      procoursingUrl={procoursingUrl}
+      className={rowClassName}
+      title={procoursingUrl ? 'Результаты на procoursing.ru' : getEventHeadline(event)}
+    >
       {rowContent}
-    </Link>
+    </ProcoursingEventLink>
   )
 }

@@ -58,7 +58,7 @@
 } />
 ```
 
-**`bare`:** `TopDogsFilters`, `Judges/index`, `DoninoPageToolbar`. **Framed:** `Events/index.tsx` (календарь соревнований, local DEV only).
+**`bare`:** `TopDogsFilters`, `Judges/index`, `DoninoPageToolbar`. **Framed:** `Events/index.tsx` (календарь соревнований; на проде — `publicCalendars.competitions`).
 
 Канон паттернов: [`18-CODE-PATTERNS.md`](18-CODE-PATTERNS.md)
 

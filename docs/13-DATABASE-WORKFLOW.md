@@ -510,6 +510,8 @@ npx wrangler d1 execute pc-db --remote --command "SELECT date_start, date_end, s
 - Дата: `formatRowDateParts` + `dayEnd` для диапазона
 - Отмена: `isEventCancelled` → бейдж, приглушённый стиль
 - Дисциплина: цвет левого бордера (`DISCIPLINE_BORDER`), БЗМП — синий `blue-*`
+- Строка: `EventListRow` → `ProcoursingEventLink` (прод: `results_url` на procoursing.ru; **не** `return null` при `localEventPath === null`)
+- Временная плашка: `TemporaryCompetitionsCalendarBanner` на `/competitions?tab=calendar`
 
 ### Что НЕ ломать
 

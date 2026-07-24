@@ -65,7 +65,7 @@ npm run test:e2e:ui
 | `e2e/home.spec.ts` | Hero, ближайшие события, overflow 375px |
 | `e2e/guide.spec.ts` | `/guide`, вкладки справочника |
 | `e2e/navigation.spec.ts` | Навигация по разделам |
-| `e2e/competitions.spec.ts` | Hub соревнований: рейтинг/судьи; календарь доступен в local DEV |
+| `e2e/competitions.spec.ts` | Hub соревнований: рейтинг/судьи; календарь при ui-flags / local DEV |
 | `e2e/event-results.spec.ts` | Local DEV: `/event/:id`; legacy `/admin/event` → `/event`; на prod build `/event` → ranking |
 | `e2e/top-dogs.spec.ts` | `/top`, карточки собак |
 | `e2e/judges.spec.ts` | Поиск, карточки, детальная страница |

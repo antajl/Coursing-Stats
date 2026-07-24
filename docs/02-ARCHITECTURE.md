@@ -150,8 +150,8 @@ POST /api/admin/recreate-views
 
 **Pages (lazy-loaded):** полная карта — [`04-FRONTEND.md`](04-FRONTEND.md). Кратко:
 - `/` — `Home.tsx` (hero с фото-фоном + settle, поиск собаки, события, топ сезона, Донино)
-- `/competitions` — `Competitions.tsx` (hub: **Рейтинг + Судьи**; `?tab=calendar` только Vite DEV / `isLocalDev`)
-- `/shows` — `Shows.tsx` (hub: рейтинг + судьи; календарь / `/shows/exhibition/:id` — только DEV)
+- `/competitions` — `Competitions.tsx` (hub: рейтинг + судьи; `?tab=calendar` — локально всегда, на проде по `ui-flags.json` → `publicCalendars.competitions`; плашка `TemporaryCompetitionsCalendarBanner`)
+- `/shows` — `Shows.tsx` (hub: рейтинг + судьи; календарь на проде по `publicCalendars.shows`; `/shows/exhibition/:id` — только DEV)
 - `/top`, `/judges` — legacy redirect → `/competitions?tab=…`
 - `/event/:id` — протоколы соревнований (**только DEV**; на проде → hub)
 - `/dog/:id` — единый профиль; `/judges/:judgeId` — судья
@@ -275,7 +275,7 @@ DNS зона `coursing-stats.ru` — в **Cloudflare**.
 ### Легаси (не использовать для новых ссылок)
 
 - `api.coursing-stats.ru` — Worker не деплоится
-- Публичный календарь / протоколы на проде — вариант A; локально (`isLocalDev` = `import.meta.env.DEV`) — вкладки «Календарь» в nav и `/event/:id`, `/shows/exhibition/:id`
+- Публичный календарь на проде — по `ui-flags.json`; полные протоколы `/event/:id` и `/shows/exhibition/:id` — только `isLocalDev`. Строки календаря соревнований на проде → procoursing.ru (`ProcoursingEventLink`)
 
 ### User-Agent скрапера
 

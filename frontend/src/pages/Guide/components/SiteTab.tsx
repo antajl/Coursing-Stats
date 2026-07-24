@@ -101,7 +101,9 @@ export default function SiteTab() {
         </p>
         <p className="text-[13px] text-charcoal-600 dark:text-charcoal-300">
           Данные из открытых протоколов; как устроен рейтинг и индекс CS — во вкладке <strong>«Рейтинг»</strong>.
-          Календарь соревнований — на procoursing.ru, выставок — на rkf.online.
+          Пока procoursing.ru недоступен, календарь соревнований временно на Coursing Stats (
+          <strong>Соревнования → Календарь</strong>); клик по событию ведёт на протокол на procoursing.ru, когда сайт снова
+          отвечает. Календарь выставок — на rkf.online.
         </p>
       </SectionCard>
 

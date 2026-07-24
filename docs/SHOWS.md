@@ -117,8 +117,6 @@ data/v1/shows/
 
 Gate календаря: `usePublicCalendarVisible` ← `data/v1/ui-flags.json` (+ всегда `isLocalDev`). Протоколы: `isLocalDev` only. Sitemap не включает calendar/exhibition URL.
 
-**Временный календарь выставок на проде:** пока procoursing.ru недоступен, `publicCalendars.shows` может быть `true`. На `/shows?tab=calendar` под шапкой — закрываемая плашка `TemporaryShowsCalendarBanner` (dismiss → `localStorage` ключ `cs-dismiss-shows-calendar-temp-notice`).
-
 **Прод vs локально (выставки):** на проде — рейтинг + профили из `indexes/`; история собаки → `rkf.online/exhibitions/{id}` и PDF (`reports_link`), не наш `/shows/exhibition/...`. Полные протоколы `/shows/exhibition/...` — **только DEV**. Календарь на проде — по флагу `ui-flags.json`. PDF и `exhibitions-rkf` в git/CDN **не** кладём (`data/local/`, gitignore).
 
 ### Объём PDF (по `calendar-rkf`, type1+type3)

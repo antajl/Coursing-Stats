@@ -3,17 +3,17 @@ import { useLocation, useSearchParams } from 'react-router-dom'
 import { Icons } from '../lib/icons'
 import { usePublicCalendarVisible } from '../hooks/useStaticData'
 
-const STORAGE_KEY = 'cs-dismiss-shows-calendar-temp-notice'
+const STORAGE_KEY = 'cs-dismiss-competitions-calendar-temp-notice'
 
 /**
- * Плашка под шапкой на /shows?tab=calendar:
+ * Плашка под шапкой на /competitions?tab=calendar:
  * раздел временно на нашем сайте, пока procoursing.ru недоступен.
  * Закрытие сохраняется в localStorage.
  */
-export default function TemporaryShowsCalendarBanner() {
+export default function TemporaryCompetitionsCalendarBanner() {
   const location = useLocation()
   const [searchParams] = useSearchParams()
-  const calendarVisible = usePublicCalendarVisible('shows')
+  const calendarVisible = usePublicCalendarVisible('competitions')
   const [dismissed, setDismissed] = useState(true)
 
   useEffect(() => {
@@ -25,7 +25,8 @@ export default function TemporaryShowsCalendarBanner() {
   }, [])
 
   const onCalendarTab =
-    location.pathname === '/shows' && (searchParams.get('tab') || 'ranking') === 'calendar'
+    location.pathname === '/competitions' &&
+    (searchParams.get('tab') || 'ranking') === 'calendar'
   const visible = calendarVisible && onCalendarTab && !dismissed
 
   if (!visible) return null
@@ -46,7 +47,7 @@ export default function TemporaryShowsCalendarBanner() {
     >
       <div className="mx-auto flex max-w-7xl items-start gap-3 px-3 py-2.5 sm:items-center sm:px-4 md:px-6 lg:px-8">
         <p className="min-w-0 flex-1 text-sm leading-snug">
-          Календарь выставок временно размещён на Coursing Stats, пока{' '}
+          Календарь соревнований временно размещён на Coursing Stats, пока{' '}
           <a
             href="http://procoursing.ru/"
             target="_blank"
