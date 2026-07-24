@@ -34,16 +34,16 @@ npx vitest run backend/tests/static-indexes.test.ts
 2. `_headers` ставил на `/assets/*` **immutable** на год → браузер кэшировал HTML как «JS».
 3. Раньше чанки без хэша в имени (`MedalTally.js`) смешивались между деплоями.
 
-### Защита (с 2026-07-22, уточнено)
+### Защита (с 2026-07-22, уточнено 2026-07-24)
 
-- Vite: `assets/[name]-[hash].js` + build-stamp banner (новые имена после каждого CI)
-- `_redirects`: только `/* /index.html 200` — **без** корневого `404.html` (иначе Pages отключает SPA и `/competitions` = 404)
-- Не использовать `/assets/* → 404` в `_redirects` (на Pages rewrite со статусом 404 не поддерживается)
-- HTML: `no-cache`; авто-reload при ошибке чанка
+- Vite: `assets/[name]-[stamp]-[hash].js` (новые имена после каждого CI)
+- `_redirects`: только `/* /index.html 200` — **без** корневого `404.html`
+- `/assets/*`: **`no-cache, must-revalidate`** (не immutable) — иначе HTML, пойманный на URL чанка во время деплоя, залипает в браузере
+- HTML: `no-cache`; авто-reload с `?_csrb=` при ошибке чанка / MIME text/html
 
-Если кэш уже отравлен: после деплоя с новым stamp хэши vendor-чанков сменятся сами; при залипании — инкогнито один раз.
+Если кэш уже отравлен: **Ctrl+Shift+R** (или инкогнито) один раз — либо дождаться деплоя с новым stamp (новые URL чанков).
 
-Канон: [`20-OPERATIONS.md`](20-OPERATIONS.md) → «Кэш фронта», [`16-TROUBLESHOOTING.md`](16-TROUBLESHOOTING.md) (этот файл).
+Календарь/Донино «пустые» при белом экране — следствие того же краша JS, не отсутствия данных на CDN.
 
 
 ---

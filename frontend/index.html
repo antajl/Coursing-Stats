@@ -29,7 +29,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&subset=cyrillic&display=swap" rel="stylesheet">
     <script>
-      // Если сам entry /assets/index-*.js не загрузился (MIME/HTML после деплоя) — один reload.
+      // Если /assets/*.js не загрузился (MIME/HTML после деплоя) — reload с cache-bust.
       (function () {
         var KEY = 'cs:asset-reload';
         function reloadOnce() {
@@ -39,7 +39,13 @@
             if (prev && now - prev < 15000) return;
             sessionStorage.setItem(KEY, String(now));
           } catch (e) {}
-          location.reload();
+          try {
+            var u = new URL(location.href);
+            u.searchParams.set('_csrb', String(Date.now()));
+            location.replace(u.href);
+          } catch (e2) {
+            location.reload();
+          }
         }
         window.addEventListener('error', function (e) {
           var t = e && e.target;

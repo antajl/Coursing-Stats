@@ -77,9 +77,9 @@ scripts\deploy-to-github.bat  # иначе прод не увидит измен
 
 | Слой | Политика |
 |------|----------|
-| HTML (`/`, `/index.html`) | `no-cache` — всегда свежий shell с новыми хэшами JS |
-| `/assets/*-[hash].*` | `immutable` год; имена с content-hash |
-| Missing `/assets/*` | Не SPA-HTML 200 желательно; на Pages **нельзя** rewrite 404 в `_redirects`. Не добавлять корневой `404.html` (ломает SPA). |
+| HTML (`/`, `/index.html`, prerender hubs) | `no-cache` — всегда свежий shell с новыми хэшами JS |
+| `/assets/*-[stamp]-[hash].*` | `no-cache, must-revalidate` (не immutable): при гонке деплоя SPA может отдать HTML на URL чанка — браузер не должен держать это часами |
+| Missing `/assets/*` | На Pages rewrite 404 в `_redirects` **нельзя**. Не добавлять корневой `404.html` (ломает SPA). |
 | Сбой чанка после деплоя | авто-`reload` + **build-stamp** в Vite banner → новые хэши vendor на каждый CI |
 
 Не возвращать unhashed имена чанков (`MedalTally.js`) и не ставить SPA-fallback на `/assets/*`.
