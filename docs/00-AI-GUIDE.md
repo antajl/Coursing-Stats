@@ -62,7 +62,7 @@
 2. **`data/v1/` в git** — источник правды для прода.
 3. **Импорт данных:** парсеры → локальная SQLite (`node-data-store`) → `npm run sync-sqlite-to-v1` → `data/v1/` → `npm run build-all-data`. D1 в runtime **не используется**.
 4. **Админка** — только локально: UI `:5173/admin`, API `:8787`.
-5. **`build-all-data`** — пересобирает `indexes/`, sitemap; CI при push. Snapshot: **`results > 0`**, иначе пустой рейтинг на проде → [`03a-DATA-DIAGNOSTICS.md`](03a-DATA-DIAGNOSTICS.md), [`20-OPERATIONS.md`](20-OPERATIONS.md).
+5. **`build-all-data`** — пересобирает competition `indexes/`, sitemap; CI при push. Snapshot: **`results > 0`**, иначе пустой рейтинг на проде → [`03a-DATA-DIAGNOSTICS.md`](03a-DATA-DIAGNOSTICS.md), [`20-OPERATIONS.md`](20-OPERATIONS.md). Show-индексы (`shows/indexes/`) в CI **не** пересобираются без `data/local/shows/exhibitions-rkf` — иначе рейтинг без BIS (только ЛПП). Канон: [`SHOWS.md`](SHOWS.md).
 6. **Два топа** — медали и очки, **не смешивать**. Очки: сортировка по **`rating_score` (индекс CS)**, не по `best_score`.
 7. **`total_score`** = `grand_total` как есть, **не делить** на число судей.
 8. **API путь** `/api/competitions`, не `/api/events` (uBlock).
