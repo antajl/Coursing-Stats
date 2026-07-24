@@ -242,7 +242,7 @@ export default function DoninoDogProfile() {
             <button
               type="button"
               onClick={handleBack}
-              className="absolute right-full top-5 z-10 mr-0.5 flex h-11 w-11 items-center justify-center rounded-lg text-old-money-500 transition-colors hover:bg-old-money-50 hover:text-camel-700 md:top-8 dark:text-old-money-400 dark:hover:bg-charcoal-700 dark:hover:text-camel-400"
+              className="relative z-10 mb-2 inline-flex h-11 w-11 items-center justify-center rounded-lg text-old-money-500 transition-colors hover:bg-old-money-50 hover:text-camel-700 md:absolute md:right-full md:top-8 md:mb-0 md:mr-0.5 dark:text-old-money-400 dark:hover:bg-charcoal-700 dark:hover:text-camel-400"
               aria-label="Назад"
               data-export-ignore
             >
@@ -287,10 +287,10 @@ export default function DoninoDogProfile() {
                     <h2 className="mb-4 text-lg font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 md:text-xl">Замер скорости</h2>
 
                     <div className="mb-4 rounded-xl border-2 border-warm-blue-200 dark:border-warm-blue-600 bg-warm-blue-50 dark:bg-charcoal-700 p-4 text-center">
-                      <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2 uppercase tracking-wide">Лучшая скорость</div>
+                      <div className="text-xs font-semibold text-charcoal-500 dark:text-charcoal-400 mb-2 uppercase tracking-wide">Лучшая скорость</div>
                       <div className="whitespace-nowrap text-4xl font-bold tracking-tight text-warm-blue-800 dark:text-warm-blue-400">
                         {data?.speedStats?.bestSpeed?.toFixed(1) || '—'}
-                        <span className="text-base font-normal text-gray-400 dark:text-gray-500 ml-2">км/ч</span>
+                        <span className="text-base font-normal text-charcoal-400 dark:text-charcoal-400 ml-2">км/ч</span>
                       </div>
                     </div>
 
@@ -299,7 +299,7 @@ export default function DoninoDogProfile() {
                         <div className="text-xs font-semibold text-old-money-500 dark:text-old-money-400 mb-1 uppercase tracking-wide">Средняя</div>
                         <div className="whitespace-nowrap text-2xl font-bold text-warm-blue-900 dark:text-warm-blue-400">
                           {data?.speedStats?.avgSpeed?.toFixed(1) || '—'}
-                          <span className="text-sm font-normal text-gray-400 dark:text-gray-500 ml-1">км/ч</span>
+                          <span className="text-sm font-normal text-charcoal-400 dark:text-charcoal-400 ml-1">км/ч</span>
                         </div>
                       </div>
                       <div className="rounded-xl bg-warm-blue-50 dark:bg-charcoal-700 p-4 text-center border border-warm-blue-200 dark:border-warm-blue-600">
@@ -311,7 +311,7 @@ export default function DoninoDogProfile() {
                           <div className="text-xs font-semibold text-old-money-500 dark:text-old-money-400 mb-1 uppercase tracking-wide">Рейтинг в породе</div>
                           <div className="text-2xl font-bold text-charcoal-800 dark:text-charcoal-100">
                             #{data.speedStats.breedRank}
-                            <span className="text-sm font-normal text-gray-400 dark:text-gray-500 ml-1">из {data.speedStats.breedTotal}</span>
+                            <span className="text-sm font-normal text-charcoal-400 dark:text-charcoal-400 ml-1">из {data.speedStats.breedTotal}</span>
                           </div>
                         </div>
                       )}
@@ -348,10 +348,10 @@ export default function DoninoDogProfile() {
                     <h2 className="text-lg md:text-xl font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 mb-4">Бега борзых (350 м)</h2>
 
                     <div className="mb-4 rounded-xl border-2 border-forest-200 dark:border-forest-600 bg-forest-50 dark:bg-charcoal-700 p-4 text-center">
-                      <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2 uppercase tracking-wide">Лучшее время</div>
+                      <div className="text-xs font-semibold text-charcoal-500 dark:text-charcoal-400 mb-2 uppercase tracking-wide">Лучшее время</div>
                       <div className="whitespace-nowrap text-4xl font-bold tracking-tight text-forest-700 dark:text-forest-300">
                         {data?.coursingStats?.bestTime?.toFixed(2) || '—'}
-                        <span className="text-base font-normal text-gray-400 dark:text-gray-500 ml-2">сек</span>
+                        <span className="text-base font-normal text-charcoal-400 dark:text-charcoal-400 ml-2">сек</span>
                       </div>
                     </div>
 
@@ -360,7 +360,7 @@ export default function DoninoDogProfile() {
                         <div className="text-xs font-semibold text-old-money-500 dark:text-old-money-400 mb-1 uppercase tracking-wide">Среднее</div>
                         <div className="whitespace-nowrap text-2xl font-bold text-charcoal-800 dark:text-charcoal-100">
                           {data?.coursingStats?.avgTime?.toFixed(2) || '—'}
-                          <span className="text-sm font-normal text-gray-400 dark:text-gray-500 ml-1">сек</span>
+                          <span className="text-sm font-normal text-charcoal-400 dark:text-charcoal-400 ml-1">сек</span>
                         </div>
                       </div>
                       <div className="bg-forest-50 dark:bg-charcoal-700 rounded-xl p-4 text-center border border-forest-200 dark:border-forest-600">
@@ -372,7 +372,7 @@ export default function DoninoDogProfile() {
                           <div className="text-xs font-semibold text-old-money-500 dark:text-old-money-400 mb-1 uppercase tracking-wide">Рейтинг в породе</div>
                           <div className="text-2xl font-bold text-charcoal-800 dark:text-charcoal-100">
                             #{data.coursingStats.breedRank}
-                            <span className="text-sm font-normal text-gray-400 dark:text-gray-500 ml-1">из {data.coursingStats.breedTotal}</span>
+                            <span className="text-sm font-normal text-charcoal-400 dark:text-charcoal-400 ml-1">из {data.coursingStats.breedTotal}</span>
                           </div>
                         </div>
                       )}

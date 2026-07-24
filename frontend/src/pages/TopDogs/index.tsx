@@ -13,8 +13,8 @@ const COURSING_TABS = ['placement', 'score'] as const
 type CoursingTab = (typeof COURSING_TABS)[number]
 
 function parseCoursingTab(value: string | null): CoursingTab {
-  if (value === 'placement') return 'placement'
-  return 'score'
+  if (value === 'score') return 'score'
+  return 'placement'
 }
 
 const CURRENT_SEASON = String(new Date().getFullYear())
@@ -42,10 +42,10 @@ export default function TopDogs() {
       if (isEmbedded) {
         params.set('tab', 'ranking')
       }
-      if (tab === 'score') {
+      if (tab === 'placement') {
         params.delete('rankingTab')
       } else {
-        params.set('rankingTab', 'placement')
+        params.set('rankingTab', 'score')
       }
       setSearchParams(params)
     },

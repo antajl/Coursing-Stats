@@ -1,7 +1,6 @@
 import type { ReactNode } from 'react'
 import HoverTooltip from '../components/ui/HoverTooltip'
 import {
-  AWARD_CATEGORY_LABEL,
   categoryBadgeClass,
   classifyCompetitionTitle,
   groupItemsByCategory,
@@ -15,7 +14,10 @@ import {
   type ShowAwardKey,
   type ShowTitleCounts,
 } from '../../../backend/lib/show-award-ranking'
-import { compareCompetitionTitles } from '../../../backend/lib/competition-titles'
+import {
+  compareCompetitionTitles,
+  competitionTitleDisplayName,
+} from '../../../backend/lib/competition-titles'
 import {
   classifyDogProfileTitle,
   compareDogProfileTitles,
@@ -24,7 +26,11 @@ import {
   titleBadgeClass,
   type DogTitle,
 } from './qualificationTitles'
-import { awardTooltipForKey, awardTooltipList } from './awardTooltip'
+import {
+  awardTooltipForDogTitle,
+  awardTooltipForKey,
+  awardTooltipList,
+} from './awardTooltip'
 
 const SEPARATOR_CLASS =
   'mx-0.5 h-3 w-px shrink-0 self-center bg-old-money-300 dark:bg-charcoal-500'
@@ -145,24 +151,24 @@ export function renderGroupedDogTitles(titles: DogTitle[]): ReactNode {
           {gi > 0 ? <span className={SEPARATOR_CLASS} aria-hidden /> : null}
           {group.items.map((item) => {
             const showKey = matchShowAwardToken(item.title)
+            const badgeTitle = showKey
+              ? item.title
+              : competitionTitleDisplayName(item.title)
+            const line = formatTitleLine({ title: badgeTitle, count: item.count })
             return (
               <HoverTooltip
-                key={item.title}
-                label={
-                  showKey
-                    ? awardTooltipForKey(showKey, item.count)
-                    : AWARD_CATEGORY_LABEL[group.category]
-                }
+                key={`${group.category}-${badgeTitle}`}
+                label={awardTooltipForDogTitle(item.title, item.count)}
                 placement="top"
-                variant={showKey ? 'site' : 'default'}
-                delayMs={showKey ? 0 : undefined}
-                portal={Boolean(showKey)}
+                variant="site"
+                delayMs={0}
+                portal
               >
                 <span
-                  className={`inline-flex rounded px-2.5 py-1 text-xs font-semibold whitespace-nowrap ${titleBadgeClass(item.title)}`}
+                  className={`inline-flex rounded-md px-2.5 py-1 text-xs font-semibold tabular-nums whitespace-nowrap ${titleBadgeClass(badgeTitle)}`}
                   tabIndex={0}
                 >
-                  {formatTitleLine(item)}
+                  {line}
                 </span>
               </HoverTooltip>
             )
@@ -191,14 +197,26 @@ export function renderQualificationChips(qualification: string | null | undefine
       {groups.map((group, gi) => (
         <span key={group.category} className="inline-flex flex-wrap items-center gap-1">
           {gi > 0 ? <span className={SEPARATOR_CLASS} aria-hidden /> : null}
-          {group.items.map((title) => (
-            <span
-              key={title}
-              className={`inline-flex rounded px-1.5 py-0.5 text-[10px] font-semibold whitespace-nowrap ${categoryBadgeClass(classifyEventTitle(title))}`}
-            >
-              {title}
-            </span>
-          ))}
+          {group.items.map((title) => {
+            const badge = competitionTitleDisplayName(title)
+            return (
+              <HoverTooltip
+                key={title}
+                label={awardTooltipForDogTitle(title)}
+                placement="top"
+                variant="site"
+                delayMs={0}
+                portal
+              >
+                <span
+                  className={`inline-flex rounded-md px-1.5 py-0.5 text-[10px] font-semibold whitespace-nowrap ${categoryBadgeClass(classifyEventTitle(title))}`}
+                  tabIndex={0}
+                >
+                  {badge}
+                </span>
+              </HoverTooltip>
+            )
+          })}
         </span>
       ))}
     </>

@@ -1,6 +1,6 @@
 import { dedupeByRecordDate, expandCoursingTimeline } from '../../lib/recordDates'
 
-export const HISTORY_DEFAULT = 5
+export const HISTORY_DEFAULT = 3
 
 export function formatScore(v: unknown) {
   if (v === undefined || v === null || v === '') return '—'

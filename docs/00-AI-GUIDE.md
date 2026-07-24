@@ -48,9 +48,11 @@
 | Донино модель/UI | `09-SPEED-RECORDS.md` | ссылка |
 | Донино Sheets→CDN | `09a-DONINO-PIPELINE.md` | ссылка |
 | Выставки | `SHOWS.md` | кратко в `03-DATA.md` |
-| UI-паттерны | `18-CODE-PATTERNS.md`, `04-FRONTEND.md` | ссылка |
+| UI, маршруты, public surface / ui-flags | `04-FRONTEND.md` | ссылка |
+| UI-паттерны кода | `18-CODE-PATTERNS.md` | ссылка |
 | Симптом → fix | `16-TROUBLESHOOTING.md` | процедура в каноне, здесь кратко |
-| D1 схема/workflow | `12` / `13` — **LEGACY**, только импорт | |
+| Backend scripts / npm | `11-DEVELOPMENT.md` | ссылка |
+| D1 схема/workflow | stubs `12` / `13` → `docs/archive/` — **LEGACY** | |
 
 При значимых изменениях обновляй **канон**, не копируй абзацы.
 
@@ -68,14 +70,14 @@
 8. **API путь** `/api/competitions`, не `/api/events` (uBlock).
 9. **Донино:** `speed_records` (км/ч) и `coursing_records` (сек) — разные источники. Модель: [`09-SPEED-RECORDS.md`](09-SPEED-RECORDS.md); пайплайн: [`09a-DONINO-PIPELINE.md`](09a-DONINO-PIPELINE.md).
 10. **procoursing.ru** — windows-1251, `fetch-win1251.ts`.
-11. **Публичный UI (вариант A):** на проде по умолчанию нет календаря и протоколов — только рейтинг/судьи/профили. Календари на проде включаются флагами `data/v1/ui-flags.json` (`scripts/show-calendar-*.bat` / `hide-calendar-*.bat` + deploy). Временный календарь соревнований: плашка `TemporaryCompetitionsCalendarBanner` на `/competitions?tab=calendar`. Соревнования: протоколы → procoursing.ru. Выставки: история → `rkf.online` + PDF отчёт (`reports_link`), не `/shows/exhibition/...`. Локально (`npm run dev`): календари в nav всегда; протоколы → `/event/:id`, `/shows/exhibition/:id`. PDF-кэш **не** в git/CDN — см. [`SHOWS.md`](SHOWS.md).
-12. **Выставки RKF PDF:** `ingest-rkf-calendar` → `download-rkf-reports` → `parse-rkf-reports` → `build-show-indexes`; годы с **2026 вниз**; column-aware парсер (`parse-rkf-certificate-pdf.ts`); type3 главный ринг — только 2025–2026 (`main_ring`, бейджи BIS/BIG…); часть type3 даёт пустой `main_ring` (layout); type1-embedded BIS без type3 — ещё не парсим. Детали и долги — [`SHOWS.md`](SHOWS.md). ~74k PDF на 2019–2026.
+11. **Публичный UI (вариант A):** канон — [`04-FRONTEND.md`](04-FRONTEND.md) → «Public surface». Кратко: календари на проде по `ui-flags.json`; протоколы `/event/:id` только DEV; временная плашка `TemporaryCompetitionsCalendarBanner` на `/competitions?tab=calendar`. Выставки: [`SHOWS.md`](SHOWS.md).
+12. **Выставки RKF PDF:** `ingest-rkf-calendar` → `download-rkf-reports` → `parse-rkf-reports` → `build-show-indexes`; годы с **2026 вниз**; column-aware парсер (`parse-rkf-certificate-pdf.ts`); type3 главный ринг — только 2025–2026 (`main_ring`, бейджи BIS/BIG…); часть type3 даёт пустой `main_ring` (layout); type1-embedded BIS без type3 — ещё не парсим. Список судей: % «отлично» при ≥30 оценках, сортировка с toggle ↑/↓. Детали и долги — [`SHOWS.md`](SHOWS.md). ~74k PDF на 2019–2026.
 ---
 
 ## 5. Не менять без явного запроса
 
 - Все породы и архив 2015–2026 в UI
-- Два отдельных рейтинга (места vs очки)
+- Два отдельных рейтинга (медали vs очки); UI-лейбл вкладки — **«медали»** (не «места»), default — медали
 - Родословные — ссылка наружу, не парсим PDF
 - Не ребрендить procoursing.ru
 - Не деплоить Worker в CI
@@ -94,15 +96,15 @@
 | Тест парсера | `npm run test-parser-fixtures` |
 | Деплой / прод сломан | [`20-OPERATIONS.md`](20-OPERATIONS.md) |
 | Пустой рейтинг/судьи | [`03a-DATA-DIAGNOSTICS.md`](03a-DATA-DIAGNOSTICS.md); `16-TROUBLESHOOTING.md` |
-| D1 схема (legacy) | `12-DATABASE-SCHEMA.md` |
-| D1 workflow (legacy) | `13-DATABASE-WORKFLOW.md` |
+| D1 схема (legacy) | stub `12-DATABASE-SCHEMA.md` → `archive/` |
+| D1 workflow (legacy) | stub `13-DATABASE-WORKFLOW.md` → `archive/` |
 | Новая страница | `04-FRONTEND.md`; `AppRoutes.tsx`, `SEO.tsx`, `build-derived-indexes.ts`; SEO: `07-SEO.md` |
 | Донино | `09-SPEED-RECORDS.md`, `09a-DONINO-PIPELINE.md`, `donino/*.json` |
 | Выставки | `SHOWS.md` |
 | Breed Archive | `03-DATA.md` → «Breed Archive»; `npm run enrich-breedarchive-urls` |
 | Фильтр пород в рейтинге | `03-DATA.md` → «Породы в UI»; `useCompetingBreeds` |
-| Карта фронтенда | [`04-FRONTEND.md`](04-FRONTEND.md) |
-| Скрипты, npm | [`04-DEVELOPMENT.md`](04-DEVELOPMENT.md) |
+| Карта фронтенда / public UI | [`04-FRONTEND.md`](04-FRONTEND.md) |
+| Скрипты, npm | [`11-DEVELOPMENT.md`](11-DEVELOPMENT.md) |
 | Паттерны кода | `18-CODE-PATTERNS.md` |
 
 ---
@@ -135,7 +137,7 @@ frontend/src/pages/
 data/v1/
 ```
 
-Полная карта: [`04-FRONTEND.md`](04-FRONTEND.md), [`04-DEVELOPMENT.md`](04-DEVELOPMENT.md).
+Полная карта: [`04-FRONTEND.md`](04-FRONTEND.md), [`11-DEVELOPMENT.md`](11-DEVELOPMENT.md).
 
 ---
 

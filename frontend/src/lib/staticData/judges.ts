@@ -59,10 +59,11 @@ export async function getJudgeDetails(
   judgeId: string,
   breed = '',
   discipline = '',
+  year = '',
 ): Promise<ApiResult<Record<string, unknown>>> {
   const judgeName = decodeURIComponent(judgeId)
 
-  if (!breed && !discipline) {
+  if (!breed && !discipline && !year) {
     const detail = await fetchJson<JudgeDetailFile>(
       `indexes/judge-details/${judgeDetailKey(judgeName)}.json`,
     )
@@ -70,7 +71,7 @@ export async function getJudgeDetails(
   }
 
   const rows = await loadJudgesRawRows()
-  const filtered = filterJudgeRawRows(rows, { breed, discipline })
+  const filtered = filterJudgeRawRows(rows, { breed, discipline, year })
 
   const breedStatsMap = aggregateBreedStats(filtered, judgeName)
   const breedData = formatBreedData(breedStatsMap, filtered, judgeName)

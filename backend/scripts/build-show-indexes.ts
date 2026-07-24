@@ -11,7 +11,14 @@ import {
   showRankScore,
   type ShowTitleCounts,
 } from '../lib/show-award-ranking'
-import { bestShowGradeLabel, isShowAbsenceGrade } from '../lib/show-grades'
+import {
+  bestShowGradeLabel,
+  isShowAbsenceGrade,
+  normalizeDiskval,
+  parseShowGrade,
+  SHOW_GRADE_ORDER,
+  type ShowGradeKey,
+} from '../lib/show-grades'
 import { stableShowProfileId, SHOW_PROFILE_ID_BASE } from '../lib/show-dog-profile-id'
 import {
   addBreedAliasPair,
@@ -433,10 +440,46 @@ function buildDogRankingByYear(exhibitions: ShowExhibition[]): Map<string, ShowD
 }
 
 interface ShowJudgeEntry {
+  id: string
   name: string
   /** Число выставок, где судья встречался (уникальные exhibition.id). */
   total_judged: number
+  unique_breeds: number
   breeds: string[]
+  by_year: Record<string, number>
+  /** Доля «отлично» среди graded (0–1). null если нет оценок. */
+  excellent_rate: number | null
+  graded: number
+  /** % отлично по годам (0–1), только годы с graded > 0. */
+  by_year_excellent?: Record<string, number>
+  by_year_graded?: Record<string, number>
+}
+
+interface ShowJudgeDetailExhibition {
+  id: number
+  date: string
+  title: string
+  rkf_url?: string
+  /** Оценки на этой выставке (protocol rows). Нули опускаются. */
+  grade_counts?: Partial<Record<ShowGradeKey | 'dq', number>>
+  /** Породы на этой выставке (protocol rows). Нужно для фильтра периода. */
+  breed_counts?: Record<string, number>
+}
+
+interface ShowJudgeDetail {
+  id: string
+  name: string
+  total_judged: number
+  unique_breeds: number
+  by_year: Record<string, number>
+  breeds: Array<{ breed: string; count: number }>
+  exhibitions: ShowJudgeDetailExhibition[]
+  strictness?: {
+    graded: number
+    grades: Record<ShowGradeKey | 'dq', number>
+    excellent_rate: number | null
+    below_excellent_rate: number | null
+  }
 }
 
 /** Ключ слияния: Jose Luis Payro ≡ Jose Luis PAYRO */
@@ -448,67 +491,442 @@ function normalizeJudgeKey(raw: string): string {
     .toLowerCase()
 }
 
-/** Предпочитаем частое написание; при равной частоте — не ALL CAPS. */
+/**
+ * Нормализация отображаемого имени судьи выставок для дедупликации.
+ * Убирает скобки со странами, заменяет разделители, схлопывает пробелы.
+ */
+function normalizeShowJudgeDisplayName(raw: string): string {
+  let normalized = raw
+    .normalize('NFKC')
+    .trim()
+    .toLowerCase()
+
+  // Убрать содержимое скобок: (россия), (russia), (rf), (ркф)
+  normalized = normalized.replace(/\([^)]*\)/g, '')
+
+  // Заменить запятые, точки с запятой, точки на пробелы (для инициалов)
+  normalized = normalized.replace(/[,;.]+/g, ' ')
+
+  // Схлопнуть пробелы и NBSP
+  normalized = normalized.replace(/[\u00a0\s]+/g, ' ').trim()
+
+  // Эвристика для склеенных фамилии+имени (например "гавриловаяна")
+  // Консервативная: режем только если имя в whitelist
+  const commonNames = new Set([
+    'яна', 'алексей', 'ольга', 'елена', 'ирина', 'мария', 'анна', 'олег', 'иван',
+    'петр', 'пётр', 'сергей', 'андрей', 'дмитрий', 'александр', 'наталья', 'наталья',
+    'татьяна', 'екатерина', 'светлана', 'юлия', 'юлианна', 'вероника', 'виктория',
+    'марина', 'елена', 'ксения', 'дарья', 'полина', 'софия', 'алина', 'михаил',
+    'николай', 'николай', 'владимир', 'владислав', 'артем', 'артём', 'роман',
+    'максим', 'константин', 'геннадий', 'валентин', 'виктор', 'галина', 'любовь',
+    'надежда', 'зоя', 'лариса', 'оксана', 'элина', 'эдуард', 'эмиль', 'юрий',
+    'григорий', 'степан', 'федор', 'илья', 'кирилл', 'павел', 'руслан', 'тимур',
+    'вячеслав', 'ярослав', 'игорь', 'василий', 'алекс', 'лена', 'лена', 'наташа',
+    'наташа', 'таня', 'таня', 'саша', 'саша', 'катя', 'катя', 'маша', 'маша'
+  ])
+  
+  const words = normalized.split(/\s+/)
+  const processedWords = words.map(word => {
+    if (word.length >= 10) {
+      // Паттерн: фамилия (оканчивается на -ова/-ева/-ина и т.д.) + имя (3+ буквы)
+      const match = word.match(/^(.*?(?:ова|ева|ёва|ина|ына|ская|цкая|ский|цкий))([а-яё]{3,})$/iu)
+      if (match) {
+        const [, surname, name] = match
+        // Проверяем whitelist имён и минимальную длину фамилии
+        if (commonNames.has(name.toLowerCase()) && surname.length >= 5) {
+          return `${surname} ${name}`
+        }
+      }
+    }
+    return word
+  })
+  normalized = processedWords.join(' ')
+
+  return normalized
+}
+
+/**
+ * Парсинг нормализованного имени судьи на части.
+ * Возвращает фамилию, имя, отчество и их инициалы.
+ */
+interface ShowJudgeNameParts {
+  last: string
+  first: string
+  middle: string
+  firstInitial: string
+  middleInitial: string
+}
+
+function parseShowJudgeNameParts(normalized: string): ShowJudgeNameParts {
+  const parts = normalized.split(/\s+/).filter(Boolean)
+  
+  const last = parts[0] || ''
+  const first = parts[1] || ''
+  const middle = parts[2] || ''
+
+  // Извлечь инициалы (первая буква, убирая точку если есть)
+  const firstInitial = first ? first.replace(/\./g, '').charAt(0) : ''
+  const middleInitial = middle ? middle.replace(/\./g, '').charAt(0) : ''
+
+  return { last, first, middle, firstInitial, middleInitial }
+}
+
+/**
+ * Ключ слияния для судей выставок.
+ * Формат: фамилия|инициалИмени|инициалОтчества
+ * Позволяет объединять полные формы с сокращенными (Иванов И.И. ≡ Иванов И.).
+ * Использует wildcard (*) для отсутствующего отчества, чтобы сливать формы с/без отчества.
+ */
+function showJudgeMergeKey(parts: ShowJudgeNameParts): string {
+  const middle = parts.middleInitial || '*'
+  return `${parts.last}|${parts.firstInitial}|${middle}`
+}
+
+/** Имя файла judge-details (как competitions judgeDetailKey). */
+function showJudgeDetailFileKey(id: string): string {
+  return Buffer.from(id, 'utf8')
+    .toString('base64')
+    .replace(/\+/g, '-')
+    .replace(/\//g, '_')
+    .replace(/=+$/, '')
+}
+
+function exhibitionRkfUrl(exhibition: ShowExhibition): string | undefined {
+  if (exhibition.url?.trim()) return exhibition.url.trim()
+  if (exhibition.source === 'rkf-pdf') return `https://rkf.online/exhibitions/${exhibition.id}`
+  if (exhibition.id) {
+    return `https://lc.rkfshow.ru/RKF/ExhibitionResults/ExhibitionResultListView?exhibitionId=${exhibition.id}`
+  }
+  return undefined
+}
+
+/** Предпочитаем частое написание; при равной частоте — более длинная форма с отчеством, затем не ALL CAPS. */
 function pickCanonicalJudgeName(nameCounts: Map<string, number>): string {
   const entries = [...nameCounts.entries()]
   entries.sort((a, b) => {
+    // Prefer higher frequency
     if (b[1] !== a[1]) return b[1] - a[1]
+    
+    // Prefer longer name (more parts = likely has patronymic)
+    const aParts = a[0].split(/\s+/).length
+    const bParts = b[0].split(/\s+/).length
+    if (aParts !== bParts) return bParts - aParts
+    
+    // Prefer names without country suffixes in parentheses
+    const aHasParens = a[0].includes('(')
+    const bHasParens = b[0].includes('(')
+    if (aHasParens !== bHasParens) return aHasParens ? 1 : -1
+    
+    // Prefer not ALL CAPS at equal frequency
     const aAllCaps = a[0] === a[0].toUpperCase() && /[A-Za-zА-Яа-я]/.test(a[0])
     const bAllCaps = b[0] === b[0].toUpperCase() && /[A-Za-zА-Яа-я]/.test(b[0])
     if (aAllCaps !== bAllCaps) return aAllCaps ? 1 : -1
+    
     return a[0].localeCompare(b[0], 'en')
   })
   return entries[0]![0]
 }
 
-function buildJudgesIndex(exhibitions: ShowExhibition[]): ShowJudgeEntry[] {
+function buildJudgesIndex(exhibitions: ShowExhibition[]): {
+  list: ShowJudgeEntry[]
+  details: ShowJudgeDetail[]
+  baseline: {
+    schema: string
+    graded: number
+    excellent_rate: number
+    below_excellent_rate: number
+    grades: Record<ShowGradeKey | 'dq', number>
+  }
+} {
   type Acc = {
-    exhibitions: Set<number>
-    breeds: Set<string>
+    exhibitionMeta: Map<number, ShowJudgeDetailExhibition>
+    exhibitionYears: Map<number, string>
+    exhibitionGradeCounts: Map<number, Map<ShowGradeKey | 'dq', number>>
+    exhibitionBreedCounts: Map<number, Map<string, number>>
+    breeds: Map<string, number>
     nameCounts: Map<string, number>
+    gradeCounts: Map<ShowGradeKey | 'dq', number>
+    gradedTotal: number
   }
   const byKey = new Map<string, Acc>()
 
-  const touch = (raw: string | undefined | null, exhibitionId: number, breed?: string) => {
+  const bumpExhibitionGrade = (
+    acc: Acc,
+    exhibitionId: number,
+    key: ShowGradeKey | 'dq',
+  ) => {
+    let map = acc.exhibitionGradeCounts.get(exhibitionId)
+    if (!map) {
+      map = new Map()
+      acc.exhibitionGradeCounts.set(exhibitionId, map)
+    }
+    map.set(key, (map.get(key) || 0) + 1)
+  }
+
+  const touch = (
+    raw: string | undefined | null,
+    exhibition: ShowExhibition,
+    breed?: string,
+    grade?: string | null,
+  ) => {
     const name = (raw || '').replace(/[\u00a0\s]+/g, ' ').trim()
     if (!name) return
     if (!isPlausibleJudgeName(name)) return
-    const key = normalizeJudgeKey(name)
-    let acc = byKey.get(key)
-    if (!acc) {
-      acc = { exhibitions: new Set(), breeds: new Set(), nameCounts: new Map() }
-      byKey.set(key, acc)
+    
+    // Use merge key for deduplication instead of simple normalization
+    const normalized = normalizeShowJudgeDisplayName(name)
+    const parts = parseShowJudgeNameParts(normalized)
+    const key = showJudgeMergeKey(parts)
+    
+    // If we have a wildcard middle initial, try to find an existing entry with a specific patronymic
+    let actualKey = key
+    if (parts.middleInitial === '' && parts.firstInitial) {
+      // Look for existing keys with same last+first initial but specific patronymic
+      for (const [existingKey] of byKey) {
+        const [last, first, middle] = existingKey.split('|')
+        if (last === parts.last && first === parts.firstInitial && middle !== '*') {
+          // Found an entry with specific patronymic, merge into it
+          actualKey = existingKey
+          break
+        }
+      }
     }
-    acc.exhibitions.add(exhibitionId)
+    
+    let acc = byKey.get(actualKey)
+    if (!acc) {
+      acc = {
+        exhibitionMeta: new Map(),
+        exhibitionYears: new Map(),
+        exhibitionGradeCounts: new Map(),
+        exhibitionBreedCounts: new Map(),
+        breeds: new Map(),
+        nameCounts: new Map(),
+        gradeCounts: new Map(),
+        gradedTotal: 0,
+      }
+      byKey.set(actualKey, acc)
+    }
     acc.nameCounts.set(name, (acc.nameCounts.get(name) || 0) + 1)
+    if (!acc.exhibitionMeta.has(exhibition.id)) {
+      const year = extractYear(exhibition.date)
+      acc.exhibitionMeta.set(exhibition.id, {
+        id: exhibition.id,
+        date: exhibition.date || '',
+        title: exhibition.title || '',
+        rkf_url: exhibitionRkfUrl(exhibition),
+      })
+      if (year) acc.exhibitionYears.set(exhibition.id, year)
+    }
     const b = (breed || '').trim()
-    // Skip colour/variety fragments that leaked from wrapped PDF breed cells
-    if (b && !isBreedFragment(b)) acc.breeds.add(b)
+    if (b && !isBreedFragment(b)) {
+      acc.breeds.set(b, (acc.breeds.get(b) || 0) + 1)
+      let breedMap = acc.exhibitionBreedCounts.get(exhibition.id)
+      if (!breedMap) {
+        breedMap = new Map()
+        acc.exhibitionBreedCounts.set(exhibition.id, breedMap)
+      }
+      breedMap.set(b, (breedMap.get(b) || 0) + 1)
+    }
+
+    // Grade counting - only if grade is provided
+    if (grade != null) {
+      // Skip absences
+      if (isShowAbsenceGrade(grade)) return
+
+      // Check for disqualification
+      if (normalizeDiskval(grade)) {
+        acc.gradeCounts.set('dq', (acc.gradeCounts.get('dq') || 0) + 1)
+        bumpExhibitionGrade(acc, exhibition.id, 'dq')
+        acc.gradedTotal++
+        return
+      }
+
+      // Parse grade
+      const parsedGrade = parseShowGrade(grade)
+      if (parsedGrade) {
+        acc.gradeCounts.set(parsedGrade, (acc.gradeCounts.get(parsedGrade) || 0) + 1)
+        bumpExhibitionGrade(acc, exhibition.id, parsedGrade)
+        acc.gradedTotal++
+      }
+    }
   }
 
   for (const exhibition of exhibitions) {
     if (Array.isArray(exhibition.judges)) {
       for (const judge of exhibition.judges) {
-        touch(judge, exhibition.id)
+        touch(judge, exhibition)
       }
     }
 
     if (exhibition.results && Array.isArray(exhibition.results)) {
       for (const result of exhibition.results) {
         const r = result as ShowResult & { breed_judge?: string }
-        touch(r.judge, exhibition.id, r.breed)
-        touch(r.breed_judge, exhibition.id, r.breed)
+        
+        // Single canonical judge per result row for breed + grade counting
+        // Prefer breed_judge, else judge. Prevents double counting.
+        const rowJudge = (r.breed_judge || r.judge || '').trim()
+        if (rowJudge) {
+          touch(rowJudge, exhibition, r.breed, r.grade)
+        }
       }
     }
   }
 
-  return Array.from(byKey.values())
-    .map((acc) => ({
-      name: pickCanonicalJudgeName(acc.nameCounts),
-      total_judged: acc.exhibitions.size,
-      breeds: Array.from(acc.breeds).sort((a, b) => a.localeCompare(b, 'ru')),
-    }))
-    .sort((a, b) => b.total_judged - a.total_judged || a.name.localeCompare(b.name, 'en'))
+  // Build baseline from all results (one pass, no double counting)
+  const baselineGradeCounts: Map<ShowGradeKey | 'dq', number> = new Map()
+  let baselineGradedTotal = 0
+  for (const exhibition of exhibitions) {
+    if (exhibition.results && Array.isArray(exhibition.results)) {
+      for (const result of exhibition.results) {
+        const r = result as ShowResult & { breed_judge?: string }
+        const grade = r.grade
+        
+        if (grade == null) continue
+        if (isShowAbsenceGrade(grade)) continue
+        
+        if (normalizeDiskval(grade)) {
+          baselineGradeCounts.set('dq', (baselineGradeCounts.get('dq') || 0) + 1)
+          baselineGradedTotal++
+          continue
+        }
+        
+        const parsedGrade = parseShowGrade(grade)
+        if (parsedGrade) {
+          baselineGradeCounts.set(parsedGrade, (baselineGradeCounts.get(parsedGrade) || 0) + 1)
+          baselineGradedTotal++
+        }
+      }
+    }
+  }
+
+  const baselineGrades: Record<ShowGradeKey | 'dq', number> = {} as Record<ShowGradeKey | 'dq', number>
+  for (const key of SHOW_GRADE_ORDER) {
+    baselineGrades[key] = baselineGradeCounts.get(key) || 0
+  }
+  baselineGrades.dq = baselineGradeCounts.get('dq') || 0
+
+  const baselineExcellent = baselineGrades.excellent || 0
+  const baselineExcellentRate = baselineGradedTotal > 0 ? baselineExcellent / baselineGradedTotal : 0
+  const baselineBelowExcellentRate = baselineGradedTotal > 0 ? (baselineGradedTotal - baselineExcellent) / baselineGradedTotal : 0
+
+  const baseline = {
+    schema: 'coursing-stats/show-judges-strictness-baseline-v1',
+    graded: baselineGradedTotal,
+    excellent_rate: baselineExcellentRate,
+    below_excellent_rate: baselineBelowExcellentRate,
+    grades: baselineGrades,
+  }
+
+  const details: ShowJudgeDetail[] = []
+  const list: ShowJudgeEntry[] = []
+
+  for (const [id, acc] of byKey) {
+    const name = pickCanonicalJudgeName(acc.nameCounts)
+    const byYear: Record<string, number> = {}
+    for (const year of acc.exhibitionYears.values()) {
+      byYear[year] = (byYear[year] || 0) + 1
+    }
+    const breedEntries = [...acc.breeds.entries()]
+      .map(([breed, count]) => ({ breed, count }))
+      .sort((a, b) => b.count - a.count || a.breed.localeCompare(b.breed, 'ru'))
+    const exhibitionList = [...acc.exhibitionMeta.values()]
+      .map((meta) => {
+        const gMap = acc.exhibitionGradeCounts.get(meta.id)
+        const grade_counts: Partial<Record<ShowGradeKey | 'dq', number>> = {}
+        if (gMap) {
+          for (const [gk, n] of gMap) {
+            if (n > 0) grade_counts[gk] = n
+          }
+        }
+        const bMap = acc.exhibitionBreedCounts.get(meta.id)
+        const breed_counts: Record<string, number> = {}
+        if (bMap) {
+          for (const [breed, n] of bMap) {
+            if (n > 0) breed_counts[breed] = n
+          }
+        }
+        return {
+          ...meta,
+          ...(Object.keys(grade_counts).length > 0 ? { grade_counts } : {}),
+          ...(Object.keys(breed_counts).length > 0 ? { breed_counts } : {}),
+        }
+      })
+      .sort((a, b) => (b.date || '').localeCompare(a.date || ''))
+    const total_judged = exhibitionList.length
+    const unique_breeds = breedEntries.length
+    const breeds = breedEntries.map((e) => e.breed)
+
+    // Build strictness object
+    let strictness: ShowJudgeDetail['strictness'] | undefined
+    let excellent_rate: number | null = null
+    if (acc.gradedTotal > 0) {
+      const grades: Record<ShowGradeKey | 'dq', number> = {} as Record<ShowGradeKey | 'dq', number>
+      for (const key of SHOW_GRADE_ORDER) {
+        grades[key] = acc.gradeCounts.get(key) || 0
+      }
+      grades.dq = acc.gradeCounts.get('dq') || 0
+
+      const excellent = grades.excellent || 0
+      const excellentRate = excellent / acc.gradedTotal
+      const belowExcellentRate = (acc.gradedTotal - excellent) / acc.gradedTotal
+      excellent_rate = excellentRate
+
+      strictness = {
+        graded: acc.gradedTotal,
+        grades,
+        excellent_rate: excellentRate,
+        below_excellent_rate: belowExcellentRate,
+      }
+    }
+
+    const byYearExcellentCounts: Record<string, number> = {}
+    const byYearGraded: Record<string, number> = {}
+    for (const [exId, gMap] of acc.exhibitionGradeCounts) {
+      const year = acc.exhibitionYears.get(exId)
+      if (!year) continue
+      let excellent = 0
+      let graded = 0
+      for (const [gk, n] of gMap) {
+        graded += n
+        if (gk === 'excellent') excellent += n
+      }
+      if (graded <= 0) continue
+      byYearGraded[year] = (byYearGraded[year] || 0) + graded
+      byYearExcellentCounts[year] = (byYearExcellentCounts[year] || 0) + excellent
+    }
+    const by_year_excellent: Record<string, number> = {}
+    for (const [year, graded] of Object.entries(byYearGraded)) {
+      by_year_excellent[year] = (byYearExcellentCounts[year] || 0) / graded
+    }
+
+    list.push({
+      id,
+      name,
+      total_judged,
+      unique_breeds,
+      breeds,
+      by_year: byYear,
+      excellent_rate,
+      graded: acc.gradedTotal,
+      ...(Object.keys(by_year_excellent).length > 0
+        ? { by_year_excellent, by_year_graded: byYearGraded }
+        : {}),
+    })
+    details.push({
+      id,
+      name,
+      total_judged,
+      unique_breeds,
+      by_year: byYear,
+      breeds: breedEntries,
+      exhibitions: exhibitionList,
+      strictness,
+    })
+  }
+
+  list.sort((a, b) => b.total_judged - a.total_judged || a.name.localeCompare(b.name, 'en'))
+  details.sort((a, b) => b.total_judged - a.total_judged || a.name.localeCompare(b.name, 'en'))
+  return { list, details, baseline }
 }
 
 
@@ -827,9 +1245,30 @@ async function main() {
   )
   console.log(`  Saved breed-aliases.json (${aliasPairs.length} pairs)`)
 
-  const judges = buildJudgesIndex(exhibitions)
+  const { list: judges, details: judgeDetails, baseline } = buildJudgesIndex(exhibitions)
   console.log(`Built index for ${judges.length} judges`)
   fs.writeFileSync(path.join(INDEXES_DIR, 'judges.json'), JSON.stringify(judges))
+
+  // Save strictness baseline
+  fs.writeFileSync(
+    path.join(INDEXES_DIR, 'judges-strictness-baseline.json'),
+    JSON.stringify(baseline, null, 2),
+  )
+  console.log(`  Saved judges-strictness-baseline.json (graded=${baseline.graded}, excellent_rate=${(baseline.excellent_rate * 100).toFixed(1)}%)`)
+
+  const judgeDetailsDir = path.join(INDEXES_DIR, 'judge-details')
+  if (fs.existsSync(judgeDetailsDir)) {
+    for (const name of fs.readdirSync(judgeDetailsDir)) {
+      if (name.endsWith('.json')) fs.unlinkSync(path.join(judgeDetailsDir, name))
+    }
+  } else {
+    fs.mkdirSync(judgeDetailsDir, { recursive: true })
+  }
+  for (const detail of judgeDetails) {
+    const fileKey = showJudgeDetailFileKey(detail.id)
+    fs.writeFileSync(path.join(judgeDetailsDir, `${fileKey}.json`), JSON.stringify(detail))
+  }
+  console.log(`  Saved judge-details/ (${judgeDetails.length} files)`)
 
   // Лёгкие счётчики для главной (CDN; не тянуть dog-ranking.json)
   let appearances = 0

@@ -4,13 +4,15 @@ import {
   classifyCompetitionTitle,
   groupItemsByCategory,
 } from '../../../../lib/awardCategories'
-import { compareCompetitionTitles } from '../../../../../../backend/lib/competition-titles'
+import {
+  compareCompetitionTitles,
+  competitionTitleDisplayName,
+} from '../../../../../../backend/lib/competition-titles'
+import { awardTooltipForCompetitionTitle } from '../../../../lib/awardTooltip'
 
 interface QualificationBadgesProps {
   qualification: string
 }
-
-const LONG_TITLE_THRESHOLD = 28
 
 export default function QualificationBadges({ qualification }: QualificationBadgesProps) {
   const parts = [...qualification.split(',')]
@@ -30,32 +32,24 @@ export default function QualificationBadges({ qualification }: QualificationBadg
               aria-hidden
             />
           ) : null}
-          {group.items.map((trimmed, i) => {
-            const isLong = trimmed.length > LONG_TITLE_THRESHOLD
-            const badge = (
-              <span
-                className={[
-                  'inline-block max-w-full rounded px-1.5 py-0.5 text-xs font-medium',
-                  isLong ? 'truncate md:max-w-[220px]' : '',
-                  categoryBadgeClass(group.category),
-                ]
-                  .filter(Boolean)
-                  .join(' ')}
-              >
-                {trimmed}
-              </span>
-            )
-
+          {group.items.map((raw, i) => {
+            const badge = competitionTitleDisplayName(raw)
             return (
-              <span key={`${trimmed}-${i}`}>
-                {isLong ? (
-                  <HoverTooltip label={trimmed} placement="bottom">
-                    {badge}
-                  </HoverTooltip>
-                ) : (
-                  badge
-                )}
-              </span>
+              <HoverTooltip
+                key={`${badge}-${i}`}
+                label={awardTooltipForCompetitionTitle(raw)}
+                placement="top"
+                variant="site"
+                delayMs={0}
+                portal
+              >
+                <span
+                  className={`inline-flex rounded-md px-1.5 py-0.5 text-xs font-semibold whitespace-nowrap ${categoryBadgeClass(group.category)}`}
+                  tabIndex={0}
+                >
+                  {badge}
+                </span>
+              </HoverTooltip>
             )
           })}
         </span>

@@ -39,8 +39,14 @@ export default function TitlesTab() {
       </SectionCard>
 
       <TitleHierarchySection
-        title="Иерархия наград: крутые → сертификаты → титулы дня → собирательные"
+        title="Иерархия наград: собирательные → крутые → сертификаты → прочее"
         levels={[
+          {
+            tier: 'cumulative',
+            label: 'Собирательные',
+            badges: ['ГЧР РК', 'ГЧРКФ РК', 'НЧ РК', 'ПЧ РК'],
+            note: 'Оформляются в РКФ по набору; гранды — сложнее одного старта',
+          },
           {
             tier: 'prestige',
             label: 'Крутые (титулы старта)',
@@ -50,19 +56,13 @@ export default function TitlesTab() {
           {
             tier: 'certificate',
             label: 'Сертификаты',
-            badges: ['CACIL', 'CACL', 'CACLBr'],
-            note: 'Титульные сертификаты в колонке «титул» протокола',
+            badges: ['CACIL', 'CACL', 'CACLBr', 'RegCACL'],
+            note: 'CACIL/CACL/CACLBr — п. 1.4 Положения; RegCACL — в протоколах (региональный)',
           },
           {
             tier: 'diploma',
-            label: 'Титулы дня',
-            note: 'Прочие дипломы старта из протокола (если указаны отдельно от сертификатов и статусных титулов)',
-          },
-          {
-            tier: 'cumulative',
-            label: 'Собирательные',
-            badges: ['НЧ РК', 'ПЧ РК', 'ГЧР РК', 'ГЧРКФ РК'],
-            note: 'Оформляются в РКФ по набору талонов и сертификатов',
+            label: 'Прочее дня',
+            note: 'Прочие дипломы старта из протокола (если указаны отдельно)',
           },
         ]}
       />
@@ -77,7 +77,7 @@ export default function TitlesTab() {
           <AbbrTag abbr="CACL" />.
         </p>
         <InfoCallout>
-          На сайте <strong>два независимых рейтинга</strong>: по местам (медали) и по очкам — они не смешиваются. Подробнее
+          На сайте <strong>два независимых рейтинга</strong>: по медалям и по очкам — они не смешиваются. Подробнее
           — во вкладке «Рейтинг» этого справочника.
         </InfoCallout>
       </SectionCard>
@@ -145,17 +145,18 @@ export default function TitlesTab() {
         <RefTag>Положение о титулах, п. 3.3.1.1–3.3.1.6 · с 15.12.2022</RefTag>
       </SectionCard>
 
-      <SectionCard title="Варианты оформления «Чемпион России» по курсингу">
+      <SectionCard title="Оформление «Чемпион России» (ЧР РК)">
         <p className="text-xs text-old-money-600 dark:text-old-money-400">
-          Помимо победы на ЧР — накопление CACL и других талонов (между 2-м и 7-м вариантами — не менее 1 года и 1
-          дня):
+          С 15.12.2022 титул оформляется только талоном 1-го места на Чемпионате России по дисциплине. Набор CACL /
+          ЧРКФ / ПКР больше не обменивается на ЧР РК — эти пути относятся к{' '}
+          <strong className="font-semibold text-charcoal-800 dark:text-charcoal-200">НЧ РК</strong> (блок выше).
         </p>
         <ol className="mt-2 list-decimal space-y-1.5 pl-5 text-sm">
           {CH_RUSSIA_VARIANTS.map((variant) => (
             <li key={variant}>{variant}</li>
           ))}
         </ol>
-        <RefTag>Правила курсинга, п. 4.3.5.1–4.3.5.2</RefTag>
+        <RefTag>Положение о титулах, п. 3.2.1 · с 15.12.2022 (не п. 4.3.5 Правил курсинга 2020)</RefTag>
       </SectionCard>
 
       <SectionCard title="Особенности курсинга">

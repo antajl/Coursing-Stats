@@ -20,11 +20,6 @@ export const HOME_PHOTOS_GENERATED: HomePhotoGenerated[] = [
     "category": "bzmp"
   },
   {
-    "id": "bzmp-03",
-    "src": "/images/home/bzmp-03.jpg",
-    "category": "bzmp"
-  },
-  {
     "id": "bzmp-04",
     "src": "/images/home/bzmp-04.jpg",
     "category": "bzmp"
@@ -80,16 +75,6 @@ export const HOME_PHOTOS_GENERATED: HomePhotoGenerated[] = [
     "category": "race"
   },
   {
-    "id": "race-10",
-    "src": "/images/home/race-10.jpg",
-    "category": "race"
-  },
-  {
-    "id": "race-11",
-    "src": "/images/home/race-11.jpg",
-    "category": "race"
-  },
-  {
     "id": "race-12",
     "src": "/images/home/race-12.jpg",
     "category": "race"
@@ -100,23 +85,8 @@ export const HOME_PHOTOS_GENERATED: HomePhotoGenerated[] = [
     "category": "race"
   },
   {
-    "id": "race-14",
-    "src": "/images/home/race-14.jpg",
-    "category": "race"
-  },
-  {
     "id": "race-15",
     "src": "/images/home/race-15.jpg",
     "category": "race"
-  },
-  {
-    "id": "show-05",
-    "src": "/images/home/show-05.jpg",
-    "category": "show"
-  },
-  {
-    "id": "show-06",
-    "src": "/images/home/show-06.jpg",
-    "category": "show"
   }
 ]

@@ -20,6 +20,18 @@ function CoursingRankingToggle({
       aria-label="Рейтинг курсинга"
       className="inline-flex rounded-md bg-old-money-200/45 p-0.5 dark:bg-charcoal-700/70"
     >
+      <button
+        type="button"
+        aria-pressed={placementActive}
+        onClick={() => onChange('placement')}
+        className={
+          placementActive
+            ? 'rounded px-2.5 py-0.5 text-[11px] font-semibold lowercase text-charcoal-800 bg-cream-50/90 dark:bg-charcoal-600 dark:text-charcoal-100'
+            : 'rounded px-2.5 py-0.5 text-[11px] font-medium lowercase text-old-money-600 transition-colors hover:text-charcoal-700 dark:text-charcoal-400 dark:hover:text-charcoal-200'
+        }
+      >
+        медали
+      </button>
       <span
         className={
           scoreActive
@@ -45,18 +57,6 @@ function CoursingRankingToggle({
         />
         <CoursingRatingHint embedded />
       </span>
-      <button
-        type="button"
-        aria-pressed={placementActive}
-        onClick={() => onChange('placement')}
-        className={
-          placementActive
-            ? 'rounded px-2.5 py-0.5 text-[11px] font-semibold lowercase text-charcoal-800 bg-cream-50/90 dark:bg-charcoal-600 dark:text-charcoal-100'
-            : 'rounded px-2.5 py-0.5 text-[11px] font-medium lowercase text-old-money-600 transition-colors hover:text-charcoal-700 dark:text-charcoal-400 dark:hover:text-charcoal-200'
-        }
-      >
-        места
-      </button>
     </div>
   )
 }

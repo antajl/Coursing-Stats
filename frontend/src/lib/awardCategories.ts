@@ -12,10 +12,10 @@ import {
 export type AwardCategory = ShowAwardCategory | 'cumulative' | 'other'
 
 export const AWARD_CATEGORY_ORDER: AwardCategory[] = [
+  'cumulative',
   'prestige',
   'certificate',
   'diploma',
-  'cumulative',
   'other',
 ]
 
@@ -77,13 +77,16 @@ export function classifyCompetitionTitle(raw: string): AwardCategory {
   const u = t.toUpperCase()
   const compact = u.replace(/\s+/g, ' ')
 
-  // Собирательные (кумулятивные)
+  // Собирательные (кумулятивные) — гранды / НЧ / ПЧ / C.I.C.
   if (
     /^(НЧ|ПЧ|ГЧР|ГЧРКФ)(\s+РК)?$/.test(compact) ||
     compact.includes('НАЦИОНАЛЬНЫЙ ЧЕМПИОН') ||
     compact.includes('ПОРОДНЫЙ ЧЕМПИОН') ||
     compact.includes('ГРАНД ЧЕМПИОН') ||
-    compact.includes('ГРАНД-ЧЕМПИОН')
+    compact.includes('ГРАНД-ЧЕМПИОН') ||
+    compact.includes('INTERNATIONAL CHAMPION') ||
+    /\bC\.?I\.?C\b/.test(compact) ||
+    compact.includes('ИНТЕРЧЕМПИОН')
   ) {
     return 'cumulative'
   }
@@ -100,8 +103,15 @@ export function classifyCompetitionTitle(raw: string): AwardCategory {
     return 'prestige'
   }
 
-  // Сертификаты
-  if (/^CACIL/.test(compact) || /^CACL/.test(compact) || compact.includes('CACIL') || compact.includes('CACL')) {
+  // Сертификаты (в т.ч. региональный RegCACL)
+  if (
+    /^CACIL/.test(compact) ||
+    /^CACL/.test(compact) ||
+    /^REGCACL/.test(compact) ||
+    compact.includes('CACIL') ||
+    compact.includes('CACL') ||
+    compact.includes('REGCACL')
+  ) {
     return 'certificate'
   }
 

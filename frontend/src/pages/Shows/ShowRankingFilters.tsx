@@ -144,7 +144,7 @@ export default function ShowRankingFilters({
               placeholder="Кличка, порода…"
               className="!w-auto min-w-[200px] flex-1 max-w-lg"
             />
-            <div className="flex shrink-0 items-center gap-1.5">
+            <div className="flex max-w-full flex-wrap items-center gap-1.5">
               <ToolbarFiltersDropdown
                 active={hasPanelFilters}
                 onReset={onResetPanelFilters}

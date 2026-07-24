@@ -2,15 +2,15 @@
 
 > **ИИ:** карта задач — [README.md](README.md). Runtime данные — [03-DATA.md](03-DATA.md).
 
-Полная документация **локального dev API** (админка и отладка).
+**Только локальный admin/dev API** (`npm run dev` → `:8787`). Публичный прод этот API **не** вызывает — сайт читает `/data/v1/` с CDN (`frontend/src/lib/staticData.ts`).
 
-> **Публичный прод** не использует этот API. Сайт читает JSON с CDN: `/data/v1/` (`frontend/src/lib/staticData.ts`). См. [`03-DATA.md`](03-DATA.md).
+Секции **Top Ratings / Dogs / Competitions / …** ниже — legacy/debug эндпоинты local-dev (и бывшего Worker); фронт на проде их не использует.
 
 ## Base URL
 
 **Локальная админка / dev:** `http://127.0.0.1:8787` (`npm run dev`)
 
-**Legacy (не вызывается фронтом с 2026-07-07):** `https://api.coursing-stats.ru`
+**Legacy Worker URL (не деплоится в CI):** `https://api.coursing-stats.ru`
 
 ## CORS
 
@@ -306,10 +306,12 @@ Headers: X-Admin-Token: secret
 }
 ```
 
-### Top Ratings
+### Top Ratings (legacy / local-dev)
+
+> Публичный рейтинг на проде — из `data/v1/indexes/top-*.json`, не из этих эндпоинтов.
 
 #### GET /api/top/placement
-Топ по местам (медальный зачёт).
+Топ по медалям (медальный зачёт, placement).
 
 **Параметры:**
 - `breed` (опционально) — фильтр по породе
@@ -412,7 +414,7 @@ GET /api/top/speed?breed=САЛЮКИ&year=2025&minStarts=5&limit=10&offset=0
 }
 ```
 
-### Dogs
+### Dogs (legacy / local-dev)
 
 #### GET /api/dogs/:id
 Профиль собаки с раздельной статистикой для курсинга и racing.
@@ -520,7 +522,7 @@ GET /api/donino-dog/Тайга/Салюки
 }
 ```
 
-### Competitions
+### Competitions (legacy / local-dev)
 
 #### GET /api/competitions
 Список соревнований с фильтром по году.

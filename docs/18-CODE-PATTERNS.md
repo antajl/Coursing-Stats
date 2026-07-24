@@ -1,6 +1,6 @@
 # Code Patterns — Паттерны кода
 
-> **ИИ:** архитектура — [02-ARCHITECTURE.md](02-ARCHITECTURE.md). Фронтенд — [04-FRONTEND.md](04-FRONTEND.md). Backend — [04-DEVELOPMENT.md](04-DEVELOPMENT.md).
+> **ИИ:** архитектура — [02-ARCHITECTURE.md](02-ARCHITECTURE.md). Фронтенд — [04-FRONTEND.md](04-FRONTEND.md). Backend — [11-DEVELOPMENT.md](11-DEVELOPMENT.md).
 
 Повторяющиеся паттерны в коде Coursing Stats. Используйте эти паттерны для понимания кода и создания новых компонентов.
 
@@ -27,13 +27,13 @@
 **Функции (публичный API тот же):**
 - `getEvents()` — Все события с фильтрацией/сортировкой
 - `getEvent(id)` — Одно событие по ID
-- `getTopPlacement(year, filters)` — Рейтинг по местам
+- `getTopPlacement(year, filters)` — Рейтинг по медалям (placement)
 - `getTopScore(year, filters)` — Рейтинг по очкам
 - `getTopSpeed(year, filters)` — Рейтинг по скорости
 - `getSpeedRecords()` — Все рекорды Донино (скорость)
 - `getCoursingRecords()` — Все рекорды Донино (беги 350м)
 - `getJudges()` — Все судьи
-- `getJudgeDetails(key)` — Детали судьи
+- `getJudgeDetails(key, year?)` — Детали судьи (соревнования; опциональный год)
 - `getDogProfile(id)` — Профиль собаки
 - `getDogEvents(dogId)` — История событий собаки
 
@@ -137,7 +137,7 @@ const breedValues = data?.success ? data.data.breeds : [];
 ## Индекс CS (рейтинг «по очкам»)
 
 ### Описание
-Вкладка **«очки»** (курсинг + БЗМП) сортирует собак по **`rating_score`**, а не по сумме протокола. Два рейтинга (медали / очки) **не сводятся** в одну формулу с вкладкой «места».
+Вкладка **«очки»** (курсинг + БЗМП) сортирует собак по **`rating_score`**, а не по сумме протокола. Два рейтинга (медали / очки) **не сводятся** в одну формулу.
 
 ### Реализация
 | Файл | Роль |
@@ -170,9 +170,9 @@ const breedValues = data?.success ? data.data.breeds : [];
 
 **UI**
 - Две колонки: `TopDogsColumns.tsx` — курсинг/БЗМП | рейсинг.
-- Переключатель в плашке: **очки** (default, слева) | **места**; ⓘ внутри сегмента «очки».
-- URL: без `rankingTab` = очки; `?rankingTab=placement` = медали.
-- Главная: «Топ сезона» — две колонки (соревнования | выставки); табы **Очки → Медали → Скорость**; `HomeSeasonTopRow`; hero — `HomeHeroStage` (не галерея). Поиск кличек: `dogNameMatchesQuery` (`lib/dogName.ts`), не `includes` по одной раскладке.
+- Переключатель в плашке: **медали** (default, слева) | **очки**; ⓘ внутри сегмента «очки».
+- URL: без `rankingTab` = медали (placement); `?rankingTab=score` = очки.
+- Главная: «Топ сезона» — две колонки-панели (соревнования | выставки); табы **Медали → Очки → Скорость** (default «Медали»); `HomeSeasonTopRow`; hero — `HomeHeroStage` (не галерея); масштаб — `.home-v2-scale` вариант A (2 hero выставок + chips спорта). Поиск кличек: `dogNameMatchesQuery` (`lib/dogName.ts`), не `includes` по одной раскладке. Канон UI: [`04-FRONTEND.md`](04-FRONTEND.md).
 - `DogCard` (score): индекс CS крупно, детали строкой.
 
 ---
@@ -485,7 +485,7 @@ try {
 
 ## React UI pitfalls
 
-Перенесено из `04-DEVELOPMENT.md` (канон здесь).
+Перенесено из `11-DEVELOPMENT.md` (канон здесь).
 
 ### useEffect ↔ URL: без бесконечных циклов
 
@@ -534,6 +534,6 @@ if (isInitialLoad && isLoading) {
 ## См. также
 
 - [02-ARCHITECTURE.md](02-ARCHITECTURE.md) — Архитектура проекта
-- [04-DEVELOPMENT.md](04-DEVELOPMENT.md) — npm, backend scripts
+- [11-DEVELOPMENT.md](11-DEVELOPMENT.md) — npm, backend scripts
 - [04-FRONTEND.md](04-FRONTEND.md) — UI и маршруты
 - [06-DESIGN-SYSTEM.md](06-DESIGN-SYSTEM.md) — тема и токены

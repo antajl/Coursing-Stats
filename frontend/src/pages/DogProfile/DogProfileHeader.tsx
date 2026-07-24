@@ -1,24 +1,45 @@
-import { ChevronLeft, Download, ExternalLink } from 'lucide-react'
+import { ChevronLeft, Download } from 'lucide-react'
 import OwnerCrownName from '../../components/OwnerCrownName'
 import { type DogTitle } from '../../lib/qualificationTitles'
 import { renderGroupedDogTitles } from '../../lib/awardChipRender'
 import { parseDogName } from '../../lib/dogName'
 import { displayBreed } from '../../lib/breedMapping'
 
+/** Локальная копия favicon Breed Archive (см. public/images/). */
+const BREED_ARCHIVE_FAVICON = '/images/breedarchive-favicon.png'
+
 type DogProfileHeaderProps = {
   // Dog profile payload from static indexes (loosely typed)
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   dog: any
-  titles: DogTitle[]
+  /** Титулы выставок (красота). */
+  showTitles: DogTitle[]
+  /** Титулы курсинга / БЗМП / бегов. */
+  competitionTitles: DogTitle[]
   showRuName: boolean
   exporting: boolean
   onBack: () => void
   onExport: () => void
 }
 
+function TitleDomainBlock({ label, titles }: { label: string; titles: DogTitle[] }) {
+  if (titles.length === 0) return null
+  return (
+    <div className="min-w-0 text-center">
+      <div className="mb-1.5 text-[11px] font-medium text-old-money-500 dark:text-old-money-400">
+        {label}
+      </div>
+      <div className="flex flex-wrap items-center justify-center gap-1.5">
+        {renderGroupedDogTitles(titles)}
+      </div>
+    </div>
+  )
+}
+
 export function DogProfileHeader({
   dog,
-  titles,
+  showTitles,
+  competitionTitles,
   showRuName,
   exporting,
   onBack,
@@ -26,13 +47,14 @@ export function DogProfileHeader({
 }: DogProfileHeaderProps) {
   const { primary, secondary } = parseDogName(dog.name_lat, dog.name_ru)
   const breedDisplay = displayBreed(dog.breed)
+  const hasTitles = showTitles.length > 0 || competitionTitles.length > 0
 
   return (
     <div className="relative mb-6">
       <button
         type="button"
         onClick={onBack}
-        className="absolute right-full top-5 z-10 mr-0.5 flex h-11 w-11 items-center justify-center rounded-lg text-old-money-500 transition-colors hover:bg-old-money-50 hover:text-camel-700 md:top-8 dark:text-old-money-400 dark:hover:bg-charcoal-700 dark:hover:text-camel-400"
+        className="relative z-10 mb-2 inline-flex h-11 w-11 items-center justify-center rounded-lg text-old-money-500 transition-colors hover:bg-old-money-50 hover:text-camel-700 md:absolute md:right-full md:top-8 md:mb-0 md:mr-0.5 dark:text-old-money-400 dark:hover:bg-charcoal-700 dark:hover:text-camel-400"
         aria-label="Назад"
         data-export-ignore
       >
@@ -82,7 +104,14 @@ export function DogProfileHeader({
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 rounded-full border border-old-money-200 bg-white px-3 py-1.5 text-xs font-semibold text-camel-700 transition-colors hover:border-camel-400 hover:bg-camel-50 dark:border-charcoal-600 dark:bg-charcoal-800 dark:text-camel-400 dark:hover:border-camel-600 dark:hover:bg-charcoal-700"
                 >
-                  <ExternalLink className="h-3.5 w-3.5 shrink-0" aria-hidden />
+                  <img
+                    src={BREED_ARCHIVE_FAVICON}
+                    alt=""
+                    width={14}
+                    height={14}
+                    className="h-3.5 w-3.5 shrink-0 rounded-sm"
+                    decoding="async"
+                  />
                   Breed Archive
                 </a>
               )}
@@ -101,12 +130,24 @@ export function DogProfileHeader({
           </button>
         </div>
 
-        {titles.length > 0 && (
+        {hasTitles && (
           <div className="mt-4 border-t border-old-money-100 pt-4 dark:border-charcoal-600">
-            <div className="mb-2 text-xs font-semibold uppercase tracking-wide text-old-money-500 dark:text-old-money-400">
-              Титулы
+            <div
+              className={
+                showTitles.length > 0 && competitionTitles.length > 0
+                  ? 'grid grid-cols-1 gap-4 md:grid-cols-[1fr_auto_1fr] md:items-stretch md:gap-0'
+                  : 'grid grid-cols-1'
+              }
+            >
+              <TitleDomainBlock label="Курсинг и бега" titles={competitionTitles} />
+              {showTitles.length > 0 && competitionTitles.length > 0 ? (
+                <div
+                  className="hidden w-px self-stretch bg-gradient-to-b from-transparent via-old-money-300 to-transparent dark:via-charcoal-500 md:mx-6 md:block"
+                  aria-hidden
+                />
+              ) : null}
+              <TitleDomainBlock label="Выставки" titles={showTitles} />
             </div>
-            <div className="flex flex-wrap items-center gap-1.5">{renderGroupedDogTitles(titles)}</div>
           </div>
         )}
 

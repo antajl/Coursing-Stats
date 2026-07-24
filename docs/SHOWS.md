@@ -11,7 +11,7 @@
 - Список выставок: ~100 выставок (2019-2026)
 - Проблема: использует Telerik Data Grid с AJAX, возвращает HTML/JavaScript шаблоны
 
-### Текущий статус (2026-07-23)
+### Текущий статус (2026-07-24)
 
 **Основной источник рейтинга 2026 — PDF «Итоговый отчет» с rkf.online** (не LC scrape):
 
@@ -35,6 +35,7 @@
 **UI (рейтинг / судьи / главная):**
 - «Сезон YYYY» **включён по умолчанию** (соревнования и выставки); снять кнопку — весь срез; бейджик года в ActiveFilters **не** дублирует дефолтный сезон
 - На главной в колонке «Выставки» метрика — **причина места** (`BOB ×18 · VCAC ×27`), не голый `best_award`; данные в `indexes/home-top-{year}.json` (+ `titles`)
+- Список судей: карточки (Выставок / Пород / Отлично %), сортировка справа (повторный клик → ↑/↓); «—» при &lt;30 оценках — см. ниже «UI судей»
 - Протокол `/shows/exhibition/:id` — **только DEV**
 
 **Ещё не идеально / долги:**
@@ -95,7 +96,10 @@ data/v1/shows/
 │                       lc_exhibition_id, lc_url }]
 └── indexes/
     ├── dog-ranking-{year}.json
-    ├── judges.json          # [{ name, total_judged, breeds[] }]
+    ├── judges.json          # id, name, total_judged, unique_breeds, breeds[], by_year,
+    │                        # excellent_rate, graded, by_year_excellent, by_year_graded
+    ├── judge-details/{key}.json  # профиль: выставки (grade_counts/breed_counts), породы, strictness
+    ├── judges-strictness-baseline.json  # site-wide strictness metrics
     └── breed-aliases.json
 ```
 
@@ -103,14 +107,17 @@ data/v1/shows/
 
 - **Shows.tsx** - Hub страница с табами
 - **Shows/ShowRanking.tsx** - Рейтинг выставочных собак
-- **Shows/ShowJudges.tsx** - Судьи выставок
+- **Shows/ShowJudges.tsx** - Судьи выставок (карточки + тулбар: поиск / порода / сезон / сортировка)
+- **Shows/ShowJudgeDetail.tsx** - Профиль судьи выставок (шапка как у собаки; вкладки Породы | Выставки)
 - **Shows/ShowCalendar.tsx** - Календарь выставок
+- **components/ShowJudgeCard.tsx** - карточка списка: Выставок | Пород | Отлично % (или «—»)
 
 ### Маршрутизация
 
 - `/shows` - hub страница
 - `/shows?tab=ranking` - рейтинг
-- `/shows?tab=judges` - судьи
+- `/shows?tab=judges` - судьи (список)
+- `/shows/judges/:judgeId` - профиль судьи (`id` = normalizeJudgeKey; файл detail — base64url key)
 - `/shows?tab=calendar` — календарь (локально всегда; на проде — `ui-flags.json` → `publicCalendars.shows`, скрипты `scripts/show-calendar-shows.bat` / `hide-calendar-shows.bat`)
 - `/shows/exhibition/:id` — протокол выставки (**только DEV**; на проде → `/shows`)
 - `/shows?tab=champions` и `/shows/champions` → редирект на рейтинг (вкладка снята: дублировала рейтинг)
@@ -150,17 +157,29 @@ Gate календаря: `usePublicCalendarVisible` ← `data/v1/ui-flags.json` 
 | `indexes/dog-details/{000–255}.json` | да | подробности + history; профиль грузит один шард по id |
 | `indexes/show-dog-lookup.json` | да | competition id / кличка+порода → show id |
 | `indexes/home-top-{year}.json` | да | топ-3 для главной (+ компактные `titles`) |
-| `indexes/judges.json` | да | судьи выставок |
+| `indexes/judges.json` | да | список судей + `excellent_rate` / `graded` / `by_year*` |
+| `indexes/judge-details/*.json` | да | профили: выставки с `grade_counts`/`breed_counts`, породы, strictness |
+| `indexes/judges-strictness-baseline.json` | да | site-wide baseline (% «отлично», счётчики оценок) |
 | `indexes/dog-ranking-unknown.json` | да* | lean, выставки без даты |
 | `indexes/dog-ranking.json` | **нет** | all-time полный; только локально/сборка |
 | `calendar/{year}.json` | да | лёгкий LC scraped список (~90) |
-| `calendar-rkf/{year}.json` | да* | каталог rkf.online CategoryId=1 (~3–3.5 MB/год); UI только DEV |
+| `calendar-rkf/{year}.json` | да* | каталог rkf.online CategoryId=1 (~3–3.5 MB/год); UI на проде — `publicCalendars.shows` |
 
 - **UI:** `getShowDogRanking(year)` → lean файл или manifest+шарды `dog-ranking-{year}-a.json…` (склейка по порядку рейтинга); без года → склейка шардов годов; **по умолчанию — текущий сезон**
 - Полный календарный год (2025 и т.п.) после PDF-парса почти наверняка больше частичного 2026: lean + **авто-нарезка** в `build-show-indexes`, если файл > ~24 MB (куски ~18 MB).
-- **Календарь UI:** `getShowCalendar()` предпочитает `shows/calendar-rkf/{year}.json` (каталог rkf.online CategoryId=1); fallback — `shows/calendar/{year}.json` (LC scraped). Полный протокол — `exhibitions/*.json` (LC) или `exhibitions-rkf` (PDF) на `/shows/exhibition/:id` (**только DEV**)
+- **Календарь UI:** `getShowCalendar()` предпочитает `shows/calendar-rkf/{year}.json` (каталог rkf.online CategoryId=1); fallback — `shows/calendar/{year}.json` (LC scraped). На проде вкладка календаря — по `ui-flags.json` → `publicCalendars.shows` (см. [`04-FRONTEND.md`](04-FRONTEND.md) → Public surface). Полный протокол — `exhibitions/*.json` (LC) или `exhibitions-rkf` (PDF) на `/shows/exhibition/:id` (**только DEV**)
 - **Ингест rkf.online:** `npm run ingest-rkf-calendar` → `backend/scripts/shows/ingest-rkf-calendar.ts` (метаданные, без PDF). Lean-поля: `ranks`, `national_breed_club_name`, `breeds`, `reports_link` (PDF type 1 «Итоговый отчет»), `bis_reports_link` (PDF type 3 BIS). LC-подсветка: `reports_links` с `exhibitionId` на lc.rkfshow.ru|rkfshow.ru, id ∈ `source-index.json`
-- **Сборка индексов:** `npx tsx backend/scripts/build-show-indexes.ts` — читает LC `exhibitions/` **и** локальные `data/local/shows/exhibitions-rkf/` → `indexes/dog-ranking-*.json`, `home-top-*.json`, `dog-details/`, `judges.json`. Переписывает `calendar/{year}.json`, **не** трогает `calendar-rkf/`. Хвост append sitemap может долго висеть — индексы к тому моменту уже записаны
+- **Сборка индексов:** `npx tsx backend/scripts/build-show-indexes.ts` — читает LC `exhibitions/` **и** локальные `data/local/shows/exhibitions-rkf/` → `indexes/dog-ranking-*.json`, `home-top-*.json`, `dog-details/`, `judges.json`, `judge-details/`, `judges-strictness-baseline.json`. Переписывает `calendar/{year}.json`, **не** трогает `calendar-rkf/`. Хвост append sitemap может долго висеть — индексы к тому моменту уже записаны
+- **UI судей (список `/shows?tab=judges`):**
+  - `PageToolbar`: поиск, фильтр пород, чип «Сезон YYYY»; справа компактный сегмент сортировки **Выставки | Породы | % отлично** (не в одной группе с фильтрами).
+  - Повторный клик по **активной** кнопке сортировки переключает направление ↓/↑ (убывание ↔ возрастание); смена колонки снова с ↓.
+  - `ShowJudgeCard`: Выставок | Пород | **Отлично** (`excellentPct` 0–100 или «—»). Клик → `/shows/judges/:id`. Без avg_score / критериев курсинга.
+  - **Порог 30 оценок** (`MIN_GRADED_FOR_RATE`): в списке % «отлично» и сортировка по нему учитывают только судей с ≥30 graded за выбранный период (год из `by_year_graded` / `by_year_excellent`, иначе all-time `graded` / `excellent_rate`). Меньше 30 или нет данных → на карточке «—», в сортировке такие всегда **в конце** (и при ↑, и при ↓).
+  - Источник атрибуции: Портал РКФ. Sitemap **не** включает URL всех судей (только SEO на странице профиля).
+- **Профиль судьи (`ShowJudgeDetail`):** рамочка как у собаки — назад (`/shows?tab=judges`), ФИО, select года (`?year=`), KPI, кликабельные плитки оценок (`?grade=` → вкладка «Выставки» + фильтр), плитки строгости. Вкладки **Породы | Выставки**. В `judge-details` у каждой выставки — `grade_counts` / `breed_counts` (после `build-show-indexes`). Подписи оценок: Оч. персп. / Персп. и т.д.
+- **Строгость судей:** в шапке профиля. По оценкам экстерьера (неявки не считаются). Сравнение % «отлично» с site-wide baseline (`judges-strictness-baseline.json`). Порог «мало данных» для вердикта — &lt;30 оценок. Вердикт ±3 п.п. Плитки: Отлично / Оч. хор / Хор / Удовл / ОП / Перспективный / Дисквал.
+- **Соревнования — профиль судьи (`Judges/JudgeDetail`):** тот же каркас шапки (назад, год, KPI, дисциплины); вкладки **Породы | Старты | Критерии**; клик по оценкам породы → фильтр стартов. Данные — competition `indexes/judge-details`, не shows.
+- **Подсчёт пород:** в `build-show-indexes.ts` один вызов `touch()` на строку результата (предпочитая `breed_judge`, иначе `judge`) — без двойного подсчёта. В UI колонка «Оценок» = число записей в протоколах по породе, не уникальные собаки.
 - **`build-all-data` / CI:** пересобирает show-индексы **только если** есть `data/local/shows/exhibitions-rkf/` (gitignore). Иначе оставляет committed `data/v1/shows/indexes/*` и проверяет, что в `dog-ranking-2026` есть BIS (≥50). Без этого CI затирал рейтинг до ~LC-only (макс. ЛПП/BOB, без BIS/BIG).
 - **Прод:** только рейтинг + профили из индексов. История собаки ведёт на `url` (rkf.online / LC) и при наличии на `reports_link` (PDF). Полные протоколы и PDF **не** на CDN.
 - **Логика:** `backend/lib/show-award-ranking.ts` — полный реестр токенов протокола (BIS…СС), веса `rank_score`, алиасы ЛПП/ЛППП → BOB/BOS; `formatShowRankingReason` / `compactShowTitles` для главной
@@ -224,7 +243,7 @@ npx tsx scripts/enrich-show-breed-titles.ts 106   # блок «Титулы»
 
 **Полный скрап с нуля:** `npx tsx parsers/shows/scrape-show-results.ts show <id>`
 
-Подробнее про группы FCI: [`SHOWS-RKF-BREED-GROUPS.md`](SHOWS-RKF-BREED-GROUPS.md).
+Подробнее про группы FCI: [`SHOWS-RKF.md`](SHOWS-RKF.md) → «Группы пород и судьи Specialty».
 
 ### Скрипт скрапинга (legacy entry)
 
@@ -262,7 +281,7 @@ npm run ingest-rkf-calendar
 npx tsx backend/scripts/shows/ingest-rkf-calendar.ts --from=2025-01-01 --to=2025-12-31
 ```
 
-Пишет `data/v1/shows/calendar-rkf/{year}.json` + `manifest.json`. Пагинация по **годовым окнам** (API отдаёт HTTP 500 при `StartElement ≥ 10000`). UI календаря (только `isLocalDev`) подсвечивает строки с `has_lc_protocol` (warm-blue), ссылка на rkf.online **`/exhibitions/{id}`** (мн. число; `/exhibition/{id}` — client 404); при наличии LC — вторичная ссылка на протокол / локальный `/shows/exhibition/:lcId`.
+Пишет `data/v1/shows/calendar-rkf/{year}.json` + `manifest.json`. Пагинация по **годовым окнам** (API отдаёт HTTP 500 при `StartElement ≥ 10000`). UI календаря (локально всегда; на проде — `publicCalendars.shows`) подсвечивает строки с `has_lc_protocol` (warm-blue), ссылка на rkf.online **`/exhibitions/{id}`** (мн. число; `/exhibition/{id}` — client 404); при наличии LC — вторичная ссылка на протокол / локальный `/shows/exhibition/:lcId`.
 
 **Группировка mono в UI** (`ShowCalendar.tsx` + `showCalendarGroup.ts`): варианты с одним `date+title+ranks+city+club` и разными НКП схлопываются в одну строку (аккордеон); счётчик месяца считает **группы**, не сырые карточки. «КЧК» и «КЧК в каждом классе» не сливаются (ranks в ключе).
 
@@ -276,11 +295,44 @@ cd backend && npx tsx scripts/build-show-indexes.ts
 
 **Что делает:**
 - Строит lean `dog-ranking-{year}.json`; если lean > ~24 MB — manifest + куски `dog-ranking-{year}-a.json…` (фронт склеивает). Подробности — `dog-details/`. All-time `dog-ranking.json` локально, не на CDN.
-- Строит `judges.json`, `breed-aliases.json`
+- Строит `judges.json`, `judge-details/`, `breed-aliases.json`
 - **Post-processing пород** (`backend/lib/show-breed-judge-clean.ts`): при пустом `breed_judge` отрезает судью, вклеенного в `breed` (напр. «БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА Горан ГЛАДИЧ») — по списку судей выставок + повторяющимся person-like хвостам; recovered judge → `breed_judge`. Сырые `exhibitions/*.json` **не** переписываются; идеальный фикс — в HTML-парсере. После чистки polluted breed+judge в индексах → 0
 - Используется после добавления новых выставок
 
 **Тест чистки:** `backend/tests/show-breed-judge-clean.test.ts`
+
+**Дедупликация судей:**
+
+Для объединения вариантов имён одного судьи (с/без отчества, с инициалами) используется merge key с wildcard логикой:
+
+- **normalizeShowJudgeDisplayName(raw: string): string** — нормализация имени:
+  - Unicode NFKC, lowercasing
+  - Удаление суффиксов страны в скобках `(россия)`, `(russia)`, `(rf)`, `(ркф)`
+  - Замена знаков препинания `,;. ` на пробелы (для инициалов)
+  - Эвристика для склеенных фамилии+имени (например «гавриловаяна» → «гаврилова яна»):
+    - Применяется только если имя в whitelist (яна, алексей, ольга, елена, ирина, мария, анна, олег, иван, …)
+    - Паттерн: фамилия (оканчивается на -ова/-ева/-ина/-ская/-цкая/-ский/-цкий) + имя (3+ буквы)
+    - Минимальная длина фамилии ≥ 5 символов
+    - Проверяется каждое слово отдельно (для случаев «гавриловаяна адольфовна»)
+
+- **parseShowJudgeNameParts(normalized: string): ShowJudgeNameParts** — парсинг нормализованного имени:
+  - Возвращает `{ last, first, middle, firstInitial, middleInitial }`
+  - Извлекает инициалы (первая буква, убирая точку если есть)
+
+- **showJudgeMergeKey(parts: ShowJudgeNameParts): string** — генерация merge key:
+  - Формат: `last|firstInitial|middleInitial`
+  - Если `middleInitial` отсутствует → используется wildcard `*`
+  - Примеры: `захарова|г|п`, `захарова|г|*`
+
+- **Логика слияния в buildJudgesIndex:**
+  - Если у записи отсутствует отчестве (wildcard `*`), ищется существующая запись с тем же last+firstInitial и конкретным отчеством
+  - Найденная запись используется для слияния (wildcard → specific)
+  - Запрещено сливать записи с разными явными инициалами (different first/middle initials)
+
+- **Правила:**
+  - «Захарова Г.П.» и «Захарова Галина Петровна» → один merge key (wildcard слиётся в specific)
+  - «Иванов Иван» и «Иванов Пётр» → разные merge keys (разные firstInitial)
+  - «Захарова Г.А.» и «Захарова Г.П.» → разные merge keys (разные middleInitial, оба specific)
 
 **Отображение пород в UI:** sentence case / `displayBreed` (чип `primary`; полное имя в tooltip) / «тип не указан» для выжлы и НО без маркера шерсти — [`03-DATA.md`](03-DATA.md) → «Канон и отображение». Guide: `/guide?tab=shows`.
 

@@ -13,7 +13,10 @@ import {
   isShowOnlyProfileId,
   showDogProfilePath,
 } from '../../lib/showDogProfilePath'
-import { mergeDogProfileTitles } from '../../lib/qualificationTitles'
+import {
+  buildDogProfileTitleGroups,
+  maxMergeDogTitles,
+} from '../../lib/qualificationTitles'
 import { toPng } from 'html-to-image'
 import SkeletonLoader from '../../components/SkeletonLoader'
 import ErrorState from '../../components/ErrorState'
@@ -132,13 +135,19 @@ export default function DogProfile() {
   }, [competitionId, dog, loading, showRouteDogId, showRouteBreed, isLegacyShowRoute, profileId])
 
   // До любых early return — иначе нарушаются Rules of Hooks
-  const titles = useMemo(
+  const titleGroups = useMemo(
     () =>
-      mergeDogProfileTitles(
-        Array.isArray(dog?.titles) ? dog.titles : [],
-        showDog?.titles,
-      ),
-    [dog?.titles, showDog?.titles],
+      buildDogProfileTitleGroups({
+        competitionIndexed: Array.isArray(dog?.titles) ? dog.titles : [],
+        competitions: events,
+        showTitles: showDog?.titles,
+        showHistory: showDog?.history,
+      }),
+    [dog?.titles, events, showDog?.titles, showDog?.history],
+  )
+  const titles = useMemo(
+    () => maxMergeDogTitles(titleGroups.competition, titleGroups.show),
+    [titleGroups],
   )
 
   // Linked show dog on legacy URL → canonical /dog/{competition_id}
@@ -330,7 +339,8 @@ export default function DogProfile() {
           <div ref={exportRef}>
             <DogProfileHeader
               dog={headerDog}
-              titles={titles}
+              showTitles={titleGroups.show}
+              competitionTitles={titleGroups.competition}
               showRuName={!!showRuName}
               exporting={exporting}
               onBack={() => navigate(-1)}

@@ -196,7 +196,9 @@ shadow-md p-4
 hover:shadow-lg hover:scale-[1.01] transition-all duration-200 cursor-pointer
 ```
 
-**`JudgeCard`** (`frontend/src/components/JudgeCard.tsx`) — список судей на `/judges`: grid карточек вместо таблицы; имя, число оцениваний, ссылка на `/judges/{name}`.
+**`JudgeCard`** (`frontend/src/components/JudgeCard.tsx`) — список судей соревнований (`/competitions?tab=judges`): имя, число оцениваний → `/judges/{name}`.
+
+**`ShowJudgeCard`** (`frontend/src/components/ShowJudgeCard.tsx`) — список судей выставок (`/shows?tab=judges`): Выставок | Пород | Отлично % (или «—» при &lt;30 оценках). Сортировка и порог — [`SHOWS.md`](SHOWS.md) → «UI судей».
 
 ### Кнопки
 
@@ -238,16 +240,18 @@ font-mono tabular-nums
 ```
 [←]  КЛИЧКА ♀                    [↓ скачать]
      латинская часть (если есть)
-     [порода]  [Breed Archive ↗]   ← только если pedigree_url
+     [порода]  [Breed Archive]   ← favicon BA + текст; только если pedigree_url
 
 ────────────────────────────────────────────
-Титулы:  [Чемпион России X2] [CACL] …   ← flex-wrap чипы по крутости, не колонка справа
+  Курсинг и бега:   [ЧРКФ РК] [RegCACL] …     |     Выставки:  [BIS] [ЛПП ×5] …
+                    ← два домена по центру колонок, вертикальный разделитель на md+;
+                      без общего заголовка «Титулы»; слева курсинг/бега, справа выставки
 ```
 
-- Chip **Breed Archive:** `rounded-full`, border `old-money-200`, иконка `ExternalLink`, открывается в новой вкладке
+- Chip **Breed Archive:** `rounded-full`, border `old-money-200`, favicon `/images/breedarchive-favicon.png`, открывается в новой вкладке
 
 - Кнопки «назад» и «скачать» с `data-export-ignore` (не попадают в PNG-экспорт)
-- Титулы — `titleBadgeClass()` + `formatTitleLine()`, горизонтальный ряд
+- Титулы — `buildDogProfileTitleGroups()` + `titleBadgeClass()` / `formatTitleLine()`; источники: вся история стартов (`qualification`) и выставок (`titles` + `history`)
 
 ### PageToolbar
 
@@ -260,15 +264,28 @@ font-mono tabular-nums
 
 Сегменты — `ToolbarSegmentControl` или `ViewToggle` (pill внутри bordered group).
 
-**Панель «Фильтры»:** `ToolbarFiltersDropdown` — белая карточка `rounded-xl`, секции с `TOOLBAR_FILTER_SECTION_LABEL`, строки `TOOLBAR_FILTER_CHECKBOX_ROW`, футер «Сбросить» / «Готово».
+**Панель «Фильтры»:** `ToolbarFiltersDropdown` — desktop: карточка `cream-50` справа от кнопки; mobile: bottom sheet + затемнение. Sticky-футер «Сбросить» / «Готово». Бейдж с числом активных условий на кнопке (`activeCount`).
 
-**Рейтинг — секция «Год»:** один выбранный год или ни одного (все годы). Повторный клик по отмеченному году снимает галку; chip под тулбаром — «Все годы».
+**Рейтинг (`TopDogsFilters`):** панель шире (~520×440): год — `flex-wrap` без гориз. скролла; порода + пороги в две колонки (desktop); скролл только у списка пород. Mobile: bottom sheet, пороги в `<details>`.
 
-**Рейтинг — секция «Порода»:** только породы с выступлениями (`useCompetingBreeds`, ~66); без `18` и прочего числового мусора из `breeds.json`.
-
-**Рейтинг — «по очкам»:** подсказка ⓘ внутри сегмента «очки» — `CoursingRatingHint.tsx` (простой язык); формула — `/guide?tab=rating`. `HoverTooltip` `variant="site"`, `interactive`.
-
+**Рейтинг — переключатель курсинга:** **медали** (default, слева) | **очки**; ⓘ внутри сегмента «очки» — `CoursingRatingHint.tsx`; формула — `/guide?tab=rating`. URL: без `rankingTab` = медали; `?rankingTab=score` = очки. Главная «Топ сезона»: **Медали → Очки → Скорость** (`HomeRankingTabs`, default «Медали»). `HoverTooltip` `variant="site"`, `interactive`.
 **Где:** рейтинг (`TopDogsFilters`), судьи (`Judges/index`), рекорды Донино (`DoninoPageToolbar`), календарь соревнований (`Events/index.tsx` — framed; на проде по ui-flags).
+
+### Главная (home-v2) — визуальные паттерны
+
+Канон разметки/блоков: [`04-FRONTEND.md`](04-FRONTEND.md) → «Главная страница». Классы в `frontend/src/index.css`:
+
+| Класс / приём | Назначение |
+|---------------|------------|
+| `.home-v2-col`, `.home-v2-events-col` | Панель: border + radius + cream фон; шапка `.home-v2-col-head` с camel-тоном |
+| `.home-v2-events-col .home-event-row` | Плоские строки внутри панели (без вложенных карточек); цветной `border-l-4` дисциплины сохраняется |
+| `.home-v2-external` | Футер-CTA колонки событий (полная ширина, camel фон, `→` через `::after`) |
+| `.home-v2-section-link` | Кнопка-ссылка у заголовка секции (обводка camel, `→` через `::after`) |
+| `.home-v2-section-title::after` | Короткая camel-черта под иконкой+H2 |
+| `.home-v2-scale*` | Вариант A: 2 hero-цифры выставок + chips спорта; count-up только на hero; годы — только в hero-eyebrow |
+| `.home-v2-stage-copy` z-index 7 | Выше body (6), чтобы listbox поиска не уходил под контент |
+
+Не смешивать с legacy `.hero-stats` / `.donino-home-col-panel` на `/` (панели home-v2 — отдельные классы).
 
 ### Рекорды Донино — статистика
 

@@ -525,7 +525,7 @@ function ExhibitionHeader({ exhibition, onBack }: { exhibition: ShowExhibition; 
       <button
         type="button"
         onClick={onBack}
-        className="absolute right-full top-5 z-10 mr-0.5 flex h-11 w-11 items-center justify-center rounded-lg text-old-money-500 transition-colors hover:bg-old-money-50 hover:text-camel-700 md:top-8 dark:text-old-money-400 dark:hover:bg-charcoal-700 dark:hover:text-camel-400"
+        className="relative z-10 mb-2 inline-flex h-11 w-11 items-center justify-center rounded-lg text-old-money-500 transition-colors hover:bg-old-money-50 hover:text-camel-700 md:absolute md:right-full md:top-8 md:mb-0 md:mr-0.5 dark:text-old-money-400 dark:hover:bg-charcoal-700 dark:hover:text-camel-400"
         aria-label="Назад"
       >
         <ChevronLeft className="h-5 w-5" aria-hidden />

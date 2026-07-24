@@ -4,8 +4,12 @@ export type {
 } from '../../lib/competition-titles'
 export {
   COMPETITION_TITLE_RANK,
+  COMPETITION_TITLE_BADGE,
+  COMPETITION_TITLE_LABELS,
   competitionTitleKey,
   competitionTitleDisplayName,
+  competitionTitleLabel,
+  isKnownCompetitionTitleKey,
   competitionTitleRank,
   compareCompetitionTitles,
   splitQualification,

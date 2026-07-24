@@ -54,16 +54,18 @@ Cloudflare D1 (events, dogs, results)  ← скрипты импорта
 | `backend/scripts/speed/sync-speed-records.ts` | `backend/scripts/speed/` | Загрузка замеров скорости Донино (prod + GitHub Actions) |
 | `backend/scripts/speed/fetch-coursing-records.ts` | `backend/scripts/speed/` | Загрузка зачётов курсинга 350 м |
 
-### 2. Database (D1)
+### 2. Database (D1) — LEGACY, только импорт
 
-**Tables:**
+Не runtime прода. Публичный сайт читает `data/v1/` (см. §3). Схема/workflow: stubs [12](12-DATABASE-SCHEMA.md) / [13](13-DATABASE-WORKFLOW.md) → `docs/archive/`.
+
+**Tables (SQLite/D1 при импорте):**
 - `events` — мероприятия (event_type: coursing, bzmp, racing)
 - `dogs` — собаки
 - `results` — результаты выступлений (raw_scores_json хранит детальные данные)
 - `speed_records` — замер скорости Донино (км/ч, Google Sheet `1NTiY3HXZ…`)
 - `coursing_records` — бега борзых 350 м (время в сек, Google Sheet `1hpdA8vl…`)
 
-**Views (для топов):**
+**Views (для топов при сборке snapshot):**
 - `v_top_by_placement` — медальный зачёт (курсинг + БЗМП)
 - `v_top_by_score` — агрегаты по очкам; CDN-индекс дополняет `rating_score` (индекс CS)
 
@@ -299,7 +301,7 @@ DNS зона `coursing-stats.ru` — в **Cloudflare**.
 | `.cursor/` / `.devin/` | Rules + skills |
 | `.github/workflows/` | CI Pages, update-speed-records |
 
-Детали скриптов: [`04-DEVELOPMENT.md`](04-DEVELOPMENT.md). Дерево `data/`: [`03-DATA.md`](03-DATA.md).
+Детали скриптов: [`11-DEVELOPMENT.md`](11-DEVELOPMENT.md). Дерево `data/`: [`03-DATA.md`](03-DATA.md).
 
 ### Быстрая схема потоков данных
 

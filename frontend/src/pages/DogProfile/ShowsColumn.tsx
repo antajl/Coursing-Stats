@@ -212,20 +212,20 @@ export function ShowsColumn({ dog }: ShowsColumnProps) {
                   <div className="min-w-0 break-words text-xs font-bold uppercase tracking-wide text-camel-700 dark:text-camel-400">
                     {entry.exhibition_title || 'Выставка'}
                   </div>
-                  <HistoryShowAwardsRow titles={entryTitles} />
-                  <div className="mt-1 flex flex-wrap items-center gap-2">
-                    <ShowGradeChip grade={entry.grade} />
-                  </div>
                   <div className="mt-1 flex items-center justify-between gap-3">
                     <div className="font-semibold text-charcoal-800 dark:text-charcoal-100">
                       {entry.date || '—'}
                     </div>
-                    {entry.placement > 0 && (
-                      <span className="shrink-0 text-base font-bold text-camel-700 dark:text-camel-400">
-                        #{entry.placement}
-                      </span>
-                    )}
+                    <div className="flex shrink-0 items-center gap-2">
+                      {entry.placement > 0 && (
+                        <span className="text-base font-bold text-camel-700 dark:text-camel-400">
+                          #{entry.placement}
+                        </span>
+                      )}
+                      <ShowGradeChip grade={entry.grade} />
+                    </div>
                   </div>
+                  <HistoryShowAwardsRow titles={entryTitles} />
                 </>
               )
               if (localExhibitionPath) {

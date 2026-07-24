@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { animateCount } from '../lib/motion'
+import { animateCount, prefersReducedMotion } from '../lib/motion'
 
 interface StatCounterProps {
   value: number
@@ -12,14 +12,42 @@ export default function StatCounter({ value, className = '' }: StatCounterProps)
   useEffect(() => {
     const el = ref.current
     if (!el) return
-    const tween = animateCount(el, value)
+
+    let tween: ReturnType<typeof animateCount>
+    let started = false
+
+    const start = () => {
+      if (started) return
+      started = true
+      tween = animateCount(el, value)
+    }
+
+    if (prefersReducedMotion()) {
+      el.textContent = value <= 0 ? '0' : String(Math.round(value))
+      return
+    }
+
+    el.textContent = '0'
+
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry?.isIntersecting) {
+          start()
+          io.disconnect()
+        }
+      },
+      { threshold: 0.4, rootMargin: '0px 0px -8% 0px' },
+    )
+    io.observe(el)
+
     return () => {
+      io.disconnect()
       tween?.kill()
     }
   }, [value])
 
   return (
-    <div ref={ref} className={className}>
+    <div ref={ref} className={className} aria-label={String(value)}>
       0
     </div>
   )

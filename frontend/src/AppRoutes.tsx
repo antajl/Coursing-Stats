@@ -14,6 +14,7 @@ const DoninoDogProfile = lazy(() => import('./pages/DoninoDogProfile'));
 const Guide = lazy(() => import('./pages/Guide'));
 const JudgeDetail = lazy(() => import('./pages/Judges/JudgeDetail'));
 const ShowExhibitionDetail = lazy(() => import('./pages/Shows/ShowExhibitionDetail'));
+const ShowJudgeDetail = lazy(() => import('./pages/Shows/ShowJudgeDetail'));
 const EventResults = lazy(() => import('./pages/Events/EventResults'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
@@ -68,6 +69,7 @@ export default function AppRoutes() {
         <Route path="/competitions" element={<Competitions />} />
         <Route path="/procoursing" element={<LegacyProcoursingRedirect />} />
         <Route path="/shows" element={<Shows />} />
+        <Route path="/shows/judges/:judgeId" element={<ShowJudgeDetail />} />
         <Route
           path="/shows/exhibition/:id"
           element={isLocalDev ? <ShowExhibitionDetail /> : <Navigate to="/shows" replace />}

@@ -62,7 +62,7 @@ export function ResultScorePanel({ result }: { result: Result }) {
     )
   }
   if (result.status === 'dns') {
-    return <div className="text-right text-xs text-gray-600 dark:text-gray-400 md:text-sm">Неявка</div>
+    return <div className="text-right text-xs text-charcoal-600 dark:text-charcoal-400 md:text-sm">Неявка</div>
   }
   if (isDisqualified) return null
   return null

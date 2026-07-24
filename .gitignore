@@ -105,3 +105,9 @@ frontend/public/data/v1/
 # Test artifacts
 playwright-report/
 test-results/
+
+# Accidental local dumps
+git-files.txt
+.tmp-seo-dialog.txt
+tmp-pdf-excel-exp/
+backend/scripts/tmp-*.ts

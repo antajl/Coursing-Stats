@@ -30,12 +30,14 @@
 | Данные, indexes, enrich | **03-DATA.md** | ссылка |
 | Диагностика пустого рейтинга | **03a-DATA-DIAGNOSTICS.md** | ссылка |
 | Деплой, чеклисты | **20-OPERATIONS.md** | ссылка |
-| UI, маршруты, **главная v2** | **04-FRONTEND.md** | ссылка |
+| UI, маршруты, **главная v2**, public surface / ui-flags | **04-FRONTEND.md** | ссылка |
 | SEO / sitemap | **07-SEO.md** | ссылка |
 | Донино модель/UI | **09-SPEED-RECORDS.md** | ссылка |
 | Донино пайплайн | **09a-DONINO-PIPELINE.md** | ссылка |
 | Выставки CDN/парсинг | **SHOWS.md** | кратко в 03-DATA |
 | Симптом → fix | **16-TROUBLESHOOTING.md** | кратко + ссылка на канон |
+| Backend scripts / npm | **11-DEVELOPMENT.md** | ссылка |
+| D1 схема/workflow | stubs **12** / **13** → [`archive/`](archive/README.md) | не читать без импорта |
 
 ---
 
@@ -45,7 +47,7 @@
 | Задача | Документ |
 |--------|----------|
 | Запуск, npm | [01-GETTING-STARTED.md](01-GETTING-STARTED.md), [20-OPERATIONS.md](20-OPERATIONS.md) |
-| Backend scripts, локальная разработка | [04-DEVELOPMENT.md](04-DEVELOPMENT.md) |
+| Backend scripts, локальная разработка | [11-DEVELOPMENT.md](11-DEVELOPMENT.md) |
 | Фронтенд, компоненты, маршруты, главная | **[04-FRONTEND.md](04-FRONTEND.md)** |
 | Архитектура, стек | [02-ARCHITECTURE.md](02-ARCHITECTURE.md) |
 | Данные, админка, `data/v1/` | **[03-DATA.md](03-DATA.md)** |
@@ -53,8 +55,9 @@
 | Пустой рейтинг/судьи на проде | [03a-DATA-DIAGNOSTICS.md](03a-DATA-DIAGNOSTICS.md), [20-OPERATIONS.md](20-OPERATIONS.md) |
 | Белый экран / MIME JS после деплоя | [16-TROUBLESHOOTING.md](16-TROUBLESHOOTING.md), [20-OPERATIONS.md](20-OPERATIONS.md) → «Кэш фронта» |
 | Донино локально ≠ прод | [16-TROUBLESHOOTING.md](16-TROUBLESHOOTING.md), [09a-DONINO-PIPELINE.md](09a-DONINO-PIPELINE.md) |
-| Выставки: PDF / CDN / UI | **[SHOWS.md](SHOWS.md)** |
-| Выставки: LC scrape (Playwright) | [SHOWS-RKF.md](SHOWS-RKF.md) → группы: [SHOWS-RKF-BREED-GROUPS.md](SHOWS-RKF-BREED-GROUPS.md) |
+| Выставки: PDF / CDN / UI | **[SHOWS.md](SHOWS.md)** (судьи: список % отлично / порог 30, профили) |
+| Выставки: LC scrape (Playwright) | [SHOWS-RKF.md](SHOWS-RKF.md) (группы FCI — секция в том же файле) |
+| Публичный UI: календари / ui-flags / протоколы | **[04-FRONTEND.md](04-FRONTEND.md)** → «Public surface» |
 | Локальный API (админка) | [05-API-REFERENCE.md](05-API-REFERENCE.md) |
 | UI, цвета, тёмная тема | [06-DESIGN-SYSTEM.md](06-DESIGN-SYSTEM.md) |
 | Фильтры рейтинга | [03-DATA.md](03-DATA.md) → «Породы в UI», [18-CODE-PATTERNS.md](18-CODE-PATTERNS.md) |
@@ -65,11 +68,12 @@
 | Донино: Sheets → CDN / CI | [09a-DONINO-PIPELINE.md](09a-DONINO-PIPELINE.md) |
 | Справочник `/guide` (РКФ) | [10-GUIDE.md](10-GUIDE.md) — соревнования + выставки |
 
-### Техническое (12–18)
+### Техническое (11–18, archive)
 | Задача | Документ |
 |--------|----------|
-| Схема таблиц (**LEGACY** D1 / SQLite, только импорт) | [12-DATABASE-SCHEMA.md](12-DATABASE-SCHEMA.md) |
-| **LEGACY** D1 workflow (только импорт) | [13-DATABASE-WORKFLOW.md](13-DATABASE-WORKFLOW.md) |
+| Backend scripts, npm | [11-DEVELOPMENT.md](11-DEVELOPMENT.md) |
+| Схема таблиц (**LEGACY** stub → archive) | [12-DATABASE-SCHEMA.md](12-DATABASE-SCHEMA.md) → [archive/12-…](archive/12-DATABASE-SCHEMA.md) |
+| **LEGACY** D1 workflow (stub → archive) | [13-DATABASE-WORKFLOW.md](13-DATABASE-WORKFLOW.md) → [archive/13-…](archive/13-DATABASE-WORKFLOW.md) |
 | Парсеры (правила) | [14-PARSING-RULES.md](14-PARSING-RULES.md) |
 | Парсеры (детали) | [15-PARSING-IMPLEMENTATION.md](15-PARSING-IMPLEMENTATION.md) |
 | Решение проблем | [16-TROUBLESHOOTING.md](16-TROUBLESHOOTING.md) |

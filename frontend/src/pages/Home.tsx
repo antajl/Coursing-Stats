@@ -125,7 +125,7 @@ function SectionHead({
   return (
     <div className="home-v2-section-head">
       <div className="home-v2-section-title">
-        <Icon className="h-5 w-5 shrink-0 text-camel-500" strokeWidth={1.75} />
+        <Icon className="h-5 w-5 shrink-0" strokeWidth={1.75} aria-hidden />
         <h2>{title}</h2>
       </div>
       {href && linkLabel ? (
@@ -215,7 +215,7 @@ export default function Home() {
   const [doninoSpeedRecords, setDoninoSpeedRecords] = useState<SpeedRecord[]>([])
   const [doninoCoursingRecords, setDoninoCoursingRecords] = useState<CoursingRecord[]>([])
   const [topShowDogs, setTopShowDogs] = useState<ShowHomeTopDog[]>([])
-  const [rankingTab, setRankingTab] = useState<RankingTab>('score')
+  const [rankingTab, setRankingTab] = useState<RankingTab>('placement')
   const [loading, setLoading] = useState(true)
   const [bodyReady, setBodyReady] = useState(() => prefersReducedMotion())
   const showsCalendarVisible = usePublicCalendarVisible('shows')
@@ -405,7 +405,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="home-v2-external"
               >
-                Календарь на procoursing.ru →
+                Календарь на procoursing.ru
               </a>
             </div>
           </div>
@@ -435,7 +435,7 @@ export default function Home() {
               )}
               {showsCalendarVisible ? (
                 <Link to="/shows?tab=calendar" className="home-v2-external">
-                  Календарь выставок →
+                  Календарь выставок
                 </Link>
               ) : (
                 <a
@@ -444,7 +444,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="home-v2-external"
                 >
-                  Календарь на rkf.online →
+                  Календарь на rkf.online
                 </a>
               )}
             </div>
@@ -452,36 +452,36 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. Compact scale */}
+      {/* 5. Scale — вариант A: 2 hero-цифры выставок + тихий хвост спорта */}
       <section className="home-v2-scale" aria-label="Масштаб базы" data-home-reveal>
         <div className="home-v2-scale-primary">
           <div className="home-v2-scale-item">
             <div className="home-v2-scale-num">
-              {loading ? '—' : <StatCounter value={stats?.events ?? 0} />}
-            </div>
-            <div className="home-v2-scale-lbl">соревнований</div>
-          </div>
-          <div className="home-v2-scale-item">
-            <div className="home-v2-scale-num">
-              {loading ? '—' : <StatCounter value={showStats?.exhibitions ?? 0} />}
+              {loading || !showStats ? '—' : <StatCounter value={showStats.exhibitions} />}
             </div>
             <div className="home-v2-scale-lbl">выставок</div>
+            <p className="home-v2-scale-hint">протоколы РКФ в одном месте</p>
+          </div>
+          <div className="home-v2-scale-divider" aria-hidden />
+          <div className="home-v2-scale-item">
+            <div className="home-v2-scale-num">
+              {loading || !showStats ? '—' : <StatCounter value={showStats.appearances} />}
+            </div>
+            <div className="home-v2-scale-lbl">записей на ринге</div>
+            <p className="home-v2-scale-hint">старты, оценки, титулы</p>
           </div>
         </div>
-        <p className="home-v2-scale-secondary">
-          {!loading && stats ? (
-            <>
-              {stats.results.toLocaleString('ru-RU')} результатов ·{' '}
-              {stats.dogs.toLocaleString('ru-RU')} собак · {stats.breeds} пород ·{' '}
-              {stats.judges} судей
-              {showStats
-                ? ` · ${showStats.appearances.toLocaleString('ru-RU')} выставочных записей`
-                : ''}
-            </>
-          ) : (
-            'Загрузка…'
-          )}
-        </p>
+        <ul className="home-v2-scale-chips" aria-label="Спортивная база">
+          <li>
+            {loading || !stats ? '—' : stats.events} соревнований
+          </li>
+          <li>
+            {loading || !stats ? '—' : stats.results} результатов
+          </li>
+          <li>
+            {loading || !stats ? '—' : stats.dogs} собак в спорте
+          </li>
+        </ul>
       </section>
 
       {/* 6. Season top */}
@@ -491,7 +491,7 @@ export default function Home() {
             icon={Icons.medal}
             title={`Топ сезона ${CURRENT_SEASON}`}
             href="/competitions?tab=ranking"
-            linkLabel="Весь рейтинг →"
+            linkLabel="Весь рейтинг"
           />
           {loading ? (
             <p className="home-v2-empty">Загрузка…</p>
@@ -568,7 +568,7 @@ export default function Home() {
             icon={Icons.speed}
             title="Рекорды Донино"
             href="/speed-records"
-            linkLabel="Все рекорды →"
+            linkLabel="Все рекорды"
           />
           {loading ? (
             <p className="home-v2-empty">Загрузка…</p>

@@ -120,35 +120,15 @@ npm run build-all-data                        # обязательно
 
 ## Пустой рейтинг / судьи на проде
 
-### Симптом
-Локально рейтинг и судьи есть; на **coursing-stats.ru** — пусто. CDN может отдавать `200` с `"count": 0`.
-
-### Быстрая диагностика
+Симптом: локально ок, на coursing-stats.ru пусто; CDN `200` с `"count": 0`.
 
 ```bash
-# Локально
-cat data/v1/indexes/top-placement-all.json | head -c 200
-cat data/v1/indexes/judges-summary.json | head -c 200
-
-npm run build-data-snapshot    # results должно быть > 0
+npm run build-data-snapshot    # results > 0
 npm run build-all-data
 npx vitest run backend/tests/static-indexes.test.ts
 ```
 
-На проде (браузер/curl):  
-`https://coursing-stats.ru/data/v1/indexes/top-placement-all.json` — поле `count` > 0.
-
-### Типичная причина
-CI `build-all-data` собрал пустые indexes (часто `loadCompetitions()` не загрузил `results[]` из `competitions/*.json`).
-
-### Решение
-1. Исправить pipeline (`load-sqlite.ts` → `loadCompetitions` must load `results[]`)
-
-2. Локально `build-all-data` + тесты
-3. Push с корректными `data/v1/` и кодом
-
-**Полная процедура:** [`03a-DATA-DIAGNOSTICS.md`](03a-DATA-DIAGNOSTICS.md)
-
+**Канон процедуры** (цепочка сборки, curl, `loadCompetitions`): [`03a-DATA-DIAGNOSTICS.md`](03a-DATA-DIAGNOSTICS.md). Симптом → index: [`16-TROUBLESHOOTING.md`](16-TROUBLESHOOTING.md).
 
 ---
 
@@ -184,7 +164,7 @@ npm run export-archive
 
 | Задача | Документ |
 |--------|----------|
-| npm-скрипты, backend scripts | [`04-DEVELOPMENT.md`](04-DEVELOPMENT.md) |
+| npm-скрипты, backend scripts | [`11-DEVELOPMENT.md`](11-DEVELOPMENT.md) |
 | Админка | [`17-ADMIN-WORKFLOW.md`](17-ADMIN-WORKFLOW.md) |
 | Парсеры | [`14-PARSING-RULES.md`](14-PARSING-RULES.md) |
 | Тесты | [`08-TESTING.md`](08-TESTING.md) |

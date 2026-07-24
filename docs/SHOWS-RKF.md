@@ -36,7 +36,25 @@ npx tsx scripts/enrich-show-breed-titles.ts 106   # блок «Титулы»
 
 **Полный скрап с нуля:** `npx tsx parsers/shows/scrape-show-results.ts show <id>`
 
-Подробнее про группы FCI: [`SHOWS-RKF-BREED-GROUPS.md`](SHOWS-RKF-BREED-GROUPS.md).
+## Группы пород и судьи Specialty (каталог AJAX)
+
+**Источник:** AJAX `ExhibitionResultListViewRefresh` (POST, перехват через Playwright при загрузке списка пород). BreedView — только построчные результаты; группы FCI и судья Specialty **не** на BreedView.
+
+| Поле JSON | Наше поле |
+|-----------|-----------|
+| `GroupName` | `breed_group` (на RKF — `h2.titlelight`) |
+| `Items[].Name` | `breed` |
+| `Items[].Count` | `breed_count` |
+| `Items[].LocalizationParameters` (ru-RU) `"BREED (Specialty) Judge"` | `breed_judge` |
+| `Items[].DogBreedId` | `dog_breed_id` |
+
+**Код:** `exhibition-catalog.ts`, `parse-breed-view.ts`, `scrape-show-results.ts`; обогащение — `enrich-show-exhibition.ts`.
+
+```bash
+cd backend && npx tsx scripts/enrich-show-exhibition.ts 106
+```
+
+**BreedView (ru-RU):** секции после `h2.titlelight` (Титулы / Кобели / Суки), протяжка класса, отдельно `grade` и `title`. Фикстура: `backend/fixtures/show-106-refresh-captured.json`.
 
 ## Data Structure
 

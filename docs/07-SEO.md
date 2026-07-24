@@ -163,7 +163,7 @@ URL профилей Донино попадают в **статический**
 />
 ```
 
-#### Страницы судей (`frontend/src/pages/Judges/JudgeDetail.tsx`)
+#### Страницы судей соревнований (`frontend/src/pages/Judges/JudgeDetail.tsx`)
 ```tsx
 <SEO
   title={`${judgeName} - статистика судьи`}
@@ -171,6 +171,8 @@ URL профилей Донино попадают в **статический**
   keywords={`${judgeName}, судья, курсинг, бега борзых, статистика...`}
 />
 ```
+
+Профили судей **выставок** (`ShowJudgeDetail`) — отдельно; канон UI/данных: [`SHOWS.md`](SHOWS.md).
 
 ## robots.txt
 
@@ -311,12 +313,15 @@ useEffect(() => { reachGoal('dog_profile_view') }, [reachGoal])
 
 ## История изменений
 
+### 2026-07-24
+- Главная (home-v2): панели колонок, плоские event-row внутри, CTA `.home-v2-external` / `.home-v2-section-link`; масштаб — центрированные метрики + count-up `StatCounter`; z-index stage-copy над body для listbox поиска. Канон: [`04-FRONTEND.md`](04-FRONTEND.md), токены: [`06-DESIGN-SYSTEM.md`](06-DESIGN-SYSTEM.md)
+
 ### 2026-07-23
 - Фаза A: честные meta без «календаря» на проде; сильные title хабов; `/shows` в sitemap; короткий `DEFAULT_KEYWORDS`; `canonicalUrl` и фактовое description у `/dog/:id` и Донино; SEO guide по вкладкам
 - Фаза B: prerender HTML хабов и `/dog/:id` после Vite build (`prerender-seo` в CI); no-cache для prerender-путей в `_headers`
 - Фаза C: FAQ + FAQPage на Guide; BreadcrumbList JSON-LD на профиле (без дублей шапки в UI)
 - Тексты: слоган и H1 на главной; «Кому полезен» + обновлённый FAQ/рейтинг в справке; угловая атрибуция источника на рейтингах и Донино
-- Главная: две строки hero-stats (соревнования + выставки); «Топ сезона» двумя колонками; титулы соревнований — отдельный CACLBr и сортировка по крутости
+- Главная: блок масштаба базы (соревнования + выставки и secondary-метрики); «Топ сезона» двумя колонками; титулы соревнований — отдельный CACLBr и сортировка по крутости
 
 ### Что дальше (фаза D — в основном вне кода)
 

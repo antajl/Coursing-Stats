@@ -5,6 +5,9 @@ import {
   getJudges,
   getJudgeDetails,
   getSpeedRecords,
+  getShowJudges,
+  getShowJudgeDetails,
+  getShowJudgesStrictnessBaseline,
 } from '../lib/staticData';
 import {
   calendarVisibleFromFlags,
@@ -93,10 +96,15 @@ export function useJudges(breed: string, discipline: string, year = '') {
   });
 }
 
-export function useJudgeDetails(judgeId: string | undefined, breed: string, discipline: string) {
+export function useJudgeDetails(
+  judgeId: string | undefined,
+  breed: string,
+  discipline: string,
+  year = '',
+) {
   return useQuery({
-    queryKey: ['judgeDetails', judgeId, breed, discipline],
-    queryFn: () => getJudgeDetails(judgeId!, breed, discipline),
+    queryKey: ['judgeDetails', judgeId, breed, discipline, year],
+    queryFn: () => getJudgeDetails(judgeId!, breed, discipline, year),
     enabled: !!judgeId,
     staleTime: STALE_MS,
   });
@@ -196,4 +204,29 @@ export function useUiFlags() {
 export function usePublicCalendarVisible(kind: PublicCalendarKind): boolean {
   const { data } = useUiFlags()
   return calendarVisibleFromFlags(kind, data)
+}
+
+export function useShowJudges() {
+  return useQuery({
+    queryKey: ['showJudges'],
+    queryFn: getShowJudges,
+    staleTime: STALE_MS,
+  })
+}
+
+export function useShowJudgeDetails(judgeId: string | undefined) {
+  return useQuery({
+    queryKey: ['showJudgeDetails', judgeId],
+    queryFn: () => getShowJudgeDetails(judgeId),
+    enabled: Boolean(judgeId),
+    staleTime: STALE_MS,
+  })
+}
+
+export function useShowJudgesStrictnessBaseline() {
+  return useQuery({
+    queryKey: ['showJudgesStrictnessBaseline'],
+    queryFn: getShowJudgesStrictnessBaseline,
+    staleTime: STALE_LONG_MS,
+  })
 }

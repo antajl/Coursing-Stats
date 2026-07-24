@@ -6,6 +6,12 @@ import {
   matchShowAwardToken,
   type ShowAwardKey,
 } from '../../../backend/lib/show-award-ranking'
+import {
+  competitionTitleDisplayName,
+  competitionTitleKey,
+  competitionTitleLabel,
+  isKnownCompetitionTitleKey,
+} from '../../../backend/lib/competition-titles'
 import { showAwardBadgeClass, titleBadgeClass } from './qualificationTitles'
 
 /** Окошко тултипа: бейдж + полное название (как в справке). */
@@ -44,13 +50,36 @@ export function awardTooltipForKey(key: ShowAwardKey, count?: number): ReactNode
   )
 }
 
+/** Тултип рабочего титула (курсинг / БЗМП / бега) — тот же layout, что у выставок. */
+export function awardTooltipForCompetitionTitle(raw: string, count?: number): ReactNode {
+  const key = competitionTitleKey(raw)
+  const badgeBase = competitionTitleDisplayName(raw, key)
+  const badge = count != null && count > 1 ? `${badgeBase} ×${count}` : badgeBase
+  return (
+    <AwardTooltipRow
+      badge={badge}
+      label={competitionTitleLabel(raw, key)}
+      badgeClass={titleBadgeClass(badgeBase)}
+    />
+  )
+}
+
 export function awardTooltipForToken(token: string): ReactNode {
-  const key = matchShowAwardToken(token)
-  if (key) return awardTooltipForKey(key)
+  const showKey = matchShowAwardToken(token)
+  if (showKey) return awardTooltipForKey(showKey)
+  const key = competitionTitleKey(token)
+  if (isKnownCompetitionTitleKey(key)) return awardTooltipForCompetitionTitle(token)
   const badge = displayShowAwardToken(token)
   return (
     <AwardTooltipRow badge={badge} label={token} badgeClass={titleBadgeClass(token)} />
   )
+}
+
+/** Тултип чипа шапки профиля (выставка или курсинг/беги). */
+export function awardTooltipForDogTitle(title: string, count?: number): ReactNode {
+  const showKey = matchShowAwardToken(title)
+  if (showKey) return awardTooltipForKey(showKey, count)
+  return awardTooltipForCompetitionTitle(title, count)
 }
 
 export function awardTooltipList(

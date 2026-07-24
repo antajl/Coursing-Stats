@@ -127,7 +127,8 @@ export function animateCount(
   value: number,
   options: { duration?: number; from?: number } = {},
 ): gsap.core.Tween | void {
-  const { duration = 1.2, from = 0 } = options
+  const { duration = 1.35, from = 0 } = options
+  const format = (n: number) => String(Math.round(n))
 
   if (value <= 0) {
     el.textContent = '0'
@@ -135,18 +136,19 @@ export function animateCount(
   }
 
   if (prefersReducedMotion()) {
-    el.textContent = String(value)
+    el.textContent = format(value)
     return
   }
 
   const counter = { val: from }
+  el.textContent = format(from)
   return gsap.to(counter, {
     val: value,
     duration,
     ease: 'power3.out',
     overwrite: 'auto',
     onUpdate: () => {
-      el.textContent = String(Math.round(counter.val))
+      el.textContent = format(counter.val)
     },
   })
 }

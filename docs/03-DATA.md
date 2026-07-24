@@ -67,7 +67,7 @@ data/v1/
             ├── dog-ranking.json          # all-time рейтинг (исключён из деплоя, >25 MB)
             ├── home-top-{year}.json      # топ-3 для главной (+ titles для метрики)
             ├── hero-stats.json           # счётчики выставок на главной
-            └── judges.json                # индекс судей выставок
+            └── judges.json                # судьи + excellent_rate / graded / by_year* (≥30 → UI %)
 └── pc-db.sqlite               # для dev-админки; не источник правды для прода
 ```
 
@@ -243,7 +243,8 @@ CS  = round(μ̃ + P + E, 2)                   # rating_score
 
 - Агрегация профиля: `backend/lib/competition-titles.ts` → `aggregateQualificationTitles` (в `dog-profiles` при `build-derived-indexes`).
 - **CACLBr ≠ CACL** (отдельный ключ и счётчик).
-- Чипы в шапке профиля и в истории старта сортируются **по крутости** (ЧР / ЧРКФ → CACIL/CACL → CACLBr → RegCACL…): `compareCompetitionTitles` + категории в `awardCategories.ts` / `awardChipRender.tsx`.
+- Шапка профиля: два домена — слева **Курсинг и бега**, справа **Выставки** (`buildDogProfileTitleGroups`); счётчики = max(индекс, пересчёт по всей истории).
+- Чипы внутри домена сортируются **по крутости** (ГЧР → C.I.C. → ЧР → НЧ → ПКР → ЧРКФ → CACIL → CACL → CACLBr → RegCACL…): `compareCompetitionTitles` + категории в `awardCategories.ts` / `awardChipRender.tsx`.
 - Дубль одного протокола на два `event_id` (одинаковые собаки/места/баллы) **задваивает** старты и индекс CS — такие пары нужно удалять из `competitions/` + `calendar/` и пересобирать indexes. Пример: 2026-04-18 Казань БЗМП `1305` (оставить) / `1306` (удалён как копия).
 
 Выставки: склейка «порода+судья» в сырых `exhibitions/*.json` чистится при сборке индексов — см. [`SHOWS.md`](SHOWS.md) → Build Pipeline.
@@ -308,7 +309,7 @@ npm run build-all-data
 git commit && push
 ```
 
-Подробно про D1: `docs/12-DATABASE-SCHEMA.md` (схема) и `docs/13-DATABASE-WORKFLOW.md` (workflow).  
+Подробно про D1: stubs [`12-DATABASE-SCHEMA.md`](12-DATABASE-SCHEMA.md) / [`13-DATABASE-WORKFLOW.md`](13-DATABASE-WORKFLOW.md) → [`archive/`](archive/README.md).  
 Бэкап-снимки D1: раздел «Data Archive» ниже (`npm run export-archive`).
 
 ---
@@ -395,8 +396,8 @@ D1 remote может отличаться — только для импорта
 |----------|--------------|
 | `docs/02-ARCHITECTURE.md` | Общая архитектура, компоненты |
 | `docs/03a-DATA-DIAGNOSTICS.md` | Пустой рейтинг/судьи на проде |
-| `docs/12-DATABASE-SCHEMA.md` | Legacy схема D1 (только импорт) |
-| `docs/13-DATABASE-WORKFLOW.md` | Legacy D1 workflow (только импорт) |
+| `docs/12-DATABASE-SCHEMA.md` | Legacy схема D1 (stub → `archive/`) |
+| `docs/13-DATABASE-WORKFLOW.md` | Legacy D1 workflow (stub → `archive/`) |
 | `docs/14-PARSING-RULES.md` | Правила парсеров procoursing.ru |
 | `docs/15-PARSING-IMPLEMENTATION.md` | Детали парсеров |
 | `docs/05-API-REFERENCE.md` | Эндпоинты локального API |

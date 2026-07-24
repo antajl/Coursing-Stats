@@ -131,10 +131,10 @@ export default function HoverTooltip({
           role="tooltip"
           className={`${pointerClass} absolute ${positionClass} z-50 ${panelClass} transition-none ${
             useCssOnly
-              ? 'invisible opacity-0 group-hover/tip:visible group-hover/tip:opacity-100 group-focus-within/tip:visible group-focus-within/tip:opacity-100'
+              ? 'hidden group-hover/tip:block group-focus-within/tip:block'
               : open
-                ? 'visible opacity-100'
-                : 'invisible opacity-0'
+                ? 'block'
+                : 'hidden'
           }`}
         >
           {label}

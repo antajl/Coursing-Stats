@@ -6,10 +6,17 @@ test.describe('Mobile Viewport', () => {
 
   const pages = [
     { path: '/', name: 'home' },
+    { path: '/competitions?tab=ranking', name: 'competitions-ranking' },
     { path: '/competitions?tab=judges', name: 'judges' },
+    { path: '/competitions?tab=calendar', name: 'competitions-calendar' },
+    { path: '/shows?tab=ranking', name: 'shows-ranking' },
+    { path: '/shows?tab=judges', name: 'shows-judges' },
+    { path: '/shows?tab=calendar', name: 'shows-calendar' },
     { path: '/speed-records', name: 'speed-records' },
-    { path: '/competitions', name: 'competitions' },
+    { path: '/speed-records?view=stats', name: 'speed-records-stats' },
     { path: '/guide', name: 'guide' },
+    { path: '/dog/182', name: 'dog-profile' },
+    { path: '/judges/%D0%9A%D0%B0%D1%80%D0%B5%D0%BB%D0%B8%D0%BD%D0%B0%20%D0%9D.%D0%92.', name: 'judge-detail' },
   ] as const
 
   for (const { path, name } of pages) {
