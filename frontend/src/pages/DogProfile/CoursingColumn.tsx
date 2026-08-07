@@ -7,6 +7,7 @@ import {
   DisciplineColumnShell,
   DisciplineFooterRow,
   DisciplineHistoryCard,
+  DisciplineHeroLinkHint,
   DisciplineStatsCard,
   disciplineTheme,
 } from './DisciplineColumnShell'
@@ -71,9 +72,7 @@ export function CoursingColumn({
       <div className={`text-4xl font-bold tracking-tight tabular-nums ${t.heroValue}`}>
         {formatScore(coursing.best_score)}
       </div>
-      <div className="mt-2 min-h-[1.25rem] text-sm font-medium text-forest-600 opacity-0 transition-opacity group-hover:opacity-100 dark:text-forest-500">
-        открыть результаты →
-      </div>
+      <DisciplineHeroLinkHint theme={THEME} />
     </>
   )
 

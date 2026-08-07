@@ -15,7 +15,7 @@ import TopDogsFilters from './TopDogsFilters'
 import TopDogsColumns from './TopDogsColumns'
 import { filterCombinedRanking, filterSpeed } from './filterUtils'
 import { buildCombinedRanking } from './mergeCombinedRanking'
-import { useAuth, getLocalStorageFavorites } from '../../contexts/AuthContext'
+import { useFavorites } from '../../hooks/useFavorites'
 
 const CURRENT_SEASON = String(new Date().getFullYear())
 
@@ -30,7 +30,7 @@ export default function TopDogs() {
   const [searchParams] = useSearchParams()
   const isEmbedded = location.pathname === '/competitions'
   const { reachGoal } = useYandexGoal()
-  const { isAuthenticated } = useAuth()
+  const { favorites, toggleFavorite } = useFavorites()
 
   const [filterYear, setFilterYear] = useState(() => initialYearFilter(searchParams))
   const [filterBreed, setFilterBreed] = useState(() => searchParams.get('breed') || '')
@@ -40,26 +40,6 @@ export default function TopDogs() {
   const [filterMinStarts, setFilterMinStarts] = useState(() => searchParams.get('minStarts') || '')
   const [filterScoreFrom, setFilterScoreFrom] = useState(() => searchParams.get('scoreFrom') || '')
   const [filterSpeedFrom, setFilterSpeedFrom] = useState(() => searchParams.get('speedFrom') || '')
-
-  const [favorites, setFavorites] = useState<Set<string>>(() => {
-    return new Set(getLocalStorageFavorites())
-  })
-
-  useEffect(() => {
-    if (!isAuthenticated) return
-
-    const loadCloudFavorites = async () => {
-      try {
-        const { authApi } = await import('../../lib/authApi')
-        const { favorites: favoriteIds } = await authApi.getFavorites()
-        setFavorites(new Set(favoriteIds))
-      } catch (error) {
-        console.error('Failed to load cloud favorites:', error)
-      }
-    }
-
-    loadCloudFavorites()
-  }, [isAuthenticated])
 
   useEffect(() => {
     if (filterYear || filterBreed || searchQuery || filterMinStarts || filterScoreFrom || filterSpeedFrom) {
@@ -153,7 +133,7 @@ export default function TopDogs() {
       {!isEmbedded && (
         <SEO
           title="Рейтинг собак"
-          description="Единый рейтинг курсинга и БЗМП: Elo, индекс CS и медали. Фильтры по породе и сезону. Статистика выступлений."
+          description="Единый рейтинг курсинга и БЗМП: зачёт сезона по медалям, CS как тай-брейк, Elo на карточке как справка. Фильтры по породе и сезону."
           canonicalUrl="https://coursing-stats.ru/competitions?tab=ranking"
         />
       )}
@@ -189,41 +169,10 @@ export default function TopDogs() {
           filteredSpeed={filteredSpeed}
           filterYear={filterYear}
           favorites={favorites}
-          onToggleFavorite={async (dogId: string) => {
-            const previousFavorites = new Set(favorites)
-            const newFavorites = new Set(favorites)
-            const isRemoving = newFavorites.has(dogId)
-
-            if (isRemoving) {
-              newFavorites.delete(dogId)
-            } else {
-              newFavorites.add(dogId)
-            }
-
-            setFavorites(newFavorites)
-
-            try {
-              if (isRemoving) {
-                if (isAuthenticated) {
-                  const { authApi } = await import('../../lib/authApi')
-                  await authApi.removeFavorite(dogId)
-                } else {
-                  const { removeLocalStorageFavorite } = await import('../../contexts/AuthContext')
-                  removeLocalStorageFavorite(dogId)
-                }
-              } else {
-                if (isAuthenticated) {
-                  const { authApi } = await import('../../lib/authApi')
-                  await authApi.addFavorite(dogId)
-                } else {
-                  const { addLocalStorageFavorite } = await import('../../contexts/AuthContext')
-                  addLocalStorageFavorite(dogId)
-                }
-              }
-            } catch (error) {
+          onToggleFavorite={(dogId, meta) => {
+            void toggleFavorite(dogId, meta).catch((error) => {
               console.error('Failed to toggle favorite:', error)
-              setFavorites(previousFavorites)
-            }
+            })
           }}
         />
       )}

@@ -1,14 +1,8 @@
 import { Composer } from 'grammy';
 import { CoursingStatsAPI } from '../../api';
-import { getNavigationButtons, getJudgesMenu, getJudgesKeyboard } from '../../keyboards';
+import { getNavigationButtons, getJudgesKeyboard } from '../../keyboards';
 import { RatingItem } from '../../types';
-
-// Cloudflare Workers KV namespace type (from @cloudflare/workers-types)
-type KVNamespace = {
-  get(key: string, type?: string): Promise<string | null>;
-  put(key: string, value: string, options?: { expirationTtl?: number }): Promise<void>;
-  delete(key: string): Promise<void>;
-};
+import type { KVNamespace } from '../context';
 
 /**
  * Обработчики рейтинга судей

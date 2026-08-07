@@ -104,6 +104,9 @@ export interface Rating {
   gold?: number;
   silver?: number;
   bronze?: number;
+  /** Racing speed ranking (top-speed-*) */
+  best_speed?: number;
+  avg_speed?: number;
 }
 
 // Расширенные интерфейсы для данных из API

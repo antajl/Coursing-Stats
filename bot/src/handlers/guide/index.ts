@@ -8,7 +8,7 @@ import { getNavigationButtons } from '../../keyboards';
  * @param cache - опциональное KV хранилище для кэширования
  * @returns экземпляр Composer с обработчиками справки
  */
-export function createGuide(api: CoursingStatsAPI, cache?: KVNamespace) {
+export function createGuide(api: CoursingStatsAPI) {
   const guide = new Composer();
 
   /**

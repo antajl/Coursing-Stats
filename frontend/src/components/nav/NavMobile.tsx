@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import ThemeToggle from '../ThemeToggle'
+import FavoritesCapsule from './FavoritesCapsule'
 import { usePublicCalendarVisible } from '../../hooks/useStaticData'
 import { useNavLogoVisibility } from './useNavLogoVisibility'
 import { DATA_SOURCE_LINKS, GUIDE_MENU_ITEMS } from './navLinks'
@@ -65,7 +66,8 @@ export function NavMobile({
             style={{ objectFit: 'contain' }}
           />
         </Link>
-        <div className="flex items-center gap-2">
+        <div className="flex min-w-0 flex-1 items-center justify-end gap-2">
+          <FavoritesCapsule />
           <ThemeToggle />
           <button
             onClick={onToggleMobileMenu}

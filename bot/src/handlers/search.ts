@@ -1,9 +1,11 @@
 import { Composer } from 'grammy';
 import { CoursingStatsAPI } from '../api';
-import { getNavigationButtons, getDogSelectionKeyboard } from '../keyboards';
+import { getNavigationButtons, getDogSelectionKeyboard, getDogCardKeyboard } from '../keyboards';
 import { sanitizeInput, validateDogId, validateSearchQuery } from './utils/validators';
 import { getDisplayName } from './utils/helpers';
+import { formatDogCard } from './utils/dogCard';
 import { Dog } from '../types';
+import type { KVNamespace } from './context';
 
 /**
  * Форматирует дату в русский формат (ДД.ММ.ГГГГ)
@@ -26,13 +28,6 @@ function formatDateRussian(dateString: string): string {
     return dateString;
   }
 }
-
-// Cloudflare Workers KV namespace type (from @cloudflare/workers-types)
-type KVNamespace = {
-  get(key: string, type?: string): Promise<string | null>;
-  put(key: string, value: string, options?: { expirationTtl?: number }): Promise<void>;
-  delete(key: string): Promise<void>;
-};
 
 /**
  * Вспомогательные функции для обработки профиля собаки
@@ -58,22 +53,9 @@ async function handleDogIdSearch(ctx: any, dogId: string, api: CoursingStatsAPI)
       return;
     }
     
-    const dog = dogData.dog;
-    const text = `
-<b>${dog.name_lat || dog.name_ru || 'N/A'}</b> (${dog.breed || 'N/A'})
-
-<b>Статистика:</b>
-• Курсинг: ${dog.coursing_stats.total_starts} стартов, лучш. ${dog.coursing_stats.best_score}
-• Бега: ${dog.racing_stats.total_starts} стартов, лучш. ${dog.racing_stats.best_speed} км/ч
-• Медали: ${dog.coursing_stats.gold + dog.racing_stats.gold}🥇 ${dog.coursing_stats.silver + dog.racing_stats.silver}🥈 ${dog.coursing_stats.bronze + dog.racing_stats.bronze}🥉
-${dog.shows_stats ? `• Выставки: ${dog.shows_stats.total_starts} стартов, ${dog.shows_stats.points} очков` : ''}
-
-<a href="https://coursing-stats.ru/dog/${dog.id}">🌐 Подробности на сайте</a>
-    `.trim();
-    
-    await ctx.reply(text, {
+    await ctx.reply(formatDogCard(dogData), {
       parse_mode: 'HTML',
-      reply_markup: getNavigationButtons('main_menu', 'main_menu')
+      reply_markup: getDogCardKeyboard(dogData.dog.id.toString())
     });
   } catch (error) {
     await ctx.reply('❌ Ошибка при загрузке профиля собаки. Попробуйте позже.', {
@@ -106,15 +88,37 @@ async function handleDogNameSearch(ctx: any, dogName: string, api: CoursingStats
   
   await ctx.reply(`<b>🔍 Поиск собаки: ${dogName}</b>`, { parse_mode: 'HTML' });
   
-  // Context-aware search: check Donino records first
+  // Prefer competition dogs; Donino is a separate domain (name+breed)
+  const dogs = await api.searchDogsByName(dogName, undefined, 5);
+  
+  if (dogs.length > 0) {
+    let text = `<b>Найдено собак: ${dogs.length}</b>\n\n`;
+    
+    dogs.forEach((dog: Dog, index: number) => {
+      const name = getDisplayName(dog);
+      text += `${index + 1}. ${name}\n`;
+    });
+    
+    if (dogs.length === 5) {
+      text += '\n<i>Показаны первые 5 результатов. Для более точного поиска введите более конкретное название.</i>';
+    }
+    
+    text += '\n\nВыберите собаку для просмотра:';
+    
+    await ctx.reply(text, { 
+      parse_mode: 'HTML',
+      reply_markup: getDogSelectionKeyboard(dogs)
+    });
+    return;
+  }
+
   const doninoResults = await api.searchDoninoRecords(dogName);
   
   if (doninoResults.speed.length > 0 || doninoResults.coursing.length > 0) {
-    // Found in Donino records - show Donino profile
     const speedRecord = doninoResults.speed[0];
     const coursingRecord = doninoResults.coursing[0];
     
-    let text = `<b>🏆 ${speedRecord.name || coursingRecord.name}</b> (Рекорды Донино)\n\n`;
+    let text = `<b>🏆 ${speedRecord?.name || coursingRecord?.name}</b> (Рекорды Донино)\n\n`;
     
     if (speedRecord) {
       text += `<b>Рекорды скорости:</b>\n`;
@@ -136,34 +140,10 @@ async function handleDogNameSearch(ctx: any, dogName: string, api: CoursingStats
     return;
   }
   
-  // Not found in Donino, search in regular competitions/shows
-  const dogs = await api.searchDogsByName(dogName, undefined, 5);
-  
-  if (dogs.length === 0) {
-    await ctx.reply(
-      '❌ Собаки не найдены.\n\nПопробуйте:\n• Другое написание клички\n• Введите ID собаки (число)\n• Более конкретный запрос',
-      { reply_markup: getNavigationButtons('main_menu', 'main_menu') }
-    );
-    return;
-  }
-  
-  let text = `<b>Найдено собак: ${dogs.length}</b>\n\n`;
-  
-  dogs.forEach((dog: Dog, index: number) => {
-    const name = getDisplayName(dog);
-    text += `${index + 1}. ${name}\n`;
-  });
-  
-  if (dogs.length === 5) {
-    text += '\n<i>Показаны первые 5 результатов. Для более точного поиска введите более конкретное название.</i>';
-  }
-  
-  text += '\n\nВыберите собаку для просмотра:';
-  
-  await ctx.reply(text, { 
-    parse_mode: 'HTML',
-    reply_markup: getDogSelectionKeyboard(dogs)
-  });
+  await ctx.reply(
+    '❌ Собаки не найдены.\n\nПопробуйте:\n• Другое написание клички\n• Введите ID собаки (число)\n• Более конкретный запрос',
+    { reply_markup: getNavigationButtons('main_menu', 'main_menu') }
+  );
 }
 
 /**
@@ -208,8 +188,12 @@ export function createSearch(api: CoursingStatsAPI, cache?: KVNamespace) {
     
     // Check for clear command (as text, not just slash command)
     if (text.toLowerCase() === 'clear' || text.toLowerCase() === 'очистить') {
-      // Trigger the clear command
-      await ctx.reply('/clear');
+      if (userId && cache) {
+        await cache.delete(`compare:${userId}`);
+      }
+      await ctx.reply('Режим сравнения сброшен.', {
+        reply_markup: getNavigationButtons('main_menu', 'main_menu')
+      });
       return;
     }
     

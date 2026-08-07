@@ -81,9 +81,15 @@ export function sortEventsByDate(events: Competition[]): Competition[] {
  * @param events - массив событий для отображения
  * @param year - год для заголовка
  * @param type - тип событий для заголовка
+ * @param offset - смещение для пагинации (по 10)
  * @returns отформатированный текст сообщения
  */
-export function formatCalendarText(events: Competition[], year: number, type: 'all' | 'coursing' | 'racing' | 'shows'): string {
+export function formatCalendarText(
+  events: Competition[],
+  year: number,
+  type: 'all' | 'coursing' | 'racing' | 'shows',
+  offset: number = 0
+): string {
   const typeLabels = {
     all: 'Календарь соревнований',
     coursing: 'Календарь соревнований по курсингу',
@@ -103,11 +109,19 @@ export function formatCalendarText(events: Competition[], year: number, type: 'a
   if (events.length === 0) {
     text += emptyMessages[type];
   } else {
-    events.slice(0, 10).forEach((event, index) => {
-      const date = formatDateRussian(event.date_start || event.date || '');
-      const name = event.title || event.name || 'Название не указано';
-      text += `${index + 1}. ${date} - ${name}\n`;
-    });
+    const page = events.slice(offset, offset + 10);
+    if (page.length === 0) {
+      text += emptyMessages[type];
+    } else {
+      page.forEach((event, index) => {
+        const date = formatDateRussian(event.date_start || event.date || '');
+        const name = event.title || event.name || 'Название не указано';
+        text += `${offset + index + 1}. ${date} - ${name}\n`;
+      });
+      if (events.length > offset + 10) {
+        text += `\n<i>Показано ${offset + 1}–${offset + page.length} из ${events.length}</i>`;
+      }
+    }
   }
   
   return text;

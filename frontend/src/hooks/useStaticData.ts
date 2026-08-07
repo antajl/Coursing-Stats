@@ -146,7 +146,22 @@ export function useDogProfile(dogId: string) {
     queryFn: async () => {
       const result = await fetchStaticData<DogProfileData>(`/data/v1/indexes/dog-profiles/${dogId}.json`);
       if (result.success && result.data?.dog) {
-        return { success: true, data: result.data.dog };
+        const file = result.data as DogProfileData & {
+          elo_rating?: number | null
+          elo_races?: number | null
+          elo_reliable?: boolean
+          elo_low_data?: boolean
+        }
+        return {
+          success: true,
+          data: {
+            ...file.dog,
+            elo_rating: file.elo_rating ?? null,
+            elo_races: file.elo_races ?? null,
+            elo_reliable: file.elo_reliable,
+            elo_low_data: file.elo_low_data,
+          },
+        };
       }
       return result;
     },
