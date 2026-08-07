@@ -75,6 +75,17 @@ export interface SpeedRecord {
   speed?: number;
   max_speed?: number;
   speed_value?: number;
+  speed_km_h?: number;
+  sex?: string;
+  status?: string;
+  track_type?: string | null;
+  screenshot_url?: string;
+  history?: Array<{
+    speed_km_h?: number;
+    speed_kmh?: number;
+    date: string;
+    track_type?: string | null;
+  }>;
 }
 
 export interface CoursingRecord {
@@ -82,6 +93,12 @@ export interface CoursingRecord {
   breed: string;
   time_seconds: number;
   date: string;
+  status?: string;
+  track_length?: number;
+  history?: Array<{
+    time_seconds: number;
+    date: string;
+  }>;
 }
 
 export interface Rating {
