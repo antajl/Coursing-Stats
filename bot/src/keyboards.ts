@@ -10,8 +10,9 @@ export function getMainInlineMenu(): InlineKeyboard {
     .text(`${unicodeIcons.shows} Выставки`, 'shows_menu')
     .row()
     .text(`${unicodeIcons.donino} Донино`, 'donino_records')
-    .text(`${unicodeIcons.book} Справка`, 'guide_menu')
+    .text(`${unicodeIcons.favorites} Избранное`, 'favorites')
     .row()
+    .text(`${unicodeIcons.book} Справка`, 'guide_menu')
     .url(`${unicodeIcons.website} Открыть сайт`, 'https://coursing-stats.ru');
 
   return keyboard;
@@ -96,7 +97,7 @@ export function getYearsMenu(category: string, includeAllYears: boolean = true):
       keyboard.row();
     }
     if (category.startsWith('rating_shows')) {
-      keyboard.text(year, `shows_${year}`);
+      keyboard.text(year, `rating_shows_${year}`);
     } else {
       keyboard.text(year, `${category}_${year}_0`);
     }
@@ -171,6 +172,13 @@ export function getJudgesKeyboard(currentType: 'competition' | 'shows'): InlineK
   }
 
   keyboard.row();
+  if (currentType === 'competition') {
+    keyboard.url('🌐 На сайте', 'https://coursing-stats.ru/competitions?tab=judges');
+  } else {
+    keyboard.url('🌐 На сайте', 'https://coursing-stats.ru/shows?tab=judges');
+  }
+
+  keyboard.row();
   keyboard.text('← Назад', 'main_menu');
   keyboard.text('🏠 На главную', 'main_menu');
 
@@ -194,17 +202,16 @@ export function getRatingKeyboard(discipline: string, category: string, year: st
 
   keyboard.row();
 
-  // Category toggle (score/placement) - only for coursing and racing
-  if (discipline !== 'shows' && year !== 'all') {
+  // Category toggle (score/placement) - only for coursing (racing = speed index)
+  if (discipline === 'coursing' && year !== 'all') {
     const otherCategory = category === 'score' ? 'placement' : 'score';
     const categoryLabel = category === 'score' ? 'По медалям' : 'По очкам';
     keyboard.text(categoryLabel, `rating_${discipline}_${otherCategory}_${year}`);
-
-    // Year selector button
     keyboard.text('Другой год', `rating_${discipline}_${category}_years`);
-  } else if (discipline !== 'shows' && year === 'all') {
-    // For "all years" category, no toggle
+  } else if (discipline === 'coursing' && year === 'all') {
     keyboard.text('Другой год', `rating_${discipline}_${category}_years`);
+  } else if (discipline === 'racing') {
+    keyboard.text('Другой год', `rating_racing_placement_years`);
   } else {
     // For shows, only year selector
     keyboard.text('Другой год', `rating_shows_years`);
@@ -212,11 +219,22 @@ export function getRatingKeyboard(discipline: string, category: string, year: st
 
   keyboard.row();
 
-  // Pagination button
-  if (offset === 0) {
-    keyboard.text('Ещё 5', `rating_${discipline}_${category}_${year}_5`);
+  // Pagination — only coursing/racing (shows: top-10 fixed, no handler)
+  if (discipline !== 'shows') {
+    if (offset === 0) {
+      keyboard.text('Ещё 5', `rating_${discipline}_${category}_${year}_5`);
+    } else {
+      keyboard.text('Назад', `rating_${discipline}_${category}_${year}_0`);
+    }
+    keyboard.row();
+  }
+
+  if (discipline === 'shows') {
+    keyboard.url('🌐 На сайте', 'https://coursing-stats.ru/shows?tab=ranking');
+  } else if (discipline === 'racing') {
+    keyboard.url('🌐 На сайте', 'https://coursing-stats.ru/competitions?tab=ranking');
   } else {
-    keyboard.text('Назад', `rating_${discipline}_${category}_${year}_0`);
+    keyboard.url('🌐 На сайте', 'https://coursing-stats.ru/competitions?tab=ranking');
   }
 
   keyboard.row();
@@ -261,31 +279,49 @@ export function getCalendarKeyboard(offset: string | number = 0, isShows: boolea
   }
 
   keyboard.row();
-  keyboard.text('← Назад', 'competitions_menu');
+  if (isShows) {
+    keyboard.url('🌐 На сайте', 'https://coursing-stats.ru/shows?tab=calendar');
+  } else {
+    keyboard.url('🌐 На сайте', 'https://coursing-stats.ru/competitions?tab=calendar');
+  }
+
+  keyboard.row();
+  keyboard.text('← Назад', isShows ? 'shows_menu' : 'competitions_menu');
   keyboard.text('🏠 На главную', 'main_menu');
 
   return keyboard;
 }
 
-// Calendar filters keyboard - no longer needed, filters are inline now
-// export function getCalendarFiltersKeyboard(): InlineKeyboard {
-//   return new InlineKeyboard()
-//     .text('Курсинг', 'filter_coursing')
-//     .text('Бега борзых', 'filter_racing')
-//     .row()
-//     .text('Все', 'filter_all')
-//     .row()
-//     .text('← Назад', 'calendar');
-// }
+/** Список избранного: номер → dog:{id} */
+export function getFavoritesKeyboard(
+  dogs: Array<{ id: number; name_lat?: string; name_ru?: string }>
+): InlineKeyboard {
+  const keyboard = new InlineKeyboard();
 
-export function getDogCardKeyboard(dogId: string): InlineKeyboard {
+  dogs.forEach((dog, index) => {
+    const label = `${index + 1}`;
+    keyboard.text(label, `dog:${dog.id}`);
+    if ((index + 1) % 5 === 0) {
+      keyboard.row();
+    }
+  });
+
+  if (dogs.length % 5 !== 0) {
+    keyboard.row();
+  }
+  keyboard.text(`${unicodeIcons.back} Назад`, 'main_menu');
+  keyboard.text(`${unicodeIcons.home} На главную`, 'main_menu');
+  return keyboard;
+}
+
+export function getDogCardKeyboard(dogId: string, backCallback: string = 'main_menu'): InlineKeyboard {
   return new InlineKeyboard()
-    .text('В избранное', `favorite_${dogId}`)
-    .text('На сайт', `site_${dogId}`)
+    .text('В избранное', `add_favorite:${dogId}`)
+    .url('На сайт', `https://coursing-stats.ru/dog/${dogId}`)
     .row()
     .text('Сравнить с другой', `compare_start_${dogId}`)
     .row()
-    .text('← Назад', 'main_menu')
+    .text('← Назад', backCallback)
     .text('🏠 На главную', 'main_menu');
 }
 

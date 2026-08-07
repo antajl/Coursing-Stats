@@ -7,19 +7,24 @@ import {
   getDogSelectionKeyboard,
   getDoninoMenu,
   getJudgesMenu,
+  getJudgesKeyboard,
   getRatingKeyboard,
-  getCalendarKeyboard
+  getCalendarKeyboard,
+  getDogCardKeyboard,
+  getFavoritesKeyboard
 } from './keyboards';
 
 describe('Keyboards', () => {
   describe('getMainInlineMenu', () => {
-    it('should return main menu keyboard', () => {
+    it('should return main menu keyboard with favorites', () => {
       const keyboard = getMainInlineMenu();
       expect(keyboard).toBeDefined();
-      // Check that it has the expected structure
       const inlineKeyboard = keyboard.inline_keyboard;
       expect(inlineKeyboard).toBeDefined();
       expect(inlineKeyboard.length).toBeGreaterThan(0);
+      const callbacks = inlineKeyboard.flat().map((b) => ('callback_data' in b ? b.callback_data : null));
+      expect(callbacks).toContain('favorites');
+      expect(callbacks).toContain('search_dog');
     });
   });
 
@@ -70,6 +75,54 @@ describe('Keyboards', () => {
       }
 
       expect(yearCount).toBe(currentYear - 2015 + 1);
+    });
+
+    it('should emit rating_shows_{year} for show rankings', () => {
+      const year = new Date().getFullYear().toString();
+      const keyboard = getYearsMenu('rating_shows', false);
+      const callbacks = keyboard.inline_keyboard.flat()
+        .map((b) => ('callback_data' in b ? b.callback_data : null))
+        .filter(Boolean);
+      expect(callbacks).toContain(`rating_shows_${year}`);
+      expect(callbacks.some((c) => typeof c === 'string' && c.startsWith('shows_') && !c.startsWith('rating_shows_'))).toBe(false);
+    });
+  });
+
+  describe('getDogCardKeyboard', () => {
+    it('should use add_favorite and site URL matching handlers', () => {
+      const keyboard = getDogCardKeyboard('123');
+      const buttons = keyboard.inline_keyboard.flat();
+      const favorite = buttons.find((b) => 'callback_data' in b && b.callback_data === 'add_favorite:123');
+      const site = buttons.find((b) => 'url' in b && b.url === 'https://coursing-stats.ru/dog/123');
+      expect(favorite).toBeDefined();
+      expect(site).toBeDefined();
+    });
+  });
+
+  describe('getFavoritesKeyboard', () => {
+    it('emits dog:{id} callbacks for each favorite', () => {
+      const keyboard = getFavoritesKeyboard([
+        { id: 10, name_lat: 'A' },
+        { id: 20, name_ru: 'B' },
+      ]);
+      const callbacks = keyboard.inline_keyboard.flat()
+        .map((b) => ('callback_data' in b ? b.callback_data : null));
+      expect(callbacks).toContain('dog:10');
+      expect(callbacks).toContain('dog:20');
+    });
+  });
+
+  describe('site links on list keyboards', () => {
+    it('calendar competitions has site URL', () => {
+      const keyboard = getCalendarKeyboard(0, false, 'all');
+      const urls = keyboard.inline_keyboard.flat().map((b) => ('url' in b ? b.url : null));
+      expect(urls).toContain('https://coursing-stats.ru/competitions?tab=calendar');
+    });
+
+    it('judges shows has site URL', () => {
+      const keyboard = getJudgesKeyboard('shows');
+      const urls = keyboard.inline_keyboard.flat().map((b) => ('url' in b ? b.url : null));
+      expect(urls).toContain('https://coursing-stats.ru/shows?tab=judges');
     });
   });
 

@@ -1,14 +1,18 @@
 import { Link } from 'react-router-dom'
 import { ChevronLeft, Star as StarIcon, Rabbit, Gauge, Sparkles } from 'lucide-react'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import OwnerCrownName from '../../components/OwnerCrownName'
 import { type DogTitle } from '../../lib/qualificationTitles'
 import { renderGroupedDogTitles } from '../../lib/awardChipRender'
 import { parseDogName } from '../../lib/dogName'
 import { displayBreed } from '../../lib/breedMapping'
-import { useAuth } from '../../contexts/AuthContext'
-import { authApi } from '../../lib/authApi'
+import { useFavorites } from '../../hooks/useFavorites'
 import { createLogger } from '../../lib/logging'
+import StandingPlaceButton, {
+  type RankDomain,
+  type StandingExplainerInput,
+  type StandingExplainerScope,
+} from './StandingPlaceExplainer'
 
 const profileLogger = createLogger('dog-profile')
 
@@ -18,7 +22,7 @@ const BREED_ARCHIVE_FAVICON = '/assets/icons/breedarchive.webp'
 export type ProfileHeaderRank = {
   key: 'coursing' | 'racing' | 'shows'
   label: string
-  rank: number
+  rank: number | null
   href: string
   yearRank?: number
   breedRank?: number
@@ -39,6 +43,12 @@ type DogProfileHeaderProps = {
   onExport: () => void
   /** Места во всевременных рейтингах — показываем любые 1–3 из трёх. */
   ranks?: ProfileHeaderRank[]
+  /** Данные для «почему это место» по колонкам. */
+  explainers?: {
+    coursing?: StandingExplainerInput | null
+    racing?: StandingExplainerInput | null
+    shows?: StandingExplainerInput | null
+  }
 }
 
 function TitleDomainBlock({ label, titles }: { label: string; titles: DogTitle[] }) {
@@ -64,47 +74,63 @@ export function DogProfileHeader({
   onBack,
   onExport,
   ranks = [],
+  explainers = {},
 }: DogProfileHeaderProps) {
   const { primary, secondary } = parseDogName(dog.name_lat, dog.name_ru)
   const breedDisplay = displayBreed(dog.breed)
   const hasTitles = showTitles.length > 0 || competitionTitles.length > 0
   const hasRanks = ranks.length > 0
-  const { isAuthenticated } = useAuth()
-  const [isFavorite, setIsFavorite] = useState(false)
+  const { isFavorite, toggleFavorite } = useFavorites()
   const [loadingFavorite, setLoadingFavorite] = useState(false)
+  const dogId = String(dog.id)
+  const favorite = isFavorite(dogId)
 
-  useEffect(() => {
-    if (!isAuthenticated) return
-    const checkFavorite = async () => {
-      try {
-        const { favorites } = await authApi.getFavorites()
-        setIsFavorite(favorites.includes(dog.id))
-      } catch (error) {
-        console.error('Failed to check favorite status:', error)
-      }
+  const rankColor = (val: number | null | undefined) => {
+    if (val == null) return 'text-charcoal-400 dark:text-charcoal-500'
+    if (val <= 3) return 'text-amber-600 dark:text-amber-400 font-semibold'
+    if (val <= 4) return 'text-charcoal-700 dark:text-charcoal-300'
+    return 'text-charcoal-500 dark:text-charcoal-400'
+  }
+
+  const renderPlace = (
+    domain: RankDomain,
+    scope: StandingExplainerScope,
+    value: number | null | undefined,
+    row: ProfileHeaderRank | undefined,
+  ) => {
+    const base = explainers[domain]
+    if (base && value != null) {
+      return (
+        <StandingPlaceButton
+          value={value}
+          domain={domain}
+          scope={scope}
+          className={`text-[11px] tabular-nums ${rankColor(value)}`}
+          data={{
+            ...base,
+            rank: row?.rank,
+            yearRank: row?.yearRank,
+            breedRank: row?.breedRank,
+            yearBreedRank: row?.yearBreedRank,
+          }}
+        />
+      )
     }
-    checkFavorite()
-  }, [isAuthenticated, dog.id])
+    return (
+      <span className={`text-[11px] tabular-nums ${rankColor(value)}`}>
+        {value != null ? `#${value}` : '—'}
+      </span>
+    )
+  }
 
   const handleToggleFavorite = async () => {
-    if (!isAuthenticated) {
-      profileLogger.info('Favorite toggle redirected to login', { dogId: dog.id });
-      window.location.href = '/login';
-      return;
-    }
-    profileLogger.info('Favorite toggle initiated', { dogId: dog.id, isFavorite });
+    profileLogger.info('Favorite toggle initiated', { dogId, isFavorite: favorite })
     setLoadingFavorite(true)
     try {
-      if (isFavorite) {
-        await authApi.removeFavorite(dog.id);
-        profileLogger.info('Favorite removed', { dogId: dog.id });
-      } else {
-        await authApi.addFavorite(dog.id);
-        profileLogger.info('Favorite added', { dogId: dog.id });
-      }
-      setIsFavorite(!isFavorite)
+      await toggleFavorite(dogId, { name: primary, breed: dog.breed || '' })
+      profileLogger.info(favorite ? 'Favorite removed' : 'Favorite added', { dogId })
     } catch (error) {
-      profileLogger.error('Failed to toggle favorite', error as Error, { dogId: dog.id, isFavorite })
+      profileLogger.error('Failed to toggle favorite', error as Error, { dogId, isFavorite: favorite })
     } finally {
       setLoadingFavorite(false)
     }
@@ -182,16 +208,16 @@ export function DogProfileHeader({
                 onClick={handleToggleFavorite}
                 disabled={loadingFavorite}
                 className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-50 ${
-                  isFavorite
+                  favorite
                     ? 'border-amber-400 bg-amber-50 text-amber-700 hover:border-amber-500 hover:bg-amber-100 dark:border-amber-600 dark:bg-amber-900/30 dark:text-amber-400 dark:hover:border-amber-500 dark:hover:bg-amber-900/50'
                     : 'border-old-money-200 bg-white text-camel-700 hover:border-camel-400 hover:bg-camel-50 dark:border-charcoal-600 dark:bg-charcoal-800 dark:text-camel-400 dark:hover:border-camel-600 dark:hover:bg-charcoal-700'
                 }`}
-                aria-label={isFavorite ? 'Удалить из избранного' : 'Добавить в избранное'}
-                title={isFavorite ? 'Удалить из избранного' : 'Добавить в избранное'}
+                aria-label={favorite ? 'Удалить из избранного' : 'Добавить в избранное'}
+                title={favorite ? 'Удалить из избранного' : 'Добавить в избранное'}
                 data-export-ignore
               >
-                <StarIcon className={`h-3.5 w-3.5 shrink-0 ${isFavorite ? 'fill-current' : ''}`} aria-hidden />
-                {isFavorite ? 'В избранном' : 'В избранное'}
+                <StarIcon className={`h-3.5 w-3.5 shrink-0 ${favorite ? 'fill-current' : ''}`} aria-hidden />
+                {favorite ? 'В избранном' : 'В избранное'}
               </button>
             </div>
           </div>
@@ -220,74 +246,50 @@ export function DogProfileHeader({
                     )
                   })}
                   <div className="text-[10px] text-charcoal-400 dark:text-charcoal-500 text-right pr-2">Общий</div>
-                  {['coursing', 'racing', 'shows'].map((key, index) => {
+                  {(['coursing', 'racing', 'shows'] as const).map((key, index) => {
                     const r = ranks.find((rank) => rank.key === key)
-                    const rankValue = r?.rank
-                    const getRankColor = (val: number | null | undefined) => {
-                      if (val == null) return 'text-charcoal-400 dark:text-charcoal-500'
-                      if (val <= 3) return 'text-amber-600 dark:text-amber-400 font-semibold'
-                      if (val <= 4) return 'text-charcoal-700 dark:text-charcoal-300'
-                      return 'text-charcoal-500 dark:text-charcoal-400'
-                    }
                     return (
-                      <div key={key} className={`h-4 flex items-center justify-end ${index > 0 ? 'border-l border-charcoal-200/10 dark:border-charcoal-600/10 pl-2' : ''}`}>
-                        <span className={`text-[11px] tabular-nums ${getRankColor(rankValue)}`}>
-                          {rankValue != null ? `#${rankValue}` : '—'}
-                        </span>
+                      <div
+                        key={key}
+                        className={`h-4 flex items-center justify-end ${index > 0 ? 'border-l border-charcoal-200/10 dark:border-charcoal-600/10 pl-2' : ''}`}
+                      >
+                        {renderPlace(key, 'overall', r?.rank, r)}
                       </div>
                     )
                   })}
                   <div className="text-[10px] text-charcoal-400 dark:text-charcoal-500 text-right pr-2">За год</div>
-                  {['coursing', 'racing', 'shows'].map((key, index) => {
+                  {(['coursing', 'racing', 'shows'] as const).map((key, index) => {
                     const r = ranks.find((rank) => rank.key === key)
-                    const rankValue = r?.yearRank
-                    const getRankColor = (val: number | null | undefined) => {
-                      if (val == null) return 'text-charcoal-400 dark:text-charcoal-500'
-                      if (val <= 3) return 'text-amber-600 dark:text-amber-400 font-semibold'
-                      if (val <= 4) return 'text-charcoal-700 dark:text-charcoal-300'
-                      return 'text-charcoal-500 dark:text-charcoal-400'
-                    }
                     return (
-                      <div key={key} className={`h-4 flex items-center justify-end ${index > 0 ? 'border-l border-charcoal-200/10 dark:border-charcoal-600/10 pl-2' : ''}`}>
-                        <span className={`text-[11px] tabular-nums ${getRankColor(rankValue)}`}>
-                          {rankValue != null ? `#${rankValue}` : '—'}
-                        </span>
+                      <div
+                        key={key}
+                        className={`h-4 flex items-center justify-end ${index > 0 ? 'border-l border-charcoal-200/10 dark:border-charcoal-600/10 pl-2' : ''}`}
+                      >
+                        {renderPlace(key, 'year', r?.yearRank, r)}
                       </div>
                     )
                   })}
                   <div className="text-[10px] text-charcoal-400 dark:text-charcoal-500 text-right pr-2">Порода</div>
-                  {['coursing', 'racing', 'shows'].map((key, index) => {
+                  {(['coursing', 'racing', 'shows'] as const).map((key, index) => {
                     const r = ranks.find((rank) => rank.key === key)
-                    const rankValue = r?.breedRank
-                    const getRankColor = (val: number | null | undefined) => {
-                      if (val == null) return 'text-charcoal-400 dark:text-charcoal-500'
-                      if (val <= 3) return 'text-amber-600 dark:text-amber-400 font-semibold'
-                      if (val <= 4) return 'text-charcoal-700 dark:text-charcoal-300'
-                      return 'text-charcoal-500 dark:text-charcoal-400'
-                    }
                     return (
-                      <div key={key} className={`h-4 flex items-center justify-end ${index > 0 ? 'border-l border-charcoal-200/10 dark:border-charcoal-600/10 pl-2' : ''}`}>
-                        <span className={`text-[11px] tabular-nums ${getRankColor(rankValue)}`}>
-                          {rankValue != null ? `#${rankValue}` : '—'}
-                        </span>
+                      <div
+                        key={key}
+                        className={`h-4 flex items-center justify-end ${index > 0 ? 'border-l border-charcoal-200/10 dark:border-charcoal-600/10 pl-2' : ''}`}
+                      >
+                        {renderPlace(key, 'breed', r?.breedRank, r)}
                       </div>
                     )
                   })}
                   <div className="text-[10px] text-charcoal-400 dark:text-charcoal-500 text-right pr-2">Пор. за год</div>
-                  {['coursing', 'racing', 'shows'].map((key, index) => {
+                  {(['coursing', 'racing', 'shows'] as const).map((key, index) => {
                     const r = ranks.find((rank) => rank.key === key)
-                    const rankValue = r?.yearBreedRank
-                    const getRankColor = (val: number | null | undefined) => {
-                      if (val == null) return 'text-charcoal-400 dark:text-charcoal-500'
-                      if (val <= 3) return 'text-amber-600 dark:text-amber-400 font-semibold'
-                      if (val <= 4) return 'text-charcoal-700 dark:text-charcoal-300'
-                      return 'text-charcoal-500 dark:text-charcoal-400'
-                    }
                     return (
-                      <div key={key} className={`h-4 flex items-center justify-end ${index > 0 ? 'border-l border-charcoal-200/10 dark:border-charcoal-600/10 pl-2' : ''}`}>
-                        <span className={`text-[11px] tabular-nums ${getRankColor(rankValue)}`}>
-                          {rankValue != null ? `#${rankValue}` : '—'}
-                        </span>
+                      <div
+                        key={key}
+                        className={`h-4 flex items-center justify-end ${index > 0 ? 'border-l border-charcoal-200/10 dark:border-charcoal-600/10 pl-2' : ''}`}
+                      >
+                        {renderPlace(key, 'yearBreed', r?.yearBreedRank, r)}
                       </div>
                     )
                   })}

@@ -1,14 +1,19 @@
 import { Composer } from 'grammy';
 import { CoursingStatsAPI } from '../api';
-import { getMainInlineMenu, getNavigationButtons, getCompetitionsMenu, getShowsMenu, getGuideMenu } from '../keyboards';
+import { getMainInlineMenu, getNavigationButtons, getCompetitionsMenu, getShowsMenu, getGuideMenu, getDogCardKeyboard, getDoninoKeyboard } from '../keyboards';
 import { validateDogId } from './utils/validators';
-
-// Cloudflare Workers KV namespace type (from @cloudflare/workers-types)
-type KVNamespace = {
-  get(key: string, type?: string): Promise<string | null>;
-  put(key: string, value: string, options?: { expirationTtl?: number }): Promise<void>;
-  delete(key: string): Promise<void>;
-};
+import { formatDogCard } from './utils/dogCard';
+import {
+  buildDoninoBreedNotFoundResult,
+  buildInlineDogResult,
+  buildInlineDoninoResults,
+  collectDoninoBreeds,
+  getSpeedKmh,
+  matchDoninoBreeds,
+  parseDoninoInlineQuery,
+} from '../inlineQuery';
+import type { SpeedRecordExtended } from '../types';
+import type { KVNamespace } from './context';
 
 /**
  * Helper function for adding emoji reactions
@@ -94,22 +99,9 @@ async function handleDogIdSearch(ctx: any, dogId: string, api: CoursingStatsAPI)
       return;
     }
     
-    const dog = dogData.dog;
-    const text = `
-<b>${dog.name_lat || dog.name_ru || 'N/A'}</b> (${dog.breed || 'N/A'})
-
-<b>Статистика:</b>
-• Курсинг: ${dog.coursing_stats.total_starts} стартов, лучш. ${dog.coursing_stats.best_score}
-• Бега: ${dog.racing_stats.total_starts} стартов, лучш. ${dog.racing_stats.best_speed} км/ч
-• Медали: ${dog.coursing_stats.gold + dog.racing_stats.gold}🥇 ${dog.coursing_stats.silver + dog.racing_stats.silver}🥈 ${dog.coursing_stats.bronze + dog.racing_stats.bronze}🥉
-${dog.shows_stats ? `• Выставки: ${dog.shows_stats.total_starts} стартов, ${dog.shows_stats.points} очков` : ''}
-
-<a href="https://coursing-stats.ru/dog/${dog.id}">🌐 Подробности на сайте</a>
-    `.trim();
-    
-    await ctx.reply(text, {
+    await ctx.reply(formatDogCard(dogData), {
       parse_mode: 'HTML',
-      reply_markup: getNavigationButtons('main_menu', 'main_menu')
+      reply_markup: getDogCardKeyboard(dogData.dog.id.toString())
     });
   } catch (error) {
     await ctx.reply('❌ Ошибка при загрузке профиля собаки. Попробуйте позже.', {
@@ -135,7 +127,55 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
   const { sanitizeInput, validateSearchQuery } = await import('./utils/validators');
   const query = sanitizeInput(ctx.inlineQuery.query);
 
-  // Validate query
+  const inlineButton = {
+    text: '🤖 Открыть бота',
+    start_parameter: 'inline',
+  };
+
+  // Phrase shortcuts: донино / donino [порода]
+  const doninoQuery = parseDoninoInlineQuery(query);
+  if (doninoQuery) {
+    try {
+      const records = await api.getSpeedRecords();
+
+      if (doninoQuery.breedQuery) {
+        const allBreeds = collectDoninoBreeds(records.speed, records.coursing);
+        const matchedBreeds = matchDoninoBreeds(doninoQuery.breedQuery, allBreeds);
+
+        if (matchedBreeds.length === 0) {
+          await ctx.answerInlineQuery(buildDoninoBreedNotFoundResult(doninoQuery.breedQuery), {
+            cache_time: 0,
+          });
+          return;
+        }
+
+        const speed = records.speed.filter((r) => matchedBreeds.includes(r.breed));
+        const coursing = records.coursing.filter((r) => matchedBreeds.includes(r.breed));
+        const breedLabel = matchedBreeds.length === 1 ? matchedBreeds[0] : matchedBreeds.join(', ');
+        const results = buildInlineDoninoResults(speed, coursing, {
+          breedLabel,
+          siteBreeds: matchedBreeds,
+        });
+
+        await ctx.answerInlineQuery(results, {
+          cache_time: 300,
+          button: { text: '⏱ Донино в боте', start_parameter: 'donino' },
+        });
+        return;
+      }
+
+      const results = buildInlineDoninoResults(records.speed, records.coursing);
+      await ctx.answerInlineQuery(results, {
+        cache_time: 300,
+        button: { text: '⏱ Донино в боте', start_parameter: 'donino' },
+      });
+    } catch {
+      await ctx.answerInlineQuery([], { cache_time: 0 });
+    }
+    return;
+  }
+
+  // Validate dog search query
   if (!validateSearchQuery(query)) {
     await ctx.answerInlineQuery([], { cache_time: 0 });
     return;
@@ -149,22 +189,11 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
       return;
     }
 
-    const results = dogs.map((dog: any) => ({
-      type: 'article' as const,
-      id: dog.id.toString(),
-      title: `${dog.name_lat || dog.name_ru || 'N/A'} (${dog.breed || 'N/A'})`,
-      description: `Стартов: ${dog.competition_count || 0}`,
-      input_message_content: {
-        message_text: `<b>${dog.name_lat || dog.name_ru || 'N/A'}</b>\n` +
-                       `Стартов: ${dog.competition_count || 0}\n` +
-                       `Порода: ${dog.breed || 'N/A'}`,
-        parse_mode: 'HTML' as const
-      },
-      url: `https://coursing-stats.ru/dog/${dog.id}`
-    }));
+    const results = dogs.map((dog) => buildInlineDogResult(dog));
 
     await ctx.answerInlineQuery(results, {
-      cache_time: 300
+      cache_time: 300,
+      button: inlineButton,
     });
   } catch (error) {
     await ctx.answerInlineQuery([], { cache_time: 0 });
@@ -189,6 +218,24 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
     await handleDogIdSearch(ctx, dogId, api);
     return;
   }
+
+  if (args === 'donino') {
+      const records = await api.getSpeedRecords();
+      let text = '<b>⏱ Рекорды Донино</b>\n\n';
+      if (records.speed.length === 0) {
+        text += 'Не удалось загрузить рекорды скорости';
+      } else {
+        records.speed.slice(0, 10).forEach((record, index) => {
+          const speed = getSpeedKmh(record as SpeedRecordExtended);
+          text += `${index + 1}. ${record.name} (${record.breed}) - ${speed} км/ч\n`;
+        });
+      }
+      await ctx.reply(text, {
+        parse_mode: 'HTML',
+        reply_markup: getDoninoKeyboard('speed'),
+      });
+      return;
+    }
     
   const welcomeText = `
 <b>Coursing Stats</b> — статистика соревнований собак

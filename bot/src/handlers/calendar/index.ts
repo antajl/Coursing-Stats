@@ -4,13 +4,7 @@ import { getNavigationButtons, getCalendarKeyboard } from '../../keyboards';
 import { Competition } from '../../types';
 import { filterUpcomingEvents, filterByEventType, sortEventsByDate, formatCalendarText } from './filters';
 import { safeEditOrReply } from '../commands';
-
-// Cloudflare Workers KV namespace type (from @cloudflare/workers-types)
-type KVNamespace = {
-  get(key: string, type?: string): Promise<string | null>;
-  put(key: string, value: string, options?: { expirationTtl?: number }): Promise<void>;
-  delete(key: string): Promise<void>;
-};
+import type { KVNamespace } from '../context';
 
 /**
  * Обработчики календаря соревнований и выставок
@@ -213,7 +207,7 @@ export function createCalendar(api: CoursingStatsAPI, cache?: KVNamespace) {
   calendar.callbackQuery(/^filter_(shows)$/, async (ctx) => {
     await safeEditOrReply(ctx, '<b>Загрузка календаря...</b>', { 
       parse_mode: 'HTML',
-      reply_markup: getNavigationButtons('competitions_menu', 'competitions_menu')
+      reply_markup: getNavigationButtons('shows_menu', 'main_menu')
     }, cache);
 
     try {
@@ -223,14 +217,14 @@ export function createCalendar(api: CoursingStatsAPI, cache?: KVNamespace) {
       
       const currentYear = new Date().getFullYear();
       const events = await Promise.race([
-        api.getCalendar(currentYear.toString()),
+        api.getShowsCalendar(currentYear.toString()),
         timeoutPromise
       ]) as Competition[];
 
       if (events.length === 0) {
         await safeEditOrReply(ctx,
-          'Не удалось загрузить календарь',
-          { reply_markup: getNavigationButtons('competitions_menu', 'competitions_menu') },
+          'Не удалось загрузить календарь выставок',
+          { reply_markup: getNavigationButtons('shows_menu', 'main_menu') },
           cache
         );
         return;
@@ -239,7 +233,7 @@ export function createCalendar(api: CoursingStatsAPI, cache?: KVNamespace) {
       const today = new Date();
       today.setHours(0, 0, 0, 0);
       
-      const upcomingEvents = sortEventsByDate(filterByEventType(filterUpcomingEvents(events, today), 'shows'));
+      const upcomingEvents = sortEventsByDate(filterUpcomingEvents(events, today));
       const text = formatCalendarText(upcomingEvents, currentYear, 'shows');
 
       await safeEditOrReply(ctx, text, {
@@ -250,14 +244,90 @@ export function createCalendar(api: CoursingStatsAPI, cache?: KVNamespace) {
       console.error('[filter_shows] Error loading calendar:', error);
       await safeEditOrReply(ctx,
         '❌ Ошибка при загрузке календаря. Попробуйте позже.',
-        { reply_markup: getNavigationButtons('competitions_menu', 'competitions_menu') },
+        { reply_markup: getNavigationButtons('shows_menu', 'main_menu') },
         cache
       );
     }
   });
 
-  // Pagination handlers for calendar would be added here
-  // For now, this covers the main calendar functionality
+  // Shows calendar (from shows menu)
+  calendar.callbackQuery(/^shows_calendar(?:_(\d+))?$/, async (ctx) => {
+    const offset = parseInt(ctx.match![1] || '0', 10);
+    await safeEditOrReply(ctx, '<b>Загрузка календаря выставок...</b>', {
+      parse_mode: 'HTML',
+      reply_markup: getNavigationButtons('shows_menu', 'main_menu')
+    }, cache);
+
+    try {
+      const currentYear = new Date().getFullYear();
+      const events = await api.getShowsCalendar(currentYear.toString());
+
+      if (events.length === 0) {
+        await safeEditOrReply(ctx,
+          'Не удалось загрузить календарь выставок',
+          { reply_markup: getNavigationButtons('shows_menu', 'main_menu') },
+          cache
+        );
+        return;
+      }
+
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      const upcomingEvents = sortEventsByDate(filterUpcomingEvents(events, today));
+      const text = formatCalendarText(upcomingEvents, currentYear, 'shows', offset);
+
+      await safeEditOrReply(ctx, text, {
+        parse_mode: 'HTML',
+        reply_markup: getCalendarKeyboard(offset, true, 'shows')
+      }, cache);
+    } catch (error) {
+      console.error('[shows_calendar] Error:', error);
+      await safeEditOrReply(ctx,
+        '❌ Ошибка при загрузке календаря выставок.',
+        { reply_markup: getNavigationButtons('shows_menu', 'main_menu') },
+        cache
+      );
+    }
+  });
+
+  // Competition calendar pagination
+  calendar.callbackQuery(/^calendar_(\d+)$/, async (ctx) => {
+    const offset = parseInt(ctx.match![1], 10);
+    await safeEditOrReply(ctx, '<b>Загрузка календаря...</b>', {
+      parse_mode: 'HTML',
+      reply_markup: getNavigationButtons('competitions_menu', 'main_menu')
+    }, cache);
+
+    try {
+      const currentYear = new Date().getFullYear();
+      const events = await api.getCalendar(currentYear.toString());
+      if (events.length === 0) {
+        await safeEditOrReply(ctx,
+          'Не удалось загрузить календарь',
+          { reply_markup: getNavigationButtons('competitions_menu', 'main_menu') },
+          cache
+        );
+        return;
+      }
+
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      const upcomingEvents = sortEventsByDate(filterUpcomingEvents(events, today));
+      const text = formatCalendarText(upcomingEvents, currentYear, 'all', offset);
+
+      await safeEditOrReply(ctx, text, {
+        parse_mode: 'HTML',
+        reply_markup: getCalendarKeyboard(offset, false, 'all')
+      }, cache);
+    } catch (error) {
+      console.error('[calendar_page] Error:', error);
+      await safeEditOrReply(ctx,
+        '❌ Ошибка при загрузке календаря.',
+        { reply_markup: getNavigationButtons('competitions_menu', 'main_menu') },
+        cache
+      );
+    }
+  });
 
   return calendar;
 }

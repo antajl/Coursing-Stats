@@ -1,6 +1,6 @@
 ---
 title: Telegram Bot
-verified: 2026-08-06
+verified: 2026-08-07
 ---
 
 # 08 — Bot
@@ -15,11 +15,13 @@ verified: 2026-08-06
 |------|--|
 | Runtime | Cloudflare Workers |
 | Framework | Grammy |
-| Data | `https://coursing-stats.ru/data/v1/...` |
+| Data | `https://coursing-stats.ru/data/v1/...` (или `SITE_URL`) |
 | Secrets | `BOT_TOKEN`, `WEBHOOK_SECRET` (Workers secrets; `bot/.dev.vars` local) |
+| Webhook | POST `/webhook` проверяет `X-Telegram-Bot-Api-Secret-Token` |
 | Dog card | **aggregates only** — не дампить полную историю |
-| Search | CDN + compact index; KV cache |
-| Cron | daily `0 0 * * *` notifications |
+| Search | CDN + compact index; KV cache; competition dogs first, then Donino |
+| Deploy | **manual only** — `cd bot; yarn run deploy` (не в site CI) |
+| Notifications / cron | **не реализованы** |
 
 ### KV TTL (ориентир `bot/src/api.ts`)
 
@@ -28,19 +30,33 @@ verified: 2026-08-06
 | index / ratings / records / shows / judges / compact | 3600s |
 | calendar / search results | 1800s |
 | dog profile | 0 (no long cache) |
+| favorites | 30 days |
+| compare state | 5 min |
+| rate limit | 60s window |
 
 ### CDN endpoints used
 
-`indexes/dogs-index.json`, `bot-search-compact.json`, `dog-profiles/{id}.json`, `top-*`, `calendar/{year}`, `donino/*`, `shows/indexes/dog-ranking-{year}`, `judges-summary`, `shows/indexes/judges.json`
+`indexes/dogs-index.json`, `bot-search-compact.json`, `dog-profiles/{id}.json`, `top-score-*`, `top-placement-*`, `top-speed-*` (racing), `calendar/{year}`, `donino/*`, `shows/calendar/{year}`, `shows/indexes/dog-ranking-{year}`, `judges-summary`, `shows/indexes/judges.json`
+
+## Architecture
+
+```
+Telegram → POST /webhook (+ secret header)
+  → worker.ts (rate limit KV, Grammy handleUpdate)
+  → handlers/* (Composer modules)
+  → api.ts → CDN + KV cache
+```
 
 ## Key files
 
 ```
-bot/src/worker.ts
-bot/src/api.ts
-bot/src/handlers.ts
-bot/src/keyboards.ts
-bot/src/types.ts
+bot/src/worker.ts              # entry, webhook secret, rate limit
+bot/src/api.ts                 # CDN client + KV TTL
+bot/src/keyboards.ts           # inline keyboards
+bot/src/handlers/index.ts      # wires modules
+bot/src/handlers/commands.ts   # /start, menus
+bot/src/handlers/search.ts     # text search + compare mode
+bot/src/handlers/{ratings,calendar,judges,donino,favorites,dogs,comparison,guide}/
 bot/wrangler.toml
 .cursor/skills/bot-add-handler/
 ```
@@ -48,12 +64,18 @@ bot/wrangler.toml
 ## Workflows
 
 ```bash
+cd bot; yarn install
 cd bot; yarn run build    # tsc — обязательно перед deploy
-cd bot; yarn test
-cd bot; yarn run deploy
+cd bot; yarn run test:run
+cd bot; yarn run deploy   # manual
 ```
 
-Rate limit: ~100 req/min/user. Input validation на handlers.
+Webhook after deploy:
+```
+https://<worker>/set-webhook?secret=<WEBHOOK_SECRET>
+```
+
+Rate limit: ~100 req/min/user (ACK Telegram + user message). Input validation на handlers.
 
 ## Forbidden
 
@@ -62,6 +84,7 @@ Rate limit: ~100 req/min/user. Input validation на handlers.
 - Commit secrets
 - Deploy без `yarn run build`
 - Ломать CDN schema без согласования с сайтом
+- Автодеплой бота в site CI без явного запроса
 
 ## See also
 

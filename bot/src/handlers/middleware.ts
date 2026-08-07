@@ -1,11 +1,5 @@
-import { Bot, Context } from 'grammy';
-
-// Cloudflare Workers KV namespace type (from @cloudflare/workers-types)
-type KVNamespace = {
-  get(key: string, type?: string): Promise<string | null>;
-  put(key: string, value: string, options?: { expirationTtl?: number }): Promise<void>;
-  delete(key: string): Promise<void>;
-};
+import { Bot } from 'grammy';
+import type { KVNamespace } from './context';
 
 /**
  * Настраивает middleware для бота

@@ -8,6 +8,7 @@ import { MedalIcon, type MedalVariant } from './MedalTally'
 import OwnerCrownName from './OwnerCrownName'
 import MedalBadge from './MedalBadge'
 import RankBadge from './RankBadge'
+import CombinedMetricsRotator from './CombinedMetricsRotator'
 
 /** Единая высота карточки в двухколоночном рейтинге (строки выравниваются попарно). */
 export const DOG_CARD_HEIGHT_CLASS = 'h-[5.25rem]'
@@ -143,19 +144,6 @@ export function StartsLabel({ starts, size = 'sm' }: { starts: number; size?: 's
       <span>Участий</span>
       <span className={num}>{starts}</span>
     </div>
-  )
-}
-
-function MutedMetric({ value, label }: { value: string; label: string }) {
-  return (
-    <span className="inline-flex items-baseline gap-0.5">
-      <span className="text-[10px] font-medium tabular-nums text-charcoal-400 dark:text-charcoal-500">
-        {value}
-      </span>
-      <span className="text-[7px] font-medium uppercase tracking-wide text-charcoal-400/90 dark:text-charcoal-500">
-        {label}
-      </span>
-    </span>
   )
 }
 
@@ -331,15 +319,10 @@ export default function DogCard({ dog, type, filterYear, rank, variant = 'card' 
           </div>
 
           <div className="mr-8 flex min-h-0 min-w-[10.5rem] shrink-0 flex-col justify-between border-l border-old-money-200/60 pl-2 dark:border-charcoal-600/60">
-            <div className="relative h-7 w-full">
-              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center gap-2 whitespace-nowrap transition-all duration-200 ease-out group-hover:translate-y-1 group-hover:opacity-0 group-focus-within:translate-y-1 group-focus-within:opacity-0">
-                <MutedMetric value={elo.value} label="Elo" />
-                <MutedMetric value={formatIndexScore(dog)} label="CS" />
-              </div>
-              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center justify-end whitespace-nowrap opacity-0 -translate-y-1 transition-all duration-200 ease-out group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:translate-y-0 group-focus-within:opacity-100">
-                <CsDetailLine dog={dog} />
-              </div>
-            </div>
+            <CombinedMetricsRotator
+              csValue={formatIndexScore(dog)}
+              eloValue={elo.value}
+            />
             <div className="flex justify-end">
               <StartsLabel starts={dog.total_starts || 0} size="md" />
             </div>

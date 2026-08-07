@@ -5,6 +5,7 @@ import { NavMenuDropdown } from '../NavMenuDropdown'
 import { usePublicCalendarVisible } from '../../hooks/useStaticData'
 import { useAuth } from '../../contexts/AuthContext'
 import { useNavLogoVisibility } from './useNavLogoVisibility'
+import FavoritesCapsule from './FavoritesCapsule'
 import {
   competitionsMenuItems,
   DONINO_MENU_ITEMS,
@@ -143,6 +144,7 @@ export function NavDesktop({
       </div>
 
       <div className="flex shrink-0 items-center gap-2 lg:gap-3">
+        <FavoritesCapsule />
         {isAuthenticated ? (
           <Link
             to="/account"

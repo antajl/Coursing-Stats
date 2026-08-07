@@ -8,6 +8,7 @@ import Nav from './components/Nav'
 import TemporaryCompetitionsCalendarBanner from './components/TemporaryCompetitionsCalendarBanner'
 import AppRoutes from './AppRoutes'
 import { AuthProvider } from './contexts/AuthContext'
+import { FavoritesProvider } from './contexts/FavoritesContext'
 import { ToastProvider } from './components/ToastManager'
 import { ErrorBoundary } from './components/ErrorBoundary'
 
@@ -22,6 +23,7 @@ function App() {
     <HelmetProvider>
       <QueryProvider>
         <AuthProvider>
+          <FavoritesProvider>
           <ToastProvider>
             <ErrorBoundary>
               <Router>
@@ -46,6 +48,7 @@ function App() {
               </Router>
             </ErrorBoundary>
           </ToastProvider>
+          </FavoritesProvider>
         </AuthProvider>
       </QueryProvider>
     </HelmetProvider>

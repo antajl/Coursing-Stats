@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { ChevronRight } from 'lucide-react'
 
 export type DisciplineTheme = 'forest' | 'warm-blue' | 'camel'
 
@@ -42,6 +43,32 @@ const THEME: Record<
 
 export function disciplineTheme(theme: DisciplineTheme) {
   return THEME[theme]
+}
+
+const LINK_HINT_THEME: Record<DisciplineTheme, string> = {
+  forest:
+    'border-forest-200/80 bg-white/90 text-forest-700 shadow-sm hover:border-forest-300 hover:bg-forest-50 dark:border-forest-700/80 dark:bg-charcoal-800/90 dark:text-forest-300 dark:hover:border-forest-600 dark:hover:bg-charcoal-700',
+  'warm-blue':
+    'border-warm-blue-200/80 bg-white/90 text-warm-blue-700 shadow-sm hover:border-warm-blue-300 hover:bg-warm-blue-50 dark:border-warm-blue-700/80 dark:bg-charcoal-800/90 dark:text-warm-blue-300 dark:hover:border-warm-blue-600 dark:hover:bg-charcoal-700',
+  camel:
+    'border-camel-200/80 bg-white/90 text-camel-700 shadow-sm hover:border-camel-300 hover:bg-camel-50 dark:border-camel-700/80 dark:bg-charcoal-800/90 dark:text-camel-300 dark:hover:border-camel-600 dark:hover:bg-charcoal-700',
+}
+
+/** Подсказка «открыть результаты» в hero-блоке колонки (появляется при hover на карточку-ссылку). */
+export function DisciplineHeroLinkHint({ theme }: { theme: DisciplineTheme }) {
+  return (
+    <div className="mt-1.5 flex min-h-[1.25rem] translate-y-0.5 justify-center opacity-0 transition-all duration-200 group-hover:translate-y-0 group-hover:opacity-100">
+      <span
+        className={`inline-flex items-center gap-0.5 rounded border px-2 py-0.5 text-[11px] font-semibold leading-none transition-colors ${LINK_HINT_THEME[theme]}`}
+      >
+        Открыть результаты
+        <ChevronRight
+          className="h-3 w-3 shrink-0 opacity-70 transition-transform group-hover:translate-x-0.5"
+          aria-hidden
+        />
+      </span>
+    </div>
+  )
 }
 
 /** Общая оболочка колонки: равная ширина/высота каркаса. */

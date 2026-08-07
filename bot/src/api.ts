@@ -1,7 +1,6 @@
 import { Dog, DogData, SpeedRecord, CoursingRecord, Rating, Competition, RatingItem, SpeedRecordExtended, CompetitionData } from './types';
 
-const SITE_URL = 'https://coursing-stats.ru';
-const BASE_API_URL = `${SITE_URL}/data/v1`;
+const DEFAULT_SITE_URL = 'https://coursing-stats.ru';
 
 interface CompactSearchIndex {
   schema: string;
@@ -47,15 +46,27 @@ const CACHE_TTL = {
   BOT_SEARCH_COMPACT: 3600,
 } as const;
 
+/** Convert show calendar date "DD.MM.YYYY" → "YYYY-MM-DD" (or passthrough). */
+function parseShowCalendarDate(date?: string): string | undefined {
+  if (!date) return undefined;
+  const m = /^(\d{2})\.(\d{2})\.(\d{4})$/.exec(date.trim());
+  if (m) return `${m[3]}-${m[2]}-${m[1]}`;
+  return date;
+}
+
 class CoursingStatsAPI {
   private cache: KVNamespace | null = null;
+  private baseApiUrl: string;
 
   /**
    * Создает экземпляр API клиента для Coursing Stats
    * @param cache - опциональное KV хранилище для кэширования запросов
+   * @param siteUrl - базовый URL сайта (CDN), по умолчанию продакшен
    */
-  constructor(cache?: KVNamespace) {
+  constructor(cache?: KVNamespace, siteUrl: string = DEFAULT_SITE_URL) {
     this.cache = cache || null;
+    const origin = (siteUrl || DEFAULT_SITE_URL).replace(/\/$/, '');
+    this.baseApiUrl = `${origin}/data/v1`;
   }
 
   private async fetchJSON(url: string, ttl?: number, retries: number = 3): Promise<unknown> {
@@ -108,7 +119,7 @@ class CoursingStatsAPI {
   private async getDogsIndex(): Promise<Dog[] | null> {
     try {
       // Кэширование: индекс собак - 1 час (индекс меняется редко)
-      const data = await this.fetchJSON(`${BASE_API_URL}/indexes/dogs-index.json`, CACHE_TTL.DOGS_INDEX);
+      const data = await this.fetchJSON(`${this.baseApiUrl}/indexes/dogs-index.json`, CACHE_TTL.DOGS_INDEX);
 
       if (data && Array.isArray(data)) {
         return data;
@@ -122,7 +133,7 @@ class CoursingStatsAPI {
   private async getCompactSearchIndex(): Promise<CompactSearchIndex | null> {
     try {
       // Кэширование: компактный индекс - 1 час
-      const data = await this.fetchJSON(`${BASE_API_URL}/indexes/bot-search-compact.json`, CACHE_TTL.BOT_SEARCH_COMPACT);
+      const data = await this.fetchJSON(`${this.baseApiUrl}/indexes/bot-search-compact.json`, CACHE_TTL.BOT_SEARCH_COMPACT);
 
       if (data && (data as any).schema === 'coursing-stats/bot-search-compact-v1') {
         return data as CompactSearchIndex;
@@ -423,7 +434,7 @@ class CoursingStatsAPI {
    */
   async getDogById(dogId: string): Promise<DogData | null> {
     try {
-      const url = `${BASE_API_URL}/indexes/dog-profiles/${dogId}.json`;
+      const url = `${this.baseApiUrl}/indexes/dog-profiles/${dogId}.json`;
       // Без кэширования - профили индивидуальны и часто запрашиваются
       const result = await this.fetchJSON(url, CACHE_TTL.DOG_PROFILE);
 
@@ -443,37 +454,25 @@ class CoursingStatsAPI {
    */
   async getTopRatings(discipline: string = 'coursing', category: string = 'score', year: string = '2026', limit: number = 10): Promise<Rating[]> {
     try {
-      let data;
-      let endpoint;
-      
+      let endpoint: string;
+
       if (discipline === 'racing') {
-        // Racing might not have separate endpoints, try to use coursing endpoints with filtering
-        endpoint = `${BASE_API_URL}/indexes/top-placement-${year}.json`;
+        // Racing speed ranking (medals ≠ CS points ≠ speed — separate indexes)
+        endpoint = `${this.baseApiUrl}/indexes/top-speed-${year}.json`;
+      } else if (category === 'score') {
+        endpoint = `${this.baseApiUrl}/indexes/top-score-${year}.json`;
       } else {
-        // Coursing (default)
-        if (category === 'score') {
-          endpoint = `${BASE_API_URL}/indexes/top-score-${year}.json`;
-        } else {
-          endpoint = `${BASE_API_URL}/indexes/top-placement-${year}.json`;
-        }
+        endpoint = `${this.baseApiUrl}/indexes/top-placement-${year}.json`;
       }
 
       // Кэширование: рейтинги - 1 час (обновляются редко после соревнований)
-      data = await this.fetchJSON(endpoint, CACHE_TTL.RATINGS);
-
+      const data = await this.fetchJSON(endpoint, CACHE_TTL.RATINGS);
       const ratingsData = data as { items?: Rating[] } | Rating[];
 
       if (ratingsData && typeof ratingsData === 'object' && 'items' in ratingsData && ratingsData.items) {
-        let ratings = ratingsData.items.slice(0, limit);
-
-        // If racing discipline, filter by racing-related breeds or activities
-        if (discipline === 'racing') {
-          // Try to filter - this is a simplified approach
-          // In reality, we'd need proper racing data
-        }
-
-        return ratings;
-      } else if (ratingsData && Array.isArray(ratingsData)) {
+        return ratingsData.items.slice(0, limit);
+      }
+      if (ratingsData && Array.isArray(ratingsData)) {
         return ratingsData.slice(0, limit);
       }
       return [];
@@ -489,8 +488,8 @@ class CoursingStatsAPI {
   async getSpeedRecords(): Promise<{ speed: SpeedRecord[]; coursing: CoursingRecord[] }> {
     try {
       // Кэширование: рекорды - 1 час (меняются редко)
-      const speedData = await this.fetchJSON(`${BASE_API_URL}/donino/speed_records.json`, CACHE_TTL.RECORDS);
-      const coursingData = await this.fetchJSON(`${BASE_API_URL}/donino/coursing_records.json`, CACHE_TTL.RECORDS);
+      const speedData = await this.fetchJSON(`${this.baseApiUrl}/donino/speed_records.json`, CACHE_TTL.RECORDS);
+      const coursingData = await this.fetchJSON(`${this.baseApiUrl}/donino/coursing_records.json`, CACHE_TTL.RECORDS);
 
       const speedRecords = (speedData as { records?: SpeedRecord[] })?.records || [];
       const coursingRecords = (coursingData as { records?: CoursingRecord[] })?.records || [];
@@ -541,7 +540,7 @@ class CoursingStatsAPI {
   async getCalendar(year: string = new Date().getFullYear().toString()): Promise<Competition[]> {
     try {
       // Кэширование: календарь - 30 минут (может обновляться чаще)
-      const data = await this.fetchJSON(`${BASE_API_URL}/calendar/${year}.json`, CACHE_TTL.CALENDAR);
+      const data = await this.fetchJSON(`${this.baseApiUrl}/calendar/${year}.json`, CACHE_TTL.CALENDAR);
       const calendarData = data as { events?: Competition[] };
       return calendarData?.events || [];
     } catch (error) {
@@ -556,10 +555,32 @@ class CoursingStatsAPI {
    */
   async getShowsCalendar(year: string = new Date().getFullYear().toString()): Promise<Competition[]> {
     try {
-      // Кэширование: календарь выставок - 30 минут (может обновляться чаще)
-      const data = await this.fetchJSON(`${BASE_API_URL}/shows/calendar/${year}.json`, CACHE_TTL.CALENDAR);
-      const calendarData = data as { events?: Competition[] };
-      return calendarData?.events || [];
+      // CDN: shows/calendar/{year}.json → { exhibitions: [{ id, date: "DD.MM.YYYY", title, location, ... }] }
+      const data = await this.fetchJSON(`${this.baseApiUrl}/shows/calendar/${year}.json`, CACHE_TTL.CALENDAR);
+      const calendarData = data as {
+        exhibitions?: Array<{
+          id: number;
+          date?: string;
+          title?: string;
+          location?: string;
+          rank?: string;
+        }>;
+      };
+
+      const exhibitions = calendarData?.exhibitions || [];
+      return exhibitions.map((ex) => {
+        const isoDate = parseShowCalendarDate(ex.date);
+        return {
+          id: ex.id,
+          title: ex.title,
+          name: ex.title,
+          date: isoDate,
+          date_start: isoDate,
+          location: ex.location || '',
+          event_type: 'show',
+          type: ex.rank,
+        } satisfies Competition;
+      });
     } catch (error) {
       return [];
     }
@@ -573,7 +594,7 @@ class CoursingStatsAPI {
   async getShows(year: string): Promise<RatingItem[]> {
     try {
       // Кэширование: выставки - 1 час (обновляются после событий)
-      const data = await this.fetchJSON(`${BASE_API_URL}/shows/indexes/dog-ranking-${year}.json`, CACHE_TTL.SHOWS);
+      const data = await this.fetchJSON(`${this.baseApiUrl}/shows/indexes/dog-ranking-${year}.json`, CACHE_TTL.SHOWS);
       // Shows data is a flat array, not {top: [...]}
       if (data && Array.isArray(data)) {
         return data as RatingItem[];
@@ -592,7 +613,7 @@ class CoursingStatsAPI {
     try {
       // Competition judges: indexes/judges-summary.json
       // Кэширование: судьи соревнований - 1 час (рейтинги меняются редко)
-      const data = await this.fetchJSON(`${BASE_API_URL}/indexes/judges-summary.json`, CACHE_TTL.JUDGES);
+      const data = await this.fetchJSON(`${this.baseApiUrl}/indexes/judges-summary.json`, CACHE_TTL.JUDGES);
       if (data && Array.isArray(data)) {
         return data as RatingItem[];
       }
@@ -610,7 +631,7 @@ class CoursingStatsAPI {
     try {
       // Show judges: shows/indexes/judges.json
       // Кэширование: судьи выставок - 1 час (рейтинги меняются редко)
-      const data = await this.fetchJSON(`${BASE_API_URL}/shows/indexes/judges.json`, CACHE_TTL.JUDGES);
+      const data = await this.fetchJSON(`${this.baseApiUrl}/shows/indexes/judges.json`, CACHE_TTL.JUDGES);
       if (data && Array.isArray(data)) {
         return data as RatingItem[];
       }

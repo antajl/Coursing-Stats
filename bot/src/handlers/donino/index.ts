@@ -3,13 +3,7 @@ import { CoursingStatsAPI } from '../../api';
 import { getNavigationButtons, getDoninoKeyboard } from '../../keyboards';
 import { SpeedRecordExtended } from '../../types';
 import { safeEditOrReply } from '../commands';
-
-// Cloudflare Workers KV namespace type (from @cloudflare/workers-types)
-type KVNamespace = {
-  get(key: string, type?: string): Promise<string | null>;
-  put(key: string, value: string, options?: { expirationTtl?: number }): Promise<void>;
-  delete(key: string): Promise<void>;
-};
+import type { KVNamespace } from '../context';
 
 /**
  * Helper function for adding emoji reactions

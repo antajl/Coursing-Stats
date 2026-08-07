@@ -15,7 +15,7 @@ verified: 2026-08-06
 |---------|----------|
 | Bot tokens | Cloudflare Workers secrets; never git |
 | Local | `.env.ai`, `bot/.dev.vars` — gitignored; **не** коммитить |
-| Webhook | secret token validation |
+| Webhook | secret token validation on **POST** (`X-Telegram-Bot-Api-Secret-Token`) |
 | Bot input | sanitize, length limits, format checks |
 | Rate limit | ~100 req/min/user (KV) |
 | Logging | structured security events (invalid input, rate limit, suspicious) |

@@ -1,4 +1,5 @@
 import { Bot } from 'grammy';
+import type { Update } from '@grammyjs/types';
 import { setupHandlers } from './handlers/index';
 import { CoursingStatsAPI } from './api';
 
@@ -20,16 +21,19 @@ const RATE_LIMIT_WINDOW = 60; // seconds
 async function checkRateLimit(userId: string, env: Env): Promise<{ allowed: boolean; remaining: number }> {
   const key = `rate_limit:${userId}`;
   const current = await env.CACHE.get(key);
-  const count = current ? parseInt(current) : 0;
-  
+  const count = current ? parseInt(current, 10) : 0;
+
   if (count >= RATE_LIMIT_REQUESTS) {
-    // TODO: Add security logging when type checking is fixed
     return { allowed: false, remaining: 0 };
   }
-  
-  // Increment counter with TTL
+
   await env.CACHE.put(key, String(count + 1), { expirationTtl: RATE_LIMIT_WINDOW });
   return { allowed: true, remaining: RATE_LIMIT_REQUESTS - count - 1 };
+}
+
+function isValidWebhookSecret(request: Request, env: Env): boolean {
+  const header = request.headers.get('X-Telegram-Bot-Api-Secret-Token');
+  return Boolean(env.WEBHOOK_SECRET) && header === env.WEBHOOK_SECRET;
 }
 
 export default {
@@ -37,9 +41,35 @@ export default {
     try {
       const url = new URL(request.url);
 
-      // Health check
+      // Health check: CDN reachable + KV writable
       if (url.pathname === '/health') {
-        return new Response('OK', { status: 200 });
+        const siteUrl = (env.SITE_URL || 'https://coursing-stats.ru').replace(/\/$/, '');
+        const checks: { cdn: boolean; kv: boolean; error?: string } = { cdn: false, kv: false };
+
+        try {
+          const cdnRes = await fetch(`${siteUrl}/data/v1/manifest.json`, {
+            method: 'GET',
+            headers: { Accept: 'application/json' },
+          });
+          checks.cdn = cdnRes.ok;
+        } catch (e) {
+          checks.error = e instanceof Error ? e.message : 'cdn fetch failed';
+        }
+
+        try {
+          const probeKey = 'health:probe';
+          await env.CACHE.put(probeKey, String(Date.now()), { expirationTtl: 60 });
+          const got = await env.CACHE.get(probeKey);
+          checks.kv = Boolean(got);
+        } catch (e) {
+          checks.error = e instanceof Error ? e.message : 'kv failed';
+        }
+
+        const ok = checks.cdn && checks.kv;
+        return new Response(JSON.stringify({ ok, ...checks }), {
+          status: ok ? 200 : 503,
+          headers: { 'Content-Type': 'application/json' },
+        });
       }
 
       // Set webhook endpoint
@@ -49,22 +79,40 @@ export default {
           return new Response('Invalid secret', { status: 403 });
         }
 
+        if (!env.WEBHOOK_SECRET) {
+          return new Response('WEBHOOK_SECRET is not configured', { status: 500 });
+        }
+
         const webhookUrl = `${url.origin}/webhook`;
         const response = await fetch(
-          `https://api.telegram.org/bot${env.BOT_TOKEN}/setWebhook?url=${encodeURIComponent(webhookUrl)}&secret_token=${env.WEBHOOK_SECRET}`
+          `https://api.telegram.org/bot${env.BOT_TOKEN}/setWebhook`,
+          {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              url: webhookUrl,
+              secret_token: env.WEBHOOK_SECRET,
+              allowed_updates: [
+                'message',
+                'edited_message',
+                'callback_query',
+                'inline_query',
+                'chosen_inline_result',
+              ],
+            }),
+          }
         );
         const result = await response.json() as { ok: boolean; description?: string };
 
         if (result.ok) {
           return new Response('Webhook set successfully', { status: 200 });
-        } else {
-          return new Response(`Failed to set webhook: ${result.description}`, { status: 500 });
         }
+        return new Response(`Failed to set webhook: ${result.description}`, { status: 500 });
       }
 
       // Initialize bot and API instances only once
       if (!globalBot || !globalApi) {
-        globalApi = new CoursingStatsAPI(env.CACHE);
+        globalApi = new CoursingStatsAPI(env.CACHE, env.SITE_URL);
         globalBot = new Bot(env.BOT_TOKEN);
 
         await globalBot.init();
@@ -72,25 +120,43 @@ export default {
         setupHandlers(globalBot, globalApi, env.CACHE);
       }
 
-      // Handle webhook manually
+      // Handle webhook
       if (request.method === 'POST' && (url.pathname === '/webhook' || url.pathname === '/')) {
+        if (!isValidWebhookSecret(request, env)) {
+          return new Response('Unauthorized', { status: 401 });
+        }
+
         const body = await request.text();
 
         try {
-          const update = JSON.parse(body);
-          
-          // Rate limiting check
+          const update = JSON.parse(body) as Update;
+
           const userId = update.message?.from?.id || update.callback_query?.from?.id;
           if (userId) {
             const rateLimitResult = await checkRateLimit(userId.toString(), env);
             if (!rateLimitResult.allowed) {
-              return new Response('Rate limit exceeded', { status: 429 });
+              // Always ACK Telegram (avoid retry storm); notify user when possible
+              try {
+                if (update.callback_query?.id) {
+                  await globalBot.api.answerCallbackQuery(update.callback_query.id, {
+                    text: 'Слишком много запросов. Подождите минуту.',
+                    show_alert: true,
+                  });
+                } else if (update.message?.chat?.id) {
+                  await globalBot.api.sendMessage(
+                    update.message.chat.id,
+                    '⏳ Слишком много запросов. Подождите минуту и попробуйте снова.'
+                  );
+                }
+              } catch {
+                // ignore notify failures
+              }
+              return new Response('OK', { status: 200 });
             }
           }
-          
+
           await globalBot.handleUpdate(update);
         } catch (error) {
-          // Log errors for debugging while protecting sensitive information
           console.error('Error handling update:', error instanceof Error ? error.message : 'Unknown error');
         }
 
@@ -101,5 +167,5 @@ export default {
     } catch (error) {
       return new Response('Internal Server Error', { status: 500 });
     }
-  }
+  },
 };

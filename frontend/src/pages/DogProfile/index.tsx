@@ -453,6 +453,38 @@ export default function DogProfile() {
           onBack={() => navigate(-1)}
           onExport={handleExport}
           ranks={headerRanks}
+          explainers={{
+            coursing: hasCoursingData
+              ? {
+                  gold: coursing.gold,
+                  silver: coursing.silver,
+                  bronze: coursing.bronze,
+                  total_starts: coursing.total_starts,
+                  avg_judge_score: coursing.avg_judge_score,
+                  best_judge_score: coursing.best_judge_score,
+                  elo_rating: dog?.elo_rating ?? null,
+                  elo_races: dog?.elo_races ?? null,
+                }
+              : null,
+            racing: hasRacingData
+              ? {
+                  best_speed: racing.best_speed,
+                  avg_speed: racing.avg_speed,
+                  racing_starts: racing.total_starts,
+                  racing_gold: racing.gold,
+                  racing_silver: racing.silver,
+                  racing_bronze: racing.bronze,
+                }
+              : null,
+            shows: showDog
+              ? {
+                  total_shows: showDog.total_shows,
+                  rank_score: showDog.rank_score ?? null,
+                  best_award: showDog.best_award ?? null,
+                  best_grade: showDog.best_grade ?? null,
+                }
+              : null,
+          }}
         />
 
         <div className="mb-6 grid grid-cols-1 items-stretch gap-4 md:grid-cols-3 md:gap-6 lg:gap-8">
