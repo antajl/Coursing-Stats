@@ -1,0 +1,266 @@
+/* Search on stage — slightly stronger field */
+.home-v2-stage .home-v2-search-field {
+  background: rgba(252, 250, 247, 0.72);
+  border-bottom-color: var(--om-300);
+  backdrop-filter: blur(8px);
+  border-radius: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.dark .home-v2-stage .home-v2-search-field {
+  background: rgba(38, 34, 30, 0.72);
+  border-bottom-color: var(--char-500);
+}
+
+/* Search */
+.home-v2-search {
+  position: relative;
+  max-width: 20rem;
+  margin-bottom: 8px;
+  margin-left: auto;
+}
+.home-v2-search-field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 14px;
+  min-height: 48px;
+  border-bottom: 1.5px solid var(--om-300);
+  background: transparent;
+  transition: border-color 0.15s;
+}
+.home-v2-search-field:focus-within {
+  border-color: var(--camel-500);
+}
+.dark .home-v2-search-field {
+  border-color: var(--char-600);
+}
+.dark .home-v2-search-field:focus-within {
+  border-color: var(--camel-400);
+}
+.home-v2-search-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: var(--char-500);
+}
+.dark .home-v2-search-icon {
+  color: var(--cream-50);
+  stroke: currentColor;
+}
+.home-v2-search-field input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  color: var(--char-900);
+  padding: 12px 0;
+}
+.dark .home-v2-search-field input {
+  color: var(--char-100);
+}
+.home-v2-search-field input::placeholder {
+  color: var(--char-500);
+}
+.dark .home-v2-search-field input::placeholder {
+  color: var(--char-300);
+}
+.home-v2-search-list {
+  position: absolute;
+  z-index: 30;
+  left: 0;
+  right: 0;
+  top: calc(100% + 4px);
+  margin: 0;
+  padding: 6px 0;
+  list-style: none;
+  background: var(--cream-50);
+  border: 1px solid var(--om-200);
+  border-radius: 12px;
+  box-shadow: 0 16px 40px -20px rgba(67, 58, 49, 0.35);
+  max-height: 280px;
+  overflow: auto;
+}
+@media (min-height: 500px) {
+  .home-v2-search-list {
+    max-height: min(280px, 50vh);
+  }
+}
+.dark .home-v2-search-list {
+  background: var(--char-800);
+  border-color: var(--char-600);
+}
+.home-v2-search-list button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  width: 100%;
+  text-align: left;
+  padding: 10px 14px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: inherit;
+}
+.home-v2-search-list button.is-active,
+.home-v2-search-list button:hover {
+  background: var(--camel-50);
+}
+.dark .home-v2-search-list button.is-active,
+.dark .home-v2-search-list button:hover {
+  background: rgba(155, 103, 32, 0.2);
+}
+.home-v2-search-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--char-900);
+}
+.dark .home-v2-search-name { color: var(--char-100); }
+.home-v2-search-breed {
+  font-size: 12px;
+  color: var(--char-500);
+}
+.home-v2-search-hint {
+  margin: 8px 0 0;
+  font-size: 12px;
+  color: var(--char-500);
+}
+
+.home-v2-block {
+  margin-bottom: 52px;
+}
+.home-v2-section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--om-200);
+}
+.dark .home-v2-section-head { border-bottom-color: var(--char-700); }
+.home-v2-section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.home-v2-section-title h2 {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--char-900);
+}
+.dark .home-v2-section-title h2 { color: var(--char-100); }
+.home-v2-section-title svg {
+  color: var(--camel-600);
+}
+.dark .home-v2-section-title svg {
+  color: var(--camel-400);
+}
+.home-v2-section-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px 7px 14px;
+  border-radius: 10px;
+  border: 1.5px solid var(--camel-300);
+  background: color-mix(in srgb, var(--camel-50) 80%, var(--cream-50));
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--camel-800);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+.home-v2-section-link::after {
+  content: '→';
+  font-weight: 700;
+  transition: transform 0.15s ease;
+}
+.home-v2-section-link:hover {
+  background: var(--camel-100);
+  border-color: var(--camel-500);
+  color: var(--camel-900);
+  text-decoration: none;
+}
+.home-v2-section-link:hover::after {
+  transform: translateX(3px);
+}
+.dark .home-v2-section-link {
+  color: var(--camel-200);
+  border-color: var(--camel-700);
+  background: color-mix(in srgb, var(--camel-900) 40%, var(--char-800));
+}
+.dark .home-v2-section-link:hover {
+  color: var(--cream-50);
+  border-color: var(--camel-400);
+  background: color-mix(in srgb, var(--camel-800) 55%, var(--char-800));
+}
+
+.home-v2-events {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-width: none;
+}
+.home-v2-events-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 24px;
+  align-items: start;
+}
+.home-v2-external {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 0;
+  padding: 11px 14px;
+  border: 0;
+  border-top: 1px solid var(--om-200);
+  border-radius: 0;
+  background: color-mix(in srgb, var(--camel-50) 55%, var(--cream-50));
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--camel-800);
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+.home-v2-external::after {
+  content: '→';
+  flex-shrink: 0;
+  font-size: 14px;
+  transition: transform 0.15s ease;
+}
+.home-v2-external:hover {
+  background: var(--camel-100);
+  color: var(--camel-900);
+  text-decoration: none;
+}
+.home-v2-external:hover::after {
+  transform: translateX(4px);
+}
+.dark .home-v2-external {
+  color: var(--camel-200);
+  border-top-color: var(--char-700);
+  background: color-mix(in srgb, var(--camel-900) 32%, var(--char-800));
+}
+.dark .home-v2-external:hover {
+  color: var(--cream-50);
+  background: color-mix(in srgb, var(--camel-800) 45%, var(--char-800));
+}
+.home-v2-empty {
+  margin: 0;
+  font-size: 14px;
+  color: var(--char-500);
+}
+.home-v2-empty a {
+  font-weight: 600;
+  color: var(--camel-700);
+}

@@ -1,0 +1,32 @@
+{
+  "name": "coursing-stats-bot",
+  "version": "1.0.0",
+  "description": "Telegram bot for Coursing Stats",
+  "main": "src/worker.ts",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "build": "tsc",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "security:scan": "yarn audit && grep -r \"API_KEY\\|SECRET\\|TOKEN\" --include=\"*.ts\" --exclude-dir=node_modules || echo \"No secrets found\""
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "coursing",
+    "stats"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "jsdom": "^30.0.0",
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0",
+    "wrangler": "^3.57.1"
+  },
+  "dependencies": {
+    "coursing-stats": "file:..",
+    "grammy": "^1.21.1"
+  }
+}

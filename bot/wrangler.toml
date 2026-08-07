@@ -1,0 +1,46 @@
+name = "coursing-stats-bot"
+main = "src/worker.ts"
+compatibility_date = "2024-01-01"
+
+[vars]
+SITE_URL = "https://coursing-stats.ru"
+
+# For local development: set BOT_TOKEN in .dev.vars or environment variable
+# BOT_TOKEN = "your_bot_token_here"
+
+[[kv_namespaces]]
+binding = "CACHE"
+id = "f8937ddcfdf241d69a6ef7704c98d2a4"
+
+# RATE_LIMIT uses same KV namespace as CACHE with different key prefixes
+# Keys: "rate_limit:{user_id}:{window}"
+
+[observability]
+enabled = true
+
+[observability.logs]
+enabled = true
+persist = true
+invocation_logs = true
+
+# Build configuration
+[build]
+command = "tsc"
+
+# Exclude backend and other unrelated files
+exclude = [
+  "backend/**",
+  "frontend/**",
+  "data/**",
+  "docs/**",
+  ".github/**",
+  ".windsurf/**",
+  ".agents/**",
+  ".claude/**",
+  ".devin/**",
+  "node_modules/**",
+  "*.md",
+  "*.lock",
+  "package-lock.json",
+  "yarn.lock"
+]

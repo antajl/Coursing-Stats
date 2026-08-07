@@ -1,0 +1,43 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "CP",
+  "count": 4,
+  "dogs": [
+    {
+      "id": "768305121",
+      "name_lat": "CPUTNIK VELESA OTRADA LYUBVI",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "671230113",
+      "name_lat": "CPPER BULLS AMON RA",
+      "name_ru": "",
+      "breed": "БУЛЬМАСТИФ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "246316466",
+      "name_lat": "CPUTNIK VELESA ONEGIN",
+      "name_ru": "",
+      "breed": "МОПС / PUG",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "33438721",
+      "name_lat": "CPUTNIK VELESA LEDI BLEYK",
+      "name_ru": "",
+      "breed": "МОПС ЧЁРНЫЙ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    }
+  ]
+}

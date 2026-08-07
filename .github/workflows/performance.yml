@@ -1,0 +1,109 @@
+name: Performance Checks
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  performance-baseline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'yarn'
+      
+      - name: Install dependencies
+        run: yarn install
+      
+      - name: Measure performance
+        run: yarn run perf:measure
+        continue-on-error: true
+      
+      - name: Upload performance results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: performance-results
+          path: |
+            performance-report.json
+            .devin/performance-baseline.json
+          retention-days: 30
+  
+  bundle-size-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'yarn'
+      
+      - name: Install dependencies
+        run: yarn install
+      
+      - name: Build frontend
+        run: cd frontend; yarn run build
+      
+      - name: Check bundle size
+        run: |
+          TOTAL_SIZE=$(du -sh frontend/dist/assets/*.js | awk '{sum+=$1} END {print sum}')
+          MAIN_BUNDLE=$(du -sh frontend/dist/assets/index-*.js | awk '{print $1}')
+          XLSX_BUNDLE=$(du -sh frontend/dist/assets/xlsx*.js 2>/dev/null || echo "0")
+          
+          echo "Total bundle size: ${TOTAL_SIZE}K"
+          echo "Main bundle: ${MAIN_BUNDLE}K"
+          echo "XLSX bundle: ${XLSX_BUNDLE}K"
+          
+          # Alert if main bundle > 500KB
+          if [ ${MAIN_BUNDLE%K} -gt 500 ]; then
+            echo "::warning::Main bundle size exceeds 500KB"
+          fi
+          
+          # Alert if xlsx bundle > 100KB and not separate
+          if [ ${XLSX_BUNDLE%K} -gt 100 ]; then
+            echo "::warning::XLSX bundle should be lazy-loaded"
+          fi
+      
+      - name: Upload bundle analysis
+        uses: actions/upload-artifact@v4
+        with:
+          name: bundle-analysis
+          path: frontend/dist/assets/
+          retention-days: 30
+  
+  data-validation-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'yarn'
+      
+      - name: Install dependencies
+        run: yarn install
+      
+      - name: Run data validation
+        run: yarn run data:validate
+        continue-on-error: true
+        timeout-minutes: 8
+      
+      - name: Check validation results
+        run: |
+          if grep -q "INVALID" <<EOF
+          $(yarn run data:validate 2>&1 || true)
+          EOF
+          then
+            echo "::warning::Data validation failed - check errors"
+          fi

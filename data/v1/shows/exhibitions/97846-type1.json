@@ -1,0 +1,33 @@
+{
+  "dogs": [
+    {
+      "breed": "АЛЯСКИНСКИЙ",
+      "judge": "MANDRIK, ELENA",
+      "catalog_number": 1,
+      "dog_name": "AKBAR DART VADER",
+      "birth_date": "30.10.2020",
+      "pedigree": "BCU 243-000859",
+      "class": "ЧЕМ",
+      "grade": "а ОТЛ",
+      "title": "ЮКЧП, ВКЧП, КЧК",
+      "bob": false,
+      "show_date": "08.03.2026"
+    },
+    {
+      "breed": "АЛЯСКИНСКИЙ",
+      "judge": "MANDRIK, ELENA",
+      "catalog_number": 2,
+      "dog_name": "MAZURSTAR HEYLI AKBAROVNA",
+      "birth_date": "15.05.2025",
+      "pedigree": "BCU 243-000993",
+      "class": "ЮН",
+      "grade": "ОТЛ",
+      "title": "ЮКЧК",
+      "bob": false,
+      "show_date": "08.03.2026"
+    }
+  ],
+  "page_count": 1,
+  "raw_token_count": 64,
+  "has_main_ring_sheet": false
+}

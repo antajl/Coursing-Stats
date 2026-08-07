@@ -1,0 +1,34 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "G'",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "1001264533",
+      "name_lat": "G'EJVA NA'VI S KORALLOVOGO RIFA БУДУЛАЙ",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "SHETLAND SHEEPDOG",
+      "total_shows": 38,
+      "competition_dog_id": null
+    },
+    {
+      "id": "175543082",
+      "name_lat": "G'YOLL' SEREBRISTAYA",
+      "name_ru": "",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
+      "breed_en": "YAKUTSKAYA LAIKA (YAKUTIAN LAIKA)",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1439510106",
+      "name_lat": "G'JACQUELINE ONASSIS S DVINY",
+      "name_ru": "",
+      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    }
+  ]
+}

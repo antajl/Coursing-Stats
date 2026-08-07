@@ -1,0 +1,47 @@
+name: Update Speed Records
+
+on:
+  schedule:
+    # 2 раза в день: 08:00, 20:00 МСК (UTC+3)
+    - cron: "0 5 * * *"
+    - cron: "0 17 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-speed-records:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: yarn
+
+      - name: Install Node dependencies
+        run: yarn install
+
+      - name: Export speed records from Google Sheets to JSON
+        run: npx tsx backend/scripts/speed/export-speed-from-sheets.ts
+
+      - name: Export coursing records from Google Sheets to JSON
+        run: npx tsx backend/scripts/speed/export-coursing-from-sheets.ts
+
+      - name: Commit updated data files
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/v1/donino/speed_records.json data/v1/donino/coursing_records.json
+          if git diff --staged --quiet; then
+            echo "No data changes to commit"
+          else
+            git commit -m "Update speed records from Google Sheets"
+            git push
+          fi

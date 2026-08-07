@@ -1,0 +1,34 @@
+{
+    "schema":  "coursing-stats/local-data-manifest-v1",
+    "exported_at":  "2026-07-29T09:36:31.526Z",
+    "source":  "merge-duplicate-dogs-v1 + build-all-data",
+    "counts":  {
+                   "events":  223,
+                   "events_with_results":  94,
+                   "dogs":  1458,
+                   "unique_dogs":  1458,
+                   "results":  3716,
+                   "donino_speed":  224,
+                   "donino_coursing":  124,
+                   "breeds":  86,
+                   "exhibitions":  62088,
+                   "show_dogs":  1500455,
+                   "show_ring_entries":  18600000
+               },
+    "paths":  {
+                  "calendar":  "calendar/{year}.json",
+                  "competitions":  "competitions/{year}/{month}/{id}-{slug}.json",
+                  "dogs":  "dogs/by-id/{id}.json | dogs/by-key/{dog_key}.json",
+                  "donino":  "donino/speed_records.json | donino/coursing_records.json",
+                  "indexes":  "indexes/*.json",
+                  "shows_calendar":  "shows/calendar-rkf/{year}.json",
+                  "shows_exhibitions":  "shows/exhibitions/{date}-{id}-{title}.json",
+                  "shows_indexes":  "shows/indexes/*.json"
+              },
+    "workflow":  {
+                     "manual_edit":  "Правьте JSON напрямую; один турнир = один файл competitions/",
+                     "calendar_link":  "calendar/*.json → results_file указывает на competitions/",
+                     "donino_update":  "Скажите агенту «обнови Донино» → npm run export-local-data -- --fetch-donino или правка donino/*.json вручную",
+                     "site_phase":  "Публичный сайт: /data/v1/ на CDN (см. docs/DATA.md)"
+                 }
+}

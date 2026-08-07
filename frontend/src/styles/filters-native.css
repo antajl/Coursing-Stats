@@ -1,0 +1,39 @@
+﻿/* Панель фильтров: на md нельзя трогать transform — иначе съедает -translate-x-1/2
+   и панель на кадр появляется справа от кнопки, потом «прыгает» в центр. */
+.cs-filter-panel-enter {
+  animation: fadeIn 160ms ease-out;
+}
+@media (max-width: 767px) {
+  .cs-filter-panel-enter {
+    animation: filterSheetEnter 200ms ease-out;
+  }
+}
+@keyframes filterSheetEnter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cs-filter-panel-enter {
+    animation: none;
+  }
+}
+
+/* Native select: readable options in dark mode */
+select {
+  color-scheme: light;
+}
+
+.dark select {
+  color-scheme: dark;
+}
+
+.dark select option {
+  background-color: var(--char-800);
+  color: var(--char-100);
+}

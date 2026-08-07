@@ -1,0 +1,101 @@
+# CoursingStats Project Glossary
+version: 2.0.0
+last_updated: 2026-08-06
+
+terms:
+  RKF:
+    definition: Russian Kennel Federation / RKF show ecosystem (rkf.online, LC)
+    see_also: docs/sheets/04-shows.md
+
+  Turso:
+    definition: libSQL cloud used for large exhibition protocol payloads
+    context: Fallback for getShowExhibition; rankings/calendar stay on CDN
+    see_also: docs/sheets/04-shows.md, docs/decisions/009-turso-migration.md
+
+  Exhibitions / Shows:
+    definition: RKF dog shows (separate identity from sport competitions)
+    see_also: docs/sheets/04-shows.md, docs/sheets/01-three-domains.md
+
+  Competitions:
+    definition: Sport events from procoursing (coursing, BZMP, racing)
+    see_also: docs/sheets/03-competitions.md
+
+  CDN:
+    definition: Cloudflare delivery of data/v1 JSON for the static site
+    see_also: docs/sheets/02-data-pipeline.md, docs/decisions/001-cloudflare-pages-hosting.md
+
+  JSON Indexes:
+    definition: Derived files under data/v1/indexes and shows/indexes
+    see_also: docs/sheets/02-data-pipeline.md
+
+  React Query:
+    definition: Used for show ranking/calendar/exhibition fetches
+    see_also: docs/decisions/002-react-query-data-fetching.md, docs/sheets/07-frontend.md
+
+  Cloudflare Pages:
+    definition: Hosts the static frontend (project coursingstats)
+    see_also: docs/sheets/09-ops-deploy.md
+
+  Cloudflare Workers:
+    definition: Hosts Telegram bot (not public site data runtime)
+    see_also: docs/sheets/08-bot.md
+
+  Exhibitions-RKF:
+    definition: PDF → local sqlite/Turso protocol pipeline for RKF
+    see_also: docs/sheets/04-shows.md, docs/decisions/007-exhibitions-rkf-sqlite-migration.md
+
+  SQLite:
+    definition: In-memory during build-all-data; local RKF archive optional
+    see_also: docs/decisions/003-sqlite-json-indexes.md
+
+  ADR:
+    definition: Architecture Decision Record under docs/decisions/
+    see_also: docs/decisions/
+
+  Bot:
+    definition: Telegram bot @coursing_stats_bot
+    see_also: docs/sheets/08-bot.md
+
+  Build-all-data:
+    definition: yarn script rebuilding indexes, copy-data, publish-gates
+    see_also: docs/sheets/02-data-pipeline.md
+
+  Donino:
+    definition: Separate speed (km/h) and 350m (sec) measurement domain
+    see_also: docs/sheets/05-donino.md
+
+  Judges:
+    definition: Sport judges ≠ show judges (separate indexes)
+    see_also: docs/sheets/01-three-domains.md
+
+  CS rating:
+    definition: Points rating (cs-v1); distinct from placement medals
+    see_also: docs/sheets/03-competitions.md
+
+  MAP:
+    definition: docs/MAP.md — single agent documentation router
+    see_also: docs/MAP.md
+
+  Sheets:
+    definition: Agent cheatsheets in docs/sheets/
+    see_also: docs/sheets/00-overview.md
+
+acronyms:
+  ADR: Architecture Decision Record
+  RKF: Russian Kennel / show federation ecosystem
+  CDN: Content Delivery Network
+  CS: Coursing Stats points rating (cs-v1)
+  MCP: Model Context Protocol
+
+phrases:
+  "CDN-only architecture":
+    definition: Public site reads JSON from CDN with no Worker/D1 runtime
+    see_also: docs/sheets/00-overview.md
+
+  "Exhibitions-RKF special case":
+    definition: Large protocols via Turso; rankings remain CDN
+    see_also: docs/sheets/04-shows.md
+
+  "medals ≠ points":
+    definition: Never merge top-placement and top-score rankings
+    see_also: docs/sheets/03-competitions.md

@@ -1,0 +1,34 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "XS",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "736893996",
+      "name_lat": "XSEMEILLEUR RIKOVA PLACE",
+      "name_ru": "",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1155786209",
+      "name_lat": "XSANTOS THE MISTERY OF HISTORY",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН /",
+      "breed_en": "",
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
+      "id": "42843702",
+      "name_lat": "XSIR IZ BELOY BRIGABY",
+      "name_ru": "",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "schema": "coursing-stats/merge-confirmed-dogs-v1",
+  "generated_at": "2026-07-26T10:19:52.578Z",
+  "applied": true,
+  "merges": [
+    {
+      "aliasId": 9741,
+      "keepId": 5634,
+      "reason": "STANGERS LAND ZENIT CHARMAN — variant name suffix; alias only in event 1545",
+      "alias_name": "STANGERS LAND ZENIT CHARMAN",
+      "keep_name": "STANGERS LAND ZENIT",
+      "filesTouched": [],
+      "resultsRemapped": 0,
+      "rowsDroppedAsDup": 0
+    },
+    {
+      "aliasId": 9743,
+      "keepId": 5641,
+      "reason": "BLAZE OF GLORY DAGGER — variant name suffix; alias only in event 1545",
+      "alias_name": "BLAZE OF GLORY DAGGER",
+      "keep_name": "BLAZE OF GLORY",
+      "filesTouched": [],
+      "resultsRemapped": 0,
+      "rowsDroppedAsDup": 0
+    }
+  ]
+}

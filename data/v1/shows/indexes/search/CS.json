@@ -1,0 +1,25 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "CS",
+  "count": 2,
+  "dogs": [
+    {
+      "id": "731702237",
+      "name_lat": "CSHASTLIVAYA SOBAKA AVRORA",
+      "name_ru": "",
+      "breed": "ПЕРЕЦ С СОЛЬЮ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "874846377",
+      "name_lat": "CSOLT",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

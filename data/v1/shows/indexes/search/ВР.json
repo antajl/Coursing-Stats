@@ -1,0 +1,943 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "ВР",
+  "count": 104,
+  "dogs": [
+    {
+      "id": "1915097090",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ТЕОДОР АВГУСТ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "593688557",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ДОЛИНА РОЗ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
+      "id": "423546751",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ВЕРА",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 30,
+      "competition_dog_id": null
+    },
+    {
+      "id": "454058417",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ЭДЕЛЬ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 43,
+      "competition_dog_id": null
+    },
+    {
+      "id": "312626780",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ТАЙГЕР РЕУС",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "618976235",
+      "name_lat": "ВРЕМЯ МЕЧТЫ АРИЯ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1965206465",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ЭТЕРИ ВИКТОРИЯ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "LABRADOR RETRIEVER",
+      "total_shows": 24,
+      "competition_dog_id": null
+    },
+    {
+      "id": "161184632",
+      "name_lat": "ВРЕМЯ НЕ ЖДЕТ ГАБРИЭЛЬ",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "380226510",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ТАЛИСМАН ФРАНЦ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1622728975",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ЕСЕНИЯ II",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "357958495",
+      "name_lat": "ВРАЧУЮЩАЯ ДУШУ АЙЯ",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1447625287",
+      "name_lat": "ВРАЗОВСКИХ МАГИЯ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР)",
+      "breed_en": "GERMAN HUNTING TERRIER",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "378824167",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ДЕЙТРОН",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "963463414",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ЭЛЬДОРАДО",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 31,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1706382112",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ПАТРИЦИЯ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "903636590",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ИМПУЛЬС",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "322096651",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ЭММА",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "470972346",
+      "name_lat": "ВРЕМЯ МЕЧТЫ РОЛАН",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "201410570",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ПОКЕР",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "498217342",
+      "name_lat": "ВРЕМЯ МЕЧТЫ РУБИУС",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "989371852",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ЯШМА",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1406696678",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ЕВЛАМПИЯ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1213488965",
+      "name_lat": "ВРЕМЯ МЕЧТЫ МАРЛЕН",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "769976791",
+      "name_lat": "ВРАЗОВСКИХ БЕЗОГЛЯДНЫЙ",
+      "name_ru": "",
+      "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
+      "breed_en": "YUZHNORUSSKAYA OVCHARKA (SOUTH RUSSIAN SHEEPHERD DOG)",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1602882314",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ДАНИЛА МАСТЕР",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "903500007",
+      "name_lat": "ВРАЗОВСКИХ РАРИТЕТ",
+      "name_ru": "",
+      "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1781631055",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ЯГУАР 2",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1758817125",
+      "name_lat": "Время Мечты Де Луна Платинум Фор Лабрилион`С",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1499013028",
+      "name_lat": "ВРЕМЯ МЕЧТЫ РОЗМАРИ (Изменено по Решению ВК от 21.06.23 вопрос 36)",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "LABRADOR RETRIEVER",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1715246803",
+      "name_lat": "ВРЕМЯ МЕЧТЫ РАГНАР",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1510945450",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ЯРС КАСПЕР ИЗ ЖУРАВЛИНОГО",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1763625213",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ЯСМИН",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "LABRADOR RETRIEVER",
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1348081950",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ЖОЗЕФИНА АМОРЕ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "913555016",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ЯМАЙКА",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "489726021",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ГЕРМАНИКА",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "56237054",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ЛЕГРАН",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "693271724",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ГРАНД II",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1234944873",
+      "name_lat": "ВРАЗОВСКИХ ЗЛАТА ОСЕНЬ",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "RUSSKAYA PSOVAYA BORZAYA (BORZOI)",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1029726906",
+      "name_lat": "ВРЕМЯ МЕЧТЫ РЕНЕСМИ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1421244838",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ЯГУАР-II",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "978590741",
+      "name_lat": "ВРАЙ-ВУЛФ ТАЙСОН",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1070139677",
+      "name_lat": "ВРАЗОВСКИХ ВАРФАЛАМЕЙ ВАРУХ",
+      "name_ru": "",
+      "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
+      "breed_en": "YUZHNORUSSKAYA OVCHARKA (SOUTH RUSSIAN SHEEPHERD DOG)",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1642467078",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ФИЛАДЕЛЬФИЯ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1520434229",
+      "name_lat": "ВРЕМЯ МЕЧТАТЬ ЯММИ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "225966361",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ГЕНРИ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "LABRADOR RETRIEVER",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "123134052",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ГАЛАКТИКА",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "993600983",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ПОРШ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1769667196",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ДАРТ МОЛЛ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "889078194",
+      "name_lat": "ВРАЙ-ВУЛФ ГИД БЕТТИ",
+      "name_ru": "",
+      "breed": "Аляскинский маламут",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "517865698",
+      "name_lat": "ВРАЗОВСКИХ СМЕЛЫЙ СВЯТОГОР",
+      "name_ru": "",
+      "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "211815877",
+      "name_lat": "ВРАЗОВСКИХ СЛАВЯНА СТОЯНА",
+      "name_ru": "",
+      "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1980214627",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ЛОРИ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "372713493",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ЯССОН",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "194723914",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ФЕЯ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "269276756",
+      "name_lat": "ВРУМ ВРУМ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "236578514",
+      "name_lat": "ВРЕМЯ МЕЧТЫ БЕЛЛЬ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "737336446",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ВАРЯГ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1966913241",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ДАН",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "708794065",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ЯГУАР",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1266029683",
+      "name_lat": "ВРАЙ-ВУЛЬФ ТАЙСОН",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "937268585",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ЛЕКСА",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "752626277",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ЯММИ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "LABRADOR RETRIEVER",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1807247861",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ЛАДА",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "544303660",
+      "name_lat": "ВРИКО ХЭРУМИ",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1939023263",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ЛИБЕРТИ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1722827684",
+      "name_lat": "ВРАЗОВСКИХ КХАН АЛТАЙ",
+      "name_ru": "",
+      "breed": "BORZOI - RUSSIAN HUNTING",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1651638384",
+      "name_lat": "ВРАЗОВСКИХ СЧАСТЛИВЫЙ",
+      "name_ru": "",
+      "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1596450009",
+      "name_lat": "ВРАЗОВСКИХ ДИНАМИТ",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "522011935",
+      "name_lat": "ВРАЗОВСКИХ БЛАГОРОДНАЯ",
+      "name_ru": "",
+      "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "376715442",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ГЕРА",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "251846653",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ПЕРСЕФОНА ДЕБОРА",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "LABRADOR RETRIEVER",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1816312418",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ЯСОН",
+      "name_ru": "",
+      "breed": "ЛАБРАДОРРЕТРИВЕР/",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "592607014",
+      "name_lat": "ВРАЗОВСКИХ АРИЭЛЛА АВИШАГ АВИВА",
+      "name_ru": "",
+      "breed": "RUSSIAN HUNTING",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "246488840",
+      "name_lat": "ВРАЗОВСКИХ КАТУНЬ",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1240869451",
+      "name_lat": "ВРЕМЯ МЕЧТЫ МИЯ МУНЛАЙТ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1023668203",
+      "name_lat": "ВРЕМЯ МЕЧТЫ МАРШАЛ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1958884416",
+      "name_lat": "ВРАЗОВСКИХ ЛЕБЕДЬ",
+      "name_ru": "",
+      "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "262993983",
+      "name_lat": "ВРАЗОВСКИХ ТОНИ",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1559020841",
+      "name_lat": "ВРУМ ВРУМ",
+      "name_ru": "",
+      "breed": "КАРДИГАН / WELSH",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "582046446",
+      "name_lat": "ВРАНГЕЛЬ ДЕМО",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1776384060",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ЭДГАРД",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР / LABRADOR",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "150548074",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ЛАЙКАР",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1947095425",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ПЕТРА ЭДОМА",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "982461965",
+      "name_lat": "ВРЕМЯ МЕЧТЫ БИГ БОСС",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "515939290",
+      "name_lat": "ВРЕМЯ МЕЧТЫ КИТАНА",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1144402103",
+      "name_lat": "ВРУМ ВРУМ",
+      "name_ru": "",
+      "breed": "WELSH CORGI CARDIGAN",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1812331980",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ЮЛИЙ ЦЕЗАРЬ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "LABRADOR RETRIEVER",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "651680463",
+      "name_lat": "ВРАЗОВСКИХ БЛЕСКАЯ",
+      "name_ru": "",
+      "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1978026466",
+      "name_lat": "ВРЕМЯ НЕ ЖДЕТ ФЬОРД",
+      "name_ru": "",
+      "breed": "УИППЕТ / WHIPPET",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "825712511",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ЯММИ ,",
+      "name_ru": "",
+      "breed": "ИВЕР/",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1226679854",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ИРБИС",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1576191059",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ЛУКА",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "404458855",
+      "name_lat": "ВРЕМЯ МЕЧТЫ РУБИУС НАШ ЛЮБИМЕЦ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОРРЕТРИВЕР/",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "550515010",
+      "name_lat": "Время Мечты Гриффиндор",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1292493444",
+      "name_lat": "ВРАЗОВСКИХ ГРОЗА",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "464187256",
+      "name_lat": "ВРЕМЯ МЕЧТЫ РОБИНЗОН",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1696241653",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ДЕ- ЛУНА ФОР ЛАБРИЛИОН'С",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1978775055",
+      "name_lat": "Время Мечты Перфекта",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1368306585",
+      "name_lat": "ВРАЗОВСКИХ ТЬМА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "48564449",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ЧЕРУТТИ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1858831037",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ЧИО САН",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "325135346",
+      "name_lat": "ВРЕМЯ МЕЧТЫ МИРА",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР / LABRADOR",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "273167664",
+      "name_lat": "ВРЕМЯ МЕЧТЫ ЯМАТО САМУРАЙ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "371877909",
+      "name_lat": "ВРЕМЯ МЕЧТЫ МАРС",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

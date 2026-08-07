@@ -1,0 +1,358 @@
+import { useState, useEffect, useRef, useCallback, useMemo } from 'react'
+import { api } from '../services/api'
+import { parseDogName } from '../lib/dogName'
+import { buildEventResultsUrlMap, procoursingUrlForEventId } from '../lib/procoursingLinks'
+import ProcoursingEventLink from './ProcoursingEventLink'
+import MedalTally from './MedalTally'
+
+// Позиция рядом с курсором, с удержанием в пределах экрана
+function computePosition(pointer, cardWidth, cardHeight) {
+  const margin = 12
+  const offset = 14
+  const vw = window.innerWidth
+  const vh = window.innerHeight
+
+  let x = pointer.x + offset
+  let y = pointer.y + offset
+
+  if (x + cardWidth > vw - margin) {
+    x = pointer.x - cardWidth - offset
+  }
+  if (y + cardHeight > vh - margin) {
+    y = pointer.y - cardHeight - offset
+  }
+
+  x = Math.max(margin, Math.min(x, vw - cardWidth - margin))
+  y = Math.max(margin, Math.min(y, vh - cardHeight - margin))
+
+  return { x, y }
+}
+
+export default function DogTooltip({ dogId, pointer, onClose }) {
+  const [dogData, setDogData] = useState(null)
+  const [dogEvents, setDogEvents] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
+  const [position, setPosition] = useState({ x: -9999, y: -9999 })
+
+  const tooltipRef = useRef(null)
+  const eventResultsUrls = useMemo(() => buildEventResultsUrlMap(dogEvents), [dogEvents])
+
+  // Пересчитываем позицию когда карточка отрендерилась и мы знаем её размер
+  useEffect(() => {
+    if (!pointer || !tooltipRef.current) return
+    const rect = tooltipRef.current.getBoundingClientRect()
+    const pos = computePosition(pointer, rect.width, rect.height)
+    setPosition(pos)
+  }, [pointer, dogData])
+
+  useEffect(() => {
+    if (!dogId) return
+    const fetchDogData = async () => {
+      try {
+        setLoading(true)
+        setError(null)
+        const [profileResult, eventsResult] = await Promise.all([
+          api.getDogProfile(dogId),
+          api.getDogEvents(dogId),
+        ])
+        if (profileResult.data) {
+          setDogData(profileResult.data)
+        } else {
+          setError('Не удалось загрузить данные')
+        }
+        if (eventsResult?.success && Array.isArray(eventsResult.data)) {
+          setDogEvents(eventsResult.data)
+        } else {
+          setDogEvents([])
+        }
+      } catch (err) {
+        setError('Ошибка загрузки')
+        console.error('Error fetching dog data:', err)
+      } finally {
+        setLoading(false)
+      }
+    }
+    fetchDogData()
+  }, [dogId])
+
+  // Закрытие по клику снаружи
+  const handleClickOutside = useCallback((e) => {
+    if (tooltipRef.current && !tooltipRef.current.contains(e.target)) {
+      onClose()
+    }
+  }, [onClose])
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [handleClickOutside])
+
+  if (!pointer) return null
+
+  const style: React.CSSProperties = {
+    position: 'fixed',
+    left: `${position.x}px`,
+    top: `${position.y}px`,
+    zIndex: 1000,
+    // Прячем до первого пересчёта позиции чтобы не было прыжка
+    visibility: position.x === -9999 ? 'hidden' : 'visible',
+  }
+
+  // ── Загрузка ──────────────────────────────────────────────────────────────
+  if (loading) {
+    return (
+      <div ref={tooltipRef} style={style}
+        className="bg-white dark:bg-charcoal-800 rounded-2xl shadow-xl border border-old-money-200 dark:border-charcoal-600 p-5 w-[320px] md:w-[440px] animate-fade-in">
+          <div className="flex items-center gap-3 text-old-money-500 dark:text-old-money-400">
+          <div className="h-4 w-4 animate-spin rounded-full border-2 border-old-money-300 border-t-camel-600" />
+          <span className="text-sm">Загрузка...</span>
+        </div>
+      </div>
+    )
+  }
+
+  // ── Ошибка ────────────────────────────────────────────────────────────────
+  if (error) {
+    return (
+      <div ref={tooltipRef} style={style}
+        className="bg-white dark:bg-charcoal-800 rounded-2xl shadow-xl border border-red-200 dark:border-red-700 p-5 w-[320px] md:w-[440px] animate-fade-in">
+        <div className="text-sm text-red-500 dark:text-red-400">{error}</div>
+      </div>
+    )
+  }
+
+  if (!dogData) return null
+
+  const coursing = dogData.coursing_stats || {}
+  const racing = dogData.racing_stats || {}
+  const hasCoursingData = coursing.total_starts > 0
+  const hasRacingData = racing.total_starts > 0
+
+  const { primary, secondary } = parseDogName(dogData.name_lat, dogData.name_ru)
+
+  const hasCourseMedals = coursing.gold > 0 || coursing.silver > 0 || coursing.bronze > 0
+  const hasRacingMedals = racing.gold > 0 || racing.silver > 0 || racing.bronze > 0
+
+  const formatScore = (v) =>
+    v !== undefined && v !== null ? parseFloat(v).toFixed(2) : '—'
+
+  const bestScoreEventId = coursing.best_score_event_id || null
+  const bestJudgeScoreEventId = coursing.best_judge_score_event_id || null
+  const avgJudgeScoreEventId = coursing.avg_judge_score_event_id || null
+  const bestSpeedEventId = racing.best_speed_event_id || null
+  const avgSpeedEventId = racing.avg_speed_event_id || null
+
+  const statCellClass = 'bg-white dark:bg-charcoal-800 rounded-lg p-2 shadow-sm text-center'
+  const statLabelClass = 'text-[10px] text-gray-400 dark:text-gray-500 mb-0.5'
+  const linkCellClass = `${statCellClass} block transition-colors hover:bg-camel-50 dark:hover:bg-charcoal-700`
+  const linkCellBlueClass = `${statCellClass} block transition-colors hover:bg-warm-blue-50 dark:hover:bg-charcoal-700`
+
+  // ── ПОЛНАЯ карточка (единственный режим) ─────────────────────────────────
+  return (
+      <div ref={tooltipRef} style={style}
+        className="bg-white dark:bg-charcoal-800 rounded-2xl shadow-xl border border-old-money-200 dark:border-charcoal-600 w-[320px] md:w-[440px] animate-fade-in-scale">
+
+        <div className="p-4 md:p-5 relative">
+
+          {/* ── Шапка ─────────────────────────────────────────────────────── */}
+          <div className="mb-4 pb-4 border-b border-old-money-100 dark:border-charcoal-600">
+            <div className="min-w-0">
+              <div className="flex items-baseline gap-2 flex-wrap">
+                <h3 className="text-base font-bold font-serif text-charcoal-900 dark:text-charcoal-100 leading-tight">
+                  {primary}
+                </h3>
+                {dogData.sex && (
+                  <span className="text-sm text-gray-400 dark:text-gray-500 flex-shrink-0">
+                    {dogData.sex === 'M' ? '♂' : '♀'}
+                  </span>
+                )}
+              </div>
+              {secondary && (
+                <div className="text-xs text-old-money-500 dark:text-old-money-400 mt-0.5 truncate">{secondary}</div>
+              )}
+              {/* Порода — под именем, не правее */}
+              <div className="mt-1.5">
+                <span className="inline-block bg-old-money-100 dark:bg-charcoal-700 text-old-money-700 dark:text-old-money-300 text-xs font-medium font-serif rounded-full py-0.5 px-3">
+                  {dogData.breed}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* ── Блоки дисциплин ───────────────────────────────────────────── */}
+          <div className={`grid gap-3 mb-4 ${hasCoursingData && hasRacingData ? 'grid-cols-2' : 'grid-cols-1'}`}>
+
+            {/* Курсинг */}
+            {hasCoursingData && (
+              <div className="bg-gradient-to-br from-old-money-50 dark:from-charcoal-700 to-old-money-100 dark:to-charcoal-600 rounded-xl p-3 border border-old-money-200 dark:border-charcoal-600">
+                <div className="text-xs font-bold text-old-money-700 dark:text-old-money-300 mb-3">Курсинг / БЗМП</div>
+
+                {/* Лучший результат */}
+                {bestScoreEventId ? (
+                  <ProcoursingEventLink
+                    eventId={bestScoreEventId}
+                    procoursingUrl={procoursingUrlForEventId(eventResultsUrls, bestScoreEventId)}
+                    className="group mb-3 block rounded-lg border border-camel-200 dark:border-camel-600 bg-white dark:bg-charcoal-800 p-3 text-center shadow-sm transition-colors hover:bg-camel-50 dark:hover:bg-charcoal-700"
+                    title="Открыть результаты соревнования"
+                  >
+                    <div className="text-[10px] text-gray-400 dark:text-gray-500 mb-1">Лучший результат</div>
+                    <div className="text-2xl font-bold text-camel-700 dark:text-camel-300 leading-none group-hover:text-camel-800 dark:group-hover:text-camel-200">
+                      {coursing.best_score ?? '—'}
+                    </div>
+                    <div className="mt-1 text-[10px] text-camel-700 dark:text-camel-500 opacity-0 transition-opacity group-hover:opacity-100">
+                      открыть результаты →
+                    </div>
+                  </ProcoursingEventLink>
+                ) : (
+                  <div className="bg-white dark:bg-charcoal-800 rounded-lg p-3 shadow-sm mb-3 text-center">
+                    <div className="text-[10px] text-gray-400 dark:text-gray-500 mb-1">Лучший результат</div>
+                    <div className="text-2xl font-bold text-camel-700 dark:text-camel-300 leading-none">
+                      {coursing.best_score ?? '—'}
+                    </div>
+                  </div>
+                )}
+
+                <div className="grid grid-cols-3 gap-2 mb-3">
+                  <div className={statCellClass}>
+                    <div className={statLabelClass}>Участия</div>
+                    <div className="text-base font-bold text-old-money-800 dark:text-old-money-300">{coursing.total_starts}</div>
+                  </div>
+                  {bestJudgeScoreEventId ? (
+                    <ProcoursingEventLink
+                      eventId={bestJudgeScoreEventId}
+                      procoursingUrl={procoursingUrlForEventId(eventResultsUrls, bestJudgeScoreEventId)}
+                      className={linkCellClass}
+                      title="Открыть результаты соревнования"
+                    >
+                      <div className={statLabelClass}>Лучшая оценка</div>
+                      <div className="text-base font-bold text-old-money-800 dark:text-old-money-300">{formatScore(coursing.best_judge_score)}</div>
+                    </ProcoursingEventLink>
+                  ) : (
+                    <div className={statCellClass}>
+                      <div className={statLabelClass}>Лучшая оценка</div>
+                      <div className="text-base font-bold text-old-money-800 dark:text-old-money-300">{formatScore(coursing.best_judge_score)}</div>
+                    </div>
+                  )}
+                  {avgJudgeScoreEventId ? (
+                    <ProcoursingEventLink
+                      eventId={avgJudgeScoreEventId}
+                      procoursingUrl={procoursingUrlForEventId(eventResultsUrls, avgJudgeScoreEventId)}
+                      className={linkCellClass}
+                      title="Открыть результаты соревнования"
+                    >
+                      <div className={statLabelClass}>Средняя оценка</div>
+                      <div className="text-base font-bold text-old-money-800 dark:text-old-money-300">{formatScore(coursing.avg_judge_score)}</div>
+                    </ProcoursingEventLink>
+                  ) : (
+                    <div className={statCellClass}>
+                      <div className={statLabelClass}>Средняя оценка</div>
+                      <div className="text-base font-bold text-old-money-800 dark:text-old-money-300">{formatScore(coursing.avg_judge_score)}</div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Медали */}
+                {hasCourseMedals && (
+                  <div className="flex justify-center py-1">
+                    <MedalTally
+                      gold={coursing.gold}
+                      silver={coursing.silver}
+                      bronze={coursing.bronze}
+                      size="sm"
+                    />
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* Рейсинг */}
+            {hasRacingData && (
+              <div className="rounded-xl border border-warm-blue-200 dark:border-warm-blue-600 bg-gradient-to-br from-warm-blue-50 dark:from-charcoal-700 to-warm-blue-100 dark:to-charcoal-600 p-3">
+                <div className="mb-3 text-xs font-bold text-warm-blue-800 dark:text-warm-blue-400">Рейсинг</div>
+
+                {/* Лучшая скорость */}
+                {bestSpeedEventId ? (
+                  <ProcoursingEventLink
+                    eventId={bestSpeedEventId}
+                    procoursingUrl={procoursingUrlForEventId(eventResultsUrls, bestSpeedEventId)}
+                    className="group mb-3 block rounded-lg border border-warm-blue-200 dark:border-warm-blue-600 bg-white dark:bg-charcoal-800 p-3 text-center shadow-sm transition-colors hover:bg-warm-blue-50 dark:hover:bg-charcoal-700"
+                    title="Открыть результаты соревнования"
+                  >
+                    <div className="text-[10px] text-gray-400 dark:text-gray-500 mb-1">Лучшая скорость</div>
+                    <div className="whitespace-nowrap text-2xl font-bold text-warm-blue-800 dark:text-warm-blue-400 leading-none group-hover:text-warm-blue-900 dark:group-hover:text-warm-blue-300">
+                      {racing.best_speed ?? '—'}
+                      {racing.best_speed && <span className="text-sm font-normal text-gray-400 ml-1">км/ч</span>}
+                    </div>
+                    <div className="mt-1 text-[10px] text-warm-blue-700 dark:text-warm-blue-500 opacity-0 transition-opacity group-hover:opacity-100">
+                      открыть результаты →
+                    </div>
+                  </ProcoursingEventLink>
+                ) : (
+                  <div className="bg-white dark:bg-charcoal-800 rounded-lg p-3 shadow-sm mb-3 text-center">
+                    <div className="text-[10px] text-gray-400 dark:text-gray-500 mb-1">Лучшая скорость</div>
+                    <div className="whitespace-nowrap text-2xl font-bold text-warm-blue-800 dark:text-warm-blue-400 leading-none">
+                      {racing.best_speed ?? '—'}
+                      {racing.best_speed && <span className="text-sm font-normal text-gray-400 dark:text-gray-500 ml-1">км/ч</span>}
+                    </div>
+                  </div>
+                )}
+
+                <div className="grid grid-cols-2 gap-2">
+                  <div className={statCellClass}>
+                    <div className={statLabelClass}>Участия</div>
+                    <div className="text-base font-bold text-warm-blue-900 dark:text-warm-blue-400">{racing.total_starts}</div>
+                  </div>
+                  {avgSpeedEventId ? (
+                    <ProcoursingEventLink
+                      eventId={avgSpeedEventId}
+                      procoursingUrl={procoursingUrlForEventId(eventResultsUrls, avgSpeedEventId)}
+                      className={linkCellBlueClass}
+                      title="Открыть результаты соревнования"
+                    >
+                      <div className={statLabelClass}>Средняя</div>
+                      <div className="whitespace-nowrap text-base font-bold text-warm-blue-900 dark:text-warm-blue-400">
+                        {racing.avg_speed
+                          ? <>{racing.avg_speed}<span className="text-[10px] font-normal text-gray-400 dark:text-gray-500 ml-0.5">км/ч</span></>
+                          : '—'
+                        }
+                      </div>
+                    </ProcoursingEventLink>
+                  ) : (
+                    <div className={statCellClass}>
+                      <div className={statLabelClass}>Средняя</div>
+                      <div className="whitespace-nowrap text-base font-bold text-warm-blue-900 dark:text-warm-blue-400">
+                        {racing.avg_speed
+                          ? <>{racing.avg_speed}<span className="text-[10px] font-normal text-gray-400 dark:text-gray-500 ml-0.5">км/ч</span></>
+                          : '—'
+                        }
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Медали */}
+                {hasRacingMedals && (
+                  <div className="flex justify-center py-1">
+                    <MedalTally
+                      gold={racing.gold}
+                      silver={racing.silver}
+                      bronze={racing.bronze}
+                      size="sm"
+                    />
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+
+          {/* ── Владелец ──────────────────────────────────────────────────── */}
+          {dogData.owner && (
+            <div className="text-xs text-old-money-500 dark:text-old-money-400 pt-3 border-t border-old-money-100 dark:border-charcoal-600">
+              <span className="font-medium text-old-money-600 dark:text-old-money-300">Владелец:</span> {dogData.owner}
+            </div>
+          )}
+        </div>
+      </div>
+  )
+}

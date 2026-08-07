@@ -1,0 +1,60 @@
+:root{
+  --om-50:#faf8f4;--om-100:#f3ede4;--om-200:#e7ddcf;--om-300:#d9ccb8;--om-400:#c7b79e;--om-600:#98836a;--om-700:#796855;--om-800:#5d5144;--om-900:#433a31;
+  --cream-50:#fcfaf7;--cream-100:#f7f2ea;--cream-200:#eee5d6;
+  --camel-50:#faf6f0;--camel-100:#f3e7d5;--camel-200:#e7d1ab;--camel-300:#d8b57a;--camel-400:#c79c56;--camel-500:#b68231;--camel-600:#9b6720;--camel-700:#7b511c;--camel-800:#5c3c15;--camel-900:#3f2a0f;--camel-950:#2a1c0a;
+  --char-100:#ecebe7;--char-200:#d5d1c9;--char-300:#bcb7ad;--char-400:#9a9388;--char-500:#7a7a7a;--char-700:#4d4740;--char-800:#38342f;--char-900:#252320;
+  --forest-300:#aac7ab;--forest-600:#557658;--forest-700:#435d46;
+  --wb-300:#a8c0cf;--wb-600:#55738a;--wb-700:#465c70;
+  --terra-200:#efc8b4;--terra-500:#bb6148;--terra-600:#9d4c37;
+  --spacing-xs:4px;--spacing-sm:8px;--spacing-md:16px;--spacing-lg:24px;--spacing-xl:32px;--spacing-2xl:48px;--spacing-3xl:64px;
+  --font-sans: Montserrat, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-serif: Georgia, "Times New Roman", serif;
+  --font-mono: "JetBrains Mono", "Courier New", monospace;
+  /* Medal and rank colors */
+  --medal-gold-bg: #FFD700;
+  --medal-gold-text: #2c2314;
+  --medal-silver-bg: #C0C0C0;
+  --medal-silver-text: #2c2314;
+  --medal-bronze-bg: #CD7F32;
+  --medal-bronze-text: #2c2314;
+  --rank-1-color: var(--medal-gold-bg);
+  --rank-2-color: var(--medal-silver-bg);
+  --rank-3-color: var(--medal-bronze-bg);
+  /* Z-index layers */
+  --z-tooltip: 1000;
+  --z-dropdown: 1050;
+  --z-modal: 1100;
+}
+
+*{box-sizing:border-box;}
+
+html {
+  transition: background-color 200ms ease, color 200ms ease;
+  background-color: var(--om-50);
+}
+
+body {
+  margin:0; font-family:var(--font-sans); color:var(--char-900);
+  background-color: var(--om-50);
+  min-height:100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html.dark {
+  background-color: var(--char-900);
+}
+
+.dark body {
+  color: var(--char-100);
+  background-color: var(--char-900);
+}
+
+.placement-badge-gold{background-color:var(--camel-400);border-color:var(--camel-600);color:#2c2314;}
+.placement-badge-silver{background-color:var(--om-400);border-color:var(--om-700);color:var(--char-800);}
+.placement-badge-bronze{background-color:var(--terra-200);border-color:var(--terra-600);color:#7b3d2a;}
+.placement-badge-neutral{background-color:var(--om-200);border-color:var(--om-500);color:var(--char-700);}
+.dark .placement-badge-gold{background-color:var(--camel-600);border-color:var(--camel-300);color:var(--camel-100);}
+.dark .placement-badge-silver{background-color:var(--char-700);border-color:var(--char-300);color:var(--char-100);}
+.dark .placement-badge-bronze{background-color:var(--terra-600);border-color:#bb6148;color:var(--terra-200);}
+.dark .placement-badge-neutral{background-color:var(--char-700);border-color:var(--char-400);color:var(--char-200);}

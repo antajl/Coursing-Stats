@@ -1,0 +1,91 @@
+/*
+ * Оболочка всего сайта (App.tsx):
+ * — базовый градиент + grain
+ * — .cs-page-blobs: мягкие пятна; позиции/появление — PageAtmosphereBlobs.tsx
+ */
+.cs-page-shell {
+  position: relative;
+  z-index: 0;
+  background-color: transparent;
+  background-image: none;
+}
+
+.cs-page-shell::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.2;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.6  0 0 0 0 0.45  0 0 0 0 0.35  0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 180px 180px;
+}
+
+.cs-page-blobs {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  display: none;
+}
+
+.cs-page-blob {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0;
+  will-change: opacity, left, top, width, height;
+}
+
+.cs-page-blob--a {
+  background: color-mix(in srgb, var(--camel-300) 62%, var(--cream-100));
+}
+
+.cs-page-blob--b {
+  background: color-mix(in srgb, var(--camel-200) 48%, var(--om-100));
+}
+
+.cs-page-blob--c {
+  background: color-mix(in srgb, var(--camel-100) 70%, var(--cream-50));
+}
+
+.dark .cs-page-shell {
+  background-color: transparent;
+  background-image: none;
+}
+
+.dark .cs-page-shell::before {
+  opacity: 0.12;
+  mix-blend-mode: soft-light;
+}
+
+.dark .cs-page-blob--a {
+  background: color-mix(in srgb, var(--camel-800) 45%, var(--char-800));
+}
+
+.dark .cs-page-blob--b {
+  background: color-mix(in srgb, var(--camel-900) 38%, var(--char-700));
+}
+
+.dark .cs-page-blob--c {
+  background: color-mix(in srgb, var(--camel-950) 50%, var(--char-800));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cs-page-shell {
+    background-attachment: scroll;
+  }
+  .owner-mark-name > * {
+    animation: none;
+    background-image: none;
+    color: var(--owner-mark-base) !important;
+    -webkit-text-fill-color: var(--owner-mark-base);
+  }
+}
+
+footer{margin-top:60px; text-align:center; font-size:12px; color:var(--om-600);}
+.dark footer{color:var(--char-500);}

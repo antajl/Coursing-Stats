@@ -1,0 +1,31 @@
+{
+  "ignorePatterns": [
+    {
+      "pattern": "^http://localhost"
+    },
+    {
+      "pattern": "^https://coursing-stats.ru"
+    },
+    {
+      "pattern": "^https://procoursing.ru"
+    },
+    {
+      "pattern": "^https://github.com"
+    }
+  ],
+  "replacementPatterns": [
+    {
+      "pattern": "^../",
+      "replacement": "docs/"
+    },
+    {
+      "pattern": "^#",
+      "replacement": ""
+    }
+  ],
+  "aliveStatusCodes": [200, 206, 301, 302, 303, 307, 308],
+  "fallbackRetryCount": 2,
+  "retryOn429": true,
+  "retryCount": 2,
+  "timeout": "10s"
+}

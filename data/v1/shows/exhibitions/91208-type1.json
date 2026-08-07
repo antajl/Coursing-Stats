@@ -1,0 +1,85 @@
+{
+  "dogs": [
+    {
+      "breed": "БУЛЬДОГ",
+      "judge": "ВЛАСЕНКО ЛАРИСА ВЛАДИМИРОВНА",
+      "catalog_number": 1,
+      "dog_name": "SIBIRSKIY BARBARIS RADZHA",
+      "birth_date": "18.05.2025",
+      "pedigree": "ADZ 5235",
+      "class": "ЩЕН",
+      "grade": "а ОП",
+      "title": "ЮКЧП, ВКЧП, ЛПП",
+      "bob": true,
+      "show_date": "25.01.2026"
+    },
+    {
+      "breed": "КОРСО",
+      "judge": "ВЛАСЕНКО ЛАРИСА ВЛАДИМИРОВНА",
+      "catalog_number": 2,
+      "dog_name": "LION HEART",
+      "birth_date": "27.02.2025",
+      "pedigree": "7270285",
+      "class": "ЮН",
+      "grade": "ОТЛ",
+      "title": "JCAC",
+      "bob": false,
+      "show_date": "25.01.2026"
+    },
+    {
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
+      "judge": "ВЛАСЕНКО ЛАРИСА ВЛАДИМИРОВНА",
+      "catalog_number": 3,
+      "dog_name": "МОХНАТАЯ ЛАПА ИЗ ЯР ГРАДА",
+      "birth_date": "08.03.2025",
+      "pedigree": "7240476",
+      "class": "ЮН",
+      "grade": "ОТЛ",
+      "title": "ЛПП, JCAC",
+      "bob": true,
+      "show_date": "25.01.2026"
+    },
+    {
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "judge": "ВЛАСЕНКО ЛАРИСА ВЛАДИМИРОВНА",
+      "catalog_number": 4,
+      "dog_name": "IN DONO DI GLORIA CAELESTIS DONUM AMORIS",
+      "birth_date": "30.09.2025",
+      "pedigree": "AXD 16072",
+      "class": "Б",
+      "grade": "ОП",
+      "title": "",
+      "bob": false,
+      "show_date": "25.01.2026"
+    },
+    {
+      "breed": "РОТВЕЙЛЕР",
+      "judge": "ВЛАСЕНКО ЛАРИСА ВЛАДИМИРОВНА",
+      "catalog_number": 5,
+      "dog_name": "СОКРОВИЩЕ АЛЕКСЫ ЕСЕНИЯ",
+      "birth_date": "07.05.2024",
+      "pedigree": "7180097",
+      "class": "ПРМ",
+      "grade": "ОТЛ",
+      "title": "ЛПП, CAC",
+      "bob": true,
+      "show_date": "25.01.2026"
+    },
+    {
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "judge": "ВЛАСЕНКО ЛАРИСА ВЛАДИМИРОВНА",
+      "catalog_number": 6,
+      "dog_name": "AZ-MARAL ZHENEVA-IV",
+      "birth_date": "22.03.2025",
+      "pedigree": "7352743",
+      "class": "ЮН",
+      "grade": "ОТЛ",
+      "title": "JCAC",
+      "bob": false,
+      "show_date": "25.01.2026"
+    }
+  ],
+  "page_count": 1,
+  "raw_token_count": 128,
+  "has_main_ring_sheet": false
+}

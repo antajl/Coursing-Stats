@@ -1,0 +1,33 @@
+{
+  "dogs": [
+    {
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "judge": "БЕЛКИН АЛЕКСЕЙ СЕРГЕЕВИЧ",
+      "catalog_number": 1,
+      "dog_name": "АСНИКУС ФЕНИКС",
+      "birth_date": "17.12.2024",
+      "pedigree": "7191141",
+      "class": "ЮН",
+      "grade": "а ОТЛ",
+      "title": "ЮКЧП, ВКЧП, ЮКЧК",
+      "bob": false,
+      "show_date": "25.04.2026"
+    },
+    {
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "judge": "БЕЛКИН АЛЕКСЕЙ СЕРГЕЕВИЧ",
+      "catalog_number": 2,
+      "dog_name": "DECEMBER SNOW KISS",
+      "birth_date": "23.12.2022",
+      "pedigree": "6669425",
+      "class": "ЧЕМ",
+      "grade": "ОТЛ",
+      "title": "КЧК",
+      "bob": false,
+      "show_date": "25.04.2026"
+    }
+  ],
+  "page_count": 1,
+  "raw_token_count": 63,
+  "has_main_ring_sheet": false
+}

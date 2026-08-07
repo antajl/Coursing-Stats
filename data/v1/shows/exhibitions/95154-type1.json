@@ -1,0 +1,59 @@
+{
+  "dogs": [
+    {
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "judge": "БЕГМА ИННА ВАЛЕРЬЕВНА",
+      "catalog_number": 1,
+      "dog_name": "MIRACLE FROM EMMA'S CAPRICE",
+      "birth_date": "12.11.2023",
+      "pedigree": "6977390",
+      "class": "ЧЕМ",
+      "grade": "а ОТЛ",
+      "title": "ЮКЧП, ВКЧП, КЧК",
+      "bob": false,
+      "show_date": "15.02.2026"
+    },
+    {
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "judge": "БЕГМА ИННА ВАЛЕРЬЕВНА",
+      "catalog_number": 2,
+      "dog_name": "КЭНДИ ДАНИЭЛЛА",
+      "birth_date": "31.08.2025",
+      "pedigree": "ZMR 2520",
+      "class": "Б",
+      "grade": "НЯ",
+      "title": "",
+      "bob": false,
+      "show_date": "15.02.2026"
+    },
+    {
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "judge": "БЕГМА ИННА ВАЛЕРЬЕВНА",
+      "catalog_number": 3,
+      "dog_name": "ЮЛИА'С СТАР ФРАНЧЕСКА",
+      "birth_date": "01.12.2024",
+      "pedigree": "7172000",
+      "class": "ЮН",
+      "grade": "ОТЛ",
+      "title": "ЮКЧК",
+      "bob": false,
+      "show_date": "15.02.2026"
+    },
+    {
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "judge": "БЕГМА ИННА ВАЛЕРЬЕВНА",
+      "catalog_number": 4,
+      "dog_name": "SCHASTLIVY MIR DELISIYA",
+      "birth_date": "10.06.2018",
+      "pedigree": "5328131",
+      "class": "ЧЕМ",
+      "grade": "ОТЛ",
+      "title": "КЧК",
+      "bob": false,
+      "show_date": "15.02.2026"
+    }
+  ],
+  "page_count": 1,
+  "raw_token_count": 88,
+  "has_main_ring_sheet": false
+}

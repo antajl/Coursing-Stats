@@ -1,0 +1,25 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "TX",
+  "count": 2,
+  "dogs": [
+    {
+      "id": "1579702442",
+      "name_lat": "TXAI SILK WALK ON THE CLOUD",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "687627817",
+      "name_lat": "TXURI DE CANUBAN",
+      "name_ru": "",
+      "breed": "ИСПАНСКАЯ ГОНЧАЯ",
+      "breed_en": "SPANISH HOUND",
+      "total_shows": 3,
+      "competition_dog_id": null
+    }
+  ]
+}

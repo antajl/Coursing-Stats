@@ -1,0 +1,59 @@
+{
+  "dogs": [
+    {
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "judge": "КРЫЛОВА ЕКАТЕРИНА АНАТОЛЬЕВНА",
+      "catalog_number": 1,
+      "dog_name": "TAEZHNYY VETER URSA",
+      "birth_date": "13.11.2024",
+      "pedigree": "7185430",
+      "class": "ПРМ",
+      "grade": "а ОТЛ",
+      "title": "ЮКЧП, ВКЧП, КЧК",
+      "bob": false,
+      "show_date": "15.03.2026"
+    },
+    {
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "judge": "КРЫЛОВА ЕКАТЕРИНА АНАТОЛЬЕВНА",
+      "catalog_number": 2,
+      "dog_name": "PARKER",
+      "birth_date": "08.03.2023",
+      "pedigree": "6739010",
+      "class": "ОТК",
+      "grade": "ОЧ. ХОР",
+      "title": "",
+      "bob": false,
+      "show_date": "15.03.2026"
+    },
+    {
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "judge": "КРЫЛОВА ЕКАТЕРИНА АНАТОЛЬЕВНА",
+      "catalog_number": 3,
+      "dog_name": "PORT FORTIS XANTA",
+      "birth_date": "05.01.2025",
+      "pedigree": "7198186",
+      "class": "ЮН",
+      "grade": "ОТЛ",
+      "title": "ЮКЧК",
+      "bob": false,
+      "show_date": "15.03.2026"
+    },
+    {
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "judge": "КРЫЛОВА ЕКАТЕРИНА АНАТОЛЬЕВНА",
+      "catalog_number": 4,
+      "dog_name": "TIFFANI ROYAL DREAM",
+      "birth_date": "28.12.2022",
+      "pedigree": "6733409",
+      "class": "ЧЕМ",
+      "grade": "ОТЛ",
+      "title": "КЧК",
+      "bob": false,
+      "show_date": "15.03.2026"
+    }
+  ],
+  "page_count": 1,
+  "raw_token_count": 85,
+  "has_main_ring_sheet": false
+}

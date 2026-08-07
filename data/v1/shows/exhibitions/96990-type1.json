@@ -1,0 +1,33 @@
+{
+  "dogs": [
+    {
+      "breed": "БОРДОСКИЙ ДОГ",
+      "judge": "БОГДАНОВА ЗОЯ МИХАЙЛОВНА",
+      "catalog_number": 1,
+      "dog_name": "ИНДИГО БЛЕК ДИАМАНТ",
+      "birth_date": "24.02.2025",
+      "pedigree": "7298925",
+      "class": "ЮН",
+      "grade": "а ОТЛ",
+      "title": "ЮКЧП, ВКЧП, ЮКЧК",
+      "bob": false,
+      "show_date": "23.05.2026"
+    },
+    {
+      "breed": "БОРДОСКИЙ ДОГ",
+      "judge": "БОГДАНОВА ЗОЯ МИХАЙЛОВНА",
+      "catalog_number": 2,
+      "dog_name": "ФАЙЕР ХЕППИНЕСС",
+      "birth_date": "27.06.2021",
+      "pedigree": "6245945",
+      "class": "ОТК",
+      "grade": "ОТЛ",
+      "title": "КЧК",
+      "bob": false,
+      "show_date": "23.05.2026"
+    }
+  ],
+  "page_count": 1,
+  "raw_token_count": 64,
+  "has_main_ring_sheet": false
+}

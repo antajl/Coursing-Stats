@@ -1,0 +1,33 @@
+{
+  "dogs": [
+    {
+      "breed": "ЛАГОТТО РОМАНЬОЛО",
+      "judge": "БЕЛКИН АЛЕКСЕЙ СЕРГЕЕВИЧ",
+      "catalog_number": 1,
+      "dog_name": "ФОРЕСТ ТРАИЛ ШЕРЛОК",
+      "birth_date": "21.01.2025",
+      "pedigree": "7208695",
+      "class": "ПРМ",
+      "grade": "а ОТЛ",
+      "title": "ЮКЧП, ВКЧП, КЧК",
+      "bob": false,
+      "show_date": "25.04.2026"
+    },
+    {
+      "breed": "ЛАГОТТО РОМАНЬОЛО",
+      "judge": "БЕЛКИН АЛЕКСЕЙ СЕРГЕЕВИЧ",
+      "catalog_number": 2,
+      "dog_name": "ФИКО ФОРТЕ ВИСТЕРИЯ",
+      "birth_date": "10.04.2024",
+      "pedigree": "7060009",
+      "class": "ОТК",
+      "grade": "ОТЛ",
+      "title": "КЧК",
+      "bob": false,
+      "show_date": "25.04.2026"
+    }
+  ],
+  "page_count": 1,
+  "raw_token_count": 63,
+  "has_main_ring_sheet": false
+}

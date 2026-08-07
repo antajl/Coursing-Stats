@@ -1,0 +1,130 @@
+import { useMemo, useEffect } from 'react'
+import { useSearchParams } from 'react-router-dom'
+import { SEO } from '../../components/SEO'
+import DoninoAttribution from '../../components/DoninoAttribution'
+import { useYandexGoal } from '../../components/YandexMetrica'
+import { useSpeedRecordsPage } from './useSpeedRecordsPage'
+import DoninoPageToolbar from './DoninoPageToolbar'
+import DoninoRecordsColumns from './DoninoRecordsColumns'
+import DoninoStatsColumns from './DoninoStatsColumns'
+import SkeletonLoader from '../../components/SkeletonLoader'
+
+function SpeedRecords() {
+  const [searchParams] = useSearchParams()
+  const view = searchParams.get('view') === 'stats' ? 'stats' : 'table'
+  const page = useSpeedRecordsPage()
+  const { reachGoal } = useYandexGoal()
+
+  // Отслеживание просмотра рекордов скорости
+  useEffect(() => {
+    reachGoal('speed_records_view')
+  }, [reachGoal])
+
+  const scrollResetKey = useMemo(
+    () =>
+      [
+        page.searchQuery,
+        page.filterYears.join(','),
+        page.filterBreeds.join(','),
+        page.filterSexes.join(','),
+        page.sortField,
+        page.sortDirection,
+        page.coursingSortField,
+        page.coursingSortDirection,
+      ].join('|'),
+    [
+      page.searchQuery,
+      page.filterYears,
+      page.filterBreeds,
+      page.filterSexes,
+      page.sortField,
+      page.sortDirection,
+      page.coursingSortField,
+      page.coursingSortDirection,
+    ]
+  )
+
+  return (
+    <div className="space-y-6">
+      <SEO
+        title="Рекорды Донино: замер скорости и бега 350 м"
+        description="Рекорды полигона Курсинг Донино: замер скорости (км/ч) и бега борзых на 350 м (сек). Таблицы по породам, статистика и история."
+        canonicalUrl="https://coursing-stats.ru/speed-records"
+        keywords="рекорды Донино, замер скорости, бега 350 м, курсинг Донино, скорость собаки"
+      />
+      <div className="relative rounded-2xl border border-cream-300 bg-cream-50/90 px-4 py-3 shadow-xl backdrop-blur-lg dark:border-charcoal-700 dark:bg-charcoal-800/90 md:px-6 md:py-4">
+        <DoninoAttribution variant="footnote" className="absolute right-0 top-0 z-10" />
+        <DoninoPageToolbar
+          view={view}
+          searchQuery={page.searchQuery}
+          onSearchChange={page.setSearchQuery}
+          filterYears={page.filterYears}
+          filterBreeds={page.filterBreeds}
+          filterSexes={page.filterSexes}
+          filterMinSpeed={page.filterMinSpeed}
+          filterMaxSpeed={page.filterMaxSpeed}
+          filterMinTime={page.filterMinTime}
+          filterMaxTime={page.filterMaxTime}
+          onFilterMinSpeedChange={page.setFilterMinSpeed}
+          onFilterMaxSpeedChange={page.setFilterMaxSpeed}
+          onFilterMinTimeChange={page.setFilterMinTime}
+          onFilterMaxTimeChange={page.setFilterMaxTime}
+          statsGroupBy={page.statsGroupBy}
+          onStatsGroupByChange={page.setStatsGroupBy}
+          dropdownRef={page.dropdownRef}
+          years={page.years}
+          breeds={page.breeds}
+          sexes={page.sexes}
+          onToggleFilter={page.toggleFilter}
+          onClearFilters={page.clearAllFilters}
+          onClearPanelFilters={page.clearPanelFilters}
+          hasActiveFilters={page.hasActiveFilters}
+          speedRecords={page.filteredRecords}
+          coursingRecords={page.filteredCoursingRecords}
+        />
+
+        <div className="mt-6">
+          {page.loading && <SkeletonLoader variant="card" count={6} />}
+
+          {page.error && !page.loading && (
+            <div className="rounded-xl border border-red-200 bg-red-50 p-4 text-red-700 dark:border-red-700 dark:bg-red-950/40 dark:text-red-300">
+              Ошибка: {page.error instanceof Error ? page.error.message : String(page.error)}
+            </div>
+          )}
+
+          {!page.loading && !page.error && view === 'table' && (
+            <DoninoRecordsColumns
+              speedRecords={page.filteredRecords}
+              coursingRecords={page.filteredCoursingRecords}
+              speedSortField={page.sortField}
+              speedSortDirection={page.sortDirection}
+              coursingSortField={page.coursingSortField}
+              coursingSortDirection={page.coursingSortDirection}
+              onSpeedSort={page.handleSort}
+              onCoursingSort={page.handleCoursingSort}
+              resetScrollKey={scrollResetKey}
+            />
+          )}
+
+          {!page.loading && !page.error && view === 'stats' && (
+            <DoninoStatsColumns
+              speedRecords={page.speedRecordsWithHistory}
+              coursingRecords={page.coursingRecords}
+              searchQuery={page.searchQuery}
+              filterYears={page.filterYears}
+              filterBreeds={page.filterBreeds}
+              filterSexes={page.filterSexes}
+              filterMinSpeed={page.filterMinSpeed}
+              filterMaxSpeed={page.filterMaxSpeed}
+              filterMinTime={page.filterMinTime}
+              filterMaxTime={page.filterMaxTime}
+              statsGroupBy={page.statsGroupBy}
+            />
+          )}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default SpeedRecords

@@ -1,0 +1,85 @@
+{
+  "dogs": [
+    {
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "judge": "РАННАМЯГИ ОЛЬГА АЛЕКСАНДРОВНА",
+      "catalog_number": 1,
+      "dog_name": "ИКСАЙТ ПЫЛАЮЩИЙ ФЕНИКС",
+      "birth_date": "09.05.2025",
+      "pedigree": "7275517",
+      "class": "ЮН",
+      "grade": "а ОТЛ",
+      "title": "ЮКЧП, ВКЧП, ЛПП, JCAC",
+      "bob": true,
+      "show_date": "10.05.2026"
+    },
+    {
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
+      "judge": "РАННАМЯГИ ОЛЬГА АЛЕКСАНДРОВНА",
+      "catalog_number": 2,
+      "dog_name": "PANTOMIME VENTURESOME",
+      "birth_date": "01.06.2021",
+      "pedigree": "6325973",
+      "class": "ЧЕМ",
+      "grade": "ОТЛ",
+      "title": "ЛПП, CAC",
+      "bob": true,
+      "show_date": "10.05.2026"
+    },
+    {
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "judge": "РАННАМЯГИ ОЛЬГА АЛЕКСАНДРОВНА",
+      "catalog_number": 3,
+      "dog_name": "ARNI BILL",
+      "birth_date": "31.01.2024",
+      "pedigree": "6865028",
+      "class": "ОТК",
+      "grade": "ОТЛ",
+      "title": "CAC",
+      "bob": false,
+      "show_date": "10.05.2026"
+    },
+    {
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "judge": "РАННАМЯГИ ОЛЬГА АЛЕКСАНДРОВНА",
+      "catalog_number": 4,
+      "dog_name": "ДИСКАЙ ДЖЕКС ВАЙЛД ЗОНЕ",
+      "birth_date": "11.04.2025",
+      "pedigree": "7197788",
+      "class": "ЮН",
+      "grade": "ОТЛ",
+      "title": "ЛПП, JCAC",
+      "bob": true,
+      "show_date": "10.05.2026"
+    },
+    {
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "judge": "РАННАМЯГИ ОЛЬГА АЛЕКСАНДРОВНА",
+      "catalog_number": 5,
+      "dog_name": "ASTY MARTINIKA",
+      "birth_date": "10.12.2024",
+      "pedigree": "7174791",
+      "class": "ПРМ",
+      "grade": "ОТЛ",
+      "title": "ЛПП, CAC",
+      "bob": true,
+      "show_date": "10.05.2026"
+    },
+    {
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
+      "judge": "РАННАМЯГИ ОЛЬГА АЛЕКСАНДРОВНА",
+      "catalog_number": 6,
+      "dog_name": "GLORIA DEI MEDLIN",
+      "birth_date": "30.07.2023",
+      "pedigree": "6771842",
+      "class": "ОТК",
+      "grade": "НЯ",
+      "title": "",
+      "bob": false,
+      "show_date": "10.05.2026"
+    }
+  ],
+  "page_count": 1,
+  "raw_token_count": 132,
+  "has_main_ring_sheet": false
+}

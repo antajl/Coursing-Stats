@@ -1,0 +1,19 @@
+{
+  "schema": "coursing-stats/show-exhibition-v1",
+  "exported_at": "2026-07-12T00:00:00.000Z",
+  "source": "lc.rkfshow.ru",
+  "event_id": 106,
+  "event": {
+    "id": 106,
+    "date": "16.11.2025",
+    "title": "Eurasia. CIS Cup 2025",
+    "location": "Москва",
+    "rank": "CACIB FCI",
+    "type": "Международная выставка",
+    "club": "РКФ",
+    "judges": ["Иванов И.И.", "Петров П.П."]
+  },
+  "result_count": 0,
+  "results": [],
+  "raw_text": "Sample data for demonstration. Actual scraping requires additional configuration for lc.rkfshow.ru API."
+}

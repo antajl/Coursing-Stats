@@ -1,0 +1,33 @@
+{
+  "dogs": [
+    {
+      "breed": "КЕРН ТЕРЬЕР",
+      "judge": "ЕФИМОВ ВАДИМ ЮРЬЕВИЧ",
+      "catalog_number": 1,
+      "dog_name": "АЙРА СПИРИТ ЗЕ ВИНД",
+      "birth_date": "20.11.2024",
+      "pedigree": "7189191",
+      "class": "ПРМ",
+      "grade": "ОТЛ",
+      "title": "СС",
+      "bob": false,
+      "show_date": "09.05.2026"
+    },
+    {
+      "breed": "КЕРН ТЕРЬЕР",
+      "judge": "ЕФИМОВ ВАДИМ ЮРЬЕВИЧ",
+      "catalog_number": 2,
+      "dog_name": "RUS EKAN VANIL",
+      "birth_date": "07.11.2024",
+      "pedigree": "7188563",
+      "class": "ОТК",
+      "grade": "ОТЛ",
+      "title": "КЧК",
+      "bob": false,
+      "show_date": "09.05.2026"
+    }
+  ],
+  "page_count": 1,
+  "raw_token_count": 72,
+  "has_main_ring_sheet": false
+}

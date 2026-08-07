@@ -1,0 +1,43 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "ML",
+  "count": 4,
+  "dogs": [
+    {
+      "id": "1472011130",
+      "name_lat": "MLECHNYI PUT' COSMOS",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
+      "breed_en": "",
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
+      "id": "9272",
+      "name_lat": "MLECHNYY PUT IZ POLETA MECHTI",
+      "name_ru": "",
+      "breed": "УИППЕТ",
+      "breed_en": "WHIPPET",
+      "total_shows": 12,
+      "competition_dog_id": 9272
+    },
+    {
+      "id": "1869308017",
+      "name_lat": "MLECHNYY PUT",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "DALMATIAN",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1002018805",
+      "name_lat": "MLECHNYJ PUT IZ TVERSKOY SKAZKI",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

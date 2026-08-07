@@ -1,0 +1,43 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "GZ",
+  "count": 4,
+  "dogs": [
+    {
+      "id": "661012148",
+      "name_lat": "GZHEL V STILE COUNTRY",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "AUSTRALIAN SHEPHERD",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "239818385",
+      "name_lat": "GZHELLI LEDI VANIL'NAYA",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1732629543",
+      "name_lat": "GZHELSKIY SOUVENIR ILONA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ (СОВР ОК)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "469155458",
+      "name_lat": "GZHEL RASPISNAYA",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "CAVALIER KING CHARLES SPANIEL",
+      "total_shows": 2,
+      "competition_dog_id": null
+    }
+  ]
+}

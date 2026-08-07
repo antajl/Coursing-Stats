@@ -1,0 +1,25 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "PJ",
+  "count": 2,
+  "dogs": [
+    {
+      "id": "1544785302",
+      "name_lat": "PJER MARIO BELLGOTTO",
+      "name_ru": "",
+      "breed": "ЛАГОТТО РОМАНЬОЛО",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1101765654",
+      "name_lat": "PJERRE GAMTOS HARMONIJA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ СТАНДАРТНЫЙ РЫЖИЙ, СЕРЫЙ",
+      "breed_en": "POODLE STANDARD FAWN, GREY",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

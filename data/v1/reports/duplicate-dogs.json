@@ -1,0 +1,72 @@
+{
+  "schema": "coursing-stats/duplicate-dogs-audit-v1",
+  "generated_at": "2026-07-24T15:30:00.331Z",
+  "source": "data/v1/dogs/by-id",
+  "totals": {
+    "dogs": 1458,
+    "garbage_names": 5,
+    "duplicate_clusters": 2,
+    "dogs_in_clusters": 4
+  },
+  "garbage_sample": [
+    {
+      "id": 602,
+      "name_lat": "87",
+      "breed": "18"
+    },
+    {
+      "id": 9694,
+      "name_lat": "18",
+      "breed": "18"
+    },
+    {
+      "id": 9695,
+      "name_lat": "17",
+      "breed": "16"
+    },
+    {
+      "id": 9696,
+      "name_lat": "",
+      "breed": "18"
+    },
+    {
+      "id": 9697,
+      "name_lat": "",
+      "breed": "16"
+    }
+  ],
+  "clusters": [
+    {
+      "breed": "УИППЕТ",
+      "ids": [
+        5634,
+        9741
+      ],
+      "names": [
+        "STANGERS LAND ZENIT",
+        "STANGERS LAND ZENIT CHARMAN"
+      ],
+      "competition_id_counts": [
+        18,
+        1
+      ],
+      "suggested_keep_id": 5634
+    },
+    {
+      "breed": "УИППЕТ",
+      "ids": [
+        5641,
+        9743
+      ],
+      "names": [
+        "BLAZE OF GLORY",
+        "BLAZE OF GLORY DAGGER"
+      ],
+      "competition_id_counts": [
+        17,
+        1
+      ],
+      "suggested_keep_id": 5641
+    }
+  ]
+}

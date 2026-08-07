@@ -1,0 +1,25 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "TZ",
+  "count": 2,
+  "dogs": [
+    {
+      "id": "423241178",
+      "name_lat": "TZARITSA NILA NEFERTITI",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1931282735",
+      "name_lat": "TZEZARIYA DEL TORO",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    }
+  ]
+}

@@ -1,0 +1,5821 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "ВЛ",
+  "count": 646,
+  "dogs": [
+    {
+      "id": "289481264",
+      "name_lat": "ВЛАСТЬ ОГНЯ ХРАБРОЕ СЕРДЦЕ (Изменено по решению Выставочной комиссии от 20.08.2024 В. 35)",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 39,
+      "competition_dog_id": null
+    },
+    {
+      "id": "176173609",
+      "name_lat": "ВЛАТЕРФОЛЬГ ШЕРИЛ КОУЛ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 45,
+      "competition_dog_id": null
+    },
+    {
+      "id": "705871578",
+      "name_lat": "ВЛАДБОКС ВИВАТ РОК-Н-РОЛЛ",
+      "name_ru": "",
+      "breed": "БОКСЕР",
+      "breed_en": "",
+      "total_shows": 25,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1516493918",
+      "name_lat": "ВЛАДЫКА ГОР НУАР БЭТТИ",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "930032706",
+      "name_lat": "ВЛАТЕРФОЛЬГ ШАТО Д'ЭРУВИЛЬ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed_en": "",
+      "total_shows": 34,
+      "competition_dog_id": null
+    },
+    {
+      "id": "917754978",
+      "name_lat": "ВЛАТЕРФОЛЬГ ХАРТ ОФ РОУМ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1366145415",
+      "name_lat": "ВЛАД ДАЙМОНД БРАБУС",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed_en": "",
+      "total_shows": 56,
+      "competition_dog_id": null
+    },
+    {
+      "id": "782095918",
+      "name_lat": "ВЛАРИС ЛАЙН ВИН ЧЕСТА БЛЭК СТАР",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1523424040",
+      "name_lat": "ВЛАРИС ЛАЙН БЕНДЖАМИН",
+      "name_ru": "",
+      "breed": "СОЛЬЮ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "851204239",
+      "name_lat": "ВЛАД ЛАЙН ЛАКИ",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed_en": "",
+      "total_shows": 34,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1456957257",
+      "name_lat": "ВЛАСТЬ ОГНЯ УЛЬТИМАТУМ",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ /",
+      "breed_en": "",
+      "total_shows": 27,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1704720945",
+      "name_lat": "ВЛАДБОКС ВИВАТ НИД НОУ ИНТРОДАКШН",
+      "name_ru": "",
+      "breed": "БОКСЕР ТИГРОВЫЙ",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1979538792",
+      "name_lat": "ВЛАДИДОГС ЗЕВС",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1878417758",
+      "name_lat": "ВЛАСТЬ ОГНЯ БОЙС БЕНД",
+      "name_ru": "",
+      "breed": "ГРИФФОН",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "632693778",
+      "name_lat": "ВЛАСТОР'С БИРГИТТА",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 80,
+      "competition_dog_id": null
+    },
+    {
+      "id": "203032275",
+      "name_lat": "ВЛАДБОКС ВИВАТ ПАРЛАМЕНТ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ БОКСЁР РЫЖИЙ",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "257599180",
+      "name_lat": "ВЛАСТЬ ОГНЯ АРМАГЕДДОН",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 26,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1500772995",
+      "name_lat": "ВЛАСТЕЛИН СЕРДЕЦ ТАЮР",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "24198640",
+      "name_lat": "ВЛАСТОР'С ЗEН ДАН",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "625062711",
+      "name_lat": "ВЛАДЛИДЕР УРУРУ ПАКО",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 58,
+      "competition_dog_id": null
+    },
+    {
+      "id": "169528298",
+      "name_lat": "ВЛАСТЕЛИНА ВЕЛИКАЯ",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1948494157",
+      "name_lat": "ВЛАТЕРФОЛЬГ ДИНАСТИЯ МАРИЯ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1608419402",
+      "name_lat": "ВЛАДИ'С МАНОР БОСТОН",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "418094217",
+      "name_lat": "ВЛАДБОКС ВИВАТ ОФРА ОХАНА",
+      "name_ru": "",
+      "breed": "БОКСЕР",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1157211820",
+      "name_lat": "ВЛАДИЭЛИ ЗИППИ ТЕСЛА",
+      "name_ru": "",
+      "breed": "АРГЕНТИНСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1410615265",
+      "name_lat": "ВЛАТЕРФОЛЬГ ШИНОН РОЭЭ ЛА КРУА",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 38,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1501265505",
+      "name_lat": "ВЛАДИЭЛИ ВОРЛД ИЗ МАЙН",
+      "name_ru": "",
+      "breed": "БОРДОСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "68051192",
+      "name_lat": "ВЛАД ДАЙМОНД ЗЕВС",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed_en": "",
+      "total_shows": 83,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1205442425",
+      "name_lat": "ВЛАТЕРФОЛЬГ ЕТТИ ХЭППИ СТАР",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "957876651",
+      "name_lat": "ВЛАРИС ЛАЙН ДЕЛЮКС",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1264886110",
+      "name_lat": "ВЛАСТЕЛИН ОГНЯ ИЗ СОЛНЕЧНОЙ КОЛЫБЕЛИ",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed_en": "",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1582368898",
+      "name_lat": "ВЛАРИС ЛАЙН ЕЖИ МИХАЛ",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С СОЛЬЮ",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "32361427",
+      "name_lat": "ВЛАСТЕЛИН ДУШИ ЯРОСЛАВА",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "652130746",
+      "name_lat": "ВЛАТЕРФОЛЬГ ШЕВАЛЬЕ ДЮ ВАЛЬ (К/Х)",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "165747445",
+      "name_lat": "ВЛЮБЛЕННАЯ В ЖИЗНЬ ИЗ ДОМА ПРОЗОРОВСКИХ",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "7564368",
+      "name_lat": "Властелин Мира Из Дома Каштановых",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 37,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1197287577",
+      "name_lat": "ВЛАСТИТЕЛЬНАЯ ФРЕЙЯ",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
+      "breed_en": "",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1871768216",
+      "name_lat": "ВЛАДА ФОМ ХАУС ШИРАН (К/Х)",
+      "name_ru": "",
+      "breed": "ПЕМБРОК / WELSH",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1882235056",
+      "name_lat": "ВЛАСТЕЛИН ВСЕЛЕННОЙ",
+      "name_ru": "",
+      "breed": "СЕНБЕРНАР КОРОТКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "337950262",
+      "name_lat": "ВЛАСТЬ ОГНЯ РАШ РАКЕТА",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "154919408",
+      "name_lat": "ВЛАД ДАЙМОНД КРИСТАЛЛ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed_en": "",
+      "total_shows": 29,
+      "competition_dog_id": null
+    },
+    {
+      "id": "840963768",
+      "name_lat": "ВЛАДЛИДЕР СТРОГО ДЛЯ КОРНЕТТО ДЕЛЬ ЧАТТО",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "163950951",
+      "name_lat": "ВЛАДЫЧИЦА ДУШИ ВИРА",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "924400394",
+      "name_lat": "ВЛАТЕРФОЛЬГ ЧИРОККО ВЕСТА",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "783789526",
+      "name_lat": "ВЛАДЫКА МОСКОВИИ ДЕРЗКИЙ ГУСАР",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "227485168",
+      "name_lat": "ВЛАСТЕЛИН УДАЧИ С РУБЛЕВКИ",
+      "name_ru": "",
+      "breed": "SPITZ MINIATURE SPITZ ORANGE, GREY, OTHER",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "392336635",
+      "name_lat": "ВЛАДИЭЛИ ВОНДЕРЛЕНД",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "975909677",
+      "name_lat": "ВЛАДА",
+      "name_ru": "",
+      "breed": "БРЕТОНСКИЙ ЭПАНЬОЛЬ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "815598796",
+      "name_lat": "ВЛАСТЕЛИН СЕРДЕЦ",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "40984195",
+      "name_lat": "ВЛАТЕРФОЛЬГ НАЙДЖЕЛ КИЛИАН",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "461012947",
+      "name_lat": "ВЛАДИСВЕТ ЭЛЛАДА",
+      "name_ru": "",
+      "breed": "РУССКАЯ ЦВЕТНАЯ БОЛОНКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "609652130",
+      "name_lat": "ВЛАДЫКА ДОНА АВРОРА",
+      "name_ru": "",
+      "breed": "САМОЕД",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "312058757",
+      "name_lat": "ВЛАДИЭЛИ ЗЗ ТОП",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "306046601",
+      "name_lat": "ВЛАДИ'С МАНОР ВАЛЬДА",
+      "name_ru": "",
+      "breed": "СХИППЕРКЕ БЕРНСКИЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1049244680",
+      "name_lat": "ВЛАДИ'С МАНОР АРИСТОКРАТ",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1107462696",
+      "name_lat": "ВЛАДБОКС ВИВАТ ЛЮБОМИР ФОР РУСС ПРОЗИТ",
+      "name_ru": "",
+      "breed": "БОКСЕР",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1975655066",
+      "name_lat": "ВЛАСТОРС ЖАНЖАК",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1714239749",
+      "name_lat": "ВЛАСТОР'С ЗЭН ДАН",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР /",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1218458896",
+      "name_lat": "ВЛАДЛЕНА ВИВА ЛА ДИВА",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН /",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "786640395",
+      "name_lat": "ВЛАСТЕЛИН КОЛЕЦ",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "307402817",
+      "name_lat": "ВЛАТЕРФОЛЬГ ТЕОДОР ЧАРМИНГ ПРИНЦ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1813792174",
+      "name_lat": "ВЛАТЕРФОЛЬГ ЧИЗЕТТ КАРТЬЕ (К/Х)",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1629214907",
+      "name_lat": "ВЛАТЕРФОЛЬГ ПЕТРА",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 26,
+      "competition_dog_id": null
+    },
+    {
+      "id": "311925498",
+      "name_lat": "ВЛАСТЕЛИН УДАЧИ ЯХОНТ",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1467233594",
+      "name_lat": "ВЛАДИ'С МАНОР БЕСТ",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1137389521",
+      "name_lat": "ВЛАДИ'С МАНОР ГРЕТЭЛЬ",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "905913656",
+      "name_lat": "ВЛАДИЭЛИ ЗЗТОП",
+      "name_ru": "",
+      "breed": "ЗЕННЕНХУНД БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "401392157",
+      "name_lat": "ВЛАСТЬ ОГНЯ АДВОКАТ ДЬЯВОЛА",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "102607281",
+      "name_lat": "ВЛАСТЬ ОТ ФИЛЛИПОВОЙ",
+      "name_ru": "",
+      "breed": "МАЛАМУТ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1411943494",
+      "name_lat": "ВЛАДЛЕН МИЛОРД",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1805806000",
+      "name_lat": "ВЛАДЛИДЕР У КА ТАО",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "133429907",
+      "name_lat": "ВЛАТЕРФОЛЬГ КЛАССИК ХАРТБРЕЙКЕР",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "507610244",
+      "name_lat": "ВЛАДЫКА МОСКОВИИ ФОРТУНА МОЕ СОВЕРШЕНСТВО",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1050253024",
+      "name_lat": "ВЛАДИАНД БРИОШ НАНТА",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР СТАФФОРДШИРСКИЙ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "137962785",
+      "name_lat": "ВЛИЯТЕЛЬНАЯ ЦАРСКАЯ ОСОБА АВРОРА",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ ШНАУЦЕР ПЕРЕЦ С",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "958457757",
+      "name_lat": "ВЛАДЛЕНА СУВЕНИР ЖУЛЬЕН",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1072499053",
+      "name_lat": "ВЛАСТЬ ОТ ФИЛИППОВОЙ",
+      "name_ru": "",
+      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1700238771",
+      "name_lat": "ВЛАРИС ЛАЙН ЭЛИДЕЯ",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1450056023",
+      "name_lat": "ВЛАСТЕЛИНА",
+      "name_ru": "",
+      "breed": "МОСКОВСКАЯ СТОРОЖЕВАЯ / MOSCOW",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "784913799",
+      "name_lat": "ВЛАТЕРФОЛЬГ ЧИКА ФИКС",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "80303345",
+      "name_lat": "ВЛАДЛЕНА КОРОЛЕВА ЮГА",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1854364554",
+      "name_lat": "ВЛАДИОЗ ВИОЛ ЮРЗА",
+      "name_ru": "",
+      "breed": "СЕНБЕРНАР КОРОТКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "109023516",
+      "name_lat": "ВЛАСТЕЛИН ДУШИ ЮВИЛЬЕТТА",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "394109900",
+      "name_lat": "ВЛАСТЕЛИН УДАЧИ ВАГНЕР",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1706498892",
+      "name_lat": "ВЛАТЕРФОЛЬГ ШАРДОНЕ ЖАМЕЛЛЬ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "453721862",
+      "name_lat": "ВЛАТЕРФОЛЬГ ШЕВАЛЬЕ ДЮ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "537427284",
+      "name_lat": "ВЛАДБОКС ВИВАТ ЛЮБЛЯНА",
+      "name_ru": "",
+      "breed": "БОКСЕР",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1802049680",
+      "name_lat": "ВЛАСТЬ ОГНЯ КЕЙСИ",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1764292395",
+      "name_lat": "ВЛАДЫКА МОСКОВИИ ВЕЛЬВЕТ ДРИМ",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 31,
+      "competition_dog_id": null
+    },
+    {
+      "id": "149982973",
+      "name_lat": "ВЛАСТЕЛИН СИБИРИ ДИЗЕЛЬ",
+      "name_ru": "",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "502703904",
+      "name_lat": "ВЛАД ДАЙМОНД ЕВРАЗИЯ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed_en": "",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1330732254",
+      "name_lat": "ВЛАСТЬ ОГНЯ И АМ КРЕЙЗИ",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1848515381",
+      "name_lat": "ВЛАДЫКА МОСКОВИИ ВАЛЛЕЙ ОФ ЛАВ",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "AMERICAN AKITA",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1605789512",
+      "name_lat": "ВЛАДИДОГС НАЙТ",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
+      "id": "117038960",
+      "name_lat": "ВЛАДЛИДЕР СВОЯ ИГРА",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 44,
+      "competition_dog_id": null
+    },
+    {
+      "id": "667499208",
+      "name_lat": "ВЛАДБОКС ВИВАТ ЛУЧЕЗАР",
+      "name_ru": "",
+      "breed": "БОКСЕР",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "837088594",
+      "name_lat": "ВЛАДЫКА ДОНА АДЕЛЬ",
+      "name_ru": "",
+      "breed": "САМОЕД",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1639880499",
+      "name_lat": "ВЛАД ДАЙМОНД ВЕРОНА",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1509833807",
+      "name_lat": "ВЛАДИДОГС ЭЛЬФИЯ ЛЕСНАЯ НИМФА",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1896843790",
+      "name_lat": "ВЛАД ДАЙМОНД АЛЕН ДЕЛОН",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1356448645",
+      "name_lat": "ВЛАСТЬ ОГНЯ КРИСТИНА",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1653201692",
+      "name_lat": "ВЛАДЫКА ГОР МЭДЖИК",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД /",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "320490654",
+      "name_lat": "ВЛАДЛИДЕР НАЙС АБСОЛЮТНЫЙ ПОУЭР",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 24,
+      "competition_dog_id": null
+    },
+    {
+      "id": "513719866",
+      "name_lat": "ВЛАСТЬ ОГНЯ ДАНС ЛЕГЕНД",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "372796644",
+      "name_lat": "ВЛАДИ'МИР ИЗ КОРОЛЕВСТВА АННЫ",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1395566883",
+      "name_lat": "ВЛАДБОКС ВИВАТ ЗВЕЗДА ФОР ВАЛ ДЕ ИСТР",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ БОКСЕР",
+      "breed_en": "BOXER",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1182433605",
+      "name_lat": "ВЛАТЕРФОЛЬГ ШАНЕЛЬ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed_en": "GERMAN SHEPHERD DOG DOUBLE COAT",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "454594378",
+      "name_lat": "ВЛАДЛЕНА СУВЕНИР БАРСЕЛОНА / BARSELONA",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "23863463",
+      "name_lat": "ВЛАД ДАЙМОНД АРАБЕСКА",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "668158701",
+      "name_lat": "ВЛАСТЬ ОГНЯ ВОСТОРГ",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "141241999",
+      "name_lat": "ВЛАДА ВАЛЕНСИЯ МОРСКАЯ БАБОЧКА",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed_en": "",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1879020781",
+      "name_lat": "ВЛАД ДАЙМОНД КАВА",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed_en": "",
+      "total_shows": 24,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1006152928",
+      "name_lat": "ВЛАСТЕЛИНА",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1555917872",
+      "name_lat": "ВЛАДЫКА МОСКОВИИ ХЭРВЬЮ",
+      "name_ru": "",
+      "breed": "БУЛЬМАСТИФ",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1152525602",
+      "name_lat": "ВЛАСТНЫЙ ЧАБРИЭЛЬ",
+      "name_ru": "",
+      "breed": "САМОЕДСКАЯ СОБАКА",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1108161740",
+      "name_lat": "ВЛАСТА ВАЙТ СТАЛ ВАЛЕНТИНО",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1535542264",
+      "name_lat": "ВЛАТЕРФОЛЬГ СИЛЬВЕР ДОЛЛАР",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1221818805",
+      "name_lat": "ВЛАСТЬ ОГНЯ ШАМАХАНСКАЯ ЦАРИЦА",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1587493812",
+      "name_lat": "ВЛАСТОР'С БЕЛИНДА",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1497120825",
+      "name_lat": "ВЛАДИДОГС ЧЕССИ",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1890232536",
+      "name_lat": "ВЛАДИСЛАВА",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "283011755",
+      "name_lat": "ВЛАТЕРФОЛЬГ ФАЛТОН МАККЕЙ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "481062806",
+      "name_lat": "ВЛАТЕРФОЛЬГ ПОРШЕ ДИЗАЙН",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1512121570",
+      "name_lat": "ВЛАСТЬ ОГНЯ ЗВЕЗДА УТРА",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "427793395",
+      "name_lat": "ВЛАСТА ВАЙТ СТАЛ ЖАН",
+      "name_ru": "",
+      "breed": "КЛАМБЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "604122517",
+      "name_lat": "ВЛАДЛИДЕР ВЕРСАЛИЯ",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "141072249",
+      "name_lat": "ВЛАСТЕЛИН УДАЧИ ЯМАЙКА",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1245542690",
+      "name_lat": "ВЛАДИСВЕТ ЗОЛУШКА",
+      "name_ru": "",
+      "breed": "БОЛОНКА",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "754190650",
+      "name_lat": "ВЛАТЕРФОЛЬГ АРКТИК АЙС",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "813300533",
+      "name_lat": "ВЛАДЫКА МОСКОВИИ ДЖЕЙН",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "20484174",
+      "name_lat": "ВЛАТЕРФОЛЬГ ЕЛАРИЯ АСТРИЯ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "42602806",
+      "name_lat": "ВЛАДБОКС ВИВАТ ЗОЛТОН",
+      "name_ru": "",
+      "breed": "БОКСЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "416689079",
+      "name_lat": "ВЛАДИЭЛИ ВИННЕР",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1865282761",
+      "name_lat": "ВЛАДИДОГС ИСТА",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "699703933",
+      "name_lat": "ВЛАСТЬ ОГНЯ ЗОДИАК",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "486961668",
+      "name_lat": "ВЛАДЛИДЕР ДАРХАН БЛЭК БРИЛЛИАНТ",
+      "name_ru": "",
+      "breed": "МАЙОРСКИЙ МАСТИФ (КА ДЕ БО) / MAJORCA",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1638466213",
+      "name_lat": "ВЛАДЫКА КАСПИЯ СТОКС",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1699629191",
+      "name_lat": "ВЛАДЕЯ ЛАККИ ВЭЙ",
+      "name_ru": "",
+      "breed": "ЧАУ ЧАУ",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1947601948",
+      "name_lat": "ВЛАСТЬ ОГНЯ ДИНАМИТ",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "889044249",
+      "name_lat": "ВЛАД ДАЙМОНД ЕСЕНИЯ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "142658743",
+      "name_lat": "ВЛАДИЛАР ЭЛИТА ЩЕПЕТУХА",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "242218792",
+      "name_lat": "ВЛАДЫКА МИРА ИЗ ТРЕТЬЯКОВСКОЙ ГАЛЕРЕИ",
+      "name_ru": "",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1017448686",
+      "name_lat": "ВЛАДИДОГ ЦЕНТРАЛ",
+      "name_ru": "",
+      "breed": "CHIHUAHUA SMOOTH",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1720183114",
+      "name_lat": "ВЛАСТА ИЗ ИМПЕРИИ ОКСВОЛЛ",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "33532437",
+      "name_lat": "ВЛАДИМИРА ИЗ СВИТЫ ЕКАТЕРИНЫ",
+      "name_ru": "",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1016813628",
+      "name_lat": "ВЛАД ДАЙМОНД ВИКТОРИЯ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "928201809",
+      "name_lat": "ВЛАД ДАЙМОНД ЕЛИЗАВЕТА",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1742488205",
+      "name_lat": "ВЛАТЕРФОЛЬГ ФЕХУ ФЕЕРИЯ ФОРТУНА (N'B)",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "649963831",
+      "name_lat": "ВЛАДЫКА МОСКОВИИ АРМАГЕДОН",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1226810893",
+      "name_lat": "ВЛАД ДАЙМОНД ВАЛЕНСИЯ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "270490962",
+      "name_lat": "ВЛАТЕРФОЛЬГ КАРТ БЛАНШ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "312707078",
+      "name_lat": "ВЛАД ДАЙМОНД БЕНТЛИ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1385599425",
+      "name_lat": "ВЛАСТЕЛИН СЕРДЦА МОЕГО ИЗ ИСМЕНДЕР",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1574447220",
+      "name_lat": "ВЛАДИДОГС ЖАН ЖАК ЛЕРУА",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1069051717",
+      "name_lat": "ВЛАДЫКА МОСКОВИИ НЬЮ ДЭЙ",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "567879115",
+      "name_lat": "ВЛАДЛЕНА СУВЕНИР ВИОЛЕТТА",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "518468416",
+      "name_lat": "ВЛАДИАНД АСТОН МАРТИН",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР /",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "143905673",
+      "name_lat": "ВЛАДБОКС ВИВАТ ЛЮБИМА",
+      "name_ru": "",
+      "breed": "БОКСЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1087562178",
+      "name_lat": "ВЛАДИЛАР ЭЛИТА РУФУС",
+      "name_ru": "",
+      "breed": "CHIHUAHUA LONG",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1794034110",
+      "name_lat": "ВЛАТЕРФОЛЬГ ШОМОН СИР-ЛУАР",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1724956449",
+      "name_lat": "ВЛАДЛИДЕР МАРШЕЛЬ",
+      "name_ru": "",
+      "breed": "МОПС / PUG",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "553062637",
+      "name_lat": "ВЛАСТЕЛИН МОЕЙ ДУШИ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "146172299",
+      "name_lat": "ВЛАТЕРФОЛЬГ РУСЛАНА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "921699025",
+      "name_lat": "ВЛАТЕРФОЛЬГ ЛИКА ХЭППИ СТАР",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1706807038",
+      "name_lat": "ВЛАДЫКА МОСКОВИИ ПАНДОРА МОЕ СОВЕРШЕНСТВО",
+      "name_ru": "",
+      "breed": "БУЛЬМАСТИФ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1303447273",
+      "name_lat": "ВЛАСТЕЛИНА СЕРДЕЦ МИЛА",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1252258642",
+      "name_lat": "ВЛАСТИЛИН ТАКАРА",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1353301931",
+      "name_lat": "ВЛАДЫКА МОСКОВИИ ШОУТАЙМ ОН ДИМЕНД",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "92114198",
+      "name_lat": "ВЛАДЛИДЕР ОБОЛЬСТИТЕЛЬ ПАРЕНЬ МЕЧТЫ",
+      "name_ru": "",
+      "breed": "DOGUE DE BORDEAUX БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "2296257",
+      "name_lat": "ВЛАСТЬ ОГНЯ ФРИ СПИРИТ",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "643162653",
+      "name_lat": "ВЛАДЛИДЕР ПОДАРОК СУДЬБЫ",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "177103199",
+      "name_lat": "ВЛАТЕРФОЛЬГ ЕФФЕКТ ДРИМ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "777411455",
+      "name_lat": "ВЛАТЕРФОЛЬГ НЕНСИ АЛЬТЕР ЭГО (К/Х)",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "604121880",
+      "name_lat": "ВЛЮБИТЬСЯ РАЗ И НАВСЕГДА",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "983669287",
+      "name_lat": "ВЛАДЛИДЕР ГРАЦИЯ КВИН РИНГ",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "371568442",
+      "name_lat": "ВЛАДЫКА МОСКОВИИ ПРЭСТОН",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1543138288",
+      "name_lat": "ВЛАД ДАЙМОНД ОКЕАНИЯ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "699513068",
+      "name_lat": "ВЛАСТЕЛИНА",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1164331029",
+      "name_lat": "ВЛАТЕРФОЛЬГ ЛАС РОКА ДЕ ЛА СЬЕРРА",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1777096255",
+      "name_lat": "ВЛАДЫКА ИЗ ДОМА ЗЕНКОВЫХ",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "390809387",
+      "name_lat": "ВЛАТЕРФОЛЬГ ЕЙФЕЛИЯ ПРАДА",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1987983609",
+      "name_lat": "ВЛАТЕРФОЛЬГ ЭЛИС НИКОЛАС",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "495994163",
+      "name_lat": "ВЛАД ДАЙМОНД ГЕЛЕНДВАГЕН",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "650199656",
+      "name_lat": "ВЛАДЫКА МОСКОВИИ ПАЛОТТА ГРЕЙС",
+      "name_ru": "",
+      "breed": "БУЛЬМАСТИФ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "553119473",
+      "name_lat": "ВЛАДЫКА ДОНА АФИНА",
+      "name_ru": "",
+      "breed": "САМОЕД",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1309732330",
+      "name_lat": "ВЛАСТЬ ОГНЯ ЮНА",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1294167137",
+      "name_lat": "ВЛАТЕРФОЛЬГ ОССЭЛЬ ТАУРИЭЛЬ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1489154882",
+      "name_lat": "ВЛАДБОКС ВИВАТ МИШЕЛЬ ФОР ВАЛЬ ДЕ ИСТР",
+      "name_ru": "",
+      "breed": "БОКСЕР РЫЖИЙ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1887912549",
+      "name_lat": "ВЛАТЕРФОЛЬГ АБСОЛЮТЛИ ФАВОРИТ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1565400164",
+      "name_lat": "Влатерфольг Виллафранка Тиррена",
+      "name_ru": "",
+      "breed": "Вельш корги пемброк",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "372642456",
+      "name_lat": "ВЛАСТА С МЕЩЕРСКОГО ОЗЕРА",
+      "name_ru": "",
+      "breed": "ВОСТОЧНО-ЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1481092029",
+      "name_lat": "ВЛАДИДОГС ОЧИ",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "203920547",
+      "name_lat": "ВЛАДИДОГС ЖЕФРИ",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "37710082",
+      "name_lat": "ВЛАСТЕЛИНА",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL ASIA",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "361944588",
+      "name_lat": "ВЛАДЫКА АДА ЛЮЦИФЕР ДЕННИЦА",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1687452508",
+      "name_lat": "ВЛАТЕРФОЛЬГ ЮЗ ОФ ВЭПОНС",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1264774520",
+      "name_lat": "ВЛАТЕРФОЛЬГ ЛИОНЕЛЬ ЧЕРУТТИ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "127509381",
+      "name_lat": "ВЛАТЕРФОЛЬГ АКСИОМА АСКЛАНД ВИТА",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "900766268",
+      "name_lat": "ВЛАТЕРФОЛЬГ ЧЕЛСИ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "661113216",
+      "name_lat": "ВЛАТЕРФОЛЬГ ХАРБОР ЛАЙТС",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "613265512",
+      "name_lat": "ВЛАСТЬ ОГНЯ ПРАЙД РЕВАНШ",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1142717849",
+      "name_lat": "ВЛАДЫКА ГОР ВИЗАНТИЯ",
+      "name_ru": "",
+      "breed": "КАНГАЛЬСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "15706819",
+      "name_lat": "ВЛАСТА ВАЙТ СТАЛ ЖИЗЕЛЬ",
+      "name_ru": "",
+      "breed": "КЛАМБЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "258096041",
+      "name_lat": "ВЛАСТЕЛИН ДУШИ НАФАНЯ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1254912091",
+      "name_lat": "ВЛАСТА ОЛИВА ДЕ МИКАЛАНИРА",
+      "name_ru": "",
+      "breed": "БИВЕР ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "527300386",
+      "name_lat": "ВЛАДЫКА МОСКОВИИ РОЯЛ БЛЭКБЕРРИ",
+      "name_ru": "",
+      "breed": "БУЛЬМАСТИФ /",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1713701463",
+      "name_lat": "ВЛАРИС ЛАЙН БЕНЕДИКТ",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С СОЛЬЮ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1539913661",
+      "name_lat": "ВЛАТЕРФОРГ ЧЕЙС ПИКС ХОЛЛОУ (К/Х)",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1822249916",
+      "name_lat": "ВЛАСТЕЛИНА НЕБЕСНАЯ",
+      "name_ru": "",
+      "breed": "ИРЛАНДСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1312054300",
+      "name_lat": "ВЛАД ДАЙМОНД АРИЯ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "138625611",
+      "name_lat": "ВЛАСТЬ ДЛЯ СОКРОВИЩА РОССИИ",
+      "name_ru": "",
+      "breed": "БУЛЬМАСТИФ",
+      "breed_en": "",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1934484463",
+      "name_lat": "ВЛАТЕРФОЛЬГ ДАМИАНИ ИДЕН (К/Х)",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1343296805",
+      "name_lat": "ВЛАСТЕЛИН УДАЧИ ЯНТАРЬ",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "225730159",
+      "name_lat": "ВЛАДБОКС ВИВАТ ЛЮБАВА",
+      "name_ru": "",
+      "breed": "БОКСЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1228142062",
+      "name_lat": "ВЛАСТЕЛИН ВЕТРОВ ВОРС",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "787144458",
+      "name_lat": "ВЛАДБОКС ВИВАТ ИМПЕРИАЛ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ БОКСЁР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "708951334",
+      "name_lat": "ВЛАДА ФОМ ХАУС ШИРАН",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1239817277",
+      "name_lat": "ВЛАДИЭЛИ ГЭЛАКСИ",
+      "name_ru": "",
+      "breed": "БОРДОСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "288867179",
+      "name_lat": "ВЛАТЕРФОЛЬГ АРТИК АЙС",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "234545538",
+      "name_lat": "ВЛАСТЕЛИН УДАЧИ ЯРОМИР",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "368874048",
+      "name_lat": "ВЛАДЫКА МИРА ИЗ ТРЕТЬЯКОВСКО Й ГАЛЕРЕИ",
+      "name_ru": "",
+      "breed": "Вельш корги кардиган /",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1959016282",
+      "name_lat": "ВЛАДБОКС ВИВАТ КАДРИЛЬ",
+      "name_ru": "",
+      "breed": "БОКСЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1831602998",
+      "name_lat": "ВЛАСТЕЛИН ДУШИ ЯРОСЛАВНА",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "251535998",
+      "name_lat": "ВЛАСТЕЛИН СЕРДЕЦ С СЕРЕБРЯНОЙ ЛАГУНЫ",
+      "name_ru": "",
+      "breed": "БИВЕР ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "892411084",
+      "name_lat": "Властор'c Биргитта",
+      "name_ru": "",
+      "breed": "Американский стаффтерьер",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "898934079",
+      "name_lat": "ВЛАСТЬ КРАСОТЫ ЖАРДИН",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1472532160",
+      "name_lat": "ВЛАДИДОГС ЧУДО ПИЧ",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "169073312",
+      "name_lat": "ВЛАСТЕЛИН УДАЧИ ЯШМА",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1170727979",
+      "name_lat": "ВЛАТЕРФОЛЬГ АРМАНИ ХИТ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "615970272",
+      "name_lat": "ВЛАДИДОГС ИДЖИ-II",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "751063372",
+      "name_lat": "ВЛАДЫКА ГОР ПРИНЦЕССА ЛЕЯ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1045720511",
+      "name_lat": "ВЛАСТОР'С ЕВЕРТОН",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1388508318",
+      "name_lat": "ВЛАСТЕЛИН ДУШИ ЖРИЦА",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "542929357",
+      "name_lat": "ВЛАТЕРФОЛЬГ КОНСУЭЛА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "455493825",
+      "name_lat": "ВЛАДЫКА ГОР ИСТ- ФЕРРИС КРИСТАЛ ХЭД АВРОРА",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД /",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1855292407",
+      "name_lat": "ВЛАДА",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1002339447",
+      "name_lat": "ВЛАДБОКС ВИВАТ ЖАСМИН",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ БОКСЁР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1158932332",
+      "name_lat": "ВЛАДИДОГС УЛАН",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ / GERMAN SPITZ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1809110570",
+      "name_lat": "ВЛАСТЬ ОГНЯ РЕКЕТИР СЕМИЦВЕТИК",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1125134527",
+      "name_lat": "ВЛАДИ ИЗ ГАЛАКУНА",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "219099224",
+      "name_lat": "ВЛАД ДАЙМОНД AC/DC",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1103371066",
+      "name_lat": "ВЛАСТОР' С БИРГИТТА",
+      "name_ru": "",
+      "breed": "СТАФФОР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "969249287",
+      "name_lat": "ВЛАДЛИДЕР РАЙСКАЯ МОНИКА",
+      "name_ru": "",
+      "breed": "МОПС / PUG",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1216782488",
+      "name_lat": "ВЛАДЫКА МОСКОВИИ ДРИМ ОФ МАЙ СОУЛ",
+      "name_ru": "",
+      "breed": "БУЛЬМАСТИФ",
+      "breed_en": "BULLMASTIFF",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "899267501",
+      "name_lat": "ВЛАСТЕЛИН ДУШИ МОНИКА БЕЛУЧЧИ",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "726932024",
+      "name_lat": "ВЛАРИС ЛАЙН АЙГАР",
+      "name_ru": "",
+      "breed": "СЕРЕБРОМ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1725824446",
+      "name_lat": "ВЛАДИДОГС КОСМОС",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1744480390",
+      "name_lat": "ВЛАДЛИДЕР ГЕЛАКСИ ШОУ",
+      "name_ru": "",
+      "breed": "МОПС / PUG",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "704327342",
+      "name_lat": "ВЛАДИДОГС КАЙМАН",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1737426265",
+      "name_lat": "ВЛАДА ВИКТОРИЯ",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1755808400",
+      "name_lat": "ВЛАДИ’С МАНОР ГРАНД ОРСО",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1887104103",
+      "name_lat": "ВЛАТЕРФОЛЬГ ЕЛЛЕН СИЛ ВАНА",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "598571750",
+      "name_lat": "ВЛАТЕРФОЛЬГ ИСЛАНДИЯ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "136333736",
+      "name_lat": "ВЛАСТЕЛИНА",
+      "name_ru": "",
+      "breed": "СТОРОЖЕВАЯ /",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1010500791",
+      "name_lat": "ВЛАСТЬ ОГНЯ ЮМ ЮМ",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "506486274",
+      "name_lat": "ВЛАДЫКА ГОР ЮНОНА",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "310551685",
+      "name_lat": "ВЛАТЕРФОЛЬГ ЭЛИЗАБЕТ",
+      "name_ru": "",
+      "breed": "GERMAN SHEPHERD DOG",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "50106939",
+      "name_lat": "ВЛАСТА",
+      "name_ru": "",
+      "breed": "ФИНСКИЙ ШПИЦ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "230269606",
+      "name_lat": "ВЛАСТЕЛИНА",
+      "name_ru": "",
+      "breed": "MOSCOW",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "939841965",
+      "name_lat": "ВЛАТЕРФОЛЬГ ЛАС СЬЕРРА ДЕ ЛА РОКА",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1638064038",
+      "name_lat": "ВЛАТЕРФОЛЬГ ЗУМБА ТЕРЕСА МАУРИ К/Х",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "61191054",
+      "name_lat": "ВЛАСТОР'С ЕВСЕН",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1625353909",
+      "name_lat": "ВЛАД ДАЙМОНД АС/DC",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1563258303",
+      "name_lat": "ВЛЮБА",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "30910887",
+      "name_lat": "ВЛАДБОКС ВИВАТ ЗАГАДКА",
+      "name_ru": "",
+      "breed": "БОКСЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1779054116",
+      "name_lat": "ВЛАТЕРФОЛЬГ ФОСТЕРИ КИНГ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "722970284",
+      "name_lat": "ВЛАТЕРФОЛЬГ МОНИКА АЛЬБА",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "981560845",
+      "name_lat": "ВЛАДЫКА МОСКОВИИ РОВЕР",
+      "name_ru": "",
+      "breed": "БУЛЬМАСТИФ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "360798361",
+      "name_lat": "ВЛАСТОР'С ЕВСЕН-VLASTOR'S EVSEN",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "102040840",
+      "name_lat": "ВЛАТЕРФОЛЬГ ЧАРЕЙРО ПЕРРА",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 24,
+      "competition_dog_id": null
+    },
+    {
+      "id": "562193075",
+      "name_lat": "ВЛАТЕРФОЛЬГ Санта- Мария Новелла",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "297532089",
+      "name_lat": "ВЛАТЕРФОЛЬГ ЕВИКА ГОЛДЕН КВИН",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1333530055",
+      "name_lat": "ВЛАТЕРФОЛЬГ ЭЛЛЕН РУТ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "151515773",
+      "name_lat": "ВЛАТЕРФОЛЬГ РЕБЕКА 2",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1816913429",
+      "name_lat": "ВЛАДА",
+      "name_ru": "",
+      "breed": "ДЛИННАЯ ОСТЕВАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "260505433",
+      "name_lat": "ВЛАДЫКА МОСКОВИИ НАЙТ ИН ЭДЕМ",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1724532236",
+      "name_lat": "ВЛАТЕРФОЛЬГ ФАННИ ГЕРЛ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1472093749",
+      "name_lat": "ВЛАТЕРФОЛЬГ ЕЛЛЕН СИЛВАН",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "295013679",
+      "name_lat": "ВЛАДИДОГС МИДЖИСИ",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1569208814",
+      "name_lat": "ВЛАТЕРФОЛЬГ ТЕСТА МАУРА",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1966211131",
+      "name_lat": "ВЛАТЕРФОЛЬГ ТРИША РОЯЛ ДРИМ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "312744561",
+      "name_lat": "ВЛАТЕРФОЛЬГ КАСА ДЕЛ ОРО",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1309530655",
+      "name_lat": "ВЛАДЛИДЕР НИНЕЛЬ ХИАВИНС ГАТЕ",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1548049096",
+      "name_lat": "ВЛАСТЕЛИНА",
+      "name_ru": "",
+      "breed": "МОСКОВСКАЯ СТОРОЖЕВАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1287348165",
+      "name_lat": "ВЛАДЕЮЩИЙ МИРОМ ЦЕЗАРЬ",
+      "name_ru": "",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1039062685",
+      "name_lat": "ВЛАДИЛАР ЭЛИТА РОКСОЛАНА",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1768058807",
+      "name_lat": "ВЛАСТА ОЛИВА ДЕ",
+      "name_ru": "",
+      "breed": "БИВЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1904611333",
+      "name_lat": "ВЛАДИДОГС ЗУМА ПРИНЦЕССА СИДИМИНСКАЯ",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1469210092",
+      "name_lat": "ВЛАСТЕЛИН КОЛЕЦ ИЗ ТАЕЖНОЙ СКАЗКИ",
+      "name_ru": "",
+      "breed": "САМОЕДСКАЯ СОБАКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "710549618",
+      "name_lat": "ВЛАДИЭЛИ ВИННЭР",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1009570919",
+      "name_lat": "ВЛАСТЕЛИНА",
+      "name_ru": "",
+      "breed": "САМОЕДСКАЯ СОБАКА /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "284896371",
+      "name_lat": "Власта",
+      "name_ru": "",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "161526040",
+      "name_lat": "ВЛАДЫКА МОСКОВИИ ФРАНЧЕСКА",
+      "name_ru": "",
+      "breed": "АКИТА АМЕРИКАНСКАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1312809519",
+      "name_lat": "ВЛАСТЬ ОГНЯ КАРМЕН",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1071324386",
+      "name_lat": "ВЛАДИЛАР ЭЛИТА РУФУС (Д/Ш)",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "694675183",
+      "name_lat": "ВЛАСТЕЛИН ДУШИ ЖЕФРЕЙ ЛЕВИС",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1981151886",
+      "name_lat": "ВЛАСТЬ ОГНЯ РАКЕТА",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "254932147",
+      "name_lat": "ВЛАДЫКА МОСКОВИИ ДИРЕКТ ХИТ",
+      "name_ru": "",
+      "breed": "BULLMASTIFF",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "158448559",
+      "name_lat": "ВЛАДЫКА ГОР ВАЛЬКИРИЯ",
+      "name_ru": "",
+      "breed": "КАНГАЛЬСКАЯ ОВЧАРКА / KANGAL",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "730168525",
+      "name_lat": "ВЛАСТЕЛИН ДУШИ АЙС ВЕНТУРА",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1061609508",
+      "name_lat": "ВЛАТЕРФОЛЬГ КАРДАНО ФАБИАНО",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "230817271",
+      "name_lat": "ВЛАТЕРФОЛЬГ ИМИТИЯ СЮИТА",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "417286189",
+      "name_lat": "ВЛАДИДОГС ПОНКА",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "197315093",
+      "name_lat": "ВЛАСТЬ ОГНЯ БОМБШЕЛЛ",
+      "name_ru": "",
+      "breed": "ПТИ БРАБАНСОН",
+      "breed_en": "PETIT BRABANCON",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "554544582",
+      "name_lat": "Властор'С Брэндан",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "934448090",
+      "name_lat": "ВЛЮБЛЕННАЯ ПЕРВАЯ ЛЕДИ",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "924967427",
+      "name_lat": "ВЛАДИДОГС АРМАНИ",
+      "name_ru": "",
+      "breed": "CHIHUAHUA SMOOTH",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "622491152",
+      "name_lat": "ВЛАТЕРФОЛЬГ ФЕРИ РЕД ПРИНЦЕССА",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1113899634",
+      "name_lat": "ВЛАДЫКА ГОР ВЕЗУВИЙ",
+      "name_ru": "",
+      "breed": "КАНГАЛЬСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "934103269",
+      "name_lat": "ВЛАТЕРФОЛЬГ ЧИЕЛЛА ФРОМ СТАЙЛ ВЭЛЛИ К/Х",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1935944359",
+      "name_lat": "ВЛАСТЕЛИН ДУШИ ЭЛЕГИЯ",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "499395122",
+      "name_lat": "ВЛАСТЕЛИНА ОГНЕННАЯ ШТУЧКА",
+      "name_ru": "",
+      "breed": "ЧАУ ЧАУ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "962100290",
+      "name_lat": "ВЛАДЫКА ГОР АПРИОРИ АСТЕРА",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД /",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1412099823",
+      "name_lat": "ВЛАТЕРФОЛЬГ ЗАТЕЯ ВЕСЁЛАЯ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1586488374",
+      "name_lat": "ВЛАДИАНД АРЛЕН НЕСС",
+      "name_ru": "",
+      "breed": "стаффордширский бультерьер",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "494471582",
+      "name_lat": "ВЛАДЭРА БЛЭК ДЕ ШАРМ ОТ ДИАЛЬ",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "533404571",
+      "name_lat": "ВЛЮБА",
+      "name_ru": "",
+      "breed": "RUSSIAN HUNTING",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "632478527",
+      "name_lat": "ВЛАДЛЕН",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "838629875",
+      "name_lat": "ВЛАДИЭЛИ АВАТАР",
+      "name_ru": "",
+      "breed": "DOGUE DE BORDEAUX БУЛЬДОГ / BULLDOG",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1232748612",
+      "name_lat": "ВЛАДЫЧИЦА ГРЕЗ ИЗ ЧЕРНОЙ ДРУЖИНЫ",
+      "name_ru": "",
+      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ / GIANT",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "385659749",
+      "name_lat": "ВЛАДИДОГС ЦЕНТРАЛ",
+      "name_ru": "",
+      "breed": "CHIHUAHUA SMOOTH",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1009745950",
+      "name_lat": "ВЛАДИСТАР НЕРТЕРА",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1853225896",
+      "name_lat": "ВЛАДЫКА МОСКОВИИ ФИЕСТА",
+      "name_ru": "",
+      "breed": "СКАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1675534289",
+      "name_lat": "ВЛАСТЕЛИН НОЧИ ВАРКРАФТ",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER KING",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1253461518",
+      "name_lat": "ВЛАДА ВИКТОРИЯ ИЗ ЗАПОЛЯРЬЯ",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "549149485",
+      "name_lat": "ВЛАДИСВЕТ ТАНГОР СВОБОДНЫЙ ПОЛЕТ",
+      "name_ru": "",
+      "breed": "РУССКАЯ ЦВЕТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1070558595",
+      "name_lat": "ВЛАТЕРФОЛЬГ РАУФ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1757362344",
+      "name_lat": "ВЛАДИСТАР РОКСАЛАНА",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА Г.Ш.",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1356488239",
+      "name_lat": "ВЛАРИС ЛАЙН ЭВА ЭШЛИ",
+      "name_ru": "",
+      "breed": "СЕРЕБРОМ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1699839524",
+      "name_lat": "ВЛАТЕРФОЛЬГ ЕМЭРЕЛД ФОКС",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "962900779",
+      "name_lat": "ВЛАТЕРФОЛЬГ НОННА АСТРИД",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "272263739",
+      "name_lat": "ВЛАДИСВЕТ ВИОЛЕТТА",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "116509011",
+      "name_lat": "ВЛАТЕРФОЛЬГ ВАН КЛИФ ЭНД АРТЕЛС",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "433895541",
+      "name_lat": "ВЛАТЕРФОЛЬГ ЧЕРУТТИ",
+      "name_ru": "",
+      "breed": "GERMAN SHEPHERD DOG",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1453387420",
+      "name_lat": "ВЛАДЫЧИЦА ПОЛЕЙ",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "412381103",
+      "name_lat": "ВЛАСТЬ ОГНЯ СТАР ТРЕК",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "331289202",
+      "name_lat": "ВЛАДИСВЕТ ДУЛЬСИНЕЯ",
+      "name_ru": "",
+      "breed": "COLOR BICHON",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1582202598",
+      "name_lat": "ВЛАТЕРФОЛЬГ НЕНСИ АЛЬТЕР ЕГО",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "146190104",
+      "name_lat": "ВЛАСТА",
+      "name_ru": "",
+      "breed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "956483203",
+      "name_lat": "ВЛАДИСВЕТ УДАЧА",
+      "name_ru": "",
+      "breed": "Русская цветная болонка /",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "662660900",
+      "name_lat": "ВЛАСТОР'С ЖАСМИН",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1760229620",
+      "name_lat": "ВЛАТЕРФОЛЬГ ФЕСТ КЛАСС",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1175438011",
+      "name_lat": "ВЛАТЕРФОЛЬГ ФОРЕВЕР РОЯЛ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "853324151",
+      "name_lat": "ВЛАДЫКА МОСКОВИИ АРИАНА",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "780860688",
+      "name_lat": "ВЛАСТЕЛИНА",
+      "name_ru": "",
+      "breed": "КОРСО СТОРОЖЕВАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1770180789",
+      "name_lat": "ВЛАДИДОГС УМБЕРТА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1920049917",
+      "name_lat": "ВЛАДИДОГС ЦЕФЕЯ",
+      "name_ru": "",
+      "breed": "CHIHUAHUA SMOOTH",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "616701575",
+      "name_lat": "ВЛАДЫКА ГОР ТАЁЖНАЯ",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ НЕМЕЦКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "408629386",
+      "name_lat": "ВЛАДИОЗ ВИОЛ ГЕРМАНИКА",
+      "name_ru": "",
+      "breed": "DEUTSCHER",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1521723744",
+      "name_lat": "ВЛАСТИЛИНА ИЗ ИМПЕРИИ ЦУНЬ",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "293650257",
+      "name_lat": "ВЛАСТЕЛИН ДУШИ Е' ИМПЕРИАЛ",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1850338524",
+      "name_lat": "ВЛАДЛИ ДЕР УРУРУ ПАКО",
+      "name_ru": "",
+      "breed": "ИЙ ТЕРЬЕР /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "180088240",
+      "name_lat": "ВЛАД ДАЙМОН Д ЗЕВС",
+      "name_ru": "",
+      "breed": "LABRADO",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1324581503",
+      "name_lat": "ВЛАСТЬ ОГНЯ ОСОБО ОПАСЕН",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1447018532",
+      "name_lat": "ВЛАДЫЧИЦА МОРСКАЯ из ЗАМКА ШАРБУЛЕ",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР ЦВЕТНОЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1097765746",
+      "name_lat": "ВЛАСТЬ ОГНЯ ОН ЛОВЕ",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "115744717",
+      "name_lat": "ВЛАРИС ЛАЙН",
+      "name_ru": "",
+      "breed": "С СЕРЕБРОМ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1372204878",
+      "name_lat": "ВЛАДА ИЗ ГАЛАКУНА",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1526942572",
+      "name_lat": "ВЛАДМИРА ФОР ГЕНЕСИС СТАРС",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР ЦВЕТНОЙ МИНИАТЮРНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1365645669",
+      "name_lat": "ВЛАДИ'С МАНОР БЕЛИВ ИН ДРИМ",
+      "name_ru": "",
+      "breed": "ЗЕННЕНХУНД БЕРНСКИЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "352574224",
+      "name_lat": "Влатерфольг Мия",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "905537316",
+      "name_lat": "ВЛАРИС ЛАЙН",
+      "name_ru": "",
+      "breed": "СЕРЕБРОМ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1780611137",
+      "name_lat": "ВЛЮБЛЕННАЯ В СОЛНЦЕ",
+      "name_ru": "",
+      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "775304948",
+      "name_lat": "ВЛАСТНАЯ ВЛАДЛЕНА ДЛЯ ДОМА БАЕВОЙ",
+      "name_ru": "",
+      "breed": "ШАР ПЕЙ /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "213678789",
+      "name_lat": "ВЛАТЕРФОЛЬГ ФЕРГЕТ МИ НОТ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1426241542",
+      "name_lat": "ВЛАТЕРФОЛЬГ ЖАКАДИ ПАРАДИ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "458090672",
+      "name_lat": "ВЛАТЕРФОЛЬГ УРСУЛА 2",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "762993102",
+      "name_lat": "ВЛАТЕРФОЛЬГ ЦУКИШИМА ШУКУРО",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "361928839",
+      "name_lat": "ВЛАТЕРФОЛЬГ АНТИК БЬЮТИ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1426097678",
+      "name_lat": "ВЛАД ДАЙМОН Д КАВА",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР / LABRADOR RETRIEVER",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1310053574",
+      "name_lat": "ВЛАТЕРФОЛЬГ УРСУЛА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1517939756",
+      "name_lat": "ВЛАСТА",
+      "name_ru": "",
+      "breed": "ОХОТНИЧИЙ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1408542287",
+      "name_lat": "ВЛАДИМИРСКИЙ ЦЕНТРАЛ ИЗ РУССКОЙ ДИНАСТИИ",
+      "name_ru": "",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1620538671",
+      "name_lat": "ВЛАСТЕЛИНА ИЗ КРАСНОГО ДАРА",
+      "name_ru": "",
+      "breed": "VOSTOCHNOEVROPEISKAYA OVCHARKA",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1006337235",
+      "name_lat": "ВЛАДОМИРА КУДЕСНИЦА",
+      "name_ru": "",
+      "breed": "СТОРОЖЕВАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1224553229",
+      "name_lat": "ВЛАСТЕЛИН ПОВОЛЖЬЯ МИРОСЛАВА",
+      "name_ru": "",
+      "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1396306885",
+      "name_lat": "ВЛАТЕРФОЛЬГ УГО САНЧАС",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "842319111",
+      "name_lat": "ВЛАТЕРФОЛЬГУГО САНЧЕС",
+      "name_ru": "",
+      "breed": "ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "811420525",
+      "name_lat": "ВЛАСТЬ ОГНЯ ПЕЙДЖЕЙ",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "385767376",
+      "name_lat": "ВЛАД ДАЙМОНД ВАЛЬДИВИЯ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "121551669",
+      "name_lat": "ВЛАДИДОГС ПИКАП",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "72108814",
+      "name_lat": "ВЛАДЛИДЕР РОЗА- МАРИЯ",
+      "name_ru": "",
+      "breed": "МОПС / PUG",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1998896514",
+      "name_lat": "ВЛАТЕРФОЛЬГ САНЧО ПАНСА",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1901372598",
+      "name_lat": "ВЛА’СТОРС МАЙ БЛЭК КУИН",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1751952684",
+      "name_lat": "ВЛАСТА ВАЙТ СТАЛ ОЛЛИ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1197623021",
+      "name_lat": "ВЛАСТЬ ОГНЯ ЦУНАМИ",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "34398521",
+      "name_lat": "ВЛАДИ'С МАНОР ГЕРДА",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "828026837",
+      "name_lat": "ВЛАРИС ЛАЙН ИНТРИГА ХОНДА",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "348289673",
+      "name_lat": "ВЛАДИЛИДЕР СВОЯ ИГРА",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР /",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "596252670",
+      "name_lat": "ВЛАТЕРФОЛЬГ ФЕХУ ФЕЕРИЯ ФОРТУНА",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "400805348",
+      "name_lat": "ВЛАДЛЕНА МЕЧТА ИМПЕРАТОРА",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "314985643",
+      "name_lat": "ВЛАДИСЛАВА С МОСКОВСКОЙ ГОРКИ",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "29189471",
+      "name_lat": "ВЛАСТЕЛИН ДУШИ ЕСЕНИЯ",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "207857690",
+      "name_lat": "ВЛАДЛЕНА СУВЕНИР БЕЛИССИМА / BELISSIMA",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1410548442",
+      "name_lat": "ВЛАДЛИДЕР МОИСЕЙ",
+      "name_ru": "",
+      "breed": "МОПС БЕЖЕВЫЙ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "268400746",
+      "name_lat": "ВЛАТЕРФОЛЬГ ЭЛЕН ЛЕВОН",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1983062698",
+      "name_lat": "ВЛАДЫКА МОСКОВИИ ФАННИ",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "583135324",
+      "name_lat": "ВЛАТЕРФОЛЬГ ЗЕМЛЯНИКА ЯГОДА",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1576868469",
+      "name_lat": "ВЛАД ДАЙМОНД ИКС",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1781121006",
+      "name_lat": "ВЛАСТЬ ОГНЯ ФЕЙРИ ТЕЙЛ",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "373510905",
+      "name_lat": "ВЛАДА С МЕЩЕРСКОГО КРАЯ",
+      "name_ru": "",
+      "breed": "СОБАКА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1464019202",
+      "name_lat": "ВЛАДИДОГС ВАРВИК",
+      "name_ru": "",
+      "breed": "CHIHUAHUA SMOOTH",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1636306307",
+      "name_lat": "ВЛАДИ'C МАНОР ЕСЕНИЯ",
+      "name_ru": "",
+      "breed": "ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "763364796",
+      "name_lat": "ВЛАРИС ЛАЙН ЗИЛЭС ФО ЛИБЕРТИ",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "461128026",
+      "name_lat": "ВЛАДИДОГС ЛАМБЭРА",
+      "name_ru": "",
+      "breed": "GERMAN SPITZ TOY (POMERANIAN)",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1263793426",
+      "name_lat": "ВЛАТЕРФОЛЬГ ЕДЕЛЬ РОУЗ КАДЕТ (к/х)",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1990029208",
+      "name_lat": "ВЛАСТЕЛИН УДАЧИ ЕЛИСЕЙ",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "207170025",
+      "name_lat": "ВЛЮБА",
+      "name_ru": "",
+      "breed": "ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1909007365",
+      "name_lat": "ВЛАСТЕЛИНА",
+      "name_ru": "",
+      "breed": "МОСКОВСКАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "926583855",
+      "name_lat": "ВЛАДИМИР ВАН",
+      "name_ru": "",
+      "breed": "AMERICAN",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1935774823",
+      "name_lat": "ВЛАДЫКА МОСКОВИИ АВАНТЮРНАЯ РУСЯ    ( К/Х )",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "WELSH CORGI PEMBROKE",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "114491420",
+      "name_lat": "ВЛАДЫКА МОСКОВИИ ТАЙНА",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "AMERICAN AKITA",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "196489347",
+      "name_lat": "ВЛАСТЬ ОГНЯ Я ТВОЙ КУМИР",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1366488046",
+      "name_lat": "ВЛАТЕРФОЛЬГ ФЕХУ ФЕЕРИЯ ФОРТУНА ( К/Х )",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "WELSH CORGI PEMBROKE",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1119267483",
+      "name_lat": "ВЛАДЫКА МОСКОВИИ СЛЕВИН ЗЕ БЭСТ",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "AMERICAN AKITA",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1782449639",
+      "name_lat": "ВЛАДЫКА МОСКОВИИ ВЕСТА",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "151434969",
+      "name_lat": "ВЛАДЫКА МОСКОВИИ ДАНИЭЛЬ",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "15440723",
+      "name_lat": "ВЛАДИДОГС ЛЕКСИ",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "652646781",
+      "name_lat": "ВЛАДЛИДЕР ГРАНД ПРИ ФУРИЯ",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "453649659",
+      "name_lat": "ВЛАДИСВЕТ КОРОЛЕВА КРАСОТЫ",
+      "name_ru": "",
+      "breed": "БОЛОНКА / RUSSKAYA",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "86350075",
+      "name_lat": "ВЛАДИСВЕТ ИВОЛГА",
+      "name_ru": "",
+      "breed": "БОЛОНКА / RUSSKAYA",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1989670191",
+      "name_lat": "ВЛАТЕРФОЛЬГ ЕРРЕРА ДЕ АЛЬКАНТАРА (К/Х)",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "284997878",
+      "name_lat": "ВЛАДИ ВАЛЕНСИЯ ГОЛДИ",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "921755445",
+      "name_lat": "ВЛАДЛИДЕР ГЛАМУРНАЯ ЛЕДИ",
+      "name_ru": "",
+      "breed": "МОПС БЕЖЕВЫЙ / PUG FAWN",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "290615755",
+      "name_lat": "ВЛАСТЕЛИН ДУШИ МИКАЭЛА БЕНС",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "384322168",
+      "name_lat": "ВЛАТЕРФОЛЬГ ЛАКШЕРИ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "233792181",
+      "name_lat": "ВЛАДЛЕНА ВПЕРЁД ЗОВУЩАЯ",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1172070141",
+      "name_lat": "ВЛАДИЛАР ЭЛИТА АТОС",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЁРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "945711923",
+      "name_lat": "ВЛАТЕРФОЛЬГЮЗ ОФ ВЭПОНС",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "876166428",
+      "name_lat": "ВЛАДЫКА ГОР МАДЖОНГ",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1177151481",
+      "name_lat": "ВЛАСТЕЛИН ДУШИ ОДЕЗИ ОРИАДНА",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "158714316",
+      "name_lat": "ВЛАСТЬ ОГНЯ УРАГАН СТРАСТЕЙ",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "917203530",
+      "name_lat": "ВЛАДЛИДЕР СТИЧ",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР / AMERICAN",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1193114485",
+      "name_lat": "ВЛАДИЛАР ЭЛИТА ГАБИ",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1373281553",
+      "name_lat": "ВЛАСТЬ ЛЮБВИ",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1697120470",
+      "name_lat": "ВЛАД ДАЙМОНД ДАС ИСТ ФАНТАСТИШ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1984072779",
+      "name_lat": "ВЛАДИДОГС БАКЕМИ ДЖИУ",
+      "name_ru": "",
+      "breed": "СИБА / SHIBA",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "360945606",
+      "name_lat": "ВЛАСТЬ ОГНЯ ЭЛЕКТРА",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "956113286",
+      "name_lat": "ВЛАДИ-МИР ИЗ СОЗВЕЗДИЯ ДЕВЫ",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "523759652",
+      "name_lat": "ВЛАДИЛАР ЭЛИТА ЯРКАЯ КРАСА",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "107287818",
+      "name_lat": "ВЛАДЛИДЕР УРАН",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР /",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "562477679",
+      "name_lat": "ВЛАСТОР'С ЖАРГАЛ - VLASTOR' S ZHARGAL",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "704847256",
+      "name_lat": "ВЛАСТЕЛИН ДУШИ ПАЛЕРМО",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1405503692",
+      "name_lat": "ВЛАСТЕЛИН ДУШИ СЕЗАРИЯ",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1900643085",
+      "name_lat": "ВЛАСТЕЛИН УДАЧИ ЖОНКИЛЬ",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "3505320",
+      "name_lat": "ВЛАТЕРФОЛЬГ ДАНИЕЛЬ АНРИ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "26974893",
+      "name_lat": "ВЛАСТА ФИШ МУНИ",
+      "name_ru": "",
+      "breed": "ЧАУ ЧАУ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "216796473",
+      "name_lat": "ВЛАДИДОГС НАЙК",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "285889704",
+      "name_lat": "ВЛАДИДОГС АЛИСА В СТРАНЕ ЧУДЕС",
+      "name_ru": "",
+      "breed": "GERMAN SPITZ TOY (POMERANIAN)",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "668187618",
+      "name_lat": "ВЛАСТЕЛИН СЕРДЦА МОЕГО",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "961302042",
+      "name_lat": "ВЛАДИДОГС РОНА РАФАЭЛЛА",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "151834357",
+      "name_lat": "ВЛАДИДОГС ЧЕРНИЧКА БУСЯ",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1499769522",
+      "name_lat": "ВЛАДЫКА МОСКОВИИ ГОЛДЕН ДЕЙЗИ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "486452029",
+      "name_lat": "ВЛАДИДОГС ФРИДА",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1402522305",
+      "name_lat": "ВЛАСТЕЛИН ДУШИ БАГГИ",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "803378930",
+      "name_lat": "ВЛАСТЕЛИН ДУШИ ОКТАВИЯ АРНА",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "219062178",
+      "name_lat": "ВЛАДБОКС ВИВАТ МАРСЕЛЬ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ БОКСЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1047252831",
+      "name_lat": "ВЛАСТЬ ОГНЯ БЕАТРИЧЕ",
+      "name_ru": "",
+      "breed": "БЕЛЬГИЙСКИЙ ГРИФФОН",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "849850541",
+      "name_lat": "ВЛАСТЕЛИН МИРА",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1872185864",
+      "name_lat": "ВЛАДИЛАР ЭЛИТА ЯРИК ДЕ ТРУА",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "962684489",
+      "name_lat": "ВЛАСТЕЛИН МОЕГО СЕРДЦА",
+      "name_ru": "",
+      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ /",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "942945929",
+      "name_lat": "ВЛАД ДАЙМОНД ГРАЦИЯ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "820357866",
+      "name_lat": "ВЛАДЕЙ ХАРТ КЛИО",
+      "name_ru": "",
+      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1117815243",
+      "name_lat": "ВЛАТЕРФОЛЬГ ФИЛЛИПС ЛЕСЛИ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1487834049",
+      "name_lat": "ВЛАДИЭЛИ ЛАВ СТОРИ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "118512952",
+      "name_lat": "ВЛА'СТОРС МАЙ БЛЭК КУИН",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ АМЕРИКАНСКИЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "97208409",
+      "name_lat": "ВЛАТЕРФОЛЬГ АНАБЕЛЬ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1532537469",
+      "name_lat": "ВЛАДИЭЛИ ВАЙТ СЕНСЕЙШН",
+      "name_ru": "",
+      "breed": "ГРЮНЕНДАЛЬ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "102369615",
+      "name_lat": "ВЛАСТИСЛАВА",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1768168258",
+      "name_lat": "ВЛАДЛЕНА",
+      "name_ru": "",
+      "breed": "ЗЕННЕНХУНД БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1176042789",
+      "name_lat": "ВЛАДИ ХАНИ",
+      "name_ru": "",
+      "breed": "КОРСО / ITALIAN CANE",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1077802597",
+      "name_lat": "ВЛАСТЕЛИНА",
+      "name_ru": "",
+      "breed": "КАНЕ МОСКОВСКАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "232452017",
+      "name_lat": "ВЛАСТЕЛИНА",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "273039102",
+      "name_lat": "ВЛАСТА ЛИКА",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "66434586",
+      "name_lat": "ВЛАДА",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ Д/Ш",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1793554999",
+      "name_lat": "ВЛАДИДОГС ЯРА",
+      "name_ru": "",
+      "breed": "CHIHUAHUA SMOOTH",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1153864750",
+      "name_lat": "ВЛОЯ МЕЛОДИ",
+      "name_ru": "",
+      "breed": "ЧАУ ЧАУ / CHOW CHOW",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "527041793",
+      "name_lat": "ВЛАДА",
+      "name_ru": "",
+      "breed": "CAUCASIAN SHEPHERD",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1555941476",
+      "name_lat": "ВЛАСТЕЛИНА",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН МОСКОВСКАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "445359136",
+      "name_lat": "ВЛАСТЕЛИНА",
+      "name_ru": "",
+      "breed": "БОРДОСКИЙ МОСКОВСКАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "947119157",
+      "name_lat": "ВЛАСТЕЛИНА",
+      "name_ru": "",
+      "breed": "ASIA SHEPHERD DOG",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "789401497",
+      "name_lat": "ВЛАСТЕЛИНА",
+      "name_ru": "",
+      "breed": "MOSCOW WATCH",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "628483324",
+      "name_lat": "ВЛАСТЕЛИНА",
+      "name_ru": "",
+      "breed": "СТОРОЖЕВАЯ / MOSCOW",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1696727733",
+      "name_lat": "ВЛАДИ",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР / YORKSHIRE TERRIER",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "169447869",
+      "name_lat": "Власта",
+      "name_ru": "",
+      "breed": "БУЛЬМАСТИФ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1398979442",
+      "name_lat": "Владианд",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1029584488",
+      "name_lat": "ВЛАСТЕЛИНА",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1010262563",
+      "name_lat": "ВЛАСТЕЛИНА",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "984864164",
+      "name_lat": "ВЛАДИМИР ВАН",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "218830110",
+      "name_lat": "ВЛАСТЕЛИНА",
+      "name_ru": "",
+      "breed": "ЛАЙКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1706915439",
+      "name_lat": "ВЛАСТЕЛИНА",
+      "name_ru": "",
+      "breed": "СПИНОНЕ ЯКУТСКАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "428296785",
+      "name_lat": "ВЛАДИСЛАВА",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "787803926",
+      "name_lat": "ВЛАДЫКА МОСКОВИИ ХАРИКЕН ВИННЕР",
+      "name_ru": "",
+      "breed": "БУЛЬМАСТИФ",
+      "breed_en": "BULLMASTIFF",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "702515418",
+      "name_lat": "ВЛАДБОКС ВИВАТ ЗАДАР",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ БОКСЕР",
+      "breed_en": "BOXER",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "286852311",
+      "name_lat": "ВЛАДИЛАР ЭЛИТА ФОРТУНА",
+      "name_ru": "",
+      "breed": "CHIHUAHUA SMOOTH",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "149338759",
+      "name_lat": "ВЛАДЫКА МОСКОВИИ ЯРКАЯ ШТУЧКА",
+      "name_ru": "",
+      "breed": "ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "399836507",
+      "name_lat": "ВЛАДЫКА ИЗ МИРА АНТАЛЛИС BRONISLAVA",
+      "name_ru": "",
+      "breed": "БУЛЬМАСТИФ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "864484115",
+      "name_lat": "ВЛАДЫКА МОСКОВИИ САНТЕЗУ РОССО",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1982057761",
+      "name_lat": "ВЛАДИДОГС РИККИ",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ / GERMAN",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1878747722",
+      "name_lat": "ВЛЕКОМЫЙ МЕЧТОЙ ХРАНИМЫЙ АНГЕЛОМ",
+      "name_ru": "",
+      "breed": "ШАР ПЕЙ / SHAR PEI",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "386238982",
+      "name_lat": "ВЛАДИЭЛИ АТЛАНТА",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ / BULLDOG",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "750726723",
+      "name_lat": "ВЛАДИДОГС ЯРЛ БИРГЕР ТОТТЕНХЕМ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ ШПИЦ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "218224370",
+      "name_lat": "ВЛАДИДОГС ИСКОРКА ОГНЕННАЯ",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "358555061",
+      "name_lat": "ВЛАСТЛЕНА ДЛЯ БОН ШАНС",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР / YORKSHIRE TERRIER",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "622633869",
+      "name_lat": "ВЛАСТЕЛИНА МИРА ИЗАБЕЛЛА",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "884139266",
+      "name_lat": "ВЛАДИДОГС ЧИНЗАНО",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1455784305",
+      "name_lat": "ВЛАДИДОГС ШАНЭЛЬ ЖЁ ТЭН",
+      "name_ru": "",
+      "breed": "YORKSHIRE TERRIER",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1166614397",
+      "name_lat": "ВЛАДИДОГС ЦЕЗАРЬ КИНГ",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ / GERMAN SPITZ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "793683036",
+      "name_lat": "ВЛАДИДОГС ПАУЛИНА II",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "54393072",
+      "name_lat": "ВЛАДИДОГС ФЭШН ФИФА ЛЕДИ",
+      "name_ru": "",
+      "breed": "RUSSIAN TOY SMOOTH-",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1647584115",
+      "name_lat": "ВЛАДИДОГС ПЭППИ ИЗ ПОМЕСТЬЯ МИХАЙЛИЧЕНКО",
+      "name_ru": "",
+      "breed": "CHIHUAHUA SMOOTH",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1849669294",
+      "name_lat": "ВЛАДИДОГС АНЖЕЛИКА МАРКИЗА АНГЕЛОВ",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "514898303",
+      "name_lat": "ВЛАДИДОГС УЛЛИЯ",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ / GERMAN",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "108898354",
+      "name_lat": "ВЛАДА ИЗ КУРГАН ГРАДА",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1505889735",
+      "name_lat": "ВЛАСТЬ КРАСОТЫ ЕСЕНИЯ",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "119576509",
+      "name_lat": "ВЛАДИДОГС РАМУЭЛЛА ВОСХОДЯЩЕЕ СОЛНЦЕ",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "627246192",
+      "name_lat": "ВЛАСТИЛИН ИЗ ЛЬВИНОГО ПРАЙДА",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "57929284",
+      "name_lat": "ВЛАДА БЕЛОЕ ОБЛАКО",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1272930184",
+      "name_lat": "ВЛАДЛЕНА БРИЗ",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ / GERMAN SPITZ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1912393162",
+      "name_lat": "ВЛАДИДОГС ЗЕНИТ",
+      "name_ru": "",
+      "breed": "МАЛЫЙ БЕЛЫЙ /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "705504981",
+      "name_lat": "ВЛАДИДОГС МАДОННА МИСТЕРИЯ БУФФ",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1415996410",
+      "name_lat": "ВЛАДЫКА СТЕПИ ЕЛИЗИЯ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "6571062",
+      "name_lat": "ВЛАТЕРФОЛЬГ Ю'Л СИ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "61831175",
+      "name_lat": "Владамир Блэк Меджик",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1387332209",
+      "name_lat": "ВЛАСТЕЛИН СЕРДЕЦ ИЗ ИЖГРАДА",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "427968440",
+      "name_lat": "ВЛАСТЕЛИН УДАЧИ ЖИВАНШИ ДЖЕНТЕЛЬМЕН",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "578344175",
+      "name_lat": "ВЛАСТЕЛИН ДУШИ ПАЭЛЛА ПРЕЗИНТЕЙШЕН",
+      "name_ru": "",
+      "breed": "JACK RUSSELL TERRIER",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1154848075",
+      "name_lat": "ВЛАТЕРФОЛЬГ ЕРРЕРА ДЕ АЛЬКАНТАРА",
+      "name_ru": "",
+      "breed": "ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1363534284",
+      "name_lat": "ВЛАДБОК С ВИВАТ ЗАГАДКА",
+      "name_ru": "",
+      "breed": "BOXER",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "470865833",
+      "name_lat": "ВЛАДЫКА ГОР ИМБИРНЫЙ ПРЯНИК",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "113716482",
+      "name_lat": "ВЛАТЕРФОЛЬГ ЛАЙН ХАЙТ СПИРИТЕД",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1097413562",
+      "name_lat": "ВЛАДА ИЗ ЛЕМБОЛОВО",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1561369595",
+      "name_lat": "ВЛАСТЕЛИН УДАЧИ ЖЁ Т'ЭМ ПАРИ",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ / FRENCH BULLDOG",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1026051368",
+      "name_lat": "ВЛАТЕРФОЛЬГ ХАМРИН",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1630709564",
+      "name_lat": "ВЛАТЕРФОЛЬГ ХАРМИН",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1502802396",
+      "name_lat": "ВЛАДИДОГС НАПОЛЕОН",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ / FRENCH BULLDOG",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "889576500",
+      "name_lat": "ВЛАДЫКА МОСКОВИИ ОРЧИД БЛАК ФЛОУЕР",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1732586620",
+      "name_lat": "ВЛАДИОЗ ВИОЛ ЦИРКОН",
+      "name_ru": "",
+      "breed": "DEUTSCHER",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "253955165",
+      "name_lat": "ВЛАДИОЗ ВИОЛ ЦИТРА",
+      "name_ru": "",
+      "breed": "DEUTSCHER",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1797088602",
+      "name_lat": "ВЛАТЕРФОЛЬГ ГУЧЧИ",
+      "name_ru": "",
+      "breed": "GERMAN SHEPHERD DOG",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "431546228",
+      "name_lat": "ВЛАДЫКА МОСКОВИИ К'ТАМЕРЛАН",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1344338153",
+      "name_lat": "ВЛАДЛИДЕР ЖИГАЛО ПЛЕЙ БОЙ",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1244483330",
+      "name_lat": "ВЛАДЫКА МИРА ОТ ДРЕВАЛЛЕЙ",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1759027713",
+      "name_lat": "ВЛАДЫКА МОСКОВИИ ОБЫКНОВЕННОЕ ЧУДО",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1297308116",
+      "name_lat": "ВЛАСТЕЛИН ДУШИ ЭЛОХА ПОБЕД",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1649437820",
+      "name_lat": "ВЛАДИЛАР ЭЛИТА ЕЛВИС",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1567880535",
+      "name_lat": "ВЛАДИДОГС УГОЛЕК",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "633282980",
+      "name_lat": "ВЛАДИДОГС РАШЕЛЬ",
+      "name_ru": "",
+      "breed": "RUSSIAN TOY SMOOTH-",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "477598470",
+      "name_lat": "ВЛАДЛИДЕР НЕЛЬСОН ФОР ЛАВ",
+      "name_ru": "",
+      "breed": "BORDEAUX БУЛЬДОГ / BULLDOG",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "239213644",
+      "name_lat": "ВЛАДИДОГС ЦАЙРИ ТРАЙМФ ОФ ДАРКНЕС",
+      "name_ru": "",
+      "breed": "САМОЕДСКАЯ СОБАКА / SAMOYED",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1213806713",
+      "name_lat": "ВЛАДЛИДЕР МЕЛИССА",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МАЛЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE MOYEN GREY, APRICOT, RED FAWN",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1686119169",
+      "name_lat": "ВЛАДЫКА МОСКОВИИ ИСКРА РАДОСТИ",
+      "name_ru": "",
+      "breed": "ПЕМБРОК / WELSH",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1760501163",
+      "name_lat": "ВЛАТЕРФОЛЬГ ХИЗ ЛЕЙТЕС ФЛЕЙМ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК / WELSH CORGI",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1463466936",
+      "name_lat": "ВЛАТЕРФОЛЬГ ЖЕВЕЛЬ ПРЕЗЕНТ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "248179478",
+      "name_lat": "ВЛАТЕРФОЛЬГ ПОРШЕ КАЙМАН",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "559593538",
+      "name_lat": "ВЛАСТЕЛИН ПОВОЛЖЬЯ АДМИРАЛ",
+      "name_ru": "",
+      "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "23274352",
+      "name_lat": "ВЛАСТЕЛИН ПОВОЛЖЬЯ АМБРА ВДОХНОВЕНИЕ ДУШИ",
+      "name_ru": "",
+      "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1906107421",
+      "name_lat": "ВЛАДИОЗ ВИОЛ ТИАНА",
+      "name_ru": "",
+      "breed": "ПОДШЕРСТКОМ /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1351045851",
+      "name_lat": "ВЛАСТЕЛИНА АНГЕЛОВ",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "139121527",
+      "name_lat": "ВЛАТЕРФОЛЬГ РИХЕР ЭЛИЗАБЭТ",
+      "name_ru": "",
+      "breed": "ПЕМБРОК / WELSH",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "270312272",
+      "name_lat": "ВЛАСТЕЛИН ДУШИ ЭПОХА ПОБЕД",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "725719460",
+      "name_lat": "ВЛАСТЕЛИН ДУШИ НОВЕЛЛА МАДЛЕН",
+      "name_ru": "",
+      "breed": "ДРТ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1461517094",
+      "name_lat": "ВЛАСТЕЛИН ПОВОЛЖЬЯ БОН ШАНС МАЖИ НУАР",
+      "name_ru": "",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "116435312",
+      "name_lat": "ВЛАСТЕЛИН ПОВОЛЖЬЯ БОЯРЫНЯ",
+      "name_ru": "",
+      "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ / ST.",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1170243581",
+      "name_lat": "ВЛАСТЕЛИН ДУШИ ЭЙДЖЕРЕН",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1367911764",
+      "name_lat": "ВЛАД ДАЙМОНД",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "959681081",
+      "name_lat": "ВЛАТЕРФОЛЬГ ИНДИАНА ДЖОНС",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК / WELSH CORGI",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "14341900",
+      "name_lat": "ВЛАТЕРФОЛЬГ УСФИН ЭКВИСТ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1166744234",
+      "name_lat": "ВЛАТЕРФОЛЬГ ГАРФИЛД АМАЗИНГ ДИСКОВЕРИ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "229555124",
+      "name_lat": "Владыка Московии Лизавета",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1525163419",
+      "name_lat": "ВЛАТЕРФОЛЬГ ОРОМЕ ИНДИС ВАНА",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1719993632",
+      "name_lat": "ВЛАДИДОГС ЯРИВДА",
+      "name_ru": "",
+      "breed": "GERMAN SPITZ TOY (POMERANIAN)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "181173809",
+      "name_lat": "ВЛАДЭРА БЛЭК ДЭ ШАРМ ОТ ДИАЛЬ",
+      "name_ru": "",
+      "breed": "МОПС/PUG",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1068520436",
+      "name_lat": "ВЛАДИЛАР ЭЛИТА ЭРИКА",
+      "name_ru": "",
+      "breed": "CHIHUAHUA SMOOTH",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "29912328",
+      "name_lat": "ВЛАДЫКА ДОНА БАХТИЯР",
+      "name_ru": "",
+      "breed": "CAUCASIAN SHEPHERD",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1301743667",
+      "name_lat": "ВЛАДИЛАР ЭЛИТА ЭЛЬФ",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ / CHIHUAHUA SMOOTH",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1438931334",
+      "name_lat": "ВЛАД ДАЙМОНД АЛИС КУПЕР",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1917713011",
+      "name_lat": "ВЛАДЛЕНА СУВЕНИР ЕНИСЕЙ",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER KING",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1093753872",
+      "name_lat": "ВЛАДИСВЕТ ИВУШКА",
+      "name_ru": "",
+      "breed": "РУССКАЯ ЦВЕТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "103635963",
+      "name_lat": "ВЛАТЕРФОЛЬГ ФЕСТ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "874958590",
+      "name_lat": "ВЛАДИЭЛИ ДЕЛЬТА",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "831521190",
+      "name_lat": "ВЛАДИЭЛИ ДЕСТИНЕЙШН",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1403004422",
+      "name_lat": "ВЛАТЕРФОЛЬГ ИНФАНТА ИНГРИД",
+      "name_ru": "",
+      "breed": "ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1105756339",
+      "name_lat": "ВЛАТЕРФОЛЬГ ИНСПИРЭЙШИН ФАЭР",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "166544475",
+      "name_lat": "ВЛАДЫКА СИБИРИ",
+      "name_ru": "",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "612123100",
+      "name_lat": "ВЛАДИ'С МАНОР ВЛАДА",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "796565963",
+      "name_lat": "ВЛАТЕРФОЛЬГ ЛЯ РОШЕЛЬ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК / WELSH CORGI",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1977684322",
+      "name_lat": "ВЛАДА БЛОНД СТАЙЛ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1207585372",
+      "name_lat": "Властор'c Бригитта",
+      "name_ru": "",
+      "breed": "американский стаффтерьер",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "576760908",
+      "name_lat": "ВЛАТЕРФОЛЬГ РАЦА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "296206767",
+      "name_lat": "ВЛАДЛИДЕР РОКЕТ БУТЧ",
+      "name_ru": "",
+      "breed": "МОПС / PUG",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1650782778",
+      "name_lat": "ВЛЮБЛЕННАЯ ПРИНЦЕССА ВИТАМИНКА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1887186303",
+      "name_lat": "ВЛАДЫЧИЦА ДУШИ ИРА",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "902206093",
+      "name_lat": "ВЛАТЕРФОЛЬГ ПОНТИАК КАТАЛИНА",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "344053751",
+      "name_lat": "ВЛАТЕРФОЛЬГ ФЕЙРИ ТЭЙЛ КВИН",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1894221859",
+      "name_lat": "ВЛАДЫЧИЦА МОЕЙ ДУШИ",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ / CHIHUAHUA LONG HAIRED",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "265100239",
+      "name_lat": "ВЛАДИЭЛИ ЗИППИ ТЕСЛА REPIN PICTURES KREMLIN",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1097709957",
+      "name_lat": "ВЛАДЫКА МОСКОВИИГАРМОНИЯ ЧУВСТВ",
+      "name_ru": "",
+      "breed": "ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1557021546",
+      "name_lat": "ВЛАТЕРФОЛЬГ ВИВЬЕН-ВЕСТВУД",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1960980467",
+      "name_lat": "ВЛАСТЬ ОГНЯ ПАЙ ТЭС БЕБИ",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1286018650",
+      "name_lat": "ВЛАТЕРФОЛЬГЛАС РОКА ДЕ ЛА СЬЕРРА",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "103723933",
+      "name_lat": "ВЛАРИС ЛАЙН АДОЛЬФ",
+      "name_ru": "",
+      "breed": "СЕРЕБРОМ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1417398192",
+      "name_lat": "ВЛАДИЛАР ЭЛИТА ЯГОДКА МАЛИНКА",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЁРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1252456935",
+      "name_lat": "ВЛАДЕЮЩИЙ МИРОМ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "255242551",
+      "name_lat": "ВЛАТЕРФОЛЬГ САЛЬВАДОР ДАЛИ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "2470256",
+      "name_lat": "ВЛАСТЕЛИН ДУШИ УНТЕР",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "714333382",
+      "name_lat": "ВЛАДИЛАР ЭЛИТА ВАСАБИ",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1327932182",
+      "name_lat": "ВЛАДЫКА ГОР ШЕМРОК ЧАРМ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1151716762",
+      "name_lat": "ВЛАТЕРФОЛЬ ШИНОН РОЭЭ ЛА КРУА",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1186546395",
+      "name_lat": "ВЛАТЕРФОЛЬГ РИЧИ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1828738478",
+      "name_lat": "ВЛАСТЕЛИН ДУШИ УРГАНТ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1411521092",
+      "name_lat": "ВЛАСТЬ ОГНЯ ФАЙЕР ФОКС",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "504769620",
+      "name_lat": "ВЛАСТЕЛИНА ВСЕЛЕННОЙ",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1947545231",
+      "name_lat": "ВЛАТЕРФОЛЬГ КАРТ БЛАНШ (к/х)",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "52969516",
+      "name_lat": "ВЛАДБОКС ВИВАТ ОЛИВИЯ ОЛЛИН",
+      "name_ru": "",
+      "breed": "БОКСЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1153138776",
+      "name_lat": "ВЛАТЕРФОЛЬГ КАРТ БЛАНШ ( )",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "232385592",
+      "name_lat": "ВЛАТЕРФОЛЬГ ЛИКА ХЕППИ СТАР",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1876272107",
+      "name_lat": "ВЛАТЕРФОЛЬГ ФИЕРА ДИ ПРИМЬЕРА",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "142460520",
+      "name_lat": "ВЛАСТЕЛИН УДАЧИ БАШАР",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1543422998",
+      "name_lat": "ВЛАДХИНС ФИНВЕСТ БРИГТ СТАР",
+      "name_ru": "",
+      "breed": "АФФЕНПИНЧЕР БЕРНСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "281266370",
+      "name_lat": "ВЛАДИ'C МАНОР ЕВА",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1095493786",
+      "name_lat": "ВЛАТЕРФОЛЬГ БЕЛЛА ВИТА",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1461715142",
+      "name_lat": "ВЛАДИ'С МАНОР ЕВГРАФ",
+      "name_ru": "",
+      "breed": "ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "853902500",
+      "name_lat": "ВЛАСТОР'С ВАЛДАЙ",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "624985305",
+      "name_lat": "ВЛАСТИМИРА ПОСАДСКАЯ СТРАЖА",
+      "name_ru": "",
+      "breed": "СТОРОЖЕВАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1710853887",
+      "name_lat": "ВЛАТЕРФОЛЬГ РАФАЭЛА 2",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1806390348",
+      "name_lat": "ВЛАСТИНИЯ БЕСТ ЛИТТЛ ГЕРЛ",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "984357725",
+      "name_lat": "ВЛАСТИЛИНА СЕЛЕНА",
+      "name_ru": "",
+      "breed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "51059124",
+      "name_lat": "ВЛАТЕРФОЛЬГЛАВ ОФ ЛАЙФ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "693892080",
+      "name_lat": "ВЛАД ДАЙМОНД САНТА КРИСТИНА",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "370431575",
+      "name_lat": "ВЛАСТОР'С ЖАРГАЛ",
+      "name_ru": "",
+      "breed": "AMERICAN STAFFORDSHIRE",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "94668516",
+      "name_lat": "ВЛАДИЛАР ЭЛИТА КАРАМЕЛЬНАЯ ЛЕДИ (К- Ш)",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1369794816",
+      "name_lat": "ВЛАД ДАЙМОН Д ОКЕАНИЯ",
+      "name_ru": "",
+      "breed": "LABRADO",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "197624756",
+      "name_lat": "ВЛАД ДАЙМОН Д КРИСТАЛ Л",
+      "name_ru": "",
+      "breed": "LABRADO",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "17768980",
+      "name_lat": "ВЛСАТЕЛИН УДАЧИ ЕЛИСЕЙ",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "81267572",
+      "name_lat": "ВЛАСТЕЛИНА Д-Ш",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1189440015",
+      "name_lat": "ВЛАСТА ВАЙТ СТАЛ ТОМОС",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "882532124",
+      "name_lat": "ВЛАТЕРФ ОЛЬГ ДИНАСТИ Я МАРИЯ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "764689085",
+      "name_lat": "ВЛАСТЕЛИН ДУШИ НЕВАДА",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "869042479",
+      "name_lat": "Властелин Ветров",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "578491920",
+      "name_lat": "ВЛАСТЕЛИН ДУШИ ШАНТАЛЬ",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1759877007",
+      "name_lat": "Властор'С Жанкак",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1048477000",
+      "name_lat": "ВЛАСТЕЛИН УДАЧИ ЖЕ ОЗЕ",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ сплошной окрас",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "541845503",
+      "name_lat": "ВЛАСТЕЛИН КОЛЕЦ ИЗ СОЗВЕЗДИЯ БЛИЗНЕЦОВ",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1054705564",
+      "name_lat": "ВЛАД ДАЙМОНД НОВЕЛЛА",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1776702812",
+      "name_lat": "ВЛАТЕРФОЛЬГ ФЕХУ ФЕЕРИЯ ФОРТУНА ( )",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

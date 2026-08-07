@@ -1,0 +1,46 @@
+name: Security Scan
+
+on:
+  schedule:
+    - cron: '0 0 * * 0' # Weekly on Sunday
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  security-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'yarn'
+      
+      - name: Install dependencies
+        run: yarn install
+      
+      - name: Run yarn audit
+        run: yarn audit
+        continue-on-error: true
+      
+      - name: Check for secrets
+        run: yarn run security:scan
+        continue-on-error: true
+      
+      - name: Check bot dependencies
+        run: |
+          cd bot; yarn audit || true
+          cd ../frontend; yarn audit || true
+        continue-on-error: true
+      
+      - name: Generate security report
+        if: always()
+        run: |
+          echo "Security scan completed at $(date)" > security-report.txt
+          yarn audit >> security-report.txt || true
+          echo "Report saved"

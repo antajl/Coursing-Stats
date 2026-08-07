@@ -1,0 +1,111 @@
+{
+  "dogs": [
+    {
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "judge": "ЗУБКОВА ЛЮДМИЛА",
+      "catalog_number": 1,
+      "dog_name": "ЛАЙТ ФЕНТЕЗИ ЗУБЕН ЭЛЬ ШЕМАЛИ",
+      "birth_date": "15.06.2024",
+      "pedigree": "7049567",
+      "class": "ПРМ",
+      "grade": "ОТЛ",
+      "title": "ЛПП, CAC",
+      "bob": true,
+      "show_date": "10.01.2026"
+    },
+    {
+      "breed": "ПЕМБРОК",
+      "judge": "РУБИНШТЕЙН ТАТЬЯНА ГЕННАДЬЕВНА",
+      "catalog_number": 2,
+      "dog_name": "AIRYSHIRE NOBLE SOUL",
+      "birth_date": "22.03.2025",
+      "pedigree": "7294982",
+      "class": "ЮН",
+      "grade": "ОТЛ",
+      "title": "JCAC",
+      "bob": false,
+      "show_date": "10.01.2026"
+    },
+    {
+      "breed": "ПЕМБРОК",
+      "judge": "РУБИНШТЕЙН ТАТЬЯНА ГЕННАДЬЕВНА",
+      "catalog_number": 3,
+      "dog_name": "MISTYCOR YUVENTA SHINING BEAUTY",
+      "birth_date": "25.01.2025",
+      "pedigree": "7229746",
+      "class": "ЮН",
+      "grade": "ОТЛ",
+      "title": "",
+      "bob": false,
+      "show_date": "10.01.2026"
+    },
+    {
+      "breed": "ПЕМБРОК",
+      "judge": "РУБИНШТЕЙН ТАТЬЯНА ГЕННАДЬЕВНА",
+      "catalog_number": 4,
+      "dog_name": "NIAN AMORE AELITA",
+      "birth_date": "05.04.2025",
+      "pedigree": "7299806",
+      "class": "ЮН",
+      "grade": "ОТЛ",
+      "title": "ЛПП, JCAC",
+      "bob": true,
+      "show_date": "10.01.2026"
+    },
+    {
+      "breed": "ОПЕЙСКАЯ ОВЧАРКА",
+      "judge": "РУБИНШТЕЙН ТАТЬЯНА ГЕННАДЬЕВНА",
+      "catalog_number": 5,
+      "dog_name": "ЛЕГЕНДА СЕДОГО УРАЛА ЗВЕРЬ",
+      "birth_date": "10.03.2024",
+      "pedigree": "6947995",
+      "class": "ПРМ",
+      "grade": "ОТЛ",
+      "title": "ЛПП, CAC",
+      "bob": true,
+      "show_date": "10.01.2026"
+    },
+    {
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "judge": "РУБИНШТЕЙН ТАТЬЯНА ГЕННАДЬЕВНА",
+      "catalog_number": 6,
+      "dog_name": "MARIS DE FLOR KAYA",
+      "birth_date": "23.02.2025",
+      "pedigree": "6948805",
+      "class": "ЮН",
+      "grade": "ОТЛ",
+      "title": "ЛПП, JCAC",
+      "bob": true,
+      "show_date": "10.01.2026"
+    },
+    {
+      "breed": "ДЛИННОШЕРС",
+      "judge": "РУБИНШТЕЙН ТАТЬЯНА ГЕННАДЬЕВНА",
+      "catalog_number": 7,
+      "dog_name": "MARIS DE FLOR ILIANA",
+      "birth_date": "14.09.2024",
+      "pedigree": "7075429",
+      "class": "ПРМ",
+      "grade": "ОТЛ",
+      "title": "ЛПП, CAC",
+      "bob": true,
+      "show_date": "10.01.2026"
+    },
+    {
+      "breed": "ШЕЛТИ",
+      "judge": "РУБИНШТЕЙН ТАТЬЯНА ГЕННАДЬЕВНА",
+      "catalog_number": 8,
+      "dog_name": "BIJUTI EIBL EFRON",
+      "birth_date": "22.02.2024",
+      "pedigree": "6947615",
+      "class": "ПРМ",
+      "grade": "ОТЛ",
+      "title": "ЛПП, CAC",
+      "bob": true,
+      "show_date": "10.01.2026"
+    }
+  ],
+  "page_count": 2,
+  "raw_token_count": 222,
+  "has_main_ring_sheet": false
+}

@@ -1,0 +1,63 @@
+{
+  "schema": "coursing-stats/show-home-top-v1",
+  "year": "2019",
+  "dogs": [
+    {
+      "id": "372966918",
+      "name_lat": "ALDIA BILLI BOM",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ВАНДЕЙСКИЙ БАССЕТ ГРИФФОН",
+      "sex": "",
+      "total_shows": 12,
+      "best_award": "BOB",
+      "rank_score": 15730,
+      "titles": {
+        "BOB": 5,
+        "CACIB": 8,
+        "CAC": 12,
+        "CHRKF": 8,
+        "P_MOSCOW": 1
+      },
+      "competition_dog_id": null
+    },
+    {
+      "id": "89088821",
+      "name_lat": "NORDEN LIHT LISA",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
+      "sex": "",
+      "total_shows": 17,
+      "best_award": "BOB",
+      "rank_score": 14770,
+      "titles": {
+        "BOB": 3,
+        "CACIB": 12,
+        "R_CACIB": 3,
+        "CAC": 13,
+        "CHRKF": 12,
+        "KCHK": 2,
+        "R_CAC": 2
+      },
+      "competition_dog_id": null
+    },
+    {
+      "id": "412024049",
+      "name_lat": "HIGH WINDS LITTLE BUDDY",
+      "name_ru": "",
+      "breed": "ВОДНАЯ СОБАКА /",
+      "sex": "",
+      "total_shows": 36,
+      "best_award": "BOB",
+      "rank_score": 14570,
+      "titles": {
+        "BOB": 4,
+        "CACIB": 5,
+        "CAC": 33,
+        "CHRKF": 12,
+        "P_MOSCOW": 1
+      },
+      "competition_dog_id": null
+    }
+  ],
+  "updated_at": "2026-08-04"
+}

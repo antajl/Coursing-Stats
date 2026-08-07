@@ -1,0 +1,83 @@
+name: Deploy to Cloudflare
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'frontend/**'
+      - 'backend/**'
+      - 'data/**'
+      - 'scripts/**'
+      - 'public/**'
+      - '.github/workflows/deploy-frontend.yml'
+      - 'package.json'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      deployments: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: yarn
+      
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Install root dependencies
+        run: yarn install
+
+      - name: Build and package data for Pages
+        run: yarn run build-all-data
+        env:
+          NODE_OPTIONS: --max-old-space-size=4096
+
+      - name: Verify static indexes are non-empty
+        run: npx vitest run backend/tests/static-indexes.test.ts backend/tests/publish-gates.test.ts
+
+      - name: Verify parser fixtures
+        run: npx vitest run backend/tests/parser-fixtures.test.ts
+
+      - name: Agent Verification
+        run: |
+          echo "Running agent verification checks..."
+          yarn run security:scan
+          yarn run data:quick
+
+      - name: Install frontend dependencies
+        working-directory: ./frontend
+        run: yarn install
+
+      - name: Build frontend
+        working-directory: ./frontend
+        env:
+          VITE_TURSO_URL: ${{ secrets.VITE_TURSO_URL }}
+          VITE_TURSO_AUTH_TOKEN: ${{ secrets.VITE_TURSO_AUTH_TOKEN }}
+        run: yarn run build
+
+      - name: Prerender SEO HTML
+        run: yarn run prerender-seo
+
+      - name: Deploy Frontend to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy frontend/dist --project-name=coursingstats --branch=main --commit-dirty=true
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
+      # Worker больше не нужен для публичного сайта — фронтенд читает
+      # /data/v1/*.json прямо с Pages CDN (см. docs/03-DATA.md). Админка
+      # работает только локально через `yarn run dev` (local-dev-server :8787).
+      # Worker deploy в CI намеренно отключён.
