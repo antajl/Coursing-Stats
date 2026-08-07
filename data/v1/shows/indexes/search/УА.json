@@ -1,0 +1,916 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "УА",
+  "count": 101,
+  "dogs": [
+    {
+      "id": "1853722413",
+      "name_lat": "УАЙЛД ПАРАДАЙЗ",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1937975658",
+      "name_lat": "УАЙТ СИБОД ГИФТ ФО Ю",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
+      "id": "502723628",
+      "name_lat": "УАЙТ СИБОД ГЭМБЛЕР",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "754916056",
+      "name_lat": "УАНДЭ СТОРИ ТЕОДОР",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1870888373",
+      "name_lat": "УАЙТ СИБОД ХЭВ Э НАЙС ДЭЙ",
+      "name_ru": "",
+      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "160775089",
+      "name_lat": "УАЙТ СНОУ КВИН ЛЕГЕНДА ЭЛЬТИГЕНА",
+      "name_ru": "",
+      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "16403411",
+      "name_lat": "УАЙТ СИБОД ОНЛИ Ю МАРСОЛАЙН КАПРИЗ",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 25,
+      "competition_dog_id": null
+    },
+    {
+      "id": "560373884",
+      "name_lat": "Уайлд Флауэр",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1426828129",
+      "name_lat": "УАЙТ КАЙ ФОМ МАИР ХОФ",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "823102540",
+      "name_lat": "УАНДЕР ОЛИВИЯ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "428218582",
+      "name_lat": "УАНДЭ СТОРИ БЕЛЛА ФРОМ ЗЕ ВАЙТ СИА",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "236178207",
+      "name_lat": "Уайт Дейзи Мэй от Невского Дуэта",
+      "name_ru": "",
+      "breed": "континентальный той спаниель - папийон",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "154794249",
+      "name_lat": "УАЙТ БРЮЛИК ШИК",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1701843492",
+      "name_lat": "УАЙЛД НИК ЯНТАРНЫЙ ЛИС",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДР.ОКРАСЫ",
+      "breed_en": "GERMAN SPITZ MINIATURE ORANGE, GREY & OTHER COLOR",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1766359237",
+      "name_lat": "УАЙТ ДАНДЕЛИОН ДАЛИЯ",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "",
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1620471784",
+      "name_lat": "УАН ЭНД ОНЛИ ИЗ ДОМА ЛОПАТСКИХ",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "275272109",
+      "name_lat": "УАЙТ МЯТЕЖНЫЙ ДУХ",
+      "name_ru": "",
+      "breed": "ПАРСОН РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1801007351",
+      "name_lat": "УАЙТ",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ ПОЙНТЕР",
+      "breed_en": "ENGLISH POINTER",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "604605751",
+      "name_lat": "УАЙТ СИБОД КСЕНТРИКС",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1916306797",
+      "name_lat": "УАЙТ ДАНДЕЛИОН ДАЛИЯ/WHITE DANDELION DALIYA",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "686864519",
+      "name_lat": "УАЙТ ДАНДЕЛИОН ВИКТОР",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1876096721",
+      "name_lat": "УАНДЭ СТОРИ АРГЕНТИНА ЯМАЙКА",
+      "name_ru": "",
+      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР) /",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "491029039",
+      "name_lat": "УАЛАНТА БЛЕСК ПОВОЛЖЬЯ",
+      "name_ru": "",
+      "breed": "МАЛАМУТ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "130906826",
+      "name_lat": "УАЙТ ФЭНГ",
+      "name_ru": "",
+      "breed": "GERMAN SPITZ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1372039783",
+      "name_lat": "УАЙД ЯНТАРНЫЙ ЛИС",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "938510235",
+      "name_lat": "УАЙТ ДЕЗИ МЕЙ ОТ НЕВСКОГО ДУЭТА",
+      "name_ru": "",
+      "breed": "Папийон",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1035491744",
+      "name_lat": "УАЙТ ГОЛДЕН АРНИ",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1541270057",
+      "name_lat": "УАЙТ ДАНДЕЛИОН ИВО",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1999049192",
+      "name_lat": "УАЙТ БЛЭК ТОР",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1229982937",
+      "name_lat": "УАЙТ СВЕТ ГАЛАКТИКИ",
+      "name_ru": "",
+      "breed": "ЧАУ ЧАУ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "202828649",
+      "name_lat": "УАЛАНТА ЖОРДАНА АРМАНИ",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ КОРОТКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "911277194",
+      "name_lat": "УАЙТ ЛАЙН БОМБАРДЬЕ",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "CHIHUAHUA SMOOTH-HAIRED",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1381140337",
+      "name_lat": "УАЙДЕР РУБИНОВОГО ЦАРСТВА",
+      "name_ru": "",
+      "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "802745526",
+      "name_lat": "УАЙТ СИБОД НОКИА",
+      "name_ru": "",
+      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1306909294",
+      "name_lat": "УАНЛАВЭВЕР АНДЖЕЛИНА",
+      "name_ru": "",
+      "breed": "лабрадор ретривер",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1137479779",
+      "name_lat": "УАЙТ КВИН ОТ СНЕЖНОГО ПРИНЦА",
+      "name_ru": "",
+      "breed": "САМОЕДСКАЯ СОБАКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1947633912",
+      "name_lat": "УАН ИН МИЛЬОН МАЙБАХ",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "591746733",
+      "name_lat": "УАНДЭ СТОРИ АЛТАЙСКАЯ ЖРИЦА",
+      "name_ru": "",
+      "breed": "ПАРСОН ТЕРЬЕР) / SCOTTISH",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1596872054",
+      "name_lat": "УАЙТ СНОУ КВИН ЛЕГЕНДА ЭЛЬТИГЕ НА",
+      "name_ru": "",
+      "breed": "ДЛИННО",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1921284824",
+      "name_lat": "УАМИТ МАСКАТ ЛОЛИПОП",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1575511796",
+      "name_lat": "УАЛАНА МИРА ТЕЛЬГАР",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1593921249",
+      "name_lat": "УАФИНА ОТ ЗОЛОТОГО ПРИБОЯ",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1866390790",
+      "name_lat": "УАЙТ СИБОД ХЭНДРИКС ДЖИН",
+      "name_ru": "",
+      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "452926223",
+      "name_lat": "УАЛАНТА МИРА",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "234797337",
+      "name_lat": "УАЛАНТА АРМАНИ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "549783753",
+      "name_lat": "Уакагарасу Такатори",
+      "name_ru": "",
+      "breed": "Акита",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1218889554",
+      "name_lat": "УАЙТ ЛЕОНАРДО",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1075340899",
+      "name_lat": "УАЙТ ЭНДЖЕЛ",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1367100842",
+      "name_lat": "УАЙЛИЯ ОБОЛЬСТИТЕЛЬНИЦА",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "247965499",
+      "name_lat": "УАЙТ РУССИАН ПЛС С ЛИПЕЦКИХ ОЗЁР",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1868015069",
+      "name_lat": "УАЙТ ЭНЖЕЛ",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "894079449",
+      "name_lat": "УАЛАНТА АРМАНИ ФОМ ФЕСТБУРГ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "697298610",
+      "name_lat": "УАЙНИ ДАНА",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "598688209",
+      "name_lat": "УАЙТ СИБОД ЗЕЛАНДИЯ",
+      "name_ru": "",
+      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1373117785",
+      "name_lat": "УАСИМА ФРОМ ХАУС НАТТИМ",
+      "name_ru": "",
+      "breed": "РОТВЕЙЛЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1779151433",
+      "name_lat": "УАЛЯ ГРАНД ХЭЛЛ",
+      "name_ru": "",
+      "breed": "ДЛИННОШЕРС",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "357331907",
+      "name_lat": "УАЙТ СИБОД ГИТАНА",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1445316173",
+      "name_lat": "УАНДЕФУЛ ГРЕЙС КВИН",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "303360088",
+      "name_lat": "УАН ЛАВ УЛЬЯНА",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "541804229",
+      "name_lat": "УАЙДЛИ МИТИКО КВЕНТИН ДЖИРО",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1709191635",
+      "name_lat": "УАДЖИТ",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1830179464",
+      "name_lat": "УАНДЕФУЛ МИРИКЛ ГЭЛАКСИ СТАР",
+      "name_ru": "",
+      "breed": "CHIHUAHUA SMOOTH",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1761289284",
+      "name_lat": "УАЙТ БЁРН",
+      "name_ru": "",
+      "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1677754027",
+      "name_lat": "УАЙТТ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "30122189",
+      "name_lat": "УАЙТ ЖИВАНШИ БОНАСЬЕ",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "579556037",
+      "name_lat": "УАЙТ САН ОФ ВЕ ДИЗЕТ АНАБЕЛЛЬ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "8377551",
+      "name_lat": "УАЙТ ЭЛВИН БРУКС СТЮАРТ ЛИТТЛ",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "164644407",
+      "name_lat": "УАЙЛИ С НИЖНЕГО ЛУГА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "236471761",
+      "name_lat": "УАЙТ СИБОД ИНТЕРНЕШНЛ ЛАВ",
+      "name_ru": "",
+      "breed": "КОЛЛИ КОРОТКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "873124083",
+      "name_lat": "УАЙТ СИБОД АРКТИК ВОЯДЖЕР",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "108754173",
+      "name_lat": "УАЙТ ЭНДЖЕЛ",
+      "name_ru": "",
+      "breed": "CHIHUAHUA SMOOTH",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "185473344",
+      "name_lat": "УАЙТ ЭНДЖЕЛ",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "5803888",
+      "name_lat": "УАЙТ ВАЙТ",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ / MALTESE",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1856359737",
+      "name_lat": "УАРДА",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1980074966",
+      "name_lat": "УАЙТ ФЭНГ",
+      "name_ru": "",
+      "breed": "И ДРУГИЕ ОКРАСЫ /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1401131136",
+      "name_lat": "УАДЖИТ",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР / YORKSHIRE",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1978122064",
+      "name_lat": "УАДЖИТ",
+      "name_ru": "",
+      "breed": "YORKSHIRE",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1543548421",
+      "name_lat": "УАЙТА",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "957034372",
+      "name_lat": "УАЙДЛИ МИТИКЕ КВЕНТИН ДЖИРО",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "186017625",
+      "name_lat": "УАЙТ СИБОД ФРОМ СИБОД УИЗ ЛАВ",
+      "name_ru": "",
+      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1475776281",
+      "name_lat": "УАЙТ ЛАЙН ЛАМБОРДЖИНИ",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1510660569",
+      "name_lat": "УАЙТ ЭНД БЛЭК СОЛОМОН",
+      "name_ru": "",
+      "breed": "МАЛАМУТ / ALASKAN",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1112619569",
+      "name_lat": "УАЙТ СИБОД ФАЙЕРБЕД",
+      "name_ru": "",
+      "breed": "колли длинношерстный",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1921652835",
+      "name_lat": "УАЙТА ГЭЛАКСИ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "841653992",
+      "name_lat": "УАДАД ИЗ ГОРНОГО",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "976929485",
+      "name_lat": "Уайт Дарси Бриллианс",
+      "name_ru": "",
+      "breed": "Немецкий Шпиц Малый оранжевый",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "229339126",
+      "name_lat": "УАЙТ РУССИА ПЛЮС С ЛИПЕЦКИХ ОЗЕР",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА Д/Ш",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "481291447",
+      "name_lat": "УАЙТ РУССИЯ ПЛЮС С ЛИПЕЦКИХ ОЗЕР",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА Д/Ш",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "651426082",
+      "name_lat": "УАЙТЛИ БЛЭК ПЕРЛ",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1817741006",
+      "name_lat": "УАЛИНА ИЗ ДРУЖНОЙ СЕМЕЙКИ",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "584623879",
+      "name_lat": "УАЙТ ЭНДЖЕЛ БОССАР",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "188024954",
+      "name_lat": "УАЙТ КЕРРОЛИН АННЕМАРИ",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) / GERMAN SPITZ ZWERGSPITZ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "43573237",
+      "name_lat": "УАЙЛД СТАР ХЁРТ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1778667376",
+      "name_lat": "УАЙЛИ КРИСТАЛ ВИКТОРИ",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "758247884",
+      "name_lat": "УАЙТ СИБОД КЬЮТ ЭНД СВИТ",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "387011306",
+      "name_lat": "УАЙТ МИЛЛИОН",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL ASIA",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "591166481",
+      "name_lat": "УАДЖИТ ЗВЕЗДОЧКА",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "238651172",
+      "name_lat": "УАЙЛИ ЮТТА СВИТ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1749622593",
+      "name_lat": "УАЛАНТА ЛУНА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1590141414",
+      "name_lat": "УАЙТ МУИЧИРО ГОЛД",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1272233033",
+      "name_lat": "УАЙЛД БИ ДЖУН",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "MB",
+  "count": 2,
+  "dogs": [
+    {
+      "id": "89961675",
+      "name_lat": "MBAPPE O DA QUINTA DAS OLARIAS",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "LABRADOR RETRIEVER",
+      "total_shows": 26,
+      "competition_dog_id": null
+    },
+    {
+      "id": "809759860",
+      "name_lat": "MBARS",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    }
+  ]
+}

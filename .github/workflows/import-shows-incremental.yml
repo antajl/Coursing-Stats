@@ -1,0 +1,140 @@
+name: Import Shows to Turso (Incremental)
+
+on:
+  workflow_dispatch:
+    inputs:
+      commit:
+        description: 'Sources commit hash (leave empty for latest)'
+        required: false
+        type: string
+  schedule:
+    # Run daily at 10:00 UTC (13:00 MSK)
+    - cron: '0 10 * * *'
+
+env:
+  TURSO_URL: ${{ secrets.TURSO_URL }}
+  TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
+  SHOWS_SOURCES_DIR: data/local/shows
+  SHOWS_PARSER_VERSION: turso-v1
+  SOURCES_REPO_TOKEN: ${{ secrets.SOURCES_REPO_TOKEN }}
+
+jobs:
+  import-shows:
+    name: Import shows to Turso
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Checkout sources repo
+        uses: actions/checkout@v4
+        with:
+          repository: antajl/coursing-stats-sources
+          path: data/local/shows
+          token: ${{ env.SOURCES_REPO_TOKEN }}
+          fetch-depth: 1
+
+      - name: Get sources commit
+        id: get-commit
+        run: |
+          if [ -n "${{ inputs.commit }}" ]; then
+            echo "commit=${{ inputs.commit }}" >> $GITHUB_OUTPUT
+          else
+            cd data/local/shows
+            COMMIT=$(git rev-parse HEAD)
+            echo "commit=$COMMIT" >> $GITHUB_OUTPUT
+          fi
+          echo "Sources commit: ${{ steps.get-commit.outputs.commit }}"
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Import shows to Turso (incremental)
+        env:
+          SOURCES_COMMIT: ${{ steps.get-commit.outputs.commit }}
+        run: yarn run import-shows-to-turso
+
+      - name: Rebuild show indexes
+        run: yarn run build-show-indexes
+
+      - name: Verify dog links
+        run: npx tsx backend/scripts/repair/verify-dog-links.ts
+
+      - name: Create PR with changes
+        if: success()
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Check for changes
+          if git diff --quiet; then
+            echo "No changes detected - skipping PR creation"
+            exit 0
+          fi
+          
+          # Create branch
+          BRANCH="shows-update-$(date +%Y%m%d-%H%M%S)"
+          git checkout -b $BRANCH
+          
+          # Commit changes
+          git add data/v1/shows/
+          git commit -m "Update show indexes from Turso (commit: ${{ steps.get-commit.outputs.commit }})"
+          
+          # Push branch
+          git push origin $BRANCH
+          
+          # Create PR
+          gh pr create \
+            --title "Update show indexes from Turso" \
+            --body "Automated update of show indexes from Turso import.
+
+          Sources commit: ${{ steps.get-commit.outputs.commit }}
+          Workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+          This PR updates:
+          - data/v1/shows/indexes/ (exhibitions, dogs, rankings, search)
+          - data/v1/shows/exhibitions/ (if any new exhibitions added)
+
+          Review the changes before merging." \
+            --base main
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  build-frontend:
+    name: Build frontend (for PR)
+    needs: import-shows
+    if: success()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build frontend
+        run: |
+          cd frontend
+          yarn install
+          yarn run build
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: frontend-dist
+          path: frontend/dist
+          retention-days: 7

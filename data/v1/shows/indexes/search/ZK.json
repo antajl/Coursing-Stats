@@ -1,0 +1,34 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "ZK",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "1243139144",
+      "name_lat": "ZKARABI'S PANTERA",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
+      "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1890609961",
+      "name_lat": "ZKARABI'S JACK SPARROW",
+      "name_ru": "",
+      "breed": "ПАПИЙОН /",
+      "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1228299521",
+      "name_lat": "ZKARABI'S PENNYWISE",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
+      "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
+      "total_shows": 2,
+      "competition_dog_id": null
+    }
+  ]
+}

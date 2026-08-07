@@ -1,0 +1,60 @@
+{
+  "schema": "coursing-stats/show-home-top-v1",
+  "year": "2020",
+  "dogs": [
+    {
+      "id": "124237413",
+      "name_lat": "REEDLY ROAD QUITE RIGHT",
+      "name_ru": "",
+      "breed": "ФАРАОНОВА СОБАКА /",
+      "sex": "",
+      "total_shows": 88,
+      "best_award": "CACIB",
+      "rank_score": 15590,
+      "titles": {
+        "CACIB": 11,
+        "CAC": 84,
+        "CHRKF": 27,
+        "KCHK": 2
+      },
+      "competition_dog_id": null
+    },
+    {
+      "id": "517475378",
+      "name_lat": "ZLAT O'HARRY ALTAIR",
+      "name_ru": "",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
+      "sex": "",
+      "total_shows": 73,
+      "best_award": "CACIB",
+      "rank_score": 14285,
+      "titles": {
+        "CACIB": 12,
+        "CAC": 66,
+        "CHRKF": 25,
+        "KCHK": 3,
+        "R_CAC": 2
+      },
+      "competition_dog_id": null
+    },
+    {
+      "id": "679843999",
+      "name_lat": "AQUATORIYA KELVIN ZHENERAL",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД /",
+      "sex": "",
+      "total_shows": 34,
+      "best_award": "CACIB",
+      "rank_score": 13960,
+      "titles": {
+        "CACIB": 19,
+        "R_CACIB": 1,
+        "CAC": 28,
+        "CHRKF": 22,
+        "KCHK": 4
+      },
+      "competition_dog_id": null
+    }
+  ],
+  "updated_at": "2026-08-04"
+}

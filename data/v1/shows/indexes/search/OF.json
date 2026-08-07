@@ -1,0 +1,934 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "OF",
+  "count": 103,
+  "dogs": [
+    {
+      "id": "498272580",
+      "name_lat": "OF LAKI LANDS BIG BADA BOOM",
+      "name_ru": "",
+      "breed": "ЛЕЙКЛЕНД ТЕРЬЕР",
+      "breed_en": "LAKELAND TERRIER",
+      "total_shows": 36,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1950535456",
+      "name_lat": "OFELIYA",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1349710389",
+      "name_lat": "OFELIYA OGNENNAYA STRAST'",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "27210810",
+      "name_lat": "OFELSEGE LORD TIGER'S EYE",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "480088057",
+      "name_lat": "OFRA SIYAYUSHCHAYA LAN KAVKAZA",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "709539521",
+      "name_lat": "OFELIYA POBEDITELNITSA MIRA",
+      "name_ru": "",
+      "breed": "РУССКАЯ САЛОННАЯ СОБАКА (ОСТАЛЬНЫЕ ОКРАСЫ)",
+      "breed_en": "RUSSKAYA SALONNAYA SOBAKA (RUSSIAN SALON DOG) OTHER COLOUR",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "235896637",
+      "name_lat": "OFELIYA BLEK STAR",
+      "name_ru": "",
+      "breed": "ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1555629930",
+      "name_lat": "OF FORTIN DOMINICA SUNSHINE",
+      "name_ru": "",
+      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER KING",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1871846158",
+      "name_lat": "OF THE BEST",
+      "name_ru": "",
+      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1008372146",
+      "name_lat": "OFFICER IZ BELOY BRIGADY",
+      "name_ru": "",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1914696468",
+      "name_lat": "OFELIA FROM FANTASY FLAME",
+      "name_ru": "",
+      "breed": "КАРДИГАН",
+      "breed_en": "",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "485842532",
+      "name_lat": "OFELIA BLENHEIM HILL HOUSE",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 33,
+      "competition_dog_id": null
+    },
+    {
+      "id": "570621720",
+      "name_lat": "OFFBARK PRINTS",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "587188320",
+      "name_lat": "OFFBARK OLFARD",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1093822660",
+      "name_lat": "OFELIYA",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ / MALTESE",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1996154205",
+      "name_lat": "OF SNOW WIND V SOLNECHNOM GORODE",
+      "name_ru": "",
+      "breed": "САМОЕД",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1957520800",
+      "name_lat": "OFFBARK USLADA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "971137888",
+      "name_lat": "OFFBARK FAVORITE",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "912613341",
+      "name_lat": "OF HUSSAR",
+      "name_ru": "",
+      "breed": "ВЕСТ ХАЙЛЕНД УАЙТ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "750",
+      "name_lat": "OFELSEGE LADY RUBELLIT",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": 750
+    },
+    {
+      "id": "1415869345",
+      "name_lat": "OFELIYA NEZHNYY TSVETOK",
+      "name_ru": "",
+      "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "269431118",
+      "name_lat": "OFELIYA",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕПТИ БРАБАНСОН",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "561484879",
+      "name_lat": "OF DOMINOSCO",
+      "name_ru": "",
+      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "15170702",
+      "name_lat": "OFF BIT IZ DOMA ANGELINI",
+      "name_ru": "",
+      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "108775328",
+      "name_lat": "OFFBARK PRINTS (Изменено по решению ВК от 21.04.2025 В. 22)",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1119277108",
+      "name_lat": "OFELIYA PUKH S OSTROVA UTRENNEY ZARI",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "750418084",
+      "name_lat": "OFFBARK USPEKH",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 24,
+      "competition_dog_id": null
+    },
+    {
+      "id": "352210958",
+      "name_lat": "OFLOUR LEO VOM ZARENDORF",
+      "name_ru": "",
+      "breed": "ЛЕОНБЕРГЕР",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1597301945",
+      "name_lat": "OF STONEGARTH AMAZING LAD",
+      "name_ru": "",
+      "breed": "ВЕСТ ХАЙЛЕНД ВАЙТ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1960038623",
+      "name_lat": "OFF-SHORE VIVA VITA",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1398731256",
+      "name_lat": "OFELIYA S OSTROVA UTRENNEY ZARI",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1976533876",
+      "name_lat": "OFELIA FROM HOUSE OF BLACKS",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1419233358",
+      "name_lat": "OFELIYA YARA BRAJN IZ BEREZOVOGO LOGA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "19035108",
+      "name_lat": "OFELIA MARMAX ALL WE HEED IS LOVE",
+      "name_ru": "",
+      "breed": "И ДРУГИЕ ОКРАСЫ /",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "780869128",
+      "name_lat": "OFELIA",
+      "name_ru": "",
+      "breed": "ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "913121372",
+      "name_lat": "OFELIA GRACE IZ MAZHORNOGO LADA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "193234032",
+      "name_lat": "OFELIYA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "283528041",
+      "name_lat": "OFELIYA",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "222151827",
+      "name_lat": "OFELIYA",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "427014856",
+      "name_lat": "OFFICER KEEP ON MOVING",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "637393062",
+      "name_lat": "OF THE MAY HEART SHER NORFOLK LORD NOCHI",
+      "name_ru": "",
+      "breed": "Эрдель Терьер",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "546711758",
+      "name_lat": "OFFSPRING OF",
+      "name_ru": "",
+      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "275355668",
+      "name_lat": "OFELIA FAIRY BUTTERFLY EILIN",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "187704528",
+      "name_lat": "OF FORTIN",
+      "name_ru": "",
+      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "97468315",
+      "name_lat": "OF AIR",
+      "name_ru": "",
+      "breed": "ШАР ПЕЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "614683146",
+      "name_lat": "OF DESIRES",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "724003766",
+      "name_lat": "OF SILVER WAY KARJALAINE",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ / SIBERIAN HUSKY",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "266609985",
+      "name_lat": "OF FREEDOM ЮСТИН ДЖОИНС",
+      "name_ru": "",
+      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "583380222",
+      "name_lat": "OFFBARK ONIKS",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "551892288",
+      "name_lat": "OFFBARK DOMINO",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1751056096",
+      "name_lat": "OFELIA KLAN SYCYLIJCZYKOW",
+      "name_ru": "",
+      "breed": "БАССЕТ ХАУНД",
+      "breed_en": "BASSET HOUND",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "225068220",
+      "name_lat": "OF RUSSIA WYOMAERS",
+      "name_ru": "",
+      "breed": "GRIFFON BELGE",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1554949123",
+      "name_lat": "OFELIA S SEVERNOGO URALA",
+      "name_ru": "",
+      "breed": "КАНГАЛЬСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1058940461",
+      "name_lat": "OFRA SITAYUSHCHAYA KAVKAZA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "864918520",
+      "name_lat": "OF SNOW BACHATA FAYNA VARTA",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "853358711",
+      "name_lat": "OF ALL VLASTA (Изменено по Решению ВК от 24.11.21 вопрос",
+      "name_ru": "",
+      "breed": "БОСТОН ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "896164123",
+      "name_lat": "OF MY SOUL GALIROMA VERGINIA",
+      "name_ru": "",
+      "breed": "ТАЙСКИЙ РИДЖБЕК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "30245823",
+      "name_lat": "OFELIYA FIORE CARLEONE",
+      "name_ru": "",
+      "breed": "КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1584032639",
+      "name_lat": "OFELIYA IZ DINASTIYI GALYANZH",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "MINIATURE PINSCHER",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1692901558",
+      "name_lat": "OFELIYA S SAMOGO CHJORNOGO MORJA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "104556092",
+      "name_lat": "OFELIYA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "103363834",
+      "name_lat": "OFELYA",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "355771628",
+      "name_lat": "OF FORTIN",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "239697132",
+      "name_lat": "OF FORTIN GLEAM",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "42924381",
+      "name_lat": "OF'RUS DE",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "273961365",
+      "name_lat": "OFELIYA IRISH CREAM",
+      "name_ru": "",
+      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1357714054",
+      "name_lat": "OFELIYA S SEREBRYANOY LAGUNY",
+      "name_ru": "",
+      "breed": "БИВЕР ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "346062069",
+      "name_lat": "OF DADDY ADAMANT S NEVSKIH",
+      "name_ru": "",
+      "breed": "Далматин",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1416350771",
+      "name_lat": "OFFSPRING",
+      "name_ru": "",
+      "breed": "ГЛАДКОШЕРС",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "834082441",
+      "name_lat": "OF OLYMPUS BLUE GALAXY",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "108699878",
+      "name_lat": "OF FORTIN ALAIN",
+      "name_ru": "",
+      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER KING",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "454744756",
+      "name_lat": "OF FORTIN GOLDEN",
+      "name_ru": "",
+      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER KING",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1359463534",
+      "name_lat": "of Stars Wakane",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1136106788",
+      "name_lat": "OF NETIV HA' AYIT",
+      "name_ru": "",
+      "breed": "КОЛЛИ КОРОТКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "691903798",
+      "name_lat": "OFELIA BENTLEY BENTAYGA",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1483449464",
+      "name_lat": "OFELIYA",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ / BULLDOG",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "635754816",
+      "name_lat": "OFELIIJA LEDI GREI",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МАЛЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1254930616",
+      "name_lat": "OFELIYA IZ DOMA KOLESNIK",
+      "name_ru": "",
+      "breed": "БУЛЬМАСТИФ",
+      "breed_en": "BULLMASTIFF",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1041745478",
+      "name_lat": "OFELIYA S ZOLOTOGO GRADA",
+      "name_ru": "",
+      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed_en": "RUSSKIY СHIORNY TERRIER (RUSSIAN BLACK TERRIER)",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "236859531",
+      "name_lat": "OF COURSE I AM RUSSTYLE’S DU VALLON DE L’ALBA",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1349643499",
+      "name_lat": "OFELIYA VANILNAYA FEERIYA",
+      "name_ru": "",
+      "breed": "МОПС БЕЖЕВЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1273989561",
+      "name_lat": "OFELIYA SELENA ANEMON",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "888967346",
+      "name_lat": "OFFA IZ RODNOGO KRAYA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "96996687",
+      "name_lat": "OFELIA",
+      "name_ru": "",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "VOSTOCHNOEVROPEISKAYA OVCHARKA (EAST EUROPEAN SHEPHERD DOG)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1961115503",
+      "name_lat": "Ofeliya",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ЦВЕРГШПИЦ/ПОМЕРАНСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "986769280",
+      "name_lat": "OFELIA",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1691486280",
+      "name_lat": "OFELIYA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК / WELSH CORGI",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1786680690",
+      "name_lat": "OF THE EAST",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "144576848",
+      "name_lat": "OFELIYA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "866036738",
+      "name_lat": "OFSHOR DREAM DLYA SVAN BLACK",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "MINIATURE PINSCHER",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "186392151",
+      "name_lat": "OF POMS FOREVER TABARRO",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "GERMAN TOY SPITZ (POMERANIAN)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1338686460",
+      "name_lat": "OF THE ELVES",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН / WELSH CORGI CARDIGAN",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "246156288",
+      "name_lat": "of The Golden Prince Нев Сентурион",
+      "name_ru": "",
+      "breed": "ВЕЙМАРАНЕР АМЕРИКАНСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1884717248",
+      "name_lat": "OF TAITA`S USHABTI",
+      "name_ru": "",
+      "breed": "СИЛИХЕМ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "251866451",
+      "name_lat": "OFKEYMZ VTHB",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "258607486",
+      "name_lat": "OF THE WILD ITURY PUZZLE ISSAR",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "100186489",
+      "name_lat": "OF VICTORY BARRA'S BRITT",
+      "name_ru": "",
+      "breed": "КАРДИГАН",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "982955411",
+      "name_lat": "OFFSCREEN VOICE AUDREY HERBURN",
+      "name_ru": "",
+      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "812881589",
+      "name_lat": "OFFBARK GERMANIKA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1925873646",
+      "name_lat": "OF COALS NAI",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1024202868",
+      "name_lat": "Ofra Siayushchaya Lan Kavkaza",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "16932185",
+      "name_lat": "Ofra Siyaushaya Lan Kavkaza",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "993658846",
+      "name_lat": "OF AN EXCELLEN",
+      "name_ru": "",
+      "breed": "ЧАРЛЬЗ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

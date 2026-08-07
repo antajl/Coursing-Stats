@@ -1,0 +1,43 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "VP",
+  "count": 4,
+  "dogs": [
+    {
+      "id": "1415809310",
+      "name_lat": "VPEREDI PLANETY S KRASNOGO JARA",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "",
+      "total_shows": 31,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1081978358",
+      "name_lat": "VP DEL SOL CLUB ADONIS",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1131988636",
+      "name_lat": "VP DEL SOL CLUB HURRICANE",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1893987403",
+      "name_lat": "VPERED ZOVUSCHAYA S BEREGA DONA",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "NEWFOUNDLAND",
+      "total_shows": 2,
+      "competition_dog_id": null
+    }
+  ]
+}

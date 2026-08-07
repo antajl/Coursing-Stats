@@ -1,0 +1,916 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "KS",
+  "count": 101,
+  "dogs": [
+    {
+      "id": "1427899433",
+      "name_lat": "KSANFI MICHELANGELO",
+      "name_ru": "",
+      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "567246293",
+      "name_lat": "KSANFI ERMIONIYA",
+      "name_ru": "",
+      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР)",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1436298914",
+      "name_lat": "KSENIY ANGELUS VITA",
+      "name_ru": "",
+      "breed": "БАССЕТ ХАУНД",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "343698489",
+      "name_lat": "KSIMENA FROM RUSSIAN FIELD",
+      "name_ru": "",
+      "breed": "ХОРТАЯ БОРЗАЯ",
+      "breed_en": "HORTAYA BORZAYA",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "90716477",
+      "name_lat": "KSANFI CARAMBOLETTA",
+      "name_ru": "",
+      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР)",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "482527253",
+      "name_lat": "KSANFI CARAMBOLINA",
+      "name_ru": "",
+      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР)",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1819173278",
+      "name_lat": "KSOLO CLUB CHESHIRSKIY KOT",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1996187635",
+      "name_lat": "KSANDIAR ZARLINA",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "730224709",
+      "name_lat": "KSANLING DZHUNDZHE",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "950025251",
+      "name_lat": "KSIYA DZHU FARUK HAR NOHOY",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "TIBETAN MASTIFF (DO-KHYI)",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "215090136",
+      "name_lat": "KSANFI GERMANIKA",
+      "name_ru": "",
+      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР) /",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "224290736",
+      "name_lat": "KSANDIAR ZHENEVEVA",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1039062245",
+      "name_lat": "KSOLO CLUB TRUFFALDINO",
+      "name_ru": "",
+      "breed": "СОБАКА",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "889343794",
+      "name_lat": "KSARA VOM MAIR HOF",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1178821758",
+      "name_lat": "KSORA IZ HOROVODA ZVEZD",
+      "name_ru": "",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "104105613",
+      "name_lat": "KSOLO CLUB EROFEJ",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
+      "breed_en": "CHINESE CRESTED DOG",
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "773130595",
+      "name_lat": "KSOLO KLAB TIARA DLYA FANTASTIK KASHMIR",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
+      "breed_en": "CHINESE CRESTED DOG",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1195900573",
+      "name_lat": "KSOLO CLUB RENESMI",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
+      "breed_en": "CHINESE CRESTED DOG",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "78834306",
+      "name_lat": "KSOLO CLUB EMIKO (PUFF)",
+      "name_ru": "",
+      "breed": "СОБАКА",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "338193923",
+      "name_lat": "KSOLO CLUB MAZHOR",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1732182102",
+      "name_lat": "KSANTIA BELLA",
+      "name_ru": "",
+      "breed": "ШНАУЦЕР (перец с солью)",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "79356745",
+      "name_lat": "KSOLO CLUB YUMMI BRIGHT STAR PUFF",
+      "name_ru": "",
+      "breed": "СОБАКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "722509076",
+      "name_lat": "KSOLO CLUB CHARUYUSCHIY SOBLAZN",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "689646199",
+      "name_lat": "KSAVIER LOYAL BRAVE",
+      "name_ru": "",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1264489590",
+      "name_lat": "KSOLO CLUB LEGENDA SHOW GALAKTIKI",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
+      "breed_en": "CHINESE CRESTED DOG",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "169673296",
+      "name_lat": "KSOLO CLUB SHABLY BON (PUFF)",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
+      "breed_en": "CHINESE CRESTED DOG",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "514095280",
+      "name_lat": "KSOLOMANIYA VITTORIYA",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ (СТАНДАРТНЫЙ)",
+      "breed_en": "XOLOITZCUINTLE (STANDARD)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "576016586",
+      "name_lat": "KSOLO CLUB JULIKA",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
+      "breed_en": "CHINESE CRESTED DOG",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1052097233",
+      "name_lat": "KSOLO CLUB FREDERIMMA AVGUSTA",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
+      "breed_en": "CHINESE CRESTED DOG",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "199628736",
+      "name_lat": "KSANTI'S FAMILY DINASTIA",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "612495580",
+      "name_lat": "KSOLO CLUB OKIM",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
+      "breed_en": "CHINESE CRESTED DOG",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "923017606",
+      "name_lat": "KSAV’IERA IZ DOMA MADAMY",
+      "name_ru": "",
+      "breed": "ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "323085511",
+      "name_lat": "KSOLO CLUB KARAMZIN",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1489465698",
+      "name_lat": "KSOLO CLUB YAHONTOVIY MOY (PUFF)",
+      "name_ru": "",
+      "breed": "СОБАКА ПУХОВАЯ",
+      "breed_en": "CHINESE CRESTED DOG",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "173880028",
+      "name_lat": "KSOLO CLUB YAHONTOVIY MOY",
+      "name_ru": "",
+      "breed": "СОБАКА",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "202675154",
+      "name_lat": "KSIYA DZHU PORSHE KAIEN",
+      "name_ru": "",
+      "breed": "АФФЕНПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1330071670",
+      "name_lat": "KSOLO KLUB KIRK VAN HUNTEN (PUFF)",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1267521610",
+      "name_lat": "KSANDIAR SAMANTA",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "585251703",
+      "name_lat": "KSANDIAR PATRICIA",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "866431993",
+      "name_lat": "KSANFI JEANPAOLA",
+      "name_ru": "",
+      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР)",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1036920606",
+      "name_lat": "KSOLO CLUB THE MAGIC POLLEN",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
+      "breed_en": "CHINESE CRESTED DOG",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1363229812",
+      "name_lat": "KSENIA GINGER",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1413552143",
+      "name_lat": "KSIU LAN",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "TIBETAN MASTIFF (DO-KHYI)",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "80569535",
+      "name_lat": "KSANDIAR PIERRE KARDIN",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1332112239",
+      "name_lat": "KSAVER IZ ALTAYSKOY DINASTII",
+      "name_ru": "",
+      "breed": "КОРСО",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1065552416",
+      "name_lat": "KSANFI ARAUCARIA",
+      "name_ru": "",
+      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "24215546",
+      "name_lat": "KSANFI JEANPOLA",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1309087118",
+      "name_lat": "KSENA ZAREVO STEPI",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ БОКСЕР",
+      "breed_en": "BOXER",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "110056287",
+      "name_lat": "KSOLO CLUB LATTE",
+      "name_ru": "",
+      "breed": "СОБАКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "501103777",
+      "name_lat": "KSOLO CLUB MINELLI LANART",
+      "name_ru": "",
+      "breed": "СОБАКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1040742701",
+      "name_lat": "KSENIA GRAND DUCHESS",
+      "name_ru": "",
+      "breed": "УИППЕТ",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "182549430",
+      "name_lat": "KSANDIAR TAMILA",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "273087590",
+      "name_lat": "KSYU IL DEN'S GALA PERSIVAL' БЕЛИССИМО БРАВО МАСТЕР ОФ",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1034560807",
+      "name_lat": "KSANFI BACKSTREET BOY",
+      "name_ru": "",
+      "breed": "СКОТЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "689918932",
+      "name_lat": "KSOLO CLUB ULTRA BRAVO",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
+      "breed_en": "CHINESE CRESTED DOG",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "272876465",
+      "name_lat": "KSANFI BARRISTER",
+      "name_ru": "",
+      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "931987372",
+      "name_lat": "KSOLO CLUB NIKITA KOZHEMYAKA",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "460817692",
+      "name_lat": "KSOLO CLUB SHABLY BON PUFF",
+      "name_ru": "",
+      "breed": "СОБАКА ПУХОВАЯ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1134555622",
+      "name_lat": "KSOLO CLUB ZHOFREY DE PEYRAK",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1527380036",
+      "name_lat": "KSOLO CLUB KIRK VAN HUTEN",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
+      "breed_en": "CHINESE CRESTED DOG",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1135307418",
+      "name_lat": "KSOLO CLUB YANTAR'",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
+      "breed_en": "CHINESE CRESTED DOG",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1082414720",
+      "name_lat": "KSIYA DZHU TSAGAAN CHINGIS",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1861307542",
+      "name_lat": "KSOLO CLUB ELUSIYA DE LYUT IMA",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "914616524",
+      "name_lat": "KSYU IL DEN'S DOROGAYA MOYA",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1025665184",
+      "name_lat": "KSOLO CLUB ZHI-VAN-SHI",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1626352774",
+      "name_lat": "KSANFI NORMANDIYA FOR SPRIGHTLY LOUT",
+      "name_ru": "",
+      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
+      "breed_en": "SCOTTISH TERRIER",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1516918553",
+      "name_lat": "KSYU IL DEN'S LUBAVA",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "189229623",
+      "name_lat": "KSAYDEN RIORSON",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ ФАЛЕН",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "607846462",
+      "name_lat": "KSYU IL DEN’S DOROGAYA MOYA",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "909549362",
+      "name_lat": "KSIYA DZHU GANNIBAL",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "201476694",
+      "name_lat": "KSANDIAR PIERRE CARDIN",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1337542962",
+      "name_lat": "KSOLO CLUB ARCHI GOLD",
+      "name_ru": "",
+      "breed": "СОБАКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1711883528",
+      "name_lat": "KSOLO CLUB SHABLY BON",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1430081070",
+      "name_lat": "KSOLO CLUB OKIM (PUFF)",
+      "name_ru": "",
+      "breed": "СОБАКА ПУХОВАЯ /",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1917960024",
+      "name_lat": "KSOLO CLUB NOTA",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1021120980",
+      "name_lat": "KSIYA DZHU SOLTO NASAN",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1608802252",
+      "name_lat": "KSOLO CLUB ULTRA BRAVO PUFF",
+      "name_ru": "",
+      "breed": "СОБАКА ПУХОВАЯ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1906333931",
+      "name_lat": "KSOLO CLUB KHUSNA",
+      "name_ru": "",
+      "breed": "ХОХЛАТАЯ СОБАКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1451667926",
+      "name_lat": "KSOLO CLUB ELAINE",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1926755230",
+      "name_lat": "KSOLO CLUB KHATAN- AISHE",
+      "name_ru": "",
+      "breed": "СОБАКА ГОЛАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "956811355",
+      "name_lat": "KSANTIA AVANTA",
+      "name_ru": "",
+      "breed": "ШНАУЦЕР П-С",
+      "breed_en": "SCHNAUZER P-S",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "490735771",
+      "name_lat": "KSOLO CLUB NATUREL (PUFF)",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1434297011",
+      "name_lat": "KSARO-CHESTNAYA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1040758355",
+      "name_lat": "KSAR CHRISTMAS SONG AT CAVALLIERIK",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "RUSSKAYA PSOVAYA BORZAYA (BORZOI)",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1767206106",
+      "name_lat": "KSIYA DZHU ZUANSHI",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1628876933",
+      "name_lat": "KSOLO CLUB MAGIC",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
+      "breed_en": "CHINESE CRESTED DOG",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "235845677",
+      "name_lat": "KSOLO CLUB TIARA",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
+      "breed_en": "CHINESE CRESTED DOG",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1191118100",
+      "name_lat": "KSOLO CLUB ONE IN A MILLION",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
+      "breed_en": "CHINESE CRESTED DOG",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "832258483",
+      "name_lat": "KSOLO CLUB NATUREL",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
+      "breed_en": "CHINESE CRESTED DOG",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "557580101",
+      "name_lat": "KSOLO KLAB TEA FANTASTIK-KASHMIR",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
+      "breed_en": "CHINESE CRESTED DOG",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "237740103",
+      "name_lat": "KSOLO KLAB ROKSI    ( PUKH )",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
+      "breed_en": "CHINESE CRESTED DOG",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "755624226",
+      "name_lat": "KSOLO CLUB EVANGELINA",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
+      "breed_en": "CHINESE CRESTED DOG",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "291387032",
+      "name_lat": "KS FIORD CZARNY DWOR ZE SKOLNITEGO",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ К-Ш ЛЕГАВАЯ (КУРЦХААР)",
+      "breed_en": "GERMAN SHORT-HAIRED POINTING DOG (DEUTSCH KURZHAAR)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1539934361",
+      "name_lat": "KSU IL DEN'S GALA PERSIVAL'",
+      "name_ru": "",
+      "breed": "BULLDOG FAWN, BRINDLE",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1096981570",
+      "name_lat": "KSOLO CLUB DOVE CHIFTAIN",
+      "name_ru": "",
+      "breed": "СОБАКА ГОЛАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "461837001",
+      "name_lat": "KSOLO CLUB DIANA BOWDLER",
+      "name_ru": "",
+      "breed": "КИНГ ХОХЛАТАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "116609549",
+      "name_lat": "KSANDIAR ZHAKLIN ZHEMO",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "100898195",
+      "name_lat": "KSANDIAR EVRO SHIK",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "427722678",
+      "name_lat": "KSOLO CLUB YAKHONT",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1433070063",
+      "name_lat": "KSTOVSKAYA SKAZKA REDKOE SCHASTIE",
+      "name_ru": "",
+      "breed": "ШАР ПЕЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "367169199",
+      "name_lat": "KSANA ISLAND MINX",
+      "name_ru": "",
+      "breed": "ТАЙСКИЙ РИДЖБЕК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

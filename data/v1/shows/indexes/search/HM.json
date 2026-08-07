@@ -1,0 +1,34 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "HM",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "283377524",
+      "name_lat": "HMEL IZ SOKOLINOGO GNEZDA",
+      "name_ru": "",
+      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "556806090",
+      "name_lat": "HMELNOY MED IZ STRANI GREZ",
+      "name_ru": "",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
+      "breed_en": "DACHSHUND STANDARD SMOOTH-HAIRED",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1773819487",
+      "name_lat": "HMEL IZ SOKOLINO GO GNEZDA",
+      "name_ru": "",
+      "breed": "ТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

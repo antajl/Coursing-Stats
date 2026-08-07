@@ -1,0 +1,71 @@
+{
+  "schema": "coursing-stats/show-home-top-v1",
+  "year": "2021",
+  "dogs": [
+    {
+      "id": "589559894",
+      "name_lat": "DANTE COMPATRIOTA DI BONFINI",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ БРАКК",
+      "sex": "",
+      "total_shows": 33,
+      "best_award": "BOB",
+      "rank_score": 27935,
+      "titles": {
+        "BOB": 4,
+        "CACIB": 29,
+        "CAC": 33,
+        "CHRKF": 31,
+        "P_MOSCOW": 2,
+        "KCHK": 1,
+        "KCHP": 4
+      },
+      "competition_dog_id": null
+    },
+    {
+      "id": "868633086",
+      "name_lat": "SHEN DE LUX HUMMER",
+      "name_ru": "",
+      "breed": "ШИ ТЦУ",
+      "sex": "",
+      "total_shows": 24,
+      "best_award": "BOB",
+      "rank_score": 23070,
+      "titles": {
+        "BOB": 4,
+        "CACIB": 22,
+        "R_CACIB": 1,
+        "CAC": 22,
+        "CHRKF": 22,
+        "P_MOSCOW": 2,
+        "KCHK": 6,
+        "R_CAC": 1
+      },
+      "competition_dog_id": null
+    },
+    {
+      "id": "1437613263",
+      "name_lat": "SANDAURI YURAI HEEPP",
+      "name_ru": "",
+      "breed": "БОРОДАТЫЙ КОЛЛИ",
+      "sex": "",
+      "total_shows": 27,
+      "best_award": "BOB",
+      "rank_score": 21990,
+      "titles": {
+        "BOB": 3,
+        "BOS": 1,
+        "CACIB": 20,
+        "R_CACIB": 2,
+        "CAC": 24,
+        "CHRKF": 22,
+        "P_MOSCOW": 2,
+        "KCHP": 5,
+        "R_CAC": 2,
+        "SS": 1
+      },
+      "competition_dog_id": null
+    }
+  ],
+  "updated_at": "2026-08-04"
+}

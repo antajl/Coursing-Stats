@@ -1,0 +1,25 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "VK",
+  "count": 2,
+  "dogs": [
+    {
+      "id": "590371040",
+      "name_lat": "Vkhagar iz Strany Kutha",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1251615444",
+      "name_lat": "VKUS ZHIZNI OT BORODNEVYKH",
+      "name_ru": "",
+      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
+      "breed_en": "ALASKAN MALAMUTE",
+      "total_shows": 2,
+      "competition_dog_id": null
+    }
+  ]
+}

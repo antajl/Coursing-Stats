@@ -1,0 +1,34 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "VH",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "1785010680",
+      "name_lat": "VHOOPI GOLDBERG",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1563212566",
+      "name_lat": "VHAGAR CHYORNYJ BRILLIANT",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "617166892",
+      "name_lat": "VHAGAR IZ STRANI KUTHA",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ / BORDER",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

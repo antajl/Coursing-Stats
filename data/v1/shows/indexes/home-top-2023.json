@@ -1,0 +1,66 @@
+{
+  "schema": "coursing-stats/show-home-top-v1",
+  "year": "2023",
+  "dogs": [
+    {
+      "id": "210254866",
+      "name_lat": "ROSA GLORIA DEI Z KASETEK",
+      "name_ru": "",
+      "breed": "СОБАКА",
+      "sex": "",
+      "total_shows": 60,
+      "best_award": "BOB",
+      "rank_score": 115570,
+      "titles": {
+        "BOB": 52,
+        "BOS": 2,
+        "CAC": 59,
+        "CHRKF": 39,
+        "P_RUSSIA": 1,
+        "P_MOSCOW": 1,
+        "KCHP": 3,
+        "CW": 3
+      },
+      "competition_dog_id": null
+    },
+    {
+      "id": "1902762572",
+      "name_lat": "AKHTAMAR MELODY",
+      "name_ru": "",
+      "breed": "МАЛЫЙ БРАБАНСОН",
+      "sex": "",
+      "total_shows": 73,
+      "best_award": "BOB",
+      "rank_score": 108445,
+      "titles": {
+        "BOB": 50,
+        "CAC": 66,
+        "CHRKF": 26,
+        "KCHK": 7,
+        "R_CAC": 1
+      },
+      "competition_dog_id": null
+    },
+    {
+      "id": "429930964",
+      "name_lat": "DOUBLE DREAM LOVESET BAGIRA",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ СЕТТЕР",
+      "sex": "",
+      "total_shows": 51,
+      "best_award": "BOB",
+      "rank_score": 100995,
+      "titles": {
+        "BOB": 45,
+        "BOS": 2,
+        "CAC": 50,
+        "CHRKF": 43,
+        "P_MOSCOW": 1,
+        "KCHK": 7,
+        "CW": 3
+      },
+      "competition_dog_id": null
+    }
+  ],
+  "updated_at": "2026-08-04"
+}

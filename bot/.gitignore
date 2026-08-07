@@ -1,0 +1,27 @@
+# Build output
+dist/
+
+# Dependencies
+node_modules/
+
+# Environment
+.env
+.dev.vars
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Exclude backend from bot deployment
+../backend/
+../frontend/
+../data/
+../docs/
+../.github/
+../.windsurf/
+../.agents/
+../.claude/
+../.devin/

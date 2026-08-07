@@ -1,0 +1,853 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "ШП",
+  "count": 94,
+  "dogs": [
+    {
+      "id": "1736603982",
+      "name_lat": "ШПИЛЬКА ВИЛЬКА БАЛОВНИЦА",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1104497059",
+      "name_lat": "ШПИТТАЛЬ-АН-ДЕР- ДРАУ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "850410897",
+      "name_lat": "ШПИНЕЛЬ ЧЕРНАЯ ЖЕМЧУЖИНА",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "875112875",
+      "name_lat": "ШПИЦ-ФЛАИНГ ТЕССИ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "722174257",
+      "name_lat": "ШПИЦ-ФЛАИНГ ИТОН",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ БЕЛЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "138243018",
+      "name_lat": "ШПАНСКАЯ МУШКА ОТ НЭЛ З ЮССЭН",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "517309744",
+      "name_lat": "ШПАНА МОСКОВСКАЯ ИЗ МЫШКИНОГО ДОМА",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ  Г-Ш",
+      "breed_en": "DACHSHUND MINIATURE SMOOTH-HAIRED",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "343081018",
+      "name_lat": "ШПИЦ-ФЛАИНГ ОЛАВЕР",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ (Оранж.Сер. И Др.)",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "347419646",
+      "name_lat": "ШПУЛЬКА С БЕРЕГА ДОНА",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "753824797",
+      "name_lat": "ШПИЦБУРГ ЦЕЗАРЬ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "801882229",
+      "name_lat": "ШПИЦБУРГ ЭРИК",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) /",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1406170563",
+      "name_lat": "ШПИЦЯР БЕСТ ОФ ЗЕ БЕСТ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "91447531",
+      "name_lat": "ШПИЦБУРГ ВАСС",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "665044343",
+      "name_lat": "ШПИЦ-ФЛАИНГ ХАННА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "553994674",
+      "name_lat": "ШПИЦ-ФЛАИНГ ЖАКЛИН",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "18552365",
+      "name_lat": "ШПИЦБУРГ КОРА",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "873670469",
+      "name_lat": "ШПИЦ-ЛЕНД ШОУМЕН",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1975367322",
+      "name_lat": "ШПИЦ-ЛЕНД ЮВЕНТУС",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "181466483",
+      "name_lat": "ШПИЦБУРГ ЯРА",
+      "name_ru": "",
+      "breed": "GERMAN SPITZ TOY (POMERANIAN)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1203154511",
+      "name_lat": "ШПИЦБУРГ ДЖЕСИКА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "321467864",
+      "name_lat": "ШПИЦБУРГ ВИЛОРА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1137284755",
+      "name_lat": "ШПУЛЬКА",
+      "name_ru": "",
+      "breed": "ЗАПАДНОСИБИРСКАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "546672866",
+      "name_lat": "ШПИЦБУРГ ВАРДАН",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "970844300",
+      "name_lat": "ШПИОНКА ИЗ ТРЕТЬЯКОВСКОЙ ГАЛЕРЕИ ВИТТО КАРЛЕОНЕ ФОМ",
+      "name_ru": "",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1222643904",
+      "name_lat": "ШПИЦ-ФЛАИНГ ЛЕО",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "292582248",
+      "name_lat": "ШПИЦБУРГ ЮНИКА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1508611872",
+      "name_lat": "ШПИЦБУРГ ЯРА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1482979185",
+      "name_lat": "ШПИЦБУРГ ХЕССА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1673263488",
+      "name_lat": "ШПИЦ-ФЛАИНГ ЮСТИНА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "77327133",
+      "name_lat": "ШПИЦБУРГ ГЕНРИХ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1668750343",
+      "name_lat": "ШПИЦ-ФЛАИНГ ДАЙАНА III",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1669682972",
+      "name_lat": "ШПИЦ-ФЛАИНГ МОНА ЛИЗА",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "619088465",
+      "name_lat": "ШПИЦБУРГ КОКО",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "166985354",
+      "name_lat": "ШПИЦ-ФЛАИНГ СИМОН",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1601629448",
+      "name_lat": "ШПИЦБУРГ ЮЛИУС",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1753314594",
+      "name_lat": "ШПИЦЯР ШАРЛОТТА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "953476197",
+      "name_lat": "ШПИНЕЛЬ",
+      "name_ru": "",
+      "breed": "КАРДИГАН / WELSH",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "156214235",
+      "name_lat": "ШПИЦЯР ФРЕЯ",
+      "name_ru": "",
+      "breed": "GERMAN SPITZ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "331029364",
+      "name_lat": "ШПУЛЬКА",
+      "name_ru": "",
+      "breed": "ЛАЙКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "859923001",
+      "name_lat": "ШПИЦ-ФЛАИНГ ЭСМИРАЛЬДА",
+      "name_ru": "",
+      "breed": "SPITZ KLEINSPITZ ORANGE, GREY, OTHER",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "146488257",
+      "name_lat": "ШПИЦЯР КИТТИ",
+      "name_ru": "",
+      "breed": "ПОМЕРАНСКИЙ ШПИЦ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1099581713",
+      "name_lat": "ШПИЦЯР ЛИВАДИЯ",
+      "name_ru": "",
+      "breed": "ПОМЕРАНСКИЙ ШПИЦ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1001017045",
+      "name_lat": "ШПИЦЯР УЯРИК",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ –",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1073745648",
+      "name_lat": "ШПИЦЯР УАЛАНТА",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "804240226",
+      "name_lat": "ШПИЦБУРГ МЕДЕЯ",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "538601764",
+      "name_lat": "ШПИЦЯР ОДРИ ТАТУ",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) / GERMAN",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1008853830",
+      "name_lat": "ШПИЦЯР СОЛАНДЖ",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) / GERMAN",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1005341976",
+      "name_lat": "ШПИЦБУРГ РЕГИНА",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1417576063",
+      "name_lat": "ШПИЦ-ФЛАИНГ ПАУЛА",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "774354487",
+      "name_lat": "ШПИЦ-ФЛАИНГ ЛИОРА",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1180489681",
+      "name_lat": "ШПИЦ-ФЛАИНГ АМЕЛИЯ",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "55310120",
+      "name_lat": "ШПИЦ-ЛЕНД ТЕЙСИ",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "607401055",
+      "name_lat": "ШПИЦ-ФЛАИНГ ИЗАБЕЛЬ",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ / GERMAN SPITZ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "71800224",
+      "name_lat": "ШПИЦ-ФЛАИНГ ГРЕТА",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "854369954",
+      "name_lat": "ШПИЦЯР РИДИК",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) / GERMAN",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1740638659",
+      "name_lat": "ШПИЦЯР ЧАРОЛИНА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) / GERMAN",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1738051045",
+      "name_lat": "ШПИЦБУРГ ТОРА",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "600324517",
+      "name_lat": "ШПИЦБУРГ ШАНИ",
+      "name_ru": "",
+      "breed": "GERMAN SPITZ TOY (POMERANIAN)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "225108819",
+      "name_lat": "ШПИЦЯР АЙОВА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) / GERMAN",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1937201408",
+      "name_lat": "ШПИЦЯР БЭЙЛИС",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "568557931",
+      "name_lat": "ШПИЦЯР БРИТТАНИ",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "564235153",
+      "name_lat": "ШПИЦЯР РОЗА ВЕТРОВ",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "567523824",
+      "name_lat": "ШПИЦБУРГ ШЕЙХ",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1265859700",
+      "name_lat": "ШПИЦБУРГ БАЛЬТАЗАР",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "632744999",
+      "name_lat": "ШПИЛЬХОВ ГРЕЙСИ (Д-Ш)",
+      "name_ru": "",
+      "breed": "ШЕРСТЬ С",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1513607860",
+      "name_lat": "ШПИЦБУРГ ХАНА",
+      "name_ru": "",
+      "breed": "GERMAN SPITZ TOY (POMERANIAN)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1945932401",
+      "name_lat": "ШПИЦБУРГ НИКА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ПОМЕРАНСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "562942150",
+      "name_lat": "ШПИЦ-ФЛАИНГ ДАНИИЛ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1994952358",
+      "name_lat": "ШПИЦ-ФЛАИНГ ДАРЬЯНА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1262738674",
+      "name_lat": "ШПИЦ-ФЛАИНГ СОФИЯ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "248620012",
+      "name_lat": "ШПИЦ-ФЛАИНГ МИЛАНА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "95001740",
+      "name_lat": "ШПИЦ-ФЛАИНГ АРИАННА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1842008429",
+      "name_lat": "ШПИЦ-ФЛАИНГ УЛАНА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1598105729",
+      "name_lat": "ШПИЦ-ФЛАИНГ ЯНИС II",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "595369638",
+      "name_lat": "ШПИЦЯР ТАЙРИН",
+      "name_ru": "",
+      "breed": "GERMAN SPITZ TOY (POMERANIAN)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "864999715",
+      "name_lat": "ШПИЦ-ЛЕНД ФЕРРЕРО РОШЕ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1419516474",
+      "name_lat": "ШПИЦ-ФЛАИНГ НОРДЖИНА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "305681404",
+      "name_lat": "ШПИЦ ФЛАИНГ ЧАРИССА II",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "729749043",
+      "name_lat": "ШПИЦ-ФЛАИНГ ПЕРСИ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1313381439",
+      "name_lat": "ШПИЦ ЛЕНД ЧАРОИТА МЭДЖИК",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1669039192",
+      "name_lat": "ШПИЦ-ФЛАИНГ СЬЮЗИ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1552383864",
+      "name_lat": "ШПИЦ-ФЛАИНГ РИЦА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "374922254",
+      "name_lat": "ШПИЦ-ФЛАИНГ КОРНЕЛИЯ II",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1752487208",
+      "name_lat": "ШПИЦЯР НИЦЦА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1689735687",
+      "name_lat": "ШПИЦ-ФЛАИНГ ЭРИКА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1037073272",
+      "name_lat": "ШПИЦНАЗ КАТАНА",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ШПИЦ БЕЛЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1408908377",
+      "name_lat": "ШПИЦБУРГ ГРЕТА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1202181043",
+      "name_lat": "Шпицяр Марсианка",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "435570920",
+      "name_lat": "ШПИЦ-ФЛАИНГ ДЖЕННА",
+      "name_ru": "",
+      "breed": "COLOURS",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "774490915",
+      "name_lat": "ШПИЦ-ФЛАИНГ ЗАБАВА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "107628330",
+      "name_lat": "ШПИЦ-ЛЕНД ЕВРО ФО ЛАВ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ЦВЕРГШПИЦ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "237450058",
+      "name_lat": "ШПИЦ-ЛЕНД ЕКЕЙЛИ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ЦВЕРГШПИЦ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1402717668",
+      "name_lat": "ШПИЦ-ЛЕНД ЮДЖИ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ЦВЕРГШПИЦ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "6489973",
+      "name_lat": "ШПИЦ-ЛЕНД ЮНИКА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ЦВЕРГШПИЦ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "ВЮ",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "109452769",
+      "name_lat": "Вюншен",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "262915824",
+      "name_lat": "ВЮНШЕН ГОРЖУСЬ ТОБОЙ ДРАЙВ",
+      "name_ru": "",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "561500155",
+      "name_lat": "ВЮНШЕН ARSENAL SON OF HELL",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

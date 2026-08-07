@@ -1,0 +1,862 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "UT",
+  "count": 95,
+  "dogs": [
+    {
+      "id": "991788441",
+      "name_lat": "UTRENNIY BREEZE ROMANTIK",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "",
+      "total_shows": 69,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1468328864",
+      "name_lat": "UTRENNIY BREEZE TALISMAN OKEANA",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1585892848",
+      "name_lat": "UTRENNIY BREEZE NO RISK NO FAN",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "",
+      "total_shows": 66,
+      "competition_dog_id": null
+    },
+    {
+      "id": "808053736",
+      "name_lat": "UTOPIYA IZ GRADA KATERINY",
+      "name_ru": "",
+      "breed": "СОЛЬЮ ШНАУЦЕР ПЕРЕЦ С",
+      "breed_en": "SCHNAUZER P-S",
+      "total_shows": 45,
+      "competition_dog_id": null
+    },
+    {
+      "id": "125051959",
+      "name_lat": "UTRENNIY BREEZE KHARIZMA",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "",
+      "total_shows": 38,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1320693915",
+      "name_lat": "UTRENNIY BREEZE TAYNA TUMANA",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "DALMATIAN",
+      "total_shows": 41,
+      "competition_dog_id": null
+    },
+    {
+      "id": "195198805",
+      "name_lat": "UTESHENIE MOEGO SERDTSA IZ ZELENOY ROSHI",
+      "name_ru": "",
+      "breed": "СОЛЬЮ /",
+      "breed_en": "SCHNAUZER P-S",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "80542058",
+      "name_lat": "UTA DE LA FAMILIA VARINARFINI (MEDIA)",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ (СРЕДНИЙ)",
+      "breed_en": "XOLOITZCUINTLE (INTERMEDIATE)",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "906488442",
+      "name_lat": "UTRENNIY BREEZE WHITNEY",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "DALMATIAN",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1100815443",
+      "name_lat": "UTARI CHEZAR",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "SHIBA",
+      "total_shows": 67,
+      "competition_dog_id": null
+    },
+    {
+      "id": "686377571",
+      "name_lat": "UTRENNIY BREEZE HELLO DADDY",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН /",
+      "breed_en": "",
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1458922168",
+      "name_lat": "UTEKHA FEERIYA USPEKHA",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed_en": "MINIATURE SCHNAUZER BLACK & SILVER",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "79686663",
+      "name_lat": "UTONCHENNAYA NATURA IZ MISHKINOGO DOMA",
+      "name_ru": "",
+      "breed": "DACHSHUND MINIATURE",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1661768085",
+      "name_lat": "UTSUKUSHI-SA SO ZVEZDNOGO PUTI",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "SHIBA",
+      "total_shows": 28,
+      "competition_dog_id": null
+    },
+    {
+      "id": "786576136",
+      "name_lat": "UTSUKUSHISA GO-KADZEKAORU",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "SHIBA",
+      "total_shows": 32,
+      "competition_dog_id": null
+    },
+    {
+      "id": "81860098",
+      "name_lat": "UTRENNIY BREEZE ULISS",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "833415471",
+      "name_lat": "UTRENNYAYA ZARYA IZ OZHERELIA",
+      "name_ru": "",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА) /",
+      "breed_en": "ITALIAN SIGHTHOUND",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1532441468",
+      "name_lat": "UTU ASTRA CANINA",
+      "name_ru": "",
+      "breed": "БОСЕРОН",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1720054731",
+      "name_lat": "UTRENNIY BREEZE FELICIA LA MIA FELICITA",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН /",
+      "breed_en": "",
+      "total_shows": 38,
+      "competition_dog_id": null
+    },
+    {
+      "id": "659315691",
+      "name_lat": "UTRENNYAYA ZVEZDA OF ODGERIKA",
+      "name_ru": "",
+      "breed": "ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "290671507",
+      "name_lat": "UTRENNIY BREEZE MAGDALINA",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН /",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "93739719",
+      "name_lat": "UTRENNIY BREEZE ULTIMATUM POBEDY",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "DALMATIAN",
+      "total_shows": 24,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1664150013",
+      "name_lat": "UTRENNIY BREEZE NOW OR NEVER",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "770771990",
+      "name_lat": "UTRENNIY BREEZE ULYANA",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "DALMATIAN",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "849413402",
+      "name_lat": "UTRENNIY BREEZE UNDINA",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН /",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1809860786",
+      "name_lat": "UTRENNYAYA ZARYA IZ STAROY SHUI",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1564502775",
+      "name_lat": "UTSUKUSHI-SASO ZVEZDNOGO PUTI",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1293823269",
+      "name_lat": "UTRENNIY BREEZE SAMUEL",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "DALMATIAN",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1666487450",
+      "name_lat": "UTA SIN'YU KEN",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "breed_en": "AKITA",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "524998219",
+      "name_lat": "UTER OT NEVSKOGO HOBBITA",
+      "name_ru": "",
+      "breed": "ГРИФФОН",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1534234930",
+      "name_lat": "UTTORI-SURU",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "724159881",
+      "name_lat": "UTRENNIY BREEZE MILANA",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН /",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1485634692",
+      "name_lat": "UTRENNIY BREEZE FINIK DOLCHE FRUTTO",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "DALMATIAN",
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "757495057",
+      "name_lat": "UTRENNJAJA ZVEZDA OT BUMAGE",
+      "name_ru": "",
+      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР) /",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1773850210",
+      "name_lat": "UTRENNIY BREEZE MOI ADMIRAL",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН /",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1291704",
+      "name_lat": "UTRENNIY BREEZE MOY ADMIRAL",
+      "name_ru": "",
+      "breed": "DALMATIAN",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "2708177",
+      "name_lat": "UTRENNIY BREEZE RANDEVU",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1443379230",
+      "name_lat": "UTRENNIY BREEZE POSEYDON",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН /",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1000746895",
+      "name_lat": "UTTORI-SURU",
+      "name_ru": "",
+      "breed": "АКИТА / AKITA",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "751907792",
+      "name_lat": "UTTORI SURU CRIMEAN KHAN",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "618970188",
+      "name_lat": "UTRENNIY BREEZE TANETS PRIBOYA",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН /",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "365861741",
+      "name_lat": "UTRENNIY BREEZE TSUNAMI",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1948994764",
+      "name_lat": "UTRENNIY BREEZE ROKSOLANA",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1556780893",
+      "name_lat": "UTRENNYAYA ZVEZDA OT BUMAGE",
+      "name_ru": "",
+      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
+      "breed_en": "SCOTTISH TERRIER",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1362324928",
+      "name_lat": "UTRENNIY BREEZE SANSHAJN",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1440407919",
+      "name_lat": "UTOLI MOI PECHALI IZ MISHKINOGO DOMA",
+      "name_ru": "",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
+      "breed_en": "DACHSHUND KANINCHEN SMOOTH-HAIRED",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1236410717",
+      "name_lat": "UTRENNIY BREEZE SAY AURORAS MOON",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "DALMATIAN",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1512095095",
+      "name_lat": "UTRENNIY BREEZE REVANSH",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "741168919",
+      "name_lat": "UTRENNIY BREEZE INDIANA",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН /",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "921339947",
+      "name_lat": "UTRENNIY BREEZE INDIGO",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН /",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "860806738",
+      "name_lat": "UTRENNYAYA ZVEZDA IZ GAREMA BELYH DIV",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "624001860",
+      "name_lat": "UTAGAWA GO FROM HACHIMANTAI",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1821143926",
+      "name_lat": "UTAYKA IZ GRADA KATERINY",
+      "name_ru": "",
+      "breed": "ШАР ПЕЙ ШНАУЦЕР ЧЁРНЫЙ ШНАУЦЕР ЧЁРНЫЙ ШНАУЦЕР ЧЁРНЫЙ ШНАУЦЕР ЧЁРНЫЙ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1437780661",
+      "name_lat": "UTRENNIY BREEZE LIVADIA",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН /",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "153368483",
+      "name_lat": "UTAE TOMIMOPA",
+      "name_ru": "",
+      "breed": "АКИТА / AKITA",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1853711356",
+      "name_lat": "UTRENNIY BREEZE NO RISK NO FUN",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "907614965",
+      "name_lat": "UTOPIAN RU EYE CANDY",
+      "name_ru": "",
+      "breed": "ПЕКИНЕС",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "220440252",
+      "name_lat": "UTRINA GIKEIRA ERNA",
+      "name_ru": "",
+      "breed": "РОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "741785494",
+      "name_lat": "UTRENNJAJA ZORJA SOKROVISCHE RUSI",
+      "name_ru": "",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР / RUSSIAN BLACK",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "793303947",
+      "name_lat": "UTRENNAYA ZVEZDA IZ ZHEMCHUZHINY KUZBASSA",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "531872259",
+      "name_lat": "UTHER PENDRAGON",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1717307259",
+      "name_lat": "UTA DEBUN VOM HOUSE ALEKS",
+      "name_ru": "",
+      "breed": "РОТВЕЙЛЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "58654926",
+      "name_lat": "UTRENNYAYA ZVEZDA AKUNA MATATA",
+      "name_ru": "",
+      "breed": "ШАР ПЕЙ",
+      "breed_en": "SHAR PEI",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1102718857",
+      "name_lat": "UTAH-SKY",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1446549659",
+      "name_lat": "UTAH-SKY",
+      "name_ru": "",
+      "breed": "ПОКЕТ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1988112483",
+      "name_lat": "UTAH-SKY",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "726040788",
+      "name_lat": "UTSUKUSHI TAKANI MEGUMI",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "SHIBA",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1179521653",
+      "name_lat": "UTRAMARIN S BEREGOV BALTIKI",
+      "name_ru": "",
+      "breed": "ПАРСОН СТАФФОРДШИРСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1712049251",
+      "name_lat": "UTOLI MOI PECHALI IZ OZHERELIA",
+      "name_ru": "",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "750284771",
+      "name_lat": "UTER",
+      "name_ru": "",
+      "breed": "GORDON SETTER",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1682928119",
+      "name_lat": "UTER",
+      "name_ru": "",
+      "breed": "СЕТТЕР ГОРДОН /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1108146450",
+      "name_lat": "UTER",
+      "name_ru": "",
+      "breed": "SETTER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "204948038",
+      "name_lat": "UTARI KAMI",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1993627002",
+      "name_lat": "UTRENNYAYA ZVEZDA UNDINA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "964990452",
+      "name_lat": "UTSUKUSHI HIME-SAMA",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "177395601",
+      "name_lat": "UTAH CONFIDENCE",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1409051125",
+      "name_lat": "UTRENNIY BREEZE PANDORA",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "85169207",
+      "name_lat": "UTONCHENNYY LEPESTOK ORKHIDEI",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "SIBERIAN HUSKY",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1390308743",
+      "name_lat": "UTRENNIY BREEZE HAPPY BUDDY BARNEY",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1406538997",
+      "name_lat": "UTERYANNOE SOKROVISCHE IZ KLANA SIMURANA",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "578062394",
+      "name_lat": "UTENA IOSHIKO",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1383558982",
+      "name_lat": "UTOUKI HOSENS HUYU MIRYOKU KAT",
+      "name_ru": "",
+      "breed": "АКИТА / AKITA",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1307639466",
+      "name_lat": "UTRENNIYA ROZA",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "580568246",
+      "name_lat": "UTTA BYUTI",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1341386670",
+      "name_lat": "UT-USSAT-UINSTON OT MARINY KURANOVOY",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
+      "breed_en": "DACHSHUND MINIATURE WIRE-HAIRED",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1754818226",
+      "name_lat": "UTOPIA-IN-HOUSE-ALEX SUTORMANSKA",
+      "name_ru": "",
+      "breed": "ЧЕРНОГОРСКАЯ ГОРНАЯ ГОНЧАЯ",
+      "breed_en": "MONTENEGRIN MOUNTAIN HOUND",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "42807075",
+      "name_lat": "UTRENNYAYA ZVEZDA IZ VOLSHEBNOGO LESA",
+      "name_ru": "",
+      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
+      "breed_en": "IRISH WOLFHOUND",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "857121238",
+      "name_lat": "UTARI DELLA PORTA DIPINTA",
+      "name_ru": "",
+      "breed": "КОРСО / ITALIAN CANE",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1650245285",
+      "name_lat": "UTONCHENNYIY LEPESTOK ORHIDEI",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1093771184",
+      "name_lat": "UTA AI MANAMI",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1598409212",
+      "name_lat": "UTRENNYAYA ZVEZDA IZ KRASNOGO DARA",
+      "name_ru": "",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "45200085",
+      "name_lat": "UTRENNIY BREEZE FIGHTER TOBIAS",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1779149021",
+      "name_lat": "UTRENNIY KOFE IZ NADINVILLE",
+      "name_ru": "",
+      "breed": "ПТИ БРАБАНСОН",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "139000621",
+      "name_lat": "UTRENNYAYA ZVEZDA EVA",
+      "name_ru": "",
+      "breed": "САМОЕД",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "38607996",
+      "name_lat": "UTONCHENNAYA OSOBA DIANA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

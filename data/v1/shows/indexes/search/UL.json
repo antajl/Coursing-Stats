@@ -1,0 +1,4660 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "UL",
+  "count": 517,
+  "dogs": [
+    {
+      "id": "129772831",
+      "name_lat": "UL'RIKH KING OF RING",
+      "name_ru": "",
+      "breed": "СОБАКА РЫЖИЙ",
+      "breed_en": "RUSSKAYA SALONNAYA SOBAKA (RUSSIAN SALON DOG) RED, FAWN, CREAM, RED &WHITE, FAWN &WHITE, CREAM & WHITE",
+      "total_shows": 71,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1055664405",
+      "name_lat": "ULTRAMARINE'S VEKTOR",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "BEAGLE",
+      "total_shows": 45,
+      "competition_dog_id": null
+    },
+    {
+      "id": "144788270",
+      "name_lat": "ULRIKH IZ KRASNOY DOLINY",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 43,
+      "competition_dog_id": null
+    },
+    {
+      "id": "801678759",
+      "name_lat": "ULTRAMARINE'S BEATRICE",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "BEAGLE",
+      "total_shows": 63,
+      "competition_dog_id": null
+    },
+    {
+      "id": "104468781",
+      "name_lat": "ULTRAMARINE'S SHES LIVIN LA VIDA LOCA",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "BEAGLE",
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "289032680",
+      "name_lat": "ULTRAVIOLET IZ TERLETSKOY DUBRAVY",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "DALMATIAN",
+      "total_shows": 25,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1951870171",
+      "name_lat": "ULAN FROM MADAME IRINA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1329971176",
+      "name_lat": "ULYBKA FORTUNY GRAFINYA VISHENKA",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1772648594",
+      "name_lat": "ULMARA VON WESPEN HAUS",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "197337733",
+      "name_lat": "ULOVKA CARDINALA S TAINSTVENNOGO OSTROVA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed_en": "",
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "55287111",
+      "name_lat": "ULTIMATE BULLY CASH",
+      "name_ru": "",
+      "breed": "ПОКЕТ",
+      "breed_en": "AMERICAN BULLY POCKET",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "147396163",
+      "name_lat": "ULTIMATE BULLY LEILA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ СТАНДАРТ",
+      "breed_en": "AMERICAN BULLY STANDARD",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "949065532",
+      "name_lat": "ULTRAMARINE'S AURUS",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "BEAGLE",
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
+      "id": "501661504",
+      "name_lat": "ULYBKA FORTUNY ELANA",
+      "name_ru": "",
+      "breed": "ТАКСА КРОЛИЧЬЯ Ж-Ш",
+      "breed_en": "DACHSHUND KANINCHEN WIRE-HAIRED",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1161203834",
+      "name_lat": "ULLI",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1451662527",
+      "name_lat": "ULYBKA FORTUNY SUPERAGENT",
+      "name_ru": "",
+      "breed": "DACHSHUND ZWERG",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1750551716",
+      "name_lat": "ULMIRA STORM",
+      "name_ru": "",
+      "breed": "ПТИ БРАБАНСОН",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1677234687",
+      "name_lat": "ULYBKA",
+      "name_ru": "",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1391373697",
+      "name_lat": "ULF VOM REXON FORST",
+      "name_ru": "",
+      "breed": "ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР)",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "990808042",
+      "name_lat": "ULTIMATE BULLY HAMMER",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1260458669",
+      "name_lat": "ULLI BELAYA MEDVEDICA",
+      "name_ru": "",
+      "breed": "САМОЕД",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "605054489",
+      "name_lat": "ULYBKA FORTUNY KONFETTI",
+      "name_ru": "",
+      "breed": "ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1297609443",
+      "name_lat": "ULYANA KENTOVNA ART OF BULLS",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "BULLDOG",
+      "total_shows": 50,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1900428643",
+      "name_lat": "ULYBKA FORTUNY ELBRUS",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1703104583",
+      "name_lat": "ULALIYA DE MARIYA",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "665081031",
+      "name_lat": "ULTRAMARINE'S BUTTERFLY",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "BEAGLE",
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "341510341",
+      "name_lat": "ULNARA IZ MURANOVO",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "525300369",
+      "name_lat": "ULI HABIBA V KRONVERSKOM",
+      "name_ru": "",
+      "breed": "ТАЗЫ",
+      "breed_en": "KAZAKH TAZY",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "239073034",
+      "name_lat": "ULZANA VESELYJE REBJATA",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1573005869",
+      "name_lat": "ULTRAMARINE'S BASTA",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "BEAGLE",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "100351778",
+      "name_lat": "ULTRA STYLE FOR HUNTER OF TAURICA",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1899908256",
+      "name_lat": "ULDEYMA HAPPY LIFE",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 24,
+      "competition_dog_id": null
+    },
+    {
+      "id": "214857553",
+      "name_lat": "ULOVKA IZ GRADA KATERINY",
+      "name_ru": "",
+      "breed": "СОЛЬЮ ШНАУЦЕР ПЕРЕЦ С",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1436184005",
+      "name_lat": "ULF-BOSCKO NO BARTAS KRASTA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1742070586",
+      "name_lat": "ULTIMATUM IZ SKAZKI O KHVOSTE FEI",
+      "name_ru": "",
+      "breed": "БИВЕР ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "614444767",
+      "name_lat": "ULTRAMARINES ALL EYES ON LUCIA",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "BEAGLE",
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1405742608",
+      "name_lat": "ULEYA IZ KOROLEVSTVA ANNY",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1993908536",
+      "name_lat": "ULRIH FON KLEINEN BARTIGEN",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "84182434",
+      "name_lat": "ULITA IZ UNIKALNOI KOLLEKTSII",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1374054176",
+      "name_lat": "ULKA DOCH LISHI",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1209251795",
+      "name_lat": "ULTIMATUM STAFF VICTORIA'S SECRET",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
+      "id": "716496581",
+      "name_lat": "ULTRAMARINES AQUAMAN",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1282224885",
+      "name_lat": "ULET TOP BLACK",
+      "name_ru": "",
+      "breed": "РОТВЕЙЛЕР",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "897614038",
+      "name_lat": "ULYBKA FORTUNY UVERTYURA",
+      "name_ru": "",
+      "breed": "ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "568241539",
+      "name_lat": "ULTIMATE BULLY DONUT HIS MAJESTY",
+      "name_ru": "",
+      "breed": "ПОКЕТ",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "418925571",
+      "name_lat": "ULLIS IZ DOLINI PYATI OZYER",
+      "name_ru": "",
+      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1660581262",
+      "name_lat": "ULANA ZARYA NADEZNY DRUG",
+      "name_ru": "",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1488062877",
+      "name_lat": "ULM VON WEISSNACHTE",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1806221021",
+      "name_lat": "ULMA MY BLACK LOVE",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 33,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1005969514",
+      "name_lat": "ULTRA FUNNY S BEREGA TURI",
+      "name_ru": "",
+      "breed": "РОТВЕЙЛЕР",
+      "breed_en": "",
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1280583040",
+      "name_lat": "ULIANA",
+      "name_ru": "",
+      "breed": "АКИТА / AMERICAN",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "915924544",
+      "name_lat": "ULYBKA SEVERA SKY SCARLET",
+      "name_ru": "",
+      "breed": "САМОЕД",
+      "breed_en": "SAMOYED",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1590999851",
+      "name_lat": "ULFINA IZ NOVOI SIBIRI",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "713499646",
+      "name_lat": "ULVAR IZ VOROBINOGO GNEZDA",
+      "name_ru": "",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1502051022",
+      "name_lat": "ULTRAMARINES VENI VIDI VICHI",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "48525698",
+      "name_lat": "ULRIKA PRINCESS",
+      "name_ru": "",
+      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "129162449",
+      "name_lat": "ULYBKA FORTUNY OLYMPIA",
+      "name_ru": "",
+      "breed": "ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1736996452",
+      "name_lat": "ULTIMATE BULLY ANTEY",
+      "name_ru": "",
+      "breed": "БУЛЛИ ПОКЕТ /",
+      "breed_en": "",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1467608310",
+      "name_lat": "ULTRA CRISTAL LEOPOLDO",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1880085766",
+      "name_lat": "ULTRA CRISTAL TERRO",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1297358979",
+      "name_lat": "ULANA",
+      "name_ru": "",
+      "breed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "163615390",
+      "name_lat": "ULTRA KRISTAL TERRO",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1789452734",
+      "name_lat": "ULTRA",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1570867652",
+      "name_lat": "ULYANA",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1174484060",
+      "name_lat": "ULLER 2 IZ NOVOI SIBIRI",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "358154443",
+      "name_lat": "ULTRA CRISTAL ORION",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "162665642",
+      "name_lat": "ULYANA OF MAGICAL AND",
+      "name_ru": "",
+      "breed": "ВЕСТ ХАЙЛЕНД УАЙТ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "357505410",
+      "name_lat": "ULLA FROM MOLOSS HOUSE",
+      "name_ru": "",
+      "breed": "КЛАМБЕР СПАНИЕЛЬ",
+      "breed_en": "CLUMBER SPANIEL",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1514265939",
+      "name_lat": "ULTRAMARINE'S AMELIA",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "BEAGLE",
+      "total_shows": 26,
+      "competition_dog_id": null
+    },
+    {
+      "id": "155755409",
+      "name_lat": "ULYBKA FORTUNY GOSPOZHA UDACHA",
+      "name_ru": "",
+      "breed": "МАЛЫЙ БРАБАНСОН",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "221010916",
+      "name_lat": "ULHAN BELYI VOIN",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "SREDNEASIATSKAYA OVCHARKA (CENTRAL ASIA SHEPHERD DOG)",
+      "total_shows": 43,
+      "competition_dog_id": null
+    },
+    {
+      "id": "612",
+      "name_lat": "ULYSSE AL SAIF MAJAL",
+      "name_ru": "",
+      "breed": "САЛЮКИ",
+      "breed_en": "SALUKI",
+      "total_shows": 6,
+      "competition_dog_id": 612
+    },
+    {
+      "id": "1452610330",
+      "name_lat": "ULETNYI BREND S EGERSKOY SLOBODY",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "SHETLAND SHEEPDOG",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1722943684",
+      "name_lat": "ULTIMATE CHOICE",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "727198719",
+      "name_lat": "ULYANA CZAREVNA IZ STAROY SHUI",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "668975515",
+      "name_lat": "ULYBKA SEVERA SNEZHNAYA KOROLEVA",
+      "name_ru": "",
+      "breed": "САМОЕД",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "219928566",
+      "name_lat": "ULSAN VON WEISSNACHTE",
+      "name_ru": "",
+      "breed": "СОЛЬЮ ШНАУЦЕР ПЕРЕЦ С",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1969650317",
+      "name_lat": "ULTRA IZ NOVOI SIBIRI (L-H)",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1505621493",
+      "name_lat": "ULYBKA FORTUNY",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "GERMAN TOY SPITZ (POMERANIAN)",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1792576900",
+      "name_lat": "ULYBKA FORTUNY ULTRAMARIN",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1465906173",
+      "name_lat": "ULTIMALE BULLY VULKAN",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "308471758",
+      "name_lat": "ULYBKA MONY LIZY ITALIA AMORE MIA",
+      "name_ru": "",
+      "breed": "GERMAN SPITZ TOY (POMERANIAN)",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1955181834",
+      "name_lat": "ULTIMATUM OT GVENDOLEN",
+      "name_ru": "",
+      "breed": "БРАБАНСОН СТАНДАРТНЫЙ – чёрный, белый, коричневый",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "394803511",
+      "name_lat": "ULTRA CRISTAL KONTR- ADMIRAL",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1726539575",
+      "name_lat": "ULETNYY KHAN-PATSAN IZ ZAMKA MELVIN",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1828576800",
+      "name_lat": "ULTRAMARIN",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1272171647",
+      "name_lat": "ULTRASHINE PLAKI DE LAYT",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "405555754",
+      "name_lat": "ULYBKA FORTUNY IZ DOMA KUNETS",
+      "name_ru": "",
+      "breed": "АФФЕНПИНЧЕР БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "578439064",
+      "name_lat": "ULLI",
+      "name_ru": "",
+      "breed": "АКИТА КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "465223265",
+      "name_lat": "ULAN IZ DOMA TAJUR",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬСРЕДНИЙ ОКРАС БЕЛЫЙ,ЧЕРНЫЙ, КОВАЛЕНКО МАРИНА ГОРДЕЕВНА КОРИЧНЕВЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1184892052",
+      "name_lat": "ULTRO BREND BANESSA",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1244001838",
+      "name_lat": "ULTIMATE BULLI LEILA",
+      "name_ru": "",
+      "breed": "ПОКЕТ / AMERICAN",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "92899144",
+      "name_lat": "ULLI",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "633885852",
+      "name_lat": "ULYBKA FORTUNY GORTENZIYA",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "287263392",
+      "name_lat": "ULTRA TOP BLACK",
+      "name_ru": "",
+      "breed": "РОТВЕЙЛЕР /",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "574402500",
+      "name_lat": "ULLA",
+      "name_ru": "",
+      "breed": "ГРЕНЛАНДСКАЯ СОБАКА",
+      "breed_en": "GREENLAND DOG",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1184455531",
+      "name_lat": "ULAN Z BESKIDZKIEGO MATECZNIKA",
+      "name_ru": "",
+      "breed": "ПОЛЬСКАЯ ОХОТНИЧЬЯ СОБАКА",
+      "breed_en": "POLISH HUNTING DOG",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1034323831",
+      "name_lat": "ULTRA MODERN TENDERLING",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed_en": "",
+      "total_shows": 32,
+      "competition_dog_id": null
+    },
+    {
+      "id": "251791217",
+      "name_lat": "ULTIMATUM IZ DOMA KUNETS",
+      "name_ru": "",
+      "breed": "АФФЕНПИНЧЕР",
+      "breed_en": "AFFENPINSCHER",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "43164466",
+      "name_lat": "ULF IZ BELOGO JARA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 26,
+      "competition_dog_id": null
+    },
+    {
+      "id": "28623352",
+      "name_lat": "ULMARISSA VON WEISSNACHTE",
+      "name_ru": "",
+      "breed": "СОЛЬЮ ШНАУЦЕР ПЕРЕЦ С",
+      "breed_en": "SCHNAUZER P-S",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "488294179",
+      "name_lat": "ULTIMATUM STAFF ALTO DEL KARMEN",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1306205047",
+      "name_lat": "ULRIKA FOR VALESABULLS OT JULIANNY CHARM",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
+      "breed_en": "",
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "749404723",
+      "name_lat": "ULTRA SHTUCHKA S KRASNOY GORKI (G)",
+      "name_ru": "",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА ГРЮНЕНДАЛЬ",
+      "breed_en": "BELGIAN SHEPHERD DOG GROENENDAEL",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1135958837",
+      "name_lat": "ULDERIKA IZ ELISGRADA",
+      "name_ru": "",
+      "breed": "ГРИФФОН",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1191085212",
+      "name_lat": "ULTRAMARINE'S EXCLUSIVE FETA",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "BEAGLE",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "567812322",
+      "name_lat": "ULYBKA SEVERA TAYNA TRYUFELNOGO LESA",
+      "name_ru": "",
+      "breed": "ЯПОНСКИЙ ХИН",
+      "breed_en": "JAPANESE CHIN",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1075005560",
+      "name_lat": "ULTRAMARINE'S SUGAR DADDY",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "BEAGLE",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "838826556",
+      "name_lat": "ULIANA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА / AMERICAN AKITA",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1899783234",
+      "name_lat": "ULUF IVI'S HARTO",
+      "name_ru": "",
+      "breed": "ШАР ПЕЙ",
+      "breed_en": "SHAR PEI",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1400634563",
+      "name_lat": "ULETNAYA SHTUCHKA IZ OZHERELIA",
+      "name_ru": "",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1278387988",
+      "name_lat": "ULF IZ HANSKOI RATI",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 30,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1175690653",
+      "name_lat": "ULDERIKA IZ ELISGRADA ( GR.BEL. )",
+      "name_ru": "",
+      "breed": "БЕЛЬГИЙСКИЙ ГРИФФОН",
+      "breed_en": "GRIFFON BELGE",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1076994629",
+      "name_lat": "ULAN",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "RUSSKAYA PSOVAYA BORZAYA (BORZOI)",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1995926033",
+      "name_lat": "ULTIMATE LOVE PERSEUS",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1479998442",
+      "name_lat": "ULLA FALA LOVE'A",
+      "name_ru": "",
+      "breed": "ВЕЙМАРАНЕР К-Ш",
+      "breed_en": "WEIMARANER SHORT-HAIRED",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1282995920",
+      "name_lat": "ULTRA S KNJAZHESKOGO DVORA",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "181341992",
+      "name_lat": "ULMAS ALEANT'TAR IZ STRANY BELOVODIYE",
+      "name_ru": "",
+      "breed": "КАЗАХСКИЙ ТАЗЫ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1505963558",
+      "name_lat": "ULIUS DU MAS ENSOLEILLE",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "270729386",
+      "name_lat": "ULTRAMARIN IZ ZAMKA MELVIN",
+      "name_ru": "",
+      "breed": "NEWFOUNDLАND",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1142983863",
+      "name_lat": "ULT-ERA OF BLOODREINA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА /",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1456015584",
+      "name_lat": "ULMA WALLES APRIKOT",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1878712814",
+      "name_lat": "ULMA SHINE STAR STEFANIA",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1760241984",
+      "name_lat": "ULMA",
+      "name_ru": "",
+      "breed": "ЛЕОНБЕРГЕР МОСКОВСКАЯ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "114359692",
+      "name_lat": "ULTRA CRISTAL KAIZER",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "106434537",
+      "name_lat": "ULZANA",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "8226546",
+      "name_lat": "ULLA BELLA",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "164842390",
+      "name_lat": "ULMA STAR GIRL",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "852972525",
+      "name_lat": "ULAJUK",
+      "name_ru": "",
+      "breed": "ГРЕНЛАНДСКАЯ СОБАКА /",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "170139826",
+      "name_lat": "ULYANA IZ MUROMSKOI VATAGI",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1026394676",
+      "name_lat": "ULARTOK",
+      "name_ru": "",
+      "breed": "ГРЕНЛАНДСКАЯ СОБАКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1985986806",
+      "name_lat": "ULARTOK",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ ГРЕНЛАНДСКАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "208955738",
+      "name_lat": "ULF",
+      "name_ru": "",
+      "breed": "PETIT BRABANSON",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "379079397",
+      "name_lat": "ULLI",
+      "name_ru": "",
+      "breed": "ТАКСА КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "899036566",
+      "name_lat": "ULTRASHINE CENTR VSELENNOY",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1190210941",
+      "name_lat": "ULDERICO RICKY LIBAU MER",
+      "name_ru": "",
+      "breed": "ЯКУТСКАЯ ГОНЧАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1551454170",
+      "name_lat": "ULIANA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА /",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1866704059",
+      "name_lat": "ULRIH VOM HAUS SCHIRAN",
+      "name_ru": "",
+      "breed": "СХИППЕРКЕ /",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1716476868",
+      "name_lat": "ULYSSES FALA LOVE'A",
+      "name_ru": "",
+      "breed": "ВЕЙМАРАНЕР К-Ш",
+      "breed_en": "WEIMARANER SHORT-HAIRED",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1302598520",
+      "name_lat": "ULTIMATE BULLY ROCKY",
+      "name_ru": "",
+      "breed": "ПОКЕТ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "296834249",
+      "name_lat": "ULYANA IZ DINASTII RUTTS",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1708980391",
+      "name_lat": "ULTRA WHITE KIDDY WIN'S",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "263539632",
+      "name_lat": "ULTRA CRISTAL COMMISSAR",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "131983345",
+      "name_lat": "ULTRAVIOLET FIRE IZ DINASTII CHEMPIONOV",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "851195795",
+      "name_lat": "ULRIH IZ ALTAISKOI DINASTII",
+      "name_ru": "",
+      "breed": "КОРСО",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1524615998",
+      "name_lat": "ULYBKA",
+      "name_ru": "",
+      "breed": "YAKUTSKAYA LAIKA",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "224693331",
+      "name_lat": "ULTIMATE",
+      "name_ru": "",
+      "breed": "КЕРН СТАФФОРДШИРСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "303443320",
+      "name_lat": "ULTIMATE BULLY ROKKY",
+      "name_ru": "",
+      "breed": "ШЕЛТИ АМЕРИКАНСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "24672619",
+      "name_lat": "ULYSSES ODISSEYA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1855957319",
+      "name_lat": "ULTIMATE BULLY VARVARA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1531475759",
+      "name_lat": "ULF VON WALSHAGEN",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "GERMAN SHEPHERD DOG DOUBLE COAT",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "162388782",
+      "name_lat": "ULYBKA IZ DOLINY SOLNCA",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "GOLDEN RETRIEVER",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "207846567",
+      "name_lat": "ULTRAMARIN IZ DINASTII CHEMPIONOV",
+      "name_ru": "",
+      "breed": "КОРСО",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1867941470",
+      "name_lat": "ULIS",
+      "name_ru": "",
+      "breed": "ТАКСА СТАНДАРТНАЯ Ж-Ш",
+      "breed_en": "DACHSHUND STANDARD WIRE-HAIRED",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "196915682",
+      "name_lat": "ULAANA RUFARO UORNESH",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ",
+      "breed_en": "",
+      "total_shows": 25,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1548382798",
+      "name_lat": "UL'M'ER GOSUDAREV FAVORITE",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "737989267",
+      "name_lat": "ULTIMATE DREAM BEST POM",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "GERMAN TOY SPITZ (POMERANIAN)",
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1204113469",
+      "name_lat": "ULETNAYA OSOBA",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР /",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "986109373",
+      "name_lat": "ULTRA VAN HET GROOT WEZENLAND",
+      "name_ru": "",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
+      "breed_en": "BELGIAN SHEPHERD DOG MALINOIS",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "439894504",
+      "name_lat": "ULYBKA SEVERA YASUMI KAGAYAKU HOSHI",
+      "name_ru": "",
+      "breed": "СИБА / SHIBA",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1978729855",
+      "name_lat": "ULYBKA MECHTY IZ PRYANICHNOGO DOMIKA",
+      "name_ru": "",
+      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "83441773",
+      "name_lat": "ULTIMATUM STAFF BERETTA",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 25,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1726696464",
+      "name_lat": "ULTRAMARIN EVERYONES DREAM S BEREGA LABY",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "825957578",
+      "name_lat": "ULTRAMARINE'S BEATRIS",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "BEAGLE",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "142423187",
+      "name_lat": "ULFAT IZ DONSKOY LIBERII",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "AMERICAN AKITA",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1968672410",
+      "name_lat": "ULIX IZ MIRASHELA",
+      "name_ru": "",
+      "breed": "ВОЛЬФШПИЦ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1568097650",
+      "name_lat": "ULTRA LUMI TEL",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1197433614",
+      "name_lat": "ULTRA AFFECTION",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1045624047",
+      "name_lat": "ULMARINE SUN DELIGHT",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1523433665",
+      "name_lat": "ULTIMATUM STAFF ARCHIE INVINCIBLE",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "782217494",
+      "name_lat": "ULTRA CRISTAL RATMIR SHEMSU SOTIS",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1984872445",
+      "name_lat": "ULTRA SHIK IZ GRADA KATERINY",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 27,
+      "competition_dog_id": null
+    },
+    {
+      "id": "801044199",
+      "name_lat": "ULANA MEGGI KEJT",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "753783102",
+      "name_lat": "ULYBKA FORTUNY GALANRNY KAVALER",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "180238346",
+      "name_lat": "ULTRA WHITE PEARL",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1719383984",
+      "name_lat": "ULYBKA BIS STRELA",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1814073644",
+      "name_lat": "ULYANA-ULINKA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ МАЛЫЙ ШПИЦ (оранжевый, серый, другие окрасы)",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1089880677",
+      "name_lat": "ULRIKA MARY FOR ANREIZ WIN",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "872271270",
+      "name_lat": "ULIANA-ALWAYS FIRST IZ MARIGRADA",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "ITALIAN CANE CORSO",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1416248285",
+      "name_lat": "ULANA STAR ONVORD",
+      "name_ru": "",
+      "breed": "ШАР ПЕЙ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "351646615",
+      "name_lat": "ULTRA IS DOMA TORRA",
+      "name_ru": "",
+      "breed": "РОТВЕЙЛЕР /",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "551091341",
+      "name_lat": "ULDITA DOLCHE VITA",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1310984132",
+      "name_lat": "ULRIKA IZ PALEVYH BULDOGOV",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "FRENCH BULLDOG",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "621433399",
+      "name_lat": "ULYBKA MILOY LADY",
+      "name_ru": "",
+      "breed": "САМОЕД",
+      "breed_en": "SAMOYED",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1232381831",
+      "name_lat": "ULTRA PRETTY PEREGRINA",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1216753241",
+      "name_lat": "ULYBKA FORTUNY TALISMAN UDACHI",
+      "name_ru": "",
+      "breed": "DACHSHUND MINIATURE",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "662055768",
+      "name_lat": "ULLANMAEN HAT TRICK",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "646156125",
+      "name_lat": "ULTRASHIK SICILIA",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "539193567",
+      "name_lat": "ULTEGRA TO SAISHN",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "562773120",
+      "name_lat": "ULENSHPIGEL OT NEVSKOGO HOBBITA (P.BR.)",
+      "name_ru": "",
+      "breed": "ПТИ БРАБАНСОН",
+      "breed_en": "PETIT BRABANCON",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1525847655",
+      "name_lat": "ULTRAMARIN",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1330657304",
+      "name_lat": "ULAN POLAR BEAR DE VIVA LEGENDA",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1469662867",
+      "name_lat": "ULLIS SOLAR SPLENDER KING",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "751698817",
+      "name_lat": "ULYBKA SEVERA TSURINA VENETCIA",
+      "name_ru": "",
+      "breed": "САМОЕДСКАЯ СОБАКА /",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1973016111",
+      "name_lat": "ULAAN BAATYR S ENISEJSKIKH POLEY",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1948715801",
+      "name_lat": "ULZANA GAMMI DANNA",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1548397474",
+      "name_lat": "ULMA",
+      "name_ru": "",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "110102294",
+      "name_lat": "ULTRAMARIM II IZ DINASTII CHEMPIONOV",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1308366240",
+      "name_lat": "ULTRA SHTUCHKA S KRASNOY GORKI",
+      "name_ru": "",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1777650616",
+      "name_lat": "ULRIKA LA COMPONELLA",
+      "name_ru": "",
+      "breed": "ЧЕРНЫЙ, МРАМОРНЫЙ",
+      "breed_en": "DEUTSCHE DOGGE BLACK, HARLEQUIN, OVERLAY",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1696623303",
+      "name_lat": "ULISS OF MAGICAL LAND",
+      "name_ru": "",
+      "breed": "ВЕСТ ХАЙЛЕНД ВАЙТ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1818791250",
+      "name_lat": "ULANA ALIADO IZ URALSKOY PLEYADY ZVYOZD",
+      "name_ru": "",
+      "breed": "БОКСЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "289648140",
+      "name_lat": "ULIBKA SOLNTSA ZIRAEL",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1561050506",
+      "name_lat": "ULTIMATUM IZ SKAZKI O KHVOSTE FEY",
+      "name_ru": "",
+      "breed": "БИВЕР ТЕРЬЕР",
+      "breed_en": "BIEWER TERRIER",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "269831918",
+      "name_lat": "ULRIK THE'PRINSE SHOLOM ALEIHEM",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "827503005",
+      "name_lat": "UL HEYKA EMIL",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "999958129",
+      "name_lat": "ULTRA DOG STENLY EFFEKT BABOCHKI",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "216734071",
+      "name_lat": "ULYBKA LETA DLYA SNEZHNOJ CHAJKI",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1526709557",
+      "name_lat": "Ultra love IZ DOLINY SOLNCA",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "266885123",
+      "name_lat": "ULBAR COOL BOY",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1544998667",
+      "name_lat": "ULYBKA FORTUNY PYATYI ELEMENT",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "929421717",
+      "name_lat": "ULETNYY PAREN IZ MISHKINOGO DOMA",
+      "name_ru": "",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
+      "breed_en": "DACHSHUND KANINCHEN SMOOTH-HAIRED",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1196469435",
+      "name_lat": "ULFKHILD IZ VOROBINOGO GNEZDA",
+      "name_ru": "",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "51014700",
+      "name_lat": "ULTRA-VIOLET ROCK CRYSTALL IZ ANGARII",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "323272684",
+      "name_lat": "ULINA GREY HAZE",
+      "name_ru": "",
+      "breed": "С СОЛЬЮ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1088922558",
+      "name_lat": "ULTRASEA OT PANDY SHARM",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "GERMAN TOY SPITZ (POMERANIAN)",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1217381635",
+      "name_lat": "ULTRASHIK VALENTINO",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "42292603",
+      "name_lat": "ULTRA LYALYA S TEMERNIKA",
+      "name_ru": "",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
+      "breed_en": "DACHSHUND STANDARD SMOOTH-HAIRED",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1190700010",
+      "name_lat": "ULLIRI IZ BELOGO JARA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "421812859",
+      "name_lat": "ULIBKA SOLNTSA VESELIN VIKTORIOS",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "948984446",
+      "name_lat": "ULFSAAR URSA",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "276274739",
+      "name_lat": "ULTRA SAGITTARIUS SIGN",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "JACK RUSSELL TERRIER",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1613326991",
+      "name_lat": "ULYANA VIVAT",
+      "name_ru": "",
+      "breed": "BULL TERRIER STANDART WHITE",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1348598918",
+      "name_lat": "ULISS VON HAUS DEVARTIS",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "274732600",
+      "name_lat": "ULYANA IZ DOMA LEVSHOVOI",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "652184997",
+      "name_lat": "ULISSA WISE RUSLANA",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "58211443",
+      "name_lat": "ULTRAMARIN S BEREGOV BALTIKI",
+      "name_ru": "",
+      "breed": "СКОТЧ ИРСКИЙ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1483234337",
+      "name_lat": "ULTRA SPESHIALITY BAY ATSTSEPTUS OLIS",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "160863717",
+      "name_lat": "ULIY CEZAR ОТ LA BUFFO BULLI",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "308376212",
+      "name_lat": "ULF",
+      "name_ru": "",
+      "breed": "ПТИ БРАБАНСОН",
+      "breed_en": "PETIT BRABANCON",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "416442561",
+      "name_lat": "ULYBKA FORTUNY OLIVIA",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "116644339",
+      "name_lat": "ULLASTIINA AATU",
+      "name_ru": "",
+      "breed": "ФИНСКИЙ ШПИЦ /",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1911089465",
+      "name_lat": "ULTRA IZ TERLETSKOY DUBRAVY",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "DALMATIAN",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1762783967",
+      "name_lat": "ULAAN SOR BALU",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1030928183",
+      "name_lat": "ULTRAMARIN",
+      "name_ru": "",
+      "breed": "КОРСО / ITALIAN CANE",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1820212730",
+      "name_lat": "ULISES MASTINEUM",
+      "name_ru": "",
+      "breed": "МАСТИФ",
+      "breed_en": "MASTIFF",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1500286162",
+      "name_lat": "ULISSA WISE NIKKO DE NIROS",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "859929218",
+      "name_lat": "ULTRA ADRENALINE",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "100168907",
+      "name_lat": "ULYANA IZ RUSSKOI ZVEZDY",
+      "name_ru": "",
+      "breed": "БУРЯТ-МОНГОЛЬСКАЯ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1942434676",
+      "name_lat": "ULYBKA SOLNTSA YARNSAKSA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1355171441",
+      "name_lat": "ULTRA HAUSE'PALMARINO PEKASSA GALLERY",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "734692410",
+      "name_lat": "ULTIMATE BULLY ROXY",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "589435367",
+      "name_lat": "ULTIMATE BULLY PANDORA",
+      "name_ru": "",
+      "breed": "ПОКЕТ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1347605581",
+      "name_lat": "ULLIUS URFI DZHUS",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1871733470",
+      "name_lat": "ULYBKA SEVERA GRACZIOZNAYA LADY",
+      "name_ru": "",
+      "breed": "ЯПОНСКИЙ ХИН БЕЛО- РЫЖИЙ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1199403106",
+      "name_lat": "ULMA IZ DOMA LOTSMAN",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1279762411",
+      "name_lat": "ULRIKH IZ ALTAYSKOY DINASTII",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "163645833",
+      "name_lat": "ULTRAMARIN S BEREGOF BALTIKI",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР /",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1911018951",
+      "name_lat": "ULYBKA SOLNTSA YABBA DABBA DU",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1376053956",
+      "name_lat": "ULMIRA DLYA WINNER HUND",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1058501519",
+      "name_lat": "ULTIMATUM IZ LIKINSKIKH",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "MINIATURE PINSCHER",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1553038535",
+      "name_lat": "ULFI CHAMS",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "544478517",
+      "name_lat": "ULRIC ASPIRE TO INSPIRE CONSTANTA PRAIM",
+      "name_ru": "",
+      "breed": "БУЛЬМАСТИФ",
+      "breed_en": "BULLMASTIFF",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "17571100",
+      "name_lat": "ULYBKA FORTUNY GALANTNY KAVALER",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ жесткошерстная",
+      "breed_en": "DACHSHUND MINIATURE WIRE-HAIRED",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "433641890",
+      "name_lat": "ULFI CHAMS",
+      "name_ru": "",
+      "breed": "МОПС / PUG",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1348312683",
+      "name_lat": "ULTRAMARIN",
+      "name_ru": "",
+      "breed": "КОРСО",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "892717389",
+      "name_lat": "ULTRA VIOLET IZ DOMA VENGRE",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "104985779",
+      "name_lat": "ULIXES-ODISSEUS ARGO",
+      "name_ru": "",
+      "breed": "CHINESE CRESTED DOG",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1258848302",
+      "name_lat": "ULLA SNEJNAYA BURYA",
+      "name_ru": "",
+      "breed": "САМОЕД /",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1287533000",
+      "name_lat": "ULMAS",
+      "name_ru": "",
+      "breed": "КОРОТКОШЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "402209015",
+      "name_lat": "ULLI",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ СОБАКА) СТАНДАРТНАЯ /",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "595660371",
+      "name_lat": "ULAF IZ MIRASHELA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "40294817",
+      "name_lat": "ULAN HRABRIY VOIN",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1021826681",
+      "name_lat": "ULLA PIA CHILL",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1260995436",
+      "name_lat": "ULMAS",
+      "name_ru": "",
+      "breed": "Короткошерст ный",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1057704672",
+      "name_lat": "ULLI",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ СОБАКА) СТАНДАРТНАЯ / XOLOITZCUINTLE",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "907413226",
+      "name_lat": "ULYBKA FORTUNY DRAGONFLY",
+      "name_ru": "",
+      "breed": "DACHSHUND MINIATURE",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1088048407",
+      "name_lat": "ULTRAMARINE'S СТАР ЭЙДЖ ВЕРОНА",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "553325401",
+      "name_lat": "ULFI'S HANNA MONTANA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "818195523",
+      "name_lat": "ULTRAVIOLET",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "6770064",
+      "name_lat": "ULTIMATUM STAF AURORA GOLDEN TIME",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1077939983",
+      "name_lat": "ULTIMATUM STAFF AURORA GOLDEN TIME",
+      "name_ru": "",
+      "breed": "AMERICAN",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1988575069",
+      "name_lat": "ULTRA CRISTAL YANTARNY MED",
+      "name_ru": "",
+      "breed": "БИГЛЬ / BEAGLE",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1885098752",
+      "name_lat": "ULTRA CRISTAL LUCSOR",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "166205027",
+      "name_lat": "ULMA VOM SAFARI LAND",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "GERMAN SHEPHERD DOG DOUBLE COAT",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "789820306",
+      "name_lat": "ULIS MAGIAN FUHTEL OT BARBATSUTSY",
+      "name_ru": "",
+      "breed": "ШНАУЦЕР ЧЕРНЫЙ",
+      "breed_en": "SCHNAUZER BLACK",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1549745241",
+      "name_lat": "ULMIRA-CHERNAYA ZHEMCHUZHINA",
+      "name_ru": "",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "127314160",
+      "name_lat": "ULISSA WISE SHARKEY MELROUN",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ МИНИАТЮРНЫЙ ШПИЦ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "749741437",
+      "name_lat": "ULENSHPIGEL OT NEVSKOGO HOBBITA",
+      "name_ru": "",
+      "breed": "МАЛЫЙ БРАБАНСОН",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "469335589",
+      "name_lat": "ULISSA WISE EL TORRO",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "735166203",
+      "name_lat": "ULZANA VASELYJE REBJATA",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ (ГЛАДКОШЕРСТНЫЙ)",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "644721012",
+      "name_lat": "ULFI CHAMS",
+      "name_ru": "",
+      "breed": "МОПС БЕЖЕВЫЙ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "931969966",
+      "name_lat": "ULFASAR ZOLOTOY DUH",
+      "name_ru": "",
+      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ СЕТТЕР /",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1310633026",
+      "name_lat": "ULMAS",
+      "name_ru": "",
+      "breed": "ВЕЙМАРАНЕР Короткошерстный",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "541790651",
+      "name_lat": "ULISS IZ PLEMENI KEDRA",
+      "name_ru": "",
+      "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1189716229",
+      "name_lat": "ULKA",
+      "name_ru": "",
+      "breed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1527994749",
+      "name_lat": "ULYBA",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1629752050",
+      "name_lat": "ULTRAMARIN",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН ИТАЛЬЯНСКИЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1447569856",
+      "name_lat": "ULMA",
+      "name_ru": "",
+      "breed": "КИТАЙСКИЙ СТОРОЖЕВАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1856878806",
+      "name_lat": "ULTIMATUM MODNY STYLE",
+      "name_ru": "",
+      "breed": "ИРЛАНДСКИЙ МЯГКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1785960651",
+      "name_lat": "ULTRA IZ NOVOI SIBIRI ( L-H )",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1182436391",
+      "name_lat": "ULTRAMODNAYA SHTUCHKA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "290954504",
+      "name_lat": "ULISS SHOKO LISS",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА К-Ш",
+      "breed_en": "CHIHUAHUA SMOOTH-HAIRED",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1187101825",
+      "name_lat": "ULYBKA SEVERA CVETOK SAKURY",
+      "name_ru": "",
+      "breed": "Японский хин",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1152745855",
+      "name_lat": "ULRIKA MAJ IZ ZAMKA PRIORA",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1937487520",
+      "name_lat": "ULYANA SIYAYUSHCHIJ BRILLIANT",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1267809523",
+      "name_lat": "ULANA",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "738429275",
+      "name_lat": "ULAN",
+      "name_ru": "",
+      "breed": "BORZOI - RUSSIAN HUNTING",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "798165486",
+      "name_lat": "ULMA",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ МОСКОВСКАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1931441344",
+      "name_lat": "ULMA",
+      "name_ru": "",
+      "breed": "КОРСО СТОРОЖЕВАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1445561543",
+      "name_lat": "ULMA",
+      "name_ru": "",
+      "breed": "МОСКОВСКАЯ СТОРОЖЕВАЯ / MOSCOW",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "375491167",
+      "name_lat": "ULLA BELLA",
+      "name_ru": "",
+      "breed": "MINIATURE",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1866203922",
+      "name_lat": "ULLA BELLA",
+      "name_ru": "",
+      "breed": "СЕРЕБРОМ /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1328696905",
+      "name_lat": "ULYBKA FORTUNY DIVA LAGUNA",
+      "name_ru": "",
+      "breed": "ТАКСА КРОЛИЧЬЯ Д-Ш",
+      "breed_en": "DACHSHUND KANINCHEN LONG HAIRED",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1688239406",
+      "name_lat": "ULTRA FANNI S BEREGA TURI",
+      "name_ru": "",
+      "breed": "РОТВЕЙЛЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "10935229",
+      "name_lat": "ULENSHPIGEL OT NEVSKOGO",
+      "name_ru": "",
+      "breed": "ЛЬНЫЙ МАЛЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1387872280",
+      "name_lat": "ULRIKA GABRIELLA",
+      "name_ru": "",
+      "breed": "ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "724122367",
+      "name_lat": "ULISSA CHARM ITSELF IZ SOLNECHNOGO GORODA",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1896591504",
+      "name_lat": "ULTIMATUM) САНТА",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "121859426",
+      "name_lat": "ULTRA SMART SOUL MENGO CELEBRATION",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР /ЧЕРН-СЕР/",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "866620703",
+      "name_lat": "ULTIMA BLACK S IZJUMINKOI JULIANY",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "294131893",
+      "name_lat": "ULISS VELESOVICH",
+      "name_ru": "",
+      "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "671545912",
+      "name_lat": "ULTRA SPECIAL",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "748928682",
+      "name_lat": "ULRIKH MARLEN GERVIK",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "271187177",
+      "name_lat": "ULYBKA FORTUNY MIMOZA",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "259668051",
+      "name_lat": "Ulan Von Der Lengernheide",
+      "name_ru": "",
+      "breed": "SHEPHERD DOG DOUBLE",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1641733493",
+      "name_lat": "ULMA",
+      "name_ru": "",
+      "breed": "МОСКОВСКАЯ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "585605702",
+      "name_lat": "ULTRAVIOLET IZ TERLESKOY DUBRAVY",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1875152914",
+      "name_lat": "ULTRA FLORENCE",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "372816042",
+      "name_lat": "ULRICH IZ FORTUNA MERDI",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1094872704",
+      "name_lat": "ULLA VON HAUS DEVARTIS",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "249471963",
+      "name_lat": "ULYBKA DLYA ANNY",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "869173045",
+      "name_lat": "ULYBKA FORTUNY DLYA ZHELYAVI",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "926397944",
+      "name_lat": "ULTIMATE BULLY CHOCOLATE QUEEN",
+      "name_ru": "",
+      "breed": "AMERICAN BULLY",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "863929773",
+      "name_lat": "ULMA",
+      "name_ru": "",
+      "breed": "СТОРОЖЕВАЯ ПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1738974823",
+      "name_lat": "ULISSA WISE FELISSIYA ALIS",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "800664187",
+      "name_lat": "ULTIMATUM STAFF ALTO DEL CARMEN",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1105340239",
+      "name_lat": "ULVAR RUNGERD DOLLI",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С СОЛЬЮ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "530951677",
+      "name_lat": "ULWE",
+      "name_ru": "",
+      "breed": "КАНЕ-КОРСО КИТАЙСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1082047209",
+      "name_lat": "ULMA",
+      "name_ru": "",
+      "breed": "MOSCOW WATCH",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "366948449",
+      "name_lat": "ULULOKA",
+      "name_ru": "",
+      "breed": "RHODESIAN",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1810637598",
+      "name_lat": "ULBERN IZ BOLSHOGO DOMA",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "607973020",
+      "name_lat": "ULANKA COLOUR FEERIA",
+      "name_ru": "",
+      "breed": "ПАПИЙОН /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1509708174",
+      "name_lat": "ULTRA HOUSE`PALMARINO PEKASSA GALLERY",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "551805929",
+      "name_lat": "ULTRA WINNER",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР / JACK",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1974900147",
+      "name_lat": "ULYBKA SOLNTSA YUMI MALENKAYA PRINTSESSA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1590525671",
+      "name_lat": "ULTIMATUM STAFF GESHTAL'T ZAKRYT",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР /",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "54147906",
+      "name_lat": "ULTRA MAGIC IZ IMPERII ADAMANT",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "337487767",
+      "name_lat": "ULUF ESGER GLYUKOZA",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "SREDNEASIATSKAYA OVCHARKA (CENTRAL ASIA SHEPHERD DOG)",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "654635525",
+      "name_lat": "ULTIMATE BULLY VULKAN",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1145935991",
+      "name_lat": "ULARD ANNA-LUIZA",
+      "name_ru": "",
+      "breed": "AIREDALE TERRIER",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "799323681",
+      "name_lat": "ULTIMATUM STAFF BESTIYA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1181214010",
+      "name_lat": "ULTIMATE",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "141154376",
+      "name_lat": "ULAN VOM KLINOV HOF",
+      "name_ru": "",
+      "breed": "ХОВАВАРТ",
+      "breed_en": "HOVAWART",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1016265545",
+      "name_lat": "ULTRA DELICIJA",
+      "name_ru": "",
+      "breed": "ПАРСОН РАССЕЛ ТЕРЬЕР",
+      "breed_en": "PARSON RUSSELL TERRIER",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "427030470",
+      "name_lat": "ULTIMATUM STAFF GLAVNYY GEROY",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1907838357",
+      "name_lat": "ULTRAMARIN II IZ DINASTII CHEMPIONOV",
+      "name_ru": "",
+      "breed": "КОРСО / ITALIAN CANE",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1265768196",
+      "name_lat": "ULLANMAEN MIDNIGHT BLUE OCEAN",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1151243311",
+      "name_lat": "ULMA AUKSINE PILNATIS",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "651503707",
+      "name_lat": "ULTRA AWARD",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "746963606",
+      "name_lat": "ULTRA ANGEL BEBI",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДР.ОКРАСЫ",
+      "breed_en": "GERMAN SPITZ MINIATURE ORANGE, GREY & OTHER COLOR",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "277758351",
+      "name_lat": "ULAR IZ BELOY STAI",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ",
+      "breed_en": "POODLE TOY",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "564261149",
+      "name_lat": "ULISSA WISE SHARON TRACE",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "183529731",
+      "name_lat": "ULTRA WINNER BULLY NEXT LEVEL YASHA",
+      "name_ru": "",
+      "breed": "ШЕЛТИ АМЕРИКАНСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "949796271",
+      "name_lat": "ULANA PRIDE OF VALENCIA",
+      "name_ru": "",
+      "breed": "КОРСО / ITALIAN CANE",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "188143342",
+      "name_lat": "ULYBKA SEVERA ZHELAN RUSSKIY BOGATYR",
+      "name_ru": "",
+      "breed": "САМОЕДСКАЯ СОБАКА /",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1312414955",
+      "name_lat": "ULFI CHAMS",
+      "name_ru": "",
+      "breed": "МОПС БЕЖЕВЫЙ / PUG FAWN",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1611798618",
+      "name_lat": "ULTIMATE",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1595437219",
+      "name_lat": "ULTRAMARINOV",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "152365136",
+      "name_lat": "Ultramarin Blue Stempfort Vaudeville",
+      "name_ru": "",
+      "breed": "Д/Ш",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "248524551",
+      "name_lat": "ULTIMATE DEPTH S MYSA HERSONES",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН ЧЁРНО- ПОДПАЛЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "760864727",
+      "name_lat": "ULTRAMARIN E'S BEATRICE",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1833425355",
+      "name_lat": "ULAAN BAATYR S ENISEISKIH POLEI",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1658146053",
+      "name_lat": "ULTRAXION DRAGON",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1070317917",
+      "name_lat": "ULMA",
+      "name_ru": "",
+      "breed": "СТОРОЖЕВАЯ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "53314269",
+      "name_lat": "ULYANA DU DORMEUR DU VAL VIVANT",
+      "name_ru": "",
+      "breed": "СОЛОВЬЕВА ТАТЬЯНА АНАТОЛЬЕВНА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "943021808",
+      "name_lat": "ULLI",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "381590615",
+      "name_lat": "ULTRA BRAVO",
+      "name_ru": "",
+      "breed": "СОБАКА ПУХОВАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "56913990",
+      "name_lat": "ULTIMATE BULLY TORRO",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1905705436",
+      "name_lat": "ULTIMATE BULLY PATRICK",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1292262293",
+      "name_lat": "ULTRA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1477194963",
+      "name_lat": "ULLA BELLA",
+      "name_ru": "",
+      "breed": "MINIATURE SCHNAUZER BLACK AND SILVER",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1083373996",
+      "name_lat": "ULMA",
+      "name_ru": "",
+      "breed": "СТОРОЖЕВАЯ / MOSCOW",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "326717287",
+      "name_lat": "ULIANA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР / AMERICAN STAFFORDSHIRE",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1280161257",
+      "name_lat": "ULRIKA ULYBKA SUDBY",
+      "name_ru": "",
+      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed_en": "RUSSKIY СHIORNY TERRIER (RUSSIAN BLACK TERRIER)",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "704588253",
+      "name_lat": "ULMIRA PRINCESSA",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "442285182",
+      "name_lat": "ULYBKA DZHAKONDY ZGRAIA NADZEI",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "426105023",
+      "name_lat": "ULAAN BAATYR S ENISEJSKIKH POLEI",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1896762174",
+      "name_lat": "ULMA",
+      "name_ru": "",
+      "breed": "КАВКАЗСКАЯ МОСКОВСКАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "15060678",
+      "name_lat": "ULTIMATE BULLY RICHARD",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ /",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1926184284",
+      "name_lat": "ULTRA CRISTAL NED OLLIVER",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "613580511",
+      "name_lat": "ULTRA BEAUTIFUL FACE",
+      "name_ru": "",
+      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1472785161",
+      "name_lat": "ULYBKA SOFII",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "588071612",
+      "name_lat": "ULTRA SUPER STAR",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1013226425",
+      "name_lat": "ULIANA",
+      "name_ru": "",
+      "breed": "ХАВАНЕЗ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "135548549",
+      "name_lat": "ULISSA DEVOTA",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "256860598",
+      "name_lat": "ULTRAMOTIVE PRINCESS SIDERIS",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "165735281",
+      "name_lat": "ULTIMATUM STAFF GROSSMEYSTER",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1816309910",
+      "name_lat": "ULUF ESGER AYNA",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "SREDNEASIATSKAYA OVCHARKA (CENTRAL ASIA SHEPHERD DOG)",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "223780688",
+      "name_lat": "ULYBKA FORTUNY IZ UNIKALNOI KOLLEKTSII",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1793622743",
+      "name_lat": "ULYANA IZ DOMA LENGRI",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН)",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "333202554",
+      "name_lat": "ULTIMA FIAT LUX EX VALHALOS SARGAS",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "747134624",
+      "name_lat": "ULTRO BREND VANESSA",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1109626223",
+      "name_lat": "ULISSA WISE MIRO",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "GERMAN TOY SPITZ (POMERANIAN)",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "440183893",
+      "name_lat": "ULYBKA SEVERA VOLNY VETER",
+      "name_ru": "",
+      "breed": "САМОЕД",
+      "breed_en": "SAMOYED",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1382815113",
+      "name_lat": "ULTIMUS OPUS DEI EX VALHALOS SARGAS",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "948938987",
+      "name_lat": "ULTIMATUM MIRU TURMALIN",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "584397463",
+      "name_lat": "ULMAS ALEANT'TAR IZ STRANY BELOVODYE",
+      "name_ru": "",
+      "breed": "КАЗАХСКИЙ ТАЗЫ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "416643051",
+      "name_lat": "ULISSA WISE OMALIA SAVIERA",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1272266080",
+      "name_lat": "ULTRA SUPER AGENT OF THE STARS BESTSELLER",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "470412769",
+      "name_lat": "ULTRA BOSS",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "JACK RUSSELL TERRIER",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "239638126",
+      "name_lat": "ULAN UNIKUM",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "101433120",
+      "name_lat": "ULANA STAR",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "903899029",
+      "name_lat": "ULNARA",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1062383195",
+      "name_lat": "ULANA",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "515823883",
+      "name_lat": "ULQUIORRA",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "753713426",
+      "name_lat": "ULMA",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1323655318",
+      "name_lat": "ULUF ESGER GUCCI",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "SREDNEASIATSKAYA OVCHARKA (CENTRAL ASIA SHEPHERD DOG)",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "400323521",
+      "name_lat": "ULTIMATUM STAFF VIRGINIE VIARD",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1751298602",
+      "name_lat": "ULTRA VON DER SCHILDKROTE JP",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Д-Ш",
+      "breed_en": "DACHSHUND MINIATURE LONG-HAIRED",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "754420041",
+      "name_lat": "ULYBKA FORTUNY IRONIYA SUDBY",
+      "name_ru": "",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
+      "breed_en": "DACHSHUND STANDARD SMOOTH-HAIRED",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1587366350",
+      "name_lat": "ULTRA LUX BABY POM",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДР.ОКРАСЫ",
+      "breed_en": "GERMAN SPITZ MINIATURE ORANGE, GREY & OTHER COLOR",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "962296619",
+      "name_lat": "ULAN OT VOLNOGO PSA",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
+      "breed_en": "CHINESE CRESTED DOG",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1674178536",
+      "name_lat": "ULYASHA IZ HVOSTATOGO BALAGANA",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР П-С",
+      "breed_en": "MINIATURE SCHNAUZER P-S",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "958924704",
+      "name_lat": "ULISSA WISE HEIDI KISS",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1012221480",
+      "name_lat": "ULYBKA BIS CASSIOPEIA",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1357769872",
+      "name_lat": "ULTRA NAPOLEON",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "268748229",
+      "name_lat": "ULTIMATUM VOM RUMBACHTAL",
+      "name_ru": "",
+      "breed": "ДЛИННАЯ ОСТЕВАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "360606241",
+      "name_lat": "ULTIMATE OBSESSION WITH HER",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1574266876",
+      "name_lat": "ULTRA SUNNY SEA",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1119704027",
+      "name_lat": "ULYANA OT LOMONOSOVOY",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "385536068",
+      "name_lat": "ULTRASHINE PEPPI",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "292699899",
+      "name_lat": "ULYANA KRASA IZ TAYOZHNOY DALI",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "732117904",
+      "name_lat": "ULMARI ANDROMEDA PINK",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "490507482",
+      "name_lat": "ULYBKA FORTUNY IZ ZAMKA MELVIN",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1306962780",
+      "name_lat": "ULANA VELIKOLEPNAYA",
+      "name_ru": "",
+      "breed": "ШИ-ТЦУ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1158453833",
+      "name_lat": "ULYANA ANDREEVNA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1444896898",
+      "name_lat": "ULA ENDZHEL AYS",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1608622441",
+      "name_lat": "ULTRA CREAM COFEE",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1913121981",
+      "name_lat": "ULUHAN UZ SUZENDE TORU",
+      "name_ru": "",
+      "breed": "DOBERMANN",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "940223726",
+      "name_lat": "ULLA VON WESPEN HAUS",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "241904100",
+      "name_lat": "ULTIMA DIVA SIDERS",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1867597422",
+      "name_lat": "ULTIMATE BULLY LILIAN",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ КЛАССИК БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "113026462",
+      "name_lat": "ULYOTNAYA MYATA",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР КОЙКЕРХОНДЬЕ (ГОЛЛАНДСКИЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "860270780",
+      "name_lat": "ULMAS GIZIR",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "39369083",
+      "name_lat": "ULMAS GIZIR",
+      "name_ru": "",
+      "breed": "СКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "18093964",
+      "name_lat": "ULANKA",
+      "name_ru": "",
+      "breed": "ПАПИЙОН /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "80825210",
+      "name_lat": "ULWE",
+      "name_ru": "",
+      "breed": "ЧУНЦИН",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1445658868",
+      "name_lat": "ULU TOYON",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1030522620",
+      "name_lat": "ULTRA RED",
+      "name_ru": "",
+      "breed": "AMERICAN AKITA",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1471247581",
+      "name_lat": "ULARTOK",
+      "name_ru": "",
+      "breed": "ГРЕНЛАНДСКАЯ СОБАКА / GREENLAND DOG",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1534921796",
+      "name_lat": "ULMA",
+      "name_ru": "",
+      "breed": "КИТАЙСКИЙ МОСКОВСКАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1306537764",
+      "name_lat": "ULYANA",
+      "name_ru": "",
+      "breed": "YORKSHIRE TERRIER",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1596986341",
+      "name_lat": "ULLI",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ ГОЛАЯ СОБАКА) СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1620028696",
+      "name_lat": "ULMA",
+      "name_ru": "",
+      "breed": "МОСКОВСКАЯ СТОРОЖЕВАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "15461190",
+      "name_lat": "ULTRA",
+      "name_ru": "",
+      "breed": "GERMAN SHEPHERD DOG",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1596162636",
+      "name_lat": "ULTRA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БЕРНСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "539575254",
+      "name_lat": "ULTRAMARIN",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК / WELSH CORGI",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "698031525",
+      "name_lat": "ULIANA",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР / AMERICAN",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "154832506",
+      "name_lat": "ULTRAMARIN",
+      "name_ru": "",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "250907316",
+      "name_lat": "ULTRA",
+      "name_ru": "",
+      "breed": "GERMAN SHEPHERD",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "934193805",
+      "name_lat": "UL'TRA STAIL",
+      "name_ru": "",
+      "breed": "БИГЛЬ / BEAGLE",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1090471228",
+      "name_lat": "ULTIMATE",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "565503875",
+      "name_lat": "ULQUIORRA",
+      "name_ru": "",
+      "breed": "КОЛЛИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "8306843",
+      "name_lat": "ULYAS",
+      "name_ru": "",
+      "breed": "ГРИФФОН / GRIFFON",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1080603261",
+      "name_lat": "ULYAS",
+      "name_ru": "",
+      "breed": "БОСТОН БРЮССЕЛЬСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "610964782",
+      "name_lat": "ULYBKA BOGA",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ СПИНОНЕ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "378384747",
+      "name_lat": "ULYAS",
+      "name_ru": "",
+      "breed": "ГРИФФОН",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1184914282",
+      "name_lat": "ULTRAMARINE LOS-",
+      "name_ru": "",
+      "breed": "АЛЯСКИНСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "65681434",
+      "name_lat": "ULLA",
+      "name_ru": "",
+      "breed": "БРЕТОНСКИЙ ЭПАНЬОЛЬ / BRITTANY SPANIEL",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1902827796",
+      "name_lat": "ULRIKA IZ DOLINY SOLNCA",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "GOLDEN RETRIEVER",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "53288333",
+      "name_lat": "ULLANA V.VALTENBERG (D-SH)",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
+      "breed_en": "GERMAN SHEPHERD DOG LONG DOUBLE COAT",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1852056930",
+      "name_lat": "ULTRA WINNING DAI HARD",
+      "name_ru": "",
+      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
+      "breed_en": "SCOTTISH TERRIER",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "370727713",
+      "name_lat": "ULYBKA FORTUNY MARZIPAN",
+      "name_ru": "",
+      "breed": "ТАКСА КРОЛИЧЬЯ Д-Ш",
+      "breed_en": "DACHSHUND KANINCHEN LONG HAIRED",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1691897826",
+      "name_lat": "ULISS OT NEVSKOGO HOBBITA",
+      "name_ru": "",
+      "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН",
+      "breed_en": "GRIFFON BRUXELLOIS",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1649570971",
+      "name_lat": "ULRIK BRIGHT (P.BR.)",
+      "name_ru": "",
+      "breed": "ПТИ БРАБАНСОН",
+      "breed_en": "PETIT BRABANCON",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1369590756",
+      "name_lat": "ULYBKA FORTUNY GOSPOZHA UDACHA (P.BR.)",
+      "name_ru": "",
+      "breed": "ПТИ БРАБАНСОН",
+      "breed_en": "PETIT BRABANCON",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "296188936",
+      "name_lat": "ULTRA GOLD IZ GRADA KATERINY",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ, СЕРЫЙ",
+      "breed_en": "POODLE MINIATURE FAWN, GREY",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1790789534",
+      "name_lat": "ULISS S POLJARNOGO SOZVEZDIJA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "GERMAN TOY SPITZ (POMERANIAN)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1005048000",
+      "name_lat": "ULISSA WISE SENCHERI OF SUCCESS",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "772498892",
+      "name_lat": "ULISSA WISE YUVELINA",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1806837602",
+      "name_lat": "ULIANA IZ TIADEL",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1123120741",
+      "name_lat": "ULLA RICH HEPPI",
+      "name_ru": "",
+      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1555806858",
+      "name_lat": "ULTRA AWARD LOVELY-ORANGE",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР / JACK RUSSELL TERRIER",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1764092658",
+      "name_lat": "ULTIMAT UM IZ DOMA KUNETS",
+      "name_ru": "",
+      "breed": "AFFENPIN",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "741569886",
+      "name_lat": "ULETNAYA KRASOTKA IZ MIRA ANZHELIKI",
+      "name_ru": "",
+      "breed": "БОКСЕР БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "409820792",
+      "name_lat": "ULIBKA SOLNTSA DREAM COME TRUE",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "352528053",
+      "name_lat": "ULYBKA VOM HAUS ERFULLUNGEN VUNSCHEN",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "250330111",
+      "name_lat": "ULVIYA AN-NASSIR",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL ASIA",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1885596015",
+      "name_lat": "ULYBKA BYUTI GERDA RED WHITE POWER",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1303009517",
+      "name_lat": "ULTRAMARINE GOLUBAYA ZHEMCHUZHINA",
+      "name_ru": "",
+      "breed": "КОКЕР СПАНИЕЛЬ / ENGLISH COCKER",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1796376767",
+      "name_lat": "ULTRA BESTIA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "331912951",
+      "name_lat": "ULISS DZHOIS PEKASSA GALLERY",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER KING",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "296707347",
+      "name_lat": "ULTRA FOR MARY",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "41091177",
+      "name_lat": "ULTRAMARIN IZ BEREZOVOGO LOGA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1118565250",
+      "name_lat": "ULTRA FAST FUTURA",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1860769154",
+      "name_lat": "ULTRA BREND ANGEL EYES",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "11064883",
+      "name_lat": "ULISS VAJT DAJMON",
+      "name_ru": "",
+      "breed": "ГЛАДКОШЕРС",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1153104872",
+      "name_lat": "ULYBKA FORTUNY RENESSANS",
+      "name_ru": "",
+      "breed": "DACHSHUND MINIATURE",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1868609171",
+      "name_lat": "ULFI FORD BLACKIE",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "256966100",
+      "name_lat": "ULYANA DLYA SOZVEZDIYA STOLITSI",
+      "name_ru": "",
+      "breed": "SHEPHERD DOG DOUBLE",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "167957095",
+      "name_lat": "ULTRAVIOLET IS TERLETSKOY DUBRAVY",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "422477624",
+      "name_lat": "ULRICA TOP CHICA IZ VESELOI SEMEIKI",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1226711028",
+      "name_lat": "ULANA DENBURG",
+      "name_ru": "",
+      "breed": "БОКСЕР НЕМЕЦКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "426890839",
+      "name_lat": "ULYBKA FORTUNY SERAFIMA",
+      "name_ru": "",
+      "breed": "ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1328419479",
+      "name_lat": "ULTIMATUM IN CRAZY STYLE",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1186272613",
+      "name_lat": "ULAN VOLNI VETER",
+      "name_ru": "",
+      "breed": "RUSSIAN SHEPHERD",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1475531893",
+      "name_lat": "UL’RIKH KING OF RING",
+      "name_ru": "",
+      "breed": "СОБАКА РЫЖИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1426655866",
+      "name_lat": "ULTRAMARINES BETWEEN US SPECIAL",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "112917424",
+      "name_lat": "ULANA CLAIRE",
+      "name_ru": "",
+      "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "619747505",
+      "name_lat": "ULKA KEY LIME PIE OT NYUSHKI-PLYUSHKI",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "46324253",
+      "name_lat": "ULYBKA BIS ALRISHA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "18095034",
+      "name_lat": "ULANIA NO BARTAS KRASTA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "784522487",
+      "name_lat": "UL'VI IZ DRUZHNOI SLOBODI",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1951119898",
+      "name_lat": "ULMA ZOLOTAYA MEDVEDITSA",
+      "name_ru": "",
+      "breed": "ЛЕОНБЕРГЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "491614100",
+      "name_lat": "ULTRAMOTIVE PRINCESS",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР / AMERICAN",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1503407763",
+      "name_lat": "ULLYCLAN DEXTER DIAMOND",
+      "name_ru": "",
+      "breed": "ПОКЕТ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "189235737",
+      "name_lat": "ULTIMATUM BORN GROSS ART",
+      "name_ru": "",
+      "breed": "БОЛЬШОЙ ШВЕЙЦАРСКИЙ ЗЕННЕНХУНД БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "329597184",
+      "name_lat": "ULETNAYA ZAKLEPKA",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР / YORKSHIRE TERRIER",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "346067912",
+      "name_lat": "ULYSSE VHAGAR OF BAXLEY",
+      "name_ru": "",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА ТЕРВЮРЕН",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "29199260",
+      "name_lat": "Ulma Vom Safari Land, HD-B, ED-0, ОКД-2, ЗКС-1",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1360766951",
+      "name_lat": "ULYBKA IZ DOMA KUNETS",
+      "name_ru": "",
+      "breed": "АФФЕНПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "208106719",
+      "name_lat": "ULLIRI VON HAUS DEVARTIS",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "515451503",
+      "name_lat": "ULTRA CRISTAL SANNY HORIZON",
+      "name_ru": "",
+      "breed": "БИГЛЬ / BEAGLE",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "820802985",
+      "name_lat": "ULTRAMARINES VENI",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1681176607",
+      "name_lat": "ULRIKA ANFISIYA",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "228053851",
+      "name_lat": "ULLI BRAYT STAR S BUHTY LADOGI",
+      "name_ru": "",
+      "breed": "ПЕКИНЕС",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

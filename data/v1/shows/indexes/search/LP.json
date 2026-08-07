@@ -1,0 +1,34 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "LP",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "449744222",
+      "name_lat": "LPG MISS PHATHU THAI@ET TAR MENEL",
+      "name_ru": "",
+      "breed": "ТАЙСКИЙ РИДЖБЕК",
+      "breed_en": "THAI RIDGEBACK DOG",
+      "total_shows": 52,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1373522099",
+      "name_lat": "LPG MISS PHATHU TAJ ET TARMENEL",
+      "name_ru": "",
+      "breed": "ТАЙСКИЙ РИДЖБЕК",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "39414888",
+      "name_lat": "LPG MISS PHATNU THAI@ET TAR MENEL",
+      "name_ru": "",
+      "breed": "ТАЙСКИЙ РИДЖБЕК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "ND",
+  "count": 4,
+  "dogs": [
+    {
+      "id": "11110424",
+      "name_lat": "NDOKI GERMAN RED GRAFANO",
+      "name_ru": "",
+      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+      "breed_en": "RHODESIAN RIDGEBACK",
+      "total_shows": 27,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1782283477",
+      "name_lat": "ND",
+      "name_ru": "",
+      "breed": "КЕРН ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1861586227",
+      "name_lat": "NDOK IZ TAYOZHN",
+      "name_ru": "",
+      "breed": "ИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "140286904",
+      "name_lat": "ND ZAR CLYDON’S COPPER",
+      "name_ru": "",
+      "breed": "ЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

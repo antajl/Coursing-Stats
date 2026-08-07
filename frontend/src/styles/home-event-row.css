@@ -1,0 +1,59 @@
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px 80px;}
+
+.home-event-row{
+  display:flex; align-items:center; gap:12px;
+  padding:8px 12px; border-radius:12px;
+  background:var(--cream-50);
+  border-top:1px solid var(--om-200);
+  border-right:1px solid var(--om-200);
+  border-bottom:1px solid var(--om-200);
+  text-decoration:none; color:inherit;
+  transition:background-color .15s ease, border-color .15s ease;
+  min-width:0; max-width:100%;
+}
+.home-event-row:hover{
+  border-top-color:var(--camel-300);
+  border-right-color:var(--camel-300);
+  border-bottom-color:var(--camel-300);
+  background:color-mix(in srgb, var(--camel-50) 70%, var(--cream-50));
+}
+.home-event-row--champ{
+  border-top-color:var(--camel-300);
+  border-right-color:var(--camel-300);
+  border-bottom-color:var(--camel-300);
+}
+.home-event-row--compact{padding:9px 10px;}
+.home-event-row--skeleton{border-left-width:0; pointer-events:none;}
+.home-event-row-date{flex-shrink:0; width:3.25rem; min-width:3.25rem; text-align:center;}
+
+.home-ranking-tabs{
+  display:flex; align-items:center; flex-wrap:nowrap; justify-content:center; gap:14px;
+  flex-shrink:0; padding:0 2px;
+}
+.home-ranking-tab{
+  border:none; background:none; padding:2px 0 4px; cursor:pointer; white-space:nowrap;
+  font-size:13px; font-weight:500; color:var(--char-500);
+  border-bottom:2px solid transparent; transition:color .15s ease;
+}
+.home-ranking-tab:hover{color:var(--char-800);}
+.home-ranking-tab--active{
+  color:var(--char-900); font-weight:600; border-bottom-color:transparent;
+}
+
+.dark .home-event-row{
+  background:var(--char-800);
+  border-top-color:var(--char-700);
+  border-right-color:var(--char-700);
+  border-bottom-color:var(--char-700);
+}
+.dark .home-ranking-tab{color:var(--char-300);}
+.dark .home-ranking-tab:hover{color:var(--char-100);}
+.dark .home-ranking-tab--active{color:var(--cream-50); border-bottom-color:transparent;}
+
+@media(max-width:860px){
+  .home-ranking-tabs{flex-wrap:wrap;}
+}
+
+@media(max-width:480px){
+  .wrap{padding:0 12px 64px;}
+}

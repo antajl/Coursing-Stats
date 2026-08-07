@@ -1,0 +1,13 @@
+﻿/* Extra small devices (phones, 375px and up) */
+@media (max-width: 479px) {
+  .home-v2-events-col {
+    flex-direction: column;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .home-v2-events-col {
+    flex-direction: row;
+  }
+}

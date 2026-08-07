@@ -1,0 +1,43 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "FS",
+  "count": 4,
+  "dogs": [
+    {
+      "id": "1802586808",
+      "name_lat": "FS ATLANT",
+      "name_ru": "",
+      "breed": "ПОКЕТ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "324872660",
+      "name_lat": "FS ATLANT",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1966142404",
+      "name_lat": "FS AMURA-AUDI",
+      "name_ru": "",
+      "breed": "СХИППЕРКЕ АМЕРИКАНСКИЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1029773077",
+      "name_lat": "FS ATLANT",
+      "name_ru": "",
+      "breed": "ПОКЕТ / AMERICAN BULLY",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

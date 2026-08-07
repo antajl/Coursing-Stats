@@ -1,0 +1,27 @@
+name = "coursing-stats-pdf-worker"
+main = "src/worker.ts"
+compatibility_date = "2026-06-24"
+
+# Workers AI binding for PDF processing
+[ai]
+binding = "AI"
+
+# KV namespace for caching results (use existing bot KV)
+[[kv_namespaces]]
+binding = "CACHE"
+id = "f8937ddcfdf241d69a6ef7704c98d2a4"
+
+# D1 database for PDF metadata
+[[d1_databases]]
+binding = "DB"
+database_name = "coursing-stats-pdf"
+database_id = "13855cb8-4e7a-4acd-bf0f-33af604ea8b0"
+
+# Observability
+[observability]
+enabled = true
+
+[observability.logs]
+enabled = true
+persist = true
+invocation_logs = true

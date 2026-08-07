@@ -1,0 +1,34 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "BT",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "1246437036",
+      "name_lat": "BTOP GUN CUORE DI ALIANTE",
+      "name_ru": "",
+      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
+      "breed_en": "WEIMARANER SHORT-HAIRED",
+      "total_shows": 49,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1158929014",
+      "name_lat": "BTSC BULLY KENNEL GABRIEL",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "breed_en": "AMERICAN BULLY XL",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1932783047",
+      "name_lat": "BTR IZ KUZNETSKGRADA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    }
+  ]
+}

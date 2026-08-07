@@ -1,0 +1,66 @@
+# Topic index — only existing files (2026-08-06)
+
+topics:
+  - id: overview
+    title: Project overview
+    primary: docs/sheets/00-overview.md
+    related: [docs/MAP.md, AGENTS.md]
+
+  - id: three-domains
+    title: Competitions / Shows / Donino
+    primary: docs/sheets/01-three-domains.md
+    related: [docs/sheets/03-competitions.md, docs/sheets/04-shows.md, docs/sheets/05-donino.md]
+
+  - id: data-pipeline
+    title: data/v1 and build-all-data
+    primary: docs/sheets/02-data-pipeline.md
+    related: [docs/decisions/003-sqlite-json-indexes.md]
+
+  - id: competitions
+    title: Sport competitions
+    primary: docs/sheets/03-competitions.md
+    related: [docs/sheets/06-parsers.md]
+
+  - id: shows
+    title: RKF exhibitions
+    primary: docs/sheets/04-shows.md
+    related: [docs/decisions/007-exhibitions-rkf-sqlite-migration.md, docs/decisions/009-turso-migration.md]
+
+  - id: donino
+    title: Donino records
+    primary: docs/sheets/05-donino.md
+
+  - id: parsers
+    title: procoursing parsers
+    primary: docs/sheets/06-parsers.md
+
+  - id: frontend
+    title: React SPA
+    primary: docs/sheets/07-frontend.md
+    related: [docs/decisions/001-cloudflare-pages-hosting.md, docs/decisions/002-react-query-data-fetching.md]
+
+  - id: bot
+    title: Telegram bot
+    primary: docs/sheets/08-bot.md
+    related: [docs/decisions/005-telegram-bot-integration.md]
+
+  - id: ops
+    title: Dev and deploy
+    primary: docs/sheets/09-ops-deploy.md
+
+  - id: security
+    title: Security
+    primary: docs/sheets/10-security.md
+
+  - id: testing
+    title: Tests and gates
+    primary: docs/sheets/11-testing.md
+
+  - id: agent-skills
+    title: Cursor skills routing
+    primary: docs/sheets/12-agent-skills.md
+
+  - id: decisions
+    title: Architecture Decision Records
+    primary: docs/decisions/
+    related: [docs/MAP.md]

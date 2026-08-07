@@ -1,0 +1,43 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "СE",
+  "count": 4,
+  "dogs": [
+    {
+      "id": "555668084",
+      "name_lat": "СERLINA CERRO FREYA",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1832023573",
+      "name_lat": "СELESTINA",
+      "name_ru": "",
+      "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1613798557",
+      "name_lat": "СEFEA IZ TVERSKOGO DOMA",
+      "name_ru": "",
+      "breed": "РОТВЕЙЛЕР",
+      "breed_en": "ROTTWEILER",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "95657233",
+      "name_lat": "СENTURION ZEST IZ URALSKOY PLEYADY ZVYOZD",
+      "name_ru": "",
+      "breed": "БОКСЕР ТИГРОВЫЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    }
+  ]
+}

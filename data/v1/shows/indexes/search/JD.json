@@ -1,0 +1,25 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "JD",
+  "count": 2,
+  "dogs": [
+    {
+      "id": "1692189418",
+      "name_lat": "JDANA IZ STEPNOGO ALTAYA",
+      "name_ru": "",
+      "breed": "ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР)",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1937868819",
+      "name_lat": "JDGI STAR'S BRAVE BANSHEE",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР СТАФФОРДШИРСКИЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    }
+  ]
+}

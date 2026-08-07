@@ -1,0 +1,51 @@
+{
+  "breedParams": {
+    "УИППЕТ": {
+      "scale": 8,
+      "k0": 45,
+      "testLogLoss": 0.6721
+    },
+    "БАСЕНДЖИ": {
+      "scale": 8,
+      "k0": 50,
+      "testLogLoss": 0.6631
+    },
+    "РУССКАЯ ПСОВАЯ БОРЗАЯ": {
+      "scale": 8,
+      "k0": 50,
+      "testLogLoss": 0.6195848102182001
+    },
+    "РОДЕЗИЙСКИЙ РИДЖБЕК": {
+      "scale": 8,
+      "k0": 50,
+      "testLogLoss": 0.5595049555913464
+    },
+    "САЛЮКИ": {
+      "scale": 8,
+      "k0": 50,
+      "testLogLoss": 0.6478956058236214
+    }
+  },
+  "calibrationMethod": "per-breed for large pools, volume-based assignment for small pools",
+  "scaleRange": [
+    8,
+    10,
+    12,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "k0Range": [
+    30,
+    35,
+    40,
+    45,
+    50
+  ],
+  "scaleLowerBound": 8,
+  "scaleSensitivity": "63.9% of S_A values in sensitive range (0.30-0.70) at scale=8"
+}

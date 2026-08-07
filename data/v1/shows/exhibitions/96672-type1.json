@@ -1,0 +1,33 @@
+{
+  "dogs": [
+    {
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "judge": "ШИЯН ВЛАДИМИР",
+      "catalog_number": 1,
+      "dog_name": "ARIEL ARGO AURA",
+      "birth_date": "09.01.2026",
+      "pedigree": "AOP 3126",
+      "class": "Б",
+      "grade": "а ОП",
+      "title": "ЮКЧП, ВКЧП",
+      "bob": false,
+      "show_date": "26.04.2026"
+    },
+    {
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "judge": "ШИЯН ВЛАДИМИР",
+      "catalog_number": 2,
+      "dog_name": "SAAGAN DALI DORIS",
+      "birth_date": "12.10.2020",
+      "pedigree": "5772655",
+      "class": "ЧЕМ",
+      "grade": "ОТЛ",
+      "title": "КЧК",
+      "bob": false,
+      "show_date": "26.04.2026"
+    }
+  ],
+  "page_count": 1,
+  "raw_token_count": 60,
+  "has_main_ring_sheet": false
+}

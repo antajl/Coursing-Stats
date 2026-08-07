@@ -1,0 +1,49 @@
+# DISABLED: Turso sync broken (@libsql/linux-x64-gnu error)
+# Re-enable when Turso compatibility issues are resolved
+
+# name: Monitor RKF Calendar
+#
+# on:
+#   schedule:
+#     # Run once daily at midnight UTC
+#     - cron: '0 0 * * *'
+#   workflow_dispatch:
+#
+# jobs:
+#   monitor-rkf:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v4
+#       
+#       - name: Setup Node.js
+#         uses: actions/setup-node@v4
+#         with:
+#           node-version: '22'
+#           cache: 'yarn'
+#           cache-dependency-path: backend/yarn.lock
+#
+#       - name: Install dependencies
+#         working-directory: ./backend
+#         run: yarn install
+#
+#       - name: Scan RKF calendar
+#         working-directory: ./backend
+#         run: npx tsx scripts/monitor-rkf-calendar.ts
+#         env:
+#           TURSO_URL: ${{ secrets.TURSO_URL }}
+#           TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
+#       
+#       - name: Process new reports
+#         working-directory: ./backend
+#         run: npx tsx scripts/auto-process-reports.ts
+#         env:
+#           TURSO_URL: ${{ secrets.TURSO_URL }}
+#           TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
+#
+#       - name: Sync to Turso
+#         working-directory: ./backend
+#         run: npx tsx scripts/turso/import-exhibitions-rkf.ts
+#         env:
+#           TURSO_URL: ${{ secrets.TURSO_URL }}
+#           TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}

@@ -1,0 +1,5488 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "SV",
+  "count": 609,
+  "dogs": [
+    {
+      "id": "1384463569",
+      "name_lat": "SVOBODNAYA STAYA YAMAL",
+      "name_ru": "",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
+      "breed_en": "YAKUTSKAYA LAIKA (YAKUTIAN LAIKA)",
+      "total_shows": 49,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1642783750",
+      "name_lat": "SVETIX REKLAMNYJ ROLIK",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1765761056",
+      "name_lat": "SVETLIE ISTOKI KROSHECHKA HAVROSHECHKA",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "SHETLAND SHEEPDOG",
+      "total_shows": 35,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1324881424",
+      "name_lat": "SVOBODNAYA STAYA GRENLANDIA",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "SIBERIAN HUSKY",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "144177472",
+      "name_lat": "SVETLIE ISTOKI CHURCHILL",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "AUSTRALIAN SHEPHERD",
+      "total_shows": 31,
+      "competition_dog_id": null
+    },
+    {
+      "id": "71185060",
+      "name_lat": "SVELIS LIME KURD",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "256621061",
+      "name_lat": "SVETIKS REALITY SHOW",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 26,
+      "competition_dog_id": null
+    },
+    {
+      "id": "791730890",
+      "name_lat": "SVETLIE ISTOKI NAFANYA",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1105953310",
+      "name_lat": "SVELIZ HOT RED PEPPER",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "NORWICH TERRIER",
+      "total_shows": 26,
+      "competition_dog_id": null
+    },
+    {
+      "id": "471741502",
+      "name_lat": "SVITA MARGO CZVET NACZII (Изменено по решению ВК от 21.04.2025 В. 31)",
+      "name_ru": "",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 25,
+      "competition_dog_id": null
+    },
+    {
+      "id": "552337691",
+      "name_lat": "SVET ZVEZDY CHARISMA",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "828496609",
+      "name_lat": "SVET POSADA BYANKA",
+      "name_ru": "",
+      "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1763872036",
+      "name_lat": "SVELIZ KASHTAN",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "162776363",
+      "name_lat": "SVELIZ EVOLUTION",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "NORWICH TERRIER",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1710944159",
+      "name_lat": "SVETSKAYA LVITSA IZ DOMA KUNETS",
+      "name_ru": "",
+      "breed": "АФФЕНПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1220464971",
+      "name_lat": "SVETIX REDKIY DAR",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1733643752",
+      "name_lat": "SVET POSADA BOND",
+      "name_ru": "",
+      "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "76407005",
+      "name_lat": "SVEGO BOX OPIUM",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ БОКСЕР",
+      "breed_en": "BOXER",
+      "total_shows": 49,
+      "competition_dog_id": null
+    },
+    {
+      "id": "880405511",
+      "name_lat": "SVETIKS NEVER SAY NEVER",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1899746673",
+      "name_lat": "SVETANIC OCEAN OF LOVE",
+      "name_ru": "",
+      "breed": "ПАПИЙОН",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "334023715",
+      "name_lat": "SVARGAS ICEBERRY",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР БЕЛЫЙ",
+      "breed_en": "MINIATURE SCHNAUZER WHITE",
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1308864687",
+      "name_lat": "SVOBODNAYA STAYA GRENLANDIYA",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "SIBERIAN HUSKY",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1156237462",
+      "name_lat": "SVELIZ PEACH PUNCH SCANDVIK",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "NORWICH TERRIER",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "11795693",
+      "name_lat": "SVEITANA GEIL SOLNECHNAAYA ENERGIYA",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1111168190",
+      "name_lat": "SVERKAYUSHCHAYA BERTA",
+      "name_ru": "",
+      "breed": "УИППЕТ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1188782188",
+      "name_lat": "SVITA MARGO HIYORI",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "407595329",
+      "name_lat": "SVET GALAKTIKI GRAVITATSIYA VSELENNOY",
+      "name_ru": "",
+      "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "339960832",
+      "name_lat": "SVET ZVEZDY REGINA MINDFUL",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "173230500",
+      "name_lat": "SVELIZ DRAGONHERT",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "973117722",
+      "name_lat": "SVYATOZAR IZ RUSSKOI ZVEZDY",
+      "name_ru": "",
+      "breed": "ХОТОШО (БУРЯТСКАЯ СОБАКА)",
+      "breed_en": "HOTOSHO (BURYATIAN DOG)",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "19130031",
+      "name_lat": "SVET ZVEZDY DINASTY",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1481417526",
+      "name_lat": "SVET IZ BELOY BRIGADY",
+      "name_ru": "",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1548501615",
+      "name_lat": "SVAROG",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "153542698",
+      "name_lat": "SVEITANA GEIL YASNO CHTO YA KLASSNY",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "PUG",
+      "total_shows": 31,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1180628751",
+      "name_lat": "SVET ZVEZDY GARDELIA DARLING",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "592887220",
+      "name_lat": "SVIRELI ZVUK IZ TVERSKOY SKAZKI",
+      "name_ru": "",
+      "breed": "Шелти",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1772203335",
+      "name_lat": "SVARGAS VICE VERSA",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1994674675",
+      "name_lat": "SVELIZ EMOTIONS FOR LIBIRIS",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "889424465",
+      "name_lat": "SVITA MARGO CHERRY BLOOM",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "176307732",
+      "name_lat": "SVEITANA GEIL KRASOTA SPASET MIR",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1874425408",
+      "name_lat": "SVYATAYA ALFEYA CHESTER",
+      "name_ru": "",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "770249309",
+      "name_lat": "SVOBODNAYA STAYA NIGHTKING SEVEN KINGDOMS",
+      "name_ru": "",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1465858588",
+      "name_lat": "SVELIZ GLAFIRA",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "828308497",
+      "name_lat": "SVEITANA GEIL IYA ZOLOTO DRAKONA",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1878748204",
+      "name_lat": "SVET ZVEZDY OVACIA",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "PUG",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "57601107",
+      "name_lat": "SVET ZVEZDY YUKHANNA GRACIOUS",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1646692628",
+      "name_lat": "SVETLIE ISTOKI SENSACIYA",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "244977258",
+      "name_lat": "SVET ZVEZDY GALLIANA LEADING",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1532405153",
+      "name_lat": "SVETLIE ISTOKI ANCHUTKA",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "SHETLAND SHEEPDOG",
+      "total_shows": 24,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1580499326",
+      "name_lat": "SVETLIE ISTOKI IVESTA",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1432398502",
+      "name_lat": "SVEITANA GEIL ZHIZNERADOSTNIY PYKH",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "746482974",
+      "name_lat": "SVETSKIY LEV TAMOE",
+      "name_ru": "",
+      "breed": "ПАПИЙОН",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1058787627",
+      "name_lat": "SVOBODNAYA STAYA SALMA",
+      "name_ru": "",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1986000369",
+      "name_lat": "SVARGAS ICEMINT",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР БЕЛЫЙ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1066081374",
+      "name_lat": "SVETLYACHOK KLEMATIS",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1148910395",
+      "name_lat": "SVIT KENDI",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1084720920",
+      "name_lat": "SVETSKAYA LVIZSA AGLAYA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1548777874",
+      "name_lat": "SVIT HARMFUL TEODOR",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "166398940",
+      "name_lat": "SVET ZVEZDY CZITRUS POKORITEL",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1308189784",
+      "name_lat": "SVETLIE ISTOKI ZHELUDYEVAYA FEECHKA",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "SHETLAND SHEEPDOG",
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1915190272",
+      "name_lat": "SVEYTANA GEYL IZOBILIE",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "PUG",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1610960007",
+      "name_lat": "SVITA MARGO ETSUKO",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "685410478",
+      "name_lat": "SVETLIE ISTOKI EVEREST",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1442731577",
+      "name_lat": "SVETANIC WILMAR",
+      "name_ru": "",
+      "breed": "ПАПИЙОН /",
+      "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
+      "total_shows": 41,
+      "competition_dog_id": null
+    },
+    {
+      "id": "482126573",
+      "name_lat": "SVOBODNAYA STAYA KHITRAYA LISA TOSYA",
+      "name_ru": "",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "712250587",
+      "name_lat": "SVETART TEQUILA",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "SIBERIAN HUSKY",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "743427812",
+      "name_lat": "SVET GALAKTIKI LEON BAZEL",
+      "name_ru": "",
+      "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1832056697",
+      "name_lat": "SVET ZVEZDY UILYAM VOLEVOJ",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "265658352",
+      "name_lat": "SVYATAYA ALFEYA UDALETS",
+      "name_ru": "",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1562610483",
+      "name_lat": "SVET GALAKTIKI SENSATION",
+      "name_ru": "",
+      "breed": "СЕНБЕРНАР КОРОТКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "753721163",
+      "name_lat": "SVET ZVEZDY BELLA HADID",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1380588193",
+      "name_lat": "SVELIZ GALATEA",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "977089918",
+      "name_lat": "SVET POSADA ASTRID",
+      "name_ru": "",
+      "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
+      "breed_en": "MAREMMA AND THE ABRUZZES SHEEPDOG",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1364606287",
+      "name_lat": "SVETIX REALITY SHOW",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1937264795",
+      "name_lat": "SVET POSADA EMAY",
+      "name_ru": "",
+      "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
+      "breed_en": "MAREMMA AND THE ABRUZZES SHEEPDOG",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1091839094",
+      "name_lat": "SVETLIE ISTOKI CHAROVNICZA",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "530755049",
+      "name_lat": "SVELIZ BOURBON",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "NORWICH TERRIER",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1066738818",
+      "name_lat": "SVEITANA GEIL KRASIVO JIT NE ZAPRETISH",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "PUG",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "331628885",
+      "name_lat": "SVOBODNAYA STAYA TSENNOST YAKUTOV ISTER",
+      "name_ru": "",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "516757820",
+      "name_lat": "SVOBODNAYA STAYA FELICHITA",
+      "name_ru": "",
+      "breed": "САМОЕД",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "756237057",
+      "name_lat": "SVET LUNNY",
+      "name_ru": "",
+      "breed": "УИППЕТ / WHIPPET",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "123133493",
+      "name_lat": "SVET POSADA ELEN",
+      "name_ru": "",
+      "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
+      "breed_en": "MAREMMA AND THE ABRUZZES SHEEPDOG",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "552803650",
+      "name_lat": "SVET ZVEZDY CZILYA BARKHATNYJ ANGEL",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "623904037",
+      "name_lat": "SVET I ELITA BANDEROS",
+      "name_ru": "",
+      "breed": "РУССКАЯ САЛОННАЯ СОБАКА ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "763846822",
+      "name_lat": "SVOBODNAYA STAYA SHOW MUST GO ON",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "891449222",
+      "name_lat": "SVETLIE ISTOKI  ZIMNIY VECHER  ( KURZ. )",
+      "name_ru": "",
+      "breed": "ЧАУ ЧАУ",
+      "breed_en": "CHOW CHOW",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "948755850",
+      "name_lat": "SVETANIC MAESTRO",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ – ПАПИЙОН",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1253212663",
+      "name_lat": "SVETLIE ISTOKI BELAYA METELITSA",
+      "name_ru": "",
+      "breed": "SHETLAND",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1045266585",
+      "name_lat": "SVELIZ COCA COLA",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1349048234",
+      "name_lat": "SVETLANA'S FEISHN UOKENDA (MEDIO)",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ (СРЕДНИЙ)",
+      "breed_en": "XOLOITZCUINTLE (INTERMEDIATE)",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "958593309",
+      "name_lat": "SVET MUROMA NAUM RUSSICH",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "DOBERMANN",
+      "total_shows": 25,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1067916602",
+      "name_lat": "SVOBODNAYA STAYA YANTARKA",
+      "name_ru": "",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
+      "breed_en": "YAKUTSKAYA LAIKA (YAKUTIAN LAIKA)",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1259717906",
+      "name_lat": "SVET ZVEZDY FANTASTIC VICTORY",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "602175594",
+      "name_lat": "SVET ZVEZDY BAZOOKA",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1142901089",
+      "name_lat": "SVET URALA EZHEVICHNYY DZHEM",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1763533256",
+      "name_lat": "SVOYA ATMOSFERA ASTREYA",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1468845610",
+      "name_lat": "SVET MUROMA NATHAN RAIS",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "271866673",
+      "name_lat": "SVELIZ VEGАS",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1459692354",
+      "name_lat": "SVET LYUBANTER STING STINGER",
+      "name_ru": "",
+      "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
+      "breed_en": "MAREMMA AND THE ABRUZZES SHEEPDOG",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1913070091",
+      "name_lat": "SVOBODNYI SOKOL SUNSHINE",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1435248461",
+      "name_lat": "SVEGO BOX OGNENNAYA KATNISS",
+      "name_ru": "",
+      "breed": "БОКСЕР / BOXER",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "606503706",
+      "name_lat": "SVELIZ QUICK AND EASY",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "204801627",
+      "name_lat": "SVITA MARGO HITMAN",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1817352574",
+      "name_lat": "SVET LYUBANTER STELLA",
+      "name_ru": "",
+      "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
+      "breed_en": "MAREMMA AND THE ABRUZZES SHEEPDOG",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "569249901",
+      "name_lat": "SVETIX KRYSTAL BELL",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "90847044",
+      "name_lat": "SVET ZVEZDY EXCELSIOR",
+      "name_ru": "",
+      "breed": "МОПС / PUG",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "439846674",
+      "name_lat": "SVELIZ JULIANNA",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "NORWICH TERRIER",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1559946091",
+      "name_lat": "SVELIZ LIME KURD",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "NORWICH TERRIER",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "222963787",
+      "name_lat": "SVETLIE ISTOKI MENESTREL OSENI",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "304911118",
+      "name_lat": "SVOBODNAYA STAYA TEFFY BLACK",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "176044920",
+      "name_lat": "SVET ANGELOV ASSOL MY LOVE",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1036754434",
+      "name_lat": "SVET ZVEZDY REAL WINNER",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "PUG",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1482003656",
+      "name_lat": "SVET I ELITA BARBARA",
+      "name_ru": "",
+      "breed": "РУССКАЯ САЛОННАЯ СОБАКА ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "438281691",
+      "name_lat": "SVET ZVEZDY ASTEROID BARHATNII ANGEL",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1577789784",
+      "name_lat": "SVEGO BOX SHINDZHU",
+      "name_ru": "",
+      "breed": "БОКСЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1632921378",
+      "name_lat": "SVELIZ MIRINDA",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "765594331",
+      "name_lat": "SVET LUNNY",
+      "name_ru": "",
+      "breed": "УИППЕТ",
+      "breed_en": "WHIPPET",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "754545990",
+      "name_lat": "SVYATOZAR IZ ORLINOGO GNEZDA",
+      "name_ru": "",
+      "breed": "РЧТ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1200020234",
+      "name_lat": "SVETSTYLE MAYBACH",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1241864091",
+      "name_lat": "SVOBODNAYA STAYA EHNERGIYA RUNY",
+      "name_ru": "",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
+      "breed_en": "YAKUTSKAYA LAIKA (YAKUTIAN LAIKA)",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "882488254",
+      "name_lat": "SVET ZVEZDY MARISOL",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "695508814",
+      "name_lat": "SVOBODNAYA STAYA ROKSALANA",
+      "name_ru": "",
+      "breed": "ЯКУТСКАЯ ЛАЙКА /",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "986532472",
+      "name_lat": "SVETSTYLE ONLY FOR ME",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "893865604",
+      "name_lat": "SVETSKAYA LVITSA IZ RUSSKOI DINASTII",
+      "name_ru": "",
+      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed_en": "RUSSKIY СHIORNY TERRIER (RUSSIAN BLACK TERRIER)",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1408243996",
+      "name_lat": "SVETIKS SUGAR PLUM",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1800577551",
+      "name_lat": "SVELIZ FORTUNA",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "427081136",
+      "name_lat": "SVELIZ I WANT IT ALL FOR SENT DJONS",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "NORWICH TERRIER",
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "139890464",
+      "name_lat": "SVET ZVEZDY YUVELINA QUEEN",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1510167413",
+      "name_lat": "SVITJODS ULTIMATE ARCHIE",
+      "name_ru": "",
+      "breed": "СЕТТЕР ГОРДОН",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "330396207",
+      "name_lat": "SVETIX REKLAMNY",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "220132856",
+      "name_lat": "SVELIZ DUNCAN",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР /",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "291650017",
+      "name_lat": "SVEGO BOX ESMERALDA",
+      "name_ru": "",
+      "breed": "БОКСЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1772097717",
+      "name_lat": "SVETLIE ISTOKI DAFNA",
+      "name_ru": "",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
+      "breed_en": "DACHSHUND STANDARD SMOOTH-HAIRED",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "280050800",
+      "name_lat": "SVEN OTTO HARALDSSON",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
+      "breed_en": "MINIATURE SCHNAUZER BLACK & SILVER",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1449785841",
+      "name_lat": "SVEMAR IMPERIYA RUSS MOYA",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "466801362",
+      "name_lat": "SVETLYE ISTOKI KAJZER DZHON",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "725028309",
+      "name_lat": "SVELIZ FORTUNA SENT DJONS KATYUSHA",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1605900805",
+      "name_lat": "SVETLIE ISTOKI EGO VELICHESTVO",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "SHETLAND SHEEPDOG",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1357910510",
+      "name_lat": "SVET ZVEZDY JASMINE SOFIA",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "962950536",
+      "name_lat": "SVOBODNAYA STAYA HITRAYA LISA TOSYA",
+      "name_ru": "",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
+      "breed_en": "YAKUTSKAYA LAIKA (YAKUTIAN LAIKA)",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "512981499",
+      "name_lat": "SVOBODNAYA STAYA DALANTAY",
+      "name_ru": "",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
+      "breed_en": "YAKUTSKAYA LAIKA (YAKUTIAN LAIKA)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "690202798",
+      "name_lat": "SVETLAYA MECHTA",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ",
+      "breed_en": "",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "163368634",
+      "name_lat": "SVET ZVEZDY EXCLUSIVE EFFECT",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1220323109",
+      "name_lat": "SVOBODNAYA STAYA KARMEN",
+      "name_ru": "",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
+      "breed_en": "YAKUTSKAYA LAIKA (YAKUTIAN LAIKA)",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1401117440",
+      "name_lat": "SVANKHILD IZ VOROBINOGO GNEZDA",
+      "name_ru": "",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "81267607",
+      "name_lat": "SVELIZ ENAMORED LIBIRIS",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "NORWICH TERRIER",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1417481170",
+      "name_lat": "SVARGAS VESTEIN",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР БЕЛЫЙ",
+      "breed_en": "MINIATURE SCHNAUZER WHITE",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "954555963",
+      "name_lat": "SVETOVID GRAI NEW ERA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА /",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1264744996",
+      "name_lat": "SVET ZVEZDY KATALINA QUEEN",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "557653124",
+      "name_lat": "SVELIZ MORGАNА",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР /",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1976617768",
+      "name_lat": "SVOBODNAYA STAYA LOLITA BABY",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "SIBERIAN HUSKY",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1630808384",
+      "name_lat": "SVETAL ANDANTE VIVACE",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "676451344",
+      "name_lat": "SVOBODNAYA STAYA BESPODOBNAYA PELAGEYA",
+      "name_ru": "",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
+      "breed_en": "YAKUTSKAYA LAIKA (YAKUTIAN LAIKA)",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1958871224",
+      "name_lat": "SVELIZ MEPHISTO",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР /",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1787444308",
+      "name_lat": "SVYATAYA ALFEYA NEON",
+      "name_ru": "",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "377034850",
+      "name_lat": "SVEITANA GEIL EGOIST",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "PUG",
+      "total_shows": 24,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1873137557",
+      "name_lat": "SVET ZVEZDY USLADA",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1892743566",
+      "name_lat": "SVEITANA GEIL SOLNECHNAYA ENERGIYA",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "PUG",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1585861773",
+      "name_lat": "SVEGO BOX TASKINI",
+      "name_ru": "",
+      "breed": "БОКСЕР ТИГРОВЫЙ",
+      "breed_en": "BOXER",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1737382698",
+      "name_lat": "SVELIZ OREGON",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "NORWICH TERRIER",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1443973243",
+      "name_lat": "SVOBODNAYA STAYA DEPESH MOD",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1225880928",
+      "name_lat": "SVEITANA GEIL IZOBILIE",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "PUG",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "486102067",
+      "name_lat": "SVETLIE ISTOKI NASHA GORDOST",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "SHETLAND SHEEPDOG",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1730174560",
+      "name_lat": "SVET TANGRI ADELLE",
+      "name_ru": "",
+      "breed": "БАССЕТ ХАУНД",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "816829162",
+      "name_lat": "SVETOVID GALE FORSE OF NATURE",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА /",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "451850224",
+      "name_lat": "SVETOL’S MINDALNY VKUS LYUBVI",
+      "name_ru": "",
+      "breed": "ГЛАДКОШЕРС",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "934020359",
+      "name_lat": "SVEITANA GEIL VSEGDA NA GREBNE",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "951670427",
+      "name_lat": "SVET ZVEZDY HUMMER",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1880295092",
+      "name_lat": "SVEITANA GEIL VAM I NE SNILOS' (Изменено по Решению ВК от 17.08.22 в 17)",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "89165565",
+      "name_lat": "SVETLIE ISTOKI YUZHNY BREEZ",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1533435381",
+      "name_lat": "SVET GALAKTIKI GIRON DOBROLYUB",
+      "name_ru": "",
+      "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "838735122",
+      "name_lat": "SVET I ELITA VICENZA CON AMORE PER VOI",
+      "name_ru": "",
+      "breed": "БИВЕР ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "738391356",
+      "name_lat": "SVEGO BOX ELVIS",
+      "name_ru": "",
+      "breed": "БОКСЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "596855644",
+      "name_lat": "SVELIZ JUMANJI",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1839453065",
+      "name_lat": "SVEITANA GEIL EPICA",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "890321998",
+      "name_lat": "SVELIZ PINA COLLADA ALISVUT",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1753161729",
+      "name_lat": "SVEITANA GEIL FENIX'A",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1783378592",
+      "name_lat": "SVELIZ PEPSI COLA",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "716846655",
+      "name_lat": "SVAGNI LEELA",
+      "name_ru": "",
+      "breed": "КОЛЛИ КОРОТКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "445563207",
+      "name_lat": "SVEMAR ZHARDON ZHGUCHIJ PERCHIK",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "280623680",
+      "name_lat": "SVETOSLAVA BELLA DANNA",
+      "name_ru": "",
+      "breed": "ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "104950233",
+      "name_lat": "SVOBODNAYA STAYA SAURON",
+      "name_ru": "",
+      "breed": "САМОЕД",
+      "breed_en": "SAMOYED",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1445196543",
+      "name_lat": "SVETOL'S MINDALNY VKUS LYUBVI",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1133353415",
+      "name_lat": "SVEITANA GEIL DESERTNAYA PIROZHENKA",
+      "name_ru": "",
+      "breed": "МОПС ЧЁРНЫЙ",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1503482674",
+      "name_lat": "SVEITANA GEIL TANTSUYUSCHIY FILOSOF",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "PUG",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "165167198",
+      "name_lat": "SVETOVID GRIZZLY MY FANTASTIC ANIMAL",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА /",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "45512686",
+      "name_lat": "SVAN BLACK OPOZITSIA OBRI",
+      "name_ru": "",
+      "breed": "MINIATURE PINSCHER",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1315943916",
+      "name_lat": "SVELIZ REACH FOR THE SKY",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "235971464",
+      "name_lat": "SVETAL CHEEKY AND CHARMING",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПЯТНИСТЫЙ",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "170040540",
+      "name_lat": "SVYATOSLAV IZ RUSSKOI DINASTII",
+      "name_ru": "",
+      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed_en": "RUSSKIY СHIORNY TERRIER (RUSSIAN BLACK TERRIER)",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "519111144",
+      "name_lat": "SVETLIE ISTOKI ISTORIA LYUBVI",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "196364427",
+      "name_lat": "SVEITANA GEIL ULETNY AVATAR",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "PUG",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1987332893",
+      "name_lat": "SVELIZ I WANT ALL FOR SENT DJONS",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1148877683",
+      "name_lat": "SVOBODNAYA STAYA JANTAL",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "516751323",
+      "name_lat": "SVARGAS CHARODEYKA",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "534540672",
+      "name_lat": "SVETOZAR IZ KRASNOGO DARA",
+      "name_ru": "",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "522039569",
+      "name_lat": "SVET I ELITA ALEKS YARKIY ANGEL",
+      "name_ru": "",
+      "breed": "БИВЕР ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1292956055",
+      "name_lat": "SVEITANA GEIL BEGUSCHAYA K POBEDE",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "693366307",
+      "name_lat": "SVET GALAKTIKI GIRS DE LUX",
+      "name_ru": "",
+      "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1325920894",
+      "name_lat": "SVEITANA GEIL U SCHAST'YA EST' IMYA",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1244203007",
+      "name_lat": "SVET NADEZHDY KAROLINA",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "495145074",
+      "name_lat": "SVETAL ORDINARY MIRACLE",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1015814419",
+      "name_lat": "SVET ZVEZDY CHIO CHIO SAN",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1180184943",
+      "name_lat": "SVOBODNAYA STAYA HRABRYJ OSKAR",
+      "name_ru": "",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
+      "breed_en": "YAKUTSKAYA LAIKA (YAKUTIAN LAIKA)",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "549638108",
+      "name_lat": "SVEGO BOX YUNIT HIGH LEVEL",
+      "name_ru": "",
+      "breed": "БОКСЕР",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "294065019",
+      "name_lat": "SVELIZ DORIAN BRAVE TAIL",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "793257027",
+      "name_lat": "SVETSKIY LEV ODARENNAYA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1668599422",
+      "name_lat": "SVEITANA GEIL CENNOE SOKROVISHE",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "PUG",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "406603245",
+      "name_lat": "SVARGAS LAVINA",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР БЕЛЫЙ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "139520359",
+      "name_lat": "SVETALITI FUZZI YUZZI",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1907431753",
+      "name_lat": "SVETIRKLAND BLUE CINNAMON FLOWER",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1279334431",
+      "name_lat": "SVELIZ AMERICAN REMBO",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "NORWICH TERRIER",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "469135311",
+      "name_lat": "SVYATAYA ALFEYA CUNAMI",
+      "name_ru": "",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "717930645",
+      "name_lat": "SVETANIC TSENNYI PRIZ",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
+      "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1480587904",
+      "name_lat": "SVETNLIE ISTOKI ZOLOTAYA BUSINKA",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1903968441",
+      "name_lat": "SVETLIE ISTOKI AROMAT NOCHI",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "174025838",
+      "name_lat": "SVETLIE ISTOKI DECADENCE",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "SHETLAND SHEEPDOG",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1336467410",
+      "name_lat": "SVETIRKLAND G-FORCE TIGRESS",
+      "name_ru": "",
+      "breed": "CHIHUAHUA LONG",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "499559439",
+      "name_lat": "SVIT HARMFUL EVA DOMINGA",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "20231115",
+      "name_lat": "SVETLIE ISTOKI VILLADA",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "SHETLAND SHEEPDOG",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "907320158",
+      "name_lat": "SVETLIE ISTOKI ROCK-N-ROLL",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "SHETLAND SHEEPDOG",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "971234995",
+      "name_lat": "SVETIRKLAND JE VIENS DE RUSSIE",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1083314882",
+      "name_lat": "SVELERI UMI HIME FOR BARBARI'S SKY",
+      "name_ru": "",
+      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "697419495",
+      "name_lat": "SVET NADEZHDY VICTOR VELIKIY",
+      "name_ru": "",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "703298632",
+      "name_lat": "SVET ZVEZDY VARVARA KRASA",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "411804862",
+      "name_lat": "SVOBODNAYA STAYA CHIRITI ROSE",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "SIBERIAN HUSKY",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1946625742",
+      "name_lat": "SVET ZVEZDY ENERGY OF LIFE",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "350449898",
+      "name_lat": "SVETOSLAVA BEAUTY NIGHT",
+      "name_ru": "",
+      "breed": "ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1484548313",
+      "name_lat": "SVOBODNAYA STAYA BORIS",
+      "name_ru": "",
+      "breed": "ЯКУТСКАЯ ЛАЙКА /",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "701144506",
+      "name_lat": "SVET I ELITA BAUNTI",
+      "name_ru": "",
+      "breed": "БИВЕР ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "335119926",
+      "name_lat": "SVETART RAPID FIRE",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1201774000",
+      "name_lat": "SVARGAS SANTA FE",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1551867076",
+      "name_lat": "SVARGAS VALENTINE",
+      "name_ru": "",
+      "breed": "MINIATURE SCHNAUZER BLACK AND SILVER",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "992144020",
+      "name_lat": "SVET ZVEZDY TIRAMISU",
+      "name_ru": "",
+      "breed": "МОПС / PUG",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "88936485",
+      "name_lat": "SVYATAYA ALFEYA SARA",
+      "name_ru": "",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "702711208",
+      "name_lat": "Svaroga",
+      "name_ru": "",
+      "breed": "САМОЕДСКАЯ СОБАКА",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1611598393",
+      "name_lat": "SVETOL'S CHERRY VICTORY TESSI NEXT",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "602424807",
+      "name_lat": "SVET GALAKTIKI INFINITI",
+      "name_ru": "",
+      "breed": "СЕНБЕРНАР КОРОТКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "581149359",
+      "name_lat": "SVELIZ NUTELLA",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1553280843",
+      "name_lat": "SVELIZ DIAQUIRI EQILIBRIUM",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1868355008",
+      "name_lat": "SVELERI VISKY SCOTTISH FOR ELLENBERRIS",
+      "name_ru": "",
+      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "160574919",
+      "name_lat": "SVET ANGELOV BRUNO BANANI",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "107302386",
+      "name_lat": "SVOBODNAYA STAYA NORMANDY FOREVER WITH ME",
+      "name_ru": "",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
+      "breed_en": "YAKUTSKAYA LAIKA (YAKUTIAN LAIKA)",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "995535065",
+      "name_lat": "SVETOVID VOTAN SAGE LEADING THE PACK",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "941344956",
+      "name_lat": "SVITOLINA S VASILYEVSKIKH BEREGOV",
+      "name_ru": "",
+      "breed": "ОСТЕВАЯ ШЕРСТЬ С",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1088817520",
+      "name_lat": "SVOBODNAYA STAYA ZVYEZDNAYA LILIYA",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1389358303",
+      "name_lat": "SVELIZ TAROT EMPRESS",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1313998221",
+      "name_lat": "SVELIZ VIRGINIA",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "214019268",
+      "name_lat": "SVETSKAYA LVITSA STEFFI OT REGINY",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕРШАР ПЕЙ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1504490192",
+      "name_lat": "SVET SEVERA ZARA",
+      "name_ru": "",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1954123455",
+      "name_lat": "SVITA MARGO KASATKA",
+      "name_ru": "",
+      "breed": "ТОЙ-ФОКСТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "18915177",
+      "name_lat": "SVET POSADA ELAN",
+      "name_ru": "",
+      "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
+      "breed_en": "MAREMMA AND THE ABRUZZES SHEEPDOG",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1175539849",
+      "name_lat": "SVOBODNAYA STAYA DANTE MILI",
+      "name_ru": "",
+      "breed": "SIBERIAN HUSKY",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "932425004",
+      "name_lat": "SVETLYE ISTOKI KOROLEK PTICHKA PEVCHAYA",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "525734783",
+      "name_lat": "SVETOSLAVA BONNI MIO ANGHELO",
+      "name_ru": "",
+      "breed": "ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1753314697",
+      "name_lat": "SVELIZ MOUNTAIN DEW",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "251413482",
+      "name_lat": "SVANA SIGRID",
+      "name_ru": "",
+      "breed": "СКАЙ ТЕРЬЕР",
+      "breed_en": "SKYE TERRIER",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "137516411",
+      "name_lat": "SVARGAS OKTAVIA",
+      "name_ru": "",
+      "breed": "MINIATURE SCHNAUZER BLACK AND SILVER",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "194032700",
+      "name_lat": "SVETLIE ISTOKI ZOLOTAYA BUSINKA",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1489981318",
+      "name_lat": "SVARGAS DE FAKTO",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1689804066",
+      "name_lat": "SVETART SOFT WHISPER",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1032017573",
+      "name_lat": "SVETALITY CHINGIZHAN ZAVOEVATEL",
+      "name_ru": "",
+      "breed": "DOGUE DE BORDEAUX",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1216026465",
+      "name_lat": "SVET SEVERA ZARINA",
+      "name_ru": "",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "55449493",
+      "name_lat": "SVET NADEZHDY ZHASMIN RISING STAR",
+      "name_ru": "",
+      "breed": "ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "403191641",
+      "name_lat": "SVOBODNAYA STAYA MISHEL PRINCESS OF MY HEART",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1365052129",
+      "name_lat": "SVET POSADA BONNI 2",
+      "name_ru": "",
+      "breed": "МАРЕММО-АБРУЦЦКАЯ ОВЧАРКА",
+      "breed_en": "MAREMMA AND THE ABRUZZES SHEEPDOG",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1972686551",
+      "name_lat": "SVITI NASLEDNITSA NAZARA",
+      "name_ru": "",
+      "breed": "ньюфаундленд",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1050380297",
+      "name_lat": "SVEITANA GEIL",
+      "name_ru": "",
+      "breed": "ГИНДУЛЛИНА",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "93880146",
+      "name_lat": "SVOBODNAYA STAYA ADRIANA LIMA",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "SIBERIAN HUSKY",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "129690084",
+      "name_lat": "SVET NADEZHDY LINDA MY LOVE",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1901705695",
+      "name_lat": "SVET GALAKTIKI GORDOST NEBES",
+      "name_ru": "",
+      "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1718456769",
+      "name_lat": "SVELIZ CLASSY AND FABULOUS",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1097314418",
+      "name_lat": "SVETSKIY LEV SANSARA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "813661166",
+      "name_lat": "SVETIRKLAND YEAH MAYBE",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "691944318",
+      "name_lat": "SVET ZVEZDY CELESTA",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1782637036",
+      "name_lat": "SVETLIE ISTOKI ZNOYNYI MACHO",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "629494522",
+      "name_lat": "SVEGO BOX INGIBORG",
+      "name_ru": "",
+      "breed": "БОКСЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "968461452",
+      "name_lat": "SVETLIE ISTOKI RASSHITAYA BISEROM",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "SHETLAND SHEEPDOG",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1736173805",
+      "name_lat": "SVET ZVEZDY NEWTON",
+      "name_ru": "",
+      "breed": "МОПС / PUG",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "336366636",
+      "name_lat": "SVOBODNYI SOKOL ROKSALANA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1306353835",
+      "name_lat": "SVET ZVEZDY LANCELOT",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "PUG",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1140886708",
+      "name_lat": "SVYATAYA ALFEYA ZDESYA",
+      "name_ru": "",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "27287111",
+      "name_lat": "SVOBODNAYA STAYA YU TEJLA",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "717772916",
+      "name_lat": "SVETALITY YURAI",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "99760206",
+      "name_lat": "SVANKY TUNES POWER BANK",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "155614876",
+      "name_lat": "SVETAL SKY LINK",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1137919054",
+      "name_lat": "SVETOL’S VISHNYA",
+      "name_ru": "",
+      "breed": "ДЛИННОШЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "127324456",
+      "name_lat": "SVELIZ LET IT BE FOR SENT DJONS",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "204997802",
+      "name_lat": "SVET ZVEZDY ZARYA USPEHA",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "PUG",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1694567131",
+      "name_lat": "SVETOVID VOYSE GETING EVRIVEA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "AMERICAN AKITA",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "783480143",
+      "name_lat": "SVIT HARMFUL ZHAKLIN ORABEL",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "355048821",
+      "name_lat": "SVEGO BOX METTERNIH",
+      "name_ru": "",
+      "breed": "БОКСЕР ТИГРОВЫЙ /",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "11246973",
+      "name_lat": "SVELIZ ISADORA",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1432594428",
+      "name_lat": "SVET SEVERA ZAFAR",
+      "name_ru": "",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "458846945",
+      "name_lat": "SVETOZARA BLUE PRINCESS OF THE EAST GUCCI LINE",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР /",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "319059197",
+      "name_lat": "SVET LYUBANTER SHCHNNON LESLI",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "136910844",
+      "name_lat": "SVELIZ KEEP IN TOUCH",
+      "name_ru": "",
+      "breed": "NORWICH TERRIER",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "146709145",
+      "name_lat": "SVETLIE ISTOKI ASTERION",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1787688151",
+      "name_lat": "SVETLIE ISTOKI ZETTA- JONS",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1374885692",
+      "name_lat": "SVEITANA GEIL MALYSHKA NA MILLION",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "PUG",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "206981311",
+      "name_lat": "SVET SEVERA SAMIRA",
+      "name_ru": "",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1985694817",
+      "name_lat": "SVOBODNAYA STAYA MALINA",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "SIBERIAN HUSKY",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1568250737",
+      "name_lat": "SVARGAS RENAISSANCE",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР (ЧЕРНЫЙ)",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1438035397",
+      "name_lat": "SVETSTYLE IN LOVE FOREVER",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "773914177",
+      "name_lat": "SVET TANGRI ATLANT",
+      "name_ru": "",
+      "breed": "БАССЕТ ХАУНД",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "826136146",
+      "name_lat": "SVELIZ LUXURY",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР /",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "451768425",
+      "name_lat": "SVET GALAKTIKI TALITA TELLI",
+      "name_ru": "",
+      "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "681925310",
+      "name_lat": "SVET LYUBANTER SHCHENNON LESLI",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "711872505",
+      "name_lat": "SVETSTYLE OCEAN LOVE",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "905046432",
+      "name_lat": "SVEMAR ORANGE OLIVE FURSHET",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "715441507",
+      "name_lat": "SVET GALAKTIKI GAVR SPUTNIK MOY",
+      "name_ru": "",
+      "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1755033017",
+      "name_lat": "SVETOZAR YAMIR SPARROW",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "WELSH CORGI PEMBROKE",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "875121482",
+      "name_lat": "SVAROGA",
+      "name_ru": "",
+      "breed": "SAMOYED",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1537950352",
+      "name_lat": "SVOBODNAYA STAYADEPESH MOD",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "393819000",
+      "name_lat": "SVEITANA GEIL U SCHAST YA EST IMYA",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "86984376",
+      "name_lat": "SVOBODNAYA STAYA YUKIKO GIN",
+      "name_ru": "",
+      "breed": "SIBERIAN HUSKY",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1216246808",
+      "name_lat": "SVEMAR DIDEYSI REYNDBOL",
+      "name_ru": "",
+      "breed": "CHIHUAHUA LONG HAIRED",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "921145607",
+      "name_lat": "SVETLANA DES NICHEES DE RIOPSE",
+      "name_ru": "",
+      "breed": "БИШОН ХАВАНЕС",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "331150450",
+      "name_lat": "SVETOVID DOVAHKIIN FLAMING PASSIONS",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "775961894",
+      "name_lat": "SVEITANA GEIL PRAVDIVAYA ISTORIYA",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "PUG",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1740360504",
+      "name_lat": "SVET MUROMA LIBERTY PALMIRA",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "661322617",
+      "name_lat": "SVET SEVERA LARSON",
+      "name_ru": "",
+      "breed": "SHEPHERD DOG",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1947531443",
+      "name_lat": "SVARGAS BECRUX",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР БЕЛЫЙ",
+      "breed_en": "MINIATURE SCHNAUZER WHITE",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1772090141",
+      "name_lat": "SVELIZ CLAP YOUR HANDS",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "NORWICH TERRIER",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1168172190",
+      "name_lat": "Svobodnaya Staya Devana",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1725377167",
+      "name_lat": "SVOBONAYA STAYA DEVANA",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "230610564",
+      "name_lat": "SVET MUROMA SAYORA ISIDA",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1646445913",
+      "name_lat": "SVETSKAYA DAMA IZ EVELGRIN",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "161684347",
+      "name_lat": "SVET NADEZHDY PATRISIYA",
+      "name_ru": "",
+      "breed": "ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "828338259",
+      "name_lat": "SVETLIE ISTOKI ANTURAZH",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "SHETLAND SHEEPDOG",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1736390196",
+      "name_lat": "SVETART SWEET DONUT",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "SIBERIAN HUSKY",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "631185184",
+      "name_lat": "SVIT HARMFUL EDMOND",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "873318935",
+      "name_lat": "SVIT SOFI",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "783688426",
+      "name_lat": "SVYATAYA ALFEYA KAYSTIN",
+      "name_ru": "",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА / WHITE SWISS",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "637976165",
+      "name_lat": "SVETIKS REKLAMNYI ROLIK",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1178271213",
+      "name_lat": "SVETLIE ISTOKI USPEH",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "551887654",
+      "name_lat": "SVELIZ JAM CAKE",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1573293882",
+      "name_lat": "SVERKAYUSHCHAYA ZVEZDA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE NAIN GREY, APRICOT, RED FAWN",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "109285976",
+      "name_lat": "SVARGAS PREMIERE",
+      "name_ru": "",
+      "breed": "цвергшнауцер (черный)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "198209159",
+      "name_lat": "SVETLIE ISTOKI PERSEYA",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "275649562",
+      "name_lat": "SVEITANA GEIL BUMER LASKOVYI PIZHON",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "PUG",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "36203582",
+      "name_lat": "SVEITANA GEIL OCHAROVATELNY TARASIK",
+      "name_ru": "",
+      "breed": "МОПС / PUG",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1823609858",
+      "name_lat": "SVEITANA GEIL SHAL'NAYA IMPERATRITSA",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1667304768",
+      "name_lat": "SVETAL MILKY WAY",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПЯТНИСТЫЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "371915754",
+      "name_lat": "SVOBODNAYA STAYA TIFANI",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "SIBERIAN HUSKY",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "537832790",
+      "name_lat": "SVETAL YELL OF JOY",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "44224399",
+      "name_lat": "SVETLIE ISTOKI YUZHNYBREEZ",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "246275237",
+      "name_lat": "SVETLIE ISTOKI CHAROVNCZA",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "218650417",
+      "name_lat": "SVETSKAYA ZABAVA YAMAHA GOLD",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1434681710",
+      "name_lat": "SVOBODNAYA STAYA REBEKKA",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "426240675",
+      "name_lat": "SVOBODNAYA STAYA GALAKTIKA BEZDONNAYA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "447388806",
+      "name_lat": "SVOBODNAYA STAYA YMAL",
+      "name_ru": "",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "207080260",
+      "name_lat": "SVOBODNAYA STAYA URAN S SUN TITAN",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ / SIBERIAN HUSKY",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "920588481",
+      "name_lat": "SVEITNA GEIL U SCHASTÝA EST' IMYA",
+      "name_ru": "",
+      "breed": "МОПС / PUG",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "222033233",
+      "name_lat": "SVETLIE ISTOKI HRIZANTEMA",
+      "name_ru": "",
+      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1256660378",
+      "name_lat": "SVELIZ CLOZE ATTENTION FOR EQUILIBRIUM",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1935080420",
+      "name_lat": "SVOBODNAYA STAYA DERESH MOD",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ СИБИРСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1261059168",
+      "name_lat": "SVET NADEZHDY BERTA",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД / BERNESE MOUNTAIN",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "513867603",
+      "name_lat": "SVOBODNAYA STAYA PRADA STAR",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1958729446",
+      "name_lat": "SVET GALAKTIKI GIRON DOBROLY UB",
+      "name_ru": "",
+      "breed": "Й / ST.",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "209968613",
+      "name_lat": "SVET NADEZHDY DZHOY HRABROE SERDTSE",
+      "name_ru": "",
+      "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1893132334",
+      "name_lat": "SVAGNI LOKHITA-HASTA",
+      "name_ru": "",
+      "breed": "КОЛЛИ КОРОТКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "7106109",
+      "name_lat": "SVETALITY CHARUYUSCHAYA VZOR",
+      "name_ru": "",
+      "breed": "БОРДОСКИЙ ДОГ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "30995806",
+      "name_lat": "SVITA MARGO FAYER",
+      "name_ru": "",
+      "breed": "ТОЙ-ФОКСТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "787992008",
+      "name_lat": "SVIT HARMFUL MALAVITA",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1101379791",
+      "name_lat": "SVIT HARMFUL ANABEL AJRIS",
+      "name_ru": "",
+      "breed": "ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "422908850",
+      "name_lat": "SVOBODNAYA STAYA DARIA DOCH TALANA",
+      "name_ru": "",
+      "breed": "ЯКУТСКАЯ ЛАЙКА /",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1273414412",
+      "name_lat": "SVET ZVEZDY KORONA IMPERII",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "PUG",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "169864586",
+      "name_lat": "SVET MUROMA TEODORA NAVARRA",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "333528576",
+      "name_lat": "SVETOL'S CHERRY VICTORI TESSI NEXT",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "205672452",
+      "name_lat": "SVOBODNAYA STAYA YU-TAYMYR",
+      "name_ru": "",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
+      "breed_en": "YAKUTSKAYA LAIKA (YAKUTIAN LAIKA)",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1073651672",
+      "name_lat": "SVEGO BOX TORETTO",
+      "name_ru": "",
+      "breed": "БОКСЕР",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "204543266",
+      "name_lat": "SVET MURONA LETICIA PRIMAVERA",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1887361833",
+      "name_lat": "SVETGO BOX METTERNIH",
+      "name_ru": "",
+      "breed": "БОКСЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "246294459",
+      "name_lat": "SVET ZVEZDY YUNITY PRIME FOR HELAVIS",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1739457742",
+      "name_lat": "SVITA MARGO TSVET NATSII",
+      "name_ru": "",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1028024354",
+      "name_lat": "SVOBODNAYA STAYA UNGAR II",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "176331379",
+      "name_lat": "SVET MOEJ LJUBVI CASSIOPEIA",
+      "name_ru": "",
+      "breed": "RUSSIAN TOY SMOOTH-",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1079735085",
+      "name_lat": "SVELIZ GRAND MERSI",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "68106956",
+      "name_lat": "SVET POSADA BISMARK",
+      "name_ru": "",
+      "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "156266516",
+      "name_lat": "SVETALITY FERARRI RED",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1542055592",
+      "name_lat": "SVEITANA GEIL SHAL’NAYA IMPERATRITSA",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "349637167",
+      "name_lat": "SVARGAS SCOTTISH WHISKEY",
+      "name_ru": "",
+      "breed": "MINIATURE",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1622276731",
+      "name_lat": "SVETOL’S OLIMPIYA",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "553199502",
+      "name_lat": "SVELIZ HOTSY TOTSY",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1815278877",
+      "name_lat": "SVEMAR SHIKARNAYA KRASOTKA",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1332161847",
+      "name_lat": "SVELIZ AMORE MIO",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "NORWICH TERRIER",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "275793167",
+      "name_lat": "SVOBODNAYA STAYA GO TO WIN FILADELFIA",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "SIBERIAN HUSKY",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "258667647",
+      "name_lat": "SVET ZVEZDY ESMINA",
+      "name_ru": "",
+      "breed": "МОПС БЕЖЕВЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "46624450",
+      "name_lat": "SVETLYE ISTOKI USPEH-II",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1292168834",
+      "name_lat": "SVAJONIU",
+      "name_ru": "",
+      "breed": "ДЛИННОШЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1290363663",
+      "name_lat": "SVETOL’S CHERRY VICTORY TESSI NEXT",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1033407337",
+      "name_lat": "SVETLIE ISTOKI ALMAVIVA",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "468185513",
+      "name_lat": "SVETOL'S OLIMPIKA",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "979982555",
+      "name_lat": "SVETOL'S LAVANDA",
+      "name_ru": "",
+      "breed": "ГЛАДКОШЕРС",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "510438831",
+      "name_lat": "SVEMAR PEPITA",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1213322390",
+      "name_lat": "SVET DIMIRA INESSA",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН КОРИЧНЕВО- ПОДПАЛЫЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "928464071",
+      "name_lat": "SVOBODNAYA STAYA YA TUNDRA DOCH LEGENDY",
+      "name_ru": "",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
+      "breed_en": "YAKUTSKAYA LAIKA (YAKUTIAN LAIKA)",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1584989240",
+      "name_lat": "SVOBODNAYA STAYA SYENA LEDYANOE PLAMYA",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "SIBERIAN HUSKY",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1481266499",
+      "name_lat": "SVOBODNAYA STAYA SHAYNIS MOON",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "SIBERIAN HUSKY",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1903624520",
+      "name_lat": "SVOBODNAYA STAYA HALDAR",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "128345547",
+      "name_lat": "SVETSTYLE GOLDEN BLUES",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "YORKSHIRE TERRIER",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1710180947",
+      "name_lat": "SVETLANA'S FEISHN TONA (MEDIO)",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ (СРЕДНИЙ)",
+      "breed_en": "XOLOITZCUINTLE (INTERMEDIATE)",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1483276467",
+      "name_lat": "SVETOL’S ART AKSIOMA",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "240512956",
+      "name_lat": "SVESTA VILLS",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "218691161",
+      "name_lat": "SVAROG",
+      "name_ru": "",
+      "breed": "ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "842062636",
+      "name_lat": "SVAROG",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКАЯ РУССКАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1365910937",
+      "name_lat": "SVET MOIH OCHEY FANTASTIK BABY",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "250481784",
+      "name_lat": "SVET MUROMA TVORJASCHAJA NADEZHDU",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "913014970",
+      "name_lat": "SVOBODNAYA STAYA BRUKLIN II",
+      "name_ru": "",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
+      "breed_en": "YAKUTSKAYA LAIKA (YAKUTIAN LAIKA)",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "96270070",
+      "name_lat": "SVEGO BOX PANDORA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ БОКСЕР",
+      "breed_en": "BOXER",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1768927419",
+      "name_lat": "SVOBODAYA STAYA SOUL SEA",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1173282094",
+      "name_lat": "SVET NADEZHDY BELLA",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1047511555",
+      "name_lat": "SVEITANA GEIL CENNOE",
+      "name_ru": "",
+      "breed": "ГИНДУЛЛИНА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "47999631",
+      "name_lat": "SVETIX NEVER SAY NEVER",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ ПЯТНИСТЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1717644986",
+      "name_lat": "SVITA MARGO GERAKL",
+      "name_ru": "",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "419498469",
+      "name_lat": "SVEGO BOX EMILYA",
+      "name_ru": "",
+      "breed": "БОКСЕР ТИГРОВЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "80253011",
+      "name_lat": "SVET MUROMA NATAN RATIBOR",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН ЧЁРНО- ПОДПАЛЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1847094344",
+      "name_lat": "SVETOCH",
+      "name_ru": "",
+      "breed": "YAKUTSKAYA LAIKA",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1855555804",
+      "name_lat": "SVOBODNYI SOKOL ODRI",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "416074581",
+      "name_lat": "SVETANIC WONDERFUL JOY",
+      "name_ru": "",
+      "breed": "ПАПИЙОН /",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "773775625",
+      "name_lat": "SVETOZASTAR DEAR DREAM",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1067416162",
+      "name_lat": "SVETLIE ISTOKI KAJZER DZHON",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "285516376",
+      "name_lat": "SVETOL’S SECRET STYLE CHI",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "47950996",
+      "name_lat": "SVETANIC LAZIE LUXE",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1702439828",
+      "name_lat": "SVETA LOLITA FOR LUX",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1806628844",
+      "name_lat": "SVOBODNAYA STAYA FERRARI ROSSO",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "SIBERIAN HUSKY",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "552218770",
+      "name_lat": "SVEGO BOX ZHENSHEN",
+      "name_ru": "",
+      "breed": "БОКСЕР РЫЖИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1357768291",
+      "name_lat": "SVET NADEZHDY RIANA",
+      "name_ru": "",
+      "breed": "ЗЕННЕНХУНД /",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "946112386",
+      "name_lat": "SVET GALAKTIKI ZHEYSON",
+      "name_ru": "",
+      "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1768727015",
+      "name_lat": "SVETOL'S FIGARO",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "812862655",
+      "name_lat": "SVOBODNAYA STAYA VERONA",
+      "name_ru": "",
+      "breed": "YAKUTSKAYA LAIKA",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "465159892",
+      "name_lat": "SVETSKAYA LVITSA DIASTAR",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1315059223",
+      "name_lat": "SVEITANA GEIL VAM I NE",
+      "name_ru": "",
+      "breed": "КРАКОВСКАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "341558090",
+      "name_lat": "SVET ZVEZDY FOREVER HUBERT",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "57720556",
+      "name_lat": "SVOBODNAYA STAYA YASNAYA ZVEZDOCHKA",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "SIBERIAN HUSKY",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1762267726",
+      "name_lat": "SVOBODNAYA STAYA SHANEL SHARMING LEGEND",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "SIBERIAN HUSKY",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "644137184",
+      "name_lat": "SVETIRKLAND GALLANT SNOW BARS",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "620511418",
+      "name_lat": "SVET ZVEZDY AKSUNAMUN",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1201308180",
+      "name_lat": "SVET MUROMA NAOMI RA",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "DOBERMANN",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "620129099",
+      "name_lat": "SVET STEISI AZAMAT",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "TIBETAN MASTIFF (DO-KHYI)",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1521625286",
+      "name_lat": "SVETLIE ISTOKI YAROSLAV",
+      "name_ru": "",
+      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed_en": "RUSSKIY СHIORNY TERRIER (RUSSIAN BLACK TERRIER)",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1010560919",
+      "name_lat": "SVARGAS PALLADA",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "935249191",
+      "name_lat": "SVEN TE REAL WINER",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "975507256",
+      "name_lat": "SVEGO BOX LEXUS",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ БОКСЕР",
+      "breed_en": "BOXER",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "698595536",
+      "name_lat": "SVETART FOXY LADY",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1268568142",
+      "name_lat": "SVETOVID DID FOREVER YOUNG AS LOVE",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА /",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "862227302",
+      "name_lat": "SVETLOLESIE RUS",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "RUSSKAYA PSOVAYA BORZAYA (BORZOI)",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "687194446",
+      "name_lat": "SVOBODNAYA STAYA PALLADA",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "SIBERIAN HUSKY",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "224796780",
+      "name_lat": "SVOBODNAYA STAYA ETE D'AMOUR",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "SIBERIAN HUSKY",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "350005026",
+      "name_lat": "SVETANIC DARLING KING",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
+      "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "834440369",
+      "name_lat": "SVET ZVEZDY KNYAZ MIKHAIL",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "PUG",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "338948014",
+      "name_lat": "SVET ZVEZDY NOEL DANDY DORADO",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "PUG",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1467602224",
+      "name_lat": "SVET ZVEZDY MONA LIZA",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "PUG",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1004544589",
+      "name_lat": "SVOBODNAYA STAYA ULYANA II",
+      "name_ru": "",
+      "breed": "САМОЕД",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "756415976",
+      "name_lat": "SVELIS TROILAND",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1697274109",
+      "name_lat": "SVOBODNAYA STAYA TSESAR ARTI",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1545732403",
+      "name_lat": "SVETANIC YELLOW STAR",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1746222915",
+      "name_lat": "SVETOL’S DINAMIKA",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1995909306",
+      "name_lat": "SVET MUROMA LETICIA PRIMAVERA",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН /",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1043535844",
+      "name_lat": "SVETLAYA KRASAVITSA NOCHI",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1397605995",
+      "name_lat": "SVETOZAR LUCHEZARNIY",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1249787539",
+      "name_lat": "SVIT HARMFUL DARLING RED",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ – Окрас серый, абрикосовый, красный",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "784099933",
+      "name_lat": "SVOBODNAYA STAYA SHELLA VIDADI LIFE",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "SIBERIAN HUSKY",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "60803319",
+      "name_lat": "SVETSTYLE AVANTURIN",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "YORKSHIRE TERRIER",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1387970727",
+      "name_lat": "SVELIZ DRAGONHEART",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "NORWICH TERRIER",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "231177240",
+      "name_lat": "SVYATOVIT POBEDITEL TMY",
+      "name_ru": "",
+      "breed": "СТАРОАНГЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "OLD ENGLISH SHEEPDOG",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1676098576",
+      "name_lat": "SVETOZAR SOLNECHNYI ZAICHIK (N/B)",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "WELSH CORGI PEMBROKE",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "391809401",
+      "name_lat": "SVOBODNAYA STAYA INDIGO",
+      "name_ru": "",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
+      "breed_en": "YAKUTSKAYA LAIKA (YAKUTIAN LAIKA)",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1542914272",
+      "name_lat": "SVOBODNAYA STAYA ILARIYA",
+      "name_ru": "",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
+      "breed_en": "YAKUTSKAYA LAIKA (YAKUTIAN LAIKA)",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1139650224",
+      "name_lat": "SVOBODNAYA STAYA EDINSTVENNAYA GYURZA",
+      "name_ru": "",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
+      "breed_en": "YAKUTSKAYA LAIKA (YAKUTIAN LAIKA)",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "875142008",
+      "name_lat": "SVOBODNAYA STAYA EZHEVIKA-IRISKA",
+      "name_ru": "",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
+      "breed_en": "YAKUTSKAYA LAIKA (YAKUTIAN LAIKA)",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1188051183",
+      "name_lat": "SVETSTYLE KISS ME BABY",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "YORKSHIRE TERRIER",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1993219756",
+      "name_lat": "SVOBODNAYA STAYA YULIANA KUKLA",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "SIBERIAN HUSKY",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1676663312",
+      "name_lat": "SVIREP UDALOY IZ SELA TSAREVO",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "RUSSKAYA PSOVAYA BORZAYA (BORZOI)",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "908194255",
+      "name_lat": "SVETLIE ISTOKI ZHEMCHUZHNY MUAR",
+      "name_ru": "",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "COLLIE ROUGH",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1277717972",
+      "name_lat": "SVET MUROMA SCHASTLIVIY IZBRANNIK",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "DOBERMANN",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "228915688",
+      "name_lat": "SVET MUROMA TSENTURION KRONOS",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "DOBERMANN",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "510872251",
+      "name_lat": "SVEGO BOX ZIPPO",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ БОКСЕР",
+      "breed_en": "BOXER",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "739478368",
+      "name_lat": "SVET STEISI ANSARIA",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "TIBETAN MASTIFF (DO-KHYI)",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1858886782",
+      "name_lat": "SVENTANA BENNITA MAGIK KISS",
+      "name_ru": "",
+      "breed": "ШИ ТЦУ",
+      "breed_en": "SHIH TZU",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1905393017",
+      "name_lat": "SVOBODNAYA STAYA YAGODKA-MALINKA",
+      "name_ru": "",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
+      "breed_en": "YAKUTSKAYA LAIKA (YAKUTIAN LAIKA)",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1600734986",
+      "name_lat": "SVEMAR DOBRAYA RYBKA DORIS",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1264891609",
+      "name_lat": "SVYATAYA ALFEYA LEVISH",
+      "name_ru": "",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1786111535",
+      "name_lat": "SVETSKAYA LVITSA",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "915440668",
+      "name_lat": "SVETOL'S OLIMPIADA",
+      "name_ru": "",
+      "breed": "ДЛИННОШЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "664236336",
+      "name_lat": "SVET ZVEZDY EVA",
+      "name_ru": "",
+      "breed": "МОПС / PUG",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1874405264",
+      "name_lat": "SVET LYUBANTER IGREJN LORA",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1094617749",
+      "name_lat": "SVIT HARMFUL DZHULIANNA ROW",
+      "name_ru": "",
+      "breed": "ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "560580208",
+      "name_lat": "SVET LYUBANTER NELSON MANDELA",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1136158955",
+      "name_lat": "SVIT HARMFUL JORZHETTA CLAIR",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1009634703",
+      "name_lat": "SVIT HARMFUL YUSSI YULIANA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1135506476",
+      "name_lat": "SVIT HARMFUL YARKAYA ELKA",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1610866272",
+      "name_lat": "SVIT HARMFUL ELMINA",
+      "name_ru": "",
+      "breed": "ДЛИННОШЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1353744781",
+      "name_lat": "SVIT HARMFUL FISHKA",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1936184293",
+      "name_lat": "SVETOL'S EMELYANA",
+      "name_ru": "",
+      "breed": "КОРОТКОШЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "824864131",
+      "name_lat": "SVET NADEZHDY MILANA KOROLEVA KRASOTY",
+      "name_ru": "",
+      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "558801222",
+      "name_lat": "SVYATAYA ALFEYA YUPERVA",
+      "name_ru": "",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "262982833",
+      "name_lat": "SVETIX CLEAR STREAM",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1139963708",
+      "name_lat": "SVOYA ATMOSFERA ALIVIYA",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1339255985",
+      "name_lat": "SVETOGOR OT LUGARI",
+      "name_ru": "",
+      "breed": "РОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1400323757",
+      "name_lat": "SVOBODNAYA STAYA EVEREST AKA YUTA",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1988153396",
+      "name_lat": "SVITA MARGO JASMINE",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1179371508",
+      "name_lat": "SVETIRKLAND BEA PLUM FLAVOR",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА длинношерстная",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "451109842",
+      "name_lat": "SVET MOIH OCHEY FIRE FOX",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "98527518",
+      "name_lat": "SVET POSADA BEATRICHE",
+      "name_ru": "",
+      "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "244908051",
+      "name_lat": "SVETOL'S SHALUNIYA METELICA",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "759881980",
+      "name_lat": "SVET LYUBANTER TSEZAR",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "473046997",
+      "name_lat": "SVET NADEZHDY NIKA",
+      "name_ru": "",
+      "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "616413068",
+      "name_lat": "SVET URALA KHLOYA SEJMER",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "97865398",
+      "name_lat": "SVETOL'S VALKIRIA WHITE",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1722886927",
+      "name_lat": "SVETOL'S CHIZHIK",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "100315666",
+      "name_lat": "SVETOL'S VERONA",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1315322943",
+      "name_lat": "SVYATAYA ALFEYA YUFIMIYA",
+      "name_ru": "",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "497143869",
+      "name_lat": "SVET GALAKTIKI TESEYA TRIS",
+      "name_ru": "",
+      "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1910018455",
+      "name_lat": "SVAT LYUTIY",
+      "name_ru": "",
+      "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
+      "breed_en": "YUZHNORUSSKAYA OVCHARKA (SOUTH RUSSIAN SHEEPHERD DOG)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "701495538",
+      "name_lat": "SVIT KANDI",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1770402211",
+      "name_lat": "SVYATOPOLK",
+      "name_ru": "",
+      "breed": "БАССЕТ ХАУНД / BASSET",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "985308971",
+      "name_lat": "SVETOVID BORNA STRENGTH OF MIND",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "AMERICAN AKITA",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "222176254",
+      "name_lat": "SVOBODNAYA STAYA TEFFI BLACK",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "SIBERIAN HUSKY",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "733397206",
+      "name_lat": "SVET POSADA EJOY",
+      "name_ru": "",
+      "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
+      "breed_en": "MAREMMA AND THE ABRUZZES SHEEPDOG",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "112973284",
+      "name_lat": "SVEYTANA GEYL ZHEMCHUZHNAYA ORKHIDEYA",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "PUG",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "474411841",
+      "name_lat": "SVEYTANA GEYL GORYACHAYA GRENOCHKA",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "PUG",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "633829435",
+      "name_lat": "SVELIZ CLOSE ATTENTION FOR EQUILIBRIUM",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "NORWICH TERRIER",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "461667352",
+      "name_lat": "SVOBODNAYA STAYA SIMBA STRONG",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "SIBERIAN HUSKY",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "61210212",
+      "name_lat": "SVOBODNAYA STAYA PANDORA",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "SIBERIAN HUSKY",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "18383642",
+      "name_lat": "SVEJII VETER BYUROKRAT ( N/B )",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "WELSH CORGI PEMBROKE",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "181054007",
+      "name_lat": "SVOBODNAYA STAYA MICHIGAN",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1119015028",
+      "name_lat": "SVOBODNAYA STAYA KRISTOFER",
+      "name_ru": "",
+      "breed": "ВОСТОЧНО- ЯКУТСКАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "991575912",
+      "name_lat": "SVET MOIH OCHEY UKON DZHEK",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1291704701",
+      "name_lat": "SVET OCHEI OT BUMAGE",
+      "name_ru": "",
+      "breed": "СИЛИХЕМ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "331207648",
+      "name_lat": "SVET SAPFIROVOY ZVEZDY",
+      "name_ru": "",
+      "breed": "БОКСЕР ПОЛЬСКАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "693414670",
+      "name_lat": "SVET MOIH OCHEY UMMI",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1324510827",
+      "name_lat": "SVEITANA GEIL EZHEVICHNY JAM",
+      "name_ru": "",
+      "breed": "МОПС / PUG",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "110583381",
+      "name_lat": "SVETSKIY STIL CITRIN CRYSTAL",
+      "name_ru": "",
+      "breed": "ЧАРЛЬЗ ФАЛЕН) ПАПИЙОН / CONTINENTAL TOY",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1839833096",
+      "name_lat": "SVOBODNAYA STAYA IZYUMINKA INTRIGI",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1848910327",
+      "name_lat": "SVET HRUSTALYA MARNEO",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1786942175",
+      "name_lat": "SVYATAYA ALFEYA MANTIN",
+      "name_ru": "",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "67458659",
+      "name_lat": "SVETLANKA IZ BELOGO JARA",
+      "name_ru": "",
+      "breed": "ОСТЕВАЯ ШЕРСТЬ С",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "600762625",
+      "name_lat": "SVETIRKLAND DANCE WITH ME",
+      "name_ru": "",
+      "breed": "CHIHUAHUA SMOOTH",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "146365266",
+      "name_lat": "SVEGA JUST BEAUTY",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1042150839",
+      "name_lat": "SVEGO BOX MACARENA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ БОКСЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "687872525",
+      "name_lat": "SVEGO BOX INDIGA",
+      "name_ru": "",
+      "breed": "БОКСЕР ТИГРОВЫЙ /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1300012519",
+      "name_lat": "SVEGO BOX MATTERNIH",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ БОКСЕР (ТИГРОВЫЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1403065279",
+      "name_lat": "SVET GALAKTIKI KASANDRA",
+      "name_ru": "",
+      "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "128254585",
+      "name_lat": "SVETART MARS",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1844417638",
+      "name_lat": "SVETSKAYA LVITSA IZ ORDENA L'VINOE SERDCE",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1433606990",
+      "name_lat": "SVETOL’S VITAMINKA FOR SMILE",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "60661795",
+      "name_lat": "SVETOL’S FIGARO",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "547769616",
+      "name_lat": "SVET MUROMA LINGARD POWER",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН ЧЁРНО- ПОДПАЛЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "933308648",
+      "name_lat": "SVETSKAYA L'VICA IZ ROSTOVA PAPY",
+      "name_ru": "",
+      "breed": "ЦВЕТНОЙ / BULL",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "135875445",
+      "name_lat": "SVIT HARMFUL ZOLLA",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "650080179",
+      "name_lat": "SVET NASDEZHDY ZEVS",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "198598603",
+      "name_lat": "SVIT HARMFUL KATRIN AMI MARI",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ / FRENCH",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "10402558",
+      "name_lat": "SVYATAYA ALFEYA FANTASIYA",
+      "name_ru": "",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "333562659",
+      "name_lat": "SVETOL’S BLUEBERRY",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "478700588",
+      "name_lat": "SVETOL’S WHITE PYURPLE ANGEL",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "949803921",
+      "name_lat": "SVIT HARMFUL ZEVS",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "126590866",
+      "name_lat": "SVET POSADA BRAMA",
+      "name_ru": "",
+      "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1781277387",
+      "name_lat": "SVIT HARMFUL CHERRI FLOR",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "412851750",
+      "name_lat": "SVEMAR DIVNYY PRINTS",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "495002471",
+      "name_lat": "SVETOSLAVA GABRIELLA ANGEL ICE",
+      "name_ru": "",
+      "breed": "ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1155990002",
+      "name_lat": "SVET OCHEI MOIH MARSELLA",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "641260768",
+      "name_lat": "SVETART RALPH LOURENT",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1042596561",
+      "name_lat": "SVIT KENDI SBEREGOV VOLHOVA",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "43606477",
+      "name_lat": "SVETART HAMER",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1140064617",
+      "name_lat": "SVETIRKLAND ICON BEAUTY",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "735879220",
+      "name_lat": "SVET URALA TOMNAYA TOSKANA (LONG COAT)",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1112245723",
+      "name_lat": "SVETLIE ISTOKI IRMA",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1395156913",
+      "name_lat": "SVETOL'S WHITE PURPLE ANGEL",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1861807717",
+      "name_lat": "SVOBODNAYA STAYA NUAR BRILLIANS",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1023945849",
+      "name_lat": "SVETOL'S BUSIRINA VAN GRIG",
+      "name_ru": "",
+      "breed": "ГЛАДКОШЕРС",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "823679446",
+      "name_lat": "SVOY USPEH IZ SKAZGRADA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1102223622",
+      "name_lat": "SVET NADEZHDY NORA",
+      "name_ru": "",
+      "breed": "МАРЕММО-АБРУЦЦКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "411021476",
+      "name_lat": "SVET OCHEY MOIKH LYUBAVA",
+      "name_ru": "",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "55398463",
+      "name_lat": "SVETANIC KAMILLA",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1384513012",
+      "name_lat": "SVELIZ FINIMOR",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "985434991",
+      "name_lat": "SVETART ULTRA MAGIC",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ / SIBERIAN",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1623121495",
+      "name_lat": "SVIT HARMFUL JIXEL VERONIK",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "336074807",
+      "name_lat": "SVIT HARMFUL DEBORA MING",
+      "name_ru": "",
+      "breed": "ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "937539263",
+      "name_lat": "SVIT HARMFUL JULIET VALERY",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1148463513",
+      "name_lat": "SVELIZ TAKE A CHANCE FOR LIBIRIS",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1465497011",
+      "name_lat": "SVEMAR ZHAR-PTICZA",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "103496295",
+      "name_lat": "SVEMAR SHOKO SHANSANETKA",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "77375069",
+      "name_lat": "SVIT KANDI SALVE MARIS STELLA",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "160379145",
+      "name_lat": "SVET ZVEZDY RACHELLE GENTLE",
+      "name_ru": "",
+      "breed": "МОПС / PUG",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1580429881",
+      "name_lat": "SVETSTYLE LAGUNA",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "588166109",
+      "name_lat": "SVIT CHOKLET ZHUZHA IZ GORODA NA NEVE",
+      "name_ru": "",
+      "breed": "ДЛИННОШЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "859550925",
+      "name_lat": "SVETOL'S OLIMPIYA",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1597959430",
+      "name_lat": "SVETOL'S VOROZHEYA",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1711792938",
+      "name_lat": "SVETOL'S KNYAZHENIKA OTRAZHENIE ZVEZD",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1700807951",
+      "name_lat": "SVETOL'S CHIVLI",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ КОРОТКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1233969965",
+      "name_lat": "SVIT HARMFUL YANNI-MELONI",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1740989780",
+      "name_lat": "SVET ZVEZDY TSUSIMA",
+      "name_ru": "",
+      "breed": "МОПС / PUG",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1470621568",
+      "name_lat": "SVEMAR LILII BELOY AROMAT",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1601662488",
+      "name_lat": "SVET ANGELOV VARVARA KRASA",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1767033078",
+      "name_lat": "SVIT HARMFUL DJOZIANA ANASTASI",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ Окрас рыжий, серый",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1464088922",
+      "name_lat": "SVIT HARMFUL NOELLA",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1743510286",
+      "name_lat": "SVET OCHEY MOIH IZ TSVETNOY AKVARELI",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "606840829",
+      "name_lat": "SVOBODNAYA STAYA ATTIKA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1323006180",
+      "name_lat": "SVOBODNAYA STAYA IOSHI YURI",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "187842719",
+      "name_lat": "SVET GALAKTIKI FANTASTICA ALSANI",
+      "name_ru": "",
+      "breed": "ДЛИННОШЕРС",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "24383603",
+      "name_lat": "SVITA MARGO EMIKO",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1845121312",
+      "name_lat": "SVETLIE ISTOKI SENSATSIYA",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "932620538",
+      "name_lat": "SVET GALAKTIKI FANTASTIKA ALSANI",
+      "name_ru": "",
+      "breed": "ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1408269406",
+      "name_lat": "SVET GALAKTIKI TAYRA TIARA",
+      "name_ru": "",
+      "breed": "ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "278823471",
+      "name_lat": "SVIFT S MILLIONNOGO MOSTA",
+      "name_ru": "",
+      "breed": "КЛАМБЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1305390379",
+      "name_lat": "SVOBODNYI SOKOL TESSA",
+      "name_ru": "",
+      "breed": "ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "323836695",
+      "name_lat": "SVETOVID TUCHCHI BLEK",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

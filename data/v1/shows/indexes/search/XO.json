@@ -1,0 +1,790 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "XO",
+  "count": 87,
+  "dogs": [
+    {
+      "id": "415847939",
+      "name_lat": "XOLOMANIA FELIPE",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ (СТАНДАРТНЫЙ)",
+      "breed_en": "",
+      "total_shows": 129,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1207494797",
+      "name_lat": "XOE ELEKI'S I GOT YOU BABE ПОПУТН",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 36,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1914264883",
+      "name_lat": "XOLOMANIA POLINA",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
+      "breed_en": "",
+      "total_shows": 28,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1731936898",
+      "name_lat": "XOLOMANIA YULKA",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ (СТАНДАРТНЫЙ)",
+      "breed_en": "",
+      "total_shows": 32,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1854705712",
+      "name_lat": "XOLOMANIA LUIZA (STAND)",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ (СТАНДАРТНЫЙ)",
+      "breed_en": "XOLOITZCUINTLE (STANDARD)",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "58744550",
+      "name_lat": "XOLOMANIA HANK",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ (СТАНДАРТНЫЙ)",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "981388522",
+      "name_lat": "XOCHIQUETZAL FROM TECUANI",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ (СТАНДАРТНЫЙ)",
+      "breed_en": "XOLOITZCUINTLE (STANDARD)",
+      "total_shows": 45,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1468418193",
+      "name_lat": "XOLOMANIA TITAN",
+      "name_ru": "",
+      "breed": "МЕКСИКАНСКАЯ ГОЛАЯ СОБАКА (Ксолоитцкуинтли)",
+      "breed_en": "",
+      "total_shows": 36,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1866565108",
+      "name_lat": "XOLOMANIA ZABAVA",
+      "name_ru": "",
+      "breed": "XOLOITZCUINTLE STANDART",
+      "breed_en": "",
+      "total_shows": 26,
+      "competition_dog_id": null
+    },
+    {
+      "id": "796460432",
+      "name_lat": "XOLOMANIA HOMER (STAND)",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ (СТАНДАРТНЫЙ)",
+      "breed_en": "XOLOITZCUINTLE (STANDARD)",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1122141739",
+      "name_lat": "XOLOMANIA SOLANA",
+      "name_ru": "",
+      "breed": "МЕКСИКАНСКАЯ ГОЛАЯ",
+      "breed_en": "",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "693244347",
+      "name_lat": "XOLOMANIA BELLE (STAND)",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ (СТАНДАРТНЫЙ)",
+      "breed_en": "XOLOITZCUINTLE (STANDARD)",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1435976675",
+      "name_lat": "XOE ELEKI’S I GOT YOU BABE",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "272906223",
+      "name_lat": "XOLOMANIA VANGA",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "793530163",
+      "name_lat": "XOLOMANIA SHAKIRA",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ (СТАНДАРТНЫЙ)",
+      "breed_en": "XOLOITZCUINTLE (STANDARD)",
+      "total_shows": 32,
+      "competition_dog_id": null
+    },
+    {
+      "id": "606761439",
+      "name_lat": "XOLOMANIA VITTORIA (STAND)",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ (СТАНДАРТНЫЙ)",
+      "breed_en": "XOLOITZCUINTLE (STANDARD)",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1919587386",
+      "name_lat": "XOLOMANIA YULANA",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "712818073",
+      "name_lat": "XOLOMANIA YULANA (STAND)",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ (СТАНДАРТНЫЙ)",
+      "breed_en": "XOLOITZCUINTLE (STANDARD)",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1927413608",
+      "name_lat": "XOLOMANIA YO-MOYO",
+      "name_ru": "",
+      "breed": "Ксолоитцкуин тли (стандарт)",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "150799351",
+      "name_lat": "XOLOMANIA FEMIDA",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ СОБАКА) СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1417751079",
+      "name_lat": "XOE'S ROUGHNECK",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "PUG",
+      "total_shows": 28,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1174664346",
+      "name_lat": "XOLOMANIA ESTEL (STAND)",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ (СТАНДАРТНЫЙ)",
+      "breed_en": "XOLOITZCUINTLE (STANDARD)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1980596256",
+      "name_lat": "XOLOMANIA FELIPE (STAND)",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ (СТАНДАРТНЫЙ)",
+      "breed_en": "XOLOITZCUINTLE (STANDARD)",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1885859525",
+      "name_lat": "XOLOMANIA LUIZA",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
+      "breed_en": "",
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "170817020",
+      "name_lat": "XOLOMANIA LIMANNER GRAND",
+      "name_ru": "",
+      "breed": "СОБАКА (Ксолоитцкуинтли) – Стандартная",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1617435796",
+      "name_lat": "XOLOMANIA CHYERNAYA ZVEZDA CHOLITA",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "134859728",
+      "name_lat": "XOLOMANIA SHAKIRA (STAND)",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ (СТАНДАРТНЫЙ)",
+      "breed_en": "XOLOITZCUINTLE (STANDARD)",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "646661884",
+      "name_lat": "XOLOMANIA UNO",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1932403714",
+      "name_lat": "XOLHTEMOC AVALOS/LARA",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1086007093",
+      "name_lat": "XOLOMANIA EMILY",
+      "name_ru": "",
+      "breed": "МЕКСИКАНСКАЯ ГОЛАЯ СОБАКА (КСОЛОИТЦКУИНТЛИ)",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1320504581",
+      "name_lat": "XOLOWORLD DJACOB (MEDIO)",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ (СРЕДНИЙ)",
+      "breed_en": "XOLOITZCUINTLE (INTERMEDIATE)",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "973820629",
+      "name_lat": "XOLOMANIA BERMUDO (STAND)",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ (СТАНДАРТНЫЙ)",
+      "breed_en": "XOLOITZCUINTLE (STANDARD)",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1822553321",
+      "name_lat": "XOLOMANIA YULKA (STAND)",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ (СТАНДАРТНЫЙ)",
+      "breed_en": "XOLOITZCUINTLE (STANDARD)",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "979876403",
+      "name_lat": "XOLOMANIA ZVEN",
+      "name_ru": "",
+      "breed": "ЛАЙКА СОБАКА) СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1766072033",
+      "name_lat": "XOLOMANIA CATALINA",
+      "name_ru": "",
+      "breed": "КСОЛОИТСКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ СОБАКА) СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "744396376",
+      "name_lat": "XOLOMANIA ZHADINA",
+      "name_ru": "",
+      "breed": "КСОЛОИТСКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ СОБАКА) СРЕДНЯЯ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "22633979",
+      "name_lat": "XOLOMANIA PANDORA",
+      "name_ru": "",
+      "breed": "СОБАКА (Ксолоитцкуинтли) – Стандартная",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "108152087",
+      "name_lat": "XOLOMANIA HOMER",
+      "name_ru": "",
+      "breed": "СОБАКА СТАНДАРТНАЯ /",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1150417945",
+      "name_lat": "XOLOMANIA PERSIVAL",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ СОБАКА) СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "129196881",
+      "name_lat": "XOE'S ALL KINDS OF TROUBLE",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "PUG",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1144285914",
+      "name_lat": "XOLOMANIA ESTEL",
+      "name_ru": "",
+      "breed": "МЕКСИКАНСКАЯ ГОЛАЯ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "66563501",
+      "name_lat": "XOLOMANIA PERSEY",
+      "name_ru": "",
+      "breed": "ЕВРАЗИЕР СОБАКА) СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1390905764",
+      "name_lat": "XOLOMANIA YOSHKIN KOT",
+      "name_ru": "",
+      "breed": "СОБАКА СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1220813311",
+      "name_lat": "XOLOMANIA YO-MOYO (STAND)",
+      "name_ru": "",
+      "breed": "МЕКСИКАНСКАЯ ГОЛАЯ СОБАКА стандартная",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "779866338",
+      "name_lat": "XOLOMANIA ROMEO",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ (СТАНДАРТНЫЙ)",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "868887374",
+      "name_lat": "XOLOMANIA VICO",
+      "name_ru": "",
+      "breed": "КИСУ КСОЛОИТСКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "241126122",
+      "name_lat": "XOLOMANIA FILIPP",
+      "name_ru": "",
+      "breed": "СОБАКА (Ксолоитцкуинтли) – Стандартная",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "22932770",
+      "name_lat": "XOLOMANIA NATASHA",
+      "name_ru": "",
+      "breed": "КСОЛОИТСКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ СОБАКА) СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "519303162",
+      "name_lat": "XOLOMANIA DIONA",
+      "name_ru": "",
+      "breed": "МЕКСИКАНСКАЯ ГОЛАЯ СОБАКА СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "989868753",
+      "name_lat": "XOLOMANIA CHERNAYA ZVEZDA CHOLITA",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ (СТАНДАРТНЫЙ)",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1373435560",
+      "name_lat": "XOLOMANIA ODIN",
+      "name_ru": "",
+      "breed": "АКИТА КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1416486600",
+      "name_lat": "XOLOMANIA ZEUS",
+      "name_ru": "",
+      "breed": "ГОЛАЯ СОБАКА (СТАНД)",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1813169848",
+      "name_lat": "XOLOMANIA MALINA",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1204003026",
+      "name_lat": "XOLOMANIA COSMO",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ КСОЛОИТСКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1358400612",
+      "name_lat": "XOLOMANIA CARAMBA",
+      "name_ru": "",
+      "breed": "ЗАПАДНО- ГОЛАЯ СОБАКА (КСОЛОИТЦКУИНТЛ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "455190960",
+      "name_lat": "XOLA XIT YAMALA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "110945867",
+      "name_lat": "XOLOMANIA POLINA (STAND)",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ СТАНДАРТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "377684285",
+      "name_lat": "XOLOMANIA OTRADA",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "524545384",
+      "name_lat": "XOLOWORLD ZUMARA (MEDIO)",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ (СРЕДНИЙ)",
+      "breed_en": "XOLOITZCUINTLE (INTERMEDIATE)",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "751598017",
+      "name_lat": "XOLOMANIA VANGA (СТАНД)",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ ГОЛАЯ СОБАКА) СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1493566395",
+      "name_lat": "XOLOMANIA ENISEY",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "189034118",
+      "name_lat": "XOLOMANIA VANGA (STAND)",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ (СТАНДАРТНЫЙ)",
+      "breed_en": "XOLOITZCUINTLE (STANDARD)",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "585639694",
+      "name_lat": "XOE'S SAND TRAP",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "PUG",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "13793638",
+      "name_lat": "XOLOMANIA DAENERYS",
+      "name_ru": "",
+      "breed": "КИСУ КСОЛОИТСКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1915069216",
+      "name_lat": "XOLOMANIA NAEL",
+      "name_ru": "",
+      "breed": "СОБАКА (Ксолоитцкуинтли) – Стандартная",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "536371239",
+      "name_lat": "XOLOMANIA NAEL (Изменено по Решению ВК от 13.07.22 вопрос 33)",
+      "name_ru": "",
+      "breed": "СОБАКА (Ксолоитцкуинтли) – Стандартная",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "30418250",
+      "name_lat": "XOLOMANIA VITTORIA",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1887214566",
+      "name_lat": "XOE'S ROUGHNE CK",
+      "name_ru": "",
+      "breed": "PUG BLACK",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1703337733",
+      "name_lat": "XOLOMANIA YOSHKA- MATRYOSHKA",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1883624049",
+      "name_lat": "XOLOMANIA CHARODEY",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "214175172",
+      "name_lat": "XONEY",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "154734591",
+      "name_lat": "XOLOMANIA ANDUIN",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1559175086",
+      "name_lat": "XOLOMANIA MONTES",
+      "name_ru": "",
+      "breed": "СОБАКА) СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1769108184",
+      "name_lat": "XOLOMANIA YURI LVOVICH",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ (СТАНДАРТНЫЙ)",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "335780809",
+      "name_lat": "XOLOMANIA ESENIA",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "130765525",
+      "name_lat": "XOLOMANIA DOROTHY",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1419423690",
+      "name_lat": "XOLOMON",
+      "name_ru": "",
+      "breed": "XOLOITZCUINTLE",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1267187208",
+      "name_lat": "XOLOMANIA UNO",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ СОБАКА) СРЕДНЯЯ /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "386775889",
+      "name_lat": "XOLOMANIA UNO",
+      "name_ru": "",
+      "breed": "ЕВРАЗИЕР КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1287435057",
+      "name_lat": "XOLOMANIA BERNARDO",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ (СТАНДАРТНЫЙ)",
+      "breed_en": "XOLOITZCUINTLE (STANDARD)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "347259964",
+      "name_lat": "XOLOMANIA BAGIRA (STANDARD)",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ (СТАНДАРТНЫЙ)",
+      "breed_en": "XOLOITZCUINTLE (STANDARD)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1098037017",
+      "name_lat": "XOE'S ROUGHNECK MERRY MANKY",
+      "name_ru": "",
+      "breed": "МОПС / PUG",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "744842682",
+      "name_lat": "XOLOMANIA SHEYNA",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "709895035",
+      "name_lat": "XOLOMANIA SHAGANE",
+      "name_ru": "",
+      "breed": "ЕВРАЗИЕР ГОЛАЯ СОБАКА) СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "216809265",
+      "name_lat": "XOLOMANIA ELIZAR",
+      "name_ru": "",
+      "breed": "СОБАКА) СТАНДАРТНАЯ / XOLOITZCUINTLE",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1470322034",
+      "name_lat": "XOLOMANIA DIEGO",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "43036277",
+      "name_lat": "XOLOMANIA DIAS",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

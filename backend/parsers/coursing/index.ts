@@ -1,0 +1,157 @@
+/**
+ * Модульный парсер результатов курсинга
+ * Использует разбитые на модули функции для лучшей читаемости и поддержки
+ */
+
+import * as cheerio from "cheerio";
+import { fetchWin1251 } from "../../lib/fetch-win1251";
+import { normalizeDogName, normalizeBreed } from "./utils";
+import { parseDogRow, parseNonArrivedRow } from "./row-parsers";
+import { extractJudgeCount } from "./header-parsers";
+import { CoursingParseResultSchema } from "./schemas";
+import { extractJudgesFromPage } from "../shared/extract-judges";
+import { parseBreedClassHeader } from "../shared/breed-class-header";
+import { normalizeProtocolPageTitle } from "../shared/protocol-title";
+import { isNonArrivedSectionHeader, isNonArrivedDataRow } from "../shared/non-arrived-section";
+import { parserLogger } from "../../lib/structured-logging";
+
+export async function parseCoursingHTML(html) {
+  parserLogger.info('Starting coursing HTML parsing', { htmlLength: html.length });
+  
+  const $ = cheerio.load(html);
+  const results = [];
+  let currentBreedClass = null;
+  let inNonArrivedSection = null;
+  let telegramUrl = null;
+  let fullTitle = null;
+  let eventDate = null;
+  let protocolLocation = null;
+  let judges = null;
+
+  // Извлекаем полный заголовок из title тега
+  const pageTitle = $('title').text();
+  if (pageTitle) {
+    parserLogger.debug('Extracted page title', { pageTitle });
+    fullTitle = normalizeProtocolPageTitle(pageTitle.trim());
+  }
+
+  // Извлекаем дату события из заголовка
+  const dateMatch = fullTitle?.match(/(\d{1,2})\.(\d{1,2})\.(\d{2,4})/);
+  if (dateMatch) {
+    const [, day, month, year] = dateMatch;
+    eventDate = `${year.length === 2 ? '20' + year : year}-${month}-${day}`;
+  }
+
+  // Извлекаем URL Telegram
+  const telegramLink = $('a[href*="t.me"]').first();
+  if (telegramLink.length > 0) {
+    telegramUrl = telegramLink.attr('href');
+  }
+
+  // Извлекаем местоположение протокола
+  const locationMatch = fullTitle?.match(/(?:в|г\.|город)\s+([А-Яа-я\s]+)/i);
+  if (locationMatch) {
+    protocolLocation = locationMatch[1].trim();
+  }
+
+  judges = extractJudgesFromPage($);
+
+  const allRows = $('table tr').toArray();
+  const processedRows = new Set(); // Отслеживаем обработанные строки
+  
+  allRows.forEach(($row, rowIndex) => {
+    const $rowEl = $($row);
+    const bgColor = $rowEl.attr('bgcolor');
+    const $cells = $rowEl.find("td");
+    const firstCellText = $cells.eq(0).text().trim();
+    
+    // Пропускаем уже обработанные строки (например, строки с оценками судьи 2)
+    if (processedRows.has(rowIndex)) {
+      return;
+    }
+    
+    const normalizedBgColor = bgColor ? bgColor.toLowerCase() : '';
+    const breedClassHeader = parseBreedClassHeader(firstCellText, bgColor);
+    if (breedClassHeader) {
+      currentBreedClass = breedClassHeader;
+      inNonArrivedSection = false;
+      return;
+    }
+
+    if (isNonArrivedSectionHeader(firstCellText)) {
+      inNonArrivedSection = true;
+      currentBreedClass = null;
+      return;
+    }
+
+    const rowText = $rowEl.text();
+    if (isNonArrivedDataRow(rowText, bgColor, inNonArrivedSection)) {
+      const parsed = parseNonArrivedRow($rowEl);
+      if (parsed) results.push(parsed);
+      return;
+    }
+    
+    // Белый фон - строки собак
+    if (normalizedBgColor === "#ffffff" || !bgColor) {
+      if (currentBreedClass) {
+        const parsed = parseDogRow($, $rowEl, currentBreedClass, allRows, rowIndex, judges, extractJudgeCount, processedRows);
+        if (parsed) {
+          results.push(parsed);
+          processedRows.add(rowIndex); // Помечаем текущую строку как обработанную
+        }
+      }
+    }
+  });
+
+  const parseResult = { results, telegram_url: telegramUrl, full_title: fullTitle, event_date: eventDate, protocol_location: protocolLocation, judges, track_schemes: [] };
+  
+  parserLogger.info('Completed coursing HTML parsing', { 
+    resultsCount: results.length,
+    hasJudges: !!judges,
+    hasEventDate: !!eventDate
+  });
+  
+  return parseResult;
+}
+
+export async function parseCoursingHTMLWithValidation(html) {
+  parserLogger.debug('Starting coursing HTML parsing with validation');
+  
+  const result = await parseCoursingHTML(html);
+  
+  // Валидация результата с помощью Zod
+  const validationResult = CoursingParseResultSchema.safeParse(result);
+  
+  if (!validationResult.success) {
+    parserLogger.error('Zod validation error', undefined, { 
+      validationErrors: validationResult.error 
+    });
+    // Возвращаем результат даже при ошибке валидации для совместимости
+    return result;
+  }
+  
+  parserLogger.debug('Coursing HTML validation passed');
+  return result;
+  
+  return validationResult.data;
+}
+
+export async function parseCoursingResultsPage(url) {
+  const html = await fetchWin1251(url);
+  return parseCoursingHTML(html);
+}
+
+// CLI-режим для быстрой проверки на одной странице:
+// node coursing/index.mjs <url>
+if (import.meta.url === `file://${process.argv[1]}` && process.argv[2]) {
+  const url = process.argv[2];
+  parseCoursingResultsPage(url).then((res) => {
+    console.log(JSON.stringify(res, null, 2));
+    console.log(`\nВсего строк-результатов: ${res.results.length}`);
+    console.log(
+      `Из них с непонятным статусом (нужна ручная проверка raw_text): ${
+        res.results.filter((r) => r.status === "unknown_status_check_raw_text" || r.status === "unknown_status").length
+      }`
+    );
+  });
+}

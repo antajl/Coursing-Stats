@@ -1,0 +1,736 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "ОВ",
+  "count": 81,
+  "dogs": [
+    {
+      "id": "109701157",
+      "name_lat": "ОВАЦИЯ ДОНА БОЛЬШАЯ АМБИЦИЯ",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "32939609",
+      "name_lat": "ОВАЦИЯ ДОНА АЗАРТНАЯ ЗВЕЗДА",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "480904507",
+      "name_lat": "ОВЕР ТУ Ю ИЗ ТЕРЛЕЦКОЙ ДУБРАВЫ",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "DALMATIAN",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1064314209",
+      "name_lat": "ОВАЦИЯ КРИСТИ",
+      "name_ru": "",
+      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "STAFFORDSHIRE BULL TERRIER",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "705955655",
+      "name_lat": "ОВАЦИЯ ДОНА ФОРТУНА ВИННЕР",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1032951128",
+      "name_lat": "ОВАЦИЯ ЭБОНИ БЬЮТИ",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁР.",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "932419253",
+      "name_lat": "ОВАЦИЯ ФО ГАЛАКС ПРАЙД",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1986951531",
+      "name_lat": "ОВАИЯ ДОНА ФОРТУНА ВИННЕР",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1945496508",
+      "name_lat": "ОВАЦИЯ ДОНА ВОСХИТИТЕЛЬНАЯ МИА БЕЛЛА",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1815849894",
+      "name_lat": "ОВАЦИЯ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ БЕЛЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1515476889",
+      "name_lat": "ОВАЦИЯ",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ШПИЦ БЕЛЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1542533742",
+      "name_lat": "ОВАЦИЯ ЭПЛОЗ ЛЕДИ ГАГА",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "780314046",
+      "name_lat": "ОВЕР ТАЙМ АКАСИ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "LABRADOR RETRIEVER",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "691417899",
+      "name_lat": "ОВАЦИЯ ИЗ ЗВЕЗДНОГО ЛЕГИОНА",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "350062991",
+      "name_lat": "ОВАЦИЯ ОМСКАЯ СЕНСАЦИЯ",
+      "name_ru": "",
+      "breed": "ВЕСТ ХАЙЛЕНД ВАЙТ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "830483066",
+      "name_lat": "ОВАЦИЯ ПРИМАДОННА",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "951285612",
+      "name_lat": "ОВАЦИЯ ПЕРВАЯ ЛЕДИ",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1981209434",
+      "name_lat": "ОВАЦИЯ ИЗ КОМПАНИИ СЕБЯСТЬЯНА",
+      "name_ru": "",
+      "breed": "ФОКСТЕРЬЕР ГЛАДКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "427206306",
+      "name_lat": "ОВАЦИЯ ДЖУЛИТ КЛЕО",
+      "name_ru": "",
+      "breed": "САМОЕД",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1097665114",
+      "name_lat": "ОВАЦИЯ ДОНА НОН СТОП НЭВЭ ВЕНДЕТТА",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "531048455",
+      "name_lat": "ОВАЦИЯ ДОНА КАСАБЛАНКА",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1679063973",
+      "name_lat": "ОВЕРНЬ ИЗЮМОВНА АЛЬМИЛЕ",
+      "name_ru": "",
+      "breed": "ПАПИЙОН /",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "17716945",
+      "name_lat": "ОВАЦИЯ ДЖУДИТ КЛЕО",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "422578242",
+      "name_lat": "ОВАЦИЯ ДОНА ЭГОИСТА",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "23827064",
+      "name_lat": "ОВАЦИЯ ОЛЬГА КНЯЖНА РУСИ",
+      "name_ru": "",
+      "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1228581535",
+      "name_lat": "ОВАЦИЯ ОНЛИ Ю",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "99666153",
+      "name_lat": "ОВАДАН ГОАР",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1599838092",
+      "name_lat": "ОВАЦИЯ ИЗ КРАЯ ЛЕСНЫХ ОЗЁР",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1442668630",
+      "name_lat": "ОВАЦИЯ ТАНГО В ДВОЕМ",
+      "name_ru": "",
+      "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "774269200",
+      "name_lat": "ОВЕР ТАЙМ АГАТА",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "LABRADOR RETRIEVER",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1961627433",
+      "name_lat": "ОВЕРИ ИМПОРТАНТ ПЕРСОН МАТИЛЬДА",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "359911582",
+      "name_lat": "ОВАЦИЯ АЛИСА",
+      "name_ru": "",
+      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "172480701",
+      "name_lat": "ОВАЦИЯ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "536406596",
+      "name_lat": "ОВАЦИИ БАРС БЕЛЛО",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1922978007",
+      "name_lat": "ОВАЦИЯ ДОНА КОМИЛЬФО",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "186384671",
+      "name_lat": "ОВАЦИЯ ЛЕДИ ИЗ ДОНСКОЙ ЛИБЕРИИ",
+      "name_ru": "",
+      "breed": "GERMAN SPITZ KLEINSPITZ ORANGE, GREY, OTHER",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "242660482",
+      "name_lat": "ОВАЦИЯ С ГОРЫ КЛЮЧЕЙ",
+      "name_ru": "",
+      "breed": "Мопс / PUG",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1363080046",
+      "name_lat": "ОВАН ОСЛЕПИТЕЛЬНЫЙ ПАРЕНЬ",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "36917364",
+      "name_lat": "ОВЕР ТАЙМ БЛЮЗ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1889149241",
+      "name_lat": "ОВАЦИЯ ЭВАНС",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1734565854",
+      "name_lat": "ОВИНА АЙВАРЕС",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1182119654",
+      "name_lat": "ОВЕРКОНФИДЕНС",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "251968072",
+      "name_lat": "ОВЕРКОНФИДЕНС",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК / WELSH CORGI",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "596952544",
+      "name_lat": "ОВАЦИИ А'ШЕЙЛА",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1808344962",
+      "name_lat": "ОВАЦИЯ ИЗ ЦАРСКОСЕЛЬСКОЙ УСАДЬБЫ",
+      "name_ru": "",
+      "breed": "МОСКОВСКАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "572099619",
+      "name_lat": "ОВАЦИЯ ОГНЯ ИЗ ГРАДА БЕЛЫХ БЕРЕЗ",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1650738468",
+      "name_lat": "ОВАЦИЯ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1399770137",
+      "name_lat": "ОВАЦИЯ ЛИНДА",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "146023042",
+      "name_lat": "ОВАЦИЯ ИЗ ФОМКИНО",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "737771852",
+      "name_lat": "ОВЕРЛОРД",
+      "name_ru": "",
+      "breed": "МОПС / PUG",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "614052884",
+      "name_lat": "ОВАЦИЯ СИЛЬВИЯ",
+      "name_ru": "",
+      "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "62078897",
+      "name_lat": "ОВЕЙШЕН ФО БЕСТ ИН АНГЕЛ ПОМ",
+      "name_ru": "",
+      "breed": "GERMAN SPITZ TOY (POMERANIAN)",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "214622158",
+      "name_lat": "ОВАНЕС ИЗ КОРОЛЕВСТВА СТАФФ",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1038383818",
+      "name_lat": "ОВАЦИЯ БЕЛАЯ НОЧЬ",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "882234938",
+      "name_lat": "ОВАЦИЯ КАРИС",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "273406285",
+      "name_lat": "ОВАЦИЯ БРАВО",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1997498218",
+      "name_lat": "ОВАЦИЯ ДОНА РЭДИАНТ ХЕППИНЕСС ВЕНИАМИН",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "89092300",
+      "name_lat": "ОВЛАД",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "291490503",
+      "name_lat": "ОВАЦИЯ",
+      "name_ru": "",
+      "breed": "GERMAN SPITZ TOY (POMERANIAN)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "705508193",
+      "name_lat": "ОВЕРЛОРД",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "462475712",
+      "name_lat": "ОВАЦИЯ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1904241849",
+      "name_lat": "ОВАЦИЯ",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "916563463",
+      "name_lat": "ОВАЦИЯ",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "974919191",
+      "name_lat": "ОВЕРКОНФИДЕНС",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "838966253",
+      "name_lat": "ОВЕРКОНФИДЕНС",
+      "name_ru": "",
+      "breed": "ПЕМБРОК / WELSH",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1408623241",
+      "name_lat": "ОВАДАН ОДИН",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1558209126",
+      "name_lat": "ОВАЦИЯ ЖИЗНЬ О'КЕЙ",
+      "name_ru": "",
+      "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "922033690",
+      "name_lat": "ОВАЦИЯ БРАВО(Г/Ш)",
+      "name_ru": "",
+      "breed": "CHIHUAHUA SMOOTH",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1316616592",
+      "name_lat": "ОВАЦИЯ ОТ СОЛЬНИКА",
+      "name_ru": "",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "116605420",
+      "name_lat": "ОВЕЙН ЭЛЬФО ИЗ СОЗВЕЗДИЯ",
+      "name_ru": "",
+      "breed": "АРГЕНТИНСКИЙ ДОГ /",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "42921509",
+      "name_lat": "ОВЕРИСА АЛИСТАР",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1302229613",
+      "name_lat": "ОВ ЕМПРЕСС ФИКЕ ЭРАГОН",
+      "name_ru": "",
+      "breed": "АКИТА / AMERICAN",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1907683804",
+      "name_lat": "ОВАЦИЯ ОН БЬЮТИ",
+      "name_ru": "",
+      "breed": "CHIHUAHUA SMOOTH",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "301618292",
+      "name_lat": "ОВАЦИЯ ЮНОНА РАСКОШНАЯ ЗВЕЗДА",
+      "name_ru": "",
+      "breed": "МАЛЫЙ БРАБАНСОН",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "536901893",
+      "name_lat": "ОВАЦИЯ ДОНА ЛАЙТ СКАЙ ЛАККИ",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1625030842",
+      "name_lat": "Овер Тайм Беретта",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1235918349",
+      "name_lat": "ОВАЦИЯ С САМОГО ЧЕРНОГО МОРЯ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1782968026",
+      "name_lat": "ОВАЦИЯ ДОНА ФИЛАДЕЛЬФИЯ",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "66600410",
+      "name_lat": "ОВЕР ЗЕ МУН ИЗ ТЕРЛЕЦКОЙ ДУБРАВЫ",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1577866262",
+      "name_lat": "ОВ ГЕЛИОС ШАРОН",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "85307544",
+      "name_lat": "ОВИТА ФОМ ХАУС КСЕНИ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}
