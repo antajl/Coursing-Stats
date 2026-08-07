@@ -128,8 +128,8 @@ export function getDogSelectionKeyboard(dogs: Dog[], mode: 'search' | 'compare' 
 
 export function getDoninoMenu(): InlineKeyboard {
   return new InlineKeyboard()
-    .text('Скорость', 'donino_speed')
-    .text('Курсинг', 'donino_coursing')
+    .text('Курсинг', 'donino_speed')
+    .text('Рейсинг 350м', 'donino_coursing')
     .row()
     .text('← Назад', 'main_menu')
     .text('🏠 На главную', 'main_menu');
@@ -138,16 +138,20 @@ export function getDoninoMenu(): InlineKeyboard {
 export function getDoninoKeyboard(currentType: 'speed' | 'coursing'): InlineKeyboard {
   const keyboard = new InlineKeyboard();
 
-  // Toggle between speed and coursing
   if (currentType === 'speed') {
-    keyboard.text('Курсинг', 'donino_coursing');
+    keyboard.text('Рейсинг 350м', 'donino_coursing');
   } else {
-    keyboard.text('Замеры', 'donino_speed');
+    keyboard.text('Курсинг', 'donino_speed');
   }
 
-  keyboard.row();
-  keyboard.text('← Назад', 'main_menu');
-  keyboard.text('🏠 На главную', 'main_menu');
+  keyboard
+    .row()
+    .url('Открыть Курсинг Донино', 'https://runningdog.ru/')
+    .row()
+    .url('Открыть на сайте', 'https://coursing-stats.ru/speed-records')
+    .row()
+    .text('← Назад', 'main_menu')
+    .text('🏠 На главную', 'main_menu');
 
   return keyboard;
 }

@@ -4,15 +4,18 @@ import { getMainInlineMenu, getNavigationButtons, getCompetitionsMenu, getShowsM
 import { validateDogId } from './utils/validators';
 import { formatDogCard } from './utils/dogCard';
 import {
-  buildDoninoBreedNotFoundResult,
+  buildDoninoNotFoundResult,
   buildInlineDogResult,
+  buildInlineDoninoDogResults,
   buildInlineDoninoResults,
   collectDoninoBreeds,
-  getSpeedKmh,
+  findDoninoDogsByName,
+  formatDoninoTopChatText,
   matchDoninoBreeds,
+  matchExactDoninoBreeds,
+  parseDoninoDiscipline,
   parseDoninoInlineQuery,
 } from '../inlineQuery';
-import type { SpeedRecordExtended } from '../types';
 import type { KVNamespace } from './context';
 
 /**
@@ -132,42 +135,74 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
     start_parameter: 'inline',
   };
 
-  // Phrase shortcuts: донино / donino [порода]
+  // Phrase shortcuts: донино / donino [курсинг|рейсинг|порода|кличка]
   const doninoQuery = parseDoninoInlineQuery(query);
   if (doninoQuery) {
     try {
       const records = await api.getSpeedRecords();
+      const doninoButton = { text: '⏱ Донино в боте', start_parameter: 'donino' };
 
-      if (doninoQuery.breedQuery) {
+      if (doninoQuery.term) {
+        const discipline = parseDoninoDiscipline(doninoQuery.term);
+        const filterTerm = discipline?.rest ?? (discipline ? undefined : doninoQuery.term);
+
+        if (discipline && !filterTerm) {
+          const results = buildInlineDoninoResults(records.speed, records.coursing, {
+            only: discipline.discipline,
+          });
+          await ctx.answerInlineQuery(results, { cache_time: 0, button: doninoButton });
+          return;
+        }
+
+        const lookup = filterTerm ?? doninoQuery.term;
         const allBreeds = collectDoninoBreeds(records.speed, records.coursing);
-        const matchedBreeds = matchDoninoBreeds(doninoQuery.breedQuery, allBreeds);
+        const exactBreeds = matchExactDoninoBreeds(lookup, allBreeds);
+        const nameHits = findDoninoDogsByName(lookup, records.speed, records.coursing);
+        const partialBreeds = matchDoninoBreeds(lookup, allBreeds);
 
-        if (matchedBreeds.length === 0) {
-          await ctx.answerInlineQuery(buildDoninoBreedNotFoundResult(doninoQuery.breedQuery), {
+        if (exactBreeds.length > 0) {
+          const speed = records.speed.filter((r) => exactBreeds.includes(r.breed));
+          const coursing = records.coursing.filter((r) => exactBreeds.includes(r.breed));
+          const results = buildInlineDoninoResults(speed, coursing, {
+            breedLabel: exactBreeds[0],
+            siteBreeds: exactBreeds,
+            only: discipline?.discipline,
+          });
+          await ctx.answerInlineQuery(results, { cache_time: 0, button: doninoButton });
+          return;
+        }
+
+        if (nameHits.length > 0) {
+          await ctx.answerInlineQuery(buildInlineDoninoDogResults(nameHits), {
             cache_time: 0,
+            button: doninoButton,
           });
           return;
         }
 
-        const speed = records.speed.filter((r) => matchedBreeds.includes(r.breed));
-        const coursing = records.coursing.filter((r) => matchedBreeds.includes(r.breed));
-        const breedLabel = matchedBreeds.length === 1 ? matchedBreeds[0] : matchedBreeds.join(', ');
-        const results = buildInlineDoninoResults(speed, coursing, {
-          breedLabel,
-          siteBreeds: matchedBreeds,
-        });
+        if (partialBreeds.length > 0) {
+          const speed = records.speed.filter((r) => partialBreeds.includes(r.breed));
+          const coursing = records.coursing.filter((r) => partialBreeds.includes(r.breed));
+          const breedLabel = partialBreeds.length === 1 ? partialBreeds[0] : partialBreeds.join(', ');
+          const results = buildInlineDoninoResults(speed, coursing, {
+            breedLabel,
+            siteBreeds: partialBreeds,
+            only: discipline?.discipline,
+          });
+          await ctx.answerInlineQuery(results, { cache_time: 0, button: doninoButton });
+          return;
+        }
 
-        await ctx.answerInlineQuery(results, {
-          cache_time: 300,
-          button: { text: '⏱ Донино в боте', start_parameter: 'donino' },
+        await ctx.answerInlineQuery(buildDoninoNotFoundResult(doninoQuery.term), {
+          cache_time: 0,
         });
         return;
       }
 
       const results = buildInlineDoninoResults(records.speed, records.coursing);
       await ctx.answerInlineQuery(results, {
-        cache_time: 300,
-        button: { text: '⏱ Донино в боте', start_parameter: 'donino' },
+        cache_time: 0,
+        button: doninoButton,
       });
     } catch {
       await ctx.answerInlineQuery([], { cache_time: 0 });
@@ -221,15 +256,7 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
 
   if (args === 'donino') {
       const records = await api.getSpeedRecords();
-      let text = '<b>⏱ Рекорды Донино</b>\n\n';
-      if (records.speed.length === 0) {
-        text += 'Не удалось загрузить рекорды скорости';
-      } else {
-        records.speed.slice(0, 10).forEach((record, index) => {
-          const speed = getSpeedKmh(record as SpeedRecordExtended);
-          text += `${index + 1}. ${record.name} (${record.breed}) - ${speed} км/ч\n`;
-        });
-      }
+      const text = formatDoninoTopChatText(records.speed, records.coursing, { only: 'speed' });
       await ctx.reply(text, {
         parse_mode: 'HTML',
         reply_markup: getDoninoKeyboard('speed'),

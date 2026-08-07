@@ -4,30 +4,9 @@ import { getNavigationButtons, getDogSelectionKeyboard, getDogCardKeyboard } fro
 import { sanitizeInput, validateDogId, validateSearchQuery } from './utils/validators';
 import { getDisplayName } from './utils/helpers';
 import { formatDogCard } from './utils/dogCard';
+import { buildInlineDoninoDogResults, findDoninoDogsByName } from '../inlineQuery';
 import { Dog } from '../types';
 import type { KVNamespace } from './context';
-
-/**
- * Форматирует дату в русский формат (ДД.ММ.ГГГГ)
- * @param dateString - строка даты в формате YYYY-MM-DD
- * @returns дата в формате DD.MM.YYYY или оригинальная строка если формат неверный
- */
-function formatDateRussian(dateString: string): string {
-  if (!dateString) return 'N/A';
-  
-  try {
-    const date = new Date(dateString);
-    if (isNaN(date.getTime())) return dateString;
-    
-    const day = String(date.getDate()).padStart(2, '0');
-    const month = String(date.getMonth() + 1).padStart(2, '0');
-    const year = date.getFullYear();
-    
-    return `${day}.${month}.${year}`;
-  } catch (error) {
-    return dateString;
-  }
-}
 
 /**
  * Вспомогательные функции для обработки профиля собаки
@@ -112,36 +91,22 @@ async function handleDogNameSearch(ctx: any, dogName: string, api: CoursingStats
     return;
   }
 
-  const doninoResults = await api.searchDoninoRecords(dogName);
-  
-  if (doninoResults.speed.length > 0 || doninoResults.coursing.length > 0) {
-    const speedRecord = doninoResults.speed[0];
-    const coursingRecord = doninoResults.coursing[0];
-    
-    let text = `<b>🏆 ${speedRecord?.name || coursingRecord?.name}</b> (Рекорды Донино)\n\n`;
-    
-    if (speedRecord) {
-      text += `<b>Рекорды скорости:</b>\n`;
-      text += `• ${speedRecord.speed_kmh} км/ч — ${formatDateRussian(speedRecord.date || '')}\n`;
+  const records = await api.getSpeedRecords();
+  const doninoHits = findDoninoDogsByName(dogName, records.speed, records.coursing, 3);
+
+  if (doninoHits.length > 0) {
+    const cards = buildInlineDoninoDogResults(doninoHits);
+    for (const card of cards) {
+      await ctx.reply(card.input_message_content.message_text, {
+        parse_mode: 'HTML',
+        reply_markup: card.reply_markup,
+      });
     }
-    
-    if (coursingRecord) {
-      text += `<b>Рекорды курсинга:</b>\n`;
-      text += `• ${coursingRecord.time_seconds} сек — ${formatDateRussian(coursingRecord.date || '')}\n`;
-    }
-    
-    text += `\n<i>Это отдельный рейтинг от соревнований и выставок</i>\n\n`;
-    text += `<a href="https://coursing-stats.ru/speed-records">🌐 Все рекорды Донино</a>`;
-    
-    await ctx.reply(text, {
-      parse_mode: 'HTML',
-      reply_markup: getNavigationButtons('main_menu', 'main_menu')
-    });
     return;
   }
   
   await ctx.reply(
-    '❌ Собаки не найдены.\n\nПопробуйте:\n• Другое написание клички\n• Введите ID собаки (число)\n• Более конкретный запрос',
+    '❌ Собаки не найдены.\n\nПопробуйте:\n• Другое написание клички\n• Введите ID собаки (число)\n• Более конкретный запрос\n• Inline: @coursing_stats_bot донино',
     { reply_markup: getNavigationButtons('main_menu', 'main_menu') }
   );
 }
