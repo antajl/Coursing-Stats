@@ -33,6 +33,7 @@ CoursingStats — статистика соревнований (procoursing), �
 | Package manager | **yarn@1.22.22** |
 | Local secrets | `.env.ai` (gitignored) |
 | Two sport ratings | medals ≠ CS points — never merge |
+| Local admin | `/admin` + `/admin/event/:id` only in `yarn run dev` |
 | Bot | Workers + Grammy + KV; aggregates only |
 
 Three domains: **Competitions** / **Shows** / **Donino** — see [docs/sheets/01-three-domains.md](docs/sheets/01-three-domains.md).
@@ -42,15 +43,17 @@ Three domains: **Competitions** / **Shows** / **Donino** — see [docs/sheets/01
 ## Critical Commands
 
 ```bash
-yarn run dev                  # Vite :5173 + admin API :8787
+yarn run dev                  # Vite :5173 + admin API :8787 (/admin)
 yarn run build-all-data       # Rebuild indexes + publish-gates
 yarn run test-parser-fixtures
 yarn test
+# Archive Full_Results → competitions → calendar link:
+# npx tsx backend/scripts/import/import-full-results-archive.ts
+# npx tsx backend/scripts/import/sync-archive-comps-to-calendar.ts
 cd bot; yarn run build
 cd bot; yarn test
 cd bot; yarn run deploy
 ```
-
 PowerShell: use `;` not `&&`.
 
 ---

@@ -1,0 +1,4709 @@
+{
+  "schema": "coursing-stats/competition-v1",
+  "exported_at": "2026-08-08T20:12:46.253Z",
+  "source": "archive-full-results-legacy",
+  "event_id": 1551,
+  "event": {
+    "id": 1551,
+    "year": 2015,
+    "date_start": "2015-08-08",
+    "date_end": "2015-08-09",
+    "rank_label": "Национальные сертификатные состязания по курсингу",
+    "event_type": "coursing",
+    "competition_kind": null,
+    "competition_type": null,
+    "title": "Национальные сертификатные состязания по курсингу",
+    "host_club": null,
+    "region": null,
+    "location": "М.О., Сергиево-Посадский р-н",
+    "catalog_url": null,
+    "results_url": "https://web.archive.org/web/20171005153223/http://procoursing.ru/Full_Results_2015_08.html",
+    "confirmed": 0,
+    "last_modified": null,
+    "scraped_at": "2026-08-08T20:12:46.253Z",
+    "telegram_url": null,
+    "full_title": null,
+    "event_date": "2015-08-08",
+    "protocol_location": null,
+    "judges": null,
+    "track_schemes": [],
+    "admin_verified_at": null
+  },
+  "result_count": 55,
+  "results": [
+    {
+      "id": 1,
+      "event_id": 1551,
+      "dog_id": 9747,
+      "breed_class": "Басенджи - Стандарт - Микс",
+      "catalog_no": 1,
+      "placement": 1,
+      "total_score": 330,
+      "judge_count": 2,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 43,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  16,
+                  16,
+                  16,
+                  16
+                ],
+                "sum": 79
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 166,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 51,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  16,
+                  16,
+                  16,
+                  15
+                ],
+                "sum": 79
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 164,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 330
+      },
+      "raw_text": "1 | Басенджи | Стандарт | Кобели | Angel Congo Iffat Isimo to Evonti | 43 | 15 | 16 | 16 | 16 | 16 | 166 | 51 | 16 | 16 | 16 | 16 | 15 | 164 | 330 | 1 | CC | CACL",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "angel-congo-iffat-isimo-to-evonti--басенджи",
+      "dog": {
+        "id": 9747,
+        "dog_key": "angel-congo-iffat-isimo-to-evonti--басенджи",
+        "name_lat": "ANGEL CONGO IFFAT ISIMO TO EVONTI",
+        "name_ru": "ANGEL CONGO IFFAT ISIMO TO EVONTI",
+        "breed": "БАСЕНДЖИ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 2,
+      "event_id": 1551,
+      "dog_id": 9748,
+      "breed_class": "Басенджи - Стандарт - Микс",
+      "catalog_no": 2,
+      "placement": 4,
+      "total_score": 306,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 43,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  14,
+                  15,
+                  15,
+                  16,
+                  16
+                ],
+                "sum": 76
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  15,
+                  16,
+                  17,
+                  16,
+                  16
+                ],
+                "sum": 80
+              }
+            ],
+            "total": 156,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 51,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  14,
+                  14,
+                  16,
+                  14
+                ],
+                "sum": 73
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  13,
+                  16,
+                  16,
+                  16,
+                  16
+                ],
+                "sum": 77
+              }
+            ],
+            "total": 150,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 306
+      },
+      "raw_text": "2 | Басенджи | Стандарт | Кобели | SONBAR'S WESTERLY WIND | 43 | 14 | 15 | 15 | 16 | 16 | 156 | 51 | 15 | 14 | 14 | 16 | 14 | 150 | 306 | 4 | CC | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "sonbars-westerly-wind--басенджи",
+      "dog": {
+        "id": 9748,
+        "dog_key": "sonbars-westerly-wind--басенджи",
+        "name_lat": "SONBARS WESTERLY WIND",
+        "name_ru": "SONBARS WESTERLY WIND",
+        "breed": "БАСЕНДЖИ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 3,
+      "event_id": 1551,
+      "dog_id": 9749,
+      "breed_class": "Басенджи - Стандарт - Микс",
+      "catalog_no": 3,
+      "placement": 3,
+      "total_score": 316,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 44,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  15,
+                  14,
+                  15,
+                  15
+                ],
+                "sum": 74
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  15,
+                  17,
+                  16,
+                  17,
+                  15
+                ],
+                "sum": 80
+              }
+            ],
+            "total": 154,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 52,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  14,
+                  16,
+                  15,
+                  16,
+                  15
+                ],
+                "sum": 76
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  17,
+                  17
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 162,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 316
+      },
+      "raw_text": "3 | Басенджи | Стандарт | Суки | Marlen-Brao Kerolain Beauty | 44 | 15 | 15 | 14 | 15 | 15 | 154 | 52 | 14 | 16 | 15 | 16 | 15 | 162 | 316 | 3 | CC | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "marlen-brao-kerolain-beauty--басенджи",
+      "dog": {
+        "id": 9749,
+        "dog_key": "marlen-brao-kerolain-beauty--басенджи",
+        "name_lat": "MARLEN BRAO KEROLAIN BEAUTY",
+        "name_ru": "MARLEN BRAO KEROLAIN BEAUTY",
+        "breed": "БАСЕНДЖИ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 4,
+      "event_id": 1551,
+      "dog_id": 9750,
+      "breed_class": "Басенджи - Стандарт - Микс",
+      "catalog_no": 4,
+      "placement": 2,
+      "total_score": 323,
+      "judge_count": 2,
+      "qualification": "R.CACL",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 44,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  16,
+                  16,
+                  16,
+                  15
+                ],
+                "sum": 79
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  16,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 162,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 52,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  16,
+                  16,
+                  16,
+                  15
+                ],
+                "sum": 79
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  16,
+                  16,
+                  17,
+                  16
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 161,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 323
+      },
+      "raw_text": "4 | Басенджи | Стандарт | Суки | АМАГАММА ЛУНДЖИЛ | 44 | 16 | 16 | 16 | 16 | 15 | 162 | 52 | 16 | 16 | 16 | 16 | 15 | 161 | 323 | 2 | CC | R.CACL",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "амагамма-лунджил--басенджи",
+      "dog": {
+        "id": 9750,
+        "dog_key": "амагамма-лунджил--басенджи",
+        "name_lat": "АМАГАММА ЛУНДЖИЛ",
+        "name_ru": "АМАГАММА ЛУНДЖИЛ",
+        "breed": "БАСЕНДЖИ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 5,
+      "event_id": 1551,
+      "dog_id": 9751,
+      "breed_class": "Басенджи - Стандарт - Микс",
+      "catalog_no": 5,
+      "placement": 5,
+      "total_score": 303,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 44,
+            "bib_color": "yellow",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  14,
+                  13,
+                  13,
+                  15,
+                  14
+                ],
+                "sum": 69
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  14,
+                  15,
+                  16,
+                  16,
+                  15
+                ],
+                "sum": 76
+              }
+            ],
+            "total": 145,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 52,
+            "bib_color": "yellow",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  14,
+                  15,
+                  15,
+                  16,
+                  15
+                ],
+                "sum": 75
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 158,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 303
+      },
+      "raw_text": "5 | Басенджи | Стандарт | Суки | Горден Магик Дарлона Флер Нуар | 44 | 14 | 13 | 13 | 15 | 14 | 145 | 52 | 14 | 15 | 15 | 16 | 15 | 158 | 303 | 5 | CC | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "горден-магик-дарлона-флер-нуар--басенджи",
+      "dog": {
+        "id": 9751,
+        "dog_key": "горден-магик-дарлона-флер-нуар--басенджи",
+        "name_lat": "ГОРДЕН МАГИК ДАРЛОНА ФЛЕР НУАР",
+        "name_ru": "ГОРДЕН МАГИК ДАРЛОНА ФЛЕР НУАР",
+        "breed": "БАСЕНДЖИ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 6,
+      "event_id": 1551,
+      "dog_id": 9752,
+      "breed_class": "Далматин - Стандарт - Микс",
+      "catalog_no": 6,
+      "placement": 2,
+      "total_score": 324,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 45,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  16,
+                  15,
+                  16,
+                  15
+                ],
+                "sum": 77
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  16,
+                  18,
+                  17
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 163,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 54,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  17,
+                  16,
+                  16,
+                  16
+                ],
+                "sum": 80
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  15,
+                  16,
+                  17,
+                  17,
+                  16
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 161,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 324
+      },
+      "raw_text": "6 | Далматин | Стандарт | Кобели | ALPHADIRATO KNIGHTED KING | 45 | 15 | 16 | 15 | 16 | 15 | 163 | 54 | 15 | 17 | 16 | 16 | 16 | 161 | 324 | 2 | CC | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "alphadirato-knighted-king--далматин",
+      "dog": {
+        "id": 9752,
+        "dog_key": "alphadirato-knighted-king--далматин",
+        "name_lat": "ALPHADIRATO KNIGHTED KING",
+        "name_ru": "ALPHADIRATO KNIGHTED KING",
+        "breed": "ДАЛМАТИН",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 7,
+      "event_id": 1551,
+      "dog_id": 9753,
+      "breed_class": "Далматин - Стандарт - Микс",
+      "catalog_no": 7,
+      "placement": 1,
+      "total_score": 353,
+      "judge_count": 2,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 46,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 89
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  19,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 178,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 54,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  16
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 175,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 353
+      },
+      "raw_text": "7 | Далматин | Стандарт | Кобели | Gloriandus Maserati | 46 | 18 | 18 | 18 | 18 | 17 | 178 | 54 | 17 | 18 | 18 | 18 | 18 | 175 | 353 | 1 | CC | CACL",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "gloriandus-maserati--далматин",
+      "dog": {
+        "id": 9753,
+        "dog_key": "gloriandus-maserati--далматин",
+        "name_lat": "GLORIANDUS MASERATI",
+        "name_ru": "GLORIANDUS MASERATI",
+        "breed": "ДАЛМАТИН",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 8,
+      "event_id": 1551,
+      "dog_id": 9754,
+      "breed_class": "Далматин - Стандарт - Микс",
+      "catalog_no": 8,
+      "placement": null,
+      "total_score": 161,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 46,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  15,
+                  16,
+                  16,
+                  14
+                ],
+                "sum": 77
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  17,
+                  16
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 161,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 53,
+            "bib_color": "red",
+            "judges": [],
+            "total": null,
+            "disqualified": true,
+            "disqualification_reason": "Сошёл"
+          }
+        ],
+        "grand_total": 161
+      },
+      "raw_text": "8 | Далматин | Стандарт | Суки | ALPHADIRATO HARMONY | 46 | 16 | 15 | 16 | 16 | 14 | 161 | 53 | Сошёл |  | 161 |  |  | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "alphadirato-harmony--далматин",
+      "dog": {
+        "id": 9754,
+        "dog_key": "alphadirato-harmony--далматин",
+        "name_lat": "ALPHADIRATO HARMONY",
+        "name_ru": "ALPHADIRATO HARMONY",
+        "breed": "ДАЛМАТИН",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 9,
+      "event_id": 1551,
+      "dog_id": 9755,
+      "breed_class": "Ирландский волкодав - Стандарт - Микс",
+      "catalog_no": 9,
+      "placement": 2,
+      "total_score": 314,
+      "judge_count": 2,
+      "qualification": "R.CACL",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 50,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  16,
+                  16,
+                  15,
+                  15
+                ],
+                "sum": 78
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  15,
+                  16,
+                  17,
+                  16
+                ],
+                "sum": 80
+              }
+            ],
+            "total": 158,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 58,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  15,
+                  15,
+                  15,
+                  15
+                ],
+                "sum": 76
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  16,
+                  15,
+                  17,
+                  16
+                ],
+                "sum": 80
+              }
+            ],
+            "total": 156,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 314
+      },
+      "raw_text": "9 | Ирландский волкодав | Стандарт | Кобели | Dar Keltov iz Volshebnogo Lesa | 50 | 16 | 16 | 16 | 15 | 15 | 158 | 58 | 16 | 15 | 15 | 15 | 15 | 156 | 314 | 2 | CC | R.CACL",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "dar-keltov-iz-volshebnogo-lesa--ирландскии-волкодав",
+      "dog": {
+        "id": 9755,
+        "dog_key": "dar-keltov-iz-volshebnogo-lesa--ирландскии-волкодав",
+        "name_lat": "DAR KELTOV IZ VOLSHEBNOGO LESA",
+        "name_ru": "DAR KELTOV IZ VOLSHEBNOGO LESA",
+        "breed": "ИРЛАНДСКИЙ ВОЛКОДАВ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 10,
+      "event_id": 1551,
+      "dog_id": 9756,
+      "breed_class": "Ирландский волкодав - Стандарт - Микс",
+      "catalog_no": 10,
+      "placement": 3,
+      "total_score": 306,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 49,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  12,
+                  16,
+                  15,
+                  15,
+                  14
+                ],
+                "sum": 72
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  10,
+                  15,
+                  13,
+                  15,
+                  15
+                ],
+                "sum": 68
+              }
+            ],
+            "total": 140,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 57,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  16,
+                  17,
+                  16,
+                  16
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 166,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 306
+      },
+      "raw_text": "10 | Ирландский волкодав | Стандарт | Суки | OGNENNAYA STRELA IZ VOLSHEBNOGO LESA | 49 | 12 | 16 | 15 | 15 | 14 | 140 | 57 | 17 | 17 | 17 | 17 | 17 | 166 | 306 | 3 | CC | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "ognennaya-strela-iz-volshebnogo-lesa--ирландскии-волкодав",
+      "dog": {
+        "id": 9756,
+        "dog_key": "ognennaya-strela-iz-volshebnogo-lesa--ирландскии-волкодав",
+        "name_lat": "OGNENNAYA STRELA IZ VOLSHEBNOGO LESA",
+        "name_ru": "OGNENNAYA STRELA IZ VOLSHEBNOGO LESA",
+        "breed": "ИРЛАНДСКИЙ ВОЛКОДАВ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 11,
+      "event_id": 1551,
+      "dog_id": 9757,
+      "breed_class": "Ирландский волкодав - Стандарт - Микс",
+      "catalog_no": 11,
+      "placement": 1,
+      "total_score": 333,
+      "judge_count": 2,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 49,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  17,
+                  16
+                ],
+                "sum": 82
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 168,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 57,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  16,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 82
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  16,
+                  17
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 165,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 333
+      },
+      "raw_text": "11 | Ирландский волкодав | Стандарт | Суки | RECHENKA IZ VOLSHEBNOGO LESA | 49 | 16 | 17 | 16 | 17 | 16 | 168 | 57 | 16 | 16 | 16 | 17 | 17 | 165 | 333 | 1 | CC | CACL",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "rechenka-iz-volshebnogo-lesa--ирландскии-волкодав",
+      "dog": {
+        "id": 9757,
+        "dog_key": "rechenka-iz-volshebnogo-lesa--ирландскии-волкодав",
+        "name_lat": "RECHENKA IZ VOLSHEBNOGO LESA",
+        "name_ru": "RECHENKA IZ VOLSHEBNOGO LESA",
+        "breed": "ИРЛАНДСКИЙ ВОЛКОДАВ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 12,
+      "event_id": 1551,
+      "dog_id": 9758,
+      "breed_class": "Ирландский волкодав - Юниоры - Микс",
+      "catalog_no": 12,
+      "placement": 1,
+      "total_score": 330,
+      "judge_count": 2,
+      "qualification": "Лучший юниор",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 48,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  16,
+                  16,
+                  16,
+                  16
+                ],
+                "sum": 79
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 165,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 56,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  16,
+                  15,
+                  17,
+                  16
+                ],
+                "sum": 80
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  18,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 165,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 330
+      },
+      "raw_text": "12 | Ирландский волкодав | Юниоры | Кобели | FENIMORE COOPER IZ VOLSHEBNOGO LESA | 48 | 15 | 16 | 16 | 16 | 16 | 165 | 56 | 16 | 16 | 15 | 17 | 16 | 165 | 330 | 1 | CC | Лучший юниор",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "fenimore-cooper-iz-volshebnogo-lesa--ирландскии-волкодав",
+      "dog": {
+        "id": 9758,
+        "dog_key": "fenimore-cooper-iz-volshebnogo-lesa--ирландскии-волкодав",
+        "name_lat": "FENIMORE COOPER IZ VOLSHEBNOGO LESA",
+        "name_ru": "FENIMORE COOPER IZ VOLSHEBNOGO LESA",
+        "breed": "ИРЛАНДСКИЙ ВОЛКОДАВ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 13,
+      "event_id": 1551,
+      "dog_id": 9759,
+      "breed_class": "Испанский гальго - Стандарт - Микс",
+      "catalog_no": 13,
+      "placement": 1,
+      "total_score": 363,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 47,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  20,
+                  19,
+                  19,
+                  18
+                ],
+                "sum": 93
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  19,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 181,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 55,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  20,
+                  19,
+                  20,
+                  18
+                ],
+                "sum": 94
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  19,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 182,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 363
+      },
+      "raw_text": "13 | Испанский гальго | Стандарт | Кобели | JUCARO SPI FINITO | 47 | 17 | 20 | 19 | 19 | 18 | 181 | 55 | 17 | 20 | 19 | 20 | 18 | 182 | 363 | 1 | CC | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "jucaro-spi-finito--испанскии-гальго",
+      "dog": {
+        "id": 9759,
+        "dog_key": "jucaro-spi-finito--испанскии-гальго",
+        "name_lat": "JUCARO SPI FINITO",
+        "name_ru": "JUCARO SPI FINITO",
+        "breed": "ИСПАНСКИЙ ГАЛЬГО",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 14,
+      "event_id": 1551,
+      "dog_id": 9760,
+      "breed_class": "Ксолоитцкуинтли Стандарт - Стандарт - Микс",
+      "catalog_no": 14,
+      "placement": 1,
+      "total_score": 344,
+      "judge_count": 2,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 27,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  17,
+                  16
+                ],
+                "sum": 82
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  17,
+                  16
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 165,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 38,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  19,
+                  18,
+                  19,
+                  18
+                ],
+                "sum": 91
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 179,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 344
+      },
+      "raw_text": "14 | Ксолоитцкуинтли Стандарт | Стандарт | Кобели | DE DIOS REGALO | 27 | 16 | 17 | 16 | 17 | 16 | 165 | 38 | 17 | 19 | 18 | 19 | 18 | 179 | 344 | 1 | CC | CACL",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "de-dios-regalo--ксолоитцкуинтли-стандарт",
+      "dog": {
+        "id": 9760,
+        "dog_key": "de-dios-regalo--ксолоитцкуинтли-стандарт",
+        "name_lat": "DE DIOS REGALO",
+        "name_ru": "DE DIOS REGALO",
+        "breed": "КСОЛОИТЦКУИНТЛИ СТАНДАРТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 15,
+      "event_id": 1551,
+      "dog_id": 9761,
+      "breed_class": "Ксолоитцкуинтли Стандарт - Стандарт - Микс",
+      "catalog_no": 15,
+      "placement": 4,
+      "total_score": 325,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 28,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  16,
+                  17,
+                  17,
+                  16
+                ],
+                "sum": 81
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  15,
+                  17,
+                  16,
+                  17,
+                  15
+                ],
+                "sum": 80
+              }
+            ],
+            "total": 161,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 36,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  16,
+                  16,
+                  17,
+                  16
+                ],
+                "sum": 81
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  15
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 164,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 325
+      },
+      "raw_text": "15 | Ксолоитцкуинтли Стандарт | Стандарт | Кобели | RUS SHOW FOREVER ESPARGARO | 28 | 15 | 16 | 17 | 17 | 16 | 161 | 36 | 16 | 16 | 16 | 17 | 16 | 164 | 325 | 4 | CC | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "rus-show-forever-espargaro--ксолоитцкуинтли-стандарт",
+      "dog": {
+        "id": 9761,
+        "dog_key": "rus-show-forever-espargaro--ксолоитцкуинтли-стандарт",
+        "name_lat": "RUS SHOW FOREVER ESPARGARO",
+        "name_ru": "RUS SHOW FOREVER ESPARGARO",
+        "breed": "КСОЛОИТЦКУИНТЛИ СТАНДАРТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 16,
+      "event_id": 1551,
+      "dog_id": 9762,
+      "breed_class": "Ксолоитцкуинтли Медио - Стандарт - Микс",
+      "catalog_no": 16,
+      "placement": null,
+      "total_score": 164,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 27,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  15,
+                  15,
+                  16,
+                  18
+                ],
+                "sum": 79
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  15,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 164,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 37,
+            "bib_color": "#00a2e8",
+            "judges": [],
+            "total": null,
+            "disqualified": true,
+            "disqualification_reason": "Сошёл"
+          }
+        ],
+        "grand_total": 164
+      },
+      "raw_text": "16 | Ксолоитцкуинтли Медио | Стандарт | Кобели | RUS SHOW FOREVER TEENAGER | 27 | 15 | 15 | 15 | 16 | 18 | 164 | 37 | Сошёл |  | 164 |  |  | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "rus-show-forever-teenager--ксолоитцкуинтли-медио",
+      "dog": {
+        "id": 9762,
+        "dog_key": "rus-show-forever-teenager--ксолоитцкуинтли-медио",
+        "name_lat": "RUS SHOW FOREVER TEENAGER",
+        "name_ru": "RUS SHOW FOREVER TEENAGER",
+        "breed": "КСОЛОИТЦКУИНТЛИ МЕДИО",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 17,
+      "event_id": 1551,
+      "dog_id": 9763,
+      "breed_class": "Ксолоитцкуинтли Стандарт - Стандарт - Микс",
+      "catalog_no": 17,
+      "placement": 3,
+      "total_score": 337,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 29,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  16,
+                  16,
+                  17,
+                  15
+                ],
+                "sum": 79
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  16,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 163,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 36,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 88
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 174,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 337
+      },
+      "raw_text": "17 | Ксолоитцкуинтли Стандарт | Стандарт | Кобели | YUKALPETEN HANTAYVI | 29 | 15 | 16 | 16 | 17 | 15 | 163 | 36 | 18 | 18 | 17 | 18 | 17 | 174 | 337 | 3 | CC | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "yukalpeten-hantayvi--ксолоитцкуинтли-стандарт",
+      "dog": {
+        "id": 9763,
+        "dog_key": "yukalpeten-hantayvi--ксолоитцкуинтли-стандарт",
+        "name_lat": "YUKALPETEN HANTAYVI",
+        "name_ru": "YUKALPETEN HANTAYVI",
+        "breed": "КСОЛОИТЦКУИНТЛИ СТАНДАРТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 18,
+      "event_id": 1551,
+      "dog_id": 9764,
+      "breed_class": "Ксолоитцкуинтли Стандарт - Стандарт - Микс",
+      "catalog_no": 18,
+      "placement": 2,
+      "total_score": 343,
+      "judge_count": 2,
+      "qualification": "R.CACL",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 28,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  17,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 85
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  16,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 169,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 37,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  18,
+                  16
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 174,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 343
+      },
+      "raw_text": "18 | Ксолоитцкуинтли Стандарт | Стандарт | Суки | DULCE BAYA DE NAQHI | 28 | 18 | 17 | 16 | 17 | 17 | 169 | 37 | 18 | 18 | 18 | 18 | 18 | 174 | 343 | 2 | CC | R.CACL",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "dulce-baya-de-naqhi--ксолоитцкуинтли-стандарт",
+      "dog": {
+        "id": 9764,
+        "dog_key": "dulce-baya-de-naqhi--ксолоитцкуинтли-стандарт",
+        "name_lat": "DULCE BAYA DE NAQHI",
+        "name_ru": "DULCE BAYA DE NAQHI",
+        "breed": "КСОЛОИТЦКУИНТЛИ СТАНДАРТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 19,
+      "event_id": 1551,
+      "dog_id": 9765,
+      "breed_class": "Левретка - Стандарт - Микс",
+      "catalog_no": 19,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 30,
+            "bib_color": "red",
+            "judges": [],
+            "total": null,
+            "disqualified": true,
+            "disqualification_reason": "Сошёл"
+          }
+        ]
+      },
+      "raw_text": "19 | Левретка | Стандарт | Суки | BONITA | 30 | Сошёл |  |  |  |  |  |  |  |  |  |  |  | ",
+      "judges": null,
+      "status_reason": "Сошёл",
+      "dog_key": "bonita--левретка",
+      "dog": {
+        "id": 9765,
+        "dog_key": "bonita--левретка",
+        "name_lat": "BONITA",
+        "name_ru": "BONITA",
+        "breed": "ЛЕВРЕТКА",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 20,
+      "event_id": 1551,
+      "dog_id": 9766,
+      "breed_class": "Родезийский риджбек - Ветераны - Микс",
+      "catalog_no": 20,
+      "placement": 1,
+      "total_score": 168,
+      "judge_count": 2,
+      "qualification": "Лучший ветеран",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 31,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  16,
+                  15,
+                  17,
+                  16
+                ],
+                "sum": 80
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 168,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 168
+      },
+      "raw_text": "20 | Родезийский риджбек | Ветераны | Суки | PODAROK IZ AFRIKI BLISS BOUNTY | 31 | 16 | 16 | 15 | 17 | 16 | 168 |  |  |  |  |  |  |  | 168 | 1 | CC | Лучший ветеран",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "podarok-iz-afriki-bliss-bounty--родезиискии-риджбек",
+      "dog": {
+        "id": 9766,
+        "dog_key": "podarok-iz-afriki-bliss-bounty--родезиискии-риджбек",
+        "name_lat": "PODAROK IZ AFRIKI BLISS BOUNTY",
+        "name_ru": "PODAROK IZ AFRIKI BLISS BOUNTY",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 21,
+      "event_id": 1551,
+      "dog_id": 9767,
+      "breed_class": "Неприбывшие участники",
+      "catalog_no": 21,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dns",
+      "raw_scores_json": {
+        "heats": []
+      },
+      "raw_text": "21 | Родезийский риджбек | Стандарт | Кобели | TINA TRADING TESORO THEODORE |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ",
+      "judges": null,
+      "status_reason": "Неявка",
+      "dog_key": "tina-trading-tesoro-theodore--родезиискии-риджбек",
+      "dog": {
+        "id": 9767,
+        "dog_key": "tina-trading-tesoro-theodore--родезиискии-риджбек",
+        "name_lat": "TINA TRADING TESORO THEODORE",
+        "name_ru": "TINA TRADING TESORO THEODORE",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 22,
+      "event_id": 1551,
+      "dog_id": 9768,
+      "breed_class": "Родезийский риджбек - Стандарт - Суки",
+      "catalog_no": 22,
+      "placement": 2,
+      "total_score": 330,
+      "judge_count": 2,
+      "qualification": "R.CACL",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 32,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  12,
+                  16,
+                  16,
+                  17,
+                  14
+                ],
+                "sum": 75
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  15,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 161,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 39,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 169,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 330
+      },
+      "raw_text": "22 | Родезийский риджбек | Стандарт | Суки | AVE CAESAR ABBA DANCING QUEEN | 32 | 12 | 16 | 16 | 17 | 14 | 161 | 39 | 17 | 17 | 17 | 17 | 17 | 169 | 330 | 2 | CC | R.CACL",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "ave-caesar-abba-dancing-queen--родезиискии-риджбек",
+      "dog": {
+        "id": 9768,
+        "dog_key": "ave-caesar-abba-dancing-queen--родезиискии-риджбек",
+        "name_lat": "AVE CAESAR ABBA DANCING QUEEN",
+        "name_ru": "AVE CAESAR ABBA DANCING QUEEN",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 23,
+      "event_id": 1551,
+      "dog_id": 9769,
+      "breed_class": "Родезийский риджбек - Стандарт - Суки",
+      "catalog_no": 23,
+      "placement": 1,
+      "total_score": 339,
+      "judge_count": 2,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 33,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 83
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  17
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 170,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 40,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  18,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 84
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  17,
+                  18
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 169,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 339
+      },
+      "raw_text": "23 | Родезийский риджбек | Стандарт | Суки | Sunhill Ridges Nola Adeola | 33 | 16 | 17 | 16 | 17 | 17 | 170 | 40 | 16 | 18 | 16 | 17 | 17 | 169 | 339 | 1 | CC | CACL",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "sunhill-ridges-nola-adeola--родезиискии-риджбек",
+      "dog": {
+        "id": 9769,
+        "dog_key": "sunhill-ridges-nola-adeola--родезиискии-риджбек",
+        "name_lat": "SUNHILL RIDGES NOLA ADEOLA",
+        "name_ru": "SUNHILL RIDGES NOLA ADEOLA",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 24,
+      "event_id": 1551,
+      "dog_id": 9770,
+      "breed_class": "Неприбывшие участники",
+      "catalog_no": 24,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dns",
+      "raw_scores_json": {
+        "heats": []
+      },
+      "raw_text": "24 | Родезийский риджбек | Стандарт | Суки | Tina Trading Fedora |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ",
+      "judges": null,
+      "status_reason": "Неявка",
+      "dog_key": "tina-trading-fedora--родезиискии-риджбек",
+      "dog": {
+        "id": 9770,
+        "dog_key": "tina-trading-fedora--родезиискии-риджбек",
+        "name_lat": "TINA TRADING FEDORA",
+        "name_ru": "TINA TRADING FEDORA",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 25,
+      "event_id": 1551,
+      "dog_id": 9771,
+      "breed_class": "Родезийский риджбек - Стандарт - Суки",
+      "catalog_no": 25,
+      "placement": 3,
+      "total_score": 321,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 33,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  17,
+                  15,
+                  17,
+                  16
+                ],
+                "sum": 80
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  15,
+                  16,
+                  16,
+                  17,
+                  16
+                ],
+                "sum": 80
+              }
+            ],
+            "total": 160,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 39,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  15,
+                  16,
+                  17,
+                  16
+                ],
+                "sum": 79
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  17,
+                  16
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 161,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 321
+      },
+      "raw_text": "25 | Родезийский риджбек | Стандарт | Суки | БЬЮСОУЛ КУЛ КУИН | 33 | 15 | 17 | 15 | 17 | 16 | 160 | 39 | 15 | 15 | 16 | 17 | 16 | 161 | 321 | 3 | CC | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "бьюсоул-кул-куин--родезиискии-риджбек",
+      "dog": {
+        "id": 9771,
+        "dog_key": "бьюсоул-кул-куин--родезиискии-риджбек",
+        "name_lat": "БЬЮСОУЛ КУЛ КУИН",
+        "name_ru": "БЬЮСОУЛ КУЛ КУИН",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 26,
+      "event_id": 1551,
+      "dog_id": 9772,
+      "breed_class": "Русская псовая борзая - Ветераны - Микс",
+      "catalog_no": 26,
+      "placement": 1,
+      "total_score": 126,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 8,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  9,
+                  12,
+                  10,
+                  10,
+                  8
+                ],
+                "sum": 49
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  15,
+                  15,
+                  15,
+                  16,
+                  16
+                ],
+                "sum": 77
+              }
+            ],
+            "total": 126,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 26,
+            "bib_color": "#00a2e8",
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 126
+      },
+      "raw_text": "26 | Русская псовая борзая | Ветераны | Суки | АЛИСА | 8 | 9 | 12 | 10 | 10 | 8 | 126 | 26 |  |  |  |  |  |  | 126 | 1 |  | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "алиса--русская-псовая-борзая",
+      "dog": {
+        "id": 9772,
+        "dog_key": "алиса--русская-псовая-борзая",
+        "name_lat": "АЛИСА",
+        "name_ru": "АЛИСА",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 27,
+      "event_id": 1551,
+      "dog_id": 9773,
+      "breed_class": "Русская псовая борзая - Стандарт - Кобели",
+      "catalog_no": 27,
+      "placement": 2,
+      "total_score": 317,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 11,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  14,
+                  16,
+                  14,
+                  16,
+                  16
+                ],
+                "sum": 76
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 163,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 22,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  14,
+                  14,
+                  14,
+                  16,
+                  15
+                ],
+                "sum": 73
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  16,
+                  16,
+                  17,
+                  16
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 154,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 317
+      },
+      "raw_text": "27 | Русская псовая борзая | Стандарт | Кобели | ALLUR | 11 | 14 | 16 | 14 | 16 | 16 | 163 | 22 | 14 | 14 | 14 | 16 | 15 | 154 | 317 | 2 | CC | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "allur--русская-псовая-борзая",
+      "dog": {
+        "id": 9773,
+        "dog_key": "allur--русская-псовая-борзая",
+        "name_lat": "ALLUR",
+        "name_ru": "ALLUR",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 28,
+      "event_id": 1551,
+      "dog_id": 9774,
+      "breed_class": "Русская псовая борзая - Стандарт - Кобели",
+      "catalog_no": 28,
+      "placement": 7,
+      "total_score": 61,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 10,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  3,
+                  5,
+                  3,
+                  4,
+                  6
+                ],
+                "sum": 21
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  7,
+                  10,
+                  8,
+                  7,
+                  8
+                ],
+                "sum": 40
+              }
+            ],
+            "total": 61,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 61
+      },
+      "raw_text": "28 | Русская псовая борзая | Стандарт | Кобели | BEYOND BELIEF ROYAL LILY | 10 | 3 | 5 | 3 | 4 | 6 | 61 |  |  |  |  |  |  |  | 61 | 7 |  | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "beyond-belief-royal-lily--русская-псовая-борзая",
+      "dog": {
+        "id": 9774,
+        "dog_key": "beyond-belief-royal-lily--русская-псовая-борзая",
+        "name_lat": "BEYOND BELIEF ROYAL LILY",
+        "name_ru": "BEYOND BELIEF ROYAL LILY",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 29,
+      "event_id": 1551,
+      "dog_id": 9775,
+      "breed_class": "Неприбывшие участники",
+      "catalog_no": 29,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dns",
+      "raw_scores_json": {
+        "heats": []
+      },
+      "raw_text": "29 | Русская псовая борзая | Стандарт | Кобели | DOMINO HOMIEROVITCH BOLDAREFFCHINO |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ",
+      "judges": null,
+      "status_reason": "Неявка",
+      "dog_key": "domino-homierovitch-boldareffchino--русская-псовая-борзая",
+      "dog": {
+        "id": 9775,
+        "dog_key": "domino-homierovitch-boldareffchino--русская-псовая-борзая",
+        "name_lat": "DOMINO HOMIEROVITCH BOLDAREFFCHINO",
+        "name_ru": "DOMINO HOMIEROVITCH BOLDAREFFCHINO",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 30,
+      "event_id": 1551,
+      "dog_id": 9776,
+      "breed_class": "Русская псовая борзая - Стандарт - Кобели",
+      "catalog_no": 30,
+      "placement": 4,
+      "total_score": 271,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 12,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  14,
+                  16,
+                  14,
+                  12,
+                  10
+                ],
+                "sum": 66
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 151,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 22,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  10,
+                  13,
+                  10,
+                  10,
+                  8
+                ],
+                "sum": 51
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  12,
+                  15,
+                  14,
+                  14,
+                  14
+                ],
+                "sum": 69
+              }
+            ],
+            "total": 120,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 271
+      },
+      "raw_text": "30 | Русская псовая борзая | Стандарт | Кобели | Борзые - Сенавиан Барин | 12 | 14 | 16 | 14 | 12 | 10 | 151 | 22 | 10 | 13 | 10 | 10 | 8 | 120 | 271 | 4 | CC | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "борзые-сенавиан-барин--русская-псовая-борзая",
+      "dog": {
+        "id": 9776,
+        "dog_key": "борзые-сенавиан-барин--русская-псовая-борзая",
+        "name_lat": "БОРЗЫЕ СЕНАВИАН БАРИН",
+        "name_ru": "БОРЗЫЕ СЕНАВИАН БАРИН",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 31,
+      "event_id": 1551,
+      "dog_id": 9777,
+      "breed_class": "Русская псовая борзая - Стандарт - Кобели",
+      "catalog_no": 31,
+      "placement": 5,
+      "total_score": 253,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 9,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  14,
+                  15,
+                  10,
+                  11,
+                  12
+                ],
+                "sum": 62
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  17,
+                  16
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 144,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 23,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  8,
+                  10,
+                  10,
+                  6,
+                  7
+                ],
+                "sum": 41
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  14,
+                  13,
+                  14,
+                  13,
+                  14
+                ],
+                "sum": 68
+              }
+            ],
+            "total": 109,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 253
+      },
+      "raw_text": "31 | Русская псовая борзая | Стандарт | Кобели | Борзые - Сенавиан Ермак | 9 | 14 | 15 | 10 | 11 | 12 | 144 | 23 | 8 | 10 | 10 | 6 | 7 | 109 | 253 | 5 |  | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "борзые-сенавиан-ермак--русская-псовая-борзая",
+      "dog": {
+        "id": 9777,
+        "dog_key": "борзые-сенавиан-ермак--русская-псовая-борзая",
+        "name_lat": "БОРЗЫЕ СЕНАВИАН ЕРМАК",
+        "name_ru": "БОРЗЫЕ СЕНАВИАН ЕРМАК",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 32,
+      "event_id": 1551,
+      "dog_id": 9778,
+      "breed_class": "Русская псовая борзая - Стандарт - Кобели",
+      "catalog_no": 32,
+      "placement": 1,
+      "total_score": 326,
+      "judge_count": 2,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 10,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  17,
+                  16,
+                  16,
+                  15
+                ],
+                "sum": 79
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 164,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 21,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  16,
+                  17,
+                  16,
+                  16
+                ],
+                "sum": 81
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  16,
+                  16,
+                  17,
+                  16
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 162,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 326
+      },
+      "raw_text": "32 | Русская псовая борзая | Стандарт | Кобели | Княжье Золото Великан Могучий | 10 | 15 | 17 | 16 | 16 | 15 | 164 | 21 | 16 | 16 | 17 | 16 | 16 | 162 | 326 | 1 | CC | CACL",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "княжье-золото-великан-могучии--русская-псовая-борзая",
+      "dog": {
+        "id": 9778,
+        "dog_key": "княжье-золото-великан-могучии--русская-псовая-борзая",
+        "name_lat": "КНЯЖЬЕ ЗОЛОТО ВЕЛИКАН МОГУЧИЙ",
+        "name_ru": "КНЯЖЬЕ ЗОЛОТО ВЕЛИКАН МОГУЧИЙ",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 33,
+      "event_id": 1551,
+      "dog_id": 9779,
+      "breed_class": "Русская псовая борзая - Стандарт - Кобели",
+      "catalog_no": 33,
+      "placement": 6,
+      "total_score": 166,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 9,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  12,
+                  13,
+                  8,
+                  9,
+                  10
+                ],
+                "sum": 52
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  15,
+                  16,
+                  16,
+                  16,
+                  16
+                ],
+                "sum": 79
+              }
+            ],
+            "total": 131,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 23,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  2,
+                  2,
+                  1,
+                  1,
+                  1
+                ],
+                "sum": 7
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  5,
+                  8,
+                  5,
+                  5,
+                  5
+                ],
+                "sum": 28
+              }
+            ],
+            "total": 35,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 166
+      },
+      "raw_text": "33 | Русская псовая борзая | Стандарт | Кобели | Княжье Золото Вираж Крутой | 9 | 12 | 13 | 8 | 9 | 10 | 131 | 23 | 2 | 2 | 1 | 1 | 1 | 35 | 166 | 6 |  | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "княжье-золото-вираж-крутои--русская-псовая-борзая",
+      "dog": {
+        "id": 9779,
+        "dog_key": "княжье-золото-вираж-крутои--русская-псовая-борзая",
+        "name_lat": "КНЯЖЬЕ ЗОЛОТО ВИРАЖ КРУТОЙ",
+        "name_ru": "КНЯЖЬЕ ЗОЛОТО ВИРАЖ КРУТОЙ",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 34,
+      "event_id": 1551,
+      "dog_id": 9780,
+      "breed_class": "Русская псовая борзая - Стандарт - Кобели",
+      "catalog_no": 34,
+      "placement": 3,
+      "total_score": 317,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 11,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  17,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 82
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 168,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 21,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  17,
+                  15,
+                  15,
+                  16
+                ],
+                "sum": 79
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  14,
+                  15,
+                  14,
+                  13,
+                  14
+                ],
+                "sum": 70
+              }
+            ],
+            "total": 149,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 317
+      },
+      "raw_text": "34 | Русская псовая борзая | Стандарт | Кобели | HOROVOD IZ SELA TSAREVO | 11 | 15 | 17 | 16 | 17 | 17 | 168 | 21 | 16 | 17 | 15 | 15 | 16 | 149 | 317 | 3 | CC | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "horovod-iz-sela-tsarevo--русская-псовая-борзая",
+      "dog": {
+        "id": 9780,
+        "dog_key": "horovod-iz-sela-tsarevo--русская-псовая-борзая",
+        "name_lat": "HOROVOD IZ SELA TSAREVO",
+        "name_ru": "HOROVOD IZ SELA TSAREVO",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 35,
+      "event_id": 1551,
+      "dog_id": 9781,
+      "breed_class": "Русская псовая борзая - Стандарт - Суки",
+      "catalog_no": 35,
+      "placement": 3,
+      "total_score": 74,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 8,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  7,
+                  8,
+                  5,
+                  6,
+                  7
+                ],
+                "sum": 33
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  5,
+                  10,
+                  8,
+                  8,
+                  10
+                ],
+                "sum": 41
+              }
+            ],
+            "total": 74,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 74
+      },
+      "raw_text": "35 | Русская псовая борзая | Стандарт | Суки | MISCHRAN CATVONDEE | 8 | 7 | 8 | 5 | 6 | 7 | 74 |  |  |  |  |  |  |  | 74 | 3 |  | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "mischran-catvondee--русская-псовая-борзая",
+      "dog": {
+        "id": 9781,
+        "dog_key": "mischran-catvondee--русская-псовая-борзая",
+        "name_lat": "MISCHRAN CATVONDEE",
+        "name_ru": "MISCHRAN CATVONDEE",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 36,
+      "event_id": 1551,
+      "dog_id": 9782,
+      "breed_class": "Русская псовая борзая - Стандарт - Суки",
+      "catalog_no": 36,
+      "placement": 1,
+      "total_score": 351,
+      "judge_count": 2,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 13,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 177,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 24,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  17,
+                  18
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 174,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 351
+      },
+      "raw_text": "36 | Русская псовая борзая | Стандарт | Суки | Завируха | 13 | 17 | 18 | 17 | 18 | 18 | 177 | 24 | 18 | 18 | 18 | 18 | 18 | 174 | 351 | 1 | CC | CACL",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "завируха--русская-псовая-борзая",
+      "dog": {
+        "id": 9782,
+        "dog_key": "завируха--русская-псовая-борзая",
+        "name_lat": "ЗАВИРУХА",
+        "name_ru": "ЗАВИРУХА",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 37,
+      "event_id": 1551,
+      "dog_id": 9783,
+      "breed_class": "Русская псовая борзая - Стандарт - Суки",
+      "catalog_no": 37,
+      "placement": 2,
+      "total_score": 184,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 13,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  16,
+                  16,
+                  16,
+                  16
+                ],
+                "sum": 80
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  16,
+                  17,
+                  16,
+                  16
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 161,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 24,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ],
+                "sum": 5
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  3,
+                  3,
+                  2,
+                  5,
+                  5
+                ],
+                "sum": 18
+              }
+            ],
+            "total": 23,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 184
+      },
+      "raw_text": "37 | Русская псовая борзая | Стандарт | Суки | Княжье Золото Саламандра | 13 | 16 | 16 | 16 | 16 | 16 | 161 | 24 | 1 | 1 | 1 | 1 | 1 | 23 | 184 | 2 |  | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "княжье-золото-саламандра--русская-псовая-борзая",
+      "dog": {
+        "id": 9783,
+        "dog_key": "княжье-золото-саламандра--русская-псовая-борзая",
+        "name_lat": "КНЯЖЬЕ ЗОЛОТО САЛАМАНДРА",
+        "name_ru": "КНЯЖЬЕ ЗОЛОТО САЛАМАНДРА",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 38,
+      "event_id": 1551,
+      "dog_id": 9784,
+      "breed_class": "Русская псовая борзая - Юниоры - Микс",
+      "catalog_no": 38,
+      "placement": 1,
+      "total_score": 286,
+      "judge_count": 2,
+      "qualification": "Лучший юниор",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 12,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  13,
+                  15,
+                  15,
+                  13,
+                  13
+                ],
+                "sum": 69
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 156,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 25,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  9,
+                  12,
+                  11,
+                  9,
+                  8
+                ],
+                "sum": 49
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  15,
+                  16,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 130,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 286
+      },
+      "raw_text": "38 | Русская псовая борзая | Юниоры | Кобели | Княжье Золото Эмир | 12 | 13 | 15 | 15 | 13 | 13 | 156 | 25 | 9 | 12 | 11 | 9 | 8 | 130 | 286 | 1 | CC | Лучший юниор",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "княжье-золото-эмир--русская-псовая-борзая",
+      "dog": {
+        "id": 9784,
+        "dog_key": "княжье-золото-эмир--русская-псовая-борзая",
+        "name_lat": "КНЯЖЬЕ ЗОЛОТО ЭМИР",
+        "name_ru": "КНЯЖЬЕ ЗОЛОТО ЭМИР",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 39,
+      "event_id": 1551,
+      "dog_id": 9785,
+      "breed_class": "Салюки - Юниоры - Микс",
+      "catalog_no": 39,
+      "placement": 1,
+      "total_score": 357,
+      "judge_count": 2,
+      "qualification": "Лучший юниор",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 35,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  19,
+                  19,
+                  18,
+                  17
+                ],
+                "sum": 90
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  17,
+                  16
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 174,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 41,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  19,
+                  18
+                ],
+                "sum": 93
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 90
+              }
+            ],
+            "total": 183,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 357
+      },
+      "raw_text": "39 | Салюки | Юниоры | Кобели | Басарат Карим Гедеон | 35 | 17 | 19 | 19 | 18 | 17 | 174 | 41 | 18 | 19 | 19 | 19 | 18 | 183 | 357 | 1 | CC | Лучший юниор",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "басарат-карим-гедеон--салюки",
+      "dog": {
+        "id": 9785,
+        "dog_key": "басарат-карим-гедеон--салюки",
+        "name_lat": "БАСАРАТ КАРИМ ГЕДЕОН",
+        "name_ru": "БАСАРАТ КАРИМ ГЕДЕОН",
+        "breed": "САЛЮКИ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 40,
+      "event_id": 1551,
+      "dog_id": 9786,
+      "breed_class": "Неприбывшие участники",
+      "catalog_no": 40,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dns",
+      "raw_scores_json": {
+        "heats": []
+      },
+      "raw_text": "40 | Салюки | Юниоры | Кобели | Салгрей'С Инширах |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ",
+      "judges": null,
+      "status_reason": "Неявка",
+      "dog_key": "салгреис-инширах--салюки",
+      "dog": {
+        "id": 9786,
+        "dog_key": "салгреис-инширах--салюки",
+        "name_lat": "САЛГРЕЙС ИНШИРАХ",
+        "name_ru": "САЛГРЕЙС ИНШИРАХ",
+        "breed": "САЛЮКИ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 41,
+      "event_id": 1551,
+      "dog_id": 9787,
+      "breed_class": "Салюки - Юниоры - Микс",
+      "catalog_no": 41,
+      "placement": 2,
+      "total_score": 354,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 35,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 86
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 174,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 41,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  19,
+                  18
+                ],
+                "sum": 91
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 180,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 354
+      },
+      "raw_text": "41 | Салюки | Юниоры | Суки | Salgrey`s Indira | 35 | 16 | 18 | 17 | 18 | 17 | 174 | 41 | 18 | 18 | 18 | 19 | 18 | 180 | 354 | 2 | CC | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "salgreys-indira--салюки",
+      "dog": {
+        "id": 9787,
+        "dog_key": "salgreys-indira--салюки",
+        "name_lat": "SALGREYS INDIRA",
+        "name_ru": "SALGREYS INDIRA",
+        "breed": "САЛЮКИ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 42,
+      "event_id": 1551,
+      "dog_id": 9788,
+      "breed_class": "Салюки - Стандарт - Микс",
+      "catalog_no": 42,
+      "placement": 1,
+      "total_score": 354,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 34,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 87
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 174,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 42,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  19,
+                  18,
+                  19,
+                  18
+                ],
+                "sum": 91
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  19,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 180,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 354
+      },
+      "raw_text": "42 | Салюки | Стандарт | Суки | ДИОСКУРИ АМАЛФЕЯ | 34 | 16 | 18 | 18 | 18 | 17 | 174 | 42 | 17 | 19 | 18 | 19 | 18 | 180 | 354 | 1 | CC | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "диоскури-амалфея--салюки",
+      "dog": {
+        "id": 9788,
+        "dog_key": "диоскури-амалфея--салюки",
+        "name_lat": "ДИОСКУРИ АМАЛФЕЯ",
+        "name_ru": "ДИОСКУРИ АМАЛФЕЯ",
+        "breed": "САЛЮКИ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 43,
+      "event_id": 1551,
+      "dog_id": 9789,
+      "breed_class": "Уиппет - Выше стандарта - Кобели",
+      "catalog_no": 43,
+      "placement": 1,
+      "total_score": 344,
+      "judge_count": 2,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 1,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  18,
+                  16
+                ],
+                "sum": 84
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 171,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 15,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 87
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 173,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 344
+      },
+      "raw_text": "43 | Уиппет | Выше стандарта | Кобели | BORN TO CHARM LEON | 1 | 16 | 17 | 17 | 18 | 16 | 171 | 15 | 17 | 18 | 17 | 18 | 17 | 173 | 344 | 1 | CC | CACL",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "born-to-charm-leon--уиппет",
+      "dog": {
+        "id": 9789,
+        "dog_key": "born-to-charm-leon--уиппет",
+        "name_lat": "BORN TO CHARM LEON",
+        "name_ru": "BORN TO CHARM LEON",
+        "breed": "УИППЕТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 44,
+      "event_id": 1551,
+      "dog_id": 9790,
+      "breed_class": "Уиппет - Выше стандарта - Кобели",
+      "catalog_no": 44,
+      "placement": 2,
+      "total_score": 341,
+      "judge_count": 2,
+      "qualification": "R.CACL",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 1,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  18,
+                  17,
+                  18,
+                  16
+                ],
+                "sum": 84
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  18,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 169,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 14,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 84
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 172,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 341
+      },
+      "raw_text": "44 | Уиппет | Выше стандарта | Кобели | Fionn Clann Jefferson | 1 | 15 | 18 | 17 | 18 | 16 | 169 | 14 | 17 | 17 | 16 | 17 | 17 | 172 | 341 | 2 | CC | R.CACL",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "fionn-clann-jefferson--уиппет",
+      "dog": {
+        "id": 9790,
+        "dog_key": "fionn-clann-jefferson--уиппет",
+        "name_lat": "FIONN CLANN JEFFERSON",
+        "name_ru": "FIONN CLANN JEFFERSON",
+        "breed": "УИППЕТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 45,
+      "event_id": 1551,
+      "dog_id": 9791,
+      "breed_class": "Уиппет - Выше стандарта - Кобели",
+      "catalog_no": 45,
+      "placement": 3,
+      "total_score": 338,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 2,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  14,
+                  17,
+                  17,
+                  17,
+                  15
+                ],
+                "sum": 80
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 167,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 15,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  18,
+                  16
+                ],
+                "sum": 84
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 171,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 338
+      },
+      "raw_text": "45 | Уиппет | Выше стандарта | Кобели | Жан Харлей Майпретти Фром Элита | 2 | 14 | 17 | 17 | 17 | 15 | 167 | 15 | 16 | 17 | 17 | 18 | 16 | 171 | 338 | 3 | CC | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "жан-харлеи-маипретти-фром-элита--уиппет",
+      "dog": {
+        "id": 9791,
+        "dog_key": "жан-харлеи-маипретти-фром-элита--уиппет",
+        "name_lat": "ЖАН ХАРЛЕЙ МАЙПРЕТТИ ФРОМ ЭЛИТА",
+        "name_ru": "ЖАН ХАРЛЕЙ МАЙПРЕТТИ ФРОМ ЭЛИТА",
+        "breed": "УИППЕТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 46,
+      "event_id": 1551,
+      "dog_id": 9792,
+      "breed_class": "Уиппет - Стандарт - Кобели",
+      "catalog_no": 46,
+      "placement": 1,
+      "total_score": 340,
+      "judge_count": 2,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 4,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  16,
+                  16,
+                  16,
+                  16
+                ],
+                "sum": 79
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 166,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 17,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 87
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 174,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 340
+      },
+      "raw_text": "46 | Уиппет | Стандарт | Кобели | Argus-Eyed Iris Dneprovskaya Piranya | 4 | 15 | 16 | 16 | 16 | 16 | 166 | 17 | 17 | 18 | 17 | 18 | 17 | 174 | 340 | 1 | CC | CACL",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "argus-eyed-iris-dneprovskaya-piranya--уиппет",
+      "dog": {
+        "id": 9792,
+        "dog_key": "argus-eyed-iris-dneprovskaya-piranya--уиппет",
+        "name_lat": "ARGUS EYED IRIS DNEPROVSKAYA PIRANYA",
+        "name_ru": "ARGUS EYED IRIS DNEPROVSKAYA PIRANYA",
+        "breed": "УИППЕТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 47,
+      "event_id": 1551,
+      "dog_id": 9453,
+      "breed_class": "Уиппет - Стандарт - Кобели",
+      "catalog_no": 47,
+      "placement": 3,
+      "total_score": 303,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 3,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  8,
+                  17,
+                  16,
+                  11,
+                  9
+                ],
+                "sum": 61
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  10,
+                  15,
+                  13,
+                  13,
+                  11
+                ],
+                "sum": 62
+              }
+            ],
+            "total": 123,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 17,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 91
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 180,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 303
+      },
+      "raw_text": "47 | Уиппет | Стандарт | Кобели | TATYANIN DEN VERNIY | 3 | 8 | 17 | 16 | 11 | 9 | 123 | 17 | 18 | 19 | 18 | 18 | 18 | 180 | 303 | 3 | CC | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "tatyanin-den-verniy--уиппет",
+      "dog": {
+        "id": 9453,
+        "dog_key": "tatyanin-den-verniy--уиппет",
+        "name_lat": "TATYANIN DEN VERNIY",
+        "name_ru": "TATYANIN DEN VERNIY",
+        "breed": "УИППЕТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 48,
+      "event_id": 1551,
+      "dog_id": 9793,
+      "breed_class": "Уиппет - Стандарт - Кобели",
+      "catalog_no": 48,
+      "placement": 2,
+      "total_score": 339,
+      "judge_count": 2,
+      "qualification": "R.CACL",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 4,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  17,
+                  14,
+                  16,
+                  15
+                ],
+                "sum": 78
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 163,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 16,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 176,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 339
+      },
+      "raw_text": "48 | Уиппет | Стандарт | Кобели | Сладкий Ветер Степей | 4 | 16 | 17 | 14 | 16 | 15 | 163 | 16 | 18 | 18 | 17 | 18 | 18 | 176 | 339 | 2 | CC | R.CACL",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "сладкии-ветер-степеи--уиппет",
+      "dog": {
+        "id": 9793,
+        "dog_key": "сладкии-ветер-степеи--уиппет",
+        "name_lat": "СЛАДКИЙ ВЕТЕР СТЕПЕЙ",
+        "name_ru": "СЛАДКИЙ ВЕТЕР СТЕПЕЙ",
+        "breed": "УИППЕТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 49,
+      "event_id": 1551,
+      "dog_id": 9794,
+      "breed_class": "Уиппет - Стандарт - Кобели",
+      "catalog_no": 49,
+      "placement": 4,
+      "total_score": 290,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 3,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  9,
+                  17,
+                  15,
+                  10,
+                  8
+                ],
+                "sum": 59
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  10,
+                  14,
+                  12,
+                  10,
+                  10
+                ],
+                "sum": 56
+              }
+            ],
+            "total": 115,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 16,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  18,
+                  17
+                ],
+                "sum": 84
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  19,
+                  18
+                ],
+                "sum": 91
+              }
+            ],
+            "total": 175,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 290
+      },
+      "raw_text": "49 | Уиппет | Стандарт | Кобели | ЭЛИТАР ФРОМ ВОРЛД | 3 | 9 | 17 | 15 | 10 | 8 | 115 | 16 | 16 | 17 | 16 | 18 | 17 | 175 | 290 | 4 | CC | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "элитар-фром-ворлд--уиппет",
+      "dog": {
+        "id": 9794,
+        "dog_key": "элитар-фром-ворлд--уиппет",
+        "name_lat": "ЭЛИТАР ФРОМ ВОРЛД",
+        "name_ru": "ЭЛИТАР ФРОМ ВОРЛД",
+        "breed": "УИППЕТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 50,
+      "event_id": 1551,
+      "dog_id": 9795,
+      "breed_class": "Уиппет - Стандарт - Суки",
+      "catalog_no": 50,
+      "placement": 4,
+      "total_score": 311,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 5,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  15,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 82
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  17,
+                  16
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 165,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 19,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  14,
+                  14,
+                  12,
+                  13,
+                  11
+                ],
+                "sum": 64
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  15,
+                  18,
+                  16,
+                  17,
+                  16
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 146,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 311
+      },
+      "raw_text": "50 | Уиппет | Стандарт | Суки | Istoriya Lubvi Luxury Dove | 5 | 16 | 15 | 17 | 17 | 17 | 165 | 19 | 14 | 14 | 12 | 13 | 11 | 146 | 311 | 4 | CC | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "istoriya-lubvi-luxury-dove--уиппет",
+      "dog": {
+        "id": 9795,
+        "dog_key": "istoriya-lubvi-luxury-dove--уиппет",
+        "name_lat": "ISTORIYA LUBVI LUXURY DOVE",
+        "name_ru": "ISTORIYA LUBVI LUXURY DOVE",
+        "breed": "УИППЕТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 51,
+      "event_id": 1551,
+      "dog_id": 9796,
+      "breed_class": "Уиппет - Стандарт - Суки",
+      "catalog_no": 51,
+      "placement": 1,
+      "total_score": 345,
+      "judge_count": 2,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 6,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 86
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 91
+              }
+            ],
+            "total": 177,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 19,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  17,
+                  16
+                ],
+                "sum": 82
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  17,
+                  17
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 168,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 345
+      },
+      "raw_text": "51 | Уиппет | Стандарт | Суки | VALPAIN PEK SANSA | 6 | 17 | 18 | 17 | 17 | 17 | 177 | 19 | 16 | 17 | 16 | 17 | 16 | 168 | 345 | 1 | CC | CACL",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "valpain-pek-sansa--уиппет",
+      "dog": {
+        "id": 9796,
+        "dog_key": "valpain-pek-sansa--уиппет",
+        "name_lat": "VALPAIN PEK SANSA",
+        "name_ru": "VALPAIN PEK SANSA",
+        "breed": "УИППЕТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 52,
+      "event_id": 1551,
+      "dog_id": 9797,
+      "breed_class": "Уиппет - Стандарт - Суки",
+      "catalog_no": 52,
+      "placement": 3,
+      "total_score": 335,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 6,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  16,
+                  16,
+                  16,
+                  17
+                ],
+                "sum": 81
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 165,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 18,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  17,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 87
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  16,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 170,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 335
+      },
+      "raw_text": "52 | Уиппет | Стандарт | Суки | VOLAR BLEK SHARC NIGHT | 6 | 16 | 16 | 16 | 16 | 17 | 165 | 18 | 18 | 17 | 17 | 17 | 18 | 170 | 335 | 3 | CC | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "volar-blek-sharc-night--уиппет",
+      "dog": {
+        "id": 9797,
+        "dog_key": "volar-blek-sharc-night--уиппет",
+        "name_lat": "VOLAR BLEK SHARC NIGHT",
+        "name_ru": "VOLAR BLEK SHARC NIGHT",
+        "breed": "УИППЕТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 53,
+      "event_id": 1551,
+      "dog_id": 9798,
+      "breed_class": "Неприбывшие участники",
+      "catalog_no": 53,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dns",
+      "raw_scores_json": {
+        "heats": []
+      },
+      "raw_text": "53 | Уиппет | Стандарт | Суки | Буси Вафа Эльфа |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ",
+      "judges": null,
+      "status_reason": "Неявка",
+      "dog_key": "буси-вафа-эльфа--уиппет",
+      "dog": {
+        "id": 9798,
+        "dog_key": "буси-вафа-эльфа--уиппет",
+        "name_lat": "БУСИ ВАФА ЭЛЬФА",
+        "name_ru": "БУСИ ВАФА ЭЛЬФА",
+        "breed": "УИППЕТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 54,
+      "event_id": 1551,
+      "dog_id": 9799,
+      "breed_class": "Уиппет - Стандарт - Суки",
+      "catalog_no": 54,
+      "placement": 2,
+      "total_score": 338,
+      "judge_count": 2,
+      "qualification": "R.CACL",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 5,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  14,
+                  16,
+                  16,
+                  15,
+                  15
+                ],
+                "sum": 76
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 164,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 18,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  16,
+                  17
+                ],
+                "sum": 86
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 174,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 338
+      },
+      "raw_text": "54 | Уиппет | Стандарт | Суки | NIFTY RACING GIRL | 5 | 14 | 16 | 16 | 15 | 15 | 164 | 18 | 17 | 18 | 18 | 16 | 17 | 174 | 338 | 2 | CC | R.CACL",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "nifty-racing-girl--уиппет",
+      "dog": {
+        "id": 9799,
+        "dog_key": "nifty-racing-girl--уиппет",
+        "name_lat": "NIFTY RACING GIRL",
+        "name_ru": "NIFTY RACING GIRL",
+        "breed": "УИППЕТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 55,
+      "event_id": 1551,
+      "dog_id": 9800,
+      "breed_class": "Уиппет - Юниоры - Микс",
+      "catalog_no": 55,
+      "placement": 1,
+      "total_score": 346,
+      "judge_count": 2,
+      "qualification": "Лучший юниор",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 7,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 86
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 173,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 20,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  15,
+                  16
+                ],
+                "sum": 85
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  17,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 173,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 346
+      },
+      "raw_text": "55 | Уиппет | Юниоры | Кобели | Лакшери Кин Квик Флэш | 7 | 17 | 18 | 17 | 17 | 17 | 173 | 20 | 18 | 18 | 18 | 15 | 16 | 173 | 346 | 1 | CC | Лучший юниор",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "лакшери-кин-квик-флэш--уиппет",
+      "dog": {
+        "id": 9800,
+        "dog_key": "лакшери-кин-квик-флэш--уиппет",
+        "name_lat": "ЛАКШЕРИ КИН КВИК ФЛЭШ",
+        "name_ru": "ЛАКШЕРИ КИН КВИК ФЛЭШ",
+        "breed": "УИППЕТ",
+        "sex": null,
+        "owner": null
+      }
+    }
+  ]
+}

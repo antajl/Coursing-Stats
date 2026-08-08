@@ -1,0 +1,1080 @@
+{
+  "schema": "coursing-stats/competition-v1",
+  "exported_at": "2026-08-08T20:12:46.253Z",
+  "source": "archive-full-results-legacy",
+  "event_id": 1573,
+  "event": {
+    "id": 1573,
+    "year": 2021,
+    "date_start": "2021-04-18",
+    "date_end": null,
+    "rank_label": "Бега за механической приманкой, Чемпионат России",
+    "event_type": "racing",
+    "competition_kind": null,
+    "competition_type": null,
+    "title": "Бега за механической приманкой, Чемпионат России",
+    "host_club": null,
+    "region": null,
+    "location": "Московская обл., Михайловское",
+    "catalog_url": null,
+    "results_url": "https://web.archive.org/web/20220311190531/http://procoursing.ru/Full_Results_2021-04-18_BegaChR.html",
+    "confirmed": 0,
+    "last_modified": null,
+    "scraped_at": "2026-08-08T20:12:46.253Z",
+    "telegram_url": null,
+    "full_title": null,
+    "event_date": "2021-04-18",
+    "protocol_location": null,
+    "judges": null,
+    "track_schemes": [],
+    "admin_verified_at": null
+  },
+  "result_count": 11,
+  "results": [
+    {
+      "id": 1,
+      "event_id": 1573,
+      "dog_id": 9220,
+      "breed_class": "Бигль - Стандартный - Микс",
+      "catalog_no": 2,
+      "placement": null,
+      "total_score": 353,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 1,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  19,
+                  18
+                ],
+                "sum": 91
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 180,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 9,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 87
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  18,
+                  16
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 173,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 353
+      },
+      "raw_text": "1 | 2 | Бигль | Стандартный | Кобель | Арес | 1 | 18 | 18 | 18 | 19 | 18 | 180 | 9 | 17 | 18 | 17 | 18 | 17 | 173 | 353 | CC | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "арес--бигль",
+      "dog": {
+        "id": 9220,
+        "dog_key": "арес--бигль",
+        "name_lat": "АРЕС",
+        "name_ru": "АРЕС",
+        "breed": "БИГЛЬ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 2,
+      "event_id": 1573,
+      "dog_id": 9545,
+      "breed_class": "Бордер Колли - Стандартный - Микс",
+      "catalog_no": 3,
+      "placement": null,
+      "total_score": 351,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 2,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 88
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 177,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 10,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  15
+                ],
+                "sum": 86
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  19,
+                  18,
+                  19,
+                  16
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 174,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 351
+      },
+      "raw_text": "1 | 3 | Бордер Колли | Стандартный | Сука | AISKNEKHT TEQUILA | 2 | 17 | 18 | 18 | 18 | 17 | 177 | 10 | 17 | 18 | 18 | 18 | 15 | 174 | 351 | CC | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "aisknekht-tequila--бордер-колли",
+      "dog": {
+        "id": 9545,
+        "dog_key": "aisknekht-tequila--бордер-колли",
+        "name_lat": "AISKNEKHT TEQUILA",
+        "name_ru": "AISKNEKHT TEQUILA",
+        "breed": "БОРДЕР КОЛЛИ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 3,
+      "event_id": 1573,
+      "dog_id": 10436,
+      "breed_class": "Джек Рассел Терьер - Стандартный - Микс",
+      "catalog_no": 4,
+      "placement": null,
+      "total_score": 365,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 3,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  19,
+                  18
+                ],
+                "sum": 91
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              }
+            ],
+            "total": 181,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 11,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  19,
+                  19,
+                  18,
+                  20,
+                  19
+                ],
+                "sum": 95
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 184,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 365
+      },
+      "raw_text": "1 | 4 | Джек Рассел Терьер | Стандартный | Сука | Гордость Дарны Златослава | 3 | 18 | 18 | 18 | 19 | 18 | 181 | 11 | 19 | 19 | 18 | 20 | 19 | 184 | 365 | CC | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "гордость-дарны-златослава--джек-рассел-терьер",
+      "dog": {
+        "id": 10436,
+        "dog_key": "гордость-дарны-златослава--джек-рассел-терьер",
+        "name_lat": "ГОРДОСТЬ ДАРНЫ ЗЛАТОСЛАВА",
+        "name_ru": "ГОРДОСТЬ ДАРНЫ ЗЛАТОСЛАВА",
+        "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 4,
+      "event_id": 1573,
+      "dog_id": 10437,
+      "breed_class": "Доберман - Стандартный - Микс",
+      "catalog_no": 5,
+      "placement": null,
+      "total_score": 353,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 4,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 175,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 12,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 178,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 353
+      },
+      "raw_text": "1 | 5 | Доберман | Стандартный | Сука | POVER I GRATSE DARKNESS QUEEN | 4 | 18 | 18 | 17 | 18 | 18 | 175 | 12 | 17 | 18 | 18 | 18 | 18 | 178 | 353 | CC | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "pover-i-gratse-darkness-queen--доберман",
+      "dog": {
+        "id": 10437,
+        "dog_key": "pover-i-gratse-darkness-queen--доберман",
+        "name_lat": "POVER I GRATSE DARKNESS QUEEN",
+        "name_ru": "POVER I GRATSE DARKNESS QUEEN",
+        "breed": "ДОБЕРМАН",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 5,
+      "event_id": 1573,
+      "dog_id": 9224,
+      "breed_class": "Ирландский терьер - Стандартный - Микс",
+      "catalog_no": 9,
+      "placement": null,
+      "total_score": 357,
+      "judge_count": 2,
+      "qualification": "Чемпион России",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 5,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  19,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 178,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 13,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  17,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 179,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 357
+      },
+      "raw_text": "1 | 9 | Ирландский терьер | Стандартный | Сука | Магия Урала Ядвига Для Рус Денди Лот | 5 | 18 | 18 | 17 | 19 | 18 | 178 | 13 | 18 | 18 | 18 | 18 | 18 | 179 | 357 | CC | Чемпион России",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "магия-урала-ядвига-для-рус-денди-лот--ирландскии-терьер",
+      "dog": {
+        "id": 9224,
+        "dog_key": "магия-урала-ядвига-для-рус-денди-лот--ирландскии-терьер",
+        "name_lat": "МАГИЯ УРАЛА ЯДВИГА ДЛЯ РУС ДЕНДИ ЛОТ",
+        "name_ru": "МАГИЯ УРАЛА ЯДВИГА ДЛЯ РУС ДЕНДИ ЛОТ",
+        "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 6,
+      "event_id": 1573,
+      "dog_id": 10438,
+      "breed_class": "Ирландский терьер - Стандартный - Микс",
+      "catalog_no": 7,
+      "placement": null,
+      "total_score": 356,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 5,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 178,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 14,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 89
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 178,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 356
+      },
+      "raw_text": "2 | 7 | Ирландский терьер | Стандартный | Кобель | Neznoye Plamya Broderick | 5 | 17 | 18 | 18 | 18 | 18 | 178 | 14 | 18 | 18 | 18 | 18 | 17 | 178 | 356 | CC | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "neznoye-plamya-broderick--ирландскии-терьер",
+      "dog": {
+        "id": 10438,
+        "dog_key": "neznoye-plamya-broderick--ирландскии-терьер",
+        "name_lat": "NEZNOYE PLAMYA BRODERICK",
+        "name_ru": "NEZNOYE PLAMYA BRODERICK",
+        "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 7,
+      "event_id": 1573,
+      "dog_id": 10439,
+      "breed_class": "Ирландский терьер - Стандартный - Микс",
+      "catalog_no": 8,
+      "placement": null,
+      "total_score": 356,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 6,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 89
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              }
+            ],
+            "total": 179,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 13,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 89
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 177,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 356
+      },
+      "raw_text": "3 | 8 | Ирландский терьер | Стандартный | Сука | YURATE YANTARNYA KAPLYA | 6 | 18 | 18 | 18 | 18 | 17 | 179 | 13 | 18 | 18 | 18 | 18 | 17 | 177 | 356 | CC | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "yurate-yantarnya-kaplya--ирландскии-терьер",
+      "dog": {
+        "id": 10439,
+        "dog_key": "yurate-yantarnya-kaplya--ирландскии-терьер",
+        "name_lat": "YURATE YANTARNYA KAPLYA",
+        "name_ru": "YURATE YANTARNYA KAPLYA",
+        "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 8,
+      "event_id": 1573,
+      "dog_id": 9230,
+      "breed_class": "Метис - Стандартный - Микс",
+      "catalog_no": 12,
+      "placement": null,
+      "total_score": 361,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 8,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  19,
+                  17
+                ],
+                "sum": 90
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 91
+              }
+            ],
+            "total": 181,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 16,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 90
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              }
+            ],
+            "total": 180,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 361
+      },
+      "raw_text": "1 | 12 | Метис | Стандартный | Кобель | ПЕС | 8 | 18 | 18 | 18 | 19 | 17 | 181 | 16 | 18 | 19 | 18 | 18 | 17 | 180 | 361 |  | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "пес--метис",
+      "dog": {
+        "id": 9230,
+        "dog_key": "пес--метис",
+        "name_lat": "ПЕС",
+        "name_ru": "ПЕС",
+        "breed": "МЕТИС",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 9,
+      "event_id": 1573,
+      "dog_id": 9236,
+      "breed_class": "Метис - Стандартный - Микс",
+      "catalog_no": 15,
+      "placement": null,
+      "total_score": 361,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 8,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  19,
+                  18
+                ],
+                "sum": 91
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              }
+            ],
+            "total": 181,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 15,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 89
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 91
+              }
+            ],
+            "total": 180,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 361
+      },
+      "raw_text": "2 | 15 | Метис | Стандартный | Сука | КНОПА | 8 | 18 | 18 | 18 | 19 | 18 | 181 | 15 | 18 | 18 | 18 | 18 | 17 | 180 | 361 |  | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "кнопа--метис",
+      "dog": {
+        "id": 9236,
+        "dog_key": "кнопа--метис",
+        "name_lat": "КНОПА",
+        "name_ru": "КНОПА",
+        "breed": "МЕТИС",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 10,
+      "event_id": 1573,
+      "dog_id": 9232,
+      "breed_class": "Метис - Стандартный - Микс",
+      "catalog_no": 11,
+      "placement": null,
+      "total_score": 347,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 7,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  17,
+                  16
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 168,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 16,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 179,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 347
+      },
+      "raw_text": "3 | 11 | Метис | Стандартный | Кобель | БОНЯ | 7 | 16 | 18 | 17 | 17 | 17 | 168 | 16 | 18 | 18 | 18 | 18 | 18 | 179 | 347 |  | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "боня--метис",
+      "dog": {
+        "id": 9232,
+        "dog_key": "боня--метис",
+        "name_lat": "БОНЯ",
+        "name_ru": "БОНЯ",
+        "breed": "МЕТИС",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 11,
+      "event_id": 1573,
+      "dog_id": 9232,
+      "breed_class": "Метис - Стандартный - Микс",
+      "catalog_no": 14,
+      "placement": null,
+      "total_score": 341,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 7,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  18,
+                  15,
+                  16,
+                  16
+                ],
+                "sum": 81
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  18,
+                  16,
+                  16,
+                  16
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 163,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 15,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 88
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              }
+            ],
+            "total": 178,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 341
+      },
+      "raw_text": "4 | 14 | Метис | Стандартный | Сука | БОНЯ. | 7 | 16 | 18 | 15 | 16 | 16 | 163 | 15 | 18 | 18 | 17 | 18 | 17 | 178 | 341 |  | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "боня--метис",
+      "dog": {
+        "id": 9232,
+        "dog_key": "боня--метис",
+        "name_lat": "БОНЯ",
+        "name_ru": "БОНЯ",
+        "breed": "МЕТИС",
+        "sex": null,
+        "owner": null
+      }
+    }
+  ]
+}

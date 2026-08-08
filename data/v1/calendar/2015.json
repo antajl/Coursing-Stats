@@ -1,9 +1,9 @@
 {
   "schema": "coursing-stats/calendar-v1",
   "year": 2015,
-  "exported_at": "2026-07-08T14:48:08.259Z",
+  "exported_at": "2026-08-08T19:04:40.810Z",
   "event_count": 3,
-  "with_results": 0,
+  "with_results": 2,
   "events": [
     {
       "id": 20150314,
@@ -22,14 +22,14 @@
       "host_club": "",
       "region": null,
       "location": "Московская область, деревня Левково",
-      "results_url": "https://web.archive.org/web/20250915163520/http://procoursing.ru/results/2015-03-14/",
+      "results_url": "https://web.archive.org/web/20171005153249/http://procoursing.ru/Full_Results_2015_03.html",
       "catalog_url": null,
       "confirmed": 0,
       "judges": null,
-      "has_results": false,
-      "results_file": null,
-      "result_count": 0,
-      "participants_count": 0
+      "has_results": true,
+      "results_file": "competitions/2015/03-март/1552-соревнования-по-курсингу-мартовскии-заяц.json",
+      "result_count": 112,
+      "participants_count": 112
     },
     {
       "id": 20150808,
@@ -48,17 +48,17 @@
       "host_club": "",
       "region": null,
       "location": "Московская область, Сергиево-Посадский р-н",
-      "results_url": "https://web.archive.org/web/20250915163520/http://procoursing.ru/results/2015-08-08/",
+      "results_url": "https://web.archive.org/web/20171005153223/http://procoursing.ru/Full_Results_2015_08.html",
       "catalog_url": null,
       "confirmed": 0,
       "judges": null,
-      "has_results": false,
-      "results_file": null,
-      "result_count": 0,
-      "participants_count": 0
+      "has_results": true,
+      "results_file": "competitions/2015/08-август/1551-национальные-сертификатные-состязания-по-курсинг.json",
+      "result_count": 55,
+      "participants_count": 55
     },
     {
-      "id": 20150808,
+      "id": 201508081,
       "year": 2015,
       "month": "08-август",
       "date_start": "2015-08-08",

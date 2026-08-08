@@ -16,10 +16,16 @@ const JudgeDetail = lazy(() => import('./pages/Judges/JudgeDetail'));
 const ShowExhibitionDetail = lazy(() => import('./pages/Shows/ShowExhibitionDetail'));
 const ShowJudgeDetail = lazy(() => import('./pages/Shows/ShowJudgeDetail'));
 const EventResults = lazy(() => import('./pages/Events/EventResults'));
+const AdminEventsList = lazy(() => import('./pages/Admin/AdminEventsList'));
+const AdminEventEditor = lazy(() => import('./pages/Admin/AdminEventEditor'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 const LoginPage = lazy(() => import('./pages/LoginPage'));
 const RegisterPage = lazy(() => import('./pages/RegisterPage'));
-const AccountPage = lazy(() => import('./pages/AccountPage'));
+const AccountPage = lazy(() => import('./pages/Account'));
+const AccountSettingsPage = lazy(() => import('./pages/Account/AccountSettings'));
+const ForgotPasswordPage = lazy(() => import('./pages/ForgotPasswordPage'));
+const ResetPasswordPage = lazy(() => import('./pages/ResetPasswordPage'));
+const VerifyEmailPage = lazy(() => import('./pages/VerifyEmailPage'));
 
 function LegacyProcoursingRedirect() {
   const location = useLocation();
@@ -45,12 +51,6 @@ function LegacyExhibitionRedirect() {
   const { id } = useParams<{ id: string }>();
   if (!isLocalDev) return <Navigate to="/shows" replace />;
   return <Navigate to={`/shows/exhibition/${id}`} replace />;
-}
-
-function LegacyAdminEventRedirect() {
-  const { id } = useParams<{ id: string }>();
-  if (!isLocalDev) return <Navigate to="/competitions?tab=ranking" replace />;
-  return <Navigate to={`/event/${id}`} replace />;
 }
 
 function AdminCalendarRedirect() {
@@ -118,8 +118,9 @@ export default function AppRoutes() {
         <Route path="/top-dogs" element={<LegacyTopRedirect />} />
         <Route path="/dog/:id" element={<ShowDogIdRedirect />} />
         <Route path="/event/:id" element={<EventResults />} />
+        <Route path="/admin" element={<AdminEventsList />} />
         <Route path="/admin/calendar" element={<AdminCalendarRedirect />} />
-        <Route path="/admin/event/:id" element={<LegacyAdminEventRedirect />} />
+        <Route path="/admin/event/:id" element={<AdminEventEditor />} />
         <Route path="/speed-records" element={<SpeedRecords />} />
         <Route path="/guide" element={<Guide />} />
         <Route path="/donino-dog/:name/:breed" element={<DoninoDogProfile />} />
@@ -128,6 +129,10 @@ export default function AppRoutes() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/account" element={<AccountPage />} />
+        <Route path="/account/settings" element={<AccountSettingsPage />} />
+        <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+        <Route path="/reset-password" element={<ResetPasswordPage />} />
+        <Route path="/verify-email" element={<VerifyEmailPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Suspense>

@@ -1,6 +1,6 @@
 ---
 title: Frontend
-verified: 2026-08-06
+verified: 2026-08-08
 ---
 
 # 07 — Frontend
@@ -19,7 +19,8 @@ React 19 + Vite + Tailwind SPA на Cloudflare Pages. Данные: static JSON;
 | Shows lists | React Query (`staleTime` ~5 min) → CDN |
 | Exhibition detail | CDN → Turso fallback (`lib/turso.ts`) |
 | Design | PageToolbar, SALUKI theme — см. существующие UI patterns в `frontend/src` |
-| Admin | только `yarn run dev` → `/admin*` + API `:8787` |
+| Admin | только `yarn run dev` → `/admin` (список/создание) + `/admin/event/:id` (редактор) + API `:8787`; на проде нет |
+| Years dropdown | `indexes/years.json`; hooks: `useApi` `['api','years']` ≠ `useStaticData` `['staticData','years']` |
 | iframe | `frontend/public/_headers` frame-ancestors |
 
 ### Main routes
@@ -49,6 +50,7 @@ SEO prerender: `yarn run prerender-seo` (когда нужно).
 - Не добавлять Worker runtime для публичных данных.
 - Не хардкодить counters — `manifest.json`.
 - Performance ranking shows: отдельный backlog; не ломать lean indexes.
+- React Query: не шарить один `queryKey` между `useApi` и `useStaticData` с разным shape (годы календаря: `['api','years']` vs `['staticData','years']`) — иначе dropdown «Год» схлопывается до 5 лет.
 
 ## See also
 

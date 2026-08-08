@@ -13,6 +13,28 @@ describe('competitionTitleKey', () => {
     expect(competitionTitleKey('RegCACL')).toBe('regcacl')
   })
 
+  it('keeps R.CACL separate from CACL (and R.CACIL from CACIL)', () => {
+    expect(competitionTitleKey('R.CACL')).toBe('rcacl')
+    expect(competitionTitleKey('R.CACL')).not.toBe('cacl')
+    expect(competitionTitleDisplayName('R.CACL')).toBe('R.CACL')
+    expect(competitionTitleKey('R.CACIL')).toBe('rcacil')
+    expect(competitionTitleDisplayName('R.CACIL')).toBe('R.CACIL')
+    expect(competitionTitleKey('CACL')).toBe('cacl')
+    expect(competitionTitleDisplayName('CACL')).toBe('CACL')
+  })
+
+  it('does not merge R.CACL into CACL when aggregating', () => {
+    const titles = aggregateQualificationTitles([
+      { qualification: 'CACL' },
+      { qualification: 'R.CACL' },
+      { qualification: 'R.CACL' },
+    ])
+    expect(titles).toEqual([
+      { title: 'CACL', count: 1 },
+      { title: 'R.CACL', count: 2 },
+    ])
+  })
+
   it('maps working Russia champion full name', () => {
     expect(competitionTitleKey('Чемпион России по рабочим качествам собак')).toBe('champion_russia')
   })

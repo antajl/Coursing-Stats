@@ -39,7 +39,7 @@ export function useBreeds() {
 
 export function useYears() {
   return useQuery({
-    queryKey: ['years'],
+    queryKey: ['api', 'years'],
     queryFn: () => api.getYears(),
     staleTime: STALE_LONG_MS,
   });

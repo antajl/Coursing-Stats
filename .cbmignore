@@ -1,0 +1,31 @@
+# codebase-memory-mcp: keep the graph off huge CDN/data trees
+# (without this, indexing CoursingStats can eat 10–20GB RAM)
+
+# Truth data published to CDN — tens of thousands of JSON files
+data/v1/
+data/tmp/
+data/local/
+data/source/
+data/archive/
+
+# Locks / deps / build
+**/node_modules/
+**/yarn.lock
+**/package-lock.json
+**/.wrangler/
+**/dist/
+**/coverage/
+frontend/public/data/
+
+# Bot/vendor noise
+bot/node_modules/
+auth-worker/node_modules/
+auth-worker/yarn.lock
+
+# Large binaries / fixtures HTML dumps
+**/*.sqlite
+**/*.sqlite.gz
+**/*.webp
+**/*.png
+**/*.jpg
+backend/tests/fixtures/**/*.html

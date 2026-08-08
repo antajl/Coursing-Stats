@@ -1,9 +1,9 @@
 {
   "schema": "coursing-stats/calendar-v1",
   "year": 2020,
-  "exported_at": "2026-07-08T14:48:28.587Z",
+  "exported_at": "2026-08-08T19:04:40.812Z",
   "event_count": 6,
-  "with_results": 0,
+  "with_results": 4,
   "events": [
     {
       "id": 20200815,
@@ -22,17 +22,17 @@
       "host_club": "",
       "region": null,
       "location": "Ярославль, АТЦ \"Левково\"",
-      "results_url": "https://web.archive.org/web/20250708015218/http://procoursing.ru/results/2020-08-15_B_R/",
+      "results_url": "https://web.archive.org/web/20220321114137/http://procoursing.ru/Full_Results_2020-08-15_1.html",
       "catalog_url": null,
       "confirmed": 0,
       "judges": null,
-      "has_results": false,
-      "results_file": null,
-      "result_count": 0,
-      "participants_count": 0
+      "has_results": true,
+      "results_file": "competitions/2020/08-август/1570-бега-за-механическои-приманкои.json",
+      "result_count": 44,
+      "participants_count": 44
     },
     {
-      "id": 20200815,
+      "id": 202008151,
       "year": 2020,
       "month": "08-август",
       "date_start": "2020-08-15",
@@ -48,14 +48,14 @@
       "host_club": "",
       "region": null,
       "location": "Ярославль, АТЦ \"Левково\"",
-      "results_url": "https://web.archive.org/web/20250708015218/http://procoursing.ru/results/2020-08-15_C_R/",
+      "results_url": "https://web.archive.org/web/20220321114137/http://procoursing.ru/Full_Results_2020-08-15_1.html",
       "catalog_url": null,
       "confirmed": 0,
       "judges": null,
-      "has_results": false,
-      "results_file": null,
-      "result_count": 0,
-      "participants_count": 0
+      "has_results": true,
+      "results_file": "competitions/2020/08-август/1584-состязания-по-бегам-борзых-курсинг-чркф.json",
+      "result_count": 44,
+      "participants_count": 44
     },
     {
       "id": 20200822,
@@ -100,14 +100,14 @@
       "host_club": "",
       "region": null,
       "location": "Московская область, Новый Милет",
-      "results_url": "https://web.archive.org/web/20250708015218/http://procoursing.ru/results/2020-09-12_R/",
+      "results_url": "https://web.archive.org/web/20220311190554/http://procoursing.ru/Full_Results_2020-09-12.html",
       "catalog_url": "https://web.archive.org/web/20250708015218/http://procoursing.ru/results/2020-09-12/Catalog_2020-09-12_Racing_ChRussia.pdf",
       "confirmed": 0,
       "judges": null,
-      "has_results": false,
-      "results_file": null,
-      "result_count": 0,
-      "participants_count": 0
+      "has_results": true,
+      "results_file": "competitions/2020/09-сентябрь/1571-чемпионат-россии-по-бегам-борзых-за-механическим.json",
+      "result_count": 53,
+      "participants_count": 53
     },
     {
       "id": 20200920,
@@ -126,14 +126,14 @@
       "host_club": "",
       "region": null,
       "location": "Московская область, город Раменское",
-      "results_url": "https://web.archive.org/web/20250708015218/http://procoursing.ru/results/2020-09-20_R/",
+      "results_url": "https://web.archive.org/web/20211220183932/http://procoursing.ru/Full_Results_2020-09-20.html",
       "catalog_url": null,
       "confirmed": 0,
       "judges": null,
-      "has_results": false,
-      "results_file": null,
-      "result_count": 0,
-      "participants_count": 0
+      "has_results": true,
+      "results_file": "competitions/2020/09-сентябрь/1572-кубок-россии-по-бегам-борзых-за-механическим-заи.json",
+      "result_count": 62,
+      "participants_count": 62
     },
     {
       "id": 20201003,

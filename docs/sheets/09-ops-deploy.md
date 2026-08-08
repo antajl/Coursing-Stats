@@ -1,6 +1,6 @@
 ---
 title: Ops & Deploy
-verified: 2026-08-06
+verified: 2026-08-08
 ---
 
 # 09 — Ops & Deploy
@@ -14,7 +14,7 @@ verified: 2026-08-06
 | Факт | |
 |------|--|
 | Package manager | **yarn@1.22.22** |
-| Dev | `yarn run dev` → Vite `:5173` + admin `:8787` |
+| Dev | `yarn run dev` → Vite `:5173` + local admin API `:8787` (`/admin`, `/admin/event/:id`) |
 | Site deploy | `.github/workflows/deploy-frontend.yml` → `build-all-data` → Pages project `coursingstats` |
 | Bot deploy | отдельно (`cd bot; yarn run deploy`); **не** Worker сайта в site CI |
 | Calendar toggle | `data/v1/ui-flags.json` + `scripts/show-calendar-*.bat` / `hide-calendar-*.bat` |

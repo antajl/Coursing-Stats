@@ -19,7 +19,7 @@ export default function ResultCard({ result, index }: ResultCardProps) {
   const cardContent = (
     <div
       className={[
-        'overflow-visible rounded-lg border border-old-money-200 bg-cream-50 transition-all duration-200 ease-in-out hover:scale-[1.01] hover:shadow-md hover:bg-old-money-100/80 dark:border-charcoal-500 dark:bg-charcoal-800/40 dark:hover:bg-charcoal-700/80 dark:hover:shadow-lg',
+        'group/card overflow-visible rounded-lg border border-old-money-200 bg-cream-50 transition-all duration-200 ease-in-out hover:scale-[1.01] hover:shadow-md hover:bg-old-money-100/80 dark:border-charcoal-500 dark:bg-charcoal-800/40 dark:hover:bg-charcoal-700/80 dark:hover:shadow-lg',
         result.dog_id ? 'cursor-pointer' : '',
         accent,
         alternate ? 'bg-white/60 dark:bg-charcoal-800/25' : '',

@@ -96,7 +96,7 @@ export function useCompetingBreeds() {
 
 export function useYears() {
   return useQuery({
-    queryKey: ['years'],
+    queryKey: ['staticData', 'years'],
     queryFn: () => fetchStaticData<{ years: number[]; count: number }>('/data/v1/indexes/years.json'),
     staleTime: STALE_LONG_MS,
   });
