@@ -1,0 +1,754 @@
+{
+  "schema": "coursing-stats/competition-v1",
+  "exported_at": "2026-08-08T20:12:46.253Z",
+  "source": "archive-full-results-legacy",
+  "event_id": 1570,
+  "event": {
+    "id": 1570,
+    "year": 2020,
+    "date_start": "2020-08-15",
+    "date_end": "2020-08-16",
+    "rank_label": "Бега за механической приманкой",
+    "event_type": "racing",
+    "competition_kind": null,
+    "competition_type": null,
+    "title": "Бега за механической приманкой",
+    "host_club": null,
+    "region": null,
+    "location": "Ярославль, АТЦ \"Левково\"",
+    "catalog_url": null,
+    "results_url": "https://web.archive.org/web/20220506133530/http://procoursing.ru/Full_Results_2020-08-15_2.html",
+    "confirmed": 0,
+    "last_modified": null,
+    "scraped_at": "2026-08-08T20:12:46.253Z",
+    "telegram_url": null,
+    "full_title": null,
+    "event_date": "2020-08-15",
+    "protocol_location": null,
+    "judges": null,
+    "track_schemes": [],
+    "admin_verified_at": null
+  },
+  "result_count": 10,
+  "results": [
+    {
+      "id": 1,
+      "event_id": 1570,
+      "dog_id": 9220,
+      "breed_class": "Бигль - Стандартный - Микс",
+      "catalog_no": 4,
+      "placement": 1,
+      "total_score": 342,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 46,
+            "bib_color": "yellow",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 86
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  15,
+                  17
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 169,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 51,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  17,
+                  18,
+                  16,
+                  18
+                ],
+                "sum": 85
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  19,
+                  18,
+                  16,
+                  19
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 173,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 342
+      },
+      "raw_text": "4 | Бигль | Стандартный | Кобель | Арес | 46 | 17 | 17 | 17 | 17 | 18 | 169 | 51 | 16 | 17 | 18 | 16 | 18 | 173 | 342 | 1 | CC | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "арес--бигль",
+      "dog": {
+        "id": 9220,
+        "dog_key": "арес--бигль",
+        "name_lat": "АРЕС",
+        "name_ru": "АРЕС",
+        "breed": "БИГЛЬ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 2,
+      "event_id": 1570,
+      "dog_id": 10386,
+      "breed_class": "Бигль - Стандартный - Микс",
+      "catalog_no": 5,
+      "placement": 2,
+      "total_score": 328,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 46,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  16,
+                  16,
+                  15,
+                  15
+                ],
+                "sum": 77
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  16,
+                  16,
+                  15,
+                  16
+                ],
+                "sum": 79
+              }
+            ],
+            "total": 156,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 51,
+            "bib_color": "yellow",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  16,
+                  15,
+                  18,
+                  18
+                ],
+                "sum": 83
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  19
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 172,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 328
+      },
+      "raw_text": "5 | Бигль | Стандартный | Кобель | Манифик Мет Юлиан | 46 | 15 | 16 | 16 | 15 | 15 | 156 | 51 | 16 | 16 | 15 | 18 | 18 | 172 | 328 | 2 | CC | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "манифик-мет-юлиан--бигль",
+      "dog": {
+        "id": 10386,
+        "dog_key": "манифик-мет-юлиан--бигль",
+        "name_lat": "МАНИФИК МЕТ ЮЛИАН",
+        "name_ru": "МАНИФИК МЕТ ЮЛИАН",
+        "breed": "БИГЛЬ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 3,
+      "event_id": 1570,
+      "dog_id": 9545,
+      "breed_class": "Бордер Колли - Стандартный - Микс",
+      "catalog_no": 6,
+      "placement": 1,
+      "total_score": 368,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 47,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  20
+                ],
+                "sum": 90
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  19,
+                  18,
+                  19,
+                  19
+                ],
+                "sum": 92
+              }
+            ],
+            "total": 182,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 52,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  19,
+                  20
+                ],
+                "sum": 93
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  18,
+                  19
+                ],
+                "sum": 93
+              }
+            ],
+            "total": 186,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 368
+      },
+      "raw_text": "6 | Бордер Колли | Стандартный | Сука | AISKNEKHT TEQUILA | 47 | 17 | 18 | 17 | 18 | 20 | 182 | 52 | 18 | 18 | 18 | 19 | 20 | 186 | 368 | 1 | CC | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "aisknekht-tequila--бордер-колли",
+      "dog": {
+        "id": 9545,
+        "dog_key": "aisknekht-tequila--бордер-колли",
+        "name_lat": "AISKNEKHT TEQUILA",
+        "name_ru": "AISKNEKHT TEQUILA",
+        "breed": "БОРДЕР КОЛЛИ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 4,
+      "event_id": 1570,
+      "dog_id": 10387,
+      "breed_class": "Питбультерьер - Стандартный - Микс",
+      "catalog_no": 8,
+      "placement": 1,
+      "total_score": 362,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 36,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  19,
+                  19,
+                  19,
+                  19,
+                  20
+                ],
+                "sum": 96
+              }
+            ],
+            "total": 184,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 45,
+            "bib_color": "yellow",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  18,
+                  19,
+                  19,
+                  19
+                ],
+                "sum": 93
+              }
+            ],
+            "total": 178,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 362
+      },
+      "raw_text": "8 | Питбультерьер | Стандартный | Сука | PIT REAL WILD GLORY DOTCH VELDTA | 36 | 17 | 18 | 17 | 18 | 18 | 184 | 45 | 17 | 17 | 17 | 17 | 17 | 178 | 362 | 1 | CC | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "pit-real-wild-glory-dotch-veldta--питбультерьер",
+      "dog": {
+        "id": 10387,
+        "dog_key": "pit-real-wild-glory-dotch-veldta--питбультерьер",
+        "name_lat": "PIT REAL WILD GLORY DOTCH VELDTA",
+        "name_ru": "PIT REAL WILD GLORY DOTCH VELDTA",
+        "breed": "ПИТБУЛЬТЕРЬЕР",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 5,
+      "event_id": 1570,
+      "dog_id": 10388,
+      "breed_class": "Питбультерьер - Стандартный - Микс",
+      "catalog_no": 9,
+      "placement": 2,
+      "total_score": 361,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 36,
+            "bib_color": "yellow",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  18,
+                  16,
+                  18,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  20
+                ],
+                "sum": 92
+              }
+            ],
+            "total": 180,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 45,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  18,
+                  16,
+                  17,
+                  18
+                ],
+                "sum": 85
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  19,
+                  19,
+                  19,
+                  19,
+                  20
+                ],
+                "sum": 96
+              }
+            ],
+            "total": 181,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 361
+      },
+      "raw_text": "9 | Питбультерьер | Стандартный | Сука | Истинная Ценность | 36 | 18 | 18 | 16 | 18 | 18 | 180 | 45 | 16 | 18 | 16 | 17 | 18 | 181 | 361 | 2 | CC | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "истинная-ценность--питбультерьер",
+      "dog": {
+        "id": 10388,
+        "dog_key": "истинная-ценность--питбультерьер",
+        "name_lat": "ИСТИННАЯ ЦЕННОСТЬ",
+        "name_ru": "ИСТИННАЯ ЦЕННОСТЬ",
+        "breed": "ПИТБУЛЬТЕРЬЕР",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 6,
+      "event_id": 1570,
+      "dog_id": 10389,
+      "breed_class": "Питбультерьер - Стандартный - Микс",
+      "catalog_no": 7,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 37,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  16,
+                  14,
+                  16,
+                  14
+                ],
+                "sum": 77
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  15,
+                  16,
+                  16,
+                  17
+                ],
+                "sum": 80
+              }
+            ],
+            "total": 157,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
+      "raw_text": "7 | Питбультерьер | Стандартный | Кобель | Х-Бой Нью Блуд | 37 | 17 | 16 | 14 | 16 | 14 | 157 |  | Травма |  | 157 |  |  | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "х-бои-нью-блуд--питбультерьер",
+      "dog": {
+        "id": 10389,
+        "dog_key": "х-бои-нью-блуд--питбультерьер",
+        "name_lat": "Х БОЙ НЬЮ БЛУД",
+        "name_ru": "Х БОЙ НЬЮ БЛУД",
+        "breed": "ПИТБУЛЬТЕРЬЕР",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 7,
+      "event_id": 1570,
+      "dog_id": 10390,
+      "breed_class": "Русская псовая борзая - Стандартный - Микс",
+      "catalog_no": 10,
+      "placement": 1,
+      "total_score": 321,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 4,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  15,
+                  17,
+                  18
+                ],
+                "sum": 85
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  16,
+                  16,
+                  16,
+                  17
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 166,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 8,
+            "bib_color": "yellow",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  17,
+                  12,
+                  15,
+                  17
+                ],
+                "sum": 78
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  16,
+                  15,
+                  15,
+                  15
+                ],
+                "sum": 77
+              }
+            ],
+            "total": 155,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 321
+      },
+      "raw_text": "10 | Русская псовая борзая | Стандартный | Кобель | Горностай | 4 | 17 | 18 | 15 | 17 | 18 | 166 | 8 | 17 | 17 | 12 | 15 | 17 | 155 | 321 | 1 | CC | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "горностаи--русская-псовая-борзая",
+      "dog": {
+        "id": 10390,
+        "dog_key": "горностаи--русская-псовая-борзая",
+        "name_lat": "ГОРНОСТАЙ",
+        "name_ru": "ГОРНОСТАЙ",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 8,
+      "event_id": 1570,
+      "dog_id": 10547,
+      "breed_class": "Неприбывшие участники",
+      "catalog_no": 1,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dns",
+      "raw_scores_json": {
+        "heats": []
+      },
+      "raw_text": "1 | Баварская гончая | Стандартный | Кобель | BURTON SFORA GIEMZIORA | Неявка",
+      "judges": null,
+      "status_reason": "Неявка",
+      "dog_key": "burton-sfora-giemziora--баварская-гончая",
+      "dog": {
+        "id": 10547,
+        "dog_key": "burton-sfora-giemziora--баварская-гончая",
+        "name_lat": "BURTON SFORA GIEMZIORA",
+        "name_ru": "BURTON SFORA GIEMZIORA",
+        "breed": "БАВАРСКАЯ ГОНЧАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 9,
+      "event_id": 1570,
+      "dog_id": 10548,
+      "breed_class": "Неприбывшие участники",
+      "catalog_no": 2,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dns",
+      "raw_scores_json": {
+        "heats": []
+      },
+      "raw_text": "2 | Баварская гончая | Стандартный | Сука | BETI SFORA GIEMZIORA | Неявка",
+      "judges": null,
+      "status_reason": "Неявка",
+      "dog_key": "beti-sfora-giemziora--баварская-гончая",
+      "dog": {
+        "id": 10548,
+        "dog_key": "beti-sfora-giemziora--баварская-гончая",
+        "name_lat": "BETI SFORA GIEMZIORA",
+        "name_ru": "BETI SFORA GIEMZIORA",
+        "breed": "БАВАРСКАЯ ГОНЧАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 10,
+      "event_id": 1570,
+      "dog_id": 10549,
+      "breed_class": "Неприбывшие участники",
+      "catalog_no": 3,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dns",
+      "raw_scores_json": {
+        "heats": []
+      },
+      "raw_text": "3 | Баварская гончая | Стандартный | Сука | DANYUSHA | Неявка",
+      "judges": null,
+      "status_reason": "Неявка",
+      "dog_key": "danyusha--баварская-гончая",
+      "dog": {
+        "id": 10549,
+        "dog_key": "danyusha--баварская-гончая",
+        "name_lat": "DANYUSHA",
+        "name_ru": "DANYUSHA",
+        "breed": "БАВАРСКАЯ ГОНЧАЯ",
+        "sex": null,
+        "owner": null
+      }
+    }
+  ]
+}

@@ -7,6 +7,7 @@ import EventHeader from './EventHeader'
 import ResultsSection from './ResultsSection'
 import { SEO } from '../../../components/SEO'
 import { getEventHeadline } from '../eventListUtils'
+import { isLocalDev } from '../../../lib/env'
 import type { Event, Result } from './types'
 
 export default function EventResults() {
@@ -123,6 +124,16 @@ export default function EventResults() {
         )}
 
         <EventHeader event={event} results={results} onBack={() => navigate(-1)} />
+        {isLocalDev && (
+          <div className="mb-3">
+            <Link
+              to={`/admin/event/${id}`}
+              className="inline-flex rounded-lg border border-camel-400 bg-camel-50 px-3 py-1.5 text-sm font-semibold text-camel-900 hover:bg-camel-100 dark:border-camel-600 dark:bg-charcoal-800 dark:text-camel-300 dark:hover:bg-charcoal-700"
+            >
+              Редактировать
+            </Link>
+          </div>
+        )}
         <ResultsSection results={results} />
       </div>
     </>

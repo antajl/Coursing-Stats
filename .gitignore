@@ -13,6 +13,7 @@ node_modules/
 # Cloudflare
 .wrangler/
 **/*.sqlite
+.tmp-auth-worker/
 
 # Local SQLite / Turso working copies (not for CDN)
 data/*.db
@@ -92,8 +93,7 @@ backend/backend/
 # Test fixtures with images - local only, not needed for CI
 backend/tests/fixtures/2015/
 
-# Frontend admin pages - not needed for production
-frontend/src/pages/Admin/
+# Frontend admin pages live in git; gated to DEV via isLocalDev (not a prod route)
 frontend/src/data/mockData.js
 
 # Debug pages - not needed for production

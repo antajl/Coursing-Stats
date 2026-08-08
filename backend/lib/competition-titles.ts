@@ -26,7 +26,9 @@ export type CompetitionTitleKey =
   | 'breed_champion'
   | 'breed_champion_rkf'
   | 'cacil'
+  | 'rcacil'
   | 'cacl'
+  | 'rcacl'
   | 'caclbr'
   | 'regcacl'
   | 'international'
@@ -44,7 +46,9 @@ export const COMPETITION_TITLE_BADGE: Record<string, string> = {
   breed_champion_rkf: 'ПЧРКФ РК',
   international: 'C.I.C.',
   cacil: 'CACIL',
+  rcacil: 'R.CACIL',
   cacl: 'CACL',
+  rcacl: 'R.CACL',
   caclbr: 'CACLBr',
   regcacl: 'RegCACL',
 }
@@ -61,7 +65,9 @@ export const COMPETITION_TITLE_LABELS: Record<string, string> = {
   breed_champion_rkf: 'Чемпион РКФ по рабочим качествам собак в породе',
   international: 'Интернациональный чемпион по бегам / курсингу (C.I.C., FCI)',
   cacil: 'CACIL — международный титульный сертификат (бега и курсинг борзых)',
+  rcacil: 'R.CACIL — резервный международный титульный сертификат',
   cacl: 'CACL — национальный титульный сертификат',
+  rcacl: 'R.CACL — резервный национальный титульный сертификат',
   caclbr: 'CACLBr — породный титульный сертификат (Br = breed)',
   regcacl: 'RegCACL — региональный / локальный сертификат (в протоколах; не в п. 1.4 Положения РКФ)',
 }
@@ -71,7 +77,7 @@ export const COMPETITION_TITLE_LABELS: Record<string, string> = {
  * Числа с запасом между ступенями — чтобы вставлять редкие титулы без перестановки соседей.
  */
 export const COMPETITION_TITLE_RANK: Record<string, number> = {
-  // Кумулятивы / FCI career (сложнее одного старта)
+  // Кумулятивы / FCI career (сложнее одного участия)
   grand_champion_russia: 140, // ГЧР РК: два ЧР по разным дисциплинам
   grand_champion_rkf: 135, // ГЧРКФ РК: два ЧРКФ по разным дисциплинам
   international: 130, // C.I.C. / Intern. Champion (FCI, набор CACIL)
@@ -83,7 +89,9 @@ export const COMPETITION_TITLE_RANK: Record<string, number> = {
   breed_champion_rkf: 90, // ПЧРКФ РК: 1-е на монопородном ЧРКФ
   // Сертификаты (шаг к кумулятивам)
   cacil: 85, // международный
+  rcacil: 80, // резерв CACIL
   cacl: 60, // национальный
+  rcacl: 55, // резерв CACL (R.CACL)
   caclbr: 50, // породный (Br = breed)
   regcacl: 40, // региональный / локальный; в протоколах есть, в п. 1.4 Положения нет
 }
@@ -144,7 +152,22 @@ export function competitionTitleKey(raw: string): CompetitionTitleKey {
     return 'international'
   }
 
-  // Сертификаты: узкие ключи раньше общего CACL
+  // Сертификаты: резервы и узкие ключи раньше общего CACL/CACIL
+  // (иначе «R.CACL» матчится как `\bcacl\b` → ошибочно CACL)
+  if (
+    /^r\.?\s*cacil\b/.test(t) ||
+    /^rcacil\b/.test(t) ||
+    /\br\.?\s*cacil\b/.test(t)
+  ) {
+    return 'rcacil'
+  }
+  if (
+    /^r\.?\s*cacl\b/.test(t) ||
+    /^rcacl\b/.test(t) ||
+    /\br\.?\s*cacl\b/.test(t)
+  ) {
+    if (!t.includes('caclbr') && !/cacl\s*br/.test(t)) return 'rcacl'
+  }
   if (t.includes('cacil') || t.includes('c.i.c')) return 'cacil'
   if (t.includes('caclbr') || /^cacl\s*br\b/.test(t) || t === 'cacl br') return 'caclbr'
   if (t.includes('regcacl') || (t.includes('reg') && t.includes('cacl'))) return 'regcacl'

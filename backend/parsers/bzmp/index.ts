@@ -11,6 +11,7 @@ import { extractJudgesFromPage } from "../shared/extract-judges";
 import { parseBreedClassHeader } from "../shared/breed-class-header";
 import { normalizeProtocolPageTitle } from "../shared/protocol-title";
 import { isNonArrivedSectionHeader, isNonArrivedDataRow } from "../shared/non-arrived-section";
+import { applyMixBreedClasses } from "../shared/breed-class-mix";
 
 export async function parseBzmpHTML(html) {
   const $ = cheerio.load(html);
@@ -95,6 +96,8 @@ export async function parseBzmpHTML(html) {
       }
     }
   });
+
+  applyMixBreedClasses(results);
 
   return { results, telegram_url: telegramUrl, full_title: fullTitle, event_date: eventDate, protocol_location: protocolLocation, judges, track_schemes: [] };
 }

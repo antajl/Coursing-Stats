@@ -1,9 +1,9 @@
 {
   "schema": "coursing-stats/calendar-v1",
   "year": 2016,
-  "exported_at": "2026-07-08T14:48:11.732Z",
+  "exported_at": "2026-08-08T19:04:40.811Z",
   "event_count": 3,
-  "with_results": 0,
+  "with_results": 2,
   "events": [
     {
       "id": 20160227,
@@ -22,14 +22,14 @@
       "host_club": "",
       "region": null,
       "location": "Московская область, Сергиево-Посадский р-н",
-      "results_url": "https://web.archive.org/web/20250624050602/http://procoursing.ru/results/2016-02-27/",
+      "results_url": "https://web.archive.org/web/20171005153314/http://procoursing.ru/Full_Results_2016_02.html",
       "catalog_url": null,
       "confirmed": 0,
       "judges": null,
-      "has_results": false,
-      "results_file": null,
-      "result_count": 0,
-      "participants_count": 0
+      "has_results": true,
+      "results_file": "competitions/2016/02-февраль/1553-чемпионат-по-курсингу-мартовскии-заяц.json",
+      "result_count": 113,
+      "participants_count": 113
     },
     {
       "id": 20160806,
@@ -48,17 +48,17 @@
       "host_club": "",
       "region": null,
       "location": "Московская область, Пушкинский р-н, д. Михайловское",
-      "results_url": "https://web.archive.org/web/20250624050602/http://procoursing.ru/results/2016-08-06/",
+      "results_url": "https://web.archive.org/web/20170421200413/http://procoursing.ru/Full_Results_2016_08.html",
       "catalog_url": null,
       "confirmed": 0,
       "judges": null,
-      "has_results": false,
-      "results_file": null,
-      "result_count": 0,
-      "participants_count": 0
+      "has_results": true,
+      "results_file": "competitions/2016/08-август/1554-региональные-состязания.json",
+      "result_count": 58,
+      "participants_count": 58
     },
     {
-      "id": 20160806,
+      "id": 201608061,
       "year": 2016,
       "month": "08-август",
       "date_start": "2016-08-06",

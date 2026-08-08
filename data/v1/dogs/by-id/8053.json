@@ -1,18 +1,20 @@
 {
   "schema": "coursing-stats/dog-v1",
-  "exported_at": "2026-07-11T10:55:51.099Z",
+  "exported_at": "2026-07-08T00:31:32.188Z",
   "id": 8053,
-  "dog_key": "дорогои-друг-уланка-dorogoy-drug-ulanka--русская-псовая-борзая",
-  "name_lat": "ДОРОГОЙ ДРУГ УЛАНКА /DOROGOY DRUG ULANKA",
-  "name_ru": "ДОРОГОЙ ДРУГ УЛАНКА /DOROGOY DRUG ULANKA",
+  "dog_key": "dorogoy-drug-ulanka--русская-псовая-борзая",
+  "name_lat": "DOROGOY DRUG ULANKA",
+  "name_ru": "ДОРОГОЙ ДРУГ УЛАНКА",
   "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
   "sex": null,
   "owner": null,
-  "pedigree_url": "https://borzoi.breedarchive.com/animal/view/dorogoy-drug-ulanka-9f2094de-0644-431a-9be6-39fe36a6d325",
   "competition_ids": [
-    1273
+    1273,
+    1575
   ],
   "competition_files": [
-    "competitions/2025/06-июнь/1273-чркф-курсинг-борзых.json"
-  ]
+    "competitions/2025/06-июнь/1273-чркф-курсинг-борзых.json",
+    "competitions/2021/04-апрель/1575-чепионат-ркф-по-курсингу-борзых.json"
+  ],
+  "pedigree_url": "https://borzoi.breedarchive.com/animal/view/dorogoy-drug-ulanka-9f2094de-0644-431a-9be6-39fe36a6d325"
 }

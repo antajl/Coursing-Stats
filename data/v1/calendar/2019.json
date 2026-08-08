@@ -1,9 +1,9 @@
 {
   "schema": "coursing-stats/calendar-v1",
   "year": 2019,
-  "exported_at": "2026-07-08T14:48:25.023Z",
+  "exported_at": "2026-08-08T19:04:40.812Z",
   "event_count": 12,
-  "with_results": 0,
+  "with_results": 7,
   "events": [
     {
       "id": 20190302,
@@ -22,14 +22,14 @@
       "host_club": "",
       "region": null,
       "location": "Московская область, деревня Михайловское",
-      "results_url": "https://web.archive.org/web/20250915161147/http://procoursing.ru/results/2019-03-02/",
+      "results_url": "https://web.archive.org/web/20190822132005/http://procoursing.ru/Full_Results_2019-03-03.html",
       "catalog_url": null,
       "confirmed": 0,
       "judges": null,
-      "has_results": false,
-      "results_file": null,
-      "result_count": 0,
-      "participants_count": 0
+      "has_results": true,
+      "results_file": "competitions/2019/03-март/1563-чемпионат-по-курсингу-мартовскии-заяц-2019.json",
+      "result_count": 93,
+      "participants_count": 93
     },
     {
       "id": 20190416,
@@ -74,14 +74,14 @@
       "host_club": "",
       "region": null,
       "location": "Московская область, Ленинский район, деревня Суханово",
-      "results_url": "https://web.archive.org/web/20250915161147/http://procoursing.ru/results/2019-04-27/",
+      "results_url": "https://web.archive.org/web/20190806040649/http://procoursing.ru/Full_Results_2019-04-27.html",
       "catalog_url": null,
       "confirmed": 0,
       "judges": null,
-      "has_results": false,
-      "results_file": null,
-      "result_count": 0,
-      "participants_count": 0
+      "has_results": true,
+      "results_file": "competitions/2019/04-апрель/1564-международныи-чемпионат-по-курсингу-чемпионат-ро.json",
+      "result_count": 159,
+      "participants_count": 159
     },
     {
       "id": 20190615,
@@ -100,14 +100,14 @@
       "host_club": "",
       "region": null,
       "location": "Московская область, Новый Милет",
-      "results_url": "https://web.archive.org/web/20250915161147/http://procoursing.ru/results/2019-06-15/",
+      "results_url": "https://web.archive.org/web/20190719131534/http://procoursing.ru/Full_Results_2019-06-15.html",
       "catalog_url": null,
       "confirmed": 0,
       "judges": null,
-      "has_results": false,
-      "results_file": null,
-      "result_count": 0,
-      "participants_count": 0
+      "has_results": true,
+      "results_file": "competitions/2019/06-июнь/1565-бега-борзых-за-механическим-заицем-круг.json",
+      "result_count": 58,
+      "participants_count": 58
     },
     {
       "id": 20190811,
@@ -152,14 +152,14 @@
       "host_club": "",
       "region": null,
       "location": "Московская область, деревня Суханово",
-      "results_url": "https://web.archive.org/web/20250915161147/http://procoursing.ru/results/2019-08-24/",
+      "results_url": "https://web.archive.org/web/20190919230532/http://procoursing.ru/Full_Results_2019-08-25.html",
       "catalog_url": null,
       "confirmed": 0,
       "judges": null,
-      "has_results": false,
-      "results_file": null,
-      "result_count": 0,
-      "participants_count": 0
+      "has_results": true,
+      "results_file": "competitions/2019/08-август/1566-чемпионат-ркф-cacl.json",
+      "result_count": 111,
+      "participants_count": 111
     },
     {
       "id": 20190901,
@@ -178,14 +178,14 @@
       "host_club": "",
       "region": null,
       "location": "Московская область, деревня Михайловское",
-      "results_url": "https://web.archive.org/web/20250915161147/http://procoursing.ru/results/2019-09-01/",
+      "results_url": "https://web.archive.org/web/20190919230542/http://procoursing.ru/Full_Results_2019-09-01.html",
       "catalog_url": null,
       "confirmed": 0,
       "judges": null,
-      "has_results": false,
-      "results_file": null,
-      "result_count": 0,
-      "participants_count": 0
+      "has_results": true,
+      "results_file": "competitions/2019/09-сентябрь/1567-кубок-россии-по-бегам-борзых.json",
+      "result_count": 56,
+      "participants_count": 56
     },
     {
       "id": 20190908,
@@ -230,14 +230,14 @@
       "host_club": "",
       "region": null,
       "location": "Московская область, Новый Милет",
-      "results_url": "https://web.archive.org/web/20250915161147/http://procoursing.ru/results/2019-09-15/",
+      "results_url": "https://web.archive.org/web/20190919235708/http://procoursing.ru/Full_Results_2019-09-15.html",
       "catalog_url": null,
       "confirmed": 0,
       "judges": null,
-      "has_results": false,
-      "results_file": null,
-      "result_count": 0,
-      "participants_count": 0
+      "has_results": true,
+      "results_file": "competitions/2019/09-сентябрь/1568-кубок-россии-по-бегам-борзых-курсинг.json",
+      "result_count": 92,
+      "participants_count": 92
     },
     {
       "id": 20190922,
@@ -256,14 +256,14 @@
       "host_club": "",
       "region": null,
       "location": "Московская область, город Раменское",
-      "results_url": "https://web.archive.org/web/20250915161147/http://procoursing.ru/results/2019-09-22/",
+      "results_url": "https://web.archive.org/web/20191017124012/http://procoursing.ru/Full_Results_2019-09-22.html",
       "catalog_url": null,
       "confirmed": 0,
       "judges": null,
-      "has_results": false,
-      "results_file": null,
-      "result_count": 0,
-      "participants_count": 0
+      "has_results": true,
+      "results_file": "competitions/2019/09-сентябрь/1569-национальные-состязания-по-бегам-борзых-за-механ.json",
+      "result_count": 27,
+      "participants_count": 27
     },
     {
       "id": 20191005,

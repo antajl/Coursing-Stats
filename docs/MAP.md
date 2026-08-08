@@ -2,7 +2,7 @@
 title: Docs Map — Agent Router
 description: Single navigation entry for CoursingStats docs. Task → one cheatsheet.
 confidence: stable
-verified: 2026-08-06
+verified: 2026-08-08
 ---
 
 # MAP — куда смотреть
@@ -17,7 +17,7 @@ verified: 2026-08-06
 | Публичный сайт | CDN `/data/v1/*.json` — без Worker/D1 runtime |
 | Календари | `ui-flags.json`: competitions **ON**, shows **ON** |
 | Turso | Только протоколы выставок (`getShowExhibition` fallback) |
-| Secrets локально | `.env.ai` (gitignored); frontend `VITE_TURSO_*` |
+| Dev / admin | Vite `:5173` + local admin `:8787` — `/admin`, `/admin/event/:id` (DEV only) |
 | Рейтинги спорта | зачёт сезона (медали/КПД) → CS tie-break; Elo display-only — никогда не мерджить в одно число |
 
 ## Задача → файл

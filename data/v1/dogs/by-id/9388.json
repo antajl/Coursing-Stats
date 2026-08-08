@@ -1,1 +1,38 @@
-{"schema":"coursing-stats/dog-v1","exported_at":"2026-07-08T00:31:32.188Z","id":9388,"dog_key":"entayli-yoz--уиппет","name_lat":"ENTAYLI YOZ","name_ru":"ENTAYLI YOZ","breed":"УИППЕТ","sex":null,"owner":null,"competition_ids":[1436,1444,1453],"competition_files":["competitions/2023/08-август/1436-чемпионат-ркф-cacl-по-бегам-борзых.json","competitions/2023/10-октябрь/1444-кубок-россии-по-курсингу.json","competitions/2024/05-май/1453-чемпионат-ркф-cacl-по-курсингу-борзых.json"],"pedigree_url":"https://whippet.breedarchive.com/animal/view/entayli-yoz-d0c504bb-bba8-4363-b2cc-b31e97f36c42"}
+{
+  "schema": "coursing-stats/dog-v1",
+  "exported_at": "2026-07-08T00:31:32.188Z",
+  "id": 9388,
+  "dog_key": "entayli-yoz--уиппет",
+  "name_lat": "ENTAYLI YOZ",
+  "name_ru": "ENTAYLI YOZ",
+  "breed": "УИППЕТ",
+  "sex": null,
+  "owner": null,
+  "competition_ids": [
+    1436,
+    1444,
+    1453,
+    1567,
+    1569,
+    1571,
+    1572,
+    1580,
+    1582,
+    1583,
+    1578
+  ],
+  "competition_files": [
+    "competitions/2023/08-август/1436-чемпионат-ркф-cacl-по-бегам-борзых.json",
+    "competitions/2023/10-октябрь/1444-кубок-россии-по-курсингу.json",
+    "competitions/2024/05-май/1453-чемпионат-ркф-cacl-по-курсингу-борзых.json",
+    "competitions/2019/09-сентябрь/1567-кубок-россии-по-бегам-борзых.json",
+    "competitions/2019/09-сентябрь/1569-национальные-состязания-по-бегам-борзых-за-механ.json",
+    "competitions/2020/09-сентябрь/1571-чемпионат-россии-по-бегам-борзых-за-механическим.json",
+    "competitions/2020/09-сентябрь/1572-кубок-россии-по-бегам-борзых-за-механическим-заи.json",
+    "competitions/2021/08-август/1580-международные-состязания-по-курсингу-cacil-чемпи.json",
+    "competitions/2021/09-сентябрь/1582-кубок-россии-курсинг-борзых.json",
+    "competitions/2021/10-октябрь/1583-заичик-листопадничек-курсинг-cacil-cacl.json",
+    "competitions/2021/06-июнь/1578-чемпионат-ркф-cacl-по-бегам-борзых.json"
+  ],
+  "pedigree_url": "https://whippet.breedarchive.com/animal/view/entayli-yoz-d0c504bb-bba8-4363-b2cc-b31e97f36c42"
+}

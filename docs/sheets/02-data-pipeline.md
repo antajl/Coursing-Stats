@@ -1,6 +1,6 @@
 ---
 title: Data Pipeline
-verified: 2026-08-06
+verified: 2026-08-08
 ---
 
 # 02 — Data Pipeline
@@ -17,6 +17,8 @@ verified: 2026-08-06
 | Generated для Pages | `frontend/public/data/v1/` (gitignore) через `copy-data` |
 | Indexes | Не править вручную — `build-all-data` |
 | Как строятся indexes | JSON → **in-memory SQLite** (`openDb`), не stale `pc-db.sqlite` |
+| Calendar UI | `calendar/{year}.json` + `indexes/calendar-index.json` / `events-by-id.json` |
+| Protocol page | `/event/:id` читает `events-by-id[id].results_file` → `competitions/…json` |
 | Show indexes в CI | Обычно **не** пересобираются (нет local RKF); ship committed `data/v1/shows/indexes/*` |
 | Local без RKF archive | Skip show rebuild — иначе можно уничтожить BIS |
 
@@ -63,7 +65,15 @@ yarn run build-all-data
 yarn run publish-gates
 ```
 
-После правок `competitions/` или `dogs/` — **обязательно** `build-all-data`.
+После правок `competitions/`, `dogs/` или `calendar/` — **обязательно** `build-all-data` (или как минимум `rebuild-calendar-index` если только календарь).
+
+Импорт archive Full_Results → `competitions/`:
+
+```bash
+npx tsx backend/scripts/import/import-full-results-archive.ts
+npx tsx backend/scripts/import/sync-archive-comps-to-calendar.ts   # results_file + has_results
+yarn run build-all-data
+```
 
 ## Pitfalls — empty ranking на проде
 
@@ -71,6 +81,7 @@ yarn run publish-gates
 2. Проверяй CDN `count` / `items`, не только HTTP 200.  
 3. Причина часто: indexes собраны без `results[]` (load path).  
 4. Донино **независимо** от sport results.
+5. Новые `competitions/*.json` **не видны в табе календаря**, пока в `calendar/{year}.json` нет строки с `results_file` / `has_results` и не пересобран `events-by-id`.
 
 ## See also
 

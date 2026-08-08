@@ -3,6 +3,7 @@ import DogNameLink from './components/DogNameLink'
 import QualificationBadges from './components/QualificationBadges'
 import HoverTooltip from '../../../components/ui/HoverTooltip'
 import { displayStatusReason } from '../../../lib/statusReason'
+import { hasDisqualifiedHeat, parseRawScores } from './utils'
 import type { Result } from './types'
 
 interface ResultSummaryProps {
@@ -29,7 +30,7 @@ export function Scoreboard({ score, showVc, vc }: { score: number | string; show
   return (
     <div className="relative">
       {showVc && (
-        <div className="absolute -right-1 -top-1 z-10">
+        <div className="absolute -right-3 -top-2.5 z-10">
           <VcBadge vc={vc} corner />
         </div>
       )}
@@ -46,12 +47,14 @@ export function ResultScorePanel({ result }: { result: Result }) {
   const isDisqualified = result.status === 'disqualified' || result.status === 'dns'
   const statusLabel = displayStatusReason(result.status_reason)
   const showVc = hasHighestQualification(result.vc)
+  const dqShownInHeats = hasDisqualifiedHeat(parseRawScores(result.raw_scores_json))
 
   if (result.total_score) {
     return <Scoreboard score={result.total_score} showVc={showVc} vc={result.vc || 'СС'} />
   }
   if (showVc) return <VcBadge vc={result.vc || 'СС'} />
   if (result.status === 'disqualified' && statusLabel) {
+    if (dqShownInHeats) return null
     return (
       <div className="max-w-[8rem] text-right text-xs italic text-red-600 dark:text-red-400 md:text-sm">
         {statusLabel}
@@ -68,6 +71,7 @@ export function ResultScorePanel({ result }: { result: Result }) {
 export default function ResultSummary({ result }: ResultSummaryProps) {
   const isDisqualified = result.status === 'disqualified' || result.status === 'dns'
   const statusLabel = displayStatusReason(result.status_reason)
+  const dqShownInHeats = hasDisqualifiedHeat(parseRawScores(result.raw_scores_json))
 
   return (
     <div className="flex min-w-0 flex-1 items-center gap-2 md:gap-3">
@@ -82,7 +86,7 @@ export default function ResultSummary({ result }: ResultSummaryProps) {
             <QualificationBadges qualification={result.qualification} />
           )}
         </div>
-        {result.status === 'disqualified' && statusLabel && (
+        {result.status === 'disqualified' && statusLabel && !dqShownInHeats && (
           <div className="text-xs italic text-red-600 dark:text-red-400 md:hidden">{statusLabel}</div>
         )}
         {result.status === 'dns' && (

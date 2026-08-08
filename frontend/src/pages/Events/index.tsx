@@ -48,19 +48,21 @@ export default function Events() {
   const events: CalendarEvent[] =
     eventsData?.success && Array.isArray(eventsData.data) ? eventsData.data : []
 
-  const allYears = yearsArray.map((y: { year?: number } | number) =>
-    typeof y === 'object' ? y.year : y,
-  )
   const sortedYears = useMemo(() => {
+    const allYears = yearsArray
+      .map((y: { year?: number } | number) => (typeof y === 'object' ? y.year : y))
+      .filter((y): y is number => typeof y === 'number' && Number.isFinite(y))
+
     const years = [CURRENT_SEASON, ...allYears]
       .map(String)
       .filter(Boolean)
       .sort((a, b) => Number(b) - Number(a))
       .filter((value, index, self) => self.indexOf(value) === index)
 
+    // Fallback only if years index failed/empty — cover archive range, not just 5 seasons
     if (years.length <= 1) {
       const currentYear = new Date().getFullYear()
-      return Array.from({ length: 5 }, (_, i) => String(currentYear - i))
+      return Array.from({ length: currentYear - 2014 }, (_, i) => String(currentYear - i))
     }
 
     return years

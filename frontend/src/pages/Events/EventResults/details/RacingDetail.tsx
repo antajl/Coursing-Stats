@@ -1,37 +1,8 @@
 import type { RawScores } from '../types'
-import { bibColorStyle, bibTextClass, normalizeBibColorName } from '../utils'
-import HoverTooltip from '../../../../components/ui/HoverTooltip'
+import PoponaCell from '../components/PoponaCell'
 
 interface RacingDetailProps {
   rawScores: RawScores
-}
-
-const BIB_LABELS: Record<string, string> = {
-  red: 'Красная попона',
-  white: 'Белая попона',
-  blue: 'Голубая попона',
-  black: 'Чёрная попона',
-}
-
-/** Ячейка попоны как в протоколе: цветной фон + цифра */
-function PoponaCell({ number, color }: { number?: number | string | null; color?: string | null }) {
-  if (number == null && !color) {
-    return <span className="text-old-money-400">—</span>
-  }
-
-  const normalized = normalizeBibColorName(color ?? undefined)
-  const title = normalized ? (BIB_LABELS[normalized] || normalized) : undefined
-
-  return (
-    <HoverTooltip label={title} placement="top" variant="site" delayMs={0} portal>
-      <span
-        className={`inline-flex min-h-[2rem] min-w-[2.25rem] items-center justify-center rounded text-sm font-bold shadow-sm cursor-help ${normalized ? bibTextClass(normalized) : 'text-charcoal-900 dark:text-charcoal-100 border border-old-money-300'}`}
-        style={normalized ? bibColorStyle(normalized) : undefined}
-      >
-        {number ?? '—'}
-      </span>
-    </HoverTooltip>
-  )
 }
 
 export default function RacingDetail({ rawScores }: RacingDetailProps) {

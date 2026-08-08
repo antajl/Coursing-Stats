@@ -19,7 +19,11 @@ export function groupResultsByBreedClass(results: Result[]): {
   sortedGroups: string[]
 } {
   const grouped = results.reduce<Record<string, Result[]>>((acc, result) => {
-    const groupKey = result.breed_class || 'Другие'
+    // Неявки всегда в отдельной группе в конце списка (как в modern-протоколах)
+    const groupKey =
+      result.status === 'dns'
+        ? 'Неприбывшие участники'
+        : result.breed_class || 'Другие'
     if (!acc[groupKey]) acc[groupKey] = []
     acc[groupKey].push(result)
     return acc
@@ -33,7 +37,12 @@ export function groupResultsByBreedClass(results: Result[]): {
   })
 
   for (const groupKey of sortedGroups) {
-    grouped[groupKey].sort((a, b) => (a.placement || 999) - (b.placement || 999))
+    grouped[groupKey].sort((a, b) => {
+      const aDns = a.status === 'dns' ? 1 : 0
+      const bDns = b.status === 'dns' ? 1 : 0
+      if (aDns !== bDns) return aDns - bDns
+      return (a.placement || 999) - (b.placement || 999)
+    })
   }
 
   return { grouped, sortedGroups }
@@ -96,4 +105,9 @@ export function bibTextClass(bibColor: string | undefined): string {
 export function hasDisplayableRawScores(rawScores: RawScores | null): boolean {
   if (!rawScores) return false
   return !!(rawScores.heats || rawScores.format === 'racing')
+}
+
+/** Heat-level DQ is shown in ScoringDetail — avoid repeating the same label in the card header. */
+export function hasDisqualifiedHeat(rawScores: RawScores | null): boolean {
+  return Boolean(rawScores?.heats?.some(h => h.disqualified))
 }
