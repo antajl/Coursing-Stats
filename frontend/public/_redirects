@@ -1,25 +1,28 @@
-# Escape hatch: CF pretty-URLs turn *.html → /spa-shell and React has no such route (client 404).
+# Escape hatch: CF pretty-URLs turn name.html into /name and React has no such route.
+# Never use a catch-all rewrite to a .html file — CF applies pretty-URL 308 to the target
+# (that pattern with 404.html broke the whole site with Location /404).
 /spa-shell / 301
 /spa-shell/ / 301
 /spa-shell.html / 301
 /spa-shell/* / 301
+/404 / 301
+/404/ / 301
+/404.html / 301
 
-# Legacy ranking URLs still in GSC — hard 301 (not only client Navigate)
+# Legacy ranking URLs still in GSC
 /top /competitions?tab=ranking 301
 /top-dogs /competitions?tab=ranking 301
 
-# Static bot banners (Telegram sendPhoto) — must not fall through to SPA
+# Static bot banners (Telegram sendPhoto)
 /bot/* /bot/:splat 200
 
-# BIMI logo (email inbox avatar) — must not fall through to SPA
+# BIMI logo
 /bimi/* /bimi/:splat 200
 /.well-known/bimi/* /.well-known/bimi/:splat 200
 
-# Never SPA-fallback CDN JSON / built assets
+# CDN JSON / built assets (explicit; static files also win first)
 /data/* /data/:splat 200
 /assets/* /assets/:splat 200
 
-# SPA fallback: must be a root-level HTML file.
-# Nested /spa-shell/index.html was ignored → CF default SPA served home (bad canonical).
-# Top-level 404.html also disables CF's "no 404.html → map all paths to /" behavior.
-/* /404.html 200
+# No /* catch-all: without root 404.html, CF Pages SPA mode serves /index.html
+# for unknown client routes. Prerendered /dog|/event|/shows/… are real static files.
