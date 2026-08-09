@@ -1,3 +1,13 @@
+# Escape hatch: CF pretty-URLs turn *.html → /spa-shell and React has no such route (client 404).
+/spa-shell / 301
+/spa-shell/ / 301
+/spa-shell.html / 301
+/spa-shell/* / 301
+
+# Legacy ranking URLs still in GSC — hard 301 (not only client Navigate)
+/top /competitions?tab=ranking 301
+/top-dogs /competitions?tab=ranking 301
+
 # Static bot banners (Telegram sendPhoto) — must not fall through to SPA
 /bot/* /bot/:splat 200
 
@@ -5,10 +15,11 @@
 /bimi/* /bimi/:splat 200
 /.well-known/bimi/* /.well-known/bimi/:splat 200
 
-# Never SPA-fallback CDN JSON / built assets (explicit; static files also win first)
+# Never SPA-fallback CDN JSON / built assets
 /data/* /data/:splat 200
 /assets/* /assets/:splat 200
 
-# Client routes without a prerendered /path/index.html
-# Directory index — NOT spa-shell.html (CF pretty-URL 308 to /spa-shell breaks everything)
-/* /spa-shell/index.html 200
+# SPA fallback: must be a root-level HTML file.
+# Nested /spa-shell/index.html was ignored → CF default SPA served home (bad canonical).
+# Top-level 404.html also disables CF's "no 404.html → map all paths to /" behavior.
+/* /404.html 200

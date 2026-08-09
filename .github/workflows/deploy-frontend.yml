@@ -71,15 +71,16 @@ jobs:
 
       - name: Verify SEO artifacts
         run: |
+          test -f frontend/dist/404.html
           test -f frontend/dist/spa-shell/index.html
-          test -f frontend/dist/spa-shell.html
           test -f frontend/dist/robots.txt
           test -f frontend/public/sitemap.xml
           grep -q '/event/' frontend/public/sitemap.xml
           test -d frontend/dist/event || test -d frontend/dist/dog
           test -d frontend/dist/shows/exhibition
           test -d frontend/dist/shows/judges
-          grep -q 'spa-shell/index.html' frontend/dist/_redirects
+          grep -q '/\* /404.html 200' frontend/dist/_redirects
+          grep -q '/spa-shell / 301' frontend/dist/_redirects
 
       - name: Deploy Frontend to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3

@@ -123,6 +123,7 @@ describe('prerender-seo helpers', () => {
     expect(home).toContain('<link rel="canonical" href="https://coursing-stats.ru/" />')
     const neutral = buildNeutralSpaShell(home)
     expect(neutral).not.toMatch(/rel=["']canonical["']/)
+    expect(neutral).not.toContain('property="og:url"')
     expect(neutral).not.toContain('<h1>Статистика курсинга, бегов и выставок собак</h1>')
   })
 

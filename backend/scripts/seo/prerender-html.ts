@@ -193,7 +193,8 @@ export function buildNeutralSpaShell(html: string): string {
     out,
     'Coursing Stats — рейтинги и статистика собак в России: курсинг и бега борзых, рекорды Донино, выставки РКФ, профили и судьи.',
   )
-  out = replaceOrInsertMetaProperty(out, 'og:url', `${SITE_ORIGIN}/`)
+  // Do not advertise home URL on the shared SPA fallback shell.
+  out = out.replace(/<meta\s+property=["']og:url["'][^>]*>\s*/gi, '')
   out = replaceOrInsertMetaProperty(
     out,
     'og:title',
