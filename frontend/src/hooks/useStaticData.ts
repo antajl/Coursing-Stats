@@ -2,6 +2,8 @@ import { useQuery } from '@tanstack/react-query';
 import { deriveCompetingBreeds, type DogsIndexEntry } from '../lib/competingBreeds';
 import {
   getCoursingRecords,
+  getDogEvents,
+  getDogProfile,
   getJudges,
   getJudgeDetails,
   getSpeedRecords,
@@ -17,7 +19,6 @@ import {
 } from '../lib/uiFlags';
 import {
   type TopItemsResponse,
-  type DogProfileData,
 } from '../schemas/api';
 
 const STALE_MS = 5 * 60 * 1000;
@@ -143,28 +144,7 @@ export function useCoursingRecords(breed: string, limit: number, search: string,
 export function useDogProfile(dogId: string) {
   return useQuery({
     queryKey: ['dogProfile', dogId],
-    queryFn: async () => {
-      const result = await fetchStaticData<DogProfileData>(`/data/v1/indexes/dog-profiles/${dogId}.json`);
-      if (result.success && result.data?.dog) {
-        const file = result.data as DogProfileData & {
-          elo_rating?: number | null
-          elo_races?: number | null
-          elo_reliable?: boolean
-          elo_low_data?: boolean
-        }
-        return {
-          success: true,
-          data: {
-            ...file.dog,
-            elo_rating: file.elo_rating ?? null,
-            elo_races: file.elo_races ?? null,
-            elo_reliable: file.elo_reliable,
-            elo_low_data: file.elo_low_data,
-          },
-        };
-      }
-      return result;
-    },
+    queryFn: () => getDogProfile(dogId),
     enabled: !!dogId,
     staleTime: STALE_MS,
   });
@@ -173,13 +153,7 @@ export function useDogProfile(dogId: string) {
 export function useDogEvents(dogId: string) {
   return useQuery({
     queryKey: ['dogEvents', dogId],
-    queryFn: async () => {
-      const result = await fetchStaticData<DogProfileData>(`/data/v1/indexes/dog-profiles/${dogId}.json`);
-      if (result.success && result.data?.competitions) {
-        return { success: true, data: result.data.competitions };
-      }
-      return result;
-    },
+    queryFn: () => getDogEvents(dogId),
     enabled: !!dogId,
     staleTime: STALE_MS,
   });

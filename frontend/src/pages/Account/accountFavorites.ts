@@ -1,6 +1,6 @@
 import { dogNameMatchesQuery } from '../../lib/dogName'
 import { displayBreed } from '../../lib/breedMapping'
-import { fetchJson } from '../../lib/staticData/core'
+import { getDogProfileFile } from '../../lib/staticData/dogs'
 
 export type FavoriteMedalStats = {
   gold: number
@@ -110,10 +110,7 @@ export function parseFavoriteDog(
 }
 
 export async function loadFavoriteDog(id: string): Promise<FavoriteDog | null> {
-  const file = await fetchJson<{
-    dog?: Record<string, unknown>
-    competitions?: Record<string, unknown>[]
-  }>(`indexes/dog-profiles/${id}.json`)
+  const file = await getDogProfileFile(id)
   if (!file?.dog) return null
   return parseFavoriteDog(id, file.dog, file.competitions ?? [])
 }

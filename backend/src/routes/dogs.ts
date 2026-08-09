@@ -1,10 +1,25 @@
 import { Hono } from 'hono';
 import { canonicalBreed } from '../lib/breed-mapping';
 import { loadStaticDataJson } from '../../lib/local-data/static-data';
+import { cdnPackShardKey, dogProfilePackPath } from '../../lib/cdn-packs';
 
 type Env = {
   ADMIN_API_TOKEN: string;
 };
+
+async function loadDogProfileDoc(dogId: string): Promise<{
+  dog?: Record<string, unknown>
+  competitions?: unknown[]
+} | null> {
+  const pack = await loadStaticDataJson<{ byId?: Record<string, unknown> }>(
+    dogProfilePackPath(cdnPackShardKey(dogId)),
+  )
+  const fromPack = pack?.byId?.[String(dogId)] as
+    | { dog?: Record<string, unknown>; competitions?: unknown[] }
+    | undefined
+  if (fromPack?.dog) return fromPack
+  return loadStaticDataJson(`indexes/dog-profiles/${dogId}.json`)
+}
 
 export function handleDogs(app: Hono<{ Bindings: Env }>) {
   // GET /api/dogs — список собак (для админки; до маршрута /api/dogs/:id)
@@ -31,7 +46,7 @@ export function handleDogs(app: Hono<{ Bindings: Env }>) {
   app.get('/api/dogs/:id', async (c) => {
     const dogId = c.req.param('id');
     
-    const dogProfile = await loadStaticDataJson<any>(`indexes/dog-profiles/${dogId}.json`);
+    const dogProfile = await loadDogProfileDoc(dogId);
     
     if (!dogProfile?.dog) {
       return c.json({ success: false, error: 'Dog not found' }, 404);
@@ -44,7 +59,7 @@ export function handleDogs(app: Hono<{ Bindings: Env }>) {
   app.get('/api/dogs/:id/competitions', async (c) => {
     const dogId = c.req.param('id');
     
-    const dogProfile = await loadStaticDataJson<any>(`indexes/dog-profiles/${dogId}.json`);
+    const dogProfile = await loadDogProfileDoc(dogId);
     
     if (!dogProfile?.competitions) {
       return c.json({ success: false, error: 'Dog not found' }, 404);

@@ -63,9 +63,56 @@ function resolveProfilesDir(): string {
   return ''
 }
 
-function listDogProfileFiles(dir: string): string[] {
+function listDogProfileEntries(dir: string): Array<{ id: string; profile: Parameters<typeof dogMetaFromProfile>[0] }> {
   if (!dir || !fs.existsSync(dir)) return []
-  return fs.readdirSync(dir).filter((f) => f.endsWith('.json'))
+  const out: Array<{ id: string; profile: Parameters<typeof dogMetaFromProfile>[0] }> = []
+  for (const file of fs.readdirSync(dir).filter((f) => f.endsWith('.json'))) {
+    const raw = fs.readFileSync(path.join(dir, file), 'utf8')
+    let parsed: unknown
+    try {
+      parsed = JSON.parse(raw)
+    } catch {
+      console.warn(`[prerender-seo] skip invalid JSON: ${file}`)
+      continue
+    }
+    const pack = parsed as { byId?: Record<string, Parameters<typeof dogMetaFromProfile>[0]> }
+    if (pack?.byId && typeof pack.byId === 'object') {
+      for (const [id, profile] of Object.entries(pack.byId)) {
+        out.push({ id, profile })
+      }
+      continue
+    }
+    const legacy = parsed as Parameters<typeof dogMetaFromProfile>[0]
+    const id = path.basename(file, '.json')
+    out.push({ id, profile: legacy })
+  }
+  return out
+}
+
+function prerenderCompetitionDogs(spaHtml: string, profilesDir: string): number {
+  const entries = listDogProfileEntries(profilesDir)
+  let written = 0
+  for (const { id: fileId, profile: rawProfile } of entries) {
+    let profile = rawProfile
+    const id = String(profile?.dog?.id ?? fileId)
+    if (!profile.dog) {
+      profile = { dog: { id }, competitions: profile.competitions || [] }
+    } else if (profile.dog.id == null) {
+      profile.dog.id = id
+    }
+
+    const meta = dogMetaFromProfile(profile)
+    const html = applyMetaToSpaShell(spaHtml, {
+      title: meta.title,
+      description: meta.description,
+      canonicalUrl: `${SITE_ORIGIN}/dog/${id}`,
+      bodyHtml: buildDogBodyHtml(meta.body),
+      jsonLd: breadcrumbJsonLd(meta.breadcrumbs),
+    })
+    writeHtml(path.join(DIST, 'dog', id, 'index.html'), html)
+    written++
+  }
+  return written
 }
 
 function hubOutPath(hubPath: string): string {
@@ -86,39 +133,6 @@ function prerenderHubs(spaHtml: string): number {
     writeHtml(hubOutPath(hub.path), html)
   }
   return HUB_PAGES.length
-}
-
-function prerenderCompetitionDogs(spaHtml: string, profilesDir: string): number {
-  const files = listDogProfileFiles(profilesDir)
-  let written = 0
-  for (const file of files) {
-    const id = path.basename(file, '.json')
-    const raw = fs.readFileSync(path.join(profilesDir, file), 'utf8')
-    let profile: Parameters<typeof dogMetaFromProfile>[0]
-    try {
-      profile = JSON.parse(raw)
-    } catch {
-      console.warn(`[prerender-seo] skip invalid JSON: ${file}`)
-      continue
-    }
-    if (!profile.dog) {
-      profile = { dog: { id }, competitions: profile.competitions || [] }
-    } else if (profile.dog.id == null) {
-      profile.dog.id = id
-    }
-
-    const meta = dogMetaFromProfile(profile)
-    const html = applyMetaToSpaShell(spaHtml, {
-      title: meta.title,
-      description: meta.description,
-      canonicalUrl: `${SITE_ORIGIN}/dog/${id}`,
-      bodyHtml: buildDogBodyHtml(meta.body),
-      jsonLd: breadcrumbJsonLd(meta.breadcrumbs),
-    })
-    writeHtml(path.join(DIST, 'dog', id, 'index.html'), html)
-    written++
-  }
-  return written
 }
 
 type ShowRankingEntry = {

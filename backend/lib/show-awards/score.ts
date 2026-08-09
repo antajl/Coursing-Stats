@@ -10,6 +10,7 @@ import {
   type ShowTitleCounts,
 } from './order'
 import { matchShowAwardToken, splitShowTitleTokens } from './match'
+import { cdnPackShardKey } from '../cdn-packs'
 
 /** Парсинг колонки «титул» протокола; CACIB/JCAC/R.CAC не дают лишний CAC. */
 export function parseShowTitles(title: string): ShowTitleCounts {
@@ -109,21 +110,7 @@ export function compactShowTitles(titles: ShowTitleCounts): Partial<ShowTitleCou
 
 /** Шард файла подробностей: shows/indexes/dog-details/{shard}.json */
 export function showDogDetailShard(id: string | number, shardCount = 256): string {
-  // Handle numeric IDs (competition_dog_id, FNV-1a stable IDs)
-  const numId = Number(id)
-  if (!isNaN(numId) && numId > 0) {
-    return String(Math.abs(numId) % shardCount).padStart(3, '0')
-  }
-
-  // Handle hex IDs (SHA256-based IDs for collision fixes)
-  // Use simple hash of the string to determine shard
-  const strId = String(id)
-  let hash = 0
-  for (let i = 0; i < strId.length; i++) {
-    hash = ((hash << 5) - hash) + strId.charCodeAt(i)
-    hash |= 0 // Convert to 32-bit integer
-  }
-  return String(Math.abs(hash) % shardCount).padStart(3, '0')
+  return cdnPackShardKey(id, shardCount)
 }
 
 /** Ключи, сгруппированные по категории (prestige → certificate → diploma). */

@@ -57,7 +57,7 @@
 - [x] **Step 1:** Smoke Turso (прод или `.env`): 3–5 exhibition id открываются
 - [x] **Step 2:** Implement exclude + allowlist copy
 - [x] **Step 3:** После copy: `exhibitions/` в public содержит только index-referenced files (~91), не ~5k (`87` present + `4` missing)
-- [ ] **Step 4:** Deploy + ручная проверка `/shows` calendar, ranking, 2 LC, 2 RKF exhibition, `/dog/:id`, `/event/:id`
+- [x] **Step 4:** Deploy + смоук: сайт снова 200 после фикса spa-shell loop (`a7d8ddfb`); rankings/LC/event/dog-profile OK; by-id на apex может ещё висеть в CDN-кэше — purge в CF Dashboard
 
 ---
 
@@ -75,10 +75,10 @@
 
 **Files:** build-derived dog-profiles writer + `frontend` loaders (`dogs.ts`, hooks)
 
-**Design:** шарды по `id % N` или prefix; **не** смешивать с show-dogs. Один запрос = один пак или точечный файл — выбрать после дизайна API.
+**Design:** 256 packs `pack-{000-255}.json` via `cdnPackShardKey`; **не** смешивать с show-dogs.
 
-- [ ] Spec shard layout + migrate reader
-- [ ] Keep backward-compatible fallback during rollout
+- [x] Spec shard layout + migrate reader
+- [x] Keep backward-compatible fallback during rollout
 
 ---
 
@@ -86,15 +86,19 @@
 
 Отдельная категория (судьи выставок ≠ спорт). Не смешивать с dog-profiles.
 
+- [x] Writers (`build-show-indexes`, merge) + reader + one-shot pack script
+
 ---
 
-### Task 6 (Phase B, optional): Укрупнить `shows/indexes/search` только если p50 мелкие и UX не страдает
+### Task 6 (Phase B, optional): Укрупнить `shows/indexes/search`
+
+**Вердикт:** не трогаем. Уже ~1002 шарда, медиана ~19 KB; после A+B слотов достаточно. Укрупнение только если снова упрёмся в 20k.
 
 ---
 
 ### Task 7 (Phase C): ADR/sheet «Data layers»
 
-Явная таблица: канон git vs Turso vs CDN packs. Без обязательного «всё в SQL».
+- [x] ADR-014 + sheet `02-data-pipeline` updated
 
 ---
 

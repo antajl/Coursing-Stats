@@ -19,6 +19,7 @@ import {
   type ShowGradeKey,
 } from '../lib/show-grades'
 import { stableShowProfileId, SHOW_PROFILE_ID_BASE } from '../lib/show-dog-profile-id'
+import { cdnPackShardKey } from '../lib/cdn-packs'
 import {
   normalizeShowJudgeDisplayName,
   parseShowJudgeNameParts,
@@ -558,11 +559,25 @@ async function main() {
   } else {
     fs.mkdirSync(judgeDetailsDir, { recursive: true })
   }
+  const judgePacks = new Map<string, Record<string, unknown>>()
   for (const detail of judgeDetails) {
     const fileKey = showJudgeDetailFileKey(detail.id)
-    fs.writeFileSync(path.join(judgeDetailsDir, `${fileKey}.json`), JSON.stringify(detail))
+    const shard = cdnPackShardKey(fileKey)
+    const bucket = judgePacks.get(shard) ?? {}
+    bucket[fileKey] = detail
+    judgePacks.set(shard, bucket)
   }
-  console.log(`  Saved judge-details/ (${judgeDetails.length} files)`)
+  for (const [shard, byKey] of [...judgePacks.entries()].sort((a, b) => a[0].localeCompare(b[0]))) {
+    fs.writeFileSync(
+      path.join(judgeDetailsDir, `pack-${shard}.json`),
+      JSON.stringify({
+        schema: 'coursing-stats/show-judge-detail-pack-v1',
+        shard,
+        byKey,
+      }),
+    )
+  }
+  console.log(`  Saved judge-details/pack-*.json (${judgePacks.size} packs, ${judgeDetails.length} judges)`)
 
   // Build hero stats
   let appearances = 0
