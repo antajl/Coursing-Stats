@@ -207,7 +207,7 @@ export function buildDogBodyHtml(dog: DogProfileInput): string {
   const comps = (dog.recentCompetitions || []).filter(Boolean).slice(0, 5)
   const compsBlock =
     comps.length > 0
-      ? `<h2>Недавние старты</h2><ul>${comps.map((t) => `<li>${escapeHtml(t)}</li>`).join('')}</ul>`
+      ? `<h2>Недавние участия</h2><ul>${comps.map((t) => `<li>${escapeHtml(t)}</li>`).join('')}</ul>`
       : ''
 
   const links = [
@@ -247,10 +247,10 @@ export function dogMetaFromProfile(profile: {
   const cs = dog.coursing_stats
   const rs = dog.racing_stats
   if (cs && (cs.total_starts || 0) > 0) {
-    facts.push(`Курсинг: ${cs.total_starts} стартов`)
+    facts.push(`Курсинг: ${cs.total_starts} участий`)
   }
   if (rs && (rs.total_starts || 0) > 0) {
-    facts.push(`Бега: ${rs.total_starts} стартов`)
+    facts.push(`Бега: ${rs.total_starts} участий`)
   }
   const medals: string[] = []
   const gold = (cs?.gold || 0) + (rs?.gold || 0)

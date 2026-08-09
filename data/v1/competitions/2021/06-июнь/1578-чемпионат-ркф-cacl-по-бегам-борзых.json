@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/competition-v1",
-  "exported_at": "2026-08-08T20:12:46.253Z",
-  "source": "archive-full-results-legacy",
+  "exported_at": "2026-08-08T23:12:39.320Z",
+  "source": "reparse-legacy-racing",
   "event_id": 1578,
   "event": {
     "id": 1578,
@@ -20,7 +20,7 @@
     "results_url": "https://web.archive.org/web/20220419105248/http://procoursing.ru/Full_Results_2021-06-19.html",
     "confirmed": 0,
     "last_modified": null,
-    "scraped_at": "2026-08-08T20:12:46.253Z",
+    "scraped_at": "2026-08-08T23:12:39.320Z",
     "telegram_url": null,
     "full_title": null,
     "event_date": "2021-06-19",
@@ -29,65 +29,40 @@
     "track_schemes": [],
     "admin_verified_at": null
   },
-  "result_count": 63,
+  "result_count": 55,
   "results": [
     {
-      "id": 1,
+      "id": 24665,
       "event_id": 1578,
       "dog_id": 43,
       "breed_class": "Басенджи - Стандартный - Кобель",
       "catalog_no": 3,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "",
-      "status": null,
+      "placement": 1,
+      "total_score": 31.9,
+      "judge_count": 0,
+      "qualification": "Чемпион РКФ",
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  2,
-                  2,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 4
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 2,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 32.12,
+            "speed_kmh": 39.228
           },
           {
-            "heat_number": 2,
-            "bib_number": 33,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  2,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 2
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 33,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 31.9,
+            "speed_kmh": 39.498
           }
-        ]
+        ],
+        "grand_total": 31.9,
+        "normalized_score": 31.9,
+        "format": "racing"
       },
       "raw_text": "1 | 3 | Басенджи | Стандартный | Кобель | SUNRISE LEUR ADAM | 350 | 2 | 2 | 32,12 с10,90 м/с39,228 км/ч |  |  |  | 33 | 2 | 31,90 с10,97 м/с39,498 км/ч | CC | Чемпион РКФ",
       "judges": null,
@@ -104,62 +79,37 @@
       }
     },
     {
-      "id": 2,
+      "id": 24666,
       "event_id": 1578,
       "dog_id": 9240,
       "breed_class": "Басенджи - Стандартный - Кобель",
       "catalog_no": 2,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "",
-      "status": null,
+      "placement": 2,
+      "total_score": 31.23,
+      "judge_count": 0,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  2,
-                  1,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 3
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 2,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 31.23,
+            "speed_kmh": 40.346
           },
           {
-            "heat_number": 2,
-            "bib_number": 33,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  1,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 1
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 33,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 32.39,
+            "speed_kmh": 38.901
           }
-        ]
+        ],
+        "grand_total": 31.23,
+        "normalized_score": 31.23,
+        "format": "racing"
       },
       "raw_text": "2 | 2 | Басенджи | Стандартный | Кобель | KILIMANJARO KAISER | 350 | 2 | 1 | 31,23 с11,21 м/с40,346 км/ч |  |  |  | 33 | 1 | 32,39 с10,81 м/с38,901 км/ч | CC | CACL",
       "judges": null,
@@ -176,62 +126,37 @@
       }
     },
     {
-      "id": 3,
+      "id": 24667,
       "event_id": 1578,
       "dog_id": 5683,
       "breed_class": "Басенджи - Стандартный - Кобель",
       "catalog_no": 1,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 3,
+      "total_score": 32.29,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
             "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  1,
-                  2,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 3
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 32.29,
+            "speed_kmh": 39.021
           },
           {
-            "heat_number": 2,
-            "bib_number": 33,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  4,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 4
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 33,
+            "bib_number": 4,
+            "bib_color": "black",
+            "time": 32.48,
+            "speed_kmh": 38.793
           }
-        ]
+        ],
+        "grand_total": 32.29,
+        "normalized_score": 32.29,
+        "format": "racing"
       },
       "raw_text": "3 | 1 | Басенджи | Стандартный | Кобель | ХАУС ЗЭ РЭЙНБОУ УЗОЧИ ЗИКИМО | 350 | 1 | 2 | 32,29 с10,84 м/с39,021 км/ч |  |  |  | 33 | 4 | 32,48 с10,78 м/с38,793 км/ч | CC | ",
       "judges": null,
@@ -248,62 +173,135 @@
       }
     },
     {
-      "id": 4,
+      "id": 24668,
       "event_id": 1578,
-      "dog_id": 10416,
-      "breed_class": "Басенджи - Стандартный - Сука",
-      "catalog_no": 12,
+      "dog_id": 10349,
+      "breed_class": "Басенджи - Стандартный - Кобель",
+      "catalog_no": 5,
       "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "total_score": 32.16,
+      "judge_count": 0,
       "qualification": "",
       "vc": "",
-      "status": null,
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
             "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  3,
-                  2,
-                  null,
-                  null,
-                  1
-                ],
-                "sum": 6
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 32.16,
+            "speed_kmh": 39.179
           },
           {
-            "heat_number": 2,
-            "bib_number": 41,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  1,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 1
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 33,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Дисквалификация"
           }
-        ]
+        ],
+        "grand_total": 32.16,
+        "normalized_score": 32.16,
+        "format": "racing"
+      },
+      "raw_text": " | 5 | Басенджи | Стандартный | Кобель | БЕНУА | 350 | 1 | 3 | 32,16 с10,88 м/с39,179 км/ч |  |  |  | 33 | 3 | Дисквалификация |  | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "бенуа--басенджи",
+      "dog": {
+        "id": 10349,
+        "dog_key": "бенуа--басенджи",
+        "name_lat": "БЕНУА",
+        "name_ru": "БЕНУА",
+        "breed": "БАСЕНДЖИ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 24669,
+      "event_id": 1578,
+      "dog_id": 50,
+      "breed_class": "Басенджи - Стандартный - Кобель",
+      "catalog_no": 6,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Дисквалификация"
+          }
+        ],
+        "grand_total": null,
+        "normalized_score": null,
+        "format": "racing"
+      },
+      "raw_text": " | 6 | Басенджи | Стандартный | Кобель | ИТУРИ ПАЗЗЛ ЕКСТРАОРДИНАРИ СМАРТ | 350 | 1 | 1 | Дисквалификация |  |  |  |  |  |  |  | ",
+      "judges": null,
+      "status_reason": "Дисквалификация",
+      "dog_key": "итури-паззл-екстраординари-смарт--басенджи",
+      "dog": {
+        "id": 50,
+        "dog_key": "итури-паззл-екстраординари-смарт--басенджи",
+        "name_lat": "ИТУРИ ПАЗЗЛ ЕКСТРАОРДИНАРИ СМАРТ",
+        "name_ru": "ИТУРИ ПАЗЗЛ ЕКСТРАОРДИНАРИ СМАРТ",
+        "breed": "БАСЕНДЖИ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 24670,
+      "event_id": 1578,
+      "dog_id": 10416,
+      "breed_class": "Басенджи - Стандартный - Сука",
+      "catalog_no": 12,
+      "placement": 1,
+      "total_score": 29.56,
+      "judge_count": 0,
+      "qualification": "Чемпион РКФ",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 3,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 30.04,
+            "speed_kmh": 41.944
+          },
+          {
+            "heat_number": 22,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 29.56,
+            "speed_kmh": 42.625
+          },
+          {
+            "heat_number": 41,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 29.63,
+            "speed_kmh": 42.524
+          }
+        ],
+        "grand_total": 29.56,
+        "normalized_score": 29.56,
+        "format": "racing"
       },
       "raw_text": "1 | 12 | Басенджи | Стандартный | Сука | БЭРТИ | 350 | 3 | 2 | 30,04 с11,65 м/с41,944 км/ч | 22 | 1 | 29,56 с11,84 м/с42,625 км/ч | 41 | 1 | 29,63 с11,81 м/с42,524 км/ч | CC | Чемпион РКФ",
       "judges": null,
@@ -320,62 +318,44 @@
       }
     },
     {
-      "id": 5,
+      "id": 24671,
       "event_id": 1578,
       "dog_id": 51,
       "breed_class": "Басенджи - Стандартный - Сука",
       "catalog_no": 10,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "",
-      "status": null,
+      "placement": 2,
+      "total_score": 31.78,
+      "judge_count": 0,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  4,
-                  3,
-                  null,
-                  null,
-                  2
-                ],
-                "sum": 9
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 4,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 31.78,
+            "speed_kmh": 39.648
           },
           {
-            "heat_number": 2,
-            "bib_number": 41,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  3,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 3
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 23,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 31.94,
+            "speed_kmh": 39.449
+          },
+          {
+            "heat_number": 41,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 32.02,
+            "speed_kmh": 39.35
           }
-        ]
+        ],
+        "grand_total": 31.78,
+        "normalized_score": 31.78,
+        "format": "racing"
       },
       "raw_text": "2 | 10 | Басенджи | Стандартный | Сука | SONETA STAR IZ DIVNOGO SADA | 350 | 4 | 3 | 31,78 с11,01 м/с39,648 км/ч | 23 | 2 | 31,94 с10,96 м/с39,449 км/ч | 41 | 3 | 32,02 с10,93 м/с39,350 км/ч | CC | CACL",
       "judges": null,
@@ -392,62 +372,44 @@
       }
     },
     {
-      "id": 6,
+      "id": 24672,
       "event_id": 1578,
       "dog_id": 564,
       "breed_class": "Басенджи - Стандартный - Сука",
       "catalog_no": 11,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 3,
+      "total_score": 31.34,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  3,
-                  1,
-                  null,
-                  null,
-                  1
-                ],
-                "sum": 5
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 3,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 31.34,
+            "speed_kmh": 40.204
           },
           {
-            "heat_number": 2,
-            "bib_number": 41,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  2,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 2
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 23,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 31.58,
+            "speed_kmh": 39.899
+          },
+          {
+            "heat_number": 41,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 32.16,
+            "speed_kmh": 39.179
           }
-        ]
+        ],
+        "grand_total": 31.34,
+        "normalized_score": 31.34,
+        "format": "racing"
       },
       "raw_text": "3 | 11 | Басенджи | Стандартный | Сука | SUNRISE LEUR ARISHA | 350 | 3 | 1 | 31,34 с11,17 м/с40,204 км/ч | 23 | 1 | 31,58 с11,08 м/с39,899 км/ч | 41 | 2 | 32,16 с10,88 м/с39,179 км/ч | CC | ",
       "judges": null,
@@ -464,62 +426,44 @@
       }
     },
     {
-      "id": 7,
+      "id": 24673,
       "event_id": 1578,
       "dog_id": 10441,
       "breed_class": "Басенджи - Стандартный - Сука",
       "catalog_no": 7,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 4,
+      "total_score": 32.27,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  4,
-                  2,
-                  null,
-                  null,
-                  3
-                ],
-                "sum": 9
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 4,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 32.27,
+            "speed_kmh": 39.046
           },
           {
-            "heat_number": 2,
-            "bib_number": 41,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  4,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 4
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 22,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 32.6,
+            "speed_kmh": 38.65
+          },
+          {
+            "heat_number": 41,
+            "bib_number": 4,
+            "bib_color": "black",
+            "time": 32.43,
+            "speed_kmh": 38.853
           }
-        ]
+        ],
+        "grand_total": 32.27,
+        "normalized_score": 32.27,
+        "format": "racing"
       },
       "raw_text": "4 | 7 | Басенджи | Стандартный | Сука | ИТУРИ ПАЗЗЛ ВИЛМА | 350 | 4 | 2 | 32,27 с10,85 м/с39,046 км/ч | 22 | 3 | 32,60 с10,74 м/с38,650 км/ч | 41 | 4 | 32,43 с10,79 м/с38,853 км/ч | CC | ",
       "judges": null,
@@ -536,41 +480,37 @@
       }
     },
     {
-      "id": 8,
+      "id": 24674,
       "event_id": 1578,
       "dog_id": 6048,
       "breed_class": "Басенджи - Стандартный - Сука",
       "catalog_no": 9,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 5,
+      "total_score": 32.89,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  3,
-                  3,
-                  null,
-                  null,
-                  3
-                ],
-                "sum": 9
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 3,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 33.27,
+            "speed_kmh": 37.872
+          },
+          {
+            "heat_number": 23,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 32.89,
+            "speed_kmh": 38.31
           }
-        ]
+        ],
+        "grand_total": 32.89,
+        "normalized_score": 32.89,
+        "format": "racing"
       },
       "raw_text": "5 | 9 | Басенджи | Стандартный | Сука | SHAMIKA IZ DIVNOGO SADA | 350 | 3 | 3 | 33,27 с10,52 м/с37,872 км/ч | 23 | 3 | 32,89 с10,64 м/с38,310 км/ч |  |  |  | CC | ",
       "judges": null,
@@ -587,62 +527,86 @@
       }
     },
     {
-      "id": 9,
+      "id": 24675,
+      "event_id": 1578,
+      "dog_id": 10443,
+      "breed_class": "Басенджи - Стандартный - Сука",
+      "catalog_no": 8,
+      "placement": null,
+      "total_score": 31.9,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 4,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 31.9,
+            "speed_kmh": 39.498
+          },
+          {
+            "heat_number": 22,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Дисквалификация"
+          }
+        ],
+        "grand_total": 31.9,
+        "normalized_score": 31.9,
+        "format": "racing"
+      },
+      "raw_text": " | 8 | Басенджи | Стандартный | Сука | KAYLAS LADY | 350 | 4 | 1 | 31,90 с10,97 м/с39,498 км/ч | 22 | 2 | Дисквалификация |  |  |  |  | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "kaylas-lady--басенджи",
+      "dog": {
+        "id": 10443,
+        "dog_key": "kaylas-lady--басенджи",
+        "name_lat": "KAYLAS LADY",
+        "name_ru": "KAYLAS LADY",
+        "breed": "БАСЕНДЖИ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 24676,
       "event_id": 1578,
       "dog_id": 182,
       "breed_class": "Родезийский риджбек - Стандартный - Микс",
       "catalog_no": 17,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "",
-      "status": null,
+      "placement": 1,
+      "total_score": 27.28,
+      "judge_count": 0,
+      "qualification": "Чемпион РКФ",
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  19,
-                  3,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 22
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 19,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 27.77,
+            "speed_kmh": 45.373
           },
           {
-            "heat_number": 2,
-            "bib_number": 38,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  1,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 1
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 38,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 27.28,
+            "speed_kmh": 46.188
           }
-        ]
+        ],
+        "grand_total": 27.28,
+        "normalized_score": 27.28,
+        "format": "racing"
       },
       "raw_text": "1 | 17 | Родезийский риджбек | Стандартный | Сука | ARIES KHAN PHREIA PASIPHAE | 350 | 19 | 3 | 27,77 с12,60 м/с45,373 км/ч |  |  |  | 38 | 1 | 27,28 с12,83 м/с46,188 км/ч | CC | Чемпион РКФ",
       "judges": null,
@@ -659,62 +623,135 @@
       }
     },
     {
-      "id": 10,
+      "id": 24677,
+      "event_id": 1578,
+      "dog_id": 9255,
+      "breed_class": "Родезийский риджбек - Стандартный - Микс",
+      "catalog_no": 16,
+      "placement": null,
+      "total_score": 30.5,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 19,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 30.5,
+            "speed_kmh": 41.311
+          },
+          {
+            "heat_number": 38,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Сошёл"
+          }
+        ],
+        "grand_total": 30.5,
+        "normalized_score": 30.5,
+        "format": "racing"
+      },
+      "raw_text": " | 16 | Родезийский риджбек | Стандартный | Сука | MAENDELEO HOLY LARA CROFT ARIES KHAN | 350 | 19 | 2 | 30,50 с11,48 м/с41,311 км/ч |  |  |  | 38 | 2 | Сошёл |  | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "maendeleo-holy-lara-croft-aries-khan--родезиискии-риджбек",
+      "dog": {
+        "id": 9255,
+        "dog_key": "maendeleo-holy-lara-croft-aries-khan--родезиискии-риджбек",
+        "name_lat": "MAENDELEO HOLY LARA CROFT ARIES KHAN",
+        "name_ru": "MAENDELEO HOLY LARA CROFT ARIES KHAN",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 24678,
+      "event_id": 1578,
+      "dog_id": 9248,
+      "breed_class": "Родезийский риджбек - Стандартный - Микс",
+      "catalog_no": 15,
+      "placement": null,
+      "total_score": 32.81,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 19,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 32.81,
+            "speed_kmh": 38.403
+          },
+          {
+            "heat_number": 38,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Дисквалификация"
+          }
+        ],
+        "grand_total": 32.81,
+        "normalized_score": 32.81,
+        "format": "racing"
+      },
+      "raw_text": " | 15 | Родезийский риджбек | Стандартный | Кобель | ARIES KHAN MARLON BRANDO | 350 | 19 | 1 | 32,81 с10,67 м/с38,403 км/ч |  |  |  | 38 | 3 | Дисквалификация |  | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "aries-khan-marlon-brando--родезиискии-риджбек",
+      "dog": {
+        "id": 9248,
+        "dog_key": "aries-khan-marlon-brando--родезиискии-риджбек",
+        "name_lat": "ARIES KHAN MARLON BRANDO",
+        "name_ru": "ARIES KHAN MARLON BRANDO",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 24679,
       "event_id": 1578,
       "dog_id": 5962,
       "breed_class": "Родезийский риджбек - Юниоры - Микс",
       "catalog_no": 18,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
+      "placement": 1,
+      "total_score": 26.98,
+      "judge_count": 0,
+      "qualification": "Лучший юниор",
       "vc": "",
-      "status": null,
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  1,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 1
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 21,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 27.21,
+            "speed_kmh": 46.307
           },
           {
-            "heat_number": 2,
-            "bib_number": 40,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  1,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 1
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 40,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 26.98,
+            "speed_kmh": 46.701
           }
-        ]
+        ],
+        "grand_total": 26.98,
+        "normalized_score": 26.98,
+        "format": "racing"
       },
       "raw_text": "1 | 18 | Родезийский риджбек | Юниоры | Сука | АРИЕС ХАН РИВЬЕРА АЛЬ РИША САНГРИЭЛЬ | 350 | 21 | 1 | 27,21 с12,86 м/с46,307 км/ч |  |  |  | 40 | 1 | 26,98 с12,97 м/с46,701 км/ч |  | Лучший юниор",
       "judges": null,
@@ -731,62 +768,37 @@
       }
     },
     {
-      "id": 11,
+      "id": 24680,
       "event_id": 1578,
       "dog_id": 10482,
       "breed_class": "Родезийский риджбек - Юниоры - Микс",
       "catalog_no": 19,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 2,
+      "total_score": 28.3,
+      "judge_count": 0,
       "qualification": "",
       "vc": "",
-      "status": null,
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  2,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 2
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 21,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 28.3,
+            "speed_kmh": 44.523
           },
           {
-            "heat_number": 2,
-            "bib_number": 40,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  2,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 2
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 40,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 28.35,
+            "speed_kmh": 44.444
           }
-        ]
+        ],
+        "grand_total": 28.3,
+        "normalized_score": 28.3,
+        "format": "racing"
       },
       "raw_text": "2 | 19 | Родезийский риджбек | Юниоры | Кобель | АРИЕС ХАН РЕГУЛУС РЭДКЛИФФ | 350 | 21 | 2 | 28,30 с12,37 м/с44,523 км/ч |  |  |  | 40 | 2 | 28,35 с12,35 м/с44,444 км/ч |  | ",
       "judges": null,
@@ -803,62 +815,37 @@
       }
     },
     {
-      "id": 12,
+      "id": 24681,
       "event_id": 1578,
       "dog_id": 9871,
       "breed_class": "Уиппет - Ветераны - Микс",
       "catalog_no": 68,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "",
-      "status": null,
+      "placement": 1,
+      "total_score": 25.7,
+      "judge_count": 0,
+      "qualification": "Лучший ветеран",
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  16,
-                  1,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 17
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 16,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 25.83,
+            "speed_kmh": 48.78
           },
           {
-            "heat_number": 2,
-            "bib_number": 35,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  1,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 1
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 35,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 25.7,
+            "speed_kmh": 49.027
           }
-        ]
+        ],
+        "grand_total": 25.7,
+        "normalized_score": 25.7,
+        "format": "racing"
       },
       "raw_text": "1 | 68 | Уиппет | Ветераны | Сука | АРЛЕТТ ФАЕР-ШОТ | 350 | 16 | 1 | 25,83 с13,55 м/с48,780 км/ч |  |  |  | 35 | 1 | 25,70 с13,62 м/с49,027 км/ч | CC | Лучший ветеран",
       "judges": null,
@@ -875,62 +862,44 @@
       }
     },
     {
-      "id": 13,
+      "id": 24682,
       "event_id": 1578,
       "dog_id": 78,
       "breed_class": "Уиппет - Стандартный - Кобель",
       "catalog_no": 24,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "",
-      "status": null,
+      "placement": 1,
+      "total_score": 23.63,
+      "judge_count": 0,
+      "qualification": "Чемпион РКФ",
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  10,
-                  3,
-                  null,
-                  null,
-                  1
-                ],
-                "sum": 14
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 10,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 24.24,
+            "speed_kmh": 51.98
           },
           {
-            "heat_number": 2,
-            "bib_number": 43,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  1,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 1
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 29,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 23.63,
+            "speed_kmh": 53.322
+          },
+          {
+            "heat_number": 43,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 23.81,
+            "speed_kmh": 52.919
           }
-        ]
+        ],
+        "grand_total": 23.63,
+        "normalized_score": 23.63,
+        "format": "racing"
       },
       "raw_text": "1 | 24 | Уиппет | Стандартный | Кобель | GUY | 350 | 10 | 3 | 24,24 с14,44 м/с51,980 км/ч | 29 | 1 | 23,63 с14,81 м/с53,322 км/ч | 43 | 1 | 23,81 с14,70 м/с52,919 км/ч | CC | Чемпион РКФ",
       "judges": null,
@@ -947,62 +916,44 @@
       }
     },
     {
-      "id": 14,
+      "id": 24683,
       "event_id": 1578,
       "dog_id": 10319,
       "breed_class": "Уиппет - Стандартный - Кобель",
       "catalog_no": 34,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "",
-      "status": null,
+      "placement": 2,
+      "total_score": 23.88,
+      "judge_count": 0,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  10,
-                  1,
-                  null,
-                  null,
-                  1
-                ],
-                "sum": 12
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 10,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 23.96,
+            "speed_kmh": 52.588
           },
           {
-            "heat_number": 2,
-            "bib_number": 43,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  2,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 2
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 27,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 23.88,
+            "speed_kmh": 52.764
+          },
+          {
+            "heat_number": 43,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 23.97,
+            "speed_kmh": 52.566
           }
-        ]
+        ],
+        "grand_total": 23.88,
+        "normalized_score": 23.88,
+        "format": "racing"
       },
       "raw_text": "2 | 34 | Уиппет | Стандартный | Кобель | STRONG STOAT | 350 | 10 | 1 | 23,96 с14,61 м/с52,588 км/ч | 27 | 1 | 23,88 с14,66 м/с52,764 км/ч | 43 | 2 | 23,97 с14,60 м/с52,566 км/ч | CC | CACL",
       "judges": null,
@@ -1019,62 +970,44 @@
       }
     },
     {
-      "id": 15,
+      "id": 24684,
       "event_id": 1578,
       "dog_id": 10321,
       "breed_class": "Уиппет - Стандартный - Кобель",
       "catalog_no": 26,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 3,
+      "total_score": 24.06,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  9,
-                  3,
-                  null,
-                  null,
-                  2
-                ],
-                "sum": 14
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 9,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 24.28,
+            "speed_kmh": 51.895
           },
           {
-            "heat_number": 2,
-            "bib_number": 43,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  4,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 4
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 29,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 24.06,
+            "speed_kmh": 52.369
+          },
+          {
+            "heat_number": 43,
+            "bib_number": 4,
+            "bib_color": "black",
+            "time": 24.5,
+            "speed_kmh": 51.429
           }
-        ]
+        ],
+        "grand_total": 24.06,
+        "normalized_score": 24.06,
+        "format": "racing"
       },
       "raw_text": "3 | 26 | Уиппет | Стандартный | Кобель | KULIKOVO POLE VINTAGE | 350 | 9 | 3 | 24,28 с14,42 м/с51,895 км/ч | 29 | 2 | 24,06 с14,55 м/с52,369 км/ч | 43 | 4 | 24,50 с14,29 м/с51,429 км/ч | CC | ",
       "judges": null,
@@ -1091,62 +1024,44 @@
       }
     },
     {
-      "id": 16,
+      "id": 24685,
       "event_id": 1578,
       "dog_id": 573,
       "breed_class": "Уиппет - Стандартный - Кобель",
       "catalog_no": 28,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 4,
+      "total_score": 23.99,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  9,
-                  2,
-                  null,
-                  null,
-                  1
-                ],
-                "sum": 12
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 9,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 24.07,
+            "speed_kmh": 52.347
           },
           {
-            "heat_number": 2,
-            "bib_number": 43,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  3,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 3
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 28,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 23.99,
+            "speed_kmh": 52.522
+          },
+          {
+            "heat_number": 43,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 27.31,
+            "speed_kmh": 46.137
           }
-        ]
+        ],
+        "grand_total": 23.99,
+        "normalized_score": 23.99,
+        "format": "racing"
       },
       "raw_text": "4 | 28 | Уиппет | Стандартный | Кобель | LIFT ME UP | 350 | 9 | 2 | 24,07 с14,54 м/с52,347 км/ч | 28 | 1 | 23,99 с14,59 м/с52,522 км/ч | 43 | 3 | 27,31 с12,82 м/с46,137 км/ч | CC | ",
       "judges": null,
@@ -1163,41 +1078,37 @@
       }
     },
     {
-      "id": 17,
+      "id": 24686,
       "event_id": 1578,
       "dog_id": 9336,
       "breed_class": "Уиппет - Стандартный - Кобель",
       "catalog_no": 23,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 5,
+      "total_score": 24.18,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  11,
-                  1,
-                  null,
-                  null,
-                  2
-                ],
-                "sum": 14
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 11,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 24.5,
+            "speed_kmh": 51.429
+          },
+          {
+            "heat_number": 27,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 24.18,
+            "speed_kmh": 52.109
           }
-        ]
+        ],
+        "grand_total": 24.18,
+        "normalized_score": 24.18,
+        "format": "racing"
       },
       "raw_text": "5 | 23 | Уиппет | Стандартный | Кобель | GORDEY | 350 | 11 | 1 | 24,50 с14,29 м/с51,429 км/ч | 27 | 2 | 24,18 с14,47 м/с52,109 км/ч |  |  |  | CC | ",
       "judges": null,
@@ -1214,41 +1125,37 @@
       }
     },
     {
-      "id": 18,
+      "id": 24687,
       "event_id": 1578,
       "dog_id": 10454,
       "breed_class": "Уиппет - Стандартный - Кобель",
       "catalog_no": 25,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 6,
+      "total_score": 24.27,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  11,
-                  2,
-                  null,
-                  null,
-                  3
-                ],
-                "sum": 16
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 11,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 24.83,
+            "speed_kmh": 50.745
+          },
+          {
+            "heat_number": 27,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 24.27,
+            "speed_kmh": 51.916
           }
-        ]
+        ],
+        "grand_total": 24.27,
+        "normalized_score": 24.27,
+        "format": "racing"
       },
       "raw_text": "6 | 25 | Уиппет | Стандартный | Кобель | КУЛИКОВО ПОЛЕ ДАНТЕ | 350 | 11 | 2 | 24,83 с14,10 м/с50,745 км/ч | 27 | 3 | 24,27 с14,42 м/с51,916 км/ч |  |  |  | CC | ",
       "judges": null,
@@ -1265,41 +1172,37 @@
       }
     },
     {
-      "id": 19,
+      "id": 24688,
       "event_id": 1578,
       "dog_id": 9456,
       "breed_class": "Уиппет - Стандартный - Кобель",
       "catalog_no": 33,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 7,
+      "total_score": 24.43,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  10,
-                  2,
-                  null,
-                  null,
-                  2
-                ],
-                "sum": 14
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 10,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 24.46,
+            "speed_kmh": 51.513
+          },
+          {
+            "heat_number": 28,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 24.43,
+            "speed_kmh": 51.576
           }
-        ]
+        ],
+        "grand_total": 24.43,
+        "normalized_score": 24.43,
+        "format": "racing"
       },
       "raw_text": "7 | 33 | Уиппет | Стандартный | Кобель | STEEL SWIFT | 350 | 10 | 2 | 24,46 с14,31 м/с51,513 км/ч | 28 | 2 | 24,43 с14,33 м/с51,576 км/ч |  |  |  | CC | ",
       "judges": null,
@@ -1316,41 +1219,37 @@
       }
     },
     {
-      "id": 20,
+      "id": 24689,
       "event_id": 1578,
       "dog_id": 10187,
       "breed_class": "Уиппет - Стандартный - Кобель",
       "catalog_no": 21,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 8,
+      "total_score": 24.78,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  9,
-                  1,
-                  null,
-                  null,
-                  3
-                ],
-                "sum": 13
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 9,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 25.13,
+            "speed_kmh": 50.139
+          },
+          {
+            "heat_number": 28,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 24.78,
+            "speed_kmh": 50.847
           }
-        ]
+        ],
+        "grand_total": 24.78,
+        "normalized_score": 24.78,
+        "format": "racing"
       },
       "raw_text": "8 | 21 | Уиппет | Стандартный | Кобель | BRILLIANT FLASH | 350 | 9 | 1 | 25,13 с13,93 м/с50,139 км/ч | 28 | 3 | 24,78 с14,12 м/с50,847 км/ч |  |  |  | CC | ",
       "judges": null,
@@ -1367,41 +1266,37 @@
       }
     },
     {
-      "id": 21,
+      "id": 24690,
       "event_id": 1578,
       "dog_id": 10282,
       "breed_class": "Уиппет - Стандартный - Кобель",
       "catalog_no": 31,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 9,
+      "total_score": 25.07,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  11,
-                  3,
-                  null,
-                  null,
-                  3
-                ],
-                "sum": 17
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 11,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 25.17,
+            "speed_kmh": 50.06
+          },
+          {
+            "heat_number": 29,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 25.07,
+            "speed_kmh": 50.259
           }
-        ]
+        ],
+        "grand_total": 25.07,
+        "normalized_score": 25.07,
+        "format": "racing"
       },
       "raw_text": "9 | 31 | Уиппет | Стандартный | Кобель | STANGERS LAND BARST | 350 | 11 | 3 | 25,17 с13,91 м/с50,060 км/ч | 29 | 3 | 25,07 с13,96 м/с50,259 км/ч |  |  |  | CC | ",
       "judges": null,
@@ -1418,62 +1313,44 @@
       }
     },
     {
-      "id": 22,
+      "id": 24691,
       "event_id": 1578,
       "dog_id": 10425,
       "breed_class": "Уиппет - Стандартный - Сука",
       "catalog_no": 40,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "",
-      "status": null,
+      "placement": 1,
+      "total_score": 23.08,
+      "judge_count": 0,
+      "qualification": "Чемпион РКФ",
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  12,
-                  3,
-                  null,
-                  null,
-                  1
-                ],
-                "sum": 16
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 12,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 23.28,
+            "speed_kmh": 54.124
           },
           {
-            "heat_number": 2,
-            "bib_number": 44,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  1,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 1
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 30,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 23.13,
+            "speed_kmh": 54.475
+          },
+          {
+            "heat_number": 44,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 23.08,
+            "speed_kmh": 54.593
           }
-        ]
+        ],
+        "grand_total": 23.08,
+        "normalized_score": 23.08,
+        "format": "racing"
       },
       "raw_text": "1 | 40 | Уиппет | Стандартный | Сука | PALLADA ASTRUM | 350 | 12 | 3 | 23,28 с15,03 м/с54,124 км/ч | 30 | 1 | 23,13 с15,13 м/с54,475 км/ч | 44 | 1 | 23,08 с15,16 м/с54,593 км/ч | CC | Чемпион РКФ",
       "judges": null,
@@ -1490,62 +1367,44 @@
       }
     },
     {
-      "id": 23,
+      "id": 24692,
       "event_id": 1578,
       "dog_id": 10433,
       "breed_class": "Уиппет - Стандартный - Сука",
       "catalog_no": 41,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "",
-      "status": null,
+      "placement": 2,
+      "total_score": 23.31,
+      "judge_count": 0,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  13,
-                  1,
-                  null,
-                  null,
-                  1
-                ],
-                "sum": 15
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 13,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 23.51,
+            "speed_kmh": 53.594
           },
           {
-            "heat_number": 2,
-            "bib_number": 44,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  2,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 2
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 31,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 23.31,
+            "speed_kmh": 54.054
+          },
+          {
+            "heat_number": 44,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 23.39,
+            "speed_kmh": 53.869
           }
-        ]
+        ],
+        "grand_total": 23.31,
+        "normalized_score": 23.31,
+        "format": "racing"
       },
       "raw_text": "2 | 41 | Уиппет | Стандартный | Сука | PRIMA POLARIS | 350 | 13 | 1 | 23,51 с14,89 м/с53,594 км/ч | 31 | 1 | 23,31 с15,02 м/с54,054 км/ч | 44 | 2 | 23,39 с14,96 м/с53,869 км/ч | CC | CACL",
       "judges": null,
@@ -1562,62 +1421,44 @@
       }
     },
     {
-      "id": 24,
+      "id": 24693,
       "event_id": 1578,
       "dog_id": 85,
       "breed_class": "Уиппет - Стандартный - Сука",
       "catalog_no": 46,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 3,
+      "total_score": 23.72,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  12,
-                  1,
-                  null,
-                  null,
-                  1
-                ],
-                "sum": 14
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 12,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 23.72,
+            "speed_kmh": 53.12
           },
           {
-            "heat_number": 2,
-            "bib_number": 44,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  3,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 3
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 32,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 23.79,
+            "speed_kmh": 52.963
+          },
+          {
+            "heat_number": 44,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 23.74,
+            "speed_kmh": 53.075
           }
-        ]
+        ],
+        "grand_total": 23.72,
+        "normalized_score": 23.72,
+        "format": "racing"
       },
       "raw_text": "3 | 46 | Уиппет | Стандартный | Сука | STANGERS LAND BRATISLAVA | 350 | 12 | 1 | 23,72 с14,76 м/с53,120 км/ч | 32 | 1 | 23,79 с14,71 м/с52,963 км/ч | 44 | 3 | 23,74 с14,74 м/с53,075 км/ч | CC | ",
       "judges": null,
@@ -1634,62 +1475,44 @@
       }
     },
     {
-      "id": 25,
+      "id": 24694,
       "event_id": 1578,
       "dog_id": 10324,
       "breed_class": "Уиппет - Стандартный - Сука",
       "catalog_no": 44,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 4,
+      "total_score": 23.74,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  13,
-                  2,
-                  null,
-                  null,
-                  2
-                ],
-                "sum": 17
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 13,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 23.74,
+            "speed_kmh": 53.075
           },
           {
-            "heat_number": 2,
-            "bib_number": 44,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  4,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 4
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 32,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 23.92,
+            "speed_kmh": 52.676
+          },
+          {
+            "heat_number": 44,
+            "bib_number": 4,
+            "bib_color": "black",
+            "time": 24.25,
+            "speed_kmh": 51.959
           }
-        ]
+        ],
+        "grand_total": 23.74,
+        "normalized_score": 23.74,
+        "format": "racing"
       },
       "raw_text": "4 | 44 | Уиппет | Стандартный | Сука | SNOW SWALLOW | 350 | 13 | 2 | 23,74 с14,74 м/с53,075 км/ч | 32 | 2 | 23,92 с14,63 м/с52,676 км/ч | 44 | 4 | 24,25 с14,43 м/с51,959 км/ч | CC | ",
       "judges": null,
@@ -1706,41 +1529,37 @@
       }
     },
     {
-      "id": 26,
+      "id": 24695,
       "event_id": 1578,
       "dog_id": 10426,
       "breed_class": "Уиппет - Стандартный - Сука",
       "catalog_no": 42,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 5,
+      "total_score": 23.91,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  14,
-                  2,
-                  null,
-                  null,
-                  2
-                ],
-                "sum": 18
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 14,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 23.94,
+            "speed_kmh": 52.632
+          },
+          {
+            "heat_number": 31,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 23.91,
+            "speed_kmh": 52.698
           }
-        ]
+        ],
+        "grand_total": 23.91,
+        "normalized_score": 23.91,
+        "format": "racing"
       },
       "raw_text": "5 | 42 | Уиппет | Стандартный | Сука | RUNNING WAVE | 350 | 14 | 2 | 23,94 с14,62 м/с52,632 км/ч | 31 | 2 | 23,91 с14,64 м/с52,698 км/ч |  |  |  | CC | ",
       "judges": null,
@@ -1757,41 +1576,37 @@
       }
     },
     {
-      "id": 27,
+      "id": 24696,
       "event_id": 1578,
       "dog_id": 10029,
       "breed_class": "Уиппет - Стандартный - Сука",
       "catalog_no": 36,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 6,
+      "total_score": 25.03,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  14,
-                  1,
-                  null,
-                  null,
-                  2
-                ],
-                "sum": 17
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 14,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 25.08,
+            "speed_kmh": 50.239
+          },
+          {
+            "heat_number": 30,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 25.03,
+            "speed_kmh": 50.34
           }
-        ]
+        ],
+        "grand_total": 25.03,
+        "normalized_score": 25.03,
+        "format": "racing"
       },
       "raw_text": "6 | 36 | Уиппет | Стандартный | Сука | BAFFI BLIZZARD BLACK | 350 | 14 | 1 | 25,08 с13,96 м/с50,239 км/ч | 30 | 2 | 25,03 с13,98 м/с50,340 км/ч |  |  |  | CC | ",
       "judges": null,
@@ -1808,41 +1623,37 @@
       }
     },
     {
-      "id": 28,
+      "id": 24697,
       "event_id": 1578,
       "dog_id": 10207,
       "breed_class": "Уиппет - Стандартный - Сука",
       "catalog_no": 45,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 7,
+      "total_score": 26.64,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  12,
-                  2,
-                  null,
-                  null,
-                  3
-                ],
-                "sum": 17
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 12,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 26.92,
+            "speed_kmh": 46.805
+          },
+          {
+            "heat_number": 32,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 26.64,
+            "speed_kmh": 47.297
           }
-        ]
+        ],
+        "grand_total": 26.64,
+        "normalized_score": 26.64,
+        "format": "racing"
       },
       "raw_text": "7 | 45 | Уиппет | Стандартный | Сука | STANGERS LAND ALKIONA | 350 | 12 | 2 | 26,92 с13,00 м/с46,805 км/ч | 32 | 3 | 26,64 с13,14 м/с47,297 км/ч |  |  |  | CC | ",
       "judges": null,
@@ -1859,62 +1670,133 @@
       }
     },
     {
-      "id": 29,
+      "id": 24698,
+      "event_id": 1578,
+      "dog_id": 10535,
+      "breed_class": "Уиппет - Стандартный - Сука",
+      "catalog_no": 38,
+      "placement": null,
+      "total_score": 25.75,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 14,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 25.75,
+            "speed_kmh": 48.932
+          },
+          {
+            "heat_number": 30,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Дисквалификация"
+          }
+        ],
+        "grand_total": 25.75,
+        "normalized_score": 25.75,
+        "format": "racing"
+      },
+      "raw_text": " | 38 | Уиппет | Стандартный | Сука | ФЕЙРИ ТЕЙЛ | 350 | 14 | 3 | 25,75 с13,59 м/с48,932 км/ч | 30 | 3 | Дисквалификация |  |  |  |  | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "феири-теил--уиппет",
+      "dog": {
+        "id": 10535,
+        "dog_key": "феири-теил--уиппет",
+        "name_lat": "ФЕЙРИ ТЕЙЛ",
+        "name_ru": "ФЕЙРИ ТЕЙЛ",
+        "breed": "УИППЕТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 24699,
+      "event_id": 1578,
+      "dog_id": 10427,
+      "breed_class": "Уиппет - Стандартный - Сука",
+      "catalog_no": 43,
+      "placement": null,
+      "total_score": 25.91,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 13,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 25.91,
+            "speed_kmh": 48.63
+          }
+        ],
+        "grand_total": 25.91,
+        "normalized_score": 25.91,
+        "format": "racing"
+      },
+      "raw_text": " | 43 | Уиппет | Стандартный | Сука | SILVER SABLE | 350 | 13 | 3 | 25,91 с13,51 м/с48,630 км/ч | 31 | 3 | Травма |  |  |  |  | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "silver-sable--уиппет",
+      "dog": {
+        "id": 10427,
+        "dog_key": "silver-sable--уиппет",
+        "name_lat": "SILVER SABLE",
+        "name_ru": "SILVER SABLE",
+        "breed": "УИППЕТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 24700,
       "event_id": 1578,
       "dog_id": 10483,
       "breed_class": "Уиппет - Стандартный-спринтеры - Кобель",
       "catalog_no": 53,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "",
-      "status": null,
+      "placement": 1,
+      "total_score": 23.41,
+      "judge_count": 0,
+      "qualification": "Чемпион РКФ",
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  5,
-                  3,
-                  null,
-                  null,
-                  1
-                ],
-                "sum": 9
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 5,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 23.41,
+            "speed_kmh": 53.823
           },
           {
-            "heat_number": 2,
-            "bib_number": 42,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  1,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 1
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 24,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 23.82,
+            "speed_kmh": 52.897
+          },
+          {
+            "heat_number": 42,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 23.56,
+            "speed_kmh": 53.48
           }
-        ]
+        ],
+        "grand_total": 23.41,
+        "normalized_score": 23.41,
+        "format": "racing"
       },
       "raw_text": "1 | 53 | Уиппет | Стандартный-спринтеры | Кобель | KULIKOVO POLE DAR | 350 | 5 | 3 | 23,41 с14,95 м/с53,823 км/ч | 24 | 1 | 23,82 с14,69 м/с52,897 км/ч | 42 | 1 | 23,56 с14,86 м/с53,480 км/ч | CC | Чемпион РКФ",
       "judges": null,
@@ -1931,62 +1813,44 @@
       }
     },
     {
-      "id": 30,
+      "id": 24701,
       "event_id": 1578,
       "dog_id": 488,
       "breed_class": "Уиппет - Стандартный-спринтеры - Кобель",
       "catalog_no": 58,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "",
-      "status": null,
+      "placement": 2,
+      "total_score": 23.79,
+      "judge_count": 0,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  7,
-                  1,
-                  null,
-                  null,
-                  1
-                ],
-                "sum": 9
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 7,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 23.79,
+            "speed_kmh": 52.963
           },
           {
-            "heat_number": 2,
-            "bib_number": 42,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  3,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 3
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 25,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 23.89,
+            "speed_kmh": 52.742
+          },
+          {
+            "heat_number": 42,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 24.72,
+            "speed_kmh": 50.971
           }
-        ]
+        ],
+        "grand_total": 23.79,
+        "normalized_score": 23.79,
+        "format": "racing"
       },
       "raw_text": "2 | 58 | Уиппет | Стандартный-спринтеры | Кобель | VARLOK YARKAYA MOLNIYA | 350 | 7 | 1 | 23,79 с14,71 м/с52,963 км/ч | 25 | 1 | 23,89 с14,65 м/с52,742 км/ч | 42 | 3 | 24,72 с14,16 м/с50,971 км/ч | CC | CACL",
       "judges": null,
@@ -2003,62 +1867,44 @@
       }
     },
     {
-      "id": 31,
+      "id": 24702,
       "event_id": 1578,
       "dog_id": 9287,
       "breed_class": "Уиппет - Стандартный-спринтеры - Кобель",
       "catalog_no": 57,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 3,
+      "total_score": 24.14,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  5,
-                  4,
-                  null,
-                  null,
-                  3
-                ],
-                "sum": 12
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 5,
+            "bib_number": 4,
+            "bib_color": "black",
+            "time": 24.56,
+            "speed_kmh": 51.303
           },
           {
-            "heat_number": 2,
-            "bib_number": 42,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  4,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 4
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 24,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 24.14,
+            "speed_kmh": 52.196
+          },
+          {
+            "heat_number": 42,
+            "bib_number": 4,
+            "bib_color": "black",
+            "time": 24.74,
+            "speed_kmh": 50.93
           }
-        ]
+        ],
+        "grand_total": 24.14,
+        "normalized_score": 24.14,
+        "format": "racing"
       },
       "raw_text": "3 | 57 | Уиппет | Стандартный-спринтеры | Кобель | VALPAIN PEK DIRECT HIT | 350 | 5 | 4 | 24,56 с14,25 м/с51,303 км/ч | 24 | 3 | 24,14 с14,50 м/с52,196 км/ч | 42 | 4 | 24,74 с14,15 м/с50,930 км/ч | CC | ",
       "judges": null,
@@ -2075,41 +1921,93 @@
       }
     },
     {
-      "id": 32,
+      "id": 24703,
+      "event_id": 1578,
+      "dog_id": 9340,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобель",
+      "catalog_no": 50,
+      "placement": null,
+      "total_score": 23.7,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 7,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 25.02,
+            "speed_kmh": 50.36
+          },
+          {
+            "heat_number": 25,
+            "bib_number": 4,
+            "bib_color": "black",
+            "time": 23.7,
+            "speed_kmh": 53.165
+          },
+          {
+            "heat_number": 42,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Дисквалификация"
+          }
+        ],
+        "grand_total": 23.7,
+        "normalized_score": 23.7,
+        "format": "racing"
+      },
+      "raw_text": " | 50 | Уиппет | Стандартный-спринтеры | Кобель | GAMBRINUS KOROL' HMELYA | 350 | 7 | 3 | 25,02 с13,99 м/с50,360 км/ч | 25 | 4 | 23,70 с14,77 м/с53,165 км/ч | 42 | 2 | Дисквалификация |  | ",
+      "judges": null,
+      "status_reason": null,
+      "dog_key": "gambrinus-korol-hmelya--уиппет",
+      "dog": {
+        "id": 9340,
+        "dog_key": "gambrinus-korol-hmelya--уиппет",
+        "name_lat": "GAMBRINUS KOROL HMELYA",
+        "name_ru": "ГАМБРИНУС КОРОЛЬ ХМЕЛЯ",
+        "breed": "УИППЕТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 24704,
       "event_id": 1578,
       "dog_id": 9342,
       "breed_class": "Уиппет - Стандартный-спринтеры - Кобель",
       "catalog_no": 49,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 5,
+      "total_score": 24.15,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  6,
-                  3,
-                  null,
-                  null,
-                  1
-                ],
-                "sum": 10
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 6,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 24.15,
+            "speed_kmh": 52.174
+          },
+          {
+            "heat_number": 26,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 24.31,
+            "speed_kmh": 51.831
           }
-        ]
+        ],
+        "grand_total": 24.15,
+        "normalized_score": 24.15,
+        "format": "racing"
       },
       "raw_text": "5 | 49 | Уиппет | Стандартный-спринтеры | Кобель | DON CORLEONE | 350 | 6 | 3 | 24,15 с14,49 м/с52,174 км/ч | 26 | 1 | 24,31 с14,40 м/с51,831 км/ч |  |  |  | CC | ",
       "judges": null,
@@ -2126,41 +2024,37 @@
       }
     },
     {
-      "id": 33,
+      "id": 24705,
       "event_id": 1578,
       "dog_id": 9283,
       "breed_class": "Уиппет - Стандартный-спринтеры - Кобель",
       "catalog_no": 47,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 6,
+      "total_score": 24.37,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  5,
-                  1,
-                  null,
-                  null,
-                  2
-                ],
-                "sum": 8
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 5,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 24.42,
+            "speed_kmh": 51.597
+          },
+          {
+            "heat_number": 25,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 24.37,
+            "speed_kmh": 51.703
           }
-        ]
+        ],
+        "grand_total": 24.37,
+        "normalized_score": 24.37,
+        "format": "racing"
       },
       "raw_text": "6 | 47 | Уиппет | Стандартный-спринтеры | Кобель | BATMAN NIGHT SHADOW | 350 | 5 | 1 | 24,42 с14,33 м/с51,597 км/ч | 25 | 2 | 24,37 с14,36 м/с51,703 км/ч |  |  |  | CC | ",
       "judges": null,
@@ -2177,41 +2071,37 @@
       }
     },
     {
-      "id": 34,
+      "id": 24706,
       "event_id": 1578,
       "dog_id": 10429,
       "breed_class": "Уиппет - Стандартный-спринтеры - Кобель",
       "catalog_no": 52,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 7,
+      "total_score": 24.37,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  6,
-                  2,
-                  null,
-                  null,
-                  2
-                ],
-                "sum": 10
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 6,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 24.37,
+            "speed_kmh": 51.703
+          },
+          {
+            "heat_number": 26,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 24.41,
+            "speed_kmh": 51.618
           }
-        ]
+        ],
+        "grand_total": 24.37,
+        "normalized_score": 24.37,
+        "format": "racing"
       },
       "raw_text": "7 | 52 | Уиппет | Стандартный-спринтеры | Кобель | КЕТЛИН РУТГЕР | 350 | 6 | 2 | 24,37 с14,36 м/с51,703 км/ч | 26 | 2 | 24,41 с14,34 м/с51,618 км/ч |  |  |  | CC | ",
       "judges": null,
@@ -2228,41 +2118,37 @@
       }
     },
     {
-      "id": 35,
+      "id": 24707,
       "event_id": 1578,
       "dog_id": 9435,
       "breed_class": "Уиппет - Стандартный-спринтеры - Кобель",
       "catalog_no": 51,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 8,
+      "total_score": 24.44,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  5,
-                  2,
-                  null,
-                  null,
-                  3
-                ],
-                "sum": 10
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 5,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 24.71,
+            "speed_kmh": 50.992
+          },
+          {
+            "heat_number": 25,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 24.44,
+            "speed_kmh": 51.555
           }
-        ]
+        ],
+        "grand_total": 24.44,
+        "normalized_score": 24.44,
+        "format": "racing"
       },
       "raw_text": "8 | 51 | Уиппет | Стандартный-спринтеры | Кобель | ГРИНЧ НОЧНОЙ ПОЛЕТ | 350 | 5 | 2 | 24,71 с14,16 м/с50,992 км/ч | 25 | 3 | 24,44 с14,32 м/с51,555 км/ч |  |  |  | CC | ",
       "judges": null,
@@ -2279,41 +2165,37 @@
       }
     },
     {
-      "id": 36,
+      "id": 24708,
       "event_id": 1578,
       "dog_id": 5658,
       "breed_class": "Уиппет - Стандартный-спринтеры - Кобель",
       "catalog_no": 59,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 9,
+      "total_score": 24.47,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  8,
-                  2,
-                  null,
-                  null,
-                  2
-                ],
-                "sum": 12
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 8,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 24.47,
+            "speed_kmh": 51.492
+          },
+          {
+            "heat_number": 24,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 24.49,
+            "speed_kmh": 51.45
           }
-        ]
+        ],
+        "grand_total": 24.47,
+        "normalized_score": 24.47,
+        "format": "racing"
       },
       "raw_text": "9 | 59 | Уиппет | Стандартный-спринтеры | Кобель | ВАРВАР КОНАН БЕССТРАШНЫЙ | 350 | 8 | 2 | 24,47 с14,30 м/с51,492 км/ч | 24 | 2 | 24,49 с14,29 м/с51,450 км/ч |  |  |  | CC | ",
       "judges": null,
@@ -2330,41 +2212,37 @@
       }
     },
     {
-      "id": 37,
+      "id": 24709,
       "event_id": 1578,
       "dog_id": 10428,
       "breed_class": "Уиппет - Стандартный-спринтеры - Кобель",
       "catalog_no": 60,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 10,
+      "total_score": 24.74,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  6,
-                  1,
-                  null,
-                  null,
-                  4
-                ],
-                "sum": 11
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 6,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 24.94,
+            "speed_kmh": 50.521
+          },
+          {
+            "heat_number": 26,
+            "bib_number": 4,
+            "bib_color": "black",
+            "time": 24.74,
+            "speed_kmh": 50.93
           }
-        ]
+        ],
+        "grand_total": 24.74,
+        "normalized_score": 24.74,
+        "format": "racing"
       },
       "raw_text": "10 | 60 | Уиппет | Стандартный-спринтеры | Кобель | VREMYA NE ZHDYOT ERAGON | 350 | 6 | 1 | 24,94 с14,03 м/с50,521 км/ч | 26 | 4 | 24,74 с14,15 м/с50,930 км/ч |  |  |  | CC | ",
       "judges": null,
@@ -2381,41 +2259,37 @@
       }
     },
     {
-      "id": 38,
+      "id": 24710,
       "event_id": 1578,
       "dog_id": 7289,
       "breed_class": "Уиппет - Стандартный-спринтеры - Кобель",
       "catalog_no": 54,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 11,
+      "total_score": 24.86,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  8,
-                  1,
-                  null,
-                  null,
-                  3
-                ],
-                "sum": 12
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 8,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 24.9,
+            "speed_kmh": 50.602
+          },
+          {
+            "heat_number": 26,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 24.86,
+            "speed_kmh": 50.684
           }
-        ]
+        ],
+        "grand_total": 24.86,
+        "normalized_score": 24.86,
+        "format": "racing"
       },
       "raw_text": "11 | 54 | Уиппет | Стандартный-спринтеры | Кобель | КУЛИКОВО ПОЛЕ ГЕРМЕС | 350 | 8 | 1 | 24,90 с14,06 м/с50,602 км/ч | 26 | 3 | 24,86 с14,08 м/с50,684 км/ч |  |  |  | CC | ",
       "judges": null,
@@ -2432,41 +2306,37 @@
       }
     },
     {
-      "id": 39,
+      "id": 24711,
       "event_id": 1578,
       "dog_id": 10484,
       "breed_class": "Уиппет - Стандартный-спринтеры - Кобель",
       "catalog_no": 61,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 12,
+      "total_score": 25.57,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  8,
-                  3,
-                  null,
-                  null,
-                  4
-                ],
-                "sum": 15
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 8,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 26.03,
+            "speed_kmh": 48.406
+          },
+          {
+            "heat_number": 24,
+            "bib_number": 4,
+            "bib_color": "black",
+            "time": 25.57,
+            "speed_kmh": 49.276
           }
-        ]
+        ],
+        "grand_total": 25.57,
+        "normalized_score": 25.57,
+        "format": "racing"
       },
       "raw_text": "12 | 61 | Уиппет | Стандартный-спринтеры | Кобель | ЗОРКИЙ СОКОЛ ИЗ ДОМА ПРОНИНЫХ | 350 | 8 | 3 | 26,03 с13,45 м/с48,406 км/ч | 24 | 4 | 25,57 с13,69 м/с49,276 км/ч |  |  |  | CC | ",
       "judges": null,
@@ -2483,62 +2353,79 @@
       }
     },
     {
-      "id": 40,
+      "id": 24712,
+      "event_id": 1578,
+      "dog_id": 9538,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобель",
+      "catalog_no": 55,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 7,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Дисквалификация"
+          }
+        ],
+        "grand_total": null,
+        "normalized_score": null,
+        "format": "racing"
+      },
+      "raw_text": " | 55 | Уиппет | Стандартный-спринтеры | Кобель | ORPHEUS OF VERYWHIP | 350 | 7 | 2 | Дисквалификация |  |  |  |  |  |  |  | ",
+      "judges": null,
+      "status_reason": "Дисквалификация",
+      "dog_key": "orpheus-of-verywhip--уиппет",
+      "dog": {
+        "id": 9538,
+        "dog_key": "orpheus-of-verywhip--уиппет",
+        "name_lat": "ORPHEUS OF VERYWHIP",
+        "name_ru": "ORPHEUS OF VERYWHIP",
+        "breed": "УИППЕТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 24713,
       "event_id": 1578,
       "dog_id": 10385,
       "breed_class": "Уиппет - Стандартный-спринтеры - Сука",
       "catalog_no": 65,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "",
-      "status": null,
+      "placement": 1,
+      "total_score": 23.42,
+      "judge_count": 0,
+      "qualification": "Чемпион РКФ",
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  15,
-                  2,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 17
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 15,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 23.43,
+            "speed_kmh": 53.777
           },
           {
-            "heat_number": 2,
-            "bib_number": 34,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  1,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 1
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 34,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 23.42,
+            "speed_kmh": 53.8
           }
-        ]
+        ],
+        "grand_total": 23.42,
+        "normalized_score": 23.42,
+        "format": "racing"
       },
       "raw_text": "1 | 65 | Уиппет | Стандартный-спринтеры | Сука | PUMMA SPIRIT | 350 | 15 | 2 | 23,43 с14,94 м/с53,777 км/ч |  |  |  | 34 | 1 | 23,42 с14,94 м/с53,800 км/ч | CC | Чемпион РКФ",
       "judges": null,
@@ -2555,62 +2442,37 @@
       }
     },
     {
-      "id": 41,
+      "id": 24714,
       "event_id": 1578,
       "dog_id": 9436,
       "breed_class": "Уиппет - Стандартный-спринтеры - Сука",
       "catalog_no": 63,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "",
-      "status": null,
+      "placement": 2,
+      "total_score": 24.9,
+      "judge_count": 0,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  15,
-                  3,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 18
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 15,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 25.22,
+            "speed_kmh": 49.96
           },
           {
-            "heat_number": 2,
-            "bib_number": 34,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  3,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 3
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 34,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 24.9,
+            "speed_kmh": 50.602
           }
-        ]
+        ],
+        "grand_total": 24.9,
+        "normalized_score": 24.9,
+        "format": "racing"
       },
       "raw_text": "2 | 63 | Уиппет | Стандартный-спринтеры | Сука | ГИНУРА ЮТТА КУЛУМА | 350 | 15 | 3 | 25,22 с13,88 м/с49,960 км/ч |  |  |  | 34 | 3 | 24,90 с14,06 м/с50,602 км/ч | CC | CACL",
       "judges": null,
@@ -2627,62 +2489,37 @@
       }
     },
     {
-      "id": 42,
+      "id": 24715,
       "event_id": 1578,
       "dog_id": 10032,
       "breed_class": "Уиппет - Стандартный-спринтеры - Сука",
       "catalog_no": 64,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 3,
+      "total_score": 25.16,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  15,
-                  1,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 16
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 15,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 25.16,
+            "speed_kmh": 50.079
           },
           {
-            "heat_number": 2,
-            "bib_number": 34,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  2,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 2
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 34,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 25.47,
+            "speed_kmh": 49.47
           }
-        ]
+        ],
+        "grand_total": 25.16,
+        "normalized_score": 25.16,
+        "format": "racing"
       },
       "raw_text": "3 | 64 | Уиппет | Стандартный-спринтеры | Сука | LAVING BRIZ FLORENCE | 350 | 15 | 1 | 25,16 с13,91 м/с50,079 км/ч |  |  |  | 34 | 2 | 25,47 с13,74 м/с49,470 км/ч | CC | ",
       "judges": null,
@@ -2699,62 +2536,37 @@
       }
     },
     {
-      "id": 43,
+      "id": 24716,
       "event_id": 1578,
       "dog_id": 10460,
       "breed_class": "Уиппет - Юниоры - Микс",
       "catalog_no": 66,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
+      "placement": 1,
+      "total_score": 25.28,
+      "judge_count": 0,
+      "qualification": "Лучший юниор",
       "vc": "",
-      "status": null,
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  17,
-                  1,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 18
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 17,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 25.28,
+            "speed_kmh": 49.842
           },
           {
-            "heat_number": 2,
-            "bib_number": 36,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  1,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 1
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 36,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 25.42,
+            "speed_kmh": 49.567
           }
-        ]
+        ],
+        "grand_total": 25.28,
+        "normalized_score": 25.28,
+        "format": "racing"
       },
       "raw_text": "1 | 66 | Уиппет | Юниоры | Сука | ЛАКШЕРИ ВИПП НИКИТА | 350 | 17 | 1 | 25,28 с13,84 м/с49,842 км/ч |  |  |  | 36 | 1 | 25,42 с13,77 м/с49,567 км/ч |  | Лучший юниор",
       "judges": null,
@@ -2771,62 +2583,37 @@
       }
     },
     {
-      "id": 44,
+      "id": 24717,
       "event_id": 1578,
       "dog_id": 9712,
       "breed_class": "Фараонова собака - Стандартный - Микс",
       "catalog_no": 70,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 1,
+      "total_score": 29.41,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  18,
-                  1,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 19
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 18,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 29.41,
+            "speed_kmh": 42.843
           },
           {
-            "heat_number": 2,
-            "bib_number": 37,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  1,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 1
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 37,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 29.62,
+            "speed_kmh": 42.539
           }
-        ]
+        ],
+        "grand_total": 29.41,
+        "normalized_score": 29.41,
+        "format": "racing"
       },
       "raw_text": "1 | 70 | Фараонова собака | Стандартный | Кобель | REEDLY ROAD MYBERN | 350 | 18 | 1 | 29,41 с11,90 м/с42,843 км/ч |  |  |  | 37 | 1 | 29,62 с11,82 м/с42,539 км/ч | CC | ",
       "judges": null,
@@ -2843,62 +2630,37 @@
       }
     },
     {
-      "id": 45,
+      "id": 24718,
       "event_id": 1578,
       "dog_id": 10161,
       "breed_class": "Чирнеко дель Этна - Стандартный - Микс",
       "catalog_no": 71,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 1,
+      "total_score": 27.69,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  20,
-                  2,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 22
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 20,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 27.71,
+            "speed_kmh": 45.471
           },
           {
-            "heat_number": 2,
-            "bib_number": 39,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  1,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 1
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 39,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 27.69,
+            "speed_kmh": 45.504
           }
-        ]
+        ],
+        "grand_total": 27.69,
+        "normalized_score": 27.69,
+        "format": "racing"
       },
       "raw_text": "1 | 71 | Чирнеко дель Этна | Стандартный | Кобель | COLISTO'S BIRBO | 350 | 20 | 2 | 27,71 с12,63 м/с45,471 км/ч |  |  |  | 39 | 1 | 27,69 с12,64 м/с45,504 км/ч | CC | ",
       "judges": null,
@@ -2915,62 +2677,37 @@
       }
     },
     {
-      "id": 46,
+      "id": 24719,
       "event_id": 1578,
       "dog_id": 10035,
       "breed_class": "Чирнеко дель Этна - Стандартный - Микс",
       "catalog_no": 72,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 2,
+      "total_score": 29.27,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 350,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  20,
-                  1,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 21
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 20,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 29.49,
+            "speed_kmh": 42.726
           },
           {
-            "heat_number": 2,
-            "bib_number": 39,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  2,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 2
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 39,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 29.27,
+            "speed_kmh": 43.047
           }
-        ]
+        ],
+        "grand_total": 29.27,
+        "normalized_score": 29.27,
+        "format": "racing"
       },
       "raw_text": "2 | 72 | Чирнеко дель Этна | Стандартный | Кобель | SOLLUCERO | 350 | 20 | 1 | 29,49 с11,87 м/с42,726 км/ч |  |  |  | 39 | 2 | 29,27 с11,96 м/с43,047 км/ч | CC | ",
       "judges": null,
@@ -2982,499 +2719,6 @@
         "name_lat": "SOLLUCERO",
         "name_ru": "SOLLUCERO",
         "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
-        "sex": null,
-        "owner": null
-      }
-    },
-    {
-      "id": 47,
-      "event_id": 1578,
-      "dog_id": 10553,
-      "breed_class": "Неприбывшие участники",
-      "catalog_no": 4,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "",
-      "status": "dns",
-      "raw_scores_json": {
-        "heats": []
-      },
-      "raw_text": "4 | Басенджи | Стандартный | Кобель | АФРИКАНСКИЙ МОЛЧУН ИМПЕРИАЛ | Неявка",
-      "judges": null,
-      "status_reason": "Неявка",
-      "dog_key": "африканскии-молчун-империал--басенджи",
-      "dog": {
-        "id": 10553,
-        "dog_key": "африканскии-молчун-империал--басенджи",
-        "name_lat": "АФРИКАНСКИЙ МОЛЧУН ИМПЕРИАЛ",
-        "name_ru": "АФРИКАНСКИЙ МОЛЧУН ИМПЕРИАЛ",
-        "breed": "БАСЕНДЖИ",
-        "sex": null,
-        "owner": null
-      }
-    },
-    {
-      "id": 48,
-      "event_id": 1578,
-      "dog_id": 9243,
-      "breed_class": "Неприбывшие участники",
-      "catalog_no": 13,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "",
-      "status": "dns",
-      "raw_scores_json": {
-        "heats": []
-      },
-      "raw_text": "13 | Грейхаунд | Стандартный | Кобель | ФИОНН КЛАНН ЛОЧ ЛОМОНОД | Неявка",
-      "judges": null,
-      "status_reason": "Неявка",
-      "dog_key": "фионн-кланн-лоч-ломонод--греихаунд",
-      "dog": {
-        "id": 9243,
-        "dog_key": "фионн-кланн-лоч-ломонод--греихаунд",
-        "name_lat": "ФИОНН КЛАНН ЛОЧ ЛОМОНОД",
-        "name_ru": "ФИОНН КЛАНН ЛОЧ ЛОМОНОД",
-        "breed": "ГРЕЙХАУНД",
-        "sex": null,
-        "owner": null
-      }
-    },
-    {
-      "id": 49,
-      "event_id": 1578,
-      "dog_id": 10430,
-      "breed_class": "Неприбывшие участники",
-      "catalog_no": 14,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "",
-      "status": "dns",
-      "raw_scores_json": {
-        "heats": []
-      },
-      "raw_text": "14 | Левретка | Стандартный | Сука | GRACE HAUND ELIZABETH HER EXCELLENCE | Неявка",
-      "judges": null,
-      "status_reason": "Неявка",
-      "dog_key": "grace-haund-elizabeth-her-excellence--левретка",
-      "dog": {
-        "id": 10430,
-        "dog_key": "grace-haund-elizabeth-her-excellence--левретка",
-        "name_lat": "GRACE HAUND ELIZABETH HER EXCELLENCE",
-        "name_ru": "GRACE HAUND ELIZABETH HER EXCELLENCE",
-        "breed": "ЛЕВРЕТКА",
-        "sex": null,
-        "owner": null
-      }
-    },
-    {
-      "id": 50,
-      "event_id": 1578,
-      "dog_id": 7070,
-      "breed_class": "Неприбывшие участники",
-      "catalog_no": 20,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "",
-      "status": "dns",
-      "raw_scores_json": {
-        "heats": []
-      },
-      "raw_text": "20 | Русская псовая борзая | Юниоры | Сука | ПРИ-ЧУДА | Неявка",
-      "judges": null,
-      "status_reason": "Неявка",
-      "dog_key": "при-чуда--русская-псовая-борзая",
-      "dog": {
-        "id": 7070,
-        "dog_key": "при-чуда--русская-псовая-борзая",
-        "name_lat": "ПРИ ЧУДА",
-        "name_ru": "ПРИ ЧУДА",
-        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-        "sex": null,
-        "owner": null
-      }
-    },
-    {
-      "id": 51,
-      "event_id": 1578,
-      "dog_id": 576,
-      "breed_class": "Неприбывшие участники",
-      "catalog_no": 22,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "",
-      "status": "dns",
-      "raw_scores_json": {
-        "heats": []
-      },
-      "raw_text": "22 | Уиппет | Стандартный | Кобель | GHAN BURI GHAN'S WARLOCK | Неявка",
-      "judges": null,
-      "status_reason": "Неявка",
-      "dog_key": "ghan-buri-ghans-warlock--уиппет",
-      "dog": {
-        "id": 576,
-        "dog_key": "ghan-buri-ghans-warlock--уиппет",
-        "name_lat": "GHAN BURI GHANS WARLOCK",
-        "name_ru": "GHAN BURI GHANS WARLOCK /GHAN BURI GHANS WARLOCK",
-        "breed": "УИППЕТ",
-        "sex": null,
-        "owner": null
-      }
-    },
-    {
-      "id": 52,
-      "event_id": 1578,
-      "dog_id": 10077,
-      "breed_class": "Неприбывшие участники",
-      "catalog_no": 27,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "",
-      "status": "dns",
-      "raw_scores_json": {
-        "heats": []
-      },
-      "raw_text": "27 | Уиппет | Стандартный | Кобель | LET IT BE | Неявка",
-      "judges": null,
-      "status_reason": "Неявка",
-      "dog_key": "let-it-be--уиппет",
-      "dog": {
-        "id": 10077,
-        "dog_key": "let-it-be--уиппет",
-        "name_lat": "LET IT BE",
-        "name_ru": "LET IT BE",
-        "breed": "УИППЕТ",
-        "sex": null,
-        "owner": null
-      }
-    },
-    {
-      "id": 53,
-      "event_id": 1578,
-      "dog_id": 9272,
-      "breed_class": "Неприбывшие участники",
-      "catalog_no": 29,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "",
-      "status": "dns",
-      "raw_scores_json": {
-        "heats": []
-      },
-      "raw_text": "29 | Уиппет | Стандартный | Кобель | MLECHNYY PUT IZ POLETA MECHTI | Неявка",
-      "judges": null,
-      "status_reason": "Неявка",
-      "dog_key": "mlechnyy-put-iz-poleta-mechti--уиппет",
-      "dog": {
-        "id": 9272,
-        "dog_key": "mlechnyy-put-iz-poleta-mechti--уиппет",
-        "name_lat": "MLECHNYY PUT IZ POLETA MECHTI",
-        "name_ru": "MLECHNYY PUT IZ POLETA MECHTI",
-        "breed": "УИППЕТ",
-        "sex": null,
-        "owner": null
-      }
-    },
-    {
-      "id": 54,
-      "event_id": 1578,
-      "dog_id": 262,
-      "breed_class": "Неприбывшие участники",
-      "catalog_no": 30,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "",
-      "status": "dns",
-      "raw_scores_json": {
-        "heats": []
-      },
-      "raw_text": "30 | Уиппет | Стандартный | Кобель | RUNNING RAIDERS GRIM REAPER | Неявка",
-      "judges": null,
-      "status_reason": "Неявка",
-      "dog_key": "running-raiders-grim-reaper--уиппет",
-      "dog": {
-        "id": 262,
-        "dog_key": "running-raiders-grim-reaper--уиппет",
-        "name_lat": "RUNNING RAIDERS GRIM REAPER",
-        "name_ru": "RUNNING RAIDERS GRIM REAPER",
-        "breed": "УИППЕТ",
-        "sex": null,
-        "owner": null
-      }
-    },
-    {
-      "id": 55,
-      "event_id": 1578,
-      "dog_id": 10340,
-      "breed_class": "Неприбывшие участники",
-      "catalog_no": 32,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "",
-      "status": "dns",
-      "raw_scores_json": {
-        "heats": []
-      },
-      "raw_text": "32 | Уиппет | Стандартный | Кобель | STANGER LAND BLACKTHORNE WINTER | Неявка",
-      "judges": null,
-      "status_reason": "Неявка",
-      "dog_key": "stanger-land-blackthorne-winter--уиппет",
-      "dog": {
-        "id": 10340,
-        "dog_key": "stanger-land-blackthorne-winter--уиппет",
-        "name_lat": "STANGER LAND BLACKTHORNE WINTER",
-        "name_ru": "STANGER LAND BLACKTHORNE WINTER",
-        "breed": "УИППЕТ",
-        "sex": null,
-        "owner": null
-      }
-    },
-    {
-      "id": 56,
-      "event_id": 1578,
-      "dog_id": 298,
-      "breed_class": "Неприбывшие участники",
-      "catalog_no": 35,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "",
-      "status": "dns",
-      "raw_scores_json": {
-        "heats": []
-      },
-      "raw_text": "35 | Уиппет | Стандартный | Кобель | ДЖИНИ ЛАМБОР | Неявка",
-      "judges": null,
-      "status_reason": "Неявка",
-      "dog_key": "джини-ламбор--уиппет",
-      "dog": {
-        "id": 298,
-        "dog_key": "джини-ламбор--уиппет",
-        "name_lat": "ДЖИНИ ЛАМБОР",
-        "name_ru": "ДЖИНИ ЛАМБОР",
-        "breed": "УИППЕТ",
-        "sex": null,
-        "owner": null
-      }
-    },
-    {
-      "id": 57,
-      "event_id": 1578,
-      "dog_id": 9337,
-      "breed_class": "Неприбывшие участники",
-      "catalog_no": 37,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "",
-      "status": "dns",
-      "raw_scores_json": {
-        "heats": []
-      },
-      "raw_text": "37 | Уиппет | Стандартный | Сука | ERIKMAN'S FIRE CARNELIA | Неявка",
-      "judges": null,
-      "status_reason": "Неявка",
-      "dog_key": "erikmans-fire-carnelia--уиппет",
-      "dog": {
-        "id": 9337,
-        "dog_key": "erikmans-fire-carnelia--уиппет",
-        "name_lat": "ERIKMANS FIRE CARNELIA",
-        "name_ru": "ERIKMANS FIRE CARNELIA",
-        "breed": "УИППЕТ",
-        "sex": null,
-        "owner": null
-      }
-    },
-    {
-      "id": 58,
-      "event_id": 1578,
-      "dog_id": 10084,
-      "breed_class": "Неприбывшие участники",
-      "catalog_no": 39,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "",
-      "status": "dns",
-      "raw_scores_json": {
-        "heats": []
-      },
-      "raw_text": "39 | Уиппет | Стандартный | Сука | LAST UNICORN | Неявка",
-      "judges": null,
-      "status_reason": "Неявка",
-      "dog_key": "last-unicorn--уиппет",
-      "dog": {
-        "id": 10084,
-        "dog_key": "last-unicorn--уиппет",
-        "name_lat": "LAST UNICORN",
-        "name_ru": "LAST UNICORN",
-        "breed": "УИППЕТ",
-        "sex": null,
-        "owner": null
-      }
-    },
-    {
-      "id": 59,
-      "event_id": 1578,
-      "dog_id": 10023,
-      "breed_class": "Неприбывшие участники",
-      "catalog_no": 48,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "",
-      "status": "dns",
-      "raw_scores_json": {
-        "heats": []
-      },
-      "raw_text": "48 | Уиппет | Стандартный-спринтеры | Кобель | BLACK JACK | Неявка",
-      "judges": null,
-      "status_reason": "Неявка",
-      "dog_key": "black-jack--уиппет",
-      "dog": {
-        "id": 10023,
-        "dog_key": "black-jack--уиппет",
-        "name_lat": "BLACK JACK",
-        "name_ru": "BLACK JACK",
-        "breed": "УИППЕТ",
-        "sex": null,
-        "owner": null
-      }
-    },
-    {
-      "id": 60,
-      "event_id": 1578,
-      "dog_id": 10359,
-      "breed_class": "Неприбывшие участники",
-      "catalog_no": 56,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "",
-      "status": "dns",
-      "raw_scores_json": {
-        "heats": []
-      },
-      "raw_text": "56 | Уиппет | Стандартный-спринтеры | Кобель | SHOW MUST GO ON | Неявка",
-      "judges": null,
-      "status_reason": "Неявка",
-      "dog_key": "show-must-go-on--уиппет",
-      "dog": {
-        "id": 10359,
-        "dog_key": "show-must-go-on--уиппет",
-        "name_lat": "SHOW MUST GO ON",
-        "name_ru": "SHOW MUST GO ON",
-        "breed": "УИППЕТ",
-        "sex": null,
-        "owner": null
-      }
-    },
-    {
-      "id": 61,
-      "event_id": 1578,
-      "dog_id": 9388,
-      "breed_class": "Неприбывшие участники",
-      "catalog_no": 62,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "",
-      "status": "dns",
-      "raw_scores_json": {
-        "heats": []
-      },
-      "raw_text": "62 | Уиппет | Стандартный-спринтеры | Сука | ENTAYLI YOZ | Неявка",
-      "judges": null,
-      "status_reason": "Неявка",
-      "dog_key": "entayli-yoz--уиппет",
-      "dog": {
-        "id": 9388,
-        "dog_key": "entayli-yoz--уиппет",
-        "name_lat": "ENTAYLI YOZ",
-        "name_ru": "ENTAYLI YOZ",
-        "breed": "УИППЕТ",
-        "sex": null,
-        "owner": null
-      }
-    },
-    {
-      "id": 62,
-      "event_id": 1578,
-      "dog_id": 7034,
-      "breed_class": "Неприбывшие участники",
-      "catalog_no": 67,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "",
-      "status": "dns",
-      "raw_scores_json": {
-        "heats": []
-      },
-      "raw_text": "67 | Уиппет | Юниоры | Сука | TATYANIN DEN IGRUSHKA | Неявка",
-      "judges": null,
-      "status_reason": "Неявка",
-      "dog_key": "tatyanin-den-igrushka--уиппет",
-      "dog": {
-        "id": 7034,
-        "dog_key": "tatyanin-den-igrushka--уиппет",
-        "name_lat": "TATYANIN DEN IGRUSHKA",
-        "name_ru": "ТАТЬЯНИН ДЕНЬ ИГРУШКА",
-        "breed": "УИППЕТ",
-        "sex": null,
-        "owner": null
-      }
-    },
-    {
-      "id": 63,
-      "event_id": 1578,
-      "dog_id": 9798,
-      "breed_class": "Неприбывшие участники",
-      "catalog_no": 69,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "",
-      "status": "dns",
-      "raw_scores_json": {
-        "heats": []
-      },
-      "raw_text": "69 | Уиппет | Ветераны | Сука | БУСИ ВАФА ЭЛЬФА | Неявка",
-      "judges": null,
-      "status_reason": "Неявка",
-      "dog_key": "буси-вафа-эльфа--уиппет",
-      "dog": {
-        "id": 9798,
-        "dog_key": "буси-вафа-эльфа--уиппет",
-        "name_lat": "БУСИ ВАФА ЭЛЬФА",
-        "name_ru": "БУСИ ВАФА ЭЛЬФА",
-        "breed": "УИППЕТ",
         "sex": null,
         "owner": null
       }

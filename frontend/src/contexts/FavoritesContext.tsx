@@ -43,6 +43,7 @@ type FavoritesContextValue = {
   ready: boolean
   isFavorite: (dogId: string | number) => boolean
   toggleFavorite: (dogId: string | number, meta?: FavoriteDogMeta) => Promise<void>
+  removeFavorites: (ids: string[]) => Promise<void>
   setActive: (dogId: string) => void
   getMeta: (dogId: string) => FavoriteDogMeta | undefined
   setMeta: (dogId: string, meta: FavoriteDogMeta) => void
@@ -150,19 +151,70 @@ export function FavoritesProvider({ children }: { children: ReactNode }) {
     [favorites],
   )
 
+  const removeFavorites = useCallback(
+    async (ids: string[]) => {
+      const unique = [...new Set(ids.map(String))].filter((id) => favorites.has(id))
+      if (unique.length === 0) return
+
+      const previous = new Set(favorites)
+      const previousActive = activeId
+      const next = new Set(favorites)
+      for (const id of unique) next.delete(id)
+
+      setFavorites(next)
+      if (activeId && !next.has(activeId)) {
+        const fallback = [...next][0] ?? null
+        setActiveId(fallback)
+        setActiveFavoriteId(fallback)
+      }
+
+      try {
+        if (isAuthenticated) {
+          for (const id of unique) {
+            await authApi.removeFavorite(id)
+          }
+        } else {
+          for (const id of unique) {
+            removeLocalStorageFavorite(id)
+          }
+        }
+      } catch (error) {
+        setFavorites(previous)
+        setActiveId(previousActive)
+        setActiveFavoriteId(previousActive)
+        throw error
+      }
+    },
+    [favorites, isAuthenticated, activeId],
+  )
+
+  const favoriteIds = useMemo(() => [...favorites], [favorites])
+
   const value = useMemo(
     () => ({
       favorites,
-      favoriteIds: [...favorites],
+      favoriteIds,
       activeId,
       ready,
       isFavorite,
       toggleFavorite,
+      removeFavorites,
       setActive,
       getMeta,
       setMeta,
     }),
-    [favorites, activeId, ready, isFavorite, toggleFavorite, setActive, getMeta, setMeta],
+    [
+      favorites,
+      favoriteIds,
+      activeId,
+      ready,
+      isFavorite,
+      toggleFavorite,
+      removeFavorites,
+      setActive,
+      getMeta,
+      setMeta,
+    ],
   )
 
   return <FavoritesContext.Provider value={value}>{children}</FavoritesContext.Provider>

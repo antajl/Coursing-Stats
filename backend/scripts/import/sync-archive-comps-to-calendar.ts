@@ -200,6 +200,16 @@ function main() {
       best.ev.participants_count = resultCount
       if (doc.event.results_url) best.ev.results_url = doc.event.results_url
       if (!best.ev.location && doc.event.location) best.ev.location = doc.event.location
+      // Refresh junk Wayback titles / wrong discipline from competition truth
+      if (/главная страница/i.test(String(best.ev.title || ''))) {
+        best.ev.title = doc.event.title || doc.event.rank_label || best.ev.title
+        best.ev.full_title = doc.event.title || doc.event.rank_label || best.ev.full_title
+        best.ev.rank_label = doc.event.rank_label || doc.event.title || best.ev.rank_label
+      }
+      if (doc.event.event_type) {
+        best.ev.event_type = doc.event.event_type
+        best.ev.discipline_code = doc.event.event_type
+      }
       report.push({
         compId: doc.event_id,
         action: `link score=${best.score}`,

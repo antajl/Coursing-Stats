@@ -1,5 +1,9 @@
-# Static files should be served directly
-/banners/* /banners/:splat 200
+# Static bot banners (Telegram sendPhoto) — must not fall through to SPA
+/bot/* /bot/:splat 200
+
+# BIMI logo (email inbox avatar) — must not fall through to SPA
+/bimi/* /bimi/:splat 200
+/.well-known/bimi/* /.well-known/bimi/:splat 200
 
 # SPA fallback for all other routes
 /* /index.html 200

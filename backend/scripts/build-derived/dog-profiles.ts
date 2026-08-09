@@ -3,7 +3,7 @@ import path from 'node:path';
 import type Database from 'better-sqlite3';
 import { dataV1Path, listJsonFiles } from '../../lib/local-data/paths';
 import { aggregateQualificationTitles } from '../../src/lib/qualification-titles';
-import { RACING_EXCLUDED_STATUSES_SQL } from '../../src/lib/racing-status';
+import { PARTICIPATION_STATUSES_SQL, RACING_EXCLUDED_STATUSES_SQL } from '../../src/lib/racing-status';
 import { INDEXES_DIR } from './shared';
 
 type CoursingRow = { dog_id: number; event_id: number; total_score: number | null; placement: number | null; raw_scores_json: string | null };
@@ -241,7 +241,7 @@ export function buildDogProfiles(db: Database.Database) {
     .prepare(
       `SELECT r.dog_id, r.event_id, r.total_score, r.placement, r.raw_scores_json
        FROM results r JOIN events e ON r.event_id = e.id
-       WHERE r.status = 'finished' AND e.event_type IN ('coursing', 'bzmp')`,
+       WHERE r.status IN ${PARTICIPATION_STATUSES_SQL} AND e.event_type IN ('coursing', 'bzmp')`,
     )
     .all() as CoursingRow[];
 
@@ -372,7 +372,21 @@ export function buildDogProfiles(db: Database.Database) {
       competitions,
     };
 
-    fs.writeFileSync(path.join(outDir, `${dogId}.json`), JSON.stringify(payload), 'utf-8');
+    const outPath = path.join(outDir, `${dogId}.json`)
+    const body = JSON.stringify(payload)
+    for (let attempt = 0; attempt < 5; attempt++) {
+      try {
+        fs.writeFileSync(outPath, body, 'utf-8')
+        break
+      } catch (err) {
+        const code = (err as NodeJS.ErrnoException).code
+        if ((code === 'UNKNOWN' || code === 'EBUSY' || code === 'EPERM') && attempt < 4) {
+          Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 50 * (attempt + 1))
+          continue
+        }
+        throw err
+      }
+    }
   }
 
   const keepIds = new Set(sortedDogIds.map(String));

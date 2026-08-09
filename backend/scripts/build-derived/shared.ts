@@ -29,6 +29,19 @@ export function openDb(): Database.Database {
 export function writeIndex(name: string, data: unknown) {
   fs.mkdirSync(INDEXES_DIR, { recursive: true });
   const filePath = path.join(INDEXES_DIR, name);
-  fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf-8');
-  console.log('  →', name);
+  const json = JSON.stringify(data, null, 2);
+  let lastErr: unknown;
+  for (let attempt = 0; attempt < 12; attempt++) {
+    try {
+      fs.writeFileSync(filePath, json, 'utf-8');
+      console.log('  →', name);
+      return;
+    } catch (e) {
+      lastErr = e;
+      const code = (e as NodeJS.ErrnoException)?.code;
+      if (code !== 'UNKNOWN' && code !== 'EPERM' && code !== 'EBUSY') throw e;
+      Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 80 * (attempt + 1));
+    }
+  }
+  throw lastErr;
 }

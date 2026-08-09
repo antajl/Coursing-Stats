@@ -14,6 +14,10 @@ import { parseCoursingHTML } from '../../parsers/coursing/index'
 import { parseBzmpHTML } from '../../parsers/bzmp/index'
 import { parseRacingHTML } from '../../parsers/racing/index'
 import { parseLegacyFullResultsHTML } from '../../parsers/legacy-full-results/index'
+import {
+  detectLegacyFullResultsKind,
+  parseLegacyFullResultsRacingHTML,
+} from '../../parsers/legacy-full-results/racing'
 import { normalizeBreed, normalizeDogName } from '../../parsers/coursing/utils'
 import {
   ROOT,
@@ -170,6 +174,34 @@ function maxDogId(dogs: Map<string, DogPayload>): number {
   return max
 }
 
+/** Global max results[].id across competitions/ — avoids INSERT OR REPLACE collisions in load-sqlite. */
+function maxResultIdAcrossCompetitions(): number {
+  const root = path.join(V1, 'competitions')
+  let max = 0
+  const walk = (dir: string) => {
+    if (!fs.existsSync(dir)) return
+    for (const ent of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, ent.name)
+      if (ent.isDirectory()) walk(full)
+      else if (ent.name.endsWith('.json')) {
+        try {
+          const doc = JSON.parse(fs.readFileSync(full, 'utf-8')) as {
+            results?: Array<{ id?: number | null }>
+          }
+          for (const r of doc.results ?? []) {
+            const id = Number(r.id)
+            if (Number.isFinite(id)) max = Math.max(max, id)
+          }
+        } catch {
+          /* skip unreadable */
+        }
+      }
+    }
+  }
+  walk(root)
+  return max
+}
+
 function saveDog(dog: DogPayload, exportedAt: string) {
   const payload = { schema: 'coursing-stats/dog-v1', exported_at: exportedAt, ...dog }
   try {
@@ -228,7 +260,22 @@ async function findExistingByDate(
       const filePath = path.join(monthDir, file)
       const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
       const ev = data.event
-      if (!ev || ev.date_start !== dateStart) continue
+      if (!ev) continue
+
+      const evUrl = String(ev.results_url || '').toLowerCase()
+      const urlHit =
+        !!urlBase &&
+        (evUrl.includes(urlBase) || evUrl.includes(urlBase.replace(/^full_results_/, '')))
+
+      const sameDate = ev.date_start === dateStart || ev.date_end === dateStart
+      let nearDate = false
+      if (opts?.overwrite && typeof ev.date_start === 'string') {
+        const a = Date.parse(ev.date_start)
+        const b = Date.parse(dateStart)
+        nearDate = Number.isFinite(a) && Number.isFinite(b) && Math.abs(a - b) <= 2 * 86400000
+      }
+      if (!urlHit && !sameDate && !nearDate) continue
+
       const hasResults = (data.result_count || data.results?.length || 0) > 0
       if (hasResults && !opts?.overwrite) continue
 
@@ -239,9 +286,8 @@ async function findExistingByDate(
       }
       const src = String(data.source || '')
       if (src.includes('archive-full-results')) score += 5
-      if (urlBase && String(ev.results_url || '').toLowerCase().includes(urlBase.replace(/^full_results_/, ''))) {
-        score += 8
-      }
+      if (urlHit) score += 15
+      if (sameDate) score += 3
       if (score < 10) continue
       candidates.push({ id: Number(ev.id), filePath, data, score })
     }
@@ -258,6 +304,8 @@ async function main() {
   fs.mkdirSync(OUT_HTML, { recursive: true })
   const dogsByKey = DRY_RUN ? new Map<string, DogPayload>() : loadDogsByKey()
   let nextDogId = DRY_RUN ? 900000 : maxDogId(dogsByKey) + 1
+  let nextResultId = DRY_RUN ? 9_000_000 : maxResultIdAcrossCompetitions() + 1
+  console.log(`nextDogId=${nextDogId} nextResultId=${nextResultId}`)
   let nextEventId = DRY_RUN ? 900000 : allocateSportEventId()
   const exportedAt = new Date().toISOString()
   const report: any[] = []
@@ -294,17 +342,34 @@ async function main() {
     const titleGuess = extractTitleFromHtml(html) || base.replace(/_/g, ' ')
     let parserType = guessParserType(base, html)
 
-    // Prefer legacy Full_Results layout (archive era); fall back to modern parsers
+    // Prefer legacy Full_Results layout (archive era); fall back to modern parsers.
+    // Racing-time Full_Results must NOT go through coursing-family adapter (misreads times as scores).
     let parsedRows: any[] = []
-    let legacyMeta: ReturnType<typeof parseLegacyFullResultsHTML> | null = null
+    let legacyMeta: {
+      title: string | null
+      date_start: string | null
+      date_end: string | null
+      location: string | null
+      results: any[]
+    } | null = null
     let parseError: string | null = null
-    let parseSource: 'legacy' | 'modern' | 'none' = 'none'
+    let parseSource: 'legacy' | 'legacy-racing' | 'modern' | 'none' = 'none'
+    const legacyKind = detectLegacyFullResultsKind(html)
 
     try {
-      legacyMeta = parseLegacyFullResultsHTML(html)
-      if (legacyMeta.results.length > 0) {
-        parsedRows = legacyMeta.results
-        parseSource = 'legacy'
+      if (legacyKind === 'racing-time') {
+        legacyMeta = parseLegacyFullResultsRacingHTML(html)
+        if (legacyMeta.results.length > 0) {
+          parsedRows = legacyMeta.results
+          parseSource = 'legacy-racing'
+          parserType = 'racing'
+        }
+      } else {
+        legacyMeta = parseLegacyFullResultsHTML(html)
+        if (legacyMeta.results.length > 0) {
+          parsedRows = legacyMeta.results
+          parseSource = 'legacy'
+        }
       }
     } catch (e) {
       parseError = (e as Error).message
@@ -338,14 +403,31 @@ async function main() {
       dateGuess
     const dateEnd = legacyMeta?.date_end || null
     const year = Number(String(dateStart).slice(0, 4))
-    const titleFinal = legacyMeta?.title || titleGuess
+    let titleFinal = legacyMeta?.title || titleGuess
+    // Wayback nav chrome sometimes becomes the «title»
+    if (/главная страница/i.test(titleFinal || '')) {
+      const better = extractTitleFromHtml(html)
+      if (better && !/главная страница|полные результаты соревнования$/i.test(better)) {
+        titleFinal = better
+      } else {
+        const m = html.match(
+          /(Чемпионат[^<]{10,120}|Кубок[^<]{10,120}|Национальн[^<]{10,120}|Региональн[^<]{10,120}|Бега[^<]{10,120})/i,
+        )
+        if (m) titleFinal = m[1].replace(/\s+/g, ' ').trim()
+      }
+    }
     const locationFinal = legacyMeta?.location || null
     // Refine type from header/title after legacy parse
     {
       const blob = `${titleFinal} ${base}`.toLowerCase()
-      if (blob.includes('bega') || blob.includes('бега')) parserType = 'racing'
-      else if (blob.includes('бзмп') || blob.includes('механическ')) parserType = 'bzmp'
-      else if (blob.includes('курсинг')) parserType = 'coursing'
+      if (parseSource === 'legacy-racing') {
+        parserType = 'racing'
+      } else if (blob.includes('курсинг') || parseSource === 'legacy') {
+        // Judge-scored Full_Results (incl. «бега … (курсинг) by_points»)
+        parserType = blob.includes('бзмп') ? 'bzmp' : 'coursing'
+      } else if (blob.includes('bega') || blob.includes('бега')) {
+        parserType = 'racing'
+      } else if (blob.includes('бзмп') || blob.includes('механическ')) parserType = 'bzmp'
     }
 
     const existing =
@@ -386,11 +468,17 @@ async function main() {
       year,
       date_start: dateStart,
       date_end: dateEnd ?? prev?.event?.date_end ?? null,
-      rank_label: prev?.event?.rank_label || titleFinal,
+      rank_label:
+        prev?.event?.rank_label && !/главная страница/i.test(String(prev.event.rank_label))
+          ? prev.event.rank_label
+          : titleFinal,
       event_type: parserType,
       competition_kind: prev?.event?.competition_kind ?? null,
       competition_type: prev?.event?.competition_type ?? null,
-      title: prev?.event?.title || titleFinal,
+      title:
+        prev?.event?.title && !/главная страница/i.test(String(prev.event.title))
+          ? prev.event.title
+          : titleFinal,
       host_club: prev?.event?.host_club ?? null,
       region: prev?.event?.region ?? null,
       location: prev?.event?.location || locationFinal,
@@ -472,17 +560,17 @@ async function main() {
         if (dogDirty && !DRY_RUN) saveDog(dog, exportedAt)
 
         competitionResults.push({
-          id: competitionResults.length + 1,
+          id: nextResultId++,
           event_id: eventId,
           dog_id: dog?.id ?? null,
           breed_class: row.breed_class ?? null,
           catalog_no: row.catalog_no ?? null,
           placement: row.placement ?? null,
           total_score: row.total_score ?? row.grand_total ?? null,
-          judge_count: row.judge_count ?? 2,
+          judge_count: row.judge_count ?? (parserType === 'racing' ? 0 : 2),
           qualification: row.qualification ?? '',
           vc: row.vc ?? '',
-          status: row.status ?? null,
+          status: row.status ?? 'finished',
           raw_scores_json: row.raw_scores_json ?? row.heats ?? null,
           raw_text: row.raw_text ?? '',
           judges: event.judges,

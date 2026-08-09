@@ -109,7 +109,20 @@ export function competitionRelPath(event: Row, eventId: number): string {
 
 export function writeJson(filePath: string, data: unknown) {
   fs.mkdirSync(path.dirname(filePath), { recursive: true });
-  fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf-8');
+  const json = JSON.stringify(data, null, 2);
+  let lastErr: unknown;
+  for (let attempt = 0; attempt < 12; attempt++) {
+    try {
+      fs.writeFileSync(filePath, json, 'utf-8');
+      return;
+    } catch (e) {
+      lastErr = e;
+      const code = (e as NodeJS.ErrnoException)?.code;
+      if (code !== 'UNKNOWN' && code !== 'EPERM' && code !== 'EBUSY') throw e;
+      Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 80 * (attempt + 1));
+    }
+  }
+  throw lastErr;
 }
 
 export function groupBy<T extends Row>(rows: T[], key: keyof T): Map<string, T[]> {

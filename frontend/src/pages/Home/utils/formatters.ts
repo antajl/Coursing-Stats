@@ -1,14 +1,15 @@
 import type { RankingTab, TopDog, CoursingRecord } from '../types'
 import type { ShowHomeTopDog } from '../../../lib/staticData'
 
+/** Russian plural: участие / участия / участий */
 export function formatStarts(n?: number | null): string | null {
   if (n == null || Number.isNaN(n)) return null
   const mod10 = n % 10
   const mod100 = n % 100
-  if (mod100 >= 11 && mod100 <= 14) return `${n} стартов`
-  if (mod10 === 1) return `${n} старт`
-  if (mod10 >= 2 && mod10 <= 4) return `${n} старта`
-  return `${n} стартов`
+  if (mod100 >= 11 && mod100 <= 14) return `${n} участий`
+  if (mod10 === 1) return `${n} участие`
+  if (mod10 >= 2 && mod10 <= 4) return `${n} участия`
+  return `${n} участий`
 }
 
 export function formatScore(value?: number | null): string {

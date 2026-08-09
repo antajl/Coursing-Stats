@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/competition-v1",
-  "exported_at": "2026-08-08T20:12:46.253Z",
-  "source": "archive-full-results-legacy",
+  "exported_at": "2026-08-08T22:47:59.771Z",
+  "source": "archive-full-results-legacy-racing",
   "event_id": 1556,
   "event": {
     "id": 1556,
@@ -20,7 +20,7 @@
     "results_url": "https://web.archive.org/web/20170818144457/http://procoursing.ru/Full_Results_2017_08.html",
     "confirmed": 0,
     "last_modified": null,
-    "scraped_at": "2026-08-08T20:12:46.253Z",
+    "scraped_at": "2026-08-08T22:47:59.771Z",
     "telegram_url": null,
     "full_title": null,
     "event_date": "2017-08-13",
@@ -32,62 +32,37 @@
   "result_count": 58,
   "results": [
     {
-      "id": 1,
+      "id": 22977,
       "event_id": 1556,
       "dog_id": 9962,
       "breed_class": "Басенджи - 2 - Микс",
       "catalog_no": 1,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 2,
+      "total_score": 26.27,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 8,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  2,
-                  null,
-                  null,
-                  15,
-                  3
-                ],
-                "sum": 20
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 8,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 26.27,
+            "speed_kmh": null
           },
           {
-            "heat_number": 2,
-            "bib_number": 28.48,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  2
-                ],
-                "sum": 2
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 15,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 28.48,
+            "speed_kmh": null
           }
-        ]
+        ],
+        "grand_total": 26.27,
+        "normalized_score": 26.27,
+        "format": "racing"
       },
       "raw_text": "1 | Басенджи | 2 | Кобели | AYKO PICH | 8 | 2 |  | 26,27 | 15 | 3 |  | 28,48 |  |  |  |  | 2 | CC | ",
       "judges": null,
@@ -104,62 +79,37 @@
       }
     },
     {
-      "id": 2,
+      "id": 22978,
       "event_id": 1556,
       "dog_id": 9939,
       "breed_class": "Басенджи - 2 - Микс",
       "catalog_no": 2,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "",
-      "status": null,
+      "placement": 1,
+      "total_score": 25.8,
+      "judge_count": 0,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 8,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  1,
-                  null,
-                  null,
-                  15,
-                  1
-                ],
-                "sum": 17
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 8,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 25.8,
+            "speed_kmh": null
           },
           {
-            "heat_number": 2,
-            "bib_number": 28.37,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  1
-                ],
-                "sum": 1
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 15,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 28.37,
+            "speed_kmh": null
           }
-        ]
+        ],
+        "grand_total": 25.8,
+        "normalized_score": 25.8,
+        "format": "racing"
       },
       "raw_text": "2 | Басенджи | 2 | Кобели | BBVADDIN BONGANI BAHA | 8 | 1 |  | 25,80 | 15 | 1 |  | 28,37 |  |  |  |  | 1 | CC | CACL",
       "judges": null,
@@ -176,62 +126,37 @@
       }
     },
     {
-      "id": 3,
+      "id": 22979,
       "event_id": 1556,
       "dog_id": 9808,
       "breed_class": "Басенджи - 2 - Микс",
       "catalog_no": 3,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 3,
+      "total_score": 26.16,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 8,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  3,
-                  null,
-                  null,
-                  15,
-                  2
-                ],
-                "sum": 20
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 8,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 26.16,
+            "speed_kmh": null
           },
           {
-            "heat_number": 2,
-            "bib_number": 28.93,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  3
-                ],
-                "sum": 3
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 15,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 28.93,
+            "speed_kmh": null
           }
-        ]
+        ],
+        "grand_total": 26.16,
+        "normalized_score": 26.16,
+        "format": "racing"
       },
       "raw_text": "3 | Басенджи | 2 | Кобели | Salonga Vasco da Gama | 8 | 3 |  | 26,16 | 15 | 2 |  | 28,93 |  |  |  |  | 3 | CC | ",
       "judges": null,
@@ -248,62 +173,37 @@
       }
     },
     {
-      "id": 4,
+      "id": 22980,
       "event_id": 1556,
       "dog_id": 10013,
       "breed_class": "Басенджи - 2 - Микс",
       "catalog_no": 4,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 4,
+      "total_score": 26.71,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 8,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  4,
-                  null,
-                  null,
-                  15,
-                  4
-                ],
-                "sum": 23
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 8,
+            "bib_number": 4,
+            "bib_color": "black",
+            "time": 26.71,
+            "speed_kmh": null
           },
           {
-            "heat_number": 2,
-            "bib_number": 29.45,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  4
-                ],
-                "sum": 4
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 15,
+            "bib_number": 4,
+            "bib_color": "black",
+            "time": 29.45,
+            "speed_kmh": null
           }
-        ]
+        ],
+        "grand_total": 26.71,
+        "normalized_score": 26.71,
+        "format": "racing"
       },
       "raw_text": "4 | Басенджи | 2 | Суки | Тим Спирит Принцесса Тана | 8 | 4 |  | 26,71 | 15 | 4 |  | 29,45 |  |  |  |  | 4 | CC | ",
       "judges": null,
@@ -320,19 +220,22 @@
       }
     },
     {
-      "id": 5,
+      "id": 22981,
       "event_id": 1556,
       "dog_id": 10014,
       "breed_class": "Неприбывшие участники",
       "catalog_no": 5,
       "placement": null,
       "total_score": null,
-      "judge_count": 2,
+      "judge_count": 0,
       "qualification": "",
       "vc": "",
       "status": "dns",
       "raw_scores_json": {
-        "heats": []
+        "heats": [],
+        "grand_total": null,
+        "normalized_score": null,
+        "format": "racing"
       },
       "raw_text": "5 | Басенджи | 1 | Кобели | Гезан Гореденна |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ",
       "judges": null,
@@ -349,45 +252,36 @@
       }
     },
     {
-      "id": 6,
+      "id": 22982,
       "event_id": 1556,
       "dog_id": 10015,
       "breed_class": "Левретка - 2 - Суки",
       "catalog_no": 6,
       "placement": null,
       "total_score": null,
-      "judge_count": 2,
+      "judge_count": 0,
       "qualification": "",
       "vc": "",
-      "status": null,
+      "status": "disqualified",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 9,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  1,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 1
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 9,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Сход с трассы"
           }
-        ]
+        ],
+        "grand_total": null,
+        "normalized_score": null,
+        "format": "racing"
       },
       "raw_text": "6 | Левретка | 2 | Суки | House of Hounds Genivieva | 9 | 1 |  | Сход с трассы |  |  |  |  |  |  |  |  |  |  | ",
       "judges": null,
-      "status_reason": null,
+      "status_reason": "Сход с трассы",
       "dog_key": "house-of-hounds-genivieva--левретка",
       "dog": {
         "id": 10015,
@@ -400,45 +294,36 @@
       }
     },
     {
-      "id": 7,
+      "id": 22983,
       "event_id": 1556,
       "dog_id": 9970,
       "breed_class": "Левретка - 2 - Суки",
       "catalog_no": 7,
       "placement": null,
       "total_score": null,
-      "judge_count": 2,
+      "judge_count": 0,
       "qualification": "",
       "vc": "",
-      "status": null,
+      "status": "disqualified",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 9,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  2,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 2
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 9,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Вход в круг"
           }
-        ]
+        ],
+        "grand_total": null,
+        "normalized_score": null,
+        "format": "racing"
       },
       "raw_text": "7 | Левретка | 2 | Суки | HOUSE OF HOUNDS NAOMI | 9 | 2 |  | Вход в круг |  |  |  |  |  |  |  |  |  |  | ",
       "judges": null,
-      "status_reason": null,
+      "status_reason": "Вход в круг",
       "dog_key": "house-of-hounds-naomi--левретка",
       "dog": {
         "id": 9970,
@@ -451,62 +336,30 @@
       }
     },
     {
-      "id": 8,
+      "id": 22984,
       "event_id": 1556,
       "dog_id": 10016,
       "breed_class": "Левретка - 2 - Суки",
       "catalog_no": 8,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "",
-      "status": null,
+      "placement": 1,
+      "total_score": 29.75,
+      "judge_count": 0,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 9,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  3,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 3
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
-          },
-          {
-            "heat_number": 2,
-            "bib_number": null,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  1
-                ],
-                "sum": 1
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 9,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 29.75,
+            "speed_kmh": null
           }
-        ]
+        ],
+        "grand_total": 29.75,
+        "normalized_score": 29.75,
+        "format": "racing"
       },
       "raw_text": "8 | Левретка | 2 | Суки | Munna | 9 | 3 |  | 29,75 |  |  |  |  |  |  |  |  | 1 | CC | CACL",
       "judges": null,
@@ -523,41 +376,39 @@
       }
     },
     {
-      "id": 9,
+      "id": 22985,
       "event_id": 1556,
       "dog_id": 10017,
       "breed_class": "Родезийский риджбек - 2 - Суки",
       "catalog_no": 9,
       "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "total_score": 39.31,
+      "judge_count": 0,
       "qualification": "",
       "vc": "",
-      "status": null,
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
             "heat_number": 1,
-            "bib_number": 1,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  2,
-                  null,
-                  null,
-                  11,
-                  2
-                ],
-                "sum": 15
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 39.31,
+            "speed_kmh": null
+          },
+          {
+            "heat_number": 11,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Снят"
           }
-        ]
+        ],
+        "grand_total": 39.31,
+        "normalized_score": 39.31,
+        "format": "racing"
       },
       "raw_text": "9 | Родезийский риджбек | 2 | Суки | DEYONGA GAYA MONIFA | 1 | 2 |  | 39,31 | 11 | 2 |  | Снят |  |  |  |  |  |  | ",
       "judges": null,
@@ -574,45 +425,36 @@
       }
     },
     {
-      "id": 10,
+      "id": 22986,
       "event_id": 1556,
       "dog_id": 9894,
       "breed_class": "Родезийский риджбек - 2 - Суки",
       "catalog_no": 10,
       "placement": null,
       "total_score": null,
-      "judge_count": 2,
+      "judge_count": 0,
       "qualification": "",
       "vc": "",
-      "status": null,
+      "status": "disqualified",
       "raw_scores_json": {
         "heats": [
           {
             "heat_number": 1,
             "bib_number": 1,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  1,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 1
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "bib_color": "red",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Вход в круг"
           }
-        ]
+        ],
+        "grand_total": null,
+        "normalized_score": null,
+        "format": "racing"
       },
       "raw_text": "10 | Родезийский риджбек | 2 | Суки | PODAROK IZ AFRIKI KITA JAZZ | 1 | 1 |  | Вход в круг |  |  |  |  |  |  |  |  |  |  | ",
       "judges": null,
-      "status_reason": null,
+      "status_reason": "Вход в круг",
       "dog_key": "podarok-iz-afriki-kita-jazz--родезиискии-риджбек",
       "dog": {
         "id": 9894,
@@ -625,45 +467,36 @@
       }
     },
     {
-      "id": 11,
+      "id": 22987,
       "event_id": 1556,
       "dog_id": 9942,
       "breed_class": "Родезийский риджбек - 2 - Суки",
       "catalog_no": 11,
       "placement": null,
       "total_score": null,
-      "judge_count": 2,
+      "judge_count": 0,
       "qualification": "",
       "vc": "",
-      "status": null,
+      "status": "disqualified",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 2,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  1,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 1
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 2,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Вход в круг"
           }
-        ]
+        ],
+        "grand_total": null,
+        "normalized_score": null,
+        "format": "racing"
       },
       "raw_text": "11 | Родезийский риджбек | 2 | Суки | PODAROK IZ AFRIKI LAKESHA IMANI | 2 | 1 |  | Вход в круг |  |  |  |  |  |  |  |  |  |  | ",
       "judges": null,
-      "status_reason": null,
+      "status_reason": "Вход в круг",
       "dog_key": "podarok-iz-afriki-lakesha-imani--родезиискии-риджбек",
       "dog": {
         "id": 9942,
@@ -676,41 +509,39 @@
       }
     },
     {
-      "id": 12,
+      "id": 22988,
       "event_id": 1556,
       "dog_id": 9769,
       "breed_class": "Родезийский риджбек - 2 - Суки",
       "catalog_no": 12,
       "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "total_score": 39.92,
+      "judge_count": 0,
       "qualification": "",
       "vc": "",
-      "status": null,
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
             "heat_number": 1,
-            "bib_number": 1,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  3,
-                  null,
-                  null,
-                  11,
-                  3
-                ],
-                "sum": 17
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 39.92,
+            "speed_kmh": null
+          },
+          {
+            "heat_number": 11,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Снят"
           }
-        ]
+        ],
+        "grand_total": 39.92,
+        "normalized_score": 39.92,
+        "format": "racing"
       },
       "raw_text": "12 | Родезийский риджбек | 2 | Суки | Sunhill Ridges Nola Adeola | 1 | 3 |  | 39,92 | 11 | 3 |  | Снят |  |  |  |  |  |  | ",
       "judges": null,
@@ -727,62 +558,37 @@
       }
     },
     {
-      "id": 13,
+      "id": 22989,
       "event_id": 1556,
       "dog_id": 9895,
       "breed_class": "Родезийский риджбек - 2 - Суки",
       "catalog_no": 13,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "",
-      "status": null,
+      "placement": 1,
+      "total_score": 36.61,
+      "judge_count": 0,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 2,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  3,
-                  null,
-                  null,
-                  11,
-                  1
-                ],
-                "sum": 15
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 2,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 39.28,
+            "speed_kmh": null
           },
           {
-            "heat_number": 2,
-            "bib_number": 36.61,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  1
-                ],
-                "sum": 1
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 11,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 36.61,
+            "speed_kmh": null
           }
-        ]
+        ],
+        "grand_total": 36.61,
+        "normalized_score": 36.61,
+        "format": "racing"
       },
       "raw_text": "13 | Родезийский риджбек | 2 | Суки | Подарок из Африки Якита Мокко | 2 | 3 |  | 39,28 | 11 | 1 |  | 36,61 |  |  |  |  | 1 | CC | CACL",
       "judges": null,
@@ -799,45 +605,36 @@
       }
     },
     {
-      "id": 14,
+      "id": 22990,
       "event_id": 1556,
       "dog_id": 9977,
       "breed_class": "Родезийский риджбек - 2 - Суки",
       "catalog_no": 14,
       "placement": null,
       "total_score": null,
-      "judge_count": 2,
+      "judge_count": 0,
       "qualification": "",
       "vc": "",
-      "status": null,
+      "status": "disqualified",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
+            "heat_number": 2,
             "bib_number": 2,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  2,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 2
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "bib_color": "blue",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Остановка"
           }
-        ]
+        ],
+        "grand_total": null,
+        "normalized_score": null,
+        "format": "racing"
       },
       "raw_text": "14 | Родезийский риджбек | 2 | Суки | Ридже'с Стар Орси Бютифул Гёл | 2 | 2 |  | Остановка |  |  |  |  |  |  |  |  |  |  | ",
       "judges": null,
-      "status_reason": null,
+      "status_reason": "Остановка",
       "dog_key": "риджес-стар-орси-бютифул-гел--родезиискии-риджбек",
       "dog": {
         "id": 9977,
@@ -850,45 +647,36 @@
       }
     },
     {
-      "id": 15,
+      "id": 22991,
       "event_id": 1556,
       "dog_id": 9979,
       "breed_class": "Русская псовая борзая - 2 - Кобели",
       "catalog_no": 15,
       "placement": null,
       "total_score": null,
-      "judge_count": 2,
+      "judge_count": 0,
       "qualification": "",
       "vc": "",
-      "status": null,
+      "status": "disqualified",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 3,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  2,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 2
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 3,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Агрессия"
           }
-        ]
+        ],
+        "grand_total": null,
+        "normalized_score": null,
+        "format": "racing"
       },
       "raw_text": "15 | Русская псовая борзая | 2 | Кобели | BURHAN BELOKUR | 3 | 2 |  | Агрессия |  |  |  |  |  |  |  |  |  |  | ",
       "judges": null,
-      "status_reason": null,
+      "status_reason": "Агрессия",
       "dog_key": "burhan-belokur--русская-псовая-борзая",
       "dog": {
         "id": 9979,
@@ -901,45 +689,36 @@
       }
     },
     {
-      "id": 16,
+      "id": 22992,
       "event_id": 1556,
       "dog_id": 10018,
       "breed_class": "Русская псовая борзая - 2 - Кобели",
       "catalog_no": 16,
       "placement": null,
       "total_score": null,
-      "judge_count": 2,
+      "judge_count": 0,
       "qualification": "",
       "vc": "",
-      "status": null,
+      "status": "disqualified",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
+            "heat_number": 3,
             "bib_number": 3,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  3,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 3
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "bib_color": "white",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Снята"
           }
-        ]
+        ],
+        "grand_total": null,
+        "normalized_score": null,
+        "format": "racing"
       },
       "raw_text": "16 | Русская псовая борзая | 2 | Кобели | LUNNAYA RADUGA BELYI MEDVED | 3 | 3 |  | Снята |  |  |  |  |  |  |  |  |  |  | ",
       "judges": null,
-      "status_reason": null,
+      "status_reason": "Снята",
       "dog_key": "lunnaya-raduga-belyi-medved--русская-псовая-борзая",
       "dog": {
         "id": 10018,
@@ -952,45 +731,36 @@
       }
     },
     {
-      "id": 17,
+      "id": 22993,
       "event_id": 1556,
       "dog_id": 10019,
       "breed_class": "Русская псовая борзая - 2 - Кобели",
       "catalog_no": 17,
       "placement": null,
       "total_score": null,
-      "judge_count": 2,
+      "judge_count": 0,
       "qualification": "",
       "vc": "",
-      "status": null,
+      "status": "disqualified",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 3,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  1,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 1
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 3,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Сход с трассы"
           }
-        ]
+        ],
+        "grand_total": null,
+        "normalized_score": null,
+        "format": "racing"
       },
       "raw_text": "17 | Русская псовая борзая | 2 | Кобели | Несказанный Свет Любый | 3 | 1 |  | Сход с трассы |  |  |  |  |  |  |  |  |  |  | ",
       "judges": null,
-      "status_reason": null,
+      "status_reason": "Сход с трассы",
       "dog_key": "несказанныи-свет-любыи--русская-псовая-борзая",
       "dog": {
         "id": 10019,
@@ -1003,62 +773,37 @@
       }
     },
     {
-      "id": 18,
+      "id": 22994,
       "event_id": 1556,
       "dog_id": 10020,
       "breed_class": "Русская псовая борзая - 2 - Суки",
       "catalog_no": 18,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "",
-      "status": null,
+      "placement": 1,
+      "total_score": 36.83,
+      "judge_count": 0,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 4,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  2,
-                  null,
-                  null,
-                  12,
-                  1
-                ],
-                "sum": 15
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 4,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 37.77,
+            "speed_kmh": null
           },
           {
-            "heat_number": 2,
-            "bib_number": 36.83,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  1
-                ],
-                "sum": 1
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 12,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 36.83,
+            "speed_kmh": null
           }
-        ]
+        ],
+        "grand_total": 36.83,
+        "normalized_score": 36.83,
+        "format": "racing"
       },
       "raw_text": "18 | Русская псовая борзая | 2 | Суки | LUNNAYA RADUGA AMBITZIA | 4 | 2 |  | 37,77 | 12 | 1 |  | 36,83 |  |  |  |  | 1 | CC | CACL",
       "judges": null,
@@ -1075,62 +820,37 @@
       }
     },
     {
-      "id": 19,
+      "id": 22995,
       "event_id": 1556,
       "dog_id": 10021,
       "breed_class": "Русская псовая борзая - 2 - Суки",
       "catalog_no": 19,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 2,
+      "total_score": 36.9,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 5,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  2,
-                  null,
-                  null,
-                  12,
-                  2
-                ],
-                "sum": 16
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 5,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 38.01,
+            "speed_kmh": null
           },
           {
-            "heat_number": 2,
-            "bib_number": 36.9,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  2
-                ],
-                "sum": 2
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 12,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 36.9,
+            "speed_kmh": null
           }
-        ]
+        ],
+        "grand_total": 36.9,
+        "normalized_score": 36.9,
+        "format": "racing"
       },
       "raw_text": "19 | Русская псовая борзая | 2 | Суки | LUNNAYA RADUGA BELAYA NOCH | 5 | 2 |  | 38,01 | 12 | 2 |  | 36,90 |  |  |  |  | 2 | CC | ",
       "judges": null,
@@ -1147,41 +867,39 @@
       }
     },
     {
-      "id": 20,
+      "id": 22996,
       "event_id": 1556,
       "dog_id": 9984,
       "breed_class": "Русская псовая борзая - 2 - Суки",
       "catalog_no": 20,
       "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "total_score": 38.63,
+      "judge_count": 0,
       "qualification": "",
       "vc": "",
-      "status": null,
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 4,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  1,
-                  null,
-                  null,
-                  12,
-                  3
-                ],
-                "sum": 16
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 4,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 38.63,
+            "speed_kmh": null
+          },
+          {
+            "heat_number": 12,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Сход с трассы"
           }
-        ]
+        ],
+        "grand_total": 38.63,
+        "normalized_score": 38.63,
+        "format": "racing"
       },
       "raw_text": "20 | Русская псовая борзая | 2 | Суки | Воля Вольная Гордая Русь | 4 | 1 |  | 38,63 | 12 | 3 |  | Сход с трассы |  |  |  |  |  |  | ",
       "judges": null,
@@ -1198,45 +916,36 @@
       }
     },
     {
-      "id": 21,
+      "id": 22997,
       "event_id": 1556,
       "dog_id": 9991,
       "breed_class": "Русская псовая борзая - 2 - Суки",
       "catalog_no": 21,
       "placement": null,
       "total_score": null,
-      "judge_count": 2,
+      "judge_count": 0,
       "qualification": "",
       "vc": "",
-      "status": null,
+      "status": "disqualified",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 5,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  1,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 1
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 5,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Сход с трассы"
           }
-        ]
+        ],
+        "grand_total": null,
+        "normalized_score": null,
+        "format": "racing"
       },
       "raw_text": "21 | Русская псовая борзая | 2 | Суки | Цвет-Калина от Борзых Никона | 5 | 1 |  | Сход с трассы |  |  |  |  |  |  |  |  |  |  | ",
       "judges": null,
-      "status_reason": null,
+      "status_reason": "Сход с трассы",
       "dog_key": "цвет-калина-от-борзых-никона--русская-псовая-борзая",
       "dog": {
         "id": 9991,
@@ -1249,41 +958,39 @@
       }
     },
     {
-      "id": 22,
+      "id": 22998,
       "event_id": 1556,
       "dog_id": 9910,
       "breed_class": "Русская псовая борзая - 2 - Суки",
       "catalog_no": 22,
       "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "total_score": 40.12,
+      "judge_count": 0,
       "qualification": "",
       "vc": "",
-      "status": null,
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
+            "heat_number": 4,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 40.12,
+            "speed_kmh": null
+          },
+          {
+            "heat_number": 12,
             "bib_number": 4,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  3,
-                  null,
-                  null,
-                  12,
-                  4
-                ],
-                "sum": 19
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "bib_color": "black",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Вход в круг"
           }
-        ]
+        ],
+        "grand_total": 40.12,
+        "normalized_score": 40.12,
+        "format": "racing"
       },
       "raw_text": "22 | Русская псовая борзая | 2 | Суки | Чарующая Ночь из Раздолья | 4 | 3 |  | 40,12 | 12 | 4 |  | Вход в круг |  |  |  |  |  |  | ",
       "judges": null,
@@ -1300,62 +1007,37 @@
       }
     },
     {
-      "id": 23,
+      "id": 22999,
       "event_id": 1556,
       "dog_id": 9914,
       "breed_class": "Салюки - 2 - Микс",
       "catalog_no": 23,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "",
-      "status": null,
+      "placement": 1,
+      "total_score": 33.62,
+      "judge_count": 0,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 7,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  1,
-                  null,
-                  null,
-                  14,
-                  1
-                ],
-                "sum": 16
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 7,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 33.62,
+            "speed_kmh": null
           },
           {
-            "heat_number": 2,
-            "bib_number": 33.92,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  1
-                ],
-                "sum": 1
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 14,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 33.92,
+            "speed_kmh": null
           }
-        ]
+        ],
+        "grand_total": 33.62,
+        "normalized_score": 33.62,
+        "format": "racing"
       },
       "raw_text": "23 | Салюки | 2 | Кобели | Dioskury Araks Allous | 7 | 1 |  | 33,62 | 14 | 1 |  | 33,92 |  |  |  |  | 1 | CC | CACL",
       "judges": null,
@@ -1372,45 +1054,36 @@
       }
     },
     {
-      "id": 24,
+      "id": 23000,
       "event_id": 1556,
       "dog_id": 9916,
       "breed_class": "Салюки - 2 - Микс",
       "catalog_no": 24,
       "placement": null,
       "total_score": null,
-      "judge_count": 2,
+      "judge_count": 0,
       "qualification": "",
       "vc": "",
-      "status": null,
+      "status": "disqualified",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 7,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  3,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 3
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 7,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Агрессия"
           }
-        ]
+        ],
+        "grand_total": null,
+        "normalized_score": null,
+        "format": "racing"
       },
       "raw_text": "24 | Салюки | 2 | Кобели | Dioskury Ra | 7 | 3 |  | Агрессия |  |  |  |  |  |  |  |  |  |  | ",
       "judges": null,
-      "status_reason": null,
+      "status_reason": "Агрессия",
       "dog_key": "dioskury-ra--салюки",
       "dog": {
         "id": 9916,
@@ -1423,62 +1096,37 @@
       }
     },
     {
-      "id": 25,
+      "id": 23001,
       "event_id": 1556,
       "dog_id": 10022,
       "breed_class": "Салюки - 2 - Микс",
       "catalog_no": 25,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 2,
+      "total_score": 34.09,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 7,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  4,
-                  null,
-                  null,
-                  14,
-                  2
-                ],
-                "sum": 20
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 7,
+            "bib_number": 4,
+            "bib_color": "black",
+            "time": 34.09,
+            "speed_kmh": null
           },
           {
-            "heat_number": 2,
-            "bib_number": 34.66,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  2
-                ],
-                "sum": 2
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 14,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 34.66,
+            "speed_kmh": null
           }
-        ]
+        ],
+        "grand_total": 34.09,
+        "normalized_score": 34.09,
+        "format": "racing"
       },
       "raw_text": "25 | Салюки | 2 | Кобели | Imran Eihab Mahsun | 7 | 4 |  | 34,09 | 14 | 2 |  | 34,66 |  |  |  |  | 2 | CC | ",
       "judges": null,
@@ -1495,41 +1143,39 @@
       }
     },
     {
-      "id": 26,
+      "id": 23002,
       "event_id": 1556,
       "dog_id": 9918,
       "breed_class": "Салюки - 2 - Микс",
       "catalog_no": 26,
       "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "total_score": 36.34,
+      "judge_count": 0,
       "qualification": "",
       "vc": "",
-      "status": null,
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 7,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  2,
-                  null,
-                  null,
-                  14,
-                  3
-                ],
-                "sum": 19
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 7,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 36.34,
+            "speed_kmh": null
+          },
+          {
+            "heat_number": 14,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Вход в круг"
           }
-        ]
+        ],
+        "grand_total": 36.34,
+        "normalized_score": 36.34,
+        "format": "racing"
       },
       "raw_text": "26 | Салюки | 2 | Суки | Диоскури Рара Кьяра | 7 | 2 |  | 36,34 | 14 | 3 |  | Вход в круг |  |  |  |  |  |  | ",
       "judges": null,
@@ -1546,45 +1192,36 @@
       }
     },
     {
-      "id": 27,
+      "id": 23003,
       "event_id": 1556,
       "dog_id": 9283,
       "breed_class": "Уиппет - 5 - Кобели",
       "catalog_no": 27,
       "placement": null,
       "total_score": null,
-      "judge_count": 2,
+      "judge_count": 0,
       "qualification": "",
       "vc": "",
-      "status": null,
+      "status": "disqualified",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 22,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  4,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 4
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 22,
+            "bib_number": 4,
+            "bib_color": "black",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Вход в круг"
           }
-        ]
+        ],
+        "grand_total": null,
+        "normalized_score": null,
+        "format": "racing"
       },
       "raw_text": "27 | Уиппет | 5 | Кобели | BATMAN NIGHT SHADOW | 22 | 4 |  | Вход в круг |  |  |  |  |  |  |  |  |  |  | ",
       "judges": null,
-      "status_reason": null,
+      "status_reason": "Вход в круг",
       "dog_key": "batman-night-shadow--уиппет",
       "dog": {
         "id": 9283,
@@ -1597,62 +1234,44 @@
       }
     },
     {
-      "id": 28,
+      "id": 23004,
       "event_id": 1556,
       "dog_id": 10023,
       "breed_class": "Уиппет - 5 - Кобели",
       "catalog_no": 28,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 3,
+      "total_score": 22.67,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 22,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  2,
-                  null,
-                  null,
-                  null,
-                  3
-                ],
-                "sum": 5
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 22,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 23.8,
+            "speed_kmh": null
           },
           {
-            "heat_number": 2,
-            "bib_number": 22.67,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  2,
-                  null,
-                  null,
-                  3
-                ],
-                "sum": 5
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 29,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 22.67,
+            "speed_kmh": null
+          },
+          {
+            "heat_number": 34,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 23.17,
+            "speed_kmh": null
           }
-        ]
+        ],
+        "grand_total": 22.67,
+        "normalized_score": 22.67,
+        "format": "racing"
       },
       "raw_text": "28 | Уиппет | 5 | Кобели | Black Jack | 22 | 2 |  | 23,80 | 29 | 3 |  | 22,67 | 34 | 2 |  | 23,17 | 3 | CC | ",
       "judges": null,
@@ -1669,62 +1288,37 @@
       }
     },
     {
-      "id": 29,
+      "id": 23005,
       "event_id": 1556,
       "dog_id": 10024,
       "breed_class": "Уиппет - 5 - Кобели",
       "catalog_no": 29,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 5,
+      "total_score": 23.49,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 22,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  1,
-                  null,
-                  null,
-                  null,
-                  2
-                ],
-                "sum": 3
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 22,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 23.49,
+            "speed_kmh": null
           },
           {
-            "heat_number": 2,
-            "bib_number": 23.52,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  5
-                ],
-                "sum": 5
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 29,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 23.52,
+            "speed_kmh": null
           }
-        ]
+        ],
+        "grand_total": 23.49,
+        "normalized_score": 23.49,
+        "format": "racing"
       },
       "raw_text": "29 | Уиппет | 5 | Кобели | Mystique's Treasure | 22 | 1 |  | 23,49 | 29 | 2 |  | 23,52 |  |  |  |  | 5 | CC | ",
       "judges": null,
@@ -1741,62 +1335,44 @@
       }
     },
     {
-      "id": 30,
+      "id": 23006,
       "event_id": 1556,
       "dog_id": 9931,
       "breed_class": "Уиппет - 5 - Кобели",
       "catalog_no": 30,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "",
-      "status": null,
+      "placement": 1,
+      "total_score": 22.77,
+      "judge_count": 0,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 21,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  2,
-                  null,
-                  null,
-                  null,
-                  1
-                ],
-                "sum": 3
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 21,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 23,
+            "speed_kmh": null
           },
           {
-            "heat_number": 2,
-            "bib_number": 23.32,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  4,
-                  null,
-                  null,
-                  1
-                ],
-                "sum": 5
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 29,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 23.32,
+            "speed_kmh": null
+          },
+          {
+            "heat_number": 34,
+            "bib_number": 4,
+            "bib_color": "black",
+            "time": 22.77,
+            "speed_kmh": null
           }
-        ]
+        ],
+        "grand_total": 22.77,
+        "normalized_score": 22.77,
+        "format": "racing"
       },
       "raw_text": "30 | Уиппет | 5 | Кобели | Valpain Pek Akira Hikaaru | 21 | 2 |  | 23,00 | 29 | 1 |  | 23,32 | 34 | 4 |  | 22,77 | 1 | CC | CACL",
       "judges": null,
@@ -1813,62 +1389,44 @@
       }
     },
     {
-      "id": 31,
+      "id": 23007,
       "event_id": 1556,
       "dog_id": 9952,
       "breed_class": "Уиппет - 5 - Кобели",
       "catalog_no": 31,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 2,
+      "total_score": 22.86,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 21,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  4,
-                  null,
-                  null,
-                  null,
-                  1
-                ],
-                "sum": 5
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 21,
+            "bib_number": 4,
+            "bib_color": "black",
+            "time": 23.11,
+            "speed_kmh": null
           },
           {
-            "heat_number": 2,
-            "bib_number": 22.86,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  3,
-                  null,
-                  null,
-                  2
-                ],
-                "sum": 5
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 30,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 22.86,
+            "speed_kmh": null
+          },
+          {
+            "heat_number": 34,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 23.1,
+            "speed_kmh": null
           }
-        ]
+        ],
+        "grand_total": 22.86,
+        "normalized_score": 22.86,
+        "format": "racing"
       },
       "raw_text": "31 | Уиппет | 5 | Кобели | Гром Прометей | 21 | 4 |  | 23,11 | 30 | 1 |  | 22,86 | 34 | 3 |  | 23,10 | 2 | CC | ",
       "judges": null,
@@ -1885,62 +1443,44 @@
       }
     },
     {
-      "id": 32,
+      "id": 23008,
       "event_id": 1556,
       "dog_id": 10025,
       "breed_class": "Уиппет - 5 - Кобели",
       "catalog_no": 32,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 4,
+      "total_score": 22.67,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 22,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  3,
-                  null,
-                  null,
-                  null,
-                  2
-                ],
-                "sum": 5
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 22,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 23.56,
+            "speed_kmh": null
           },
           {
-            "heat_number": 2,
-            "bib_number": 22.67,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  1,
-                  null,
-                  null,
-                  4
-                ],
-                "sum": 5
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 30,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 22.67,
+            "speed_kmh": null
+          },
+          {
+            "heat_number": 34,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 25.56,
+            "speed_kmh": null
           }
-        ]
+        ],
+        "grand_total": 22.67,
+        "normalized_score": 22.67,
+        "format": "racing"
       },
       "raw_text": "32 | Уиппет | 5 | Кобели | Диоскур Вектор Скорости | 22 | 3 |  | 23,56 | 30 | 2 |  | 22,67 | 34 | 1 |  | 25,56 | 4 | CC | ",
       "judges": null,
@@ -1957,62 +1497,37 @@
       }
     },
     {
-      "id": 33,
+      "id": 23009,
       "event_id": 1556,
       "dog_id": 9800,
       "breed_class": "Уиппет - 5 - Кобели",
       "catalog_no": 33,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 7,
+      "total_score": 24.3,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 21,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  3,
-                  null,
-                  null,
-                  null,
-                  4
-                ],
-                "sum": 7
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 21,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 24.3,
+            "speed_kmh": null
           },
           {
-            "heat_number": 2,
-            "bib_number": 25.49,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  7
-                ],
-                "sum": 7
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 29,
+            "bib_number": 4,
+            "bib_color": "black",
+            "time": 25.49,
+            "speed_kmh": null
           }
-        ]
+        ],
+        "grand_total": 24.3,
+        "normalized_score": 24.3,
+        "format": "racing"
       },
       "raw_text": "33 | Уиппет | 5 | Кобели | Лакшери Кин Квик Флэш | 21 | 3 |  | 24,30 | 29 | 4 |  | 25,49 |  |  |  |  | 7 | CC | ",
       "judges": null,
@@ -2029,62 +1544,37 @@
       }
     },
     {
-      "id": 34,
+      "id": 23010,
       "event_id": 1556,
       "dog_id": 9997,
       "breed_class": "Уиппет - 5 - Кобели",
       "catalog_no": 34,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 6,
+      "total_score": 23.86,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 21,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  1,
-                  null,
-                  null,
-                  null,
-                  3
-                ],
-                "sum": 4
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 21,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 23.86,
+            "speed_kmh": null
           },
           {
-            "heat_number": 2,
-            "bib_number": 24,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  6
-                ],
-                "sum": 6
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 30,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 24,
+            "speed_kmh": null
           }
-        ]
+        ],
+        "grand_total": 23.86,
+        "normalized_score": 23.86,
+        "format": "racing"
       },
       "raw_text": "34 | Уиппет | 5 | Кобели | РАЙЗИНГ САН | 21 | 1 |  | 23,86 | 30 | 3 |  | 24,00 |  |  |  |  | 6 | CC | ",
       "judges": null,
@@ -2101,62 +1591,44 @@
       }
     },
     {
-      "id": 35,
+      "id": 23011,
       "event_id": 1556,
       "dog_id": 10026,
       "breed_class": "Уиппет - 5 - Суки",
       "catalog_no": 35,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "",
-      "status": null,
+      "placement": 1,
+      "total_score": 23.64,
+      "judge_count": 0,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 24,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  3,
-                  null,
-                  null,
-                  null,
-                  2
-                ],
-                "sum": 5
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 24,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 24.44,
+            "speed_kmh": null
           },
           {
-            "heat_number": 2,
-            "bib_number": 24.15,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  4,
-                  null,
-                  null,
-                  1
-                ],
-                "sum": 5
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 31,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 24.15,
+            "speed_kmh": null
+          },
+          {
+            "heat_number": 35,
+            "bib_number": 4,
+            "bib_color": "black",
+            "time": 23.64,
+            "speed_kmh": null
           }
-        ]
+        ],
+        "grand_total": 23.64,
+        "normalized_score": 23.64,
+        "format": "racing"
       },
       "raw_text": "35 | Уиппет | 5 | Суки | Sylvianne's Undine | 24 | 3 |  | 24,44 | 31 | 2 |  | 24,15 | 35 | 4 |  | 23,64 | 1 | CC | CACL",
       "judges": null,
@@ -2173,62 +1645,44 @@
       }
     },
     {
-      "id": 36,
+      "id": 23012,
       "event_id": 1556,
       "dog_id": 9934,
       "breed_class": "Уиппет - 5 - Суки",
       "catalog_no": 36,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 4,
+      "total_score": 23.5,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 23,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  3,
-                  null,
-                  null,
-                  null,
-                  3
-                ],
-                "sum": 6
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 23,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 27.11,
+            "speed_kmh": null
           },
           {
-            "heat_number": 2,
-            "bib_number": 23.5,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  1,
-                  null,
-                  null,
-                  4
-                ],
-                "sum": 5
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 32,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 23.5,
+            "speed_kmh": null
+          },
+          {
+            "heat_number": 35,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 24.43,
+            "speed_kmh": null
           }
-        ]
+        ],
+        "grand_total": 23.5,
+        "normalized_score": 23.5,
+        "format": "racing"
       },
       "raw_text": "36 | Уиппет | 5 | Суки | Valpain Pek Akemi Hime | 23 | 3 |  | 27,11 | 32 | 3 |  | 23,50 | 35 | 1 |  | 24,43 | 4 | CC | ",
       "judges": null,
@@ -2245,19 +1699,22 @@
       }
     },
     {
-      "id": 37,
+      "id": 23013,
       "event_id": 1556,
       "dog_id": 9936,
       "breed_class": "Неприбывшие участники",
       "catalog_no": 37,
       "placement": null,
       "total_score": null,
-      "judge_count": 2,
+      "judge_count": 0,
       "qualification": "",
       "vc": "",
       "status": "dns",
       "raw_scores_json": {
-        "heats": []
+        "heats": [],
+        "grand_total": null,
+        "normalized_score": null,
+        "format": "racing"
       },
       "raw_text": "37 | Уиппет | 5 | Суки | Valpain Pek Anzu Hana |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ",
       "judges": null,
@@ -2274,62 +1731,37 @@
       }
     },
     {
-      "id": 38,
+      "id": 23014,
       "event_id": 1556,
       "dog_id": 9999,
       "breed_class": "Уиппет - 5 - Суки",
       "catalog_no": 38,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 6,
+      "total_score": 24.35,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 23,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  1,
-                  null,
-                  null,
-                  null,
-                  1
-                ],
-                "sum": 2
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 23,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 24.35,
+            "speed_kmh": null
           },
           {
-            "heat_number": 2,
-            "bib_number": 24.79,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  6
-                ],
-                "sum": 6
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 31,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 24.79,
+            "speed_kmh": null
           }
-        ]
+        ],
+        "grand_total": 24.35,
+        "normalized_score": 24.35,
+        "format": "racing"
       },
       "raw_text": "38 | Уиппет | 5 | Суки | VOLAR BLEK SHARC RAVENA | 23 | 1 |  | 24,35 | 31 | 1 |  | 24,79 |  |  |  |  | 6 | CC | ",
       "judges": null,
@@ -2346,62 +1778,44 @@
       }
     },
     {
-      "id": 39,
+      "id": 23015,
       "event_id": 1556,
       "dog_id": 10002,
       "breed_class": "Уиппет - 5 - Суки",
       "catalog_no": 39,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 2,
+      "total_score": 23.84,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 24,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  2,
-                  null,
-                  null,
-                  null,
-                  1
-                ],
-                "sum": 3
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 24,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 24.37,
+            "speed_kmh": null
           },
           {
-            "heat_number": 2,
-            "bib_number": 23.99,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  3,
-                  null,
-                  null,
-                  2
-                ],
-                "sum": 5
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 32,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 23.99,
+            "speed_kmh": null
+          },
+          {
+            "heat_number": 35,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 23.84,
+            "speed_kmh": null
           }
-        ]
+        ],
+        "grand_total": 23.84,
+        "normalized_score": 23.84,
+        "format": "racing"
       },
       "raw_text": "39 | Уиппет | 5 | Суки | Whippolly Illiria | 24 | 2 |  | 24,37 | 32 | 1 |  | 23,99 | 35 | 3 |  | 23,84 | 2 | CC | ",
       "judges": null,
@@ -2418,62 +1832,37 @@
       }
     },
     {
-      "id": 40,
+      "id": 23016,
       "event_id": 1556,
       "dog_id": 10027,
       "breed_class": "Уиппет - 5 - Суки",
       "catalog_no": 40,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 5,
+      "total_score": 24.21,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 24,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  1,
-                  null,
-                  null,
-                  null,
-                  3
-                ],
-                "sum": 4
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 24,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 24.95,
+            "speed_kmh": null
           },
           {
-            "heat_number": 2,
-            "bib_number": 24.21,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  5
-                ],
-                "sum": 5
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 31,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 24.21,
+            "speed_kmh": null
           }
-        ]
+        ],
+        "grand_total": 24.21,
+        "normalized_score": 24.21,
+        "format": "racing"
       },
       "raw_text": "40 | Уиппет | 5 | Суки | WHIPPOLLY ISIDORA | 24 | 1 |  | 24,95 | 31 | 3 |  | 24,21 |  |  |  |  | 5 | CC | ",
       "judges": null,
@@ -2490,62 +1879,44 @@
       }
     },
     {
-      "id": 41,
+      "id": 23017,
       "event_id": 1556,
       "dog_id": 10028,
       "breed_class": "Уиппет - 5 - Суки",
       "catalog_no": 41,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 3,
+      "total_score": 23.67,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 23,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  2,
-                  null,
-                  null,
-                  null,
-                  2
-                ],
-                "sum": 4
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 23,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 24.45,
+            "speed_kmh": null
           },
           {
-            "heat_number": 2,
-            "bib_number": 23.67,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  2,
-                  null,
-                  null,
-                  3
-                ],
-                "sum": 5
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 32,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 23.67,
+            "speed_kmh": null
+          },
+          {
+            "heat_number": 35,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 24.21,
+            "speed_kmh": null
           }
-        ]
+        ],
+        "grand_total": 23.67,
+        "normalized_score": 23.67,
+        "format": "racing"
       },
       "raw_text": "41 | Уиппет | 5 | Суки | Лакшери Кармен Лину Ранне | 23 | 2 |  | 24,45 | 32 | 2 |  | 23,67 | 35 | 2 |  | 24,21 | 3 | CC | ",
       "judges": null,
@@ -2562,62 +1933,37 @@
       }
     },
     {
-      "id": 42,
+      "id": 23018,
       "event_id": 1556,
       "dog_id": 9792,
       "breed_class": "Уиппет - 2 - Кобели",
       "catalog_no": 42,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 4,
+      "total_score": 23.61,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 20,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  1,
-                  null,
-                  null,
-                  null,
-                  2
-                ],
-                "sum": 3
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 20,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 24.32,
+            "speed_kmh": null
           },
           {
-            "heat_number": 2,
-            "bib_number": 23.61,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  4
-                ],
-                "sum": 4
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 28,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 23.61,
+            "speed_kmh": null
           }
-        ]
+        ],
+        "grand_total": 23.61,
+        "normalized_score": 23.61,
+        "format": "racing"
       },
       "raw_text": "42 | Уиппет | 2 | Кобели | Argus-Eyed Iris Dneprovskaya Piranya | 20 | 1 |  | 24,32 | 28 | 2 |  | 23,61 |  |  |  |  | 4 | CC | ",
       "judges": null,
@@ -2634,62 +1980,37 @@
       }
     },
     {
-      "id": 43,
+      "id": 23019,
       "event_id": 1556,
       "dog_id": 10004,
       "breed_class": "Уиппет - 2 - Кобели",
       "catalog_no": 43,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 2,
+      "total_score": 23.05,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 20,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  4,
-                  null,
-                  null,
-                  null,
-                  3
-                ],
-                "sum": 7
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 20,
+            "bib_number": 4,
+            "bib_color": "black",
+            "time": 24.45,
+            "speed_kmh": null
           },
           {
-            "heat_number": 2,
-            "bib_number": 23.05,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  2
-                ],
-                "sum": 2
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 28,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 23.05,
+            "speed_kmh": null
           }
-        ]
+        ],
+        "grand_total": 23.05,
+        "normalized_score": 23.05,
+        "format": "racing"
       },
       "raw_text": "43 | Уиппет | 2 | Кобели | BLUE WIND OF TRIUMPH | 20 | 4 |  | 24,45 | 28 | 3 |  | 23,05 |  |  |  |  | 2 | CC | ",
       "judges": null,
@@ -2706,62 +2027,37 @@
       }
     },
     {
-      "id": 44,
+      "id": 23020,
       "event_id": 1556,
       "dog_id": 9453,
       "breed_class": "Уиппет - 2 - Кобели",
       "catalog_no": 44,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "",
-      "status": null,
+      "placement": 1,
+      "total_score": 22.83,
+      "judge_count": 0,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 20,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  3,
-                  null,
-                  null,
-                  null,
-                  1
-                ],
-                "sum": 4
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 20,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 23.34,
+            "speed_kmh": null
           },
           {
-            "heat_number": 2,
-            "bib_number": 22.83,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  1
-                ],
-                "sum": 1
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 28,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 22.83,
+            "speed_kmh": null
           }
-        ]
+        ],
+        "grand_total": 22.83,
+        "normalized_score": 22.83,
+        "format": "racing"
       },
       "raw_text": "44 | Уиппет | 2 | Кобели | TATYANIN DEN VERNIY | 20 | 3 |  | 23,34 | 28 | 1 |  | 22,83 |  |  |  |  | 1 | CC | CACL",
       "judges": null,
@@ -2778,62 +2074,37 @@
       }
     },
     {
-      "id": 45,
+      "id": 23021,
       "event_id": 1556,
       "dog_id": 9793,
       "breed_class": "Уиппет - 2 - Кобели",
       "catalog_no": 45,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 3,
+      "total_score": 23.45,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 20,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  2,
-                  null,
-                  null,
-                  null,
-                  4
-                ],
-                "sum": 6
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 20,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 25.63,
+            "speed_kmh": null
           },
           {
-            "heat_number": 2,
-            "bib_number": 23.45,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  3
-                ],
-                "sum": 3
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 28,
+            "bib_number": 4,
+            "bib_color": "black",
+            "time": 23.45,
+            "speed_kmh": null
           }
-        ]
+        ],
+        "grand_total": 23.45,
+        "normalized_score": 23.45,
+        "format": "racing"
       },
       "raw_text": "45 | Уиппет | 2 | Кобели | Сладкий Ветер Степей | 20 | 2 |  | 25,63 | 28 | 4 |  | 23,45 |  |  |  |  | 3 | CC | ",
       "judges": null,
@@ -2850,62 +2121,46 @@
       }
     },
     {
-      "id": 46,
+      "id": 23022,
       "event_id": 1556,
       "dog_id": 10029,
       "breed_class": "Уиппет - 2 - Суки",
       "catalog_no": 46,
       "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "total_score": 23.03,
+      "judge_count": 0,
       "qualification": "",
       "vc": "",
-      "status": null,
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 18,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  1,
-                  null,
-                  null,
-                  null,
-                  1
-                ],
-                "sum": 2
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 18,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 23.03,
+            "speed_kmh": null
           },
           {
-            "heat_number": 2,
-            "bib_number": 24.17,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  1,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 1
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 25,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 24.17,
+            "speed_kmh": null
+          },
+          {
+            "heat_number": 33,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Сошёл"
           }
-        ]
+        ],
+        "grand_total": 23.03,
+        "normalized_score": 23.03,
+        "format": "racing"
       },
       "raw_text": "46 | Уиппет | 2 | Суки | BAFFI BLIZZARD BLACK | 18 | 1 |  | 23,03 | 25 | 1 |  | 24,17 | 33 | 1 |  | Сошёл |  |  | ",
       "judges": null,
@@ -2922,62 +2177,37 @@
       }
     },
     {
-      "id": 47,
+      "id": 23023,
       "event_id": 1556,
       "dog_id": 9869,
       "breed_class": "Уиппет - 2 - Суки",
       "catalog_no": 47,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 6,
+      "total_score": 24.18,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 17,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  1,
-                  null,
-                  null,
-                  null,
-                  3
-                ],
-                "sum": 4
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 17,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 24.18,
+            "speed_kmh": null
           },
           {
-            "heat_number": 2,
-            "bib_number": 24.89,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  6
-                ],
-                "sum": 6
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 26,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 24.89,
+            "speed_kmh": null
           }
-        ]
+        ],
+        "grand_total": 24.18,
+        "normalized_score": 24.18,
+        "format": "racing"
       },
       "raw_text": "47 | Уиппет | 2 | Суки | Classic N Tahari Beuaty at Masaru | 17 | 1 |  | 24,18 | 26 | 3 |  | 24,89 |  |  |  |  | 6 | CC | ",
       "judges": null,
@@ -2994,62 +2224,44 @@
       }
     },
     {
-      "id": 48,
+      "id": 23024,
       "event_id": 1556,
       "dog_id": 10030,
       "breed_class": "Уиппет - 2 - Суки",
       "catalog_no": 48,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 2,
+      "total_score": 23.52,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 17,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  3,
-                  null,
-                  null,
-                  null,
-                  2
-                ],
-                "sum": 5
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 17,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 23.52,
+            "speed_kmh": null
           },
           {
-            "heat_number": 2,
-            "bib_number": 23.75,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  4,
-                  null,
-                  null,
-                  2
-                ],
-                "sum": 6
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 26,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 23.75,
+            "speed_kmh": null
+          },
+          {
+            "heat_number": 33,
+            "bib_number": 4,
+            "bib_color": "black",
+            "time": 23.58,
+            "speed_kmh": null
           }
-        ]
+        ],
+        "grand_total": 23.52,
+        "normalized_score": 23.52,
+        "format": "racing"
       },
       "raw_text": "48 | Уиппет | 2 | Суки | Gretta Fuerte | 17 | 3 |  | 23,52 | 26 | 2 |  | 23,75 | 33 | 4 |  | 23,58 | 2 | CC | ",
       "judges": null,
@@ -3066,45 +2278,36 @@
       }
     },
     {
-      "id": 49,
+      "id": 23025,
       "event_id": 1556,
       "dog_id": 9795,
       "breed_class": "Уиппет - 2 - Суки",
       "catalog_no": 49,
       "placement": null,
       "total_score": null,
-      "judge_count": 2,
+      "judge_count": 0,
       "qualification": "",
       "vc": "",
-      "status": null,
+      "status": "disqualified",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 17,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  2,
-                  null,
-                  null,
-                  null,
-                  null
-                ],
-                "sum": 2
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 17,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Сход с трассы"
           }
-        ]
+        ],
+        "grand_total": null,
+        "normalized_score": null,
+        "format": "racing"
       },
       "raw_text": "49 | Уиппет | 2 | Суки | Istoriya Lubvi Luxury Dove | 17 | 2 |  | Сход с трассы |  |  |  |  |  |  |  |  |  |  | ",
       "judges": null,
-      "status_reason": null,
+      "status_reason": "Сход с трассы",
       "dog_key": "istoriya-lubvi-luxury-dove--уиппет",
       "dog": {
         "id": 9795,
@@ -3117,62 +2320,37 @@
       }
     },
     {
-      "id": 50,
+      "id": 23026,
       "event_id": 1556,
       "dog_id": 10031,
       "breed_class": "Уиппет - 2 - Суки",
       "catalog_no": 50,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 7,
+      "total_score": 25.48,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 18,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  4,
-                  null,
-                  null,
-                  null,
-                  4
-                ],
-                "sum": 8
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 18,
+            "bib_number": 4,
+            "bib_color": "black",
+            "time": 25.58,
+            "speed_kmh": null
           },
           {
-            "heat_number": 2,
-            "bib_number": 25.48,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  7
-                ],
-                "sum": 7
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 25,
+            "bib_number": 4,
+            "bib_color": "black",
+            "time": 25.48,
+            "speed_kmh": null
           }
-        ]
+        ],
+        "grand_total": 25.48,
+        "normalized_score": 25.48,
+        "format": "racing"
       },
       "raw_text": "50 | Уиппет | 2 | Суки | My Little Universe | 18 | 4 |  | 25,58 | 25 | 4 |  | 25,48 |  |  |  |  | 7 | CC | ",
       "judges": null,
@@ -3189,62 +2367,44 @@
       }
     },
     {
-      "id": 51,
+      "id": 23027,
       "event_id": 1556,
       "dog_id": 9799,
       "breed_class": "Уиппет - 2 - Суки",
       "catalog_no": 51,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "",
-      "status": null,
+      "placement": 1,
+      "total_score": 23.06,
+      "judge_count": 0,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 18,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  2,
-                  null,
-                  null,
-                  null,
-                  1
-                ],
-                "sum": 3
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 18,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 23.3,
+            "speed_kmh": null
           },
           {
-            "heat_number": 2,
-            "bib_number": 23.27,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  2,
-                  null,
-                  null,
-                  1
-                ],
-                "sum": 3
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 26,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 23.27,
+            "speed_kmh": null
+          },
+          {
+            "heat_number": 33,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 23.06,
+            "speed_kmh": null
           }
-        ]
+        ],
+        "grand_total": 23.06,
+        "normalized_score": 23.06,
+        "format": "racing"
       },
       "raw_text": "51 | Уиппет | 2 | Суки | NIFTY RACING GIRL | 18 | 2 |  | 23,30 | 26 | 1 |  | 23,27 | 33 | 2 |  | 23,06 | 1 | CC | CACL",
       "judges": null,
@@ -3261,62 +2421,44 @@
       }
     },
     {
-      "id": 52,
+      "id": 23028,
       "event_id": 1556,
       "dog_id": 9796,
       "breed_class": "Уиппет - 2 - Суки",
       "catalog_no": 52,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 3,
+      "total_score": 23.46,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 17,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  4,
-                  null,
-                  null,
-                  null,
-                  2
-                ],
-                "sum": 6
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 17,
+            "bib_number": 4,
+            "bib_color": "black",
+            "time": 23.46,
+            "speed_kmh": null
           },
           {
-            "heat_number": 2,
-            "bib_number": 24.19,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  3,
-                  null,
-                  null,
-                  3
-                ],
-                "sum": 6
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 25,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 24.19,
+            "speed_kmh": null
+          },
+          {
+            "heat_number": 33,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 24.12,
+            "speed_kmh": null
           }
-        ]
+        ],
+        "grand_total": 23.46,
+        "normalized_score": 23.46,
+        "format": "racing"
       },
       "raw_text": "52 | Уиппет | 2 | Суки | VALPAIN PEK SANSA | 17 | 4 |  | 23,46 | 25 | 2 |  | 24,19 | 33 | 3 |  | 24,12 | 3 | CC | ",
       "judges": null,
@@ -3333,62 +2475,37 @@
       }
     },
     {
-      "id": 53,
+      "id": 23029,
       "event_id": 1556,
       "dog_id": 9956,
       "breed_class": "Уиппет - 2 - Суки",
       "catalog_no": 53,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 5,
+      "total_score": 23.54,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 18,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  3,
-                  null,
-                  null,
-                  null,
-                  3
-                ],
-                "sum": 6
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 18,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 23.54,
+            "speed_kmh": null
           },
           {
-            "heat_number": 2,
-            "bib_number": 23.76,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  5
-                ],
-                "sum": 5
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 25,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 23.76,
+            "speed_kmh": null
           }
-        ]
+        ],
+        "grand_total": 23.54,
+        "normalized_score": 23.54,
+        "format": "racing"
       },
       "raw_text": "53 | Уиппет | 2 | Суки | Грация Эмбер | 18 | 3 |  | 23,54 | 25 | 3 |  | 23,76 |  |  |  |  | 5 | CC | ",
       "judges": null,
@@ -3405,62 +2522,37 @@
       }
     },
     {
-      "id": 54,
+      "id": 23030,
       "event_id": 1556,
       "dog_id": 10032,
       "breed_class": "Уиппет - 1 - Микс",
       "catalog_no": 54,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
+      "placement": 1,
+      "total_score": 24.18,
+      "judge_count": 0,
+      "qualification": "Лучший юниор",
       "vc": "",
-      "status": null,
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 19,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  1,
-                  null,
-                  null,
-                  null,
-                  1
-                ],
-                "sum": 2
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 19,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 24.18,
+            "speed_kmh": null
           },
           {
-            "heat_number": 2,
-            "bib_number": 24.39,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  1
-                ],
-                "sum": 1
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 27,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 24.39,
+            "speed_kmh": null
           }
-        ]
+        ],
+        "grand_total": 24.18,
+        "normalized_score": 24.18,
+        "format": "racing"
       },
       "raw_text": "54 | Уиппет | 1 | Суки | LAVING BRIZ FLORENCE | 19 | 1 |  | 24,18 | 27 | 1 |  | 24,39 |  |  |  |  | 1 |  | Лучший юниор",
       "judges": null,
@@ -3477,62 +2569,37 @@
       }
     },
     {
-      "id": 55,
+      "id": 23031,
       "event_id": 1556,
       "dog_id": 10033,
       "breed_class": "Хортая борзая - 1 - Микс",
       "catalog_no": 55,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
+      "placement": 1,
+      "total_score": 36.02,
+      "judge_count": 0,
+      "qualification": "Лучший юниор",
       "vc": "",
-      "status": null,
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 6,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  1,
-                  null,
-                  null,
-                  13,
-                  1
-                ],
-                "sum": 15
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 6,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 36.3,
+            "speed_kmh": null
           },
           {
-            "heat_number": 2,
-            "bib_number": 36.02,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  1
-                ],
-                "sum": 1
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 13,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 36.02,
+            "speed_kmh": null
           }
-        ]
+        ],
+        "grand_total": 36.02,
+        "normalized_score": 36.02,
+        "format": "racing"
       },
       "raw_text": "55 | Хортая борзая | 1 | Кобели | Айс-Крим | 6 | 1 |  | 36,30 | 13 | 1 |  | 36,02 |  |  |  |  | 1 |  | Лучший юниор",
       "judges": null,
@@ -3549,62 +2616,37 @@
       }
     },
     {
-      "id": 56,
+      "id": 23032,
       "event_id": 1556,
       "dog_id": 10034,
       "breed_class": "Чирнеко дель Этна - 2 - Микс",
       "catalog_no": 56,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 2,
+      "total_score": 27.71,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 10,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  1,
-                  null,
-                  null,
-                  16,
-                  2
-                ],
-                "sum": 19
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 10,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 27.71,
+            "speed_kmh": null
           },
           {
-            "heat_number": 2,
-            "bib_number": 28.16,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  2
-                ],
-                "sum": 2
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 16,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 28.16,
+            "speed_kmh": null
           }
-        ]
+        ],
+        "grand_total": 27.71,
+        "normalized_score": 27.71,
+        "format": "racing"
       },
       "raw_text": "56 | Чирнеко дель Этна | 2 | Кобели | Colisto’s Beato | 10 | 1 |  | 27,71 | 16 | 2 |  | 28,16 |  |  |  |  | 2 | CC | ",
       "judges": null,
@@ -3621,62 +2663,37 @@
       }
     },
     {
-      "id": 57,
+      "id": 23033,
       "event_id": 1556,
       "dog_id": 10035,
       "breed_class": "Чирнеко дель Этна - 2 - Микс",
       "catalog_no": 57,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "",
-      "status": null,
+      "placement": 1,
+      "total_score": 27.33,
+      "judge_count": 0,
+      "qualification": "CACL",
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 10,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  3,
-                  null,
-                  null,
-                  16,
-                  1
-                ],
-                "sum": 20
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 10,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 27.49,
+            "speed_kmh": null
           },
           {
-            "heat_number": 2,
-            "bib_number": 27.33,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  1
-                ],
-                "sum": 1
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 16,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 27.33,
+            "speed_kmh": null
           }
-        ]
+        ],
+        "grand_total": 27.33,
+        "normalized_score": 27.33,
+        "format": "racing"
       },
       "raw_text": "57 | Чирнеко дель Этна | 2 | Кобели | Sollucero | 10 | 3 |  | 27,49 | 16 | 1 |  | 27,33 |  |  |  |  | 1 | CC | CACL",
       "judges": null,
@@ -3693,62 +2710,37 @@
       }
     },
     {
-      "id": 58,
+      "id": 23034,
       "event_id": 1556,
       "dog_id": 10036,
       "breed_class": "Чирнеко дель Этна - 2 - Микс",
       "catalog_no": 58,
-      "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "placement": 3,
+      "total_score": 31.96,
+      "judge_count": 0,
       "qualification": "",
-      "vc": "",
-      "status": null,
+      "vc": "CC",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
-            "heat_number": 1,
-            "bib_number": 10,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  2,
-                  null,
-                  null,
-                  16,
-                  3
-                ],
-                "sum": 21
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 10,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 32.63,
+            "speed_kmh": null
           },
           {
-            "heat_number": 2,
-            "bib_number": 31.96,
-            "bib_color": null,
-            "judges": [
-              {
-                "judge_number": 1,
-                "scores": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  3
-                ],
-                "sum": 3
-              }
-            ],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "heat_number": 16,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 31.96,
+            "speed_kmh": null
           }
-        ]
+        ],
+        "grand_total": 31.96,
+        "normalized_score": 31.96,
+        "format": "racing"
       },
       "raw_text": "58 | Чирнеко дель Этна | 2 | Суки | Colisto’s Gvenda | 10 | 2 |  | 32,63 | 16 | 3 |  | 31,96 |  |  |  |  | 3 | CC | ",
       "judges": null,

@@ -1,9 +1,9 @@
 import { Composer } from 'grammy';
 import { CoursingStatsAPI } from '../api';
-import { getNavigationButtons, getDogSelectionKeyboard, getDogCardKeyboard } from '../keyboards';
+import { getNavigationButtons, getDogSelectionKeyboard } from '../keyboards';
 import { sanitizeInput, validateDogId, validateSearchQuery } from './utils/validators';
 import { getDisplayName } from './utils/helpers';
-import { formatDogCard } from './utils/dogCard';
+import { buildDogCardPresentation } from './utils/presentDogCard';
 import { buildInlineDoninoDogResults, findDoninoDogsByName } from '../inlineQuery';
 import { Dog } from '../types';
 import type { KVNamespace } from './context';
@@ -15,7 +15,12 @@ import type { KVNamespace } from './context';
  * @param api - клиент API Coursing Stats
  * @throws {Error} при ошибке загрузки профиля собаки
  */
-async function handleDogIdSearch(ctx: any, dogId: string, api: CoursingStatsAPI) {
+async function handleDogIdSearch(
+  ctx: any,
+  dogId: string,
+  api: CoursingStatsAPI,
+  cache?: KVNamespace,
+) {
   // Additional validation as defense in depth
   if (!validateDogId(dogId)) {
     await ctx.reply('❌ Неверный формат ID собаки.');
@@ -31,10 +36,16 @@ async function handleDogIdSearch(ctx: any, dogId: string, api: CoursingStatsAPI)
       });
       return;
     }
+
+    const card = await buildDogCardPresentation(api, dogData, {
+      cache,
+      userId: ctx.from?.id.toString(),
+    });
     
-    await ctx.reply(formatDogCard(dogData), {
+    await ctx.reply(card.text, {
       parse_mode: 'HTML',
-      reply_markup: getDogCardKeyboard(dogData.dog.id.toString())
+      link_preview_options: { is_disabled: true },
+      reply_markup: card.reply_markup,
     });
   } catch (error) {
     await ctx.reply('❌ Ошибка при загрузке профиля собаки. Попробуйте позже.', {
@@ -173,10 +184,16 @@ export function createSearch(api: CoursingStatsAPI, cache?: KVNamespace) {
           return;
         }
 
-        await ctx.reply('<b>Поиск второй собаки...</b>', { parse_mode: 'HTML' });
+        const statusMsg = await ctx.reply('<b>Поиск второй собаки...</b>', { parse_mode: 'HTML' });
 
         try {
           const dogs = await api.searchDogsByName(query, undefined, 5);
+
+          try {
+            await ctx.api.deleteMessage(ctx.chat!.id, statusMsg.message_id);
+          } catch {
+            // ignore delete failures
+          }
 
           if (!dogs || dogs.length === 0) {
             await ctx.reply('Ничего не найдено. Попробуйте другой запрос.');
@@ -189,11 +206,22 @@ export function createSearch(api: CoursingStatsAPI, cache?: KVNamespace) {
             return;
           }
 
-          // Show selection keyboard
-          await ctx.reply('Выберите вторую собаку:', {
-            reply_markup: getDogSelectionKeyboard(dogs, 'compare')
+          let text = `<b>Найдено собак: ${dogs.length}</b>\n\n`;
+          dogs.forEach((dog: Dog, index: number) => {
+            text += `${index + 1}. ${getDisplayName(dog)}\n`;
+          });
+          text += '\nВыберите вторую собаку:';
+
+          await ctx.reply(text, {
+            parse_mode: 'HTML',
+            reply_markup: getDogSelectionKeyboard(dogs, 'compare'),
           });
         } catch (error) {
+          try {
+            await ctx.api.deleteMessage(ctx.chat!.id, statusMsg.message_id);
+          } catch {
+            // ignore
+          }
           await ctx.reply('Ошибка при поиске. Попробуйте позже.');
         }
         return;
@@ -210,7 +238,7 @@ export function createSearch(api: CoursingStatsAPI, cache?: KVNamespace) {
         );
         return;
       }
-      await handleDogIdSearch(ctx, text, api);
+      await handleDogIdSearch(ctx, text, api, cache);
       return;
     }
     

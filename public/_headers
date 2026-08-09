@@ -1,10 +1,13 @@
-/banners/*
-  Cache-Control: public, max-age=31536000, immutable
-  Content-Type: image/png
+/bot/*
+  Cache-Control: public, max-age=86400
 
-/banners
-  Cache-Control: public, max-age=31536000, immutable
-  Content-Type: image/png
+/bimi/*
+  Content-Type: image/svg+xml
+  Cache-Control: public, max-age=86400
+
+/.well-known/bimi/*
+  Content-Type: image/svg+xml
+  Cache-Control: public, max-age=86400
 
 /*
   X-Content-Type-Options: nosniff

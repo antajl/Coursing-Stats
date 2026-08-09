@@ -59,11 +59,11 @@ describe('prerender-seo helpers', () => {
       id: 263,
       name: 'TEST DOG',
       breed: 'УИППЕТ',
-      facts: ['Курсинг: 3 стартов'],
+      facts: ['Курсинг: 3 участий'],
       recentCompetitions: ['ЧРКФ — тест'],
     })
     expect(body).toContain('TEST DOG')
-    expect(body).toContain('Курсинг: 3 стартов')
+    expect(body).toContain('Курсинг: 3 участий')
     expect(body).toContain('ЧРКФ — тест')
     expect(body).toContain('href="/competitions"')
     expect(body).toContain('href="/speed-records"')

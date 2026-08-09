@@ -1,8 +1,8 @@
 import { Composer } from 'grammy';
 import { CoursingStatsAPI } from '../api';
-import { getMainInlineMenu, getNavigationButtons, getCompetitionsMenu, getShowsMenu, getGuideMenu, getDogCardKeyboard, getDoninoKeyboard } from '../keyboards';
+import { getMainInlineMenu, getNavigationButtons, getCompetitionsMenu, getShowsMenu, getGuideMenu, getDoninoKeyboard } from '../keyboards';
 import { validateDogId } from './utils/validators';
-import { formatDogCard } from './utils/dogCard';
+import { buildDogCardPresentation } from './utils/presentDogCard';
 import {
   buildDoninoNotFoundResult,
   buildInlineDogResult,
@@ -16,6 +16,8 @@ import {
   parseDoninoDiscipline,
   parseDoninoInlineQuery,
 } from '../inlineQuery';
+import { BOT_PHOTOS } from '../constants';
+import { isDogFavorite } from './utils/presentDogCard';
 import type { KVNamespace } from './context';
 
 /**
@@ -85,7 +87,12 @@ export async function safeEditOrReply(ctx: any, text: string, options: any = {},
  * @param api - клиент API Coursing Stats
  * @throws {Error} при ошибке загрузки профиля собаки
  */
-async function handleDogIdSearch(ctx: any, dogId: string, api: CoursingStatsAPI) {
+async function handleDogIdSearch(
+  ctx: any,
+  dogId: string,
+  api: CoursingStatsAPI,
+  cache?: KVNamespace,
+) {
   try {
     // Show typing indicator for better UX
     const chatId = ctx.chat?.id;
@@ -101,10 +108,16 @@ async function handleDogIdSearch(ctx: any, dogId: string, api: CoursingStatsAPI)
       });
       return;
     }
+
+    const card = await buildDogCardPresentation(api, dogData, {
+      cache,
+      userId: ctx.from?.id.toString(),
+    });
     
-    await ctx.reply(formatDogCard(dogData), {
+    await ctx.reply(card.text, {
       parse_mode: 'HTML',
-      reply_markup: getDogCardKeyboard(dogData.dog.id.toString())
+      link_preview_options: { is_disabled: true },
+      reply_markup: card.reply_markup,
     });
   } catch (error) {
     await ctx.reply('❌ Ошибка при загрузке профиля собаки. Попробуйте позже.', {
@@ -224,10 +237,28 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
       return;
     }
 
-    const results = dogs.map((dog) => buildInlineDogResult(dog));
+    const userId = ctx.from?.id.toString();
+    const results = (
+      await Promise.all(
+        dogs.map(async (dog) => {
+          const dogData = await api.getDogById(dog.id.toString());
+          if (!dogData) return null;
+          const [shows, isFavorite] = await Promise.all([
+            api.getShowSummaryForCompetitionDog(dogData.dog.id),
+            isDogFavorite(cache, userId, dogData.dog.id),
+          ]);
+          return buildInlineDogResult(dogData, { shows, isFavorite });
+        }),
+      )
+    ).filter((r): r is NonNullable<typeof r> => r != null);
+
+    if (results.length === 0) {
+      await ctx.answerInlineQuery([], { cache_time: 0 });
+      return;
+    }
 
     await ctx.answerInlineQuery(results, {
-      cache_time: 300,
+      cache_time: 60,
       button: inlineButton,
     });
   } catch (error) {
@@ -250,7 +281,7 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
       await ctx.reply('❌ Неверный формат ссылки. Пожалуйста, используйте кнопку меню для поиска.');
       return;
     }
-    await handleDogIdSearch(ctx, dogId, api);
+    await handleDogIdSearch(ctx, dogId, api, cache);
     return;
   }
 
@@ -280,7 +311,7 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
 Напишите кличку или ID собаки или выберите действие из меню ниже
     `.trim();
 
-  const photoUrl = 'https://coursing-stats.ru/bot/banner.png?v=2';
+  const photoUrl = BOT_PHOTOS.home;
   const userId = ctx.from?.id.toString();
   const chatId = ctx.chat?.id;
 
@@ -363,7 +394,7 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
 Напишите кличку или ID собаки или выберите действие из меню ниже
     `.trim();
 
-    const photoUrl = 'https://coursing-stats.ru/bot/banner.png?v=2';
+    const photoUrl = BOT_PHOTOS.home;
     const userId = ctx.from?.id.toString();
     const chatId = ctx.chat?.id;
 
@@ -448,7 +479,7 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
     await addReaction(ctx, '🏆');
     const userId = ctx.from?.id.toString();
     const chatId = ctx.chat?.id;
-    const photoUrl = 'https://coursing-stats.ru/bot/banners/competitions.png?v=2';
+    const photoUrl = BOT_PHOTOS.competitions;
     
     // Show typing indicator for better UX
     if (chatId) {
@@ -498,7 +529,7 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
     await addReaction(ctx, '🎪');
     const userId = ctx.from?.id.toString();
     const chatId = ctx.chat?.id;
-    const photoUrl = 'https://coursing-stats.ru/bot/banners/shows.png?v=2';
+    const photoUrl = BOT_PHOTOS.shows;
     
     // Show typing indicator for better UX
     if (chatId) {
@@ -548,7 +579,7 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
     await addReaction(ctx, '📚');
     const userId = ctx.from?.id.toString();
     const chatId = ctx.chat?.id;
-    const photoUrl = 'https://coursing-stats.ru/bot/banners/guide.png?v=2';
+    const photoUrl = BOT_PHOTOS.guide;
     
     // Show typing indicator for better UX
     if (chatId) {

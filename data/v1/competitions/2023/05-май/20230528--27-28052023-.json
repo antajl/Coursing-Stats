@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/competition-v1",
-  "exported_at": "2026-07-08T16:05:10.567Z",
-  "source": "web-archive",
+  "exported_at": "2026-08-08T23:13:45.474Z",
+  "source": "reparse-relink-from-git",
   "event_id": 20230528,
   "event": {
     "id": 20230528,
@@ -28,7 +28,7 @@
     "judges": "- Лукина Д.М., - Карелина Н.В.",
     "track_schemes": []
   },
-  "result_count": 11,
+  "result_count": 9,
   "results": [
     {
       "breed_class": "Метис - Стандартный - Суки",
@@ -51,10 +51,14 @@
       "dog_id": 9322,
       "dog": {
         "id": 9322,
+        "dog_key": "аиза--метис",
         "name_lat": "АЙЗА",
         "name_ru": "АЙЗА",
-        "breed": "МЕТИС"
-      }
+        "breed": "МЕТИС",
+        "sex": null,
+        "owner": null
+      },
+      "dog_key": "аиза--метис"
     },
     {
       "breed_class": "Метис - Стандартный - Суки",
@@ -77,29 +81,14 @@
       "dog_id": 9237,
       "dog": {
         "id": 9237,
+        "dog_key": "лея-ред-пит-праит--метис",
         "name_lat": "ЛЕЯ РЕД ПИТ ПРАЙТ",
         "name_ru": "ЛЕЯ РЕД ПИТ ПРАЙТ",
-        "breed": "МЕТИС"
-      }
-    },
-    {
-      "breed_class": "Цвергпинчер - Стандартный - Кобели",
-      "placement": 1,
-      "catalog_no": 11,
-      "breed": "ЦВЕРГПИНЧЕР",
-      "class": "Стандартный",
-      "sex": "Кобель",
-      "name": "ЦЕСВИЛЬ ГАРДЕН ИРИНУС ГОЛД БРЕЙН",
-      "name_lat": "ЦЕСВИЛЬ ГАРДЕН ИРИНУС ГОЛД БРЕЙН",
-      "total_score": 348,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "CC",
-      "status": "finished",
-      "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":94,\"bib_color\":\"red\",\"judges\":[{\"judge_number\":1,\"scores\":[17,17,17,16,17],\"sum\":84},{\"judge_number\":2,\"scores\":[18,19,19,18,18],\"sum\":92}],\"total\":176,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":100,\"bib_color\":\"red\",\"judges\":[{\"judge_number\":1,\"scores\":[17,17,17,16,18],\"sum\":85},{\"judge_number\":2,\"scores\":[17,18,18,16,18],\"sum\":87}],\"total\":172,\"disqualified\":false,\"disqualification_reason\":null}]}",
-      "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">11</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Цвергпинчер</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ЦЕСВИЛЬ ГАРДЕН ИРИНУС ГОЛД БРЕЙН</font></td>\n<td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>94</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>176</b></font></td>\n<td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>100</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>172</b></font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>348</b></font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n",
-      "judges": "Лукина Д.М., Карелина Н.В."
+        "breed": "МЕТИС",
+        "sex": null,
+        "owner": null
+      },
+      "dog_key": "лея-ред-пит-праит--метис"
     },
     {
       "breed_class": "Американский стаффордширский терьер - Стандартный - Общая",
@@ -121,10 +110,14 @@
       "dog_id": 743,
       "dog": {
         "id": 743,
+        "dog_key": "tcenniy-prize-eirena--американскии-стаффордшир",
         "name_lat": "TCENNIY PRIZE EIRENA",
         "name_ru": "TCENNIY PRIZE EIRENA",
-        "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР"
-      }
+        "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+        "sex": null,
+        "owner": null
+      },
+      "dog_key": "tcenniy-prize-eirena--американскии-стаффордшир"
     },
     {
       "breed_class": "Американский стаффордширский терьер - Стандартный - Общая",
@@ -146,10 +139,14 @@
       "dog_id": 507,
       "dog": {
         "id": 507,
+        "dog_key": "bakaroro-end-itubori-the-best-tcenniy-pr--американскии-стаффордшир",
         "name_lat": "BAKARORO END ITUBORI THE BEST TCENNIY PRIZE",
         "name_ru": "BAKARORO END ITUBORI THE BEST TCENNIY PRIZE",
-        "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР"
-      }
+        "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+        "sex": null,
+        "owner": null
+      },
+      "dog_key": "bakaroro-end-itubori-the-best-tcenniy-pr--американскии-стаффордшир"
     },
     {
       "breed_class": "Американский стаффордширский терьер - Стандартный - Общая",
@@ -171,10 +168,14 @@
       "dog_id": 7445,
       "dog": {
         "id": 7445,
+        "dog_key": "tcenniy-prize-esclusivo--американскии-стаффордшир",
         "name_lat": "TCENNIY PRIZE ESCLUSIVO",
         "name_ru": "ЦЕННЫЙ ПРИЗ ЕСКЛЮЗИВО",
-        "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР"
-      }
+        "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+        "sex": null,
+        "owner": null
+      },
+      "dog_key": "tcenniy-prize-esclusivo--американскии-стаффордшир"
     },
     {
       "breed_class": "Ирландский терьер - Стандартный - Общая",
@@ -196,28 +197,14 @@
       "dog_id": 7738,
       "dog": {
         "id": 7738,
+        "dog_key": "richli-red-yuniti--ирландскии-терьер",
         "name_lat": "RICHLI RED YUNITI",
         "name_ru": "РИЧЛИ РЭД ЮНИТИ",
-        "breed": "ИРЛАНДСКИЙ ТЕРЬЕР"
-      }
-    },
-    {
-      "breed_class": "Ирландский терьер - Стандартный - Общая",
-      "placement": 2,
-      "catalog_no": 8,
-      "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
-      "class": "Стандартный",
-      "sex": "Сука",
-      "name": "YURATE YANTARNAYA KAPLYA",
-      "name_lat": "YURATE YANTARNAYA KAPLYA",
-      "total_score": 345,
-      "judge_count": 2,
-      "qualification": "",
-      "vc": "CC",
-      "status": "finished",
-      "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":90,\"bib_color\":\"17\",\"judges\":[{\"judge_number\":1,\"scores\":[17,17,17,17,17],\"sum\":85},{\"judge_number\":2,\"scores\":[17,17,18,18,18],\"sum\":88}],\"total\":173,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":95,\"bib_color\":\"17\",\"judges\":[{\"judge_number\":1,\"scores\":[17,17,17,16,17],\"sum\":84},{\"judge_number\":2,\"scores\":[18,18,17,18,18],\"sum\":89}],\"total\":172,\"disqualified\":false,\"disqualification_reason\":null}]}",
-      "raw_text": ""
+        "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
+        "sex": null,
+        "owner": null
+      },
+      "dog_key": "richli-red-yuniti--ирландскии-терьер"
     },
     {
       "breed_class": "Ирландский терьер - Стандартный - Общая",
@@ -239,10 +226,14 @@
       "dog_id": 9223,
       "dog": {
         "id": 9223,
+        "dog_key": "bestsennyi-podarok-iz-doma-alantes--ирландскии-терьер",
         "name_lat": "BESTSENNYI PODAROK IZ DOMA ALANTES",
         "name_ru": "БЕСЦЕННЫЙ ПОДАРОК ИЗ ДОМА АЛАНТЕС",
-        "breed": "ИРЛАНДСКИЙ ТЕРЬЕР"
-      }
+        "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
+        "sex": null,
+        "owner": null
+      },
+      "dog_key": "bestsennyi-podarok-iz-doma-alantes--ирландскии-терьер"
     },
     {
       "breed_class": "Ирландский терьер - Стандартный - Общая",
@@ -264,10 +255,14 @@
       "dog_id": 8942,
       "dog": {
         "id": 8942,
+        "dog_key": "aine-irish-ashling--ирландскии-терьер",
         "name_lat": "AINE IRISH ASHLING",
         "name_ru": "АЙНЕ АЙРИШ АШЛИНГ",
-        "breed": "ИРЛАНДСКИЙ ТЕРЬЕР"
-      }
+        "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
+        "sex": null,
+        "owner": null
+      },
+      "dog_key": "aine-irish-ashling--ирландскии-терьер"
     },
     {
       "breed_class": "Ирландский терьер - Стандартный - Общая",
@@ -289,10 +284,14 @@
       "dog_id": 9222,
       "dog": {
         "id": 9222,
+        "dog_key": "nezhnoye-plamya-anten--ирландскии-терьер",
         "name_lat": "NEZHNOYE PLAMYA ANTEN",
         "name_ru": "NEZHNOYE PLAMYA ANTEN",
-        "breed": "ИРЛАНДСКИЙ ТЕРЬЕР"
-      }
+        "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
+        "sex": null,
+        "owner": null
+      },
+      "dog_key": "nezhnoye-plamya-anten--ирландскии-терьер"
     }
   ],
   "id": "20230528--27-28052023-",

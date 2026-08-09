@@ -95,11 +95,22 @@ export function buildJudgeDetails(rows: unknown[], judgesData: { id?: string; na
       criteria_stats: criteriaData,
     };
 
-    fs.writeFileSync(
-      path.join(outDir, `${judgeDetailKey(judgeName)}.json`),
-      JSON.stringify(payload),
-      'utf-8',
-    );
+    const detailPath = path.join(outDir, `${judgeDetailKey(judgeName)}.json`)
+    const detailJson = JSON.stringify(payload)
+    let lastErr: unknown
+    for (let attempt = 0; attempt < 12; attempt++) {
+      try {
+        fs.writeFileSync(detailPath, detailJson, 'utf-8')
+        lastErr = null
+        break
+      } catch (e) {
+        lastErr = e
+        const code = (e as NodeJS.ErrnoException)?.code
+        if (code !== 'UNKNOWN' && code !== 'EPERM' && code !== 'EBUSY') throw e
+        Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 80 * (attempt + 1))
+      }
+    }
+    if (lastErr) throw lastErr
     count += 1;
   }
 

@@ -14,6 +14,41 @@ const CONTENT_TYPES: Record<string, string> = {
 }
 
 /**
+ * Баннеры Telegram-бота живут в repo `public/bot` (webp).
+ * Vite publicDir = `frontend/public`, поэтому перед сборкой синхронизируем
+ * webp туда — иначе /bot/* на Pages отдаёт SPA HTML и sendPhoto ломается.
+ */
+function syncBotBanners(): Plugin {
+  const srcRoot = path.resolve(__dirname, '../public/bot')
+  const destRoot = path.resolve(__dirname, 'public/bot')
+
+  const sync = () => {
+    if (!fs.existsSync(srcRoot)) return
+    fs.mkdirSync(path.join(destRoot, 'banners'), { recursive: true })
+    for (const name of ['banner.webp']) {
+      const from = path.join(srcRoot, name)
+      if (fs.existsSync(from)) fs.copyFileSync(from, path.join(destRoot, name))
+    }
+    const bannersDir = path.join(srcRoot, 'banners')
+    if (!fs.existsSync(bannersDir)) return
+    for (const name of fs.readdirSync(bannersDir)) {
+      if (!name.endsWith('.webp')) continue
+      fs.copyFileSync(path.join(bannersDir, name), path.join(destRoot, 'banners', name))
+    }
+  }
+
+  return {
+    name: 'sync-bot-banners',
+    buildStart() {
+      sync()
+    },
+    configureServer() {
+      sync()
+    },
+  }
+}
+
+/**
  * В dev/preview отдаёт repo `data/v1` по пути `/data/v1/*`, как это делает
  * Cloudflare Pages в проде. Так фронтенд читает JSON напрямую, без Worker/D1.
  */
@@ -64,6 +99,7 @@ const buildStamp = process.env.GITHUB_SHA?.slice(0, 8) || String(Date.now())
 export default defineConfig({
   plugins: [
     react(),
+    syncBotBanners(),
     serveDataV1(),
     homePhotosPlugin({
       publicHomeDir: path.resolve(__dirname, 'public/assets/home'),
@@ -106,7 +142,21 @@ export default defineConfig({
       },
     },
     headers: {
-      'Content-Security-Policy': "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://coursing-stats.ru https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://coursing-stats.ru https://fonts.googleapis.com; img-src 'self' data: https://coursing-stats.ru https://*.googleusercontent.com https://*.gstatic.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://coursing-stats.ru https://api.telegram.org https://coursing-stats-antajl.aws-eu-west-1.turso.io https://auth-worker.antajltube.workers.dev https://www.googletagmanager.com; frame-src 'self' https://coursing-stats.ru https://t.me; frame-ancestors 'self' https://coursing-stats.ru; worker-src 'self'; form-action 'self'; upgrade-insecure-requests;",
+      // Dev CSP: worker-src must allow blob: — Vite HMR reconnects via blob Worker
+      // after "server connection lost". Without it React ends up with Invalid hook call.
+      // connect-src: ws/wss for HMR websocket (same-origin + explicit for some browsers).
+      'Content-Security-Policy':
+        "default-src 'self'; " +
+        "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://coursing-stats.ru https://www.googletagmanager.com; " +
+        "style-src 'self' 'unsafe-inline' https://coursing-stats.ru https://fonts.googleapis.com; " +
+        "img-src 'self' data: blob: https://coursing-stats.ru https://*.googleusercontent.com https://*.gstatic.com; " +
+        "font-src 'self' https://fonts.gstatic.com; " +
+        "connect-src 'self' ws: wss: https://coursing-stats.ru https://api.telegram.org https://coursing-stats-antajl.aws-eu-west-1.turso.io https://auth-worker.antajltube.workers.dev https://www.googletagmanager.com; " +
+        "frame-src 'self' https://coursing-stats.ru https://t.me; " +
+        "frame-ancestors 'self' https://coursing-stats.ru; " +
+        "worker-src 'self' blob:; " +
+        "form-action 'self'; " +
+        "upgrade-insecure-requests;",
       'X-Content-Type-Options': 'nosniff',
       'X-Frame-Options': 'DENY',
       'X-XSS-Protection': '1; mode=block',

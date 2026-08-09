@@ -214,7 +214,7 @@ export function CoursingColumn({
               >
                 {showAllCoursingEvents
                   ? 'Свернуть'
-                  : `Показать все ${coursingEvents.length} стартов`}
+                  : `Показать все ${coursingEvents.length} участий`}
               </button>
             )}
           </div>

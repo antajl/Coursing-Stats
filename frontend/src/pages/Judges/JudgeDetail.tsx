@@ -202,7 +202,7 @@ export default function JudgeDetail() {
     <>
       <SEO
         title={`${judgeName} - статистика судьи`}
-        description={`Статистика судьи ${judgeName} по курсингу и бегам борзых. ${eventCount} стартов, оценки по породам и критериям.`}
+        description={`Статистика судьи ${judgeName} по курсингу и бегам борзых. ${eventCount} соревнований, оценки по породам и критериям.`}
         keywords={`${judgeName}, судья, курсинг, бега борзых, статистика, РКФ, оценки, соревнования`}
       />
       <div className="space-y-5 pb-4">
@@ -262,7 +262,7 @@ export default function JudgeDetail() {
                 <p className="text-3xl font-bold tabular-nums tracking-tight text-charcoal-900 dark:text-charcoal-100 md:text-4xl">
                   {eventCount}
                 </p>
-                <p className="mt-1 text-sm text-charcoal-500 dark:text-charcoal-400">стартов</p>
+                <p className="mt-1 text-sm text-charcoal-500 dark:text-charcoal-400">соревнований</p>
               </button>
               <button
                 type="button"
@@ -500,7 +500,7 @@ export default function JudgeDetail() {
               <>
                 {filteredEvents.length === 0 ? (
                   <p className="text-sm text-charcoal-500 dark:text-charcoal-400">
-                    {eventBreedFilter ? 'Нет стартов по этой породе' : 'Нет стартов'}
+                    {eventBreedFilter ? 'Нет соревнований по этой породе' : 'Нет соревнований'}
                   </p>
                 ) : (
                   <>

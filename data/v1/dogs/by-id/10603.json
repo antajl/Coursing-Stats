@@ -1,0 +1,25 @@
+{
+  "schema": "coursing-stats/dog-v1",
+  "exported_at": "2026-08-08T23:10:42.232Z",
+  "id": 10603,
+  "dog_key": "mistfield-dodger--уиппет",
+  "name_lat": "MISTFIELD DODGER",
+  "name_ru": "МИСТФИЛД ДОДЖЕР",
+  "breed": "УИППЕТ",
+  "sex": null,
+  "owner": null,
+  "competition_ids": [
+    20230415,
+    20230430,
+    20240429,
+    20240511,
+    20240525
+  ],
+  "competition_files": [
+    "competitions/2023/04-апрель/20230415--15-16042023-.json",
+    "competitions/2023/04-апрель/20230430--cacl-2904-01052023-.json",
+    "competitions/2024/04-апрель/20240429--cacl-29-30042024-.json",
+    "competitions/2024/05-май/20240511--11052024-.json",
+    "competitions/2024/05-май/20240525--cacl-25-26052024-.json"
+  ]
+}

@@ -43,7 +43,7 @@ export default function JudgeCard({ judge }: JudgeCardProps) {
 
       <div className="flex shrink-0 flex-wrap items-center gap-2 sm:gap-3">
         <StatPill label="Оценок" value={judge.total_evaluations_count || 0} />
-        <StatPill label="Стартов" value={judge.unique_events || 0} />
+        <StatPill label="Соревнований" value={judge.unique_events || 0} />
         {typeof judge.unique_dogs === 'number' ? (
           <StatPill label="Собак" value={judge.unique_dogs} />
         ) : null}

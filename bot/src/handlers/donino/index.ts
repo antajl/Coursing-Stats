@@ -2,6 +2,7 @@ import { Composer } from 'grammy';
 import { CoursingStatsAPI } from '../../api';
 import { getDoninoKeyboard } from '../../keyboards';
 import { formatDoninoTopChatText } from '../../inlineQuery';
+import { BOT_PHOTOS } from '../../constants';
 import type { KVNamespace } from '../context';
 
 /**
@@ -49,7 +50,7 @@ export function createDonino(api: CoursingStatsAPI, cache?: KVNamespace) {
     await addReaction(ctx, '⏱');
     const userId = ctx.from?.id.toString();
     const chatId = ctx.chat?.id;
-    const photoUrl = 'https://coursing-stats.ru/bot/banners/donino.png?v=2';
+    const photoUrl = BOT_PHOTOS.donino;
 
     if (chatId) {
       await ctx.api.sendChatAction(chatId, 'upload_photo');

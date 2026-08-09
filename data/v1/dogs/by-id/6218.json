@@ -1,14 +1,13 @@
 {
   "schema": "coursing-stats/dog-v1",
-  "exported_at": "2026-07-11T10:55:51.099Z",
+  "exported_at": "2026-07-08T00:31:32.188Z",
   "id": 6218,
-  "dog_key": "билли-бонс-billy-bones--уиппет",
-  "name_lat": "БИЛЛИ БОНС /BILLY BONES",
-  "name_ru": "БИЛЛИ БОНС /BILLY BONES",
+  "dog_key": "billy-bones--уиппет",
+  "name_lat": "BILLY BONES",
+  "name_ru": "БИЛЛИ БОНС",
   "breed": "УИППЕТ",
   "sex": null,
   "owner": null,
-  "pedigree_url": "https://whippet.breedarchive.com/animal/view/billy-bones-2c536bfa-55bc-466f-8ae5-16fc276ac4b8",
   "competition_ids": [
     1255,
     1264,
@@ -16,7 +15,12 @@
     1275,
     1280,
     1282,
-    1317
+    1317,
+    1467,
+    1472,
+    20240824,
+    20240914,
+    20240929
   ],
   "competition_files": [
     "competitions/2025/04-апрель/1255-чемпионат-россии-курсинг-борзых.json",
@@ -25,6 +29,12 @@
     "competitions/2025/06-июнь/1275-пчркф-басенджи-родезиискии-риджбек-русская-псова.json",
     "competitions/2025/08-август/1280-чркф-курсинг-борзых.json",
     "competitions/2025/08-август/1282-чркф-курсинг-борзых.json",
-    "competitions/2026/05-май/1317-чемпионат-россии-курсинг-борзых.json"
-  ]
+    "competitions/2026/05-май/1317-чемпионат-россии-курсинг-борзых.json",
+    "competitions/2024/09-сентябрь/1467-чемпионат-ркф-cacl-по-курсингу-борзых.json",
+    "competitions/2024/09-сентябрь/1472-монопородные-чемпионаты-ркф-по-курсингу-борзых-в.json",
+    "competitions/2024/08-август/20240824--24082024-.json",
+    "competitions/2024/09-сентябрь/20240914--14092024-c-.json",
+    "competitions/2024/09-сентябрь/20240929--29092024-.json"
+  ],
+  "pedigree_url": "https://whippet.breedarchive.com/animal/view/billy-bones-2c536bfa-55bc-466f-8ae5-16fc276ac4b8"
 }

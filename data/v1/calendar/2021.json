@@ -1,9 +1,9 @@
 {
   "schema": "coursing-stats/calendar-v1",
   "year": 2021,
-  "exported_at": "2026-08-08T19:04:40.813Z",
+  "exported_at": "2026-08-08T23:37:00.813Z",
   "event_count": 17,
-  "with_results": 12,
+  "with_results": 13,
   "events": [
     {
       "id": 20210417,
@@ -41,8 +41,8 @@
       "full_title": "ЧР по БЗМП",
       "rank_label": "ЧР по БЗМП",
       "rank_code": "ЧР",
-      "discipline_code": "bzmp",
-      "event_type": "coursing",
+      "discipline_code": "racing",
+      "event_type": "racing",
       "competition_kind": "Чемпионат России",
       "competition_type": "Курсинг борзых",
       "host_club": "",
@@ -55,7 +55,7 @@
       "has_results": true,
       "results_file": "competitions/2021/04-апрель/1573-бега-за-механическои-приманкои-чемпионат-россии.json",
       "result_count": 11,
-      "participants_count": 11
+      "participants_count": 10
     },
     {
       "id": 20210424,
@@ -172,7 +172,7 @@
       "rank_label": "ЧРКФ по рейсингу",
       "rank_code": "ЧРКФ",
       "discipline_code": "racing",
-      "event_type": "coursing",
+      "event_type": "racing",
       "competition_kind": "",
       "competition_type": "",
       "host_club": "",
@@ -184,8 +184,8 @@
       "judges": null,
       "has_results": true,
       "results_file": "competitions/2021/06-июнь/1578-чемпионат-ркф-cacl-по-бегам-борзых.json",
-      "result_count": 46,
-      "participants_count": 46
+      "result_count": 55,
+      "participants_count": 55
     },
     {
       "id": 20210807,
@@ -198,7 +198,7 @@
       "rank_label": "ЧРКФ по рейсингу за механическим зайцем",
       "rank_code": "ЧРКФ",
       "discipline_code": "racing",
-      "event_type": "coursing",
+      "event_type": "racing",
       "competition_kind": "",
       "competition_type": "",
       "host_club": "",
@@ -210,8 +210,8 @@
       "judges": null,
       "has_results": true,
       "results_file": "competitions/2021/08-август/1579-чемпионат-ркф-cacl-по-бегам-борзых-за-механическ.json",
-      "result_count": 17,
-      "participants_count": 17
+      "result_count": 22,
+      "participants_count": 22
     },
     {
       "id": 20210821,
@@ -288,8 +288,8 @@
       "judges": null,
       "has_results": true,
       "results_file": "competitions/2021/09-сентябрь/1581-чемпионат-ркф-по-бегам-за-механическои-приманкои.json",
-      "result_count": 31,
-      "participants_count": 31
+      "result_count": 7,
+      "participants_count": 7
     },
     {
       "id": 202109041,
@@ -301,21 +301,21 @@
       "full_title": "ЧРКФ по БЗМП",
       "rank_label": "ЧРКФ по БЗМП",
       "rank_code": "ЧРКФ",
-      "discipline_code": "bzmp",
-      "event_type": "coursing",
+      "discipline_code": "racing",
+      "event_type": "racing",
       "competition_kind": "",
       "competition_type": "Курсинг борзых",
       "host_club": "",
       "region": null,
       "location": "Калужская область, б/о Головинка",
-      "results_url": "https://web.archive.org/web/20250708014721/http://procoursing.ru/results/2021-09-04_B/",
+      "results_url": "https://web.archive.org/web/20220419104822/http://procoursing.ru/Full_Results_2021-09-04_ChRKF.html",
       "catalog_url": null,
       "confirmed": 0,
       "judges": null,
-      "has_results": false,
-      "results_file": null,
-      "result_count": 0,
-      "participants_count": 0
+      "has_results": true,
+      "results_file": "competitions/2021/09-сентябрь/1581-чемпионат-ркф-по-бегам-за-механическои-приманкои.json",
+      "result_count": 7,
+      "participants_count": 7
     },
     {
       "id": 20210918,

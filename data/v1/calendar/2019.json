@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/calendar-v1",
   "year": 2019,
-  "exported_at": "2026-08-08T19:04:40.812Z",
+  "exported_at": "2026-08-08T23:37:00.812Z",
   "event_count": 12,
   "with_results": 7,
   "events": [
@@ -94,7 +94,7 @@
       "rank_label": "ЧРКФ по рейсингу",
       "rank_code": "ЧРКФ",
       "discipline_code": "racing",
-      "event_type": "coursing",
+      "event_type": "racing",
       "competition_kind": "",
       "competition_type": "",
       "host_club": "",
@@ -172,7 +172,7 @@
       "rank_label": "КР по рейсингу",
       "rank_code": "КР",
       "discipline_code": "racing",
-      "event_type": "coursing",
+      "event_type": "racing",
       "competition_kind": "Кубок России",
       "competition_type": "",
       "host_club": "",
@@ -250,7 +250,7 @@
       "rank_label": "CACL по рейсингу",
       "rank_code": "CACL",
       "discipline_code": "racing",
-      "event_type": "coursing",
+      "event_type": "racing",
       "competition_kind": "CACL",
       "competition_type": "",
       "host_club": "",
@@ -262,8 +262,8 @@
       "judges": null,
       "has_results": true,
       "results_file": "competitions/2019/09-сентябрь/1569-национальные-состязания-по-бегам-борзых-за-механ.json",
-      "result_count": 27,
-      "participants_count": 27
+      "result_count": 40,
+      "participants_count": 40
     },
     {
       "id": 20191005,

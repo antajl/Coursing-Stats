@@ -83,7 +83,7 @@ export function maxMergeDogTitles(...lists: DogTitle[][]): DogTitle[] {
 }
 
 /**
- * Титулы курсинга/БЗМП/бегов: индекс профиля + пересчёт по истории стартов
+ * Титулы курсинга/БЗМП/бегов: индекс профиля + пересчёт по истории участий
  * (finished + непустой qualification), max по ключу — чтобы ничего не потерять.
  */
 export function resolveCompetitionTitles(opts: {

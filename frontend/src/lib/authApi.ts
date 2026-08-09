@@ -5,7 +5,11 @@ export interface User {
   id: string;
   email: string;
   display_name: string;
-  created_at: string;
+  /** ISO string, unix seconds/ms, or empty — auth-worker shape varies */
+  created_at: string | number;
+  /** false for Yandex-only accounts until password is set */
+  has_password?: boolean;
+  auth_provider?: 'oauth' | 'password';
 }
 
 export interface AuthResponse {
@@ -57,17 +61,26 @@ async function authFetch<T>(url: string, options?: RequestInit): Promise<T> {
 
   if (!response.ok) {
     let errorMessage = 'Request failed';
+    let errorCode: string | undefined;
     try {
-      const error: ErrorResponse = await response.json();
+      const error: ErrorResponse & { code?: string } = await response.json();
       errorMessage = error.error || errorMessage;
-    } catch (e) {
-      errorMessage = await response.text() || errorMessage;
+      errorCode = error.code;
+    } catch {
+      errorMessage = (await response.text()) || errorMessage;
     }
-    // Clear token on 401 Unauthorized
     if (response.status === 401) {
-      clearToken();
+      // Don't clear token on login failures — only on authenticated endpoints
+      const isAuthEndpoint =
+        url.startsWith('/auth/login') ||
+        url.startsWith('/auth/register') ||
+        url.startsWith('/auth/forgot') ||
+        url.startsWith('/auth/reset');
+      if (!isAuthEndpoint) clearToken();
     }
-    throw new Error(errorMessage);
+    const err = new Error(errorMessage) as Error & { code?: string };
+    if (errorCode) err.code = errorCode;
+    throw err;
   }
 
   return response.json();
@@ -146,6 +159,32 @@ export const authApi = {
     return authFetch<{ display_name: string }>('/me', {
       method: 'PATCH',
       body: JSON.stringify({ display_name: displayName }),
+    });
+  },
+
+  async setPassword(password: string): Promise<{ success: boolean; message: string }> {
+    return authFetch<{ success: boolean; message: string }>('/auth/set-password', {
+      method: 'POST',
+      body: JSON.stringify({ password }),
+    });
+  },
+
+  async forgotPassword(email: string): Promise<{
+    message: string
+    email_sent?: boolean
+    mail_configured?: boolean
+    code?: string
+  }> {
+    return authFetch('/auth/forgot-password', {
+      method: 'POST',
+      body: JSON.stringify({ email }),
+    });
+  },
+
+  async resetPassword(token: string, password: string): Promise<{ success: boolean; message: string }> {
+    return authFetch<{ success: boolean; message: string }>('/auth/reset-password', {
+      method: 'POST',
+      body: JSON.stringify({ token, password }),
     });
   },
 

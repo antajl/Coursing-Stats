@@ -227,7 +227,7 @@ export function RacingColumn({
               >
                 {showAllRacingEvents
                   ? 'Свернуть'
-                  : `Показать все ${racingEvents.length} стартов`}
+                  : `Показать все ${racingEvents.length} участий`}
               </button>
             )}
           </div>

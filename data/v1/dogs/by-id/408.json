@@ -1,1 +1,22 @@
-{"schema":"coursing-stats/dog-v1","exported_at":"2026-07-08T00:31:32.188Z","id":408,"dog_key":"cavallierik-latur--русская-псовая-борзая","name_lat":"CAVALLIERIK LATUR","name_ru":"CAVALLIERIK LATUR","breed":"РУССКАЯ ПСОВАЯ БОРЗАЯ","sex":null,"owner":null,"competition_ids":[1270,1271],"competition_files":["competitions/2025/05-май/1270-чркф-бега-борзых.json","competitions/2025/06-июнь/1271-чркф-курсинг-борзых.json"],"pedigree_url":"https://borzoi.breedarchive.com/animal/view/cavallierik-latur-015d70e9-485c-49a0-9b88-a4cbb2910cf9"}
+{
+  "schema": "coursing-stats/dog-v1",
+  "exported_at": "2026-07-08T00:31:32.188Z",
+  "id": 408,
+  "dog_key": "cavallierik-latur--русская-псовая-борзая",
+  "name_lat": "CAVALLIERIK LATUR",
+  "name_ru": "CAVALLIERIK LATUR",
+  "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+  "sex": null,
+  "owner": null,
+  "competition_ids": [
+    1270,
+    1271,
+    20240429
+  ],
+  "competition_files": [
+    "competitions/2025/05-май/1270-чркф-бега-борзых.json",
+    "competitions/2025/06-июнь/1271-чркф-курсинг-борзых.json",
+    "competitions/2024/04-апрель/20240429--cacl-29-30042024-.json"
+  ],
+  "pedigree_url": "https://borzoi.breedarchive.com/animal/view/cavallierik-latur-015d70e9-485c-49a0-9b88-a4cbb2910cf9"
+}

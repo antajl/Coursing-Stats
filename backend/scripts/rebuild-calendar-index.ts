@@ -64,20 +64,54 @@ export function rebuildCalendarIndexes(): { total: number; years: number } {
   })
 
   writeJson(path.join(V1, 'indexes/calendar-index.json'), calendarManifest)
-  writeJson(
-    path.join(V1, 'indexes/events-by-id.json'),
-    Object.fromEntries(
-      calendarManifest.map((e) => [
-        String(e.id),
-        {
-          results_file: resolveResultsFilePath(e.results_file, e.year, e.month),
-          date_start: e.date_start,
-          title: e.title ?? null,
-          has_results: Boolean(e.has_results),
-        },
-      ]),
-    ),
-  )
+
+  // Same numeric id can appear in archive years and later calendars (e.g. 1557).
+  // Prefer the entry that has results_file / has_results.
+  const eventsById: Record<
+    string,
+    {
+      results_file: string | null
+      date_start: string
+      title: string | null
+      has_results: boolean
+    }
+  > = {}
+
+  const putById = (
+    key: string,
+    next: {
+      results_file: string | null
+      date_start: string
+      title: string | null
+      has_results: boolean
+    },
+  ) => {
+    const prev = eventsById[key]
+    if (!prev) {
+      eventsById[key] = next
+      return
+    }
+    const prevScore = (prev.has_results ? 2 : 0) + (prev.results_file ? 1 : 0)
+    const nextScore = (next.has_results ? 2 : 0) + (next.results_file ? 1 : 0)
+    if (nextScore > prevScore) eventsById[key] = next
+  }
+
+  for (const e of calendarManifest) {
+    const next = {
+      results_file: resolveResultsFilePath(e.results_file, e.year, e.month),
+      date_start: e.date_start,
+      title: e.title ?? null,
+      has_results: Boolean(e.has_results),
+    }
+    putById(String(e.id), next)
+    // Alias competition file id (1567-….json) so /event/1567 resolves protocols
+    // even when calendar row uses YYYYMMDD and a later year reused the numeric id.
+    const m = next.results_file?.match(/\/(\d+)-[^/]+\.json$/)
+    if (m && m[1] !== String(e.id)) {
+      putById(m[1], next)
+    }
+  }
+  writeJson(path.join(V1, 'indexes/events-by-id.json'), eventsById)
 
   return { total: calendarManifest.length, years: files.length }
 }

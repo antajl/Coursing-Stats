@@ -3,11 +3,9 @@
  */
 
 import { extractNumber, extractBoldNumber, extractItalicNumber, extractBibColor, cleanText } from '../coursing/utils'
+import { sumCriteriaScores } from './coursing-scores'
 
-function sumScores(scores) {
-  if (!scores.some((s) => s !== null)) return null
-  return scores.reduce((acc, s) => acc + (s ?? 0), 0)
-}
+const sumScores = sumCriteriaScores
 
 function readJudgeScores($cells, start, end, cellCount) {
   const scores = []

@@ -21,6 +21,7 @@ verified: 2026-08-07
 | Dog card | **aggregates only** — не дампить полную историю |
 | Search | CDN + compact index; KV cache; competition dogs first, then Donino |
 | Deploy | **manual only** — `cd bot; yarn run deploy` (не в site CI) |
+| Menu photos | webp на `https://coursing-stats.ru/bot/*.webp` (source `public/bot`, sync → `frontend/public` при Vite build) |
 | Notifications / cron | **не реализованы** |
 
 ### KV TTL (ориентир `bot/src/api.ts`)
