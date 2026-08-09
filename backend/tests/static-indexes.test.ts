@@ -52,19 +52,20 @@ describe('static data indexes (data/v1/indexes)', () => {
     expect(raw.length).toBeGreaterThan(0);
   });
 
-  it.skipIf(skipIfMissing)('dog-profiles/{id}.json has coursing/racing stats and competitions', () => {
+  it.skipIf(skipIfMissing)('dog-profiles packs contain coursing/racing stats and competitions', () => {
     const dogsDir = path.join(INDEXES, 'dog-profiles');
     expect(fs.existsSync(dogsDir)).toBe(true);
-    const files = fs.readdirSync(dogsDir).filter((f) => f.endsWith('.json'));
-    expect(files.length).toBeGreaterThan(0);
+    const packs = fs.readdirSync(dogsDir).filter((f) => f.startsWith('pack-') && f.endsWith('.json'));
+    expect(packs.length).toBeGreaterThan(0);
 
-    const sample = readJson<{ dog: Record<string, unknown>; competitions: unknown[] }>(
-      `indexes/dog-profiles/${files[0]}`,
+    const samplePack = readJson<{ byId: Record<string, { dog: Record<string, unknown>; competitions: unknown[] }> }>(
+      `indexes/dog-profiles/${packs[0]}`,
     );
-    expect(sample.dog).toHaveProperty('coursing_stats');
-    expect(sample.dog).toHaveProperty('racing_stats');
-    expect(sample.dog).toHaveProperty('titles');
-    expect(Array.isArray(sample.competitions)).toBe(true);
+    const first = Object.values(samplePack.byId)[0];
+    expect(first.dog).toHaveProperty('coursing_stats');
+    expect(first.dog).toHaveProperty('racing_stats');
+    expect(first.dog).toHaveProperty('titles');
+    expect(Array.isArray(first.competitions)).toBe(true);
   });
 
   it.skipIf(skipIfMissing)('sitemap.xml is generated into frontend/public', () => {

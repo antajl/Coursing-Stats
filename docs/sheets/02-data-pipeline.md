@@ -58,10 +58,14 @@ data/v1/
 | `calendar/`, `indexes/` (tops, events-by-id, dog-profiles, …), `donino/`, `competitions/` | да | горячее CDN |
 | `shows/calendar-*`, `shows/indexes/*` (кроме oversized) | да | списки/календари |
 | `shows/exhibitions/*` bulk (~5k) | **нет** | Turso; на CDN только allowlist из `shows/index.json` (~90 LC) |
-| `dogs/by-id/` | **нет** | сайт читает `indexes/dog-profiles/` |
+| `dogs/by-id/` | **нет** | сайт читает `indexes/dog-profiles/pack-*.json` |
+| `indexes/dog-profiles/` | **паки** `pack-000…255.json` | не per-id |
+| `shows/indexes/judge-details/` | **паки** `pack-*.json` | не per-id |
 | huge `dog-ranking-*`, sqlite, registries | **нет** | лимиты / backend-only |
 
-Ожидаемый бюджет data-файлов после A: ~10–12k (было ~17.5k) + prerender HTML (dogs/events/hubs). План: `docs/superpowers/plans/2026-08-09-cdn-publish-slim.md`.
+Слои данных: [ADR-014](../decisions/014-cdn-packs-vs-turso.md). План: `docs/superpowers/plans/2026-08-09-cdn-publish-slim.md`.
+
+Ожидаемый бюджет data-файлов после A+B: порядка **~5–7k** data JSON + prerender HTML (dogs/events/hubs).
 
 ## Key files
 

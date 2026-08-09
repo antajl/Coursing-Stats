@@ -51,7 +51,7 @@ export {
 
 export { getJudges, getJudgeDetails } from './judges'
 
-export { getDogProfile, getDogEvents } from './dogs'
+export { getDogProfile, getDogEvents, getDogProfileFile } from './dogs'
 
 export {
   getShowCalendar,

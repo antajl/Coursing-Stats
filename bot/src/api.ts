@@ -434,14 +434,35 @@ class CoursingStatsAPI {
    */
   async getDogById(dogId: string): Promise<DogData | null> {
     try {
-      const url = `${this.baseApiUrl}/indexes/dog-profiles/${dogId}.json`;
-      // Без кэширования - профили индивидуальны и часто запрашиваются
-      const result = await this.fetchJSON(url, CACHE_TTL.DOG_PROFILE);
+      const shard = this.cdnPackShardKey(dogId)
+      const packUrl = `${this.baseApiUrl}/indexes/dog-profiles/pack-${shard}.json`
+      const pack = (await this.fetchJSON(packUrl, CACHE_TTL.DOG_PROFILE)) as {
+        byId?: Record<string, DogData>
+      } | null
+      const fromPack = pack?.byId?.[String(dogId)]
+      if (fromPack) return fromPack
 
-      return result as DogData | null;
+      const url = `${this.baseApiUrl}/indexes/dog-profiles/${dogId}.json`
+      const result = await this.fetchJSON(url, CACHE_TTL.DOG_PROFILE)
+      return result as DogData | null
     } catch (error) {
-      return null;
+      return null
     }
+  }
+
+  /** Same algorithm as backend/lib/cdn-packs.ts (256 packs). */
+  private cdnPackShardKey(id: string | number): string {
+    const numId = Number(id)
+    if (!Number.isNaN(numId) && Number.isFinite(numId) && numId > 0 && String(id).trim() === String(numId)) {
+      return String(Math.abs(numId) % 256).padStart(3, '0')
+    }
+    const strId = String(id)
+    let hash = 0
+    for (let i = 0; i < strId.length; i++) {
+      hash = (hash << 5) - hash + strId.charCodeAt(i)
+      hash |= 0
+    }
+    return String(Math.abs(hash) % 256).padStart(3, '0')
   }
 
   /**

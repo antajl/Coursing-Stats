@@ -2,7 +2,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { ChevronRight, Star } from 'lucide-react'
 import { useFavorites } from '../../hooks/useFavorites'
-import { fetchJson } from '../../lib/staticData/core'
+import { getDogProfileFile } from '../../lib/staticData/dogs'
 import { parseDogName } from '../../lib/dogName'
 import { displayBreed } from '../../lib/breedMapping'
 
@@ -32,12 +32,10 @@ export default function FavoritesCapsule() {
     if (!activeId || cachedMeta) return
     let cancelled = false
     const load = async () => {
-      const file = await fetchJson<{ dog?: { name_lat?: string; name_ru?: string; breed?: string } }>(
-        `indexes/dog-profiles/${activeId}.json`,
-      )
+      const file = await getDogProfileFile(activeId)
       if (cancelled) return
       if (file?.dog) {
-        const d = file.dog
+        const d = file.dog as { name_lat?: string; name_ru?: string; breed?: string }
         const { primary } = parseDogName(d.name_lat || '', d.name_ru)
         setMeta(activeId, { name: primary, breed: d.breed || '' })
       } else {
@@ -63,11 +61,9 @@ export default function FavoritesCapsule() {
             next[id] = cached
             return
           }
-          const file = await fetchJson<{ dog?: { name_lat?: string; name_ru?: string; breed?: string } }>(
-            `indexes/dog-profiles/${id}.json`,
-          )
+          const file = await getDogProfileFile(id)
           if (file?.dog) {
-            const d = file.dog
+            const d = file.dog as { name_lat?: string; name_ru?: string; breed?: string }
             const { primary } = parseDogName(d.name_lat || '', d.name_ru)
             next[id] = { name: primary, breed: d.breed || '' }
             setMeta(id, next[id])

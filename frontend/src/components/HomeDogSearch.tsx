@@ -61,8 +61,9 @@ async function dogProfileExists(id: number, cache: Map<number, boolean>): Promis
   const cached = cache.get(id)
   if (cached != null) return cached
   try {
-    const res = await fetch(`/data/v1/indexes/dog-profiles/${id}.json`, { method: 'GET' })
-    const ok = res.ok
+    const { getDogProfile } = await import('../lib/staticData/dogs')
+    const result = await getDogProfile(String(id))
+    const ok = result.success
     cache.set(id, ok)
     return ok
   } catch {

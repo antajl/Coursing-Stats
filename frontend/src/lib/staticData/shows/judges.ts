@@ -1,5 +1,17 @@
+import { cdnPackShardKey, showJudgeDetailPackPath, type ShowJudgeDetailPackFile } from '../../../../../backend/lib/cdn-packs'
 import { type ShowGradeKey } from '../../../../../backend/lib/show-grades'
 import { type ApiResult, fetchJson, judgeDetailKey } from '../core'
+
+const showJudgePackCache = new Map<string, Promise<ShowJudgeDetailPackFile | null>>()
+
+async function loadShowJudgePack(shard: string): Promise<ShowJudgeDetailPackFile | null> {
+  let pending = showJudgePackCache.get(shard)
+  if (!pending) {
+    pending = fetchJson<ShowJudgeDetailPackFile>(showJudgeDetailPackPath(shard))
+    showJudgePackCache.set(shard, pending)
+  }
+  return pending
+}
 
 export interface ShowJudge {
   id: string
@@ -130,9 +142,15 @@ export async function getShowJudgeDetails(
 ): Promise<ApiResult<ShowJudgeDetail>> {
   if (!judgeId) return { success: false, error: 'Judge id required' }
   const id = decodeURIComponent(judgeId)
-  const detail = await fetchJson<ShowJudgeDetail>(
-    `shows/indexes/judge-details/${judgeDetailKey(id)}.json`,
-  )
+  const fileKey = judgeDetailKey(id)
+  const shard = cdnPackShardKey(fileKey)
+  const pack = await loadShowJudgePack(shard)
+  let detail = pack?.byKey?.[fileKey] as ShowJudgeDetail | undefined
+  if (!detail) {
+    // Legacy fallback during rollout
+    detail =
+      (await fetchJson<ShowJudgeDetail>(`shows/indexes/judge-details/${fileKey}.json`)) ?? undefined
+  }
   if (!detail || !detail.name) {
     return { success: false, error: 'Show judge not found' }
   }

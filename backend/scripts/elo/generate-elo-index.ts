@@ -2,7 +2,7 @@
  * Generate Elo v2 indexes + sync dog-profiles.
  * Params from elo-v2-locked-params.json (scale=8, K0=50 after recalibration).
  */
-import { readFileSync, writeFileSync, readdirSync, existsSync } from 'fs'
+import { readFileSync, writeFileSync, readdirSync, existsSync, unlinkSync } from 'fs'
 import { join, resolve, dirname } from 'path'
 import { fileURLToPath } from 'url'
 import {
@@ -11,6 +11,7 @@ import {
   type ByeRun,
   type SoloLoss,
 } from '../../lib/rating/elo-calculator'
+import { cdnPackShardKey, type DogProfilePackFile } from '../../lib/cdn-packs'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
@@ -167,16 +168,30 @@ function writeUpdatedProfiles(
     profile.elo_races = races
     profile.elo_reliable = flags.elo_reliable
     profile.elo_low_data = flags.elo_low_data
-  }
-
-  for (const profile of dogProfiles.values()) {
-    if (profile.elo_rating == null || profile.elo_races == null) continue
-    const filePath = join(DOG_PROFILES_DIR, `${profile.dog.id}.json`)
-    writeFileRetry(filePath, JSON.stringify(profile))
     updated++
   }
 
-  console.log(`Updated ${updated} dog profiles with Elo ratings`)
+  const packs = new Map<string, DogProfilePackFile>()
+  for (const profile of dogProfiles.values()) {
+    const shard = cdnPackShardKey(profile.dog.id)
+    let pack = packs.get(shard)
+    if (!pack) {
+      pack = { schema: 'coursing-stats/dog-profile-pack-v1', shard, byId: {} }
+      packs.set(shard, pack)
+    }
+    pack.byId[String(profile.dog.id)] = profile
+  }
+
+  for (const entry of readdirSync(DOG_PROFILES_DIR)) {
+    if (!entry.endsWith('.json')) continue
+    unlinkSync(join(DOG_PROFILES_DIR, entry))
+  }
+
+  for (const [shard, pack] of packs) {
+    writeFileRetry(join(DOG_PROFILES_DIR, `pack-${shard}.json`), JSON.stringify(pack))
+  }
+
+  console.log(`Updated ${updated} dog profiles with Elo ratings (${packs.size} packs)`)
 }
 
 function main() {
@@ -195,8 +210,19 @@ function main() {
   const dogProfiles: Map<number, DogProfile> = new Map()
   for (const file of readdirSync(DOG_PROFILES_DIR)) {
     if (!file.endsWith('.json')) continue
-    const profile: DogProfile = JSON.parse(readFileSync(join(DOG_PROFILES_DIR, file), 'utf-8'))
-    dogProfiles.set(profile.dog.id, profile)
+    const raw = JSON.parse(readFileSync(join(DOG_PROFILES_DIR, file), 'utf-8')) as
+      | DogProfile
+      | DogProfilePackFile
+    if (raw && typeof raw === 'object' && 'byId' in raw && raw.byId) {
+      for (const profile of Object.values(raw.byId)) {
+        const p = profile as DogProfile
+        if (p?.dog?.id != null) dogProfiles.set(p.dog.id, p)
+      }
+      continue
+    }
+    if (raw && typeof raw === 'object' && 'dog' in raw && (raw as DogProfile).dog?.id != null) {
+      dogProfiles.set((raw as DogProfile).dog.id, raw as DogProfile)
+    }
   }
   console.log(`Loaded ${dogProfiles.size} dog profiles`)
 

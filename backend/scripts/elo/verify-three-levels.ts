@@ -83,8 +83,18 @@ function loadProfiles(): Map<number, ProfileFile> {
   const map = new Map<number, ProfileFile>()
   for (const file of readdirSync(PROFILES_DIR)) {
     if (!file.endsWith('.json')) continue
-    const p: ProfileFile = JSON.parse(readFileSync(join(PROFILES_DIR, file), 'utf-8'))
-    map.set(p.dog.id, p)
+    const raw = JSON.parse(readFileSync(join(PROFILES_DIR, file), 'utf-8')) as
+      | ProfileFile
+      | { byId?: Record<string, ProfileFile> }
+    if (raw && typeof raw === 'object' && 'byId' in raw && raw.byId) {
+      for (const p of Object.values(raw.byId)) {
+        if (p?.dog?.id != null) map.set(p.dog.id, p)
+      }
+      continue
+    }
+    if (raw && typeof raw === 'object' && 'dog' in raw && (raw as ProfileFile).dog?.id != null) {
+      map.set((raw as ProfileFile).dog.id, raw as ProfileFile)
+    }
   }
   return map
 }

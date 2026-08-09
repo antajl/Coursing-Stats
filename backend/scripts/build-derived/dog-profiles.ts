@@ -4,6 +4,7 @@ import type Database from 'better-sqlite3';
 import { dataV1Path, listJsonFiles } from '../../lib/local-data/paths';
 import { aggregateQualificationTitles } from '../../src/lib/qualification-titles';
 import { PARTICIPATION_STATUSES_SQL, RACING_EXCLUDED_STATUSES_SQL } from '../../src/lib/racing-status';
+import { cdnPackShardKey, type DogProfilePackFile } from '../../lib/cdn-packs';
 import { INDEXES_DIR } from './shared';
 
 type CoursingRow = { dog_id: number; event_id: number; total_score: number | null; placement: number | null; raw_scores_json: string | null };
@@ -309,6 +310,8 @@ export function buildDogProfiles(db: Database.Database) {
   ]);
   const sortedDogIds = [...allDogIds].sort((a, b) => a - b);
 
+  const packs = new Map<string, Record<string, unknown>>();
+
   for (const dogId of sortedDogIds) {
     const fromFile = metadataById.get(dogId);
     const fromDb = dogsById.get(dogId);
@@ -372,29 +375,43 @@ export function buildDogProfiles(db: Database.Database) {
       competitions,
     };
 
-    const outPath = path.join(outDir, `${dogId}.json`)
-    const body = JSON.stringify(payload)
+    const shard = cdnPackShardKey(dogId);
+    const bucket = packs.get(shard) ?? {};
+    bucket[String(dogId)] = payload;
+    packs.set(shard, bucket);
+  }
+
+  // Remove legacy per-id files and stale packs, then write fresh packs.
+  for (const entry of fs.readdirSync(outDir)) {
+    if (!entry.endsWith('.json')) continue;
+    fs.unlinkSync(path.join(outDir, entry));
+  }
+
+  let packBytes = 0;
+  for (const [shard, byId] of [...packs.entries()].sort((a, b) => a[0].localeCompare(b[0]))) {
+    const body = JSON.stringify({
+      schema: 'coursing-stats/dog-profile-pack-v1',
+      shard,
+      byId,
+    } satisfies DogProfilePackFile);
+    packBytes += Buffer.byteLength(body);
+    const outPath = path.join(outDir, `pack-${shard}.json`);
     for (let attempt = 0; attempt < 5; attempt++) {
       try {
-        fs.writeFileSync(outPath, body, 'utf-8')
-        break
+        fs.writeFileSync(outPath, body, 'utf-8');
+        break;
       } catch (err) {
-        const code = (err as NodeJS.ErrnoException).code
+        const code = (err as NodeJS.ErrnoException).code;
         if ((code === 'UNKNOWN' || code === 'EBUSY' || code === 'EPERM') && attempt < 4) {
-          Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 50 * (attempt + 1))
-          continue
+          Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 50 * (attempt + 1));
+          continue;
         }
-        throw err
+        throw err;
       }
     }
   }
 
-  const keepIds = new Set(sortedDogIds.map(String));
-  for (const entry of fs.readdirSync(outDir)) {
-    if (!entry.endsWith('.json')) continue;
-    const id = entry.slice(0, -'.json'.length);
-    if (!keepIds.has(id)) fs.unlinkSync(path.join(outDir, entry));
-  }
-
-  console.log(`  → dog-profiles/ (${sortedDogIds.length} files)`);
+  console.log(
+    `  → dog-profiles/pack-*.json (${packs.size} packs, ${sortedDogIds.length} dogs, ${(packBytes / (1024 * 1024)).toFixed(1)} MB)`,
+  );
 }
