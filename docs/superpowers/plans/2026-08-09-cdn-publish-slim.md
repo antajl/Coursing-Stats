@@ -37,10 +37,10 @@
 - Modify: `backend/scripts/publish/verify-publish-gates.ts` (`PUBLISH_EXCLUDE_PATTERNS`)
 - Test: `backend/tests/publish-exclude.test.ts` (новый)
 
-**Why safe:** фронт читает `indexes/dog-profiles/{id}.json`, не `dogs/by-id/`. by-id нужен билдам/импорту в git.
+**Why safe:** фронт читает `indexes/dog-profiles/pack-*.json` (`byId`), не `dogs/by-id/`. by-id нужен билдам/импорту в git.
 
 - [x] **Step 1:** Добавить паттерн `dogs/by-id` в оба exclude-списка
-- [x] **Step 2:** Тест: `shouldExclude('dogs/by-id/1.json') === true`, `shouldExclude('indexes/dog-profiles/1.json') === false`
+- [x] **Step 2:** Тест: `shouldExclude('dogs/by-id/1.json') === true`, `shouldExclude('indexes/dog-profiles/pack-001.json') === false`
 - [x] **Step 3:** `node frontend/scripts/copy-data.js` → в `frontend/public/data/v1` нет `dogs/by-id`
 
 ---

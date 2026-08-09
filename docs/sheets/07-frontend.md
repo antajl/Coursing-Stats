@@ -1,6 +1,6 @@
 ---
 title: Frontend
-verified: 2026-08-08
+verified: 2026-08-09
 ---
 
 # 07 — Frontend
@@ -15,9 +15,12 @@ React 19 + Vite + Tailwind SPA на Cloudflare Pages. Данные: static JSON;
 |------|--|
 | Entry routes | `frontend/src/AppRoutes.tsx` |
 | Static data | `frontend/src/lib/staticData/*`, `hooks/useStaticData.ts` |
+| Sport dog profile | `dogs.ts` → `indexes/dog-profiles/pack-XXX.json` (`byId`) |
+| Show judge detail | `shows/judges.ts` → `judge-details/pack-XXX.json` (`byKey`) |
 | Calendars gate | `data/v1/ui-flags.json` + `usePublicCalendarVisible` — local всегда видно |
 | Shows lists | React Query (`staleTime` ~5 min) → CDN |
-| Exhibition detail | CDN → Turso fallback (`lib/turso.ts`) |
+| Exhibition detail | LC allowlist CDN → Turso fallback (`lib/turso.ts`) |
+| SPA fallback | `_redirects` → `/spa-shell/index.html` (не `spa-shell.html` — CF pretty-URL loop) |
 | Design | PageToolbar, SALUKI theme — см. существующие UI patterns в `frontend/src` |
 | Admin | только `yarn run dev` → `/admin` (список/создание) + `/admin/event/:id` (редактор) + API `:8787`; на проде нет |
 | Years dropdown | `indexes/years.json`; hooks: `useApi` `['api','years']` ≠ `useStaticData` `['staticData','years']` |
@@ -54,4 +57,4 @@ SEO prerender: `yarn run prerender-seo` (когда нужно).
 
 ## See also
 
-[01-three-domains](01-three-domains.md) · [04-shows](04-shows.md) · ADR-001, ADR-002
+[01-three-domains](01-three-domains.md) · [02-data-pipeline](02-data-pipeline.md) · [04-shows](04-shows.md) · ADR-001, ADR-002, [ADR-014](../decisions/014-cdn-packs-vs-turso.md)

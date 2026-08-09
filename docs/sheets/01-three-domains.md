@@ -1,6 +1,6 @@
 ---
 title: Three Domains
-verified: 2026-08-06
+verified: 2026-08-09
 ---
 
 # 01 — Three Domains
@@ -37,8 +37,9 @@ verified: 2026-08-06
 |---------|--------------|-------|--------|
 | Calendar | `calendar/{year}.json` | `shows/calendar-rkf/` | — |
 | Rankings | `indexes/top-*` | `shows/indexes/dog-ranking-{year}.json` | inline JSON |
-| Protocols | `competitions/...json` | CDN index → **Turso fallback** | — |
-| Profiles | `indexes/dog-profiles/` | `show-dog-lookup/` shards | filter name+breed |
+| Protocols | `competitions/...json` | LC allowlist CDN / RKF → **Turso** | — |
+| Profiles | `indexes/dog-profiles/pack-*.json` | `dog-details/` + `show-dog-lookup/` shards | filter name+breed |
+| Judge details | `indexes/judge-details/{key}.json` (~50) | `shows/indexes/judge-details/pack-*.json` | — |
 
 ## Key files
 
@@ -55,4 +56,4 @@ verified: 2026-08-06
 
 ## See also
 
-[03-competitions](03-competitions.md) · [04-shows](04-shows.md) · [05-donino](05-donino.md) · skill `sport-show-linkage`
+[00-overview](00-overview.md) · [02-data-pipeline](02-data-pipeline.md) · [ADR-014](../decisions/014-cdn-packs-vs-turso.md)

@@ -1,6 +1,6 @@
 ---
 title: Overview
-verified: 2026-08-06
+verified: 2026-08-09
 ---
 
 # 00 — Overview
@@ -13,13 +13,15 @@ CoursingStats — агрегатор статистики собак: сорев
 
 | Факт | |
 |------|--|
-| Публичный сайт | Static React SPA → CDN `/data/v1/*.json` |
+| Публичный сайт | Static React SPA → CDN `/data/v1/*.json` (+ Brotli/gzip на edge) |
 | Worker/D1 в prod сайта | **Нет** (админка только локально `:8787`) |
 | Источник правды данных | `data/v1/` в git |
 | Bot | Cloudflare Workers + Grammy + KV |
 | Package manager | **yarn@1.22.22** |
 | Календари на проде | ON (`data/v1/ui-flags.json`) |
-| Turso | Только протоколы выставок (не ranking/calendar) |
+| Turso | Только протоколы выставок RKF (не ranking/calendar) |
+| CDN packs | Профили спорта и судьи выставок — `pack-*.json` ([ADR-014](../decisions/014-cdn-packs-vs-turso.md)) |
+| Pages | ≤~20k файлов; `dogs/by-id` и bulk exhibitions **не** копируются |
 
 **Статистика (ориентир 2026-08):** соревнования ~223 / ~94 с results / ~1 458 dogs; выставки ~62k в каталоге; Донино — отдельные JSON.
 
@@ -56,4 +58,4 @@ PowerShell: цепочки через `;`, не `&&`.
 
 ## See also
 
-[01-three-domains](01-three-domains.md) · [09-ops-deploy](09-ops-deploy.md) · [decisions/](../decisions/)
+[01-three-domains](01-three-domains.md) · [02-data-pipeline](02-data-pipeline.md) · [09-ops-deploy](09-ops-deploy.md) · [decisions/](../decisions/)

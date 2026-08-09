@@ -1,6 +1,6 @@
 ---
 title: Ops & Deploy
-verified: 2026-08-08
+verified: 2026-08-09
 ---
 
 # 09 — Ops & Deploy
@@ -16,6 +16,7 @@ verified: 2026-08-08
 | Package manager | **yarn@1.22.22** |
 | Dev | `yarn run dev` → Vite `:5173` + local admin API `:8787` (`/admin`, `/admin/event/:id`) |
 | Site deploy | `.github/workflows/deploy-frontend.yml` → `build-all-data` → Pages project `coursingstats` |
+| Pages file limit | ≤~20k; slim через `publish-exclude.js` + CDN packs (ADR-014) |
 | Bot deploy | отдельно (`cd bot; yarn run deploy`); **не** Worker сайта в site CI |
 | Calendar toggle | `data/v1/ui-flags.json` + `scripts/show-calendar-*.bat` / `hide-calendar-*.bat` |
 | Secrets site/scripts | `.env.ai` (`TURSO_URL`, `TURSO_AUTH_TOKEN`) — gitignored |
@@ -42,6 +43,7 @@ PowerShell: `cd bot; yarn test` — не `&&`.
 
 - `.github/workflows/deploy-frontend.yml`
 - `.github/workflows/update-speed-records.yml`
+- `backend/scripts/publish/publish-exclude.js`, `frontend/scripts/copy-data.js`
 - `package.json` scripts
 - `data/v1/ui-flags.json`
 
@@ -56,6 +58,8 @@ PowerShell: `cd bot; yarn test` — не `&&`.
 - Docs с `npm run` — устарели, используй yarn.
 - CI без local RKF не должен пересобирать show indexes «с нуля» в пустоту.
 - После смены indexes — дождаться publish-gates.
+- Не возвращать `/* /spa-shell.html 200` — CF pretty-URL даёт 308-луп; нужен `/spa-shell/index.html`.
+- Exclude (`dogs/by-id`, bulk exhibitions) ≠ удаление из git; чистка репо — отдельно.
 
 ## See also
 

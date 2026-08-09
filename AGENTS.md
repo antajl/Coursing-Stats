@@ -28,8 +28,10 @@ CoursingStats — статистика соревнований (procoursing), �
 |------|--|
 | Public site | JSON from CDN only — **no** Worker/D1 runtime |
 | Truth | `data/v1/` in git |
+| CDN packs | `dog-profiles/pack-*`, show `judge-details/pack-*` ([ADR-014](docs/decisions/014-cdn-packs-vs-turso.md)) |
+| Pages slim | exclude `dogs/by-id` + bulk exhibitions (`publish-exclude.js`) |
 | Calendars | ON in `data/v1/ui-flags.json` (competitions + shows) |
-| Turso | Exhibition **protocols** only (`getShowExhibition` fallback) |
+| Turso | Exhibition **protocols** only (`getShowExhibition` fallback; LC allowlist still CDN) |
 | Package manager | **yarn@1.22.22** |
 | Local secrets | `.env.ai` (gitignored) |
 | Two sport ratings | medals ≠ CS points — never merge |
