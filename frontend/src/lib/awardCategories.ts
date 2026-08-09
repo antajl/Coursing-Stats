@@ -91,7 +91,7 @@ export function classifyCompetitionTitle(raw: string): AwardCategory {
     return 'cumulative'
   }
 
-  // Крутые титулы старта (ранг мероприятия / рабочие качества)
+  // Крутые титулы соревнования (ранг мероприятия / рабочие качества)
   if (
     /^(ЧР|ПКР|ЧРКФ|ПЧРКФ)(\s+РК)?$/.test(compact) ||
     compact.startsWith('ЧЕМПИОН РОССИИ') ||

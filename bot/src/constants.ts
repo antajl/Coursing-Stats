@@ -58,3 +58,16 @@ export function botStartLink(startParam: string, botUsername = 'coursing_stats_b
 }
 
 export const BOT_USERNAME = 'coursing_stats_bot';
+
+/** Баннеры меню: webp на Pages `/bot/*` (см. public/bot + frontend sync). */
+const BOT_PHOTO_VERSION = '3';
+const botPhoto = (path: string) =>
+  `https://coursing-stats.ru/bot/${path}?v=${BOT_PHOTO_VERSION}`;
+
+export const BOT_PHOTOS = {
+  home: botPhoto('banner.webp'),
+  competitions: botPhoto('banners/competitions.webp'),
+  shows: botPhoto('banners/shows.webp'),
+  guide: botPhoto('banners/guide.webp'),
+  donino: botPhoto('banners/donino.webp'),
+} as const;

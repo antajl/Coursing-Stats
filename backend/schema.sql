@@ -104,7 +104,7 @@ SELECT
 FROM results r
 JOIN dogs d ON d.id = r.dog_id
 JOIN events e ON r.event_id = e.id
-WHERE r.status = 'finished' AND e.event_type IN ('coursing', 'bzmp')
+WHERE r.status IN ('finished', 'disqualified') AND e.event_type IN ('coursing', 'bzmp')
 GROUP BY d.id, e.year
 ORDER BY e.year DESC, gold DESC, silver DESC, bronze DESC;
 
@@ -143,7 +143,7 @@ SELECT
 FROM results r
 JOIN dogs d ON d.id = r.dog_id
 JOIN events e ON r.event_id = e.id
-WHERE r.status = 'finished' AND e.event_type IN ('coursing', 'bzmp')
+WHERE r.status IN ('finished', 'disqualified') AND e.event_type IN ('coursing', 'bzmp')
 GROUP BY d.id, e.year
 ORDER BY e.year DESC, avg_judge_score DESC, total_starts DESC, best_judge_score DESC, best_score DESC;
 

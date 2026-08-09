@@ -365,7 +365,7 @@ export function parseLegacyFullResultsHTML(html: string): LegacyFullResultsParse
     const rowBg = $(trs[i]).attr('bgcolor') || $(trs[i]).attr('bgColor') || null
     const greyNoShow = isNoShowRowBg(rowBg)
 
-    let status: string | null = null
+    let status: string | null = 'finished'
     let status_reason: string | null = null
     if (h1j1.disqualified && !heat1Total && !grandTotal) {
       status = 'disqualified'

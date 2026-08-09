@@ -26,21 +26,23 @@ export interface DogData {
     pedigree_url: string | null;
     coursing_stats: {
       total_starts: number;
-      best_score: number;
-      avg_score: number;
-      avg_judge_score?: number;
+      best_score: number | null;
+      avg_score?: number | null;
+      best_judge_score?: number | null;
+      avg_judge_score?: number | null;
       gold: number;
       silver: number;
       bronze: number;
     };
     racing_stats: {
       total_starts: number;
-      best_speed: number;
-      avg_speed: number;
+      best_speed: number | null;
+      avg_speed?: number | null;
       gold: number;
       silver: number;
       bronze: number;
     };
+    titles?: Array<{ title: string; count?: number }>;
     shows_stats?: {
       total_starts: number;
       best_placement: number;

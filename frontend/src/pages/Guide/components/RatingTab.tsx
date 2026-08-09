@@ -10,7 +10,7 @@ export default function RatingTab() {
           вопрос: насколько стабильно собака получает высокие оценки судей, а не «сколько баллов суммой за все годы».
         </p>
         <p className="text-[13px] text-charcoal-600 dark:text-charcoal-300">
-          На карточке крупно — индекс CS; мелко — среднее и лучшее за старт, число стартов. Рейтинг по{' '}
+          На карточке крупно — индекс CS; мелко — среднее и лучшее за участие, число участий. Рейтинг по{' '}
           <strong>медалям</strong> считается отдельно и с CS не смешивается.
         </p>
         <p className="text-[13px] text-charcoal-600 dark:text-charcoal-300">
@@ -26,7 +26,7 @@ export default function RatingTab() {
         </p>
         <ul className="list-inside list-disc space-y-1 pl-1 text-[13px]">
           <li>
-            Порядок мест: <strong>медали → CS</strong> (при равных медалях выше тот, кто собрал их за меньше стартов;
+            Порядок мест: <strong>медали → CS</strong> (при равных медалях выше тот, кто собрал их за меньше участий;
             при ничьей — индекс CS). <strong>Elo на место не влияет</strong> — только на карточке как справка.
           </li>
           <li>
@@ -44,8 +44,8 @@ export default function RatingTab() {
 
       <SectionCard title="Формула CS (версия v1)">
         <p className="text-[13px]">
-          В расчёт входят: сглаженная средняя оценка одного судьи (чтобы один-два старта не доминировали), бонус до{' '}
-          <strong>0,6</strong> за лучший результат выше среднего и бонус до <strong>2</strong> за число стартов.
+          В расчёт входят: сглаженная средняя оценка одного судьи (чтобы один-два участия не доминировали), бонус до{' '}
+          <strong>0,6</strong> за лучший результат выше среднего и бонус до <strong>2</strong> за число участий.
         </p>
 
         <div className="rounded-lg border border-old-money-200 bg-old-money-50/50 px-3 py-2.5 font-mono text-[11px] leading-relaxed text-charcoal-800 dark:border-charcoal-600 dark:bg-charcoal-900/40 dark:text-charcoal-100">
@@ -57,11 +57,11 @@ export default function RatingTab() {
 
         <p className="text-[13px]">
           <strong>Пример:</strong> СТАНГЕРС ЛАНД ИНГРИД ЭЛЕГАНТ — μ=87, n=64, B=97, S=16 →{' '}
-          <strong>CS=89,28</strong>. Собака с одним стартом и μ=96 получит CS≈88,85 — ниже стабильной карьеры.
+          <strong>CS=89,28</strong>. Собака с одним участием и μ=96 получит CS≈88,85 — ниже стабильной карьеры.
         </p>
 
         <ul className="list-inside list-disc space-y-1 pl-1 text-[13px] text-charcoal-600 dark:text-charcoal-300">
-          <li>Константы prior=85 и k=12 зафиксированы — индекс не «плывёт» без новых стартов собаки.</li>
+          <li>Константы prior=85 и k=12 зафиксированы — индекс не «плывёт» без новых участий собаки.</li>
           <li>Курсинг и БЗМП используют одну шкалу оценок судей.</li>
         </ul>
       </SectionCard>
@@ -117,7 +117,7 @@ export default function RatingTab() {
         <ul className="list-inside list-disc space-y-1 pl-1 text-[13px] text-charcoal-600 dark:text-charcoal-300">
           <li>
             <strong>Медали</strong> — главный ключ (золото ценнее серебра и бронзы; при одинаковом наборе выше
-            эффективность по числу стартов).
+            эффективность по числу участий).
           </li>
           <li>
             <strong>CS</strong> — тай-брейк при равных медалях: стабильность оценок судей.

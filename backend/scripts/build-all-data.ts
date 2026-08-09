@@ -148,12 +148,34 @@ function assertShowRankingHasBis(relPath: string) {
 }
 
 console.log('\nValidating show ranking indexes…');
-// Skip BIS validation in CI since dog-ranking.json is excluded from git (too large)
-// Show ranking uses sharded structure (dog-ranking-01.json to dog-ranking-21.json)
-if (!isCI) {
-  assertShowRankingHasBis('data/v1/shows/indexes/dog-ranking.json');
+// Prefer monolithic dog-ranking.json; fall back to committed shards (dog-ranking-01…).
+// CI historically skipped when the monolith was gitignored as too large.
+const showRankingMonolith = 'data/v1/shows/indexes/dog-ranking.json';
+const showRankingShard0 = 'data/v1/shows/indexes/dog-ranking-01.json';
+if (fs.existsSync(path.join(ROOT, showRankingMonolith))) {
+  assertShowRankingHasBis(showRankingMonolith);
+} else if (fs.existsSync(path.join(ROOT, showRankingShard0))) {
+  console.log(
+    `  ${showRankingMonolith} missing — validating BIS via shards ${showRankingShard0}…`,
+  );
+  // Build a synthetic { shards } doc so assertShowRankingHasBis can load all parts.
+  const showIdxDir = path.join(ROOT, 'data/v1/shows/indexes');
+  const shards = fs
+    .readdirSync(showIdxDir)
+    .filter((n) => /^dog-ranking-\d+\.json$/.test(n))
+    .sort();
+  const tmpManifest = path.join(showIdxDir, '_dog-ranking-shards-check.json');
+  fs.writeFileSync(tmpManifest, JSON.stringify({ shards }, null, 2), 'utf-8');
+  try {
+    assertShowRankingHasBis(path.relative(ROOT, tmpManifest).split(path.sep).join('/'));
+  } finally {
+    fs.unlinkSync(tmpManifest);
+  }
+} else if (isCI) {
+  console.log('  Skipping BIS validation in CI (no dog-ranking monolith/shards)');
 } else {
-  console.log('  Skipping BIS validation in CI (dog-ranking.json excluded from git)');
+  console.error(`FATAL: missing ${showRankingMonolith} and dog-ranking-NN.json shards`);
+  process.exit(1);
 }
 
 // Also copy data for local preview (frontend/public/data/v1/)

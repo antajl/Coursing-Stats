@@ -24,6 +24,23 @@ const OUTPUT_DIR = join(ROOT, 'data/v1/indexes')
 const ELO_MIN_SHOW = 3
 const ELO_LOW_DATA = 8
 
+/** Windows AV/indexer can briefly lock files under data/v1/indexes. */
+function writeFileRetry(filePath: string, data: string, attempts = 12): void {
+  let lastErr: unknown
+  for (let attempt = 0; attempt < attempts; attempt++) {
+    try {
+      writeFileSync(filePath, data, 'utf-8')
+      return
+    } catch (e) {
+      lastErr = e
+      const code = (e as NodeJS.ErrnoException)?.code
+      if (code !== 'UNKNOWN' && code !== 'EPERM' && code !== 'EBUSY') throw e
+      Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 80 * (attempt + 1))
+    }
+  }
+  throw lastErr
+}
+
 interface DogProfile {
   dog: {
     id: number
@@ -121,7 +138,7 @@ function generateIndex(
   }
 
   const outputPath = join(OUTPUT_DIR, fileName)
-  writeFileSync(outputPath, JSON.stringify(output, null, 2), 'utf-8')
+  writeFileRetry(outputPath, JSON.stringify(output, null, 2))
   console.log(`Generated ${outputPath} with ${items.length} items`)
 }
 
@@ -155,7 +172,7 @@ function writeUpdatedProfiles(
   for (const profile of dogProfiles.values()) {
     if (profile.elo_rating == null || profile.elo_races == null) continue
     const filePath = join(DOG_PROFILES_DIR, `${profile.dog.id}.json`)
-    writeFileSync(filePath, JSON.stringify(profile), 'utf-8')
+    writeFileRetry(filePath, JSON.stringify(profile))
     updated++
   }
 

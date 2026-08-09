@@ -89,13 +89,23 @@ describe('Keyboards', () => {
   });
 
   describe('getDogCardKeyboard', () => {
-    it('should use add_favorite and site URL matching handlers', () => {
+    it('should use add_favorite and profile site URL matching handlers', () => {
       const keyboard = getDogCardKeyboard('123');
       const buttons = keyboard.inline_keyboard.flat();
       const favorite = buttons.find((b) => 'callback_data' in b && b.callback_data === 'add_favorite:123');
       const site = buttons.find((b) => 'url' in b && b.url === 'https://coursing-stats.ru/dog/123');
       expect(favorite).toBeDefined();
+      expect(favorite && 'text' in favorite ? favorite.text : null).toBe('В избранное');
       expect(site).toBeDefined();
+      expect(site && 'text' in site ? site.text : null).toBe('Профиль на сайте');
+    });
+
+    it('shows favorite state when already saved', () => {
+      const keyboard = getDogCardKeyboard('123', 'main_menu', { isFavorite: true });
+      const buttons = keyboard.inline_keyboard.flat();
+      const favorite = buttons.find((b) => 'callback_data' in b && b.callback_data === 'remove_favorite:123');
+      expect(favorite).toBeDefined();
+      expect(favorite && 'text' in favorite ? favorite.text : null).toBe('⭐ В избранном');
     });
   });
 

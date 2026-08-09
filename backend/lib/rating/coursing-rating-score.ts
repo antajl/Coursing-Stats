@@ -27,7 +27,7 @@ export const COURSING_RATING_SHRINK_K = 12;
 export const COURSING_RATING_PEAK_WEIGHT = 0.15;
 export const COURSING_RATING_PEAK_CAP = 4;
 export const COURSING_RATING_STARTS_WEIGHT = 0.5;
-/** Жёсткий потолок бонуса стартов. */
+/** Жёсткий потолок бонуса за число участий. */
 export const COURSING_RATING_STARTS_CAP = 2;
 
 /** Максимальный бонус пика: 0,15 × 4 = 0,6. */
@@ -35,7 +35,7 @@ export const COURSING_RATING_PEAK_BONUS_MAX =
   COURSING_RATING_PEAK_WEIGHT * COURSING_RATING_PEAK_CAP;
 
 export const COURSING_RATING_FORMULA_HINT =
-  'Индекс CS v1: средняя оценка одного судьи (курсинг + БЗМП) с сглаживанием к prior=85 при малом n + до +0,6 за пик + до +2 за старты. Сумма протокола не учитывается.';
+  'Индекс CS v1: средняя оценка одного судьи (курсинг + БЗМП) с сглаживанием к prior=85 при малом n + до +0,6 за пик + до +2 за участия. Сумма протокола не учитывается.';
 
 export interface CoursingRatingInput {
   avg_judge_score: number | null | undefined;

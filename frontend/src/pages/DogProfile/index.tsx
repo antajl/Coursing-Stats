@@ -376,10 +376,10 @@ export default function DogProfile() {
 
   const seoFacts: string[] = []
   if (hasCoursingData) {
-    seoFacts.push(`курсинг ${coursing.total_starts || 0} стартов`)
+    seoFacts.push(`курсинг ${coursing.total_starts || 0} участий`)
   }
   if (hasRacingData) {
-    seoFacts.push(`беги ${racing.total_starts || 0} стартов`)
+    seoFacts.push(`беги ${racing.total_starts || 0} участий`)
   }
   if (showDog && (showDog.total_shows || 0) > 0) {
     seoFacts.push(`выставки: ${showDog.total_shows}`)

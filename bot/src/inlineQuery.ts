@@ -1,6 +1,8 @@
 import { InlineKeyboard } from 'grammy';
 import { botStartLink } from './constants';
-import type { CoursingRecord, Dog, SpeedRecord, SpeedRecordExtended } from './types';
+import { getInlineDogCardKeyboard } from './keyboards';
+import { formatDogCard, type ShowDogCardSummary } from './handlers/utils/dogCard';
+import type { CoursingRecord, Dog, DogData, SpeedRecord, SpeedRecordExtended } from './types';
 
 const SITE_URL = 'https://coursing-stats.ru';
 const DONINO_SITE = `${SITE_URL}/speed-records`;
@@ -314,26 +316,35 @@ function doninoDogMarkup(name: string, breed: string, screenshotUrl?: string) {
   return keyboard;
 }
 
-export function buildInlineDogResult(dog: Dog) {
+export function buildInlineDogResult(
+  dogData: DogData,
+  options: { shows?: ShowDogCardSummary | null; isFavorite?: boolean } = {},
+) {
+  const dog = dogData.dog;
   const name = dog.name_lat || dog.name_ru || 'N/A';
   const breed = dog.breed || 'N/A';
-  const starts = dog.competition_count || 0;
+  const c = dog.coursing_stats;
+  const r = dog.racing_stats;
+  const shows = options.shows;
+
+  const descriptionParts: string[] = [];
+  if ((c.total_starts ?? 0) > 0) descriptionParts.push(`Курсинг: ${c.total_starts}`);
+  if ((r.total_starts ?? 0) > 0) descriptionParts.push(`Бега: ${r.total_starts}`);
+  if (shows && shows.total_shows > 0) descriptionParts.push(`Выставки: ${shows.total_shows}`);
 
   return {
     type: 'article' as const,
     id: dog.id.toString(),
     title: `${name} (${breed})`,
-    description: `Стартов: ${starts}`,
+    description: descriptionParts.join(' · ') || 'Нет участий',
     input_message_content: {
-      message_text:
-        `<b>${name}</b> (${breed})\n` +
-        `Стартов: ${starts}\n\n` +
-        `<i>Нажмите «Открыть в боте» для карточки и избранного</i>`,
+      message_text: formatDogCard(dogData, { shows }),
       parse_mode: 'HTML' as const,
+      link_preview_options: { is_disabled: true },
     },
-    reply_markup: new InlineKeyboard()
-      .url('🤖 Открыть в боте', botStartLink(`dog_${dog.id}`))
-      .url('🌐 На сайте', `${SITE_URL}/dog/${dog.id}`),
+    reply_markup: getInlineDogCardKeyboard(dog.id.toString(), {
+      isFavorite: options.isFavorite,
+    }),
   };
 }
 

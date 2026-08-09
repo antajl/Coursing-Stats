@@ -1,6 +1,6 @@
 ---
 title: Data Pipeline
-verified: 2026-08-08
+verified: 2026-08-09
 ---
 
 # 02 — Data Pipeline
@@ -19,6 +19,7 @@ verified: 2026-08-08
 | Как строятся indexes | JSON → **in-memory SQLite** (`openDb`), не stale `pc-db.sqlite` |
 | Calendar UI | `calendar/{year}.json` + `indexes/calendar-index.json` / `events-by-id.json` |
 | Protocol page | `/event/:id` читает `events-by-id[id].results_file` → `competitions/…json` |
+| events-by-id collisions | Prefer entry with `has_results` / `results_file`; also alias id from `…/{compId}-slug.json` so `/event/1552` works when calendar id is `YYYYMMDD` |
 | Show indexes в CI | Обычно **не** пересобираются (нет local RKF); ship committed `data/v1/shows/indexes/*` |
 | Local без RKF archive | Skip show rebuild — иначе можно уничтожить BIS |
 

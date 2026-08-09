@@ -1,0 +1,17 @@
+{
+  "name": "auth-worker",
+  "main": "src/index.ts",
+  "compatibility_date": "2024-01-01",
+  "workers_dev": true,
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "cs-users",
+      "database_id": "7b6b93a4-662f-4e4e-ae2c-5ce913df36fb"
+    }
+  ],
+  "vars": {
+    "YANDEX_CLIENT_ID": "165a25912ff74a4ca941c6048ece132e",
+    "YANDEX_REDIRECT_URI": "https://auth-worker.antajltube.workers.dev/v1/oauth/yandex/callback"
+  }
+}

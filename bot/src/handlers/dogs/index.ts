@@ -2,7 +2,7 @@ import { Composer } from 'grammy';
 import { CoursingStatsAPI } from '../../api';
 import { getNavigationButtons, getDogCardKeyboard } from '../../keyboards';
 import { validateDogId } from '../utils/validators';
-import { formatDogCard } from '../utils/dogCard';
+import { buildDogCardPresentation } from '../utils/presentDogCard';
 import type { KVNamespace } from '../context';
 
 /**
@@ -38,10 +38,16 @@ export function createDogs(api: CoursingStatsAPI, cache?: KVNamespace) {
       const back = ctx.callbackQuery.message?.text?.includes('Избранные')
         ? 'favorites'
         : 'main_menu';
+      const card = await buildDogCardPresentation(api, dogData, {
+        cache,
+        userId: ctx.from?.id.toString(),
+        backCallback: back,
+      });
 
-      await ctx.editMessageText(formatDogCard(dogData), {
+      await ctx.editMessageText(card.text, {
         parse_mode: 'HTML',
-        reply_markup: getDogCardKeyboard(dogData.dog.id.toString(), back)
+        link_preview_options: { is_disabled: true },
+        reply_markup: card.reply_markup,
       });
     } catch (error) {
       await ctx.editMessageText(
@@ -76,6 +82,14 @@ export function createDogs(api: CoursingStatsAPI, cache?: KVNamespace) {
     } else {
       await ctx.answerCallbackQuery('Уже в избранном');
     }
+
+    try {
+      await ctx.editMessageReplyMarkup({
+        reply_markup: getDogCardKeyboard(dogId, 'main_menu', { isFavorite: true }),
+      });
+    } catch {
+      // Message may be too old / not editable — ignore
+    }
   });
 
   dogs.callbackQuery(/^remove_favorite:(\d+)$/, async (ctx) => {
@@ -84,6 +98,11 @@ export function createDogs(api: CoursingStatsAPI, cache?: KVNamespace) {
 
     if (!userId || !cache) {
       await ctx.answerCallbackQuery('Ошибка при удалении из избранного');
+      return;
+    }
+
+    if (!validateDogId(dogId)) {
+      await ctx.answerCallbackQuery('Неверный ID собаки');
       return;
     }
 
@@ -98,6 +117,14 @@ export function createDogs(api: CoursingStatsAPI, cache?: KVNamespace) {
       await ctx.answerCallbackQuery('Удалено из избранного');
     } else {
       await ctx.answerCallbackQuery('Не в избранном');
+    }
+
+    try {
+      await ctx.editMessageReplyMarkup({
+        reply_markup: getDogCardKeyboard(dogId, 'main_menu', { isFavorite: false }),
+      });
+    } catch {
+      // Message may be too old / not editable — ignore
     }
   });
 

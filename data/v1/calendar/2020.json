@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/calendar-v1",
   "year": 2020,
-  "exported_at": "2026-08-08T19:04:40.812Z",
+  "exported_at": "2026-08-08T23:37:00.812Z",
   "event_count": 6,
   "with_results": 4,
   "events": [
@@ -15,21 +15,21 @@
       "full_title": "Бега за механической приманкой",
       "rank_label": "Бега за механической приманкой",
       "rank_code": null,
-      "discipline_code": "bzmp",
-      "event_type": "coursing",
+      "discipline_code": "racing",
+      "event_type": "racing",
       "competition_kind": "",
       "competition_type": "БЗМП",
       "host_club": "",
       "region": null,
       "location": "Ярославль, АТЦ \"Левково\"",
-      "results_url": "https://web.archive.org/web/20220321114137/http://procoursing.ru/Full_Results_2020-08-15_1.html",
+      "results_url": "https://web.archive.org/web/20220506133530/http://procoursing.ru/Full_Results_2020-08-15_2.html",
       "catalog_url": null,
       "confirmed": 0,
       "judges": null,
       "has_results": true,
       "results_file": "competitions/2020/08-август/1570-бега-за-механическои-приманкои.json",
-      "result_count": 44,
-      "participants_count": 44
+      "result_count": 10,
+      "participants_count": 10
     },
     {
       "id": 202008151,
@@ -42,7 +42,7 @@
       "rank_label": "ЧРКФ по рейсингу",
       "rank_code": "ЧРКФ",
       "discipline_code": "racing",
-      "event_type": "coursing",
+      "event_type": "racing",
       "competition_kind": "",
       "competition_type": "Курсинг борзых",
       "host_club": "",
@@ -54,8 +54,8 @@
       "judges": null,
       "has_results": true,
       "results_file": "competitions/2020/08-август/1584-состязания-по-бегам-борзых-курсинг-чркф.json",
-      "result_count": 44,
-      "participants_count": 44
+      "result_count": 51,
+      "participants_count": 51
     },
     {
       "id": 20200822,
@@ -94,7 +94,7 @@
       "rank_label": "ЧР по рейсингу за механическим зайцем",
       "rank_code": "ЧР",
       "discipline_code": "racing",
-      "event_type": "coursing",
+      "event_type": "racing",
       "competition_kind": "Чемпионат России",
       "competition_type": "",
       "host_club": "",
@@ -106,8 +106,8 @@
       "judges": null,
       "has_results": true,
       "results_file": "competitions/2020/09-сентябрь/1571-чемпионат-россии-по-бегам-борзых-за-механическим.json",
-      "result_count": 53,
-      "participants_count": 53
+      "result_count": 68,
+      "participants_count": 68
     },
     {
       "id": 20200920,
@@ -120,7 +120,7 @@
       "rank_label": "КР по рейсингу за механическим зайцем",
       "rank_code": "КР",
       "discipline_code": "racing",
-      "event_type": "coursing",
+      "event_type": "racing",
       "competition_kind": "Кубок России",
       "competition_type": "",
       "host_club": "",
@@ -132,8 +132,8 @@
       "judges": null,
       "has_results": true,
       "results_file": "competitions/2020/09-сентябрь/1572-кубок-россии-по-бегам-борзых-за-механическим-заи.json",
-      "result_count": 62,
-      "participants_count": 62
+      "result_count": 74,
+      "participants_count": 74
     },
     {
       "id": 20201003,

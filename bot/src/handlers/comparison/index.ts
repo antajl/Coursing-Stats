@@ -60,9 +60,11 @@ export function createComparison(api: CoursingStatsAPI, cache?: KVNamespace) {
     }
 
     try {
-      const [dog1, dog2] = await Promise.all([
+      const [dog1, dog2, shows1, shows2] = await Promise.all([
         api.getDogById(firstDogId),
-        api.getDogById(secondDogId)
+        api.getDogById(secondDogId),
+        api.getShowSummaryForCompetitionDog(firstDogId),
+        api.getShowSummaryForCompetitionDog(secondDogId),
       ]);
 
       if (!dog1 || !dog2) {
@@ -70,10 +72,13 @@ export function createComparison(api: CoursingStatsAPI, cache?: KVNamespace) {
         return;
       }
 
-      const text = `<b>Сравнение</b>\n\n——— Собака 1 ———\n${formatDogCard(dog1)}\n\n——— Собака 2 ———\n${formatDogCard(dog2)}`;
+      const text =
+        `<b>Сравнение</b>\n\n——— Собака 1 ———\n${formatDogCard(dog1, { shows: shows1 })}\n\n` +
+        `——— Собака 2 ———\n${formatDogCard(dog2, { shows: shows2 })}`;
 
       await ctx.editMessageText(text, {
         parse_mode: 'HTML',
+        link_preview_options: { is_disabled: true },
         reply_markup: getNavigationButtons('main_menu', 'main_menu')
       });
 

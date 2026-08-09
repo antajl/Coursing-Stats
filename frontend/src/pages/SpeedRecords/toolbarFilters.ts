@@ -145,7 +145,7 @@ export function buildTopDogsActiveFilterChips(
     chips.push({ key: 'breed', label: filterBreed, onRemove: () => onBreedChange('') })
   }
   if (filterMinStarts) {
-    chips.push({ key: 'min-starts', label: `от ${filterMinStarts} стартов`, onRemove: () => onMinStartsChange('') })
+    chips.push({ key: 'min-starts', label: `от ${filterMinStarts} участий`, onRemove: () => onMinStartsChange('') })
   }
   if (filterScoreFrom) {
     chips.push({ key: 'min-score', label: `индекс CS от ${filterScoreFrom}`, onRemove: () => onScoreFromChange('') })

@@ -318,15 +318,37 @@ export function getFavoritesKeyboard(
   return keyboard;
 }
 
-export function getDogCardKeyboard(dogId: string, backCallback: string = 'main_menu'): InlineKeyboard {
+export function getDogCardKeyboard(
+  dogId: string,
+  backCallback: string = 'main_menu',
+  options: { isFavorite?: boolean } = {},
+): InlineKeyboard {
+  const favoriteButton = options.isFavorite
+    ? { text: '⭐ В избранном', callback: `remove_favorite:${dogId}` }
+    : { text: 'В избранное', callback: `add_favorite:${dogId}` };
+
   return new InlineKeyboard()
-    .text('В избранное', `add_favorite:${dogId}`)
-    .url('На сайт', `https://coursing-stats.ru/dog/${dogId}`)
+    .text(favoriteButton.text, favoriteButton.callback)
+    .url('Профиль на сайте', `https://coursing-stats.ru/dog/${dogId}`)
     .row()
     .text('Сравнить с другой', `compare_start_${dogId}`)
     .row()
     .text('← Назад', backCallback)
     .text('🏠 На главную', 'main_menu');
+}
+
+/** Клавиатура для inline-карточки: без «Назад/Главную» (сообщение уходит в чужой чат). */
+export function getInlineDogCardKeyboard(
+  dogId: string,
+  options: { isFavorite?: boolean } = {},
+): InlineKeyboard {
+  const favoriteButton = options.isFavorite
+    ? { text: '⭐ В избранном', callback: `remove_favorite:${dogId}` }
+    : { text: 'В избранное', callback: `add_favorite:${dogId}` };
+
+  return new InlineKeyboard()
+    .text(favoriteButton.text, favoriteButton.callback)
+    .url('Профиль на сайте', `https://coursing-stats.ru/dog/${dogId}`);
 }
 
 export function getCompareKeyboard(firstDogId: string): InlineKeyboard {

@@ -1,5 +1,5 @@
 import type Database from 'better-sqlite3';
-import { RACING_EXCLUDED_STATUSES_SQL } from '../../src/lib/racing-status';
+import { PARTICIPATION_STATUSES_SQL, RACING_EXCLUDED_STATUSES_SQL } from '../../src/lib/racing-status';
 import { attachScoreMetrics } from '../../lib/data-logic/attach-score-metrics';
 import { sortScoreItems } from '../../lib/data-logic/sort-top';
 import { COURSING_RATING_SCORE_VERSION } from '../../lib/rating/coursing-rating-score';
@@ -20,7 +20,7 @@ const PLACEMENT_ALL_YEARS_SQL = `
   FROM results r
   JOIN dogs d ON d.id = r.dog_id
   JOIN events e ON r.event_id = e.id
-  WHERE r.status = 'finished' AND e.event_type IN ('coursing', 'bzmp')
+  WHERE r.status IN ${PARTICIPATION_STATUSES_SQL} AND e.event_type IN ('coursing', 'bzmp')
   GROUP BY d.id
   ORDER BY gold DESC, silver DESC, bronze DESC
 `;
@@ -50,7 +50,7 @@ const SCORE_ALL_YEARS_SQL = `
   FROM results r
   JOIN dogs d ON d.id = r.dog_id
   JOIN events e ON r.event_id = e.id
-  WHERE r.status = 'finished' AND e.event_type IN ('coursing', 'bzmp')
+  WHERE r.status IN ${PARTICIPATION_STATUSES_SQL} AND e.event_type IN ('coursing', 'bzmp')
   GROUP BY d.id
 `;
 

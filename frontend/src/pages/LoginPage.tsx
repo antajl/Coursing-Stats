@@ -24,7 +24,6 @@ export default function LoginPage() {
       if (err instanceof Error) {
         errorMessage = err.message;
       } else if (typeof err === 'object' && err !== null) {
-        // Try to extract error message from object
         if ('error' in err) {
           errorMessage = String(err.error);
         } else if ('message' in err) {
@@ -35,6 +34,7 @@ export default function LoginPage() {
       } else if (typeof err === 'string') {
         errorMessage = err;
       }
+      // Soften oauth_only copy if API returns English code in message path
       setError(errorMessage);
     } finally {
       setLoading(false);
@@ -113,6 +113,15 @@ export default function LoginPage() {
                 </svg>
               )}
             </button>
+          </div>
+
+          <div className="flex justify-end -mt-2">
+            <Link
+              to="/forgot-password"
+              className="text-sm text-camel-700 hover:text-camel-800 dark:text-camel-400 dark:hover:text-camel-300"
+            >
+              Забыли пароль?
+            </Link>
           </div>
 
           <button

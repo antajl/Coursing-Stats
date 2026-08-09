@@ -10,6 +10,22 @@ import type { Race, ByeRun, SoloLoss } from '../../lib/rating/elo-calculator'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
+function writeFileRetry(filePath: string, data: string, attempts = 12): void {
+  let lastErr: unknown
+  for (let attempt = 0; attempt < attempts; attempt++) {
+    try {
+      writeFileSync(filePath, data, 'utf-8')
+      return
+    } catch (e) {
+      lastErr = e
+      const code = (e as NodeJS.ErrnoException)?.code
+      if (code !== 'UNKNOWN' && code !== 'EPERM' && code !== 'EBUSY') throw e
+      Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 80 * (attempt + 1))
+    }
+  }
+  throw lastErr
+}
+
 interface Heat {
   heat_number: number
   bib_number: number | null
@@ -416,7 +432,7 @@ function main() {
     solo_losses: allSoloLosses,
   }
 
-  writeFileSync(OUTPUT_FILE, JSON.stringify(output, null, 2))
+  writeFileRetry(OUTPUT_FILE, JSON.stringify(output, null, 2))
 
   console.log('Extraction complete!')
   console.log(JSON.stringify(statistics, null, 2))

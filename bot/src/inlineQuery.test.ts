@@ -14,21 +14,94 @@ import {
 import { botStartLink } from './constants';
 
 describe('inlineQuery', () => {
-  it('includes open-in-bot deep link on each result', () => {
+  it('builds full dog profile card for inline result', () => {
     const result = buildInlineDogResult({
-      id: 123,
-      name_lat: 'REX',
-      name_ru: 'Рекс',
-      breed: 'Уиппет',
-      competition_count: 7,
+      schema: 'test',
+      exported_at: '2026-01-01',
+      dog: {
+        id: 123,
+        dog_key: '123',
+        name_lat: 'REX',
+        name_ru: 'Рекс',
+        breed: 'Уиппет',
+        sex: 'M',
+        owner: null,
+        pedigree_url: null,
+        coursing_stats: {
+          total_starts: 7,
+          best_score: 300,
+          best_judge_score: 90,
+          gold: 1,
+          silver: 0,
+          bronze: 0,
+        },
+        racing_stats: {
+          total_starts: 0,
+          best_speed: null,
+          gold: 0,
+          silver: 0,
+          bronze: 0,
+        },
+      },
     });
 
-    expect(result.reply_markup).toBeDefined();
+    expect(result.title).toContain('REX');
+    expect(result.description).toContain('Курсинг: 7');
+    expect(result.input_message_content.message_text).toContain('Участий: 7');
+    expect(result.input_message_content.message_text).toContain('лучший балл: 300');
+    expect(result.input_message_content.message_text).not.toContain('Открыть в боте');
+    expect(result.input_message_content.message_text).not.toContain('Бега борзых');
+
     const buttons = result.reply_markup!.inline_keyboard.flat();
-    const openBot = buttons.find((b) => 'url' in b && b.url === botStartLink('dog_123'));
-    const openSite = buttons.find((b) => 'url' in b && b.url === 'https://coursing-stats.ru/dog/123');
-    expect(openBot).toBeDefined();
-    expect(openSite).toBeDefined();
+    const site = buttons.find((b) => 'url' in b && b.url === 'https://coursing-stats.ru/dog/123');
+    const favorite = buttons.find((b) => 'callback_data' in b && b.callback_data === 'add_favorite:123');
+    expect(site).toBeDefined();
+    expect(site && 'text' in site ? site.text : null).toBe('Профиль на сайте');
+    expect(favorite).toBeDefined();
+  });
+
+  it('includes show titles in inline dog card', () => {
+    const result = buildInlineDogResult(
+      {
+        schema: 'test',
+        exported_at: '2026-01-01',
+        dog: {
+          id: 5657,
+          dog_key: '5657',
+          name_lat: 'LEVIATHAN',
+          name_ru: null,
+          breed: 'УИППЕТ',
+          sex: null,
+          owner: null,
+          pedigree_url: null,
+          coursing_stats: {
+            total_starts: 1,
+            best_score: 100,
+            gold: 0,
+            silver: 0,
+            bronze: 0,
+          },
+          racing_stats: {
+            total_starts: 0,
+            best_speed: null,
+            gold: 0,
+            silver: 0,
+            bronze: 0,
+          },
+        },
+      },
+      {
+        shows: {
+          total_shows: 2,
+          best_award: 'YKCHP',
+          title_keys: ['YKCHP', 'VKCHP'],
+          title_counts: { YKCHP: 1, VKCHP: 1 },
+        },
+      },
+    );
+
+    expect(result.description).toContain('Выставки: 2');
+    expect(result.input_message_content.message_text).toContain('ЮКЧП, ВКЧП');
   });
 
   it('detects donino phrase keywords case-insensitively', () => {

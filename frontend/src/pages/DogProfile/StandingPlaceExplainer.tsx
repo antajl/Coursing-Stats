@@ -145,7 +145,7 @@ function CoursingBody({ data, scope }: { data: StandingExplainerInput; scope: St
         {starts > 0 ? (
           <>
             {' '}
-            за <strong>{starts}</strong> стартов
+            за <strong>{starts}</strong> участий
             {scope === 'overall' || scope === 'breed' ? ' (карьера)' : ''}.
           </>
         ) : null}
@@ -197,14 +197,14 @@ function RacingBody({ data }: { data: StandingExplainerInput }) {
           {starts > 0 ? (
             <>
               {' '}
-              · стартов: <strong>{starts}</strong>
+              · участий: <strong>{starts}</strong>
             </>
           ) : null}
           .
         </li>
       ) : starts > 0 ? (
         <li>
-          Стартов в бегах: <strong>{starts}</strong>.
+          Участий в бегах: <strong>{starts}</strong>.
         </li>
       ) : null}
       <li>Медали курсинга и Elo на порядок в колонке «Бега» не влияют.</li>

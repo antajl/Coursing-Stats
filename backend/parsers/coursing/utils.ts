@@ -147,7 +147,7 @@ export function extractBibColor($cell) {
   return null;
 }
 
-export function detectStatusFromText(text, hasScore = true) {
+export function detectStatusFromText(text, hasScore = true, hasValidJudgeData = false) {
   const normalized = cleanText(text).toLowerCase().replace(/ё/g, "е");
 
   // Неявка - не участвовал вообще

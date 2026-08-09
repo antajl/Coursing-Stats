@@ -1,1 +1,26 @@
-{"schema":"coursing-stats/dog-v1","exported_at":"2026-07-08T00:31:32.188Z","id":9416,"dog_key":"restless-whip-giuseppina--уиппет","name_lat":"RESTLESS WHIP GIUSEPPINA","name_ru":"RESTLESS WHIP GIUSEPPINA","breed":"УИППЕТ","sex":null,"owner":null,"competition_ids":[1438,1444],"competition_files":["competitions/2023/09-сентябрь/1438-чемпионат-ркф-cacl-по-курсингу.json","competitions/2023/10-октябрь/1444-кубок-россии-по-курсингу.json"],"pedigree_url":"https://whippet.breedarchive.com/animal/view/restless-whip-giuseppina-e4649126-2dfd-40b3-9803-d33001a16c70"}
+{
+  "schema": "coursing-stats/dog-v1",
+  "exported_at": "2026-07-08T00:31:32.188Z",
+  "id": 9416,
+  "dog_key": "restless-whip-giuseppina--уиппет",
+  "name_lat": "RESTLESS WHIP GIUSEPPINA",
+  "name_ru": "RESTLESS WHIP GIUSEPPINA",
+  "breed": "УИППЕТ",
+  "sex": null,
+  "owner": null,
+  "competition_ids": [
+    1438,
+    1444,
+    20231007,
+    20230902,
+    20240616
+  ],
+  "competition_files": [
+    "competitions/2023/09-сентябрь/1438-чемпионат-ркф-cacl-по-курсингу.json",
+    "competitions/2023/10-октябрь/1444-кубок-россии-по-курсингу.json",
+    "competitions/2023/10-октябрь/20231007--07-08102023-.json",
+    "competitions/2023/09-сентябрь/20230902--cacl-02092023-.json",
+    "competitions/2024/06-июнь/20240616--cacl-16062024-.json"
+  ],
+  "pedigree_url": "https://whippet.breedarchive.com/animal/view/restless-whip-giuseppina-e4649126-2dfd-40b3-9803-d33001a16c70"
+}

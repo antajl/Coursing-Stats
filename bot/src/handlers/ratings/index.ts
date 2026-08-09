@@ -15,7 +15,7 @@ function formatRacingRatings(ratingList: Rating[], yearLabel: string): string {
     const best = rating.best_speed != null ? rating.best_speed.toFixed(2) : '-';
     const avg = rating.avg_speed != null ? rating.avg_speed.toFixed(2) : '-';
     const starts = rating.total_starts || '-';
-    text += `${index + 1}. ${name} (${breed})\n   Лучшая: ${best} км/ч | Средняя: ${avg} | Старты: ${starts}\n\n`;
+    text += `${index + 1}. ${name} (${breed})\n   Лучшая: ${best} км/ч | Средняя: ${avg} | Участия: ${starts}\n\n`;
   });
   return text;
 }
@@ -23,7 +23,7 @@ function formatRacingRatings(ratingList: Rating[], yearLabel: string): string {
 function formatCoursingRatings(ratingList: Rating[], category: string, yearLabel: string): string {
   let text = `<b>Топ-${ratingList.length} ${category === 'score' ? 'по очкам' : 'медали'} - Курсинг (${yearLabel})</b>\n\n`;
   if (category === 'score') {
-    text += `<i>💡 Индекс — усреднённая оценка судей за все старты</i>\n\n`;
+    text += `<i>💡 Индекс — усреднённая оценка судей за все участия</i>\n\n`;
   }
   ratingList.forEach((rating, index) => {
     const name = getDisplayName(rating);
@@ -33,13 +33,13 @@ function formatCoursingRatings(ratingList: Rating[], category: string, yearLabel
       const best = rating.best_score || '-';
       const avg = rating.avg_judge_score || '-';
       const starts = rating.total_starts || '-';
-      text += `${index + 1}. ${name} (${breed})\n   Индекс: ${score} | Средний: ${avg} | Лучший: ${best} | Старты: ${starts}\n\n`;
+      text += `${index + 1}. ${name} (${breed})\n   Индекс: ${score} | Средний: ${avg} | Лучший: ${best} | Участия: ${starts}\n\n`;
     } else {
       const gold = rating.gold || 0;
       const silver = rating.silver || 0;
       const bronze = rating.bronze || 0;
       const starts = rating.total_starts || '-';
-      text += `${index + 1}. ${name} (${breed})\n   🥇${gold} 🥈${silver} 🥉${bronze} | Старты: ${starts}\n\n`;
+      text += `${index + 1}. ${name} (${breed})\n   🥇${gold} 🥈${silver} 🥉${bronze} | Участия: ${starts}\n\n`;
     }
   });
   return text;

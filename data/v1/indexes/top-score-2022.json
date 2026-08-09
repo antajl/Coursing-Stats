@@ -2,7 +2,7 @@
   "schema": "coursing-stats/index-top-score-v1",
   "year": 2022,
   "rating_score_version": "cs-v1",
-  "count": 17,
+  "count": 28,
   "items": [
     {
       "dog_id": 7088,
@@ -20,9 +20,39 @@
       "rating_score": 88.1
     },
     {
+      "dog_id": 10587,
+      "name_lat": "PRIMA DONNA",
+      "name_ru": "ПРИМА ДОННА",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year": 2022,
+      "best_score": 372,
+      "total_starts": 1,
+      "best_judge_score": 95,
+      "avg_judge_score": 93,
+      "year_from": 2022,
+      "year_to": 2022,
+      "judge_eval_count": 4,
+      "rating_score": 88.1
+    },
+    {
+      "dog_id": 6228,
+      "name_lat": "СТАНГЕРС ЛАНД ДАРИНГ ГРЕЙТЛИ",
+      "name_ru": "СТАНГЕРС ЛАНД ДАРИНГ ГРЕЙТЛИ",
+      "breed": "УИППЕТ",
+      "year": 2022,
+      "best_score": 371,
+      "total_starts": 1,
+      "best_judge_score": 94,
+      "avg_judge_score": 92.75,
+      "year_from": 2022,
+      "year_to": 2022,
+      "judge_eval_count": 4,
+      "rating_score": 88.04
+    },
+    {
       "dog_id": 556,
-      "name_lat": "LUXURY WHIPP ORION",
-      "name_ru": "ЛАКШЕРИ ВИПП ОРИОН",
+      "name_lat": "ЛАКШЕРИ ВИПП ОРИОН /LUXURY WHIPP ORION",
+      "name_ru": "ЛАКШЕРИ ВИПП ОРИОН /LUXURY WHIPP ORION",
       "breed": "УИППЕТ",
       "year": 2022,
       "best_score": 368,
@@ -48,6 +78,21 @@
       "year_to": 2022,
       "judge_eval_count": 4,
       "rating_score": 87.79
+    },
+    {
+      "dog_id": 10588,
+      "name_lat": "POLE TAJKA",
+      "name_ru": "ПОЛЕ ТАЙКА",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year": 2022,
+      "best_score": 365,
+      "total_starts": 1,
+      "best_judge_score": 93,
+      "avg_judge_score": 91.25,
+      "year_from": 2022,
+      "year_to": 2022,
+      "judge_eval_count": 4,
+      "rating_score": 87.66
     },
     {
       "dog_id": 9411,
@@ -170,6 +215,36 @@
       "rating_score": 87.29
     },
     {
+      "dog_id": 10393,
+      "name_lat": "ГОРДЕН МАГИК МАРИЭЛЬ ПЕРСЕУС УРСА",
+      "name_ru": "ГОРДЕН МАГИК МАРИЭЛЬ ПЕРСЕУС УРСА",
+      "breed": "БАСЕНДЖИ",
+      "year": 2022,
+      "best_score": 359,
+      "total_starts": 1,
+      "best_judge_score": 93,
+      "avg_judge_score": 89.75,
+      "year_from": 2022,
+      "year_to": 2022,
+      "judge_eval_count": 4,
+      "rating_score": 87.29
+    },
+    {
+      "dog_id": 10585,
+      "name_lat": "BORS MES AMIS DE MAFINNS",
+      "name_ru": null,
+      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
+      "year": 2022,
+      "best_score": 359,
+      "total_starts": 1,
+      "best_judge_score": 93,
+      "avg_judge_score": 89.75,
+      "year_from": 2022,
+      "year_to": 2022,
+      "judge_eval_count": 4,
+      "rating_score": 87.29
+    },
+    {
       "dog_id": 122,
       "name_lat": "STANGERS LAND VERSAILLES CHARMAN",
       "name_ru": "СТАНГЕРС ЛАНД ВЕРСАЛЬ ШАРМАН",
@@ -188,6 +263,21 @@
       "dog_id": 463,
       "name_lat": "LUXURY WHIPP ONIKS",
       "name_ru": "ЛАКШЕРИ ВИПП ОНИКС",
+      "breed": "УИППЕТ",
+      "year": 2022,
+      "best_score": 358,
+      "total_starts": 1,
+      "best_judge_score": 92,
+      "avg_judge_score": 89.5,
+      "year_from": 2022,
+      "year_to": 2022,
+      "judge_eval_count": 4,
+      "rating_score": 87.23
+    },
+    {
+      "dog_id": 7109,
+      "name_lat": "FLETCHER ILLUSTRIOUS WINNER",
+      "name_ru": "ФЛЕТЧЕР ИЛЛАСТРИАС ВИННЕР",
       "breed": "УИППЕТ",
       "year": 2022,
       "best_score": 358,
@@ -230,6 +320,21 @@
       "rating_score": 87.16
     },
     {
+      "dog_id": 10537,
+      "name_lat": "HORLEND’S INTERMAL ENERGY",
+      "name_ru": "HORLEND’S INTERMAL ENERGY",
+      "breed": "УИППЕТ",
+      "year": 2022,
+      "best_score": 357,
+      "total_starts": 1,
+      "best_judge_score": 92,
+      "avg_judge_score": 89.25,
+      "year_from": 2022,
+      "year_to": 2022,
+      "judge_eval_count": 4,
+      "rating_score": 87.16
+    },
+    {
       "dog_id": 371,
       "name_lat": "ROSSO BOREALE AURORA",
       "name_ru": "ROSSO BOREALE AURORA",
@@ -245,6 +350,36 @@
       "rating_score": 87.1
     },
     {
+      "dog_id": 10589,
+      "name_lat": "DOLCOPUPS ALISA",
+      "name_ru": "ДОЛГОПУПС АЛИСА",
+      "breed": "УИППЕТ",
+      "year": 2022,
+      "best_score": 355,
+      "total_starts": 1,
+      "best_judge_score": 91,
+      "avg_judge_score": 88.75,
+      "year_from": 2022,
+      "year_to": 2022,
+      "judge_eval_count": 4,
+      "rating_score": 87.04
+    },
+    {
+      "dog_id": 7120,
+      "name_lat": "ROSSO BOREALE VITTORIYA SIDA",
+      "name_ru": "РОССО БОРЕАЛЕ ВИТТОРИЯ СИДА",
+      "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+      "year": 2022,
+      "best_score": 354,
+      "total_starts": 1,
+      "best_judge_score": 93,
+      "avg_judge_score": 88.5,
+      "year_from": 2022,
+      "year_to": 2022,
+      "judge_eval_count": 4,
+      "rating_score": 86.98
+    },
+    {
       "dog_id": 9414,
       "name_lat": "AMBER VEIV’S MARIUS",
       "name_ru": "AMBER VEIV’S MARIUS",
@@ -258,6 +393,36 @@
       "year_to": 2022,
       "judge_eval_count": 4,
       "rating_score": 86.85
+    },
+    {
+      "dog_id": 10590,
+      "name_lat": "ISTORIYA LUBVI EVR BYSTRYJ",
+      "name_ru": "ИСТОРИЯ ЛЮБВИ ЭВР БЫСТРЫЙ",
+      "breed": "УИППЕТ",
+      "year": 2022,
+      "best_score": 351,
+      "total_starts": 1,
+      "best_judge_score": 89,
+      "avg_judge_score": 87.75,
+      "year_from": 2022,
+      "year_to": 2022,
+      "judge_eval_count": 4,
+      "rating_score": 86.68
+    },
+    {
+      "dog_id": 10586,
+      "name_lat": "VERNAYA KELTAM IZ VOLSHEBNOGO LESA",
+      "name_ru": null,
+      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
+      "year": 2022,
+      "best_score": 347,
+      "total_starts": 1,
+      "best_judge_score": 89,
+      "avg_judge_score": 86.75,
+      "year_from": 2022,
+      "year_to": 2022,
+      "judge_eval_count": 4,
+      "rating_score": 86.47
     }
   ]
 }

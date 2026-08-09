@@ -210,7 +210,7 @@ function buildDogRanking(exhibitions: ShowExhibition[]): ShowDog[] {
     }
     
     for (const result of exhibition.results) {
-      // Неявка — заявка без старта: не в рейтинг и не в историю профиля
+      // Неявка — заявка без участия: не в рейтинг и не в историю профиля
       if (isShowAbsenceGrade(result.grade)) continue
 
       const parsed = parseDogName(result.dog_name)
@@ -259,7 +259,7 @@ function buildDogRanking(exhibitions: ShowExhibition[]): ShowDog[] {
         if (result.breed_en && !existing.breed_en) {
           existing.breed_en = result.breed_en
         }
-        // Стабильный URL-id: меньший ring number среди стартов этой клички
+        // Стабильный URL-id: меньший ring number среди участий этой клички
         if (parsed.id && (!existing.id || Number(parsed.id) < Number(existing.id))) {
           existing.id = parsed.id
         }
