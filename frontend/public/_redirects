@@ -13,6 +13,10 @@
 /top /competitions?tab=ranking 301
 /top-dogs /competitions?tab=ranking 301
 
+# Legacy judges list (keep /judges/:id as real sport judge profiles)
+/judges /competitions?tab=judges 301
+/judges/ /competitions?tab=judges 301
+
 # Static bot banners (Telegram sendPhoto)
 /bot/* /bot/:splat 200
 
