@@ -5,6 +5,10 @@
 /bimi/* /bimi/:splat 200
 /.well-known/bimi/* /.well-known/bimi/:splat 200
 
+# Never SPA-fallback CDN JSON / built assets (explicit; static files also win first)
+/data/* /data/:splat 200
+/assets/* /assets/:splat 200
+
 # Client routes without a prerendered /path/index.html
-# Neutral shell (no home canonical) — written by yarn run prerender-seo
-/* /spa-shell.html 200
+# Directory index — NOT spa-shell.html (CF pretty-URL 308 to /spa-shell breaks everything)
+/* /spa-shell/index.html 200
