@@ -27,9 +27,9 @@ function Competitions() {
     <div className="space-y-6">
       <SEO
         title="Рейтинг собак: курсинг и бега борзых"
-        description="Рейтинг собак по медалям и очкам (курсинг, БЗМП, бега борзых), медальный зачёт и статистика судей. Данные с 2015 года."
+        description="Два отдельных рейтинга — по медалям и по очкам CS (курсинг, БЗМП, бега борзых) — плюс статистика судей. Источник протоколов — procoursing.ru, данные с 2015 года."
         canonicalUrl="https://coursing-stats.ru/competitions"
-        keywords="рейтинг курсинг, бега борзых, топ собак, медали, судьи курсинг, РКФ"
+        keywords="рейтинг курсинг, бега борзых, топ собак, медали, судьи курсинг, РКФ, procoursing"
       />
       <div className="relative rounded-2xl border border-cream-300 bg-cream-50/90 shadow-xl backdrop-blur-lg dark:border-charcoal-700 dark:bg-charcoal-900/90">
         <ProcoursingAttribution variant="footnote" className="absolute right-0 top-0 z-10" />

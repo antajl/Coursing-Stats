@@ -9,14 +9,15 @@
 **Tech Stack:** Vite, React 19, `react-helmet-async`, Cloudflare Pages `_redirects`, `backend/scripts/seo/prerender-*.ts`, `backend/scripts/build-derived/sitemap.ts`, vitest, yarn@1.22.22.
 
 
-## Status (обновлено 2026-08-09)
+## Status (обновлено 2026-08-09, вечер)
 
 | Область | Статус |
 |---------|--------|
-| Tasks 1–10 (код) | **Готово** — spa-shell, robots, sitemap, OG/canonical, prerender хабов/собак/events/судей спорта/Донино, client SEO выставок, auth noindex, CI verify, выравнивание хабов |
-| Prerender выставок + судей выставок | **Вкл по умолчанию** после CDN slim/packs (~5.7k data + HTML ≈ ~15k < 20k). Выкл: `PRERENDER_EXHIBITIONS=0` / `PRERENDER_SHOW_JUDGES=0` |
-| SPA fallback | `/* /spa-shell/index.html 200` (**не** `spa-shell.html` — CF pretty-URL 308-луп) |
-| Task 11 (GSC / Яндекс) | **Оператор** — переотправить тот же URL sitemap после деплоя |
+| Tasks 1–10 (код) | **Готово** — robots, sitemap, OG/canonical, prerender хабов/собак/events/судей/Донино/выставок/судей выставок, auth noindex, CI, выравнивание хабов |
+| SPA fallback (CF Pages) | **Не** `/* → *.html 200` (pretty-URL → 308 на `/name`, ломало весь сайт). Без корневого `404.html` CF SPA mode отдаёт `/index.html` на неизвестные URL. `/spa-shell` и `/404` → **301 /**. SEO URL = prerender static HTML |
+| Task 11 ops | **2026-08-09 API:** GSC MCP + Яндекс токен. GSC: `/` indexed; sitemap 9313/0 err; hubs OK. Яндекс: переобход `/` + ~150 URL (квота дня); sitemap delete+re-add. Метрика 110619327 + GA `G-3SKPEE7PZ0` в коде. Monitor Coverage — открыт. |
+| Tasks 12–13 | **Код готов** — mid-tail сниппеты; `/judges` 301; sitemap/prerender events только с `results_file` |
+| Следующий фокус | Деплой сниппетов/редиректов; мониторинг Яндекс searchable_pages; через 2–4 нед. новая выгрузка Coverage |
 
 ## Global Constraints
 
@@ -25,8 +26,8 @@
 - Три домена: соревнования / выставки / Донино — не путать id в URL и текстах.
 - PowerShell: команды через `;`, не `&&`.
 - Коммиты только по явной просьбе пользователя.
-- Cloudflare Pages: static file (`/path/index.html`) имеет приоритет над SPA fallback; fallback нужен для клиентских маршрутов без prerender.
-- Лимит файлов Pages: не включать full dump show-only dogs (`PRERENDER_SHOW_ONLY`) без явного решения. После slim/packs бюджет позволяет полный prerender выставок + судей выставок.
+- Cloudflare Pages: **запрещено** `/* /something.html 200` — pretty-URL даёт видимый 308 на `/something` (инцидент 2026-08-09). Prerendered `/path/index.html` ок. Неизвестный путь без файла → SPA `/index.html` (home).
+- Лимит файлов Pages: не включать full dump show-only dogs (`PRERENDER_SHOW_ONLY`) без явного решения. После slim/packs бюджет позволяет полный prerender выставок + судей выставок (~15k &lt; 20k).
 - Язык сниппетов и H1: русский; бренд в title: `| Coursing Stats` (бренд не русифицируем — см. Brand).
 - Аккаунты уже есть: Яндекс.Вебмастер, Метрика, Google Search Console, GA — задачи ниже только настройка/проверка, не регистрация.
 
@@ -41,6 +42,7 @@
 | Ключевые слова (RU) | Ядро: курсинг, рейсинг, бега борзых, результаты, рекорды, статистика, награды, рейтинг + породы. В title/description — естественно, без stuffing. |
 | Бренд | Оставить **Coursing Stats**. Левая часть title — по-русски и по сущности; справа бренд. |
 | CDN file budget | Slim publish + packs → data ~5.7k; с полным show prerender оценка ~15k файлов на Pages (лимит 20k). |
+| CF pretty-URL | Не использовать catch-all rewrite на `.html`. Ловушки `/spa-shell`, `/404` — только 301 на `/`. |
 
 ### Почему «всё» по спорту недолго
 
@@ -72,7 +74,43 @@
 | Просканирована, пока не проиндексирована | 6 | Очередь Google. |
 | Canonical / soft 404 / noindex / duplicate | 1–4 | Мелочь; проверить после spa-shell fix. |
 
-**Метаданные:** Sitemap = «Все обработанные страницы» — sitemap Google уже съел; проблема не в «не отправили», а в качестве/уникальности URL. После полного prerender выставок имеет смысл **переотправить** тот же `https://coursing-stats.ru/sitemap.xml` в GSC и Яндекс (Task 11).
+**Метаданные:** Sitemap = «Все обработанные страницы» — sitemap Google уже съел; проблема не в «не отправили», а в качестве/уникальности URL. Sitemap переотправлен 2026-08-09 (Task 11).
+
+## GSC Performance snapshot (экспорт 2026-08-09)
+
+Источник: `coursing-stats.ru-Performance-on-Search-2026-08-09` + папка `D:\Downloads\1` (Coverage∪Performance∪Crawl).
+
+| Метрика | Значение | Вывод |
+|---------|----------|--------|
+| Клики / показы (3 мес.) | ~6 / ~140 | Трафик крошечный; сигнал intent важнее объёма |
+| Топ-запросы | procoursing, курсинг на ярославке, донино, сенавиан, русский простор | Mid-tail / бренды клубов — не голова «курсинг» (поз. ~68) |
+| Топ-страницы | `/`, `/event/…`, `/dog/…`, `/shows` | Events/dogs уже кликают; `/shows` поз. ~20, CTR 0 |
+| Crawl | до ~2.7k req/день, много JSON | Бюджет обхода есть; 6.5% 404 — разобрать списком |
+| http:// home | показы | Следить HSTS / редирект |
+
+Подробный разбор: canvas `gsc-performance-seo` (чат SEO).
+
+## Yandex Webmaster snapshot (экспорт 2026-08-09)
+
+Источники в `D:\Downloads`:
+
+| Файл | Содержание | Объём |
+|------|------------|-------|
+| `coursing-stats.ru_909932d82443d61b7639bd3c.csv` | Статистика обхода: url, httpCode, lastAccess | **792** URL, все **200** |
+| `coursing-stats.ru_8c725efac7323bb579233914.csv` | url / lastAccess / title | **пусто** (только заголовок) |
+| `coursing-stats.ru_d4614eeeb7cd1a4c01a07454.csv` | Исключённые / статусы в поиске | **100** URL (выборка) |
+
+**Обход (a):** префиксы `/dog/` 585, `/donino-dog/` 131, `/judges/` 70; хабы по 1. Почти все `lastAccess` = **14.07.2026** (до сегодняшнего prerender выставок/events/spa-fix). Событий и выставок в этой выгрузке почти нет — робот ещё не переобшёл новый HTML.
+
+**Исключённые (c) — критично:**
+
+| status | Кол-во | Смысл | Действие |
+|--------|--------|-------|----------|
+| `META_NO_INDEX` | **1** (`/`) | Яндекс видел noindex на главной (снимок title ещё старый: «…курсинга и выставок…»; lastAccess **06.08.2026**) | Сейчас на проде **нет** `noindex` на `/`. **Переобход главной** в Вебмастере + проверка «Индексирование → Исключённые» через несколько дней |
+| `DUPLICATE` | **48** (все `/dog/…`) | Типично для SPA: разные URL отдавали один и тот же HTML (главную) | После prerender `/dog/:id` — **переобход** выборки собак; дубли должны смениться на INDEXED |
+| `OTHER` | **51** (все `/dog/…`) | У робота нет свежих данных | Ждать / форсировать переобход |
+
+**Вывод по Яндексу:** данные отражают состояние **до** полного prerender. Код уже чинит причину DUPLICATE. Срочный ops: переобход `/` (снять META_NO_INDEX) + 5–10 `/dog/…` + `/event/{id с results}` + `/speed-records`.
 
 ## Brand
 
@@ -91,7 +129,7 @@
 | Судьи выставок | `/shows/judges/:id` | да (~2243) | **да (default ON)** | ~2243 |
 | Auth/admin | `/login`, `/admin`, … | нет | noindex | — |
 
-**Исправлено:** SPA fallback больше не отдаёт HTML главной на `/event/*` и др. — `spa-shell/index.html` без home canonical.
+**Исправлено (2026-08-09):** prerender сущностей в CI; `/spa-shell`/`/404` → 301 `/`. Неизвестный путь без файла всё ещё может отдать HTML главной (CF SPA mode) — поэтому в sitemap только URL с реальным контентом, а Inspection проверять **prerendered** id (напр. `/event/1250`, не `/event/1276` без `results_file`).
 
 ---
 
@@ -533,23 +571,58 @@ Order must be: `build-all-data` (writes `frontend/public/sitemap.xml`) → `fron
 
 Не код. Делает владелец аккаунтов (пользователь) + агент подсказывает по скринам/цифрам.
 
-- [ ] **Step 1: GSC**
-  - Sitemaps → удалить/переотправить `https://coursing-stats.ru/sitemap.xml`
-  - URL Inspection: `/`, `/competitions`, `/event/{known-id}`, `/dog/{id}`, `/judges/{name}`, `/shows/exhibition/{id}`, `/donino-dog/...`
-  - Смотреть «HTML с сервера / rendered» — title и H1 должны быть сущности, не главной
+- [x] **Step 1: GSC** — sitemap переотправлен; часть URL отправлена в индексирование (продолжать Inspection на prerendered URL)
+  - URL Inspection приоритет: `/`, `/competitions`, `/event/1250` (или другой с `results_file`), `/dog/85`, `/shows/exhibition/1`, `/speed-records`
+  - «HTML с сервера» — title/H1 сущности, не главной
 
-- [ ] **Step 2: Яндекс.Вебмастер**
-  - Индексирование → Файлы Sitemap → добавить/обновить sitemap
-  - Индексирование → **Рендеринг JavaScript**: пока нет полного prerender всех страниц — оставить «на усмотрение робота» или явно разрешить; **после** полного prerender важных URL — можно запретить рендеринг (экономия), если «Проверка страницы» без JS уже видит контент
-  - Проверка страницы на `/event/...` **без JS**: должен быть H1 мероприятия
-  - robots.txt анализ — Allow, Sitemap ok
+- [x] **Step 2: Яндекс.Вебмастер** — sitemap обновлён; рендеринг JS включён
+  - [x] **Переобход `/`** — API 2026-08-09 (снять устаревший `META_NO_INDEX`)
+  - [x] Переобход 5–10+ `/dog/…` + events/shows (квота дня ~150 URL)
+  - [x] Проверка страницы `/event/…` **без JS** — H1 мероприятия (live `/event/1250/` уникальный title)
+  - robots.txt: Allow + Sitemap ok (CF managed Content-Signal для AI — не трогаем search=yes)
 
-- [ ] **Step 3: Метрика / GA**
-  - Не для индексации; проверить что цели не ломаются после `_redirects` change
+- [x] **Step 3: Метрика / GA**
+  - Метрика `110619327` в `YandexMetrica`; GA4 `G-3SKPEE7PZ0` в `frontend/index.html` — на месте после SPA-fix
 
 - [ ] **Step 4: Monitor 2–4 недели**
-  - Покрытие / «Исключённые страницы» / дубли canonical
-  - `site:coursing-stats.ru` в Яндексе и Google (ориентир, не точная метрика)
+  - GSC Coverage: «Обнаружена, не проиндексирована» (было 929)
+  - Яндекс: Исключённые — DUPLICATE↓, META_NO_INDEX на `/` исчез
+  - `site:coursing-stats.ru` в обоих поисковиках (ориентир)
+
+---
+
+### Task 12: Mid-tail RU snippets (по GSC Performance)
+
+**Зачем:** уже есть показы по «procoursing», «курсинг донино», «ярославке», «русский простор» при CTR≈0.
+
+**Files:**
+- `HUB_PAGES` + page `<SEO>` для `/speed-records`, `/competitions`, home
+- `eventMetaFromEntry` / prerender event title — не выкидывать имя клуба из title/H1
+
+- [x] **Step 1:** `/speed-records` — явно «курсинг Донино», «в Донино» в title/description (как в запросах)
+- [x] **Step 2:** Home / competitions — одно естественное упоминание, что агрегатор результатов (в т.ч. procoursing), без stuffing
+- [x] **Step 3:** Spot-check 2–3 event title содержат клуб из календаря
+- [ ] **Step 4:** Commit по просьбе
+
+---
+
+### Task 13: Cleanup crawl noise (GSC 404 / redirects)
+
+**Зачем:** Coverage — 141×404, 193×redirect; Яндекс crawl пока чистый 200 по 792 URL (выборка старая).
+
+- [x] **Step 1:** Выгрузить список 404 из GSC → отделить мёртвые id от ложных (кэш) — детального CSV нет (только count 141); follow-up после новой Coverage
+- [x] **Step 2:** Убедиться `/top`, `/top-dogs` дают **301** (уже в `_redirects`); добавлен `/judges` list → 301 `/competitions?tab=judges`
+- [x] **Step 3:** Не тащить в sitemap URL без `results_file` (ужесточено: только `results_file`, не `has_results` alone)
+- [ ] **Step 4:** Через 2 недели — новая выгрузка Яндекс «Исключённые» + GSC Coverage
+
+---
+
+### Task 14 (optional / later): Neutral shell via Pages Function
+
+Только если soft-404 главной на мусорных URL станет проблемой в GSC/Яндексе.  
+Не делать `/* → *.html 200`. Вариант: `404.html` + middleware 404→200 **или** Workers `html_handling`. Не блокер при текущем prerender.
+
+- [ ] **Step 0:** Не начинать, пока Task 11–13 не стабилизируют индекс
 
 ---
 
@@ -567,6 +640,9 @@ Order must be: `build-all-data` (writes `frontend/public/sitemap.xml`) → `fron
 2. **Placeholders:** нет TBD; env caps заданы числами.
 3. **Consistency:** event IDs = `events-by-id` keys; show judge IDs = `judges.json.id`; exhibition IDs = calendar link targets.
 
-## What we need from the user (blocking / helpful)
+## What we need from the user (ops)
 
-См. ответ в чате — без этого Task 11 и приоритеты Phase B/C уточняются наугад.
+1. **Яндекс → Переобход** главной `/` (статус `META_NO_INDEX` в экспорте — на проде noindex уже нет).
+2. Переобход пары `/dog/…` из DUPLICATE + `/event/1250` + `/speed-records`.
+3. Через 1–2 недели — новые CSV «Исключённые» / обход из Вебмастера и свежий GSC Coverage.
+4. Не слать в Inspection URL без prerender (напр. `/event/1276` без `results_file`).

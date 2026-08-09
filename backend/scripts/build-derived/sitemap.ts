@@ -99,7 +99,7 @@ function loadEventIdsWithResults(): string[] {
       { results_file?: string | null; has_results?: boolean }
     >
     return Object.entries(data)
-      .filter(([, e]) => Boolean(e?.results_file) || e?.has_results === true)
+      .filter(([, e]) => Boolean(e?.results_file))
       .map(([id]) => id)
       .sort((a, b) => Number(a) - Number(b) || a.localeCompare(b))
   } catch {

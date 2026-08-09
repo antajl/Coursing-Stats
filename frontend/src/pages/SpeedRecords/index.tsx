@@ -47,10 +47,10 @@ function SpeedRecords() {
   return (
     <div className="space-y-6">
       <SEO
-        title="Рекорды Донино: замер скорости и бега 350 м"
-        description="Рекорды полигона Курсинг Донино: замер скорости (км/ч) и бега борзых на 350 м (сек). Таблицы по породам, статистика и история."
+        title="Курсинг в Донино: рекорды скорости и бега 350 м"
+        description="Рекорды курсинга в Донино: замер скорости (км/ч) и бега борзых на 350 м (сек) на полигоне Курсинг Донино. Таблицы по породам, статистика и история."
         canonicalUrl="https://coursing-stats.ru/speed-records"
-        keywords="рекорды Донино, замер скорости, бега 350 м, курсинг Донино, скорость собаки"
+        keywords="курсинг в Донино, курсинг Донино, рекорды Донино, замер скорости, бега 350 м, скорость собаки"
       />
       <div className="relative rounded-2xl border border-cream-300 bg-cream-50/90 px-4 py-3 shadow-xl backdrop-blur-lg dark:border-charcoal-700 dark:bg-charcoal-800/90 md:px-6 md:py-4">
         <DoninoAttribution variant="footnote" className="absolute right-0 top-0 z-10" />

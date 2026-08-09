@@ -282,7 +282,7 @@ function prerenderEvents(spaHtml: string): number {
 
   let written = 0
   for (const [id, entry] of Object.entries(index)) {
-    if (!entry?.results_file && entry?.has_results !== true) continue
+    if (!entry?.results_file) continue
     const cal = calById.get(id)
     let resultCount = cal?.result_count ?? null
     let location = cal?.location ?? null
@@ -290,24 +290,22 @@ function prerenderEvents(spaHtml: string): number {
     let eventType = cal?.event_type ?? null
     let kind = cal?.competition_kind ?? null
 
-    if (entry.results_file) {
-      const comp = readJsonFile<{
-        event?: {
-          title?: string | null
-          location?: string | null
-          event_type?: string | null
-          competition_kind?: string | null
-        }
-        results?: unknown[]
-      }>(path.join(ROOT, 'data/v1', entry.results_file))
-      if (comp?.event) {
-        title = title || comp.event.title || null
-        location = location || comp.event.location || null
-        eventType = eventType || comp.event.event_type || null
-        kind = kind || comp.event.competition_kind || null
+    const comp = readJsonFile<{
+      event?: {
+        title?: string | null
+        location?: string | null
+        event_type?: string | null
+        competition_kind?: string | null
       }
-      if (Array.isArray(comp?.results)) resultCount = comp.results.length
+      results?: unknown[]
+    }>(path.join(ROOT, 'data/v1', entry.results_file))
+    if (comp?.event) {
+      title = title || comp.event.title || null
+      location = location || comp.event.location || null
+      eventType = eventType || comp.event.event_type || null
+      kind = kind || comp.event.competition_kind || null
     }
+    if (Array.isArray(comp?.results)) resultCount = comp.results.length
 
     const meta = eventMetaFromEntry({
       id,

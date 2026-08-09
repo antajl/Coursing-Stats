@@ -7,6 +7,7 @@ import {
   buildNeutralSpaShell,
   escapeHtml,
   eventMetaFromEntry,
+  HUB_PAGES,
 } from '../scripts/seo/prerender-html'
 
 const SPA_SHELL = `<!doctype html>
@@ -139,5 +140,19 @@ describe('prerender-seo helpers', () => {
     expect(meta.title).toContain('ЧРКФ Курсинг')
     expect(meta.description).toContain('участников')
     expect(meta.h1).toBe('ЧРКФ Курсинг')
+  })
+
+  it('HUB_PAGES mid-tail: Донино + procoursing without stuffing', () => {
+    const home = HUB_PAGES.find((h) => h.path === '/')!
+    const competitions = HUB_PAGES.find((h) => h.path === '/competitions')!
+    const donino = HUB_PAGES.find((h) => h.path === '/speed-records')!
+    expect(home.description.toLowerCase()).toContain('procoursing')
+    expect(home.description.toLowerCase()).toContain('агрегатор')
+    expect(competitions.description.toLowerCase()).toContain('procoursing')
+    expect(competitions.description).toMatch(/медал/i)
+    expect(competitions.description).toMatch(/CS|очк/i)
+    expect(donino.title.toLowerCase()).toContain('донино')
+    expect(donino.title.toLowerCase()).toMatch(/курсинг/)
+    expect(donino.description.toLowerCase()).toMatch(/в донино|курсинг донино/)
   })
 })

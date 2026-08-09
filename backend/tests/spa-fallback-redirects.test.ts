@@ -10,6 +10,8 @@ describe('SPA fallback redirects', () => {
     expect(text).toMatch(/\/spa-shell \/ 301/)
     expect(text).toMatch(/\/404 \/ 301/)
     expect(text).toMatch(/\/top-dogs \/competitions\?tab=ranking 301/)
+    expect(text).toMatch(/\/judges \/competitions\?tab=judges 301/)
+    expect(text).toMatch(/\/judges\/ \/competitions\?tab=judges 301/)
     expect(text).toMatch(/\/data\/\* \/data\/:splat 200/)
     // Catch-all rewrite to a .html file is unsafe on CF Pages (308 to extensionless path).
     expect(text).not.toMatch(/^\/\* \/\S+\.html 200\s*$/m)
