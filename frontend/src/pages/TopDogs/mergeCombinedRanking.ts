@@ -80,6 +80,21 @@ function mergeDog(into: CombinedRankingDog, from: LooseDog): CombinedRankingDog 
   }
 }
 
+/**
+ * Elo indexes embed career profile fields (gold/starts/CS) even in year files.
+ * Never let those overwrite season placement/score stats on the combined card.
+ */
+function mergeEloOnly(into: CombinedRankingDog, from: LooseDog): CombinedRankingDog {
+  return {
+    ...into,
+    name_lat: into.name_lat || String(from.name_lat || `DOG_${into.dog_id}`),
+    name_ru: into.name_ru ?? (from.name_ru as string | undefined),
+    breed: into.breed || String(from.breed || ''),
+    elo_rating: asNum(from.elo_rating) ?? into.elo_rating,
+    elo_races: asNum(from.elo_races) ?? into.elo_races,
+  }
+}
+
 /** Season standing B: standingScore → CS → starts → dog_id. Elo never sorts. */
 function compareSeasonStanding(a: CombinedRankingDog, b: CombinedRankingDog): number {
   const sA = standingScore(a)
@@ -132,7 +147,25 @@ export function buildCombinedRanking(
 
   ingest(placement)
   ingest(score)
-  ingest(elo)
+
+  for (const row of elo) {
+    const id = asNum(row.dog_id)
+    if (id == null) continue
+    const existing = byId.get(id)
+    if (!existing) {
+      // Elo-only dog (no season placement/score): keep identity + Elo, no career medals.
+      byId.set(id, mergeEloOnly(
+        {
+          dog_id: id,
+          name_lat: String(row.name_lat || `DOG_${id}`),
+          breed: String(row.breed || ''),
+        },
+        row,
+      ))
+    } else {
+      byId.set(id, mergeEloOnly(existing, row))
+    }
+  }
 
   const sorted = [...byId.values()].sort(compareSeasonStanding)
   return sorted.map((dog, i) => ({ ...dog, rank: i + 1 }))
