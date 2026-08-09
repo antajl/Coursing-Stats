@@ -49,11 +49,24 @@ data/v1/
 ### Publish-gates
 
 - results &gt; 0, tops/judges non-empty, season top, file ≤ **24.5 MB**
-- Исключает: all-time `dog-ranking.json`, raw RKF bulk, sqlite
+- Исключения: `backend/scripts/publish/publish-exclude.js` (синхрон с `copy-data`)
+
+### Что уезжает на Pages (после Phase A)
+
+| Путь | На Pages? | Почему |
+|------|-----------|--------|
+| `calendar/`, `indexes/` (tops, events-by-id, dog-profiles, …), `donino/`, `competitions/` | да | горячее CDN |
+| `shows/calendar-*`, `shows/indexes/*` (кроме oversized) | да | списки/календари |
+| `shows/exhibitions/*` bulk (~5k) | **нет** | Turso; на CDN только allowlist из `shows/index.json` (~90 LC) |
+| `dogs/by-id/` | **нет** | сайт читает `indexes/dog-profiles/` |
+| huge `dog-ranking-*`, sqlite, registries | **нет** | лимиты / backend-only |
+
+Ожидаемый бюджет data-файлов после A: ~10–12k (было ~17.5k) + prerender HTML (dogs/events/hubs). План: `docs/superpowers/plans/2026-08-09-cdn-publish-slim.md`.
 
 ## Key files
 
 - `backend/scripts/build-all-data.ts`
+- `backend/scripts/publish/publish-exclude.js`
 - `backend/scripts/publish/verify-publish-gates.ts`
 - `frontend/scripts/copy-data.js`
 - `frontend/src/lib/staticData/` + `hooks/useStaticData.ts`
