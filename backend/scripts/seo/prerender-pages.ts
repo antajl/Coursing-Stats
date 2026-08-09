@@ -422,11 +422,20 @@ function buildCalendarExhibitionLookup(): Map<
 }
 
 function prerenderExhibitions(spaHtml: string): number {
+  // Off by default: ~4k HTML files blow Cloudflare Pages 20k file limit with data/v1.
+  // Enable with PRERENDER_EXHIBITIONS=1 (optional PRERENDER_EXHIBITIONS_MAX).
+  if (process.env.PRERENDER_EXHIBITIONS !== '1') return 0
+
   const ids = loadExhibitionIdsForSitemap()
+  const max =
+    process.env.PRERENDER_EXHIBITIONS_MAX != null && process.env.PRERENDER_EXHIBITIONS_MAX !== ''
+      ? Math.max(0, Number(process.env.PRERENDER_EXHIBITIONS_MAX) || 0)
+      : Number.POSITIVE_INFINITY
   const cal = buildCalendarExhibitionLookup()
   const index = readJsonFile<Record<string, string>>(path.join(ROOT, 'data/v1/shows/index.json')) || {}
   let written = 0
   for (const id of ids) {
+    if (written >= max) break
     const calMeta = cal.get(id)
     let dogCount: number | null = null
     let title = calMeta?.title || null
@@ -470,10 +479,19 @@ function prerenderExhibitions(spaHtml: string): number {
     writeHtml(path.join(DIST, 'shows', 'exhibition', id, 'index.html'), html)
     written++
   }
+  if (ids.length > written) {
+    console.warn(
+      `[prerender-seo] exhibitions capped/skipped: candidates=${ids.length} written=${written} (set PRERENDER_EXHIBITIONS=1 and optional PRERENDER_EXHIBITIONS_MAX)`,
+    )
+  }
   return written
 }
 
 function prerenderShowJudges(spaHtml: string): number {
+  // Off by default: ~2.2k HTML files — same Pages file-limit concern as exhibitions.
+  // Enable with PRERENDER_SHOW_JUDGES=1 (optional PRERENDER_SHOW_JUDGES_MAX).
+  if (process.env.PRERENDER_SHOW_JUDGES !== '1') return 0
+
   const raw = readJsonFile<
     | Array<{
         id?: string
@@ -494,9 +512,9 @@ function prerenderShowJudges(spaHtml: string): number {
   >(path.join(ROOT, 'data/v1/shows/indexes/judges.json'))
   const judges = Array.isArray(raw) ? raw : raw?.judges || []
   const max =
-    process.env.PRERENDER_SHOW_JUDGES_MAX === '0'
-      ? Number.POSITIVE_INFINITY
-      : Math.max(0, Number(process.env.PRERENDER_SHOW_JUDGES_MAX || 0) || 0) || Number.POSITIVE_INFINITY
+    process.env.PRERENDER_SHOW_JUDGES_MAX != null && process.env.PRERENDER_SHOW_JUDGES_MAX !== ''
+      ? Math.max(0, Number(process.env.PRERENDER_SHOW_JUDGES_MAX) || 0)
+      : Number.POSITIVE_INFINITY
 
   const ranked = [...judges].sort((a, b) => (b.total_judged || 0) - (a.total_judged || 0))
   let written = 0
@@ -520,6 +538,11 @@ function prerenderShowJudges(spaHtml: string): number {
     })
     writeHtml(path.join(DIST, 'shows', 'judges', staticSeoPathSegment(id), 'index.html'), html)
     written++
+  }
+  if (judges.length > written) {
+    console.warn(
+      `[prerender-seo] show judges capped/skipped: candidates=${judges.length} written=${written} (set PRERENDER_SHOW_JUDGES=1)`,
+    )
   }
   return written
 }
