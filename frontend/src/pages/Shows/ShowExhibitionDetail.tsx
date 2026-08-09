@@ -5,6 +5,7 @@ import SkeletonLoader from '../../components/SkeletonLoader'
 import ErrorState from '../../components/ErrorState'
 import RKFAttribution from '../../components/RKFAttribution'
 import PageToolbar from '../../components/toolbar/PageToolbar'
+import { SEO } from '../../components/SEO'
 import { CACHE } from '../../lib/constants'
 import ToolbarFiltersDropdown from '../../components/toolbar/ToolbarFiltersDropdown'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
@@ -116,9 +117,25 @@ export default function ShowExhibitionDetail() {
   }
 
   const hasCatalog = exhibition.breed_catalog != null && exhibition.breed_catalog.length > 0
+  const seoTitle = `${exhibition.title || 'Выставка'} — ${exhibition.date || ''}`.trim()
+  const seoDescription = [
+    `Выставка РКФ: ${exhibition.title}`,
+    exhibition.date || null,
+    exhibition.location || null,
+    exhibition.results?.length ? `${exhibition.results.length} результатов` : null,
+    'Протокол и статистика на Coursing Stats.',
+  ]
+    .filter(Boolean)
+    .join('. ')
 
   return (
     <div className="mx-auto max-w-full pb-2 sm:pb-4">
+      <SEO
+        title={seoTitle}
+        description={seoDescription}
+        keywords={`${exhibition.title}, выставка РКФ, результаты, ${exhibition.location || ''}`}
+        canonicalUrl={`https://coursing-stats.ru/shows/exhibition/${id}`}
+      />
       <ExhibitionHeader exhibition={exhibition} onBack={() => navigate(-1)} />
 
       {exhibition.results.length > 0 || hasCatalog ? (

@@ -4,7 +4,9 @@ import {
   breadcrumbJsonLd,
   buildDogBodyHtml,
   buildHubBodyHtml,
+  buildNeutralSpaShell,
   escapeHtml,
+  eventMetaFromEntry,
 } from '../scripts/seo/prerender-html'
 
 const SPA_SHELL = `<!doctype html>
@@ -92,5 +94,49 @@ describe('prerender-seo helpers', () => {
     })
     expect(html).toContain('application/ld+json')
     expect(html).toContain('BreadcrumbList')
+  })
+
+  it('applyMetaToSpaShell updates og:title and og:description', () => {
+    const shell = SPA_SHELL.replace(
+      '</head>',
+      '<meta property="og:title" content="Old OG" />\n<meta property="og:description" content="Old OD" />\n</head>',
+    )
+    const html = applyMetaToSpaShell(shell, {
+      title: 'Новый title | Coursing Stats',
+      description: 'Новое описание',
+      canonicalUrl: 'https://coursing-stats.ru/dog/1',
+      bodyHtml: '<main></main>',
+    })
+    expect(html).toContain('property="og:title" content="Новый title | Coursing Stats"')
+    expect(html).toContain('property="og:description" content="Новое описание"')
+    expect(html).toContain('property="og:url" content="https://coursing-stats.ru/dog/1"')
+  })
+
+  it('neutral spa shell has no canonical; home hub gets canonical to /', () => {
+    expect(SPA_SHELL).not.toMatch(/rel=["']canonical["']/)
+    const home = applyMetaToSpaShell(SPA_SHELL, {
+      title: 'Статистика курсинга и выставок собак | Coursing Stats',
+      description: 'Вся карьера собаки',
+      canonicalUrl: 'https://coursing-stats.ru/',
+      bodyHtml: '<main><h1>Статистика</h1></main>',
+    })
+    expect(home).toContain('<link rel="canonical" href="https://coursing-stats.ru/" />')
+    const neutral = buildNeutralSpaShell(home)
+    expect(neutral).not.toMatch(/rel=["']canonical["']/)
+    expect(neutral).not.toContain('<h1>Статистика</h1>')
+  })
+
+  it('eventMetaFromEntry builds RU title and description', () => {
+    const meta = eventMetaFromEntry({
+      id: '1250',
+      title: 'ЧРКФ Курсинг',
+      date_start: '2025-03-08',
+      location: 'Екатеринбург',
+      result_count: 40,
+      competition_kind: 'ЧРКФ',
+    })
+    expect(meta.title).toContain('ЧРКФ Курсинг')
+    expect(meta.description).toContain('участников')
+    expect(meta.h1).toBe('ЧРКФ Курсинг')
   })
 })

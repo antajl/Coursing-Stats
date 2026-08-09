@@ -15,10 +15,17 @@ import {
   breadcrumbJsonLd,
   buildDogBodyHtml,
   buildHubBodyHtml,
+  buildNeutralSpaShell,
+  buildSimpleEntityBodyHtml,
   dogMetaFromProfile,
   dogMetaFromShowRanking,
+  doninoMeta,
+  eventMetaFromEntry,
+  exhibitionMeta,
+  showJudgeMeta,
+  sportJudgeMeta,
 } from './prerender-html.js'
-
+import { loadExhibitionIdsForSitemap } from '../build-derived/sitemap.js'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT = path.resolve(__dirname, '../../..')
 const DIST = path.join(ROOT, 'frontend/dist')
@@ -30,6 +37,13 @@ const SHOW_ONLY_ID_MIN = 1_000_000
 
 function ensureDir(dir: string): void {
   fs.mkdirSync(dir, { recursive: true })
+}
+
+/** Path segment safe on Windows + Linux; matches stricter percent-encoding than encodeURIComponent. */
+export function staticSeoPathSegment(value: string): string {
+  return encodeURIComponent(value).replace(/[!'()*]/g, (c) => {
+    return `%${c.charCodeAt(0).toString(16).toUpperCase().padStart(2, '0')}`
+  })
 }
 
 function writeHtml(filePath: string, html: string): void {
@@ -202,6 +216,314 @@ function prerenderShowOnlyDogs(spaHtml: string): number {
   return written
 }
 
+function readJsonFile<T>(filePath: string): T | null {
+  if (!fs.existsSync(filePath)) return null
+  try {
+    return JSON.parse(fs.readFileSync(filePath, 'utf8')) as T
+  } catch {
+    return null
+  }
+}
+
+function prerenderEvents(spaHtml: string): number {
+  const index = readJsonFile<
+    Record<
+      string,
+      {
+        results_file?: string | null
+        has_results?: boolean
+        date_start?: string | null
+        title?: string | null
+      }
+    >
+  >(path.join(ROOT, 'data/v1/indexes/events-by-id.json'))
+  if (!index) return 0
+
+  const calendar = readJsonFile<
+    Array<{
+      id?: number | string
+      title?: string | null
+      location?: string | null
+      event_type?: string | null
+      competition_kind?: string | null
+      result_count?: number | null
+      date_start?: string | null
+    }>
+  >(path.join(ROOT, 'data/v1/indexes/calendar-index.json'))
+  const calById = new Map<
+    string,
+    {
+      id?: number | string
+      title?: string | null
+      location?: string | null
+      event_type?: string | null
+      competition_kind?: string | null
+      result_count?: number | null
+      date_start?: string | null
+    }
+  >()
+  for (const row of calendar || []) {
+    if (row?.id != null) calById.set(String(row.id), row)
+  }
+
+  let written = 0
+  for (const [id, entry] of Object.entries(index)) {
+    if (!entry?.results_file && entry?.has_results !== true) continue
+    const cal = calById.get(id)
+    let resultCount = cal?.result_count ?? null
+    let location = cal?.location ?? null
+    let title = entry.title || cal?.title || null
+    let eventType = cal?.event_type ?? null
+    let kind = cal?.competition_kind ?? null
+
+    if (entry.results_file) {
+      const comp = readJsonFile<{
+        event?: {
+          title?: string | null
+          location?: string | null
+          event_type?: string | null
+          competition_kind?: string | null
+        }
+        results?: unknown[]
+      }>(path.join(ROOT, 'data/v1', entry.results_file))
+      if (comp?.event) {
+        title = title || comp.event.title || null
+        location = location || comp.event.location || null
+        eventType = eventType || comp.event.event_type || null
+        kind = kind || comp.event.competition_kind || null
+      }
+      if (Array.isArray(comp?.results)) resultCount = comp.results.length
+    }
+
+    const meta = eventMetaFromEntry({
+      id,
+      title,
+      date_start: entry.date_start || cal?.date_start || null,
+      location,
+      result_count: resultCount,
+      event_type: eventType,
+      competition_kind: kind,
+    })
+    const html = applyMetaToSpaShell(spaHtml, {
+      title: meta.title,
+      description: meta.description,
+      canonicalUrl: `${SITE_ORIGIN}/event/${id}`,
+      bodyHtml: buildSimpleEntityBodyHtml(meta),
+      jsonLd: breadcrumbJsonLd(meta.breadcrumbs),
+    })
+    writeHtml(path.join(DIST, 'event', id, 'index.html'), html)
+    written++
+  }
+  return written
+}
+
+function prerenderSportJudges(spaHtml: string): number {
+  const summary = readJsonFile<{
+    judges?: Array<{
+      id?: string
+      name?: string
+      unique_events?: number
+      unique_breeds?: number
+      unique_dogs?: number
+    }>
+  }>(path.join(ROOT, 'data/v1/indexes/judges-summary.json'))
+  const judges = summary?.judges || []
+  let written = 0
+  for (const j of judges) {
+    const id = j.id || j.name
+    if (!id) continue
+    const meta = sportJudgeMeta({
+      id,
+      name: j.name || id,
+      unique_events: j.unique_events,
+      unique_breeds: j.unique_breeds,
+      unique_dogs: j.unique_dogs,
+    })
+    const html = applyMetaToSpaShell(spaHtml, {
+      title: meta.title,
+      description: meta.description,
+      canonicalUrl: `${SITE_ORIGIN}/judges/${encodeURIComponent(id)}`,
+      bodyHtml: buildSimpleEntityBodyHtml(meta),
+      jsonLd: breadcrumbJsonLd(meta.breadcrumbs),
+    })
+    writeHtml(path.join(DIST, 'judges', staticSeoPathSegment(id), 'index.html'), html)
+    written++
+  }
+  return written
+}
+
+function prerenderDoninoDogs(spaHtml: string): number {
+  const pairs = new Map<string, { name: string; breed: string }>()
+  for (const file of ['donino/speed_records.json', 'donino/coursing_records.json']) {
+    const doc = readJsonFile<
+      | Array<{ name?: string; breed?: string }>
+      | { records?: Array<{ name?: string; breed?: string }> }
+    >(path.join(ROOT, 'data/v1', file))
+    const rows = Array.isArray(doc) ? doc : doc?.records || []
+    for (const row of rows) {
+      if (!row?.name || !row?.breed) continue
+      const key = `${row.name}\0${row.breed}`
+      pairs.set(key, { name: row.name, breed: row.breed })
+    }
+  }
+  let written = 0
+  for (const dog of pairs.values()) {
+    const meta = doninoMeta(dog)
+    const html = applyMetaToSpaShell(spaHtml, {
+      title: meta.title,
+      description: meta.description,
+      canonicalUrl: `${SITE_ORIGIN}/donino-dog/${encodeURIComponent(dog.name)}/${encodeURIComponent(dog.breed)}`,
+      bodyHtml: buildSimpleEntityBodyHtml(meta),
+      jsonLd: breadcrumbJsonLd(meta.breadcrumbs),
+    })
+    writeHtml(
+      path.join(
+        DIST,
+        'donino-dog',
+        staticSeoPathSegment(dog.name),
+        staticSeoPathSegment(dog.breed),
+        'index.html',
+      ),
+      html,
+    )
+    written++
+  }
+  return written
+}
+
+function buildCalendarExhibitionLookup(): Map<
+  string,
+  { title?: string | null; date?: string | null; city?: string | null }
+> {
+  const map = new Map<string, { title?: string | null; date?: string | null; city?: string | null }>()
+  const dir = path.join(ROOT, 'data/v1/shows/calendar-rkf')
+  if (!fs.existsSync(dir)) return map
+  for (const file of fs.readdirSync(dir)) {
+    if (!/^\d{4}\.json$/.test(file)) continue
+    const doc = readJsonFile<{
+      exhibitions?: Array<{
+        id?: number | string
+        lc_exhibition_id?: number | string | null
+        title?: string | null
+        date?: string | null
+        city?: string | null
+      }>
+    }>(path.join(dir, file))
+    for (const e of doc?.exhibitions || []) {
+      if (e.id != null) {
+        map.set(String(e.id), { title: e.title, date: e.date, city: e.city })
+      }
+      if (e.lc_exhibition_id != null) {
+        map.set(String(e.lc_exhibition_id), { title: e.title, date: e.date, city: e.city })
+      }
+    }
+  }
+  return map
+}
+
+function prerenderExhibitions(spaHtml: string): number {
+  const ids = loadExhibitionIdsForSitemap()
+  const cal = buildCalendarExhibitionLookup()
+  const index = readJsonFile<Record<string, string>>(path.join(ROOT, 'data/v1/shows/index.json')) || {}
+  let written = 0
+  for (const id of ids) {
+    const calMeta = cal.get(id)
+    let dogCount: number | null = null
+    let title = calMeta?.title || null
+    let date = calMeta?.date || null
+    let city = calMeta?.city || null
+
+    const type1 = readJsonFile<{ dogs?: unknown[]; dogs_count?: number }>(
+      path.join(ROOT, 'data/v1/shows/exhibitions', `${id}-type1.json`),
+    )
+    if (type1) {
+      dogCount = Array.isArray(type1.dogs) ? type1.dogs.length : type1.dogs_count ?? null
+      const firstDog = Array.isArray(type1.dogs) ? (type1.dogs[0] as { show_date?: string }) : null
+      if (!date && firstDog?.show_date) date = firstDog.show_date
+    } else if (index[id]) {
+      const fileEx = readJsonFile<{
+        title?: string
+        date?: string
+        city?: string
+        dogs?: unknown[]
+        results?: unknown[]
+      }>(path.join(ROOT, 'data/v1/shows', index[id]))
+      if (fileEx) {
+        title = title || fileEx.title || null
+        date = date || fileEx.date || null
+        city = city || fileEx.city || null
+        dogCount =
+          (Array.isArray(fileEx.dogs) && fileEx.dogs.length) ||
+          (Array.isArray(fileEx.results) && fileEx.results.length) ||
+          null
+      }
+    }
+
+    const meta = exhibitionMeta({ id, title, date, city, dogCount })
+    const html = applyMetaToSpaShell(spaHtml, {
+      title: meta.title,
+      description: meta.description,
+      canonicalUrl: `${SITE_ORIGIN}/shows/exhibition/${id}`,
+      bodyHtml: buildSimpleEntityBodyHtml(meta),
+      jsonLd: breadcrumbJsonLd(meta.breadcrumbs),
+    })
+    writeHtml(path.join(DIST, 'shows', 'exhibition', id, 'index.html'), html)
+    written++
+  }
+  return written
+}
+
+function prerenderShowJudges(spaHtml: string): number {
+  const raw = readJsonFile<
+    | Array<{
+        id?: string
+        name?: string
+        display_name?: string
+        total_judged?: number
+        unique_breeds?: number
+      }>
+    | {
+        judges?: Array<{
+          id?: string
+          name?: string
+          display_name?: string
+          total_judged?: number
+          unique_breeds?: number
+        }>
+      }
+  >(path.join(ROOT, 'data/v1/shows/indexes/judges.json'))
+  const judges = Array.isArray(raw) ? raw : raw?.judges || []
+  const max =
+    process.env.PRERENDER_SHOW_JUDGES_MAX === '0'
+      ? Number.POSITIVE_INFINITY
+      : Math.max(0, Number(process.env.PRERENDER_SHOW_JUDGES_MAX || 0) || 0) || Number.POSITIVE_INFINITY
+
+  const ranked = [...judges].sort((a, b) => (b.total_judged || 0) - (a.total_judged || 0))
+  let written = 0
+  for (const j of ranked) {
+    if (written >= max) break
+    const id = j.id
+    if (!id) continue
+    const meta = showJudgeMeta({
+      id,
+      name: j.name,
+      display_name: j.display_name,
+      total_judged: j.total_judged,
+      unique_breeds: j.unique_breeds,
+    })
+    const html = applyMetaToSpaShell(spaHtml, {
+      title: meta.title,
+      description: meta.description,
+      canonicalUrl: `${SITE_ORIGIN}/shows/judges/${encodeURIComponent(id)}`,
+      bodyHtml: buildSimpleEntityBodyHtml(meta),
+      jsonLd: breadcrumbJsonLd(meta.breadcrumbs),
+    })
+    writeHtml(path.join(DIST, 'shows', 'judges', staticSeoPathSegment(id), 'index.html'), html)
+    written++
+  }
+  return written
+}
+
 function main(): void {
   const started = Date.now()
 
@@ -218,15 +540,25 @@ function main(): void {
     process.exit(1)
   }
 
-  const hubs = prerenderHubs(spaHtml)
+  // Neutral SPA fallback for unknown routes (must NOT carry home canonical/H1).
+  // Re-runs may read an already-patched index.html — always neutralize first.
+  writeHtml(path.join(DIST, 'spa-shell.html'), buildNeutralSpaShell(spaHtml))
+  const shellForPages = buildNeutralSpaShell(spaHtml)
+
+  const hubs = prerenderHubs(shellForPages)
   const profilesDir = resolveProfilesDir()
-  const competitionDogs = prerenderCompetitionDogs(spaHtml, profilesDir)
-  const showOnlyDogs = prerenderShowOnlyDogs(spaHtml)
+  const competitionDogs = prerenderCompetitionDogs(shellForPages, profilesDir)
+  const showOnlyDogs = prerenderShowOnlyDogs(shellForPages)
   const dogs = competitionDogs + showOnlyDogs
+  const events = prerenderEvents(shellForPages)
+  const judges = prerenderSportJudges(shellForPages)
+  const donino = prerenderDoninoDogs(shellForPages)
+  const exhibitions = prerenderExhibitions(shellForPages)
+  const showJudges = prerenderShowJudges(shellForPages)
   const elapsed = Date.now() - started
 
   console.log(
-    `[prerender-seo] hubs=${hubs} dogs=${dogs} (competition=${competitionDogs}, show-only=${showOnlyDogs}) elapsed=${elapsed}ms`,
+    `[prerender-seo] hubs=${hubs} dogs=${dogs} (competition=${competitionDogs}, show-only=${showOnlyDogs}) events=${events} judges=${judges} donino=${donino} exhibitions=${exhibitions} showJudges=${showJudges} elapsed=${elapsed}ms`,
   )
 }
 

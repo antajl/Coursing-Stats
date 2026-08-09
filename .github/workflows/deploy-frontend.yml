@@ -69,6 +69,14 @@ jobs:
       - name: Prerender SEO HTML
         run: yarn run prerender-seo
 
+      - name: Verify SEO artifacts
+        run: |
+          test -f frontend/dist/spa-shell.html
+          test -f frontend/dist/robots.txt
+          test -f frontend/public/sitemap.xml
+          grep -q '/event/' frontend/public/sitemap.xml
+          test -d frontend/dist/event || test -d frontend/dist/dog
+
       - name: Deploy Frontend to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
