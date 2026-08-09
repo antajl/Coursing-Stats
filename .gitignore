@@ -188,6 +188,7 @@ test-results/
 
 # Accidental local dumps
 git-files.txt
+.tmp/
 .tmp-seo-dialog.txt
 tmp-pdf-excel-exp/
 backend/scripts/tmp-*.ts
