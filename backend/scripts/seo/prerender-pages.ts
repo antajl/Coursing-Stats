@@ -564,9 +564,13 @@ function main(): void {
   }
 
   // Neutral SPA fallback for unknown routes (must NOT carry home canonical/H1).
+  // Use spa-shell/index.html (not spa-shell.html): CF Pages "pretty URL" 308 from
+  // *.html → /spa-shell combined with `/* /spa-shell.html 200` caused a site-wide redirect loop.
   // Re-runs may read an already-patched index.html — always neutralize first.
-  writeHtml(path.join(DIST, 'spa-shell.html'), buildNeutralSpaShell(spaHtml))
   const shellForPages = buildNeutralSpaShell(spaHtml)
+  writeHtml(path.join(DIST, 'spa-shell', 'index.html'), shellForPages)
+  // Keep legacy path too so old bookmarks / verify scripts do not 404 during transition.
+  writeHtml(path.join(DIST, 'spa-shell.html'), shellForPages)
 
   const hubs = prerenderHubs(shellForPages)
   const profilesDir = resolveProfilesDir()
