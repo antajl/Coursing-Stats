@@ -83,4 +83,57 @@ describe('buildCombinedRanking season standing B', () => {
     )
     expect(rows[0].dog_id).toBe(1)
   })
+
+  it('does not let career medals/starts from Elo year index overwrite season stats', () => {
+    const rows = buildCombinedRanking(
+      [
+        {
+          dog_id: 5735,
+          name_lat: 'DZHANA',
+          breed: 'БАСЕНДЖИ',
+          gold: 2,
+          silver: 1,
+          bronze: 0,
+          total_starts: 3,
+        },
+      ],
+      [
+        {
+          dog_id: 5735,
+          rating_score: 85.09,
+          judge_eval_count: 12,
+          avg_judge_score: 82.5,
+          best_judge_score: 86,
+          best_score: 333,
+          total_starts: 3,
+        },
+      ],
+      [
+        {
+          dog_id: 5735,
+          elo_rating: 1561,
+          elo_races: 6,
+          // Career fields from dog-profile snapshot in top-elo-YYYY
+          gold: 16,
+          silver: 2,
+          bronze: 0,
+          total_starts: 19,
+          best_score: 356,
+          avg_judge_score: 85.52,
+          rating_score: 90,
+        },
+      ]
+    )
+    expect(rows).toHaveLength(1)
+    const dog = rows[0]
+    expect(dog.gold).toBe(2)
+    expect(dog.silver).toBe(1)
+    expect(dog.bronze).toBe(0)
+    expect(dog.total_starts).toBe(3)
+    expect(dog.rating_score).toBe(85.09)
+    expect(dog.best_score).toBe(333)
+    expect(dog.avg_judge_score).toBe(82.5)
+    expect(dog.elo_rating).toBe(1561)
+    expect(dog.elo_races).toBe(6)
+  })
 })
