@@ -204,6 +204,7 @@ export default function JudgeDetail() {
         title={`${judgeName} - статистика судьи`}
         description={`Статистика судьи ${judgeName} по курсингу и бегам борзых. ${eventCount} соревнований, оценки по породам и критериям.`}
         keywords={`${judgeName}, судья, курсинг, бега борзых, статистика, РКФ, оценки, соревнования`}
+        canonicalUrl={`https://coursing-stats.ru/judges/${encodeURIComponent(judgeId || judgeName)}`}
       />
       <div className="space-y-5 pb-4">
         <div className="relative">

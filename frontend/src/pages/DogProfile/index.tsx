@@ -424,17 +424,6 @@ export default function DogProfile() {
         description={description}
         keywords={keywords}
         canonicalUrl={canonicalUrl}
-        enableAIGeneration={true}
-        aiGenerationData={{
-          type: 'dog',
-          data: {
-            name: dogName,
-            breed: dogBreed,
-            stats: seoFacts.join('; '),
-            achievements: dogTitles || 'Нет титулов',
-            context: 'Участник соревнований по курсингу и бегам борзых'
-          }
-        }}
       />
       <JsonLd
         data={breadcrumbListSchema([

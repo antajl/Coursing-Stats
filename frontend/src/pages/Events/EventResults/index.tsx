@@ -113,6 +113,7 @@ export default function EventResults() {
         title={`${eventName} - ${eventDate}`}
         description={description}
         keywords={`${eventName}, ${eventType}, ${event.location}, результаты, статистика, РКФ, ${eventDate}`}
+        canonicalUrl={`https://coursing-stats.ru/event/${id}`}
       />
       <div className="max-w-full mx-auto pb-2 sm:pb-4">
         {error && (

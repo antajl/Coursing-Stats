@@ -15,6 +15,7 @@ export default function NotFound() {
         title="Страница не найдена"
         description="Страница не найдена."
         keywords="404, страница не найдена"
+        noIndex
       />
       <div className="fixed inset-0 z-40 overflow-hidden">
         <picture>

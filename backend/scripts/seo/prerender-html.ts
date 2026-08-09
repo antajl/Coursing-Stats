@@ -149,20 +149,84 @@ function setRootBody(html: string, bodyHtml: string): string {
   return html.replace(/<\/body>/i, `<div id="root">${bodyHtml}</div>\n</body>`)
 }
 
+function replaceOrInsertMetaProperty(html: string, property: string, content: string): string {
+  const safe = escapeHtml(content)
+  const re = new RegExp(
+    `<meta\\s+property=["']${property}["'][^>]*>`,
+    'i',
+  )
+  const tag = `<meta property="${property}" content="${safe}" />`
+  if (re.test(html)) return html.replace(re, tag)
+  return html.replace(/<\/head>/i, `  ${tag}\n</head>`)
+}
+
+function replaceOrInsertMetaName(html: string, name: string, content: string): string {
+  const safe = escapeHtml(content)
+  const re = new RegExp(`<meta\\s+name=["']${name}["'][^>]*>`, 'i')
+  const tag = `<meta name="${name}" content="${safe}" />`
+  if (re.test(html)) return html.replace(re, tag)
+  return html.replace(/<\/head>/i, `  ${tag}\n</head>`)
+}
+
 export type ApplyMetaOptions = {
   title: string
   description: string
   canonicalUrl: string
   bodyHtml: string
   jsonLd?: Record<string, unknown> | null
+  ogImage?: string
 }
 
-/** Patch SPA shell: title, description, canonical, optional JSON-LD, #root body. Keeps script/link assets. */
+/** Strip hub/dog patches so SPA fallback never advertises home canonical. */
+export function buildNeutralSpaShell(html: string): string {
+  let out = html
+  out = out.replace(/<link\s+rel=["']canonical["'][^>]*>\s*/gi, '')
+  out = out.replace(
+    /<script\s+type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>\s*/gi,
+    '',
+  )
+  out = replaceTitle(
+    out,
+    'Coursing Stats — статистика курсинга, бегов и выставок собак',
+  )
+  out = replaceOrInsertMetaDescription(
+    out,
+    'Coursing Stats — рейтинги и статистика собак в России: курсинг и бега борзых, рекорды Донино, выставки РКФ, профили и судьи.',
+  )
+  out = replaceOrInsertMetaProperty(out, 'og:url', `${SITE_ORIGIN}/`)
+  out = replaceOrInsertMetaProperty(
+    out,
+    'og:title',
+    'Coursing Stats — статистика курсинга, бегов и выставок',
+  )
+  out = replaceOrInsertMetaProperty(
+    out,
+    'og:description',
+    'Рейтинги собак: курсинг и бега, рекорды Донино, выставки РКФ, профили и судьи.',
+  )
+  out = setRootBody(out, '')
+  return out
+}
+
+/** Patch SPA shell: title, description, canonical, OG/Twitter, optional JSON-LD, #root body. */
 export function applyMetaToSpaShell(spaHtml: string, options: ApplyMetaOptions): string {
+  const ogImage = options.ogImage || `${SITE_ORIGIN}/og-image.svg`
   let html = spaHtml
   html = replaceTitle(html, options.title)
   html = replaceOrInsertMetaDescription(html, options.description)
   html = replaceOrInsertCanonical(html, options.canonicalUrl)
+  html = replaceOrInsertMetaProperty(html, 'og:type', 'website')
+  html = replaceOrInsertMetaProperty(html, 'og:url', options.canonicalUrl)
+  html = replaceOrInsertMetaProperty(html, 'og:title', options.title)
+  html = replaceOrInsertMetaProperty(html, 'og:description', options.description)
+  html = replaceOrInsertMetaProperty(html, 'og:image', ogImage)
+  html = replaceOrInsertMetaProperty(html, 'og:locale', 'ru_RU')
+  html = replaceOrInsertMetaProperty(html, 'og:site_name', 'Coursing Stats')
+  html = replaceOrInsertMetaName(html, 'twitter:card', 'summary_large_image')
+  html = replaceOrInsertMetaName(html, 'twitter:url', options.canonicalUrl)
+  html = replaceOrInsertMetaName(html, 'twitter:title', options.title)
+  html = replaceOrInsertMetaName(html, 'twitter:description', options.description)
+  html = replaceOrInsertMetaName(html, 'twitter:image', ogImage)
   html = injectJsonLd(html, options.jsonLd)
   html = setRootBody(html, options.bodyHtml)
   return html
@@ -322,6 +386,225 @@ export function dogMetaFromShowRanking(entry: {
       { name: 'Главная', url: '/' },
       { name: 'Рейтинг', url: '/competitions' },
       { name, url: `/dog/${id}` },
+    ],
+  }
+}
+
+export type SimpleEntityMeta = {
+  title: string
+  description: string
+  h1: string
+  paragraph: string
+  breadcrumbs: BreadcrumbItem[]
+  sectionLinks: { href: string; label: string }[]
+}
+
+export function buildSimpleEntityBodyHtml(meta: Omit<SimpleEntityMeta, 'title' | 'description'>): string {
+  const crumbs = meta.breadcrumbs
+    .map((c, i) =>
+      i === meta.breadcrumbs.length - 1
+        ? `<span>${escapeHtml(c.name)}</span>`
+        : `<a href="${escapeHtml(c.url)}">${escapeHtml(c.name)}</a>`,
+    )
+    .join(' → ')
+  const links = meta.sectionLinks
+    .map((l) => `<a href="${escapeHtml(l.href)}">${escapeHtml(l.label)}</a>`)
+    .join(' · ')
+  return [
+    `<main>`,
+    `<nav aria-label="Хлебные крошки">${crumbs}</nav>`,
+    `<h1>${escapeHtml(meta.h1)}</h1>`,
+    `<p>${escapeHtml(meta.paragraph)}</p>`,
+    `<nav aria-label="Разделы сайта">${links}</nav>`,
+    `</main>`,
+  ].join('\n')
+}
+
+export function eventMetaFromEntry(entry: {
+  id: string
+  title?: string | null
+  date_start?: string | null
+  location?: string | null
+  result_count?: number | null
+  event_type?: string | null
+  competition_kind?: string | null
+}): SimpleEntityMeta {
+  const headline = entry.title?.trim() || `Соревнование ${entry.id}`
+  const date = entry.date_start || ''
+  const location = entry.location?.trim() || ''
+  const kind = entry.competition_kind || entry.event_type || 'курсинг'
+  const n = entry.result_count
+  const title = date
+    ? `${headline} — ${date} | Coursing Stats`
+    : `${headline} | Coursing Stats`
+  const description = [
+    `Результаты: ${kind}${date ? ` ${date}` : ''}`,
+    location ? location : null,
+    n != null && n > 0 ? `${n} участников` : null,
+    'Протокол на Coursing Stats.',
+  ]
+    .filter(Boolean)
+    .join('. ')
+  const paragraph = [
+    `Результаты соревнования по виду «${kind}»`,
+    date ? `от ${date}` : null,
+    location ? `в ${location}` : null,
+    n != null && n > 0 ? `(${n} участников)` : null,
+    'Статистика курсинга, бегов борзых и рейтинги на Coursing Stats.',
+  ]
+    .filter(Boolean)
+    .join(' ')
+
+  return {
+    title,
+    description,
+    h1: headline,
+    paragraph,
+    breadcrumbs: [
+      { name: 'Главная', url: '/' },
+      { name: 'Соревнования', url: '/competitions' },
+      { name: headline, url: `/event/${entry.id}` },
+    ],
+    sectionLinks: [
+      { href: '/competitions?tab=calendar', label: 'Календарь' },
+      { href: '/competitions?tab=ranking', label: 'Рейтинг' },
+      { href: '/guide', label: 'Справочник' },
+    ],
+  }
+}
+
+export function sportJudgeMeta(judge: {
+  id: string
+  name?: string | null
+  unique_events?: number | null
+  unique_breeds?: number | null
+  unique_dogs?: number | null
+}): SimpleEntityMeta {
+  const name = judge.name?.trim() || judge.id
+  const facts = [
+    judge.unique_events != null ? `${judge.unique_events} соревнований` : null,
+    judge.unique_breeds != null ? `${judge.unique_breeds} пород` : null,
+    judge.unique_dogs != null ? `${judge.unique_dogs} собак` : null,
+  ].filter(Boolean)
+  const title = `${name} — статистика судьи | Coursing Stats`
+  const description =
+    facts.length > 0
+      ? `Статистика судьи ${name} по курсингу и бегам борзых: ${facts.join(', ')}.`
+      : `Статистика судьи ${name} по курсингу и бегам борзых на Coursing Stats.`
+  return {
+    title,
+    description,
+    h1: name,
+    paragraph: description,
+    breadcrumbs: [
+      { name: 'Главная', url: '/' },
+      { name: 'Судьи', url: '/competitions?tab=judges' },
+      { name: name, url: `/judges/${encodeURIComponent(judge.id)}` },
+    ],
+    sectionLinks: [
+      { href: '/competitions?tab=judges', label: 'Судьи' },
+      { href: '/competitions', label: 'Соревнования' },
+      { href: '/guide', label: 'Справочник' },
+    ],
+  }
+}
+
+export function doninoMeta(dog: { name: string; breed: string }): SimpleEntityMeta {
+  const title = `${dog.name} (${dog.breed}) — рекорды Донино | Coursing Stats`
+  const description = `Рекорды ${dog.name} (${dog.breed}) на полигоне Курсинг Донино: замер скорости и бега 350 м.`
+  return {
+    title,
+    description,
+    h1: `${dog.name} (${dog.breed})`,
+    paragraph: description,
+    breadcrumbs: [
+      { name: 'Главная', url: '/' },
+      { name: 'Донино', url: '/speed-records' },
+      {
+        name: dog.name,
+        url: `/donino-dog/${encodeURIComponent(dog.name)}/${encodeURIComponent(dog.breed)}`,
+      },
+    ],
+    sectionLinks: [
+      { href: '/speed-records', label: 'Рекорды Донино' },
+      { href: '/competitions', label: 'Соревнования' },
+      { href: '/guide', label: 'Справочник' },
+    ],
+  }
+}
+
+export function exhibitionMeta(entry: {
+  id: string
+  title?: string | null
+  date?: string | null
+  city?: string | null
+  dogCount?: number | null
+}): SimpleEntityMeta {
+  const headline = entry.title?.trim() || `Выставка ${entry.id}`
+  const date = entry.date || ''
+  const city = entry.city || ''
+  const n = entry.dogCount
+  const title = date
+    ? `${headline} — ${date} | Coursing Stats`
+    : `${headline} | Coursing Stats`
+  const description = [
+    `Выставка РКФ: ${headline}`,
+    date || null,
+    city || null,
+    n != null && n > 0 ? `${n} собак в протоколе` : null,
+    'Результаты и статистика на Coursing Stats.',
+  ]
+    .filter(Boolean)
+    .join('. ')
+  return {
+    title,
+    description,
+    h1: headline,
+    paragraph: description,
+    breadcrumbs: [
+      { name: 'Главная', url: '/' },
+      { name: 'Выставки', url: '/shows' },
+      { name: headline, url: `/shows/exhibition/${entry.id}` },
+    ],
+    sectionLinks: [
+      { href: '/shows?tab=calendar', label: 'Календарь выставок' },
+      { href: '/shows?tab=ranking', label: 'Рейтинг' },
+      { href: '/guide', label: 'Справочник' },
+    ],
+  }
+}
+
+export function showJudgeMeta(judge: {
+  id: string
+  name?: string | null
+  display_name?: string | null
+  total_judged?: number | null
+  unique_breeds?: number | null
+}): SimpleEntityMeta {
+  const name = judge.display_name?.trim() || judge.name?.trim() || judge.id
+  const facts = [
+    judge.total_judged != null ? `${judge.total_judged} оценок` : null,
+    judge.unique_breeds != null ? `${judge.unique_breeds} пород` : null,
+  ].filter(Boolean)
+  const title = `${name} — судья выставок | Coursing Stats`
+  const description =
+    facts.length > 0
+      ? `Статистика судьи ${name} на выставках РКФ: ${facts.join(', ')}.`
+      : `Статистика судьи ${name} на выставках РКФ на Coursing Stats.`
+  return {
+    title,
+    description,
+    h1: name,
+    paragraph: description,
+    breadcrumbs: [
+      { name: 'Главная', url: '/' },
+      { name: 'Судьи выставок', url: '/shows?tab=judges' },
+      { name: name, url: `/shows/judges/${encodeURIComponent(judge.id)}` },
+    ],
+    sectionLinks: [
+      { href: '/shows?tab=judges', label: 'Судьи выставок' },
+      { href: '/shows', label: 'Выставки' },
+      { href: '/guide', label: 'Справочник' },
     ],
   }
 }

@@ -5,5 +5,6 @@
 /bimi/* /bimi/:splat 200
 /.well-known/bimi/* /.well-known/bimi/:splat 200
 
-# SPA fallback for all other routes
-/* /index.html 200
+# Client routes without a prerendered /path/index.html
+# Neutral shell (no home canonical) — written by yarn run prerender-seo
+/* /spa-shell.html 200

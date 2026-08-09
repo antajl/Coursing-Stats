@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { useNavigate, Link } from 'react-router-dom';
+import { SEO } from '../components/SEO';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -45,6 +46,8 @@ export default function LoginPage() {
   const accountRedirect = isLocalhost ? 'http://localhost:5173/account' : 'https://coursing-stats.ru/account';
 
   return (
+    <>
+      <SEO title="Вход" description="Вход в аккаунт Coursing Stats." noIndex />
     <div className="min-h-screen flex items-center justify-center px-4">
       <div className="max-w-md w-full">
         <div className="text-center mb-8">
@@ -176,5 +179,6 @@ export default function LoginPage() {
         </p>
       </div>
     </div>
+    </>
   );
 }

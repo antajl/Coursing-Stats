@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { useNavigate, Link } from 'react-router-dom';
+import { SEO } from '../components/SEO';
 
 export default function RegisterPage() {
   const [email, setEmail] = useState('');
@@ -54,6 +55,8 @@ export default function RegisterPage() {
   const redirectUri = 'https://auth-worker.antajltube.workers.dev/v1/oauth/yandex/callback';
 
   return (
+    <>
+      <SEO title="Регистрация" description="Регистрация в Coursing Stats." noIndex />
     <div className="min-h-screen flex items-center justify-center px-4">
       <div className="max-w-md w-full">
         <div className="text-center mb-8">
@@ -200,5 +203,6 @@ export default function RegisterPage() {
         </p>
       </div>
     </div>
+    </>
   );
 }
