@@ -77,6 +77,8 @@ jobs:
           test -f frontend/public/sitemap.xml
           grep -q '/event/' frontend/public/sitemap.xml
           test -d frontend/dist/event || test -d frontend/dist/dog
+          test -d frontend/dist/shows/exhibition
+          test -d frontend/dist/shows/judges
           grep -q 'spa-shell/index.html' frontend/dist/_redirects
 
       - name: Deploy Frontend to Cloudflare Pages

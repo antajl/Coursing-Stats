@@ -1,12 +1,22 @@
 # SEO Indexation (Google + Яндекс, RU) Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [x]`) syntax for tracking.
 
 **Goal:** Сделать так, чтобы Google и Яндекс индексировали все публичные сущности сайта (рейтинги, календарь, результаты `/event/:id`, профили собак, судей спорта и выставок, выставки, Донино) с уникальными title/description/canonical и crawlable HTML — без переезда на Next.js.
 
 **Architecture:** Остаёмся на Vite SPA + Cloudflare Pages. Источник правды — статический HTML из `yarn run prerender-seo` после `frontend build`. Критичный фикс: SPA-fallback больше не должен отдавать meta/canonical главной. Sitemap собирается при `build-all-data` из тех же индексов, что читает UI. Клиентский `SEO`/`JsonLd` остаётся для гидрации и соцпревью после загрузки JS.
 
 **Tech Stack:** Vite, React 19, `react-helmet-async`, Cloudflare Pages `_redirects`, `backend/scripts/seo/prerender-*.ts`, `backend/scripts/build-derived/sitemap.ts`, vitest, yarn@1.22.22.
+
+
+## Status (обновлено 2026-08-09)
+
+| Область | Статус |
+|---------|--------|
+| Tasks 1–10 (код) | **Готово** — spa-shell, robots, sitemap, OG/canonical, prerender хабов/собак/events/судей спорта/Донино, client SEO выставок, auth noindex, CI verify, выравнивание хабов |
+| Prerender выставок + судей выставок | **Вкл по умолчанию** после CDN slim/packs (~5.7k data + HTML ≈ ~15k < 20k). Выкл: `PRERENDER_EXHIBITIONS=0` / `PRERENDER_SHOW_JUDGES=0` |
+| SPA fallback | `/* /spa-shell/index.html 200` (**не** `spa-shell.html` — CF pretty-URL 308-луп) |
+| Task 11 (GSC / Яндекс) | **Оператор** — переотправить тот же URL sitemap после деплоя |
 
 ## Global Constraints
 
@@ -16,7 +26,7 @@
 - PowerShell: команды через `;`, не `&&`.
 - Коммиты только по явной просьбе пользователя.
 - Cloudflare Pages: static file (`/path/index.html`) имеет приоритет над SPA fallback; fallback нужен для клиентских маршрутов без prerender.
-- Лимит файлов Pages: не включать full dump show-only dogs (`PRERENDER_SHOW_ONLY`) без явного решения.
+- Лимит файлов Pages: не включать full dump show-only dogs (`PRERENDER_SHOW_ONLY`) без явного решения. После slim/packs бюджет позволяет полный prerender выставок + судей выставок.
 - Язык сниппетов и H1: русский; бренд в title: `| Coursing Stats` (бренд не русифицируем — см. Brand).
 - Аккаунты уже есть: Яндекс.Вебмастер, Метрика, Google Search Console, GA — задачи ниже только настройка/проверка, не регистрация.
 
@@ -24,12 +34,13 @@
 
 | Тема | Решение |
 |------|---------|
-| Объём | Сначала **всё основное** (хабы, собаки, судьи спорта, Донино, sitemap, spa-shell). |
-| Спорт `/event` | Prerender **все** с `results_file` (~163), не только 2026 (~18). Это секунды, не часы. |
-| Выставки | В sitemap — URL с реальным протоколом. **Prerender HTML выставок/судей выставок по умолчанию ВЫКЛ** (`PRERENDER_EXHIBITIONS=1` / `PRERENDER_SHOW_JUDGES=1`): Cloudflare Pages лимит **20 000 файлов**; полный dump + `data/v1` его превышает. Sitemap остаётся полным. |
-| Судьи выставок | Sitemap все (~2243). Prerender только с `PRERENDER_SHOW_JUDGES=1` (из‑за лимита файлов Pages). |
+| Объём | Хабы, собаки, судьи спорта, Донино, events, sitemap, spa-shell — в проде. |
+| Спорт `/event` | Prerender **все** с `results_file` (~163). |
+| Выставки | В sitemap — URL с реальным протоколом (~4069). **Prerender HTML ON по умолчанию** (~4k). Выкл: `PRERENDER_EXHIBITIONS=0`. |
+| Судьи выставок | Sitemap все (~2243). **Prerender ON по умолчанию**. Выкл: `PRERENDER_SHOW_JUDGES=0`. |
 | Ключевые слова (RU) | Ядро: курсинг, рейсинг, бега борзых, результаты, рекорды, статистика, награды, рейтинг + породы. В title/description — естественно, без stuffing. |
 | Бренд | Оставить **Coursing Stats**. Левая часть title — по-русски и по сущности; справа бренд. |
+| CDN file budget | Slim publish + packs → data ~5.7k; с полным show prerender оценка ~15k файлов на Pages (лимит 20k). |
 
 ### Почему «всё» по спорту недолго
 
@@ -38,11 +49,11 @@
 | Events all years | ~163 | < 5 с | ~1 MB |
 | Sport judges | ~40 | < 1 с | ~0.2 MB |
 | Donino | ~236 | < 5 с | ~1 MB |
-| Exhibition protocols | ~5k | ~1–3 мин | ~25–40 MB |
+| Exhibition protocols | ~4k | ~1–3 мин | ~20–30 MB |
 | Show judges | ~2.2k | ~1 мин | ~10–15 MB |
 | Dogs (уже есть) | ~2.5k | уже в CI | — |
 
-Узкое место — **upload Cloudflare Pages**, не генерация. Календарь выставок 2024–2026 = 8–9k строк **не** равен числу страниц сайта: у большинства нет LC-протокола (в 2026 `has_lc_protocol` ≈ 34).
+Узкое место — **upload Cloudflare Pages**, не генерация. Календарь выставок 2024–2026 = 8–9k строк **не** равен числу страниц сайта: у большинства нет LC-протокола.
 
 ## GSC Coverage snapshot (экспорт 2026-08-09)
 
@@ -61,26 +72,26 @@
 | Просканирована, пока не проиндексирована | 6 | Очередь Google. |
 | Canonical / soft 404 / noindex / duplicate | 1–4 | Мелочь; проверить после spa-shell fix. |
 
-**Метаданные:** Sitemap = «Все обработанные страницы» — sitemap Google уже съел; проблема не в «не отправили», а в качестве/уникальности URL.
+**Метаданные:** Sitemap = «Все обработанные страницы» — sitemap Google уже съел; проблема не в «не отправили», а в качестве/уникальности URL. После полного prerender выставок имеет смысл **переотправить** тот же `https://coursing-stats.ru/sitemap.xml` в GSC и Яндекс (Task 11).
 
 ## Brand
 
 Проблемы в `| Coursing Stats` нет. Для RU-аудитории важнее **русская левая часть** («Результаты…», «Рейтинг уиппетов…»), а не перевод бренда. «Курсинг Статс» выглядит хуже. Выставки уже отражать в hub title/description («курсинг, бега и выставки РКФ»), не переименовывая бренд.
 
-## Scope snapshot (проверено 2026-08-09)
+## Scope snapshot (проверено 2026-08-09, после slim/packs + full show prerender)
 
-| Сущность | URL | В sitemap сейчас | Prerender HTML сейчас | Порядок величины |
-|----------|-----|------------------|------------------------|------------------|
+| Сущность | URL | Sitemap | Prerender HTML | Порядок величины |
+|----------|-----|---------|----------------|------------------|
 | Хабы | `/`, `/competitions`, `/shows`, `/speed-records`, `/guide` | да | да | 5 |
 | Собаки спорта | `/dog/:id` | да (~2551) | да | ~2.5k |
-| Судьи спорта | `/judges/:judgeId` | да (~44) | **нет** | ~40 |
-| Донино | `/donino-dog/:name/:breed` | да (~236) | **нет** | ~236 |
-| Результаты | `/event/:id` | **0** | **нет** | ~163 с `results_file` в `events-by-id.json` |
-| Выставки | `/shows/exhibition/:id` | **0** | **нет** + нет `<SEO>` в page | ~тысячи (источник URL = календарь UI) |
-| Судьи выставок | `/shows/judges/:id` | **0** | **нет** (есть клиентский SEO) | ~2243 |
-| Auth/admin | `/login`, `/admin`, … | не должно быть | noindex | — |
+| Судьи спорта | `/judges/:judgeId` | да (~44) | да | ~40 |
+| Донино | `/donino-dog/:name/:breed` | да (~236) | да | ~236 |
+| Результаты | `/event/:id` | да (~163) | да | ~163 с `results_file` |
+| Выставки | `/shows/exhibition/:id` | да (~4069) | **да (default ON)** | ~4k |
+| Судьи выставок | `/shows/judges/:id` | да (~2243) | **да (default ON)** | ~2243 |
+| Auth/admin | `/login`, `/admin`, … | нет | noindex | — |
 
-**Прод-баг:** `/event/*`, `/judges/*`, `/donino-dog/*`, `/shows/exhibition/*` отдают HTML главной (title/description/canonical → `https://coursing-stats.ru/`).
+**Исправлено:** SPA fallback больше не отдаёт HTML главной на `/event/*` и др. — `spa-shell/index.html` без home canonical.
 
 ---
 
@@ -95,11 +106,11 @@
 
 **Interfaces:**
 - Consumes: существующий `HUB_PAGES`, `applyMetaToSpaShell`
-- Produces: `frontend/dist/spa-shell.html` (нейтральный shell без canonical на `/`); `frontend/dist/index.html` = prerender главной; `_redirects` правило `/* /spa-shell.html 200` **после** исключений для статики
+- Produces: `frontend/dist/spa-shell/index.html` (+ legacy `spa-shell.html` copy); `frontend/dist/index.html` = prerender главной; `_redirects` правило `/* /spa-shell/index.html 200` **после** исключений для статики
 
 **Problem:** Сейчас `prerenderHubs` пишет home в `dist/index.html`, а `/* /index.html 200` отдаёт этот файл на все неизвестные URL → ложный canonical на главную.
 
-- [ ] **Step 1: Write failing test for redirects file**
+- [x] **Step 1: Write failing test for redirects file**
 
 ```ts
 // backend/tests/spa-fallback-redirects.test.ts
@@ -118,12 +129,12 @@ describe('SPA fallback redirects', () => {
 })
 ```
 
-- [ ] **Step 2: Run test — expect FAIL**
+- [x] **Step 2: Run test — expect FAIL**
 
 Run: `npx vitest run backend/tests/spa-fallback-redirects.test.ts`
 Expected: FAIL — правило ещё на `index.html`
 
-- [ ] **Step 3: Update `_redirects`**
+- [x] **Step 3: Update `_redirects`**
 
 Заменить SPA fallback на:
 
@@ -139,7 +150,7 @@ Expected: FAIL — правило ещё на `index.html`
 /* /spa-shell.html 200
 ```
 
-- [ ] **Step 4: Change prerender CLI**
+- [x] **Step 4: Change prerender CLI**
 
 В `prerender-pages.ts`:
 1. Прочитать Vite `dist/index.html` **до** патча home → сохранить как `dist/spa-shell.html`.
@@ -154,16 +165,16 @@ writeHtml(path.join(DIST, 'spa-shell.html'), spaHtml) // neutral copy first
 // then prerenderHubs(spaHtml) which overwrites DIST_INDEX for `/`
 ```
 
-- [ ] **Step 5: Extend unit test**
+- [x] **Step 5: Extend unit test**
 
 Добавить в `prerender-seo.test.ts` кейс: shell без home-canonical; home HTML с canonical `/`.
 
-- [ ] **Step 6: Run tests**
+- [x] **Step 6: Run tests**
 
 Run: `npx vitest run backend/tests/spa-fallback-redirects.test.ts backend/tests/prerender-seo.test.ts`
 Expected: PASS
 
-- [ ] **Step 7: Manual local check after build+prerender**
+- [x] **Step 7: Manual local check after build+prerender**
 
 ```powershell
 cd frontend; yarn run build
@@ -176,7 +187,7 @@ Test-Path frontend/dist/competitions/index.html
 
 Expected: `spa-shell` без home-canonical (или без canonical); `index.html` с `https://coursing-stats.ru/`; `/competitions/index.html` существует.
 
-- [ ] **Step 8: Commit** (только если пользователь просит)
+- [x] **Step 8: Commit** (только если пользователь просит)
 
 ```bash
 git add frontend/public/_redirects backend/scripts/seo/prerender-pages.ts backend/tests/spa-fallback-redirects.test.ts backend/tests/prerender-seo.test.ts
@@ -194,7 +205,7 @@ git commit -m "fix(seo): SPA fallback uses neutral shell instead of home HTML"
 **Interfaces:**
 - Produces: публичный `https://coursing-stats.ru/robots.txt` с `Content-Type: text/plain`
 
-- [ ] **Step 1: Write failing existence test**
+- [x] **Step 1: Write failing existence test**
 
 ```ts
 it('robots.txt exists in frontend/public', () => {
@@ -202,9 +213,9 @@ it('robots.txt exists in frontend/public', () => {
 })
 ```
 
-- [ ] **Step 2: Run — FAIL**
+- [x] **Step 2: Run — FAIL**
 
-- [ ] **Step 3: Create `frontend/public/robots.txt`**
+- [x] **Step 3: Create `frontend/public/robots.txt`**
 
 ```txt
 User-agent: *
@@ -224,9 +235,9 @@ Sitemap: https://coursing-stats.ru/sitemap.xml
 
 Не блокировать `/assets/`, `/data/`, JS/CSS — иначе Яндекс/Google не смогут рендерить.
 
-- [ ] **Step 4: Run test — PASS**
+- [x] **Step 4: Run test — PASS**
 
-- [ ] **Step 5: Commit** (по просьбе)
+- [x] **Step 5: Commit** (по просьбе)
 
 ```bash
 git commit -m "feat(seo): add robots.txt for Google and Yandex crawlers"
@@ -256,7 +267,7 @@ git commit -m "feat(seo): add robots.txt for Google and Yandex crawlers"
 - Exhibition: только id, которые реально линкует календарь выставок.
 - Show judge: `judge.id` как в `ShowJudgeDetail` canonical.
 
-- [ ] **Step 1: Write failing test**
+- [x] **Step 1: Write failing test**
 
 ```ts
 it('sitemap includes event, exhibition and show-judge locs when fixtures present', () => {
@@ -271,9 +282,9 @@ it('sitemap includes event, exhibition and show-judge locs when fixtures present
 
 Вынести сбор URL в чистую функцию `collectSitemapUrls(...)` в `sitemap.ts` (или `sitemap-urls.ts`), XML — тонкая обёртка.
 
-- [ ] **Step 2: Run — FAIL**
+- [x] **Step 2: Run — FAIL**
 
-- [ ] **Step 3: Implement `collectSitemapUrls` + XML writer**
+- [x] **Step 3: Implement `collectSitemapUrls` + XML writer**
 
 Приоритеты (ориентир):
 - `/` 1.0, hubs 0.9–0.8
@@ -284,17 +295,17 @@ it('sitemap includes event, exhibition and show-judge locs when fixtures present
 
 `events: []` в `sitemap-urls.json` заполнить реальными путями.
 
-- [ ] **Step 4: Wire into `build-derived-indexes` / show-index append**
+- [x] **Step 4: Wire into `build-derived-indexes` / show-index append**
 
 Убедиться, что `build-all-data` → sitemap содержит новые типы. Show-only dog append не ломает XML.
 
-- [ ] **Step 5: Run tests**
+- [x] **Step 5: Run tests**
 
 ```powershell
 npx vitest run backend/tests/sitemap-build.test.ts backend/tests/static-indexes.test.ts
 ```
 
-- [ ] **Step 6: Local regenerate check**
+- [x] **Step 6: Local regenerate check**
 
 ```powershell
 yarn run build-all-data
@@ -305,7 +316,7 @@ Select-String -Path frontend/public/sitemap.xml -Pattern '/shows/exhibition/' | 
 
 Expected: `/event/` > 0; exhibitions > 0; show judges > 0.
 
-- [ ] **Step 7: Commit** (по просьбе)
+- [x] **Step 7: Commit** (по просьбе)
 
 ```bash
 git commit -m "feat(seo): include events, exhibitions and show judges in sitemap"
@@ -327,7 +338,7 @@ git commit -m "feat(seo): include events, exhibitions and show judges in sitemap
   - `twitter:title`, `twitter:description`
   - keep existing title/description/canonical/jsonLd/body
 
-- [ ] **Step 1: Failing test — OG updated**
+- [x] **Step 1: Failing test — OG updated**
 
 ```ts
 it('applyMetaToSpaShell updates og:title and og:description', () => {
@@ -347,13 +358,13 @@ it('applyMetaToSpaShell updates og:title and og:description', () => {
 })
 ```
 
-- [ ] **Step 2: Implement replace helpers for OG/Twitter**
+- [x] **Step 2: Implement replace helpers for OG/Twitter**
 
-- [ ] **Step 3: Fix relative canonical in `ShowDogProfile`**
+- [x] **Step 3: Fix relative canonical in `ShowDogProfile`**
 
 Сейчас: `canonicalUrl={`/shows/dog/${showDogId}`}` — сделать абсолютный `https://coursing-stats.ru/...` (как в остальных страницах).
 
-- [ ] **Step 4: Add missing canonical on EventResults + JudgeDetail**
+- [x] **Step 4: Add missing canonical on EventResults + JudgeDetail**
 
 ```tsx
 canonicalUrl={`https://coursing-stats.ru/event/${id}`}
@@ -361,7 +372,7 @@ canonicalUrl={`https://coursing-stats.ru/event/${id}`}
 canonicalUrl={`https://coursing-stats.ru/judges/${encodeURIComponent(judgeId)}`}
 ```
 
-- [ ] **Step 5: Tests PASS + Commit** (по просьбе)
+- [x] **Step 5: Tests PASS + Commit** (по просьбе)
 
 ---
 
@@ -393,17 +404,17 @@ canonicalUrl={`https://coursing-stats.ru/judges/${encodeURIComponent(judgeId)}`}
 - Judge: `{name} — статистика судьи | Coursing Stats`
 - Donino: `{name} ({breed}) — рекорды Донино | Coursing Stats`
 
-- [ ] **Step 1: Unit tests for meta builders (fail first)**
+- [x] **Step 1: Unit tests for meta builders (fail first)**
 
-- [ ] **Step 2: Implement builders**
+- [x] **Step 2: Implement builders**
 
-- [ ] **Step 3: Wire CLI + log counts**
+- [x] **Step 3: Wire CLI + log counts**
 
 ```
 [prerender-seo] hubs=… dogs=… events=… judges=… donino=…
 ```
 
-- [ ] **Step 4: Run prerender locally, spot-check**
+- [x] **Step 4: Run prerender locally, spot-check**
 
 ```powershell
 yarn run prerender-seo
@@ -412,7 +423,7 @@ Select-String -Path frontend/dist/event/*/index.html -Pattern '<title>' | Select
 
 Expected: title не главной; canonical `/event/...`.
 
-- [ ] **Step 5: Commit** (по просьбе)
+- [x] **Step 5: Commit** (по просьбе)
 
 ---
 
@@ -423,18 +434,18 @@ Expected: title не главной; canonical `/event/...`.
 - Modify: `backend/scripts/seo/prerender-pages.ts` — `prerenderExhibitions`
 - Data: show calendar indexes (тот же id, что `ShowCalendarRow`)
 
-**Policy (user 2026-08-09):**
+**Policy (user 2026-08-09, обновлено после CDN slim):**
 - Sitemap + prerender: только выставки, для которых на сайте есть открываемый протокол (UI id / `data/v1/shows/exhibitions/*`), **не** все 9k строк RKF-календаря без протокола.
-- Default = all protocol pages (~5k). Если CI upload упрётся в лимит — временно `PRERENDER_EXHIBITION_YEARS=2026` или cap, sitemap при этом остаётся полным по протоколам.
+- **Default ON** (~4k HTML). Выкл: `PRERENDER_EXHIBITIONS=0`. Cap: `PRERENDER_EXHIBITIONS_MAX`. Если CI upload упрётся в лимит — временно cap или `=0`, sitemap при этом остаётся полным по протоколам.
 - Не индексировать «пустые» calendar-only карточки без контента.
 
-- [ ] **Step 1: Add client SEO on exhibition detail** (title/description/canonical) — даже до prerender помогает после JS; для Яндекса недостаточен один.
+- [x] **Step 1: Add client SEO on exhibition detail** (title/description/canonical) — даже до prerender помогает после JS; для Яндекса недостаточен один.
 
-- [ ] **Step 2: Prerender subset with unique meta + H1 + short paragraph + link to `/shows`**
+- [x] **Step 2: Prerender subset with unique meta + H1 + short paragraph + link to `/shows`**
 
-- [ ] **Step 3: Test + manual curl after deploy**
+- [x] **Step 3: Test + manual curl after deploy**
 
-- [ ] **Step 4: Commit** (по просьбе)
+- [x] **Step 4: Commit** (по просьбе)
 
 ---
 
@@ -445,17 +456,17 @@ Expected: title не главной; canonical `/event/...`.
 - Source: `data/v1/shows/indexes/judges.json` (`id` slug вроде `гаврилова|я|а`)
 
 **Policy:**
-- Default cap `PRERENDER_SHOW_JUDGES_MAX=500` (сортировка по `total_judged` desc)
+- **Default ON** (~2243). Выкл: `PRERENDER_SHOW_JUDGES=0`. Optional cap `PRERENDER_SHOW_JUDGES_MAX` (сортировка по `total_judged` desc)
 - Sitemap: все (~2243)
-- Full: `PRERENDER_SHOW_JUDGES_MAX=0` means unlimited (document in comment)
+- Unlimited: не задавать `PRERENDER_SHOW_JUDGES_MAX`
 
-- [ ] **Step 1: Meta builder + tests**
+- [x] **Step 1: Meta builder + tests**
 
-- [ ] **Step 2: Write `dist/shows/judges/{id}/index.html`**
+- [x] **Step 2: Write `dist/shows/judges/{id}/index.html`**
 
 На Windows/CI: id содержит `|` — проверить, что Cloudflare принимает такие пути; если нет — обсудить encode стратегии **без смены публичного URL** (файл = encodeURIComponent, CF декодирует). Зафиксировать выбранный encode в тесте.
 
-- [ ] **Step 3: Commit** (по просьбе)
+- [x] **Step 3: Commit** (по просьбе)
 
 ---
 
@@ -466,11 +477,11 @@ Expected: title не главной; canonical `/event/...`.
 - Modify: `frontend/src/pages/DogProfile/index.tsx` — убрать несуществующие `enableAIGeneration` / `aiGenerationData` у `<SEO>` (сейчас props нет в компоненте)
 - Optional: не трогать `seoGenerator.ts` Worker, пока не нужен
 
-- [ ] **Step 1: Add `<SEO … noIndex />` на auth**
+- [x] **Step 1: Add `<SEO … noIndex />` на auth**
 
-- [ ] **Step 2: Clean DogProfile SEO props**
+- [x] **Step 2: Clean DogProfile SEO props**
 
-- [ ] **Step 3: Commit** (по просьбе)
+- [x] **Step 3: Commit** (по просьбе)
 
 ---
 
@@ -480,7 +491,7 @@ Expected: title не главной; canonical `/event/...`.
 - Modify: `.github/workflows/deploy-frontend.yml` (уже есть `prerender-seo` — проверить порядок: build → prerender → deploy; убедиться что `spa-shell.html` попадает в dist)
 - Optional env in workflow for exhibition/judge caps
 
-- [ ] **Step 1: Confirm artifact contains `spa-shell.html`, `robots.txt`, expanded `sitemap.xml`, sample `event/*/index.html`**
+- [x] **Step 1: Confirm artifact contains `spa-shell.html`, `robots.txt`, expanded `sitemap.xml`, sample `event/*/index.html`**
 
 Можно добавить шаг:
 
@@ -495,7 +506,7 @@ Expected: title не главной; canonical `/event/...`.
 
 (после copy sitemap into dist — Vite копирует `public/` → `dist/` на build; sitemap должен существовать **до** `frontend build`. Сейчас sitemap пишет `build-all-data` в `frontend/public` **до** frontend build в workflow — ок.)
 
-- [ ] **Step 2: If sitemap generated after frontend public copy timing drifts — document order in sheet 07**
+- [x] **Step 2: If sitemap generated after frontend public copy timing drifts — document order in sheet 07**
 
 Order must be: `build-all-data` (writes `frontend/public/sitemap.xml`) → `frontend yarn build` (copies public) → `prerender-seo`.
 
@@ -512,9 +523,9 @@ Order must be: `build-all-data` (writes `frontend/public/sitemap.xml`) → `fron
 - Ключи естественно: «курсинг», «бега борзых», «выставки РКФ», «рекорды Донино», «рейтинг собак», «статистика судей»
 - Не keyword stuffing
 
-- [ ] **Step 1: Align prerender hub text ↔ visible UI text** (бот и юзер видят одно и то же по смыслу)
+- [x] **Step 1: Align prerender hub text ↔ visible UI text** (бот и юзер видят одно и то же по смыслу)
 
-- [ ] **Step 2: Commit** (по просьбе)
+- [x] **Step 2: Commit** (по просьбе)
 
 ---
 

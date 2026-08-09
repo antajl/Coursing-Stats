@@ -436,9 +436,9 @@ function buildCalendarExhibitionLookup(): Map<
 }
 
 function prerenderExhibitions(spaHtml: string): number {
-  // Off by default: ~4k HTML files blow Cloudflare Pages 20k file limit with data/v1.
-  // Enable with PRERENDER_EXHIBITIONS=1 (optional PRERENDER_EXHIBITIONS_MAX).
-  if (process.env.PRERENDER_EXHIBITIONS !== '1') return 0
+  // On by default after CDN slim/packs (~15k files est. with full set; under Pages 20k).
+  // Disable with PRERENDER_EXHIBITIONS=0; optional PRERENDER_EXHIBITIONS_MAX.
+  if (process.env.PRERENDER_EXHIBITIONS === '0') return 0
 
   const ids = loadExhibitionIdsForSitemap()
   const max =
@@ -495,16 +495,15 @@ function prerenderExhibitions(spaHtml: string): number {
   }
   if (ids.length > written) {
     console.warn(
-      `[prerender-seo] exhibitions capped/skipped: candidates=${ids.length} written=${written} (set PRERENDER_EXHIBITIONS=1 and optional PRERENDER_EXHIBITIONS_MAX)`,
+      `[prerender-seo] exhibitions capped/skipped: candidates=${ids.length} written=${written} (optional PRERENDER_EXHIBITIONS_MAX; disable with PRERENDER_EXHIBITIONS=0)`,
     )
   }
   return written
 }
 
 function prerenderShowJudges(spaHtml: string): number {
-  // Off by default: ~2.2k HTML files — same Pages file-limit concern as exhibitions.
-  // Enable with PRERENDER_SHOW_JUDGES=1 (optional PRERENDER_SHOW_JUDGES_MAX).
-  if (process.env.PRERENDER_SHOW_JUDGES !== '1') return 0
+  // On by default after CDN slim/packs. Disable with PRERENDER_SHOW_JUDGES=0.
+  if (process.env.PRERENDER_SHOW_JUDGES === '0') return 0
 
   const raw = readJsonFile<
     | Array<{
@@ -555,7 +554,7 @@ function prerenderShowJudges(spaHtml: string): number {
   }
   if (judges.length > written) {
     console.warn(
-      `[prerender-seo] show judges capped/skipped: candidates=${judges.length} written=${written} (set PRERENDER_SHOW_JUDGES=1)`,
+      `[prerender-seo] show judges capped/skipped: candidates=${judges.length} written=${written} (optional PRERENDER_SHOW_JUDGES_MAX; disable with PRERENDER_SHOW_JUDGES=0)`,
     )
   }
   return written

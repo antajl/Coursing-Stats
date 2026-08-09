@@ -46,7 +46,7 @@ yarn run dev
 cd frontend; yarn run build
 ```
 
-SEO prerender: `yarn run prerender-seo` (когда нужно).
+SEO prerender: `yarn run prerender-seo` после `frontend build` (CI). По умолчанию пишет HTML хабов, dogs, events, судей спорта, Донино, **выставок** и **судей выставок**. Выкл show-пакетов: `PRERENDER_EXHIBITIONS=0` / `PRERENDER_SHOW_JUDGES=0`. Fallback: `/spa-shell/index.html`.
 
 ## Pitfalls
 

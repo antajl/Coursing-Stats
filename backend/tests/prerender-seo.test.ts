@@ -115,15 +115,15 @@ describe('prerender-seo helpers', () => {
   it('neutral spa shell has no canonical; home hub gets canonical to /', () => {
     expect(SPA_SHELL).not.toMatch(/rel=["']canonical["']/)
     const home = applyMetaToSpaShell(SPA_SHELL, {
-      title: 'Статистика курсинга и выставок собак | Coursing Stats',
+      title: 'Статистика курсинга, бегов и выставок собак | Coursing Stats',
       description: 'Вся карьера собаки',
       canonicalUrl: 'https://coursing-stats.ru/',
-      bodyHtml: '<main><h1>Статистика</h1></main>',
+      bodyHtml: '<main><h1>Статистика курсинга, бегов и выставок собак</h1></main>',
     })
     expect(home).toContain('<link rel="canonical" href="https://coursing-stats.ru/" />')
     const neutral = buildNeutralSpaShell(home)
     expect(neutral).not.toMatch(/rel=["']canonical["']/)
-    expect(neutral).not.toContain('<h1>Статистика</h1>')
+    expect(neutral).not.toContain('<h1>Статистика курсинга, бегов и выставок собак</h1>')
   })
 
   it('eventMetaFromEntry builds RU title and description', () => {
