@@ -1,6 +1,6 @@
 ---
 title: Telegram Bot
-verified: 2026-08-07
+verified: 2026-08-09
 ---
 
 # 08 — Bot
@@ -37,7 +37,7 @@ verified: 2026-08-07
 
 ### CDN endpoints used
 
-`indexes/dogs-index.json`, `bot-search-compact.json`, `dog-profiles/{id}.json`, `top-score-*`, `top-placement-*`, `top-speed-*` (racing), `calendar/{year}`, `donino/*`, `shows/calendar/{year}`, `shows/indexes/dog-ranking-{year}`, `judges-summary`, `shows/indexes/judges.json`
+`indexes/dogs-index.json`, `bot-search-compact.json`, `indexes/dog-profiles/pack-XXX.json` (byId; legacy `{id}.json` fallback), `top-score-*`, `top-placement-*`, `top-speed-*` (racing), `calendar/{year}`, `donino/*`, `shows/calendar/{year}`, `shows/indexes/dog-ranking-{year}`, `judges-summary`, `shows/indexes/judges.json`
 
 ## Architecture
 

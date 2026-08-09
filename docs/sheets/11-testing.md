@@ -1,6 +1,6 @@
 ---
 title: Testing
-verified: 2026-08-06
+verified: 2026-08-09
 ---
 
 # 11 — Testing
@@ -34,6 +34,7 @@ yarn run publish-gates
 
 - Fixtures: `backend/tests/fixtures/`
 - PDF shows tests: `backend/tests/parse-rkf-certificate-pdf.test.ts`, `show-grades.test.ts`
+- Publish slim: `backend/tests/publish-exclude.test.ts`, `backend/tests/cdn-packs.test.ts`, `spa-fallback-redirects.test.ts`
 - CI: static-indexes / publish-gates tests в workflow
 
 ## Pitfalls

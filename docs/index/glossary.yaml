@@ -1,6 +1,6 @@
 # CoursingStats Project Glossary
-version: 2.0.0
-last_updated: 2026-08-06
+version: 2.1.0
+last_updated: 2026-08-09
 
 terms:
   RKF:
@@ -9,8 +9,8 @@ terms:
 
   Turso:
     definition: libSQL cloud used for large exhibition protocol payloads
-    context: Fallback for getShowExhibition; rankings/calendar stay on CDN
-    see_also: docs/sheets/04-shows.md, docs/decisions/009-turso-migration.md
+    context: Fallback for getShowExhibition; rankings/calendar stay on CDN; LC allowlist may still be CDN JSON
+    see_also: docs/sheets/04-shows.md, docs/decisions/009-turso-migration.md, docs/decisions/014-cdn-packs-vs-turso.md
 
   Exhibitions / Shows:
     definition: RKF dog shows (separate identity from sport competitions)
@@ -24,6 +24,11 @@ terms:
     definition: Cloudflare delivery of data/v1 JSON for the static site
     see_also: docs/sheets/02-data-pipeline.md, docs/decisions/001-cloudflare-pages-hosting.md
 
+  CDN pack:
+    definition: One of 256 JSON shard files (pack-000…255) holding many entities in byId/byKey
+    context: Sport dog-profiles and show judge-details; reduces Pages file count
+    see_also: docs/decisions/014-cdn-packs-vs-turso.md, backend/lib/cdn-packs.ts
+
   JSON Indexes:
     definition: Derived files under data/v1/indexes and shows/indexes
     see_also: docs/sheets/02-data-pipeline.md
@@ -33,7 +38,7 @@ terms:
     see_also: docs/decisions/002-react-query-data-fetching.md, docs/sheets/07-frontend.md
 
   Cloudflare Pages:
-    definition: Hosts the static frontend (project coursingstats)
+    definition: Hosts the static frontend (project coursingstats); soft limit ~20k files per deploy
     see_also: docs/sheets/09-ops-deploy.md
 
   Cloudflare Workers:
@@ -59,6 +64,10 @@ terms:
   Build-all-data:
     definition: yarn script rebuilding indexes, copy-data, publish-gates
     see_also: docs/sheets/02-data-pipeline.md
+
+  publish-exclude:
+    definition: Shared list of paths not copied to Pages (dogs/by-id, bulk exhibitions, oversized rankings)
+    see_also: backend/scripts/publish/publish-exclude.js, docs/sheets/02-data-pipeline.md
 
   Donino:
     definition: Separate speed (km/h) and 350m (sec) measurement domain

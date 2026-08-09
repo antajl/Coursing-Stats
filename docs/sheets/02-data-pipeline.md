@@ -30,10 +30,13 @@ data/v1/
   manifest.json, breeds.json, ui-flags.json
   calendar/{year}.json
   competitions/{year}/{month}/{id}-{slug}.json   # results[] внутри
-  dogs/by-id|by-key/
+  dogs/by-id|by-key/                             # git/билд; не на Pages
   donino/speed_records.json | coursing_records.json
-  indexes/*                                      # sport derived
-  shows/indexes/* | shows/calendar-rkf/ | ...
+  indexes/dog-profiles/pack-*.json               # sport profiles (256 packs)
+  indexes/*                                      # tops, judges, events-by-id…
+  shows/indexes/judge-details/pack-*.json
+  shows/indexes/dog-details/                     # show dog packs
+  shows/calendar-rkf/ | shows/index.json | …
 ```
 
 ### Pipeline (`yarn run build-all-data`)
