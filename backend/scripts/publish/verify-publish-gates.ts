@@ -19,36 +19,24 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { createHash } from 'node:crypto'
 import { countDuplicateCompetitionGroups } from '../../lib/competition-fingerprint'
+import {
+  PUBLISH_EXCLUDE_PATTERNS,
+  shouldExcludePublishPath,
+} from './publish-exclude.js'
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../..')
 
 /** Cloudflare Pages soft limit per file; stay under with margin. */
 export const MAX_PUBLISH_FILE_BYTES = Math.floor(24.5 * 1024 * 1024)
 
-/**
- * Paths relative to data/v1 that must NEVER be copied to Pages.
- * Keep in sync with frontend/scripts/copy-data.js
- */
-export const PUBLISH_EXCLUDE_PATTERNS = [
-  'shows/indexes/dog-ranking.json', // all-time, hundreds of MB
-  'shows/indexes/show-dog-lookup.json', // 38 MB, backend-only
-  'shows/indexes/year-data', // year-data files exceed Cloudflare Pages 25 MiB
-  'shows/exhibitions-rkf', // RAW data (44k+ files), should be in data/local/shows/
-  'dogs/registry.json', // 126 MB, backend-only canonical registry
-  'judges/registry.json', // backend-only canonical registry
-  'pc-db.sqlite',
-  'pc-db.sqlite.gz',
-  'README.md',
-  'publish-manifest.json', // generated meta; optional on CDN but not required
-] as const
+export { PUBLISH_EXCLUDE_PATTERNS }
 
 type GateOk = { ok: true; label: string; detail: string }
 type GateFail = { ok: false; label: string; detail: string }
 type Gate = GateOk | GateFail
 
 function shouldExclude(relativePath: string): boolean {
-  const normalized = relativePath.replace(/\\/g, '/')
-  return PUBLISH_EXCLUDE_PATTERNS.some((p) => normalized === p || normalized.endsWith('/' + p) || normalized.includes(p))
+  return shouldExcludePublishPath(relativePath)
 }
 
 function walkFiles(dir: string, baseRel = ''): string[] {
