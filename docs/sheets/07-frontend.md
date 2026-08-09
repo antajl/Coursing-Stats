@@ -20,7 +20,7 @@ React 19 + Vite + Tailwind SPA на Cloudflare Pages. Данные: static JSON;
 | Calendars gate | `data/v1/ui-flags.json` + `usePublicCalendarVisible` — local всегда видно |
 | Shows lists | React Query (`staleTime` ~5 min) → CDN |
 | Exhibition detail | LC allowlist CDN → Turso fallback (`lib/turso.ts`) |
-| SPA fallback | `_redirects` → `/404.html` 200 (не `index.html` и не `spa-shell.html`). `/spa-shell` → 301 `/`. Nested spa-shell rewrite игнорировался CF → отдавалась главная. |
+| SPA fallback | CF Pages SPA mode (нет корневого `404.html`) → неизвестные URL отдают `/index.html`. **Нельзя** `/* /*.html 200` — pretty-URL даёт 308 на `/name`. `/spa-shell` и `/404` → 301 `/`. SEO URL — через prerender static HTML. |
 | Design | PageToolbar, SALUKI theme — см. существующие UI patterns в `frontend/src` |
 | Admin | только `yarn run dev` → `/admin` (список/создание) + `/admin/event/:id` (редактор) + API `:8787`; на проде нет |
 | Years dropdown | `indexes/years.json`; hooks: `useApi` `['api','years']` ≠ `useStaticData` `['staticData','years']` |

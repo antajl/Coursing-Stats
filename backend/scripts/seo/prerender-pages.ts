@@ -576,13 +576,9 @@ function main(): void {
     process.exit(1)
   }
 
-  // Neutral SPA fallback for unknown routes (must NOT carry home canonical/H1).
-  // CF Pages: without a root 404.html, unknown paths default to `/` (home) — bad for SEO.
-  // Nested /spa-shell/index.html as /* rewrite target was ignored in practice; use /404.html.
-  // Also 301 /spa-shell in _redirects — CF pretty-URLs make /spa-shell.html → /spa-shell (React 404).
+  // Neutral shell kept for optional tooling; do NOT add root 404.html (disables SPA mode)
+  // and do NOT use `/* /….html 200` (CF pretty-URLs rewrite → visible 308 to /name).
   const shellForPages = buildNeutralSpaShell(spaHtml)
-  writeHtml(path.join(DIST, '404.html'), shellForPages)
-  // Keep directory shell for old bookmarks; _redirects 301s /spa-shell → /.
   writeHtml(path.join(DIST, 'spa-shell', 'index.html'), shellForPages)
 
   const hubs = prerenderHubs(shellForPages)
