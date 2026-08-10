@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/donino-speed-v1",
   "source": "google-sheets",
-  "count": 224,
+  "count": 227,
   "records": [
     {
       "breed": "Уиппет",
@@ -726,6 +726,17 @@
       "history": []
     },
     {
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Руна",
+      "speed_km_h": 51,
+      "date": "2026-08-08",
+      "screenshot_url": "https://disk.yandex.ru/i/wEFzsv8RypEXDw",
+      "status": "new",
+      "track_type": "прямая",
+      "history": []
+    },
+    {
       "breed": "Чирнеко дель Этна",
       "sex": "К",
       "name": "Джус",
@@ -924,6 +935,17 @@
       ]
     },
     {
+      "breed": "Ксолоитцкуинтли",
+      "sex": "К",
+      "name": "Ашаби",
+      "speed_km_h": 47,
+      "date": "2026-08-08",
+      "screenshot_url": "https://disk.yandex.ru/i/BzPQPoP8r5RpJQ",
+      "status": "new",
+      "track_type": "курсинг",
+      "history": []
+    },
+    {
       "breed": "Метис",
       "sex": "С",
       "name": "Габи",
@@ -975,7 +997,7 @@
       "speed_km_h": 46,
       "date": "2026-06-14",
       "screenshot_url": "https://disk.yandex.ru/i/beNtbEo-Re8gww",
-      "status": "new",
+      "status": "normal",
       "track_type": "прямая",
       "history": [
         {
@@ -1269,8 +1291,19 @@
       "speed_km_h": 38,
       "date": "2026-07-14",
       "screenshot_url": "https://disk.yandex.ru/i/DH29YAugvGv7cw",
-      "status": "new",
+      "status": "normal",
       "track_type": "прямая",
+      "history": []
+    },
+    {
+      "breed": "Басенджи",
+      "sex": "К",
+      "name": "Арчи",
+      "speed_km_h": 35,
+      "date": "2026-08-08",
+      "screenshot_url": "https://disk.yandex.ru/i/5Ej0ZfqzlMONWA",
+      "status": "new",
+      "track_type": "курсинг",
       "history": []
     },
     {
