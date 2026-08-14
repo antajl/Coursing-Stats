@@ -194,6 +194,8 @@ export function DogProfileHeader({
                   <img
                     src={BREED_ARCHIVE_FAVICON}
                     alt=""
+                    role="presentation"
+                    aria-hidden="true"
                     width={14}
                     height={14}
                     className="h-3.5 w-3.5 shrink-0 rounded-sm"
