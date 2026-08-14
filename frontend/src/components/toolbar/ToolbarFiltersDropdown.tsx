@@ -2,6 +2,7 @@ import { useEffect, useId, useRef, useState, type ReactNode } from 'react'
 import { ChevronDown } from 'lucide-react'
 import { TOOLBAR_CHIP, TOOLBAR_CHIP_ACTIVE, TOOLBAR_CHIP_IDLE } from '../../lib/toolbar'
 import { useKeyboardNavigation } from '../../hooks/useKeyboardNavigation'
+import { useFocusTrap } from '../../hooks/useFocusManagement'
 
 interface ToolbarFiltersDropdownProps {
   children: ReactNode
@@ -33,8 +34,11 @@ export default function ToolbarFiltersDropdown({
 }: ToolbarFiltersDropdownProps) {
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
+  const panelRef = useRef<HTMLDivElement>(null)
   const panelId = useId()
   const showBadge = activeCount > 0
+
+  useFocusTrap(open, panelRef)
 
   const setOpenState = (next: boolean) => {
     setOpen(next)
@@ -116,6 +120,7 @@ export default function ToolbarFiltersDropdown({
             }}
           />
           <div
+            ref={panelRef}
             id={panelId}
             role="dialog"
             aria-modal="true"

@@ -2,6 +2,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { useEffect, useRef, type MouseEvent, type ReactNode } from 'react'
 import type { LucideIcon } from 'lucide-react'
 import { Icons } from '../lib/icons'
+import { useFocusTrap } from '../hooks/useFocusManagement'
 
 const OPEN_DELAY_MS = 70
 const CLOSE_DELAY_MS = 120
@@ -41,10 +42,13 @@ export function NavMenuDropdown({
 }: NavMenuDropdownProps) {
   const location = useLocation()
   const containerRef = useRef<HTMLDivElement>(null)
+  const menuPanelRef = useRef<HTMLDivElement>(null)
   const openTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const pinnedRef = useRef(false)
   const intentFiredRef = useRef(false)
+
+  useFocusTrap(open, menuPanelRef)
 
   const clearTimers = () => {
     if (openTimerRef.current) {
@@ -150,7 +154,7 @@ export function NavMenuDropdown({
 
       {open && (
         <div className="nav-dropdown absolute left-1/2 top-full z-[100] w-max min-w-[9.5rem] -translate-x-1/2 pt-2">
-          <div className="nav-dropdown-panel overflow-hidden rounded-xl border-2 border-old-money-200 bg-white shadow-xl dark:border-charcoal-600 dark:bg-charcoal-800">
+          <div ref={menuPanelRef} className="nav-dropdown-panel overflow-hidden rounded-xl border-2 border-old-money-200 bg-white shadow-xl dark:border-charcoal-600 dark:bg-charcoal-800">
             <ul className="py-1">
               {items.map((item) => {
                 const active = item.isActive?.(location.pathname, location.search) ?? false
