@@ -145,7 +145,7 @@ main:has(.home-v2) {
 @media (prefers-reduced-motion: reduce) {
   .home-v2-scroll-cue {
     animation: none;
-    opacity: 0.8;
+    opacity: 1;
   }
 }
 .dark .home-v2-scroll-cue {
@@ -167,12 +167,6 @@ main:has(.home-v2) {
 }
 .dark .home-v2-scroll-cue:hover {
   color: var(--camel-300);
-}
-@media (prefers-reduced-motion: reduce) {
-  .home-v2-scroll-cue {
-    animation: none;
-    opacity: 1;
-  }
 }
 
 .home-v2-stage-copy {
