@@ -3,10 +3,29 @@
 [data-podium]{
   opacity:0;
 }
-@media (prefers-reduced-motion: reduce){
+
+/* Global reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
   [data-rise],
   [data-podium]{
-    opacity:1;
+    opacity:1 !important;
+    transform: none !important;
+  }
+
+  .owner-mark-name > * {
+    animation: none !important;
+    background-image: none !important;
+    color: var(--owner-mark-base) !important;
+    -webkit-text-fill-color: var(--owner-mark-base);
   }
 }
 
@@ -107,30 +126,12 @@
   animation: favoriteStarPop 350ms ease-out;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .animate-fade-in-scale,
-  .animate-favorite-star-pop {
-    animation: none;
-  }
-}
-
 /* List reveal: НЕ ставить opacity:0 в CSS — после фильтра/поиска
    новые строки маунтятся уже после одноразового GSAP и останутся невидимыми. */
-@media (prefers-reduced-motion: reduce) {
-  [data-list-item] {
-    opacity: 1;
-    transform: none;
-  }
-}
 
 /* Смена вкладки хаба */
 .cs-tab-panel-enter {
   animation: fadeIn 160ms ease-out;
-}
-@media (prefers-reduced-motion: reduce) {
-  .cs-tab-panel-enter {
-    animation: none;
-  }
 }
 
 /* Единый skeleton shimmer */
@@ -157,9 +158,11 @@
   );
   background-size: 200% 100%;
 }
+
+/* Skeleton shimmer reduced motion fallback */
 @media (prefers-reduced-motion: reduce) {
   .cs-skeleton-shimmer {
-    animation: none;
+    animation: none !important;
     background: var(--om-200);
   }
   .dark .cs-skeleton-shimmer {

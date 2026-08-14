@@ -1,5 +1,6 @@
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
+import { useEffect } from 'react'
 
 gsap.registerPlugin(useGSAP)
 
@@ -8,6 +9,21 @@ export { useGSAP }
 export function prefersReducedMotion(): boolean {
   if (typeof window === 'undefined') return false
   return window.matchMedia('(prefers-reduced-motion: reduce)').matches
+}
+
+// Add listener for runtime changes
+export function useReducedMotionListener(callback: (prefersReduced: boolean) => void) {
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
+    callback(mediaQuery.matches)
+
+    const handler = (event: MediaQueryListEvent) => {
+      callback(event.matches)
+    }
+
+    mediaQuery.addEventListener('change', handler)
+    return () => mediaQuery.removeEventListener('change', handler)
+  }, [callback])
 }
 
 export interface RiseInOptions {
