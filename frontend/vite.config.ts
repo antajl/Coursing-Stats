@@ -122,62 +122,63 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins,
-  cacheDir: './.vite', // Avoid node_modules/.vite for PnP compatibility
-  build: {
-    rollupOptions: {
-      output: {
-        // Stamp in filename (not only banner): Rolldown content-hash ignores banner,
-        // so poisoned /assets/* caches need a new URL every CI deploy.
-        entryFileNames: `assets/[name]-${buildStamp}-[hash].js`,
-        chunkFileNames: `assets/[name]-${buildStamp}-[hash].js`,
-        assetFileNames: 'assets/[name]-[hash][extname]',
-        // Code splitting to separate heavy libraries
-        manualChunks: (id) => {
-          // Separate xlsx library into its own chunk
-          if (id.includes('xlsx-js-style')) {
-            return 'xlsx-vendor';
-          }
+    cacheDir: './.vite', // Avoid node_modules/.vite for PnP compatibility
+    build: {
+      rollupOptions: {
+        output: {
+          // Stamp in filename (not only banner): Rolldown content-hash ignores banner,
+          // so poisoned /assets/* caches need a new URL every CI deploy.
+          entryFileNames: `assets/[name]-${buildStamp}-[hash].js`,
+          chunkFileNames: `assets/[name]-${buildStamp}-[hash].js`,
+          assetFileNames: 'assets/[name]-[hash][extname]',
+          // Code splitting to separate heavy libraries
+          manualChunks: (id) => {
+            // Separate xlsx library into its own chunk
+            if (id.includes('xlsx-js-style')) {
+              return 'xlsx-vendor';
+            }
+          },
         },
       },
+      chunkSizeWarningLimit: 600, // Increase from default 500KB to account for xlsx chunk
+      // CSS minification - use esbuild instead of lightningcss to avoid native module issues
+      cssMinify: 'esbuild',
     },
-    chunkSizeWarningLimit: 600, // Increase from default 500KB to account for xlsx chunk
-    // CSS minification - use esbuild instead of lightningcss to avoid native module issues
-    cssMinify: 'esbuild',
-  },
-  server: {
-    proxy: {
-      '/api': {
-        target: 'http://127.0.0.1:8787',
-        changeOrigin: true,
-        secure: false,
-        configure: (proxy) => {
-          proxy.on('proxyReq', (proxyReq) => {
-            console.log('Proxying request to:', proxyReq.path)
-          })
+    server: {
+      proxy: {
+        '/api': {
+          target: 'http://127.0.0.1:8787',
+          changeOrigin: true,
+          secure: false,
+          configure: (proxy) => {
+            proxy.on('proxyReq', (proxyReq) => {
+              console.log('Proxying request to:', proxyReq.path)
+            })
+          },
         },
       },
+      headers: {
+        // Dev CSP: worker-src must allow blob: — Vite HMR reconnects via blob Worker
+        // after "server connection lost". Without it React ends up with Invalid hook call.
+        // connect-src: ws/wss for HMR websocket (same-origin + explicit for some browsers).
+        'Content-Security-Policy':
+          "default-src 'self'; " +
+          "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://coursing-stats.ru https://www.googletagmanager.com; " +
+          "style-src 'self' 'unsafe-inline' https://coursing-stats.ru https://fonts.googleapis.com; " +
+          "img-src 'self' data: blob: https://coursing-stats.ru https://*.googleusercontent.com https://*.gstatic.com; " +
+          "font-src 'self' https://fonts.gstatic.com; " +
+          "connect-src 'self' ws: wss: https://coursing-stats.ru https://api.telegram.org https://coursing-stats-antajl.aws-eu-west-1.turso.io https://auth-worker.antajltube.workers.dev https://www.googletagmanager.com; " +
+          "frame-src 'self' https://coursing-stats.ru https://t.me; " +
+          "frame-ancestors 'self' https://coursing-stats.ru; " +
+          "worker-src 'self' blob:; " +
+          "form-action 'self'; " +
+          "upgrade-insecure-requests;",
+        'X-Content-Type-Options': 'nosniff',
+        'X-Frame-Options': 'DENY',
+        'X-XSS-Protection': '1; mode=block',
+        'Referrer-Policy': 'strict-origin-when-cross-origin',
+        'Permissions-Policy': 'geolocation=(), microphone=(), camera=()',
+      },
     },
-    headers: {
-      // Dev CSP: worker-src must allow blob: — Vite HMR reconnects via blob Worker
-      // after "server connection lost". Without it React ends up with Invalid hook call.
-      // connect-src: ws/wss for HMR websocket (same-origin + explicit for some browsers).
-      'Content-Security-Policy':
-        "default-src 'self'; " +
-        "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://coursing-stats.ru https://www.googletagmanager.com; " +
-        "style-src 'self' 'unsafe-inline' https://coursing-stats.ru https://fonts.googleapis.com; " +
-        "img-src 'self' data: blob: https://coursing-stats.ru https://*.googleusercontent.com https://*.gstatic.com; " +
-        "font-src 'self' https://fonts.gstatic.com; " +
-        "connect-src 'self' ws: wss: https://coursing-stats.ru https://api.telegram.org https://coursing-stats-antajl.aws-eu-west-1.turso.io https://auth-worker.antajltube.workers.dev https://www.googletagmanager.com; " +
-        "frame-src 'self' https://coursing-stats.ru https://t.me; " +
-        "frame-ancestors 'self' https://coursing-stats.ru; " +
-        "worker-src 'self' blob:; " +
-        "form-action 'self'; " +
-        "upgrade-insecure-requests;",
-      'X-Content-Type-Options': 'nosniff',
-      'X-Frame-Options': 'DENY',
-      'X-XSS-Protection': '1; mode=block',
-      'Referrer-Policy': 'strict-origin-when-cross-origin',
-      'Permissions-Policy': 'geolocation=(), microphone=(), camera=()',
-    },
-  },
+  }
 })
