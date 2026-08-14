@@ -22,6 +22,7 @@ type NavMenuDropdownProps = {
   isSectionActive: boolean
   items: NavMenuItem[]
   chevronLabel: string
+  ariaLabel?: string
   /** Fired on hover intent (before menu opens) — use for data/chunk prefetch. */
   onIntent?: () => void
 }
@@ -35,6 +36,7 @@ export function NavMenuDropdown({
   isSectionActive,
   items,
   chevronLabel,
+  ariaLabel,
   onIntent,
 }: NavMenuDropdownProps) {
   const location = useLocation()
@@ -121,6 +123,7 @@ export function NavMenuDropdown({
         <Link
           to={defaultTo}
           title={title}
+          aria-label={ariaLabel}
           className="relative flex items-center whitespace-nowrap py-2 pl-2.5 pr-0.5 transition-colors duration-300 lg:pl-4"
         >
           {label}

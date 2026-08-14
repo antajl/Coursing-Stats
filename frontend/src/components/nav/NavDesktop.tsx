@@ -95,6 +95,7 @@ export function NavDesktop({
           title="Рейтинг собак и судьи: курсинг, БЗМП, бега борзых"
           isSectionActive={isCompetitionsActive}
           chevronLabel="Меню раздела Соревнования"
+          ariaLabel="Соревнования - рейтинг, календарь, судьи"
           label={
             <>
               <span className="lg:hidden">Соревн.</span>
@@ -110,6 +111,7 @@ export function NavDesktop({
           title="Рейтинг собак и судьи на выставках"
           isSectionActive={isShowsActive}
           chevronLabel="Меню раздела Выставки"
+          ariaLabel="Выставки - рейтинг, календарь, судьи"
           label="Выставки"
           items={showsItems}
           onIntent={() => {
@@ -123,6 +125,7 @@ export function NavDesktop({
           title="Рекорды полигона Курсинг Донино"
           isSectionActive={isSpeedRecordsActive}
           chevronLabel="Меню раздела Курсинг Донино"
+          ariaLabel="Курсинг Донино - записи и статистика"
           label={
             <>
               <span className="lg:hidden">Донино</span>
@@ -138,6 +141,7 @@ export function NavDesktop({
           title="Правила, титулы, протоколы и рейтинг"
           isSectionActive={isGuideActive}
           chevronLabel="Меню раздела Справка"
+          ariaLabel="Справка - правила, титулы, протоколы"
           label="Справка"
           items={GUIDE_MENU_ITEMS}
         />
