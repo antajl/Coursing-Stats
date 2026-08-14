@@ -15,3 +15,19 @@
 @import './styles/home-v2-search.css';
 @import './styles/home-v2-scale.css';
 @import './styles/home-v2-panels.css';
+
+/* Focus indicators */
+*:focus-visible {
+  outline: 2px solid var(--camel-600);
+  outline-offset: 2px;
+}
+
+/* Dark mode focus */
+.dark *:focus-visible {
+  outline-color: var(--camel-400);
+}
+
+/* Remove default focus for mouse users */
+:focus:not(:focus-visible) {
+  outline: none;
+}
