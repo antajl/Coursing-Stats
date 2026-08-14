@@ -23,7 +23,7 @@ export default function ToolbarActiveFilters({ chips, onClearAll }: ToolbarActiv
           <button
             type="button"
             onClick={chip.onRemove}
-            className="rounded-full p-0.5 text-charcoal-400 hover:bg-old-money-100 hover:text-charcoal-700 dark:hover:bg-charcoal-700 dark:hover:text-charcoal-200"
+            className="min-h-[44px] min-w-[44px] rounded-full p-0.5 text-charcoal-400 hover:bg-old-money-100 hover:text-charcoal-700 dark:hover:bg-charcoal-700 dark:hover:text-charcoal-200"
             aria-label={`Убрать фильтр ${chip.label}`}
           >
             <X className="h-3 w-3" strokeWidth={2.5} />

@@ -61,7 +61,7 @@ export default function TemporaryCompetitionsCalendarBanner() {
         <button
           type="button"
           onClick={dismiss}
-          className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-charcoal-600 transition-colors hover:bg-camel-200/80 hover:text-charcoal-900 dark:text-charcoal-300 dark:hover:bg-charcoal-700 dark:hover:text-charcoal-50"
+          className="inline-flex min-h-[44px] min-w-[44px] h-8 w-8 shrink-0 items-center justify-center rounded-lg text-charcoal-600 transition-colors hover:bg-camel-200/80 hover:text-charcoal-900 dark:text-charcoal-300 dark:hover:bg-charcoal-700 dark:hover:text-charcoal-50"
           aria-label="Закрыть предупреждение"
         >
           <Icons.close className="h-4 w-4" strokeWidth={2} aria-hidden />
