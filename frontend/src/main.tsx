@@ -14,6 +14,22 @@ preloadOptimizedFonts()
 
 initSentry()
 
+// ARIA audit in development
+if (import.meta.env.DEV) {
+  window.addEventListener('load', () => {
+    import('./lib/ariaAudit').then(({ auditAriaLabels }) => {
+      const issues = auditAriaLabels()
+      if (issues.length > 0) {
+        console.group('ARIA Audit Issues')
+        issues.forEach(issue => {
+          console.warn(issue)
+        })
+        console.groupEnd()
+      }
+    })
+  })
+}
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
