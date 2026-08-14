@@ -4,9 +4,13 @@ import './lib/reloadOnChunkError'
 import './index.css'
 import App from './App'
 import { initSentry } from './sentry'
+import { preloadOptimizedFonts } from './lib/fontOptimization'
 
 // Меняет content-hash entry при каждом намеренном bust деплоя (не убирать зря).
 void 'cs-asset-bust-2026-07-22d'
+
+// Preload fonts early for faster rendering
+preloadOptimizedFonts()
 
 initSentry()
 
