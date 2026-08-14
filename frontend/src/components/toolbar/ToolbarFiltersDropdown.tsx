@@ -1,6 +1,7 @@
 import { useEffect, useId, useRef, useState, type ReactNode } from 'react'
 import { ChevronDown } from 'lucide-react'
 import { TOOLBAR_CHIP, TOOLBAR_CHIP_ACTIVE, TOOLBAR_CHIP_IDLE } from '../../lib/toolbar'
+import { useKeyboardNavigation } from '../../hooks/useKeyboardNavigation'
 
 interface ToolbarFiltersDropdownProps {
   children: ReactNode
@@ -40,6 +41,10 @@ export default function ToolbarFiltersDropdown({
     onOpenChange?.(next)
   }
 
+  const { handleKeyDown } = useKeyboardNavigation({
+    onEscape: () => setOpenState(false),
+  })
+
   useEffect(() => {
     function handlePointerOutside(event: MouseEvent | TouchEvent) {
       const target = event.target as Node | null
@@ -53,14 +58,6 @@ export default function ToolbarFiltersDropdown({
       document.removeEventListener('mousedown', handlePointerOutside)
       document.removeEventListener('touchstart', handlePointerOutside)
     }
-  }, [])
-
-  useEffect(() => {
-    function handleEsc(event: KeyboardEvent) {
-      if (event.key === 'Escape') setOpenState(false)
-    }
-    document.addEventListener('keydown', handleEsc)
-    return () => document.removeEventListener('keydown', handleEsc)
   }, [])
 
   useEffect(() => {
@@ -89,6 +86,7 @@ export default function ToolbarFiltersDropdown({
       <button
         type="button"
         onClick={() => setOpenState(!open)}
+        onKeyDown={handleKeyDown}
         aria-expanded={open}
         aria-controls={panelId}
         aria-label={showBadge ? `${label}, активных: ${activeCount}` : label}
@@ -110,6 +108,12 @@ export default function ToolbarFiltersDropdown({
             aria-label="Закрыть фильтры"
             className="fixed inset-0 z-40 bg-charcoal-900/40 md:hidden"
             onClick={() => setOpenState(false)}
+            onKeyDown={(e) => {
+              if (e.key === 'Escape') {
+                e.preventDefault()
+                setOpenState(false)
+              }
+            }}
           />
           <div
             id={panelId}

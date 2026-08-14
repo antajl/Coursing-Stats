@@ -242,6 +242,18 @@ export default function HomeDogSearch({ className = '' }: HomeDogSearchProps) {
                   className={idx === activeIdx ? 'is-active' : undefined}
                   onMouseEnter={() => setActiveIdx(idx)}
                   onClick={() => void goDog(dog.id)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'ArrowDown') {
+                      e.preventDefault()
+                      setActiveIdx((prev) => Math.min(prev + 1, results.length - 1))
+                    } else if (e.key === 'ArrowUp') {
+                      e.preventDefault()
+                      setActiveIdx((prev) => Math.max(prev - 1, 0))
+                    } else if (e.key === 'Enter' && idx === activeIdx) {
+                      e.preventDefault()
+                      void goDog(dog.id)
+                    }
+                  }}
                 >
                   <span className="home-v2-search-name">{primary}</span>
                   {dog.breed && <span className="home-v2-search-breed">{dog.breed}</span>}

@@ -122,7 +122,7 @@ export default function CombinedMetricsRotator({
         setExpanded((v) => !v)
       }}
       onKeyDown={(e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
           e.preventDefault()
           e.stopPropagation()
           setExpanded((v) => !v)
