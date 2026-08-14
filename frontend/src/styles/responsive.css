@@ -1,13 +1,121 @@
-﻿/* Extra small devices (phones, 375px and up) */
-@media (max-width: 479px) {
+﻿/* Extra small devices (phones, < 375px) */
+@media (max-width: 374px) {
+  .home-v2-events-col {
+    flex-direction: column;
+  }
+
+  .home-v2-search-input {
+    font-size: 14px;
+  }
+
+  .home-v2-section-title h2 {
+    font-size: 1.22rem;
+  }
+}
+
+/* Small devices (phones, 375px - 479px) */
+@media (min-width: 375px) and (max-width: 479px) {
   .home-v2-events-col {
     flex-direction: column;
   }
 }
 
-/* Medium devices (tablets, 768px and up) */
+/* Medium devices (large phones, 480px - 639px) */
+@media (min-width: 480px) and (max-width: 639px) {
+  .home-v2-events-col {
+    flex-direction: column;
+  }
+
+  .dog-card-stats {
+    flex-direction: row;
+  }
+}
+
+/* Large devices (tablets, 640px - 767px) */
+@media (min-width: 640px) and (max-width: 767px) {
+  .home-v2-events-col {
+    flex-direction: row;
+  }
+
+  .home-v2-panels {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Extra large devices (tablets, 768px - 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
   .home-v2-events-col {
     flex-direction: row;
+  }
+
+  .home-v2-panels {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop devices (1024px - 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .home-v2-events-col {
+    flex-direction: row;
+  }
+
+  .home-v2-panels {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large desktop (1280px - 1535px) */
+@media (min-width: 1280px) and (max-width: 1535px) {
+  .home-v2-panels {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Extra large desktop (1536px+) */
+@media (min-width: 1536px) {
+  .home-v2-panels {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Base font sizes - mobile first */
+html {
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+/* Responsive line heights */
+@media (max-width: 767px) {
+  h1 {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.25rem;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 1.875rem;
+    line-height: 1.3;
   }
 }
