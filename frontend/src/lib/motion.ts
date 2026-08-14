@@ -31,7 +31,7 @@ export function riseIn(targets: gsap.TweenTarget, options: RiseInOptions = {}): 
     delay = 0,
     y = 10,
     duration = 0.42,
-    ease = 'power2.out',
+    ease = 'power3.out',  // Changed from power2.out to power3.out for smoother feel
     mode = 'full',
   } = options
 
