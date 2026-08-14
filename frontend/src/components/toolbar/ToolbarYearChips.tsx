@@ -84,7 +84,7 @@ export default function ToolbarYearChips({
   }
 
   const navBtn =
-    'inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-old-money-200 bg-white text-charcoal-700 shadow-sm transition-colors hover:bg-old-money-50 dark:border-charcoal-600 dark:bg-charcoal-800 dark:text-charcoal-200 dark:hover:bg-charcoal-700'
+    'inline-flex min-h-[44px] min-w-[44px] h-7 w-7 shrink-0 items-center justify-center rounded-full border border-old-money-200 bg-white text-charcoal-700 shadow-sm transition-colors hover:bg-old-money-50 dark:border-charcoal-600 dark:bg-charcoal-800 dark:text-charcoal-200 dark:hover:bg-charcoal-700'
 
   const handleAll = () => {
     if (mode === 'multi') onClear?.()

@@ -17,7 +17,7 @@ export default function RankBadge({ rank, className = '' }: RankBadgeProps) {
     const imageSrc = RANK_IMAGES[rank as keyof typeof RANK_IMAGES]
     return (
       <div
-        className={`inline-flex items-center justify-center w-8 h-8 ${className}`}
+        className={`inline-flex items-center justify-center min-h-[44px] min-w-[44px] w-8 h-8 ${className}`}
         aria-label={`Rank ${rank}`}
       >
         <img
@@ -34,7 +34,7 @@ export default function RankBadge({ rank, className = '' }: RankBadgeProps) {
   // Rank 4+: text-based, centered, no hash
   return (
     <div
-      className={`w-8 text-center text-sm font-bold tabular-nums text-charcoal-400 dark:text-charcoal-500 ${className}`}
+      className={`min-h-[44px] min-w-[44px] w-8 flex items-center justify-center text-center text-sm font-bold tabular-nums text-charcoal-400 dark:text-charcoal-500 ${className}`}
       aria-label={`Rank ${rank}`}
     >
       {rank}
