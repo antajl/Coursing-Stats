@@ -27,6 +27,10 @@ if (import.meta.env.DEV) {
         console.groupEnd()
       }
     })
+
+    import('./lib/colorContrastAudit').then(({ runAudit }) => {
+      runAudit()
+    })
   })
 }
 
