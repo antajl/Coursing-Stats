@@ -25,7 +25,7 @@ export default function OAuthCallback() {
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="text-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-camel-600 mx-auto"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-4 border-camel-200 dark:border-charcoal-600 border-t-camel-600 dark:border-t-camel-400 mx-auto"></div>
         <p className="mt-4 text-charcoal-600 dark:text-cream-300">Обработка авторизации...</p>
       </div>
     </div>
