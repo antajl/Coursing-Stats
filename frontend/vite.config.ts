@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url'
 import { defineConfig, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
 import { homePhotosPlugin } from './vite-plugin-home-photos'
+import { visualizer } from 'rollup-plugin-visualizer'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const DATA_V1_ROOT = path.resolve(__dirname, '../data/v1')
@@ -96,8 +97,8 @@ function serveDataV1(): Plugin {
 // Banner alone is NOT enough: Rolldown content-hash ignores it.
 const buildStamp = process.env.GITHUB_SHA?.slice(0, 8) || String(Date.now())
 
-export default defineConfig({
-  plugins: [
+export default defineConfig(({ mode }) => {
+  const plugins: Plugin[] = [
     react(),
     syncBotBanners(),
     serveDataV1(),
@@ -105,7 +106,22 @@ export default defineConfig({
       publicHomeDir: path.resolve(__dirname, 'public/assets/home'),
       outFile: path.resolve(__dirname, 'src/lib/homePhotos.generated.ts'),
     }),
-  ],
+  ]
+
+  // Add bundle analyzer in analyze mode
+  if (mode === 'analyze') {
+    plugins.push(
+      visualizer({
+        filename: './dist/bundle-stats.html',
+        open: true,
+        gzipSize: true,
+        brotliSize: true,
+      })
+    )
+  }
+
+  return {
+    plugins,
   cacheDir: './.vite', // Avoid node_modules/.vite for PnP compatibility
   build: {
     rollupOptions: {
