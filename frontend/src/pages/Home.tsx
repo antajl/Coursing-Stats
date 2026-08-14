@@ -97,6 +97,8 @@ export default function Home() {
         loading="eager"
         fetchPriority="high"
         alt=""
+        role="presentation"
+        aria-hidden="true"
         className={`hidden md:block fixed left-4 top-20 scale-50 origin-top-left will-change-opacity pointer-events-none z-50 transition-opacity duration-[${ANIMATION.CSS_FAST}ms] ease-linear`}
       />
 

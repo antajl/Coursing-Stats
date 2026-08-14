@@ -166,6 +166,8 @@ export default function HomeHeroStage({ children, metrics }: HomeHeroStageProps)
           <img
             src="/assets/hero/background.webp"
             alt=""
+            role="presentation"
+            aria-hidden="true"
             className="home-v2-stage-layer"
             loading="eager"
             fetchPriority="high"

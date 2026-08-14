@@ -151,6 +151,8 @@ export default function EventHeader({ event, results, onBack }: EventHeaderProps
               <img
                 src="/assets/icons/web-archive.ico"
                 alt=""
+                role="presentation"
+                aria-hidden="true"
                 className="h-4 w-4 rounded-full"
                 width={16}
                 height={16}

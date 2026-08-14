@@ -58,6 +58,8 @@ export function NavMobile({
           <img
             src="/assets/brand/logo.webp"
             alt=""
+            role="presentation"
+            aria-hidden="true"
             className={`h-10 transition-opacity duration-300 ${
               logoVisible ? 'opacity-80' : 'opacity-0'
             }`}
@@ -115,6 +117,9 @@ export function NavMobile({
             <div>
               <button
                 onClick={onToggleStatistics}
+                aria-expanded={statisticsOpen}
+                aria-controls="statistics-menu"
+                aria-label="Соревнования - рейтинг, календарь, судьи"
                 className={`w-full flex items-center justify-between px-4 py-2 text-sm font-semibold transition-colors ${
                   isCompetitionsActive ? 'text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200'
                 }`}
@@ -130,7 +135,7 @@ export function NavMobile({
                 </svg>
               </button>
               {statisticsOpen && (
-                <div className="mt-2 space-y-1 pl-4">
+                <div id="statistics-menu" className="mt-2 space-y-1 pl-4" role="menu">
                   <Link
                     to="/competitions?tab=ranking"
                     onClick={onCloseMobileMenu}
@@ -163,6 +168,9 @@ export function NavMobile({
                   void import('../../lib/prefetchShows').then((m) => m.prefetchShowsHeavyTabs())
                   onToggleShows()
                 }}
+                aria-expanded={showsOpen}
+                aria-controls="shows-menu"
+                aria-label="Выставки - рейтинг, календарь, судьи"
                 className={`w-full flex items-center justify-between px-4 py-2 text-sm font-semibold transition-colors ${
                   isShowsActive ? 'text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200'
                 }`}
@@ -178,7 +186,7 @@ export function NavMobile({
                 </svg>
               </button>
               {showsOpen && (
-                <div className="mt-2 space-y-1 pl-4">
+                <div id="shows-menu" className="mt-2 space-y-1 pl-4" role="menu">
                   <Link
                     to="/shows?tab=ranking"
                     onClick={onCloseMobileMenu}
@@ -208,6 +216,9 @@ export function NavMobile({
             <div>
               <button
                 onClick={onToggleDonino}
+                aria-expanded={doninoOpen}
+                aria-controls="donino-menu"
+                aria-label="Курсинг Донино - записи и статистика"
                 className={`w-full flex items-center justify-between px-4 py-2 text-sm font-semibold transition-colors ${
                   isSpeedRecordsActive ? 'text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200'
                 }`}
@@ -223,7 +234,7 @@ export function NavMobile({
                 </svg>
               </button>
               {doninoOpen && (
-                <div className="mt-2 space-y-1 pl-4">
+                <div id="donino-menu" className="mt-2 space-y-1 pl-4" role="menu">
                   <Link
                     to="/speed-records?view=table"
                     onClick={onCloseMobileMenu}
@@ -244,6 +255,9 @@ export function NavMobile({
             <div>
               <button
                 onClick={onToggleGuide}
+                aria-expanded={guideOpen}
+                aria-controls="guide-menu"
+                aria-label="Справка - правила, титулы, протоколы"
                 className={`w-full flex items-center justify-between px-4 py-2 text-sm font-semibold transition-colors ${
                   isGuideActive ? 'text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200'
                 }`}
@@ -266,7 +280,7 @@ export function NavMobile({
                 </svg>
               </button>
               {guideOpen && (
-                <div className="mt-2 space-y-1 pl-4">
+                <div id="guide-menu" className="mt-2 space-y-1 pl-4" role="menu">
                   {GUIDE_MENU_ITEMS.map((item) => (
                     <Link
                       key={item.to}
