@@ -2,14 +2,14 @@
 title: Docs Map — Agent Router
 description: Single navigation entry for CoursingStats docs. Task → one cheatsheet.
 confidence: stable
-verified: 2026-08-09
+verified: 2026-08-16
 ---
 
 # MAP — куда смотреть
 
 **Правило:** `AGENTS.md` → этот файл → **один** sheet. Не искать правду в git history старых `docs/site|wiki|bot`.
 
-## Прод-факты (проверено 2026-08-09)
+## Прод-факты (проверено 2026-08-16)
 
 | Факт | Значение |
 |------|----------|
