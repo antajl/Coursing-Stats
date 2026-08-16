@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import React from 'react'
+import React, { createContext, useContext, useMemo } from 'react'
 import { dogYearBadge } from '../lib/season'
 import { parseDogName } from '../lib/dogName'
 import { displayBreed } from '../lib/breedMapping'
@@ -9,6 +9,25 @@ import OwnerCrownName from './OwnerCrownName'
 import MedalBadge from './MedalBadge'
 import RankBadge from './RankBadge'
 import CombinedMetricsRotator from './CombinedMetricsRotator'
+
+// Context for compound components
+interface DogCardContextValue {
+  dog: DogCardProps['dog']
+  type: DogCardProps['type']
+  filterYear: string
+  rank?: number
+  variant: DogCardVariant
+}
+
+const DogCardContext = createContext<DogCardContextValue | null>(null)
+
+function useDogCardContext() {
+  const context = useContext(DogCardContext)
+  if (!context) {
+    throw new Error('DogCard compound components must be used within DogCard')
+  }
+  return context
+}
 
 /** Единая высота карточки в двухколоночном рейтинге (строки выравниваются попарно). */
 export const DOG_CARD_HEIGHT_CLASS = 'h-[5.25rem]'
@@ -208,11 +227,56 @@ export function Top3AccentBar({ rank }: { rank: number }) {
   )
 }
 
-export default function DogCard({ dog, type, filterYear, rank, variant = 'card' }: DogCardProps) {
+// Compound components
+function DogCardHeader() {
+  const { dog, filterYear } = useDogCardContext()
   const { primary, secondary } = parseDogName(dog.name_lat, dog.name_ru)
   const breedDisplay = displayBreed(dog.breed)
+  const yearBadge = dogYearBadge(dog, filterYear)
 
-  const getStats = () => {
+  return (
+    <div className="min-w-0 overflow-hidden">
+      <OwnerCrownName name={primary} dogId={dog.dog_id} kind="competition">
+        <h3
+          className="text-xs font-bold leading-snug text-charcoal-900 dark:text-charcoal-100"
+          title={secondary ? `${primary} / ${secondary}` : primary}
+        >
+          {primary}
+        </h3>
+      </OwnerCrownName>
+      <div className="flex items-center gap-1 text-[9px]">
+        <span className="text-charcoal-500 dark:text-charcoal-400">
+          {breedDisplay.primary}
+        </span>
+        {yearBadge && (
+          <>
+            <span className="text-charcoal-300 dark:text-charcoal-600" aria-hidden>
+              ·
+            </span>
+            <span className="text-charcoal-500 dark:text-charcoal-400">
+              {yearBadge.label}
+            </span>
+          </>
+        )}
+      </div>
+    </div>
+  )
+}
+
+function DogCardMedals() {
+  const { dog } = useDogCardContext()
+  return (
+    <div className="flex min-w-0 shrink-0 items-center gap-1.5 text-xs">
+      <MedalBadge variant="gold" count={dog.gold || 0} size="sm" />
+      <MedalBadge variant="silver" count={dog.silver || 0} size="sm" />
+      <MedalBadge variant="bronze" count={dog.bronze || 0} size="sm" />
+    </div>
+  )
+}
+
+function DogCardStats() {
+  const { dog, type } = useDogCardContext()
+  const stats = useMemo(() => {
     switch (type) {
       case 'placement':
         return {
@@ -249,9 +313,86 @@ export default function DogCard({ dog, type, filterYear, rank, variant = 'card' 
           starts: dog.total_starts || 0,
         }
     }
+  }, [dog, type])
+
+  if (type === 'score') {
+    return <ScoreStatsRow dog={dog} />
   }
 
-  const stats = getStats()
+  if (type === 'speed') {
+    return (
+      <div className="flex min-w-0 items-center justify-between gap-2 text-xs">
+        <div className="flex min-w-0 flex-wrap items-center gap-x-1.5 gap-y-0.5">
+          {stats.scoreStats.map((stat, idx) => (
+            <React.Fragment key={idx}>
+              <span className="text-charcoal-500 dark:text-charcoal-400">{stat.label}:</span>
+              <span className="font-semibold tabular-nums text-charcoal-700 dark:text-charcoal-200">
+                {stat.value}
+              </span>
+              {idx < stats.scoreStats.length - 1 && (
+                <span className="text-charcoal-300 dark:text-charcoal-600" aria-hidden>
+                  ·
+                </span>
+              )}
+            </React.Fragment>
+          ))}
+        </div>
+        <StartsLabel starts={stats.starts} size="md" />
+      </div>
+    )
+  }
+
+  if (type === 'elo') {
+    const elo = eloDisplay(dog)
+    return (
+      <div className="flex items-center justify-between text-xs">
+        <div className="flex items-center gap-3">
+          <div className="flex items-baseline gap-1.5">
+            <span className="text-lg font-bold tabular-nums text-camel-700 dark:text-camel-400">
+              {elo.value}
+            </span>
+            <span className="text-[8px] font-semibold uppercase tracking-wide text-charcoal-500 dark:text-charcoal-400">
+              Elo
+            </span>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  if (type === 'placement') {
+    return (
+      <div className="flex items-center justify-between text-xs">
+        <div className="flex items-center gap-3">
+          <MedalBadge variant="gold" count={dog.gold || 0} size="sm" />
+          <MedalBadge variant="silver" count={dog.silver || 0} size="sm" />
+          <MedalBadge variant="bronze" count={dog.bronze || 0} size="sm" />
+        </div>
+        <StartsLabel starts={stats.starts} size="md" />
+      </div>
+    )
+  }
+
+  return null
+}
+
+function DogCardRank() {
+  const { rank } = useDogCardContext()
+  if (rank == null || rank <= 0) return null
+  return (
+    <div className="flex shrink-0 items-center self-stretch pr-2">
+      <RankBadge rank={rank} />
+    </div>
+  )
+}
+
+// Attach compound components to main component
+DogCard.Header = DogCardHeader
+DogCard.Medals = DogCardMedals
+DogCard.Stats = DogCardStats
+DogCard.Rank = DogCardRank
+
+export default function DogCard({ dog, type, filterYear, rank, variant = 'card' }: DogCardProps) {
   const yearBadge = dogYearBadge(dog, filterYear)
   const elo = type === 'elo' || type === 'combined' ? eloDisplay(dog) : null
   const isTop3 =
@@ -271,176 +412,53 @@ export default function DogCard({ dog, type, filterYear, rank, variant = 'card' 
     ? `${cardShell.replace('overflow-hidden', 'overflow-visible')} ${top3Wash}`.trim()
     : cardShell
 
-  const rankBadge =
-    rank != null && rank > 0 ? (
-      <div className="flex shrink-0 items-center self-stretch pr-2">
-        <RankBadge rank={rank} />
-      </div>
-    ) : null
+  const contextValue = useMemo<DogCardContextValue>(
+    () => ({ dog, type, filterYear, rank, variant }),
+    [dog, type, filterYear, rank, variant]
+  )
 
   return (
-    <Link to={`/dog/${dog.dog_id}`} className={shellClass}>
-      {isTop3 && rank != null ? <Top3AccentBar rank={rank} /> : null}
-      {type === 'combined' && elo ? (
-        <>
-          {rankBadge}
-          <div className="flex min-h-0 min-w-0 flex-1 flex-col justify-between gap-0 overflow-hidden">
-            <div className="min-w-0 overflow-hidden">
-              <OwnerCrownName name={primary} dogId={dog.dog_id} kind="competition">
-                <h3
-                  className="text-xs font-bold leading-snug text-charcoal-900 dark:text-charcoal-100"
-                  title={secondary ? `${primary} / ${secondary}` : primary}
-                >
-                  {primary}
-                </h3>
-              </OwnerCrownName>
-              <div className="flex items-center gap-1 text-[9px]">
-                <span className="text-charcoal-500 dark:text-charcoal-400">
-                  {breedDisplay.primary}
-                </span>
-                {yearBadge && (
-                  <>
-                    <span className="text-charcoal-300 dark:text-charcoal-600" aria-hidden>
-                      ·
-                    </span>
-                    <span className="text-charcoal-500 dark:text-charcoal-400">
-                      {yearBadge.label}
-                    </span>
-                  </>
-                )}
-              </div>
+    <DogCardContext.Provider value={contextValue}>
+      <Link to={`/dog/${dog.dog_id}`} className={shellClass}>
+        {isTop3 && rank != null ? <Top3AccentBar rank={rank} /> : null}
+        {type === 'combined' && elo ? (
+          <>
+            <DogCard.Rank />
+            <div className="flex min-h-0 min-w-0 flex-1 flex-col justify-between gap-0 overflow-hidden">
+              <DogCard.Header />
+              <DogCard.Medals />
             </div>
 
-            <div className="flex min-w-0 shrink-0 items-center gap-1.5 text-xs">
-              <MedalBadge variant="gold" count={dog.gold || 0} size="sm" />
-              <MedalBadge variant="silver" count={dog.silver || 0} size="sm" />
-              <MedalBadge variant="bronze" count={dog.bronze || 0} size="sm" />
-            </div>
-          </div>
-
-          <div className="mr-8 flex min-h-0 min-w-[10.5rem] shrink-0 flex-col justify-between border-l border-old-money-200/60 pl-2 dark:border-charcoal-600/60">
-            <CombinedMetricsRotator
-              csValue={formatIndexScore(dog)}
-              eloValue={elo.value}
-            />
-            <div className="flex justify-end">
-              <StartsLabel starts={dog.total_starts || 0} size="md" />
-            </div>
-          </div>
-        </>
-      ) : type === 'speed' ? (
-        <>
-          {rankBadge}
-          <div className="flex min-h-0 min-w-0 flex-1 flex-col justify-between gap-0 overflow-hidden">
-            <div className="min-w-0 overflow-hidden">
-              <OwnerCrownName name={primary} dogId={dog.dog_id} kind="competition">
-                <h3
-                  className="text-xs font-bold leading-snug text-charcoal-900 dark:text-charcoal-100"
-                  title={secondary ? `${primary} / ${secondary}` : primary}
-                >
-                  {primary}
-                </h3>
-              </OwnerCrownName>
-              <div className="flex items-center gap-1 text-[9px]">
-                <span className="text-charcoal-500 dark:text-charcoal-400">
-                  {breedDisplay.primary}
-                </span>
-                {yearBadge && (
-                  <>
-                    <span className="text-charcoal-300 dark:text-charcoal-600" aria-hidden>
-                      ·
-                    </span>
-                    <span className="text-charcoal-500 dark:text-charcoal-400">
-                      {yearBadge.label}
-                    </span>
-                  </>
-                )}
+            <div className="mr-8 flex min-h-0 min-w-[10.5rem] shrink-0 flex-col justify-between border-l border-old-money-200/60 pl-2 dark:border-charcoal-600/60">
+              <CombinedMetricsRotator
+                csValue={formatIndexScore(dog)}
+                eloValue={elo.value}
+              />
+              <div className="flex justify-end">
+                <StartsLabel starts={dog.total_starts || 0} size="md" />
               </div>
             </div>
-            <div className="flex min-w-0 items-center justify-between gap-2 text-xs">
-              <div className="flex min-w-0 flex-wrap items-center gap-x-1.5 gap-y-0.5">
-                {stats.scoreStats.map((stat, idx) => (
-                  <React.Fragment key={idx}>
-                    <span className="text-charcoal-500 dark:text-charcoal-400">{stat.label}:</span>
-                    <span className="font-semibold tabular-nums text-charcoal-700 dark:text-charcoal-200">
-                      {stat.value}
-                    </span>
-                    {idx < stats.scoreStats.length - 1 && (
-                      <span className="text-charcoal-300 dark:text-charcoal-600" aria-hidden>
-                        ·
-                      </span>
-                    )}
-                  </React.Fragment>
-                ))}
-              </div>
-              <StartsLabel starts={stats.starts} size="md" />
+          </>
+        ) : type === 'speed' ? (
+          <>
+            <DogCard.Rank />
+            <div className="flex min-h-0 min-w-0 flex-1 flex-col justify-between gap-0 overflow-hidden">
+              <DogCard.Header />
+              <DogCard.Stats />
             </div>
-          </div>
-        </>
-      ) : (
-        <>
-      <div className="flex w-full items-start gap-2 overflow-hidden">
-        {rank != null && rank > 0 && (
-          <RankBadge rank={rank} />
+          </>
+        ) : (
+          <>
+            <div className="flex w-full items-start gap-2 overflow-hidden">
+              {rank != null && rank > 0 && <RankBadge rank={rank} />}
+              <div className="min-w-0 flex-1">
+                <DogCard.Header />
+              </div>
+            </div>
+            <DogCard.Stats />
+          </>
         )}
-
-        <div className="min-w-0 flex-1">
-          <OwnerCrownName name={primary} dogId={dog.dog_id} kind="competition">
-            <h3
-              className="text-xs font-bold leading-snug text-charcoal-900 dark:text-charcoal-100"
-              title={secondary ? `${primary} / ${secondary}` : primary}
-            >
-              {primary}
-            </h3>
-          </OwnerCrownName>
-
-          <div className="flex items-center gap-1 text-[9px]">
-            <span className="text-charcoal-500 dark:text-charcoal-400">
-              {breedDisplay.primary}
-            </span>
-            {yearBadge && (
-              <>
-                <span className="text-charcoal-300 dark:text-charcoal-600" aria-hidden>
-                  ·
-                </span>
-                <span className="text-charcoal-500 dark:text-charcoal-400">
-                  {yearBadge.label}
-                </span>
-              </>
-            )}
-          </div>
-        </div>
-      </div>
-
-      {type === 'score' ? (
-        <ScoreStatsRow dog={dog} />
-      ) : type === 'elo' && elo ? (
-        <div className="flex items-center justify-between text-xs">
-          <div className="flex items-center gap-3">
-            {rank != null && rank > 0 && <div className="w-7"></div>}
-            <div className="flex items-baseline gap-1.5">
-              <span className="text-lg font-bold tabular-nums text-camel-700 dark:text-camel-400">
-                {elo.value}
-              </span>
-              <span className="text-[8px] font-semibold uppercase tracking-wide text-charcoal-500 dark:text-charcoal-400">
-                Elo
-              </span>
-            </div>
-          </div>
-        </div>
-      ) : type === 'placement' ? (
-        <div className="flex items-center justify-between text-xs">
-          <div className="flex items-center gap-3">
-            {rank != null && rank > 0 && <div className="w-7"></div>}
-            <MedalBadge variant="gold" count={dog.gold || 0} size="sm" />
-            <MedalBadge variant="silver" count={dog.silver || 0} size="sm" />
-            <MedalBadge variant="bronze" count={dog.bronze || 0} size="sm" />
-          </div>
-          <StartsLabel starts={stats.starts} size="md" />
-        </div>
-      ) : null}
-        </>
-      )}
-    </Link>
+      </Link>
+    </DogCardContext.Provider>
   )
 }
