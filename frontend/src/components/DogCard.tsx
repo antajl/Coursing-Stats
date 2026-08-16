@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import React, { createContext, useContext, useMemo } from 'react'
+import { createContext, useContext, useMemo, memo } from 'react'
 import { dogYearBadge } from '../lib/season'
 import { parseDogName } from '../lib/dogName'
 import { displayBreed } from '../lib/breedMapping'
@@ -230,9 +230,18 @@ export function Top3AccentBar({ rank }: { rank: number }) {
 // Compound components
 function DogCardHeader() {
   const { dog, filterYear } = useDogCardContext()
-  const { primary, secondary } = parseDogName(dog.name_lat, dog.name_ru)
-  const breedDisplay = displayBreed(dog.breed)
-  const yearBadge = dogYearBadge(dog, filterYear)
+  const { primary, secondary } = useMemo(
+    () => parseDogName(dog.name_lat, dog.name_ru),
+    [dog.name_lat, dog.name_ru]
+  )
+  const breedDisplay = useMemo(
+    () => displayBreed(dog.breed),
+    [dog.breed]
+  )
+  const yearBadge = useMemo(
+    () => dogYearBadge(dog, filterYear),
+    [dog, filterYear]
+  )
 
   return (
     <div className="min-w-0 overflow-hidden">
@@ -392,25 +401,42 @@ DogCard.Medals = DogCardMedals
 DogCard.Stats = DogCardStats
 DogCard.Rank = DogCardRank
 
-export default function DogCard({ dog, type, filterYear, rank, variant = 'card' }: DogCardProps) {
-  const yearBadge = dogYearBadge(dog, filterYear)
-  const elo = type === 'elo' || type === 'combined' ? eloDisplay(dog) : null
-  const isTop3 =
-    (type === 'combined' || type === 'speed') && rank != null && rank > 0 && rank <= 3
-  const top3Wash = isTop3 ? TOP3_WASH[rank as 1 | 2 | 3] : ''
+const DogCardInner = function DogCard({ dog, type, filterYear, rank, variant = 'card' }: DogCardProps) {
+  const yearBadge = useMemo(
+    () => dogYearBadge(dog, filterYear),
+    [dog, filterYear]
+  )
+  const elo = useMemo(
+    () => (type === 'elo' || type === 'combined' ? eloDisplay(dog) : null),
+    [type, dog]
+  )
+  const isTop3 = useMemo(
+    () => (type === 'combined' || type === 'speed') && rank != null && rank > 0 && rank <= 3,
+    [type, rank]
+  )
+  const top3Wash = useMemo(
+    () => (isTop3 ? TOP3_WASH[rank as 1 | 2 | 3] : ''),
+    [isTop3, rank]
+  )
 
   const shellBase = variant === 'embedded' ? EMBEDDED_SHELL : CARD_SHELL
   const useFlexShell = type === 'combined' || type === 'speed'
-  const cardShell = useFlexShell
-    ? shellBase.replace(
-        `grid ${DOG_CARD_HEIGHT_CLASS} grid-rows-[auto_auto]`,
-        `flex ${DOG_CARD_HEIGHT_CLASS} flex-row items-stretch`
-      )
-    : shellBase
+  const cardShell = useMemo(
+    () => useFlexShell
+      ? shellBase.replace(
+          `grid ${DOG_CARD_HEIGHT_CLASS} grid-rows-[auto_auto]`,
+          `flex ${DOG_CARD_HEIGHT_CLASS} flex-row items-stretch`
+        )
+      : shellBase,
+    [useFlexShell, shellBase]
+  )
   // Overflow visible so the outside accent bar is not clipped by the shell.
-  const shellClass = isTop3
-    ? `${cardShell.replace('overflow-hidden', 'overflow-visible')} ${top3Wash}`.trim()
-    : cardShell
+  const shellClass = useMemo(
+    () => isTop3
+      ? `${cardShell.replace('overflow-hidden', 'overflow-visible')} ${top3Wash}`.trim()
+      : cardShell,
+    [isTop3, cardShell, top3Wash]
+  )
 
   const contextValue = useMemo<DogCardContextValue>(
     () => ({ dog, type, filterYear, rank, variant }),
@@ -462,3 +488,13 @@ export default function DogCard({ dog, type, filterYear, rank, variant = 'card' 
     </DogCardContext.Provider>
   )
 }
+
+export default memo(DogCardInner, (prevProps, nextProps) => {
+  return (
+    prevProps.dog.dog_id === nextProps.dog.dog_id &&
+    prevProps.type === nextProps.type &&
+    prevProps.filterYear === nextProps.filterYear &&
+    prevProps.rank === nextProps.rank &&
+    prevProps.variant === nextProps.variant
+  )
+})
