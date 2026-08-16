@@ -3,7 +3,7 @@
  * Специфично для русского SEO и Core Web Vitals
  */
 
-import { useState } from 'react'
+import { useState, useCallback } from 'react'
 
 /**
  * Предзагрузка критических шрифтов для улучшения LCP
@@ -162,13 +162,83 @@ export function virtualizedList<T>(
 
   const visibleItems = items.slice(startIndex, endIndex + 1)
 
+  const onScroll = useCallback((e: React.UIEvent<HTMLDivElement>) => {
+    setScrollTop(e.currentTarget.scrollTop)
+  }, [])
+
   return {
     visibleItems,
     startIndex,
-    onScroll: (e: React.UIEvent<HTMLDivElement>) => {
-      setScrollTop(e.currentTarget.scrollTop)
-    },
+    onScroll,
     totalHeight: items.length * itemHeight,
     offsetY: startIndex * itemHeight,
   }
+}
+
+/**
+ * Создание Set для O(1) lookups вместо O(n) array.includes
+ */
+export function createLookupSet<T>(items: T[]): Set<T> {
+  return new Set(items)
+}
+
+/**
+ * Оптимизированная проверка наличия элемента
+ */
+export function hasItem<T>(lookupSet: Set<T>, item: T): boolean {
+  return lookupSet.has(item)
+}
+
+/**
+ * Кэширование дорогих вычислений
+ */
+export function createComputationCache<TInput, TResult>() {
+  const cache = new Map<TInput, TResult>()
+
+  return {
+    get(input: TInput, compute: () => TResult): TResult {
+      if (cache.has(input)) {
+        return cache.get(input)!
+      }
+      const result = compute()
+      cache.set(input, result)
+      return result
+    },
+    clear(): void {
+      cache.clear()
+    },
+    size(): number {
+      return cache.size
+    },
+  }
+}
+
+/**
+ * Отложенное выполнение некритичных задач
+ */
+export function deferNonCriticalWork(callback: () => void): void {
+  if (typeof window === 'undefined') return
+
+  if ('requestIdleCallback' in window) {
+    window.requestIdleCallback(callback)
+  } else {
+    setTimeout(callback, 0)
+  }
+}
+
+/**
+ * Оптимизированная фильтрация и сортировка в один проход
+ */
+export function filterAndSort<T>(
+  items: T[],
+  predicate: (item: T) => boolean,
+  compareFn: (a: T, b: T) => number
+): T[] {
+  const filtered: T[] = []
+  for (const item of items) {
+    if (predicate(item)) {
+      filtered.push(item)
+    }
+  }
+  return filtered.sort(compareFn)
 }
