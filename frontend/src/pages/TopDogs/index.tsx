@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useMemo } from 'react'
+import { useState, useEffect, useRef, useMemo, useCallback } from 'react'
 import { useSearchParams, useLocation } from 'react-router-dom'
 import { SEO } from '../../components/SEO'
 import { useYandexGoal } from '../../components/YandexMetrica'
@@ -106,25 +106,31 @@ export default function TopDogs() {
     [topSpeed]
   )
 
-  const filteredCombined = filterCombinedRanking(combinedRanking, filterParams)
-  const filteredSpeed = filterSpeed(rankedSpeed, filterParams)
+  const filteredCombined = useMemo(
+    () => filterCombinedRanking(combinedRanking, filterParams),
+    [combinedRanking, filterParams]
+  )
+  const filteredSpeed = useMemo(
+    () => filterSpeed(rankedSpeed, filterParams),
+    [rankedSpeed, filterParams]
+  )
 
-  const handleResetFilters = () => {
+  const handleResetFilters = useCallback(() => {
     setFilterYear(CURRENT_SEASON)
     setFilterBreed('')
     setSearchQuery('')
     setFilterMinStarts('')
     setFilterScoreFrom('')
     setFilterSpeedFrom('')
-  }
+  }, [])
 
-  const handleResetPanelFilters = () => {
+  const handleResetPanelFilters = useCallback(() => {
     setFilterYear(CURRENT_SEASON)
     setFilterBreed('')
     setFilterMinStarts('')
     setFilterScoreFrom('')
     setFilterSpeedFrom('')
-  }
+  }, [])
 
   const showListSkeleton = isInitialLoad && loading
 

@@ -1,4 +1,4 @@
-import { useEffect, useId, useRef, useState, type ReactNode } from 'react'
+import { useEffect, useId, useRef, useState, useCallback, useMemo, memo, type ReactNode } from 'react'
 import { ChevronDown } from 'lucide-react'
 import { TOOLBAR_CHIP, TOOLBAR_CHIP_ACTIVE, TOOLBAR_CHIP_IDLE } from '../../lib/toolbar'
 import { useKeyboardNavigation } from '../../hooks/useKeyboardNavigation'
@@ -22,7 +22,7 @@ interface ToolbarFiltersDropdownProps {
   onOpenChange?: (open: boolean) => void
 }
 
-export default function ToolbarFiltersDropdown({
+function ToolbarFiltersDropdownInner({
   children,
   onReset,
   active = false,
@@ -36,14 +36,14 @@ export default function ToolbarFiltersDropdown({
   const ref = useRef<HTMLDivElement>(null)
   const panelRef = useRef<HTMLDivElement>(null)
   const panelId = useId()
-  const showBadge = activeCount > 0
+  const showBadge = useMemo(() => activeCount > 0, [activeCount])
 
   useFocusTrap(open, panelRef)
 
-  const setOpenState = (next: boolean) => {
+  const setOpenState = useCallback((next: boolean) => {
     setOpen(next)
     onOpenChange?.(next)
-  }
+  }, [onOpenChange])
 
   const { handleKeyDown } = useKeyboardNavigation({
     onEscape: () => setOpenState(false),
@@ -81,9 +81,12 @@ export default function ToolbarFiltersDropdown({
     }
   }, [open])
 
-  const mobileHeight = fillContent
-    ? 'h-[min(88dvh,640px)] max-h-[min(88dvh,640px)]'
-    : 'max-h-[min(88dvh,640px)]'
+  const mobileHeight = useMemo(
+    () => fillContent
+      ? 'h-[min(88dvh,640px)] max-h-[min(88dvh,640px)]'
+      : 'max-h-[min(88dvh,640px)]',
+    [fillContent]
+  )
 
   return (
     <div className="relative shrink-0" ref={ref}>
@@ -178,3 +181,5 @@ export default function ToolbarFiltersDropdown({
     </div>
   )
 }
+
+export default memo(ToolbarFiltersDropdownInner)
