@@ -20,6 +20,8 @@ CoursingStats — статистика соревнований (procoursing), �
 
 **Прод:** https://coursing-stats.ru · **CDN:** `/data/v1/` · **GitHub:** antajl/Coursing-Stats
 
+**Статус улучшений дизайна:** Phases 1-7 завершены (accessibility, performance, responsive design, React composition patterns) — см. [`docs/superpowers/plans/2025-01-15-comprehensive-design-improvement.md`](docs/superpowers/plans/2025-01-15-comprehensive-design-improvement.md)
+
 ---
 
 ## Critical Architecture Facts
