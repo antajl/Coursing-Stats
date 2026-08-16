@@ -8,12 +8,14 @@ import {
   isImportantCompetition,
 } from '../pages/Events/eventListUtils'
 
+type HomeEventRowVariant = 'default' | 'compact'
+
 interface HomeEventRowProps {
   event: CalendarEvent
-  compact?: boolean
+  variant?: HomeEventRowVariant
 }
 
-export default function HomeEventRow({ event, compact = false }: HomeEventRowProps) {
+export default function HomeEventRow({ event, variant = 'default' }: HomeEventRowProps) {
   const eventType = event.event_type || 'other'
   const borderClass = DISCIPLINE_BORDER[eventType] || DISCIPLINE_BORDER.default
   const dateParts = formatRowDateParts(event.date_start, event.date_end)
@@ -23,7 +25,7 @@ export default function HomeEventRow({ event, compact = false }: HomeEventRowPro
 
   const className = `home-event-row border-l-4 ${borderClass} ${
     important ? 'home-event-row--champ' : ''
-  } ${compact ? 'home-event-row--compact' : ''} ${procoursingUrl ? '' : 'cursor-default'}`
+  } ${variant === 'compact' ? 'home-event-row--compact' : ''} ${procoursingUrl ? '' : 'cursor-default'}`
 
   const content = (
     <>
@@ -46,7 +48,7 @@ export default function HomeEventRow({ event, compact = false }: HomeEventRowPro
         {dateParts ? (
           <>
             <span className="block whitespace-nowrap font-semibold tabular-nums">{dateParts.dayLine}</span>
-            {compact ? (
+            {variant === 'compact' ? (
               <span className="block whitespace-nowrap text-[11px] text-charcoal-500 dark:text-charcoal-400">
                 {dateParts.month}
               </span>
