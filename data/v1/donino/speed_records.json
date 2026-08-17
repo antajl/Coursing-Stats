@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/donino-speed-v1",
   "source": "google-sheets",
-  "count": 227,
+  "count": 235,
   "records": [
     {
       "breed": "Уиппет",
@@ -60,15 +60,36 @@
       "breed": "Уиппет",
       "sex": "С",
       "name": "Бонни",
-      "speed_km_h": 60,
-      "date": "2026-05-27",
-      "screenshot_url": "https://disk.yandex.ru/i/6vm328Pm2Q3ssw",
+      "speed_km_h": 62,
+      "date": "2026-08-16",
+      "screenshot_url": "https://disk.yandex.ru/i/y0upRGOvY51X0w",
       "status": "improved",
-      "track_type": "прямая",
+      "track_type": "круг",
       "history": [
+        {
+          "speed_km_h": 60,
+          "date": "2026-05-27"
+        },
         {
           "speed_km_h": 55,
           "date": "2025-11-23",
+          "track_type": null
+        }
+      ]
+    },
+    {
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Джипси",
+      "speed_km_h": 62,
+      "date": "2026-08-16",
+      "screenshot_url": "https://disk.yandex.ru/i/4MHt4Gy_OxBrwg",
+      "status": "new",
+      "track_type": "круг",
+      "history": [
+        {
+          "speed_km_h": 58,
+          "date": "2025-07-13",
           "track_type": null
         }
       ]
@@ -98,6 +119,26 @@
       ]
     },
     {
+      "breed": "Гальго",
+      "sex": "К",
+      "name": "Шерегеш",
+      "speed_km_h": 60,
+      "date": "2026-08-16",
+      "screenshot_url": "https://disk.yandex.ru/i/ErW1PloO015YTA",
+      "status": "improved",
+      "track_type": "круг",
+      "history": [
+        {
+          "speed_km_h": 59,
+          "date": "2026-06-20"
+        },
+        {
+          "speed_km_h": 57,
+          "date": "2026-05-31"
+        }
+      ]
+    },
+    {
       "breed": "Уиппет",
       "sex": "К",
       "name": "Марс",
@@ -107,22 +148,6 @@
       "status": "normal",
       "track_type": "круг",
       "history": []
-    },
-    {
-      "breed": "Гальго",
-      "sex": "К",
-      "name": "Шерегеш",
-      "speed_km_h": 59,
-      "date": "2026-06-20",
-      "screenshot_url": "https://disk.yandex.ru/i/PmkzSj3f7EPYDw",
-      "status": "improved",
-      "track_type": "круг",
-      "history": [
-        {
-          "speed_km_h": 57,
-          "date": "2026-05-31"
-        }
-      ]
     },
     {
       "breed": "Уиппет",
@@ -189,12 +214,16 @@
       "breed": "Уиппет",
       "sex": "С",
       "name": "Энджи",
-      "speed_km_h": 57,
-      "date": "2026-05-31",
-      "screenshot_url": "https://disk.yandex.ru/i/O3uE0KJOuW4DUw",
-      "status": "normal",
+      "speed_km_h": 58,
+      "date": "2026-08-16",
+      "screenshot_url": "https://disk.yandex.ru/i/MpsGpFXeB_Qhkw",
+      "status": "improved",
       "track_type": "круг",
       "history": [
+        {
+          "speed_km_h": 57,
+          "date": "2026-05-31"
+        },
         {
           "speed_km_h": 57,
           "date": "2025-07-17",
@@ -387,6 +416,31 @@
       ]
     },
     {
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Винни",
+      "speed_km_h": 56,
+      "date": "2026-08-16",
+      "screenshot_url": "https://disk.yandex.ru/i/Hj0A_wAVBVqQxQ",
+      "status": "improved",
+      "track_type": "круг",
+      "history": [
+        {
+          "speed_km_h": 55,
+          "date": "2026-07-05"
+        },
+        {
+          "speed_km_h": 54,
+          "date": "2026-05-27"
+        },
+        {
+          "speed_km_h": 54,
+          "date": "2025-12-07",
+          "track_type": null
+        }
+      ]
+    },
+    {
       "breed": "Салюки",
       "sex": "С",
       "name": "Тайга",
@@ -417,27 +471,6 @@
       "status": "normal",
       "track_type": "прямая",
       "history": []
-    },
-    {
-      "breed": "Уиппет",
-      "sex": "С",
-      "name": "Винни",
-      "speed_km_h": 55,
-      "date": "2026-07-05",
-      "screenshot_url": "https://disk.yandex.ru/i/-md8yF9awNb2UA",
-      "status": "improved",
-      "track_type": "круг",
-      "history": [
-        {
-          "speed_km_h": 54,
-          "date": "2026-05-27"
-        },
-        {
-          "speed_km_h": 54,
-          "date": "2025-12-07",
-          "track_type": null
-        }
-      ]
     },
     {
       "breed": "Уиппет",
@@ -488,6 +521,22 @@
       "status": "normal",
       "track_type": "прямая",
       "history": []
+    },
+    {
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Руна",
+      "speed_km_h": 54,
+      "date": "2026-08-16",
+      "screenshot_url": "https://disk.yandex.ru/i/rwV-8W4uk9lgmA",
+      "status": "improved",
+      "track_type": "круг",
+      "history": [
+        {
+          "speed_km_h": 51,
+          "date": "2026-08-08"
+        }
+      ]
     },
     {
       "breed": "Малинуа",
@@ -726,17 +775,6 @@
       "history": []
     },
     {
-      "breed": "Уиппет",
-      "sex": "С",
-      "name": "Руна",
-      "speed_km_h": 51,
-      "date": "2026-08-08",
-      "screenshot_url": "https://disk.yandex.ru/i/wEFzsv8RypEXDw",
-      "status": "new",
-      "track_type": "прямая",
-      "history": []
-    },
-    {
       "breed": "Чирнеко дель Этна",
       "sex": "К",
       "name": "Джус",
@@ -941,7 +979,7 @@
       "speed_km_h": 47,
       "date": "2026-08-08",
       "screenshot_url": "https://disk.yandex.ru/i/BzPQPoP8r5RpJQ",
-      "status": "new",
+      "status": "normal",
       "track_type": "курсинг",
       "history": []
     },
@@ -1054,12 +1092,17 @@
       "breed": "Басенджи",
       "sex": "К",
       "name": "Ноки",
-      "speed_km_h": 44,
-      "date": "2026-05-27",
-      "screenshot_url": "https://disk.yandex.ru/i/KX1NScbXsFTqag",
-      "status": "normal",
-      "track_type": "прямая",
-      "history": []
+      "speed_km_h": 45,
+      "date": "2026-08-16",
+      "screenshot_url": "https://disk.yandex.ru/i/KVrtodB47tCBJQ",
+      "status": "improved",
+      "track_type": "круг",
+      "history": [
+        {
+          "speed_km_h": 44,
+          "date": "2026-05-27"
+        }
+      ]
     },
     {
       "breed": "Бордер-колли",
@@ -1175,6 +1218,23 @@
         {
           "speed_km_h": 43,
           "date": "2025-10-11",
+          "track_type": null
+        }
+      ]
+    },
+    {
+      "breed": "Басенджи",
+      "sex": "К",
+      "name": "Фокс",
+      "speed_km_h": 41,
+      "date": "2026-08-16",
+      "screenshot_url": "https://disk.yandex.ru/i/kVgLnKFRsp9VVg",
+      "status": "new",
+      "track_type": "круг",
+      "history": [
+        {
+          "speed_km_h": 42,
+          "date": "2025-07-30",
           "track_type": null
         }
       ]
@@ -1302,7 +1362,7 @@
       "speed_km_h": 35,
       "date": "2026-08-08",
       "screenshot_url": "https://disk.yandex.ru/i/5Ej0ZfqzlMONWA",
-      "status": "new",
+      "status": "normal",
       "track_type": "курсинг",
       "history": []
     },
@@ -1373,7 +1433,13 @@
       "screenshot_url": "https://disk.yandex.ru/i/i8aWw6Yh5S7U4w",
       "status": "normal",
       "track_type": null,
-      "history": []
+      "history": [
+        {
+          "speed_km_h": 62,
+          "date": "2026-08-16",
+          "track_type": "круг"
+        }
+      ]
     },
     {
       "breed": "Уиппет",
@@ -1435,9 +1501,13 @@
       "track_type": null,
       "history": [
         {
-          "speed_km_h": 57,
-          "date": "2026-05-31",
+          "speed_km_h": 58,
+          "date": "2026-08-16",
           "track_type": "круг"
+        },
+        {
+          "speed_km_h": 57,
+          "date": "2026-05-31"
         }
       ]
     },
@@ -1541,9 +1611,13 @@
       "track_type": null,
       "history": [
         {
+          "speed_km_h": 62,
+          "date": "2026-08-16",
+          "track_type": "круг"
+        },
+        {
           "speed_km_h": 60,
-          "date": "2026-05-27",
-          "track_type": "прямая"
+          "date": "2026-05-27"
         }
       ]
     },
@@ -1683,9 +1757,13 @@
       "track_type": null,
       "history": [
         {
-          "speed_km_h": 55,
-          "date": "2026-07-05",
+          "speed_km_h": 56,
+          "date": "2026-08-16",
           "track_type": "круг"
+        },
+        {
+          "speed_km_h": 55,
+          "date": "2026-07-05"
         },
         {
           "speed_km_h": 54,
@@ -2523,7 +2601,13 @@
       "screenshot_url": "https://disk.yandex.ru/i/4U62Snlu10SC3w",
       "status": "normal",
       "track_type": null,
-      "history": []
+      "history": [
+        {
+          "speed_km_h": 41,
+          "date": "2026-08-16",
+          "track_type": "круг"
+        }
+      ]
     },
     {
       "breed": "Немецкая овчарка",
@@ -3413,9 +3497,13 @@
       "status": "old",
       "history": [
         {
-          "speed_km_h": 59,
-          "date": "2026-06-20",
+          "speed_km_h": 60,
+          "date": "2026-08-16",
           "track_type": "круг"
+        },
+        {
+          "speed_km_h": 59,
+          "date": "2026-06-20"
         }
       ]
     },
@@ -3571,9 +3659,13 @@
       "status": "old",
       "history": [
         {
-          "speed_km_h": 55,
-          "date": "2026-07-05",
+          "speed_km_h": 56,
+          "date": "2026-08-16",
           "track_type": "круг"
+        },
+        {
+          "speed_km_h": 55,
+          "date": "2026-07-05"
         },
         {
           "speed_km_h": 54,
@@ -3644,6 +3736,125 @@
           "speed_km_h": 56,
           "date": "2026-07-14",
           "track_type": "прямая"
+        }
+      ]
+    },
+    {
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Руна",
+      "speed_km_h": 51,
+      "date": "2026-08-08",
+      "screenshot_url": "https://disk.yandex.ru/i/wEFzsv8RypEXDw",
+      "status": "new",
+      "history": [
+        {
+          "speed_km_h": 54,
+          "date": "2026-08-16",
+          "track_type": "круг"
+        }
+      ]
+    },
+    {
+      "breed": "Гальго",
+      "sex": "К",
+      "name": "Шерегеш",
+      "speed_km_h": 59,
+      "date": "2026-06-20",
+      "screenshot_url": "https://disk.yandex.ru/i/PmkzSj3f7EPYDw",
+      "status": "improved",
+      "history": [
+        {
+          "speed_km_h": 60,
+          "date": "2026-08-16",
+          "track_type": "круг"
+        },
+        {
+          "speed_km_h": 57,
+          "date": "2026-05-31"
+        }
+      ]
+    },
+    {
+      "breed": "Басенджи",
+      "sex": "К",
+      "name": "Ноки",
+      "speed_km_h": 44,
+      "date": "2026-05-27",
+      "screenshot_url": "https://disk.yandex.ru/i/KX1NScbXsFTqag",
+      "status": "old",
+      "history": [
+        {
+          "speed_km_h": 45,
+          "date": "2026-08-16",
+          "track_type": "круг"
+        }
+      ]
+    },
+    {
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Бонни",
+      "speed_km_h": 60,
+      "date": "2026-05-27",
+      "screenshot_url": "https://disk.yandex.ru/i/6vm328Pm2Q3ssw",
+      "status": "improved",
+      "history": [
+        {
+          "speed_km_h": 62,
+          "date": "2026-08-16",
+          "track_type": "круг"
+        },
+        {
+          "speed_km_h": 55,
+          "date": "2025-11-23",
+          "track_type": null
+        }
+      ]
+    },
+    {
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Винни",
+      "speed_km_h": 55,
+      "date": "2026-07-05",
+      "screenshot_url": "https://disk.yandex.ru/i/-md8yF9awNb2UA",
+      "status": "improved",
+      "history": [
+        {
+          "speed_km_h": 56,
+          "date": "2026-08-16",
+          "track_type": "круг"
+        },
+        {
+          "speed_km_h": 54,
+          "date": "2026-05-27"
+        },
+        {
+          "speed_km_h": 54,
+          "date": "2025-12-07",
+          "track_type": null
+        }
+      ]
+    },
+    {
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Энджи",
+      "speed_km_h": 57,
+      "date": "2026-05-31",
+      "screenshot_url": "https://disk.yandex.ru/i/O3uE0KJOuW4DUw",
+      "status": "old",
+      "history": [
+        {
+          "speed_km_h": 58,
+          "date": "2026-08-16",
+          "track_type": "круг"
+        },
+        {
+          "speed_km_h": 57,
+          "date": "2025-07-17",
+          "track_type": null
         }
       ]
     }
