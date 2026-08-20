@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/donino-speed-v1",
   "source": "google-sheets",
-  "count": 235,
+  "count": 240,
   "records": [
     {
       "breed": "Уиппет",
@@ -84,7 +84,7 @@
       "speed_km_h": 62,
       "date": "2026-08-16",
       "screenshot_url": "https://disk.yandex.ru/i/4MHt4Gy_OxBrwg",
-      "status": "new",
+      "status": "improved",
       "track_type": "круг",
       "history": [
         {
@@ -900,6 +900,17 @@
       ]
     },
     {
+      "breed": "Чирнеко дель Этна",
+      "sex": "С",
+      "name": "Нэнси",
+      "speed_km_h": 49,
+      "date": "2026-06-19",
+      "screenshot_url": "https://disk.yandex.ru/i/sUs_-U1TRNQOPA",
+      "status": "new",
+      "track_type": "круг",
+      "history": []
+    },
+    {
       "breed": "Бордер-колли",
       "sex": "С",
       "name": "Вега",
@@ -1105,6 +1116,17 @@
       ]
     },
     {
+      "breed": "Чирнеко дель Этна",
+      "sex": "С",
+      "name": "Кьянти",
+      "speed_km_h": 45,
+      "date": "2026-08-19",
+      "screenshot_url": "https://disk.yandex.ru/i/ROQQH2-KbUHk0A",
+      "status": "new",
+      "track_type": "круг",
+      "history": []
+    },
+    {
       "breed": "Бордер-колли",
       "sex": "К",
       "name": "Велес",
@@ -1145,6 +1167,23 @@
         {
           "speed_km_h": 44,
           "date": "2025-12-20",
+          "track_type": null
+        }
+      ]
+    },
+    {
+      "breed": "Немецкая овчарка",
+      "sex": "С",
+      "name": "Юта",
+      "speed_km_h": 43,
+      "date": "2026-06-19",
+      "screenshot_url": "https://disk.yandex.ru/i/bVmXHakwTvsLcQ",
+      "status": "improved",
+      "track_type": "круг",
+      "history": [
+        {
+          "speed_km_h": 41,
+          "date": "2025-07-13",
           "track_type": null
         }
       ]
@@ -1206,6 +1245,27 @@
       ]
     },
     {
+      "breed": "Немецкая овчарка",
+      "sex": "С",
+      "name": "Ая",
+      "speed_km_h": 42,
+      "date": "2026-08-19",
+      "screenshot_url": "https://disk.yandex.ru/i/QWcS9NBNSutlFw",
+      "status": "improved",
+      "track_type": "круг",
+      "history": [
+        {
+          "speed_km_h": 39,
+          "date": "2025-07-30",
+          "track_type": null
+        },
+        {
+          "speed_km_h": 36,
+          "date": "2025-07-13"
+        }
+      ]
+    },
+    {
       "breed": "Левретка",
       "sex": "К",
       "name": "Финик",
@@ -1229,7 +1289,7 @@
       "speed_km_h": 41,
       "date": "2026-08-16",
       "screenshot_url": "https://disk.yandex.ru/i/kVgLnKFRsp9VVg",
-      "status": "new",
+      "status": "normal",
       "track_type": "круг",
       "history": [
         {
@@ -1323,23 +1383,28 @@
       ]
     },
     {
+      "breed": "Немецкая овчарка",
+      "sex": "К",
+      "name": "Дизель",
+      "speed_km_h": 39,
+      "date": "2026-06-19",
+      "screenshot_url": "https://disk.yandex.ru/i/IvQPX8f7gsk8Cg",
+      "status": "improved",
+      "track_type": "круг",
+      "history": [
+        {
+          "speed_km_h": 38,
+          "date": "2026-07-08"
+        }
+      ]
+    },
+    {
       "breed": "Веймаранер",
       "sex": "К",
       "name": "Верс",
       "speed_km_h": 38,
       "date": "2026-04-08",
       "screenshot_url": "https://disk.yandex.ru/i/dvUv-NUqvJp0Jg",
-      "status": "normal",
-      "track_type": "курсинг",
-      "history": []
-    },
-    {
-      "breed": "Немецкая овчарка",
-      "sex": "К",
-      "name": "Дизель",
-      "speed_km_h": 38,
-      "date": "2026-07-08",
-      "screenshot_url": "https://disk.yandex.ru/i/ngL4KshRPemnAg",
       "status": "normal",
       "track_type": "курсинг",
       "history": []
@@ -2678,7 +2743,13 @@
       "screenshot_url": "https://disk.yandex.ru/i/LoqnmNYE9VI5zg",
       "status": "normal",
       "track_type": null,
-      "history": []
+      "history": [
+        {
+          "speed_km_h": 43,
+          "date": "2026-06-19",
+          "track_type": "круг"
+        }
+      ]
     },
     {
       "breed": "Ризеншнауцер",
@@ -2740,6 +2811,11 @@
       "status": "improved",
       "track_type": null,
       "history": [
+        {
+          "speed_km_h": 42,
+          "date": "2026-08-19",
+          "track_type": "круг"
+        },
         {
           "speed_km_h": 36,
           "date": "2025-07-13"
@@ -2966,6 +3042,11 @@
       "screenshot_url": "https://disk.yandex.ru/i/j9_-0EbBw5bQHw",
       "status": "old",
       "history": [
+        {
+          "speed_km_h": 42,
+          "date": "2026-08-19",
+          "track_type": "круг"
+        },
         {
           "speed_km_h": 39,
           "date": "2025-07-30",
@@ -3855,6 +3936,22 @@
           "speed_km_h": 57,
           "date": "2025-07-17",
           "track_type": null
+        }
+      ]
+    },
+    {
+      "breed": "Немецкая овчарка",
+      "sex": "К",
+      "name": "Дизель",
+      "speed_km_h": 38,
+      "date": "2026-07-08",
+      "screenshot_url": "https://disk.yandex.ru/i/ngL4KshRPemnAg",
+      "status": "old",
+      "history": [
+        {
+          "speed_km_h": 39,
+          "date": "2026-06-19",
+          "track_type": "круг"
         }
       ]
     }
