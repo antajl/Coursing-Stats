@@ -77,14 +77,15 @@ export default function TopDogsFilters({
   const breedTrigger = (
     <button
       type="button"
-      className={`inline-flex h-8 items-center rounded-full border px-3.5 text-xs font-semibold whitespace-nowrap transition-colors gap-1.5 ${
+      className={`inline-flex h-8 items-center rounded-full border px-3.5 text-xs font-semibold transition-colors gap-1.5 max-w-[20rem] ${
         filterBreed
           ? 'border-camel-500 bg-camel-500 text-charcoal-900 dark:border-camel-400 dark:bg-camel-600 dark:text-cream-50'
           : 'border-old-money-200 dark:border-charcoal-600 bg-cream-50 dark:bg-charcoal-800 text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-700'
       }`}
+      title={filterBreed || 'Порода'}
     >
-      {filterBreed || 'Порода'}
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-down h-3.5 w-3.5 transition-transform" aria-hidden>
+      <span className="min-w-0 truncate">{filterBreed || 'Порода'}</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-down h-3.5 w-3.5 transition-transform shrink-0" aria-hidden>
         <path d="m6 9 6 6 6-6"></path>
       </svg>
     </button>
@@ -100,7 +101,7 @@ export default function TopDogsFilters({
       }`}
     >
       {filterYear || 'Год'}
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-down h-3.5 w-3.5 transition-transform" aria-hidden>
+      <svg xmlns="http://www.w3.org/0/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-down h-3.5 w-3.5 transition-transform" aria-hidden>
         <path d="m6 9 6 6 6-6"></path>
       </svg>
     </button>

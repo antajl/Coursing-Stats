@@ -149,8 +149,8 @@ export default function DoninoPageToolbar({
   const breedTrigger = (
     <button
       type="button"
-      className={toolbarPillTriggerClass(filterBreeds.length > 0, 'max-w-[12rem]')}
-      title={filterBreeds.length > 1 ? filterBreeds.join(', ') : undefined}
+      className={toolbarPillTriggerClass(filterBreeds.length > 0, 'max-w-[20rem]')}
+      title={filterBreeds.length > 1 ? filterBreeds.join(', ') : filterBreeds[0] || undefined}
     >
       <span className="min-w-0 truncate">{breedTriggerLabel}</span>
       <PillChevron />
