@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import { createContext, useContext, useMemo } from 'react'
-import { TOOLBAR_PANEL } from '../../lib/toolbar'
+import { TOOLBAR_PANEL, TOOLBAR_CHIP, TOOLBAR_CHIP_IDLE } from '../../lib/toolbar'
 
 interface PageToolbarContextValue {
   filters: ReactNode
@@ -94,7 +94,7 @@ export default function PageToolbar({
   topRowClassName = '',
 }: PageToolbarProps) {
   const showBottom = Boolean(bottomLeft || bottomRight)
-  const showEnd = Boolean(exportAction || trailing)
+  const showEnd = Boolean(exportAction || trailing || onClearAllFilters)
 
   const contextValue = useMemo<PageToolbarContextValue>(
     () => ({
@@ -121,19 +121,18 @@ export default function PageToolbar({
                 <div className="flex shrink-0 items-center gap-2">
                   {exportAction}
                   {trailing}
+                  {onClearAllFilters && (
+                    <button
+                      type="button"
+                      onClick={onClearAllFilters}
+                      className={`${TOOLBAR_CHIP} ${TOOLBAR_CHIP_IDLE}`}
+                    >
+                      Сбросить
+                    </button>
+                  )}
                 </div>
               )}
             </div>
-
-            {onClearAllFilters && (
-              <button
-                type="button"
-                onClick={onClearAllFilters}
-                className="text-xs font-medium text-charcoal-500 underline-offset-2 hover:text-camel-700 hover:underline dark:text-charcoal-400 dark:hover:text-camel-400"
-              >
-                Сбросить все фильтры
-              </button>
-            )}
 
             {showBottom && (
               <div className="flex w-full flex-wrap items-center justify-between gap-x-4 gap-y-1 border-t border-old-money-200/60 pt-2.5 dark:border-charcoal-600/80">
