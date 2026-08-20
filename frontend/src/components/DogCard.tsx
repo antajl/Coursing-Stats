@@ -395,12 +395,6 @@ function DogCardRank() {
   )
 }
 
-// Attach compound components to main component
-DogCard.Header = DogCardHeader
-DogCard.Medals = DogCardMedals
-DogCard.Stats = DogCardStats
-DogCard.Rank = DogCardRank
-
 const DogCardInner = function DogCard({ dog, type, filterYear, rank, variant = 'card' }: DogCardProps) {
   const yearBadge = useMemo(
     () => dogYearBadge(dog, filterYear),
@@ -498,3 +492,9 @@ export default memo(DogCardInner, (prevProps, nextProps) => {
     prevProps.variant === nextProps.variant
   )
 })
+
+// Attach compound components to memoized component
+DogCard.Header = DogCardHeader
+DogCard.Medals = DogCardMedals
+DogCard.Stats = DogCardStats
+DogCard.Rank = DogCardRank
