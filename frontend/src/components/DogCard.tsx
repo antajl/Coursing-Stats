@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { createContext, useContext, useMemo, memo } from 'react'
+import { createContext, useContext, useMemo, memo, type FC, type NamedExoticComponent } from 'react'
 import { dogYearBadge } from '../lib/season'
 import { parseDogName } from '../lib/dogName'
 import { displayBreed } from '../lib/breedMapping'
@@ -33,6 +33,13 @@ function useDogCardContext() {
 export const DOG_CARD_HEIGHT_CLASS = 'h-[5.25rem]'
 
 export type DogCardVariant = 'card' | 'embedded'
+
+interface DogCardComposition {
+  Header: typeof DogCardHeader
+  Medals: typeof DogCardMedals
+  Stats: typeof DogCardStats
+  Rank: typeof DogCardRank
+}
 
 interface DogCardProps {
   dog: {
@@ -228,7 +235,7 @@ export function Top3AccentBar({ rank }: { rank: number }) {
 }
 
 // Compound components
-function DogCardHeader() {
+const DogCardHeader: FC = function DogCardHeader() {
   const { dog, filterYear } = useDogCardContext()
   const { primary, secondary } = useMemo(
     () => parseDogName(dog.name_lat, dog.name_ru),
@@ -272,7 +279,7 @@ function DogCardHeader() {
   )
 }
 
-function DogCardMedals() {
+const DogCardMedals: FC = function DogCardMedals() {
   const { dog } = useDogCardContext()
   return (
     <div className="flex min-w-0 shrink-0 items-center gap-1.5 text-xs">
@@ -283,7 +290,7 @@ function DogCardMedals() {
   )
 }
 
-function DogCardStats() {
+const DogCardStats: FC = function DogCardStats() {
   const { dog, type } = useDogCardContext()
   const stats = useMemo(() => {
     switch (type) {
@@ -333,7 +340,7 @@ function DogCardStats() {
       <div className="flex min-w-0 items-center justify-between gap-2 text-xs">
         <div className="flex min-w-0 flex-wrap items-center gap-x-1.5 gap-y-0.5">
           {stats.scoreStats.map((stat, idx) => (
-            <React.Fragment key={idx}>
+            <div key={idx} className="contents">
               <span className="text-charcoal-500 dark:text-charcoal-400">{stat.label}:</span>
               <span className="font-semibold tabular-nums text-charcoal-700 dark:text-charcoal-200">
                 {stat.value}
@@ -343,7 +350,7 @@ function DogCardStats() {
                   ·
                 </span>
               )}
-            </React.Fragment>
+            </div>
           ))}
         </div>
         <StartsLabel starts={stats.starts} size="md" />
@@ -385,7 +392,7 @@ function DogCardStats() {
   return null
 }
 
-function DogCardRank() {
+const DogCardRank: FC = function DogCardRank() {
   const { rank } = useDogCardContext()
   if (rank == null || rank <= 0) return null
   return (
@@ -443,10 +450,10 @@ const DogCardInner = function DogCard({ dog, type, filterYear, rank, variant = '
         {isTop3 && rank != null ? <Top3AccentBar rank={rank} /> : null}
         {type === 'combined' && elo ? (
           <>
-            <DogCard.Rank />
+            <DogCardRank />
             <div className="flex min-h-0 min-w-0 flex-1 flex-col justify-between gap-0 overflow-hidden">
-              <DogCard.Header />
-              <DogCard.Medals />
+              <DogCardHeader />
+              <DogCardMedals />
             </div>
 
             <div className="mr-8 flex min-h-0 min-w-[10.5rem] shrink-0 flex-col justify-between border-l border-old-money-200/60 pl-2 dark:border-charcoal-600/60">
@@ -461,10 +468,10 @@ const DogCardInner = function DogCard({ dog, type, filterYear, rank, variant = '
           </>
         ) : type === 'speed' ? (
           <>
-            <DogCard.Rank />
+            <DogCardRank />
             <div className="flex min-h-0 min-w-0 flex-1 flex-col justify-between gap-0 overflow-hidden">
-              <DogCard.Header />
-              <DogCard.Stats />
+              <DogCardHeader />
+              <DogCardStats />
             </div>
           </>
         ) : (
@@ -472,10 +479,10 @@ const DogCardInner = function DogCard({ dog, type, filterYear, rank, variant = '
             <div className="flex w-full items-start gap-2 overflow-hidden">
               {rank != null && rank > 0 && <RankBadge rank={rank} />}
               <div className="min-w-0 flex-1">
-                <DogCard.Header />
+                <DogCardHeader />
               </div>
             </div>
-            <DogCard.Stats />
+            <DogCardStats />
           </>
         )}
       </Link>
@@ -483,7 +490,7 @@ const DogCardInner = function DogCard({ dog, type, filterYear, rank, variant = '
   )
 }
 
-export default memo(DogCardInner, (prevProps, nextProps) => {
+const DogCardMemo = memo(DogCardInner, (prevProps, nextProps) => {
   return (
     prevProps.dog.dog_id === nextProps.dog.dog_id &&
     prevProps.type === nextProps.type &&
@@ -491,10 +498,12 @@ export default memo(DogCardInner, (prevProps, nextProps) => {
     prevProps.rank === nextProps.rank &&
     prevProps.variant === nextProps.variant
   )
-})
+}) as NamedExoticComponent<DogCardProps> & DogCardComposition
 
 // Attach compound components to memoized component
-DogCard.Header = DogCardHeader
-DogCard.Medals = DogCardMedals
-DogCard.Stats = DogCardStats
-DogCard.Rank = DogCardRank
+DogCardMemo.Header = DogCardHeader
+DogCardMemo.Medals = DogCardMedals
+DogCardMemo.Stats = DogCardStats
+DogCardMemo.Rank = DogCardRank
+
+export default DogCardMemo
