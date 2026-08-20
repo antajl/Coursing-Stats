@@ -3,7 +3,6 @@ import { ChevronDown } from 'lucide-react'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
 import ToolbarTip from '../../components/toolbar/ToolbarTip'
-import type { ActiveFilterChip } from '../../components/toolbar/ToolbarActiveFilters'
 import ModernDropdown from '../../components/ui/ModernDropdown'
 import { Icons } from '../../lib/icons'
 import { LEGEND_DOT_COLOR, MONTH_FILTER_OPTIONS } from './eventListUtils'
@@ -101,70 +100,6 @@ export default function EventsToolbar({
       searchQuery ||
       filterYear !== CURRENT_SEASON,
   )
-
-  const activeFilterChips = useMemo((): ActiveFilterChip[] => {
-    const chips: ActiveFilterChip[] = []
-
-    if (filterYear !== CURRENT_SEASON) {
-      chips.push({
-        key: 'year',
-        label: filterYear || 'Все года',
-        onRemove: () => onFilterYearChange(CURRENT_SEASON),
-      })
-    }
-    if (filterMonth) {
-      chips.push({
-        key: 'month',
-        label: MONTH_FILTER_OPTIONS.find((m) => m.value === filterMonth)?.label || filterMonth,
-        onRemove: () => onFilterMonthChange(''),
-      })
-    }
-    if (filterWithProtocol) {
-      chips.push({
-        key: 'protocol',
-        label: 'С протоколом',
-        onRemove: () => onFilterWithProtocolChange(false),
-      })
-    }
-    if (filterDiscipline) {
-      chips.push({
-        key: 'discipline',
-        label: disciplineLabel,
-        onRemove: () => onFilterDisciplineChange(''),
-      })
-    }
-    if (filterCompetitionKind) {
-      chips.push({
-        key: 'kind',
-        label: filterCompetitionKind,
-        onRemove: () => onFilterCompetitionKindChange(''),
-      })
-    }
-    if (quickPreset === 'championships' || filterChampionshipsOnly) {
-      chips.push({
-        key: 'championships',
-        label: 'Чемпионаты и кубки',
-        onRemove: onClearChampionships,
-      })
-    }
-
-    return chips
-  }, [
-    filterYear,
-    filterMonth,
-    filterWithProtocol,
-    filterDiscipline,
-    filterCompetitionKind,
-    filterChampionshipsOnly,
-    quickPreset,
-    disciplineLabel,
-    onFilterYearChange,
-    onFilterMonthChange,
-    onFilterWithProtocolChange,
-    onFilterDisciplineChange,
-    onFilterCompetitionKindChange,
-    onClearChampionships,
-  ])
 
   const handleDisciplineToggle = (discipline: string) => {
     onFilterDisciplineChange(filterDiscipline === discipline ? '' : discipline)
@@ -429,7 +364,6 @@ export default function EventsToolbar({
     <PageToolbar
       bare
       topRowClassName="pr-28 md:pr-32"
-      activeFilterChips={activeFilterChips}
       onClearAllFilters={hasActiveFilters ? onResetFilters : undefined}
       filters={filters}
       bottomLeft={

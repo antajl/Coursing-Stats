@@ -11,7 +11,6 @@ import { TOOLBAR_CHIP, TOOLBAR_CHIP_ACTIVE, TOOLBAR_CHIP_IDLE, TOOLBAR_FILTER_SE
 import { useJudges } from '../../hooks/useStaticData'
 import EmptyState from '../../components/EmptyState'
 import LoadingCard from '../../components/LoadingCard'
-import { buildJudgesActiveFilterChips } from '../SpeedRecords/toolbarFilters'
 import RecordSortBar from '../SpeedRecords/RecordSortBar'
 import { useListReveal } from '../../hooks/useListReveal'
 
@@ -142,21 +141,6 @@ export default function Judges() {
   const hasPanelFilters = Boolean(filterBreed || filterDiscipline)
   const panelFilterCount = (filterBreed ? 1 : 0) + (filterDiscipline ? 1 : 0)
 
-  const activeFilterChips = useMemo(
-    () =>
-      buildJudgesActiveFilterChips(
-        searchQuery,
-        filterYear,
-        filterBreed,
-        filterDiscipline,
-        setSearchQuery,
-        setFilterYear,
-        setFilterBreed,
-        setFilterDiscipline
-      ),
-    [searchQuery, filterYear, filterBreed, filterDiscipline]
-  )
-
   const clearFilters = () => {
     setSearchQuery('')
     setFilterYear('')
@@ -185,7 +169,6 @@ export default function Judges() {
       <div className="mb-4">
         <PageToolbar
           bare
-          activeFilterChips={activeFilterChips}
           onClearAllFilters={hasActiveFilters ? clearFilters : undefined}
           filters={
             <>

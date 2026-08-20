@@ -13,7 +13,6 @@ import {
 import { useShowJudges, useShowJudgesPage0 } from '../../hooks/useStaticData'
 import EmptyState from '../../components/EmptyState'
 import SkeletonLoader from '../../components/SkeletonLoader'
-import { buildJudgesActiveFilterChips } from '../SpeedRecords/toolbarFilters'
 import RecordSortBar from '../SpeedRecords/RecordSortBar'
 import type { ShowJudge } from '../../lib/staticData'
 import { matchesBreedFilter, uniqueCanonicalBreeds } from '../../lib/breedMapping'
@@ -190,21 +189,6 @@ export default function ShowJudges() {
   const hasActiveFilters = Boolean(yearIsNonDefault || filterBreed || searchQuery)
   const hasPanelFilters = Boolean(filterBreed)
 
-  const activeFilterChips = useMemo(
-    () =>
-      buildJudgesActiveFilterChips(
-        searchQuery,
-        yearIsNonDefault ? filterYear : '',
-        filterBreed,
-        '',
-        setSearchQuery,
-        setFilterYear,
-        setFilterBreed,
-        () => undefined,
-      ),
-    [searchQuery, filterYear, filterBreed, yearIsNonDefault],
-  )
-
   const clearFilters = () => {
     setSearchQuery('')
     setFilterYear(CURRENT_SEASON)
@@ -253,7 +237,6 @@ export default function ShowJudges() {
       ) : null}
       <PageToolbar
         bare
-        activeFilterChips={activeFilterChips}
         onClearAllFilters={hasActiveFilters ? clearFilters : undefined}
         filters={
           <>

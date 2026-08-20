@@ -11,7 +11,6 @@ import ModernDropdown from '../../components/ui/ModernDropdown'
 import { TOOLBAR_NUMBER_INPUT, toolbarPillTriggerClass } from '../../lib/toolbar'
 import { exportDoninoToExcel, exportDoninoStatsToExcel } from './exportExcel'
 import { GROUP_BY_OPTIONS, type GroupBy } from './stats/constants'
-import { buildSpeedActiveFilterChips } from './toolbarFilters'
 
 interface DoninoPageToolbarProps {
   view: 'table' | 'stats'
@@ -122,61 +121,6 @@ export default function DoninoPageToolbar({
     [breeds],
   )
 
-  const activeFilterChips = useMemo(() => {
-    const chips = buildSpeedActiveFilterChips(
-      searchQuery,
-      filterYears,
-      filterBreeds,
-      filterSexes,
-      onSearchChange,
-      onToggleFilter,
-    )
-    if (filterMinSpeed) {
-      chips.push({
-        key: 'minSpeed',
-        label: `от ${filterMinSpeed} км/ч`,
-        onRemove: () => onFilterMinSpeedChange(''),
-      })
-    }
-    if (filterMaxSpeed) {
-      chips.push({
-        key: 'maxSpeed',
-        label: `до ${filterMaxSpeed} км/ч`,
-        onRemove: () => onFilterMaxSpeedChange(''),
-      })
-    }
-    if (filterMinTime) {
-      chips.push({
-        key: 'minTime',
-        label: `от ${filterMinTime} с`,
-        onRemove: () => onFilterMinTimeChange(''),
-      })
-    }
-    if (filterMaxTime) {
-      chips.push({
-        key: 'maxTime',
-        label: `до ${filterMaxTime} с`,
-        onRemove: () => onFilterMaxTimeChange(''),
-      })
-    }
-    return chips
-  }, [
-    searchQuery,
-    filterYears,
-    filterBreeds,
-    filterSexes,
-    filterMinSpeed,
-    filterMaxSpeed,
-    filterMinTime,
-    filterMaxTime,
-    onSearchChange,
-    onToggleFilter,
-    onFilterMinSpeedChange,
-    onFilterMaxSpeedChange,
-    onFilterMinTimeChange,
-    onFilterMaxTimeChange,
-  ])
-
   const clearAllYears = () => {
     for (const y of [...filterYears]) onToggleFilter('year', y)
   }
@@ -218,7 +162,6 @@ export default function DoninoPageToolbar({
       <PageToolbar
         bare
         topRowClassName="pr-28 md:pr-32"
-        activeFilterChips={activeFilterChips}
         onClearAllFilters={hasActiveFilters ? onClearFilters : undefined}
         filters={
           <>

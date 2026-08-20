@@ -9,7 +9,6 @@ import { SEO } from '../../components/SEO'
 import { CACHE } from '../../lib/constants'
 import ToolbarFiltersDropdown from '../../components/toolbar/ToolbarFiltersDropdown'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
-import type { ActiveFilterChip } from '../../components/toolbar/ToolbarActiveFilters'
 import { getShowExhibition } from '../../lib/staticData'
 import {
   SHOW_AWARD_BADGE,
@@ -74,20 +73,6 @@ export default function ShowExhibitionDetail() {
   )
 
   const hasActiveFilters = Boolean(searchQuery.trim() || awardKey)
-  const activeFilterChips: ActiveFilterChip[] = useMemo(() => {
-    const chips: ActiveFilterChip[] = []
-    if (searchQuery.trim()) {
-      chips.push({ key: 'search', label: searchQuery.trim(), onRemove: () => setSearchQuery('') })
-    }
-    if (awardKey) {
-      chips.push({
-        key: 'award',
-        label: SHOW_AWARD_BADGE[awardKey],
-        onRemove: () => setAwardKey(null),
-      })
-    }
-    return chips
-  }, [searchQuery, awardKey])
 
   if (loading) {
     return (
@@ -143,7 +128,6 @@ export default function ShowExhibitionDetail() {
           <PageToolbar
             bare
             trailing={<RKFAttribution />}
-            activeFilterChips={activeFilterChips}
             onClearAllFilters={
               hasActiveFilters
                 ? () => {
