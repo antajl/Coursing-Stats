@@ -25,6 +25,8 @@ export default function Home() {
     showStats,
     featuredEvents,
     featuredShows,
+    competitionSlides,
+    showSlides,
     topPlacement,
     topScore,
     topSpeed,
@@ -32,6 +34,7 @@ export default function Home() {
     doninoCoursingRecords,
     topShowDogs,
     loading,
+    error,
   } = homeData
 
   // GSAP animations for reveal sections
