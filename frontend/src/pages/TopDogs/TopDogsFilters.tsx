@@ -8,7 +8,6 @@ import {
   TOOLBAR_FILTER_SECTION_LABEL,
   TOOLBAR_NUMBER_INPUT,
 } from '../../lib/toolbar'
-import { buildTopDogsActiveFilterChips } from '../SpeedRecords/toolbarFilters'
 
 interface TopDogsFiltersProps {
   searchQuery: string
@@ -71,40 +70,6 @@ export default function TopDogsFilters({
   const hasThresholdFilters = filterMinStarts || filterScoreFrom || filterSpeedFrom
   const thresholdCount = [filterMinStarts, filterScoreFrom, filterSpeedFrom].filter(Boolean).length
 
-  const activeFilterChips = useMemo(
-    () =>
-      buildTopDogsActiveFilterChips(
-        searchQuery,
-        filterYear,
-        filterBreed,
-        filterMinStarts,
-        filterScoreFrom,
-        filterSpeedFrom,
-        onSearchChange,
-        onYearChange,
-        onBreedChange,
-        onMinStartsChange,
-        onScoreFromChange,
-        onSpeedFromChange,
-        currentSeason,
-      ),
-    [
-      searchQuery,
-      filterYear,
-      filterBreed,
-      filterMinStarts,
-      filterScoreFrom,
-      filterSpeedFrom,
-      onSearchChange,
-      onYearChange,
-      onBreedChange,
-      onMinStartsChange,
-      onScoreFromChange,
-      onSpeedFromChange,
-      currentSeason,
-    ]
-  )
-
   const handleBreedSelect = (breed: string) => {
     onBreedChange(filterBreed === breed ? '' : breed)
   }
@@ -146,7 +111,6 @@ export default function TopDogsFilters({
       <PageToolbar
         bare
         topRowClassName="pr-28 md:pr-32"
-        activeFilterChips={activeFilterChips}
         onClearAllFilters={hasActiveFilters ? onResetFilters : undefined}
         filters={
           <>

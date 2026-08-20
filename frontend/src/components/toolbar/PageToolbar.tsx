@@ -1,13 +1,11 @@
 import type { ReactNode } from 'react'
 import { createContext, useContext, useMemo } from 'react'
 import { TOOLBAR_PANEL } from '../../lib/toolbar'
-import ToolbarActiveFilters, { type ActiveFilterChip } from './ToolbarActiveFilters'
 
 interface PageToolbarContextValue {
   filters: ReactNode
   exportAction?: ReactNode
   trailing?: ReactNode
-  activeFilterChips?: ActiveFilterChip[]
   onClearAllFilters?: () => void
   bottomLeft?: ReactNode
   bottomRight?: ReactNode
@@ -31,7 +29,6 @@ interface PageToolbarProps {
   exportAction?: ReactNode
   /** Справа в первой строке (источник данных и т.п.) */
   trailing?: ReactNode
-  activeFilterChips?: ActiveFilterChip[]
   onClearAllFilters?: () => void
   bottomLeft?: ReactNode
   bottomRight?: ReactNode
@@ -90,7 +87,6 @@ export default function PageToolbar({
   filters,
   exportAction,
   trailing,
-  activeFilterChips = [],
   onClearAllFilters,
   bottomLeft,
   bottomRight,
@@ -105,14 +101,13 @@ export default function PageToolbar({
       filters,
       exportAction,
       trailing,
-      activeFilterChips,
       onClearAllFilters,
       bottomLeft,
       bottomRight,
       bare,
       topRowClassName,
     }),
-    [filters, exportAction, trailing, activeFilterChips, onClearAllFilters, bottomLeft, bottomRight, bare, topRowClassName]
+    [filters, exportAction, trailing, onClearAllFilters, bottomLeft, bottomRight, bare, topRowClassName]
   )
 
   return (
@@ -130,7 +125,15 @@ export default function PageToolbar({
               )}
             </div>
 
-            <ToolbarActiveFilters chips={activeFilterChips} onClearAll={onClearAllFilters} />
+            {onClearAllFilters && (
+              <button
+                type="button"
+                onClick={onClearAllFilters}
+                className="text-xs font-medium text-charcoal-500 underline-offset-2 hover:text-camel-700 hover:underline dark:text-charcoal-400 dark:hover:text-camel-400"
+              >
+                Сбросить все фильтры
+              </button>
+            )}
 
             {showBottom && (
               <div className="flex w-full flex-wrap items-center justify-between gap-x-4 gap-y-1 border-t border-old-money-200/60 pt-2.5 dark:border-charcoal-600/80">
