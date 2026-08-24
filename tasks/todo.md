@@ -1,73 +1,67 @@
-# Code Optimization Task List
+# Task List: Backend Duplication Elimination
 
-## Phase 1: Foundation Utilities
+## Phase 1: Shared Audit Utilities
 
-- [ ] **Task 1:** Create useClickOutside Hook
-  - Create `frontend/src/hooks/useClickOutside.ts`
-  - Handle mousedown and touchstart events
-  - Proper cleanup on unmount
-  - TypeScript types defined
-  - Verify: TypeScript compilation, dropdown components work
+- [ ] **Task 1:** Create shared walkJson utility
+  - Create `backend/lib/audit-utils.ts` with walkJson function
+  - Update 3 files to import from new utility
+  - Verify TypeScript compilation
+  - Size: S
 
-- [ ] **Task 2:** Unify Text Normalization Functions
-  - Create `backend/lib/text-normalization.ts`
-  - Update `dog-identity-match.ts` to use shared utility
-  - Update `dog-name-parts.ts` to use shared utility
-  - Verify: Tests pass, build-all-data succeeds, manual dog identity check
+- [ ] **Task 2:** Create shared normalizeKeyPart utility  
+  - Create `backend/lib/key-normalization.ts` with normalizeKeyPart function
+  - Update 6 files to import from new utility
+  - Verify TypeScript compilation
+  - Size: S
 
-## Checkpoint: Foundation
-- [ ] All tests pass
-- [ ] TypeScript compilation succeeds
-- [ ] No regressions in existing functionality
+## Phase 2: Show Identity Normalization
 
-## Phase 2: Component Optimization
+- [ ] **Task 3:** Create unified normalizeShowIdentity utility
+  - Create `backend/lib/show-normalization.ts` with robust implementation
+  - Document behavioral differences from simple version
+  - Update import scripts with migration checks
+  - Size: M
 
-- [ ] **Task 3:** Refactor DogCard.tsx Performance
-  - Remove unnecessary `useMemo` calls
-  - Consolidate duplicate formatting functions
-  - Simplify conditional rendering logic
-  - Verify: Tests pass, manual DogCard rendering check, performance check
+## Phase 3: Unify Normalization Functions
 
-- [ ] **Task 4:** Apply useClickOutside to Dropdown Components
-  - Update `ToolbarFiltersDropdown.tsx` to use new hook
-  - Update `ToolbarSelectDropdown.tsx` to use new hook
-  - Remove duplicate click-outside logic
-  - Verify: Tests pass, manual dropdown functionality check
+- [ ] **Task 4:** Consolidate normalizeDogName and normalizeBreed
+  - Extend `backend/lib/text-normalization.ts` with domain-specific functions
+  - Create unified normalizeDogName using normalizeText base
+  - Create unified normalizeBreed using normalizeText base
+  - Document behavioral changes
+  - Size: M
 
-## Checkpoint: Component Optimization
-- [ ] All tests pass
-- [ ] Dropdowns work correctly
-- [ ] DogCard renders without regressions
+- [ ] **Task 5:** Update all imports to use consolidated utilities
+  - Update import statements in all affected files
+  - Remove local duplicate function definitions
+  - Verify no circular dependencies
+  - Check TypeScript compilation
+  - Size: L
 
-## Phase 3: Backend Parser Optimization
+## Phase 4: Testing
 
-- [ ] **Task 5:** Unify Extract Functions in Coursing Utils
-  - Create unified `extractNumberFromElement` function
-  - Update all coursing parser call sites
-  - Remove duplicate extract functions
-  - Verify: Parser fixtures pass, build-all-data succeeds, manual parsing check
+- [ ] **Task 6:** Comprehensive testing and validation
+  - Run `yarn test` - verify all tests pass
+  - Run `yarn run build-all-data` - verify data pipeline
+  - Run `yarn run test-parser-fixtures` - verify parser tests
+  - Manual smoke test of affected scripts
+  - Size: S
 
-- [ ] **Task 6:** Simplify CDN Pack Shard Function
-  - Extract `hashString` helper function
-  - Simplify `cdnPackShardKey` logic
-  - Add ponytail comment for optimization ceiling
-  - Verify: Tests pass, build-all-data succeeds, CDN path consistency check
+## Progress Tracking
 
-## Checkpoint: Backend Optimization
-- [ ] All tests pass
-- [ ] Parser fixtures pass
-- [ ] CDN functionality unchanged
+**Completed:** 0/6 tasks  
+**Current Phase:** Phase 1  
+**Estimated Code Reduction:** ~150 lines  
+**New Utility Modules:** 3  
+**Files to Update:** 15+
 
-## Phase 4: Final Cleanup
+## Blocking Issues
 
-- [ ] **Task 7:** Remove Unused Code and Imports
-  - Remove unused imports from refactored files
-  - Remove dead code
-  - Verify: Linter passes, TypeScript compilation, all tests pass
+None identified yet.
 
-## Checkpoint: Complete
-- [ ] All acceptance criteria met
-- [ ] All tests pass
-- [ ] Build succeeds
-- [ ] Code is more maintainable
-- [ ] Ready for review
+## Notes
+
+- Each task should be committed separately
+- Use feature branches for each phase
+- Run tests after each task completion
+- Document any behavioral changes in commit messages

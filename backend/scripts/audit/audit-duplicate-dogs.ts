@@ -13,6 +13,7 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { dogNamesLikelySame } from '../../lib/dog-name-parts'
 import { collectDogNameParts } from '../../lib/dog-identity-match'
+import { normalizeBreed } from '../../lib/text-normalization.js'
 
 /**
  * Stricter than dogNamesLikelySame alone: if both dogs have a Latin-looking name,
@@ -63,10 +64,6 @@ function isGarbageName(dog: DogCard): boolean {
   if (raw.length < 2) return true
   if (/^\d+$/.test(raw.replace(/\s+/g, ''))) return true
   return false
-}
-
-function normalizeBreed(breed?: string | null): string {
-  return (breed ?? '').trim().toUpperCase() || 'UNKNOWN'
 }
 
 function parseArgs(): { outPath: string } {
@@ -139,7 +136,7 @@ function main() {
 
   const byBreed = new Map<string, DogCard[]>()
   for (const d of usable) {
-    const b = normalizeBreed(d.breed)
+    const b = normalizeBreed(d.breed) || 'UNKNOWN'
     if (!byBreed.has(b)) byBreed.set(b, [])
     byBreed.get(b)!.push(d)
   }

@@ -12,6 +12,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { walkJson } from '../../lib/audit-utils.js'
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../..')
 const BY_ID = path.join(ROOT, 'data/v1/dogs/by-id')
@@ -44,18 +45,6 @@ type DogCard = {
   competition_files?: string[]
   merged_alias_ids?: number[]
   [key: string]: unknown
-}
-
-function walkJson(dir: string, base = ''): string[] {
-  if (!fs.existsSync(dir)) return []
-  const out: string[] = []
-  for (const ent of fs.readdirSync(dir, { withFileTypes: true })) {
-    const rel = base ? `${base}/${ent.name}` : ent.name
-    const full = path.join(dir, ent.name)
-    if (ent.isDirectory()) out.push(...walkJson(full, rel))
-    else if (ent.name.endsWith('.json')) out.push(rel)
-  }
-  return out
 }
 
 function readDog(id: number): DogCard {

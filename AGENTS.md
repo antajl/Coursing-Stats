@@ -7,10 +7,23 @@
 
 ## Quick Start (30 seconds)
 
-1. **[docs/MAP.md](docs/MAP.md)** — куда смотреть  
-2. **[docs/sheets/](docs/sheets/)** — шпаргалки 00–12  
-3. **[docs/decisions/](docs/decisions/)** — почему (ADRs)  
-4. Skills: `.cursor/rules/skill-routing.mdc` → Read matching `.cursor/skills/*/SKILL.md`
+1. **[docs/MAP.md](docs/MAP.md)** — куда смотреть
+2. **[docs/sheets/](docs/sheets/)** — шпаргалки 00–12
+3. **[docs/decisions/](docs/decisions/)** — почему (ADRs)
+4. Skills: `.agents/skills/*/SKILL.md` — 9 domain-specific skills for CoursingStats
+
+## Automatic Skill Usage
+
+The following global skills are automatically activated during development:
+
+- **ponytail** — Forces laziest working solution (YAGNI, stdlib first, minimal code)
+- **verification-before-completion** — Requires verification evidence before claiming completion
+- **incremental-implementation** — Builds in thin vertical slices with testing between each
+
+These skills trigger automatically based on context:
+- **ponytail**: Any coding task, refactoring, or when user mentions "lazy", "simplest", "minimal"
+- **verification-before-completion**: Before claiming completion, done, fixed, or tests pass
+- **incremental-implementation**: When implementing features touching multiple files or large changes
 
 ---
 

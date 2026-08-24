@@ -3,15 +3,9 @@
  * Unlinked show dogs use ≥ SHOW_PROFILE_ID_BASE so they never collide with procoursing ids.
  */
 
-export const SHOW_PROFILE_ID_BASE = 1_000_000
+import { normalizeKeyPart } from './key-normalization.js'
 
-function normalizeKeyPart(value: string): string {
-  return value
-    .normalize('NFKC')
-    .replace(/\s+/g, ' ')
-    .trim()
-    .toUpperCase()
-}
+export const SHOW_PROFILE_ID_BASE = 1_000_000
 
 /** Deterministic FNV-1a → id in [SHOW_PROFILE_ID_BASE, SHOW_PROFILE_ID_BASE + 2^31). */
 export function stableShowProfileId(nameLat: string, breed: string): number {

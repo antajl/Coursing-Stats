@@ -6,6 +6,7 @@ import { fileURLToPath } from 'url'
 import fs from 'node:fs'
 import path from 'node:path'
 import { createHash } from 'node:crypto'
+import { normalizeShowIdentity } from '../../lib/show-normalization.js'
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url))
 config({ path: resolve(__dirname, '../../.env') })
@@ -49,10 +50,6 @@ function sourceKind(file: string): string {
 function yearOf(dateStr: string): number {
   const date = new Date(dateStr)
   return isNaN(date.getTime()) ? 0 : date.getFullYear()
-}
-
-function normalizeShowIdentity(name: string): string {
-  return name.toUpperCase().replace(/[^A-ZА-Я]/g, '')
 }
 
 function normalizeShowJudgeDisplayName(name: string): string {
