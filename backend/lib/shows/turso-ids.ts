@@ -1,8 +1,8 @@
 import crypto from 'node:crypto'
+import { normalizeShowIdentity as _normalizeShowIdentity } from '../show-normalization.js'
 
-export function normalizeShowIdentity(value: string): string {
-  return value.normalize('NFKC').toUpperCase().replace(/Ё/g, 'Е').replace(/[^\p{L}\p{N}]+/gu, ' ').replace(/\s+/g, ' ').trim()
-}
+// Re-export for backward compatibility with tests and import scripts
+export const normalizeShowIdentity = _normalizeShowIdentity
 
 /** Opaque, deterministic IDs avoid numeric hash collisions and never expose source text. */
 export function stableTursoId(kind: string, ...parts: Array<string | number | null | undefined>): string {

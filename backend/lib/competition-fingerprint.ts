@@ -6,6 +6,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { createHash } from 'node:crypto'
 import { fileURLToPath } from 'node:url'
+import { walkJson } from './audit-utils.js'
 
 export type CompetitionFingerprintDoc = {
   event?: { id?: number; date?: string; title?: string; event_type?: string; type?: string }
@@ -35,18 +36,6 @@ export function competitionContentFingerprint(doc: CompetitionFingerprintDoc): s
     .sort()
   const payload = [date, eventType, String(rows.length), ...rows].join('\n')
   return createHash('sha256').update(payload, 'utf8').digest('hex').slice(0, 16)
-}
-
-function walkJson(dir: string, base = ''): string[] {
-  if (!fs.existsSync(dir)) return []
-  const out: string[] = []
-  for (const ent of fs.readdirSync(dir, { withFileTypes: true })) {
-    const rel = base ? `${base}/${ent.name}` : ent.name
-    const full = path.join(dir, ent.name)
-    if (ent.isDirectory()) out.push(...walkJson(full, rel))
-    else if (ent.name.endsWith('.json')) out.push(rel)
-  }
-  return out
 }
 
 /** Count duplicate fingerprint groups among competitions with results. */

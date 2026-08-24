@@ -24,3 +24,25 @@ export function normalizeText(text: string | null | undefined): string {
     .replace(/\s+/g, ' ')
     .trim()
 }
+
+/**
+ * Normalizes dog names for identity matching.
+ * Uses normalizeText as base for consistent behavior across domains.
+ * 
+ * @param name - Dog name to normalize
+ * @returns Normalized dog name
+ */
+export function normalizeDogName(name: string | null | undefined): string {
+  return normalizeText(name)
+}
+
+/**
+ * Normalizes breed names for identity matching.
+ * Uses normalizeText as base for consistent behavior across domains.
+ * 
+ * @param breed - Breed name to normalize
+ * @returns Normalized breed name
+ */
+export function normalizeBreed(breed: string | null | undefined): string {
+  return normalizeText(breed)
+}

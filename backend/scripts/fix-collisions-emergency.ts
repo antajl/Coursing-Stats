@@ -3,6 +3,7 @@ import * as path from 'path'
 import { fileURLToPath } from 'url'
 import { stableShowProfileId } from '../lib/show-dog-profile-id'
 import crypto from 'crypto'
+import { normalizeKeyPart } from '../../lib/key-normalization.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -48,14 +49,6 @@ function listExhibitionJsonFiles(dir: string): string[] {
     else if (name.endsWith('.json')) files.push(full)
   }
   return files
-}
-
-function normalizeKeyPart(value: string): string {
-  return value
-    .normalize('NFKC')
-    .replace(/\s+/g, ' ')
-    .trim()
-    .toUpperCase()
 }
 
 function dogStableId(nameLat: string, breed: string): string {

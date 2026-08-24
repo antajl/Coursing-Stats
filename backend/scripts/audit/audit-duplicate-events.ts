@@ -8,6 +8,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { competitionContentFingerprint } from '../../lib/competition-fingerprint'
+import { walkJson } from '../../lib/audit-utils.js'
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../..')
 const COMPS = path.join(ROOT, 'data/v1/competitions')
@@ -20,18 +21,6 @@ type CompMeta = {
   eventType: string | null
   resultsCount: number
   fingerprint: string
-}
-
-function walkJson(dir: string, base = ''): string[] {
-  if (!fs.existsSync(dir)) return []
-  const out: string[] = []
-  for (const ent of fs.readdirSync(dir, { withFileTypes: true })) {
-    const rel = base ? `${base}/${ent.name}` : ent.name
-    const full = path.join(dir, ent.name)
-    if (ent.isDirectory()) out.push(...walkJson(full, rel))
-    else if (ent.name.endsWith('.json')) out.push(rel)
-  }
-  return out
 }
 
 function main() {
