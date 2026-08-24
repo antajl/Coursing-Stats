@@ -149,10 +149,11 @@ export default function DoninoPageToolbar({
   const breedTrigger = (
     <button
       type="button"
-      className={toolbarPillTriggerClass(filterBreeds.length > 0, 'max-w-[20rem]')}
-      title={filterBreeds.length > 1 ? filterBreeds.join(', ') : filterBreeds[0] || undefined}
+      className={toolbarPillTriggerClass(filterBreeds.length > 0)}
+      title={filterBreeds.length > 1 ? filterBreeds.join(', ') : filterBreeds[0] || 'Порода'}
+      aria-label={filterBreeds.length > 1 ? `Породы: ${filterBreeds.join(', ')}` : filterBreeds[0] ? `Порода: ${filterBreeds[0]}` : 'Порода'}
     >
-      <span className="min-w-0 truncate">{breedTriggerLabel}</span>
+      <span className="shrink-0">Порода</span>
       <PillChevron />
     </button>
   )
@@ -162,7 +163,6 @@ export default function DoninoPageToolbar({
       <PageToolbar
         bare
         topRowClassName="pr-28 md:pr-32"
-        onClearAllFilters={hasActiveFilters ? onClearFilters : undefined}
         filters={
           <>
             <ToolbarSearch

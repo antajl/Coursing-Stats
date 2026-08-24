@@ -192,8 +192,6 @@ export default function ShowCalendar() {
     <PageToolbar
       bare
       topRowClassName="pr-28 md:pr-32"
-      activeFilterChips={activeFilterChips}
-      onClearAllFilters={hasActiveFilters ? handleResetFilters : undefined}
       filters={
         <ShowCalendarToolbar
           searchQuery={searchQuery}

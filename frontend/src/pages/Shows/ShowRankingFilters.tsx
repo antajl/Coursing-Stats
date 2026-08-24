@@ -190,8 +190,6 @@ export default function ShowRankingFilters({
       <PageToolbar
         bare
         topRowClassName="pr-28 md:pr-32"
-        activeFilterChips={activeFilterChips}
-        onClearAllFilters={hasActiveFilters ? onResetFilters : undefined}
         filters={
           <>
             <ToolbarSearch

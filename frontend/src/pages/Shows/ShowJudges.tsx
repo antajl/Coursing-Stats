@@ -237,7 +237,6 @@ export default function ShowJudges() {
       ) : null}
       <PageToolbar
         bare
-        onClearAllFilters={hasActiveFilters ? clearFilters : undefined}
         filters={
           <>
             <ToolbarSearch
