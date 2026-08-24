@@ -7,6 +7,8 @@
  * - Порода: обязательна; RU↔EN через alias map.
  */
 
+import { normalizeText } from './text-normalization'
+
 export type DogIdentityFields = {
   name_lat?: string | null
   name_ru?: string | null
@@ -16,16 +18,6 @@ export type DogIdentityFields = {
 
 export type BreedAliasMap = Map<string, Set<string>>
 
-function normalizePart(text: string): string {
-  return text
-    .toUpperCase()
-    .replace(/Ё/g, 'Е')
-    .replace(/[''`'"".]/g, '')
-    .replace(/[-_/\\]+/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim()
-}
-
 /** Целые формы клички (до/после «/», lat + ru) — не отдельные слова. */
 export function collectDogNameParts(nameLat?: string | null, nameRu?: string | null): string[] {
   const parts = new Set<string>()
@@ -33,7 +25,7 @@ export function collectDogNameParts(nameLat?: string | null, nameRu?: string | n
     if (!raw?.trim()) continue
     const normalized = raw.replace(/<br\s*\/?>/gi, '/')
     for (const chunk of normalized.split('/')) {
-      const part = normalizePart(chunk)
+      const part = normalizeText(chunk)
       if (part.length >= 2) parts.add(part)
     }
   }
@@ -61,7 +53,7 @@ export function breedKeys(breed?: string | null, breedEn?: string | null): strin
       .replace(/\s+[А-ЯЁA-Z][а-яёa-z]+\s+[А-ЯЁA-Z]\.[А-ЯЁA-Z]\.?$/u, '')
       .replace(/\s+[А-ЯЁA-Z][а-яё]+\s+[А-ЯЁA-Z][а-яё]+$/u, '')
       .trim()
-    const n = normalizePart(cleaned)
+    const n = normalizeText(cleaned)
     if (n) keys.add(n)
   }
   return [...keys]

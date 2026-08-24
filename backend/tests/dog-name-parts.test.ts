@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import { collectDogNameParts, dogNamesLikelySame } from '../lib/dog-name-parts';
+import { collectDogNameParts } from '../lib/dog-identity-match';
+import { dogNamesLikelySame } from '../lib/dog-name-parts';
 
 describe('dog-name-parts', () => {
   it('splits slash names into parts', () => {

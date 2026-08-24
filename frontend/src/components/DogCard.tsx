@@ -93,7 +93,7 @@ function StatBox({ label, value }: { label: string; value: string | number }) {
   )
 }
 
-function formatJudgeScore(value?: number | null): string {
+function formatScore(value?: number | null): string {
   if (value == null || Number.isNaN(value)) return '—'
   return Number.isInteger(value) ? String(value) : value.toFixed(1)
 }
@@ -130,7 +130,7 @@ function CsDetailLine({
       <span>
         ср.{' '}
         <span className="font-semibold tabular-nums text-charcoal-700 dark:text-charcoal-200">
-          {formatJudgeScore(dog.avg_judge_score)}
+          {formatScore(dog.avg_judge_score)}
         </span>
       </span>
       <span className="text-old-money-300 dark:text-charcoal-500" aria-hidden>
@@ -139,7 +139,7 @@ function CsDetailLine({
       <span>
         лучш.{' '}
         <span className="font-semibold tabular-nums text-charcoal-700 dark:text-charcoal-200">
-          {formatJudgeScore(dog.best_judge_score)}
+          {formatScore(dog.best_judge_score)}
         </span>
       </span>
       <span className="text-old-money-300 dark:text-charcoal-500" aria-hidden>
@@ -148,7 +148,7 @@ function CsDetailLine({
       <span>
         Σ{' '}
         <span className="font-semibold tabular-nums text-charcoal-700 dark:text-charcoal-200">
-          {formatJudgeScore(dog.best_score)}
+          {formatScore(dog.best_score)}
         </span>
       </span>
     </div>
@@ -237,18 +237,9 @@ export function Top3AccentBar({ rank }: { rank: number }) {
 // Compound components
 const DogCardHeader: FC = function DogCardHeader() {
   const { dog, filterYear } = useDogCardContext()
-  const { primary, secondary } = useMemo(
-    () => parseDogName(dog.name_lat, dog.name_ru),
-    [dog.name_lat, dog.name_ru]
-  )
-  const breedDisplay = useMemo(
-    () => displayBreed(dog.breed),
-    [dog.breed]
-  )
-  const yearBadge = useMemo(
-    () => dogYearBadge(dog, filterYear),
-    [dog, filterYear]
-  )
+  const { primary, secondary } = parseDogName(dog.name_lat, dog.name_ru)
+  const breedDisplay = displayBreed(dog.breed)
+  const yearBadge = dogYearBadge(dog, filterYear)
 
   return (
     <div className="min-w-0 overflow-hidden">
@@ -403,41 +394,23 @@ const DogCardRank: FC = function DogCardRank() {
 }
 
 const DogCardInner = function DogCard({ dog, type, filterYear, rank, variant = 'card' }: DogCardProps) {
-  const yearBadge = useMemo(
-    () => dogYearBadge(dog, filterYear),
-    [dog, filterYear]
-  )
-  const elo = useMemo(
-    () => (type === 'elo' || type === 'combined' ? eloDisplay(dog) : null),
-    [type, dog]
-  )
-  const isTop3 = useMemo(
-    () => (type === 'combined' || type === 'speed') && rank != null && rank > 0 && rank <= 3,
-    [type, rank]
-  )
-  const top3Wash = useMemo(
-    () => (isTop3 ? TOP3_WASH[rank as 1 | 2 | 3] : ''),
-    [isTop3, rank]
-  )
+  const yearBadge = dogYearBadge(dog, filterYear)
+  const elo = (type === 'elo' || type === 'combined') ? eloDisplay(dog) : null
+  const isTop3 = (type === 'combined' || type === 'speed') && rank != null && rank > 0 && rank <= 3
+  const top3Wash = isTop3 ? TOP3_WASH[rank as 1 | 2 | 3] : ''
 
   const shellBase = variant === 'embedded' ? EMBEDDED_SHELL : CARD_SHELL
   const useFlexShell = type === 'combined' || type === 'speed'
-  const cardShell = useMemo(
-    () => useFlexShell
-      ? shellBase.replace(
-          `grid ${DOG_CARD_HEIGHT_CLASS} grid-rows-[auto_auto]`,
-          `flex ${DOG_CARD_HEIGHT_CLASS} flex-row items-stretch`
-        )
-      : shellBase,
-    [useFlexShell, shellBase]
-  )
+  const cardShell = useFlexShell
+    ? shellBase.replace(
+        `grid ${DOG_CARD_HEIGHT_CLASS} grid-rows-[auto_auto]`,
+        `flex ${DOG_CARD_HEIGHT_CLASS} flex-row items-stretch`
+      )
+    : shellBase
   // Overflow visible so the outside accent bar is not clipped by the shell.
-  const shellClass = useMemo(
-    () => isTop3
-      ? `${cardShell.replace('overflow-hidden', 'overflow-visible')} ${top3Wash}`.trim()
-      : cardShell,
-    [isTop3, cardShell, top3Wash]
-  )
+  const shellClass = isTop3
+    ? `${cardShell.replace('overflow-hidden', 'overflow-visible')} ${top3Wash}`.trim()
+    : cardShell
 
   const contextValue = useMemo<DogCardContextValue>(
     () => ({ dog, type, filterYear, rank, variant }),

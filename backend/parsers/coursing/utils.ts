@@ -2,27 +2,30 @@
  * Утилиты для парсинга результатов курсинга
  */
 
-export function extractNumber(text) {
-  if (!text) return null;
-  const match = text.match(/\d+/);
-  return match ? parseInt(match[0], 10) : null;
+import * as cheerio from "cheerio"
+
+export function extractNumber(text: string | null | undefined): number | null {
+  if (!text) return null
+  const match = text.match(/\d+/)
+  return match ? parseInt(match[0], 10) : null
 }
 
-export function extractBoldNumber($el) {
-  const text = $el.find("b").text();
-  return extractNumber(text);
+/**
+ * Извлекает число из элемента cheerio с опциональным селектором.
+ * Если указан селектор, ищет внутри него, иначе использует сам элемент.
+ */
+export function extractNumberFromElement($el: cheerio.Cheerio<any>, selector?: string): number | null {
+  const text = selector ? $el.find(selector).text() : $el.text()
+  return extractNumber(text)
 }
 
-export function extractItalicNumber($el) {
-  const text = $el.find("i").text();
-  if (text) {
-    const match = text.match(/\d+/);
-    return match ? parseInt(match[0], 10) : null;
-  }
-  // Если нет <i>, пробуем просто текст
-  const plainText = $el.text();
-  const match = plainText.match(/\d+/);
-  return match ? parseInt(match[0], 10) : null;
+// ponytail: оставляем для обратной совместимости существующего кода
+export function extractBoldNumber($el: cheerio.Cheerio<any>): number | null {
+  return extractNumberFromElement($el, 'b')
+}
+
+export function extractItalicNumber($el: cheerio.Cheerio<any>): number | null {
+  return extractNumberFromElement($el, 'i')
 }
 
 export function cleanText(text) {

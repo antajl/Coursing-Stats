@@ -1,6 +1,7 @@
-import { useEffect, useId, useRef, useState, type ReactNode } from 'react'
+import { useId, useRef, useState, type ReactNode } from 'react'
 import { ChevronDown } from 'lucide-react'
 import { TOOLBAR_CHIP, TOOLBAR_CHIP_ACTIVE, TOOLBAR_CHIP_IDLE } from '../../lib/toolbar'
+import { useClickOutside } from '../../hooks/useClickOutside'
 
 interface ToolbarSelectDropdownProps {
   value: string
@@ -23,28 +24,7 @@ export default function ToolbarSelectDropdown({
 
   const displayValue = value || placeholder
 
-  useEffect(() => {
-    function handlePointerOutside(event: MouseEvent | TouchEvent) {
-      const target = event.target as Node | null
-      if (ref.current && target && !ref.current.contains(target)) {
-        setOpen(false)
-      }
-    }
-    document.addEventListener('mousedown', handlePointerOutside)
-    document.addEventListener('touchstart', handlePointerOutside, { passive: true })
-    return () => {
-      document.removeEventListener('mousedown', handlePointerOutside)
-      document.removeEventListener('touchstart', handlePointerOutside)
-    }
-  }, [])
-
-  useEffect(() => {
-    function handleEsc(event: KeyboardEvent) {
-      if (event.key === 'Escape') setOpen(false)
-    }
-    document.addEventListener('keydown', handleEsc)
-    return () => document.removeEventListener('keydown', handleEsc)
-  }, [])
+  useClickOutside(ref, { onClickOutside: () => setOpen(false) })
 
   const handleSelect = (option: string) => {
     onChange(option === value ? '' : option)

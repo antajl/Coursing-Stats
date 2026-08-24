@@ -3,6 +3,7 @@ import { ChevronDown } from 'lucide-react'
 import { TOOLBAR_CHIP, TOOLBAR_CHIP_ACTIVE, TOOLBAR_CHIP_IDLE } from '../../lib/toolbar'
 import { useKeyboardNavigation } from '../../hooks/useKeyboardNavigation'
 import { useFocusTrap } from '../../hooks/useFocusManagement'
+import { useClickOutside } from '../../hooks/useClickOutside'
 
 interface ToolbarFiltersDropdownProps {
   children: ReactNode
@@ -49,20 +50,7 @@ function ToolbarFiltersDropdownInner({
     onEscape: () => setOpenState(false),
   })
 
-  useEffect(() => {
-    function handlePointerOutside(event: MouseEvent | TouchEvent) {
-      const target = event.target as Node | null
-      if (ref.current && target && !ref.current.contains(target)) {
-        setOpenState(false)
-      }
-    }
-    document.addEventListener('mousedown', handlePointerOutside)
-    document.addEventListener('touchstart', handlePointerOutside, { passive: true })
-    return () => {
-      document.removeEventListener('mousedown', handlePointerOutside)
-      document.removeEventListener('touchstart', handlePointerOutside)
-    }
-  }, [])
+  useClickOutside(ref, { onClickOutside: () => setOpenState(false) })
 
   useEffect(() => {
     if (!open) return
