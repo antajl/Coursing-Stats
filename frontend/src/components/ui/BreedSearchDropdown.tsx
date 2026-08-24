@@ -94,9 +94,16 @@ export default function BreedSearchDropdown({
       isOpen={isOpen}
       onOpenChange={setIsOpen}
       className={className}
-      width="280px"
+      width="320px"
     >
       <div className="p-2 min-w-[200px] max-w-xs">
+        {/* Selected breed indicator */}
+        {selectedBreed && !searchQuery && (
+          <div className="mb-2 px-2 py-1.5 text-xs font-medium text-camel-700 dark:text-camel-400 bg-camel-50 dark:bg-camel-900/20 rounded-md">
+            Выбрано: {displayBreed(selectedBreed).primary}
+          </div>
+        )}
+
         {/* Search input */}
         <div className="relative mb-2">
           <input

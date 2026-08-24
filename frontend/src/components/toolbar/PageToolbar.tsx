@@ -6,7 +6,6 @@ interface PageToolbarContextValue {
   filters: ReactNode
   exportAction?: ReactNode
   trailing?: ReactNode
-  onClearAllFilters?: () => void
   bottomLeft?: ReactNode
   bottomRight?: ReactNode
   bare?: boolean
@@ -29,7 +28,6 @@ interface PageToolbarProps {
   exportAction?: ReactNode
   /** Справа в первой строке (источник данных и т.п.) */
   trailing?: ReactNode
-  onClearAllFilters?: () => void
   bottomLeft?: ReactNode
   bottomRight?: ReactNode
   bare?: boolean
@@ -87,27 +85,25 @@ export default function PageToolbar({
   filters,
   exportAction,
   trailing,
-  onClearAllFilters,
   bottomLeft,
   bottomRight,
   bare = false,
   topRowClassName = '',
 }: PageToolbarProps) {
   const showBottom = Boolean(bottomLeft || bottomRight)
-  const showEnd = Boolean(exportAction || trailing || onClearAllFilters)
+  const showEnd = Boolean(exportAction || trailing)
 
   const contextValue = useMemo<PageToolbarContextValue>(
     () => ({
       filters,
       exportAction,
       trailing,
-      onClearAllFilters,
       bottomLeft,
       bottomRight,
       bare,
       topRowClassName,
     }),
-    [filters, exportAction, trailing, onClearAllFilters, bottomLeft, bottomRight, bare, topRowClassName]
+    [filters, exportAction, trailing, bottomLeft, bottomRight, bare, topRowClassName]
   )
 
   return (
@@ -121,15 +117,6 @@ export default function PageToolbar({
                 <div className="flex shrink-0 items-center gap-2">
                   {exportAction}
                   {trailing}
-                  {onClearAllFilters && (
-                    <button
-                      type="button"
-                      onClick={onClearAllFilters}
-                      className={`${TOOLBAR_CHIP} ${TOOLBAR_CHIP_IDLE}`}
-                    >
-                      Сбросить
-                    </button>
-                  )}
                 </div>
               )}
             </div>

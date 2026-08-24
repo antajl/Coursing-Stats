@@ -128,14 +128,6 @@ export default function ShowExhibitionDetail() {
           <PageToolbar
             bare
             trailing={<RKFAttribution />}
-            onClearAllFilters={
-              hasActiveFilters
-                ? () => {
-                    setSearchQuery('')
-                    setAwardKey(null)
-                  }
-                : undefined
-            }
             filters={
               <>
                 <ToolbarSearch

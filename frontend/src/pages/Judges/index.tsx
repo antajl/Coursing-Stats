@@ -169,7 +169,6 @@ export default function Judges() {
       <div className="mb-4">
         <PageToolbar
           bare
-          onClearAllFilters={hasActiveFilters ? clearFilters : undefined}
           filters={
             <>
               <ToolbarSearch

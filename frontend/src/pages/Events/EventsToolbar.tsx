@@ -364,7 +364,6 @@ export default function EventsToolbar({
     <PageToolbar
       bare
       topRowClassName="pr-28 md:pr-32"
-      onClearAllFilters={hasActiveFilters ? onResetFilters : undefined}
       filters={filters}
       bottomLeft={
         stats ? (
