@@ -1,5 +1,16 @@
 {
   "version": 1,
+  "globalSkills": [
+    "ponytail",
+    "verification-before-completion",
+    "incremental-implementation",
+    "test-driven-development",
+    "debugging-and-error-recovery",
+    "git-workflow-and-versioning",
+    "context-engineering",
+    "security-and-hardening",
+    "planning-and-task-breakdown"
+  ],
   "skills": {
     "accessibility": {
       "source": "addyosmani/web-quality-skills",
@@ -65,13 +76,13 @@
       "source": "addyosmani/agent-skills",
       "sourceType": "github",
       "skillPath": "skills/context-engineering/SKILL.md",
-      "computedHash": "bb8864454c5a24636cab86c4b3c4b29e7e7431c80485bfd7c9c0a19a01936510"
+      "computedHash": "custom-install"
     },
     "debugging-and-error-recovery": {
       "source": "addyosmani/agent-skills",
       "sourceType": "github",
       "skillPath": "skills/debugging-and-error-recovery/SKILL.md",
-      "computedHash": "1a119d27e8f1d27ed6317adf3115826336491346780dcb7d7a7a7f79fe3ffe10"
+      "computedHash": "custom-install"
     },
     "deprecation-and-migration": {
       "source": "addyosmani/agent-skills",
@@ -79,24 +90,13 @@
       "skillPath": "skills/deprecation-and-migration/SKILL.md",
       "computedHash": "55a559781ae92cacd6b75acd509e61b577c2660212d1808da2fbb8dbadc90196"
     },
-    "document-processing": {
-      "source": "heymegabyte/claude-skills",
-      "sourceType": "github",
-      "skillPath": "18-document-processing/SKILL.md",
-      "computedHash": "bd4390d93145f93eaf6413a205eac3481ff644279d8c09e99580ac20e08cc623"
-    },
     "documentation-and-adrs": {
       "source": "addyosmani/agent-skills",
       "sourceType": "github",
       "skillPath": "skills/documentation-and-adrs/SKILL.md",
       "computedHash": "7464fd2950b99fb00bbf65cab27653e0a049eef00c98927713ffdfe232a9daa9"
     },
-    "documentation-manager": {
-      "source": "pedroknigge/documentation-manager",
-      "sourceType": "github",
-      "skillPath": "skills/documentation-manager/SKILL.md",
-      "computedHash": "35bf533a146daec91be7d1c0bd1c793ecfb370d859334ac5fb423e4ac8a88caa"
-    },
+
     "doubt-driven-development": {
       "source": "addyosmani/agent-skills",
       "sourceType": "github",
@@ -125,7 +125,7 @@
       "source": "addyosmani/agent-skills",
       "sourceType": "github",
       "skillPath": "skills/git-workflow-and-versioning/SKILL.md",
-      "computedHash": "8b53153892a21c3a486831bf608970b040ad0e9da698505af58c659242cf835c"
+      "computedHash": "custom-install"
     },
     "grill-me": {
       "source": "mattpocock/skills",
@@ -144,12 +144,6 @@
       "sourceType": "github",
       "skillPath": "skills/engineering/improve-codebase-architecture/SKILL.md",
       "computedHash": "569299a60c8e93880f3b3c1eca55578f58f7e1a4155876edb4cb814da3d6b3ea"
-    },
-    "incremental-implementation": {
-      "source": "addyosmani/agent-skills",
-      "sourceType": "github",
-      "skillPath": "skills/incremental-implementation/SKILL.md",
-      "computedHash": "d83e705bd54b0a4b02a75cdda0a3f2a28b935286e31eb945e13aafe079c87b59"
     },
     "interview-me": {
       "source": "addyosmani/agent-skills",
@@ -179,7 +173,7 @@
       "source": "addyosmani/agent-skills",
       "sourceType": "github",
       "skillPath": "skills/planning-and-task-breakdown/SKILL.md",
-      "computedHash": "ecc29e854ff27b26a2e6b3e4f15ec5b9bd74f65c7e434515eb0e4ac23cc6cdee"
+      "computedHash": "custom-install"
     },
     "react-composition-2026": {
       "source": "patternsdev/skills",
@@ -215,7 +209,7 @@
       "source": "addyosmani/agent-skills",
       "sourceType": "github",
       "skillPath": "skills/security-and-hardening/SKILL.md",
-      "computedHash": "a0246e67cf8f8a18687a7736442738318b1997715fbdf53dfcf767082c51cca5"
+      "computedHash": "custom-install"
     },
     "self-improving-agent": {
       "source": "charon-fan/agent-playbook",
@@ -245,7 +239,7 @@
       "source": "addyosmani/agent-skills",
       "sourceType": "github",
       "skillPath": "skills/test-driven-development/SKILL.md",
-      "computedHash": "133428ac28fa75cf6f8cf5dafea8d603022852ce59a0520620784c7e3dc7e519"
+      "computedHash": "custom-install"
     },
     "using-agent-skills": {
       "source": "addyosmani/agent-skills",
@@ -289,11 +283,23 @@
       "skillPath": "skills/verify-security/SKILL.md",
       "computedHash": "f65809e547abd4193847a66cafaa586dcccc8c2b93e4977aa7d6294a4d7402ce"
     },
-    "wiki": {
-      "source": "natsu1211/deepwiki-skill",
+    "ponytail": {
+      "source": "DietrichGebert/ponytail",
       "sourceType": "github",
-      "skillPath": ".apm/skills/wiki/SKILL.md",
-      "computedHash": "5db7ef2714539e8b3f4eb96f797a12be87a36172ed7d6d590ea2c389a9004818"
+      "skillPath": "skills/ponytail/SKILL.md",
+      "computedHash": "custom-install"
+    },
+    "verification-before-completion": {
+      "source": "Charpup/verification-before-completion",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "custom-install"
+    },
+    "incremental-implementation": {
+      "source": "addyosmani/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/incremental-implementation/SKILL.md",
+      "computedHash": "custom-install"
     }
   }
 }
