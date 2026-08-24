@@ -4,30 +4,8 @@
  * и одна из частей совпадает с другой записью той же породы — скорее всего одна собака.
  */
 
-function normalizePart(text: string): string {
-  return text
-    .toUpperCase()
-    .replace(/[''`'""]/g, '')
-    .replace(/Ё/g, 'Е')
-    .replace(/\s+/g, ' ')
-    .trim();
-}
-
-/** Все значимые части клички (до/после «/», name_lat и name_ru). */
-export function collectDogNameParts(nameLat?: string | null, nameRu?: string | null): string[] {
-  const parts = new Set<string>();
-
-  for (const raw of [nameLat, nameRu]) {
-    if (!raw?.trim()) continue;
-    const normalized = raw.replace(/<br\s*\/?>/gi, '/');
-    for (const chunk of normalized.split('/')) {
-      const part = normalizePart(chunk);
-      if (part.length >= 2) parts.add(part);
-    }
-  }
-
-  return [...parts];
-}
+import { normalizeText } from './text-normalization'
+import { collectDogNameParts } from './dog-identity-match'
 
 export type DogNameFields = {
   name_lat?: string | null;
@@ -36,7 +14,7 @@ export type DogNameFields = {
 };
 
 function normalizeBreed(breed?: string | null): string {
-  return (breed ?? '').trim().toUpperCase();
+  return normalizeText(breed ?? '');
 }
 
 /** Одна порода + пересечение частей клички → вероятно одна собака. */

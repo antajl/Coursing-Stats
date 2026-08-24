@@ -11,7 +11,8 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { dogNamesLikelySame, collectDogNameParts } from '../../lib/dog-name-parts'
+import { dogNamesLikelySame } from '../../lib/dog-name-parts'
+import { collectDogNameParts } from '../../lib/dog-identity-match'
 
 /**
  * Stricter than dogNamesLikelySame alone: if both dogs have a Latin-looking name,

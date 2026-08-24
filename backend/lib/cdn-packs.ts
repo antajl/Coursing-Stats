@@ -5,6 +5,16 @@
 
 export const CDN_PACK_SHARD_COUNT = 256
 
+/** Simple string hash for consistent sharding. ponytail: optimization ceiling */
+function hashString(str: string): number {
+  let hash = 0
+  for (let i = 0; i < str.length; i++) {
+    hash = (hash << 5) - hash + str.charCodeAt(i)
+    hash |= 0
+  }
+  return Math.abs(hash)
+}
+
 /** Shard key for any string/number id (sport dogs, show judges, etc.). */
 export function cdnPackShardKey(id: string | number, shardCount = CDN_PACK_SHARD_COUNT): string {
   const numId = Number(id)
@@ -12,13 +22,7 @@ export function cdnPackShardKey(id: string | number, shardCount = CDN_PACK_SHARD
     return String(Math.abs(numId) % shardCount).padStart(3, '0')
   }
 
-  const strId = String(id)
-  let hash = 0
-  for (let i = 0; i < strId.length; i++) {
-    hash = (hash << 5) - hash + strId.charCodeAt(i)
-    hash |= 0
-  }
-  return String(Math.abs(hash) % shardCount).padStart(3, '0')
+  return String(hashString(String(id)) % shardCount).padStart(3, '0')
 }
 
 export function dogProfilePackPath(shardKey: string): string {
