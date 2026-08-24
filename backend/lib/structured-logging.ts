@@ -15,7 +15,7 @@ export interface LogContext {
   operation?: string;
   userId?: string;
   requestId?: string;
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 export interface LogEntry {
@@ -24,7 +24,7 @@ export interface LogEntry {
   message: string;
   context: LogContext;
   error?: Error;
-  metadata?: Record<string, any>;
+  metadata?: Record<string, unknown>;
 }
 
 class StructuredLogger {
@@ -34,7 +34,7 @@ class StructuredLogger {
     this.context = { component };
   }
 
-  private log(level: LogLevel, message: string, metadata?: Record<string, any>, error?: Error): void {
+  private log(level: LogLevel, message: string, metadata?: Record<string, unknown>, error?: Error): void {
     const entry: LogEntry = {
       timestamp: new Date().toISOString(),
       level,
@@ -63,19 +63,19 @@ class StructuredLogger {
     }
   }
 
-  debug(message: string, metadata?: Record<string, any>): void {
+  debug(message: string, metadata?: Record<string, unknown>): void {
     this.log(LogLevel.DEBUG, message, metadata);
   }
 
-  info(message: string, metadata?: Record<string, any>): void {
+  info(message: string, metadata?: Record<string, unknown>): void {
     this.log(LogLevel.INFO, message, metadata);
   }
 
-  warn(message: string, metadata?: Record<string, any>): void {
+  warn(message: string, metadata?: Record<string, unknown>): void {
     this.log(LogLevel.WARN, message, metadata);
   }
 
-  error(message: string, error?: Error, metadata?: Record<string, any>): void {
+  error(message: string, error?: Error, metadata?: Record<string, unknown>): void {
     this.log(LogLevel.ERROR, message, metadata, error);
   }
 
