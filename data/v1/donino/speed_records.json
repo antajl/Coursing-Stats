@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/donino-speed-v1",
   "source": "google-sheets",
-  "count": 240,
+  "count": 245,
   "records": [
     {
       "breed": "Уиппет",
@@ -619,12 +619,16 @@
       "breed": "Малинуа",
       "sex": "К",
       "name": "Люцифер",
-      "speed_km_h": 52,
-      "date": "2026-05-31",
-      "screenshot_url": "https://disk.yandex.ru/i/AnH7sMtdWZUlMg",
-      "status": "normal",
+      "speed_km_h": 53,
+      "date": "2026-08-27",
+      "screenshot_url": "https://disk.yandex.ru/i/vEPiSJdAs-9j7A",
+      "status": "improved",
       "track_type": "круг",
       "history": [
+        {
+          "speed_km_h": 52,
+          "date": "2026-05-31"
+        },
         {
           "speed_km_h": 53,
           "date": "2025-08-20",
@@ -906,7 +910,7 @@
       "speed_km_h": 49,
       "date": "2026-06-19",
       "screenshot_url": "https://disk.yandex.ru/i/sUs_-U1TRNQOPA",
-      "status": "new",
+      "status": "normal",
       "track_type": "круг",
       "history": []
     },
@@ -1122,7 +1126,7 @@
       "speed_km_h": 45,
       "date": "2026-08-19",
       "screenshot_url": "https://disk.yandex.ru/i/ROQQH2-KbUHk0A",
-      "status": "new",
+      "status": "normal",
       "track_type": "круг",
       "history": []
     },
@@ -1170,6 +1174,17 @@
           "track_type": null
         }
       ]
+    },
+    {
+      "breed": "Басенджи",
+      "sex": "К",
+      "name": "Заки",
+      "speed_km_h": 44,
+      "date": "2026-08-27",
+      "screenshot_url": "https://disk.yandex.ru/i/DQ0Y5rxsE359og",
+      "status": "new",
+      "track_type": "круг",
+      "history": []
     },
     {
       "breed": "Немецкая овчарка",
@@ -1366,6 +1381,17 @@
       ]
     },
     {
+      "breed": "Басенджи",
+      "sex": "К",
+      "name": "Джерри",
+      "speed_km_h": 40,
+      "date": "2026-08-27",
+      "screenshot_url": "https://disk.yandex.ru/i/RYUsFigybvTBIA",
+      "status": "new",
+      "track_type": "круг",
+      "history": []
+    },
+    {
       "breed": "Веймаранер",
       "sex": "С",
       "name": "Тень",
@@ -1397,6 +1423,28 @@
           "date": "2026-07-08"
         }
       ]
+    },
+    {
+      "breed": "Немецкая овчарка",
+      "sex": "К",
+      "name": "Кольт",
+      "speed_km_h": 39,
+      "date": "2026-08-27",
+      "screenshot_url": "https://disk.yandex.ru/i/HWEBaGEy189nVw",
+      "status": "new",
+      "track_type": "прямая ",
+      "history": []
+    },
+    {
+      "breed": "Бриар",
+      "sex": "К",
+      "name": "Иоширо",
+      "speed_km_h": 39,
+      "date": "2026-08-27",
+      "screenshot_url": "https://disk.yandex.ru/i/wk4AByePZekDjw",
+      "status": "new",
+      "track_type": "круг",
+      "history": []
     },
     {
       "breed": "Веймаранер",
@@ -1912,9 +1960,13 @@
       "track_type": null,
       "history": [
         {
-          "speed_km_h": 52,
-          "date": "2026-05-31",
+          "speed_km_h": 53,
+          "date": "2026-08-27",
           "track_type": "круг"
+        },
+        {
+          "speed_km_h": 52,
+          "date": "2026-05-31"
         }
       ]
     },
@@ -3952,6 +4004,27 @@
           "speed_km_h": 39,
           "date": "2026-06-19",
           "track_type": "круг"
+        }
+      ]
+    },
+    {
+      "breed": "Малинуа",
+      "sex": "К",
+      "name": "Люцифер",
+      "speed_km_h": 52,
+      "date": "2026-05-31",
+      "screenshot_url": "https://disk.yandex.ru/i/AnH7sMtdWZUlMg",
+      "status": "old",
+      "history": [
+        {
+          "speed_km_h": 53,
+          "date": "2026-08-27",
+          "track_type": "круг"
+        },
+        {
+          "speed_km_h": 53,
+          "date": "2025-08-20",
+          "track_type": null
         }
       ]
     }
