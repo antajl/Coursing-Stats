@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/donino-speed-v1",
   "source": "google-sheets",
-  "count": 245,
+  "count": 251,
   "records": [
     {
       "breed": "Уиппет",
@@ -539,6 +539,17 @@
       ]
     },
     {
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Эйва",
+      "speed_km_h": 54,
+      "date": "2026-08-29",
+      "screenshot_url": "https://disk.yandex.ru/i/PzetBkznwJRFBg",
+      "status": "new",
+      "track_type": "прямая",
+      "history": []
+    },
+    {
       "breed": "Малинуа",
       "sex": "С",
       "name": "Барса",
@@ -635,6 +646,17 @@
           "track_type": null
         }
       ]
+    },
+    {
+      "breed": "Уиппет",
+      "sex": "К",
+      "name": "Ричи",
+      "speed_km_h": 53,
+      "date": "2026-08-29",
+      "screenshot_url": "https://disk.yandex.ru/i/B75Ar9dxsE_60g",
+      "status": "new",
+      "track_type": "курсинг",
+      "history": []
     },
     {
       "breed": "Фараонова собака",
@@ -862,6 +884,17 @@
       ]
     },
     {
+      "breed": "АПБТ",
+      "sex": "С",
+      "name": "Пуля",
+      "speed_km_h": 50,
+      "date": "2026-08-29",
+      "screenshot_url": "https://disk.yandex.ru/i/W-0KExprqD_NAA",
+      "status": "new",
+      "track_type": "прямая",
+      "history": []
+    },
+    {
       "breed": "Левретка",
       "sex": "К",
       "name": "Айвенго",
@@ -912,6 +945,17 @@
       "screenshot_url": "https://disk.yandex.ru/i/sUs_-U1TRNQOPA",
       "status": "normal",
       "track_type": "круг",
+      "history": []
+    },
+    {
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Джуди",
+      "speed_km_h": 49,
+      "date": "2026-08-29",
+      "screenshot_url": "https://disk.yandex.ru/i/7UFIeWHnhGHIlA",
+      "status": "new",
+      "track_type": "курсинг",
       "history": []
     },
     {
@@ -996,6 +1040,17 @@
       "screenshot_url": "https://disk.yandex.ru/i/BzPQPoP8r5RpJQ",
       "status": "normal",
       "track_type": "курсинг",
+      "history": []
+    },
+    {
+      "breed": "АПБТ",
+      "sex": "С",
+      "name": "Хира",
+      "speed_km_h": 47,
+      "date": "2026-08-29",
+      "screenshot_url": "https://disk.yandex.ru/i/zO7QsMnaTmvVLw",
+      "status": "new",
+      "track_type": "прямая",
       "history": []
     },
     {
@@ -1182,7 +1237,7 @@
       "speed_km_h": 44,
       "date": "2026-08-27",
       "screenshot_url": "https://disk.yandex.ru/i/DQ0Y5rxsE359og",
-      "status": "new",
+      "status": "normal",
       "track_type": "круг",
       "history": []
     },
@@ -1387,7 +1442,7 @@
       "speed_km_h": 40,
       "date": "2026-08-27",
       "screenshot_url": "https://disk.yandex.ru/i/RYUsFigybvTBIA",
-      "status": "new",
+      "status": "normal",
       "track_type": "круг",
       "history": []
     },
@@ -1431,7 +1486,7 @@
       "speed_km_h": 39,
       "date": "2026-08-27",
       "screenshot_url": "https://disk.yandex.ru/i/HWEBaGEy189nVw",
-      "status": "new",
+      "status": "normal",
       "track_type": "прямая ",
       "history": []
     },
@@ -1442,8 +1497,19 @@
       "speed_km_h": 39,
       "date": "2026-08-27",
       "screenshot_url": "https://disk.yandex.ru/i/wk4AByePZekDjw",
-      "status": "new",
+      "status": "normal",
       "track_type": "круг",
+      "history": []
+    },
+    {
+      "breed": "Пудель",
+      "sex": "К",
+      "name": "Рэми",
+      "speed_km_h": 39,
+      "date": "2026-08-29",
+      "screenshot_url": "https://disk.yandex.ru/i/PuUZgPIdbmZNPA",
+      "status": "new",
+      "track_type": "курсинг",
       "history": []
     },
     {
