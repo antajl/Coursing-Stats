@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/donino-speed-v1",
   "source": "google-sheets",
-  "count": 251,
+  "count": 255,
   "records": [
     {
       "breed": "Уиппет",
@@ -162,6 +162,30 @@
     },
     {
       "breed": "Уиппет",
+      "sex": "С",
+      "name": "Астрид",
+      "speed_km_h": 59,
+      "date": "2026-09-03",
+      "screenshot_url": "https://disk.yandex.ru/i/DPB22W9HFgf60A",
+      "status": "improved",
+      "track_type": "прямая",
+      "history": [
+        {
+          "speed_km_h": 57,
+          "date": "2026-07-04"
+        },
+        {
+          "speed_km_h": 54,
+          "date": "2026-07-01"
+        },
+        {
+          "speed_km_h": 53,
+          "date": "2026-06-25"
+        }
+      ]
+    },
+    {
+      "breed": "Уиппет",
       "sex": "К",
       "name": "Рик",
       "speed_km_h": 58,
@@ -228,26 +252,6 @@
           "speed_km_h": 57,
           "date": "2025-07-17",
           "track_type": null
-        }
-      ]
-    },
-    {
-      "breed": "Уиппет",
-      "sex": "С",
-      "name": "Астрид",
-      "speed_km_h": 57,
-      "date": "2026-07-04",
-      "screenshot_url": "https://disk.yandex.ru/i/EDzrtl2nf4yS_w",
-      "status": "improved",
-      "track_type": "прямая",
-      "history": [
-        {
-          "speed_km_h": 54,
-          "date": "2026-07-01"
-        },
-        {
-          "speed_km_h": 53,
-          "date": "2026-06-25"
         }
       ]
     },
@@ -545,7 +549,7 @@
       "speed_km_h": 54,
       "date": "2026-08-29",
       "screenshot_url": "https://disk.yandex.ru/i/PzetBkznwJRFBg",
-      "status": "new",
+      "status": "normal",
       "track_type": "прямая",
       "history": []
     },
@@ -654,7 +658,7 @@
       "speed_km_h": 53,
       "date": "2026-08-29",
       "screenshot_url": "https://disk.yandex.ru/i/B75Ar9dxsE_60g",
-      "status": "new",
+      "status": "normal",
       "track_type": "курсинг",
       "history": []
     },
@@ -890,7 +894,7 @@
       "speed_km_h": 50,
       "date": "2026-08-29",
       "screenshot_url": "https://disk.yandex.ru/i/W-0KExprqD_NAA",
-      "status": "new",
+      "status": "normal",
       "track_type": "прямая",
       "history": []
     },
@@ -954,7 +958,7 @@
       "speed_km_h": 49,
       "date": "2026-08-29",
       "screenshot_url": "https://disk.yandex.ru/i/7UFIeWHnhGHIlA",
-      "status": "new",
+      "status": "normal",
       "track_type": "курсинг",
       "history": []
     },
@@ -1015,6 +1019,23 @@
       ]
     },
     {
+      "breed": "Веймаранер",
+      "sex": "С",
+      "name": "Афина",
+      "speed_km_h": 48,
+      "date": "2026-09-03",
+      "screenshot_url": "https://disk.yandex.ru/i/2MHoCnpXmq6hNA",
+      "status": "new",
+      "track_type": "курсинг",
+      "history": [
+        {
+          "speed_km_h": 48,
+          "date": "2026-07-03",
+          "track_type": "курсинг"
+        }
+      ]
+    },
+    {
       "breed": "АПБТ",
       "sex": "К",
       "name": "Эль",
@@ -1049,7 +1070,7 @@
       "speed_km_h": 47,
       "date": "2026-08-29",
       "screenshot_url": "https://disk.yandex.ru/i/zO7QsMnaTmvVLw",
-      "status": "new",
+      "status": "normal",
       "track_type": "прямая",
       "history": []
     },
@@ -1447,6 +1468,22 @@
       "history": []
     },
     {
+      "breed": "Немецкая овчарка",
+      "sex": "С",
+      "name": "Ника",
+      "speed_km_h": 40,
+      "date": "2026-09-03",
+      "screenshot_url": "https://disk.yandex.ru/i/DUDkW-ptM-BSqA",
+      "status": "improved",
+      "track_type": "прямая",
+      "history": [
+        {
+          "speed_km_h": 38,
+          "date": "2026-07-14"
+        }
+      ]
+    },
+    {
       "breed": "Веймаранер",
       "sex": "С",
       "name": "Тень",
@@ -1508,7 +1545,7 @@
       "speed_km_h": 39,
       "date": "2026-08-29",
       "screenshot_url": "https://disk.yandex.ru/i/PuUZgPIdbmZNPA",
-      "status": "new",
+      "status": "normal",
       "track_type": "курсинг",
       "history": []
     },
@@ -1521,17 +1558,6 @@
       "screenshot_url": "https://disk.yandex.ru/i/dvUv-NUqvJp0Jg",
       "status": "normal",
       "track_type": "курсинг",
-      "history": []
-    },
-    {
-      "breed": "Немецкая овчарка",
-      "sex": "С",
-      "name": "Ника",
-      "speed_km_h": 38,
-      "date": "2026-07-14",
-      "screenshot_url": "https://disk.yandex.ru/i/DH29YAugvGv7cw",
-      "status": "normal",
-      "track_type": "прямая",
       "history": []
     },
     {
@@ -3098,6 +3124,23 @@
       "history": []
     },
     {
+      "breed": "Веймаранер",
+      "sex": "С",
+      "name": "Афина",
+      "speed_km_h": 48,
+      "date": "2026-07-03",
+      "screenshot_url": "https://disk.yandex.ru/i/2MHoCnpXmq6hNA",
+      "status": "normal",
+      "track_type": "курсинг",
+      "history": [
+        {
+          "speed_km_h": 48,
+          "date": "2026-09-03",
+          "track_type": "курсинг"
+        }
+      ]
+    },
+    {
       "breed": "Бордер-колли",
       "sex": "К",
       "name": "Велес",
@@ -3785,9 +3828,13 @@
       "status": "old",
       "history": [
         {
-          "speed_km_h": 57,
-          "date": "2026-07-04",
+          "speed_km_h": 59,
+          "date": "2026-09-03",
           "track_type": "прямая"
+        },
+        {
+          "speed_km_h": 57,
+          "date": "2026-07-04"
         },
         {
           "speed_km_h": 54,
@@ -3805,9 +3852,13 @@
       "status": "improved",
       "history": [
         {
-          "speed_km_h": 57,
-          "date": "2026-07-04",
+          "speed_km_h": 59,
+          "date": "2026-09-03",
           "track_type": "прямая"
+        },
+        {
+          "speed_km_h": 57,
+          "date": "2026-07-04"
         },
         {
           "speed_km_h": 53,
@@ -4091,6 +4142,46 @@
           "speed_km_h": 53,
           "date": "2025-08-20",
           "track_type": null
+        }
+      ]
+    },
+    {
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Астрид",
+      "speed_km_h": 57,
+      "date": "2026-07-04",
+      "screenshot_url": "https://disk.yandex.ru/i/EDzrtl2nf4yS_w",
+      "status": "improved",
+      "history": [
+        {
+          "speed_km_h": 59,
+          "date": "2026-09-03",
+          "track_type": "прямая"
+        },
+        {
+          "speed_km_h": 54,
+          "date": "2026-07-01"
+        },
+        {
+          "speed_km_h": 53,
+          "date": "2026-06-25"
+        }
+      ]
+    },
+    {
+      "breed": "Немецкая овчарка",
+      "sex": "С",
+      "name": "Ника",
+      "speed_km_h": 38,
+      "date": "2026-07-14",
+      "screenshot_url": "https://disk.yandex.ru/i/DH29YAugvGv7cw",
+      "status": "old",
+      "history": [
+        {
+          "speed_km_h": 40,
+          "date": "2026-09-03",
+          "track_type": "прямая"
         }
       ]
     }
