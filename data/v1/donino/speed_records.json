@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/donino-speed-v1",
   "source": "google-sheets",
-  "count": 255,
+  "count": 256,
   "records": [
     {
       "breed": "Уиппет",
@@ -445,6 +445,26 @@
       ]
     },
     {
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Руна",
+      "speed_km_h": 56,
+      "date": "2026-09-10",
+      "screenshot_url": "https://disk.yandex.ru/i/odewwVCC4BHlBg",
+      "status": "improved",
+      "track_type": "прямая",
+      "history": [
+        {
+          "speed_km_h": 54,
+          "date": "2026-08-16"
+        },
+        {
+          "speed_km_h": 51,
+          "date": "2026-08-08"
+        }
+      ]
+    },
+    {
       "breed": "Салюки",
       "sex": "С",
       "name": "Тайга",
@@ -525,22 +545,6 @@
       "status": "normal",
       "track_type": "прямая",
       "history": []
-    },
-    {
-      "breed": "Уиппет",
-      "sex": "С",
-      "name": "Руна",
-      "speed_km_h": 54,
-      "date": "2026-08-16",
-      "screenshot_url": "https://disk.yandex.ru/i/rwV-8W4uk9lgmA",
-      "status": "improved",
-      "track_type": "круг",
-      "history": [
-        {
-          "speed_km_h": 51,
-          "date": "2026-08-08"
-        }
-      ]
     },
     {
       "breed": "Уиппет",
@@ -3999,9 +4003,13 @@
       "status": "new",
       "history": [
         {
+          "speed_km_h": 56,
+          "date": "2026-09-10",
+          "track_type": "прямая"
+        },
+        {
           "speed_km_h": 54,
-          "date": "2026-08-16",
-          "track_type": "круг"
+          "date": "2026-08-16"
         }
       ]
     },
@@ -4182,6 +4190,26 @@
           "speed_km_h": 40,
           "date": "2026-09-03",
           "track_type": "прямая"
+        }
+      ]
+    },
+    {
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Руна",
+      "speed_km_h": 54,
+      "date": "2026-08-16",
+      "screenshot_url": "https://disk.yandex.ru/i/rwV-8W4uk9lgmA",
+      "status": "improved",
+      "history": [
+        {
+          "speed_km_h": 56,
+          "date": "2026-09-10",
+          "track_type": "прямая"
+        },
+        {
+          "speed_km_h": 51,
+          "date": "2026-08-08"
         }
       ]
     }
