@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/donino-speed-v1",
   "source": "google-sheets",
-  "count": 256,
+  "count": 268,
   "records": [
     {
       "breed": "Уиппет",
@@ -181,6 +181,27 @@
         {
           "speed_km_h": 53,
           "date": "2026-06-25"
+        }
+      ]
+    },
+    {
+      "breed": "Уиппет",
+      "sex": "К",
+      "name": "Сильвер",
+      "speed_km_h": 59,
+      "date": "2026-09-13",
+      "screenshot_url": "https://disk.yandex.ru/i/3dJjbyMfA8XRiA",
+      "status": "improved",
+      "track_type": "прямая",
+      "history": [
+        {
+          "speed_km_h": 56,
+          "date": "2026-07-14",
+          "track_type": "прямая"
+        },
+        {
+          "speed_km_h": 54,
+          "date": "2026-07-01"
         }
       ]
     },
@@ -405,22 +426,6 @@
     },
     {
       "breed": "Уиппет",
-      "sex": "К",
-      "name": "Сильвер",
-      "speed_km_h": 56,
-      "date": "2026-07-14",
-      "screenshot_url": "https://disk.yandex.ru/i/XYLCa5yhXcbM0Q",
-      "status": "improved",
-      "track_type": "прямая",
-      "history": [
-        {
-          "speed_km_h": 54,
-          "date": "2026-07-01"
-        }
-      ]
-    },
-    {
-      "breed": "Уиппет",
       "sex": "С",
       "name": "Винни",
       "speed_km_h": 56,
@@ -465,6 +470,17 @@
       ]
     },
     {
+      "breed": "Русская псовая борзая",
+      "sex": "С",
+      "name": "Флёна",
+      "speed_km_h": 56,
+      "date": "2026-09-13",
+      "screenshot_url": "https://disk.yandex.ru/i/KmRuCVSRpCwc1A",
+      "status": "new",
+      "track_type": "курсинг",
+      "history": []
+    },
+    {
       "breed": "Салюки",
       "sex": "С",
       "name": "Тайга",
@@ -495,6 +511,50 @@
       "status": "normal",
       "track_type": "прямая",
       "history": []
+    },
+    {
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Барселона",
+      "speed_km_h": 55,
+      "date": "2026-09-13",
+      "screenshot_url": "https://disk.yandex.ru/i/9cKipfzAxBk-sg",
+      "status": "improved",
+      "track_type": "курсинг",
+      "history": [
+        {
+          "speed_km_h": 54,
+          "date": "2025-07-20",
+          "track_type": null
+        }
+      ]
+    },
+    {
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Асти",
+      "speed_km_h": 55,
+      "date": "2026-09-13",
+      "screenshot_url": "https://disk.yandex.ru/i/yr_p7BmyrKITRw",
+      "status": "new",
+      "track_type": "курсинг",
+      "history": []
+    },
+    {
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Эйва",
+      "speed_km_h": 55,
+      "date": "2026-09-13",
+      "screenshot_url": "https://disk.yandex.ru/i/USNT-4kG-beg2A",
+      "status": "improved",
+      "track_type": "прямая",
+      "history": [
+        {
+          "speed_km_h": 54,
+          "date": "2026-08-29"
+        }
+      ]
     },
     {
       "breed": "Уиппет",
@@ -547,14 +607,14 @@
       "history": []
     },
     {
-      "breed": "Уиппет",
-      "sex": "С",
-      "name": "Эйва",
+      "breed": "Русская псовая борзая",
+      "sex": "К",
+      "name": "Флеш",
       "speed_km_h": 54,
-      "date": "2026-08-29",
-      "screenshot_url": "https://disk.yandex.ru/i/PzetBkznwJRFBg",
-      "status": "normal",
-      "track_type": "прямая",
+      "date": "2026-09-13",
+      "screenshot_url": "https://disk.yandex.ru/i/e2tPb1A8uy7q0Q",
+      "status": "new",
+      "track_type": "курсинг",
       "history": []
     },
     {
@@ -664,6 +724,28 @@
       "screenshot_url": "https://disk.yandex.ru/i/B75Ar9dxsE_60g",
       "status": "normal",
       "track_type": "курсинг",
+      "history": []
+    },
+    {
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Элли",
+      "speed_km_h": 53,
+      "date": "2026-09-13",
+      "screenshot_url": "https://disk.yandex.ru/i/2exoK8c87iggnw",
+      "status": "new",
+      "track_type": "прямая",
+      "history": []
+    },
+    {
+      "breed": "Салюки",
+      "sex": "К",
+      "name": "Лёня",
+      "speed_km_h": 53,
+      "date": "2026-09-13",
+      "screenshot_url": "https://disk.yandex.ru/i/vIlafvLTRdAeUg",
+      "status": "new",
+      "track_type": "прямая",
       "history": []
     },
     {
@@ -967,6 +1049,17 @@
       "history": []
     },
     {
+      "breed": "Русская псовая борзая",
+      "sex": "К",
+      "name": "Граф",
+      "speed_km_h": 49,
+      "date": "2026-08-13",
+      "screenshot_url": "https://disk.yandex.ru/i/wtsE4W2JOzmMBQ",
+      "status": "new",
+      "track_type": "курсинг",
+      "history": []
+    },
+    {
       "breed": "Бордер-колли",
       "sex": "С",
       "name": "Вега",
@@ -1029,7 +1122,7 @@
       "speed_km_h": 48,
       "date": "2026-09-03",
       "screenshot_url": "https://disk.yandex.ru/i/2MHoCnpXmq6hNA",
-      "status": "new",
+      "status": "normal",
       "track_type": "курсинг",
       "history": [
         {
@@ -1378,6 +1471,17 @@
       ]
     },
     {
+      "breed": "Австралийская овчарка",
+      "sex": "С",
+      "name": "Сальса",
+      "speed_km_h": 42,
+      "date": "2026-09-13",
+      "screenshot_url": "https://disk.yandex.ru/i/_ZaXTKGSAP6ttw",
+      "status": "new",
+      "track_type": "прямая",
+      "history": []
+    },
+    {
       "breed": "Басенджи",
       "sex": "К",
       "name": "Фокс",
@@ -1563,6 +1667,44 @@
       "status": "normal",
       "track_type": "курсинг",
       "history": []
+    },
+    {
+      "breed": "Хаски",
+      "sex": "С",
+      "name": "Эва",
+      "speed_km_h": 37,
+      "date": "2026-09-19",
+      "screenshot_url": "https://disk.yandex.ru/i/sNDOdD4pzaSMGA",
+      "status": "new",
+      "track_type": "курсинг",
+      "history": [
+        {
+          "speed_km_h": 39,
+          "date": "2025-10-11",
+          "track_type": null
+        }
+      ]
+    },
+    {
+      "breed": "Цвергпинчер",
+      "sex": "К",
+      "name": "Марвел",
+      "speed_km_h": 37,
+      "date": "2026-09-13",
+      "screenshot_url": "https://disk.yandex.ru/i/g50Jmjrbh0q7wg",
+      "status": "new",
+      "track_type": "курсинг",
+      "history": [
+        {
+          "speed_km_h": 39,
+          "date": "2025-12-07",
+          "track_type": null
+        },
+        {
+          "speed_km_h": 38,
+          "date": "2025-09-07"
+        }
+      ]
     },
     {
       "breed": "Басенджи",
@@ -1871,7 +2013,13 @@
       "screenshot_url": "https://disk.yandex.ru/d/bgFW-WC4WUKNKQ",
       "status": "normal",
       "track_type": null,
-      "history": []
+      "history": [
+        {
+          "speed_km_h": 55,
+          "date": "2026-09-13",
+          "track_type": "курсинг"
+        }
+      ]
     },
     {
       "breed": "Уиппет",
@@ -2990,7 +3138,13 @@
       "screenshot_url": "https://disk.yandex.ru/i/S-QZlSJNODvXHg",
       "status": "normal",
       "track_type": null,
-      "history": []
+      "history": [
+        {
+          "speed_km_h": 37,
+          "date": "2026-09-19",
+          "track_type": "курсинг"
+        }
+      ]
     },
     {
       "breed": "АСТ",
@@ -3013,6 +3167,11 @@
       "status": "improved",
       "track_type": null,
       "history": [
+        {
+          "speed_km_h": 37,
+          "date": "2026-09-13",
+          "track_type": "курсинг"
+        },
         {
           "speed_km_h": 38,
           "date": "2025-09-07"
@@ -3126,6 +3285,27 @@
       "status": "normal",
       "track_type": null,
       "history": []
+    },
+    {
+      "breed": "Уиппет",
+      "sex": "К",
+      "name": "Сильвер",
+      "speed_km_h": 56,
+      "date": "2026-07-14",
+      "screenshot_url": "https://disk.yandex.ru/i/XYLCa5yhXcbM0Q",
+      "status": "normal",
+      "track_type": "прямая",
+      "history": [
+        {
+          "speed_km_h": 59,
+          "date": "2026-09-13",
+          "track_type": "прямая"
+        },
+        {
+          "speed_km_h": 54,
+          "date": "2026-07-01"
+        }
+      ]
     },
     {
       "breed": "Веймаранер",
@@ -3634,6 +3814,11 @@
       "status": "old",
       "history": [
         {
+          "speed_km_h": 37,
+          "date": "2026-09-13",
+          "track_type": "курсинг"
+        },
+        {
           "speed_km_h": 39,
           "date": "2025-12-07",
           "track_type": null
@@ -3987,6 +4172,11 @@
       "status": "old",
       "history": [
         {
+          "speed_km_h": 59,
+          "date": "2026-09-13",
+          "track_type": "прямая"
+        },
+        {
           "speed_km_h": 56,
           "date": "2026-07-14",
           "track_type": "прямая"
@@ -4210,6 +4400,22 @@
         {
           "speed_km_h": 51,
           "date": "2026-08-08"
+        }
+      ]
+    },
+    {
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Эйва",
+      "speed_km_h": 54,
+      "date": "2026-08-29",
+      "screenshot_url": "https://disk.yandex.ru/i/PzetBkznwJRFBg",
+      "status": "old",
+      "history": [
+        {
+          "speed_km_h": 55,
+          "date": "2026-09-13",
+          "track_type": "прямая"
         }
       ]
     }
