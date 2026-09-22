@@ -29,6 +29,7 @@ const STATIC_PAGES: SitemapUrl[] = [
   { loc: '/shows', priority: '0.9', changefreq: 'daily' },
   { loc: '/speed-records', priority: '0.8', changefreq: 'daily' },
   { loc: '/guide', priority: '0.6', changefreq: 'monthly' },
+  { loc: '/about', priority: '0.5', changefreq: 'monthly' },
   // Legacy redirects → /competitions?tab=… (оставлены для уже проиндексированных URL)
   { loc: '/top', priority: '0.5', changefreq: 'weekly' },
   { loc: '/judges', priority: '0.5', changefreq: 'weekly' },

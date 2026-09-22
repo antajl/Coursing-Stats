@@ -148,18 +148,23 @@ function assertShowRankingHasBis(relPath: string) {
 }
 
 console.log('\nValidating show ranking indexes…');
-// Prefer monolithic dog-ranking.json; fall back to committed shards (dog-ranking-01…).
+// Prefer monolithic dog-ranking.json; fall back to committed shards (dog-ranking-01… or dog-ranking-YYYY.json).
 // CI historically skipped when the monolith was gitignored as too large.
 const showRankingMonolith = 'data/v1/shows/indexes/dog-ranking.json';
-const showRankingShard0 = 'data/v1/shows/indexes/dog-ranking-01.json';
+const showIdxDir = path.join(ROOT, 'data/v1/shows/indexes');
+
+// Check for any dog-ranking files (monolith, numbered shards, or year-based)
+const hasDogRankingFiles = fs.readdirSync(showIdxDir).some((n) => 
+  n === 'dog-ranking.json' || /^dog-ranking-\d+\.json$/.test(n)
+);
+
 if (fs.existsSync(path.join(ROOT, showRankingMonolith))) {
   assertShowRankingHasBis(showRankingMonolith);
-} else if (fs.existsSync(path.join(ROOT, showRankingShard0))) {
+} else if (hasDogRankingFiles) {
   console.log(
-    `  ${showRankingMonolith} missing — validating BIS via shards ${showRankingShard0}…`,
+    `  ${showRankingMonolith} missing — validating BIS via dog-ranking shards…`,
   );
   // Build a synthetic { shards } doc so assertShowRankingHasBis can load all parts.
-  const showIdxDir = path.join(ROOT, 'data/v1/shows/indexes');
   const shards = fs
     .readdirSync(showIdxDir)
     .filter((n) => /^dog-ranking-\d+\.json$/.test(n))

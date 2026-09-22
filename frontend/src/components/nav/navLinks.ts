@@ -126,12 +126,6 @@ export const GUIDE_MENU_ITEMS: NavMenuItem[] = [
     icon: Icons.trend,
     isActive: guideTabActive('rating'),
   },
-  {
-    to: '/guide?tab=site',
-    label: 'О сайте',
-    icon: Icons.paw,
-    isActive: guideTabActive('site'),
-  },
 ]
 
 export const DATA_SOURCE_LINKS = [

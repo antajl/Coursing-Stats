@@ -22,6 +22,7 @@ type NavDesktopProps = {
   isShowsActive: boolean
   isSpeedRecordsActive: boolean
   isGuideActive: boolean
+  isAboutActive: boolean
   openMenu: OpenMenuId
   setMenuOpen: (id: Exclude<OpenMenuId, null>) => (open: boolean) => void
   sourcesOpen: boolean
@@ -36,6 +37,7 @@ export function NavDesktop({
   isShowsActive,
   isSpeedRecordsActive,
   isGuideActive,
+  isAboutActive,
   openMenu,
   setMenuOpen,
   sourcesOpen,
@@ -145,6 +147,17 @@ export function NavDesktop({
           label="Справка"
           items={GUIDE_MENU_ITEMS}
         />
+        <Link
+          to="/about"
+          className={`group relative shrink-0 px-2.5 py-2 text-xs font-semibold whitespace-nowrap transition-all duration-300 lg:px-5 lg:text-sm ${
+            isAboutActive ? 'text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200 hover:text-charcoal-900 dark:hover:text-charcoal-100'
+          }`}
+        >
+          <span className="relative z-10">О проекте</span>
+          <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-camel-600 transition-transform duration-300 ${
+            isAboutActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+          }`}></span>
+        </Link>
       </div>
 
       <div className="flex shrink-0 items-center gap-2 lg:gap-3">

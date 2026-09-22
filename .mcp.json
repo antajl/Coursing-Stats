@@ -1,8 +1,13 @@
 {
   "mcpServers": {
-    "codebase-memory-mcp": {
-      "command": "codebase-memory-mcp",
-      "args": []
+    "github": {
+      "url": "https://api.githubcopilot.com/mcp"
+    },
+    "cloudflare": {
+      "url": "https://mcp.cloudflare.com/mcp"
+    },
+    "cloudflare-docs": {
+      "url": "https://docs.mcp.cloudflare.com/mcp"
     }
   }
 }

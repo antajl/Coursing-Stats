@@ -1,6 +1,6 @@
 ---
 title: Frontend
-verified: 2026-08-16
+verified: 2026-09-22
 ---
 
 # 07 — Frontend
@@ -28,7 +28,7 @@ React 19 + Vite + Tailwind SPA на Cloudflare Pages. Данные: static JSON;
 
 ### Main routes
 
-`/`, `/competitions`, `/shows`, `/speed-records`, `/guide`, `/dog/:id`, `/event/:id`, `/donino-dog/:name/:breed`, `/shows/exhibition/:id`, `/shows/dog/…`, `/judges/:judgeId`, `/shows/judges/:judgeId`, auth `/login|/register|/account`
+`/`, `/competitions`, `/shows`, `/speed-records`, `/guide`, `/about`, `/dog/:id`, `/event/:id`, `/donino-dog/:name/:breed`, `/shows/exhibition/:id`, `/shows/dog/…`, `/judges/:judgeId`, `/shows/judges/:judgeId`, auth `/login|/register|/account`
 
 ## Key files
 

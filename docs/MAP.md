@@ -2,7 +2,7 @@
 title: Docs Map — Agent Router
 description: Single navigation entry for CoursingStats docs. Task → one cheatsheet.
 confidence: stable
-verified: 2026-08-16
+verified: 2026-09-22
 ---
 
 # MAP — куда смотреть
@@ -46,3 +46,12 @@ verified: 2026-08-16
 ## Skills (коротко)
 
 См. [12-agent-skills](sheets/12-agent-skills.md). Домены: `three-domains` → `competitions-domain` / `shows-domain` / `donino-domain`.
+
+## MCP Integration (NEW 2026-09-22)
+
+Официальные MCP серверы для GitHub и Cloudflare:
+- **GitHub:** `https://api.githubcopilot.com/mcp` — OAuth, repository management, issues, PRs, Actions
+- **Cloudflare:** `https://mcp.cloudflare.com/mcp` — OAuth, Code Mode, 2500+ endpoints
+- **Cloudflare Docs:** `https://docs.mcp.cloudflare.com/mcp` — Documentation search
+
+Конфигурация: `.devin/mcp_config.json`

@@ -12,6 +12,7 @@ type NavMobileProps = {
   isShowsActive: boolean
   isSpeedRecordsActive: boolean
   isGuideActive: boolean
+  isAboutActive: boolean
   mobileMenuOpen: boolean
   statisticsOpen: boolean
   showsOpen: boolean
@@ -34,6 +35,7 @@ export function NavMobile({
   isShowsActive,
   isSpeedRecordsActive,
   isGuideActive,
+  isAboutActive,
   mobileMenuOpen,
   statisticsOpen,
   showsOpen,
@@ -294,6 +296,20 @@ export function NavMobile({
                 </div>
               )}
             </div>
+            <Link
+              to="/about"
+              onClick={onCloseMobileMenu}
+              className={`block px-4 py-2 text-sm font-semibold transition-colors ${
+                isAboutActive ? 'text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200'
+              }`}
+            >
+              <span className="relative inline-block">
+                О проекте
+                <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-camel-600 transition-transform duration-300 ${
+                  isAboutActive ? 'scale-x-100' : 'scale-x-0'
+                }`}></span>
+              </span>
+            </Link>
             <div className="border-t border-old-money-200 dark:border-charcoal-600 pt-2 mt-2">
               <button
                 onClick={onToggleSources}
