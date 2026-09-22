@@ -86,6 +86,7 @@ const HUB_NAV: { href: string; label: string }[] = [
   { href: '/shows', label: 'Выставки' },
   { href: '/speed-records', label: 'Донино' },
   { href: '/guide', label: 'Справочник' },
+  { href: '/about', label: 'О проекте' },
 ]
 
 export function escapeHtml(value: string): string {
