@@ -7,7 +7,6 @@ import { GUIDE_FAQS } from './guideFaqs'
 import ProtocolTab from './components/ProtocolTab'
 import RatingTab from './components/RatingTab'
 import ShowsTab from './components/ShowsTab'
-import SiteTab from './components/SiteTab'
 import TitlesTab from './components/TitlesTab'
 
 const GUIDE_SECTIONS = [
@@ -39,18 +38,14 @@ const GUIDE_SECTIONS = [
       'Как устроен зачёт сезона Coursing Stats: медали и эффективность, индекс CS, Elo как справка.',
     keywords: 'рейтинг курсинг, зачёт сезона, индекс CS, Elo, медали курсинг',
   },
-  {
-    id: 'site',
-    label: 'О сайте',
-    description:
-      'О проекте Coursing Stats: источники данных (procoursing.ru, Донино, РКФ), связь с автором.',
-    keywords: 'Coursing Stats, о сайте, procoursing, Донино, статистика курсинга',
-  },
 ] as const
 
 type TabId = (typeof GUIDE_SECTIONS)[number]['id']
 
 function parseGuideTab(value: string | null): TabId {
+  if (value === 'site') {
+    return 'titles'
+  }
   return GUIDE_SECTIONS.some((t) => t.id === value) ? (value as TabId) : 'titles'
 }
 
@@ -78,7 +73,6 @@ export default function Guide() {
         {activeTab === 'shows' && <ShowsTab />}
         {activeTab === 'protocol' && <ProtocolTab />}
         {activeTab === 'rating' && <RatingTab />}
-        {activeTab === 'site' && <SiteTab />}
       </div>
     </div>
   )

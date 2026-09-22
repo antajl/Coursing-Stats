@@ -26,6 +26,7 @@ export default function Nav() {
   const isShowsActive =
     location.pathname === '/shows' || location.pathname.startsWith('/shows/')
   const isGuideActive = location.pathname === '/guide';
+  const isAboutActive = location.pathname === '/about';
 
   const setMenuOpen = useCallback((id: Exclude<OpenMenuId, null>) => {
     return (open: boolean) => {
@@ -103,6 +104,7 @@ export default function Nav() {
         isShowsActive={isShowsActive}
         isSpeedRecordsActive={isSpeedRecordsActive}
         isGuideActive={isGuideActive}
+        isAboutActive={isAboutActive}
         openMenu={openMenu}
         setMenuOpen={setMenuOpen}
         sourcesOpen={sourcesOpen}
@@ -116,6 +118,7 @@ export default function Nav() {
         isShowsActive={isShowsActive}
         isSpeedRecordsActive={isSpeedRecordsActive}
         isGuideActive={isGuideActive}
+        isAboutActive={isAboutActive}
         mobileMenuOpen={mobileMenuOpen}
         statisticsOpen={statisticsOpen}
         showsOpen={showsOpen}

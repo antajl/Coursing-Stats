@@ -1,6 +1,6 @@
 ---
 title: Shows (RKF)
-verified: 2026-08-09
+verified: 2026-09-22
 ---
 
 # 04 — Shows (выставки)

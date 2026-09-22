@@ -12,6 +12,7 @@ const UnifiedDogProfile = lazy(() => import('./pages/UnifiedDogProfile'));
 const SpeedRecords = lazy(() => import('./pages/SpeedRecords/index'));
 const DoninoDogProfile = lazy(() => import('./pages/DoninoDogProfile'));
 const Guide = lazy(() => import('./pages/Guide'));
+const About = lazy(() => import('./pages/About'));
 const JudgeDetail = lazy(() => import('./pages/Judges/JudgeDetail'));
 const ShowExhibitionDetail = lazy(() => import('./pages/Shows/ShowExhibitionDetail'));
 const ShowJudgeDetail = lazy(() => import('./pages/Shows/ShowJudgeDetail'));
@@ -46,6 +47,8 @@ function LegacyJudgesListRedirect() {
   params.set('tab', 'judges');
   return <Navigate to={`/competitions?${params.toString()}`} replace />;
 }
+
+
 
 function LegacyExhibitionRedirect() {
   const { id } = useParams<{ id: string }>();
@@ -125,6 +128,7 @@ export default function AppRoutes() {
         <Route path="/admin/event/:id" element={<AdminEventEditor />} />
         <Route path="/speed-records" element={<SpeedRecords />} />
         <Route path="/guide" element={<Guide />} />
+        <Route path="/about" element={<About />} />
         <Route path="/donino-dog/:name/:breed" element={<DoninoDogProfile />} />
         <Route path="/judges" element={<LegacyJudgesListRedirect />} />
         <Route path="/judges/:judgeId" element={<JudgeDetail />} />

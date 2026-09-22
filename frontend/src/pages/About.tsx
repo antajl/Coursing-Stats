@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Check, Copy, Mail, MessageCircle, Send } from 'lucide-react'
-import { GUIDE_SITE_FAQS } from '../guideFaqs'
-import { ExternalHref, SectionCard } from './GuideUi'
+import { SectionCard, ExternalHref } from './Guide/components/GuideUi'
+import { SEO } from '../components/SEO'
 
 function ContactLink({
   label,
@@ -91,10 +91,17 @@ const AUDIENCE = [
   },
 ] as const
 
-export default function SiteTab() {
+export default function AboutPage() {
   return (
-    <div className="space-y-4">
-      <SectionCard title="Что такое Coursing Stats">
+    <main className="space-y-6">
+      <SEO
+        title="О проекте Coursing Stats"
+        description="Информация о проекте Coursing Stats: стек технологий, архитектура, реализованные улучшения, исходный код."
+        keywords="Coursing Stats, о проекте, Vite, React, Cloudflare Pages"
+        canonicalUrl="https://coursing-stats.ru/about"
+      />
+      
+      <SectionCard title="Описание проекта">
         <p>
           Некоммерческий агрегатор статистики: результаты соревнований с procoursing.ru (курсинг, БЗМП, бега борзых),
           выставки РКФ и рекорды полигона Донино. Проект не связан с ProCoursing и РКФ.
@@ -123,12 +130,32 @@ export default function SiteTab() {
         </div>
       </SectionCard>
 
-      <SectionCard title="Связь с автором">
-        <div className="grid gap-2 md:grid-cols-3">
-          <ContactLink label="Почта" value="antajl@yandex.ru" href="mailto:antajl@yandex.ru" icon={Mail} />
-          <ContactLink label="Telegram" value="@antajl" href="https://t.me/antajl" icon={Send} external />
-          <DiscordContact />
-        </div>
+      <SectionCard title="Техническая информация">
+        <ul className="space-y-1">
+          <li><strong>Frontend:</strong> Vite + React</li>
+          <li><strong>Hosting:</strong> Cloudflare Pages</li>
+          <li><strong>Architecture:</strong> CDN-only (no Worker/D1 runtime)</li>
+          <li><strong>SEO:</strong> Prerender через build pipeline</li>
+        </ul>
+      </SectionCard>
+
+      <SectionCard title="Реализованные улучшения">
+        <ul className="space-y-1">
+          <li>✅ SEO (robots.txt, sitemap.xml, Schema.org, OG-теги)</li>
+          <li>✅ Accessibility (WCAG 2.2 AA, Phases 1-7)</li>
+          <li>✅ Performance (Core Web Vitals оптимизация)</li>
+        </ul>
+      </SectionCard>
+
+      <SectionCard title="Исходный код">
+        <ExternalHref href="https://github.com/antajl/Coursing-Stats">
+          GitHub Repository
+        </ExternalHref>
+      </SectionCard>
+
+      <SectionCard title="Версия">
+        <p>Версия: 1.0.0</p>
+        <p>Лицензия: MIT</p>
       </SectionCard>
 
       <SectionCard title="Источники данных">
@@ -155,16 +182,13 @@ export default function SiteTab() {
         </ul>
       </SectionCard>
 
-      <SectionCard title="Частые вопросы">
-        <dl className="space-y-4">
-          {GUIDE_SITE_FAQS.map((faq) => (
-            <div key={faq.question}>
-              <dt className="font-semibold text-charcoal-900 dark:text-charcoal-100">{faq.question}</dt>
-              <dd className="mt-1 text-[13px] text-charcoal-600 dark:text-charcoal-300">{faq.answer}</dd>
-            </div>
-          ))}
-        </dl>
+      <SectionCard title="Связь с автором">
+        <div className="grid gap-2 md:grid-cols-3">
+          <ContactLink label="Почта" value="antajl@yandex.ru" href="mailto:antajl@yandex.ru" icon={Mail} />
+          <ContactLink label="Telegram" value="@antajl" href="https://t.me/antajl" icon={Send} external />
+          <DiscordContact />
+        </div>
       </SectionCard>
-    </div>
+    </main>
   )
 }

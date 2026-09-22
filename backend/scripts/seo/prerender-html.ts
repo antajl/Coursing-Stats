@@ -69,6 +69,15 @@ export const HUB_PAGES: HubMeta[] = [
     paragraph:
       'Титулы и сертификаты, выставки РКФ, чтение протоколов, формула рейтинга и источники данных проекта.',
   },
+  {
+    path: '/about',
+    title: 'О проекте Coursing Stats | Coursing Stats',
+    description:
+      'Информация о проекте Coursing Stats: стек технологий, архитектура, реализованные улучшения, исходный код.',
+    h1: '',
+    paragraph:
+      'Некоммерческий агрегатор статистики: результаты соревнований с procoursing.ru, выставки РКФ и рекорды полигона Донино.',
+  },
 ]
 
 const HUB_NAV: { href: string; label: string }[] = [
