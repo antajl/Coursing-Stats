@@ -128,7 +128,8 @@ From ADRs (Proposed status):
 
 ## Last Modified Summary
 
-- 2026-09-22: Documentation cleanup and reorganization (this work)
+- 2026-09-22: Dark theme removed - light theme only (CSS reduced by 23%)
+- 2026-09-22: Documentation cleanup and reorganization
 - 2026-08-24: Code quality audit completed
 - 2026-08-06: ADR-014 (CDN Packs vs Turso)
 - 2026-08-05: ADR-012 (TypeScript strict), ADR-013 (AI-readable docs)

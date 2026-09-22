@@ -85,6 +85,14 @@ None identified.
 
 ## Recent Changes (2026-09-22)
 
+### Dark Theme Removal
+- Removed dark theme support (light theme only)
+- Deleted `ThemeToggle.tsx` and `useDarkMode.tsx`
+- Removed all `dark:` Tailwind classes from 163 TSX files
+- Removed all `.dark` CSS selectors from 12 CSS files
+- CSS reduced from ~135 kB to 103.75 kB (-23%)
+- 185 files changed (+1596, -1956 lines)
+
 ### Documentation Cleanup
 - Removed ADR-011 (rejected SQL schema, 580 lines of useless content)
 - Removed outdated `tasks/todo.md` and `tasks/plan.md` (consolidation already completed)
