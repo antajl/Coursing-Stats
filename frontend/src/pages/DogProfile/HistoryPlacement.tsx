@@ -21,8 +21,8 @@ export function HistoryPlacement({
   if (status === 'disqualified') {
     return (
       <HoverTooltip label="Отстранение" placement="top" variant="site" delayMs={0} portal>
-        <div className="w-6 h-6 rounded-full bg-red-100 dark:bg-red-900 border-2 border-red-500 dark:border-red-600 flex items-center justify-center cursor-help">
-          <svg className="w-3 h-3 text-red-600 dark:text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="w-6 h-6 rounded-full bg-red-100 border-2 border-red-500 flex items-center justify-center cursor-help">
+          <svg className="w-3 h-3 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
           </svg>
         </div>
@@ -45,7 +45,7 @@ export function HistoryPlacement({
 
   return (
     <span
-      className="text-sm font-semibold tabular-nums text-old-money-500 dark:text-old-money-400"
+      className="text-sm font-semibold tabular-nums text-old-money-500"
       aria-label={`${place}-е место`}
     >
       #{place}
@@ -70,7 +70,7 @@ export function HistoryMetaRow({
 }) {
   return (
     <div className="mt-1 grid grid-cols-[minmax(0,1fr)_auto_1.75rem] items-center gap-x-2">
-      <div className="min-w-0 font-semibold text-charcoal-800 dark:text-charcoal-100">{date}</div>
+      <div className="min-w-0 font-semibold text-charcoal-800">{date}</div>
       <div className="justify-self-end">{trailing ?? null}</div>
       <div className="flex h-[26px] w-7 items-center justify-center justify-self-end">
         <HistoryPlacement placement={placement} status={status} />

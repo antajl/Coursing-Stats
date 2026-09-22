@@ -5,9 +5,9 @@ import { formatShowGradeBadge } from '../../../backend/lib/show-grades'
 export const SHOW_CHIP_BASE =
   'inline-flex shrink-0 rounded-md border px-1.5 py-0.5 text-[11px] font-semibold tracking-wide'
 
-export const SHOW_GRADE_CHIP_CLASS = `${SHOW_CHIP_BASE} border-old-money-300 bg-cream-50 text-charcoal-800 dark:border-charcoal-500 dark:bg-charcoal-800/80 dark:text-charcoal-100`
+export const SHOW_GRADE_CHIP_CLASS = `${SHOW_CHIP_BASE} border-old-money-300 bg-cream-50 text-charcoal-800`
 
-export const SHOW_ABSENCE_CHIP_CLASS = `${SHOW_CHIP_BASE} border-charcoal-300 bg-charcoal-50 text-charcoal-600 dark:border-charcoal-500 dark:bg-charcoal-800 dark:text-charcoal-300`
+export const SHOW_ABSENCE_CHIP_CLASS = `${SHOW_CHIP_BASE} border-charcoal-300 bg-charcoal-50 text-charcoal-600`
 
 /** Награды в каталоге — тот же силуэт, что у оценок (без разнобоя категорий). */
 export const SHOW_AWARD_CHIP_CLASS = SHOW_GRADE_CHIP_CLASS

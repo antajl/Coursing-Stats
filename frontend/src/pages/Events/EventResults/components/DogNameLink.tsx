@@ -12,7 +12,7 @@ export default function DogNameLink({ result }: DogNameLinkProps) {
   const sexLabel = result.dog.sex === 'Кобель' ? 'Кобель' : 'Сука'
 
   const nameElement = (
-    <span className="min-w-0 break-words text-sm font-medium text-old-money-800 dark:text-old-money-300 md:text-base">
+    <span className="min-w-0 break-words text-sm font-medium text-old-money-800 md:text-base">
       {primary}
     </span>
   )

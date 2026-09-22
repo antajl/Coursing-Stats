@@ -44,10 +44,10 @@ export default function ResetPasswordPage() {
   return (
     <div className="min-h-screen flex items-center justify-center px-4">
       <div className="max-w-md w-full">
-        <h1 className="text-3xl font-bold text-charcoal-900 dark:text-cream-100 mb-2 text-center">
+        <h1 className="text-3xl font-bold text-charcoal-900 mb-2 text-center">
           Новый пароль
         </h1>
-        <p className="text-center text-charcoal-600 dark:text-cream-300 mb-8">
+        <p className="text-center text-charcoal-600 mb-8">
           Минимум 8 символов. После сохранения войдите по email.
         </p>
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -67,7 +67,7 @@ export default function ResetPasswordPage() {
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-4 py-2 border border-charcoal-300 dark:border-charcoal-600 rounded-lg bg-white dark:bg-charcoal-800"
+              className="w-full px-4 py-2 border border-charcoal-300 rounded-lg bg-white"
               disabled={loading}
             />
           </div>

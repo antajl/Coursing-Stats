@@ -167,7 +167,7 @@ export default function JudgeDetail() {
 
   if (loading) {
     return (
-      <div className="py-12 text-center text-old-money-600 dark:text-old-money-400">
+      <div className="py-12 text-center text-old-money-600">
         <div className="text-lg font-medium">Загрузка информации о судье...</div>
       </div>
     )
@@ -176,12 +176,12 @@ export default function JudgeDetail() {
   if (!judgeData) {
     return (
       <div className="py-12 text-center">
-        <div className="mb-4 rounded-xl border border-amber-200 bg-amber-50 p-4 text-amber-800 dark:border-amber-700 dark:bg-amber-900 dark:text-amber-300">
+        <div className="mb-4 rounded-xl border border-amber-200 bg-amber-50 p-4 text-amber-800">
           <p className="font-medium">Судья не найден</p>
         </div>
         <Link
           to="/competitions?tab=judges"
-          className="text-camel-700 transition-colors hover:text-camel-800 hover:underline dark:text-camel-400 dark:hover:text-camel-300"
+          className="text-camel-700 transition-colors hover:text-camel-800 hover:underline"
         >
           <span className="md:hidden">Назад</span>
           <span className="hidden md:inline">← Вернуться к списку судей</span>
@@ -211,15 +211,15 @@ export default function JudgeDetail() {
           <button
             type="button"
             onClick={() => navigate('/competitions?tab=judges')}
-            className="relative z-10 mb-2 inline-flex h-11 w-11 items-center justify-center rounded-lg text-old-money-500 transition-colors hover:bg-old-money-50 hover:text-camel-700 md:absolute md:right-full md:top-8 md:mb-0 md:mr-0.5 dark:text-old-money-400 dark:hover:bg-charcoal-700 dark:hover:text-camel-400"
+            className="relative z-10 mb-2 inline-flex h-11 w-11 items-center justify-center rounded-lg text-old-money-500 transition-colors hover:bg-old-money-50 hover:text-camel-700 md:absolute md:right-full md:top-8 md:mb-0 md:mr-0.5"
             aria-label="Назад"
           >
             <ChevronLeft className="h-5 w-5" aria-hidden />
           </button>
 
-          <div className="min-w-0 rounded-xl border border-old-money-200/80 bg-white p-5 dark:border-charcoal-600 dark:bg-charcoal-800/50 md:p-7">
+          <div className="min-w-0 rounded-xl border border-old-money-200/80 bg-white p-5 md:p-7">
             <div className="flex flex-wrap items-center justify-between gap-3">
-              <h1 className="min-w-0 text-2xl font-bold tracking-tight text-charcoal-900 dark:text-charcoal-100 md:text-3xl">
+              <h1 className="min-w-0 text-2xl font-bold tracking-tight text-charcoal-900 md:text-3xl">
                 {judgeName}
               </h1>
               <select
@@ -227,7 +227,7 @@ export default function JudgeDetail() {
                 aria-label="Период"
                 value={yearParam}
                 onChange={(e) => setYear(e.target.value)}
-                className="h-10 rounded-lg border border-old-money-200 bg-white px-3 text-sm text-charcoal-800 focus:border-camel-500 focus:outline-none focus:ring-2 focus:ring-camel-100 dark:border-charcoal-600 dark:bg-charcoal-800 dark:text-charcoal-200 dark:focus:ring-camel-900"
+                className="h-10 rounded-lg border border-old-money-200 bg-white px-3 text-sm text-charcoal-800 focus:border-camel-500 focus:outline-none focus:ring-2 focus:ring-camel-100"
               >
                 <option value="">Все года</option>
                 {availableYears.map((y) => (
@@ -238,18 +238,18 @@ export default function JudgeDetail() {
               </select>
             </div>
 
-            <div className="mt-6 grid grid-cols-2 gap-4 border-t border-old-money-100 pt-5 text-center dark:border-charcoal-600 sm:grid-cols-4 sm:gap-6">
+            <div className="mt-6 grid grid-cols-2 gap-4 border-t border-old-money-100 pt-5 text-center sm:grid-cols-4 sm:gap-6">
               <div>
-                <p className="text-3xl font-bold tabular-nums tracking-tight text-charcoal-900 dark:text-charcoal-100 md:text-4xl">
+                <p className="text-3xl font-bold tabular-nums tracking-tight text-charcoal-900 md:text-4xl">
                   {avgScore != null ? avgScore.toFixed(2) : '—'}
                 </p>
-                <p className="mt-1 text-sm text-charcoal-500 dark:text-charcoal-400">средняя</p>
+                <p className="mt-1 text-sm text-charcoal-500">средняя</p>
               </div>
               <div>
-                <p className="text-3xl font-bold tabular-nums tracking-tight text-charcoal-900 dark:text-charcoal-100 md:text-4xl">
+                <p className="text-3xl font-bold tabular-nums tracking-tight text-charcoal-900 md:text-4xl">
                   {totalEvals || '—'}
                 </p>
-                <p className="mt-1 text-sm text-charcoal-500 dark:text-charcoal-400">оценок</p>
+                <p className="mt-1 text-sm text-charcoal-500">оценок</p>
               </div>
               <button
                 type="button"
@@ -260,10 +260,10 @@ export default function JudgeDetail() {
                 }}
                 className="transition-opacity hover:opacity-80"
               >
-                <p className="text-3xl font-bold tabular-nums tracking-tight text-charcoal-900 dark:text-charcoal-100 md:text-4xl">
+                <p className="text-3xl font-bold tabular-nums tracking-tight text-charcoal-900 md:text-4xl">
                   {eventCount}
                 </p>
-                <p className="mt-1 text-sm text-charcoal-500 dark:text-charcoal-400">соревнований</p>
+                <p className="mt-1 text-sm text-charcoal-500">соревнований</p>
               </button>
               <button
                 type="button"
@@ -274,14 +274,14 @@ export default function JudgeDetail() {
                 }}
                 className="transition-opacity hover:opacity-80"
               >
-                <p className="text-3xl font-bold tabular-nums tracking-tight text-charcoal-900 dark:text-charcoal-100 md:text-4xl">
+                <p className="text-3xl font-bold tabular-nums tracking-tight text-charcoal-900 md:text-4xl">
                   {breedCount}
                 </p>
-                <p className="mt-1 text-sm text-charcoal-500 dark:text-charcoal-400">пород</p>
+                <p className="mt-1 text-sm text-charcoal-500">пород</p>
               </button>
             </div>
 
-            <div className="mt-6 border-t border-old-money-100 pt-5 dark:border-charcoal-600">
+            <div className="mt-6 border-t border-old-money-100 pt-5">
               <div className="mx-auto grid max-w-2xl grid-cols-2 gap-2 sm:grid-cols-4">
                 {DISCIPLINES.map(({ value, label }) => {
                   const active = disciplineParam === value
@@ -293,11 +293,11 @@ export default function JudgeDetail() {
                       onClick={() => setDiscipline(value)}
                       className={`flex h-[3.5rem] w-full flex-col items-center justify-center rounded-xl border px-2 transition-colors ${
                         active
-                          ? 'border-camel-500 bg-camel-50 dark:border-camel-500 dark:bg-camel-950/50'
-                          : 'border-old-money-200 bg-white hover:border-camel-400 hover:bg-camel-50/40 dark:border-charcoal-600 dark:bg-charcoal-800 dark:hover:border-camel-600'
+                          ? 'border-camel-500 bg-camel-50'
+                          : 'border-old-money-200 bg-white hover:border-camel-400 hover:bg-camel-50/40'
                       }`}
                     >
-                      <span className="text-sm font-semibold text-charcoal-800 dark:text-charcoal-100">
+                      <span className="text-sm font-semibold text-charcoal-800">
                         {label}
                       </span>
                     </button>
@@ -311,9 +311,9 @@ export default function JudgeDetail() {
         <div
           ref={listsRef}
           id="judge-events"
-          className="scroll-mt-20 rounded-xl border border-old-money-200/80 bg-white dark:border-charcoal-600 dark:bg-charcoal-800/50"
+          className="scroll-mt-20 rounded-xl border border-old-money-200/80 bg-white"
         >
-          <div className="flex flex-wrap items-center gap-2 border-b border-old-money-100 px-4 pt-3 dark:border-charcoal-600 md:px-6">
+          <div className="flex flex-wrap items-center gap-2 border-b border-old-money-100 px-4 pt-3 md:px-6">
             <div className="flex flex-wrap gap-1">
               {(
                 [
@@ -328,12 +328,12 @@ export default function JudgeDetail() {
                   onClick={() => setListTab(tab.id)}
                   className={`rounded-t-lg px-4 py-2.5 text-sm font-semibold transition-colors ${
                     listTab === tab.id
-                      ? 'border-b-2 border-camel-600 text-camel-800 dark:border-camel-400 dark:text-camel-300'
-                      : 'text-charcoal-500 hover:text-charcoal-800 dark:text-charcoal-400 dark:hover:text-charcoal-200'
+                      ? 'border-b-2 border-camel-600 text-camel-800'
+                      : 'text-charcoal-500 hover:text-charcoal-800'
                   }`}
                 >
                   {tab.label}
-                  <span className="ml-1.5 tabular-nums text-charcoal-400 dark:text-charcoal-500">
+                  <span className="ml-1.5 tabular-nums text-charcoal-400">
                     {tab.count}
                   </span>
                 </button>
@@ -341,7 +341,7 @@ export default function JudgeDetail() {
             </div>
             {eventBreedFilter && listTab === 'events' && (
               <div className="mb-1 ml-auto flex items-center gap-2">
-                <span className="rounded-full border border-camel-300 bg-camel-50 px-3 py-1 text-xs font-semibold text-camel-800 dark:border-camel-600 dark:bg-camel-950/40 dark:text-camel-300">
+                <span className="rounded-full border border-camel-300 bg-camel-50 px-3 py-1 text-xs font-semibold text-camel-800">
                   {eventBreedFilter}
                 </span>
                 <button
@@ -351,7 +351,7 @@ export default function JudgeDetail() {
                     next.delete('eventBreed')
                     setSearchParams(next, { replace: true })
                   }}
-                  className="text-xs text-charcoal-500 underline hover:text-camel-700 dark:text-charcoal-400 dark:hover:text-camel-400"
+                  className="text-xs text-charcoal-500 underline hover:text-camel-700"
                 >
                   Сбросить
                 </button>
@@ -363,23 +363,23 @@ export default function JudgeDetail() {
             {listTab === 'breeds' && (
               <>
                 {sortedBreeds.length === 0 ? (
-                  <p className="text-sm text-charcoal-500 dark:text-charcoal-400">Нет данных о породах</p>
+                  <p className="text-sm text-charcoal-500">Нет данных о породах</p>
                 ) : (
                   <>
-                    <div className="mb-2 hidden gap-4 text-xs uppercase tracking-wide text-charcoal-500 dark:text-charcoal-400 sm:flex">
+                    <div className="mb-2 hidden gap-4 text-xs uppercase tracking-wide text-charcoal-500 sm:flex">
                       <span className="flex-1">Порода</span>
                       <span className="w-24 shrink-0 text-center">Оценок</span>
                       <span className="w-20 shrink-0 text-center">Средняя</span>
                       <span className="w-16 shrink-0 text-center">Мин</span>
                       <span className="w-16 shrink-0 text-center">Макс</span>
                     </div>
-                    <ul className="divide-y divide-old-money-100 dark:divide-charcoal-700">
+                    <ul className="divide-y divide-old-money-100">
                       {(showAllBreeds ? sortedBreeds : sortedBreeds.slice(0, 20)).map((stat) => (
                         <li key={stat.breed} className="py-2.5">
                           <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4">
                             <button
                               type="button"
-                              className="min-w-0 flex-1 text-left text-sm font-medium text-charcoal-800 dark:text-charcoal-100"
+                              className="min-w-0 flex-1 text-left text-sm font-medium text-charcoal-800"
                               onClick={() =>
                                 setExpandedBreed(expandedBreed === stat.breed ? null : stat.breed)
                               }
@@ -394,30 +394,30 @@ export default function JudgeDetail() {
                               onClick={() => toggleEventBreed(stat.breed)}
                               className={`w-full rounded-md px-2 py-0.5 text-center text-sm font-semibold tabular-nums sm:w-24 ${
                                 eventBreedFilter === stat.breed
-                                  ? 'bg-camel-100 text-camel-800 dark:bg-camel-950/50 dark:text-camel-300'
-                                  : 'text-camel-700 hover:bg-camel-50 dark:text-camel-400 dark:hover:bg-camel-950/40'
+                                  ? 'bg-camel-100 text-camel-800'
+                                  : 'text-camel-700 hover:bg-camel-50'
                               }`}
                               title="Показать участия по этой породе"
                             >
                               {stat.evaluations_count || 0}
                             </button>
-                            <span className="w-full text-center text-sm tabular-nums text-charcoal-700 dark:text-charcoal-200 sm:w-20">
+                            <span className="w-full text-center text-sm tabular-nums text-charcoal-700 sm:w-20">
                               {stat.avg_score != null ? stat.avg_score.toFixed(2) : '—'}
                             </span>
-                            <span className="hidden w-16 text-center text-sm tabular-nums text-charcoal-600 dark:text-charcoal-300 sm:block">
+                            <span className="hidden w-16 text-center text-sm tabular-nums text-charcoal-600 sm:block">
                               {stat.min_score ?? '—'}
                             </span>
-                            <span className="hidden w-16 text-center text-sm tabular-nums text-charcoal-600 dark:text-charcoal-300 sm:block">
+                            <span className="hidden w-16 text-center text-sm tabular-nums text-charcoal-600 sm:block">
                               {stat.max_score ?? '—'}
                             </span>
                           </div>
                           {expandedBreed === stat.breed && stat.dogs && stat.dogs.length > 0 && (
-                            <ul className="mt-2 space-y-1 rounded-lg bg-old-money-50/60 p-3 dark:bg-charcoal-900/40">
+                            <ul className="mt-2 space-y-1 rounded-lg bg-old-money-50/60 p-3">
                               {stat.dogs.map((dog, dogIdx) => (
                                 <li key={`${dog.name}-${dogIdx}`} className="text-sm">
                                   <button
                                     type="button"
-                                    className="flex w-full items-center justify-between gap-2 text-left text-charcoal-700 dark:text-charcoal-200"
+                                    className="flex w-full items-center justify-between gap-2 text-left text-charcoal-700"
                                     onClick={() =>
                                       setExpandedDog(expandedDog === dogIdx ? null : dogIdx)
                                     }
@@ -433,7 +433,7 @@ export default function JudgeDetail() {
                                     </span>
                                   </button>
                                   {expandedDog === dogIdx && dog.scores_by_criteria && (
-                                    <div className="mt-2 grid grid-cols-1 gap-1 pl-2 text-xs text-charcoal-600 dark:text-charcoal-400">
+                                    <div className="mt-2 grid grid-cols-1 gap-1 pl-2 text-xs text-charcoal-600">
                                       {Object.entries(dog.scores_by_criteria).map(([idx, scores]) => {
                                         const valid = Array.isArray(scores)
                                           ? scores.filter((s) => s !== null && !Number.isNaN(s))
@@ -462,7 +462,7 @@ export default function JudgeDetail() {
                       <button
                         type="button"
                         onClick={() => setShowAllBreeds(!showAllBreeds)}
-                        className="mt-3 text-sm text-camel-700 hover:text-camel-800 dark:text-camel-400 dark:hover:text-camel-300"
+                        className="mt-3 text-sm text-camel-700 hover:text-camel-800"
                       >
                         {showAllBreeds ? 'Свернуть' : `Показать все (${sortedBreeds.length})`}
                       </button>
@@ -500,24 +500,24 @@ export default function JudgeDetail() {
             {listTab === 'events' && (
               <>
                 {filteredEvents.length === 0 ? (
-                  <p className="text-sm text-charcoal-500 dark:text-charcoal-400">
+                  <p className="text-sm text-charcoal-500">
                     {eventBreedFilter ? 'Нет соревнований по этой породе' : 'Нет соревнований'}
                   </p>
                 ) : (
                   <>
-                    <ul className="divide-y divide-old-money-100 dark:divide-charcoal-700">
+                    <ul className="divide-y divide-old-money-100">
                       {(showAllEvents ? filteredEvents : filteredEvents.slice(0, 20)).map((ev) => (
                         <li
                           key={ev.key}
                           className="flex flex-col gap-0.5 py-2.5 sm:flex-row sm:items-baseline sm:gap-3"
                         >
-                          <span className="shrink-0 text-xs tabular-nums text-charcoal-500 dark:text-charcoal-400 sm:w-24">
+                          <span className="shrink-0 text-xs tabular-nums text-charcoal-500 sm:w-24">
                             {formatDate(ev.date)}
                           </span>
-                          <span className="min-w-0 flex-1 text-sm text-charcoal-800 dark:text-charcoal-100">
+                          <span className="min-w-0 flex-1 text-sm text-charcoal-800">
                             {ev.title}
                           </span>
-                          <span className="shrink-0 text-xs text-charcoal-500 dark:text-charcoal-400">
+                          <span className="shrink-0 text-xs text-charcoal-500">
                             {ev.breed}
                           </span>
                         </li>
@@ -527,7 +527,7 @@ export default function JudgeDetail() {
                       <button
                         type="button"
                         onClick={() => setShowAllEvents(!showAllEvents)}
-                        className="mt-3 text-sm text-camel-700 hover:text-camel-800 dark:text-camel-400 dark:hover:text-camel-300"
+                        className="mt-3 text-sm text-camel-700 hover:text-camel-800"
                       >
                         {showAllEvents ? 'Свернуть' : `Показать все (${filteredEvents.length})`}
                       </button>
@@ -540,35 +540,35 @@ export default function JudgeDetail() {
             {listTab === 'criteria' && (
               <>
                 {sortedCriteria.length === 0 ? (
-                  <p className="text-sm text-charcoal-500 dark:text-charcoal-400">Нет данных</p>
+                  <p className="text-sm text-charcoal-500">Нет данных</p>
                 ) : (
                   <>
-                    <div className="mb-2 hidden gap-4 text-xs uppercase tracking-wide text-charcoal-500 dark:text-charcoal-400 sm:flex">
+                    <div className="mb-2 hidden gap-4 text-xs uppercase tracking-wide text-charcoal-500 sm:flex">
                       <span className="flex-1">Критерий</span>
                       <span className="w-24 shrink-0 text-center">Оценок</span>
                       <span className="w-20 shrink-0 text-center">Средняя</span>
                       <span className="w-16 shrink-0 text-center">Мин</span>
                       <span className="w-16 shrink-0 text-center">Макс</span>
                     </div>
-                    <ul className="divide-y divide-old-money-100 dark:divide-charcoal-700">
+                    <ul className="divide-y divide-old-money-100">
                       {sortedCriteria.map((stat, idx) => (
                         <li
                           key={idx}
                           className="flex flex-col gap-1 py-2.5 sm:flex-row sm:items-center sm:gap-4"
                         >
-                          <span className="min-w-0 flex-1 text-sm text-charcoal-800 dark:text-charcoal-100">
+                          <span className="min-w-0 flex-1 text-sm text-charcoal-800">
                             {String(stat.name || '')}
                           </span>
-                          <span className="w-full text-center text-sm tabular-nums font-semibold text-charcoal-700 dark:text-charcoal-200 sm:w-24">
+                          <span className="w-full text-center text-sm tabular-nums font-semibold text-charcoal-700 sm:w-24">
                             {Number(stat.evaluations_count) || 0}
                           </span>
-                          <span className="w-full text-center text-sm tabular-nums text-charcoal-700 dark:text-charcoal-200 sm:w-20">
+                          <span className="w-full text-center text-sm tabular-nums text-charcoal-700 sm:w-20">
                             {stat.avg_score != null ? Number(stat.avg_score).toFixed(2) : '—'}
                           </span>
-                          <span className="hidden w-16 text-center text-sm tabular-nums text-charcoal-600 dark:text-charcoal-300 sm:block">
+                          <span className="hidden w-16 text-center text-sm tabular-nums text-charcoal-600 sm:block">
                             {stat.min_score != null ? String(stat.min_score) : '—'}
                           </span>
-                          <span className="hidden w-16 text-center text-sm tabular-nums text-charcoal-600 dark:text-charcoal-300 sm:block">
+                          <span className="hidden w-16 text-center text-sm tabular-nums text-charcoal-600 sm:block">
                             {stat.max_score != null ? String(stat.max_score) : '—'}
                           </span>
                         </li>

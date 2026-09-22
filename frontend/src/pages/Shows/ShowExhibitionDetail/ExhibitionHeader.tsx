@@ -18,14 +18,14 @@ function StatPill({
 }) {
   return (
     <div
-      className={`rounded-lg border border-old-money-200 bg-white/80 px-3 py-2 dark:border-charcoal-600 dark:bg-charcoal-800/60 ${className}`}
+      className={`rounded-lg border border-old-money-200 bg-white/80 px-3 py-2 ${className}`}
     >
       <div
-        className={`font-serif font-bold tabular-nums leading-tight text-charcoal-900 dark:text-charcoal-100 ${valueClassName || 'text-lg md:text-xl'}`}
+        className={`font-serif font-bold tabular-nums leading-tight text-charcoal-900 ${valueClassName || 'text-lg md:text-xl'}`}
       >
         {value}
       </div>
-      <div className="mt-0.5 text-[10px] font-medium uppercase tracking-wide text-old-money-500 dark:text-old-money-400">
+      <div className="mt-0.5 text-[10px] font-medium uppercase tracking-wide text-old-money-500">
         {label}
       </div>
     </div>
@@ -55,21 +55,21 @@ export function ExhibitionHeader({ exhibition, onBack }: { exhibition: ShowExhib
       <button
         type="button"
         onClick={onBack}
-        className="relative z-10 mb-2 inline-flex h-11 w-11 items-center justify-center rounded-lg text-old-money-500 transition-colors hover:bg-old-money-50 hover:text-camel-700 md:absolute md:right-full md:top-8 md:mb-0 md:mr-0.5 dark:text-old-money-400 dark:hover:bg-charcoal-700 dark:hover:text-camel-400"
+        className="relative z-10 mb-2 inline-flex h-11 w-11 items-center justify-center rounded-lg text-old-money-500 transition-colors hover:bg-old-money-50 hover:text-camel-700 md:absolute md:right-full md:top-8 md:mb-0 md:mr-0.5"
         aria-label="Назад"
       >
         <ChevronLeft className="h-5 w-5" aria-hidden />
       </button>
 
-      <div className="min-w-0 rounded-xl border border-old-money-200 bg-cream-50 p-3 dark:border-charcoal-600 dark:bg-charcoal-800/40 md:p-4">
+      <div className="min-w-0 rounded-xl border border-old-money-200 bg-cream-50 p-3 md:p-4">
         <div className="flex items-start justify-between gap-2">
-          <h1 className="min-w-0 font-serif text-xl font-bold leading-tight tracking-tight text-charcoal-900 dark:text-charcoal-100 md:text-2xl">
+          <h1 className="min-w-0 font-serif text-xl font-bold leading-tight tracking-tight text-charcoal-900 md:text-2xl">
             {rkfUrl ? (
               <a
                 href={rkfUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-colors hover:text-camel-700 dark:hover:text-camel-400"
+                className="transition-colors hover:text-camel-700"
               >
                 {exhibition.title}
               </a>
@@ -82,7 +82,7 @@ export function ExhibitionHeader({ exhibition, onBack }: { exhibition: ShowExhib
               href={rkfUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-0.5 inline-flex flex-shrink-0 items-center gap-1.5 rounded-full border border-old-money-200 bg-white/90 py-1 pl-1 pr-2.5 text-xs font-semibold text-camel-700 shadow-sm transition-colors hover:border-camel-400 hover:bg-camel-50 hover:text-camel-800 dark:border-charcoal-600 dark:bg-charcoal-800 dark:text-camel-400 dark:hover:border-camel-600 dark:hover:bg-charcoal-700 dark:hover:text-camel-300"
+              className="mt-0.5 inline-flex flex-shrink-0 items-center gap-1.5 rounded-full border border-old-money-200 bg-white/90 py-1 pl-1 pr-2.5 text-xs font-semibold text-camel-700 shadow-sm transition-colors hover:border-camel-400 hover:bg-camel-50 hover:text-camel-800"
               aria-label={externalLabel}
               title={externalLabel}
             >
@@ -119,7 +119,7 @@ export function ExhibitionHeader({ exhibition, onBack }: { exhibition: ShowExhib
         </div>
 
         {metaLine ? (
-          <p className="text-sm leading-snug text-charcoal-600 dark:text-charcoal-300">{metaLine}</p>
+          <p className="text-sm leading-snug text-charcoal-600">{metaLine}</p>
         ) : null}
       </div>
     </div>

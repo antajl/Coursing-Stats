@@ -12,9 +12,9 @@ export default function Button({ children, variant = 'primary', onClick, classNa
   const baseClasses = 'rounded-xl font-semibold transition-colors'
   
   const variantClasses = {
-    primary: 'bg-camel-600 dark:bg-camel-700 text-white hover:bg-camel-700 dark:hover:bg-camel-600',
-    ghost: 'bg-transparent text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-700',
-    outline: 'bg-transparent border-2 border-old-money-300 dark:border-charcoal-600 text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-700',
+    primary: 'bg-camel-600 text-white hover:bg-camel-700',
+    ghost: 'bg-transparent text-charcoal-700 hover:bg-old-money-50',
+    outline: 'bg-transparent border-2 border-old-money-300 text-charcoal-700 hover:bg-old-money-50',
   }
   
   return (

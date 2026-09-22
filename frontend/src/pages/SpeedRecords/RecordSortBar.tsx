@@ -16,7 +16,7 @@ interface RecordSortBarProps {
 export default function RecordSortBar({ options, sortField, sortDirection, onSort }: RecordSortBarProps) {
   return (
     <div className="flex flex-wrap items-center gap-2">
-      <span className="text-xs font-medium text-old-money-500 dark:text-old-money-400">Сортировка</span>
+      <span className="text-xs font-medium text-old-money-500">Сортировка</span>
       <div className="inline-flex flex-wrap items-center gap-1.5">
         {options.map(({ field, label }) => {
           const active = sortField === field

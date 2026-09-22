@@ -37,7 +37,7 @@ export function LegacyResultsSection({
 
   if (filtered.length === 0) {
     return (
-      <p className="rounded-xl border border-old-money-200 bg-cream-50 px-4 py-6 text-center text-sm text-old-money-500 dark:border-charcoal-600 dark:bg-charcoal-800/40 dark:text-old-money-400">
+      <p className="rounded-xl border border-old-money-200 bg-cream-50 px-4 py-6 text-center text-sm text-old-money-500">
         Ничего не найдено по заданным фильтрам
       </p>
     )
@@ -49,7 +49,7 @@ export function LegacyResultsSection({
       .map(([breed, breedResults]) => (
         <details
           key={breed}
-          className="group/breed rounded-lg border border-old-money-200 bg-white/70 dark:border-charcoal-600 dark:bg-charcoal-800/40"
+          className="group/breed rounded-lg border border-old-money-200 bg-white/70"
           open={forceOpen || breedsMap.size === 1 || undefined}
         >
           <summary className="cursor-pointer list-none px-3 py-2 font-semibold marker:content-none">
@@ -71,14 +71,14 @@ export function LegacyResultsSection({
         .map(([groupName, breedsMap]) => (
           <details
             key={groupName}
-            className="group/fci rounded-xl border border-old-money-200 bg-cream-50/80 dark:border-charcoal-600 dark:bg-charcoal-800/40"
+            className="group/fci rounded-xl border border-old-money-200 bg-cream-50/80"
             open={forceOpen || undefined}
           >
             <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 marker:content-none [&::-webkit-details-marker]:hidden">
               <ChevronRight className="h-5 w-5 shrink-0 text-camel-600 transition-transform group-open/fci:rotate-90" />
               <h2 className="font-serif text-base font-bold text-charcoal-900 md:text-lg">{groupName}</h2>
             </summary>
-            <div className="space-y-2 border-t border-old-money-200 px-3 pb-3 pt-2 dark:border-charcoal-600">
+            <div className="space-y-2 border-t border-old-money-200 px-3 pb-3 pt-2">
               {renderBreeds(breedsMap)}
             </div>
           </details>

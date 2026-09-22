@@ -111,7 +111,7 @@ export default function SpeedHistorySparkline({ current, history, className = ''
         y1={floorY}
         x2={width - padding.right}
         y2={floorY}
-        className="stroke-old-money-200 dark:stroke-charcoal-600"
+        className="stroke-old-money-200"
         strokeWidth="1"
       />
 
@@ -120,7 +120,7 @@ export default function SpeedHistorySparkline({ current, history, className = ''
       <path
         d={linePath}
         fill="none"
-        className="stroke-camel-600 dark:stroke-camel-400"
+        className="stroke-camel-600"
         strokeWidth="2.5"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -136,8 +136,8 @@ export default function SpeedHistorySparkline({ current, history, className = ''
             rx={8}
             className={
               delta > 0
-                ? 'fill-green-600 dark:fill-green-500'
-                : 'fill-old-money-400 dark:fill-charcoal-500'
+                ? 'fill-green-600'
+                : 'fill-old-money-400'
             }
           />
           <text
@@ -159,8 +159,8 @@ export default function SpeedHistorySparkline({ current, history, className = ''
             textAnchor="middle"
             className={
               point.isCurrent
-                ? 'fill-camel-700 text-[10px] font-bold dark:fill-camel-300'
-                : 'fill-old-money-500 text-[9px] font-semibold dark:fill-charcoal-400'
+                ? 'fill-camel-700 text-[10px] font-bold'
+                : 'fill-old-money-500 text-[9px] font-semibold'
             }
           >
             {point.speed}
@@ -171,8 +171,8 @@ export default function SpeedHistorySparkline({ current, history, className = ''
             r={point.isCurrent ? 4.5 : 3.5}
             className={
               point.isCurrent
-                ? 'fill-camel-600 stroke-white dark:fill-camel-400 dark:stroke-charcoal-800'
-                : 'fill-old-money-300 stroke-white dark:fill-charcoal-500 dark:stroke-charcoal-800'
+                ? 'fill-camel-600 stroke-white'
+                : 'fill-old-money-300 stroke-white'
             }
             strokeWidth="2"
           />

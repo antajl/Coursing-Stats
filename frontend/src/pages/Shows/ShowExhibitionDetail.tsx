@@ -91,7 +91,7 @@ export default function ShowExhibitionDetail() {
           action={
             <Link
               to="/shows?tab=ranking"
-              className="rounded-xl border-2 border-camel-300 bg-white px-4 py-2 text-sm font-semibold text-camel-700 transition-all hover:border-camel-400 hover:bg-camel-50 dark:border-camel-600 dark:bg-charcoal-800 dark:text-camel-400 dark:hover:bg-charcoal-700"
+              className="rounded-xl border-2 border-camel-300 bg-white px-4 py-2 text-sm font-semibold text-camel-700 transition-all hover:border-camel-400 hover:bg-camel-50"
             >
               К рейтингу выставок
             </Link>
@@ -176,8 +176,8 @@ export default function ShowExhibitionDetail() {
           awardKey={awardKey}
         />
       ) : (
-        <div className="rounded-xl border border-old-money-200 bg-cream-50 p-4 dark:border-charcoal-600 dark:bg-charcoal-800/40">
-          <div className="text-sm text-old-money-500 dark:text-old-money-400">Нет данных о результатах</div>
+        <div className="rounded-xl border border-old-money-200 bg-cream-50 p-4">
+          <div className="text-sm text-old-money-500">Нет данных о результатах</div>
         </div>
       )}
     </div>

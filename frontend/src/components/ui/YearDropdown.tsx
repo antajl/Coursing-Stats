@@ -85,8 +85,8 @@ export default function YearDropdown({
                 onClick={() => handleSelect(year)}
                 className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
                   isSelected
-                    ? 'bg-camel-500 text-charcoal-900 dark:bg-camel-600 dark:text-cream-50'
-                    : 'text-charcoal-700 hover:bg-camel-100 dark:text-charcoal-200 dark:hover:bg-camel-900/30'
+                    ? 'bg-camel-500 text-charcoal-900'
+                    : 'text-charcoal-700 hover:bg-camel-100'
                 }`}
               >
                 {displayYear(year)}
@@ -96,10 +96,10 @@ export default function YearDropdown({
         </div>
 
         {selectedYear !== currentSeason && (
-          <div className="mt-1 pt-1 border-t border-old-money-200 dark:border-charcoal-600">
+          <div className="mt-1 pt-1 border-t border-old-money-200">
             <button
               onClick={handleClear}
-              className="w-full px-3 py-1.5 text-sm text-charcoal-500 hover:text-charcoal-700 dark:text-charcoal-400 dark:hover:text-charcoal-200 transition-colors"
+              className="w-full px-3 py-1.5 text-sm text-charcoal-500 hover:text-charcoal-700 transition-colors"
             >
               {currentSeason}
             </button>

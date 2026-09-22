@@ -229,26 +229,26 @@ export default function ShowRanking() {
 
       {showListSkeleton ? (
         <div className="min-h-[360px]" aria-busy="true" aria-live="polite">
-          <p className="mb-3 text-xs text-charcoal-500 dark:text-charcoal-400">
+          <p className="mb-3 text-xs text-charcoal-500">
             Загрузка рейтинга сезона…
           </p>
           <SkeletonLoader variant="card" count={8} />
         </div>
       ) : loadFailed ? (
         <div className="min-h-[360px] flex items-center justify-center">
-          <p className="text-sm text-red-600 dark:text-red-400">
+          <p className="text-sm text-red-600">
             Ошибка загрузки данных. Попробуйте позже.
           </p>
         </div>
       ) : (
         <>
           {rankingPartial ? (
-            <p className="mb-3 text-xs text-charcoal-500 dark:text-charcoal-400" aria-live="polite">
+            <p className="mb-3 text-xs text-charcoal-500" aria-live="polite">
               Показан топ рейтинга — полный сезон подгружается…
             </p>
           ) : null}
           {isFiltering && (
-            <p className="mb-3 text-xs text-camel-600 dark:text-camel-400 animate-pulse">
+            <p className="mb-3 text-xs text-camel-600 animate-pulse">
               Фильтрация...
             </p>
           )}

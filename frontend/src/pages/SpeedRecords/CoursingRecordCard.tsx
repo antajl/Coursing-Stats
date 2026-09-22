@@ -32,27 +32,27 @@ export default function CoursingRecordCard({ record }: CoursingRecordCardProps) 
   )
 
   return (
-    <div className="group flex overflow-hidden rounded-xl border border-old-money-200 bg-white transition-colors duration-200 hover:border-camel-300 hover:bg-cream-50 dark:border-charcoal-600 dark:bg-charcoal-800 dark:hover:border-camel-700 dark:hover:bg-charcoal-700/40">
+    <div className="group flex overflow-hidden rounded-xl border border-old-money-200 bg-white transition-colors duration-200 hover:border-camel-300 hover:bg-cream-50">
       <Link
         to={`/donino-dog/${encodeURIComponent(record.name)}/${encodeURIComponent(record.breed)}`}
         state={{ from: 'coursing-records' }}
-        className="flex min-w-0 flex-1 flex-col gap-3 p-4 transition-colors group-hover:bg-cream-50 sm:grid sm:grid-cols-[minmax(0,1fr)_auto_auto] sm:items-center sm:gap-4 dark:group-hover:bg-charcoal-700/40"
+        className="flex min-w-0 flex-1 flex-col gap-3 p-4 transition-colors group-hover:bg-cream-50 sm:grid sm:grid-cols-[minmax(0,1fr)_auto_auto] sm:items-center sm:gap-4"
       >
         <div className="flex min-w-0 flex-col gap-3 sm:contents">
           <div className="min-w-0 sm:col-start-1">
             <div className="mb-1.5 flex flex-wrap items-center gap-x-2 gap-y-0.5">
               <OwnerCrownName name={record.name} breed={record.breed} kind="donino">
-                <h3 className="break-words text-base font-bold leading-snug text-charcoal-900 line-clamp-2 dark:text-charcoal-100">
+                <h3 className="break-words text-base font-bold leading-snug text-charcoal-900 line-clamp-2">
                   {record.name}
                 </h3>
               </OwnerCrownName>
               {record.sex && <DogSexIcon sex={record.sex} />}
             </div>
-            <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-old-money-600 dark:text-old-money-400">
-              <span className="rounded-md bg-cream-100 px-2 py-0.5 text-xs font-medium text-charcoal-700 dark:bg-charcoal-700 dark:text-charcoal-300">
+            <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-old-money-600">
+              <span className="rounded-md bg-cream-100 px-2 py-0.5 text-xs font-medium text-charcoal-700">
                 {record.breed}
               </span>
-              <span className="text-old-money-400 dark:text-old-money-500">·</span>
+              <span className="text-old-money-400">·</span>
               <span>{formatRecordDate(record.date)}</span>
             </div>
           </div>
@@ -80,7 +80,7 @@ export default function CoursingRecordCard({ record }: CoursingRecordCardProps) 
         <div className="hidden shrink-0 items-center gap-3 sm:col-start-3 sm:flex">
           {timeBlock}
           <ChevronRight
-            className="h-5 w-5 text-old-money-300 transition-all group-hover:translate-x-0.5 group-hover:text-camel-600 dark:text-charcoal-500 dark:group-hover:text-camel-400"
+            className="h-5 w-5 text-old-money-300 transition-all group-hover:translate-x-0.5 group-hover:text-camel-600"
             strokeWidth={2}
           />
         </div>

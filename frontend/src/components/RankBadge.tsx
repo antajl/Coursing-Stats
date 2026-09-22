@@ -34,7 +34,7 @@ export default function RankBadge({ rank, className = '' }: RankBadgeProps) {
   // Rank 4+: text-based, centered, no hash
   return (
     <div
-      className={`min-h-[44px] min-w-[44px] w-8 flex items-center justify-center text-center text-sm font-bold tabular-nums text-charcoal-400 dark:text-charcoal-500 ${className}`}
+      className={`min-h-[44px] min-w-[44px] w-8 flex items-center justify-center text-center text-sm font-bold tabular-nums text-charcoal-400 ${className}`}
       aria-label={`Rank ${rank}`}
     >
       {rank}

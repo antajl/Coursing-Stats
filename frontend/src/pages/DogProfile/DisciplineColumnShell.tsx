@@ -15,29 +15,29 @@ const THEME: Record<
   }
 > = {
   forest: {
-    cardBorder: 'border-forest-200 dark:border-forest-700',
-    heroBorder: 'border-forest-200 dark:border-forest-600',
-    heroBg: 'bg-forest-50/80 dark:bg-charcoal-700/80',
-    heroValue: 'text-forest-700 dark:text-forest-300',
-    cellBorder: 'border-forest-200 dark:border-forest-600',
-    cellBg: 'bg-forest-50/80 dark:bg-charcoal-700/80',
+    cardBorder: 'border-forest-200',
+    heroBorder: 'border-forest-200',
+    heroBg: 'bg-forest-50/80',
+    heroValue: 'text-forest-700',
+    cellBorder: 'border-forest-200',
+    cellBg: 'bg-forest-50/80',
   },
   'warm-blue': {
-    cardBorder: 'border-warm-blue-200 dark:border-warm-blue-700',
-    heroBorder: 'border-warm-blue-200 dark:border-warm-blue-600',
-    heroBg: 'bg-warm-blue-50/80 dark:bg-charcoal-700/80',
-    heroValue: 'text-warm-blue-800 dark:text-warm-blue-400',
-    cellBorder: 'border-warm-blue-200 dark:border-warm-blue-600',
-    cellBg: 'bg-warm-blue-50/80 dark:bg-charcoal-700/80',
+    cardBorder: 'border-warm-blue-200',
+    heroBorder: 'border-warm-blue-200',
+    heroBg: 'bg-warm-blue-50/80',
+    heroValue: 'text-warm-blue-800',
+    cellBorder: 'border-warm-blue-200',
+    cellBg: 'bg-warm-blue-50/80',
   },
   camel: {
-    cardBorder: 'border-camel-200 dark:border-camel-700',
-    heroBorder: 'border-camel-200 dark:border-camel-600',
+    cardBorder: 'border-camel-200',
+    heroBorder: 'border-camel-200',
     // camel palette starts at 100 (no 50) — use 100/80 to match soft empty-panel tint
-    heroBg: 'bg-camel-100/80 dark:bg-charcoal-700/80',
-    heroValue: 'text-camel-700 dark:text-camel-300',
-    cellBorder: 'border-camel-200 dark:border-camel-600',
-    cellBg: 'bg-camel-100/80 dark:bg-charcoal-700/80',
+    heroBg: 'bg-camel-100/80',
+    heroValue: 'text-camel-700',
+    cellBorder: 'border-camel-200',
+    cellBg: 'bg-camel-100/80',
   },
 }
 
@@ -47,11 +47,11 @@ export function disciplineTheme(theme: DisciplineTheme) {
 
 const LINK_HINT_THEME: Record<DisciplineTheme, string> = {
   forest:
-    'border-forest-200/80 bg-white/90 text-forest-700 shadow-sm hover:border-forest-300 hover:bg-forest-50 dark:border-forest-700/80 dark:bg-charcoal-800/90 dark:text-forest-300 dark:hover:border-forest-600 dark:hover:bg-charcoal-700',
+    'border-forest-200/80 bg-white/90 text-forest-700 shadow-sm hover:border-forest-300 hover:bg-forest-50',
   'warm-blue':
-    'border-warm-blue-200/80 bg-white/90 text-warm-blue-700 shadow-sm hover:border-warm-blue-300 hover:bg-warm-blue-50 dark:border-warm-blue-700/80 dark:bg-charcoal-800/90 dark:text-warm-blue-300 dark:hover:border-warm-blue-600 dark:hover:bg-charcoal-700',
+    'border-warm-blue-200/80 bg-white/90 text-warm-blue-700 shadow-sm hover:border-warm-blue-300 hover:bg-warm-blue-50',
   camel:
-    'border-camel-200/80 bg-white/90 text-camel-700 shadow-sm hover:border-camel-300 hover:bg-camel-50 dark:border-camel-700/80 dark:bg-charcoal-800/90 dark:text-camel-300 dark:hover:border-camel-600 dark:hover:bg-charcoal-700',
+    'border-camel-200/80 bg-white/90 text-camel-700 shadow-sm hover:border-camel-300 hover:bg-camel-50',
 }
 
 /** Подсказка «открыть результаты» в hero-блоке колонки (появляется при hover на карточку-ссылку). */
@@ -88,9 +88,9 @@ export function DisciplineStatsCard({
   const t = THEME[theme]
   return (
     <div
-      className={`flex h-[24rem] shrink-0 flex-col overflow-hidden rounded-xl border bg-white p-5 dark:bg-charcoal-800 md:h-[25rem] md:p-6 ${t.cardBorder}`}
+      className={`flex h-[24rem] shrink-0 flex-col overflow-hidden rounded-xl border bg-white p-5 md:h-[25rem] md:p-6 ${t.cardBorder}`}
     >
-      <h2 className="mb-4 shrink-0 text-lg font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 md:text-xl">
+      <h2 className="mb-4 shrink-0 text-lg font-bold tracking-tight text-charcoal-800 md:text-xl">
         {title}
       </h2>
       <div className="flex min-h-0 flex-1 flex-col overflow-hidden">{children}</div>
@@ -120,11 +120,11 @@ export function DisciplineHero({
   return (
     <Comp
       className={`group mb-4 block h-[7.25rem] shrink-0 overflow-hidden rounded-lg border p-4 text-center transition-colors ${t.heroBorder} ${t.heroBg} ${
-        Comp === 'a' ? 'hover:brightness-[0.98] dark:hover:bg-charcoal-600' : ''
+        Comp === 'a' ? 'hover:brightness-[0.98]' : ''
       }`}
       {...rest}
     >
-      <div className="mb-2 text-xs font-semibold uppercase tracking-wide text-charcoal-500 dark:text-charcoal-400">
+      <div className="mb-2 text-xs font-semibold uppercase tracking-wide text-charcoal-500">
         {label}
       </div>
       <div
@@ -132,13 +132,13 @@ export function DisciplineHero({
       >
         <span className="min-w-0 break-words">{value}</span>
         {unit ? (
-          <span className="text-base font-normal text-charcoal-400 dark:text-charcoal-500">{unit}</span>
+          <span className="text-base font-normal text-charcoal-400">{unit}</span>
         ) : null}
       </div>
       <div
         className={`mt-2 min-h-[1.25rem] truncate text-sm font-medium ${
           footerAlwaysVisible
-            ? 'text-camel-600 dark:text-camel-500'
+            ? 'text-camel-600'
             : 'opacity-0 transition-opacity group-hover:opacity-100'
         }`}
       >
@@ -164,14 +164,14 @@ export function DisciplineStatCell({
   return (
     <Comp
       className={`group min-h-[5.5rem] rounded-xl border p-4 text-center transition-colors ${t.cellBorder} ${t.cellBg} ${
-        Comp === 'a' ? 'hover:brightness-[0.98] dark:hover:bg-charcoal-600' : ''
+        Comp === 'a' ? 'hover:brightness-[0.98]' : ''
       }`}
       {...rest}
     >
-      <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-old-money-500 dark:text-old-money-400">
+      <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-old-money-500">
         {label}
       </div>
-      <div className="text-2xl font-bold tabular-nums text-charcoal-800 dark:text-charcoal-100">
+      <div className="text-2xl font-bold tabular-nums text-charcoal-800">
         {value}
       </div>
     </Comp>
@@ -198,13 +198,13 @@ export function DisciplineHistoryCard({
 }) {
   const t = THEME[theme]
   return (
-    <div className={`rounded-xl border bg-white p-5 dark:bg-charcoal-800 md:p-6 ${t.cardBorder}`}>
+    <div className={`rounded-xl border bg-white p-5 md:p-6 ${t.cardBorder}`}>
       {participations != null && participations > 0 ? (
-        <div className="mb-3 flex items-baseline justify-between gap-2 border-b border-old-money-100 pb-2 dark:border-charcoal-700">
-          <span className="text-xs font-semibold uppercase tracking-wide text-charcoal-500 dark:text-charcoal-400">
+        <div className="mb-3 flex items-baseline justify-between gap-2 border-b border-old-money-100 pb-2">
+          <span className="text-xs font-semibold uppercase tracking-wide text-charcoal-500">
             Участий
           </span>
-          <span className="text-sm font-bold tabular-nums text-charcoal-800 dark:text-charcoal-100">
+          <span className="text-sm font-bold tabular-nums text-charcoal-800">
             {participations}
           </span>
         </div>

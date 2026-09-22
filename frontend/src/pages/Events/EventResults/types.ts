@@ -28,6 +28,10 @@ export interface Result {
   total_score?: number | string | null
   vc?: string | null
   raw_scores_json?: string | null
+  dog?: {
+    sex_icon?: string
+    sex?: string
+  }
 }
 
 export interface Judge {

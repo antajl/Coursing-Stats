@@ -10,7 +10,7 @@ interface ToolbarOptionBarProps {
 export default function ToolbarOptionBar({ label, options, value, onChange }: ToolbarOptionBarProps) {
   return (
     <div className="flex flex-wrap items-center gap-2">
-      <span className="text-xs font-medium text-old-money-500 dark:text-old-money-400">{label}</span>
+      <span className="text-xs font-medium text-old-money-500">{label}</span>
       <div className="inline-flex flex-wrap items-center gap-1.5">
         {options.map((option) => {
           const active = value === option.value

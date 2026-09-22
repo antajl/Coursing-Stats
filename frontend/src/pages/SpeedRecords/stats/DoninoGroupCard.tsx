@@ -71,7 +71,7 @@ export default function DoninoGroupCard({
         </span>
         <span className="donino-group-card__best">
           {isSpeed ? 'Лучшая' : 'Лучшее'}{' '}
-          <strong className="text-camel-700 dark:text-camel-400">{bestText}</strong>
+          <strong className="text-camel-700">{bestText}</strong>
           {row.recordHolder && (
             <>
               {' '}
@@ -105,7 +105,7 @@ export default function DoninoGroupCard({
                     <DoninoDogNameLink name={dog.name} breed={dog.breed} />
                   </td>
                   <td className="text-center">{dog.runCount}</td>
-                  <td className="text-center font-semibold text-camel-700 dark:text-camel-400">
+                  <td className="text-center font-semibold text-camel-700">
                     {isSpeedDog(dog)
                       ? `${formatDoninoSpeedKmh(dog.bestSpeed)} км/ч`
                       : `${dog.bestTime.toFixed(2)} сек`}

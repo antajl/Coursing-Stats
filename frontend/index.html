@@ -66,15 +66,6 @@
         }, true);
       })();
     </script>
-    <script>
-      (function() {
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'dark') {
-          document.documentElement.classList.add('dark');
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#1a1a1a');
-        }
-      })();
-    </script>
   </head>
   <body>
     <div id="root"></div>

@@ -32,28 +32,28 @@ export default function HomeEventRow({ event, variant = 'default' }: HomeEventRo
       <div className="min-w-0 flex-1">
         <div className="flex items-center gap-1.5">
           {important && (
-            <TrophyIcon className="h-3 w-3 shrink-0 text-camel-600 dark:text-camel-400" strokeWidth={2} />
+            <TrophyIcon className="h-3 w-3 shrink-0 text-camel-600" strokeWidth={2} />
           )}
-          <span className="truncate text-xs font-semibold text-charcoal-900 dark:text-charcoal-100">
+          <span className="truncate text-xs font-semibold text-charcoal-900">
             {getEventHeadline(event)}
           </span>
         </div>
         {event.location && (
-          <p className="mt-0.5 truncate text-[11px] text-charcoal-500 dark:text-charcoal-400">
+          <p className="mt-0.5 truncate text-[11px] text-charcoal-500">
             {event.location}
           </p>
         )}
       </div>
-      <div className="home-event-row-date shrink-0 text-sm leading-tight text-charcoal-900 dark:text-charcoal-100">
+      <div className="home-event-row-date shrink-0 text-sm leading-tight text-charcoal-900">
         {dateParts ? (
           <>
             <span className="block whitespace-nowrap font-semibold tabular-nums">{dateParts.dayLine}</span>
             {variant === 'compact' ? (
-              <span className="block whitespace-nowrap text-[11px] text-charcoal-500 dark:text-charcoal-400">
+              <span className="block whitespace-nowrap text-[11px] text-charcoal-500">
                 {dateParts.month}
               </span>
             ) : (
-              <span className="block whitespace-nowrap text-[11px] text-charcoal-500 dark:text-charcoal-400">
+              <span className="block whitespace-nowrap text-[11px] text-charcoal-500">
                 {dateParts.metaLine}
               </span>
             )}

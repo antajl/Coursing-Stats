@@ -1,16 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   safelist: [
-    'bg-forest-400', 'hover:bg-forest-500', 'dark:bg-forest-900', 'dark:hover:bg-forest-800',
-    'bg-warm-blue-400', 'hover:bg-warm-blue-500', 'dark:bg-warm-blue-900', 'dark:hover:bg-warm-blue-800',
-    'bg-terracotta-400', 'hover:bg-terracotta-500', 'dark:bg-terracotta-700', 'dark:hover:bg-terracotta-800',
-    'border-terracotta-500', 'dark:border-terracotta-600', 'bg-terracotta-500', 'dark:bg-terracotta-600',
-    'bg-camel-400', 'hover:bg-camel-500', 'dark:bg-camel-900', 'dark:hover:bg-camel-800',
+    'bg-forest-400', 'hover:bg-forest-500',
+    'bg-warm-blue-400', 'hover:bg-warm-blue-500',
+    'bg-terracotta-400', 'hover:bg-terracotta-500',
+    'border-terracotta-500', 'bg-terracotta-500',
+    'bg-camel-400', 'hover:bg-camel-500',
   ],
   theme: {
     extend: {

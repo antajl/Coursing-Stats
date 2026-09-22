@@ -31,7 +31,7 @@ export function AwardTooltipRow({
       >
         {badge}
       </span>
-      <span className="min-w-0 text-[11px] leading-snug text-charcoal-800 dark:text-charcoal-100">
+      <span className="min-w-0 text-[11px] leading-snug text-charcoal-800">
         {label}
       </span>
     </div>

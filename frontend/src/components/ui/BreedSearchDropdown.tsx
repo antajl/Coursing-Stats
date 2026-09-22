@@ -99,7 +99,7 @@ export default function BreedSearchDropdown({
       <div className="p-2 min-w-[200px] max-w-xs">
         {/* Selected breed indicator */}
         {selectedBreed && !searchQuery && (
-          <div className="mb-2 px-2 py-1.5 text-xs font-medium text-camel-700 dark:text-camel-400 bg-camel-50 dark:bg-camel-900/20 rounded-md">
+          <div className="mb-2 px-2 py-1.5 text-xs font-medium text-camel-700 bg-camel-50 rounded-md">
             Выбрано: {displayBreed(selectedBreed).primary}
           </div>
         )}
@@ -112,13 +112,13 @@ export default function BreedSearchDropdown({
             placeholder="Поиск породы..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full px-3 py-2 text-sm border border-old-money-200 rounded-md bg-white dark:border-charcoal-600 dark:bg-charcoal-700 dark:text-charcoal-100 focus:outline-none focus:ring-2 focus:ring-camel-300"
+            className="w-full px-3 py-2 text-sm border border-old-money-200 rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-camel-300"
             onKeyDown={handleKeyDown}
           />
           {searchQuery && (
             <button
               onClick={() => setSearchQuery('')}
-              className="absolute right-2 top-1/2 -translate-y-1/2 text-charcoal-400 hover:text-charcoal-600 dark:text-charcoal-500 dark:hover:text-charcoal-300"
+              className="absolute right-2 top-1/2 -translate-y-1/2 text-charcoal-400 hover:text-charcoal-600"
               aria-label="Clear search"
             >
               ×
@@ -133,7 +133,7 @@ export default function BreedSearchDropdown({
           role="menu"
         >
           {filteredBreeds.length === 0 ? (
-            <div className="px-3 py-2 text-sm text-charcoal-500 dark:text-charcoal-400">
+            <div className="px-3 py-2 text-sm text-charcoal-500">
               Породы не найдены
             </div>
           ) : (
@@ -148,13 +148,13 @@ export default function BreedSearchDropdown({
                   onClick={() => handleSelect(breed)}
                   className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
                     isSelected
-                      ? 'bg-camel-500 text-charcoal-900 dark:bg-camel-600 dark:text-cream-50'
-                      : 'text-charcoal-700 hover:bg-camel-100 dark:text-charcoal-200 dark:hover:bg-camel-900/30'
+                      ? 'bg-camel-500 text-charcoal-900'
+                      : 'text-charcoal-700 hover:bg-camel-100'
                   }`}
                 >
                   {display.primary}
                   {display.secondary && (
-                    <span className="ml-2 text-charcoal-400 dark:text-charcoal-500">
+                    <span className="ml-2 text-charcoal-400">
                       {display.secondary}
                     </span>
                   )}
@@ -166,10 +166,10 @@ export default function BreedSearchDropdown({
 
         {/* Clear selection button */}
         {selectedBreed && (
-          <div className="mt-2 pt-2 border-t border-old-money-200 dark:border-charcoal-600">
+          <div className="mt-2 pt-2 border-t border-old-money-200">
             <button
               onClick={handleClear}
-              className="w-full px-3 py-1.5 text-sm text-charcoal-500 hover:text-charcoal-700 dark:text-charcoal-400 dark:hover:text-charcoal-200 transition-colors"
+              className="w-full px-3 py-1.5 text-sm text-charcoal-500 hover:text-charcoal-700 transition-colors"
             >
               Сбросить фильтр
             </button>

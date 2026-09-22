@@ -113,13 +113,13 @@ export function NavMenuDropdown({
   useEffect(() => () => clearTimers(), [])
 
   const triggerTone = isSectionActive
-    ? 'text-camel-700 dark:text-camel-400'
-    : 'text-charcoal-700 dark:text-charcoal-200 hover:text-charcoal-900 dark:hover:text-charcoal-100'
+    ? 'text-camel-700'
+    : 'text-charcoal-700 hover:text-charcoal-900'
 
   const chevronTone =
     open || isSectionActive
-      ? 'text-camel-600 dark:text-camel-400'
-      : 'text-charcoal-400 dark:text-charcoal-500 group-hover:text-camel-600 dark:group-hover:text-camel-400'
+      ? 'text-camel-600'
+      : 'text-charcoal-400 group-hover:text-camel-600'
 
   return (
     <div ref={containerRef} className="relative" onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
@@ -154,7 +154,7 @@ export function NavMenuDropdown({
 
       {open && (
         <div className="nav-dropdown absolute left-1/2 top-full z-[100] w-max min-w-[9.5rem] -translate-x-1/2 pt-2">
-          <div ref={menuPanelRef} className="nav-dropdown-panel overflow-hidden rounded-xl border-2 border-old-money-200 bg-white shadow-xl dark:border-charcoal-600 dark:bg-charcoal-800">
+          <div ref={menuPanelRef} className="nav-dropdown-panel overflow-hidden rounded-xl border-2 border-old-money-200 bg-white shadow-xl">
             <ul className="py-1">
               {items.map((item) => {
                 const active = item.isActive?.(location.pathname, location.search) ?? false
@@ -169,12 +169,12 @@ export function NavMenuDropdown({
                       }}
                       className={`flex items-center gap-2.5 whitespace-nowrap px-4 py-2.5 text-sm transition-colors ${
                         active
-                          ? 'bg-camel-50 font-semibold text-camel-800 dark:bg-camel-950/30 dark:text-camel-300'
-                          : 'text-charcoal-700 hover:bg-old-money-50 dark:text-charcoal-200 dark:hover:bg-charcoal-700'
+                          ? 'bg-camel-50 font-semibold text-camel-800'
+                          : 'text-charcoal-700 hover:bg-old-money-50'
                       }`}
                     >
                       <Icon
-                        className={`h-4 w-4 shrink-0 ${active ? 'text-camel-600 dark:text-camel-400' : 'text-old-money-500 dark:text-charcoal-400'}`}
+                        className={`h-4 w-4 shrink-0 ${active ? 'text-camel-600' : 'text-old-money-500'}`}
                         strokeWidth={1.75}
                         aria-hidden
                       />

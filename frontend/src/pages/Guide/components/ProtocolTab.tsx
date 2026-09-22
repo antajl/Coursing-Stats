@@ -19,9 +19,9 @@ function StatGrid({ items }: { items: { label: string; sub: string }[] }) {
       {items.map((item) => (
         <div
           key={item.label}
-          className="rounded-lg border border-old-money-200 bg-old-money-50/80 px-3 py-3 text-center dark:border-charcoal-600 dark:bg-charcoal-800/60"
+          className="rounded-lg border border-old-money-200 bg-old-money-50/80 px-3 py-3 text-center"
         >
-          <div className="text-xs font-semibold uppercase tracking-wide text-camel-700 dark:text-camel-400">
+          <div className="text-xs font-semibold uppercase tracking-wide text-camel-700">
             {item.label}
           </div>
           <div className="mt-1 text-[11px] text-old-money-500">{item.sub}</div>
@@ -41,9 +41,9 @@ function ScoringStatGrid({
       {items.map((stat) => (
         <div
           key={stat.label}
-          className="rounded-lg border border-old-money-200 bg-old-money-50/80 px-3 py-3 text-center dark:border-charcoal-600 dark:bg-charcoal-800/60"
+          className="rounded-lg border border-old-money-200 bg-old-money-50/80 px-3 py-3 text-center"
         >
-          <div className="font-serif text-2xl font-bold text-camel-700 dark:text-camel-400">{stat.n}</div>
+          <div className="font-serif text-2xl font-bold text-camel-700">{stat.n}</div>
           <div className="mt-0.5 text-xs font-semibold uppercase tracking-wide text-old-money-600">{stat.label}</div>
           <div className="text-[11px] text-old-money-500">{stat.sub}</div>
         </div>
@@ -59,16 +59,16 @@ export default function ProtocolTab() {
     <div className="space-y-4">
       <SectionCard title="Квалификация (ВС)">
         <div className="flex flex-wrap items-start gap-3">
-          <span className="inline-block rounded border border-camel-200 bg-camel-100 px-2 py-1 text-sm font-semibold text-camel-800 dark:border-camel-700 dark:bg-camel-900/50 dark:text-camel-300">
+          <span className="inline-block rounded border border-camel-200 bg-camel-100 px-2 py-1 text-sm font-semibold text-camel-800">
             ВС
           </span>
           <div className="min-w-0 flex-1">
             <p>
-              <strong className="font-semibold text-charcoal-800 dark:text-charcoal-200">Высшая квалификация</strong> —
+              <strong className="font-semibold text-charcoal-800">Высшая квалификация</strong> —
               в HTML-протоколе procoursing.ru отмечается «CC» или «+» (зависит от формата таблицы), если собака выполнила
               квалификационные нормы, необходимые для присвоения титула или сертификата на этом соревновании.
             </p>
-            <p className="mt-2 text-xs text-old-money-600 dark:text-old-money-400">
+            <p className="mt-2 text-xs text-old-money-600">
               В таблице колонка называется CC или ВС; на сайте — бейдж ВС у итогового балла. См. «Структура таблицы» в
               сегменте дисциплины.
             </p>
@@ -98,7 +98,7 @@ export default function ProtocolTab() {
                 { label: 'CC / Титул', sub: 'квалификация и сертификат' },
               ]}
             />
-            <p className="text-xs text-old-money-600 dark:text-old-money-400">
+            <p className="text-xs text-old-money-600">
               На сайте в карточке результата — таблица забегов с оценками судей; итог в шапке = общая сумма протокола
               (<strong>Σ</strong>), без деления на число судей.
             </p>
@@ -125,13 +125,13 @@ export default function ProtocolTab() {
               {CRITERIA.map((c) => (
                 <div
                   key={c.key}
-                  className="flex gap-3 rounded-lg border border-old-money-200 bg-white px-3 py-2.5 dark:border-charcoal-600 dark:bg-charcoal-800/40"
+                  className="flex gap-3 rounded-lg border border-old-money-200 bg-white px-3 py-2.5"
                 >
-                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-camel-100 font-serif text-lg font-bold text-camel-800 dark:bg-camel-900/40 dark:text-camel-300">
+                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-camel-100 font-serif text-lg font-bold text-camel-800">
                     {c.key}
                   </div>
                   <div className="min-w-0">
-                    <div className="font-semibold text-charcoal-800 dark:text-charcoal-200">{c.name}</div>
+                    <div className="font-semibold text-charcoal-800">{c.name}</div>
                     <p className="mt-0.5 text-xs leading-relaxed">{c.summary}</p>
                     <RefTag>{c.ref}</RefTag>
                   </div>
@@ -142,7 +142,7 @@ export default function ProtocolTab() {
           </SectionCard>
 
           <SectionCard title="Квалификация и титулы">
-            <p className="text-xs text-old-money-600 dark:text-old-money-400">
+            <p className="text-xs text-old-money-600">
               Ключевая норма для титула: {COURSING_CACL_QUALIFICATION} (п. 4.3.4). Без выполнения норм титул или{' '}
               <AbbrTag abbr="CACL" /> не присваивается, даже при высоком месте.
             </p>
@@ -150,9 +150,9 @@ export default function ProtocolTab() {
               {COURSING_CERTIFICATES.map((item) => (
                 <div
                   key={item.code}
-                  className="rounded-lg border border-old-money-200 bg-old-money-50/60 px-4 py-3 dark:border-charcoal-600 dark:bg-charcoal-800/50"
+                  className="rounded-lg border border-old-money-200 bg-old-money-50/60 px-4 py-3"
                 >
-                  <div className="text-[10px] font-semibold uppercase tracking-wide text-old-money-500 dark:text-old-money-400">
+                  <div className="text-[10px] font-semibold uppercase tracking-wide text-old-money-500">
                     {item.level}
                   </div>
                   <div className="mt-1">
@@ -187,11 +187,11 @@ export default function ProtocolTab() {
                 { label: 'ВС / Титул', sub: 'квалификация и сертификат' },
               ]}
             />
-            <p className="text-xs text-old-money-600 dark:text-old-money-400">
+            <p className="text-xs text-old-money-600">
               Формат колонок: 18 ячеек (CC — время и скорость в одной ячейке; отметка «CC») или 21 ячейка (ВС — время и
               скорость раздельно; отметка «+»). См. блок «Квалификация (ВС)» выше.
             </p>
-            <p className="text-xs text-old-money-600 dark:text-old-money-400">
+            <p className="text-xs text-old-money-600">
               На сайте в карточке результата — таблица забегов (время, скорость км/ч, попона); итоговое «лучшее время» из
               протокола.
             </p>
@@ -199,7 +199,7 @@ export default function ProtocolTab() {
           </SectionCard>
 
           <SectionCard title="Оценка результата">
-            <p className="text-xs text-old-money-600 dark:text-old-money-400">
+            <p className="text-xs text-old-money-600">
               Критериев <strong>М / Р / В / П / Э</strong> нет — место определяется по времени на финише (разд. VI).
             </p>
             <div className="grid gap-3 sm:grid-cols-2">
@@ -218,13 +218,13 @@ export default function ProtocolTab() {
               ].map((metric) => (
                 <div
                   key={metric.key}
-                  className="flex gap-3 rounded-lg border border-old-money-200 bg-white px-3 py-2.5 dark:border-charcoal-600 dark:bg-charcoal-800/40"
+                  className="flex gap-3 rounded-lg border border-old-money-200 bg-white px-3 py-2.5"
                 >
-                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-camel-100 font-serif text-sm font-bold text-camel-800 dark:bg-camel-900/40 dark:text-camel-300">
+                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-camel-100 font-serif text-sm font-bold text-camel-800">
                     {metric.key}
                   </div>
                   <div className="min-w-0">
-                    <div className="font-semibold text-charcoal-800 dark:text-charcoal-200">{metric.name}</div>
+                    <div className="font-semibold text-charcoal-800">{metric.name}</div>
                     <p className="mt-0.5 text-xs leading-relaxed">{metric.summary}</p>
                     {'ref' in metric && metric.ref ? <RefTag>{metric.ref}</RefTag> : null}
                   </div>
@@ -255,9 +255,9 @@ export default function ProtocolTab() {
               {COURSING_CERTIFICATES.map((item) => (
                 <div
                   key={item.code}
-                  className="rounded-lg border border-old-money-200 bg-old-money-50/60 px-4 py-3 dark:border-charcoal-600 dark:bg-charcoal-800/50"
+                  className="rounded-lg border border-old-money-200 bg-old-money-50/60 px-4 py-3"
                 >
-                  <div className="text-[10px] font-semibold uppercase tracking-wide text-old-money-500 dark:text-old-money-400">
+                  <div className="text-[10px] font-semibold uppercase tracking-wide text-old-money-500">
                     {item.level}
                   </div>
                   <div className="mt-1">

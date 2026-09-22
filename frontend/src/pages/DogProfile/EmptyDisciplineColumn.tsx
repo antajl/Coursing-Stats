@@ -20,7 +20,7 @@ export function EmptyDisciplineColumn({ title, theme }: EmptyDisciplineColumnPro
         <div
           className={`mb-4 flex h-[7.25rem] shrink-0 flex-col items-center justify-center overflow-hidden rounded-lg border border-dashed p-4 text-center ${t.heroBorder} ${t.heroBg}`}
         >
-          <p className="text-sm font-medium text-old-money-500 dark:text-old-money-400">данных нет</p>
+          <p className="text-sm font-medium text-old-money-500">данных нет</p>
         </div>
         <div className="mb-4 grid shrink-0 grid-cols-2 gap-3">
           <div

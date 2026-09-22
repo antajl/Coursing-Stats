@@ -196,8 +196,8 @@ export default function DoninoPageToolbar({
                     }}
                     className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
                       filterYears.length === 0
-                        ? 'bg-camel-500 text-charcoal-900 dark:bg-camel-600 dark:text-cream-50'
-                        : 'text-charcoal-700 hover:bg-camel-100 dark:text-charcoal-200 dark:hover:bg-camel-900/30'
+                        ? 'bg-camel-500 text-charcoal-900'
+                        : 'text-charcoal-700 hover:bg-camel-100'
                     }`}
                   >
                     Все года
@@ -212,8 +212,8 @@ export default function DoninoPageToolbar({
                         onClick={() => onToggleFilter('year', year)}
                         className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
                           active
-                            ? 'bg-camel-500 text-charcoal-900 dark:bg-camel-600 dark:text-cream-50'
-                            : 'text-charcoal-700 hover:bg-camel-100 dark:text-charcoal-200 dark:hover:bg-camel-900/30'
+                            ? 'bg-camel-500 text-charcoal-900'
+                            : 'text-charcoal-700 hover:bg-camel-100'
                         }`}
                       >
                         {year}
@@ -261,8 +261,8 @@ export default function DoninoPageToolbar({
                     }}
                     className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
                       filterSexes.length === 0
-                        ? 'bg-camel-500 text-charcoal-900 dark:bg-camel-600 dark:text-cream-50'
-                        : 'text-charcoal-700 hover:bg-camel-100 dark:text-charcoal-200 dark:hover:bg-camel-900/30'
+                        ? 'bg-camel-500 text-charcoal-900'
+                        : 'text-charcoal-700 hover:bg-camel-100'
                     }`}
                   >
                     Все
@@ -277,8 +277,8 @@ export default function DoninoPageToolbar({
                         onClick={() => onToggleFilter('sex', sex)}
                         className={`flex w-full items-center gap-2 rounded-md px-3 py-2 text-left text-sm transition-colors ${
                           active
-                            ? 'bg-camel-500 text-charcoal-900 dark:bg-camel-600 dark:text-cream-50'
-                            : 'text-charcoal-700 hover:bg-camel-100 dark:text-charcoal-200 dark:hover:bg-camel-900/30'
+                            ? 'bg-camel-500 text-charcoal-900'
+                            : 'text-charcoal-700 hover:bg-camel-100'
                         }`}
                       >
                         <DogSexIcon sex={sex} />
@@ -309,7 +309,7 @@ export default function DoninoPageToolbar({
                     />
                     <div className="grid grid-cols-2 gap-2">
                       <label className="block space-y-0.5">
-                        <span className="text-[11px] font-medium text-charcoal-600 dark:text-charcoal-300">
+                        <span className="text-[11px] font-medium text-charcoal-600">
                           Мин. км/ч
                         </span>
                         <input
@@ -321,7 +321,7 @@ export default function DoninoPageToolbar({
                         />
                       </label>
                       <label className="block space-y-0.5">
-                        <span className="text-[11px] font-medium text-charcoal-600 dark:text-charcoal-300">
+                        <span className="text-[11px] font-medium text-charcoal-600">
                           Макс. км/ч
                         </span>
                         <input
@@ -333,7 +333,7 @@ export default function DoninoPageToolbar({
                         />
                       </label>
                       <label className="block space-y-0.5">
-                        <span className="text-[11px] font-medium text-charcoal-600 dark:text-charcoal-300">
+                        <span className="text-[11px] font-medium text-charcoal-600">
                           Мин. сек
                         </span>
                         <input
@@ -346,7 +346,7 @@ export default function DoninoPageToolbar({
                         />
                       </label>
                       <label className="block space-y-0.5">
-                        <span className="text-[11px] font-medium text-charcoal-600 dark:text-charcoal-300">
+                        <span className="text-[11px] font-medium text-charcoal-600">
                           Макс. сек
                         </span>
                         <input
@@ -372,14 +372,14 @@ export default function DoninoPageToolbar({
                       <ChevronDown className="ml-1 h-3.5 w-3.5" strokeWidth={2} />
                     </ToolbarChip>
                     {exportDropdownOpen && (
-                      <div className="absolute right-0 top-full z-50 mt-1 min-w-[160px] rounded-lg border border-old-money-200 bg-white shadow-lg dark:border-charcoal-600 dark:bg-charcoal-800">
+                      <div className="absolute right-0 top-full z-50 mt-1 min-w-[160px] rounded-lg border border-old-money-200 bg-white shadow-lg">
                         <button
                           type="button"
                           onClick={() => {
                             exportDoninoToExcel(speedRecords, coursingRecords)
                             setExportDropdownOpen(false)
                           }}
-                          className="w-full px-4 py-2 text-left text-sm text-charcoal-700 hover:bg-cream-50 dark:text-charcoal-200 dark:hover:bg-charcoal-700"
+                          className="w-full px-4 py-2 text-left text-sm text-charcoal-700 hover:bg-cream-50"
                         >
                           Записи
                         </button>
@@ -389,7 +389,7 @@ export default function DoninoPageToolbar({
                             exportDoninoStatsToExcel(speedStats!, coursingStats!)
                             setExportDropdownOpen(false)
                           }}
-                          className="w-full px-4 py-2 text-left text-sm text-charcoal-700 hover:bg-cream-50 dark:text-charcoal-200 dark:hover:bg-charcoal-700"
+                          className="w-full px-4 py-2 text-left text-sm text-charcoal-700 hover:bg-cream-50"
                         >
                           Статистика
                         </button>
@@ -408,7 +408,7 @@ export default function DoninoPageToolbar({
         }
       />
       {view === 'table' && filterSexes.length > 0 && (
-        <p className="mt-2 text-xs text-old-money-500 dark:text-old-money-400">
+        <p className="mt-2 text-xs text-old-money-500">
           Фильтр по полу применяется только к колонке «Замер».
         </p>
       )}
@@ -418,7 +418,7 @@ export default function DoninoPageToolbar({
           filterMaxSpeed ||
           filterMinTime ||
           filterMaxTime) && (
-          <p className="mt-2 text-xs text-old-money-500 dark:text-old-money-400">
+          <p className="mt-2 text-xs text-old-money-500">
             {filterSexes.length > 0 && 'Фильтр по полу — только «Замер». '}
             {(filterMinSpeed || filterMaxSpeed) && 'Диапазон км/ч — только «Замер». '}
             {(filterMinTime || filterMaxTime) && 'Диапазон сек — только «Бега 350 м».'}

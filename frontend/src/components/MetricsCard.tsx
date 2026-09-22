@@ -15,8 +15,8 @@ export default function MetricsCard({
   className = '',
 }: MetricsCardProps) {
   const variantStyles = {
-    primary: 'bg-gradient-to-br from-camel-100/95 to-cream-50/95 dark:from-camel-900/80 dark:to-charcoal-800/80 shadow-2xl',
-    secondary: 'bg-gradient-to-br from-camel-100/95 to-cream-50/95 dark:from-camel-900/80 dark:to-charcoal-800/80',
+    primary: 'bg-gradient-to-br from-camel-100/95 to-cream-50/95 shadow-2xl',
+    secondary: 'bg-gradient-to-br from-camel-100/95 to-cream-50/95',
   }
 
   const paddingStyles = {
@@ -25,9 +25,9 @@ export default function MetricsCard({
   }
 
   return (
-    <div className={`${variantStyles[variant]} ${paddingStyles[variant]} backdrop-blur-md rounded-xl border border-camel-200/50 dark:border-camel-700/50 hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-200 ${className}`}>
-      <div className="flex items-center justify-center mb-3 pb-3 border-b border-charcoal-200 dark:border-charcoal-700">
-        <p className={`font-semibold text-camel-700 dark:text-camel-300 ${variant === 'primary' ? 'text-base' : 'text-sm'}`}>
+    <div className={`${variantStyles[variant]} ${paddingStyles[variant]} backdrop-blur-md rounded-xl border border-camel-200/50 hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-200 ${className}`}>
+      <div className="flex items-center justify-center mb-3 pb-3 border-b border-charcoal-200">
+        <p className={`font-semibold text-camel-700 ${variant === 'primary' ? 'text-base' : 'text-sm'}`}>
           {title}
         </p>
       </div>
@@ -41,10 +41,10 @@ export default function MetricsCard({
           />
         ))}
         {metrics.length > 1 && (
-          <div className="absolute left-1/3 top-0 bottom-0 w-px bg-charcoal-200 dark:bg-charcoal-700" />
+          <div className="absolute left-1/3 top-0 bottom-0 w-px bg-charcoal-200" />
         )}
         {metrics.length > 2 && (
-          <div className="absolute left-2/3 top-0 bottom-0 w-px bg-charcoal-200 dark:bg-charcoal-700" />
+          <div className="absolute left-2/3 top-0 bottom-0 w-px bg-charcoal-200" />
         )}
       </div>
     </div>

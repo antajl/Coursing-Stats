@@ -186,7 +186,7 @@ export default function HomeHeroStage({ children, metrics }: HomeHeroStageProps)
             <button
               type="button"
               onClick={toggleMetrics}
-              className="fixed right-2 top-16 md:hidden z-50 p-2 rounded-full bg-white/90 dark:bg-charcoal-800/90 backdrop-blur-sm shadow-lg border border-camel-200 dark:border-camel-700 will-change-opacity flex items-center justify-center"
+              className="fixed right-2 top-16 md:hidden z-50 p-2 rounded-full bg-white/90 backdrop-blur-sm shadow-lg border border-camel-200 will-change-opacity flex items-center justify-center"
               aria-label={metricsCollapsed ? 'Показать статистику' : 'Скрыть статистику'}
             >
               <Icons.chevronDown

@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import { useRef } from 'react'
-import ThemeToggle from '../ThemeToggle'
 import { NavMenuDropdown } from '../NavMenuDropdown'
 import { usePublicCalendarVisible } from '../../hooks/useStaticData'
 import { useAuth } from '../../contexts/AuthContext'
@@ -16,7 +15,6 @@ import {
 } from './navLinks'
 
 type NavDesktopProps = {
-  isDark: boolean
   isActive: (path: string) => boolean
   isCompetitionsActive: boolean
   isShowsActive: boolean
@@ -31,7 +29,6 @@ type NavDesktopProps = {
 }
 
 export function NavDesktop({
-  isDark,
   isActive,
   isCompetitionsActive,
   isShowsActive,
@@ -82,7 +79,7 @@ export function NavDesktop({
         <Link
           to="/"
           className={`group relative shrink-0 px-2.5 py-2 text-xs font-semibold whitespace-nowrap transition-all duration-300 lg:px-5 lg:text-sm ${
-            isActive('/') ? 'text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200 hover:text-charcoal-900 dark:hover:text-charcoal-100'
+            isActive('/') ? 'text-camel-700' : 'text-charcoal-700 hover:text-charcoal-900'
           }`}
         >
           <span className="relative z-10">Главная</span>
@@ -150,7 +147,7 @@ export function NavDesktop({
         <Link
           to="/about"
           className={`group relative shrink-0 px-2.5 py-2 text-xs font-semibold whitespace-nowrap transition-all duration-300 lg:px-5 lg:text-sm ${
-            isAboutActive ? 'text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200 hover:text-charcoal-900 dark:hover:text-charcoal-100'
+            isAboutActive ? 'text-camel-700' : 'text-charcoal-700 hover:text-charcoal-900'
           }`}
         >
           <span className="relative z-10">О проекте</span>
@@ -165,19 +162,18 @@ export function NavDesktop({
         {isAuthenticated ? (
           <Link
             to="/account"
-            className="px-2 lg:px-3 py-2 text-xs lg:text-sm font-medium text-charcoal-700 dark:text-charcoal-200 hover:text-charcoal-900 dark:hover:text-charcoal-100 transition-colors whitespace-nowrap"
+            className="px-2 lg:px-3 py-2 text-xs lg:text-sm font-medium text-charcoal-700 hover:text-charcoal-900 transition-colors whitespace-nowrap"
           >
             {user?.display_name}
           </Link>
         ) : (
           <Link
             to="/login"
-            className="px-2 lg:px-3 py-2 text-xs lg:text-sm font-medium text-camel-700 dark:text-camel-400 hover:text-camel-800 dark:hover:text-camel-300 transition-colors whitespace-nowrap"
+            className="px-2 lg:px-3 py-2 text-xs lg:text-sm font-medium text-camel-700 hover:text-camel-800 transition-colors whitespace-nowrap"
           >
             Войти
           </Link>
         )}
-        <ThemeToggle />
         <div
           className="relative shrink-0"
           onMouseEnter={onSourcesMouseEnter}
@@ -186,23 +182,23 @@ export function NavDesktop({
           <button
             aria-expanded={sourcesOpen}
             aria-label="Источники данных"
-            className="w-11 h-11 border-2 border-old-money-300 dark:border-charcoal-600 rounded-lg bg-old-money-50 dark:bg-charcoal-800 hover:bg-old-money-100 dark:hover:bg-charcoal-700 transition-colors flex items-center justify-center shrink-0"
+            className="w-11 h-11 border-2 border-old-money-300 rounded-lg bg-old-money-50 hover:bg-old-money-100 transition-colors flex items-center justify-center shrink-0"
             title="Источники данных"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-old-money-700 dark:text-camel-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-old-money-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
             </svg>
           </button>
           {sourcesOpen && (
-            <div className="absolute right-0 mt-1 w-64 bg-white dark:bg-charcoal-800 rounded-xl shadow-xl border-2 border-old-money-200 dark:border-charcoal-600 overflow-hidden z-[100]">
+            <div className="absolute right-0 mt-1 w-64 bg-white rounded-xl shadow-xl border-2 border-old-money-200 overflow-hidden z-[100]">
               {DATA_SOURCE_LINKS.map((link, index) => (
                 <a
                   key={link.href}
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`block px-4 py-3 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-700 transition-colors${
-                    index < DATA_SOURCE_LINKS.length - 1 ? ' border-b border-old-money-100 dark:border-charcoal-600' : ''
+                  className={`block px-4 py-3 text-sm text-charcoal-700 hover:bg-old-money-50 transition-colors${
+                    index < DATA_SOURCE_LINKS.length - 1 ? ' border-b border-old-money-100' : ''
                   }`}
                 >
                   {link.label}

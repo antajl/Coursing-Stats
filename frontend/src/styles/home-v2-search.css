@@ -7,10 +7,6 @@
   padding-left: 12px;
   padding-right: 12px;
 }
-.dark .home-v2-stage .home-v2-search-field {
-  background: rgba(38, 34, 30, 0.72);
-  border-bottom-color: var(--char-500);
-}
 
 /* Search */
 .home-v2-search {
@@ -32,21 +28,11 @@
 .home-v2-search-field:focus-within {
   border-color: var(--camel-500);
 }
-.dark .home-v2-search-field {
-  border-color: var(--char-600);
-}
-.dark .home-v2-search-field:focus-within {
-  border-color: var(--camel-400);
-}
 .home-v2-search-icon {
   width: 18px;
   height: 18px;
   flex-shrink: 0;
   color: var(--char-500);
-}
-.dark .home-v2-search-icon {
-  color: var(--cream-50);
-  stroke: currentColor;
 }
 .home-v2-search-field input {
   flex: 1;
@@ -58,14 +44,8 @@
   color: var(--char-900);
   padding: 12px 0;
 }
-.dark .home-v2-search-field input {
-  color: var(--char-100);
-}
 .home-v2-search-field input::placeholder {
   color: var(--char-500);
-}
-.dark .home-v2-search-field input::placeholder {
-  color: var(--char-300);
 }
 .home-v2-search-list {
   position: absolute;
@@ -88,10 +68,6 @@
     max-height: min(280px, 50vh);
   }
 }
-.dark .home-v2-search-list {
-  background: var(--char-800);
-  border-color: var(--char-600);
-}
 .home-v2-search-list button {
   display: flex;
   flex-direction: column;
@@ -109,16 +85,11 @@
 .home-v2-search-list button:hover {
   background: var(--camel-50);
 }
-.dark .home-v2-search-list button.is-active,
-.dark .home-v2-search-list button:hover {
-  background: rgba(155, 103, 32, 0.2);
-}
 .home-v2-search-name {
   font-weight: 600;
   font-size: 14px;
   color: var(--char-900);
 }
-.dark .home-v2-search-name { color: var(--char-100); }
 .home-v2-search-breed {
   font-size: 12px;
   color: var(--char-500);
@@ -142,7 +113,6 @@
   padding-bottom: 12px;
   border-bottom: 1px solid var(--om-200);
 }
-.dark .home-v2-section-head { border-bottom-color: var(--char-700); }
 .home-v2-section-title {
   display: flex;
   align-items: center;
@@ -155,12 +125,8 @@
   margin: 0;
   color: var(--char-900);
 }
-.dark .home-v2-section-title h2 { color: var(--char-100); }
 .home-v2-section-title svg {
   color: var(--camel-600);
-}
-.dark .home-v2-section-title svg {
-  color: var(--camel-400);
 }
 .home-v2-section-link {
   display: inline-flex;
@@ -191,16 +157,6 @@
 }
 .home-v2-section-link:hover::after {
   transform: translateX(3px);
-}
-.dark .home-v2-section-link {
-  color: var(--camel-200);
-  border-color: var(--camel-700);
-  background: color-mix(in srgb, var(--camel-900) 40%, var(--char-800));
-}
-.dark .home-v2-section-link:hover {
-  color: var(--cream-50);
-  border-color: var(--camel-400);
-  background: color-mix(in srgb, var(--camel-800) 55%, var(--char-800));
 }
 
 .home-v2-events {
@@ -245,15 +201,6 @@
 }
 .home-v2-external:hover::after {
   transform: translateX(4px);
-}
-.dark .home-v2-external {
-  color: var(--camel-200);
-  border-top-color: var(--char-700);
-  background: color-mix(in srgb, var(--camel-900) 32%, var(--char-800));
-}
-.dark .home-v2-external:hover {
-  color: var(--cream-50);
-  background: color-mix(in srgb, var(--camel-800) 45%, var(--char-800));
 }
 .home-v2-empty {
   margin: 0;

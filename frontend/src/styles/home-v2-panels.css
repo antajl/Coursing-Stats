@@ -26,19 +26,8 @@
   border-radius: calc(16px - 1.5px);
   box-shadow: inset 0 -2px 0 0 var(--om-100);
 }
-.dark .home-breed-progress-track {
-  box-shadow: inset 0 -2px 0 0 var(--char-700);
-}
 .home-breed-progress-fill__bar {
   box-shadow: inset 0 -2px 0 0 var(--camel-500);
-}
-.dark .home-breed-progress-fill__bar {
-  box-shadow: inset 0 -2px 0 0 var(--camel-400);
-}
-.dark .home-v2-col,
-.dark .home-v2-events-col {
-  background: var(--char-800);
-  border-color: var(--char-700);
 }
 .home-v2-col-head {
   font-family: var(--font-serif);
@@ -49,11 +38,6 @@
   padding: 12px 16px;
   border-bottom: 1px solid var(--om-200);
   background: color-mix(in srgb, var(--camel-100) 55%, var(--cream-50));
-}
-.dark .home-v2-col-head {
-  color: var(--camel-300);
-  border-color: var(--char-700);
-  background: color-mix(in srgb, var(--camel-900) 35%, var(--char-800));
 }
 .home-v2-col-head--tabs {
   display: flex;
@@ -122,17 +106,6 @@
   border-bottom: 1px solid var(--om-200);
   background: transparent;
 }
-.dark .home-v2-events-col .home-event-row {
-  background: transparent;
-  border-bottom-color: var(--char-700);
-}
-.dark .home-v2-events-col .home-event-row:hover {
-  background: color-mix(in srgb, var(--char-900) 55%, transparent);
-  border-bottom-color: var(--char-700);
-}
-.dark .home-v2-events-col .home-event-row--champ {
-  border-bottom-color: var(--char-700);
-}
 .home-v2-col .donino-home-empty,
 .home-v2-col .home-v2-empty,
 .home-v2-events-col .home-v2-empty {
@@ -145,7 +118,6 @@
   border-top: 1px solid var(--om-200);
   max-width: none;
 }
-.dark .home-v2-foot { border-color: var(--char-700); }
 .home-v2-foot .home-v2-disclaimer {
   margin: 0 auto 10px;
   max-width: 42rem;
@@ -157,14 +129,12 @@
   color: var(--char-700);
   text-align: center;
 }
-.dark .home-v2-contact { color: var(--char-300); }
 .home-v2-contact a {
   font-weight: 600;
   color: var(--camel-700);
   text-decoration: none;
 }
 .home-v2-contact a:hover { text-decoration: underline; }
-.dark .home-v2-contact a { color: var(--camel-400); }
 
 @media (max-width: 860px) {
   .home-v2-stage {

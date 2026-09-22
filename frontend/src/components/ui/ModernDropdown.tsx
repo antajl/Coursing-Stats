@@ -111,7 +111,7 @@ export default function ModernDropdown({
   const dropdownContent = (
     <div
       ref={dropdownRef}
-      className={`rounded-lg border border-old-money-200 bg-white shadow-lg dark:border-charcoal-600 dark:bg-charcoal-800 ${className}`}
+      className={`rounded-lg border border-old-money-200 bg-white shadow-lg ${className}`}
       style={{
         position: portal ? 'fixed' : 'absolute',
         top: position.top,

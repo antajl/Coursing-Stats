@@ -13,14 +13,14 @@ export function StatCard({
   highlight?: boolean
 }) {
   return (
-    <div className="bg-white dark:bg-charcoal-800 rounded-xl border border-cream-300 dark:border-charcoal-600 p-5">
-      <div className="text-xs uppercase tracking-wide text-old-money-600 dark:text-old-money-400 mb-2">{label}</div>
+    <div className="bg-white rounded-xl border border-cream-300 p-5">
+      <div className="text-xs uppercase tracking-wide text-old-money-600 mb-2">{label}</div>
       <div
-        className={`text-2xl font-bold ${highlight ? 'text-camel-700 dark:text-camel-400' : 'text-charcoal-900 dark:text-charcoal-100'}`}
+        className={`text-2xl font-bold ${highlight ? 'text-camel-700' : 'text-charcoal-900'}`}
       >
         {value}
       </div>
-      {sub && <div className="text-sm text-charcoal-500 dark:text-charcoal-400 mt-1">{sub}</div>}
+      {sub && <div className="text-sm text-charcoal-500 mt-1">{sub}</div>}
     </div>
   )
 }
@@ -52,7 +52,7 @@ export function FilterDropdown({
           {options.map((opt) => (
             <label
               key={opt}
-              className="flex cursor-pointer items-center gap-2 px-3 py-2 text-sm hover:bg-cream-50 dark:hover:bg-charcoal-700"
+              className="flex cursor-pointer items-center gap-2 px-3 py-2 text-sm hover:bg-cream-50"
             >
               <input type="checkbox" checked={selected.includes(opt)} onChange={() => onChange(opt)} />
               {formatOption ? formatOption(opt) : opt}
@@ -90,14 +90,14 @@ export function DistributionChart({
       className={
         bare
           ? ''
-          : `bg-white dark:bg-charcoal-800 rounded-xl border border-cream-300 dark:border-charcoal-600 ${
+          : `bg-white rounded-xl border border-cream-300 ${
               compact ? 'p-3 md:p-4' : 'p-6'
             }`
       }
     >
       {!hideTitle && (
         <h2
-          className={`font-bold text-charcoal-900 dark:text-charcoal-100 mb-4 ${
+          className={`font-bold text-charcoal-900 mb-4 ${
             compact ? 'text-base' : 'text-xl'
           }`}
         >
@@ -111,21 +111,21 @@ export function DistributionChart({
           return (
             <div key={range.label} className="flex items-center gap-2 md:gap-4">
               <div
-                className={`shrink-0 text-right text-charcoal-700 dark:text-charcoal-300 ${
+                className={`shrink-0 text-right text-charcoal-700 ${
                   compact ? 'w-14 text-xs' : 'w-28 text-sm'
                 }`}
               >
                 {range.label}
               </div>
-              <div className="flex-1 bg-cream-200 dark:bg-charcoal-600 rounded-full h-5 md:h-6 overflow-hidden">
+              <div className="flex-1 bg-cream-200 rounded-full h-5 md:h-6 overflow-hidden">
                 <div
                   className="bg-gradient-to-r from-camel-400 to-camel-600 h-full rounded-full"
                   style={{ width: `${(count / maxCount) * 100}%` }}
                 />
               </div>
-              <div className={`shrink-0 font-semibold text-charcoal-800 dark:text-charcoal-200 ${compact ? 'w-16 text-xs' : 'w-24 text-sm'}`}>
+              <div className={`shrink-0 font-semibold text-charcoal-800 ${compact ? 'w-16 text-xs' : 'w-24 text-sm'}`}>
                 {count}{' '}
-                <span className="text-charcoal-500 dark:text-charcoal-400 font-normal">({pct.toFixed(1)}%)</span>
+                <span className="text-charcoal-500 font-normal">({pct.toFixed(1)}%)</span>
               </div>
             </div>
           )

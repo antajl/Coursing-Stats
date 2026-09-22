@@ -40,16 +40,6 @@
   color:var(--char-900); font-weight:600; border-bottom-color:transparent;
 }
 
-.dark .home-event-row{
-  background:var(--char-800);
-  border-top-color:var(--char-700);
-  border-right-color:var(--char-700);
-  border-bottom-color:var(--char-700);
-}
-.dark .home-ranking-tab{color:var(--char-300);}
-.dark .home-ranking-tab:hover{color:var(--char-100);}
-.dark .home-ranking-tab--active{color:var(--cream-50); border-bottom-color:transparent;}
-
 @media(max-width:860px){
   .home-ranking-tabs{flex-wrap:wrap;}
 }

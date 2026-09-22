@@ -10,21 +10,21 @@ export function JudgeBreedPanel({
   onToggleShowAll: () => void
 }) {
   if (breeds.length === 0) {
-    return <p className="text-sm text-charcoal-500 dark:text-charcoal-400">Нет данных о породах</p>
+    return <p className="text-sm text-charcoal-500">Нет данных о породах</p>
   }
 
   return (
     <>
-      <div className="mb-2 flex gap-4 text-xs uppercase tracking-wide text-charcoal-500 dark:text-charcoal-400">
+      <div className="mb-2 flex gap-4 text-xs uppercase tracking-wide text-charcoal-500">
         <span className="flex-1">Порода</span>
         <span className="shrink-0">Оценок</span>
       </div>
-      <ul className="divide-y divide-old-money-100 dark:divide-charcoal-700">
+      <ul className="divide-y divide-old-money-100">
         {(showAll ? breeds : breeds.slice(0, 20)).map((row) => (
           <li key={row.breed} className="flex items-center justify-between gap-3 py-2 text-sm">
-            <span className="min-w-0 text-charcoal-800 dark:text-charcoal-100">{row.breed}</span>
+            <span className="min-w-0 text-charcoal-800">{row.breed}</span>
             <span
-              className="shrink-0 tabular-nums font-semibold text-charcoal-600 dark:text-charcoal-300"
+              className="shrink-0 tabular-nums font-semibold text-charcoal-600"
               title="Записей в протоколах по породе"
             >
               {row.count}
@@ -36,7 +36,7 @@ export function JudgeBreedPanel({
         <button
           type="button"
           onClick={onToggleShowAll}
-          className="mt-3 text-sm text-camel-700 hover:text-camel-800 dark:text-camel-400 dark:hover:text-camel-300"
+          className="mt-3 text-sm text-camel-700 hover:text-camel-800"
         >
           {showAll ? 'Свернуть' : `Показать все (${breeds.length})`}
         </button>

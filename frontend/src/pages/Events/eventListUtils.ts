@@ -18,41 +18,41 @@ export interface CalendarEvent {
 }
 
 export const DISCIPLINE_BORDER: Record<string, string> = {
-  coursing: 'border-l-forest-300 dark:border-l-forest-600',
-  bzmp: 'border-l-blue-500 dark:border-l-blue-600',
-  racing: 'border-l-rose-300 dark:border-l-rose-600',
-  other: 'border-l-amber-300 dark:border-l-amber-600',
-  default: 'border-l-old-money-300 dark:border-l-charcoal-600',
+  coursing: 'border-l-forest-300',
+  bzmp: 'border-l-blue-500',
+  racing: 'border-l-rose-300',
+  other: 'border-l-amber-300',
+  default: 'border-l-old-money-300',
 }
 
 export const DISCIPLINE_BADGE: Record<string, { bg: string; text: string; label: string }> = {
   coursing: {
-    bg: 'bg-forest-100 dark:bg-forest-900/40',
-    text: 'text-forest-700 dark:text-forest-300',
+    bg: 'bg-forest-100',
+    text: 'text-forest-700',
     label: 'Курсинг',
   },
   bzmp: {
-    bg: 'bg-blue-100 dark:bg-blue-900/40',
-    text: 'text-blue-700 dark:text-blue-300',
+    bg: 'bg-blue-100',
+    text: 'text-blue-700',
     label: 'БЗМП',
   },
   racing: {
-    bg: 'bg-rose-100 dark:bg-rose-900/40',
-    text: 'text-rose-700 dark:text-rose-300',
+    bg: 'bg-rose-100',
+    text: 'text-rose-700',
     label: 'Бега',
   },
   other: {
-    bg: 'bg-amber-100 dark:bg-amber-900/40',
-    text: 'text-amber-700 dark:text-amber-300',
+    bg: 'bg-amber-100',
+    text: 'text-amber-700',
     label: 'Другие',
   },
 }
 
 export const LEGEND_DOT_COLOR: Record<string, string> = {
-  coursing: 'bg-forest-300 dark:bg-forest-600',
-  bzmp: 'bg-blue-500 dark:bg-blue-600',
-  racing: 'bg-rose-300 dark:bg-rose-600',
-  other: 'bg-amber-300 dark:bg-amber-600',
+  coursing: 'bg-forest-300',
+  bzmp: 'bg-blue-500',
+  racing: 'bg-rose-300',
+  other: 'bg-amber-300',
   championship: 'bg-camel-500',
 }
 

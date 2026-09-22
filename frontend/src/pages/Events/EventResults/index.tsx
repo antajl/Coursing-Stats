@@ -71,7 +71,7 @@ export default function EventResults() {
           action={
             <Link
               to="/competitions?tab=calendar"
-              className="rounded-xl border-2 border-camel-300 bg-white px-4 py-2 text-sm font-semibold text-camel-700 transition-all hover:border-camel-400 hover:bg-camel-50 dark:border-camel-600 dark:bg-charcoal-800 dark:text-camel-400 dark:hover:bg-charcoal-700"
+              className="rounded-xl border-2 border-camel-300 bg-white px-4 py-2 text-sm font-semibold text-camel-700 transition-all hover:border-camel-400 hover:bg-camel-50"
             >
               К календарю
             </Link>
@@ -129,7 +129,7 @@ export default function EventResults() {
           <div className="mb-3">
             <Link
               to={`/admin/event/${id}`}
-              className="inline-flex rounded-lg border border-camel-400 bg-camel-50 px-3 py-1.5 text-sm font-semibold text-camel-900 hover:bg-camel-100 dark:border-camel-600 dark:bg-charcoal-800 dark:text-camel-300 dark:hover:bg-charcoal-700"
+              className="inline-flex rounded-lg border border-camel-400 bg-camel-50 px-3 py-1.5 text-sm font-semibold text-camel-900 hover:bg-camel-100"
             >
               Редактировать
             </Link>

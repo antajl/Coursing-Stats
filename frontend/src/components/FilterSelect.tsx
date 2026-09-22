@@ -34,14 +34,14 @@ export default function FilterSelect({
   const id = useId()
   const screenReaderLabel = ariaLabel || label
   const selectBase =
-    'h-8 w-full min-w-0 max-w-full px-3 bg-white dark:bg-charcoal-800 border-[1.5px] border-old-money-300 dark:border-charcoal-600 rounded-lg text-xs font-medium text-charcoal-700 dark:text-charcoal-200 focus:ring-2 focus:ring-gold-400 dark:focus:ring-camel-600 focus:border-transparent transition-colors dark:[color-scheme:dark]'
+    'h-8 w-full min-w-0 max-w-full px-3 bg-white border-[1.5px] border-old-money-300 rounded-lg text-xs font-medium text-charcoal-700 focus:ring-2 focus:ring-gold-400 focus:border-transparent transition-colors'
 
   return (
     <div className={className}>
       {label && (
         <label
           htmlFor={id}
-          className="block text-sm font-semibold text-old-money-700 dark:text-old-money-400 mb-2"
+          className="block text-sm font-semibold text-old-money-700 mb-2"
         >
           {label}
         </label>

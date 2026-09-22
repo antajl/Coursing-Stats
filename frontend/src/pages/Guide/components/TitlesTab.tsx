@@ -31,7 +31,7 @@ export default function TitlesTab() {
       <SectionCard title="Официальные источники">
         <p>
           Ниже — выжимка по{' '}
-          <strong className="font-semibold text-charcoal-800 dark:text-charcoal-200">курсингу и бегам борзых</strong>{' '}
+          <strong className="font-semibold text-charcoal-800">курсингу и бегам борзых</strong>{' '}
           из документов РКФ. Это <strong>отдельная</strong> дисциплина от выставок (см. вкладку «Выставки»). При
           расхождении с протоколом или при оформлении диплома ориентируйтесь на полные тексты.
         </p>
@@ -100,14 +100,14 @@ export default function TitlesTab() {
         <div className="overflow-x-auto">
           <table className="w-full min-w-[480px] text-left text-sm">
             <thead>
-              <tr className="border-b border-old-money-200 dark:border-charcoal-600">
+              <tr className="border-b border-old-money-200">
                 <th className="pb-2 pr-3 font-semibold">Ранг</th>
                 <th className="pb-2 pr-3 font-semibold">1 место (общий)</th>
                 <th className="pb-2 pr-3 font-semibold">2 место</th>
                 <th className="pb-2 font-semibold">В породе</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-old-money-100 dark:divide-charcoal-700">
+            <tbody className="divide-y divide-old-money-100">
               {STATUS_EVENT_RULES.map((row) => (
                 <tr key={row.rank}>
                   <td className="py-2.5 pr-3 font-medium">{row.rank}</td>
@@ -130,7 +130,7 @@ export default function TitlesTab() {
       </SectionCard>
 
       <SectionCard title="Кумулятивные титулы">
-        <p className="text-xs text-old-money-600 dark:text-old-money-400">
+        <p className="text-xs text-old-money-600">
           Оформляются в РКФ по набору талонов — не путать с титулами одного дня.
         </p>
         <CumulativeTitlesGrid items={CUMULATIVE_TITLES} />
@@ -146,10 +146,10 @@ export default function TitlesTab() {
       </SectionCard>
 
       <SectionCard title="Оформление «Чемпион России» (ЧР РК)">
-        <p className="text-xs text-old-money-600 dark:text-old-money-400">
+        <p className="text-xs text-old-money-600">
           С 15.12.2022 титул оформляется только талоном 1-го места на Чемпионате России по дисциплине. Набор CACL /
           ЧРКФ / ПКР больше не обменивается на ЧР РК — эти пути относятся к{' '}
-          <strong className="font-semibold text-charcoal-800 dark:text-charcoal-200">НЧ РК</strong> (блок выше).
+          <strong className="font-semibold text-charcoal-800">НЧ РК</strong> (блок выше).
         </p>
         <ol className="mt-2 list-decimal space-y-1.5 pl-5 text-sm">
           {CH_RUSSIA_VARIANTS.map((variant) => (

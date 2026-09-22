@@ -29,7 +29,7 @@ export function HomeBreedCarouselPager({
   if (dots.length <= 1) return null
 
   return (
-    <div className="mt-auto border-t border-old-money-100 dark:border-charcoal-700">
+    <div className="mt-auto border-t border-old-money-100">
       <div
         className="flex items-center justify-center gap-1.5 px-3 py-2"
         role="tablist"
@@ -47,8 +47,8 @@ export function HomeBreedCarouselPager({
               title={dot.label}
               className={`h-1.5 rounded-full transition-all duration-300 ${
                 active
-                  ? 'w-4 bg-camel-500 dark:bg-camel-400'
-                  : 'w-1.5 bg-old-money-300 hover:bg-old-money-400 dark:bg-charcoal-600 dark:hover:bg-charcoal-500'
+                  ? 'w-4 bg-camel-500'
+                  : 'w-1.5 bg-old-money-300 hover:bg-old-money-400'
               }`}
               onClick={() => go(i)}
             />

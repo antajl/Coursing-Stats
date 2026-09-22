@@ -36,7 +36,7 @@ export default function PoponaCell({ number, color, compact = false }: PoponaCel
   return (
     <HoverTooltip label={title} placement="top" variant="site" delayMs={0} portal>
       <span
-        className={`inline-flex items-center justify-center rounded font-bold shadow-sm cursor-help ${sizeClass} ${normalized ? bibTextClass(normalized) : 'text-charcoal-900 dark:text-charcoal-100 border border-old-money-300'}`}
+        className={`inline-flex items-center justify-center rounded font-bold shadow-sm cursor-help ${sizeClass} ${normalized ? bibTextClass(normalized) : 'text-charcoal-900 border border-old-money-300'}`}
         style={normalized ? bibColorStyle(normalized) : undefined}
       >
         {number ?? '—'}

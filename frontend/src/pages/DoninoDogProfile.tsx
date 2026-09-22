@@ -93,7 +93,7 @@ export default function DoninoDogProfile() {
       badges.push({
         icon: <Award className="h-4 w-4" />,
         label: 'Чемпион',
-        color: 'bg-forest-100 text-forest-700 dark:bg-forest-900/30 dark:text-forest-300',
+        color: 'bg-forest-100 text-forest-700',
         tooltip: 'Топ-5 породы по скорости и по времени',
       })
     }
@@ -105,7 +105,7 @@ export default function DoninoDogProfile() {
         badges.push({
           icon: <Zap className="h-4 w-4" />,
           label: 'Мастер скорости',
-          color: 'bg-warm-blue-100 text-warm-blue-700 dark:bg-warm-blue-900/30 dark:text-warm-blue-300',
+          color: 'bg-warm-blue-100 text-warm-blue-700',
           tooltip: 'Максимальная скорость 60+ км/ч',
         })
       }
@@ -118,7 +118,7 @@ export default function DoninoDogProfile() {
         badges.push({
           icon: <Zap className="h-4 w-4" />,
           label: 'Мастер времени',
-          color: 'bg-forest-100 text-forest-700 dark:bg-forest-900/30 dark:text-forest-300',
+          color: 'bg-forest-100 text-forest-700',
           tooltip: 'Лучшее время 20- секунд или меньше',
         })
       }
@@ -129,7 +129,7 @@ export default function DoninoDogProfile() {
       badges.push({
         icon: <Zap className="h-4 w-4" />,
         label: `Топ-${data.speedStats.breedRank} породы (скорость)`,
-        color: 'bg-terracotta-100 text-terracotta-700 dark:bg-terracotta-900/30 dark:text-terracotta-300',
+        color: 'bg-terracotta-100 text-terracotta-700',
         tooltip: `Собака занимает ${data.speedStats.breedRank} место среди ${data.speedStats.breedTotal} собак своей породы по скорости`,
       })
     }
@@ -139,7 +139,7 @@ export default function DoninoDogProfile() {
       badges.push({
         icon: <Zap className="h-4 w-4" />,
         label: `Топ-${data.coursingStats.breedRank} породы (бега)`,
-        color: 'bg-terracotta-100 text-terracotta-700 dark:bg-terracotta-900/30 dark:text-terracotta-300',
+        color: 'bg-terracotta-100 text-terracotta-700',
         tooltip: `Собака занимает ${data.coursingStats.breedRank} место среди ${data.coursingStats.breedTotal} собак своей породы по времени`,
       })
     }
@@ -157,7 +157,7 @@ export default function DoninoDogProfile() {
           badges.push({
             icon: <TrendingUp className="h-4 w-4" />,
             label: 'Прорыв',
-            color: 'bg-terracotta-100 text-terracotta-700 dark:bg-terracotta-900/30 dark:text-terracotta-300',
+            color: 'bg-terracotta-100 text-terracotta-700',
             tooltip: `Улучшение на ${improvement.toFixed(0)}%+ от первого результата`,
           })
         }
@@ -170,7 +170,7 @@ export default function DoninoDogProfile() {
       badges.push({
         icon: <Award className="h-4 w-4" />,
         label: 'Ветеран',
-        color: 'bg-camel-100 text-camel-700 dark:bg-camel-900/30 dark:text-camel-300',
+        color: 'bg-camel-100 text-camel-700',
         tooltip: `${totalRecords} замеров и забегов`,
       })
     }
@@ -243,23 +243,23 @@ export default function DoninoDogProfile() {
             <button
               type="button"
               onClick={handleBack}
-              className="relative z-10 mb-2 inline-flex h-11 w-11 items-center justify-center rounded-lg text-old-money-500 transition-colors hover:bg-old-money-50 hover:text-camel-700 md:absolute md:right-full md:top-8 md:mb-0 md:mr-0.5 dark:text-old-money-400 dark:hover:bg-charcoal-700 dark:hover:text-camel-400"
+              className="relative z-10 mb-2 inline-flex h-11 w-11 items-center justify-center rounded-lg text-old-money-500 transition-colors hover:bg-old-money-50 hover:text-camel-700 md:absolute md:right-full md:top-8 md:mb-0 md:mr-0.5"
               aria-label="Назад"
               data-export-ignore
             >
               <ChevronLeft className="h-5 w-5" aria-hidden />
             </button>
-            <div className="rounded-2xl border-2 border-old-money-200 bg-white p-5 shadow-md dark:border-charcoal-600 dark:bg-charcoal-800 md:p-8">
-              <div className="flex flex-col gap-4 md:flex-row md:gap-6 md:divide-x md:divide-old-money-200 dark:md:divide-charcoal-600">
+            <div className="rounded-2xl border-2 border-old-money-200 bg-white p-5 shadow-md md:p-8">
+              <div className="flex flex-col gap-4 md:flex-row md:gap-6 md:divide-x md:divide-old-money-200">
                 <div className="w-full md:w-1/2">
                   <div className="flex flex-wrap items-baseline gap-3 md:gap-4">
                     <OwnerCrownName name={data?.name} breed={data?.breed} kind="donino">
-                      <h1 className="text-2xl font-bold tracking-tight text-charcoal-900 dark:text-charcoal-100 md:text-3xl">{data?.name}</h1>
+                      <h1 className="text-2xl font-bold tracking-tight text-charcoal-900 md:text-3xl">{data?.name}</h1>
                     </OwnerCrownName>
                     {dogSex && <DogSexIcon sex={dogSex} size={18} className="mb-0.5" />}
                   </div>
                   <div className="mt-3">
-                    <span className="inline-block rounded-full border border-old-money-200 bg-cream-100 px-4 py-1.5 text-sm font-semibold text-charcoal-700 dark:border-charcoal-600 dark:bg-charcoal-700 dark:text-charcoal-300">
+                    <span className="inline-block rounded-full border border-old-money-200 bg-cream-100 px-4 py-1.5 text-sm font-semibold text-charcoal-700">
                       {data?.breed}
                     </span>
                   </div>
@@ -284,44 +284,44 @@ export default function DoninoDogProfile() {
             <div className="mb-6 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
               {hasSpeedRecords ? (
                 <div className="flex min-w-0 flex-col gap-4">
-                  <div className="flex h-[24rem] shrink-0 flex-col overflow-hidden rounded-2xl border-2 border-warm-blue-200 bg-white p-5 shadow-md dark:border-warm-blue-600 dark:bg-charcoal-800 md:h-[25rem] md:p-6">
-                    <h2 className="mb-4 shrink-0 text-lg font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 md:text-xl">
+                  <div className="flex h-[24rem] shrink-0 flex-col overflow-hidden rounded-2xl border-2 border-warm-blue-200 bg-white p-5 shadow-md md:h-[25rem] md:p-6">
+                    <h2 className="mb-4 shrink-0 text-lg font-bold tracking-tight text-charcoal-800 md:text-xl">
                       Замер скорости
                     </h2>
 
-                    <div className="mb-4 flex h-[7.25rem] shrink-0 flex-col items-center justify-center rounded-xl border-2 border-warm-blue-200 bg-warm-blue-50 p-4 text-center dark:border-warm-blue-600 dark:bg-charcoal-700">
-                      <div className="mb-2 text-xs font-semibold uppercase tracking-wide text-charcoal-500 dark:text-charcoal-400">
+                    <div className="mb-4 flex h-[7.25rem] shrink-0 flex-col items-center justify-center rounded-xl border-2 border-warm-blue-200 bg-warm-blue-50 p-4 text-center">
+                      <div className="mb-2 text-xs font-semibold uppercase tracking-wide text-charcoal-500">
                         Лучшая скорость
                       </div>
-                      <div className="whitespace-nowrap text-4xl font-bold tracking-tight text-warm-blue-800 dark:text-warm-blue-400">
+                      <div className="whitespace-nowrap text-4xl font-bold tracking-tight text-warm-blue-800">
                         {data?.speedStats?.bestSpeed?.toFixed(1) || '—'}
                         <span className="ml-2 text-base font-normal text-charcoal-400">км/ч</span>
                       </div>
                     </div>
 
                     <div className="mb-4 grid min-h-0 flex-1 grid-cols-2 gap-3 content-start">
-                      <div className="rounded-xl border border-warm-blue-200 bg-warm-blue-50 p-4 text-center dark:border-warm-blue-600 dark:bg-charcoal-700">
-                        <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-old-money-500 dark:text-old-money-400">
+                      <div className="rounded-xl border border-warm-blue-200 bg-warm-blue-50 p-4 text-center">
+                        <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-old-money-500">
                           Средняя
                         </div>
-                        <div className="whitespace-nowrap text-2xl font-bold text-warm-blue-900 dark:text-warm-blue-400">
+                        <div className="whitespace-nowrap text-2xl font-bold text-warm-blue-900">
                           {data?.speedStats?.avgSpeed?.toFixed(1) || '—'}
                           <span className="ml-1 text-sm font-normal text-charcoal-400">км/ч</span>
                         </div>
                       </div>
-                      <div className="rounded-xl border border-warm-blue-200 bg-warm-blue-50 p-4 text-center dark:border-warm-blue-600 dark:bg-charcoal-700">
-                        <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-old-money-500 dark:text-old-money-400">
+                      <div className="rounded-xl border border-warm-blue-200 bg-warm-blue-50 p-4 text-center">
+                        <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-old-money-500">
                           Замеров
                         </div>
-                        <div className="text-2xl font-bold text-warm-blue-900 dark:text-warm-blue-400">
+                        <div className="text-2xl font-bold text-warm-blue-900">
                           {uniqueSpeedRecords.length}
                         </div>
                       </div>
-                      <div className="rounded-xl border border-warm-blue-200 bg-warm-blue-50 p-4 text-center dark:border-warm-blue-600 dark:bg-charcoal-700">
-                        <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-old-money-500 dark:text-old-money-400">
+                      <div className="rounded-xl border border-warm-blue-200 bg-warm-blue-50 p-4 text-center">
+                        <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-old-money-500">
                           Рейтинг в породе
                         </div>
-                        <div className="text-2xl font-bold text-charcoal-800 dark:text-charcoal-100">
+                        <div className="text-2xl font-bold text-charcoal-800">
                           {data?.speedStats?.breedRank > 0 ? (
                             <>
                               #{data.speedStats.breedRank}
@@ -335,29 +335,29 @@ export default function DoninoDogProfile() {
                         </div>
                       </div>
                       <div
-                        className="rounded-xl border border-dashed border-warm-blue-200 bg-warm-blue-50/50 opacity-50 dark:border-warm-blue-600 dark:bg-charcoal-700/50"
+                        className="rounded-xl border border-dashed border-warm-blue-200 bg-warm-blue-50/50 opacity-50"
                         aria-hidden
                       />
                     </div>
                   </div>
 
                   {uniqueSpeedRecords.length > 0 && (
-                    <div className="rounded-2xl border-2 border-warm-blue-200 bg-white p-5 shadow-md dark:border-warm-blue-600 dark:bg-charcoal-800 md:p-6">
-                      <h3 className="mb-4 text-base font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 md:text-lg">
+                    <div className="rounded-2xl border-2 border-warm-blue-200 bg-white p-5 shadow-md md:p-6">
+                      <h3 className="mb-4 text-base font-bold tracking-tight text-charcoal-800 md:text-lg">
                         История
                       </h3>
                       <div className="space-y-2">
                         {uniqueSpeedRecords.map((record, idx) => (
                           <div key={idx} className="flex items-center gap-4">
-                            <div className="w-24 shrink-0 text-right text-sm text-charcoal-700 dark:text-charcoal-300">
+                            <div className="w-24 shrink-0 text-right text-sm text-charcoal-700">
                               {formatRecordDate(record.date)}
                             </div>
-                            <div className="relative h-6 flex-1 overflow-hidden rounded-full bg-cream-200 dark:bg-charcoal-600">
+                            <div className="relative h-6 flex-1 overflow-hidden rounded-full bg-cream-200">
                               <AnimatedMeterBar
                                 percent={(Number(record.speed_km_h) / 80) * 100}
                                 className="h-full rounded-full bg-gradient-to-r from-warm-blue-400 to-warm-blue-600 transition-[width] duration-500 ease-out"
                               />
-                              <div className="absolute inset-0 flex items-center justify-center text-sm font-bold text-charcoal-900 dark:text-charcoal-100">
+                              <div className="absolute inset-0 flex items-center justify-center text-sm font-bold text-charcoal-900">
                                 {Number(record.speed_km_h).toFixed(1)} км/ч
                               </div>
                             </div>
@@ -368,62 +368,62 @@ export default function DoninoDogProfile() {
                   )}
                 </div>
               ) : (
-                <div className="flex h-[24rem] shrink-0 flex-col overflow-hidden rounded-2xl border-2 border-dashed border-warm-blue-200 bg-white p-5 shadow-md dark:border-warm-blue-600 dark:bg-charcoal-800 md:h-[25rem] md:p-6">
-                  <h2 className="mb-4 shrink-0 text-lg font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 md:text-xl">
+                <div className="flex h-[24rem] shrink-0 flex-col overflow-hidden rounded-2xl border-2 border-dashed border-warm-blue-200 bg-white p-5 shadow-md md:h-[25rem] md:p-6">
+                  <h2 className="mb-4 shrink-0 text-lg font-bold tracking-tight text-charcoal-800 md:text-xl">
                     Замер скорости
                   </h2>
-                  <div className="mb-4 flex h-[7.25rem] shrink-0 flex-col items-center justify-center rounded-xl border border-dashed border-warm-blue-200 bg-warm-blue-50/50 dark:border-warm-blue-600 dark:bg-charcoal-700/50">
-                    <p className="text-sm font-medium text-old-money-500 dark:text-old-money-400">данных нет</p>
+                  <div className="mb-4 flex h-[7.25rem] shrink-0 flex-col items-center justify-center rounded-xl border border-dashed border-warm-blue-200 bg-warm-blue-50/50 opacity-50">
+                    <p className="text-sm font-medium text-old-money-500">данных нет</p>
                   </div>
                   <div className="grid flex-1 grid-cols-2 content-start gap-3">
-                    <div className="min-h-[5.5rem] rounded-xl border border-dashed border-warm-blue-200 bg-warm-blue-50/50 opacity-50 dark:border-warm-blue-600 dark:bg-charcoal-700/50" />
-                    <div className="min-h-[5.5rem] rounded-xl border border-dashed border-warm-blue-200 bg-warm-blue-50/50 opacity-50 dark:border-warm-blue-600 dark:bg-charcoal-700/50" />
-                    <div className="min-h-[5.5rem] rounded-xl border border-dashed border-warm-blue-200 bg-warm-blue-50/50 opacity-50 dark:border-warm-blue-600 dark:bg-charcoal-700/50" />
-                    <div className="min-h-[5.5rem] rounded-xl border border-dashed border-warm-blue-200 bg-warm-blue-50/50 opacity-50 dark:border-warm-blue-600 dark:bg-charcoal-700/50" />
+                    <div className="min-h-[5.5rem] rounded-xl border border-dashed border-warm-blue-200 bg-warm-blue-50/50 opacity-50" />
+                    <div className="min-h-[5.5rem] rounded-xl border border-dashed border-warm-blue-200 bg-warm-blue-50/50 opacity-50" />
+                    <div className="min-h-[5.5rem] rounded-xl border border-dashed border-warm-blue-200 bg-warm-blue-50/50 opacity-50" />
+                    <div className="min-h-[5.5rem] rounded-xl border border-dashed border-warm-blue-200 bg-warm-blue-50/50 opacity-50" />
                   </div>
                 </div>
               )}
 
               {hasCoursingRecords ? (
                 <div className="flex min-w-0 flex-col gap-4">
-                  <div className="flex h-[24rem] shrink-0 flex-col overflow-hidden rounded-2xl border-2 border-forest-200 bg-white p-5 shadow-md dark:border-forest-600 dark:bg-charcoal-800 md:h-[25rem] md:p-6">
-                    <h2 className="mb-4 shrink-0 text-lg font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 md:text-xl">
+                  <div className="flex h-[24rem] shrink-0 flex-col overflow-hidden rounded-2xl border-2 border-forest-200 bg-white p-5 shadow-md md:h-[25rem] md:p-6">
+                    <h2 className="mb-4 shrink-0 text-lg font-bold tracking-tight text-charcoal-800 md:text-xl">
                       Бега борзых (350 м)
                     </h2>
 
-                    <div className="mb-4 flex h-[7.25rem] shrink-0 flex-col items-center justify-center rounded-xl border-2 border-forest-200 bg-forest-50 p-4 text-center dark:border-forest-600 dark:bg-charcoal-700">
-                      <div className="mb-2 text-xs font-semibold uppercase tracking-wide text-charcoal-500 dark:text-charcoal-400">
+                    <div className="mb-4 flex h-[7.25rem] shrink-0 flex-col items-center justify-center rounded-xl border-2 border-forest-200 bg-forest-50 p-4 text-center">
+                      <div className="mb-2 text-xs font-semibold uppercase tracking-wide text-charcoal-500">
                         Лучшее время
                       </div>
-                      <div className="whitespace-nowrap text-4xl font-bold tracking-tight text-forest-700 dark:text-forest-300">
+                      <div className="whitespace-nowrap text-4xl font-bold tracking-tight text-forest-700">
                         {data?.coursingStats?.bestTime?.toFixed(2) || '—'}
                         <span className="ml-2 text-base font-normal text-charcoal-400">сек</span>
                       </div>
                     </div>
 
                     <div className="mb-4 grid min-h-0 flex-1 grid-cols-2 content-start gap-3">
-                      <div className="rounded-xl border border-forest-200 bg-forest-50 p-4 text-center dark:border-forest-600 dark:bg-charcoal-700">
-                        <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-old-money-500 dark:text-old-money-400">
+                      <div className="rounded-xl border border-forest-200 bg-forest-50 p-4 text-center">
+                        <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-old-money-500">
                           Среднее
                         </div>
-                        <div className="whitespace-nowrap text-2xl font-bold text-charcoal-800 dark:text-charcoal-100">
+                        <div className="whitespace-nowrap text-2xl font-bold text-charcoal-800">
                           {data?.coursingStats?.avgTime?.toFixed(2) || '—'}
                           <span className="ml-1 text-sm font-normal text-charcoal-400">сек</span>
                         </div>
                       </div>
-                      <div className="rounded-xl border border-forest-200 bg-forest-50 p-4 text-center dark:border-forest-600 dark:bg-charcoal-700">
-                        <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-old-money-500 dark:text-old-money-400">
+                      <div className="rounded-xl border border-forest-200 bg-forest-50 p-4 text-center">
+                        <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-old-money-500">
                           Забегов
                         </div>
-                        <div className="text-2xl font-bold text-charcoal-800 dark:text-charcoal-100">
+                        <div className="text-2xl font-bold text-charcoal-800">
                           {coursingHistory.length}
                         </div>
                       </div>
-                      <div className="rounded-xl border border-forest-200 bg-forest-50 p-4 text-center dark:border-forest-600 dark:bg-charcoal-700">
-                        <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-old-money-500 dark:text-old-money-400">
+                      <div className="rounded-xl border border-forest-200 bg-forest-50 p-4 text-center">
+                        <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-old-money-500">
                           Рейтинг в породе
                         </div>
-                        <div className="text-2xl font-bold text-charcoal-800 dark:text-charcoal-100">
+                        <div className="text-2xl font-bold text-charcoal-800">
                           {data?.coursingStats?.breedRank > 0 ? (
                             <>
                               #{data.coursingStats.breedRank}
@@ -437,29 +437,29 @@ export default function DoninoDogProfile() {
                         </div>
                       </div>
                       <div
-                        className="rounded-xl border border-dashed border-forest-200 bg-forest-50/50 opacity-50 dark:border-forest-600 dark:bg-charcoal-700/50"
+                        className="rounded-xl border border-dashed border-forest-200 bg-forest-50/50 opacity-50"
                         aria-hidden
                       />
                     </div>
                   </div>
 
                   {coursingHistory.length > 0 && (
-                    <div className="rounded-2xl border-2 border-forest-200 bg-white p-5 shadow-md dark:border-forest-600 dark:bg-charcoal-800 md:p-6">
-                      <h3 className="mb-4 text-base font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 md:text-lg">
+                    <div className="rounded-2xl border-2 border-forest-200 bg-white p-5 shadow-md md:p-6">
+                      <h3 className="mb-4 text-base font-bold tracking-tight text-charcoal-800 md:text-lg">
                         История
                       </h3>
                       <div className="space-y-2">
                         {coursingHistory.map((record, idx) => (
                           <div key={idx} className="flex items-center gap-4">
-                            <div className="w-24 shrink-0 text-right text-sm text-charcoal-700 dark:text-charcoal-300">
+                            <div className="w-24 shrink-0 text-right text-sm text-charcoal-700">
                               {formatRecordDate(record.date)}
                             </div>
-                            <div className="relative h-6 flex-1 overflow-hidden rounded-full bg-cream-200 dark:bg-charcoal-600">
+                            <div className="relative h-6 flex-1 overflow-hidden rounded-full bg-cream-200">
                               <AnimatedMeterBar
                                 percent={(30 / Number(record.time_seconds)) * 100}
                                 className="h-full rounded-full bg-gradient-to-r from-forest-400 to-forest-600 transition-[width] duration-500 ease-out"
                               />
-                              <div className="absolute inset-0 flex items-center justify-center text-sm font-bold text-charcoal-900 dark:text-charcoal-100">
+                              <div className="absolute inset-0 flex items-center justify-center text-sm font-bold text-charcoal-900">
                                 {Number(record.time_seconds).toFixed(2)} сек
                               </div>
                             </div>
@@ -470,18 +470,18 @@ export default function DoninoDogProfile() {
                   )}
                 </div>
               ) : (
-                <div className="flex h-[24rem] shrink-0 flex-col overflow-hidden rounded-2xl border-2 border-dashed border-forest-200 bg-white p-5 shadow-md dark:border-forest-600 dark:bg-charcoal-800 md:h-[25rem] md:p-6">
-                  <h2 className="mb-4 shrink-0 text-lg font-bold tracking-tight text-charcoal-800 dark:text-charcoal-100 md:text-xl">
+                <div className="flex h-[24rem] shrink-0 flex-col overflow-hidden rounded-2xl border-2 border-dashed border-forest-200 bg-white p-5 shadow-md md:h-[25rem] md:p-6">
+                  <h2 className="mb-4 shrink-0 text-lg font-bold tracking-tight text-charcoal-800 md:text-xl">
                     Бега борзых (350 м)
                   </h2>
-                  <div className="mb-4 flex h-[7.25rem] shrink-0 flex-col items-center justify-center rounded-xl border border-dashed border-forest-200 bg-forest-50/50 dark:border-forest-600 dark:bg-charcoal-700/50">
-                    <p className="text-sm font-medium text-old-money-500 dark:text-old-money-400">данных нет</p>
+                  <div className="mb-4 flex h-[7.25rem] shrink-0 flex-col items-center justify-center rounded-xl border border-dashed border-forest-200 bg-forest-50/50 opacity-50">
+                    <p className="text-sm font-medium text-old-money-500">данных нет</p>
                   </div>
                   <div className="grid flex-1 grid-cols-2 content-start gap-3">
-                    <div className="min-h-[5.5rem] rounded-xl border border-dashed border-forest-200 bg-forest-50/50 opacity-50 dark:border-forest-600 dark:bg-charcoal-700/50" />
-                    <div className="min-h-[5.5rem] rounded-xl border border-dashed border-forest-200 bg-forest-50/50 opacity-50 dark:border-forest-600 dark:bg-charcoal-700/50" />
-                    <div className="min-h-[5.5rem] rounded-xl border border-dashed border-forest-200 bg-forest-50/50 opacity-50 dark:border-forest-600 dark:bg-charcoal-700/50" />
-                    <div className="min-h-[5.5rem] rounded-xl border border-dashed border-forest-200 bg-forest-50/50 opacity-50 dark:border-forest-600 dark:bg-charcoal-700/50" />
+                    <div className="min-h-[5.5rem] rounded-xl border border-dashed border-forest-200 bg-forest-50/50 opacity-50" />
+                    <div className="min-h-[5.5rem] rounded-xl border border-dashed border-forest-200 bg-forest-50/50 opacity-50" />
+                    <div className="min-h-[5.5rem] rounded-xl border border-dashed border-forest-200 bg-forest-50/50 opacity-50" />
+                    <div className="min-h-[5.5rem] rounded-xl border border-dashed border-forest-200 bg-forest-50/50 opacity-50" />
                   </div>
                 </div>
               )}
@@ -489,8 +489,8 @@ export default function DoninoDogProfile() {
           )}
 
           {!hasSpeedRecords && !hasCoursingRecords && (
-            <div className="rounded-2xl border-2 border-old-money-200 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 p-6 text-center shadow-md">
-              <p className="text-old-money-600 dark:text-old-money-400">Нет записей для этой собаки</p>
+            <div className="rounded-2xl border-2 border-old-money-200 bg-white p-6 text-center shadow-md">
+              <p className="text-old-money-600">Нет записей для этой собаки</p>
             </div>
           )}
 

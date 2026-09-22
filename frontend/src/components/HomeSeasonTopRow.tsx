@@ -8,9 +8,9 @@ import { displayBreed } from '../lib/breedMapping'
 
 /** Soft wash inside the row; bar is outside via Top3AccentBar. */
 const TOP3_WASH: Record<1 | 2 | 3, string> = {
-  1: 'bg-amber-50/45 dark:bg-amber-950/25',
-  2: 'bg-slate-100/55 dark:bg-slate-800/35',
-  3: 'bg-orange-50/45 dark:bg-orange-950/25',
+  1: 'bg-amber-50/45',
+  2: 'bg-slate-100/55',
+  3: 'bg-orange-50/45',
 }
 
 interface HomeSeasonTopRowProps {
@@ -68,7 +68,7 @@ export default function HomeSeasonTopRow({
   return (
     <Link
       to={to}
-      className={`relative flex ${DOG_CARD_HEIGHT_CLASS} flex-row items-stretch gap-0 ${isTop3 ? 'overflow-visible' : 'overflow-hidden'} border-0 bg-transparent px-4 py-1.5 shadow-none transition-colors duration-150 hover:bg-camel-100/60 dark:hover:bg-camel-900/30 ${top3Wash}`.trim()}
+      className={`relative flex ${DOG_CARD_HEIGHT_CLASS} flex-row items-stretch gap-0 ${isTop3 ? 'overflow-visible' : 'overflow-hidden'} border-0 bg-transparent px-4 py-1.5 shadow-none transition-colors duration-150 hover:bg-camel-100/60 ${top3Wash}`.trim()}
     >
       {isTop3 && rank != null ? <Top3AccentBar rank={rank} /> : null}
       {rank != null && rank > 0 ? (
@@ -81,7 +81,7 @@ export default function HomeSeasonTopRow({
         <div className="min-w-0 overflow-hidden">
           <OwnerCrownName name={name} breed={breed} dogId={dogId} kind="competition">
             <h3
-              className="text-xs font-bold leading-snug text-charcoal-900 dark:text-charcoal-100"
+              className="text-xs font-bold leading-snug text-charcoal-900"
               title={name}
             >
               {name}
@@ -90,17 +90,17 @@ export default function HomeSeasonTopRow({
           {breed || meta ? (
             <div className="flex items-center gap-1 text-[9px]">
               {breed && (
-                <span className="text-charcoal-500 dark:text-charcoal-400">
+                <span className="text-charcoal-500">
                   {displayBreed(breed).primary}
                 </span>
               )}
               {breed && meta && (
-                <span className="text-charcoal-300 dark:text-charcoal-600" aria-hidden>
+                <span className="text-charcoal-300" aria-hidden>
                   ·
                 </span>
               )}
               {meta && (
-                <span className="text-charcoal-500 dark:text-charcoal-400">{meta}</span>
+                <span className="text-charcoal-500">{meta}</span>
               )}
             </div>
           ) : null}
@@ -109,7 +109,7 @@ export default function HomeSeasonTopRow({
         <div className="flex min-w-0 items-center gap-2 text-xs">{awards}</div>
       </div>
 
-      <div className="flex min-h-0 min-w-[6.5rem] shrink-0 flex-col justify-end border-l border-old-money-200/60 pl-2 dark:border-charcoal-600/60">
+      <div className="flex min-h-0 min-w-[6.5rem] shrink-0 flex-col justify-end border-l border-old-money-200/60 pl-2">
         <div className="flex justify-end">
           <StartsLabel starts={participations} size="md" />
         </div>

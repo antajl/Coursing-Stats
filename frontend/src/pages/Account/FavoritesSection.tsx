@@ -100,41 +100,41 @@ export function FavoritesSection({
   return (
     <section className="mb-10">
       <div className="flex flex-wrap items-baseline justify-between gap-2 mb-4">
-        <h2 className="text-2xl font-bold text-charcoal-900 dark:text-cream-100">
+        <h2 className="text-2xl font-bold text-charcoal-900">
           Мои собаки
           {!loading && dogs.length > 0 ? (
-            <span className="ml-2 text-lg font-normal text-charcoal-500 dark:text-charcoal-400">
+            <span className="ml-2 text-lg font-normal text-charcoal-500">
               · {dogs.length}
             </span>
           ) : null}
         </h2>
         {manageMode && !loading && visible.length !== dogs.length ? (
-          <span className="text-sm text-charcoal-500 dark:text-charcoal-400">
+          <span className="text-sm text-charcoal-500">
             {visible.length} из {dogs.length}
           </span>
         ) : null}
       </div>
 
       {missingCount > 0 && !loading && (
-        <p className="mb-3 text-sm text-charcoal-500 dark:text-charcoal-400">
+        <p className="mb-3 text-sm text-charcoal-500">
           Не удалось загрузить профили: {missingCount}
         </p>
       )}
 
       {loading ? (
-        <div className="text-charcoal-600 dark:text-cream-300">Загрузка избранного…</div>
+        <div className="text-charcoal-600">Загрузка избранного…</div>
       ) : dogs.length === 0 ? (
-        <div className="relative overflow-hidden rounded-xl border border-dashed border-charcoal-300 dark:border-charcoal-600 px-6 py-12 text-center">
+        <div className="relative overflow-hidden rounded-xl border border-dashed border-charcoal-300 px-6 py-12 text-center">
           <div
             className="absolute inset-0 bg-cover bg-center opacity-10"
             style={{ backgroundImage: "url('/assets/hero/background.webp')" }}
             aria-hidden
           />
-          <Star className="relative w-10 h-10 text-camel-600 dark:text-camel-400 mx-auto mb-4" />
-          <p className="relative text-charcoal-800 dark:text-cream-100 text-lg font-medium mb-2">
+          <Star className="relative w-10 h-10 text-camel-600 mx-auto mb-4" />
+          <p className="relative text-charcoal-800 text-lg font-medium mb-2">
             В избранном пока пусто
           </p>
-          <p className="relative text-charcoal-600 dark:text-cream-300 mb-6 max-w-md mx-auto">
+          <p className="relative text-charcoal-600 mb-6 max-w-md mx-auto">
             Добавляйте собак звёздочкой на профиле или в рейтинге — они появятся здесь со статистикой и
             последними участиями.
           </p>
@@ -155,12 +155,12 @@ export function FavoritesSection({
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
                   placeholder="Поиск по кличке или породе"
-                  className="flex-1 px-3 py-2 border border-charcoal-300 dark:border-charcoal-600 rounded-lg bg-white dark:bg-charcoal-700 text-charcoal-900 dark:text-cream-100"
+                  className="flex-1 px-3 py-2 border border-charcoal-300 rounded-lg bg-white text-charcoal-900"
                 />
                 <select
                   value={sortMode}
                   onChange={(e) => setSortMode(e.target.value as FavoriteSortMode)}
-                  className="px-3 py-2 border border-charcoal-300 dark:border-charcoal-600 rounded-lg bg-white dark:bg-charcoal-700 text-charcoal-900 dark:text-cream-100"
+                  className="px-3 py-2 border border-charcoal-300 rounded-lg bg-white text-charcoal-900"
                   aria-label="Сортировка"
                 >
                   <option value="recent">По порядку в списке</option>
@@ -173,7 +173,7 @@ export function FavoritesSection({
                 <button
                   type="button"
                   onClick={selectAllVisible}
-                  className="text-charcoal-600 dark:text-cream-300 hover:text-charcoal-900 dark:hover:text-cream-100"
+                  className="text-charcoal-600 hover:text-charcoal-900"
                 >
                   Выбрать все
                 </button>
@@ -182,7 +182,7 @@ export function FavoritesSection({
                     <button
                       type="button"
                       onClick={clearSelection}
-                      className="text-charcoal-600 dark:text-cream-300 hover:text-charcoal-900 dark:hover:text-cream-100"
+                      className="text-charcoal-600 hover:text-charcoal-900"
                     >
                       Снять выбор
                     </button>
@@ -190,7 +190,7 @@ export function FavoritesSection({
                       type="button"
                       onClick={() => void runBulkRemove()}
                       disabled={bulkBusy}
-                      className="text-terracotta-600 dark:text-terracotta-400 hover:text-terracotta-800 disabled:opacity-50"
+                      className="text-terracotta-600 hover:text-terracotta-800 disabled:opacity-50"
                     >
                       {bulkBusy ? 'Удаление…' : `Убрать выбранные (${selected.size})`}
                     </button>
@@ -201,7 +201,7 @@ export function FavoritesSection({
           )}
 
           {visible.length === 0 ? (
-            <p className="text-charcoal-600 dark:text-cream-300">Ничего не найдено</p>
+            <p className="text-charcoal-600">Ничего не найдено</p>
           ) : (
             <div className={`grid gap-4 ${dogs.length > 1 ? 'md:grid-cols-2' : ''}`}>
               {visible.map((dog) => (

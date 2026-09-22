@@ -116,12 +116,12 @@ export default function ShowDogProfile() {
 
         {/* Competition link block */}
         {dog.competition_dog_id && (
-          <div className="mb-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-            <p className="text-sm text-blue-800 dark:text-blue-200">
+          <div className="mb-6 p-4 bg-blue-50 rounded-lg">
+            <p className="text-sm text-blue-800">
               Эта собака также участвует в соревнованиях.{' '}
               <Link 
                 to={`/dog/${dog.competition_dog_id}`}
-                className="font-semibold underline hover:text-blue-600 dark:hover:text-blue-300"
+                className="font-semibold underline hover:text-blue-600"
               >
                 Посмотреть спортивный профиль
               </Link>

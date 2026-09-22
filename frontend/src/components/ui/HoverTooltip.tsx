@@ -85,8 +85,8 @@ export default function HoverTooltip({
 
   const panelClass =
     variant === 'site'
-      ? 'min-w-[15.5rem] max-w-[19rem] whitespace-normal text-left text-[11px] leading-snug rounded-lg border border-old-money-300 bg-cream-50 px-3 py-2.5 font-normal text-charcoal-800 shadow-lg dark:border-charcoal-600 dark:bg-charcoal-800 dark:text-charcoal-100'
-      : 'max-w-[16rem] whitespace-pre-line text-left rounded-md bg-charcoal-800 px-2 py-1 text-xs font-normal text-white shadow-md dark:bg-charcoal-100 dark:text-charcoal-900'
+      ? 'min-w-[15.5rem] max-w-[19rem] whitespace-normal text-left text-[11px] leading-snug rounded-lg border border-old-money-300 bg-cream-50 px-3 py-2.5 font-normal text-charcoal-800 shadow-lg'
+      : 'max-w-[16rem] whitespace-pre-line text-left rounded-md bg-charcoal-800 px-2 py-1 text-xs font-normal text-white shadow-md'
 
   const pointerClass = interactive ? 'pointer-events-auto' : 'pointer-events-none'
 

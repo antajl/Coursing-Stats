@@ -24,7 +24,7 @@ export function ExhibitionDogNameLink({
   const content = (
     <>
       {ringLabel ? (
-        <span className="mr-1.5 font-mono text-xs tabular-nums text-charcoal-500 dark:text-charcoal-400">
+        <span className="mr-1.5 font-mono text-xs tabular-nums text-charcoal-500">
           ({ringLabel})
         </span>
       ) : null}
@@ -43,7 +43,7 @@ export function ExhibitionDogNameLink({
   return (
     <Link
       to={href}
-      className={`block truncate transition-colors hover:text-camel-700 hover:underline hover:underline-offset-2 dark:hover:text-camel-400 ${className}`}
+      className={`block truncate transition-colors hover:text-camel-700 hover:underline hover:underline-offset-2 ${className}`}
       title={name || dogName}
     >
       {content}
@@ -53,29 +53,29 @@ export function ExhibitionDogNameLink({
 
 export function BreedTitleRowView({ row, breed }: { row: BreedTitleRow; breed: string }) {
   return (
-    <li className="rounded-md bg-camel-50/80 px-2.5 py-2 text-sm dark:bg-camel-900/20">
+    <li className="rounded-md bg-camel-50/80 px-2.5 py-2 text-sm">
       <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
         <span className={SHOW_AWARD_CHIP_CLASS}>
           {row.title_code}
         </span>
         {row.ring_number > 0 ? (
-          <span className="font-mono text-xs tabular-nums text-charcoal-500 dark:text-charcoal-400">
+          <span className="font-mono text-xs tabular-nums text-charcoal-500">
             ({row.ring_number})
           </span>
         ) : null}
         {exhibitionDogProfilePath(row.dog_name, breed) ? (
           <Link
             to={exhibitionDogProfilePath(row.dog_name, breed)!}
-            className="font-semibold text-charcoal-900 transition-colors hover:text-camel-700 hover:underline hover:underline-offset-2 dark:text-charcoal-100 dark:hover:text-camel-400"
+            className="font-semibold text-charcoal-900 transition-colors hover:text-camel-700 hover:underline hover:underline-offset-2"
           >
             {row.dog_name}
           </Link>
         ) : (
-          <span className="font-semibold text-charcoal-900 dark:text-charcoal-100">{row.dog_name}</span>
+          <span className="font-semibold text-charcoal-900">{row.dog_name}</span>
         )}
       </div>
       {row.owner?.trim() ? (
-        <div className="mt-1 text-xs text-charcoal-500 dark:text-charcoal-400">
+        <div className="mt-1 text-xs text-charcoal-500">
           Судья: {row.owner.trim()}
         </div>
       ) : null}

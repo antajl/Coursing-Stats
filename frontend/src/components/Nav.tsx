@@ -1,6 +1,5 @@
 import { useLocation } from 'react-router-dom'
 import { useState, useRef, useEffect, useCallback } from 'react'
-import { useDarkMode } from '../hooks/useDarkMode'
 import { isLocalDev } from '../lib/env'
 import { NavDesktop } from './nav/NavDesktop'
 import { NavMobile } from './nav/NavMobile'
@@ -16,7 +15,6 @@ export default function Nav() {
   const [showsOpen, setShowsOpen] = useState(false);
   const [guideOpen, setGuideOpen] = useState(false);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const isDark = useDarkMode();
   const isActive = (path: string) => location.pathname === path || (path === '/' && location.pathname === '/');
   const isCompetitionsActive =
     location.pathname === '/competitions' ||
@@ -96,9 +94,8 @@ export default function Nav() {
   }, []);
 
   return (
-    <nav className="nav-glass sticky top-0 z-50 relative border-b border-cream-300/20 dark:border-charcoal-700/30 shadow-[0_4px_7px_-2px_rgba(43,37,32,0.34)] dark:shadow-[0_4px_8px_-2px_rgba(0,0,0,0.72)]">
+    <nav className="nav-glass sticky top-0 z-50 relative border-b border-cream-300/20 shadow-[0_4px_7px_-2px_rgba(43,37,32,0.34)]">
       <NavDesktop
-        isDark={isDark}
         isActive={isActive}
         isCompetitionsActive={isCompetitionsActive}
         isShowsActive={isShowsActive}
@@ -112,7 +109,6 @@ export default function Nav() {
         onSourcesMouseLeave={handleMouseLeave}
       />
       <NavMobile
-        isDark={isDark}
         isActive={isActive}
         isCompetitionsActive={isCompetitionsActive}
         isShowsActive={isShowsActive}

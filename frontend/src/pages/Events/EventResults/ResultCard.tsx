@@ -19,10 +19,10 @@ export default function ResultCard({ result, index }: ResultCardProps) {
   const cardContent = (
     <div
       className={[
-        'group/card overflow-visible rounded-lg border border-old-money-200 bg-cream-50 transition-all duration-200 ease-in-out hover:scale-[1.01] hover:shadow-md hover:bg-old-money-100/80 dark:border-charcoal-500 dark:bg-charcoal-800/40 dark:hover:bg-charcoal-700/80 dark:hover:shadow-lg',
+        'group/card overflow-visible rounded-lg border border-old-money-200 bg-cream-50 transition-all duration-200 ease-in-out hover:scale-[1.01] hover:shadow-md hover:bg-old-money-100/80',
         result.dog_id ? 'cursor-pointer' : '',
         accent,
-        alternate ? 'bg-white/60 dark:bg-charcoal-800/25' : '',
+        alternate ? 'bg-white/60' : '',
       ].filter(Boolean).join(' ')}
     >
       <div className="flex items-center gap-2 p-1.5 md:gap-3 md:p-2">
@@ -33,7 +33,7 @@ export default function ResultCard({ result, index }: ResultCardProps) {
         </div>
       </div>
 
-      <div className="border-t border-old-money-100 px-1.5 pb-1.5 dark:border-charcoal-600 md:px-2 md:pb-2">
+      <div className="border-t border-old-money-100 px-1.5 pb-1.5 md:px-2 md:pb-2">
         <div className="mx-2 mr-2 md:mx-0 md:mr-4">
           <DetailPanel rawScores={rawScores} result={result} />
         </div>
