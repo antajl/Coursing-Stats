@@ -190,7 +190,7 @@ frontend/src/
     home-v2.css                     # Home v2 stage / search / scale (~1020–end)
     donino.css                      # DONINO HOME + DONINO LIST
     motion-reveal.css               # GSAP riseIn, list reveal, skeleton
-    filters-native.css              # filter panels + native select dark
+    filters-native.css              # filter panels + native select
 ```
 
 Vite/PostCSS: `@import` внутри `index.css` поддерживается; не подключать CSS из JSX без нужды.
@@ -255,7 +255,7 @@ Expected: `True`
 ### Task 0c: Вырезать мёртвые стили старой Home + упростить Hero.tsx
 
 **Files:**
-- Modify: `frontend/src/index.css` — удалить неиспользуемые `.hero-dashboard`, `.home-podium*`, связанные dark/media (после rg по TSX)
+- Modify: `frontend/src/index.css` — удалить неиспользуемые `.hero-dashboard`, `.home-podium*` (после rg по TSX)
 - Modify: `frontend/src/components/Hero.tsx` — оставить types (+ то что реально нужно MetricsWidget); удалить `HeroIntro` / `HeroStatsBar` если rg подтверждает zero imports
 - Modify: импорты types при переносе
 
@@ -263,7 +263,7 @@ Expected: `True`
 
 - [ ] **Step 2: Упростить Hero.tsx**
 
-- [ ] **Step 3: Smoke** `/` light+dark, MetricsWidget на home
+- [ ] **Step 3: Smoke** `/` light only, MetricsWidget на home
 
 - [ ] **Step 4: Затем** (Phase 5 ниже) split оставшегося CSS на `@import` — уже по меньшему объёму
 
@@ -525,7 +525,7 @@ Expected: PASS без правок ассертов (только если path 
 
 - [ ] **Step 5: `index.css` = tailwind + imports; LOC ≤100**
 
-- [ ] **Step 6: Visual smoke** — `/`, `/speed-records`, `/shows`, dark mode toggle: shell blobs, home stage, donino rows.
+- [ ] **Step 6: Visual smoke** — `/`, `/speed-records`, `/shows`, light theme only: shell blobs, home stage, donino rows.
 
 ---
 
@@ -586,7 +586,7 @@ cd frontend; yarn exec tsc --noEmit
 | `/shows/exhibition/:id` | main ring, catalog, legacy |
 | `/shows/judges/:id` | tabs, strictness |
 | Events/competitions calendar | URL filters |
-| `/` + dark | home-v2 + shell |
+| `/` (light only) | home-v2 + shell |
 | `/speed-records` | donino list CSS |
 
 - [ ] **Step 4: Обновить canvas audit** (optional) — пересчитать топ LOC в `large-files-optimization.canvas.tsx`

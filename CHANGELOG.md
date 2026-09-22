@@ -2,6 +2,26 @@
 
 All notable changes to the CoursingStats project.
 
+## [2026-09-22] Dark Theme Removal
+
+### Removed
+- Dark theme support (light theme only)
+- `ThemeToggle.tsx` component
+- `useDarkMode.tsx` hook
+- All `dark:` Tailwind classes from 163 TSX files
+- All `.dark` CSS selectors from 12 CSS files
+- Dark mode logic from `index.html`
+- `darkMode` configuration from `tailwind.config.js`
+
+### Changed
+- CSS reduced from ~135 kB to 103.75 kB (-23%)
+- Site now uses light theme exclusively
+- Simplified codebase and styling
+
+### Related
+- Frontend: 185 files changed (+1596, -1956 lines)
+- Documentation: Updated INDEX.md, comprehensive-design-improvement.md, frontend sheet
+
 ## [2026-09-22] About Page and Navigation Improvements
 
 ### Added

@@ -7,7 +7,7 @@ verified: 2026-09-22
 
 ## Purpose
 
-React 19 + Vite + Tailwind SPA на Cloudflare Pages. Данные: static JSON; Turso только для miss протоколов выставок.
+React 19 + Vite + Tailwind SPA на Cloudflare Pages. Данные: static JSON; Turso только для miss протоколов выставок. **Light theme only** (dark mode removed 2026-09-22, CSS reduced by 23%).
 
 ## Truth table
 

@@ -184,10 +184,10 @@ Focus on comprehensive account management with organized settings sections. Prof
   - Analytics participation
 
 - **Appearance Settings**
-  - Theme selection (light/dark)
   - Font size options
   - Density settings
   - Accent color selection
+  - **Note:** Dark mode removed 2026-09-22 (light theme only)
 
 #### Priority 3 (Advanced)
 - **Advanced Settings**
@@ -239,7 +239,7 @@ interface UserSettings {
     data_retention_days: number;
   };
   appearance: {
-    theme: 'light' | 'dark' | 'auto';
+    theme: 'light'; // Dark mode removed 2026-09-22
     font_size: 'small' | 'medium' | 'large';
     density: 'comfortable' | 'compact';
   };
@@ -567,7 +567,7 @@ interface MixedProfile {
       favorite_alerts: boolean;
     };
     appearance: {
-      theme: 'light' | 'dark' | 'auto';
+      theme: 'light'; // Dark mode removed 2026-09-22
       language: string;
     };
   };

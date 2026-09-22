@@ -12,11 +12,9 @@
 
 - Package manager: yarn@1.22.22
 - No breaking changes to existing functionality
-- All changes must maintain existing dark mode support
 - Preserve existing Russian-language UI text
 - No changes to backend/worker runtime (frontend-only)
 - Follow existing code patterns in the codebase
-- Test changes in both light and dark modes
 - Maintain CDN-only architecture for production (no Worker/D1 runtime)
 - Respect three-domain separation (Competitions/Shows/Donino)
 
@@ -276,6 +274,7 @@
 - Re-render optimization ✅
 - JavaScript performance improvements ✅
 - Rendering performance enhancements ✅
+- Dark theme removed ✅ (2026-09-22 - light theme only)
 
 **Dependencies:** Phase 6 complete ✅
 

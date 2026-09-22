@@ -12,11 +12,10 @@
 
 - Package manager: yarn@1.22.22
 - No breaking changes to existing functionality
-- All changes must maintain existing dark mode support
 - Preserve existing Russian-language UI text
 - No changes to backend/worker runtime (frontend-only)
 - Follow existing code patterns in the codebase
-- Test changes in both light and dark modes
+- **Note:** Dark mode was removed on 2026-09-22 (light theme only). Code examples in this document may contain dark: classes for historical reference - they should be updated to light-only versions if implemented.
 
 ---
 

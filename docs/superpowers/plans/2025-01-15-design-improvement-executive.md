@@ -345,7 +345,7 @@ ease = 'power3.out'  // Changed from power2.out
 |------|--------|------------|
 | Breaking keyboard navigation | High | Test keyboard-only after each change, use git revert if needed |
 | Performance regression | High | Measure before/after with Lighthouse, implement incrementally |
-| Visual regressions | Medium | Screenshot comparison, test in both light/dark modes |
+| Visual regressions | Medium | Screenshot comparison, test in light mode (dark mode removed 2026-09-22) |
 
 ### Medium Risk
 | Risk | Impact | Mitigation |
@@ -366,7 +366,7 @@ ease = 'power3.out'  // Changed from power2.out
 
 - Package manager: yarn@1.22.22
 - No breaking changes to existing functionality
-- Maintain existing dark mode support
+- **Note:** Dark mode was removed on 2026-09-22 (light theme only)
 - Preserve Russian-language UI text
 - No changes to backend/worker runtime (frontend-only)
 - Follow existing code patterns in the codebase
