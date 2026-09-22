@@ -36,10 +36,10 @@ export default function ForgotPasswordPage() {
     <div className="min-h-screen flex items-center justify-center px-4">
       <div className="max-w-md w-full">
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-charcoal-900 dark:text-cream-100 mb-2">
+          <h1 className="text-3xl font-bold text-charcoal-900 mb-2">
             Сброс пароля
           </h1>
-          <p className="text-charcoal-600 dark:text-cream-300">
+          <p className="text-charcoal-600">
             Для аккаунта через Яндекс проще войти через Яндекс и задать пароль в настройках.
           </p>
         </div>
@@ -49,8 +49,8 @@ export default function ForgotPasswordPage() {
             <div
               className={
                 result.email_sent
-                  ? 'bg-green-100 dark:bg-green-900/30 border border-green-300 dark:border-green-700 text-green-800 dark:text-green-200 px-4 py-3 rounded'
-                  : 'bg-camel-50 dark:bg-camel-900/20 border border-camel-300 dark:border-camel-700 text-charcoal-800 dark:text-cream-100 px-4 py-3 rounded'
+                  ? 'bg-green-100 border border-green-300 text-green-800 px-4 py-3 rounded'
+                  : 'bg-camel-50 border border-camel-300 text-charcoal-800 px-4 py-3 rounded'
               }
             >
               {result.message}
@@ -63,11 +63,11 @@ export default function ForgotPasswordPage() {
                   onClick={() => {
                     window.location.href = `https://auth-worker.antajltube.workers.dev/v1/oauth/yandex/authorize?state=${encodeURIComponent(accountRedirect)}`
                   }}
-                  className="w-full flex items-center justify-center gap-2 py-3 px-4 border border-charcoal-300 dark:border-charcoal-600 rounded-lg bg-white dark:bg-charcoal-800 hover:bg-charcoal-50 dark:hover:bg-charcoal-700"
+                  className="w-full flex items-center justify-center gap-2 py-3 px-4 border border-charcoal-300 rounded-lg bg-white hover:bg-charcoal-50"
                 >
                   <span className="text-sm font-medium">Войти через Яндекс</span>
                 </button>
-                <p className="text-sm text-charcoal-600 dark:text-cream-300 text-center">
+                <p className="text-sm text-charcoal-600 text-center">
                   После входа: Настройки → задать пароль.
                 </p>
               </div>
@@ -80,12 +80,12 @@ export default function ForgotPasswordPage() {
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4">
             {error && (
-              <div className="bg-terracotta-100 dark:bg-terracotta-900/30 border border-terracotta-300 dark:border-terracotta-700 text-terracotta-800 dark:text-terracotta-200 px-4 py-3 rounded">
+              <div className="bg-terracotta-100 border border-terracotta-300 text-terracotta-800 px-4 py-3 rounded">
                 {error}
               </div>
             )}
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-charcoal-700 dark:text-cream-300 mb-1">
+              <label htmlFor="email" className="block text-sm font-medium text-charcoal-700 mb-1">
                 Email
               </label>
               <input
@@ -94,7 +94,7 @@ export default function ForgotPasswordPage() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-2 border border-charcoal-300 dark:border-charcoal-600 rounded-lg bg-white dark:bg-charcoal-800 text-charcoal-900 dark:text-cream-100"
+                className="w-full px-4 py-2 border border-charcoal-300 rounded-lg bg-white text-charcoal-900"
                 disabled={loading}
               />
             </div>
@@ -105,7 +105,7 @@ export default function ForgotPasswordPage() {
             >
               {loading ? 'Отправка…' : 'Отправить ссылку'}
             </button>
-            <p className="text-center text-sm text-charcoal-600 dark:text-cream-300">
+            <p className="text-center text-sm text-charcoal-600">
               <Link to="/login" className="text-camel-700 hover:text-camel-800">
                 ← Назад ко входу
               </Link>

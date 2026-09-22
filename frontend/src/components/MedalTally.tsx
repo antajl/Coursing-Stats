@@ -13,23 +13,23 @@ const TALLY_STYLES: Record<
   { count: string; rowGap: string; itemGap: string }
 > = {
   sm: {
-    count: 'text-xs font-semibold tabular-nums text-charcoal-700 dark:text-charcoal-200',
+    count: 'text-xs font-semibold tabular-nums text-charcoal-700',
     rowGap: 'gap-x-2',
     itemGap: 'gap-1',
   },
   md: {
-    count: 'text-sm font-semibold tabular-nums text-charcoal-700 dark:text-charcoal-200',
+    count: 'text-sm font-semibold tabular-nums text-charcoal-700',
     rowGap: 'gap-x-2.5',
     itemGap: 'gap-1',
   },
   lg: {
-    count: 'text-sm font-bold tabular-nums text-charcoal-700 dark:text-charcoal-200',
+    count: 'text-sm font-bold tabular-nums text-charcoal-700',
     rowGap: 'gap-x-3',
     itemGap: 'gap-1.5',
   },
   xl: {
     count:
-      'text-base font-bold tabular-nums text-old-money-800 dark:text-old-money-200',
+      'text-base font-bold tabular-nums text-old-money-800',
     rowGap: 'gap-x-3.5',
     itemGap: 'gap-1.5',
   },

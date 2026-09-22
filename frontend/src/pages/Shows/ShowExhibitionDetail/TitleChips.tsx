@@ -89,7 +89,7 @@ export function TitleChips({ title }: { title: string }) {
       >
         {chips}
         <div
-          className="pointer-events-none absolute inset-y-0 right-0 w-4 bg-gradient-to-l from-white to-transparent dark:from-charcoal-800"
+          className="pointer-events-none absolute inset-y-0 right-0 w-4 bg-gradient-to-l from-white to-transparent"
           aria-hidden
         />
       </div>

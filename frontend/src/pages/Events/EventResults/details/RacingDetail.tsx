@@ -16,10 +16,10 @@ export default function RacingDetail({ rawScores }: RacingDetailProps) {
           const speedMs = heat.speed_kmh ? (heat.speed_kmh / 3.6).toFixed(1) : null
 
           return (
-            <div key={heatIdx} className="bg-white dark:bg-charcoal-800 rounded-xl p-3 border border-old-money-200 dark:border-charcoal-600">
-              <div className="grid grid-cols-4 gap-2 mb-3 pb-2 border-b border-old-money-100 dark:border-charcoal-600 text-center">
+            <div key={heatIdx} className="bg-white rounded-xl p-3 border border-old-money-200">
+              <div className="grid grid-cols-4 gap-2 mb-3 pb-2 border-b border-old-money-100 text-center">
                 <div>
-                  <div className={`font-bold ${isHeatDisqualified ? 'text-red-600' : 'text-camel-700 dark:text-camel-400'}`}>
+                  <div className={`font-bold ${isHeatDisqualified ? 'text-red-600' : 'text-camel-700'}`}>
                     <span className="text-old-money-400 text-xs">№</span>{heat.heat_number || '—'}
                   </div>
                 </div>
@@ -27,25 +27,25 @@ export default function RacingDetail({ rawScores }: RacingDetailProps) {
                   <PoponaCell number={heat.bib_number} color={heat.bib_color} />
                 </div>
                 <div>
-                  <div className="font-bold text-charcoal-900 dark:text-charcoal-100">
+                  <div className="font-bold text-charcoal-900">
                     {heat.time ? `${heat.time} с` : '—'}
                   </div>
                 </div>
                 <div>
-                  <div className="font-bold text-charcoal-900 dark:text-charcoal-100">
+                  <div className="font-bold text-charcoal-900">
                     {speedMs ? `${speedMs} м/с` : '—'}
                   </div>
                 </div>
               </div>
 
               {isHeatDisqualified ? (
-                <div className="text-center text-red-600 dark:text-red-400 italic text-sm py-2">
+                <div className="text-center text-red-600 italic text-sm py-2">
                   Отстранение
                 </div>
               ) : (
                 <div className="text-center text-sm">
                   <span className="text-old-money-500">Скорость: </span>
-                  <span className="font-bold text-camel-700 dark:text-camel-400">
+                  <span className="font-bold text-camel-700">
                     {heat.speed_kmh ? `${heat.speed_kmh.toFixed(1)} км/ч` : '—'}
                   </span>
                 </div>
@@ -55,12 +55,12 @@ export default function RacingDetail({ rawScores }: RacingDetailProps) {
         })}
 
         {rawScores.grand_total && (
-          <div className="rounded-xl border border-camel-200 dark:border-camel-600 bg-camel-50 dark:bg-charcoal-700 p-3 text-center">
-            <span className="text-sm text-gray-600 dark:text-gray-400">Лучшее время: </span>
-            <span className="text-lg font-bold text-camel-700 dark:text-camel-400">{rawScores.grand_total} сек</span>
+          <div className="rounded-xl border border-camel-200 bg-camel-50 p-3 text-center">
+            <span className="text-sm text-gray-600">Лучшее время: </span>
+            <span className="text-lg font-bold text-camel-700">{rawScores.grand_total} сек</span>
             <span className="mx-2 text-gray-400">|</span>
-            <span className="text-sm text-gray-600 dark:text-gray-400">Скорость: </span>
-            <span className="text-lg font-bold text-camel-700 dark:text-camel-400">
+            <span className="text-sm text-gray-600">Скорость: </span>
+            <span className="text-lg font-bold text-camel-700">
               {(() => {
                 const bestHeat = heats.find(h => {
                   const heatTime = typeof h.time === 'number' ? h.time : parseFloat(h.time || '0')
@@ -92,21 +92,21 @@ export default function RacingDetail({ rawScores }: RacingDetailProps) {
               const speedMs = heat.speed_kmh ? (heat.speed_kmh / 3.6).toFixed(1) : null
 
               return (
-                <tr key={heatIdx} className={heatIdx > 0 ? 'border-t border-old-money-200 dark:border-charcoal-600' : ''}>
-                  <td className={`py-0.5 pr-2 font-semibold text-charcoal-900 dark:text-charcoal-100 align-middle ${isBest ? 'font-bold text-camel-700 dark:text-camel-400' : ''} ${isHeatDisqualified ? 'text-red-600 dark:text-red-400' : ''}`}>
+                <tr key={heatIdx} className={heatIdx > 0 ? 'border-t border-old-money-200' : ''}>
+                  <td className={`py-0.5 pr-2 font-semibold text-charcoal-900 align-middle ${isBest ? 'font-bold text-camel-700' : ''} ${isHeatDisqualified ? 'text-red-600' : ''}`}>
                     <span className="text-old-money-400 mr-0.5">№</span>
                     {heat.heat_number || '—'}
                   </td>
                   <td className="py-0.5 pr-2 text-center align-middle">
                     <PoponaCell number={heat.bib_number} color={heat.bib_color} />
                   </td>
-                  <td className={`py-0.5 pr-2 text-center align-middle ${isHeatDisqualified ? 'text-red-600 dark:text-red-400 italic' : 'text-charcoal-900 dark:text-charcoal-100'} ${isBest ? 'font-bold' : ''}`}>
+                  <td className={`py-0.5 pr-2 text-center align-middle ${isHeatDisqualified ? 'text-red-600 italic' : 'text-charcoal-900'} ${isBest ? 'font-bold' : ''}`}>
                     {heat.time ? `${heat.time} сек` : '-'}
                   </td>
-                  <td className={`py-0.5 pr-2 text-center align-middle ${isHeatDisqualified ? 'text-red-600 dark:text-red-400 italic' : 'text-charcoal-900 dark:text-charcoal-100'}`}>
+                  <td className={`py-0.5 pr-2 text-center align-middle ${isHeatDisqualified ? 'text-red-600 italic' : 'text-charcoal-900'}`}>
                     {speedMs ? `${speedMs} м/с` : '-'}
                   </td>
-                  <td className={`py-0.5 pr-2 text-center align-middle ${isHeatDisqualified ? 'text-red-600 dark:text-red-400 italic' : 'text-camel-700 dark:text-camel-400 font-bold'}`}>
+                  <td className={`py-0.5 pr-2 text-center align-middle ${isHeatDisqualified ? 'text-red-600 italic' : 'text-camel-700 font-bold'}`}>
                     {heat.speed_kmh ? `${heat.speed_kmh.toFixed(1)} км/ч` : '-'}
                   </td>
                 </tr>

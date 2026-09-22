@@ -162,7 +162,7 @@ function TitleChips({ title }: { title: string }) {
       >
         {chips}
         <div
-          className="pointer-events-none absolute inset-y-0 right-0 w-4 bg-gradient-to-l from-white to-transparent dark:from-charcoal-800"
+          className="pointer-events-none absolute inset-y-0 right-0 w-4 bg-gradient-to-l from-white to-transparent"
           aria-hidden
         />
       </div>
@@ -184,15 +184,15 @@ export function MainRingTabs({ rows }: MainRingTabsProps) {
 
   return (
     <div className="main-ring-tabs">
-      <div className="flex gap-2 border-b border-charcoal-200 dark:border-charcoal-700 mb-4 overflow-x-auto">
+      <div className="flex gap-2 border-b border-charcoal-200 mb-4 overflow-x-auto">
         {tabs.map((tab) => (
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
             className={`px-3 py-2 text-sm font-medium whitespace-nowrap transition-colors ${
               activeTab === tab.id
-                ? 'text-camel-700 border-b-2 border-camel-700 dark:text-camel-400 dark:border-camel-400'
-                : 'text-charcoal-500 hover:text-charcoal-700 dark:text-charcoal-400 dark:hover:text-charcoal-200'
+                ? 'text-camel-700 border-b-2 border-camel-700'
+                : 'text-charcoal-500 hover:text-charcoal-700'
             }`}
           >
             {tab.shortLabel}
@@ -201,21 +201,21 @@ export function MainRingTabs({ rows }: MainRingTabsProps) {
       </div>
 
       <div className="main-ring-content">
-        <h3 className="font-serif text-lg mb-3 text-charcoal-900 dark:text-charcoal-100">
+        <h3 className="font-serif text-lg mb-3 text-charcoal-900">
           {activeTabData?.label}
         </h3>
         <table className="w-full text-sm">
           <thead>
-            <tr className="border-b border-charcoal-200 dark:border-charcoal-700">
-              <th className="text-left py-2 px-3 text-charcoal-500 dark:text-charcoal-400">Место</th>
-              <th className="text-left py-2 px-3 text-charcoal-500 dark:text-charcoal-400">Порода</th>
-              <th className="text-left py-2 px-3 text-charcoal-500 dark:text-charcoal-400">Собака</th>
-              <th className="text-left py-2 px-3 text-charcoal-500 dark:text-charcoal-400">Награда</th>
+            <tr className="border-b border-charcoal-200">
+              <th className="text-left py-2 px-3 text-charcoal-500">Место</th>
+              <th className="text-left py-2 px-3 text-charcoal-500">Порода</th>
+              <th className="text-left py-2 px-3 text-charcoal-500">Собака</th>
+              <th className="text-left py-2 px-3 text-charcoal-500">Награда</th>
             </tr>
           </thead>
           <tbody>
             {activeTabData?.rows.map((row, idx) => (
-              <tr key={idx} className="border-b border-charcoal-100 dark:border-charcoal-800">
+              <tr key={idx} className="border-b border-charcoal-100">
                 <td className="py-2 px-3 font-mono">{row.place}</td>
                 <td className="py-2 px-3">{row.breed}</td>
                 <td className="py-2 px-3">{row.dog_name}</td>

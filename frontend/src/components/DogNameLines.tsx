@@ -11,7 +11,7 @@ export default function DogNameLines({
   name_lat,
   name_ru,
   primaryClassName = '',
-  secondaryClassName = 'text-xs text-old-money-500 dark:text-old-money-400 font-normal',
+  secondaryClassName = 'text-xs text-old-money-500 font-normal',
 }: DogNameLinesProps) {
   const { primary, secondary } = parseDogName(name_lat, name_ru)
 

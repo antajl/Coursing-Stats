@@ -67,7 +67,7 @@ function PageToolbarBottom() {
   const showBottom = Boolean(bottomLeft || bottomRight)
   if (!showBottom) return null
   return (
-    <div className="flex w-full flex-wrap items-center justify-between gap-x-4 gap-y-1 border-t border-old-money-200/60 pt-2.5 dark:border-charcoal-600/80">
+    <div className="flex w-full flex-wrap items-center justify-between gap-x-4 gap-y-1 border-t border-old-money-200/60 pt-2.5">
       {bottomLeft}
       {bottomRight}
     </div>
@@ -122,7 +122,7 @@ export default function PageToolbar({
             </div>
 
             {showBottom && (
-              <div className="flex w-full flex-wrap items-center justify-between gap-x-4 gap-y-1 border-t border-old-money-200/60 pt-2.5 dark:border-charcoal-600/80">
+              <div className="flex w-full flex-wrap items-center justify-between gap-x-4 gap-y-1 border-t border-old-money-200/60 pt-2.5">
                 {bottomLeft}
                 {bottomRight}
               </div>

@@ -1,12 +1,10 @@
 import { Link } from 'react-router-dom'
-import ThemeToggle from '../ThemeToggle'
 import FavoritesCapsule from './FavoritesCapsule'
 import { usePublicCalendarVisible } from '../../hooks/useStaticData'
 import { useNavLogoVisibility } from './useNavLogoVisibility'
 import { DATA_SOURCE_LINKS, GUIDE_MENU_ITEMS } from './navLinks'
 
 type NavMobileProps = {
-  isDark: boolean
   isActive: (path: string) => boolean
   isCompetitionsActive: boolean
   isShowsActive: boolean
@@ -29,7 +27,6 @@ type NavMobileProps = {
 }
 
 export function NavMobile({
-  isDark,
   isActive,
   isCompetitionsActive,
   isShowsActive,
@@ -72,15 +69,14 @@ export function NavMobile({
         </Link>
         <div className="flex min-w-0 flex-1 items-center justify-end gap-2">
           <FavoritesCapsule />
-          <ThemeToggle />
           <button
             onClick={onToggleMobileMenu}
             aria-expanded={mobileMenuOpen}
             aria-controls="mobile-menu"
             aria-label="Навигационное меню"
-            className="w-11 h-11 border-2 border-old-money-300 dark:border-charcoal-600 rounded-lg bg-old-money-50 dark:bg-charcoal-800 hover:bg-old-money-100 dark:hover:bg-charcoal-700 transition-colors flex items-center justify-center"
+            className="w-11 h-11 border-2 border-old-money-300 rounded-lg bg-old-money-50 hover:bg-old-money-100 transition-colors flex items-center justify-center"
           >
-            <svg className="w-5 h-5 text-old-money-700 dark:text-camel-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 text-old-money-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {mobileMenuOpen ? (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               ) : (
@@ -100,13 +96,13 @@ export function NavMobile({
       )}
 
       {mobileMenuOpen && (
-        <div id="mobile-menu" className="md:hidden absolute top-12 left-0 right-0 z-50 bg-white dark:bg-charcoal-900 border-b border-old-money-200 dark:border-charcoal-700 shadow-lg">
+        <div id="mobile-menu" className="md:hidden absolute top-12 left-0 right-0 z-50 bg-white border-b border-old-money-200 shadow-lg">
           <div className="px-4 py-3 space-y-2">
             <Link
               to="/"
               onClick={onCloseMobileMenu}
               className={`block px-4 py-2 text-sm font-semibold transition-colors ${
-                isActive('/') ? 'text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200'
+                isActive('/') ? 'text-camel-700' : 'text-charcoal-700'
               }`}
             >
               <span className="relative inline-block">
@@ -123,7 +119,7 @@ export function NavMobile({
                 aria-controls="statistics-menu"
                 aria-label="Соревнования - рейтинг, календарь, судьи"
                 className={`w-full flex items-center justify-between px-4 py-2 text-sm font-semibold transition-colors ${
-                  isCompetitionsActive ? 'text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200'
+                  isCompetitionsActive ? 'text-camel-700' : 'text-charcoal-700'
                 }`}
               >
                 <span className="relative inline-block">
@@ -141,7 +137,7 @@ export function NavMobile({
                   <Link
                     to="/competitions?tab=ranking"
                     onClick={onCloseMobileMenu}
-                    className="block px-4 py-2 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800 rounded-lg transition-colors"
+                    className="block px-4 py-2 text-sm text-charcoal-700 hover:bg-old-money-50 rounded-lg transition-colors"
                   >
                     Рейтинг
                   </Link>
@@ -149,7 +145,7 @@ export function NavMobile({
                     <Link
                       to="/competitions?tab=calendar"
                       onClick={onCloseMobileMenu}
-                      className="block px-4 py-2 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800 rounded-lg transition-colors"
+                      className="block px-4 py-2 text-sm text-charcoal-700 hover:bg-old-money-50 rounded-lg transition-colors"
                     >
                       Календарь
                     </Link>
@@ -157,7 +153,7 @@ export function NavMobile({
                   <Link
                     to="/competitions?tab=judges"
                     onClick={onCloseMobileMenu}
-                    className="block px-4 py-2 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800 rounded-lg transition-colors"
+                    className="block px-4 py-2 text-sm text-charcoal-700 hover:bg-old-money-50 rounded-lg transition-colors"
                   >
                     Судьи
                   </Link>
@@ -174,7 +170,7 @@ export function NavMobile({
                 aria-controls="shows-menu"
                 aria-label="Выставки - рейтинг, календарь, судьи"
                 className={`w-full flex items-center justify-between px-4 py-2 text-sm font-semibold transition-colors ${
-                  isShowsActive ? 'text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200'
+                  isShowsActive ? 'text-camel-700' : 'text-charcoal-700'
                 }`}
               >
                 <span className="relative inline-block">
@@ -192,7 +188,7 @@ export function NavMobile({
                   <Link
                     to="/shows?tab=ranking"
                     onClick={onCloseMobileMenu}
-                    className="block px-4 py-2 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800 rounded-lg transition-colors"
+                    className="block px-4 py-2 text-sm text-charcoal-700 hover:bg-old-money-50 rounded-lg transition-colors"
                   >
                     Рейтинг
                   </Link>
@@ -200,7 +196,7 @@ export function NavMobile({
                     <Link
                       to="/shows?tab=calendar"
                       onClick={onCloseMobileMenu}
-                      className="block px-4 py-2 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800 rounded-lg transition-colors"
+                      className="block px-4 py-2 text-sm text-charcoal-700 hover:bg-old-money-50 rounded-lg transition-colors"
                     >
                       Календарь
                     </Link>
@@ -208,7 +204,7 @@ export function NavMobile({
                   <Link
                     to="/shows?tab=judges"
                     onClick={onCloseMobileMenu}
-                    className="block px-4 py-2 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800 rounded-lg transition-colors"
+                    className="block px-4 py-2 text-sm text-charcoal-700 hover:bg-old-money-50 rounded-lg transition-colors"
                   >
                     Судьи
                   </Link>
@@ -222,7 +218,7 @@ export function NavMobile({
                 aria-controls="donino-menu"
                 aria-label="Курсинг Донино - записи и статистика"
                 className={`w-full flex items-center justify-between px-4 py-2 text-sm font-semibold transition-colors ${
-                  isSpeedRecordsActive ? 'text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200'
+                  isSpeedRecordsActive ? 'text-camel-700' : 'text-charcoal-700'
                 }`}
               >
                 <span className="relative inline-block">
@@ -240,14 +236,14 @@ export function NavMobile({
                   <Link
                     to="/speed-records?view=table"
                     onClick={onCloseMobileMenu}
-                    className="block px-4 py-2 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800 rounded-lg transition-colors"
+                    className="block px-4 py-2 text-sm text-charcoal-700 hover:bg-old-money-50 rounded-lg transition-colors"
                   >
                     Записи
                   </Link>
                   <Link
                     to="/speed-records?view=stats"
                     onClick={onCloseMobileMenu}
-                    className="block px-4 py-2 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800 rounded-lg transition-colors"
+                    className="block px-4 py-2 text-sm text-charcoal-700 hover:bg-old-money-50 rounded-lg transition-colors"
                   >
                     Статистика
                   </Link>
@@ -261,7 +257,7 @@ export function NavMobile({
                 aria-controls="guide-menu"
                 aria-label="Справка - правила, титулы, протоколы"
                 className={`w-full flex items-center justify-between px-4 py-2 text-sm font-semibold transition-colors ${
-                  isGuideActive ? 'text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200'
+                  isGuideActive ? 'text-camel-700' : 'text-charcoal-700'
                 }`}
               >
                 <span className="relative inline-block">
@@ -288,7 +284,7 @@ export function NavMobile({
                       key={item.to}
                       to={item.to}
                       onClick={onCloseMobileMenu}
-                      className="block rounded-lg px-4 py-2 text-sm text-charcoal-700 transition-colors hover:bg-old-money-50 dark:text-charcoal-200 dark:hover:bg-charcoal-800"
+                      className="block rounded-lg px-4 py-2 text-sm text-charcoal-700 transition-colors hover:bg-old-money-50"
                     >
                       {item.label}
                     </Link>
@@ -300,7 +296,7 @@ export function NavMobile({
               to="/about"
               onClick={onCloseMobileMenu}
               className={`block px-4 py-2 text-sm font-semibold transition-colors ${
-                isAboutActive ? 'text-camel-700 dark:text-camel-400' : 'text-charcoal-700 dark:text-charcoal-200'
+                isAboutActive ? 'text-camel-700' : 'text-charcoal-700'
               }`}
             >
               <span className="relative inline-block">
@@ -310,10 +306,10 @@ export function NavMobile({
                 }`}></span>
               </span>
             </Link>
-            <div className="border-t border-old-money-200 dark:border-charcoal-600 pt-2 mt-2">
+            <div className="border-t border-old-money-200 pt-2 mt-2">
               <button
                 onClick={onToggleSources}
-                className="w-full flex items-center justify-between px-4 py-2 rounded-lg text-sm font-semibold text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800 transition-colors"
+                className="w-full flex items-center justify-between px-4 py-2 rounded-lg text-sm font-semibold text-charcoal-700 hover:bg-old-money-50 transition-colors"
               >
                 <span>Источники данных</span>
                 <svg className={`w-4 h-4 transition-transform ${sourcesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -328,7 +324,7 @@ export function NavMobile({
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block px-4 py-2 text-sm text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-800 rounded-lg transition-colors"
+                      className="block px-4 py-2 text-sm text-charcoal-700 hover:bg-old-money-50 rounded-lg transition-colors"
                     >
                       {link.label}
                     </a>

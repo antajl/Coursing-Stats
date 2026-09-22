@@ -74,14 +74,14 @@ export default function ToolbarFilterOptionList({
         />
       ) : null}
       <div
-        className={`space-y-0.5 overflow-y-auto overflow-x-hidden overscroll-contain rounded-lg border border-old-money-200/70 bg-white/70 p-1 [-webkit-overflow-scrolling:touch] dark:border-charcoal-600 dark:bg-charcoal-900/40 ${
+        className={`space-y-0.5 overflow-y-auto overflow-x-hidden overscroll-contain rounded-lg border border-old-money-200/70 bg-white/70 p-1 [-webkit-overflow-scrolling:touch] ${
           fill ? 'min-h-0 max-h-[min(220px,36vh)] flex-1' : 'max-h-44'
         }`}
         role="listbox"
         aria-multiselectable={mode === 'multi'}
       >
         {filtered.length === 0 ? (
-          <p className="px-2.5 py-3 text-xs text-charcoal-500 dark:text-charcoal-400">{emptyText}</p>
+          <p className="px-2.5 py-3 text-xs text-charcoal-500">{emptyText}</p>
         ) : (
           filtered.map((opt) => {
             const selected = isSelected(mode, value, opt.value)
@@ -100,7 +100,7 @@ export default function ToolbarFilterOptionList({
                   } ${
                     selected
                       ? 'border-camel-600 bg-camel-500'
-                      : 'border-old-money-300 bg-white dark:border-charcoal-500 dark:bg-charcoal-800'
+                      : 'border-old-money-300 bg-white'
                   }`}
                   aria-hidden
                 >

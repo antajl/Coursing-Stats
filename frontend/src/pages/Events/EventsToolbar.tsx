@@ -144,8 +144,8 @@ export default function EventsToolbar({
               }}
               className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
                 !filterYear
-                  ? 'bg-camel-500 text-charcoal-900 dark:bg-camel-600 dark:text-cream-50'
-                  : 'text-charcoal-700 hover:bg-camel-100 dark:text-charcoal-200 dark:hover:bg-camel-900/30'
+                  ? 'bg-camel-500 text-charcoal-900'
+                  : 'text-charcoal-700 hover:bg-camel-100'
               }`}
             >
               Все года
@@ -162,8 +162,8 @@ export default function EventsToolbar({
                 }}
                 className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
                   filterYear === year
-                    ? 'bg-camel-500 text-charcoal-900 dark:bg-camel-600 dark:text-cream-50'
-                    : 'text-charcoal-700 hover:bg-camel-100 dark:text-charcoal-200 dark:hover:bg-camel-900/30'
+                    ? 'bg-camel-500 text-charcoal-900'
+                    : 'text-charcoal-700 hover:bg-camel-100'
                 }`}
               >
                 {year}
@@ -201,8 +201,8 @@ export default function EventsToolbar({
                 }}
                 className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
                   filterMonth === opt.value
-                    ? 'bg-camel-500 text-charcoal-900 dark:bg-camel-600 dark:text-cream-50'
-                    : 'text-charcoal-700 hover:bg-camel-100 dark:text-charcoal-200 dark:hover:bg-camel-900/30'
+                    ? 'bg-camel-500 text-charcoal-900'
+                    : 'text-charcoal-700 hover:bg-camel-100'
                 }`}
               >
                 {opt.label}
@@ -236,8 +236,8 @@ export default function EventsToolbar({
               }}
               className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
                 !filterDiscipline
-                  ? 'bg-camel-500 text-charcoal-900 dark:bg-camel-600 dark:text-cream-50'
-                  : 'text-charcoal-700 hover:bg-camel-100 dark:text-charcoal-200 dark:hover:bg-camel-900/30'
+                  ? 'bg-camel-500 text-charcoal-900'
+                  : 'text-charcoal-700 hover:bg-camel-100'
               }`}
             >
               Все дисциплины
@@ -253,8 +253,8 @@ export default function EventsToolbar({
                 }}
                 className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
                   filterDiscipline === opt.value
-                    ? 'bg-camel-500 text-charcoal-900 dark:bg-camel-600 dark:text-cream-50'
-                    : 'text-charcoal-700 hover:bg-camel-100 dark:text-charcoal-200 dark:hover:bg-camel-900/30'
+                    ? 'bg-camel-500 text-charcoal-900'
+                    : 'text-charcoal-700 hover:bg-camel-100'
                 }`}
               >
                 {opt.label}
@@ -290,8 +290,8 @@ export default function EventsToolbar({
                 }}
                 className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
                   !filterCompetitionKind
-                    ? 'bg-camel-500 text-charcoal-900 dark:bg-camel-600 dark:text-cream-50'
-                    : 'text-charcoal-700 hover:bg-camel-100 dark:text-charcoal-200 dark:hover:bg-camel-900/30'
+                    ? 'bg-camel-500 text-charcoal-900'
+                    : 'text-charcoal-700 hover:bg-camel-100'
                 }`}
               >
                 Все виды
@@ -307,8 +307,8 @@ export default function EventsToolbar({
                   }}
                   className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
                     filterCompetitionKind === kind
-                      ? 'bg-camel-500 text-charcoal-900 dark:bg-camel-600 dark:text-cream-50'
-                      : 'text-charcoal-700 hover:bg-camel-100 dark:text-charcoal-200 dark:hover:bg-camel-900/30'
+                      ? 'bg-camel-500 text-charcoal-900'
+                      : 'text-charcoal-700 hover:bg-camel-100'
                   }`}
                 >
                   {kind}
@@ -351,7 +351,7 @@ export default function EventsToolbar({
     <div className="flex flex-wrap items-center justify-end gap-x-3.5 gap-y-1">
       {LEGEND.map(({ key, label, tip }) => (
         <ToolbarTip key={key} label={tip}>
-          <span className="inline-flex items-center gap-1.5 text-xs text-charcoal-500 dark:text-charcoal-300">
+          <span className="inline-flex items-center gap-1.5 text-xs text-charcoal-500">
             <span className={`h-2 w-2 rounded-sm ${LEGEND_DOT_COLOR[key]}`} />
             {label}
           </span>
@@ -367,7 +367,7 @@ export default function EventsToolbar({
       filters={filters}
       bottomLeft={
         stats ? (
-          <p className="text-xs text-charcoal-500 dark:text-charcoal-300">
+          <p className="text-xs text-charcoal-500">
             {`Всего событий: ${stats.total} · отфильтровано: ${stats.filtered} · с результатом: ${stats.withResult}`}
             {filterDiscipline && (
               <span className="hidden sm:inline"> · {disciplineLabel}</span>

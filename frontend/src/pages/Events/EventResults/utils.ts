@@ -97,9 +97,9 @@ export function bibColorStyle(bibColor: string | undefined): CSSProperties {
 
 export function bibTextClass(bibColor: string | undefined): string {
   const normalized = normalizeBibColorName(bibColor)
-  if (normalized === 'white' || normalized === 'yellow') return 'text-charcoal-900 dark:text-charcoal-100'
+  if (normalized === 'white' || normalized === 'yellow') return 'text-charcoal-900'
   if (normalized === 'red' || normalized === 'blue' || normalized === 'black' || normalized === 'green') return 'text-white'
-  return 'text-charcoal-900 dark:text-charcoal-100'
+  return 'text-charcoal-900'
 }
 
 export function hasDisplayableRawScores(rawScores: RawScores | null): boolean {

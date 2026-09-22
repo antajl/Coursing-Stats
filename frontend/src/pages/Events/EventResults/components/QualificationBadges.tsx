@@ -28,7 +28,7 @@ export default function QualificationBadges({ qualification }: QualificationBadg
         <span key={group.category} className="inline-flex flex-wrap items-center gap-1">
           {gi > 0 ? (
             <span
-              className="mx-0.5 h-3 w-px shrink-0 self-center bg-old-money-300 dark:bg-charcoal-500"
+              className="mx-0.5 h-3 w-px shrink-0 self-center bg-old-money-300"
               aria-hidden
             />
           ) : null}

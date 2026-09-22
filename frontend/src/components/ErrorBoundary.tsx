@@ -37,12 +37,12 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
       }
 
       return (
-        <div className="min-h-screen flex items-center justify-center bg-cream-50 dark:bg-charcoal-900">
+        <div className="min-h-screen flex items-center justify-center bg-cream-50">
           <div className="text-center p-8">
-            <h1 className="text-2xl font-bold text-charcoal-900 dark:text-charcoal-100 mb-4">
+            <h1 className="text-2xl font-bold text-charcoal-900 mb-4">
               Что-то пошло не так
             </h1>
-            <p className="text-charcoal-600 dark:text-charcoal-400 mb-6">
+            <p className="text-charcoal-600 mb-6">
               Произошла ошибка при загрузке страницы
             </p>
             <button

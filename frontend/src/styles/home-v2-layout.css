@@ -40,10 +40,6 @@ main:has(.home-v2) {
   /* как база .cs-page-shell (om-50) — шов фото→контент */
   --home-fade: #faf8f4;
 }
-.dark .home-v2 {
-  /* как dark .cs-page-shell */
-  --home-fade: #252320;
-}
 /* Body над швом stage (::after z=4), но ниже stage-copy (поиск / hero). */
 .home-v2-body {
   position: relative;
@@ -148,9 +144,6 @@ main:has(.home-v2) {
     opacity: 1;
   }
 }
-.dark .home-v2-scroll-cue {
-  color: var(--camel-400);
-}
 .home-v2-scroll-cue svg {
   width: 48px;
   height: 48px;
@@ -164,9 +157,6 @@ main:has(.home-v2) {
 .home-v2-scroll-cue:hover {
   color: var(--camel-800);
   transform: translateX(-50%) scale(1.1);
-}
-.dark .home-v2-scroll-cue:hover {
-  color: var(--camel-300);
 }
 
 .home-v2-stage-copy {
@@ -226,10 +216,6 @@ main:has(.home-v2) {
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7), 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-.dark .home-v2-hero-copy h1 {
-  color: rgba(255, 255, 255, 0.9);
-}
-
 .home-v2-hero-copy h1 em {
   font-style: normal;
   color: rgba(255, 255, 255, 0.85);
@@ -242,8 +228,4 @@ main:has(.home-v2) {
   line-height: 1.6;
   margin: 0 0 12px;
   text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8), 0 0 1px rgba(255, 255, 255, 0.5);
-}
-
-.dark .home-v2-lead {
-  color: rgba(255, 255, 255, 0.8);
 }

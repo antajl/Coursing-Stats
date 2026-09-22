@@ -28,10 +28,10 @@ export function ShowCalendarMonthList({
           return (
             <div
               key={row.key}
-              className="sticky top-2 z-10 mb-1.5 mt-1.5 flex items-baseline justify-between rounded-lg bg-old-money-100 dark:bg-charcoal-800 px-3.5 py-1.5 font-serif text-sm font-bold text-old-money-700 dark:text-old-money-300 first:mt-0"
+              className="sticky top-2 z-10 mb-1.5 mt-1.5 flex items-baseline justify-between rounded-lg bg-old-money-100 px-3.5 py-1.5 font-serif text-sm font-bold text-old-money-700 first:mt-0"
             >
               <span>{row.label}</span>
-              <span className="font-mono text-xs font-normal text-charcoal-500 dark:text-charcoal-300">
+              <span className="font-mono text-xs font-normal text-charcoal-500">
                 {row.count}{' '}
                 {row.count === 1 ? 'выставка' : row.count < 5 ? 'выставки' : 'выставок'}
               </span>
@@ -53,7 +53,7 @@ export function ShowCalendarMonthList({
       {hasMore && (
         <div
           ref={loadMoreRef}
-          className="py-4 text-center text-sm text-charcoal-500 dark:text-charcoal-400"
+          className="py-4 text-center text-sm text-charcoal-500"
         >
           Загрузка…
         </div>

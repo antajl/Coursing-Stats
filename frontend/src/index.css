@@ -22,11 +22,6 @@
   outline-offset: 2px;
 }
 
-/* Dark mode focus */
-.dark *:focus-visible {
-  outline-color: var(--camel-400);
-}
-
 /* Remove default focus for mouse users */
 :focus:not(:focus-visible) {
   outline: none;

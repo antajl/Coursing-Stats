@@ -141,8 +141,8 @@ export default function ShowRankingFilters({
       type="button"
       className={`inline-flex h-8 items-center rounded-full border px-3.5 text-xs font-semibold whitespace-nowrap transition-colors gap-1.5 ${
         filterBreed
-          ? 'border-camel-500 bg-camel-500 text-charcoal-900 dark:border-camel-400 dark:bg-camel-600 dark:text-cream-50'
-          : 'border-old-money-200 dark:border-charcoal-600 bg-cream-50 dark:bg-charcoal-800 text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-700'
+          ? 'border-camel-500 bg-camel-500 text-charcoal-900'
+          : 'border-old-money-200 bg-cream-50 text-charcoal-700 hover:bg-old-money-50'
       }`}
     >
       {filterBreed || 'Порода'}
@@ -157,8 +157,8 @@ export default function ShowRankingFilters({
       type="button"
       className={`inline-flex h-8 items-center rounded-full border px-3.5 text-xs font-semibold whitespace-nowrap transition-colors gap-1.5 ${
         filterYear && filterYear !== currentSeason
-          ? 'border-camel-500 bg-camel-500 text-charcoal-900 dark:border-camel-400 dark:bg-camel-600 dark:text-cream-50'
-          : 'border-old-money-200 dark:border-charcoal-600 bg-cream-50 dark:bg-charcoal-800 text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-700'
+          ? 'border-camel-500 bg-camel-500 text-charcoal-900'
+          : 'border-old-money-200 bg-cream-50 text-charcoal-700 hover:bg-old-money-50'
       }`}
     >
       {filterYear || 'Год'}
@@ -173,8 +173,8 @@ export default function ShowRankingFilters({
       type="button"
       className={`inline-flex h-8 max-w-[14rem] items-center rounded-full border px-3.5 text-xs font-semibold transition-colors gap-1.5 ${
         filterGroup
-          ? 'border-camel-500 bg-camel-500 text-charcoal-900 dark:border-camel-400 dark:bg-camel-600 dark:text-cream-50'
-          : 'border-old-money-200 dark:border-charcoal-600 bg-cream-50 dark:bg-charcoal-800 text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-700'
+          ? 'border-camel-500 bg-camel-500 text-charcoal-900'
+          : 'border-old-money-200 bg-cream-50 text-charcoal-700 hover:bg-old-money-50'
       }`}
       title={filterGroup || undefined}
     >
@@ -216,8 +216,8 @@ export default function ShowRankingFilters({
                       }}
                       className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
                         !filterYear
-                          ? 'bg-camel-500 text-charcoal-900 dark:bg-camel-600 dark:text-cream-50'
-                          : 'text-charcoal-700 hover:bg-camel-100 dark:text-charcoal-200 dark:hover:bg-camel-900/30'
+                          ? 'bg-camel-500 text-charcoal-900'
+                          : 'text-charcoal-700 hover:bg-camel-100'
                       }`}
                     >
                       Все года
@@ -232,8 +232,8 @@ export default function ShowRankingFilters({
                         }}
                         className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
                           filterYear === year
-                            ? 'bg-camel-500 text-charcoal-900 dark:bg-camel-600 dark:text-cream-50'
-                            : 'text-charcoal-700 hover:bg-camel-100 dark:text-charcoal-200 dark:hover:bg-camel-900/30'
+                            ? 'bg-camel-500 text-charcoal-900'
+                            : 'text-charcoal-700 hover:bg-camel-100'
                         }`}
                       >
                         {year}
@@ -270,8 +270,8 @@ export default function ShowRankingFilters({
                         }}
                         className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
                         !filterGroup
-                          ? 'bg-camel-500 text-charcoal-900 dark:bg-camel-600 dark:text-cream-50'
-                          : 'text-charcoal-700 hover:bg-camel-100 dark:text-charcoal-200 dark:hover:bg-camel-900/30'
+                          ? 'bg-camel-500 text-charcoal-900'
+                          : 'text-charcoal-700 hover:bg-camel-100'
                       }`}
                       >
                         Все группы
@@ -286,8 +286,8 @@ export default function ShowRankingFilters({
                           }}
                           className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
                             filterGroup === group
-                              ? 'bg-camel-500 text-charcoal-900 dark:bg-camel-600 dark:text-cream-50'
-                              : 'text-charcoal-700 hover:bg-camel-100 dark:text-charcoal-200 dark:hover:bg-camel-900/30'
+                              ? 'bg-camel-500 text-charcoal-900'
+                              : 'text-charcoal-700 hover:bg-camel-100'
                           }`}
                         >
                           {group}
@@ -314,10 +314,10 @@ export default function ShowRankingFilters({
                 >
                   <div className="flex min-h-0 flex-1 flex-col overflow-y-auto overscroll-contain p-2">
                     <details
-                      className="group shrink-0 rounded-lg border border-old-money-200/80 bg-white/50 dark:border-charcoal-600 dark:bg-charcoal-900/30"
+                      className="group shrink-0 rounded-lg border border-old-money-200/80 bg-white/50"
                       defaultOpen={hasAwardMins}
                     >
-                      <summary className="flex cursor-pointer list-none items-center justify-between gap-2 px-3 py-2.5 text-xs font-semibold text-charcoal-700 marker:content-none dark:text-charcoal-200 [&::-webkit-details-marker]:hidden">
+                      <summary className="flex cursor-pointer list-none items-center justify-between gap-2 px-3 py-2.5 text-xs font-semibold text-charcoal-700 marker:content-none [&::-webkit-details-marker]:hidden">
                         <span className="flex items-center gap-2">
                           Награды (минимум)
                           {awardMinCount > 0 ? (
@@ -326,14 +326,14 @@ export default function ShowRankingFilters({
                             </span>
                           ) : null}
                         </span>
-                        <span className="text-old-money-400 transition-transform group-open:rotate-180 dark:text-charcoal-500">
+                        <span className="text-old-money-400 transition-transform group-open:rotate-180">
                           ▾
                         </span>
                       </summary>
-                      <div className="grid max-h-40 grid-cols-2 gap-2 overflow-y-auto overflow-x-hidden border-t border-old-money-200/70 px-3 py-3 dark:border-charcoal-600/70">
+                      <div className="grid max-h-40 grid-cols-2 gap-2 overflow-y-auto overflow-x-hidden border-t border-old-money-200/70 px-3 py-3">
                         {SHOW_FILTER_AWARD_KEYS.map((key) => (
                           <label key={key} className="block min-w-0 space-y-0.5">
-                            <span className="text-[11px] font-medium text-charcoal-600 dark:text-charcoal-300">
+                            <span className="text-[11px] font-medium text-charcoal-600">
                               {SHOW_AWARD_BADGE[key]}
                             </span>
                             <input

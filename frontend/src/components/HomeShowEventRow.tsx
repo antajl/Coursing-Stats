@@ -69,15 +69,15 @@ export default function HomeShowEventRow({ exhibition }: HomeShowEventRowProps) 
   const headline = rank ? `${rank} · ${title}` : title
 
   const className =
-    'home-event-row home-event-row--compact border-l-4 border-l-camel-400 dark:border-l-camel-600'
+    'home-event-row home-event-row--compact border-l-4 border-l-camel-400'
 
   const content = (
     <>
-      <div className="home-event-row-date shrink-0 text-sm leading-tight text-charcoal-900 dark:text-charcoal-100">
+      <div className="home-event-row-date shrink-0 text-sm leading-tight text-charcoal-900">
         {dateParts ? (
           <>
             <span className="block whitespace-nowrap font-semibold tabular-nums">{dateParts.dayLine}</span>
-            <span className="block whitespace-nowrap text-[11px] text-charcoal-500 dark:text-charcoal-400">
+            <span className="block whitespace-nowrap text-[11px] text-charcoal-500">
               {dateParts.month}
             </span>
           </>
@@ -86,11 +86,11 @@ export default function HomeShowEventRow({ exhibition }: HomeShowEventRowProps) 
         )}
       </div>
       <div className="min-w-0 flex-1">
-        <span className="block truncate text-xs font-semibold text-charcoal-900 dark:text-charcoal-100">
+        <span className="block truncate text-xs font-semibold text-charcoal-900">
           {headline}
         </span>
         {place ? (
-          <p className="mt-0.5 truncate text-[11px] text-charcoal-500 dark:text-charcoal-400">{place}</p>
+          <p className="mt-0.5 truncate text-[11px] text-charcoal-500">{place}</p>
         ) : null}
       </div>
     </>

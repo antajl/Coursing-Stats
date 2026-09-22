@@ -205,10 +205,10 @@ export default function AccountPage() {
     return (
       <div className="min-h-screen flex items-center justify-center px-4">
         <div className="text-center max-w-md">
-          <h1 className="text-2xl font-bold text-charcoal-900 dark:text-cream-100 mb-3">
+          <h1 className="text-2xl font-bold text-charcoal-900 mb-3">
             Войдите, чтобы следить за собаками
           </h1>
-          <p className="text-charcoal-600 dark:text-cream-300 mb-6">
+          <p className="text-charcoal-600 mb-6">
             Избранные собаки, участия и результаты — в одном месте.
           </p>
           <Link
@@ -261,7 +261,7 @@ export default function AccountPage() {
       <div className="mt-2 mb-4">
         <Link
           to="/account/settings"
-          className="inline-flex items-center text-sm text-charcoal-500 dark:text-charcoal-400 hover:text-charcoal-800 dark:hover:text-cream-100"
+          className="inline-flex items-center text-sm text-charcoal-500 hover:text-charcoal-800"
         >
           Настройки аккаунта
         </Link>

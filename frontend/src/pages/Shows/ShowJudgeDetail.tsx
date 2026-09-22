@@ -124,7 +124,7 @@ export default function ShowJudgeDetail() {
 
   if (loading) {
     return (
-      <div className="py-12 text-center text-old-money-600 dark:text-old-money-400">
+      <div className="py-12 text-center text-old-money-600">
         <div className="text-lg font-medium">Загрузка информации о судье...</div>
       </div>
     )
@@ -133,12 +133,12 @@ export default function ShowJudgeDetail() {
   if (!judge) {
     return (
       <div className="py-12 text-center">
-        <div className="mb-4 rounded-xl border border-amber-200 bg-amber-50 p-4 text-amber-800 dark:border-amber-700 dark:bg-amber-900 dark:text-amber-300">
+        <div className="mb-4 rounded-xl border border-amber-200 bg-amber-50 p-4 text-amber-800">
           <p className="font-medium">Судья не найден</p>
         </div>
         <Link
           to="/shows?tab=judges"
-          className="text-camel-700 transition-colors hover:text-camel-800 hover:underline dark:text-camel-400 dark:hover:text-camel-300"
+          className="text-camel-700 transition-colors hover:text-camel-800 hover:underline"
         >
           <span className="md:hidden">Назад</span>
           <span className="hidden md:inline">← Вернуться к списку судей</span>
@@ -172,7 +172,7 @@ export default function ShowJudgeDetail() {
           <button
             type="button"
             onClick={() => navigate('/shows?tab=judges')}
-            className="relative z-10 mb-2 inline-flex h-11 w-11 items-center justify-center rounded-lg text-old-money-500 transition-colors hover:bg-old-money-50 hover:text-camel-700 md:absolute md:right-full md:top-8 md:mb-0 md:mr-0.5 dark:text-old-money-400 dark:hover:bg-charcoal-700 dark:hover:text-camel-400"
+            className="relative z-10 mb-2 inline-flex h-11 w-11 items-center justify-center rounded-lg text-old-money-500 transition-colors hover:bg-old-money-50 hover:text-camel-700 md:absolute md:right-full md:top-8 md:mb-0 md:mr-0.5"
             aria-label="Назад"
           >
             <ChevronLeft className="h-5 w-5" aria-hidden />

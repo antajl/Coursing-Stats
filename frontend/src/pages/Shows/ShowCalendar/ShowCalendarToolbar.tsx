@@ -82,8 +82,8 @@ export function ShowCalendarToolbar({
               }}
               className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
                 !filterYear
-                  ? 'bg-camel-500 text-charcoal-900 dark:bg-camel-600 dark:text-cream-50'
-                  : 'text-charcoal-700 hover:bg-camel-100 dark:text-charcoal-200 dark:hover:bg-camel-900/30'
+                  ? 'bg-camel-500 text-charcoal-900'
+                  : 'text-charcoal-700 hover:bg-camel-100'
               }`}
             >
               Все года
@@ -100,8 +100,8 @@ export function ShowCalendarToolbar({
                 }}
                 className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
                   filterYear === year
-                    ? 'bg-camel-500 text-charcoal-900 dark:bg-camel-600 dark:text-cream-50'
-                    : 'text-charcoal-700 hover:bg-camel-100 dark:text-charcoal-200 dark:hover:bg-camel-900/30'
+                    ? 'bg-camel-500 text-charcoal-900'
+                    : 'text-charcoal-700 hover:bg-camel-100'
                 }`}
               >
                 {year}
@@ -137,8 +137,8 @@ export function ShowCalendarToolbar({
                 }}
                 className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
                   filterMonth === opt.value
-                    ? 'bg-camel-500 text-charcoal-900 dark:bg-camel-600 dark:text-cream-50'
-                    : 'text-charcoal-700 hover:bg-camel-100 dark:text-charcoal-200 dark:hover:bg-camel-900/30'
+                    ? 'bg-camel-500 text-charcoal-900'
+                    : 'text-charcoal-700 hover:bg-camel-100'
                 }`}
               >
                 {opt.label}

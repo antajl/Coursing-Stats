@@ -44,7 +44,7 @@ export default function AccountSettingsPage() {
     return (
       <div className="min-h-screen flex items-center justify-center px-4">
         <div className="text-center max-w-md">
-          <h1 className="text-2xl font-bold text-charcoal-900 dark:text-cream-100 mb-3">
+          <h1 className="text-2xl font-bold text-charcoal-900 mb-3">
             Войдите, чтобы открыть настройки
           </h1>
           <Link
@@ -93,39 +93,39 @@ export default function AccountSettingsPage() {
     <div className="max-w-2xl mx-auto px-4 py-8 sm:py-10">
       <Link
         to="/account"
-        className="inline-flex items-center gap-1.5 text-sm text-charcoal-600 dark:text-cream-300 hover:text-charcoal-900 dark:hover:text-cream-100 mb-6"
+        className="inline-flex items-center gap-1.5 text-sm text-charcoal-600 hover:text-charcoal-900 mb-6"
       >
         <ArrowLeft className="w-4 h-4" />
         К кабинету
       </Link>
 
-      <h1 className="text-3xl font-bold text-charcoal-900 dark:text-cream-100 mb-8">
+      <h1 className="text-3xl font-bold text-charcoal-900 mb-8">
         Настройки аккаунта
       </h1>
 
-      <section className="mb-8 rounded-xl border border-charcoal-200 dark:border-charcoal-700 px-4 py-4">
-        <h2 className="text-[11px] font-semibold uppercase tracking-[0.12em] text-charcoal-500 dark:text-charcoal-400 mb-3">
+      <section className="mb-8 rounded-xl border border-charcoal-200 px-4 py-4">
+        <h2 className="text-[11px] font-semibold uppercase tracking-[0.12em] text-charcoal-500 mb-3">
           Профиль
         </h2>
-        <p className="text-charcoal-800 dark:text-cream-100 font-medium">{user.display_name}</p>
-        <p className="mt-1 text-sm text-charcoal-600 dark:text-cream-300">{user.email}</p>
+        <p className="text-charcoal-800 font-medium">{user.display_name}</p>
+        <p className="mt-1 text-sm text-charcoal-600">{user.email}</p>
         {memberSince && (
-          <p className="mt-2 text-sm text-charcoal-500 dark:text-charcoal-400">
+          <p className="mt-2 text-sm text-charcoal-500">
             С нами с {memberSince}
           </p>
         )}
       </section>
 
-      <section className="mb-8 rounded-xl border border-charcoal-200 dark:border-charcoal-700 px-4 py-4">
-        <h2 className="text-[11px] font-semibold uppercase tracking-[0.12em] text-charcoal-500 dark:text-charcoal-400 mb-3">
+      <section className="mb-8 rounded-xl border border-charcoal-200 px-4 py-4">
+        <h2 className="text-[11px] font-semibold uppercase tracking-[0.12em] text-charcoal-500 mb-3">
           Пароль
         </h2>
         {user.has_password === false ? (
-          <p className="text-sm text-charcoal-600 dark:text-cream-300 mb-3">
+          <p className="text-sm text-charcoal-600 mb-3">
             Аккаунт создан через Яндекс — пароля ещё нет. Задайте его, чтобы входить и по email.
           </p>
         ) : (
-          <p className="text-sm text-charcoal-600 dark:text-cream-300 mb-3">
+          <p className="text-sm text-charcoal-600 mb-3">
             Можно задать новый пароль для входа по email.
           </p>
         )}
@@ -137,10 +137,10 @@ export default function AccountSettingsPage() {
           }}
         >
           {passwordMsg && (
-            <p className="text-sm text-green-700 dark:text-green-400">{passwordMsg}</p>
+            <p className="text-sm text-green-700">{passwordMsg}</p>
           )}
           {passwordError && (
-            <p className="text-sm text-terracotta-600 dark:text-terracotta-400">{passwordError}</p>
+            <p className="text-sm text-terracotta-600">{passwordError}</p>
           )}
           <input
             type="password"
@@ -149,7 +149,7 @@ export default function AccountSettingsPage() {
             value={newPassword}
             onChange={(e) => setNewPassword(e.target.value)}
             placeholder="Новый пароль (мин. 8)"
-            className="w-full px-3 py-2 border border-charcoal-300 dark:border-charcoal-600 rounded-lg bg-white dark:bg-charcoal-700 text-charcoal-900 dark:text-cream-100"
+            className="w-full px-3 py-2 border border-charcoal-300 rounded-lg bg-white text-charcoal-900"
             disabled={savingPassword}
           />
           <button
@@ -162,11 +162,11 @@ export default function AccountSettingsPage() {
         </form>
       </section>
 
-      <section className="mb-8 rounded-xl border border-charcoal-200 dark:border-charcoal-700 px-4 py-4">
-        <h2 className="text-[11px] font-semibold uppercase tracking-[0.12em] text-charcoal-500 dark:text-charcoal-400 mb-3">
+      <section className="mb-8 rounded-xl border border-charcoal-200 px-4 py-4">
+        <h2 className="text-[11px] font-semibold uppercase tracking-[0.12em] text-charcoal-500 mb-3">
           Telegram
         </h2>
-        <p className="text-sm text-charcoal-600 dark:text-cream-300 mb-3">
+        <p className="text-sm text-charcoal-600 mb-3">
           Бот Coursing Stats — поиск собак, рейтинги и избранное в Telegram. Уведомления о результатах
           появятся позже.
         </p>
@@ -174,36 +174,36 @@ export default function AccountSettingsPage() {
           href="https://t.me/coursing_stats_bot"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center text-sm font-medium text-camel-800 dark:text-camel-300 hover:underline"
+          className="inline-flex items-center text-sm font-medium text-camel-800 hover:underline"
         >
           Открыть @coursing_stats_bot →
         </a>
       </section>
 
-      <section className="mb-8 rounded-xl border border-charcoal-200 dark:border-charcoal-700 px-4 py-4">
-        <h2 className="text-[11px] font-semibold uppercase tracking-[0.12em] text-charcoal-500 dark:text-charcoal-400 mb-3">
+      <section className="mb-8 rounded-xl border border-charcoal-200 px-4 py-4">
+        <h2 className="text-[11px] font-semibold uppercase tracking-[0.12em] text-charcoal-500 mb-3">
           Безопасность
         </h2>
         <button
           type="button"
           onClick={() => void logout()}
-          className="text-sm text-charcoal-700 dark:text-cream-200 hover:text-charcoal-900 dark:hover:text-cream-100"
+          className="text-sm text-charcoal-700 hover:text-charcoal-900"
         >
           Выйти
         </button>
       </section>
 
-      <section className="rounded-xl border border-terracotta-300/80 dark:border-terracotta-800/70 bg-terracotta-50/40 dark:bg-terracotta-950/20 px-4 py-4">
-        <h2 className="text-[11px] font-semibold uppercase tracking-[0.12em] text-terracotta-700 dark:text-terracotta-400 mb-2">
+      <section className="rounded-xl border border-terracotta-300/80 bg-terracotta-50/40 px-4 py-4">
+        <h2 className="text-[11px] font-semibold uppercase tracking-[0.12em] text-terracotta-700 mb-2">
           Удаление аккаунта
         </h2>
-        <p className="text-sm text-charcoal-600 dark:text-charcoal-400 mb-3">
+        <p className="text-sm text-charcoal-600 mb-3">
           Удаление необратимо: аккаунт и избранное исчезнут.
         </p>
         <button
           type="button"
           onClick={() => setShowDeleteModal(true)}
-          className="inline-flex items-center justify-center rounded-lg border border-terracotta-600 bg-terracotta-600 px-3 py-2 text-sm font-medium text-white hover:bg-terracotta-700 dark:border-terracotta-500 dark:bg-terracotta-700 transition-colors"
+          className="inline-flex items-center justify-center rounded-lg border border-terracotta-600 bg-terracotta-600 px-3 py-2 text-sm font-medium text-white hover:bg-terracotta-700 transition-colors"
         >
           Удалить аккаунт…
         </button>

@@ -84,7 +84,7 @@ export default function ToolbarYearChips({
   }
 
   const navBtn =
-    'inline-flex min-h-[44px] min-w-[44px] h-7 w-7 shrink-0 items-center justify-center rounded-full border border-old-money-200 bg-white text-charcoal-700 shadow-sm transition-colors hover:bg-old-money-50 dark:border-charcoal-600 dark:bg-charcoal-800 dark:text-charcoal-200 dark:hover:bg-charcoal-700'
+    'inline-flex min-h-[44px] min-w-[44px] h-7 w-7 shrink-0 items-center justify-center rounded-full border border-old-money-200 bg-white text-charcoal-700 shadow-sm transition-colors hover:bg-old-money-50'
 
   const handleAll = () => {
     if (mode === 'multi') onClear?.()
@@ -107,13 +107,13 @@ export default function ToolbarYearChips({
       <div className="relative min-w-0 flex-1">
         {canLeft ? (
           <div
-            className="pointer-events-none absolute inset-y-0 left-0 z-10 w-5 bg-gradient-to-r from-cream-50 to-transparent dark:from-charcoal-800"
+            className="pointer-events-none absolute inset-y-0 left-0 z-10 w-5 bg-gradient-to-r from-cream-50 to-transparent"
             aria-hidden
           />
         ) : null}
         {canRight ? (
           <div
-            className="pointer-events-none absolute inset-y-0 right-0 z-10 w-5 bg-gradient-to-l from-cream-50 to-transparent dark:from-charcoal-800"
+            className="pointer-events-none absolute inset-y-0 right-0 z-10 w-5 bg-gradient-to-l from-cream-50 to-transparent"
             aria-hidden
           />
         ) : null}

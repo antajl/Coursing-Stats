@@ -41,20 +41,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-html.dark {
-  background-color: var(--char-900);
-}
-
-.dark body {
-  color: var(--char-100);
-  background-color: var(--char-900);
-}
-
 .placement-badge-gold{background-color:var(--camel-400);border-color:var(--camel-600);color:#2c2314;}
 .placement-badge-silver{background-color:var(--om-400);border-color:var(--om-700);color:var(--char-800);}
 .placement-badge-bronze{background-color:var(--terra-200);border-color:var(--terra-600);color:#7b3d2a;}
 .placement-badge-neutral{background-color:var(--om-200);border-color:var(--om-500);color:var(--char-700);}
-.dark .placement-badge-gold{background-color:var(--camel-600);border-color:var(--camel-300);color:var(--camel-100);}
-.dark .placement-badge-silver{background-color:var(--char-700);border-color:var(--char-300);color:var(--char-100);}
-.dark .placement-badge-bronze{background-color:var(--terra-600);border-color:#bb6148;color:var(--terra-200);}
-.dark .placement-badge-neutral{background-color:var(--char-700);border-color:var(--char-400);color:var(--char-200);}

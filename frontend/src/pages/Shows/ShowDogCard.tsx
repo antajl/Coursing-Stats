@@ -154,13 +154,13 @@ function ShowAwardsRow({
           {awards.length > 0 ? (
             renderShowAwardChips({ titles, maxVisible, nowrap: true })
           ) : (
-            <span className="text-[10px] text-charcoal-400 dark:text-charcoal-500">Нет наград</span>
+            <span className="text-[10px] text-charcoal-400">Нет наград</span>
           )}
         </div>
       </div>
       <div className="flex items-center gap-2 shrink-0">
-        <span className="text-charcoal-500 dark:text-charcoal-400">Выставки:</span>
-        <span className="font-semibold tabular-nums text-charcoal-700 dark:text-charcoal-200">
+        <span className="text-charcoal-500">Выставки:</span>
+        <span className="font-semibold tabular-nums text-charcoal-700">
           {totalShows || 0}
         </span>
       </div>
@@ -178,7 +178,7 @@ export default function ShowDogCard({ dog, rank, filterYear = '' }: ShowDogCardP
   return (
     <Link
       to={href}
-      className={`relative grid min-w-0 w-full ${DOG_CARD_HEIGHT_CLASS} grid-rows-[auto_auto] gap-0 overflow-hidden border-b border-old-money-200 bg-white py-1.5 px-4 transition-colors duration-200 hover:bg-camel-100/60 dark:border-charcoal-600 dark:bg-charcoal-800 dark:hover:bg-camel-900/30 first:rounded-t-xl last:rounded-b-xl last:border-b-0`}
+      className={`relative grid min-w-0 w-full ${DOG_CARD_HEIGHT_CLASS} grid-rows-[auto_auto] gap-0 overflow-hidden border-b border-old-money-200 bg-white py-1.5 px-4 transition-colors duration-200 hover:bg-camel-100/60 first:rounded-t-xl last:rounded-b-xl last:border-b-0`}
     >
       <div className="flex items-center gap-2 w-full overflow-hidden">
         {/* Rank badge on the left */}
@@ -195,7 +195,7 @@ export default function ShowDogCard({ dog, rank, filterYear = '' }: ShowDogCardP
             kind="competition"
           >
             <h3
-              className="text-xs font-bold leading-snug text-charcoal-900 dark:text-charcoal-100"
+              className="text-xs font-bold leading-snug text-charcoal-900"
               title={secondary ? `${primary} / ${secondary}` : primary}
             >
               {primary}
@@ -204,15 +204,15 @@ export default function ShowDogCard({ dog, rank, filterYear = '' }: ShowDogCardP
 
           {/* Breed and year as subtitle */}
           <div className="flex items-center gap-1 text-[9px]">
-            <span className="text-charcoal-500 dark:text-charcoal-400">
+            <span className="text-charcoal-500">
               {breedDisplay.primary}
             </span>
             {yearBadge && (
               <>
-                <span className="text-charcoal-300 dark:text-charcoal-600" aria-hidden>
+                <span className="text-charcoal-300" aria-hidden>
                   ·
                 </span>
-                <span className="text-charcoal-500 dark:text-charcoal-400">
+                <span className="text-charcoal-500">
                   {yearBadge.label}
                 </span>
               </>

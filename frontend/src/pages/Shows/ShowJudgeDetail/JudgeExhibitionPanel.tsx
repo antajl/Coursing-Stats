@@ -21,7 +21,7 @@ export function JudgeExhibitionPanel({
 }) {
   if (exhibitions.length === 0) {
     return (
-      <p className="text-sm text-charcoal-500 dark:text-charcoal-400">
+      <p className="text-sm text-charcoal-500">
         {gradeFilter ? 'Нет выставок с этой оценкой за выбранный период' : 'Нет выставок'}
       </p>
     )
@@ -29,7 +29,7 @@ export function JudgeExhibitionPanel({
 
   return (
     <>
-      <ul className="divide-y divide-old-money-100 dark:divide-charcoal-700">
+      <ul className="divide-y divide-old-money-100">
         {(showAll ? exhibitions : exhibitions.slice(0, 20)).map((ex) => {
           const href = ex.rkf_url || (ex.id ? `https://rkf.online/exhibitions/${ex.id}` : null)
           const gradeN = gradeFilter ? ex.grade_counts?.[gradeFilter] || 0 : 0
@@ -38,7 +38,7 @@ export function JudgeExhibitionPanel({
               key={`${ex.id}-${ex.date}`}
               className="flex flex-col gap-0.5 py-2.5 sm:flex-row sm:items-baseline sm:gap-3"
             >
-              <span className="shrink-0 text-xs tabular-nums text-charcoal-500 dark:text-charcoal-400 sm:w-24">
+              <span className="shrink-0 text-xs tabular-nums text-charcoal-500 sm:w-24">
                 {formatDate(ex.date)}
               </span>
               {href ? (
@@ -46,17 +46,17 @@ export function JudgeExhibitionPanel({
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="min-w-0 flex-1 text-sm font-medium text-camel-700 hover:underline dark:text-camel-400"
+                  className="min-w-0 flex-1 text-sm font-medium text-camel-700 hover:underline"
                 >
                   {ex.title || `Выставка ${ex.id}`}
                 </a>
               ) : (
-                <span className="min-w-0 flex-1 text-sm text-charcoal-800 dark:text-charcoal-100">
+                <span className="min-w-0 flex-1 text-sm text-charcoal-800">
                   {ex.title || `Выставка ${ex.id}`}
                 </span>
               )}
               {gradeFilter && gradeN > 0 && (
-                <span className="shrink-0 text-xs tabular-nums text-charcoal-500 dark:text-charcoal-400">
+                <span className="shrink-0 text-xs tabular-nums text-charcoal-500">
                   {gradeN}
                 </span>
               )}
@@ -68,7 +68,7 @@ export function JudgeExhibitionPanel({
         <button
           type="button"
           onClick={onToggleShowAll}
-          className="mt-3 text-sm text-camel-700 hover:text-camel-800 dark:text-camel-400 dark:hover:text-camel-300"
+          className="mt-3 text-sm text-camel-700 hover:text-camel-800"
         >
           {showAll ? 'Свернуть' : `Показать все (${exhibitions.length})`}
         </button>

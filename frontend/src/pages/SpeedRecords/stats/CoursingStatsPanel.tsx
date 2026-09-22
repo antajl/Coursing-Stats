@@ -38,7 +38,7 @@ export default function CoursingStatsPanel({
       />
 
       {groupBy === 'sex' && (
-        <p className="text-xs text-charcoal-500 dark:text-charcoal-400">
+        <p className="text-xs text-charcoal-500">
           Пол — из таблицы замеров (в 350 м пола нет).
         </p>
       )}

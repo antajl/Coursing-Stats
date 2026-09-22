@@ -53,28 +53,6 @@
   background: color-mix(in srgb, var(--camel-100) 70%, var(--cream-50));
 }
 
-.dark .cs-page-shell {
-  background-color: transparent;
-  background-image: none;
-}
-
-.dark .cs-page-shell::before {
-  opacity: 0.12;
-  mix-blend-mode: soft-light;
-}
-
-.dark .cs-page-blob--a {
-  background: color-mix(in srgb, var(--camel-800) 45%, var(--char-800));
-}
-
-.dark .cs-page-blob--b {
-  background: color-mix(in srgb, var(--camel-900) 38%, var(--char-700));
-}
-
-.dark .cs-page-blob--c {
-  background: color-mix(in srgb, var(--camel-950) 50%, var(--char-800));
-}
-
 @media (prefers-reduced-motion: reduce) {
   .cs-page-shell {
     background-attachment: scroll;
@@ -88,4 +66,3 @@
 }
 
 footer{margin-top:60px; text-align:center; font-size:12px; color:var(--om-600);}
-.dark footer{color:var(--char-500);}

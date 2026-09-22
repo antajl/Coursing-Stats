@@ -34,7 +34,7 @@ export default function ShowRankingColumns({ dogs, filterYear }: ShowRankingColu
 
   return (
     <div className="space-y-4">
-      <div className="grid min-w-0 grid-cols-1 gap-0 rounded-xl border border-old-money-200 dark:border-charcoal-600">
+      <div className="grid min-w-0 grid-cols-1 gap-0 rounded-xl border border-old-money-200">
         {visibleDogs.map((dog) => (
           <ShowDogCard key={dogListKey(dog)} dog={dog} rank={dog.rank} filterYear={filterYear} />
         ))}
@@ -43,7 +43,7 @@ export default function ShowRankingColumns({ dogs, filterYear }: ShowRankingColu
       {hasMore && (
         <div
           ref={loadMoreRef}
-          className="py-4 text-center text-sm text-charcoal-500 dark:text-charcoal-400"
+          className="py-4 text-center text-sm text-charcoal-500"
         >
           Загрузка…
         </div>

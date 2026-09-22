@@ -10,7 +10,7 @@ export function abbrExpansion(abbr: string): string | undefined {
   return ABBR_LOOKUP[abbr]
 }
 
-const ABBR_CLASS = 'font-mono text-xs font-bold text-camel-700 dark:text-camel-400'
+const ABBR_CLASS = 'font-mono text-xs font-bold text-camel-700'
 
 export function AbbrTag({
   abbr,
@@ -34,9 +34,9 @@ export function AbbrTag({
 
 export function SectionCard({ title, children }: { title: string; children: ReactNode }) {
   return (
-    <section className="rounded-xl border border-old-money-200 bg-white/80 p-4 dark:border-charcoal-600 dark:bg-charcoal-800/50 md:p-6">
-      <h2 className="mb-3 font-serif text-lg font-bold text-charcoal-900 dark:text-charcoal-100 md:text-xl">{title}</h2>
-      <div className="space-y-3 text-sm leading-relaxed text-charcoal-700 dark:text-charcoal-300">{children}</div>
+    <section className="rounded-xl border border-old-money-200 bg-white/80 p-4 md:p-6">
+      <h2 className="mb-3 font-serif text-lg font-bold text-charcoal-900 md:text-xl">{title}</h2>
+      <div className="space-y-3 text-sm leading-relaxed text-charcoal-700">{children}</div>
     </section>
   )
 }
@@ -47,7 +47,7 @@ export function ExternalHref({ href, children }: { href: string; children: React
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center gap-1 text-camel-700 underline decoration-camel-300 underline-offset-2 transition-colors hover:text-camel-800 dark:text-camel-400 dark:decoration-camel-700 dark:hover:text-camel-300"
+      className="inline-flex items-center gap-1 text-camel-700 underline decoration-camel-300 underline-offset-2 transition-colors hover:text-camel-800"
     >
       {children}
       <ExternalLink className="h-3.5 w-3.5 flex-shrink-0" aria-hidden />
@@ -65,13 +65,13 @@ export function TitleBadge({ title }: { title: string }) {
 
 export function RefTag({ children }: { children: ReactNode }) {
   return (
-    <span className="mt-1 block text-[11px] text-old-money-500 dark:text-old-money-400">{children}</span>
+    <span className="mt-1 block text-[11px] text-old-money-500">{children}</span>
   )
 }
 
 export function InfoCallout({ children }: { children: ReactNode }) {
   return (
-    <div className="rounded-lg border border-camel-200 bg-camel-50/80 px-3 py-2.5 text-sm text-camel-900 dark:border-camel-800 dark:bg-camel-950/30 dark:text-camel-200">
+    <div className="rounded-lg border border-camel-200 bg-camel-50/80 px-3 py-2.5 text-sm text-camel-900">
       {children}
     </div>
   )
@@ -92,12 +92,12 @@ export function OfficialSourcesList({ sources }: { sources: readonly OfficialSou
           key={src.href}
           className={`rounded-lg border px-3 py-2.5 ${
             src.supplementary
-              ? 'border-old-money-200 bg-old-money-50/50 dark:border-charcoal-600 dark:bg-charcoal-800/40'
-              : 'border-camel-200 bg-white dark:border-camel-900/50 dark:bg-charcoal-800/60'
+              ? 'border-old-money-200 bg-old-money-50/50'
+              : 'border-camel-200 bg-white'
           }`}
         >
           <ExternalHref href={src.href}>{src.label}</ExternalHref>
-          <p className="mt-1 text-xs text-old-money-600 dark:text-old-money-400">{src.note}</p>
+          <p className="mt-1 text-xs text-old-money-600">{src.note}</p>
         </li>
       ))}
     </ul>
@@ -123,25 +123,25 @@ export function TitleHierarchySection({
 }) {
   const tierClass = {
     prestige:
-      'rounded-lg border-2 border-camel-400 bg-camel-50 px-4 py-3 dark:border-camel-500 dark:bg-camel-950/30',
+      'rounded-lg border-2 border-camel-400 bg-camel-50 px-4 py-3',
     certificate:
-      'rounded-lg border border-old-money-400 bg-old-money-50 px-4 py-3 dark:border-charcoal-500 dark:bg-charcoal-800/80',
+      'rounded-lg border border-old-money-400 bg-old-money-50 px-4 py-3',
     diploma:
-      'rounded-lg border border-camel-300 bg-camel-50/70 px-4 py-3 dark:border-camel-800 dark:bg-camel-950/20',
+      'rounded-lg border border-camel-300 bg-camel-50/70 px-4 py-3',
     cumulative:
-      'rounded-lg border-2 border-camel-500 bg-cream-50 px-4 py-3 dark:border-camel-400 dark:bg-charcoal-800/60',
+      'rounded-lg border-2 border-camel-500 bg-cream-50 px-4 py-3',
   }
   const labelClass = {
-    prestige: 'text-[10px] font-semibold uppercase tracking-wide text-camel-800 dark:text-camel-300',
-    certificate: 'text-[10px] font-semibold uppercase tracking-wide text-old-money-600 dark:text-old-money-400',
-    diploma: 'text-[10px] font-semibold uppercase tracking-wide text-camel-700 dark:text-camel-400',
-    cumulative: 'text-[10px] font-semibold uppercase tracking-wide text-camel-800 dark:text-camel-300',
+    prestige: 'text-[10px] font-semibold uppercase tracking-wide text-camel-800',
+    certificate: 'text-[10px] font-semibold uppercase tracking-wide text-old-money-600',
+    diploma: 'text-[10px] font-semibold uppercase tracking-wide text-camel-700',
+    cumulative: 'text-[10px] font-semibold uppercase tracking-wide text-camel-800',
   }
   const wrapClass = {
     prestige: '',
-    certificate: 'ml-3 border-l-2 border-old-money-300 pl-4 dark:border-charcoal-600',
-    diploma: 'ml-6 border-l-2 border-camel-300 pl-4 dark:border-camel-700',
-    cumulative: 'ml-9 border-l-2 border-camel-400 pl-4 dark:border-camel-600',
+    certificate: 'ml-3 border-l-2 border-old-money-300 pl-4',
+    diploma: 'ml-6 border-l-2 border-camel-300 pl-4',
+    cumulative: 'ml-9 border-l-2 border-camel-400 pl-4',
   }
 
   return (
@@ -176,9 +176,9 @@ export function CertificateLevelsGrid({ items }: { items: readonly CertificateLe
       {items.map((item) => (
         <div
           key={item.code}
-          className="rounded-lg border border-old-money-200 bg-old-money-50/60 px-4 py-3 dark:border-charcoal-600 dark:bg-charcoal-800/50"
+          className="rounded-lg border border-old-money-200 bg-old-money-50/60 px-4 py-3"
         >
-          <div className="text-[10px] font-semibold uppercase tracking-wide text-old-money-500 dark:text-old-money-400">
+          <div className="text-[10px] font-semibold uppercase tracking-wide text-old-money-500">
             {item.level}
           </div>
           <div className="mt-2">
@@ -204,7 +204,7 @@ export function EventTitlesGrid({ items }: { items: readonly EventTitleItem[] })
       {items.map((item) => (
         <div
           key={item.abbr}
-          className="rounded-lg border border-old-money-200 bg-old-money-50/60 p-3 dark:border-charcoal-600 dark:bg-charcoal-800/50"
+          className="rounded-lg border border-old-money-200 bg-old-money-50/60 p-3"
         >
           <div className="flex flex-wrap items-center gap-2">
             <AbbrTag abbr={item.abbr} title={item.abbrTitle} />
@@ -230,9 +230,9 @@ export function CumulativeTitlesGrid({ items }: { items: readonly CumulativeTitl
   return (
     <div className="grid gap-3 md:grid-cols-2">
       {items.map((item) => (
-        <div key={item.abbr} className="rounded-lg border border-old-money-200 p-3 dark:border-charcoal-600">
+        <div key={item.abbr} className="rounded-lg border border-old-money-200 p-3">
           <AbbrTag abbr={item.abbr} title={item.abbrTitle} />
-          <p className="mt-1 font-medium text-charcoal-800 dark:text-charcoal-200">{item.title}</p>
+          <p className="mt-1 font-medium text-charcoal-800">{item.title}</p>
           <p className="mt-1 text-xs">{item.summary}</p>
           <RefTag>{item.ref}</RefTag>
         </div>
@@ -256,13 +256,13 @@ export function AbbreviationsTable({
     <>
       <div className="overflow-x-auto">
         <table className="w-full min-w-[280px] text-sm">
-          <tbody className="divide-y divide-old-money-100 dark:divide-charcoal-700">
+          <tbody className="divide-y divide-old-money-100">
             {rows.map((row) => (
               <tr key={row.abbr}>
                 <td className="py-2 pr-4 whitespace-nowrap">
                   <AbbrTag abbr={row.abbr} title={abbrLookup?.[row.abbr] ?? row.full} />
                 </td>
-                <td className="py-2 text-charcoal-700 dark:text-charcoal-300">{row.full}</td>
+                <td className="py-2 text-charcoal-700">{row.full}</td>
               </tr>
             ))}
           </tbody>
@@ -281,17 +281,17 @@ export function PriorityAwardsList({ items }: { items: readonly PriorityAward[] 
       {items.map((item) => (
         <li
           key={item.abbr}
-          className="flex gap-3 rounded-lg border border-old-money-200 bg-old-money-50/40 px-3 py-2.5 dark:border-charcoal-600 dark:bg-charcoal-800/40"
+          className="flex gap-3 rounded-lg border border-old-money-200 bg-old-money-50/40 px-3 py-2.5"
         >
-          <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-camel-100 text-xs font-bold text-camel-800 dark:bg-charcoal-700 dark:text-camel-300">
+          <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-camel-100 text-xs font-bold text-camel-800">
             {item.rank}
           </span>
           <div className="min-w-0">
             <div className="flex flex-wrap items-center gap-2">
               <AbbrTag abbr={item.abbr} title={item.abbrTitle} />
-              <span className="text-sm font-semibold text-charcoal-800 dark:text-charcoal-100">{item.title}</span>
+              <span className="text-sm font-semibold text-charcoal-800">{item.title}</span>
             </div>
-            <p className="mt-0.5 text-xs text-charcoal-600 dark:text-charcoal-400">{item.note}</p>
+            <p className="mt-0.5 text-xs text-charcoal-600">{item.note}</p>
           </div>
         </li>
       ))}
@@ -307,7 +307,7 @@ export function FeatureNotesGrid({ items }: { items: readonly FeatureItem[] }) {
       {items.map((item) => (
         <div
           key={item.label}
-          className="rounded-lg border border-old-money-200 bg-old-money-50/50 px-3 py-2.5 dark:border-charcoal-600 dark:bg-charcoal-800/40"
+          className="rounded-lg border border-old-money-200 bg-old-money-50/50 px-3 py-2.5"
         >
           <div className="text-xs font-semibold uppercase tracking-wide text-old-money-500">{item.label}</div>
           <p className="mt-1">{item.text}</p>

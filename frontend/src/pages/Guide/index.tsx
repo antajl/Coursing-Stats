@@ -68,7 +68,7 @@ export default function Guide() {
         canonicalUrl={`https://coursing-stats.ru/guide?tab=${activeTab}`}
       />
       <JsonLd data={faqPageSchema(GUIDE_FAQS)} />
-      <div className="rounded-2xl border border-cream-300 bg-cream-50/90 px-4 py-3 shadow-xl backdrop-blur-lg dark:border-charcoal-700 dark:bg-charcoal-800/90 md:px-6 md:py-4">
+      <div className="rounded-2xl border border-cream-300 bg-cream-50/90 px-4 py-3 shadow-xl backdrop-blur-lg md:px-6 md:py-4">
         {activeTab === 'titles' && <TitlesTab />}
         {activeTab === 'shows' && <ShowsTab />}
         {activeTab === 'protocol' && <ProtocolTab />}

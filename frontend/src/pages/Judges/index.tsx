@@ -233,7 +233,7 @@ export default function Judges() {
       </div>
 
       {sortedJudges.length === 0 ? (
-        <div className="overflow-hidden rounded-xl border border-old-money-200 bg-white dark:border-charcoal-600 dark:bg-charcoal-800">
+        <div className="overflow-hidden rounded-xl border border-old-money-200 bg-white">
           <EmptyState title="Судьи не найдены" description="Попробуйте изменить фильтры" />
         </div>
       ) : (

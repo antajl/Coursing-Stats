@@ -29,26 +29,24 @@ export const AWARD_CATEGORY_LABEL: Record<AwardCategory, string> = {
 
 /**
  * Стили чипа по категории (единый язык выставки / соревнования / справка).
- * Только оттенки из tailwind.config (camel 100–700, без 800/900/950) —
- * иначе dark:bg-* не генерируется и light-фон + light-текст дают нечитаемые чипы
- * на footer `dark:bg-charcoal-700` (ShowDogCard / DogCard).
+ * Только оттенки из tailwind.config (camel 100–700, без 800/900/950).
  */
 export const AWARD_CATEGORY_BADGE_CLASS: Record<AwardCategory, string> = {
   prestige:
-    'border border-camel-400 dark:border-camel-500 bg-camel-100 dark:bg-camel-700/40 text-camel-700 dark:text-camel-200',
+    'border border-camel-400 bg-camel-100 text-camel-700',
   certificate:
-    'border border-old-money-400 dark:border-charcoal-500 bg-old-money-100 dark:bg-charcoal-600 text-old-money-900 dark:text-charcoal-100',
+    'border border-old-money-400 bg-old-money-100 text-old-money-900',
   diploma:
-    'border border-camel-300/80 dark:border-camel-600 bg-cream-50 dark:bg-charcoal-600/90 text-camel-700 dark:text-camel-300',
+    'border border-camel-300/80 bg-cream-50 text-camel-700',
   cumulative:
-    'border-2 border-camel-500 dark:border-camel-400 bg-cream-50 dark:bg-charcoal-800 text-camel-700 dark:text-camel-200',
+    'border-2 border-camel-500 bg-cream-50 text-camel-700',
   other:
-    'border border-old-money-200 dark:border-charcoal-600 bg-cream-50 dark:bg-charcoal-800 text-charcoal-500 dark:text-charcoal-300',
+    'border border-old-money-200 bg-cream-50 text-charcoal-500',
 }
 
 /** Акцент для верхнего тира prestige (BIS). */
 const PRESTIGE_TOP_CLASS =
-  'border-2 border-camel-400 dark:border-camel-500 bg-camel-100 dark:bg-camel-700/40 text-camel-700 dark:text-camel-200'
+  'border-2 border-camel-400 bg-camel-100 text-camel-700'
 
 export function showAwardCategory(key: ShowAwardKey): ShowAwardCategory {
   return SHOW_AWARD_CATEGORY[key]

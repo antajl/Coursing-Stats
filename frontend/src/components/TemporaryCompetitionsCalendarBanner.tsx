@@ -43,7 +43,7 @@ export default function TemporaryCompetitionsCalendarBanner() {
   return (
     <div
       role="status"
-      className="border-b border-camel-300/80 bg-camel-100/95 text-charcoal-800 dark:border-camel-700/60 dark:bg-charcoal-800 dark:text-charcoal-100"
+      className="border-b border-camel-300/80 bg-camel-100/95 text-charcoal-800"
     >
       <div className="mx-auto flex max-w-7xl items-start gap-3 px-3 py-2.5 sm:items-center sm:px-4 md:px-6 lg:px-8">
         <p className="min-w-0 flex-1 text-sm leading-snug">
@@ -52,7 +52,7 @@ export default function TemporaryCompetitionsCalendarBanner() {
             href="http://procoursing.ru/"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-semibold text-camel-800 underline decoration-camel-500/50 underline-offset-2 hover:text-camel-700 dark:text-camel-300 dark:hover:text-camel-200"
+            className="font-semibold text-camel-800 underline decoration-camel-500/50 underline-offset-2 hover:text-camel-700"
           >
             procoursing.ru
           </a>{' '}
@@ -61,7 +61,7 @@ export default function TemporaryCompetitionsCalendarBanner() {
         <button
           type="button"
           onClick={dismiss}
-          className="inline-flex min-h-[44px] min-w-[44px] h-8 w-8 shrink-0 items-center justify-center rounded-lg text-charcoal-600 transition-colors hover:bg-camel-200/80 hover:text-charcoal-900 dark:text-charcoal-300 dark:hover:bg-charcoal-700 dark:hover:text-charcoal-50"
+          className="inline-flex min-h-[44px] min-w-[44px] h-8 w-8 shrink-0 items-center justify-center rounded-lg text-charcoal-600 transition-colors hover:bg-camel-200/80 hover:text-charcoal-900"
           aria-label="Закрыть предупреждение"
         >
           <Icons.close className="h-4 w-4" strokeWidth={2} aria-hidden />

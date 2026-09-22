@@ -30,45 +30,45 @@ import { BreedTitleRowView, ExhibitionDogNameLink } from './ExhibitionDogNameLin
 function ClassResultsTable({ classes }: { classes: ClassResultGroup[] }) {
   return (
     <div className="min-w-0 w-full">
-      <table className="w-full table-fixed divide-y divide-old-money-200 text-sm dark:divide-charcoal-600">
+      <table className="w-full table-fixed divide-y divide-old-money-200 text-sm">
         <thead>
-          <tr className="border-b border-old-money-200 dark:border-charcoal-600">
-            <th className="w-[6.5rem] px-2 py-2 text-left text-xs font-bold uppercase tracking-wide text-charcoal-700 dark:text-charcoal-200">
+          <tr className="border-b border-old-money-200">
+            <th className="w-[6.5rem] px-2 py-2 text-left text-xs font-bold uppercase tracking-wide text-charcoal-700">
               Класс
             </th>
-            <th className="min-w-0 px-2.5 py-2 text-left text-xs font-bold uppercase tracking-wide text-charcoal-700 dark:text-charcoal-200">
+            <th className="min-w-0 px-2.5 py-2 text-left text-xs font-bold uppercase tracking-wide text-charcoal-700">
               Собака
             </th>
-            <th className="w-[4.75rem] px-1.5 py-2 text-left text-xs font-bold uppercase tracking-wide text-charcoal-700 dark:text-charcoal-200">
+            <th className="w-[4.75rem] px-1.5 py-2 text-left text-xs font-bold uppercase tracking-wide text-charcoal-700">
               Оценка
             </th>
-            <th className="w-[9rem] px-2 py-2 text-left text-xs font-bold uppercase tracking-wide text-charcoal-700 dark:text-charcoal-200">
+            <th className="w-[9rem] px-2 py-2 text-left text-xs font-bold uppercase tracking-wide text-charcoal-700">
               Награды
             </th>
           </tr>
         </thead>
-        <tbody className="divide-y divide-old-money-100 dark:divide-charcoal-700">
+        <tbody className="divide-y divide-old-money-100">
           {classes.map((group) =>
             group.rows.map((row, idx) => (
               <tr
                 key={`${group.className}-${row.dog_name}-${idx}`}
-                className="transition-colors hover:bg-old-money-50/80 dark:hover:bg-charcoal-700/40"
+                className="transition-colors hover:bg-old-money-50/80"
               >
                 {idx === 0 && (
                   <td
                     rowSpan={group.rows.length}
-                    className="min-w-0 overflow-hidden align-top border-r border-old-money-100 bg-cream-100/60 px-2 py-2.5 text-xs font-semibold leading-snug text-charcoal-800 dark:border-charcoal-700 dark:bg-charcoal-800/40 dark:text-charcoal-100"
+                    className="min-w-0 overflow-hidden align-top border-r border-old-money-100 bg-cream-100/60 px-2 py-2.5 text-xs font-semibold leading-snug text-charcoal-800"
                   >
                     <span className="block break-words">{localizeShowClass(group.className)}</span>
                   </td>
                 )}
-                <td className="min-w-0 overflow-hidden px-2.5 py-2.5 font-medium text-charcoal-900 dark:text-charcoal-100">
+                <td className="min-w-0 overflow-hidden px-2.5 py-2.5 font-medium text-charcoal-900">
                   <ExhibitionDogNameLink dogName={row.dog_name} breed={row.breed} />
                 </td>
                 <td className="px-1.5 py-2.5">
                   <ShowGradeChip grade={row.grade} />
                 </td>
-                <td className="min-w-0 overflow-hidden px-2 py-2.5 text-xs font-medium text-camel-800 dark:text-camel-300">
+                <td className="min-w-0 overflow-hidden px-2 py-2.5 text-xs font-medium text-camel-800">
                   <TitleChips title={row.title} />
                 </td>
               </tr>
@@ -96,15 +96,15 @@ export function BreedResultsPanel({
 
   if (results.length === 0 && !(titleRows?.length)) {
     return (
-      <p className="px-2 py-3 text-sm text-old-money-500 dark:text-old-money-400">Нет результатов по этой породе</p>
+      <p className="px-2 py-3 text-sm text-old-money-500">Нет результатов по этой породе</p>
     )
   }
 
   return (
-    <div className="space-y-4 border-t border-old-money-200 px-2 pb-3 pt-3 dark:border-charcoal-600">
+    <div className="space-y-4 border-t border-old-money-200 px-2 pb-3 pt-3">
       {((titleRows && titleRows.length > 0) || (!hasCatalogTitles && fallbackHighlights.length > 0)) && (
         <section>
-          <h4 className="mb-2 text-xs font-semibold uppercase tracking-wide text-old-money-600 dark:text-old-money-400">
+          <h4 className="mb-2 text-xs font-semibold uppercase tracking-wide text-old-money-600">
             Титулы
           </h4>
           <ul className="space-y-1.5">
@@ -119,14 +119,14 @@ export function BreedResultsPanel({
               : fallbackHighlights.map((row, idx) => (
                   <li
                     key={`${row.dog_name}-${idx}`}
-                    className="rounded-md bg-camel-50/80 px-2.5 py-2 text-sm dark:bg-camel-900/20"
+                    className="rounded-md bg-camel-50/80 px-2.5 py-2 text-sm"
                   >
                     <TitleChips title={row.title} />
-                    <div className="mt-1 font-semibold text-charcoal-800 dark:text-charcoal-100">
+                    <div className="mt-1 font-semibold text-charcoal-800">
                       <ExhibitionDogNameLink dogName={row.dog_name} breed={row.breed || breed} />
                     </div>
                     {row.owner ? (
-                      <div className="mt-0.5 text-xs text-charcoal-500 dark:text-charcoal-400">
+                      <div className="mt-0.5 text-xs text-charcoal-500">
                         Судья: {row.owner}
                       </div>
                     ) : null}
@@ -138,7 +138,7 @@ export function BreedResultsPanel({
 
       {sexSections.map((section) => (
         <section key={section.label}>
-          <h4 className="mb-3 border-b border-old-money-200 pb-1.5 font-serif text-base font-bold text-charcoal-900 dark:border-charcoal-600 dark:text-charcoal-100">
+          <h4 className="mb-3 border-b border-old-money-200 pb-1.5 font-serif text-base font-bold text-charcoal-900">
             {section.label}
           </h4>
           <ClassResultsTable classes={section.classes} />
@@ -159,7 +159,7 @@ export function ExhibitionAwardFilter({
 }) {
   if (awards.length === 0) {
     return (
-      <p className="text-xs text-old-money-500 dark:text-old-money-400">Нет наград в протоколе</p>
+      <p className="text-xs text-old-money-500">Нет наград в протоколе</p>
     )
   }
 
@@ -169,7 +169,7 @@ export function ExhibitionAwardFilter({
 
   return (
     <div>
-      <div className="mb-2 text-[10px] font-semibold uppercase tracking-wide text-old-money-500 dark:text-old-money-400">
+      <div className="mb-2 text-[10px] font-semibold uppercase tracking-wide text-old-money-500">
         Награда
       </div>
       <div className="flex flex-wrap gap-1.5">
@@ -234,26 +234,26 @@ function BreedAccordionItem({
 
   return (
     <details
-      className="group/breed rounded-lg border border-old-money-200 bg-white/70 dark:border-charcoal-600 dark:bg-charcoal-800/40"
+      className="group/breed rounded-lg border border-old-money-200 bg-white/70"
       open={forceOpen || open}
       onToggle={(e) => setOpen((e.currentTarget as HTMLDetailsElement).open)}
     >
       <summary className="flex cursor-pointer list-none items-center gap-2 px-3 py-2.5 marker:content-none [&::-webkit-details-marker]:hidden">
         <ChevronRight
-          className="h-4 w-4 shrink-0 text-old-money-500 transition-transform group-open/breed:rotate-90 dark:text-old-money-400"
+          className="h-4 w-4 shrink-0 text-old-money-500 transition-transform group-open/breed:rotate-90"
           aria-hidden
         />
         <div className="min-w-0 flex-1">
-          <div className="font-semibold text-charcoal-900 dark:text-charcoal-100">{catalog.breed}</div>
+          <div className="font-semibold text-charcoal-900">{catalog.breed}</div>
           {catalog.breed_judge && (
-            <div className="mt-0.5 flex items-center gap-1 text-xs text-charcoal-600 dark:text-charcoal-400">
+            <div className="mt-0.5 flex items-center gap-1 text-xs text-charcoal-600">
               <UserRound className="h-3 w-3 shrink-0" aria-hidden />
               <span>{catalog.breed_judge}</span>
             </div>
           )}
         </div>
         {countLabel && (
-          <span className="shrink-0 rounded-md bg-cream-100 px-2 py-0.5 text-xs font-medium text-charcoal-600 dark:bg-charcoal-700 dark:text-charcoal-300">
+          <span className="shrink-0 rounded-md bg-cream-100 px-2 py-0.5 text-xs font-medium text-charcoal-600">
             {countLabel}
           </span>
         )}
@@ -295,7 +295,7 @@ export function CatalogResultsSection({
 
   if (filteredCatalog.length === 0) {
     return (
-      <p className="rounded-xl border border-old-money-200 bg-cream-50 px-4 py-6 text-center text-sm text-old-money-500 dark:border-charcoal-600 dark:bg-charcoal-800/40 dark:text-old-money-400">
+      <p className="rounded-xl border border-old-money-200 bg-cream-50 px-4 py-6 text-center text-sm text-old-money-500">
         Ничего не найдено по заданным фильтрам
       </p>
     )
@@ -326,22 +326,22 @@ export function CatalogResultsSection({
       {[...groupMap.entries()].map(([groupName, breeds]) => (
         <details
           key={groupName}
-          className="group/fci rounded-xl border border-old-money-200 bg-cream-50/80 dark:border-charcoal-600 dark:bg-charcoal-800/40"
+          className="group/fci rounded-xl border border-old-money-200 bg-cream-50/80"
           open={forceOpen || undefined}
         >
           <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 marker:content-none [&::-webkit-details-marker]:hidden">
             <ChevronRight
-              className="h-5 w-5 shrink-0 text-camel-600 transition-transform group-open/fci:rotate-90 dark:text-camel-400"
+              className="h-5 w-5 shrink-0 text-camel-600 transition-transform group-open/fci:rotate-90"
               aria-hidden
             />
-            <h2 className="min-w-0 flex-1 font-serif text-base font-bold leading-snug text-charcoal-900 dark:text-charcoal-100 md:text-lg">
+            <h2 className="min-w-0 flex-1 font-serif text-base font-bold leading-snug text-charcoal-900 md:text-lg">
               {groupName}
             </h2>
-            <span className="shrink-0 text-xs font-medium text-old-money-600 dark:text-old-money-400">
+            <span className="shrink-0 text-xs font-medium text-old-money-600">
               {breeds.length} пород
             </span>
           </summary>
-          <div className="space-y-2 border-t border-old-money-200 px-3 pb-3 pt-2 dark:border-charcoal-600">
+          <div className="space-y-2 border-t border-old-money-200 px-3 pb-3 pt-2">
             {breedList(breeds)}
           </div>
         </details>

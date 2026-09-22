@@ -16,7 +16,7 @@ export default function DogStatsTable({ data, type = 'placement', filterYear }) 
   const [sortConfig, setSortConfig] = useState({ key: null, direction: 'asc' })
 
   if (!data || data.length === 0) {
-    return <div className="text-center py-12 text-old-money-600 dark:text-old-money-400">Нет данных</div>;
+    return <div className="text-center py-12 text-old-money-600">Нет данных</div>;
   }
 
   const handleSort = (key) => {
@@ -79,27 +79,27 @@ export default function DogStatsTable({ data, type = 'placement', filterYear }) 
 
   return (
     <>
-      <div className="overflow-hidden rounded-2xl border-2 border-old-money-200 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 shadow-md">
+      <div className="overflow-hidden rounded-2xl border-2 border-old-money-200 bg-white shadow-md">
         {/* Mobile cards */}
         <div className="md:hidden space-y-3 p-3">
           {pageData.map((dog, index) => (
-            <div key={dog.dog_id} className="rounded-xl border border-old-money-200 dark:border-charcoal-600 bg-cream-50 dark:bg-charcoal-700 p-4 transition-colors hover:bg-cream-100 dark:hover:bg-charcoal-600">
+            <div key={dog.dog_id} className="rounded-xl border border-old-money-200 bg-cream-50 p-4 transition-colors hover:bg-cream-100">
               <div className="flex justify-between items-start mb-3">
                 <div className="flex-1">
-                  <div className="text-xs text-old-money-500 dark:text-old-money-400 mb-1">#{page * PAGE_SIZE + index + 1}</div>
+                  <div className="text-xs text-old-money-500 mb-1">#{page * PAGE_SIZE + index + 1}</div>
                   <button
                     onClick={(e) => handleClick(e, dog.dog_id)}
-                    className="text-left transition-colors hover:text-camel-800 dark:hover:text-camel-300"
+                    className="text-left transition-colors hover:text-camel-800"
                   >
                     <DogNameLines
                       name_lat={dog.name_lat}
                       name_ru={dog.name_ru}
-                      primaryClassName="text-base font-bold text-camel-700 dark:text-camel-400"
+                      primaryClassName="text-base font-bold text-camel-700"
                     />
                   </button>
-                  <div className="text-xs text-old-money-600 dark:text-old-money-400 mt-1">{dog.breed}</div>
+                  <div className="text-xs text-old-money-600 mt-1">{dog.breed}</div>
                   {filterYear && (
-                    <div className="text-xs text-old-money-500 dark:text-old-money-400 mt-1">Год: {getRowYear(dog)}</div>
+                    <div className="text-xs text-old-money-500 mt-1">Год: {getRowYear(dog)}</div>
                   )}
                 </div>
               </div>
@@ -114,53 +114,53 @@ export default function DogStatsTable({ data, type = 'placement', filterYear }) 
                   <div className="flex justify-center" title="3-е место">
                     <MedalIcon variant="bronze" size="sm" />
                   </div>
-                  <div className="text-center text-old-money-500 dark:text-old-money-400">Участий</div>
+                  <div className="text-center text-old-money-500">Участий</div>
                 </div>
               )}
               <div className="grid grid-cols-4 gap-2 text-xs">
                 {type === 'placement' ? (
                   <>
-                    <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center">
-                      <div className="font-bold tabular-nums text-old-money-800 dark:text-old-money-200">{dog.gold}</div>
+                    <div className="bg-white rounded-lg p-2 text-center">
+                      <div className="font-bold tabular-nums text-old-money-800">{dog.gold}</div>
                     </div>
-                    <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center">
-                      <div className="font-bold tabular-nums text-old-money-800 dark:text-old-money-200">{dog.silver}</div>
+                    <div className="bg-white rounded-lg p-2 text-center">
+                      <div className="font-bold tabular-nums text-old-money-800">{dog.silver}</div>
                     </div>
-                    <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center">
-                      <div className="font-bold tabular-nums text-old-money-800 dark:text-old-money-200">{dog.bronze}</div>
+                    <div className="bg-white rounded-lg p-2 text-center">
+                      <div className="font-bold tabular-nums text-old-money-800">{dog.bronze}</div>
                     </div>
-                    <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center">
-                      <div className="font-bold tabular-nums text-old-money-800 dark:text-old-money-200">{dog.total_starts}</div>
+                    <div className="bg-white rounded-lg p-2 text-center">
+                      <div className="font-bold tabular-nums text-old-money-800">{dog.total_starts}</div>
                     </div>
                   </>
                 ) : type === 'speed' ? (
                   <>
-                    <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center col-span-2">
-                      <div className="text-old-money-500 dark:text-old-money-400">Лучшая</div>
-                      <div className="font-bold text-old-money-800 dark:text-old-money-200">{dog.best_speed ? `${dog.best_speed} км/ч` : '-'}</div>
+                    <div className="bg-white rounded-lg p-2 text-center col-span-2">
+                      <div className="text-old-money-500 text-old-money-400">Лучшая</div>
+                      <div className="font-bold text-old-money-800">{dog.best_speed ? `${dog.best_speed} км/ч` : '-'}</div>
                     </div>
-                    <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center col-span-2">
-                      <div className="text-old-money-500 dark:text-old-money-400">Средняя</div>
-                      <div className="font-bold text-old-money-800 dark:text-old-money-200">{dog.avg_speed ? `${dog.avg_speed} км/ч` : '-'}</div>
+                    <div className="bg-white rounded-lg p-2 text-center col-span-2">
+                      <div className="text-old-money-500 text-old-money-400">Средняя</div>
+                      <div className="font-bold text-old-money-800">{dog.avg_speed ? `${dog.avg_speed} км/ч` : '-'}</div>
                     </div>
-                    <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center col-span-4">
-                      <div className="text-old-money-500 dark:text-old-money-400">Участий</div>
-                      <div className="font-bold text-old-money-800 dark:text-old-money-200">{dog.total_starts}</div>
+                    <div className="bg-white rounded-lg p-2 text-center col-span-4">
+                      <div className="text-old-money-500 text-old-money-400">Участий</div>
+                      <div className="font-bold text-old-money-800">{dog.total_starts}</div>
                     </div>
                   </>
                 ) : (
                   <>
-                    <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center col-span-2">
-                      <div className="text-old-money-500 dark:text-old-money-400">Лучший</div>
-                      <div className="font-bold text-old-money-800 dark:text-old-money-200">{dog.best_score ? parseFloat(dog.best_score).toFixed(2).replace(/\.00$/, '') : '-'}</div>
+                    <div className="bg-white rounded-lg p-2 text-center col-span-2">
+                      <div className="text-old-money-500 text-old-money-400">Лучший</div>
+                      <div className="font-bold text-old-money-800">{dog.best_score ? parseFloat(dog.best_score).toFixed(2).replace(/\.00$/, '') : '-'}</div>
                     </div>
-                    <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center col-span-2">
-                      <div className="text-old-money-500 dark:text-old-money-400">Средний</div>
-                      <div className="font-bold text-old-money-800 dark:text-old-money-200">{dog.avg_score ? parseFloat(dog.avg_score).toFixed(2).replace(/\.00$/, '') : '-'}</div>
+                    <div className="bg-white rounded-lg p-2 text-center col-span-2">
+                      <div className="text-old-money-500 text-old-money-400">Средний</div>
+                      <div className="font-bold text-old-money-800">{dog.avg_score ? parseFloat(dog.avg_score).toFixed(2).replace(/\.00$/, '') : '-'}</div>
                     </div>
-                    <div className="bg-white dark:bg-charcoal-700 rounded-lg p-2 text-center col-span-4">
-                      <div className="text-old-money-500 dark:text-old-money-400">Участий</div>
-                      <div className="font-bold text-old-money-800 dark:text-old-money-200">{dog.total_starts}</div>
+                    <div className="bg-white rounded-lg p-2 text-center col-span-4">
+                      <div className="text-old-money-500 text-old-money-400">Участий</div>
+                      <div className="font-bold text-old-money-800">{dog.total_starts}</div>
                     </div>
                   </>
                 )}
@@ -172,30 +172,30 @@ export default function DogStatsTable({ data, type = 'placement', filterYear }) 
         {/* Desktop table */}
         <div className="hidden md:block overflow-x-auto">
           <table className="w-full min-w-[800px]">
-          <thead className="bg-cream-100 dark:bg-charcoal-700">
+          <thead className="bg-cream-100">
             <tr>
               <th 
-                className="px-6 py-4 text-left text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 cursor-pointer hover:bg-cream-200 dark:hover:bg-charcoal-600"
+                className="px-6 py-4 text-left text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 cursor-pointer hover:bg-cream-200"
                 onClick={() => handleSort('rank')}
               >
                 # {sortConfig.key === 'rank' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
               </th>
               {filterYear && (
                 <th 
-                  className="px-6 py-4 text-left text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 cursor-pointer hover:bg-cream-200 dark:hover:bg-charcoal-600"
+                  className="px-6 py-4 text-left text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 cursor-pointer hover:bg-cream-200"
                   onClick={() => handleSort('year')}
                 >
                   Год {sortConfig.key === 'year' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
                 </th>
               )}
               <th 
-                className="px-6 py-4 text-left text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 cursor-pointer hover:bg-cream-200 dark:hover:bg-charcoal-600"
+                className="px-6 py-4 text-left text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 cursor-pointer hover:bg-cream-200"
                 onClick={() => handleSort('name')}
               >
                 Собака {sortConfig.key === 'name' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
               </th>
               <th 
-                className="px-6 py-4 text-left text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 cursor-pointer hover:bg-cream-200 dark:hover:bg-charcoal-600"
+                className="px-6 py-4 text-left text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 cursor-pointer hover:bg-cream-200"
                 onClick={() => handleSort('breed')}
               >
                 Порода {sortConfig.key === 'breed' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
@@ -203,7 +203,7 @@ export default function DogStatsTable({ data, type = 'placement', filterYear }) 
               {type === 'placement' ? (
                 <>
                   <th 
-                    className="px-6 py-4 text-center text-xs font-bold text-charcoal-700 dark:text-charcoal-200 cursor-pointer hover:bg-cream-200 dark:hover:bg-charcoal-600"
+                    className="px-6 py-4 text-center text-xs font-bold text-charcoal-700 cursor-pointer hover:bg-cream-200"
                     onClick={() => handleSort('gold')}
                     title="1-е место"
                     aria-label="1-е место"
@@ -214,7 +214,7 @@ export default function DogStatsTable({ data, type = 'placement', filterYear }) 
                     </span>
                   </th>
                   <th 
-                    className="px-6 py-4 text-center text-xs font-bold text-charcoal-700 dark:text-charcoal-200 cursor-pointer hover:bg-cream-200 dark:hover:bg-charcoal-600"
+                    className="px-6 py-4 text-center text-xs font-bold text-charcoal-700 cursor-pointer hover:bg-cream-200"
                     onClick={() => handleSort('silver')}
                     title="2-е место"
                     aria-label="2-е место"
@@ -225,7 +225,7 @@ export default function DogStatsTable({ data, type = 'placement', filterYear }) 
                     </span>
                   </th>
                   <th 
-                    className="px-6 py-4 text-center text-xs font-bold text-charcoal-700 dark:text-charcoal-200 cursor-pointer hover:bg-cream-200 dark:hover:bg-charcoal-600"
+                    className="px-6 py-4 text-center text-xs font-bold text-charcoal-700 cursor-pointer hover:bg-cream-200"
                     onClick={() => handleSort('bronze')}
                     title="3-е место"
                     aria-label="3-е место"
@@ -239,13 +239,13 @@ export default function DogStatsTable({ data, type = 'placement', filterYear }) 
               ) : type === 'speed' ? (
                 <>
                   <th 
-                    className="px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 cursor-pointer hover:bg-cream-200 dark:hover:bg-charcoal-600"
+                    className="px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 cursor-pointer hover:bg-cream-200"
                     onClick={() => handleSort('best_speed')}
                   >
                     Лучшая скорость {sortConfig.key === 'best_speed' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
                   </th>
                   <th 
-                    className="px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 cursor-pointer hover:bg-cream-200 dark:hover:bg-charcoal-600"
+                    className="px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 cursor-pointer hover:bg-cream-200"
                     onClick={() => handleSort('avg_speed')}
                   >
                     Средняя скорость {sortConfig.key === 'avg_speed' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
@@ -254,13 +254,13 @@ export default function DogStatsTable({ data, type = 'placement', filterYear }) 
               ) : (
                 <>
                   <th 
-                    className="px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 cursor-pointer hover:bg-cream-200 dark:hover:bg-charcoal-600"
+                    className="px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 cursor-pointer hover:bg-cream-200"
                     onClick={() => handleSort('best_score')}
                   >
                     Лучший {sortConfig.key === 'best_score' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
                   </th>
                   <th 
-                    className="px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 cursor-pointer hover:bg-cream-200 dark:hover:bg-charcoal-600"
+                    className="px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 cursor-pointer hover:bg-cream-200"
                     onClick={() => handleSort('avg_score')}
                   >
                     Средний {sortConfig.key === 'avg_score' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
@@ -268,27 +268,27 @@ export default function DogStatsTable({ data, type = 'placement', filterYear }) 
                 </>
               )}
               <th 
-                className="px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 dark:text-charcoal-200 cursor-pointer hover:bg-cream-200 dark:hover:bg-charcoal-600"
+                className="px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-charcoal-700 cursor-pointer hover:bg-cream-200"
                 onClick={() => handleSort('total_starts')}
               >
                 Участий {sortConfig.key === 'total_starts' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
               </th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-old-money-200 dark:divide-charcoal-600">
+          <tbody className="divide-y divide-old-money-200">
             {pageData.map((dog, index) => (
-              <tr key={dog.dog_id} className="transition-colors hover:bg-cream-50 dark:hover:bg-charcoal-700">
-                <td className="px-6 py-4 text-sm text-old-money-800 dark:text-old-money-300 font-bold">
+              <tr key={dog.dog_id} className="transition-colors hover:bg-cream-50">
+                <td className="px-6 py-4 text-sm text-old-money-800 font-bold">
                   {page * PAGE_SIZE + index + 1}
                 </td>
                 {filterYear && (
-                  <td className="px-6 py-4 text-sm text-old-money-800 dark:text-old-money-300">
+                  <td className="px-6 py-4 text-sm text-old-money-800">
                     {getRowYear(dog)}
                   </td>
                 )}
-                <td className="px-6 py-4 text-sm text-old-money-800 dark:text-old-money-300">
+                <td className="px-6 py-4 text-sm text-old-money-800">
                   <span 
-                    className="cursor-pointer transition-colors hover:text-camel-800 dark:hover:text-camel-300"
+                    className="cursor-pointer transition-colors hover:text-camel-800"
                     onMouseEnter={(e) => handleMouseEnter(e, dog.dog_id)}
                     onMouseLeave={handleMouseLeave}
                     onClick={(e) => handleClick(e, dog.dog_id)}
@@ -296,45 +296,45 @@ export default function DogStatsTable({ data, type = 'placement', filterYear }) 
                     <DogNameLines
                       name_lat={dog.name_lat}
                       name_ru={dog.name_ru}
-                      primaryClassName="font-medium text-camel-700 dark:text-camel-400"
+                      primaryClassName="font-medium text-camel-700"
                     />
                   </span>
                 </td>
-                <td className="px-6 py-4 text-sm text-old-money-800 dark:text-old-money-300">
+                <td className="px-6 py-4 text-sm text-old-money-800">
                   {dog.breed}
                 </td>
                 {type === 'placement' ? (
                   <>
-                    <td className="px-6 py-4 text-center text-sm font-semibold tabular-nums text-charcoal-800 dark:text-charcoal-100">
+                    <td className="px-6 py-4 text-center text-sm font-semibold tabular-nums text-charcoal-800">
                       {dog.gold}
                     </td>
-                    <td className="px-6 py-4 text-center text-sm font-semibold tabular-nums text-charcoal-800 dark:text-charcoal-100">
+                    <td className="px-6 py-4 text-center text-sm font-semibold tabular-nums text-charcoal-800">
                       {dog.silver}
                     </td>
-                    <td className="px-6 py-4 text-center text-sm font-semibold tabular-nums text-charcoal-800 dark:text-charcoal-100">
+                    <td className="px-6 py-4 text-center text-sm font-semibold tabular-nums text-charcoal-800">
                       {dog.bronze}
                     </td>
                   </>
                 ) : type === 'speed' ? (
                   <>
-                    <td className="px-6 py-4 text-center text-sm text-old-money-800 dark:text-old-money-200 font-bold">
+                    <td className="px-6 py-4 text-center text-sm text-old-money-800 font-bold">
                       {dog.best_speed ? `${dog.best_speed} км/ч` : '-'}
                     </td>
-                    <td className="px-6 py-4 text-center text-sm text-old-money-800 dark:text-old-money-200">
+                    <td className="px-6 py-4 text-center text-sm text-old-money-800">
                       {dog.avg_speed ? `${dog.avg_speed} км/ч` : '-'}
                     </td>
                   </>
                 ) : (
                   <>
-                    <td className="px-6 py-4 text-center text-sm text-old-money-800 dark:text-old-money-200 font-bold">
+                    <td className="px-6 py-4 text-center text-sm text-old-money-800 font-bold">
                       {dog.best_score ? parseFloat(dog.best_score).toFixed(2).replace(/\.00$/, '') : '-'}
                     </td>
-                    <td className="px-6 py-4 text-center text-sm text-old-money-800 dark:text-old-money-200">
+                    <td className="px-6 py-4 text-center text-sm text-old-money-800">
                       {dog.avg_score ? parseFloat(dog.avg_score).toFixed(2).replace(/\.00$/, '') : '-'}
                     </td>
                   </>
                 )}
-                <td className="px-6 py-4 text-center text-sm text-old-money-800 dark:text-old-money-200">
+                <td className="px-6 py-4 text-center text-sm text-old-money-800">
                   {dog.total_starts}
                 </td>
               </tr>
@@ -345,7 +345,7 @@ export default function DogStatsTable({ data, type = 'placement', filterYear }) 
       </div>
 
       {totalPages > 1 && (
-        <div className="mt-4 flex items-center justify-between text-sm text-old-money-700 dark:text-old-money-400">
+        <div className="mt-4 flex items-center justify-between text-sm text-old-money-700 text-old-money-400">
           <span>
             Показано {page * PAGE_SIZE + 1}–{Math.min((page + 1) * PAGE_SIZE, sortedData.length)} из {sortedData.length}
           </span>
@@ -354,7 +354,7 @@ export default function DogStatsTable({ data, type = 'placement', filterYear }) 
               type="button"
               disabled={page === 0}
               onClick={() => setPage(page - 1)}
-              className="min-h-[44px] min-w-[44px] rounded-lg border border-old-money-300 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 px-4 py-2 transition-colors hover:bg-cream-50 dark:hover:bg-charcoal-700 disabled:opacity-40"
+              className="min-h-[44px] min-w-[44px] rounded-lg border border-old-money-300 bg-white px-4 py-2 transition-colors hover:bg-cream-50 disabled:opacity-40"
             >
               Назад
             </button>
@@ -365,7 +365,7 @@ export default function DogStatsTable({ data, type = 'placement', filterYear }) 
               type="button"
               disabled={page >= totalPages - 1}
               onClick={() => setPage(page + 1)}
-              className="min-h-[44px] min-w-[44px] rounded-lg border border-old-money-300 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 px-4 py-2 transition-colors hover:bg-cream-50 dark:hover:bg-charcoal-700 disabled:opacity-40"
+              className="min-h-[44px] min-w-[44px] rounded-lg border border-old-money-300 bg-white px-4 py-2 transition-colors hover:bg-cream-50 disabled:opacity-40"
             >
               Вперёд
             </button>

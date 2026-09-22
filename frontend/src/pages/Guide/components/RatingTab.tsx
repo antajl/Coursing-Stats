@@ -9,11 +9,11 @@ export default function RatingTab() {
           <strong>CS (Coursing Stats)</strong> — индекс для рейтинга «по очкам» на курсинге и БЗМП. Он отвечает на
           вопрос: насколько стабильно собака получает высокие оценки судей, а не «сколько баллов суммой за все годы».
         </p>
-        <p className="text-[13px] text-charcoal-600 dark:text-charcoal-300">
+        <p className="text-[13px] text-charcoal-600">
           На карточке крупно — индекс CS; мелко — среднее и лучшее за участие, число участий. Рейтинг по{' '}
           <strong>медалям</strong> считается отдельно и с CS не смешивается.
         </p>
-        <p className="text-[13px] text-charcoal-600 dark:text-charcoal-300">
+        <p className="text-[13px] text-charcoal-600">
           Текущая формула: <strong>CS v1</strong> (в данных — поле <code>rating_score_version: cs-v1</code>). Смена
           версии будет явно указана здесь и в индексах, без тихого пересчёта «как будто так было всегда».
         </p>
@@ -37,7 +37,7 @@ export default function RatingTab() {
           Подсказка ⓘ у заголовка колонки. Elo считается в пулах по породам — для сравнения «силы» удобнее выбрать
           породу, но сортировку списка это не меняет.
         </InfoCallout>
-        <p className="text-[13px] text-charcoal-600 dark:text-charcoal-300">
+        <p className="text-[13px] text-charcoal-600">
           По умолчанию включён фильтр <strong>текущего сезона</strong>. Снять кнопку — смотреть карьеру.
         </p>
       </SectionCard>
@@ -48,11 +48,11 @@ export default function RatingTab() {
           <strong>0,6</strong> за лучший результат выше среднего и бонус до <strong>2</strong> за число участий.
         </p>
 
-        <div className="rounded-lg border border-old-money-200 bg-old-money-50/50 px-3 py-2.5 font-mono text-[11px] leading-relaxed text-charcoal-800 dark:border-charcoal-600 dark:bg-charcoal-900/40 dark:text-charcoal-100">
+        <div className="rounded-lg border border-old-money-200 bg-old-money-50/50 px-3 py-2.5 font-mono text-[11px] leading-relaxed text-charcoal-800">
           <p>μ̃ = (μ × n + 85 × 12) / (n + 12)</p>
           <p>P = B &gt; μ̃ ? 0,15 × min(B − μ̃, 4) : 0</p>
           <p>E = min(2, 0,5 × log₂(S + 1))</p>
-          <p className="font-semibold text-camel-800 dark:text-camel-300">CS = round(μ̃ + P + E, 2)</p>
+          <p className="font-semibold text-camel-800">CS = round(μ̃ + P + E, 2)</p>
         </div>
 
         <p className="text-[13px]">
@@ -60,7 +60,7 @@ export default function RatingTab() {
           <strong>CS=89,28</strong>. Собака с одним участием и μ=96 получит CS≈88,85 — ниже стабильной карьеры.
         </p>
 
-        <ul className="list-inside list-disc space-y-1 pl-1 text-[13px] text-charcoal-600 dark:text-charcoal-300">
+        <ul className="list-inside list-disc space-y-1 pl-1 text-[13px] text-charcoal-600">
           <li>Константы prior=85 и k=12 зафиксированы — индекс не «плывёт» без новых участий собаки.</li>
           <li>Курсинг и БЗМП используют одну шкалу оценок судей.</li>
         </ul>
@@ -71,11 +71,11 @@ export default function RatingTab() {
           <strong>Elo</strong> — система рейтинга на основе парных сравнений в забегах. Учитывает оценки судей и{' '}
           <strong>силу соперников</strong>: выиграть у сильного ценнее, чем у слабого.
         </p>
-        <p className="text-[13px] text-charcoal-600 dark:text-charcoal-300">
+        <p className="text-[13px] text-charcoal-600">
           В одном пуле — <strong>курсинг и БЗМП</strong> (хронологически). Породы считаются отдельно (
           <code>breedPools</code>). Медали и CS с Elo не смешиваются.
         </p>
-        <p className="text-[13px] text-charcoal-600 dark:text-charcoal-300">
+        <p className="text-[13px] text-charcoal-600">
           Текущая версия: <strong>Elo v2</strong> (параметры: scale=8, K0=50 после перекалибровки на корпусе
           coursing+BZMP). Рейтинг соперника берётся на момент забега — без утечки из будущего.
         </p>
@@ -87,7 +87,7 @@ export default function RatingTab() {
           проигрыш.
         </p>
 
-        <div className="rounded-lg border border-old-money-200 bg-old-money-50/50 px-3 py-2.5 font-mono text-[11px] leading-relaxed text-charcoal-800 dark:border-charcoal-600 dark:bg-charcoal-900/40 dark:text-charcoal-100">
+        <div className="rounded-lg border border-old-money-200 bg-old-money-50/50 px-3 py-2.5 font-mono text-[11px] leading-relaxed text-charcoal-800">
           <p>E_A = 1 / (1 + 10^((R_B − R_A) / 400))</p>
           <p>S_A = 0,5 + 0,5 × tanh((score_A − score_B) / scale) — scored</p>
           <p>S_A = 0 при DQ (партнёр получает S=1; соло DQ — vs равный виртуальный соперник)</p>
@@ -99,7 +99,7 @@ export default function RatingTab() {
           <strong>Параметры:</strong> scale=8, K0=50, начальный рейтинг 1500.
         </p>
 
-        <ul className="list-inside list-disc space-y-1 pl-1 text-[13px] text-charcoal-600 dark:text-charcoal-300">
+        <ul className="list-inside list-disc space-y-1 pl-1 text-[13px] text-charcoal-600">
           <li>
             <strong>DQ</strong> снижает Elo (S=0). Bye-run без DQ только увеличивает опыт n (K уменьшается).
           </li>
@@ -114,7 +114,7 @@ export default function RatingTab() {
           Медали, CS и Elo — разные смыслы. Места в рейтинге задаёт зачёт сезона (не смесь в одно число):
         </p>
 
-        <ul className="list-inside list-disc space-y-1 pl-1 text-[13px] text-charcoal-600 dark:text-charcoal-300">
+        <ul className="list-inside list-disc space-y-1 pl-1 text-[13px] text-charcoal-600">
           <li>
             <strong>Медали</strong> — главный ключ (золото ценнее серебра и бронзы; при одинаковом наборе выше
             эффективность по числу участий).
@@ -127,7 +127,7 @@ export default function RatingTab() {
           </li>
         </ul>
 
-        <p className="text-[13px] text-charcoal-600 dark:text-charcoal-300">
+        <p className="text-[13px] text-charcoal-600">
           Выбирайте породу, если нужен более честный топ «кто сильнее среди своих».
         </p>
       </SectionCard>
@@ -136,12 +136,12 @@ export default function RatingTab() {
         <dl className="space-y-4">
           {GUIDE_RATING_FAQS.map((faq) => (
             <div key={faq.question}>
-              <dt className="font-semibold text-charcoal-900 dark:text-charcoal-100">{faq.question}</dt>
-              <dd className="mt-1 text-[13px] text-charcoal-600 dark:text-charcoal-300">{faq.answer}</dd>
+              <dt className="font-semibold text-charcoal-900">{faq.question}</dt>
+              <dd className="mt-1 text-[13px] text-charcoal-600">{faq.answer}</dd>
             </div>
           ))}
         </dl>
-        <p className="text-[13px] text-charcoal-600 dark:text-charcoal-300">
+        <p className="text-[13px] text-charcoal-600">
           Выставки — вкладка <strong>«Выставки»</strong>; источники и контакты — <strong>«О сайте»</strong>.
         </p>
       </SectionCard>

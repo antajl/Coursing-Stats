@@ -101,14 +101,14 @@ export default function DogProfile() {
     : []
 
   const headerBreed = dog?.breed || showDog?.breed || showRouteBreed || ''
-  const { data: breedRecordsData } = useSpeedRecordsByBreed(dog?.breed || '')
+  const { data: breedRecordsData } = useSpeedRecordsByBreed(dog?.breed || showDog?.breed || '')
   const breedRecords = breedRecordsData?.success
     ? Array.isArray(breedRecordsData.data)
       ? breedRecordsData.data
       : []
     : []
 
-  const { data: breedCoursingRecordsData } = useCoursingRecordsByBreed(dog?.breed || '')
+  const { data: breedCoursingRecordsData } = useCoursingRecordsByBreed(dog?.breed || showDog?.breed || '')
   const breedCoursingRecords = breedCoursingRecordsData?.success
     ? Array.isArray(breedCoursingRecordsData.data)
       ? breedCoursingRecordsData.data
@@ -129,9 +129,9 @@ export default function DogProfile() {
         // Это позволяет найти собаку в выставках даже без show_dog_id
         const result = await resolveShowDogDetail({
           profileId: profileId || (isLegacyShowRoute ? showRouteDogId : null),
-          competitionId: dog?.id ?? competitionId,
-          nameLat: dog?.name_lat,
-          nameRu: dog?.name_ru,
+          competitionId: dog?.id ? String(dog.id) : competitionId,
+          nameLat: dog?.name_lat || '',
+          nameRu: dog?.name_ru || '',
           breed: dog?.breed || showRouteBreed,
         })
         if (!cancelled) {
@@ -313,7 +313,7 @@ export default function DogProfile() {
         action={
           <Link
             to={isLegacyShowRoute || !dog ? '/shows?tab=ranking' : '/competitions?tab=ranking'}
-            className="rounded-xl border-2 border-camel-300 bg-white px-4 py-2 text-sm font-semibold text-camel-700 transition-all hover:border-camel-400 hover:bg-camel-50 dark:border-camel-600 dark:bg-charcoal-800 dark:text-camel-400 dark:hover:bg-charcoal-700"
+            className="rounded-xl border-2 border-camel-300 bg-white px-4 py-2 text-sm font-semibold text-camel-700 transition-all hover:border-camel-400 hover:bg-camel-50"
           >
             К рейтингу
           </Link>

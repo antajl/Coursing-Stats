@@ -57,7 +57,7 @@ export default function SlidingSegmentControl({
     <div ref={groupRef} className={`${TOOLBAR_SEGMENT_GROUP} relative`} role="group" aria-label={ariaLabel}>
       <span
         aria-hidden
-        className="pointer-events-none absolute top-0.5 bottom-0.5 rounded-md bg-camel-500 shadow-sm transition-[left,width] duration-200 ease-out dark:bg-camel-600"
+        className="pointer-events-none absolute top-0.5 bottom-0.5 rounded-md bg-camel-500 shadow-sm transition-[left,width] duration-200 ease-out"
         style={{
           left: pill.left,
           width: pill.width,
@@ -75,7 +75,7 @@ export default function SlidingSegmentControl({
             onClick={() => onChange(segment.id)}
             className={`${TOOLBAR_SEGMENT} relative z-[1] ${
               active
-                ? 'text-charcoal-900 dark:text-cream-50'
+                ? 'text-charcoal-900'
                 : TOOLBAR_SEGMENT_IDLE
             }`}
             aria-pressed={active}

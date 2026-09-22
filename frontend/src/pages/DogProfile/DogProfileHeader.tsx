@@ -55,7 +55,7 @@ function TitleDomainBlock({ label, titles }: { label: string; titles: DogTitle[]
   if (titles.length === 0) return null
   return (
     <div className="min-w-0 text-center">
-      <div className="mb-1.5 text-[11px] font-medium text-old-money-500 dark:text-old-money-400">
+      <div className="mb-1.5 text-[11px] font-medium text-old-money-500">
         {label}
       </div>
       <div className="flex flex-wrap items-center justify-center gap-1.5">
@@ -86,10 +86,10 @@ export function DogProfileHeader({
   const favorite = isFavorite(dogId)
 
   const rankColor = (val: number | null | undefined) => {
-    if (val == null) return 'text-charcoal-400 dark:text-charcoal-500'
-    if (val <= 3) return 'text-amber-600 dark:text-amber-400 font-semibold'
-    if (val <= 4) return 'text-charcoal-700 dark:text-charcoal-300'
-    return 'text-charcoal-500 dark:text-charcoal-400'
+    if (val == null) return 'text-charcoal-400'
+    if (val <= 3) return 'text-amber-600 font-semibold'
+    if (val <= 4) return 'text-charcoal-700'
+    return 'text-charcoal-500'
   }
 
   const renderPlace = (
@@ -141,40 +141,40 @@ export function DogProfileHeader({
       <button
         type="button"
         onClick={onBack}
-        className="relative z-10 mb-2 inline-flex h-11 w-11 items-center justify-center rounded-lg text-old-money-500 transition-colors hover:bg-old-money-50 hover:text-camel-700 md:absolute md:right-full md:top-8 md:mb-0 md:mr-0.5 dark:text-old-money-400 dark:hover:bg-charcoal-700 dark:hover:text-camel-400"
+        className="relative z-10 mb-2 inline-flex h-11 w-11 items-center justify-center rounded-lg text-old-money-500 transition-colors hover:bg-old-money-50 hover:text-camel-700 md:absolute md:right-full md:top-8 md:mb-0 md:mr-0.5"
         aria-label="Назад"
         data-export-ignore
       >
         <ChevronLeft className="h-5 w-5" aria-hidden />
       </button>
-      <div className="relative min-w-0 rounded-xl border border-old-money-200/80 bg-white p-5 dark:border-charcoal-600 dark:bg-charcoal-800/50 md:p-8">
+      <div className="relative min-w-0 rounded-xl border border-old-money-200/80 bg-white p-5 md:p-8">
         <div className="flex items-start gap-4">
           <div className="min-w-0 flex-1">
             <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
               <OwnerCrownName name={primary} dogId={dog.id} kind="competition">
-                <h1 className="text-2xl font-bold tracking-tight text-charcoal-900 dark:text-charcoal-100 md:text-3xl">
+                <h1 className="text-2xl font-bold tracking-tight text-charcoal-900 md:text-3xl">
                   {primary}
                 </h1>
               </OwnerCrownName>
               {dog.sex && (
-                <span className="text-lg font-medium text-charcoal-400 dark:text-charcoal-500">
+                <span className="text-lg font-medium text-charcoal-400">
                   {dog.sex === 'M' ? '♂' : '♀'}
                 </span>
               )}
             </div>
             {secondary ? (
-              <div className="mt-1 text-base font-medium text-charcoal-400 dark:text-charcoal-500">
+              <div className="mt-1 text-base font-medium text-charcoal-400">
                 {secondary}
               </div>
             ) : showRuName ? (
-              <div className="mt-1 text-base font-medium text-old-money-500 dark:text-old-money-400">
+              <div className="mt-1 text-base font-medium text-old-money-500">
                 {dog.name_ru}
               </div>
             ) : null}
             <div className="mt-2.5 flex flex-wrap items-center gap-2">
               <div className="min-w-0">
                 <span
-                  className="inline-block rounded-full border border-old-money-200 bg-cream-100 px-4 py-1.5 text-sm font-semibold text-charcoal-700 dark:border-charcoal-600 dark:bg-charcoal-700 dark:text-charcoal-300"
+                  className="inline-block rounded-full border border-old-money-200 bg-cream-100 px-4 py-1.5 text-sm font-semibold text-charcoal-700"
                   title={
                     breedDisplay.secondary
                       ? `${breedDisplay.primary} — ${breedDisplay.secondary}`
@@ -189,7 +189,7 @@ export function DogProfileHeader({
                   href={dog.pedigree_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 rounded-full border border-old-money-200 bg-white px-3 py-1.5 text-xs font-semibold text-camel-700 transition-colors hover:border-camel-400 hover:bg-camel-50 dark:border-charcoal-600 dark:bg-charcoal-800 dark:text-camel-400 dark:hover:border-camel-600 dark:hover:bg-charcoal-700"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-old-money-200 bg-white px-3 py-1.5 text-xs font-semibold text-camel-700 transition-colors hover:border-camel-400 hover:bg-camel-50"
                 >
                   <img
                     src={BREED_ARCHIVE_FAVICON}
@@ -211,8 +211,8 @@ export function DogProfileHeader({
                 disabled={loadingFavorite}
                 className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-50 ${
                   favorite
-                    ? 'border-amber-400 bg-amber-50 text-amber-700 hover:border-amber-500 hover:bg-amber-100 dark:border-amber-600 dark:bg-amber-900/30 dark:text-amber-400 dark:hover:border-amber-500 dark:hover:bg-amber-900/50'
-                    : 'border-old-money-200 bg-white text-camel-700 hover:border-camel-400 hover:bg-camel-50 dark:border-charcoal-600 dark:bg-charcoal-800 dark:text-camel-400 dark:hover:border-camel-600 dark:hover:bg-charcoal-700'
+                    ? 'border-amber-400 bg-amber-50 text-amber-700 hover:border-amber-500 hover:bg-amber-100'
+                    : 'border-old-money-200 bg-white text-camel-700 hover:border-camel-400 hover:bg-camel-50'
                 }`}
                 aria-label={favorite ? 'Удалить из избранного' : 'Добавить в избранное'}
                 title={favorite ? 'Удалить из избранного' : 'Добавить в избранное'}
@@ -228,68 +228,68 @@ export function DogProfileHeader({
               className="hidden shrink-0 absolute top-0 right-0 z-10 md:block md:relative md:mt-0 md:ml-4"
               aria-label="Места в рейтингах"
             >
-              <div className="px-4 py-2 rounded-lg border border-old-money-200/80 bg-white dark:border-charcoal-600 dark:bg-charcoal-800 md:border-none md:bg-transparent md:p-0 md:rounded-none md:dark:bg-transparent">
+              <div className="px-4 py-2 rounded-lg border border-old-money-200/80 bg-white md:border-none md:bg-transparent md:p-0 md:rounded-none">
                 <div className="grid grid-cols-4 gap-1">
                   <div />
                   {['coursing', 'racing', 'shows'].map((key, index) => {
                     const r = ranks.find((rank) => rank.key === key)
-                    const icon = key === 'coursing' ? <Rabbit className="h-4 w-4 text-charcoal-400 dark:text-charcoal-500" /> : key === 'racing' ? <Gauge className="h-4 w-4 text-charcoal-400 dark:text-charcoal-500" /> : <Sparkles className="h-4 w-4 text-charcoal-400 dark:text-charcoal-500" />
+                    const icon = key === 'coursing' ? <Rabbit className="h-4 w-4 text-charcoal-400" /> : key === 'racing' ? <Gauge className="h-4 w-4 text-charcoal-400" /> : <Sparkles className="h-4 w-4 text-charcoal-400" />
                     const label = key === 'coursing' ? 'Курсинг' : key === 'racing' ? 'Бега' : 'Выставки'
                     const href = key === 'shows' ? '/shows?tab=ranking&year=' : '/competitions?tab=ranking&year='
                     return (
                       <Link key={key} to={href} className="group">
-                        <div className={`flex items-center justify-center gap-1 mb-1 ${index > 0 ? 'border-l border-charcoal-200/10 dark:border-charcoal-600/10 pl-2' : ''}`}>
+                        <div className={`flex items-center justify-center gap-1 mb-1 ${index > 0 ? 'border-l border-charcoal-200/10 pl-2' : ''}`}>
                           {icon}
-                          <div className="text-[10px] font-medium text-charcoal-500 dark:text-charcoal-400 uppercase">
+                          <div className="text-[10px] font-medium text-charcoal-500 uppercase">
                             {label}
                           </div>
                         </div>
                       </Link>
                     )
                   })}
-                  <div className="text-[10px] text-charcoal-400 dark:text-charcoal-500 text-right pr-2">Общий</div>
+                  <div className="text-[10px] text-charcoal-400 text-right pr-2">Общий</div>
                   {(['coursing', 'racing', 'shows'] as const).map((key, index) => {
                     const r = ranks.find((rank) => rank.key === key)
                     return (
                       <div
                         key={key}
-                        className={`h-4 flex items-center justify-end ${index > 0 ? 'border-l border-charcoal-200/10 dark:border-charcoal-600/10 pl-2' : ''}`}
+                        className={`h-4 flex items-center justify-end ${index > 0 ? 'border-l border-charcoal-200/10 pl-2' : ''}`}
                       >
                         {renderPlace(key, 'overall', r?.rank, r)}
                       </div>
                     )
                   })}
-                  <div className="text-[10px] text-charcoal-400 dark:text-charcoal-500 text-right pr-2">За год</div>
+                  <div className="text-[10px] text-charcoal-400 text-right pr-2">За год</div>
                   {(['coursing', 'racing', 'shows'] as const).map((key, index) => {
                     const r = ranks.find((rank) => rank.key === key)
                     return (
                       <div
                         key={key}
-                        className={`h-4 flex items-center justify-end ${index > 0 ? 'border-l border-charcoal-200/10 dark:border-charcoal-600/10 pl-2' : ''}`}
+                        className={`h-4 flex items-center justify-end ${index > 0 ? 'border-l border-charcoal-200/10 pl-2' : ''}`}
                       >
                         {renderPlace(key, 'year', r?.yearRank, r)}
                       </div>
                     )
                   })}
-                  <div className="text-[10px] text-charcoal-400 dark:text-charcoal-500 text-right pr-2">Порода</div>
+                  <div className="text-[10px] text-charcoal-400 text-right pr-2">Порода</div>
                   {(['coursing', 'racing', 'shows'] as const).map((key, index) => {
                     const r = ranks.find((rank) => rank.key === key)
                     return (
                       <div
                         key={key}
-                        className={`h-4 flex items-center justify-end ${index > 0 ? 'border-l border-charcoal-200/10 dark:border-charcoal-600/10 pl-2' : ''}`}
+                        className={`h-4 flex items-center justify-end ${index > 0 ? 'border-l border-charcoal-200/10 pl-2' : ''}`}
                       >
                         {renderPlace(key, 'breed', r?.breedRank, r)}
                       </div>
                     )
                   })}
-                  <div className="text-[10px] text-charcoal-400 dark:text-charcoal-500 text-right pr-2">Пор. за год</div>
+                  <div className="text-[10px] text-charcoal-400 text-right pr-2">Пор. за год</div>
                   {(['coursing', 'racing', 'shows'] as const).map((key, index) => {
                     const r = ranks.find((rank) => rank.key === key)
                     return (
                       <div
                         key={key}
-                        className={`h-4 flex items-center justify-end ${index > 0 ? 'border-l border-charcoal-200/10 dark:border-charcoal-600/10 pl-2' : ''}`}
+                        className={`h-4 flex items-center justify-end ${index > 0 ? 'border-l border-charcoal-200/10 pl-2' : ''}`}
                       >
                         {renderPlace(key, 'yearBreed', r?.yearBreedRank, r)}
                       </div>
@@ -302,7 +302,7 @@ export function DogProfileHeader({
         </div>
 
         {hasTitles && (
-          <div className="mt-4 border-t border-old-money-100 pt-4 dark:border-charcoal-600">
+          <div className="mt-4 border-t border-old-money-100 pt-4">
             <div
               className={
                 showTitles.length > 0 && competitionTitles.length > 0
@@ -313,7 +313,7 @@ export function DogProfileHeader({
               <TitleDomainBlock label="Курсинг и бега" titles={competitionTitles} />
               {showTitles.length > 0 && competitionTitles.length > 0 ? (
                 <div
-                  className="hidden w-px self-stretch bg-gradient-to-b from-transparent via-old-money-300 to-transparent dark:via-charcoal-500 md:mx-6 md:block"
+                  className="hidden w-px self-stretch bg-gradient-to-b from-transparent via-old-money-300 to-transparent md:mx-6 md:block"
                   aria-hidden
                 />
               ) : null}
@@ -323,8 +323,8 @@ export function DogProfileHeader({
         )}
 
         {dog.owner && (
-          <div className="mt-4 border-t border-old-money-100 pt-4 text-sm text-old-money-700 dark:border-charcoal-600 dark:text-old-money-300">
-            <span className="font-semibold text-old-money-800 dark:text-old-money-200">Владелец:</span> {dog.owner}
+          <div className="mt-4 border-t border-old-money-100 pt-4 text-sm text-old-money-700">
+            <span className="font-semibold text-old-money-800">Владелец:</span> {dog.owner}
           </div>
         )}
       </div>

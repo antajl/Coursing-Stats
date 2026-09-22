@@ -19,7 +19,7 @@ export function ProgressiveDisclosure({
     <div className="mb-4">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 text-sm font-medium text-camel-700 hover:text-camel-800 dark:text-camel-400 dark:hover:text-camel-300 transition-colors"
+        className="flex items-center gap-2 text-sm font-medium text-camel-700 hover:text-camel-800 transition-colors"
         aria-expanded={isOpen}
       >
         <svg

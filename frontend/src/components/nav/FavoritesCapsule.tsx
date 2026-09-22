@@ -91,15 +91,15 @@ export default function FavoritesCapsule() {
   const multi = favoriteIds.length > 1
 
   const shellClass = onAccount
-    ? 'flex items-center overflow-hidden rounded-full border border-charcoal-300/70 bg-cream-100/80 text-charcoal-500 opacity-60 dark:border-charcoal-600 dark:bg-charcoal-800/60 dark:text-charcoal-400'
-    : 'flex items-center overflow-hidden rounded-full border border-amber-300/80 bg-amber-50/90 text-amber-900 dark:border-amber-700/60 dark:bg-amber-950/40 dark:text-amber-100'
+    ? 'flex items-center overflow-hidden rounded-full border border-charcoal-300/70 bg-cream-100/80 text-charcoal-500 opacity-60'
+    : 'flex items-center overflow-hidden rounded-full border border-amber-300/80 bg-amber-50/90 text-amber-900'
 
   const linkHover = onAccount
-    ? 'flex shrink-0 items-center gap-1 px-2 py-1.5 hover:bg-charcoal-200/40 md:gap-1.5 md:px-2.5 dark:hover:bg-charcoal-700/40'
-    : 'flex shrink-0 items-center gap-1 px-2 py-1.5 hover:bg-amber-100/80 md:gap-1.5 md:px-2.5 dark:hover:bg-amber-900/40'
+    ? 'flex shrink-0 items-center gap-1 px-2 py-1.5 hover:bg-charcoal-200/40 md:gap-1.5 md:px-2.5'
+    : 'flex shrink-0 items-center gap-1 px-2 py-1.5 hover:bg-amber-100/80 md:gap-1.5 md:px-2.5'
 
   const starClass = onAccount
-    ? 'h-3.5 w-3.5 shrink-0 fill-current text-charcoal-400 dark:text-charcoal-500'
+    ? 'h-3.5 w-3.5 shrink-0 fill-current text-charcoal-400'
     : 'h-3.5 w-3.5 shrink-0 fill-current text-amber-500 animate-favorite-star-pop'
 
   return (
@@ -121,8 +121,8 @@ export default function FavoritesCapsule() {
             type="button"
             className={
               onAccount
-                ? 'shrink-0 border-l border-charcoal-300/60 px-1.5 py-1.5 text-[10px] font-bold leading-none text-charcoal-500 hover:bg-charcoal-200/40 dark:border-charcoal-600 dark:text-charcoal-400 dark:hover:bg-charcoal-700/50'
-                : 'shrink-0 border-l border-amber-300/60 px-1.5 py-1.5 text-[10px] font-bold leading-none text-amber-700 hover:bg-amber-100 dark:border-amber-700/50 dark:text-amber-200 dark:hover:bg-amber-900/50'
+                ? 'shrink-0 border-l border-charcoal-300/60 px-1.5 py-1.5 text-[10px] font-bold leading-none text-charcoal-500 hover:bg-charcoal-200/40'
+                : 'shrink-0 border-l border-amber-300/60 px-1.5 py-1.5 text-[10px] font-bold leading-none text-amber-700 hover:bg-amber-100'
             }
             aria-expanded={open}
             aria-label="Выбрать другую избранную собаку"
@@ -134,7 +134,7 @@ export default function FavoritesCapsule() {
         ) : null}
       </div>
       {open && favoriteIds.length > 1 ? (
-        <div className="absolute right-0 z-[100] mt-1 flex max-h-64 w-56 flex-col overflow-hidden rounded-xl border-2 border-old-money-200 bg-white shadow-xl dark:border-charcoal-600 dark:bg-charcoal-800">
+        <div className="absolute right-0 z-[100] mt-1 flex max-h-64 w-56 flex-col overflow-hidden rounded-xl border-2 border-old-money-200 bg-white shadow-xl">
           <div className="overflow-auto">
             {favoriteIds.map((id) => {
               const m = listMeta[id] || getMeta(id) || (id === activeId ? meta : null)
@@ -144,10 +144,10 @@ export default function FavoritesCapsule() {
                 <button
                   key={id}
                   type="button"
-                  className={`block w-full border-b border-old-money-100 px-3 py-2 text-left text-xs last:border-0 hover:bg-old-money-50 dark:border-charcoal-700 dark:hover:bg-charcoal-700 ${
+                  className={`block w-full border-b border-old-money-100 px-3 py-2 text-left text-xs last:border-0 hover:bg-old-money-50 ${
                     id === activeId
-                      ? 'bg-amber-50 font-semibold dark:bg-amber-950/30'
-                      : 'text-charcoal-700 dark:text-charcoal-200'
+                      ? 'bg-amber-50 font-semibold'
+                      : 'text-charcoal-700'
                   }`}
                   onClick={() => {
                     setActive(id)
@@ -160,10 +160,10 @@ export default function FavoritesCapsule() {
               )
             })}
           </div>
-          <div className="shrink-0 border-t border-old-money-100 bg-cream-50/90 p-2 dark:border-charcoal-700 dark:bg-charcoal-900/50">
+          <div className="shrink-0 border-t border-old-money-100 bg-cream-50/90 p-2">
             <Link
               to="/account"
-              className="group flex w-full items-center justify-between gap-2 rounded-lg border border-old-money-200/70 bg-white px-3 py-2 text-xs font-semibold text-charcoal-700 shadow-sm transition-all hover:border-camel-300 hover:bg-camel-50 hover:text-camel-800 hover:shadow dark:border-charcoal-600 dark:bg-charcoal-800 dark:text-charcoal-200 dark:hover:border-camel-700 dark:hover:bg-charcoal-700 dark:hover:text-camel-300"
+              className="group flex w-full items-center justify-between gap-2 rounded-lg border border-old-money-200/70 bg-white px-3 py-2 text-xs font-semibold text-charcoal-700 shadow-sm transition-all hover:border-camel-300 hover:bg-camel-50 hover:text-camel-800 hover:shadow"
               onClick={() => setOpen(false)}
             >
               <span className="flex items-center gap-1.5">
@@ -171,7 +171,7 @@ export default function FavoritesCapsule() {
                 Все избранные
               </span>
               <ChevronRight
-                className="h-4 w-4 shrink-0 text-charcoal-400 transition-transform group-hover:translate-x-0.5 group-hover:text-camel-600 dark:text-charcoal-500 dark:group-hover:text-camel-400"
+                className="h-4 w-4 shrink-0 text-charcoal-400 transition-transform group-hover:translate-x-0.5 group-hover:text-camel-600"
                 aria-hidden
               />
             </Link>

@@ -32,7 +32,7 @@ function FavoriteCardStar({
         e.preventDefault()
         onToggle(dogId, meta)
       }}
-      className={`absolute right-2 top-2 z-10 rounded-full bg-white/90 p-1.5 shadow-sm transition-all duration-150 hover:bg-cream-100 active:scale-90 dark:bg-charcoal-800/90 dark:hover:bg-charcoal-700 ${
+      className={`absolute right-2 top-2 z-10 rounded-full bg-white/90 p-1.5 shadow-sm transition-all duration-150 hover:bg-cream-100 active:scale-90 ${
         isFav ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
       }`}
       title={isFav ? 'Удалить из избранного' : 'Добавить в избранное'}
@@ -95,7 +95,7 @@ export default function TopDogsColumns({
       title="Курсинг/БЗМП"
       count={filteredCombined.length}
       action={
-        <span className="inline-flex items-center gap-1 text-[11px] text-old-money-600 dark:text-charcoal-400">
+        <span className="inline-flex items-center gap-1 text-[11px] text-old-money-600">
           Медали → CS · Elo справка
           <CoursingRatingHint embedded />
         </span>
@@ -147,14 +147,14 @@ export default function TopDogsColumns({
     visibleCoursing.length > 0 ? (
       visibleCoursing.map((dog) => renderCoursingCard(dog, `coursing-${dog.dog_id}`))
     ) : (
-      <p className="py-6 text-center text-sm text-charcoal-500 dark:text-charcoal-400">Нет данных</p>
+      <p className="py-6 text-center text-sm text-charcoal-500">Нет данных</p>
     )
 
   const speedList =
     visibleSpeed.length > 0 ? (
       visibleSpeed.map((dog: any) => renderSpeedCard(dog, `speed-${dog.dog_id}`))
     ) : (
-      <p className="py-6 text-center text-sm text-charcoal-500 dark:text-charcoal-400">Нет данных</p>
+      <p className="py-6 text-center text-sm text-charcoal-500">Нет данных</p>
     )
 
   return (
@@ -171,7 +171,7 @@ export default function TopDogsColumns({
       {hasMore && (
         <div
           ref={loadMoreRef}
-          className="py-4 text-center text-sm text-charcoal-500 dark:text-charcoal-400"
+          className="py-4 text-center text-sm text-charcoal-500"
         >
           Загрузка…
         </div>

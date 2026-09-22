@@ -76,7 +76,7 @@ function ProfileShowAwardsFooter({ titles }: { titles: ShowDogCardData['titles']
 
   if (awards.length === 0) {
     return (
-      <span className="text-sm text-old-money-500 dark:text-old-money-400">Нет наград</span>
+      <span className="text-sm text-old-money-500">Нет наград</span>
     )
   }
 
@@ -177,7 +177,7 @@ export function ShowsColumn({ dog }: ShowsColumnProps) {
 
         <div className="mb-4 shrink-0">
           <div className={cellClass}>
-            <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-old-money-500 dark:text-old-money-400">
+            <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-old-money-500">
               Лучшая оценка
             </div>
             <div className="flex justify-center pt-1">
@@ -198,10 +198,10 @@ export function ShowsColumn({ dog }: ShowsColumnProps) {
               const entryTitles = parseShowTitles(entry.title || '')
               const rowKey = `${entry.exhibition_id}-${idx}`
               const rowClass =
-                'block border-b border-camel-200/80 py-3 h-[6.5rem] text-inherit no-underline transition-colors last:border-b-0 hover:bg-camel-50/60 dark:border-camel-700/60 dark:hover:bg-charcoal-700/40'
+                'block border-b border-camel-200/80 py-3 h-[6.5rem] text-inherit no-underline transition-colors last:border-b-0 hover:bg-camel-50/60'
               const rowBody = (
                 <>
-                  <div className="min-w-0 flex-shrink-0 break-words text-xs font-bold uppercase tracking-wide text-camel-700 dark:text-camel-400">
+                  <div className="min-w-0 flex-shrink-0 break-words text-xs font-bold uppercase tracking-wide text-camel-700">
                     {entry.exhibition_title && entry.exhibition_title.length > 50 ? (
                       <HoverTooltip label={entry.exhibition_title} placement="top" variant="site" delayMs={0} portal>
                         <span className="cursor-help">{entry.exhibition_title.slice(0, 50)}...</span>
@@ -234,7 +234,7 @@ export function ShowsColumn({ dog }: ShowsColumnProps) {
               <button
                 type="button"
                 onClick={() => setShowAll((v) => !v)}
-                className="text-sm font-semibold text-camel-700 dark:text-camel-400"
+                className="text-sm font-semibold text-camel-700"
               >
                 {showAll ? 'Свернуть' : `Показать все ${history.length} выставок`}
               </button>

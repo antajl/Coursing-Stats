@@ -10,7 +10,7 @@ import { formatShowDate, isShowNotStartedYet } from '../showCalendarDate'
 import { exhibitionRkfUrl, OutboundLinks } from './OutboundLinks'
 
 const RANK_CHIP =
-  'inline-flex h-5 shrink-0 items-center justify-center rounded-md bg-old-money-100/90 px-1.5 font-mono text-xs font-semibold text-charcoal-600 dark:bg-charcoal-700/90 dark:text-charcoal-200'
+  'inline-flex h-5 shrink-0 items-center justify-center rounded-md bg-old-money-100/90 px-1.5 font-mono text-xs font-semibold text-charcoal-600'
 
 /** Подзаголовок mono: НКП или список пород. */
 function monoSubtitle(exhibition: ShowRkfCalendarEntry): string | null {
@@ -30,8 +30,8 @@ function rankTokens(exhibition: ShowRkfCalendarEntry): string[] {
 
 function rowSurfaceClass(hasProtocol: boolean): string {
   return hasProtocol
-    ? 'border border-warm-blue-200 dark:border-warm-blue-800 border-l-4 border-l-warm-blue-500 dark:border-l-warm-blue-400 bg-warm-blue-50/60 dark:bg-warm-blue-900/30 hover:bg-warm-blue-100/80 dark:hover:bg-warm-blue-900/40'
-    : 'border border-old-money-200 dark:border-charcoal-600 border-l-4 border-l-camel-500 bg-cream-50 dark:bg-charcoal-800 hover:bg-camel-100 dark:hover:bg-charcoal-700'
+    ? 'border border-warm-blue-200 border-l-4 border-l-warm-blue-500 bg-warm-blue-50/60 hover:bg-warm-blue-100/80'
+    : 'border border-old-money-200 border-l-4 border-l-camel-500 bg-cream-50 hover:bg-camel-100'
 }
 
 export interface ShowCalendarRowProps {
@@ -72,8 +72,8 @@ export function ShowCalendarRow({
   const ranks = isMulti ? collectGroupRanks(group.children) : rankTokens(exhibition)
 
   const titleClass = singleLocalPath
-    ? 'min-w-0 truncate leading-[1.3em] text-[13.5px] font-semibold text-charcoal-900 dark:text-charcoal-100 group-hover:text-camel-700 dark:group-hover:text-camel-300'
-    : 'min-w-0 truncate leading-[1.3em] text-[13.5px] font-semibold text-charcoal-900 dark:text-charcoal-100'
+    ? 'min-w-0 truncate leading-[1.3em] text-[13.5px] font-semibold text-charcoal-900 group-hover:text-camel-700'
+    : 'min-w-0 truncate leading-[1.3em] text-[13.5px] font-semibold text-charcoal-900'
 
   const openReport = () => {
     if (reportUrl) {
@@ -123,7 +123,7 @@ export function ShowCalendarRow({
           interactive ? 'cursor-pointer' : 'cursor-default'
         } ${rowSurfaceClass(hasProtocol)}`}
       >
-        <div className="w-[4.75rem] shrink-0 self-center text-sm leading-tight text-charcoal-800 dark:text-charcoal-100 sm:w-[5rem]">
+        <div className="w-[4.75rem] shrink-0 self-center text-sm leading-tight text-charcoal-800 sm:w-[5rem]">
           {dateParts ? (
             <span className="block whitespace-nowrap font-semibold tabular-nums">
               {dateParts}
@@ -137,7 +137,7 @@ export function ShowCalendarRow({
           <div className="flex min-w-0 items-center gap-1.5">
             {isMulti ? (
               <ChevronRight
-                className={`h-3.5 w-3.5 shrink-0 text-charcoal-500 transition-transform dark:text-charcoal-300 ${
+                className={`h-3.5 w-3.5 shrink-0 text-charcoal-500 transition-transform ${
                   expanded ? 'rotate-90' : ''
                 }`}
                 aria-hidden
@@ -155,12 +155,12 @@ export function ShowCalendarRow({
             )}
           </div>
           {subtitle && (
-            <div className="mt-0.5 truncate text-xs font-medium text-charcoal-700 dark:text-charcoal-200">
+            <div className="mt-0.5 truncate text-xs font-medium text-charcoal-700">
               {subtitle}
             </div>
           )}
           {(place || exhibition.club) && (
-            <div className="mt-0.5 truncate text-xs text-charcoal-500 dark:text-charcoal-300">
+            <div className="mt-0.5 truncate text-xs text-charcoal-500">
               {[place, exhibition.club].filter(Boolean).join(' · ')}
             </div>
           )}
@@ -176,14 +176,14 @@ export function ShowCalendarRow({
             </div>
           )}
           {isMulti && (
-            <div className="mt-1 text-[11px] text-charcoal-500 dark:text-charcoal-400 sm:hidden">
+            <div className="mt-1 text-[11px] text-charcoal-500 sm:hidden">
               {group.children.length} НКП · нажмите, чтобы{' '}
               {expanded ? 'свернуть' : 'развернуть'}
             </div>
           )}
         </div>
 
-        <div className="hidden sm:flex w-[7.75rem] shrink-0 flex-col items-end justify-center gap-1 self-stretch pl-3 border-l border-old-money-200/80 dark:border-charcoal-600/80">
+        <div className="hidden sm:flex w-[7.75rem] shrink-0 flex-col items-end justify-center gap-1 self-stretch pl-3 border-l border-old-money-200/80">
           {!isMulti ? (
             <OutboundLinks
               rkfUrl={rkfUrl}
@@ -192,7 +192,7 @@ export function ShowCalendarRow({
               notStartedYet={notStartedYet}
             />
           ) : (
-            <span className="w-full whitespace-nowrap text-right text-[11px] leading-tight text-charcoal-500 dark:text-charcoal-400">
+            <span className="w-full whitespace-nowrap text-right text-[11px] leading-tight text-charcoal-500">
               {group.children.length} НКП
             </span>
           )}
@@ -200,7 +200,7 @@ export function ShowCalendarRow({
       </div>
 
       {expanded ? (
-        <ul className="mt-0.5 mb-1 ml-[4.75rem] sm:ml-[5rem] space-y-0.5 border-l border-old-money-200/80 pl-3 dark:border-charcoal-600/80">
+        <ul className="mt-0.5 mb-1 ml-[4.75rem] sm:ml-[5rem] space-y-0.5 border-l border-old-money-200/80 pl-3">
           {group.children.map((child) => {
             const childRkf = exhibitionRkfUrl(child)
             const childReport = child.reports_link?.trim() || null
@@ -251,16 +251,16 @@ export function ShowCalendarRow({
                 }
                 className={`flex flex-wrap items-center justify-between gap-x-3 gap-y-1 rounded-md px-2.5 py-1.5 text-xs ${
                   child.has_lc_protocol
-                    ? 'bg-warm-blue-50/70 dark:bg-warm-blue-900/25'
-                    : 'bg-cream-50/80 dark:bg-charcoal-800/60'
-                } ${childInteractive ? 'cursor-pointer hover:bg-camel-100 dark:hover:bg-charcoal-700' : ''}`}
+                    ? 'bg-warm-blue-50/70'
+                    : 'bg-cream-50/80'
+                } ${childInteractive ? 'cursor-pointer hover:bg-camel-100' : ''}`}
               >
                 <div className="min-w-0 flex-1">
-                  <span className="font-medium text-charcoal-800 dark:text-charcoal-100">
+                  <span className="font-medium text-charcoal-800">
                     {childHeading}
                   </span>
                   {nkpLabel !== 'НКП' && childRanks.length > 0 ? (
-                    <span className="ml-2 text-[11px] text-charcoal-500 dark:text-charcoal-400">
+                    <span className="ml-2 text-[11px] text-charcoal-500">
                       {childRanks.join(', ')}
                     </span>
                   ) : null}

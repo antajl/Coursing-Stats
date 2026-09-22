@@ -79,8 +79,8 @@ export default function TopDogsFilters({
       type="button"
       className={`inline-flex h-8 items-center rounded-full border px-3.5 text-xs font-semibold transition-colors gap-1.5 ${
         filterBreed
-          ? 'border-camel-500 bg-camel-500 text-charcoal-900 dark:border-camel-400 dark:bg-camel-600 dark:text-cream-50'
-          : 'border-old-money-200 dark:border-charcoal-600 bg-cream-50 dark:bg-charcoal-800 text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-700'
+          ? 'border-camel-500 bg-camel-500 text-charcoal-900'
+          : 'border-old-money-200 bg-cream-50 text-charcoal-700 hover:bg-old-money-50'
       }`}
       title={filterBreed || 'Порода'}
       aria-label={filterBreed ? `Порода: ${filterBreed}` : 'Порода'}
@@ -97,8 +97,8 @@ export default function TopDogsFilters({
       type="button"
       className={`inline-flex h-8 items-center rounded-full border px-3.5 text-xs font-semibold whitespace-nowrap transition-colors gap-1.5 ${
         filterYear && filterYear !== currentSeason
-          ? 'border-camel-500 bg-camel-500 text-charcoal-900 dark:border-camel-400 dark:bg-camel-600 dark:text-cream-50'
-          : 'border-old-money-200 dark:border-charcoal-600 bg-cream-50 dark:bg-charcoal-800 text-charcoal-700 dark:text-charcoal-200 hover:bg-old-money-50 dark:hover:bg-charcoal-700'
+          ? 'border-camel-500 bg-camel-500 text-charcoal-900'
+          : 'border-old-money-200 bg-cream-50 text-charcoal-700 hover:bg-old-money-50'
       }`}
     >
       {filterYear || 'Год'}
@@ -139,8 +139,8 @@ export default function TopDogsFilters({
                       }}
                       className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
                         !filterYear
-                          ? 'bg-camel-500 text-charcoal-900 dark:bg-camel-600 dark:text-cream-50'
-                          : 'text-charcoal-700 hover:bg-camel-100 dark:text-charcoal-200 dark:hover:bg-camel-900/30'
+                          ? 'bg-camel-500 text-charcoal-900'
+                          : 'text-charcoal-700 hover:bg-camel-100'
                       }`}
                     >
                       Все года
@@ -155,8 +155,8 @@ export default function TopDogsFilters({
                         }}
                         className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
                           filterYear === year
-                            ? 'bg-camel-500 text-charcoal-900 dark:bg-camel-600 dark:text-cream-50'
-                            : 'text-charcoal-700 hover:bg-camel-100 dark:text-charcoal-200 dark:hover:bg-camel-900/30'
+                            ? 'bg-camel-500 text-charcoal-900'
+                            : 'text-charcoal-700 hover:bg-camel-100'
                         }`}
                       >
                         {year}
@@ -191,7 +191,7 @@ export default function TopDogsFilters({
                 >
                   <div className="flex flex-col gap-3 p-2">
                     <label className="block space-y-0.5">
-                      <span className="text-[11px] font-medium text-charcoal-600 dark:text-charcoal-300">
+                      <span className="text-[11px] font-medium text-charcoal-600">
                         Участия
                       </span>
                       <input
@@ -204,7 +204,7 @@ export default function TopDogsFilters({
                       />
                     </label>
                     <label className="block space-y-0.5">
-                      <span className="text-[11px] font-medium text-charcoal-600 dark:text-charcoal-300">
+                      <span className="text-[11px] font-medium text-charcoal-600">
                         CS
                       </span>
                       <input
@@ -218,7 +218,7 @@ export default function TopDogsFilters({
                       />
                     </label>
                     <label className="block space-y-0.5">
-                      <span className="text-[11px] font-medium text-charcoal-600 dark:text-charcoal-300">
+                      <span className="text-[11px] font-medium text-charcoal-600">
                         Скорость
                       </span>
                       <input

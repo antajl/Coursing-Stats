@@ -36,7 +36,7 @@ export default function ShowsTab() {
       <SectionCard title="Официальные источники">
         <p>
           Ниже — выжимка по{' '}
-          <strong className="font-semibold text-charcoal-800 dark:text-charcoal-200">выставкам собак (conformation)</strong>{' '}
+          <strong className="font-semibold text-charcoal-800">выставкам собак (conformation)</strong>{' '}
           по документам РКФ и FCI. Это <strong>отдельная</strong> дисциплина от курсинга, бегов и БЗМП (см. вкладку
           «Соревнования»). При расхождении с протоколом ориентируйтесь на полные тексты.
         </p>
@@ -90,12 +90,12 @@ export default function ShowsTab() {
           <strong>текущего сезона</strong> (кнопка «Сезон YYYY»); снять её — рейтинг по всем загруженным годам.
           При поиске по кличке сезон не режет выдачу.
         </p>
-        <p className="text-[13px] text-charcoal-600 dark:text-charcoal-300">
+        <p className="text-[13px] text-charcoal-600">
           На главной в колонке «Выставки» справа — не один ярлык вроде «BOB», а краткая причина места (например{' '}
-          <strong className="font-semibold text-charcoal-800 dark:text-charcoal-200">BOB ×18 · VCAC ×27</strong>
+          <strong className="font-semibold text-charcoal-800">BOB ×18 · VCAC ×27</strong>
           ): самые весомые награды сезона со счётчиками.
         </p>
-        <p className="text-[13px] text-charcoal-600 dark:text-charcoal-300">
+        <p className="text-[13px] text-charcoal-600">
           Локально на странице выставки: шапка (дата / счётчики / место + строка клуб · ранг · тип), блок{' '}
           <strong>Главный ринг</strong> (вкладки BIS / возраст / BIG), каталог по породам. Клик по кличке открывает
           профиль собаки. Оценки и «Неявка» нормализуются из PDF (в т.ч. переносы вроде «ЩЕ ОП Н», «Нея вка»).
@@ -150,20 +150,20 @@ export default function ShowsTab() {
         <div className="overflow-x-auto">
           <table className="w-full min-w-[520px] border-collapse text-left text-sm">
             <thead>
-              <tr className="border-b border-old-money-200 dark:border-charcoal-600">
+              <tr className="border-b border-old-money-200">
                 <th className="py-2 pr-3 font-semibold">Ранг</th>
                 <th className="py-2 pr-3 font-semibold">Тип</th>
                 <th className="py-2 font-semibold">Сертификаты / титулы</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-old-money-100 dark:divide-charcoal-700">
+            <tbody className="divide-y divide-old-money-100">
               {SHOW_RANKS.map((row) => (
                 <tr key={row.rank}>
-                  <td className="py-2 pr-3 font-mono text-xs font-bold text-camel-700 dark:text-camel-400">
+                  <td className="py-2 pr-3 font-mono text-xs font-bold text-camel-700">
                     {row.rank}
                   </td>
-                  <td className="py-2 pr-3 text-charcoal-600 dark:text-charcoal-300">{row.scope}</td>
-                  <td className="py-2 text-charcoal-600 dark:text-charcoal-300">{row.certs}</td>
+                  <td className="py-2 pr-3 text-charcoal-600">{row.scope}</td>
+                  <td className="py-2 text-charcoal-600">{row.certs}</td>
                 </tr>
               ))}
             </tbody>
@@ -173,7 +173,7 @@ export default function ShowsTab() {
       </SectionCard>
 
       <SectionCard title="Кумулятивные титулы">
-        <p className="text-xs text-old-money-600 dark:text-old-money-400">
+        <p className="text-xs text-old-money-600">
           Оформляются в РКФ по набору сертификатов — не путать с наградами одного дня.
         </p>
         <CumulativeTitlesGrid
@@ -201,8 +201,8 @@ export default function ShowsTab() {
         <dl className="space-y-4">
           {GUIDE_SHOWS_FAQS.map((faq) => (
             <div key={faq.question}>
-              <dt className="font-semibold text-charcoal-900 dark:text-charcoal-100">{faq.question}</dt>
-              <dd className="mt-1 text-[13px] text-charcoal-600 dark:text-charcoal-300">{faq.answer}</dd>
+              <dt className="font-semibold text-charcoal-900">{faq.question}</dt>
+              <dd className="mt-1 text-[13px] text-charcoal-600">{faq.answer}</dd>
             </div>
           ))}
         </dl>

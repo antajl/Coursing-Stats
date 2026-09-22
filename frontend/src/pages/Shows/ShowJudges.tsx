@@ -211,7 +211,7 @@ export default function ShowJudges() {
   if (showSkeleton) {
     return (
       <div className="mx-auto max-w-full space-y-4 pb-2 sm:pb-4" aria-busy="true" aria-live="polite">
-        <p className="text-xs text-charcoal-500 dark:text-charcoal-400">Загрузка судей…</p>
+        <p className="text-xs text-charcoal-500">Загрузка судей…</p>
         <SkeletonLoader variant="card" count={8} />
       </div>
     )
@@ -219,7 +219,7 @@ export default function ShowJudges() {
 
   if (loadFailed) {
     return (
-      <div className="overflow-hidden rounded-xl border border-old-money-200 bg-white dark:border-charcoal-600 dark:bg-charcoal-800">
+      <div className="overflow-hidden rounded-xl border border-old-money-200 bg-white">
         <EmptyState
           title="Судьи не загружены"
           description="Индекс shows/indexes/judges.json пуст. Пересоберите build-show-indexes."
@@ -231,7 +231,7 @@ export default function ShowJudges() {
   return (
     <div className="mx-auto max-w-full space-y-4 pb-2 sm:pb-4">
       {judgesPartial ? (
-        <p className="text-xs text-charcoal-500 dark:text-charcoal-400" aria-live="polite">
+        <p className="text-xs text-charcoal-500" aria-live="polite">
           Показан топ судей — полный список подгрузится при поиске, фильтре или прокрутке
         </p>
       ) : null}
@@ -294,7 +294,7 @@ export default function ShowJudges() {
       />
 
       {sortedJudges.length === 0 ? (
-        <div className="overflow-hidden rounded-xl border border-old-money-200 bg-white dark:border-charcoal-600 dark:bg-charcoal-800">
+        <div className="overflow-hidden rounded-xl border border-old-money-200 bg-white">
           <EmptyState
             title="Судьи не найдены"
             description={

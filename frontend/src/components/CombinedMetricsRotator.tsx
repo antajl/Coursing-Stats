@@ -56,10 +56,10 @@ function getSharedSlide() {
 function MutedMetric({ value, label }: { value: string; label: string }) {
   return (
     <span className="inline-flex items-baseline gap-0.5">
-      <span className="text-[10px] font-medium tabular-nums text-charcoal-400 dark:text-charcoal-500">
+      <span className="text-[10px] font-medium tabular-nums text-charcoal-400">
         {value}
       </span>
-      <span className="text-[7px] font-medium uppercase tracking-wide text-charcoal-400/90 dark:text-charcoal-500">
+      <span className="text-[7px] font-medium uppercase tracking-wide text-charcoal-400/90">
         {label}
       </span>
     </span>
@@ -69,8 +69,8 @@ function MutedMetric({ value, label }: { value: string; label: string }) {
 function BigMetric({ value, label }: { value: string; label: string }) {
   return (
     <div className="flex items-baseline justify-end gap-1 leading-none">
-      <span className="text-lg font-bold tabular-nums text-camel-700 dark:text-camel-400">{value}</span>
-      <span className="text-[8px] font-semibold uppercase tracking-wide text-charcoal-500 dark:text-charcoal-400">
+      <span className="text-lg font-bold tabular-nums text-camel-700">{value}</span>
+      <span className="text-[8px] font-semibold uppercase tracking-wide text-charcoal-500">
         {label}
       </span>
     </div>

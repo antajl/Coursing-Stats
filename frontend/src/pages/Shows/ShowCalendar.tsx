@@ -212,7 +212,7 @@ export default function ShowCalendar() {
         />
       }
       bottomLeft={
-        <p className="text-xs text-charcoal-500 dark:text-charcoal-300">
+        <p className="text-xs text-charcoal-500">
           {`Всего событий: ${exhibitions.length} · отфильтровано: ${filteredGroups.length} · с результатом: ${withResultCount}`}
         </p>
       }
@@ -233,7 +233,7 @@ export default function ShowCalendar() {
       <div className="max-w-full mx-auto pb-2 sm:pb-4">
         <div className="mb-4">{pageToolbar}</div>
         <div className="min-h-[360px] flex items-center justify-center">
-          <p className="text-sm text-red-600 dark:text-red-400">
+          <p className="text-sm text-red-600">
             Ошибка загрузки календаря. Попробуйте позже.
           </p>
         </div>

@@ -60,29 +60,29 @@ export default function RegisterPage() {
     <div className="min-h-screen flex items-center justify-center px-4">
       <div className="max-w-md w-full">
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-charcoal-900 dark:text-cream-100 mb-2">
+          <h1 className="text-3xl font-bold text-charcoal-900 mb-2">
             Создать аккаунт
           </h1>
-          <p className="text-charcoal-600 dark:text-cream-300">
+          <p className="text-charcoal-600">
             Регистрация для сохранения избранных собак
           </p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           {error && (
-            <div className="bg-terracotta-100 dark:bg-terracotta-900/30 border border-terracotta-300 dark:border-terracotta-700 text-terracotta-800 dark:text-terracotta-200 px-4 py-3 rounded">
+            <div className="bg-terracotta-100 border border-terracotta-300 text-terracotta-800 px-4 py-3 rounded">
               {error}
             </div>
           )}
 
           {info && (
-            <div className="bg-green-100 dark:bg-green-900/30 border border-green-300 dark:border-green-700 text-green-800 dark:text-green-200 px-4 py-3 rounded">
+            <div className="bg-green-100 border border-green-300 text-green-800 px-4 py-3 rounded">
               {info}
             </div>
           )}
 
           <div>
-            <label htmlFor="displayName" className="block text-sm font-medium text-charcoal-700 dark:text-cream-300 mb-1">
+            <label htmlFor="displayName" className="block text-sm font-medium text-charcoal-700 mb-1">
               Имя
             </label>
             <input
@@ -94,13 +94,13 @@ export default function RegisterPage() {
               minLength={1}
               maxLength={50}
               autoComplete="name"
-              className="w-full px-4 py-2 border border-charcoal-300 dark:border-charcoal-600 rounded-lg bg-white dark:bg-charcoal-800 text-charcoal-900 dark:text-cream-100 focus:ring-2 focus:ring-camel-500 focus:border-transparent"
+              className="w-full px-4 py-2 border border-charcoal-300 rounded-lg bg-white text-charcoal-900 focus:ring-2 focus:ring-camel-500 focus:border-transparent"
               disabled={loading}
             />
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-charcoal-700 dark:text-cream-300 mb-1">
+            <label htmlFor="email" className="block text-sm font-medium text-charcoal-700 mb-1">
               Email
             </label>
             <input
@@ -110,13 +110,13 @@ export default function RegisterPage() {
               onChange={(e) => setEmail(e.target.value)}
               required
               autoComplete="email"
-              className="w-full px-4 py-2 border border-charcoal-300 dark:border-charcoal-600 rounded-lg bg-white dark:bg-charcoal-800 text-charcoal-900 dark:text-cream-100 focus:ring-2 focus:ring-camel-500 focus:border-transparent"
+              className="w-full px-4 py-2 border border-charcoal-300 rounded-lg bg-white text-charcoal-900 focus:ring-2 focus:ring-camel-500 focus:border-transparent"
               disabled={loading}
             />
           </div>
 
           <div className="relative">
-            <label htmlFor="password" className="block text-sm font-medium text-charcoal-700 dark:text-cream-300 mb-1">
+            <label htmlFor="password" className="block text-sm font-medium text-charcoal-700 mb-1">
               Пароль (минимум 12 символов)
             </label>
             <input
@@ -127,7 +127,7 @@ export default function RegisterPage() {
               required
               minLength={12}
               autoComplete="new-password"
-              className="w-full px-4 py-2 pr-12 border border-charcoal-300 dark:border-charcoal-600 rounded-lg bg-white dark:bg-charcoal-800 text-charcoal-900 dark:text-cream-100 focus:ring-2 focus:ring-camel-500 focus:border-transparent"
+              className="w-full px-4 py-2 pr-12 border border-charcoal-300 rounded-lg bg-white text-charcoal-900 focus:ring-2 focus:ring-camel-500 focus:border-transparent"
               disabled={loading}
             />
             <button
@@ -135,7 +135,7 @@ export default function RegisterPage() {
               onMouseDown={() => setShowPassword(true)}
               onMouseUp={() => setShowPassword(false)}
               onMouseLeave={() => setShowPassword(false)}
-              className="absolute right-3 top-8 text-charcoal-500 hover:text-charcoal-700 dark:text-charcoal-400 dark:hover:text-charcoal-200"
+              className="absolute right-3 top-8 text-charcoal-500 hover:text-charcoal-700"
               disabled={loading}
             >
               {showPassword ? (
@@ -161,10 +161,10 @@ export default function RegisterPage() {
 
           <div className="relative my-6">
             <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-charcoal-300 dark:border-charcoal-600"></div>
+              <div className="w-full border-t border-charcoal-300"></div>
             </div>
             <div className="relative flex justify-center text-sm">
-              <span className="px-2 bg-white dark:bg-charcoal-900 text-charcoal-600 dark:text-cream-300">или с помощью</span>
+              <span className="px-2 bg-white text-charcoal-600">или с помощью</span>
             </div>
           </div>
 
@@ -173,29 +173,29 @@ export default function RegisterPage() {
               type="button"
               onClick={() => window.location.href = `https://oauth.yandex.ru/authorize?response_type=code&client_id=165a25912ff74a4ca941c6048ece132e&redirect_uri=${encodeURIComponent(redirectUri)}&state=${encodeURIComponent(accountRedirect)}`}
               disabled={loading}
-              className="flex items-center justify-center gap-2 py-3 px-4 border border-charcoal-300 dark:border-charcoal-600 rounded-lg bg-white dark:bg-charcoal-800 hover:bg-charcoal-50 dark:hover:bg-charcoal-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="flex items-center justify-center gap-2 py-3 px-4 border border-charcoal-300 rounded-lg bg-white hover:bg-charcoal-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
                 <path d="M2.04 12c0-5.523 4.476-10 10-10 5.522 0 10 4.477 10 10s-4.478 10-10 10c-5.524 0-10-4.477-10-10z" fill="#FC3F1D"/>
                 <path d="M13.32 7.666h-.924c-1.694 0-2.585.858-2.585 2.123 0 1.43.616 2.1 1.881 2.959l1.045.704-3.003 4.487H7.49l2.695-4.014c-1.55-1.111-2.42-2.19-2.42-4.015 0-2.288 1.595-3.85 4.62-3.85h3.003v11.868H13.32V7.666z" fill="#fff"/>
               </svg>
-              <span className="text-sm font-medium text-charcoal-900 dark:text-cream-100">Яндекс</span>
+              <span className="text-sm font-medium text-charcoal-900">Яндекс</span>
             </button>
 
             <button
               type="button"
               disabled={loading}
-              className="flex items-center justify-center gap-2 py-3 px-4 border border-charcoal-300 dark:border-charcoal-600 rounded-lg bg-white dark:bg-charcoal-800 hover:bg-charcoal-50 dark:hover:bg-charcoal-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed opacity-50 cursor-not-allowed"
+              className="flex items-center justify-center gap-2 py-3 px-4 border border-charcoal-300 rounded-lg bg-white hover:bg-charcoal-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed opacity-50 cursor-not-allowed"
             >
               <svg className="w-6 h-6" viewBox="0 0 24 24" fill="#0077FF">
                 <path d="M12.785 16.241c-.692 0-1.313-.094-1.862-.281-.55-.188-.99-.458-1.322-.812-.332-.354-.588-.79-.768-1.307-.18-.517-.27-1.09-.27-1.719 0-.629.09-1.202.27-1.719.18-.517.436-.953.768-1.307.332-.354.772-.624 1.322-.812.55-.187 1.17-.281 1.862-.281.692 0 1.313.094 1.862.281.55.188.99.458 1.322.812.332.354.588.79.768 1.307.18.517.27 1.09.27 1.719 0 .629-.09 1.202-.27 1.719-.18.517-.436.953-.768 1.307-.332.354-.772.624-1.322.812-.55.187-1.17.281-1.862.281zm0-1.5c.475 0 .875-.062 1.2-.187.325-.125.588-.293.788-.506.2-.213.344-.463.432-.75.088-.287.132-.596.132-.928 0-.332-.044-.641-.132-.928-.088-.287-.232-.537-.432-.75-.2-.213-.463-.381-.788-.506-.325-.125-.725-.187-1.2-.187-.475 0-.875.062-1.2.187-.325.125-.588.293-.788.506-.2.213-.344.463-.432.75-.088.287-.132.596-.132.928 0 .332.044.641.132.928.088.287.232.537.432.75.2.213.463.381.788.506.325.125.725.187 1.2.187z"/>
               </svg>
-              <span className="text-sm font-medium text-charcoal-900 dark:text-cream-100">ВКонтакте</span>
+              <span className="text-sm font-medium text-charcoal-900">ВКонтакте</span>
             </button>
           </div>
         </form>
 
-        <p className="text-center mt-6 text-charcoal-600 dark:text-cream-300">
+        <p className="text-center mt-6 text-charcoal-600">
           Уже есть аккаунт?{' '}
           <Link to="/login" className="text-camel-600 hover:text-camel-700 font-medium">
             Войти

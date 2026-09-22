@@ -82,7 +82,7 @@ export default function DoninoStatsSummary({
           </span>
           <span>
             {mode === 'speed' ? 'лучшая' : 'лучшее'}{' '}
-            <strong className="font-semibold text-camel-700 dark:text-camel-400">{bestText}</strong>
+            <strong className="font-semibold text-camel-700">{bestText}</strong>
             {bestDogName && (
               <>
                 {' '}
@@ -90,7 +90,7 @@ export default function DoninoStatsSummary({
                 <DoninoDogNameLink
                   name={bestDogName}
                   breed={bestDogBreed ?? ''}
-                  className="font-medium text-charcoal-800 dark:text-charcoal-100"
+                  className="font-medium text-charcoal-800"
                 />
               </>
             )}

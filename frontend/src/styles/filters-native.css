@@ -24,16 +24,6 @@
   }
 }
 
-/* Native select: readable options in dark mode */
 select {
   color-scheme: light;
-}
-
-.dark select {
-  color-scheme: dark;
-}
-
-.dark select option {
-  background-color: var(--char-800);
-  color: var(--char-100);
 }

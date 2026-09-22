@@ -59,14 +59,13 @@ export default function ToolbarSelectDropdown({
             aria-label={placeholder}
             className={[
               'cs-filter-panel-enter fixed inset-x-0 bottom-0 z-50 flex flex-col overflow-hidden rounded-t-2xl border border-old-money-200 bg-cream-50 shadow-2xl',
-              'dark:border-charcoal-600 dark:bg-charcoal-800',
               'max-h-[min(50vh,400px)]',
               // Desktop popover
               'md:absolute md:inset-auto md:left-0 md:top-full md:mt-1.5 md:w-[min(200px,calc(100vw-2rem))] md:rounded-xl md:shadow-xl',
             ].join(' ')}
           >
             <div className="flex shrink-0 justify-center pt-2.5 md:hidden" aria-hidden>
-              <span className="h-1 w-10 rounded-full bg-old-money-300 dark:bg-charcoal-500" />
+              <span className="h-1 w-10 rounded-full bg-old-money-300" />
             </div>
             <div className="min-h-0 flex-1 overflow-y-auto overflow-x-hidden overscroll-contain px-2 pb-2 pt-1 md:px-1 md:pb-1 md:pt-1">
               <div className="space-y-0.5">
@@ -80,7 +79,7 @@ export default function ToolbarSelectDropdown({
                     className={`w-full rounded-lg px-3 py-2 text-left text-xs font-medium transition-colors ${
                       value === option
                         ? 'bg-camel-500 text-charcoal-900'
-                        : 'text-charcoal-700 hover:bg-old-money-100 dark:text-charcoal-200 dark:hover:bg-charcoal-700'
+                        : 'text-charcoal-700 hover:bg-old-money-100'
                     }`}
                   >
                     {option}

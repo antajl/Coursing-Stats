@@ -71,7 +71,7 @@ export default function DoninoRecordsColumns({
   const emptyBoth = speedRecords.length === 0 && coursingRecords.length === 0
 
   if (emptyBoth) {
-    return <div className="py-12 text-center text-old-money-600 dark:text-old-money-400">Нет данных</div>
+    return <div className="py-12 text-center text-old-money-600">Нет данных</div>
   }
 
   return (
@@ -149,7 +149,7 @@ export default function DoninoRecordsColumns({
       {hasMore && (
         <div
           ref={loadMoreRef}
-          className="py-4 text-center text-sm text-charcoal-500 dark:text-charcoal-400"
+          className="py-4 text-center text-sm text-charcoal-500"
         >
           Загрузка…
         </div>

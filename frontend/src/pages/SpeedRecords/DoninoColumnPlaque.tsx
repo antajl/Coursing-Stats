@@ -24,12 +24,12 @@ export default function DoninoColumnPlaque({
   asHeader = false,
 }: DoninoColumnPlaqueProps) {
   const shellClass = asHeader
-    ? 'donino-column-plaque relative flex h-10 min-h-10 items-center border-b border-old-money-200 bg-cream-100/90 px-3.5 dark:border-charcoal-600 dark:bg-charcoal-800/90'
-    : 'donino-column-plaque relative mb-3 flex h-10 min-h-10 items-center rounded-xl border border-old-money-200 bg-cream-100/90 px-3.5 dark:border-charcoal-600 dark:bg-charcoal-800/90'
+    ? 'donino-column-plaque relative flex h-10 min-h-10 items-center border-b border-old-money-200 bg-cream-100/90 px-3.5'
+    : 'donino-column-plaque relative mb-3 flex h-10 min-h-10 items-center rounded-xl border border-old-money-200 bg-cream-100/90 px-3.5'
 
   return (
     <div className={shellClass}>
-      <h2 className="relative z-[1] shrink-0 font-mono text-[11px] font-bold uppercase tracking-widest text-camel-700 dark:text-camel-400">
+      <h2 className="relative z-[1] shrink-0 font-mono text-[11px] font-bold uppercase tracking-widest text-camel-700">
         {title}
       </h2>
       {action && (
@@ -37,7 +37,7 @@ export default function DoninoColumnPlaque({
           <div className="pointer-events-auto">{action}</div>
         </div>
       )}
-      <span className="relative z-[1] ml-auto shrink-0 text-xs font-semibold text-old-money-600 dark:text-old-money-400">
+      <span className="relative z-[1] ml-auto shrink-0 text-xs font-semibold text-old-money-600">
         {formatDogCount(count)}
       </span>
     </div>
@@ -56,11 +56,11 @@ export function DoninoColumnShell({
   listRef?: Ref<HTMLDivElement>
 }) {
   return (
-    <section className="min-w-0 overflow-hidden rounded-xl border border-old-money-200 bg-white dark:border-charcoal-600 dark:bg-charcoal-800">
+    <section className="min-w-0 overflow-hidden rounded-xl border border-old-money-200 bg-white">
       {plaque}
       <div
         ref={listRef}
-        className="flex flex-col divide-y divide-old-money-100 pl-[3px] dark:divide-charcoal-700"
+        className="flex flex-col divide-y divide-old-money-100 pl-[3px]"
       >
         {children}
       </div>

@@ -12,7 +12,7 @@ export default function DogSexIcon({ sex, className = '', size = 16 }: DogSexIco
       <Venus
         size={size}
         strokeWidth={2}
-        className={`shrink-0 text-rose-400 dark:text-rose-500 ${className}`}
+        className={`shrink-0 text-rose-400 ${className}`}
         aria-label="Сука"
         title="Сука"
       />
@@ -24,7 +24,7 @@ export default function DogSexIcon({ sex, className = '', size = 16 }: DogSexIco
       <Mars
         size={size}
         strokeWidth={2}
-        className={`shrink-0 text-slate-500 dark:text-slate-400 ${className}`}
+        className={`shrink-0 text-slate-500 ${className}`}
         aria-label="Кабель"
         title="Кабель"
       />

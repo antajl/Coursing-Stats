@@ -103,8 +103,8 @@ export default function DogTooltip({ dogId, pointer, onClose }) {
   if (loading) {
     return (
       <div ref={tooltipRef} style={style}
-        className="bg-white dark:bg-charcoal-800 rounded-2xl shadow-xl border border-old-money-200 dark:border-charcoal-600 p-5 w-[320px] md:w-[440px] animate-fade-in">
-          <div className="flex items-center gap-3 text-old-money-500 dark:text-old-money-400">
+        className="bg-white rounded-2xl shadow-xl border border-old-money-200 p-5 w-[320px] md:w-[440px] animate-fade-in">
+          <div className="flex items-center gap-3 text-old-money-500">
           <div className="h-4 w-4 animate-spin rounded-full border-2 border-old-money-300 border-t-camel-600" />
           <span className="text-sm">Загрузка...</span>
         </div>
@@ -116,8 +116,8 @@ export default function DogTooltip({ dogId, pointer, onClose }) {
   if (error) {
     return (
       <div ref={tooltipRef} style={style}
-        className="bg-white dark:bg-charcoal-800 rounded-2xl shadow-xl border border-red-200 dark:border-red-700 p-5 w-[320px] md:w-[440px] animate-fade-in">
-        <div className="text-sm text-red-500 dark:text-red-400">{error}</div>
+        className="bg-white rounded-2xl shadow-xl border border-red-200 p-5 w-[320px] md:w-[440px] animate-fade-in">
+        <div className="text-sm text-red-500">{error}</div>
       </div>
     )
   }
@@ -143,37 +143,37 @@ export default function DogTooltip({ dogId, pointer, onClose }) {
   const bestSpeedEventId = racing.best_speed_event_id || null
   const avgSpeedEventId = racing.avg_speed_event_id || null
 
-  const statCellClass = 'bg-white dark:bg-charcoal-800 rounded-lg p-2 shadow-sm text-center'
-  const statLabelClass = 'text-[10px] text-gray-400 dark:text-gray-500 mb-0.5'
-  const linkCellClass = `${statCellClass} block transition-colors hover:bg-camel-50 dark:hover:bg-charcoal-700`
-  const linkCellBlueClass = `${statCellClass} block transition-colors hover:bg-warm-blue-50 dark:hover:bg-charcoal-700`
+  const statCellClass = 'bg-white rounded-lg p-2 shadow-sm text-center'
+  const statLabelClass = 'text-[10px] text-gray-400 mb-0.5'
+  const linkCellClass = `${statCellClass} block transition-colors hover:bg-camel-50`
+  const linkCellBlueClass = `${statCellClass} block transition-colors hover:bg-warm-blue-50`
 
   // ── ПОЛНАЯ карточка (единственный режим) ─────────────────────────────────
   return (
       <div ref={tooltipRef} style={style}
-        className="bg-white dark:bg-charcoal-800 rounded-2xl shadow-xl border border-old-money-200 dark:border-charcoal-600 w-[320px] md:w-[440px] animate-fade-in-scale">
+        className="bg-white rounded-2xl shadow-xl border border-old-money-200 w-[320px] md:w-[440px] animate-fade-in-scale">
 
         <div className="p-4 md:p-5 relative">
 
           {/* ── Шапка ─────────────────────────────────────────────────────── */}
-          <div className="mb-4 pb-4 border-b border-old-money-100 dark:border-charcoal-600">
+          <div className="mb-4 pb-4 border-b border-old-money-100">
             <div className="min-w-0">
               <div className="flex items-baseline gap-2 flex-wrap">
-                <h3 className="text-base font-bold font-serif text-charcoal-900 dark:text-charcoal-100 leading-tight">
+                <h3 className="text-base font-bold font-serif text-charcoal-900 leading-tight">
                   {primary}
                 </h3>
                 {dogData.sex && (
-                  <span className="text-sm text-gray-400 dark:text-gray-500 flex-shrink-0">
+                  <span className="text-sm text-gray-400 flex-shrink-0">
                     {dogData.sex === 'M' ? '♂' : '♀'}
                   </span>
                 )}
               </div>
               {secondary && (
-                <div className="text-xs text-old-money-500 dark:text-old-money-400 mt-0.5 truncate">{secondary}</div>
+                <div className="text-xs text-old-money-500 mt-0.5 truncate">{secondary}</div>
               )}
               {/* Порода — под именем, не правее */}
               <div className="mt-1.5">
-                <span className="inline-block bg-old-money-100 dark:bg-charcoal-700 text-old-money-700 dark:text-old-money-300 text-xs font-medium font-serif rounded-full py-0.5 px-3">
+                <span className="inline-block bg-old-money-100 text-old-money-700 text-xs font-medium font-serif rounded-full py-0.5 px-3">
                   {dogData.breed}
                 </span>
               </div>
@@ -185,29 +185,29 @@ export default function DogTooltip({ dogId, pointer, onClose }) {
 
             {/* Курсинг */}
             {hasCoursingData && (
-              <div className="bg-gradient-to-br from-old-money-50 dark:from-charcoal-700 to-old-money-100 dark:to-charcoal-600 rounded-xl p-3 border border-old-money-200 dark:border-charcoal-600">
-                <div className="text-xs font-bold text-old-money-700 dark:text-old-money-300 mb-3">Курсинг / БЗМП</div>
+              <div className="bg-gradient-to-br from-old-money-50 to-old-money-100 rounded-xl p-3 border border-old-money-200">
+                <div className="text-xs font-bold text-old-money-700 mb-3">Курсинг / БЗМП</div>
 
                 {/* Лучший результат */}
                 {bestScoreEventId ? (
                   <ProcoursingEventLink
                     eventId={bestScoreEventId}
                     procoursingUrl={procoursingUrlForEventId(eventResultsUrls, bestScoreEventId)}
-                    className="group mb-3 block rounded-lg border border-camel-200 dark:border-camel-600 bg-white dark:bg-charcoal-800 p-3 text-center shadow-sm transition-colors hover:bg-camel-50 dark:hover:bg-charcoal-700"
+                    className="group mb-3 block rounded-lg border border-camel-200 bg-white p-3 text-center shadow-sm transition-colors hover:bg-camel-50"
                     title="Открыть результаты соревнования"
                   >
-                    <div className="text-[10px] text-gray-400 dark:text-gray-500 mb-1">Лучший результат</div>
-                    <div className="text-2xl font-bold text-camel-700 dark:text-camel-300 leading-none group-hover:text-camel-800 dark:group-hover:text-camel-200">
+                    <div className="text-[10px] text-gray-400 mb-1">Лучший результат</div>
+                    <div className="text-2xl font-bold text-camel-700 leading-none group-hover:text-camel-800">
                       {coursing.best_score ?? '—'}
                     </div>
-                    <div className="mt-1 text-[10px] text-camel-700 dark:text-camel-500 opacity-0 transition-opacity group-hover:opacity-100">
+                    <div className="mt-1 text-[10px] text-camel-700 opacity-0 transition-opacity group-hover:opacity-100">
                       открыть результаты →
                     </div>
                   </ProcoursingEventLink>
                 ) : (
-                  <div className="bg-white dark:bg-charcoal-800 rounded-lg p-3 shadow-sm mb-3 text-center">
-                    <div className="text-[10px] text-gray-400 dark:text-gray-500 mb-1">Лучший результат</div>
-                    <div className="text-2xl font-bold text-camel-700 dark:text-camel-300 leading-none">
+                  <div className="bg-white rounded-lg p-3 shadow-sm mb-3 text-center">
+                    <div className="text-[10px] text-gray-400 mb-1">Лучший результат</div>
+                    <div className="text-2xl font-bold text-camel-700 leading-none">
                       {coursing.best_score ?? '—'}
                     </div>
                   </div>
@@ -216,7 +216,7 @@ export default function DogTooltip({ dogId, pointer, onClose }) {
                 <div className="grid grid-cols-3 gap-2 mb-3">
                   <div className={statCellClass}>
                     <div className={statLabelClass}>Участия</div>
-                    <div className="text-base font-bold text-old-money-800 dark:text-old-money-300">{coursing.total_starts}</div>
+                    <div className="text-base font-bold text-old-money-800">{coursing.total_starts}</div>
                   </div>
                   {bestJudgeScoreEventId ? (
                     <ProcoursingEventLink
@@ -226,12 +226,12 @@ export default function DogTooltip({ dogId, pointer, onClose }) {
                       title="Открыть результаты соревнования"
                     >
                       <div className={statLabelClass}>Лучшая оценка</div>
-                      <div className="text-base font-bold text-old-money-800 dark:text-old-money-300">{formatScore(coursing.best_judge_score)}</div>
+                      <div className="text-base font-bold text-old-money-800">{formatScore(coursing.best_judge_score)}</div>
                     </ProcoursingEventLink>
                   ) : (
                     <div className={statCellClass}>
                       <div className={statLabelClass}>Лучшая оценка</div>
-                      <div className="text-base font-bold text-old-money-800 dark:text-old-money-300">{formatScore(coursing.best_judge_score)}</div>
+                      <div className="text-base font-bold text-old-money-800">{formatScore(coursing.best_judge_score)}</div>
                     </div>
                   )}
                   {avgJudgeScoreEventId ? (
@@ -242,12 +242,12 @@ export default function DogTooltip({ dogId, pointer, onClose }) {
                       title="Открыть результаты соревнования"
                     >
                       <div className={statLabelClass}>Средняя оценка</div>
-                      <div className="text-base font-bold text-old-money-800 dark:text-old-money-300">{formatScore(coursing.avg_judge_score)}</div>
+                      <div className="text-base font-bold text-old-money-800">{formatScore(coursing.avg_judge_score)}</div>
                     </ProcoursingEventLink>
                   ) : (
                     <div className={statCellClass}>
                       <div className={statLabelClass}>Средняя оценка</div>
-                      <div className="text-base font-bold text-old-money-800 dark:text-old-money-300">{formatScore(coursing.avg_judge_score)}</div>
+                      <div className="text-base font-bold text-old-money-800">{formatScore(coursing.avg_judge_score)}</div>
                     </div>
                   )}
                 </div>
@@ -268,32 +268,32 @@ export default function DogTooltip({ dogId, pointer, onClose }) {
 
             {/* Рейсинг */}
             {hasRacingData && (
-              <div className="rounded-xl border border-warm-blue-200 dark:border-warm-blue-600 bg-gradient-to-br from-warm-blue-50 dark:from-charcoal-700 to-warm-blue-100 dark:to-charcoal-600 p-3">
-                <div className="mb-3 text-xs font-bold text-warm-blue-800 dark:text-warm-blue-400">Рейсинг</div>
+              <div className="rounded-xl border border-warm-blue-200 bg-gradient-to-br from-warm-blue-50 to-warm-blue-100 p-3">
+                <div className="mb-3 text-xs font-bold text-warm-blue-800">Рейсинг</div>
 
                 {/* Лучшая скорость */}
                 {bestSpeedEventId ? (
                   <ProcoursingEventLink
                     eventId={bestSpeedEventId}
                     procoursingUrl={procoursingUrlForEventId(eventResultsUrls, bestSpeedEventId)}
-                    className="group mb-3 block rounded-lg border border-warm-blue-200 dark:border-warm-blue-600 bg-white dark:bg-charcoal-800 p-3 text-center shadow-sm transition-colors hover:bg-warm-blue-50 dark:hover:bg-charcoal-700"
+                    className="group mb-3 block rounded-lg border border-warm-blue-200 bg-white p-3 text-center shadow-sm transition-colors hover:bg-warm-blue-50"
                     title="Открыть результаты соревнования"
                   >
-                    <div className="text-[10px] text-gray-400 dark:text-gray-500 mb-1">Лучшая скорость</div>
-                    <div className="whitespace-nowrap text-2xl font-bold text-warm-blue-800 dark:text-warm-blue-400 leading-none group-hover:text-warm-blue-900 dark:group-hover:text-warm-blue-300">
+                    <div className="text-[10px] text-gray-400 mb-1">Лучшая скорость</div>
+                    <div className="whitespace-nowrap text-2xl font-bold text-warm-blue-800 leading-none group-hover:text-warm-blue-900">
                       {racing.best_speed ?? '—'}
                       {racing.best_speed && <span className="text-sm font-normal text-gray-400 ml-1">км/ч</span>}
                     </div>
-                    <div className="mt-1 text-[10px] text-warm-blue-700 dark:text-warm-blue-500 opacity-0 transition-opacity group-hover:opacity-100">
+                    <div className="mt-1 text-[10px] text-warm-blue-700 opacity-0 transition-opacity group-hover:opacity-100">
                       открыть результаты →
                     </div>
                   </ProcoursingEventLink>
                 ) : (
-                  <div className="bg-white dark:bg-charcoal-800 rounded-lg p-3 shadow-sm mb-3 text-center">
-                    <div className="text-[10px] text-gray-400 dark:text-gray-500 mb-1">Лучшая скорость</div>
-                    <div className="whitespace-nowrap text-2xl font-bold text-warm-blue-800 dark:text-warm-blue-400 leading-none">
+                  <div className="bg-white rounded-lg p-3 shadow-sm mb-3 text-center">
+                    <div className="text-[10px] text-gray-400 mb-1">Лучшая скорость</div>
+                    <div className="whitespace-nowrap text-2xl font-bold text-warm-blue-800 leading-none">
                       {racing.best_speed ?? '—'}
-                      {racing.best_speed && <span className="text-sm font-normal text-gray-400 dark:text-gray-500 ml-1">км/ч</span>}
+                      {racing.best_speed && <span className="text-sm font-normal text-gray-400 ml-1">км/ч</span>}
                     </div>
                   </div>
                 )}
@@ -301,7 +301,7 @@ export default function DogTooltip({ dogId, pointer, onClose }) {
                 <div className="grid grid-cols-2 gap-2">
                   <div className={statCellClass}>
                     <div className={statLabelClass}>Участия</div>
-                    <div className="text-base font-bold text-warm-blue-900 dark:text-warm-blue-400">{racing.total_starts}</div>
+                    <div className="text-base font-bold text-warm-blue-900">{racing.total_starts}</div>
                   </div>
                   {avgSpeedEventId ? (
                     <ProcoursingEventLink
@@ -311,9 +311,9 @@ export default function DogTooltip({ dogId, pointer, onClose }) {
                       title="Открыть результаты соревнования"
                     >
                       <div className={statLabelClass}>Средняя</div>
-                      <div className="whitespace-nowrap text-base font-bold text-warm-blue-900 dark:text-warm-blue-400">
+                      <div className="whitespace-nowrap text-base font-bold text-warm-blue-900">
                         {racing.avg_speed
-                          ? <>{racing.avg_speed}<span className="text-[10px] font-normal text-gray-400 dark:text-gray-500 ml-0.5">км/ч</span></>
+                          ? <>{racing.avg_speed}<span className="text-[10px] font-normal text-gray-400 ml-0.5">км/ч</span></>
                           : '—'
                         }
                       </div>
@@ -321,9 +321,9 @@ export default function DogTooltip({ dogId, pointer, onClose }) {
                   ) : (
                     <div className={statCellClass}>
                       <div className={statLabelClass}>Средняя</div>
-                      <div className="whitespace-nowrap text-base font-bold text-warm-blue-900 dark:text-warm-blue-400">
+                      <div className="whitespace-nowrap text-base font-bold text-warm-blue-900">
                         {racing.avg_speed
-                          ? <>{racing.avg_speed}<span className="text-[10px] font-normal text-gray-400 dark:text-gray-500 ml-0.5">км/ч</span></>
+                          ? <>{racing.avg_speed}<span className="text-[10px] font-normal text-gray-400 ml-0.5">км/ч</span></>
                           : '—'
                         }
                       </div>
@@ -348,8 +348,8 @@ export default function DogTooltip({ dogId, pointer, onClose }) {
 
           {/* ── Владелец ──────────────────────────────────────────────────── */}
           {dogData.owner && (
-            <div className="text-xs text-old-money-500 dark:text-old-money-400 pt-3 border-t border-old-money-100 dark:border-charcoal-600">
-              <span className="font-medium text-old-money-600 dark:text-old-money-300">Владелец:</span> {dogData.owner}
+            <div className="text-xs text-old-money-500 pt-3 border-t border-old-money-100">
+              <span className="font-medium text-old-money-600">Владелец:</span> {dogData.owner}
             </div>
           )}
         </div>

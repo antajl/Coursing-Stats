@@ -30,22 +30,22 @@ export function LinkAccountModal({
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div className="bg-white dark:bg-charcoal-800 rounded-lg p-6 max-w-md w-full mx-4">
-        <h2 className="text-xl font-bold text-charcoal-900 dark:text-cream-100 mb-4">
+      <div className="bg-white rounded-lg p-6 max-w-md w-full mx-4">
+        <h2 className="text-xl font-bold text-charcoal-900 mb-4">
           Связать аккаунт
         </h2>
-        <p className="text-charcoal-600 dark:text-cream-300 mb-4">
+        <p className="text-charcoal-600 mb-4">
           Аккаунт с email {email} уже существует. Хотите связать его с {provider}?
         </p>
         <div className="mb-4">
-          <label className="block text-sm font-medium text-charcoal-700 dark:text-cream-300 mb-2">
+          <label className="block text-sm font-medium text-charcoal-700 mb-2">
             Пароль (если есть)
           </label>
           <input
             type="password"
             value={password}
             onChange={(e) => onPasswordChange(e.target.value)}
-            className="w-full px-3 py-2 border border-charcoal-300 dark:border-charcoal-600 rounded-lg bg-white dark:bg-charcoal-700 text-charcoal-900 dark:text-cream-100"
+            className="w-full px-3 py-2 border border-charcoal-300 rounded-lg bg-white text-charcoal-900"
             placeholder="Введите пароль для подтверждения"
           />
         </div>
@@ -61,7 +61,7 @@ export function LinkAccountModal({
           <button
             type="button"
             onClick={onCancel}
-            className="flex-1 bg-charcoal-200 hover:bg-charcoal-300 dark:bg-charcoal-700 dark:hover:bg-charcoal-600 text-charcoal-900 dark:text-cream-100 font-medium py-2 px-4 rounded-lg transition-colors"
+            className="flex-1 bg-charcoal-200 hover:bg-charcoal-300 text-charcoal-900 font-medium py-2 px-4 rounded-lg transition-colors"
           >
             Отмена
           </button>
@@ -76,11 +76,11 @@ export function DeleteAccountModal({ open, deleting, onConfirm, onCancel }: Dele
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div className="bg-white dark:bg-charcoal-800 rounded-lg p-6 max-w-md w-full mx-4">
-        <h2 className="text-xl font-bold text-charcoal-900 dark:text-cream-100 mb-4">
+      <div className="bg-white rounded-lg p-6 max-w-md w-full mx-4">
+        <h2 className="text-xl font-bold text-charcoal-900 mb-4">
           Удалить аккаунт
         </h2>
-        <p className="text-charcoal-600 dark:text-cream-300 mb-4">
+        <p className="text-charcoal-600 mb-4">
           Вы уверены, что хотите удалить свой аккаунт? Это действие нельзя отменить. Все ваши
           данные, включая избранные собаки, будут удалены.
         </p>
@@ -97,7 +97,7 @@ export function DeleteAccountModal({ open, deleting, onConfirm, onCancel }: Dele
             type="button"
             onClick={onCancel}
             disabled={deleting}
-            className="flex-1 bg-charcoal-200 hover:bg-charcoal-300 dark:bg-charcoal-700 dark:hover:bg-charcoal-600 text-charcoal-900 dark:text-cream-100 font-medium py-2 px-4 rounded-lg transition-colors disabled:opacity-50"
+            className="flex-1 bg-charcoal-200 hover:bg-charcoal-300 text-charcoal-900 font-medium py-2 px-4 rounded-lg transition-colors disabled:opacity-50"
           >
             Отмена
           </button>

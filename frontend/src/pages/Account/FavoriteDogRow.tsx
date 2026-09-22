@@ -63,8 +63,8 @@ export function FavoriteDogRow({
     <div
       className={`group relative flex flex-col gap-3 rounded-xl border p-4 transition-colors ${
         isActive
-          ? 'border-camel-500 bg-camel-50/50 dark:bg-camel-900/25 dark:border-camel-600'
-          : 'border-charcoal-200 dark:border-charcoal-700 bg-white dark:bg-charcoal-800/80 hover:border-camel-400 dark:hover:border-camel-600'
+          ? 'border-camel-500 bg-camel-50/50'
+          : 'border-charcoal-200 bg-white hover:border-camel-400'
       }`}
     >
       <div className="flex items-start gap-3">
@@ -80,26 +80,26 @@ export function FavoriteDogRow({
         )}
         <Link
           to={`/dog/${dog.id}`}
-          className="flex flex-1 min-w-0 items-start gap-2 rounded-md -m-1 p-1 hover:bg-camel-50/60 dark:hover:bg-charcoal-700/40 transition-colors"
+          className="flex flex-1 min-w-0 items-start gap-2 rounded-md -m-1 p-1 hover:bg-camel-50/60 transition-colors"
         >
           <span className="min-w-0 flex-1">
-            <h3 className="font-semibold text-charcoal-900 dark:text-cream-100 truncate text-lg leading-snug group-hover:text-camel-800 dark:group-hover:text-camel-300 transition-colors">
+            <h3 className="font-semibold text-charcoal-900 truncate text-lg leading-snug group-hover:text-camel-800 transition-colors">
               {isActive && (
-                <span className="mr-1.5 inline-flex align-middle text-camel-700 dark:text-camel-300" title="Главная">
+                <span className="mr-1.5 inline-flex align-middle text-camel-700" title="Главная">
                   ★
                 </span>
               )}
               {dog.name_lat}
             </h3>
             {dog.name_ru && dog.name_ru !== dog.name_lat ? (
-              <p className="text-sm text-charcoal-600 dark:text-cream-300 truncate">{dog.name_ru}</p>
+              <p className="text-sm text-charcoal-600 truncate">{dog.name_ru}</p>
             ) : null}
             {meta ? (
-              <p className="text-sm text-charcoal-500 dark:text-charcoal-400 truncate mt-0.5">{meta}</p>
+              <p className="text-sm text-charcoal-500 truncate mt-0.5">{meta}</p>
             ) : null}
           </span>
           <ChevronRight
-            className="mt-1 h-5 w-5 shrink-0 text-charcoal-300 opacity-0 transition-all group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:text-camel-600 dark:text-charcoal-600 dark:group-hover:text-camel-400"
+            className="mt-1 h-5 w-5 shrink-0 text-charcoal-300 opacity-0 transition-all group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:text-camel-600"
             aria-hidden
           />
         </Link>
@@ -109,23 +109,23 @@ export function FavoriteDogRow({
             type="button"
             onClick={() => setMenuOpen((v) => !v)}
             disabled={removing}
-            className="p-2 text-charcoal-400 hover:text-charcoal-700 dark:hover:text-cream-100 transition-colors disabled:opacity-50"
+            className="p-2 text-charcoal-400 hover:text-charcoal-700 transition-colors disabled:opacity-50"
             aria-label={`Действия: ${dog.name_lat}`}
             aria-expanded={menuOpen}
           >
             <MoreHorizontal className="w-5 h-5" />
           </button>
           {menuOpen && (
-            <div className="absolute right-0 z-20 mt-1 min-w-[12rem] rounded-lg border border-charcoal-200 dark:border-charcoal-600 bg-white dark:bg-charcoal-800 shadow-lg py-1 text-sm">
+            <div className="absolute right-0 z-20 mt-1 min-w-[12rem] rounded-lg border border-charcoal-200 bg-white shadow-lg py-1 text-sm">
               {isActive ? (
-                <p className="px-3 py-2 text-camel-800 dark:text-camel-300 inline-flex items-center gap-1.5">
+                <p className="px-3 py-2 text-camel-800 inline-flex items-center gap-1.5">
                   <Pin className="w-3.5 h-3.5" />
                   Главная собака
                 </p>
               ) : (
                 <button
                   type="button"
-                  className="w-full text-left px-3 py-2 hover:bg-cream-100 dark:hover:bg-charcoal-700 text-charcoal-800 dark:text-cream-100"
+                  className="w-full text-left px-3 py-2 hover:bg-cream-100 text-charcoal-800"
                   onClick={() => {
                     onSetActive(dog.id)
                     setMenuOpen(false)
@@ -136,7 +136,7 @@ export function FavoriteDogRow({
               )}
               <button
                 type="button"
-                className="w-full text-left px-3 py-2 hover:bg-cream-100 dark:hover:bg-charcoal-700 text-terracotta-700 dark:text-terracotta-400"
+                className="w-full text-left px-3 py-2 hover:bg-cream-100 text-terracotta-700"
                 onClick={() => {
                   onRemove(dog.id)
                   setMenuOpen(false)
@@ -151,7 +151,7 @@ export function FavoriteDogRow({
 
       <div className={`space-y-1.5 text-sm ${manageMode ? 'pl-7' : ''}`}>
         {c && c.total_starts > 0 && (
-          <p className="tabular-nums text-charcoal-700 dark:text-cream-200">
+          <p className="tabular-nums text-charcoal-700">
             {formatStarts(c.total_starts)}
             <span className="text-charcoal-400 mx-2">·</span>
             🥇 {c.gold}
@@ -162,7 +162,7 @@ export function FavoriteDogRow({
           </p>
         )}
         {dog.lastEvent && (
-          <p className="text-charcoal-500 dark:text-charcoal-400">
+          <p className="text-charcoal-500">
             Последнее участие · {formatRuDate(dog.lastEvent.date_start)}
             {dog.lastEvent.placement != null ? ` · ${dog.lastEvent.placement} место` : ''}
           </p>

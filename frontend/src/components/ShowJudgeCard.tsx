@@ -16,11 +16,11 @@ export interface ShowJudgeCardData {
 
 function StatPill({ label, value }: { label: string; value: string | number }) {
   return (
-    <div className="min-w-[4.5rem] rounded-lg bg-cream-100 px-3 py-1.5 text-center dark:bg-charcoal-700">
-      <p className="mb-0.5 text-[9px] uppercase tracking-wide text-charcoal-500 dark:text-charcoal-400">
+    <div className="min-w-[4.5rem] rounded-lg bg-cream-100 px-3 py-1.5 text-center">
+      <p className="mb-0.5 text-[9px] uppercase tracking-wide text-charcoal-500">
         {label}
       </p>
-      <p className="text-sm font-bold tabular-nums text-camel-700 dark:text-camel-400">{value}</p>
+      <p className="text-sm font-bold tabular-nums text-camel-700">{value}</p>
     </div>
   )
 }
@@ -33,10 +33,10 @@ export default function ShowJudgeCard({ judge }: { judge: ShowJudgeCardData }) {
   return (
     <Link
       to={`/shows/judges/${encodeURIComponent(judge.id)}`}
-      className="flex flex-col gap-3 rounded-xl border border-old-money-200 bg-white p-4 transition-colors duration-200 hover:border-camel-300 hover:bg-cream-50 dark:border-charcoal-600 dark:bg-charcoal-800 dark:hover:border-camel-700 dark:hover:bg-charcoal-700/40 sm:flex-row sm:items-center sm:gap-4"
+      className="flex flex-col gap-3 rounded-xl border border-old-money-200 bg-white p-4 transition-colors duration-200 hover:border-camel-300 hover:bg-cream-50 sm:flex-row sm:items-center sm:gap-4"
     >
       <div className="min-w-0 flex-1">
-        <h3 className="line-clamp-2 break-words text-base font-bold leading-snug text-charcoal-800 dark:text-charcoal-100 sm:text-sm">
+        <h3 className="line-clamp-2 break-words text-base font-bold leading-snug text-charcoal-800 sm:text-sm">
           {displayName}
         </h3>
         {chips.length > 0 && (
@@ -44,13 +44,13 @@ export default function ShowJudgeCard({ judge }: { judge: ShowJudgeCardData }) {
             {chips.map((breed) => (
               <span
                 key={breed}
-                className="max-w-[11rem] truncate rounded-md border border-old-money-200/80 bg-cream-50 px-1.5 py-0.5 text-[10px] font-medium text-charcoal-600 dark:border-charcoal-600 dark:bg-charcoal-900/50 dark:text-charcoal-300"
+                className="max-w-[11rem] truncate rounded-md border border-old-money-200/80 bg-cream-50 px-1.5 py-0.5 text-[10px] font-medium text-charcoal-600"
               >
                 {formatBreedSentenceCase(breed)}
               </span>
             ))}
             {extraBreeds > 0 && (
-              <span className="text-[10px] tabular-nums text-charcoal-400 dark:text-charcoal-500">
+              <span className="text-[10px] tabular-nums text-charcoal-400">
                 +{extraBreeds}
               </span>
             )}

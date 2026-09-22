@@ -19,7 +19,7 @@ export default function DoninoGroupCardList({
 }: DoninoGroupCardListProps) {
   if (rows.length === 0) {
     return (
-      <p className="rounded-xl border border-dashed border-old-money-200 px-4 py-6 text-center text-sm text-charcoal-500 dark:border-charcoal-600 dark:text-charcoal-400">
+      <p className="rounded-xl border border-dashed border-old-money-200 px-4 py-6 text-center text-sm text-charcoal-500">
         Нет данных для выбранных фильтров
       </p>
     )

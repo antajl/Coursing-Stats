@@ -8,7 +8,7 @@ import {
 } from './adminApi';
 
 const inputClass =
-  'w-full rounded-lg border border-old-money-300 bg-white px-2.5 py-1.5 text-sm dark:border-charcoal-600 dark:bg-charcoal-800';
+  'w-full rounded-lg border border-old-money-300 bg-white px-2.5 py-1.5 text-sm';
 
 export default function AdminEventsList() {
   const navigate = useNavigate();
@@ -85,10 +85,10 @@ export default function AdminEventsList() {
     <div className="mx-auto max-w-5xl px-3 pb-10 pt-4 sm:px-4">
       <div className="mb-4 flex flex-wrap items-end justify-between gap-3">
         <div>
-          <h1 className="font-serif text-2xl font-bold text-charcoal-900 dark:text-charcoal-100">
+          <h1 className="font-serif text-2xl font-bold text-charcoal-900">
             Админ · соревнования
           </h1>
-          <p className="mt-1 text-sm text-old-money-600 dark:text-old-money-400">
+          <p className="mt-1 text-sm text-old-money-600">
             Локально · {verifiedCount}/{items.length} проверено за {year || 'все годы'}
           </p>
         </div>
@@ -100,10 +100,10 @@ export default function AdminEventsList() {
           >
             {showCreate ? 'Отмена' : '+ Новое событие'}
           </button>
-          <label className="text-sm text-charcoal-700 dark:text-charcoal-300">
+          <label className="text-sm text-charcoal-700">
             Год{' '}
             <select
-              className="ml-1 rounded-lg border border-old-money-300 bg-white px-2 py-1.5 dark:border-charcoal-600 dark:bg-charcoal-800"
+              className="ml-1 rounded-lg border border-old-money-300 bg-white px-2 py-1.5"
               value={year}
               onChange={(e) => setYear(e.target.value)}
             >
@@ -115,7 +115,7 @@ export default function AdminEventsList() {
               ))}
             </select>
           </label>
-          <label className="flex items-center gap-2 text-sm text-charcoal-700 dark:text-charcoal-300">
+          <label className="flex items-center gap-2 text-sm text-charcoal-700">
             <input
               type="checkbox"
               checked={onlyUnverified}
@@ -129,7 +129,7 @@ export default function AdminEventsList() {
       {showCreate && (
         <form
           onSubmit={onCreate}
-          className="mb-4 grid gap-3 rounded-xl border border-camel-300 bg-camel-50/40 p-4 dark:border-camel-700 dark:bg-charcoal-800/60 sm:grid-cols-2"
+          className="mb-4 grid gap-3 rounded-xl border border-camel-300 bg-camel-50/40 p-4 sm:grid-cols-2"
         >
           <label className="text-sm">
             <span className="mb-1 block text-[11px] uppercase tracking-wide text-old-money-500">
@@ -212,7 +212,7 @@ export default function AdminEventsList() {
       )}
 
       {error && (
-        <div className="mb-4 rounded-lg border border-red-300 bg-red-50 px-3 py-2 text-sm text-red-800 dark:border-red-800 dark:bg-red-950/40 dark:text-red-200">
+        <div className="mb-4 rounded-lg border border-red-300 bg-red-50 px-3 py-2 text-sm text-red-800">
           {error}
         </div>
       )}
@@ -220,9 +220,9 @@ export default function AdminEventsList() {
       {loading ? (
         <p className="text-sm text-old-money-500">Загрузка…</p>
       ) : (
-        <div className="overflow-x-auto rounded-xl border border-old-money-200 dark:border-charcoal-700">
+        <div className="overflow-x-auto rounded-xl border border-old-money-200">
           <table className="min-w-full text-left text-sm">
-            <thead className="bg-old-money-50 text-[11px] uppercase tracking-wide text-old-money-600 dark:bg-charcoal-800 dark:text-old-money-400">
+            <thead className="bg-old-money-50 text-[11px] uppercase tracking-wide text-old-money-600">
               <tr>
                 <th className="px-3 py-2">✓</th>
                 <th className="px-3 py-2">Дата</th>
@@ -235,7 +235,7 @@ export default function AdminEventsList() {
               {visible.map((e) => (
                 <tr
                   key={e.id}
-                  className="border-t border-old-money-100 hover:bg-camel-50/50 dark:border-charcoal-700 dark:hover:bg-charcoal-800/80"
+                  className="border-t border-old-money-100 hover:bg-camel-50/50"
                 >
                   <td className="px-3 py-2 tabular-nums">
                     {e.admin_verified_at ? '✓' : '·'}
@@ -246,12 +246,12 @@ export default function AdminEventsList() {
                   <td className="px-3 py-2">
                     <Link
                       to={`/admin/event/${e.id}`}
-                      className="font-medium text-camel-800 underline-offset-2 hover:underline dark:text-camel-400"
+                      className="font-medium text-camel-800 underline-offset-2 hover:underline"
                     >
                       {e.title || e.rank_label || `Событие ${e.id}`}
                     </Link>
                   </td>
-                  <td className="px-3 py-2 text-old-money-600 dark:text-old-money-400">
+                  <td className="px-3 py-2 text-old-money-600">
                     {e.location || '—'}
                   </td>
                   <td className="px-3 py-2 tabular-nums text-old-money-500">{e.id}</td>

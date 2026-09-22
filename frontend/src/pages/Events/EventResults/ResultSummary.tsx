@@ -16,8 +16,8 @@ function hasHighestQualification(vc: Result['vc']): boolean {
 
 export function VcBadge({ vc, corner = false }: { vc: string; corner?: boolean }) {
   const badgeClass = corner
-    ? 'inline-block cursor-help rounded border border-camel-200 bg-camel-100 px-1 py-px text-[10px] font-semibold leading-tight text-camel-800 shadow-sm dark:border-camel-700 dark:bg-camel-900/50 dark:text-camel-300'
-    : 'inline-block cursor-help rounded border border-camel-200 bg-camel-100 px-1.5 py-0.5 text-xs font-semibold text-camel-800 dark:border-camel-700 dark:bg-camel-900/50 dark:text-camel-300'
+    ? 'inline-block cursor-help rounded border border-camel-200 bg-camel-100 px-1 py-px text-[10px] font-semibold leading-tight text-camel-800 shadow-sm'
+    : 'inline-block cursor-help rounded border border-camel-200 bg-camel-100 px-1.5 py-0.5 text-xs font-semibold text-camel-800'
 
   return (
     <HoverTooltip label="Высшая квалификация" placement={corner ? 'bottom' : 'top'}>
@@ -34,8 +34,8 @@ export function Scoreboard({ score, showVc, vc }: { score: number | string; show
           <VcBadge vc={vc} corner />
         </div>
       )}
-      <div className="flex min-w-[3.5rem] flex-col items-end rounded-lg border border-old-money-200 bg-white/90 px-2 py-1 dark:border-charcoal-500 dark:bg-charcoal-800/90">
-        <div className="font-serif text-lg font-bold tabular-nums leading-none text-camel-700 dark:text-camel-400 md:text-xl">
+      <div className="flex min-w-[3.5rem] flex-col items-end rounded-lg border border-old-money-200 bg-white/90 px-2 py-1">
+        <div className="font-serif text-lg font-bold tabular-nums leading-none text-camel-700 md:text-xl">
           {score}
         </div>
       </div>
@@ -56,13 +56,13 @@ export function ResultScorePanel({ result }: { result: Result }) {
   if (result.status === 'disqualified' && statusLabel) {
     if (dqShownInHeats) return null
     return (
-      <div className="max-w-[8rem] text-right text-xs italic text-red-600 dark:text-red-400 md:text-sm">
+      <div className="max-w-[8rem] text-right text-xs italic text-red-600 md:text-sm">
         {statusLabel}
       </div>
     )
   }
   if (result.status === 'dns') {
-    return <div className="text-right text-xs text-charcoal-600 dark:text-charcoal-400 md:text-sm">Неявка</div>
+    return <div className="text-right text-xs text-charcoal-600 md:text-sm">Неявка</div>
   }
   if (isDisqualified) return null
   return null
@@ -87,10 +87,10 @@ export default function ResultSummary({ result }: ResultSummaryProps) {
           )}
         </div>
         {result.status === 'disqualified' && statusLabel && !dqShownInHeats && (
-          <div className="text-xs italic text-red-600 dark:text-red-400 md:hidden">{statusLabel}</div>
+          <div className="text-xs italic text-red-600 md:hidden">{statusLabel}</div>
         )}
         {result.status === 'dns' && (
-          <div className="text-xs text-gray-600 dark:text-gray-400 md:hidden">Неявка</div>
+          <div className="text-xs text-gray-600 md:hidden">Неявка</div>
         )}
       </div>
     </div>

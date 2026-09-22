@@ -160,34 +160,3 @@
 }
 .donino-group-card__table td{padding:5px 6px; border-top:1px solid var(--om-200);}
 .donino-group-card__more{margin:8px 0 0; font-size:11px; color:var(--char-500);}
-
-.dark .donino-home-row{border-bottom-color:var(--char-700);}
-.dark .donino-home-row-breed{color:var(--char-300);}
-.dark .donino-home-metric{color:var(--camel-400);}
-.dark .donino-home-metric-unit{color:var(--char-300);}
-.dark .donino-home-empty{color:var(--char-300);}
-.dark .donino-list-row{background:var(--char-800); border-color:var(--char-600);}
-.dark .donino-list-row:hover{border-color:var(--camel-600);}
-.dark .donino-list-row--embedded{background:transparent; border-color:transparent;}
-.dark .donino-list-row--embedded:hover{background:var(--char-700); border-color:transparent; box-shadow:none;}
-.dark .donino-list-row-link:hover{background:var(--char-700);}
-.dark .donino-list-row--embedded .donino-list-row-link:hover{background:transparent;}
-.dark .donino-list-row-screen{border-color:var(--char-600); color:var(--om-400);}
-.dark .donino-list-row-screen:hover{background:var(--char-700); color:var(--camel-400);}
-.dark .donino-list-row--embedded .donino-list-row-screen{border-left-color:var(--char-700);}
-.dark .donino-stats-chart{background:var(--char-800); border-color:var(--char-600);}
-.dark .donino-stats-column-header{background:var(--char-800); border-color:var(--char-600);}
-.dark .donino-stats-column-header__title{color:var(--camel-400);}
-.dark .donino-stats-column-header__dogs{color:var(--om-400);}
-.dark .donino-stats-column-header__stats{color:var(--char-300);}
-.dark .donino-stats-chart__summary{color:var(--char-100);}
-.dark .donino-stats-chart__body{border-color:var(--char-600);}
-.dark .donino-group-card{background:var(--char-800); border-color:var(--char-600);}
-.dark .donino-group-card:hover{border-color:var(--camel-600);}
-.dark .donino-group-card--open{border-color:var(--camel-500);}
-.dark .donino-group-card__label{color:var(--char-100);}
-.dark .donino-group-card__badge{background:var(--char-700); color:var(--char-200);}
-.dark .donino-group-card__metrics,
-.dark .donino-group-card__best{color:var(--char-300);}
-.dark .donino-group-card__body{background:var(--char-900); border-color:var(--char-600);}
-.dark .donino-group-card__table td{border-color:var(--char-600);}

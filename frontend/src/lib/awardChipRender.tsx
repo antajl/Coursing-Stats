@@ -33,7 +33,7 @@ import {
 } from './awardTooltip'
 
 const SEPARATOR_CLASS =
-  'mx-0.5 h-3 w-px shrink-0 self-center bg-old-money-300 dark:bg-charcoal-500'
+  'mx-0.5 h-3 w-px shrink-0 self-center bg-old-money-300'
 
 /** Квалификация события / история — только competition. */
 function classifyEventTitle(title: string): AwardCategory {
@@ -125,7 +125,7 @@ export function renderShowAwardChips({
             portal
           >
             <span
-              className={`inline-flex shrink-0 items-center rounded-md bg-old-money-200/80 font-semibold tabular-nums text-charcoal-600 dark:bg-charcoal-600 dark:text-charcoal-200 ${pad} ${textSize}`}
+              className={`inline-flex shrink-0 items-center rounded-md bg-old-money-200/80 font-semibold tabular-nums text-charcoal-600 ${pad} ${textSize}`}
               tabIndex={0}
             >
               +{hiddenKeys.length}

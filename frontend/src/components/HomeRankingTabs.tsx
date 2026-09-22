@@ -69,7 +69,7 @@ export default function HomeRankingTabs({ value, onChange }: HomeRankingTabsProp
     >
       <span
         aria-hidden
-        className="pointer-events-none absolute bottom-0 h-0.5 rounded-full bg-camel-500 transition-[left,width] duration-200 ease-out dark:bg-camel-400"
+        className="pointer-events-none absolute bottom-0 h-0.5 rounded-full bg-camel-500 transition-[left,width] duration-200 ease-out"
         style={{
           left: line.left,
           width: line.width,

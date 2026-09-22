@@ -11,7 +11,7 @@ interface DoninoDogNameLinkProps {
 }
 
 const baseClassName =
-  'font-semibold text-camel-700 dark:text-camel-400 underline decoration-camel-400/60 underline-offset-2 transition-colors hover:text-camel-800 dark:hover:text-camel-300 hover:decoration-camel-600 dark:hover:decoration-camel-400'
+  'font-semibold text-camel-700 underline decoration-camel-400/60 underline-offset-2 transition-colors hover:text-camel-800 hover:decoration-camel-600'
 
 export default function DoninoDogNameLink({ name, breed, from, className = '', onClick }: DoninoDogNameLinkProps) {
   return (

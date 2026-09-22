@@ -86,7 +86,7 @@ export function AccountHeader({
                 value={draftName}
                 onChange={(e) => setDraftName(e.target.value)}
                 disabled={saving}
-                className="min-w-[12rem] flex-1 max-w-sm px-3 py-2 border border-charcoal-300 dark:border-charcoal-600 rounded-lg bg-white dark:bg-charcoal-700 text-charcoal-900 dark:text-cream-100"
+                className="min-w-[12rem] flex-1 max-w-sm px-3 py-2 border border-charcoal-300 rounded-lg bg-white text-charcoal-900"
                 aria-label="Отображаемое имя"
                 autoFocus
                 onKeyDown={(e) => {
@@ -98,7 +98,7 @@ export function AccountHeader({
                 type="button"
                 onClick={() => void saveName()}
                 disabled={saving}
-                className="p-2 text-camel-700 hover:text-camel-900 dark:text-camel-400 disabled:opacity-50"
+                className="p-2 text-camel-700 hover:text-camel-900 disabled:opacity-50"
                 title="Сохранить"
               >
                 <Check className="w-5 h-5" />
@@ -107,7 +107,7 @@ export function AccountHeader({
                 type="button"
                 onClick={cancelEdit}
                 disabled={saving}
-                className="p-2 text-charcoal-500 hover:text-charcoal-800 dark:text-charcoal-400 disabled:opacity-50"
+                className="p-2 text-charcoal-500 hover:text-charcoal-800 disabled:opacity-50"
                 title="Отмена"
               >
                 <X className="w-5 h-5" />
@@ -115,24 +115,24 @@ export function AccountHeader({
             </div>
           ) : (
             <div className="flex flex-wrap items-center gap-2">
-              <h1 className="text-3xl sm:text-4xl font-bold text-charcoal-900 dark:text-cream-100 leading-tight">
+              <h1 className="text-3xl sm:text-4xl font-bold text-charcoal-900 leading-tight">
                 {user.display_name}
               </h1>
               <button
                 type="button"
                 onClick={startEdit}
-                className="p-1.5 text-charcoal-500 hover:text-charcoal-800 dark:text-charcoal-400 dark:hover:text-cream-100"
+                className="p-1.5 text-charcoal-500 hover:text-charcoal-800"
                 title="Изменить имя"
               >
                 <Pencil className="w-4 h-4" />
               </button>
             </div>
           )}
-          {error && <p className="mt-1 text-sm text-terracotta-600 dark:text-terracotta-400">{error}</p>}
+          {error && <p className="mt-1 text-sm text-terracotta-600">{error}</p>}
           {metaParts.length > 0 ? (
-            <p className="mt-2 text-charcoal-600 dark:text-cream-300">{metaParts.join(' · ')}</p>
+            <p className="mt-2 text-charcoal-600">{metaParts.join(' · ')}</p>
           ) : (
-            <p className="mt-2 text-charcoal-600 dark:text-cream-300">
+            <p className="mt-2 text-charcoal-600">
               Следите за своими собаками и результатами
             </p>
           )}
@@ -140,7 +140,7 @@ export function AccountHeader({
 
         <Link
           to="/account/settings"
-          className="inline-flex items-center gap-1.5 text-sm text-charcoal-600 dark:text-cream-300 hover:text-charcoal-900 dark:hover:text-cream-100"
+          className="inline-flex items-center gap-1.5 text-sm text-charcoal-600 hover:text-charcoal-900"
         >
           <Settings className="w-4 h-4" />
           Настройки

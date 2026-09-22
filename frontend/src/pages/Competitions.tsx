@@ -31,7 +31,7 @@ function Competitions() {
         canonicalUrl="https://coursing-stats.ru/competitions"
         keywords="рейтинг курсинг, бега борзых, топ собак, медали, судьи курсинг, РКФ, procoursing"
       />
-      <div className="relative rounded-2xl border border-cream-300 bg-cream-50/90 shadow-xl backdrop-blur-lg dark:border-charcoal-700 dark:bg-charcoal-900/90">
+      <div className="relative rounded-2xl border border-cream-300 bg-cream-50/90 shadow-xl backdrop-blur-lg">
         <ProcoursingAttribution variant="footnote" className="absolute right-0 top-0 z-10" />
         <div className="min-h-[400px] px-4 py-3 md:px-6 md:py-4">
           {activeTab === 'ranking' && (

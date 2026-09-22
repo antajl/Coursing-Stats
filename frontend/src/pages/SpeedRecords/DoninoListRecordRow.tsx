@@ -33,10 +33,10 @@ function getTrackTypeIcon(trackType: string | null | undefined) {
   if (!trackType) return null
   const lower = trackType.toLowerCase()
   if (lower.includes('круг') || lower.includes('circle')) {
-    return <Circle size={12} className="text-camel-600 dark:text-camel-400" />
+    return <Circle size={12} className="text-camel-600" />
   }
   if (lower.includes('прямая') || lower.includes('straight') || lower.includes('line')) {
-    return <Minus size={12} className="text-camel-600 dark:text-camel-400" />
+    return <Minus size={12} className="text-camel-600" />
   }
   return null
 }
@@ -45,7 +45,7 @@ function TrackTypeBadge({ trackType }: { trackType: string | null | undefined })
   if (!trackType) return null
   const icon = getTrackTypeIcon(trackType)
   return (
-    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-camel-100 dark:bg-camel-900 text-camel-700 dark:text-camel-200 text-xs font-medium">
+    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-camel-100 text-camel-700 text-xs font-medium">
       {icon}
       {trackType}
     </span>
@@ -95,21 +95,21 @@ export default function DoninoListRecordRow({
     <Link
       to={`/donino-dog/${encodeURIComponent(name)}/${encodeURIComponent(breed)}`}
       state={{ from: mode === 'speed' ? 'speed-records' : 'coursing-records' }}
-      className="donino-list-row-link group min-w-0 flex-1 border-b border-old-money-200 dark:border-charcoal-600 bg-white py-2 px-4 transition-colors duration-200 hover:bg-camel-100/60 dark:bg-charcoal-800 dark:hover:bg-camel-900/30"
+      className="donino-list-row-link group min-w-0 flex-1 border-b border-old-money-200 bg-white py-2 px-4 transition-colors duration-200 hover:bg-camel-100/60"
     >
       <div className="donino-home-row-main min-w-0">
         <div className="flex min-w-0 items-center gap-2">
           <OwnerCrownName name={name} breed={breed} kind="donino">
-            <span className="break-words font-serif text-base font-bold leading-snug text-charcoal-900 line-clamp-2 dark:text-charcoal-100">
+            <span className="break-words font-serif text-base font-bold leading-snug text-charcoal-900 line-clamp-2">
               {name}
             </span>
           </OwnerCrownName>
           {sex && <DogSexIcon sex={sex} />}
         </div>
         {(date || breed) && (
-          <div className="mt-0.5 flex min-w-0 items-center gap-1.5 text-xs text-old-money-500 dark:text-old-money-400">
+          <div className="mt-0.5 flex min-w-0 items-center gap-1.5 text-xs text-old-money-500">
             {date && <span>{formatRecordDate(date)}</span>}
-            {date && breed && <span className="text-old-money-300 dark:text-charcoal-500">·</span>}
+            {date && breed && <span className="text-old-money-300">·</span>}
             {breed && <span className="donino-home-row-breed">{breed}</span>}
           </div>
         )}

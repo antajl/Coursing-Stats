@@ -19,7 +19,7 @@ export default function ToolbarSearch({
 
   return (
     <div
-      className={`flex h-8 w-[280px] max-w-full shrink-0 items-center gap-2 rounded-[10px] border-[1.5px] border-old-money-300 bg-white px-3 dark:border-charcoal-600 dark:bg-charcoal-800 ${className}`}
+      className={`flex h-8 w-[280px] max-w-full shrink-0 items-center gap-2 rounded-[10px] border-[1.5px] border-old-money-300 bg-white px-3 ${className}`}
     >
       <SearchIcon className="h-3.5 w-3.5 shrink-0 text-charcoal-500" strokeWidth={1.75} />
       <input
@@ -27,14 +27,14 @@ export default function ToolbarSearch({
         placeholder={placeholder}
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="w-full min-w-0 border-none bg-transparent text-xs font-medium text-charcoal-800 outline-none placeholder:text-charcoal-400 dark:text-charcoal-200"
+        className="w-full min-w-0 border-none bg-transparent text-xs font-medium text-charcoal-800 outline-none placeholder:text-charcoal-400"
       />
       {hasValue ? (
         <button
           type="button"
           onClick={() => onChange('')}
           aria-label="Очистить поиск"
-          className="-mr-1 flex min-h-[44px] min-w-[44px] h-6 w-6 shrink-0 items-center justify-center rounded-full text-charcoal-500 transition-colors hover:bg-old-money-100 hover:text-charcoal-800 dark:hover:bg-charcoal-700 dark:hover:text-charcoal-100"
+          className="-mr-1 flex min-h-[44px] min-w-[44px] h-6 w-6 shrink-0 items-center justify-center rounded-full text-charcoal-500 transition-colors hover:bg-old-money-100 hover:text-charcoal-800"
         >
           <ClearIcon className="h-3.5 w-3.5" strokeWidth={2} />
         </button>

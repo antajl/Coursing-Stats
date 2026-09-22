@@ -118,7 +118,7 @@ function HeaderPlacesLine({ data }: { data: StandingExplainerInput }) {
   if (data.yearBreedRank != null) parts.push(<>пор./год <strong>#{data.yearBreedRank}</strong></>)
   if (parts.length === 0) return null
   return (
-    <p className="border-t border-old-money-200/80 pt-2 text-[11px] leading-snug text-charcoal-600 dark:border-charcoal-600 dark:text-charcoal-300">
+    <p className="border-t border-old-money-200/80 pt-2 text-[11px] leading-snug text-charcoal-600">
       В шапке:{' '}
       {parts.map((p, i) => (
         <span key={i}>
@@ -139,7 +139,7 @@ function CoursingBody({ data, scope }: { data: StandingExplainerInput; scope: St
   const cs = formatCs(data)
   const elo = data.elo_rating
   return (
-    <ol className="list-decimal space-y-1.5 pl-4 text-[11px] leading-snug text-charcoal-700 dark:text-charcoal-200">
+    <ol className="list-decimal space-y-1.5 pl-4 text-[11px] leading-snug text-charcoal-700">
       <li>
         <strong>Медали</strong> — главный ключ: {gold} зол. / {silver} сер. / {bronze} бр.
         {starts > 0 ? (
@@ -179,7 +179,7 @@ function RacingBody({ data }: { data: StandingExplainerInput }) {
   const avg = data.avg_speed
   const starts = data.racing_starts ?? 0
   return (
-    <ol className="list-decimal space-y-1.5 pl-4 text-[11px] leading-snug text-charcoal-700 dark:text-charcoal-200">
+    <ol className="list-decimal space-y-1.5 pl-4 text-[11px] leading-snug text-charcoal-700">
       <li>
         Место в бегах задаёт <strong>лучшая скорость</strong>
         {best != null ? (
@@ -214,7 +214,7 @@ function RacingBody({ data }: { data: StandingExplainerInput }) {
 
 function ShowsBody({ data }: { data: StandingExplainerInput }) {
   return (
-    <ol className="list-decimal space-y-1.5 pl-4 text-[11px] leading-snug text-charcoal-700 dark:text-charcoal-200">
+    <ol className="list-decimal space-y-1.5 pl-4 text-[11px] leading-snug text-charcoal-700">
       <li>
         Место считается по <strong>выставочному rank score</strong> (награды CAC/CACIB и др.), отдельно от спорта.
       </li>
@@ -271,19 +271,19 @@ function StandingExplainerBody({
   return (
     <div className="max-w-[19rem] space-y-2.5 text-left">
       <div className="flex items-start justify-between gap-2">
-        <p className="text-[12px] font-semibold leading-tight text-charcoal-900 dark:text-charcoal-50">
+        <p className="text-[12px] font-semibold leading-tight text-charcoal-900">
           {scopeTitle(domain, scope, place)}
         </p>
         <button
           type="button"
           onClick={onClose}
-          className="shrink-0 rounded p-0.5 text-charcoal-400 hover:text-charcoal-700 dark:hover:text-charcoal-200"
+          className="shrink-0 rounded p-0.5 text-charcoal-400 hover:text-charcoal-700"
           aria-label="Закрыть"
         >
           ×
         </button>
       </div>
-      <p className="text-[11px] leading-snug text-charcoal-700 dark:text-charcoal-200">
+      <p className="text-[11px] leading-snug text-charcoal-700">
         {scopeLead(domain, scope)}
       </p>
       {domain === 'coursing' ? (
@@ -294,12 +294,12 @@ function StandingExplainerBody({
         <ShowsBody data={data} />
       )}
       <HeaderPlacesLine data={data} />
-      <p className="text-[11px] leading-snug text-charcoal-600 dark:text-charcoal-300">
+      <p className="text-[11px] leading-snug text-charcoal-600">
         Подробнее — в{' '}
         <Link
           to={`/guide?tab=${guideTab}`}
           onClick={onClose}
-          className="font-semibold text-camel-700 underline underline-offset-2 hover:text-camel-800 dark:text-camel-400"
+          className="font-semibold text-camel-700 underline underline-offset-2 hover:text-camel-800"
         >
           {guideLabel}
         </Link>
@@ -370,7 +370,7 @@ export default function StandingPlaceButton({
             id={tipId}
             role="dialog"
             aria-label={scopeTitle(domain, scope, value)}
-            className="fixed min-w-[15.5rem] max-w-[19rem] -translate-x-1/2 rounded-lg border border-old-money-300 bg-cream-50 px-3 py-2.5 text-[11px] font-normal text-charcoal-800 shadow-lg dark:border-charcoal-600 dark:bg-charcoal-800 dark:text-charcoal-100"
+            className="fixed min-w-[15.5rem] max-w-[19rem] -translate-x-1/2 rounded-lg border border-old-money-300 bg-cream-50 px-3 py-2.5 text-[11px] font-normal text-charcoal-800 shadow-lg"
             style={{ top: coords.top, left: coords.left, zIndex: 'var(--z-tooltip)' }}
           >
             <StandingExplainerBody
@@ -393,8 +393,8 @@ export default function StandingPlaceButton({
         onClick={toggle}
         aria-expanded={open}
         aria-controls={open ? tipId : undefined}
-        className={`rounded px-0.5 underline decoration-dotted decoration-charcoal-300 underline-offset-2 transition-colors hover:text-camel-700 dark:decoration-charcoal-500 dark:hover:text-camel-400 ${className ?? ''} ${
-          open ? 'text-camel-700 dark:text-camel-400' : ''
+        className={`rounded px-0.5 underline decoration-dotted decoration-charcoal-300 underline-offset-2 transition-colors hover:text-camel-700 ${className ?? ''} ${
+          open ? 'text-camel-700' : ''
         }`}
         aria-label={`Место ${value}: объяснить рейтинг (${domainLabel(domain)})`}
       >

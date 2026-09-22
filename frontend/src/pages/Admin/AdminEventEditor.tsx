@@ -91,7 +91,7 @@ function Field({
 }
 
 const inputClass =
-  'w-full rounded-lg border border-old-money-300 bg-white px-2.5 py-1.5 text-sm text-charcoal-900 dark:border-charcoal-600 dark:bg-charcoal-800 dark:text-charcoal-100';
+  'w-full rounded-lg border border-old-money-300 bg-white px-2.5 py-1.5 text-sm text-charcoal-900';
 
 export default function AdminEventEditor() {
   const { id: idParam } = useParams<{ id: string }>();
@@ -262,29 +262,29 @@ export default function AdminEventEditor() {
         <div>
           <Link
             to="/admin"
-            className="text-sm text-camel-800 hover:underline dark:text-camel-400"
+            className="text-sm text-camel-800 hover:underline"
           >
             ← К списку
           </Link>
-          <h1 className="mt-1 font-serif text-2xl font-bold text-charcoal-900 dark:text-charcoal-100">
+          <h1 className="mt-1 font-serif text-2xl font-bold text-charcoal-900">
             Событие #{eventId}
           </h1>
         </div>
         <Link
           to={`/event/${eventId}`}
-          className="text-sm text-old-money-600 hover:underline dark:text-old-money-400"
+          className="text-sm text-old-money-600 hover:underline"
         >
           Открыть публичный протокол
         </Link>
       </div>
 
       {error && (
-        <div className="mb-3 rounded-lg border border-red-300 bg-red-50 px-3 py-2 text-sm text-red-800 dark:border-red-800 dark:bg-red-950/40 dark:text-red-200">
+        <div className="mb-3 rounded-lg border border-red-300 bg-red-50 px-3 py-2 text-sm text-red-800">
           {error}
         </div>
       )}
       {statusMsg && (
-        <div className="mb-3 rounded-lg border border-emerald-300 bg-emerald-50 px-3 py-2 text-sm text-emerald-900 dark:border-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-200">
+        <div className="mb-3 rounded-lg border border-emerald-300 bg-emerald-50 px-3 py-2 text-sm text-emerald-900">
           {statusMsg}
         </div>
       )}
@@ -293,7 +293,7 @@ export default function AdminEventEditor() {
         <p className="text-sm text-old-money-500">Загрузка…</p>
       ) : (
         <>
-          <section className="mb-6 grid gap-3 rounded-xl border border-old-money-200 bg-white/70 p-4 dark:border-charcoal-700 dark:bg-charcoal-900/40 sm:grid-cols-2">
+          <section className="mb-6 grid gap-3 rounded-xl border border-old-money-200 bg-white/70 p-4 sm:grid-cols-2">
             <Field label="Дата начала">
               <input
                 className={inputClass}
@@ -360,7 +360,7 @@ export default function AdminEventEditor() {
                 onChange={(e) => setEventDraft((d) => ({ ...d, results_url: e.target.value }))}
               />
             </Field>
-            <label className="flex items-center gap-2 self-end pb-1 text-sm font-medium text-charcoal-800 dark:text-charcoal-200">
+            <label className="flex items-center gap-2 self-end pb-1 text-sm font-medium text-charcoal-800">
               <input
                 type="checkbox"
                 checked={verified}
@@ -371,21 +371,21 @@ export default function AdminEventEditor() {
           </section>
 
           <div className="mb-2 flex items-center justify-between gap-2">
-            <h2 className="font-serif text-lg font-semibold text-charcoal-900 dark:text-charcoal-100">
+            <h2 className="font-serif text-lg font-semibold text-charcoal-900">
               Результаты ({rows.length})
             </h2>
             <button
               type="button"
               onClick={addRow}
-              className="rounded-lg border border-camel-400 bg-camel-50 px-3 py-1.5 text-sm font-semibold text-camel-900 hover:bg-camel-100 dark:border-camel-600 dark:bg-charcoal-800 dark:text-camel-300"
+              className="rounded-lg border border-camel-400 bg-camel-50 px-3 py-1.5 text-sm font-semibold text-camel-900 hover:bg-camel-100"
             >
               + Строка
             </button>
           </div>
 
-          <div className="overflow-x-auto rounded-xl border border-old-money-200 dark:border-charcoal-700">
+          <div className="overflow-x-auto rounded-xl border border-old-money-200">
             <table className="min-w-[1100px] w-full text-left text-xs">
-              <thead className="bg-old-money-50 text-[10px] uppercase tracking-wide text-old-money-600 dark:bg-charcoal-800 dark:text-old-money-400">
+              <thead className="bg-old-money-50 text-[10px] uppercase tracking-wide text-old-money-600">
                 <tr>
                   <th className="px-2 py-2">Собака</th>
                   <th className="px-2 py-2">Порода</th>
@@ -402,7 +402,7 @@ export default function AdminEventEditor() {
               </thead>
               <tbody>
                 {rows.map((r) => (
-                  <tr key={r._key} className="border-t border-old-money-100 dark:border-charcoal-700 align-top">
+                  <tr key={r._key} className="border-t border-old-money-100 align-top">
                     <td className="relative px-2 py-1.5">
                       <input
                         className={inputClass}
@@ -414,12 +414,12 @@ export default function AdminEventEditor() {
                         onFocus={() => setDogQuery({ key: r._key, q: r.dog_name })}
                       />
                       {dogQuery?.key === r._key && dogHits.length > 0 && (
-                        <ul className="absolute z-20 mt-1 max-h-40 w-72 overflow-auto rounded-lg border border-old-money-300 bg-white shadow-lg dark:border-charcoal-600 dark:bg-charcoal-800">
+                        <ul className="absolute z-20 mt-1 max-h-40 w-72 overflow-auto rounded-lg border border-old-money-300 bg-white shadow-lg">
                           {dogHits.map((h) => (
                             <li key={h.id}>
                               <button
                                 type="button"
-                                className="block w-full px-2 py-1.5 text-left hover:bg-camel-50 dark:hover:bg-charcoal-700"
+                                className="block w-full px-2 py-1.5 text-left hover:bg-camel-50"
                                 onClick={() => {
                                   updateRow(r._key, {
                                     dog_id: h.id,
@@ -502,7 +502,7 @@ export default function AdminEventEditor() {
                     <td className="px-2 py-1.5">
                       <button
                         type="button"
-                        className="text-red-700 hover:underline dark:text-red-400"
+                        className="text-red-700 hover:underline"
                         onClick={() => deleteRow(r._key)}
                       >
                         Удал.
@@ -516,7 +516,7 @@ export default function AdminEventEditor() {
         </>
       )}
 
-      <div className="fixed inset-x-0 bottom-0 z-30 border-t border-old-money-200 bg-white/95 px-3 py-3 backdrop-blur dark:border-charcoal-700 dark:bg-charcoal-900/95">
+      <div className="fixed inset-x-0 bottom-0 z-30 border-t border-old-money-200 bg-white/95 px-3 py-3 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-3">
           <p className="text-xs text-old-money-500">
             {dirty ? 'Есть несохранённые изменения' : 'Всё сохранено'}

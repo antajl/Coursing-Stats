@@ -27,18 +27,18 @@ export default function GroupedStatsTable({
 
   return (
     <div
-      className={`bg-white dark:bg-charcoal-800 rounded-xl border border-cream-300 dark:border-charcoal-600 space-y-4 ${
+      className={`bg-white rounded-xl border border-cream-300 space-y-4 ${
         compact ? 'p-3 md:p-4' : 'p-6'
       }`}
     >
-      <h2 className={`font-bold text-charcoal-900 dark:text-charcoal-100 ${compact ? 'text-base' : 'text-xl'}`}>
+      <h2 className={`font-bold text-charcoal-900 ${compact ? 'text-base' : 'text-xl'}`}>
         Срезы
       </h2>
 
       <div className="overflow-x-auto">
         <table className={`w-full ${compact ? 'min-w-[480px]' : 'min-w-[640px]'}`}>
           <thead>
-            <tr className="border-b-2 border-cream-300 dark:border-charcoal-600">
+            <tr className="border-b-2 border-cream-300">
               <th className="px-3 py-3 text-left font-semibold">
                 {GROUP_BY_OPTIONS.find((o) => o.value === groupBy)?.label}
               </th>
@@ -57,14 +57,14 @@ export default function GroupedStatsTable({
             {rows.map((row) => (
               <React.Fragment key={row.key}>
                 <tr
-                  className="border-b border-cream-200 dark:border-charcoal-600 hover:bg-cream-50 dark:hover:bg-charcoal-700 cursor-pointer"
+                  className="border-b border-cream-200 hover:bg-cream-50 cursor-pointer"
                   onClick={() => setExpandedKey(expandedKey === row.key ? null : row.key)}
                 >
                   <td className="px-3 py-3 font-semibold">
                     <span className="mr-2 text-charcoal-400">{expandedKey === row.key ? '▼' : '▶'}</span>
                     {row.label}
                     {row.lowSample && (
-                      <span className="ml-2 text-xs text-charcoal-500 dark:text-charcoal-400 font-normal">мало данных</span>
+                      <span className="ml-2 text-xs text-charcoal-500 font-normal">мало данных</span>
                     )}
                   </td>
                   <td className="px-3 py-3 text-center">{row.runCount}</td>
@@ -76,7 +76,7 @@ export default function GroupedStatsTable({
                         ? `${row.avgPrimary.toFixed(1)} км/ч`
                         : `${row.avgPrimary.toFixed(2)} сек`}
                   </td>
-                  <td className="px-3 py-3 text-center font-bold text-camel-700 dark:text-camel-400">
+                  <td className="px-3 py-3 text-center font-bold text-camel-700">
                     {row.bestPrimary == null
                       ? '—'
                       : isSpeed
@@ -97,7 +97,7 @@ export default function GroupedStatsTable({
                   </td>
                 </tr>
                 {expandedKey === row.key && (
-                  <tr className="bg-cream-50 dark:bg-charcoal-700">
+                  <tr className="bg-cream-50">
                     <td colSpan={6} className="px-3 py-3">
                       <table className="w-full text-sm">
                         <thead>
@@ -110,12 +110,12 @@ export default function GroupedStatsTable({
                         </thead>
                         <tbody>
                           {row.dogs.slice(0, 15).map((dog) => (
-                            <tr key={`${dog.name}_${dog.breed}`} className="border-t border-cream-200 dark:border-charcoal-600">
+                            <tr key={`${dog.name}_${dog.breed}`} className="border-t border-cream-200">
                               <td className="py-1.5">
                                 <DoninoDogNameLink name={dog.name} breed={dog.breed} />
                               </td>
                               <td className="text-center py-1.5">{dog.runCount}</td>
-                              <td className="text-center py-1.5 font-semibold text-camel-700 dark:text-camel-400">
+                              <td className="text-center py-1.5 font-semibold text-camel-700">
                                 {isSpeedDog(dog)
                                   ? `${dog.bestSpeed.toFixed(1)} км/ч`
                                   : `${dog.bestTime.toFixed(2)} сек`}
@@ -130,7 +130,7 @@ export default function GroupedStatsTable({
                         </tbody>
                       </table>
                       {row.dogs.length > 15 && (
-                        <p className="text-xs text-charcoal-500 dark:text-charcoal-400 mt-2">и ещё {row.dogs.length - 15}…</p>
+                        <p className="text-xs text-charcoal-500 mt-2">и ещё {row.dogs.length - 15}…</p>
                       )}
                     </td>
                   </tr>

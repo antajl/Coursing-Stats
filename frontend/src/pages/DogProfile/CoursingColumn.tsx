@@ -66,7 +66,7 @@ export function CoursingColumn({
 
   const heroInner = (
     <>
-      <div className="mb-2 text-xs font-semibold uppercase tracking-wide text-charcoal-500 dark:text-charcoal-400">
+      <div className="mb-2 text-xs font-semibold uppercase tracking-wide text-charcoal-500">
         Лучший результат
       </div>
       <div className={`text-4xl font-bold tracking-tight tabular-nums ${t.heroValue}`}>
@@ -86,7 +86,7 @@ export function CoursingColumn({
             <ProcoursingEventLink
               eventId={bestScoreEventId}
               procoursingUrl={procoursingUrlForEventId(eventResultsUrls, bestScoreEventId)}
-              className={`group mb-4 block h-[7.25rem] shrink-0 overflow-hidden rounded-lg border p-4 text-center transition-colors hover:brightness-[0.98] dark:hover:bg-charcoal-600 ${t.heroBorder} ${t.heroBg}`}
+              className={`group mb-4 block h-[7.25rem] shrink-0 overflow-hidden rounded-lg border p-4 text-center transition-colors hover:brightness-[0.98] ${t.heroBorder} ${t.heroBg}`}
             >
               {heroInner}
             </ProcoursingEventLink>
@@ -101,21 +101,21 @@ export function CoursingColumn({
               <ProcoursingEventLink
                 eventId={bestJudgeScoreEventId}
                 procoursingUrl={procoursingUrlForEventId(eventResultsUrls, bestJudgeScoreEventId)}
-                className={`${cellClass} hover:brightness-[0.98] dark:hover:bg-charcoal-600`}
+                className={`${cellClass} hover:brightness-[0.98]`}
               >
-                <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-old-money-500 dark:text-old-money-400">
+                <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-old-money-500">
                   Лучшая оценка
                 </div>
-                <div className="text-2xl font-bold tabular-nums text-charcoal-800 dark:text-charcoal-100">
+                <div className="text-2xl font-bold tabular-nums text-charcoal-800">
                   {formatScore(coursing.best_judge_score)}
                 </div>
               </ProcoursingEventLink>
             ) : (
               <div className={cellClass}>
-                <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-old-money-500 dark:text-old-money-400">
+                <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-old-money-500">
                   Лучшая оценка
                 </div>
-                <div className="text-2xl font-bold tabular-nums text-charcoal-800 dark:text-charcoal-100">
+                <div className="text-2xl font-bold tabular-nums text-charcoal-800">
                   {formatScore(coursing.best_judge_score)}
                 </div>
               </div>
@@ -124,21 +124,21 @@ export function CoursingColumn({
               <ProcoursingEventLink
                 eventId={avgJudgeScoreEventId}
                 procoursingUrl={procoursingUrlForEventId(eventResultsUrls, avgJudgeScoreEventId)}
-                className={`${cellClass} hover:brightness-[0.98] dark:hover:bg-charcoal-600`}
+                className={`${cellClass} hover:brightness-[0.98]`}
               >
-                <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-old-money-500 dark:text-old-money-400">
+                <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-old-money-500">
                   Средняя оценка
                 </div>
-                <div className="text-2xl font-bold tabular-nums text-charcoal-800 dark:text-charcoal-100">
+                <div className="text-2xl font-bold tabular-nums text-charcoal-800">
                   {formatScore(coursing.avg_judge_score)}
                 </div>
               </ProcoursingEventLink>
             ) : (
               <div className={cellClass}>
-                <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-old-money-500 dark:text-old-money-400">
+                <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-old-money-500">
                   Средняя оценка
                 </div>
-                <div className="text-2xl font-bold tabular-nums text-charcoal-800 dark:text-charcoal-100">
+                <div className="text-2xl font-bold tabular-nums text-charcoal-800">
                   {formatScore(coursing.avg_judge_score)}
                 </div>
               </div>
@@ -164,12 +164,12 @@ export function CoursingColumn({
           <div>
             {visibleCoursingEvents.map((event, idx) => {
               const cardClass =
-                'block border-b border-forest-200/80 py-3 h-[6.5rem] transition-colors last:border-b-0 hover:bg-forest-50/60 dark:border-forest-700/60 dark:hover:bg-charcoal-700/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-camel-500'
+                'block border-b border-forest-200/80 py-3 h-[6.5rem] transition-colors last:border-b-0 hover:bg-forest-50/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-camel-500'
               const cardBody = (
                 <>
                   <div className="min-w-0 flex-shrink-0">
                     {event.competition_kind ? (
-                      <div className="break-words text-xs font-bold uppercase tracking-wide text-forest-700 dark:text-forest-400">
+                      <div className="break-words text-xs font-bold uppercase tracking-wide text-forest-700">
                         {event.competition_kind}
                       </div>
                     ) : null}
@@ -210,7 +210,7 @@ export function CoursingColumn({
               <button
                 type="button"
                 onClick={onToggleShowAll}
-                className="text-sm font-semibold text-camel-700 dark:text-camel-400"
+                className="text-sm font-semibold text-camel-700"
               >
                 {showAllCoursingEvents
                   ? 'Свернуть'

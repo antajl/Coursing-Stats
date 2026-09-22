@@ -54,7 +54,7 @@ function SpeedValue({ value, size = 'hero' }: { value: unknown; size?: 'hero' | 
     <>
       {formatted}
       <span
-        className={`ml-1 font-normal text-charcoal-400 dark:text-charcoal-500 ${
+        className={`ml-1 font-normal text-charcoal-400 ${
           size === 'hero' ? 'text-base' : 'text-sm'
         }`}
       >
@@ -81,7 +81,7 @@ export function RacingColumn({
 
   const heroInner = (
     <>
-      <div className="mb-2 text-xs font-semibold uppercase tracking-wide text-charcoal-500 dark:text-charcoal-400">
+      <div className="mb-2 text-xs font-semibold uppercase tracking-wide text-charcoal-500">
         Лучшая скорость
       </div>
       <div
@@ -103,7 +103,7 @@ export function RacingColumn({
             <ProcoursingEventLink
               eventId={bestSpeedEventId}
               procoursingUrl={procoursingUrlForEventId(eventResultsUrls, bestSpeedEventId)}
-              className={`group mb-4 block h-[7.25rem] shrink-0 overflow-hidden rounded-lg border p-4 text-center transition-colors hover:brightness-[0.98] dark:hover:bg-charcoal-600 ${t.heroBorder} ${t.heroBg}`}
+              className={`group mb-4 block h-[7.25rem] shrink-0 overflow-hidden rounded-lg border p-4 text-center transition-colors hover:brightness-[0.98] ${t.heroBorder} ${t.heroBg}`}
             >
               {heroInner}
             </ProcoursingEventLink>
@@ -118,21 +118,21 @@ export function RacingColumn({
               <ProcoursingEventLink
                 eventId={avgSpeedEventId}
                 procoursingUrl={procoursingUrlForEventId(eventResultsUrls, avgSpeedEventId)}
-                className={`${cellClass} block hover:brightness-[0.98] dark:hover:bg-charcoal-600`}
+                className={`${cellClass} block hover:brightness-[0.98]`}
               >
-                <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-old-money-500 dark:text-old-money-400">
+                <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-old-money-500">
                   Средняя
                 </div>
-                <div className="text-2xl font-bold tabular-nums text-charcoal-800 dark:text-charcoal-100">
+                <div className="text-2xl font-bold tabular-nums text-charcoal-800">
                   <SpeedValue value={racing.avg_speed} size="cell" />
                 </div>
               </ProcoursingEventLink>
             ) : (
               <div className={cellClass}>
-                <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-old-money-500 dark:text-old-money-400">
+                <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-old-money-500">
                   Средняя
                 </div>
-                <div className="text-2xl font-bold tabular-nums text-charcoal-800 dark:text-charcoal-100">
+                <div className="text-2xl font-bold tabular-nums text-charcoal-800">
                   <SpeedValue value={racing.avg_speed} size="cell" />
                 </div>
               </div>
@@ -158,12 +158,12 @@ export function RacingColumn({
           <div>
             {visibleRacingEvents.map((event, idx) => {
               const cardClass =
-                'block border-b border-warm-blue-200/80 py-3 h-[6.5rem] transition-colors last:border-b-0 hover:bg-warm-blue-50/60 dark:border-warm-blue-700/60 dark:hover:bg-charcoal-700/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-camel-500'
+                'block border-b border-warm-blue-200/80 py-3 h-[6.5rem] transition-colors last:border-b-0 hover:bg-warm-blue-50/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-camel-500'
               const cardBody = (
                 <>
                   <div className="min-w-0 flex-shrink-0">
                     {event.competition_kind ? (
-                      <div className="break-words text-xs font-bold uppercase tracking-wide text-warm-blue-700 dark:text-warm-blue-400">
+                      <div className="break-words text-xs font-bold uppercase tracking-wide text-warm-blue-700">
                         {event.competition_kind}
                       </div>
                     ) : null}
@@ -183,15 +183,15 @@ export function RacingColumn({
                       event.best_speed || event.distance ? (
                         <div className="flex items-center gap-1.5 text-xs">
                           {event.best_speed && (
-                            <span className="font-medium tabular-nums text-old-money-600 dark:text-old-money-400">
+                            <span className="font-medium tabular-nums text-old-money-600">
                               {event.best_speed} км/ч
                             </span>
                           )}
                           {event.best_speed && event.distance && (
-                            <span className="text-old-money-300 dark:text-old-money-500">•</span>
+                            <span className="text-old-money-300">•</span>
                           )}
                           {event.distance && (
-                            <span className="font-medium tabular-nums text-old-money-600 dark:text-old-money-400">
+                            <span className="font-medium tabular-nums text-old-money-600">
                               {event.distance} м
                             </span>
                           )}
@@ -223,7 +223,7 @@ export function RacingColumn({
               <button
                 type="button"
                 onClick={onToggleShowAll}
-                className="text-sm font-semibold text-camel-700 dark:text-camel-400"
+                className="text-sm font-semibold text-camel-700"
               >
                 {showAllRacingEvents
                   ? 'Свернуть'

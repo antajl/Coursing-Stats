@@ -21,9 +21,9 @@ export default function EventsMonthList({ monthGroups, reveal }: EventsMonthList
     <div ref={listRevealRef}>
       {monthGroups.map((group) => (
         <div key={group.key} className="mb-1.5">
-          <div className="sticky top-2 z-10 mb-1.5 flex items-baseline justify-between rounded-lg bg-old-money-100 dark:bg-charcoal-800 px-3.5 py-1.5 font-serif text-sm font-bold text-old-money-700 dark:text-old-money-300">
+          <div className="sticky top-2 z-10 mb-1.5 flex items-baseline justify-between rounded-lg bg-old-money-100 px-3.5 py-1.5 font-serif text-sm font-bold text-old-money-700">
             <span>{group.label}</span>
-            <span className="font-mono text-xs font-normal text-charcoal-500 dark:text-charcoal-300">
+            <span className="font-mono text-xs font-normal text-charcoal-500">
               {group.events.length}{' '}
               {group.events.length === 1 ? 'событие' : group.events.length < 5 ? 'события' : 'событий'}
             </span>
