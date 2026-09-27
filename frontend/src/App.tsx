@@ -7,7 +7,6 @@ import { QueryProvider } from './lib/query-client'
 import Nav from './components/Nav'
 import TemporaryCompetitionsCalendarBanner from './components/TemporaryCompetitionsCalendarBanner'
 import AppRoutes from './AppRoutes'
-import { AuthProvider } from './contexts/AuthContext'
 import { FavoritesProvider } from './contexts/FavoritesContext'
 import { ToastProvider } from './components/ToastManager'
 import { ErrorBoundary } from './components/ErrorBoundary'
@@ -22,8 +21,7 @@ function App() {
   return (
     <HelmetProvider>
       <QueryProvider>
-        <AuthProvider>
-          <FavoritesProvider>
+        <FavoritesProvider>
           <ToastProvider>
             <ErrorBoundary>
               <Router>
@@ -48,8 +46,7 @@ function App() {
               </Router>
             </ErrorBoundary>
           </ToastProvider>
-          </FavoritesProvider>
-        </AuthProvider>
+        </FavoritesProvider>
       </QueryProvider>
     </HelmetProvider>
   )

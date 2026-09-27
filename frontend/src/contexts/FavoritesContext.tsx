@@ -7,15 +7,33 @@ import {
   useState,
   type ReactNode,
 } from 'react'
-import { authApi } from '../lib/authApi'
-import {
-  addLocalStorageFavorite,
-  getLocalStorageFavorites,
-  removeLocalStorageFavorite,
-  useAuth,
-} from './AuthContext'
 
 const ACTIVE_FAVORITE_KEY = 'coursing_active_favorite'
+const LOCAL_STORAGE_FAVORITES_KEY = 'coursing_favorites'
+
+// LocalStorage favorites utilities
+function getLocalStorageFavorites(): string[] {
+  try {
+    const stored = localStorage.getItem(LOCAL_STORAGE_FAVORITES_KEY)
+    return stored ? JSON.parse(stored) : []
+  } catch {
+    return []
+  }
+}
+
+function addLocalStorageFavorite(dogId: string): void {
+  const favorites = getLocalStorageFavorites()
+  if (!favorites.includes(dogId)) {
+    favorites.push(dogId)
+    localStorage.setItem(LOCAL_STORAGE_FAVORITES_KEY, JSON.stringify(favorites))
+  }
+}
+
+function removeLocalStorageFavorite(dogId: string): void {
+  const favorites = getLocalStorageFavorites()
+  const filtered = favorites.filter(id => id !== dogId)
+  localStorage.setItem(LOCAL_STORAGE_FAVORITES_KEY, JSON.stringify(filtered))
+}
 
 export type FavoriteDogMeta = { name: string; breed: string }
 
@@ -52,45 +70,27 @@ type FavoritesContextValue = {
 const FavoritesContext = createContext<FavoritesContextValue | undefined>(undefined)
 
 export function FavoritesProvider({ children }: { children: ReactNode }) {
-  const { isAuthenticated } = useAuth()
   const [favorites, setFavorites] = useState<Set<string>>(() => new Set(getLocalStorageFavorites()))
   const [activeId, setActiveId] = useState<string | null>(() => getActiveFavoriteId())
   const [metaById, setMetaById] = useState<Record<string, FavoriteDogMeta>>({})
-  const [ready, setReady] = useState(!isAuthenticated)
+  const [ready, setReady] = useState(true)
 
   useEffect(() => {
     let cancelled = false
     const load = async () => {
-      if (!isAuthenticated) {
-        const local = getLocalStorageFavorites()
-        if (!cancelled) {
-          setFavorites(new Set(local))
-          const active = getActiveFavoriteId()
-          setActiveId(active && local.includes(active) ? active : local[0] ?? null)
-          setReady(true)
-        }
-        return
-      }
-      try {
-        const { favorites: ids } = await authApi.getFavorites()
-        if (cancelled) return
-        setFavorites(new Set(ids))
+      const local = getLocalStorageFavorites()
+      if (!cancelled) {
+        setFavorites(new Set(local))
         const active = getActiveFavoriteId()
-        setActiveId(active && ids.includes(active) ? active : ids[0] ?? null)
-      } catch {
-        if (!cancelled) {
-          const local = getLocalStorageFavorites()
-          setFavorites(new Set(local))
-        }
-      } finally {
-        if (!cancelled) setReady(true)
+        setActiveId(active && local.includes(active) ? active : local[0] ?? null)
+        setReady(true)
       }
     }
     void load()
     return () => {
       cancelled = true
     }
-  }, [isAuthenticated])
+  }, [])
 
   const setMeta = useCallback((dogId: string, meta: FavoriteDogMeta) => {
     setMetaById((prev) => (prev[dogId] ? prev : { ...prev, [dogId]: meta }))
@@ -120,26 +120,14 @@ export function FavoritesProvider({ children }: { children: ReactNode }) {
           setActiveId(fallback)
           setActiveFavoriteId(fallback)
         }
+        removeLocalStorageFavorite(id)
       } else {
         setActiveId(id)
         setActiveFavoriteId(id)
-      }
-
-      try {
-        if (isAuthenticated) {
-          if (removing) await authApi.removeFavorite(id)
-          else await authApi.addFavorite(id)
-        } else if (removing) {
-          removeLocalStorageFavorite(id)
-        } else {
-          addLocalStorageFavorite(id)
-        }
-      } catch (error) {
-        setFavorites(previous)
-        throw error
+        addLocalStorageFavorite(id)
       }
     },
-    [favorites, isAuthenticated, activeId],
+    [favorites, activeId],
   )
 
   const setActive = useCallback(
@@ -168,24 +156,11 @@ export function FavoritesProvider({ children }: { children: ReactNode }) {
         setActiveFavoriteId(fallback)
       }
 
-      try {
-        if (isAuthenticated) {
-          for (const id of unique) {
-            await authApi.removeFavorite(id)
-          }
-        } else {
-          for (const id of unique) {
-            removeLocalStorageFavorite(id)
-          }
-        }
-      } catch (error) {
-        setFavorites(previous)
-        setActiveId(previousActive)
-        setActiveFavoriteId(previousActive)
-        throw error
+      for (const id of unique) {
+        removeLocalStorageFavorite(id)
       }
     },
-    [favorites, isAuthenticated, activeId],
+    [favorites, activeId],
   )
 
   const favoriteIds = useMemo(() => [...favorites], [favorites])

@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom'
 import { useRef } from 'react'
 import { NavMenuDropdown } from '../NavMenuDropdown'
 import { usePublicCalendarVisible } from '../../hooks/useStaticData'
-import { useAuth } from '../../contexts/AuthContext'
 import { useNavLogoVisibility } from './useNavLogoVisibility'
 import FavoritesCapsule from './FavoritesCapsule'
 import {
@@ -45,7 +44,6 @@ export function NavDesktop({
   const showsCalendar = usePublicCalendarVisible('shows')
   const competitionsItems = competitionsMenuItems(competitionsCalendar)
   const showsItems = showsMenuItems(showsCalendar)
-  const { isAuthenticated, user } = useAuth()
   const logoRef = useRef<HTMLAnchorElement>(null)
   const navCenterRef = useRef<HTMLDivElement>(null)
   const { logoVisible, logoOpacity } = useNavLogoVisibility(logoRef, navCenterRef)
@@ -159,21 +157,6 @@ export function NavDesktop({
 
       <div className="flex shrink-0 items-center gap-2 lg:gap-3">
         <FavoritesCapsule />
-        {isAuthenticated ? (
-          <Link
-            to="/account"
-            className="px-2 lg:px-3 py-2 text-xs lg:text-sm font-medium text-charcoal-700 hover:text-charcoal-900 transition-colors whitespace-nowrap"
-          >
-            {user?.display_name}
-          </Link>
-        ) : (
-          <Link
-            to="/login"
-            className="px-2 lg:px-3 py-2 text-xs lg:text-sm font-medium text-camel-700 hover:text-camel-800 transition-colors whitespace-nowrap"
-          >
-            Войти
-          </Link>
-        )}
         <div
           className="relative shrink-0"
           onMouseEnter={onSourcesMouseEnter}
