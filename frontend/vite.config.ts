@@ -121,6 +121,30 @@ export default defineConfig(({ mode }) => {
   }
 
   return {
+    base: '/Coursing-Stats/',
+    plugins,
+    react(),
+    syncBotBanners(),
+    serveDataV1(),
+    homePhotosPlugin({
+      publicHomeDir: path.resolve(__dirname, 'public/assets/home'),
+      outFile: path.resolve(__dirname, 'src/lib/homePhotos.generated.ts'),
+    }),
+  ]
+
+  // Add bundle analyzer in analyze mode
+  if (mode === 'analyze') {
+    plugins.push(
+      visualizer({
+        filename: './dist/bundle-stats.html',
+        open: true,
+        gzipSize: true,
+        brotliSize: true,
+      })
+    )
+  }
+
+  return {
     plugins,
     cacheDir: './.vite', // Avoid node_modules/.vite for PnP compatibility
     build: {
