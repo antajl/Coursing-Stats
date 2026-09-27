@@ -2,6 +2,37 @@
 
 All notable changes to the CoursingStats project.
 
+## [2026-09-27] GitHub Pages Migration + Auth Removal
+
+### Changed
+- Migrated from Cloudflare Pages to GitHub Pages for Russia accessibility
+- GitHub Actions workflow now deploys to GitHub Pages instead of Cloudflare Pages
+- DNS migration from Cloudflare nameservers to Reg.ru nameservers
+- GitHub Pages custom domain configured: coursing-stats.ru
+
+### Removed
+- Authentication system (AuthContext, authApi, auth pages, Account component)
+- Auth worker dependency (login system no longer needed)
+- Development tooling:
+  - .codeiumignore (Codeium AI config)
+  - .env.example (env template)
+  - .mailmap (git blame mapping)
+  - .markdown-link-check.json (markdown link checker)
+  - playwright.config.ts (Playwright config)
+  - e2e/ folder (E2E tests)
+  - tasks/ folder (task tracking)
+- docs/ and e2e/ from git tracking (kept locally only)
+
+### Changed
+- FavoritesContext simplified to use localStorage only (no auth dependency)
+- Removed login/register buttons from navigation
+- .gitignore updated to exclude docs/ and e2e tests
+
+### Related
+- GitHub Actions: .github/workflows/deploy-frontend.yml
+- DNS: Reg.ru nameservers (ns1.reg.ru, ns2.reg.ru)
+- GitHub Pages: 4 A records for apex, CNAME for www
+
 ## [2026-09-22] Dark Theme Removal
 
 ### Removed
