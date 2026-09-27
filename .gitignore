@@ -134,6 +134,14 @@ frontend/.env.local
 .cursor/
 .windsurf/
 
+# Documentation
+docs/
+
+# E2E tests
+frontend/e2e/
+*.e2e.ts
+*.e2e.tsx
+
 # OS
 .DS_Store
 .DS_Store?
