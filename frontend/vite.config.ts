@@ -121,7 +121,6 @@ export default defineConfig(({ mode }) => {
   }
 
   return {
-    base: '/Coursing-Stats/',
     plugins,
     cacheDir: './.vite', // Avoid node_modules/.vite for PnP compatibility
     build: {
