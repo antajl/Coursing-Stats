@@ -10,11 +10,10 @@
 1. **[docs/QUICK-REFERENCE.md](docs/QUICK-REFERENCE.md)** — 5-minute overview, critical commands
 2. **[docs/MAP.md](docs/MAP.md)** — куда смотреть (detailed router)
 3. **[docs/INDEX.md](docs/INDEX.md)** — quick links by category
-4. **[tasks/STATUS.md](tasks/STATUS.md)** — project status, active tasks
-5. **[docs/sheets/](docs/sheets/)** — шпаргалки 00–12
-6. **[docs/decisions/](docs/decisions/)** — почему (ADRs)
-7. Skills: `.agents/skills/*/SKILL.md` — 9 domain-specific skills for CoursingStats
-8. MCP: GitHub + Cloudflare official servers configured in `.mcp.json`
+4. **[docs/sheets/](docs/sheets/)** — шпаргалки 00–12
+5. **[docs/decisions/](docs/decisions/)** — почему (ADRs)
+6. Skills: `.agents/skills/*/SKILL.md` — 9 domain-specific skills for CoursingStats
+7. MCP: GitHub + Cloudflare official servers configured in `.mcp.json`
 
 ## Automatic Skill Usage
 
