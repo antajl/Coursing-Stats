@@ -1,4 +1,4 @@
-name: Deploy to Cloudflare
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -19,8 +19,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     permissions:
-      contents: read
-      deployments: write
+      contents: write
+      pages: write
+      id-token: write
 
     steps:
       - name: Checkout
@@ -69,6 +70,11 @@ jobs:
       - name: Prerender SEO HTML
         run: yarn run prerender-seo
 
+      - name: Copy data to dist
+        run: |
+          mkdir -p frontend/dist/data/v1
+          cp -r data/v1/* frontend/dist/data/v1/
+
       - name: Verify SEO artifacts
         run: |
           test -f frontend/dist/spa-shell/index.html
@@ -82,15 +88,14 @@ jobs:
           grep -q '/404 / 301' frontend/dist/_redirects
           ! grep -qE '/\* /[^ ]+\.html 200' frontend/dist/_redirects
 
-      - name: Deploy Frontend to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy frontend/dist --project-name=coursingstats --branch=main --commit-dirty=true
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
-      # Worker больше не нужен для публичного сайта — фронтенд читает
-      # /data/v1/*.json прямо с Pages CDN (см. docs/03-DATA.md). Админка
-      # работает только локально через `yarn run dev` (local-dev-server :8787).
-      # Worker deploy в CI намеренно отключён.
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: frontend/dist
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
