@@ -20,13 +20,6 @@ const EventResults = lazy(() => import('./pages/Events/EventResults'));
 const AdminEventsList = lazy(() => import('./pages/Admin/AdminEventsList'));
 const AdminEventEditor = lazy(() => import('./pages/Admin/AdminEventEditor'));
 const NotFound = lazy(() => import('./pages/NotFound'));
-const LoginPage = lazy(() => import('./pages/LoginPage'));
-const RegisterPage = lazy(() => import('./pages/RegisterPage'));
-const AccountPage = lazy(() => import('./pages/Account'));
-const AccountSettingsPage = lazy(() => import('./pages/Account/AccountSettings'));
-const ForgotPasswordPage = lazy(() => import('./pages/ForgotPasswordPage'));
-const ResetPasswordPage = lazy(() => import('./pages/ResetPasswordPage'));
-const VerifyEmailPage = lazy(() => import('./pages/VerifyEmailPage'));
 
 function LegacyProcoursingRedirect() {
   const location = useLocation();
@@ -132,13 +125,6 @@ export default function AppRoutes() {
         <Route path="/donino-dog/:name/:breed" element={<DoninoDogProfile />} />
         <Route path="/judges" element={<LegacyJudgesListRedirect />} />
         <Route path="/judges/:judgeId" element={<JudgeDetail />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/register" element={<RegisterPage />} />
-        <Route path="/account" element={<AccountPage />} />
-        <Route path="/account/settings" element={<AccountSettingsPage />} />
-        <Route path="/forgot-password" element={<ForgotPasswordPage />} />
-        <Route path="/reset-password" element={<ResetPasswordPage />} />
-        <Route path="/verify-email" element={<VerifyEmailPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Suspense>
