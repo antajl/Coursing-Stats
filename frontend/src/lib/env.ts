@@ -6,14 +6,8 @@ export const isLocalDev = import.meta.env.DEV
  * (scripts/show-calendar-*.bat / hide-calendar-*.bat). Локально календари всегда видны.
  *
  * Протоколы выставок `/shows/exhibition/:id` — на сайте (Turso).
- * Протоколы соревнований `/event/:id` — только DEV; на проде ссылки на procoursing.ru.
+ * Протоколы соревнований `/event/:id` — на сайте (CDN).
  */
-
-/**
- * Базовый путь к локальному просмотру протокола соревнования.
- * На проде null — ссылки ведут на procoursing.ru (см. ProcoursingEventLink).
- */
-export const localEventPath = isLocalDev ? '/event' : null
 
 /** Базовый путь к протоколу выставки на сайте (dev и prod). */
 export const localExhibitionPath = '/shows/exhibition'

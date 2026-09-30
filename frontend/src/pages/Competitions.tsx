@@ -1,6 +1,5 @@
 import { lazy, Suspense, useState, useEffect } from 'react'
 import { Navigate, useSearchParams } from 'react-router-dom'
-import ProcoursingAttribution from '../components/ProcoursingAttribution'
 import { SEO } from '../components/SEO'
 import { usePublicCalendarVisible } from '../hooks/useStaticData'
 import LoadingCard from '../components/LoadingCard'
@@ -27,12 +26,11 @@ function Competitions() {
     <div className="space-y-6">
       <SEO
         title="Рейтинг собак: курсинг и бега борзых"
-        description="Два отдельных рейтинга — по медалям и по очкам CS (курсинг, БЗМП, бега борзых) — плюс статистика судей. Источник протоколов — procoursing.ru, данные с 2015 года."
+        description="Два отдельных рейтинга — по медалям и по очкам CS (курсинг, БЗМП, бега борзых) — плюс статистика судей. Данные с 2015 года."
         canonicalUrl="https://coursing-stats.ru/competitions"
-        keywords="рейтинг курсинг, бега борзых, топ собак, медали, судьи курсинг, РКФ, procoursing"
+        keywords="рейтинг курсинг, бега борзых, топ собак, медали, судьи курсинг, РКФ"
       />
       <div className="relative rounded-2xl border border-cream-300 bg-cream-50/90 shadow-xl backdrop-blur-lg">
-        <ProcoursingAttribution variant="footnote" className="absolute right-0 top-0 z-10" />
         <div className="min-h-[400px] px-4 py-3 md:px-6 md:py-4">
           {activeTab === 'ranking' && (
             <div

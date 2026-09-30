@@ -117,7 +117,7 @@ export function NavMobile({
                 onClick={onToggleStatistics}
                 aria-expanded={statisticsOpen}
                 aria-controls="statistics-menu"
-                aria-label="Соревнования - рейтинг, календарь, судьи"
+                aria-label="Соревнования - рейтинг, архив, судьи"
                 className={`w-full flex items-center justify-between px-4 py-2 text-sm font-semibold transition-colors ${
                   isCompetitionsActive ? 'text-camel-700' : 'text-charcoal-700'
                 }`}
@@ -147,7 +147,7 @@ export function NavMobile({
                       onClick={onCloseMobileMenu}
                       className="block px-4 py-2 text-sm text-charcoal-700 hover:bg-old-money-50 rounded-lg transition-colors"
                     >
-                      Календарь
+                      Архив
                     </Link>
                   )}
                   <Link

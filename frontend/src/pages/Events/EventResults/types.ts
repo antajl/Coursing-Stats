@@ -1,5 +1,8 @@
 export interface Event {
   results_url?: string | null
+  catalog_url?: string | null
+  results_pdf_url?: string | null
+  rules_url?: string | null
   full_title?: string | null
   rank_label?: string | null
   competition_kind?: string | null

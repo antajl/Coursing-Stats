@@ -92,7 +92,7 @@ export function NavDesktop({
           title="Рейтинг собак и судьи: курсинг, БЗМП, бега борзых"
           isSectionActive={isCompetitionsActive}
           chevronLabel="Меню раздела Соревнования"
-          ariaLabel="Соревнования - рейтинг, календарь, судьи"
+          ariaLabel="Соревнования - рейтинг, архив, судьи"
           label={
             <>
               <span className="lg:hidden">Соревн.</span>

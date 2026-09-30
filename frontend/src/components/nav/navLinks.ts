@@ -38,7 +38,7 @@ export function guideTabActive(tab: string) {
 
 const COMPETITIONS_CALENDAR_ITEM: NavMenuItem = {
   to: '/competitions?tab=calendar',
-  label: 'Календарь',
+  label: 'Архив',
   icon: Icons.calendar,
   isActive: competitionTabActive('calendar'),
 }

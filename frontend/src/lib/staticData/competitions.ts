@@ -157,6 +157,8 @@ export async function getEvent(eventId: string): Promise<ApiResult<Record<string
       location: entry.location,
       catalog_url: entry.catalog_url,
       results_url: entry.results_url,
+      rules_url: entry.rules_url ?? null,
+      results_pdf_url: entry.results_pdf_url ?? null,
       confirmed: entry.confirmed,
       judges: entry.judges ?? null,
       track_schemes: null,

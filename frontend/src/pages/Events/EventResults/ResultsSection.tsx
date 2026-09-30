@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import ResultCard from './ResultCard'
-import { groupResultsByBreedClass } from './utils'
+import { groupResultsByBreedClass, groupRacingResults, isRacingFormat, parseRawScores } from './utils'
 import type { Result } from './types'
 
 interface ResultsSectionProps {
@@ -27,7 +27,15 @@ export default function ResultsSection({ results }: ResultsSectionProps) {
     )
   }
 
-  const { grouped, sortedGroups } = groupResultsByBreedClass(results)
+  // Detect if this is a racing event
+  const isRacing = results.some(r => {
+    const rawScores = parseRawScores(r.raw_scores_json)
+    return isRacingFormat(rawScores)
+  })
+
+  const { grouped, sortedGroups } = isRacing 
+    ? groupRacingResults(results)
+    : groupResultsByBreedClass(results)
 
   const breeds = Array.from(new Set(results.map(r => r.dog.breed))).sort()
 
@@ -41,7 +49,9 @@ export default function ResultsSection({ results }: ResultsSectionProps) {
 
   const allBreedsCount = breeds.length
 
-  const { grouped: filteredGrouped, sortedGroups: filteredSortedGroups } = groupResultsByBreedClass(filteredResults)
+  const { grouped: filteredGrouped, sortedGroups: filteredSortedGroups } = isRacing
+    ? groupRacingResults(filteredResults)
+    : groupResultsByBreedClass(filteredResults)
 
   return (
     <div className="space-y-4">
@@ -78,13 +88,86 @@ export default function ResultsSection({ results }: ResultsSectionProps) {
       {filteredSortedGroups.map(groupKey => {
         const groupResults = filteredGrouped[groupKey]
 
+        // For racing, show sub-groups by breed and class
+        if (isRacing && groupKey !== 'Неприбывшие участники') {
+          // Group by breed first
+          const breedGroups = groupResults.reduce<Record<string, Result[]>>((acc, r) => {
+            const breed = r.dog?.breed || 'Другие'
+            if (!acc[breed]) acc[breed] = []
+            acc[breed].push(r)
+            return acc
+          }, {})
+
+          const sortedBreeds = Object.keys(breedGroups).sort()
+
+          return (
+            <section key={groupKey} className="space-y-4 mb-6 overflow-hidden">
+              <div className="flex items-center justify-between gap-3 bg-camel-100 pl-4 py-2 pr-3 rounded-lg border-t border-b border-r border-camel-200 rounded-tl-lg rounded-tr-lg">
+                <h3 className="min-w-0 flex-1 text-lg font-bold tracking-tight text-camel-800">
+                  {groupKey}
+                </h3>
+                <span className="flex-shrink-0 text-xs font-medium text-camel-600">
+                  {breedCountLabel(groupResults.length)}
+                </span>
+              </div>
+              <div className="pl-4 border-l-2 border-camel-300 space-y-4 -mt-0.5">
+              
+              {sortedBreeds.map(breed => {
+                const breedResults = breedGroups[breed]
+                // Sort by class (from breed_class: "Порода - Класс")
+                const classOrder = ['стандарт', 'спринтер', 'юниор', 'ветеран']
+                const sortedResults = breedResults.sort((a, b) => {
+                  const breedClassA = a.breed_class || ''
+                  const breedClassB = b.breed_class || ''
+                  const partsA = breedClassA.split(' - ')
+                  const partsB = breedClassB.split(' - ')
+                  const classA = partsA.length >= 2 ? partsA[1] : breedClassA
+                  const classB = partsB.length >= 2 ? partsB[1] : breedClassB
+                  
+                  const aIndex = classOrder.indexOf(classA.toLowerCase())
+                  const bIndex = classOrder.indexOf(classB.toLowerCase())
+                  
+                  // Both in predefined order
+                  if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex
+                  // Only a in predefined order
+                  if (aIndex !== -1) return -1
+                  // Only b in predefined order
+                  if (bIndex !== -1) return 1
+                  // Neither in predefined order - alphabetical
+                  return classA.localeCompare(classB)
+                })
+
+                return (
+                  <div key={breed} className="space-y-3">
+                    <div className="flex items-center justify-between gap-3">
+                      <h4 className="min-w-0 flex-1 text-sm font-semibold text-charcoal-700">
+                        {breed}
+                      </h4>
+                      <span className="flex-shrink-0 text-xs text-old-money-500">
+                        {breedCountLabel(breedResults.length)}
+                      </span>
+                    </div>
+                    <div className="space-y-2">
+                      {sortedResults.map((result, idx) => (
+                        <ResultCard key={`${result.dog_id}-${idx}`} result={result} index={idx} />
+                      ))}
+                    </div>
+                  </div>
+                )
+              })}
+              </div>
+            </section>
+          )
+        }
+
+        // Standard grouping for non-racing or DNS
         return (
-          <section key={groupKey}>
-            <div className="flex items-center justify-between gap-3 mb-3">
-              <h3 className="min-w-0 flex-1 text-lg font-bold tracking-tight text-charcoal-800">
+          <section key={groupKey} className="space-y-4">
+            <div className="flex items-center justify-between gap-3 bg-camel-100 py-2 px-3 rounded-lg border border-camel-200">
+              <h3 className="min-w-0 flex-1 text-lg font-bold tracking-tight text-camel-800">
                 {groupKey}
               </h3>
-              <span className="flex-shrink-0 text-xs font-medium text-old-money-500">
+              <span className="flex-shrink-0 text-xs font-medium text-camel-600">
                 {breedCountLabel(groupResults.length)}
               </span>
             </div>

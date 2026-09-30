@@ -17,8 +17,6 @@ const JudgeDetail = lazy(() => import('./pages/Judges/JudgeDetail'));
 const ShowExhibitionDetail = lazy(() => import('./pages/Shows/ShowExhibitionDetail'));
 const ShowJudgeDetail = lazy(() => import('./pages/Shows/ShowJudgeDetail'));
 const EventResults = lazy(() => import('./pages/Events/EventResults'));
-const AdminEventsList = lazy(() => import('./pages/Admin/AdminEventsList'));
-const AdminEventEditor = lazy(() => import('./pages/Admin/AdminEventEditor'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 function LegacyProcoursingRedirect() {
@@ -47,16 +45,6 @@ function LegacyExhibitionRedirect() {
   const { id } = useParams<{ id: string }>();
   if (!isLocalDev) return <Navigate to="/shows" replace />;
   return <Navigate to={`/shows/exhibition/${id}`} replace />;
-}
-
-function AdminCalendarRedirect() {
-  const calendarVisible = usePublicCalendarVisible('competitions');
-  return (
-    <Navigate
-      to={calendarVisible ? '/competitions?tab=calendar' : '/competitions?tab=ranking'}
-      replace
-    />
-  );
 }
 
 function ShowDogIdRedirect() {
@@ -116,9 +104,6 @@ export default function AppRoutes() {
         <Route path="/top-dogs" element={<LegacyTopRedirect />} />
         <Route path="/dog/:id" element={<ShowDogIdRedirect />} />
         <Route path="/event/:id" element={<EventResults />} />
-        <Route path="/admin" element={<AdminEventsList />} />
-        <Route path="/admin/calendar" element={<AdminCalendarRedirect />} />
-        <Route path="/admin/event/:id" element={<AdminEventEditor />} />
         <Route path="/speed-records" element={<SpeedRecords />} />
         <Route path="/guide" element={<Guide />} />
         <Route path="/about" element={<About />} />

@@ -1,8 +1,8 @@
 {
   "schema": "coursing-stats/calendar-v1",
   "year": 2020,
-  "exported_at": "2026-08-08T23:37:00.812Z",
-  "event_count": 6,
+  "exported_at": "2026-09-28T13:21:42.916Z",
+  "event_count": 4,
   "with_results": 4,
   "events": [
     {
@@ -58,32 +58,6 @@
       "participants_count": 51
     },
     {
-      "id": 20200822,
-      "year": 2020,
-      "month": "08-август",
-      "date_start": "2020-08-22",
-      "date_end": "2020-08-23",
-      "title": "Международный чемпионат по курсингу ранга CACIL & ЧРКФ по курсингу",
-      "full_title": "Международный чемпионат по курсингу ранга CACIL & ЧРКФ по курсингу",
-      "rank_label": "Международный чемпионат по курсингу ранга CACIL & ЧРКФ по курсингу",
-      "rank_code": "CACIL",
-      "discipline_code": "coursing",
-      "event_type": "coursing",
-      "competition_kind": "CAC",
-      "competition_type": "Курсинг борзых",
-      "host_club": "",
-      "region": null,
-      "location": "Московская область, деревня Суханово",
-      "results_url": "https://web.archive.org/web/20250708015218/http://procoursing.ru/results/2020-08-22_R/",
-      "catalog_url": null,
-      "confirmed": 0,
-      "judges": null,
-      "has_results": false,
-      "results_file": null,
-      "result_count": 0,
-      "participants_count": 0
-    },
-    {
       "id": 20200912,
       "year": 2020,
       "month": "09-сентябрь",
@@ -134,32 +108,6 @@
       "results_file": "competitions/2020/09-сентябрь/1572-кубок-россии-по-бегам-борзых-за-механическим-заи.json",
       "result_count": 74,
       "participants_count": 74
-    },
-    {
-      "id": 20201003,
-      "year": 2020,
-      "month": "10-октябрь",
-      "date_start": "2020-10-03",
-      "date_end": "2020-10-04",
-      "title": "Международный чемпионат по курсингу ранга CACIL & ЧР по курсингу",
-      "full_title": "Международный чемпионат по курсингу ранга CACIL & ЧР по курсингу",
-      "rank_label": "Международный чемпионат по курсингу ранга CACIL & ЧР по курсингу",
-      "rank_code": "CACIL",
-      "discipline_code": "coursing",
-      "event_type": "coursing",
-      "competition_kind": "Чемпионат России",
-      "competition_type": "Курсинг борзых",
-      "host_club": "",
-      "region": null,
-      "location": "Московская область, деревня Михайловское",
-      "results_url": "https://web.archive.org/web/20250708015218/http://procoursing.ru/results/2020-10-03/",
-      "catalog_url": null,
-      "confirmed": 0,
-      "judges": null,
-      "has_results": false,
-      "results_file": null,
-      "result_count": 0,
-      "participants_count": 0
     }
   ]
 }

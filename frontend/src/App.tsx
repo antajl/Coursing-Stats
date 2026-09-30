@@ -5,7 +5,6 @@ import PageAtmosphereBlobs from './components/PageAtmosphereBlobs'
 import { YandexMetrica } from './components/YandexMetrica'
 import { QueryProvider } from './lib/query-client'
 import Nav from './components/Nav'
-import TemporaryCompetitionsCalendarBanner from './components/TemporaryCompetitionsCalendarBanner'
 import AppRoutes from './AppRoutes'
 import { FavoritesProvider } from './contexts/FavoritesContext'
 import { ToastProvider } from './components/ToastManager'
@@ -37,7 +36,6 @@ function App() {
                   <HomeOnlyBlobs />
                   <Nav />
                   <div className="relative z-[1]">
-                    <TemporaryCompetitionsCalendarBanner />
                     <main id="main-content" className="w-full md:max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 pt-3 pb-5 md:pt-4 flex-1">
                       <AppRoutes />
                     </main>

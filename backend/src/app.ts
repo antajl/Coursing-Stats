@@ -4,7 +4,6 @@ import { edgeCache } from './lib/edge-cache';
 import { handleCompetitions } from './routes/events';
 import { handleDogs } from './routes/dogs';
 import { handleTop } from './routes/top';
-import { handleAdmin } from './routes/admin';
 import { handleSpeed } from './routes/speed';
 import { handleJudges } from './routes/judges';
 import { handleSitemap } from './routes/sitemap';
@@ -32,7 +31,6 @@ handleCompetitions(app);
 handleDogs(app);
 handleTop(app);
 handleJudges(app);
-handleAdmin(app);
 handleSitemap(app);
 
 // SPA fallback (не перехватывать несуществующие API-маршруты)

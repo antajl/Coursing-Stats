@@ -1,0 +1,3723 @@
+{
+  "schema": "coursing-stats/competition-v1",
+  "exported_at": "2026-09-28T18:08:06.864Z",
+  "source": "manual-entry",
+  "event_id": 2022000,
+  "event": {
+    "id": 2022000,
+    "year": 2026,
+    "date_start": "2026-09-12",
+    "date_end": "2026-09-13",
+    "rank_label": "Чемпионат России\n(Бега борзых)",
+    "event_type": "racing",
+    "competition_kind": "Чемпионат России",
+    "competition_type": "Бега борзых",
+    "title": "Чемпионат России по бегам борзых",
+    "host_club": "ОООК КЦ «Элита» РАЛББ",
+    "region": null,
+    "location": "Московская обл., ГО Сергиев Посад",
+    "catalog_url": "https://disk.yandex.ru/i/-5sMOFc_XK-PWg",
+    "results_url": null,
+    "rules_url": "https://disk.yandex.ru/d/xv6kHZ8G3GskfQ",
+    "results_pdf_url": "https://disk.yandex.ru/d/OhMUpq_yi3q3hw",
+    "confirmed": 1,
+    "last_modified": null,
+    "scraped_at": null,
+    "telegram_url": null,
+    "full_title": null,
+    "event_date": null,
+    "protocol_location": null,
+    "judges": "Полякова Г.Б., Иванова Г.С., Гольдинова Л.М., Куликова Г.В.",
+    "track_schemes": []
+  },
+  "result_count": 73,
+  "results": [
+    {
+      "id": 8000,
+      "event_id": 2022000,
+      "dog_id": 5735,
+      "breed_class": "Басенджи - Стандартный - Кобель",
+      "catalog_no": 2,
+      "placement": 1,
+      "total_score": 30.86,
+      "judge_count": 0,
+      "qualification": "Чемпион России, CACLBr, RegCACL",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 45,
+            "bib_color": "red",
+            "time": 31.49,
+            "speed_kmh": 40.013
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 54,
+            "bib_color": "red",
+            "time": 30.86,
+            "speed_kmh": 40.83
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 62,
+            "bib_color": "red",
+            "time": 31.39,
+            "speed_kmh": 40.14
+          }
+        ],
+        "grand_total": 30.86,
+        "normalized_score": 30.86,
+        "format": "racing"
+      },
+      "raw_text": "DZHANA-DZHAN GENRI MORGAN ДЖАНА-ДЖАН ГЕНРИ МОРГАН - 1 место - 30.86 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "dzhana-dzhan-genri-morgan--басенджи",
+      "dog": {
+        "id": 5735,
+        "dog_key": "dzhana-dzhan-genri-morgan--басенджи",
+        "name_lat": "DZHANA-DZHAN GENRI MORGAN",
+        "name_ru": "ДЖАНА-ДЖАН ГЕНРИ МОРГАН",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Кобель",
+        "owner": null,
+        "sex_icon": "♂"
+      }
+    },
+    {
+      "id": 8001,
+      "event_id": 2022000,
+      "dog_id": 855,
+      "breed_class": "Басенджи - Стандартный - Кобель",
+      "catalog_no": 3,
+      "placement": 2,
+      "total_score": 33.23,
+      "judge_count": 0,
+      "qualification": "CACL, RegCACL",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 45,
+            "bib_color": "white",
+            "time": 33.71,
+            "speed_kmh": 37.378
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 54,
+            "bib_color": "blue",
+            "time": 33.23,
+            "speed_kmh": 37.918
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 62,
+            "bib_color": "blue",
+            "time": 34.18,
+            "speed_kmh": 36.864
+          }
+        ],
+        "grand_total": 33.23,
+        "normalized_score": 33.23,
+        "format": "racing"
+      },
+      "raw_text": "HARMONY KAMA TIRAMISU BEST EVER ХАРМОНИ КАМА ТИРАМИСУ БЕСТ ЭВЕР - 2 место - 33.23 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "harmony-kama-tiramisu-best-ever--басенджи",
+      "dog": {
+        "id": 855,
+        "dog_key": "harmony-kama-tiramisu-best-ever--басенджи",
+        "name_lat": "HARMONY KAMA TIRAMISU BEST EVER",
+        "name_ru": "ХАРМОНИ КАМА ТИРАМИСУ БЕСТ ЭВЕР",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Кобель",
+        "owner": null,
+        "sex_icon": "♂"
+      }
+    },
+    {
+      "id": 8002,
+      "event_id": 2022000,
+      "dog_id": 10729,
+      "breed_class": "Басенджи - Стандартный - Кобель",
+      "catalog_no": 1,
+      "placement": null,
+      "total_score": 0,
+      "judge_count": 0,
+      "qualification": "|",
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "heats": [],
+        "grand_total": 0,
+        "normalized_score": 0,
+        "format": "racing"
+      },
+      "raw_text": "DUNDEE CROCODILE HUNTER ДАНДИ КРОКОДАЙЛ ХАНТЕР - null место - 0 с",
+      "judges": "",
+      "status_reason": "(Агрессия)",
+      "dog_key": "dundee-crocodile-hunter--басенджи",
+      "dog": {
+        "id": 10729,
+        "dog_key": "dundee-crocodile-hunter--басенджи",
+        "name_lat": "DUNDEE CROCODILE HUNTER",
+        "name_ru": "ДАНДИ КРОКОДАЙЛ ХАНТЕР",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Кобель",
+        "owner": null,
+        "sex_icon": "♂"
+      }
+    },
+    {
+      "id": 8003,
+      "event_id": 2022000,
+      "dog_id": 10730,
+      "breed_class": "Басенджи - Стандартный - Сука",
+      "catalog_no": 8,
+      "placement": 1,
+      "total_score": 32.21,
+      "judge_count": 0,
+      "qualification": "Чемпион России, RegCACL",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 43,
+            "bib_color": "white",
+            "time": 32.54,
+            "speed_kmh": 38.722
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 52,
+            "bib_color": "red",
+            "time": 32.21,
+            "speed_kmh": 39.118
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 61,
+            "bib_color": "red",
+            "time": 32.81,
+            "speed_kmh": 38.403
+          }
+        ],
+        "grand_total": 32.21,
+        "normalized_score": 32.21,
+        "format": "racing"
+      },
+      "raw_text": "NICOL SAN S KNJAZHESKOGO DVORA НИКОЛЬ САН С КНЯЖЕСКОГО ДВОРА - 1 место - 32.21 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "nicol-san-s-knjazheskogo-dvora--басенджи",
+      "dog": {
+        "id": 10730,
+        "dog_key": "nicol-san-s-knjazheskogo-dvora--басенджи",
+        "name_lat": "NICOL SAN S KNJAZHESKOGO DVORA",
+        "name_ru": "НИКОЛЬ САН С КНЯЖЕСКОГО ДВОРА",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Сука",
+        "owner": null,
+        "sex_icon": "♀"
+      }
+    },
+    {
+      "id": 8004,
+      "event_id": 2022000,
+      "dog_id": 10731,
+      "breed_class": "Басенджи - Стандартный - Сука",
+      "catalog_no": 7,
+      "placement": 2,
+      "total_score": 32.83,
+      "judge_count": 0,
+      "qualification": "CACL, RegCACL",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 44,
+            "bib_color": "white",
+            "time": 33.32,
+            "speed_kmh": 37.815
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 52,
+            "bib_color": "blue",
+            "time": 32.94,
+            "speed_kmh": 38.251
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 61,
+            "bib_color": "white",
+            "time": 32.83,
+            "speed_kmh": 38.38
+          }
+        ],
+        "grand_total": 32.83,
+        "normalized_score": 32.83,
+        "format": "racing"
+      },
+      "raw_text": "HARMONY KAMA ILONA ХАРМОНИ КАМА ИЛОНА - 2 место - 32.83 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "harmony-kama-ilona--басенджи",
+      "dog": {
+        "id": 10731,
+        "dog_key": "harmony-kama-ilona--басенджи",
+        "name_lat": "HARMONY KAMA ILONA",
+        "name_ru": "ХАРМОНИ КАМА ИЛОНА",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Сука",
+        "owner": null,
+        "sex_icon": "♀"
+      }
+    },
+    {
+      "id": 8005,
+      "event_id": 2022000,
+      "dog_id": 10732,
+      "breed_class": "Басенджи - Стандартный - Сука",
+      "catalog_no": 6,
+      "placement": 3,
+      "total_score": 32.69,
+      "judge_count": 0,
+      "qualification": "RegCACL",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 44,
+            "bib_color": "red",
+            "time": 32.91,
+            "speed_kmh": 38.286
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 53,
+            "bib_color": "blue",
+            "time": 32.69,
+            "speed_kmh": 38.544
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 61,
+            "bib_color": "blue",
+            "time": 32.95,
+            "speed_kmh": 38.24
+          }
+        ],
+        "grand_total": 32.69,
+        "normalized_score": 32.69,
+        "format": "racing"
+      },
+      "raw_text": "EE VELICHESTVO ЕЕ ВЕЛИЧЕСТВО - 3 место - 32.69 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "ee-velichestvo--басенджи",
+      "dog": {
+        "id": 10732,
+        "dog_key": "ee-velichestvo--басенджи",
+        "name_lat": "EE VELICHESTVO",
+        "name_ru": "ЕЕ ВЕЛИЧЕСТВО",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Сука",
+        "owner": null,
+        "sex_icon": "♀"
+      }
+    },
+    {
+      "id": 8006,
+      "event_id": 2022000,
+      "dog_id": 10733,
+      "breed_class": "Басенджи - Стандартный - Сука",
+      "catalog_no": 5,
+      "placement": 4,
+      "total_score": 33.94,
+      "judge_count": 0,
+      "qualification": null,
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 43,
+            "bib_color": "blue",
+            "time": 37.09,
+            "speed_kmh": 33.971
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 52,
+            "bib_color": "white",
+            "time": 33.94,
+            "speed_kmh": 37.124
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 61,
+            "bib_color": "yellow",
+            "time": 40.01,
+            "speed_kmh": 31.492
+          }
+        ],
+        "grand_total": 33.94,
+        "normalized_score": 33.94,
+        "format": "racing"
+      },
+      "raw_text": "DINA DEIO ДИНА ДЭЙО - 4 место - 33.94 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "dina-deio--басенджи",
+      "dog": {
+        "id": 10733,
+        "dog_key": "dina-deio--басенджи",
+        "name_lat": "DINA DEIO",
+        "name_ru": "ДИНА ДЭЙО",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Сука",
+        "owner": null,
+        "sex_icon": "♀"
+      }
+    },
+    {
+      "id": 8007,
+      "event_id": 2022000,
+      "dog_id": 5696,
+      "breed_class": "Басенджи - Стандартный - Сука",
+      "catalog_no": 9,
+      "placement": 5,
+      "total_score": 37.17,
+      "judge_count": 0,
+      "qualification": null,
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 43,
+            "bib_color": "red",
+            "time": 37.17,
+            "speed_kmh": 33.898
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 53,
+            "bib_color": "yellow",
+            "time": 37.52,
+            "speed_kmh": 33.582
+          }
+        ],
+        "grand_total": 37.17,
+        "normalized_score": 37.17,
+        "format": "racing"
+      },
+      "raw_text": "PAIPER AMETISTA DZHUVEl HARRIS ПАЙПЕР АМЕТИСТА ДЖУВЕЛ ХАРРИС - 5 место - 37.17 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "paiper-ametista-dzhuvel-harris--басенджи",
+      "dog": {
+        "id": 5696,
+        "dog_key": "paiper-ametista-dzhuvel-harris--басенджи",
+        "name_lat": "PAIPER AMETISTA DZHUVEl HARRIS",
+        "name_ru": "ПАЙПЕР АМЕТИСТА ДЖУВЕЛ ХАРРИС",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Сука",
+        "owner": null,
+        "sex_icon": "♀"
+      }
+    },
+    {
+      "id": 8008,
+      "event_id": 2022000,
+      "dog_id": 10734,
+      "breed_class": "Басенджи - Стандартный - Сука",
+      "catalog_no": 11,
+      "placement": null,
+      "total_score": 32.03,
+      "judge_count": 0,
+      "qualification": null,
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 43,
+            "bib_color": "yellow",
+            "time": 32.03,
+            "speed_kmh": 39.338
+          }
+        ],
+        "grand_total": 32.03,
+        "normalized_score": 32.03,
+        "format": "racing"
+      },
+      "raw_text": "YAGODNAYA KARAMELKA ЯГОДНАЯ КАРАМЕЛЬКА - null место - 32.03 с",
+      "judges": "",
+      "status_reason": "(Агрессия)",
+      "dog_key": "yagodnaya-karamelka--басенджи",
+      "dog": {
+        "id": 10734,
+        "dog_key": "yagodnaya-karamelka--басенджи",
+        "name_lat": "YAGODNAYA KARAMELKA",
+        "name_ru": "ЯГОДНАЯ КАРАМЕЛЬКА",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Сука",
+        "owner": null,
+        "sex_icon": "♀"
+      }
+    },
+    {
+      "id": 8009,
+      "event_id": 2022000,
+      "dog_id": 5742,
+      "breed_class": "Басенджи - Стандартный - Сука",
+      "catalog_no": 10,
+      "placement": null,
+      "total_score": 34.29,
+      "judge_count": 0,
+      "qualification": null,
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 44,
+            "bib_color": "blue",
+            "time": 34.29,
+            "speed_kmh": 36.745
+          }
+        ],
+        "grand_total": 34.29,
+        "normalized_score": 34.29,
+        "format": "racing"
+      },
+      "raw_text": "RUBI РУБИ - null место - 34.29 с",
+      "judges": "",
+      "status_reason": "(Агрессия)",
+      "dog_key": "rubi--басенджи",
+      "dog": {
+        "id": 5742,
+        "dog_key": "rubi--басенджи",
+        "name_lat": "RUBI",
+        "name_ru": "РУБИ",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Сука",
+        "owner": null,
+        "sex_icon": "♀"
+      }
+    },
+    {
+      "id": 8010,
+      "event_id": 2022000,
+      "dog_id": 5620,
+      "breed_class": "Грейхаунд - Стандартный - Кобель",
+      "catalog_no": 12,
+      "placement": 1,
+      "total_score": 26.75,
+      "judge_count": 0,
+      "qualification": "CACLBr",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 13,
+            "bib_color": "red",
+            "time": 27.15,
+            "speed_kmh": 46.409
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 29,
+            "bib_color": "red",
+            "time": 26.75,
+            "speed_kmh": 47.103
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 39,
+            "bib_color": "red",
+            "time": 28.29,
+            "speed_kmh": 44.539
+          }
+        ],
+        "grand_total": 26.75,
+        "normalized_score": 26.75,
+        "format": "racing"
+      },
+      "raw_text": "HEPI HEPRI SUPREME COMMANDER ХЕПИ ХЕПРИ СУПРЕМ КОМАНДЕР - 1 место - 26.75 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "hepi-hepri-supreme-commander--грейхаунд",
+      "dog": {
+        "id": 5620,
+        "dog_key": "hepi-hepri-supreme-commander--грейхаунд",
+        "name_lat": "HEPI HEPRI SUPREME COMMANDER",
+        "name_ru": "ХЕПИ ХЕПРИ СУПРЕМ КОМАНДЕР",
+        "breed": "ГРЕЙХАУНД",
+        "sex": "Кобель",
+        "owner": null,
+        "sex_icon": "♂"
+      }
+    },
+    {
+      "id": 8011,
+      "event_id": 2022000,
+      "dog_id": 540,
+      "breed_class": "Малая итальянская борзая - Ветераны - Сука",
+      "catalog_no": 21,
+      "placement": 1,
+      "total_score": 32.63,
+      "judge_count": 0,
+      "qualification": null,
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 3,
+            "bib_color": "red",
+            "time": 32.63,
+            "speed_kmh": 38.615
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 33,
+            "bib_color": "red",
+            "time": 33.63,
+            "speed_kmh": 37.467
+          }
+        ],
+        "grand_total": 32.63,
+        "normalized_score": 32.63,
+        "format": "racing"
+      },
+      "raw_text": " GRACE HAUND ELIZABETH HER EXCELLENCE - 1 место - 32.63 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "",
+      "dog": {
+        "id": 540,
+        "dog_key": "",
+        "name_lat": "",
+        "name_ru": "GRACE HAUND ELIZABETH HER EXCELLENCE",
+        "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
+        "sex": "Сука",
+        "owner": null,
+        "sex_icon": "♀"
+      }
+    },
+    {
+      "id": 8012,
+      "event_id": 2022000,
+      "dog_id": 5836,
+      "breed_class": "Малая итальянская борзая - Стандартный-спринтеры - Кобель",
+      "catalog_no": 18,
+      "placement": 1,
+      "total_score": 28.24,
+      "judge_count": 0,
+      "qualification": "Чемпион России, CACLBr, RegCACL",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 28.46,
+            "speed_kmh": 44.273
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 19,
+            "bib_color": "red",
+            "time": 28.24,
+            "speed_kmh": 44.618
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 34,
+            "bib_color": "red",
+            "time": 28.5,
+            "speed_kmh": 44.211
+          }
+        ],
+        "grand_total": 28.24,
+        "normalized_score": 28.24,
+        "format": "racing"
+      },
+      "raw_text": "VETLUGA MEGUMI MARS DEL ESPACIO ВЕТЛУГА МЕГУМИ МАРС ДЕЛ ЕСПАСИО - 1 место - 28.24 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "vetluga-megumi-mars-del-espacio--малая итальянская борзая",
+      "dog": {
+        "id": 5836,
+        "dog_key": "vetluga-megumi-mars-del-espacio--малая итальянская борзая",
+        "name_lat": "VETLUGA MEGUMI MARS DEL ESPACIO",
+        "name_ru": "ВЕТЛУГА МЕГУМИ МАРС ДЕЛ ЕСПАСИО",
+        "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
+        "sex": "Кобель",
+        "owner": null,
+        "sex_icon": "♂"
+      }
+    },
+    {
+      "id": 8013,
+      "event_id": 2022000,
+      "dog_id": 358,
+      "breed_class": "Малая итальянская борзая - Стандартный-спринтеры - Кобель",
+      "catalog_no": 16,
+      "placement": 2,
+      "total_score": 28.99,
+      "judge_count": 0,
+      "qualification": "CACL, RegCACL",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 1,
+            "bib_color": "white",
+            "time": 29.22,
+            "speed_kmh": 43.121
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 18,
+            "bib_color": "red",
+            "time": 29.01,
+            "speed_kmh": 43.433
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 34,
+            "bib_color": "blue",
+            "time": 28.99,
+            "speed_kmh": 43.463
+          }
+        ],
+        "grand_total": 28.99,
+        "normalized_score": 28.99,
+        "format": "racing"
+      },
+      "raw_text": "AGOTI ADAMANTE DEL ESPACIO АГОТИ АДАМАНТЕ ДЕЛ ЕСПАСИО - 2 место - 28.99 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "agoti-adamante-del-espacio--малая итальянская борзая",
+      "dog": {
+        "id": 358,
+        "dog_key": "agoti-adamante-del-espacio--малая итальянская борзая",
+        "name_lat": "AGOTI ADAMANTE DEL ESPACIO",
+        "name_ru": "АГОТИ АДАМАНТЕ ДЕЛ ЕСПАСИО",
+        "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
+        "sex": "Кобель",
+        "owner": null,
+        "sex_icon": "♂"
+      }
+    },
+    {
+      "id": 8014,
+      "event_id": 2022000,
+      "dog_id": 10735,
+      "breed_class": "Малая итальянская борзая - Стандартный-спринтеры - Сука",
+      "catalog_no": 19,
+      "placement": 3,
+      "total_score": 29.34,
+      "judge_count": 0,
+      "qualification": "RegCACL",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 1,
+            "bib_color": "blue",
+            "time": 29.41,
+            "speed_kmh": 42.843
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 19,
+            "bib_color": "blue",
+            "time": 29.34,
+            "speed_kmh": 42.945
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 34,
+            "bib_color": "white",
+            "time": 29.48,
+            "speed_kmh": 42.741
+          }
+        ],
+        "grand_total": 29.34,
+        "normalized_score": 29.34,
+        "format": "racing"
+      },
+      "raw_text": "I'M A LEGEND ANYWAY ИМ А ЛЕГЕНД ЭНИВЕЙ - 3 место - 29.34 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "i'm-a-legend-anyway--малая итальянская борзая",
+      "dog": {
+        "id": 10735,
+        "dog_key": "i'm-a-legend-anyway--малая итальянская борзая",
+        "name_lat": "I'M A LEGEND ANYWAY",
+        "name_ru": "ИМ А ЛЕГЕНД ЭНИВЕЙ",
+        "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
+        "sex": "Сука",
+        "owner": null,
+        "sex_icon": "♀"
+      }
+    },
+    {
+      "id": 8015,
+      "event_id": 2022000,
+      "dog_id": 10736,
+      "breed_class": "Малая итальянская борзая - Стандартный-спринтеры - Сука",
+      "catalog_no": 20,
+      "placement": 4,
+      "total_score": 29.74,
+      "judge_count": 0,
+      "qualification": null,
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 2,
+            "bib_color": "red",
+            "time": 30.03,
+            "speed_kmh": 41.958
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 18,
+            "bib_color": "white",
+            "time": 29.74,
+            "speed_kmh": 42.367
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 34,
+            "bib_color": "yellow",
+            "time": 30.25,
+            "speed_kmh": 41.653
+          }
+        ],
+        "grand_total": 29.74,
+        "normalized_score": 29.74,
+        "format": "racing"
+      },
+      "raw_text": "VETLUGA HALVA RACEDOG ВЕТЛУГА ХАЛВА РЕЙСДОГ - 4 место - 29.74 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "vetluga-halva-racedog--малая итальянская борзая",
+      "dog": {
+        "id": 10736,
+        "dog_key": "vetluga-halva-racedog--малая итальянская борзая",
+        "name_lat": "VETLUGA HALVA RACEDOG",
+        "name_ru": "ВЕТЛУГА ХАЛВА РЕЙСДОГ",
+        "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
+        "sex": "Сука",
+        "owner": null,
+        "sex_icon": "♀"
+      }
+    },
+    {
+      "id": 8016,
+      "event_id": 2022000,
+      "dog_id": 10737,
+      "breed_class": "Малая итальянская борзая - Стандартный-спринтеры - Кобель",
+      "catalog_no": 17,
+      "placement": 5,
+      "total_score": 29.8,
+      "judge_count": 0,
+      "qualification": null,
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 30.07,
+            "speed_kmh": 41.902
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 19,
+            "bib_color": "white",
+            "time": 29.8,
+            "speed_kmh": 42.282
+          }
+        ],
+        "grand_total": 29.8,
+        "normalized_score": 29.8,
+        "format": "racing"
+      },
+      "raw_text": "GRACE HAUND JASMINE NOIR ГРЭЙС ХАУНД ЖАСМИН НУАР - 5 место - 29.8 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "grace-haund-jasmine-noir--малая итальянская борзая",
+      "dog": {
+        "id": 10737,
+        "dog_key": "grace-haund-jasmine-noir--малая итальянская борзая",
+        "name_lat": "GRACE HAUND JASMINE NOIR",
+        "name_ru": "ГРЭЙС ХАУНД ЖАСМИН НУАР",
+        "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
+        "sex": "Кобель",
+        "owner": null,
+        "sex_icon": "♂"
+      }
+    },
+    {
+      "id": 8017,
+      "event_id": 2022000,
+      "dog_id": 9527,
+      "breed_class": "Поденко Ибиценко (к-ш, г-ш) - Стандартный - Сука",
+      "catalog_no": 22,
+      "placement": 1,
+      "total_score": 29.8,
+      "judge_count": 0,
+      "qualification": "CACLBr",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 46,
+            "bib_color": "blue",
+            "time": 31.58,
+            "speed_kmh": 39.899
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 55,
+            "bib_color": "red",
+            "time": 29.8,
+            "speed_kmh": 42.282
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 63,
+            "bib_color": "red",
+            "time": 30.39,
+            "speed_kmh": 41.461
+          }
+        ],
+        "grand_total": 29.8,
+        "normalized_score": 29.8,
+        "format": "racing"
+      },
+      "raw_text": " DODONA BALTAS VEJAS - 1 место - 29.8 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "",
+      "dog": {
+        "id": 9527,
+        "dog_key": "",
+        "name_lat": "",
+        "name_ru": "DODONA BALTAS VEJAS",
+        "breed": "ПОДЕНКО ИБИЦЕНКО (К-Ш, Г-Ш)",
+        "sex": "Сука",
+        "owner": null,
+        "sex_icon": "♀"
+      }
+    },
+    {
+      "id": 8018,
+      "event_id": 2022000,
+      "dog_id": 9528,
+      "breed_class": "Поденко Ибиценко (к-ш, г-ш) - Стандартный - Сука",
+      "catalog_no": 23,
+      "placement": null,
+      "total_score": 0,
+      "judge_count": 0,
+      "qualification": "|",
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "heats": [],
+        "grand_total": 0,
+        "normalized_score": 0,
+        "format": "racing"
+      },
+      "raw_text": " JAZZ MY FUNNY VALENTINE BALTAS VEJAS - null место - 0 с",
+      "judges": "",
+      "status_reason": "(Агрессия)",
+      "dog_key": "",
+      "dog": {
+        "id": 9528,
+        "dog_key": "",
+        "name_lat": "",
+        "name_ru": "JAZZ MY FUNNY VALENTINE BALTAS VEJAS",
+        "breed": "ПОДЕНКО ИБИЦЕНКО (К-Ш, Г-Ш)",
+        "sex": "Сука",
+        "owner": null,
+        "sex_icon": "♀"
+      }
+    },
+    {
+      "id": 8019,
+      "event_id": 2022000,
+      "dog_id": 5757,
+      "breed_class": "Родезийский риджбек - Стандартный - Кобель",
+      "catalog_no": 26,
+      "placement": 1,
+      "total_score": 27.8,
+      "judge_count": 0,
+      "qualification": "Чемпион России, CACLBr, RegCACL",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 16,
+            "bib_color": "red",
+            "time": 27.8,
+            "speed_kmh": 45.324
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 31,
+            "bib_color": "red",
+            "time": 28.16,
+            "speed_kmh": 44.744
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 41,
+            "bib_color": "red",
+            "time": 28.82,
+            "speed_kmh": 43.72
+          }
+        ],
+        "grand_total": 27.8,
+        "normalized_score": 27.8,
+        "format": "racing"
+      },
+      "raw_text": "KEYOD КЭЙОД - 1 место - 27.8 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "keyod--родезийский риджбек",
+      "dog": {
+        "id": 5757,
+        "dog_key": "keyod--родезийский риджбек",
+        "name_lat": "KEYOD",
+        "name_ru": "КЭЙОД",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": "Кобель",
+        "owner": null,
+        "sex_icon": "♂"
+      }
+    },
+    {
+      "id": 8020,
+      "event_id": 2022000,
+      "dog_id": 5755,
+      "breed_class": "Родезийский риджбек - Стандартный - Кобель",
+      "catalog_no": 24,
+      "placement": null,
+      "total_score": 0,
+      "judge_count": 0,
+      "qualification": "|",
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "heats": [],
+        "grand_total": 0,
+        "normalized_score": 0,
+        "format": "racing"
+      },
+      "raw_text": "ARIES KHAN SAMUEL FORSAGE JACKSON АРИЕС ХАН СЭМЮЭЛЬ ФОРСАЖ ДЖЕКСОН - null место - 0 с",
+      "judges": "",
+      "status_reason": "(Вход в круг)",
+      "dog_key": "aries-khan-samuel-forsage-jackson--родезийский риджбек",
+      "dog": {
+        "id": 5755,
+        "dog_key": "aries-khan-samuel-forsage-jackson--родезийский риджбек",
+        "name_lat": "ARIES KHAN SAMUEL FORSAGE JACKSON",
+        "name_ru": "АРИЕС ХАН СЭМЮЭЛЬ ФОРСАЖ ДЖЕКСОН",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": "Кобель",
+        "owner": null,
+        "sex_icon": "♂"
+      }
+    },
+    {
+      "id": 8021,
+      "event_id": 2022000,
+      "dog_id": 10738,
+      "breed_class": "Родезийский риджбек - Стандартный - Кобель",
+      "catalog_no": 27,
+      "placement": null,
+      "total_score": 0,
+      "judge_count": 0,
+      "qualification": "|",
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "heats": [],
+        "grand_total": 0,
+        "normalized_score": 0,
+        "format": "racing"
+      },
+      "raw_text": "RIDGE'S STAR VINCENT РИДЖЭС СТАР ВИНСЕНТ - null место - 0 с",
+      "judges": "",
+      "status_reason": "(Возврат к владельцу)",
+      "dog_key": "ridge's-star-vincent--родезийский риджбек",
+      "dog": {
+        "id": 10738,
+        "dog_key": "ridge's-star-vincent--родезийский риджбек",
+        "name_lat": "RIDGE'S STAR VINCENT",
+        "name_ru": "РИДЖЭС СТАР ВИНСЕНТ",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": "Кобель",
+        "owner": null,
+        "sex_icon": "♂"
+      }
+    },
+    {
+      "id": 8022,
+      "event_id": 2022000,
+      "dog_id": null,
+      "breed_class": "Родезийский риджбек - Стандартный - Сука",
+      "catalog_no": 28,
+      "placement": 1,
+      "total_score": 29.45,
+      "judge_count": 0,
+      "qualification": "Чемпион России, RegCACL",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 17,
+            "bib_color": "blue",
+            "time": 29.67,
+            "speed_kmh": 42.467
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 32,
+            "bib_color": "red",
+            "time": 29.5,
+            "speed_kmh": 42.712
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 42,
+            "bib_color": "red",
+            "time": 29.45,
+            "speed_kmh": 42.784
+          }
+        ],
+        "grand_total": 29.45,
+        "normalized_score": 29.45,
+        "format": "racing"
+      },
+      "raw_text": " ARIES KHAN PHIREA PASIPHAE - 1 место - 29.45 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "",
+      "dog": {
+        "id": null,
+        "dog_key": "",
+        "name_lat": "",
+        "name_ru": "ARIES KHAN PHIREA PASIPHAE",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": "Сука",
+        "owner": null,
+        "sex_icon": "♀"
+      }
+    },
+    {
+      "id": 8023,
+      "event_id": 2022000,
+      "dog_id": 10739,
+      "breed_class": "Родезийский риджбек - Стандартный - Сука",
+      "catalog_no": 29,
+      "placement": null,
+      "total_score": 0,
+      "judge_count": 0,
+      "qualification": "|",
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "heats": [],
+        "grand_total": 0,
+        "normalized_score": 0,
+        "format": "racing"
+      },
+      "raw_text": "ARIES KHAN SANDRA SALAMANDER ALEXANDRA АРИЕС ХАН САНДРА САЛАМАНДРА АЛЕКСАНДРА - null место - 0 с",
+      "judges": "",
+      "status_reason": "(Агрессия)",
+      "dog_key": "aries-khan-sandra-salamander-alexandra--родезийский риджбек",
+      "dog": {
+        "id": 10739,
+        "dog_key": "aries-khan-sandra-salamander-alexandra--родезийский риджбек",
+        "name_lat": "ARIES KHAN SANDRA SALAMANDER ALEXANDRA",
+        "name_ru": "АРИЕС ХАН САНДРА САЛАМАНДРА АЛЕКСАНДРА",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": "Сука",
+        "owner": null,
+        "sex_icon": "♀"
+      }
+    },
+    {
+      "id": 8024,
+      "event_id": 2022000,
+      "dog_id": null,
+      "breed_class": "Родезийский риджбек - Стандартный - Сука",
+      "catalog_no": 30,
+      "placement": null,
+      "total_score": 30.57,
+      "judge_count": 0,
+      "qualification": null,
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 17,
+            "bib_color": "red",
+            "time": 30.57,
+            "speed_kmh": 41.217
+          }
+        ],
+        "grand_total": 30.57,
+        "normalized_score": 30.57,
+        "format": "racing"
+      },
+      "raw_text": " KLEINVALLEY ZABAVA - null место - 30.57 с",
+      "judges": "",
+      "status_reason": "(Остановка на трассе)",
+      "dog_key": "",
+      "dog": {
+        "id": null,
+        "dog_key": "",
+        "name_lat": "",
+        "name_ru": "KLEINVALLEY ZABAVA",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": "Сука",
+        "owner": null,
+        "sex_icon": "♀"
+      }
+    },
+    {
+      "id": 8025,
+      "event_id": 2022000,
+      "dog_id": 8516,
+      "breed_class": "Русская псовая борзая - Стандартный - Микс",
+      "catalog_no": 33,
+      "placement": 1,
+      "total_score": 25.94,
+      "judge_count": 0,
+      "qualification": "Чемпион России, CACLBr, RegCACL",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 47,
+            "bib_color": "red",
+            "time": 25.94,
+            "speed_kmh": 48.574
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 56,
+            "bib_color": "blue",
+            "time": 26.24,
+            "speed_kmh": 48.018
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 64,
+            "bib_color": "blue",
+            "time": 26.94,
+            "speed_kmh": 46.771
+          }
+        ],
+        "grand_total": 25.94,
+        "normalized_score": 25.94,
+        "format": "racing"
+      },
+      "raw_text": "SOKOL & K EFROSINIYA СОКОЛ & К ЕФРОСИНИЯ - 1 место - 25.94 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "sokol-&-k-efrosiniya--русская псовая борзая",
+      "dog": {
+        "id": 8516,
+        "dog_key": "sokol-&-k-efrosiniya--русская псовая борзая",
+        "name_lat": "SOKOL & K EFROSINIYA",
+        "name_ru": "СОКОЛ & К ЕФРОСИНИЯ",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Сука",
+        "owner": null,
+        "sex_icon": "♀"
+      }
+    },
+    {
+      "id": 8026,
+      "event_id": 2022000,
+      "dog_id": 10740,
+      "breed_class": "Русская псовая борзая - Стандартный - Микс",
+      "catalog_no": 32,
+      "placement": 2,
+      "total_score": 26.7,
+      "judge_count": 0,
+      "qualification": "CACL, RegCACL",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 47,
+            "bib_color": "blue",
+            "time": 26.86,
+            "speed_kmh": 46.91
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 56,
+            "bib_color": "white",
+            "time": 26.7,
+            "speed_kmh": 47.191
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 64,
+            "bib_color": "white",
+            "time": 27.66,
+            "speed_kmh": 45.553
+          }
+        ],
+        "grand_total": 26.7,
+        "normalized_score": 26.7,
+        "format": "racing"
+      },
+      "raw_text": "FLYONA ФЛЕНА - 2 место - 26.7 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "flyona--русская псовая борзая",
+      "dog": {
+        "id": 10740,
+        "dog_key": "flyona--русская псовая борзая",
+        "name_lat": "FLYONA",
+        "name_ru": "ФЛЕНА",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Сука",
+        "owner": null,
+        "sex_icon": "♀"
+      }
+    },
+    {
+      "id": 8027,
+      "event_id": 2022000,
+      "dog_id": 10741,
+      "breed_class": "Русская псовая борзая - Стандартный - Микс",
+      "catalog_no": 31,
+      "placement": null,
+      "total_score": 25.44,
+      "judge_count": 0,
+      "qualification": null,
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 47,
+            "bib_color": "white",
+            "time": 25.44,
+            "speed_kmh": 49.528
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 56,
+            "bib_color": "red",
+            "time": 25.63,
+            "speed_kmh": 49.161
+          }
+        ],
+        "grand_total": 25.44,
+        "normalized_score": 25.44,
+        "format": "racing"
+      },
+      "raw_text": "FLESH-ROYAL ФЛЕШ-РОЯЛЬ - null место - 25.44 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "flesh-royal--русская псовая борзая",
+      "dog": {
+        "id": 10741,
+        "dog_key": "flesh-royal--русская псовая борзая",
+        "name_lat": "FLESH-ROYAL",
+        "name_ru": "ФЛЕШ-РОЯЛЬ",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Кобель",
+        "owner": null,
+        "sex_icon": "♂"
+      }
+    },
+    {
+      "id": 8028,
+      "event_id": 2022000,
+      "dog_id": 5782,
+      "breed_class": "Салюки - Стандартный - Микс",
+      "catalog_no": 38,
+      "placement": 1,
+      "total_score": 25.92,
+      "judge_count": 0,
+      "qualification": "Чемпион России, CACLBr, RegCACL",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 15,
+            "bib_color": "white",
+            "time": 25.92,
+            "speed_kmh": 48.611
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 30,
+            "bib_color": "red",
+            "time": 26.01,
+            "speed_kmh": 48.443
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 40,
+            "bib_color": "red",
+            "time": 26.06,
+            "speed_kmh": 48.35
+          }
+        ],
+        "grand_total": 25.92,
+        "normalized_score": 25.92,
+        "format": "racing"
+      },
+      "raw_text": "EMUL DE GEPARD GELILA AL RAWDA ЭМУЛЬ ДЭ ГЕПАРД ГЕЛИЛА АЛЬ РАВДА - 1 место - 25.92 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "emul-de-gepard-gelila-al-rawda--салюки",
+      "dog": {
+        "id": 5782,
+        "dog_key": "emul-de-gepard-gelila-al-rawda--салюки",
+        "name_lat": "EMUL DE GEPARD GELILA AL RAWDA",
+        "name_ru": "ЭМУЛЬ ДЭ ГЕПАРД ГЕЛИЛА АЛЬ РАВДА",
+        "breed": "САЛЮКИ",
+        "sex": "Сука",
+        "owner": null,
+        "sex_icon": "♀"
+      }
+    },
+    {
+      "id": 8029,
+      "event_id": 2022000,
+      "dog_id": 10742,
+      "breed_class": "Салюки - Стандартный - Микс",
+      "catalog_no": 37,
+      "placement": 2,
+      "total_score": 26.77,
+      "judge_count": 0,
+      "qualification": "CACL, RegCACL",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 14,
+            "bib_color": "red",
+            "time": 27.03,
+            "speed_kmh": 46.615
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 30,
+            "bib_color": "white",
+            "time": 26.77,
+            "speed_kmh": 47.068
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 40,
+            "bib_color": "white",
+            "time": 26.88,
+            "speed_kmh": 46.875
+          }
+        ],
+        "grand_total": 26.77,
+        "normalized_score": 26.77,
+        "format": "racing"
+      },
+      "raw_text": "BEL ETUAL KAYALA БЕЛЬ ЭТУАЛЬ КАЯЛА - 2 место - 26.77 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "bel-etual-kayala--салюки",
+      "dog": {
+        "id": 10742,
+        "dog_key": "bel-etual-kayala--салюки",
+        "name_lat": "BEL ETUAL KAYALA",
+        "name_ru": "БЕЛЬ ЭТУАЛЬ КАЯЛА",
+        "breed": "САЛЮКИ",
+        "sex": "Сука",
+        "owner": null,
+        "sex_icon": "♀"
+      }
+    },
+    {
+      "id": 8030,
+      "event_id": 2022000,
+      "dog_id": 867,
+      "breed_class": "Салюки - Стандартный - Микс",
+      "catalog_no": 36,
+      "placement": 3,
+      "total_score": 26.91,
+      "judge_count": 0,
+      "qualification": "RegCACL",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 14,
+            "bib_color": "blue",
+            "time": 27.08,
+            "speed_kmh": 46.529
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 30,
+            "bib_color": "yellow",
+            "time": 26.91,
+            "speed_kmh": 46.823
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 40,
+            "bib_color": "yellow",
+            "time": 26.98,
+            "speed_kmh": 46.701
+          }
+        ],
+        "grand_total": 26.91,
+        "normalized_score": 26.91,
+        "format": "racing"
+      },
+      "raw_text": "BEL ETUAL BON VOYAGE БЕЛЬ ЭТУАЛЬ БОН ВОЯЖ - 3 место - 26.91 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "bel-etual-bon-voyage--салюки",
+      "dog": {
+        "id": 867,
+        "dog_key": "bel-etual-bon-voyage--салюки",
+        "name_lat": "BEL ETUAL BON VOYAGE",
+        "name_ru": "БЕЛЬ ЭТУАЛЬ БОН ВОЯЖ",
+        "breed": "САЛЮКИ",
+        "sex": "Сука",
+        "owner": null,
+        "sex_icon": "♀"
+      }
+    },
+    {
+      "id": 8031,
+      "event_id": 2022000,
+      "dog_id": 5779,
+      "breed_class": "Салюки - Стандартный - Микс",
+      "catalog_no": 34,
+      "placement": 4,
+      "total_score": 26.03,
+      "judge_count": 0,
+      "qualification": null,
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 15,
+            "bib_color": "red",
+            "time": 26.03,
+            "speed_kmh": 48.406
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 30,
+            "bib_color": "blue",
+            "time": 27.07,
+            "speed_kmh": 46.546
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 40,
+            "bib_color": "blue",
+            "time": 27.44,
+            "speed_kmh": 45.918
+          }
+        ],
+        "grand_total": 26.03,
+        "normalized_score": 26.03,
+        "format": "racing"
+      },
+      "raw_text": "SALGREY'S VELAR САЛГРЕЙС ВЕЛАР - 4 место - 26.03 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "salgrey's-velar--салюки",
+      "dog": {
+        "id": 5779,
+        "dog_key": "salgrey's-velar--салюки",
+        "name_lat": "SALGREY'S VELAR",
+        "name_ru": "САЛГРЕЙС ВЕЛАР",
+        "breed": "САЛЮКИ",
+        "sex": "Кобель",
+        "owner": null,
+        "sex_icon": "♂"
+      }
+    },
+    {
+      "id": 8032,
+      "event_id": 2022000,
+      "dog_id": 5781,
+      "breed_class": "Салюки - Стандартный - Микс",
+      "catalog_no": 35,
+      "placement": null,
+      "total_score": 0,
+      "judge_count": 0,
+      "qualification": "|",
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "heats": [],
+        "grand_total": 0,
+        "normalized_score": 0,
+        "format": "racing"
+      },
+      "raw_text": "SALUKOV SINDBAD STORY OF SEVEN SEAS САЛЮКОВ СИНБАД СТОРИ ОФ СЕВЕН СИАС - null место - 0 с",
+      "judges": "",
+      "status_reason": "(Вход в круг)",
+      "dog_key": "salukov-sindbad-story-of-seven-seas--салюки",
+      "dog": {
+        "id": 5781,
+        "dog_key": "salukov-sindbad-story-of-seven-seas--салюки",
+        "name_lat": "SALUKOV SINDBAD STORY OF SEVEN SEAS",
+        "name_ru": "САЛЮКОВ СИНБАД СТОРИ ОФ СЕВЕН СИАС",
+        "breed": "САЛЮКИ",
+        "sex": "Кобель",
+        "owner": null,
+        "sex_icon": "♂"
+      }
+    },
+    {
+      "id": 8033,
+      "event_id": 2022000,
+      "dog_id": 6202,
+      "breed_class": "Тазы - Стандартный - Кобель",
+      "catalog_no": 39,
+      "placement": 1,
+      "total_score": 26.48,
+      "judge_count": 0,
+      "qualification": "Чемпион России, CACLBr, RegCACL",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 48,
+            "bib_color": "red",
+            "time": 26.57,
+            "speed_kmh": 47.422
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 57,
+            "bib_color": "blue",
+            "time": 26.48,
+            "speed_kmh": 47.583
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 65,
+            "bib_color": "blue",
+            "time": 26.67,
+            "speed_kmh": 47.244
+          }
+        ],
+        "grand_total": 26.48,
+        "normalized_score": 26.48,
+        "format": "racing"
+      },
+      "raw_text": "SEHRA EL MERGEN BASIR СЭХРА ЭЛЬ МЕРГЕН БАСИР - 1 место - 26.48 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "sehra-el-mergen-basir--тазы",
+      "dog": {
+        "id": 6202,
+        "dog_key": "sehra-el-mergen-basir--тазы",
+        "name_lat": "SEHRA EL MERGEN BASIR",
+        "name_ru": "СЭХРА ЭЛЬ МЕРГЕН БАСИР",
+        "breed": "ТАЗЫ",
+        "sex": "Кобель",
+        "owner": null,
+        "sex_icon": "♂"
+      }
+    },
+    {
+      "id": 8034,
+      "event_id": 2022000,
+      "dog_id": 6203,
+      "breed_class": "Тазы - Стандартный - Кобель",
+      "catalog_no": 40,
+      "placement": 2,
+      "total_score": 26.44,
+      "judge_count": 0,
+      "qualification": "CACL, RegCACL",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 48,
+            "bib_color": "blue",
+            "time": 26.54,
+            "speed_kmh": 47.476
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 57,
+            "bib_color": "red",
+            "time": 26.44,
+            "speed_kmh": 47.655
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 65,
+            "bib_color": "red",
+            "time": 26.82,
+            "speed_kmh": 46.98
+          }
+        ],
+        "grand_total": 26.44,
+        "normalized_score": 26.44,
+        "format": "racing"
+      },
+      "raw_text": "SEHRA EL MIRASDAR СЭХРА ЭЛЬ МИРАСДАР - 2 место - 26.44 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "sehra-el-mirasdar--тазы",
+      "dog": {
+        "id": 6203,
+        "dog_key": "sehra-el-mirasdar--тазы",
+        "name_lat": "SEHRA EL MIRASDAR",
+        "name_ru": "СЭХРА ЭЛЬ МИРАСДАР",
+        "breed": "ТАЗЫ",
+        "sex": "Кобель",
+        "owner": null,
+        "sex_icon": "♂"
+      }
+    },
+    {
+      "id": 8035,
+      "event_id": 2022000,
+      "dog_id": 459,
+      "breed_class": "Уиппет - Стандартный - Кобель",
+      "catalog_no": 42,
+      "placement": 1,
+      "total_score": 23.62,
+      "judge_count": 0,
+      "qualification": "Чемпион России, CACLBr, RegCACL",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 5,
+            "bib_color": "red",
+            "time": 24.8,
+            "speed_kmh": 50.806
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 21,
+            "bib_color": "red",
+            "time": 23.62,
+            "speed_kmh": 53.345
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 35,
+            "bib_color": "red",
+            "time": 23.84,
+            "speed_kmh": 52.852
+          }
+        ],
+        "grand_total": 23.62,
+        "normalized_score": 23.62,
+        "format": "racing"
+      },
+      "raw_text": " DEVAJ 1976 ZAROOQ - 1 место - 23.62 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "",
+      "dog": {
+        "id": 459,
+        "dog_key": "",
+        "name_lat": "",
+        "name_ru": "DEVAJ 1976 ZAROOQ",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null,
+        "sex_icon": "♂"
+      }
+    },
+    {
+      "id": 8036,
+      "event_id": 2022000,
+      "dog_id": 5631,
+      "breed_class": "Уиппет - Стандартный - Кобель",
+      "catalog_no": 45,
+      "placement": 2,
+      "total_score": 24.24,
+      "judge_count": 0,
+      "qualification": "CACL, RegCACL",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 4,
+            "bib_color": "blue",
+            "time": 24.99,
+            "speed_kmh": 50.42
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 21,
+            "bib_color": "blue",
+            "time": 24.24,
+            "speed_kmh": 51.98
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 35,
+            "bib_color": "blue",
+            "time": 24.29,
+            "speed_kmh": 51.873
+          }
+        ],
+        "grand_total": 24.24,
+        "normalized_score": 24.24,
+        "format": "racing"
+      },
+      "raw_text": "STANGERS LAND ZAMIR СТАНГЕРС ЛАНД ЗАМИР - 2 место - 24.24 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "stangers-land-zamir--уиппет",
+      "dog": {
+        "id": 5631,
+        "dog_key": "stangers-land-zamir--уиппет",
+        "name_lat": "STANGERS LAND ZAMIR",
+        "name_ru": "СТАНГЕРС ЛАНД ЗАМИР",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null,
+        "sex_icon": "♂"
+      }
+    },
+    {
+      "id": 8037,
+      "event_id": 2022000,
+      "dog_id": 5637,
+      "breed_class": "Уиппет - Стандартный - Кобель",
+      "catalog_no": 44,
+      "placement": 3,
+      "total_score": 24.41,
+      "judge_count": 0,
+      "qualification": "RegCACL",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 4,
+            "bib_color": "white",
+            "time": 24.86,
+            "speed_kmh": 50.684
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 20,
+            "bib_color": "red",
+            "time": 24.41,
+            "speed_kmh": 51.618
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 35,
+            "bib_color": "white",
+            "time": 24.64,
+            "speed_kmh": 51.136
+          }
+        ],
+        "grand_total": 24.41,
+        "normalized_score": 24.41,
+        "format": "racing"
+      },
+      "raw_text": "STANGERS LAND IRWIN DIVNYI СТАНГЕРС ЛАНД ИРВИН ДИВНЫЙ - 3 место - 24.41 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "stangers-land-irwin-divnyi--уиппет",
+      "dog": {
+        "id": 5637,
+        "dog_key": "stangers-land-irwin-divnyi--уиппет",
+        "name_lat": "STANGERS LAND IRWIN DIVNYI",
+        "name_ru": "СТАНГЕРС ЛАНД ИРВИН ДИВНЫЙ",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null,
+        "sex_icon": "♂"
+      }
+    },
+    {
+      "id": 8038,
+      "event_id": 2022000,
+      "dog_id": 738,
+      "breed_class": "Уиппет - Стандартный - Кобель",
+      "catalog_no": 41,
+      "placement": 4,
+      "total_score": 24.76,
+      "judge_count": 0,
+      "qualification": null,
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 4,
+            "bib_color": "yellow",
+            "time": 25.6,
+            "speed_kmh": 49.219
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 20,
+            "bib_color": "white",
+            "time": 24.76,
+            "speed_kmh": 50.889
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 35,
+            "bib_color": "yellow",
+            "time": 25.32,
+            "speed_kmh": 49.763
+          }
+        ],
+        "grand_total": 24.76,
+        "normalized_score": 24.76,
+        "format": "racing"
+      },
+      "raw_text": " ALPHAS BORA - 4 место - 24.76 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "",
+      "dog": {
+        "id": 738,
+        "dog_key": "",
+        "name_lat": "",
+        "name_ru": "ALPHAS BORA",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null,
+        "sex_icon": "♂"
+      }
+    },
+    {
+      "id": 8039,
+      "event_id": 2022000,
+      "dog_id": 10743,
+      "breed_class": "Уиппет - Стандартный - Кобель",
+      "catalog_no": 43,
+      "placement": 5,
+      "total_score": 25.14,
+      "judge_count": 0,
+      "qualification": null,
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 4,
+            "bib_color": "red",
+            "time": 25.14,
+            "speed_kmh": 50.119
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 20,
+            "bib_color": "blue",
+            "time": 25.21,
+            "speed_kmh": 49.98
+          }
+        ],
+        "grand_total": 25.14,
+        "normalized_score": 25.14,
+        "format": "racing"
+      },
+      "raw_text": "MALENKIY PRINTS IZ POLETA MECHTI МАЛЕНЬКИЙ ПРИНЦ ИЗ ПОЛЕТА МЕЧТЫ - 5 место - 25.14 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "malenkiy-prints-iz-poleta-mechti--уиппет",
+      "dog": {
+        "id": 10743,
+        "dog_key": "malenkiy-prints-iz-poleta-mechti--уиппет",
+        "name_lat": "MALENKIY PRINTS IZ POLETA MECHTI",
+        "name_ru": "МАЛЕНЬКИЙ ПРИНЦ ИЗ ПОЛЕТА МЕЧТЫ",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null,
+        "sex_icon": "♂"
+      }
+    },
+    {
+      "id": 8040,
+      "event_id": 2022000,
+      "dog_id": 5803,
+      "breed_class": "Уиппет - Стандартный - Кобель",
+      "catalog_no": 47,
+      "placement": 6,
+      "total_score": 25.54,
+      "judge_count": 0,
+      "qualification": null,
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 5,
+            "bib_color": "white",
+            "time": 25.61,
+            "speed_kmh": 49.2
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 21,
+            "bib_color": "yellow",
+            "time": 25.54,
+            "speed_kmh": 49.334
+          }
+        ],
+        "grand_total": 25.54,
+        "normalized_score": 25.54,
+        "format": "racing"
+      },
+      "raw_text": "YARYJ VETER IZ POLETA MECHTI ЯРЫЙ ВЕТЕР ИЗ ПОЛЕТА МЕЧТЫ - 6 место - 25.54 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "yaryj-veter-iz-poleta-mechti--уиппет",
+      "dog": {
+        "id": 5803,
+        "dog_key": "yaryj-veter-iz-poleta-mechti--уиппет",
+        "name_lat": "YARYJ VETER IZ POLETA MECHTI",
+        "name_ru": "ЯРЫЙ ВЕТЕР ИЗ ПОЛЕТА МЕЧТЫ",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null,
+        "sex_icon": "♂"
+      }
+    },
+    {
+      "id": 8041,
+      "event_id": 2022000,
+      "dog_id": 460,
+      "breed_class": "Уиппет - Стандартный - Кобель",
+      "catalog_no": 46,
+      "placement": null,
+      "total_score": 25.4,
+      "judge_count": 0,
+      "qualification": null,
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 5,
+            "bib_color": "blue",
+            "time": 25.4,
+            "speed_kmh": 49.606
+          }
+        ],
+        "grand_total": 25.4,
+        "normalized_score": 25.4,
+        "format": "racing"
+      },
+      "raw_text": "STATNIY BARON СТАТНЫЙ БАРОН - null место - 25.4 с",
+      "judges": "",
+      "status_reason": "(Агрессия)",
+      "dog_key": "statniy-baron--уиппет",
+      "dog": {
+        "id": 460,
+        "dog_key": "statniy-baron--уиппет",
+        "name_lat": "STATNIY BARON",
+        "name_ru": "СТАТНЫЙ БАРОН",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null,
+        "sex_icon": "♂"
+      }
+    },
+    {
+      "id": 8042,
+      "event_id": 2022000,
+      "dog_id": 10744,
+      "breed_class": "Уиппет - Стандартный - Сука",
+      "catalog_no": 49,
+      "placement": 1,
+      "total_score": 23.87,
+      "judge_count": 0,
+      "qualification": "Чемпион России, RegCACL",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 7,
+            "bib_color": "blue",
+            "time": 23.87,
+            "speed_kmh": 52.786
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 23,
+            "bib_color": "red",
+            "time": 24.1,
+            "speed_kmh": 52.282
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 36,
+            "bib_color": "blue",
+            "time": 24.08,
+            "speed_kmh": 52.326
+          }
+        ],
+        "grand_total": 23.87,
+        "normalized_score": 23.87,
+        "format": "racing"
+      },
+      "raw_text": "BONNY FLYING FLASH БОННИ ФЛАИНГ ФЛЭШ - 1 место - 23.87 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "bonny-flying-flash--уиппет",
+      "dog": {
+        "id": 10744,
+        "dog_key": "bonny-flying-flash--уиппет",
+        "name_lat": "BONNY FLYING FLASH",
+        "name_ru": "БОННИ ФЛАИНГ ФЛЭШ",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null,
+        "sex_icon": "♀"
+      }
+    },
+    {
+      "id": 8043,
+      "event_id": 2022000,
+      "dog_id": 554,
+      "breed_class": "Уиппет - Стандартный - Сука",
+      "catalog_no": 51,
+      "placement": 2,
+      "total_score": 23.81,
+      "judge_count": 0,
+      "qualification": "CACL, RegCACL",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 6,
+            "bib_color": "blue",
+            "time": 23.81,
+            "speed_kmh": 52.919
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 24,
+            "bib_color": "red",
+            "time": 23.88,
+            "speed_kmh": 52.764
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 36,
+            "bib_color": "red",
+            "time": 24.66,
+            "speed_kmh": 51.095
+          }
+        ],
+        "grand_total": 23.81,
+        "normalized_score": 23.81,
+        "format": "racing"
+      },
+      "raw_text": "FEEL MY HEART DREMFYRE UNA ФЕЕЛ МАЙ ХЕАРТ ДРЕМИФАЕР УНА - 2 место - 23.81 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "feel-my-heart-dremfyre-una--уиппет",
+      "dog": {
+        "id": 554,
+        "dog_key": "feel-my-heart-dremfyre-una--уиппет",
+        "name_lat": "FEEL MY HEART DREMFYRE UNA",
+        "name_ru": "ФЕЕЛ МАЙ ХЕАРТ ДРЕМИФАЕР УНА",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null,
+        "sex_icon": "♀"
+      }
+    },
+    {
+      "id": 8044,
+      "event_id": 2022000,
+      "dog_id": 10745,
+      "breed_class": "Уиппет - Стандартный - Сука",
+      "catalog_no": 48,
+      "placement": 3,
+      "total_score": 24.61,
+      "judge_count": 0,
+      "qualification": "RegCACL",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 8,
+            "bib_color": "red",
+            "time": 24.61,
+            "speed_kmh": 51.199
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 24,
+            "bib_color": "blue",
+            "time": 24.83,
+            "speed_kmh": 50.745
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 36,
+            "bib_color": "yellow",
+            "time": 24.67,
+            "speed_kmh": 51.074
+          }
+        ],
+        "grand_total": 24.61,
+        "normalized_score": 24.61,
+        "format": "racing"
+      },
+      "raw_text": "AMAZONKA DOCH CHARODEYA АМАЗОНКА ДОЧЬ ЧАРОДЕЯ - 3 место - 24.61 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "amazonka-doch-charodeya--уиппет",
+      "dog": {
+        "id": 10745,
+        "dog_key": "amazonka-doch-charodeya--уиппет",
+        "name_lat": "AMAZONKA DOCH CHARODEYA",
+        "name_ru": "АМАЗОНКА ДОЧЬ ЧАРОДЕЯ",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null,
+        "sex_icon": "♀"
+      }
+    },
+    {
+      "id": 8045,
+      "event_id": 2022000,
+      "dog_id": 263,
+      "breed_class": "Уиппет - Стандартный - Сука",
+      "catalog_no": 53,
+      "placement": 4,
+      "total_score": 24.24,
+      "judge_count": 0,
+      "qualification": null,
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 8,
+            "bib_color": "blue",
+            "time": 24.24,
+            "speed_kmh": 51.98
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 22,
+            "bib_color": "red",
+            "time": 24.3,
+            "speed_kmh": 51.852
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 36,
+            "bib_color": "white",
+            "time": 24.86,
+            "speed_kmh": 50.684
+          }
+        ],
+        "grand_total": 24.24,
+        "normalized_score": 24.24,
+        "format": "racing"
+      },
+      "raw_text": "STANGERS LAND INGRID ELEGANT СТАНГЕРС ЛАНД ИНГРИД ЭЛЕГАНТ - 4 место - 24.24 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "stangers-land-ingrid-elegant--уиппет",
+      "dog": {
+        "id": 263,
+        "dog_key": "stangers-land-ingrid-elegant--уиппет",
+        "name_lat": "STANGERS LAND INGRID ELEGANT",
+        "name_ru": "СТАНГЕРС ЛАНД ИНГРИД ЭЛЕГАНТ",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null,
+        "sex_icon": "♀"
+      }
+    },
+    {
+      "id": 8046,
+      "event_id": 2022000,
+      "dog_id": 5874,
+      "breed_class": "Уиппет - Стандартный - Сука",
+      "catalog_no": 57,
+      "placement": 5,
+      "total_score": 24.88,
+      "judge_count": 0,
+      "qualification": null,
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 7,
+            "bib_color": "white",
+            "time": 24.88,
+            "speed_kmh": 50.643
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 23,
+            "bib_color": "blue",
+            "time": 24.88,
+            "speed_kmh": 50.643
+          }
+        ],
+        "grand_total": 24.88,
+        "normalized_score": 24.88,
+        "format": "racing"
+      },
+      "raw_text": "WITCH OF SHERWOOD УИТЧ ФО ШЕРВУД - 5 место - 24.88 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "witch-of-sherwood--уиппет",
+      "dog": {
+        "id": 5874,
+        "dog_key": "witch-of-sherwood--уиппет",
+        "name_lat": "WITCH OF SHERWOOD",
+        "name_ru": "УИТЧ ФО ШЕРВУД",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null,
+        "sex_icon": "♀"
+      }
+    },
+    {
+      "id": 8047,
+      "event_id": 2022000,
+      "dog_id": 10746,
+      "breed_class": "Уиппет - Стандартный - Сука",
+      "catalog_no": 54,
+      "placement": 6,
+      "total_score": 25.01,
+      "judge_count": 0,
+      "qualification": null,
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 6,
+            "bib_color": "white",
+            "time": 25.01,
+            "speed_kmh": 50.38
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 22,
+            "bib_color": "blue",
+            "time": 25.01,
+            "speed_kmh": 50.38
+          }
+        ],
+        "grand_total": 25.01,
+        "normalized_score": 25.01,
+        "format": "racing"
+      },
+      "raw_text": "STANGERS LAND KATALINA СТАНГЕРС ЛАНД КАТАЛИНА - 6 место - 25.01 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "stangers-land-katalina--уиппет",
+      "dog": {
+        "id": 10746,
+        "dog_key": "stangers-land-katalina--уиппет",
+        "name_lat": "STANGERS LAND KATALINA",
+        "name_ru": "СТАНГЕРС ЛАНД КАТАЛИНА",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null,
+        "sex_icon": "♀"
+      }
+    },
+    {
+      "id": 8048,
+      "event_id": 2022000,
+      "dog_id": 5876,
+      "breed_class": "Уиппет - Стандартный - Сука",
+      "catalog_no": 50,
+      "placement": 7,
+      "total_score": 25.77,
+      "judge_count": 0,
+      "qualification": null,
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 7,
+            "bib_color": "red",
+            "time": 25.86,
+            "speed_kmh": 48.724
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 24,
+            "bib_color": "white",
+            "time": 25.77,
+            "speed_kmh": 48.894
+          }
+        ],
+        "grand_total": 25.77,
+        "normalized_score": 25.77,
+        "format": "racing"
+      },
+      "raw_text": "DIAMANT TOP KRISTAL ДИАМАНТ ТОП КРИСТАЛ - 7 место - 25.77 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "diamant-top-kristal--уиппет",
+      "dog": {
+        "id": 5876,
+        "dog_key": "diamant-top-kristal--уиппет",
+        "name_lat": "DIAMANT TOP KRISTAL",
+        "name_ru": "ДИАМАНТ ТОП КРИСТАЛ",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null,
+        "sex_icon": "♀"
+      }
+    },
+    {
+      "id": 8049,
+      "event_id": 2022000,
+      "dog_id": 7802,
+      "breed_class": "Уиппет - Стандартный - Сука",
+      "catalog_no": 56,
+      "placement": 8,
+      "total_score": 25.92,
+      "judge_count": 0,
+      "qualification": null,
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 6,
+            "bib_color": "red",
+            "time": 25.92,
+            "speed_kmh": 48.611
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 23,
+            "bib_color": "white",
+            "time": 26.1,
+            "speed_kmh": 48.276
+          }
+        ],
+        "grand_total": 25.92,
+        "normalized_score": 25.92,
+        "format": "racing"
+      },
+      "raw_text": "VIZAVI ANGEL NA LADOSHKE ВИЗАВИ АНГЕЛ НА ЛАДОШКЕ - 8 место - 25.92 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "vizavi-angel-na-ladoshke--уиппет",
+      "dog": {
+        "id": 7802,
+        "dog_key": "vizavi-angel-na-ladoshke--уиппет",
+        "name_lat": "VIZAVI ANGEL NA LADOSHKE",
+        "name_ru": "ВИЗАВИ АНГЕЛ НА ЛАДОШКЕ",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null,
+        "sex_icon": "♀"
+      }
+    },
+    {
+      "id": 8050,
+      "event_id": 2022000,
+      "dog_id": 10747,
+      "breed_class": "Уиппет - Стандартный - Сука",
+      "catalog_no": 55,
+      "placement": 9,
+      "total_score": 27.56,
+      "judge_count": 0,
+      "qualification": null,
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 8,
+            "bib_color": "white",
+            "time": 27.78,
+            "speed_kmh": 45.356
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 22,
+            "bib_color": "white",
+            "time": 27.56,
+            "speed_kmh": 45.718
+          }
+        ],
+        "grand_total": 27.56,
+        "normalized_score": 27.56,
+        "format": "racing"
+      },
+      "raw_text": "TALIYA CVETUSCHAYA ТАЛИЯ ЦВЕТУЩАЯ АЗАЛИЯ - 9 место - 27.56 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "taliya-cvetuschaya--уиппет",
+      "dog": {
+        "id": 10747,
+        "dog_key": "taliya-cvetuschaya--уиппет",
+        "name_lat": "TALIYA CVETUSCHAYA",
+        "name_ru": "ТАЛИЯ ЦВЕТУЩАЯ АЗАЛИЯ",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null,
+        "sex_icon": "♀"
+      }
+    },
+    {
+      "id": 8051,
+      "event_id": 2022000,
+      "dog_id": 10748,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобель",
+      "catalog_no": 60,
+      "placement": 1,
+      "total_score": 23.72,
+      "judge_count": 0,
+      "qualification": "Чемпион России, CACLBr, RegCACL",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 10,
+            "bib_color": "blue",
+            "time": 23.73,
+            "speed_kmh": 53.097
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 26,
+            "bib_color": "red",
+            "time": 23.88,
+            "speed_kmh": 52.764
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 37,
+            "bib_color": "red",
+            "time": 23.72,
+            "speed_kmh": 53.12
+          }
+        ],
+        "grand_total": 23.72,
+        "normalized_score": 23.72,
+        "format": "racing"
+      },
+      "raw_text": "FEEL MY HEART DUNCAN MACLEOD ФЕЕЛ МАЙ ХЕАРТ ДУНКАН МАКЛАУД - 1 место - 23.72 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "feel-my-heart-duncan-macleod--уиппет",
+      "dog": {
+        "id": 10748,
+        "dog_key": "feel-my-heart-duncan-macleod--уиппет",
+        "name_lat": "FEEL MY HEART DUNCAN MACLEOD",
+        "name_ru": "ФЕЕЛ МАЙ ХЕАРТ ДУНКАН МАКЛАУД",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null,
+        "sex_icon": "♂"
+      }
+    },
+    {
+      "id": 8052,
+      "event_id": 2022000,
+      "dog_id": 5653,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобель",
+      "catalog_no": 62,
+      "placement": 2,
+      "total_score": 24.99,
+      "judge_count": 0,
+      "qualification": "CACL, RegCACL",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 9,
+            "bib_color": "red",
+            "time": 25.93,
+            "speed_kmh": 48.592
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 26,
+            "bib_color": "yellow",
+            "time": 25.01,
+            "speed_kmh": 50.38
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 37,
+            "bib_color": "white",
+            "time": 24.99,
+            "speed_kmh": 50.42
+          }
+        ],
+        "grand_total": 24.99,
+        "normalized_score": 24.99,
+        "format": "racing"
+      },
+      "raw_text": "SAGITA VOLAT GERO POST TE САДЖИТЕЙ ВОЛЕЙТ ГЕРО ПОСТ ТЕ - 2 место - 24.99 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "sagita-volat-gero-post-te--уиппет",
+      "dog": {
+        "id": 5653,
+        "dog_key": "sagita-volat-gero-post-te--уиппет",
+        "name_lat": "SAGITA VOLAT GERO POST TE",
+        "name_ru": "САДЖИТЕЙ ВОЛЕЙТ ГЕРО ПОСТ ТЕ",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null,
+        "sex_icon": "♂"
+      }
+    },
+    {
+      "id": 8053,
+      "event_id": 2022000,
+      "dog_id": 5649,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобель",
+      "catalog_no": 61,
+      "placement": 3,
+      "total_score": 24.87,
+      "judge_count": 0,
+      "qualification": "RegCACL",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 10,
+            "bib_color": "white",
+            "time": 24.96,
+            "speed_kmh": 50.481
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 25,
+            "bib_color": "red",
+            "time": 24.87,
+            "speed_kmh": 50.663
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 37,
+            "bib_color": "blue",
+            "time": 25.12,
+            "speed_kmh": 50.159
+          }
+        ],
+        "grand_total": 24.87,
+        "normalized_score": 24.87,
+        "format": "racing"
+      },
+      "raw_text": "KUPIDON КУПИДОН - 3 место - 24.87 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "kupidon--уиппет",
+      "dog": {
+        "id": 5649,
+        "dog_key": "kupidon--уиппет",
+        "name_lat": "KUPIDON",
+        "name_ru": "КУПИДОН",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null,
+        "sex_icon": "♂"
+      }
+    },
+    {
+      "id": 8054,
+      "event_id": 2022000,
+      "dog_id": 10696,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобель",
+      "catalog_no": 64,
+      "placement": 4,
+      "total_score": 25.01,
+      "judge_count": 0,
+      "qualification": null,
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 9,
+            "bib_color": "yellow",
+            "time": 25.01,
+            "speed_kmh": 50.38
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 26,
+            "bib_color": "blue",
+            "time": 25.36,
+            "speed_kmh": 49.685
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 37,
+            "bib_color": "yellow",
+            "time": 25.23,
+            "speed_kmh": 49.941
+          }
+        ],
+        "grand_total": 25.01,
+        "normalized_score": 25.01,
+        "format": "racing"
+      },
+      "raw_text": "WALKING WELSH ROUTES УОКИНГ УЭЛШ РУТС - 4 место - 25.01 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "walking-welsh-routes--уиппет",
+      "dog": {
+        "id": 10696,
+        "dog_key": "walking-welsh-routes--уиппет",
+        "name_lat": "WALKING WELSH ROUTES",
+        "name_ru": "УОКИНГ УЭЛШ РУТС",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null,
+        "sex_icon": "♂"
+      }
+    },
+    {
+      "id": 8055,
+      "event_id": 2022000,
+      "dog_id": 7288,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобель",
+      "catalog_no": 65,
+      "placement": 5,
+      "total_score": 25.04,
+      "judge_count": 0,
+      "qualification": null,
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 10,
+            "bib_color": "yellow",
+            "time": 25.19,
+            "speed_kmh": 50.02
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 25,
+            "bib_color": "blue",
+            "time": 25.04,
+            "speed_kmh": 50.319
+          }
+        ],
+        "grand_total": 25.04,
+        "normalized_score": 25.04,
+        "format": "racing"
+      },
+      "raw_text": "WHIPPOLLY ELIXIR УИППОЛЛИ ЭЛИКСИР - 5 место - 25.04 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "whippolly-elixir--уиппет",
+      "dog": {
+        "id": 7288,
+        "dog_key": "whippolly-elixir--уиппет",
+        "name_lat": "WHIPPOLLY ELIXIR",
+        "name_ru": "УИППОЛЛИ ЭЛИКСИР",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null,
+        "sex_icon": "♂"
+      }
+    },
+    {
+      "id": 8056,
+      "event_id": 2022000,
+      "dog_id": 10749,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобель",
+      "catalog_no": 59,
+      "placement": 6,
+      "total_score": 25.22,
+      "judge_count": 0,
+      "qualification": null,
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 9,
+            "bib_color": "blue",
+            "time": 25.22,
+            "speed_kmh": 49.96
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 26,
+            "bib_color": "white",
+            "time": 25.49,
+            "speed_kmh": 49.431
+          }
+        ],
+        "grand_total": 25.22,
+        "normalized_score": 25.22,
+        "format": "racing"
+      },
+      "raw_text": "EREMA ЕРЕМА - 6 место - 25.22 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "erema--уиппет",
+      "dog": {
+        "id": 10749,
+        "dog_key": "erema--уиппет",
+        "name_lat": "EREMA",
+        "name_ru": "ЕРЕМА",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null,
+        "sex_icon": "♂"
+      }
+    },
+    {
+      "id": 8057,
+      "event_id": 2022000,
+      "dog_id": 760,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобель",
+      "catalog_no": 58,
+      "placement": 7,
+      "total_score": 25.74,
+      "judge_count": 0,
+      "qualification": null,
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 10,
+            "bib_color": "red",
+            "time": 26.12,
+            "speed_kmh": 48.239
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 25,
+            "bib_color": "yellow",
+            "time": 25.74,
+            "speed_kmh": 48.951
+          }
+        ],
+        "grand_total": 25.74,
+        "normalized_score": 25.74,
+        "format": "racing"
+      },
+      "raw_text": " BEYOND BLUE DOUGHNUT - 7 место - 25.74 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "",
+      "dog": {
+        "id": 760,
+        "dog_key": "",
+        "name_lat": "",
+        "name_ru": "BEYOND BLUE DOUGHNUT",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null,
+        "sex_icon": "♂"
+      }
+    },
+    {
+      "id": 8058,
+      "event_id": 2022000,
+      "dog_id": 488,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобель",
+      "catalog_no": 63,
+      "placement": 8,
+      "total_score": 25.76,
+      "judge_count": 0,
+      "qualification": null,
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 9,
+            "bib_color": "white",
+            "time": 25.76,
+            "speed_kmh": 48.913
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 25,
+            "bib_color": "white",
+            "time": 25.98,
+            "speed_kmh": 48.499
+          }
+        ],
+        "grand_total": 25.76,
+        "normalized_score": 25.76,
+        "format": "racing"
+      },
+      "raw_text": " VARLOK YARKAYA MOLNIYA - 8 место - 25.76 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "",
+      "dog": {
+        "id": 488,
+        "dog_key": "",
+        "name_lat": "",
+        "name_ru": "VARLOK YARKAYA MOLNIYA",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null,
+        "sex_icon": "♂"
+      }
+    },
+    {
+      "id": 8059,
+      "event_id": 2022000,
+      "dog_id": 464,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Сука",
+      "catalog_no": 67,
+      "placement": 1,
+      "total_score": 23.35,
+      "judge_count": 0,
+      "qualification": "Чемпион России, RegCACL",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 11,
+            "bib_color": "white",
+            "time": 23.35,
+            "speed_kmh": 53.961
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 28,
+            "bib_color": "red",
+            "time": 23.48,
+            "speed_kmh": 53.663
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 38,
+            "bib_color": "red",
+            "time": 24.03,
+            "speed_kmh": 52.434
+          }
+        ],
+        "grand_total": 23.35,
+        "normalized_score": 23.35,
+        "format": "racing"
+      },
+      "raw_text": "FEEL MY HEART DRAMIEL COSMIC ФЕЕЛ МАЙ ХЕАРТ ДРАМИЭЛЬ КОСМИК - 1 место - 23.35 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "feel-my-heart-dramiel-cosmic--уиппет",
+      "dog": {
+        "id": 464,
+        "dog_key": "feel-my-heart-dramiel-cosmic--уиппет",
+        "name_lat": "FEEL MY HEART DRAMIEL COSMIC",
+        "name_ru": "ФЕЕЛ МАЙ ХЕАРТ ДРАМИЭЛЬ КОСМИК",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null,
+        "sex_icon": "♀"
+      }
+    },
+    {
+      "id": 8060,
+      "event_id": 2022000,
+      "dog_id": 5797,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Сука",
+      "catalog_no": 66,
+      "placement": 2,
+      "total_score": 24.26,
+      "judge_count": 0,
+      "qualification": "CACL, RegCACL",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 11,
+            "bib_color": "red",
+            "time": 24.45,
+            "speed_kmh": 51.534
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 27,
+            "bib_color": "red",
+            "time": 24.26,
+            "speed_kmh": 51.937
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 38,
+            "bib_color": "blue",
+            "time": 24.35,
+            "speed_kmh": 51.745
+          }
+        ],
+        "grand_total": 24.26,
+        "normalized_score": 24.26,
+        "format": "racing"
+      },
+      "raw_text": "DZHIPSY LILIT BOGINYA NOCHI ДЖИПСИ ЛИЛИТ БОГИНЯ НОЧИ - 2 место - 24.26 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "dzhipsy-lilit-boginya-nochi--уиппет",
+      "dog": {
+        "id": 5797,
+        "dog_key": "dzhipsy-lilit-boginya-nochi--уиппет",
+        "name_lat": "DZHIPSY LILIT BOGINYA NOCHI",
+        "name_ru": "ДЖИПСИ ЛИЛИТ БОГИНЯ НОЧИ",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null,
+        "sex_icon": "♀"
+      }
+    },
+    {
+      "id": 8061,
+      "event_id": 2022000,
+      "dog_id": 5663,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Сука",
+      "catalog_no": 70,
+      "placement": 3,
+      "total_score": 25.27,
+      "judge_count": 0,
+      "qualification": "RegCACL",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 12,
+            "bib_color": "blue",
+            "time": 25.27,
+            "speed_kmh": 49.861
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 28,
+            "bib_color": "blue",
+            "time": 25.69,
+            "speed_kmh": 49.046
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 38,
+            "bib_color": "white",
+            "time": 25.83,
+            "speed_kmh": 48.78
+          }
+        ],
+        "grand_total": 25.27,
+        "normalized_score": 25.27,
+        "format": "racing"
+      },
+      "raw_text": "STANGERS LAND ZLATOSLAVA СТАНГЕРС ЛАНД ЗЛАТОСЛАВА - 3 место - 25.27 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "stangers-land-zlatoslava--уиппет",
+      "dog": {
+        "id": 5663,
+        "dog_key": "stangers-land-zlatoslava--уиппет",
+        "name_lat": "STANGERS LAND ZLATOSLAVA",
+        "name_ru": "СТАНГЕРС ЛАНД ЗЛАТОСЛАВА",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null,
+        "sex_icon": "♀"
+      }
+    },
+    {
+      "id": 8062,
+      "event_id": 2022000,
+      "dog_id": 5661,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Сука",
+      "catalog_no": 68,
+      "placement": 4,
+      "total_score": 25.59,
+      "judge_count": 0,
+      "qualification": null,
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 11,
+            "bib_color": "blue",
+            "time": 25.59,
+            "speed_kmh": 49.238
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 27,
+            "bib_color": "blue",
+            "time": 25.7,
+            "speed_kmh": 49.027
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 38,
+            "bib_color": "yellow",
+            "time": 25.92,
+            "speed_kmh": 48.611
+          }
+        ],
+        "grand_total": 25.59,
+        "normalized_score": 25.59,
+        "format": "racing"
+      },
+      "raw_text": "STANGERS LAND INTERNAL ENERGY СТАНГЕРС ЛАНД ИНТЕРНАЛ ЭНЕРДЖИ - 4 место - 25.59 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "stangers-land-internal-energy--уиппет",
+      "dog": {
+        "id": 5661,
+        "dog_key": "stangers-land-internal-energy--уиппет",
+        "name_lat": "STANGERS LAND INTERNAL ENERGY",
+        "name_ru": "СТАНГЕРС ЛАНД ИНТЕРНАЛ ЭНЕРДЖИ",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null,
+        "sex_icon": "♀"
+      }
+    },
+    {
+      "id": 8063,
+      "event_id": 2022000,
+      "dog_id": 5798,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Сука",
+      "catalog_no": 69,
+      "placement": 5,
+      "total_score": 26.64,
+      "judge_count": 0,
+      "qualification": null,
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 12,
+            "bib_color": "red",
+            "time": 26.64,
+            "speed_kmh": 47.297
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 28,
+            "bib_color": "white",
+            "time": 26.64,
+            "speed_kmh": 47.297
+          }
+        ],
+        "grand_total": 26.64,
+        "normalized_score": 26.64,
+        "format": "racing"
+      },
+      "raw_text": "STANGERS LAND KOMETA СТАНГЕРС ЛАНД КОМЕТА - 5 место - 26.64 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "stangers-land-kometa--уиппет",
+      "dog": {
+        "id": 5798,
+        "dog_key": "stangers-land-kometa--уиппет",
+        "name_lat": "STANGERS LAND KOMETA",
+        "name_ru": "СТАНГЕРС ЛАНД КОМЕТА",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null,
+        "sex_icon": "♀"
+      }
+    },
+    {
+      "id": 8064,
+      "event_id": 2022000,
+      "dog_id": null,
+      "breed_class": "Фараонова собака - Стандартный - Микс",
+      "catalog_no": 73,
+      "placement": 1,
+      "total_score": 28.48,
+      "judge_count": 0,
+      "qualification": "Чемпион России, CACLBr, RegCACL",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 49,
+            "bib_color": "red",
+            "time": 28.89,
+            "speed_kmh": 43.614
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 58,
+            "bib_color": "blue",
+            "time": 28.48,
+            "speed_kmh": 44.242
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 66,
+            "bib_color": "red",
+            "time": 28.83,
+            "speed_kmh": 43.704
+          }
+        ],
+        "grand_total": 28.48,
+        "normalized_score": 28.48,
+        "format": "racing"
+      },
+      "raw_text": " REEDLY ROAD WILLEMIJN - 1 место - 28.48 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "",
+      "dog": {
+        "id": null,
+        "dog_key": "",
+        "name_lat": "",
+        "name_ru": "REEDLY ROAD WILLEMIJN",
+        "breed": "ФАРАОНОВА СОБАКА",
+        "sex": "Сука",
+        "owner": null,
+        "sex_icon": "♀"
+      }
+    },
+    {
+      "id": 8065,
+      "event_id": 2022000,
+      "dog_id": null,
+      "breed_class": "Фараонова собака - Стандартный - Микс",
+      "catalog_no": 72,
+      "placement": 2,
+      "total_score": 29.51,
+      "judge_count": 0,
+      "qualification": "CACL, RegCACL",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 49,
+            "bib_color": "blue",
+            "time": 29.51,
+            "speed_kmh": 42.697
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 58,
+            "bib_color": "white",
+            "time": 29.92,
+            "speed_kmh": 42.112
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 66,
+            "bib_color": "white",
+            "time": 30.48,
+            "speed_kmh": 41.339
+          }
+        ],
+        "grand_total": 29.51,
+        "normalized_score": 29.51,
+        "format": "racing"
+      },
+      "raw_text": " HALLAM TERRA OBSESSION AT REEDLY ROAD - 2 место - 29.51 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "",
+      "dog": {
+        "id": null,
+        "dog_key": "",
+        "name_lat": "",
+        "name_ru": "HALLAM TERRA OBSESSION AT REEDLY ROAD",
+        "breed": "ФАРАОНОВА СОБАКА",
+        "sex": "Сука",
+        "owner": null,
+        "sex_icon": "♀"
+      }
+    },
+    {
+      "id": 8066,
+      "event_id": 2022000,
+      "dog_id": 10750,
+      "breed_class": "Фараонова собака - Стандартный - Микс",
+      "catalog_no": 71,
+      "placement": 3,
+      "total_score": 28.59,
+      "judge_count": 0,
+      "qualification": "RegCACL",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 49,
+            "bib_color": "white",
+            "time": 28.59,
+            "speed_kmh": 44.071
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 58,
+            "bib_color": "red",
+            "time": 29.28,
+            "speed_kmh": 43.033
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 66,
+            "bib_color": "blue",
+            "time": 30.5,
+            "speed_kmh": 41.311
+          }
+        ],
+        "grand_total": 28.59,
+        "normalized_score": 28.59,
+        "format": "racing"
+      },
+      "raw_text": "SHNEYDER RICH REM ШНЕЙДЕР РИЧ РЭМ - 3 место - 28.59 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "shneyder-rich-rem--фараонова собака",
+      "dog": {
+        "id": 10750,
+        "dog_key": "shneyder-rich-rem--фараонова собака",
+        "name_lat": "SHNEYDER RICH REM",
+        "name_ru": "ШНЕЙДЕР РИЧ РЭМ",
+        "breed": "ФАРАОНОВА СОБАКА",
+        "sex": "Кобель",
+        "owner": null,
+        "sex_icon": "♂"
+      }
+    },
+    {
+      "id": 8067,
+      "event_id": 2022000,
+      "dog_id": 6292,
+      "breed_class": "Чирнеко дель Этна - Стандартный - Кобель",
+      "catalog_no": 77,
+      "placement": 1,
+      "total_score": 28.4,
+      "judge_count": 0,
+      "qualification": "Чемпион России, CACLBr, RegCACL",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 50,
+            "bib_color": "blue",
+            "time": 28.57,
+            "speed_kmh": 44.102
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 59,
+            "bib_color": "red",
+            "time": 28.4,
+            "speed_kmh": 44.366
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 67,
+            "bib_color": "red",
+            "time": 28.62,
+            "speed_kmh": 44.025
+          }
+        ],
+        "grand_total": 28.4,
+        "normalized_score": 28.4,
+        "format": "racing"
+      },
+      "raw_text": "IRKISS SID ИРКИСС СИД - 1 место - 28.4 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "irkiss-sid--чирнеко дель этна",
+      "dog": {
+        "id": 6292,
+        "dog_key": "irkiss-sid--чирнеко дель этна",
+        "name_lat": "IRKISS SID",
+        "name_ru": "ИРКИСС СИД",
+        "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+        "sex": "Кобель",
+        "owner": null,
+        "sex_icon": "♂"
+      }
+    },
+    {
+      "id": 8068,
+      "event_id": 2022000,
+      "dog_id": 118,
+      "breed_class": "Чирнеко дель Этна - Стандартный - Кобель",
+      "catalog_no": 75,
+      "placement": null,
+      "total_score": 30.11,
+      "judge_count": 0,
+      "qualification": null,
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 50,
+            "bib_color": "white",
+            "time": 30.11,
+            "speed_kmh": 41.847
+          }
+        ],
+        "grand_total": 30.11,
+        "normalized_score": 30.11,
+        "format": "racing"
+      },
+      "raw_text": " ALIA LUX ZAFFIRO - null место - 30.11 с",
+      "judges": "",
+      "status_reason": "(Агрессия на старте)",
+      "dog_key": "",
+      "dog": {
+        "id": 118,
+        "dog_key": "",
+        "name_lat": "",
+        "name_ru": "ALIA LUX ZAFFIRO",
+        "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+        "sex": "Кобель",
+        "owner": null,
+        "sex_icon": "♂"
+      }
+    },
+    {
+      "id": 8069,
+      "event_id": 2022000,
+      "dog_id": 10751,
+      "breed_class": "Чирнеко дель Этна - Стандартный - Кобель",
+      "catalog_no": 76,
+      "placement": null,
+      "total_score": 30.69,
+      "judge_count": 0,
+      "qualification": null,
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 50,
+            "bib_color": "red",
+            "time": 30.69,
+            "speed_kmh": 41.056
+          }
+        ],
+        "grand_total": 30.69,
+        "normalized_score": 30.69,
+        "format": "racing"
+      },
+      "raw_text": "ELVIN ЭЛВИН - null место - 30.69 с",
+      "judges": "",
+      "status_reason": "(Нарушение экипировки)",
+      "dog_key": "elvin--чирнеко дель этна",
+      "dog": {
+        "id": 10751,
+        "dog_key": "elvin--чирнеко дель этна",
+        "name_lat": "ELVIN",
+        "name_ru": "ЭЛВИН",
+        "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+        "sex": "Кобель",
+        "owner": null,
+        "sex_icon": "♂"
+      }
+    },
+    {
+      "id": 8070,
+      "event_id": 2022000,
+      "dog_id": 10752,
+      "breed_class": "Чирнеко дель Этна - Стандартный - Сука",
+      "catalog_no": 80,
+      "placement": 1,
+      "total_score": 29.44,
+      "judge_count": 0,
+      "qualification": "Чемпион России, RegCACL",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 51,
+            "bib_color": "blue",
+            "time": 29.68,
+            "speed_kmh": 42.453
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 60,
+            "bib_color": "red",
+            "time": 29.44,
+            "speed_kmh": 42.799
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 68,
+            "bib_color": "red",
+            "time": 29.85,
+            "speed_kmh": 42.211
+          }
+        ],
+        "grand_total": 29.44,
+        "normalized_score": 29.44,
+        "format": "racing"
+      },
+      "raw_text": "IRKISS VOLPE CHIARA ИРКИСС ВОЛЬПЕ КЬЯРА - 1 место - 29.44 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "irkiss-volpe-chiara--чирнеко дель этна",
+      "dog": {
+        "id": 10752,
+        "dog_key": "irkiss-volpe-chiara--чирнеко дель этна",
+        "name_lat": "IRKISS VOLPE CHIARA",
+        "name_ru": "ИРКИСС ВОЛЬПЕ КЬЯРА",
+        "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+        "sex": "Сука",
+        "owner": null,
+        "sex_icon": "♀"
+      }
+    },
+    {
+      "id": 8071,
+      "event_id": 2022000,
+      "dog_id": 10753,
+      "breed_class": "Чирнеко дель Этна - Стандартный - Сука",
+      "catalog_no": 79,
+      "placement": 2,
+      "total_score": 30.19,
+      "judge_count": 0,
+      "qualification": "CACL, RegCACL",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 51,
+            "bib_color": "white",
+            "time": 30.37,
+            "speed_kmh": 41.488
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 60,
+            "bib_color": "blue",
+            "time": 30.19,
+            "speed_kmh": 41.736
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 68,
+            "bib_color": "blue",
+            "time": 30.22,
+            "speed_kmh": 41.694
+          }
+        ],
+        "grand_total": 30.19,
+        "normalized_score": 30.19,
+        "format": "racing"
+      },
+      "raw_text": "IRKISS NANSY ИРКИСС НЭНСИ - 2 место - 30.19 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "irkiss-nansy--чирнеко дель этна",
+      "dog": {
+        "id": 10753,
+        "dog_key": "irkiss-nansy--чирнеко дель этна",
+        "name_lat": "IRKISS NANSY",
+        "name_ru": "ИРКИСС НЭНСИ",
+        "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+        "sex": "Сука",
+        "owner": null,
+        "sex_icon": "♀"
+      }
+    },
+    {
+      "id": 8072,
+      "event_id": 2022000,
+      "dog_id": 10754,
+      "breed_class": "Чирнеко дель Этна - Стандартный - Сука",
+      "catalog_no": 78,
+      "placement": 3,
+      "total_score": 31.13,
+      "judge_count": 0,
+      "qualification": "RegCACL",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 51,
+            "bib_color": "red",
+            "time": 31.13,
+            "speed_kmh": 40.475
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 60,
+            "bib_color": "white",
+            "time": 31.39,
+            "speed_kmh": 40.14
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 68,
+            "bib_color": "white",
+            "time": 31.17,
+            "speed_kmh": 40.423
+          }
+        ],
+        "grand_total": 31.13,
+        "normalized_score": 31.13,
+        "format": "racing"
+      },
+      "raw_text": "ERIN ЭРИН - 3 место - 31.13 с",
+      "judges": "",
+      "status_reason": null,
+      "dog_key": "erin--чирнеко дель этна",
+      "dog": {
+        "id": 10754,
+        "dog_key": "erin--чирнеко дель этна",
+        "name_lat": "ERIN",
+        "name_ru": "ЭРИН",
+        "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+        "sex": "Сука",
+        "owner": null,
+        "sex_icon": "♀"
+      }
+    }
+  ]
+}
