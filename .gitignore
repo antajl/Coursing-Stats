@@ -201,3 +201,6 @@ backend/scripts/tmp-*.ts
 
 # Bot environment variables
 bot/.dev.vars
+
+# Devin agent skills - local only, not needed for production
+.agents/
