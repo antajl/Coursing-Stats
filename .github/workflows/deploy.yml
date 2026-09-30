@@ -1,0 +1,50 @@
+name: Deploy to Yandex Cloud
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'yarn'
+      
+      - name: Install dependencies
+        run: yarn install
+      
+      - name: Build frontend
+        run: yarn build
+      
+      - name: Install AWS CLI
+        run: |
+          pip install awscli
+      
+      - name: Deploy to Yandex Object Storage
+        run: |
+          aws s3 sync frontend/dist/ s3://${{ secrets.S3_BUCKET }}/ \
+            --endpoint-url https://storage.yandexcloud.net \
+            --acl public-read \
+            --delete
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      
+      - name: Deploy data to Yandex Object Storage
+        run: |
+          aws s3 sync data/v1/ s3://${{ secrets.S3_BUCKET }}/data/v1/ \
+            --endpoint-url https://storage.yandexcloud.net \
+            --acl public-read \
+            --delete
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
