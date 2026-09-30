@@ -22,7 +22,12 @@ jobs:
       - name: Install dependencies
         run: yarn install
       
+      - name: Install frontend dependencies
+        working-directory: ./frontend
+        run: yarn install
+      
       - name: Build frontend
+        working-directory: ./frontend
         run: yarn build
       
       - name: Install AWS CLI
