@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/donino-speed-v1",
   "source": "google-sheets",
-  "count": 268,
+  "count": 271,
   "records": [
     {
       "breed": "Уиппет",
@@ -140,6 +140,34 @@
     },
     {
       "breed": "Уиппет",
+      "sex": "С",
+      "name": "Астрид",
+      "speed_km_h": 60,
+      "date": "2026-09-30",
+      "screenshot_url": "https://disk.yandex.ru/i/TVQvzH9nZjqTzw",
+      "status": "improved",
+      "track_type": "прямая",
+      "history": [
+        {
+          "speed_km_h": 59,
+          "date": "2026-09-03"
+        },
+        {
+          "speed_km_h": 57,
+          "date": "2026-07-04"
+        },
+        {
+          "speed_km_h": 54,
+          "date": "2026-07-01"
+        },
+        {
+          "speed_km_h": 53,
+          "date": "2026-06-25"
+        }
+      ]
+    },
+    {
+      "breed": "Уиппет",
       "sex": "К",
       "name": "Марс",
       "speed_km_h": 59,
@@ -159,30 +187,6 @@
       "status": "normal",
       "track_type": "круг",
       "history": []
-    },
-    {
-      "breed": "Уиппет",
-      "sex": "С",
-      "name": "Астрид",
-      "speed_km_h": 59,
-      "date": "2026-09-03",
-      "screenshot_url": "https://disk.yandex.ru/i/DPB22W9HFgf60A",
-      "status": "improved",
-      "track_type": "прямая",
-      "history": [
-        {
-          "speed_km_h": 57,
-          "date": "2026-07-04"
-        },
-        {
-          "speed_km_h": 54,
-          "date": "2026-07-01"
-        },
-        {
-          "speed_km_h": 53,
-          "date": "2026-06-25"
-        }
-      ]
     },
     {
       "breed": "Уиппет",
@@ -476,7 +480,7 @@
       "speed_km_h": 56,
       "date": "2026-09-13",
       "screenshot_url": "https://disk.yandex.ru/i/KmRuCVSRpCwc1A",
-      "status": "new",
+      "status": "normal",
       "track_type": "курсинг",
       "history": []
     },
@@ -536,7 +540,7 @@
       "speed_km_h": 55,
       "date": "2026-09-13",
       "screenshot_url": "https://disk.yandex.ru/i/yr_p7BmyrKITRw",
-      "status": "new",
+      "status": "normal",
       "track_type": "курсинг",
       "history": []
     },
@@ -613,9 +617,25 @@
       "speed_km_h": 54,
       "date": "2026-09-13",
       "screenshot_url": "https://disk.yandex.ru/i/e2tPb1A8uy7q0Q",
-      "status": "new",
+      "status": "normal",
       "track_type": "курсинг",
       "history": []
+    },
+    {
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Дени",
+      "speed_km_h": 54,
+      "date": "2026-09-30",
+      "screenshot_url": "https://disk.yandex.ru/i/AAXGD_Fd4RH7Ag",
+      "status": "improved",
+      "track_type": "прямая",
+      "history": [
+        {
+          "speed_km_h": 48,
+          "date": "2026-07-01"
+        }
+      ]
     },
     {
       "breed": "Малинуа",
@@ -733,7 +753,7 @@
       "speed_km_h": 53,
       "date": "2026-09-13",
       "screenshot_url": "https://disk.yandex.ru/i/2exoK8c87iggnw",
-      "status": "new",
+      "status": "normal",
       "track_type": "прямая",
       "history": []
     },
@@ -744,7 +764,7 @@
       "speed_km_h": 53,
       "date": "2026-09-13",
       "screenshot_url": "https://disk.yandex.ru/i/vIlafvLTRdAeUg",
-      "status": "new",
+      "status": "normal",
       "track_type": "прямая",
       "history": []
     },
@@ -752,12 +772,16 @@
       "breed": "Фараонова собака",
       "sex": "К",
       "name": "Рэм",
-      "speed_km_h": 52,
-      "date": "2026-06-04",
-      "screenshot_url": "https://disk.yandex.ru/i/4FAIgXf-wgsl2Q",
-      "status": "normal",
-      "track_type": "курсинг",
+      "speed_km_h": 53,
+      "date": "2026-09-30",
+      "screenshot_url": "https://disk.yandex.ru/i/_Wl_qw7UWP-nrQ",
+      "status": "improved",
+      "track_type": "прямая",
       "history": [
+        {
+          "speed_km_h": 52,
+          "date": "2026-06-04"
+        },
         {
           "speed_km_h": 52,
           "date": "2025-09-07",
@@ -1055,7 +1079,7 @@
       "speed_km_h": 49,
       "date": "2026-08-13",
       "screenshot_url": "https://disk.yandex.ru/i/wtsE4W2JOzmMBQ",
-      "status": "new",
+      "status": "normal",
       "track_type": "курсинг",
       "history": []
     },
@@ -1085,17 +1109,6 @@
       "screenshot_url": "https://disk.yandex.ru/i/yN9yVVPkwd9OYg",
       "status": "normal",
       "track_type": "прямая",
-      "history": []
-    },
-    {
-      "breed": "Уиппет",
-      "sex": "С",
-      "name": "Дени",
-      "speed_km_h": 48,
-      "date": "2026-07-01",
-      "screenshot_url": "https://disk.yandex.ru/i/CqLiCVvZeLzgOw",
-      "status": "normal",
-      "track_type": "курсинг",
       "history": []
     },
     {
@@ -1477,7 +1490,7 @@
       "speed_km_h": 42,
       "date": "2026-09-13",
       "screenshot_url": "https://disk.yandex.ru/i/_ZaXTKGSAP6ttw",
-      "status": "new",
+      "status": "normal",
       "track_type": "прямая",
       "history": []
     },
@@ -1675,7 +1688,7 @@
       "speed_km_h": 37,
       "date": "2026-09-19",
       "screenshot_url": "https://disk.yandex.ru/i/sNDOdD4pzaSMGA",
-      "status": "new",
+      "status": "normal",
       "track_type": "курсинг",
       "history": [
         {
@@ -1692,7 +1705,7 @@
       "speed_km_h": 37,
       "date": "2026-09-13",
       "screenshot_url": "https://disk.yandex.ru/i/g50Jmjrbh0q7wg",
-      "status": "new",
+      "status": "normal",
       "track_type": "курсинг",
       "history": [
         {
@@ -2269,9 +2282,13 @@
       "track_type": null,
       "history": [
         {
+          "speed_km_h": 53,
+          "date": "2026-09-30",
+          "track_type": "прямая"
+        },
+        {
           "speed_km_h": 52,
-          "date": "2026-06-04",
-          "track_type": "курсинг"
+          "date": "2026-06-04"
         }
       ]
     },
@@ -4017,9 +4034,13 @@
       "status": "old",
       "history": [
         {
-          "speed_km_h": 59,
-          "date": "2026-09-03",
+          "speed_km_h": 60,
+          "date": "2026-09-30",
           "track_type": "прямая"
+        },
+        {
+          "speed_km_h": 59,
+          "date": "2026-09-03"
         },
         {
           "speed_km_h": 57,
@@ -4041,9 +4062,13 @@
       "status": "improved",
       "history": [
         {
-          "speed_km_h": 59,
-          "date": "2026-09-03",
+          "speed_km_h": 60,
+          "date": "2026-09-30",
           "track_type": "прямая"
+        },
+        {
+          "speed_km_h": 59,
+          "date": "2026-09-03"
         },
         {
           "speed_km_h": 57,
@@ -4353,9 +4378,13 @@
       "status": "improved",
       "history": [
         {
-          "speed_km_h": 59,
-          "date": "2026-09-03",
+          "speed_km_h": 60,
+          "date": "2026-09-30",
           "track_type": "прямая"
+        },
+        {
+          "speed_km_h": 59,
+          "date": "2026-09-03"
         },
         {
           "speed_km_h": 54,
@@ -4416,6 +4445,71 @@
           "speed_km_h": 55,
           "date": "2026-09-13",
           "track_type": "прямая"
+        }
+      ]
+    },
+    {
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Астрид",
+      "speed_km_h": 59,
+      "date": "2026-09-03",
+      "screenshot_url": "https://disk.yandex.ru/i/DPB22W9HFgf60A",
+      "status": "improved",
+      "history": [
+        {
+          "speed_km_h": 60,
+          "date": "2026-09-30",
+          "track_type": "прямая"
+        },
+        {
+          "speed_km_h": 57,
+          "date": "2026-07-04"
+        },
+        {
+          "speed_km_h": 54,
+          "date": "2026-07-01"
+        },
+        {
+          "speed_km_h": 53,
+          "date": "2026-06-25"
+        }
+      ]
+    },
+    {
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Дени",
+      "speed_km_h": 48,
+      "date": "2026-07-01",
+      "screenshot_url": "https://disk.yandex.ru/i/CqLiCVvZeLzgOw",
+      "status": "old",
+      "history": [
+        {
+          "speed_km_h": 54,
+          "date": "2026-09-30",
+          "track_type": "прямая"
+        }
+      ]
+    },
+    {
+      "breed": "Фараонова собака",
+      "sex": "К",
+      "name": "Рэм",
+      "speed_km_h": 52,
+      "date": "2026-06-04",
+      "screenshot_url": "https://disk.yandex.ru/i/4FAIgXf-wgsl2Q",
+      "status": "old",
+      "history": [
+        {
+          "speed_km_h": 53,
+          "date": "2026-09-30",
+          "track_type": "прямая"
+        },
+        {
+          "speed_km_h": 52,
+          "date": "2025-09-07",
+          "track_type": null
         }
       ]
     }
