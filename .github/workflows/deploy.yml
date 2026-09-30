@@ -44,7 +44,22 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       
+      - name: Check if data files changed
+        id: check-data
+        run: |
+          # Check if any files in data/v1/ changed
+          if git diff --quiet HEAD^ HEAD -- data/v1/; then
+            echo "No data files changed"
+            echo "data_changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "Data files changed"
+            echo "data_changed=true" >> $GITHUB_OUTPUT
+            # List changed files
+            git diff --name-only HEAD^ HEAD -- data/v1/
+          fi
+          
       - name: Deploy data to Yandex Object Storage
+        if: steps.check-data.outputs.data_changed == 'true'
         run: |
           aws s3 sync data/v1/ s3://${{ secrets.S3_BUCKET }}/data/v1/ \
             --endpoint-url https://storage.yandexcloud.net \
