@@ -125,16 +125,6 @@ export default function EventResults() {
         )}
 
         <EventHeader event={event} results={results} onBack={() => navigate(-1)} />
-        {isLocalDev && (
-          <div className="mb-3">
-            <Link
-              to={`/admin/event/${id}`}
-              className="inline-flex rounded-lg border border-camel-400 bg-camel-50 px-3 py-1.5 text-sm font-semibold text-camel-900 hover:bg-camel-100"
-            >
-              Редактировать
-            </Link>
-          </div>
-        )}
         <ResultsSection results={results} />
       </div>
     </>

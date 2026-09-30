@@ -7,7 +7,7 @@ interface DogSexIconProps {
 }
 
 export default function DogSexIcon({ sex, className = '', size = 16 }: DogSexIconProps) {
-  if (sex === 'С') {
+  if (sex === 'Сука' || sex === 'С') {
     return (
       <Venus
         size={size}
@@ -19,7 +19,7 @@ export default function DogSexIcon({ sex, className = '', size = 16 }: DogSexIco
     )
   }
 
-  if (sex === 'К') {
+  if (sex === 'Кобель' || sex === 'К') {
     return (
       <Mars
         size={size}

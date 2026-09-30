@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { ChevronLeft, Calendar, Users, MapPin, Building2, User, PawPrint } from 'lucide-react'
+import { ChevronLeft, Calendar, Users, MapPin, Building2, User, PawPrint, Download, FileText, BookOpen } from 'lucide-react'
 import BreedGroupDivider from './components/BreedGroupDivider'
 import HoverTooltip from '../../../components/ui/HoverTooltip'
 import { toProcoursingArchiveUrl } from '../../../lib/procoursingArchive'
@@ -139,28 +139,78 @@ export default function EventHeader({ event, results, onBack }: EventHeaderProps
               </div>
             </div>
           </div>
-          {archiveResultsUrl && (
+          <div className="mt-2 flex flex-wrap gap-2">
+            {archiveResultsUrl && (
+              <a
+                href={archiveResultsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex flex-shrink-0 items-center gap-1.5 rounded-full border border-camel-200 bg-camel-50 px-2.5 py-1.5 text-xs font-medium text-camel-700 shadow-sm transition-colors hover:border-camel-400 hover:bg-camel-100"
+                aria-label="Открыть протокол в web.archive.org"
+                title="Открыть протокол в web.archive.org"
+              >
+                <img
+                  src="/assets/icons/web-archive.ico"
+                  alt=""
+                  role="presentation"
+                  aria-hidden="true"
+                  className="h-4 w-4 rounded-full"
+                  width={16}
+                  height={16}
+                  decoding="async"
+                />
+                <span className="hidden sm:inline">Archive</span>
+              </a>
+            )}
             <a
-              href={archiveResultsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-0.5 inline-flex flex-shrink-0 items-center gap-1.5 rounded-full border border-camel-200 bg-camel-50 px-2.5 py-1.5 text-xs font-medium text-camel-700 shadow-sm transition-colors hover:border-camel-400 hover:bg-camel-100"
-              aria-label="Открыть протокол в web.archive.org"
-              title="Открыть протокол в web.archive.org"
+              href={event.rules_url || '#'}
+              target={event.rules_url ? '_blank' : undefined}
+              rel={event.rules_url ? 'noopener noreferrer' : undefined}
+              className={`inline-flex flex-shrink-0 items-center gap-1.5 rounded-full border px-2.5 py-1.5 text-xs font-medium shadow-sm transition-colors ${
+                event.rules_url
+                  ? 'border-camel-200 bg-camel-50 text-camel-700 hover:border-camel-400 hover:bg-camel-100'
+                  : 'border-old-money-200 bg-old-money-50 text-old-money-400 cursor-not-allowed'
+              }`}
+              aria-label="Регламент"
+              title={event.rules_url ? 'Регламент' : 'Регламент недоступен'}
+              onClick={(e) => !event.rules_url && e.preventDefault()}
             >
-              <img
-                src="/assets/icons/web-archive.ico"
-                alt=""
-                role="presentation"
-                aria-hidden="true"
-                className="h-4 w-4 rounded-full"
-                width={16}
-                height={16}
-                decoding="async"
-              />
-              <span className="hidden sm:inline">Archive</span>
+              <BookOpen className="h-4 w-4" aria-hidden />
+              <span className="hidden sm:inline">Регламент</span>
             </a>
-          )}
+            <a
+              href={event.catalog_url || '#'}
+              target={event.catalog_url ? '_blank' : undefined}
+              rel={event.catalog_url ? 'noopener noreferrer' : undefined}
+              className={`inline-flex flex-shrink-0 items-center gap-1.5 rounded-full border px-2.5 py-1.5 text-xs font-medium shadow-sm transition-colors ${
+                event.catalog_url
+                  ? 'border-camel-200 bg-camel-50 text-camel-700 hover:border-camel-400 hover:bg-camel-100'
+                  : 'border-old-money-200 bg-old-money-50 text-old-money-400 cursor-not-allowed'
+              }`}
+              aria-label="Каталог"
+              title={event.catalog_url ? 'Каталог' : 'Каталог недоступен'}
+              onClick={(e) => !event.catalog_url && e.preventDefault()}
+            >
+              <FileText className="h-4 w-4" aria-hidden />
+              <span className="hidden sm:inline">Каталог</span>
+            </a>
+            <a
+              href={event.results_pdf_url || '#'}
+              target={event.results_pdf_url ? '_blank' : undefined}
+              rel={event.results_pdf_url ? 'noopener noreferrer' : undefined}
+              className={`inline-flex flex-shrink-0 items-center gap-1.5 rounded-full border px-2.5 py-1.5 text-xs font-medium shadow-sm transition-colors ${
+                event.results_pdf_url
+                  ? 'border-camel-200 bg-camel-50 text-camel-700 hover:border-camel-400 hover:bg-camel-100'
+                  : 'border-old-money-200 bg-old-money-50 text-old-money-400 cursor-not-allowed'
+              }`}
+              aria-label="Результаты"
+              title={event.results_pdf_url ? 'Результаты' : 'Результаты недоступны'}
+              onClick={(e) => !event.results_pdf_url && e.preventDefault()}
+            >
+              <Download className="h-4 w-4" aria-hidden />
+              <span className="hidden sm:inline">Результаты</span>
+            </a>
+          </div>
         </div>
 
         {(event.host_club || event.judges || trackSchemes.length > 0) && (

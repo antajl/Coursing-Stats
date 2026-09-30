@@ -10,52 +10,49 @@ export default function RacingDetail({ rawScores }: RacingDetailProps) {
 
   return (
     <>
-      <div className="md:hidden space-y-3">
-        {heats.map((heat, heatIdx) => {
-          const isHeatDisqualified = !heat.time && !heat.speed_kmh
-          const speedMs = heat.speed_kmh ? (heat.speed_kmh / 3.6).toFixed(1) : null
+      <div className="md:hidden">
+        <div className="flex gap-2 overflow-x-auto pb-2">
+          {heats.map((heat, heatIdx) => {
+            const isHeatDisqualified = !heat.time && !heat.speed_kmh
+            const speedMs = heat.speed_kmh ? (heat.speed_kmh / 3.6).toFixed(1) : null
 
-          return (
-            <div key={heatIdx} className="bg-white rounded-xl p-3 border border-old-money-200">
-              <div className="grid grid-cols-4 gap-2 mb-3 pb-2 border-b border-old-money-100 text-center">
-                <div>
+            return (
+              <div key={heatIdx} className="flex-shrink-0 bg-white rounded-xl p-3 border border-old-money-200 min-w-[140px]">
+                <div className="text-center mb-2">
                   <div className={`font-bold ${isHeatDisqualified ? 'text-red-600' : 'text-camel-700'}`}>
                     <span className="text-old-money-400 text-xs">№</span>{heat.heat_number || '—'}
                   </div>
                 </div>
-                <div>
-                  <PoponaCell number={heat.bib_number} color={heat.bib_color} />
-                </div>
-                <div>
+                <div className="space-y-1 text-center">
+                  <div>
+                    <PoponaCell number={heat.bib_number} color={heat.bib_color} />
+                  </div>
                   <div className="font-bold text-charcoal-900">
                     {heat.time ? `${heat.time} с` : '—'}
                   </div>
-                </div>
-                <div>
                   <div className="font-bold text-charcoal-900">
                     {speedMs ? `${speedMs} м/с` : '—'}
                   </div>
+                  {isHeatDisqualified ? (
+                    <div className="text-red-600 italic text-xs py-1">
+                      Отстранение
+                    </div>
+                  ) : (
+                    <div className="text-xs">
+                      <span className="text-old-money-500">Скорость: </span>
+                      <span className="font-bold text-camel-700">
+                        {heat.speed_kmh ? `${heat.speed_kmh.toFixed(1)} км/ч` : '—'}
+                      </span>
+                    </div>
+                  )}
                 </div>
               </div>
-
-              {isHeatDisqualified ? (
-                <div className="text-center text-red-600 italic text-sm py-2">
-                  Отстранение
-                </div>
-              ) : (
-                <div className="text-center text-sm">
-                  <span className="text-old-money-500">Скорость: </span>
-                  <span className="font-bold text-camel-700">
-                    {heat.speed_kmh ? `${heat.speed_kmh.toFixed(1)} км/ч` : '—'}
-                  </span>
-                </div>
-              )}
-            </div>
-          )
-        })}
+            )
+          })}
+        </div>
 
         {rawScores.grand_total && (
-          <div className="rounded-xl border border-camel-200 bg-camel-50 p-3 text-center">
+          <div className="mt-3 rounded-xl border border-camel-200 bg-camel-50 p-3 text-center">
             <span className="text-sm text-gray-600">Лучшее время: </span>
             <span className="text-lg font-bold text-camel-700">{rawScores.grand_total} сек</span>
             <span className="mx-2 text-gray-400">|</span>

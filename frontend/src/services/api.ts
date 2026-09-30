@@ -1,15 +1,8 @@
 /**
  * Публичное API сайта = чтение статических JSON с CDN (см. lib/staticData.ts),
- * без Cloudflare Worker/D1 как посредника. Админка не использует этот файл —
- * она ходит напрямую в локальный dev-server (`pages/Admin/adminApi.ts`).
+ * без Cloudflare Worker/D1 как посредника.
  */
 import * as staticData from '../lib/staticData'
-
-/** Legacy export для adminApi; публичный сайт API не использует. */
-const API_URL =
-  import.meta.env.VITE_API_URL || ''
-
-export { API_URL }
 
 const IS_DEV = import.meta.env.DEV
 
