@@ -41,6 +41,9 @@ jobs:
       - name: Build frontend
         working-directory: ./frontend
         run: yarn build
+
+      - name: Prerender SEO HTML
+        run: yarn run prerender-seo
       
       - name: Install AWS CLI & Configure Performance
         run: |
@@ -52,7 +55,8 @@ jobs:
           aws s3 sync frontend/dist/ s3://${{ secrets.S3_BUCKET }}/ \
             --endpoint-url https://storage.yandexcloud.net \
             --acl public-read \
-            --delete
+            --delete \
+            --exclude "data/*"
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -61,9 +65,12 @@ jobs:
         run: |
           git config core.quotepath false
 
-          if [ "${{ inputs.full_sync }}" = "true" ]; then
+          if [ "${{ inputs.full_sync }}" = "true" ] || git log -1 --pretty=%B | grep -q '\[full sync\]'; then
             echo "mode=full" >> $GITHUB_OUTPUT
-            echo "Full sync requested manually"
+            echo "Full sync requested"
+          elif ! aws s3 ls "s3://${{ secrets.S3_BUCKET }}/data/v1/meta.json" --endpoint-url https://storage.yandexcloud.net > /dev/null 2>&1; then
+            echo "mode=full" >> $GITHUB_OUTPUT
+            echo "data/v1/meta.json not found on S3 — triggering automatic full sync recovery"
           elif git diff --quiet HEAD~1 HEAD -- data/v1/; then
             echo "mode=none" >> $GITHUB_OUTPUT
             echo "No data files changed. Skipping data deploy step."
@@ -84,6 +91,9 @@ jobs:
               echo "mode=incremental" >> $GITHUB_OUTPUT
             fi
           fi
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
       - name: Deploy changed data files (Incremental)
         if: steps.data-diff.outputs.mode == 'incremental'
