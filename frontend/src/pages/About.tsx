@@ -93,7 +93,7 @@ const AUDIENCE = [
 
 export default function AboutPage() {
   return (
-    <main className="space-y-6">
+    <div className="space-y-6">
       <SEO
         title="О проекте Coursing Stats"
         description="Информация о проекте Coursing Stats: стек технологий, архитектура, реализованные улучшения, исходный код."
@@ -106,7 +106,7 @@ export default function AboutPage() {
           Некоммерческий агрегатор статистики: результаты соревнований с procoursing.ru (курсинг, БЗМП, бега борзых),
           выставки РКФ и рекорды полигона Донино. Проект не связан с ProCoursing и РКФ.
         </p>
-        <p className="text-[13px] text-charcoal-600">
+        <p className="text-charcoal-600">
           Данные из открытых протоколов; как устроен рейтинг и индекс CS — во вкладке <strong>«Рейтинг»</strong>.
           Пока procoursing.ru недоступен, календарь соревнований временно на Coursing Stats (
           <strong>Соревнования → Календарь</strong>); клик по событию ведёт на протокол на procoursing.ru, когда сайт снова
@@ -124,7 +124,7 @@ export default function AboutPage() {
               <p className="text-[10px] font-semibold uppercase tracking-wide text-old-money-500">
                 {item.title}
               </p>
-              <p className="mt-1.5 text-[13px] leading-snug text-charcoal-700">{item.text}</p>
+              <p className="mt-1.5 text-sm leading-snug text-charcoal-700">{item.text}</p>
             </div>
           ))}
         </div>
@@ -189,6 +189,6 @@ export default function AboutPage() {
           <DiscordContact />
         </div>
       </SectionCard>
-    </main>
+    </div>
   )
 }

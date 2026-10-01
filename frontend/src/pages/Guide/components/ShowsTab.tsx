@@ -32,7 +32,7 @@ function ShowAbbr({ abbr }: { abbr: string }) {
 
 export default function ShowsTab() {
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
       <SectionCard title="Официальные источники">
         <p>
           Ниже — выжимка по{' '}
@@ -90,12 +90,12 @@ export default function ShowsTab() {
           <strong>текущего сезона</strong> (кнопка «Сезон YYYY»); снять её — рейтинг по всем загруженным годам.
           При поиске по кличке сезон не режет выдачу.
         </p>
-        <p className="text-[13px] text-charcoal-600">
+        <p className="text-charcoal-600">
           На главной в колонке «Выставки» справа — не один ярлык вроде «BOB», а краткая причина места (например{' '}
           <strong className="font-semibold text-charcoal-800">BOB ×18 · VCAC ×27</strong>
           ): самые весомые награды сезона со счётчиками.
         </p>
-        <p className="text-[13px] text-charcoal-600">
+        <p className="text-charcoal-600">
           Локально на странице выставки: шапка (дата / счётчики / место + строка клуб · ранг · тип), блок{' '}
           <strong>Главный ринг</strong> (вкладки BIS / возраст / BIG), каталог по породам. Клик по кличке открывает
           профиль собаки. Оценки и «Неявка» нормализуются из PDF (в т.ч. переносы вроде «ЩЕ ОП Н», «Нея вка»).
@@ -132,7 +132,7 @@ export default function ShowsTab() {
         <EventTitlesGrid
           items={SHOW_EVENT_TITLES.map((item) => ({ ...item, abbrTitle: SHOW_ABBR_LOOKUP[item.abbr] }))}
         />
-        <p className="text-[13px]">Полный приоритет наград одного дня (сверху — престижнее):</p>
+        <p>Полный приоритет наград одного дня (сверху — престижнее):</p>
         <PriorityAwardsList
           items={SHOW_EVENT_AWARDS_PRIORITY.map((item) => ({
             ...item,
@@ -143,7 +143,7 @@ export default function ShowsTab() {
       </SectionCard>
 
       <SectionCard title="Ранги выставок: кто что получает">
-        <p className="text-[13px]">
+        <p>
           От ранга зависит, какие сертификаты можно присудить. Чем выше ранг, тем больше возможностей (например,{' '}
           <ShowAbbr abbr="CACIB" /> только на CACIB FCI).
         </p>
@@ -202,7 +202,7 @@ export default function ShowsTab() {
           {GUIDE_SHOWS_FAQS.map((faq) => (
             <div key={faq.question}>
               <dt className="font-semibold text-charcoal-900">{faq.question}</dt>
-              <dd className="mt-1 text-[13px] text-charcoal-600">{faq.answer}</dd>
+              <dd className="mt-1 text-sm text-charcoal-600">{faq.answer}</dd>
             </div>
           ))}
         </dl>

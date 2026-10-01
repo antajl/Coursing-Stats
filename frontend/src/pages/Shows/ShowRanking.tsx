@@ -140,9 +140,6 @@ export default function ShowRanking() {
   const years = Array.from(
     new Set(['2017', '2018', '2019', '2021', '2022', '2023', '2024', '2025', '2026']),
   ).sort((a, b) => Number(b) - Number(a))
-  const groups = Array.from(
-    new Set(allDogs.map((d) => d.breed_group).filter(Boolean) as string[]),
-  ).sort()
 
   const rankedDogs = useMemo(() => {
     if (filterYear) {
@@ -219,7 +216,6 @@ export default function ShowRanking() {
         dogIndex={dogIndex}
         filterGroup={filterGroup}
         onGroupChange={setFilterGroup}
-        groupValues={groups}
         awardMins={awardMins}
         onAwardMinChange={handleAwardMinChange}
         onResetFilters={handleResetFilters}

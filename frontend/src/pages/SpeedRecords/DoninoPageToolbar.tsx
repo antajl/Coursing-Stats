@@ -9,6 +9,7 @@ import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
 import BreedSearchDropdown from '../../components/ui/BreedSearchDropdown'
 import ModernDropdown from '../../components/ui/ModernDropdown'
 import { TOOLBAR_NUMBER_INPUT, toolbarPillTriggerClass } from '../../lib/toolbar'
+import type { DogsIndexEntry } from '../../lib/competingBreeds'
 import { exportDoninoToExcel, exportDoninoStatsToExcel } from './exportExcel'
 import { GROUP_BY_OPTIONS, type GroupBy } from './stats/constants'
 
@@ -34,9 +35,12 @@ interface DoninoPageToolbarProps {
   breeds: string[]
   sexes: string[]
   onToggleFilter: (type: string, value: string) => void
+  onYearChange?: (year: string) => void
+  currentSeason?: string
   onClearFilters: () => void
   onClearPanelFilters: () => void
   hasActiveFilters: boolean
+  dogIndex?: DogsIndexEntry[]
   speedRecords: { name: string; sex: string; breed: string; speed_km_h: number; date: string; screenshot_url?: string }[]
   coursingRecords: { name: string; breed: string; time_seconds: number; date: string }[]
   speedStats?: { breed: string; count: number; bestSpeed: number; avgSpeed: number }[]
@@ -75,9 +79,12 @@ export default function DoninoPageToolbar({
   breeds,
   sexes,
   onToggleFilter,
+  onYearChange,
+  currentSeason = '2026',
   onClearFilters,
   onClearPanelFilters,
   hasActiveFilters,
+  dogIndex: propDogIndex,
   speedRecords,
   coursingRecords,
   speedStats,
@@ -117,8 +124,11 @@ export default function DoninoPageToolbar({
   )
 
   const dogIndex = useMemo(
-    () => breeds.map((breed) => ({ breed, competition_count: 1 })),
-    [breeds],
+    () =>
+      propDogIndex && propDogIndex.length > 0
+        ? propDogIndex
+        : breeds.map((breed) => ({ breed, competition_count: 1 })),
+    [propDogIndex, breeds],
   )
 
   const clearAllYears = () => {
@@ -158,6 +168,10 @@ export default function DoninoPageToolbar({
     </button>
   )
 
+  const isYearActive =
+    filterYears.length > 0 &&
+    !(filterYears.length === 1 && filterYears[0] === currentSeason)
+
   return (
     <div ref={dropdownRef}>
       <PageToolbar
@@ -176,7 +190,7 @@ export default function DoninoPageToolbar({
                 trigger={
                   <button
                     type="button"
-                    className={toolbarPillTriggerClass(filterYears.length > 0)}
+                    className={toolbarPillTriggerClass(isYearActive)}
                   >
                     {yearTriggerLabel}
                     <PillChevron />
@@ -191,7 +205,11 @@ export default function DoninoPageToolbar({
                     type="button"
                     role="menuitem"
                     onClick={() => {
-                      clearAllYears()
+                      if (onYearChange) {
+                        onYearChange('')
+                      } else {
+                        clearAllYears()
+                      }
                       setYearDropdownOpen(false)
                     }}
                     className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
@@ -203,13 +221,21 @@ export default function DoninoPageToolbar({
                     Все года
                   </button>
                   {sortedYears.map((year) => {
-                    const active = filterYears.includes(year)
+                    const active = filterYears.length === 1 && filterYears[0] === year
                     return (
                       <button
                         key={year}
                         type="button"
                         role="menuitem"
-                        onClick={() => onToggleFilter('year', year)}
+                        onClick={() => {
+                          if (onYearChange) {
+                            onYearChange(year)
+                          } else {
+                            clearAllYears()
+                            onToggleFilter('year', year)
+                          }
+                          setYearDropdownOpen(false)
+                        }}
                         className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
                           active
                             ? 'bg-camel-500 text-charcoal-900'
