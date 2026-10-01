@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Star } from 'lucide-react'
 import DogCard, { DOG_CARD_HEIGHT_CLASS } from '../../components/DogCard'
 import EmptyState from '../../components/EmptyState'
@@ -33,7 +34,7 @@ function FavoriteCardStar({
         onToggle(dogId, meta)
       }}
       className={`absolute right-2 top-2 z-10 rounded-full bg-white/90 p-1.5 shadow-sm transition-all duration-150 hover:bg-cream-100 active:scale-90 ${
-        isFav ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
+        isFav ? 'opacity-100' : 'opacity-40 sm:opacity-0 sm:group-hover:opacity-100'
       }`}
       title={isFav ? 'Удалить из избранного' : 'Добавить в избранное'}
       aria-label={isFav ? 'Удалить из избранного' : 'Добавить в избранное'}
@@ -67,6 +68,10 @@ export default function TopDogsColumns({
   favorites,
   onToggleFavorite,
 }: TopDogsColumnsProps) {
+  const [selectedMobileColumn, setSelectedMobileColumn] = useState<'coursing' | 'racing' | null>(null)
+  const activeMobileColumn =
+    selectedMobileColumn ?? (filteredCombined.length === 0 && filteredSpeed.length > 0 ? 'racing' : 'coursing')
+
   const listLength = Math.max(filteredCombined.length, filteredSpeed.length)
 
   const { visibleCount, loadMoreRef, hasMore } = useInfiniteScroll(listLength, [
@@ -159,13 +164,53 @@ export default function TopDogsColumns({
 
   return (
     <div className="space-y-4">
+      {/* Mobile discipline switcher (< lg) */}
+      <div className="lg:hidden flex items-center justify-center p-1 bg-cream-100 rounded-xl border border-old-money-200/60 shadow-sm">
+        <button
+          type="button"
+          onClick={() => setSelectedMobileColumn('coursing')}
+          className={`flex-1 flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg text-xs font-semibold transition-all ${
+            activeMobileColumn === 'coursing'
+              ? 'bg-white text-charcoal-900 shadow-sm border border-old-money-200/80'
+              : 'text-charcoal-600 hover:text-charcoal-900'
+          }`}
+        >
+          <span>Курсинг / БЗМП</span>
+          <span className={`h-4 min-w-[1.25rem] px-1 rounded-full text-[10px] font-bold flex items-center justify-center leading-none ${
+            activeMobileColumn === 'coursing' ? 'bg-camel-100 text-camel-800' : 'bg-charcoal-200/60 text-charcoal-600'
+          }`}>
+            {filteredCombined.length}
+          </span>
+        </button>
+        <button
+          type="button"
+          onClick={() => setSelectedMobileColumn('racing')}
+          className={`flex-1 flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg text-xs font-semibold transition-all ${
+            activeMobileColumn === 'racing'
+              ? 'bg-white text-charcoal-900 shadow-sm border border-old-money-200/80'
+              : 'text-charcoal-600 hover:text-charcoal-900'
+          }`}
+        >
+          <span>Рейсинг</span>
+          <span className={`h-4 min-w-[1.25rem] px-1 rounded-full text-[10px] font-bold flex items-center justify-center leading-none ${
+            activeMobileColumn === 'racing' ? 'bg-warm-blue-100 text-warm-blue-800' : 'bg-charcoal-200/60 text-charcoal-600'
+          }`}>
+            {filteredSpeed.length}
+          </span>
+        </button>
+      </div>
+
       <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-2 lg:gap-8">
-        <DoninoColumnShell plaque={coursingPlaque} listRef={coursingRevealRef}>
-          {coursingList}
-        </DoninoColumnShell>
-        <DoninoColumnShell plaque={racingPlaque} listRef={speedRevealRef}>
-          {speedList}
-        </DoninoColumnShell>
+        <div className={activeMobileColumn === 'racing' ? 'hidden lg:block' : 'block'}>
+          <DoninoColumnShell plaque={coursingPlaque} listRef={coursingRevealRef}>
+            {coursingList}
+          </DoninoColumnShell>
+        </div>
+        <div className={activeMobileColumn === 'coursing' ? 'hidden lg:block' : 'block'}>
+          <DoninoColumnShell plaque={racingPlaque} listRef={speedRevealRef}>
+            {speedList}
+          </DoninoColumnShell>
+        </div>
       </div>
 
       {hasMore && (

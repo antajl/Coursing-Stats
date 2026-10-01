@@ -15,6 +15,8 @@ interface SlidingSegmentControlProps {
   value: string
   onChange: (id: string) => void
   ariaLabel: string
+  className?: string
+  buttonClassName?: string
 }
 
 /**
@@ -25,6 +27,8 @@ export default function SlidingSegmentControl({
   value,
   onChange,
   ariaLabel,
+  className = '',
+  buttonClassName = '',
 }: SlidingSegmentControlProps) {
   const groupRef = useRef<HTMLDivElement>(null)
   const [pill, setPill] = useState({ left: 0, width: 0, ready: false })
@@ -54,7 +58,7 @@ export default function SlidingSegmentControl({
   }, [value, segments])
 
   return (
-    <div ref={groupRef} className={`${TOOLBAR_SEGMENT_GROUP} relative`} role="group" aria-label={ariaLabel}>
+    <div ref={groupRef} className={`${TOOLBAR_SEGMENT_GROUP} relative ${className}`} role="group" aria-label={ariaLabel}>
       <span
         aria-hidden
         className="pointer-events-none absolute top-0.5 bottom-0.5 rounded-md bg-camel-500 shadow-sm transition-[left,width] duration-200 ease-out"
@@ -73,7 +77,7 @@ export default function SlidingSegmentControl({
             type="button"
             data-seg-id={segment.id}
             onClick={() => onChange(segment.id)}
-            className={`${TOOLBAR_SEGMENT} relative z-[1] ${
+            className={`${TOOLBAR_SEGMENT} relative z-[1] ${buttonClassName} ${
               active
                 ? 'text-charcoal-900'
                 : TOOLBAR_SEGMENT_IDLE

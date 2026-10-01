@@ -4,15 +4,27 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - 'bot/**'
+  workflow_dispatch:
+    inputs:
+      full_sync:
+        description: 'Полная синхронизация всех файлов data/v1/'
+        required: false
+        type: boolean
+        default: false
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    name: Build & Deploy to Yandex Cloud
     
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      
+        with:
+          fetch-depth: 2
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -30,11 +42,12 @@ jobs:
         working-directory: ./frontend
         run: yarn build
       
-      - name: Install AWS CLI
+      - name: Install AWS CLI & Configure Performance
         run: |
           pip install awscli
-      
-      - name: Deploy to Yandex Object Storage
+          aws configure set default.s3.max_concurrent_requests 50
+
+      - name: Deploy frontend to Yandex Object Storage
         run: |
           aws s3 sync frontend/dist/ s3://${{ secrets.S3_BUCKET }}/ \
             --endpoint-url https://storage.yandexcloud.net \
@@ -43,9 +56,64 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      
-      - name: Deploy data to Yandex Object Storage
+      - name: Detect data changes
+        id: data-diff
         run: |
+          git config core.quotepath false
+
+          if [ "${{ inputs.full_sync }}" = "true" ]; then
+            echo "mode=full" >> $GITHUB_OUTPUT
+            echo "Full sync requested manually"
+          elif git diff --quiet HEAD~1 HEAD -- data/v1/; then
+            echo "mode=none" >> $GITHUB_OUTPUT
+            echo "No data files changed. Skipping data deploy step."
+          else
+            git -c core.quotepath=false diff --name-only --diff-filter=d HEAD~1 HEAD -- data/v1/ > /tmp/changed_files.txt
+            git -c core.quotepath=false diff --name-only --diff-filter=D HEAD~1 HEAD -- data/v1/ > /tmp/deleted_files.txt
+            
+            CHANGED_COUNT=$(grep -c -v '^$' /tmp/changed_files.txt || true)
+            DELETED_COUNT=$(grep -c -v '^$' /tmp/deleted_files.txt || true)
+            
+            echo "Changed files count: $CHANGED_COUNT"
+            echo "Deleted files count: $DELETED_COUNT"
+
+            if [ "$CHANGED_COUNT" -gt 250 ]; then
+              echo "mode=full" >> $GITHUB_OUTPUT
+              echo "More than 250 files changed ($CHANGED_COUNT), falling back to optimized full s3 sync"
+            else
+              echo "mode=incremental" >> $GITHUB_OUTPUT
+            fi
+          fi
+
+      - name: Deploy changed data files (Incremental)
+        if: steps.data-diff.outputs.mode == 'incremental'
+        run: |
+          echo "Uploading changed files..."
+          while IFS= read -r file; do
+            if [ -n "$file" ] && [ -f "$file" ]; then
+              echo "Uploading $file"
+              aws s3 cp "$file" "s3://${{ secrets.S3_BUCKET }}/$file" \
+                --endpoint-url https://storage.yandexcloud.net \
+                --acl public-read
+            fi
+          done < /tmp/changed_files.txt
+
+          echo "Removing deleted files from S3..."
+          while IFS= read -r file; do
+            if [ -n "$file" ]; then
+              echo "Deleting $file from S3"
+              aws s3 rm "s3://${{ secrets.S3_BUCKET }}/$file" \
+                --endpoint-url https://storage.yandexcloud.net
+            fi
+          done < /tmp/deleted_files.txt
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      - name: Deploy all data (Full Sync)
+        if: steps.data-diff.outputs.mode == 'full'
+        run: |
+          echo "Running full S3 sync for data/v1/..."
           aws s3 sync data/v1/ s3://${{ secrets.S3_BUCKET }}/data/v1/ \
             --endpoint-url https://storage.yandexcloud.net \
             --acl public-read \

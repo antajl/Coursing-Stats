@@ -22,6 +22,9 @@ export default function DoninoDogProfile() {
   const exportRef = useRef(null)
 
   const fromCoursingRecords = location.state?.from === 'coursing-records'
+  const [mobileTab, setMobileTab] = useState<'speed' | 'coursing'>(() =>
+    fromCoursingRecords ? 'coursing' : 'speed'
+  )
 
   useEffect(() => {
     async function fetchDogData() {
@@ -79,6 +82,14 @@ export default function DoninoDogProfile() {
     )
   }, [coursingTimeline, data?.coursingRecords])
   const dogSex = useMemo(() => data?.sex || data?.speedRecords?.find((r) => r.sex)?.sex || '', [data?.sex, data?.speedRecords])
+
+  useEffect(() => {
+    if (!hasSpeedRecords && hasCoursingRecords) {
+      setMobileTab('coursing')
+    } else if (hasSpeedRecords && !hasCoursingRecords) {
+      setMobileTab('speed')
+    }
+  }, [hasSpeedRecords, hasCoursingRecords])
 
   // Achievements calculation
   const achievements = useMemo(() => {
@@ -238,18 +249,30 @@ export default function DoninoDogProfile() {
     <div className="p-4 md:p-6">
       <div className="max-w-4xl mx-auto">
         <div ref={exportRef}>
-          {/* Шапка профиля — кнопка «назад» вне потока, слева от карточки */}
+          {/* Шапка профиля — кнопка «назад» вне потока на десктопе, внутри на мобильном */}
           <div className="relative mb-6">
             <button
               type="button"
               onClick={handleBack}
-              className="relative z-10 mb-2 inline-flex h-11 w-11 items-center justify-center rounded-lg text-old-money-500 transition-colors hover:bg-old-money-50 hover:text-camel-700 md:absolute md:right-full md:top-8 md:mb-0 md:mr-0.5"
+              className="hidden md:absolute md:right-full md:top-8 md:mr-1 md:inline-flex md:h-11 md:w-11 md:items-center md:justify-center md:rounded-lg md:text-old-money-500 md:transition-colors md:hover:bg-old-money-50 md:hover:text-camel-700"
               aria-label="Назад"
               data-export-ignore
             >
               <ChevronLeft className="h-5 w-5" aria-hidden />
             </button>
-            <div className="rounded-2xl border-2 border-old-money-200 bg-white p-5 shadow-md md:p-8">
+            <div className="rounded-2xl border-2 border-old-money-200 bg-white p-4 sm:p-5 md:p-8 shadow-md">
+              {/* Мобильная кнопка Назад (внутри карточки сверху) */}
+              <div className="mb-3 flex items-center md:hidden" data-export-ignore>
+                <button
+                  type="button"
+                  onClick={handleBack}
+                  className="-ml-1 inline-flex items-center gap-1 rounded-lg px-2 py-1 text-xs font-semibold text-old-money-600 transition-colors hover:bg-old-money-50 hover:text-charcoal-900"
+                  aria-label="Назад"
+                >
+                  <ChevronLeft className="h-4 w-4 shrink-0 text-old-money-500" aria-hidden />
+                  <span>Назад</span>
+                </button>
+              </div>
               <div className="flex flex-col gap-4 md:flex-row md:gap-6 md:divide-x md:divide-old-money-200">
                 <div className="w-full md:w-1/2">
                   <div className="flex flex-wrap items-baseline gap-3 md:gap-4">
@@ -265,7 +288,7 @@ export default function DoninoDogProfile() {
                   </div>
                 </div>
                 {achievements.length > 0 && (
-                  <div className="flex w-full flex-wrap items-start justify-end gap-2 md:w-1/2 md:pl-6">
+                  <div className="flex w-full flex-wrap items-start justify-start md:justify-end gap-1.5 sm:gap-2 md:w-1/2 md:pl-6 pt-3 md:pt-0 border-t border-old-money-100 md:border-t-0">
                     {achievements.map((badge, idx) => (
                       <HoverTooltip key={idx} label={badge.tooltip}>
                         <div className={`flex shrink-0 items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold ${badge.color}`}>
@@ -279,53 +302,82 @@ export default function DoninoDogProfile() {
               </div>
             </div>
           </div>
-          {/* Статистика и история — всегда 2 колонки; карточки статистики одной высоты */}
+
+          {/* Мобильный переключатель дисциплин (если есть обе) */}
+          {hasSpeedRecords && hasCoursingRecords && (
+            <div className="mb-4 flex rounded-xl border border-old-money-200/80 bg-cream-100 p-1 md:hidden">
+              <button
+                type="button"
+                onClick={() => setMobileTab('speed')}
+                className={`flex-1 rounded-lg py-1.5 px-3 text-xs font-semibold transition-all ${
+                  mobileTab === 'speed'
+                    ? 'bg-camel-500 text-charcoal-900 shadow-sm'
+                    : 'text-charcoal-600 hover:text-charcoal-900'
+                }`}
+              >
+                Замер скорости ({uniqueSpeedRecords.length})
+              </button>
+              <button
+                type="button"
+                onClick={() => setMobileTab('coursing')}
+                className={`flex-1 rounded-lg py-1.5 px-3 text-xs font-semibold transition-all ${
+                  mobileTab === 'coursing'
+                    ? 'bg-camel-500 text-charcoal-900 shadow-sm'
+                    : 'text-charcoal-600 hover:text-charcoal-900'
+                }`}
+              >
+                Бега 350 м ({coursingHistory.length})
+              </button>
+            </div>
+          )}
+
+          {/* Статистика и история */}
           {(hasSpeedRecords || hasCoursingRecords) && (
             <div className="mb-6 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
               {hasSpeedRecords ? (
-                <div className="flex min-w-0 flex-col gap-4">
-                  <div className="flex h-[24rem] shrink-0 flex-col overflow-hidden rounded-2xl border-2 border-warm-blue-200 bg-white p-5 shadow-md md:h-[25rem] md:p-6">
-                    <h2 className="mb-4 shrink-0 text-lg font-bold tracking-tight text-charcoal-800 md:text-xl">
+                <div className={`min-w-0 flex-col gap-4 ${mobileTab === 'speed' || !hasCoursingRecords ? 'flex' : 'hidden md:flex'}`}>
+                  <div className="flex min-h-[22rem] md:h-[25rem] shrink-0 flex-col rounded-2xl border-2 border-warm-blue-200 bg-white p-4 sm:p-5 shadow-md md:p-6">
+                    <h2 className="mb-3 sm:mb-4 shrink-0 text-lg font-bold tracking-tight text-charcoal-800 md:text-xl">
                       Замер скорости
                     </h2>
 
-                    <div className="mb-4 flex h-[7.25rem] shrink-0 flex-col items-center justify-center rounded-xl border-2 border-warm-blue-200 bg-warm-blue-50 p-4 text-center">
-                      <div className="mb-2 text-xs font-semibold uppercase tracking-wide text-charcoal-500">
+                    <div className="mb-3 sm:mb-4 flex h-[6.5rem] sm:h-[7.25rem] shrink-0 flex-col items-center justify-center rounded-xl border-2 border-warm-blue-200 bg-warm-blue-50 p-3 sm:p-4 text-center">
+                      <div className="mb-1 sm:mb-2 text-xs font-semibold uppercase tracking-wide text-charcoal-500">
                         Лучшая скорость
                       </div>
-                      <div className="whitespace-nowrap text-4xl font-bold tracking-tight text-warm-blue-800">
+                      <div className="whitespace-nowrap text-3xl sm:text-4xl font-bold tracking-tight text-warm-blue-800">
                         {data?.speedStats?.bestSpeed?.toFixed(1) || '—'}
-                        <span className="ml-2 text-base font-normal text-charcoal-400">км/ч</span>
+                        <span className="ml-1.5 sm:ml-2 text-sm sm:text-base font-normal text-charcoal-400">км/ч</span>
                       </div>
                     </div>
 
-                    <div className="mb-4 grid min-h-0 flex-1 grid-cols-2 gap-3 content-start">
-                      <div className="rounded-xl border border-warm-blue-200 bg-warm-blue-50 p-4 text-center">
-                        <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-old-money-500">
+                    <div className="mb-2 sm:mb-4 grid min-h-0 flex-1 grid-cols-2 gap-2 sm:gap-3 content-start">
+                      <div className="rounded-xl border border-warm-blue-200 bg-warm-blue-50 p-2.5 sm:p-4 text-center">
+                        <div className="mb-1 text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-old-money-500">
                           Средняя
                         </div>
-                        <div className="whitespace-nowrap text-2xl font-bold text-warm-blue-900">
+                        <div className="whitespace-nowrap text-xl sm:text-2xl font-bold text-warm-blue-900">
                           {data?.speedStats?.avgSpeed?.toFixed(1) || '—'}
-                          <span className="ml-1 text-sm font-normal text-charcoal-400">км/ч</span>
+                          <span className="ml-1 text-xs sm:text-sm font-normal text-charcoal-400">км/ч</span>
                         </div>
                       </div>
-                      <div className="rounded-xl border border-warm-blue-200 bg-warm-blue-50 p-4 text-center">
-                        <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-old-money-500">
+                      <div className="rounded-xl border border-warm-blue-200 bg-warm-blue-50 p-2.5 sm:p-4 text-center">
+                        <div className="mb-1 text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-old-money-500">
                           Замеров
                         </div>
-                        <div className="text-2xl font-bold text-warm-blue-900">
+                        <div className="text-xl sm:text-2xl font-bold text-warm-blue-900">
                           {uniqueSpeedRecords.length}
                         </div>
                       </div>
-                      <div className="rounded-xl border border-warm-blue-200 bg-warm-blue-50 p-4 text-center">
-                        <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-old-money-500">
+                      <div className="rounded-xl border border-warm-blue-200 bg-warm-blue-50 p-2.5 sm:p-4 text-center">
+                        <div className="mb-1 text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-old-money-500">
                           Рейтинг в породе
                         </div>
-                        <div className="text-2xl font-bold text-charcoal-800">
+                        <div className="text-xl sm:text-2xl font-bold text-charcoal-800">
                           {data?.speedStats?.breedRank > 0 ? (
                             <>
                               #{data.speedStats.breedRank}
-                              <span className="ml-1 text-sm font-normal text-charcoal-400">
+                              <span className="ml-1 text-xs sm:text-sm font-normal text-charcoal-400">
                                 из {data.speedStats.breedTotal}
                               </span>
                             </>
@@ -342,14 +394,14 @@ export default function DoninoDogProfile() {
                   </div>
 
                   {uniqueSpeedRecords.length > 0 && (
-                    <div className="rounded-2xl border-2 border-warm-blue-200 bg-white p-5 shadow-md md:p-6">
-                      <h3 className="mb-4 text-base font-bold tracking-tight text-charcoal-800 md:text-lg">
+                    <div className="rounded-2xl border-2 border-warm-blue-200 bg-white p-4 sm:p-5 shadow-md md:p-6">
+                      <h3 className="mb-3 sm:mb-4 text-base font-bold tracking-tight text-charcoal-800 md:text-lg">
                         История
                       </h3>
                       <div className="space-y-2">
                         {uniqueSpeedRecords.map((record, idx) => (
-                          <div key={idx} className="flex items-center gap-4">
-                            <div className="w-24 shrink-0 text-right text-sm text-charcoal-700">
+                          <div key={idx} className="flex items-center gap-2.5 sm:gap-4">
+                            <div className="w-20 sm:w-24 shrink-0 text-right text-xs sm:text-sm text-charcoal-700">
                               {formatRecordDate(record.date)}
                             </div>
                             <div className="relative h-6 flex-1 overflow-hidden rounded-full bg-cream-200">
@@ -357,7 +409,7 @@ export default function DoninoDogProfile() {
                                 percent={(Number(record.speed_km_h) / 80) * 100}
                                 className="h-full rounded-full bg-gradient-to-r from-warm-blue-400 to-warm-blue-600 transition-[width] duration-500 ease-out"
                               />
-                              <div className="absolute inset-0 flex items-center justify-center text-sm font-bold text-charcoal-900">
+                              <div className="absolute inset-0 flex items-center justify-center text-xs sm:text-sm font-bold text-charcoal-900">
                                 {Number(record.speed_km_h).toFixed(1)} км/ч
                               </div>
                             </div>
@@ -368,66 +420,66 @@ export default function DoninoDogProfile() {
                   )}
                 </div>
               ) : (
-                <div className="flex h-[24rem] shrink-0 flex-col overflow-hidden rounded-2xl border-2 border-dashed border-warm-blue-200 bg-white p-5 shadow-md md:h-[25rem] md:p-6">
+                <div className={`min-h-[22rem] md:h-[25rem] shrink-0 flex-col rounded-2xl border-2 border-dashed border-warm-blue-200 bg-white p-4 sm:p-5 shadow-md md:p-6 ${mobileTab === 'speed' || !hasCoursingRecords ? 'flex' : 'hidden md:flex'}`}>
                   <h2 className="mb-4 shrink-0 text-lg font-bold tracking-tight text-charcoal-800 md:text-xl">
                     Замер скорости
                   </h2>
-                  <div className="mb-4 flex h-[7.25rem] shrink-0 flex-col items-center justify-center rounded-xl border border-dashed border-warm-blue-200 bg-warm-blue-50/50 opacity-50">
+                  <div className="mb-4 flex h-[6.5rem] sm:h-[7.25rem] shrink-0 flex-col items-center justify-center rounded-xl border border-dashed border-warm-blue-200 bg-warm-blue-50/50 opacity-50">
                     <p className="text-sm font-medium text-old-money-500">данных нет</p>
                   </div>
-                  <div className="grid flex-1 grid-cols-2 content-start gap-3">
-                    <div className="min-h-[5.5rem] rounded-xl border border-dashed border-warm-blue-200 bg-warm-blue-50/50 opacity-50" />
-                    <div className="min-h-[5.5rem] rounded-xl border border-dashed border-warm-blue-200 bg-warm-blue-50/50 opacity-50" />
-                    <div className="min-h-[5.5rem] rounded-xl border border-dashed border-warm-blue-200 bg-warm-blue-50/50 opacity-50" />
-                    <div className="min-h-[5.5rem] rounded-xl border border-dashed border-warm-blue-200 bg-warm-blue-50/50 opacity-50" />
+                  <div className="grid flex-1 grid-cols-2 content-start gap-2.5 sm:gap-3">
+                    <div className="min-h-[5rem] rounded-xl border border-dashed border-warm-blue-200 bg-warm-blue-50/50 opacity-50" />
+                    <div className="min-h-[5rem] rounded-xl border border-dashed border-warm-blue-200 bg-warm-blue-50/50 opacity-50" />
+                    <div className="min-h-[5rem] rounded-xl border border-dashed border-warm-blue-200 bg-warm-blue-50/50 opacity-50" />
+                    <div className="min-h-[5rem] rounded-xl border border-dashed border-warm-blue-200 bg-warm-blue-50/50 opacity-50" />
                   </div>
                 </div>
               )}
 
               {hasCoursingRecords ? (
-                <div className="flex min-w-0 flex-col gap-4">
-                  <div className="flex h-[24rem] shrink-0 flex-col overflow-hidden rounded-2xl border-2 border-forest-200 bg-white p-5 shadow-md md:h-[25rem] md:p-6">
-                    <h2 className="mb-4 shrink-0 text-lg font-bold tracking-tight text-charcoal-800 md:text-xl">
+                <div className={`min-w-0 flex-col gap-4 ${mobileTab === 'coursing' || !hasSpeedRecords ? 'flex' : 'hidden md:flex'}`}>
+                  <div className="flex min-h-[22rem] md:h-[25rem] shrink-0 flex-col rounded-2xl border-2 border-forest-200 bg-white p-4 sm:p-5 shadow-md md:p-6">
+                    <h2 className="mb-3 sm:mb-4 shrink-0 text-lg font-bold tracking-tight text-charcoal-800 md:text-xl">
                       Бега борзых (350 м)
                     </h2>
 
-                    <div className="mb-4 flex h-[7.25rem] shrink-0 flex-col items-center justify-center rounded-xl border-2 border-forest-200 bg-forest-50 p-4 text-center">
-                      <div className="mb-2 text-xs font-semibold uppercase tracking-wide text-charcoal-500">
+                    <div className="mb-3 sm:mb-4 flex h-[6.5rem] sm:h-[7.25rem] shrink-0 flex-col items-center justify-center rounded-xl border-2 border-forest-200 bg-forest-50 p-3 sm:p-4 text-center">
+                      <div className="mb-1 sm:mb-2 text-xs font-semibold uppercase tracking-wide text-charcoal-500">
                         Лучшее время
                       </div>
-                      <div className="whitespace-nowrap text-4xl font-bold tracking-tight text-forest-700">
+                      <div className="whitespace-nowrap text-3xl sm:text-4xl font-bold tracking-tight text-forest-700">
                         {data?.coursingStats?.bestTime?.toFixed(2) || '—'}
-                        <span className="ml-2 text-base font-normal text-charcoal-400">сек</span>
+                        <span className="ml-1.5 sm:ml-2 text-sm sm:text-base font-normal text-charcoal-400">сек</span>
                       </div>
                     </div>
 
-                    <div className="mb-4 grid min-h-0 flex-1 grid-cols-2 content-start gap-3">
-                      <div className="rounded-xl border border-forest-200 bg-forest-50 p-4 text-center">
-                        <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-old-money-500">
+                    <div className="mb-2 sm:mb-4 grid min-h-0 flex-1 grid-cols-2 gap-2 sm:gap-3 content-start">
+                      <div className="rounded-xl border border-forest-200 bg-forest-50 p-2.5 sm:p-4 text-center">
+                        <div className="mb-1 text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-old-money-500">
                           Среднее
                         </div>
-                        <div className="whitespace-nowrap text-2xl font-bold text-charcoal-800">
+                        <div className="whitespace-nowrap text-xl sm:text-2xl font-bold text-charcoal-800">
                           {data?.coursingStats?.avgTime?.toFixed(2) || '—'}
-                          <span className="ml-1 text-sm font-normal text-charcoal-400">сек</span>
+                          <span className="ml-1 text-xs sm:text-sm font-normal text-charcoal-400">сек</span>
                         </div>
                       </div>
-                      <div className="rounded-xl border border-forest-200 bg-forest-50 p-4 text-center">
-                        <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-old-money-500">
+                      <div className="rounded-xl border border-forest-200 bg-forest-50 p-2.5 sm:p-4 text-center">
+                        <div className="mb-1 text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-old-money-500">
                           Забегов
                         </div>
-                        <div className="text-2xl font-bold text-charcoal-800">
+                        <div className="text-xl sm:text-2xl font-bold text-charcoal-800">
                           {coursingHistory.length}
                         </div>
                       </div>
-                      <div className="rounded-xl border border-forest-200 bg-forest-50 p-4 text-center">
-                        <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-old-money-500">
+                      <div className="rounded-xl border border-forest-200 bg-forest-50 p-2.5 sm:p-4 text-center">
+                        <div className="mb-1 text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-old-money-500">
                           Рейтинг в породе
                         </div>
-                        <div className="text-2xl font-bold text-charcoal-800">
+                        <div className="text-xl sm:text-2xl font-bold text-charcoal-800">
                           {data?.coursingStats?.breedRank > 0 ? (
                             <>
                               #{data.coursingStats.breedRank}
-                              <span className="ml-1 text-sm font-normal text-charcoal-400">
+                              <span className="ml-1 text-xs sm:text-sm font-normal text-charcoal-400">
                                 из {data.coursingStats.breedTotal}
                               </span>
                             </>
@@ -444,14 +496,14 @@ export default function DoninoDogProfile() {
                   </div>
 
                   {coursingHistory.length > 0 && (
-                    <div className="rounded-2xl border-2 border-forest-200 bg-white p-5 shadow-md md:p-6">
-                      <h3 className="mb-4 text-base font-bold tracking-tight text-charcoal-800 md:text-lg">
+                    <div className="rounded-2xl border-2 border-forest-200 bg-white p-4 sm:p-5 shadow-md md:p-6">
+                      <h3 className="mb-3 sm:mb-4 text-base font-bold tracking-tight text-charcoal-800 md:text-lg">
                         История
                       </h3>
                       <div className="space-y-2">
                         {coursingHistory.map((record, idx) => (
-                          <div key={idx} className="flex items-center gap-4">
-                            <div className="w-24 shrink-0 text-right text-sm text-charcoal-700">
+                          <div key={idx} className="flex items-center gap-2.5 sm:gap-4">
+                            <div className="w-20 sm:w-24 shrink-0 text-right text-xs sm:text-sm text-charcoal-700">
                               {formatRecordDate(record.date)}
                             </div>
                             <div className="relative h-6 flex-1 overflow-hidden rounded-full bg-cream-200">
@@ -459,7 +511,7 @@ export default function DoninoDogProfile() {
                                 percent={(30 / Number(record.time_seconds)) * 100}
                                 className="h-full rounded-full bg-gradient-to-r from-forest-400 to-forest-600 transition-[width] duration-500 ease-out"
                               />
-                              <div className="absolute inset-0 flex items-center justify-center text-sm font-bold text-charcoal-900">
+                              <div className="absolute inset-0 flex items-center justify-center text-xs sm:text-sm font-bold text-charcoal-900">
                                 {Number(record.time_seconds).toFixed(2)} сек
                               </div>
                             </div>
@@ -470,18 +522,18 @@ export default function DoninoDogProfile() {
                   )}
                 </div>
               ) : (
-                <div className="flex h-[24rem] shrink-0 flex-col overflow-hidden rounded-2xl border-2 border-dashed border-forest-200 bg-white p-5 shadow-md md:h-[25rem] md:p-6">
+                <div className={`min-h-[22rem] md:h-[25rem] shrink-0 flex-col rounded-2xl border-2 border-dashed border-forest-200 bg-white p-4 sm:p-5 shadow-md md:p-6 ${mobileTab === 'coursing' || !hasSpeedRecords ? 'flex' : 'hidden md:flex'}`}>
                   <h2 className="mb-4 shrink-0 text-lg font-bold tracking-tight text-charcoal-800 md:text-xl">
                     Бега борзых (350 м)
                   </h2>
-                  <div className="mb-4 flex h-[7.25rem] shrink-0 flex-col items-center justify-center rounded-xl border border-dashed border-forest-200 bg-forest-50/50 opacity-50">
+                  <div className="mb-4 flex h-[6.5rem] sm:h-[7.25rem] shrink-0 flex-col items-center justify-center rounded-xl border border-dashed border-forest-200 bg-forest-50/50 opacity-50">
                     <p className="text-sm font-medium text-old-money-500">данных нет</p>
                   </div>
-                  <div className="grid flex-1 grid-cols-2 content-start gap-3">
-                    <div className="min-h-[5.5rem] rounded-xl border border-dashed border-forest-200 bg-forest-50/50 opacity-50" />
-                    <div className="min-h-[5.5rem] rounded-xl border border-dashed border-forest-200 bg-forest-50/50 opacity-50" />
-                    <div className="min-h-[5.5rem] rounded-xl border border-dashed border-forest-200 bg-forest-50/50 opacity-50" />
-                    <div className="min-h-[5.5rem] rounded-xl border border-dashed border-forest-200 bg-forest-50/50 opacity-50" />
+                  <div className="grid flex-1 grid-cols-2 content-start gap-2.5 sm:gap-3">
+                    <div className="min-h-[5rem] rounded-xl border border-dashed border-forest-200 bg-forest-50/50 opacity-50" />
+                    <div className="min-h-[5rem] rounded-xl border border-dashed border-forest-200 bg-forest-50/50 opacity-50" />
+                    <div className="min-h-[5rem] rounded-xl border border-dashed border-forest-200 bg-forest-50/50 opacity-50" />
+                    <div className="min-h-[5rem] rounded-xl border border-dashed border-forest-200 bg-forest-50/50 opacity-50" />
                   </div>
                 </div>
               )}

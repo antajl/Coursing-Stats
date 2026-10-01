@@ -191,7 +191,7 @@ export default function ShowCalendar() {
   const pageToolbar = (
     <PageToolbar
       bare
-      topRowClassName="pr-28 md:pr-32"
+      topRowClassName="pr-0 md:pr-32"
       filters={
         <ShowCalendarToolbar
           searchQuery={searchQuery}
@@ -212,9 +212,14 @@ export default function ShowCalendar() {
         />
       }
       bottomLeft={
-        <p className="text-xs text-charcoal-500">
-          {`Всего событий: ${exhibitions.length} · отфильтровано: ${filteredGroups.length} · с результатом: ${withResultCount}`}
-        </p>
+        <>
+          <p className="hidden sm:block text-xs text-charcoal-500">
+            {`Всего событий: ${exhibitions.length} · отфильтровано: ${filteredGroups.length} · с результатом: ${withResultCount}`}
+          </p>
+          <p className="sm:hidden text-xs text-charcoal-500">
+            {`${filteredGroups.length} из ${exhibitions.length} · с рез.: ${withResultCount}`}
+          </p>
+        </>
       }
     />
   )

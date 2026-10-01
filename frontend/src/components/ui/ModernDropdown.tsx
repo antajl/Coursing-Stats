@@ -83,10 +83,12 @@ export default function ModernDropdown({
       const triggerRect = triggerRef.current?.getBoundingClientRect()
       if (!triggerRect) return
 
+      const dropdownWidth = width ? parseInt(width) : triggerRect.width
+      const maxLeft = window.innerWidth - dropdownWidth - 8
       setPosition({
         top: triggerRect.bottom + 4,
-        left: triggerRect.left,
-        width: width ? parseInt(width) : triggerRect.width,
+        left: Math.max(8, Math.min(triggerRect.left, maxLeft)),
+        width: dropdownWidth,
       })
     }
 

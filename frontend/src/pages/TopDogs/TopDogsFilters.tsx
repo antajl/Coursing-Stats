@@ -112,16 +112,16 @@ export default function TopDogsFilters({
     <div className="mb-4" ref={dropdownRef}>
       <PageToolbar
         bare
-        topRowClassName="pr-28 md:pr-32"
+        topRowClassName="pr-0 md:pr-32"
         filters={
           <>
             <ToolbarSearch
               value={searchQuery}
               onChange={onSearchChange}
               placeholder="Кличка, порода…"
-              className="!w-auto min-w-[200px] max-w-xs"
+              className="w-full sm:!w-auto min-w-0 sm:min-w-[200px] max-w-sm"
             />
-            <div className="flex max-w-full flex-wrap items-center gap-1.5">
+            <div className="flex max-w-full flex-wrap items-center gap-1.5 w-full sm:w-auto">
               {/* Year dropdown */}
               <ModernDropdown
                 trigger={yearTrigger}

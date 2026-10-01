@@ -205,10 +205,10 @@ function MedalStatBox({ variant, value }: { variant: MedalVariant; value?: numbe
 }
 
 const CARD_SHELL =
-  `group relative grid ${DOG_CARD_HEIGHT_CLASS} grid-rows-[auto_auto] gap-0 overflow-hidden rounded-xl border border-old-money-200 bg-white p-2 transition-colors duration-200 hover:border-camel-300 hover:bg-cream-50`
+  `group relative grid min-h-[5.25rem] sm:h-[5.25rem] grid-rows-[auto_auto] gap-0 overflow-hidden rounded-xl border border-old-money-200 bg-white p-2 transition-colors duration-200 hover:border-camel-300 hover:bg-cream-50`
 
 const EMBEDDED_SHELL =
-  `group relative grid ${DOG_CARD_HEIGHT_CLASS} grid-rows-[auto_auto] gap-0 overflow-hidden border-0 bg-transparent px-4 py-1.5 shadow-none transition-colors duration-150 hover:bg-camel-100/60`
+  `group relative grid min-h-[5.25rem] sm:h-[5.25rem] grid-rows-[auto_auto] gap-0 overflow-hidden border-0 bg-transparent px-3 sm:px-4 py-2 sm:py-1.5 shadow-none transition-colors duration-150 hover:bg-camel-100/60`
 
 /** Soft wash inside the row for ranks 1–3 (bar sits outside — see Top3AccentBar). */
 const TOP3_WASH: Record<1 | 2 | 3, string> = {
@@ -383,11 +383,11 @@ const DogCardStats: FC = function DogCardStats() {
   return null
 }
 
-const DogCardRank: FC = function DogCardRank() {
+const DogCardRank: FC<{ className?: string }> = function DogCardRank({ className = '' }) {
   const { rank } = useDogCardContext()
   if (rank == null || rank <= 0) return null
   return (
-    <div className="flex shrink-0 items-center self-stretch pr-2">
+    <div className={`flex shrink-0 items-center self-stretch pr-2 ${className}`}>
       <RankBadge rank={rank} />
     </div>
   )
@@ -403,8 +403,8 @@ const DogCardInner = function DogCard({ dog, type, filterYear, rank, variant = '
   const useFlexShell = type === 'combined' || type === 'speed'
   const cardShell = useFlexShell
     ? shellBase.replace(
-        `grid ${DOG_CARD_HEIGHT_CLASS} grid-rows-[auto_auto]`,
-        `flex ${DOG_CARD_HEIGHT_CLASS} flex-row items-stretch`
+        `grid min-h-[5.25rem] sm:h-[5.25rem] grid-rows-[auto_auto]`,
+        `flex min-h-[5.25rem] sm:h-[5.25rem] flex-row items-stretch`
       )
     : shellBase
   // Overflow visible so the outside accent bar is not clipped by the shell.
@@ -423,28 +423,82 @@ const DogCardInner = function DogCard({ dog, type, filterYear, rank, variant = '
         {isTop3 && rank != null ? <Top3AccentBar rank={rank} /> : null}
         {type === 'combined' && elo ? (
           <>
-            <DogCardRank />
-            <div className="flex min-h-0 min-w-0 flex-1 flex-col justify-between gap-0 overflow-hidden">
-              <DogCardHeader />
-              <DogCardMedals />
+            {/* Mobile layout (< sm) */}
+            <div className="flex sm:hidden flex-row items-stretch w-full min-h-[5.25rem] py-1 gap-2 overflow-hidden">
+              <DogCardRank className="pr-0 self-center" />
+              <div className="flex min-w-0 flex-1 flex-col justify-between gap-1 overflow-hidden">
+                <div className="pr-8 min-w-0">
+                  <DogCardHeader />
+                </div>
+
+                <div className="flex items-center justify-between gap-2 min-w-0">
+                  <DogCardMedals />
+                  <div className="flex items-center gap-2 shrink-0">
+                    <div className="w-auto min-w-[4.5rem]">
+                      <CombinedMetricsRotator
+                        csValue={formatIndexScore(dog)}
+                        eloValue={elo.value}
+                      />
+                    </div>
+                    <span className="text-old-money-300" aria-hidden>·</span>
+                    <div className="flex items-center gap-1 text-[11px] font-semibold text-charcoal-700 tabular-nums">
+                      <span>{dog.total_starts || 0}</span>
+                      <span className="text-[9px] font-normal text-charcoal-500">ст.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div className="mr-8 flex min-h-0 min-w-[10.5rem] shrink-0 flex-col justify-between border-l border-old-money-200/60 pl-2">
-              <CombinedMetricsRotator
-                csValue={formatIndexScore(dog)}
-                eloValue={elo.value}
-              />
-              <div className="flex justify-end">
-                <StartsLabel starts={dog.total_starts || 0} size="md" />
+            {/* Desktop layout (>= sm) */}
+            <div className="hidden sm:flex flex-row items-stretch w-full min-w-0">
+              <DogCardRank />
+              <div className="flex min-h-0 min-w-0 flex-1 flex-col justify-between gap-0 overflow-hidden">
+                <DogCardHeader />
+                <DogCardMedals />
+              </div>
+
+              <div className="mr-8 flex min-h-0 min-w-[10.5rem] shrink-0 flex-col justify-between border-l border-old-money-200/60 pl-2">
+                <CombinedMetricsRotator
+                  csValue={formatIndexScore(dog)}
+                  eloValue={elo.value}
+                />
+                <div className="flex justify-end">
+                  <StartsLabel starts={dog.total_starts || 0} size="md" />
+                </div>
               </div>
             </div>
           </>
         ) : type === 'speed' ? (
           <>
-            <DogCardRank />
-            <div className="flex min-h-0 min-w-0 flex-1 flex-col justify-between gap-0 overflow-hidden">
-              <DogCardHeader />
-              <DogCardStats />
+            {/* Mobile layout (< sm) */}
+            <div className="flex sm:hidden flex-row items-stretch w-full min-h-[5.25rem] py-1 gap-2 overflow-hidden">
+              <DogCardRank className="pr-0 self-center" />
+              <div className="flex min-w-0 flex-1 flex-col justify-between gap-1 overflow-hidden">
+                <div className="pr-8 min-w-0">
+                  <DogCardHeader />
+                </div>
+                <div className="flex items-center justify-between gap-2 min-w-0">
+                  <div className="flex items-center gap-1.5 text-[11px] text-charcoal-600">
+                    <span>макс: <strong className="font-bold text-charcoal-800 tabular-nums">{dog.best_speed ? dog.best_speed.toFixed(1) : '-'}</strong></span>
+                    <span className="text-old-money-300" aria-hidden>·</span>
+                    <span>сред: <strong className="font-bold text-charcoal-800 tabular-nums">{dog.avg_speed ? dog.avg_speed.toFixed(1) : '-'}</strong> км/ч</span>
+                  </div>
+                  <div className="flex items-center gap-1 text-[11px] font-semibold text-charcoal-700 tabular-nums shrink-0">
+                    <span>{dog.total_starts || 0}</span>
+                    <span className="text-[9px] font-normal text-charcoal-500">ст.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Desktop layout (>= sm) */}
+            <div className="hidden sm:flex flex-row items-stretch w-full min-w-0">
+              <DogCardRank />
+              <div className="flex min-h-0 min-w-0 flex-1 flex-col justify-between gap-0 overflow-hidden">
+                <DogCardHeader />
+                <DogCardStats />
+              </div>
             </div>
           </>
         ) : (

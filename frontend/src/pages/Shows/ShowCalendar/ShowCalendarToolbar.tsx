@@ -55,6 +55,7 @@ export function ShowCalendarToolbar({
         value={searchQuery}
         onChange={onSearchChange}
         placeholder="Название, город, клуб, НКП…"
+        className="w-full sm:!w-auto min-w-0 sm:min-w-[200px] max-w-sm"
       />
       <div className="flex max-w-full flex-wrap items-center gap-1.5">
         <ModernDropdown

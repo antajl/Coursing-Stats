@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import DoninoListRecordRow from './DoninoListRecordRow'
 import DoninoColumnPlaque, { DoninoColumnShell } from './DoninoColumnPlaque'
 import { useInfiniteScroll } from '../../hooks/useInfiniteScroll'
@@ -62,6 +63,7 @@ export default function DoninoRecordsColumns({
   onCoursingSort,
   resetScrollKey,
 }: DoninoRecordsColumnsProps) {
+  const [mobileTab, setMobileTab] = useState<'speed' | 'coursing'>('speed')
   const listLength = Math.max(speedRecords.length, coursingRecords.length)
   const { visibleCount, loadMoreRef, hasMore } = useInfiniteScroll(listLength, [resetScrollKey])
 
@@ -76,8 +78,34 @@ export default function DoninoRecordsColumns({
 
   return (
     <div className="space-y-4">
+      {/* Мобильный переключатель дисциплин */}
+      <div className="flex rounded-xl border border-old-money-200/80 bg-cream-100 p-1 lg:hidden">
+        <button
+          type="button"
+          onClick={() => setMobileTab('speed')}
+          className={`flex-1 rounded-lg py-1.5 px-3 text-xs font-semibold transition-all ${
+            mobileTab === 'speed'
+              ? 'bg-camel-500 text-charcoal-900 shadow-sm'
+              : 'text-charcoal-600 hover:text-charcoal-900'
+          }`}
+        >
+          Замер ({speedRecords.length})
+        </button>
+        <button
+          type="button"
+          onClick={() => setMobileTab('coursing')}
+          className={`flex-1 rounded-lg py-1.5 px-3 text-xs font-semibold transition-all ${
+            mobileTab === 'coursing'
+              ? 'bg-camel-500 text-charcoal-900 shadow-sm'
+              : 'text-charcoal-600 hover:text-charcoal-900'
+          }`}
+        >
+          Бега 350 м ({coursingRecords.length})
+        </button>
+      </div>
+
       <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-2 lg:gap-8">
-        <div className="min-w-0 space-y-3">
+        <div className={`min-w-0 space-y-3 ${mobileTab === 'speed' ? 'block' : 'hidden lg:block'}`}>
           <div className="min-h-8">
             <RecordSortBar
               options={SPEED_SORT_OPTIONS}
@@ -111,7 +139,7 @@ export default function DoninoRecordsColumns({
           </DoninoColumnShell>
         </div>
 
-        <div className="min-w-0 space-y-3">
+        <div className={`min-w-0 space-y-3 ${mobileTab === 'coursing' ? 'block' : 'hidden lg:block'}`}>
           <div className="min-h-8">
             <RecordSortBar
               options={COURSING_SORT_OPTIONS}
