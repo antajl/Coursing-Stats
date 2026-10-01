@@ -5,6 +5,7 @@ import {
   normalizeRecordDateIso,
   time350ToSpeedKmh,
 } from '../../../lib/recordDates'
+import { matchesBreedFilter } from '../../../lib/breedMapping'
 import type { GroupBy } from './constants'
 import { MIN_SAMPLES_FOR_AVG } from './constants'
 
@@ -255,7 +256,9 @@ export function filterSpeedRecords(
     filtered = filtered.filter((r) => filters.years.includes(String(getRecordYear(r.date))))
   }
   if (filters.breeds.length) {
-    filtered = filtered.filter((r) => filters.breeds.includes(r.breed))
+    filtered = filtered.filter((r) =>
+      filters.breeds.some((fb) => matchesBreedFilter(r.breed, fb))
+    )
   }
   if (filters.sexes.length) {
     filtered = filtered.filter((r) => filters.sexes.includes(r.sex))
@@ -290,7 +293,9 @@ export function filterCoursingRecords(
     filtered = filtered.filter((r) => filters.years.includes(String(getRecordYear(r.date))))
   }
   if (filters.breeds.length) {
-    filtered = filtered.filter((r) => filters.breeds.includes(r.breed))
+    filtered = filtered.filter((r) =>
+      filters.breeds.some((fb) => matchesBreedFilter(r.breed, fb))
+    )
   }
   if (filters.minTime) {
     const min = parseFloat(filters.minTime)

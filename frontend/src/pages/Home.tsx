@@ -3,6 +3,7 @@ import { SEO } from '../components/SEO'
 import { JsonLd, organizationSchema, webSiteSchema } from '../components/JsonLd'
 import { useGSAP, prefersReducedMotion, riseIn } from '../lib/motion'
 import HomeHeroStage from '../components/HomeHeroStage'
+import HomeDogSearch from '../components/HomeDogSearch'
 import MetricsWidget from '../components/MetricsWidget'
 import { useHomeData } from './Home/hooks/useHomeData'
 import { useHeroScroll } from './Home/hooks/useHeroScroll'
@@ -107,7 +108,26 @@ export default function Home() {
       />
 
       <HomeHeroStage
-        children={<></>}
+        children={
+          <div className="flex flex-col items-center md:items-start w-full">
+            {/* Mobile Hero Title */}
+            <div className="md:hidden pt-4 pb-1 text-center pointer-events-none select-none">
+              <img
+                src="/assets/hero/title.webp"
+                width={IMAGES.HERO_TITLE.WIDTH}
+                height={IMAGES.HERO_TITLE.HEIGHT}
+                alt="Coursing Stats"
+                className="w-[210px] max-w-[65vw] h-auto mx-auto drop-shadow-sm"
+                loading="eager"
+              />
+            </div>
+
+            {/* Dog Search */}
+            <div className="w-full max-w-sm md:max-w-md md:mt-[310px] md:ml-4 z-20">
+              <HomeDogSearch className="w-full" />
+            </div>
+          </div>
+        }
         metrics={
           <MetricsWidget
             events={featuredEvents}

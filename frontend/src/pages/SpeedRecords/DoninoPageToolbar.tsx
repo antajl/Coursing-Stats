@@ -10,6 +10,7 @@ import BreedSearchDropdown from '../../components/ui/BreedSearchDropdown'
 import ModernDropdown from '../../components/ui/ModernDropdown'
 import { TOOLBAR_NUMBER_INPUT, toolbarPillTriggerClass } from '../../lib/toolbar'
 import type { DogsIndexEntry } from '../../lib/competingBreeds'
+import { displayBreed } from '../../lib/breedMapping'
 import { exportDoninoToExcel, exportDoninoStatsToExcel } from './exportExcel'
 import { GROUP_BY_OPTIONS, type GroupBy } from './stats/constants'
 
@@ -36,6 +37,7 @@ interface DoninoPageToolbarProps {
   sexes: string[]
   onToggleFilter: (type: string, value: string) => void
   onYearChange?: (year: string) => void
+  onBreedChange?: (breed: string) => void
   currentSeason?: string
   onClearFilters: () => void
   onClearPanelFilters: () => void
@@ -80,6 +82,7 @@ export default function DoninoPageToolbar({
   sexes,
   onToggleFilter,
   onYearChange,
+  onBreedChange,
   currentSeason = '2026',
   onClearFilters,
   onClearPanelFilters,
@@ -146,7 +149,7 @@ export default function DoninoPageToolbar({
     filterBreeds.length === 0
       ? 'Порода'
       : filterBreeds.length === 1
-        ? filterBreeds[0]
+        ? (displayBreed(filterBreeds[0]).primary || filterBreeds[0])
         : `Порода · ${filterBreeds.length}`
 
   const sexTriggerLabel =
@@ -160,10 +163,10 @@ export default function DoninoPageToolbar({
     <button
       type="button"
       className={toolbarPillTriggerClass(filterBreeds.length > 0)}
-      title={filterBreeds.length > 1 ? filterBreeds.join(', ') : filterBreeds[0] || 'Порода'}
-      aria-label={filterBreeds.length > 1 ? `Породы: ${filterBreeds.join(', ')}` : filterBreeds[0] ? `Порода: ${filterBreeds[0]}` : 'Порода'}
+      title={filterBreeds.length > 1 ? filterBreeds.join(', ') : (filterBreeds[0] ? (displayBreed(filterBreeds[0]).primary || filterBreeds[0]) : 'Порода')}
+      aria-label={filterBreeds.length > 1 ? `Породы: ${filterBreeds.join(', ')}` : filterBreeds[0] ? `Порода: ${displayBreed(filterBreeds[0]).primary || filterBreeds[0]}` : 'Порода'}
     >
-      <span className="shrink-0">Порода</span>
+      <span className="shrink-0">{breedTriggerLabel}</span>
       <PillChevron />
     </button>
   )
@@ -253,11 +256,16 @@ export default function DoninoPageToolbar({
                 breeds={breeds}
                 selectedBreed={filterBreeds[0]}
                 onSelect={(breed) => {
-                  if (!breed) {
-                    for (const b of [...filterBreeds]) onToggleFilter('breed', b)
-                    return
+                  if (onBreedChange) {
+                    onBreedChange(breed)
+                  } else {
+                    if (!breed) {
+                      for (const b of [...filterBreeds]) onToggleFilter('breed', b)
+                    } else {
+                      for (const b of [...filterBreeds]) onToggleFilter('breed', b)
+                      onToggleFilter('breed', breed)
+                    }
                   }
-                  onToggleFilter('breed', breed)
                 }}
                 trigger={breedTrigger}
                 dogIndex={dogIndex}

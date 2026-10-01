@@ -25,7 +25,8 @@ export function useHeroScroll() {
     }
 
     const checkOverlap = () => {
-      const metricsPanel = document.querySelector('.fixed.right-4.top-16') as HTMLElement | null
+      const metricsPanel = (document.querySelector('[data-metrics-panel]') ||
+        document.querySelector('.fixed.right-4.top-16')) as HTMLElement | null
       if (!metricsPanel) {
         overlapClear = 1
         applyOpacity()
@@ -50,7 +51,7 @@ export function useHeroScroll() {
     const observer = new ResizeObserver(checkOverlap)
     observer.observe(heroTitle)
 
-    const metricsPanel = document.querySelector('.fixed.right-4.top-16')
+    const metricsPanel = document.querySelector('[data-metrics-panel]') || document.querySelector('.fixed.right-4.top-16')
     if (metricsPanel) observer.observe(metricsPanel)
 
     window.addEventListener('scroll', handleScroll, { passive: true })
