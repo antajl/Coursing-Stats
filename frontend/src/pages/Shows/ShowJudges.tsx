@@ -230,20 +230,16 @@ export default function ShowJudges() {
 
   return (
     <div className="mx-auto max-w-full space-y-4 pb-2 sm:pb-4">
-      {judgesPartial ? (
-        <p className="text-xs text-charcoal-500" aria-live="polite">
-          Показан топ судей — полный список подгрузится при поиске, фильтре или прокрутке
-        </p>
-      ) : null}
       <PageToolbar
         bare
+        topRowClassName="pr-0 md:pr-32"
         filters={
           <>
             <ToolbarSearch
               value={searchQuery}
               onChange={setSearchQuery}
               placeholder="Фамилия судьи…"
-              className="!w-auto min-w-[200px] max-w-xs shrink-0"
+              className="w-full sm:!w-auto min-w-0 sm:min-w-[200px] max-w-sm"
             />
             <div className="flex max-w-full flex-wrap items-center gap-1.5">
               <ToolbarFiltersDropdown

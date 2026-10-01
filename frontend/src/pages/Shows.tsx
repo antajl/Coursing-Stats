@@ -11,7 +11,7 @@ const ShowJudges = lazy(() => import('./Shows/ShowJudges'))
 const ShowCalendar = lazy(() => import('./Shows/ShowCalendar'))
 
 function Shows() {
-  const [searchParams] = useSearchParams()
+  const [searchParams, setSearchParams] = useSearchParams()
   const tab = searchParams.get('tab') || 'ranking'
   const calendarVisible = usePublicCalendarVisible('shows')
 
@@ -23,6 +23,18 @@ function Shows() {
     tab === 'judges' || tab === 'ranking' || (calendarVisible && tab === 'calendar')
       ? tab
       : 'ranking'
+
+  const handleTabChange = (newTab: string) => {
+    const next = new URLSearchParams(searchParams)
+    next.set('tab', newTab)
+    setSearchParams(next)
+  }
+
+  const tabs = [
+    { id: 'ranking', label: 'Рейтинг' },
+    ...(calendarVisible ? [{ id: 'calendar', label: 'Календарь' }] : []),
+    { id: 'judges', label: 'Судьи' },
+  ]
 
   // Warm the other heavy tab while the user is already on /shows.
   useEffect(() => {
@@ -51,8 +63,29 @@ function Shows() {
         keywords="рейтинг выставок, выставки собак, РКФ, CAC, BOB, ЧРКФ, судьи выставок"
       />
       <div className="relative rounded-2xl border border-cream-300 bg-cream-50/90 shadow-xl backdrop-blur-lg">
-        <RKFAttribution variant="footnote" className="absolute right-0 top-0 z-10" />
+        <RKFAttribution variant="footnote" className="hidden sm:inline-flex absolute right-0 top-0 z-10" />
         <div className="min-h-[480px] px-4 py-3 md:px-6 md:py-4">
+          <div className="mb-4 flex flex-wrap items-center justify-between gap-2 border-b border-old-money-200/60 pb-3">
+            <div className="flex w-full items-center gap-1.5 rounded-xl border border-old-money-200/60 bg-cream-100 p-1 sm:w-auto">
+              {tabs.map((t) => {
+                const active = activeTab === t.id
+                return (
+                  <button
+                    key={t.id}
+                    type="button"
+                    onClick={() => handleTabChange(t.id)}
+                    className={`flex flex-1 sm:flex-initial items-center justify-center gap-1.5 rounded-lg py-1.5 px-3.5 text-xs font-semibold transition-all ${
+                      active
+                        ? 'bg-camel-500 text-charcoal-900 shadow-sm'
+                        : 'text-charcoal-600 hover:text-charcoal-900 hover:bg-cream-50/50'
+                    }`}
+                  >
+                    {t.label}
+                  </button>
+                )
+              })}
+            </div>
+          </div>
           {activeTab === 'ranking' && (
             <div
               key="ranking"
@@ -92,6 +125,9 @@ function Shows() {
               </Suspense>
             </div>
           )}
+          <div className="mt-4 border-t border-old-money-200/50 pt-3 text-center sm:hidden">
+            <RKFAttribution variant="inline" />
+          </div>
         </div>
       </div>
     </div>

@@ -50,17 +50,23 @@ function parseGuideTab(value: string | null): TabId {
 }
 
 export default function Guide() {
-  const [searchParams] = useSearchParams()
+  const [searchParams, setSearchParams] = useSearchParams()
   const activeTab = parseGuideTab(searchParams.get('tab'))
   const section = GUIDE_SECTIONS.find((s) => s.id === activeTab) ?? GUIDE_SECTIONS[0]
   const { reachGoal } = useYandexGoal()
+
+  const handleTabChange = (newTab: TabId) => {
+    const next = new URLSearchParams(searchParams)
+    next.set('tab', newTab)
+    setSearchParams(next)
+  }
 
   useEffect(() => {
     reachGoal('guide_view')
   }, [reachGoal])
 
   return (
-    <div className="space-y-6">
+    <>
       <SEO
         title={`Справочник — ${section.label}`}
         description={section.description}
@@ -69,11 +75,32 @@ export default function Guide() {
       />
       <JsonLd data={faqPageSchema(GUIDE_FAQS)} />
       <div className="rounded-2xl border border-cream-300 bg-cream-50/90 px-4 py-3 shadow-xl backdrop-blur-lg md:px-6 md:py-4">
+        <div className="mb-4 flex flex-wrap items-center justify-between gap-2 border-b border-old-money-200/60 pb-3">
+          <div className="flex w-full items-center gap-1 rounded-xl border border-old-money-200/60 bg-cream-100 p-1 sm:w-auto sm:gap-1.5">
+            {GUIDE_SECTIONS.map((s) => {
+              const active = activeTab === s.id
+              return (
+                <button
+                  key={s.id}
+                  type="button"
+                  onClick={() => handleTabChange(s.id)}
+                  className={`flex flex-1 sm:flex-initial items-center justify-center rounded-lg py-1.5 px-2 sm:px-3.5 text-[11px] sm:text-xs font-semibold transition-all truncate ${
+                    active
+                      ? 'bg-camel-500 text-charcoal-900 shadow-sm'
+                      : 'text-charcoal-600 hover:text-charcoal-900 hover:bg-cream-50/50'
+                  }`}
+                >
+                  {s.label}
+                </button>
+              )
+            })}
+          </div>
+        </div>
         {activeTab === 'titles' && <TitlesTab />}
         {activeTab === 'shows' && <ShowsTab />}
         {activeTab === 'protocol' && <ProtocolTab />}
         {activeTab === 'rating' && <RatingTab />}
       </div>
-    </div>
+    </>
   )
 }
