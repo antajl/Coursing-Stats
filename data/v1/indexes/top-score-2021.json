@@ -2,7 +2,7 @@
   "schema": "coursing-stats/index-top-score-v1",
   "year": 2021,
   "rating_score_version": "cs-v1",
-  "count": 261,
+  "count": 260,
   "items": [
     {
       "dog_id": 555,
@@ -440,8 +440,8 @@
       "rating_score": 88.54
     },
     {
-      "dog_id": 10454,
-      "name_lat": "КУЛИКОВО ПОЛЕ ДАНТЕ",
+      "dog_id": 577,
+      "name_lat": "KULIKOVO POLE DANTE",
       "name_ru": "КУЛИКОВО ПОЛЕ ДАНТЕ",
       "breed": "УИППЕТ",
       "year": 2021,
@@ -815,8 +815,8 @@
       "rating_score": 87.35
     },
     {
-      "dog_id": 10481,
-      "name_lat": "КУЛИКОВО ПОЛЕ ГОРДЕЯ",
+      "dog_id": 9586,
+      "name_lat": "KULIKOVO POLE GORDEYA",
       "name_ru": "КУЛИКОВО ПОЛЕ ГОРДЕЯ",
       "breed": "УИППЕТ",
       "year": 2021,
@@ -2135,6 +2135,21 @@
       "rating_score": 86.63
     },
     {
+      "dog_id": 9335,
+      "name_lat": "SOLAR SPIRIT ANDROMEDA",
+      "name_ru": "СОЛАР СПИРИТ АНДРОМЕДА",
+      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+      "year": 2021,
+      "best_score": 527,
+      "total_starts": 2,
+      "best_judge_score": 91,
+      "avg_judge_score": 86.5,
+      "year_from": 2021,
+      "year_to": 2021,
+      "judge_eval_count": 8,
+      "rating_score": 86.99
+    },
+    {
       "dog_id": 9290,
       "name_lat": "СТИЛАР ХЭЙЛСТОРМ",
       "name_ru": "СТИЛАР ХЭЙЛСТОРМ",
@@ -2178,21 +2193,6 @@
       "year_to": 2021,
       "judge_eval_count": 4,
       "rating_score": 86.66
-    },
-    {
-      "dog_id": 9335,
-      "name_lat": "SOLAR SPIRIT ANDROMEDA",
-      "name_ru": "СОЛАР СПИРИТ АНДРОМЕДА",
-      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
-      "year": 2021,
-      "best_score": 527,
-      "total_starts": 1,
-      "best_judge_score": 89,
-      "avg_judge_score": 87.25,
-      "year_from": 2021,
-      "year_to": 2021,
-      "judge_eval_count": 4,
-      "rating_score": 86.58
     },
     {
       "dog_id": 10512,
@@ -2780,9 +2780,9 @@
       "rating_score": 86.31
     },
     {
-      "dog_id": 7264,
-      "name_lat": "БОРЗОМИР ГАЛИЯ БАСМА",
-      "name_ru": "БОРЗОМИР ГАЛИЯ БАСМА",
+      "dog_id": 226,
+      "name_lat": "БОРЗОМИР ГАЛИЯ БАСМА /BORZOMIR GALIJA BASMA",
+      "name_ru": "БОРЗОМИР ГАЛИЯ БАСМА /BORZOMIR GALIJA BASMA",
       "breed": "СЛЮГИ",
       "year": 2021,
       "best_score": 344,
@@ -2853,21 +2853,6 @@
       "year_to": 2021,
       "judge_eval_count": 12,
       "rating_score": 85.52
-    },
-    {
-      "dog_id": 10529,
-      "name_lat": "СОЛАР СПИРИТ АНДРОМЕДА",
-      "name_ru": "СОЛАР СПИРИТ АНДРОМЕДА",
-      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
-      "year": 2021,
-      "best_score": 325,
-      "total_starts": 1,
-      "best_judge_score": 91,
-      "avg_judge_score": 85.75,
-      "year_from": 2021,
-      "year_to": 2021,
-      "judge_eval_count": 4,
-      "rating_score": 86.29
     },
     {
       "dog_id": 9568,
@@ -3500,8 +3485,8 @@
       "rating_score": 88.3
     },
     {
-      "dog_id": 10527,
-      "name_lat": "РЕМИСА АМИТА",
+      "dog_id": 10609,
+      "name_lat": "REMISA AMITA",
       "name_ru": "РЕМИСА АМИТА",
       "breed": "БАСЕНДЖИ",
       "year": 2021,
@@ -3710,9 +3695,9 @@
       "rating_score": 84.8
     },
     {
-      "dog_id": 10489,
-      "name_lat": "NIGHT WOLF S KNJAZHESKOGO DVORA",
-      "name_ru": "NIGHT WOLF S KNJAZHESKOGO DVORA",
+      "dog_id": 9650,
+      "name_lat": "НАЙТ ВОЛФ С КНЯЖЕСКОГО ДВОРА /NIGHT WOLF S KNJAZHESKOGO DVORA",
+      "name_ru": "НАЙТ ВОЛФ С КНЯЖЕСКОГО ДВОРА /NIGHT WOLF S KNJAZHESKOGO DVORA",
       "breed": "БАСЕНДЖИ",
       "year": 2021,
       "best_score": 322,

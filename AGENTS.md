@@ -7,13 +7,14 @@
 
 ## Quick Start (30 seconds)
 
-1. **[docs/QUICK-REFERENCE.md](docs/QUICK-REFERENCE.md)** — 5-minute overview, critical commands
-2. **[docs/MAP.md](docs/MAP.md)** — куда смотреть (detailed router)
-3. **[docs/INDEX.md](docs/INDEX.md)** — quick links by category
-4. **[docs/sheets/](docs/sheets/)** — шпаргалки 00–12
-5. **[docs/decisions/](docs/decisions/)** — почему (ADRs)
-6. Skills: `.agents/skills/*/SKILL.md` — 9 domain-specific skills for CoursingStats
-7. MCP: GitHub + Cloudflare official servers configured in `.mcp.json`
+1. **[docs/ROADMAP.md](docs/ROADMAP.md)** — План развития и 4 ветки рефакторинга (читать обязательно)
+2. **[docs/QUICK-REFERENCE.md](docs/QUICK-REFERENCE.md)** — 5-minute overview, critical commands
+3. **[docs/MAP.md](docs/MAP.md)** — куда смотреть (detailed router)
+4. **[docs/INDEX.md](docs/INDEX.md)** — quick links by category
+5. **[docs/sheets/](docs/sheets/)** — шпаргалки 00–13
+6. **[docs/decisions/](docs/decisions/)** — почему (ADRs)
+7. Skills: `.agents/skills/*/SKILL.md` — 10 domain-specific skills for CoursingStats (включая `competition-ingest`)
+8. MCP: GitHub + Cloudflare official servers configured in `.mcp.json`
 
 ## Automatic Skill Usage
 
@@ -36,7 +37,7 @@ CoursingStats — статистика соревнований (procoursing), �
 
 **Прод:** https://coursing-stats.ru · **CDN:** `/data/v1/` · **GitHub:** antajl/Coursing-Stats
 
-**Статус улучшений дизайна:** Phases 1-7 завершены (accessibility, performance, responsive design, React composition patterns) — см. [`docs/superpowers/plans/2025-01-15-comprehensive-design-improvement.md`](docs/superpowers/plans/2025-01-15-comprehensive-design-improvement.md)
+**Стратегия и дорожная карта:** см. [`docs/ROADMAP.md`](docs/ROADMAP.md) (4 ветки разработки).
 
 ---
 
@@ -45,6 +46,7 @@ CoursingStats — статистика соревнований (procoursing), �
 | Факт | |
 |------|--|
 | Public site | JSON from CDN only — **no** Worker/D1 runtime |
+| Hosting | **Yandex Object Storage** (`deploy.yml` CI sync) |
 | Truth | `data/v1/` in git |
 | CDN packs | `dog-profiles/pack-*`, show `judge-details/pack-*` ([ADR-014](docs/decisions/014-cdn-packs-vs-turso.md)) |
 | Pages slim | exclude `dogs/by-id` + bulk exhibitions (`publish-exclude.js`) |
@@ -53,7 +55,6 @@ CoursingStats — статистика соревнований (procoursing), �
 | Package manager | **yarn@1.22.22** |
 | Local secrets | `.env.ai` (gitignored) |
 | Two sport ratings | medals ≠ CS points — never merge |
-| Local admin | `/admin` + `/admin/event/:id` only in `yarn run dev` |
 | Bot | Workers + Grammy + KV; aggregates only |
 
 Three domains: **Competitions** / **Shows** / **Donino** — see [docs/sheets/01-three-domains.md](docs/sheets/01-three-domains.md).
@@ -63,7 +64,8 @@ Three domains: **Competitions** / **Shows** / **Donino** — see [docs/sheets/01
 ## Critical Commands
 
 ```bash
-yarn run dev                  # Vite :5173 + admin API :8787 (/admin)
+yarn run dev                  # Vite :5173
+yarn run ingest-competition <draft.json> # Safe competition import (matches dogs, prevents orphan dogs)
 yarn run build-all-data       # Rebuild indexes + publish-gates
 yarn run test-parser-fixtures
 yarn test
@@ -80,6 +82,7 @@ PowerShell: use `;` not `&&`.
 
 ## Forbidden (without explicit request)
 
+- Manually create competition or dog JSON files bypassing `yarn ingest-competition` (leads to orphan dogs and test failures)
 - All breeds + 2015–2026 archive in UI  
 - Merge medals/points; change CS without `cs-v2` + guide  
 - Parse Breed Archive PDF (URL only)  
