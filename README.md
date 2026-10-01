@@ -1,67 +1,158 @@
-# Coursing Stats
+# CoursingStats
 
-Агрегатор статистики по собакам, участвовавшим в состязаниях [procoursing.ru](http://procoursing.ru)
-(курсинг, БЗМП, бега/трасса) за все годы (2015–2026) и выставках РКФ (2019–2026).
+Platform for cynological sports statistics, conformation dog shows, and speed records.
 
-## Статистика данных
+[![Website](https://img.shields.io/badge/Site-coursing--stats.ru-0070F3?style=flat-square)](https://coursing-stats.ru)
+[![Telegram Bot](https://img.shields.io/badge/Telegram_Bot-@coursing__stats__bot-2CA5E0?style=flat-square&logo=telegram&logoColor=white)](https://t.me/coursing_stats_bot)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
+[![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.4-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Cloudflare Workers](https://img.shields.io/badge/Cloudflare_Workers-Telegram_Bot-F38020?style=flat-square&logo=cloudflare&logoColor=white)](https://workers.cloudflare.com/)
 
-**Соревнования (курсинг, БЗМП, бега):**
-- 200+ соревнований (2015–2026)
-- 150+ с результатами
-- 1,500+ собак
-- 3,700+ результатов
-- 256 dog-profiles pack файлов
+---
 
-**Выставки РКФ:**
-- 60,000+ выставок
-- 1,500,000+ собак в рейтинге
-- ~18M записей на ринге
-- 50,000+ выставок с PDF отчётом (85%+)
+## Обзор проекта
 
-**Донино (замеры скорости):**
-- 200+ замеров скорости
-- 100+ замеров курсинга (350 м)
+**CoursingStats** — открытая аналитическая платформа и агрегатор кинологической статистики в России. Проект объединяет результаты официальных состязаний борзых (2015–2026), национальные выставки Российской кинологической федерации (РКФ) и замеры спринтерской скорости в единую систему с поиском, рейтингами и профилями собак.
 
-## Документация
+### Быстрые ссылки
 
-- **Агенты:** [`AGENTS.md`](AGENTS.md) → [`docs/MAP.md`](docs/MAP.md) → [`docs/sheets/`](docs/sheets/)
-- **Hub:** [`docs/README.md`](docs/README.md)
-- **ADRs:** [`docs/decisions/`](docs/decisions/)
-- **llms.txt:** [`docs/llms.txt`](docs/llms.txt)
-- **План улучшений:** [`docs/superpowers/plans/2025-01-15-comprehensive-design-improvement.md`](docs/superpowers/plans/2025-01-15-comprehensive-design-improvement.md) (Phases 1-7 completed)
+- Веб-сайт: [coursing-stats.ru](https://coursing-stats.ru)
+- Telegram-бот: [@coursing_stats_bot](https://t.me/coursing_stats_bot)
+- Открытый CDN данных: [coursing-stats.ru/data/v1/](https://coursing-stats.ru/data/v1/)
+- Дорожная карта: [docs/ROADMAP.md](docs/ROADMAP.md)
+- Индекс документации: [docs/MAP.md](docs/MAP.md)
 
-| Тема | Шпаргалка |
-|------|-----------|
-| Три домена | [docs/sheets/01-three-domains.md](docs/sheets/01-three-domains.md) |
-| Данные / indexes | [docs/sheets/02-data-pipeline.md](docs/sheets/02-data-pipeline.md) |
-| Соревнования | [docs/sheets/03-competitions.md](docs/sheets/03-competitions.md) |
-| Выставки / Turso | [docs/sheets/04-shows.md](docs/sheets/04-shows.md) |
-| Донино | [docs/sheets/05-donino.md](docs/sheets/05-donino.md) |
-| Парсеры | [docs/sheets/06-parsers.md](docs/sheets/06-parsers.md) |
-| Frontend | [docs/sheets/07-frontend.md](docs/sheets/07-frontend.md) |
-| Bot | [docs/sheets/08-bot.md](docs/sheets/08-bot.md) |
-| Deploy / ops | [docs/sheets/09-ops-deploy.md](docs/sheets/09-ops-deploy.md) |
-| Security | [docs/sheets/10-security.md](docs/sheets/10-security.md) |
+---
+
+## Три ключевых домена
+
+Система разделена на три изолированных домена со своими правилами расчета и источниками:
+
+| Домен | Описание | Источники и рейтинги |
+|---|---|---|
+| **Соревнования (Sport)** | Курсинг, бега за механической приманкой (БЗМП), круговой трек. Профили собак, статистика судей, динамика забегов. | Данные procoursing.ru (2015–2026). Две независимые системы ранжирования: **Медали** (подиумы) и **Очки CS** (баллы за качество забега), а также расчет рейтинга **Elo** для очных парных забегов. |
+| **Выставки РКФ (Shows)** | Национальный рейтинг собак, протоколы рингов, профили экспертов-судей и архивы выставок всех рангов (CAC, CACIB, монопородные). | Парсинг официальных PDF-отчетов РКФ. База из более чем 1.5 млн собак и расчет всероссийских годовых рейтингов по породам и группам FCI. |
+| **Донино (Speed)** | Фиксация спринтерских рекордов борзых на специализированной трассе в Донино. | Радарные замеры максимальной скорости (**км/ч**) и прохождение дистанции курсинга 350 м (**секунды**). |
+
+---
+
+## Масштаб данных
+
+| Показатель | Значение |
+|---|---|
+| Спортивные турниры (курсинг, бега, БЗМП) | 200+ состязаний (2015–2026) |
+| Спортивные собаки в базе | 1,500+ собак |
+| Результаты забегов в протоколах | 3,700+ записей |
+| Выставки РКФ | 60,000+ выставок |
+| Собак в выставочном рейтинге | 1,500,000+ собак |
+| Записей в протоколах рингов | ~18,000,000 записей |
+| Замеры скорости и спринта (Донино) | 300+ официальных результатов |
+
+---
+
+## Архитектура и технические решения
+
+- **Zero-Backend для веб-интерфейса:** Публичный сайт не использует сервер приложений во время выполнения (no runtime Worker/D1). Фронтенд взаимодействует исключительно со статическим оптимизированным JSON-хранилищем через CDN на базе Yandex Object Storage (`/data/v1/`).
+- **CDN Packs Pattern ([ADR-014](docs/decisions/014-cdn-packs-vs-turso.md)):** Профили собак и детали судей упаковываются в блочные сжатые файлы (`pack-*`), что исключает генерацию сотен тысяч мелких сетевых запросов.
+- **Edge SQLite (Turso):** Протоколы рингов выставок хранятся в распределенной БД Turso (libSQL) и запрашиваются по требованию клиентом в режиме fallback.
+- **Serverless Telegram Bot:** Бот реализован на Grammy и развернут в Cloudflare Workers с многоуровневым KV-кэшированием.
+- **AI-First архитектура:** Кодовая база снабжена контекстными инструкциями для AI-ассистентов (`AGENTS.md`, каталог `.agents/skills/`, 14 тематических шпаргалок в `docs/sheets/`).
+
+---
+
+## Стек технологий
+
+- **Frontend:** React 19, TypeScript, Vite, Tailwind CSS, TanStack React Query, GSAP, Lucide Icons.
+- **Data & Pipelines:** Node.js, TSX, Vitest, Cheerio, ExcelJS, PDF parsing (pdfjs, paddle-ocr), Zod.
+- **Telegram Bot:** Cloudflare Workers, Grammy, TypeScript, Cloudflare KV.
+- **Инфраструктура:** Yandex Object Storage (Static CDN), Turso (libSQL/SQLite), GitHub Actions CI/CD.
+
+---
 
 ## Быстрый старт
 
+### Системные требования
+
+- Node.js >= 20.x
+- Yarn 1.22.22
+
+### Установка и запуск
+
+1. Клонирование репозитория:
+   ```bash
+   git clone https://github.com/antajl/Coursing-Stats.git
+   cd Coursing-Stats
+   ```
+
+2. Установка зависимостей:
+   ```bash
+   yarn install
+   ```
+
+3. Запуск локального сервера разработки:
+   ```bash
+   yarn run dev
+   ```
+   Фронтенд будет доступен по адресу `http://localhost:5173`.
+
+### Пайплайн обработки данных
+
 ```bash
-yarn install
-yarn run dev          # Vite :5173 + admin :8787 (data/v1/ на диске)
-yarn run test-parser
+# Безопасный ввод турнира с автоматическим сопоставлением собак:
+yarn ingest-competition <path-to-draft.json>
+
+# Полная пересборка всех индексов и проверка publish-gates:
+yarn run build-all-data
+
+# Запуск тестов парсеров и фикстур:
 yarn run test-parser-fixtures
+
+# Запуск тестов бэкенда:
+yarn test
 ```
 
-## Продакшн
+### Разработка и тестирование Telegram-бота
 
-| | |
-|--|--|
-| **Сайт** | https://coursing-stats.ru |
-| **Данные** | https://coursing-stats.ru/data/v1/ |
-| **GitHub** | https://github.com/antajl/Coursing-Stats |
+```bash
+cd bot
+yarn install
+yarn test
+yarn run dev
+```
 
-Подробности: [docs/MAP.md](docs/MAP.md), [docs/sheets/00-overview.md](docs/sheets/00-overview.md)
+---
+
+## Структура репозитория
+
+```
+CoursingStats/
+|-- frontend/             # Клиентское приложение (React 19, Vite, Tailwind CSS)
+|-- backend/              # Парсеры, скрипты импорта, валидация и генерация индексов
+|   |-- parsers/          # Парсеры procoursing.ru (курсинг, БЗМП, бега)
+|   |-- scripts/          # Скрипты пересборки данных, миграций и аудита
+|   `-- tests/            # Тесты парсеров и расчетных алгоритмов
+|-- bot/                  # Telegram-бот (Cloudflare Workers + Grammy)
+|-- data/v1/              # Каноническая база данных (JSON) для раздачи через CDN
+|-- docs/                 # Архитектурная документация, ADR и шпаргалки
+|   |-- ROADMAP.md        # Дорожная карта развития проекта
+|   |-- MAP.md            # Маршрутизатор по документации и задачам
+|   |-- decisions/        # Архитектурные решения (ADR-001 - ADR-014)
+|   `-- sheets/           # Детальные шпаргалки (00-14) по всем аспектам системы
+`-- AGENTS.md             # Точка входа для AI-ассистентов
+```
+
+---
+
+## Документация
+
+- [Дорожная карта (ROADMAP)](docs/ROADMAP.md) — 4 ключевых направления развития проекта.
+- [Маршрутизатор документации (MAP)](docs/MAP.md) — навигатор по кодовой базе и задачам.
+- [Архитектурные решения (ADR)](docs/decisions/) — история и контекст инженерных решений.
+- [Шпаргалки по разделам](docs/sheets/) — 14 подробных технических документов.
+
+---
 
 ## Лицензия
 
-MIT
+Проект распространяется под лицензией MIT. Подробности в файле [LICENSE](LICENSE).
