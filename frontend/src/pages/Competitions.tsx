@@ -13,12 +13,16 @@ function Competitions() {
   const tab = searchParams.get('tab') || 'ranking'
   const calendarVisible = usePublicCalendarVisible('competitions')
 
-  if (!calendarVisible && tab === 'calendar') {
+  if (tab === 'calendar') {
+    return <Navigate to="/competitions?tab=archive" replace />
+  }
+
+  if (!calendarVisible && tab === 'archive') {
     return <Navigate to="/competitions?tab=ranking" replace />
   }
 
   const activeTab =
-    tab === 'judges' || tab === 'ranking' || (calendarVisible && tab === 'calendar')
+    tab === 'judges' || tab === 'ranking' || (calendarVisible && tab === 'archive')
       ? tab
       : 'ranking'
 
@@ -26,9 +30,9 @@ function Competitions() {
     <div className="space-y-6">
       <SEO
         title="Рейтинг собак: курсинг и бега борзых"
-        description="Два отдельных рейтинга — по медалям и по очкам CS (курсинг, БЗМП, бега борзых) — плюс статистика судей. Данные с 2015 года."
+        description="Два отдельных рейтинга — по медалям и по очкам CS (курсинг, БЗМП, бега борзых) — плюс архив соревнований и статистика судей. Данные с 2015 года."
         canonicalUrl="https://coursing-stats.ru/competitions"
-        keywords="рейтинг курсинг, бега борзых, топ собак, медали, судьи курсинг, РКФ"
+        keywords="рейтинг курсинг, бега борзых, топ собак, медали, архив соревнований, судьи курсинг, РКФ"
       />
       <div className="relative rounded-2xl border border-cream-300 bg-cream-50/90 shadow-xl backdrop-blur-lg">
         <div className="min-h-[400px] px-4 py-3 md:px-6 md:py-4">
@@ -58,12 +62,12 @@ function Competitions() {
               </Suspense>
             </div>
           )}
-          {calendarVisible && activeTab === 'calendar' && (
+          {calendarVisible && activeTab === 'archive' && (
             <div
-              key="calendar"
-              id="tab-panel-calendar"
+              key="archive"
+              id="tab-panel-archive"
               role="tabpanel"
-              aria-labelledby="tab-calendar"
+              aria-labelledby="tab-archive"
               className="cs-tab-panel-enter"
             >
               <Suspense fallback={<LoadingCard count={3} variant="list" />}>

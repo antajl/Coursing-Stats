@@ -118,7 +118,7 @@ export function NavDesktop({
         <NavMenuDropdown
           open={openMenu === 'donino'}
           onOpenChange={setMenuOpen('donino')}
-          defaultTo="/speed-records?view=table"
+          defaultTo="/speed-records?tab=records"
           title="Рекорды полигона Курсинг Донино"
           isSectionActive={isSpeedRecordsActive}
           chevronLabel="Меню раздела Курсинг Донино"

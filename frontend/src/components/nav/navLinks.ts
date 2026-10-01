@@ -19,13 +19,21 @@ export function showTabActive(tab: string) {
   }
 }
 
-export function doninoViewActive(view: 'table' | 'stats') {
+export function doninoTabActive(tab: 'records' | 'stats') {
   return (pathname: string, search: string) => {
     if (pathname !== '/speed-records') return false
-    const current = new URLSearchParams(search).get('view')
-    if (view === 'table') return current !== 'stats'
-    return current === 'stats'
+    const sp = new URLSearchParams(search)
+    const currentTab = sp.get('tab')
+    const currentView = sp.get('view')
+    if (tab === 'records') {
+      return currentTab === 'records' || currentTab === 'table' || (!currentTab && currentView !== 'stats')
+    }
+    return currentTab === 'stats' || currentView === 'stats'
   }
+}
+
+export function doninoViewActive(view: 'table' | 'stats') {
+  return doninoTabActive(view === 'stats' ? 'stats' : 'records')
 }
 
 export function guideTabActive(tab: string) {
@@ -36,11 +44,15 @@ export function guideTabActive(tab: string) {
   }
 }
 
-const COMPETITIONS_CALENDAR_ITEM: NavMenuItem = {
-  to: '/competitions?tab=calendar',
+const COMPETITIONS_ARCHIVE_ITEM: NavMenuItem = {
+  to: '/competitions?tab=archive',
   label: 'Архив',
   icon: Icons.calendar,
-  isActive: competitionTabActive('calendar'),
+  isActive: (pathname: string, search: string) => {
+    if (pathname !== '/competitions' && pathname !== '/procoursing') return false
+    const current = new URLSearchParams(search).get('tab')
+    return current === 'archive' || current === 'calendar'
+  },
 }
 
 export function competitionsMenuItems(calendarVisible: boolean): NavMenuItem[] {
@@ -51,7 +63,7 @@ export function competitionsMenuItems(calendarVisible: boolean): NavMenuItem[] {
       icon: Icons.medal,
       isActive: competitionTabActive('ranking'),
     },
-    ...(calendarVisible ? [COMPETITIONS_CALENDAR_ITEM] : []),
+    ...(calendarVisible ? [COMPETITIONS_ARCHIVE_ITEM] : []),
     {
       to: '/competitions?tab=judges',
       label: 'Судьи',
@@ -88,16 +100,16 @@ export function showsMenuItems(calendarVisible: boolean): NavMenuItem[] {
 
 export const DONINO_MENU_ITEMS: NavMenuItem[] = [
   {
-    to: '/speed-records?view=table',
+    to: '/speed-records?tab=records',
     label: 'Записи',
     icon: Icons.speed,
-    isActive: doninoViewActive('table'),
+    isActive: doninoTabActive('records'),
   },
   {
-    to: '/speed-records?view=stats',
+    to: '/speed-records?tab=stats',
     label: 'Статистика',
     icon: Icons.trend,
-    isActive: doninoViewActive('stats'),
+    isActive: doninoTabActive('stats'),
   },
 ]
 
