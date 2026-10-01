@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/index-top-speed-v1",
   "year": 2026,
-  "count": 141,
+  "count": 144,
   "items": [
     {
       "dog_id": 842,
@@ -92,26 +92,15 @@
       "total_starts": 1
     },
     {
-      "dog_id": 82,
-      "name_lat": "УРАЛ СПИРИТ САЛАМАНДР /URAL SPIRIT SALAMANDER",
-      "name_ru": "УРАЛ СПИРИТ САЛАМАНДР /URAL SPIRIT SALAMANDER",
-      "breed": "УИППЕТ",
-      "year_from": 2026,
-      "year_to": 2026,
-      "best_speed": 53.77720870678617,
-      "avg_speed": 52.79,
-      "total_starts": 1
-    },
-    {
       "dog_id": 5656,
       "name_lat": "URAL SPIRIT SALAMANDER",
       "name_ru": "URAL SPIRIT SALAMANDER",
       "breed": "УИППЕТ",
       "year_from": 2026,
       "year_to": 2026,
-      "best_speed": 53.367,
-      "avg_speed": 52.75,
-      "total_starts": 1
+      "best_speed": 53.77720870678617,
+      "avg_speed": 52.77,
+      "total_starts": 2
     },
     {
       "dog_id": 267,
@@ -243,6 +232,17 @@
       "year_to": 2026,
       "best_speed": 51.902,
       "avg_speed": 51.59,
+      "total_starts": 1
+    },
+    {
+      "dog_id": 10762,
+      "name_lat": "URAL SPIRIT THUNDER",
+      "name_ru": null,
+      "breed": "Уиппет",
+      "year_from": 2026,
+      "year_to": 2026,
+      "best_speed": 51.66051660516605,
+      "avg_speed": 51.44,
       "total_starts": 1
     },
     {
@@ -411,9 +411,9 @@
       "total_starts": 1
     },
     {
-      "dog_id": 10696,
-      "name_lat": "WALKING WELSH ROUTES",
-      "name_ru": null,
+      "dog_id": 5889,
+      "name_lat": "УОКИНГ УЭЛШ РУТС /WALKING WELSH ROUTES",
+      "name_ru": "УОКИНГ УЭЛШ РУТС /WALKING WELSH ROUTES",
       "breed": "УИППЕТ",
       "year_from": 2026,
       "year_to": 2026,
@@ -518,6 +518,17 @@
       "year_to": 2026,
       "best_speed": 49.942,
       "avg_speed": 48.4,
+      "total_starts": 1
+    },
+    {
+      "dog_id": 10763,
+      "name_lat": "BIRNENHOF ASTRID LAGUZ",
+      "name_ru": null,
+      "breed": "Уиппет",
+      "year_from": 2026,
+      "year_to": 2026,
+      "best_speed": 49.8220640569395,
+      "avg_speed": 49.82,
       "total_starts": 1
     },
     {
@@ -826,6 +837,17 @@
       "year_to": 2026,
       "best_speed": 47.542,
       "avg_speed": 47.13,
+      "total_starts": 1
+    },
+    {
+      "dog_id": 10764,
+      "name_lat": "BIRNENHOF ADELRUN RAIDHO",
+      "name_ru": null,
+      "breed": "Уиппет",
+      "year_from": 2026,
+      "year_to": 2026,
+      "best_speed": 47.42190440346255,
+      "avg_speed": 47.22,
       "total_starts": 1
     },
     {
@@ -1200,6 +1222,17 @@
       "year_to": 2026,
       "best_speed": 42.282,
       "avg_speed": 41.21,
+      "total_starts": 1
+    },
+    {
+      "dog_id": 10765,
+      "name_lat": "HEIDI SOTIS EREN YEAGER",
+      "name_ru": null,
+      "breed": "Фараонова собака",
+      "year_from": 2026,
+      "year_to": 2026,
+      "best_speed": 42.25352112676056,
+      "avg_speed": 42.14,
       "total_starts": 1
     },
     {
