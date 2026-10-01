@@ -55,12 +55,113 @@ function TitleDomainBlock({ label, titles }: { label: string; titles: DogTitle[]
   if (titles.length === 0) return null
   return (
     <div className="min-w-0 text-center">
-      <div className="mb-1.5 text-[11px] font-medium text-old-money-500">
+      <div className="mb-2 text-[11px] font-semibold uppercase tracking-wider text-old-money-500">
         {label}
       </div>
-      <div className="flex flex-wrap items-center justify-center gap-1.5">
-        {renderGroupedDogTitles(titles)}
-      </div>
+      {renderGroupedDogTitles(titles)}
+    </div>
+  )
+}
+
+function RanksTable({
+  ranks,
+  renderPlace,
+}: {
+  ranks: ProfileHeaderRank[]
+  renderPlace: (
+    domain: RankDomain,
+    scope: StandingExplainerScope,
+    value: number | null | undefined,
+    row: ProfileHeaderRank | undefined,
+  ) => React.ReactNode
+}) {
+  return (
+    <div className="grid grid-cols-4 gap-1">
+      <div />
+      {(['coursing', 'racing', 'shows'] as const).map((key, index) => {
+        const icon =
+          key === 'coursing' ? (
+            <Rabbit className="h-4 w-4 text-charcoal-400" />
+          ) : key === 'racing' ? (
+            <Gauge className="h-4 w-4 text-charcoal-400" />
+          ) : (
+            <Sparkles className="h-4 w-4 text-charcoal-400" />
+          )
+        const label =
+          key === 'coursing' ? 'Курсинг' : key === 'racing' ? 'Бега' : 'Выставки'
+        const href =
+          key === 'shows' ? '/shows?tab=ranking&year=' : '/competitions?tab=ranking&year='
+        return (
+          <Link key={key} to={href} className="group">
+            <div
+              className={`mb-1 flex items-center justify-center gap-1 ${
+                index > 0 ? 'border-l border-charcoal-200/10 pl-2' : ''
+              }`}
+            >
+              {icon}
+              <div className="text-[10px] font-medium uppercase text-charcoal-500">
+                {label}
+              </div>
+            </div>
+          </Link>
+        )
+      })}
+      <div className="pr-2 text-right text-[10px] text-charcoal-400">Общий</div>
+      {(['coursing', 'racing', 'shows'] as const).map((key, index) => {
+        const r = ranks.find((rank) => rank.key === key)
+        return (
+          <div
+            key={key}
+            className={`flex h-4 items-center justify-end ${
+              index > 0 ? 'border-l border-charcoal-200/10 pl-2' : ''
+            }`}
+          >
+            {renderPlace(key, 'overall', r?.rank, r)}
+          </div>
+        )
+      })}
+      <div className="pr-2 text-right text-[10px] text-charcoal-400">За год</div>
+      {(['coursing', 'racing', 'shows'] as const).map((key, index) => {
+        const r = ranks.find((rank) => rank.key === key)
+        return (
+          <div
+            key={key}
+            className={`flex h-4 items-center justify-end ${
+              index > 0 ? 'border-l border-charcoal-200/10 pl-2' : ''
+            }`}
+          >
+            {renderPlace(key, 'year', r?.yearRank, r)}
+          </div>
+        )
+      })}
+      <div className="pr-2 text-right text-[10px] text-charcoal-400">Порода</div>
+      {(['coursing', 'racing', 'shows'] as const).map((key, index) => {
+        const r = ranks.find((rank) => rank.key === key)
+        return (
+          <div
+            key={key}
+            className={`flex h-4 items-center justify-end ${
+              index > 0 ? 'border-l border-charcoal-200/10 pl-2' : ''
+            }`}
+          >
+            {renderPlace(key, 'breed', r?.breedRank, r)}
+          </div>
+        )
+      })}
+      <div className="pr-2 text-right text-[10px] text-charcoal-400">Пор. за год</div>
+      {(['coursing', 'racing', 'shows'] as const).map((key, index) => {
+        const r = ranks.find((rank) => rank.key === key)
+        return (
+          <div
+            key={key}
+            className={`flex h-4 items-center justify-end ${
+              index > 0 ? 'border-l border-charcoal-200/10 pl-2' : ''
+            }`}
+          >
+            {renderPlace(key, 'yearBreed', r?.yearBreedRank, r)}
+          </div>
+        )
+      })}
     </div>
   )
 }
@@ -138,21 +239,34 @@ export function DogProfileHeader({
 
   return (
     <div className="relative mb-6">
+      {/* Десктопная кнопка назад (слева от карточки) */}
       <button
         type="button"
         onClick={onBack}
-        className="relative z-10 mb-2 inline-flex h-11 w-11 items-center justify-center rounded-lg text-old-money-500 transition-colors hover:bg-old-money-50 hover:text-camel-700 md:absolute md:right-full md:top-8 md:mb-0 md:mr-0.5"
+        className="hidden md:absolute md:right-full md:top-8 md:mr-1 md:inline-flex md:h-11 md:w-11 md:items-center md:justify-center md:rounded-lg md:text-old-money-500 md:transition-colors md:hover:bg-old-money-50 md:hover:text-camel-700"
         aria-label="Назад"
         data-export-ignore
       >
         <ChevronLeft className="h-5 w-5" aria-hidden />
       </button>
-      <div className="relative min-w-0 rounded-xl border border-old-money-200/80 bg-white p-5 md:p-8">
+      <div className="relative min-w-0 rounded-xl border border-old-money-200/80 bg-white p-4 sm:p-5 md:p-8">
+        {/* Мобильная кнопка Назад (внутри карточки сверху) */}
+        <div className="mb-3 flex items-center md:hidden" data-export-ignore>
+          <button
+            type="button"
+            onClick={onBack}
+            className="-ml-1 inline-flex items-center gap-1 rounded-lg px-2 py-1 text-xs font-semibold text-old-money-600 transition-colors hover:bg-old-money-50 hover:text-charcoal-900"
+            aria-label="Назад"
+          >
+            <ChevronLeft className="h-4 w-4 shrink-0 text-old-money-500" aria-hidden />
+            <span>Назад</span>
+          </button>
+        </div>
         <div className="flex items-start gap-4">
           <div className="min-w-0 flex-1">
             <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
               <OwnerCrownName name={primary} dogId={dog.id} kind="competition">
-                <h1 className="text-2xl font-bold tracking-tight text-charcoal-900 md:text-3xl">
+                <h1 className="break-words text-2xl font-bold tracking-tight text-charcoal-900 md:text-3xl">
                   {primary}
                 </h1>
               </OwnerCrownName>
@@ -229,77 +343,22 @@ export function DogProfileHeader({
               aria-label="Места в рейтингах"
             >
               <div className="px-4 py-2 rounded-lg border border-old-money-200/80 bg-white md:border-none md:bg-transparent md:p-0 md:rounded-none">
-                <div className="grid grid-cols-4 gap-1">
-                  <div />
-                  {['coursing', 'racing', 'shows'].map((key, index) => {
-                    const r = ranks.find((rank) => rank.key === key)
-                    const icon = key === 'coursing' ? <Rabbit className="h-4 w-4 text-charcoal-400" /> : key === 'racing' ? <Gauge className="h-4 w-4 text-charcoal-400" /> : <Sparkles className="h-4 w-4 text-charcoal-400" />
-                    const label = key === 'coursing' ? 'Курсинг' : key === 'racing' ? 'Бега' : 'Выставки'
-                    const href = key === 'shows' ? '/shows?tab=ranking&year=' : '/competitions?tab=ranking&year='
-                    return (
-                      <Link key={key} to={href} className="group">
-                        <div className={`flex items-center justify-center gap-1 mb-1 ${index > 0 ? 'border-l border-charcoal-200/10 pl-2' : ''}`}>
-                          {icon}
-                          <div className="text-[10px] font-medium text-charcoal-500 uppercase">
-                            {label}
-                          </div>
-                        </div>
-                      </Link>
-                    )
-                  })}
-                  <div className="text-[10px] text-charcoal-400 text-right pr-2">Общий</div>
-                  {(['coursing', 'racing', 'shows'] as const).map((key, index) => {
-                    const r = ranks.find((rank) => rank.key === key)
-                    return (
-                      <div
-                        key={key}
-                        className={`h-4 flex items-center justify-end ${index > 0 ? 'border-l border-charcoal-200/10 pl-2' : ''}`}
-                      >
-                        {renderPlace(key, 'overall', r?.rank, r)}
-                      </div>
-                    )
-                  })}
-                  <div className="text-[10px] text-charcoal-400 text-right pr-2">За год</div>
-                  {(['coursing', 'racing', 'shows'] as const).map((key, index) => {
-                    const r = ranks.find((rank) => rank.key === key)
-                    return (
-                      <div
-                        key={key}
-                        className={`h-4 flex items-center justify-end ${index > 0 ? 'border-l border-charcoal-200/10 pl-2' : ''}`}
-                      >
-                        {renderPlace(key, 'year', r?.yearRank, r)}
-                      </div>
-                    )
-                  })}
-                  <div className="text-[10px] text-charcoal-400 text-right pr-2">Порода</div>
-                  {(['coursing', 'racing', 'shows'] as const).map((key, index) => {
-                    const r = ranks.find((rank) => rank.key === key)
-                    return (
-                      <div
-                        key={key}
-                        className={`h-4 flex items-center justify-end ${index > 0 ? 'border-l border-charcoal-200/10 pl-2' : ''}`}
-                      >
-                        {renderPlace(key, 'breed', r?.breedRank, r)}
-                      </div>
-                    )
-                  })}
-                  <div className="text-[10px] text-charcoal-400 text-right pr-2">Пор. за год</div>
-                  {(['coursing', 'racing', 'shows'] as const).map((key, index) => {
-                    const r = ranks.find((rank) => rank.key === key)
-                    return (
-                      <div
-                        key={key}
-                        className={`h-4 flex items-center justify-end ${index > 0 ? 'border-l border-charcoal-200/10 pl-2' : ''}`}
-                      >
-                        {renderPlace(key, 'yearBreed', r?.yearBreedRank, r)}
-                      </div>
-                    )
-                  })}
-                </div>
+                <RanksTable ranks={ranks} renderPlace={renderPlace} />
               </div>
             </div>
           ) : null}
         </div>
+
+        {hasRanks ? (
+          <div
+            className="mt-4 block md:hidden rounded-xl border border-old-money-200/80 bg-cream-50/60 p-3 overflow-x-auto no-scrollbar"
+            aria-label="Места в рейтингах"
+          >
+            <div className="min-w-[270px]">
+              <RanksTable ranks={ranks} renderPlace={renderPlace} />
+            </div>
+          </div>
+        ) : null}
 
         {hasTitles && (
           <div className="mt-4 border-t border-old-money-100 pt-4">

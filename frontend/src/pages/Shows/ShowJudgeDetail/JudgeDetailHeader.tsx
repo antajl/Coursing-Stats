@@ -1,3 +1,4 @@
+import { ChevronLeft } from 'lucide-react'
 import {
   GRADE_TILES,
   type GradeFilterKey,
@@ -28,6 +29,7 @@ export function JudgeDetailHeader({
   onSelectExhibitions,
   onSelectBreeds,
   onToggleGrade,
+  onBack,
 }: {
   judgeName: string
   yearParam: string
@@ -47,9 +49,23 @@ export function JudgeDetailHeader({
   onSelectExhibitions: () => void
   onSelectBreeds: () => void
   onToggleGrade: (key: GradeFilterKey) => void
+  onBack?: () => void
 }) {
   return (
-    <div className="min-w-0 rounded-xl border border-old-money-200/80 bg-white p-5 md:p-7">
+    <div className="min-w-0 rounded-xl border border-old-money-200/80 bg-white p-4 sm:p-5 md:p-7">
+      {onBack && (
+        <div className="mb-3 flex items-center md:hidden">
+          <button
+            type="button"
+            onClick={onBack}
+            className="-ml-1 inline-flex items-center gap-1 rounded-lg px-2 py-1 text-xs font-semibold text-old-money-600 transition-colors hover:bg-old-money-50 hover:text-charcoal-900"
+            aria-label="Назад"
+          >
+            <ChevronLeft className="h-4 w-4 shrink-0 text-old-money-500" aria-hidden />
+            <span>Назад</span>
+          </button>
+        </div>
+      )}
       <div className="flex flex-wrap items-center justify-between gap-3">
         <h1 className="min-w-0 text-2xl font-bold tracking-tight text-charcoal-900 md:text-3xl">
           {judgeName}

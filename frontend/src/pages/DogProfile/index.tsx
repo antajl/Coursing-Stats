@@ -1,5 +1,6 @@
 import { useState, useRef, useMemo, useEffect } from 'react'
 import { useParams, Link, useNavigate, useLocation, Navigate } from 'react-router-dom'
+import { Rabbit, Gauge, Sparkles, Timer } from 'lucide-react'
 import {
   useDogProfile,
   useDogEvents,
@@ -258,6 +259,113 @@ export default function DogProfile() {
     [titleGroups],
   )
 
+  type DisciplineTabId = 'coursing' | 'racing' | 'shows' | 'donino'
+
+  const coursing = dog?.coursing_stats || {}
+  const racing = dog?.racing_stats || {}
+  const hasCoursingData = (coursing.total_starts || 0) > 0
+  const hasRacingData = (racing.total_starts || 0) > 0
+  const coursingEvents = useMemo(
+    () => events.filter((e) => e.event_type === 'coursing' || e.event_type === 'bzmp'),
+    [events],
+  )
+  const racingEvents = useMemo(
+    () => events.filter((e) => e.event_type === 'racing'),
+    [events],
+  )
+  const showCoursingColumn = hasCoursingData || coursingEvents.length > 0
+  const showRacingColumn = hasRacingData || racingEvents.length > 0
+  const hasSpeedRecords = speedRecords.length > 0
+  const hasCoursingRecords = coursingRecords.length > 0
+
+  const hasShowData = Boolean(
+    showDog &&
+      ((showDog.total_shows || 0) > 0 ||
+        (Array.isArray(showDog.history) && showDog.history.length > 0)),
+  )
+
+  const availableTabs = useMemo(() => {
+    const tabs: Array<{
+      id: DisciplineTabId
+      label: string
+      icon: typeof Rabbit
+      count: number
+      theme: 'forest' | 'warm-blue' | 'camel'
+    }> = []
+
+    if (showCoursingColumn) {
+      tabs.push({
+        id: 'coursing',
+        label: 'Курсинг',
+        icon: Rabbit,
+        count: coursing.total_starts || coursingEvents.length || 0,
+        theme: 'forest',
+      })
+    }
+    if (showRacingColumn) {
+      tabs.push({
+        id: 'racing',
+        label: 'Бега',
+        icon: Gauge,
+        count: racing.total_starts || racingEvents.length || 0,
+        theme: 'warm-blue',
+      })
+    }
+    if (hasShowData) {
+      tabs.push({
+        id: 'shows',
+        label: 'Выставки',
+        icon: Sparkles,
+        count: showDog?.total_shows || showDog?.history?.length || 0,
+        theme: 'camel',
+      })
+    }
+    if (hasSpeedRecords || hasCoursingRecords) {
+      tabs.push({
+        id: 'donino',
+        label: 'Донино',
+        icon: Timer,
+        count: speedRecords.length + coursingRecords.length,
+        theme: 'forest',
+      })
+    }
+    return tabs
+  }, [
+    showCoursingColumn,
+    coursing.total_starts,
+    coursingEvents.length,
+    showRacingColumn,
+    racing.total_starts,
+    racingEvents.length,
+    hasShowData,
+    showDog?.total_shows,
+    showDog?.history?.length,
+    hasSpeedRecords,
+    hasCoursingRecords,
+    speedRecords.length,
+    coursingRecords.length,
+  ])
+
+  const [activeDiscipline, setActiveDiscipline] = useState<DisciplineTabId>(() => {
+    if (fromSpeedRecords || fromCoursingRecords) return 'donino'
+    if (showCoursingColumn) return 'coursing'
+    if (showRacingColumn) return 'racing'
+    if (hasShowData) return 'shows'
+    if (hasSpeedRecords || hasCoursingRecords) return 'donino'
+    return 'coursing'
+  })
+
+  useEffect(() => {
+    if (availableTabs.length > 0 && !availableTabs.some((t) => t.id === activeDiscipline)) {
+      if ((fromSpeedRecords || fromCoursingRecords) && availableTabs.some((t) => t.id === 'donino')) {
+        setActiveDiscipline('donino')
+      } else {
+        setActiveDiscipline(availableTabs[0].id)
+      }
+    }
+  }, [availableTabs, activeDiscipline, fromSpeedRecords, fromCoursingRecords])
+
+
   // Linked show dog on legacy URL → canonical /dog/{competition_id}
   if (
     !showsLoading &&
@@ -330,25 +438,13 @@ export default function DogProfile() {
     sex: showDog!.sex,
   }
 
-  const coursing = dog?.coursing_stats || {}
-  const racing = dog?.racing_stats || {}
-  const hasCoursingData = (coursing.total_starts || 0) > 0
-  const hasRacingData = (racing.total_starts || 0) > 0
   const hasCourseMedals =
     (coursing.gold || 0) > 0 || (coursing.silver || 0) > 0 || (coursing.bronze || 0) > 0
   const hasRacingMedals =
     (racing.gold || 0) > 0 || (racing.silver || 0) > 0 || (racing.bronze || 0) > 0
-  const coursingEvents = events.filter(
-    (e) => e.event_type === 'coursing' || e.event_type === 'bzmp',
-  )
-  const racingEvents = events.filter((e) => e.event_type === 'racing')
-  const showCoursingColumn = hasCoursingData || coursingEvents.length > 0
-  const showRacingColumn = hasRacingData || racingEvents.length > 0
 
-  const hasSpeedRecords = speedRecords.length > 0
+
   const speedStats = hasSpeedRecords ? computeSpeedStats(speedRecords, breedRecords) : null
-
-  const hasCoursingRecords = coursingRecords.length > 0
   const coursingStats = hasCoursingRecords
     ? computeCoursingDoninoStats(coursingRecords, breedCoursingRecords)
     : null
@@ -476,7 +572,145 @@ export default function DogProfile() {
           }}
         />
 
-        <div className="mb-6 grid grid-cols-1 items-stretch gap-4 md:grid-cols-3 md:gap-6 lg:gap-8">
+        {/* Мобильный сегмент-контрол дисциплин */}
+        {availableTabs.length > 1 && (
+          <div
+            className={`mb-4 w-full p-1 rounded-2xl bg-cream-100/80 border border-old-money-200/90 shadow-2xs md:hidden ${
+              availableTabs.length <= 3
+                ? 'grid gap-1.5'
+                : 'flex items-center gap-1.5 overflow-x-auto no-scrollbar'
+            }`}
+            style={
+              availableTabs.length <= 3
+                ? { gridTemplateColumns: `repeat(${availableTabs.length}, minmax(0, 1fr))` }
+                : undefined
+            }
+            role="tablist"
+            aria-label="Дисциплины собаки"
+          >
+            {availableTabs.map((tab) => {
+              const isActive = activeDiscipline === tab.id
+              return (
+                <button
+                  key={tab.id}
+                  type="button"
+                  role="tab"
+                  aria-selected={isActive}
+                  onClick={() => setActiveDiscipline(tab.id)}
+                  className={`flex items-center justify-center gap-1.5 rounded-xl py-2 px-1.5 text-xs font-semibold transition-all min-w-0 ${
+                    availableTabs.length > 3 ? 'shrink-0 px-3' : 'w-full'
+                  } ${
+                    isActive
+                      ? tab.theme === 'forest'
+                        ? 'bg-forest-600 text-white shadow-xs'
+                        : tab.theme === 'warm-blue'
+                          ? 'bg-warm-blue-700 text-white shadow-xs'
+                          : 'bg-camel-600 text-white shadow-xs'
+                      : 'text-charcoal-700 hover:text-charcoal-900 hover:bg-white/50'
+                  }`}
+                >
+                  <tab.icon
+                    className={`h-3.5 w-3.5 shrink-0 ${isActive ? 'text-white' : 'text-charcoal-400'}`}
+                    aria-hidden
+                  />
+                  <span className="truncate">{tab.label}</span>
+                  {tab.count > 0 && (
+                    <span
+                      className={`inline-flex items-center justify-center h-4.5 min-w-[1.25rem] px-1.5 rounded-full text-[10px] font-bold tabular-nums leading-none shrink-0 ${
+                        isActive
+                          ? 'bg-white/25 text-white'
+                          : 'bg-old-money-200/70 text-charcoal-700'
+                      }`}
+                    >
+                      {tab.count}
+                    </span>
+                  )}
+                </button>
+              )
+            })}
+          </div>
+        )}
+
+        {/* Мобильный вид: отображение только выбранной дисциплины */}
+        <div className="mb-6 block md:hidden">
+          {availableTabs.length === 0 ? (
+            <EmptyDisciplineColumn title="Курсинг / БЗМП" theme="forest" />
+          ) : (
+            <>
+              {activeDiscipline === 'coursing' && (
+                showCoursingColumn ? (
+                  <CoursingColumn
+                    hasCoursingData={hasCoursingData}
+                    hasCourseMedals={hasCourseMedals}
+                    coursing={coursing}
+                    coursingEvents={coursingEvents}
+                    visibleCoursingEvents={visibleCoursingEvents}
+                    eventResultsUrls={eventResultsUrls}
+                    bestScoreEventId={bestScoreEventId}
+                    bestJudgeScoreEventId={bestJudgeScoreEventId}
+                    avgJudgeScoreEventId={avgJudgeScoreEventId}
+                    showAllCoursingEvents={showAllCoursingEvents}
+                    onToggleShowAll={() => setShowAllCoursingEvents((v) => !v)}
+                  />
+                ) : (
+                  <EmptyDisciplineColumn title="Курсинг / БЗМП" theme="forest" />
+                )
+              )}
+
+              {activeDiscipline === 'racing' && (
+                showRacingColumn ? (
+                  <RacingColumn
+                    hasRacingData={hasRacingData}
+                    hasRacingMedals={hasRacingMedals}
+                    racing={racing}
+                    racingEvents={racingEvents}
+                    visibleRacingEvents={visibleRacingEvents}
+                    eventResultsUrls={eventResultsUrls}
+                    bestSpeedEventId={bestSpeedEventId}
+                    avgSpeedEventId={avgSpeedEventId}
+                    showAllRacingEvents={showAllRacingEvents}
+                    onToggleShowAll={() => setShowAllRacingEvents((v) => !v)}
+                  />
+                ) : (
+                  <EmptyDisciplineColumn title="Бега борзых" theme="warm-blue" />
+                )
+              )}
+
+              {activeDiscipline === 'shows' && (
+                showDog ? (
+                  <ShowsColumn dog={showDog} />
+                ) : (
+                  <EmptyDisciplineColumn title="Выставки" theme="camel" />
+                )
+              )}
+
+              {activeDiscipline === 'donino' && (
+                <div className="space-y-4">
+                  {hasSpeedRecords && speedStats ? (
+                    <DoninoSpeedColumn
+                      speedStats={speedStats}
+                      visibleSpeedHistory={visibleSpeedHistory}
+                      showAllSpeedHistory={showAllSpeedHistory}
+                      onToggleShowAll={() => setShowAllSpeedHistory((v) => !v)}
+                    />
+                  ) : null}
+
+                  {hasCoursingRecords && coursingStats ? (
+                    <DoninoCoursingColumn
+                      coursingStats={coursingStats}
+                      visibleCoursingDoninoHistory={visibleCoursingDoninoHistory}
+                      showAllCoursingDoninoHistory={showAllCoursingDoninoHistory}
+                      onToggleShowAll={() => setShowAllCoursingDoninoHistory((v) => !v)}
+                    />
+                  ) : null}
+                </div>
+              )}
+            </>
+          )}
+        </div>
+
+        {/* Десктопный вид: 3 колонки рядом */}
+        <div className="mb-6 hidden items-stretch gap-4 md:grid md:grid-cols-3 md:gap-6 lg:gap-8">
           {showCoursingColumn ? (
             <CoursingColumn
               hasCoursingData={hasCoursingData}
@@ -519,36 +753,39 @@ export default function DogProfile() {
           )}
         </div>
 
+        {/* Десктопное Донино: CollapsibleSection внизу */}
         {(hasSpeedRecords || hasCoursingRecords) && (
-          <CollapsibleSection
-            title="Рекорды Донино"
-            defaultOpen={false}
-            className="mb-6"
-          >
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
-              {hasSpeedRecords && speedStats ? (
-                <DoninoSpeedColumn
-                  speedStats={speedStats}
-                  visibleSpeedHistory={visibleSpeedHistory}
-                  showAllSpeedHistory={showAllSpeedHistory}
-                  onToggleShowAll={() => setShowAllSpeedHistory((v) => !v)}
-                />
-              ) : (
-                <EmptyDisciplineColumn title="Замер скорости" theme="warm-blue" />
-              )}
+          <div className="hidden md:block">
+            <CollapsibleSection
+              title="Рекорды Донино"
+              defaultOpen={false}
+              className="mb-6"
+            >
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
+                {hasSpeedRecords && speedStats ? (
+                  <DoninoSpeedColumn
+                    speedStats={speedStats}
+                    visibleSpeedHistory={visibleSpeedHistory}
+                    showAllSpeedHistory={showAllSpeedHistory}
+                    onToggleShowAll={() => setShowAllSpeedHistory((v) => !v)}
+                  />
+                ) : (
+                  <EmptyDisciplineColumn title="Замер скорости" theme="warm-blue" />
+                )}
 
-              {hasCoursingRecords && coursingStats ? (
-                <DoninoCoursingColumn
-                  coursingStats={coursingStats}
-                  visibleCoursingDoninoHistory={visibleCoursingDoninoHistory}
-                  showAllCoursingDoninoHistory={showAllCoursingDoninoHistory}
-                  onToggleShowAll={() => setShowAllCoursingDoninoHistory((v) => !v)}
-                />
-              ) : (
-                <EmptyDisciplineColumn title="Бега борзых (350 м)" theme="forest" />
-              )}
-            </div>
-          </CollapsibleSection>
+                {hasCoursingRecords && coursingStats ? (
+                  <DoninoCoursingColumn
+                    coursingStats={coursingStats}
+                    visibleCoursingDoninoHistory={visibleCoursingDoninoHistory}
+                    showAllCoursingDoninoHistory={showAllCoursingDoninoHistory}
+                    onToggleShowAll={() => setShowAllCoursingDoninoHistory((v) => !v)}
+                  />
+                ) : (
+                  <EmptyDisciplineColumn title="Бега борзых (350 м)" theme="forest" />
+                )}
+              </div>
+            </CollapsibleSection>
+          </div>
         )}
       </div>
     </>

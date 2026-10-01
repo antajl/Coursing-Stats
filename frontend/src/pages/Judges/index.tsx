@@ -175,9 +175,9 @@ export default function Judges() {
                 value={searchQuery}
                 onChange={setSearchQuery}
                 placeholder="Фамилия судьи…"
-                className="!w-auto min-w-[200px] flex-1 max-w-lg"
+                className="w-full sm:!w-auto min-w-0 sm:min-w-[200px] max-w-sm"
               />
-              <div className="flex max-w-full flex-wrap items-center gap-1.5">
+              <div className="flex max-w-full flex-wrap items-center gap-1.5 w-full sm:w-auto">
                 <ToolbarFiltersDropdown
                   active={hasPanelFilters}
                   activeCount={panelFilterCount}

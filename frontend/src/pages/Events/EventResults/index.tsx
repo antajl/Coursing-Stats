@@ -70,10 +70,10 @@ export default function EventResults() {
           message={`ID: ${id}`}
           action={
             <Link
-              to="/competitions?tab=calendar"
+              to="/competitions?tab=archive"
               className="rounded-xl border-2 border-camel-300 bg-white px-4 py-2 text-sm font-semibold text-camel-700 transition-all hover:border-camel-400 hover:bg-camel-50"
             >
-              К календарю
+              К архиву соревнований
             </Link>
           }
         />

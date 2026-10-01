@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import { ChevronRight, Star } from 'lucide-react'
+import { Star } from 'lucide-react'
 import { useFavorites } from '../../hooks/useFavorites'
 import { getDogProfileFile } from '../../lib/staticData/dogs'
 import { parseDogName } from '../../lib/dogName'
@@ -159,22 +159,6 @@ export default function FavoritesCapsule() {
                 </button>
               )
             })}
-          </div>
-          <div className="shrink-0 border-t border-old-money-100 bg-cream-50/90 p-2">
-            <Link
-              to="/account"
-              className="group flex w-full items-center justify-between gap-2 rounded-lg border border-old-money-200/70 bg-white px-3 py-2 text-xs font-semibold text-charcoal-700 shadow-sm transition-all hover:border-camel-300 hover:bg-camel-50 hover:text-camel-800 hover:shadow"
-              onClick={() => setOpen(false)}
-            >
-              <span className="flex items-center gap-1.5">
-                <Star className="h-3.5 w-3.5 text-amber-500" aria-hidden />
-                Все избранные
-              </span>
-              <ChevronRight
-                className="h-4 w-4 shrink-0 text-charcoal-400 transition-transform group-hover:translate-x-0.5 group-hover:text-camel-600"
-                aria-hidden
-              />
-            </Link>
           </div>
         </div>
       ) : null}
