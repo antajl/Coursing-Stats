@@ -137,15 +137,6 @@
 .home-v2-contact a:hover { text-decoration: underline; }
 
 @media (max-width: 860px) {
-  .home-v2-stage {
-    display: none;
-  }
-  .home-v2--revealed .home-v2-stage {
-    min-height: min(88dvh, 760px);
-  }
-  .home-v2-stage--settled {
-    min-height: 0;
-  }
   .home-v2-columns,
   .home-v2-events-grid {
     grid-template-columns: 1fr;

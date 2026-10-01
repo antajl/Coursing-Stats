@@ -1,0 +1,28 @@
+# Coursing Stats
+
+> Dog competition statistics aggregator (coursing, BZMP, racing) + RKF shows + Donino + Telegram bot. CDN-only public site.
+
+## Documentation (start here)
+
+- [MAP](MAP.md) — task → one cheatsheet (AI router)
+- [Overview](sheets/00-overview.md)
+- [Three domains](sheets/01-three-domains.md)
+- [Data pipeline](sheets/02-data-pipeline.md)
+- [Competitions](sheets/03-competitions.md)
+- [Shows / Turso](sheets/04-shows.md)
+- [Donino](sheets/05-donino.md)
+- [Parsers](sheets/06-parsers.md)
+- [Frontend](sheets/07-frontend.md)
+- [Bot](sheets/08-bot.md)
+- [Ops / deploy](sheets/09-ops-deploy.md)
+- [Security](sheets/10-security.md)
+- [Testing](sheets/11-testing.md)
+- [Agent skills](sheets/12-agent-skills.md)
+- [ADRs](decisions/)
+- [Root AGENTS.md](../AGENTS.md)
+
+## Optional
+
+- [Manifest](manifest.yaml)
+- [Glossary](index/glossary.yaml)
+- [Topics](index/topics.yaml)

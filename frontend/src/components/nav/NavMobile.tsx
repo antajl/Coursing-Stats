@@ -49,19 +49,24 @@ export function NavMobile({
 }: NavMobileProps) {
   const competitionsCalendar = usePublicCalendarVisible('competitions')
   const showsCalendar = usePublicCalendarVisible('shows')
-  const { logoVisible } = useNavLogoVisibility()
+  const { logoVisible, logoOpacity } = useNavLogoVisibility()
   return (
     <>
       <div className="md:hidden flex items-center justify-between h-12 pl-2 pr-2 gap-2">
-        <Link to="/">
+        <Link
+          to="/"
+          className="transition-opacity duration-[200ms] ease-linear"
+          style={{
+            opacity: logoOpacity * 0.8,
+            pointerEvents: logoVisible ? 'auto' : 'none',
+          }}
+          aria-hidden={!logoVisible}
+          tabIndex={logoVisible ? undefined : -1}
+        >
           <img
             src="/assets/brand/logo.webp"
-            alt=""
-            role="presentation"
-            aria-hidden="true"
-            className={`h-10 transition-opacity duration-300 ${
-              logoVisible ? 'opacity-80' : 'opacity-0'
-            }`}
+            alt="Coursing Stats"
+            className="h-10"
             loading="lazy"
             decoding="async"
             style={{ objectFit: 'contain' }}

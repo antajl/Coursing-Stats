@@ -79,6 +79,7 @@ interface HomeDogSearchProps {
 export default function HomeDogSearch({ className = '' }: HomeDogSearchProps) {
   const navigate = useNavigate()
   const listId = useId()
+  const inputId = useId()
   const rootRef = useRef<HTMLDivElement>(null)
   const profileCacheRef = useRef(new Map<number, boolean>())
   const [query, setQuery] = useState('')
@@ -189,13 +190,13 @@ export default function HomeDogSearch({ className = '' }: HomeDogSearchProps) {
   return (
     <div ref={rootRef} className={`home-v2-search ${className}`.trim()}>
       <form onSubmit={onSubmit} role="search">
-        <label className="sr-only" htmlFor="home-v2-dog-search">
+        <label className="sr-only" htmlFor={inputId}>
           Найти собаку
         </label>
         <div className="home-v2-search-field">
           <Icons.search className="home-v2-search-icon" aria-hidden />
           <input
-            id="home-v2-dog-search"
+            id={inputId}
             type="search"
             autoComplete="off"
             placeholder="Кличка собаки…"

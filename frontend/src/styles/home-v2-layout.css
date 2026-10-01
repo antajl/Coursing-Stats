@@ -62,10 +62,8 @@ main:has(.home-v2) {
   z-index: 1;
 }
 @media (max-width: 767px) {
-  .home-v2-stage {
-    min-height: 460px;
-    height: calc(88dvh - var(--cs-nav-offset));
-    padding-bottom: 12px;
+  .home-v2-stage--closed {
+    display: none !important;
   }
 }
 .home-v2-stage-media {
@@ -108,11 +106,6 @@ main:has(.home-v2) {
   pointer-events: none;
   filter: saturate(0.94) contrast(1.04);
 }
-@media (max-width: 767px) {
-  .home-v2-stage-layer {
-    object-position: 65% 35%;
-  }
-}
 /*
  * Шов на границе: размазаннее (~72px), без плотной «полки» в центре.
  * z-index ниже body — не перекрывает заголовки.
@@ -142,14 +135,7 @@ main:has(.home-v2) {
 }
 @media (max-width: 767px) {
   .home-v2-scroll-cue {
-    padding: 4px 12px;
-  }
-  .home-v2-scroll-cue svg {
-    width: 32px;
-    height: 32px;
-  }
-  .home-v2-scroll-cue-chevron {
-    margin-top: -14px;
+    display: none !important;
   }
 }
 @keyframes scrollCuePulse {
@@ -187,7 +173,8 @@ main:has(.home-v2) {
 .home-v2-stage-copy {
   position: relative;
   z-index: 7;
-  width: 100%;
+  width: fit-content;
+  max-width: 100%;
   padding-top: 8px;
   padding-bottom: 4px;
   flex: 0 1 auto;

@@ -1,12 +1,12 @@
-import { useRef, useCallback } from 'react'
+import { useRef, useCallback, useState } from 'react'
 import { SEO } from '../components/SEO'
 import { JsonLd, organizationSchema, webSiteSchema } from '../components/JsonLd'
 import { useGSAP, prefersReducedMotion, riseIn } from '../lib/motion'
+import { Icons } from '../lib/icons'
 import HomeHeroStage from '../components/HomeHeroStage'
 import HomeDogSearch from '../components/HomeDogSearch'
 import MetricsWidget from '../components/MetricsWidget'
 import { useHomeData } from './Home/hooks/useHomeData'
-import { useHeroScroll } from './Home/hooks/useHeroScroll'
 import { SeasonTopSection } from './Home/components/SeasonTopSection'
 import { DoninoRecordsSection } from './Home/components/DoninoRecordsSection'
 import { HomeFooter } from './Home/components/HomeFooter'
@@ -15,7 +15,6 @@ import { ANIMATION, IMAGES } from '../lib/constants'
 
 export default function Home() {
   const pageRef = useRef<HTMLDivElement>(null)
-  const heroTitleRef = useHeroScroll()
   const homeData = useHomeData()
   
   // Memoize formatDate to prevent unnecessary re-renders
@@ -93,37 +92,24 @@ export default function Home() {
       <JsonLd data={organizationSchema} />
       <JsonLd data={webSiteSchema} />
 
-      {/* Hero title only on home page */}
-      <img
-        ref={heroTitleRef}
-        src="/assets/hero/title.webp"
-        width={IMAGES.HERO_TITLE.WIDTH}
-        height={IMAGES.HERO_TITLE.HEIGHT}
-        loading="eager"
-        fetchPriority="high"
-        alt=""
-        role="presentation"
-        aria-hidden="true"
-        className={`hidden md:block fixed left-4 top-20 scale-50 origin-top-left will-change-opacity pointer-events-none z-50 transition-opacity duration-[${ANIMATION.CSS_FAST}ms] ease-linear`}
-      />
-
+      {/* Desktop Hero Stage (>= 768px) and Mobile Initial Screen (< 768px) */}
       <HomeHeroStage
         children={
-          <div className="flex flex-col items-center md:items-start w-full">
-            {/* Mobile Hero Title */}
-            <div className="md:hidden pt-4 pb-1 text-center pointer-events-none select-none">
-              <img
-                src="/assets/hero/title.webp"
-                width={IMAGES.HERO_TITLE.WIDTH}
-                height={IMAGES.HERO_TITLE.HEIGHT}
-                alt="Coursing Stats"
-                className="w-[210px] max-w-[65vw] h-auto mx-auto drop-shadow-sm"
-                loading="eager"
-              />
-            </div>
-
-            {/* Dog Search */}
-            <div className="w-full max-w-sm md:max-w-md md:mt-[310px] md:ml-4 z-20">
+          <div
+            className="flex flex-col items-start gap-4 lg:gap-6 select-none max-w-full"
+            style={{ width: 'clamp(400px, 36vw, 720px)' }}
+          >
+            <img
+              src="/assets/hero/title.webp"
+              width={IMAGES.HERO_TITLE.WIDTH}
+              height={IMAGES.HERO_TITLE.HEIGHT}
+              alt="Coursing Stats"
+              data-page-logo="desktop"
+              loading="eager"
+              fetchPriority="high"
+              className="w-full h-auto drop-shadow-md pointer-events-none"
+            />
+            <div className="w-full max-w-[500px] ml-6 lg:ml-10 pointer-events-auto">
               <HomeDogSearch className="w-full" />
             </div>
           </div>
@@ -138,9 +124,33 @@ export default function Home() {
             formatDate={memoizedFormatDate}
           />
         }
+        onCloseMetrics={() => {
+          const target = document.getElementById('content-start') || document.querySelector('.home-v2-body')
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' })
+          } else {
+            window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })
+          }
+        }}
       />
 
       <div className="wrap home-v2-body">
+        {/* Mobile Header: Logo & Search directly above SeasonTopSection */}
+        <div id="content-start" className="md:hidden flex flex-col items-center pt-2 pb-4 scroll-mt-14">
+          <img
+            src="/assets/hero/title.webp"
+            width={IMAGES.HERO_TITLE.WIDTH}
+            height={IMAGES.HERO_TITLE.HEIGHT}
+            alt="Coursing Stats"
+            data-page-logo="mobile"
+            className="w-[280px] sm:w-[320px] max-w-[88vw] h-auto mx-auto drop-shadow-sm pointer-events-none select-none"
+            loading="lazy"
+          />
+          <div className="w-full max-w-md px-2 pt-2 pb-2">
+            <HomeDogSearch className="w-full" />
+          </div>
+        </div>
+
         {/* Season top section */}
         <SeasonTopSection
           competitionSlides={competitionSlides}

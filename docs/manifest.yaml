@@ -1,0 +1,77 @@
+# CoursingStats Documentation Manifest
+# AI-Readable Knowledge Pack Configuration
+
+project:
+  name: CoursingStats
+  description: Coursing / shows / Donino statistics platform + Telegram bot
+  version: 2.0.0
+  last_updated: 2026-08-06
+  primary_audience: ai_agents
+
+writing_rules:
+  structure:
+    - Frontmatter with verified date when factual
+    - Tables for constraints; lists for procedures
+    - Link via MAP.md, not duplicate trees
+  density:
+    - Project-specific only
+    - No generic framework tutorials
+  declarative:
+    - Constraints over recommendations
+    - Explicit Done when
+  navigable:
+    - Single router: docs/MAP.md
+    - One sheet per task area
+
+confidence_levels:
+  stable:
+    description: Cheatsheets and ADRs
+    locations: [docs/sheets/, docs/decisions/, docs/MAP.md]
+  glossary:
+    description: Terminology
+    locations: [docs/index/glossary.yaml]
+
+entry_points:
+  primary: AGENTS.md
+  router: docs/MAP.md
+  sheets: docs/sheets/
+  decisions: docs/decisions/
+  terminology: docs/index/glossary.yaml
+  topics: docs/index/topics.yaml
+
+semantic_areas:
+  - id: overview
+    location: docs/sheets/00-overview.md
+  - id: domains
+    location: docs/sheets/01-three-domains.md
+  - id: data
+    location: docs/sheets/02-data-pipeline.md
+  - id: competitions
+    location: docs/sheets/03-competitions.md
+  - id: shows
+    location: docs/sheets/04-shows.md
+  - id: donino
+    location: docs/sheets/05-donino.md
+  - id: parsers
+    location: docs/sheets/06-parsers.md
+  - id: frontend
+    location: docs/sheets/07-frontend.md
+  - id: bot
+    location: docs/sheets/08-bot.md
+  - id: ops
+    location: docs/sheets/09-ops-deploy.md
+  - id: security
+    location: docs/sheets/10-security.md
+  - id: testing
+    location: docs/sheets/11-testing.md
+  - id: agent-skills
+    location: docs/sheets/12-agent-skills.md
+
+package_manager: yarn@1.22.22
+
+forbidden_without_request:
+  - Merge medals and CS points
+  - Runtime D1 in production
+  - Commit/push without explicit ask
+  - Full dog history in bot
+  - Rebrand procoursing.ru
