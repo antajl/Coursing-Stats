@@ -77,12 +77,16 @@ export default function ProtocolTab() {
         <RefTag>Правила курсинга, п. 4.3.4</RefTag>
       </SectionCard>
 
-      <ToolbarSegmentControl
-        segments={[...PROTOCOL_SEGMENTS]}
-        value={segment}
-        onChange={setSegment}
-        ariaLabel="Дисциплина протокола"
-      />
+      <div className="flex w-full sm:w-auto">
+        <ToolbarSegmentControl
+          segments={[...PROTOCOL_SEGMENTS]}
+          value={segment}
+          onChange={setSegment}
+          ariaLabel="Дисциплина протокола"
+          className="w-full sm:w-auto flex sm:inline-flex"
+          buttonClassName="flex-1 sm:flex-initial text-center justify-center"
+        />
+      </div>
 
       {segment === 'coursing' && (
         <>

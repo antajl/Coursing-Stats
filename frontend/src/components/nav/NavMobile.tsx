@@ -112,186 +112,67 @@ export function NavMobile({
                 }`}></span>
               </span>
             </Link>
-            <div>
-              <button
-                onClick={onToggleStatistics}
-                aria-expanded={statisticsOpen}
-                aria-controls="statistics-menu"
-                aria-label="Соревнования - рейтинг, архив, судьи"
-                className={`w-full flex items-center justify-between px-4 py-2 text-sm font-semibold transition-colors ${
-                  isCompetitionsActive ? 'text-camel-700' : 'text-charcoal-700'
-                }`}
-              >
-                <span className="relative inline-block">
-                  Соревнования
-                  <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-camel-600 transition-transform duration-300 ${
-                    isCompetitionsActive ? 'scale-x-100' : 'scale-x-0'
-                  }`}></span>
-                </span>
-                <svg className={`w-4 h-4 transition-transform ${statisticsOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              {statisticsOpen && (
-                <div id="statistics-menu" className="mt-2 space-y-1 pl-4" role="menu">
-                  <Link
-                    to="/competitions?tab=ranking"
-                    onClick={onCloseMobileMenu}
-                    className="block px-4 py-2 text-sm text-charcoal-700 hover:bg-old-money-50 rounded-lg transition-colors"
-                  >
-                    Рейтинг
-                  </Link>
-                  {competitionsCalendar && (
-                    <Link
-                      to="/competitions?tab=archive"
-                      onClick={onCloseMobileMenu}
-                      className="block px-4 py-2 text-sm text-charcoal-700 hover:bg-old-money-50 rounded-lg transition-colors"
-                    >
-                      Архив
-                    </Link>
-                  )}
-                  <Link
-                    to="/competitions?tab=judges"
-                    onClick={onCloseMobileMenu}
-                    className="block px-4 py-2 text-sm text-charcoal-700 hover:bg-old-money-50 rounded-lg transition-colors"
-                  >
-                    Судьи
-                  </Link>
-                </div>
-              )}
-            </div>
-            <div>
-              <button
-                onClick={() => {
-                  void import('../../lib/prefetchShows').then((m) => m.prefetchShowsHeavyTabs())
-                  onToggleShows()
-                }}
-                aria-expanded={showsOpen}
-                aria-controls="shows-menu"
-                aria-label="Выставки - рейтинг, календарь, судьи"
-                className={`w-full flex items-center justify-between px-4 py-2 text-sm font-semibold transition-colors ${
-                  isShowsActive ? 'text-camel-700' : 'text-charcoal-700'
-                }`}
-              >
-                <span className="relative inline-block">
-                  Выставки
-                  <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-camel-600 transition-transform duration-300 ${
-                    isShowsActive ? 'scale-x-100' : 'scale-x-0'
-                  }`}></span>
-                </span>
-                <svg className={`w-4 h-4 transition-transform ${showsOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              {showsOpen && (
-                <div id="shows-menu" className="mt-2 space-y-1 pl-4" role="menu">
-                  <Link
-                    to="/shows?tab=ranking"
-                    onClick={onCloseMobileMenu}
-                    className="block px-4 py-2 text-sm text-charcoal-700 hover:bg-old-money-50 rounded-lg transition-colors"
-                  >
-                    Рейтинг
-                  </Link>
-                  {showsCalendar && (
-                    <Link
-                      to="/shows?tab=calendar"
-                      onClick={onCloseMobileMenu}
-                      className="block px-4 py-2 text-sm text-charcoal-700 hover:bg-old-money-50 rounded-lg transition-colors"
-                    >
-                      Календарь
-                    </Link>
-                  )}
-                  <Link
-                    to="/shows?tab=judges"
-                    onClick={onCloseMobileMenu}
-                    className="block px-4 py-2 text-sm text-charcoal-700 hover:bg-old-money-50 rounded-lg transition-colors"
-                  >
-                    Судьи
-                  </Link>
-                </div>
-              )}
-            </div>
-            <div>
-              <button
-                onClick={onToggleDonino}
-                aria-expanded={doninoOpen}
-                aria-controls="donino-menu"
-                aria-label="Курсинг Донино - записи и статистика"
-                className={`w-full flex items-center justify-between px-4 py-2 text-sm font-semibold transition-colors ${
-                  isSpeedRecordsActive ? 'text-camel-700' : 'text-charcoal-700'
-                }`}
-              >
-                <span className="relative inline-block">
-                  Курсинг Донино
-                  <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-camel-600 transition-transform duration-300 ${
-                    isSpeedRecordsActive ? 'scale-x-100' : 'scale-x-0'
-                  }`}></span>
-                </span>
-                <svg className={`w-4 h-4 transition-transform ${doninoOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              {doninoOpen && (
-                <div id="donino-menu" className="mt-2 space-y-1 pl-4" role="menu">
-                  <Link
-                    to="/speed-records?tab=records"
-                    onClick={onCloseMobileMenu}
-                    className="block px-4 py-2 text-sm text-charcoal-700 hover:bg-old-money-50 rounded-lg transition-colors"
-                  >
-                    Записи
-                  </Link>
-                  <Link
-                    to="/speed-records?tab=stats"
-                    onClick={onCloseMobileMenu}
-                    className="block px-4 py-2 text-sm text-charcoal-700 hover:bg-old-money-50 rounded-lg transition-colors"
-                  >
-                    Статистика
-                  </Link>
-                </div>
-              )}
-            </div>
-            <div>
-              <button
-                onClick={onToggleGuide}
-                aria-expanded={guideOpen}
-                aria-controls="guide-menu"
-                aria-label="Справка - правила, титулы, протоколы"
-                className={`w-full flex items-center justify-between px-4 py-2 text-sm font-semibold transition-colors ${
-                  isGuideActive ? 'text-camel-700' : 'text-charcoal-700'
-                }`}
-              >
-                <span className="relative inline-block">
-                  Справка
-                  <span
-                    className={`absolute bottom-0 left-0 h-0.5 w-full bg-camel-600 transition-transform duration-300 ${
-                      isGuideActive ? 'scale-x-100' : 'scale-x-0'
-                    }`}
-                  />
-                </span>
-                <svg
-                  className={`h-4 w-4 transition-transform ${guideOpen ? 'rotate-180' : ''}`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              {guideOpen && (
-                <div id="guide-menu" className="mt-2 space-y-1 pl-4" role="menu">
-                  {GUIDE_MENU_ITEMS.map((item) => (
-                    <Link
-                      key={item.to}
-                      to={item.to}
-                      onClick={onCloseMobileMenu}
-                      className="block rounded-lg px-4 py-2 text-sm text-charcoal-700 transition-colors hover:bg-old-money-50"
-                    >
-                      {item.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
+            <Link
+              to="/competitions"
+              onClick={onCloseMobileMenu}
+              className={`block px-4 py-2 text-sm font-semibold transition-colors ${
+                isCompetitionsActive ? 'text-camel-700' : 'text-charcoal-700'
+              }`}
+            >
+              <span className="relative inline-block">
+                Соревнования
+                <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-camel-600 transition-transform duration-300 ${
+                  isCompetitionsActive ? 'scale-x-100' : 'scale-x-0'
+                }`}></span>
+              </span>
+            </Link>
+            <Link
+              to="/shows"
+              onClick={() => {
+                void import('../../lib/prefetchShows').then((m) => m.prefetchShowsHeavyTabs())
+                onCloseMobileMenu()
+              }}
+              className={`block px-4 py-2 text-sm font-semibold transition-colors ${
+                isShowsActive ? 'text-camel-700' : 'text-charcoal-700'
+              }`}
+            >
+              <span className="relative inline-block">
+                Выставки
+                <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-camel-600 transition-transform duration-300 ${
+                  isShowsActive ? 'scale-x-100' : 'scale-x-0'
+                }`}></span>
+              </span>
+            </Link>
+            <Link
+              to="/speed-records"
+              onClick={onCloseMobileMenu}
+              className={`block px-4 py-2 text-sm font-semibold transition-colors ${
+                isSpeedRecordsActive ? 'text-camel-700' : 'text-charcoal-700'
+              }`}
+            >
+              <span className="relative inline-block">
+                Курсинг Донино
+                <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-camel-600 transition-transform duration-300 ${
+                  isSpeedRecordsActive ? 'scale-x-100' : 'scale-x-0'
+                }`}></span>
+              </span>
+            </Link>
+            <Link
+              to="/guide"
+              onClick={onCloseMobileMenu}
+              className={`block px-4 py-2 text-sm font-semibold transition-colors ${
+                isGuideActive ? 'text-camel-700' : 'text-charcoal-700'
+              }`}
+            >
+              <span className="relative inline-block">
+                Справка
+                <span
+                  className={`absolute bottom-0 left-0 h-0.5 w-full bg-camel-600 transition-transform duration-300 ${
+                    isGuideActive ? 'scale-x-100' : 'scale-x-0'
+                  }`}
+                />
+              </span>
+            </Link>
             <Link
               to="/about"
               onClick={onCloseMobileMenu}

@@ -52,16 +52,31 @@ export function ExhibitionHeader({ exhibition, onBack }: { exhibition: ShowExhib
 
   return (
     <div className="relative mb-6">
-      <button
-        type="button"
-        onClick={onBack}
-        className="relative z-10 mb-2 inline-flex h-11 w-11 items-center justify-center rounded-lg text-old-money-500 transition-colors hover:bg-old-money-50 hover:text-camel-700 md:absolute md:right-full md:top-8 md:mb-0 md:mr-0.5"
-        aria-label="Назад"
-      >
-        <ChevronLeft className="h-5 w-5" aria-hidden />
-      </button>
+      {onBack && (
+        <button
+          type="button"
+          onClick={onBack}
+          className="hidden md:absolute md:right-full md:top-8 md:mr-1 md:inline-flex md:h-11 md:w-11 md:items-center md:justify-center md:rounded-lg md:text-old-money-500 md:transition-colors md:hover:bg-old-money-50 md:hover:text-camel-700"
+          aria-label="Назад"
+        >
+          <ChevronLeft className="h-5 w-5" aria-hidden />
+        </button>
+      )}
 
-      <div className="min-w-0 rounded-xl border border-old-money-200 bg-cream-50 p-3 md:p-4">
+      <div className="min-w-0 rounded-xl border border-old-money-200 bg-cream-50 p-4 sm:p-4 md:p-5">
+        {onBack && (
+          <div className="mb-3 flex items-center md:hidden">
+            <button
+              type="button"
+              onClick={onBack}
+              className="-ml-1 inline-flex items-center gap-1 rounded-lg px-2 py-1 text-xs font-semibold text-old-money-600 transition-colors hover:bg-old-money-50 hover:text-charcoal-900"
+              aria-label="Назад"
+            >
+              <ChevronLeft className="h-4 w-4 shrink-0 text-old-money-500" aria-hidden />
+              <span>Назад</span>
+            </button>
+          </div>
+        )}
         <div className="flex items-start justify-between gap-2">
           <h1 className="min-w-0 font-serif text-xl font-bold leading-tight tracking-tight text-charcoal-900 md:text-2xl">
             {rkfUrl ? (

@@ -67,6 +67,7 @@ export default function DoninoStatsColumns({
   filterMaxTime,
   statsGroupBy,
 }: DoninoStatsColumnsProps) {
+  const [mobileTab, setMobileTab] = useState<'speed' | 'coursing'>('speed')
   const [expandedKey, setExpandedKey] = useState<string | null>(null)
 
   useEffect(() => {
@@ -163,8 +164,34 @@ export default function DoninoStatsColumns({
         />
       )}
 
+      {/* Мобильный переключатель колонок статистики */}
+      <div className="flex rounded-xl border border-old-money-200/80 bg-cream-100 p-1 lg:hidden">
+        <button
+          type="button"
+          onClick={() => setMobileTab('speed')}
+          className={`flex-1 rounded-lg py-1.5 px-3 text-xs font-semibold transition-all ${
+            mobileTab === 'speed'
+              ? 'bg-camel-500 text-charcoal-900 shadow-sm'
+              : 'text-charcoal-600 hover:text-charcoal-900'
+          }`}
+        >
+          Замер скорости
+        </button>
+        <button
+          type="button"
+          onClick={() => setMobileTab('coursing')}
+          className={`flex-1 rounded-lg py-1.5 px-3 text-xs font-semibold transition-all ${
+            mobileTab === 'coursing'
+              ? 'bg-camel-500 text-charcoal-900 shadow-sm'
+              : 'text-charcoal-600 hover:text-charcoal-900'
+          }`}
+        >
+          Бега 350 м
+        </button>
+      </div>
+
       <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-2 lg:gap-8">
-        <section className="min-w-0">
+        <section className={`min-w-0 ${mobileTab === 'speed' ? 'block' : 'hidden lg:block'}`}>
           <DoninoStatsSummary
             title="Замер"
             dogCount={uniqueSpeedDogCount(filteredSpeed)}
@@ -192,7 +219,7 @@ export default function DoninoStatsColumns({
           />
         </section>
 
-        <section className="min-w-0">
+        <section className={`min-w-0 ${mobileTab === 'coursing' ? 'block' : 'hidden lg:block'}`}>
           <DoninoStatsSummary
             title="Бега 350 м"
             dogCount={uniqueCoursingDogCount(filteredCoursing)}

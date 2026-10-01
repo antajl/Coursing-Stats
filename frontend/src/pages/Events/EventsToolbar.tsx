@@ -117,8 +117,9 @@ export default function EventsToolbar({
         value={searchQuery}
         onChange={onSearchChange}
         placeholder="Название, клуб, регион…"
+        className="w-full sm:!w-auto min-w-0 sm:min-w-[200px] max-w-sm"
       />
-      <div className="flex max-w-full flex-wrap items-center gap-1.5">
+      <div className="flex max-w-full flex-wrap items-center gap-1.5 w-full sm:w-auto">
         <ModernDropdown
           trigger={
             <button
@@ -317,19 +318,6 @@ export default function EventsToolbar({
             </div>
           </ModernDropdown>
         )}
-        <button
-          type="button"
-          onClick={() => {
-            onFilterWithProtocolChange(!filterWithProtocol)
-            onClearQuickPreset()
-          }}
-          className={`${TOOLBAR_CHIP} ${
-            filterWithProtocol ? TOOLBAR_CHIP_ACTIVE : TOOLBAR_CHIP_IDLE
-          }`}
-          aria-pressed={filterWithProtocol}
-        >
-          С протоколом
-        </button>
         <ToolbarTip label="Только чемпионаты, кубки и статусы ЧРКФ / ПЧРКФ">
           <button
             type="button"
@@ -363,16 +351,21 @@ export default function EventsToolbar({
   return (
     <PageToolbar
       bare
-      topRowClassName="pr-28 md:pr-32"
+      topRowClassName="pr-0 md:pr-32"
       filters={filters}
       bottomLeft={
         stats ? (
-          <p className="text-xs text-charcoal-500">
-            {`Всего событий: ${stats.total} · отфильтровано: ${stats.filtered} · с результатом: ${stats.withResult}`}
-            {filterDiscipline && (
-              <span className="hidden sm:inline"> · {disciplineLabel}</span>
-            )}
-          </p>
+          <>
+            <p className="hidden sm:block text-xs text-charcoal-500">
+              {`Всего событий: ${stats.total} · отфильтровано: ${stats.filtered} · с результатом: ${stats.withResult}`}
+              {filterDiscipline && (
+                <span> · {disciplineLabel}</span>
+              )}
+            </p>
+            <p className="sm:hidden text-xs text-charcoal-500">
+              {`${stats.filtered} из ${stats.total} · с рез.: ${stats.withResult}`}
+            </p>
+          </>
         ) : undefined
       }
       bottomRight={legend}

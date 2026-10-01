@@ -145,10 +145,9 @@ export function renderGroupedDogTitles(titles: DogTitle[]): ReactNode {
   const groups = groupItemsByCategory(sorted, (item) => classifyDogProfileTitle(item.title))
 
   return (
-    <>
-      {groups.map((group, gi) => (
-        <span key={group.category} className="inline-flex flex-wrap items-center gap-1.5">
-          {gi > 0 ? <span className={SEPARATOR_CLASS} aria-hidden /> : null}
+    <div className="flex flex-col items-center gap-2">
+      {groups.map((group) => (
+        <div key={group.category} className="flex flex-wrap items-center justify-center gap-1.5">
           {group.items.map((item) => {
             const showKey = matchShowAwardToken(item.title)
             const badgeTitle = showKey
@@ -173,9 +172,9 @@ export function renderGroupedDogTitles(titles: DogTitle[]): ReactNode {
               </HoverTooltip>
             )
           })}
-        </span>
+        </div>
       ))}
-    </>
+    </div>
   )
 }
 

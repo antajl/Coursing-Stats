@@ -158,8 +158,9 @@ function ShowAwardsRow({
           )}
         </div>
       </div>
-      <div className="flex items-center gap-2 shrink-0">
-        <span className="text-charcoal-500">Выставки:</span>
+      <div className="flex items-center gap-1.5 shrink-0 text-xs">
+        <span className="hidden sm:inline text-charcoal-500">Выставки:</span>
+        <span className="sm:hidden text-charcoal-500 text-[10px]">выст.:</span>
         <span className="font-semibold tabular-nums text-charcoal-700">
           {totalShows || 0}
         </span>
@@ -178,7 +179,7 @@ export default function ShowDogCard({ dog, rank, filterYear = '' }: ShowDogCardP
   return (
     <Link
       to={href}
-      className={`relative grid min-w-0 w-full ${DOG_CARD_HEIGHT_CLASS} grid-rows-[auto_auto] gap-0 overflow-hidden border-b border-old-money-200 bg-white py-1.5 px-4 transition-colors duration-200 hover:bg-camel-100/60 first:rounded-t-xl last:rounded-b-xl last:border-b-0`}
+      className={`relative grid min-w-0 w-full min-h-[5.25rem] sm:h-[5.25rem] grid-rows-[auto_auto] gap-0 overflow-hidden border-b border-old-money-200 bg-white py-2 sm:py-1.5 px-3 sm:px-4 transition-colors duration-200 hover:bg-camel-100/60 first:rounded-t-xl last:rounded-b-xl last:border-b-0`}
     >
       <div className="flex items-center gap-2 w-full overflow-hidden">
         {/* Rank badge on the left */}
