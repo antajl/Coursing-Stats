@@ -10,7 +10,7 @@
 1. **[docs/QUICK-REFERENCE.md](docs/QUICK-REFERENCE.md)** — 5-minute overview, critical commands
 2. **[docs/MAP.md](docs/MAP.md)** — куда смотреть (detailed router)
 3. **[docs/INDEX.md](docs/INDEX.md)** — quick links by category
-4. **[docs/sheets/](docs/sheets/)** — шпаргалки 00–12
+4. **[docs/sheets/](docs/sheets/)** — шпаргалки 00–14 (включая `14-design-system`)
 5. **[docs/decisions/](docs/decisions/)** — почему (ADRs)
 6. Skills: `.agents/skills/*/SKILL.md` — 9 domain-specific skills for CoursingStats
 7. MCP: GitHub + Cloudflare official servers configured in `.mcp.json`
@@ -53,6 +53,7 @@ CoursingStats — статистика соревнований (procoursing), �
 | Package manager | **yarn@1.22.22** |
 | Local secrets | `.env.ai` (gitignored) |
 | Two sport ratings | medals ≠ CS points — never merge |
+| Design Contract | Saluki theme, 5 base UI patterns — [docs/sheets/14-design-system.md](docs/sheets/14-design-system.md) |
 | Local admin | `/admin` + `/admin/event/:id` only in `yarn run dev` |
 | Bot | Workers + Grammy + KV; aggregates only |
 

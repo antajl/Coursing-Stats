@@ -11,7 +11,9 @@ import SkeletonLoader from '../../components/SkeletonLoader'
 
 function SpeedRecords() {
   const [searchParams] = useSearchParams()
-  const view = searchParams.get('view') === 'stats' ? 'stats' : 'table'
+  const rawTab = searchParams.get('tab')
+  const rawView = searchParams.get('view')
+  const view = rawTab === 'stats' || rawView === 'stats' ? 'stats' : 'table'
   const page = useSpeedRecordsPage()
   const { reachGoal } = useYandexGoal()
 

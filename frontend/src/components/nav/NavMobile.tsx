@@ -143,7 +143,7 @@ export function NavMobile({
                   </Link>
                   {competitionsCalendar && (
                     <Link
-                      to="/competitions?tab=calendar"
+                      to="/competitions?tab=archive"
                       onClick={onCloseMobileMenu}
                       className="block px-4 py-2 text-sm text-charcoal-700 hover:bg-old-money-50 rounded-lg transition-colors"
                     >
@@ -234,14 +234,14 @@ export function NavMobile({
               {doninoOpen && (
                 <div id="donino-menu" className="mt-2 space-y-1 pl-4" role="menu">
                   <Link
-                    to="/speed-records?view=table"
+                    to="/speed-records?tab=records"
                     onClick={onCloseMobileMenu}
                     className="block px-4 py-2 text-sm text-charcoal-700 hover:bg-old-money-50 rounded-lg transition-colors"
                   >
                     Записи
                   </Link>
                   <Link
-                    to="/speed-records?view=stats"
+                    to="/speed-records?tab=stats"
                     onClick={onCloseMobileMenu}
                     className="block px-4 py-2 text-sm text-charcoal-700 hover:bg-old-money-50 rounded-lg transition-colors"
                   >

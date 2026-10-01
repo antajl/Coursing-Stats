@@ -17,29 +17,36 @@ function doninoRecordsFromQuery(
 export function useSpeedRecordsPage() {
   const [searchParams, setSearchParams] = useSearchParams()
   const [view, setView] = useState<'table' | 'stats'>(() => {
-    if (searchParams.get('tab') === 'stats') return 'stats'
-    const v = searchParams.get('view')
-    return v === 'stats' ? 'stats' : 'table'
+    const rawTab = searchParams.get('tab')
+    if (rawTab === 'stats') return 'stats'
+    const rawView = searchParams.get('view')
+    return rawView === 'stats' ? 'stats' : 'table'
   })
 
   useEffect(() => {
+    const rawView = searchParams.get('view')
     const rawTab = searchParams.get('tab')
-    if (rawTab === 'stats') {
+
+    // Normalize legacy ?view= to ?tab=
+    if (rawView) {
       const params = new URLSearchParams(searchParams)
-      params.delete('tab')
-      params.set('view', 'stats')
+      params.delete('view')
+      params.set('tab', rawView === 'stats' ? 'stats' : 'records')
       params.delete('statsTab')
       setSearchParams(params, { replace: true })
-      setView('stats')
+      setView(rawView === 'stats' ? 'stats' : 'table')
       return
     }
-    if (rawTab === 'coursing' || rawTab === 'table') {
+
+    if (rawTab === 'table' || rawTab === 'coursing') {
       const params = new URLSearchParams(searchParams)
-      params.delete('tab')
+      params.set('tab', 'records')
       setSearchParams(params, { replace: true })
+      setView('table')
+      return
     }
-    const v = searchParams.get('view')
-    setView(v === 'stats' ? 'stats' : 'table')
+
+    setView(rawTab === 'stats' ? 'stats' : 'table')
   }, [searchParams, setSearchParams])
 
   const speedRecordsQuery = useSpeedRecords('', '', 10000, '', '')
