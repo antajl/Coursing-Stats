@@ -1,12 +1,12 @@
 {
   "schema": "coursing-stats/duplicate-dogs-audit-v1",
-  "generated_at": "2026-07-24T15:30:00.331Z",
+  "generated_at": "2026-10-01T09:59:29.141Z",
   "source": "data/v1/dogs/by-id",
   "totals": {
-    "dogs": 1458,
+    "dogs": 2402,
     "garbage_names": 5,
-    "duplicate_clusters": 2,
-    "dogs_in_clusters": 4
+    "duplicate_clusters": 53,
+    "dogs_in_clusters": 107
   },
   "garbage_sample": [
     {
@@ -37,36 +37,855 @@
   ],
   "clusters": [
     {
-      "breed": "УИППЕТ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "ids": [
-        5634,
-        9741
+        9268,
+        10601,
+        10612
       ],
       "names": [
-        "STANGERS LAND ZENIT",
-        "STANGERS LAND ZENIT CHARMAN"
+        "ЛУННАЯ РАДУГА РЕЛИКВИЯ",
+        "LUNNAJA RADUGA RELIKVIA",
+        "LUNNAJA RADUGA RELIKVIYA"
+      ],
+      "competition_id_counts": [
+        3,
+        1,
+        1
+      ],
+      "suggested_keep_id": 9268
+    },
+    {
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
+      "ids": [
+        10643,
+        9521
+      ],
+      "names": [
+        "DRIM NEISHN ANDANTE",
+        "ДРИМ НЕЙШН АНДАНТЕ"
+      ],
+      "competition_id_counts": [
+        2,
+        1
+      ],
+      "suggested_keep_id": 10643
+    },
+    {
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
+      "ids": [
+        9522,
+        10644
+      ],
+      "names": [
+        "ДРИМ НЕЙШН АХАМКАРА",
+        "DRIM NEISHN AKHAMKARA"
+      ],
+      "competition_id_counts": [
+        1,
+        1
+      ],
+      "suggested_keep_id": 9522
+    },
+    {
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
+      "ids": [
+        9523,
+        10645
+      ],
+      "names": [
+        "МЕДОУЛАРК БИ БОП Э ЛУЛА",
+        "MEDAWLARK BE BOP A LULA"
+      ],
+      "competition_id_counts": [
+        1,
+        1
+      ],
+      "suggested_keep_id": 9523
+    },
+    {
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
+      "ids": [
+        9613,
+        10712
+      ],
+      "names": [
+        "ЗЛАТ ОХАРРИ БАДИХАН",
+        "ZLAT OHARRY BADIKHAN"
+      ],
+      "competition_id_counts": [
+        1,
+        1
+      ],
+      "suggested_keep_id": 9613
+    },
+    {
+      "breed": "БАСЕНДЖИ",
+      "ids": [
+        9675,
+        10441
+      ],
+      "names": [
+        "ITURY PUZZLE VILMA",
+        "ИТУРИ ПАЗЗЛ ВИЛМА"
+      ],
+      "competition_id_counts": [
+        6,
+        6
+      ],
+      "suggested_keep_id": 9675
+    },
+    {
+      "breed": "БАСЕНДЖИ",
+      "ids": [
+        10608,
+        10526
+      ],
+      "names": [
+        "BAGHEERA",
+        "БАГИРА"
+      ],
+      "competition_id_counts": [
+        2,
+        1
+      ],
+      "suggested_keep_id": 10608
+    },
+    {
+      "breed": "БАСЕНДЖИ",
+      "ids": [
+        9591,
+        10553
+      ],
+      "names": [
+        "AFRIKANSKYI MOLCHUN IMPERIAL",
+        "АФРИКАНСКИЙ МОЛЧУН ИМПЕРИАЛ"
+      ],
+      "competition_id_counts": [
+        1,
+        1
+      ],
+      "suggested_keep_id": 9591
+    },
+    {
+      "breed": "БАСЕНДЖИ",
+      "ids": [
+        5683,
+        10592
+      ],
+      "names": [
+        "ХАУС ЗЭ РЭЙНБОУ УЗОЧИ ЗИКИМО",
+        "HOUSE THE RAINBOW UZOCHI ZIKIMO"
+      ],
+      "competition_id_counts": [
+        22,
+        10
+      ],
+      "suggested_keep_id": 5683
+    },
+    {
+      "breed": "БАСЕНДЖИ",
+      "ids": [
+        9419,
+        10656
+      ],
+      "names": [
+        "ВЯТ СТАЙЛ КАЙСАР КАЛИБ",
+        "VYAT STYLE KAISAR KALIB"
+      ],
+      "competition_id_counts": [
+        2,
+        1
+      ],
+      "suggested_keep_id": 9419
+    },
+    {
+      "breed": "БАСЕНДЖИ",
+      "ids": [
+        10675,
+        9636
+      ],
+      "names": [
+        "GOLDEN AIRIS BEYSI",
+        "ГОЛДЕН АЙРИС БЕЙСИ"
+      ],
+      "competition_id_counts": [
+        2,
+        1
+      ],
+      "suggested_keep_id": 10675
+    },
+    {
+      "breed": "БАСЕНДЖИ",
+      "ids": [
+        9406,
+        10703
+      ],
+      "names": [
+        "ХАУС ЗЭ РЭЙНБОУ ЮНОНА",
+        "HOUSE THE RAINBOW YOUNONA"
+      ],
+      "competition_id_counts": [
+        2,
+        1
+      ],
+      "suggested_keep_id": 9406
+    },
+    {
+      "breed": "БАСЕНДЖИ",
+      "ids": [
+        10707,
+        9687
+      ],
+      "names": [
+        "WINNER TIME YOUTUBE",
+        "ВИННЕР ТАЙМ ЮТУБ"
+      ],
+      "competition_id_counts": [
+        3,
+        2
+      ],
+      "suggested_keep_id": 10707
+    },
+    {
+      "breed": "БАСЕНДЖИ",
+      "ids": [
+        9634,
+        10710
+      ],
+      "names": [
+        "ИТУРИ ПАЗЗЛ ПАСТ ЭНД ФЬЮЧЕР",
+        "ITURY PUZZLE PAST AND FUTURE"
+      ],
+      "competition_id_counts": [
+        1,
+        1
+      ],
+      "suggested_keep_id": 9634
+    },
+    {
+      "breed": "БАСЕНДЖИ",
+      "ids": [
+        9635,
+        10711
+      ],
+      "names": [
+        "ИТУРИ ПАЗЗЛ ПОЛАЙТ ГАЙ",
+        "ITURY PUZZLE POLITE GUY"
+      ],
+      "competition_id_counts": [
+        1,
+        1
+      ],
+      "suggested_keep_id": 9635
+    },
+    {
+      "breed": "БАСЕНДЖИ",
+      "ids": [
+        9663,
+        10716
+      ],
+      "names": [
+        "ТИМ СПИРИТ ГРЕНУЙ II",
+        "TIM SPIRIT GRENUJ II"
+      ],
+      "competition_id_counts": [
+        1,
+        1
+      ],
+      "suggested_keep_id": 9663
+    },
+    {
+      "breed": "БАСЕНДЖИ",
+      "ids": [
+        9665,
+        10718
+      ],
+      "names": [
+        "ВЯТ СТАЙЛ ЦЕРЦАРА",
+        "VYAT STYLE CERCARA"
+      ],
+      "competition_id_counts": [
+        1,
+        1
+      ],
+      "suggested_keep_id": 9665
+    },
+    {
+      "breed": "ГРЕЙХАУНД",
+      "ids": [
+        9243,
+        10593
+      ],
+      "names": [
+        "ФИОНН КЛАНН ЛОЧ ЛОМОНОД",
+        "FIONN CLANN LANCE LOMOND"
+      ],
+      "competition_id_counts": [
+        7,
+        1
+      ],
+      "suggested_keep_id": 9243
+    },
+    {
+      "breed": "ГРЕЙХАУНД",
+      "ids": [
+        9244,
+        10594
+      ],
+      "names": [
+        "АРТЕФАКТ РЕЙСЕР",
+        "ARTEFAKT RACER"
+      ],
+      "competition_id_counts": [
+        1,
+        1
+      ],
+      "suggested_keep_id": 9244
+    },
+    {
+      "breed": "ГРЕЙХАУНД",
+      "ids": [
+        9596,
+        10676
+      ],
+      "names": [
+        "RUSSKIY VETER ZHGUCHIJ PERECZ",
+        "РУССКИЙ ВЕТЕР ЖГУЧИЙ ПЕРЕЦ"
+      ],
+      "competition_id_counts": [
+        2,
+        1
+      ],
+      "suggested_keep_id": 9596
+    },
+    {
+      "breed": "ГРЕЙХАУНД",
+      "ids": [
+        9423,
+        10713
+      ],
+      "names": [
+        "РУССКИЙ ВЕТЕР ДЭГБИ",
+        "RUSSKIY VETER DEGBY"
+      ],
+      "competition_id_counts": [
+        3,
+        1
+      ],
+      "suggested_keep_id": 9423
+    },
+    {
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "ids": [
+        812,
+        9557
+      ],
+      "names": [
+        "AJZA LUNNYJ SVET",
+        "АЙЗА ЛУННЫЙ СВЕТ /AYZA LUNNYJ SVET"
+      ],
+      "competition_id_counts": [
+        5,
+        3
+      ],
+      "suggested_keep_id": 812
+    },
+    {
+      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+      "ids": [
+        9590,
+        10595
+      ],
+      "names": [
+        "SOLAR SPIRIT BAGHEERA",
+        "СОЛАР СПИРИТ БАГИРА"
+      ],
+      "competition_id_counts": [
+        10,
+        4
+      ],
+      "suggested_keep_id": 9590
+    },
+    {
+      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+      "ids": [
+        9529,
+        10646
+      ],
+      "names": [
+        "ИНКРЕДИБЛ АРТ ЖУЛИ",
+        "INCREDIBLE ART JULI"
+      ],
+      "competition_id_counts": [
+        1,
+        1
+      ],
+      "suggested_keep_id": 9529
+    },
+    {
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "ids": [
+        292,
+        10496
+      ],
+      "names": [
+        "CAVALLIERIK UNIKUM",
+        "КАВАЛЛЬЕРИК УНИКУМ"
+      ],
+      "competition_id_counts": [
+        3,
+        2
+      ],
+      "suggested_keep_id": 292
+    },
+    {
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "ids": [
+        10599,
+        9262
+      ],
+      "names": [
+        "LUNNAJA RADUGA PANGEYA ULTIMA",
+        "ЛУННАЯ РАДУГА ПАНГЕЯ УЛЬТИМА"
+      ],
+      "competition_id_counts": [
+        3,
+        1
+      ],
+      "suggested_keep_id": 10599
+    },
+    {
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "ids": [
+        9264,
+        10600
+      ],
+      "names": [
+        "АХ ШАЛУНЬЯ",
+        "AH SHALUNYA"
+      ],
+      "competition_id_counts": [
+        3,
+        3
+      ],
+      "suggested_keep_id": 9264
+    },
+    {
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "ids": [
+        7226,
+        10647
+      ],
+      "names": [
+        "LUNNAJA RADUGA CZARSKIJ CHERVONECZ",
+        "LUNNAJA RADUGA TSARSKIY CHERVONETS"
       ],
       "competition_id_counts": [
         18,
         1
       ],
-      "suggested_keep_id": 5634
+      "suggested_keep_id": 7226
+    },
+    {
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "ids": [
+        9510,
+        10650
+      ],
+      "names": [
+        "ЛУННАЯ РАДУГА ТАНГО В НОЧИ",
+        "LUNNAJA RADUGA TANGO V NOCHI"
+      ],
+      "competition_id_counts": [
+        2,
+        1
+      ],
+      "suggested_keep_id": 9510
+    },
+    {
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "ids": [
+        9376,
+        10700
+      ],
+      "names": [
+        "ФУРИЯ ИЗ КРЫЛАТОЙ ЛЕГЕНДЫ",
+        "FURIYA IZ KRYLATOI LEGENDY"
+      ],
+      "competition_id_counts": [
+        10,
+        3
+      ],
+      "suggested_keep_id": 9376
+    },
+    {
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "ids": [
+        9409,
+        10719
+      ],
+      "names": [
+        "ЛУННАЯ РАДУГА ФАНТАСТИКА",
+        "LUNNAJA RADUGA FANTASTIKA"
+      ],
+      "competition_id_counts": [
+        12,
+        5
+      ],
+      "suggested_keep_id": 9409
+    },
+    {
+      "breed": "САЛЮКИ",
+      "ids": [
+        10613,
+        9350
+      ],
+      "names": [
+        "RADA GRAVITY DGI DEKSTER",
+        "РАДА ГРАВИТИ ДЖИ ДЕКСТЕР"
+      ],
+      "competition_id_counts": [
+        3,
+        2
+      ],
+      "suggested_keep_id": 10613
+    },
+    {
+      "breed": "ТАЙСКИЙ РИДЖБЕК",
+      "ids": [
+        9270,
+        10602
+      ],
+      "names": [
+        "Ж МИНИ ФЭШН ЛИТЛ БЛЮ КУИН МАЙ ДИА ФРЕНДС",
+        "G MINI FASHION LITTLE BLUE QUEEN MY DEAR FRIENDS"
+      ],
+      "competition_id_counts": [
+        1,
+        1
+      ],
+      "suggested_keep_id": 9270
     },
     {
       "breed": "УИППЕТ",
       "ids": [
-        5641,
-        9743
+        10460,
+        9343
       ],
       "names": [
-        "BLAZE OF GLORY",
-        "BLAZE OF GLORY DAGGER"
+        "ЛАКШЕРИ ВИПП НИКИТА",
+        "LUXURY WHIPP NIKITA"
       ],
       "competition_id_counts": [
-        17,
+        6,
+        3
+      ],
+      "suggested_keep_id": 10460
+    },
+    {
+      "breed": "УИППЕТ",
+      "ids": [
+        600,
+        10539
+      ],
+      "names": [
+        "DENSI MIDNIGHT SUN",
+        "ДЕНСИ МИДНАЙТ САН"
+      ],
+      "competition_id_counts": [
+        10,
         1
       ],
-      "suggested_keep_id": 5641
+      "suggested_keep_id": 600
+    },
+    {
+      "breed": "УИППЕТ",
+      "ids": [
+        9289,
+        10590
+      ],
+      "names": [
+        "ИСТОРИЯ ЛЮБВИ ЭВР БЫСТРЫЙ",
+        "ISTORIYA LUBVI EVR BYSTRYJ"
+      ],
+      "competition_id_counts": [
+        5,
+        5
+      ],
+      "suggested_keep_id": 9289
+    },
+    {
+      "breed": "УИППЕТ",
+      "ids": [
+        10603,
+        9271
+      ],
+      "names": [
+        "MISTFIELD DODGER",
+        "МИСТФИЛД ДОДЖЕР"
+      ],
+      "competition_id_counts": [
+        5,
+        3
+      ],
+      "suggested_keep_id": 10603
+    },
+    {
+      "breed": "УИППЕТ",
+      "ids": [
+        9273,
+        10604
+      ],
+      "names": [
+        "ТАТЬЯНИН ДЕНЬ ИНКИ",
+        "TATYANIN DEN INKY"
+      ],
+      "competition_id_counts": [
+        1,
+        1
+      ],
+      "suggested_keep_id": 9273
+    },
+    {
+      "breed": "УИППЕТ",
+      "ids": [
+        9276,
+        10605
+      ],
+      "names": [
+        "АЦУАРЕЛА ДЕЛЬ РИО ДРАГОНФЛАЙ",
+        "ACUARELA DEL’ RIO DRAGONFLY"
+      ],
+      "competition_id_counts": [
+        1,
+        1
+      ],
+      "suggested_keep_id": 9276
+    },
+    {
+      "breed": "УИППЕТ",
+      "ids": [
+        10606,
+        9284
+      ],
+      "names": [
+        "BLACK EDITION",
+        "БЛЭК ЭДИШЕН"
+      ],
+      "competition_id_counts": [
+        4,
+        1
+      ],
+      "suggested_keep_id": 10606
+    },
+    {
+      "breed": "УИППЕТ",
+      "ids": [
+        10624,
+        9415
+      ],
+      "names": [
+        "RATIMIR IDUSCHIY K SLAVE IZ KAMELOTA",
+        "РАТИМИР ИДУЩИЙ К СЛАВЕ ИЗ КАМЕЛОТА"
+      ],
+      "competition_id_counts": [
+        5,
+        2
+      ],
+      "suggested_keep_id": 10624
+    },
+    {
+      "breed": "УИППЕТ",
+      "ids": [
+        9537,
+        10652
+      ],
+      "names": [
+        "ФЕЕЛ МАЙ ХЕАРТ БИСКВИТ",
+        "FEEL MY HEART BISCUIT"
+      ],
+      "competition_id_counts": [
+        3,
+        3
+      ],
+      "suggested_keep_id": 9537
+    },
+    {
+      "breed": "УИППЕТ",
+      "ids": [
+        10654,
+        9630
+      ],
+      "names": [
+        "ACUARELA DELRIO IBERICA",
+        "АЦУАРЕЛА ДЕЛЬ РИО ИБЕРИКА"
+      ],
+      "competition_id_counts": [
+        2,
+        1
+      ],
+      "suggested_keep_id": 10654
+    },
+    {
+      "breed": "УИППЕТ",
+      "ids": [
+        9434,
+        10657
+      ],
+      "names": [
+        "БЛОССОМТАЙМ",
+        "BLOSSOMTIME"
+      ],
+      "competition_id_counts": [
+        3,
+        1
+      ],
+      "suggested_keep_id": 9434
+    },
+    {
+      "breed": "УИППЕТ",
+      "ids": [
+        9672,
+        10720
+      ],
+      "names": [
+        "АУРОРА ЛОВЕЛИ СОЛАР ФЕНОМЕН",
+        "AURORA LOVELY SOLAR PHENOMEN"
+      ],
+      "competition_id_counts": [
+        1,
+        1
+      ],
+      "suggested_keep_id": 9672
+    },
+    {
+      "breed": "УИППЕТ",
+      "ids": [
+        248,
+        7296
+      ],
+      "names": [
+        "LUXURY WHIPP OMEGA",
+        "ЛАКШЕРИ ВИПП ОМЕГА"
+      ],
+      "competition_id_counts": [
+        9,
+        8
+      ],
+      "suggested_keep_id": 248
+    },
+    {
+      "breed": "УИППЕТ",
+      "ids": [
+        249,
+        7298
+      ],
+      "names": [
+        "LUXURY WHIPP NEW BELLE",
+        "ЛАКШЕРИ ВИПП НЬЮ БЕЛЛЕ"
+      ],
+      "competition_id_counts": [
+        8,
+        7
+      ],
+      "suggested_keep_id": 249
+    },
+    {
+      "breed": "УИППЕТ",
+      "ids": [
+        269,
+        6228
+      ],
+      "names": [
+        "STANGERS LAND DARING GREATLY",
+        "СТАНГЕРС ЛАНД ДАРИНГ ГРЕЙТЛИ"
+      ],
+      "competition_id_counts": [
+        10,
+        7
+      ],
+      "suggested_keep_id": 269
+    },
+    {
+      "breed": "ФАРАОНОВА СОБАКА",
+      "ids": [
+        9297,
+        10607
+      ],
+      "names": [
+        "МЭЙФ АРЛИН ГИЛЬГАМЕШ",
+        "MAFE ARLIN GILGAMESH"
+      ],
+      "competition_id_counts": [
+        3,
+        3
+      ],
+      "suggested_keep_id": 9297
+    },
+    {
+      "breed": "ХОРТАЯ БОРЗАЯ",
+      "ids": [
+        9702,
+        10669
+      ],
+      "names": [
+        "БУРЕВЕЙ ФРОМ РАШН ФИЛД",
+        "BUREVEY FROM RUSSIAN FIELD"
+      ],
+      "competition_id_counts": [
+        1,
+        1
+      ],
+      "suggested_keep_id": 9702
+    },
+    {
+      "breed": "ХОРТАЯ БОРЗАЯ",
+      "ids": [
+        9714,
+        10721
+      ],
+      "names": [
+        "У ДАР ХАН",
+        "U DAR HAN"
+      ],
+      "competition_id_counts": [
+        1,
+        1
+      ],
+      "suggested_keep_id": 9714
+    },
+    {
+      "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+      "ids": [
+        9610,
+        10697
+      ],
+      "names": [
+        "MIA SANTOS REI",
+        "МИА САНТОС РЕЙ"
+      ],
+      "competition_id_counts": [
+        5,
+        2
+      ],
+      "suggested_keep_id": 9610
+    },
+    {
+      "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+      "ids": [
+        9632,
+        10709
+      ],
+      "names": [
+        "ЗОЛТАИС ДИАМОНД ИРИЯ ПРИМАВЕРА",
+        "ZOLTAIS DIAMOND IRIA PRIMAVERA"
+      ],
+      "competition_id_counts": [
+        1,
+        1
+      ],
+      "suggested_keep_id": 9632
     }
   ]
 }

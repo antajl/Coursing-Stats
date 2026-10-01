@@ -1,6 +1,6 @@
 {
   "schema": "coursing-stats/dog-v1",
-  "exported_at": "2026-07-08T00:31:32.188Z",
+  "exported_at": "2026-10-01T09:59:01.050Z",
   "id": 6285,
   "dog_key": "jani-sha-den-iz-schneider-rich--фараонова-собака",
   "name_lat": "JANI SHA DEN IZ SCHNEIDER RICH",
@@ -16,18 +16,27 @@
     1438,
     1453,
     20230415,
+    20230527,
     20230902,
     20240525
   ],
   "competition_files": [
+    "competitions/2023/04-апрель/1426-чемпионат-ркф-cacl-по-курсингу.json",
+    "competitions/2023/04-апрель/20230415--15-16042023-.json",
+    "competitions/2023/05-май/20230527--27-28052023-.json",
+    "competitions/2023/09-сентябрь/1438-чемпионат-ркф-cacl-по-курсингу.json",
+    "competitions/2023/09-сентябрь/20230902--cacl-02092023-.json",
+    "competitions/2024/05-май/1453-чемпионат-ркф-cacl-по-курсингу-борзых.json",
+    "competitions/2024/05-май/20240525--cacl-25-26052024-.json",
     "competitions/2025/05-май/1268-чркф-курсинг-борзых.json",
     "competitions/2025/10-октябрь/1296-пчркф-родезиискии-риджбек-уиппет-русская-псовая-.json",
-    "competitions/2026/05-май/1317-чемпионат-россии-курсинг-борзых.json",
-    "competitions/2023/04-апрель/1426-чемпионат-ркф-cacl-по-курсингу.json",
-    "competitions/2023/09-сентябрь/1438-чемпионат-ркф-cacl-по-курсингу.json",
-    "competitions/2024/05-май/1453-чемпионат-ркф-cacl-по-курсингу-борзых.json",
-    "competitions/2023/04-апрель/20230415--15-16042023-.json",
-    "competitions/2023/09-сентябрь/20230902--cacl-02092023-.json",
-    "competitions/2024/05-май/20240525--cacl-25-26052024-.json"
+    "competitions/2026/05-май/1317-чемпионат-россии-курсинг-борзых.json"
+  ],
+  "pedigree_url": null,
+  "merged_alias_ids": [
+    10625
+  ],
+  "merged_aliases": [
+    "GANI SHA DEN IZ SCHNEIDER RICH"
   ]
 }
