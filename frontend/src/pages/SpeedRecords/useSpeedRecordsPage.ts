@@ -5,6 +5,7 @@ import { formatRecordDate, getRecordYear, parseRecordDate, parseRecordHistory } 
 import { buildSexByDogMap } from './stats/doninoStatsUtils'
 import type { GroupBy } from './stats/constants'
 import type { DogsIndexEntry } from '../../lib/competingBreeds'
+import { matchesBreedFilter, canonicalBreed } from '../../lib/breedMapping'
 
 function doninoRecordsFromQuery(
   result: { success: boolean; data?: unknown } | undefined,
@@ -191,7 +192,9 @@ export function useSpeedRecordsPage() {
       }
 
       if (filterBreeds.length > 0) {
-        filtered = filtered.filter((record) => filterBreeds.includes(record.breed))
+        filtered = filtered.filter((record) =>
+          filterBreeds.some((fb) => matchesBreedFilter(record.breed, fb))
+        )
       }
 
       if (filterSexes.length > 0) {
@@ -286,7 +289,9 @@ export function useSpeedRecordsPage() {
       }
 
       if (filterBreeds.length > 0) {
-        filtered = filtered.filter((record) => filterBreeds.includes(record.breed))
+        filtered = filtered.filter((record) =>
+          filterBreeds.some((fb) => matchesBreedFilter(record.breed, fb))
+        )
       }
 
       if (filterYears.length > 0) {
@@ -381,6 +386,10 @@ export function useSpeedRecordsPage() {
     setFilterYears(year ? [year] : [])
   }, [])
 
+  const onBreedChange = useCallback((breed: string) => {
+    setFilterBreeds(breed ? [breed] : [])
+  }, [])
+
   const clearAllFilters = useCallback(() => {
     setFilterYears([CURRENT_SEASON])
     setFilterBreeds([])
@@ -442,14 +451,16 @@ export function useSpeedRecordsPage() {
     const dogMap = new Map<string, string>()
     for (const r of bestSpeedRecords) {
       if (r.name && r.breed) {
-        const key = `${r.name.trim().toLowerCase()}_${r.breed.trim().toLowerCase()}`
-        dogMap.set(key, r.breed)
+        const canon = canonicalBreed(r.breed)
+        const key = `${r.name.trim()}_${canon}`.toLowerCase()
+        dogMap.set(key, canon)
       }
     }
     for (const r of bestCoursingRecords) {
       if (r.name && r.breed) {
-        const key = `${r.name.trim().toLowerCase()}_${r.breed.trim().toLowerCase()}`
-        dogMap.set(key, r.breed)
+        const canon = canonicalBreed(r.breed)
+        const key = `${r.name.trim()}_${canon}`.toLowerCase()
+        dogMap.set(key, canon)
       }
     }
     return Array.from(dogMap.values()).map((breed) => ({
@@ -466,6 +477,7 @@ export function useSpeedRecordsPage() {
     onYearChange,
     currentSeason: CURRENT_SEASON,
     filterBreeds,
+    onBreedChange,
     filterSexes,
     filterMinSpeed,
     setFilterMinSpeed,

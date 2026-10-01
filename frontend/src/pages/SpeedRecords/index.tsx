@@ -101,6 +101,7 @@ function SpeedRecords() {
           onSearchChange={page.setSearchQuery}
           filterYears={page.filterYears}
           filterBreeds={page.filterBreeds}
+          onBreedChange={page.onBreedChange}
           filterSexes={page.filterSexes}
           filterMinSpeed={page.filterMinSpeed}
           filterMaxSpeed={page.filterMaxSpeed}
