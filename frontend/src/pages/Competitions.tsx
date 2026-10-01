@@ -48,7 +48,7 @@ function Competitions() {
       />
       <div className="relative rounded-2xl border border-cream-300 bg-cream-50/90 shadow-xl backdrop-blur-lg">
         <div className="min-h-[400px] px-4 py-3 md:px-6 md:py-4">
-          <div className="mb-4 flex items-center justify-between border-b border-old-money-200/60 pb-3">
+          <div className="mb-4 flex items-center justify-between border-b border-old-money-200/60 pb-3 md:hidden">
             <div className="flex w-full items-center gap-1.5 rounded-xl border border-old-money-200/60 bg-cream-100 p-1 sm:w-auto">
               {tabs.map((t) => {
                 const active = activeTab === t.id

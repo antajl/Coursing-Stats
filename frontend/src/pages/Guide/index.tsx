@@ -75,7 +75,7 @@ export default function Guide() {
       />
       <JsonLd data={faqPageSchema(GUIDE_FAQS)} />
       <div className="rounded-2xl border border-cream-300 bg-cream-50/90 px-4 py-3 shadow-xl backdrop-blur-lg md:px-6 md:py-4">
-        <div className="mb-4 flex flex-wrap items-center justify-between gap-2 border-b border-old-money-200/60 pb-3">
+        <div className="mb-4 flex flex-wrap items-center justify-between gap-2 border-b border-old-money-200/60 pb-3 md:hidden">
           <div className="flex w-full items-center gap-1 rounded-xl border border-old-money-200/60 bg-cream-100 p-1 sm:w-auto sm:gap-1.5">
             {GUIDE_SECTIONS.map((s) => {
               const active = activeTab === s.id
