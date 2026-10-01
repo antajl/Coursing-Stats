@@ -1,0 +1,44 @@
+name: Deploy Telegram Bot to Cloudflare Workers
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'bot/**'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Build, Test & Deploy Bot
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'yarn'
+          cache-dependency-path: 'bot/yarn.lock'
+
+      - name: Install bot dependencies
+        working-directory: ./bot
+        run: yarn install --frozen-lockfile
+
+      - name: Type check (TypeScript)
+        working-directory: ./bot
+        run: yarn run build
+
+      - name: Run unit tests
+        working-directory: ./bot
+        run: yarn run test:run
+
+      - name: Deploy to Cloudflare Workers
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: 'bot'
+          command: deploy

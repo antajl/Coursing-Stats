@@ -12,7 +12,7 @@
 3. **[docs/INDEX.md](docs/INDEX.md)** — quick links by category
 4. **[docs/sheets/](docs/sheets/)** — шпаргалки 00–14 (включая `14-design-system`)
 5. **[docs/decisions/](docs/decisions/)** — почему (ADRs)
-6. Skills: `.agents/skills/*/SKILL.md` — 9 domain-specific skills for CoursingStats
+6. Skills: `.agents/skills/*/SKILL.md` — 12 domain-specific skills for CoursingStats (включая `competition-ingest`, `bot-deploy`, `workers-best-practices`)
 7. MCP: GitHub + Cloudflare official servers configured in `.mcp.json`
 
 ## Automatic Skill Usage
@@ -85,7 +85,7 @@ PowerShell: use `;` not `&&`.
 - Merge medals/points; change CS without `cs-v2` + guide  
 - Parse Breed Archive PDF (URL only)  
 - Rebrand procoursing.ru  
-- Deploy Worker in site CI  
+- Deploy Worker in site CI (use isolated deploy-bot.yml on bot/** only)  
 - Commit/push without user request  
 - Runtime D1 in production  
 - Full dog history in bot  
