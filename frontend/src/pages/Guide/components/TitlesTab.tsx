@@ -27,7 +27,7 @@ import {
 
 export default function TitlesTab() {
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
       <SectionCard title="Официальные источники">
         <p>
           Ниже — выжимка по{' '}

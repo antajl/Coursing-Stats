@@ -56,7 +56,7 @@ export default function ProtocolTab() {
   const [segment, setSegment] = useState<string>('coursing')
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
       <SectionCard title="Квалификация (ВС)">
         <div className="flex flex-wrap items-start gap-3">
           <span className="inline-block rounded border border-camel-200 bg-camel-100 px-2 py-1 text-sm font-semibold text-camel-800">

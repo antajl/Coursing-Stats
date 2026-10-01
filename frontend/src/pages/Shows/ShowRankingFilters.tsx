@@ -28,9 +28,9 @@ interface ShowRankingFiltersProps {
   onBreedChange: (value: string) => void
   breedValues: string[]
   dogIndex?: import('../../lib/competingBreeds').DogsIndexEntry[]
-  filterGroup: string
-  onGroupChange: (value: string) => void
-  groupValues: string[]
+  filterGroup?: string
+  onGroupChange?: (value: string) => void
+  groupValues?: string[]
   awardMins: ShowAwardMinFilters
   onAwardMinChange: (key: ShowAwardKey, value: string) => void
   onResetFilters: () => void
@@ -49,9 +49,9 @@ export default function ShowRankingFilters({
   onBreedChange,
   breedValues,
   dogIndex,
-  filterGroup,
+  filterGroup = '',
   onGroupChange,
-  groupValues,
+  groupValues = [],
   awardMins,
   onAwardMinChange,
   onResetFilters,
@@ -59,7 +59,6 @@ export default function ShowRankingFilters({
   dropdownRef,
 }: ShowRankingFiltersProps) {
   const [yearDropdownOpen, setYearDropdownOpen] = useState(false)
-  const [groupDropdownOpen, setGroupDropdownOpen] = useState(false)
   
   const sortedYears = useMemo(
     () => [...yearValues].sort((a, b) => Number(b) - Number(a)),
@@ -132,10 +131,6 @@ export default function ShowRankingFilters({
     onBreedChange(filterBreed === breed ? '' : breed)
   }
 
-  const handleGroupSelect = (group: string) => {
-    onGroupChange(filterGroup === group ? '' : group)
-  }
-
   const breedTrigger = (
     <button
       type="button"
@@ -163,23 +158,6 @@ export default function ShowRankingFilters({
     >
       {filterYear || 'Год'}
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-down h-3.5 w-3.5 transition-transform" aria-hidden>
-        <path d="m6 9 6 6 6-6"></path>
-      </svg>
-    </button>
-  )
-
-  const groupTrigger = (
-    <button
-      type="button"
-      className={`inline-flex h-8 max-w-[14rem] items-center rounded-full border px-3.5 text-xs font-semibold transition-colors gap-1.5 ${
-        filterGroup
-          ? 'border-camel-500 bg-camel-500 text-charcoal-900'
-          : 'border-old-money-200 bg-cream-50 text-charcoal-700 hover:bg-old-money-50'
-      }`}
-      title={filterGroup || undefined}
-    >
-      <span className="min-w-0 truncate">{filterGroup || 'Группа'}</span>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-down h-3.5 w-3.5 shrink-0 transition-transform" aria-hidden>
         <path d="m6 9 6 6 6-6"></path>
       </svg>
     </button>
@@ -252,51 +230,6 @@ export default function ShowRankingFilters({
                 dogIndex={dogIndex}
               />
 
-              {/* Group dropdown */}
-              {groupValues.length > 0 && (
-                <ModernDropdown
-                  trigger={groupTrigger}
-                  isOpen={groupDropdownOpen}
-                  onOpenChange={setGroupDropdownOpen}
-                  width="320px"
-                >
-                  <div className="p-1 min-w-[300px]">
-                    <div className="max-h-60 overflow-y-auto" role="menu">
-                      <button
-                        role="menuitem"
-                        onClick={() => {
-                          onGroupChange('')
-                          setGroupDropdownOpen(false)
-                        }}
-                        className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
-                        !filterGroup
-                          ? 'bg-camel-500 text-charcoal-900'
-                          : 'text-charcoal-700 hover:bg-camel-100'
-                      }`}
-                      >
-                        Все группы
-                      </button>
-                      {groupValues.map((group) => (
-                        <button
-                          key={group}
-                          role="menuitem"
-                          onClick={() => {
-                            onGroupChange(group)
-                            setGroupDropdownOpen(false)
-                          }}
-                          className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
-                            filterGroup === group
-                              ? 'bg-camel-500 text-charcoal-900'
-                              : 'text-charcoal-700 hover:bg-camel-100'
-                          }`}
-                        >
-                          {group}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                </ModernDropdown>
-              )}
 
               {/* Award minimums dropdown */}
               {hasAwardMins && (

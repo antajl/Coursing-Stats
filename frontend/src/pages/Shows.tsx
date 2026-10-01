@@ -55,82 +55,82 @@ function Shows() {
   const fallback = <LoadingCard count={6} variant="shows" />
 
   return (
-    <div className="space-y-6">
+    <>
       <SEO
         title="Рейтинг выставочных собак РКФ"
         description="Рейтинг собак по выставкам РКФ: награды дня (CAC, BOB, ЧРКФ и др.), профили и статистика судей. Ссылки на оригиналы rkf.online."
         canonicalUrl="https://coursing-stats.ru/shows"
         keywords="рейтинг выставок, выставки собак, РКФ, CAC, BOB, ЧРКФ, судьи выставок"
       />
-      <div className="relative rounded-2xl border border-cream-300 bg-cream-50/90 shadow-xl backdrop-blur-lg">
-        <RKFAttribution variant="footnote" className="hidden sm:inline-flex absolute right-0 top-0 z-10" />
-        <div className="min-h-[480px] px-4 py-3 md:px-6 md:py-4">
-          <div className="mb-4 flex flex-wrap items-center justify-between gap-2 border-b border-old-money-200/60 pb-3 md:hidden">
-            <div className="flex w-full items-center gap-1.5 rounded-xl border border-old-money-200/60 bg-cream-100 p-1 sm:w-auto">
-              {tabs.map((t) => {
-                const active = activeTab === t.id
-                return (
-                  <button
-                    key={t.id}
-                    type="button"
-                    onClick={() => handleTabChange(t.id)}
-                    className={`flex flex-1 sm:flex-initial items-center justify-center gap-1.5 rounded-lg py-1.5 px-3.5 text-xs font-semibold transition-all ${
-                      active
-                        ? 'bg-camel-500 text-charcoal-900 shadow-sm'
-                        : 'text-charcoal-600 hover:text-charcoal-900 hover:bg-cream-50/50'
-                    }`}
-                  >
-                    {t.label}
-                  </button>
-                )
-              })}
-            </div>
-          </div>
-          {activeTab === 'ranking' && (
-            <div
-              key="ranking"
-              id="tab-panel-ranking"
-              role="tabpanel"
-              aria-labelledby="tab-ranking"
-              className="cs-tab-panel-enter"
-            >
-              <Suspense fallback={fallback}>
-                <ShowRanking />
-              </Suspense>
-            </div>
-          )}
-          {calendarVisible && activeTab === 'calendar' && (
-            <div
-              key="calendar"
-              id="tab-panel-calendar"
-              role="tabpanel"
-              aria-labelledby="tab-calendar"
-              className="cs-tab-panel-enter"
-            >
-              <Suspense fallback={fallback}>
-                <ShowCalendar />
-              </Suspense>
-            </div>
-          )}
-          {activeTab === 'judges' && (
-            <div
-              key="judges"
-              id="tab-panel-judges"
-              role="tabpanel"
-              aria-labelledby="tab-judges"
-              className="cs-tab-panel-enter"
-            >
-              <Suspense fallback={fallback}>
-                <ShowJudges />
-              </Suspense>
-            </div>
-          )}
-          <div className="mt-4 border-t border-old-money-200/50 pt-3 text-center sm:hidden">
-            <RKFAttribution variant="inline" />
-          </div>
+      {/* Mobile-only tab switcher */}
+      <div className="mb-4 flex items-center justify-between md:hidden">
+        <div className="flex w-full items-center gap-1.5 rounded-xl border border-old-money-200/80 bg-white/80 p-1 shadow-xs sm:w-auto">
+          {tabs.map((t) => {
+            const active = activeTab === t.id
+            return (
+              <button
+                key={t.id}
+                type="button"
+                onClick={() => handleTabChange(t.id)}
+                className={`flex flex-1 sm:flex-initial items-center justify-center gap-1.5 rounded-lg py-1.5 px-3.5 text-xs font-semibold transition-all ${
+                  active
+                    ? 'bg-camel-500 text-charcoal-900 shadow-sm'
+                    : 'text-charcoal-600 hover:text-charcoal-900 hover:bg-cream-50/50'
+                }`}
+              >
+                {t.label}
+              </button>
+            )
+          })}
         </div>
       </div>
-    </div>
+
+      <div className="min-h-[480px]">
+        {activeTab === 'ranking' && (
+          <div
+            key="ranking"
+            id="tab-panel-ranking"
+            role="tabpanel"
+            aria-labelledby="tab-ranking"
+            className="cs-tab-panel-enter"
+          >
+            <Suspense fallback={fallback}>
+              <ShowRanking />
+            </Suspense>
+          </div>
+        )}
+        {calendarVisible && activeTab === 'calendar' && (
+          <div
+            key="calendar"
+            id="tab-panel-calendar"
+            role="tabpanel"
+            aria-labelledby="tab-calendar"
+            className="cs-tab-panel-enter"
+          >
+            <Suspense fallback={fallback}>
+              <ShowCalendar />
+            </Suspense>
+          </div>
+        )}
+        {activeTab === 'judges' && (
+          <div
+            key="judges"
+            id="tab-panel-judges"
+            role="tabpanel"
+            aria-labelledby="tab-judges"
+            className="cs-tab-panel-enter"
+          >
+            <Suspense fallback={fallback}>
+              <ShowJudges />
+            </Suspense>
+          </div>
+        )}
+      </div>
+
+      <div className="pt-2 text-center">
+        <RKFAttribution variant="inline" />
+      </div>
+    </>
   )
 }
 

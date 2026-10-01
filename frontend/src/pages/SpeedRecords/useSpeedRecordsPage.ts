@@ -4,6 +4,7 @@ import { useSpeedRecords, useCoursingRecords } from '../../hooks/useStaticData'
 import { formatRecordDate, getRecordYear, parseRecordDate, parseRecordHistory } from '../../lib/recordDates'
 import { buildSexByDogMap } from './stats/doninoStatsUtils'
 import type { GroupBy } from './stats/constants'
+import type { DogsIndexEntry } from '../../lib/competingBreeds'
 
 function doninoRecordsFromQuery(
   result: { success: boolean; data?: unknown } | undefined,
@@ -52,9 +53,13 @@ export function useSpeedRecordsPage() {
   const speedRecordsQuery = useSpeedRecords('', '', 10000, '', '')
   const coursingRecordsQuery = useCoursingRecords('', 10000, '', '')
 
-  const [filterYears, setFilterYears] = useState(() => {
-    const years = searchParams.get('years')
-    return years ? years.split(',') : []
+  const CURRENT_SEASON = String(new Date().getFullYear())
+
+  const [filterYears, setFilterYears] = useState<string[]>(() => {
+    const raw = searchParams.get('years') ?? searchParams.get('year')
+    if (raw === null) return [CURRENT_SEASON]
+    if (raw === '' || raw === 'all') return []
+    return raw.split(',').filter(Boolean)
   })
   const [filterBreeds, setFilterBreeds] = useState(() => {
     const breeds = searchParams.get('breeds')
@@ -372,8 +377,12 @@ export function useSpeedRecordsPage() {
     [coursingSortField, coursingSortDirection]
   )
 
+  const onYearChange = useCallback((year: string) => {
+    setFilterYears(year ? [year] : [])
+  }, [])
+
   const clearAllFilters = useCallback(() => {
-    setFilterYears([])
+    setFilterYears([CURRENT_SEASON])
     setFilterBreeds([])
     setFilterSexes([])
     setSearchQuery('')
@@ -381,20 +390,23 @@ export function useSpeedRecordsPage() {
     setFilterMaxSpeed('')
     setFilterMinTime('')
     setFilterMaxTime('')
-  }, [])
+  }, [CURRENT_SEASON])
 
   const clearPanelFilters = useCallback(() => {
-    setFilterYears([])
+    setFilterYears([CURRENT_SEASON])
     setFilterBreeds([])
     setFilterSexes([])
     setFilterMinSpeed('')
     setFilterMaxSpeed('')
     setFilterMinTime('')
     setFilterMaxTime('')
-  }, [])
+  }, [CURRENT_SEASON])
+
+  const isYearNonDefault =
+    filterYears.length !== 1 || filterYears[0] !== CURRENT_SEASON
 
   const hasActiveFilters = Boolean(
-    filterYears.length > 0 ||
+    isYearNonDefault ||
       filterBreeds.length > 0 ||
       filterSexes.length > 0 ||
       searchQuery ||
@@ -426,11 +438,33 @@ export function useSpeedRecordsPage() {
 
   const sexes = [...new Set(bestSpeedRecords.map((r) => r.sex) as string[])].sort()
 
+  const dogIndex = useMemo<DogsIndexEntry[]>(() => {
+    const dogMap = new Map<string, string>()
+    for (const r of bestSpeedRecords) {
+      if (r.name && r.breed) {
+        const key = `${r.name.trim().toLowerCase()}_${r.breed.trim().toLowerCase()}`
+        dogMap.set(key, r.breed)
+      }
+    }
+    for (const r of bestCoursingRecords) {
+      if (r.name && r.breed) {
+        const key = `${r.name.trim().toLowerCase()}_${r.breed.trim().toLowerCase()}`
+        dogMap.set(key, r.breed)
+      }
+    }
+    return Array.from(dogMap.values()).map((breed) => ({
+      breed,
+      competition_count: 1,
+    }))
+  }, [bestSpeedRecords, bestCoursingRecords])
+
   return {
     view,
     searchQuery,
     setSearchQuery,
     filterYears,
+    onYearChange,
+    currentSeason: CURRENT_SEASON,
     filterBreeds,
     filterSexes,
     filterMinSpeed,
@@ -465,5 +499,6 @@ export function useSpeedRecordsPage() {
     years,
     breeds,
     sexes,
+    dogIndex,
   }
 }

@@ -68,9 +68,9 @@ jobs:
           if [ "${{ inputs.full_sync }}" = "true" ] || git log -1 --pretty=%B | grep -q '\[full sync\]'; then
             echo "mode=full" >> $GITHUB_OUTPUT
             echo "Full sync requested"
-          elif ! aws s3 ls "s3://${{ secrets.S3_BUCKET }}/data/v1/meta.json" --endpoint-url https://storage.yandexcloud.net > /dev/null 2>&1; then
+          elif ! aws s3 ls "s3://${{ secrets.S3_BUCKET }}/data/v1/ui-flags.json" --endpoint-url https://storage.yandexcloud.net > /dev/null 2>&1; then
             echo "mode=full" >> $GITHUB_OUTPUT
-            echo "data/v1/meta.json not found on S3 — triggering automatic full sync recovery"
+            echo "data/v1/ui-flags.json not found on S3 — triggering automatic full sync recovery"
           elif git diff --quiet HEAD~1 HEAD -- data/v1/; then
             echo "mode=none" >> $GITHUB_OUTPUT
             echo "No data files changed. Skipping data deploy step."

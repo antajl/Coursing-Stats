@@ -64,36 +64,37 @@ function SpeedRecords() {
   )
 
   return (
-    <div className="space-y-6">
+    <>
       <SEO
         title="Курсинг в Донино: рекорды скорости и бега 350 м"
         description="Рекорды курсинга в Донино: замер скорости (км/ч) и бега борзых на 350 м (сек) на полигоне Курсинг Донино. Таблицы по породам, статистика и история."
         canonicalUrl="https://coursing-stats.ru/speed-records"
         keywords="курсинг в Донино, курсинг Донино, рекорды Донино, замер скорости, бега 350 м, скорость собаки"
       />
-      <div className="relative rounded-2xl border border-cream-300 bg-cream-50/90 px-4 py-3 shadow-xl backdrop-blur-lg md:px-6 md:py-4">
-        <DoninoAttribution variant="footnote" className="hidden sm:inline-flex absolute right-0 top-0 z-10" />
-        <div className="mb-4 flex flex-wrap items-center justify-between gap-2 border-b border-old-money-200/60 pb-3 md:hidden">
-          <div className="flex w-full items-center gap-1.5 rounded-xl border border-old-money-200/60 bg-cream-100 p-1 sm:w-auto">
-            {tabs.map((t) => {
-              const active = (t.id === 'stats' && view === 'stats') || (t.id === 'records' && view === 'table')
-              return (
-                <button
-                  key={t.id}
-                  type="button"
-                  onClick={() => handleTabChange(t.id as 'records' | 'stats')}
-                  className={`flex flex-1 sm:flex-initial items-center justify-center gap-1.5 rounded-lg py-1.5 px-3.5 text-xs font-semibold transition-all ${
-                    active
-                      ? 'bg-camel-500 text-charcoal-900 shadow-sm'
-                      : 'text-charcoal-600 hover:text-charcoal-900 hover:bg-cream-50/50'
-                  }`}
-                >
-                  {t.label}
-                </button>
-              )
-            })}
-          </div>
+      {/* Mobile-only tab switcher */}
+      <div className="mb-4 flex items-center justify-between md:hidden">
+        <div className="flex w-full items-center gap-1.5 rounded-xl border border-old-money-200/80 bg-white/80 p-1 shadow-xs sm:w-auto">
+          {tabs.map((t) => {
+            const active = (t.id === 'stats' && view === 'stats') || (t.id === 'records' && view === 'table')
+            return (
+              <button
+                key={t.id}
+                type="button"
+                onClick={() => handleTabChange(t.id as 'records' | 'stats')}
+                className={`flex flex-1 sm:flex-initial items-center justify-center gap-1.5 rounded-lg py-1.5 px-3.5 text-xs font-semibold transition-all ${
+                  active
+                    ? 'bg-camel-500 text-charcoal-900 shadow-sm'
+                    : 'text-charcoal-600 hover:text-charcoal-900 hover:bg-cream-50/50'
+                }`}
+              >
+                {t.label}
+              </button>
+            )
+          })}
         </div>
+      </div>
+
+      <div className="space-y-4">
         <DoninoPageToolbar
           view={view}
           searchQuery={page.searchQuery}
@@ -116,14 +117,17 @@ function SpeedRecords() {
           breeds={page.breeds}
           sexes={page.sexes}
           onToggleFilter={page.toggleFilter}
+          onYearChange={page.onYearChange}
+          currentSeason={page.currentSeason}
           onClearFilters={page.clearAllFilters}
           onClearPanelFilters={page.clearPanelFilters}
           hasActiveFilters={page.hasActiveFilters}
+          dogIndex={page.dogIndex}
           speedRecords={page.filteredRecords}
           coursingRecords={page.filteredCoursingRecords}
         />
 
-        <div className="mt-6">
+        <div>
           {page.loading && <SkeletonLoader variant="card" count={6} />}
 
           {page.error && !page.loading && (
@@ -162,11 +166,12 @@ function SpeedRecords() {
             />
           )}
         </div>
-        <div className="mt-4 border-t border-old-money-200/50 pt-3 text-center sm:hidden">
+
+        <div className="pt-2 text-center">
           <DoninoAttribution variant="inline" />
         </div>
       </div>
-    </div>
+    </>
   )
 }
 
