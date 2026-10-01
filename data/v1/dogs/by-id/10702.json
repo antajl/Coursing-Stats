@@ -1,19 +1,28 @@
 {
   "schema": "coursing-stats/dog-v1",
-  "exported_at": "2026-08-08T23:28:35.959Z",
+  "exported_at": "2026-10-01T09:59:01.041Z",
   "id": 10702,
   "dog_key": "valpain-pek-korwin-prince-of-amber--уиппет",
   "name_lat": "VALPAIN PEK KORWIN PRINCE OF AMBER",
-  "name_ru": null,
+  "name_ru": "ВАЛЬПАЙН ПЭК КОРВИН ПРИНЦ ОФ ЭМБЕР /VALPAIN PEK KORWIN PRINCE OF AMBER",
   "breed": "УИППЕТ",
   "sex": null,
   "owner": null,
   "competition_ids": [
+    1265,
     20240525,
     20240616
   ],
   "competition_files": [
     "competitions/2024/05-май/20240525--cacl-25-26052024-.json",
-    "competitions/2024/06-июнь/20240616--cacl-16062024-.json"
+    "competitions/2024/06-июнь/20240616--cacl-16062024-.json",
+    "competitions/2025/05-май/1265-чркф-курсинг-борзых.json"
+  ],
+  "pedigree_url": "https://whippet.breedarchive.com/animal/view/valpain-pek-korwin-prince-of-amber-991009c2-9e04-40eb-9bb6-8a1a4f29598a",
+  "merged_alias_ids": [
+    7683
+  ],
+  "merged_aliases": [
+    "ВАЛЬПАЙН ПЭК КОРВИН ПРИНЦ ОФ ЭМБЕР /VALPAIN PEK KORWIN PRINCE OF AMBER"
   ]
 }

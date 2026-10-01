@@ -2,7 +2,7 @@
   "schema": "coursing-stats/index-top-score-v1",
   "year": 2023,
   "rating_score_version": "cs-v1",
-  "count": 414,
+  "count": 411,
   "items": [
     {
       "dog_id": 570,
@@ -485,9 +485,9 @@
       "rating_score": 87.3
     },
     {
-      "dog_id": 8519,
-      "name_lat": "BEARS VICTORY KRYLATAYA LEGENDA",
-      "name_ru": "БЕАРС ВИКТОРИ КРЫЛАТАЯ ЛЕГЕНДА",
+      "dog_id": 550,
+      "name_lat": "БЕАРС ВИКТОРИ КРЫЛАТАЯ ЛЕГЕНДА /BEARS VICTORY KRYLATAYA LEGENDA",
+      "name_ru": "БЕАРС ВИКТОРИ КРЫЛАТАЯ ЛЕГЕНДА /BEARS VICTORY KRYLATAYA LEGENDA",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "year": 2023,
       "best_score": 272,
@@ -1760,8 +1760,8 @@
       "rating_score": 86.79
     },
     {
-      "dog_id": 10667,
-      "name_lat": "PRELESTA",
+      "dog_id": 9379,
+      "name_lat": "ПРЕЛЕСТА",
       "name_ru": "ПРЕЛЕСТА",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "year": 2023,
@@ -1867,7 +1867,7 @@
     {
       "dog_id": 10621,
       "name_lat": "KETLIN DARCY",
-      "name_ru": null,
+      "name_ru": "КЕТЛИН ДАРСИ /KETLIN DARCY",
       "breed": "УИППЕТ",
       "year": 2023,
       "best_score": 350,
@@ -2045,6 +2045,21 @@
       "rating_score": 87.41
     },
     {
+      "dog_id": 6285,
+      "name_lat": "JANI SHA DEN IZ SCHNEIDER RICH",
+      "name_ru": "ЖАНИ ША ДЕН ИЗ ШНЕЙДЕР РИЧ",
+      "breed": "ФАРАОНОВА СОБАКА",
+      "year": 2023,
+      "best_score": 349,
+      "total_starts": 3,
+      "best_judge_score": 91,
+      "avg_judge_score": 86.33,
+      "year_from": 2023,
+      "year_to": 2023,
+      "judge_eval_count": 12,
+      "rating_score": 87.27
+    },
+    {
       "dog_id": 9458,
       "name_lat": "ASTI HONEY JOY",
       "name_ru": "АСТИ ХОНЕЙ ДЖОЙ",
@@ -2058,21 +2073,6 @@
       "year_to": 2023,
       "judge_eval_count": 12,
       "rating_score": 86.81
-    },
-    {
-      "dog_id": 6285,
-      "name_lat": "JANI SHA DEN IZ SCHNEIDER RICH",
-      "name_ru": "ЖАНИ ША ДЕН ИЗ ШНЕЙДЕР РИЧ",
-      "breed": "ФАРАОНОВА СОБАКА",
-      "year": 2023,
-      "best_score": 349,
-      "total_starts": 2,
-      "best_judge_score": 91,
-      "avg_judge_score": 87,
-      "year_from": 2023,
-      "year_to": 2023,
-      "judge_eval_count": 8,
-      "rating_score": 87.19
     },
     {
       "dog_id": 9400,
@@ -2120,8 +2120,8 @@
       "rating_score": 86.95
     },
     {
-      "dog_id": 10597,
-      "name_lat": "CHERNOSLIV",
+      "dog_id": 9258,
+      "name_lat": "ЧЕРНОСЛИВ",
       "name_ru": "ЧЕРНОСЛИВ",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "year": 2023,
@@ -2330,8 +2330,8 @@
       "rating_score": 86.5
     },
     {
-      "dog_id": 10651,
-      "name_lat": "BEL ETUAL LIBERTANGO",
+      "dog_id": 9532,
+      "name_lat": "БЕЛЬ ЭТУАЛЬ ЛИБЕРТАНГО",
       "name_ru": "БЕЛЬ ЭТУАЛЬ ЛИБЕРТАНГО",
       "breed": "САЛЮКИ",
       "year": 2023,
@@ -2510,8 +2510,8 @@
       "rating_score": 86.54
     },
     {
-      "dog_id": 10649,
-      "name_lat": "RUSSKAYA RAPSODIYA ADAMANT",
+      "dog_id": 9428,
+      "name_lat": "РУССКАЯ РАПСОДИЯ АДАМАНТ",
       "name_ru": "РУССКАЯ РАПСОДИЯ АДАМАНТ",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "year": 2023,
@@ -2752,7 +2752,7 @@
     {
       "dog_id": 10615,
       "name_lat": "VALPAIN PEK KLARISSA",
-      "name_ru": null,
+      "name_ru": "ВАЛЬПАЙН ПЭК КЛАРИССА /VALPAIN PEK KLARISSA",
       "breed": "УИППЕТ",
       "year": 2023,
       "best_score": 345,
@@ -3277,7 +3277,7 @@
     {
       "dog_id": 10622,
       "name_lat": "ILIFIA IZ SCHNEIDER RICH",
-      "name_ru": null,
+      "name_ru": "ИЛИФИЯ ИЗ ШНЕЙДЕР РИЧ /ILIFIA IZ SCHNEIDER RICH",
       "breed": "ФАРАОНОВА СОБАКА",
       "year": 2023,
       "best_score": 342,
@@ -3536,21 +3536,6 @@
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "year": 2023,
       "best_score": 340,
-      "total_starts": 1,
-      "best_judge_score": 88,
-      "avg_judge_score": 85,
-      "year_from": 2023,
-      "year_to": 2023,
-      "judge_eval_count": 4,
-      "rating_score": 85.95
-    },
-    {
-      "dog_id": 10625,
-      "name_lat": "GANI SHA DEN IZ SCHNEIDER RICH",
-      "name_ru": "ЖАНИ ША ДЕН ИЗ ШНЕЙДЕР РИЧ",
-      "breed": "ФАРАОНОВА СОБАКА",
-      "year": 2023,
-      "best_score": 323,
       "total_starts": 1,
       "best_judge_score": 88,
       "avg_judge_score": 85,
@@ -3875,6 +3860,21 @@
       "rating_score": 85.78
     },
     {
+      "dog_id": 447,
+      "name_lat": "МИСТРЕСС ОФ КОППЕР ХИЛЛ /MISTRESS OF COPPER HILL",
+      "name_ru": "МИСТРЕСС ОФ КОППЕР ХИЛЛ /MISTRESS OF COPPER HILL",
+      "breed": "УИППЕТ",
+      "year": 2023,
+      "best_score": 337,
+      "total_starts": 2,
+      "best_judge_score": 86,
+      "avg_judge_score": 84.25,
+      "year_from": 2023,
+      "year_to": 2023,
+      "judge_eval_count": 4,
+      "rating_score": 85.78
+    },
+    {
       "dog_id": 9236,
       "name_lat": "КНОПА",
       "name_ru": "КНОПА",
@@ -3903,21 +3903,6 @@
       "year_to": 2023,
       "judge_eval_count": 4,
       "rating_score": 85.91
-    },
-    {
-      "dog_id": 7973,
-      "name_lat": "МИСТРЕСС ОФ КОППЕР ХИЛЛ",
-      "name_ru": "МИСТРЕСС ОФ КОППЕР ХИЛЛ",
-      "breed": "УИППЕТ",
-      "year": 2023,
-      "best_score": 337,
-      "total_starts": 1,
-      "best_judge_score": 86,
-      "avg_judge_score": 84.25,
-      "year_from": 2023,
-      "year_to": 2023,
-      "judge_eval_count": 4,
-      "rating_score": 85.49
     },
     {
       "dog_id": 9325,
@@ -3965,8 +3950,8 @@
       "rating_score": 85.96
     },
     {
-      "dog_id": 10598,
-      "name_lat": "OBEREG RUSI AMETIST",
+      "dog_id": 9260,
+      "name_lat": "ОБЕРЕГ РУСИ АМЕТИСТ",
       "name_ru": "ОБЕРЕГ РУСИ АМЕТИСТ",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "year": 2023,
@@ -4655,6 +4640,21 @@
       "rating_score": 85.19
     },
     {
+      "dog_id": 7445,
+      "name_lat": "ЦЕННЫЙ ПРИЗ ЕСКЛЮЗИВО /TCENNIY PRIZE ESCLUSIVO",
+      "name_ru": "ЦЕННЫЙ ПРИЗ ЕСКЛЮЗИВО /TCENNIY PRIZE ESCLUSIVO",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "year": 2023,
+      "best_score": 328,
+      "total_starts": 2,
+      "best_judge_score": 87,
+      "avg_judge_score": 81.63,
+      "year_from": 2023,
+      "year_to": 2023,
+      "judge_eval_count": 8,
+      "rating_score": 84.95
+    },
+    {
       "dog_id": 9296,
       "name_lat": "LIBERTY INDIGO STAR",
       "name_ru": "LIBERTY INDIGO STAR",
@@ -4689,21 +4689,6 @@
       "name_lat": "TIM SPIRIT KAJLAS",
       "name_ru": "TIM SPIRIT KAJLAS",
       "breed": "БАСЕНДЖИ",
-      "year": 2023,
-      "best_score": 328,
-      "total_starts": 1,
-      "best_judge_score": 85,
-      "avg_judge_score": 82,
-      "year_from": 2023,
-      "year_to": 2023,
-      "judge_eval_count": 4,
-      "rating_score": 84.86
-    },
-    {
-      "dog_id": 10628,
-      "name_lat": "TCENNIY PRIZE ESCLUSIVO /TCENNIY PRIZE ESCLUSIVO",
-      "name_ru": "TCENNIY PRIZE ESCLUSIVO /TCENNIY PRIZE ESCLUSIVO",
-      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "year": 2023,
       "best_score": 328,
       "total_starts": 1,
@@ -4970,21 +4955,6 @@
       "rating_score": 84.29
     },
     {
-      "dog_id": 7445,
-      "name_lat": "ЦЕННЫЙ ПРИЗ ЕСКЛЮЗИВО /TCENNIY PRIZE ESCLUSIVO",
-      "name_ru": "ЦЕННЫЙ ПРИЗ ЕСКЛЮЗИВО /TCENNIY PRIZE ESCLUSIVO",
-      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "year": 2023,
-      "best_score": 307,
-      "total_starts": 1,
-      "best_judge_score": 87,
-      "avg_judge_score": 81.25,
-      "year_from": 2023,
-      "year_to": 2023,
-      "judge_eval_count": 4,
-      "rating_score": 85
-    },
-    {
       "dog_id": 9218,
       "name_lat": "АСТ ПОИНТ КЛАБ ШЕКСПИР /AST POINT KLUB SHAKESPEARE",
       "name_ru": "АСТ ПОИНТ КЛАБ ШЕКСПИР /AST POINT KLUB SHAKESPEARE",
@@ -5195,10 +5165,10 @@
       "rating_score": 85.12
     },
     {
-      "dog_id": 9449,
-      "name_lat": "ADEL",
-      "name_ru": "ADEL",
-      "breed": "БИГЛЬ",
+      "dog_id": 665,
+      "name_lat": "ZHE TEM KASPER",
+      "name_ru": "ZHE TEM KASPER",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
       "year": 2023,
       "best_score": 316,
       "total_starts": 1,
@@ -5210,10 +5180,10 @@
       "rating_score": 84.08
     },
     {
-      "dog_id": 10629,
-      "name_lat": "ZHE TEM KASPER /ZHE TEM KASPER",
-      "name_ru": "ZHE TEM KASPER /ZHE TEM KASPER",
-      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "dog_id": 9449,
+      "name_lat": "ADEL",
+      "name_ru": "ADEL",
+      "breed": "БИГЛЬ",
       "year": 2023,
       "best_score": 316,
       "total_starts": 1,
@@ -5784,21 +5754,6 @@
       "name_lat": "DAKAR S KNJAZHESKOGO DVORA",
       "name_ru": "DAKAR S KNJAZHESKOGO DVORA",
       "breed": "БАСЕНДЖИ",
-      "year": 2023,
-      "best_score": null,
-      "total_starts": 1,
-      "best_judge_score": null,
-      "avg_judge_score": null,
-      "year_from": 2023,
-      "year_to": 2023,
-      "judge_eval_count": 0,
-      "rating_score": null
-    },
-    {
-      "dog_id": 447,
-      "name_lat": "МИСТРЕСС ОФ КОППЕР ХИЛЛ /MISTRESS OF COPPER HILL",
-      "name_ru": "МИСТРЕСС ОФ КОППЕР ХИЛЛ /MISTRESS OF COPPER HILL",
-      "breed": "УИППЕТ",
       "year": 2023,
       "best_score": null,
       "total_starts": 1,

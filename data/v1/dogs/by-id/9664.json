@@ -1,6 +1,6 @@
 {
   "schema": "coursing-stats/dog-v1",
-  "exported_at": "2026-07-08T00:31:32.188Z",
+  "exported_at": "2026-10-01T09:58:08.512Z",
   "id": 9664,
   "dog_key": "рус-догма-олэиинка-оста--басенджи",
   "name_lat": "РУС ДОГМА ОЛЭЙИНКА ОСТА",
@@ -9,9 +9,18 @@
   "sex": null,
   "owner": null,
   "competition_ids": [
-    1465
+    1465,
+    20240901
   ],
   "competition_files": [
-    "competitions/2024/09-сентябрь/1465-кубок-россии-cacl-по-курсингу-борзых.json"
+    "competitions/2024/09-сентябрь/1465-кубок-россии-cacl-по-курсингу-борзых.json",
+    "competitions/2024/09-сентябрь/20240901--01092024-.json"
+  ],
+  "pedigree_url": null,
+  "merged_alias_ids": [
+    10717
+  ],
+  "merged_aliases": [
+    "RUS DOGMA OLEYINKA OSTA"
   ]
 }
