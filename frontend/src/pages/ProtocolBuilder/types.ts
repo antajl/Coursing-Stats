@@ -21,9 +21,6 @@ export interface DogParticipant {
   id: string
   catalogNumber: string
   dogName: string
-  breed: string
-  sex: 'male' | 'female' | ''
-  className: string
   // Забег 1
   run1_heat: string
   run1_blanket: 'red' | 'white' | 'blue' | ''
@@ -43,6 +40,14 @@ export interface DogParticipant {
   awards: string[]
 }
 
+export interface CategoryGroup {
+  id: string
+  breed: string
+  className: string
+  sex: 'male' | 'female' | 'mixed'
+  dogs: DogParticipant[]
+}
+
 export function createEmptyScores(): CoursingScores {
   return {
     speed: '',
@@ -58,9 +63,6 @@ export function createNewParticipant(catalogNum: number = 1): DogParticipant {
     id: 'dog_' + Math.random().toString(36).substring(2, 9),
     catalogNumber: String(catalogNum),
     dogName: '',
-    breed: 'Уиппет',
-    sex: 'male',
-    className: 'Стандартный',
     run1_heat: '1',
     run1_blanket: 'red',
     run1_scores: createEmptyScores(),
@@ -77,6 +79,26 @@ export function createNewParticipant(catalogNum: number = 1): DogParticipant {
   }
 }
 
+export function createNewCategory(
+  breed: string = 'Басенджи',
+  className: string = 'Стандартный',
+  sex: 'male' | 'female' | 'mixed' = 'male',
+  initialDogsCount: number = 2,
+  startingCatalogNum: number = 1
+): CategoryGroup {
+  const dogs: DogParticipant[] = []
+  for (let i = 0; i < initialDogsCount; i++) {
+    dogs.push(createNewParticipant(startingCatalogNum + i))
+  }
+  return {
+    id: 'cat_' + Math.random().toString(36).substring(2, 9),
+    breed,
+    className,
+    sex,
+    dogs
+  }
+}
+
 export function calculateRoundSum(scores: CoursingScores): number {
   const nums = [scores.speed, scores.enthusiasm, scores.intelligence, scores.agility, scores.endurance]
   return nums.reduce<number>((acc, v) => acc + (typeof v === 'number' ? v : 0), 0)
@@ -85,4 +107,9 @@ export function calculateRoundSum(scores: CoursingScores): number {
 export function calculateTotalScore(p: DogParticipant): number {
   if (p.disqualified) return 0
   return calculateRoundSum(p.run1_scores) + calculateRoundSum(p.run2_scores)
+}
+
+export function formatCategoryTitle(cat: CategoryGroup): string {
+  const sexLabel = cat.sex === 'male' ? 'Кобели' : (cat.sex === 'female' ? 'Суки' : 'Смешанный')
+  return `${cat.breed} — ${cat.className} — ${sexLabel}`
 }
