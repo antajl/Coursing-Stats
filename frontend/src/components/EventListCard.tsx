@@ -18,7 +18,7 @@ export default function EventListCard({
   return (
     <div className={`bg-gradient-to-br from-camel-100/95 to-cream-50/95 backdrop-blur-md rounded-xl p-3.5 md:p-4 shadow-xl border border-camel-200/50 hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-200 cursor-pointer flex flex-col justify-between ${className}`}>
       <div className="flex items-center justify-between mb-2 pb-1.5 border-b border-charcoal-200/70">
-        <p className="text-xs font-bold uppercase tracking-wider text-camel-800">Ближайшие события</p>
+        <p className="text-xs md:text-sm font-bold uppercase tracking-wider text-camel-800">Последние результаты</p>
         <span className="text-[10px] uppercase tracking-wider text-charcoal-400 font-semibold">Календарь</span>
       </div>
       <div className="flex flex-col md:flex-row gap-3 md:gap-3.5 items-stretch flex-1">
@@ -50,8 +50,8 @@ export default function EventListCard({
             ))
           ) : (
             <EmptyState
-              title="Нет ближайших соревнований"
-              description="Проверьте позже"
+              title="Нет результатов"
+              description="Протоколы появятся после соревнований"
             />
           )}
         </div>
@@ -84,8 +84,8 @@ export default function EventListCard({
             ))
           ) : (
             <EmptyState
-              title="Нет ближайших выставок"
-              description="Проверьте позже"
+              title="Нет результатов"
+              description="Протоколы появятся после выставок"
             />
           )}
         </div>
