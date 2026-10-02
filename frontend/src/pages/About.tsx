@@ -1,20 +1,14 @@
 import { useState } from 'react'
 import {
-  Award,
   Bot,
   Check,
   Code2,
   Copy,
   ExternalLink,
-  Flag,
-  Gauge,
   Mail,
   MapPin,
   MessageCircle,
-  Scale,
   Send,
-  Trophy,
-  Users,
 } from 'lucide-react'
 import { ExternalHref } from './Guide/components/GuideUi'
 import { SEO } from '../components/SEO'
@@ -101,82 +95,32 @@ function DiscordContact() {
   )
 }
 
-const AUDIENCE_BENEFITS = [
-  {
-    icon: Trophy,
-    title: 'Владельцам и заводчикам',
-    description:
-      'Полная история собаки: участия, баллы, медали, выставочные сертификаты и рекорды скорости Донино в едином профиле со ссылками на первоисточники.',
-  },
-  {
-    icon: Users,
-    title: 'Клубам и организаторам',
-    description:
-      'Архив соревнований и выставок, рейтинги сезонов по породам и сводная статистика участников без ручного перебора разрозненных таблиц.',
-  },
-  {
-    icon: Scale,
-    title: 'Судьям и экспертам',
-    description:
-      'Сводная история судейских назначений, статистика выставочных оценок по породам и архив результатов состязаний прошлых лет.',
-  },
-] as const
-
-const ECOSYSTEM_SECTIONS = [
-  {
-    icon: Flag,
-    title: 'Соревнования',
-    description:
-      'Курсинг, БЗМП и бега борзых. Топ-медали, рейтинг очков CS, профили спортивных судей и детальные протоколы забегов.',
-  },
-  {
-    icon: Award,
-    title: 'Выставки РКФ',
-    description:
-      'Выставочные рейтинги собак, история сертификатов (CAC, CACIB, ЧРКФ, BIG, BIS) и сводная статистика оценок по породам.',
-  },
-  {
-    icon: Gauge,
-    title: 'Полигон Донино',
-    description:
-      'Замеры чистой скорости бега (км/ч) и спринтерские рекорды на дистанции 350 метров с электронным хронометражем.',
-  },
-  {
-    icon: Bot,
-    title: 'Telegram-бот',
-    description:
-      'Быстрый поиск собак, карточки участников, результаты состязаний и уведомления в кармане через @coursing_stats_bot.',
-    href: 'https://t.me/coursing_stats_bot',
-    linkText: 'Открыть бота',
-  },
-] as const
-
 const DATA_SOURCES = [
   {
     name: 'Procoursing.ru',
-    role: 'Календарь, результаты и протоколы соревнований по курсингу и бегам',
+    role: 'Протоколы и результаты соревнований по курсингу и круговому треку',
     url: 'http://procoursing.ru',
   },
   {
     name: 'Российская кинологическая федерация (РКФ)',
-    role: 'Календарь и выставочные протоколы рингов собак',
+    role: 'Календарь, регламенты и каталоги выставок собак',
     url: 'https://rkf.org.ru/dressirovka-i-sport/polozhenija/',
   },
   {
-    name: 'Беговой полигон Донино',
-    role: 'Замеры максимальной скорости бега борзых (runningdog.ru)',
+    name: 'Полигон Донино (runningdog.ru)',
+    role: 'Замеры максимальной скорости бега борзых (км/ч)',
     url: 'https://runningdog.ru/',
   },
   {
-    name: 'Рекорды Донино (курсинг и бега)',
-    role: 'Хронометраж и спринтерские рекорды на дистанции 350 м',
+    name: 'Таблицы рекордов Донино',
+    role: 'Спринтерские результаты на дистанции 350 метров',
     url: 'https://docs.google.com/spreadsheets/d/1NTiY3HXZIkXE8xTeXZESgMKaZsEXunmcWhTfhhkoKyE/edit?gid=1787526009#gid=1787526009',
   },
 ] as const
 
 export default function AboutPage() {
   return (
-    <div className="mx-auto max-w-5xl space-y-8 pb-8">
+    <div className="mx-auto max-w-4xl space-y-6 pb-8">
       <SEO
         title="О проекте Coursing Stats — независимый архив соревнований и выставок собак в России"
         description="Некоммерческий электронный архив соревнований по курсингу, бегов борзых, выставок РКФ и замеров Донино в России. Профили собак, протоколы стартов и статистика."
@@ -201,13 +145,16 @@ export default function AboutPage() {
       />
 
       {/* Hero section */}
-      <section className="rounded-2xl border border-old-money-200/90 bg-white/90 p-5 sm:p-8 shadow-sm">
+      <section className="rounded-2xl border border-old-money-200/90 bg-white/90 p-5 sm:p-7 shadow-sm">
         <div className="flex flex-wrap items-center gap-2">
           <span className="inline-flex items-center rounded-full border border-camel-200/80 bg-camel-50 px-2.5 py-0.5 text-xs font-semibold text-camel-800">
             Некоммерческий проект
           </span>
           <span className="inline-flex items-center rounded-full border border-old-money-200 bg-cream-100/60 px-2.5 py-0.5 text-xs font-medium text-charcoal-600">
-            Открытые данные
+            Параллельный справочник
+          </span>
+          <span className="inline-flex items-center rounded-full border border-old-money-200 bg-cream-100/60 px-2.5 py-0.5 text-xs font-medium text-charcoal-600">
+            Россия
           </span>
         </div>
 
@@ -215,105 +162,36 @@ export default function AboutPage() {
           О проекте Coursing Stats
         </h1>
 
-        <p className="mt-3 text-base leading-relaxed text-charcoal-700 sm:text-lg">
-          Сайт изначально создавался как личный проект для себя — чтобы иметь под рукой удобный и надежный архив
-          соревнований по курсингу, бегов борзых, выставок и скоростных замеров. Со временем этот архив вырос,
-          и я решил открыть его для всех любителей пород и кинологического спорта, кому это тоже может быть полезно.
+        <p className="mt-3 text-sm sm:text-base leading-relaxed text-charcoal-700">
+          Проект задумывался из простого и практичного интереса: собрать объективную статистику работы
+          судей, объединить разрозненные результаты состязаний прошлых лет и сделать удобные интерактивные
+          профили собак, где наглядно видны все их старты, оценки, медали, скоростные замеры и движение в
+          рейтингах.
         </p>
 
-        <p className="mt-2.5 text-sm leading-relaxed text-charcoal-600">
-          Огромный и тяжелый труд по организации состязаний, судейству, составлению регламентов и подсчету результатов на полях
-          ведут кинологические клубы, секретариат и судьи на местах. Этот сайт ничего не регламентирует самостоятельно —
-          он лишь бережно систематизирует уже опубликованные официальные протоколы в единый структурированный архив.
+        <p className="mt-2.5 text-xs sm:text-sm leading-relaxed text-charcoal-600">
+          Огромный и тяжелый труд по организации состязаний, судейству, составлению регламентов и подсчету
+          результатов на полях ведут кинологические клубы, секретариат и судьи на местах. Coursing Stats
+          ничего не регламентирует самостоятельно — сервис лишь бережно систематизирует уже опубликованные
+          официальные протоколы в единый структурированный архив.
         </p>
 
-        <p className="mt-2 text-sm leading-relaxed text-charcoal-500">
-          На основе этих сохраненных протоколов автоматически выстраиваются профили собак (чтобы вся история стартов
-          и наград была собрана в одном месте), профили судей, выставочная и беговая статистика, а также рейтинги сезонов.
+        <p className="mt-2 text-xs sm:text-sm leading-relaxed text-charcoal-500">
+          Сайт не претендует на официальный статус и не конкурирует с другими ресурсами, существуя как
+          удобный параллельный справочник для всех любителей борзых и спортивных собак.
         </p>
       </section>
 
-      {/* Audience benefits */}
-      <section className="space-y-3">
-        <h2 className="font-serif text-lg font-bold text-charcoal-900 sm:text-xl">
-          Кому полезен сервис
-        </h2>
-        <div className="grid gap-3 md:grid-cols-3">
-          {AUDIENCE_BENEFITS.map((item) => {
-            const Icon = item.icon
-            return (
-              <div
-                key={item.title}
-                className="flex flex-col rounded-xl border border-old-money-200/80 bg-cream-50/50 p-4 sm:p-5"
-              >
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-old-money-200/80 bg-white text-camel-700 shadow-sm">
-                  <Icon className="h-5 w-5" aria-hidden />
-                </div>
-                <h3 className="mt-3 font-serif text-base font-bold text-charcoal-900">
-                  {item.title}
-                </h3>
-                <p className="mt-1.5 text-xs sm:text-sm leading-relaxed text-charcoal-600">
-                  {item.description}
-                </p>
-              </div>
-            )
-          })}
-        </div>
-      </section>
-
-      {/* Project Ecosystem */}
-      <section className="space-y-3">
-        <h2 className="font-serif text-lg font-bold text-charcoal-900 sm:text-xl">
-          Разделы платформы
-        </h2>
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {ECOSYSTEM_SECTIONS.map((sec) => {
-            const Icon = sec.icon
-            return (
-              <div
-                key={sec.title}
-                className="flex flex-col justify-between rounded-xl border border-old-money-200/80 bg-white/80 p-4 sm:p-4.5"
-              >
-                <div>
-                  <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-cream-100 text-camel-700">
-                    <Icon className="h-4.5 w-4.5" aria-hidden />
-                  </div>
-                  <h3 className="mt-2.5 font-serif text-base font-bold text-charcoal-900">
-                    {sec.title}
-                  </h3>
-                  <p className="mt-1 text-xs leading-relaxed text-charcoal-600">
-                    {sec.description}
-                  </p>
-                </div>
-                {sec.href && (
-                  <div className="mt-3 pt-2">
-                    <a
-                      href={sec.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-camel-700 transition-colors hover:text-camel-800"
-                    >
-                      {sec.linkText}
-                      <ExternalLink className="h-3.5 w-3.5" aria-hidden />
-                    </a>
-                  </div>
-                )}
-              </div>
-            )
-          })}
-        </div>
-      </section>
-
-      {/* Data sources & Openness grid */}
+      {/* Two columns: Sources and Tools */}
       <div className="grid gap-4 md:grid-cols-2">
         {/* Sources */}
-        <section className="flex flex-col justify-between rounded-xl border border-old-money-200/90 bg-white/80 p-4 sm:p-6">
+        <section className="flex flex-col justify-between rounded-xl border border-old-money-200/90 bg-white/80 p-4 sm:p-5">
           <div>
-            <h2 className="font-serif text-lg font-bold text-charcoal-900">
-              Источники данных
+            <h2 className="font-serif text-base sm:text-lg font-bold text-charcoal-900">
+              Первоисточники данных
             </h2>
             <p className="mt-1 text-xs text-charcoal-500">
-              Все сведения агрегируются исключительно из публичных официальных источников:
+              Сведения агрегируются исключительно из публичных официальных ресурсов:
             </p>
             <ul className="mt-3 space-y-2.5 text-xs sm:text-sm text-charcoal-700">
               {DATA_SOURCES.map((source) => (
@@ -328,36 +206,49 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Open source & architecture */}
-        <section className="flex flex-col justify-between rounded-xl border border-old-money-200/90 bg-white/80 p-4 sm:p-6">
-          <div>
-            <h2 className="font-serif text-lg font-bold text-charcoal-900">
-              Открытость и технологии
-            </h2>
-            <p className="mt-2 text-xs sm:text-sm leading-relaxed text-charcoal-600">
-              Проект ориентирован на максимальную скорость и автономность. Статическая архитектура с
-              распределением данных через CDN обеспечивает моментальную загрузку каталогов и профилей даже
-              в полевых условиях при нестабильной мобильной связи.
-            </p>
+        {/* Telegram bot & Open source */}
+        <section className="flex flex-col justify-between rounded-xl border border-old-money-200/90 bg-white/80 p-4 sm:p-5">
+          <div className="space-y-4">
+            <div>
+              <h2 className="font-serif text-base sm:text-lg font-bold text-charcoal-900">
+                Telegram-бот и инструменты
+              </h2>
+              <div className="mt-3 rounded-lg border border-old-money-200/80 bg-cream-50/60 p-3.5">
+                <div className="flex items-center gap-2">
+                  <Bot className="h-4.5 w-4.5 text-camel-700" aria-hidden />
+                  <span className="text-xs font-semibold text-charcoal-900">@coursing_stats_bot</span>
+                </div>
+                <p className="mt-1.5 text-xs leading-relaxed text-charcoal-600">
+                  Карманный помощник для смартфонов: быстрый поиск карточки любой собаки по кличке,
+                  просмотр судей и свежих результатов состязаний прямо на поле или у ринга.
+                </p>
+                <div className="mt-2.5">
+                  <a
+                    href="https://t.me/coursing_stats_bot"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-camel-700 hover:text-camel-800"
+                  >
+                    <span>Открыть бота в Telegram</span>
+                    <ExternalLink className="h-3 w-3" aria-hidden />
+                  </a>
+                </div>
+              </div>
+            </div>
 
-            <div className="mt-4 space-y-2 rounded-lg border border-old-money-200/80 bg-cream-50/50 p-3 text-xs text-charcoal-700">
-              <div className="flex justify-between">
-                <span className="text-charcoal-500">Лицензия исходного кода:</span>
-                <span className="font-mono font-semibold text-charcoal-900">MIT License</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-charcoal-500">Формат отдачи данных:</span>
-                <span className="font-mono font-semibold text-charcoal-900">JSON API (CDN)</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-charcoal-500">Оптимизация под смартфоны:</span>
-                <span className="font-semibold text-charcoal-900">Mobile-first</span>
-              </div>
+            <div>
+              <h3 className="font-serif text-sm font-bold text-charcoal-900">
+                Открытость и исходный код
+              </h3>
+              <p className="mt-1 text-xs leading-relaxed text-charcoal-600">
+                Проект с открытым исходным кодом под лицензией MIT. Легковесная архитектура без серверных баз данных
+                обеспечивает быструю работу даже при слабом мобильном интернете.
+              </p>
             </div>
           </div>
 
           <div className="mt-4 pt-3 border-t border-old-money-100 flex items-center justify-between">
-            <span className="text-xs text-charcoal-500">Репозиторий на GitHub:</span>
+            <span className="text-xs text-charcoal-500">Репозиторий проекта:</span>
             <a
               href="https://github.com/antajl/Coursing-Stats"
               target="_blank"
@@ -365,7 +256,7 @@ export default function AboutPage() {
               className="inline-flex items-center gap-1.5 rounded-lg border border-old-money-200 bg-white px-3 py-1.5 text-xs font-semibold text-charcoal-800 shadow-sm transition-colors hover:border-camel-300 hover:text-camel-800"
             >
               <Code2 className="h-4 w-4 text-camel-700" aria-hidden />
-              <span>GitHub</span>
+              <span>GitHub (MIT)</span>
               <ExternalLink className="h-3 w-3 text-charcoal-400" aria-hidden />
             </a>
           </div>
@@ -373,17 +264,17 @@ export default function AboutPage() {
       </div>
 
       {/* Contacts & Regionality */}
-      <section className="rounded-2xl border border-old-money-200/90 bg-white/90 p-5 sm:p-7 shadow-sm">
+      <section className="rounded-2xl border border-old-money-200/90 bg-white/90 p-5 sm:p-6 shadow-sm">
         <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
-          <h2 className="font-serif text-lg font-bold text-charcoal-900 sm:text-xl">
+          <h2 className="font-serif text-base sm:text-lg font-bold text-charcoal-900">
             Контакты и география проекта
           </h2>
           <span className="text-xs text-charcoal-500">
-            Для предложений, вопросов и исправлений в протоколах
+            Для сообщений об ошибках в кличках или отправки протоколов
           </span>
         </div>
 
-        <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-3.5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           <div className="flex items-center gap-3 rounded-xl border border-old-money-200/90 bg-cream-50/50 p-3.5">
             <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-old-money-200/80 bg-white text-camel-700 shadow-sm">
               <MapPin className="h-5 w-5" aria-hidden />
@@ -415,7 +306,7 @@ export default function AboutPage() {
             value="antajl@yandex.ru"
             href="mailto:antajl@yandex.ru"
             icon={Mail}
-            subtext="Для обращений и файлов"
+            subtext="Для протоколов и файлов"
           />
 
           <DiscordContact />
@@ -423,14 +314,12 @@ export default function AboutPage() {
       </section>
 
       {/* Legal disclaimer */}
-      <footer className="rounded-xl border border-old-money-100 bg-cream-50/30 p-4 text-center sm:text-left">
+      <footer className="rounded-xl border border-old-money-100 bg-cream-50/30 p-3.5 text-center sm:text-left">
         <p className="text-xs leading-relaxed text-charcoal-500">
-          <strong>Правовая оговорка:</strong> Coursing Stats — независимый некоммерческий
-          информационно-аналитический проект. Сервис не является официальным сайтом или подразделением
-          Российской кинологической федерации (РКФ) или портала ProCoursing. Все зарегистрированные
-          наименования, товарные знаки и официальные регламенты состязаний принадлежат их законным
-          правообладателям. Все данные агрегированы исключительно из публично открытых протоколов
-          соревнований и выставок.
+          <strong>Правовая оговорка:</strong> Coursing Stats — независимый некоммерческий информационный
+          проект. Сервис не является официальным сайтом Российской кинологической федерации (РКФ) или портала
+          ProCoursing. Все товарные знаки, регламенты состязаний и официальные наименования принадлежат их
+          законным правообладателям. Данные агрегируются исключительно из открытых протоколов соревнований и выставок.
         </p>
       </footer>
     </div>
