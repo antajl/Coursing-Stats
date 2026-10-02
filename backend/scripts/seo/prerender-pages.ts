@@ -105,7 +105,7 @@ function prerenderCompetitionDogs(spaHtml: string, profilesDir: string): number 
     const html = applyMetaToSpaShell(spaHtml, {
       title: meta.title,
       description: meta.description,
-      canonicalUrl: `${SITE_ORIGIN}/dog/${id}`,
+      canonicalUrl: `${SITE_ORIGIN}/dog/${id}/`,
       bodyHtml: buildDogBodyHtml(meta.body),
       jsonLd: breadcrumbJsonLd(meta.breadcrumbs),
     })
@@ -123,7 +123,7 @@ function hubOutPath(hubPath: string): string {
 
 function prerenderHubs(spaHtml: string): number {
   for (const hub of HUB_PAGES) {
-    const canonicalUrl = hub.path === '/' ? `${SITE_ORIGIN}/` : `${SITE_ORIGIN}${hub.path}`
+    const canonicalUrl = hub.path === '/' ? `${SITE_ORIGIN}/` : `${SITE_ORIGIN}${hub.path.replace(/\/?$/, '/')}`
     const html = applyMetaToSpaShell(spaHtml, {
       title: hub.title,
       description: hub.description,
@@ -215,7 +215,7 @@ function prerenderShowOnlyDogs(spaHtml: string): number {
     const html = applyMetaToSpaShell(spaHtml, {
       title: meta.title,
       description: meta.description,
-      canonicalUrl: `${SITE_ORIGIN}/dog/${id}`,
+      canonicalUrl: `${SITE_ORIGIN}/dog/${id}/`,
       bodyHtml: buildDogBodyHtml(meta.body),
       jsonLd: breadcrumbJsonLd(meta.breadcrumbs),
     })
@@ -319,7 +319,7 @@ function prerenderEvents(spaHtml: string): number {
     const html = applyMetaToSpaShell(spaHtml, {
       title: meta.title,
       description: meta.description,
-      canonicalUrl: `${SITE_ORIGIN}/event/${id}`,
+      canonicalUrl: `${SITE_ORIGIN}/event/${id}/`,
       bodyHtml: buildSimpleEntityBodyHtml(meta),
       jsonLd: breadcrumbJsonLd(meta.breadcrumbs),
     })
@@ -354,7 +354,7 @@ function prerenderSportJudges(spaHtml: string): number {
     const html = applyMetaToSpaShell(spaHtml, {
       title: meta.title,
       description: meta.description,
-      canonicalUrl: `${SITE_ORIGIN}/judges/${encodeURIComponent(id)}`,
+      canonicalUrl: `${SITE_ORIGIN}/judges/${encodeURIComponent(id)}/`,
       bodyHtml: buildSimpleEntityBodyHtml(meta),
       jsonLd: breadcrumbJsonLd(meta.breadcrumbs),
     })
@@ -384,7 +384,7 @@ function prerenderDoninoDogs(spaHtml: string): number {
     const html = applyMetaToSpaShell(spaHtml, {
       title: meta.title,
       description: meta.description,
-      canonicalUrl: `${SITE_ORIGIN}/donino-dog/${encodeURIComponent(dog.name)}/${encodeURIComponent(dog.breed)}`,
+      canonicalUrl: `${SITE_ORIGIN}/donino-dog/${encodeURIComponent(dog.name)}/${encodeURIComponent(dog.breed)}/`,
       bodyHtml: buildSimpleEntityBodyHtml(meta),
       jsonLd: breadcrumbJsonLd(meta.breadcrumbs),
     })
@@ -484,7 +484,7 @@ function prerenderExhibitions(spaHtml: string): number {
     const html = applyMetaToSpaShell(spaHtml, {
       title: meta.title,
       description: meta.description,
-      canonicalUrl: `${SITE_ORIGIN}/shows/exhibition/${id}`,
+      canonicalUrl: `${SITE_ORIGIN}/shows/exhibition/${id}/`,
       bodyHtml: buildSimpleEntityBodyHtml(meta),
       jsonLd: breadcrumbJsonLd(meta.breadcrumbs),
     })
@@ -543,7 +543,7 @@ function prerenderShowJudges(spaHtml: string): number {
     const html = applyMetaToSpaShell(spaHtml, {
       title: meta.title,
       description: meta.description,
-      canonicalUrl: `${SITE_ORIGIN}/shows/judges/${encodeURIComponent(id)}`,
+      canonicalUrl: `${SITE_ORIGIN}/shows/judges/${encodeURIComponent(id)}/`,
       bodyHtml: buildSimpleEntityBodyHtml(meta),
       jsonLd: breadcrumbJsonLd(meta.breadcrumbs),
     })
@@ -589,6 +589,22 @@ function main(): void {
   const donino = prerenderDoninoDogs(shellForPages)
   const exhibitions = prerenderExhibitions(shellForPages)
   const showJudges = prerenderShowJudges(shellForPages)
+
+  // Ensure sitemap.xml and robots.txt are copied to dist for deployment
+  const sitemapSrc = path.join(ROOT, 'frontend/public/sitemap.xml')
+  const sitemapDst = path.join(DIST, 'sitemap.xml')
+  if (fs.existsSync(sitemapSrc)) {
+    fs.copyFileSync(sitemapSrc, sitemapDst)
+    console.log(`[prerender-seo] Copied sitemap.xml to dist (${fs.statSync(sitemapDst).size} bytes)`)
+  }
+
+  const robotsSrc = path.join(ROOT, 'frontend/public/robots.txt')
+  const robotsDst = path.join(DIST, 'robots.txt')
+  if (fs.existsSync(robotsSrc)) {
+    fs.copyFileSync(robotsSrc, robotsDst)
+    console.log(`[prerender-seo] Copied robots.txt to dist (${fs.statSync(robotsDst).size} bytes)`)
+  }
+
   const elapsed = Date.now() - started
 
   console.log(
