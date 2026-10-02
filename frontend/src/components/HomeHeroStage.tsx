@@ -161,7 +161,7 @@ export default function HomeHeroStage({ children, metrics, onCloseMetrics }: Hom
       onCloseMetrics()
       return
     }
-    const target = document.getElementById('content-start') || document.querySelector('.home-v2-body')
+    const target = document.getElementById('season-top') || document.getElementById('content-start') || document.querySelector('.home-v2-body')
     if (target) {
       target.scrollIntoView({ behavior: 'smooth' })
     } else {

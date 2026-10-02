@@ -47,7 +47,7 @@ function SeasonTopSectionInner({
   if (!showSeasonSection) return null
 
   return (
-    <section className="home-v2-block" data-home-reveal>
+    <section id="season-top" className="home-v2-block scroll-mt-20" data-home-reveal>
       <SectionHead
         icon={Icons.medal}
         title={`Топ сезона ${CURRENT_SEASON}`}
