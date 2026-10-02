@@ -23,21 +23,22 @@ export function exportToCSV(header: CompetitionHeader, kind: CompetitionKind, ca
     })
 
     if (kind === 'coursing') {
-      const headerCols = ['Место', '№ кат.', 'Кличка собаки', 'Порода', 'Класс', 'Пол']
+      const headerCols = ['Место', '№', 'Кличка собаки', 'Порода', 'Класс', 'Пол']
       for (let r = 1; r <= cat.runsCount; r++) {
-        headerCols.push(`Забег ${r}`, `Круг ${r} (Сумма)`, `Скор ${r}`, `Энт ${r}`, `Инт ${r}`, `Ман ${r}`, `Вын ${r}`)
+        headerCols.push(`Забег ${r}`, `Забег ${r} (Сумма)`, `Скор ${r}`, `Энт ${r}`, `Инт ${r}`, `Ман ${r}`, `Вын ${r}`)
       }
       headerCols.push('Итоговый балл', 'Титулы и сертификаты', 'Статус')
       lines.push(headerCols.map(h => `"${h}"`).join(';'))
 
       sortedDogs.forEach((p, idx) => {
+        const dogSexLabel = p.sex === 'male' ? 'Кобель' : (p.sex === 'female' ? 'Сука' : (cat.sex === 'female' ? 'Сука' : 'Кобель'))
         const row: Array<string | number> = [
           p.disqualified ? 'ДИСКВ' : (idx + 1),
           p.catalogNumber,
           p.dogName,
           cat.breed,
           cat.className,
-          cat.sex === 'male' ? 'Кобель' : (cat.sex === 'female' ? 'Сука' : 'Смешанный'),
+          dogSexLabel,
         ]
 
         for (let r = 0; r < cat.runsCount; r++) {
@@ -57,10 +58,11 @@ export function exportToCSV(header: CompetitionHeader, kind: CompetitionKind, ca
     } else {
       lines.push([
         'Место',
-        '№ кат.',
+        '№',
         'Кличка собаки',
         'Порода',
         'Класс',
+        'Пол',
         'Бокс',
         'Время 1',
         'Время 2',
@@ -70,12 +72,14 @@ export function exportToCSV(header: CompetitionHeader, kind: CompetitionKind, ca
       ].map(h => `"${h}"`).join(';'))
 
       sortedDogs.forEach((p, idx) => {
+        const dogSexLabel = p.sex === 'male' ? 'Кобель' : (p.sex === 'female' ? 'Сука' : (cat.sex === 'female' ? 'Сука' : 'Кобель'))
         lines.push([
           p.disqualified ? 'ДИСКВ' : (idx + 1),
           p.catalogNumber,
           p.dogName,
           cat.breed,
           cat.className,
+          dogSexLabel,
           p.racing_box,
           p.racing_time1,
           p.racing_time2,

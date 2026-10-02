@@ -439,11 +439,13 @@ export default function ProtocolBuilder() {
 
         {/* СПИСОК КАТЕГОРИЙ */}
         <div className="space-y-4">
-          {categories.map((category) => (
-            <div
-              key={category.id}
-              className="bg-cream-50/95 rounded-xl border border-om-200 shadow-xs overflow-hidden"
-            >
+          {categories.map((category) => {
+            const isCategoryActive = category.dogs.some(d => d.id === activeAwardsDogId || d.id === activeSearchDogId)
+            return (
+              <div
+                key={category.id}
+                className={`bg-cream-50/95 rounded-xl border border-om-200 shadow-xs ${isCategoryActive ? 'relative z-20' : 'relative z-0'}`}
+              >
               {/* Шапка категории: Порода, Класс, Пол + Управление количеством забегов (1, 2, 3) */}
               <div className="bg-om-100/70 px-3 py-2.5 border-b border-om-200/80 flex flex-wrap items-center justify-between gap-2.5">
                 <div className="flex flex-wrap items-center gap-2">
@@ -496,7 +498,7 @@ export default function ProtocolBuilder() {
                               : 'text-char-600 hover:text-char-900 bg-cream-50/70'
                           }`}
                         >
-                          {n} {n === 1 ? 'круг' : 'круга'}
+                          {n} {n === 1 ? 'забег' : (n < 5 ? 'забега' : 'забегов')}
                         </button>
                       ))}
                     </div>
@@ -529,10 +531,14 @@ export default function ProtocolBuilder() {
                   const total = calculateTotalScore(dog, category.runsCount)
                   const isAutocompleteOpen = activeSearchDogId === dog.id
 
+                  const isDogActive = activeAwardsDogId === dog.id || activeSearchDogId === dog.id
+
                   return (
                     <div
                       key={dog.id}
-                      className="bg-om-50/70 hover:bg-cream-50 rounded-lg border border-om-200/70 p-2 space-y-1.5 transition-all shadow-2xs"
+                      className={`bg-om-50/70 hover:bg-cream-50 rounded-lg border border-om-200/70 p-2 space-y-1.5 transition-all shadow-2xs ${
+                        isDogActive ? 'relative z-30' : 'relative z-0'
+                      }`}
                     >
                       {/* Строка собаки */}
                       <div className="flex flex-wrap items-center justify-between gap-2 text-xs">
@@ -566,30 +572,47 @@ export default function ProtocolBuilder() {
 
                             {/* Всплывающий список существующих собак из базы сайта */}
                             {isAutocompleteOpen && filteredExistingDogs.length > 0 && (
-                              <div className="absolute left-0 top-full mt-1 w-72 bg-cream-50 rounded-lg border border-om-300 shadow-lg z-50 py-1 divide-y divide-om-100 max-h-48 overflow-y-auto">
-                                <div className="px-2 py-0.5 text-[9px] font-bold text-camel-800 uppercase tracking-wider bg-om-100/60 flex justify-between items-center">
-                                  <span>Собаки из базы сайта</span>
-                                  <button
-                                    onClick={() => setActiveSearchDogId(null)}
-                                    className="text-char-400 hover:text-char-800"
-                                  >
-                                    <X className="w-2.5 h-2.5" />
-                                  </button>
+                              <>
+                                <div
+                                  className="fixed inset-0 z-40"
+                                  onClick={() => setActiveSearchDogId(null)}
+                                />
+                                <div className="absolute left-0 top-full mt-1 w-72 bg-cream-50 rounded-lg border border-om-300 shadow-2xl z-50 py-1 divide-y divide-om-100 max-h-48 overflow-y-auto ring-1 ring-char-900/10">
+                                  <div className="px-2 py-0.5 text-[9px] font-bold text-camel-800 uppercase tracking-wider bg-om-100/60 flex justify-between items-center">
+                                    <span>Собаки из базы сайта</span>
+                                    <button
+                                      onClick={() => setActiveSearchDogId(null)}
+                                      className="text-char-400 hover:text-char-800"
+                                    >
+                                      <X className="w-2.5 h-2.5" />
+                                    </button>
+                                  </div>
+                                  {filteredExistingDogs.map((exDog, i) => (
+                                    <button
+                                      key={i}
+                                      type="button"
+                                      onClick={() => selectExistingDog(category.id, dog.id, exDog)}
+                                      className="w-full text-left px-2 py-1 hover:bg-camel-100/70 text-xs flex justify-between items-center transition-colors"
+                                    >
+                                      <span className="font-semibold text-char-900 truncate">{exDog.name}</span>
+                                      <span className="text-[10px] text-char-400 ml-1 shrink-0">{exDog.breed}</span>
+                                    </button>
+                                  ))}
                                 </div>
-                                {filteredExistingDogs.map((exDog, i) => (
-                                  <button
-                                    key={i}
-                                    type="button"
-                                    onClick={() => selectExistingDog(category.id, dog.id, exDog)}
-                                    className="w-full text-left px-2 py-1 hover:bg-camel-100/70 text-xs flex justify-between items-center transition-colors"
-                                  >
-                                    <span className="font-semibold text-char-900 truncate">{exDog.name}</span>
-                                    <span className="text-[10px] text-char-400 ml-1 shrink-0">{exDog.breed}</span>
-                                  </button>
-                                ))}
-                              </div>
+                              </>
                             )}
                           </div>
+
+                          {/* Выбор пола сразу после клички */}
+                          <select
+                            value={dog.sex}
+                            onChange={e => updateDog(category.id, dog.id, { sex: e.target.value as any })}
+                            className="px-1.5 py-1 bg-cream-50 rounded border border-om-200 text-xs text-char-800 shrink-0 font-medium"
+                            title="Пол собаки"
+                          >
+                            <option value="male">Коб.</option>
+                            <option value="female">Сука</option>
+                          </select>
                         </div>
 
                         {/* Компактный блок баллов забегов (динамически 1, 2 или 3) */}
@@ -599,13 +622,13 @@ export default function ProtocolBuilder() {
                               const sum = calculateRoundSum(run.scores)
                               return (
                                 <div key={rIdx} className="flex items-center gap-1 bg-cream-50 px-1.5 py-0.5 rounded border border-om-200">
-                                  <span className="text-[10px] text-char-500 font-bold">К{rIdx + 1}:</span>
+                                  <span className="text-[10px] text-char-500 font-bold">З{rIdx + 1}:</span>
                                   <input
                                     type="text"
                                     value={run.heat}
                                     onChange={e => updateRunField(category.id, dog.id, rIdx, 'heat', e.target.value)}
                                     className="w-5 text-center bg-om-50 border border-om-200 rounded py-0.5 text-[10px]"
-                                    title={`Забег круга ${rIdx + 1}`}
+                                    title={`Забег ${rIdx + 1}`}
                                   />
                                   <select
                                     value={run.blanket}
@@ -679,9 +702,16 @@ export default function ProtocolBuilder() {
                           </div>
                         )}
 
-                        {/* Правая часть: Титулы (кнопка с меню), Итог и Удаление */}
+                        {/* Правая часть: Итог (перед титулами), Титулы (кнопка с меню) и Удаление */}
                         <div className="flex items-center gap-1.5 ml-auto">
-                          {/* Кнопка с выбором титулов на одной строке */}
+                          {/* Итоговая сумма перед титулами */}
+                          <div className="bg-camel-100/80 border border-camel-300 px-2 py-0.5 rounded text-center min-w-[46px]" title="Общая сумма баллов">
+                            <span className="text-xs font-bold text-char-900 tabular-nums">
+                              {dog.disqualified ? 'ДИСКВ' : total}
+                            </span>
+                          </div>
+
+                          {/* Кнопка с выбором титулов */}
                           <div className="relative">
                             <button
                               type="button"
@@ -700,45 +730,44 @@ export default function ProtocolBuilder() {
 
                             {/* Выпадающее меню с выбором нескольких титулов */}
                             {activeAwardsDogId === dog.id && (
-                              <div className="absolute right-0 top-full mt-1 w-44 bg-cream-50 rounded-lg border border-om-300 shadow-xl z-50 py-1 divide-y divide-om-100">
-                                <div className="px-2.5 py-1 text-[9px] font-bold text-camel-800 uppercase tracking-wider bg-om-100/60 flex justify-between items-center">
-                                  <span>Выбор титулов</span>
-                                  <button
-                                    onClick={() => setActiveAwardsDogId(null)}
-                                    className="text-char-400 hover:text-char-800"
-                                  >
-                                    <X className="w-2.5 h-2.5" />
-                                  </button>
+                              <>
+                                <div
+                                  className="fixed inset-0 z-40"
+                                  onClick={() => setActiveAwardsDogId(null)}
+                                />
+                                <div className="absolute right-0 top-full mt-1 w-48 bg-cream-50 rounded-lg border border-om-300 shadow-2xl z-50 py-1 divide-y divide-om-100 ring-1 ring-char-900/10">
+                                  <div className="px-2.5 py-1 text-[9px] font-bold text-camel-800 uppercase tracking-wider bg-om-100/60 flex justify-between items-center">
+                                    <span>Выбор титулов</span>
+                                    <button
+                                      onClick={() => setActiveAwardsDogId(null)}
+                                      className="text-char-400 hover:text-char-800"
+                                    >
+                                      <X className="w-2.5 h-2.5" />
+                                    </button>
+                                  </div>
+                                  <div className="p-1 space-y-0.5 max-h-48 overflow-y-auto">
+                                    {TITLES_LIST.map(title => {
+                                      const active = dog.awards.includes(title)
+                                      return (
+                                        <button
+                                          key={title}
+                                          type="button"
+                                          onClick={() => toggleAward(category.id, dog.id, title)}
+                                          className={`w-full text-left px-2 py-1 rounded text-xs flex justify-between items-center transition-colors ${
+                                            active
+                                              ? 'bg-camel-100 text-camel-900 font-bold'
+                                              : 'hover:bg-om-100 text-char-700'
+                                          }`}
+                                        >
+                                          <span>{title}</span>
+                                          {active && <Check className="w-3 h-3 text-camel-700" />}
+                                        </button>
+                                      )
+                                    })}
+                                  </div>
                                 </div>
-                                <div className="p-1 space-y-0.5">
-                                  {TITLES_LIST.map(title => {
-                                    const active = dog.awards.includes(title)
-                                    return (
-                                      <button
-                                        key={title}
-                                        type="button"
-                                        onClick={() => toggleAward(category.id, dog.id, title)}
-                                        className={`w-full text-left px-2 py-1 rounded text-xs flex justify-between items-center transition-colors ${
-                                          active
-                                            ? 'bg-camel-100 text-camel-900 font-bold'
-                                            : 'hover:bg-om-100 text-char-700'
-                                        }`}
-                                      >
-                                        <span>{title}</span>
-                                        {active && <Check className="w-3 h-3 text-camel-700" />}
-                                      </button>
-                                    )
-                                  })}
-                                </div>
-                              </div>
+                              </>
                             )}
-                          </div>
-
-                          {/* Итоговая сумма */}
-                          <div className="bg-camel-100/80 border border-camel-300 px-2 py-0.5 rounded text-center min-w-[46px]">
-                            <span className="text-xs font-bold text-char-900 tabular-nums">
-                              {dog.disqualified ? 'ДИСКВ' : total}
-                            </span>
                           </div>
 
                           {/* Удаление */}
@@ -757,7 +786,8 @@ export default function ProtocolBuilder() {
                 })}
               </div>
             </div>
-          ))}
+          )
+        })}
         </div>
       </div>
 
@@ -799,12 +829,12 @@ export default function ProtocolBuilder() {
                   <thead>
                     <tr className="border-b border-om-200 text-[10px] uppercase font-bold text-char-500">
                       <th className="py-1.5 px-2 w-12">Место</th>
-                      <th className="py-1.5 px-2 w-12">№ кат.</th>
+                      <th className="py-1.5 px-2 w-10">№</th>
                       <th className="py-1.5 px-2">Кличка собаки</th>
                       {kind === 'coursing' ? (
                         <>
                           {Array.from({ length: cat.runsCount }).map((_, r) => (
-                            <th key={r} className="py-1.5 px-2 text-center">{r + 1} Круг</th>
+                            <th key={r} className="py-1.5 px-2 text-center">{r + 1} Забег</th>
                           ))}
                           <th className="py-1.5 px-2 text-right">Итого баллов</th>
                         </>
@@ -825,7 +855,14 @@ export default function ProtocolBuilder() {
                           {d.disqualified ? '—' : `${idx + 1}`}
                         </td>
                         <td className="py-1.5 px-2 text-char-500 font-mono">{d.catalogNumber}</td>
-                        <td className="py-1.5 px-2 font-semibold text-char-900">{d.dogName || '—'}</td>
+                        <td className="py-1.5 px-2 font-semibold text-char-900">
+                          {d.dogName || '—'}
+                          {d.sex && (
+                            <span className="text-[10px] text-char-400 font-normal ml-1">
+                              ({d.sex === 'female' ? 'сука' : 'коб.'})
+                            </span>
+                          )}
+                        </td>
                         {kind === 'coursing' ? (
                           <>
                             {Array.from({ length: cat.runsCount }).map((_, r) => (

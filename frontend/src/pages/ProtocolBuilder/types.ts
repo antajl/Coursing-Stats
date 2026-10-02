@@ -27,6 +27,7 @@ export interface DogParticipant {
   id: string
   catalogNumber: string
   dogName: string
+  sex: 'male' | 'female' | ''
   // Забеги для курсинга (динамический массив: 1, 2, 3 забега)
   runs: RunData[]
   // Для рейсинга
@@ -79,6 +80,7 @@ export function createNewParticipant(catalogNum: number = 1, runsCount = 1): Dog
     id: 'dog_' + Math.random().toString(36).substring(2, 9),
     catalogNumber: String(catalogNum),
     dogName: '',
+    sex: 'male',
     runs,
     racing_box: '1',
     racing_time1: '',
