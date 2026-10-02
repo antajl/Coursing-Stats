@@ -33,6 +33,7 @@ React 19 + Vite + Tailwind SPA (деплой на Yandex Object Storage). Дан
 - `frontend/vite.config.ts`
 - `frontend/src/index.css` — Tailwind + `@import` → `frontend/src/styles/*` (nav, shell, donino, home-v2-*)
 - `frontend/src/pages/**` — крупные страницы разбиты: `Shows/ShowExhibitionDetail/`, `ShowCalendar/`, `ShowJudgeDetail/`, `Events/{EventsToolbar,EventsMonthList}`
+- `frontend/src/lib/judgeUiUtils.ts` — инициалы для монограмм судей, бейджи строгости и утилиты отображения
 - `frontend/src/lib/staticData/*` — доменные barrels (`shows.ts` → `shows/…`)
 - `frontend/src/components/toolbar/**`
 - `frontend/.env.example` — `VITE_TURSO_*`

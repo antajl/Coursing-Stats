@@ -474,7 +474,7 @@ export function eventMetaFromEntry(entry: {
     breadcrumbs: [
       { name: 'Главная', url: '/' },
       { name: 'Соревнования', url: '/competitions' },
-      { name: headline, url: `/event/${entry.id}` },
+      { name: headline, url: `/event/${entry.id}/` },
     ],
     sectionLinks: [
       { href: '/competitions?tab=calendar', label: 'Календарь' },
@@ -497,11 +497,11 @@ export function sportJudgeMeta(judge: {
     judge.unique_breeds != null ? `${judge.unique_breeds} пород` : null,
     judge.unique_dogs != null ? `${judge.unique_dogs} собак` : null,
   ].filter(Boolean)
-  const title = `${name} — статистика судьи | Coursing Stats`
+  const title = `${name} — судья по курсингу и бегам борзых | Coursing Stats`
   const description =
     facts.length > 0
-      ? `Статистика судьи ${name} по курсингу и бегам борзых: ${facts.join(', ')}.`
-      : `Статистика судьи ${name} по курсингу и бегам борзых на Coursing Stats.`
+      ? `Судья по курсингу и бегам ${name}: статистика забегов (${facts.join(', ')}), судимые породы и оценки собак на Coursing Stats.`
+      : `Судья по курсингу и бегам борзых ${name}: профиль, статистика судейства и судимые породы на Coursing Stats.`
   return {
     title,
     description,
@@ -510,7 +510,7 @@ export function sportJudgeMeta(judge: {
     breadcrumbs: [
       { name: 'Главная', url: '/' },
       { name: 'Судьи', url: '/competitions?tab=judges' },
-      { name: name, url: `/judges/${encodeURIComponent(judge.id)}` },
+      { name: name, url: `/judges/${encodeURIComponent(judge.id)}/` },
     ],
     sectionLinks: [
       { href: '/competitions?tab=judges', label: 'Судьи' },
@@ -533,7 +533,7 @@ export function doninoMeta(dog: { name: string; breed: string }): SimpleEntityMe
       { name: 'Донино', url: '/speed-records' },
       {
         name: dog.name,
-        url: `/donino-dog/${encodeURIComponent(dog.name)}/${encodeURIComponent(dog.breed)}`,
+        url: `/donino-dog/${encodeURIComponent(dog.name)}/${encodeURIComponent(dog.breed)}/`,
       },
     ],
     sectionLinks: [
@@ -575,7 +575,7 @@ export function exhibitionMeta(entry: {
     breadcrumbs: [
       { name: 'Главная', url: '/' },
       { name: 'Выставки', url: '/shows' },
-      { name: headline, url: `/shows/exhibition/${entry.id}` },
+      { name: headline, url: `/shows/exhibition/${entry.id}/` },
     ],
     sectionLinks: [
       { href: '/shows?tab=calendar', label: 'Календарь выставок' },
@@ -597,11 +597,11 @@ export function showJudgeMeta(judge: {
     judge.total_judged != null ? `${judge.total_judged} оценок` : null,
     judge.unique_breeds != null ? `${judge.unique_breeds} пород` : null,
   ].filter(Boolean)
-  const title = `${name} — судья выставок | Coursing Stats`
+  const title = `${name} — судья РКФ: статистика выставок, породы, строгость оценок | Coursing Stats`
   const description =
     facts.length > 0
-      ? `Статистика судьи ${name} на выставках РКФ: ${facts.join(', ')}.`
-      : `Статистика судьи ${name} на выставках РКФ на Coursing Stats.`
+      ? `Судья РКФ / FCI ${name}: статистика судейства на выставках собак (${facts.join(', ')}), строгость оценок (% отлично), породы и история судейства.`
+      : `Судья РКФ / FCI ${name}: статистика судейства на выставках собак, строгость оценок (% отлично), породы и история судейства на Coursing Stats.`
   return {
     title,
     description,
@@ -610,7 +610,7 @@ export function showJudgeMeta(judge: {
     breadcrumbs: [
       { name: 'Главная', url: '/' },
       { name: 'Судьи выставок', url: '/shows?tab=judges' },
-      { name: name, url: `/shows/judges/${encodeURIComponent(judge.id)}` },
+      { name: name, url: `/shows/judges/${encodeURIComponent(judge.id)}/` },
     ],
     sectionLinks: [
       { href: '/shows?tab=judges', label: 'Судьи выставок' },

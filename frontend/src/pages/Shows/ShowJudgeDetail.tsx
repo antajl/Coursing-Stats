@@ -3,6 +3,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { ChevronLeft } from 'lucide-react'
 import { SEO } from '../../components/SEO'
 import { useShowJudgeDetails, useShowJudgesStrictnessBaseline } from '../../hooks/useStaticData'
+import { JsonLd, personSchema } from '../../components/JsonLd'
 import {
   GRADE_TILES,
   buildStrictness,
@@ -162,10 +163,19 @@ export default function ShowJudgeDetail() {
   return (
     <>
       <SEO
-        title={`${judge.name} — судья выставок`}
-        description={`Статистика судьи ${judge.name} на выставках РКФ: ${periodExhibitions.length} выставок, ${periodBreeds.length} пород.`}
-        keywords={`${judge.name}, судья, выставки РКФ, CAC, BOB`}
-        canonicalUrl={`https://coursing-stats.ru/shows/judges/${encodeURIComponent(judge.id)}`}
+        title={`${judge.display_name || judge.name} — судья РКФ: статистика выставок, породы, строгость оценок`}
+        description={`Судья РКФ / FCI ${judge.display_name || judge.name}: статистика судейства на выставках собак (${periodExhibitions.length} выставок, ${periodBreeds.length} пород), строгость оценок (% отлично) и судимые породы.`}
+        keywords={`${judge.display_name || judge.name}, судья, эксперт ркф, отзывы, выставки ркф, cac, bob, строгость`}
+        canonicalUrl={`https://coursing-stats.ru/shows/judges/${encodeURIComponent(judge.id)}/`}
+      />
+      <JsonLd
+        data={personSchema({
+          name: judge.display_name || judge.name,
+          jobTitle: 'Судья по породам собак РКФ / FCI',
+          url: `https://coursing-stats.ru/shows/judges/${encodeURIComponent(judge.id)}/`,
+          description: `Эксперт РКФ / FCI ${judge.display_name || judge.name}: статистика судейства на выставках собак, судимые породы.`,
+          worksFor: 'Российская Кинологическая Федерация (РКФ)',
+        })}
       />
       <div className="space-y-5 pb-4">
         <div className="relative">
@@ -178,7 +188,7 @@ export default function ShowJudgeDetail() {
             <ChevronLeft className="h-5 w-5" aria-hidden />
           </button>
           <JudgeDetailHeader
-            judgeName={judge.name}
+            judgeName={judge.display_name || judge.name}
             onBack={() => navigate('/shows?tab=judges')}
             yearParam={yearParam}
             availableYears={availableYears}
