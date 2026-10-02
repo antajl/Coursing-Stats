@@ -19,9 +19,9 @@ const CURRENT_SEASON = String(new Date().getFullYear())
 type SortKey = 'evals' | 'events' | 'avg'
 
 const SORT_OPTIONS: Array<{ field: SortKey; label: string }> = [
-  { field: 'evals', label: 'Оценки' },
-  { field: 'events', label: 'Участия' },
-  { field: 'avg', label: 'Средняя' },
+  { field: 'evals', label: 'Забеги' },
+  { field: 'events', label: 'Турниры' },
+  { field: 'avg', label: 'Ср. балл' },
 ]
 
 const DISCIPLINE_OPTIONS = [
@@ -221,7 +221,7 @@ export default function Judges() {
               </div>
             </>
           }
-          bottomLeft={
+          trailing={
             <RecordSortBar
               options={SORT_OPTIONS}
               sortField={sortKey}
