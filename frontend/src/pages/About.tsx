@@ -120,7 +120,7 @@ const DATA_SOURCES = [
 
 export default function AboutPage() {
   return (
-    <div className="mx-auto max-w-4xl space-y-6 pb-8">
+    <div className="mx-auto max-w-full space-y-6 pb-8">
       <SEO
         title="О проекте Coursing Stats — независимый архив соревнований и выставок собак в России"
         description="Некоммерческий электронный архив соревнований по курсингу, бегов борзых, выставок РКФ и замеров Донино в России. Профили собак, протоколы стартов и статистика."
