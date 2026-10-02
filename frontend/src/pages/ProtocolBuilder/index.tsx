@@ -225,6 +225,26 @@ export default function ProtocolBuilder() {
     }))
   }
 
+  const BLANKET_CYCLE: Array<'red' | 'white' | 'blue'> = ['red', 'white', 'blue']
+
+  const cycleBlanket = (categoryId: string, dogId: string, runIndex: number) => {
+    setCategories(prev => prev.map(cat => {
+      if (cat.id !== categoryId) return cat
+      return {
+        ...cat,
+        dogs: cat.dogs.map(d => {
+          if (d.id !== dogId) return d
+          const runs = [...d.runs]
+          if (!runs[runIndex]) runs[runIndex] = createRunData()
+          const current = (runs[runIndex].blanket || 'red') as 'red' | 'white' | 'blue'
+          const nextIdx = (BLANKET_CYCLE.indexOf(current) + 1) % BLANKET_CYCLE.length
+          runs[runIndex] = { ...runs[runIndex], blanket: BLANKET_CYCLE[nextIdx] }
+          return { ...d, runs }
+        })
+      }
+    }))
+  }
+
   const updateRunScore = (
     categoryId: string,
     dogId: string,
@@ -659,29 +679,45 @@ export default function ProtocolBuilder() {
                           <div className="flex flex-wrap items-center gap-1.5">
                             {dog.runs.slice(0, category.runsCount).map((run, rIdx) => {
                               const sum = calculateRoundSum(run.scores)
-                              return (
-                                <div key={rIdx} className="flex items-center gap-1 bg-cream-50 px-1.5 py-0.5 rounded border border-om-200">
-                                  <span className="text-[10px] text-char-500 font-bold">З{rIdx + 1}:</span>
-                                  <input
-                                    type="text"
-                                    value={run.heat}
-                                    onChange={e => updateRunField(category.id, dog.id, rIdx, 'heat', e.target.value)}
-                                    className="w-5 text-center bg-om-50 border border-om-200 rounded py-0.5 text-[10px]"
-                                    title={`Забег ${rIdx + 1}`}
-                                  />
-                                  <select
-                                    value={run.blanket}
-                                    onChange={e => updateRunField(category.id, dog.id, rIdx, 'blanket', e.target.value)}
-                                    className="bg-om-50 border border-om-200 rounded px-1 py-0.5 text-[9px]"
-                                    title="Попона"
-                                  >
-                                    <option value="red">Красн.</option>
-                                    <option value="white">Бел.</option>
-                                    <option value="blue">Син.</option>
-                                  </select>
+                              const blanketColor = run.blanket || 'red'
+                              const blanketTitle = blanketColor === 'red' ? 'Красная' : blanketColor === 'blue' ? 'Синяя' : 'Белая'
+                              const blanketBg = blanketColor === 'red'
+                                ? 'bg-rose-50 border-rose-300 text-rose-950 focus-within:ring-rose-400'
+                                : blanketColor === 'blue'
+                                ? 'bg-sky-50 border-sky-300 text-sky-950 focus-within:ring-sky-400'
+                                : 'bg-white border-om-300 text-char-900 focus-within:ring-camel-400'
 
-                                  {/* 5 критериев */}
-                                  <div className="flex items-center gap-0.5 ml-0.5">
+                              const dotBg = blanketColor === 'red'
+                                ? 'bg-rose-600 ring-rose-300'
+                                : blanketColor === 'blue'
+                                ? 'bg-sky-600 ring-sky-300'
+                                : 'bg-white border border-char-400 ring-om-200'
+
+                              return (
+                                <div key={rIdx} className="flex items-center gap-1 bg-cream-50 px-1 py-0.5 rounded border border-om-200">
+                                  {/* Номер забега с переключателем цвета попоны прямо в кнопке */}
+                                  <div
+                                    className={`flex items-center rounded border px-1 py-0.5 gap-1 transition-all ${blanketBg}`}
+                                    title={`Забег ${rIdx + 1}. Попона: ${blanketTitle}. Нажмите на кружок для смены цвета (Красная / Белая / Синяя)`}
+                                  >
+                                    <button
+                                      type="button"
+                                      onClick={() => cycleBlanket(category.id, dog.id, rIdx)}
+                                      className={`w-3 h-3 rounded-full shrink-0 ring-1 cursor-pointer transition-transform hover:scale-115 active:scale-90 ${dotBg}`}
+                                      title={`Попона: ${blanketTitle}. Нажмите для смены цвета (Красная / Белая / Синяя)`}
+                                    />
+                                    <input
+                                      type="text"
+                                      value={run.heat}
+                                      onChange={e => updateRunField(category.id, dog.id, rIdx, 'heat', e.target.value)}
+                                      className="w-5 text-center bg-transparent text-[11px] font-bold focus:outline-none"
+                                      placeholder="№"
+                                      title={`Номер забега (${blanketTitle} попона)`}
+                                    />
+                                  </div>
+
+                                  {/* 5 критериев оценок без стрелок вверх-вниз с достаточной шириной */}
+                                  <div className="flex items-center gap-0.5">
                                     {(['speed', 'enthusiasm', 'intelligence', 'agility', 'endurance'] as const).map(c => (
                                       <input
                                         key={c}
@@ -690,13 +726,13 @@ export default function ProtocolBuilder() {
                                         max={20}
                                         value={run.scores[c]}
                                         onChange={e => updateRunScore(category.id, dog.id, rIdx, c, e.target.value)}
-                                        className="w-6 text-center py-0.5 bg-om-50 border border-om-200 rounded text-[10px] font-semibold tabular-nums"
+                                        className="w-7 text-center py-0.5 px-0 bg-om-50 border border-om-200 rounded text-[11px] font-bold tabular-nums [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none focus:outline-none focus:ring-1 focus:ring-camel-500"
                                         placeholder="0"
                                         title={c === 'speed' ? 'Скорость' : c === 'enthusiasm' ? 'Энтузиазм' : c === 'intelligence' ? 'Интеллект' : c === 'agility' ? 'Маневренность' : 'Выносливость'}
                                       />
                                     ))}
                                   </div>
-                                  <span className="text-[10px] font-bold text-camel-800 ml-1 min-w-[18px] text-right">
+                                  <span className="text-[10px] font-bold text-camel-800 ml-0.5 min-w-[18px] text-right">
                                     {sum}
                                   </span>
                                 </div>
