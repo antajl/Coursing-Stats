@@ -17,18 +17,18 @@ export interface CoursingScores {
   endurance: number | ''
 }
 
+export interface RunData {
+  heat: string
+  blanket: 'red' | 'white' | 'blue' | ''
+  scores: CoursingScores
+}
+
 export interface DogParticipant {
   id: string
   catalogNumber: string
   dogName: string
-  // Забег 1
-  run1_heat: string
-  run1_blanket: 'red' | 'white' | 'blue' | ''
-  run1_scores: CoursingScores
-  // Забег 2
-  run2_heat: string
-  run2_blanket: 'red' | 'white' | 'blue' | ''
-  run2_scores: CoursingScores
+  // Забеги для курсинга (динамический массив: 1, 2, 3 забега)
+  runs: RunData[]
   // Для рейсинга
   racing_box: string
   racing_time1: string
@@ -45,6 +45,8 @@ export interface CategoryGroup {
   breed: string
   className: string
   sex: 'male' | 'female' | 'mixed'
+  // Количество забегов в категории: по умолчанию 1, можно включить 2 и 3
+  runsCount: 1 | 2 | 3
   dogs: DogParticipant[]
 }
 
@@ -58,17 +60,26 @@ export function createEmptyScores(): CoursingScores {
   }
 }
 
-export function createNewParticipant(catalogNum: number = 1): DogParticipant {
+export function createRunData(heat = '1', blanket: 'red' | 'white' | 'blue' | '' = 'red'): RunData {
+  return {
+    heat,
+    blanket,
+    scores: createEmptyScores()
+  }
+}
+
+export function createNewParticipant(catalogNum: number = 1, runsCount = 1): DogParticipant {
+  const blankets: Array<'red' | 'white' | 'blue'> = ['red', 'white', 'blue']
+  const runs: RunData[] = []
+  for (let r = 0; r < runsCount; r++) {
+    runs.push(createRunData('1', blankets[r % 3]))
+  }
+
   return {
     id: 'dog_' + Math.random().toString(36).substring(2, 9),
     catalogNumber: String(catalogNum),
     dogName: '',
-    run1_heat: '1',
-    run1_blanket: 'red',
-    run1_scores: createEmptyScores(),
-    run2_heat: '1',
-    run2_blanket: 'white',
-    run2_scores: createEmptyScores(),
+    runs,
     racing_box: '1',
     racing_time1: '',
     racing_time2: '',
@@ -84,17 +95,19 @@ export function createNewCategory(
   className: string = 'Стандартный',
   sex: 'male' | 'female' | 'mixed' = 'male',
   initialDogsCount: number = 2,
-  startingCatalogNum: number = 1
+  startingCatalogNum: number = 1,
+  runsCount: 1 | 2 | 3 = 1
 ): CategoryGroup {
   const dogs: DogParticipant[] = []
   for (let i = 0; i < initialDogsCount; i++) {
-    dogs.push(createNewParticipant(startingCatalogNum + i))
+    dogs.push(createNewParticipant(startingCatalogNum + i, runsCount))
   }
   return {
     id: 'cat_' + Math.random().toString(36).substring(2, 9),
     breed,
     className,
     sex,
+    runsCount,
     dogs
   }
 }
@@ -104,9 +117,14 @@ export function calculateRoundSum(scores: CoursingScores): number {
   return nums.reduce<number>((acc, v) => acc + (typeof v === 'number' ? v : 0), 0)
 }
 
-export function calculateTotalScore(p: DogParticipant): number {
+export function calculateTotalScore(p: DogParticipant, runsCount: number = 1): number {
   if (p.disqualified) return 0
-  return calculateRoundSum(p.run1_scores) + calculateRoundSum(p.run2_scores)
+  let total = 0
+  const activeRuns = p.runs.slice(0, runsCount)
+  for (const r of activeRuns) {
+    total += calculateRoundSum(r.scores)
+  }
+  return total
 }
 
 export function formatCategoryTitle(cat: CategoryGroup): string {

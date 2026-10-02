@@ -19,62 +19,40 @@ export function exportToCSV(header: CompetitionHeader, kind: CompetitionKind, ca
     const sortedDogs = [...cat.dogs].sort((a, b) => {
       if (a.disqualified && !b.disqualified) return 1
       if (!a.disqualified && b.disqualified) return -1
-      return calculateTotalScore(b) - calculateTotalScore(a)
+      return calculateTotalScore(b, cat.runsCount) - calculateTotalScore(a, cat.runsCount)
     })
 
     if (kind === 'coursing') {
-      lines.push([
-        'Место',
-        '№ кат.',
-        'Кличка собаки',
-        'Порода',
-        'Класс',
-        'Пол',
-        '1 Круг (Сумма)',
-        'Скор. 1',
-        'Энт. 1',
-        'Инт. 1',
-        'Ман. 1',
-        'Вын. 1',
-        '2 Круг (Сумма)',
-        'Скор. 2',
-        'Энт. 2',
-        'Инт. 2',
-        'Ман. 2',
-        'Вын. 2',
-        'Итоговый балл',
-        'Титулы и сертификаты',
-        'Статус'
-      ].map(h => `"${h}"`).join(';'))
+      const headerCols = ['Место', '№ кат.', 'Кличка собаки', 'Порода', 'Класс', 'Пол']
+      for (let r = 1; r <= cat.runsCount; r++) {
+        headerCols.push(`Забег ${r}`, `Круг ${r} (Сумма)`, `Скор ${r}`, `Энт ${r}`, `Инт ${r}`, `Ман ${r}`, `Вын ${r}`)
+      }
+      headerCols.push('Итоговый балл', 'Титулы и сертификаты', 'Статус')
+      lines.push(headerCols.map(h => `"${h}"`).join(';'))
 
       sortedDogs.forEach((p, idx) => {
-        const sum1 = calculateRoundSum(p.run1_scores)
-        const sum2 = calculateRoundSum(p.run2_scores)
-        const total = calculateTotalScore(p)
-
-        lines.push([
+        const row: Array<string | number> = [
           p.disqualified ? 'ДИСКВ' : (idx + 1),
           p.catalogNumber,
           p.dogName,
           cat.breed,
           cat.className,
           cat.sex === 'male' ? 'Кобель' : (cat.sex === 'female' ? 'Сука' : 'Смешанный'),
-          sum1,
-          p.run1_scores.speed,
-          p.run1_scores.enthusiasm,
-          p.run1_scores.intelligence,
-          p.run1_scores.agility,
-          p.run1_scores.endurance,
-          sum2,
-          p.run2_scores.speed,
-          p.run2_scores.enthusiasm,
-          p.run2_scores.intelligence,
-          p.run2_scores.agility,
-          p.run2_scores.endurance,
-          total,
+        ]
+
+        for (let r = 0; r < cat.runsCount; r++) {
+          const run = p.runs[r] || { heat: '1', scores: { speed: 0, enthusiasm: 0, intelligence: 0, agility: 0, endurance: 0 } }
+          const sum = calculateRoundSum(run.scores)
+          row.push(run.heat, sum, run.scores.speed, run.scores.enthusiasm, run.scores.intelligence, run.scores.agility, run.scores.endurance)
+        }
+
+        row.push(
+          calculateTotalScore(p, cat.runsCount),
           p.awards.join(', '),
           p.disqualified ? 'Дисквалификация' : 'Финишировал'
-        ].map(v => `"${String(v ?? '').replace(/"/g, '""')}"`).join(';'))
+        )
+
+        lines.push(row.map(v => `"${String(v ?? '').replace(/"/g, '""')}"`).join(';'))
       })
     } else {
       lines.push([
@@ -122,7 +100,7 @@ export function exportToCSV(header: CompetitionHeader, kind: CompetitionKind, ca
 
 export function exportToJSON(header: CompetitionHeader, kind: CompetitionKind, categories: CategoryGroup[]): void {
   const data = {
-    schema: 'coursing-stats/protocol-builder-v2',
+    schema: 'coursing-stats/protocol-builder-v3',
     exported_at: new Date().toISOString(),
     competition: header,
     kind,
@@ -131,28 +109,24 @@ export function exportToJSON(header: CompetitionHeader, kind: CompetitionKind, c
       breed: cat.breed,
       class: cat.className,
       sex: cat.sex,
+      runs_count: cat.runsCount,
       dogs: cat.dogs.map(p => ({
         catalog_number: p.catalogNumber,
         dog_name: p.dogName,
-        round1: {
-          heat: p.run1_heat,
-          blanket: p.run1_blanket,
-          scores: p.run1_scores,
-          total: calculateRoundSum(p.run1_scores)
-        },
-        round2: {
-          heat: p.run2_heat,
-          blanket: p.run2_blanket,
-          scores: p.run2_scores,
-          total: calculateRoundSum(p.run2_scores)
-        },
+        runs: p.runs.slice(0, cat.runsCount).map((r, i) => ({
+          round_index: i + 1,
+          heat: r.heat,
+          blanket: r.blanket,
+          scores: r.scores,
+          total: calculateRoundSum(r.scores)
+        })),
         racing: {
           box: p.racing_box,
           time1: p.racing_time1,
           time2: p.racing_time2,
           final_time: p.racing_final_time
         },
-        grand_total: calculateTotalScore(p),
+        grand_total: calculateTotalScore(p, cat.runsCount),
         disqualified: p.disqualified,
         awards: p.awards,
         comment: p.comment
