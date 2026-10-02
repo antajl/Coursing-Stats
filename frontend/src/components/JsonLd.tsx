@@ -41,6 +41,37 @@ export function faqPageSchema(faqs: { question: string; answer: string }[]): Rec
   }
 }
 
+export function personSchema({
+  name,
+  jobTitle,
+  url,
+  description,
+  worksFor = 'Российская Кинологическая Федерация (РКФ)',
+}: {
+  name: string
+  jobTitle: string
+  url: string
+  description?: string
+  worksFor?: string
+}): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name,
+    jobTitle,
+    url,
+    ...(description ? { description } : {}),
+    ...(worksFor
+      ? {
+          worksFor: {
+            '@type': 'Organization',
+            name: worksFor,
+          },
+        }
+      : {}),
+  }
+}
+
 // Organization schema для Coursing Stats
 export const organizationSchema = {
   '@context': 'https://schema.org',
