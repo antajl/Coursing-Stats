@@ -11,7 +11,8 @@ import {
   X,
   Award,
   ChevronDown,
-  Check
+  Check,
+  RotateCcw
 } from 'lucide-react'
 import type { CompetitionHeader, CategoryGroup, DogParticipant, CompetitionKind } from './types'
 import {
@@ -49,21 +50,25 @@ interface ExistingDog {
   breed: string
 }
 
+const DEFAULT_HEADER: CompetitionHeader = {
+  title: 'Чемпионат РКФ по курсингу',
+  rank: 'ЧРКФ',
+  date: new Date().toISOString().substring(0, 10),
+  location: 'Московская обл., Донино',
+  club: 'МКОО Клуб Спортивного Собаководства',
+  judges: ''
+}
+
+const createDefaultCategories = (): CategoryGroup[] => [
+  createNewCategory('Басенджи', 'Стандартный', 'male', 2, 1, 1)
+]
+
 export default function ProtocolBuilder() {
   const [kind, setKind] = useState<CompetitionKind>('coursing')
-  const [header, setHeader] = useState<CompetitionHeader>({
-    title: 'Чемпионат РКФ по курсингу',
-    rank: 'ЧРКФ',
-    date: new Date().toISOString().substring(0, 10),
-    location: 'Московская обл., Донино',
-    club: 'МКОО Клуб Спортивного Собаководства',
-    judges: ''
-  })
+  const [header, setHeader] = useState<CompetitionHeader>(DEFAULT_HEADER)
 
   // Категории: по умолчанию 1 забег
-  const [categories, setCategories] = useState<CategoryGroup[]>([
-    createNewCategory('Басенджи', 'Стандартный', 'male', 2, 1, 1)
-  ])
+  const [categories, setCategories] = useState<CategoryGroup[]>(createDefaultCategories)
 
   // База существующих собак для автокомплита
   const [allExistingDogs, setAllExistingDogs] = useState<ExistingDog[]>([])
@@ -311,6 +316,21 @@ export default function ProtocolBuilder() {
     }, 1000)
   }
 
+  const handleResetToDefault = () => {
+    if (window.confirm('Стереть все внесённые данные и сбросить протокол до начального состояния?')) {
+      localStorage.removeItem(STORAGE_KEY)
+      setHeader({
+        ...DEFAULT_HEADER,
+        date: new Date().toISOString().substring(0, 10)
+      })
+      setKind('coursing')
+      setCategories(createDefaultCategories())
+      setActiveAwardsDogId(null)
+      setActiveSearchDogId(null)
+      setSearchQuery('')
+    }
+  }
+
   return (
     <div className="space-y-5 pb-20 pt-2">
       {/* ПАНЕЛЬ ПАРАМЕТРОВ ТУРНИРА (скрывается при печати) */}
@@ -347,6 +367,15 @@ export default function ProtocolBuilder() {
             >
               <Download className="w-3.5 h-3.5" />
               <span>Скачать результаты (JSON)</span>
+            </button>
+
+            <button
+              onClick={handleResetToDefault}
+              className="flex items-center gap-1.5 px-3 py-1.5 bg-cream-50 hover:bg-terracotta-50 text-char-600 hover:text-terracotta-700 text-xs font-medium rounded-lg border border-om-200 hover:border-terracotta-300 shadow-xs transition-all ml-auto sm:ml-2"
+              title="Стереть все введённые данные и вернуть шаблон по умолчанию"
+            >
+              <RotateCcw className="w-3.5 h-3.5" />
+              <span>Сбросить всё</span>
             </button>
           </div>
         </div>
@@ -445,17 +474,12 @@ export default function ProtocolBuilder() {
 
       {/* ОФИЦИАЛЬНАЯ ШАПКА РЕЗУЛЬТАТОВ (отображается только при печати / сохранении в PDF) */}
       <div className="hidden print:block mb-5 border-b-2 border-char-900 pb-3">
-        <div className="flex items-center justify-between gap-4 mb-3">
-          <div className="flex items-center">
-            <img
-              src="/assets/brand/logo.webp"
-              alt="Coursing Stats"
-              className="h-10 w-auto object-contain"
-            />
-          </div>
-          <div className="text-right text-[10px] text-char-600 font-medium">
-            <span className="uppercase tracking-wider font-bold text-char-800">Официальный протокол соревнований</span>
-          </div>
+        <div className="flex items-center mb-3">
+          <img
+            src="/assets/brand/logo.webp"
+            alt="Coursing Stats"
+            className="h-10 w-auto object-contain"
+          />
         </div>
 
         <div className="text-center space-y-1">
