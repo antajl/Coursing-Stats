@@ -189,7 +189,7 @@ export default function HomeHeroStage({ children, metrics, onCloseMetrics }: Hom
 
       <div
         ref={contentRef}
-        className={`hidden md:block md:fixed md:left-4 lg:left-6 md:top-20 z-20 will-change-opacity w-fit max-w-full ${contentFaded ? 'opacity-0 pointer-events-none invisible' : 'opacity-100 pointer-events-auto visible'}`}
+        className={`hidden md:block md:fixed md:top-20 z-20 will-change-opacity w-fit max-w-full home-v2-stage-content ${contentFaded ? 'opacity-0 pointer-events-none invisible' : 'opacity-100 pointer-events-auto visible'}`}
       >
         {children}
       </div>
@@ -198,7 +198,7 @@ export default function HomeHeroStage({ children, metrics, onCloseMetrics }: Hom
         <div
           ref={metricsRef}
           data-metrics-panel="true"
-          className="relative z-40 w-full max-w-xl mx-auto px-3 pt-2 md:pt-0 md:fixed md:right-4 md:top-20 md:max-w-5xl md:px-0 max-h-[calc(88dvh-4rem)] md:max-h-none overflow-y-auto md:overflow-visible will-change-opacity pointer-events-auto"
+          className="relative z-40 w-full max-w-xl mx-auto px-3 pt-2 md:pt-0 md:fixed md:top-20 md:max-w-5xl md:px-0 max-h-[calc(88dvh-4rem)] md:max-h-none overflow-y-auto md:overflow-visible will-change-opacity pointer-events-auto home-v2-stage-metrics"
         >
           {/* Mobile close button: smoothly collapses stage so content flies up */}
           <div className="md:hidden flex justify-end pb-1.5">
@@ -218,12 +218,12 @@ export default function HomeHeroStage({ children, metrics, onCloseMetrics }: Hom
       {/* Scroll cue is hidden on mobile (< 768px) and only visible on desktop */}
       <button
         type="button"
-        className="hidden md:flex home-v2-scroll-cue"
-        aria-label="Прокрутить вниз"
+        className="hidden md:inline-flex home-v2-scroll-cue group"
+        aria-label="Прокрутить к рейтингам сезона"
         onClick={handleScrollDown}
       >
-        <Icons.chevronDown aria-hidden />
-        <Icons.chevronDown className="home-v2-scroll-cue-chevron" aria-hidden />
+        <span>Рейтинги сезона</span>
+        <Icons.chevronDown className="w-3.5 h-3.5 text-camel-700 transition-transform duration-200 group-hover:translate-y-0.5" aria-hidden />
       </button>
     </section>
   )

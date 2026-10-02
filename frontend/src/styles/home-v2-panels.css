@@ -180,13 +180,6 @@
     inset: -16px -24px -12px -20px;
     filter: blur(10px);
   }
-  .home-v2:not(.home-v2--revealed) .home-v2-scroll-cue svg {
-    width: 28px;
-    height: 28px;
-  }
-  .home-v2:not(.home-v2--revealed) .home-v2-scroll-cue-chevron {
-    margin-top: -12px;
-  }
 }
 @media (max-height: 600px) {
   .home-v2:not(.home-v2--revealed) .home-v2-hero-copy {
@@ -199,9 +192,6 @@
   .home-v2:not(.home-v2--revealed) .home-v2-lead {
     font-size: 0.85rem;
     margin-bottom: 8px;
-  }
-  .home-v2:not(.home-v2--revealed) .home-v2-scroll-cue-chevron {
-    margin-top: -12px;
   }
 }
 @media (max-height: 520px) {
