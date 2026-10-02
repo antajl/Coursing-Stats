@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { formatBreedSentenceCase } from '../lib/breedMapping'
-import { getJudgeInitials, getStrictnessBadge } from '../lib/judgeUiUtils'
+import { formatJudgeDisplayName, getJudgeInitials, getStrictnessBadge } from '../lib/judgeUiUtils'
 
 export interface ShowJudgeCardData {
   id: string
@@ -39,7 +39,8 @@ function StatPill({
 export default function ShowJudgeCard({ judge }: { judge: ShowJudgeCardData }) {
   const chips = (judge.breedChips || []).slice(0, 2)
   const extraBreeds = Math.max(0, judge.breedsCount - chips.length)
-  const displayName = judge.display_name || judge.name
+  const rawName = judge.display_name || judge.name
+  const displayName = formatJudgeDisplayName(rawName)
   const initials = getJudgeInitials(displayName)
 
   const excellentRateFraction = judge.excellentPct != null ? judge.excellentPct / 100 : null

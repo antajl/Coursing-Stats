@@ -39,6 +39,7 @@ verified: 2026-10-01
 | Парсеры procoursing | [sheets/06-parsers.md](sheets/06-parsers.md) |
 | Routes, ui-flags, React Query | [sheets/07-frontend.md](sheets/07-frontend.md) |
 | Дизайн-система, UI Kit, десктопные компоненты | [sheets/14-design-system.md](sheets/14-design-system.md) |
+| SEO, поисковая аналитика, Mobile-First | [sheets/15-seo-analytics.md](sheets/15-seo-analytics.md) |
 | Telegram bot | [sheets/08-bot.md](sheets/08-bot.md) |
 | Dev, deploy, CI, secrets | [sheets/09-ops-deploy.md](sheets/09-ops-deploy.md) |
 | Security | [sheets/10-security.md](sheets/10-security.md) |

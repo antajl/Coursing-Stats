@@ -4,15 +4,22 @@ import {
   type GradeFilterKey,
   type StrictnessVerdict,
 } from './judgeDetailAggregates'
-import { getJudgeInitials, getStrictnessBadge } from '../../../lib/judgeUiUtils'
+import { formatJudgeDisplayName, getJudgeInitials, getStrictnessBadge } from '../../../lib/judgeUiUtils'
 
 type PeriodStrictness = {
   graded: number
   excellent_rate: number | null
 }
 
+const DEFAULT_GRADE_ACCENT = {
+  dot: 'bg-charcoal-400',
+  border: 'border-charcoal-200/80',
+  activeBorder: 'border-charcoal-600',
+  activeBg: 'bg-cream-100',
+}
+
 const GRADE_ACCENTS: Record<
-  GradeFilterKey,
+  string,
   { dot: string; border: string; activeBorder: string; activeBg: string }
 > = {
   excellent: {
@@ -38,6 +45,18 @@ const GRADE_ACCENTS: Record<
     border: 'border-orange-200/80',
     activeBorder: 'border-orange-600',
     activeBg: 'bg-orange-50',
+  },
+  very_promising: {
+    dot: 'bg-teal-500',
+    border: 'border-teal-200/80',
+    activeBorder: 'border-teal-600',
+    activeBg: 'bg-teal-50',
+  },
+  promising: {
+    dot: 'bg-cyan-500',
+    border: 'border-cyan-200/80',
+    activeBorder: 'border-cyan-600',
+    activeBg: 'bg-cyan-50',
   },
   dq: {
     dot: 'bg-rose-500',
@@ -100,6 +119,7 @@ export function JudgeDetailHeader({
   onToggleGrade: (key: GradeFilterKey) => void
   onBack?: () => void
 }) {
+  const displayName = formatJudgeDisplayName(judgeName)
   const initials = getJudgeInitials(judgeName)
   const strictnessBadge = getStrictnessBadge(
     periodStrictness.excellent_rate,
@@ -152,7 +172,7 @@ export function JudgeDetailHeader({
               </span>
             </div>
             <h1 className="text-2xl font-bold tracking-tight text-charcoal-900 sm:text-3xl line-clamp-2">
-              {judgeName}
+              {displayName}
             </h1>
           </div>
         </div>
@@ -176,12 +196,12 @@ export function JudgeDetailHeader({
         </div>
       </div>
 
-      {/* Primary 3 Key Statistics Cards */}
-      <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
+      {/* Primary Key Statistics Cards (4 cards) */}
+      <div className="mt-6 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
         <button
           type="button"
           onClick={onSelectExhibitions}
-          className="group flex items-center justify-between rounded-xl border border-old-money-200/80 bg-cream-50/50 p-4 text-left transition-all hover:border-camel-300 hover:bg-cream-100/70 hover:shadow-2xs"
+          className="group flex items-center justify-between rounded-xl border border-old-money-200/80 bg-cream-50/50 p-3.5 sm:p-4 text-left transition-all hover:border-camel-300 hover:bg-cream-100/70 hover:shadow-2xs"
         >
           <div>
             <p className="text-xs font-semibold uppercase tracking-wider text-charcoal-500">
@@ -191,7 +211,7 @@ export function JudgeDetailHeader({
               {periodExhibitionCount}
             </p>
           </div>
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-cream-200/60 text-camel-700 group-hover:bg-camel-200/60 transition-colors">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-cream-200/60 text-camel-700 group-hover:bg-camel-200/60 transition-colors">
             <Calendar className="h-5 w-5" />
           </div>
         </button>
@@ -199,7 +219,7 @@ export function JudgeDetailHeader({
         <button
           type="button"
           onClick={onSelectBreeds}
-          className="group flex items-center justify-between rounded-xl border border-old-money-200/80 bg-cream-50/50 p-4 text-left transition-all hover:border-camel-300 hover:bg-cream-100/70 hover:shadow-2xs"
+          className="group flex items-center justify-between rounded-xl border border-old-money-200/80 bg-cream-50/50 p-3.5 sm:p-4 text-left transition-all hover:border-camel-300 hover:bg-cream-100/70 hover:shadow-2xs"
         >
           <div>
             <p className="text-xs font-semibold uppercase tracking-wider text-charcoal-500">
@@ -209,29 +229,41 @@ export function JudgeDetailHeader({
               {periodBreedCount}
             </p>
           </div>
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-cream-200/60 text-camel-700 group-hover:bg-camel-200/60 transition-colors">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-cream-200/60 text-camel-700 group-hover:bg-camel-200/60 transition-colors">
             <Layers className="h-5 w-5" />
           </div>
         </button>
 
-        <div className="flex items-center justify-between rounded-xl border border-old-money-200/80 bg-cream-50/50 p-4 text-left">
+        <div className="flex items-center justify-between rounded-xl border border-old-money-200/80 bg-cream-50/50 p-3.5 sm:p-4 text-left">
           <div>
             <p className="text-xs font-semibold uppercase tracking-wider text-charcoal-500">
-              Всего оценок собак
+              Всего оценок
             </p>
-            <div className="mt-1 flex items-baseline gap-2">
-              <p className="text-2xl sm:text-3xl font-bold tabular-nums text-charcoal-900">
-                {periodStrictness.graded}
+            <p className="mt-1 text-2xl sm:text-3xl font-bold tabular-nums text-charcoal-900">
+              {periodStrictness.graded}
+            </p>
+          </div>
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-cream-200/60 text-camel-700">
+            <CheckCircle2 className="h-5 w-5" />
+          </div>
+        </div>
+
+        <div className="flex items-center justify-between rounded-xl border border-old-money-200/80 bg-cream-50/50 p-3.5 sm:p-4 text-left">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-wider text-charcoal-500">
+              «Отлично»
+            </p>
+            <div className="mt-1 flex items-baseline gap-1.5">
+              <p className={`text-2xl sm:text-3xl font-bold tabular-nums ${strictnessBadge.textClass}`}>
+                {excellentPct ? `${excellentPct}` : '—'}
               </p>
               {excellentPct && (
-                <span className={`text-xs font-bold ${strictnessBadge.textClass}`}>
-                  ({excellentPct} отлично)
-                </span>
+                <span className="text-[11px] font-medium text-charcoal-400">доля</span>
               )}
             </div>
           </div>
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-cream-200/60 text-camel-700">
-            <CheckCircle2 className="h-5 w-5" />
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-emerald-50 text-emerald-700">
+            <Award className="h-5 w-5" />
           </div>
         </div>
       </div>
@@ -239,22 +271,12 @@ export function JudgeDetailHeader({
       {/* Interactive Grade Tiles */}
       {hasGrades && (
         <div className="mt-6 border-t border-old-money-100 pt-5">
-          <div className="mb-2 flex items-center justify-between">
-            <p className="text-xs font-semibold uppercase tracking-wider text-charcoal-500">
-              Распределение оценок (нажмите для фильтра выставок):
-            </p>
-            {gradeFilter && (
-              <span className="text-xs text-camel-700 font-medium">
-                Фильтр активен
-              </span>
-            )}
-          </div>
           <div className="grid grid-cols-2 gap-2 sm:grid-cols-4 lg:grid-cols-7">
             {GRADE_TILES.map(({ key, label }) => {
               const count = periodGrades[key] || 0
               const active = gradeFilter === key
               const disabled = count === 0
-              const accent = GRADE_ACCENTS[key]
+              const accent = GRADE_ACCENTS[key] ?? DEFAULT_GRADE_ACCENT
 
               return (
                 <button
@@ -296,8 +318,8 @@ export function JudgeDetailHeader({
               Мало данных для шкалы строгости (нужно от 30 оценок, сейчас {periodStrictness.graded})
             </p>
           ) : (
-            <div className="mx-auto max-w-3xl space-y-3">
-              <div className="rounded-xl border border-old-money-200/80 bg-cream-50/40 p-4">
+            <div className="w-full">
+              <div className="rounded-xl border border-old-money-200/80 bg-cream-50/40 p-3 sm:p-3.5">
                 <div className="flex items-center justify-between text-xs font-semibold text-charcoal-600 mb-2">
                   <span className="flex items-center gap-1.5">
                     <span className={`h-2 w-2 rounded-full ${strictnessBadge.dotClass}`} />
@@ -311,7 +333,7 @@ export function JudgeDetailHeader({
                 </div>
 
                 {/* Multi-zone progress bar */}
-                <div className="relative h-4 overflow-hidden rounded-full bg-cream-200 border border-old-money-200/50">
+                <div className="relative h-2.5 overflow-hidden rounded-full bg-cream-200 border border-old-money-200/50">
                   {/* Visual zones background */}
                   <div className="absolute inset-0 flex">
                     <div className="w-[70%] bg-rose-100/50 border-r border-rose-200/50" title="Зона строгости (<70%)" />
@@ -336,20 +358,20 @@ export function JudgeDetailHeader({
                   {/* Site baseline vertical tick */}
                   {sitePctNumber != null && (
                     <div
-                      className="absolute top-0 bottom-0 w-1 bg-charcoal-900 shadow-sm"
+                      className="absolute top-0 bottom-0 w-1 rounded-full bg-charcoal-900 shadow-sm"
                       style={{ left: `${Math.min(100, Math.max(0, sitePctNumber))}%` }}
                       title={`Среднее по сайту: ${sitePct}`}
                     />
                   )}
                 </div>
 
-                <div className="mt-2 flex justify-between text-[10px] uppercase tracking-wider font-semibold text-charcoal-400">
-                  <span className="text-rose-700">Строгий (&lt;70%)</span>
-                  <span className="text-amber-700">Умеренный (70–80%)</span>
-                  <span className="text-emerald-700">Лояльный (&gt;80%)</span>
+                <div className="mt-2 flex justify-between text-[11px] font-medium text-charcoal-500">
+                  <span className="text-rose-700">Строгий &lt;70%</span>
+                  <span className="text-amber-700">Умеренный 70–80%</span>
+                  <span className="text-emerald-700">Лояльный &gt;80%</span>
                 </div>
 
-                <p className="mt-3 text-center text-xs text-charcoal-600 font-medium">
+                <p className="mt-2.5 text-center text-xs text-charcoal-500">
                   {strictnessVerdict?.hint ??
                     'Полоса — доля «отлично» у судьи; темная черта — среднее по выставкам'}
                 </p>

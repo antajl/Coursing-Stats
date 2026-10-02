@@ -52,7 +52,7 @@ function judgeExcellentPctForCard(judge: ShowJudge, year: string): number | null
 
 export default function ShowJudges() {
   const [searchQuery, setSearchQuery] = useState('')
-  const [filterYear, setFilterYear] = useState(CURRENT_SEASON)
+  const [filterYear, setFilterYear] = useState('')
   const [filterBreed, setFilterBreed] = useState('')
   const [sortKey, setSortKey] = useState<SortKey>('exhibitions')
   const [sortDir, setSortDir] = useState<'desc' | 'asc'>('desc')
@@ -185,13 +185,12 @@ export default function ShowJudges() {
     }
   }
 
-  const yearIsNonDefault = Boolean(filterYear) && filterYear !== CURRENT_SEASON
-  const hasActiveFilters = Boolean(yearIsNonDefault || filterBreed || searchQuery)
+  const hasActiveFilters = Boolean(filterYear || filterBreed || searchQuery)
   const hasPanelFilters = Boolean(filterBreed)
 
   const clearFilters = () => {
     setSearchQuery('')
-    setFilterYear(CURRENT_SEASON)
+    setFilterYear('')
     setFilterBreed('')
   }
 
@@ -232,7 +231,6 @@ export default function ShowJudges() {
     <div className="mx-auto max-w-full space-y-4 pb-2 sm:pb-4">
       <PageToolbar
         bare
-        topRowClassName="pr-0 md:pr-32"
         filters={
           <>
             <ToolbarSearch
@@ -279,7 +277,7 @@ export default function ShowJudges() {
             </div>
           </>
         }
-        bottomLeft={
+        trailing={
           <RecordSortBar
             options={SORT_OPTIONS}
             sortField={sortKey}

@@ -62,7 +62,7 @@ export function JudgeBreedPanel({
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Найти породу..."
-            className="w-full h-9 pl-9 pr-3 rounded-lg border border-old-money-200 bg-white text-sm text-charcoal-800 placeholder-charcoal-400 focus:border-camel-500 focus:outline-none focus:ring-2 focus:ring-camel-100"
+            className="w-full h-9 pl-9 pr-3 rounded-lg border border-old-money-200/90 bg-cream-50/60 text-sm text-charcoal-800 placeholder-charcoal-400 hover:border-camel-300 focus:border-camel-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-camel-100 transition-colors"
           />
           {searchQuery && (
             <button
