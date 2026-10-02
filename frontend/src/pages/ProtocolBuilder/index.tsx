@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import {
   Plus,
   Trash2,
@@ -7,19 +7,21 @@ import {
   FileSpreadsheet,
   Trophy,
   FolderPlus,
-  ChevronDown
+  Search,
+  X
 } from 'lucide-react'
 import type { CompetitionHeader, CategoryGroup, DogParticipant, CompetitionKind } from './types'
 import {
   createNewCategory,
   createNewParticipant,
+  createRunData,
   calculateRoundSum,
   calculateTotalScore,
   formatCategoryTitle
 } from './types'
 import { exportToCSV, exportToJSON } from './exportHelpers'
 
-const STORAGE_KEY = 'cs_protocol_builder_draft_v2'
+const STORAGE_KEY = 'cs_protocol_builder_draft_v3'
 
 const COMMON_BREEDS = [
   'Басенджи',
@@ -39,6 +41,11 @@ const COMMON_BREEDS = [
 const CLASSES = ['Стандартный', 'Спринтер', 'Юниоры', 'Ветераны', 'Открытый']
 const TITLES_LIST = ['CACL', 'ЧРКФ', 'CACIT', 'Ю.CACL', 'Вет.CACL', 'Best in Field', 'Res.CACL']
 
+interface ExistingDog {
+  name: string
+  breed: string
+}
+
 export default function ProtocolBuilder() {
   const [kind, setKind] = useState<CompetitionKind>('coursing')
   const [header, setHeader] = useState<CompetitionHeader>({
@@ -50,9 +57,38 @@ export default function ProtocolBuilder() {
     judges: ''
   })
 
+  // Категории: по умолчанию 1 забег
   const [categories, setCategories] = useState<CategoryGroup[]>([
-    createNewCategory('Басенджи', 'Стандартный', 'male', 2, 1)
+    createNewCategory('Басенджи', 'Стандартный', 'male', 2, 1, 1)
   ])
+
+  // База существующих собак для автокомплита
+  const [allExistingDogs, setAllExistingDogs] = useState<ExistingDog[]>([])
+  const [activeSearchDogId, setActiveSearchDogId] = useState<string | null>(null)
+  const [searchQuery, setSearchQuery] = useState('')
+
+  // Загрузка индекса собак сайта для быстрого автозаполнения
+  useEffect(() => {
+    fetch('/data/v1/indexes/dogs-index.json')
+      .then(res => res.json())
+      .then((data: Array<{ name_ru?: string; name_lat?: string; breed?: string }>) => {
+        if (!Array.isArray(data)) return
+        const map = new Map<string, string>()
+        data.forEach(d => {
+          const name = (d.name_ru || d.name_lat || '').trim()
+          const breed = (d.breed || '').trim()
+          if (name && !map.has(name.toLowerCase())) {
+            map.set(name.toLowerCase(), breed)
+          }
+        })
+        const list: ExistingDog[] = Array.from(map.entries()).map(([k, breed]) => ({
+          name: k.toUpperCase(),
+          breed
+        }))
+        setAllExistingDogs(list)
+      })
+      .catch(() => {})
+  }, [])
 
   // Загрузка черновика из localStorage
   useEffect(() => {
@@ -63,7 +99,19 @@ export default function ProtocolBuilder() {
         if (parsed.header) setHeader(parsed.header)
         if (parsed.kind) setKind(parsed.kind)
         if (parsed.categories && parsed.categories.length > 0) {
-          setCategories(parsed.categories)
+          // Нормализация runs
+          const normCats = parsed.categories.map((c: any) => ({
+            ...c,
+            runsCount: c.runsCount || 1,
+            dogs: (c.dogs || []).map((d: any) => ({
+              ...d,
+              runs: Array.isArray(d.runs) && d.runs.length > 0 ? d.runs : [
+                d.run1_scores ? { heat: d.run1_heat || '1', blanket: d.run1_blanket || 'red', scores: d.run1_scores } : createRunData('1', 'red'),
+                d.run2_scores ? { heat: d.run2_heat || '1', blanket: d.run2_blanket || 'white', scores: d.run2_scores } : createRunData('1', 'white')
+              ]
+            }))
+          }))
+          setCategories(normCats)
         }
       }
     } catch {}
@@ -78,10 +126,9 @@ export default function ProtocolBuilder() {
 
   // Добавление новой категории
   const addCategory = () => {
-    // Вычисляем следующий стартовый номер каталога
     let totalDogs = 0
     categories.forEach(c => { totalDogs += c.dogs.length })
-    setCategories(prev => [...prev, createNewCategory('Уиппет', 'Стандартный', 'male', 2, totalDogs + 1)])
+    setCategories(prev => [...prev, createNewCategory('Уиппет', 'Стандартный', 'male', 2, totalDogs + 1, 1)])
   }
 
   const removeCategory = (categoryId: string) => {
@@ -93,7 +140,31 @@ export default function ProtocolBuilder() {
     setCategories(prev => prev.map(c => c.id === categoryId ? { ...c, ...updates } : c))
   }
 
-  // Добавление собаки в конкретную категорию
+  // Изменение количества забегов в категории (1, 2 или 3)
+  const setCategoryRunsCount = (categoryId: string, count: 1 | 2 | 3) => {
+    setCategories(prev => prev.map(cat => {
+      if (cat.id !== categoryId) return cat
+      const updatedDogs = cat.dogs.map(dog => {
+        const currentRuns = [...dog.runs]
+        while (currentRuns.length < count) {
+          const nextIdx = currentRuns.length
+          const bColors: Array<'red' | 'white' | 'blue'> = ['red', 'white', 'blue']
+          currentRuns.push(createRunData('1', bColors[nextIdx % 3]))
+        }
+        return {
+          ...dog,
+          runs: currentRuns
+        }
+      })
+      return {
+        ...cat,
+        runsCount: count,
+        dogs: updatedDogs
+      }
+    }))
+  }
+
+  // Добавление собаки в категорию
   const addDogToCategory = (categoryId: string) => {
     let totalDogs = 0
     categories.forEach(c => { totalDogs += c.dogs.length })
@@ -102,7 +173,7 @@ export default function ProtocolBuilder() {
       if (cat.id !== categoryId) return cat
       return {
         ...cat,
-        dogs: [...cat.dogs, createNewParticipant(totalDogs + 1)]
+        dogs: [...cat.dogs, createNewParticipant(totalDogs + 1, cat.runsCount)]
       }
     }))
   }
@@ -128,10 +199,32 @@ export default function ProtocolBuilder() {
     }))
   }
 
-  const updateRoundScores = (
+  const updateRunField = (
     categoryId: string,
     dogId: string,
-    round: 'run1_scores' | 'run2_scores',
+    runIndex: number,
+    field: 'heat' | 'blanket',
+    value: string
+  ) => {
+    setCategories(prev => prev.map(cat => {
+      if (cat.id !== categoryId) return cat
+      return {
+        ...cat,
+        dogs: cat.dogs.map(d => {
+          if (d.id !== dogId) return d
+          const runs = [...d.runs]
+          if (!runs[runIndex]) runs[runIndex] = createRunData()
+          runs[runIndex] = { ...runs[runIndex], [field]: value }
+          return { ...d, runs }
+        })
+      }
+    }))
+  }
+
+  const updateRunScore = (
+    categoryId: string,
+    dogId: string,
+    runIndex: number,
     criterion: 'speed' | 'enthusiasm' | 'intelligence' | 'agility' | 'endurance',
     value: string
   ) => {
@@ -142,13 +235,16 @@ export default function ProtocolBuilder() {
         ...cat,
         dogs: cat.dogs.map(d => {
           if (d.id !== dogId) return d
-          return {
-            ...d,
-            [round]: {
-              ...d[round],
+          const runs = [...d.runs]
+          if (!runs[runIndex]) runs[runIndex] = createRunData()
+          runs[runIndex] = {
+            ...runs[runIndex],
+            scores: {
+              ...runs[runIndex].scores,
               [criterion]: num
             }
           }
+          return { ...d, runs }
         })
       }
     }))
@@ -171,26 +267,30 @@ export default function ProtocolBuilder() {
     }))
   }
 
-  // Печать только результатов (через print stylesheet)
-  const handlePrintResults = () => {
-    window.print()
+  // Фильтр автокомплита для клички
+  const filteredExistingDogs = searchQuery.trim().length >= 2
+    ? allExistingDogs.filter(d => d.name.toLowerCase().includes(searchQuery.toLowerCase())).slice(0, 8)
+    : []
+
+  const selectExistingDog = (categoryId: string, dogId: string, dog: ExistingDog) => {
+    updateDog(categoryId, dogId, { dogName: dog.name })
+    setActiveSearchDogId(null)
+    setSearchQuery('')
   }
 
   return (
-    <div className="space-y-6 pb-20 pt-2">
-      {/* ПАНЕЛЬ УПРАВЛЕНИЯ И ЭКСПОРТА (скрывается при печати) */}
-      <div className="bg-cream-50/90 backdrop-blur-sm rounded-xl p-4 md:p-5 border border-om-200 shadow-sm space-y-4 print:hidden">
-        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-om-200/70 pb-3">
-          <div className="flex items-center gap-2">
-            <span className="text-xs font-bold uppercase tracking-wider text-camel-800">
-              Параметры турнира
-            </span>
-          </div>
+    <div className="space-y-5 pb-20 pt-2">
+      {/* ПАНЕЛЬ ПАРАМЕТРОВ ТУРНИРА (скрывается при печати) */}
+      <div className="bg-cream-50/90 backdrop-blur-sm rounded-xl p-3.5 md:p-4 border border-om-200 shadow-sm space-y-3 print:hidden">
+        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-om-200/70 pb-2.5">
+          <span className="text-xs font-bold uppercase tracking-wider text-camel-800">
+            Параметры турнира
+          </span>
 
           {/* Кнопки скачивания результатов */}
           <div className="flex flex-wrap items-center gap-2">
             <button
-              onClick={handlePrintResults}
+              onClick={() => window.print()}
               className="flex items-center gap-1.5 px-3 py-1.5 bg-cream-50 hover:bg-cream-100 text-char-800 text-xs font-medium rounded-lg border border-om-200 shadow-xs transition-all"
               title="Печать или сохранение чистого протокола результатов в PDF"
             >
@@ -223,7 +323,6 @@ export default function ProtocolBuilder() {
             Метаданные
           </span>
 
-          {/* Переключатель дисциплины */}
           <div className="flex items-center bg-om-100 p-0.5 rounded-lg border border-om-200 text-xs">
             <button
               onClick={() => setKind('coursing')}
@@ -248,31 +347,29 @@ export default function ProtocolBuilder() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 text-xs">
           <div>
-            <label className="block text-char-600 font-medium mb-1">Название соревнований</label>
+            <label className="block text-char-600 font-medium mb-0.5">Название соревнований</label>
             <input
               type="text"
               value={header.title}
               onChange={e => setHeader({ ...header, title: e.target.value })}
               className="w-full px-2.5 py-1.5 bg-om-50 rounded-lg border border-om-200 text-char-900 focus:outline-none focus:ring-1 focus:ring-camel-500"
-              placeholder="Чемпионат РКФ по курсингу"
             />
           </div>
 
           <div>
-            <label className="block text-char-600 font-medium mb-1">Ранг соревнований</label>
+            <label className="block text-char-600 font-medium mb-0.5">Ранг соревнований</label>
             <input
               type="text"
               value={header.rank}
               onChange={e => setHeader({ ...header, rank: e.target.value })}
               className="w-full px-2.5 py-1.5 bg-om-50 rounded-lg border border-om-200 text-char-900 focus:outline-none focus:ring-1 focus:ring-camel-500"
-              placeholder="ЧРКФ / CACL / Квалификация"
             />
           </div>
 
           <div>
-            <label className="block text-char-600 font-medium mb-1">Дата проведения</label>
+            <label className="block text-char-600 font-medium mb-0.5">Дата проведения</label>
             <input
               type="date"
               value={header.date}
@@ -282,35 +379,32 @@ export default function ProtocolBuilder() {
           </div>
 
           <div>
-            <label className="block text-char-600 font-medium mb-1">Место / Регион</label>
+            <label className="block text-char-600 font-medium mb-0.5">Место / Регион</label>
             <input
               type="text"
               value={header.location}
               onChange={e => setHeader({ ...header, location: e.target.value })}
               className="w-full px-2.5 py-1.5 bg-om-50 rounded-lg border border-om-200 text-char-900 focus:outline-none focus:ring-1 focus:ring-camel-500"
-              placeholder="Московская обл., Донино"
             />
           </div>
 
           <div>
-            <label className="block text-char-600 font-medium mb-1">Организатор (Клуб)</label>
+            <label className="block text-char-600 font-medium mb-0.5">Организатор (Клуб)</label>
             <input
               type="text"
               value={header.club}
               onChange={e => setHeader({ ...header, club: e.target.value })}
               className="w-full px-2.5 py-1.5 bg-om-50 rounded-lg border border-om-200 text-char-900 focus:outline-none focus:ring-1 focus:ring-camel-500"
-              placeholder="МКОО Клуб Спортивного Собаководства"
             />
           </div>
 
           <div>
-            <label className="block text-char-600 font-medium mb-1">Судьи</label>
+            <label className="block text-char-600 font-medium mb-0.5">Судьи</label>
             <input
               type="text"
               value={header.judges}
               onChange={e => setHeader({ ...header, judges: e.target.value })}
               className="w-full px-2.5 py-1.5 bg-om-50 rounded-lg border border-om-200 text-char-900 focus:outline-none focus:ring-1 focus:ring-camel-500"
-              placeholder="Иванов И.И., Петров П.П."
             />
           </div>
         </div>
@@ -323,10 +417,10 @@ export default function ProtocolBuilder() {
         <p className="text-xs">Организатор: {header.club} {header.judges ? `| Судьи: ${header.judges}` : ''}</p>
       </div>
 
-      {/* РАБОЧАЯ ОБЛАСТЬ КАТЕГОРИЙ (скрывается при печати, если мы печатаем чистые результаты) */}
-      <div className="space-y-6 print:hidden">
+      {/* РАБОЧАЯ ОБЛАСТЬ КАТЕГОРИЙ (скрывается при печати) */}
+      <div className="space-y-4 print:hidden">
         <div className="flex items-center justify-between">
-          <h2 className="text-sm font-bold uppercase tracking-wider text-char-900">
+          <h2 className="text-xs font-bold uppercase tracking-wider text-char-900">
             Категории соревнований ({categories.length})
           </h2>
 
@@ -340,51 +434,69 @@ export default function ProtocolBuilder() {
         </div>
 
         {/* СПИСОК КАТЕГОРИЙ */}
-        <div className="space-y-6">
+        <div className="space-y-4">
           {categories.map((category) => (
             <div
               key={category.id}
               className="bg-cream-50/95 rounded-xl border border-om-200 shadow-xs overflow-hidden"
             >
-              {/* Шапка категории: Порода, Класс, Пол */}
-              <div className="bg-om-100/70 p-3.5 border-b border-om-200/80 flex flex-wrap items-center justify-between gap-3">
+              {/* Шапка категории: Порода, Класс, Пол + Управление количеством забегов (1, 2, 3) */}
+              <div className="bg-om-100/70 px-3 py-2.5 border-b border-om-200/80 flex flex-wrap items-center justify-between gap-2.5">
                 <div className="flex flex-wrap items-center gap-2">
-                  <span className="text-[11px] font-bold text-camel-800 uppercase tracking-wider">
+                  <span className="text-[10px] font-bold text-camel-800 uppercase tracking-wider">
                     Категория:
                   </span>
 
-                  {/* Выбор породы */}
                   <select
                     value={category.breed}
                     onChange={e => updateCategoryMeta(category.id, { breed: e.target.value })}
-                    className="px-2.5 py-1 bg-cream-50 rounded border border-om-200 text-xs font-bold text-char-900"
+                    className="px-2 py-0.5 bg-cream-50 rounded border border-om-200 text-xs font-bold text-char-900"
                   >
                     {COMMON_BREEDS.map(b => (
                       <option key={b} value={b}>{b}</option>
                     ))}
                   </select>
 
-                  {/* Выбор класса */}
                   <select
                     value={category.className}
                     onChange={e => updateCategoryMeta(category.id, { className: e.target.value })}
-                    className="px-2.5 py-1 bg-cream-50 rounded border border-om-200 text-xs font-semibold text-char-800"
+                    className="px-2 py-0.5 bg-cream-50 rounded border border-om-200 text-xs font-semibold text-char-800"
                   >
                     {CLASSES.map(c => (
                       <option key={c} value={c}>{c}</option>
                     ))}
                   </select>
 
-                  {/* Выбор пола */}
                   <select
                     value={category.sex}
                     onChange={e => updateCategoryMeta(category.id, { sex: e.target.value as any })}
-                    className="px-2.5 py-1 bg-cream-50 rounded border border-om-200 text-xs font-semibold text-char-800"
+                    className="px-2 py-0.5 bg-cream-50 rounded border border-om-200 text-xs font-semibold text-char-800"
                   >
                     <option value="male">Кобели</option>
                     <option value="female">Суки</option>
-                    <option value="mixed">Смешанный (Кобели и Суки)</option>
+                    <option value="mixed">Смешанный</option>
                   </select>
+
+                  {/* Переключатель количества забегов: 1, 2, 3 забега */}
+                  {kind === 'coursing' && (
+                    <div className="flex items-center gap-1 ml-2 bg-om-200/50 p-0.5 rounded border border-om-300/40 text-[10px]">
+                      <span className="text-char-500 font-medium px-1">Забегов:</span>
+                      {([1, 2, 3] as const).map(n => (
+                        <button
+                          key={n}
+                          type="button"
+                          onClick={() => setCategoryRunsCount(category.id, n)}
+                          className={`px-2 py-0.5 rounded font-bold transition-all ${
+                            category.runsCount === n
+                              ? 'bg-camel-600 text-white shadow-2xs'
+                              : 'text-char-600 hover:text-char-900 bg-cream-50/70'
+                          }`}
+                        >
+                          {n} {n === 1 ? 'круг' : 'круга'}
+                        </button>
+                      ))}
+                    </div>
+                  )}
                 </div>
 
                 <div className="flex items-center gap-2">
@@ -402,134 +514,132 @@ export default function ProtocolBuilder() {
                     className="p-1 text-char-400 hover:text-terracotta-600 transition-colors disabled:opacity-30"
                     title="Удалить всю категорию"
                   >
-                    <Trash2 className="w-4 h-4" />
+                    <Trash2 className="w-3.5 h-3.5" />
                   </button>
                 </div>
               </div>
 
-              {/* Список собак в категории — Ультракомпактный табличный вид */}
-              <div className="p-2 space-y-2">
+              {/* СПИСОК СОБАК В КАТЕГОРИИ */}
+              <div className="p-2 space-y-1.5">
                 {category.dogs.map((dog) => {
-                  const sum1 = calculateRoundSum(dog.run1_scores)
-                  const sum2 = calculateRoundSum(dog.run2_scores)
-                  const total = calculateTotalScore(dog)
+                  const total = calculateTotalScore(dog, category.runsCount)
+                  const isAutocompleteOpen = activeSearchDogId === dog.id
 
                   return (
                     <div
                       key={dog.id}
                       className="bg-om-50/70 hover:bg-cream-50 rounded-lg border border-om-200/70 p-2 space-y-1.5 transition-all shadow-2xs"
                     >
-                      {/* Главная компактная строка: Номер, Кличка, 1 Круг, 2 Круг, Итог, Удалить */}
+                      {/* Строка собаки */}
                       <div className="flex flex-wrap items-center justify-between gap-2 text-xs">
-                        <div className="flex items-center gap-1.5 flex-1 min-w-[200px]">
+                        {/* Номер по каталогу + Компактное поле клички собаки с автокомплитом */}
+                        <div className="relative flex items-center gap-1.5 w-full sm:w-auto sm:max-w-xs md:max-w-sm flex-1">
                           <input
                             type="text"
                             value={dog.catalogNumber}
                             onChange={e => updateDog(category.id, dog.id, { catalogNumber: e.target.value })}
-                            className="w-10 px-1 py-1 text-center font-bold bg-cream-50 rounded border border-om-200 text-xs text-char-900"
+                            className="w-9 px-1 py-1 text-center font-bold bg-cream-50 rounded border border-om-200 text-xs text-char-900"
                             placeholder="№"
                             title="Номер по каталогу"
                           />
 
-                          <input
-                            type="text"
-                            value={dog.dogName}
-                            onChange={e => updateDog(category.id, dog.id, { dogName: e.target.value })}
-                            className="flex-1 px-2 py-1 bg-cream-50 rounded border border-om-200 text-xs font-semibold text-char-900 focus:ring-1 focus:ring-camel-500 focus:outline-none"
-                            placeholder="Кличка собаки"
-                          />
+                          <div className="relative flex-1">
+                            <input
+                              type="text"
+                              value={dog.dogName}
+                              onChange={e => {
+                                updateDog(category.id, dog.id, { dogName: e.target.value })
+                                setSearchQuery(e.target.value)
+                                setActiveSearchDogId(dog.id)
+                              }}
+                              onFocus={() => {
+                                setSearchQuery(dog.dogName)
+                                setActiveSearchDogId(dog.id)
+                              }}
+                              className="w-full px-2 py-1 bg-cream-50 rounded border border-om-200 text-xs font-semibold text-char-900 focus:ring-1 focus:ring-camel-500 focus:outline-none"
+                              placeholder="Кличка собаки"
+                            />
+
+                            {/* Всплывающий список существующих собак из базы сайта */}
+                            {isAutocompleteOpen && filteredExistingDogs.length > 0 && (
+                              <div className="absolute left-0 top-full mt-1 w-72 bg-cream-50 rounded-lg border border-om-300 shadow-lg z-50 py-1 divide-y divide-om-100 max-h-48 overflow-y-auto">
+                                <div className="px-2 py-0.5 text-[9px] font-bold text-camel-800 uppercase tracking-wider bg-om-100/60 flex justify-between items-center">
+                                  <span>Собаки из базы сайта</span>
+                                  <button
+                                    onClick={() => setActiveSearchDogId(null)}
+                                    className="text-char-400 hover:text-char-800"
+                                  >
+                                    <X className="w-2.5 h-2.5" />
+                                  </button>
+                                </div>
+                                {filteredExistingDogs.map((exDog, i) => (
+                                  <button
+                                    key={i}
+                                    type="button"
+                                    onClick={() => selectExistingDog(category.id, dog.id, exDog)}
+                                    className="w-full text-left px-2 py-1 hover:bg-camel-100/70 text-xs flex justify-between items-center transition-colors"
+                                  >
+                                    <span className="font-semibold text-char-900 truncate">{exDog.name}</span>
+                                    <span className="text-[10px] text-char-400 ml-1 shrink-0">{exDog.breed}</span>
+                                  </button>
+                                ))}
+                              </div>
+                            )}
+                          </div>
                         </div>
 
-                        {/* Компактный блок баллов 1 и 2 круга */}
+                        {/* Компактный блок баллов забегов (динамически 1, 2 или 3) */}
                         {kind === 'coursing' ? (
-                          <div className="flex flex-wrap items-center gap-2">
-                            {/* Круг 1 */}
-                            <div className="flex items-center gap-1 bg-cream-50 px-2 py-1 rounded border border-om-200">
-                              <span className="text-[10px] text-char-500 font-bold">К1:</span>
-                              <input
-                                type="text"
-                                value={dog.run1_heat}
-                                onChange={e => updateDog(category.id, dog.id, { run1_heat: e.target.value })}
-                                className="w-6 text-center bg-om-50 border border-om-200 rounded py-0.5 text-[10px]"
-                                title="Номер забега"
-                              />
-                              <select
-                                value={dog.run1_blanket}
-                                onChange={e => updateDog(category.id, dog.id, { run1_blanket: e.target.value as any })}
-                                className="bg-om-50 border border-om-200 rounded px-1 py-0.5 text-[10px]"
-                                title="Цвет попоны"
-                              >
-                                <option value="red">Красн.</option>
-                                <option value="white">Бел.</option>
-                                <option value="blue">Син.</option>
-                              </select>
-
-                              {/* 5 критериев */}
-                              <div className="flex items-center gap-0.5 ml-1">
-                                {(['speed', 'enthusiasm', 'intelligence', 'agility', 'endurance'] as const).map(c => (
+                          <div className="flex flex-wrap items-center gap-1.5">
+                            {dog.runs.slice(0, category.runsCount).map((run, rIdx) => {
+                              const sum = calculateRoundSum(run.scores)
+                              return (
+                                <div key={rIdx} className="flex items-center gap-1 bg-cream-50 px-1.5 py-0.5 rounded border border-om-200">
+                                  <span className="text-[10px] text-char-500 font-bold">К{rIdx + 1}:</span>
                                   <input
-                                    key={c}
-                                    type="number"
-                                    min={0}
-                                    max={20}
-                                    value={dog.run1_scores[c]}
-                                    onChange={e => updateRoundScores(category.id, dog.id, 'run1_scores', c, e.target.value)}
-                                    className="w-7 text-center py-0.5 bg-om-50 border border-om-200 rounded text-[11px] font-semibold tabular-nums"
-                                    placeholder="0"
-                                    title={c === 'speed' ? 'Скорость' : c === 'enthusiasm' ? 'Энтузиазм' : c === 'intelligence' ? 'Интеллект' : c === 'agility' ? 'Маневренность' : 'Выносливость'}
+                                    type="text"
+                                    value={run.heat}
+                                    onChange={e => updateRunField(category.id, dog.id, rIdx, 'heat', e.target.value)}
+                                    className="w-5 text-center bg-om-50 border border-om-200 rounded py-0.5 text-[10px]"
+                                    title={`Забег круга ${rIdx + 1}`}
                                   />
-                                ))}
-                              </div>
-                              <span className="text-[11px] font-bold text-camel-800 ml-1 min-w-[20px] text-right">
-                                {sum1}
-                              </span>
-                            </div>
+                                  <select
+                                    value={run.blanket}
+                                    onChange={e => updateRunField(category.id, dog.id, rIdx, 'blanket', e.target.value)}
+                                    className="bg-om-50 border border-om-200 rounded px-1 py-0.5 text-[9px]"
+                                    title="Попона"
+                                  >
+                                    <option value="red">Красн.</option>
+                                    <option value="white">Бел.</option>
+                                    <option value="blue">Син.</option>
+                                  </select>
 
-                            {/* Круг 2 */}
-                            <div className="flex items-center gap-1 bg-cream-50 px-2 py-1 rounded border border-om-200">
-                              <span className="text-[10px] text-char-500 font-bold">К2:</span>
-                              <input
-                                type="text"
-                                value={dog.run2_heat}
-                                onChange={e => updateDog(category.id, dog.id, { run2_heat: e.target.value })}
-                                className="w-6 text-center bg-om-50 border border-om-200 rounded py-0.5 text-[10px]"
-                                title="Номер забега"
-                              />
-                              <select
-                                value={dog.run2_blanket}
-                                onChange={e => updateDog(category.id, dog.id, { run2_blanket: e.target.value as any })}
-                                className="bg-om-50 border border-om-200 rounded px-1 py-0.5 text-[10px]"
-                                title="Цвет попоны"
-                              >
-                                <option value="red">Красн.</option>
-                                <option value="white">Бел.</option>
-                                <option value="blue">Син.</option>
-                              </select>
-
-                              {/* 5 критериев */}
-                              <div className="flex items-center gap-0.5 ml-1">
-                                {(['speed', 'enthusiasm', 'intelligence', 'agility', 'endurance'] as const).map(c => (
-                                  <input
-                                    key={c}
-                                    type="number"
-                                    min={0}
-                                    max={20}
-                                    value={dog.run2_scores[c]}
-                                    onChange={e => updateRoundScores(category.id, dog.id, 'run2_scores', c, e.target.value)}
-                                    className="w-7 text-center py-0.5 bg-om-50 border border-om-200 rounded text-[11px] font-semibold tabular-nums"
-                                    placeholder="0"
-                                    title={c === 'speed' ? 'Скорость' : c === 'enthusiasm' ? 'Энтузиазм' : c === 'intelligence' ? 'Интеллект' : c === 'agility' ? 'Маневренность' : 'Выносливость'}
-                                  />
-                                ))}
-                              </div>
-                              <span className="text-[11px] font-bold text-camel-800 ml-1 min-w-[20px] text-right">
-                                {sum2}
-                              </span>
-                            </div>
+                                  {/* 5 критериев */}
+                                  <div className="flex items-center gap-0.5 ml-0.5">
+                                    {(['speed', 'enthusiasm', 'intelligence', 'agility', 'endurance'] as const).map(c => (
+                                      <input
+                                        key={c}
+                                        type="number"
+                                        min={0}
+                                        max={20}
+                                        value={run.scores[c]}
+                                        onChange={e => updateRunScore(category.id, dog.id, rIdx, c, e.target.value)}
+                                        className="w-6 text-center py-0.5 bg-om-50 border border-om-200 rounded text-[10px] font-semibold tabular-nums"
+                                        placeholder="0"
+                                        title={c === 'speed' ? 'Скорость' : c === 'enthusiasm' ? 'Энтузиазм' : c === 'intelligence' ? 'Интеллект' : c === 'agility' ? 'Маневренность' : 'Выносливость'}
+                                      />
+                                    ))}
+                                  </div>
+                                  <span className="text-[10px] font-bold text-camel-800 ml-1 min-w-[18px] text-right">
+                                    {sum}
+                                  </span>
+                                </div>
+                              )
+                            })}
                           </div>
                         ) : (
-                          /* Рейсинг компактная строка */
-                          <div className="flex items-center gap-1.5 bg-cream-50 px-2 py-1 rounded border border-om-200 text-xs">
+                          /* Рейсинг */
+                          <div className="flex items-center gap-1.5 bg-cream-50 px-2 py-0.5 rounded border border-om-200 text-xs">
                             <input
                               type="text"
                               value={dog.racing_box}
@@ -560,14 +670,14 @@ export default function ProtocolBuilder() {
                               onChange={e => updateDog(category.id, dog.id, { racing_final_time: e.target.value })}
                               className="w-16 px-1 py-0.5 bg-om-50 border border-camel-300 rounded text-center font-mono font-bold text-xs"
                               placeholder="Финал"
-                              title="Итоговое время финала"
+                              title="Итоговое время"
                             />
                           </div>
                         )}
 
-                        {/* Итоговая сумма и кнопка удаления */}
-                        <div className="flex items-center gap-2">
-                          <div className="bg-camel-100/80 border border-camel-300 px-2 py-0.5 rounded text-center min-w-[50px]">
+                        {/* Итоговая сумма и удаление */}
+                        <div className="flex items-center gap-1.5">
+                          <div className="bg-camel-100/80 border border-camel-300 px-2 py-0.5 rounded text-center min-w-[46px]">
                             <span className="text-xs font-bold text-char-900 tabular-nums">
                               {dog.disqualified ? 'ДИСКВ' : total}
                             </span>
@@ -617,9 +727,9 @@ export default function ProtocolBuilder() {
       </div>
 
       {/* ОФИЦИАЛЬНАЯ СВОДНАЯ ВЕДОМОСТЬ РЕЗУЛЬТАТОВ (ИМЕННО ЭТО ИДЁТ В ПЕЧАТЬ И PDF) */}
-      <div className="space-y-6">
+      <div className="space-y-4">
         <div className="border-b border-om-200 pb-2 flex items-center justify-between">
-          <h2 className="text-sm font-bold uppercase tracking-wider text-char-900 flex items-center gap-2">
+          <h2 className="text-xs font-bold uppercase tracking-wider text-char-900 flex items-center gap-2">
             <Trophy className="w-4 h-4 text-camel-700" />
             Итоговые результаты по категориям
           </h2>
@@ -632,20 +742,20 @@ export default function ProtocolBuilder() {
           const sortedDogs = [...cat.dogs].sort((a, b) => {
             if (a.disqualified && !b.disqualified) return 1
             if (!a.disqualified && b.disqualified) return -1
-            return calculateTotalScore(b) - calculateTotalScore(a)
+            return calculateTotalScore(b, cat.runsCount) - calculateTotalScore(a, cat.runsCount)
           })
 
           return (
             <div
               key={cat.id}
-              className="bg-cream-50 rounded-xl border border-om-200 p-4 shadow-xs space-y-3 print:border-none print:shadow-none print:p-0 print:mb-6"
+              className="bg-cream-50 rounded-xl border border-om-200 p-3.5 shadow-xs space-y-2.5 print:border-none print:shadow-none print:p-0 print:mb-6"
             >
               <div className="flex items-center justify-between border-b border-om-200/80 pb-2">
-                <h3 className="text-sm font-serif font-bold text-char-900">
+                <h3 className="text-xs font-serif font-bold text-char-900">
                   {formatCategoryTitle(cat)}
                 </h3>
-                <span className="text-xs text-char-500">
-                  Участников: {cat.dogs.length}
+                <span className="text-[11px] text-char-500">
+                  Забегов: {cat.runsCount} | Участников: {cat.dogs.length}
                 </span>
               </div>
 
@@ -653,59 +763,59 @@ export default function ProtocolBuilder() {
                 <table className="w-full text-xs text-left border-collapse">
                   <thead>
                     <tr className="border-b border-om-200 text-[10px] uppercase font-bold text-char-500">
-                      <th className="py-2 px-2 w-12">Место</th>
-                      <th className="py-2 px-2 w-12">№ кат.</th>
-                      <th className="py-2 px-3">Кличка собаки</th>
+                      <th className="py-1.5 px-2 w-12">Место</th>
+                      <th className="py-1.5 px-2 w-12">№ кат.</th>
+                      <th className="py-1.5 px-2">Кличка собаки</th>
                       {kind === 'coursing' ? (
                         <>
-                          <th className="py-2 px-2 text-center">1 Круг</th>
-                          <th className="py-2 px-2 text-center">2 Круг</th>
-                          <th className="py-2 px-2 text-right">Итого баллов</th>
+                          {Array.from({ length: cat.runsCount }).map((_, r) => (
+                            <th key={r} className="py-1.5 px-2 text-center">{r + 1} Круг</th>
+                          ))}
+                          <th className="py-1.5 px-2 text-right">Итого баллов</th>
                         </>
                       ) : (
                         <>
-                          <th className="py-2 px-2 text-center">Заезд 1</th>
-                          <th className="py-2 px-2 text-center">Заезд 2</th>
-                          <th className="py-2 px-2 text-right">Итоговое время</th>
+                          <th className="py-1.5 px-2 text-center">Заезд 1</th>
+                          <th className="py-1.5 px-2 text-center">Заезд 2</th>
+                          <th className="py-1.5 px-2 text-right">Итоговое время</th>
                         </>
                       )}
-                      <th className="py-2 px-3 text-right">Титулы и сертификаты</th>
+                      <th className="py-1.5 px-2 text-right">Титулы и сертификаты</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-om-200/60">
                     {sortedDogs.map((d, idx) => (
                       <tr key={d.id} className="hover:bg-om-50/50">
-                        <td className="py-2 px-2 font-bold text-camel-800">
+                        <td className="py-1.5 px-2 font-bold text-camel-800">
                           {d.disqualified ? '—' : `${idx + 1}`}
                         </td>
-                        <td className="py-2 px-2 text-char-500 font-mono">{d.catalogNumber}</td>
-                        <td className="py-2 px-3 font-semibold text-char-900">{d.dogName || '—'}</td>
+                        <td className="py-1.5 px-2 text-char-500 font-mono">{d.catalogNumber}</td>
+                        <td className="py-1.5 px-2 font-semibold text-char-900">{d.dogName || '—'}</td>
                         {kind === 'coursing' ? (
                           <>
-                            <td className="py-2 px-2 text-center tabular-nums text-char-700">
-                              {calculateRoundSum(d.run1_scores) || '—'}
-                            </td>
-                            <td className="py-2 px-2 text-center tabular-nums text-char-700">
-                              {calculateRoundSum(d.run2_scores) || '—'}
-                            </td>
-                            <td className="py-2 px-2 text-right font-bold tabular-nums text-char-900">
-                              {d.disqualified ? 'ДИСКВ.' : calculateTotalScore(d)}
+                            {Array.from({ length: cat.runsCount }).map((_, r) => (
+                              <td key={r} className="py-1.5 px-2 text-center tabular-nums text-char-700">
+                                {d.runs[r] ? calculateRoundSum(d.runs[r].scores) || '—' : '—'}
+                              </td>
+                            ))}
+                            <td className="py-1.5 px-2 text-right font-bold tabular-nums text-char-900">
+                              {d.disqualified ? 'ДИСКВ.' : calculateTotalScore(d, cat.runsCount)}
                             </td>
                           </>
                         ) : (
                           <>
-                            <td className="py-2 px-2 text-center font-mono text-char-700">
+                            <td className="py-1.5 px-2 text-center font-mono text-char-700">
                               {d.racing_time1 || '—'}
                             </td>
-                            <td className="py-2 px-2 text-center font-mono text-char-700">
+                            <td className="py-1.5 px-2 text-center font-mono text-char-700">
                               {d.racing_time2 || '—'}
                             </td>
-                            <td className="py-2 px-2 text-right font-bold font-mono text-char-900">
+                            <td className="py-1.5 px-2 text-right font-bold font-mono text-char-900">
                               {d.disqualified ? 'ДИСКВ.' : (d.racing_final_time || '—')}
                             </td>
                           </>
                         )}
-                        <td className="py-2 px-3 text-right font-semibold text-camel-700">
+                        <td className="py-1.5 px-2 text-right font-semibold text-camel-700">
                           {d.awards.join(', ') || '—'}
                         </td>
                       </tr>
