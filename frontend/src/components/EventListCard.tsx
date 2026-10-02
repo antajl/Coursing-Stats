@@ -16,12 +16,16 @@ export default function EventListCard({
   className = '',
 }: EventListCardProps) {
   return (
-    <div className={`bg-gradient-to-br from-camel-100/95 to-cream-50/95 backdrop-blur-md rounded-xl p-4 md:p-5 shadow-xl border border-camel-200/50 hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-200 cursor-pointer ${className}`}>
-      <div className="flex items-center justify-center mb-3 pb-3 border-b border-charcoal-200">
-        <p className="text-sm font-semibold text-camel-700">Ближайшие события</p>
+    <div className={`bg-gradient-to-br from-camel-100/95 to-cream-50/95 backdrop-blur-md rounded-xl p-3.5 md:p-4 shadow-xl border border-camel-200/50 hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-200 cursor-pointer flex flex-col justify-between ${className}`}>
+      <div className="flex items-center justify-between mb-2 pb-1.5 border-b border-charcoal-200/70">
+        <p className="text-xs font-bold uppercase tracking-wider text-camel-800">Ближайшие события</p>
+        <span className="text-[10px] uppercase tracking-wider text-charcoal-400 font-semibold">Календарь</span>
       </div>
-      <div className="flex flex-col md:flex-row gap-3 md:gap-0 items-start">
-        <div className="flex-1 space-y-1">
+      <div className="flex flex-col md:flex-row gap-3 md:gap-3.5 items-stretch flex-1">
+        <div className="flex-1 flex flex-col justify-between space-y-1">
+          <div className="text-[10px] font-bold uppercase tracking-wider text-charcoal-400 pb-0.5">
+            Курсинг и бега
+          </div>
           {events.length > 0 ? (
             events.slice(0, 3).map((event) => (
               <a
@@ -29,13 +33,13 @@ export default function EventListCard({
                 href={event.results_url ?? '#'}
                 target={event.results_url ? '_blank' : undefined}
                 rel={event.results_url ? 'noopener noreferrer' : undefined}
-                className="flex items-center gap-2 text-xs hover:text-camel-600 transition-colors hover:bg-camel-50/50 p-1.5 rounded group focus:outline-none focus:ring-2 focus:ring-camel-500 focus:ring-offset-2"
+                className="flex items-center gap-1.5 text-xs hover:text-camel-700 transition-colors hover:bg-camel-50/60 p-1.5 rounded-lg group focus:outline-none focus:ring-1 focus:ring-camel-500"
               >
-                <span className="text-charcoal-500 text-xs whitespace-nowrap shrink-0 group-hover:text-camel-600">
+                <span className="text-charcoal-500 text-xs tabular-nums whitespace-nowrap shrink-0 group-hover:text-camel-700 font-medium">
                   {formatDate(event.date_start)}
                 </span>
                 <div className="flex flex-col min-w-0 flex-1">
-                  <span className="font-semibold text-charcoal-900 line-clamp-2 hover:underline decoration-camel-500 decoration-2 underline-offset-2 text-sm" title={event.title || event.full_title}>
+                  <span className="font-semibold text-charcoal-900 line-clamp-2 hover:underline decoration-camel-500 decoration-1 underline-offset-2 text-xs leading-snug" title={event.title || event.full_title}>
                     {event.title || event.full_title}
                   </span>
                 </div>
@@ -51,8 +55,11 @@ export default function EventListCard({
             />
           )}
         </div>
-        <div className="w-px bg-charcoal-200 mx-2 self-stretch hidden md:block" />
-        <div className="flex-1 space-y-1">
+        <div className="w-px bg-charcoal-200/70 mx-0.5 self-stretch hidden md:block" />
+        <div className="flex-1 flex flex-col justify-between space-y-1">
+          <div className="text-[10px] font-bold uppercase tracking-wider text-charcoal-400 pb-0.5">
+            Выставки РКФ
+          </div>
           {shows.length > 0 ? (
             shows.slice(0, 3).map((show) => (
               <a
@@ -60,13 +67,13 @@ export default function EventListCard({
                 href={show.url ?? '#'}
                 target={show.url ? '_blank' : undefined}
                 rel={show.url ? 'noopener noreferrer' : undefined}
-                className="flex items-center gap-2 text-xs hover:text-camel-600 transition-colors hover:bg-camel-50/50 p-1.5 rounded group focus:outline-none focus:ring-2 focus:ring-camel-500 focus:ring-offset-2"
+                className="flex items-center gap-1.5 text-xs hover:text-camel-700 transition-colors hover:bg-camel-50/60 p-1.5 rounded-lg group focus:outline-none focus:ring-1 focus:ring-camel-500"
               >
-                <span className="text-charcoal-500 text-xs whitespace-nowrap shrink-0 group-hover:text-camel-600">
+                <span className="text-charcoal-500 text-xs tabular-nums whitespace-nowrap shrink-0 group-hover:text-camel-700 font-medium">
                   {formatDate(show.date)}
                 </span>
                 <div className="flex flex-col min-w-0 flex-1">
-                  <span className="font-semibold text-charcoal-900 line-clamp-2 hover:underline decoration-camel-500 decoration-2 underline-offset-2 text-sm" title={show.title}>
+                  <span className="font-semibold text-charcoal-900 line-clamp-2 hover:underline decoration-camel-500 decoration-1 underline-offset-2 text-xs leading-snug" title={show.title}>
                     {show.title}
                   </span>
                 </div>

@@ -42,20 +42,21 @@ export default function MetricsWidget({
   const showEventsList = events.length > 0 || shows.length > 0
 
   return (
-    <div className="flex flex-col md:flex-row gap-3 md:gap-4 items-stretch">
+    <div className="flex flex-col md:flex-row gap-3 md:gap-3.5 items-stretch">
       {showEventsList && (
         <EventListCard
           events={events}
           shows={shows}
           formatDate={formatDate}
-          className="flex-1 h-full"
+          className="md:flex-[1.4] h-full"
         />
       )}
       {stats && showStats && (
-        <div className="flex-1 flex flex-col gap-3 md:gap-4">
+        <div className="md:flex-1 flex flex-col gap-2.5 md:gap-3 justify-between">
           <MetricsCard
             title="Спорт"
             variant="primary"
+            className="flex-1 flex flex-col justify-center"
             metrics={[
               { value: formatNumber(stats.events), label: 'соревнований' },
               { value: formatNumber(stats.results), label: 'результатов' },
@@ -65,6 +66,7 @@ export default function MetricsWidget({
           <MetricsCard
             title="Выставки РКФ"
             variant="secondary"
+            className="flex-1 flex flex-col justify-center"
             metrics={[
               { value: formatNumber(showStats.exhibitions), label: 'выставок' },
               { value: formatNumber(showStats.appearances), label: 'записей' },

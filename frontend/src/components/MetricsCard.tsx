@@ -20,18 +20,18 @@ export default function MetricsCard({
   }
 
   const paddingStyles = {
-    primary: 'p-5 md:p-6',
-    secondary: 'p-4 md:p-5',
+    primary: 'p-3 md:p-3.5',
+    secondary: 'p-3 md:p-3.5',
   }
 
   return (
     <div className={`${variantStyles[variant]} ${paddingStyles[variant]} backdrop-blur-md rounded-xl border border-camel-200/50 hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-200 ${className}`}>
-      <div className="flex items-center justify-center mb-3 pb-3 border-b border-charcoal-200">
-        <p className={`font-semibold text-camel-700 ${variant === 'primary' ? 'text-base' : 'text-sm'}`}>
+      <div className="flex items-center justify-center mb-2 pb-1.5 border-b border-charcoal-200/70">
+        <p className="text-xs md:text-sm font-bold uppercase tracking-wider text-camel-800">
           {title}
         </p>
       </div>
-      <div className="grid grid-cols-3 gap-0 items-center relative">
+      <div className="grid grid-cols-3 gap-0 items-center relative py-0.5">
         {metrics.map((metric, index) => (
           <MetricItem
             key={`${metric.label}-${index}`}
@@ -41,10 +41,10 @@ export default function MetricsCard({
           />
         ))}
         {metrics.length > 1 && (
-          <div className="absolute left-1/3 top-0 bottom-0 w-px bg-charcoal-200" />
+          <div className="absolute left-1/3 top-0 bottom-0 w-px bg-charcoal-200/60" />
         )}
         {metrics.length > 2 && (
-          <div className="absolute left-2/3 top-0 bottom-0 w-px bg-charcoal-200" />
+          <div className="absolute left-2/3 top-0 bottom-0 w-px bg-charcoal-200/60" />
         )}
       </div>
     </div>
