@@ -26,3 +26,32 @@
 :focus:not(:focus-visible) {
   outline: none;
 }
+
+/* Print styles: suppress browser headers/footers (URL, date, title) and ensure crisp output */
+@page {
+  size: A4 portrait;
+  margin: 0;
+}
+
+@media print {
+  html, body {
+    background: #ffffff !important;
+    color: #1a1a1a !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body {
+    padding: 12mm 15mm !important;
+  }
+
+  .cs-page-shell {
+    background: transparent !important;
+  }
+
+  nav, header, footer, .print\:hidden {
+    display: none !important;
+  }
+}

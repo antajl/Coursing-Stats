@@ -95,7 +95,7 @@ export default function Nav() {
   }, []);
 
   return (
-    <nav className="nav-glass sticky top-0 z-50 relative border-b border-cream-300/20 shadow-[0_4px_7px_-2px_rgba(43,37,32,0.34)]">
+    <nav className="nav-glass sticky top-0 z-50 relative border-b border-cream-300/20 shadow-[0_4px_7px_-2px_rgba(43,37,32,0.34)] print:hidden">
       <NavDesktop
         isActive={isActive}
         isCompetitionsActive={isCompetitionsActive}
