@@ -20,6 +20,7 @@ function ContactCard({
   icon: Icon,
   subtext,
   external,
+  iconBgClass = 'bg-white text-camel-700 border-old-money-200/80',
 }: {
   label: string
   value: string
@@ -27,6 +28,7 @@ function ContactCard({
   icon: typeof Mail
   subtext?: string
   external?: boolean
+  iconBgClass?: string
 }) {
   return (
     <a
@@ -34,7 +36,7 @@ function ContactCard({
       {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
       className="group flex items-center gap-3 rounded-xl border border-old-money-200/90 bg-cream-50/50 p-3.5 transition-all hover:border-camel-300 hover:bg-cream-100/60"
     >
-      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-old-money-200/80 bg-white text-camel-700 shadow-sm transition-transform group-hover:scale-105">
+      <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border shadow-sm transition-transform group-hover:scale-105 ${iconBgClass}`}>
         <Icon className="h-5 w-5" aria-hidden />
       </span>
       <span className="min-w-0 flex-1">
@@ -72,7 +74,7 @@ function DiscordContact() {
       className="group flex w-full items-center gap-3 rounded-xl border border-old-money-200/90 bg-cream-50/50 p-3.5 text-left transition-all hover:border-camel-300 hover:bg-cream-100/60"
       title="Скопировать ник Discord"
     >
-      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-old-money-200/80 bg-white text-camel-700 shadow-sm transition-transform group-hover:scale-105">
+      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-indigo-200/80 bg-indigo-50/70 text-indigo-700 shadow-sm transition-transform group-hover:scale-105">
         <MessageCircle className="h-5 w-5" aria-hidden />
       </span>
       <span className="min-w-0 flex-1">
@@ -98,21 +100,29 @@ function DiscordContact() {
 const DATA_SOURCES = [
   {
     name: 'Procoursing.ru',
+    badge: 'Курсинг и трек',
+    badgeColor: 'border-emerald-200/80 bg-emerald-50 text-emerald-800',
     role: 'Протоколы и результаты соревнований по курсингу и круговому треку',
     url: 'http://procoursing.ru',
   },
   {
     name: 'Российская кинологическая федерация (РКФ)',
+    badge: 'Выставки РКФ',
+    badgeColor: 'border-amber-200/80 bg-amber-50 text-amber-800',
     role: 'Календарь, регламенты и каталоги выставок собак',
     url: 'https://rkf.org.ru/dressirovka-i-sport/polozhenija/',
   },
   {
     name: 'Полигон Донино (runningdog.ru)',
+    badge: 'Рекорды скорости',
+    badgeColor: 'border-sky-200/80 bg-sky-50 text-sky-800',
     role: 'Замеры максимальной скорости бега борзых (км/ч)',
     url: 'https://runningdog.ru/',
   },
   {
     name: 'Таблицы рекордов Донино',
+    badge: 'Спринт 350 м',
+    badgeColor: 'border-indigo-200/80 bg-indigo-50 text-indigo-800',
     role: 'Спринтерские результаты на дистанции 350 метров',
     url: 'https://docs.google.com/spreadsheets/d/1NTiY3HXZIkXE8xTeXZESgMKaZsEXunmcWhTfhhkoKyE/edit?gid=1787526009#gid=1787526009',
   },
@@ -147,13 +157,14 @@ export default function AboutPage() {
       {/* Hero section */}
       <section className="rounded-2xl border border-old-money-200/90 bg-white/90 p-4 sm:p-6 shadow-sm">
         <div className="flex flex-wrap items-center gap-1.5">
-          <span className="inline-flex items-center rounded-full border border-camel-200/80 bg-camel-50 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-camel-800">
+          <span className="inline-flex items-center rounded-full border border-camel-200/80 bg-camel-50 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-camel-800">
             Некоммерческий проект
           </span>
-          <span className="inline-flex items-center rounded-full border border-old-money-200 bg-cream-100/60 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-charcoal-600">
+          <span className="inline-flex items-center rounded-full border border-old-money-200 bg-cream-100/60 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-charcoal-600">
             Параллельный справочник
           </span>
-          <span className="inline-flex items-center rounded-full border border-old-money-200 bg-cream-100/60 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-charcoal-600">
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-sky-200/80 bg-sky-50 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-sky-800">
+            <span className="h-1.5 w-1.5 rounded-full bg-sky-500" />
             Россия
           </span>
         </div>
@@ -195,10 +206,15 @@ export default function AboutPage() {
             </p>
             <ul className="mt-3 space-y-2.5 text-xs sm:text-sm text-charcoal-700">
               {DATA_SOURCES.map((source) => (
-                <li key={source.name} className="border-b border-old-money-100 pb-2 last:border-0 last:pb-0">
-                  <ExternalHref href={source.url}>
-                    <span className="font-semibold text-charcoal-900">{source.name}</span>
-                  </ExternalHref>
+                <li key={source.name} className="border-b border-old-money-100 pb-2.5 last:border-0 last:pb-0">
+                  <div className="flex flex-wrap items-center justify-between gap-1.5">
+                    <ExternalHref href={source.url}>
+                      <span className="font-semibold text-charcoal-900">{source.name}</span>
+                    </ExternalHref>
+                    <span className={`inline-block rounded px-2 py-0.5 text-[10px] font-semibold border ${source.badgeColor}`}>
+                      {source.badge}
+                    </span>
+                  </div>
                   <p className="mt-0.5 text-[11px] sm:text-xs text-charcoal-500">{source.role}</p>
                 </li>
               ))}
@@ -213,12 +229,19 @@ export default function AboutPage() {
               <h2 className="font-serif text-sm sm:text-base font-bold text-charcoal-900">
                 Telegram-бот и инструменты
               </h2>
-              <div className="mt-3 rounded-lg border border-old-money-200/80 bg-cream-50/60 p-3.5">
-                <div className="flex items-center gap-2">
-                  <Bot className="h-4.5 w-4.5 text-camel-700" aria-hidden />
-                  <span className="text-xs font-semibold text-charcoal-900">@coursing_stats_bot</span>
+              <div className="mt-3 rounded-xl border border-sky-200/80 bg-sky-50/40 p-3.5">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <span className="flex h-6 w-6 items-center justify-center rounded-md bg-sky-100 text-sky-700">
+                      <Bot className="h-3.5 w-3.5" aria-hidden />
+                    </span>
+                    <span className="text-xs font-semibold text-charcoal-900">@coursing_stats_bot</span>
+                  </div>
+                  <span className="rounded-full border border-sky-200/80 bg-sky-100/60 px-2 py-0.5 text-[10px] font-semibold text-sky-800">
+                    Telegram
+                  </span>
                 </div>
-                <p className="mt-1.5 text-xs leading-relaxed text-charcoal-600">
+                <p className="mt-2 text-xs leading-relaxed text-charcoal-600">
                   Карманный помощник для смартфонов: быстрый поиск карточки любой собаки по кличке,
                   просмотр судей и свежих результатов состязаний прямо на поле или у ринга.
                 </p>
@@ -227,7 +250,7 @@ export default function AboutPage() {
                     href="https://t.me/coursing_stats_bot"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-camel-700 hover:text-camel-800"
+                    className="inline-flex items-center gap-1.5 rounded-lg border border-sky-300/80 bg-sky-100/80 px-2.5 py-1 text-xs font-semibold text-sky-900 hover:bg-sky-200/80 transition-colors"
                   >
                     <span>Открыть бота в Telegram</span>
                     <ExternalLink className="h-3 w-3" aria-hidden />
@@ -248,7 +271,12 @@ export default function AboutPage() {
           </div>
 
           <div className="mt-4 pt-3 border-t border-old-money-100 flex items-center justify-between">
-            <span className="text-xs text-charcoal-500">Репозиторий проекта:</span>
+            <div className="flex items-center gap-1.5">
+              <span className="text-xs text-charcoal-500">Репозиторий:</span>
+              <span className="rounded border border-emerald-200/80 bg-emerald-50 px-1.5 py-0.5 text-[10px] font-semibold text-emerald-800">
+                Open Source
+              </span>
+            </div>
             <a
               href="https://github.com/antajl/Coursing-Stats"
               target="_blank"
@@ -264,9 +292,9 @@ export default function AboutPage() {
       </div>
 
       {/* Contacts & Regionality */}
-      <section className="rounded-2xl border border-old-money-200/90 bg-white/90 p-5 sm:p-6 shadow-sm">
+      <section className="rounded-2xl border border-old-money-200/90 bg-white/90 p-4 sm:p-6 shadow-sm">
         <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
-          <h2 className="font-serif text-base sm:text-lg font-bold text-charcoal-900">
+          <h2 className="font-serif text-sm sm:text-base font-bold text-charcoal-900">
             Контакты и география проекта
           </h2>
           <span className="text-xs text-charcoal-500">
@@ -276,7 +304,7 @@ export default function AboutPage() {
 
         <div className="mt-3.5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           <div className="flex items-center gap-3 rounded-xl border border-old-money-200/90 bg-cream-50/50 p-3.5">
-            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-old-money-200/80 bg-white text-camel-700 shadow-sm">
+            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-sky-200/80 bg-sky-50/80 text-sky-700 shadow-sm">
               <MapPin className="h-5 w-5" aria-hidden />
             </span>
             <span className="min-w-0">
@@ -298,6 +326,7 @@ export default function AboutPage() {
             href="https://t.me/antajl"
             icon={Send}
             subtext="Личные сообщения"
+            iconBgClass="border-sky-200/80 bg-sky-50/80 text-sky-600"
             external
           />
 
@@ -307,6 +336,7 @@ export default function AboutPage() {
             href="mailto:antajl@yandex.ru"
             icon={Mail}
             subtext="Для протоколов и файлов"
+            iconBgClass="border-amber-200/80 bg-amber-50/80 text-amber-700"
           />
 
           <DiscordContact />
@@ -314,8 +344,8 @@ export default function AboutPage() {
       </section>
 
       {/* Legal disclaimer */}
-      <footer className="rounded-xl border border-old-money-100 bg-cream-50/30 p-3.5 text-center sm:text-left">
-        <p className="text-xs leading-relaxed text-charcoal-500">
+      <footer className="rounded-xl border border-old-money-100 bg-cream-50/30 p-3 text-center sm:text-left">
+        <p className="text-[11px] sm:text-xs leading-relaxed text-charcoal-500">
           <strong>Правовая оговорка:</strong> Coursing Stats — независимый некоммерческий информационный
           проект. Сервис не является официальным сайтом Российской кинологической федерации (РКФ) или портала
           ProCoursing. Все товарные знаки, регламенты состязаний и официальные наименования принадлежат их
