@@ -8,7 +8,10 @@ import {
   Trophy,
   FolderPlus,
   Search,
-  X
+  X,
+  Award,
+  ChevronDown,
+  Check
 } from 'lucide-react'
 import type { CompetitionHeader, CategoryGroup, DogParticipant, CompetitionKind } from './types'
 import {
@@ -66,6 +69,7 @@ export default function ProtocolBuilder() {
   const [allExistingDogs, setAllExistingDogs] = useState<ExistingDog[]>([])
   const [activeSearchDogId, setActiveSearchDogId] = useState<string | null>(null)
   const [searchQuery, setSearchQuery] = useState('')
+  const [activeAwardsDogId, setActiveAwardsDogId] = useState<string | null>(null)
 
   // Загрузка индекса собак сайта для быстрого автозаполнения
   useEffect(() => {
@@ -675,14 +679,69 @@ export default function ProtocolBuilder() {
                           </div>
                         )}
 
-                        {/* Итоговая сумма и удаление */}
-                        <div className="flex items-center gap-1.5">
+                        {/* Правая часть: Титулы (кнопка с меню), Итог и Удаление */}
+                        <div className="flex items-center gap-1.5 ml-auto">
+                          {/* Кнопка с выбором титулов на одной строке */}
+                          <div className="relative">
+                            <button
+                              type="button"
+                              onClick={() => setActiveAwardsDogId(activeAwardsDogId === dog.id ? null : dog.id)}
+                              className={`flex items-center gap-1 px-2 py-1 rounded border text-[11px] font-semibold transition-all ${
+                                dog.awards.length > 0
+                                  ? 'bg-camel-600 text-white border-camel-700 shadow-2xs'
+                                  : 'bg-cream-50 text-char-600 border-om-200 hover:border-camel-400'
+                              }`}
+                              title="Назначить титулы и сертификаты"
+                            >
+                              <Award className="w-3 h-3" />
+                              <span>{dog.awards.length > 0 ? dog.awards.join(', ') : 'Титулы'}</span>
+                              <ChevronDown className="w-2.5 h-2.5 opacity-70" />
+                            </button>
+
+                            {/* Выпадающее меню с выбором нескольких титулов */}
+                            {activeAwardsDogId === dog.id && (
+                              <div className="absolute right-0 top-full mt-1 w-44 bg-cream-50 rounded-lg border border-om-300 shadow-xl z-50 py-1 divide-y divide-om-100">
+                                <div className="px-2.5 py-1 text-[9px] font-bold text-camel-800 uppercase tracking-wider bg-om-100/60 flex justify-between items-center">
+                                  <span>Выбор титулов</span>
+                                  <button
+                                    onClick={() => setActiveAwardsDogId(null)}
+                                    className="text-char-400 hover:text-char-800"
+                                  >
+                                    <X className="w-2.5 h-2.5" />
+                                  </button>
+                                </div>
+                                <div className="p-1 space-y-0.5">
+                                  {TITLES_LIST.map(title => {
+                                    const active = dog.awards.includes(title)
+                                    return (
+                                      <button
+                                        key={title}
+                                        type="button"
+                                        onClick={() => toggleAward(category.id, dog.id, title)}
+                                        className={`w-full text-left px-2 py-1 rounded text-xs flex justify-between items-center transition-colors ${
+                                          active
+                                            ? 'bg-camel-100 text-camel-900 font-bold'
+                                            : 'hover:bg-om-100 text-char-700'
+                                        }`}
+                                      >
+                                        <span>{title}</span>
+                                        {active && <Check className="w-3 h-3 text-camel-700" />}
+                                      </button>
+                                    )
+                                  })}
+                                </div>
+                              </div>
+                            )}
+                          </div>
+
+                          {/* Итоговая сумма */}
                           <div className="bg-camel-100/80 border border-camel-300 px-2 py-0.5 rounded text-center min-w-[46px]">
                             <span className="text-xs font-bold text-char-900 tabular-nums">
                               {dog.disqualified ? 'ДИСКВ' : total}
                             </span>
                           </div>
 
+                          {/* Удаление */}
                           <button
                             onClick={() => removeDogFromCategory(category.id, dog.id)}
                             disabled={category.dogs.length <= 1}
@@ -692,30 +751,6 @@ export default function ProtocolBuilder() {
                             <Trash2 className="w-3.5 h-3.5" />
                           </button>
                         </div>
-                      </div>
-
-                      {/* Тонкая строка титулов */}
-                      <div className="flex flex-wrap items-center gap-1 pl-1 pt-0.5 border-t border-om-200/30">
-                        <span className="text-[9px] text-char-400 font-bold uppercase tracking-wider mr-1">
-                          Титулы:
-                        </span>
-                        {TITLES_LIST.map(title => {
-                          const active = dog.awards.includes(title)
-                          return (
-                            <button
-                              key={title}
-                              type="button"
-                              onClick={() => toggleAward(category.id, dog.id, title)}
-                              className={`px-1.5 py-0.2 text-[9px] font-semibold rounded border transition-all ${
-                                active
-                                  ? 'bg-camel-600 text-white border-camel-700'
-                                  : 'bg-cream-50 text-char-500 border-om-200 hover:border-camel-300'
-                              }`}
-                            >
-                              {title}
-                            </button>
-                          )
-                        })}
                       </div>
                     </div>
                   )
