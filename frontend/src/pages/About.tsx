@@ -100,31 +100,18 @@ function DiscordContact() {
 const DATA_SOURCES = [
   {
     name: 'Procoursing.ru',
-    badge: 'Курсинг и трек',
-    badgeColor: 'border-emerald-200/80 bg-emerald-50 text-emerald-800',
-    role: 'Протоколы и результаты соревнований по курсингу и круговому треку',
+    role: 'Специализированный портал соревнований по курсингу и круговому треку: официальные календари, составы судейских бригад и полные балльные протоколы забегов.',
     url: 'http://procoursing.ru',
   },
   {
     name: 'Российская кинологическая федерация (РКФ)',
-    badge: 'Выставки РКФ',
-    badgeColor: 'border-amber-200/80 bg-amber-50 text-amber-800',
-    role: 'Календарь, регламенты и каталоги выставок собак',
+    role: 'Главная кинологическая организация страны: официальные регламенты, единый календарь выставок всех рангов и каталоги результатов породных рингов.',
     url: 'https://rkf.org.ru/dressirovka-i-sport/polozhenija/',
   },
   {
-    name: 'Полигон Донино (runningdog.ru)',
-    badge: 'Рекорды скорости',
-    badgeColor: 'border-sky-200/80 bg-sky-50 text-sky-800',
-    role: 'Замеры максимальной скорости бега борзых (км/ч)',
+    name: 'Беговой полигон Донино (runningdog.ru)',
+    role: 'Специализированный беговой полигон для тренировок и испытаний борзых: электронные замеры пиковой скорости (км/ч) и хронометраж спринтов на 350 метров.',
     url: 'https://runningdog.ru/',
-  },
-  {
-    name: 'Таблицы рекордов Донино',
-    badge: 'Спринт 350 м',
-    badgeColor: 'border-indigo-200/80 bg-indigo-50 text-indigo-800',
-    role: 'Спринтерские результаты на дистанции 350 метров',
-    url: 'https://docs.google.com/spreadsheets/d/1NTiY3HXZIkXE8xTeXZESgMKaZsEXunmcWhTfhhkoKyE/edit?gid=1787526009#gid=1787526009',
   },
 ] as const
 
@@ -204,18 +191,15 @@ export default function AboutPage() {
             <p className="mt-1 text-xs text-charcoal-500">
               Сведения агрегируются исключительно из публичных официальных ресурсов:
             </p>
-            <ul className="mt-3 space-y-2.5 text-xs sm:text-sm text-charcoal-700">
+            <ul className="mt-3 space-y-3 text-xs sm:text-sm text-charcoal-700">
               {DATA_SOURCES.map((source) => (
-                <li key={source.name} className="border-b border-old-money-100 pb-2.5 last:border-0 last:pb-0">
-                  <div className="flex flex-wrap items-center justify-between gap-1.5">
-                    <ExternalHref href={source.url}>
-                      <span className="font-semibold text-charcoal-900">{source.name}</span>
-                    </ExternalHref>
-                    <span className={`inline-block rounded px-2 py-0.5 text-[10px] font-semibold border ${source.badgeColor}`}>
-                      {source.badge}
-                    </span>
-                  </div>
-                  <p className="mt-0.5 text-[11px] sm:text-xs text-charcoal-500">{source.role}</p>
+                <li key={source.name} className="border-b border-old-money-100 pb-3 last:border-0 last:pb-0">
+                  <ExternalHref href={source.url}>
+                    <span className="font-semibold text-charcoal-900">{source.name}</span>
+                  </ExternalHref>
+                  <p className="mt-1 text-[11px] sm:text-xs leading-relaxed text-charcoal-600">
+                    {source.role}
+                  </p>
                 </li>
               ))}
             </ul>
