@@ -126,57 +126,48 @@ export default function ProtocolBuilder() {
   })
 
   return (
-    <div className="space-y-6 pb-16">
-      {/* Шапка страницы */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-om-200 pb-4 pt-2">
-        <div>
-          <div className="flex items-center gap-2 text-camel-700 text-xs font-semibold uppercase tracking-wider">
-            <FileText className="w-4 h-4" />
-            Инструменты организатора
-          </div>
-          <h1 className="text-2xl md:text-3xl font-serif text-char-900 font-bold mt-1">
-            Конструктор протокола соревнований
-          </h1>
-          <p className="text-char-500 text-xs md:text-sm mt-0.5">
-            Заполните данные турнира и участников. Система автоматически посчитает сумму баллов и сформирует официальный протокол.
-          </p>
-        </div>
-
-        {/* Кнопки экспорта */}
-        <div className="flex flex-wrap items-center gap-2 print:hidden">
-          <button
-            onClick={handlePrint}
-            className="flex items-center gap-1.5 px-3 py-2 bg-cream-50 hover:bg-cream-100 text-char-800 text-xs font-medium rounded-lg border border-om-200 shadow-sm transition-all"
-            title="Печать или сохранение в PDF"
-          >
-            <Printer className="w-4 h-4 text-camel-700" />
-            <span>Печать / PDF</span>
-          </button>
-
-          <button
-            onClick={() => exportToCSV(header, kind, participants)}
-            className="flex items-center gap-1.5 px-3 py-2 bg-cream-50 hover:bg-cream-100 text-char-800 text-xs font-medium rounded-lg border border-om-200 shadow-sm transition-all"
-            title="Экспорт таблицы в Excel/CSV"
-          >
-            <FileSpreadsheet className="w-4 h-4 text-forest-600" />
-            <span>Экспорт в Excel</span>
-          </button>
-
-          <button
-            onClick={() => exportToJSON(header, kind, participants)}
-            className="flex items-center gap-1.5 px-3 py-2 bg-camel-600 hover:bg-camel-700 text-white text-xs font-medium rounded-lg shadow-sm transition-all"
-            title="Экспорт в формате JSON для сайта"
-          >
-            <Download className="w-4 h-4" />
-            <span>Скачать JSON</span>
-          </button>
-        </div>
-      </div>
-
+    <div className="space-y-6 pb-16 pt-2">
       {/* Форма метаданных турнира */}
       <div className="bg-cream-50/90 backdrop-blur-sm rounded-xl p-4 md:p-5 border border-om-200 shadow-sm space-y-4 print:border-none print:shadow-none print:p-0">
-        <div className="flex items-center justify-between border-b border-om-200/70 pb-3">
-          <span className="text-xs font-bold uppercase tracking-wider text-camel-800">
+        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-om-200/70 pb-3">
+          <div className="flex items-center gap-2">
+            <span className="text-xs font-bold uppercase tracking-wider text-camel-800">
+              Протокол соревнований
+            </span>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-2 print:hidden">
+            <button
+              onClick={handlePrint}
+              className="flex items-center gap-1.5 px-3 py-1.5 bg-cream-50 hover:bg-cream-100 text-char-800 text-xs font-medium rounded-lg border border-om-200 shadow-xs transition-all"
+              title="Печать или сохранение в PDF"
+            >
+              <Printer className="w-3.5 h-3.5 text-camel-700" />
+              <span>Печать / PDF</span>
+            </button>
+
+            <button
+              onClick={() => exportToCSV(header, kind, participants)}
+              className="flex items-center gap-1.5 px-3 py-1.5 bg-cream-50 hover:bg-cream-100 text-char-800 text-xs font-medium rounded-lg border border-om-200 shadow-xs transition-all"
+              title="Экспорт таблицы в Excel/CSV"
+            >
+              <FileSpreadsheet className="w-3.5 h-3.5 text-forest-600" />
+              <span>Экспорт в Excel</span>
+            </button>
+
+            <button
+              onClick={() => exportToJSON(header, kind, participants)}
+              className="flex items-center gap-1.5 px-3 py-1.5 bg-camel-600 hover:bg-camel-700 text-white text-xs font-medium rounded-lg shadow-xs transition-all"
+              title="Экспорт в формате JSON для сайта"
+            >
+              <Download className="w-3.5 h-3.5" />
+              <span>Скачать JSON</span>
+            </button>
+          </div>
+        </div>
+
+        <div className="flex items-center justify-between pt-1">
+          <span className="text-xs font-semibold text-char-600">
             Данные турнира
           </span>
 
