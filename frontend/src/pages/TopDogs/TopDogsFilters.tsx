@@ -29,6 +29,8 @@ interface TopDogsFiltersProps {
   onResetFilters: () => void
   onResetPanelFilters: () => void
   dropdownRef?: React.RefObject<HTMLDivElement>
+  totalCoursing?: number
+  totalRacing?: number
 }
 
 export default function TopDogsFilters({
@@ -51,8 +53,33 @@ export default function TopDogsFilters({
   onResetFilters,
   onResetPanelFilters,
   dropdownRef,
+  totalCoursing,
+  totalRacing,
 }: TopDogsFiltersProps) {
   const [isOpen, setIsOpen] = useState(false)
+  const [copied, setCopied] = useState(false)
+
+  const handleCopyLink = () => {
+    const url = new URL(window.location.href)
+    url.searchParams.set('tab', 'ranking')
+    if (filterYear) url.searchParams.set('year', filterYear)
+    else url.searchParams.delete('year')
+    if (filterBreed) url.searchParams.set('breed', filterBreed)
+    else url.searchParams.delete('breed')
+    if (searchQuery) url.searchParams.set('search', searchQuery)
+    else url.searchParams.delete('search')
+    if (filterMinStarts) url.searchParams.set('minStarts', filterMinStarts)
+    else url.searchParams.delete('minStarts')
+    if (filterScoreFrom) url.searchParams.set('scoreFrom', filterScoreFrom)
+    else url.searchParams.delete('scoreFrom')
+    if (filterSpeedFrom) url.searchParams.set('speedFrom', filterSpeedFrom)
+    else url.searchParams.delete('speedFrom')
+
+    void navigator.clipboard.writeText(url.toString()).then(() => {
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    })
+  }
   
   const sortedYears = useMemo(
     () => [...yearValues].map(String).sort((a, b) => Number(b) - Number(a)),
@@ -112,7 +139,6 @@ export default function TopDogsFilters({
     <div className="mb-4" ref={dropdownRef}>
       <PageToolbar
         bare
-        topRowClassName="pr-0 md:pr-32"
         filters={
           <>
             <ToolbarSearch
@@ -236,6 +262,43 @@ export default function TopDogsFilters({
               )}
             </div>
           </>
+        }
+        trailing={
+          <div className="flex items-center gap-2">
+            {(totalCoursing !== undefined || totalRacing !== undefined) && (
+              <span className="hidden md:inline-flex text-xs text-charcoal-500 font-medium px-2.5 py-1 rounded-full bg-cream-100/70 border border-old-money-200/60">
+                {filterBreed ? (
+                  <span>{filterBreed}: <strong className="font-semibold text-charcoal-800 tabular-nums">{(totalCoursing ?? 0) + (totalRacing ?? 0)}</strong></span>
+                ) : (
+                  <span>Сезон {filterYear || currentSeason}: <strong className="font-semibold text-charcoal-800 tabular-nums">{(totalCoursing ?? 0) + (totalRacing ?? 0)}</strong> участников</span>
+                )}
+              </span>
+            )}
+            <button
+              type="button"
+              onClick={handleCopyLink}
+              className="inline-flex h-8 items-center gap-1.5 rounded-full border border-old-money-200/80 bg-cream-50 px-3 text-xs font-semibold text-charcoal-700 hover:bg-old-money-50 hover:text-charcoal-900 transition-all active:scale-95 cursor-pointer"
+              title="Скопировать прямую ссылку на этот фильтр"
+              aria-label="Скопировать ссылку на рейтинг"
+            >
+              {copied ? (
+                <>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-emerald-600">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  <span className="text-emerald-700">Скопировано!</span>
+                </>
+              ) : (
+                <>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-charcoal-500">
+                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                  </svg>
+                  <span>Поделиться</span>
+                </>
+              )}
+            </button>
+          </div>
         }
       />
     </div>
