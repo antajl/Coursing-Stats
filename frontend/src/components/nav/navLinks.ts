@@ -70,6 +70,12 @@ export function competitionsMenuItems(calendarVisible: boolean): NavMenuItem[] {
       icon: Icons.club,
       isActive: competitionTabActive('judges'),
     },
+    {
+      to: '/protocol-builder',
+      label: 'Конструктор протокола',
+      icon: Icons.fileText,
+      isActive: (pathname: string) => pathname === '/protocol-builder',
+    },
   ]
 }
 
