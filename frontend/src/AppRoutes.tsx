@@ -17,6 +17,7 @@ const JudgeDetail = lazy(() => import('./pages/Judges/JudgeDetail'));
 const ShowExhibitionDetail = lazy(() => import('./pages/Shows/ShowExhibitionDetail'));
 const ShowJudgeDetail = lazy(() => import('./pages/Shows/ShowJudgeDetail'));
 const EventResults = lazy(() => import('./pages/Events/EventResults'));
+const ProtocolBuilder = lazy(() => import('./pages/ProtocolBuilder'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 function LegacyProcoursingRedirect() {
@@ -92,6 +93,7 @@ export default function AppRoutes() {
         <Route path="/spa-shell" element={<Navigate to="/" replace />} />
         <Route path="/spa-shell/*" element={<Navigate to="/" replace />} />
         <Route path="/competitions" element={<Competitions />} />
+        <Route path="/protocol-builder" element={<ProtocolBuilder />} />
         <Route path="/procoursing" element={<LegacyProcoursingRedirect />} />
         <Route path="/shows" element={<Shows />} />
         <Route path="/shows/judges/:judgeId" element={<ShowJudgeDetail />} />

@@ -20,7 +20,8 @@ import {
   TrendingUp,
   Award,
   PawPrint,
-  Zap
+  Zap,
+  FileText
 } from 'lucide-react'
 
 export const Icons = {
@@ -46,4 +47,5 @@ export const Icons = {
   award: Award,
   paw: PawPrint,
   speedFlash: Zap,
+  fileText: FileText,
 } as const
