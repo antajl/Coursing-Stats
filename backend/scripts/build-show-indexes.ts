@@ -1526,7 +1526,7 @@ async function main() {
     )
     const additions: string[] = []
     for (const dog of showOnly) {
-      const loc = `https://coursing-stats.ru/dog/${dog.id}`
+      const loc = `https://coursing-stats.ru/dog/${dog.id}/`
       if (existingLocs.has(loc)) continue
       existingLocs.add(loc)
       additions.push(

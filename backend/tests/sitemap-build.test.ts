@@ -16,10 +16,10 @@ describe('sitemap collectors', () => {
       showJudgeIds: ['иванов|и|и'],
     })
     const locs = urls.map((u) => u.loc)
-    expect(locs).toContain('/event/1250')
-    expect(locs).toContain('/shows/exhibition/10000')
+    expect(locs).toContain('/event/1250/')
+    expect(locs).toContain('/shows/exhibition/10000/')
     expect(locs.some((u) => u.startsWith('/shows/judges/'))).toBe(true)
-    expect(locs).toContain('/dog/1')
+    expect(locs).toContain('/dog/1/')
     expect(locs.every((u) => !u.startsWith('/admin'))).toBe(true)
   })
 

@@ -25,14 +25,11 @@ export type SitemapUrlSources = {
 
 const STATIC_PAGES: SitemapUrl[] = [
   { loc: '/', priority: '1.0', changefreq: 'daily' },
-  { loc: '/competitions', priority: '0.9', changefreq: 'daily' },
-  { loc: '/shows', priority: '0.9', changefreq: 'daily' },
-  { loc: '/speed-records', priority: '0.8', changefreq: 'daily' },
-  { loc: '/guide', priority: '0.6', changefreq: 'monthly' },
-  { loc: '/about', priority: '0.5', changefreq: 'monthly' },
-  // Legacy redirects → /competitions?tab=… (оставлены для уже проиндексированных URL)
-  { loc: '/top', priority: '0.5', changefreq: 'weekly' },
-  { loc: '/judges', priority: '0.5', changefreq: 'weekly' },
+  { loc: '/competitions/', priority: '0.9', changefreq: 'daily' },
+  { loc: '/shows/', priority: '0.9', changefreq: 'daily' },
+  { loc: '/speed-records/', priority: '0.8', changefreq: 'daily' },
+  { loc: '/guide/', priority: '0.6', changefreq: 'monthly' },
+  { loc: '/about/', priority: '0.5', changefreq: 'monthly' },
 ]
 
 /** Pure collector — unit-tested without sqlite. */
@@ -40,35 +37,35 @@ export function collectSitemapUrls(sources: SitemapUrlSources): SitemapUrl[] {
   const out: SitemapUrl[] = [...STATIC_PAGES]
 
   for (const id of sources.eventIds) {
-    out.push({ loc: `/event/${id}`, changefreq: 'monthly', priority: '0.7' })
+    out.push({ loc: `/event/${id}/`, changefreq: 'monthly', priority: '0.7' })
   }
   for (const id of sources.dogIds) {
-    out.push({ loc: `/dog/${id}`, changefreq: 'monthly', priority: '0.6' })
+    out.push({ loc: `/dog/${id}/`, changefreq: 'monthly', priority: '0.6' })
   }
   for (const id of sources.exhibitionIds) {
     out.push({
-      loc: `/shows/exhibition/${encodeURIComponent(id)}`,
+      loc: `/shows/exhibition/${encodeURIComponent(id)}/`,
       changefreq: 'monthly',
       priority: '0.55',
     })
   }
   for (const name of sources.sportJudgeNames) {
     out.push({
-      loc: `/judges/${encodeURIComponent(name)}`,
+      loc: `/judges/${encodeURIComponent(name)}/`,
       changefreq: 'monthly',
       priority: '0.5',
     })
   }
   for (const id of sources.showJudgeIds) {
     out.push({
-      loc: `/shows/judges/${encodeURIComponent(id)}`,
+      loc: `/shows/judges/${encodeURIComponent(id)}/`,
       changefreq: 'monthly',
       priority: '0.5',
     })
   }
   for (const d of sources.doninoDogs) {
     out.push({
-      loc: `/donino-dog/${encodeURIComponent(d.name)}/${encodeURIComponent(d.breed)}`,
+      loc: `/donino-dog/${encodeURIComponent(d.name)}/${encodeURIComponent(d.breed)}/`,
       changefreq: 'monthly',
       priority: '0.5',
     })

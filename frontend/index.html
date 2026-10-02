@@ -44,6 +44,8 @@
       (function () {
         var KEY = 'cs:asset-reload';
         function reloadOnce() {
+          // Игнорируем поисковых роботов, чтобы не плодить дубли страниц с параметром ?_csrb
+          if (/bot|google|yandex|bing|slurp|crawler|spider/i.test(navigator.userAgent || '')) return;
           try {
             var now = Date.now();
             var prev = Number(sessionStorage.getItem(KEY) || 0);
