@@ -145,38 +145,38 @@ export default function AboutPage() {
       />
 
       {/* Hero section */}
-      <section className="rounded-2xl border border-old-money-200/90 bg-white/90 p-5 sm:p-7 shadow-sm">
-        <div className="flex flex-wrap items-center gap-2">
-          <span className="inline-flex items-center rounded-full border border-camel-200/80 bg-camel-50 px-2.5 py-0.5 text-xs font-semibold text-camel-800">
+      <section className="rounded-2xl border border-old-money-200/90 bg-white/90 p-4 sm:p-6 shadow-sm">
+        <div className="flex flex-wrap items-center gap-1.5">
+          <span className="inline-flex items-center rounded-full border border-camel-200/80 bg-camel-50 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-camel-800">
             Некоммерческий проект
           </span>
-          <span className="inline-flex items-center rounded-full border border-old-money-200 bg-cream-100/60 px-2.5 py-0.5 text-xs font-medium text-charcoal-600">
+          <span className="inline-flex items-center rounded-full border border-old-money-200 bg-cream-100/60 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-charcoal-600">
             Параллельный справочник
           </span>
-          <span className="inline-flex items-center rounded-full border border-old-money-200 bg-cream-100/60 px-2.5 py-0.5 text-xs font-medium text-charcoal-600">
+          <span className="inline-flex items-center rounded-full border border-old-money-200 bg-cream-100/60 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-charcoal-600">
             Россия
           </span>
         </div>
 
-        <h1 className="mt-3.5 font-serif text-2xl font-bold tracking-tight text-charcoal-900 sm:text-3xl">
+        <h1 className="mt-3 font-serif text-xl font-bold tracking-tight text-charcoal-900 sm:text-2xl">
           О проекте Coursing Stats
         </h1>
 
-        <p className="mt-3 text-sm sm:text-base leading-relaxed text-charcoal-700">
+        <p className="mt-2.5 text-sm leading-relaxed text-charcoal-700">
           Проект задумывался из простого и практичного интереса: собрать объективную статистику работы
           судей, объединить разрозненные результаты состязаний прошлых лет и сделать удобные интерактивные
           профили собак, где наглядно видны все их старты, оценки, медали, скоростные замеры и движение в
           рейтингах.
         </p>
 
-        <p className="mt-2.5 text-xs sm:text-sm leading-relaxed text-charcoal-600">
+        <p className="mt-2 text-xs sm:text-sm leading-relaxed text-charcoal-600">
           Огромный и тяжелый труд по организации состязаний, судейству, составлению регламентов и подсчету
           результатов на полях ведут кинологические клубы, секретариат и судьи на местах. Coursing Stats
           ничего не регламентирует самостоятельно — сервис лишь бережно систематизирует уже опубликованные
           официальные протоколы в единый структурированный архив.
         </p>
 
-        <p className="mt-2 text-xs sm:text-sm leading-relaxed text-charcoal-500">
+        <p className="mt-1.5 text-xs sm:text-sm leading-relaxed text-charcoal-500">
           Сайт не претендует на официальный статус и не конкурирует с другими ресурсами, существуя как
           удобный параллельный справочник для всех любителей борзых и спортивных собак.
         </p>
@@ -187,7 +187,7 @@ export default function AboutPage() {
         {/* Sources */}
         <section className="flex flex-col justify-between rounded-xl border border-old-money-200/90 bg-white/80 p-4 sm:p-5">
           <div>
-            <h2 className="font-serif text-base sm:text-lg font-bold text-charcoal-900">
+            <h2 className="font-serif text-sm sm:text-base font-bold text-charcoal-900">
               Первоисточники данных
             </h2>
             <p className="mt-1 text-xs text-charcoal-500">
@@ -199,7 +199,7 @@ export default function AboutPage() {
                   <ExternalHref href={source.url}>
                     <span className="font-semibold text-charcoal-900">{source.name}</span>
                   </ExternalHref>
-                  <p className="mt-0.5 text-xs text-charcoal-500">{source.role}</p>
+                  <p className="mt-0.5 text-[11px] sm:text-xs text-charcoal-500">{source.role}</p>
                 </li>
               ))}
             </ul>
@@ -210,7 +210,7 @@ export default function AboutPage() {
         <section className="flex flex-col justify-between rounded-xl border border-old-money-200/90 bg-white/80 p-4 sm:p-5">
           <div className="space-y-4">
             <div>
-              <h2 className="font-serif text-base sm:text-lg font-bold text-charcoal-900">
+              <h2 className="font-serif text-sm sm:text-base font-bold text-charcoal-900">
                 Telegram-бот и инструменты
               </h2>
               <div className="mt-3 rounded-lg border border-old-money-200/80 bg-cream-50/60 p-3.5">
