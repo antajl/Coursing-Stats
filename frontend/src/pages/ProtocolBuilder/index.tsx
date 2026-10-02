@@ -282,6 +282,15 @@ export default function ProtocolBuilder() {
     setSearchQuery('')
   }
 
+  const handlePrint = () => {
+    const originalTitle = document.title
+    document.title = header.title ? `${header.title} — Результаты` : 'Протокол соревнований'
+    window.print()
+    setTimeout(() => {
+      document.title = originalTitle
+    }, 1000)
+  }
+
   return (
     <div className="space-y-5 pb-20 pt-2">
       {/* ПАНЕЛЬ ПАРАМЕТРОВ ТУРНИРА (скрывается при печати) */}
@@ -294,7 +303,7 @@ export default function ProtocolBuilder() {
           {/* Кнопки скачивания результатов */}
           <div className="flex flex-wrap items-center gap-2">
             <button
-              onClick={() => window.print()}
+              onClick={handlePrint}
               className="flex items-center gap-1.5 px-3 py-1.5 bg-cream-50 hover:bg-cream-100 text-char-800 text-xs font-medium rounded-lg border border-om-200 shadow-xs transition-all"
               title="Печать или сохранение чистого протокола результатов в PDF"
             >
@@ -414,11 +423,41 @@ export default function ProtocolBuilder() {
         </div>
       </div>
 
-      {/* ОФИЦИАЛЬНАЯ ШАПКА РЕЗУЛЬТАТОВ (отображается при печати) */}
-      <div className="hidden print:block text-center space-y-1 mb-6 border-b-2 border-char-900 pb-4">
-        <h1 className="text-xl font-bold uppercase">{header.title}</h1>
-        <p className="text-xs font-semibold">Ранг: {header.rank} | Дата: {header.date} | Место: {header.location}</p>
-        <p className="text-xs">Организатор: {header.club} {header.judges ? `| Судьи: ${header.judges}` : ''}</p>
+      {/* ОФИЦИАЛЬНАЯ ШАПКА РЕЗУЛЬТАТОВ (отображается только при печати / сохранении в PDF) */}
+      <div className="hidden print:block mb-5 border-b-2 border-char-900 pb-3">
+        <div className="flex items-center justify-between gap-4 mb-3">
+          <div className="flex items-center">
+            <img
+              src="/assets/brand/logo.webp"
+              alt="Coursing Stats"
+              className="h-10 w-auto object-contain"
+            />
+          </div>
+          <div className="text-right text-[10px] text-char-600 font-medium">
+            <span className="uppercase tracking-wider font-bold text-char-800">Официальный протокол соревнований</span>
+          </div>
+        </div>
+
+        <div className="text-center space-y-1">
+          <h1 className="text-lg font-bold uppercase tracking-wide text-char-900">
+            {header.title || 'Протокол соревнований'}
+          </h1>
+          <p className="text-xs font-semibold text-char-800">
+            {[
+              header.rank && `Ранг: ${header.rank}`,
+              header.date && `Дата: ${header.date}`,
+              header.location && `Место: ${header.location}`,
+            ].filter(Boolean).join(' | ')}
+          </p>
+          {(header.club || header.judges) && (
+            <p className="text-xs text-char-700">
+              {[
+                header.club && `Организатор: ${header.club}`,
+                header.judges && `Судьи: ${header.judges}`,
+              ].filter(Boolean).join(' | ')}
+            </p>
+          )}
+        </div>
       </div>
 
       {/* РАБОЧАЯ ОБЛАСТЬ КАТЕГОРИЙ (скрывается при печати) */}
@@ -793,12 +832,12 @@ export default function ProtocolBuilder() {
 
       {/* ОФИЦИАЛЬНАЯ СВОДНАЯ ВЕДОМОСТЬ РЕЗУЛЬТАТОВ (ИМЕННО ЭТО ИДЁТ В ПЕЧАТЬ И PDF) */}
       <div className="space-y-4">
-        <div className="border-b border-om-200 pb-2 flex items-center justify-between">
+        <div className="border-b border-om-200 pb-2 flex items-center justify-between print:hidden">
           <h2 className="text-xs font-bold uppercase tracking-wider text-char-900 flex items-center gap-2">
             <Trophy className="w-4 h-4 text-camel-700" />
             Итоговые результаты по категориям
           </h2>
-          <span className="text-xs text-char-500 print:hidden">
+          <span className="text-xs text-char-500">
             (Отображение чистого официального протокола)
           </span>
         </div>
@@ -813,7 +852,7 @@ export default function ProtocolBuilder() {
           return (
             <div
               key={cat.id}
-              className="bg-cream-50 rounded-xl border border-om-200 p-3.5 shadow-xs space-y-2.5 print:border-none print:shadow-none print:p-0 print:mb-6"
+              className="bg-cream-50 rounded-xl border border-om-200 p-3.5 shadow-xs space-y-2.5 print:bg-white print:border-b-2 print:border-char-800 print:rounded-none print:shadow-none print:p-0 print:mb-6 print:break-inside-avoid"
             >
               <div className="flex items-center justify-between border-b border-om-200/80 pb-2">
                 <h3 className="text-xs font-serif font-bold text-char-900">
@@ -898,14 +937,6 @@ export default function ProtocolBuilder() {
             </div>
           )
         })}
-
-        {/* Подписи судей в печатной версии */}
-        <div className="hidden print:block pt-8 text-xs">
-          <div className="flex justify-between border-t border-char-900 pt-3">
-            <span>Главный судья соревнований: __________________</span>
-            <span>Секретарь: __________________</span>
-          </div>
-        </div>
       </div>
     </div>
   )
