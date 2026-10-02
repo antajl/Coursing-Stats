@@ -240,6 +240,7 @@ const DogCardHeader: FC = function DogCardHeader() {
   const { primary, secondary } = parseDogName(dog.name_lat, dog.name_ru)
   const breedDisplay = displayBreed(dog.breed)
   const yearBadge = dogYearBadge(dog, filterYear)
+  const showYear = yearBadge && (!filterYear || filterYear === 'all')
 
   return (
     <div className="min-w-0 overflow-hidden">
@@ -251,11 +252,11 @@ const DogCardHeader: FC = function DogCardHeader() {
           {primary}
         </h3>
       </OwnerCrownName>
-      <div className="flex items-center gap-1 text-[9px]">
-        <span className="text-charcoal-500">
+      <div className="flex items-center gap-1 text-[10px]">
+        <span className="text-charcoal-600 font-medium">
           {breedDisplay.primary}
         </span>
-        {yearBadge && (
+        {showYear && (
           <>
             <span className="text-charcoal-300" aria-hidden>
               ·
@@ -497,7 +498,27 @@ const DogCardInner = function DogCard({ dog, type, filterYear, rank, variant = '
               <DogCardRank />
               <div className="flex min-h-0 min-w-0 flex-1 flex-col justify-between gap-0 overflow-hidden">
                 <DogCardHeader />
-                <DogCardStats />
+                <div className="flex items-center gap-1.5 text-xs text-charcoal-600">
+                  <span className="text-[11px] text-charcoal-500">Средняя скорость:</span>
+                  <strong className="font-semibold text-charcoal-800 tabular-nums">
+                    {dog.avg_speed ? dog.avg_speed.toFixed(1) : '—'}
+                  </strong>
+                  <span className="text-[10px] text-charcoal-400">км/ч</span>
+                </div>
+              </div>
+
+              <div className="mr-8 flex min-h-0 min-w-[10.5rem] shrink-0 flex-col justify-between border-l border-old-money-200/60 pl-2">
+                <div className="flex items-baseline justify-end gap-1 leading-none">
+                  <span className="text-lg font-bold tabular-nums text-camel-700">
+                    {dog.best_speed ? dog.best_speed.toFixed(1) : '—'}
+                  </span>
+                  <span className="text-[8px] font-semibold uppercase tracking-wide text-charcoal-500">
+                    макс. км/ч
+                  </span>
+                </div>
+                <div className="flex justify-end">
+                  <StartsLabel starts={dog.total_starts || 0} size="md" />
+                </div>
               </div>
             </div>
           </>

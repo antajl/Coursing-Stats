@@ -29,7 +29,7 @@ export default function DoninoColumnPlaque({
 
   return (
     <div className={shellClass}>
-      <h2 className="relative z-[1] shrink-0 font-mono text-[11px] font-bold uppercase tracking-widest text-camel-700">
+      <h2 className="relative z-[1] shrink-0 text-xs font-bold uppercase tracking-wider text-camel-800">
         {title}
       </h2>
       {action && (

@@ -163,6 +163,8 @@ export default function TopDogs() {
         onResetFilters={handleResetFilters}
         onResetPanelFilters={handleResetPanelFilters}
         dropdownRef={dropdownRef}
+        totalCoursing={filteredCombined.length}
+        totalRacing={filteredSpeed.length}
       />
 
       {showListSkeleton ? (

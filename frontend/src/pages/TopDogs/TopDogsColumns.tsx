@@ -97,18 +97,29 @@ export default function TopDogsColumns({
   const coursingPlaque = (
     <DoninoColumnPlaque
       asHeader
-      title="Курсинг/БЗМП"
+      title="Курсинг / БЗМП"
       count={filteredCombined.length}
       action={
-        <span className="inline-flex items-center gap-1 text-[11px] text-old-money-600">
-          Медали → CS · Elo справка
+        <span className="inline-flex items-center gap-1.5 text-xs text-old-money-700 font-medium">
+          <span>Ранг по победам и медалям</span>
           <CoursingRatingHint embedded />
         </span>
       }
     />
   )
 
-  const racingPlaque = <DoninoColumnPlaque asHeader title="Рейсинг" count={filteredSpeed.length} />
+  const racingPlaque = (
+    <DoninoColumnPlaque
+      asHeader
+      title="Рейсинг"
+      count={filteredSpeed.length}
+      action={
+        <span className="inline-flex items-center gap-1 text-xs text-old-money-700 font-medium">
+          <span>Ранг по максимальной скорости</span>
+        </span>
+      }
+    />
+  )
 
   const renderCoursingCard = (dog: CombinedRankingDog, slotKey: string) =>
     dog ? (
