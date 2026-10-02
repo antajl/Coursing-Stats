@@ -407,8 +407,8 @@ export default function ProtocolBuilder() {
                 </div>
               </div>
 
-              {/* Список собак в категории */}
-              <div className="p-3.5 space-y-3">
+              {/* Список собак в категории — Ультракомпактный табличный вид */}
+              <div className="p-2 space-y-2">
                 {category.dogs.map((dog) => {
                   const sum1 = calculateRoundSum(dog.run1_scores)
                   const sum2 = calculateRoundSum(dog.run2_scores)
@@ -417,16 +417,16 @@ export default function ProtocolBuilder() {
                   return (
                     <div
                       key={dog.id}
-                      className="bg-om-50/60 rounded-lg border border-om-200/80 p-3 space-y-2.5 hover:border-camel-300 transition-all"
+                      className="bg-om-50/70 hover:bg-cream-50 rounded-lg border border-om-200/70 p-2 space-y-1.5 transition-all shadow-2xs"
                     >
-                      {/* Строка идентификации собаки */}
-                      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-om-200/50 pb-2">
-                        <div className="flex items-center gap-2 flex-1 min-w-[240px]">
+                      {/* Главная компактная строка: Номер, Кличка, 1 Круг, 2 Круг, Итог, Удалить */}
+                      <div className="flex flex-wrap items-center justify-between gap-2 text-xs">
+                        <div className="flex items-center gap-1.5 flex-1 min-w-[200px]">
                           <input
                             type="text"
                             value={dog.catalogNumber}
                             onChange={e => updateDog(category.id, dog.id, { catalogNumber: e.target.value })}
-                            className="w-12 px-1.5 py-1 text-center font-bold bg-cream-50 rounded border border-om-200 text-xs text-char-900"
+                            className="w-10 px-1 py-1 text-center font-bold bg-cream-50 rounded border border-om-200 text-xs text-char-900"
                             placeholder="№"
                             title="Номер по каталогу"
                           />
@@ -435,23 +435,148 @@ export default function ProtocolBuilder() {
                             type="text"
                             value={dog.dogName}
                             onChange={e => updateDog(category.id, dog.id, { dogName: e.target.value })}
-                            className="flex-1 px-2.5 py-1 bg-cream-50 rounded border border-om-200 text-xs font-semibold text-char-900 focus:ring-1 focus:ring-camel-500 focus:outline-none"
-                            placeholder="Полная кличка собаки"
+                            className="flex-1 px-2 py-1 bg-cream-50 rounded border border-om-200 text-xs font-semibold text-char-900 focus:ring-1 focus:ring-camel-500 focus:outline-none"
+                            placeholder="Кличка собаки"
                           />
                         </div>
 
+                        {/* Компактный блок баллов 1 и 2 круга */}
+                        {kind === 'coursing' ? (
+                          <div className="flex flex-wrap items-center gap-2">
+                            {/* Круг 1 */}
+                            <div className="flex items-center gap-1 bg-cream-50 px-2 py-1 rounded border border-om-200">
+                              <span className="text-[10px] text-char-500 font-bold">К1:</span>
+                              <input
+                                type="text"
+                                value={dog.run1_heat}
+                                onChange={e => updateDog(category.id, dog.id, { run1_heat: e.target.value })}
+                                className="w-6 text-center bg-om-50 border border-om-200 rounded py-0.5 text-[10px]"
+                                title="Номер забега"
+                              />
+                              <select
+                                value={dog.run1_blanket}
+                                onChange={e => updateDog(category.id, dog.id, { run1_blanket: e.target.value as any })}
+                                className="bg-om-50 border border-om-200 rounded px-1 py-0.5 text-[10px]"
+                                title="Цвет попоны"
+                              >
+                                <option value="red">Красн.</option>
+                                <option value="white">Бел.</option>
+                                <option value="blue">Син.</option>
+                              </select>
+
+                              {/* 5 критериев */}
+                              <div className="flex items-center gap-0.5 ml-1">
+                                {(['speed', 'enthusiasm', 'intelligence', 'agility', 'endurance'] as const).map(c => (
+                                  <input
+                                    key={c}
+                                    type="number"
+                                    min={0}
+                                    max={20}
+                                    value={dog.run1_scores[c]}
+                                    onChange={e => updateRoundScores(category.id, dog.id, 'run1_scores', c, e.target.value)}
+                                    className="w-7 text-center py-0.5 bg-om-50 border border-om-200 rounded text-[11px] font-semibold tabular-nums"
+                                    placeholder="0"
+                                    title={c === 'speed' ? 'Скорость' : c === 'enthusiasm' ? 'Энтузиазм' : c === 'intelligence' ? 'Интеллект' : c === 'agility' ? 'Маневренность' : 'Выносливость'}
+                                  />
+                                ))}
+                              </div>
+                              <span className="text-[11px] font-bold text-camel-800 ml-1 min-w-[20px] text-right">
+                                {sum1}
+                              </span>
+                            </div>
+
+                            {/* Круг 2 */}
+                            <div className="flex items-center gap-1 bg-cream-50 px-2 py-1 rounded border border-om-200">
+                              <span className="text-[10px] text-char-500 font-bold">К2:</span>
+                              <input
+                                type="text"
+                                value={dog.run2_heat}
+                                onChange={e => updateDog(category.id, dog.id, { run2_heat: e.target.value })}
+                                className="w-6 text-center bg-om-50 border border-om-200 rounded py-0.5 text-[10px]"
+                                title="Номер забега"
+                              />
+                              <select
+                                value={dog.run2_blanket}
+                                onChange={e => updateDog(category.id, dog.id, { run2_blanket: e.target.value as any })}
+                                className="bg-om-50 border border-om-200 rounded px-1 py-0.5 text-[10px]"
+                                title="Цвет попоны"
+                              >
+                                <option value="red">Красн.</option>
+                                <option value="white">Бел.</option>
+                                <option value="blue">Син.</option>
+                              </select>
+
+                              {/* 5 критериев */}
+                              <div className="flex items-center gap-0.5 ml-1">
+                                {(['speed', 'enthusiasm', 'intelligence', 'agility', 'endurance'] as const).map(c => (
+                                  <input
+                                    key={c}
+                                    type="number"
+                                    min={0}
+                                    max={20}
+                                    value={dog.run2_scores[c]}
+                                    onChange={e => updateRoundScores(category.id, dog.id, 'run2_scores', c, e.target.value)}
+                                    className="w-7 text-center py-0.5 bg-om-50 border border-om-200 rounded text-[11px] font-semibold tabular-nums"
+                                    placeholder="0"
+                                    title={c === 'speed' ? 'Скорость' : c === 'enthusiasm' ? 'Энтузиазм' : c === 'intelligence' ? 'Интеллект' : c === 'agility' ? 'Маневренность' : 'Выносливость'}
+                                  />
+                                ))}
+                              </div>
+                              <span className="text-[11px] font-bold text-camel-800 ml-1 min-w-[20px] text-right">
+                                {sum2}
+                              </span>
+                            </div>
+                          </div>
+                        ) : (
+                          /* Рейсинг компактная строка */
+                          <div className="flex items-center gap-1.5 bg-cream-50 px-2 py-1 rounded border border-om-200 text-xs">
+                            <input
+                              type="text"
+                              value={dog.racing_box}
+                              onChange={e => updateDog(category.id, dog.id, { racing_box: e.target.value })}
+                              className="w-7 px-1 py-0.5 bg-om-50 border border-om-200 rounded text-center text-[11px]"
+                              placeholder="Бокс"
+                              title="Бокс"
+                            />
+                            <input
+                              type="text"
+                              value={dog.racing_time1}
+                              onChange={e => updateDog(category.id, dog.id, { racing_time1: e.target.value })}
+                              className="w-14 px-1 py-0.5 bg-om-50 border border-om-200 rounded text-center font-mono text-[11px]"
+                              placeholder="Заезд 1"
+                              title="Время заезда 1"
+                            />
+                            <input
+                              type="text"
+                              value={dog.racing_time2}
+                              onChange={e => updateDog(category.id, dog.id, { racing_time2: e.target.value })}
+                              className="w-14 px-1 py-0.5 bg-om-50 border border-om-200 rounded text-center font-mono text-[11px]"
+                              placeholder="Заезд 2"
+                              title="Время заезда 2"
+                            />
+                            <input
+                              type="text"
+                              value={dog.racing_final_time}
+                              onChange={e => updateDog(category.id, dog.id, { racing_final_time: e.target.value })}
+                              className="w-16 px-1 py-0.5 bg-om-50 border border-camel-300 rounded text-center font-mono font-bold text-xs"
+                              placeholder="Финал"
+                              title="Итоговое время финала"
+                            />
+                          </div>
+                        )}
+
+                        {/* Итоговая сумма и кнопка удаления */}
                         <div className="flex items-center gap-2">
-                          <div className="flex items-center gap-1.5 bg-camel-100/70 border border-camel-300 px-2.5 py-0.5 rounded-lg">
-                            <span className="text-[10px] font-bold text-camel-800 uppercase tracking-wider">Всего:</span>
+                          <div className="bg-camel-100/80 border border-camel-300 px-2 py-0.5 rounded text-center min-w-[50px]">
                             <span className="text-xs font-bold text-char-900 tabular-nums">
-                              {dog.disqualified ? 'ДИСКВ.' : total}
+                              {dog.disqualified ? 'ДИСКВ' : total}
                             </span>
                           </div>
 
                           <button
                             onClick={() => removeDogFromCategory(category.id, dog.id)}
                             disabled={category.dogs.length <= 1}
-                            className="text-char-400 hover:text-terracotta-600 transition-colors p-1 disabled:opacity-30"
+                            className="text-char-400 hover:text-terracotta-600 transition-colors p-1 disabled:opacity-20"
                             title="Удалить собаку"
                           >
                             <Trash2 className="w-3.5 h-3.5" />
@@ -459,157 +584,8 @@ export default function ProtocolBuilder() {
                         </div>
                       </div>
 
-                      {/* Забеги и критерии (Курсинг) */}
-                      {kind === 'coursing' ? (
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs">
-                          {/* 1-й круг */}
-                          <div className="bg-cream-50/80 rounded p-2 border border-om-200/50 space-y-1.5">
-                            <div className="flex items-center justify-between font-semibold text-char-700 text-[11px] pb-1 border-b border-om-200/40">
-                              <div className="flex items-center gap-2">
-                                <span>1 Круг</span>
-                                <span className="text-char-400">Забег:</span>
-                                <input
-                                  type="text"
-                                  value={dog.run1_heat}
-                                  onChange={e => updateDog(category.id, dog.id, { run1_heat: e.target.value })}
-                                  className="w-7 text-center bg-om-50 border border-om-200 rounded py-0.5 text-[10px]"
-                                />
-                                <span className="text-char-400">Попона:</span>
-                                <select
-                                  value={dog.run1_blanket}
-                                  onChange={e => updateDog(category.id, dog.id, { run1_blanket: e.target.value as any })}
-                                  className="bg-om-50 border border-om-200 rounded px-1 py-0.5 text-[10px]"
-                                >
-                                  <option value="red">Красная</option>
-                                  <option value="white">Белая</option>
-                                  <option value="blue">Синяя</option>
-                                </select>
-                              </div>
-                              <span className="font-bold text-camel-800 tabular-nums">Сумма: {sum1}</span>
-                            </div>
-
-                            <div className="grid grid-cols-5 gap-1 text-center">
-                              {(['speed', 'enthusiasm', 'intelligence', 'agility', 'endurance'] as const).map(c => (
-                                <div key={c}>
-                                  <label className="block text-[8px] text-char-400 uppercase mb-0.5">
-                                    {c === 'speed' && 'Скор.'}
-                                    {c === 'enthusiasm' && 'Энт.'}
-                                    {c === 'intelligence' && 'Инт.'}
-                                    {c === 'agility' && 'Ман.'}
-                                    {c === 'endurance' && 'Вын.'}
-                                  </label>
-                                  <input
-                                    type="number"
-                                    min={0}
-                                    max={20}
-                                    value={dog.run1_scores[c]}
-                                    onChange={e => updateRoundScores(category.id, dog.id, 'run1_scores', c, e.target.value)}
-                                    className="w-full text-center py-0.5 bg-om-50 border border-om-200 rounded text-xs font-semibold tabular-nums"
-                                    placeholder="0"
-                                  />
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-
-                          {/* 2-й круг */}
-                          <div className="bg-cream-50/80 rounded p-2 border border-om-200/50 space-y-1.5">
-                            <div className="flex items-center justify-between font-semibold text-char-700 text-[11px] pb-1 border-b border-om-200/40">
-                              <div className="flex items-center gap-2">
-                                <span>2 Круг</span>
-                                <span className="text-char-400">Забег:</span>
-                                <input
-                                  type="text"
-                                  value={dog.run2_heat}
-                                  onChange={e => updateDog(category.id, dog.id, { run2_heat: e.target.value })}
-                                  className="w-7 text-center bg-om-50 border border-om-200 rounded py-0.5 text-[10px]"
-                                />
-                                <span className="text-char-400">Попона:</span>
-                                <select
-                                  value={dog.run2_blanket}
-                                  onChange={e => updateDog(category.id, dog.id, { run2_blanket: e.target.value as any })}
-                                  className="bg-om-50 border border-om-200 rounded px-1 py-0.5 text-[10px]"
-                                >
-                                  <option value="red">Красная</option>
-                                  <option value="white">Белая</option>
-                                  <option value="blue">Синяя</option>
-                                </select>
-                              </div>
-                              <span className="font-bold text-camel-800 tabular-nums">Сумма: {sum2}</span>
-                            </div>
-
-                            <div className="grid grid-cols-5 gap-1 text-center">
-                              {(['speed', 'enthusiasm', 'intelligence', 'agility', 'endurance'] as const).map(c => (
-                                <div key={c}>
-                                  <label className="block text-[8px] text-char-400 uppercase mb-0.5">
-                                    {c === 'speed' && 'Скор.'}
-                                    {c === 'enthusiasm' && 'Энт.'}
-                                    {c === 'intelligence' && 'Инт.'}
-                                    {c === 'agility' && 'Ман.'}
-                                    {c === 'endurance' && 'Вын.'}
-                                  </label>
-                                  <input
-                                    type="number"
-                                    min={0}
-                                    max={20}
-                                    value={dog.run2_scores[c]}
-                                    onChange={e => updateRoundScores(category.id, dog.id, 'run2_scores', c, e.target.value)}
-                                    className="w-full text-center py-0.5 bg-om-50 border border-om-200 rounded text-xs font-semibold tabular-nums"
-                                    placeholder="0"
-                                  />
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-                        </div>
-                      ) : (
-                        /* Забеги для рейсинга */
-                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs bg-cream-50/80 p-2 rounded border border-om-200/50">
-                          <div>
-                            <label className="block text-[9px] text-char-500 mb-0.5">Бокс</label>
-                            <input
-                              type="text"
-                              value={dog.racing_box}
-                              onChange={e => updateDog(category.id, dog.id, { racing_box: e.target.value })}
-                              className="w-full px-2 py-0.5 bg-om-50 border border-om-200 rounded text-xs text-center"
-                              placeholder="1"
-                            />
-                          </div>
-                          <div>
-                            <label className="block text-[9px] text-char-500 mb-0.5">1-й Заезд (сек)</label>
-                            <input
-                              type="text"
-                              value={dog.racing_time1}
-                              onChange={e => updateDog(category.id, dog.id, { racing_time1: e.target.value })}
-                              className="w-full px-2 py-0.5 bg-om-50 border border-om-200 rounded text-xs text-center font-mono"
-                              placeholder="22.45"
-                            />
-                          </div>
-                          <div>
-                            <label className="block text-[9px] text-char-500 mb-0.5">2-й Заезд (сек)</label>
-                            <input
-                              type="text"
-                              value={dog.racing_time2}
-                              onChange={e => updateDog(category.id, dog.id, { racing_time2: e.target.value })}
-                              className="w-full px-2 py-0.5 bg-om-50 border border-om-200 rounded text-xs text-center font-mono"
-                              placeholder="22.30"
-                            />
-                          </div>
-                          <div>
-                            <label className="block text-[9px] text-char-500 mb-0.5 font-bold text-camel-800">Финал (сек)</label>
-                            <input
-                              type="text"
-                              value={dog.racing_final_time}
-                              onChange={e => updateDog(category.id, dog.id, { racing_final_time: e.target.value })}
-                              className="w-full px-2 py-0.5 bg-om-50 border border-camel-300 rounded text-xs text-center font-mono font-bold"
-                              placeholder="22.15"
-                            />
-                          </div>
-                        </div>
-                      )}
-
-                      {/* Титулы собаки */}
-                      <div className="flex flex-wrap items-center gap-1.5 pt-0.5">
+                      {/* Тонкая строка титулов */}
+                      <div className="flex flex-wrap items-center gap-1 pl-1 pt-0.5 border-t border-om-200/30">
                         <span className="text-[9px] text-char-400 font-bold uppercase tracking-wider mr-1">
                           Титулы:
                         </span>
@@ -620,10 +596,10 @@ export default function ProtocolBuilder() {
                               key={title}
                               type="button"
                               onClick={() => toggleAward(category.id, dog.id, title)}
-                              className={`px-2 py-0.5 rounded text-[10px] font-semibold border transition-all ${
+                              className={`px-1.5 py-0.2 text-[9px] font-semibold rounded border transition-all ${
                                 active
-                                  ? 'bg-camel-600 text-white border-camel-700 shadow-xs'
-                                  : 'bg-cream-50 text-char-600 border-om-200 hover:border-camel-300'
+                                  ? 'bg-camel-600 text-white border-camel-700'
+                                  : 'bg-cream-50 text-char-500 border-om-200 hover:border-camel-300'
                               }`}
                             >
                               {title}
