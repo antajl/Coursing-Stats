@@ -25,6 +25,21 @@ function App() {
                               focus:rounded-lg">
                   Перейти к содержимому
                 </a>
+                {/* Глобальный grain — покрывает все карточки и блоки без правки каждого компонента */}
+                <div
+                  aria-hidden="true"
+                  style={{
+                    position: 'fixed',
+                    inset: 0,
+                    zIndex: 2,
+                    pointerEvents: 'none',
+                    opacity: 0.048,
+                    mixBlendMode: 'multiply',
+                    backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E")`,
+                    backgroundSize: '120px 120px',
+                    backgroundRepeat: 'repeat',
+                  }}
+                />
                 <div className="cs-page-shell min-h-screen">
                   <Nav />
                   <div className="relative z-[1]">
