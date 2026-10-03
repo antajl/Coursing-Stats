@@ -80,7 +80,7 @@
     {
       "id": 26614,
       "event_id": 1283,
-      "dog_id": 547,
+      "dog_id": 402,
       "breed_class": "Родезийский риджбек - Стандартный - Кобели",
       "catalog_no": 3,
       "placement": 2,
@@ -113,12 +113,12 @@
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>3</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Родезийский риджбек</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ЭЛЬ ТОРИ САПФИР /<br>EL TORI SAPPHIRE</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">344</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">30.44 с<br>11.30 м/с<br>40.683 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">29.98 с<br>11.47 м/с<br>41.308 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
       "judges": "Козлова И.В.",
       "status_reason": null,
-      "dog_key": "эль-тори-сапфир-el-tori-sapphire--родезиискии-риджбек",
+      "dog_key": "el-tori-sapphire--родезиискии-риджбек",
       "dog": {
-        "id": 547,
-        "dog_key": "эль-тори-сапфир-el-tori-sapphire--родезиискии-риджбек",
-        "name_lat": "ЭЛЬ ТОРИ САПФИР /EL TORI SAPPHIRE",
-        "name_ru": "ЭЛЬ ТОРИ САПФИР /EL TORI SAPPHIRE",
+        "id": 402,
+        "dog_key": "el-tori-sapphire--родезиискии-риджбек",
+        "name_lat": "EL TORI SAPPHIRE",
+        "name_ru": "ЭЛЬ ТОРИ САПФИР",
         "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
         "sex": null,
         "owner": null
@@ -164,8 +164,8 @@
       "dog": {
         "id": 548,
         "dog_key": "гакеру-абубакар-gakeru-abubakar--родезиискии-риджбек",
-        "name_lat": "ГАКЕРУ АБУБАКАР /GAKERU ABUBAKAR",
-        "name_ru": "ГАКЕРУ АБУБАКАР /GAKERU ABUBAKAR",
+        "name_lat": "GAKERU ABUBAKAR",
+        "name_ru": "ГАКЕРУ АБУБАКАР",
         "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
         "sex": null,
         "owner": null
@@ -196,8 +196,8 @@
       "dog": {
         "id": 189,
         "dog_key": "ариес-хан-сэмюэль-форсаж-джексон-aries-k--родезиискии-риджбек",
-        "name_lat": "АРИЕС ХАН СЭМЮЭЛЬ ФОРСАЖ ДЖЕКСОН /ARIES KHAN SAMUEL FORSAGE JACKSON",
-        "name_ru": "АРИЕС ХАН СЭМЮЭЛЬ ФОРСАЖ ДЖЕКСОН /ARIES KHAN SAMUEL FORSAGE JACKSON",
+        "name_lat": "ARIES KHAN SAMUEL FORSAGE JACKSON",
+        "name_ru": "АРИЕС ХАН СЭМЮЭЛЬ ФОРСАЖ ДЖЕКСОН",
         "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
         "sex": null,
         "owner": null
@@ -290,8 +290,8 @@
       "dog": {
         "id": 188,
         "dog_key": "ариес-хан-скади-сарама-фаст-фьюриос-arie--родезиискии-риджбек",
-        "name_lat": "АРИЕС ХАН СКАДИ САРАМА ФАСТ & ФЬЮРИОС /ARIES KHAN SKADI SARAMA FAST & FURIOUS",
-        "name_ru": "АРИЕС ХАН СКАДИ САРАМА ФАСТ & ФЬЮРИОС /ARIES KHAN SKADI SARAMA FAST & FURIOUS",
+        "name_lat": "ARIES KHAN SKADI SARAMA FAST & FURIOUS",
+        "name_ru": "АРИЕС ХАН СКАДИ САРАМА ФАСТ & ФЬЮРИОС",
         "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
         "sex": null,
         "owner": null
@@ -408,8 +408,8 @@
       "dog": {
         "id": 186,
         "dog_key": "ариес-хан-скиф-симуран-aries-khan-scythi--родезиискии-риджбек",
-        "name_lat": "АРИЕС ХАН СКИФ СИМУРАН /ARIES KHAN SCYTHIAN SIMURAN",
-        "name_ru": "АРИЕС ХАН СКИФ СИМУРАН /ARIES KHAN SCYTHIAN SIMURAN",
+        "name_lat": "ARIES KHAN SCYTHIAN SIMURAN",
+        "name_ru": "АРИЕС ХАН СКИФ СИМУРАН",
         "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
         "sex": null,
         "owner": null
@@ -455,8 +455,8 @@
       "dog": {
         "id": 549,
         "dog_key": "сокол-k-ефросиния-sokol-k-efrosiniya--русская-псовая-борзая",
-        "name_lat": "СОКОЛ & K ЕФРОСИНИЯ /SOKOL & K EFROSINIYA",
-        "name_ru": "СОКОЛ & K ЕФРОСИНИЯ /SOKOL & K EFROSINIYA",
+        "name_lat": "SOKOL & K EFROSINIYA",
+        "name_ru": "СОКОЛ & K ЕФРОСИНИЯ",
         "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
         "sex": null,
         "owner": null
@@ -542,8 +542,8 @@
       "dog": {
         "id": 550,
         "dog_key": "беарс-виктори-крылатая-легенда-bears-vic--русская-псовая-борзая",
-        "name_lat": "БЕАРС ВИКТОРИ КРЫЛАТАЯ ЛЕГЕНДА /BEARS VICTORY KRYLATAYA LEGENDA",
-        "name_ru": "БЕАРС ВИКТОРИ КРЫЛАТАЯ ЛЕГЕНДА /BEARS VICTORY KRYLATAYA LEGENDA",
+        "name_lat": "BEARS VICTORY KRYLATAYA LEGENDA",
+        "name_ru": "БЕАРС ВИКТОРИ КРЫЛАТАЯ ЛЕГЕНДА",
         "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
         "sex": null,
         "owner": null
@@ -574,8 +574,8 @@
       "dog": {
         "id": 551,
         "dog_key": "гуля-gulya--русская-псовая-борзая",
-        "name_lat": "ГУЛЯ /GULYA",
-        "name_ru": "ГУЛЯ /GULYA",
+        "name_lat": "GULYA",
+        "name_ru": "ГУЛЯ",
         "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
         "sex": null,
         "owner": null
@@ -621,8 +621,8 @@
       "dog": {
         "id": 552,
         "dog_key": "антик-годдес-antique-goddess--уиппет",
-        "name_lat": "АНТИК ГОДДЕС /ANTIQUE GODDESS",
-        "name_ru": "АНТИК ГОДДЕС /ANTIQUE GODDESS",
+        "name_lat": "ANTIQUE GODDESS",
+        "name_ru": "АНТИК ГОДДЕС",
         "breed": "УИППЕТ",
         "sex": null,
         "owner": null
@@ -762,8 +762,8 @@
       "dog": {
         "id": 81,
         "dog_key": "ювентус-скорыи-yuventus-skoryj--уиппет",
-        "name_lat": "ЮВЕНТУС СКОРЫЙ /YUVENTUS SKORYJ",
-        "name_ru": "ЮВЕНТУС СКОРЫЙ /YUVENTUS SKORYJ",
+        "name_lat": "YUVENTUS SKORYJ",
+        "name_ru": "ЮВЕНТУС СКОРЫЙ",
         "breed": "УИППЕТ",
         "sex": null,
         "owner": null
@@ -809,8 +809,8 @@
       "dog": {
         "id": 80,
         "dog_key": "догони-ветер-небесныи-этюд-dogoni-veter---уиппет",
-        "name_lat": "ДОГОНИ ВЕТЕР НЕБЕСНЫЙ ЭТЮД /DOGONI VETER NEBESNYI ETUDE",
-        "name_ru": "ДОГОНИ ВЕТЕР НЕБЕСНЫЙ ЭТЮД /DOGONI VETER NEBESNYI ETUDE",
+        "name_lat": "DOGONI VETER NEBESNYI ETUDE",
+        "name_ru": "ДОГОНИ ВЕТЕР НЕБЕСНЫЙ ЭТЮД",
         "breed": "УИППЕТ",
         "sex": null,
         "owner": null
@@ -841,8 +841,8 @@
       "dog": {
         "id": 553,
         "dog_key": "догони-ветер-неземнои-соул-dogoni-veter---уиппет",
-        "name_lat": "ДОГОНИ ВЕТЕР НЕЗЕМНОЙ СОУЛ /DOGONI VETER NEZEMNOY SOUL",
-        "name_ru": "ДОГОНИ ВЕТЕР НЕЗЕМНОЙ СОУЛ /DOGONI VETER NEZEMNOY SOUL",
+        "name_lat": "DOGONI VETER NEZEMNOY SOUL",
+        "name_ru": "ДОГОНИ ВЕТЕР НЕЗЕМНОЙ СОУЛ",
         "breed": "УИППЕТ",
         "sex": null,
         "owner": null
@@ -888,8 +888,8 @@
       "dog": {
         "id": 554,
         "dog_key": "феел-маи-хеарт-дримфаер-уна-feel-my-hear--уиппет",
-        "name_lat": "ФЕЕЛ МАЙ ХЕАРТ ДРИМФАЕР УНА /FEEL MY HEART DREMFYRE UNA",
-        "name_ru": "ФЕЕЛ МАЙ ХЕАРТ ДРИМФАЕР УНА /FEEL MY HEART DREMFYRE UNA",
+        "name_lat": "FEEL MY HEART DREMFYRE UNA",
+        "name_ru": "ФЕЕЛ МАЙ ХЕАРТ ДРИМФАЕР УНА",
         "breed": "УИППЕТ",
         "sex": null,
         "owner": null
@@ -935,8 +935,8 @@
       "dog": {
         "id": 461,
         "dog_key": "феел-маи-хеарт-деинерис-штормборн-feel-m--уиппет",
-        "name_lat": "ФЕЕЛ МАЙ ХЕАРТ ДЕЙНЕРИС ШТОРМБОРН /FEEL MY HEART DAENERYS STORMBORN",
-        "name_ru": "ФЕЕЛ МАЙ ХЕАРТ ДЕЙНЕРИС ШТОРМБОРН /FEEL MY HEART DAENERYS STORMBORN",
+        "name_lat": "FEEL MY HEART DAENERYS STORMBORN",
+        "name_ru": "ФЕЕЛ МАЙ ХЕАРТ ДЕЙНЕРИС ШТОРМБОРН",
         "breed": "УИППЕТ",
         "sex": null,
         "owner": null
@@ -1029,8 +1029,8 @@
       "dog": {
         "id": 269,
         "dog_key": "стангерс-ланд-даринг-греитли-stangers-la--уиппет",
-        "name_lat": "СТАНГЕРС ЛАНД ДАРИНГ ГРЕЙТЛИ /STANGERS LAND DARING GREATLY",
-        "name_ru": "СТАНГЕРС ЛАНД ДАРИНГ ГРЕЙТЛИ /STANGERS LAND DARING GREATLY",
+        "name_lat": "STANGERS LAND DARING GREATLY",
+        "name_ru": "СТАНГЕРС ЛАНД ДАРИНГ ГРЕЙТЛИ",
         "breed": "УИППЕТ",
         "sex": null,
         "owner": null
@@ -1116,8 +1116,8 @@
       "dog": {
         "id": 95,
         "dog_key": "стангерс-ланд-задор-stangers-land-zador--уиппет",
-        "name_lat": "СТАНГЕРС ЛАНД ЗАДОР /STANGERS LAND ZADOR",
-        "name_ru": "СТАНГЕРС ЛАНД ЗАДОР /STANGERS LAND ZADOR",
+        "name_lat": "STANGERS LAND ZADOR",
+        "name_ru": "СТАНГЕРС ЛАНД ЗАДОР",
         "breed": "УИППЕТ",
         "sex": null,
         "owner": null
@@ -1250,8 +1250,8 @@
       "dog": {
         "id": 556,
         "dog_key": "лакшери-випп-орион-luxury-whipp-orion--уиппет",
-        "name_lat": "ЛАКШЕРИ ВИПП ОРИОН /LUXURY WHIPP ORION",
-        "name_ru": "ЛАКШЕРИ ВИПП ОРИОН /LUXURY WHIPP ORION",
+        "name_lat": "LUXURY WHIPP ORION",
+        "name_ru": "ЛАКШЕРИ ВИПП ОРИОН",
         "breed": "УИППЕТ",
         "sex": null,
         "owner": null
@@ -1282,8 +1282,8 @@
       "dog": {
         "id": 99,
         "dog_key": "голди-краунд-ионси-биргинсон-goldi-kraun--уиппет",
-        "name_lat": "ГОЛДИ КРАУНД ИОНСИ БИРГИНСОН /GOLDI KRAUND IONSI BIRGINSON",
-        "name_ru": "ГОЛДИ КРАУНД ИОНСИ БИРГИНСОН /GOLDI KRAUND IONSI BIRGINSON",
+        "name_lat": "GOLDI KRAUND IONSI BIRGINSON",
+        "name_ru": "ГОЛДИ КРАУНД ИОНСИ БИРГИНСОН",
         "breed": "УИППЕТ",
         "sex": null,
         "owner": null
@@ -1390,8 +1390,8 @@
       "dog": {
         "id": 110,
         "dog_key": "джипси-лилит-богиня-ночи-dzhipsi-lilit-b--уиппет",
-        "name_lat": "ДЖИПСИ ЛИЛИТ БОГИНЯ НОЧИ /DZHIPSI LILIT BOGINYA NOCHI",
-        "name_ru": "ДЖИПСИ ЛИЛИТ БОГИНЯ НОЧИ /DZHIPSI LILIT BOGINYA NOCHI",
+        "name_lat": "DZHIPSI LILIT BOGINYA NOCHI",
+        "name_ru": "ДЖИПСИ ЛИЛИТ БОГИНЯ НОЧИ",
         "breed": "УИППЕТ",
         "sex": null,
         "owner": null
@@ -1444,8 +1444,8 @@
       "dog": {
         "id": 274,
         "dog_key": "барселона-энкантадора-barcelona-encantad--уиппет",
-        "name_lat": "БАРСЕЛОНА ЭНКАНТАДОРА /BARCELONA ENCANTADORA",
-        "name_ru": "БАРСЕЛОНА ЭНКАНТАДОРА /BARCELONA ENCANTADORA",
+        "name_lat": "BARCELONA ENCANTADORA",
+        "name_ru": "БАРСЕЛОНА ЭНКАНТАДОРА",
         "breed": "УИППЕТ",
         "sex": null,
         "owner": null
@@ -1538,8 +1538,8 @@
       "dog": {
         "id": 109,
         "dog_key": "лакшери-випп-орхидея-luxury-whipp-orkhid--уиппет",
-        "name_lat": "ЛАКШЕРИ ВИПП ОРХИДЕЯ /LUXURY WHIPP ORKHIDEYA",
-        "name_ru": "ЛАКШЕРИ ВИПП ОРХИДЕЯ /LUXURY WHIPP ORKHIDEYA",
+        "name_lat": "LUXURY WHIPP ORKHIDEYA",
+        "name_ru": "ЛАКШЕРИ ВИПП ОРХИДЕЯ",
         "breed": "УИППЕТ",
         "sex": null,
         "owner": null

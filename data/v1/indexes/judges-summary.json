@@ -1,28 +1,39 @@
 {
   "schema": "coursing-stats/index-judges-summary-v1",
-  "count": 40,
+  "count": 28,
   "judges": [
     {
       "id": "Карелина Н.В.",
       "name": "Карелина Н.В.",
-      "total_evaluations": 9330,
-      "total_evaluations_count": 1866,
-      "avg_score": 16.289055793991416,
+      "total_evaluations": 9350,
+      "total_evaluations_count": 1870,
+      "avg_score": 16.29218415417559,
       "unique_breeds": 41,
       "unique_disciplines": 3,
-      "unique_events": 24,
-      "unique_dogs": 468
+      "unique_events": 25,
+      "unique_dogs": 463
     },
     {
       "id": "Козлова И.В.",
       "name": "Козлова И.В.",
-      "total_evaluations": 6965,
-      "total_evaluations_count": 1393,
-      "avg_score": 16.632017229002155,
-      "unique_breeds": 33,
-      "unique_disciplines": 2,
-      "unique_events": 12,
-      "unique_dogs": 392
+      "total_evaluations": 7165,
+      "total_evaluations_count": 1433,
+      "avg_score": 16.647592463363573,
+      "unique_breeds": 35,
+      "unique_disciplines": 3,
+      "unique_events": 13,
+      "unique_dogs": 404
+    },
+    {
+      "id": "Крылова Е.В.",
+      "name": "Крылова Е.В.",
+      "total_evaluations": 6635,
+      "total_evaluations_count": 1327,
+      "avg_score": 16.251290616459155,
+      "unique_breeds": 37,
+      "unique_disciplines": 3,
+      "unique_events": 15,
+      "unique_dogs": 467
     },
     {
       "id": "Вронская О.В.",
@@ -31,75 +42,64 @@
       "total_evaluations_count": 1301,
       "avg_score": 17.038040967195442,
       "unique_breeds": 33,
-      "unique_disciplines": 2,
+      "unique_disciplines": 3,
       "unique_events": 14,
-      "unique_dogs": 421
-    },
-    {
-      "id": "Крылова Е.В.",
-      "name": "Крылова Е.В.",
-      "total_evaluations": 6115,
-      "total_evaluations_count": 1223,
-      "avg_score": 16.400654129190514,
-      "unique_breeds": 37,
-      "unique_disciplines": 2,
-      "unique_events": 13,
-      "unique_dogs": 413
+      "unique_dogs": 419
     },
     {
       "id": "Гольдинова Л.М.",
       "name": "Гольдинова Л.М.",
-      "total_evaluations": 5955,
-      "total_evaluations_count": 1191,
-      "avg_score": 16.809403862300588,
-      "unique_breeds": 31,
-      "unique_disciplines": 2,
-      "unique_events": 7,
-      "unique_dogs": 422
+      "total_evaluations": 6255,
+      "total_evaluations_count": 1251,
+      "avg_score": 16.859792166266985,
+      "unique_breeds": 32,
+      "unique_disciplines": 3,
+      "unique_events": 8,
+      "unique_dogs": 442
     },
     {
       "id": "Лукина Д.М.",
       "name": "Лукина Д.М.",
-      "total_evaluations": 5870,
-      "total_evaluations_count": 1174,
-      "avg_score": 16.81618398637138,
+      "total_evaluations": 5890,
+      "total_evaluations_count": 1178,
+      "avg_score": 16.816468590831917,
       "unique_breeds": 44,
       "unique_disciplines": 3,
-      "unique_events": 16,
-      "unique_dogs": 389
+      "unique_events": 17,
+      "unique_dogs": 386
     },
     {
       "id": "Иванова Г.С.",
       "name": "Иванова Г.С.",
-      "total_evaluations": 5470,
-      "total_evaluations_count": 1094,
-      "avg_score": 17.054478976234005,
-      "unique_breeds": 36,
+      "total_evaluations": 5815,
+      "total_evaluations_count": 1163,
+      "avg_score": 16.730339073317946,
+      "unique_breeds": 38,
       "unique_disciplines": 2,
-      "unique_events": 11,
-      "unique_dogs": 374
+      "unique_events": 12,
+      "unique_dogs": 396
     },
     {
       "id": "Серова Т.Г.",
       "name": "Серова Т.Г.",
-      "total_evaluations": 4600,
-      "total_evaluations_count": 920,
-      "avg_score": 16.658695652173915,
+      "total_evaluations": 4765,
+      "total_evaluations_count": 953,
+      "avg_score": 16.467079948696025,
       "unique_breeds": 37,
-      "unique_disciplines": 2,
-      "unique_events": 6,
-      "unique_dogs": 398
+      "unique_disciplines": 3,
+      "unique_events": 7,
+      "unique_dogs": 409
     },
     {
       "id": "Рубина А.В.",
       "name": "Рубина А.В.",
-      "total_evaluations": 3215,
-      "total_evaluations_count": 643,
-      "avg_score": 16.95769828926905,
-      "unique_breeds": 20,
+      "total_evaluations": 3375,
+      "total_evaluations_count": 675,
+      "avg_score": 16.97985185185185,
+      "unique_breeds": 22,
       "unique_disciplines": 2,
       "unique_events": 8,
-      "unique_dogs": 236
+      "unique_dogs": 264
     },
     {
       "id": "Егорова М.А.",
@@ -121,7 +121,7 @@
       "unique_breeds": 16,
       "unique_disciplines": 1,
       "unique_events": 4,
-      "unique_dogs": 189
+      "unique_dogs": 188
     },
     {
       "id": "Петровас Н.Е.",
@@ -143,7 +143,7 @@
       "unique_breeds": 15,
       "unique_disciplines": 1,
       "unique_events": 4,
-      "unique_dogs": 167
+      "unique_dogs": 166
     },
     {
       "id": "Корепанова Т.В.",
@@ -168,6 +168,17 @@
       "unique_dogs": 161
     },
     {
+      "id": "Богаченко В.В.",
+      "name": "Богаченко В.В.",
+      "total_evaluations": 1420,
+      "total_evaluations_count": 284,
+      "avg_score": 17.143661971830987,
+      "unique_breeds": 14,
+      "unique_disciplines": 2,
+      "unique_events": 5,
+      "unique_dogs": 127
+    },
+    {
       "id": "Кузнецова Н.Н.",
       "name": "Кузнецова Н.Н.",
       "total_evaluations": 1420,
@@ -177,17 +188,6 @@
       "unique_disciplines": 2,
       "unique_events": 3,
       "unique_dogs": 132
-    },
-    {
-      "id": "Богаченко В.В.",
-      "name": "Богаченко В.В.",
-      "total_evaluations": 1410,
-      "total_evaluations_count": 282,
-      "avg_score": 17.140425531914893,
-      "unique_breeds": 14,
-      "unique_disciplines": 2,
-      "unique_events": 5,
-      "unique_dogs": 126
     },
     {
       "id": "Евграфова О.Н.",
@@ -234,6 +234,17 @@
       "unique_dogs": 61
     },
     {
+      "id": "Полякова Г.Б.",
+      "name": "Полякова Г.Б.",
+      "total_evaluations": 590,
+      "total_evaluations_count": 118,
+      "avg_score": 13.623287671232877,
+      "unique_breeds": 13,
+      "unique_disciplines": 2,
+      "unique_events": 2,
+      "unique_dogs": 85
+    },
+    {
       "id": "Гродинская Т.Л.",
       "name": "Гродинская Т.Л.",
       "total_evaluations": 540,
@@ -256,17 +267,6 @@
       "unique_dogs": 54
     },
     {
-      "id": "- Иванова Г.С.",
-      "name": "- Иванова Г.С.",
-      "total_evaluations": 530,
-      "total_evaluations_count": 106,
-      "avg_score": 4.355371900826446,
-      "unique_breeds": 13,
-      "unique_disciplines": 1,
-      "unique_events": 2,
-      "unique_dogs": 93
-    },
-    {
       "id": "Табуева Т.А.",
       "name": "Табуева Т.А.",
       "total_evaluations": 380,
@@ -278,15 +278,15 @@
       "unique_dogs": 38
     },
     {
-      "id": "- Куликова Г.В.",
-      "name": "- Куликова Г.В.",
-      "total_evaluations": 355,
-      "total_evaluations_count": 71,
-      "avg_score": 5.402298850574713,
-      "unique_breeds": 9,
+      "id": "Гуриненко А.В.",
+      "name": "Гуриненко А.В.",
+      "total_evaluations": 298,
+      "total_evaluations_count": 60,
+      "avg_score": 17.20805369127517,
+      "unique_breeds": 4,
       "unique_disciplines": 1,
-      "unique_events": 2,
-      "unique_dogs": 63
+      "unique_events": 1,
+      "unique_dogs": 30
     },
     {
       "id": "Куликова Г.В.",
@@ -309,138 +309,6 @@
       "unique_disciplines": 1,
       "unique_events": 1,
       "unique_dogs": 28
-    },
-    {
-      "id": "- Крылова Е.В.",
-      "name": "- Крылова Е.В.",
-      "total_evaluations": 260,
-      "total_evaluations_count": 52,
-      "avg_score": 11.899543378995434,
-      "unique_breeds": 9,
-      "unique_disciplines": 1,
-      "unique_events": 2,
-      "unique_dogs": 40
-    },
-    {
-      "id": "- Полякова Г.Б.",
-      "name": "- Полякова Г.Б.",
-      "total_evaluations": 250,
-      "total_evaluations_count": 50,
-      "avg_score": 4.697478991596639,
-      "unique_breeds": 9,
-      "unique_disciplines": 1,
-      "unique_events": 1,
-      "unique_dogs": 50
-    },
-    {
-      "id": "- Гольдинова Л.М.",
-      "name": "- Гольдинова Л.М.",
-      "total_evaluations": 150,
-      "total_evaluations_count": 30,
-      "avg_score": 17.933333333333334,
-      "unique_breeds": 3,
-      "unique_disciplines": 1,
-      "unique_events": 1,
-      "unique_dogs": 15
-    },
-    {
-      "id": "Полякова Г.Б.",
-      "name": "Полякова Г.Б.",
-      "total_evaluations": 150,
-      "total_evaluations_count": 30,
-      "avg_score": 17.7,
-      "unique_breeds": 3,
-      "unique_disciplines": 1,
-      "unique_events": 1,
-      "unique_dogs": 15
-    },
-    {
-      "id": "Гуриненко А.В.",
-      "name": "Гуриненко А.В.",
-      "total_evaluations": 150,
-      "total_evaluations_count": 30,
-      "avg_score": 17.433333333333334,
-      "unique_breeds": 3,
-      "unique_disciplines": 1,
-      "unique_events": 1,
-      "unique_dogs": 15
-    },
-    {
-      "id": "- Луговая К.И.",
-      "name": "- Луговая К.И.",
-      "total_evaluations": 150,
-      "total_evaluations_count": 30,
-      "avg_score": 4.6,
-      "unique_breeds": 8,
-      "unique_disciplines": 1,
-      "unique_events": 1,
-      "unique_dogs": 17
-    },
-    {
-      "id": "- Козлова И.В.",
-      "name": "- Козлова И.В.",
-      "total_evaluations": 120,
-      "total_evaluations_count": 24,
-      "avg_score": 17.008333333333333,
-      "unique_breeds": 6,
-      "unique_disciplines": 1,
-      "unique_events": 1,
-      "unique_dogs": 12
-    },
-    {
-      "id": "- Серова Т.Г.",
-      "name": "- Серова Т.Г.",
-      "total_evaluations": 115,
-      "total_evaluations_count": 23,
-      "avg_score": 4.722222222222222,
-      "unique_breeds": 3,
-      "unique_disciplines": 1,
-      "unique_events": 1,
-      "unique_dogs": 23
-    },
-    {
-      "id": "- Корепанова Т.В.",
-      "name": "- Корепанова Т.В.",
-      "total_evaluations": 105,
-      "total_evaluations_count": 21,
-      "avg_score": 3.707317073170732,
-      "unique_breeds": 8,
-      "unique_disciplines": 1,
-      "unique_events": 1,
-      "unique_dogs": 21
-    },
-    {
-      "id": "- Лукина Д.М.",
-      "name": "- Лукина Д.М.",
-      "total_evaluations": 80,
-      "total_evaluations_count": 16,
-      "avg_score": 16.225,
-      "unique_breeds": 3,
-      "unique_disciplines": 1,
-      "unique_events": 1,
-      "unique_dogs": 8
-    },
-    {
-      "id": "- Карелина Н.В.",
-      "name": "- Карелина Н.В.",
-      "total_evaluations": 80,
-      "total_evaluations_count": 16,
-      "avg_score": 17.4375,
-      "unique_breeds": 3,
-      "unique_disciplines": 1,
-      "unique_events": 1,
-      "unique_dogs": 8
-    },
-    {
-      "id": "- Яковлева Т.С.",
-      "name": "- Яковлева Т.С.",
-      "total_evaluations": 75,
-      "total_evaluations_count": 15,
-      "avg_score": 4.636363636363637,
-      "unique_breeds": 5,
-      "unique_disciplines": 1,
-      "unique_events": 1,
-      "unique_dogs": 8
     }
   ],
   "availableBreeds": [
