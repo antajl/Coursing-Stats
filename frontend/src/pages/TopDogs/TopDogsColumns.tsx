@@ -187,6 +187,7 @@ export default function TopDogsColumns({
           }`}
         >
           <span>Курсинг / БЗМП</span>
+          <CoursingRatingHint embedded />
           <span className={`h-4 min-w-[1.25rem] px-1 rounded-full text-[10px] font-bold flex items-center justify-center leading-none ${
             activeMobileColumn === 'coursing' ? 'bg-camel-100 text-camel-800' : 'bg-charcoal-200/60 text-charcoal-600'
           }`}>
@@ -213,12 +214,18 @@ export default function TopDogsColumns({
 
       <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-2 lg:gap-8">
         <div className={activeMobileColumn === 'racing' ? 'hidden lg:block' : 'block'}>
-          <DoninoColumnShell plaque={coursingPlaque} listRef={coursingRevealRef}>
+          <DoninoColumnShell
+            plaque={<div className="hidden lg:block">{coursingPlaque}</div>}
+            listRef={coursingRevealRef}
+          >
             {coursingList}
           </DoninoColumnShell>
         </div>
         <div className={activeMobileColumn === 'coursing' ? 'hidden lg:block' : 'block'}>
-          <DoninoColumnShell plaque={racingPlaque} listRef={speedRevealRef}>
+          <DoninoColumnShell
+            plaque={<div className="hidden lg:block">{racingPlaque}</div>}
+            listRef={speedRevealRef}
+          >
             {speedList}
           </DoninoColumnShell>
         </div>

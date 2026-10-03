@@ -41,10 +41,10 @@ export default function EventListRow({ event }: EventListRowProps) {
   const participantsBadge =
     participants > 0 ? (
       <span
-        className="inline-flex h-5 shrink-0 items-center justify-center gap-1 rounded-md bg-old-money-100/90 px-1.5 font-mono text-[11px] font-semibold tabular-nums text-charcoal-600"
+        className="inline-flex h-5 shrink-0 items-center justify-center gap-1 rounded-md border border-old-money-200/80 bg-white/90 px-1.5 font-mono text-[11px] font-semibold tabular-nums text-charcoal-700 shadow-2xs"
         title="Участников"
       >
-        <PawIcon className="h-3 w-3 shrink-0 text-charcoal-400" strokeWidth={1.75} />
+        <PawIcon className="h-3 w-3 shrink-0 text-charcoal-500" strokeWidth={1.75} />
         {participants}
       </span>
     ) : null

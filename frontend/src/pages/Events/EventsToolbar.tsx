@@ -119,7 +119,7 @@ export default function EventsToolbar({
         placeholder="Название, клуб, регион…"
         className="w-full sm:!w-auto min-w-0 sm:min-w-[200px] max-w-sm"
       />
-      <div className="flex max-w-full flex-wrap items-center gap-1.5 w-full sm:w-auto">
+      <div className="flex max-w-full items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5 w-full sm:w-auto sm:flex-wrap">
         <ModernDropdown
           trigger={
             <button
@@ -336,11 +336,11 @@ export default function EventsToolbar({
   )
 
   const legend = (
-    <div className="flex flex-wrap items-center justify-end gap-x-3.5 gap-y-1">
+    <div className="flex items-center justify-end gap-x-2 sm:gap-x-3.5 gap-y-1">
       {LEGEND.map(({ key, label, tip }) => (
         <ToolbarTip key={key} label={tip}>
-          <span className="inline-flex items-center gap-1.5 text-xs text-charcoal-500">
-            <span className={`h-2 w-2 rounded-sm ${LEGEND_DOT_COLOR[key]}`} />
+          <span className="inline-flex items-center gap-1 sm:gap-1.5 text-[11px] sm:text-xs text-charcoal-500 whitespace-nowrap">
+            <span className={`h-2 w-2 rounded-sm shrink-0 ${LEGEND_DOT_COLOR[key]}`} />
             {label}
           </span>
         </ToolbarTip>
@@ -362,8 +362,10 @@ export default function EventsToolbar({
                 <span> · {disciplineLabel}</span>
               )}
             </p>
-            <p className="sm:hidden text-xs text-charcoal-500">
-              {`${stats.filtered} из ${stats.total} · с рез.: ${stats.withResult}`}
+            <p className="sm:hidden text-[11px] text-charcoal-500 whitespace-nowrap">
+              {stats.filtered === stats.total
+                ? `${stats.total} соб. · рез: ${stats.withResult}`
+                : `${stats.filtered}/${stats.total} · рез: ${stats.withResult}`}
             </p>
           </>
         ) : undefined
