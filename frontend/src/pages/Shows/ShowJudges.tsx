@@ -1,23 +1,19 @@
 import { useState, useEffect, useMemo, useRef } from 'react'
+import { ChevronDown, X } from 'lucide-react'
 import ShowJudgeCard from '../../components/ShowJudgeCard'
 import PageToolbar from '../../components/toolbar/PageToolbar'
-import ToolbarFiltersDropdown from '../../components/toolbar/ToolbarFiltersDropdown'
-import ToolbarFilterOptionList from '../../components/toolbar/ToolbarFilterOptionList'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
-import {
-  TOOLBAR_CHIP,
-  TOOLBAR_CHIP_ACTIVE,
-  TOOLBAR_CHIP_IDLE,
-  TOOLBAR_FILTER_SECTION_LABEL,
-} from '../../lib/toolbar'
+import ModernDropdown from '../../components/ui/ModernDropdown'
+import BreedSearchDropdown from '../../components/ui/BreedSearchDropdown'
+import { toolbarPillTriggerClass } from '../../lib/toolbar'
 import { useShowJudges, useShowJudgesPage0 } from '../../hooks/useStaticData'
 import EmptyState from '../../components/EmptyState'
 import SkeletonLoader from '../../components/SkeletonLoader'
 import RecordSortBar from '../SpeedRecords/RecordSortBar'
 import type { ShowJudge } from '../../lib/staticData'
-import { matchesBreedFilter, uniqueCanonicalBreeds } from '../../lib/breedMapping'
+import { matchesBreedFilter, uniqueCanonicalBreeds, formatBreedName } from '../../lib/breedMapping'
 
-const CURRENT_SEASON = String(new Date().getFullYear())
+const SHOW_YEARS = ['2026', '2025', '2024']
 
 /** Full judges.json (~12 MB) must not race page0 — wait after first paint. */
 const FULL_JUDGES_DELAY_MS = 2500
@@ -54,6 +50,7 @@ export default function ShowJudges() {
   const [searchQuery, setSearchQuery] = useState('')
   const [filterYear, setFilterYear] = useState('')
   const [filterBreed, setFilterBreed] = useState('')
+  const [yearOpen, setYearOpen] = useState(false)
   const [sortKey, setSortKey] = useState<SortKey>('exhibitions')
   const [sortDir, setSortDir] = useState<'desc' | 'asc'>('desc')
   const [visibleCount, setVisibleCount] = useState(20)
@@ -186,15 +183,10 @@ export default function ShowJudges() {
   }
 
   const hasActiveFilters = Boolean(filterYear || filterBreed || searchQuery)
-  const hasPanelFilters = Boolean(filterBreed)
 
   const clearFilters = () => {
     setSearchQuery('')
     setFilterYear('')
-    setFilterBreed('')
-  }
-
-  const clearPanelFilters = () => {
     setFilterBreed('')
   }
 
@@ -239,41 +231,95 @@ export default function ShowJudges() {
               placeholder="Фамилия судьи…"
               className="w-full sm:w-auto min-w-0 sm:min-w-[200px] max-w-sm"
             />
-            <div className="flex max-w-full items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5 w-full sm:w-auto sm:flex-wrap">
-              <ToolbarFiltersDropdown
-                active={hasPanelFilters}
-                activeCount={filterBreed ? 1 : 0}
-                fillContent
-                panelClassName="md:w-[min(360px,calc(100vw-2rem))]"
-                onReset={clearPanelFilters}
-                label="Фильтры"
-                onOpenChange={(open) => {
-                  if (open) setUserWantsFull(true)
-                }}
-              >
-                <div className="flex min-h-0 flex-1 flex-col">
-                  <p className={TOOLBAR_FILTER_SECTION_LABEL}>Порода</p>
-                  <ToolbarFilterOptionList
-                    options={availableBreeds}
-                    value={filterBreed}
-                    onSelect={(breed) => setFilterBreed(filterBreed === breed ? '' : breed)}
-                    searchable
-                    searchPlaceholder="Найти породу…"
-                    emptyText={
-                      availableBreeds.length === 0 ? 'Нет пород в индексе' : 'Ничего не найдено'
-                    }
-                    fill
-                  />
-                </div>
-              </ToolbarFiltersDropdown>
-              <button
-                type="button"
-                onClick={() => setFilterYear(filterYear === CURRENT_SEASON ? '' : CURRENT_SEASON)}
-                aria-pressed={filterYear === CURRENT_SEASON}
-                className={`shrink-0 ${TOOLBAR_CHIP} ${filterYear === CURRENT_SEASON ? TOOLBAR_CHIP_ACTIVE : TOOLBAR_CHIP_IDLE}`}
-              >
-                Сезон {CURRENT_SEASON}
-              </button>
+              <div className="flex max-w-full items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5 w-full sm:w-auto sm:flex-wrap">
+                {/* Year Dropdown */}
+                <ModernDropdown
+                  trigger={
+                    <button
+                      type="button"
+                      className={`shrink-0 ${toolbarPillTriggerClass(Boolean(filterYear))}`}
+                    >
+                      <span>{!filterYear ? 'Все года' : `Сезон ${filterYear}`}</span>
+                      <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
+                    </button>
+                  }
+                  isOpen={yearOpen}
+                  onOpenChange={setYearOpen}
+                  width="130px"
+                >
+                  <div className="p-1 max-h-60 overflow-y-auto" role="menu">
+                    <button
+                      type="button"
+                      role="menuitem"
+                      onClick={() => {
+                        setFilterYear('')
+                        setYearOpen(false)
+                      }}
+                      className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
+                        !filterYear
+                          ? 'bg-camel-500 text-charcoal-900 font-semibold'
+                          : 'text-charcoal-700 hover:bg-camel-100'
+                      }`}
+                    >
+                      Все года
+                    </button>
+                    {SHOW_YEARS.map((year) => (
+                      <button
+                        key={year}
+                        type="button"
+                        role="menuitem"
+                        onClick={() => {
+                          setFilterYear(year)
+                          setYearOpen(false)
+                        }}
+                        className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
+                          filterYear === year
+                            ? 'bg-camel-500 text-charcoal-900 font-semibold'
+                            : 'text-charcoal-700 hover:bg-camel-100'
+                        }`}
+                      >
+                        Сезон {year}
+                      </button>
+                    ))}
+                  </div>
+                </ModernDropdown>
+
+                {/* Breed Dropdown */}
+                <BreedSearchDropdown
+                  breeds={availableBreeds}
+                  selectedBreed={filterBreed}
+                  onSelect={(breed) => {
+                    setFilterBreed(breed)
+                    if (breed) setUserWantsFull(true)
+                  }}
+                  trigger={
+                    <button
+                      type="button"
+                      className={`shrink-0 ${toolbarPillTriggerClass(Boolean(filterBreed))}`}
+                    >
+                      <span className="truncate max-w-[140px]">
+                        {filterBreed ? formatBreedName(filterBreed) : 'Порода'}
+                      </span>
+                      <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
+                    </button>
+                  }
+                />
+
+                {/* Reset Filters button */}
+                {(filterYear || filterBreed) && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setFilterYear('')
+                      setFilterBreed('')
+                    }}
+                    className="shrink-0 inline-flex items-center gap-1 rounded-lg px-2.5 py-1.5 text-xs font-medium text-old-money-600 hover:text-charcoal-900 hover:bg-cream-100 transition-colors"
+                    title="Сбросить все фильтры"
+                  >
+                    <X className="h-3.5 w-3.5" />
+                    <span>Сбросить</span>
+                  </button>
+                )}
 
               {/* Mobile sort options inside the horizontal scroll row */}
               <div className="sm:hidden flex items-center gap-1.5 shrink-0 pl-1 border-l border-old-money-200/80">

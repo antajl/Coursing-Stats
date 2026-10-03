@@ -135,20 +135,6 @@ export function JudgeDetailHeader({
 
   return (
     <div className="min-w-0 rounded-2xl border border-old-money-200/90 bg-white p-4 sm:p-6 md:p-8 shadow-xs">
-      {onBack && (
-        <div className="mb-3 flex items-center md:hidden">
-          <button
-            type="button"
-            onClick={onBack}
-            className="-ml-1 inline-flex items-center gap-1 rounded-lg px-2.5 py-1 text-xs font-semibold text-old-money-600 transition-colors hover:bg-cream-100 hover:text-charcoal-900"
-            aria-label="Назад к списку судей"
-          >
-            <ChevronLeft className="h-4 w-4 shrink-0 text-camel-600" aria-hidden />
-            <span>Все судьи выставок</span>
-          </button>
-        </div>
-      )}
-
       {/* Top Profile Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">

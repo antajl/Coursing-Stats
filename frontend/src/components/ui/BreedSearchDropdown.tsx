@@ -32,6 +32,19 @@ export default function BreedSearchDropdown({
     }
     return uniqueCanonicalBreeds(breeds)
   }, [breeds, dogIndex])
+
+  // Count dogs per breed if dogIndex is provided
+  const breedCounts = useMemo(() => {
+    if (!dogIndex || dogIndex.length === 0) return new Map<string, number>()
+    const counts = new Map<string, number>()
+    for (const dog of dogIndex) {
+      const breed = dog.breed?.trim()
+      if (!breed || (dog.competition_count ?? 0) <= 0) continue
+      if (/^\d+$/.test(breed)) continue
+      counts.set(breed, (counts.get(breed) ?? 0) + 1)
+    }
+    return counts
+  }, [dogIndex])
   
   // Filter breeds based on search query
   const filteredBreeds = uniqueBreeds.filter((breed) => {
@@ -140,22 +153,34 @@ export default function BreedSearchDropdown({
             filteredBreeds.map((breed) => {
               const display = displayBreed(breed)
               const isSelected = breed === selectedBreed
+              const count = breedCounts.get(breed)
               
               return (
                 <button
                   key={breed}
                   role="menuitem"
                   onClick={() => handleSelect(breed)}
-                  className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
+                  className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors flex items-center justify-between gap-2 ${
                     isSelected
-                      ? 'bg-camel-500 text-charcoal-900'
+                      ? 'bg-camel-500 text-charcoal-900 font-semibold'
                       : 'text-charcoal-700 hover:bg-camel-100'
                   }`}
                 >
-                  {display.primary}
-                  {display.secondary && (
-                    <span className="ml-2 text-charcoal-400">
-                      {display.secondary}
+                  <span className="truncate">
+                    {display.primary}
+                    {display.secondary && (
+                      <span className="ml-2 text-charcoal-400 font-normal text-xs">
+                        {display.secondary}
+                      </span>
+                    )}
+                  </span>
+                  {count != null && count > 0 && (
+                    <span
+                      className={`shrink-0 text-xs tabular-nums font-medium ${
+                        isSelected ? 'text-charcoal-800' : 'text-charcoal-400'
+                      }`}
+                    >
+                      {count}
                     </span>
                   )}
                 </button>
