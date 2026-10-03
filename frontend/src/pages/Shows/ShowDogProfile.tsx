@@ -85,10 +85,6 @@ export default function ShowDogProfile() {
   const title = `${dog.name_lat || dog.name_ru || ''} - ${dog.breed || ''}`
   const description = `Выставочная история собаки ${dog.name_lat || dog.name_ru || ''} породы ${dog.breed || ''}. Рейтинг: ${dog.rank || 'N/A'}, выставок: ${dog.total_shows || 0}.`
 
-  const handleBack = () => {
-    window.history.back()
-  }
-
   const handleExport = () => {
     setExporting(true)
     setTimeout(() => setExporting(false), 1000)
@@ -109,7 +105,6 @@ export default function ShowDogProfile() {
           competitionTitles={[]}
           showRuName={false}
           exporting={exporting}
-          onBack={handleBack}
           onExport={handleExport}
           ranks={headerRanks}
         />

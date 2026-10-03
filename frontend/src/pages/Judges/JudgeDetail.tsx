@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { useParams, Link, useNavigate, useSearchParams } from 'react-router-dom'
+import { useParams, Link, useSearchParams } from 'react-router-dom'
 import {
-  ChevronLeft,
   ChevronDown,
   Award,
   Calendar,
@@ -207,7 +206,6 @@ function collectEvents(breedStats: BreedStat[] | undefined): JudgeEvent[] {
 
 export default function JudgeDetail() {
   const { judgeId } = useParams()
-  const navigate = useNavigate()
   const [searchParams, setSearchParams] = useSearchParams()
   const [expandedBreed, setExpandedBreed] = useState<string | null>(null)
   const [expandedDogs, setExpandedDogs] = useState<Set<string>>(new Set())
@@ -393,16 +391,6 @@ export default function JudgeDetail() {
 
       <div className="space-y-6 pb-6">
         <div className="relative">
-          {/* Desktop floating back button */}
-          <button
-            type="button"
-            onClick={() => navigate('/competitions?tab=judges')}
-            className="hidden md:absolute md:right-full md:top-8 md:mr-2 md:inline-flex md:h-11 md:w-11 md:items-center md:justify-center md:rounded-xl md:text-old-money-500 md:transition-all md:hover:bg-cream-100 md:hover:text-camel-700 hover:scale-105"
-            aria-label="Назад к списку судей"
-          >
-            <ChevronLeft className="h-5 w-5" aria-hidden />
-          </button>
-
           {/* Hero Profile Card */}
           <div className="min-w-0 rounded-2xl border border-old-money-200/80 bg-white p-4 sm:p-6 md:p-8 shadow-xs">
             {/* Top Profile Header */}

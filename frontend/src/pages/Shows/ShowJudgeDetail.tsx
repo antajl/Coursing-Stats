@@ -1,6 +1,5 @@
-import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom'
+import { Link, useParams, useSearchParams } from 'react-router-dom'
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { ChevronLeft } from 'lucide-react'
 import { SEO } from '../../components/SEO'
 import { useShowJudgeDetails, useShowJudgesStrictnessBaseline } from '../../hooks/useStaticData'
 import { JsonLd, personSchema } from '../../components/JsonLd'
@@ -20,7 +19,6 @@ import { JudgeListsSection } from './ShowJudgeDetail/JudgeListsSection'
 
 export default function ShowJudgeDetail() {
   const { judgeId } = useParams<{ judgeId: string }>()
-  const navigate = useNavigate()
   const [searchParams, setSearchParams] = useSearchParams()
   const { data: result, isLoading: loading } = useShowJudgeDetails(judgeId)
   const { data: baselineResult } = useShowJudgesStrictnessBaseline()
@@ -179,17 +177,8 @@ export default function ShowJudgeDetail() {
       />
       <div className="space-y-5 pb-4">
         <div className="relative">
-          <button
-            type="button"
-            onClick={() => navigate('/shows?tab=judges')}
-            className="hidden md:absolute md:right-full md:top-8 md:mr-1 md:inline-flex md:h-11 md:w-11 md:items-center md:justify-center md:rounded-lg md:text-old-money-500 md:transition-colors md:hover:bg-old-money-50 md:hover:text-camel-700"
-            aria-label="Назад"
-          >
-            <ChevronLeft className="h-5 w-5" aria-hidden />
-          </button>
           <JudgeDetailHeader
             judgeName={judge.display_name || judge.name}
-            onBack={() => navigate('/shows?tab=judges')}
             yearParam={yearParam}
             availableYears={availableYears}
             onYearChange={setYear}

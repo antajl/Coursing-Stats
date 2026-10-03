@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
-import { useParams, Link, useNavigate } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import SkeletonLoader from '../../components/SkeletonLoader'
 import ErrorState from '../../components/ErrorState'
 import RKFAttribution from '../../components/RKFAttribution'
@@ -26,7 +26,6 @@ import { LegacyResultsSection } from './ShowExhibitionDetail/LegacyResultsSectio
 
 export default function ShowExhibitionDetail() {
   const { id } = useParams<{ id: string }>()
-  const navigate = useNavigate()
   const [loading, setLoading] = useState(true)
   const [exhibition, setExhibition] = useState<ShowExhibition | null>(null)
   const [error, setError] = useState<string | null>(null)
@@ -121,7 +120,7 @@ export default function ShowExhibitionDetail() {
         keywords={`${exhibition.title}, выставка РКФ, результаты, ${exhibition.location || ''}`}
         canonicalUrl={`https://coursing-stats.ru/shows/exhibition/${id}`}
       />
-      <ExhibitionHeader exhibition={exhibition} onBack={() => navigate(-1)} />
+      <ExhibitionHeader exhibition={exhibition} />
 
       {exhibition.results.length > 0 || hasCatalog ? (
         <div className="mb-4">
