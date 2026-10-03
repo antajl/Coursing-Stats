@@ -137,6 +137,71 @@ export function renderShowAwardChips({
   )
 }
 
+/** Рендер всех титулов собаки в одну прокручиваемую строку для мобильных экранов. */
+export function renderAllDogTitlesSingleLine({
+  competitionTitles,
+  showTitles,
+}: {
+  competitionTitles: DogTitle[]
+  showTitles: DogTitle[]
+}): ReactNode {
+  const hasComp = competitionTitles.length > 0
+  const hasShow = showTitles.length > 0
+  if (!hasComp && !hasShow) return null
+
+  const sortedComp = sortDogTitlesByCoolness(competitionTitles)
+  const sortedShow = sortDogTitlesByCoolness(showTitles)
+
+  const renderChip = (item: DogTitle, keyPrefix: string) => {
+    const showKey = matchShowAwardToken(item.title)
+    const badgeTitle = showKey ? item.title : competitionTitleDisplayName(item.title)
+    const line = formatTitleLine({ title: badgeTitle, count: item.count })
+    return (
+      <HoverTooltip
+        key={`${keyPrefix}-${badgeTitle}`}
+        label={awardTooltipForDogTitle(item.title, item.count)}
+        placement="top"
+        variant="site"
+        delayMs={0}
+        portal
+      >
+        <span
+          className={`inline-flex shrink-0 rounded-md px-2 py-0.5 text-[11px] font-semibold tabular-nums whitespace-nowrap ${titleBadgeClass(badgeTitle)}`}
+          tabIndex={0}
+        >
+          {line}
+        </span>
+      </HoverTooltip>
+    )
+  }
+
+  return (
+    <div className="flex w-full items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5">
+      {hasComp && (
+        <div className="flex shrink-0 items-center gap-1.5">
+          <span className="shrink-0 text-[10px] font-bold uppercase tracking-wider text-old-money-500">
+            Спорт:
+          </span>
+          {sortedComp.map((item) => renderChip(item, 'comp'))}
+        </div>
+      )}
+
+      {hasComp && hasShow && (
+        <span className="mx-1 h-3.5 w-px shrink-0 bg-old-money-300" aria-hidden />
+      )}
+
+      {hasShow && (
+        <div className="flex shrink-0 items-center gap-1.5">
+          <span className="shrink-0 text-[10px] font-bold uppercase tracking-wider text-old-money-500">
+            Выставки:
+          </span>
+          {sortedShow.map((item) => renderChip(item, 'show'))}
+        </div>
+      )}
+    </div>
+  )
+}
+
 /** Рендер титулов профиля (курсинг / бега / выставки) с группировкой по категориям. */
 export function renderGroupedDogTitles(titles: DogTitle[]): ReactNode {
   if (titles.length === 0) return null

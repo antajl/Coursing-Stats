@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom'
 import { ChevronLeft, Star as StarIcon, Rabbit, Gauge, Sparkles } from 'lucide-react'
 import { useState } from 'react'
 import OwnerCrownName from '../../components/OwnerCrownName'
-import { type DogTitle } from '../../lib/qualificationTitles'
-import { renderGroupedDogTitles } from '../../lib/awardChipRender'
+import type { DogTitle } from '../../lib/qualificationTitles'
+import { renderGroupedDogTitles, renderAllDogTitlesSingleLine } from '../../lib/awardChipRender'
 import { parseDogName } from '../../lib/dogName'
 import { displayBreed } from '../../lib/breedMapping'
 import { useFavorites } from '../../hooks/useFavorites'
@@ -361,12 +361,13 @@ export function DogProfileHeader({
         ) : null}
 
         {hasTitles && (
-          <div className="mt-4 border-t border-old-money-100 pt-4">
+          <div className="mt-4 border-t border-old-money-100 pt-3">
+            {/* Desktop view (>= md) */}
             <div
               className={
                 showTitles.length > 0 && competitionTitles.length > 0
-                  ? 'grid grid-cols-1 gap-4 md:grid-cols-[1fr_auto_1fr] md:items-stretch md:gap-0'
-                  : 'grid grid-cols-1'
+                  ? 'hidden md:grid md:grid-cols-[1fr_auto_1fr] md:items-stretch md:gap-0'
+                  : 'hidden md:grid md:grid-cols-1'
               }
             >
               <TitleDomainBlock label="Курсинг и бега" titles={competitionTitles} />
@@ -377,6 +378,11 @@ export function DogProfileHeader({
                 />
               ) : null}
               <TitleDomainBlock label="Выставки" titles={showTitles} />
+            </div>
+
+            {/* Mobile view (< md): single-line horizontal scroll track */}
+            <div className="block md:hidden">
+              {renderAllDogTitlesSingleLine({ competitionTitles, showTitles })}
             </div>
           </div>
         )}
