@@ -68,9 +68,9 @@ function MutedMetric({ value, label }: { value: string; label: string }) {
 
 function BigMetric({ value, label }: { value: string; label: string }) {
   return (
-    <div className="flex items-baseline justify-end gap-1 leading-none">
-      <span className="text-lg font-bold tabular-nums text-camel-700">{value}</span>
-      <span className="text-[8px] font-semibold uppercase tracking-wide text-charcoal-500">
+    <div className="flex items-baseline justify-end gap-1 leading-none w-full">
+      <span className="text-base sm:text-lg font-bold tabular-nums text-camel-700 tracking-tight">{value}</span>
+      <span className="text-[8px] font-semibold uppercase tracking-wide text-charcoal-500 shrink-0 w-[1.75ch] text-left">
         {label}
       </span>
     </div>
