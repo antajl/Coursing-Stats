@@ -77,7 +77,16 @@
       "status_reason": null,
       "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[null,1,null,null,null],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":2,\"bib_color\":\"blue\",\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Афганская борзая</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ШОУ ГЕРАТ РОНАЛЬДО /<br>SHOU GERAT RONALDO</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">35</font></td>\n<td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">33.91 с<br>10.62 м/с<br>38.219 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">48</font></td>\n<td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">32.95 с<br>10.93 м/с<br>39.332 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n",
-      "judges": "Иванова Г.С."
+      "judges": "Иванова Г.С.",
+      "dog_id": 5938,
+      "dog": {
+        "id": 5938,
+        "name_ru": "ШОУ ГЕРАТ РОНАЛДО",
+        "name_lat": "SHOU GERAT RONALDO",
+        "dog_key": "шоу-герат-роналдо-shou-gerat-ronaldo--афганская-борзая",
+        "breed": "АФГАНСКАЯ БОРЗАЯ"
+      },
+      "dog_key": "шоу-герат-роналдо-shou-gerat-ronaldo--афганская-борзая"
     },
     {
       "breed_class": "Басенджи - Стандартный - Микс",
@@ -286,7 +295,16 @@
       "status_reason": null,
       "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[14,1,null,null,null],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":1,\"bib_color\":\"red\",\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Басенджи</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Ветераны</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ИТУРИ ПАЗЗЛ ЕКСТРАОРДИНАРИ СМАРТ</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td>\n<td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">35.86 с<br>10.04 м/с<br>36.141 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">28</font></td>\n<td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">35.65 с<br>10.10 м/с<br>36.353 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n",
-      "judges": "Иванова Г.С."
+      "judges": "Иванова Г.С.",
+      "dog_id": 50,
+      "dog": {
+        "id": 50,
+        "name_ru": "ИТУРИ ПАЗЗЛ ЕКСТРАОРДИНАРИ СМАРТ",
+        "name_lat": "ИТУРИ ПАЗЗЛ ЕКСТРАОРДИНАРИ СМАРТ",
+        "dog_key": "итури-паззл-екстраординари-смарт--басенджи",
+        "breed": "БАСЕНДЖИ"
+      },
+      "dog_key": "итури-паззл-екстраординари-смарт--басенджи"
     },
     {
       "breed_class": "Грейхаунд - Стандартный - Кобели",
@@ -388,13 +406,16 @@
       "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[null,3,null,null,null],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":2,\"bib_color\":\"blue\",\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Испанская борзая (Гальго)</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ТАЙРА БУЭНА КАСАДОРА /<br>TAIRA BUENA CAZADORA</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">37</font></td>\n<td bgcolor=\"#f0ffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">26.41 с<br>13.63 м/с<br>49.072 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">50</font></td>\n<td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">26.39 с<br>13.64 м/с<br>49.110 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n",
       "judges": "Иванова Г.С.",
-      "dog_id": 9677,
+      "dog_id": 9654,
       "dog": {
-        "id": 9677,
-        "name_lat": "TAIRA BUENA CAZADORA",
-        "name_ru": "ТАЙРА БУЭНА КАСАДОРА",
-        "breed": "ИСПАНСКАЯ БОРЗАЯ (ГАЛЬГО)"
-      }
+        "id": 9654,
+        "name_lat": "TAIRA BUENA CASADORA",
+        "name_ru": "TAIRA BUENA CASADORA",
+        "breed": "ИСПАНСКАЯ БОРЗАЯ (ГАЛЬГО)",
+        "dog_key": "taira-buena-casadora--испанская-борзая-гальго",
+        "sex": null
+      },
+      "dog_key": "taira-buena-casadora--испанская-борзая-гальго"
     },
     {
       "breed_class": "Малая итальянская борзая (Левретка) - Стандартный - Микс",
@@ -414,7 +435,16 @@
       "status_reason": "Уход с трассы",
       "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[15,1,null,null,null],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":1,\"bib_color\":\"red\",\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Малая итальянская борзая (Левретка)</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">АЙЛЕНСТИЛЬ ЕВРИСФЕЙ ФОТИС /<br>AILENSTIL EVRISFEJ FOTIS</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td>\n<td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">32.88 с<br>10.95 м/с<br>39.416 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">29</font></td>\n<td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Отстранение (Уход с трассы)</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n",
-      "judges": "Иванова Г.С."
+      "judges": "Иванова Г.С.",
+      "dog_id": 9247,
+      "dog": {
+        "id": 9247,
+        "name_ru": "АЙЛЕНСТИЛЬ ЕВРИСФЕЙ ФОТИС",
+        "name_lat": "АЙЛЕНСТИЛЬ ЕВРИСФЕЙ ФОТИС",
+        "dog_key": "аиленстиль-еврисфеи-фотис--малая-итальянская-борзая",
+        "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)"
+      },
+      "dog_key": "аиленстиль-еврисфеи-фотис--малая-итальянская-борзая"
     },
     {
       "breed_class": "Малая итальянская борзая (Левретка) - Стандартный - Микс",
@@ -434,7 +464,16 @@
       "status_reason": "Уход с трассы",
       "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[15,3,null,null,null],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":2,\"bib_color\":\"blue\",\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">19</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Малая итальянская борзая (Левретка)</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">GRACE HAUND ELIZABETH HER EXCELLENCE</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td>\n<td bgcolor=\"#f0ffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">32.89 с<br>10.95 м/с<br>39.404 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">29</font></td>\n<td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Отстранение (Уход с трассы)</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n",
-      "judges": "Иванова Г.С."
+      "judges": "Иванова Г.С.",
+      "dog_id": 540,
+      "dog": {
+        "id": 540,
+        "name_ru": "GRACE HAUND ELIZABETH HER EXCELLENCE",
+        "name_lat": "GRACE HAUND ELIZABETH HER EXCELLENCE",
+        "dog_key": "grace-haund-elizabeth-her-excellence--малая-итальянская-борзая",
+        "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ"
+      },
+      "dog_key": "grace-haund-elizabeth-her-excellence--малая-итальянская-борзая"
     },
     {
       "breed_class": "Малая итальянская борзая (Левретка) - Стандартный - Микс",
@@ -454,7 +493,16 @@
       "status_reason": "Уход с трассы",
       "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[15,2,null,null,null],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":3,\"bib_color\":\"#f0ffff\",\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Малая итальянская борзая (Левретка)</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">АПРИОРИ СТАР СИРИУС СУННИ БОЙ /<br>APRIORI STAR SIRIUS SUNNI BOY</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td>\n<td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">33.40 с<br>10.78 м/с<br>38.802 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">29</font></td>\n<td bgcolor=\"#f0ffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Отстранение (Уход с трассы)</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n",
-      "judges": "Иванова Г.С."
+      "judges": "Иванова Г.С.",
+      "dog_id": 541,
+      "dog": {
+        "id": 541,
+        "name_ru": "АПРИОРИ СТАР СИРИУС СУННИ БОЙ",
+        "name_lat": "APRIORI STAR SIRIUS SUNNI BOY",
+        "dog_key": "apriori-star-sirius-sunni-boy--малая-итальянская-борзая",
+        "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ"
+      },
+      "dog_key": "apriori-star-sirius-sunni-boy--малая-итальянская-борзая"
     },
     {
       "breed_class": "Малая итальянская борзая (Левретка) - Стандартный-спринтеры - Кобели",
@@ -474,7 +522,16 @@
       "status_reason": null,
       "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[16,2,null,null,null],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":1,\"bib_color\":\"red\",\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">20</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Малая итальянская борзая (Левретка)</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный-спринтеры</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">АГОТИ АДАМАНТЕ ДЕЛ ЕСПАЦИО /<br>AGOTI ADAMANTE DEL ESPACIO</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">29.28 с<br>12.30 м/с<br>44.262 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">30</font></td>\n<td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">29.49 с<br>12.21 м/с<br>43.947 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Чемпион России, CACL Br</font></td>\n",
-      "judges": "Иванова Г.С."
+      "judges": "Иванова Г.С.",
+      "dog_id": 358,
+      "dog": {
+        "id": 358,
+        "name_ru": "АГОТИ АДАМАНТЕ ДЕЛ ЕСПАЦИО",
+        "name_lat": "AGOTI ADAMANTE DEL ESPACIO",
+        "dog_key": "agoti-adamante-del-espacio--малая-итальянская-борзая",
+        "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ"
+      },
+      "dog_key": "agoti-adamante-del-espacio--малая-итальянская-борзая"
     },
     {
       "breed_class": "Малая итальянская борзая (Левретка) - Стандартный-спринтеры - Кобели",
@@ -494,7 +551,16 @@
       "status_reason": "Уход с трассы",
       "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[16,1,null,null,null],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">21</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Малая итальянская борзая (Левретка)</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный-спринтеры</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">АНЖЕЛО ЧЕЛЕСТЕ АНТОНИО ВЕРДИ</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Отстранение (Уход с трассы)</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n",
-      "judges": "Иванова Г.С."
+      "judges": "Иванова Г.С.",
+      "dog_id": 9364,
+      "dog": {
+        "id": 9364,
+        "name_ru": "АНЖЕЛО ЧЕЛЕСТЕ АНТОНИО ВЕРДИ",
+        "name_lat": "АНЖЕЛО ЧЕЛЕСТЕ АНТОНИО ВЕРДИ",
+        "dog_key": "анжело-челесте-антонио-верди--малая-итальянская-борзая",
+        "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)"
+      },
+      "dog_key": "анжело-челесте-антонио-верди--малая-итальянская-борзая"
     },
     {
       "breed_class": "Поденко Ибиценко г-ш - Стандартный - Микс",
@@ -1194,7 +1260,7 @@
       "dog": {
         "id": 576,
         "name_lat": "GHAN BURI GHANS WARLOCK",
-        "name_ru": "GHAN BURI GHANS WARLOCK /GHAN BURI GHANS WARLOCK",
+        "name_ru": "GHAN BURI GHANS WARLOCK",
         "breed": "УИППЕТ"
       }
     },
@@ -1972,7 +2038,16 @@
       "status_reason": null,
       "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[10,2,null,null,1],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":2,\"bib_color\":\"blue\",\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">82</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный-спринтеры</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">СТАНГЕРС ЛАНД ЕЖЕВИКА</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">10</font></td>\n<td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">26.82 с<br>13.42 м/с<br>48.322 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">25</font></td>\n<td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">27.34 с<br>13.17 м/с<br>47.403 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">34</font></td>\n<td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">27.00 с<br>13.33 м/с<br>48.000 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CACL</font></td>\n",
-      "judges": "Иванова Г.С."
+      "judges": "Иванова Г.С.",
+      "dog_id": 5662,
+      "dog": {
+        "id": 5662,
+        "name_ru": "СТАНГЕРС ЛАНД ЕЖЕВИКА",
+        "name_lat": "STANGERS LAND EZHEVIKA",
+        "dog_key": "стангерс-ланд-ежевика-stangers-land-ezhe--уиппет",
+        "breed": "УИППЕТ"
+      },
+      "dog_key": "стангерс-ланд-ежевика-stangers-land-ezhe--уиппет"
     },
     {
       "breed_class": "Уиппет - Стандартный-спринтеры - Суки",
@@ -2343,7 +2418,16 @@
       "status_reason": "Агрессия",
       "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[null,3,null,null,null],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":2,\"bib_color\":\"blue\",\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">90</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Чирнеко дель Этна</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ИРКИСС СЛАВА</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">46</font></td>\n<td bgcolor=\"#f0ffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">32.19 с<br>11.18 м/с<br>40.261 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">59</font></td>\n<td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Снятие (Агрессия)</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n",
-      "judges": "Иванова Г.С."
+      "judges": "Иванова Г.С.",
+      "dog_id": 290,
+      "dog": {
+        "id": 290,
+        "name_ru": "ИРКИСС СЛАВА",
+        "name_lat": "IRKISS SLAVA",
+        "dog_key": "иркисс-слава-irkiss-slava--чирнеко-дель-этна",
+        "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА"
+      },
+      "dog_key": "иркисс-слава-irkiss-slava--чирнеко-дель-этна"
     }
   ],
   "id": "20240908--08092024-",
