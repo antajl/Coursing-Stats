@@ -21,8 +21,9 @@
     "location": "Москва, Раменское",
     "results_url": "local://coursing-pdf/2026-06-21_Coursing_BreedChRKF_Donino.pdf",
     "catalog_url": "http://procoursing.ru/2026/2026-06-21_Catalog_Coursing.pdf",
+    "results_pdf_url": "https://disk.yandex.ru/i/MTnjIVojPYTCzA",
     "confirmed": 1,
-    "judges": null,
+    "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
     "has_results": true,
     "results_file": "competitions/2026/06-июнь/1545-пчркф-курсинг-борзых-фараонова-собака-уиппет-сал.json",
     "result_count": 56,
@@ -48,18 +49,20 @@
       "status": "dns",
       "raw_scores_json": {},
       "raw_text": "<td></td><td><i>1</i></td><td>Салюки</td><td>Стандартный</td><td>Кобель</td><td>АЛЬ НАФИСЕХ ЛЕОН БАКСТ/<br>AL NAFISEH LEON BAKST</td><td colspan=\"19\">Неявка</td>",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "al-nafiseh-leon-bakst--салюки",
       "dog": {
         "id": 752,
         "dog_key": "al-nafiseh-leon-bakst--салюки",
-        "name_lat": "АЛЬ НАФИСЭХ ЛЕОН БАКСТ /AL NAFISEH LEON BAKST",
-        "name_ru": "АЛЬ НАФИСЭХ ЛЕОН БАКСТ /AL NAFISEH LEON BAKST",
+        "name_lat": "AL NAFISEH LEON BAKST",
+        "name_ru": "АЛЬ НАФИСЭХ ЛЕОН БАКСТ",
         "breed": "САЛЮКИ",
         "sex": null,
         "owner": null
-      }
+      },
+      "name_ru": "АЛЬ НАФИСЭХ ЛЕОН БАКСТ",
+      "name_lat": "AL NAFISEH LEON BAKST"
     },
     {
       "id": 19763,
@@ -142,7 +145,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">1</td>       <td><i>9</i></td>       <td>Салюки</td>       <td>Стандартный</td>       <td>Сука</td>       <td>РАВДА/<br>EMUL DE GEPARD GELILA AL RAWDA</td>       <td bgcolor=\"#f0ffff\"><i>8</i></td>       <td>19</td><td>18</td><td>17</td><td>18</td><td>19</td>       <td><b>91</b></td>       <td><b>178</b></td>       <td bgcolor=\"#f0ffff\"><i>16</i></td>       <td>19</td><td>19</td><td>18</td><td>19</td><td>19</td>       <td><b>94</b></td>       <td><b>179</b></td>       <td><b>357</b></td>       <td>CC</td>       <td>ПЧРКФ РК</td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "emul-de-gepard-gelila-al-rawda--салюки",
       "dog": {
@@ -236,7 +239,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">2</td>       <td><i>2</i></td>       <td>Салюки</td>       <td>Стандартный</td>       <td>Кобель</td>       <td>БЕЛЬ ЭТУАЛЬ АМБАССАДОР ІІ //<br>BEL ETUAL AMBASSADOR II</td>       <td bgcolor=\"#ff0000\"><i>7</i></td>       <td>17</td><td>17</td><td>18</td><td>17</td><td>18</td>       <td><b>87</b></td>       <td><b>181</b></td>       <td bgcolor=\"#ff0000\"><i>16</i></td>       <td>17</td><td>17</td><td>16</td><td>17</td><td>18</td>       <td><b>85</b></td>       <td><b>170</b></td>       <td><b>351</b></td>       <td>CC</td>       <td></td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "bel-etual-ambassador-ii--салюки",
       "dog": {
@@ -330,7 +333,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">3</td>       <td><i>7</i></td>       <td>Салюки</td>       <td>Стандартный</td>       <td>Кобель</td>       <td>ЫГДЫР СО ШКОДНОГО ДВОРА //<br>YGDYR SO SHKODNOGO DVORA</td>       <td bgcolor=\"#ff0000\"><i>5</i></td>       <td>17</td><td>17</td><td>18</td><td>17</td><td>16</td>       <td><b>85</b></td>       <td><b>173</b></td>       <td bgcolor=\"#ff0000\"><i>15</i></td>       <td>17</td><td>18</td><td>19</td><td>18</td><td>18</td>       <td><b>90</b></td>       <td><b>173</b></td>       <td><b>346</b></td>       <td>CC</td>       <td></td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "ygdyr-so-shkodnogo-dvora--салюки",
       "dog": {
@@ -424,7 +427,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">4</td>       <td><i>4</i></td>       <td>Салюки</td>       <td>Стандартный</td>       <td>Кобель</td>       <td>САЛГРЕЙ ' С ВЕЛАР //<br>SALGREY'S VELAR</td>       <td bgcolor=\"#f0ffff\"><i>6</i></td>       <td>18</td><td>19</td><td>19</td><td>17</td><td>19</td>       <td><b>92</b></td>       <td><b>165</b></td>       <td bgcolor=\"#f0ffff\"><i>18</i></td>       <td>16</td><td>18</td><td>17</td><td>17</td><td>17</td>       <td><b>85</b></td>       <td><b>176</b></td>       <td><b>341</b></td>       <td>CC</td>       <td></td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "salgreys-velar--салюки",
       "dog": {
@@ -518,7 +521,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">5</td>       <td><i>6</i></td>       <td>Салюки</td>       <td>Стандартный</td>       <td>Кобель</td>       <td>БЕЛЬ ЭТУАЛЬ АЛТЕР ЭГО //<br>ULYSSE AL SAIF MAJAL</td>       <td bgcolor=\"#f0ffff\"><i>6</i></td>       <td>15</td><td>17</td><td>16</td><td>15</td><td>15</td>       <td><b>78</b></td>       <td><b>146</b></td>       <td bgcolor=\"#f0ffff\"><i>18</i></td>       <td>17</td><td>19</td><td>18</td><td>18</td><td>19</td>       <td><b>91</b></td>       <td><b>177</b></td>       <td><b>323</b></td>       <td>CC</td>       <td></td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "ulysse-al-saif-majal--салюки",
       "dog": {
@@ -612,7 +615,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">6</td>       <td><i>8</i></td>       <td>Салюки</td>       <td>Стандартный</td>       <td>Сука</td>       <td>БЕЛЬ ЭТУАЛЬ АЛТЕР ЭГО //<br>BEL ETUAL ALTER EGO</td>       <td bgcolor=\"#ff0000\"><i>8</i></td>       <td>17</td><td>17</td><td>18</td><td>17</td><td>18</td>       <td><b>87</b></td>       <td><b>169</b></td>       <td bgcolor=\"#f0ffff\"><i>15</i></td>       <td>16</td><td>17</td><td>17</td><td>15</td><td>15</td>       <td><b>80</b></td>       <td><b>153</b></td>       <td><b>322</b></td>       <td>CC</td>       <td></td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "bel-etual-alter-ego--салюки",
       "dog": {
@@ -706,7 +709,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">7</td>       <td><i>3</i></td>       <td>Салюки</td>       <td>Стандартный</td>       <td>Кобель</td>       <td>НОВРУЗ НАРЦИССУС ИБН МАЛА ОД ВЬЕТРА/<br>NOWRUZ NARCISSUS IBN MALA OD VJETRA</td>       <td bgcolor=\"#f0ffff\"><i>5</i></td>       <td>13</td><td>18</td><td>13</td><td>12</td><td>13</td>       <td><b>69</b></td>       <td><b>105</b></td>       <td bgcolor=\"#f0ffff\"><i>17</i></td>       <td>16</td><td>18</td><td>17</td><td>16</td><td>16</td>       <td><b>83</b></td>       <td><b>171</b></td>       <td><b>276</b></td>       <td></td>       <td></td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "nowruz-narcissus-ibn-mala-od-vjetra--салюки",
       "dog": {
@@ -800,7 +803,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">8</td>       <td><i>5</i></td>       <td>Салюки</td>       <td>Стандартный</td>       <td>Кобель</td>       <td>САЛЮКОВ СИНБАД СТОРИ ОФ СЕВЕН СИАС/<br>SALUKOV SINDBAD STORY OF SEVEN SEAS</td>       <td bgcolor=\"#f0ffff\"><i>7</i></td>       <td>15</td><td>16</td><td>16</td><td>13</td><td>13</td>       <td><b>73</b></td>       <td><b>113</b></td>       <td bgcolor=\"#ff0000\"><i>17</i></td>       <td>15</td><td>17</td><td>16</td><td>15</td><td>17</td>       <td><b>80</b></td>       <td><b>155</b></td>       <td><b>268</b></td>       <td></td>       <td></td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "salukov-sindbad-story-of-seven-seas--салюки",
       "dog": {
@@ -827,7 +830,7 @@
       "status": "dns",
       "raw_scores_json": {},
       "raw_text": "<td></td><td><i>10</i></td><td>Салюки</td><td>Стандартный</td><td>Сука</td><td>САЛЮКОВ САИДА/<br>SALUKOV SAIDA</td><td colspan=\"19\">Неявка</td>",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "salukov-saida--салюки",
       "dog": {
@@ -921,7 +924,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">1</td>       <td><i>39</i></td>       <td>Уиппет</td>       <td>Ветераны</td>       <td>Кобель</td>       <td>RIDER OF ROHAN Brodwinek</td>       <td bgcolor=\"#ff0000\"><i>51</i></td>       <td>18</td><td>19</td><td>18</td><td>17</td><td>18</td>       <td><b>90</b></td>       <td><b>179</b></td>       <td bgcolor=\"#ff0000\"><i>60</i></td>       <td>18</td><td>18</td><td>17</td><td>16</td><td>18</td>       <td><b>87</b></td>       <td><b>172</b></td>       <td><b>351</b></td>       <td></td>       <td></td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "rider-of-rohan-brodwinek--уиппет",
       "dog": {
@@ -1015,7 +1018,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">1</td>       <td><i>11</i></td>       <td>Уиппет</td>       <td>Стандартный</td>       <td>Кобель</td>       <td>ЮНИОН СВЕТЛЫЙ //<br>YUNION SVETLYJ</td>       <td bgcolor=\"#ff0000\"><i>45</i></td>       <td>18</td><td>19</td><td>19</td><td>18</td><td>19</td>       <td><b>93</b></td>       <td><b>183</b></td>       <td bgcolor=\"#ff0000\"><i>58</i></td>       <td>20</td><td>19</td><td>20</td><td>19</td><td>19</td>       <td><b>97</b></td>       <td><b>186</b></td>       <td><b>369</b></td>       <td>CC</td>       <td>ПЧРКФ РК</td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "yunion-svetlyj--уиппет",
       "dog": {
@@ -1109,7 +1112,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">2</td>       <td><i>5</i></td>       <td>Уиппет</td>       <td>Стандартный</td>       <td>Кобель</td>       <td>СТАНГЕРС ЛАНД ВЕРСАЛЬ ШАРМАН/<br>STANGERS LAND VERSAILLES CHARMAN</td>       <td bgcolor=\"#ff0000\"><i>49</i></td>       <td>19</td><td>19</td><td>19</td><td>18</td><td>19</td>       <td><b>94</b></td>       <td><b>185</b></td>       <td bgcolor=\"#ff0000\"><i>57</i></td>       <td>17</td><td>19</td><td>18</td><td>16</td><td>17</td>       <td><b>87</b></td>       <td><b>179</b></td>       <td><b>364</b></td>       <td>CC</td>       <td></td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "stangers-land-versailles-charman--уиппет",
       "dog": {
@@ -1203,7 +1206,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">3</td>       <td><i>7</i></td>       <td>Уиппет</td>       <td>Стандартный</td>       <td>Кобель</td>       <td>СТАНГЕРС ЛАНД ЗЕНИТ //<br>STANGERS LAND ZENIT</td>       <td bgcolor=\"#f0ffff\"><i>48</i></td>       <td>18</td><td>18</td><td>18</td><td>18</td><td>19</td>       <td><b>91</b></td>       <td><b>184</b></td>       <td bgcolor=\"#f0ffff\"><i>57</i></td>       <td>18</td><td>18</td><td>18</td><td>18</td><td>20</td>       <td><b>92</b></td>       <td><b>177</b></td>       <td><b>361</b></td>       <td>CC</td>       <td></td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "stangers-land-zenit--уиппет",
       "dog": {
@@ -1297,7 +1300,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">4</td>       <td><i>6</i></td>       <td>Уиппет</td>       <td>Стандартный</td>       <td>Кобель</td>       <td>СТАНГЕРС ЛАНД ВИНСЕНТ //<br>STANGERS LAND VINCENT</td>       <td bgcolor=\"#ff0000\"><i>48</i></td>       <td>16</td><td>18</td><td>17</td><td>17</td><td>18</td>       <td><b>86</b></td>       <td><b>176</b></td>       <td bgcolor=\"#ff0000\"><i>56</i></td>       <td>18</td><td>19</td><td>18</td><td>16</td><td>17</td>       <td><b>88</b></td>       <td><b>178</b></td>       <td><b>354</b></td>       <td>CC</td>       <td></td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "stangers-land-vincent--уиппет",
       "dog": {
@@ -1391,7 +1394,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">5</td>       <td><i>12</i></td>       <td>Уиппет</td>       <td>Стандартный</td>       <td>Кобель</td>       <td>ЮВЕНТУС СКОРЫЙ //<br>YUVENTUS SKORYJ</td>       <td bgcolor=\"#f0ffff\"><i>47</i></td>       <td>18</td><td>17</td><td>18</td><td>16</td><td>17</td>       <td><b>86</b></td>       <td><b>176</b></td>       <td bgcolor=\"#f0ffff\"><i>56</i></td>       <td>17</td><td>18</td><td>17</td><td>17</td><td>18</td>       <td><b>87</b></td>       <td><b>177</b></td>       <td><b>353</b></td>       <td>CC</td>       <td></td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "yuventus-skoryj--уиппет",
       "dog": {
@@ -1485,7 +1488,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">6</td>       <td><i>2</i></td>       <td>Уиппет</td>       <td>Стандартный</td>       <td>Кобель</td>       <td>МЕТЕЛЬ АВГУСТА ДАЗЗЛИНГ ДАГГЕР/<br>METEL' AVGUSTA DAZZLING DAGGER</td>       <td bgcolor=\"#ff0000\"><i>47</i></td>       <td>17</td><td>17</td><td>18</td><td>16</td><td>17</td>       <td><b>85</b></td>       <td><b>177</b></td>       <td bgcolor=\"#f0ffff\"><i>58</i></td>       <td>17</td><td>17</td><td>18</td><td>17</td><td>18</td>       <td><b>87</b></td>       <td><b>171</b></td>       <td><b>348</b></td>       <td>CC</td>       <td></td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "metel-avgusta-dazzling-dagger--уиппет",
       "dog": {
@@ -1579,7 +1582,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">7</td>       <td><i>1</i></td>       <td>Уиппет</td>       <td>Стандартный</td>       <td>Кобель</td>       <td>БЛЭЙЗ ОФ ГЛОРИ //<br>BLAZE OF GLORY</td>       <td bgcolor=\"#f0ffff\"><i>45</i></td>       <td>16</td><td>17</td><td>17</td><td>16</td><td>16</td>       <td><b>82</b></td>       <td><b>169</b></td>       <td bgcolor=\"#ff0000\"><i>59</i></td>       <td>18</td><td>17</td><td>17</td><td>17</td><td>18</td>       <td><b>87</b></td>       <td><b>171</b></td>       <td><b>340</b></td>       <td>CC</td>       <td></td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "blaze-of-glory--уиппет",
       "dog": {
@@ -1673,7 +1676,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">8</td>       <td><i>8</i></td>       <td>Уиппет</td>       <td>Стандартный</td>       <td>Кобель</td>       <td>СТАНГЕРС ЛАНД ЗЛАТАН //<br>STANGERS LAND ZLATAN</td>       <td bgcolor=\"#f0ffff\"><i>49</i></td>       <td>16</td><td>17</td><td>16</td><td>15</td><td>15</td>       <td><b>79</b></td>       <td><b>167</b></td>       <td bgcolor=\"#f0ffff\"><i>59</i></td>       <td>17</td><td>18</td><td>18</td><td>16</td><td>17</td>       <td><b>86</b></td>       <td><b>167</b></td>       <td><b>334</b></td>       <td>CC</td>       <td></td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "stangers-land-zlatan--уиппет",
       "dog": {
@@ -1721,7 +1724,7 @@
         ]
       },
       "raw_text": "         <td rowspan=\"2\"></td>         <td><i>4</i></td>         <td>Уиппет</td>         <td>Стандартный</td>         <td>Кобель</td>         <td>СТАНГЕРС ЛАНД ЕРМАК/<br>STANGERS LAND ERMAK</td>         <td bgcolor=\"#f0ffff\"><i>46</i></td>         <td colspan=\"6\">Отстранение (Сход с трассы)</td>         <td></td>         <td></td>         <td colspan=\"6\"></td>         <td></td>         <td></td>         <td></td>         <td></td>       ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": "Сход с трассы",
       "dog_key": "stangers-land-ermak--уиппет",
       "dog": {
@@ -1769,7 +1772,7 @@
         ]
       },
       "raw_text": "         <td rowspan=\"2\"></td>         <td><i>9</i></td>         <td>Уиппет</td>         <td>Стандартный</td>         <td>Кобель</td>         <td>ВАЛТТЕРИ СИЛЬВЕР ВИНГС/<br>VALTTERY SILVER WINGS</td>         <td bgcolor=\"#f0ffff\"><i>46</i></td>         <td colspan=\"6\">Отстранение (Сход с трассы)</td>         <td></td>         <td></td>         <td colspan=\"6\"></td>         <td></td>         <td></td>         <td></td>         <td></td>       ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": "Сход с трассы",
       "dog_key": "valttery-silver-wings--уиппет",
       "dog": {
@@ -1796,7 +1799,7 @@
       "status": "dns",
       "raw_scores_json": {},
       "raw_text": "<td></td><td><i>3</i></td><td>Уиппет</td><td>Стандартный</td><td>Кобель</td><td>СТАНГЕРС ЛАНД ДАКАР РАЛЛИ/<br>STANGERS LAND DAKAR RALLY</td><td colspan=\"19\">Неявка</td>",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "stangers-land-dakar-rally--уиппет",
       "dog": {
@@ -1890,7 +1893,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">1</td>       <td><i>30</i></td>       <td>Уиппет</td>       <td>Стандартный-спринтеры</td>       <td>Кобель</td>       <td>СТАНГЕРС ЛАНД ЗОДИАК / БРЕЙВ ХАРТ СИМБА //<br>STANGERS LAND ZODIAK</td>       <td bgcolor=\"#f0ffff\"><i>40</i></td>       <td>19</td><td>19</td><td>19</td><td>18</td><td>19</td>       <td><b>94</b></td>       <td><b>181</b></td>       <td bgcolor=\"#f0ffff\"><i>55</i></td>       <td>18</td><td>19</td><td>19</td><td>18</td><td>19</td>       <td><b>93</b></td>       <td><b>182</b></td>       <td><b>363</b></td>       <td>CC</td>       <td>ПЧРКФ РК</td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "stangers-land-zodiak--уиппет",
       "dog": {
@@ -1984,7 +1987,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">2</td>       <td><i>24</i></td>       <td>Уиппет</td>       <td>Стандартный-спринтеры</td>       <td>Кобель</td>       <td>БРЕЙВ ХАРТ СИМБА / ЛЕВИАФАН ДРАГОН ОФ ЛОВЕ //<br>BRAVE HEART SIMBA</td>       <td bgcolor=\"#f0ffff\"><i>40</i></td>       <td>17</td><td>18</td><td>18</td><td>17</td><td>18</td>       <td><b>88</b></td>       <td><b>176</b></td>       <td bgcolor=\"#f0ffff\"><i>55</i></td>       <td>16</td><td>18</td><td>17</td><td>17</td><td>18</td>       <td><b>86</b></td>       <td><b>173</b></td>       <td><b>349</b></td>       <td>CC</td>       <td></td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "brave-heart-simba--уиппет",
       "dog": {
@@ -2078,7 +2081,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">3</td>       <td><i>27</i></td>       <td>Уиппет</td>       <td>Стандартный-спринтеры</td>       <td>Кобель</td>       <td>ЛЕВИАФАН ДРАГОН ОФ ЛОВЕ / СТАНГЕРС ЛАНД ИРТЫШ ТЕРРИФИК/<br>LEVIATHAN DRAGON OF LOVE</td>       <td bgcolor=\"#ff0000\"><i>43</i></td>       <td>15</td><td>18</td><td>16</td><td>14</td><td>15</td>       <td><b>78</b></td>       <td><b>164</b></td>       <td bgcolor=\"#ff0000\"><i>53</i></td>       <td>18</td><td>17</td><td>18</td><td>18</td><td>19</td>       <td><b>90</b></td>       <td><b>177</b></td>       <td><b>341</b></td>       <td>CC</td>       <td></td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "leviathan-dragon-of-love--уиппет",
       "dog": {
@@ -2172,7 +2175,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">4</td>       <td><i>29</i></td>       <td>Уиппет</td>       <td>Стандартный-спринтеры</td>       <td>Кобель</td>       <td>СТАНГЕРС ЛАНД ИРТЫШ ТЕРРИФИК/<br>STANGERS LAND IRTYSH TERRIFIC</td>       <td bgcolor=\"#f0ffff\"><i>41</i></td>       <td>16</td><td>17</td><td>18</td><td>15</td><td>17</td>       <td><b>83</b></td>       <td><b>167</b></td>       <td bgcolor=\"#ff0000\"><i>54</i></td>       <td>16</td><td>18</td><td>15</td><td>15</td><td>16</td>       <td><b>80</b></td>       <td><b>166</b></td>       <td><b>333</b></td>       <td>CC</td>       <td></td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "stangers-land-irtysh-terrific--уиппет",
       "dog": {
@@ -2266,7 +2269,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">5</td>       <td><i>28</i></td>       <td>Уиппет</td>       <td>Стандартный-спринтеры</td>       <td>Кобель</td>       <td>СОЛАР ВИНД / ИСТОРИЯ ЛЮБВИ ЛАНДЫШ СЕРЕБРИСТЫЙ/<br>SOLAR WIND</td>       <td bgcolor=\"#f0ffff\"><i>42</i></td>       <td>16</td><td>16</td><td>15</td><td>16</td><td>16</td>       <td><b>79</b></td>       <td><b>166</b></td>       <td bgcolor=\"#f0ffff\"><i>54</i></td>       <td>15</td><td>17</td><td>14</td><td>14</td><td>15</td>       <td><b>75</b></td>       <td><b>155</b></td>       <td><b>321</b></td>       <td>CC</td>       <td></td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "solar-wind--уиппет",
       "dog": {
@@ -2360,7 +2363,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">6</td>       <td><i>26</i></td>       <td>Уиппет</td>       <td>Стандартный-спринтеры</td>       <td>Кобель</td>       <td>СЕРЕБРИСТЫЙ/<br>ISTORIYA LYUBVI LANDYSH SEREBRISTYY</td>       <td bgcolor=\"#ff0000\"><i>41</i></td>       <td>17</td><td>18</td><td>17</td><td>16</td><td>16</td>       <td><b>84</b></td>       <td><b>168</b></td>       <td bgcolor=\"#f0ffff\"><i>52</i></td>       <td>10</td><td>17</td><td>6</td><td>6</td><td>6</td>       <td><b>45</b></td>       <td><b>128</b></td>       <td><b>296</b></td>       <td></td>       <td></td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "istoriya-lyubvi-landysh-serebristyy--уиппет",
       "dog": {
@@ -2454,7 +2457,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">7</td>       <td><i>32</i></td>       <td>Уиппет</td>       <td>Стандартный-спринтеры</td>       <td>Кобель</td>       <td>БЕССТРАШНЫЙ/<br>VARVAR KONAN BESSTRASHNYI</td>       <td bgcolor=\"#ff0000\"><i>42</i></td>       <td>15</td><td>19</td><td>17</td><td>15</td><td>18</td>       <td><b>84</b></td>       <td><b>171</b></td>       <td bgcolor=\"#ff0000\"><i>52</i></td>       <td>9</td><td>16</td><td>5</td><td>5</td><td>5</td>       <td><b>40</b></td>       <td><b>121</b></td>       <td><b>292</b></td>       <td></td>       <td></td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "varvar-konan-besstrashnyi--уиппет",
       "dog": {
@@ -2548,7 +2551,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">1</td>       <td><i>35</i></td>       <td>Уиппет</td>       <td>Стандартный-спринтеры</td>       <td>Сука</td>       <td>ДОГОНИ ВЕТЕР ОПЮИСАНТ САМСАРА/<br>DOGONI VETER OPUISSANTE SAMSARA</td>       <td bgcolor=\"#ff0000\"><i>23</i></td>       <td>18</td><td>19</td><td>18</td><td>18</td><td>19</td>       <td><b>92</b></td>       <td><b>178</b></td>       <td bgcolor=\"#ff0000\"><i>33</i></td>       <td>19</td><td>17</td><td>18</td><td>19</td><td>18</td>       <td><b>91</b></td>       <td><b>179</b></td>       <td><b>357</b></td>       <td>CC</td>       <td>ПЧРКФ РК</td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "dogoni-veter-opuissante-samsara--уиппет",
       "dog": {
@@ -2642,7 +2645,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">2</td>       <td><i>37</i></td>       <td>Уиппет</td>       <td>Стандартный-спринтеры</td>       <td>Сука</td>       <td>СТАНГЕРС ЛАНД КОМЕТА / МЕЛОДИЯ ИЗ САГИ О ГАРДАРИКЕ/<br>STANGERS LAND KOMETA</td>       <td bgcolor=\"#ff0000\"><i>25</i></td>       <td>18</td><td>19</td><td>19</td><td>18</td><td>18</td>       <td><b>92</b></td>       <td><b>175</b></td>       <td bgcolor=\"#f0ffff\"><i>33</i></td>       <td>17</td><td>19</td><td>19</td><td>17</td><td>19</td>       <td><b>91</b></td>       <td><b>176</b></td>       <td><b>351</b></td>       <td>CC</td>       <td></td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "stangers-land-kometa--уиппет",
       "dog": {
@@ -2736,7 +2739,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">3</td>       <td><i>36</i></td>       <td>Уиппет</td>       <td>Стандартный-спринтеры</td>       <td>Сука</td>       <td>МЕЛОДИЯ ИЗ САГИ О ГАРДАРИКЕ/<br>MELODIYA IZ SAGI O GARDARIKE</td>       <td bgcolor=\"#f0ffff\"><i>23</i></td>       <td>16</td><td>17</td><td>17</td><td>16</td><td>18</td>       <td><b>84</b></td>       <td><b>167</b></td>       <td bgcolor=\"#ff0000\"><i>32</i></td>       <td>17</td><td>17</td><td>18</td><td>17</td><td>18</td>       <td><b>87</b></td>       <td><b>180</b></td>       <td><b>347</b></td>       <td>CC</td>       <td></td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "melodiya-iz-sagi-o-gardarike--уиппет",
       "dog": {
@@ -2830,7 +2833,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">4</td>       <td><i>33</i></td>       <td>Уиппет</td>       <td>Стандартный-спринтеры</td>       <td>Сука</td>       <td>БАРСЕЛОНА ЭНКАНТАДОРА / СТАНГЕРС ЛАНД ЗЛАТОСЛАВА/<br>BARCELONA ENCANTADORA</td>       <td bgcolor=\"#ff0000\"><i>24</i></td>       <td>15</td><td>18</td><td>17</td><td>16</td><td>17</td>       <td><b>83</b></td>       <td><b>168</b></td>       <td bgcolor=\"#ff0000\"><i>34</i></td>       <td>18</td><td>17</td><td>19</td><td>19</td><td>19</td>       <td><b>92</b></td>       <td><b>175</b></td>       <td><b>343</b></td>       <td>CC</td>       <td></td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "barcelona-encantadora--уиппет",
       "dog": {
@@ -2924,7 +2927,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">5</td>       <td><i>38</i></td>       <td>Уиппет</td>       <td>Стандартный-спринтеры</td>       <td>Сука</td>       <td>СТАНГЕРС ЛАНД ЗЛАТОСЛАВА/<br>STANGERS LAND ZLATOSLAVA</td>       <td bgcolor=\"#f0ffff\"><i>25</i></td>       <td>15</td><td>17</td><td>16</td><td>15</td><td>16</td>       <td><b>79</b></td>       <td><b>161</b></td>       <td bgcolor=\"#f0ffff\"><i>32</i></td>       <td>16</td><td>18</td><td>19</td><td>17</td><td>17</td>       <td><b>87</b></td>       <td><b>173</b></td>       <td><b>334</b></td>       <td>CC</td>       <td></td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "stangers-land-zlatoslava--уиппет",
       "dog": {
@@ -3018,7 +3021,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">6</td>       <td><i>34</i></td>       <td>Уиппет</td>       <td>Стандартный-спринтеры</td>       <td>Сука</td>       <td>ЧИА ЭССИ ТУАТАРА СТРАЙКЕР/<br>CHIA ESSI TUATARA STRAYKER</td>       <td bgcolor=\"#ff0000\"><i>24</i></td>       <td>16</td><td>17</td><td>18</td><td>17</td><td>16</td>       <td><b>84</b></td>       <td><b>168</b></td>       <td bgcolor=\"#ff0000\"><i>34</i></td>       <td>15</td><td>19</td><td>15</td><td>15</td><td>15</td>       <td><b>79</b></td>       <td><b>157</b></td>       <td><b>325</b></td>       <td>CC</td>       <td></td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "chia-essi-tuatara-strayker--уиппет",
       "dog": {
@@ -3066,7 +3069,7 @@
         ]
       },
       "raw_text": "         <td rowspan=\"2\"></td>         <td><i>18</i></td>         <td>Уиппет</td>         <td>Стандартный</td>         <td>Сука</td>         <td>ГЕЛЬВЕЦИЯ ЭНИГМА КВИН/<br>GELVETSIYA ENIGMA QUEEN</td>         <td bgcolor=\"#ff0000\"><i>27</i></td>         <td colspan=\"6\">Отстранение (Потеря приманки, сход с трассы)</td>         <td></td>         <td></td>         <td colspan=\"6\"></td>         <td></td>         <td></td>         <td></td>         <td></td>       ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": "Потеря приманки, сход с трассы",
       "dog_key": "gelvetsiya-enigma-queen--уиппет",
       "dog": {
@@ -3160,7 +3163,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">1</td>       <td><i>20</i></td>       <td>Уиппет</td>       <td>Стандартный</td>       <td>Сука</td>       <td>СТАНГЕРС ЛАНД ИНГРИД ЭЛЕГАНТ/<br>STANGERS LAND INGRID ELEGANT</td>       <td bgcolor=\"#f0ffff\"><i>28</i></td>       <td>17</td><td>19</td><td>19</td><td>17</td><td>19</td>       <td><b>91</b></td>       <td><b>176</b></td>       <td bgcolor=\"#f0ffff\"><i>37</i></td>       <td>19</td><td>20</td><td>19</td><td>18</td><td>20</td>       <td><b>96</b></td>       <td><b>188</b></td>       <td><b>364</b></td>       <td>CC</td>       <td>ПЧРКФ РК</td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "stangers-land-ingrid-elegant--уиппет",
       "dog": {
@@ -3254,7 +3257,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">2</td>       <td><i>15</i></td>       <td>Уиппет</td>       <td>Стандартный</td>       <td>Сука</td>       <td>АНТИК ГОДДЕС/<br>ANTIQUE GODDESS</td>       <td bgcolor=\"#f0ffff\"><i>17</i></td>       <td>16</td><td>17</td><td>17</td><td>17</td><td>18</td>       <td><b>85</b></td>       <td><b>19</b></td>       <td><i>92</i></td>       <td>18</td><td>19</td><td>18</td><td>19</td><td>18</td>       <td><b>92</b></td>       <td><b>181</b></td>       <td><b>363</b></td>       <td>CC</td>       <td>CACLBr</td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "antique-goddess--уиппет",
       "dog": {
@@ -3348,7 +3351,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">3</td>       <td><i>13</i></td>       <td>Уиппет</td>       <td>Стандартный</td>       <td>Сука</td>       <td>АФРИКАН ПЕЙШН //<br>AFRICAN PASSION</td>       <td bgcolor=\"#f0ffff\"><i>30</i></td>       <td>17</td><td>17</td><td>17</td><td>17</td><td>18</td>       <td><b>86</b></td>       <td><b>182</b></td>       <td bgcolor=\"#f0ffff\"><i>38</i></td>       <td>18</td><td>18</td><td>18</td><td>17</td><td>18</td>       <td><b>89</b></td>       <td><b>181</b></td>       <td><b>363</b></td>       <td>CC</td>       <td></td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "african-passion--уиппет",
       "dog": {
@@ -3442,7 +3445,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">4</td>       <td><i>21</i></td>       <td>Уиппет</td>       <td>Стандартный</td>       <td>Сука</td>       <td>СТАНГЕРС ЛАНД ВАЛЕНСИЯ //<br>STANGERS LAND VALENCIA</td>       <td bgcolor=\"#f0ffff\"><i>31</i></td>       <td>17</td><td>17</td><td>17</td><td>17</td><td>18</td>       <td><b>86</b></td>       <td><b>177</b></td>       <td bgcolor=\"#ff0000\"><i>39</i></td>       <td>18</td><td>19</td><td>18</td><td>19</td><td>19</td>       <td><b>93</b></td>       <td><b>180</b></td>       <td><b>357</b></td>       <td>CC</td>       <td></td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "stangers-land-valencia--уиппет",
       "dog": {
@@ -3536,7 +3539,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">5</td>       <td><i>19</i></td>       <td>Уиппет</td>       <td>Стандартный</td>       <td>Сука</td>       <td>СТАНГЕРС ЛАНД Е - ЛАНЬ //<br>STANGERS LAND E-LAN'</td>       <td bgcolor=\"#ff0000\"><i>31</i></td>       <td>20</td><td>18</td><td>18</td><td>19</td><td>19</td>       <td><b>94</b></td>       <td><b>180</b></td>       <td bgcolor=\"#ff0000\"><i>36</i></td>       <td>18</td><td>19</td><td>19</td><td>18</td><td>19</td>       <td><b>93</b></td>       <td><b>176</b></td>       <td><b>356</b></td>       <td>CC</td>       <td></td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "stangers-land-e-lan--уиппет",
       "dog": {
@@ -3630,7 +3633,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">6</td>       <td><i>14</i></td>       <td>Уиппет</td>       <td>Стандартный</td>       <td>Сука</td>       <td>АНГЕЛИК ВИНГС</td>       <td bgcolor=\"#f0ffff\"><i>29</i></td>       <td>17</td><td>18</td><td>19</td><td>18</td><td>18</td>       <td><b>90</b></td>       <td><b>176</b></td>       <td bgcolor=\"#f0ffff\"><i>39</i></td>       <td>18</td><td>17</td><td>17</td><td>18</td><td>18</td>       <td><b>88</b></td>       <td><b>178</b></td>       <td><b>354</b></td>       <td>CC</td>       <td></td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "ангелик-вингс--уиппет",
       "dog": {
@@ -3724,7 +3727,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">7</td>       <td><i>22</i></td>       <td>Уиппет</td>       <td>Стандартный</td>       <td>Сука</td>       <td>БОГЕМИАН РАПСОДИ //<br>TIMIRIAZEVSKIJ PARK OLIVIA</td>       <td bgcolor=\"#f0ffff\"><i>28</i></td>       <td>18</td><td>18</td><td>18</td><td>18</td><td>18</td>       <td><b>90</b></td>       <td><b>174</b></td>       <td bgcolor=\"#f0ffff\"><i>37</i></td>       <td>17</td><td>17</td><td>18</td><td>17</td><td>17</td>       <td><b>86</b></td>       <td><b>176</b></td>       <td><b>350</b></td>       <td>CC</td>       <td></td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "timiriazevskij-park-olivia--уиппет",
       "dog": {
@@ -3818,7 +3821,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">8</td>       <td><i>17</i></td>       <td>Уиппет</td>       <td>Стандартный</td>       <td>Сука</td>       <td>БОГЕМИАН РАПСОДИ //<br>BOHEMIAN RHAPSODY</td>       <td bgcolor=\"#f0ffff\"><i>26</i></td>       <td>17</td><td>17</td><td>18</td><td>17</td><td>17</td>       <td><b>86</b></td>       <td><b>171</b></td>       <td bgcolor=\"#ff0000\"><i>35</i></td>       <td>18</td><td>17</td><td>18</td><td>19</td><td>17</td>       <td><b>89</b></td>       <td><b>178</b></td>       <td><b>349</b></td>       <td>CC</td>       <td></td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "bohemian-rhapsody--уиппет",
       "dog": {
@@ -3912,7 +3915,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">9</td>       <td><i>23</i></td>       <td>Уиппет</td>       <td>Стандартный</td>       <td>Сука</td>       <td>УХОУЛ УОРЛД ИН ХЕ АЙЗ //<br>WHOLE WORLD IN HER EYES</td>       <td bgcolor=\"#ff0000\"><i>29</i></td>       <td>16</td><td>19</td><td>16</td><td>16</td><td>16</td>       <td><b>83</b></td>       <td><b>168</b></td>       <td bgcolor=\"#f0ffff\"><i>35</i></td>       <td>17</td><td>19</td><td>20</td><td>18</td><td>19</td>       <td><b>93</b></td>       <td><b>178</b></td>       <td><b>346</b></td>       <td>CC</td>       <td></td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "whole-world-in-her-eyes--уиппет",
       "dog": {
@@ -4006,7 +4009,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">10</td>       <td><i>16</i></td>       <td>Уиппет</td>       <td>Стандартный</td>       <td>Сука</td>       <td>ARGENTEA STELLA</td>       <td bgcolor=\"#ff0000\"><i>30</i></td>       <td>16</td><td>19</td><td>16</td><td>16</td><td>16</td>       <td><b>83</b></td>       <td><b>177</b></td>       <td bgcolor=\"#f0ffff\"><i>36</i></td>       <td>17</td><td>19</td><td>20</td><td>18</td><td>19</td>       <td><b>93</b></td>       <td><b>147.6</b></td>       <td><b>324.6</b></td>       <td>CC</td>       <td></td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "argentea-stella--уиппет",
       "dog": {
@@ -4054,7 +4057,7 @@
         ]
       },
       "raw_text": "         <td rowspan=\"2\"></td>         <td><i>25</i></td>         <td>Уиппет</td>         <td>Стандартный-спринтеры</td>         <td>Кобель</td>         <td>ИСТОРИЯ ЛЮБВИ ИЗУМРУД/<br>ISTORIYA LUBVI IZUMRUD</td>         <td bgcolor=\"#ff0000\"><i>44</i></td>         <td colspan=\"6\">Отстранение (Потеря приманки, уход с трассы)</td>         <td></td>         <td></td>         <td colspan=\"6\"></td>         <td></td>         <td></td>         <td></td>         <td></td>       ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": "Потеря приманки, уход с трассы",
       "dog_key": "istoriya-lubvi-izumrud--уиппет",
       "dog": {
@@ -4102,7 +4105,7 @@
         ]
       },
       "raw_text": "         <td rowspan=\"2\"></td>         <td><i>31</i></td>         <td>Уиппет</td>         <td>Стандартный-спринтеры</td>         <td>Кобель</td>         <td>СТОРМ РАЙС/<br>STORM RISE</td>         <td bgcolor=\"#f0ffff\"><i>43</i></td>         <td colspan=\"6\">Отстранение (Потеря приманки, уход с трассы)</td>         <td></td>         <td></td>         <td colspan=\"6\"></td>         <td></td>         <td></td>         <td></td>         <td></td>       ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": "Потеря приманки, уход с трассы",
       "dog_key": "storm-rise--уиппет",
       "dog": {
@@ -4196,7 +4199,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">1</td>       <td><i>5</i></td>       <td>Фараонова собака</td>       <td>Стандартный</td>       <td>Кобель</td>       <td>ХЕЙДИ СОТИС ДЖЕД АТУМ / БАКСТЕР БЕРН //<br>HEIDI SOTIS DJED ATUM</td>       <td bgcolor=\"#ff0000\"><i>9</i></td>       <td>17</td><td>18</td><td>19</td><td>19</td><td>18</td>       <td><b>91</b></td>       <td><b>180</b></td>       <td bgcolor=\"#ff0000\"><i>19</i></td>       <td>18</td><td>19</td><td>19</td><td>17</td><td>18</td>       <td><b>91</b></td>       <td><b>177</b></td>       <td><b>357</b></td>       <td>CC</td>       <td>ПЧРКФ РК</td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "heidi-sotis-djed-atum--фараонова-собака",
       "dog": {
@@ -4290,7 +4293,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">2</td>       <td><i>1</i></td>       <td>Фараонова собака</td>       <td>Стандартный</td>       <td>Кобель</td>       <td>БАКСТЕР БЕРН / КОР ОРИОН ЭЛЕКСИР ОФ/<br>BAXTER BERN</td>       <td bgcolor=\"#ff0000\"><i>10</i></td>       <td>18</td><td>17</td><td>17</td><td>17</td><td>16</td>       <td><b>85</b></td>       <td><b>166</b></td>       <td bgcolor=\"#f0ffff\"><i>19</i></td>       <td>17</td><td>18</td><td>18</td><td>18</td><td>17</td>       <td><b>88</b></td>       <td><b>176</b></td>       <td><b>342</b></td>       <td>CC</td>       <td></td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "baxter-bern--фараонова-собака",
       "dog": {
@@ -4384,7 +4387,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">3</td>       <td><i>2</i></td>       <td>Фараонова собака</td>       <td>Стандартный</td>       <td>Кобель</td>       <td>ЛАЙФ/<br>COR ORION ELEKSIR OF LAYF</td>       <td bgcolor=\"#f0ffff\"><i>10</i></td>       <td>16</td><td>18</td><td>18</td><td>19</td><td>17</td>       <td><b>88</b></td>       <td><b>163</b></td>       <td bgcolor=\"#ff0000\"><i>20</i></td>       <td>18</td><td>17</td><td>17</td><td>18</td><td>18</td>       <td><b>88</b></td>       <td><b>173</b></td>       <td><b>336</b></td>       <td>CC</td>       <td></td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "cor-orion-eleksir-of-layf--фараонова-собака",
       "dog": {
@@ -4411,7 +4414,7 @@
       "status": "dns",
       "raw_scores_json": {},
       "raw_text": "<td></td><td><i>3</i></td><td>Фараонова собака</td><td>Стандартный</td><td>Кобель</td><td>ГАЛМАД СТАР ВЕДАГОР/<br>GALMAD STAR VEDAGOR</td><td colspan=\"19\">Неявка</td>",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "galmad-star-vedagor--фараонова-собака",
       "dog": {
@@ -4438,7 +4441,7 @@
       "status": "dns",
       "raw_scores_json": {},
       "raw_text": "<td></td><td><i>4</i></td><td>Фараонова собака</td><td>Стандартный</td><td>Кобель</td><td>ХЕЙДИ СОТИС ДИШРЕТ ГЕБ/<br>HEIDI SOTIS DESHRET GEB</td><td colspan=\"19\">Неявка</td>",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "heidi-sotis-deshret-geb--фараонова-собака",
       "dog": {
@@ -4532,7 +4535,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">1</td>       <td><i>7</i></td>       <td>Фараонова собака</td>       <td>Стандартный</td>       <td>Сука</td>       <td>ХЕЙДИ СОТИС ДЕЛИМАРА МИНТАКА/<br>HEIDI SOTIS DELIMARA MINTAKA</td>       <td bgcolor=\"#f0ffff\"><i>11</i></td>       <td>18</td><td>18</td><td>19</td><td>18</td><td>19</td>       <td><b>92</b></td>       <td><b>178</b></td>       <td bgcolor=\"#f0ffff\"><i>21</i></td>       <td>19</td><td>18</td><td>18</td><td>18</td><td>19</td>       <td><b>92</b></td>       <td><b>181</b></td>       <td><b>359</b></td>       <td>CC</td>       <td>ПЧРКФ РК</td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "heidi-sotis-delimara-mintaka--фараонова-собака",
       "dog": {
@@ -4626,7 +4629,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">2</td>       <td><i>8</i></td>       <td>Фараонова собака</td>       <td>Стандартный</td>       <td>Сука</td>       <td>ХЕЙДИ СОТИС ДЖГАНТИЯ МУТ/<br>HEIDI SOTIS DJGANTIYA MUT</td>       <td bgcolor=\"#f0ffff\"><i>12</i></td>       <td>17</td><td>17</td><td>18</td><td>17</td><td>17</td>       <td><b>86</b></td>       <td><b>179</b></td>       <td bgcolor=\"#ff0000\"><i>21</i></td>       <td>17</td><td>17</td><td>18</td><td>18</td><td>19</td>       <td><b>89</b></td>       <td><b>176</b></td>       <td><b>355</b></td>       <td>CC</td>       <td></td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "heidi-sotis-djgantiya-mut--фараонова-собака",
       "dog": {
@@ -4720,7 +4723,7 @@
         ]
       },
       "raw_text": "       <td rowspan=\"2\">3</td>       <td><i>6</i></td>       <td>Фараонова собака</td>       <td>Стандартный</td>       <td>Сука</td>       <td>АМЕНЕМХЕТ АНДОРА ТА МАЛЬТА/<br>AMENEMHET ANDORA TA MALTA</td>       <td bgcolor=\"#ff0000\"><i>11</i></td>       <td>17</td><td>19</td><td>17</td><td>16</td><td>18</td>       <td><b>87</b></td>       <td><b>166</b></td>       <td bgcolor=\"#ff0000\"><i>22</i></td>       <td>19</td><td>18</td><td>19</td><td>17</td><td>19</td>       <td><b>92</b></td>       <td><b>178</b></td>       <td><b>344</b></td>       <td>CC</td>       <td></td>     ",
-      "judges": "",
+      "judges": "Главный судья: Орлова М.О., судья: Богаченко В.В.",
       "status_reason": null,
       "dog_key": "amenemhet-andora-ta-malta--фараонова-собака",
       "dog": {

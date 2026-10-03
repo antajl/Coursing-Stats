@@ -2,7 +2,6 @@ import type { ReactNode } from 'react'
 import { ChevronLeft, Calendar, Users, MapPin, Building2, User, PawPrint, Download, FileText, BookOpen } from 'lucide-react'
 import BreedGroupDivider from './components/BreedGroupDivider'
 import HoverTooltip from '../../../components/ui/HoverTooltip'
-import { toProcoursingArchiveUrl } from '../../../lib/procoursingArchive'
 import { formatDate } from './utils'
 import { getEventHeadline } from '../eventListUtils'
 import type { Event, Result, TrackScheme } from './types'
@@ -64,7 +63,6 @@ export default function EventHeader({ event, results, onBack }: EventHeaderProps
     competition_kind: event.competition_kind,
     competition_type: event.competition_type,
   })
-  const archiveResultsUrl = toProcoursingArchiveUrl(event.results_url)
   const dateText = formatDate(event.date_start) || event.event_date || '—'
   const locationText = event.protocol_location || event.location || '—'
   const participantsCount = new Set(results.map(r => r.dog_id)).size
@@ -100,18 +98,7 @@ export default function EventHeader({ event, results, onBack }: EventHeaderProps
         <div className="flex items-start justify-between gap-3">
           <div className="min-w-0 flex-1">
             <h1 className="min-w-0 font-serif text-lg font-bold leading-tight tracking-tight text-charcoal-900 md:text-xl">
-              {archiveResultsUrl ? (
-                <a
-                  href={archiveResultsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="transition-colors hover:text-camel-700"
-                >
-                  {title}
-                </a>
-              ) : (
-                title
-              )}
+              {title}
             </h1>
             <div className="mt-3 flex flex-wrap gap-3">
               <div className="flex items-center gap-2 rounded-lg bg-white/60 px-3 py-2 shrink-0">
@@ -153,28 +140,6 @@ export default function EventHeader({ event, results, onBack }: EventHeaderProps
             </div>
           </div>
           <div className="mt-2 flex flex-wrap gap-2">
-            {archiveResultsUrl && (
-              <a
-                href={archiveResultsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex flex-shrink-0 items-center gap-1.5 rounded-full border border-camel-200 bg-camel-50 px-2.5 py-1.5 text-xs font-medium text-camel-700 shadow-sm transition-colors hover:border-camel-400 hover:bg-camel-100"
-                aria-label="Открыть протокол в web.archive.org"
-                title="Открыть протокол в web.archive.org"
-              >
-                <img
-                  src="/assets/icons/web-archive.ico"
-                  alt=""
-                  role="presentation"
-                  aria-hidden="true"
-                  className="h-4 w-4 rounded-full"
-                  width={16}
-                  height={16}
-                  decoding="async"
-                />
-                <span className="hidden sm:inline">Archive</span>
-              </a>
-            )}
             <a
               href={event.rules_url || '#'}
               target={event.rules_url ? '_blank' : undefined}

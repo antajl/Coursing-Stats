@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/index-top-speed-v1",
   "year": null,
-  "count": 544,
+  "count": 549,
   "items": [
     {
       "dog_id": 10175,
@@ -836,8 +836,8 @@
       "year_from": 2020,
       "year_to": 2026,
       "best_speed": 53.202,
-      "avg_speed": 43.49,
-      "total_starts": 10
+      "avg_speed": 43.41,
+      "total_starts": 11
     },
     {
       "dog_id": 10080,
@@ -2677,15 +2677,15 @@
       "total_starts": 1
     },
     {
-      "dog_id": 776,
-      "name_lat": "DUSHECHKA KRASA IZ DOMA ALANTES",
-      "name_ru": "ДУШЕЧКА КРАСА ИЗ ДОМА АЛАНТЕС",
-      "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
+      "dog_id": 10767,
+      "name_lat": "ANGELIC WINGS",
+      "name_ru": "АНДЖЕЛИК ВИНГС",
+      "breed": "УИППЕТ",
       "year_from": 2026,
       "year_to": 2026,
       "best_speed": 49.12280701754386,
-      "avg_speed": 44.49,
-      "total_starts": 2
+      "avg_speed": 49.08,
+      "total_starts": 1
     },
     {
       "dog_id": 10206,
@@ -3700,15 +3700,15 @@
       "total_starts": 1
     },
     {
-      "dog_id": 10404,
-      "name_lat": "ДРУГ СЕРЕБРЯНЫЙ ВАРНИЦА",
-      "name_ru": "ДРУГ СЕРЕБРЯНЫЙ ВАРНИЦА",
+      "dog_id": 10766,
+      "name_lat": "FLAWLESS",
+      "name_ru": "ФЛОЛЕСС",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "year_from": 2020,
+      "year_from": 2026,
       "year_to": 2026,
       "best_speed": 46.05263157894737,
-      "avg_speed": 39.95,
-      "total_starts": 3
+      "avg_speed": 45.91,
+      "total_starts": 1
     },
     {
       "dog_id": 6066,
@@ -4184,6 +4184,17 @@
       "total_starts": 2
     },
     {
+      "dog_id": 10750,
+      "name_lat": "SHNEYDER RICH REM",
+      "name_ru": "ШНЕЙДЕР РИЧ РЭМ",
+      "breed": "ФАРАОНОВА СОБАКА",
+      "year_from": 2026,
+      "year_to": 2026,
+      "best_speed": 44.31938093563138,
+      "avg_speed": 43.18,
+      "total_starts": 2
+    },
+    {
       "dog_id": 10370,
       "name_lat": "БОРЗОМИР АИДА",
       "name_ru": "БОРЗОМИР АИДА",
@@ -4206,6 +4217,17 @@
       "total_starts": 2
     },
     {
+      "dog_id": 10768,
+      "name_lat": "REEDLY ROAD WILLEMIJN",
+      "name_ru": "РИДЛИ РОУД ВИЛЛЕМЕЙН",
+      "breed": "ФАРАОНОВА СОБАКА",
+      "year_from": 2026,
+      "year_to": 2026,
+      "best_speed": 44.242,
+      "avg_speed": 43.85,
+      "total_starts": 1
+    },
+    {
       "dog_id": 10171,
       "name_lat": "PODAROK IZ AFRIKI YAKITA MOKKO",
       "name_ru": "PODAROK IZ AFRIKI YAKITA MOKKO",
@@ -4225,17 +4247,6 @@
       "year_to": 2026,
       "best_speed": 44.16403785488959,
       "avg_speed": 43.8,
-      "total_starts": 1
-    },
-    {
-      "dog_id": 10750,
-      "name_lat": "SHNEYDER RICH REM",
-      "name_ru": "ШНЕЙДЕР РИЧ РЭМ",
-      "breed": "ФАРАОНОВА СОБАКА",
-      "year_from": 2026,
-      "year_to": 2026,
-      "best_speed": 44.071,
-      "avg_speed": 42.8,
       "total_starts": 1
     },
     {
@@ -4578,6 +4589,17 @@
       "best_speed": 42.7,
       "avg_speed": 39.24,
       "total_starts": 6
+    },
+    {
+      "dog_id": 10769,
+      "name_lat": "HALLAM TERRA OBSESSION AT REEDLY ROAD",
+      "name_ru": "ХАЛЛАМ ТЕРРА ОБСЕСШН ЭТ РИДЛИ РОУД",
+      "breed": "ФАРАОНОВА СОБАКА",
+      "year_from": 2026,
+      "year_to": 2026,
+      "best_speed": 42.697,
+      "avg_speed": 42.05,
+      "total_starts": 1
     },
     {
       "dog_id": 62,
@@ -5042,6 +5064,17 @@
       "total_starts": 2
     },
     {
+      "dog_id": 819,
+      "name_lat": "KLEINVALLEY ZABAVA /KLEINVALLEY ZABAVA",
+      "name_ru": "KLEINVALLEY ZABAVA /KLEINVALLEY ZABAVA",
+      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+      "year_from": 2026,
+      "year_to": 2026,
+      "best_speed": 41.217,
+      "avg_speed": 41.22,
+      "total_starts": 1
+    },
+    {
       "dog_id": 10374,
       "name_lat": "TESORO SOLARE FORTUNATO",
       "name_ru": "TESORO SOLARE FORTUNATO",
@@ -5259,6 +5292,17 @@
       "year_to": 2026,
       "best_speed": 40.025,
       "avg_speed": 39.57,
+      "total_starts": 1
+    },
+    {
+      "dog_id": 776,
+      "name_lat": "DUSHECHKA KRASA IZ DOMA ALANTES",
+      "name_ru": "ДУШЕЧКА КРАСА ИЗ ДОМА АЛАНТЕС",
+      "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
+      "year_from": 2026,
+      "year_to": 2026,
+      "best_speed": 40,
+      "avg_speed": 39.9,
       "total_starts": 1
     },
     {
@@ -5909,6 +5953,17 @@
       "best_speed": 34.708,
       "avg_speed": 33.97,
       "total_starts": 1
+    },
+    {
+      "dog_id": 10404,
+      "name_lat": "ДРУГ СЕРЕБРЯНЫЙ ВАРНИЦА",
+      "name_ru": "ДРУГ СЕРЕБРЯНЫЙ ВАРНИЦА",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2020,
+      "year_to": 2026,
+      "best_speed": 33.98974912328028,
+      "avg_speed": 33.99,
+      "total_starts": 2
     },
     {
       "dog_id": 5696,

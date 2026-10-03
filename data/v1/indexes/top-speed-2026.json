@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/index-top-speed-v1",
   "year": 2026,
-  "count": 144,
+  "count": 149,
   "items": [
     {
       "dog_id": 842,
@@ -631,15 +631,15 @@
       "total_starts": 1
     },
     {
-      "dog_id": 776,
-      "name_lat": "DUSHECHKA KRASA IZ DOMA ALANTES",
-      "name_ru": "ДУШЕЧКА КРАСА ИЗ ДОМА АЛАНТЕС",
-      "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
+      "dog_id": 10767,
+      "name_lat": "ANGELIC WINGS",
+      "name_ru": "АНДЖЕЛИК ВИНГС",
+      "breed": "УИППЕТ",
       "year_from": 2026,
       "year_to": 2026,
       "best_speed": 49.12280701754386,
-      "avg_speed": 44.49,
-      "total_starts": 2
+      "avg_speed": 49.08,
+      "total_starts": 1
     },
     {
       "dog_id": 787,
@@ -950,15 +950,15 @@
       "total_starts": 1
     },
     {
-      "dog_id": 10404,
-      "name_lat": "ДРУГ СЕРЕБРЯНЫЙ ВАРНИЦА",
-      "name_ru": "ДРУГ СЕРЕБРЯНЫЙ ВАРНИЦА",
+      "dog_id": 10766,
+      "name_lat": "FLAWLESS",
+      "name_ru": "ФЛОЛЕСС",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "year_from": 2026,
       "year_to": 2026,
       "best_speed": 46.05263157894737,
-      "avg_speed": 39.95,
-      "total_starts": 2
+      "avg_speed": 45.91,
+      "total_starts": 1
     },
     {
       "dog_id": 5757,
@@ -1082,6 +1082,28 @@
       "total_starts": 2
     },
     {
+      "dog_id": 10750,
+      "name_lat": "SHNEYDER RICH REM",
+      "name_ru": "ШНЕЙДЕР РИЧ РЭМ",
+      "breed": "ФАРАОНОВА СОБАКА",
+      "year_from": 2026,
+      "year_to": 2026,
+      "best_speed": 44.31938093563138,
+      "avg_speed": 43.18,
+      "total_starts": 2
+    },
+    {
+      "dog_id": 10768,
+      "name_lat": "REEDLY ROAD WILLEMIJN",
+      "name_ru": "РИДЛИ РОУД ВИЛЛЕМЕЙН",
+      "breed": "ФАРАОНОВА СОБАКА",
+      "year_from": 2026,
+      "year_to": 2026,
+      "best_speed": 44.242,
+      "avg_speed": 43.85,
+      "total_starts": 1
+    },
+    {
       "dog_id": 5909,
       "name_lat": "ЦВЕТ СОЛНЦА ЖИЗНЕННЫЙ ПРИНЦИП ЛЮБИТЬ /TSVET SOLNTSA ZHIZNENNYY PRINTSIP LYUBIT",
       "name_ru": "ЦВЕТ СОЛНЦА ЖИЗНЕННЫЙ ПРИНЦИП ЛЮБИТЬ /TSVET SOLNTSA ZHIZNENNYY PRINTSIP LYUBIT",
@@ -1102,17 +1124,6 @@
       "best_speed": 44.10220511025551,
       "avg_speed": 43.34,
       "total_starts": 2
-    },
-    {
-      "dog_id": 10750,
-      "name_lat": "SHNEYDER RICH REM",
-      "name_ru": "ШНЕЙДЕР РИЧ РЭМ",
-      "breed": "ФАРАОНОВА СОБАКА",
-      "year_from": 2026,
-      "year_to": 2026,
-      "best_speed": 44.071,
-      "avg_speed": 42.8,
-      "total_starts": 1
     },
     {
       "dog_id": 6152,
@@ -1144,8 +1155,8 @@
       "year_from": 2026,
       "year_to": 2026,
       "best_speed": 43.418,
-      "avg_speed": 43.29,
-      "total_starts": 1
+      "avg_speed": 42.97,
+      "total_starts": 2
     },
     {
       "dog_id": 5901,
@@ -1189,6 +1200,17 @@
       "year_to": 2026,
       "best_speed": 42.74084124830393,
       "avg_speed": 42.72,
+      "total_starts": 1
+    },
+    {
+      "dog_id": 10769,
+      "name_lat": "HALLAM TERRA OBSESSION AT REEDLY ROAD",
+      "name_ru": "ХАЛЛАМ ТЕРРА ОБСЕСШН ЭТ РИДЛИ РОУД",
+      "breed": "ФАРАОНОВА СОБАКА",
+      "year_from": 2026,
+      "year_to": 2026,
+      "best_speed": 42.697,
+      "avg_speed": 42.05,
       "total_starts": 1
     },
     {
@@ -1313,6 +1335,17 @@
       "total_starts": 1
     },
     {
+      "dog_id": 819,
+      "name_lat": "KLEINVALLEY ZABAVA /KLEINVALLEY ZABAVA",
+      "name_ru": "KLEINVALLEY ZABAVA /KLEINVALLEY ZABAVA",
+      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+      "year_from": 2026,
+      "year_to": 2026,
+      "best_speed": 41.217,
+      "avg_speed": 41.22,
+      "total_starts": 1
+    },
+    {
       "dog_id": 10751,
       "name_lat": "ELVIN",
       "name_ru": "ЭЛВИН",
@@ -1354,6 +1387,17 @@
       "year_to": 2026,
       "best_speed": 40.025,
       "avg_speed": 39.57,
+      "total_starts": 1
+    },
+    {
+      "dog_id": 776,
+      "name_lat": "DUSHECHKA KRASA IZ DOMA ALANTES",
+      "name_ru": "ДУШЕЧКА КРАСА ИЗ ДОМА АЛАНТЕС",
+      "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
+      "year_from": 2026,
+      "year_to": 2026,
+      "best_speed": 40,
+      "avg_speed": 39.9,
       "total_starts": 1
     },
     {
@@ -1563,6 +1607,17 @@
       "year_to": 2026,
       "best_speed": 35.836,
       "avg_speed": 35.84,
+      "total_starts": 1
+    },
+    {
+      "dog_id": 10404,
+      "name_lat": "ДРУГ СЕРЕБРЯНЫЙ ВАРНИЦА",
+      "name_ru": "ДРУГ СЕРЕБРЯНЫЙ ВАРНИЦА",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2026,
+      "year_to": 2026,
+      "best_speed": 33.98974912328028,
+      "avg_speed": 33.99,
       "total_starts": 1
     },
     {
