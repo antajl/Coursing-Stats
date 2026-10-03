@@ -7,8 +7,8 @@
     "initial_rating": 1500,
     "breed_pools": true
   },
-  "exported_at": "2026-10-03T15:31:11.321Z",
-  "count": 260,
+  "exported_at": "2026-10-03T15:54:34.863Z",
+  "count": 257,
   "items": [
     {
       "dog_id": 9494,
@@ -238,12 +238,12 @@
       "sex": null,
       "owner": null,
       "pedigree_url": null,
-      "total_starts": 1,
+      "total_starts": 3,
       "best_score": 356,
-      "avg_judge_score": 89,
+      "avg_judge_score": 86.42,
       "best_judge_score": 94,
       "gold": 0,
-      "silver": 0,
+      "silver": 1,
       "bronze": 0,
       "elo_rating": 1528,
       "elo_races": 2,
@@ -451,28 +451,6 @@
       "rank": 20
     },
     {
-      "dog_id": 9349,
-      "name_lat": "SALGREYS PRODIGY",
-      "name_ru": "SALGREYS PRODIGY",
-      "breed": "САЛЮКИ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": null,
-      "total_starts": 4,
-      "best_score": 513,
-      "avg_judge_score": 87.06,
-      "best_judge_score": 92,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 1,
-      "elo_rating": 1525,
-      "elo_races": 6,
-      "elo_reliable": false,
-      "elo_low_data": true,
-      "elo_insufficient": false,
-      "rank": 21
-    },
-    {
       "dog_id": 10375,
       "name_lat": "СТАР КАРУНА ТЕЛЛУР ДЖАНГЛ ЧАЙЛД",
       "name_ru": "СТАР КАРУНА ТЕЛЛУР ДЖАНГЛ ЧАЙЛД",
@@ -492,7 +470,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 22
+      "rank": 21
     },
     {
       "dog_id": 10493,
@@ -514,6 +492,28 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
+      "rank": 22
+    },
+    {
+      "dog_id": 9349,
+      "name_lat": "SALGREYS PRODIGY",
+      "name_ru": "SALGREYS PRODIGY",
+      "breed": "САЛЮКИ",
+      "sex": null,
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 4,
+      "best_score": 513,
+      "avg_judge_score": 87.06,
+      "best_judge_score": 92,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 1,
+      "elo_rating": 1524,
+      "elo_races": 6,
+      "elo_reliable": false,
+      "elo_low_data": true,
+      "elo_insufficient": false,
       "rank": 23
     },
     {
@@ -781,24 +781,24 @@
       "rank": 35
     },
     {
-      "dog_id": 10340,
-      "name_lat": "STANGER LAND BLACKTHORNE WINTER",
-      "name_ru": "STANGER LAND BLACKTHORNE WINTER",
+      "dog_id": 10331,
+      "name_lat": "STANGERS LAND BLACKTHORNE WINTER",
+      "name_ru": "STANGERS LAND BLACKTHORNE WINTER",
       "breed": "УИППЕТ",
       "sex": null,
       "owner": null,
       "pedigree_url": null,
-      "total_starts": 3,
-      "best_score": 535,
-      "avg_judge_score": 90.58,
-      "best_judge_score": 93,
+      "total_starts": 8,
+      "best_score": 551,
+      "avg_judge_score": 90.09,
+      "best_judge_score": 95,
       "gold": 0,
       "silver": 0,
-      "bronze": 0,
+      "bronze": 1,
       "elo_rating": 1518,
-      "elo_races": 6,
-      "elo_reliable": false,
-      "elo_low_data": true,
+      "elo_races": 10,
+      "elo_reliable": true,
+      "elo_low_data": false,
       "elo_insufficient": false,
       "rank": 36
     },
@@ -869,6 +869,28 @@
       "rank": 39
     },
     {
+      "dog_id": 27,
+      "name_lat": "RIDER OF ROHAN BRODWINEK",
+      "name_ru": "RIDER OF ROHAN BRODWINEK",
+      "breed": "УИППЕТ",
+      "sex": null,
+      "owner": null,
+      "pedigree_url": "https://whippet.breedarchive.com/animal/view/rider-of-rohan-brodwinek-271351ed-b455-46db-90c8-f147ed80a911",
+      "total_starts": 21,
+      "best_score": 530,
+      "avg_judge_score": 86.76,
+      "best_judge_score": 98,
+      "gold": 2,
+      "silver": 0,
+      "bronze": 1,
+      "elo_rating": 1516,
+      "elo_races": 6,
+      "elo_reliable": false,
+      "elo_low_data": true,
+      "elo_insufficient": false,
+      "rank": 40
+    },
+    {
       "dog_id": 270,
       "name_lat": "STANGERS LAND BRIZA",
       "name_ru": "STANGERS LAND BRIZA",
@@ -887,28 +909,6 @@
       "elo_races": 12,
       "elo_reliable": true,
       "elo_low_data": false,
-      "elo_insufficient": false,
-      "rank": 40
-    },
-    {
-      "dog_id": 27,
-      "name_lat": "RIDER OF ROHAN BRODWINEK",
-      "name_ru": "RIDER OF ROHAN BRODWINEK",
-      "breed": "УИППЕТ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": "https://whippet.breedarchive.com/animal/view/rider-of-rohan-brodwinek-271351ed-b455-46db-90c8-f147ed80a911",
-      "total_starts": 21,
-      "best_score": 530,
-      "avg_judge_score": 86.76,
-      "best_judge_score": 98,
-      "gold": 2,
-      "silver": 0,
-      "bronze": 1,
-      "elo_rating": 1515,
-      "elo_races": 6,
-      "elo_reliable": false,
-      "elo_low_data": true,
       "elo_insufficient": false,
       "rank": 41
     },
@@ -1309,6 +1309,28 @@
       "rank": 59
     },
     {
+      "dog_id": 78,
+      "name_lat": "GUY",
+      "name_ru": "GUY",
+      "breed": "УИППЕТ",
+      "sex": null,
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 20,
+      "best_score": 537,
+      "avg_judge_score": 87.11,
+      "best_judge_score": 95,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 4,
+      "elo_rating": 1510,
+      "elo_races": 12,
+      "elo_reliable": true,
+      "elo_low_data": false,
+      "elo_insufficient": false,
+      "rank": 60
+    },
+    {
       "dog_id": 10434,
       "name_lat": "KORONA SOLNTSA IZ POLETA MECHTI",
       "name_ru": "KORONA SOLNTSA IZ POLETA MECHTI",
@@ -1328,7 +1350,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 60
+      "rank": 61
     },
     {
       "dog_id": 10460,
@@ -1350,7 +1372,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 61
+      "rank": 62
     },
     {
       "dog_id": 10393,
@@ -1371,28 +1393,6 @@
       "elo_races": 4,
       "elo_reliable": false,
       "elo_low_data": true,
-      "elo_insufficient": false,
-      "rank": 62
-    },
-    {
-      "dog_id": 9255,
-      "name_lat": "MAENDELEO HOLY LARA CROFT ARIES KHAN",
-      "name_ru": "MAENDELEO HOLY LARA CROFT ARIES KHAN",
-      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": null,
-      "total_starts": 6,
-      "best_score": 516,
-      "avg_judge_score": 84.58,
-      "best_judge_score": 93,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "elo_rating": 1510,
-      "elo_races": 10,
-      "elo_reliable": true,
-      "elo_low_data": false,
       "elo_insufficient": false,
       "rank": 63
     },
@@ -1463,28 +1463,6 @@
       "rank": 66
     },
     {
-      "dog_id": 78,
-      "name_lat": "GUY",
-      "name_ru": "GUY",
-      "breed": "УИППЕТ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": null,
-      "total_starts": 20,
-      "best_score": 537,
-      "avg_judge_score": 87.11,
-      "best_judge_score": 95,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 4,
-      "elo_rating": 1509,
-      "elo_races": 12,
-      "elo_reliable": true,
-      "elo_low_data": false,
-      "elo_insufficient": false,
-      "rank": 67
-    },
-    {
       "dog_id": 8053,
       "name_lat": "DOROGOY DRUG ULANKA",
       "name_ru": "ДОРОГОЙ ДРУГ УЛАНКА",
@@ -1504,7 +1482,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 68
+      "rank": 67
     },
     {
       "dog_id": 10263,
@@ -1526,7 +1504,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 69
+      "rank": 68
     },
     {
       "dog_id": 9260,
@@ -1548,7 +1526,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 70
+      "rank": 69
     },
     {
       "dog_id": 10391,
@@ -1570,6 +1548,28 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
+      "rank": 70
+    },
+    {
+      "dog_id": 9255,
+      "name_lat": "MAENDELEO HOLY LARA CROFT ARIES KHAN",
+      "name_ru": "MAENDELEO HOLY LARA CROFT ARIES KHAN",
+      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+      "sex": null,
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 6,
+      "best_score": 516,
+      "avg_judge_score": 84.58,
+      "best_judge_score": 93,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "elo_rating": 1508,
+      "elo_races": 10,
+      "elo_reliable": true,
+      "elo_low_data": false,
+      "elo_insufficient": false,
       "rank": 71
     },
     {
@@ -1595,28 +1595,6 @@
       "rank": 72
     },
     {
-      "dog_id": 10515,
-      "name_lat": "ARIES KHAN PHOEBE PIPIRIMA",
-      "name_ru": "ARIES KHAN PHOEBE PIPIRIMA",
-      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": null,
-      "total_starts": 2,
-      "best_score": 516,
-      "avg_judge_score": 84.5,
-      "best_judge_score": 90,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "elo_rating": 1508,
-      "elo_races": 4,
-      "elo_reliable": false,
-      "elo_low_data": true,
-      "elo_insufficient": false,
-      "rank": 73
-    },
-    {
       "dog_id": 10294,
       "name_lat": "RUSSKIY VETER GASTON",
       "name_ru": "RUSSKIY VETER GASTON",
@@ -1636,7 +1614,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 74
+      "rank": 73
     },
     {
       "dog_id": 10495,
@@ -1658,7 +1636,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 75
+      "rank": 74
     },
     {
       "dog_id": 9411,
@@ -1680,7 +1658,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 76
+      "rank": 75
     },
     {
       "dog_id": 180,
@@ -1702,7 +1680,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 77
+      "rank": 76
     },
     {
       "dog_id": 10472,
@@ -1724,7 +1702,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 78
+      "rank": 77
     },
     {
       "dog_id": 10473,
@@ -1743,6 +1721,28 @@
       "bronze": 0,
       "elo_rating": 1506,
       "elo_races": 6,
+      "elo_reliable": false,
+      "elo_low_data": true,
+      "elo_insufficient": false,
+      "rank": 78
+    },
+    {
+      "dog_id": 10515,
+      "name_lat": "ARIES KHAN PHOEBE PIPIRIMA",
+      "name_ru": "ARIES KHAN PHOEBE PIPIRIMA",
+      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+      "sex": null,
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 2,
+      "best_score": 516,
+      "avg_judge_score": 84.5,
+      "best_judge_score": 90,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "elo_rating": 1506,
+      "elo_races": 4,
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
@@ -1903,28 +1903,6 @@
       "rank": 86
     },
     {
-      "dog_id": 10331,
-      "name_lat": "STANGERS LAND BLACKTHORNE WINTER",
-      "name_ru": "STANGERS LAND BLACKTHORNE WINTER",
-      "breed": "УИППЕТ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": null,
-      "total_starts": 5,
-      "best_score": 551,
-      "avg_judge_score": 89.8,
-      "best_judge_score": 95,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 1,
-      "elo_rating": 1505,
-      "elo_races": 4,
-      "elo_reliable": false,
-      "elo_low_data": true,
-      "elo_insufficient": false,
-      "rank": 87
-    },
-    {
       "dog_id": 10465,
       "name_lat": "РИВЕР СОНГ ЖАМИРОКВЭЙ",
       "name_ru": "РИВЕР СОНГ ЖАМИРОКВЭЙ",
@@ -1944,7 +1922,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 88
+      "rank": 87
     },
     {
       "dog_id": 50,
@@ -1966,7 +1944,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 89
+      "rank": 88
     },
     {
       "dog_id": 10471,
@@ -1988,7 +1966,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 90
+      "rank": 89
     },
     {
       "dog_id": 10017,
@@ -2010,7 +1988,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 91
+      "rank": 90
     },
     {
       "dog_id": 9290,
@@ -2032,7 +2010,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 92
+      "rank": 91
     },
     {
       "dog_id": 9287,
@@ -2054,7 +2032,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 93
+      "rank": 92
     },
     {
       "dog_id": 9296,
@@ -2076,7 +2054,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 94
+      "rank": 93
     },
     {
       "dog_id": 10355,
@@ -2098,7 +2076,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 95
+      "rank": 94
     },
     {
       "dog_id": 9286,
@@ -2120,7 +2098,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 96
+      "rank": 95
     },
     {
       "dog_id": 10506,
@@ -2142,7 +2120,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 97
+      "rank": 96
     },
     {
       "dog_id": 9242,
@@ -2164,7 +2142,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 98
+      "rank": 97
     },
     {
       "dog_id": 7289,
@@ -2186,7 +2164,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 99
+      "rank": 98
     },
     {
       "dog_id": 10459,
@@ -2208,7 +2186,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 100
+      "rank": 99
     },
     {
       "dog_id": 7820,
@@ -2230,7 +2208,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 101
+      "rank": 100
     },
     {
       "dog_id": 9301,
@@ -2252,7 +2230,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 102
+      "rank": 101
     },
     {
       "dog_id": 10500,
@@ -2274,29 +2252,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 103
-    },
-    {
-      "dog_id": 10505,
-      "name_lat": "PODAROK IS AFRIKI RAMLA RUKURU",
-      "name_ru": "PODAROK IS AFRIKI RAMLA RUKURU",
-      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": null,
-      "total_starts": 3,
-      "best_score": 514,
-      "avg_judge_score": 83.42,
-      "best_judge_score": 88,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "elo_rating": 1503,
-      "elo_races": 6,
-      "elo_reliable": false,
-      "elo_low_data": true,
-      "elo_insufficient": false,
-      "rank": 104
+      "rank": 102
     },
     {
       "dog_id": 10522,
@@ -2318,7 +2274,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 105
+      "rank": 103
     },
     {
       "dog_id": 8950,
@@ -2340,7 +2296,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 106
+      "rank": 104
     },
     {
       "dog_id": 10537,
@@ -2362,7 +2318,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 107
+      "rank": 105
     },
     {
       "dog_id": 9538,
@@ -2384,7 +2340,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 108
+      "rank": 106
     },
     {
       "dog_id": 10332,
@@ -2406,7 +2362,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 109
+      "rank": 107
     },
     {
       "dog_id": 9245,
@@ -2428,7 +2384,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 110
+      "rank": 108
     },
     {
       "dog_id": 10540,
@@ -2450,7 +2406,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 111
+      "rank": 109
     },
     {
       "dog_id": 10359,
@@ -2472,7 +2428,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 112
+      "rank": 110
     },
     {
       "dog_id": 10321,
@@ -2494,7 +2450,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 113
+      "rank": 111
     },
     {
       "dog_id": 9701,
@@ -2516,7 +2472,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 114
+      "rank": 112
     },
     {
       "dog_id": 10146,
@@ -2538,7 +2494,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 115
+      "rank": 113
     },
     {
       "dog_id": 622,
@@ -2560,7 +2516,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 116
+      "rank": 114
     },
     {
       "dog_id": 10514,
@@ -2582,7 +2538,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 117
+      "rank": 115
     },
     {
       "dog_id": 182,
@@ -2604,7 +2560,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 118
+      "rank": 116
     },
     {
       "dog_id": 10425,
@@ -2626,7 +2582,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 119
+      "rank": 117
     },
     {
       "dog_id": 10443,
@@ -2648,7 +2604,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 120
+      "rank": 118
     },
     {
       "dog_id": 577,
@@ -2670,7 +2626,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 121
+      "rank": 119
     },
     {
       "dog_id": 10458,
@@ -2692,7 +2648,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 122
+      "rank": 120
     },
     {
       "dog_id": 9320,
@@ -2714,7 +2670,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 123
+      "rank": 121
     },
     {
       "dog_id": 10348,
@@ -2736,7 +2692,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 124
+      "rank": 122
     },
     {
       "dog_id": 9568,
@@ -2758,7 +2714,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 125
+      "rank": 123
     },
     {
       "dog_id": 10136,
@@ -2780,7 +2736,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 126
+      "rank": 124
     },
     {
       "dog_id": 10491,
@@ -2802,7 +2758,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 127
+      "rank": 125
     },
     {
       "dog_id": 10492,
@@ -2824,7 +2780,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 128
+      "rank": 126
     },
     {
       "dog_id": 9317,
@@ -2846,7 +2802,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 129
+      "rank": 127
     },
     {
       "dog_id": 600,
@@ -2868,7 +2824,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 130
+      "rank": 128
     },
     {
       "dog_id": 9329,
@@ -2890,7 +2846,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 131
+      "rank": 129
     },
     {
       "dog_id": 10282,
@@ -2912,7 +2868,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 132
+      "rank": 130
     },
     {
       "dog_id": 10462,
@@ -2934,7 +2890,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 133
+      "rank": 131
     },
     {
       "dog_id": 10450,
@@ -2956,7 +2912,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 134
+      "rank": 132
     },
     {
       "dog_id": 10077,
@@ -2978,7 +2934,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 135
+      "rank": 133
     },
     {
       "dog_id": 9337,
@@ -3000,7 +2956,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 136
+      "rank": 134
     },
     {
       "dog_id": 10474,
@@ -3022,7 +2978,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 137
+      "rank": 135
     },
     {
       "dog_id": 9335,
@@ -3044,7 +3000,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 138
+      "rank": 136
     },
     {
       "dog_id": 10333,
@@ -3066,7 +3022,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 139
+      "rank": 137
     },
     {
       "dog_id": 9243,
@@ -3076,11 +3032,11 @@
       "sex": null,
       "owner": null,
       "pedigree_url": null,
-      "total_starts": 5,
+      "total_starts": 6,
       "best_score": 359,
-      "avg_judge_score": 88.4,
+      "avg_judge_score": 88.54,
       "best_judge_score": 94,
-      "gold": 0,
+      "gold": 1,
       "silver": 0,
       "bronze": 0,
       "elo_rating": 1498,
@@ -3088,7 +3044,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 140
+      "rank": 138
     },
     {
       "dog_id": 9927,
@@ -3110,7 +3066,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 141
+      "rank": 139
     },
     {
       "dog_id": 10468,
@@ -3132,7 +3088,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 142
+      "rank": 140
     },
     {
       "dog_id": 10341,
@@ -3154,7 +3110,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 143
+      "rank": 141
     },
     {
       "dog_id": 10203,
@@ -3176,7 +3132,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 144
+      "rank": 142
     },
     {
       "dog_id": 9586,
@@ -3198,7 +3154,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 145
+      "rank": 143
     },
     {
       "dog_id": 24,
@@ -3220,7 +3176,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 146
+      "rank": 144
     },
     {
       "dog_id": 10488,
@@ -3242,7 +3198,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 147
+      "rank": 145
     },
     {
       "dog_id": 10442,
@@ -3264,7 +3220,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 148
+      "rank": 146
     },
     {
       "dog_id": 10281,
@@ -3286,7 +3242,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 149
+      "rank": 147
     },
     {
       "dog_id": 9470,
@@ -3308,7 +3264,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 150
+      "rank": 148
     },
     {
       "dog_id": 9484,
@@ -3330,7 +3286,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 151
+      "rank": 149
     },
     {
       "dog_id": 9878,
@@ -3352,7 +3308,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 152
+      "rank": 150
     },
     {
       "dog_id": 564,
@@ -3374,7 +3330,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 153
+      "rank": 151
     },
     {
       "dog_id": 292,
@@ -3396,7 +3352,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 154
+      "rank": 152
     },
     {
       "dog_id": 10520,
@@ -3418,29 +3374,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 155
-    },
-    {
-      "dog_id": 10518,
-      "name_lat": "SALGREY’S PALLADA",
-      "name_ru": "SALGREY’S PALLADA",
-      "breed": "САЛЮКИ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": null,
-      "total_starts": 1,
-      "best_score": 533,
-      "avg_judge_score": 88.5,
-      "best_judge_score": 90,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "elo_rating": 1497,
-      "elo_races": 2,
-      "elo_reliable": false,
-      "elo_low_data": false,
-      "elo_insufficient": true,
-      "rank": 156
+      "rank": 153
     },
     {
       "dog_id": 10414,
@@ -3462,7 +3396,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 157
+      "rank": 154
     },
     {
       "dog_id": 228,
@@ -3484,7 +3418,29 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 158
+      "rank": 155
+    },
+    {
+      "dog_id": 9336,
+      "name_lat": "GORDEY",
+      "name_ru": "GORDEY",
+      "breed": "УИППЕТ",
+      "sex": null,
+      "owner": null,
+      "pedigree_url": "https://whippet.breedarchive.com/animal/view/gordey-57055c15-1f5c-4b5f-a841-7e98ecd8169c",
+      "total_starts": 5,
+      "best_score": 529,
+      "avg_judge_score": 86.75,
+      "best_judge_score": 93,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "elo_rating": 1495,
+      "elo_races": 6,
+      "elo_reliable": false,
+      "elo_low_data": true,
+      "elo_insufficient": false,
+      "rank": 156
     },
     {
       "dog_id": 10417,
@@ -3506,7 +3462,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 159
+      "rank": 157
     },
     {
       "dog_id": 10448,
@@ -3528,7 +3484,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 160
+      "rank": 158
     },
     {
       "dog_id": 10207,
@@ -3550,7 +3506,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 161
+      "rank": 159
     },
     {
       "dog_id": 10466,
@@ -3572,7 +3528,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 162
+      "rank": 160
     },
     {
       "dog_id": 9368,
@@ -3594,7 +3550,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 163
+      "rank": 161
     },
     {
       "dog_id": 10483,
@@ -3616,7 +3572,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 164
+      "rank": 162
     },
     {
       "dog_id": 9540,
@@ -3638,7 +3594,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 165
+      "rank": 163
     },
     {
       "dog_id": 8949,
@@ -3660,7 +3616,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 166
+      "rank": 164
     },
     {
       "dog_id": 277,
@@ -3682,7 +3638,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 167
+      "rank": 165
     },
     {
       "dog_id": 6048,
@@ -3704,7 +3660,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 168
+      "rank": 166
     },
     {
       "dog_id": 10535,
@@ -3726,29 +3682,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 169
-    },
-    {
-      "dog_id": 9336,
-      "name_lat": "GORDEY",
-      "name_ru": "GORDEY",
-      "breed": "УИППЕТ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": "https://whippet.breedarchive.com/animal/view/gordey-57055c15-1f5c-4b5f-a841-7e98ecd8169c",
-      "total_starts": 5,
-      "best_score": 529,
-      "avg_judge_score": 86.75,
-      "best_judge_score": 93,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "elo_rating": 1494,
-      "elo_races": 6,
-      "elo_reliable": false,
-      "elo_low_data": true,
-      "elo_insufficient": false,
-      "rank": 170
+      "rank": 167
     },
     {
       "dog_id": 10155,
@@ -3770,7 +3704,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 171
+      "rank": 168
     },
     {
       "dog_id": 10461,
@@ -3792,7 +3726,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 172
+      "rank": 169
     },
     {
       "dog_id": 7167,
@@ -3814,7 +3748,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 173
+      "rank": 170
     },
     {
       "dog_id": 9789,
@@ -3836,7 +3770,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 174
+      "rank": 171
     },
     {
       "dog_id": 10032,
@@ -3858,7 +3792,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 175
+      "rank": 172
     },
     {
       "dog_id": 7035,
@@ -3880,7 +3814,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 176
+      "rank": 173
     },
     {
       "dog_id": 10009,
@@ -3902,7 +3836,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 177
+      "rank": 174
     },
     {
       "dog_id": 10525,
@@ -3924,7 +3858,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 178
+      "rank": 175
     },
     {
       "dog_id": 10510,
@@ -3946,7 +3880,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 179
+      "rank": 176
     },
     {
       "dog_id": 9412,
@@ -3968,7 +3902,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 180
+      "rank": 177
     },
     {
       "dog_id": 10440,
@@ -3990,7 +3924,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 181
+      "rank": 178
     },
     {
       "dog_id": 10424,
@@ -4012,7 +3946,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 182
+      "rank": 179
     },
     {
       "dog_id": 10463,
@@ -4034,7 +3968,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 183
+      "rank": 180
     },
     {
       "dog_id": 9712,
@@ -4056,7 +3990,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 184
+      "rank": 181
     },
     {
       "dog_id": 10404,
@@ -4078,7 +4012,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 185
+      "rank": 182
     },
     {
       "dog_id": 10353,
@@ -4100,7 +4034,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 186
+      "rank": 183
     },
     {
       "dog_id": 10014,
@@ -4122,7 +4056,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 187
+      "rank": 184
     },
     {
       "dog_id": 9289,
@@ -4144,7 +4078,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 188
+      "rank": 185
     },
     {
       "dog_id": 9293,
@@ -4166,7 +4100,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 189
+      "rank": 186
     },
     {
       "dog_id": 10397,
@@ -4188,7 +4122,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 190
+      "rank": 187
     },
     {
       "dog_id": 10295,
@@ -4210,7 +4144,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 191
+      "rank": 188
     },
     {
       "dog_id": 10456,
@@ -4232,7 +4166,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 192
+      "rank": 189
     },
     {
       "dog_id": 10361,
@@ -4254,7 +4188,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 193
+      "rank": 190
     },
     {
       "dog_id": 282,
@@ -4276,7 +4210,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 194
+      "rank": 191
     },
     {
       "dog_id": 9312,
@@ -4298,7 +4232,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 195
+      "rank": 192
     },
     {
       "dog_id": 7120,
@@ -4320,7 +4254,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 196
+      "rank": 193
     },
     {
       "dog_id": 5658,
@@ -4342,7 +4276,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 197
+      "rank": 194
     },
     {
       "dog_id": 10079,
@@ -4364,7 +4298,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 198
+      "rank": 195
     },
     {
       "dog_id": 10162,
@@ -4386,7 +4320,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 199
+      "rank": 196
     },
     {
       "dog_id": 10507,
@@ -4408,7 +4342,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 200
+      "rank": 197
     },
     {
       "dog_id": 10513,
@@ -4430,7 +4364,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 201
+      "rank": 198
     },
     {
       "dog_id": 10519,
@@ -4452,7 +4386,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 202
+      "rank": 199
     },
     {
       "dog_id": 9436,
@@ -4474,7 +4408,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 203
+      "rank": 200
     },
     {
       "dog_id": 10176,
@@ -4496,7 +4430,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 204
+      "rank": 201
     },
     {
       "dog_id": 10476,
@@ -4518,7 +4452,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 205
+      "rank": 202
     },
     {
       "dog_id": 10509,
@@ -4540,7 +4474,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 206
+      "rank": 203
     },
     {
       "dog_id": 9240,
@@ -4562,7 +4496,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 207
+      "rank": 204
     },
     {
       "dog_id": 10457,
@@ -4584,7 +4518,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 208
+      "rank": 205
     },
     {
       "dog_id": 10455,
@@ -4606,7 +4540,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 209
+      "rank": 206
     },
     {
       "dog_id": 10408,
@@ -4628,7 +4562,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 210
+      "rank": 207
     },
     {
       "dog_id": 9435,
@@ -4650,7 +4584,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 211
+      "rank": 208
     },
     {
       "dog_id": 9650,
@@ -4672,7 +4606,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 212
+      "rank": 209
     },
     {
       "dog_id": 9629,
@@ -4694,7 +4628,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 213
+      "rank": 210
     },
     {
       "dog_id": 9512,
@@ -4716,29 +4650,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 214
-    },
-    {
-      "dog_id": 10516,
-      "name_lat": "SOLAR SPIRIT AMARULA",
-      "name_ru": "SOLAR SPIRIT AMARULA",
-      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": null,
-      "total_starts": 6,
-      "best_score": 512,
-      "avg_judge_score": 82.58,
-      "best_judge_score": 88,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "elo_rating": 1486,
-      "elo_races": 2,
-      "elo_reliable": false,
-      "elo_low_data": false,
-      "elo_insufficient": true,
-      "rank": 215
+      "rank": 211
     },
     {
       "dog_id": 10047,
@@ -4760,7 +4672,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 216
+      "rank": 212
     },
     {
       "dog_id": 10533,
@@ -4782,7 +4694,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 217
+      "rank": 213
     },
     {
       "dog_id": 178,
@@ -4804,7 +4716,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 218
+      "rank": 214
     },
     {
       "dog_id": 9868,
@@ -4826,7 +4738,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 219
+      "rank": 215
     },
     {
       "dog_id": 10383,
@@ -4848,7 +4760,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 220
+      "rank": 216
     },
     {
       "dog_id": 10409,
@@ -4870,7 +4782,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 221
+      "rank": 217
     },
     {
       "dog_id": 371,
@@ -4892,7 +4804,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 222
+      "rank": 218
     },
     {
       "dog_id": 10511,
@@ -4914,20 +4826,20 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 223
+      "rank": 219
     },
     {
-      "dog_id": 10532,
-      "name_lat": "SALGREYS PALLADA",
-      "name_ru": "SALGREYS PALLADA",
-      "breed": "САЛЮКИ",
+      "dog_id": 10516,
+      "name_lat": "SOLAR SPIRIT AMARULA",
+      "name_ru": "SOLAR SPIRIT AMARULA",
+      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
       "sex": null,
       "owner": null,
       "pedigree_url": null,
-      "total_starts": 1,
-      "best_score": 341,
-      "avg_judge_score": 85.25,
-      "best_judge_score": 90,
+      "total_starts": 6,
+      "best_score": 512,
+      "avg_judge_score": 82.58,
+      "best_judge_score": 88,
       "gold": 0,
       "silver": 0,
       "bronze": 0,
@@ -4936,7 +4848,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 224
+      "rank": 220
     },
     {
       "dog_id": 10150,
@@ -4958,7 +4870,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 225
+      "rank": 221
     },
     {
       "dog_id": 9750,
@@ -4980,7 +4892,29 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 226
+      "rank": 222
+    },
+    {
+      "dog_id": 10518,
+      "name_lat": "SALGREY’S PALLADA",
+      "name_ru": "SALGREY’S PALLADA",
+      "breed": "САЛЮКИ",
+      "sex": null,
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 2,
+      "best_score": 533,
+      "avg_judge_score": 86.88,
+      "best_judge_score": 90,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "elo_rating": 1483,
+      "elo_races": 4,
+      "elo_reliable": false,
+      "elo_low_data": true,
+      "elo_insufficient": false,
+      "rank": 223
     },
     {
       "dog_id": 10444,
@@ -5002,7 +4936,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 227
+      "rank": 224
     },
     {
       "dog_id": 10394,
@@ -5024,7 +4958,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 228
+      "rank": 225
     },
     {
       "dog_id": 10081,
@@ -5046,7 +4980,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 229
+      "rank": 226
     },
     {
       "dog_id": 10028,
@@ -5068,7 +5002,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 230
+      "rank": 227
     },
     {
       "dog_id": 10446,
@@ -5090,7 +5024,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 231
+      "rank": 228
     },
     {
       "dog_id": 10349,
@@ -5112,7 +5046,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 232
+      "rank": 229
     },
     {
       "dog_id": 10452,
@@ -5134,7 +5068,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 233
+      "rank": 230
     },
     {
       "dog_id": 10464,
@@ -5156,7 +5090,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 234
+      "rank": 231
     },
     {
       "dog_id": 10053,
@@ -5178,7 +5112,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 235
+      "rank": 232
     },
     {
       "dog_id": 7265,
@@ -5200,7 +5134,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 236
+      "rank": 233
     },
     {
       "dog_id": 9277,
@@ -5222,7 +5156,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 237
+      "rank": 234
     },
     {
       "dog_id": 10517,
@@ -5244,7 +5178,29 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 238
+      "rank": 235
+    },
+    {
+      "dog_id": 10475,
+      "name_lat": "PODAROK IZ AFRIKI RAMLA RUKURU",
+      "name_ru": "PODAROK IZ AFRIKI RAMLA RUKURU",
+      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+      "sex": null,
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 4,
+      "best_score": 514,
+      "avg_judge_score": 82.81,
+      "best_judge_score": 88,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "elo_rating": 1479,
+      "elo_races": 8,
+      "elo_reliable": true,
+      "elo_low_data": false,
+      "elo_insufficient": false,
+      "rank": 236
     },
     {
       "dog_id": 10501,
@@ -5266,7 +5222,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 239
+      "rank": 237
     },
     {
       "dog_id": 9414,
@@ -5288,7 +5244,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 240
+      "rank": 238
     },
     {
       "dog_id": 10523,
@@ -5310,7 +5266,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 241
+      "rank": 239
     },
     {
       "dog_id": 10255,
@@ -5332,7 +5288,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 242
+      "rank": 240
     },
     {
       "dog_id": 9272,
@@ -5354,7 +5310,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 243
+      "rank": 241
     },
     {
       "dog_id": 10494,
@@ -5376,7 +5332,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 244
+      "rank": 242
     },
     {
       "dog_id": 10508,
@@ -5398,7 +5354,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 245
+      "rank": 243
     },
     {
       "dog_id": 10528,
@@ -5420,7 +5376,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 246
+      "rank": 244
     },
     {
       "dog_id": 9577,
@@ -5442,7 +5398,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 247
+      "rank": 245
     },
     {
       "dog_id": 9248,
@@ -5464,7 +5420,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 248
+      "rank": 246
     },
     {
       "dog_id": 10498,
@@ -5486,7 +5442,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 249
+      "rank": 247
     },
     {
       "dog_id": 10035,
@@ -5508,7 +5464,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 250
+      "rank": 248
     },
     {
       "dog_id": 10609,
@@ -5530,7 +5486,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 251
+      "rank": 249
     },
     {
       "dog_id": 10530,
@@ -5552,29 +5508,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 252
-    },
-    {
-      "dog_id": 10475,
-      "name_lat": "PODAROK IZ AFRIKI RAMLA RUKURU",
-      "name_ru": "PODAROK IZ AFRIKI RAMLA RUKURU",
-      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": null,
-      "total_starts": 1,
-      "best_score": 324,
-      "avg_judge_score": 81,
-      "best_judge_score": 86,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "elo_rating": 1471,
-      "elo_races": 2,
-      "elo_reliable": false,
-      "elo_low_data": false,
-      "elo_insufficient": true,
-      "rank": 253
+      "rank": 250
     },
     {
       "dog_id": 7034,
@@ -5596,7 +5530,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 254
+      "rank": 251
     },
     {
       "dog_id": 10538,
@@ -5618,7 +5552,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 255
+      "rank": 252
     },
     {
       "dog_id": 10477,
@@ -5640,7 +5574,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 256
+      "rank": 253
     },
     {
       "dog_id": 10531,
@@ -5662,7 +5596,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 257
+      "rank": 254
     },
     {
       "dog_id": 247,
@@ -5684,7 +5618,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 258
+      "rank": 255
     },
     {
       "dog_id": 10479,
@@ -5706,7 +5640,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 259
+      "rank": 256
     },
     {
       "dog_id": 9434,
@@ -5728,7 +5662,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 260
+      "rank": 257
     }
   ]
 }
