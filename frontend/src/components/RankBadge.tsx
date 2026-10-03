@@ -17,7 +17,7 @@ export default function RankBadge({ rank, className = '' }: RankBadgeProps) {
     const imageSrc = RANK_IMAGES[rank as keyof typeof RANK_IMAGES]
     return (
       <div
-        className={`inline-flex items-center justify-center min-h-[44px] min-w-[44px] w-8 h-8 ${className}`}
+        className={`inline-flex items-center justify-center min-h-[44px] min-w-[44px] w-9 h-9 sm:w-10 sm:h-10 ${className}`}
         aria-label={`Rank ${rank}`}
       >
         <img
@@ -31,13 +31,15 @@ export default function RankBadge({ rank, className = '' }: RankBadgeProps) {
     )
   }
 
-  // Rank 4+: text-based, centered, no hash
+  // Rank 4+: text-based, centered, subtle Old Money rounded badge
   return (
     <div
-      className={`min-h-[44px] min-w-[44px] w-8 flex items-center justify-center text-center text-sm font-bold tabular-nums text-charcoal-400 ${className}`}
+      className={`min-h-[44px] min-w-[44px] flex items-center justify-center ${className}`}
       aria-label={`Rank ${rank}`}
     >
-      {rank}
+      <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-cream-200/70 border border-old-money-200/60 text-xs font-bold tabular-nums text-charcoal-700 shadow-2xs">
+        {rank}
+      </span>
     </div>
   )
 }

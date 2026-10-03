@@ -135,18 +135,53 @@ export default function TopDogsFilters({
     </button>
   )
 
+  const shareButton = (
+    <button
+      type="button"
+      onClick={handleCopyLink}
+      className="inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full border border-old-money-200/80 bg-cream-50 px-3 text-xs font-semibold text-charcoal-700 hover:bg-old-money-50 hover:text-charcoal-900 transition-all active:scale-95 cursor-pointer"
+      title="Скопировать прямую ссылку на этот фильтр"
+      aria-label="Скопировать ссылку на рейтинг"
+    >
+      {copied ? (
+        <>
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-emerald-600">
+            <polyline points="20 6 9 17 4 12" />
+          </svg>
+          <span className="text-emerald-700">Скопировано!</span>
+        </>
+      ) : (
+        <>
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-charcoal-500">
+            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+          </svg>
+          <span>Поделиться</span>
+        </>
+      )}
+    </button>
+  )
+
   return (
     <div className="mb-4" ref={dropdownRef}>
       <PageToolbar
         bare
         filters={
-          <>
-            <ToolbarSearch
-              value={searchQuery}
-              onChange={onSearchChange}
-              placeholder="Кличка, порода…"
-              className="w-full sm:!w-auto min-w-0 sm:min-w-[200px] max-w-sm"
-            />
+          <div className="flex flex-col sm:flex-row sm:items-center gap-2 w-full">
+            {/* Row 1 on mobile: Search + Share button */}
+            <div className="flex items-center gap-2 w-full sm:w-auto">
+              <ToolbarSearch
+                value={searchQuery}
+                onChange={onSearchChange}
+                placeholder="Кличка, порода…"
+                className="flex-1 min-w-0 sm:w-auto sm:min-w-[200px] max-w-sm"
+              />
+              <div className="sm:hidden shrink-0">
+                {shareButton}
+              </div>
+            </div>
+
+            {/* Row 2 on mobile / inline on desktop: Dropdowns */}
             <div className="flex max-w-full flex-wrap items-center gap-1.5 w-full sm:w-auto">
               {/* Year dropdown */}
               <ModernDropdown
@@ -261,10 +296,10 @@ export default function TopDogsFilters({
                 </ToolbarFiltersDropdown>
               )}
             </div>
-          </>
+          </div>
         }
         trailing={
-          <div className="flex items-center gap-2">
+          <div className="hidden sm:flex items-center gap-2">
             {(totalCoursing !== undefined || totalRacing !== undefined) && (
               <span className="hidden md:inline-flex text-xs text-charcoal-500 font-medium px-2.5 py-1 rounded-full bg-cream-100/70 border border-old-money-200/60">
                 {filterBreed ? (
@@ -274,30 +309,7 @@ export default function TopDogsFilters({
                 )}
               </span>
             )}
-            <button
-              type="button"
-              onClick={handleCopyLink}
-              className="inline-flex h-8 items-center gap-1.5 rounded-full border border-old-money-200/80 bg-cream-50 px-3 text-xs font-semibold text-charcoal-700 hover:bg-old-money-50 hover:text-charcoal-900 transition-all active:scale-95 cursor-pointer"
-              title="Скопировать прямую ссылку на этот фильтр"
-              aria-label="Скопировать ссылку на рейтинг"
-            >
-              {copied ? (
-                <>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-emerald-600">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                  <span className="text-emerald-700">Скопировано!</span>
-                </>
-              ) : (
-                <>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-charcoal-500">
-                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-                  </svg>
-                  <span>Поделиться</span>
-                </>
-              )}
-            </button>
+            {shareButton}
           </div>
         }
       />
