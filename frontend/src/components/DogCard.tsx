@@ -434,16 +434,16 @@ const DogCardInner = function DogCard({ dog, type, filterYear, rank, variant = '
 
                 <div className="flex items-center justify-between gap-2 min-w-0">
                   <DogCardMedals />
-                  <div className="flex items-center gap-2 shrink-0">
-                    <div className="w-auto min-w-[4.25rem]">
+                  <div className="flex items-center gap-1.5 shrink-0">
+                    <div className="w-[4.25rem] shrink-0 text-right">
                       <CombinedMetricsRotator
                         csValue={formatIndexScore(dog)}
                         eloValue={elo.value}
                       />
                     </div>
                     <span className="text-old-money-300" aria-hidden>·</span>
-                    <div className="flex items-center gap-1 text-[11px] font-semibold text-charcoal-700 tabular-nums">
-                      <span>{dog.total_starts || 0}</span>
+                    <div className="flex items-center justify-end gap-0.5 text-[11px] font-semibold text-charcoal-700 tabular-nums shrink-0 min-w-[2.25rem]">
+                      <span className="tabular-nums text-right">{dog.total_starts || 0}</span>
                       <span className="text-[9px] font-normal text-charcoal-500">ст.</span>
                     </div>
                   </div>
@@ -485,8 +485,8 @@ const DogCardInner = function DogCard({ dog, type, filterYear, rank, variant = '
                     <span className="text-old-money-300" aria-hidden>·</span>
                     <span>сред: <strong className="font-bold text-charcoal-800 tabular-nums">{dog.avg_speed ? dog.avg_speed.toFixed(1) : '-'}</strong> км/ч</span>
                   </div>
-                  <div className="flex items-center gap-1 text-[11px] font-semibold text-charcoal-700 tabular-nums shrink-0">
-                    <span>{dog.total_starts || 0}</span>
+                  <div className="flex items-center justify-end gap-0.5 text-[11px] font-semibold text-charcoal-700 tabular-nums shrink-0 min-w-[2.25rem]">
+                    <span className="tabular-nums text-right">{dog.total_starts || 0}</span>
                     <span className="text-[9px] font-normal text-charcoal-500">ст.</span>
                   </div>
                 </div>
