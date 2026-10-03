@@ -17,9 +17,11 @@ export default function ToolbarSearch({
   const ClearIcon = Icons.close
   const hasValue = value.length > 0
 
+  const widthClass = className.includes('w-') ? '' : 'w-[280px]'
+
   return (
     <div
-      className={`flex h-8 w-[280px] max-w-full shrink-0 items-center gap-2 rounded-[10px] border-[1.5px] border-old-money-300 bg-white px-3 ${className}`}
+      className={`flex h-8 ${widthClass} max-w-full shrink-0 items-center gap-2 rounded-[10px] border-[1.5px] border-old-money-300 bg-white px-3 ${className}`}
     >
       <SearchIcon className="h-3.5 w-3.5 shrink-0 text-charcoal-500" strokeWidth={1.75} />
       <input
