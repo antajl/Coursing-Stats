@@ -1133,8 +1133,8 @@
         "format": "racing"
       },
       "dog": {
-        "name_lat": "КУПИДОН/KUPIDON",
-        "name_ru": "КУПИДОН/KUPIDON",
+        "name_lat": "KUPIDON",
+        "name_ru": "КУПИДОН",
         "breed": "УИППЕТ",
         "sex": "Кобель"
       }
@@ -1470,15 +1470,15 @@
       "breed_class": "Родезийский риджбек - стандарт - Чемпионы",
       "catalog_no": null,
       "placement": null,
-      "total_score": 0,
+      "total_score": null,
       "judge_count": 0,
       "qualification": "Чемпионов",
       "vc": "",
       "status": "dns",
       "raw_scores_json": {
         "heats": [],
-        "grand_total": 0,
-        "normalized_score": 0,
+        "grand_total": null,
+        "normalized_score": null,
         "format": "racing"
       },
       "dog": {
