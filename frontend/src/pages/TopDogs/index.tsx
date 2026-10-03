@@ -21,7 +21,7 @@ const CURRENT_SEASON = String(new Date().getFullYear())
 
 function initialYearFilter(searchParams: URLSearchParams): string {
   const fromUrl = searchParams.get('year')
-  if (fromUrl === null) return CURRENT_SEASON
+  if (fromUrl === null) return ''
   return fromUrl
 }
 
@@ -116,7 +116,7 @@ export default function TopDogs() {
   )
 
   const handleResetFilters = useCallback(() => {
-    setFilterYear(CURRENT_SEASON)
+    setFilterYear('')
     setFilterBreed('')
     setSearchQuery('')
     setFilterMinStarts('')
@@ -125,7 +125,7 @@ export default function TopDogs() {
   }, [])
 
   const handleResetPanelFilters = useCallback(() => {
-    setFilterYear(CURRENT_SEASON)
+    setFilterYear('')
     setFilterBreed('')
     setFilterMinStarts('')
     setFilterScoreFrom('')
