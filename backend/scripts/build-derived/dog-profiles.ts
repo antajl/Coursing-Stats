@@ -420,6 +420,7 @@ export function buildDogProfiles(db: Database.Database) {
     const keyBreed = slugifyDog(dog.breed || 'unknown', 24);
     const generatedKey = `${keyName}--${keyBreed}`;
 
+    const existingDogIndex = dogsIndexMap.get(dogId) as any;
     const sex = (dog as any).sex || existingDogIndex?.sex || null;
     if (existingDogIndex) {
       existingDogIndex.name_ru = dog.name_ru || existingDogIndex.name_ru || '';
