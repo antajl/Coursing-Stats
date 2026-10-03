@@ -433,10 +433,10 @@ export default function JudgeDetail() {
                   onChange={(e) => setYear(e.target.value)}
                   className="h-9 sm:h-10 rounded-xl border border-old-money-200 bg-white px-3 sm:px-3.5 text-xs sm:text-sm font-medium text-charcoal-800 shadow-2xs hover:border-camel-400 focus:border-camel-500 focus:outline-none focus:ring-2 focus:ring-camel-100 transition-colors"
                 >
-                  <option value="">Все года (всё время)</option>
+                  <option value="">Все года</option>
                   {availableYears.map((y) => (
                     <option key={y} value={y}>
-                      Сезон {y}
+                      {y}
                     </option>
                   ))}
                 </select>

@@ -194,7 +194,7 @@ export default function Judges() {
                       type="button"
                       className={`shrink-0 ${toolbarPillTriggerClass(Boolean(filterYear))}`}
                     >
-                      <span>{!filterYear ? 'Все года' : `Сезон ${filterYear}`}</span>
+                      <span>{!filterYear ? 'Все года' : filterYear}</span>
                       <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
                     </button>
                   }
@@ -233,7 +233,7 @@ export default function Judges() {
                             : 'text-charcoal-700 hover:bg-camel-100'
                         }`}
                       >
-                        Сезон {year}
+                        {year}
                       </button>
                     ))}
                   </div>
