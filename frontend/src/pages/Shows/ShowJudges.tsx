@@ -232,14 +232,14 @@ export default function ShowJudges() {
       <PageToolbar
         bare
         filters={
-          <>
+          <div className="flex flex-col sm:flex-row sm:items-center gap-2 w-full">
             <ToolbarSearch
               value={searchQuery}
               onChange={setSearchQuery}
               placeholder="Фамилия судьи…"
-              className="w-full sm:!w-auto min-w-0 sm:min-w-[200px] max-w-sm"
+              className="w-full sm:w-auto min-w-0 sm:min-w-[200px] max-w-sm"
             />
-            <div className="flex max-w-full flex-wrap items-center gap-1.5">
+            <div className="flex max-w-full items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5 w-full sm:w-auto sm:flex-wrap">
               <ToolbarFiltersDropdown
                 active={hasPanelFilters}
                 activeCount={filterBreed ? 1 : 0}
@@ -270,20 +270,33 @@ export default function ShowJudges() {
                 type="button"
                 onClick={() => setFilterYear(filterYear === CURRENT_SEASON ? '' : CURRENT_SEASON)}
                 aria-pressed={filterYear === CURRENT_SEASON}
-                className={`${TOOLBAR_CHIP} ${filterYear === CURRENT_SEASON ? TOOLBAR_CHIP_ACTIVE : TOOLBAR_CHIP_IDLE}`}
+                className={`shrink-0 ${TOOLBAR_CHIP} ${filterYear === CURRENT_SEASON ? TOOLBAR_CHIP_ACTIVE : TOOLBAR_CHIP_IDLE}`}
               >
                 Сезон {CURRENT_SEASON}
               </button>
+
+              {/* Mobile sort options inside the horizontal scroll row */}
+              <div className="sm:hidden flex items-center gap-1.5 shrink-0 pl-1 border-l border-old-money-200/80">
+                <RecordSortBar
+                  options={SORT_OPTIONS}
+                  sortField={sortKey}
+                  sortDirection={sortDir}
+                  onSort={(field) => selectSort(field as SortKey)}
+                  hideLabel
+                />
+              </div>
             </div>
-          </>
+          </div>
         }
         trailing={
-          <RecordSortBar
-            options={SORT_OPTIONS}
-            sortField={sortKey}
-            sortDirection={sortDir}
-            onSort={(field) => selectSort(field as SortKey)}
-          />
+          <div className="hidden sm:flex items-center gap-2">
+            <RecordSortBar
+              options={SORT_OPTIONS}
+              sortField={sortKey}
+              sortDirection={sortDir}
+              onSort={(field) => selectSort(field as SortKey)}
+            />
+          </div>
         }
       />
 

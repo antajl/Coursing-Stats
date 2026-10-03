@@ -11,12 +11,13 @@ interface RecordSortBarProps {
   sortField: string
   sortDirection: string
   onSort: (field: string) => void
+  hideLabel?: boolean
 }
 
-export default function RecordSortBar({ options, sortField, sortDirection, onSort }: RecordSortBarProps) {
+export default function RecordSortBar({ options, sortField, sortDirection, onSort, hideLabel = false }: RecordSortBarProps) {
   return (
     <div className="flex flex-wrap items-center gap-2">
-      <span className="text-xs font-medium text-old-money-500">Сортировка</span>
+      {!hideLabel && <span className="text-xs font-medium text-old-money-500">Сортировка</span>}
       <div className="inline-flex flex-wrap items-center gap-1.5">
         {options.map(({ field, label }) => {
           const active = sortField === field
@@ -27,7 +28,7 @@ export default function RecordSortBar({ options, sortField, sortDirection, onSor
               key={field}
               type="button"
               onClick={() => onSort(field)}
-              className={`${TOOLBAR_SORT_CHIP} ${active ? TOOLBAR_SORT_ACTIVE : TOOLBAR_SORT_IDLE}`}
+              className={`${TOOLBAR_SORT_CHIP} shrink-0 ${active ? TOOLBAR_SORT_ACTIVE : TOOLBAR_SORT_IDLE}`}
             >
               {label}
               {active && <SortIcon className="h-3 w-3 shrink-0 opacity-80" strokeWidth={2.5} />}
