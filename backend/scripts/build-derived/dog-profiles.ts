@@ -95,6 +95,17 @@ function mean(values: number[]): number {
   return values.reduce((a, b) => a + b, 0) / values.length;
 }
 
+function slugifyDog(text: string, maxLen = 48): string {
+  const base = text
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9а-яё]+/gi, '-')
+    .replace(/^-+|-+$/g, '')
+    .slice(0, maxLen);
+  return base || 'item';
+}
+
 function buildCoursingStats(rows: CoursingRow[]) {
   let total_starts = 0;
   let best_score: number | null = null;
@@ -312,6 +323,31 @@ export function buildDogProfiles(db: Database.Database) {
 
   const packs = new Map<string, Record<string, unknown>>();
 
+  const dogsIndexPath = path.join(INDEXES_DIR, 'dogs-index.json');
+  const dogsIndexMap = new Map<number, {
+    id: number;
+    dog_key: string;
+    name_lat: string;
+    name_ru: string;
+    breed: string;
+    file_by_id: string;
+    file_by_key: string;
+    competition_count: number;
+  }>();
+
+  if (fs.existsSync(dogsIndexPath)) {
+    try {
+      const existing = JSON.parse(fs.readFileSync(dogsIndexPath, 'utf-8'));
+      if (Array.isArray(existing)) {
+        for (const item of existing) {
+          if (item && typeof item.id === 'number') {
+            dogsIndexMap.set(item.id, item);
+          }
+        }
+      }
+    } catch {}
+  }
+
   for (const dogId of sortedDogIds) {
     const fromFile = metadataById.get(dogId);
     const fromDb = dogsById.get(dogId);
@@ -379,6 +415,34 @@ export function buildDogProfiles(db: Database.Database) {
     const bucket = packs.get(shard) ?? {};
     bucket[String(dogId)] = payload;
     packs.set(shard, bucket);
+
+    const keyName = slugifyDog(dog.name_ru || dog.name_lat || 'dog', 40);
+    const keyBreed = slugifyDog(dog.breed || 'unknown', 24);
+    const generatedKey = `${keyName}--${keyBreed}`;
+
+    const sex = (dog as any).sex || existingDogIndex?.sex || null;
+    if (existingDogIndex) {
+      existingDogIndex.name_ru = dog.name_ru || existingDogIndex.name_ru || '';
+      existingDogIndex.name_lat = dog.name_lat || existingDogIndex.name_lat || '';
+      existingDogIndex.breed = dog.breed || existingDogIndex.breed || '';
+      existingDogIndex.competition_count = Math.max(existingDogIndex.competition_count || 0, competitions.length);
+      if (sex) existingDogIndex.sex = sex;
+      if (!existingDogIndex.dog_key) existingDogIndex.dog_key = generatedKey;
+      if (!existingDogIndex.file_by_id) existingDogIndex.file_by_id = `dogs/by-id/${dogId}.json`;
+      if (!existingDogIndex.file_by_key) existingDogIndex.file_by_key = `dogs/by-key/${existingDogIndex.dog_key}.json`;
+    } else {
+      dogsIndexMap.set(dogId, {
+        id: dogId,
+        dog_key: generatedKey,
+        name_lat: dog.name_lat || '',
+        name_ru: dog.name_ru || '',
+        breed: dog.breed || '',
+        file_by_id: `dogs/by-id/${dogId}.json`,
+        file_by_key: `dogs/by-key/${generatedKey}.json`,
+        competition_count: competitions.length,
+        sex,
+      });
+    }
   }
 
   // Remove legacy per-id files and stale packs, then write fresh packs.
@@ -414,4 +478,20 @@ export function buildDogProfiles(db: Database.Database) {
   console.log(
     `  → dog-profiles/pack-*.json (${packs.size} packs, ${sortedDogIds.length} dogs, ${(packBytes / (1024 * 1024)).toFixed(1)} MB)`,
   );
+
+  const dogsIndexList = Array.from(dogsIndexMap.values()).sort((a, b) => a.id - b.id);
+  for (let attempt = 0; attempt < 5; attempt++) {
+    try {
+      fs.writeFileSync(dogsIndexPath, JSON.stringify(dogsIndexList, null, 2), 'utf-8');
+      break;
+    } catch (err) {
+      const code = (err as NodeJS.ErrnoException).code;
+      if ((code === 'UNKNOWN' || code === 'EBUSY' || code === 'EPERM') && attempt < 4) {
+        Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 50 * (attempt + 1));
+        continue;
+      }
+      throw err;
+    }
+  }
+  console.log(`  → dogs-index.json (${dogsIndexList.length} dogs)`);
 }
