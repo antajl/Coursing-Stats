@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/index-top-speed-v1",
   "year": 2019,
-  "count": 95,
+  "count": 94,
   "items": [
     {
       "dog_id": 10385,
@@ -55,8 +55,8 @@
       "year_from": 2019,
       "year_to": 2019,
       "best_speed": 53.3,
-      "avg_speed": 53.04,
-      "total_starts": 1
+      "avg_speed": 52.73,
+      "total_starts": 2
     },
     {
       "dog_id": 10259,
@@ -67,17 +67,6 @@
       "year_to": 2019,
       "best_speed": 53.12,
       "avg_speed": 52.43,
-      "total_starts": 1
-    },
-    {
-      "dog_id": 10340,
-      "name_lat": "STANGER LAND BLACKTHORNE WINTER",
-      "name_ru": "STANGER LAND BLACKTHORNE WINTER",
-      "breed": "УИППЕТ",
-      "year_from": 2019,
-      "year_to": 2019,
-      "best_speed": 52.6,
-      "avg_speed": 52.42,
       "total_starts": 1
     },
     {
@@ -873,9 +862,9 @@
       "total_starts": 2
     },
     {
-      "dog_id": 10300,
-      "name_lat": "TSARSKAJA PRIHOT SAYURI",
-      "name_ru": "TSARSKAJA PRIHOT SAYURI",
+      "dog_id": 9968,
+      "name_lat": "TSARSKAYA PRIHOT SAYURI",
+      "name_ru": "TSARSKAYA PRIHOT SAYURI",
       "breed": "ИРЛАНДСКИЙ ВОЛКОДАВ",
       "year_from": 2019,
       "year_to": 2019,

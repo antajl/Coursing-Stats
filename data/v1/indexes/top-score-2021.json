@@ -2,7 +2,7 @@
   "schema": "coursing-stats/index-top-score-v1",
   "year": 2021,
   "rating_score_version": "cs-v1",
-  "count": 260,
+  "count": 257,
   "items": [
     {
       "dog_id": 555,
@@ -350,21 +350,6 @@
       "rating_score": 87.68
     },
     {
-      "dog_id": 10331,
-      "name_lat": "STANGERS LAND BLACKTHORNE WINTER",
-      "name_ru": "STANGERS LAND BLACKTHORNE WINTER",
-      "breed": "УИППЕТ",
-      "year": 2021,
-      "best_score": 363,
-      "total_starts": 2,
-      "best_judge_score": 92,
-      "avg_judge_score": 87.75,
-      "year_from": 2021,
-      "year_to": 2021,
-      "judge_eval_count": 8,
-      "rating_score": 87.49
-    },
-    {
       "dog_id": 600,
       "name_lat": "DENSI MIDNIGHT SUN",
       "name_ru": "ДЕНСИ МИДНАЙТ САН",
@@ -410,19 +395,19 @@
       "rating_score": 88.39
     },
     {
-      "dog_id": 10340,
-      "name_lat": "STANGER LAND BLACKTHORNE WINTER",
-      "name_ru": "STANGER LAND BLACKTHORNE WINTER",
+      "dog_id": 10331,
+      "name_lat": "STANGERS LAND BLACKTHORNE WINTER",
+      "name_ru": "STANGERS LAND BLACKTHORNE WINTER",
       "breed": "УИППЕТ",
       "year": 2021,
       "best_score": 535,
-      "total_starts": 3,
+      "total_starts": 5,
       "best_judge_score": 93,
-      "avg_judge_score": 90.58,
+      "avg_judge_score": 89.45,
       "year_from": 2021,
       "year_to": 2021,
-      "judge_eval_count": 12,
-      "rating_score": 89.39
+      "judge_eval_count": 20,
+      "rating_score": 89.67
     },
     {
       "dog_id": 9257,
@@ -1655,6 +1640,21 @@
       "rating_score": 88.39
     },
     {
+      "dog_id": 10518,
+      "name_lat": "SALGREY’S PALLADA",
+      "name_ru": "SALGREY’S PALLADA",
+      "breed": "САЛЮКИ",
+      "year": 2021,
+      "best_score": 533,
+      "total_starts": 2,
+      "best_judge_score": 90,
+      "avg_judge_score": 86.88,
+      "year_from": 2021,
+      "year_to": 2021,
+      "judge_eval_count": 8,
+      "rating_score": 87.14
+    },
+    {
       "dog_id": 10490,
       "name_lat": "ARTEFAKT SHAH",
       "name_ru": "ARTEFAKT SHAH",
@@ -1678,21 +1678,6 @@
       "best_score": 354,
       "total_starts": 1,
       "best_judge_score": 92,
-      "avg_judge_score": 88.5,
-      "year_from": 2021,
-      "year_to": 2021,
-      "judge_eval_count": 4,
-      "rating_score": 86.98
-    },
-    {
-      "dog_id": 10518,
-      "name_lat": "SALGREY’S PALLADA",
-      "name_ru": "SALGREY’S PALLADA",
-      "breed": "САЛЮКИ",
-      "year": 2021,
-      "best_score": 533,
-      "total_starts": 1,
-      "best_judge_score": 90,
       "avg_judge_score": 88.5,
       "year_from": 2021,
       "year_to": 2021,
@@ -2885,6 +2870,21 @@
       "rating_score": 84.58
     },
     {
+      "dog_id": 10475,
+      "name_lat": "PODAROK IZ AFRIKI RAMLA RUKURU",
+      "name_ru": "PODAROK IZ AFRIKI RAMLA RUKURU",
+      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+      "year": 2021,
+      "best_score": 514,
+      "total_starts": 4,
+      "best_judge_score": 88,
+      "avg_judge_score": 82.81,
+      "year_from": 2021,
+      "year_to": 2021,
+      "judge_eval_count": 16,
+      "rating_score": 85.51
+    },
+    {
       "dog_id": 10500,
       "name_lat": "ARON CHIARELLI DARAGONA",
       "name_ru": "ARON CHIARELLI DARAGONA",
@@ -2913,21 +2913,6 @@
       "year_to": 2021,
       "judge_eval_count": 12,
       "rating_score": 86.48
-    },
-    {
-      "dog_id": 10505,
-      "name_lat": "PODAROK IS AFRIKI RAMLA RUKURU",
-      "name_ru": "PODAROK IS AFRIKI RAMLA RUKURU",
-      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
-      "year": 2021,
-      "best_score": 514,
-      "total_starts": 3,
-      "best_judge_score": 88,
-      "avg_judge_score": 83.42,
-      "year_from": 2021,
-      "year_to": 2021,
-      "judge_eval_count": 12,
-      "rating_score": 85.78
     },
     {
       "dog_id": 282,
@@ -3003,21 +2988,6 @@
       "year_to": 2021,
       "judge_eval_count": 12,
       "rating_score": 86.73
-    },
-    {
-      "dog_id": 10532,
-      "name_lat": "SALGREYS PALLADA",
-      "name_ru": "SALGREYS PALLADA",
-      "breed": "САЛЮКИ",
-      "year": 2021,
-      "best_score": 341,
-      "total_starts": 1,
-      "best_judge_score": 90,
-      "avg_judge_score": 85.25,
-      "year_from": 2021,
-      "year_to": 2021,
-      "judge_eval_count": 4,
-      "rating_score": 86.16
     },
     {
       "dog_id": 182,
@@ -3678,21 +3648,6 @@
       "year_to": 2021,
       "judge_eval_count": 4,
       "rating_score": 84.7
-    },
-    {
-      "dog_id": 10475,
-      "name_lat": "PODAROK IZ AFRIKI RAMLA RUKURU",
-      "name_ru": "PODAROK IZ AFRIKI RAMLA RUKURU",
-      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
-      "year": 2021,
-      "best_score": 324,
-      "total_starts": 1,
-      "best_judge_score": 86,
-      "avg_judge_score": 81,
-      "year_from": 2021,
-      "year_to": 2021,
-      "judge_eval_count": 4,
-      "rating_score": 84.8
     },
     {
       "dog_id": 9650,

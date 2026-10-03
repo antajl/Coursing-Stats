@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/index-top-speed-v1",
   "year": 2020,
-  "count": 89,
+  "count": 88,
   "items": [
     {
       "dog_id": 10344,
@@ -37,15 +37,15 @@
       "total_starts": 2
     },
     {
-      "dog_id": 10340,
-      "name_lat": "STANGER LAND BLACKTHORNE WINTER",
-      "name_ru": "STANGER LAND BLACKTHORNE WINTER",
+      "dog_id": 10331,
+      "name_lat": "STANGERS LAND BLACKTHORNE WINTER",
+      "name_ru": "STANGERS LAND BLACKTHORNE WINTER",
       "breed": "УИППЕТ",
       "year_from": 2020,
       "year_to": 2020,
       "best_speed": 54.8,
-      "avg_speed": 54.75,
-      "total_starts": 2
+      "avg_speed": 53.89,
+      "total_starts": 3
     },
     {
       "dog_id": 10426,
@@ -167,17 +167,6 @@
       "best_speed": 53.55,
       "avg_speed": 52.68,
       "total_starts": 3
-    },
-    {
-      "dog_id": 10331,
-      "name_lat": "STANGERS LAND BLACKTHORNE WINTER",
-      "name_ru": "STANGERS LAND BLACKTHORNE WINTER",
-      "breed": "УИППЕТ",
-      "year_from": 2020,
-      "year_to": 2020,
-      "best_speed": 53.412,
-      "avg_speed": 53.03,
-      "total_starts": 1
     },
     {
       "dog_id": 10023,
