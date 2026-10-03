@@ -205,10 +205,10 @@ function MedalStatBox({ variant, value }: { variant: MedalVariant; value?: numbe
 }
 
 const CARD_SHELL =
-  `group relative grid min-h-[5.25rem] sm:h-[5.25rem] grid-rows-[auto_auto] gap-0 overflow-hidden rounded-xl border border-old-money-200 bg-white p-2 transition-colors duration-200 hover:border-camel-300 hover:bg-cream-50`
+  `group relative grid min-h-[5rem] sm:h-[5.25rem] grid-rows-[auto_auto] gap-0 overflow-hidden rounded-xl border border-old-money-200 bg-white p-2 transition-colors duration-200 hover:border-camel-300 hover:bg-cream-50`
 
 const EMBEDDED_SHELL =
-  `group relative grid min-h-[5.25rem] sm:h-[5.25rem] grid-rows-[auto_auto] gap-0 overflow-hidden border-0 bg-transparent px-3 sm:px-4 py-2 sm:py-1.5 shadow-none transition-colors duration-150 hover:bg-camel-100/60`
+  `group relative grid min-h-[5rem] sm:h-[5.25rem] grid-rows-[auto_auto] gap-0 overflow-hidden border-0 bg-transparent px-3 sm:px-4 py-1.5 shadow-none transition-colors duration-150 hover:bg-camel-100/60`
 
 /** Soft wash inside the row for ranks 1–3 (bar sits outside — see Top3AccentBar). */
 const TOP3_WASH: Record<1 | 2 | 3, string> = {
@@ -246,22 +246,22 @@ const DogCardHeader: FC = function DogCardHeader() {
     <div className="min-w-0 overflow-hidden">
       <OwnerCrownName name={primary} dogId={dog.dog_id} kind="competition">
         <h3
-          className="text-xs font-bold leading-snug text-charcoal-900"
+          className="text-xs font-bold leading-snug text-charcoal-900 break-words line-clamp-2"
           title={secondary ? `${primary} / ${secondary}` : primary}
         >
           {primary}
         </h3>
       </OwnerCrownName>
       <div className="flex items-center gap-1 text-[10px]">
-        <span className="text-charcoal-600 font-medium">
+        <span className="text-charcoal-600 font-medium truncate">
           {breedDisplay.primary}
         </span>
         {showYear && (
           <>
-            <span className="text-charcoal-300" aria-hidden>
+            <span className="text-charcoal-300 shrink-0" aria-hidden>
               ·
             </span>
-            <span className="text-charcoal-500">
+            <span className="text-charcoal-500 shrink-0">
               {yearBadge.label}
             </span>
           </>
@@ -404,8 +404,8 @@ const DogCardInner = function DogCard({ dog, type, filterYear, rank, variant = '
   const useFlexShell = type === 'combined' || type === 'speed'
   const cardShell = useFlexShell
     ? shellBase.replace(
-        `grid min-h-[5.25rem] sm:h-[5.25rem] grid-rows-[auto_auto]`,
-        `flex min-h-[5.25rem] sm:h-[5.25rem] flex-row items-stretch`
+        `grid min-h-[5rem] sm:h-[5.25rem] grid-rows-[auto_auto]`,
+        `flex min-h-[5rem] sm:h-[5.25rem] flex-row items-stretch`
       )
     : shellBase
   // Overflow visible so the outside accent bar is not clipped by the shell.
@@ -425,17 +425,17 @@ const DogCardInner = function DogCard({ dog, type, filterYear, rank, variant = '
         {type === 'combined' && elo ? (
           <>
             {/* Mobile layout (< sm) */}
-            <div className="flex sm:hidden flex-row items-stretch w-full min-h-[5.25rem] py-1 gap-2 overflow-hidden">
+            <div className="flex sm:hidden flex-row items-stretch w-full min-h-[4.75rem] py-0.5 gap-2 overflow-hidden">
               <DogCardRank className="pr-0 self-center" />
               <div className="flex min-w-0 flex-1 flex-col justify-between gap-1 overflow-hidden">
-                <div className="pr-8 min-w-0">
+                <div className="pr-10 min-w-0">
                   <DogCardHeader />
                 </div>
 
                 <div className="flex items-center justify-between gap-2 min-w-0">
                   <DogCardMedals />
                   <div className="flex items-center gap-2 shrink-0">
-                    <div className="w-auto min-w-[4.5rem]">
+                    <div className="w-auto min-w-[4.25rem]">
                       <CombinedMetricsRotator
                         csValue={formatIndexScore(dog)}
                         eloValue={elo.value}
@@ -473,14 +473,14 @@ const DogCardInner = function DogCard({ dog, type, filterYear, rank, variant = '
         ) : type === 'speed' ? (
           <>
             {/* Mobile layout (< sm) */}
-            <div className="flex sm:hidden flex-row items-stretch w-full min-h-[5.25rem] py-1 gap-2 overflow-hidden">
+            <div className="flex sm:hidden flex-row items-stretch w-full min-h-[4.75rem] py-0.5 gap-2 overflow-hidden">
               <DogCardRank className="pr-0 self-center" />
               <div className="flex min-w-0 flex-1 flex-col justify-between gap-1 overflow-hidden">
-                <div className="pr-8 min-w-0">
+                <div className="pr-10 min-w-0">
                   <DogCardHeader />
                 </div>
                 <div className="flex items-center justify-between gap-2 min-w-0">
-                  <div className="flex items-center gap-1.5 text-[11px] text-charcoal-600">
+                  <div className="flex items-center gap-1.5 text-[11px] text-charcoal-600 min-w-0 truncate">
                     <span>макс: <strong className="font-bold text-charcoal-800 tabular-nums">{dog.best_speed ? dog.best_speed.toFixed(1) : '-'}</strong></span>
                     <span className="text-old-money-300" aria-hidden>·</span>
                     <span>сред: <strong className="font-bold text-charcoal-800 tabular-nums">{dog.avg_speed ? dog.avg_speed.toFixed(1) : '-'}</strong> км/ч</span>

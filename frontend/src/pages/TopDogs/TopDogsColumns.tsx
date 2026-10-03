@@ -101,7 +101,7 @@ export default function TopDogsColumns({
       count={filteredCombined.length}
       action={
         <span className="inline-flex items-center gap-1.5 text-xs text-old-money-700 font-medium">
-          <span>Ранг по победам и медалям</span>
+          <span className="hidden sm:inline">Ранг по победам и медалям</span>
           <CoursingRatingHint embedded />
         </span>
       }
@@ -115,7 +115,7 @@ export default function TopDogsColumns({
       count={filteredSpeed.length}
       action={
         <span className="inline-flex items-center gap-1 text-xs text-old-money-700 font-medium">
-          <span>Ранг по максимальной скорости</span>
+          <span className="hidden sm:inline">Ранг по максимальной скорости</span>
         </span>
       }
     />
