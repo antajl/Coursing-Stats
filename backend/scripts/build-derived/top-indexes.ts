@@ -124,12 +124,16 @@ const SPEED_BASE_SQL = `
     MAX(
       (SELECT MAX(CAST(json_extract(h.value, '$.speed_kmh') AS REAL))
        FROM json_each(json_extract(r.raw_scores_json, '$.heats')) AS h
-       WHERE json_extract(h.value, '$.speed_kmh') IS NOT NULL)
+       WHERE json_extract(h.value, '$.speed_kmh') IS NOT NULL
+         AND CAST(json_extract(h.value, '$.speed_kmh') AS REAL) > 0
+         AND CAST(json_extract(h.value, '$.speed_kmh') AS REAL) <= 80)
     ) AS best_speed,
     ROUND(AVG(
       (SELECT AVG(CAST(json_extract(h.value, '$.speed_kmh') AS REAL))
        FROM json_each(json_extract(r.raw_scores_json, '$.heats')) AS h
-       WHERE json_extract(h.value, '$.speed_kmh') IS NOT NULL)
+       WHERE json_extract(h.value, '$.speed_kmh') IS NOT NULL
+         AND CAST(json_extract(h.value, '$.speed_kmh') AS REAL) > 0
+         AND CAST(json_extract(h.value, '$.speed_kmh') AS REAL) <= 80)
     ), 2) AS avg_speed,
     COUNT(*) AS total_starts
   FROM results r

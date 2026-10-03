@@ -51,7 +51,7 @@ function extractHeatSpeeds(rawScoresJson: string | null): number[] {
     const speeds: number[] = [];
     for (const heat of parsed.heats ?? []) {
       const speed = parseFloat(heat.speed_kmh);
-      if (!Number.isNaN(speed)) speeds.push(speed);
+      if (!Number.isNaN(speed) && speed > 0 && speed <= 80) speeds.push(speed);
     }
     return speeds;
   } catch {
@@ -66,7 +66,7 @@ function extractRacingEventData(rawScoresJson: string | null): { best_speed: str
     const speeds: number[] = [];
     for (const heat of parsed.heats ?? []) {
       const speed = parseFloat(heat.speed_kmh);
-      if (!Number.isNaN(speed)) speeds.push(speed);
+      if (!Number.isNaN(speed) && speed > 0 && speed <= 80) speeds.push(speed);
     }
     const bestSpeed = speeds.length > 0 ? Math.max(...speeds).toFixed(2) : null;
     

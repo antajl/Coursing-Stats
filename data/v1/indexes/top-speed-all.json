@@ -1,63 +1,8 @@
 {
   "schema": "coursing-stats/index-top-speed-v1",
   "year": null,
-  "count": 544,
+  "count": 543,
   "items": [
-    {
-      "dog_id": 10175,
-      "name_lat": "BRIZ",
-      "name_ru": "BRIZ",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "year_from": 2018,
-      "year_to": 2019,
-      "best_speed": 1728,
-      "avg_speed": 887.27,
-      "total_starts": 2
-    },
-    {
-      "dog_id": 10118,
-      "name_lat": "VOLYA VOLNAYA GOSPOZHA UDACHA",
-      "name_ru": "VOLYA VOLNAYA GOSPOZHA UDACHA",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "year_from": 2018,
-      "year_to": 2018,
-      "best_speed": 1728,
-      "avg_speed": 887.45,
-      "total_starts": 1
-    },
-    {
-      "dog_id": 10176,
-      "name_lat": "BOYARYNYA",
-      "name_ru": "BOYARYNYA",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "year_from": 2018,
-      "year_to": 2019,
-      "best_speed": 864,
-      "avg_speed": 864,
-      "total_starts": 2
-    },
-    {
-      "dog_id": 456,
-      "name_lat": "BORZIE SENAVIAN IGLA",
-      "name_ru": "БОРЗЫЕ СЕНАВИАН ИГЛА",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "year_from": 2018,
-      "year_to": 2025,
-      "best_speed": 864,
-      "avg_speed": 453.72,
-      "total_starts": 3
-    },
-    {
-      "dog_id": 10173,
-      "name_lat": "БОРЗЫЕ СЕНАВИАН ИМПЕРИЯ",
-      "name_ru": "БОРЗЫЕ СЕНАВИАН ИМПЕРИЯ",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "year_from": 2018,
-      "year_to": 2018,
-      "best_speed": 576,
-      "avg_speed": 309.81,
-      "total_starts": 1
-    },
     {
       "dog_id": 462,
       "name_lat": "ALPHAS LEGACY ALTAIR",
@@ -3480,6 +3425,17 @@
       "total_starts": 1
     },
     {
+      "dog_id": 10118,
+      "name_lat": "VOLYA VOLNAYA GOSPOZHA UDACHA",
+      "name_ru": "VOLYA VOLNAYA GOSPOZHA UDACHA",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2018,
+      "year_to": 2018,
+      "best_speed": 46.89,
+      "avg_speed": 46.89,
+      "total_starts": 1
+    },
+    {
       "dog_id": 9491,
       "name_lat": "BYSTRINA",
       "name_ru": "БЫСТРИНА",
@@ -3588,6 +3544,17 @@
       "best_speed": 46.619,
       "avg_speed": 46.17,
       "total_starts": 1
+    },
+    {
+      "dog_id": 10175,
+      "name_lat": "BRIZ",
+      "name_ru": "BRIZ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2018,
+      "year_to": 2019,
+      "best_speed": 46.55,
+      "avg_speed": 46.55,
+      "total_starts": 2
     },
     {
       "dog_id": 410,
@@ -4305,6 +4272,17 @@
       "total_starts": 4
     },
     {
+      "dog_id": 10173,
+      "name_lat": "БОРЗЫЕ СЕНАВИАН ИМПЕРИЯ",
+      "name_ru": "БОРЗЫЕ СЕНАВИАН ИМПЕРИЯ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2018,
+      "year_to": 2018,
+      "best_speed": 43.61,
+      "avg_speed": 43.61,
+      "total_starts": 1
+    },
+    {
       "dog_id": 10089,
       "name_lat": "LIME FOR LOVE",
       "name_ru": "LIME FOR LOVE",
@@ -4358,6 +4336,17 @@
       "best_speed": 43.45,
       "avg_speed": 42.82,
       "total_starts": 2
+    },
+    {
+      "dog_id": 456,
+      "name_lat": "BORZIE SENAVIAN IGLA",
+      "name_ru": "БОРЗЫЕ СЕНАВИАН ИГЛА",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2018,
+      "year_to": 2025,
+      "best_speed": 43.44,
+      "avg_speed": 43.44,
+      "total_starts": 3
     },
     {
       "dog_id": 398,
