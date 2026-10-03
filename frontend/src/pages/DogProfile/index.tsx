@@ -535,7 +535,6 @@ export default function DogProfile() {
           competitionTitles={titleGroups.competition}
           showRuName={!!showRuName}
           exporting={exporting}
-          onBack={() => navigate(-1)}
           onExport={handleExport}
           ranks={headerRanks}
           explainers={{

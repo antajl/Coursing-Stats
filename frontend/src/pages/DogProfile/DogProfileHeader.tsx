@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ChevronLeft, Star as StarIcon, Rabbit, Gauge, Sparkles } from 'lucide-react'
+import { Star as StarIcon, Rabbit, Gauge, Sparkles } from 'lucide-react'
 import { useState } from 'react'
 import OwnerCrownName from '../../components/OwnerCrownName'
 import type { DogTitle } from '../../lib/qualificationTitles'
@@ -39,7 +39,7 @@ type DogProfileHeaderProps = {
   competitionTitles: DogTitle[]
   showRuName: boolean
   exporting: boolean
-  onBack: () => void
+  onBack?: () => void
   onExport: () => void
   /** Места во всевременных рейтингах — показываем любые 1–3 из трёх. */
   ranks?: ProfileHeaderRank[]
@@ -172,7 +172,6 @@ export function DogProfileHeader({
   competitionTitles,
   showRuName,
   exporting,
-  onBack,
   onExport,
   ranks = [],
   explainers = {},
@@ -239,29 +238,7 @@ export function DogProfileHeader({
 
   return (
     <div className="relative mb-6">
-      {/* Десктопная кнопка назад (слева от карточки) */}
-      <button
-        type="button"
-        onClick={onBack}
-        className="hidden md:absolute md:right-full md:top-8 md:mr-1 md:inline-flex md:h-11 md:w-11 md:items-center md:justify-center md:rounded-lg md:text-old-money-500 md:transition-colors md:hover:bg-old-money-50 md:hover:text-camel-700"
-        aria-label="Назад"
-        data-export-ignore
-      >
-        <ChevronLeft className="h-5 w-5" aria-hidden />
-      </button>
       <div className="relative min-w-0 rounded-xl border border-old-money-200/80 bg-white p-4 sm:p-5 md:p-8">
-        {/* Мобильная кнопка Назад (внутри карточки сверху) */}
-        <div className="mb-3 flex items-center md:hidden" data-export-ignore>
-          <button
-            type="button"
-            onClick={onBack}
-            className="-ml-1 inline-flex items-center gap-1 rounded-lg px-2 py-1 text-xs font-semibold text-old-money-600 transition-colors hover:bg-old-money-50 hover:text-charcoal-900"
-            aria-label="Назад"
-          >
-            <ChevronLeft className="h-4 w-4 shrink-0 text-old-money-500" aria-hidden />
-            <span>Назад</span>
-          </button>
-        </div>
         <div className="flex items-start gap-4">
           <div className="min-w-0 flex-1">
             <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">

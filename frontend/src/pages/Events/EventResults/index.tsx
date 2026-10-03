@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useParams, Link, useNavigate } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { getEvent, getEventResults } from '../../../lib/staticData'
 import ErrorState from '../../../components/ErrorState'
 import SkeletonLoader from '../../../components/SkeletonLoader'
@@ -12,7 +12,6 @@ import type { Event, Result } from './types'
 
 export default function EventResults() {
   const { id } = useParams()
-  const navigate = useNavigate()
   const [event, setEvent] = useState<Event | null>(null)
   const [results, setResults] = useState<Result[]>([])
   const [loading, setLoading] = useState(true)
@@ -124,7 +123,7 @@ export default function EventResults() {
           />
         )}
 
-        <EventHeader event={event} results={results} onBack={() => navigate(-1)} />
+        <EventHeader event={event} results={results} />
         <ResultsSection results={results} />
       </div>
     </>

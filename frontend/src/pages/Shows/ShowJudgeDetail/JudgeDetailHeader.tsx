@@ -1,4 +1,4 @@
-import { ChevronLeft, Award, Layers, Calendar, CheckCircle2 } from 'lucide-react'
+import { Award, Layers, Calendar, CheckCircle2 } from 'lucide-react'
 import {
   GRADE_TILES,
   type GradeFilterKey,
@@ -97,7 +97,6 @@ export function JudgeDetailHeader({
   onSelectExhibitions,
   onSelectBreeds,
   onToggleGrade,
-  onBack,
 }: {
   judgeName: string
   yearParam: string
@@ -117,7 +116,6 @@ export function JudgeDetailHeader({
   onSelectExhibitions: () => void
   onSelectBreeds: () => void
   onToggleGrade: (key: GradeFilterKey) => void
-  onBack?: () => void
 }) {
   const displayName = formatJudgeDisplayName(judgeName)
   const initials = getJudgeInitials(judgeName)

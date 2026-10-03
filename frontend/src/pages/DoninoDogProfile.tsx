@@ -1,6 +1,6 @@
-import { useParams, useNavigate, useLocation } from 'react-router-dom'
+import { useParams, useLocation } from 'react-router-dom'
 import { useState, useEffect, useRef, useMemo } from 'react'
-import { ChevronLeft, Award, TrendingUp, Zap } from 'lucide-react'
+import { Award, TrendingUp, Zap } from 'lucide-react'
 import SkeletonLoader from '../components/SkeletonLoader'
 import ErrorState from '../components/ErrorState'
 import DogSexIcon from '../components/DogSexIcon'
@@ -14,7 +14,6 @@ import AnimatedMeterBar from '../components/AnimatedMeterBar'
 
 export default function DoninoDogProfile() {
   const { name, breed } = useParams()
-  const navigate = useNavigate()
   const location = useLocation()
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(true)
@@ -50,14 +49,6 @@ export default function DoninoDogProfile() {
       fetchDogData()
     }
   }, [name, breed])
-
-  const handleBack = () => {
-    if (fromCoursingRecords) {
-      navigate('/speed-records?tab=coursing')
-    } else {
-      navigate('/speed-records')
-    }
-  }
 
   // Calculate derived values with useMemo (must be before early returns)
   const hasSpeedRecords = useMemo(() => data?.speedStats?.total > 0, [data?.speedStats?.total])
@@ -251,28 +242,7 @@ export default function DoninoDogProfile() {
         <div ref={exportRef}>
           {/* Шапка профиля — кнопка «назад» вне потока на десктопе, внутри на мобильном */}
           <div className="relative mb-6">
-            <button
-              type="button"
-              onClick={handleBack}
-              className="hidden md:absolute md:right-full md:top-8 md:mr-1 md:inline-flex md:h-11 md:w-11 md:items-center md:justify-center md:rounded-lg md:text-old-money-500 md:transition-colors md:hover:bg-old-money-50 md:hover:text-camel-700"
-              aria-label="Назад"
-              data-export-ignore
-            >
-              <ChevronLeft className="h-5 w-5" aria-hidden />
-            </button>
             <div className="rounded-2xl border-2 border-old-money-200 bg-white p-4 sm:p-5 md:p-8 shadow-md">
-              {/* Мобильная кнопка Назад (внутри карточки сверху) */}
-              <div className="mb-3 flex items-center md:hidden" data-export-ignore>
-                <button
-                  type="button"
-                  onClick={handleBack}
-                  className="-ml-1 inline-flex items-center gap-1 rounded-lg px-2 py-1 text-xs font-semibold text-old-money-600 transition-colors hover:bg-old-money-50 hover:text-charcoal-900"
-                  aria-label="Назад"
-                >
-                  <ChevronLeft className="h-4 w-4 shrink-0 text-old-money-500" aria-hidden />
-                  <span>Назад</span>
-                </button>
-              </div>
               <div className="flex flex-col gap-4 md:flex-row md:gap-6 md:divide-x md:divide-old-money-200">
                 <div className="w-full md:w-1/2">
                   <div className="flex flex-wrap items-baseline gap-3 md:gap-4">
