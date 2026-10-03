@@ -32,9 +32,10 @@ export default function HoverTooltip({
   portal = false,
 }: HoverTooltipProps) {
   const triggerRef = useRef<HTMLSpanElement>(null)
+  const tooltipRef = useRef<HTMLSpanElement>(null)
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const [open, setOpen] = useState(false)
-  const [coords, setCoords] = useState({ top: 0, left: 0 })
+  const [coords, setCoords] = useState({ top: 0, left: 0, transformX: '-50%' })
   const tipId = useId()
   const useCssOnly = !portal && delayMs <= 0
 
@@ -48,9 +49,28 @@ export default function HoverTooltip({
   const updateCoords = () => {
     const rect = triggerRef.current?.getBoundingClientRect()
     if (!rect) return
+    const viewportWidth = window.innerWidth || document.documentElement.clientWidth || 360
+    const padding = 12
+    const triggerCenter = rect.left + rect.width / 2
+
+    const tipWidth = tooltipRef.current?.offsetWidth || (variant === 'site' ? 280 : 160)
+    const halfWidth = tipWidth / 2
+
+    let left = triggerCenter
+    let transformX = '-50%'
+
+    if (triggerCenter - halfWidth < padding) {
+      left = padding
+      transformX = '0%'
+    } else if (triggerCenter + halfWidth > viewportWidth - padding) {
+      left = viewportWidth - padding
+      transformX = '-100%'
+    }
+
     setCoords({
       top: placement === 'bottom' ? rect.bottom + 6 : rect.top - 6,
-      left: rect.left + rect.width / 2,
+      left,
+      transformX,
     })
   }
 
@@ -73,6 +93,7 @@ export default function HoverTooltip({
 
   useEffect(() => {
     if (!portal || !open) return
+    requestAnimationFrame(() => updateCoords())
     const onScrollOrResize = () => updateCoords()
     window.addEventListener('scroll', onScrollOrResize, true)
     window.addEventListener('resize', onScrollOrResize)
@@ -80,13 +101,32 @@ export default function HoverTooltip({
       window.removeEventListener('scroll', onScrollOrResize, true)
       window.removeEventListener('resize', onScrollOrResize)
     }
-    // updateCoords closes over placement; re-bind when placement/open changes
   }, [portal, open, placement])
+
+  // Tap outside to close on mobile
+  useEffect(() => {
+    if (!open) return
+    const handleOutside = (e: MouseEvent | TouchEvent) => {
+      const target = e.target as Node | null
+      if (
+        triggerRef.current &&
+        !triggerRef.current.contains(target) &&
+        tooltipRef.current &&
+        !tooltipRef.current.contains(target)
+      ) {
+        hide()
+      }
+    }
+    document.addEventListener('pointerdown', handleOutside)
+    return () => {
+      document.removeEventListener('pointerdown', handleOutside)
+    }
+  }, [open])
 
   const panelClass =
     variant === 'site'
-      ? 'min-w-[15.5rem] max-w-[19rem] whitespace-normal text-left text-[11px] leading-snug rounded-lg border border-old-money-300 bg-cream-50 px-3 py-2.5 font-normal text-charcoal-800 shadow-lg'
-      : 'max-w-[16rem] whitespace-pre-line text-left rounded-md bg-charcoal-800 px-2 py-1 text-xs font-normal text-white shadow-md'
+      ? 'w-[calc(100vw-24px)] sm:w-auto min-w-[14rem] max-w-[20rem] whitespace-normal text-left text-[11px] leading-snug rounded-lg border border-old-money-300 bg-cream-50 px-3 py-2.5 font-normal text-charcoal-800 shadow-lg'
+      : 'max-w-[calc(100vw-24px)] whitespace-pre-line text-left rounded-md bg-charcoal-800 px-2 py-1 text-xs font-normal text-white shadow-md'
 
   const pointerClass = interactive ? 'pointer-events-auto' : 'pointer-events-none'
 
@@ -99,14 +139,14 @@ export default function HoverTooltip({
     portal && open && typeof document !== 'undefined'
       ? createPortal(
           <span
+            ref={tooltipRef}
             id={tipId}
             role="tooltip"
-            className={`${pointerClass} fixed ${panelClass} -translate-x-1/2 ${
-              placement === 'bottom' ? '' : '-translate-y-full'
-            }`}
+            className={`${pointerClass} fixed ${panelClass}`}
             style={{ 
               top: coords.top, 
               left: coords.left,
+              transform: `translateX(${coords.transformX}) ${placement === 'bottom' ? '' : 'translateY(-100%)'}`,
               zIndex: 'var(--z-tooltip)'
             }}
           >
@@ -124,6 +164,13 @@ export default function HoverTooltip({
       onMouseLeave={useCssOnly ? undefined : hide}
       onFocus={useCssOnly ? undefined : show}
       onBlur={useCssOnly ? undefined : hide}
+      onClick={(e) => {
+        if (!useCssOnly) {
+          e.stopPropagation()
+          if (open) hide()
+          else show()
+        }
+      }}
       aria-describedby={!useCssOnly && open ? tipId : undefined}
     >
       {children}
