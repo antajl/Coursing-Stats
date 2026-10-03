@@ -290,3 +290,9 @@ export function uniqueCanonicalBreeds(breeds: Iterable<string | null | undefined
   }
   return [...set].sort((a, b) => a.localeCompare(b, 'ru'))
 }
+
+/** Человекочитаемое название породы (sentence case). */
+export function formatBreedName(breed: string): string {
+  if (!breed) return ''
+  return displayBreed(breed).primary || breed
+}

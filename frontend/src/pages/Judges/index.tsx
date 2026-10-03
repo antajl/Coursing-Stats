@@ -1,20 +1,20 @@
 import { useState, useEffect, useMemo, useRef } from 'react'
 import { useLocation } from 'react-router-dom'
+import { ChevronDown, X } from 'lucide-react'
 import { SEO } from '../../components/SEO'
 import { useYandexGoal } from '../../components/YandexMetrica'
 import JudgeCard from '../../components/JudgeCard'
 import PageToolbar from '../../components/toolbar/PageToolbar'
-import ToolbarFiltersDropdown from '../../components/toolbar/ToolbarFiltersDropdown'
-import ToolbarFilterOptionList from '../../components/toolbar/ToolbarFilterOptionList'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
-import { TOOLBAR_CHIP, TOOLBAR_CHIP_ACTIVE, TOOLBAR_CHIP_IDLE, TOOLBAR_FILTER_SECTION_LABEL } from '../../lib/toolbar'
-import { useJudges } from '../../hooks/useStaticData'
+import ModernDropdown from '../../components/ui/ModernDropdown'
+import BreedSearchDropdown from '../../components/ui/BreedSearchDropdown'
+import { toolbarPillTriggerClass } from '../../lib/toolbar'
+import { formatBreedName } from '../../lib/breedMapping'
+import { useJudges, useCompetingBreeds, useYears } from '../../hooks/useStaticData'
 import EmptyState from '../../components/EmptyState'
 import LoadingCard from '../../components/LoadingCard'
 import RecordSortBar from '../SpeedRecords/RecordSortBar'
 import { useListReveal } from '../../hooks/useListReveal'
-
-const CURRENT_SEASON = String(new Date().getFullYear())
 
 type SortKey = 'evals' | 'events' | 'avg'
 
@@ -38,6 +38,8 @@ export default function Judges() {
   const [filterYear, setFilterYear] = useState('')
   const [filterBreed, setFilterBreed] = useState('')
   const [filterDiscipline, setFilterDiscipline] = useState('')
+  const [yearOpen, setYearOpen] = useState(false)
+  const [disciplineOpen, setDisciplineOpen] = useState(false)
   const [sortKey, setSortKey] = useState<SortKey>('evals')
   const [sortDir, setSortDir] = useState<'desc' | 'asc'>('desc')
   const [isInitialLoad, setIsInitialLoad] = useState(true)
@@ -52,7 +54,18 @@ export default function Judges() {
     }
   }, [isEmbedded, reachGoal])
 
+  const { data: breedsData } = useCompetingBreeds()
+  const { data: yearsData } = useYears()
   const { data: judgesData, isLoading: loading } = useJudges(filterBreed, filterDiscipline, filterYear)
+
+  const dogIndex = breedsData?.success ? breedsData.data?.dogIndex || [] : []
+  const competingBreeds = breedsData?.success ? breedsData.data?.breeds || [] : []
+
+  const availableYears = useMemo(() => {
+    const rawYears = yearsData?.success ? yearsData.data?.years || [] : []
+    const strYears = rawYears.map(String).filter((y) => Number(y) >= 2021)
+    return strYears.length > 0 ? strYears : ['2026', '2025', '2024', '2023', '2022', '2021']
+  }, [yearsData])
 
   const judges = judgesData?.success
     ? Array.isArray(judgesData.data?.judges)
@@ -67,9 +80,12 @@ export default function Judges() {
       ? (judgesData.data?.available_breeds as string[] | undefined) ??
         (judgesData.data?.availableBreeds as string[] | undefined)
       : null
-    if (Array.isArray(fromApi) && fromApi.length > 0) return [...fromApi].sort()
-    return []
-  }, [judgesData])
+    const list = Array.isArray(fromApi) && fromApi.length > 0 ? fromApi : []
+    const set = new Set<string>()
+    for (const b of competingBreeds) set.add(b)
+    for (const b of list) set.add(b)
+    return Array.from(set)
+  }, [competingBreeds, judgesData])
 
   useEffect(() => {
     if (!loading && judges.length > 0) {
@@ -138,17 +154,10 @@ export default function Judges() {
   }, [visibleCount, sortedJudges.length])
 
   const hasActiveFilters = Boolean(filterYear || filterBreed || filterDiscipline || searchQuery)
-  const hasPanelFilters = Boolean(filterBreed || filterDiscipline)
-  const panelFilterCount = (filterBreed ? 1 : 0) + (filterDiscipline ? 1 : 0)
 
   const clearFilters = () => {
     setSearchQuery('')
     setFilterYear('')
-    setFilterBreed('')
-    setFilterDiscipline('')
-  }
-
-  const clearPanelFilters = () => {
     setFilterBreed('')
     setFilterDiscipline('')
   }
@@ -178,46 +187,149 @@ export default function Judges() {
                 className="w-full sm:w-auto min-w-0 sm:min-w-[200px] max-w-sm"
               />
               <div className="flex max-w-full items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5 w-full sm:w-auto sm:flex-wrap">
-                <ToolbarFiltersDropdown
-                  active={hasPanelFilters}
-                  activeCount={panelFilterCount}
-                  fillContent
-                  panelClassName="md:w-[min(400px,calc(100vw-2rem))]"
-                  onReset={clearPanelFilters}
-                  label="Фильтры"
+                {/* Year Dropdown */}
+                <ModernDropdown
+                  trigger={
+                    <button
+                      type="button"
+                      className={`shrink-0 ${toolbarPillTriggerClass(Boolean(filterYear))}`}
+                    >
+                      <span>{!filterYear ? 'Все года' : `Сезон ${filterYear}`}</span>
+                      <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
+                    </button>
+                  }
+                  isOpen={yearOpen}
+                  onOpenChange={setYearOpen}
+                  width="130px"
                 >
-                  <div className="flex min-h-0 flex-1 flex-col gap-3">
-                    <div className="flex min-h-[12rem] flex-1 flex-col md:min-h-0">
-                      <p className={TOOLBAR_FILTER_SECTION_LABEL}>Порода</p>
-                      <ToolbarFilterOptionList
-                        options={availableBreeds}
-                        value={filterBreed}
-                        onSelect={(breed) => setFilterBreed(filterBreed === breed ? '' : breed)}
-                        searchable
-                        searchPlaceholder="Найти породу…"
-                        fill
-                      />
-                    </div>
-                    <div className="shrink-0">
-                      <p className={TOOLBAR_FILTER_SECTION_LABEL}>Дисциплина</p>
-                      <ToolbarFilterOptionList
-                        options={DISCIPLINE_OPTIONS.map((o) => ({ value: o.value, label: o.label }))}
-                        value={filterDiscipline}
-                        onSelect={(discipline) =>
-                          setFilterDiscipline(filterDiscipline === discipline ? '' : discipline)
-                        }
-                      />
-                    </div>
+                  <div className="p-1 max-h-60 overflow-y-auto" role="menu">
+                    <button
+                      type="button"
+                      role="menuitem"
+                      onClick={() => {
+                        setFilterYear('')
+                        setYearOpen(false)
+                      }}
+                      className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
+                        !filterYear
+                          ? 'bg-camel-500 text-charcoal-900 font-semibold'
+                          : 'text-charcoal-700 hover:bg-camel-100'
+                      }`}
+                    >
+                      Все года
+                    </button>
+                    {availableYears.map((year) => (
+                      <button
+                        key={year}
+                        type="button"
+                        role="menuitem"
+                        onClick={() => {
+                          setFilterYear(year)
+                          setYearOpen(false)
+                        }}
+                        className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
+                          filterYear === year
+                            ? 'bg-camel-500 text-charcoal-900 font-semibold'
+                            : 'text-charcoal-700 hover:bg-camel-100'
+                        }`}
+                      >
+                        Сезон {year}
+                      </button>
+                    ))}
                   </div>
-                </ToolbarFiltersDropdown>
-                <button
-                  type="button"
-                  onClick={() => setFilterYear(filterYear === CURRENT_SEASON ? '' : CURRENT_SEASON)}
-                  aria-pressed={filterYear === CURRENT_SEASON}
-                  className={`shrink-0 ${TOOLBAR_CHIP} ${filterYear === CURRENT_SEASON ? TOOLBAR_CHIP_ACTIVE : TOOLBAR_CHIP_IDLE}`}
+                </ModernDropdown>
+
+                {/* Breed Dropdown (Searchable, sorted by count) */}
+                <BreedSearchDropdown
+                  breeds={availableBreeds}
+                  selectedBreed={filterBreed}
+                  onSelect={setFilterBreed}
+                  trigger={
+                    <button
+                      type="button"
+                      className={`shrink-0 ${toolbarPillTriggerClass(Boolean(filterBreed))}`}
+                    >
+                      <span className="truncate max-w-[140px]">
+                        {filterBreed ? formatBreedName(filterBreed) : 'Порода'}
+                      </span>
+                      <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
+                    </button>
+                  }
+                  dogIndex={dogIndex}
+                />
+
+                {/* Discipline Dropdown */}
+                <ModernDropdown
+                  trigger={
+                    <button
+                      type="button"
+                      className={`shrink-0 ${toolbarPillTriggerClass(Boolean(filterDiscipline))}`}
+                    >
+                      <span>
+                        {filterDiscipline
+                          ? DISCIPLINE_OPTIONS.find((d) => d.value === filterDiscipline)?.label || 'Дисциплина'
+                          : 'Дисциплина'}
+                      </span>
+                      <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
+                    </button>
+                  }
+                  isOpen={disciplineOpen}
+                  onOpenChange={setDisciplineOpen}
+                  width="150px"
                 >
-                  Сезон {CURRENT_SEASON}
-                </button>
+                  <div className="p-1 max-h-60 overflow-y-auto" role="menu">
+                    <button
+                      type="button"
+                      role="menuitem"
+                      onClick={() => {
+                        setFilterDiscipline('')
+                        setDisciplineOpen(false)
+                      }}
+                      className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
+                        !filterDiscipline
+                          ? 'bg-camel-500 text-charcoal-900 font-semibold'
+                          : 'text-charcoal-700 hover:bg-camel-100'
+                      }`}
+                    >
+                      Все дисциплины
+                    </button>
+                    {DISCIPLINE_OPTIONS.map((d) => (
+                      <button
+                        key={d.value}
+                        type="button"
+                        role="menuitem"
+                        onClick={() => {
+                          setFilterDiscipline(d.value)
+                          setDisciplineOpen(false)
+                        }}
+                        className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
+                          filterDiscipline === d.value
+                            ? 'bg-camel-500 text-charcoal-900 font-semibold'
+                            : 'text-charcoal-700 hover:bg-camel-100'
+                        }`}
+                      >
+                        {d.label}
+                      </button>
+                    ))}
+                  </div>
+                </ModernDropdown>
+
+                {/* Reset Filters button */}
+                {(filterYear || filterBreed || filterDiscipline) && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setFilterYear('')
+                      setFilterBreed('')
+                      setFilterDiscipline('')
+                    }}
+                    className="shrink-0 inline-flex items-center gap-1 rounded-lg px-2.5 py-1.5 text-xs font-medium text-old-money-600 hover:text-charcoal-900 hover:bg-cream-100 transition-colors"
+                    title="Сбросить все фильтры"
+                  >
+                    <X className="h-3.5 w-3.5" />
+                    <span>Сбросить</span>
+                  </button>
+                )}
 
                 {/* Mobile sort options inside the horizontal scroll row */}
                 <div className="sm:hidden flex items-center gap-1.5 shrink-0 pl-1 border-l border-old-money-200/80">
