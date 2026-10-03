@@ -447,13 +447,16 @@ export default function JudgeDetail() {
               </div>
 
               {/* Year Filter */}
-              <div className="self-end sm:self-center shrink-0">
+              <div className="flex items-center justify-between sm:justify-end gap-2 shrink-0 w-full sm:w-auto pt-2 border-t border-old-money-100/70 sm:border-0 sm:pt-0">
+                <span className="text-xs font-semibold uppercase tracking-wider text-charcoal-400 sm:hidden">
+                  Период:
+                </span>
                 <select
                   id="judge-year"
                   aria-label="Период"
                   value={yearParam}
                   onChange={(e) => setYear(e.target.value)}
-                  className="h-10 rounded-xl border border-old-money-200 bg-white px-3.5 text-sm font-medium text-charcoal-800 shadow-2xs hover:border-camel-400 focus:border-camel-500 focus:outline-none focus:ring-2 focus:ring-camel-100 transition-colors"
+                  className="h-9 sm:h-10 rounded-xl border border-old-money-200 bg-white px-3 sm:px-3.5 text-xs sm:text-sm font-medium text-charcoal-800 shadow-2xs hover:border-camel-400 focus:border-camel-500 focus:outline-none focus:ring-2 focus:ring-camel-100 transition-colors"
                 >
                   <option value="">Все года (всё время)</option>
                   {availableYears.map((y) => (
@@ -546,9 +549,10 @@ export default function JudgeDetail() {
             {/* Criteria Mini-Gauge Strip */}
             {sortedCriteria.length > 0 && (
               <div className="mt-6 border-t border-old-money-100 pt-5">
-                <div className="mb-3 flex items-center justify-between">
+                <div className="mb-3 flex items-center justify-between gap-2">
                   <p className="text-xs font-semibold uppercase tracking-wider text-charcoal-500">
-                    Средние оценки по 5 критериям FCI (шкала 0–20):
+                    <span className="sm:hidden">Критерии FCI (0–20):</span>
+                    <span className="hidden sm:inline">Средние оценки по 5 критериям FCI (шкала 0–20):</span>
                   </p>
                   <button
                     type="button"
@@ -557,12 +561,47 @@ export default function JudgeDetail() {
                       pendingScrollRef.current = true
                       listsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
                     }}
-                    className="text-xs font-medium text-camel-700 hover:text-camel-800 hover:underline"
+                    className="text-xs font-medium text-camel-700 hover:text-camel-800 hover:underline shrink-0"
                   >
                     Подробнее о шкале →
                   </button>
                 </div>
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5">
+
+                {/* Mobile view: single clean card with 5 equal vertical rows - balanced, no scroll needed */}
+                <div className="sm:hidden rounded-xl border border-old-money-200/80 bg-cream-50/40 p-3 divide-y divide-old-money-100/70">
+                  {CRITERIA_META.map((meta) => {
+                    const match = sortedCriteria.find(
+                      (c) => c.name?.toLowerCase() === meta.name.toLowerCase(),
+                    )
+                    const score = match?.avg_score != null ? Number(match.avg_score) : null
+                    const scorePct = score != null ? Math.min(100, Math.max(0, (score / 20) * 100)) : 0
+                    const Icon = meta.icon
+
+                    return (
+                      <div
+                        key={meta.id}
+                        className="flex items-center justify-between gap-2.5 py-2 first:pt-0 last:pb-0"
+                      >
+                        <span className="inline-flex items-center gap-1.5 text-xs font-medium text-charcoal-700 w-32 shrink-0">
+                          <Icon className="h-3.5 w-3.5 text-camel-600 shrink-0" />
+                          {meta.name}
+                        </span>
+                        <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-old-money-100">
+                          <div
+                            className={`h-full rounded-full ${meta.color} transition-all duration-500`}
+                            style={{ width: `${scorePct}%` }}
+                          />
+                        </div>
+                        <span className="w-8 text-right text-xs font-bold tabular-nums text-charcoal-900 shrink-0">
+                          {score != null ? score.toFixed(1) : '—'}
+                        </span>
+                      </div>
+                    )
+                  })}
+                </div>
+
+                {/* Desktop/Tablet view: grid */}
+                <div className="hidden sm:grid sm:grid-cols-3 lg:grid-cols-5 gap-2.5">
                   {CRITERIA_META.map((meta) => {
                     const match = sortedCriteria.find(
                       (c) => c.name?.toLowerCase() === meta.name.toLowerCase(),
@@ -600,26 +639,30 @@ export default function JudgeDetail() {
 
             {/* Disciplines filter pills */}
             <div className="mt-5 border-t border-old-money-100 pt-4">
-              <div className="flex flex-wrap items-center gap-2">
-                <span className="text-xs font-semibold uppercase tracking-wider text-charcoal-400 mr-1">Дисциплина:</span>
-                {DISCIPLINES.map(({ value, label }) => {
-                  const active = disciplineParam === value
-                  return (
-                    <button
-                      key={value || 'all'}
-                      type="button"
-                      aria-pressed={active}
-                      onClick={() => setDiscipline(value)}
-                      className={`rounded-lg px-3 py-1.5 text-xs font-semibold transition-all ${
-                        active
-                          ? 'border border-camel-500 bg-camel-600 text-white shadow-2xs'
-                          : 'border border-old-money-200 bg-white text-charcoal-700 hover:border-camel-300 hover:bg-cream-50'
-                      }`}
-                    >
-                      {label}
-                    </button>
-                  )
-                })}
+              <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+                <span className="text-xs font-semibold uppercase tracking-wider text-charcoal-400 shrink-0">
+                  Дисциплина:
+                </span>
+                <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5">
+                  {DISCIPLINES.map(({ value, label }) => {
+                    const active = disciplineParam === value
+                    return (
+                      <button
+                        key={value || 'all'}
+                        type="button"
+                        aria-pressed={active}
+                        onClick={() => setDiscipline(value)}
+                        className={`shrink-0 rounded-lg px-3 py-1.5 text-xs font-semibold transition-all ${
+                          active
+                            ? 'border border-camel-500 bg-camel-600 text-white shadow-2xs'
+                            : 'border border-old-money-200 bg-white text-charcoal-700 hover:border-camel-300 hover:bg-cream-50'
+                        }`}
+                      >
+                        {label}
+                      </button>
+                    )
+                  })}
+                </div>
               </div>
             </div>
           </div>
@@ -632,8 +675,8 @@ export default function JudgeDetail() {
           className="scroll-mt-20 rounded-2xl border border-old-money-200/80 bg-white shadow-xs"
         >
           {/* Tabs Navigation Bar */}
-          <div className="flex flex-wrap items-center justify-between gap-3 border-b border-old-money-100 px-4 pt-3 md:px-6">
-            <div className="flex flex-wrap gap-1">
+          <div className="flex items-center justify-between gap-3 border-b border-old-money-100 px-4 pt-3 md:px-6 overflow-x-auto no-scrollbar">
+            <div className="flex items-center gap-1 shrink-0 -mb-px">
               {(
                 [
                   { id: 'breeds' as const, label: 'Породы и собаки', count: breedCount },
@@ -645,7 +688,7 @@ export default function JudgeDetail() {
                   key={tab.id}
                   type="button"
                   onClick={() => setListTab(tab.id)}
-                  className={`rounded-t-lg px-4 py-2.5 text-sm font-semibold transition-colors ${
+                  className={`shrink-0 rounded-t-lg px-3.5 sm:px-4 py-2.5 text-xs sm:text-sm font-semibold transition-colors ${
                     listTab === tab.id
                       ? 'border-b-2 border-camel-600 text-camel-800'
                       : 'text-charcoal-500 hover:text-charcoal-800'
@@ -707,40 +750,40 @@ export default function JudgeDetail() {
                   </div>
 
                   {/* Sort Buttons */}
-                  <div className="flex items-center gap-1.5 shrink-0 text-xs">
-                    <span className="text-charcoal-400 mr-1 hidden sm:inline">Сортировка:</span>
+                  <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5 text-xs w-full sm:w-auto">
+                    <span className="text-charcoal-400 mr-1 hidden sm:inline shrink-0">Сортировка:</span>
                     <button
                       type="button"
                       onClick={() => setBreedSort(handleSortToggle('evaluations_count', breedSort))}
-                      className={`rounded-lg px-3 py-2 font-medium transition-colors ${
+                      className={`shrink-0 rounded-lg px-2.5 sm:px-3 py-1.5 sm:py-2 font-medium transition-colors ${
                         breedSort.field === 'evaluations_count'
                           ? 'bg-camel-100 text-camel-900 font-semibold shadow-2xs'
                           : 'border border-old-money-200 bg-white text-charcoal-600 hover:bg-cream-50'
                       }`}
                     >
-                      По забегам {breedSort.field === 'evaluations_count' ? (breedSort.direction === 'desc' ? '↓' : '↑') : ''}
+                      Забеги {breedSort.field === 'evaluations_count' ? (breedSort.direction === 'desc' ? '↓' : '↑') : ''}
                     </button>
                     <button
                       type="button"
                       onClick={() => setBreedSort(handleSortToggle('avg_score', breedSort))}
-                      className={`rounded-lg px-3 py-2 font-medium transition-colors ${
+                      className={`shrink-0 rounded-lg px-2.5 sm:px-3 py-1.5 sm:py-2 font-medium transition-colors ${
                         breedSort.field === 'avg_score'
                           ? 'bg-camel-100 text-camel-900 font-semibold shadow-2xs'
                           : 'border border-old-money-200 bg-white text-charcoal-600 hover:bg-cream-50'
                       }`}
                     >
-                      По ср. баллу {breedSort.field === 'avg_score' ? (breedSort.direction === 'desc' ? '↓' : '↑') : ''}
+                      Ср. балл {breedSort.field === 'avg_score' ? (breedSort.direction === 'desc' ? '↓' : '↑') : ''}
                     </button>
                     <button
                       type="button"
                       onClick={() => setBreedSort(handleSortToggle('breed', breedSort))}
-                      className={`rounded-lg px-3 py-2 font-medium transition-colors ${
+                      className={`shrink-0 rounded-lg px-2.5 sm:px-3 py-1.5 sm:py-2 font-medium transition-colors ${
                         breedSort.field === 'breed'
                           ? 'bg-camel-100 text-camel-900 font-semibold shadow-2xs'
                           : 'border border-old-money-200 bg-white text-charcoal-600 hover:bg-cream-50'
                       }`}
                     >
-                      По породе {breedSort.field === 'breed' ? (breedSort.direction === 'desc' ? '↓' : '↑') : ''}
+                      Порода {breedSort.field === 'breed' ? (breedSort.direction === 'desc' ? '↓' : '↑') : ''}
                     </button>
                   </div>
                 </div>

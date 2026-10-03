@@ -178,13 +178,16 @@ export function JudgeDetailHeader({
         </div>
 
         {/* Year Filter */}
-        <div className="self-end sm:self-center shrink-0">
+        <div className="flex items-center justify-between sm:justify-end gap-2 shrink-0 w-full sm:w-auto pt-2 border-t border-old-money-100/70 sm:border-0 sm:pt-0">
+          <span className="text-xs font-semibold uppercase tracking-wider text-charcoal-400 sm:hidden">
+            Период:
+          </span>
           <select
             id="judge-year"
             aria-label="Период"
             value={yearParam}
             onChange={(e) => onYearChange(e.target.value)}
-            className="h-10 rounded-xl border border-old-money-200 bg-white px-3.5 text-sm font-medium text-charcoal-800 shadow-2xs hover:border-camel-400 focus:border-camel-500 focus:outline-none focus:ring-2 focus:ring-camel-100 transition-colors"
+            className="h-9 sm:h-10 rounded-xl border border-old-money-200 bg-white px-3 sm:px-3.5 text-xs sm:text-sm font-medium text-charcoal-800 shadow-2xs hover:border-camel-400 focus:border-camel-500 focus:outline-none focus:ring-2 focus:ring-camel-100 transition-colors"
           >
             <option value="">Все года (всё время)</option>
             {availableYears.map((y) => (
