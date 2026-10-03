@@ -4,7 +4,7 @@
  * Modules: `backend/scripts/build-derived/` (top, judges, dog-profiles, sitemap, bot-search).
  * Usage: npx tsx backend/scripts/build-derived-indexes.ts
  */
-import { openDb } from './build-derived/shared';
+import { openDb, ROOT } from './build-derived/shared';
 import { buildTopIndexes, buildTopSpeedIndexes, buildYearsIndex } from './build-derived/top-indexes';
 import { buildJudgesSummary, buildJudgeDetails } from './build-derived/judges-indexes';
 import { buildDogProfiles } from './build-derived/dog-profiles';
@@ -28,7 +28,7 @@ function main() {
   console.log('Building bot search compact index...');
   try {
     execSync('node backend/scripts/build-derived/bot-search-compact.cjs', { 
-      cwd: path.resolve(__dirname, '../..')
+      cwd: ROOT
     });
   } catch (error) {
     console.warn('Bot search compact index build failed (non-critical):', error.message);

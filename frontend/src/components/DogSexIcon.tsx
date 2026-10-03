@@ -7,7 +7,8 @@ interface DogSexIconProps {
 }
 
 export default function DogSexIcon({ sex, className = '', size = 16 }: DogSexIconProps) {
-  if (sex === 'Сука' || sex === 'С') {
+  const s = sex.trim().toLowerCase()
+  if (s === 'сука' || s === 'с' || s === 'female' || s === 'f') {
     return (
       <Venus
         size={size}
@@ -19,14 +20,14 @@ export default function DogSexIcon({ sex, className = '', size = 16 }: DogSexIco
     )
   }
 
-  if (sex === 'Кобель' || sex === 'К') {
+  if (s === 'кобель' || s === 'к' || s === 'male' || s === 'm') {
     return (
       <Mars
         size={size}
         strokeWidth={2}
         className={`shrink-0 text-slate-500 ${className}`}
-        aria-label="Кабель"
-        title="Кабель"
+        aria-label="Кобель"
+        title="Кобель"
       />
     )
   }
