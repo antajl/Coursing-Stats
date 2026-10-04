@@ -42,6 +42,8 @@ Skill: `shows-pdf-pipeline`.
 - `backend/lib/cdn-packs.ts` — общий шардер паков
 - `backend/parsers/shows/parse-rkf-certificate-pdf.ts` — barrel → `rkf-cert/*`
 - `backend/scripts/shows/*`, `backend/lib/show-dog-dedupe.ts`
+- `backend/scripts/repair/repair-2026-shows.ts` — ремонт пород, судей, кличек и результатов в JSON-протоколах выставок
+- `backend/scripts/repair/repair-sqlite-2026.ts` — ремонт базы `exhibitions-rkf-archive.sqlite`
 - `backend/tests/parse-rkf-certificate-pdf.test.ts`
 
 ## Workflows
@@ -53,6 +55,9 @@ yarn run parse-rkf-reports
 yarn run rebuild-show-year
 # Turso:
 yarn run turso:import-shows
+# Ремонт данных 2026:
+npx tsx backend/scripts/repair/repair-2026-shows.ts
+npx tsx backend/scripts/repair/repair-sqlite-2026.ts
 ```
 
 Local без `data/local/shows/exhibitions-rkf`: **не** форсить полный show rebuild в CI-пути.
