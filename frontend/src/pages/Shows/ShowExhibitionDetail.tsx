@@ -67,7 +67,7 @@ export default function ShowExhibitionDetail() {
   }, [isExhibitionLoading])
 
   const availableAwards = useMemo(
-    () => (exhibition ? collectExhibitionAwardKeys(exhibition.results) : []),
+    () => (exhibition?.results ? collectExhibitionAwardKeys(exhibition.results) : []),
     [exhibition]
   )
 
@@ -122,7 +122,7 @@ export default function ShowExhibitionDetail() {
       />
       <ExhibitionHeader exhibition={exhibition} />
 
-      {exhibition.results.length > 0 || hasCatalog ? (
+      {(exhibition.results?.length ?? 0) > 0 || hasCatalog ? (
         <div className="mb-4">
           <PageToolbar
             bare
@@ -164,13 +164,13 @@ export default function ShowExhibitionDetail() {
       {hasCatalog ? (
         <CatalogResultsSection
           catalog={exhibition.breed_catalog!}
-          results={exhibition.results}
+          results={exhibition.results ?? []}
           searchQuery={searchQuery}
           awardKey={awardKey}
         />
-      ) : exhibition.results.length > 0 ? (
+      ) : (exhibition.results?.length ?? 0) > 0 ? (
         <LegacyResultsSection
-          results={exhibition.results}
+          results={exhibition.results ?? []}
           searchQuery={searchQuery}
           awardKey={awardKey}
         />

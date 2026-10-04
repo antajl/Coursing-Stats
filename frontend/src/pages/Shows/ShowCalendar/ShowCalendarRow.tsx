@@ -1,4 +1,4 @@
-import { ChevronRight } from 'lucide-react'
+import { ArrowRight, ChevronDown, ChevronUp } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import type { ShowRkfCalendarEntry } from '../../../lib/staticData'
 import {
@@ -38,10 +38,13 @@ function rankTokens(exhibition: ShowRkfCalendarEntry): string[] {
     .filter(Boolean)
 }
 
-function rowSurfaceClass(hasProtocol: boolean): string {
+function rowSurfaceClass(isMulti: boolean, hasProtocol: boolean): string {
+  if (isMulti) {
+    return 'border border-camel-200/90 border-l-4 border-l-camel-600 bg-[#FDFBF7] hover:bg-camel-50/80 shadow-[0_1px_2px_rgba(0,0,0,0.02)]'
+  }
   return hasProtocol
-    ? 'border border-warm-blue-200 border-l-4 border-l-warm-blue-500 bg-warm-blue-50/60 hover:bg-warm-blue-100/80'
-    : 'border border-old-money-200 border-l-4 border-l-camel-500 bg-cream-50 hover:bg-camel-100'
+    ? 'border border-warm-blue-200/90 border-l-4 border-l-warm-blue-500 bg-warm-blue-50/50 hover:bg-warm-blue-100/70 shadow-[0_1px_2px_rgba(0,0,0,0.02)]'
+    : 'border border-old-money-200 border-l-4 border-l-camel-300 bg-cream-50 hover:bg-camel-100/70 shadow-[0_1px_2px_rgba(0,0,0,0.02)]'
 }
 
 export interface ShowCalendarRowProps {
@@ -61,18 +64,18 @@ export function ShowCalendarRow({
   const dateParts = formatShowDate(exhibition.date)
   const isLc = group.hasLc
   const hasProtocol = group.hasProtocol
+
   const singleLocalPath = (() => {
     if (isMulti) return null
-    // LC exhibitions with protocol
     if (isLc && exhibition.lc_exhibition_id) {
       return `/shows/exhibition/${exhibition.lc_exhibition_id}`
     }
-    // RKF exhibitions (now in Turso) - always link to local detail page
     if (exhibition.source === 'rkf' && exhibition.id) {
       return `/shows/exhibition/${exhibition.id}`
     }
     return null
   })()
+
   const rkfUrl = exhibitionRkfUrl(exhibition)
   const reportUrl = exhibition.reports_link?.trim() || null
   const bisReportUrl = exhibition.bis_reports_link?.trim() || null
@@ -80,10 +83,6 @@ export function ShowCalendarRow({
   const place = exhibition.city || exhibition.location || ''
   const subtitle = isMulti ? null : monoSubtitle(exhibition)
   const ranks = isMulti ? collectGroupRanks(group.children) : rankTokens(exhibition)
-
-  const titleClass = singleLocalPath
-    ? 'min-w-0 truncate leading-[1.3em] text-[13.5px] font-semibold text-charcoal-900 group-hover:text-camel-700'
-    : 'min-w-0 truncate leading-[1.3em] text-[13.5px] font-semibold text-charcoal-900'
 
   const openReport = () => {
     if (reportUrl) {
@@ -106,14 +105,14 @@ export function ShowCalendarRow({
   const interactive = isMulti || Boolean(singleLocalPath) || Boolean(reportUrl)
 
   return (
-    <div className="mb-1.5">
+    <div className="mb-2">
       <div
         role={interactive ? (isMulti ? 'button' : 'link') : undefined}
         tabIndex={interactive ? 0 : undefined}
         aria-expanded={isMulti ? expanded : undefined}
         aria-label={
           isMulti
-            ? `${expanded ? 'Свернуть' : 'Развернуть'} варианты: ${exhibition.title}`
+            ? `${expanded ? 'Свернуть' : 'Развернуть'} группу: ${exhibition.title}`
             : singleLocalPath
               ? `Открыть результаты: ${exhibition.title}`
               : undefined
@@ -129,61 +128,165 @@ export function ShowCalendarRow({
               }
             : undefined
         }
-        className={`group grid grid-cols-[4.5rem_minmax(0,1fr)] sm:grid-cols-[5rem_minmax(0,1fr)_7.75rem] items-center gap-3 sm:gap-4 rounded-lg px-3 py-2.5 sm:px-3 sm:py-2.5 transition-colors ${
+        className={`group flex flex-col sm:grid sm:grid-cols-[5rem_minmax(0,1fr)_auto] items-start sm:items-center gap-2 sm:gap-4 rounded-lg p-3 sm:py-2.5 transition-all ${
           interactive ? 'cursor-pointer' : 'cursor-default'
-        } ${rowSurfaceClass(hasProtocol)}`}
+        } ${rowSurfaceClass(isMulti, hasProtocol)}`}
       >
-        <div className="w-[4.75rem] shrink-0 self-center text-sm leading-tight text-charcoal-800 sm:w-[5rem]">
-          {dateParts ? (
-            <span className="block whitespace-nowrap font-semibold tabular-nums">
-              {dateParts}
-            </span>
-          ) : (
-            '—'
-          )}
-        </div>
+        {/* Date + Title / Details container */}
+        <div className="flex items-start sm:contents w-full gap-3">
+          {/* Date Column */}
+          <div className="w-[4.5rem] sm:w-[5rem] shrink-0 pt-0.5 sm:pt-0 text-sm leading-tight text-charcoal-800">
+            {dateParts ? (
+              <span className="block whitespace-nowrap font-semibold tabular-nums">
+                {dateParts}
+              </span>
+            ) : (
+              '—'
+            )}
+          </div>
 
-        <div className="min-w-0">
-          <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2">
-            <div className="flex min-w-0 items-center gap-1.5">
-              {isMulti ? (
-                <ChevronRight
-                  className={`h-3.5 w-3.5 shrink-0 text-charcoal-500 transition-transform ${
-                    expanded ? 'rotate-90' : ''
-                  }`}
-                  aria-hidden
-                />
-              ) : null}
-              <span className={titleClass}>{exhibition.title}</span>
+          {/* Main Info Column */}
+          <div className="min-w-0 flex-1">
+            <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
+              {/* Multi-indicator pill on left of title */}
+              {isMulti && (
+                <span className="inline-flex items-center gap-1 rounded bg-camel-200/80 px-2 py-0.5 text-[11px] font-semibold text-camel-900 border border-camel-300">
+                  {expanded ? <ChevronUp className="h-3 w-3" /> : <ChevronDown className="h-3 w-3" />}
+                  <span>{formatShowCount(group.children.length)}</span>
+                </span>
+              )}
+
+              {/* Single Protocol Badge for desktop */}
+              {!isMulti && singleLocalPath && (
+                <span className="hidden sm:inline-flex items-center gap-1 rounded bg-warm-blue-100 px-1.5 py-0.5 text-[11px] font-semibold text-warm-blue-800 border border-warm-blue-200">
+                  Протокол
+                </span>
+              )}
+
+              <span
+                className={`min-w-0 leading-[1.3em] text-[13.5px] font-semibold ${
+                  singleLocalPath
+                    ? 'text-charcoal-900 group-hover:text-warm-blue-700 transition-colors'
+                    : isMulti
+                      ? 'text-charcoal-900 group-hover:text-camel-800 transition-colors'
+                      : 'text-charcoal-900'
+                }`}
+              >
+                {exhibition.title}
+              </span>
+
+              {ranks.length > 0 && (
+                <div className="flex shrink-0 flex-wrap items-center gap-1">
+                  {ranks.slice(0, 4).map((rank) => (
+                    <span key={rank} className={RANK_CHIP}>
+                      {rank}
+                    </span>
+                  ))}
+                  {ranks.length > 4 && (
+                    <span className={RANK_CHIP}>
+                      +{ranks.length - 4}
+                    </span>
+                  )}
+                </div>
+              )}
             </div>
-            {ranks.length > 0 && (
-              <div className="mt-1 sm:mt-0 flex shrink-0 flex-wrap items-center gap-1">
-                {ranks.slice(0, 4).map((rank) => (
-                  <span key={rank} className={RANK_CHIP}>
-                    {rank}
-                  </span>
-                ))}
-                {ranks.length > 4 && (
-                  <span className={RANK_CHIP}>
-                    +{ranks.length - 4}
-                  </span>
-                )}
+
+            {subtitle && (
+              <div className="mt-0.5 truncate text-xs font-medium text-charcoal-700">
+                {subtitle}
+              </div>
+            )}
+            {(place || exhibition.club) && (
+              <div className="mt-0.5 truncate text-xs text-charcoal-500">
+                {[place, exhibition.club].filter(Boolean).join(' · ')}
               </div>
             )}
           </div>
-          {subtitle && (
-            <div className="mt-0.5 truncate text-xs font-medium text-charcoal-700">
-              {subtitle}
+        </div>
+
+        {/* Mobile Action Rows */}
+        {isMulti && (
+          <div className="w-full sm:hidden mt-1 pt-1.5 border-t border-camel-200/60">
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation()
+                onToggleExpanded(group.key)
+              }}
+              className="w-full flex items-center justify-center gap-1.5 rounded-md bg-camel-100/90 py-1.5 text-xs font-semibold text-camel-900 border border-camel-200/90 active:bg-camel-200 transition-colors"
+            >
+              {expanded ? <ChevronUp className="h-3.5 w-3.5" /> : <ChevronDown className="h-3.5 w-3.5" />}
+              <span>{expanded ? 'Свернуть список' : `Показать ${formatShowCount(group.children.length)}`}</span>
+            </button>
+          </div>
+        )}
+
+        {!isMulti && (
+          <div className="w-full sm:hidden mt-1 pt-1.5 border-t border-old-money-200/60 flex flex-wrap items-center justify-between gap-1.5">
+            {singleLocalPath ? (
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation()
+                  navigate(singleLocalPath)
+                }}
+                className="inline-flex items-center gap-1 rounded-md bg-warm-blue-600 px-3 py-1 text-xs font-semibold text-white shadow-sm active:bg-warm-blue-700 transition-colors"
+              >
+                <span>Протокол</span>
+                <ArrowRight className="h-3 w-3" />
+              </button>
+            ) : (
+              <span />
+            )}
+            <div className="flex flex-wrap items-center gap-1.5">
+              <OutboundLinks
+                rkfUrl={rkfUrl}
+                reportUrl={reportUrl}
+                bisReportUrl={bisReportUrl}
+                notStartedYet={notStartedYet}
+              />
             </div>
-          )}
-          {(place || exhibition.club) && (
-            <div className="mt-0.5 truncate text-xs text-charcoal-500">
-              {[place, exhibition.club].filter(Boolean).join(' · ')}
-            </div>
-          )}
-          {/* Mobile: outbound links only for single rows (multi → children). */}
-          {!isMulti && (
-            <div className="mt-1 flex flex-wrap items-center gap-1.5 sm:hidden">
+          </div>
+        )}
+
+        {/* Desktop Action Column (Right) */}
+        <div className="hidden sm:flex shrink-0 flex-col items-end justify-center gap-1.5 self-stretch pl-4 border-l border-old-money-200/80 min-w-[9.5rem]">
+          {isMulti ? (
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation()
+                onToggleExpanded(group.key)
+              }}
+              className="inline-flex items-center gap-1.5 rounded-lg border border-camel-300 bg-camel-100/80 px-3 py-1 text-xs font-semibold text-camel-900 shadow-sm hover:bg-camel-200/90 active:bg-camel-300 transition-colors"
+            >
+              <span>{expanded ? 'Свернуть' : 'Развернуть'}</span>
+              {expanded ? <ChevronUp className="h-3.5 w-3.5" /> : <ChevronDown className="h-3.5 w-3.5" />}
+            </button>
+          ) : singleLocalPath ? (
+            <>
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation()
+                  navigate(singleLocalPath)
+                }}
+                className="inline-flex items-center gap-1.5 rounded-lg bg-warm-blue-600 px-3 py-1 text-xs font-semibold text-white shadow-sm hover:bg-warm-blue-700 active:bg-warm-blue-800 transition-colors"
+              >
+                <span>Протокол</span>
+                <ArrowRight className="h-3.5 w-3.5" />
+              </button>
+              <div className="flex items-center gap-1">
+                <OutboundLinks
+                  rkfUrl={rkfUrl}
+                  reportUrl={reportUrl}
+                  bisReportUrl={bisReportUrl}
+                  notStartedYet={notStartedYet}
+                />
+              </div>
+            </>
+          ) : (
+            <div className="flex flex-col items-end gap-1">
               <OutboundLinks
                 rkfUrl={rkfUrl}
                 reportUrl={reportUrl}
@@ -192,32 +295,12 @@ export function ShowCalendarRow({
               />
             </div>
           )}
-          {isMulti && (
-            <div className="mt-1 text-[11px] text-charcoal-500 sm:hidden">
-              {formatShowCount(group.children.length)} · нажмите, чтобы{' '}
-              {expanded ? 'свернуть' : 'развернуть'}
-            </div>
-          )}
-        </div>
-
-        <div className="hidden sm:flex w-[7.75rem] shrink-0 flex-col items-end justify-center gap-1 self-stretch pl-3 border-l border-old-money-200/80">
-          {!isMulti ? (
-            <OutboundLinks
-              rkfUrl={rkfUrl}
-              reportUrl={reportUrl}
-              bisReportUrl={bisReportUrl}
-              notStartedYet={notStartedYet}
-            />
-          ) : (
-            <span className="w-full whitespace-nowrap text-right text-[11px] leading-tight text-charcoal-500">
-              {formatShowCount(group.children.length)}
-            </span>
-          )}
         </div>
       </div>
 
+      {/* Expanded Multi-exhibitions List */}
       {expanded ? (
-        <ul className="mt-0.5 mb-1 ml-2 sm:ml-[5rem] space-y-1 sm:space-y-0.5 border-l-2 border-old-money-200/80 pl-2 sm:pl-3">
+        <ul className="mt-1 mb-2 ml-2 sm:ml-[5.5rem] space-y-1.5 border-l-2 border-camel-300 pl-2 sm:pl-3">
           {group.children.map((child) => {
             const childRkf = exhibitionRkfUrl(child)
             const childReport = child.reports_link?.trim() || null
@@ -258,23 +341,42 @@ export function ShowCalendarRow({
                       }
                     : undefined
                 }
-                className={`flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 sm:gap-3 rounded-md px-2.5 py-2 sm:py-1.5 text-xs ${
-                  child.has_lc_protocol
-                    ? 'bg-warm-blue-50/70'
-                    : 'bg-cream-50/80'
-                } ${childInteractive ? 'cursor-pointer hover:bg-camel-100' : ''}`}
+                className={`flex flex-col sm:flex-row sm:items-center justify-between gap-2 rounded-lg border border-old-money-200/80 bg-white/90 p-2.5 text-xs transition-all shadow-[0_1px_2px_rgba(0,0,0,0.02)] ${
+                  childInteractive ? 'cursor-pointer hover:border-camel-300 hover:bg-camel-50/50' : ''
+                }`}
               >
                 <div className="min-w-0 flex-1">
-                  <span className="font-medium text-charcoal-800">
-                    {childHeading}
-                  </span>
-                  {childRanks.length > 0 ? (
-                    <span className="ml-2 font-mono text-[11px] text-charcoal-500">
-                      {childRanks.join(', ')}
+                  <div className="flex flex-wrap items-center gap-1.5">
+                    <span className="font-semibold text-charcoal-900">
+                      {childHeading}
                     </span>
-                  ) : null}
+                    {childRanks.length > 0 && (
+                      <span className="font-mono text-[11px] text-charcoal-500">
+                        {childRanks.join(', ')}
+                      </span>
+                    )}
+                  </div>
+                  {child.club && (
+                    <div className="text-[11px] text-charcoal-500 mt-0.5 truncate">
+                      {child.club}
+                    </div>
+                  )}
                 </div>
+
                 <div className="flex shrink-0 flex-wrap items-center gap-1.5 self-start sm:self-auto">
+                  {childLcPath && (
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        navigate(childLcPath)
+                      }}
+                      className="inline-flex items-center gap-1 rounded-md bg-warm-blue-600 px-2 py-0.5 text-[11px] font-semibold text-white shadow-sm hover:bg-warm-blue-700 active:bg-warm-blue-800 transition-colors"
+                    >
+                      <span>Протокол</span>
+                      <ArrowRight className="h-3 w-3" />
+                    </button>
+                  )}
                   <OutboundLinks
                     rkfUrl={childRkf}
                     reportUrl={childReport}
