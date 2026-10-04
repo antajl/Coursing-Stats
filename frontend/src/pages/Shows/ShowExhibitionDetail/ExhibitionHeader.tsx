@@ -1,35 +1,8 @@
-import type { ReactNode } from 'react'
+import { Calendar, Users, PawPrint, MapPin } from 'lucide-react'
 import LazyImage from '../../../components/LazyImage'
-import BreedGroupDivider from '../../Events/EventResults/components/BreedGroupDivider'
+import HoverTooltip from '../../../components/ui/HoverTooltip'
 import { resolveRkfOnlineExhibitionUrl, rkfExhibitionResultsUrl } from '../../../lib/rkfLinks'
 import type { ShowExhibition } from './types'
-
-function StatPill({
-  value,
-  label,
-  className = '',
-  valueClassName = '',
-}: {
-  value: ReactNode
-  label: string
-  className?: string
-  valueClassName?: string
-}) {
-  return (
-    <div
-      className={`rounded-lg border border-old-money-200 bg-white/80 px-3 py-2 ${className}`}
-    >
-      <div
-        className={`font-serif font-bold tabular-nums leading-tight text-charcoal-900 ${valueClassName || 'text-lg md:text-xl'}`}
-      >
-        {value}
-      </div>
-      <div className="mt-0.5 text-[10px] font-medium uppercase tracking-wide text-old-money-500">
-        {label}
-      </div>
-    </div>
-  )
-}
 
 export function ExhibitionHeader({ exhibition }: { exhibition: ShowExhibition }) {
   const resultsCount = exhibition.results.length
@@ -48,25 +21,68 @@ export function ExhibitionHeader({ exhibition }: { exhibition: ShowExhibition })
     .map((v) => (typeof v === 'string' ? v.trim() : ''))
     .filter(Boolean)
     .join(' · ')
+  const locationText = exhibition.location || '—'
 
   return (
-    <div className="relative mb-6">
-      <div className="min-w-0 rounded-xl border border-old-money-200 bg-cream-50 p-4 sm:p-4 md:p-5">
-        <div className="flex items-start justify-between gap-2">
-          <h1 className="min-w-0 font-serif text-xl font-bold leading-tight tracking-tight text-charcoal-900 md:text-2xl">
-            {rkfUrl ? (
-              <a
-                href={rkfUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition-colors hover:text-camel-700"
-              >
-                {exhibition.title}
-              </a>
-            ) : (
-              exhibition.title
-            )}
-          </h1>
+    <div className="relative mb-4">
+      <div className="min-w-0 rounded-xl border border-old-money-200 bg-gradient-to-br from-cream-50 to-white px-4 py-4 md:px-5 md:py-4.5">
+        <div className="flex items-start justify-between gap-3">
+          <div className="min-w-0 flex-1">
+            <h1 className="min-w-0 font-serif text-lg font-bold leading-tight tracking-tight text-charcoal-900 md:text-xl">
+              {rkfUrl ? (
+                <a
+                  href={rkfUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-colors hover:text-camel-700"
+                >
+                  {exhibition.title}
+                </a>
+              ) : (
+                exhibition.title
+              )}
+            </h1>
+
+            <div className="mt-3 flex flex-wrap gap-3">
+              <div className="flex items-center gap-2 rounded-lg bg-white/60 px-3 py-2 shrink-0">
+                <Calendar className="h-4 w-4 text-camel-600" />
+                <div>
+                  <div className="text-[10px] uppercase tracking-wide text-old-money-500">Дата</div>
+                  <div className="text-sm font-semibold text-charcoal-900">{exhibition.date || '—'}</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 rounded-lg bg-white/60 px-3 py-2 shrink-0">
+                <Users className="h-4 w-4 text-camel-600" />
+                <div>
+                  <div className="text-[10px] uppercase tracking-wide text-old-money-500">Результатов</div>
+                  <div className="text-sm font-semibold text-charcoal-900">{resultsCount}</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 rounded-lg bg-white/60 px-3 py-2 shrink-0">
+                <PawPrint className="h-4 w-4 text-camel-600" />
+                <div>
+                  <div className="text-[10px] uppercase tracking-wide text-old-money-500">Пород</div>
+                  <div className="text-sm font-semibold text-charcoal-900">{breedsCount}</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 rounded-lg bg-white/60 px-3 py-2 min-w-0 flex-1">
+                <MapPin className="h-4 w-4 text-camel-600 shrink-0" />
+                <div className="min-w-0 flex-1">
+                  <div className="text-[10px] uppercase tracking-wide text-old-money-500">Место</div>
+                  <div className="text-sm font-semibold text-charcoal-900">
+                    {locationText.length > 30 ? (
+                      <HoverTooltip label={locationText} placement="bottom" variant="site" delayMs={0} portal>
+                        <span className="cursor-help line-clamp-2">{locationText}</span>
+                      </HoverTooltip>
+                    ) : (
+                      locationText
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {rkfUrl ? (
             <a
               href={rkfUrl}
@@ -88,29 +104,10 @@ export function ExhibitionHeader({ exhibition }: { exhibition: ShowExhibition })
           ) : null}
         </div>
 
-        <BreedGroupDivider />
-
-        <div className="mb-2 grid grid-cols-2 gap-2 sm:grid-cols-4 md:mb-3">
-          <StatPill value={exhibition.date || '—'} label="дата" />
-          <StatPill value={resultsCount} label="результатов" />
-          <StatPill value={breedsCount} label="пород" />
-          <StatPill
-            value={
-              exhibition.location ? (
-                <span className="block truncate text-sm leading-snug md:text-base" title={exhibition.location}>
-                  {exhibition.location}
-                </span>
-              ) : (
-                '—'
-              )
-            }
-            label="место"
-            valueClassName="text-sm md:text-base"
-          />
-        </div>
-
         {metaLine ? (
-          <p className="text-sm leading-snug text-charcoal-600">{metaLine}</p>
+          <div className="mt-3 pt-3 border-t border-old-money-200/60">
+            <p className="text-sm leading-snug text-charcoal-600">{metaLine}</p>
+          </div>
         ) : null}
       </div>
     </div>

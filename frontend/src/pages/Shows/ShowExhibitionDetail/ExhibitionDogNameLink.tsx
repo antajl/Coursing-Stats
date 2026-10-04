@@ -26,7 +26,7 @@ export function ExhibitionDogNameLink({
   const content = (
     <>
       {ringLabel ? (
-        <span className="mr-1.5 font-mono text-xs tabular-nums text-charcoal-500">
+        <span className="mr-1.5 inline-flex items-center rounded bg-old-money-100 px-1 font-mono text-xs tabular-nums text-charcoal-600">
           ({ringLabel})
         </span>
       ) : null}
