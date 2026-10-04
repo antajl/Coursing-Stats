@@ -42,6 +42,7 @@ import {
   collapseShowDogsByNamePrefix,
 } from '../lib/show-dog-dedupe'
 import { getExhibitionsRkfStore } from '../lib/exhibitions-rkf-store'
+import { canonicalBreed } from '../src/lib/breed-mapping'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -161,11 +162,12 @@ function buildDogRanking(exhibitions: ShowExhibition[]): ShowDog[] {
       const nameLat = parsed.name_lat
       if (!nameLat) continue
 
+      const breed = canonicalBreed(result.breed)
       const provisional: Pick<ShowDog, 'id' | 'name_lat' | 'name_ru' | 'breed' | 'breed_en'> = {
         id: parsed.id || nameLat,
         name_lat: nameLat,
         name_ru: parsed.name_ru,
-        breed: result.breed,
+        breed,
         breed_en: result.breed_en,
       }
       const key = showDogMergeKey(provisional as ShowDog)
@@ -212,7 +214,7 @@ function buildDogRanking(exhibitions: ShowExhibition[]): ShowDog[] {
           id: parsed.id || key,
           name_lat: nameLat,
           name_ru: parsed.name_ru,
-          breed: result.breed,
+          breed,
           breed_en: result.breed_en,
           breed_group: result.breed_group,
           sex: '',
@@ -417,7 +419,7 @@ async function main() {
       const content = fs.readFileSync(filePath, 'utf-8')
       const exhibition = JSON.parse(content) as ShowExhibition
       const year = extractYear(exhibition.date)
-      if (year === targetYear) {
+      if (year === String(targetYear)) {
         yearFiles.push(filePath)
       }
     } catch (err) {
@@ -486,6 +488,14 @@ async function main() {
 
   const exhibitions = Array.from(byId.values())
   console.log(`Unique exhibitions for year ${targetYear}: ${exhibitions.length}`)
+
+  // Sanitize any glued judges from breeds
+  const judgeNames = collectJudgeNamesForBreedClean(exhibitions)
+  let breedJudgeStripped = 0
+  for (const ex of exhibitions) {
+    breedJudgeStripped += sanitizeExhibitionBreeds(ex, judgeNames)
+  }
+  console.log(`Cleaned glued judge names from breeds: ${breedJudgeStripped}`)
 
   // Build dog ranking for this year
   console.log(`Building dog ranking for year ${targetYear}...`)
