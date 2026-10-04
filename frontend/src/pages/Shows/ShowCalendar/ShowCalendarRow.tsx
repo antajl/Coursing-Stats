@@ -144,18 +144,20 @@ export function ShowCalendarRow({
         </div>
 
         <div className="min-w-0">
-          <div className="flex min-w-0 items-center gap-1.5">
-            {isMulti ? (
-              <ChevronRight
-                className={`h-3.5 w-3.5 shrink-0 text-charcoal-500 transition-transform ${
-                  expanded ? 'rotate-90' : ''
-                }`}
-                aria-hidden
-              />
-            ) : null}
-            <span className={titleClass}>{exhibition.title}</span>
+          <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2">
+            <div className="flex min-w-0 items-center gap-1.5">
+              {isMulti ? (
+                <ChevronRight
+                  className={`h-3.5 w-3.5 shrink-0 text-charcoal-500 transition-transform ${
+                    expanded ? 'rotate-90' : ''
+                  }`}
+                  aria-hidden
+                />
+              ) : null}
+              <span className={titleClass}>{exhibition.title}</span>
+            </div>
             {ranks.length > 0 && (
-              <div className="flex shrink-0 flex-wrap items-center gap-1">
+              <div className="mt-1 sm:mt-0 flex shrink-0 flex-wrap items-center gap-1">
                 {ranks.slice(0, 4).map((rank) => (
                   <span key={rank} className={RANK_CHIP}>
                     {rank}
@@ -215,7 +217,7 @@ export function ShowCalendarRow({
       </div>
 
       {expanded ? (
-        <ul className="mt-0.5 mb-1 ml-[4.75rem] sm:ml-[5rem] space-y-0.5 border-l border-old-money-200/80 pl-3">
+        <ul className="mt-0.5 mb-1 ml-2 sm:ml-[5rem] space-y-1 sm:space-y-0.5 border-l-2 border-old-money-200/80 pl-2 sm:pl-3">
           {group.children.map((child) => {
             const childRkf = exhibitionRkfUrl(child)
             const childReport = child.reports_link?.trim() || null
@@ -256,7 +258,7 @@ export function ShowCalendarRow({
                       }
                     : undefined
                 }
-                className={`flex flex-wrap items-center justify-between gap-x-3 gap-y-1 rounded-md px-2.5 py-1.5 text-xs ${
+                className={`flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 sm:gap-3 rounded-md px-2.5 py-2 sm:py-1.5 text-xs ${
                   child.has_lc_protocol
                     ? 'bg-warm-blue-50/70'
                     : 'bg-cream-50/80'
@@ -272,7 +274,7 @@ export function ShowCalendarRow({
                     </span>
                   ) : null}
                 </div>
-                <div className="flex shrink-0 flex-wrap items-center gap-1.5">
+                <div className="flex shrink-0 flex-wrap items-center gap-1.5 self-start sm:self-auto">
                   <OutboundLinks
                     rkfUrl={childRkf}
                     reportUrl={childReport}

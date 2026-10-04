@@ -3,7 +3,7 @@ import { resolveRkfOnlineExhibitionUrl } from '../../../lib/rkfLinks'
 
 /** Equal-width paired text buttons: Источник + Отчёт (or muted empty label). */
 const OUTBOUND_BTN =
-  'relative z-10 inline-flex h-5 w-[6.75rem] shrink-0 items-center justify-center whitespace-nowrap rounded-md text-[11px] font-medium leading-none'
+  'relative z-10 inline-flex h-5 px-2 sm:px-2.5 sm:w-[5.25rem] shrink-0 items-center justify-center whitespace-nowrap rounded-md text-[11px] font-medium leading-none'
 export const OUTBOUND_BTN_LINK = `${OUTBOUND_BTN} bg-old-money-100/90 text-camel-700 transition-colors hover:bg-old-money-200/90 hover:text-camel-800`
 export const OUTBOUND_BTN_MUTED = `${OUTBOUND_BTN} text-charcoal-400`
 

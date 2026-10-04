@@ -272,37 +272,38 @@ export async function getShowCalendar(
 export async function getShowExhibition(exhibitionId: string): Promise<ApiResult<ShowExhibition>> {
   console.log('[getShowExhibition] Loading exhibition:', exhibitionId)
 
-  // First try JSON files (for non-RKF exhibitions)
-  const index = await fetchJson<Record<string, string>>('shows/index.json')
-  const filePath = index?.[exhibitionId]
-  if (filePath) {
-    console.log('[getShowExhibition] Found in JSON index:', filePath)
-    const exhibition = await fetchJson<ShowExhibition>(`shows/${filePath}`)
-    if (exhibition) return { success: true, data: exhibition }
-  }
+  // 1. Try JSON index (for LC allowlist exhibitions)
+  try {
+    const index = await fetchJson<Record<string, string>>('shows/index.json')
+    const filePath = index?.[exhibitionId]
+    if (filePath) {
+      const exhibition = await fetchJson<ShowExhibition>(`shows/${filePath}`)
+      if (exhibition) return { success: true, data: exhibition }
+    }
+  } catch {}
 
-  // Try Turso for RKF exhibitions (migrated in ADR-007)
+  // 2. Direct JSON fetch fallback (for local dev / CDN when file is available)
+  try {
+    const directType1 = await fetchJson<ShowExhibition>(`shows/exhibitions/${exhibitionId}-type1.json`)
+    if (directType1?.id) return { success: true, data: directType1 }
+    const directRaw = await fetchJson<ShowExhibition>(`shows/exhibitions/${exhibitionId}.json`)
+    if (directRaw?.id) return { success: true, data: directRaw }
+  } catch {}
+
+  // 3. Try Turso database (contains all RKF exhibitions 2019-2026)
   try {
     const { getExhibitionById } = await import('../../turso')
-    // Try multiple years (exhibitionId is just ID, year is separate in Turso)
-    const currentYear = new Date().getFullYear()
-    for (const year of [currentYear, currentYear - 1, currentYear - 2, currentYear - 3]) {
-      console.log('[getShowExhibition] Trying Turso year:', year, 'for ID:', exhibitionId)
-      const exhibition = await getExhibitionById(exhibitionId, year)
-      if (exhibition) {
-        console.log('[getShowExhibition] Found in Turso for year:', year)
-        return { success: true, data: exhibition }
-      }
+    const exhibition = await getExhibitionById(exhibitionId)
+    if (exhibition) {
+      return { success: true, data: exhibition }
     }
-    console.log('[getShowExhibition] Not found in Turso for any year')
   } catch (error) {
     console.error('[getShowExhibition] Turso query failed:', error)
-    // Fall through to error message
   }
 
   console.log('[getShowExhibition] Exhibition not found anywhere')
   return {
     success: false,
-    error: index ? 'Exhibition not found in index or Turso' : 'Shows index unavailable',
+    error: 'Выставка не найдена',
   }
 }
