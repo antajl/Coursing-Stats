@@ -15,6 +15,13 @@ function MainRingResultsTable({ rows }: { rows: MainRingRow[] }) {
     return 'text-charcoal-600'
   }
 
+  const podiumAccent = (place: number) => {
+    if (place === 1) return 'border-l-[3px] border-l-camel-500'
+    if (place === 2) return 'border-l-[3px] border-l-charcoal-300'
+    if (place === 3) return 'border-l-[3px] border-l-terracotta-300'
+    return ''
+  }
+
   return (
     <div className="min-w-0 w-full">
       {/* Mobile: Main ring placement cards */}
@@ -22,7 +29,7 @@ function MainRingResultsTable({ rows }: { rows: MainRingRow[] }) {
         {rows.map((row) => (
           <div
             key={`${row.place}-${row.catalog_number}-${row.dog_name}`}
-            className="rounded-lg border border-old-money-200/90 bg-white p-2.5 shadow-[0_1px_2px_rgba(0,0,0,0.02)]"
+            className={`rounded-lg border border-old-money-200/90 bg-white p-2.5 shadow-[0_1px_2px_rgba(0,0,0,0.02)] ${podiumAccent(row.place)}`}
           >
             <div className="flex items-start justify-between gap-2">
               <div className="min-w-0 flex-1">
@@ -41,7 +48,7 @@ function MainRingResultsTable({ rows }: { rows: MainRingRow[] }) {
               </div>
               {row.place > 0 && (
                 <span
-                  className={`inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold ${
+                  className={`inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-bold ${
                     row.place === 1
                       ? 'bg-camel-600 text-white shadow-sm'
                       : row.place <= 3
@@ -56,7 +63,7 @@ function MainRingResultsTable({ rows }: { rows: MainRingRow[] }) {
             </div>
 
             {row.award_badge && (
-              <div className="mt-2 flex items-center pt-1.5 border-t border-old-money-100/80">
+              <div className="mt-2 flex items-center gap-1.5">
                 <HoverTooltip
                   label={awardTooltipForToken(row.award_badge)}
                   placement="top"
@@ -97,7 +104,7 @@ function MainRingResultsTable({ rows }: { rows: MainRingRow[] }) {
             {rows.map((row) => (
               <tr
                 key={`${row.place}-${row.catalog_number}-${row.dog_name}`}
-                className="transition-colors hover:bg-camel-50/50"
+                className={`transition-colors hover:bg-camel-50/50 even:bg-cream-50/30`}
               >
                 <td className={`px-2 py-2.5 text-center tabular-nums ${placementClass(row.place)}`}>
                   {row.place > 0 ? row.place : ''}
@@ -199,17 +206,23 @@ export function MainRingSection({
         ) : null}
       </div>
 
-      <div className="-mx-0.5 mb-3 flex gap-1.5 overflow-x-auto px-0.5 pb-0.5">
-        {tabs.map((tab) => (
-          <ToolbarChip
-            key={tab.id}
-            active={tab.id === active?.id}
-            onClick={() => setActiveId(tab.id)}
-            className="shrink-0"
-          >
-            <span title={tab.label}>{tab.shortLabel}</span>
-          </ToolbarChip>
-        ))}
+      <div className="relative mb-3">
+        <div className="-mx-0.5 flex gap-1.5 overflow-x-auto px-0.5 pb-0.5 pr-6">
+          {tabs.map((tab) => (
+            <ToolbarChip
+              key={tab.id}
+              active={tab.id === active?.id}
+              onClick={() => setActiveId(tab.id)}
+              className="shrink-0"
+            >
+              <span title={tab.label}>{tab.shortLabel}</span>
+            </ToolbarChip>
+          ))}
+        </div>
+        <div
+          className="pointer-events-none absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-cream-50 to-transparent"
+          aria-hidden
+        />
       </div>
 
       {active ? (

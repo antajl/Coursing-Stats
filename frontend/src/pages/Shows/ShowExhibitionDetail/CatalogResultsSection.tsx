@@ -47,7 +47,7 @@ function ClassResultsTable({ classes }: { classes: ClassResultGroup[] }) {
               {group.rows.map((row, idx) => (
                 <div
                   key={`${group.className}-${row.dog_name}-${idx}`}
-                  className="rounded-lg border border-old-money-200/90 bg-white p-2.5 shadow-[0_1px_2px_rgba(0,0,0,0.02)] hover:border-camel-300 transition-colors"
+                  className="rounded-lg border border-old-money-200/90 bg-white px-2.5 py-2 shadow-[0_1px_2px_rgba(0,0,0,0.02)] hover:border-camel-300 transition-colors"
                 >
                   <div className="flex items-start justify-between gap-2">
                     <div className="min-w-0 flex-1">
@@ -75,7 +75,7 @@ function ClassResultsTable({ classes }: { classes: ClassResultGroup[] }) {
                   </div>
 
                   {(row.grade || row.title) && (
-                    <div className="mt-2 flex flex-wrap items-center gap-1.5 pt-1.5 border-t border-old-money-100/80">
+                    <div className="mt-1.5 flex flex-wrap items-center gap-1.5">
                       {row.grade && (
                         <div className="shrink-0">
                           <ShowGradeChip grade={row.grade} />
@@ -119,7 +119,7 @@ function ClassResultsTable({ classes }: { classes: ClassResultGroup[] }) {
               group.rows.map((row, idx) => (
                 <tr
                   key={`${group.className}-${row.dog_name}-${idx}`}
-                  className="transition-colors hover:bg-camel-50/50"
+                  className="transition-colors hover:bg-camel-50/50 even:bg-cream-50/30"
                 >
                   {idx === 0 && (
                     <td
