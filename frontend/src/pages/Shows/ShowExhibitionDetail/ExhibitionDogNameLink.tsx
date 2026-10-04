@@ -8,11 +8,13 @@ export function ExhibitionDogNameLink({
   breed,
   catalogNumber,
   className = '',
+  truncate = false,
 }: {
   dogName: string
   breed: string
   catalogNumber?: number
   className?: string
+  truncate?: boolean
 }) {
   const { ring, name } = splitDogNameDisplay(dogName)
   const href = exhibitionDogProfilePath(dogName, breed)
@@ -32,9 +34,11 @@ export function ExhibitionDogNameLink({
     </>
   )
 
+  const textOverflowClass = truncate ? 'truncate' : 'break-words'
+
   if (!href) {
     return (
-      <span className={`block truncate ${className}`} title={name || dogName}>
+      <span className={`block ${textOverflowClass} ${className}`} title={name || dogName}>
         {content}
       </span>
     )
@@ -43,7 +47,7 @@ export function ExhibitionDogNameLink({
   return (
     <Link
       to={href}
-      className={`block truncate transition-colors hover:text-camel-700 hover:underline hover:underline-offset-2 ${className}`}
+      className={`block ${textOverflowClass} transition-colors hover:text-camel-700 hover:underline hover:underline-offset-2 ${className}`}
       title={name || dogName}
     >
       {content}

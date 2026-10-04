@@ -16,64 +16,123 @@ function MainRingResultsTable({ rows }: { rows: MainRingRow[] }) {
   }
 
   return (
-    <div className="overflow-x-auto">
-      <table className="w-full table-fixed divide-y divide-old-money-200 text-sm">
-        <thead>
-          <tr className="border-b border-old-money-200">
-            <th className="w-16 px-1.5 py-2 text-center text-xs font-bold uppercase tracking-wide text-charcoal-700">
-              Место
-            </th>
-            <th className="px-2.5 py-2 text-left text-xs font-bold uppercase tracking-wide text-charcoal-700">
-              Собака
-            </th>
-            <th className="w-[38%] px-2.5 py-2 text-left text-xs font-bold uppercase tracking-wide text-charcoal-700">
-              Порода
-            </th>
-            <th className="w-[6.5rem] px-2 py-2 text-left text-xs font-bold uppercase tracking-wide text-charcoal-700">
-              Награды
-            </th>
-          </tr>
-        </thead>
-        <tbody className="divide-y divide-old-money-100">
-          {rows.map((row) => (
-            <tr
-              key={`${row.place}-${row.catalog_number}-${row.dog_name}`}
-              className="transition-colors hover:bg-old-money-50/80"
-            >
-              <td className={`px-1.5 py-2.5 text-center tabular-nums ${placementClass(row.place)}`}>
-                {row.place > 0 ? row.place : ''}
-              </td>
-              <td className="min-w-0 px-2.5 py-2.5 font-medium text-charcoal-900">
+    <div className="min-w-0 w-full">
+      {/* Mobile: Main ring placement cards */}
+      <div className="block md:hidden space-y-2">
+        {rows.map((row) => (
+          <div
+            key={`${row.place}-${row.catalog_number}-${row.dog_name}`}
+            className="rounded-lg border border-old-money-200/90 bg-white p-2.5 shadow-[0_1px_2px_rgba(0,0,0,0.02)]"
+          >
+            <div className="flex items-start justify-between gap-2">
+              <div className="min-w-0 flex-1">
                 <ExhibitionDogNameLink
                   dogName={row.dog_name}
                   breed={row.breed}
                   catalogNumber={row.catalog_number}
+                  truncate={false}
+                  className="font-semibold text-sm leading-snug text-charcoal-900"
                 />
-              </td>
-              <td className="px-2.5 py-2.5 text-xs leading-snug text-charcoal-600">
-                <span className="block truncate" title={row.breed || undefined}>
-                  {row.breed || '—'}
+                {row.breed && (
+                  <div className="mt-0.5 text-xs text-charcoal-500 font-medium">
+                    {row.breed}
+                  </div>
+                )}
+              </div>
+              {row.place > 0 && (
+                <span
+                  className={`inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold ${
+                    row.place === 1
+                      ? 'bg-camel-600 text-white shadow-sm'
+                      : row.place <= 3
+                        ? 'bg-camel-100 text-camel-900 border border-camel-300'
+                        : 'bg-old-money-100 text-charcoal-600'
+                  }`}
+                  title={`Место: ${row.place}`}
+                >
+                  {row.place}
                 </span>
-              </td>
-              <td className="px-2 py-2.5 text-xs font-medium text-camel-800">
-                {row.award_badge ? (
-                  <HoverTooltip
-                    label={awardTooltipForToken(row.award_badge)}
-                    placement="top"
-                    variant="site"
-                    delayMs={TOOLTIP.DELAY_NONE}
-                    portal
-                  >
-                    <span className={SHOW_AWARD_CHIP_CLASS} tabIndex={0}>
-                      {row.award_badge}
-                    </span>
-                  </HoverTooltip>
-                ) : null}
-              </td>
+              )}
+            </div>
+
+            {row.award_badge && (
+              <div className="mt-2 flex items-center pt-1.5 border-t border-old-money-100/80">
+                <HoverTooltip
+                  label={awardTooltipForToken(row.award_badge)}
+                  placement="top"
+                  variant="site"
+                  delayMs={TOOLTIP.DELAY_NONE}
+                  portal
+                >
+                  <span className={SHOW_AWARD_CHIP_CLASS} tabIndex={0}>
+                    {row.award_badge}
+                  </span>
+                </HoverTooltip>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+
+      {/* Desktop / Tablet: Traditional table */}
+      <div className="hidden md:block overflow-x-auto rounded-lg border border-old-money-200">
+        <table className="w-full divide-y divide-old-money-200 text-sm bg-white">
+          <thead className="bg-cream-100/60">
+            <tr>
+              <th className="w-16 px-2 py-2.5 text-center text-xs font-bold uppercase tracking-wide text-charcoal-700">
+                Место
+              </th>
+              <th className="px-3.5 py-2.5 text-left text-xs font-bold uppercase tracking-wide text-charcoal-700">
+                Собака
+              </th>
+              <th className="px-3.5 py-2.5 text-left text-xs font-bold uppercase tracking-wide text-charcoal-700">
+                Порода
+              </th>
+              <th className="w-28 px-2 py-2.5 text-left text-xs font-bold uppercase tracking-wide text-charcoal-700">
+                Награды
+              </th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody className="divide-y divide-old-money-100">
+            {rows.map((row) => (
+              <tr
+                key={`${row.place}-${row.catalog_number}-${row.dog_name}`}
+                className="transition-colors hover:bg-camel-50/50"
+              >
+                <td className={`px-2 py-2.5 text-center tabular-nums ${placementClass(row.place)}`}>
+                  {row.place > 0 ? row.place : ''}
+                </td>
+                <td className="px-3.5 py-2.5 font-medium text-charcoal-900">
+                  <ExhibitionDogNameLink
+                    dogName={row.dog_name}
+                    breed={row.breed}
+                    catalogNumber={row.catalog_number}
+                    truncate={false}
+                  />
+                </td>
+                <td className="px-3.5 py-2.5 text-xs leading-snug text-charcoal-600">
+                  {row.breed || '—'}
+                </td>
+                <td className="px-2 py-2.5 text-xs font-medium text-camel-800">
+                  {row.award_badge ? (
+                    <HoverTooltip
+                      label={awardTooltipForToken(row.award_badge)}
+                      placement="top"
+                      variant="site"
+                      delayMs={TOOLTIP.DELAY_NONE}
+                      portal
+                    >
+                      <span className={SHOW_AWARD_CHIP_CLASS} tabIndex={0}>
+                        {row.award_badge}
+                      </span>
+                    </HoverTooltip>
+                  ) : null}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   )
 }

@@ -30,52 +30,120 @@ import { BreedTitleRowView, ExhibitionDogNameLink } from './ExhibitionDogNameLin
 function ClassResultsTable({ classes }: { classes: ClassResultGroup[] }) {
   return (
     <div className="min-w-0 w-full">
-      <table className="w-full table-fixed divide-y divide-old-money-200 text-sm">
-        <thead>
-          <tr className="border-b border-old-money-200">
-            <th className="w-[6.5rem] px-2 py-2 text-left text-xs font-bold uppercase tracking-wide text-charcoal-700">
-              Класс
-            </th>
-            <th className="min-w-0 px-2.5 py-2 text-left text-xs font-bold uppercase tracking-wide text-charcoal-700">
-              Собака
-            </th>
-            <th className="w-[4.75rem] px-1.5 py-2 text-left text-xs font-bold uppercase tracking-wide text-charcoal-700">
-              Оценка
-            </th>
-            <th className="w-[9rem] px-2 py-2 text-left text-xs font-bold uppercase tracking-wide text-charcoal-700">
-              Награды
-            </th>
-          </tr>
-        </thead>
-        <tbody className="divide-y divide-old-money-100">
-          {classes.map((group) =>
-            group.rows.map((row, idx) => (
-              <tr
-                key={`${group.className}-${row.dog_name}-${idx}`}
-                className="transition-colors hover:bg-old-money-50/80"
-              >
-                {idx === 0 && (
-                  <td
-                    rowSpan={group.rows.length}
-                    className="min-w-0 overflow-hidden align-top border-r border-old-money-100 bg-cream-100/60 px-2 py-2.5 text-xs font-semibold leading-snug text-charcoal-800"
-                  >
-                    <span className="block break-words">{localizeShowClass(group.className)}</span>
+      {/* Mobile: Result Cards grouped by show class (inspired by competition ResultCards) */}
+      <div className="block md:hidden space-y-3">
+        {classes.map((group) => (
+          <div key={group.className} className="space-y-1.5">
+            <div className="flex items-center justify-between rounded-lg bg-camel-100/90 px-3 py-1.5 border border-camel-200/80 shadow-[0_1px_2px_rgba(0,0,0,0.02)]">
+              <span className="text-xs font-bold uppercase tracking-wider text-camel-950">
+                {localizeShowClass(group.className)}
+              </span>
+              <span className="font-normal text-[11px] text-charcoal-600">
+                {group.rows.length} {group.rows.length === 1 ? 'собака' : group.rows.length < 5 ? 'собаки' : 'собак'}
+              </span>
+            </div>
+
+            <div className="space-y-1.5">
+              {group.rows.map((row, idx) => (
+                <div
+                  key={`${group.className}-${row.dog_name}-${idx}`}
+                  className="rounded-lg border border-old-money-200/90 bg-white p-2.5 shadow-[0_1px_2px_rgba(0,0,0,0.02)] hover:border-camel-300 transition-colors"
+                >
+                  <div className="flex items-start justify-between gap-2">
+                    <div className="min-w-0 flex-1">
+                      <ExhibitionDogNameLink
+                        dogName={row.dog_name}
+                        breed={row.breed}
+                        truncate={false}
+                        className="font-semibold text-[13.5px] leading-snug text-charcoal-900"
+                      />
+                      {row.pedigree && (
+                        <div className="mt-0.5 font-mono text-[11px] text-charcoal-400">
+                          РКФ {row.pedigree}
+                        </div>
+                      )}
+                    </div>
+
+                    {row.placement != null && row.placement > 0 && (
+                      <span
+                        className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-camel-600 font-bold text-[11px] text-white shadow-sm"
+                        title={`Место в классе: ${row.placement}`}
+                      >
+                        {row.placement}
+                      </span>
+                    )}
+                  </div>
+
+                  {(row.grade || row.title) && (
+                    <div className="mt-2 flex flex-wrap items-center gap-1.5 pt-1.5 border-t border-old-money-100/80">
+                      {row.grade && (
+                        <div className="shrink-0">
+                          <ShowGradeChip grade={row.grade} />
+                        </div>
+                      )}
+                      {row.title && (
+                        <div className="min-w-0 flex-1 flex flex-wrap items-center gap-1">
+                          <TitleChips title={row.title} />
+                        </div>
+                      )}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Desktop / Tablet (md+): Traditional table layout with ample breathing room */}
+      <div className="hidden md:block overflow-x-auto rounded-lg border border-old-money-200">
+        <table className="w-full divide-y divide-old-money-200 text-sm bg-white">
+          <thead className="bg-cream-100/60">
+            <tr>
+              <th className="w-32 px-3 py-2.5 text-left text-xs font-bold uppercase tracking-wide text-charcoal-700">
+                Класс
+              </th>
+              <th className="px-3.5 py-2.5 text-left text-xs font-bold uppercase tracking-wide text-charcoal-700">
+                Собака
+              </th>
+              <th className="w-24 px-2 py-2.5 text-left text-xs font-bold uppercase tracking-wide text-charcoal-700">
+                Оценка
+              </th>
+              <th className="w-48 px-3 py-2.5 text-left text-xs font-bold uppercase tracking-wide text-charcoal-700">
+                Награды
+              </th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-old-money-100">
+            {classes.map((group) =>
+              group.rows.map((row, idx) => (
+                <tr
+                  key={`${group.className}-${row.dog_name}-${idx}`}
+                  className="transition-colors hover:bg-camel-50/50"
+                >
+                  {idx === 0 && (
+                    <td
+                      rowSpan={group.rows.length}
+                      className="align-top border-r border-old-money-100 bg-cream-50/50 px-3 py-2.5 text-xs font-semibold leading-snug text-charcoal-800"
+                    >
+                      <span>{localizeShowClass(group.className)}</span>
+                    </td>
+                  )}
+                  <td className="px-3.5 py-2.5 font-medium text-charcoal-900">
+                    <ExhibitionDogNameLink dogName={row.dog_name} breed={row.breed} truncate={false} />
                   </td>
-                )}
-                <td className="min-w-0 overflow-hidden px-2.5 py-2.5 font-medium text-charcoal-900">
-                  <ExhibitionDogNameLink dogName={row.dog_name} breed={row.breed} />
-                </td>
-                <td className="px-1.5 py-2.5">
-                  <ShowGradeChip grade={row.grade} />
-                </td>
-                <td className="min-w-0 overflow-hidden px-2 py-2.5 text-xs font-medium text-camel-800">
-                  <TitleChips title={row.title} />
-                </td>
-              </tr>
-            ))
-          )}
-        </tbody>
-      </table>
+                  <td className="px-2 py-2.5 whitespace-nowrap">
+                    <ShowGradeChip grade={row.grade} />
+                  </td>
+                  <td className="px-3 py-2.5 text-xs font-medium text-camel-800">
+                    <TitleChips title={row.title} />
+                  </td>
+                </tr>
+              ))
+            )}
+          </tbody>
+        </table>
+      </div>
     </div>
   )
 }
