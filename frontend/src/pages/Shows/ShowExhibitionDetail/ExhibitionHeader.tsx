@@ -97,14 +97,15 @@ export function ExhibitionHeader({ exhibition }: { exhibition: ShowExhibition })
           <StatPill
             value={
               exhibition.location ? (
-                <span className="line-clamp-2 text-sm leading-snug md:text-base">{exhibition.location}</span>
+                <span className="block truncate text-sm leading-snug md:text-base" title={exhibition.location}>
+                  {exhibition.location}
+                </span>
               ) : (
                 '—'
               )
             }
             label="место"
             valueClassName="text-sm md:text-base"
-            className="col-span-2 sm:col-span-1"
           />
         </div>
 
