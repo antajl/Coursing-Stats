@@ -5,15 +5,29 @@ import { ungzip } from 'pako'
 // Lazy initialization to prevent module loading errors if env vars are missing
 let tursoClient: ReturnType<typeof createClient> | null = null
 
-const DEFAULT_TURSO_URL = 'libsql://coursing-stats-antajl.aws-eu-west-1.turso.io'
+const DEFAULT_TURSO_URL = 'https://coursing-stats-antajl.aws-eu-west-1.turso.io'
 const DEFAULT_TURSO_TOKEN =
   'eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJhIjoicnciLCJpYXQiOjE3ODU3NzQzNjgsImlkIjoiMDE5ZmM4NzEtZGIwMS03NTRlLTg5MDctN2NmNjdiMWRmOGY4Iiwia2lkIjoicl9wbkxHb09CWlVaNHRCZ2VzTWFhM1FuVkhZWlV3MVVyUmczZWx3VTh0byIsInJpZCI6ImJjZDEzNmEwLTU4MDUtNDkwOS1iNmI1LWFlZTgwMjlmZmYyMyJ9.02HaAuMBTWmgA4DKQoqxg6TLU4SGV1dLfLW63WRZ6NKc5WhWBnUp1J_83FH7lLaw-ilGpbozOxTxyd8obS-ODw'
+
+function normalizeTursoUrl(raw: string): string {
+  let url = raw.trim()
+  if (url.startsWith('libsql:/') && !url.startsWith('libsql://')) {
+    url = url.replace('libsql:/', 'https://')
+  } else if (url.startsWith('libsql://')) {
+    url = url.replace('libsql://', 'https://')
+  } else if (!url.startsWith('https://') && !url.startsWith('http://')) {
+    url = `https://${url.replace(/^\/+/, '')}`
+  }
+  return url
+}
 
 function getTursoClient() {
   if (tursoClient) return tursoClient
 
-  const tursoUrl = import.meta.env.VITE_TURSO_URL || DEFAULT_TURSO_URL
-  const tursoAuthToken = import.meta.env.VITE_TURSO_AUTH_TOKEN || DEFAULT_TURSO_TOKEN
+  const rawUrl = import.meta.env.VITE_TURSO_URL || DEFAULT_TURSO_URL
+  const tursoAuthToken = (import.meta.env.VITE_TURSO_AUTH_TOKEN || DEFAULT_TURSO_TOKEN).trim()
+
+  const tursoUrl = normalizeTursoUrl(rawUrl)
 
   if (!tursoUrl || !tursoAuthToken) {
     throw new Error('VITE_TURSO_URL and VITE_TURSO_AUTH_TOKEN are required')
