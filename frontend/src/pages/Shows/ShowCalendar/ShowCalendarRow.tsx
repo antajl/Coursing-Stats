@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import type { ShowRkfCalendarEntry } from '../../../lib/staticData'
 import {
   collectGroupRanks,
+  formatChildHeading,
   formatNkpDisplay,
   type RkfCalendarGroup,
 } from '../showCalendarGroup'
@@ -11,6 +12,15 @@ import { exhibitionRkfUrl, OutboundLinks } from './OutboundLinks'
 
 const RANK_CHIP =
   'inline-flex h-5 shrink-0 items-center justify-center rounded-md bg-old-money-100/90 px-1.5 font-mono text-xs font-semibold text-charcoal-600'
+
+function formatShowCount(count: number): string {
+  const mod10 = count % 10
+  const mod100 = count % 100
+  if (mod100 >= 11 && mod100 <= 14) return `${count} выставок`
+  if (mod10 === 1) return `${count} выставка`
+  if (mod10 >= 2 && mod10 <= 4) return `${count} выставки`
+  return `${count} выставок`
+}
 
 /** Подзаголовок mono: НКП или список пород. */
 function monoSubtitle(exhibition: ShowRkfCalendarEntry): string | null {
@@ -146,11 +156,16 @@ export function ShowCalendarRow({
             <span className={titleClass}>{exhibition.title}</span>
             {ranks.length > 0 && (
               <div className="flex shrink-0 flex-wrap items-center gap-1">
-                {ranks.map((rank) => (
+                {ranks.slice(0, 4).map((rank) => (
                   <span key={rank} className={RANK_CHIP}>
                     {rank}
                   </span>
                 ))}
+                {ranks.length > 4 && (
+                  <span className={RANK_CHIP}>
+                    +{ranks.length - 4}
+                  </span>
+                )}
               </div>
             )}
           </div>
@@ -177,7 +192,7 @@ export function ShowCalendarRow({
           )}
           {isMulti && (
             <div className="mt-1 text-[11px] text-charcoal-500 sm:hidden">
-              {group.children.length} НКП · нажмите, чтобы{' '}
+              {formatShowCount(group.children.length)} · нажмите, чтобы{' '}
               {expanded ? 'свернуть' : 'развернуть'}
             </div>
           )}
@@ -193,7 +208,7 @@ export function ShowCalendarRow({
             />
           ) : (
             <span className="w-full whitespace-nowrap text-right text-[11px] leading-tight text-charcoal-500">
-              {group.children.length} НКП
+              {formatShowCount(group.children.length)}
             </span>
           )}
         </div>
@@ -212,16 +227,8 @@ export function ShowCalendarRow({
                 : child.source === 'rkf' && child.id
                   ? `/shows/exhibition/${child.id}`
                   : null
-            const nkpLabel = formatNkpDisplay(
-              child.national_breed_club_name?.trim() || child.breeds?.trim() || '',
-            )
             const childRanks = rankTokens(child)
-            const childHeading =
-              nkpLabel !== 'НКП'
-                ? nkpLabel
-                : childRanks.length > 0
-                  ? childRanks.join(', ')
-                  : `ID ${child.id}`
+            const childHeading = formatChildHeading(child)
 
             const handleChildClick = () => {
               if (childLcPath) {
@@ -259,8 +266,8 @@ export function ShowCalendarRow({
                   <span className="font-medium text-charcoal-800">
                     {childHeading}
                   </span>
-                  {nkpLabel !== 'НКП' && childRanks.length > 0 ? (
-                    <span className="ml-2 text-[11px] text-charcoal-500">
+                  {childRanks.length > 0 ? (
+                    <span className="ml-2 font-mono text-[11px] text-charcoal-500">
                       {childRanks.join(', ')}
                     </span>
                   ) : null}

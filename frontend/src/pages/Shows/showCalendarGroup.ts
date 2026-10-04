@@ -29,16 +29,79 @@ export function formatNkpDisplay(name: string | null | undefined): string {
 }
 
 /**
- * Merge key: same day + title + city + club (quotes/punctuation ignored).
- * Different ranks (CAC 3 гр. / 5 гр.) and NKP variants collapse into one card.
+ * Merge key for calendar event: same day + city + club.
+ * Collapses all-breed (CAC/ЧРКФ), specialty (group CAC), and mono shows (NKP/КЧК)
+ * organized by the same club on the same day into a single unified event card.
  */
-export function rkfMonoMergeKey(entry: ShowRkfCalendarEntry): string {
-  return [
-    normalizeWs(entry.date),
-    normalizeMergeText(entry.title),
-    normalizeMergeText(entry.city || entry.location),
-    normalizeMergeText(entry.club),
-  ].join('\0')
+export function rkfClubMergeKey(entry: ShowRkfCalendarEntry): string {
+  const date = normalizeWs(entry.date)
+  const city = normalizeMergeText(entry.city || entry.location)
+  const club = normalizeMergeText(entry.club)
+  if (club) {
+    return [date, city, club].join('\0')
+  }
+  return [date, city, normalizeMergeText(entry.title)].join('\0')
+}
+
+/** Legacy alias for backward compatibility. */
+export const rkfMonoMergeKey = rkfClubMergeKey
+
+/** Prestige score to choose the best representative exhibition for a group card. */
+export function exhibitionPrestige(entry: ShowRkfCalendarEntry): number {
+  const ranks = (entry.ranks || entry.rank || '').toUpperCase()
+  const title = (entry.title || '').toUpperCase()
+  const hasMono = Boolean(entry.national_breed_club_name || entry.breeds)
+
+  let score = 0
+  if (ranks.includes('ОСОБЫМ СТАТУСОМ') || title.includes('ОСОБЫМ СТАТУСОМ')) score += 1000
+  else if (ranks.includes('ЧРКФ') || title.includes('ЧРКФ')) score += 800
+  else if (ranks.includes('ЧФ') || title.includes('ЧФ')) score += 600
+  else if (ranks.includes('CAC') || ranks.includes('САС')) score += 500
+  else if (ranks.includes('ПОБЕДИТЕЛЬ КЛУБА') || ranks.includes('ПК')) score += 300
+  else if (ranks.includes('КЧК')) score += 200
+
+  // All-breed shows are more representative of the club event than a single mono show
+  if (!hasMono) {
+    score += 400
+  }
+
+  if (entry.has_lc_protocol || entry.has_report_link || entry.reports_link) {
+    score += 50
+  }
+
+  return score
+}
+
+/** Sort children inside an expanded group: all-breed first, group shows second, mono by breed third. */
+export function compareGroupChildren(a: ShowRkfCalendarEntry, b: ShowRkfCalendarEntry): number {
+  const pA = exhibitionPrestige(a)
+  const pB = exhibitionPrestige(b)
+  if (pA !== pB) return pB - pA
+
+  const lA = a.breeds || a.national_breed_club_name || a.title || ''
+  const lB = b.breeds || b.national_breed_club_name || b.title || ''
+  return lA.localeCompare(lB, 'ru')
+}
+
+/** Format readable label for a child exhibition in the expanded list. */
+export function formatChildHeading(child: ShowRkfCalendarEntry): string {
+  const breed = child.breeds?.trim()
+  const nkp = child.national_breed_club_name?.trim()
+  if (breed) return breed
+  if (nkp) return formatNkpDisplay(nkp)
+
+  const ranks = child.ranks || child.rank || ''
+  const m = ranks.match(/(\d+)\s*гр/i)
+  if (m) {
+    return `Выставка ${m[1]} группы FCI`
+  }
+  if (/чркф/i.test(ranks) || /особым статусом/i.test(ranks)) {
+    return `Рейтинговая выставка ЧРКФ`
+  }
+  if (/cac|сас/i.test(ranks)) {
+    return `Всепородная выставка САС`
+  }
+  return child.title || `Выставка ID ${child.id}`
 }
 
 /** Unique rank chips across grouped children (order preserved). */
@@ -78,17 +141,7 @@ export function exhibitionHasProtocol(entry: ShowRkfCalendarEntry): boolean {
   )
 }
 
-function childLabel(entry: ShowRkfCalendarEntry): string {
-  const nkp =
-    normalizeWs(entry.national_breed_club_name) ||
-    normalizeWs(entry.breeds) ||
-    ''
-  const ranks = normalizeWs(entry.ranks || entry.rank)
-  if (nkp && ranks) return `${nkp} · ${ranks}`
-  return nkp || ranks || String(entry.id)
-}
-
-/** Group filtered calendar rows; single-child groups render like today’s flat rows. */
+/** Group filtered calendar rows by club event; single-child groups render like flat rows. */
 export function groupRkfMonoVariants(
   exhibitions: ShowRkfCalendarEntry[],
 ): RkfCalendarGroup[] {
@@ -96,7 +149,7 @@ export function groupRkfMonoVariants(
   const order: string[] = []
 
   for (const entry of exhibitions) {
-    const key = rkfMonoMergeKey(entry)
+    const key = rkfClubMergeKey(entry)
     if (!map.has(key)) {
       map.set(key, [])
       order.push(key)
@@ -105,9 +158,7 @@ export function groupRkfMonoVariants(
   }
 
   return order.map((key) => {
-    const children = [...map.get(key)!].sort((a, b) =>
-      childLabel(a).localeCompare(childLabel(b), 'ru'),
-    )
+    const children = [...map.get(key)!].sort(compareGroupChildren)
     return {
       key,
       representative: children[0]!,
@@ -127,7 +178,7 @@ export function groupMatchesSearch(
   const headFields = [rep.title, rep.city, rep.location, rep.club, rep.type, rep.ranks, rep.rank]
   if (headFields.some((f) => f && f.toLowerCase().includes(q))) return true
   return group.children.some((c) => {
-    const fields = [c.national_breed_club_name, c.breeds, c.title, c.city, c.club]
+    const fields = [c.national_breed_club_name, c.breeds, c.title, c.city, c.club, c.ranks, c.rank]
     return fields.some((f) => f && f.toLowerCase().includes(q))
   })
 }
