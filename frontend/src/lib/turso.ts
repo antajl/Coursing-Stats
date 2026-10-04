@@ -41,14 +41,19 @@ function logTursoQuery(operation: string, duration: number, success: boolean) {
   }
 }
 
-export async function getExhibitionById(id: string, year: number) {
+export async function getExhibitionById(id: string, year?: number) {
   const startTime = performance.now()
   try {
     const client = getTursoClient()
-    const result = await client.execute({
-      sql: 'SELECT data FROM exhibitions_rkf WHERE id = ? AND year = ?',
-      args: [id, year]
-    })
+    const result = year
+      ? await client.execute({
+          sql: 'SELECT data FROM exhibitions_rkf WHERE id = ? AND year = ?',
+          args: [id, year],
+        })
+      : await client.execute({
+          sql: 'SELECT data FROM exhibitions_rkf WHERE id = ? ORDER BY year DESC LIMIT 1',
+          args: [id],
+        })
     readCount++
     const duration = performance.now() - startTime
     logTursoQuery('getExhibitionById', duration, true)
