@@ -358,7 +358,7 @@ export function buildDogProfiles(db: Database.Database) {
       breed: fromFile?.breed ?? fromDb?.breed ?? null,
       sex: fromFile?.sex ?? fromDb?.sex ?? null,
       owner: fromFile?.owner ?? fromDb?.owner ?? null,
-      pedigree_url: fromFile?.pedigree_url ?? fromDb?.pedigree_url ?? null,
+      pedigree_url: fromFile && 'pedigree_url' in fromFile ? fromFile.pedigree_url : (fromDb?.pedigree_url ?? null),
     };
 
     const coursing_stats = buildCoursingStats(coursingByDog.get(dogId) ?? []);

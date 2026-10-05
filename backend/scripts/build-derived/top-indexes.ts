@@ -141,6 +141,7 @@ const SPEED_BASE_SQL = `
   JOIN events e ON r.event_id = e.id
   WHERE r.status NOT IN ${RACING_EXCLUDED_STATUSES_SQL}
     AND e.event_type = 'racing' AND r.raw_scores_json IS NOT NULL
+    AND d.id NOT IN (10768)
 `;
 
 export function buildTopSpeedIndexes(db: Database.Database) {

@@ -169,12 +169,11 @@ export default defineConfig(({ mode }) => {
           "font-src 'self' https://fonts.gstatic.com; " +
           "connect-src 'self' ws: wss: https://coursing-stats.ru https://api.telegram.org https://coursing-stats-antajl.aws-eu-west-1.turso.io https://auth-worker.antajltube.workers.dev https://www.googletagmanager.com; " +
           "frame-src 'self' https://coursing-stats.ru https://t.me; " +
-          "frame-ancestors 'self' https://coursing-stats.ru; " +
+          "frame-ancestors 'self' https://coursing-stats.ru http://procoursing.ru https://procoursing.ru; " +
           "worker-src 'self' blob:; " +
           "form-action 'self'; " +
           "upgrade-insecure-requests;",
         'X-Content-Type-Options': 'nosniff',
-        'X-Frame-Options': 'DENY',
         'X-XSS-Protection': '1; mode=block',
         'Referrer-Policy': 'strict-origin-when-cross-origin',
         'Permissions-Policy': 'geolocation=(), microphone=(), camera=()',

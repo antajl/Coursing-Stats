@@ -110,6 +110,13 @@ function Competitions() {
           </div>
         )}
       </div>
+
+      <div className="mt-8 border-t border-old-money-200/60 pt-4 pb-2 text-center">
+        <p className="text-xs leading-relaxed text-charcoal-500">
+          Спортивная статистика и результаты состязаний систематизированы на основе официальных протоколов
+          организаторов, полевых секретариатов и материалов ProCoursing.ru.
+        </p>
+      </div>
     </>
   )
 }
