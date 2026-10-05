@@ -48,12 +48,21 @@ const TOOLTIP_CONTENT = (
   </div>
 )
 
+interface CoursingRatingHintProps {
+  embedded?: boolean
+  as?: 'button' | 'span'
+}
+
 /** Иконка ⓘ у заголовка зачёта сезона. */
-export default function CoursingRatingHint({ embedded = false }: { embedded?: boolean }) {
+export default function CoursingRatingHint({
+  embedded = false,
+  as = 'button',
+}: CoursingRatingHintProps) {
+  const Tag = as
   return (
     <HoverTooltip label={TOOLTIP_CONTENT} placement="bottom" variant="site" interactive portal>
-      <button
-        type="button"
+      <Tag
+        {...(as === 'button' ? { type: 'button' as const } : {})}
         className={
           embedded
             ? 'inline-flex h-5 w-5 items-center justify-center rounded text-old-money-600 hover:text-charcoal-800'
@@ -62,7 +71,7 @@ export default function CoursingRatingHint({ embedded = false }: { embedded?: bo
         aria-label="Как считается рейтинг"
       >
         <RatingFormulaIcon />
-      </button>
+      </Tag>
     </HoverTooltip>
   )
 }

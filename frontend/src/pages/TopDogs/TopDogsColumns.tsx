@@ -187,7 +187,7 @@ export default function TopDogsColumns({
           }`}
         >
           <span>Курсинг</span>
-          <CoursingRatingHint embedded />
+          <CoursingRatingHint embedded as="span" />
           <span className={`h-4 min-w-[1.25rem] px-1 rounded-full text-[10px] font-bold flex items-center justify-center leading-none ${
             activeMobileColumn === 'coursing' ? 'bg-camel-100 text-camel-800' : 'bg-charcoal-200/60 text-charcoal-600'
           }`}>
