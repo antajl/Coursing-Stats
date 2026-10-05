@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/donino-speed-v1",
   "source": "google-sheets",
-  "count": 271,
+  "count": 275,
   "records": [
     {
       "breed": "Уиппет",
@@ -283,6 +283,27 @@
     {
       "breed": "Уиппет",
       "sex": "С",
+      "name": "Барселона",
+      "speed_km_h": 58,
+      "date": "2026-10-04",
+      "screenshot_url": "https://disk.yandex.ru/i/_gLibFlFtOyINA",
+      "status": "improved",
+      "track_type": "прямая",
+      "history": [
+        {
+          "speed_km_h": 55,
+          "date": "2026-09-13"
+        },
+        {
+          "speed_km_h": 54,
+          "date": "2025-07-20",
+          "track_type": null
+        }
+      ]
+    },
+    {
+      "breed": "Уиппет",
+      "sex": "С",
       "name": "Груша",
       "speed_km_h": 56,
       "date": "2026-05-14",
@@ -485,6 +506,26 @@
       "history": []
     },
     {
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Эйва",
+      "speed_km_h": 56,
+      "date": "2026-10-04",
+      "screenshot_url": "https://disk.yandex.ru/i/pVFFSlW19L32Pg",
+      "status": "improved",
+      "track_type": "прямая",
+      "history": [
+        {
+          "speed_km_h": 55,
+          "date": "2026-09-13"
+        },
+        {
+          "speed_km_h": 54,
+          "date": "2026-08-29"
+        }
+      ]
+    },
+    {
       "breed": "Салюки",
       "sex": "С",
       "name": "Тайга",
@@ -519,23 +560,6 @@
     {
       "breed": "Уиппет",
       "sex": "С",
-      "name": "Барселона",
-      "speed_km_h": 55,
-      "date": "2026-09-13",
-      "screenshot_url": "https://disk.yandex.ru/i/9cKipfzAxBk-sg",
-      "status": "improved",
-      "track_type": "курсинг",
-      "history": [
-        {
-          "speed_km_h": 54,
-          "date": "2025-07-20",
-          "track_type": null
-        }
-      ]
-    },
-    {
-      "breed": "Уиппет",
-      "sex": "С",
       "name": "Асти",
       "speed_km_h": 55,
       "date": "2026-09-13",
@@ -543,22 +567,6 @@
       "status": "normal",
       "track_type": "курсинг",
       "history": []
-    },
-    {
-      "breed": "Уиппет",
-      "sex": "С",
-      "name": "Эйва",
-      "speed_km_h": 55,
-      "date": "2026-09-13",
-      "screenshot_url": "https://disk.yandex.ru/i/USNT-4kG-beg2A",
-      "status": "improved",
-      "track_type": "прямая",
-      "history": [
-        {
-          "speed_km_h": 54,
-          "date": "2026-08-29"
-        }
-      ]
     },
     {
       "breed": "Уиппет",
@@ -1373,6 +1381,17 @@
       "history": []
     },
     {
+      "breed": "Басенджи",
+      "sex": "К",
+      "name": "Тайсон",
+      "speed_km_h": 44,
+      "date": "2026-10-04",
+      "screenshot_url": "https://disk.yandex.ru/d/IvlxUUn2j3Ka2A",
+      "status": "new",
+      "track_type": "прямая",
+      "history": []
+    },
+    {
       "breed": "Немецкая овчарка",
       "sex": "С",
       "name": "Юта",
@@ -1731,6 +1750,17 @@
       "history": []
     },
     {
+      "breed": "Метис",
+      "sex": "К",
+      "name": "Герц",
+      "speed_km_h": 33,
+      "date": "2026-10-04",
+      "screenshot_url": "https://disk.yandex.ru/i/ew4C5-HbHYwB_g",
+      "status": "new",
+      "track_type": "курсинг",
+      "history": []
+    },
+    {
       "breed": "Уиппет",
       "sex": "С",
       "name": "Драм",
@@ -2028,9 +2058,13 @@
       "track_type": null,
       "history": [
         {
+          "speed_km_h": 58,
+          "date": "2026-10-04",
+          "track_type": "прямая"
+        },
+        {
           "speed_km_h": 55,
-          "date": "2026-09-13",
-          "track_type": "курсинг"
+          "date": "2026-09-13"
         }
       ]
     },
@@ -4442,9 +4476,13 @@
       "status": "old",
       "history": [
         {
-          "speed_km_h": 55,
-          "date": "2026-09-13",
+          "speed_km_h": 56,
+          "date": "2026-10-04",
           "track_type": "прямая"
+        },
+        {
+          "speed_km_h": 55,
+          "date": "2026-09-13"
         }
       ]
     },
@@ -4510,6 +4548,47 @@
           "speed_km_h": 52,
           "date": "2025-09-07",
           "track_type": null
+        }
+      ]
+    },
+    {
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Барселона",
+      "speed_km_h": 55,
+      "date": "2026-09-13",
+      "screenshot_url": "https://disk.yandex.ru/i/9cKipfzAxBk-sg",
+      "status": "improved",
+      "history": [
+        {
+          "speed_km_h": 58,
+          "date": "2026-10-04",
+          "track_type": "прямая"
+        },
+        {
+          "speed_km_h": 54,
+          "date": "2025-07-20",
+          "track_type": null
+        }
+      ]
+    },
+    {
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Эйва",
+      "speed_km_h": 55,
+      "date": "2026-09-13",
+      "screenshot_url": "https://disk.yandex.ru/i/USNT-4kG-beg2A",
+      "status": "improved",
+      "history": [
+        {
+          "speed_km_h": 56,
+          "date": "2026-10-04",
+          "track_type": "прямая"
+        },
+        {
+          "speed_km_h": 54,
+          "date": "2026-08-29"
         }
       ]
     }
