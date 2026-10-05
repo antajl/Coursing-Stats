@@ -7,18 +7,26 @@ import type { KVNamespace } from './context';
  * @param cache - опциональное KV хранилище для состояния
  */
 export function setupMiddleware(bot: Bot, cache?: KVNamespace) {
-  // Middleware to automatically answer callback queries AFTER handlers
-  // Это решает race condition, когда middleware отвечает до обработки handler
+  // Middleware to automatically answer callback queries AFTER handlers if not already answered
   bot.use(async (ctx, next) => {
+    let answered = false;
+    if (ctx.callbackQuery) {
+      const originalAnswer = ctx.answerCallbackQuery.bind(ctx);
+      ctx.answerCallbackQuery = async (...args: any[]) => {
+        answered = true;
+        return originalAnswer(...args);
+      };
+    }
+
     // Сначала выполняем основной handler
     await next();
 
-    // Потом отвечаем на callback query (type-safe)
-    if (ctx.callbackQuery) {
+    // Отвечаем только если handler сам не ответил
+    if (ctx.callbackQuery && !answered) {
       try {
         await ctx.answerCallbackQuery();
       } catch (error) {
-        // Silently fail on callback query errors (already answered)
+        // Silently fail if already answered or timed out
       }
     }
   });

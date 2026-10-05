@@ -18,17 +18,32 @@ export interface Env {
 const RATE_LIMIT_REQUESTS = 100; // requests per minute
 const RATE_LIMIT_WINDOW = 60; // seconds
 
-async function checkRateLimit(userId: string, env: Env): Promise<{ allowed: boolean; remaining: number }> {
-  const key = `rate_limit:${userId}`;
-  const current = await env.CACHE.get(key);
-  const count = current ? parseInt(current, 10) : 0;
+interface RateLimitBucket {
+  count: number;
+  resetAt: number;
+}
+const inMemoryRateLimits = new Map<string, RateLimitBucket>();
 
-  if (count >= RATE_LIMIT_REQUESTS) {
+function checkRateLimit(userId: string): { allowed: boolean; remaining: number } {
+  const now = Date.now();
+  if (inMemoryRateLimits.size > 5000) {
+    for (const [id, b] of inMemoryRateLimits.entries()) {
+      if (now > b.resetAt) inMemoryRateLimits.delete(id);
+    }
+  }
+
+  const bucket = inMemoryRateLimits.get(userId);
+  if (!bucket || now > bucket.resetAt) {
+    inMemoryRateLimits.set(userId, { count: 1, resetAt: now + RATE_LIMIT_WINDOW * 1000 });
+    return { allowed: true, remaining: RATE_LIMIT_REQUESTS - 1 };
+  }
+
+  bucket.count++;
+  if (bucket.count > RATE_LIMIT_REQUESTS) {
     return { allowed: false, remaining: 0 };
   }
 
-  await env.CACHE.put(key, String(count + 1), { expirationTtl: RATE_LIMIT_WINDOW });
-  return { allowed: true, remaining: RATE_LIMIT_REQUESTS - count - 1 };
+  return { allowed: true, remaining: RATE_LIMIT_REQUESTS - bucket.count };
 }
 
 function isValidWebhookSecret(request: Request, env: Env): boolean {
@@ -105,7 +120,28 @@ export default {
         const result = await response.json() as { ok: boolean; description?: string };
 
         if (result.ok) {
-          return new Response('Webhook set successfully', { status: 200 });
+          // Register Telegram bot commands menu
+          try {
+            await fetch(`https://api.telegram.org/bot${env.BOT_TOKEN}/setMyCommands`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                commands: [
+                  { command: 'start', description: 'Главное меню' },
+                  { command: 'search', description: 'Поиск собаки по кличке или ID' },
+                  { command: 'ratings', description: 'Рейтинги и топы' },
+                  { command: 'calendar', description: 'Календарь соревнований' },
+                  { command: 'donino', description: 'Рекорды Донино' },
+                  { command: 'favorites', description: 'Избранные собаки' },
+                  { command: 'help', description: 'Справка и правила' },
+                ],
+              }),
+            });
+          } catch (cmdErr) {
+            console.error('[set-webhook] Failed to set commands:', cmdErr);
+          }
+
+          return new Response('Webhook and commands set successfully', { status: 200 });
         }
         return new Response(`Failed to set webhook: ${result.description}`, { status: 500 });
       }
@@ -114,6 +150,10 @@ export default {
       if (!globalBot || !globalApi) {
         globalApi = new CoursingStatsAPI(env.CACHE, env.SITE_URL);
         globalBot = new Bot(env.BOT_TOKEN);
+
+        globalBot.catch((err) => {
+          console.error(`[bot.catch] Error in update ${err.ctx.update.update_id}:`, err.error);
+        });
 
         await globalBot.init();
 
@@ -133,7 +173,7 @@ export default {
 
           const userId = update.message?.from?.id || update.callback_query?.from?.id;
           if (userId) {
-            const rateLimitResult = await checkRateLimit(userId.toString(), env);
+            const rateLimitResult = checkRateLimit(userId.toString());
             if (!rateLimitResult.allowed) {
               // Always ACK Telegram (avoid retry storm); notify user when possible
               try {

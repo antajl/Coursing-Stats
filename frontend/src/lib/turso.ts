@@ -55,7 +55,7 @@ function logTursoQuery(operation: string, duration: number, success: boolean) {
   }
 
   if (import.meta.env.DEV) {
-    console.log('[Turso]', logData)
+    console.debug('[Turso]', logData)
   }
 }
 

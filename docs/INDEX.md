@@ -10,6 +10,8 @@ Quick links to all CoursingStats documentation with status and last verification
 | [README.md](README.md) | Documentation entry point | 2026-10-01 |
 | [QUICK-REFERENCE.md](QUICK-REFERENCE.md) | 5-minute overview, critical commands | 2026-10-01 |
 | [MAP.md](MAP.md) | Detailed documentation router | 2026-10-01 |
+| [GLOSSARY.md](GLOSSARY.md) | Project glossary, invariants, terminology | 2026-10-05 |
+| [COMMUNITY_CHRONICLE_2026.md](COMMUNITY_CHRONICLE_2026.md) | Хроника сообщества, ProCoursing, обращения и правовой статус | 2026-10-05 |
 
 ## Domain Sheets (docs/sheets/)
 
@@ -45,9 +47,9 @@ All sheets verified 2026-10-01.
 | [005](decisions/005-telegram-bot-integration.md) | Telegram Bot Integration | Accepted | 2025-04-15 |
 | [006](decisions/006-pdf-processing-optimization.md) | PDF Processing Optimization | Accepted | 2026-08-03 |
 | [007](decisions/007-exhibitions-rkf-sqlite-migration.md) | Exhibitions-RKF SQLite Migration | Accepted | 2026-08-03 |
-| [008](decisions/008-unified-event-structure.md) | Unified Event Structure | Proposed | 2026-08-03 |
+| [008](decisions/008-unified-event-structure.md) | Unified Event Structure | Deprecated | 2026-08-03 / 2026-09-28 |
 | [009](decisions/009-turso-migration.md) | Turso Migration | Completed | 2026-08-03 |
-| [010](decisions/010-automatic-rkf-monitoring.md) | Automatic RKF Calendar Monitoring | Proposed | 2026-08-04 |
+| [010](decisions/010-automatic-rkf-monitoring.md) | Automatic RKF Calendar Monitoring | Deprecated | 2026-08-04 / 2026-09-28 |
 | [012](decisions/012-typescript-strict-and-structured-logging.md) | TypeScript Strict and Structured Logging | Accepted | 2026-08-05 |
 | [013](decisions/013-ai-readable-documentation-architecture.md) | AI-Readable Documentation Architecture | Accepted | 2026-08-05 |
 | [014](decisions/014-cdn-packs-vs-turso.md) | CDN Packs vs Turso | Accepted | 2026-08-06 |
@@ -68,14 +70,13 @@ All sheets verified 2026-10-01.
 
 | File | Location |
 |------|----------|
-| [bot/README.md](../bot/README.md) | Bot documentation |
-| [frontend/README.md](../frontend/README.md) | Frontend documentation (if exists) |
-| [backend/README.md](../backend/README.md) | Backend documentation (if exists) |
+| [bot/README.md](../bot/README.md) | Документация Telegram-бота |
+| [backend/scripts/README.md](../backend/scripts/README.md) | Описание служебных скриптов бэкенда |
 
 ## Documentation by Category
 
 ### Architecture
-- ADR-001: Cloudflare Pages Hosting
+- ADR-001: Hosting Migration (Yandex Object Storage)
 - ADR-003: SQLite + JSON Indexes
 - ADR-009: Turso Migration
 - ADR-014: CDN Packs vs Turso
@@ -86,39 +87,46 @@ All sheets verified 2026-10-01.
 - ADR-002: React Query for Data Fetching
 - ADR-004: Home Page Refactoring
 - Sheet 07: Frontend
+- Sheet 14: Design System
 
 ### Backend
 - Sheet 06: Parsers
 - Sheet 09: Operations & Deploy
 
-### Data
+### Data & Standards
 - ADR-006: PDF Processing Optimization
 - ADR-007: Exhibitions-RKF SQLite Migration
 - Sheet 03: Competitions
 - Sheet 04: Shows
 - Sheet 05: Donino
+- Sheet 13: Racing Standards
 
 ### Bot
 - ADR-005: Telegram Bot Integration
 - Sheet 08: Bot
 
-### Quality
+### Quality & Governance
 - ADR-012: TypeScript Strict and Structured Logging
 - Sheet 10: Security
 - Sheet 11: Testing
+- Community Chronicle: COMMUNITY_CHRONICLE_2026.md
 
 ### Documentation
 - ADR-013: AI-Readable Documentation Architecture
 - Sheet 12: Agent Skills
+- Sheet 15: SEO & Search Analytics
+- Glossary: GLOSSARY.md
 
-## Proposed Future Work
+## Future Work & ADR Status
 
-From ADRs (Proposed status):
-- ADR-008: Unified Event Structure — merge competitions and exhibitions into single structure
-- ADR-010: Automatic RKF Calendar Monitoring — automated scraping and processing
+No ADRs are currently in `Proposed` status.
+- ADR-008 (Unified Event Structure) and ADR-010 (Automatic RKF Calendar Monitoring) were marked **Deprecated** (2026-09-28) to preserve separate domain purity and avoid brittle scraping pipelines.
+- Active architectural and feature development follows the 4 refactoring branches in [ROADMAP.md](ROADMAP.md).
 
 ## Last Modified Summary
 
+- 2026-10-05: Community Chronicle created, docs audit completed (removed dead YAMLs/manifest, added GLOSSARY.md)
+- 2026-10-01: Hosting migrated to Yandex Object Storage (ADR-001 updated, sheets 00-15 verified)
 - 2026-09-22: Dark theme removed - light theme only (CSS reduced by 23%)
 - 2026-09-22: Documentation cleanup and reorganization
 - 2026-08-24: Code quality audit completed

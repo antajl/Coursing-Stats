@@ -3,59 +3,15 @@ import { CoursingStatsAPI } from '../api';
 import { getNavigationButtons, getDogSelectionKeyboard } from '../keyboards';
 import { sanitizeInput, validateDogId, validateSearchQuery } from './utils/validators';
 import { getDisplayName } from './utils/helpers';
-import { buildDogCardPresentation } from './utils/presentDogCard';
+import { buildDogCardPresentation, handleDogIdSearch } from './utils/presentDogCard';
 import { buildInlineDoninoDogResults, findDoninoDogsByName } from '../inlineQuery';
+import { createCompareStateHandlers } from './middleware';
 import { Dog } from '../types';
 import type { KVNamespace } from './context';
 
 /**
- * Вспомогательные функции для обработки профиля собаки
- * @param ctx - контекст Grammy (any тип для совместимости)
- * @param dogId - ID собаки для поиска
- * @param api - клиент API Coursing Stats
- * @throws {Error} при ошибке загрузки профиля собаки
- */
-async function handleDogIdSearch(
-  ctx: any,
-  dogId: string,
-  api: CoursingStatsAPI,
-  cache?: KVNamespace,
-) {
-  // Additional validation as defense in depth
-  if (!validateDogId(dogId)) {
-    await ctx.reply('❌ Неверный формат ID собаки.');
-    return;
-  }
-  
-  try {
-    const dogData = await api.getDogById(dogId);
-    
-    if (!dogData) {
-      await ctx.reply('❌ Собака не найдена. Попробуйте другой ID или поиск по кличке.', {
-        reply_markup: getNavigationButtons('main_menu', 'main_menu')
-      });
-      return;
-    }
-
-    const card = await buildDogCardPresentation(api, dogData, {
-      cache,
-      userId: ctx.from?.id.toString(),
-    });
-    
-    await ctx.reply(card.text, {
-      parse_mode: 'HTML',
-      link_preview_options: { is_disabled: true },
-      reply_markup: card.reply_markup,
-    });
-  } catch (error) {
-    await ctx.reply('❌ Ошибка при загрузке профиля собаки. Попробуйте позже.', {
-      reply_markup: getNavigationButtons('main_menu', 'main_menu')
-    });
-  }
-}
-
-/**
  * Вспомогательные функции для обработки поиска по кличке собаки
+
  * @param ctx - контекст Grammy (any тип для совместимости)
  * @param dogName - кличка собаки для поиска
  * @param api - клиент API Coursing Stats
@@ -123,31 +79,6 @@ async function handleDogNameSearch(ctx: any, dogName: string, api: CoursingStats
 }
 
 /**
- * Создает функции для хранения состояния сравнения собак
- * @param cache - опциональное KV хранилище для хранения состояния
- * @returns объект с методами для управления состоянием сравнения
- */
-function createCompareStateHandlers(cache?: KVNamespace) {
-  async function setCompareState(userId: string, dogId: string) {
-    if (!cache) return;
-    await cache.put(`compare:${userId}`, dogId, { expirationTtl: 300 }); // 5 minutes
-  }
-
-  async function getCompareState(userId: string): Promise<string | null> {
-    if (!cache) return null;
-    const dogId = await cache.get(`compare:${userId}`);
-    return dogId || null;
-  }
-
-  async function clearCompareState(userId: string) {
-    if (!cache) return;
-    await cache.delete(`compare:${userId}`);
-  }
-
-  return { setCompareState, getCompareState, clearCompareState };
-}
-
-/**
  * Обработчики поиска собак и режима сравнения
  * @param api - клиент API Coursing Stats
  * @param cache - опциональное KV хранилище для кэширования
@@ -161,6 +92,15 @@ export function createSearch(api: CoursingStatsAPI, cache?: KVNamespace) {
   search.on('message:text', async (ctx) => {
     const userId = ctx.from?.id.toString();
     const text = sanitizeInput(ctx.message.text);
+
+    // Ignore or reject unrecognized slash commands (so /foo is not searched as a dog name)
+    if (text.startsWith('/')) {
+      await ctx.reply(
+        '❌ Неизвестная команда.\n\nИспользуйте меню команд или напишите кличку собаки для поиска.',
+        { reply_markup: getNavigationButtons('main_menu', 'main_menu') }
+      );
+      return;
+    }
     
     // Check for clear command (as text, not just slash command)
     if (text.toLowerCase() === 'clear' || text.toLowerCase() === 'очистить') {
@@ -257,6 +197,3 @@ export function createSearch(api: CoursingStatsAPI, cache?: KVNamespace) {
 
   return search;
 }
-
-// Export the compare state handlers for use in other modules
-export { createCompareStateHandlers };

@@ -20,6 +20,7 @@ verified: 2026-10-01
 | Rate limit | ~100 req/min/user (KV) |
 | Logging | structured security events (invalid input, rate limit, suspicious) |
 | Site | static CDN (Yandex Object Storage); no runtime, read-only |
+| Personal data (152-ФЗ) | Клички собак, титулы и результаты состязаний РКФ — публичные спортивные факты (ст. 1259 ГК РФ), не ПДн владельцев |
 | Prefer yarn | npm на Windows даёт permission issues |
 
 ## Key files / cmds

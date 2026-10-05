@@ -10,7 +10,6 @@ export default function Nav() {
   const [sourcesOpen, setSourcesOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState<OpenMenuId>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [statisticsOpen, setStatisticsOpen] = useState(false);
   const [doninoOpen, setDoninoOpen] = useState(false);
   const [showsOpen, setShowsOpen] = useState(false);
   const [guideOpen, setGuideOpen] = useState(false);
@@ -54,10 +53,6 @@ export default function Nav() {
     setSourcesOpen(!sourcesOpen);
   };
 
-  const toggleStatistics = () => {
-    setStatisticsOpen(!statisticsOpen);
-  };
-
   const toggleDonino = () => {
     setDoninoOpen(!doninoOpen);
   };
@@ -84,7 +79,6 @@ export default function Nav() {
         setMobileMenuOpen(false);
         setSourcesOpen(false);
         setOpenMenu(null);
-        setStatisticsOpen(false);
         setDoninoOpen(false);
         setShowsOpen(false);
         setGuideOpen(false);
@@ -117,14 +111,12 @@ export default function Nav() {
         isGuideActive={isGuideActive}
         isAboutActive={isAboutActive}
         mobileMenuOpen={mobileMenuOpen}
-        statisticsOpen={statisticsOpen}
         showsOpen={showsOpen}
         doninoOpen={doninoOpen}
         guideOpen={guideOpen}
         sourcesOpen={sourcesOpen}
         onToggleMobileMenu={toggleMobileMenu}
         onCloseMobileMenu={() => setMobileMenuOpen(false)}
-        onToggleStatistics={toggleStatistics}
         onToggleShows={toggleShows}
         onToggleDonino={toggleDonino}
         onToggleGuide={toggleGuide}

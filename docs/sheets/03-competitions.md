@@ -64,7 +64,8 @@ Reparse по id из URL `/event/:id`: `npx tsx backend/scripts/import/reparse-c
 - Колонка судей в списке календаря читает `calendar.*.judges` (не протокол). Если в протоколе судьи есть, а справа пусто — поле в calendar null; после reparse можно дописать из `competition.event.judges`.
 - Один numeric id может быть и у архивного протокола, и у будущего события 2026. `rebuild-calendar-index` предпочитает запись с `has_results` / `results_file` и дополнительно алиасит id из имени файла `competitions/…/{id}-….json`, чтобы `/event/1567` открывал протокол, а не пустой календарный слот.
 - Страницы `procoursing.ru/results/…` с одним JPG (дружественные, «Тройка», часть «по баллам») — **не** HTML-протоколы; текущие парсеры их не читают (нужен OCR или ручной ввод).
+- **Неделимость спортивных протоколов:** Результаты официальных состязаний являются фактом кинологической истории и не подлежат выборочному удалению по индивидуальным запросам владельцев (иначе разрушаются турнирные таблицы для других участников). По обоснованным обращениям отключаются сторонние ссылки (`pedigree_url: null`) и исключаются замеры скорости из рейтингов. В UI архива и рейтингов выводятся дисклеймеры о возможной неполноте и неточностях ранних баз данных. Полная хроника и прецеденты: [COMMUNITY_CHRONICLE_2026.md](../COMMUNITY_CHRONICLE_2026.md).
 
 ## See also
 
-[01-three-domains](01-three-domains.md) · [02-data-pipeline](02-data-pipeline.md) · [06-parsers](06-parsers.md) · [07-frontend](07-frontend.md) · [ROADMAP](../ROADMAP.md) · ADR-014
+[01-three-domains](01-three-domains.md) · [02-data-pipeline](02-data-pipeline.md) · [06-parsers](06-parsers.md) · [07-frontend](07-frontend.md) · [ROADMAP](../ROADMAP.md) · [COMMUNITY_CHRONICLE_2026.md](../COMMUNITY_CHRONICLE_2026.md) · ADR-014

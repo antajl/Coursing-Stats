@@ -1,14 +1,7 @@
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import FavoritesCapsule from './FavoritesCapsule'
-import { usePublicCalendarVisible } from '../../hooks/useStaticData'
 import { useNavLogoVisibility } from './useNavLogoVisibility'
-import {
-  DATA_SOURCE_LINKS,
-  GUIDE_MENU_ITEMS,
-  competitionsMenuItems,
-  showsMenuItems,
-  DONINO_MENU_ITEMS
-} from './navLinks'
+import { DATA_SOURCE_LINKS } from './navLinks'
 
 type NavMobileProps = {
   isActive: (path: string) => boolean
@@ -18,17 +11,9 @@ type NavMobileProps = {
   isGuideActive: boolean
   isAboutActive: boolean
   mobileMenuOpen: boolean
-  statisticsOpen: boolean
-  showsOpen: boolean
-  doninoOpen: boolean
-  guideOpen: boolean
   sourcesOpen: boolean
   onToggleMobileMenu: () => void
   onCloseMobileMenu: () => void
-  onToggleStatistics: () => void
-  onToggleShows: () => void
-  onToggleDonino: () => void
-  onToggleGuide: () => void
   onToggleSources: () => void
 }
 
@@ -40,24 +25,11 @@ export function NavMobile({
   isGuideActive,
   isAboutActive,
   mobileMenuOpen,
-  statisticsOpen,
-  showsOpen,
-  doninoOpen,
-  guideOpen,
   sourcesOpen,
   onToggleMobileMenu,
   onCloseMobileMenu,
-  onToggleStatistics,
-  onToggleShows,
-  onToggleDonino,
-  onToggleGuide,
   onToggleSources,
 }: NavMobileProps) {
-  const location = useLocation()
-  const competitionsCalendar = usePublicCalendarVisible('competitions')
-  const showsCalendar = usePublicCalendarVisible('shows')
-  const competitionsItems = competitionsMenuItems(competitionsCalendar)
-  const showsItems = showsMenuItems(showsCalendar)
   const { logoVisible, logoOpacity } = useNavLogoVisibility()
   return (
     <>
@@ -127,221 +99,73 @@ export function NavMobile({
               </span>
             </Link>
             {/* Раздел: Соревнования */}
-            <div>
-              <div className="flex items-center justify-between">
-                <Link
-                  to="/competitions"
-                  onClick={onCloseMobileMenu}
-                  className={`flex-1 px-4 py-2 text-sm font-semibold transition-colors ${
-                    isCompetitionsActive ? 'text-camel-700' : 'text-charcoal-700'
-                  }`}
-                >
-                  <span className="relative inline-block">
-                    Соревнования
-                    <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-camel-600 transition-transform duration-300 ${
-                      isCompetitionsActive ? 'scale-x-100' : 'scale-x-0'
-                    }`}></span>
-                  </span>
-                </Link>
-                <button
-                  type="button"
-                  onClick={onToggleStatistics}
-                  aria-label="Подменю соревнований"
-                  className="px-3 py-2 text-charcoal-400 hover:text-charcoal-700 transition-colors"
-                >
-                  <svg className={`w-4 h-4 transition-transform duration-200 ${statisticsOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-              </div>
-              {statisticsOpen && (
-                <div className="pl-5 pr-2 py-1 space-y-0.5 bg-om-50/60 rounded-xl mx-2 mb-1 border border-om-200/50">
-                  {competitionsItems.map((item) => {
-                    const ItemIcon = item.icon
-                    const itemActive = item.isActive ? item.isActive(location.pathname, location.search) : false
-                    return (
-                      <Link
-                        key={item.to}
-                        to={item.to}
-                        onClick={onCloseMobileMenu}
-                        className={`flex items-center gap-2.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
-                          itemActive
-                            ? 'bg-camel-100 text-camel-900 font-bold'
-                            : 'text-charcoal-700 hover:bg-cream-100/70'
-                        }`}
-                      >
-                        {ItemIcon && <ItemIcon className="w-3.5 h-3.5 text-camel-600 shrink-0" />}
-                        <span>{item.label}</span>
-                      </Link>
-                    )
-                  })}
-                </div>
-              )}
-            </div>
+            <Link
+              to="/competitions"
+              onClick={onCloseMobileMenu}
+              className={`block px-4 py-2 text-sm font-semibold transition-colors ${
+                isCompetitionsActive ? 'text-camel-700' : 'text-charcoal-700'
+              }`}
+            >
+              <span className="relative inline-block">
+                Соревнования
+                <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-camel-600 transition-transform duration-300 ${
+                  isCompetitionsActive ? 'scale-x-100' : 'scale-x-0'
+                }`}></span>
+              </span>
+            </Link>
 
             {/* Раздел: Выставки */}
-            <div>
-              <div className="flex items-center justify-between">
-                <Link
-                  to="/shows"
-                  onClick={() => {
-                    void import('../../lib/prefetchShows').then((m) => m.prefetchShowsHeavyTabs())
-                    onCloseMobileMenu()
-                  }}
-                  className={`flex-1 px-4 py-2 text-sm font-semibold transition-colors ${
-                    isShowsActive ? 'text-camel-700' : 'text-charcoal-700'
-                  }`}
-                >
-                  <span className="relative inline-block">
-                    Выставки
-                    <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-camel-600 transition-transform duration-300 ${
-                      isShowsActive ? 'scale-x-100' : 'scale-x-0'
-                    }`}></span>
-                  </span>
-                </Link>
-                <button
-                  type="button"
-                  onClick={onToggleShows}
-                  aria-label="Подменю выставок"
-                  className="px-3 py-2 text-charcoal-400 hover:text-charcoal-700 transition-colors"
-                >
-                  <svg className={`w-4 h-4 transition-transform duration-200 ${showsOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-              </div>
-              {showsOpen && (
-                <div className="pl-5 pr-2 py-1 space-y-0.5 bg-om-50/60 rounded-xl mx-2 mb-1 border border-om-200/50">
-                  {showsItems.map((item) => {
-                    const ItemIcon = item.icon
-                    const itemActive = item.isActive ? item.isActive(location.pathname, location.search) : false
-                    return (
-                      <Link
-                        key={item.to}
-                        to={item.to}
-                        onClick={onCloseMobileMenu}
-                        className={`flex items-center gap-2.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
-                          itemActive
-                            ? 'bg-camel-100 text-camel-900 font-bold'
-                            : 'text-charcoal-700 hover:bg-cream-100/70'
-                        }`}
-                      >
-                        {ItemIcon && <ItemIcon className="w-3.5 h-3.5 text-camel-600 shrink-0" />}
-                        <span>{item.label}</span>
-                      </Link>
-                    )
-                  })}
-                </div>
-              )}
-            </div>
+            <Link
+              to="/shows"
+              onClick={() => {
+                void import('../../lib/prefetchShows').then((m) => m.prefetchShowsHeavyTabs())
+                onCloseMobileMenu()
+              }}
+              className={`block px-4 py-2 text-sm font-semibold transition-colors ${
+                isShowsActive ? 'text-camel-700' : 'text-charcoal-700'
+              }`}
+            >
+              <span className="relative inline-block">
+                Выставки
+                <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-camel-600 transition-transform duration-300 ${
+                  isShowsActive ? 'scale-x-100' : 'scale-x-0'
+                }`}></span>
+              </span>
+            </Link>
 
             {/* Раздел: Донино */}
-            <div>
-              <div className="flex items-center justify-between">
-                <Link
-                  to="/speed-records"
-                  onClick={onCloseMobileMenu}
-                  className={`flex-1 px-4 py-2 text-sm font-semibold transition-colors ${
-                    isSpeedRecordsActive ? 'text-camel-700' : 'text-charcoal-700'
-                  }`}
-                >
-                  <span className="relative inline-block">
-                    Курсинг Донино
-                    <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-camel-600 transition-transform duration-300 ${
-                      isSpeedRecordsActive ? 'scale-x-100' : 'scale-x-0'
-                    }`}></span>
-                  </span>
-                </Link>
-                <button
-                  type="button"
-                  onClick={onToggleDonino}
-                  aria-label="Подменю Донино"
-                  className="px-3 py-2 text-charcoal-400 hover:text-charcoal-700 transition-colors"
-                >
-                  <svg className={`w-4 h-4 transition-transform duration-200 ${doninoOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-              </div>
-              {doninoOpen && (
-                <div className="pl-5 pr-2 py-1 space-y-0.5 bg-om-50/60 rounded-xl mx-2 mb-1 border border-om-200/50">
-                  {DONINO_MENU_ITEMS.map((item) => {
-                    const ItemIcon = item.icon
-                    const itemActive = item.isActive ? item.isActive(location.pathname, location.search) : false
-                    return (
-                      <Link
-                        key={item.to}
-                        to={item.to}
-                        onClick={onCloseMobileMenu}
-                        className={`flex items-center gap-2.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
-                          itemActive
-                            ? 'bg-camel-100 text-camel-900 font-bold'
-                            : 'text-charcoal-700 hover:bg-cream-100/70'
-                        }`}
-                      >
-                        {ItemIcon && <ItemIcon className="w-3.5 h-3.5 text-camel-600 shrink-0" />}
-                        <span>{item.label}</span>
-                      </Link>
-                    )
-                  })}
-                </div>
-              )}
-            </div>
+            <Link
+              to="/speed-records"
+              onClick={onCloseMobileMenu}
+              className={`block px-4 py-2 text-sm font-semibold transition-colors ${
+                isSpeedRecordsActive ? 'text-camel-700' : 'text-charcoal-700'
+              }`}
+            >
+              <span className="relative inline-block">
+                Курсинг Донино
+                <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-camel-600 transition-transform duration-300 ${
+                  isSpeedRecordsActive ? 'scale-x-100' : 'scale-x-0'
+                }`}></span>
+              </span>
+            </Link>
 
             {/* Раздел: Справка */}
-            <div>
-              <div className="flex items-center justify-between">
-                <Link
-                  to="/guide"
-                  onClick={onCloseMobileMenu}
-                  className={`flex-1 px-4 py-2 text-sm font-semibold transition-colors ${
-                    isGuideActive ? 'text-camel-700' : 'text-charcoal-700'
+            <Link
+              to="/guide"
+              onClick={onCloseMobileMenu}
+              className={`block px-4 py-2 text-sm font-semibold transition-colors ${
+                isGuideActive ? 'text-camel-700' : 'text-charcoal-700'
+              }`}
+            >
+              <span className="relative inline-block">
+                Справка
+                <span
+                  className={`absolute bottom-0 left-0 h-0.5 w-full bg-camel-600 transition-transform duration-300 ${
+                    isGuideActive ? 'scale-x-100' : 'scale-x-0'
                   }`}
-                >
-                  <span className="relative inline-block">
-                    Справка
-                    <span
-                      className={`absolute bottom-0 left-0 h-0.5 w-full bg-camel-600 transition-transform duration-300 ${
-                        isGuideActive ? 'scale-x-100' : 'scale-x-0'
-                      }`}
-                    />
-                  </span>
-                </Link>
-                <button
-                  type="button"
-                  onClick={onToggleGuide}
-                  aria-label="Подменю справки"
-                  className="px-3 py-2 text-charcoal-400 hover:text-charcoal-700 transition-colors"
-                >
-                  <svg className={`w-4 h-4 transition-transform duration-200 ${guideOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-              </div>
-              {guideOpen && (
-                <div className="pl-5 pr-2 py-1 space-y-0.5 bg-om-50/60 rounded-xl mx-2 mb-1 border border-om-200/50">
-                  {GUIDE_MENU_ITEMS.map((item) => {
-                    const ItemIcon = item.icon
-                    const itemActive = item.isActive ? item.isActive(location.pathname, location.search) : false
-                    return (
-                      <Link
-                        key={item.to}
-                        to={item.to}
-                        onClick={onCloseMobileMenu}
-                        className={`flex items-center gap-2.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
-                          itemActive
-                            ? 'bg-camel-100 text-camel-900 font-bold'
-                            : 'text-charcoal-700 hover:bg-cream-100/70'
-                        }`}
-                      >
-                        {ItemIcon && <ItemIcon className="w-3.5 h-3.5 text-camel-600 shrink-0" />}
-                        <span>{item.label}</span>
-                      </Link>
-                    )
-                  })}
-                </div>
-              )}
-            </div>
+                />
+              </span>
+            </Link>
             <Link
               to="/about"
               onClick={onCloseMobileMenu}

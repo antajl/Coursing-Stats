@@ -270,7 +270,7 @@ export async function getShowCalendar(
 }
 
 export async function getShowExhibition(exhibitionId: string): Promise<ApiResult<ShowExhibition>> {
-  console.log('[getShowExhibition] Loading exhibition:', exhibitionId)
+  console.debug('[getShowExhibition] Loading exhibition:', exhibitionId)
 
   // 1. Try JSON index (for LC allowlist exhibitions)
   try {
@@ -301,7 +301,7 @@ export async function getShowExhibition(exhibitionId: string): Promise<ApiResult
     console.error('[getShowExhibition] Turso query failed:', error)
   }
 
-  console.log('[getShowExhibition] Exhibition not found anywhere')
+  console.warn('[getShowExhibition] Exhibition not found anywhere:', exhibitionId)
   return {
     success: false,
     error: 'Выставка не найдена',

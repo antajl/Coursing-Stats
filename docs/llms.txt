@@ -1,28 +1,36 @@
 # Coursing Stats
 
-> Dog competition statistics aggregator (coursing, BZMP, racing) + RKF shows + Donino + Telegram bot. CDN-only public site.
+> Dog competition statistics aggregator (coursing, BZMP, racing) + RKF shows + Donino speed records + Telegram bot. CDN-only public site hosted on Yandex Object Storage.
 
-## Documentation (start here)
+## Core Navigation (start here)
 
-- [MAP](MAP.md) — task → one cheatsheet (AI router)
-- [Overview](sheets/00-overview.md)
-- [Three domains](sheets/01-three-domains.md)
-- [Data pipeline](sheets/02-data-pipeline.md)
-- [Competitions](sheets/03-competitions.md)
-- [Shows / Turso](sheets/04-shows.md)
-- [Donino](sheets/05-donino.md)
-- [Parsers](sheets/06-parsers.md)
-- [Frontend](sheets/07-frontend.md)
-- [Bot](sheets/08-bot.md)
-- [Ops / deploy](sheets/09-ops-deploy.md)
-- [Security](sheets/10-security.md)
-- [Testing](sheets/11-testing.md)
-- [Agent skills](sheets/12-agent-skills.md)
+- [Agent Router (MAP)](MAP.md) — task → one cheatsheet
+- [Strategic Roadmap](ROADMAP.md) — active refactoring branches
+- [Quick Reference](QUICK-REFERENCE.md) — commands & gotchas
+- [Glossary & Invariants](GLOSSARY.md) — terms, concepts, invariants
+- [Community Chronicle](COMMUNITY_CHRONICLE_2026.md) — community history, ProCoursing, legal & archive status
+- [Full Index](INDEX.md) — complete file registry
+- [Root Rules](../AGENTS.md) — primary system rules and invariants
+
+## Domain Sheets (docs/sheets/)
+
+- [00 — Overview](sheets/00-overview.md)
+- [01 — Three domains](sheets/01-three-domains.md)
+- [02 — Data pipeline](sheets/02-data-pipeline.md)
+- [03 — Competitions](sheets/03-competitions.md)
+- [04 — Shows / Turso](sheets/04-shows.md)
+- [05 — Donino](sheets/05-donino.md)
+- [06 — Parsers](sheets/06-parsers.md)
+- [07 — Frontend](sheets/07-frontend.md)
+- [08 — Bot](sheets/08-bot.md)
+- [09 — Ops & deploy](sheets/09-ops-deploy.md)
+- [10 — Security](sheets/10-security.md)
+- [11 — Testing](sheets/11-testing.md)
+- [12 — Agent skills](sheets/12-agent-skills.md)
+- [13 — Racing standards](sheets/13-racing-standards.md)
+- [14 — Design system](sheets/14-design-system.md)
+- [15 — SEO & analytics](sheets/15-seo-analytics.md)
+
+## Decisions
+
 - [ADRs](decisions/)
-- [Root AGENTS.md](../AGENTS.md)
-
-## Optional
-
-- [Manifest](manifest.yaml)
-- [Glossary](index/glossary.yaml)
-- [Topics](index/topics.yaml)

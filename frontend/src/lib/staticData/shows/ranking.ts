@@ -155,26 +155,26 @@ export async function getShowDogRankingPage0(year: string): Promise<ApiResult<Sh
 }
 
 export async function getShowDogRanking(year = ''): Promise<ApiResult<ShowDog[]>> {
-  console.log('[getShowDogRanking] Requested year:', year)
+  console.debug('[getShowDogRanking] Requested year:', year)
   if (year) {
-    console.log('[getShowDogRanking] Loading year ranking for:', year)
+    console.debug('[getShowDogRanking] Loading year ranking for:', year)
     const ranking = await loadShowDogRankingYear(year)
-    console.log('[getShowDogRanking] Year ranking loaded:', ranking ? ranking.length : 'null')
+    console.debug('[getShowDogRanking] Year ranking loaded:', ranking ? ranking.length : 'null')
     if (!ranking) return { success: false, error: `Dog ranking for year ${year} unavailable` }
     return { success: true, data: ranking }
   }
 
   const allTime = await fetchJson<ShowDog[]>('shows/indexes/dog-ranking.json')
-  console.log('[getShowDogRanking] All-time ranking:', allTime ? allTime.length : 'null')
+  console.debug('[getShowDogRanking] All-time ranking:', allTime ? allTime.length : 'null')
   if (allTime && Array.isArray(allTime) && allTime.length > 0) {
     return { success: true, data: allTime.map(hydrateShowDog) }
   }
 
-  console.log('[getShowDogRanking] Loading year rankings:', SHOW_RANKING_YEARS)
+  console.debug('[getShowDogRanking] Loading year rankings:', SHOW_RANKING_YEARS)
   const parts = await Promise.all(SHOW_RANKING_YEARS.map((y) => loadShowDogRankingYear(y)))
-  console.log('[getShowDogRanking] Year rankings loaded:', parts.map(p => p ? p.length : 'null'))
+  console.debug('[getShowDogRanking] Year rankings loaded:', parts.map(p => p ? p.length : 'null'))
   const lists = parts.filter((p): p is ShowDog[] => Array.isArray(p) && p.length > 0)
-  console.log('[getShowDogRanking] Valid lists:', lists.length)
+  console.debug('[getShowDogRanking] Valid lists:', lists.length)
   if (lists.length === 0) return { success: false, error: 'Dog ranking unavailable' }
   return { success: true, data: mergeShowDogRankings(lists) }
 }
@@ -219,20 +219,20 @@ async function loadShardedLookup(): Promise<ShowDogLookup | null> {
   
   // Load all 16 shards (0-f)
   const shardKeys = Array.from({ length: 16 }, (_, i) => i.toString(16))
-  console.log('[show-dog-lookup] Loading shards:', shardKeys)
+  console.debug('[show-dog-lookup] Loading shards:', shardKeys)
   
   const shards = await Promise.all(
     shardKeys.map(async (key) => {
       const result = await fetchJson<{ byCompetitionId?: Record<string, string>, byNameBreed?: Record<string, string> }>(
         `shows/indexes/show-dog-lookup/${key}.json`
       )
-      console.log('[show-dog-lookup] Shard', key, ':', result ? 'loaded' : 'null', 
+      console.debug('[show-dog-lookup] Shard', key, ':', result ? 'loaded' : 'null', 
         result ? `(comp: ${Object.keys(result.byCompetitionId || {}).length}, name: ${Object.keys(result.byNameBreed || {}).length})` : '')
       return result
     })
   )
   
-  console.log('[show-dog-lookup] Loaded shards:', shards.filter(s => s != null).length, '/', shards.length)
+  console.debug('[show-dog-lookup] Loaded shards:', shards.filter(s => s != null).length, '/', shards.length)
   
   for (const shard of shards) {
     if (shard?.byCompetitionId) {
@@ -243,7 +243,7 @@ async function loadShardedLookup(): Promise<ShowDogLookup | null> {
     }
   }
   
-  console.log('[show-dog-lookup] Total entries:', Object.keys(byCompetitionId).length, 'competition,', Object.keys(byNameBreed).length, 'name keys')
+  console.debug('[show-dog-lookup] Total entries:', Object.keys(byCompetitionId).length, 'competition,', Object.keys(byNameBreed).length, 'name keys')
   
   if (Object.keys(byCompetitionId).length === 0 && Object.keys(byNameBreed).length === 0) {
     console.warn('[show-dog-lookup] No entries found!')
@@ -256,15 +256,15 @@ async function loadShardedLookup(): Promise<ShowDogLookup | null> {
 /** Полная карточка выставочной собаки (titles + history) из шарда dog-details/. */
 export async function getShowDogDetail(id: string): Promise<ApiResult<ShowDog>> {
   const shard = showDogDetailShard(id)
-  console.log('[getShowDogDetail] Loading shard:', shard, 'for ID:', id)
+  console.debug('[getShowDogDetail] Loading shard:', shard, 'for ID:', id)
   const pack = await fetchJson<Record<string, ShowDog>>(`shows/indexes/dog-details/${shard}.json`)
-  console.log('[getShowDogDetail] Shard loaded, keys:', pack ? Object.keys(pack).length : 'null')
+  console.debug('[getShowDogDetail] Shard loaded, keys:', pack ? Object.keys(pack).length : 'null')
   const raw = pack?.[id]
   if (!raw) {
     console.warn('[getShowDogDetail] Dog not found in shard:', id)
     return { success: false, error: `Show dog ${id} not found` }
   }
-  console.log('[getShowDogDetail] Dog found:', raw.name_lat)
+  console.debug('[getShowDogDetail] Dog found:', raw.name_lat)
   return { success: true, data: hydrateShowDog(raw) }
 }
 

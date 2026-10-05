@@ -14,24 +14,12 @@ preloadOptimizedFonts()
 
 initSentry()
 
-// ARIA audit in development
-if (import.meta.env.DEV) {
-  window.addEventListener('load', () => {
-    import('./lib/ariaAudit').then(({ auditAriaLabels }) => {
-      const issues = auditAriaLabels()
-      if (issues.length > 0) {
-        console.group('ARIA Audit Issues')
-        issues.forEach(issue => {
-          console.warn(issue)
-        })
-        console.groupEnd()
-      }
-    })
-
-    import('./lib/colorContrastAudit').then(({ runAudit }) => {
-      runAudit()
-    })
-  })
+// Development accessibility tools (accessible on-demand via console: window.__AUDIT__)
+if (import.meta.env.DEV && typeof window !== 'undefined') {
+  ;(window as unknown as { __AUDIT__: Record<string, unknown> }).__AUDIT__ = {
+    colorContrast: () => import('./lib/colorContrastAudit').then(m => m.runAudit()),
+    aria: () => import('./lib/ariaAudit').then(m => m.auditAriaLabels()),
+  }
 }
 
 createRoot(document.getElementById('root')).render(

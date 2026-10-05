@@ -67,9 +67,8 @@ export function runAudit() {
   return { total: colorPairs.length, passed: colorPairs.length - failures, failed: failures }
 }
 
-// Auto-run in development
-if (import.meta.env.DEV) {
-  window.addEventListener('load', () => {
-    setTimeout(() => runAudit(), 1000)
-  })
+// Expose on window for manual running in development:
+// In browser console: runColorContrastAudit()
+if (import.meta.env.DEV && typeof window !== 'undefined') {
+  ;(window as unknown as { runColorContrastAudit: typeof runAudit }).runColorContrastAudit = runAudit
 }
