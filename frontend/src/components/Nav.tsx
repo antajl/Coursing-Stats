@@ -10,9 +10,6 @@ export default function Nav() {
   const [sourcesOpen, setSourcesOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState<OpenMenuId>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [doninoOpen, setDoninoOpen] = useState(false);
-  const [showsOpen, setShowsOpen] = useState(false);
-  const [guideOpen, setGuideOpen] = useState(false);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const isActive = (path: string) => location.pathname === path || (path === '/' && location.pathname === '/');
   const isCompetitionsActive =
@@ -53,18 +50,6 @@ export default function Nav() {
     setSourcesOpen(!sourcesOpen);
   };
 
-  const toggleDonino = () => {
-    setDoninoOpen(!doninoOpen);
-  };
-
-  const toggleShows = () => {
-    setShowsOpen(!showsOpen);
-  };
-
-  const toggleGuide = () => {
-    setGuideOpen(!guideOpen);
-  };
-
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
@@ -79,9 +64,6 @@ export default function Nav() {
         setMobileMenuOpen(false);
         setSourcesOpen(false);
         setOpenMenu(null);
-        setDoninoOpen(false);
-        setShowsOpen(false);
-        setGuideOpen(false);
       }
     };
     document.addEventListener('keydown', handleEsc);
@@ -111,15 +93,9 @@ export default function Nav() {
         isGuideActive={isGuideActive}
         isAboutActive={isAboutActive}
         mobileMenuOpen={mobileMenuOpen}
-        showsOpen={showsOpen}
-        doninoOpen={doninoOpen}
-        guideOpen={guideOpen}
         sourcesOpen={sourcesOpen}
         onToggleMobileMenu={toggleMobileMenu}
         onCloseMobileMenu={() => setMobileMenuOpen(false)}
-        onToggleShows={toggleShows}
-        onToggleDonino={toggleDonino}
-        onToggleGuide={toggleGuide}
         onToggleSources={toggleSources}
       />
     </nav>
