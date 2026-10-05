@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
+import { createPortal } from 'react-dom'
 import {
   Plus,
   Trash2,
@@ -9,13 +10,14 @@ import {
   FileCode,
   Trophy,
   FolderPlus,
-  Search,
   X,
-  Award,
   ChevronDown,
   Check,
   RotateCcw,
-  MoreVertical
+  Ban,
+  Clock,
+  MoreVertical,
+  Search
 } from 'lucide-react'
 import { jsPDF } from 'jspdf'
 import { toPng } from 'html-to-image'
@@ -24,6 +26,7 @@ import {
   createNewCategory,
   createNewParticipant,
   createRunData,
+  createEmptyScores,
   calculateRoundSum,
   hasRoundScores,
   calculateTotalScore,
@@ -179,17 +182,47 @@ interface ExistingDog {
 }
 
 const DEFAULT_HEADER: CompetitionHeader = {
-  title: 'Чемпионат РКФ по курсингу',
-  rank: 'ЧРКФ',
+  title: 'Соревнования по курсингу',
+  rank: 'Сертификатные',
   date: new Date().toISOString().substring(0, 10),
-  location: 'Московская обл., Донино',
-  club: 'МКОО Клуб Спортивного Собаководства',
+  location: 'Город, место проведения',
+  club: 'Кинологический клуб',
   judges: ''
 }
 
 const createDefaultCategories = (): CategoryGroup[] => [
   createNewCategory('Басенджи', 'Стандартный', 'male', 2, 1, 2)
 ]
+
+interface ActiveRunMenuState {
+  catId: string
+  dogId: string
+  rIdx: number
+  rect: { top: number; bottom: number; left: number; right: number }
+}
+
+interface ActiveSearchDogState {
+  catId: string
+  dogId: string
+  rect: { top: number; bottom: number; left: number; width: number }
+}
+
+interface ActiveAwardsMenuState {
+  catId: string
+  dogId: string
+  rect: { top: number; bottom: number; left: number; right: number; width: number }
+}
+
+interface ActiveCategoryMenuState {
+  catId: string
+  rect: { top: number; bottom: number; left: number; right: number; width: number }
+}
+
+interface ActiveDogSexMenuState {
+  catId: string
+  dogId: string
+  rect: { top: number; bottom: number; left: number; right: number; width: number }
+}
 
 export default function ProtocolBuilder() {
   const [kind, setKind] = useState<CompetitionKind>('coursing')
@@ -200,10 +233,15 @@ export default function ProtocolBuilder() {
 
   // База существующих собак для автокомплита
   const [allExistingDogs, setAllExistingDogs] = useState<ExistingDog[]>([])
-  const [activeSearchDogId, setActiveSearchDogId] = useState<string | null>(null)
+  const [activeSearchDog, setActiveSearchDog] = useState<ActiveSearchDogState | null>(null)
   const [searchQuery, setSearchQuery] = useState('')
-  const [activeAwardsDogId, setActiveAwardsDogId] = useState<string | null>(null)
-  const [activeRunMenu, setActiveRunMenu] = useState<string | null>(null)
+  const [activeAwardsMenu, setActiveAwardsMenu] = useState<ActiveAwardsMenuState | null>(null)
+  const [activeRunMenu, setActiveRunMenu] = useState<ActiveRunMenuState | null>(null)
+  const [activeBreedMenu, setActiveBreedMenu] = useState<ActiveCategoryMenuState | null>(null)
+  const [breedSearch, setBreedSearch] = useState('')
+  const [activeClassMenu, setActiveClassMenu] = useState<ActiveCategoryMenuState | null>(null)
+  const [activeCategorySexMenu, setActiveCategorySexMenu] = useState<ActiveCategoryMenuState | null>(null)
+  const [activeDogSexMenu, setActiveDogSexMenu] = useState<ActiveDogSexMenuState | null>(null)
   const [isDownloadOpen, setIsDownloadOpen] = useState(false)
   const [isExportingPDF, setIsExportingPDF] = useState(false)
   const [customBreedCatIds, setCustomBreedCatIds] = useState<Record<string, boolean>>({})
@@ -220,6 +258,41 @@ export default function ProtocolBuilder() {
     }
     document.addEventListener('mousedown', handleClickOutside)
     return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [])
+
+  // Закрытие меню статуса забега, титулов, категорий и автокомплита при скролле окна или Escape
+  useEffect(() => {
+    const handleScroll = (e: Event) => {
+      const target = e.target as HTMLElement | null
+      // Не закрывать меню, если пользователь прокручивает сам выпадающий список (титулы, порода, автокомплит)
+      if (target && target.closest && target.closest('[data-portal-menu]')) {
+        return
+      }
+      setActiveRunMenu(null)
+      setActiveAwardsMenu(null)
+      setActiveSearchDog(null)
+      setActiveBreedMenu(null)
+      setActiveClassMenu(null)
+      setActiveCategorySexMenu(null)
+      setActiveDogSexMenu(null)
+    }
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setActiveRunMenu(null)
+        setActiveAwardsMenu(null)
+        setActiveSearchDog(null)
+        setActiveBreedMenu(null)
+        setActiveClassMenu(null)
+        setActiveCategorySexMenu(null)
+        setActiveDogSexMenu(null)
+      }
+    }
+    window.addEventListener('scroll', handleScroll, true)
+    window.addEventListener('keydown', handleKeyDown)
+    return () => {
+      window.removeEventListener('scroll', handleScroll, true)
+      window.removeEventListener('keydown', handleKeyDown)
+    }
   }, [])
 
   // Загрузка индекса собак сайта для быстрого автозаполнения
@@ -258,20 +331,62 @@ export default function ProtocolBuilder() {
       const saved = localStorage.getItem(STORAGE_KEY)
       if (saved) {
         const parsed = JSON.parse(saved)
-        if (parsed.header) setHeader(parsed.header)
+        if (parsed.header) {
+          const raw = parsed.header
+          setHeader({
+            ...DEFAULT_HEADER,
+            ...raw,
+            title: raw.title === 'Чемпионат РКФ по курсингу' ? DEFAULT_HEADER.title : (raw.title || DEFAULT_HEADER.title),
+            rank: raw.rank === 'ЧРКФ' ? DEFAULT_HEADER.rank : (raw.rank || DEFAULT_HEADER.rank),
+            location: raw.location === 'Московская обл., Донино' ? DEFAULT_HEADER.location : (raw.location || DEFAULT_HEADER.location),
+            club: raw.club === 'МКОО Клуб Спортивного Собаководства' ? DEFAULT_HEADER.club : (raw.club || DEFAULT_HEADER.club)
+          })
+        }
         if (parsed.kind) setKind(parsed.kind)
-        if (parsed.categories && parsed.categories.length > 0) {
-          // Нормализация runs
+        if (Array.isArray(parsed.categories) && parsed.categories.length > 0) {
+          // Нормализация runs и awards с защитой от повреждённых/устаревших черновиков
           const normCats = parsed.categories.map((c: any) => ({
             ...c,
-            runsCount: c.runsCount || 2,
-            dogs: (c.dogs || []).map((d: any) => ({
-              ...d,
-              runs: Array.isArray(d.runs) && d.runs.length > 0 ? d.runs : [
+            id: c.id || 'cat_' + Math.random().toString(36).substring(2, 9),
+            breed: c.breed || 'Басенджи',
+            className: c.className || 'Стандартный',
+            sex: c.sex || 'male',
+            runsCount: (c.runsCount === 1 || c.runsCount === 2 || c.runsCount === 3) ? c.runsCount : 2,
+            dogs: (c.dogs || []).map((d: any, dIdx: number) => {
+              const rawRuns = Array.isArray(d.runs) && d.runs.length > 0 ? d.runs : [
                 d.run1_scores ? { heat: d.run1_heat || '1', blanket: d.run1_blanket || 'red', scores: d.run1_scores } : createRunData('1', 'red'),
                 d.run2_scores ? { heat: d.run2_heat || '1', blanket: d.run2_blanket || 'white', scores: d.run2_scores } : createRunData('1', 'white')
               ]
-            }))
+
+              const runs = rawRuns.map((r: any, rIdx: number) => ({
+                heat: String(r?.heat || String(rIdx + 1)).replace(/\D/g, '').slice(0, 3) || String(rIdx + 1),
+                blanket: r?.blanket || (rIdx === 0 ? 'red' : rIdx === 1 ? 'white' : 'blue'),
+                scores: r?.scores ? {
+                  speed: typeof r.scores.speed === 'number' ? r.scores.speed : '',
+                  enthusiasm: typeof r.scores.enthusiasm === 'number' ? r.scores.enthusiasm : '',
+                  intelligence: typeof r.scores.intelligence === 'number' ? r.scores.intelligence : '',
+                  agility: typeof r.scores.agility === 'number' ? r.scores.agility : '',
+                  endurance: typeof r.scores.endurance === 'number' ? r.scores.endurance : ''
+                } : createEmptyScores(),
+                status: r?.status || 'normal',
+                reason: r?.reason || ''
+              }))
+
+              return {
+                id: d.id || 'dog_' + Math.random().toString(36).substring(2, 9),
+                catalogNumber: d.catalogNumber ?? String(dIdx + 1),
+                dogName: d.dogName || '',
+                sex: d.sex || 'male',
+                runs,
+                racing_box: d.racing_box || '1',
+                racing_time1: d.racing_time1 || '',
+                racing_time2: d.racing_time2 || '',
+                racing_final_time: d.racing_final_time || '',
+                disqualified: Boolean(d.disqualified),
+                comment: d.comment || '',
+                awards: Array.isArray(d.awards) ? d.awards : []
+              }
+            })
           }))
           setCategories(normCats)
         }
@@ -380,8 +495,8 @@ export default function ProtocolBuilder() {
         dogs: cat.dogs.map(d => {
           if (d.id !== dogId) return d
           const runs = [...d.runs]
-          if (!runs[runIndex]) runs[runIndex] = createRunData()
-          runs[runIndex] = { ...runs[runIndex], [field]: value }
+          const sanitized = field === 'heat' ? String(value || '').replace(/\D/g, '').slice(0, 3) : value
+          runs[runIndex] = { ...runs[runIndex], [field]: sanitized }
           return { ...d, runs }
         })
       }
@@ -446,25 +561,38 @@ export default function ProtocolBuilder() {
   ) => {
     setCategories(prev => prev.map(cat => {
       if (cat.id !== categoryId) return cat
+      let targetDog: DogParticipant | null = null
+      const updatedDogs = cat.dogs.map(d => {
+        if (d.id !== dogId) return d
+        const runs = [...d.runs]
+        if (!runs[runIndex]) runs[runIndex] = createRunData()
+        runs[runIndex] = {
+          ...runs[runIndex],
+          status,
+          reason: reason !== undefined ? reason : (runs[runIndex].reason || '')
+        }
+        // Если на этом забеге дисквалификация или неявка, следующие забеги очищаются
+        if (status !== 'normal') {
+          for (let next = runIndex + 1; next < runs.length; next++) {
+            runs[next] = createRunData(runs[next]?.heat || '1', runs[next]?.blanket || 'white', 'normal', '')
+          }
+        }
+        targetDog = { ...d, runs }
+        return targetDog
+      })
+
+      // Если у собаки неявка, перемещаем эту собаку в самый низ списка категории
+      if (status === 'absent' && targetDog) {
+        const otherDogs = updatedDogs.filter(d => d.id !== dogId)
+        return {
+          ...cat,
+          dogs: [...otherDogs, targetDog]
+        }
+      }
+
       return {
         ...cat,
-        dogs: cat.dogs.map(d => {
-          if (d.id !== dogId) return d
-          const runs = [...d.runs]
-          if (!runs[runIndex]) runs[runIndex] = createRunData()
-          runs[runIndex] = {
-            ...runs[runIndex],
-            status,
-            reason: reason !== undefined ? reason : (runs[runIndex].reason || '')
-          }
-          // Если на этом забеге дисквалификация или неявка, следующие забеги очищаются
-          if (status !== 'normal') {
-            for (let next = runIndex + 1; next < runs.length; next++) {
-              runs[next] = createRunData(runs[next]?.heat || '1', runs[next]?.blanket || 'white', 'normal', '')
-            }
-          }
-          return { ...d, runs }
-        })
+        dogs: updatedDogs
       }
     }))
   }
@@ -497,10 +625,11 @@ export default function ProtocolBuilder() {
         ...cat,
         dogs: cat.dogs.map(d => {
           if (d.id !== dogId) return d
-          const exists = d.awards.includes(award)
+          const currentAwards = d.awards || []
+          const exists = currentAwards.includes(award)
           return {
             ...d,
-            awards: exists ? d.awards.filter(a => a !== award) : [...d.awards, award]
+            awards: exists ? currentAwards.filter(a => a !== award) : [...currentAwards, award]
           }
         })
       }
@@ -529,7 +658,7 @@ export default function ProtocolBuilder() {
         updateCategoryMeta(categoryId, { breed: dog.breed })
       }
     }
-    setActiveSearchDogId(null)
+    setActiveSearchDog(null)
     setSearchQuery('')
   }
 
@@ -612,8 +741,14 @@ export default function ProtocolBuilder() {
       })
       setKind('coursing')
       setCategories(createDefaultCategories())
-      setActiveAwardsDogId(null)
-      setActiveSearchDogId(null)
+      setActiveAwardsMenu(null)
+      setActiveSearchDog(null)
+      setActiveRunMenu(null)
+      setActiveBreedMenu(null)
+      setActiveClassMenu(null)
+      setActiveCategorySexMenu(null)
+      setActiveDogSexMenu(null)
+      setBreedSearch('')
       setSearchQuery('')
     }
   }
@@ -732,7 +867,12 @@ export default function ProtocolBuilder() {
 
           <div className="flex items-center bg-om-100 p-0.5 rounded-lg border border-om-200 text-xs">
             <button
-              onClick={() => setKind('coursing')}
+              onClick={() => {
+                setKind('coursing')
+                if (header.title === 'Соревнования по рейсингу') {
+                  setHeader(prev => ({ ...prev, title: 'Соревнования по курсингу' }))
+                }
+              }}
               className={`px-3 py-1 rounded-md transition-all font-medium ${
                 kind === 'coursing'
                   ? 'bg-cream-50 text-char-900 shadow-xs font-semibold'
@@ -742,7 +882,12 @@ export default function ProtocolBuilder() {
               Курсинг (баллы)
             </button>
             <button
-              onClick={() => setKind('racing')}
+              onClick={() => {
+                setKind('racing')
+                if (header.title === 'Соревнования по курсингу') {
+                  setHeader(prev => ({ ...prev, title: 'Соревнования по рейсингу' }))
+                }
+              }}
               className={`px-3 py-1 rounded-md transition-all font-medium ${
                 kind === 'racing'
                   ? 'bg-cream-50 text-char-900 shadow-xs font-semibold'
@@ -761,7 +906,8 @@ export default function ProtocolBuilder() {
               type="text"
               value={header.title}
               onChange={e => setHeader({ ...header, title: e.target.value })}
-              className="w-full px-2.5 py-1.5 bg-om-50 rounded-lg border border-om-200 text-char-900 focus:outline-none focus:ring-1 focus:ring-camel-500"
+              placeholder="Название соревнований"
+              className="w-full px-2.5 py-1.5 bg-om-50 rounded-lg border border-om-200 text-char-900 placeholder:text-char-400 focus:outline-none focus:ring-1 focus:ring-camel-500"
             />
           </div>
 
@@ -771,7 +917,8 @@ export default function ProtocolBuilder() {
               type="text"
               value={header.rank}
               onChange={e => setHeader({ ...header, rank: e.target.value })}
-              className="w-full px-2.5 py-1.5 bg-om-50 rounded-lg border border-om-200 text-char-900 focus:outline-none focus:ring-1 focus:ring-camel-500"
+              placeholder="Ранг соревнований (Сертификатные, ЧРКФ и т.д.)"
+              className="w-full px-2.5 py-1.5 bg-om-50 rounded-lg border border-om-200 text-char-900 placeholder:text-char-400 focus:outline-none focus:ring-1 focus:ring-camel-500"
             />
           </div>
 
@@ -791,7 +938,8 @@ export default function ProtocolBuilder() {
               type="text"
               value={header.location}
               onChange={e => setHeader({ ...header, location: e.target.value })}
-              className="w-full px-2.5 py-1.5 bg-om-50 rounded-lg border border-om-200 text-char-900 focus:outline-none focus:ring-1 focus:ring-camel-500"
+              placeholder="Город, место проведения"
+              className="w-full px-2.5 py-1.5 bg-om-50 rounded-lg border border-om-200 text-char-900 placeholder:text-char-400 focus:outline-none focus:ring-1 focus:ring-camel-500"
             />
           </div>
 
@@ -801,7 +949,8 @@ export default function ProtocolBuilder() {
               type="text"
               value={header.club}
               onChange={e => setHeader({ ...header, club: e.target.value })}
-              className="w-full px-2.5 py-1.5 bg-om-50 rounded-lg border border-om-200 text-char-900 focus:outline-none focus:ring-1 focus:ring-camel-500"
+              placeholder="Кинологический клуб / Организатор"
+              className="w-full px-2.5 py-1.5 bg-om-50 rounded-lg border border-om-200 text-char-900 placeholder:text-char-400 focus:outline-none focus:ring-1 focus:ring-camel-500"
             />
           </div>
 
@@ -811,7 +960,8 @@ export default function ProtocolBuilder() {
               type="text"
               value={header.judges}
               onChange={e => setHeader({ ...header, judges: e.target.value })}
-              className="w-full px-2.5 py-1.5 bg-om-50 rounded-lg border border-om-200 text-char-900 focus:outline-none focus:ring-1 focus:ring-camel-500"
+              placeholder="Судейская коллегия / ФИО судей"
+              className="w-full px-2.5 py-1.5 bg-om-50 rounded-lg border border-om-200 text-char-900 placeholder:text-char-400 focus:outline-none focus:ring-1 focus:ring-camel-500"
             />
           </div>
         </div>
@@ -836,7 +986,9 @@ export default function ProtocolBuilder() {
         {/* СПИСОК КАТЕГОРИЙ */}
         <div className="space-y-4">
           {categories.map((category) => {
-            const isCategoryActive = category.dogs.some(d => d.id === activeAwardsDogId || d.id === activeSearchDogId || (activeRunMenu && activeRunMenu.startsWith(d.id)))
+            const isCategoryActive = (category.dogs || []).some(
+              d => d.id === activeAwardsMenu?.dogId || d.id === activeSearchDog?.dogId || activeRunMenu?.dogId === d.id
+            )
             return (
               <div
                 key={category.id}
@@ -870,29 +1022,22 @@ export default function ProtocolBuilder() {
                       </button>
                     </div>
                   ) : (
-                    <select
-                      value={ALL_KNOWN_BREEDS.includes(category.breed) ? category.breed : (category.breed || ALL_KNOWN_BREEDS[0])}
-                      onChange={e => {
-                        if (e.target.value === '__custom__') {
-                          setCustomBreedCatIds(prev => ({ ...prev, [category.id]: true }))
-                        } else {
-                          updateCategoryMeta(category.id, { breed: e.target.value })
-                        }
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        const rect = e.currentTarget.getBoundingClientRect()
+                        setActiveBreedMenu({
+                          catId: category.id,
+                          rect: { top: rect.top, bottom: rect.bottom, left: rect.left, right: rect.right, width: rect.width }
+                        })
+                        setBreedSearch('')
                       }}
-                      className="px-2 py-0.5 bg-cream-50 rounded border border-om-200 text-xs font-bold text-char-900 max-w-[210px]"
+                      className="px-2 py-0.5 bg-cream-50 hover:bg-cream-100 rounded border border-om-200 text-xs font-bold text-char-900 max-w-[210px] flex items-center justify-between gap-1.5 transition-colors cursor-pointer"
+                      title="Выбрать породу"
                     >
-                      {BREED_GROUPS.map(group => (
-                        <optgroup key={group.groupName} label={group.groupName}>
-                          {group.breeds.map(b => (
-                            <option key={b} value={b}>{b}</option>
-                          ))}
-                        </optgroup>
-                      ))}
-                      {!ALL_KNOWN_BREEDS.includes(category.breed) && category.breed && (
-                        <option value={category.breed}>{category.breed}</option>
-                      )}
-                      <option value="__custom__">+ Другая порода (ввести вручную)...</option>
-                    </select>
+                      <span className="truncate">{category.breed || ALL_KNOWN_BREEDS[0]}</span>
+                      <ChevronDown className="w-3 h-3 text-char-400 shrink-0" />
+                    </button>
                   )}
 
                   {/* Выбор класса: расширенный список классов соревнований + ручной ввод */}
@@ -916,36 +1061,38 @@ export default function ProtocolBuilder() {
                       </button>
                     </div>
                   ) : (
-                    <select
-                      value={CLASSES.includes(category.className) ? category.className : (category.className || CLASSES[0])}
-                      onChange={e => {
-                        if (e.target.value === '__custom__') {
-                          setCustomClassCatIds(prev => ({ ...prev, [category.id]: true }))
-                        } else {
-                          updateCategoryMeta(category.id, { className: e.target.value })
-                        }
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        const rect = e.currentTarget.getBoundingClientRect()
+                        setActiveClassMenu({
+                          catId: category.id,
+                          rect: { top: rect.top, bottom: rect.bottom, left: rect.left, right: rect.right, width: rect.width }
+                        })
                       }}
-                      className="px-2 py-0.5 bg-cream-50 rounded border border-om-200 text-xs font-semibold text-char-800"
+                      className="px-2 py-0.5 bg-cream-50 hover:bg-cream-100 rounded border border-om-200 text-xs font-semibold text-char-800 flex items-center justify-between gap-1.5 transition-colors cursor-pointer"
+                      title="Выбрать класс"
                     >
-                      {CLASSES.map(c => (
-                        <option key={c} value={c}>{c}</option>
-                      ))}
-                      {!CLASSES.includes(category.className) && category.className && (
-                        <option value={category.className}>{category.className}</option>
-                      )}
-                      <option value="__custom__">+ Другой класс...</option>
-                    </select>
+                      <span className="truncate">{category.className || CLASSES[0]}</span>
+                      <ChevronDown className="w-3 h-3 text-char-400 shrink-0" />
+                    </button>
                   )}
 
-                  <select
-                    value={category.sex}
-                    onChange={e => updateCategoryMeta(category.id, { sex: e.target.value as any })}
-                    className="px-2 py-0.5 bg-cream-50 rounded border border-om-200 text-xs font-semibold text-char-800"
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      const rect = e.currentTarget.getBoundingClientRect()
+                      setActiveCategorySexMenu({
+                        catId: category.id,
+                        rect: { top: rect.top, bottom: rect.bottom, left: rect.left, right: rect.right, width: rect.width }
+                      })
+                    }}
+                    className="px-2 py-0.5 bg-cream-50 hover:bg-cream-100 rounded border border-om-200 text-xs font-semibold text-char-800 flex items-center justify-between gap-1.5 transition-colors cursor-pointer"
+                    title="Пол собак в категории"
                   >
-                    <option value="male">Кобели</option>
-                    <option value="female">Суки</option>
-                    <option value="mixed">Микс</option>
-                  </select>
+                    <span>{category.sex === 'male' ? 'Кобели' : category.sex === 'female' ? 'Суки' : 'Микс'}</span>
+                    <ChevronDown className="w-3 h-3 text-char-400 shrink-0" />
+                  </button>
 
                   {/* Переключатель количества забегов: 1, 2, 3 */}
                   {kind === 'coursing' && (
@@ -997,7 +1144,7 @@ export default function ProtocolBuilder() {
                   <div className="flex items-center gap-1.5 shrink-0">
                     <span className="w-9 text-center shrink-0">№</span>
                     <span className="w-56 sm:w-60 md:w-64 lg:w-72 px-2 text-left shrink-0">Кличка собаки</span>
-                    <span className="w-[76px] text-center shrink-0">Пол</span>
+                    <span className="w-[92px] text-center shrink-0">Пол</span>
                   </div>
                   <div className="flex items-center gap-1.5 shrink-0">
                     {kind === 'coursing' ? (
@@ -1017,125 +1164,119 @@ export default function ProtocolBuilder() {
                     )}
                   </div>
                   <div className="flex items-center gap-1.5 shrink-0 ml-auto">
-                    <span className="w-14 text-center shrink-0">Итог</span>
+                    <span className="w-20 text-center shrink-0">Итог</span>
                     <span className="w-28 text-center shrink-0">Титулы</span>
                     <span className="w-7 shrink-0" />
                   </div>
                 </div>
 
-                {category.dogs.map((dog) => {
-                  const total = calculateTotalScore(dog, category.runsCount)
-                  const isAutocompleteOpen = activeSearchDogId === dog.id
+                {(() => {
+                  const sortedCategoryDogs = [...(category.dogs || [])].sort((a, b) => {
+                    const aAbsent = (a.runs || []).slice(0, category.runsCount).some(r => r?.status === 'absent')
+                    const bAbsent = (b.runs || []).slice(0, category.runsCount).some(r => r?.status === 'absent')
+                    return (aAbsent ? 1 : 0) - (bAbsent ? 1 : 0)
+                  })
 
-                  const isDogActive =
-                    activeAwardsDogId === dog.id ||
-                    activeSearchDogId === dog.id ||
-                    (activeRunMenu !== null && activeRunMenu.startsWith(`${dog.id}_`))
+                  return sortedCategoryDogs.map((dog) => {
+                    const isDogAbsent = (dog.runs || []).slice(0, category.runsCount).some(r => r?.status === 'absent')
 
-                  const runSlotWidth = category.runsCount === 3 ? 236 : category.runsCount === 1 ? 300 : 264
+                    const isDogActive =
+                      activeAwardsMenu?.dogId === dog.id ||
+                      activeSearchDog?.dogId === dog.id ||
+                      (activeRunMenu?.dogId === dog.id)
 
-                  return (
-                    <div
-                      key={dog.id}
-                      className={`bg-om-50/70 hover:bg-cream-50 rounded-lg border border-om-200/70 p-2 transition-all shadow-2xs min-w-max ${
-                        isDogActive ? 'relative z-30' : 'relative z-0'
-                      }`}
-                    >
-                      {/* Строка собаки — строго фиксированные колонки с гарантированным выравниванием */}
-                      <div className="flex items-center gap-3 text-xs min-w-max">
-                        {/* Номер по каталогу + Компактное поле клички собаки с автокомплитом + Пол */}
-                        <div className="relative flex items-center gap-1.5 shrink-0">
-                          <input
-                            type="text"
-                            value={dog.catalogNumber}
-                            onChange={e => updateDog(category.id, dog.id, { catalogNumber: e.target.value })}
-                            className="w-9 px-1 py-1 text-center font-bold bg-cream-50 rounded border border-om-200 text-xs text-char-900 shrink-0"
-                            placeholder="№"
-                            title="Номер по каталогу"
-                          />
+                    const runSlotWidth = category.runsCount === 3 ? 236 : category.runsCount === 1 ? 300 : 264
 
-                          <div className="relative w-56 sm:w-60 md:w-64 lg:w-72 shrink-0">
+                    return (
+                      <div
+                        key={dog.id}
+                        className={`bg-om-50/70 hover:bg-cream-50 rounded-lg border border-om-200/70 p-2 transition-all shadow-2xs min-w-max ${
+                          isDogActive ? 'relative z-30' : 'relative z-0'
+                        }`}
+                      >
+                        {/* Строка собаки — строго фиксированные колонки с гарантированным выравниванием */}
+                        <div className="flex items-center gap-3 text-xs min-w-max">
+                          {/* Номер по каталогу + Компактное поле клички собаки с автокомплитом + Пол */}
+                          <div className="relative flex items-center gap-1.5 shrink-0">
                             <input
                               type="text"
-                              value={dog.dogName}
-                              onChange={e => {
-                                updateDog(category.id, dog.id, { dogName: e.target.value })
-                                setSearchQuery(e.target.value)
-                                setActiveSearchDogId(dog.id)
-                              }}
-                              onFocus={() => {
-                                setSearchQuery(dog.dogName)
-                                setActiveSearchDogId(dog.id)
-                              }}
-                              className="w-full px-2 py-1 bg-cream-50 rounded border border-om-200 text-xs font-semibold text-char-900 focus:ring-1 focus:ring-camel-500 focus:outline-none"
-                              placeholder="Кличка собаки"
+                              value={dog.catalogNumber}
+                              onChange={e => updateDog(category.id, dog.id, { catalogNumber: e.target.value })}
+                              className="w-9 px-1 py-1 text-center font-bold bg-cream-50 rounded border border-om-200 text-xs text-char-900 shrink-0"
+                              placeholder="№"
+                              title="Номер по каталогу"
                             />
 
-                            {/* Всплывающий список существующих собак из базы сайта */}
-                            {isAutocompleteOpen && filteredExistingDogs.length > 0 && (
-                              <>
-                                <div
-                                  className="fixed inset-0 z-40"
-                                  onClick={() => setActiveSearchDogId(null)}
-                                />
-                                <div className="absolute left-0 top-full mt-1 w-72 bg-cream-50 rounded-lg border border-om-300 shadow-2xl z-50 py-1 divide-y divide-om-100 max-h-48 overflow-y-auto ring-1 ring-char-900/10">
-                                  <div className="px-2 py-0.5 text-[9px] font-bold text-camel-800 uppercase tracking-wider bg-om-100/60 flex justify-between items-center">
-                                    <span>Собаки из базы сайта</span>
-                                    <button
-                                      onClick={() => setActiveSearchDogId(null)}
-                                      className="text-char-400 hover:text-char-800"
-                                    >
-                                      <X className="w-2.5 h-2.5" />
-                                    </button>
-                                  </div>
-                                  {filteredExistingDogs.map((exDog, i) => (
-                                    <button
-                                      key={i}
-                                      type="button"
-                                      onClick={() => selectExistingDog(category.id, dog.id, exDog)}
-                                      className="w-full text-left px-2 py-1 hover:bg-camel-100/70 text-xs flex justify-between items-center transition-colors"
-                                    >
-                                      <span className="font-semibold text-char-900 truncate">{exDog.name}</span>
-                                      <div className="flex items-center gap-1.5 ml-2 shrink-0">
-                                        <span className="text-[10px] text-char-400">{exDog.breed}</span>
-                                        {exDog.sex && (
-                                          <DogSexIcon sex={exDog.sex} size={11} className="inline-block" />
-                                        )}
-                                      </div>
-                                    </button>
-                                  ))}
-                                </div>
-                              </>
-                            )}
-                          </div>
+                            <div className="relative w-56 sm:w-60 md:w-64 lg:w-72 shrink-0">
+                              <input
+                                type="text"
+                                value={dog.dogName}
+                                onChange={e => {
+                                  updateDog(category.id, dog.id, { dogName: e.target.value })
+                                  setSearchQuery(e.target.value)
+                                  const rect = e.currentTarget.getBoundingClientRect()
+                                  setActiveSearchDog({
+                                    catId: category.id,
+                                    dogId: dog.id,
+                                    rect: { top: rect.top, bottom: rect.bottom, left: rect.left, width: rect.width }
+                                  })
+                                }}
+                                onFocus={e => {
+                                  setSearchQuery(dog.dogName)
+                                  const rect = e.currentTarget.getBoundingClientRect()
+                                  setActiveSearchDog({
+                                    catId: category.id,
+                                    dogId: dog.id,
+                                    rect: { top: rect.top, bottom: rect.bottom, left: rect.left, width: rect.width }
+                                  })
+                                }}
+                                className="w-full px-2 py-1 bg-cream-50 rounded border border-om-200 text-xs font-semibold text-char-900 focus:ring-1 focus:ring-camel-500 focus:outline-none"
+                                placeholder="Кличка собаки"
+                              />
+                            </div>
 
                           {/* Выбор пола сразу после клички */}
-                          <select
-                            value={dog.sex}
-                            onChange={e => updateDog(category.id, dog.id, { sex: e.target.value as any })}
-                            className="w-[76px] px-1.5 py-1 bg-cream-50 rounded border border-om-200 text-xs text-char-800 shrink-0 font-medium"
+                          <button
+                            type="button"
+                            onClick={(e) => {
+                              const rect = e.currentTarget.getBoundingClientRect()
+                              setActiveDogSexMenu({
+                                catId: category.id,
+                                dogId: dog.id,
+                                rect: { top: rect.top, bottom: rect.bottom, left: rect.left, right: rect.right, width: rect.width }
+                              })
+                            }}
+                            className="w-[92px] px-2 py-1 bg-cream-50 hover:bg-cream-100 rounded border border-om-200 text-xs text-char-800 shrink-0 font-medium flex items-center justify-between transition-colors cursor-pointer"
                             title="Пол собаки"
                           >
-                            <option value="male">Кобель</option>
-                            <option value="female">Сука</option>
-                          </select>
+                            <span className="truncate">{dog.sex === 'male' ? 'Кобель' : 'Сука'}</span>
+                            <ChevronDown className="w-3 h-3 text-char-400 shrink-0" />
+                          </button>
                         </div>
 
                         {/* Компактный блок баллов забегов (динамически 1, 2 или 3) с фиксированной шириной */}
                         {kind === 'coursing' ? (
                           <div className="flex items-center gap-1.5 shrink-0">
                             {Array.from({ length: category.runsCount }).map((_, rIdx) => {
-                              const prevCancelled = dog.runs.slice(0, rIdx).some(pr => pr.status === 'withdrawn' || pr.status === 'absent')
+                              // Если у собаки неявка, забеги 2 и 3 визуально не отображаются (пустое место)
+                              if (isDogAbsent && rIdx > 0) {
+                                return (
+                                  <div
+                                    key={rIdx}
+                                    style={{ width: runSlotWidth }}
+                                    className="shrink-0"
+                                  />
+                                )
+                              }
+
+                              const prevCancelled = (dog.runs || []).slice(0, rIdx).some(pr => pr?.status === 'withdrawn')
                               if (prevCancelled) {
                                 return (
                                   <div
                                     key={rIdx}
-                                    className="flex items-center justify-center rounded border border-om-200/60 bg-om-100/40 text-char-400 text-[11px] font-medium shrink-0 select-none"
-                                    style={{ width: runSlotWidth, height: 32 }}
-                                    title={`Забег ${rIdx + 1}: Собака сошла в предыдущем забеге`}
-                                  >
-                                    <span>Забег {rIdx + 1}: — (сошла)</span>
-                                  </div>
+                                    style={{ width: runSlotWidth }}
+                                    className="shrink-0"
+                                  />
                                 )
                               }
 
@@ -1149,12 +1290,6 @@ export default function ProtocolBuilder() {
                                 ? 'bg-sky-50 border-sky-300 text-sky-950 focus-within:ring-sky-400'
                                 : 'bg-white border-om-300 text-char-900 focus-within:ring-camel-400'
 
-                              const dotBg = blanketColor === 'red'
-                                ? 'bg-rose-600 ring-rose-300'
-                                : blanketColor === 'blue'
-                                ? 'bg-sky-600 ring-sky-300'
-                                : 'bg-white border border-char-400 ring-om-200'
-
                               const isWithdrawn = run.status === 'withdrawn'
                               const isAbsent = run.status === 'absent'
 
@@ -1164,68 +1299,79 @@ export default function ProtocolBuilder() {
                                   className="flex items-center rounded border border-om-200 transition-all bg-cream-50 px-1.5 py-0.5 gap-1 shrink-0"
                                   style={{ width: runSlotWidth }}
                                 >
-                                  {/* Номер забега с переключателем цвета попоны */}
-                                  <div
-                                    className={`flex items-center rounded border px-1 py-0.5 gap-1 transition-all shrink-0 ${blanketBg}`}
-                                    title={`Забег ${rIdx + 1}. Попона: ${blanketTitle}. Нажмите на кружок для смены цвета`}
-                                  >
-                                    <button
-                                      type="button"
-                                      onClick={() => cycleBlanket(category.id, dog.id, rIdx)}
-                                      className="w-3 h-3 rounded-full shrink-0 ring-1 cursor-pointer transition-transform hover:scale-115 active:scale-90"
-                                      style={{ backgroundColor: blanketColor === 'red' ? '#e11d48' : blanketColor === 'blue' ? '#0284c7' : '#ffffff' }}
-                                      title={`Попона: ${blanketTitle}. Нажмите для смены цвета`}
-                                    />
-                                    <input
-                                      type="text"
-                                      value={run.heat}
-                                      onChange={e => updateRunField(category.id, dog.id, rIdx, 'heat', e.target.value)}
-                                      className="w-5 text-[11px] text-center bg-transparent font-bold focus:outline-none"
-                                      placeholder="№"
-                                      title={`Номер забега (${blanketTitle} попона)`}
-                                    />
-                                  </div>
-
-                                  {/* Если забег с дисквалификацией */}
-                                  {isWithdrawn ? (
-                                    <div className="flex items-center gap-1 bg-terracotta-50/90 border border-terracotta-300 rounded px-1.5 py-0.5 flex-1 min-w-0">
-                                      <span className="text-[10px] font-bold text-terracotta-800 uppercase tracking-wide shrink-0">
-                                        Дискв:
-                                      </span>
-                                      <input
-                                        type="text"
-                                        value={run.reason || ''}
-                                        onChange={e => updateRunReason(category.id, dog.id, rIdx, e.target.value)}
-                                        className="w-full px-1 py-0.2 bg-white border border-terracotta-200 rounded text-[11px] text-char-900 focus:outline-none focus:ring-1 focus:ring-terracotta-500 font-medium truncate"
-                                        placeholder="Причина (травма...)"
-                                        title="Причина дисквалификации"
-                                      />
-                                      <button
-                                        type="button"
-                                        onClick={() => setRunStatus(category.id, dog.id, rIdx, 'normal')}
-                                        className="text-char-400 hover:text-char-700 text-xs px-0.5 shrink-0"
-                                        title="Вернуть ввод оценок"
-                                      >
-                                        ✕
-                                      </button>
-                                    </div>
-                                  ) : isAbsent ? (
-                                    /* Если неявка */
-                                    <div className="flex items-center justify-between gap-1 bg-om-100 border border-om-300 rounded px-2 py-0.5 flex-1 min-w-0">
-                                      <span className="text-[10px] font-bold text-char-600 uppercase tracking-wide">
+                                  {isAbsent ? (
+                                    /* Если неявка — собака не пришла, поэтому нет ни попоны, ни номера забега */
+                                    <div className="flex items-center justify-between gap-1 bg-om-100/70 border border-om-200 rounded px-2.5 py-1 flex-1 min-w-0">
+                                      <span className="text-xs font-normal text-char-500">
                                         Неявка
                                       </span>
                                       <button
                                         type="button"
                                         onClick={() => setRunStatus(category.id, dog.id, rIdx, 'normal')}
-                                        className="text-char-400 hover:text-char-700 text-xs px-0.5 shrink-0"
+                                        className="text-char-400 hover:text-char-700 text-xs px-1 py-0.5 rounded hover:bg-om-200/50 cursor-pointer"
                                         title="Вернуть ввод оценок"
                                       >
                                         ✕
                                       </button>
                                     </div>
                                   ) : (
-                                    /* 5 критериев оценок */
+                                    <>
+                                      {/* Номер забега с переключателем цвета попоны */}
+                                      <div
+                                        className={`flex items-center rounded border px-1 py-0.5 gap-1 transition-all shrink-0 ${blanketBg}`}
+                                        title={`Забег ${rIdx + 1}. Попона: ${blanketTitle}. Нажмите на кружок для смены цвета`}
+                                      >
+                                        <button
+                                          type="button"
+                                          onClick={() => cycleBlanket(category.id, dog.id, rIdx)}
+                                          className="w-3 h-3 rounded-full shrink-0 ring-1 cursor-pointer transition-transform hover:scale-115 active:scale-90"
+                                          style={{ backgroundColor: blanketColor === 'red' ? '#e11d48' : blanketColor === 'blue' ? '#0284c7' : '#ffffff' }}
+                                          title={`Попона: ${blanketTitle}. Нажмите для смены цвета`}
+                                        />
+                                        <input
+                                          type="text"
+                                          inputMode="numeric"
+                                          pattern="[0-9]*"
+                                          value={run.heat}
+                                          onChange={e => {
+                                            const val = e.target.value.replace(/\D/g, '').slice(0, 3)
+                                            updateRunField(category.id, dog.id, rIdx, 'heat', val)
+                                          }}
+                                          maxLength={3}
+                                          className="w-6 text-[11px] text-center bg-transparent font-bold focus:outline-none"
+                                          placeholder="№"
+                                          title={`Номер забега (${blanketTitle} попона)`}
+                                        />
+                                      </div>
+
+                                      {/* Если забег с дисквалификацией */}
+                                      {isWithdrawn ? (
+                                        <div className="flex items-center gap-1 bg-om-100/60 border border-om-200 rounded px-1.5 py-0.5 flex-1 min-w-0">
+                                          <span className="text-[10px] font-medium text-char-600 uppercase tracking-wide shrink-0">
+                                            Дискв:
+                                          </span>
+                                          <input
+                                            type="text"
+                                            value={run.reason || ''}
+                                            onChange={e => updateRunReason(category.id, dog.id, rIdx, e.target.value)}
+                                            className="w-full px-1 py-0.2 bg-white border border-om-200 rounded text-[11px] text-char-800 focus:outline-none focus:ring-1 focus:ring-camel-500 font-medium truncate"
+                                            placeholder="Причина (травма...)"
+                                            title="Причина дисквалификации"
+                                          />
+                                          <button
+                                            type="button"
+                                            onClick={() => setRunStatus(category.id, dog.id, rIdx, 'normal')}
+                                            className="text-char-400 hover:text-char-700 text-xs px-0.5 shrink-0 cursor-pointer"
+                                            title="Вернуть ввод оценок"
+                                          >
+                                            ✕
+                                          </button>
+                                        </div>
+                                      ) : null}
+                                    </>
+                                  )}
+
+                                  {!isWithdrawn && !isAbsent && (
                                     <div className="flex items-center gap-0.5 shrink-0">
                                       {(['speed', 'enthusiasm', 'intelligence', 'agility', 'endurance'] as const).map(c => (
                                         <input
@@ -1236,7 +1382,7 @@ export default function ProtocolBuilder() {
                                           value={run.scores[c]}
                                           onChange={e => updateRunScore(category.id, dog.id, rIdx, c, e.target.value)}
                                           className={`${
-                                            category.runsCount === 3 ? 'w-6.5 text-[10px]' : 'w-7.5 text-[11px]'
+                                            category.runsCount === 3 ? 'w-[22px] text-[10px]' : 'w-[26px] text-[11px]'
                                           } text-center py-0.5 px-0 bg-om-50 border border-om-200 rounded font-bold tabular-nums [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none focus:outline-none focus:ring-1 focus:ring-camel-500`}
                                           placeholder="0"
                                           title={c === 'speed' ? 'Скорость (0-20)' : c === 'enthusiasm' ? 'Энтузиазм (0-20)' : c === 'intelligence' ? 'Интеллект (0-20)' : c === 'agility' ? 'Маневренность (0-20)' : 'Выносливость (0-20)'}
@@ -1254,60 +1400,33 @@ export default function ProtocolBuilder() {
                                     </span>
                                   )}
 
-                                  {/* Меню переключения статуса забега: Оценки, Дисквалификация, Неявка */}
-                                  <div className={`relative shrink-0 ${activeRunMenu === `${dog.id}_${rIdx}` ? 'z-50' : ''}`}>
-                                    <button
-                                      type="button"
-                                      onClick={() => setActiveRunMenu(activeRunMenu === `${dog.id}_${rIdx}` ? null : `${dog.id}_${rIdx}`)}
-                                      className="text-char-400 hover:text-char-800 p-0.5 rounded hover:bg-om-200/60 transition-colors"
-                                      title="Статус забега: Оценки, Дисквалификация, Неявка"
-                                    >
-                                      <MoreVertical className="w-3 h-3" />
-                                    </button>
-
-                                    {activeRunMenu === `${dog.id}_${rIdx}` && (
-                                      <>
-                                        <div className="fixed inset-0 z-40" onClick={() => setActiveRunMenu(null)} />
-                                        <div className="absolute right-0 top-full mt-1 w-40 bg-cream-50 rounded-lg border border-om-300 shadow-2xl z-50 py-1 divide-y divide-om-100 text-xs ring-1 ring-char-900/10">
-                                          <div className="px-2 py-0.5 text-[9px] font-bold text-camel-800 uppercase tracking-wider bg-om-100/60">
-                                            Забег {rIdx + 1}
-                                          </div>
-                                          <div className="p-1 space-y-0.5">
-                                            <button
-                                              type="button"
-                                              onClick={() => {
-                                                setRunStatus(category.id, dog.id, rIdx, 'normal')
-                                                setActiveRunMenu(null)
-                                              }}
-                                              className="w-full text-left px-2 py-1 rounded hover:bg-om-100 text-char-800 font-medium"
-                                            >
-                                              Оценки
-                                            </button>
-                                            <button
-                                              type="button"
-                                              onClick={() => {
-                                                setRunStatus(category.id, dog.id, rIdx, 'withdrawn', run.reason || '')
-                                                setActiveRunMenu(null)
-                                              }}
-                                              className="w-full text-left px-2 py-1 rounded hover:bg-terracotta-50 text-terracotta-700 font-semibold"
-                                            >
-                                              Дисквалификация
-                                            </button>
-                                            <button
-                                              type="button"
-                                              onClick={() => {
-                                                setRunStatus(category.id, dog.id, rIdx, 'absent')
-                                                setActiveRunMenu(null)
-                                              }}
-                                              className="w-full text-left px-2 py-1 rounded hover:bg-om-100 text-char-600 font-medium"
-                                            >
-                                              Неявка
-                                            </button>
-                                          </div>
-                                        </div>
-                                      </>
-                                    )}
-                                  </div>
+                                  {/* Троеточие — смена статуса забега (баллы, дисквалификация, неявка) */}
+                                  <button
+                                    type="button"
+                                    onClick={(e) => {
+                                      e.stopPropagation()
+                                      if (activeRunMenu && activeRunMenu.dogId === dog.id && activeRunMenu.rIdx === rIdx) {
+                                        setActiveRunMenu(null)
+                                      } else {
+                                        const rect = e.currentTarget.getBoundingClientRect()
+                                        setActiveRunMenu({
+                                          catId: category.id,
+                                          dogId: dog.id,
+                                          rIdx,
+                                          rect: {
+                                            top: rect.top,
+                                            bottom: rect.bottom,
+                                            left: rect.left,
+                                            right: rect.right
+                                          }
+                                        })
+                                      }
+                                    }}
+                                    className="text-char-500 hover:text-char-900 hover:bg-om-200/80 p-0.5 rounded transition-colors focus:outline-none cursor-pointer shrink-0"
+                                    title="Опции забега (баллы, дисквалификация, неявка)"
+                                  >
+                                    <MoreVertical className="w-3.5 h-3.5" />
+                                  </button>
                                 </div>
                               )
                             })}
@@ -1357,80 +1476,61 @@ export default function ProtocolBuilder() {
                             const overall = getDogOverallStatus(dog, category.runsCount)
                             return (
                               <div
-                                className={`border px-1.5 py-0.5 rounded text-center w-14 shrink-0 ${
-                                  overall.type === 'withdrawn' ? 'bg-terracotta-100/90 border-terracotta-300 text-terracotta-800' :
-                                  overall.type === 'absent' ? 'bg-om-200 border-om-300 text-char-600' :
-                                  overall.type === 'disqualified' ? 'bg-terracotta-100/90 border-terracotta-300 text-terracotta-800' :
+                                className={`border px-1.5 py-0.5 rounded text-center w-20 shrink-0 ${
+                                  overall.type === 'withdrawn' ? 'bg-om-100/80 border-om-200 text-char-600' :
+                                  overall.type === 'absent' ? 'bg-om-100/60 border-om-200 text-char-400' :
+                                  overall.type === 'disqualified' ? 'bg-om-100/80 border-om-200 text-char-600' :
                                   'bg-camel-100/80 border-camel-300 text-char-900'
                                 }`}
                                 title={overall.reason ? `Статус: ${overall.label} (${overall.reason})` : 'Итоговая сумма баллов'}
                               >
-                                <span className="text-xs font-bold tabular-nums truncate block">
-                                  {overall.label}
+                                <span className={`text-xs tabular-nums truncate block ${overall.type === 'normal' ? 'font-bold' : 'font-medium'}`}>
+                                  {overall.type === 'absent' ? 'Неявка' : (overall.type === 'withdrawn' || overall.type === 'disqualified') ? 'Дискв.' : overall.label}
                                 </span>
                               </div>
                             )
                           })()}
 
-                          {/* Кнопка с выбором титулов */}
-                          <div className={`relative w-28 shrink-0 ${activeAwardsDogId === dog.id ? 'z-50' : ''}`}>
-                            <button
-                              type="button"
-                              onClick={() => setActiveAwardsDogId(activeAwardsDogId === dog.id ? null : dog.id)}
-                              className={`w-full flex items-center justify-between gap-1 px-2 py-1 rounded border text-[11px] font-semibold transition-all ${
-                                dog.awards.length > 0
-                                  ? 'bg-camel-600 text-white border-camel-700 shadow-2xs'
-                                  : 'bg-cream-50 text-char-600 border-om-200 hover:border-camel-400'
-                              }`}
-                              title={dog.awards.length > 0 ? `Титулы: ${dog.awards.join(', ')}` : 'Назначить титулы и сертификаты'}
-                            >
-                              <span className="truncate flex-1 text-left">
-                                {dog.awards.length > 0 ? dog.awards.join(', ') : 'Титулы'}
-                              </span>
-                              <ChevronDown className="w-2.5 h-2.5 opacity-70 shrink-0" />
-                            </button>
-
-                            {/* Выпадающее меню с выбором нескольких титулов */}
-                            {activeAwardsDogId === dog.id && (
-                              <>
-                                <div
-                                  className="fixed inset-0 z-40"
-                                  onClick={() => setActiveAwardsDogId(null)}
-                                />
-                                <div className="absolute right-0 top-full mt-1 w-48 bg-cream-50 rounded-lg border border-om-300 shadow-2xl z-50 py-1 divide-y divide-om-100 ring-1 ring-char-900/10">
-                                  <div className="px-2.5 py-1 text-[9px] font-bold text-camel-800 uppercase tracking-wider bg-om-100/60 flex justify-between items-center">
-                                    <span>Выбор титулов</span>
-                                    <button
-                                      onClick={() => setActiveAwardsDogId(null)}
-                                      className="text-char-400 hover:text-char-800"
-                                    >
-                                      <X className="w-2.5 h-2.5" />
-                                    </button>
-                                  </div>
-                                  <div className="p-1 space-y-0.5 max-h-48 overflow-y-auto">
-                                    {TITLES_LIST.map(title => {
-                                      const active = dog.awards.includes(title)
-                                      return (
-                                        <button
-                                          key={title}
-                                          type="button"
-                                          onClick={() => toggleAward(category.id, dog.id, title)}
-                                          className={`w-full text-left px-2 py-1 rounded text-xs flex justify-between items-center transition-colors ${
-                                            active
-                                              ? 'bg-camel-100 text-camel-900 font-bold'
-                                              : 'hover:bg-om-100 text-char-700'
-                                          }`}
-                                        >
-                                          <span>{title}</span>
-                                          {active && <Check className="w-3 h-3 text-camel-700" />}
-                                        </button>
-                                      )
-                                    })}
-                                  </div>
-                                </div>
-                              </>
-                            )}
-                          </div>
+                          {/* Кнопка с выбором титулов (для неявки скрываем — просто пустое место) */}
+                          {isDogAbsent ? (
+                            <div className="w-28 shrink-0" />
+                          ) : (
+                            <div className="relative w-28 shrink-0">
+                              <button
+                                type="button"
+                                onClick={(e) => {
+                                  e.stopPropagation()
+                                  if (activeAwardsMenu && activeAwardsMenu.dogId === dog.id) {
+                                    setActiveAwardsMenu(null)
+                                  } else {
+                                    const rect = e.currentTarget.getBoundingClientRect()
+                                    setActiveAwardsMenu({
+                                      catId: category.id,
+                                      dogId: dog.id,
+                                      rect: {
+                                        top: rect.top,
+                                        bottom: rect.bottom,
+                                        left: rect.left,
+                                        right: rect.right,
+                                        width: rect.width
+                                      }
+                                    })
+                                  }
+                                }}
+                                className={`w-full flex items-center justify-between gap-1 px-2 py-1 rounded border text-[11px] font-semibold transition-all cursor-pointer ${
+                                  (dog.awards || []).length > 0
+                                    ? 'bg-camel-600 text-white border-camel-700 shadow-2xs'
+                                    : 'bg-cream-50 text-char-600 border-om-200 hover:border-camel-400'
+                                }`}
+                                title={(dog.awards || []).length > 0 ? `Титулы: ${(dog.awards || []).join(', ')}` : 'Назначить титулы и сертификаты'}
+                              >
+                                <span className="truncate flex-1 text-left">
+                                  {(dog.awards || []).length > 0 ? (dog.awards || []).join(', ') : 'Титулы'}
+                                </span>
+                                <ChevronDown className="w-2.5 h-2.5 opacity-70 shrink-0" />
+                              </button>
+                            </div>
+                          )}
 
                           {/* Удаление */}
                           <button
@@ -1445,7 +1545,8 @@ export default function ProtocolBuilder() {
                       </div>
                     </div>
                   )
-                })}
+                })
+              })()}
               </div>
             </div>
           )
@@ -1503,7 +1604,7 @@ export default function ProtocolBuilder() {
           </div>
 
         {categories.map((cat) => {
-          const sortedDogs = [...cat.dogs].sort((a, b) => {
+          const sortedDogs = [...(cat.dogs || [])].sort((a, b) => {
             const statusA = getDogOverallStatus(a, cat.runsCount)
             const statusB = getDogOverallStatus(b, cat.runsCount)
             const isFinA = statusA.type === 'normal'
@@ -1528,7 +1629,7 @@ export default function ProtocolBuilder() {
                   {formatCategoryTitle(cat)}
                 </h3>
                 <span className="text-[11px] text-char-500">
-                  Забегов: {cat.runsCount} | Участников: {cat.dogs.length}
+                  Забегов: {cat.runsCount} | Участников: {cat.dogs?.length || 0}
                 </span>
               </div>
 
@@ -1657,15 +1758,15 @@ export default function ProtocolBuilder() {
                     {(() => {
                       let placeCounter = 0
                       const anyDogHasScores = kind === 'coursing'
-                        ? cat.dogs.some(dog => dog.runs.slice(0, cat.runsCount).some(r => (!r.status || r.status === 'normal') && hasRoundScores(r.scores)))
-                        : cat.dogs.some(dog => Boolean(dog.racing_time1 || dog.racing_time2))
+                        ? (cat.dogs || []).some(dog => (dog.runs || []).slice(0, cat.runsCount).some(r => (!r?.status || r.status === 'normal') && hasRoundScores(r?.scores)))
+                        : (cat.dogs || []).some(dog => Boolean(dog.racing_time1 || dog.racing_time2))
 
                       return sortedDogs.map((d) => {
                         const overall = getDogOverallStatus(d, cat.runsCount)
                         const place = overall.type === 'normal'
                           ? (anyDogHasScores ? (++placeCounter) : '—')
                           : '—'
-                        const hasAnyScores = d.runs.slice(0, cat.runsCount).some(r => (!r.status || r.status === 'normal') && hasRoundScores(r.scores))
+                        const hasAnyScores = (d.runs || []).slice(0, cat.runsCount).some(r => (!r?.status || r.status === 'normal') && hasRoundScores(r?.scores))
 
                         return (
                           <tr key={d.id} className="hover:bg-om-50/50">
@@ -1683,127 +1784,120 @@ export default function ProtocolBuilder() {
                                   ) : null
                                 })()}
                               </div>
-                              {overall.type !== 'normal' && (
-                                <div className="text-[10px] text-terracotta-700 font-normal leading-tight mt-0.5">
-                                  {overall.label}{overall.reason ? `: ${overall.reason}` : ''}
+                              {overall.type === 'withdrawn' && overall.reason && (
+                                <div className="text-[10px] text-char-500 font-normal leading-tight mt-0.5">
+                                  Дискв.: {overall.reason}
                                 </div>
                               )}
                             </td>
                             {kind === 'coursing' ? (
                               <>
-                                {Array.from({ length: cat.runsCount }).map((_, r) => {
-                                  const prevCancelled = d.runs.slice(0, r).some(pr => pr.status === 'withdrawn' || pr.status === 'absent')
-                                  if (prevCancelled) {
-                                    return (
-                                      <React.Fragment key={r}>
-                                        <td className="py-1 px-0.5 text-center text-char-400">—</td>
-                                        <td className="py-1 px-0.5 text-center text-char-400">—</td>
-                                        <td className="py-1 px-0.5 text-center text-char-400">—</td>
-                                        <td className="py-1 px-0.5 text-center text-char-400">—</td>
-                                        <td className="py-1 px-0.5 text-center text-char-400">—</td>
-                                        <td className="py-1 px-0.5 text-center text-char-400">—</td>
-                                        <td className="py-1 px-1 text-center text-char-400 border-r border-om-200/60">—</td>
-                                      </React.Fragment>
-                                    )
-                                  }
-                                  const run = d.runs[r]
-                                  if (!run) {
-                                    return (
-                                      <React.Fragment key={r}>
-                                        <td className="py-1 px-0.5 text-center text-char-400">—</td>
-                                        <td className="py-1 px-0.5 text-center text-char-400">—</td>
-                                        <td className="py-1 px-0.5 text-center text-char-400">—</td>
-                                        <td className="py-1 px-0.5 text-center text-char-400">—</td>
-                                        <td className="py-1 px-0.5 text-center text-char-400">—</td>
-                                        <td className="py-1 px-0.5 text-center text-char-400">—</td>
-                                        <td className="py-1 px-1 text-center text-char-400 border-r border-om-200/60">—</td>
-                                      </React.Fragment>
-                                    )
-                                  }
+                                {overall.type === 'absent' ? (
+                                  <td
+                                    colSpan={cat.runsCount * 7}
+                                    className="py-2 px-3 text-center text-char-400 text-xs font-normal border-r border-om-200/60 bg-om-50/30"
+                                  >
+                                    Неявка
+                                  </td>
+                                ) : (
+                                  Array.from({ length: cat.runsCount }).map((_, r) => {
+                                    const prevCancelled = (d.runs || []).slice(0, r).some(pr => pr?.status === 'withdrawn')
+                                    if (prevCancelled) {
+                                      return (
+                                        <td
+                                          key={r}
+                                          colSpan={7}
+                                          className="py-1 px-1 border-r border-om-200/60"
+                                        />
+                                      )
+                                    }
+                                    const run = d.runs?.[r]
+                                    if (!run) {
+                                      return (
+                                        <React.Fragment key={r}>
+                                          <td className="py-1 px-0.5 text-center text-char-400">—</td>
+                                          <td className="py-1 px-0.5 text-center text-char-400">—</td>
+                                          <td className="py-1 px-0.5 text-center text-char-400">—</td>
+                                          <td className="py-1 px-0.5 text-center text-char-400">—</td>
+                                          <td className="py-1 px-0.5 text-center text-char-400">—</td>
+                                          <td className="py-1 px-0.5 text-center text-char-400">—</td>
+                                          <td className="py-1 px-1 text-center text-char-400 border-r border-om-200/60">—</td>
+                                        </React.Fragment>
+                                      )
+                                    }
 
-                                  const blanketColor = run.blanket || 'red'
-                                  const blanketTitle = blanketColor === 'red' ? 'Красная' : blanketColor === 'blue' ? 'Синяя' : 'Белая'
-                                  const bgStyle: React.CSSProperties =
-                                    blanketColor === 'red'
-                                      ? { backgroundColor: '#dc2626', color: '#ffffff' }
-                                      : blanketColor === 'blue'
-                                      ? { backgroundColor: '#2563eb', color: '#ffffff' }
-                                      : { backgroundColor: '#ffffff', color: '#111827', border: '1px solid #9ca3af' }
+                                    const blanketColor = run.blanket || 'red'
+                                    const blanketTitle = blanketColor === 'red' ? 'Красная' : blanketColor === 'blue' ? 'Синяя' : 'Белая'
+                                    const bgStyle: React.CSSProperties =
+                                      blanketColor === 'red'
+                                        ? { backgroundColor: '#dc2626', color: '#ffffff' }
+                                        : blanketColor === 'blue'
+                                        ? { backgroundColor: '#2563eb', color: '#ffffff' }
+                                        : { backgroundColor: '#ffffff', color: '#111827', border: '1px solid #9ca3af' }
 
-                                  if (run.status === 'withdrawn') {
+                                    if (run.status === 'withdrawn') {
+                                      return (
+                                        <React.Fragment key={r}>
+                                          <td className="py-1 px-0.5 text-center">
+                                            <span
+                                              className="inline-flex items-center justify-center min-w-[18px] max-w-[28px] h-4.5 px-0.5 rounded text-[10px] font-bold shadow-2xs truncate"
+                                              style={bgStyle}
+                                              title={`${blanketTitle} попона, забег №${run.heat || '1'}`}
+                                            >
+                                              {(run.heat || '1').slice(0, 3)}
+                                            </span>
+                                          </td>
+                                          <td colSpan={6} className="py-1 px-1 text-center text-char-600 font-medium text-[11px] border-r border-om-200/60 bg-om-100/30">
+                                            {run.reason ? `Дискв. (${run.reason})` : 'Дисквалификация'}
+                                          </td>
+                                        </React.Fragment>
+                                      )
+                                    }
+
+                                    const scores = run.scores || createEmptyScores()
+                                    const sum = calculateRoundSum(scores)
+                                    const hasScores = hasRoundScores(scores)
                                     return (
                                       <React.Fragment key={r}>
                                         <td className="py-1 px-0.5 text-center">
                                           <span
-                                            className="inline-flex items-center justify-center min-w-[18px] h-4.5 px-1 rounded text-[10px] font-bold shadow-2xs"
+                                            className="inline-flex items-center justify-center min-w-[18px] max-w-[28px] h-4.5 px-0.5 rounded text-[10px] font-bold shadow-2xs truncate"
                                             style={bgStyle}
                                             title={`${blanketTitle} попона, забег №${run.heat || '1'}`}
                                           >
-                                            {run.heat || '1'}
+                                            {(run.heat || '1').slice(0, 3)}
                                           </span>
                                         </td>
-                                        <td colSpan={6} className="py-1 px-1 text-center text-terracotta-700 font-semibold text-[11px] border-r border-om-200/60 bg-terracotta-50/40">
-                                          {run.reason ? `Дискв. (${run.reason})` : 'Дисквалификация'}
+                                        <td className="py-1 px-0.5 text-center tabular-nums text-char-700 text-xs">
+                                          {typeof scores.speed === 'number' ? scores.speed : '—'}
+                                        </td>
+                                        <td className="py-1 px-0.5 text-center tabular-nums text-char-700 text-xs">
+                                          {typeof scores.enthusiasm === 'number' ? scores.enthusiasm : '—'}
+                                        </td>
+                                        <td className="py-1 px-0.5 text-center tabular-nums text-char-700 text-xs">
+                                          {typeof scores.intelligence === 'number' ? scores.intelligence : '—'}
+                                        </td>
+                                        <td className="py-1 px-0.5 text-center tabular-nums text-char-700 text-xs">
+                                          {typeof scores.agility === 'number' ? scores.agility : '—'}
+                                        </td>
+                                        <td className="py-1 px-0.5 text-center tabular-nums text-char-700 text-xs">
+                                          {typeof scores.endurance === 'number' ? scores.endurance : '—'}
+                                        </td>
+                                        <td className="py-1 px-1 text-center tabular-nums font-bold text-char-900 text-xs border-r border-om-200/60 bg-camel-50/50">
+                                          {hasScores ? sum : '—'}
                                         </td>
                                       </React.Fragment>
                                     )
-                                  }
-
-                                  if (run.status === 'absent') {
-                                    return (
-                                      <React.Fragment key={r}>
-                                        <td className="py-1 px-0.5 text-center">
-                                          <span
-                                            className="inline-flex items-center justify-center min-w-[18px] h-4.5 px-1 rounded text-[10px] font-bold shadow-2xs"
-                                            style={bgStyle}
-                                            title={`${blanketTitle} попона, забег №${run.heat || '1'}`}
-                                          >
-                                            {run.heat || '1'}
-                                          </span>
-                                        </td>
-                                        <td colSpan={6} className="py-1 px-1 text-center text-char-500 text-[11px] border-r border-om-200/60 bg-om-100/40">
-                                          Неявка
-                                        </td>
-                                      </React.Fragment>
-                                    )
-                                  }
-
-                                  const sum = calculateRoundSum(run.scores)
-                                  const hasScores = hasRoundScores(run.scores)
-                                  return (
-                                    <React.Fragment key={r}>
-                                      <td className="py-1 px-0.5 text-center">
-                                        <span
-                                          className="inline-flex items-center justify-center min-w-[18px] h-4.5 px-1 rounded text-[10px] font-bold shadow-2xs"
-                                          style={bgStyle}
-                                          title={`${blanketTitle} попона, забег №${run.heat || '1'}`}
-                                        >
-                                          {run.heat || '1'}
-                                        </span>
-                                      </td>
-                                      <td className="py-1 px-0.5 text-center tabular-nums text-char-700 text-xs">
-                                        {typeof run.scores.speed === 'number' ? run.scores.speed : '—'}
-                                      </td>
-                                      <td className="py-1 px-0.5 text-center tabular-nums text-char-700 text-xs">
-                                        {typeof run.scores.enthusiasm === 'number' ? run.scores.enthusiasm : '—'}
-                                      </td>
-                                      <td className="py-1 px-0.5 text-center tabular-nums text-char-700 text-xs">
-                                        {typeof run.scores.intelligence === 'number' ? run.scores.intelligence : '—'}
-                                      </td>
-                                      <td className="py-1 px-0.5 text-center tabular-nums text-char-700 text-xs">
-                                        {typeof run.scores.agility === 'number' ? run.scores.agility : '—'}
-                                      </td>
-                                      <td className="py-1 px-0.5 text-center tabular-nums text-char-700 text-xs">
-                                        {typeof run.scores.endurance === 'number' ? run.scores.endurance : '—'}
-                                      </td>
-                                      <td className="py-1 px-1 text-center tabular-nums font-bold text-char-900 text-xs border-r border-om-200/60 bg-camel-50/50">
-                                        {hasScores ? sum : '—'}
-                                      </td>
-                                    </React.Fragment>
-                                  )
-                                })}
-                                <td className={`py-1.5 px-2 text-right font-bold tabular-nums border-r border-om-200/60 ${overall.type !== 'normal' ? 'text-terracotta-800' : 'text-char-900 bg-camel-100/30'}`}>
-                                  {overall.type !== 'normal' ? overall.label : (hasAnyScores ? calculateTotalScore(d, cat.runsCount) : '—')}
+                                  })
+                                )}
+                                <td className={`py-1.5 px-2 text-right tabular-nums border-r border-om-200/60 ${
+                                  overall.type === 'absent'
+                                    ? 'text-char-400 font-normal text-xs'
+                                    : overall.type !== 'normal'
+                                    ? 'text-char-600 font-medium text-xs'
+                                    : 'font-bold text-char-900 bg-camel-100/30'
+                                }`}>
+                                  {overall.type === 'absent' ? '—' : overall.type !== 'normal' ? 'Дискв.' : (hasAnyScores ? calculateTotalScore(d, cat.runsCount) : '—')}
                                 </td>
                               </>
                             ) : (
@@ -1817,13 +1911,19 @@ export default function ProtocolBuilder() {
                                 <td className="py-1.5 px-2 text-center font-mono text-char-700 border-r border-om-200/60">
                                   {d.racing_time2 || '—'}
                                 </td>
-                                <td className={`py-1.5 px-2 text-right font-bold font-mono border-r border-om-200/60 ${overall.type !== 'normal' ? 'text-terracotta-800' : 'text-char-900'}`}>
-                                  {overall.type !== 'normal' ? overall.label : (d.racing_final_time || '—')}
+                                <td className={`py-1.5 px-2 text-right font-mono border-r border-om-200/60 ${
+                                  overall.type === 'absent'
+                                    ? 'text-char-400 font-normal text-xs'
+                                    : overall.type !== 'normal'
+                                    ? 'text-char-600 font-medium text-xs'
+                                    : 'font-bold text-char-900'
+                                }`}>
+                                  {overall.type === 'absent' ? '—' : overall.type !== 'normal' ? 'Дискв.' : (d.racing_final_time || '—')}
                                 </td>
                               </>
                             )}
                             <td className="py-1.5 px-2 text-right font-semibold text-camel-700">
-                              {d.awards.join(', ') || '—'}
+                              {overall.type === 'absent' ? '—' : (((d.awards || []).join(', ')) || '—')}
                             </td>
                           </tr>
                         )
@@ -1837,6 +1937,515 @@ export default function ProtocolBuilder() {
         })}
         </div>
       </div>
+
+      {/* Портал выпадающего меню статуса забега (вне overflow-контейнеров таблицы) */}
+      {activeRunMenu && typeof document !== 'undefined' && createPortal(
+        <>
+          <div
+            className="fixed inset-0 z-50"
+            onClick={() => setActiveRunMenu(null)}
+          />
+          <div
+            data-portal-menu
+            className="fixed z-50 w-52 bg-cream-50 rounded-xl border border-om-300 shadow-2xl p-1 text-xs ring-1 ring-char-900/10 animate-in fade-in zoom-in-95 duration-100"
+            style={{
+              top: window.innerHeight - activeRunMenu.rect.bottom < 130
+                ? Math.max(10, activeRunMenu.rect.top - 110)
+                : activeRunMenu.rect.bottom + 4,
+              left: Math.max(10, Math.min(activeRunMenu.rect.right - 208, window.innerWidth - 220))
+            }}
+            onClick={e => e.stopPropagation()}
+          >
+            <div className="px-2.5 py-1 text-[10px] font-bold text-camel-800 uppercase tracking-wider border-b border-om-200/70 mb-1 flex items-center justify-between">
+              <span>Статус забега</span>
+              <button
+                type="button"
+                onClick={() => setActiveRunMenu(null)}
+                className="text-char-400 hover:text-char-700 p-0.5 rounded focus:outline-none cursor-pointer"
+              >
+                <X className="w-3 h-3" />
+              </button>
+            </div>
+
+            {(() => {
+              const activeCat = categories.find(c => c.id === activeRunMenu.catId)
+              const activeDog = activeCat?.dogs.find(d => d.id === activeRunMenu.dogId)
+              const currentRunStatus = activeDog?.runs[activeRunMenu.rIdx]?.status || 'normal'
+
+              return (
+                <div className="space-y-0.5">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setRunStatus(activeRunMenu.catId, activeRunMenu.dogId, activeRunMenu.rIdx, 'normal')
+                      setActiveRunMenu(null)
+                    }}
+                    className={`w-full text-left px-2.5 py-1.5 rounded-lg font-medium flex items-center justify-between transition-colors cursor-pointer text-xs ${
+                      currentRunStatus === 'normal' ? 'bg-camel-100/70 text-camel-900' : 'hover:bg-om-100 text-char-800'
+                    }`}
+                  >
+                    <div>
+                      <div className="font-semibold leading-tight">Оценки (баллы)</div>
+                      <div className="text-[10px] text-char-400 font-normal">Баллы по 5 критериям</div>
+                    </div>
+                    {currentRunStatus === 'normal' && <Check className="w-3.5 h-3.5 text-camel-700 shrink-0" />}
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setRunStatus(activeRunMenu.catId, activeRunMenu.dogId, activeRunMenu.rIdx, 'withdrawn')
+                      setActiveRunMenu(null)
+                    }}
+                    className={`w-full text-left px-2.5 py-1.5 rounded-lg font-medium flex items-center justify-between transition-colors cursor-pointer text-xs ${
+                      currentRunStatus === 'withdrawn' ? 'bg-terracotta-100/70 text-terracotta-900' : 'hover:bg-terracotta-50 text-terracotta-700'
+                    }`}
+                  >
+                    <div className="flex items-center gap-2.5">
+                      <Ban className="w-3.5 h-3.5 text-terracotta-600 shrink-0" />
+                      <div>
+                        <div className="font-semibold leading-tight">Дисквалификация</div>
+                        <div className="text-[10px] text-char-400 font-normal">Собака снята с забега</div>
+                      </div>
+                    </div>
+                    {currentRunStatus === 'withdrawn' && <Check className="w-3.5 h-3.5 text-terracotta-700 shrink-0" />}
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setRunStatus(activeRunMenu.catId, activeRunMenu.dogId, activeRunMenu.rIdx, 'absent')
+                      setActiveRunMenu(null)
+                    }}
+                    className={`w-full text-left px-2.5 py-1.5 rounded-lg font-medium flex items-center justify-between transition-colors cursor-pointer text-xs ${
+                      currentRunStatus === 'absent' ? 'bg-om-200/80 text-char-900' : 'hover:bg-om-100 text-char-700'
+                    }`}
+                  >
+                    <div className="flex items-center gap-2.5">
+                      <Clock className="w-3.5 h-3.5 text-char-400 shrink-0" />
+                      <div>
+                        <div className="font-semibold leading-tight">Неявка</div>
+                        <div className="text-[10px] text-char-400 font-normal">Не явилась на старт</div>
+                      </div>
+                    </div>
+                    {currentRunStatus === 'absent' && <Check className="w-3.5 h-3.5 text-char-700 shrink-0" />}
+                  </button>
+                </div>
+              )
+            })()}
+          </div>
+        </>,
+        document.body
+      )}
+
+      {/* Портал автокомплита клички собаки из базы сайта */}
+      {activeSearchDog && filteredExistingDogs.length > 0 && typeof document !== 'undefined' && createPortal(
+        <>
+          <div
+            className="fixed inset-0 z-50"
+            onClick={() => setActiveSearchDog(null)}
+          />
+          <div
+            data-portal-menu
+            className="fixed z-50 bg-cream-50 rounded-xl border border-om-300 shadow-2xl py-1 divide-y divide-om-100 max-h-56 overflow-y-auto ring-1 ring-char-900/10 text-xs animate-in fade-in zoom-in-95 duration-100"
+            style={{
+              top: window.innerHeight - activeSearchDog.rect.bottom < 180
+                ? Math.max(10, activeSearchDog.rect.top - 180)
+                : activeSearchDog.rect.bottom + 4,
+              left: Math.max(10, Math.min(window.innerWidth - 300, activeSearchDog.rect.left)),
+              width: Math.max(280, activeSearchDog.rect.width)
+            }}
+            onClick={e => e.stopPropagation()}
+          >
+            <div className="px-2.5 py-1 text-[9px] font-bold text-camel-800 uppercase tracking-wider bg-om-100/90 flex justify-between items-center sticky top-0 z-10 backdrop-blur-xs border-b border-om-200/60">
+              <span>Собаки из базы сайта</span>
+              <button
+                type="button"
+                onClick={() => setActiveSearchDog(null)}
+                className="text-char-400 hover:text-char-800 p-0.5 rounded cursor-pointer"
+              >
+                <X className="w-2.5 h-2.5" />
+              </button>
+            </div>
+            {filteredExistingDogs.map((exDog, i) => (
+              <button
+                key={i}
+                type="button"
+                onClick={() => selectExistingDog(activeSearchDog.catId, activeSearchDog.dogId, exDog)}
+                className="w-full text-left px-2.5 py-1.5 hover:bg-camel-100/70 text-xs flex justify-between items-center transition-colors cursor-pointer"
+              >
+                <span className="font-semibold text-char-900 truncate">{exDog.name}</span>
+                <div className="flex items-center gap-1.5 ml-2 shrink-0">
+                  <span className="text-[10px] text-char-400">{exDog.breed}</span>
+                  {exDog.sex && (
+                    <DogSexIcon sex={exDog.sex} size={11} className="inline-block" />
+                  )}
+                </div>
+              </button>
+            ))}
+          </div>
+        </>,
+        document.body
+      )}
+
+      {/* Портал выпадающего меню выбора титулов */}
+      {activeAwardsMenu && typeof document !== 'undefined' && (() => {
+        const targetCat = categories.find(c => c.id === activeAwardsMenu.catId)
+        const targetDog = targetCat?.dogs.find(d => d.id === activeAwardsMenu.dogId)
+        if (!targetDog) return null
+
+        return createPortal(
+          <>
+            <div
+              className="fixed inset-0 z-50"
+              onClick={() => setActiveAwardsMenu(null)}
+            />
+            <div
+              data-portal-menu
+              className="fixed z-50 w-52 bg-cream-50 rounded-xl border border-om-300 shadow-2xl p-1 text-xs ring-1 ring-char-900/10 animate-in fade-in zoom-in-95 duration-100"
+              style={{
+                top: window.innerHeight - activeAwardsMenu.rect.bottom < 240
+                  ? Math.max(10, activeAwardsMenu.rect.top - 230)
+                  : activeAwardsMenu.rect.bottom + 4,
+                left: Math.max(10, Math.min(activeAwardsMenu.rect.right - 208, window.innerWidth - 220))
+              }}
+              onClick={e => e.stopPropagation()}
+            >
+              <div className="px-2.5 py-1 text-[10px] font-bold text-camel-800 uppercase tracking-wider border-b border-om-200/70 mb-1 flex items-center justify-between">
+                <span>Выбор титулов</span>
+                <button
+                  type="button"
+                  onClick={() => setActiveAwardsMenu(null)}
+                  className="text-char-400 hover:text-char-700 p-0.5 rounded cursor-pointer"
+                >
+                  <X className="w-3 h-3" />
+                </button>
+              </div>
+              <div className="p-0.5 space-y-0.5 max-h-56 overflow-y-auto">
+                {TITLES_LIST.map(title => {
+                  const active = (targetDog.awards || []).includes(title)
+                  return (
+                    <button
+                      key={title}
+                      type="button"
+                      onClick={() => toggleAward(activeAwardsMenu.catId, activeAwardsMenu.dogId, title)}
+                      className={`w-full text-left px-2.5 py-1.5 rounded-lg text-xs flex justify-between items-center transition-colors cursor-pointer ${
+                        active
+                          ? 'bg-camel-100 text-camel-900 font-bold'
+                          : 'hover:bg-om-100 text-char-700'
+                      }`}
+                    >
+                      <span>{title}</span>
+                      {active && <Check className="w-3.5 h-3.5 text-camel-700 shrink-0" />}
+                    </button>
+                  )
+                })}
+              </div>
+            </div>
+          </>,
+          document.body
+        )
+      })()}
+
+      {/* Портал выпадающего меню выбора породы */}
+      {activeBreedMenu && typeof document !== 'undefined' && (() => {
+        const cat = categories.find(c => c.id === activeBreedMenu.catId)
+        if (!cat) return null
+
+        const query = breedSearch.toLowerCase().trim()
+        const filteredGroups = BREED_GROUPS.map(group => ({
+          ...group,
+          breeds: group.breeds.filter(b => !query || b.toLowerCase().includes(query))
+        })).filter(g => g.breeds.length > 0)
+
+        return createPortal(
+          <>
+            <div className="fixed inset-0 z-50" onClick={() => setActiveBreedMenu(null)} />
+            <div
+              data-portal-menu
+              className="fixed z-50 w-72 bg-cream-50 rounded-xl border border-om-300 shadow-2xl p-1 text-xs ring-1 ring-char-900/10 animate-in fade-in zoom-in-95 duration-100"
+              style={{
+                top: window.innerHeight - activeBreedMenu.rect.bottom < 280
+                  ? Math.max(10, activeBreedMenu.rect.top - 270)
+                  : activeBreedMenu.rect.bottom + 4,
+                left: Math.max(10, Math.min(activeBreedMenu.rect.left, window.innerWidth - 300))
+              }}
+              onClick={e => e.stopPropagation()}
+            >
+              <div className="p-1 border-b border-om-200/70 mb-1 flex items-center gap-1.5">
+                <div className="flex-1 flex items-center gap-1.5 px-2 py-1 bg-white rounded-lg border border-om-200 focus-within:ring-1 focus-within:ring-camel-500">
+                  <Search className="w-3.5 h-3.5 text-char-400 shrink-0" />
+                  <input
+                    type="text"
+                    autoFocus
+                    value={breedSearch}
+                    onChange={e => setBreedSearch(e.target.value)}
+                    placeholder="Поиск породы..."
+                    className="w-full text-xs text-char-900 bg-transparent focus:outline-none placeholder:text-char-400"
+                  />
+                  {breedSearch && (
+                    <button
+                      type="button"
+                      onClick={() => setBreedSearch('')}
+                      className="text-char-400 hover:text-char-700 p-0.5 rounded cursor-pointer"
+                    >
+                      <X className="w-2.5 h-2.5" />
+                    </button>
+                  )}
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setActiveBreedMenu(null)}
+                  className="text-char-400 hover:text-char-700 p-1 rounded cursor-pointer"
+                >
+                  <X className="w-3 h-3" />
+                </button>
+              </div>
+
+              <div className="p-0.5 space-y-1 max-h-60 overflow-y-auto">
+                {filteredGroups.map(group => (
+                  <div key={group.groupName} className="space-y-0.5">
+                    <div className="px-2 pt-1.5 pb-0.5 text-[9px] font-bold uppercase tracking-wider text-camel-800">
+                      {group.groupName}
+                    </div>
+                    {group.breeds.map(b => {
+                      const isSelected = cat.breed === b
+                      return (
+                        <button
+                          key={b}
+                          type="button"
+                          onClick={() => {
+                            updateCategoryMeta(cat.id, { breed: b })
+                            setActiveBreedMenu(null)
+                          }}
+                          className={`w-full text-left px-2.5 py-1.5 rounded-lg text-xs flex justify-between items-center transition-colors cursor-pointer ${
+                            isSelected
+                              ? 'bg-camel-100 text-camel-900 font-bold'
+                              : 'hover:bg-om-100 text-char-700'
+                          }`}
+                        >
+                          <span>{b}</span>
+                          {isSelected && <Check className="w-3.5 h-3.5 text-camel-700 shrink-0" />}
+                        </button>
+                      )
+                    })}
+                  </div>
+                ))}
+
+                {filteredGroups.length === 0 && (
+                  <div className="px-3 py-3 text-center text-xs text-char-400">
+                    Порода не найдена
+                  </div>
+                )}
+
+                <div className="pt-1 mt-1 border-t border-om-200/70">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setCustomBreedCatIds(prev => ({ ...prev, [cat.id]: true }))
+                      setActiveBreedMenu(null)
+                    }}
+                    className="w-full text-left px-2.5 py-1.5 rounded-lg text-xs text-camel-800 font-semibold hover:bg-om-100 transition-colors flex items-center gap-1.5 cursor-pointer"
+                  >
+                    <Plus className="w-3 h-3 text-camel-600" />
+                    <span>Другая порода (ввести вручную)</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </>,
+          document.body
+        )
+      })()}
+
+      {/* Портал выпадающего меню выбора класса */}
+      {activeClassMenu && typeof document !== 'undefined' && (() => {
+        const cat = categories.find(c => c.id === activeClassMenu.catId)
+        if (!cat) return null
+
+        return createPortal(
+          <>
+            <div className="fixed inset-0 z-50" onClick={() => setActiveClassMenu(null)} />
+            <div
+              data-portal-menu
+              className="fixed z-50 w-52 bg-cream-50 rounded-xl border border-om-300 shadow-2xl p-1 text-xs ring-1 ring-char-900/10 animate-in fade-in zoom-in-95 duration-100"
+              style={{
+                top: window.innerHeight - activeClassMenu.rect.bottom < 240
+                  ? Math.max(10, activeClassMenu.rect.top - 230)
+                  : activeClassMenu.rect.bottom + 4,
+                left: Math.max(10, Math.min(activeClassMenu.rect.left, window.innerWidth - 220))
+              }}
+              onClick={e => e.stopPropagation()}
+            >
+              <div className="px-2.5 py-1 text-[10px] font-bold text-camel-800 uppercase tracking-wider border-b border-om-200/70 mb-1 flex items-center justify-between">
+                <span>Выбор класса</span>
+                <button
+                  type="button"
+                  onClick={() => setActiveClassMenu(null)}
+                  className="text-char-400 hover:text-char-700 p-0.5 rounded cursor-pointer"
+                >
+                  <X className="w-3 h-3" />
+                </button>
+              </div>
+              <div className="p-0.5 space-y-0.5 max-h-56 overflow-y-auto">
+                {CLASSES.map(c => {
+                  const isSelected = cat.className === c
+                  return (
+                    <button
+                      key={c}
+                      type="button"
+                      onClick={() => {
+                        updateCategoryMeta(cat.id, { className: c })
+                        setActiveClassMenu(null)
+                      }}
+                      className={`w-full text-left px-2.5 py-1.5 rounded-lg text-xs flex justify-between items-center transition-colors cursor-pointer ${
+                        isSelected
+                          ? 'bg-camel-100 text-camel-900 font-bold'
+                          : 'hover:bg-om-100 text-char-700'
+                      }`}
+                    >
+                      <span>{c}</span>
+                      {isSelected && <Check className="w-3.5 h-3.5 text-camel-700 shrink-0" />}
+                    </button>
+                  )
+                })}
+                {!CLASSES.includes(cat.className) && cat.className && (
+                  <button
+                    type="button"
+                    onClick={() => setActiveClassMenu(null)}
+                    className="w-full text-left px-2.5 py-1.5 rounded-lg text-xs flex justify-between items-center bg-camel-100 text-camel-900 font-bold"
+                  >
+                    <span>{cat.className}</span>
+                    <Check className="w-3.5 h-3.5 text-camel-700 shrink-0" />
+                  </button>
+                )}
+                <div className="pt-1 mt-1 border-t border-om-200/70">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setCustomClassCatIds(prev => ({ ...prev, [cat.id]: true }))
+                      setActiveClassMenu(null)
+                    }}
+                    className="w-full text-left px-2.5 py-1.5 rounded-lg text-xs text-camel-800 font-semibold hover:bg-om-100 transition-colors flex items-center gap-1.5 cursor-pointer"
+                  >
+                    <Plus className="w-3 h-3 text-camel-600" />
+                    <span>Другой класс...</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </>,
+          document.body
+        )
+      })()}
+
+      {/* Портал выпадающего меню выбора пола в категории */}
+      {activeCategorySexMenu && typeof document !== 'undefined' && (() => {
+        const cat = categories.find(c => c.id === activeCategorySexMenu.catId)
+        if (!cat) return null
+
+        const sexOptions: Array<{ value: 'male' | 'female' | 'mixed'; label: string }> = [
+          { value: 'male', label: 'Кобели' },
+          { value: 'female', label: 'Суки' },
+          { value: 'mixed', label: 'Микс' }
+        ]
+
+        return createPortal(
+          <>
+            <div className="fixed inset-0 z-50" onClick={() => setActiveCategorySexMenu(null)} />
+            <div
+              data-portal-menu
+              className="fixed z-50 w-36 bg-cream-50 rounded-xl border border-om-300 shadow-2xl p-1 text-xs ring-1 ring-char-900/10 animate-in fade-in zoom-in-95 duration-100"
+              style={{
+                top: window.innerHeight - activeCategorySexMenu.rect.bottom < 150
+                  ? Math.max(10, activeCategorySexMenu.rect.top - 140)
+                  : activeCategorySexMenu.rect.bottom + 4,
+                left: Math.max(10, Math.min(activeCategorySexMenu.rect.left, window.innerWidth - 160))
+              }}
+              onClick={e => e.stopPropagation()}
+            >
+              <div className="p-0.5 space-y-0.5">
+                {sexOptions.map(opt => {
+                  const isSelected = cat.sex === opt.value
+                  return (
+                    <button
+                      key={opt.value}
+                      type="button"
+                      onClick={() => {
+                        updateCategoryMeta(cat.id, { sex: opt.value })
+                        setActiveCategorySexMenu(null)
+                      }}
+                      className={`w-full text-left px-2.5 py-1.5 rounded-lg text-xs flex justify-between items-center transition-colors cursor-pointer ${
+                        isSelected
+                          ? 'bg-camel-100 text-camel-900 font-bold'
+                          : 'hover:bg-om-100 text-char-700'
+                      }`}
+                    >
+                      <span>{opt.label}</span>
+                      {isSelected && <Check className="w-3.5 h-3.5 text-camel-700 shrink-0" />}
+                    </button>
+                  )
+                })}
+              </div>
+            </div>
+          </>,
+          document.body
+        )
+      })()}
+
+      {/* Портал выпадающего меню выбора пола в строке собаки */}
+      {activeDogSexMenu && typeof document !== 'undefined' && (() => {
+        const cat = categories.find(c => c.id === activeDogSexMenu.catId)
+        const dog = cat?.dogs.find(d => d.id === activeDogSexMenu.dogId)
+        if (!cat || !dog) return null
+
+        const sexOptions: Array<{ value: 'male' | 'female'; label: string }> = [
+          { value: 'male', label: 'Кобель' },
+          { value: 'female', label: 'Сука' }
+        ]
+
+        return createPortal(
+          <>
+            <div className="fixed inset-0 z-50" onClick={() => setActiveDogSexMenu(null)} />
+            <div
+              data-portal-menu
+              className="fixed z-50 w-32 bg-cream-50 rounded-xl border border-om-300 shadow-2xl p-1 text-xs ring-1 ring-char-900/10 animate-in fade-in zoom-in-95 duration-100"
+              style={{
+                top: window.innerHeight - activeDogSexMenu.rect.bottom < 120
+                  ? Math.max(10, activeDogSexMenu.rect.top - 110)
+                  : activeDogSexMenu.rect.bottom + 4,
+                left: Math.max(10, Math.min(activeDogSexMenu.rect.left, window.innerWidth - 140))
+              }}
+              onClick={e => e.stopPropagation()}
+            >
+              <div className="p-0.5 space-y-0.5">
+                {sexOptions.map(opt => {
+                  const isSelected = dog.sex === opt.value
+                  return (
+                    <button
+                      key={opt.value}
+                      type="button"
+                      onClick={() => {
+                        updateDog(cat.id, dog.id, { sex: opt.value })
+                        setActiveDogSexMenu(null)
+                      }}
+                      className={`w-full text-left px-2.5 py-1.5 rounded-lg text-xs flex justify-between items-center transition-colors cursor-pointer ${
+                        isSelected
+                          ? 'bg-camel-100 text-camel-900 font-bold'
+                          : 'hover:bg-om-100 text-char-700'
+                      }`}
+                    >
+                      <span>{opt.label}</span>
+                      {isSelected && <Check className="w-3.5 h-3.5 text-camel-700 shrink-0" />}
+                    </button>
+                  )
+                })}
+              </div>
+            </div>
+          </>,
+          document.body
+        )
+      })()}
     </div>
   )
 }

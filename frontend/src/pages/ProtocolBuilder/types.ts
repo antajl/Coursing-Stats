@@ -125,24 +125,25 @@ export function createNewCategory(
   }
 }
 
-export function calculateRoundSum(scores: CoursingScores): number {
+export function calculateRoundSum(scores?: CoursingScores | null): number {
+  if (!scores) return 0
   const nums = [scores.speed, scores.enthusiasm, scores.intelligence, scores.agility, scores.endurance]
   return nums.reduce<number>((acc, v) => acc + (typeof v === 'number' ? v : 0), 0)
 }
 
-export function hasRoundScores(scores: CoursingScores): boolean {
+export function hasRoundScores(scores?: CoursingScores | null): boolean {
   if (!scores) return false
   const nums = [scores.speed, scores.enthusiasm, scores.intelligence, scores.agility, scores.endurance]
   return nums.some(v => typeof v === 'number')
 }
 
-export function calculateTotalScore(p: DogParticipant, runsCount: number = 1): number {
-  if (p.disqualified) return 0
+export function calculateTotalScore(p?: DogParticipant | null, runsCount: number = 1): number {
+  if (!p || p.disqualified) return 0
   let total = 0
-  const activeRuns = p.runs.slice(0, runsCount)
+  const activeRuns = (p.runs || []).slice(0, runsCount)
   for (const r of activeRuns) {
-    if (!r.status || r.status === 'normal') {
-      total += calculateRoundSum(r.scores)
+    if (!r?.status || r.status === 'normal') {
+      total += calculateRoundSum(r?.scores)
     }
   }
   return total
@@ -154,23 +155,26 @@ export interface DogOverallStatus {
   reason?: string
 }
 
-export function getDogOverallStatus(p: DogParticipant, runsCount: number = 1): DogOverallStatus {
+export function getDogOverallStatus(p?: DogParticipant | null, runsCount: number = 1): DogOverallStatus {
+  if (!p) {
+    return { type: 'normal', label: '0' }
+  }
   if (p.disqualified) {
     return { type: 'disqualified', label: 'ДИСКВ.', reason: p.comment || '' }
   }
 
-  const activeRuns = p.runs.slice(0, runsCount)
+  const activeRuns = (p.runs || []).slice(0, runsCount)
   if (activeRuns.length === 0) {
     return { type: 'normal', label: '0' }
   }
 
   // Если все забеги неявка
-  if (activeRuns.every(r => r.status === 'absent')) {
+  if (activeRuns.every(r => r?.status === 'absent')) {
     return { type: 'absent', label: 'НЕЯВКА' }
   }
 
   // Если была дисквалификация в каком-то забеге
-  const withdrawnRun = activeRuns.find(r => r.status === 'withdrawn')
+  const withdrawnRun = activeRuns.find(r => r?.status === 'withdrawn')
   if (withdrawnRun) {
     return {
       type: 'withdrawn',
@@ -180,7 +184,7 @@ export function getDogOverallStatus(p: DogParticipant, runsCount: number = 1): D
   }
 
   // Если неявка в каком-то забеге
-  const absentRun = activeRuns.find(r => r.status === 'absent')
+  const absentRun = activeRuns.find(r => r?.status === 'absent')
   if (absentRun) {
     return { type: 'absent', label: 'НЕЯВКА' }
   }

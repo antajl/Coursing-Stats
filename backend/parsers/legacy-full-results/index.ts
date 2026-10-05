@@ -96,8 +96,22 @@ function cellInfos($: cheerio.CheerioAPI, tr: any): CellInfo[] {
     })
 }
 
-function isDqText(t: string): boolean {
-  return /дискв|снят|сош[её]л|не явка|неявка|dns|dnf/i.test(t)
+export function isDqText(t: string): boolean {
+  return /дискв|снят|сош|не\s*явка|dns|dnf|агресс|преследов|травм|отстран|помех|сход|вход в круг/i.test(t)
+}
+
+export function classifyDqReason(reason: string | null | undefined): {
+  status: 'disqualified' | 'dns' | 'dnf'
+  reason: string
+} {
+  const r = (reason || '').trim()
+  if (/не\s*явка|dns/i.test(r)) {
+    return { status: 'dns', reason: 'Неявка' }
+  }
+  if (/дискв|агресс|преследов|помех/i.test(r)) {
+    return { status: 'disqualified', reason: r || 'Дисквалификация' }
+  }
+  return { status: 'dnf', reason: r || 'Сошёл' }
 }
 
 /** Full_Results: grey row background = не явившиеся (note in protocol header). */
@@ -207,7 +221,46 @@ function parseFollowJudgeScores(
   }
   // 5 cells: belong to whichever heat was not rowspan-covered by DQ
   if (heat1Dq) return { heat1: empty5(), heat2: take5(0) }
-  return { heat1: take5(0), heat2: empty5() }
+}
+
+/**
+ * Разбор хвостовых ячеек legacy протокола после очков:
+ * Поддерживает оба порядка: [Место, CC, Титул] и [CC, Место, Титул],
+ * а также галочки "V" перед сертификатами (CACIL, R.CACIL и т.д.).
+ */
+export function parseLegacyRestTail(rest: string[]): {
+  placement: number | null
+  vc: string
+  qualification: string
+} {
+  let placement: number | null = null
+  let vc = ''
+  const titles: string[] = []
+
+  const isVc = (s: string) => /^(cc|вк|b|б)$/i.test(s)
+  const isCheck = (s: string) => /^[vв]$/i.test(s)
+  const isNum = (s: string) => /^\d+$/.test(s)
+
+  for (const raw of rest) {
+    const text = clean(raw)
+    if (!text) continue
+
+    if (placement === null && isNum(text)) {
+      placement = parseInt(text, 10)
+    } else if (!vc && isVc(text)) {
+      vc = text
+    } else if (isCheck(text)) {
+      continue
+    } else if (!isNum(text)) {
+      titles.push(text)
+    }
+  }
+
+  return {
+    placement,
+    vc,
+    qualification: titles.join(', '),
+  }
 }
 
 /**
@@ -234,8 +287,15 @@ export function parseLegacyFullResultsHTML(html: string): LegacyFullResultsParse
 
     const hasCat = detectHasCatalog(cells)
     let o = 0
-    const catalog_no = hasCat ? num(cells[1]?.text) : num(cells[0]?.text)
-    if (hasCat) o = 1
+    let leadingPlacement: number | null = null
+    let catalog_no: number | null = null
+    if (hasCat) {
+      o = 1
+      leadingPlacement = num(cells[0]?.text)
+      catalog_no = num(cells[1]?.text)
+    } else {
+      catalog_no = num(cells[0]?.text)
+    }
 
     const breed = cells[1 + o]?.text || ''
     const klass = cells[2 + o]?.text || ''
@@ -270,20 +330,8 @@ export function parseLegacyFullResultsHTML(html: string): LegacyFullResultsParse
     if (cells[idx]) idx++
 
     const rest = cells.slice(idx).map((c) => c.text)
-    let placement: number | null = null
-    // HTML: Место | CC | Титул — same field mapping as modern coursing UI:
-    // vc → scoreboard corner ("высшая квалификация", often CC)
-    // qualification → badges by dog name (CACL, Лучший юниор, …)
-    let qualification = ''
-    let vc = ''
-    if (rest.length >= 1 && /^\d+$/.test(rest[0])) {
-      placement = num(rest[0])
-      vc = rest[1] || ''
-      qualification = rest[2] || ''
-    } else {
-      vc = rest[0] || ''
-      qualification = rest[1] || ''
-    }
+    const { placement: trailingPlacement, vc, qualification } = parseLegacyRestTail(rest)
+    const rawPlacement = trailingPlacement ?? leadingPlacement
 
     // Judge 2 continuation row
     let h1j2scores: (number | null)[] = [null, null, null, null, null]
@@ -367,17 +415,28 @@ export function parseLegacyFullResultsHTML(html: string): LegacyFullResultsParse
 
     let status: string | null = 'finished'
     let status_reason: string | null = null
-    if (h1j1.disqualified && !heat1Total && !grandTotal) {
-      status = 'disqualified'
-      status_reason = h1j1.reason
-    } else if (
-      (greyNoShow || /не явка|неявка/i.test(cells.map((c) => c.text).join(' '))) &&
-      !grandTotal &&
-      !heat1Total
-    ) {
-      // UI expects status=dns for «Неявка» (not absent)
-      status = 'dns'
-      status_reason = 'Неявка'
+
+    const hasDq1 = h1j1.disqualified
+    const hasDq2 = h2j1.disqualified
+    const dqCell = cells.find((c) => isDqText(c.text))
+    const textDqMatch = dqCell ? dqCell.text : null
+
+    if (hasDq1 || hasDq2 || textDqMatch || greyNoShow) {
+      const rawReason = h1j1.reason || h2j1.reason || textDqMatch || (greyNoShow ? 'Неявка' : null)
+      const classified = classifyDqReason(rawReason)
+
+      if (classified.status === 'dns') {
+        if (!grandTotal && !heat1Total) {
+          status = 'dns'
+          status_reason = classified.reason
+        }
+      } else if (classified.status === 'disqualified') {
+        status = 'disqualified'
+        status_reason = classified.reason
+      } else if (classified.status === 'dnf') {
+        status = 'dnf'
+        status_reason = classified.reason
+      }
     }
 
     // Keep original breed/class for mix math; DNS → bottom section after mix.
@@ -388,7 +447,7 @@ export function parseLegacyFullResultsHTML(html: string): LegacyFullResultsParse
       sex: sex || null,
       name_lat: name,
       name_ru: name,
-      placement,
+      placement: status === 'finished' ? rawPlacement : null,
       total_score: grandTotal,
       judge_count,
       qualification,

@@ -98,7 +98,7 @@ export const COMPETITION_TITLE_RANK: Record<string, number> = {
 
 export function competitionTitleKey(raw: string): CompetitionTitleKey {
   const t = raw.trim().toLowerCase().replace(/\s+/g, ' ')
-  if (!t) return ''
+  if (!t || /^\d+$/.test(t) || /^[vв]$/i.test(t) || /^(cc|вк|b|б)$/i.test(t)) return ''
 
   // Кумулятивы — раньше «чемпион россии», иначе гранд/национальный съест ЧР
   if (

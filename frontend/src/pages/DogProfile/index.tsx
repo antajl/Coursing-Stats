@@ -786,6 +786,13 @@ export default function DogProfile() {
             </CollapsibleSection>
           </div>
         )}
+
+        {/* Footnote about sports data completeness (About page footer style) */}
+        <footer className="mt-8 rounded-xl border border-old-money-100 bg-cream-50/30 p-3 text-center sm:text-left">
+          <p className="text-[11px] sm:text-xs leading-relaxed text-charcoal-500">
+            <strong>Примечание:</strong> спортивные результаты и статистика формируются на основе официальных протоколов соревнований и архивов ProCoursing.ru. Сведения могут содержать ошибки или быть неполными из-за фрагментарности открытых источников и ручного ведения ранних баз организаторами.
+          </p>
+        </footer>
       </div>
     </>
   )

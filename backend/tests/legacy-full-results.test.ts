@@ -1,6 +1,10 @@
 import fs from 'node:fs'
 import { describe, expect, it } from 'vitest'
-import { parseLegacyFullResultsHTML, parseRuDateRange } from '../parsers/legacy-full-results/index'
+import {
+  parseLegacyFullResultsHTML,
+  parseLegacyRestTail,
+  parseRuDateRange,
+} from '../parsers/legacy-full-results/index'
 
 /** Minimal Full_Results snippet (Amber Yuff + Angel Congo) — same column layout as archive HTML. */
 const FIXTURE_SNIPPET = `<html><body><table>
@@ -136,4 +140,61 @@ describe('parseLegacyFullResultsHTML (coursing-family adapter)', () => {
     expect(parseRuDateRange('foo 08-09.08.2015 bar').start).toBe('2015-08-08')
     expect(parseRuDateRange('18.04.2021').start).toBe('2021-04-18')
   })
+
+  it('correctly parses tail cells in both [place, vc, qual] and [vc, place, qual] orders', () => {
+    // [place, vc, qual]
+    expect(parseLegacyRestTail(['1', 'CC', 'CACL'])).toEqual({
+      placement: 1,
+      vc: 'CC',
+      qualification: 'CACL',
+    })
+    // [vc, place, qual] as in 1564 REEDLY ROAD MYBERN
+    expect(parseLegacyRestTail(['CC', '3', 'R.CACL'])).toEqual({
+      placement: 3,
+      vc: 'CC',
+      qualification: 'R.CACL',
+    })
+    // [vc, place, title, V, cert] with checkbox marker
+    expect(parseLegacyRestTail(['CC', '2', 'Чемпион РКФ', 'V', 'CACIL'])).toEqual({
+      placement: 2,
+      vc: 'CC',
+      qualification: 'Чемпион РКФ, CACIL',
+    })
+    // [place, V] without vc or qual
+    expect(parseLegacyRestTail(['6', 'V'])).toEqual({
+      placement: 6,
+      vc: '',
+      qualification: '',
+    })
+  })
+
+  it('parses leading placement when protocol has catalog column (as in event 1568)', () => {
+    const html = `<html><body><table>
+<tr><td colspan="24">Кубок России по бегам борзых (курсинг), 15.09.2019</td></tr>
+<tr>
+  <td rowspan="2">1</td><td rowspan="2">2</td><td rowspan="2">Басенджи</td><td rowspan="2">Стандартный</td><td rowspan="2">Кобель</td>
+  <td rowspan="2">SUNRISE LEUR ADAM</td>
+  <td rowspan="2">1</td>
+  <td>17</td><td>18</td><td>18</td><td>17</td><td>17</td>
+  <td rowspan="2">177</td>
+  <td rowspan="2">59</td>
+  <td>18</td><td>18</td><td>17</td><td>18</td><td>17</td>
+  <td rowspan="2">178</td>
+  <td rowspan="2">355</td><td rowspan="2">CC</td><td rowspan="2">Победитель Кубка России</td>
+</tr>
+<tr>
+  <td>18</td><td>18</td><td>18</td><td>18</td><td>18</td>
+  <td>18</td><td>18</td><td>18</td><td>18</td><td>18</td>
+</tr>
+</table></body></html>`
+    const parsed = parseLegacyFullResultsHTML(html)
+    expect(parsed.results).toHaveLength(1)
+    const row = parsed.results[0]
+    expect(row.catalog_no).toBe(2)
+    expect(row.placement).toBe(1)
+    expect(row.vc).toBe('CC')
+    expect(row.qualification).toBe('Победитель Кубка России')
+    expect(row.total_score).toBe(355)
+  })
 })
+

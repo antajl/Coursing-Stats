@@ -3,7 +3,7 @@ import { Star as StarIcon, Rabbit, Gauge, Sparkles } from 'lucide-react'
 import { useState } from 'react'
 import OwnerCrownName from '../../components/OwnerCrownName'
 import type { DogTitle } from '../../lib/qualificationTitles'
-import { renderGroupedDogTitles, renderAllDogTitlesSingleLine } from '../../lib/awardChipRender'
+import { DogProfileAwardsBar } from './DogProfileAwardsBar'
 import { parseDogName } from '../../lib/dogName'
 import { displayBreed } from '../../lib/breedMapping'
 import { useFavorites } from '../../hooks/useFavorites'
@@ -49,18 +49,6 @@ type DogProfileHeaderProps = {
     racing?: StandingExplainerInput | null
     shows?: StandingExplainerInput | null
   }
-}
-
-function TitleDomainBlock({ label, titles }: { label: string; titles: DogTitle[] }) {
-  if (titles.length === 0) return null
-  return (
-    <div className="min-w-0 text-center">
-      <div className="mb-2 text-[11px] font-semibold uppercase tracking-wider text-old-money-500">
-        {label}
-      </div>
-      {renderGroupedDogTitles(titles)}
-    </div>
-  )
 }
 
 function RanksTable({
@@ -338,30 +326,10 @@ export function DogProfileHeader({
         ) : null}
 
         {hasTitles && (
-          <div className="mt-4 border-t border-old-money-100 pt-3">
-            {/* Desktop view (>= md) */}
-            <div
-              className={
-                showTitles.length > 0 && competitionTitles.length > 0
-                  ? 'hidden md:grid md:grid-cols-[1fr_auto_1fr] md:items-stretch md:gap-0'
-                  : 'hidden md:grid md:grid-cols-1'
-              }
-            >
-              <TitleDomainBlock label="Курсинг и бега" titles={competitionTitles} />
-              {showTitles.length > 0 && competitionTitles.length > 0 ? (
-                <div
-                  className="hidden w-px self-stretch bg-gradient-to-b from-transparent via-old-money-300 to-transparent md:mx-6 md:block"
-                  aria-hidden
-                />
-              ) : null}
-              <TitleDomainBlock label="Выставки" titles={showTitles} />
-            </div>
-
-            {/* Mobile view (< md): single-line horizontal scroll track */}
-            <div className="block md:hidden">
-              {renderAllDogTitlesSingleLine({ competitionTitles, showTitles })}
-            </div>
-          </div>
+          <DogProfileAwardsBar
+            competitionTitles={competitionTitles}
+            showTitles={showTitles}
+          />
         )}
 
         {dog.owner && (
