@@ -1,8 +1,9 @@
 import type { CoursingStatsAPI } from '../../api';
-import { getDogCardKeyboard } from '../../keyboards';
+import { getDogCardKeyboard, getNavigationButtons } from '../../keyboards';
 import type { DogData } from '../../types';
 import type { KVNamespace } from '../context';
 import { formatDogCard } from './dogCard';
+import { validateDogId } from './validators';
 
 export async function isDogFavorite(
   cache: KVNamespace | undefined,
@@ -41,3 +42,50 @@ export async function buildDogCardPresentation(
     reply_markup: getDogCardKeyboard(dogId, options.backCallback ?? 'main_menu', { isFavorite }),
   };
 }
+
+/**
+ * Единый обработчик отображения карточки собаки по ID
+ */
+export async function handleDogIdSearch(
+  ctx: any,
+  dogId: string,
+  api: CoursingStatsAPI,
+  cache?: KVNamespace,
+) {
+  if (!validateDogId(dogId)) {
+    await ctx.reply('❌ Неверный формат ID собаки.');
+    return;
+  }
+
+  try {
+    const chatId = ctx.chat?.id;
+    if (chatId) {
+      await ctx.api.sendChatAction(chatId, 'typing');
+    }
+
+    const dogData = await api.getDogById(dogId);
+
+    if (!dogData) {
+      await ctx.reply('❌ Собака не найдена. Попробуйте другой ID или поиск по кличке.', {
+        reply_markup: getNavigationButtons('main_menu', 'main_menu'),
+      });
+      return;
+    }
+
+    const card = await buildDogCardPresentation(api, dogData, {
+      cache,
+      userId: ctx.from?.id.toString(),
+    });
+
+    await ctx.reply(card.text, {
+      parse_mode: 'HTML',
+      link_preview_options: { is_disabled: true },
+      reply_markup: card.reply_markup,
+    });
+  } catch (error) {
+    await ctx.reply('❌ Ошибка при загрузке профиля собаки. Попробуйте позже.', {
+      reply_markup: getNavigationButtons('main_menu', 'main_menu'),
+    });
+  }
+}
+

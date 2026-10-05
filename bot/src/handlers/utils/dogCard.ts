@@ -177,7 +177,7 @@ export function formatDogCard(dogData: DogData, options: FormatDogCardOptions = 
     );
     const titleLines = formatShowTitleLines(shows);
     if (titleLines.length > 0) {
-      lines.push(...titleLines);
+      lines.push(`<blockquote expandable>${titleLines.join('\n')}</blockquote>`);
     }
   }
 

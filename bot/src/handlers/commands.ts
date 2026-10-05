@@ -2,7 +2,7 @@ import { Composer } from 'grammy';
 import { CoursingStatsAPI } from '../api';
 import { getMainInlineMenu, getNavigationButtons, getCompetitionsMenu, getShowsMenu, getGuideMenu, getDoninoKeyboard } from '../keyboards';
 import { validateDogId } from './utils/validators';
-import { buildDogCardPresentation } from './utils/presentDogCard';
+import { buildDogCardPresentation, handleDogIdSearch } from './utils/presentDogCard';
 import {
   buildDoninoNotFoundResult,
   buildInlineDogResult,
@@ -48,8 +48,17 @@ async function addReaction(ctx: any, emoji: string) {
 export async function safeEditOrReply(ctx: any, text: string, options: any = {}, cache?: KVNamespace) {
   const userId = ctx.from?.id.toString();
   const chatId = ctx.chat?.id;
+  const msg = ctx.callbackQuery?.message;
   
   try {
+    if (msg && 'photo' in msg && msg.photo) {
+      await ctx.editMessageCaption({
+        caption: text,
+        parse_mode: options.parse_mode,
+        reply_markup: options.reply_markup,
+      });
+      return;
+    }
     await ctx.editMessageText(text, options);
   } catch (editError) {
     console.error('[safeEditOrReply] Failed to edit message, using delete+reply:', editError);
@@ -77,52 +86,6 @@ export async function safeEditOrReply(ctx: any, text: string, options: any = {},
       const lastMessageKey = `last_message:${userId}`;
       await cache.put(lastMessageKey, message.message_id.toString(), { expirationTtl: 86400 }); // 24 hours
     }
-  }
-}
-
-/**
- * Вспомогательные функции для обработки профиля собаки
- * @param ctx - контекст Grammy (any тип для совместимости)
- * @param dogId - ID собаки для поиска
- * @param api - клиент API Coursing Stats
- * @throws {Error} при ошибке загрузки профиля собаки
- */
-async function handleDogIdSearch(
-  ctx: any,
-  dogId: string,
-  api: CoursingStatsAPI,
-  cache?: KVNamespace,
-) {
-  try {
-    // Show typing indicator for better UX
-    const chatId = ctx.chat?.id;
-    if (chatId) {
-      await ctx.api.sendChatAction(chatId, 'typing');
-    }
-    
-    const dogData = await api.getDogById(dogId);
-    
-    if (!dogData) {
-      await ctx.reply('❌ Собака не найдена. Попробуйте другой ID или поиск по кличке.', {
-        reply_markup: getNavigationButtons('main_menu', 'main_menu')
-      });
-      return;
-    }
-
-    const card = await buildDogCardPresentation(api, dogData, {
-      cache,
-      userId: ctx.from?.id.toString(),
-    });
-    
-    await ctx.reply(card.text, {
-      parse_mode: 'HTML',
-      link_preview_options: { is_disabled: true },
-      reply_markup: card.reply_markup,
-    });
-  } catch (error) {
-    await ctx.reply('❌ Ошибка при загрузке профиля собаки. Попробуйте позже.', {
-      reply_markup: getNavigationButtons('main_menu', 'main_menu')
-    });
   }
 }
 
@@ -371,6 +334,118 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
     }
   }
 });
+
+  commands.command(['help', 'guide'], async (ctx) => {
+    await safeEditOrReply(ctx, '<b>📚 Справка</b>\n\nВыберите раздел:', {
+      parse_mode: 'HTML',
+      reply_markup: getGuideMenu(),
+    }, cache);
+  });
+
+  commands.command('search', async (ctx) => {
+    await safeEditOrReply(ctx, 'Введите кличку или ID собаки (число):', {
+      parse_mode: 'HTML',
+      reply_markup: getNavigationButtons('main_menu', 'main_menu'),
+    }, cache);
+  });
+
+  commands.command('ratings', async (ctx) => {
+    const currentYear = new Date().getFullYear().toString();
+    const ratingList = await api.getTopRatings('coursing', 'placement', currentYear, 5);
+    if (!ratingList || ratingList.length === 0) {
+      await safeEditOrReply(ctx, 'Не удалось загрузить рейтинг', {
+        reply_markup: getNavigationButtons('main_menu', 'main_menu'),
+      }, cache);
+      return;
+    }
+    await safeEditOrReply(ctx, '<b>🏆 Рейтинги соревнований</b>\n\nВыберите дисциплину или категорию:', {
+      parse_mode: 'HTML',
+      reply_markup: getCompetitionsMenu(),
+    }, cache);
+  });
+
+  commands.command('calendar', async (ctx) => {
+    const currentYear = new Date().getFullYear();
+    const events = await api.getCalendar(currentYear.toString());
+    if (!events || events.length === 0) {
+      await safeEditOrReply(ctx, 'Не удалось загрузить календарь', {
+        reply_markup: getNavigationButtons('main_menu', 'main_menu'),
+      }, cache);
+      return;
+    }
+    const { filterUpcomingEvents, sortEventsByDate, formatCalendarText } = await import('./calendar/filters');
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const upcomingEvents = sortEventsByDate(filterUpcomingEvents(events, today));
+    const text = formatCalendarText(upcomingEvents, currentYear, 'all');
+    const { getCalendarKeyboard } = await import('../keyboards');
+    await safeEditOrReply(ctx, text, {
+      parse_mode: 'HTML',
+      reply_markup: getCalendarKeyboard(0, false, 'all'),
+    }, cache);
+  });
+
+  commands.command('donino', async (ctx) => {
+    const records = await api.getSpeedRecords();
+    const text = formatDoninoTopChatText(records.speed, records.coursing, { only: 'speed' });
+    await ctx.reply(text, {
+      parse_mode: 'HTML',
+      reply_markup: getDoninoKeyboard('speed'),
+    });
+  });
+
+  commands.command('favorites', async (ctx) => {
+    const userId = ctx.from?.id.toString();
+    if (!userId || !cache) {
+      await ctx.reply('Функция избранного временно недоступна.', {
+        reply_markup: getNavigationButtons('main_menu', 'main_menu'),
+      });
+      return;
+    }
+    const favoritesData = await cache.get(`favorites:${userId}`);
+    const dogIds = favoritesData ? (JSON.parse(favoritesData) as number[]) : [];
+    if (dogIds.length === 0) {
+      await ctx.reply('У вас пока нет избранных собак.\n\nДля добавления используйте кнопку «В избранное» в профиле собаки.', {
+        reply_markup: getNavigationButtons('main_menu', 'main_menu'),
+      });
+      return;
+    }
+    const dogs = await Promise.all(dogIds.slice(0, 20).map((id) => api.getDogById(id.toString())));
+    const validDogs = dogs.filter((d): d is NonNullable<typeof d> => d !== null);
+    if (validDogs.length === 0) {
+      await ctx.reply('Не удалось загрузить данные избранных собак.', {
+        reply_markup: getNavigationButtons('main_menu', 'main_menu'),
+      });
+      return;
+    }
+    let text = `<b>Избранные собаки (${validDogs.length})</b>\n\n`;
+    const listDogs = validDogs.map((dogData) => dogData.dog);
+    listDogs.forEach((dog, index) => {
+      const name = dog.name_lat || dog.name_ru || 'N/A';
+      const breed = dog.breed || 'N/A';
+      text += `${index + 1}. ${name} (${breed})\n`;
+    });
+    text += '\nНажмите номер, чтобы открыть карточку:';
+    const { getFavoritesKeyboard } = await import('../keyboards');
+    await ctx.reply(text, {
+      parse_mode: 'HTML',
+      reply_markup: getFavoritesKeyboard(listDogs),
+    });
+  });
+
+  commands.command('competitions', async (ctx) => {
+    await safeEditOrReply(ctx, '<b>🏆 Соревнования</b>\n\nВыберите действие:', {
+      parse_mode: 'HTML',
+      reply_markup: getCompetitionsMenu(),
+    }, cache);
+  });
+
+  commands.command('shows', async (ctx) => {
+    await safeEditOrReply(ctx, '<b>🎪 Выставки</b>\n\nВыберите действие:', {
+      parse_mode: 'HTML',
+      reply_markup: getShowsMenu(),
+    }, cache);
+  });
 
   /**
    * Обработчик кнопки main_menu для возврата в главное меню

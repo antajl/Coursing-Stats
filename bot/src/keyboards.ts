@@ -5,6 +5,7 @@ import { Dog } from './types';
 export function getMainInlineMenu(): InlineKeyboard {
   const keyboard = new InlineKeyboard()
     .text(`${unicodeIcons.search} Найти собаку`, 'search_dog')
+    .switchInlineCurrent(`${unicodeIcons.search} В чате`, '')
     .row()
     .text(`${unicodeIcons.calendar} Соревнования`, 'competitions_menu')
     .text(`${unicodeIcons.shows} Выставки`, 'shows_menu')
@@ -13,7 +14,7 @@ export function getMainInlineMenu(): InlineKeyboard {
     .text(`${unicodeIcons.favorites} Избранное`, 'favorites')
     .row()
     .text(`${unicodeIcons.book} Справка`, 'guide_menu')
-    .url(`${unicodeIcons.website} Открыть сайт`, 'https://coursing-stats.ru');
+    .webApp(`${unicodeIcons.website} Приложение`, 'https://coursing-stats.ru');
 
   return keyboard;
 }
@@ -225,7 +226,7 @@ export function getRatingKeyboard(discipline: string, category: string, year: st
 
   // Pagination — only coursing/racing (shows: top-10 fixed, no handler)
   if (discipline !== 'shows') {
-    if (offset === 0) {
+    if (Number(offset) === 0) {
       keyboard.text('Ещё 5', `rating_${discipline}_${category}_${year}_5`);
     } else {
       keyboard.text('Назад', `rating_${discipline}_${category}_${year}_0`);
@@ -276,7 +277,7 @@ export function getCalendarKeyboard(offset: string | number = 0, isShows: boolea
   }
 
   // Pagination button
-  if (offset === 0) {
+  if (Number(offset) === 0) {
     keyboard.text('Ещё 10', isShows ? `shows_calendar_10` : `calendar_10`);
   } else {
     keyboard.text('Назад', isShows ? `shows_calendar_0` : `calendar_0`);
@@ -329,7 +330,7 @@ export function getDogCardKeyboard(
 
   return new InlineKeyboard()
     .text(favoriteButton.text, favoriteButton.callback)
-    .url('Профиль на сайте', `https://coursing-stats.ru/dog/${dogId}`)
+    .webApp('Профиль на сайте', `https://coursing-stats.ru/dog/${dogId}`)
     .row()
     .text('Сравнить с другой', `compare_start_${dogId}`)
     .row()

@@ -59,16 +59,16 @@ describe('Keyboards', () => {
       expect(inlineKeyboard[0][0].text).toBe('Все года');
     });
 
-    it.skip('should include years from current year back to 2015', () => {
+    it('should include years from current year back to 2015', () => {
       const keyboard = getYearsMenu('rating_score', true);
       const inlineKeyboard = keyboard.inline_keyboard;
       const currentYear = new Date().getFullYear();
 
-      // Count year buttons (excluding navigation row)
+      // Count year buttons (excluding navigation row and 'Все года')
       let yearCount = 0;
       for (const row of inlineKeyboard) {
         for (const button of row) {
-          if ('callback_data' in button && typeof button.callback_data === 'string' && button.callback_data.match(/^rating_\d{4}$/)) {
+          if ('callback_data' in button && typeof button.callback_data === 'string' && /_\d{4}_0$/.test(button.callback_data)) {
             yearCount++;
           }
         }
@@ -93,7 +93,11 @@ describe('Keyboards', () => {
       const keyboard = getDogCardKeyboard('123');
       const buttons = keyboard.inline_keyboard.flat();
       const favorite = buttons.find((b) => 'callback_data' in b && b.callback_data === 'add_favorite:123');
-      const site = buttons.find((b) => 'url' in b && b.url === 'https://coursing-stats.ru/dog/123');
+      const site = buttons.find(
+        (b) =>
+          ('web_app' in b && (b as any).web_app?.url === 'https://coursing-stats.ru/dog/123') ||
+          ('url' in b && b.url === 'https://coursing-stats.ru/dog/123')
+      );
       expect(favorite).toBeDefined();
       expect(favorite && 'text' in favorite ? favorite.text : null).toBe('В избранное');
       expect(site).toBeDefined();
@@ -187,69 +191,76 @@ describe('Keyboards', () => {
   });
 
   describe('getRatingKeyboard', () => {
-    it.skip('should return rating keyboard with pagination', () => {
+    it('should return rating keyboard with pagination', () => {
       const keyboard = getRatingKeyboard('coursing', 'score', '2026', '0');
       expect(keyboard).toBeDefined();
       const inlineKeyboard = keyboard.inline_keyboard;
       expect(inlineKeyboard).toBeDefined();
 
       // Check pagination button
-      const firstRow = inlineKeyboard[0];
-      const paginationButton = firstRow.find(btn => 'callback_data' in btn && btn.callback_data === 'rating_coursing_score_2026_5');
+      const allButtons = inlineKeyboard.flat();
+      const paginationButton = allButtons.find(btn => 'callback_data' in btn && btn.callback_data === 'rating_coursing_score_2026_5');
       expect(paginationButton).toBeDefined();
       if (paginationButton && 'callback_data' in paginationButton) {
-        expect(paginationButton.text).toBe('➡️ Ещё 5');
+        expect(paginationButton.text).toBe('Ещё 5');
       }
     });
 
-    it.skip('should show back button when offset is not 0', () => {
+    it('should show back button when offset is not 0', () => {
       const keyboard = getRatingKeyboard('coursing', 'score', '2026', '5');
       const inlineKeyboard = keyboard.inline_keyboard;
-      const firstRow = inlineKeyboard[0];
-      const paginationButton = firstRow.find(btn => 'callback_data' in btn && btn.callback_data === 'rating_coursing_score_2026_0');
+      expect(inlineKeyboard).toBeDefined();
+
+      const allButtons = inlineKeyboard.flat();
+      const paginationButton = allButtons.find(btn => 'callback_data' in btn && btn.callback_data === 'rating_coursing_score_2026_0');
       expect(paginationButton).toBeDefined();
       if (paginationButton && 'callback_data' in paginationButton) {
-        expect(paginationButton.text).toBe('⬅️ Назад');
+        expect(paginationButton.text).toBe('Назад');
       }
     });
 
-    it.skip('should toggle category', () => {
+    it('should toggle category', () => {
       const keyboard = getRatingKeyboard('coursing', 'score', '2026', '0');
       const inlineKeyboard = keyboard.inline_keyboard;
-      const firstRow = inlineKeyboard[0];
-      const toggleButton = firstRow.find(btn => 'callback_data' in btn && btn.callback_data === 'rating_coursing_placement_2026');
+      expect(inlineKeyboard).toBeDefined();
+
+      const allButtons = inlineKeyboard.flat();
+      const toggleButton = allButtons.find(btn => 'callback_data' in btn && btn.callback_data === 'rating_coursing_placement_2026');
       expect(toggleButton).toBeDefined();
       if (toggleButton && 'callback_data' in toggleButton) {
-        expect(toggleButton.text).toBe('🥇 По медалям');
+        expect(toggleButton.text).toBe('По медалям');
       }
     });
   });
 
   describe('getCalendarKeyboard', () => {
-    it.skip('should return calendar keyboard with pagination', () => {
+    it('should return calendar keyboard with pagination', () => {
       const keyboard = getCalendarKeyboard('0');
       expect(keyboard).toBeDefined();
       const inlineKeyboard = keyboard.inline_keyboard;
       expect(inlineKeyboard).toBeDefined();
 
       // Check pagination button
-      const firstRow = inlineKeyboard[0];
-      const paginationButton = firstRow.find(btn => 'callback_data' in btn && btn.callback_data === 'calendar_10');
+      const allButtons = inlineKeyboard.flat();
+      const paginationButton = allButtons.find(btn => 'callback_data' in btn && btn.callback_data === 'calendar_10');
       expect(paginationButton).toBeDefined();
       if (paginationButton && 'callback_data' in paginationButton) {
-        expect(paginationButton.text).toBe('➡️ Ещё 10');
+        expect(paginationButton.text).toBe('Ещё 10');
       }
     });
 
-    it.skip('should show back button when offset is not 0', () => {
+    it('should show back button when offset is not 0', () => {
       const keyboard = getCalendarKeyboard('10');
       const inlineKeyboard = keyboard.inline_keyboard;
-      const firstRow = inlineKeyboard[0];
-      const paginationButton = firstRow.find(btn => 'callback_data' in btn && btn.callback_data === 'calendar_0');
+      expect(inlineKeyboard).toBeDefined();
+
+      const allButtons = inlineKeyboard.flat();
+      const paginationButton = allButtons.find(btn => 'callback_data' in btn && btn.callback_data === 'calendar_0');
       expect(paginationButton).toBeDefined();
       if (paginationButton && 'callback_data' in paginationButton) {
-        expect(paginationButton.text).toBe('⬅️ Назад');
+        expect(paginationButton.text).toBe('Назад');
       }
     });
   });
 });
+

@@ -45,8 +45,9 @@ verified: 2026-10-01
 | Security | [sheets/10-security.md](sheets/10-security.md) |
 | Tests, publish-gates | [sheets/11-testing.md](sheets/11-testing.md) |
 | Cursor skills / rules | [sheets/12-agent-skills.md](sheets/12-agent-skills.md) |
-| Why (ADRs) | [decisions/](decisions/) — слои CDN/Turso: [014](decisions/014-cdn-packs-vs-turso.md) |
-| Термины | [index/glossary.yaml](index/glossary.yaml) |
+| История с ProCoursing, обращения сообщества и правовой статус | [COMMUNITY_CHRONICLE_2026.md](COMMUNITY_CHRONICLE_2026.md) |
+| Архитектурные решения (ADR) | [decisions/](decisions/) — слои CDN/Turso: [014](decisions/014-cdn-packs-vs-turso.md) |
+| Термины и понятия | [GLOSSARY.md](GLOSSARY.md) |
 
 ## Skills (коротко)
 

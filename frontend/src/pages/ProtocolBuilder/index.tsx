@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { createPortal } from 'react-dom'
+import { Link } from 'react-router-dom'
+import { usePublicCalendarVisible } from '../../hooks/useStaticData'
 import {
   Plus,
   Trash2,
@@ -225,6 +227,7 @@ interface ActiveDogSexMenuState {
 }
 
 export default function ProtocolBuilder() {
+  const calendarVisible = usePublicCalendarVisible('competitions')
   const [kind, setKind] = useState<CompetitionKind>('coursing')
   const [header, setHeader] = useState<CompetitionHeader>(DEFAULT_HEADER)
 
@@ -754,7 +757,38 @@ export default function ProtocolBuilder() {
   }
 
   return (
-    <div className="space-y-5 pb-20 pt-2">
+    <>
+      {/* Mobile-only tab switcher */}
+      <div className="mb-4 flex items-center justify-between md:hidden print:hidden">
+        <div className="flex w-full items-center gap-1.5 rounded-xl border border-old-money-200/80 bg-white/80 p-1 shadow-xs sm:w-auto">
+          <Link
+            to="/competitions?tab=ranking"
+            className="flex flex-1 sm:flex-initial items-center justify-center gap-1.5 rounded-lg py-1.5 px-3.5 text-xs font-semibold text-charcoal-600 hover:text-charcoal-900 hover:bg-cream-50/50 transition-all"
+          >
+            Рейтинг
+          </Link>
+          {calendarVisible && (
+            <Link
+              to="/competitions?tab=archive"
+              className="flex flex-1 sm:flex-initial items-center justify-center gap-1.5 rounded-lg py-1.5 px-3.5 text-xs font-semibold text-charcoal-600 hover:text-charcoal-900 hover:bg-cream-50/50 transition-all"
+            >
+              Архив
+            </Link>
+          )}
+          <Link
+            to="/competitions?tab=judges"
+            className="flex flex-1 sm:flex-initial items-center justify-center gap-1.5 rounded-lg py-1.5 px-3.5 text-xs font-semibold text-charcoal-600 hover:text-charcoal-900 hover:bg-cream-50/50 transition-all"
+          >
+            Судьи
+          </Link>
+          <div className="flex flex-1 sm:flex-initial items-center justify-center gap-1.5 rounded-lg py-1.5 px-3.5 text-xs font-semibold bg-camel-500 text-charcoal-900 shadow-sm">
+            Конструктор
+          </div>
+        </div>
+      </div>
+
+      <div className="space-y-5 pb-20">
+
       {/* ПАНЕЛЬ ПАРАМЕТРОВ ТУРНИРА (скрывается при печати) */}
       <div className="bg-cream-50/90 backdrop-blur-sm rounded-xl p-3.5 md:p-4 border border-om-200 shadow-sm space-y-3 print:hidden">
         <div className="flex flex-wrap items-center justify-between gap-3 border-b border-om-200/70 pb-2.5">
@@ -1139,8 +1173,11 @@ export default function ProtocolBuilder() {
 
               {/* СПИСОК СОБАК В КАТЕГОРИИ */}
               <div className="p-2 space-y-1.5 overflow-x-auto">
+                <div className="text-[10px] text-char-400 font-medium pb-1 md:hidden">
+                  Прокручивайте строку вправо для ввода баллов и титулов &rarr;
+                </div>
                 {/* Заголовок колонок для идеального выравнивания */}
-                <div className="hidden lg:flex items-center gap-3 px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-char-400 select-none min-w-max border-b border-om-200/50 mb-1">
+                <div className="flex items-center gap-3 px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-char-400 select-none min-w-max border-b border-om-200/50 mb-1">
                   <div className="flex items-center gap-1.5 shrink-0">
                     <span className="w-9 text-center shrink-0">№</span>
                     <span className="w-56 sm:w-60 md:w-64 lg:w-72 px-2 text-left shrink-0">Кличка собаки</span>
@@ -1633,127 +1670,141 @@ export default function ProtocolBuilder() {
                 </span>
               </div>
 
-              <div className="overflow-x-auto">
-                <table className="w-full text-xs text-left border-collapse table-fixed">
-                  {kind === 'racing' ? (
-                    <colgroup>
-                      <col style={{ width: '5%' }} />
-                      <col style={{ width: '4%' }} />
-                      <col style={{ width: '36%' }} />
-                      <col style={{ width: '6%' }} />
-                      <col style={{ width: '12%' }} />
-                      <col style={{ width: '12%' }} />
-                      <col style={{ width: '12%' }} />
-                      <col style={{ width: '13%' }} />
-                    </colgroup>
-                  ) : cat.runsCount === 1 ? (
-                    <colgroup>
-                      <col style={{ width: '4.5%' }} />
-                      <col style={{ width: '3.5%' }} />
-                      <col style={{ width: '28%' }} />
-                      <col style={{ width: '4%' }} />
-                      <col style={{ width: '4%' }} />
-                      <col style={{ width: '4%' }} />
-                      <col style={{ width: '4%' }} />
-                      <col style={{ width: '4%' }} />
-                      <col style={{ width: '4%' }} />
-                      <col style={{ width: '6%' }} />
-                      <col style={{ width: '7%' }} />
-                      <col style={{ width: '27%' }} />
-                    </colgroup>
-                  ) : cat.runsCount === 3 ? (
-                    <colgroup>
-                      <col style={{ width: '4.5%' }} />
-                      <col style={{ width: '3.5%' }} />
-                      <col style={{ width: '26%' }} />
-                      {Array.from({ length: 3 }).map((_, r) => (
-                        <React.Fragment key={r}>
-                          <col style={{ width: '2.4%' }} />
-                          <col style={{ width: '2.2%' }} />
-                          <col style={{ width: '2.2%' }} />
-                          <col style={{ width: '2.2%' }} />
-                          <col style={{ width: '2.2%' }} />
-                          <col style={{ width: '2.2%' }} />
-                          <col style={{ width: '3.6%' }} />
-                        </React.Fragment>
-                      ))}
-                      <col style={{ width: '5%' }} />
-                      <col style={{ width: '10%' }} />
-                    </colgroup>
-                  ) : (
-                    <colgroup>
-                      <col style={{ width: '4.5%' }} />
-                      <col style={{ width: '3.5%' }} />
-                      <col style={{ width: '28%' }} />
-                      {Array.from({ length: 2 }).map((_, r) => (
-                        <React.Fragment key={r}>
-                          <col style={{ width: '3%' }} />
-                          <col style={{ width: '2.8%' }} />
-                          <col style={{ width: '2.8%' }} />
-                          <col style={{ width: '2.8%' }} />
-                          <col style={{ width: '2.8%' }} />
-                          <col style={{ width: '2.8%' }} />
+              {(() => {
+                const previewMinWidth =
+                  kind === 'racing'
+                    ? 'min-w-[650px]'
+                    : cat.runsCount === 3
+                    ? 'min-w-[1080px]'
+                    : cat.runsCount === 1
+                    ? 'min-w-[680px]'
+                    : 'min-w-[880px]'
+
+                return (
+                  <div className="overflow-x-auto">
+                    <div className="text-[10px] text-char-400 font-medium pb-1 md:hidden">
+                      Прокручивайте таблицу вправо для просмотра всех результатов &rarr;
+                    </div>
+                    <table className={`w-full ${previewMinWidth} print:min-w-0 text-xs text-left border-collapse table-fixed`}>
+                      {kind === 'racing' ? (
+                        <colgroup>
+                          <col style={{ width: '5%' }} />
                           <col style={{ width: '4%' }} />
-                        </React.Fragment>
-                      ))}
-                      <col style={{ width: '5%' }} />
-                      <col style={{ width: '17%' }} />
-                    </colgroup>
-                  )}
-                  <thead>
-                    <tr className="border-b border-om-200 text-[10px] uppercase font-bold text-char-500 bg-om-100/60">
-                      <th rowSpan={kind === 'coursing' ? 2 : 1} className="py-1.5 px-1 text-center border-r border-om-200/60">
-                        Место
-                      </th>
-                      <th rowSpan={kind === 'coursing' ? 2 : 1} className="py-1.5 px-1 text-center font-mono border-r border-om-200/60">
-                        №
-                      </th>
-                      <th rowSpan={kind === 'coursing' ? 2 : 1} className="py-1.5 px-2 border-r border-om-200/60">
-                        Кличка собаки
-                      </th>
-                      {kind === 'coursing' ? (
-                        <>
-                          {Array.from({ length: cat.runsCount }).map((_, r) => (
-                            <th
-                              key={r}
-                              colSpan={7}
-                              className="py-1 px-1 text-center border-r border-om-200/80 bg-camel-100/40 text-camel-950 font-bold"
-                            >
-                              {r + 1} Забег
-                            </th>
+                          <col style={{ width: '36%' }} />
+                          <col style={{ width: '6%' }} />
+                          <col style={{ width: '12%' }} />
+                          <col style={{ width: '12%' }} />
+                          <col style={{ width: '12%' }} />
+                          <col style={{ width: '13%' }} />
+                        </colgroup>
+                      ) : cat.runsCount === 1 ? (
+                        <colgroup>
+                          <col style={{ width: '4.5%' }} />
+                          <col style={{ width: '3.5%' }} />
+                          <col style={{ width: '28%' }} />
+                          <col style={{ width: '4%' }} />
+                          <col style={{ width: '4%' }} />
+                          <col style={{ width: '4%' }} />
+                          <col style={{ width: '4%' }} />
+                          <col style={{ width: '4%' }} />
+                          <col style={{ width: '4%' }} />
+                          <col style={{ width: '6%' }} />
+                          <col style={{ width: '7%' }} />
+                          <col style={{ width: '27%' }} />
+                        </colgroup>
+                      ) : cat.runsCount === 3 ? (
+                        <colgroup>
+                          <col style={{ width: '4.5%' }} />
+                          <col style={{ width: '3.5%' }} />
+                          <col style={{ width: '26%' }} />
+                          {Array.from({ length: 3 }).map((_, r) => (
+                            <React.Fragment key={r}>
+                              <col style={{ width: '2.4%' }} />
+                              <col style={{ width: '2.2%' }} />
+                              <col style={{ width: '2.2%' }} />
+                              <col style={{ width: '2.2%' }} />
+                              <col style={{ width: '2.2%' }} />
+                              <col style={{ width: '2.2%' }} />
+                              <col style={{ width: '3.6%' }} />
+                            </React.Fragment>
                           ))}
-                          <th rowSpan={2} className="py-1.5 px-1 text-right border-r border-om-200/60 bg-camel-100/60 text-camel-950 font-bold">
-                            Итого
-                          </th>
-                        </>
+                          <col style={{ width: '5%' }} />
+                          <col style={{ width: '10%' }} />
+                        </colgroup>
                       ) : (
-                        <>
-                          <th className="py-1.5 px-1 text-center border-r border-om-200/60">Бокс</th>
-                          <th className="py-1.5 px-1 text-center border-r border-om-200/60">Заезд 1</th>
-                          <th className="py-1.5 px-1 text-center border-r border-om-200/60">Заезд 2</th>
-                          <th className="py-1.5 px-1 text-right border-r border-om-200/60 font-bold">Итоговое время</th>
-                        </>
+                        <colgroup>
+                          <col style={{ width: '4.5%' }} />
+                          <col style={{ width: '3.5%' }} />
+                          <col style={{ width: '28%' }} />
+                          {Array.from({ length: 2 }).map((_, r) => (
+                            <React.Fragment key={r}>
+                              <col style={{ width: '3%' }} />
+                              <col style={{ width: '2.8%' }} />
+                              <col style={{ width: '2.8%' }} />
+                              <col style={{ width: '2.8%' }} />
+                              <col style={{ width: '2.8%' }} />
+                              <col style={{ width: '2.8%' }} />
+                              <col style={{ width: '4%' }} />
+                            </React.Fragment>
+                          ))}
+                          <col style={{ width: '5%' }} />
+                          <col style={{ width: '17%' }} />
+                        </colgroup>
                       )}
-                      <th rowSpan={kind === 'coursing' ? 2 : 1} className="py-1.5 px-2 text-right">
-                        Титулы и сертификаты
-                      </th>
-                    </tr>
-                    {kind === 'coursing' && (
-                      <tr className="border-b border-om-200 text-[9px] uppercase font-semibold text-char-600 bg-om-50/80">
-                        {Array.from({ length: cat.runsCount }).map((_, r) => (
-                          <React.Fragment key={r}>
-                            <th className="py-1 px-0.5 text-center" title="Забег и попона">Заб.</th>
-                            <th className="py-1 px-0.5 text-center" title="Скорость (0-20)">Скор</th>
-                            <th className="py-1 px-0.5 text-center" title="Энтузиазм (0-20)">Энт</th>
-                            <th className="py-1 px-0.5 text-center" title="Интеллект (0-20)">Инт</th>
-                            <th className="py-1 px-0.5 text-center" title="Маневренность (0-20)">Ман</th>
-                            <th className="py-1 px-0.5 text-center" title="Выносливость (0-20)">Вын</th>
-                            <th className="py-1 px-0.5 text-center font-bold text-char-900 border-r border-om-200/80 bg-camel-100/30" title="Сумма баллов за забег">Сумма</th>
-                          </React.Fragment>
-                        ))}
-                      </tr>
-                    )}
-                  </thead>
+                      <thead>
+                        <tr className="border-b border-om-200 text-[10px] uppercase font-bold text-char-500 bg-om-100/60">
+                          <th rowSpan={kind === 'coursing' ? 2 : 1} className="py-1.5 px-1.5 text-center border-r border-om-200/60 whitespace-nowrap">
+                            Место
+                          </th>
+                          <th rowSpan={kind === 'coursing' ? 2 : 1} className="py-1.5 px-1 text-center font-mono border-r border-om-200/60 whitespace-nowrap">
+                            №
+                          </th>
+                          <th rowSpan={kind === 'coursing' ? 2 : 1} className="py-1.5 px-2 border-r border-om-200/60 whitespace-nowrap">
+                            Кличка собаки
+                          </th>
+                          {kind === 'coursing' ? (
+                            <>
+                              {Array.from({ length: cat.runsCount }).map((_, r) => (
+                                <th
+                                  key={r}
+                                  colSpan={7}
+                                  className="py-1 px-1 text-center border-r border-om-200/80 bg-camel-100/40 text-camel-950 font-bold whitespace-nowrap"
+                                >
+                                  {r + 1} Забег
+                                </th>
+                              ))}
+                              <th rowSpan={2} className="py-1.5 px-1.5 text-right border-r border-om-200/60 bg-camel-100/60 text-camel-950 font-bold whitespace-nowrap">
+                                Итого
+                              </th>
+                            </>
+                          ) : (
+                            <>
+                              <th className="py-1.5 px-1 text-center border-r border-om-200/60 whitespace-nowrap">Бокс</th>
+                              <th className="py-1.5 px-1 text-center border-r border-om-200/60 whitespace-nowrap">Заезд 1</th>
+                              <th className="py-1.5 px-1 text-center border-r border-om-200/60 whitespace-nowrap">Заезд 2</th>
+                              <th className="py-1.5 px-1 text-right border-r border-om-200/60 font-bold whitespace-nowrap">Итоговое время</th>
+                            </>
+                          )}
+                          <th rowSpan={kind === 'coursing' ? 2 : 1} className="py-1.5 px-2 text-right whitespace-nowrap">
+                            Титулы и сертификаты
+                          </th>
+                        </tr>
+                        {kind === 'coursing' && (
+                          <tr className="border-b border-om-200 text-[9px] uppercase font-semibold text-char-600 bg-om-50/80">
+                            {Array.from({ length: cat.runsCount }).map((_, r) => (
+                              <React.Fragment key={r}>
+                                <th className="py-1 px-0.5 text-center whitespace-nowrap" title="Забег и попона">Заб.</th>
+                                <th className="py-1 px-0.5 text-center whitespace-nowrap" title="Скорость (0-20)">Скор</th>
+                                <th className="py-1 px-0.5 text-center whitespace-nowrap" title="Энтузиазм (0-20)">Энт</th>
+                                <th className="py-1 px-0.5 text-center whitespace-nowrap" title="Интеллект (0-20)">Инт</th>
+                                <th className="py-1 px-0.5 text-center whitespace-nowrap" title="Маневренность (0-20)">Ман</th>
+                                <th className="py-1 px-0.5 text-center whitespace-nowrap" title="Выносливость (0-20)">Вын</th>
+                                <th className="py-1 px-0.5 text-center font-bold text-char-900 border-r border-om-200/80 bg-camel-100/30 whitespace-nowrap" title="Сумма баллов за забег">Сумма</th>
+                              </React.Fragment>
+                            ))}
+                          </tr>
+                        )}
+                      </thead>
                   <tbody className="divide-y divide-om-200/60">
                     {(() => {
                       let placeCounter = 0
@@ -1932,8 +1983,9 @@ export default function ProtocolBuilder() {
                   </tbody>
                 </table>
               </div>
-            </div>
-          )
+            )})()}
+          </div>
+        )
         })}
         </div>
       </div>
@@ -2446,6 +2498,7 @@ export default function ProtocolBuilder() {
           document.body
         )
       })()}
-    </div>
+      </div>
+    </>
   )
 }

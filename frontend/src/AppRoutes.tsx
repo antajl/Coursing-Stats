@@ -59,7 +59,7 @@ function ShowDogIdRedirect() {
     
     // Load migrations and check if this ID needs redirect
     fetch('/data/v1/shows/id-migrations.json')
-      .then(res => res.json())
+      .then(res => (res.ok ? res.json() : []))
       .then((migrations: Array<{ old_id: string; new_id: string }>) => {
         if (cancelled) return;
         const migration = migrations.find(m => m.old_id === id);

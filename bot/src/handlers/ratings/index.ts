@@ -45,6 +45,25 @@ function formatCoursingRatings(ratingList: Rating[], category: string, yearLabel
   return text;
 }
 
+function formatShowTitles(titles: unknown): string {
+  if (!titles) return 'Нет титулов';
+  if (Array.isArray(titles)) {
+    if (titles.length === 0) return 'Нет титулов';
+    return titles.map((t: any) => (typeof t === 'string' ? t : t?.title || String(t))).join(', ');
+  }
+  if (typeof titles === 'object') {
+    const entries = Object.entries(titles as Record<string, unknown>);
+    if (entries.length === 0) return 'Нет титулов';
+    return entries
+      .map(([key, count]) => {
+        const n = Number(count);
+        return Number.isFinite(n) && n > 1 ? `${key}×${n}` : key;
+      })
+      .join(', ');
+  }
+  return 'Нет титулов';
+}
+
 /**
  * Обработчики рейтингов собак
  * @param api - клиент API Coursing Stats
@@ -101,7 +120,8 @@ export function createRatings(api: CoursingStatsAPI, cache?: KVNamespace) {
       shows.slice(0, 10).forEach((dog: RatingItem, index: number) => {
         const name = dog.name_lat || dog.name_ru || dog.name || 'N/A';
         const showCount = dog.show_count || dog.total_shows || dog.competition_count || 0;
-        text += `${index + 1}. ${name} - ${showCount} выставок\n`;
+        const titleText = formatShowTitles(dog.titles);
+        text += `${index + 1}. ${name}\n   Выставок: ${showCount} | Титулы: ${titleText}\n\n`;
       });
 
       await ctx.editMessageText(text, {
@@ -202,8 +222,7 @@ export function createRatings(api: CoursingStatsAPI, cache?: KVNamespace) {
       shows.slice(0, 10).forEach((dog: RatingItem, index: number) => {
         const name = dog.name_lat || dog.name_ru || dog.name || 'N/A';
         const showCount = dog.show_count || dog.total_shows || dog.competition_count || 0;
-        const titles = dog.titles || [];
-        const titleText = titles.length > 0 ? titles.map((t: { title: string }) => t.title).join(', ') : 'Нет титулов';
+        const titleText = formatShowTitles(dog.titles);
         text += `${index + 1}. ${name}\n   Выставок: ${showCount} | Титулы: ${titleText}\n\n`;
       });
 

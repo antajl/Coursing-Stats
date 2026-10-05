@@ -35,6 +35,7 @@ yarn run publish-gates
 - Fixtures: `backend/tests/fixtures/`
 - PDF shows tests: `backend/tests/parse-rkf-certificate-pdf.test.ts`, `show-grades.test.ts`
 - Publish slim: `backend/tests/publish-exclude.test.ts`, `backend/tests/cdn-packs.test.ts`, `spa-fallback-redirects.test.ts`
+- WCAG AA contrast: `backend/tests/wcag-contrast.test.ts` (автотест палитры Old Money)
 - CI: static-indexes / publish-gates tests в workflow
 
 ## Pitfalls
