@@ -68,10 +68,13 @@ export function maxMergeDogTitles(...lists: DogTitle[][]): DogTitle[] {
   for (const list of lists) {
     for (const t of list) {
       if (t.count <= 0 || !t.title.trim()) continue
+      if (/^\d+$/.test(t.title.trim())) continue
       const showKey = matchShowAwardToken(t.title)
+      const compKey = competitionTitleKey(t.title)
+      if (!showKey && !compKey) continue
       const mergeKey = showKey
         ? `show:${showKey}`
-        : `comp:${competitionTitleKey(t.title) || t.title.trim().toUpperCase()}`
+        : `comp:${compKey}`
       const display = showKey ? SHOW_AWARD_BADGE[showKey] : competitionTitleDisplayName(t.title)
       const existing = byKey.get(mergeKey)
       if (!existing || t.count > existing.count) {

@@ -2,7 +2,7 @@
   "schema": "coursing-stats/index-top-score-v1",
   "year": 2019,
   "rating_score_version": "cs-v1",
-  "count": 264,
+  "count": 256,
   "items": [
     {
       "dog_id": 9411,
@@ -131,13 +131,13 @@
       "breed": "УИППЕТ",
       "year": 2019,
       "best_score": 540,
-      "total_starts": 2,
-      "best_judge_score": 95,
-      "avg_judge_score": 91.83,
+      "total_starts": 1,
+      "best_judge_score": 94,
+      "avg_judge_score": 92,
       "year_from": 2019,
       "year_to": 2019,
-      "judge_eval_count": 6,
-      "rating_score": 88.67
+      "judge_eval_count": 4,
+      "rating_score": 87.85
     },
     {
       "dog_id": 10115,
@@ -341,13 +341,13 @@
       "breed": "УИППЕТ",
       "year": 2019,
       "best_score": 533,
-      "total_starts": 3,
+      "total_starts": 2,
       "best_judge_score": 94,
-      "avg_judge_score": 89.6,
+      "avg_judge_score": 90,
       "year_from": 2019,
       "year_to": 2019,
-      "judge_eval_count": 10,
-      "rating_score": 88.69
+      "judge_eval_count": 8,
+      "rating_score": 88.39
     },
     {
       "dog_id": 10330,
@@ -530,36 +530,6 @@
       "rating_score": 86.14
     },
     {
-      "dog_id": 9536,
-      "name_lat": "EMERALD OF MY SOUL",
-      "name_ru": "EMERALD OF MY SOUL",
-      "breed": "УИППЕТ",
-      "year": 2019,
-      "best_score": 359,
-      "total_starts": 2,
-      "best_judge_score": 95,
-      "avg_judge_score": 89.67,
-      "year_from": 2019,
-      "year_to": 2019,
-      "judge_eval_count": 6,
-      "rating_score": 87.95
-    },
-    {
-      "dog_id": 10341,
-      "name_lat": "SHERWOOD FOREST HERO",
-      "name_ru": "SHERWOOD FOREST HERO",
-      "breed": "УИППЕТ",
-      "year": 2019,
-      "best_score": 359,
-      "total_starts": 2,
-      "best_judge_score": 94,
-      "avg_judge_score": 88.5,
-      "year_from": 2019,
-      "year_to": 2019,
-      "judge_eval_count": 6,
-      "rating_score": 87.56
-    },
-    {
       "dog_id": 10204,
       "name_lat": "OBEREG",
       "name_ru": "OBEREG",
@@ -641,6 +611,36 @@
       "breed": "ЛЕВРЕТКА",
       "year": 2019,
       "best_score": 520,
+      "total_starts": 1,
+      "best_judge_score": 91,
+      "avg_judge_score": 89.75,
+      "year_from": 2019,
+      "year_to": 2019,
+      "judge_eval_count": 4,
+      "rating_score": 87.29
+    },
+    {
+      "dog_id": 9536,
+      "name_lat": "EMERALD OF MY SOUL",
+      "name_ru": "EMERALD OF MY SOUL",
+      "breed": "УИППЕТ",
+      "year": 2019,
+      "best_score": 359,
+      "total_starts": 1,
+      "best_judge_score": 91,
+      "avg_judge_score": 89.75,
+      "year_from": 2019,
+      "year_to": 2019,
+      "judge_eval_count": 4,
+      "rating_score": 87.29
+    },
+    {
+      "dog_id": 10341,
+      "name_lat": "SHERWOOD FOREST HERO",
+      "name_ru": "SHERWOOD FOREST HERO",
+      "breed": "УИППЕТ",
+      "year": 2019,
+      "best_score": 359,
       "total_starts": 1,
       "best_judge_score": 91,
       "avg_judge_score": 89.75,
@@ -903,21 +903,6 @@
       "year_to": 2019,
       "judge_eval_count": 4,
       "rating_score": 87.1
-    },
-    {
-      "dog_id": 10135,
-      "name_lat": "AL NAFISEH EIFA",
-      "name_ru": "AL NAFISEH EIFA",
-      "breed": "САЛЮКИ",
-      "year": 2019,
-      "best_score": 261,
-      "total_starts": 1,
-      "best_judge_score": 91,
-      "avg_judge_score": 89,
-      "year_from": 2019,
-      "year_to": 2019,
-      "judge_eval_count": 2,
-      "rating_score": 86.67
     },
     {
       "dog_id": 10287,
@@ -1625,21 +1610,6 @@
       "rating_score": 87.6
     },
     {
-      "dog_id": 9796,
-      "name_lat": "VALPAIN PEK SANSA",
-      "name_ru": "VALPAIN PEK SANSA",
-      "breed": "УИППЕТ",
-      "year": 2019,
-      "best_score": 351,
-      "total_starts": 3,
-      "best_judge_score": 90,
-      "avg_judge_score": 86.3,
-      "year_from": 2019,
-      "year_to": 2019,
-      "judge_eval_count": 10,
-      "rating_score": 87.19
-    },
-    {
       "dog_id": 10327,
       "name_lat": "ISTORIYA LUBVI NIGEL FAST",
       "name_ru": "ISTORIYA LUBVI NIGEL FAST",
@@ -1713,6 +1683,21 @@
       "year_to": 2019,
       "judge_eval_count": 8,
       "rating_score": 87.78
+    },
+    {
+      "dog_id": 9796,
+      "name_lat": "VALPAIN PEK SANSA",
+      "name_ru": "VALPAIN PEK SANSA",
+      "breed": "УИППЕТ",
+      "year": 2019,
+      "best_score": 351,
+      "total_starts": 2,
+      "best_judge_score": 90,
+      "avg_judge_score": 86.5,
+      "year_from": 2019,
+      "year_to": 2019,
+      "judge_eval_count": 8,
+      "rating_score": 86.99
     },
     {
       "dog_id": 10099,
@@ -1910,21 +1895,6 @@
       "rating_score": 86.99
     },
     {
-      "dog_id": 9456,
-      "name_lat": "STEEL SWIFT",
-      "name_ru": "STEEL SWIFT",
-      "breed": "УИППЕТ",
-      "year": 2019,
-      "best_score": 522,
-      "total_starts": 2,
-      "best_judge_score": 90,
-      "avg_judge_score": 85.33,
-      "year_from": 2019,
-      "year_to": 2019,
-      "judge_eval_count": 6,
-      "rating_score": 86.5
-    },
-    {
       "dog_id": 10291,
       "name_lat": "BONNI",
       "name_ru": "BONNI",
@@ -1933,6 +1903,21 @@
       "best_score": 525,
       "total_starts": 1,
       "best_judge_score": 91,
+      "avg_judge_score": 87.5,
+      "year_from": 2019,
+      "year_to": 2019,
+      "judge_eval_count": 4,
+      "rating_score": 86.73
+    },
+    {
+      "dog_id": 9456,
+      "name_lat": "STEEL SWIFT",
+      "name_ru": "STEEL SWIFT",
+      "breed": "УИППЕТ",
+      "year": 2019,
+      "best_score": 522,
+      "total_starts": 1,
+      "best_judge_score": 90,
       "avg_judge_score": 87.5,
       "year_from": 2019,
       "year_to": 2019,
@@ -2180,21 +2165,6 @@
       "rating_score": 85.93
     },
     {
-      "dog_id": 10227,
-      "name_lat": "NHANHLA AZERI ZEMA",
-      "name_ru": "NHANHLA AZERI ZEMA",
-      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
-      "year": 2019,
-      "best_score": 516,
-      "total_starts": 2,
-      "best_judge_score": 91,
-      "avg_judge_score": 85.83,
-      "year_from": 2019,
-      "year_to": 2019,
-      "judge_eval_count": 6,
-      "rating_score": 86.67
-    },
-    {
       "dog_id": 10299,
       "name_lat": "MILIY ZVER CHANTEL",
       "name_ru": "MILIY ZVER CHANTEL",
@@ -2248,6 +2218,21 @@
       "best_score": 348,
       "total_starts": 1,
       "best_judge_score": 95,
+      "avg_judge_score": 87,
+      "year_from": 2019,
+      "year_to": 2019,
+      "judge_eval_count": 4,
+      "rating_score": 86.6
+    },
+    {
+      "dog_id": 10227,
+      "name_lat": "NHANHLA AZERI ZEMA",
+      "name_ru": "NHANHLA AZERI ZEMA",
+      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+      "year": 2019,
+      "best_score": 516,
+      "total_starts": 1,
+      "best_judge_score": 91,
       "avg_judge_score": 87,
       "year_from": 2019,
       "year_to": 2019,
@@ -2435,36 +2420,6 @@
       "rating_score": 86.99
     },
     {
-      "dog_id": 10297,
-      "name_lat": "MARY POPPINS DARDALIE",
-      "name_ru": "MARY POPPINS DARDALIE",
-      "breed": "ДИРХАУНД",
-      "year": 2019,
-      "best_score": 526,
-      "total_starts": 2,
-      "best_judge_score": 92,
-      "avg_judge_score": 86.75,
-      "year_from": 2019,
-      "year_to": 2019,
-      "judge_eval_count": 4,
-      "rating_score": 86.83
-    },
-    {
-      "dog_id": 10145,
-      "name_lat": "STANGERS LAND ARI",
-      "name_ru": "STANGERS LAND ARI",
-      "breed": "УИППЕТ",
-      "year": 2019,
-      "best_score": 347,
-      "total_starts": 2,
-      "best_judge_score": 92,
-      "avg_judge_score": 87.83,
-      "year_from": 2019,
-      "year_to": 2019,
-      "judge_eval_count": 6,
-      "rating_score": 87.34
-    },
-    {
       "dog_id": 10264,
       "name_lat": "AFIYA MONIFA AFRIKA",
       "name_ru": "AFIYA MONIFA AFRIKA",
@@ -2495,6 +2450,21 @@
       "rating_score": 85.59
     },
     {
+      "dog_id": 10297,
+      "name_lat": "MARY POPPINS DARDALIE",
+      "name_ru": "MARY POPPINS DARDALIE",
+      "breed": "ДИРХАУНД",
+      "year": 2019,
+      "best_score": 526,
+      "total_starts": 1,
+      "best_judge_score": 92,
+      "avg_judge_score": 86.75,
+      "year_from": 2019,
+      "year_to": 2019,
+      "judge_eval_count": 4,
+      "rating_score": 86.54
+    },
+    {
       "dog_id": 10317,
       "name_lat": "CATIFA AL NAQAWA",
       "name_ru": "CATIFA AL NAQAWA",
@@ -2518,6 +2488,21 @@
       "best_score": 520,
       "total_starts": 1,
       "best_judge_score": 91,
+      "avg_judge_score": 86.75,
+      "year_from": 2019,
+      "year_to": 2019,
+      "judge_eval_count": 4,
+      "rating_score": 86.54
+    },
+    {
+      "dog_id": 10145,
+      "name_lat": "STANGERS LAND ARI",
+      "name_ru": "STANGERS LAND ARI",
+      "breed": "УИППЕТ",
+      "year": 2019,
+      "best_score": 347,
+      "total_starts": 1,
+      "best_judge_score": 90,
       "avg_judge_score": 86.75,
       "year_from": 2019,
       "year_to": 2019,
@@ -2688,21 +2673,6 @@
       "year_to": 2019,
       "judge_eval_count": 4,
       "rating_score": 86.27
-    },
-    {
-      "dog_id": 10272,
-      "name_lat": "ZVEROBOY",
-      "name_ru": "ZVEROBOY",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "year": 2019,
-      "best_score": 173,
-      "total_starts": 1,
-      "best_judge_score": 87,
-      "avg_judge_score": 86.5,
-      "year_from": 2019,
-      "year_to": 2019,
-      "judge_eval_count": 2,
-      "rating_score": 85.98
     },
     {
       "dog_id": 10066,
@@ -2893,11 +2863,11 @@
       "best_score": 172,
       "total_starts": 1,
       "best_judge_score": 88,
-      "avg_judge_score": 86,
+      "avg_judge_score": null,
       "year_from": 2019,
       "year_to": 2019,
-      "judge_eval_count": 2,
-      "rating_score": 86.07
+      "judge_eval_count": 0,
+      "rating_score": null
     },
     {
       "dog_id": 10315,
@@ -3110,21 +3080,6 @@
       "rating_score": 86
     },
     {
-      "dog_id": 10172,
-      "name_lat": "PODAROK IZ AFRIKI FLANNA RUFARO",
-      "name_ru": "PODAROK IZ AFRIKI FLANNA RUFARO",
-      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
-      "year": 2019,
-      "best_score": 497,
-      "total_starts": 2,
-      "best_judge_score": 90,
-      "avg_judge_score": 83.5,
-      "year_from": 2019,
-      "year_to": 2019,
-      "judge_eval_count": 6,
-      "rating_score": 85.89
-    },
-    {
       "dog_id": 10263,
       "name_lat": "ИТУРИ ПАЗЗЛ МАУНТАИН ДЕУ",
       "name_ru": "ИТУРИ ПАЗЗЛ МАУНТАИН ДЕУ",
@@ -3138,6 +3093,21 @@
       "year_to": 2019,
       "judge_eval_count": 4,
       "rating_score": 86.09
+    },
+    {
+      "dog_id": 10172,
+      "name_lat": "PODAROK IZ AFRIKI FLANNA RUFARO",
+      "name_ru": "PODAROK IZ AFRIKI FLANNA RUFARO",
+      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+      "year": 2019,
+      "best_score": 497,
+      "total_starts": 1,
+      "best_judge_score": 90,
+      "avg_judge_score": 85,
+      "year_from": 2019,
+      "year_to": 2019,
+      "judge_eval_count": 4,
+      "rating_score": 86.1
     },
     {
       "dog_id": 9266,
@@ -3168,21 +3138,6 @@
       "year_to": 2019,
       "judge_eval_count": 16,
       "rating_score": 87.76
-    },
-    {
-      "dog_id": 10269,
-      "name_lat": "MAKAO LINE LADY LOVE",
-      "name_ru": "MAKAO LINE LADY LOVE",
-      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
-      "year": 2019,
-      "best_score": 507,
-      "total_starts": 2,
-      "best_judge_score": 89,
-      "avg_judge_score": 86,
-      "year_from": 2019,
-      "year_to": 2019,
-      "judge_eval_count": 6,
-      "rating_score": 86.68
     },
     {
       "dog_id": 10139,
@@ -3230,6 +3185,21 @@
       "rating_score": 86.04
     },
     {
+      "dog_id": 10269,
+      "name_lat": "MAKAO LINE LADY LOVE",
+      "name_ru": "MAKAO LINE LADY LOVE",
+      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+      "year": 2019,
+      "best_score": 507,
+      "total_starts": 1,
+      "best_judge_score": 87,
+      "avg_judge_score": 84.75,
+      "year_from": 2019,
+      "year_to": 2019,
+      "judge_eval_count": 4,
+      "rating_score": 85.75
+    },
+    {
       "dog_id": 10109,
       "name_lat": "RAZGULJAI CHERVEN",
       "name_ru": "RAZGULJAI CHERVEN",
@@ -3258,21 +3228,6 @@
       "year_to": 2019,
       "judge_eval_count": 4,
       "rating_score": 85.69
-    },
-    {
-      "dog_id": 9921,
-      "name_lat": "ELFGRACE MATILDA ALDA",
-      "name_ru": "ELFGRACE MATILDA ALDA",
-      "breed": "ТАЙСКИЙ РИДЖБЕК",
-      "year": 2019,
-      "best_score": 169,
-      "total_starts": 1,
-      "best_judge_score": 86,
-      "avg_judge_score": 84.5,
-      "year_from": 2019,
-      "year_to": 2019,
-      "judge_eval_count": 2,
-      "rating_score": 85.59
     },
     {
       "dog_id": 9967,
@@ -3566,13 +3521,13 @@
       "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
       "year": 2019,
       "best_score": 308,
-      "total_starts": 2,
+      "total_starts": 1,
       "best_judge_score": 90,
-      "avg_judge_score": 82.83,
+      "avg_judge_score": 81,
       "year_from": 2019,
       "year_to": 2019,
-      "judge_eval_count": 6,
-      "rating_score": 85.67
+      "judge_eval_count": 4,
+      "rating_score": 85.1
     },
     {
       "dog_id": 9979,
@@ -3588,21 +3543,6 @@
       "year_to": 2019,
       "judge_eval_count": 4,
       "rating_score": 85.1
-    },
-    {
-      "dog_id": 10348,
-      "name_lat": "РИДЛИ РОАД КВИДДИЧ",
-      "name_ru": "РИДЛИ РОАД КВИДДИЧ",
-      "breed": "ФАРАОНОВА СОБАКА",
-      "year": 2019,
-      "best_score": 162,
-      "total_starts": 1,
-      "best_judge_score": 83,
-      "avg_judge_score": 81,
-      "year_from": 2019,
-      "year_to": 2019,
-      "judge_eval_count": 2,
-      "rating_score": 84.93
     },
     {
       "dog_id": 10156,
@@ -3673,11 +3613,11 @@
       "best_score": 239,
       "total_starts": 1,
       "best_judge_score": 82,
-      "avg_judge_score": 79.5,
+      "avg_judge_score": null,
       "year_from": 2019,
       "year_to": 2019,
-      "judge_eval_count": 2,
-      "rating_score": 84.71
+      "judge_eval_count": 0,
+      "rating_score": null
     },
     {
       "dog_id": 10267,
@@ -3693,21 +3633,6 @@
       "year_to": 2019,
       "judge_eval_count": 8,
       "rating_score": 85.56
-    },
-    {
-      "dog_id": 10177,
-      "name_lat": "BRAVA",
-      "name_ru": "BRAVA",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "year": 2019,
-      "best_score": 158,
-      "total_starts": 1,
-      "best_judge_score": 86,
-      "avg_judge_score": 79,
-      "year_from": 2019,
-      "year_to": 2019,
-      "judge_eval_count": 2,
-      "rating_score": 84.92
     },
     {
       "dog_id": 10118,
@@ -3755,21 +3680,6 @@
       "rating_score": 83.6
     },
     {
-      "dog_id": 10352,
-      "name_lat": "BUDENNYI",
-      "name_ru": "BUDENNYI",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "year": 2019,
-      "best_score": 153,
-      "total_starts": 1,
-      "best_judge_score": 78,
-      "avg_judge_score": 76.5,
-      "year_from": 2019,
-      "year_to": 2019,
-      "judge_eval_count": 2,
-      "rating_score": 84.29
-    },
-    {
       "dog_id": 10250,
       "name_lat": "ЩЕДРАЯ ДУША",
       "name_ru": "ЩЕДРАЯ ДУША",
@@ -3800,21 +3710,6 @@
       "rating_score": 83.16
     },
     {
-      "dog_id": 10314,
-      "name_lat": "BURYA OSENNYAYA",
-      "name_ru": "BURYA OSENNYAYA",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "year": 2019,
-      "best_score": 221,
-      "total_starts": 1,
-      "best_judge_score": 84,
-      "avg_judge_score": 67.5,
-      "year_from": 2019,
-      "year_to": 2019,
-      "judge_eval_count": 2,
-      "rating_score": 83.23
-    },
-    {
       "dog_id": 10321,
       "name_lat": "KULIKOVO POLE VINTAGE",
       "name_ru": "KULIKOVO POLE VINTAGE",
@@ -3843,21 +3738,6 @@
       "year_to": 2019,
       "judge_eval_count": 4,
       "rating_score": 80.94
-    },
-    {
-      "dog_id": 10304,
-      "name_lat": "ANGELO CELESTE PICASSO",
-      "name_ru": "ANGELO CELESTE PICASSO",
-      "breed": "ЛЕВРЕТКА",
-      "year": 2019,
-      "best_score": 221,
-      "total_starts": 1,
-      "best_judge_score": 82,
-      "avg_judge_score": 66,
-      "year_from": 2019,
-      "year_to": 2019,
-      "judge_eval_count": 2,
-      "rating_score": 82.79
     },
     {
       "dog_id": 10122,

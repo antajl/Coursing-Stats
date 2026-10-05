@@ -9,7 +9,7 @@
     "date_start": "2020-08-15",
     "date_end": "2020-08-16",
     "rank_label": "Бега за механической приманкой",
-    "event_type": "racing",
+    "event_type": "bzmp",
     "competition_kind": null,
     "competition_type": null,
     "title": "Бега за механической приманкой",
@@ -517,7 +517,7 @@
       "judge_count": 2,
       "qualification": "",
       "vc": "",
-      "status": "finished",
+      "status": "dnf",
       "raw_scores_json": {
         "heats": [
           {
@@ -556,7 +556,7 @@
       },
       "raw_text": "7 | Питбультерьер | Стандартный | Кобель | Х-Бой Нью Блуд | 37 | 17 | 16 | 14 | 16 | 14 | 157 |  | Травма |  | 157 |  |  | ",
       "judges": null,
-      "status_reason": null,
+      "status_reason": "Травма",
       "dog_key": "х-бои-нью-блуд--питбультерьер",
       "dog": {
         "id": 10389,

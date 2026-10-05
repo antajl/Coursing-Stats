@@ -9,7 +9,7 @@
     "date_start": "2018-09-15",
     "date_end": null,
     "rank_label": "Чемпионат РКФ по бегам борзых за механическим зайцем (курсинг)",
-    "event_type": "racing",
+    "event_type": "coursing",
     "competition_kind": null,
     "competition_type": null,
     "title": "Чемпионат РКФ по бегам борзых за механическим зайцем (курсинг)",
@@ -232,7 +232,7 @@
       "judge_count": 2,
       "qualification": "",
       "vc": "",
-      "status": "finished",
+      "status": "disqualified",
       "raw_scores_json": {
         "heats": [
           {
@@ -281,7 +281,7 @@
       },
       "raw_text": "1 | Басенджи | Стандартный | Кобель | ИТУРИ ПАЗЗЛ ЕКСТРАОРДИНАРИ СМАРТ | 1 | 16 | 17 | 16 | 16 | 15 | 164 | 54 | Дисквалификация |  | 164 |  |  | ",
       "judges": null,
-      "status_reason": null,
+      "status_reason": "Дисквалификация",
       "dog_key": "итури-паззл-екстраординари-смарт--басенджи",
       "dog": {
         "id": 50,
@@ -4199,7 +4199,7 @@
       "judge_count": 2,
       "qualification": "",
       "vc": "",
-      "status": "finished",
+      "status": "dnf",
       "raw_scores_json": {
         "heats": [
           {
@@ -4248,7 +4248,7 @@
       },
       "raw_text": "59 | Уиппет | Стандартный | Сука | ВАЛЬПАЙН ПЭК БОНАНЗА | 25 | 16 | 17 | 17 | 17 | 17 | 167 | 45 | Сошёл |  | 167 |  |  | ",
       "judges": null,
-      "status_reason": null,
+      "status_reason": "Сошёл",
       "dog_key": "вальпаин-пэк-бонанза--уиппет",
       "dog": {
         "id": 10154,
@@ -4841,7 +4841,7 @@
       "judge_count": 2,
       "qualification": "",
       "vc": "",
-      "status": "finished",
+      "status": "dnf",
       "raw_scores_json": {
         "heats": [
           {
@@ -4890,7 +4890,7 @@
       },
       "raw_text": "34 | Уиппет | Стандартный-спринтеры | Кобель | BLACK JACK | 31 | 18 | 18 | 18 | 18 | 18 | 176 | 49 | Сошёл |  | 176 |  |  | ",
       "judges": null,
-      "status_reason": null,
+      "status_reason": "Сошёл",
       "dog_key": "black-jack--уиппет",
       "dog": {
         "id": 10023,
@@ -4913,7 +4913,7 @@
       "judge_count": 2,
       "qualification": "",
       "vc": "",
-      "status": "finished",
+      "status": "dnf",
       "raw_scores_json": {
         "heats": [
           {
@@ -4962,7 +4962,7 @@
       },
       "raw_text": "42 | Уиппет | Стандартный-спринтеры | Сука | VALPAIN PEK AKEMI HIME | 29 | 18 | 18 | 17 | 17 | 17 | 174 | 46 | Сошёл |  | 174 |  |  | ",
       "judges": null,
-      "status_reason": null,
+      "status_reason": "Сошёл",
       "dog_key": "valpain-pek-akemi-hime--уиппет",
       "dog": {
         "id": 9934,
@@ -4985,7 +4985,7 @@
       "judge_count": 2,
       "qualification": "",
       "vc": "",
-      "status": "finished",
+      "status": "dnf",
       "raw_scores_json": {
         "heats": [
           {
@@ -5034,7 +5034,7 @@
       },
       "raw_text": "36 | Уиппет | Стандартный-спринтеры | Кобель | GOLIAF NEON | 33 | 16 | 17 | 17 | 17 | 17 | 167 | 50 | Снят до старта |  | 167 |  |  | ",
       "judges": null,
-      "status_reason": null,
+      "status_reason": "Снят до старта",
       "dog_key": "goliaf-neon--уиппет",
       "dog": {
         "id": 10194,
@@ -5057,7 +5057,7 @@
       "judge_count": 2,
       "qualification": "",
       "vc": "",
-      "status": "finished",
+      "status": "dnf",
       "raw_scores_json": {
         "heats": [
           {
@@ -5106,7 +5106,7 @@
       },
       "raw_text": "32 | Уиппет | Стандартный-спринтеры | Кобель | AVATAR S PLANETY PANDORA | 29 | 17 | 18 | 16 | 18 | 16 | 166 | 47 | Сошёл |  | 166 |  |  | ",
       "judges": null,
-      "status_reason": null,
+      "status_reason": "Сошёл",
       "dog_key": "avatar-s-planety-pandora--уиппет",
       "dog": {
         "id": 10259,
@@ -5129,7 +5129,7 @@
       "judge_count": 2,
       "qualification": "",
       "vc": "",
-      "status": "finished",
+      "status": "dnf",
       "raw_scores_json": {
         "heats": [
           {
@@ -5178,7 +5178,7 @@
       },
       "raw_text": "37 | Уиппет | Стандартный-спринтеры | Кобель | KULIKOVO POLE BARON | 33 | 17 | 17 | 16 | 17 | 17 | 166 | 47 | Сошёл |  | 166 |  |  | ",
       "judges": null,
-      "status_reason": null,
+      "status_reason": "Сошёл",
       "dog_key": "kulikovo-pole-baron--уиппет",
       "dog": {
         "id": 10079,
@@ -5201,7 +5201,7 @@
       "judge_count": 2,
       "qualification": "",
       "vc": "",
-      "status": "finished",
+      "status": "dnf",
       "raw_scores_json": {
         "heats": [
           {
@@ -5250,7 +5250,7 @@
       },
       "raw_text": "30 | Уиппет | Стандартный-спринтеры | Кобель | ANYUTINY GLAZKI DARIUS I | 28 | 16 | 16 | 15 | 17 | 16 | 156 | 46 | Сошёл |  | 156 |  |  | ",
       "judges": null,
-      "status_reason": null,
+      "status_reason": "Сошёл",
       "dog_key": "anyutiny-glazki-darius-i--уиппет",
       "dog": {
         "id": 10150,

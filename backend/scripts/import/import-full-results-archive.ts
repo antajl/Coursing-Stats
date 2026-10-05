@@ -106,8 +106,11 @@ function guessDateFromFilename(name: string): string | null {
 
 function guessParserType(name: string, html: string): 'coursing' | 'bzmp' | 'racing' {
   const n = name.toLowerCase()
-  if (n.includes('bega') || n.includes('racing') || /бега/i.test(html.slice(0, 2000))) return 'racing'
-  if (n.includes('bzmp') || /бзмп|механическ/i.test(html.slice(0, 2000))) return 'bzmp'
+  const header = html.slice(0, 2000).toLowerCase()
+  if (header.includes('курсинг') || n.includes('coursing')) return 'coursing'
+  if (header.includes('время 1') || header.includes('время1') || n.includes('racing')) return 'racing'
+  if (header.includes('бзмп') || header.includes('механическ') || n.includes('bzmp')) return 'bzmp'
+  if (n.includes('bega') || header.includes('бега')) return 'racing'
   return 'coursing'
 }
 

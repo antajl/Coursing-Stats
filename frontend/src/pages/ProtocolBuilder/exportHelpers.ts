@@ -62,7 +62,7 @@ export function exportToCSV(header: CompetitionHeader, kind: CompetitionKind, ca
         for (let r = 0; r < cat.runsCount; r++) {
           const prevCancelled = p.runs.slice(0, r).some(pr => pr.status === 'withdrawn' || pr.status === 'absent')
           if (prevCancelled) {
-            row.push('—', '—', '—', '', '', '', '', '')
+            row.push('', '', '', '', '', '', '', '')
             continue
           }
           const run = p.runs[r] || { heat: '1', blanket: 'red', scores: { speed: 0, enthusiasm: 0, intelligence: 0, agility: 0, endurance: 0 } }
@@ -91,7 +91,7 @@ export function exportToCSV(header: CompetitionHeader, kind: CompetitionKind, ca
           overall.type === 'withdrawn' || overall.type === 'disqualified' ? `ДИСКВ.${overall.reason ? ` (${overall.reason})` : ''}` :
           overall.type === 'absent' ? 'НЕЯВКА' :
           (hasAnyScores ? calculateTotalScore(p, cat.runsCount) : '—'),
-          p.awards.join(', '),
+          (p.awards || []).join(', '),
           overall.type === 'withdrawn' || overall.type === 'disqualified' ? `Дисквалификация${overall.reason ? `: ${overall.reason}` : ''}` :
           overall.type === 'absent' ? 'Неявка' :
           'Финишировал'
@@ -128,7 +128,7 @@ export function exportToCSV(header: CompetitionHeader, kind: CompetitionKind, ca
           p.racing_time1,
           p.racing_time2,
           p.racing_final_time,
-          p.awards.join(', '),
+          (p.awards || []).join(', '),
           p.disqualified ? 'Дисквалификация' : 'Финишировал'
         ].map(v => `"${String(v ?? '').replace(/"/g, '""')}"`).join(';'))
       })
@@ -179,7 +179,7 @@ export function exportToJSON(header: CompetitionHeader, kind: CompetitionKind, c
         overall_status: getDogOverallStatus(p, cat.runsCount),
         grand_total: calculateTotalScore(p, cat.runsCount),
         disqualified: p.disqualified,
-        awards: p.awards,
+        awards: p.awards || [],
         comment: p.comment
       }))
     }))

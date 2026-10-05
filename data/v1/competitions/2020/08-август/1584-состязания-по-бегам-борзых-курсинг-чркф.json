@@ -9,7 +9,7 @@
     "date_start": "2020-08-15",
     "date_end": "2020-08-16",
     "rank_label": "Состязания по бегам борзых (курсинг) - ЧРКФ",
-    "event_type": "racing",
+    "event_type": "coursing",
     "competition_kind": null,
     "competition_type": null,
     "title": "Состязания по бегам борзых (курсинг) - ЧРКФ",
@@ -232,7 +232,7 @@
       "judge_count": 2,
       "qualification": "",
       "vc": "",
-      "status": "finished",
+      "status": "disqualified",
       "raw_scores_json": {
         "heats": [
           {
@@ -280,7 +280,7 @@
       },
       "raw_text": "3 | Басенджи | Стандартный | Кобель | ИТУРИ ПАЗЗЛ ЕКСТРАОРДИНАРИ СМАРТ | 30 | 18 | 17 | 17 | 18 | 18 | 174 | 39 | Агрессия |  | 174 |  |  | ",
       "judges": null,
-      "status_reason": null,
+      "status_reason": "Агрессия",
       "dog_key": "итури-паззл-екстраординари-смарт--басенджи",
       "dog": {
         "id": 50,
@@ -873,7 +873,7 @@
       "judge_count": 2,
       "qualification": "",
       "vc": "",
-      "status": "finished",
+      "status": "disqualified",
       "raw_scores_json": {
         "heats": [
           {
@@ -921,7 +921,7 @@
       },
       "raw_text": "11 | Басенджи | Стандартный | Сука | Рес Севера | 34 | 18 | 17 | 17 | 18 | 18 | 175 | 40 | Агрессия |  | 175 |  |  | ",
       "judges": null,
-      "status_reason": null,
+      "status_reason": "Агрессия",
       "dog_key": "рес-севера--басенджи",
       "dog": {
         "id": 10396,
@@ -944,7 +944,7 @@
       "judge_count": 2,
       "qualification": "",
       "vc": "",
-      "status": "finished",
+      "status": "disqualified",
       "raw_scores_json": {
         "heats": [
           {
@@ -993,7 +993,7 @@
       },
       "raw_text": "7 | Басенджи | Стандартный | Сука | БОННИ | 32 | Агрессия | 0 |  |  |  |  |  |  |  | 0 |  |  | ",
       "judges": null,
-      "status_reason": null,
+      "status_reason": "Агрессия",
       "dog_key": "бонни--басенджи",
       "dog": {
         "id": 10203,
@@ -1491,7 +1491,7 @@
       "judge_count": 2,
       "qualification": "",
       "vc": "",
-      "status": "finished",
+      "status": "disqualified",
       "raw_scores_json": {
         "heats": [
           {
@@ -1539,7 +1539,7 @@
       },
       "raw_text": "17 | Русская псовая борзая | Стандартный | Кобель | ЗАДОР | 3 | 16 | 18 | 14 | 15 | 16 | 163 | 8 | Агрессия |  | 163 |  |  | ",
       "judges": null,
-      "status_reason": null,
+      "status_reason": "Агрессия",
       "dog_key": "задор--русская-псовая-борзая",
       "dog": {
         "id": 10402,
@@ -2227,7 +2227,7 @@
       "judge_count": 2,
       "qualification": "",
       "vc": "",
-      "status": "finished",
+      "status": "dnf",
       "raw_scores_json": {
         "heats": [
           {
@@ -2276,7 +2276,7 @@
       },
       "raw_text": "27 | Слюги | Стандартный | Сука | BORZOMIR BARIYAT AMIRA | 48 | 16 | 18 | 17 | 18 | 19 | 172 | 54 | Снят |  | 172 |  |  | ",
       "judges": null,
-      "status_reason": null,
+      "status_reason": "Снят",
       "dog_key": "borzomir-bariyat-amira--слюги",
       "dog": {
         "id": 7890,

@@ -7,7 +7,7 @@
     "initial_rating": 1500,
     "breed_pools": true
   },
-  "exported_at": "2026-10-05T06:58:06.444Z",
+  "exported_at": "2026-10-05T13:44:25.021Z",
   "count": 125,
   "items": [
     {
@@ -33,28 +33,6 @@
       "rank": 1
     },
     {
-      "dog_id": 9889,
-      "name_lat": "ХОРОШАЯ ТРАДИЦИЯ ИЗ ВОЛШЕБНОГО ЛЕСА",
-      "name_ru": "ХОРОШАЯ ТРАДИЦИЯ ИЗ ВОЛШЕБНОГО ЛЕСА",
-      "breed": "ИРЛАНДСКИЙ ВОЛКОДАВ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": null,
-      "total_starts": 2,
-      "best_score": 337,
-      "avg_judge_score": 84.25,
-      "best_judge_score": 85,
-      "gold": 1,
-      "silver": 0,
-      "bronze": 0,
-      "elo_rating": 1534,
-      "elo_races": 2,
-      "elo_reliable": false,
-      "elo_low_data": false,
-      "elo_insufficient": true,
-      "rank": 2
-    },
-    {
       "dog_id": 9906,
       "name_lat": "RAZGULJAI UDACHA",
       "name_ru": "RAZGULJAI UDACHA",
@@ -74,7 +52,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 3
+      "rank": 2
     },
     {
       "dog_id": 9788,
@@ -96,7 +74,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 4
+      "rank": 3
     },
     {
       "dog_id": 9769,
@@ -114,6 +92,28 @@
       "silver": 0,
       "bronze": 1,
       "elo_rating": 1533,
+      "elo_races": 2,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 4
+    },
+    {
+      "dog_id": 9874,
+      "name_lat": "ИСТОРИЯ ЛЮБВИ МИЛАДА МИЦАР",
+      "name_ru": "ИСТОРИЯ ЛЮБВИ МИЛАДА МИЦАР",
+      "breed": "УИППЕТ",
+      "sex": null,
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 1,
+      "best_score": 357,
+      "avg_judge_score": 89.25,
+      "best_judge_score": 91,
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0,
+      "elo_rating": 1530,
       "elo_races": 2,
       "elo_reliable": false,
       "elo_low_data": false,
@@ -172,7 +172,7 @@
       "sex": null,
       "owner": null,
       "pedigree_url": null,
-      "total_starts": 4,
+      "total_starts": 3,
       "best_score": 347,
       "avg_judge_score": 85.08,
       "best_judge_score": 91,
@@ -187,6 +187,28 @@
       "rank": 8
     },
     {
+      "dog_id": 9793,
+      "name_lat": "СЛАДКИЙ ВЕТЕР СТЕПЕЙ",
+      "name_ru": "СЛАДКИЙ ВЕТЕР СТЕПЕЙ",
+      "breed": "УИППЕТ",
+      "sex": null,
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 5,
+      "best_score": 358,
+      "avg_judge_score": 86.6,
+      "best_judge_score": 91,
+      "gold": 0,
+      "silver": 3,
+      "bronze": 1,
+      "elo_rating": 1529,
+      "elo_races": 4,
+      "elo_reliable": false,
+      "elo_low_data": true,
+      "elo_insufficient": false,
+      "rank": 9
+    },
+    {
       "dog_id": 9796,
       "name_lat": "VALPAIN PEK SANSA",
       "name_ru": "VALPAIN PEK SANSA",
@@ -194,9 +216,9 @@
       "sex": null,
       "owner": null,
       "pedigree_url": null,
-      "total_starts": 9,
+      "total_starts": 8,
       "best_score": 505,
-      "avg_judge_score": 87.38,
+      "avg_judge_score": 87.5,
       "best_judge_score": 94,
       "gold": 3,
       "silver": 0,
@@ -206,7 +228,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 9
+      "rank": 10
     },
     {
       "dog_id": 9938,
@@ -228,7 +250,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 10
+      "rank": 11
     },
     {
       "dog_id": 9820,
@@ -250,7 +272,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 11
+      "rank": 12
     },
     {
       "dog_id": 9771,
@@ -260,63 +282,19 @@
       "sex": null,
       "owner": null,
       "pedigree_url": null,
-      "total_starts": 4,
+      "total_starts": 5,
       "best_score": 346,
-      "avg_judge_score": 84.31,
+      "avg_judge_score": 83.1,
       "best_judge_score": 89,
       "gold": 0,
       "silver": 1,
-      "bronze": 3,
-      "elo_rating": 1528,
-      "elo_races": 4,
-      "elo_reliable": false,
-      "elo_low_data": true,
-      "elo_insufficient": false,
-      "rank": 12
-    },
-    {
-      "dog_id": 9921,
-      "name_lat": "ELFGRACE MATILDA ALDA",
-      "name_ru": "ELFGRACE MATILDA ALDA",
-      "breed": "ТАЙСКИЙ РИДЖБЕК",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": null,
-      "total_starts": 4,
-      "best_score": 358,
-      "avg_judge_score": 86.43,
-      "best_judge_score": 93,
-      "gold": 1,
-      "silver": 2,
-      "bronze": 0,
+      "bronze": 4,
       "elo_rating": 1528,
       "elo_races": 4,
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
       "rank": 13
-    },
-    {
-      "dog_id": 9899,
-      "name_lat": "ДОРОГОЙ ДРУГ СОКРУШАЙ",
-      "name_ru": "ДОРОГОЙ ДРУГ СОКРУШАЙ",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": null,
-      "total_starts": 2,
-      "best_score": 350,
-      "avg_judge_score": 86,
-      "best_judge_score": 90,
-      "gold": 1,
-      "silver": 0,
-      "bronze": 1,
-      "elo_rating": 1525,
-      "elo_races": 2,
-      "elo_reliable": false,
-      "elo_low_data": false,
-      "elo_insufficient": true,
-      "rank": 14
     },
     {
       "dog_id": 10069,
@@ -333,6 +311,28 @@
       "gold": 2,
       "silver": 0,
       "bronze": 0,
+      "elo_rating": 1525,
+      "elo_races": 2,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 14
+    },
+    {
+      "dog_id": 9915,
+      "name_lat": "DIOSKURY MARENGO",
+      "name_ru": "DIOSKURY MARENGO",
+      "breed": "САЛЮКИ",
+      "sex": null,
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 3,
+      "best_score": 342,
+      "avg_judge_score": 82.42,
+      "best_judge_score": 88,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 1,
       "elo_rating": 1525,
       "elo_races": 2,
       "elo_reliable": false,
@@ -355,7 +355,7 @@
       "gold": 1,
       "silver": 1,
       "bronze": 0,
-      "elo_rating": 1524,
+      "elo_rating": 1525,
       "elo_races": 4,
       "elo_reliable": false,
       "elo_low_data": true,
@@ -436,19 +436,41 @@
       "sex": null,
       "owner": null,
       "pedigree_url": null,
-      "total_starts": 9,
+      "total_starts": 10,
       "best_score": 529,
-      "avg_judge_score": 86.83,
+      "avg_judge_score": 86.38,
       "best_judge_score": 94,
       "gold": 2,
       "silver": 0,
-      "bronze": 0,
+      "bronze": 1,
       "elo_rating": 1520,
       "elo_races": 2,
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
       "rank": 20
+    },
+    {
+      "dog_id": 9865,
+      "name_lat": "BRIZ LEGKIY VETER",
+      "name_ru": "BRIZ LEGKIY VETER",
+      "breed": "УИППЕТ",
+      "sex": null,
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 9,
+      "best_score": 519,
+      "avg_judge_score": 87.42,
+      "best_judge_score": 94,
+      "gold": 3,
+      "silver": 1,
+      "bronze": 0,
+      "elo_rating": 1520,
+      "elo_races": 4,
+      "elo_reliable": false,
+      "elo_low_data": true,
+      "elo_insufficient": false,
+      "rank": 21
     },
     {
       "dog_id": 9799,
@@ -470,7 +492,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 21
+      "rank": 22
     },
     {
       "dog_id": 9892,
@@ -492,7 +514,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 22
+      "rank": 23
     },
     {
       "dog_id": 9895,
@@ -514,7 +536,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 23
+      "rank": 24
     },
     {
       "dog_id": 9904,
@@ -536,28 +558,6 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 24
-    },
-    {
-      "dog_id": 9865,
-      "name_lat": "BRIZ LEGKIY VETER",
-      "name_ru": "BRIZ LEGKIY VETER",
-      "breed": "УИППЕТ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": null,
-      "total_starts": 8,
-      "best_score": 519,
-      "avg_judge_score": 88.06,
-      "best_judge_score": 94,
-      "gold": 3,
-      "silver": 1,
-      "bronze": 0,
-      "elo_rating": 1517,
-      "elo_races": 4,
-      "elo_reliable": false,
-      "elo_low_data": true,
-      "elo_insufficient": false,
       "rank": 25
     },
     {
@@ -575,12 +575,34 @@
       "gold": 1,
       "silver": 1,
       "bronze": 3,
-      "elo_rating": 1514,
+      "elo_rating": 1515,
       "elo_races": 4,
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
       "rank": 26
+    },
+    {
+      "dog_id": 9868,
+      "name_lat": "EFFLORESCOS MAVISCAL",
+      "name_ru": "EFFLORESCOS MAVISCAL",
+      "breed": "УИППЕТ",
+      "sex": null,
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 12,
+      "best_score": 527,
+      "avg_judge_score": 86.98,
+      "best_judge_score": 95,
+      "gold": 3,
+      "silver": 1,
+      "bronze": 1,
+      "elo_rating": 1514,
+      "elo_races": 4,
+      "elo_reliable": false,
+      "elo_low_data": true,
+      "elo_insufficient": false,
+      "rank": 27
     },
     {
       "dog_id": 9954,
@@ -602,28 +624,6 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 27
-    },
-    {
-      "dog_id": 9868,
-      "name_lat": "EFFLORESCOS MAVISCAL",
-      "name_ru": "EFFLORESCOS MAVISCAL",
-      "breed": "УИППЕТ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": null,
-      "total_starts": 11,
-      "best_score": 527,
-      "avg_judge_score": 87.02,
-      "best_judge_score": 95,
-      "gold": 1,
-      "silver": 1,
-      "bronze": 1,
-      "elo_rating": 1512,
-      "elo_races": 4,
-      "elo_reliable": false,
-      "elo_low_data": true,
-      "elo_insufficient": false,
       "rank": 28
     },
     {
@@ -671,6 +671,28 @@
       "rank": 30
     },
     {
+      "dog_id": 9889,
+      "name_lat": "ХОРОШАЯ ТРАДИЦИЯ ИЗ ВОЛШЕБНОГО ЛЕСА",
+      "name_ru": "ХОРОШАЯ ТРАДИЦИЯ ИЗ ВОЛШЕБНОГО ЛЕСА",
+      "breed": "ИРЛАНДСКИЙ ВОЛКОДАВ",
+      "sex": null,
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 2,
+      "best_score": 337,
+      "avg_judge_score": 84.25,
+      "best_judge_score": 85,
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0,
+      "elo_rating": 1510,
+      "elo_races": 2,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 31
+    },
+    {
       "dog_id": 9948,
       "name_lat": "ALFJORD ODIN TPL",
       "name_ru": "ALFJORD ODIN TPL",
@@ -684,28 +706,6 @@
       "best_judge_score": 85,
       "gold": 0,
       "silver": 1,
-      "bronze": 0,
-      "elo_rating": 1510,
-      "elo_races": 2,
-      "elo_reliable": false,
-      "elo_low_data": false,
-      "elo_insufficient": true,
-      "rank": 31
-    },
-    {
-      "dog_id": 9950,
-      "name_lat": "EMIRESKY HONDA",
-      "name_ru": "EMIRESKY HONDA",
-      "breed": "ТАЙСКИЙ РИДЖБЕК",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": null,
-      "total_starts": 2,
-      "best_score": 359,
-      "avg_judge_score": 87,
-      "best_judge_score": 93,
-      "gold": 2,
-      "silver": 0,
       "bronze": 0,
       "elo_rating": 1510,
       "elo_races": 2,
@@ -750,7 +750,7 @@
       "best_judge_score": 90,
       "gold": 1,
       "silver": 2,
-      "bronze": 0,
+      "bronze": 1,
       "elo_rating": 1509,
       "elo_races": 2,
       "elo_reliable": false,
@@ -792,7 +792,7 @@
       "best_score": 523,
       "avg_judge_score": 86.56,
       "best_judge_score": 93,
-      "gold": 1,
+      "gold": 2,
       "silver": 2,
       "bronze": 1,
       "elo_rating": 1509,
@@ -825,26 +825,70 @@
       "rank": 37
     },
     {
-      "dog_id": 9793,
-      "name_lat": "СЛАДКИЙ ВЕТЕР СТЕПЕЙ",
-      "name_ru": "СЛАДКИЙ ВЕТЕР СТЕПЕЙ",
-      "breed": "УИППЕТ",
+      "dog_id": 9921,
+      "name_lat": "ELFGRACE MATILDA ALDA",
+      "name_ru": "ELFGRACE MATILDA ALDA",
+      "breed": "ТАЙСКИЙ РИДЖБЕК",
       "sex": null,
       "owner": null,
       "pedigree_url": null,
-      "total_starts": 5,
+      "total_starts": 3,
       "best_score": 358,
-      "avg_judge_score": 86.6,
-      "best_judge_score": 91,
-      "gold": 0,
-      "silver": 3,
-      "bronze": 1,
+      "avg_judge_score": 86.75,
+      "best_judge_score": 93,
+      "gold": 1,
+      "silver": 2,
+      "bronze": 0,
       "elo_rating": 1508,
       "elo_races": 4,
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
       "rank": 38
+    },
+    {
+      "dog_id": 9899,
+      "name_lat": "ДОРОГОЙ ДРУГ СОКРУШАЙ",
+      "name_ru": "ДОРОГОЙ ДРУГ СОКРУШАЙ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "sex": null,
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 2,
+      "best_score": 350,
+      "avg_judge_score": 86,
+      "best_judge_score": 90,
+      "gold": 1,
+      "silver": 0,
+      "bronze": 1,
+      "elo_rating": 1508,
+      "elo_races": 2,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 39
+    },
+    {
+      "dog_id": 9950,
+      "name_lat": "EMIRESKY HONDA",
+      "name_ru": "EMIRESKY HONDA",
+      "breed": "ТАЙСКИЙ РИДЖБЕК",
+      "sex": null,
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 2,
+      "best_score": 359,
+      "avg_judge_score": 87,
+      "best_judge_score": 93,
+      "gold": 2,
+      "silver": 0,
+      "bronze": 0,
+      "elo_rating": 1508,
+      "elo_races": 2,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 40
     },
     {
       "dog_id": 9814,
@@ -866,7 +910,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 39
+      "rank": 41
     },
     {
       "dog_id": 9792,
@@ -888,7 +932,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 40
+      "rank": 42
     },
     {
       "dog_id": 9825,
@@ -910,7 +954,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 41
+      "rank": 43
     },
     {
       "dog_id": 9873,
@@ -932,7 +976,29 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 42
+      "rank": 44
+    },
+    {
+      "dog_id": 9930,
+      "name_lat": "VALPAIN PEK AKIO HOTARU",
+      "name_ru": "VALPAIN PEK AKIO HOTARU",
+      "breed": "УИППЕТ",
+      "sex": null,
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 7,
+      "best_score": 529,
+      "avg_judge_score": 87.5,
+      "best_judge_score": 95,
+      "gold": 0,
+      "silver": 2,
+      "bronze": 2,
+      "elo_rating": 1506,
+      "elo_races": 4,
+      "elo_reliable": false,
+      "elo_low_data": true,
+      "elo_insufficient": false,
+      "rank": 45
     },
     {
       "dog_id": 9943,
@@ -954,29 +1020,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 43
-    },
-    {
-      "dog_id": 9874,
-      "name_lat": "ИСТОРИЯ ЛЮБВИ МИЛАДА МИЦАР",
-      "name_ru": "ИСТОРИЯ ЛЮБВИ МИЛАДА МИЦАР",
-      "breed": "УИППЕТ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": null,
-      "total_starts": 2,
-      "best_score": 357,
-      "avg_judge_score": 89.25,
-      "best_judge_score": 91,
-      "gold": 1,
-      "silver": 0,
-      "bronze": 0,
-      "elo_rating": 1506,
-      "elo_races": 2,
-      "elo_reliable": false,
-      "elo_low_data": false,
-      "elo_insufficient": true,
-      "rank": 44
+      "rank": 46
     },
     {
       "dog_id": 9900,
@@ -998,29 +1042,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 45
-    },
-    {
-      "dog_id": 9930,
-      "name_lat": "VALPAIN PEK AKIO HOTARU",
-      "name_ru": "VALPAIN PEK AKIO HOTARU",
-      "breed": "УИППЕТ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": null,
-      "total_starts": 7,
-      "best_score": 529,
-      "avg_judge_score": 87.5,
-      "best_judge_score": 95,
-      "gold": 0,
-      "silver": 2,
-      "bronze": 2,
-      "elo_rating": 1505,
-      "elo_races": 4,
-      "elo_reliable": false,
-      "elo_low_data": true,
-      "elo_insufficient": false,
-      "rank": 46
+      "rank": 47
     },
     {
       "dog_id": 9813,
@@ -1042,7 +1064,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 47
+      "rank": 48
     },
     {
       "dog_id": 9956,
@@ -1064,7 +1086,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 48
+      "rank": 49
     },
     {
       "dog_id": 9826,
@@ -1080,28 +1102,6 @@
       "best_judge_score": 92,
       "gold": 1,
       "silver": 1,
-      "bronze": 1,
-      "elo_rating": 1503,
-      "elo_races": 2,
-      "elo_reliable": false,
-      "elo_low_data": false,
-      "elo_insufficient": true,
-      "rank": 49
-    },
-    {
-      "dog_id": 9898,
-      "name_lat": "URKOFSKY NAGLETS",
-      "name_ru": "URKOFSKY NAGLETS",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": null,
-      "total_starts": 1,
-      "best_score": 347,
-      "avg_judge_score": 86.75,
-      "best_judge_score": 89,
-      "gold": 0,
-      "silver": 0,
       "bronze": 1,
       "elo_rating": 1503,
       "elo_races": 2,
@@ -1155,28 +1155,6 @@
       "rank": 52
     },
     {
-      "dog_id": 9915,
-      "name_lat": "DIOSKURY MARENGO",
-      "name_ru": "DIOSKURY MARENGO",
-      "breed": "САЛЮКИ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": null,
-      "total_starts": 2,
-      "best_score": 342,
-      "avg_judge_score": 84.13,
-      "best_judge_score": 88,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 1,
-      "elo_rating": 1502,
-      "elo_races": 2,
-      "elo_reliable": false,
-      "elo_low_data": false,
-      "elo_insufficient": true,
-      "rank": 53
-    },
-    {
       "dog_id": 9957,
       "name_lat": "COLISTOS NICO",
       "name_ru": "COLISTOS NICO",
@@ -1196,51 +1174,29 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 54
+      "rank": 53
     },
     {
-      "dog_id": 9887,
-      "name_lat": "ЧЕРВОНЫЙ ТУЗ ИЗ ВОЛШЕБНОГО ЛЕСА",
-      "name_ru": "ЧЕРВОНЫЙ ТУЗ ИЗ ВОЛШЕБНОГО ЛЕСА",
-      "breed": "ИРЛАНДСКИЙ ВОЛКОДАВ",
+      "dog_id": 9898,
+      "name_lat": "URKOFSKY NAGLETS",
+      "name_ru": "URKOFSKY NAGLETS",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "sex": null,
       "owner": null,
       "pedigree_url": null,
-      "total_starts": 2,
-      "best_score": 350,
-      "avg_judge_score": 87.83,
-      "best_judge_score": 97,
-      "gold": 0,
-      "silver": 1,
-      "bronze": 0,
-      "elo_rating": 1501,
-      "elo_races": 2,
-      "elo_reliable": false,
-      "elo_low_data": false,
-      "elo_insufficient": true,
-      "rank": 55
-    },
-    {
-      "dog_id": 9937,
-      "name_lat": "VALPAIN PEK ASAMI HOSHI",
-      "name_ru": "VALPAIN PEK ASAMI HOSHI",
-      "breed": "УИППЕТ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": null,
-      "total_starts": 2,
-      "best_score": 340,
-      "avg_judge_score": 85,
+      "total_starts": 1,
+      "best_score": 347,
+      "avg_judge_score": 86.75,
       "best_judge_score": 89,
       "gold": 0,
       "silver": 0,
-      "bronze": 0,
+      "bronze": 1,
       "elo_rating": 1501,
       "elo_races": 2,
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 56
+      "rank": 54
     },
     {
       "dog_id": 9939,
@@ -1255,14 +1211,14 @@
       "avg_judge_score": 87.11,
       "best_judge_score": 91,
       "gold": 3,
-      "silver": 0,
+      "silver": 1,
       "bronze": 1,
       "elo_rating": 1501,
       "elo_races": 2,
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 57
+      "rank": 55
     },
     {
       "dog_id": 9801,
@@ -1284,7 +1240,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 58
+      "rank": 56
     },
     {
       "dog_id": 9766,
@@ -1306,7 +1262,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 59
+      "rank": 57
     },
     {
       "dog_id": 9912,
@@ -1328,7 +1284,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 60
+      "rank": 58
     },
     {
       "dog_id": 9922,
@@ -1338,9 +1294,9 @@
       "sex": null,
       "owner": null,
       "pedigree_url": null,
-      "total_starts": 3,
+      "total_starts": 2,
       "best_score": 349,
-      "avg_judge_score": 84.38,
+      "avg_judge_score": 85.5,
       "best_judge_score": 89,
       "gold": 1,
       "silver": 0,
@@ -1350,7 +1306,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 61
+      "rank": 59
     },
     {
       "dog_id": 9872,
@@ -1372,7 +1328,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 62
+      "rank": 60
     },
     {
       "dog_id": 9940,
@@ -1394,7 +1350,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 63
+      "rank": 61
     },
     {
       "dog_id": 9944,
@@ -1404,10 +1360,10 @@
       "sex": null,
       "owner": null,
       "pedigree_url": null,
-      "total_starts": 2,
+      "total_starts": 1,
       "best_score": 343,
-      "avg_judge_score": 86.67,
-      "best_judge_score": 93,
+      "avg_judge_score": 85.75,
+      "best_judge_score": 88,
       "gold": 1,
       "silver": 0,
       "bronze": 0,
@@ -1416,7 +1372,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 64
+      "rank": 62
     },
     {
       "dog_id": 9773,
@@ -1438,7 +1394,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 65
+      "rank": 63
     },
     {
       "dog_id": 9946,
@@ -1460,7 +1416,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 66
+      "rank": 64
     },
     {
       "dog_id": 9951,
@@ -1482,7 +1438,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 67
+      "rank": 65
     },
     {
       "dog_id": 9953,
@@ -1504,7 +1460,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 68
+      "rank": 66
     },
     {
       "dog_id": 9866,
@@ -1518,7 +1474,7 @@
       "best_score": 364,
       "avg_judge_score": 88.65,
       "best_judge_score": 93,
-      "gold": 0,
+      "gold": 2,
       "silver": 1,
       "bronze": 1,
       "elo_rating": 1499,
@@ -1526,7 +1482,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 69
+      "rank": 67
     },
     {
       "dog_id": 9934,
@@ -1548,7 +1504,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 70
+      "rank": 68
     },
     {
       "dog_id": 9960,
@@ -1570,7 +1526,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 71
+      "rank": 69
     },
     {
       "dog_id": 9917,
@@ -1592,7 +1548,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 72
+      "rank": 70
     },
     {
       "dog_id": 9789,
@@ -1608,13 +1564,13 @@
       "best_judge_score": 93,
       "gold": 2,
       "silver": 0,
-      "bronze": 0,
+      "bronze": 1,
       "elo_rating": 1496,
       "elo_races": 2,
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 73
+      "rank": 71
     },
     {
       "dog_id": 9893,
@@ -1636,7 +1592,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 74
+      "rank": 72
     },
     {
       "dog_id": 9867,
@@ -1658,7 +1614,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 75
+      "rank": 73
     },
     {
       "dog_id": 9758,
@@ -1680,7 +1636,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 76
+      "rank": 74
     },
     {
       "dog_id": 9902,
@@ -1702,7 +1658,29 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 77
+      "rank": 75
+    },
+    {
+      "dog_id": 9923,
+      "name_lat": "FIRE WOLF",
+      "name_ru": "FIRE WOLF",
+      "breed": "УИППЕТ",
+      "sex": null,
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 3,
+      "best_score": 353,
+      "avg_judge_score": 85.75,
+      "best_judge_score": 94,
+      "gold": 0,
+      "silver": 1,
+      "bronze": 0,
+      "elo_rating": 1491,
+      "elo_races": 4,
+      "elo_reliable": false,
+      "elo_low_data": true,
+      "elo_insufficient": false,
+      "rank": 76
     },
     {
       "dog_id": 9877,
@@ -1724,7 +1702,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 78
+      "rank": 77
     },
     {
       "dog_id": 9886,
@@ -1746,7 +1724,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 79
+      "rank": 78
     },
     {
       "dog_id": 9787,
@@ -1768,7 +1746,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 80
+      "rank": 79
     },
     {
       "dog_id": 9935,
@@ -1790,7 +1768,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 81
+      "rank": 80
     },
     {
       "dog_id": 9936,
@@ -1806,13 +1784,13 @@
       "best_judge_score": 92,
       "gold": 0,
       "silver": 0,
-      "bronze": 1,
+      "bronze": 2,
       "elo_rating": 1490,
       "elo_races": 2,
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 82
+      "rank": 81
     },
     {
       "dog_id": 9918,
@@ -1834,7 +1812,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 83
+      "rank": 82
     },
     {
       "dog_id": 9785,
@@ -1856,7 +1834,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 84
+      "rank": 83
     },
     {
       "dog_id": 9761,
@@ -1878,7 +1856,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 85
+      "rank": 84
     },
     {
       "dog_id": 9949,
@@ -1900,7 +1878,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 86
+      "rank": 85
     },
     {
       "dog_id": 9919,
@@ -1922,7 +1900,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 87
+      "rank": 86
     },
     {
       "dog_id": 9941,
@@ -1944,7 +1922,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 88
+      "rank": 87
     },
     {
       "dog_id": 9763,
@@ -1966,7 +1944,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 89
+      "rank": 88
     },
     {
       "dog_id": 9929,
@@ -1988,6 +1966,28 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
+      "rank": 89
+    },
+    {
+      "dog_id": 9955,
+      "name_lat": "ВАСУРУ ТАФФИС БЕЙЛИС",
+      "name_ru": "ВАСУРУ ТАФФИС БЕЙЛИС",
+      "breed": "УИППЕТ",
+      "sex": null,
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 2,
+      "best_score": 324,
+      "avg_judge_score": 79.13,
+      "best_judge_score": 90,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "elo_rating": 1486,
+      "elo_races": 2,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
       "rank": 90
     },
     {
@@ -2013,6 +2013,28 @@
       "rank": 91
     },
     {
+      "dog_id": 9913,
+      "name_lat": "ABU HAKIM KHALEEL",
+      "name_ru": "ABU HAKIM KHALEEL",
+      "breed": "САЛЮКИ",
+      "sex": null,
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 2,
+      "best_score": 340,
+      "avg_judge_score": 84.88,
+      "best_judge_score": 88,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 1,
+      "elo_rating": 1485,
+      "elo_races": 2,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 92
+    },
+    {
       "dog_id": 9805,
       "name_lat": "ITURI PAZZL ABIMBOLA ALIET ANULIKA",
       "name_ru": "ITURI PAZZL ABIMBOLA ALIET ANULIKA",
@@ -2032,7 +2054,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 92
+      "rank": 93
     },
     {
       "dog_id": 9952,
@@ -2042,11 +2064,11 @@
       "sex": null,
       "owner": null,
       "pedigree_url": null,
-      "total_starts": 4,
+      "total_starts": 5,
       "best_score": 354,
-      "avg_judge_score": 84.63,
+      "avg_judge_score": 85.1,
       "best_judge_score": 94,
-      "gold": 0,
+      "gold": 1,
       "silver": 0,
       "bronze": 2,
       "elo_rating": 1485,
@@ -2054,51 +2076,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 93
-    },
-    {
-      "dog_id": 9955,
-      "name_lat": "ВАСУРУ ТАФФИС БЕЙЛИС",
-      "name_ru": "ВАСУРУ ТАФФИС БЕЙЛИС",
-      "breed": "УИППЕТ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": null,
-      "total_starts": 2,
-      "best_score": 324,
-      "avg_judge_score": 79.13,
-      "best_judge_score": 90,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "elo_rating": 1485,
-      "elo_races": 2,
-      "elo_reliable": false,
-      "elo_low_data": false,
-      "elo_insufficient": true,
       "rank": 94
-    },
-    {
-      "dog_id": 9913,
-      "name_lat": "ABU HAKIM KHALEEL",
-      "name_ru": "ABU HAKIM KHALEEL",
-      "breed": "САЛЮКИ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": null,
-      "total_starts": 2,
-      "best_score": 340,
-      "avg_judge_score": 84.88,
-      "best_judge_score": 88,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 1,
-      "elo_rating": 1483,
-      "elo_races": 2,
-      "elo_reliable": false,
-      "elo_low_data": false,
-      "elo_insufficient": true,
-      "rank": 95
     },
     {
       "dog_id": 9947,
@@ -2120,7 +2098,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 96
+      "rank": 95
     },
     {
       "dog_id": 9768,
@@ -2142,7 +2120,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 97
+      "rank": 96
     },
     {
       "dog_id": 9756,
@@ -2164,7 +2142,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 98
+      "rank": 97
     },
     {
       "dog_id": 9875,
@@ -2186,7 +2164,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 99
+      "rank": 98
     },
     {
       "dog_id": 9762,
@@ -2196,10 +2174,10 @@
       "sex": null,
       "owner": null,
       "pedigree_url": null,
-      "total_starts": 2,
+      "total_starts": 1,
       "best_score": 326,
-      "avg_judge_score": 81.67,
-      "best_judge_score": 85,
+      "avg_judge_score": 81.5,
+      "best_judge_score": 84,
       "gold": 0,
       "silver": 1,
       "bronze": 0,
@@ -2208,7 +2186,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 100
+      "rank": 99
     },
     {
       "dog_id": 9927,
@@ -2230,6 +2208,28 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
+      "rank": 100
+    },
+    {
+      "dog_id": 9937,
+      "name_lat": "VALPAIN PEK ASAMI HOSHI",
+      "name_ru": "VALPAIN PEK ASAMI HOSHI",
+      "breed": "УИППЕТ",
+      "sex": null,
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 2,
+      "best_score": 340,
+      "avg_judge_score": 85,
+      "best_judge_score": 89,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "elo_rating": 1479,
+      "elo_races": 3,
+      "elo_reliable": false,
+      "elo_low_data": true,
+      "elo_insufficient": false,
       "rank": 101
     },
     {
@@ -2255,50 +2255,6 @@
       "rank": 102
     },
     {
-      "dog_id": 9920,
-      "name_lat": "AMORA SURIA MI CORAZON",
-      "name_ru": "AMORA SURIA MI CORAZON",
-      "breed": "ТАЙСКИЙ РИДЖБЕК",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": null,
-      "total_starts": 1,
-      "best_score": 153,
-      "avg_judge_score": 76.5,
-      "best_judge_score": 80,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "elo_rating": 1478,
-      "elo_races": 2,
-      "elo_reliable": false,
-      "elo_low_data": false,
-      "elo_insufficient": true,
-      "rank": 103
-    },
-    {
-      "dog_id": 9859,
-      "name_lat": "ДОРОГОЙ ДРУГ СЕРЕБРЯНЫЙ",
-      "name_ru": "ДОРОГОЙ ДРУГ СЕРЕБРЯНЫЙ",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": null,
-      "total_starts": 2,
-      "best_score": 178,
-      "avg_judge_score": 84.25,
-      "best_judge_score": 90,
-      "gold": 1,
-      "silver": 0,
-      "bronze": 0,
-      "elo_rating": 1477,
-      "elo_races": 2,
-      "elo_reliable": false,
-      "elo_low_data": false,
-      "elo_insufficient": true,
-      "rank": 104
-    },
-    {
       "dog_id": 9942,
       "name_lat": "PODAROK IZ AFRIKI LAKESHA IMANI",
       "name_ru": "PODAROK IZ AFRIKI LAKESHA IMANI",
@@ -2318,7 +2274,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 105
+      "rank": 103
     },
     {
       "dog_id": 9884,
@@ -2340,29 +2296,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 106
-    },
-    {
-      "dog_id": 9888,
-      "name_lat": "МИЛЫЙ ЗВЕРЬ ЦЕРЕРА",
-      "name_ru": "МИЛЫЙ ЗВЕРЬ ЦЕРЕРА",
-      "breed": "ИРЛАНДСКИЙ ВОЛКОДАВ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": null,
-      "total_starts": 1,
-      "best_score": 0,
-      "avg_judge_score": 0,
-      "best_judge_score": 0,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "elo_rating": 1475,
-      "elo_races": 1,
-      "elo_reliable": false,
-      "elo_low_data": false,
-      "elo_insufficient": true,
-      "rank": 107
+      "rank": 104
     },
     {
       "dog_id": 9784,
@@ -2384,13 +2318,79 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 108
+      "rank": 105
     },
     {
       "dog_id": 9844,
       "name_lat": "DOROGOY DRUG RAZLETKA",
       "name_ru": "DOROGOY DRUG RAZLETKA",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "sex": null,
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 2,
+      "best_score": 0,
+      "avg_judge_score": 0,
+      "best_judge_score": 0,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "elo_rating": 1475,
+      "elo_races": 1,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 106
+    },
+    {
+      "dog_id": 9916,
+      "name_lat": "DIOSKURY RA",
+      "name_ru": "DIOSKURY RA",
+      "breed": "САЛЮКИ",
+      "sex": null,
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 3,
+      "best_score": 359,
+      "avg_judge_score": 89.75,
+      "best_judge_score": 96,
+      "gold": 0,
+      "silver": 1,
+      "bronze": 0,
+      "elo_rating": 1475,
+      "elo_races": 1,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 107
+    },
+    {
+      "dog_id": 9924,
+      "name_lat": "ИСТОРИЯ ЛЮБВИ ОРЛОВ ГРАФ",
+      "name_ru": "ИСТОРИЯ ЛЮБВИ ОРЛОВ ГРАФ",
+      "breed": "УИППЕТ",
+      "sex": null,
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 1,
+      "best_score": 0,
+      "avg_judge_score": 0,
+      "best_judge_score": 0,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "elo_rating": 1475,
+      "elo_races": 1,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 108
+    },
+    {
+      "dog_id": 9925,
+      "name_lat": "АЛМАЗНЫЙ ФОРСАЙД",
+      "name_ru": "АЛМАЗНЫЙ ФОРСАЙД",
+      "breed": "УИППЕТ",
       "sex": null,
       "owner": null,
       "pedigree_url": null,
@@ -2431,6 +2431,50 @@
       "rank": 110
     },
     {
+      "dog_id": 9888,
+      "name_lat": "МИЛЫЙ ЗВЕРЬ ЦЕРЕРА",
+      "name_ru": "МИЛЫЙ ЗВЕРЬ ЦЕРЕРА",
+      "breed": "ИРЛАНДСКИЙ ВОЛКОДАВ",
+      "sex": null,
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 1,
+      "best_score": 0,
+      "avg_judge_score": 0,
+      "best_judge_score": 0,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "elo_rating": 1475,
+      "elo_races": 1,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 111
+    },
+    {
+      "dog_id": 9778,
+      "name_lat": "КНЯЖЬЕ ЗОЛОТО ВЕЛИКАН МОГУЧИЙ",
+      "name_ru": "КНЯЖЬЕ ЗОЛОТО ВЕЛИКАН МОГУЧИЙ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "sex": null,
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 3,
+      "best_score": 326,
+      "avg_judge_score": 83.5,
+      "best_judge_score": 88,
+      "gold": 2,
+      "silver": 0,
+      "bronze": 0,
+      "elo_rating": 1475,
+      "elo_races": 1,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 112
+    },
+    {
       "dog_id": 9901,
       "name_lat": "СОЛОВЕЙ РАЗБОЙНИК",
       "name_ru": "СОЛОВЕЙ РАЗБОЙНИК",
@@ -2450,7 +2494,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 111
+      "rank": 113
     },
     {
       "dog_id": 9903,
@@ -2472,7 +2516,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 112
+      "rank": 114
     },
     {
       "dog_id": 9905,
@@ -2494,7 +2538,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 113
+      "rank": 115
     },
     {
       "dog_id": 9907,
@@ -2516,7 +2560,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 114
+      "rank": 116
     },
     {
       "dog_id": 9958,
@@ -2538,7 +2582,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 115
+      "rank": 117
     },
     {
       "dog_id": 9894,
@@ -2560,7 +2604,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 116
+      "rank": 118
     },
     {
       "dog_id": 9831,
@@ -2582,29 +2626,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 117
-    },
-    {
-      "dog_id": 9923,
-      "name_lat": "FIRE WOLF",
-      "name_ru": "FIRE WOLF",
-      "breed": "УИППЕТ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": null,
-      "total_starts": 3,
-      "best_score": 353,
-      "avg_judge_score": 85.75,
-      "best_judge_score": 94,
-      "gold": 0,
-      "silver": 1,
-      "bronze": 0,
-      "elo_rating": 1471,
-      "elo_races": 4,
-      "elo_reliable": false,
-      "elo_low_data": true,
-      "elo_insufficient": false,
-      "rank": 118
+      "rank": 119
     },
     {
       "dog_id": 9755,
@@ -2626,7 +2648,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 119
+      "rank": 120
     },
     {
       "dog_id": 9909,
@@ -2648,7 +2670,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 120
+      "rank": 121
     },
     {
       "dog_id": 9751,
@@ -2670,7 +2692,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 121
+      "rank": 122
     },
     {
       "dog_id": 9926,
@@ -2692,7 +2714,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 122
+      "rank": 123
     },
     {
       "dog_id": 9797,
@@ -2714,28 +2736,6 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 123
-    },
-    {
-      "dog_id": 9897,
-      "name_lat": "PERM VELIKAYA BLESK",
-      "name_ru": "PERM VELIKAYA BLESK",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": null,
-      "total_starts": 1,
-      "best_score": 157,
-      "avg_judge_score": 78.5,
-      "best_judge_score": 79,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "elo_rating": 1459,
-      "elo_races": 2,
-      "elo_reliable": false,
-      "elo_low_data": false,
-      "elo_insufficient": true,
       "rank": 124
     },
     {

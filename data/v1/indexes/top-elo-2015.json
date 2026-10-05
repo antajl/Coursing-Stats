@@ -7,8 +7,8 @@
     "initial_rating": 1500,
     "breed_pools": true
   },
-  "exported_at": "2026-10-05T06:58:06.443Z",
-  "count": 65,
+  "exported_at": "2026-10-05T13:44:25.020Z",
+  "count": 62,
   "items": [
     {
       "dog_id": 9778,
@@ -55,28 +55,6 @@
       "rank": 2
     },
     {
-      "dog_id": 9753,
-      "name_lat": "GLORIANDUS MASERATI",
-      "name_ru": "GLORIANDUS MASERATI",
-      "breed": "ДАЛМАТИН",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": null,
-      "total_starts": 2,
-      "best_score": 359,
-      "avg_judge_score": 89,
-      "best_judge_score": 91,
-      "gold": 2,
-      "silver": 0,
-      "bronze": 0,
-      "elo_rating": 1535,
-      "elo_races": 2,
-      "elo_reliable": false,
-      "elo_low_data": false,
-      "elo_insufficient": true,
-      "rank": 3
-    },
-    {
       "dog_id": 9796,
       "name_lat": "VALPAIN PEK SANSA",
       "name_ru": "VALPAIN PEK SANSA",
@@ -84,9 +62,9 @@
       "sex": null,
       "owner": null,
       "pedigree_url": null,
-      "total_starts": 9,
+      "total_starts": 8,
       "best_score": 505,
-      "avg_judge_score": 87.38,
+      "avg_judge_score": 87.5,
       "best_judge_score": 94,
       "gold": 3,
       "silver": 0,
@@ -96,7 +74,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 4
+      "rank": 3
     },
     {
       "dog_id": 9820,
@@ -118,7 +96,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 5
+      "rank": 4
     },
     {
       "dog_id": 9777,
@@ -140,7 +118,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 6
+      "rank": 5
     },
     {
       "dog_id": 9747,
@@ -162,29 +140,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 7
-    },
-    {
-      "dog_id": 9822,
-      "name_lat": "BEL ETUAL BOGEMA",
-      "name_ru": "BEL ETUAL BOGEMA",
-      "breed": "ГРЕЙХАУНД",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": null,
-      "total_starts": 1,
-      "best_score": 345,
-      "avg_judge_score": 86.25,
-      "best_judge_score": 89,
-      "gold": 1,
-      "silver": 0,
-      "bronze": 0,
-      "elo_rating": 1525,
-      "elo_races": 1,
-      "elo_reliable": false,
-      "elo_low_data": false,
-      "elo_insufficient": true,
-      "rank": 8
+      "rank": 6
     },
     {
       "dog_id": 9772,
@@ -206,7 +162,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 9
+      "rank": 7
     },
     {
       "dog_id": 9453,
@@ -228,7 +184,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 10
+      "rank": 8
     },
     {
       "dog_id": 9828,
@@ -250,7 +206,29 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 11
+      "rank": 9
+    },
+    {
+      "dog_id": 9753,
+      "name_lat": "GLORIANDUS MASERATI",
+      "name_ru": "GLORIANDUS MASERATI",
+      "breed": "ДАЛМАТИН",
+      "sex": null,
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 2,
+      "best_score": 359,
+      "avg_judge_score": 89,
+      "best_judge_score": 91,
+      "gold": 2,
+      "silver": 0,
+      "bronze": 0,
+      "elo_rating": 1515,
+      "elo_races": 3,
+      "elo_reliable": false,
+      "elo_low_data": true,
+      "elo_insufficient": false,
+      "rank": 10
     },
     {
       "dog_id": 9773,
@@ -272,7 +250,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 12
+      "rank": 11
     },
     {
       "dog_id": 9769,
@@ -294,7 +272,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 13
+      "rank": 12
     },
     {
       "dog_id": 9764,
@@ -316,7 +294,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 14
+      "rank": 13
     },
     {
       "dog_id": 9763,
@@ -338,7 +316,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 15
+      "rank": 14
     },
     {
       "dog_id": 9830,
@@ -360,7 +338,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 16
+      "rank": 15
     },
     {
       "dog_id": 9768,
@@ -382,7 +360,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 17
+      "rank": 16
     },
     {
       "dog_id": 9784,
@@ -404,7 +382,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 18
+      "rank": 17
     },
     {
       "dog_id": 9840,
@@ -426,7 +404,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 19
+      "rank": 18
     },
     {
       "dog_id": 9789,
@@ -442,13 +420,13 @@
       "best_judge_score": 93,
       "gold": 2,
       "silver": 0,
-      "bronze": 0,
+      "bronze": 1,
       "elo_rating": 1506,
       "elo_races": 2,
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 20
+      "rank": 19
     },
     {
       "dog_id": 9826,
@@ -470,7 +448,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 21
+      "rank": 20
     },
     {
       "dog_id": 9785,
@@ -492,7 +470,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 22
+      "rank": 21
     },
     {
       "dog_id": 9860,
@@ -514,7 +492,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 23
+      "rank": 22
     },
     {
       "dog_id": 9804,
@@ -536,7 +514,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 24
+      "rank": 23
     },
     {
       "dog_id": 9799,
@@ -558,7 +536,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 25
+      "rank": 24
     },
     {
       "dog_id": 9757,
@@ -580,7 +558,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 26
+      "rank": 25
     },
     {
       "dog_id": 9827,
@@ -599,6 +577,28 @@
       "bronze": 0,
       "elo_rating": 1502,
       "elo_races": 1,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 26
+    },
+    {
+      "dog_id": 9822,
+      "name_lat": "BEL ETUAL BOGEMA",
+      "name_ru": "BEL ETUAL BOGEMA",
+      "breed": "ГРЕЙХАУНД",
+      "sex": null,
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 1,
+      "best_score": 345,
+      "avg_judge_score": 86.25,
+      "best_judge_score": 89,
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0,
+      "elo_rating": 1500,
+      "elo_races": 2,
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
@@ -744,13 +744,13 @@
       "sex": null,
       "owner": null,
       "pedigree_url": null,
-      "total_starts": 1,
+      "total_starts": 2,
       "best_score": 346,
-      "avg_judge_score": 86.5,
+      "avg_judge_score": 85,
       "best_judge_score": 88,
       "gold": 1,
       "silver": 0,
-      "bronze": 0,
+      "bronze": 1,
       "elo_rating": 1500,
       "elo_races": 2,
       "elo_reliable": false,
@@ -902,7 +902,7 @@
       "best_score": 355,
       "avg_judge_score": 85.94,
       "best_judge_score": 92,
-      "gold": 0,
+      "gold": 1,
       "silver": 1,
       "bronze": 1,
       "elo_rating": 1497,
@@ -1081,7 +1081,7 @@
       "gold": 0,
       "silver": 1,
       "bronze": 0,
-      "elo_rating": 1485,
+      "elo_rating": 1484,
       "elo_races": 2,
       "elo_reliable": false,
       "elo_low_data": false,
@@ -1155,28 +1155,6 @@
       "rank": 52
     },
     {
-      "dog_id": 9762,
-      "name_lat": "RUS SHOW FOREVER TEENAGER",
-      "name_ru": "RUS SHOW FOREVER TEENAGER",
-      "breed": "КСОЛОИТЦКУИНТЛИ МЕДИО",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": null,
-      "total_starts": 2,
-      "best_score": 326,
-      "avg_judge_score": 81.67,
-      "best_judge_score": 85,
-      "gold": 0,
-      "silver": 1,
-      "bronze": 0,
-      "elo_rating": 1477,
-      "elo_races": 2,
-      "elo_reliable": false,
-      "elo_low_data": false,
-      "elo_insufficient": true,
-      "rank": 53
-    },
-    {
       "dog_id": 9761,
       "name_lat": "RUS SHOW FOREVER ESPARGARO",
       "name_ru": "RUS SHOW FOREVER ESPARGARO",
@@ -1196,7 +1174,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 54
+      "rank": 53
     },
     {
       "dog_id": 9771,
@@ -1206,19 +1184,19 @@
       "sex": null,
       "owner": null,
       "pedigree_url": null,
-      "total_starts": 4,
+      "total_starts": 5,
       "best_score": 346,
-      "avg_judge_score": 84.31,
+      "avg_judge_score": 83.1,
       "best_judge_score": 89,
       "gold": 0,
       "silver": 1,
-      "bronze": 3,
+      "bronze": 4,
       "elo_rating": 1476,
       "elo_races": 2,
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 55
+      "rank": 54
     },
     {
       "dog_id": 9774,
@@ -1240,29 +1218,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 56
-    },
-    {
-      "dog_id": 9821,
-      "name_lat": "БЕЛЬ ЭТУАЛЬ ОСКАР",
-      "name_ru": "БЕЛЬ ЭТУАЛЬ ОСКАР",
-      "breed": "ГРЕЙХАУНД",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": null,
-      "total_starts": 1,
-      "best_score": 159,
-      "avg_judge_score": 79.5,
-      "best_judge_score": 82,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "elo_rating": 1475,
-      "elo_races": 1,
-      "elo_reliable": false,
-      "elo_low_data": false,
-      "elo_insufficient": true,
-      "rank": 57
+      "rank": 55
     },
     {
       "dog_id": 9781,
@@ -1284,7 +1240,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 58
+      "rank": 56
     },
     {
       "dog_id": 9765,
@@ -1306,7 +1262,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 59
+      "rank": 57
     },
     {
       "dog_id": 9748,
@@ -1328,7 +1284,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 60
+      "rank": 58
     },
     {
       "dog_id": 9776,
@@ -1350,7 +1306,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 61
+      "rank": 59
     },
     {
       "dog_id": 9750,
@@ -1365,14 +1321,14 @@
       "avg_judge_score": 83.5,
       "best_judge_score": 90,
       "gold": 0,
-      "silver": 2,
+      "silver": 3,
       "bronze": 0,
       "elo_rating": 1469,
       "elo_races": 2,
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 62
+      "rank": 60
     },
     {
       "dog_id": 9779,
@@ -1394,7 +1350,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 63
+      "rank": 61
     },
     {
       "dog_id": 9783,
@@ -1416,29 +1372,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 64
-    },
-    {
-      "dog_id": 9754,
-      "name_lat": "ALPHADIRATO HARMONY",
-      "name_ru": "ALPHADIRATO HARMONY",
-      "breed": "ДАЛМАТИН",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": null,
-      "total_starts": 1,
-      "best_score": 161,
-      "avg_judge_score": 80.5,
-      "best_judge_score": 84,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "elo_rating": 1457,
-      "elo_races": 2,
-      "elo_reliable": false,
-      "elo_low_data": false,
-      "elo_insufficient": true,
-      "rank": 65
+      "rank": 62
     }
   ]
 }
