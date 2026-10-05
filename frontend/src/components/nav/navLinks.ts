@@ -133,6 +133,12 @@ export const GUIDE_MENU_ITEMS: NavMenuItem[] = [
     isActive: guideTabActive('shows'),
   },
   {
+    to: '/guide?tab=donino',
+    label: 'Донино',
+    icon: Icons.speed,
+    isActive: guideTabActive('donino'),
+  },
+  {
     to: '/guide?tab=protocol',
     label: 'Протоколы',
     icon: Icons.flag,

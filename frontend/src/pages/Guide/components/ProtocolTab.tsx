@@ -59,22 +59,32 @@ export default function ProtocolTab() {
     <div className="space-y-6">
       <SectionCard title="Квалификация (ВС)">
         <div className="flex flex-wrap items-start gap-3">
-          <span className="inline-block rounded border border-camel-200 bg-camel-100 px-2 py-1 text-sm font-semibold text-camel-800">
+          <span className="inline-block rounded border border-camel-300 bg-camel-100 px-2.5 py-1 text-sm font-bold text-camel-900 shadow-xs">
             ВС
           </span>
-          <div className="min-w-0 flex-1">
+          <div className="min-w-0 flex-1 space-y-2">
             <p>
-              <strong className="font-semibold text-charcoal-800">Высшая квалификация</strong> —
-              в HTML-протоколе procoursing.ru отмечается «CC» или «+» (зависит от формата таблицы), если собака выполнила
-              квалификационные нормы, необходимые для присвоения титула или сертификата на этом соревновании.
+              <strong className="font-semibold text-charcoal-900">Высшая квалификация (ВС)</strong> —
+              официальная отметка в протоколе состязаний (на procoursing.ru также обозначается как «CC» или «+»).
+              Означает, что собака успешно преодолела квалификационные нормативы РКФ:
             </p>
-            <p className="mt-2 text-xs text-old-money-600">
-              В таблице колонка называется CC или ВС; на сайте — бейдж ВС у итогового балла. См. «Структура таблицы» в
-              сегменте дисциплины.
+            <ul className="list-disc space-y-1 pl-4 text-xs text-charcoal-700">
+              <li>
+                <strong>В 1-м круге (забеге):</strong> набрано не менее <strong>50%</strong> от максимального балла — обязательное условие для допуска ко 2-му кругу.
+              </li>
+              <li>
+                <strong>По сумме 2 кругов:</strong> набрано не менее <strong>⅔ (66,7%)</strong> от максимальной суммы баллов (например, от 200 баллов у 2 судей — минимум 134 балла; от 300 баллов у 3 судей — минимум 200 баллов).
+              </li>
+              <li>
+                <strong>Право на титулы:</strong> без отметки ВС сертификаты (<AbbrTag abbr="CACL" />, <AbbrTag abbr="CACIL" />) и чемпионские титулы не присваиваются, даже если собака заняла 1-е место.
+              </li>
+            </ul>
+            <p className="text-[11px] text-old-money-600">
+              На сайте отметка «ВС» выводится бейджем рядом с итоговой суммой баллов.
             </p>
           </div>
         </div>
-        <RefTag>Правила курсинга, п. 4.3.4</RefTag>
+        <RefTag>Правила проведения состязаний РКФ, п. 4.3.4, п. 7.4.1.3</RefTag>
       </SectionCard>
 
       <div className="flex w-full sm:w-auto">
@@ -244,16 +254,20 @@ export default function ProtocolTab() {
           </SectionCard>
 
           <SectionCard title="Квалификация и титулы">
-            <ul className="list-disc space-y-1 pl-5 text-sm">
+            <ul className="list-disc space-y-1.5 pl-5 text-sm">
               <li>
-                Временный сертификат выдаётся собаке, успешно прошедшей все забеги; результат вносится в квалификационную
-                книжку (п. 5.1.1.1)
+                Временный сертификат выдаётся собаке, успешно прошедшей все забеги; результат вносится в квалификационную книжку (п. 5.1.1.1).
               </li>
               <li>
-                <AbbrTag abbr="CACIL" /> и <AbbrTag abbr="CACL" /> присуждаются по тем же правилам разд. IV, что и на
-                курсинге; минимум 3 собаки породы на старте (п. 4.3.2.1)
+                <AbbrTag abbr="CACIL" /> и <AbbrTag abbr="CACL" /> присуждаются по правилам разд. IV: требуется минимум 3 собаки породы на старте (п. 4.3.2.1).
               </li>
-              <li>На квалификационных состязаниях титулы не присваиваются (п. 4.1.5)</li>
+              <li>
+                <strong>Правило кворума по полу:</strong> если в породе и классе стартует $\ge 3$ собак одного пола, титулы присуждаются <em>раздельно</em> кобелям и сукам. Если кобелей или сук менее 3 — объявляется общий смешанный класс (<em>«Микс»</em>).
+              </li>
+              <li>
+                <strong>Цвета и номера попон:</strong> определяются номером стартового бокса: 1 — Красная, 2 — Синяя, 3 — Белая, 4 — Чёрная, 5 — Жёлтая, 6 — Чёрно-белая полосатая.
+              </li>
+              <li>На квалификационных состязаниях титулы не присваиваются (п. 4.1.5).</li>
             </ul>
             <div className="grid gap-3 sm:grid-cols-3">
               {COURSING_CERTIFICATES.map((item) => (
@@ -270,7 +284,7 @@ export default function ProtocolTab() {
                 </div>
               ))}
             </div>
-            <RefTag>Правила курсинга, разд. IV; п. 5.1.1.1</RefTag>
+            <RefTag>Правила состязаний борзых РКФ, разд. IV, VI; п. 4.3.2.1, п. 5.1.1.1</RefTag>
           </SectionCard>
         </>
       )}

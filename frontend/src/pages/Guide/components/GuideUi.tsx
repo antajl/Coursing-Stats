@@ -122,44 +122,37 @@ export function TitleHierarchySection({
   refTag?: ReactNode
 }) {
   const tierClass = {
-    prestige:
-      'rounded-lg border-2 border-camel-400 bg-camel-50 px-4 py-3',
-    certificate:
-      'rounded-lg border border-old-money-400 bg-old-money-50 px-4 py-3',
-    diploma:
-      'rounded-lg border border-camel-300 bg-camel-50/70 px-4 py-3',
-    cumulative:
-      'rounded-lg border-2 border-camel-500 bg-cream-50 px-4 py-3',
+    prestige: 'rounded-xl border border-camel-300 bg-camel-50/70 p-3.5 sm:p-4 shadow-2xs',
+    certificate: 'rounded-xl border border-old-money-200 bg-white p-3.5 sm:p-4 shadow-2xs',
+    diploma: 'rounded-xl border border-old-money-200 bg-old-money-50/50 p-3.5 sm:p-4 shadow-2xs',
+    cumulative: 'rounded-xl border border-camel-200 bg-cream-50/80 p-3.5 sm:p-4 shadow-2xs',
   }
   const labelClass = {
-    prestige: 'text-[10px] font-semibold uppercase tracking-wide text-camel-800',
-    certificate: 'text-[10px] font-semibold uppercase tracking-wide text-old-money-600',
-    diploma: 'text-[10px] font-semibold uppercase tracking-wide text-camel-700',
-    cumulative: 'text-[10px] font-semibold uppercase tracking-wide text-camel-800',
-  }
-  const wrapClass = {
-    prestige: '',
-    certificate: 'ml-3 border-l-2 border-old-money-300 pl-4',
-    diploma: 'ml-6 border-l-2 border-camel-300 pl-4',
-    cumulative: 'ml-9 border-l-2 border-camel-400 pl-4',
+    prestige: 'text-[11px] font-bold uppercase tracking-wider text-camel-900',
+    certificate: 'text-[11px] font-bold uppercase tracking-wider text-charcoal-700',
+    diploma: 'text-[11px] font-bold uppercase tracking-wider text-old-money-600',
+    cumulative: 'text-[11px] font-bold uppercase tracking-wider text-camel-800',
   }
 
   return (
     <SectionCard title={title}>
-      <div className="space-y-2">
-        {levels.map((level) => (
-          <div key={level.label} className={wrapClass[level.tier]}>
-            <div className={tierClass[level.tier]}>
-              <div className={labelClass[level.tier]}>{level.label}</div>
-              {level.badges && level.badges.length > 0 && (
-                <div className="mt-2 flex flex-wrap gap-2">
-                  {level.badges.map((badge) => (
-                    <TitleBadge key={badge} title={badge} />
-                  ))}
-                </div>
-              )}
-              {level.note && <div className="mt-2 text-xs">{level.note}</div>}
+      <div className="space-y-3">
+        {levels.map((level, idx) => (
+          <div key={level.label} className={tierClass[level.tier]}>
+            <div className="flex items-center justify-between gap-2 border-b border-old-money-100 pb-2">
+              <span className={labelClass[level.tier]}>{level.label}</span>
+              <span className="rounded-full bg-white px-2 py-0.5 text-[10px] font-semibold text-charcoal-500 shadow-2xs">
+                Уровень {idx + 1}
+              </span>
             </div>
+            {level.badges && level.badges.length > 0 && (
+              <div className="mt-2.5 flex flex-wrap gap-1.5 sm:gap-2">
+                {level.badges.map((badge) => (
+                  <TitleBadge key={badge} title={badge} />
+                ))}
+              </div>
+            )}
+            {level.note && <div className="mt-2 text-xs leading-relaxed text-charcoal-700">{level.note}</div>}
           </div>
         ))}
       </div>
@@ -273,7 +266,7 @@ export function AbbreviationsTable({
   )
 }
 
-type PriorityAward = { rank: number; abbr: string; title: string; note: string; abbrTitle?: string }
+type PriorityAward = { rank: number; abbr: string; title: string; note: string; points?: string; abbrTitle?: string }
 
 export function PriorityAwardsList({ items }: { items: readonly PriorityAward[] }) {
   return (
@@ -281,17 +274,24 @@ export function PriorityAwardsList({ items }: { items: readonly PriorityAward[] 
       {items.map((item) => (
         <li
           key={item.abbr}
-          className="flex gap-3 rounded-lg border border-old-money-200 bg-old-money-50/40 px-3 py-2.5"
+          className="flex gap-3 rounded-lg border border-old-money-200 bg-old-money-50/40 px-3 py-2.5 transition-colors hover:bg-cream-50"
         >
           <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-camel-100 text-xs font-bold text-camel-800">
             {item.rank}
           </span>
-          <div className="min-w-0">
-            <div className="flex flex-wrap items-center gap-2">
-              <AbbrTag abbr={item.abbr} title={item.abbrTitle} />
-              <span className="text-sm font-semibold text-charcoal-800">{item.title}</span>
+          <div className="min-w-0 flex-1">
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <div className="flex flex-wrap items-center gap-2">
+                <AbbrTag abbr={item.abbr} title={item.abbrTitle} />
+                <span className="text-sm font-semibold text-charcoal-800">{item.title}</span>
+              </div>
+              {item.points && (
+                <span className="inline-flex items-center rounded-md border border-camel-200/90 bg-camel-50 px-2 py-0.5 font-mono text-[11px] font-semibold text-camel-800">
+                  {item.points}
+                </span>
+              )}
             </div>
-            <p className="mt-0.5 text-xs text-charcoal-600">{item.note}</p>
+            <p className="mt-1 text-xs text-charcoal-600">{item.note}</p>
           </div>
         </li>
       ))}
