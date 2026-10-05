@@ -184,26 +184,36 @@ export default function EventHeader({ event, results }: EventHeaderProps) {
               {trackSchemes.length > 0 && (
                 <div className="flex items-center gap-2 text-sm">
                   <div className="flex flex-wrap gap-1.5">
-                    {trackSchemes.map((scheme, index) => (
-                      <span key={index} className="group relative inline-block">
-                        <span className="inline-flex items-center gap-1.5 cursor-pointer rounded-md border border-camel-200 bg-camel-50 px-2.5 py-1 text-xs font-medium text-camel-800 transition-colors hover:border-camel-400 hover:bg-camel-100">
-                          <span>{scheme.name}</span>
-                          {scheme.length && <span className="text-old-money-500">({scheme.length})</span>}
+                    {trackSchemes.map((scheme, index) => {
+                      const schemeName =
+                        !scheme.url && scheme.name === 'Схема трассы' ? 'Длина трассы' : scheme.name
+                      return (
+                        <span key={index} className="group relative inline-block">
+                          <span
+                            className={`inline-flex items-center gap-1.5 rounded-md border border-camel-200 bg-camel-50 px-2.5 py-1 text-xs font-medium text-camel-800 ${
+                              scheme.url
+                                ? 'cursor-pointer transition-colors hover:border-camel-400 hover:bg-camel-100'
+                                : ''
+                            }`}
+                          >
+                            <span>{schemeName}</span>
+                            {scheme.length && <span className="text-old-money-500">({scheme.length})</span>}
+                          </span>
+                          {scheme.url && (
+                            <div className="absolute left-0 top-full z-50 mt-2 hidden w-max max-w-[90vw] rounded-lg border border-old-money-200 bg-white p-2 shadow-xl group-hover:block md:max-w-md">
+                              <img
+                                src={scheme.url}
+                                alt={scheme.name}
+                                className="max-h-96 max-w-[90vw] object-contain md:max-w-md"
+                                onError={(e) => {
+                                  (e.target as HTMLImageElement).style.display = 'none'
+                                }}
+                              />
+                            </div>
+                          )}
                         </span>
-                        {scheme.url && (
-                          <div className="absolute left-0 top-full z-50 mt-2 hidden w-max max-w-[90vw] rounded-lg border border-old-money-200 bg-white p-2 shadow-xl group-hover:block md:max-w-md">
-                            <img
-                              src={scheme.url}
-                              alt={scheme.name}
-                              className="max-h-96 max-w-[90vw] object-contain md:max-w-md"
-                              onError={(e) => {
-                                (e.target as HTMLImageElement).style.display = 'none'
-                              }}
-                            />
-                          </div>
-                        )}
-                      </span>
-                    ))}
+                      )
+                    })}
                   </div>
                 </div>
               )}
