@@ -1,5 +1,5 @@
-import type { ReactNode } from 'react'
-import { ExternalLink } from 'lucide-react'
+import { useState, type ReactNode } from 'react'
+import { ChevronDown, ExternalLink } from 'lucide-react'
 import HoverTooltip from '../../../components/ui/HoverTooltip'
 import { titleBadgeClass } from '../../../lib/qualificationTitles'
 import { ABBREVIATIONS } from '../constants'
@@ -235,6 +235,57 @@ export function CumulativeTitlesGrid({ items }: { items: readonly CumulativeTitl
 }
 
 type AbbreviationRow = { abbr: string; full: string }
+
+export function AbbreviationsDropdown({
+  rows,
+  refTag,
+}: {
+  rows: readonly AbbreviationRow[]
+  refTag?: ReactNode
+}) {
+  const [selectedAbbr, setSelectedAbbr] = useState<string>(rows[0]?.abbr ?? '')
+
+  const currentItem = rows.find((r) => r.abbr === selectedAbbr) ?? rows[0]
+
+  return (
+    <div className="space-y-3">
+      <div className="relative max-w-lg">
+        <select
+          id="abbr-select"
+          value={selectedAbbr}
+          onChange={(e) => setSelectedAbbr(e.target.value)}
+          aria-label="Выберите сокращение"
+          className="w-full appearance-none rounded-lg border border-old-money-200 bg-white py-2 pl-3 pr-9 font-sans text-xs font-medium text-charcoal-800 shadow-2xs transition-colors hover:border-camel-300 focus:border-camel-400 focus:outline-none focus:ring-1 focus:ring-camel-400 cursor-pointer"
+        >
+          {rows.map((row) => (
+            <option key={row.abbr} value={row.abbr} className="py-1">
+              {row.abbr} — {row.full}
+            </option>
+          ))}
+        </select>
+        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2.5 text-charcoal-400">
+          <ChevronDown className="h-4 w-4" aria-hidden />
+        </div>
+      </div>
+
+      {currentItem && (
+        <div className="rounded-xl border border-camel-200/90 bg-camel-50/50 p-3.5 shadow-2xs">
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="font-mono text-xs font-bold text-camel-800 bg-white px-2.5 py-1 rounded border border-camel-200 shadow-2xs">
+              {currentItem.abbr}
+            </span>
+            <span className="text-xs font-semibold text-charcoal-700">Официальное значение:</span>
+          </div>
+          <p className="mt-2 text-xs leading-relaxed text-charcoal-800 sm:text-sm">
+            {currentItem.full}
+          </p>
+        </div>
+      )}
+
+      {refTag}
+    </div>
+  )
+}
 
 export function AbbreviationsTable({
   rows,

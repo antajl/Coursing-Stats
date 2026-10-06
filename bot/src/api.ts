@@ -730,6 +730,18 @@ class CoursingStatsAPI {
       return null;
     }
   }
+
+  /**
+   * Загружает структурированную энциклопедию и правила (guide.json) с CDN
+   */
+  async getGuide(): Promise<any | null> {
+    try {
+      const data = await this.fetchJSON(`${this.baseApiUrl}/guide.json`, 86400); // Кэш 24 часа
+      return data || null;
+    } catch {
+      return null;
+    }
+  }
 }
 
 export { CoursingStatsAPI };

@@ -49,6 +49,7 @@ function assertNonEmptyIndex(relPath: string, arrayKey: string, label: string) {
 }
 
 run('npx tsx backend/scripts/rebuild-calendar-index.ts', 'Calendar index rebuild');
+run('npx tsx backend/scripts/export/export-guide-json.ts', 'Guide JSON export');
 // Snapshot still useful for local admin/SQL — but build-derived-indexes no longer reads it
 // (always loads competitions JSON → memory). Keep snapshot in CI for other tools / debugging.
 run('npm run build-data-snapshot', 'Data snapshot build');

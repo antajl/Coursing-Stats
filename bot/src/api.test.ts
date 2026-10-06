@@ -327,4 +327,31 @@ describe('CoursingStatsAPI', () => {
       expect(result).toHaveLength(1);
     });
   });
+
+  describe('getGuide', () => {
+    it('fetches and returns guide.json data from CDN', async () => {
+      const mockGuide = {
+        schema: 'coursing-stats/guide-v1',
+        sport: { title_ladder: [{ rank: 1, badge: 'ACH RUS' }] },
+      };
+      vi.stubGlobal(
+        'fetch',
+        vi.fn().mockResolvedValue({
+          ok: true,
+          text: async () => JSON.stringify(mockGuide),
+        })
+      );
+
+      const result = await runWithTimers(() => api.getGuide());
+      expect(result).toEqual(mockGuide);
+      expect(result?.sport?.title_ladder[0]?.badge).toBe('ACH RUS');
+    });
+
+    it('returns null on fetch error', async () => {
+      vi.stubGlobal('fetch', vi.fn().mockResolvedValue({ ok: false, status: 404 }));
+
+      const result = await runWithTimers(() => api.getGuide());
+      expect(result).toBeNull();
+    });
+  });
 });
