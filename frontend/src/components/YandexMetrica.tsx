@@ -6,6 +6,16 @@ import { Helmet } from 'react-helmet-async'
 const YANDEX_METRICA_ID = 110619327
 
 export function YandexMetrica() {
+  const isLocalhost =
+    typeof window !== 'undefined' &&
+    (window.location.hostname === 'localhost' ||
+      window.location.hostname === '127.0.0.1' ||
+      window.location.hostname.endsWith('.local'))
+
+  if (import.meta.env.DEV || isLocalhost) {
+    return null
+  }
+
   return (
     <Helmet>
       {/* Яндекс.Метрика */}

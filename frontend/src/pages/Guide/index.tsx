@@ -63,6 +63,13 @@ export default function Guide() {
   const activeTab = parseGuideTab(searchParams.get('tab'))
   const section = GUIDE_SECTIONS.find((s) => s.id === activeTab) ?? GUIDE_SECTIONS[0]
   const { reachGoal } = useYandexGoal()
+
+  const handleTabChange = (newTab: TabId) => {
+    const next = new URLSearchParams(searchParams)
+    next.set('tab', newTab)
+    setSearchParams(next)
+  }
+
   useEffect(() => {
     reachGoal('guide_view')
   }, [reachGoal])

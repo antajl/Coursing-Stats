@@ -17,7 +17,7 @@ export async function sendMenuScreen(
   options: MenuScreenOptions,
 ): Promise<void> {
   const userId = ctx.from?.id?.toString();
-  const chatId = ctx.chat?.id;
+  const chatId = ctx.chat?.id || (ctx.from?.id ? Number(ctx.from.id) : undefined);
 
   // Show typing or upload_photo indicator
   if (chatId) {
@@ -47,9 +47,9 @@ export async function sendMenuScreen(
   }
 
   // Try sending photo banner if provided
-  if (options.photoUrl) {
+  if (options.photoUrl && chatId) {
     try {
-      const message = await ctx.replyWithPhoto(options.photoUrl, {
+      const message = await ctx.api.sendPhoto(chatId, options.photoUrl, {
         caption: options.text,
         parse_mode: 'HTML',
         reply_markup: options.keyboard,

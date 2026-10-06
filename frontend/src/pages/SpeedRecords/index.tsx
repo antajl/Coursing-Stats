@@ -8,6 +8,7 @@ import DoninoPageToolbar from './DoninoPageToolbar'
 import DoninoRecordsColumns from './DoninoRecordsColumns'
 import DoninoStatsColumns from './DoninoStatsColumns'
 import SkeletonLoader from '../../components/SkeletonLoader'
+import { MobileSubNavTabs } from '../../components/ui/MobileSubNavTabs'
 
 function SpeedRecords() {
   const [searchParams, setSearchParams] = useSearchParams()
@@ -71,28 +72,12 @@ function SpeedRecords() {
         canonicalUrl="https://coursing-stats.ru/speed-records"
         keywords="курсинг в Донино, курсинг Донино, рекорды Донино, замер скорости, бега 350 м, скорость собаки"
       />
-      {/* Mobile-only tab switcher */}
-      <div className="mb-4 flex items-center justify-between md:hidden">
-        <div className="flex w-full items-center gap-1.5 rounded-xl border border-old-money-200/80 bg-white/80 p-1 shadow-xs sm:w-auto">
-          {tabs.map((t) => {
-            const active = (t.id === 'stats' && view === 'stats') || (t.id === 'records' && view === 'table')
-            return (
-              <button
-                key={t.id}
-                type="button"
-                onClick={() => handleTabChange(t.id as 'records' | 'stats')}
-                className={`flex flex-1 sm:flex-initial items-center justify-center gap-1.5 rounded-lg py-1.5 px-3.5 text-xs font-semibold transition-all ${
-                  active
-                    ? 'bg-camel-500 text-charcoal-900 shadow-sm'
-                    : 'text-charcoal-600 hover:text-charcoal-900 hover:bg-cream-50/50'
-                }`}
-              >
-                {t.label}
-              </button>
-            )
-          })}
-        </div>
-      </div>
+      <MobileSubNavTabs
+        tabs={tabs}
+        activeTab={view === 'stats' ? 'stats' : 'records'}
+        onChange={(id) => handleTabChange(id as 'records' | 'stats')}
+        ariaLabel="Разделы Донино"
+      />
 
       <div className="space-y-4">
         <DoninoPageToolbar

@@ -1,8 +1,8 @@
-import { useEffect, useRef } from 'react'
+import { type ReactNode, useEffect, useRef } from 'react'
 
 export interface SubNavTabItem<T extends string = string> {
   id: T
-  label: string
+  label: ReactNode
 }
 
 interface MobileSubNavTabsProps<T extends string = string> {
@@ -11,6 +11,8 @@ interface MobileSubNavTabsProps<T extends string = string> {
   onChange: (tabId: T) => void
   className?: string
   ariaLabel?: string
+  layout?: 'auto' | 'fill' | 'scroll'
+  breakpoint?: 'md' | 'lg'
 }
 
 export function MobileSubNavTabs<T extends string = string>({
@@ -19,35 +21,49 @@ export function MobileSubNavTabs<T extends string = string>({
   onChange,
   className = '',
   ariaLabel = 'Вкладки раздела',
+  layout = 'auto',
+  breakpoint = 'md',
 }: MobileSubNavTabsProps<T>) {
   const activeTabRef = useRef<HTMLButtonElement | null>(null)
+  const isFill = layout === 'fill' || (layout === 'auto' && tabs.length <= 4)
+  const hideClass = breakpoint === 'lg' ? 'lg:hidden' : 'md:hidden'
 
   useEffect(() => {
-    activeTabRef.current?.scrollIntoView({
-      behavior: 'smooth',
-      inline: 'center',
-      block: 'nearest',
-    })
-  }, [activeTab])
+    if (!isFill) {
+      activeTabRef.current?.scrollIntoView({
+        behavior: 'smooth',
+        inline: 'center',
+        block: 'nearest',
+      })
+    }
+  }, [activeTab, isFill])
 
   return (
     <div
       role="tablist"
       aria-label={ariaLabel}
-      className={`relative mb-5 md:hidden border-b border-old-money-200/90 ${className}`.trim()}
+      className={`relative mb-5 ${hideClass} border-b border-old-money-200/90 ${className}`.trim()}
     >
-      <div className="flex items-center gap-5 overflow-x-auto no-scrollbar scroll-smooth pr-8 pl-0.5">
+      <div
+        className={
+          isFill
+            ? 'flex w-full items-center'
+            : 'flex items-center gap-5 overflow-x-auto no-scrollbar scroll-smooth pr-8 pl-0.5'
+        }
+      >
         {tabs.map((tab) => {
           const isActive = activeTab === tab.id
           return (
             <button
               key={tab.id}
-              ref={isActive ? activeTabRef : undefined}
+              ref={isActive && !isFill ? activeTabRef : undefined}
               type="button"
               role="tab"
               aria-selected={isActive}
               onClick={() => onChange(tab.id)}
-              className={`shrink-0 pt-2 pb-2.5 text-xs whitespace-nowrap transition-all border-b-2 -mb-[1px] ${
+              className={`pt-2 pb-2.5 text-xs whitespace-nowrap transition-all border-b-2 -mb-[1px] ${
+                isFill ? 'flex-1 text-center justify-center' : 'shrink-0'
+              } ${
                 isActive
                   ? 'border-camel-600 font-bold text-charcoal-900'
                   : 'border-transparent font-medium text-charcoal-500 hover:text-charcoal-800 active:text-charcoal-900'
@@ -58,8 +74,11 @@ export function MobileSubNavTabs<T extends string = string>({
           )
         })}
       </div>
-      {/* Мягкий градиент затухания справа для визуального намёка на прокрутку */}
-      <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-om-50 via-om-50/80 to-transparent" />
+
+      {/* Мягкий градиент затухания справа только в режиме прокрутки */}
+      {!isFill && (
+        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-om-50 via-om-50/80 to-transparent" />
+      )}
     </div>
   )
 }
