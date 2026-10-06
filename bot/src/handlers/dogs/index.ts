@@ -3,6 +3,7 @@ import { CoursingStatsAPI } from '../../api';
 import { getNavigationButtons, getDogCardKeyboard } from '../../keyboards';
 import { validateDogId } from '../utils/validators';
 import { buildDogCardPresentation } from '../utils/presentDogCard';
+import { safeEditOrReply } from '../commands';
 import type { KVNamespace } from '../context';
 
 /**
@@ -15,22 +16,24 @@ export function createDogs(api: CoursingStatsAPI, cache?: KVNamespace) {
     const dogId = ctx.match![1];
 
     if (!validateDogId(dogId)) {
-      await ctx.editMessageText(
+      await safeEditOrReply(
+        ctx,
         '❌ Неверный ID собаки.\n\nПожалуйста, выберите собаку из списка.',
-        { reply_markup: getNavigationButtons('main_menu', 'main_menu') }
+        { reply_markup: getNavigationButtons('main_menu', 'main_menu') },
+        cache,
       );
       return;
     }
-
-    await ctx.editMessageText('<b>Загрузка профиля собаки...</b>', { parse_mode: 'HTML' });
 
     try {
       const dogData = await api.getDogById(dogId);
 
       if (!dogData) {
-        await ctx.editMessageText(
+        await safeEditOrReply(
+          ctx,
           '❌ Собака не найдена.',
-          { reply_markup: getNavigationButtons('main_menu', 'main_menu') }
+          { reply_markup: getNavigationButtons('main_menu', 'main_menu') },
+          cache,
         );
         return;
       }
@@ -40,19 +43,21 @@ export function createDogs(api: CoursingStatsAPI, cache?: KVNamespace) {
         : 'main_menu';
       const card = await buildDogCardPresentation(api, dogData, {
         cache,
-        userId: ctx.from?.id.toString(),
+        userId: ctx.from?.id?.toString(),
         backCallback: back,
       });
 
-      await ctx.editMessageText(card.text, {
+      await safeEditOrReply(ctx, card.text, {
         parse_mode: 'HTML',
         link_preview_options: { is_disabled: true },
         reply_markup: card.reply_markup,
-      });
+      }, cache);
     } catch (error) {
-      await ctx.editMessageText(
+      await safeEditOrReply(
+        ctx,
         '❌ Ошибка при загрузке профиля собаки.',
-        { reply_markup: getNavigationButtons('main_menu', 'main_menu') }
+        { reply_markup: getNavigationButtons('main_menu', 'main_menu') },
+        cache,
       );
     }
   });

@@ -22,18 +22,12 @@ async function addReaction(ctx: any, emoji: string) {
   }
 }
 
-async function editDoninoList(ctx: any, text: string, kind: 'speed' | 'coursing') {
+import { safeEditOrReply } from '../commands';
+import { sendMenuScreen } from '../utils/menuScreen';
+
+async function editDoninoList(ctx: any, text: string, kind: 'speed' | 'coursing', cache?: KVNamespace) {
   const reply_markup = getDoninoKeyboard(kind);
-  try {
-    const msg = ctx.callbackQuery?.message;
-    if (msg && 'photo' in msg && msg.photo) {
-      await ctx.editMessageCaption({ caption: text, parse_mode: 'HTML', reply_markup });
-      return;
-    }
-    await ctx.editMessageText(text, { parse_mode: 'HTML', reply_markup });
-  } catch {
-    await ctx.reply(text, { parse_mode: 'HTML', reply_markup });
-  }
+  await safeEditOrReply(ctx, text, { parse_mode: 'HTML', reply_markup }, cache);
 }
 
 /**
@@ -48,67 +42,34 @@ export function createDonino(api: CoursingStatsAPI, cache?: KVNamespace) {
   // Donino records main menu — same tops as inline «донино курсинг»
   donino.callbackQuery('donino_records', async (ctx) => {
     await addReaction(ctx, '⏱');
-    const userId = ctx.from?.id.toString();
-    const chatId = ctx.chat?.id;
-    const photoUrl = BOT_PHOTOS.donino;
-
-    if (chatId) {
-      await ctx.api.sendChatAction(chatId, 'upload_photo');
-    }
-
-    if (userId && chatId && cache) {
-      const lastMessageKey = `last_message:${userId}`;
-      const lastMessageId = await cache.get(lastMessageKey);
-
-      if (lastMessageId) {
-        try {
-          await ctx.api.deleteMessage(chatId, parseInt(lastMessageId));
-        } catch (deleteError) {
-          console.error('[donino_records] Failed to delete previous message:', deleteError);
-        }
-      }
-    }
-
     const records = await api.getSpeedRecords();
     const text = formatDoninoTopChatText(records.speed, records.coursing, { only: 'speed' });
 
-    try {
-      const message = await ctx.replyWithPhoto(photoUrl, {
-        caption: text,
-        parse_mode: 'HTML',
-        reply_markup: getDoninoKeyboard('speed'),
-      });
-
-      if (message.message_id && userId && cache) {
-        const lastMessageKey = `last_message:${userId}`;
-        await cache.put(lastMessageKey, message.message_id.toString(), { expirationTtl: 86400 });
-      }
-    } catch (error) {
-      await ctx.reply(text, {
-        parse_mode: 'HTML',
-        reply_markup: getDoninoKeyboard('speed'),
-      });
-    }
+    await sendMenuScreen(ctx, cache, {
+      photoUrl: BOT_PHOTOS.donino,
+      text,
+      keyboard: getDoninoKeyboard('speed'),
+    });
   });
 
   donino.callbackQuery('donino_speed', async (ctx) => {
     const records = await api.getSpeedRecords();
     if (records.speed.length === 0) {
-      await editDoninoList(ctx, 'Не удалось загрузить рекорды скорости', 'speed');
+      await editDoninoList(ctx, 'Не удалось загрузить рекорды скорости', 'speed', cache);
       return;
     }
     const text = formatDoninoTopChatText(records.speed, records.coursing, { only: 'speed' });
-    await editDoninoList(ctx, text, 'speed');
+    await editDoninoList(ctx, text, 'speed', cache);
   });
 
   donino.callbackQuery('donino_coursing', async (ctx) => {
     const records = await api.getSpeedRecords();
     if (records.coursing.length === 0) {
-      await editDoninoList(ctx, 'Не удалось загрузить рекорды рейсинга 350м', 'coursing');
+      await editDoninoList(ctx, 'Не удалось загрузить рекорды рейсинга 350м', 'coursing', cache);
       return;
     }
     const text = formatDoninoTopChatText(records.speed, records.coursing, { only: 'racing' });
-    await editDoninoList(ctx, text, 'coursing');
+    await editDoninoList(ctx, text, 'coursing', cache);
   });
 
   return donino;

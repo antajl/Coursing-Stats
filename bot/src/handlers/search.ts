@@ -6,39 +6,36 @@ import { getDisplayName } from './utils/helpers';
 import { buildDogCardPresentation, handleDogIdSearch } from './utils/presentDogCard';
 import { buildInlineDoninoDogResults, findDoninoDogsByName } from '../inlineQuery';
 import { createCompareStateHandlers } from './middleware';
+import { safeEditOrReply } from './commands';
 import { Dog } from '../types';
 import type { KVNamespace } from './context';
 
 /**
- * Вспомогательные функции для обработки поиска по кличке собаки
-
- * @param ctx - контекст Grammy (any тип для совместимости)
+ * Обработка поиска по кличке собаки в едином окне
+ * @param ctx - контекст Grammy
  * @param dogName - кличка собаки для поиска
  * @param api - клиент API Coursing Stats
  * @param cache - опциональное KV хранилище для кэширования
- * @throws {Error} при ошибке поиска
  */
 async function handleDogNameSearch(ctx: any, dogName: string, api: CoursingStatsAPI, cache?: KVNamespace) {
   // Additional validation as defense in depth
   if (!validateSearchQuery(dogName)) {
-    await ctx.reply('❌ Неверный формат запроса. Минимум 2 символа, максимум 100.');
+    await safeEditOrReply(ctx, '❌ Неверный формат запроса. Минимум 2 символа, максимум 100.', {
+      reply_markup: getNavigationButtons('main_menu', 'main_menu'),
+    }, cache);
     return;
   }
   
-  // Delete user's message
-  try {
-    await ctx.deleteMessage();
-  } catch (error) {
-    // Silently fail on message deletion
+  const chatId = ctx.chat?.id;
+  if (chatId) {
+    await ctx.api.sendChatAction(chatId, 'typing').catch(() => {});
   }
-  
-  await ctx.reply(`<b>🔍 Поиск собаки: ${dogName}</b>`, { parse_mode: 'HTML' });
   
   // Prefer competition dogs; Donino is a separate domain (name+breed)
   const dogs = await api.searchDogsByName(dogName, undefined, 5);
   
   if (dogs.length > 0) {
-    let text = `<b>Найдено собак: ${dogs.length}</b>\n\n`;
+    let text = `<b>🔍 Поиск: ${dogName}</b>\nНайдено собак: ${dogs.length}\n\n`;
     
     dogs.forEach((dog: Dog, index: number) => {
       const name = getDisplayName(dog);
@@ -46,15 +43,15 @@ async function handleDogNameSearch(ctx: any, dogName: string, api: CoursingStats
     });
     
     if (dogs.length === 5) {
-      text += '\n<i>Показаны первые 5 результатов. Для более точного поиска введите более конкретное название.</i>';
+      text += '\n<i>Показаны первые 5 результатов. Для уточнения введите более конкретную кличку.</i>';
     }
     
     text += '\n\nВыберите собаку для просмотра:';
     
-    await ctx.reply(text, { 
+    await safeEditOrReply(ctx, text, { 
       parse_mode: 'HTML',
-      reply_markup: getDogSelectionKeyboard(dogs)
-    });
+      reply_markup: getDogSelectionKeyboard(dogs),
+    }, cache);
     return;
   }
 
@@ -63,18 +60,18 @@ async function handleDogNameSearch(ctx: any, dogName: string, api: CoursingStats
 
   if (doninoHits.length > 0) {
     const cards = buildInlineDoninoDogResults(doninoHits);
-    for (const card of cards) {
-      await ctx.reply(card.input_message_content.message_text, {
-        parse_mode: 'HTML',
-        reply_markup: card.reply_markup,
-      });
-    }
+    const firstCard = cards[0];
+    await safeEditOrReply(ctx, firstCard.input_message_content.message_text, {
+      parse_mode: 'HTML',
+      reply_markup: firstCard.reply_markup,
+    }, cache);
     return;
   }
   
-  await ctx.reply(
+  await safeEditOrReply(ctx,
     '❌ Собаки не найдены.\n\nПопробуйте:\n• Другое написание клички\n• Введите ID собаки (число)\n• Более конкретный запрос\n• Inline: @coursing_stats_bot донино',
-    { reply_markup: getNavigationButtons('main_menu', 'main_menu') }
+    { reply_markup: getNavigationButtons('main_menu', 'main_menu') },
+    cache
   );
 }
 
@@ -90,14 +87,15 @@ export function createSearch(api: CoursingStatsAPI, cache?: KVNamespace) {
 
   // Unified text message handler (search + comparison mode)
   search.on('message:text', async (ctx) => {
-    const userId = ctx.from?.id.toString();
+    const userId = ctx.from?.id?.toString();
     const text = sanitizeInput(ctx.message.text);
 
     // Ignore or reject unrecognized slash commands (so /foo is not searched as a dog name)
     if (text.startsWith('/')) {
-      await ctx.reply(
+      await safeEditOrReply(ctx,
         '❌ Неизвестная команда.\n\nИспользуйте меню команд или напишите кличку собаки для поиска.',
-        { reply_markup: getNavigationButtons('main_menu', 'main_menu') }
+        { reply_markup: getNavigationButtons('main_menu', 'main_menu') },
+        cache
       );
       return;
     }
@@ -107,9 +105,9 @@ export function createSearch(api: CoursingStatsAPI, cache?: KVNamespace) {
       if (userId && cache) {
         await cache.delete(`compare:${userId}`);
       }
-      await ctx.reply('Режим сравнения сброшен.', {
+      await safeEditOrReply(ctx, 'Режим сравнения сброшен.', {
         reply_markup: getNavigationButtons('main_menu', 'main_menu')
-      });
+      }, cache);
       return;
     }
     
@@ -120,49 +118,49 @@ export function createSearch(api: CoursingStatsAPI, cache?: KVNamespace) {
         // Handle comparison mode
         const query = text.trim();
         if (query.length < 2) {
-          await ctx.reply('Минимум 2 символа для поиска');
+          await safeEditOrReply(ctx, 'Минимум 2 символа для поиска второй собаки.', {
+            reply_markup: getNavigationButtons('main_menu', 'main_menu')
+          }, cache);
           return;
         }
 
-        const statusMsg = await ctx.reply('<b>Поиск второй собаки...</b>', { parse_mode: 'HTML' });
+        const chatId = ctx.chat?.id;
+        if (chatId) {
+          await ctx.api.sendChatAction(chatId, 'typing').catch(() => {});
+        }
 
         try {
           const dogs = await api.searchDogsByName(query, undefined, 5);
 
-          try {
-            await ctx.api.deleteMessage(ctx.chat!.id, statusMsg.message_id);
-          } catch {
-            // ignore delete failures
-          }
-
           if (!dogs || dogs.length === 0) {
-            await ctx.reply('Ничего не найдено. Попробуйте другой запрос.');
+            await safeEditOrReply(ctx, 'Вторая собака не найдена. Попробуйте другой запрос.', {
+              reply_markup: getNavigationButtons('main_menu', 'main_menu')
+            }, cache);
             return;
           }
 
           // Check if user selected the same dog
           if (dogs.some(d => d.id.toString() === firstDogId)) {
-            await ctx.reply('Выберите другую собаку для сравнения.');
+            await safeEditOrReply(ctx, 'Выберите другую собаку для сравнения (не ту же самую).', {
+              reply_markup: getNavigationButtons('main_menu', 'main_menu')
+            }, cache);
             return;
           }
 
-          let text = `<b>Найдено собак: ${dogs.length}</b>\n\n`;
+          let textResult = `<b>Найдено собак: ${dogs.length}</b>\n\n`;
           dogs.forEach((dog: Dog, index: number) => {
-            text += `${index + 1}. ${getDisplayName(dog)}\n`;
+            textResult += `${index + 1}. ${getDisplayName(dog)}\n`;
           });
-          text += '\nВыберите вторую собаку:';
+          textResult += '\nВыберите вторую собаку:';
 
-          await ctx.reply(text, {
+          await safeEditOrReply(ctx, textResult, {
             parse_mode: 'HTML',
             reply_markup: getDogSelectionKeyboard(dogs, 'compare'),
-          });
+          }, cache);
         } catch (error) {
-          try {
-            await ctx.api.deleteMessage(ctx.chat!.id, statusMsg.message_id);
-          } catch {
-            // ignore
-          }
-          await ctx.reply('Ошибка при поиске. Попробуйте позже.');
+          await safeEditOrReply(ctx, 'Ошибка при поиске. Попробуйте позже.', {
+            reply_markup: getNavigationButtons('main_menu', 'main_menu')
+          }, cache);
         }
         return;
       }
@@ -172,9 +170,10 @@ export function createSearch(api: CoursingStatsAPI, cache?: KVNamespace) {
     // Check if it's a dog ID (number)
     if (/^\d+$/.test(text)) {
       if (!validateDogId(text)) {
-        await ctx.reply(
+        await safeEditOrReply(ctx,
           '❌ Неверный формат ID собаки.\n\nID должен быть числом от 1 до 9999999999.',
-          { reply_markup: getNavigationButtons('main_menu', 'main_menu') }
+          { reply_markup: getNavigationButtons('main_menu', 'main_menu') },
+          cache
         );
         return;
       }
@@ -184,9 +183,10 @@ export function createSearch(api: CoursingStatsAPI, cache?: KVNamespace) {
     
     // Validate minimum length for name search
     if (!validateSearchQuery(text)) {
-      await ctx.reply(
+      await safeEditOrReply(ctx,
         '❌ Минимальная длина запроса - 2 символа.\n\nВведите более длинное название или ID собаки для поиска.',
-        { reply_markup: getNavigationButtons('main_menu', 'main_menu') }
+        { reply_markup: getNavigationButtons('main_menu', 'main_menu') },
+        cache
       );
       return;
     }

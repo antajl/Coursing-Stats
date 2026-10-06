@@ -7,6 +7,15 @@ import type { KVNamespace } from './context';
  * @param cache - опциональное KV хранилище для состояния
  */
 export function setupMiddleware(bot: Bot, cache?: KVNamespace) {
+  // Auto-delete incoming user messages in private chats (commands, searches, text)
+  // so that chat history remains completely clean in single-window mode
+  bot.use(async (ctx, next) => {
+    if (ctx.chat?.type === 'private' && ctx.message?.message_id) {
+      ctx.deleteMessage().catch(() => {});
+    }
+    await next();
+  });
+
   // Middleware to automatically answer callback queries AFTER handlers if not already answered
   bot.use(async (ctx, next) => {
     let answered = false;
