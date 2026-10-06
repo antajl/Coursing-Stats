@@ -361,7 +361,7 @@ export function getDogCardKeyboard(
     .text('🏠 На главную', 'main_menu');
 }
 
-/** Клавиатура для inline-карточки: без «Назад/Главную» (сообщение уходит в чужой чат). */
+/** Клавиатура для inline-карточки (кнопка в избранное, сайт и возврат в главное меню бота) */
 export function getInlineDogCardKeyboard(
   dogId: string,
   options: { isFavorite?: boolean } = {},
@@ -372,7 +372,9 @@ export function getInlineDogCardKeyboard(
 
   return new InlineKeyboard()
     .text(favoriteButton.text, favoriteButton.callback)
-    .url('Профиль на сайте', `https://coursing-stats.ru/dog/${dogId}`);
+    .url('Профиль на сайте', `https://coursing-stats.ru/dog/${dogId}`)
+    .row()
+    .text('🏠 Главное меню', 'main_menu');
 }
 
 export function getCompareKeyboard(firstDogId: string): InlineKeyboard {
