@@ -33,5 +33,5 @@ export function setupHandlers(bot: Bot, api: CoursingStatsAPI, cache?: KVNamespa
   bot.use(createFavorites(api, cache));
   bot.use(createComparison(api, cache));
   bot.use(createDogs(api, cache));
-  bot.use(createGuide(api));
+  bot.use(createGuide(api, cache));
 }

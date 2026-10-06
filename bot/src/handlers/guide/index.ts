@@ -1,6 +1,8 @@
 import { Composer } from 'grammy';
 import { CoursingStatsAPI } from '../../api';
 import { getNavigationButtons } from '../../keyboards';
+import { safeEditOrReply } from '../commands';
+import type { KVNamespace } from '../context';
 
 /**
  * Обработчики справки (Guide) с 5 разделами
@@ -8,7 +10,7 @@ import { getNavigationButtons } from '../../keyboards';
  * @param cache - опциональное KV хранилище для кэширования
  * @returns экземпляр Composer с обработчиками справки
  */
-export function createGuide(api: CoursingStatsAPI) {
+export function createGuide(api: CoursingStatsAPI, cache?: KVNamespace) {
   const guide = new Composer();
 
   /**
@@ -36,10 +38,10 @@ CACIL > CQN > Чемпион России > Чемпион РКФ
 <a href="https://coursing-stats.ru/guide?tab=titles">🌐 Подробнее на сайте</a>
     `.trim();
     
-    await ctx.editMessageText(text, {
+    await safeEditOrReply(ctx, text, {
       parse_mode: 'HTML',
       reply_markup: getNavigationButtons('guide_menu', 'main_menu')
-    });
+    }, cache);
   });
 
   /**
@@ -69,10 +71,10 @@ CACIL > CQN > Чемпион России > Чемпион РКФ
 <a href="https://coursing-stats.ru/guide?tab=shows">🌐 Подробнее на сайте</a>
     `.trim();
     
-    await ctx.editMessageText(text, {
+    await safeEditOrReply(ctx, text, {
       parse_mode: 'HTML',
       reply_markup: getNavigationButtons('guide_menu', 'main_menu')
-    });
+    }, cache);
   });
 
   /**
@@ -103,10 +105,10 @@ CACIL > CQN > Чемпион России > Чемпион РКФ
 <a href="https://coursing-stats.ru/guide?tab=protocol">🌐 Подробнее на сайте</a>
     `.trim();
     
-    await ctx.editMessageText(text, {
+    await safeEditOrReply(ctx, text, {
       parse_mode: 'HTML',
       reply_markup: getNavigationButtons('guide_menu', 'main_menu')
-    });
+    }, cache);
   });
 
   /**
@@ -136,10 +138,10 @@ CACIL > CQN > Чемпион России > Чемпион РКФ
 <a href="https://coursing-stats.ru/guide?tab=rating">🌐 Подробнее на сайте</a>
     `.trim();
     
-    await ctx.editMessageText(text, {
+    await safeEditOrReply(ctx, text, {
       parse_mode: 'HTML',
       reply_markup: getNavigationButtons('guide_menu', 'main_menu')
-    });
+    }, cache);
   });
 
   /**
@@ -171,10 +173,10 @@ MIT License — открытый исходный код
 <a href="https://coursing-stats.ru/guide?tab=site">🌐 Подробнее на сайте</a>
     `.trim();
     
-    await ctx.editMessageText(text, {
+    await safeEditOrReply(ctx, text, {
       parse_mode: 'HTML',
       reply_markup: getNavigationButtons('guide_menu', 'main_menu')
-    });
+    }, cache);
   });
 
   return guide;
