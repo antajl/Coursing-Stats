@@ -37,9 +37,11 @@ export async function buildDogCardPresentation(
     isDogFavorite(options.cache, options.userId, dogId),
   ]);
 
+  const dogName = dogData.dog.name_ru || dogData.dog.name_lat;
+
   return {
     text: formatDogCard(dogData, { shows }),
-    reply_markup: getDogCardKeyboard(dogId, options.backCallback ?? 'main_menu', { isFavorite }),
+    reply_markup: getDogCardKeyboard(dogId, options.backCallback ?? 'main_menu', { isFavorite, dogName }),
   };
 }
 

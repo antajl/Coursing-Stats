@@ -183,7 +183,8 @@ export function formatDogCard(dogData: DogData, options: FormatDogCardOptions = 
       `• Выставок: ${shows.total_shows} · Высшая награда: ${formatShowAward(shows.best_award)}`,
       ...(titleLines.length > 0 ? [`• Титулы: ${titleLines.join(', ')}`] : []),
     ].join('\n');
-    lines.push('', `<blockquote>${showsBlock}</blockquote>`);
+    const quoteTag = titleLines.length > 0 ? 'blockquote expandable' : 'blockquote';
+    lines.push('', `<${quoteTag}>${showsBlock}</${quoteTag.split(' ')[0]}>`);
   }
 
   return lines.join('\n').trim();
