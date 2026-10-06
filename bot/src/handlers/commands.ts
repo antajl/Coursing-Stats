@@ -47,58 +47,85 @@ async function addReaction(ctx: any, emoji: string) {
  * @param cache - опциональное KV хранилище для сохранения ID сообщения
  */
 export async function safeEditOrReply(ctx: any, text: string, options: any = {}, cache?: KVNamespace) {
-  const userId = ctx.from?.id.toString();
+  const userId = ctx.from?.id?.toString();
   const chatId = ctx.chat?.id;
   const msg = ctx.callbackQuery?.message;
   
-  try {
-    if (msg && 'photo' in msg && msg.photo) {
-      if (text.length <= 1024) {
-        await ctx.editMessageCaption({
-          caption: text,
-          parse_mode: options.parse_mode,
-          reply_markup: options.reply_markup,
-        });
+  // 1. If called from an inline callback query
+  if (msg) {
+    try {
+      if ('photo' in msg && msg.photo) {
+        if (text.length <= 1024) {
+          await ctx.editMessageCaption({
+            caption: text,
+            parse_mode: options.parse_mode,
+            reply_markup: options.reply_markup,
+          });
+          return;
+        }
+        // Caption exceeds 1024 characters; delete photo and send standard message
+        try {
+          await ctx.deleteMessage();
+        } catch {}
+        const message = await ctx.reply(text, options);
+        if (message?.message_id && userId && cache) {
+          await cache.put(`last_message:${userId}`, message.message_id.toString(), { expirationTtl: 86400 });
+        }
         return;
       }
-      // Caption exceeds 1024 characters; delete photo and send standard message
-      try {
-        await ctx.deleteMessage();
-      } catch {}
-      const message = await ctx.reply(text, options);
-      if (message?.message_id && userId && cache) {
-        await cache.put(`last_message:${userId}`, message.message_id.toString(), { expirationTtl: 86400 });
-      }
+      await ctx.editMessageText(text, options);
       return;
+    } catch (editError: any) {
+      if (editError?.description?.includes('message is not modified')) {
+        return;
+      }
     }
-    await ctx.editMessageText(text, options);
-  } catch (editError) {
-    console.error('[safeEditOrReply] Failed to edit message, using delete+reply:', editError);
-    
-    // Delete current message or cached previous message
-    const msgIdToDelete = msg?.message_id;
-    if (msgIdToDelete && chatId) {
+  }
+
+  // 2. If called from a text message / command, edit the active window in-place if possible
+  if (!msg && userId && chatId && cache) {
+    const lastMessageKey = `last_message:${userId}`;
+    const lastMessageId = await cache.get(lastMessageKey);
+
+    if (lastMessageId) {
       try {
-        await ctx.api.deleteMessage(chatId, msgIdToDelete);
-      } catch {}
-    } else if (userId && chatId && cache) {
-      const lastMessageKey = `last_message:${userId}`;
-      const lastMessageId = await cache.get(lastMessageKey);
-      if (lastMessageId) {
+        await ctx.api.editMessageText(chatId, parseInt(lastMessageId, 10), text, options);
+        return; // Successfully edited active window in-place!
+      } catch (inPlaceError: any) {
+        if (inPlaceError?.description?.includes('message is not modified')) {
+          return;
+        }
+        // If edit failed (e.g. previous was photo banner or message too old), delete old message
         try {
-          await ctx.api.deleteMessage(chatId, parseInt(lastMessageId));
+          await ctx.api.deleteMessage(chatId, parseInt(lastMessageId, 10));
         } catch {}
       }
     }
-    
-    // Send new message
+  }
+
+  // 3. Fallback: delete old message if any, send 1 new message and record in KV
+  if (msg?.message_id && chatId) {
+    try {
+      await ctx.api.deleteMessage(chatId, msg.message_id);
+    } catch {}
+  } else if (userId && chatId && cache) {
+    const lastMessageKey = `last_message:${userId}`;
+    const lastMessageId = await cache.get(lastMessageKey);
+    if (lastMessageId) {
+      try {
+        await ctx.api.deleteMessage(chatId, parseInt(lastMessageId, 10));
+      } catch {}
+    }
+  }
+
+  try {
     const message = await ctx.reply(text, options);
-    
-    // Save the new message ID if cache is available
     if (message?.message_id && userId && cache) {
       const lastMessageKey = `last_message:${userId}`;
-      await cache.put(lastMessageKey, message.message_id.toString(), { expirationTtl: 86400 }); // 24 hours
+      await cache.put(lastMessageKey, message.message_id.toString(), { expirationTtl: 86400 });
     }
+  } catch (replyError) {
+    console.error('[safeEditOrReply] Failed to send reply:', replyError);
   }
 }
 
@@ -254,7 +281,9 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
   if (args && args.startsWith('dog_')) {
     const dogId = args.replace('dog_', '');
     if (!validateDogId(dogId)) {
-      await ctx.reply('❌ Неверный формат ссылки. Пожалуйста, используйте кнопку меню для поиска.');
+      await safeEditOrReply(ctx, '❌ Неверный формат ссылки. Пожалуйста, используйте кнопку меню для поиска.', {
+        reply_markup: getNavigationButtons('main_menu', 'main_menu'),
+      }, cache);
       return;
     }
     await handleDogIdSearch(ctx, dogId, api, cache);
@@ -262,14 +291,14 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
   }
 
   if (args === 'donino') {
-      const records = await api.getSpeedRecords();
-      const text = formatDoninoTopChatText(records.speed, records.coursing, { only: 'speed' });
-      await ctx.reply(text, {
-        parse_mode: 'HTML',
-        reply_markup: getDoninoKeyboard('speed'),
-      });
-      return;
-    }
+    const records = await api.getSpeedRecords();
+    const text = formatDoninoTopChatText(records.speed, records.coursing, { only: 'speed' });
+    await safeEditOrReply(ctx, text, {
+      parse_mode: 'HTML',
+      reply_markup: getDoninoKeyboard('speed'),
+    }, cache);
+    return;
+  }
     
   const welcomeText = `
 <b>Coursing Stats</b> — статистика соревнований собак
@@ -356,34 +385,34 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
   commands.command('donino', async (ctx) => {
     const records = await api.getSpeedRecords();
     const text = formatDoninoTopChatText(records.speed, records.coursing, { only: 'speed' });
-    await ctx.reply(text, {
+    await safeEditOrReply(ctx, text, {
       parse_mode: 'HTML',
       reply_markup: getDoninoKeyboard('speed'),
-    });
+    }, cache);
   });
 
-  commands.command('favorites', async (ctx) => {
-    const userId = ctx.from?.id.toString();
+  commands.command(['favorites', 'mystats'], async (ctx) => {
+    const userId = ctx.from?.id?.toString();
     if (!userId || !cache) {
-      await ctx.reply('Функция избранного временно недоступна.', {
+      await safeEditOrReply(ctx, 'Функция избранного временно недоступна.', {
         reply_markup: getNavigationButtons('main_menu', 'main_menu'),
-      });
+      }, cache);
       return;
     }
     const favoritesData = await cache.get(`favorites:${userId}`);
     const dogIds = favoritesData ? (JSON.parse(favoritesData) as number[]) : [];
     if (dogIds.length === 0) {
-      await ctx.reply('У вас пока нет избранных собак.\n\nДля добавления используйте кнопку «В избранное» в профиле собаки.', {
+      await safeEditOrReply(ctx, 'У вас пока нет избранных собак.\n\nДля добавления используйте кнопку «В избранное» в профиле собаки.', {
         reply_markup: getNavigationButtons('main_menu', 'main_menu'),
-      });
+      }, cache);
       return;
     }
     const dogs = await Promise.all(dogIds.slice(0, 20).map((id) => api.getDogById(id.toString())));
     const validDogs = dogs.filter((d): d is NonNullable<typeof d> => d !== null);
     if (validDogs.length === 0) {
-      await ctx.reply('Не удалось загрузить данные избранных собак.', {
+      await safeEditOrReply(ctx, 'Не удалось загрузить данные избранных собак.', {
         reply_markup: getNavigationButtons('main_menu', 'main_menu'),
-      });
+      }, cache);
       return;
     }
     let text = `<b>Избранные собаки (${validDogs.length})</b>\n\n`;
@@ -395,10 +424,10 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
     });
     text += '\nВыберите собаку, чтобы открыть карточку:';
     const { getFavoritesKeyboard } = await import('../keyboards');
-    await ctx.reply(text, {
+    await safeEditOrReply(ctx, text, {
       parse_mode: 'HTML',
       reply_markup: getFavoritesKeyboard(listDogs),
-    });
+    }, cache);
   });
 
   commands.command('competitions', async (ctx) => {
@@ -420,16 +449,18 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
     const breedQuery = text.replace(/^\/breed/, '').trim();
 
     if (!breedQuery || breedQuery.length < 2) {
-      await ctx.reply(
+      await safeEditOrReply(
+        ctx,
         'Пожалуйста, укажите породу после команды.\n\nПример:\n<code>/breed салюки</code>\n<code>/breed уиппет</code>',
         { parse_mode: 'HTML', reply_markup: getNavigationButtons('main_menu', 'main_menu') },
+        cache,
       );
       return;
     }
 
     const chatId = ctx.chat?.id;
     if (chatId) {
-      await ctx.api.sendChatAction(chatId, 'typing');
+      await ctx.api.sendChatAction(chatId, 'typing').catch(() => {});
     }
 
     const dogs = await api.searchDogsByName('', breedQuery, 10);
@@ -437,9 +468,9 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
       // Fallback search
       const fallback = await api.searchDogsByName(breedQuery, undefined, 10);
       if (!fallback || fallback.length === 0) {
-        await ctx.reply(`Собаки породы «${breedQuery}» не найдены.`, {
+        await safeEditOrReply(ctx, `Собаки породы «${breedQuery}» не найдены.`, {
           reply_markup: getNavigationButtons('main_menu', 'main_menu'),
-        });
+        }, cache);
         return;
       }
 
@@ -450,10 +481,10 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
       respText += '\nВыберите собаку для просмотра:';
 
       const { getDogSelectionKeyboard } = await import('../keyboards');
-      await ctx.reply(respText, {
+      await safeEditOrReply(ctx, respText, {
         parse_mode: 'HTML',
         reply_markup: getDogSelectionKeyboard(fallback),
-      });
+      }, cache);
       return;
     }
 
@@ -464,10 +495,10 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
     respText += '\nВыберите собаку для просмотра:';
 
     const { getDogSelectionKeyboard } = await import('../keyboards');
-    await ctx.reply(respText, {
+    await safeEditOrReply(ctx, respText, {
       parse_mode: 'HTML',
       reply_markup: getDogSelectionKeyboard(dogs),
-    });
+    }, cache);
   });
 
   /**
