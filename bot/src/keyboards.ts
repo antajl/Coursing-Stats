@@ -222,12 +222,28 @@ export function getRatingKeyboard(discipline: string, category: string, year: st
       keyboard.text('Elo', `rating_${discipline}_elo_${year}`);
     }
     keyboard.row();
-    keyboard.text('Другой год', `rating_${discipline}_${category}_years`);
+    keyboard.text('2024', `rating_${discipline}_${category}_2024`);
+    keyboard.text('2025', `rating_${discipline}_${category}_2025`);
+    keyboard.text('2026', `rating_${discipline}_${category}_2026`);
+    keyboard.text('Все', `rating_${discipline}_${category}_all`);
+    keyboard.row();
+    keyboard.text('Архив годов…', `rating_${discipline}_${category}_years`);
   } else if (discipline === 'racing') {
-    keyboard.text('Другой год', `rating_racing_placement_years`);
+    keyboard.row();
+    keyboard.text('2024', `rating_racing_placement_2024`);
+    keyboard.text('2025', `rating_racing_placement_2025`);
+    keyboard.text('2026', `rating_racing_placement_2026`);
+    keyboard.text('Все', `rating_racing_placement_all`);
+    keyboard.row();
+    keyboard.text('Архив годов…', `rating_racing_placement_years`);
   } else {
-    // For shows, only year selector
-    keyboard.text('Другой год', `rating_shows_years`);
+    // For shows
+    keyboard.row();
+    keyboard.text('2024', `rating_shows_2024`);
+    keyboard.text('2025', `rating_shows_2025`);
+    keyboard.text('2026', `rating_shows_2026`);
+    keyboard.row();
+    keyboard.text('Архив годов…', `rating_shows_years`);
   }
 
   keyboard.row();
@@ -327,14 +343,18 @@ export function getFavoritesKeyboard(
 export function getDogCardKeyboard(
   dogId: string,
   backCallback: string = 'main_menu',
-  options: { isFavorite?: boolean } = {},
+  options: { isFavorite?: boolean; dogName?: string } = {},
 ): InlineKeyboard {
   const favoriteButton = options.isFavorite
     ? { text: '⭐ В избранном', callback: `remove_favorite:${dogId}` }
     : { text: 'В избранное', callback: `add_favorite:${dogId}` };
 
+  const shareQuery = options.dogName || dogId;
+
   return new InlineKeyboard()
     .text(favoriteButton.text, favoriteButton.callback)
+    .switchInline('↗️ Поделиться', shareQuery)
+    .row()
     .webApp('Профиль на сайте', `https://coursing-stats.ru/dog/${dogId}`)
     .row()
     .text('← Назад', backCallback)

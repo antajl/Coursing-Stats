@@ -6,29 +6,42 @@ import { validateYear } from '../utils/validators';
 import { Rating, RatingItem } from '../../types';
 import type { KVNamespace } from '../context';
 
+function getRankBadge(index: number): string {
+  if (index === 0) return '🥇';
+  if (index === 1) return '🥈';
+  if (index === 2) return '🥉';
+  return `${index + 1}.`;
+}
+
 function formatRacingRatings(ratingList: Rating[], yearLabel: string): string {
-  let text = `<b>Топ-${ratingList.length} скорость - Бега борзых (${yearLabel})</b>\n\n`;
+  let text = `<b>Топ-${ratingList.length} скорость · Бега борзых (${yearLabel})</b>\n\n`;
   text += `<i>💡 Рейтинг по лучшей скорости (км/ч), отдельно от медалей и очков CS</i>\n\n`;
   ratingList.forEach((rating, index) => {
+    const badge = getRankBadge(index);
     const name = getDisplayName(rating);
-    const breed = rating.breed || '';
+    const breed = rating.breed ? `<i>${rating.breed}</i>` : '';
     const best = rating.best_speed != null ? rating.best_speed.toFixed(2) : '-';
     const avg = rating.avg_speed != null ? rating.avg_speed.toFixed(2) : '-';
-    const starts = rating.total_starts || '-';
-    text += `${index + 1}. ${name} (${breed})\n   Лучшая: ${best} км/ч | Средняя: ${avg} | Участия: ${starts}\n\n`;
+    const starts = rating.total_starts ?? '-';
+
+    text += `${badge} <b>${name}</b> ${breed ? `· ${breed}` : ''}\n`;
+    text += `<code>Лучшая: ${best} км/ч · ср. ${avg} · ${starts} ст.</code>\n\n`;
   });
   return text;
 }
 
 function formatEloRatings(ratingList: Rating[], yearLabel: string): string {
-  let text = `<b>Топ-${ratingList.length} Elo-рейтинг - Курсинг (${yearLabel})</b>\n\n`;
+  let text = `<b>Топ-${ratingList.length} Elo-рейтинг · Курсинг (${yearLabel})</b>\n\n`;
   text += `<i>💡 Динамический рейтинг силы соперников (Elo-v2), отдельно от медалей и CS</i>\n\n`;
   ratingList.forEach((rating, index) => {
+    const badge = getRankBadge(index);
     const name = getDisplayName(rating);
-    const breed = rating.breed || '';
+    const breed = rating.breed ? `<i>${rating.breed}</i>` : '';
     const elo = rating.elo_rating ?? '-';
     const races = rating.elo_races ?? rating.total_starts ?? '-';
-    text += `${index + 1}. ${name} (${breed})\n   Elo: <b>${elo}</b> | Забегов: ${races}\n\n`;
+
+    text += `${badge} <b>${name}</b> ${breed ? `· ${breed}` : ''}\n`;
+    text += `<code>Рейтинг: ${elo} Elo · Забегов: ${races}</code>\n\n`;
   });
   return text;
 }
@@ -37,25 +50,27 @@ function formatCoursingRatings(ratingList: Rating[], category: string, yearLabel
   if (category === 'elo') {
     return formatEloRatings(ratingList, yearLabel);
   }
-  let text = `<b>Топ-${ratingList.length} ${category === 'score' ? 'по очкам' : 'медали'} - Курсинг (${yearLabel})</b>\n\n`;
+  let text = `<b>Топ-${ratingList.length} ${category === 'score' ? 'по очкам' : 'по медалям'} · Курсинг (${yearLabel})</b>\n\n`;
   if (category === 'score') {
     text += `<i>💡 Индекс — усреднённая оценка судей за все участия</i>\n\n`;
   }
   ratingList.forEach((rating, index) => {
+    const badge = getRankBadge(index);
     const name = getDisplayName(rating);
-    const breed = rating.breed || '';
+    const breed = rating.breed ? `<i>${rating.breed}</i>` : '';
+    const starts = rating.total_starts ?? '-';
+
+    text += `${badge} <b>${name}</b> ${breed ? `· ${breed}` : ''}\n`;
     if (category === 'score') {
       const score = rating.rating_score || rating.score || rating.total_score || '-';
       const best = rating.best_score || '-';
       const avg = rating.avg_judge_score || '-';
-      const starts = rating.total_starts || '-';
-      text += `${index + 1}. ${name} (${breed})\n   Индекс: ${score} | Средний: ${avg} | Лучший: ${best} | Участия: ${starts}\n\n`;
+      text += `<code>Индекс: ${score} · ср. ${avg} · макс ${best} · ${starts} ст.</code>\n\n`;
     } else {
       const gold = rating.gold || 0;
       const silver = rating.silver || 0;
       const bronze = rating.bronze || 0;
-      const starts = rating.total_starts || '-';
-      text += `${index + 1}. ${name} (${breed})\n   🥇${gold} 🥈${silver} 🥉${bronze} | Участия: ${starts}\n\n`;
+      text += `<code>🥇 ${gold}  🥈 ${silver}  🥉 ${bronze} · Стартов: ${starts}</code>\n\n`;
     }
   });
   return text;
