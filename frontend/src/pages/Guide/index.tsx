@@ -3,6 +3,7 @@ import { useSearchParams } from 'react-router-dom'
 import { SEO } from '../../components/SEO'
 import { JsonLd, faqPageSchema } from '../../components/JsonLd'
 import { useYandexGoal } from '../../components/YandexMetrica'
+import { MobileSubNavTabs } from '../../components/ui/MobileSubNavTabs'
 import { GUIDE_FAQS } from './guideFaqs'
 import ProtocolTab from './components/ProtocolTab'
 import RatingTab from './components/RatingTab'
@@ -62,13 +63,6 @@ export default function Guide() {
   const activeTab = parseGuideTab(searchParams.get('tab'))
   const section = GUIDE_SECTIONS.find((s) => s.id === activeTab) ?? GUIDE_SECTIONS[0]
   const { reachGoal } = useYandexGoal()
-
-  const handleTabChange = (newTab: TabId) => {
-    const next = new URLSearchParams(searchParams)
-    next.set('tab', newTab)
-    setSearchParams(next)
-  }
-
   useEffect(() => {
     reachGoal('guide_view')
   }, [reachGoal])
@@ -82,29 +76,12 @@ export default function Guide() {
         canonicalUrl={`https://coursing-stats.ru/guide?tab=${activeTab}`}
       />
       <JsonLd data={faqPageSchema(GUIDE_FAQS)} />
-
-      {/* Mobile-only tab switcher (как на остальных страницах сайта) */}
-      <div className="mb-4 flex items-center justify-between md:hidden">
-        <div className="flex w-full items-center gap-1 overflow-x-auto rounded-xl border border-old-money-200/80 bg-white/80 p-1 shadow-xs">
-          {GUIDE_SECTIONS.map((s) => {
-            const active = activeTab === s.id
-            return (
-              <button
-                key={s.id}
-                type="button"
-                onClick={() => handleTabChange(s.id)}
-                className={`flex flex-1 items-center justify-center rounded-lg py-1.5 px-2 text-xs font-semibold whitespace-nowrap transition-all ${
-                  active
-                    ? 'bg-camel-500 text-charcoal-900 shadow-sm'
-                    : 'text-charcoal-600 hover:text-charcoal-900 hover:bg-cream-50/50'
-                }`}
-              >
-                {s.label}
-              </button>
-            )
-          })}
-        </div>
-      </div>
+      <MobileSubNavTabs
+        tabs={GUIDE_SECTIONS}
+        activeTab={activeTab}
+        onChange={handleTabChange}
+        ariaLabel="Разделы справочника"
+      />
 
       {/* Main Content */}
       <div className="space-y-6">

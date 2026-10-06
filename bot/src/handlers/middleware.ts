@@ -8,9 +8,27 @@ import type { KVNamespace } from './context';
  */
 export function setupMiddleware(bot: Bot, cache?: KVNamespace) {
   // Auto-delete incoming user messages in private chats (commands, searches, text)
-  // so that chat history remains completely clean in single-window mode
+  // so that chat history remains completely clean in single-window mode.
+  // Note: if message is sent via inline query (via_bot), do NOT delete it!
   bot.use(async (ctx, next) => {
-    if (ctx.chat?.type === 'private' && ctx.message?.message_id) {
+    if (ctx.chat?.type === 'private' && ctx.message) {
+      if (ctx.message.via_bot) {
+        // User picked a dog card from inline query ("В чате")
+        const userId = ctx.from?.id?.toString();
+        const chatId = ctx.chat.id;
+        if (userId && cache) {
+          const lastMessageKey = `last_message:${userId}`;
+          const lastId = await cache.get(lastMessageKey);
+          if (lastId) {
+            try {
+              await ctx.api.deleteMessage(chatId, parseInt(lastId, 10));
+            } catch {}
+          }
+          await cache.put(lastMessageKey, ctx.message.message_id.toString(), { expirationTtl: 86400 });
+        }
+        return; // Do not pass inline result cards down to text search handler
+      }
+
       ctx.deleteMessage().catch(() => {});
     }
     await next();
