@@ -53,29 +53,41 @@ export async function safeEditOrReply(ctx: any, text: string, options: any = {},
   
   try {
     if (msg && 'photo' in msg && msg.photo) {
-      await ctx.editMessageCaption({
-        caption: text,
-        parse_mode: options.parse_mode,
-        reply_markup: options.reply_markup,
-      });
+      if (text.length <= 1024) {
+        await ctx.editMessageCaption({
+          caption: text,
+          parse_mode: options.parse_mode,
+          reply_markup: options.reply_markup,
+        });
+        return;
+      }
+      // Caption exceeds 1024 characters; delete photo and send standard message
+      try {
+        await ctx.deleteMessage();
+      } catch {}
+      const message = await ctx.reply(text, options);
+      if (message?.message_id && userId && cache) {
+        await cache.put(`last_message:${userId}`, message.message_id.toString(), { expirationTtl: 86400 });
+      }
       return;
     }
     await ctx.editMessageText(text, options);
   } catch (editError) {
     console.error('[safeEditOrReply] Failed to edit message, using delete+reply:', editError);
     
-    // Delete previous message if exists
-    if (userId && chatId && cache) {
+    // Delete current message or cached previous message
+    const msgIdToDelete = msg?.message_id;
+    if (msgIdToDelete && chatId) {
+      try {
+        await ctx.api.deleteMessage(chatId, msgIdToDelete);
+      } catch {}
+    } else if (userId && chatId && cache) {
       const lastMessageKey = `last_message:${userId}`;
       const lastMessageId = await cache.get(lastMessageKey);
-      
       if (lastMessageId) {
         try {
           await ctx.api.deleteMessage(chatId, parseInt(lastMessageId));
-        } catch (deleteError) {
-          // Ignore errors if message is too old or already deleted
-          console.error('[safeEditOrReply] Failed to delete previous message:', deleteError);
-        }
+        } catch {}
       }
     }
     
@@ -83,7 +95,7 @@ export async function safeEditOrReply(ctx: any, text: string, options: any = {},
     const message = await ctx.reply(text, options);
     
     // Save the new message ID if cache is available
-    if (message.message_id && userId && cache) {
+    if (message?.message_id && userId && cache) {
       const lastMessageKey = `last_message:${userId}`;
       await cache.put(lastMessageKey, message.message_id.toString(), { expirationTtl: 86400 }); // 24 hours
     }

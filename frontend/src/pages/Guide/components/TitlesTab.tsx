@@ -1,173 +1,164 @@
+import { useState } from 'react'
+import { ChevronDown } from 'lucide-react'
 import {
   ABBREVIATIONS,
-  CH_RUSSIA_VARIANTS,
-  COURSING_CERTIFICATES,
-  COURSING_CACL_QUALIFICATION,
   COURSING_REQUIREMENTS,
-  CUMULATIVE_TITLES,
-  EVENT_TITLES,
-  NATIONAL_CHAMPION_VARIANTS,
   OFFICIAL_SOURCES,
-  STATUS_EVENT_RULES,
+  TITLE_RANK_LADDER,
+  type TitleRankItem,
 } from '../constants'
 import {
-  AbbrTag,
-  AbbreviationsTable,
-  CertificateLevelsGrid,
-  CumulativeTitlesGrid,
-  EventTitlesGrid,
-  FeatureNotesGrid,
-  InfoCallout,
+  AbbreviationsDropdown,
   OfficialSourcesList,
   RefTag,
   SectionCard,
   TitleBadge,
-  TitleHierarchySection,
 } from './GuideUi'
+
+function TitleLadderList() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null)
+
+  const tierBg = {
+    absolute: 'border-amber-300/90 bg-amber-50/50 hover:bg-amber-50/80',
+    annual: 'border-camel-300/90 bg-camel-50/50 hover:bg-camel-50/80',
+    career: 'border-old-money-200 bg-white hover:bg-old-money-50/50',
+    cert: 'border-old-money-200/90 bg-cream-50/40 hover:bg-cream-50/70',
+  }
+
+  const badgeFrame = {
+    absolute: 'border-2 border-amber-500 bg-amber-100 text-amber-900 font-bold shadow-2xs',
+    annual: 'border-2 border-camel-500 bg-camel-100 text-camel-900 font-bold shadow-2xs',
+    career: 'border border-camel-400 bg-cream-50 text-camel-800 font-semibold shadow-2xs',
+    cert: 'border border-old-money-300 bg-white text-charcoal-800 font-medium shadow-2xs',
+  }
+
+  const tagColor = {
+    absolute: 'bg-amber-100 text-amber-900 border-amber-300',
+    annual: 'bg-camel-100 text-camel-900 border-camel-300',
+    career: 'bg-old-money-100 text-charcoal-800 border-old-money-200',
+    cert: 'bg-white text-charcoal-700 border-old-money-200',
+  }
+
+  return (
+    <div className="space-y-2">
+      {TITLE_RANK_LADDER.map((item, idx) => {
+        const isOpen = openIndex === idx
+        return (
+          <div
+            key={item.badge}
+            className={`rounded-lg border transition-all shadow-2xs ${tierBg[item.prestigeTier]}`}
+          >
+            <button
+              type="button"
+              onClick={() => setOpenIndex(isOpen ? null : idx)}
+              className="flex w-full items-center justify-between gap-2.5 p-2.5 sm:px-3 sm:py-2.5 text-left"
+            >
+              <div className="flex min-w-0 flex-1 items-center gap-2.5">
+                <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white text-[11px] font-bold text-charcoal-700 shadow-2xs">
+                  {item.rank}
+                </span>
+                <span
+                  className={`inline-block shrink-0 rounded px-2 py-0.5 text-xs ${badgeFrame[item.prestigeTier]}`}
+                >
+                  {item.badge}
+                </span>
+                <div className="min-w-0 flex-1">
+                  <div className="flex flex-wrap items-center gap-1.5">
+                    <span className="font-serif text-xs font-bold text-charcoal-900 sm:text-sm truncate">
+                      {item.name}
+                    </span>
+                  </div>
+                  <div className="text-[11px] text-charcoal-600 sm:text-xs">
+                    <span className="font-semibold text-charcoal-900">Как получить:</span> {item.howToGet}
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex shrink-0 items-center gap-2">
+                <span
+                  className={`hidden rounded border px-2 py-0.5 text-[10px] font-semibold md:inline-block shadow-2xs ${tagColor[item.prestigeTier]}`}
+                >
+                  {item.prestigeLabel}
+                </span>
+                <ChevronDown
+                  className={`h-4 w-4 text-charcoal-400 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+                  aria-hidden
+                />
+              </div>
+            </button>
+
+            {isOpen && (
+              <div className="border-t border-old-money-100 bg-white/80 px-3.5 py-2.5 text-xs text-charcoal-600">
+                <p className="leading-relaxed">{item.details}</p>
+                {item.extraList && (
+                  <div className="mt-2 rounded border border-old-money-200 bg-old-money-50/50 p-2 text-[11px]">
+                    <span className="font-semibold text-charcoal-800">Официальные варианты набора (РКФ):</span>
+                    <ul className="mt-1 list-disc pl-4 space-y-0.5 text-charcoal-600">
+                      {item.extraList.map((variant) => (
+                        <li key={variant}>{variant}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {item.ref && <RefTag>{item.ref}</RefTag>}
+              </div>
+            )}
+          </div>
+        )
+      })}
+    </div>
+  )
+}
 
 export default function TitlesTab() {
   return (
     <div className="space-y-6">
-      <SectionCard title="Официальные источники">
-        <p>
-          Ниже — выжимка по{' '}
-          <strong className="font-semibold text-charcoal-800">курсингу и бегам борзых</strong>{' '}
-          из документов РКФ. Это <strong>отдельная</strong> дисциплина от выставок (см. вкладку «Выставки»). При
-          расхождении с протоколом или при оформлении диплома ориентируйтесь на полные тексты.
+      {/* 1. Наглядная лестница титулов: ценность и как получить */}
+      <SectionCard title="Лестница титулов: ценность и как получить">
+        <p className="text-xs text-charcoal-600">
+          Сравнение всех титулов от абсолютной вершины до базовых полевых сертификатов (клик по строке раскроет детали регламента):
+        </p>
+
+        <TitleLadderList />
+      </SectionCard>
+
+      {/* 3. Ключевые правила состязаний (Памятка участника) */}
+      <SectionCard title="Памятка участника: кворум и условия сертификатов">
+        <div className="grid gap-3 sm:grid-cols-2">
+          {COURSING_REQUIREMENTS.map((req) => (
+            <div
+              key={req.label}
+              className="rounded-xl border border-old-money-200 bg-white p-3.5 shadow-2xs"
+            >
+              <div className="text-[11px] font-bold uppercase tracking-wider text-camel-800">
+                {req.label}
+              </div>
+              <p className="mt-1.5 text-xs leading-relaxed text-charcoal-700">
+                {req.text}
+              </p>
+              <RefTag>{req.ref}</RefTag>
+            </div>
+          ))}
+        </div>
+      </SectionCard>
+
+      {/* 4. Словарь сокращений */}
+      <SectionCard title="Словарь сокращений в протоколах">
+        <p className="text-xs text-charcoal-600">
+          Выберите официальное сокращение титула или сертификата, чтобы увидеть его расшифровку:
+        </p>
+        <AbbreviationsDropdown
+          rows={ABBREVIATIONS}
+          refTag={<RefTag>Положение РКФ о титулах, разд. IV · abbreviation.pdf</RefTag>}
+        />
+      </SectionCard>
+
+      {/* 5. Первоисточники и регламенты РКФ */}
+      <SectionCard title="Официальные первоисточники и регламенты">
+        <p className="text-xs text-charcoal-600">
+          Нормативные документы РКФ, регламентирующие правила присвоения титулов:
         </p>
         <OfficialSourcesList sources={OFFICIAL_SOURCES} />
-      </SectionCard>
-
-      <TitleHierarchySection
-        title="Иерархия наград: собирательные → крутые → сертификаты → прочее"
-        levels={[
-          {
-            tier: 'cumulative',
-            label: 'Собирательные',
-            badges: ['ГЧР РК', 'ГЧРКФ РК', 'НЧ РК', 'ПЧ РК'],
-            note: 'Оформляются в РКФ по набору; гранды — сложнее одного участия',
-          },
-          {
-            tier: 'prestige',
-            label: 'Крутые (титулы соревнования)',
-            badges: ['ЧР РК', 'ПКР РК', 'ЧРКФ РК', 'ПЧРКФ РК'],
-            note: 'Присваиваются на статусном мероприятии за 1 место (не путать с выставочным ЧРКФ)',
-          },
-          {
-            tier: 'certificate',
-            label: 'Сертификаты',
-            badges: ['CACIL', 'R.CACIL', 'CACL', 'R.CACL', 'CACLBr', 'RegCACL'],
-            note: 'CACIL/CACL/CACLBr — п. 1.4; R.* — резерв; RegCACL — в протоколах (региональный)',
-          },
-          {
-            tier: 'diploma',
-            label: 'Прочее дня',
-            note: 'Прочие дипломы соревнования из протокола (если указаны отдельно)',
-          },
-        ]}
-      />
-
-      <SectionCard title="Раздел «Соревнования» на сайте">
-        <p>
-          В шапке: <strong>Соревнования → Рейтинг / Судьи</strong>
-          (локально ещё <strong>Календарь</strong>). В карточке собаки — медали (1–3 место), очки, титулы
-          из протокола (<AbbrTag abbr="CACL" />, <AbbrTag abbr="CACLBr" />, <AbbrTag abbr="ЧР РК" /> и др.), число
-          участий и лучший результат. Чипы титулов в профиле и в истории участия идут <strong>от более крутых к менее</strong>
-          (ранг мероприятия → сертификаты); породный <AbbrTag abbr="CACLBr" /> считается отдельно от национального{' '}
-          <AbbrTag abbr="CACL" />.
-        </p>
-        <InfoCallout>
-          В рейтинге соревнований места задаёт <strong>зачёт сезона</strong> (медали и эффективность по участиям);
-          CS — тай-брейк, Elo на карточке — справка. Подробнее — во вкладке «Рейтинг» этого справочника.
-        </InfoCallout>
-      </SectionCard>
-
-      <SectionCard title="Сертификаты: бега и курсинг борзых">
-        <CertificateLevelsGrid items={COURSING_CERTIFICATES} />
-        <RefTag>Положение о титулах, п. 1.4; правила курсинга, п. 4.2–4.3</RefTag>
-      </SectionCard>
-
-      <SectionCard title="Титулы, присваиваемые на мероприятии">
-        <EventTitlesGrid items={EVENT_TITLES} />
-        <InfoCallout>
-          На квалификационных состязаниях (п. 1.2.7 правил) титулы <strong>не присваиваются</strong>. За 1 место на
-          ЧР / Кубке / ЧРКФ сертификат CACL не выдаётся — победитель получает титул ранга. CACL идёт со 2-го места при{' '}
-          {COURSING_CACL_QUALIFICATION} (положение о титулах, п. 3.4.2; правила курсинга, п. 4.3.4).
-        </InfoCallout>
-      </SectionCard>
-
-      <SectionCard title="Статусные мероприятия: кто что получает">
-        <div className="overflow-x-auto">
-          <table className="w-full min-w-[480px] text-left text-sm">
-            <thead>
-              <tr className="border-b border-old-money-200">
-                <th className="pb-2 pr-3 font-semibold">Ранг</th>
-                <th className="pb-2 pr-3 font-semibold">1 место (общий)</th>
-                <th className="pb-2 pr-3 font-semibold">2 место</th>
-                <th className="pb-2 font-semibold">В породе</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-old-money-100">
-              {STATUS_EVENT_RULES.map((row) => (
-                <tr key={row.rank}>
-                  <td className="py-2.5 pr-3 font-medium">{row.rank}</td>
-                  <td className="py-2.5 pr-3">
-                    <TitleBadge title={row.first} />
-                  </td>
-                  <td className="py-2.5 pr-3 text-xs">
-                    <div className="flex flex-wrap items-center gap-2">
-                      <TitleBadge title={row.secondBadge} />
-                    </div>
-                    <p className="mt-1">{row.secondDetail}</p>
-                  </td>
-                  <td className="py-2.5 text-xs">{row.breed}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <RefTag>Положение о титулах, п. 3.4.2–3.4.3; презентация Донино (примеры ЧР / КР)</RefTag>
-      </SectionCard>
-
-      <SectionCard title="Кумулятивные титулы">
-        <p className="text-xs text-old-money-600">
-          Оформляются в РКФ по набору талонов — не путать с титулами одного дня.
-        </p>
-        <CumulativeTitlesGrid items={CUMULATIVE_TITLES} />
-      </SectionCard>
-
-      <SectionCard title="Варианты оформления «Национальный чемпион» (НЧ РК)">
-        <ol className="list-decimal space-y-2 pl-5 text-sm">
-          {NATIONAL_CHAMPION_VARIANTS.map((variant) => (
-            <li key={variant}>{variant}</li>
-          ))}
-        </ol>
-        <RefTag>Положение о титулах, п. 3.3.1.1–3.3.1.6 · с 15.12.2022</RefTag>
-      </SectionCard>
-
-      <SectionCard title="Оформление «Чемпион России» (ЧР РК)">
-        <p className="text-xs text-old-money-600">
-          С 15.12.2022 титул оформляется только талоном 1-го места на Чемпионате России по дисциплине. Набор CACL /
-          ЧРКФ / ПКР больше не обменивается на ЧР РК — эти пути относятся к{' '}
-          <strong className="font-semibold text-charcoal-800">НЧ РК</strong> (блок выше).
-        </p>
-        <ol className="mt-2 list-decimal space-y-1.5 pl-5 text-sm">
-          {CH_RUSSIA_VARIANTS.map((variant) => (
-            <li key={variant}>{variant}</li>
-          ))}
-        </ol>
-        <RefTag>Положение о титулах, п. 3.2.1 · с 15.12.2022 (не п. 4.3.5 Правил курсинга 2020)</RefTag>
-      </SectionCard>
-
-      <SectionCard title="Особенности курсинга">
-        <FeatureNotesGrid items={COURSING_REQUIREMENTS} />
-      </SectionCard>
-
-      <SectionCard title="Сокращения">
-        <AbbreviationsTable
-          rows={ABBREVIATIONS}
-          refTag={<RefTag>Положение о титулах, разд. IV; презентация Донино</RefTag>}
-        />
       </SectionCard>
     </div>
   )

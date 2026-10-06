@@ -2,6 +2,11 @@
 
 export const SHOW_OFFICIAL_SOURCES = [
   {
+    label: 'Список титулов и принятые сокращения в родословных РКФ',
+    href: 'https://rkf.org.ru/wp-content/uploads/2023/12/polozhenie_o_titulakh_rkf.pdf',
+    note: 'Официальный эталон РКФ: международные (FCI), кумулятивные (ACH/GCH/CH), виннеры («Россия», «Евразия», Кубок Москвы) и монопородные титулы (разд. 1, 2, 3)',
+  },
+  {
     label: 'Положение о сертификатных выставках РКФ (ред. 18.12.2024)',
     href: 'https://help.rkf.online/ru/knowledge_base/art/2427/cat/489/polozenie-o-sertifikatnih-vistavkah-rkf-dejstvuet-do-31122025',
     note: 'В силу с 01.01.2025. Ранги, классы, оценки, сертификаты CAC/CACIB, BOB, BIG, BIS',
@@ -187,43 +192,61 @@ export const SHOW_EVENT_AWARDS_PRIORITY = [
   },
 ] as const
 
-/** Кумулятивные титулы по красоте (оформление в РКФ по набору сертификатов). */
+/** Кумулятивные титулы по красоте и абсолютные звания (оформление в РКФ по набору сертификатов). */
 export const SHOW_CHAMPIONSHIP_TITLES = [
   {
-    abbr: 'C.I.B.',
-    title: 'International Beauty Champion (FCI)',
-    summary: '4 × CACIB у 3 судей из 3 стран; ≥ 1 год между первым и последним',
-    ref: 'Положение о титулах РКФ — C.I.B.',
+    abbr: 'ACH RUS',
+    title: 'Absolute Russian Champion (Абсолютный чемпион России)',
+    summary: 'Высшая вершина в системе РКФ: Чемпион России (CH RUS) + Гранд Чемпион (GCH RUS) + Интерчемпион (C.I.B. или C.I.E.)',
+    ref: 'Список титулов РКФ, разд. 2.1',
   },
   {
-    abbr: 'ЧР',
-    title: 'Чемпион России (beauty)',
-    summary: '4 × CAC у 4 разных судей на CAC/CACIB; ≥ 1 год между первым и последним',
-    ref: 'Положение о титулах РКФ — Чемпион России',
+    abbr: 'GCH RUS',
+    title: 'Russian Grand Champion (Гранд чемпион России)',
+    summary: 'Чемпион России + Чемпион РКФ + Чемпион НКП (или по набору дипломов главных выставок страны)',
+    ref: 'Список титулов РКФ, разд. 2.1',
   },
   {
-    abbr: 'ЮЧР',
-    title: 'Юный чемпион России',
-    summary: '3 × JCAC у 3 судей; возрастные ограничения — см. положение',
-    ref: 'Положение о титулах РКФ — юные чемпионы',
+    abbr: 'C.I.B. / C.I.B.P.',
+    title: 'International Beauty Champion / Beauty & Performance (FCI)',
+    summary: 'C.I.B. — 4 × CACIB у 3 судей из 3 стран (≥ 1 год). C.I.B.P. — 2 × CACIB + 2 × CACIL (для борзых)',
+    ref: 'Список титулов РКФ, разд. 1.2; регламент FCI',
   },
   {
-    abbr: 'ЧРКФ',
-    title: 'Чемпион РКФ (beauty)',
-    summary: '1 × диплом ЧРКФ или 3 × ЧФ разных федераций (варианты в положении)',
-    ref: 'Положение о титулах РКФ — Чемпион РКФ',
+    abbr: 'CH RUS (ЧР)',
+    title: 'Чемпион России по красоте (Russian Champion)',
+    summary: '4 × CAC у 4 разных судей на CAC/CACIB (≥ 1 год между первым и последним)',
+    ref: 'Список титулов РКФ, разд. 2.2; Положение о титулах РКФ',
   },
   {
-    abbr: 'Вет.',
-    title: 'Ветераны-чемпионы',
-    summary: 'VCAC / VCACIB и оформление для собак старше порогового возраста',
-    ref: 'Положение о титулах РКФ — ветераны',
+    abbr: 'JCH RUS (ЮЧР)',
+    title: 'Юный чемпион России (Russian Junior Champion)',
+    summary: '3 × JCAC у 3 судей в классе юниоров',
+    ref: 'Список титулов РКФ, разд. 2.2; Положение о титулах РКФ',
   },
   {
-    abbr: 'КЧК',
-    title: 'Чемпион клуба / породы',
-    summary: 'Монопородные и specialty-ринги; путь отдельный от CAC',
-    ref: 'Положение о сертификатных выставках, п. 1.2',
+    abbr: 'VCH RUS (ВЧР)',
+    title: 'Ветеран чемпион России (Russian Veteran Champion)',
+    summary: '3 × VCAC у 3 судей в классе ветеранов',
+    ref: 'Список титулов РКФ, разд. 2.2; Положение о титулах РКФ',
+  },
+  {
+    abbr: 'CH RKF (ЧРКФ)',
+    title: 'Чемпион РКФ (RKF Champion)',
+    summary: '1 × диплом ЧРКФ или 3 × ЧФ разных федераций; на титульной выставке ЧРКФ',
+    ref: 'Список титулов РКФ, разд. 2.4; Положение о титулах РКФ',
+  },
+  {
+    abbr: 'ACH CLUB',
+    title: 'National Breed Club Absolute Champion (Абсолютный чемпион НКП)',
+    summary: 'Чемпион НКП по выставкам (CH CLUB) + Чемпион НКП по рабочим качествам / курсингу',
+    ref: 'Список титулов РКФ, разд. 2.5',
+  },
+  {
+    abbr: 'CH CLUB (ЧК)',
+    title: 'Чемпион национального клуба породы (Club Champion)',
+    summary: 'Оформляется по сертификатам КЧК монопородных выставок НКП',
+    ref: 'Список титулов РКФ, разд. 2.5',
   },
 ] as const
 
@@ -258,6 +281,29 @@ export const SHOW_GRADES = [
 ] as const
 
 export const SHOW_ABBREVIATIONS = [
+  { abbr: 'ACH RUS', full: 'Absolute Russian Champion (Абсолютный чемпион России — высший кумулятивный титул РКФ)' },
+  { abbr: 'GCH RUS', full: 'Russian Grand Champion (Гранд чемпион России)' },
+  { abbr: 'JGCH RUS', full: 'Russian Junior Grand Champion (Юный гранд чемпион России)' },
+  { abbr: 'VGCH RUS', full: 'Russian Veteran Grand Champion (Ветеран гранд чемпион России)' },
+  { abbr: 'CH RUS', full: 'Russian Champion (Чемпион России по красоте)' },
+  { abbr: 'JCH RUS', full: 'Russian Junior Champion (Юный чемпион России)' },
+  { abbr: 'VCH RUS', full: 'Russian Veteran Champion (Ветеран чемпион России)' },
+  { abbr: 'CH RKF', full: 'RKF Champion (Чемпион РКФ по красоте)' },
+  { abbr: 'JCH RKF', full: 'RKF Junior Champion (Юный чемпион РКФ)' },
+  { abbr: 'VCH RKF', full: 'RKF Veteran Champion (Ветеран чемпион РКФ)' },
+  { abbr: 'ACH CLUB', full: 'National Breed Club Absolute Champion (Абсолютный чемпион НКП)' },
+  { abbr: 'CH CLUB', full: 'National Breed Club Champion (Чемпион национального клуба породы)' },
+  { abbr: 'JCH CLUB', full: 'National Breed Club Junior Champion (Юный чемпион НКП)' },
+  { abbr: 'VCH CLUB', full: 'National Breed Club Veteran Champion (Ветеран чемпион НКП)' },
+  { abbr: 'C.I.B.', full: 'International Beauty Champion FCI (Интернациональный чемпион по красоте)' },
+  { abbr: 'C.I.E.', full: 'International Show Champion FCI (Интернациональный шоу-чемпион)' },
+  { abbr: 'C.I.B.P.', full: 'International Beauty & Performance Champion (Интерчемпион по красоте и курсингу борзых)' },
+  { abbr: 'WW', full: 'World Winner (Победитель Всемирной выставки собак FCI)' },
+  { abbr: 'EW', full: 'European Winner (Победитель Европейской секции FCI)' },
+  { abbr: 'EAW', full: 'Eurasian Winner (Победитель выставки «Евразия»)' },
+  { abbr: 'MW', full: 'Moscow Winner (Победитель «Кубка Москвы»)' },
+  { abbr: 'RW', full: 'Russian Winner (Победитель выставки «Россия»)' },
+  { abbr: 'BW RUS', full: 'National Breed Winner (Победитель Национальной выставки породы года)' },
   { abbr: 'BIS', full: 'Best in Show — лучшая собака выставки' },
   { abbr: 'BIG', full: 'Best in Group — лучшая собака группы FCI' },
   { abbr: 'BIS-Ю', full: 'Лучший юниор выставки (BIS Junior) — главный ринг, не ЛЮ породы' },
@@ -295,7 +341,6 @@ export const SHOW_ABBREVIATIONS = [
   { abbr: 'ЮСС', full: 'Юный сертификат соответствия' },
   { abbr: 'П «России»', full: 'Победитель выставки «Россия»' },
   { abbr: 'П Москвы', full: 'Победитель Кубка / выставки Москвы' },
-  { abbr: 'C.I.B.', full: 'International Beauty Champion FCI (кумулятивный титул)' },
 ] as const
 
 export const SHOW_ABBR_LOOKUP = Object.fromEntries(SHOW_ABBREVIATIONS.map((row) => [row.abbr, row.full]))
