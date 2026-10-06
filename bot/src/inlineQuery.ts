@@ -328,9 +328,28 @@ export function buildInlineDogResult(
   const shows = options.shows;
 
   const descriptionParts: string[] = [];
-  if ((c.total_starts ?? 0) > 0) descriptionParts.push(`Курсинг: ${c.total_starts}`);
-  if ((r.total_starts ?? 0) > 0) descriptionParts.push(`Бега: ${r.total_starts}`);
-  if (shows && shows.total_shows > 0) descriptionParts.push(`Выставки: ${shows.total_shows}`);
+  const medals: string[] = [];
+  if (c.gold > 0) medals.push(`🥇${c.gold}`);
+  if (c.silver > 0) medals.push(`🥈${c.silver}`);
+  if (c.bronze > 0) medals.push(`🥉${c.bronze}`);
+  if (r.gold > 0) medals.push(`🥇${r.gold}`);
+  if (r.silver > 0) medals.push(`🥈${r.silver}`);
+  if (r.bronze > 0) medals.push(`🥉${r.bronze}`);
+
+  if (medals.length > 0) {
+    descriptionParts.push(medals.join(' '));
+  }
+  if ((c.total_starts ?? 0) > 0) {
+    descriptionParts.push(`Курсинг: ${c.total_starts}`);
+  }
+  if (r.best_speed != null) {
+    descriptionParts.push(`${r.best_speed} км/ч`);
+  } else if ((r.total_starts ?? 0) > 0) {
+    descriptionParts.push(`Бега: ${r.total_starts}`);
+  }
+  if (shows && shows.total_shows > 0) {
+    descriptionParts.push(shows.best_award ? `Выставки: ${shows.best_award}` : `Выставок: ${shows.total_shows}`);
+  }
 
   return {
     type: 'article' as const,

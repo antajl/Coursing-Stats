@@ -20,7 +20,23 @@ function formatRacingRatings(ratingList: Rating[], yearLabel: string): string {
   return text;
 }
 
+function formatEloRatings(ratingList: Rating[], yearLabel: string): string {
+  let text = `<b>Топ-${ratingList.length} Elo-рейтинг - Курсинг (${yearLabel})</b>\n\n`;
+  text += `<i>💡 Динамический рейтинг силы соперников (Elo-v2), отдельно от медалей и CS</i>\n\n`;
+  ratingList.forEach((rating, index) => {
+    const name = getDisplayName(rating);
+    const breed = rating.breed || '';
+    const elo = rating.elo_rating ?? '-';
+    const races = rating.elo_races ?? rating.total_starts ?? '-';
+    text += `${index + 1}. ${name} (${breed})\n   Elo: <b>${elo}</b> | Забегов: ${races}\n\n`;
+  });
+  return text;
+}
+
 function formatCoursingRatings(ratingList: Rating[], category: string, yearLabel: string): string {
+  if (category === 'elo') {
+    return formatEloRatings(ratingList, yearLabel);
+  }
   let text = `<b>Топ-${ratingList.length} ${category === 'score' ? 'по очкам' : 'медали'} - Курсинг (${yearLabel})</b>\n\n`;
   if (category === 'score') {
     text += `<i>💡 Индекс — усреднённая оценка судей за все участия</i>\n\n`;
@@ -165,21 +181,22 @@ export function createRatings(api: CoursingStatsAPI, cache?: KVNamespace) {
   });
 
   // Category switchers (coursing only — racing has speed index only)
-  ratings.callbackQuery(/^rating_(coursing)_(score|placement)$/, async (ctx) => {
+  ratings.callbackQuery(/^rating_(coursing)_(score|placement|elo)$/, async (ctx) => {
     const discipline = ctx.match![1];
     const category = ctx.match![2];
+    const categoryTitle = category === 'score' ? 'По очкам' : category === 'elo' ? 'Elo-рейтинг' : 'По местам';
     await ctx.editMessageText(
-      `<b>Рейтинги - ${category === 'score' ? 'По очкам' : 'По местам'}</b>\n\nВыберите год:`,
+      `<b>Рейтинги - ${categoryTitle}</b>\n\nВыберите год:`,
       { parse_mode: 'HTML', reply_markup: getYearsMenu(`rating_${discipline}_${category}`) }
     );
   });
 
-  ratings.callbackQuery(/^rating_(coursing|racing)_(score|placement)_years$/, async (ctx) => {
+  ratings.callbackQuery(/^rating_(coursing|racing)_(score|placement|elo)_years$/, async (ctx) => {
     const discipline = ctx.match![1];
     const category = ctx.match![2];
     const title = discipline === 'racing'
       ? 'Рейтинги - Бега борзых (скорость)'
-      : `Рейтинги - ${category === 'score' ? 'По очкам' : 'По местам'}`;
+      : `Рейтинги - ${category === 'score' ? 'По очкам' : category === 'elo' ? 'Elo-рейтинг' : 'По местам'}`;
     await ctx.editMessageText(
       `<b>${title}</b>\n\nВыберите год:`,
       { parse_mode: 'HTML', reply_markup: getYearsMenu(`rating_${discipline}_${category}`, true) }
@@ -238,7 +255,7 @@ export function createRatings(api: CoursingStatsAPI, cache?: KVNamespace) {
     }
   });
 
-  ratings.callbackQuery(/^rating_(coursing|racing)_(score|placement)_(\d{4})$/, async (ctx) => {
+  ratings.callbackQuery(/^rating_(coursing|racing)_(score|placement|elo)_(\d{4})$/, async (ctx) => {
     const discipline = ctx.match![1];
     const category = ctx.match![2];
     const year = ctx.match![3];
@@ -273,7 +290,9 @@ export function createRatings(api: CoursingStatsAPI, cache?: KVNamespace) {
       return;
     }
 
-    if (category === 'score') {
+    if (category === 'elo') {
+      ratingList.sort((a, b) => (b.elo_rating || 0) - (a.elo_rating || 0));
+    } else if (category === 'score') {
       ratingList.sort((a, b) => (b.rating_score || 0) - (a.rating_score || 0));
     } else {
       ratingList.sort((a, b) => (b.gold || 0) - (a.gold || 0));
@@ -286,7 +305,7 @@ export function createRatings(api: CoursingStatsAPI, cache?: KVNamespace) {
     });
   });
 
-  ratings.callbackQuery(/^rating_(coursing|racing)_(score|placement)_all$/, async (ctx) => {
+  ratings.callbackQuery(/^rating_(coursing|racing)_(score|placement|elo)_all$/, async (ctx) => {
     const discipline = ctx.match![1];
     const category = ctx.match![2];
 
@@ -312,7 +331,9 @@ export function createRatings(api: CoursingStatsAPI, cache?: KVNamespace) {
       return;
     }
 
-    if (category === 'score') {
+    if (category === 'elo') {
+      ratingList.sort((a, b) => (b.elo_rating || 0) - (a.elo_rating || 0));
+    } else if (category === 'score') {
       ratingList.sort((a, b) => (b.rating_score || 0) - (a.rating_score || 0));
     } else {
       ratingList.sort((a, b) => (b.gold || 0) - (a.gold || 0));
@@ -326,7 +347,7 @@ export function createRatings(api: CoursingStatsAPI, cache?: KVNamespace) {
   });
 
   // Pagination handlers
-  ratings.callbackQuery(/^rating_(coursing|racing)_(score|placement)_(\d{4})_(\d+)$/, async (ctx) => {
+  ratings.callbackQuery(/^rating_(coursing|racing)_(score|placement|elo)_(\d{4})_(\d+)$/, async (ctx) => {
     const discipline = ctx.match![1];
     const category = ctx.match![2];
     const year = ctx.match![3];
@@ -355,7 +376,9 @@ export function createRatings(api: CoursingStatsAPI, cache?: KVNamespace) {
       return;
     }
 
-    if (category === 'score') {
+    if (category === 'elo') {
+      ratingList.sort((a, b) => (b.elo_rating || 0) - (a.elo_rating || 0));
+    } else if (category === 'score') {
       ratingList.sort((a, b) => (b.rating_score || 0) - (a.rating_score || 0));
     } else {
       ratingList.sort((a, b) => (b.gold || 0) - (a.gold || 0));
@@ -368,7 +391,7 @@ export function createRatings(api: CoursingStatsAPI, cache?: KVNamespace) {
     });
   });
 
-  ratings.callbackQuery(/^rating_(coursing|racing)_(score|placement)_all_(\d+)$/, async (ctx) => {
+  ratings.callbackQuery(/^rating_(coursing|racing)_(score|placement|elo)_all_(\d+)$/, async (ctx) => {
     const discipline = ctx.match![1];
     const category = ctx.match![2];
     const offset = ctx.match![3];
@@ -396,7 +419,9 @@ export function createRatings(api: CoursingStatsAPI, cache?: KVNamespace) {
       return;
     }
 
-    if (category === 'score') {
+    if (category === 'elo') {
+      ratingList.sort((a, b) => (b.elo_rating || 0) - (a.elo_rating || 0));
+    } else if (category === 'score') {
       ratingList.sort((a, b) => (b.rating_score || 0) - (a.rating_score || 0));
     } else {
       ratingList.sort((a, b) => (b.gold || 0) - (a.gold || 0));

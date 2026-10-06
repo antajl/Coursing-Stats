@@ -24,26 +24,51 @@ interface RateLimitBucket {
 }
 const inMemoryRateLimits = new Map<string, RateLimitBucket>();
 
-function checkRateLimit(userId: string): { allowed: boolean; remaining: number } {
+async function checkRateLimit(userId: string, cache?: KVNamespace): Promise<{ allowed: boolean; remaining: number }> {
   const now = Date.now();
+
+  // Fast in-memory check to reduce KV calls
   if (inMemoryRateLimits.size > 5000) {
     for (const [id, b] of inMemoryRateLimits.entries()) {
       if (now > b.resetAt) inMemoryRateLimits.delete(id);
     }
   }
 
-  const bucket = inMemoryRateLimits.get(userId);
-  if (!bucket || now > bucket.resetAt) {
+  const memBucket = inMemoryRateLimits.get(userId);
+  if (memBucket && now <= memBucket.resetAt && memBucket.count >= RATE_LIMIT_REQUESTS) {
+    return { allowed: false, remaining: 0 };
+  }
+
+  if (cache) {
+    try {
+      const windowKey = `rl:${userId}:${Math.floor(now / 60000)}`;
+      const currentCountStr = await cache.get(windowKey);
+      const count = (currentCountStr ? parseInt(currentCountStr, 10) : 0) + 1;
+      await cache.put(windowKey, String(count), { expirationTtl: 120 });
+
+      // Sync memory
+      inMemoryRateLimits.set(userId, { count, resetAt: now + RATE_LIMIT_WINDOW * 1000 });
+
+      if (count > RATE_LIMIT_REQUESTS) {
+        return { allowed: false, remaining: 0 };
+      }
+      return { allowed: true, remaining: Math.max(0, RATE_LIMIT_REQUESTS - count) };
+    } catch {
+      // Fallback to in-memory on KV error
+    }
+  }
+
+  if (!memBucket || now > memBucket.resetAt) {
     inMemoryRateLimits.set(userId, { count: 1, resetAt: now + RATE_LIMIT_WINDOW * 1000 });
     return { allowed: true, remaining: RATE_LIMIT_REQUESTS - 1 };
   }
 
-  bucket.count++;
-  if (bucket.count > RATE_LIMIT_REQUESTS) {
+  memBucket.count++;
+  if (memBucket.count > RATE_LIMIT_REQUESTS) {
     return { allowed: false, remaining: 0 };
   }
 
-  return { allowed: true, remaining: RATE_LIMIT_REQUESTS - bucket.count };
+  return { allowed: true, remaining: RATE_LIMIT_REQUESTS - memBucket.count };
 }
 
 function isValidWebhookSecret(request: Request, env: Env): boolean {
@@ -129,8 +154,9 @@ export default {
                 commands: [
                   { command: 'start', description: 'Главное меню' },
                   { command: 'search', description: 'Поиск собаки по кличке или ID' },
-                  { command: 'ratings', description: 'Рейтинги и топы' },
-                  { command: 'calendar', description: 'Календарь соревнований' },
+                  { command: 'breed', description: 'Поиск собак по породе' },
+                  { command: 'ratings', description: 'Рейтинги и топы (включая Elo)' },
+                  { command: 'archive', description: 'Архив соревнований и выставок' },
                   { command: 'donino', description: 'Рекорды Донино' },
                   { command: 'favorites', description: 'Избранные собаки' },
                   { command: 'help', description: 'Справка и правила' },
@@ -173,7 +199,7 @@ export default {
 
           const userId = update.message?.from?.id || update.callback_query?.from?.id;
           if (userId) {
-            const rateLimitResult = checkRateLimit(userId.toString());
+            const rateLimitResult = await checkRateLimit(userId.toString(), env.CACHE);
             if (!rateLimitResult.allowed) {
               // Always ACK Telegram (avoid retry storm); notify user when possible
               try {

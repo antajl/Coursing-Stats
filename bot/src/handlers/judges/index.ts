@@ -29,10 +29,11 @@ export function createJudges(api: CoursingStatsAPI, cache?: KVNamespace) {
     
     let text = '<b>Топ-10 судей соревнований</b>\n\n';
     
-    judgesList.slice(0, 10).forEach((judge: RatingItem, index: number) => {
-      const name = judge.judge_name || judge.name_lat || judge.name_ru || judge.name || 'N/A';
-      const rings = judge.rings || judge.total_rings || judge.ring_count || 0;
-      text += `${index + 1}. ${name} - ${rings} колец\n`;
+    judgesList.slice(0, 10).forEach((judge: any, index: number) => {
+      const name = judge.name || judge.judge_name || judge.name_ru || judge.name_lat || 'N/A';
+      const evs = judge.unique_events || judge.rings || judge.total_rings || 0;
+      const dogs = judge.unique_dogs ? ` (${judge.unique_dogs} собак)` : '';
+      text += `${index + 1}. <b>${name}</b> — ${evs} соревнований${dogs}\n`;
     });
     
     await ctx.editMessageText(text, { 
@@ -56,10 +57,11 @@ export function createJudges(api: CoursingStatsAPI, cache?: KVNamespace) {
     
     let text = '<b>Топ-10 судей соревнований</b>\n\n';
     
-    judgesList.slice(0, 10).forEach((judge: RatingItem, index: number) => {
-      const name = judge.judge_name || judge.name_lat || judge.name_ru || judge.name || 'N/A';
-      const rings = judge.rings || judge.total_rings || judge.ring_count || 0;
-      text += `${index + 1}. ${name} - ${rings} колец\n`;
+    judgesList.slice(0, 10).forEach((judge: any, index: number) => {
+      const name = judge.name || judge.judge_name || judge.name_ru || judge.name_lat || 'N/A';
+      const evs = judge.unique_events || judge.rings || judge.total_rings || 0;
+      const dogs = judge.unique_dogs ? ` (${judge.unique_dogs} собак)` : '';
+      text += `${index + 1}. <b>${name}</b> — ${evs} соревнований${dogs}\n`;
     });
     
     await ctx.editMessageText(text, { 

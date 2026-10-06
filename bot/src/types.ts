@@ -126,6 +126,10 @@ export interface Rating {
   /** Racing speed ranking (top-speed-*) */
   best_speed?: number;
   avg_speed?: number;
+  /** Elo ranking (top-elo-*) */
+  elo_rating?: number;
+  elo_races?: number;
+  elo_reliable?: boolean;
 }
 
 // Расширенные интерфейсы для данных из API

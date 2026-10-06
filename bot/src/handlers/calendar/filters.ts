@@ -91,17 +91,17 @@ export function formatCalendarText(
   offset: number = 0
 ): string {
   const typeLabels = {
-    all: 'Календарь соревнований',
-    coursing: 'Календарь соревнований по курсингу',
-    racing: 'Календарь соревнований по бегам борзых',
-    shows: 'Календарь выставок'
+    all: 'Архив соревнований',
+    coursing: 'Архив соревнований по курсингу',
+    racing: 'Архив соревнований по бегам борзых',
+    shows: 'Архив выставок'
   };
   
   const emptyMessages = {
-    all: 'Нет предстоящих соревнований.',
-    coursing: 'Нет предстоящих соревнований по курсингу.',
-    racing: 'Нет предстоящих соревнований по бегам борзых.',
-    shows: 'Нет предстоящих выставок.'
+    all: 'Нет соревнований в архиве.',
+    coursing: 'Нет соревнований по курсингу в архиве.',
+    racing: 'Нет соревнований по бегам борзых в архиве.',
+    shows: 'Нет выставок в архиве.'
   };
   
   let text = `<b>${typeLabels[type]} ${year}</b>\n\n`;
@@ -116,7 +116,14 @@ export function formatCalendarText(
       page.forEach((event, index) => {
         const date = formatDateRussian(event.date_start || event.date || '');
         const name = event.title || event.name || 'Название не указано';
-        text += `${offset + index + 1}. ${date} - ${name}\n`;
+        if (event.id) {
+          const eventUrl = type === 'shows'
+            ? `https://coursing-stats.ru/shows/exhibition/${event.id}`
+            : `https://coursing-stats.ru/event/${event.id}`;
+          text += `${offset + index + 1}. ${date} — <a href="${eventUrl}">${name}</a>\n`;
+        } else {
+          text += `${offset + index + 1}. ${date} — ${name}\n`;
+        }
       });
       if (events.length > offset + 10) {
         text += `\n<i>Показано ${offset + 1}–${offset + page.length} из ${events.length}</i>`;

@@ -18,6 +18,7 @@ import {
 } from '../inlineQuery';
 import { BOT_PHOTOS } from '../constants';
 import { isDogFavorite } from './utils/presentDogCard';
+import { sendMenuScreen } from './utils/menuScreen';
 import type { KVNamespace } from './context';
 
 /**
@@ -264,66 +265,21 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
 Отслеживайте результаты вашей собаки по курсингу, бегам борзых и выставкам.
 
 <b>Возможности:</b>
-• Рейтинги и топы по дисциплинам
+• Рейтинги и топы по дисциплинам (включая Elo)
 • Календарь соревнований и выставок
 • История медалей и титулов
-• Сравнение собак
-• Избранные собаки
+• Избранные собаки и быстрая карточка /mystats
+• Поиск по породе /breed
 
 <b>Как использовать:</b>
 Напишите кличку или ID собаки или выберите действие из меню ниже
     `.trim();
 
-  const photoUrl = BOT_PHOTOS.home;
-  const userId = ctx.from?.id.toString();
-  const chatId = ctx.chat?.id;
-
-  // Show typing indicator for better UX
-  if (chatId) {
-    await ctx.api.sendChatAction(chatId, 'upload_photo');
-  }
-
-  // Delete previous bot message if exists
-  if (userId && chatId && cache) {
-    const lastMessageKey = `last_message:${userId}`;
-    const lastMessageId = await cache.get(lastMessageKey);
-    
-    if (lastMessageId) {
-      try {
-        await ctx.api.deleteMessage(chatId, parseInt(lastMessageId));
-      } catch (deleteError) {
-        // Ignore errors if message is too old or already deleted
-        console.error('[/start] Failed to delete previous message:', deleteError);
-      }
-    }
-  }
-
-  // Send new message with photo
-  try {
-    const message = await ctx.replyWithPhoto(photoUrl, {
-      caption: welcomeText,
-      parse_mode: 'HTML',
-      reply_markup: getMainInlineMenu()
-    });
-    
-    // Save the new message ID
-    if (message.message_id && userId && cache) {
-      const lastMessageKey = `last_message:${userId}`;
-      await cache.put(lastMessageKey, message.message_id.toString(), { expirationTtl: 86400 }); // 24 hours
-    }
-  } catch (error) {
-    // Fallback to text message if photo fails
-    const message = await ctx.reply(welcomeText, {
-      parse_mode: 'HTML',
-      reply_markup: getMainInlineMenu()
-    });
-    
-    // Save the new message ID
-    if (message.message_id && userId && cache) {
-      const lastMessageKey = `last_message:${userId}`;
-      await cache.put(lastMessageKey, message.message_id.toString(), { expirationTtl: 86400 }); // 24 hours
-    }
-  }
+  await sendMenuScreen(ctx, cache, {
+    photoUrl: BOT_PHOTOS.home,
+    text: welcomeText,
+    keyboard: getMainInlineMenu(),
+  });
 
   // Delete the /start message
   if (ctx.message) {
@@ -364,11 +320,11 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
     }, cache);
   });
 
-  commands.command('calendar', async (ctx) => {
+  commands.command(['calendar', 'archive'], async (ctx) => {
     const currentYear = new Date().getFullYear();
     const events = await api.getCalendar(currentYear.toString());
     if (!events || events.length === 0) {
-      await safeEditOrReply(ctx, 'Не удалось загрузить календарь', {
+      await safeEditOrReply(ctx, 'Не удалось загрузить архив соревнований', {
         reply_markup: getNavigationButtons('main_menu', 'main_menu'),
       }, cache);
       return;
@@ -425,7 +381,7 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
       const breed = dog.breed || 'N/A';
       text += `${index + 1}. ${name} (${breed})\n`;
     });
-    text += '\nНажмите номер, чтобы открыть карточку:';
+    text += '\nВыберите собаку, чтобы открыть карточку:';
     const { getFavoritesKeyboard } = await import('../keyboards');
     await ctx.reply(text, {
       parse_mode: 'HTML',
@@ -447,6 +403,61 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
     }, cache);
   });
 
+  commands.command('breed', async (ctx) => {
+    const text = ctx.message?.text || '';
+    const breedQuery = text.replace(/^\/breed/, '').trim();
+
+    if (!breedQuery || breedQuery.length < 2) {
+      await ctx.reply(
+        'Пожалуйста, укажите породу после команды.\n\nПример:\n<code>/breed салюки</code>\n<code>/breed уиппет</code>',
+        { parse_mode: 'HTML', reply_markup: getNavigationButtons('main_menu', 'main_menu') },
+      );
+      return;
+    }
+
+    const chatId = ctx.chat?.id;
+    if (chatId) {
+      await ctx.api.sendChatAction(chatId, 'typing');
+    }
+
+    const dogs = await api.searchDogsByName('', breedQuery, 10);
+    if (!dogs || dogs.length === 0) {
+      // Fallback search
+      const fallback = await api.searchDogsByName(breedQuery, undefined, 10);
+      if (!fallback || fallback.length === 0) {
+        await ctx.reply(`Собаки породы «${breedQuery}» не найдены.`, {
+          reply_markup: getNavigationButtons('main_menu', 'main_menu'),
+        });
+        return;
+      }
+
+      let respText = `<b>Собаки по запросу породы «${breedQuery}» (${fallback.length}):</b>\n\n`;
+      fallback.forEach((d, idx) => {
+        respText += `${idx + 1}. ${d.name_ru || d.name_lat} (${d.breed})\n`;
+      });
+      respText += '\nВыберите собаку для просмотра:';
+
+      const { getDogSelectionKeyboard } = await import('../keyboards');
+      await ctx.reply(respText, {
+        parse_mode: 'HTML',
+        reply_markup: getDogSelectionKeyboard(fallback),
+      });
+      return;
+    }
+
+    let respText = `<b>Собаки породы «${breedQuery}» (${dogs.length}):</b>\n\n`;
+    dogs.forEach((d, idx) => {
+      respText += `${idx + 1}. ${d.name_ru || d.name_lat} (${d.breed})\n`;
+    });
+    respText += '\nВыберите собаку для просмотра:';
+
+    const { getDogSelectionKeyboard } = await import('../keyboards');
+    await ctx.reply(respText, {
+      parse_mode: 'HTML',
+      reply_markup: getDogSelectionKeyboard(dogs),
+    });
+  });
+
   /**
    * Обработчик кнопки main_menu для возврата в главное меню
    * @param ctx - контекст Grammy
@@ -459,61 +470,21 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
 Отслеживайте результаты вашей собаки по курсингу, бегам борзых и выставкам.
 
 <b>Возможности:</b>
-• Рейтинги и топы по дисциплинам
+• Рейтинги и топы по дисциплинам (включая Elo)
 • Календарь соревнований и выставок
 • История медалей и титулов
-• Сравнение собак
-• Избранные собаки
+• Избранные собаки и быстрая карточка /mystats
+• Поиск по породе /breed
 
 <b>Как использовать:</b>
 Напишите кличку или ID собаки или выберите действие из меню ниже
     `.trim();
 
-    const photoUrl = BOT_PHOTOS.home;
-    const userId = ctx.from?.id.toString();
-    const chatId = ctx.chat?.id;
-
-    // Delete previous bot message if exists
-    if (userId && chatId && cache) {
-      const lastMessageKey = `last_message:${userId}`;
-      const lastMessageId = await cache.get(lastMessageKey);
-      
-      if (lastMessageId) {
-        try {
-          await ctx.api.deleteMessage(chatId, parseInt(lastMessageId));
-        } catch (deleteError) {
-          // Ignore errors if message is too old or already deleted
-          console.error('[main_menu] Failed to delete previous message:', deleteError);
-        }
-      }
-    }
-
-    // Send new message with photo
-    try {
-      const message = await ctx.replyWithPhoto(photoUrl, {
-        caption: welcomeText,
-        parse_mode: 'HTML',
-        reply_markup: getMainInlineMenu()
-      });
-      
-      // Save the new message ID
-      if (message.message_id && userId && cache) {
-        const lastMessageKey = `last_message:${userId}`;
-        await cache.put(lastMessageKey, message.message_id.toString(), { expirationTtl: 86400 }); // 24 hours
-      }
-    } catch (error) {
-      // Fallback to text message if photo fails
-      const message = await ctx.reply(welcomeText, {
-        parse_mode: 'HTML',
-        reply_markup: getMainInlineMenu()
-      });
-      
-      // Save the new message ID
-      if (message.message_id && userId && cache) {
-        const lastMessageKey = `last_message:${userId}`;
-        await cache.put(lastMessageKey, message.message_id.toString(), { expirationTtl: 86400 }); // 24 hours
-      }
-    }
+    await sendMenuScreen(ctx, cache, {
+      photoUrl: BOT_PHOTOS.home,
+      text: welcomeText,
+      keyboard: getMainInlineMenu(),
+    });
   });
 
   /**
@@ -522,14 +493,13 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
    */
   commands.callbackQuery('search_dog', async (ctx) => {
     await addReaction(ctx, '🔍');
-    // Show typing indicator for better UX
     const chatId = ctx.chat?.id;
     if (chatId) {
       await ctx.api.sendChatAction(chatId, 'typing');
     }
     
     await safeEditOrReply(ctx,
-      'Введите кличку собаки (можно частично):',
+      'Введите кличку собаки (можно частично) или её ID:',
       { parse_mode: 'HTML', reply_markup: getNavigationButtons('main_menu', 'main_menu') },
       cache
     );
@@ -552,48 +522,11 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
    */
   commands.callbackQuery('competitions_menu', async (ctx) => {
     await addReaction(ctx, '🏆');
-    const userId = ctx.from?.id.toString();
-    const chatId = ctx.chat?.id;
-    const photoUrl = BOT_PHOTOS.competitions;
-    
-    // Show typing indicator for better UX
-    if (chatId) {
-      await ctx.api.sendChatAction(chatId, 'upload_photo');
-    }
-    
-    // Delete previous bot message if exists
-    if (userId && chatId && cache) {
-      const lastMessageKey = `last_message:${userId}`;
-      const lastMessageId = await cache.get(lastMessageKey);
-      
-      if (lastMessageId) {
-        try {
-          await ctx.api.deleteMessage(chatId, parseInt(lastMessageId));
-        } catch (deleteError) {
-          console.error('[competitions_menu] Failed to delete previous message:', deleteError);
-        }
-      }
-    }
-    
-    const welcomeText = '<b>🏆 Соревнования</b>\n\nВыберите действие:';
-    
-    try {
-      const message = await ctx.replyWithPhoto(photoUrl, {
-        caption: welcomeText,
-        parse_mode: 'HTML',
-        reply_markup: getCompetitionsMenu()
-      });
-      
-      if (message.message_id && userId && cache) {
-        const lastMessageKey = `last_message:${userId}`;
-        await cache.put(lastMessageKey, message.message_id.toString(), { expirationTtl: 86400 });
-      }
-    } catch (error) {
-      await safeEditOrReply(ctx, welcomeText, {
-        parse_mode: 'HTML',
-        reply_markup: getCompetitionsMenu()
-      }, cache);
-    }
+    await sendMenuScreen(ctx, cache, {
+      photoUrl: BOT_PHOTOS.competitions,
+      text: '<b>🏆 Соревнования</b>\n\nВыберите действие:',
+      keyboard: getCompetitionsMenu(),
+    });
   });
 
   /**
@@ -602,48 +535,11 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
    */
   commands.callbackQuery('shows_menu', async (ctx) => {
     await addReaction(ctx, '🎪');
-    const userId = ctx.from?.id.toString();
-    const chatId = ctx.chat?.id;
-    const photoUrl = BOT_PHOTOS.shows;
-    
-    // Show typing indicator for better UX
-    if (chatId) {
-      await ctx.api.sendChatAction(chatId, 'upload_photo');
-    }
-    
-    // Delete previous bot message if exists
-    if (userId && chatId && cache) {
-      const lastMessageKey = `last_message:${userId}`;
-      const lastMessageId = await cache.get(lastMessageKey);
-      
-      if (lastMessageId) {
-        try {
-          await ctx.api.deleteMessage(chatId, parseInt(lastMessageId));
-        } catch (deleteError) {
-          console.error('[shows_menu] Failed to delete previous message:', deleteError);
-        }
-      }
-    }
-    
-    const welcomeText = '<b>🎪 Выставки</b>\n\nВыберите действие:';
-    
-    try {
-      const message = await ctx.replyWithPhoto(photoUrl, {
-        caption: welcomeText,
-        parse_mode: 'HTML',
-        reply_markup: getShowsMenu()
-      });
-      
-      if (message.message_id && userId && cache) {
-        const lastMessageKey = `last_message:${userId}`;
-        await cache.put(lastMessageKey, message.message_id.toString(), { expirationTtl: 86400 });
-      }
-    } catch (error) {
-      await safeEditOrReply(ctx, welcomeText, {
-        parse_mode: 'HTML',
-        reply_markup: getShowsMenu()
-      }, cache);
-    }
+    await sendMenuScreen(ctx, cache, {
+      photoUrl: BOT_PHOTOS.shows,
+      text: '<b>🎪 Выставки</b>\n\nВыберите действие:',
+      keyboard: getShowsMenu(),
+    });
   });
 
   /**
@@ -652,79 +548,38 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
    */
   commands.callbackQuery('guide_menu', async (ctx) => {
     await addReaction(ctx, '📚');
-    const userId = ctx.from?.id.toString();
-    const chatId = ctx.chat?.id;
-    const photoUrl = BOT_PHOTOS.guide;
-    
-    // Show typing indicator for better UX
-    if (chatId) {
-      await ctx.api.sendChatAction(chatId, 'upload_photo');
-    }
-    
-    // Delete previous bot message if exists
-    if (userId && chatId && cache) {
-      const lastMessageKey = `last_message:${userId}`;
-      const lastMessageId = await cache.get(lastMessageKey);
-      
-      if (lastMessageId) {
-        try {
-          await ctx.api.deleteMessage(chatId, parseInt(lastMessageId));
-        } catch (deleteError) {
-          console.error('[guide_menu] Failed to delete previous message:', deleteError);
-        }
-      }
-    }
-    
-    const welcomeText = '<b>📚 Справка</b>\n\nВыберите раздел:';
-    
-    try {
-      const message = await ctx.replyWithPhoto(photoUrl, {
-        caption: welcomeText,
-        parse_mode: 'HTML',
-        reply_markup: getGuideMenu()
-      });
-      
-      if (message.message_id && userId && cache) {
-        const lastMessageKey = `last_message:${userId}`;
-        await cache.put(lastMessageKey, message.message_id.toString(), { expirationTtl: 86400 });
-      }
-    } catch (error) {
-      await safeEditOrReply(ctx, welcomeText, {
-        parse_mode: 'HTML',
-        reply_markup: getGuideMenu()
-      }, cache);
-    }
+    await sendMenuScreen(ctx, cache, {
+      photoUrl: BOT_PHOTOS.guide,
+      text: '<b>📚 Справка</b>\n\nВыберите раздел:',
+      keyboard: getGuideMenu(),
+    });
   });
 
   /**
-   * Обработчик кнопки back (общий обработчик, возвращает в главное меню)
+   * Обработчик кнопки back (общий обработчик, возвращает в главное меню без двойного edit)
    * @param ctx - контекст Grammy
    */
   commands.callbackQuery('back', async (ctx) => {
-    // Default behavior: go to main menu
-    // Individual handlers can override this by handling 'back' in their own modules
-    await ctx.editMessageText('Возврат в главное меню...', { parse_mode: 'HTML' });
-    
     const welcomeText = `
 <b>Coursing Stats</b> — статистика соревнований собак
 
 Отслеживайте результаты вашей собаки по курсингу, бегам борзых и выставкам.
 
 <b>Возможности:</b>
-• Рейтинги и топы по дисциплинам
+• Рейтинги и топы по дисциплинам (включая Elo)
 • Календарь соревнований и выставок
 • История медалей и титулов
-• Сравнение собак
-• Избранные собаки
+• Избранные собаки и быстрая карточка /mystats
+• Поиск по породе /breed
 
 <b>Как использовать:</b>
 Напишите кличку или ID собаки или выберите действие из меню ниже
     `.trim();
-    
-    await ctx.editMessageText(welcomeText, { 
+
+    await safeEditOrReply(ctx, welcomeText, {
       parse_mode: 'HTML',
-      reply_markup: getMainInlineMenu()
-    });
+      reply_markup: getMainInlineMenu(),
+    }, cache);
   });
 
   /**

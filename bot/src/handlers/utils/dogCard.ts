@@ -139,46 +139,51 @@ function formatShowTitleLines(shows: ShowDogCardSummary): string[] {
 
 /**
  * Краткая карточка собаки (aggregates only — без списка участий).
- * Медали курсинга и бегов раздельно; пустые дисциплины не показываем.
+ * Медали курсинга и бегов раздельно; чистая блочная вёрстка с blockquote.
  */
 export function formatDogCard(dogData: DogData, options: FormatDogCardOptions = {}): string {
   const dog = dogData.dog;
-  const name = dog.name_lat || dog.name_ru || 'N/A';
+  const name = (dog.name_lat || dog.name_ru || 'N/A').toUpperCase();
   const breed = dog.breed || 'N/A';
   const c = dog.coursing_stats;
   const r = dog.racing_stats;
   const shows = options.shows;
 
-  const lines: string[] = [`<b>${name}</b> (${breed})`];
+  const lines: string[] = [
+    `<b>${name}</b>`,
+    `<i>${breed}</i>`,
+  ];
 
   if (hasDisciplineActivity(c) || c.best_score != null || c.best_judge_score != null) {
     const bestScore = c.best_score != null ? String(c.best_score) : '—';
     const bestJudge = c.best_judge_score != null ? String(c.best_judge_score) : '—';
-    lines.push('');
-    lines.push('<b>Курсинг</b>');
-    lines.push(`• Участий: ${c.total_starts}, лучший балл: ${bestScore}`);
-    lines.push(`• Лучшая оценка от судьи: ${bestJudge}`);
-    lines.push(`• Медали: ${c.gold}🥇 ${c.silver}🥈 ${c.bronze}🥉`);
+    const coursingBlock = [
+      `🏆 <b>Курсинг</b>`,
+      `• Стартов: ${c.total_starts} · Лучший балл: ${bestScore}`,
+      `• Лучшая оценка судьи: ${bestJudge}`,
+      `• Медали: 🥇 ${c.gold}  🥈 ${c.silver}  🥉 ${c.bronze}`,
+    ].join('\n');
+    lines.push('', `<blockquote>${coursingBlock}</blockquote>`);
   }
 
   if (hasDisciplineActivity(r) || r.best_speed != null) {
     const bestSpeed = r.best_speed != null ? `${r.best_speed} км/ч` : '—';
-    lines.push('');
-    lines.push('<b>Бега борзых</b>');
-    lines.push(`• Участий: ${r.total_starts}, лучшая скорость: ${bestSpeed}`);
-    lines.push(`• Медали: ${r.gold}🥇 ${r.silver}🥈 ${r.bronze}🥉`);
+    const racingBlock = [
+      `⚡ <b>Бега борзых</b>`,
+      `• Стартов: ${r.total_starts} · Макс. скорость: ${bestSpeed}`,
+      `• Медали: 🥇 ${r.gold}  🥈 ${r.silver}  🥉 ${r.bronze}`,
+    ].join('\n');
+    lines.push('', `<blockquote>${racingBlock}</blockquote>`);
   }
 
   if (shows && shows.total_shows > 0) {
-    lines.push('');
-    lines.push('<b>Выставки</b>');
-    lines.push(
-      `• Участий: ${shows.total_shows}, лучшая награда: ${formatShowAward(shows.best_award)}`,
-    );
     const titleLines = formatShowTitleLines(shows);
-    if (titleLines.length > 0) {
-      lines.push(`<blockquote expandable>${titleLines.join('\n')}</blockquote>`);
-    }
+    const showsBlock = [
+      `🎪 <b>Выставки РКФ</b>`,
+      `• Выставок: ${shows.total_shows} · Высшая награда: ${formatShowAward(shows.best_award)}`,
+      ...(titleLines.length > 0 ? [`• Титулы: ${titleLines.join(', ')}`] : []),
+    ].join('\n');
+    lines.push('', `<blockquote>${showsBlock}</blockquote>`);
   }
 
   return lines.join('\n').trim();
