@@ -57,14 +57,14 @@ function TitleLadderList() {
             <button
               type="button"
               onClick={() => setOpenIndex(isOpen ? null : idx)}
-              className="flex w-full items-center justify-between gap-2.5 p-2.5 sm:px-3 sm:py-2 text-left"
+              className="flex w-full items-start sm:items-center justify-between gap-2 sm:gap-2.5 p-2.5 sm:px-3 sm:py-2 text-left"
             >
-              <div className="flex min-w-0 flex-1 items-center gap-2">
-                <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white text-[11px] font-bold text-charcoal-700 shadow-2xs">
+              <div className="flex min-w-0 flex-1 items-start sm:items-center gap-2">
+                <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white text-[11px] font-bold text-charcoal-700 shadow-2xs mt-0.5 sm:mt-0">
                   {item.rank}
                 </span>
                 <span
-                  className={`inline-block shrink-0 rounded px-1.5 py-0.5 text-xs ${badgeFrame[item.prestigeTier]}`}
+                  className={`inline-block shrink-0 rounded px-1.5 py-0.5 text-xs ${badgeFrame[item.prestigeTier]} mt-0.5 sm:mt-0`}
                 >
                   {item.badge}
                 </span>
@@ -73,7 +73,7 @@ function TitleLadderList() {
                 </span>
               </div>
 
-              <div className="flex shrink-0 items-center gap-2">
+              <div className="flex shrink-0 items-center gap-2 mt-0.5 sm:mt-0">
                 <span
                   className={`hidden rounded border px-2 py-0.5 text-[10px] font-semibold sm:inline-block shadow-2xs ${tagColor[item.prestigeTier]}`}
                 >
@@ -87,17 +87,25 @@ function TitleLadderList() {
             </button>
 
             {isOpen && (
-              <div className="border-t border-old-money-100 bg-white/80 px-3.5 py-2.5 text-xs text-charcoal-600">
-                <p className="leading-relaxed">{item.details}</p>
+              <div className="border-t border-old-money-100 bg-white/80 px-3.5 py-3 text-xs sm:text-sm text-charcoal-600">
+                <div className="mb-2 sm:hidden">
+                  <span
+                    className={`inline-block rounded border px-2 py-0.5 text-[10px] font-semibold shadow-2xs ${tagColor[item.prestigeTier]}`}
+                  >
+                    {item.prestigeLabel}
+                  </span>
+                </div>
 
-                <div className="mt-2 rounded border border-old-money-200 bg-old-money-50/60 p-2 text-[11px]">
-                  <span className="font-semibold text-charcoal-800">Как получить:</span>
-                  <div className="mt-0.5 text-charcoal-700">{item.howToGet}</div>
+                <p className="leading-relaxed text-charcoal-700">{item.details}</p>
+
+                <div className="mt-2.5 rounded-lg border border-old-money-200 bg-old-money-50/70 p-2.5 text-xs">
+                  <span className="font-semibold text-charcoal-900">Как получить:</span>
+                  <div className="mt-1 leading-relaxed text-charcoal-800">{item.howToGet}</div>
 
                   {item.extraList && (
-                    <div className="mt-2 pt-2 border-t border-old-money-200/60">
-                      <span className="font-semibold text-charcoal-800">Официальные варианты набора (РКФ):</span>
-                      <ul className="mt-1 list-disc pl-4 space-y-0.5 text-charcoal-600">
+                    <div className="mt-2.5 pt-2 border-t border-old-money-200/80">
+                      <span className="font-semibold text-charcoal-900">Официальные варианты набора (РКФ):</span>
+                      <ul className="mt-1.5 list-disc pl-4 space-y-1 text-charcoal-700 leading-relaxed">
                         {item.extraList.map((variant) => (
                           <li key={variant}>{variant}</li>
                         ))}

@@ -501,12 +501,7 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
     }, cache);
   });
 
-  /**
-   * Обработчик кнопки main_menu для возврата в главное меню
-   * @param ctx - контекст Grammy
-   */
-  commands.callbackQuery('main_menu', async (ctx) => {
-    await addReaction(ctx, '👀');
+  const returnToHomeScreen = async (ctx: any) => {
     const welcomeText = `
 <b>Coursing Stats</b> — статистика соревнований собак
 
@@ -528,6 +523,15 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
       text: welcomeText,
       keyboard: getMainInlineMenu(),
     });
+  };
+
+  /**
+   * Обработчик кнопки main_menu для возврата в главное меню
+   * @param ctx - контекст Grammy
+   */
+  commands.callbackQuery('main_menu', async (ctx) => {
+    await addReaction(ctx, '👀');
+    await returnToHomeScreen(ctx);
   });
 
   /**
@@ -599,41 +603,19 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
   });
 
   /**
-   * Обработчик кнопки back (общий обработчик, возвращает в главное меню без двойного edit)
+   * Обработчик кнопки back (возвращает на главный экран)
    * @param ctx - контекст Grammy
    */
   commands.callbackQuery('back', async (ctx) => {
-    const welcomeText = `
-<b>Coursing Stats</b> — статистика соревнований собак
-
-Отслеживайте результаты вашей собаки по курсингу, бегам борзых и выставкам.
-
-<b>Возможности:</b>
-• Рейтинги и топы по дисциплинам (включая Elo)
-• Календарь соревнований и выставок
-• История медалей и титулов
-• Избранные собаки и быстрая карточка /mystats
-• Поиск по породе /breed
-
-<b>Как использовать:</b>
-Напишите кличку или ID собаки или выберите действие из меню ниже
-    `.trim();
-
-    await safeEditOrReply(ctx, welcomeText, {
-      parse_mode: 'HTML',
-      reply_markup: getMainInlineMenu(),
-    }, cache);
+    await returnToHomeScreen(ctx);
   });
 
   /**
-   * Обработчик кнопки cancel_search для отмены поиска
+   * Обработчик кнопки cancel_search для отмены поиска (возвращает на главный экран)
    * @param ctx - контекст Grammy
    */
   commands.callbackQuery('cancel_search', async (ctx) => {
-    await ctx.editMessageText('Поиск отменен.', {
-      parse_mode: 'HTML',
-      reply_markup: getMainInlineMenu()
-    });
+    await returnToHomeScreen(ctx);
   });
 
   return commands;

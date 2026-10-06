@@ -325,9 +325,9 @@ export function PriorityAwardsList({ items }: { items: readonly PriorityAward[] 
       {items.map((item) => (
         <li
           key={item.abbr}
-          className="flex gap-3 rounded-lg border border-old-money-200 bg-old-money-50/40 px-3 py-2.5 transition-colors hover:bg-cream-50"
+          className="flex items-start gap-2.5 sm:gap-3 rounded-lg border border-old-money-200 bg-old-money-50/40 p-2.5 sm:px-3 sm:py-2.5 transition-colors hover:bg-cream-50"
         >
-          <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-camel-100 text-xs font-bold text-camel-800">
+          <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-camel-100 text-xs font-bold text-camel-800 mt-0.5">
             {item.rank}
           </span>
           <div className="min-w-0 flex-1">

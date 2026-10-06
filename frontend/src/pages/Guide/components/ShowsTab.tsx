@@ -145,8 +145,32 @@ export default function ShowsTab() {
           От ранга зависит, какие сертификаты можно присудить. Чем выше ранг, тем больше возможностей (например,{' '}
           <ShowAbbr abbr="CACIB" /> только на CACIB FCI).
         </p>
-        <div className="overflow-x-auto">
-          <table className="w-full min-w-[520px] border-collapse text-left text-sm">
+
+        {/* Мобильный вид: карточки рангов */}
+        <div className="space-y-2 sm:hidden">
+          {SHOW_RANKS.map((row) => (
+            <div
+              key={row.rank}
+              className="rounded-lg border border-old-money-200 bg-white p-2.5 shadow-2xs"
+            >
+              <div className="flex items-center justify-between gap-2 border-b border-old-money-100 pb-1.5">
+                <span className="font-mono text-xs font-bold text-camel-700">
+                  {row.rank}
+                </span>
+                <span className="text-[11px] font-medium text-charcoal-500">
+                  {row.scope}
+                </span>
+              </div>
+              <p className="mt-1.5 text-xs leading-relaxed text-charcoal-700">
+                {row.certs}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Десктопный вид: таблица */}
+        <div className="hidden sm:block overflow-x-auto">
+          <table className="w-full border-collapse text-left text-sm">
             <thead>
               <tr className="border-b border-old-money-200">
                 <th className="py-2 pr-3 font-semibold">Ранг</th>

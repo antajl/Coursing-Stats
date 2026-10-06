@@ -87,6 +87,9 @@ export function createSearch(api: CoursingStatsAPI, cache?: KVNamespace) {
 
   // Unified text message handler (search + comparison mode)
   search.on('message:text', async (ctx) => {
+    if (ctx.message?.via_bot) {
+      return;
+    }
     const userId = ctx.from?.id?.toString();
     const text = sanitizeInput(ctx.message.text);
 
