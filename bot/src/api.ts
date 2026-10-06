@@ -69,20 +69,22 @@ class CoursingStatsAPI {
     this.baseApiUrl = `${origin}/data/v1`;
   }
 
-  private async fetchJSON(url: string, ttl?: number, retries: number = 3): Promise<unknown> {
+  private async fetchJSON(url: string, ttl?: number, retries: number = 2): Promise<unknown> {
+    // Try cache first (before any fetch)
+    if (this.cache) {
+      try {
+        const cacheKey = `cache:${url}`;
+        const cached = await this.cache.get(cacheKey, 'json');
+        if (cached) return cached;
+      } catch {
+        // ignore cache read errors
+      }
+    }
+
     for (let attempt = 0; attempt < retries; attempt++) {
       try {
-        // Try to get from cache first
-        if (this.cache) {
-          const cacheKey = `cache:${url}`;
-          const cached = await this.cache.get(cacheKey, 'json');
-          if (cached) {
-            return cached;
-          }
-        }
-
         const response = await fetch(url);
-        
+
         if (response.ok) {
           const text = await response.text();
           const data = JSON.parse(text);
@@ -95,21 +97,13 @@ class CoursingStatsAPI {
 
           return data;
         }
-        
-        // If not OK and not last attempt, wait before retry
-        if (attempt < retries - 1) {
-          await new Promise(resolve => setTimeout(resolve, 1000 * (attempt + 1)));
-          continue;
-        }
-        
+
+        // Non-OK response — retry immediately (no setTimeout, it's an anti-pattern in Workers)
+        if (attempt < retries - 1) continue;
         return null;
       } catch (error) {
-        // If error and not last attempt, wait before retry
-        if (attempt < retries - 1) {
-          await new Promise(resolve => setTimeout(resolve, 1000 * (attempt + 1)));
-          continue;
-        }
-        
+        // Network error — retry immediately
+        if (attempt < retries - 1) continue;
         return null;
       }
     }
@@ -480,6 +474,8 @@ class CoursingStatsAPI {
       if (discipline === 'racing') {
         // Racing speed ranking (medals ≠ CS points ≠ speed — separate indexes)
         endpoint = `${this.baseApiUrl}/indexes/top-speed-${year}.json`;
+      } else if (category === 'elo') {
+        endpoint = `${this.baseApiUrl}/indexes/top-elo-${year}.json`;
       } else if (category === 'score') {
         endpoint = `${this.baseApiUrl}/indexes/top-score-${year}.json`;
       } else {
@@ -635,8 +631,11 @@ class CoursingStatsAPI {
       // Competition judges: indexes/judges-summary.json
       // Кэширование: судьи соревнований - 1 час (рейтинги меняются редко)
       const data = await this.fetchJSON(`${this.baseApiUrl}/indexes/judges-summary.json`, CACHE_TTL.JUDGES);
-      if (data && Array.isArray(data)) {
-        return data as RatingItem[];
+      if (data && typeof data === 'object') {
+        if (Array.isArray(data)) return data as RatingItem[];
+        if ('judges' in data && Array.isArray((data as any).judges)) {
+          return (data as any).judges as RatingItem[];
+        }
       }
       return [];
     } catch (error) {

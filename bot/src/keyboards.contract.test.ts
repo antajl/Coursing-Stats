@@ -55,7 +55,6 @@ function collectProductionKeyboardCallbacks(): { callback: string; source: strin
     { source: 'getCalendarKeyboard(page 10)', keyboard: getCalendarKeyboard(10, false, 'coursing') },
     { source: 'getDogCardKeyboard', keyboard: getDogCardKeyboard('42', 'favorites') },
     { source: 'getFavoritesKeyboard', keyboard: getFavoritesKeyboard([{ id: 10 }, { id: 20 }]) },
-    { source: 'getCompareKeyboard', keyboard: getCompareKeyboard('5') },
     { source: 'getNavigationButtons', keyboard: getNavigationButtons('ratings', 'main_menu') },
   ];
 
@@ -81,6 +80,5 @@ describe('keyboard ↔ handler contract', () => {
     expect(all).toContain('favorites');
     expect(all).toContain('add_favorite:42');
     expect(all).toContain('dog:10');
-    expect(all.some((c) => c.startsWith('compare_start_'))).toBe(true);
   });
 });
