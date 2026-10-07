@@ -6,9 +6,6 @@ export function getPersistentReplyKeyboard(): Keyboard {
   return new Keyboard()
     .text('🏠 Главное меню')
     .text('🔍 Поиск собаки')
-    .row()
-    .text('🏆 Рейтинги')
-    .text('📅 Календарь')
     .resized()
     .persistent();
 }
