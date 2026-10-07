@@ -26,6 +26,9 @@ export const WELCOME_TEXT = `
 Напишите кличку собаки или выберите действие из меню ниже
 `.trim();
 
+/** Заголовок меню разделов с невидимыми em-пробелами для выравнивания ширины кнопок по ширине баннера */
+export const MENU_HEADER = '<b>Разделы:</b>' + '\u2003'.repeat(16);
+
 /**
  * Отправляет или обновляет главный экран бота в двух сообщениях:
  * - Сообщение 1: Фото-баннер + описание + ReplyKeyboard (постоянные нижние кнопки)
@@ -50,7 +53,7 @@ export async function sendHomeScreen(
     // Если вызов пришел из callback_query (инлайн-кнопки "На главную" / "Назад")
     if (ctx.callbackQuery?.message?.message_id) {
       try {
-        await ctx.editMessageText('<b>Разделы:</b>', {
+        await ctx.editMessageText(MENU_HEADER, {
           parse_mode: 'HTML',
           reply_markup: getMainInlineMenu(),
         });
@@ -75,7 +78,7 @@ export async function sendHomeScreen(
       if (lastPhotoId && lastMessageId) {
         try {
           const msgIdNum = parseInt(lastMessageId, 10);
-          await ctx.api.editMessageText(chatId, msgIdNum, '<b>Разделы:</b>', {
+          await ctx.api.editMessageText(chatId, msgIdNum, MENU_HEADER, {
             parse_mode: 'HTML',
             reply_markup: getMainInlineMenu(),
           });
@@ -134,7 +137,7 @@ export async function sendHomeScreen(
 
   // Сообщение 2: Интерактивные разделы меню (InlineKeyboard)
   try {
-    const menuMsg = await ctx.api.sendMessage(chatId, '<b>Разделы:</b>', {
+    const menuMsg = await ctx.api.sendMessage(chatId, MENU_HEADER, {
       parse_mode: 'HTML',
       reply_markup: getMainInlineMenu(),
     });
