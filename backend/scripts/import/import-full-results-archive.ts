@@ -353,6 +353,7 @@ async function main() {
       date_start: string | null
       date_end: string | null
       location: string | null
+      judges?: string | null
       results: any[]
     } | null = null
     let parseError: string | null = null
@@ -494,7 +495,7 @@ async function main() {
       full_title: prev?.event?.full_title ?? null,
       event_date: dateStart,
       protocol_location: prev?.event?.protocol_location ?? null,
-      judges: prev?.event?.judges || null,
+      judges: legacyMeta?.judges || prev?.event?.judges || null,
       track_schemes: prev?.event?.track_schemes || [],
       admin_verified_at: prev?.event?.admin_verified_at ?? null,
     }

@@ -3,6 +3,7 @@ import {
   aggregateQualificationTitles,
   competitionTitleDisplayName,
   competitionTitleKey,
+  competitionTitleLabel,
   compareCompetitionTitles,
 } from '../lib/competition-titles'
 
@@ -153,4 +154,52 @@ describe('compareCompetitionTitles', () => {
       'RegCACL',
     ])
   })
+
+  it('orders Donino leagues correctly relative to certificates and local ranks', () => {
+    const parts = [
+      'Прогресс',
+      'Абсолют',
+      'CACL',
+      'Чемпионы',
+    ].sort(compareCompetitionTitles)
+
+    expect(parts).toEqual([
+      'Абсолют',
+      'Чемпионы',
+      'CACL',
+      'Прогресс',
+    ])
+  })
 })
+
+describe('Donino club leagues', () => {
+  it('maps Donino racing league tokens to distinct keys and labels', () => {
+    expect(competitionTitleKey('Абсолют')).toBe('league_absolute')
+    expect(competitionTitleDisplayName('Абсолют')).toBe('Абсолют')
+    expect(competitionTitleKey('Чемпионов')).toBe('league_champions')
+    expect(competitionTitleKey('Чемпионы')).toBe('league_champions')
+    expect(competitionTitleDisplayName('Чемпионов')).toBe('Чемпионы')
+    expect(competitionTitleKey('Прогресс')).toBe('league_progress')
+    expect(competitionTitleKey('Юниор')).toBe('league_junior')
+  })
+
+  it('provides detailed tooltip label referencing Donino club championship and runningdog.ru', () => {
+    const label = competitionTitleLabel('Абсолют')
+    expect(label).toContain('Донино')
+    expect(label).toContain('runningdog.ru')
+    expect(label).toContain('высшая лига клубного чемпионата')
+  })
+
+  it('aggregates Donino league qualifications correctly', () => {
+    const titles = aggregateQualificationTitles([
+      { qualification: 'Абсолют' },
+      { qualification: 'Абсолют' },
+      { qualification: 'Чемпионов' },
+    ])
+    expect(titles).toEqual([
+      { title: 'Абсолют', count: 2 },
+      { title: 'Чемпионы', count: 1 },
+    ])
+  })
+})
+

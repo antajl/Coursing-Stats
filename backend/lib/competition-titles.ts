@@ -32,6 +32,10 @@ export type CompetitionTitleKey =
   | 'caclbr'
   | 'regcacl'
   | 'international'
+  | 'league_absolute'
+  | 'league_champions'
+  | 'league_progress'
+  | 'league_junior'
   | string
 
 /** Короткие бейджи на чипах — как в справке (ЧР РК, CACIL…). */
@@ -51,6 +55,10 @@ export const COMPETITION_TITLE_BADGE: Record<string, string> = {
   rcacl: 'R.CACL',
   caclbr: 'CACLBr',
   regcacl: 'RegCACL',
+  league_absolute: 'Абсолют',
+  league_champions: 'Чемпионы',
+  league_progress: 'Прогресс',
+  league_junior: 'Юниор',
 }
 
 /** Полные названия для тултипов (как SHOW_AWARD_LABELS). */
@@ -70,6 +78,10 @@ export const COMPETITION_TITLE_LABELS: Record<string, string> = {
   rcacl: 'R.CACL — резервный национальный титульный сертификат',
   caclbr: 'CACLBr — породный титульный сертификат (Br = breed)',
   regcacl: 'RegCACL — региональный / локальный сертификат (в протоколах; не в п. 1.4 Положения РКФ)',
+  league_absolute: 'Лига «Абсолют» — высшая лига клубного чемпионата по рейсингу в Донино (runningdog.ru)',
+  league_champions: 'Лига «Чемпионы» — лига титулованных бегунов клубного чемпионата по рейсингу в Донино (runningdog.ru)',
+  league_progress: 'Лига «Прогресс» — стартовая лига клубного чемпионата по рейсингу в Донино (runningdog.ru)',
+  league_junior: 'Лига «Юниор» — юниорская лига клубных соревнований в Донино (runningdog.ru)',
 }
 
 /**
@@ -94,6 +106,11 @@ export const COMPETITION_TITLE_RANK: Record<string, number> = {
   rcacl: 55, // резерв CACL (R.CACL)
   caclbr: 50, // породный (Br = breed)
   regcacl: 40, // региональный / локальный; в протоколах есть, в п. 1.4 Положения нет
+  // Клубные лиги Донино (рейсинг 350 м, runningdog.ru)
+  league_absolute: 75,
+  league_champions: 70,
+  league_progress: 35,
+  league_junior: 30,
 }
 
 export function competitionTitleKey(raw: string): CompetitionTitleKey {
@@ -172,6 +189,20 @@ export function competitionTitleKey(raw: string): CompetitionTitleKey {
   if (t.includes('caclbr') || /^cacl\s*br\b/.test(t) || t === 'cacl br') return 'caclbr'
   if (t.includes('regcacl') || (t.includes('reg') && t.includes('cacl'))) return 'regcacl'
   if (/\bcacl\b/.test(t) || t.startsWith('cacl')) return 'cacl'
+
+  // Клубные лиги Донино (рейсинг 350 м, runningdog.ru)
+  if (t === 'абсолют' || t === 'лига абсолют') {
+    return 'league_absolute'
+  }
+  if (t === 'чемпионы' || t === 'чемпионов' || t === 'лига чемпионов') {
+    return 'league_champions'
+  }
+  if (t === 'прогресс' || t === 'лига прогресс') {
+    return 'league_progress'
+  }
+  if (t === 'юниор' || t === 'лига юниор') {
+    return 'league_junior'
+  }
 
   return t
 }

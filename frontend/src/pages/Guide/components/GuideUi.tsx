@@ -1,8 +1,8 @@
-import { useState, type ReactNode } from 'react'
-import { ChevronDown, ExternalLink } from 'lucide-react'
+import { useState, useMemo, type ReactNode } from 'react'
+import { ChevronDown, ExternalLink, Search, X } from 'lucide-react'
 import HoverTooltip from '../../../components/ui/HoverTooltip'
 import { titleBadgeClass } from '../../../lib/qualificationTitles'
-import { ABBREVIATIONS } from '../constants'
+import { ABBREVIATIONS, type TitleRankItem } from '../constants'
 
 const ABBR_LOOKUP = Object.fromEntries(ABBREVIATIONS.map((row) => [row.abbr, row.full]))
 
@@ -243,46 +243,80 @@ export function AbbreviationsDropdown({
   rows: readonly AbbreviationRow[]
   refTag?: ReactNode
 }) {
-  const [selectedAbbr, setSelectedAbbr] = useState<string>(rows[0]?.abbr ?? '')
+  const [query, setQuery] = useState('')
 
-  const currentItem = rows.find((r) => r.abbr === selectedAbbr) ?? rows[0]
+  const filteredRows = useMemo(() => {
+    const q = query.trim().toLowerCase()
+    if (!q) return rows
+    return rows.filter(
+      (r) => r.abbr.toLowerCase().includes(q) || r.full.toLowerCase().includes(q)
+    )
+  }, [rows, query])
 
   return (
     <div className="space-y-3">
-      <div className="relative max-w-lg">
-        <select
-          id="abbr-select"
-          value={selectedAbbr}
-          onChange={(e) => setSelectedAbbr(e.target.value)}
-          aria-label="Выберите сокращение"
-          className="w-full appearance-none rounded-lg border border-old-money-200 bg-white py-2 pl-3 pr-9 font-sans text-xs font-medium text-charcoal-800 shadow-2xs transition-colors hover:border-camel-300 focus:border-camel-400 focus:outline-none focus:ring-1 focus:ring-camel-400 cursor-pointer"
-        >
-          {rows.map((row) => (
-            <option key={row.abbr} value={row.abbr} className="py-1">
-              {row.abbr} — {row.full}
-            </option>
-          ))}
-        </select>
-        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2.5 text-charcoal-400">
-          <ChevronDown className="h-4 w-4" aria-hidden />
+      <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+        <div className="relative flex-1 max-w-md">
+          <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-charcoal-400">
+            <Search className="h-4 w-4" aria-hidden />
+          </div>
+          <input
+            type="text"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Быстрый поиск по сокращению или расшифровке..."
+            className="w-full rounded-lg border border-old-money-200 bg-white py-2 pl-9 pr-8 text-xs font-medium text-charcoal-800 placeholder-charcoal-400 shadow-2xs transition-colors hover:border-camel-300 focus:border-camel-400 focus:outline-none focus:ring-1 focus:ring-camel-400"
+          />
+          {query && (
+            <button
+              type="button"
+              onClick={() => setQuery('')}
+              className="absolute inset-y-0 right-0 flex items-center pr-2.5 text-charcoal-400 hover:text-charcoal-700 cursor-pointer"
+              aria-label="Очистить поиск"
+            >
+              <X className="h-3.5 w-3.5" />
+            </button>
+          )}
         </div>
+        <span className="shrink-0 text-xs text-charcoal-500 font-medium">
+          {filteredRows.length === rows.length
+            ? `Всего: ${rows.length}`
+            : `Найдено: ${filteredRows.length} из ${rows.length}`}
+        </span>
       </div>
 
-      {currentItem && (
-        <div className="rounded-xl border border-camel-200/90 bg-camel-50/50 p-3.5 shadow-2xs">
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="font-mono text-xs font-bold text-camel-800 bg-white px-2.5 py-1 rounded border border-camel-200 shadow-2xs">
-              {currentItem.abbr}
-            </span>
-            <span className="text-xs font-semibold text-charcoal-700">Официальное значение:</span>
-          </div>
-          <p className="mt-2 text-xs leading-relaxed text-charcoal-800 sm:text-sm">
-            {currentItem.full}
+      {filteredRows.length > 0 ? (
+        <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+          {filteredRows.map((row) => (
+            <div
+              key={row.abbr}
+              className="flex items-start gap-2.5 rounded-lg border border-old-money-200 bg-white p-2.5 shadow-2xs transition-all hover:border-camel-300 hover:bg-cream-50/40"
+            >
+              <span className="shrink-0 rounded-md border border-camel-200/90 bg-camel-50 px-2 py-0.5 font-mono text-xs font-bold text-camel-800 shadow-2xs">
+                {row.abbr}
+              </span>
+              <span className="min-w-0 flex-1 text-xs leading-relaxed text-charcoal-700 font-medium">
+                {row.full}
+              </span>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div className="rounded-lg border border-dashed border-old-money-200 bg-cream-50/50 p-6 text-center">
+          <p className="text-xs text-charcoal-600">
+            Ничего не найдено по запросу «<span className="font-semibold text-charcoal-800">{query}</span>»
           </p>
+          <button
+            type="button"
+            onClick={() => setQuery('')}
+            className="mt-2 text-xs font-semibold text-camel-700 hover:text-camel-800 underline underline-offset-2 cursor-pointer"
+          >
+            Сбросить фильтр
+          </button>
         </div>
       )}
 
-      {refTag}
+      {refTag && <div className="pt-0.5">{refTag}</div>}
     </div>
   )
 }
@@ -368,3 +402,113 @@ export function FeatureNotesGrid({ items }: { items: readonly FeatureItem[] }) {
     </div>
   )
 }
+
+export function TitleLadderList({ items }: { items: readonly TitleRankItem[] }) {
+  const [openIndex, setOpenIndex] = useState<number | null>(null)
+
+  const tierBg = {
+    international: 'border-amber-400 bg-linear-to-r from-amber-50/80 via-cream-50/50 to-amber-50/80 hover:bg-amber-100/60 shadow-xs',
+    absolute: 'border-amber-300/90 bg-amber-50/50 hover:bg-amber-50/80',
+    career: 'border-camel-300/80 bg-camel-50/40 hover:bg-camel-50/70',
+    annual: 'border-camel-200/90 bg-white hover:bg-camel-50/30',
+    cert_intl: 'border-blue-200/90 bg-blue-50/30 hover:bg-blue-50/60',
+    cert_nat: 'border-old-money-200 bg-white hover:bg-old-money-50/50',
+  }
+
+  const badgeFrame = {
+    international: 'border-2 border-amber-600 bg-amber-200 text-amber-950 font-bold shadow-xs',
+    absolute: 'border-2 border-amber-500 bg-amber-100 text-amber-900 font-bold shadow-2xs',
+    career: 'border border-camel-500 bg-camel-100 text-camel-900 font-semibold shadow-2xs',
+    annual: 'border border-camel-400 bg-cream-50 text-camel-800 font-semibold shadow-2xs',
+    cert_intl: 'border border-blue-400 bg-blue-100 text-blue-900 font-medium shadow-2xs',
+    cert_nat: 'border border-old-money-300 bg-white text-charcoal-800 font-medium shadow-2xs',
+  }
+
+  const tagColor = {
+    international: 'bg-amber-200 text-amber-950 border-amber-400 font-bold',
+    absolute: 'bg-amber-100 text-amber-900 border-amber-300',
+    career: 'bg-camel-100 text-camel-900 border-camel-300',
+    annual: 'bg-cream-100 text-camel-900 border-camel-200',
+    cert_intl: 'bg-blue-100 text-blue-900 border-blue-200',
+    cert_nat: 'bg-white text-charcoal-700 border-old-money-200',
+  }
+
+  return (
+    <div className="space-y-2">
+      {items.map((item, idx) => {
+        const isOpen = openIndex === idx
+        return (
+          <div
+            key={`${item.badge}-${item.rank}`}
+            className={`rounded-lg border transition-all shadow-2xs ${tierBg[item.prestigeTier]}`}
+          >
+            <button
+              type="button"
+              onClick={() => setOpenIndex(isOpen ? null : idx)}
+              className="flex w-full items-start sm:items-center justify-between gap-2 sm:gap-2.5 p-2.5 sm:px-3 sm:py-2 text-left"
+            >
+              <div className="flex min-w-0 flex-1 items-start sm:items-center gap-2">
+                <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white text-[11px] font-bold text-charcoal-700 shadow-2xs mt-0.5 sm:mt-0">
+                  {item.rank}
+                </span>
+                <span
+                  className={`inline-block shrink-0 rounded px-1.5 py-0.5 text-xs ${badgeFrame[item.prestigeTier]} mt-0.5 sm:mt-0`}
+                >
+                  {item.badge}
+                </span>
+                <span className="min-w-0 flex-1 font-serif text-xs font-bold leading-snug text-charcoal-900 sm:text-sm">
+                  {item.name}
+                </span>
+              </div>
+
+              <div className="flex shrink-0 items-center gap-2 mt-0.5 sm:mt-0">
+                <span
+                  className={`hidden rounded border px-2 py-0.5 text-[10px] font-semibold sm:inline-block shadow-2xs ${tagColor[item.prestigeTier]}`}
+                >
+                  {item.prestigeLabel}
+                </span>
+                <ChevronDown
+                  className={`h-4 w-4 shrink-0 text-charcoal-400 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+                  aria-hidden
+                />
+              </div>
+            </button>
+
+            {isOpen && (
+              <div className="border-t border-old-money-100 bg-white/80 px-3.5 py-3 text-xs sm:text-sm text-charcoal-600">
+                <div className="mb-2 sm:hidden">
+                  <span
+                    className={`inline-block rounded border px-2 py-0.5 text-[10px] font-semibold shadow-2xs ${tagColor[item.prestigeTier]}`}
+                  >
+                    {item.prestigeLabel}
+                  </span>
+                </div>
+
+                <p className="leading-relaxed text-charcoal-700">{item.details}</p>
+
+                <div className="mt-2.5 rounded-lg border border-old-money-200 bg-old-money-50/70 p-2.5 text-xs">
+                  <span className="font-semibold text-charcoal-900">Как получить:</span>
+                  <div className="mt-1 leading-relaxed text-charcoal-800">{item.howToGet}</div>
+
+                  {item.extraList && (
+                    <div className="mt-2.5 pt-2 border-t border-old-money-200/80">
+                      <span className="font-semibold text-charcoal-900">Официальные варианты набора (РКФ):</span>
+                      <ul className="mt-1.5 list-disc pl-4 space-y-1 text-charcoal-700 leading-relaxed">
+                        {item.extraList.map((variant) => (
+                          <li key={variant}>{variant}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+
+                {item.ref && <RefTag>{item.ref}</RefTag>}
+              </div>
+            )}
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
