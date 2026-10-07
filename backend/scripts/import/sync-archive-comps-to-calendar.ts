@@ -200,6 +200,7 @@ function main() {
       best.ev.participants_count = resultCount
       if (doc.event.results_url) best.ev.results_url = doc.event.results_url
       if (!best.ev.location && doc.event.location) best.ev.location = doc.event.location
+      if (doc.event.judges) best.ev.judges = doc.event.judges
       // Refresh junk Wayback titles / wrong discipline from competition truth
       if (/главная страница/i.test(String(best.ev.title || ''))) {
         best.ev.title = doc.event.title || doc.event.rank_label || best.ev.title

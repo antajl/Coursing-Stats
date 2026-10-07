@@ -1,230 +1,85 @@
 import {
   SHOW_ABBREVIATIONS,
-  SHOW_ABBR_LOOKUP,
-  SHOW_CERTIFICATES,
-  SHOW_CHAMPIONSHIP_TITLES,
-  SHOW_EVENT_AWARDS_PRIORITY,
-  SHOW_EVENT_TITLES,
-  SHOW_FEATURE_NOTES,
   SHOW_OFFICIAL_SOURCES,
-  SHOW_RANKS,
+  SHOW_REQUIREMENTS,
+  SHOW_TITLE_LADDER,
 } from '../showConstants'
 import { GUIDE_SHOWS_FAQS } from '../guideFaqs'
 import {
-  AbbrTag,
-  AbbreviationsTable,
-  CertificateLevelsGrid,
-  CumulativeTitlesGrid,
-  EventTitlesGrid,
-  FeatureNotesGrid,
-  ExternalHref,
-  InfoCallout,
+  AbbreviationsDropdown,
   OfficialSourcesList,
-  PriorityAwardsList,
   RefTag,
   SectionCard,
-  TitleHierarchySection,
+  TitleLadderList,
 } from './GuideUi'
-
-function ShowAbbr({ abbr }: { abbr: string }) {
-  return <AbbrTag abbr={abbr} title={SHOW_ABBR_LOOKUP[abbr]} />
-}
 
 export default function ShowsTab() {
   return (
     <div className="space-y-6">
-      <SectionCard title="Официальные источники">
-        <p>
-          Ниже — выжимка по{' '}
-          <strong className="font-semibold text-charcoal-800">выставкам собак (conformation)</strong>{' '}
-          по документам РКФ и FCI. Это <strong>отдельная</strong> дисциплина от курсинга, бегов и БЗМП (см. вкладку
-          «Соревнования»). При расхождении с протоколом ориентируйтесь на полные тексты.
+      {/* 1. Наглядная лестница титулов: ценность и как получить */}
+      <SectionCard title="Лестница титулов: ценность и как получить">
+        <p className="text-xs text-charcoal-600">
+          Сравнение всех выставочных титулов от абсолютной вершины до базовых сертификатов ринга (клик по строке раскроет детали регламента):
+        </p>
+
+        <TitleLadderList items={SHOW_TITLE_LADDER} />
+      </SectionCard>
+
+      {/* 2. Ключевые правила выставок (Памятка участника) */}
+      <SectionCard title="Памятка участника: регламент и ранги выставок">
+        <div className="grid gap-3 sm:grid-cols-2">
+          {SHOW_REQUIREMENTS.map((req) => (
+            <div
+              key={req.label}
+              className="rounded-xl border border-old-money-200 bg-white p-3.5 shadow-2xs"
+            >
+              <div className="text-[11px] font-bold uppercase tracking-wider text-camel-800">
+                {req.label}
+              </div>
+              <p className="mt-1.5 text-xs leading-relaxed text-charcoal-700">
+                {req.text}
+              </p>
+              <RefTag>{req.ref}</RefTag>
+            </div>
+          ))}
+        </div>
+      </SectionCard>
+
+      {/* 3. Словарь сокращений */}
+      <SectionCard title="Словарь сокращений в протоколах">
+        <p className="text-xs text-charcoal-600">
+          Выберите официальное сокращение титула или сертификата, чтобы увидеть его расшифровку:
+        </p>
+        <AbbreviationsDropdown
+          rows={SHOW_ABBREVIATIONS}
+          refTag={
+            <RefTag>
+              Положение о сертификатных выставках РКФ · Список титулов и принятые сокращения в родословных РКФ
+            </RefTag>
+          }
+        />
+      </SectionCard>
+
+      {/* 4. Официальные первоисточники и регламенты */}
+      <SectionCard title="Официальные первоисточники и регламенты">
+        <p className="text-xs text-charcoal-600">
+          Нормативные документы РКФ и FCI, регламентирующие выставочные правила и присвоение титулов:
         </p>
         <OfficialSourcesList sources={SHOW_OFFICIAL_SOURCES} />
       </SectionCard>
 
-      <TitleHierarchySection
-        title="Иерархия выставочных наград и титулов"
-        levels={[
-          {
-            tier: 'cumulative',
-            label: 'Абсолютные и пожизненные звания карьеры (РКФ / FCI)',
-            badges: ['АЧР', 'ГЧР', 'ЧР', 'ЧРКФ', 'C.I.B.', 'C.I.B.P.'],
-            note: 'Высшие пожизненные звания карьеры собаки в системе РКФ и FCI: АЧР (Абсолютный чемпион России — вершина), ГЧР (Гранд чемпион России), ЧР (Чемпион России), ЧРКФ (Чемпион РКФ), C.I.B. (Интерчемпион красоты FCI), C.I.B.P. (Красота и курсинг борзых FCI).',
-          },
-          {
-            tier: 'prestige',
-            label: 'Высшие награды главного и породного рингов',
-            badges: ['BIS', 'BIG', 'BIS-Ю', 'ЛПП (BOB)', 'ЛППП (BOS)', 'ЛЮ', 'ЛВ'],
-            note: (
-              <>
-                Главный ринг: <ShowAbbr abbr="BIS" /> (Best in Show — лучшая собака выставки), <ShowAbbr abbr="BIG" /> (лучшая в группе FCI), <ShowAbbr abbr="BIS-Ю" /> (лучший юниор выставки). Породный ринг: <ShowAbbr abbr="ЛПП" /> (BOB) и <ShowAbbr abbr="ЛППП" /> (BOS).
-              </>
-            ),
-          },
-          {
-            tier: 'diploma',
-            label: 'Титулы дня и победители состязаний',
-            badges: ['ЧРКФ', 'EAW', 'RW', 'MW', 'BW RUS', 'КЧК'],
-            note: 'Дипломы победителей выставки дня: ЧРКФ, виннеры главных выставок года («Евразия» EAW, «Россия» RW, Кубок Москвы MW, Национальная выставка породы BW RUS) и кандидаты в чемпионы клуба (КЧК).',
-          },
-          {
-            tier: 'certificate',
-            label: 'Сертификаты кандидатства в чемпионы',
-            badges: ['CACIB', 'CAC', 'JCAC', 'VCAC', 'CW', 'R.CACIB', 'R.CAC'],
-            note: 'Сертификаты кандидата в интернациональные (CACIB), национальные (CAC), юные (JCAC) и ветеранские (VCAC) чемпионы — строительные кирпичики для оформления чемпионских званий в РКФ.',
-          },
-        ]}
-        refTag={
-          <RefTag>Положение о сертификатных выставках РКФ; Список титулов и принятые сокращения в родословных РКФ</RefTag>
-        }
-      />
-
-      <SectionCard title="Раздел «Выставки» на сайте">
-        <p>
-          В шапке: <strong>Выставки → Рейтинг / Судьи</strong>
-          (локально ещё <strong>Календарь</strong> и страницы протоколов). В карточке собаки — счётчики наград
-          по категориям, число выставок и место в рейтинге. По умолчанию включён фильтр{' '}
-          <strong>текущего сезона</strong> (кнопка «Сезон YYYY»); снять её — рейтинг по всем загруженным годам.
-          При поиске по кличке сезон не режет выдачу.
-        </p>
-        <p className="text-charcoal-600">
-          На главной в колонке «Выставки» справа — не один ярлык вроде «BOB», а краткая причина места (например{' '}
-          <strong className="font-semibold text-charcoal-800">BOB ×18 · VCAC ×27</strong>
-          ): самые весомые награды сезона со счётчиками.
-        </p>
-        <p className="text-charcoal-600">
-          Локально на странице выставки: шапка (дата / счётчики / место + строка клуб · ранг · тип), блок{' '}
-          <strong>Главный ринг</strong> (вкладки BIS / возраст / BIG), каталог по породам. Клик по кличке открывает
-          профиль собаки. Оценки и «Неявка» нормализуются из PDF (в т.ч. переносы вроде «ЩЕ ОП Н», «Нея вка»).
-          Награды в таблице — чипы; при переполнении — прокрутка при наведении.
-        </p>
-        <p>
-          В истории выставок в карточке собаки ссылки ведут на страницу выставки на сайте (с каталогом рингов и результатами) и на{' '}
-          <ExternalHref href="https://rkf.online/">rkf.online</ExternalHref>
-          {' '}с оригинальным PDF-отчётом организаторов при его наличии.
-        </p>
-        <InfoCallout>
-          Сертификаты <ShowAbbr abbr="CAC" /> и <ShowAbbr abbr="CACIB" /> — шаг к оформлению титулов в РКФ, но не
-          равны титулу «Чемпион». <ShowAbbr abbr="BOB" /> и <ShowAbbr abbr="BIS" /> — награды конкретной выставки.
-          На сайте рейтинг считает все распознанные награды протокола (CW, JCAC, ЧРКФ, КЧП, П «России»…) с баллами
-          согласно иерархии престижности наград РКФ (см. таблицу ниже); кумулятивные титулы (C.I.B., Чемпион России)
-          оформляются в РКФ отдельно и в счётчиках одного дня не смешиваются. Бейджи главного ринга (
-          <ShowAbbr abbr="BIS" />, <ShowAbbr abbr="BIG" />, <ShowAbbr abbr="BIS-Ю" />…) попадают в рейтинг/профиль
-          только если распарсена ведомость type3 (сейчас 2025–2026; покрытие ещё не полное).
-        </InfoCallout>
-        <InfoCallout>
-          Породы в карточках — в обычном регистре (не капс РКФ). Для привычных коротких имён показываем чип
-          («Левретка», «Малинуа», «Кане-корсо», «Гальго»); полное официальное название — в подсказке при наведении.
-          Разные типы шерсти и размеры не склеиваем; если в протоколе тип не указан (голая «выжла» / «немецкая
-          овчарка»), помечаем «тип не указан», а не относим к К-Ш.
-        </InfoCallout>
-      </SectionCard>
-
-      <SectionCard title="Сертификаты на выставках">
-        <CertificateLevelsGrid items={SHOW_CERTIFICATES} />
-        <RefTag>Положение о сертификатных выставках РКФ, п. 9.5</RefTag>
-      </SectionCard>
-
-      <SectionCard title="Награды и титулы на выставке">
-        <EventTitlesGrid
-          items={SHOW_EVENT_TITLES.map((item) => ({ ...item, abbrTitle: SHOW_ABBR_LOOKUP[item.abbr] }))}
-        />
-        <p>Полная иерархия наград одного дня и их вес в рейтинге сайта (сверху — весомее):</p>
-        <PriorityAwardsList
-          items={SHOW_EVENT_AWARDS_PRIORITY.map((item) => ({
-            ...item,
-            abbrTitle: SHOW_ABBR_LOOKUP[item.abbr.split(' / ')[0]],
-          }))}
-        />
-        <RefTag>Положение о сертификатных выставках РКФ, п. 9.4–9.6; весовые коэффициенты рейтинга</RefTag>
-      </SectionCard>
-
-      <SectionCard title="Ранги выставок: кто что получает">
-        <p>
-          От ранга зависит, какие сертификаты можно присудить. Чем выше ранг, тем больше возможностей (например,{' '}
-          <ShowAbbr abbr="CACIB" /> только на CACIB FCI).
-        </p>
-
-        {/* Мобильный вид: карточки рангов */}
-        <div className="space-y-2 sm:hidden">
-          {SHOW_RANKS.map((row) => (
-            <div
-              key={row.rank}
-              className="rounded-lg border border-old-money-200 bg-white p-2.5 shadow-2xs"
-            >
-              <div className="flex items-center justify-between gap-2 border-b border-old-money-100 pb-1.5">
-                <span className="font-mono text-xs font-bold text-camel-700">
-                  {row.rank}
-                </span>
-                <span className="text-[11px] font-medium text-charcoal-500">
-                  {row.scope}
-                </span>
-              </div>
-              <p className="mt-1.5 text-xs leading-relaxed text-charcoal-700">
-                {row.certs}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        {/* Десктопный вид: таблица */}
-        <div className="hidden sm:block overflow-x-auto">
-          <table className="w-full border-collapse text-left text-sm">
-            <thead>
-              <tr className="border-b border-old-money-200">
-                <th className="py-2 pr-3 font-semibold">Ранг</th>
-                <th className="py-2 pr-3 font-semibold">Тип</th>
-                <th className="py-2 font-semibold">Сертификаты / титулы</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-old-money-100">
-              {SHOW_RANKS.map((row) => (
-                <tr key={row.rank}>
-                  <td className="py-2 pr-3 font-mono text-xs font-bold text-camel-700">
-                    {row.rank}
-                  </td>
-                  <td className="py-2 pr-3 text-charcoal-600">{row.scope}</td>
-                  <td className="py-2 text-charcoal-600">{row.certs}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <RefTag>Положение о сертификатных выставках РКФ, п. 1.2</RefTag>
-      </SectionCard>
-
-      <SectionCard title="Кумулятивные титулы">
-        <p className="text-xs text-old-money-600">
-          Оформляются в РКФ по набору сертификатов — не путать с наградами одного дня.
-        </p>
-        <CumulativeTitlesGrid
-          items={SHOW_CHAMPIONSHIP_TITLES.map((item) => ({ ...item, abbrTitle: SHOW_ABBR_LOOKUP[item.abbr] }))}
-        />
-        <InfoCallout>
-          На крупных выставках («Россия», «Евразия», «Кубок РКФ» и др.) один <ShowAbbr abbr="CAC" /> может
-          засчитываться как два; часть <ShowAbbr abbr="R.CAC" /> — как один <ShowAbbr abbr="CAC" />.
-        </InfoCallout>
-      </SectionCard>
-
-      <SectionCard title="Особенности выставок">
-        <FeatureNotesGrid items={SHOW_FEATURE_NOTES} />
-      </SectionCard>
-
-      <SectionCard title="Сокращения">
-        <AbbreviationsTable
-          rows={SHOW_ABBREVIATIONS}
-          abbrLookup={SHOW_ABBR_LOOKUP}
-          refTag={<RefTag>Положение о сертификатных выставках РКФ; Положение о титулах РКФ</RefTag>}
-        />
-      </SectionCard>
-
-      <SectionCard title="Частые вопросы">
-        <dl className="space-y-4">
+      {/* 5. Частые вопросы */}
+      <SectionCard title="Частые вопросы о выставках">
+        <dl className="space-y-3 sm:space-y-3.5">
           {GUIDE_SHOWS_FAQS.map((faq) => (
-            <div key={faq.question}>
-              <dt className="font-semibold text-charcoal-900">{faq.question}</dt>
-              <dd className="mt-1 text-sm text-charcoal-600">{faq.answer}</dd>
+            <div
+              key={faq.question}
+              className="rounded-xl border border-old-money-200 bg-white p-3.5 shadow-2xs"
+            >
+              <dt className="text-xs font-bold text-charcoal-900 sm:text-sm">{faq.question}</dt>
+              <dd className="mt-1.5 text-xs leading-relaxed text-charcoal-700 sm:text-sm">
+                {faq.answer}
+              </dd>
             </div>
           ))}
         </dl>

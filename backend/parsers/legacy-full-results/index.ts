@@ -40,6 +40,7 @@ export type LegacyFullResultsParse = {
   date_start: string | null
   date_end: string | null
   location: string | null
+  judges?: string | null
   results: LegacyFullResultRow[]
 }
 
@@ -221,6 +222,29 @@ function parseFollowJudgeScores(
   }
   // 5 cells: belong to whichever heat was not rowspan-covered by DQ
   if (heat1Dq) return { heat1: empty5(), heat2: take5(0) }
+  return { heat1: take5(0), heat2: empty5() }
+}
+
+export function extractJudgesFromColspanHeaders($: cheerio.CheerioAPI): string | null {
+  let found: string[] = []
+  $('tr').slice(0, 15).each((_, tr) => {
+    $(tr).find('td[colspan="5"], th[colspan="5"]').each((_, cell) => {
+      if (found.length > 0) return
+      const html = $(cell).html() || ''
+      const lines = html
+        .replace(/<br\s*\/?>/gi, '\n')
+        .replace(/<\/p>/gi, '\n')
+        .replace(/<[^>]+>/g, '')
+        .split('\n')
+        .map((s) => clean(s))
+        .filter((s) => s.length > 2 && !/ман|скор|вын|прес|энт|баллы|очки|забег/i.test(s))
+
+      if (lines.length > 0 && lines.every((l) => /[a-zа-я]/i.test(l) && l.length <= 50)) {
+        found = lines
+      }
+    })
+  })
+  return found.length > 0 ? found.join(', ') : null
 }
 
 /**
@@ -269,13 +293,22 @@ export function parseLegacyRestTail(rest: string[]): {
 export function parseLegacyFullResultsHTML(html: string): LegacyFullResultsParse {
   const $ = cheerio.load(html)
   const trs = $('tr').toArray()
-  const header = clean($(trs[0] || []).text())
+  let headerRow = trs[0]
+  for (const tr of trs.slice(0, 10)) {
+    const t = clean($(tr).text())
+    if (parseRuDateRange(t).start || /чемпионат|кубок|соревнован|состязан|бега/i.test(t)) {
+      headerRow = tr
+      break
+    }
+  }
+  const header = clean($(headerRow || []).text())
   const { start, end } = parseRuDateRange(header)
   let title = header
   title = title.replace(/\s*\([^)]*\)\s*$/, '')
   title = title.replace(/,\s*\d{2}-\d{2}\.\d{2}\.\d{4}\s*$/, '')
   title = title.replace(/,\s*\d{2}\.\d{2}\.\d{4}\s*$/, '')
   title = clean(title) || header || null
+  const judges = extractJudgesFromColspanHeaders($)
 
   const results: LegacyFullResultRow[] = []
   const processed = new Set<number>()
@@ -333,30 +366,36 @@ export function parseLegacyFullResultsHTML(html: string): LegacyFullResultsParse
     const { placement: trailingPlacement, vc, qualification } = parseLegacyRestTail(rest)
     const rawPlacement = trailingPlacement ?? leadingPlacement
 
-    // Judge 2 continuation row
-    let h1j2scores: (number | null)[] = [null, null, null, null, null]
-    let h2j2scores: (number | null)[] = [null, null, null, null, null]
-    if (i + 1 < trs.length) {
-      const follow = cellInfos($, trs[i + 1])
+    // Follow judge continuation rows (Judge 2, Judge 3, ...)
+    const followJudgesScores: Array<{ heat1: (number | null)[]; heat2: (number | null)[] }> = []
+    let nextRow = i + 1
+    while (nextRow < trs.length) {
+      const follow = cellInfos($, trs[nextRow])
       if (isJudgeContinuation(follow)) {
         const parsed = parseFollowJudgeScores(follow, h1j1.disqualified)
-        h1j2scores = parsed.heat1
-        h2j2scores = parsed.heat2
-        processed.add(i + 1)
+        followJudgesScores.push(parsed)
+        processed.add(nextRow)
+        nextRow++
+      } else {
+        break
       }
     }
 
     const judgesHeat1: JudgeScoreBlock[] = []
     const j1h1 = makeJudge(1, h1j1.scores)
-    const j2h1 = makeJudge(2, h1j2scores)
     if (j1h1) judgesHeat1.push(j1h1)
-    if (j2h1) judgesHeat1.push(j2h1)
+    followJudgesScores.forEach((f, fIdx) => {
+      const j = makeJudge(fIdx + 2, f.heat1)
+      if (j) judgesHeat1.push(j)
+    })
 
     const judgesHeat2: JudgeScoreBlock[] = []
     const j1h2 = makeJudge(1, h2j1.scores)
-    const j2h2 = makeJudge(2, h2j2scores)
     if (j1h2) judgesHeat2.push(j1h2)
-    if (j2h2) judgesHeat2.push(j2h2)
+    followJudgesScores.forEach((f, fIdx) => {
+      const j = makeJudge(fIdx + 2, f.heat2)
+      if (j) judgesHeat2.push(j)
+    })
 
     const heats: HeatScoreBlock[] = []
     const hasHeat1 =
@@ -473,6 +512,7 @@ export function parseLegacyFullResultsHTML(html: string): LegacyFullResultsParse
     date_start: start,
     date_end: end,
     location: locationFromHeader(header),
+    judges,
     results,
   }
 }

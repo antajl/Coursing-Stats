@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/index-top-placement-v1",
   "year": 2019,
-  "count": 256,
+  "count": 257,
   "items": [
     {
       "dog_id": 10161,
@@ -264,19 +264,6 @@
       "year_to": 2019
     },
     {
-      "dog_id": 9968,
-      "name_lat": "TSARSKAYA PRIHOT SAYURI",
-      "name_ru": "TSARSKAYA PRIHOT SAYURI",
-      "breed": "ИРЛАНДСКИЙ ВОЛКОДАВ",
-      "year": 2019,
-      "gold": 1,
-      "silver": 0,
-      "bronze": 2,
-      "total_starts": 3,
-      "year_from": 2019,
-      "year_to": 2019
-    },
-    {
       "dog_id": 10114,
       "name_lat": "RAZGULJAI CHAROVNITSA",
       "name_ru": "RAZGULJAI CHAROVNITSA",
@@ -338,6 +325,19 @@
       "silver": 0,
       "bronze": 1,
       "total_starts": 3,
+      "year_from": 2019,
+      "year_to": 2019
+    },
+    {
+      "dog_id": 9968,
+      "name_lat": "TSARSKAYA PRIHOT SAYURI",
+      "name_ru": "TSARSKAYA PRIHOT SAYURI",
+      "breed": "ИРЛАНДСКИЙ ВОЛКОДАВ",
+      "year": 2019,
+      "gold": 1,
+      "silver": 0,
+      "bronze": 1,
+      "total_starts": 2,
       "year_from": 2019,
       "year_to": 2019
     },
@@ -1130,7 +1130,7 @@
       "gold": 0,
       "silver": 1,
       "bronze": 1,
-      "total_starts": 3,
+      "total_starts": 2,
       "year_from": 2019,
       "year_to": 2019
     },
@@ -1468,7 +1468,7 @@
       "gold": 0,
       "silver": 1,
       "bronze": 0,
-      "total_starts": 2,
+      "total_starts": 1,
       "year_from": 2019,
       "year_to": 2019
     },
@@ -1993,6 +1993,19 @@
       "year_to": 2019
     },
     {
+      "dog_id": 10300,
+      "name_lat": "TSARSKAJA PRIHOT SAYURI",
+      "name_ru": "TSARSKAJA PRIHOT SAYURI",
+      "breed": "ИРЛАНДСКИЙ ВОЛКОДАВ",
+      "year": 2019,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 1,
+      "total_starts": 1,
+      "year_from": 2019,
+      "year_to": 2019
+    },
+    {
       "dog_id": 10316,
       "name_lat": "AL NAFISEH FALAKARA",
       "name_ru": "AL NAFISEH FALAKARA",
@@ -2105,7 +2118,7 @@
       "gold": 0,
       "silver": 0,
       "bronze": 0,
-      "total_starts": 3,
+      "total_starts": 2,
       "year_from": 2019,
       "year_to": 2019
     },
@@ -2916,6 +2929,19 @@
       "year_to": 2019
     },
     {
+      "dog_id": 10288,
+      "name_lat": "ITURI PUZZLE IZYUM V CHOCOLADE",
+      "name_ru": "ITURI PUZZLE IZYUM V CHOCOLADE",
+      "breed": "БАСЕНДЖИ",
+      "year": 2019,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 1,
+      "year_from": 2019,
+      "year_to": 2019
+    },
+    {
       "dog_id": 10289,
       "name_lat": "STAR KARUNA GOOD LUCK",
       "name_ru": "STAR KARUNA GOOD LUCK",
@@ -2942,19 +2968,6 @@
       "year_to": 2019
     },
     {
-      "dog_id": 10293,
-      "name_lat": "VILMA LIKA ARTEMIDA",
-      "name_ru": "VILMA LIKA ARTEMIDA",
-      "breed": "ГАННОВЕРСКАЯ ГОНЧАЯ",
-      "year": 2019,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 1,
-      "year_from": 2019,
-      "year_to": 2019
-    },
-    {
       "dog_id": 10305,
       "name_lat": "EVA",
       "name_ru": "EVA",
@@ -2968,9 +2981,9 @@
       "year_to": 2019
     },
     {
-      "dog_id": 10308,
-      "name_lat": "SVIREP IZ SELA TSAREVO",
-      "name_ru": "SVIREP IZ SELA TSAREVO",
+      "dog_id": 10307,
+      "name_lat": "DOROGOY DRUG SOKRUСHAY",
+      "name_ru": "DOROGOY DRUG SOKRUСHAY",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "year": 2019,
       "gold": 0,
@@ -3133,6 +3146,19 @@
       "silver": 0,
       "bronze": 0,
       "total_starts": 3,
+      "year_from": 2019,
+      "year_to": 2019
+    },
+    {
+      "dog_id": 10323,
+      "name_lat": "LUXURY VIPP LADY DAY",
+      "name_ru": "LUXURY VIPP LADY DAY",
+      "breed": "УИППЕТ",
+      "year": 2019,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 1,
       "year_from": 2019,
       "year_to": 2019
     },
@@ -3309,19 +3335,6 @@
       "dog_id": 10383,
       "name_lat": "ЛАКШЕРИ ВИПП ЛЕДИ ДЕЙ",
       "name_ru": "ЛАКШЕРИ ВИПП ЛЕДИ ДЕЙ",
-      "breed": "УИППЕТ",
-      "year": 2019,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 1,
-      "year_from": 2019,
-      "year_to": 2019
-    },
-    {
-      "dog_id": 10543,
-      "name_lat": "LUXURY WHIPP LADY DAY",
-      "name_ru": "LUXURY WHIPP LADY DAY",
       "breed": "УИППЕТ",
       "year": 2019,
       "gold": 0,

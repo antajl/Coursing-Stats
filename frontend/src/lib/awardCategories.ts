@@ -113,7 +113,24 @@ export function classifyCompetitionTitle(raw: string): AwardCategory {
     return 'certificate'
   }
 
-  if (compact.includes('ДИПЛОМ') || compact.includes('ПОБЕДИТЕЛЬ')) {
+  // Клубные соревновательные лиги Донино (рейсинг 350 м, runningdog.ru)
+  if (
+    compact === 'АБСОЛЮТ' ||
+    compact === 'ЛИГА АБСОЛЮТ' ||
+    compact === 'ЧЕМПИОНЫ' ||
+    compact === 'ЧЕМПИОНОВ' ||
+    compact === 'ЛИГА ЧЕМПИОНОВ'
+  ) {
+    return 'prestige'
+  }
+  if (
+    compact === 'ПРОГРЕСС' ||
+    compact === 'ЛИГА ПРОГРЕСС' ||
+    compact === 'ЮНИОР' ||
+    compact === 'ЛИГА ЮНИОР' ||
+    compact.includes('ДИПЛОМ') ||
+    compact.includes('ПОБЕДИТЕЛЬ')
+  ) {
     return 'diploma'
   }
 

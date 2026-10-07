@@ -4,6 +4,7 @@ import { type ApiResult, fetchJson } from './core'
 interface DogProfileFile {
   dog?: Record<string, unknown>
   competitions?: Record<string, unknown>[]
+  judge_stats?: Record<string, unknown> | null
   elo_rating?: number | null
   elo_races?: number | null
   elo_reliable?: boolean
@@ -39,6 +40,7 @@ export async function getDogProfile(dogId: string): Promise<ApiResult<Record<str
     success: true,
     data: {
       ...file.dog,
+      judge_stats: (file.dog as any).judge_stats ?? file.judge_stats ?? null,
       elo_rating: file.elo_rating ?? null,
       elo_races: file.elo_races ?? null,
       elo_reliable: file.elo_reliable,

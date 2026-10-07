@@ -21,7 +21,14 @@ export default function QualificationBadges({ qualification }: QualificationBadg
     .sort(compareCompetitionTitles)
 
   // Check if this is a league transition (Абсолют, Чемпионов, Прогресс, Юниор)
-  const leagueTransitions = ['Абсолют', 'Чемпионов', 'Прогресс', 'Юниор']
+  const leagueTransitions = ['Абсолют', 'Чемпионов', 'Чемпионы', 'Прогресс', 'Юниор']
+  const leagueLabels: Record<string, string> = {
+    'Абсолют': 'Переход в Лигу «Абсолют» — высшая лига клубного чемпионата по рейсингу в Донино (runningdog.ru)',
+    'Чемпионов': 'Переход в Лигу «Чемпионы» — лига титулованных бегунов клубного чемпионата по рейсингу в Донино (runningdog.ru)',
+    'Чемпионы': 'Переход в Лигу «Чемпионы» — лига титулованных бегунов клубного чемпионата по рейсингу в Донино (runningdog.ru)',
+    'Прогресс': 'Переход в Лигу «Прогресс» — стартовая лига клубного чемпионата по рейсингу в Донино (runningdog.ru)',
+    'Юниор': 'Переход в Лигу «Юниор» — юниорская лига клубных соревнований в Донино (runningdog.ru)',
+  }
   const isLeagueTransition = parts.some(p => leagueTransitions.includes(p))
 
   if (isLeagueTransition) {
@@ -32,7 +39,7 @@ export default function QualificationBadges({ qualification }: QualificationBadg
             return (
               <HoverTooltip
                 key={`league-${i}`}
-                label={`Перешёл в лигу «${raw}»`}
+                label={leagueLabels[raw] || `Переход в лигу «${raw}» (Донино)`}
                 placement="top"
                 variant="site"
                 delayMs={0}

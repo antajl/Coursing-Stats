@@ -17,6 +17,21 @@ import {
   SHOW_EVENT_AWARDS_PRIORITY,
   SHOW_CHAMPIONSHIP_TITLES,
 } from '../../../frontend/src/pages/Guide/showConstants';
+import {
+  DONINO_SPEED_LADDER,
+  DONINO_REQUIREMENTS,
+  DONINO_ABBREVIATIONS,
+} from '../../../frontend/src/pages/Guide/doninoConstants';
+import {
+  PROTOCOL_LADDER,
+  PROTOCOL_REQUIREMENTS,
+  PROTOCOL_ABBREVIATIONS,
+} from '../../../frontend/src/pages/Guide/protocolConstants';
+import {
+  RATING_LADDER,
+  RATING_REQUIREMENTS,
+  RATING_ABBREVIATIONS,
+} from '../../../frontend/src/pages/Guide/ratingConstants';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../..');
 const OUT_FILE = path.join(ROOT, 'data/v1/guide.json');
@@ -45,6 +60,42 @@ const guideData = {
     ranks: SHOW_RANKS,
     awards: SHOW_EVENT_AWARDS_PRIORITY,
     titles: SHOW_CHAMPIONSHIP_TITLES,
+  },
+  donino: {
+    speed_ladder: DONINO_SPEED_LADDER.map(item => ({
+      rank: item.rank,
+      badge: item.badge,
+      name: item.name,
+      prestigeLabel: item.prestigeLabel,
+      howToGet: item.howToGet,
+      details: item.details,
+    })),
+    requirements: DONINO_REQUIREMENTS,
+    abbreviations: DONINO_ABBREVIATIONS,
+  },
+  protocol: {
+    ladder: PROTOCOL_LADDER.map(item => ({
+      rank: item.rank,
+      badge: item.badge,
+      name: item.name,
+      prestigeLabel: item.prestigeLabel,
+      howToGet: item.howToGet,
+      details: item.details,
+    })),
+    requirements: PROTOCOL_REQUIREMENTS,
+    abbreviations: PROTOCOL_ABBREVIATIONS,
+  },
+  rating: {
+    ladder: RATING_LADDER.map(item => ({
+      rank: item.rank,
+      badge: item.badge,
+      name: item.name,
+      prestigeLabel: item.prestigeLabel,
+      howToGet: item.howToGet,
+      details: item.details,
+    })),
+    requirements: RATING_REQUIREMENTS,
+    abbreviations: RATING_ABBREVIATIONS,
   },
 };
 
