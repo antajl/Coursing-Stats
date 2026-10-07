@@ -1,6 +1,8 @@
 import type { InlineKeyboard } from 'grammy';
 import type { KVNamespace } from '../context';
 import { safeEditOrReply } from '../commands';
+import { BOT_PHOTOS } from '../../constants';
+import { getMainInlineMenu, getPersistentReplyKeyboard } from '../../keyboards';
 
 export interface MenuScreenOptions {
   photoUrl?: string;
@@ -8,64 +10,145 @@ export interface MenuScreenOptions {
   keyboard: InlineKeyboard;
 }
 
+export const WELCOME_TEXT = `
+<b>Coursing Stats</b> — статистика соревнований собак
+
+Отслеживайте результаты вашей собаки по курсингу, бегам борзых и выставкам.
+
+<b>Возможности:</b>
+• Рейтинги и топы по дисциплинам (включая Elo)
+• Календарь соревнований и выставок
+• История медалей и титулов
+• Избранные собаки и быстрая карточка /mystats
+• Поиск по породе /breed
+
+<b>Как использовать:</b>
+Напишите кличку собаки или выберите действие из меню ниже
+`.trim();
+
 /**
- * Единая функция отправки экрана меню с баннером и очисткой предыдущего сообщения
+ * Отправляет или обновляет главный экран бота в двух сообщениях:
+ * - Сообщение 1: Фото-баннер + описание + ReplyKeyboard (постоянные нижние кнопки)
+ * - Сообщение 2: Интерактивное меню (InlineKeyboard)
+ */
+export async function sendHomeScreen(
+  ctx: any,
+  cache: KVNamespace | undefined,
+  welcomeText: string = WELCOME_TEXT,
+  options: { forceNew?: boolean } = {},
+): Promise<void> {
+  const userId = ctx.from?.id?.toString();
+  const chatId = ctx.chat?.id || (ctx.from?.id ? Number(ctx.from.id) : undefined);
+
+  if (!chatId) return;
+
+  const lastPhotoKey = userId ? `last_photo:${userId}` : null;
+  const lastMessageKey = userId ? `last_message:${userId}` : null;
+
+  // 1. Попытка плавного редактирования Сообщения 2 на месте (если не forceNew)
+  if (!options.forceNew) {
+    // Если вызов пришел из callback_query (инлайн-кнопки "На главную" / "Назад")
+    if (ctx.callbackQuery?.message?.message_id) {
+      try {
+        await ctx.editMessageText('<b>Разделы:</b>', {
+          parse_mode: 'HTML',
+          reply_markup: getMainInlineMenu(),
+        });
+        return;
+      } catch (editError: any) {
+        if (editError?.description?.includes('message is not modified')) {
+          return;
+        }
+      }
+    }
+
+    // Если вызов из hears (нижняя кнопка "🏠 Главное меню")
+    if (userId && cache && lastMessageKey && lastPhotoKey) {
+      const [lastPhotoId, lastMessageId] = await Promise.all([
+        cache.get(lastPhotoKey),
+        cache.get(lastMessageKey),
+      ]);
+
+      if (lastPhotoId && lastMessageId) {
+        try {
+          await ctx.api.editMessageText(chatId, parseInt(lastMessageId, 10), '<b>Разделы:</b>', {
+            parse_mode: 'HTML',
+            reply_markup: getMainInlineMenu(),
+          });
+          return; // Успешно отредактировали на месте
+        } catch (editError: any) {
+          if (editError?.description?.includes('message is not modified')) {
+            return;
+          }
+        }
+      }
+    }
+  }
+
+  // 2. Если forceNew или редактирование не удалось: полная переотправка 2 сообщений
+  if (userId && cache && lastPhotoKey && lastMessageKey) {
+    const [lastPhotoId, lastMessageId] = await Promise.all([
+      cache.get(lastPhotoKey),
+      cache.get(lastMessageKey),
+    ]);
+    if (lastPhotoId) {
+      try {
+        await ctx.api.deleteMessage(chatId, parseInt(lastPhotoId, 10));
+      } catch {}
+    }
+    if (lastMessageId) {
+      try {
+        await ctx.api.deleteMessage(chatId, parseInt(lastMessageId, 10));
+      } catch {}
+    }
+  }
+
+  // Сообщение 1: Баннер с текстом и нижней клавиатурой ReplyKeyboard
+  let photoMsgId: number | undefined;
+  try {
+    const photoMsg = await ctx.api.sendPhoto(chatId, BOT_PHOTOS.home, {
+      caption: welcomeText,
+      parse_mode: 'HTML',
+      reply_markup: getPersistentReplyKeyboard(),
+    });
+    photoMsgId = photoMsg.message_id;
+  } catch {
+    // Фолбэк на текст если загрузка фото не удалась
+    try {
+      const textMsg = await ctx.api.sendMessage(chatId, welcomeText, {
+        parse_mode: 'HTML',
+        reply_markup: getPersistentReplyKeyboard(),
+      });
+      photoMsgId = textMsg.message_id;
+    } catch {}
+  }
+
+  if (photoMsgId && userId && cache && lastPhotoKey) {
+    await cache.put(lastPhotoKey, photoMsgId.toString(), { expirationTtl: 86400 * 7 });
+  }
+
+  // Сообщение 2: Интерактивные разделы меню (InlineKeyboard)
+  try {
+    const menuMsg = await ctx.api.sendMessage(chatId, '<b>Разделы:</b>', {
+      parse_mode: 'HTML',
+      reply_markup: getMainInlineMenu(),
+    });
+    if (menuMsg?.message_id && userId && cache && lastMessageKey) {
+      await cache.put(lastMessageKey, menuMsg.message_id.toString(), { expirationTtl: 86400 * 7 });
+    }
+  } catch (menuErr) {
+    console.error('[sendHomeScreen] Failed to send menu message:', menuErr);
+  }
+}
+
+/**
+ * Отправка подэкрана меню (редактирует активное окно)
  */
 export async function sendMenuScreen(
   ctx: any,
   cache: KVNamespace | undefined,
   options: MenuScreenOptions,
 ): Promise<void> {
-  const userId = ctx.from?.id?.toString();
-  const chatId = ctx.chat?.id || (ctx.from?.id ? Number(ctx.from.id) : undefined);
-
-  // Show typing or upload_photo indicator
-  if (chatId) {
-    try {
-      if (options.photoUrl) {
-        await ctx.api.sendChatAction(chatId, 'upload_photo');
-      } else {
-        await ctx.api.sendChatAction(chatId, 'typing');
-      }
-    } catch {
-      // ignore
-    }
-  }
-
-  // Delete previous bot message if tracked in cache
-  if (userId && chatId && cache) {
-    const lastMessageKey = `last_message:${userId}`;
-    const lastMessageId = await cache.get(lastMessageKey);
-
-    if (lastMessageId) {
-      try {
-        await ctx.api.deleteMessage(chatId, parseInt(lastMessageId, 10));
-      } catch (deleteError) {
-        // Ignore message delete failures
-      }
-    }
-  }
-
-  // Try sending photo banner if provided
-  if (options.photoUrl && chatId) {
-    try {
-      const message = await ctx.api.sendPhoto(chatId, options.photoUrl, {
-        caption: options.text,
-        parse_mode: 'HTML',
-        reply_markup: options.keyboard,
-      });
-
-      if (message?.message_id && userId && cache) {
-        const lastMessageKey = `last_message:${userId}`;
-        await cache.put(lastMessageKey, message.message_id.toString(), { expirationTtl: 86400 });
-      }
-      return;
-    } catch (photoError) {
-      // Fallback to text if photo fails
-    }
-  }
-
-  // Fallback / text message
   await safeEditOrReply(
     ctx,
     options.text,
