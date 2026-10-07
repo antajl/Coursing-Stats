@@ -2,14 +2,9 @@ import { Composer } from 'grammy';
 import { CoursingStatsAPI } from '../../api';
 import { getDoninoKeyboard } from '../../keyboards';
 import { formatDoninoTopChatText } from '../../inlineQuery';
-import { BOT_PHOTOS } from '../../constants';
 import type { KVNamespace } from '../context';
+import { safeEditOrReply } from '../commands';
 
-/**
- * Helper function for adding emoji reactions
- * @param ctx - контекст Grammy
- * @param emoji - emoji для реакции
- */
 async function addReaction(ctx: any, emoji: string) {
   try {
     await ctx.api.setMessageReaction(
@@ -21,9 +16,6 @@ async function addReaction(ctx: any, emoji: string) {
     console.error('[addReaction] Failed to add reaction:', error);
   }
 }
-
-import { safeEditOrReply } from '../commands';
-import { sendMenuScreen } from '../utils/menuScreen';
 
 async function editDoninoList(ctx: any, text: string, kind: 'speed' | 'coursing', cache?: KVNamespace) {
   const reply_markup = getDoninoKeyboard(kind);
@@ -45,11 +37,7 @@ export function createDonino(api: CoursingStatsAPI, cache?: KVNamespace) {
     const records = await api.getSpeedRecords();
     const text = formatDoninoTopChatText(records.speed, records.coursing, { only: 'speed' });
 
-    await sendMenuScreen(ctx, cache, {
-      photoUrl: BOT_PHOTOS.donino,
-      text,
-      keyboard: getDoninoKeyboard('speed'),
-    });
+    await editDoninoList(ctx, text, 'speed', cache);
   });
 
   donino.callbackQuery('donino_speed', async (ctx) => {

@@ -26,7 +26,7 @@ import {
 } from '../inlineQuery';
 import { BOT_PHOTOS } from '../constants';
 import { isDogFavorite } from './utils/presentDogCard';
-import { sendMenuScreen } from './utils/menuScreen';
+import { sendHomeScreen, sendMenuScreen, WELCOME_TEXT } from './utils/menuScreen';
 import type { KVNamespace } from './context';
 
 /**
@@ -308,37 +308,7 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
     return;
   }
     
-  const welcomeText = `
-<b>Coursing Stats</b> — статистика соревнований собак
-
-Отслеживайте результаты вашей собаки по курсингу, бегам борзых и выставкам.
-
-<b>Возможности:</b>
-• Рейтинги и топы по дисциплинам (включая Elo)
-• Календарь соревнований и выставок
-• История медалей и титулов
-• Избранные собаки и быстрая карточка /mystats
-• Поиск по породе /breed
-
-<b>Как использовать:</b>
-Напишите кличку собаки или выберите действие из меню ниже
-    `.trim();
-
-  await sendMenuScreen(ctx, cache, {
-    photoUrl: BOT_PHOTOS.home,
-    text: welcomeText,
-    keyboard: getMainInlineMenu(),
-  });
-
-
-  // Delete the /start message
-  if (ctx.message) {
-    try {
-      await ctx.deleteMessage();
-    } catch (error) {
-      // Silently fail on message deletion
-    }
-  }
+  await sendHomeScreen(ctx, cache, WELCOME_TEXT, { forceNew: true });
 });
 
   commands.command(['help', 'guide'], async (ctx) => {
@@ -511,27 +481,7 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
   });
 
   const returnToHomeScreen = async (ctx: any) => {
-    const welcomeText = `
-<b>Coursing Stats</b> — статистика соревнований собак
-
-Отслеживайте результаты вашей собаки по курсингу, бегам борзых и выставкам.
-
-<b>Возможности:</b>
-• Рейтинги и топы по дисциплинам (включая Elo)
-• Календарь соревнований и выставок
-• История медалей и титулов
-• Избранные собаки и быстрая карточка /mystats
-• Поиск по породе /breed
-
-<b>Как использовать:</b>
-Напишите кличку собаки или выберите действие из меню ниже
-    `.trim();
-
-    await sendMenuScreen(ctx, cache, {
-      photoUrl: BOT_PHOTOS.home,
-      text: welcomeText,
-      keyboard: getMainInlineMenu(),
-    });
+    await sendHomeScreen(ctx, cache, WELCOME_TEXT);
   };
 
   /**
@@ -578,11 +528,10 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
    */
   commands.callbackQuery('competitions_menu', async (ctx) => {
     await addReaction(ctx, '🏆');
-    await sendMenuScreen(ctx, cache, {
-      photoUrl: BOT_PHOTOS.competitions,
-      text: '<b>🏆 Соревнования</b>\n\nВыберите действие:',
-      keyboard: getCompetitionsMenu(),
-    });
+    await safeEditOrReply(ctx, '<b>🏆 Соревнования</b>\n\nВыберите действие:', {
+      parse_mode: 'HTML',
+      reply_markup: getCompetitionsMenu(),
+    }, cache);
   });
 
   /**
@@ -591,11 +540,10 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
    */
   commands.callbackQuery('shows_menu', async (ctx) => {
     await addReaction(ctx, '🎪');
-    await sendMenuScreen(ctx, cache, {
-      photoUrl: BOT_PHOTOS.shows,
-      text: '<b>🎪 Выставки</b>\n\nВыберите действие:',
-      keyboard: getShowsMenu(),
-    });
+    await safeEditOrReply(ctx, '<b>🎪 Выставки</b>\n\nВыберите действие:', {
+      parse_mode: 'HTML',
+      reply_markup: getShowsMenu(),
+    }, cache);
   });
 
   /**
@@ -604,11 +552,10 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
    */
   commands.callbackQuery('guide_menu', async (ctx) => {
     await addReaction(ctx, '📚');
-    await sendMenuScreen(ctx, cache, {
-      photoUrl: BOT_PHOTOS.guide,
-      text: '<b>📚 Справка</b>\n\nВыберите раздел:',
-      keyboard: getGuideMenu(),
-    });
+    await safeEditOrReply(ctx, '<b>📚 Справка</b>\n\nВыберите раздел:', {
+      parse_mode: 'HTML',
+      reply_markup: getGuideMenu(),
+    }, cache);
   });
 
   /**
@@ -648,11 +595,10 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
   });
 
   commands.hears('🏆 Рейтинги', async (ctx) => {
-    await sendMenuScreen(ctx, cache, {
-      photoUrl: BOT_PHOTOS.competitions,
-      text: '<b>🏆 Рейтинги соревнований</b>\n\nВыберите дисциплину или категорию:',
-      keyboard: getCompetitionsMenu(),
-    });
+    await safeEditOrReply(ctx, '<b>🏆 Рейтинги соревнований</b>\n\nВыберите дисциплину или категорию:', {
+      parse_mode: 'HTML',
+      reply_markup: getCompetitionsMenu(),
+    }, cache);
   });
 
   commands.hears(['📅 Календарь', 'Архив'], async (ctx) => {
