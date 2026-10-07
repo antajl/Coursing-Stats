@@ -28,6 +28,7 @@ type BreedStat = {
   breed: string
   count?: number
   evaluations_count?: number
+  events_count?: number
   avg_score?: number | null
   min_score?: number | null
   max_score?: number | null
@@ -37,7 +38,18 @@ type BreedStat = {
     avg_score?: number | null
     total_evaluations?: number
     scores_by_criteria?: Record<string, number[]>
-    events?: Array<{ title?: string; date?: string; total?: number }>
+    events?: Array<{
+      event_id?: number
+      title?: string
+      date?: string
+      total?: number
+      avg_score?: number | null
+      heats?: Array<{
+        heat_number: number
+        total: number
+        scores?: number[]
+      }>
+    }>
   }>
 }
 
@@ -846,7 +858,7 @@ export default function JudgeDetail() {
                                 }`}
                                 title="Показать соревнования по этой породе"
                               >
-                                Соревнования ({stat.evaluations_count || 0})
+                                Соревнования ({stat.events_count ?? new Set(stat.dogs?.flatMap(d => d.events?.map(e => e.event_id ?? `${e.date}|${e.title}`)) || []).size})
                               </button>
 
                               <div
@@ -965,21 +977,47 @@ export default function JudgeDetail() {
                                                 {dog.events.map((ev, evIdx) => (
                                                   <div
                                                     key={evIdx}
-                                                    className="flex items-center justify-between gap-2 p-2 text-xs"
+                                                    className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-2.5 text-xs"
                                                   >
                                                     <div className="min-w-0 flex-1">
-                                                      <span className="text-charcoal-800 font-medium">
-                                                        {ev.title || 'Соревнование'}
-                                                      </span>
-                                                      <span className="ml-2 text-charcoal-400 tabular-nums">
-                                                        {formatDate(ev.date || '')}
-                                                      </span>
+                                                      <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5">
+                                                        <span className="text-charcoal-800 font-medium">
+                                                          {ev.title || 'Соревнование'}
+                                                        </span>
+                                                        {ev.date && (
+                                                          <span className="text-charcoal-400 tabular-nums">
+                                                            {formatDate(ev.date)}
+                                                          </span>
+                                                        )}
+                                                      </div>
+
+                                                      {ev.heats && ev.heats.length > 0 && (
+                                                        <div className="mt-1.5 flex flex-wrap items-center gap-1.5">
+                                                          {ev.heats.map((h) => (
+                                                            <span
+                                                              key={h.heat_number}
+                                                              className="inline-flex items-center gap-1 rounded bg-old-money-50/80 px-2 py-0.5 font-mono text-[11px] text-old-money-700 border border-old-money-200/60"
+                                                            >
+                                                              <span className="text-charcoal-500">Забег {h.heat_number}:</span>
+                                                              <span className="font-semibold text-charcoal-900">{h.total} б.</span>
+                                                            </span>
+                                                          ))}
+                                                        </div>
+                                                      )}
                                                     </div>
-                                                    {ev.total != null && (
-                                                      <span className="font-bold tabular-nums text-camel-800 shrink-0">
-                                                        {ev.total} б.
-                                                      </span>
-                                                    )}
+
+                                                    <div className="flex sm:flex-col items-baseline sm:items-end justify-between sm:justify-center gap-1 shrink-0 pt-1 sm:pt-0 border-t sm:border-t-0 border-old-money-100/60">
+                                                      {ev.total != null && (
+                                                        <span className="font-bold tabular-nums text-camel-800 text-sm">
+                                                          {ev.total} б.
+                                                        </span>
+                                                      )}
+                                                      {ev.heats && ev.heats.length > 1 && ev.avg_score != null && (
+                                                        <span className="text-[10px] text-charcoal-400 tabular-nums">
+                                                          ср. {ev.avg_score} б.
+                                                        </span>
+                                                      )}
+                                                    </div>
                                                   </div>
                                                 ))}
                                               </div>

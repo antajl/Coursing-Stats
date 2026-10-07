@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/index-top-placement-v1",
   "year": null,
-  "count": 1832,
+  "count": 1833,
   "items": [
     {
       "dog_id": 182,
@@ -1600,18 +1600,6 @@
       "total_starts": 11
     },
     {
-      "dog_id": 9968,
-      "name_lat": "TSARSKAYA PRIHOT SAYURI",
-      "name_ru": "TSARSKAYA PRIHOT SAYURI",
-      "breed": "ИРЛАНДСКИЙ ВОЛКОДАВ",
-      "year_from": 2017,
-      "year_to": 2019,
-      "gold": 3,
-      "silver": 0,
-      "bronze": 1,
-      "total_starts": 5
-    },
-    {
       "dog_id": 129,
       "name_lat": "COLISTOS GASPARO",
       "name_ru": "COLISTOS GASPARO",
@@ -2834,6 +2822,18 @@
       "silver": 0,
       "bronze": 1,
       "total_starts": 10
+    },
+    {
+      "dog_id": 9968,
+      "name_lat": "TSARSKAYA PRIHOT SAYURI",
+      "name_ru": "TSARSKAYA PRIHOT SAYURI",
+      "breed": "ИРЛАНДСКИЙ ВОЛКОДАВ",
+      "year_from": 2017,
+      "year_to": 2019,
+      "gold": 2,
+      "silver": 0,
+      "bronze": 1,
+      "total_starts": 4
     },
     {
       "dog_id": 10047,
@@ -8696,6 +8696,18 @@
       "name_lat": "GOLUBKA SIZOKRYLAYA",
       "name_ru": "GOLUBKA SIZOKRYLAYA",
       "breed": "ХОРТАЯ БОРЗАЯ",
+      "year_from": 2019,
+      "year_to": 2019,
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 1
+    },
+    {
+      "dog_id": 10350,
+      "name_lat": "TSARSKAJA PRIHOT SAURI",
+      "name_ru": "TSARSKAJA PRIHOT SAURI",
+      "breed": "ИРЛАНДСКИЙ ВОЛКОДАВ",
       "year_from": 2019,
       "year_to": 2019,
       "gold": 1,
@@ -21977,9 +21989,9 @@
     },
     {
       "dog_id": 10767,
-      "name_lat": "ANGELIC WINGS",
-      "name_ru": "АНДЖЕЛИК ВИНГС",
-      "breed": "УИППЕТ",
+      "name_lat": "BORZOMIR BARIJAT AMIRA",
+      "name_ru": "BORZOMIR BARIJAT AMIRA",
+      "breed": "СЛЮГИ",
       "year_from": 2026,
       "year_to": 2026,
       "gold": 0,

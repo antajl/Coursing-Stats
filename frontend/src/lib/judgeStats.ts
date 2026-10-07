@@ -76,7 +76,7 @@ export function aggregateJudgeStats(rows: JudgeRawRow[]): Map<string, JudgeStats
         if (heat.judges && Array.isArray(heat.judges)) {
           for (const judge of heat.judges) {
             const judgeNum = judge.judge_number
-            const judgeName = judgeNames[judgeNum - 1] || `Судья ${judgeNum}`
+            const judgeName = judge.judge_name || judgeNames[judgeNum - 1] || `Судья ${judgeNum}`
 
             if (!judgeStats.has(judgeName)) {
               judgeStats.set(judgeName, {
@@ -112,6 +112,18 @@ export function aggregateJudgeStats(rows: JudgeRawRow[]): Map<string, JudgeStats
   }
 
   return judgeStats
+}
+
+function matchesJudge(
+  j: { judge_number: number; judge_name?: string },
+  judgeName: string,
+  judgeNames: string[],
+): boolean {
+  if (j.judge_name) {
+    return j.judge_name === judgeName
+  }
+  const judgeNum = judgeNames.indexOf(judgeName) + 1
+  return judgeNum > 0 && j.judge_number === judgeNum
 }
 
 export function formatJudgesData(judgeStats: Map<string, JudgeStatsAcc>) {
@@ -151,20 +163,19 @@ export function aggregateBreedStats(rows: JudgeRawRow[], judgeName: string): Map
     try {
       const heats = JSON.parse(row.heats_json || '[]')
       const judgeNames = parseJudgeNames(row.event_judges)
-      const judgeNum = judgeNames.indexOf(judgeName) + 1
 
-      if (judgeNum > 0) {
-        for (const heat of heats) {
-          if (heat.judges && Array.isArray(heat.judges)) {
-            const judge = heat.judges.find((j: { judge_number: number }) => j.judge_number === judgeNum)
-            if (judge?.scores && Array.isArray(judge.scores)) {
-              const validScores = judge.scores.filter((s: number | null) => s !== null && !Number.isNaN(s))
-              const breed = row.breed || ''
-              if (!breedStats.has(breed)) breedStats.set(breed, { count: 0, scores: [] })
-              const stats = breedStats.get(breed)!
-              stats.count += validScores.length
-              stats.scores.push(...validScores)
-            }
+      for (const heat of heats) {
+        if (heat.judges && Array.isArray(heat.judges)) {
+          const judge = heat.judges.find((j: { judge_number: number; judge_name?: string }) =>
+            matchesJudge(j, judgeName, judgeNames),
+          )
+          if (judge?.scores && Array.isArray(judge.scores)) {
+            const validScores = judge.scores.filter((s: number | null) => s !== null && !Number.isNaN(s))
+            const breed = row.breed || ''
+            if (!breedStats.has(breed)) breedStats.set(breed, { count: 0, scores: [] })
+            const stats = breedStats.get(breed)!
+            stats.count += validScores.length
+            stats.scores.push(...validScores)
           }
         }
       }
@@ -180,7 +191,18 @@ interface DogStatsAcc {
   name: string
   name_ru: string | null
   scores: number[]
-  events: Array<{ title: string; date: string; total: number }>
+  events: Array<{
+    event_id?: number
+    title: string
+    date: string
+    total: number
+    avg_score?: number | null
+    heats: Array<{
+      heat_number: number
+      total: number
+      scores?: number[]
+    }>
+  }>
 }
 
 function aggregateDogStats(rows: JudgeRawRow[], judgeName: string, breed: string): Map<string, DogStatsAcc> {
@@ -191,32 +213,69 @@ function aggregateDogStats(rows: JudgeRawRow[], judgeName: string, breed: string
     try {
       const heats = JSON.parse(row.heats_json || '[]')
       const judgeNames = parseJudgeNames(row.event_judges)
-      const judgeNum = judgeNames.indexOf(judgeName) + 1
+      const dogKey = `${row.name_lat}_${row.name_ru || ''}`
 
-      if (judgeNum > 0) {
+      const eventHeats: Array<{ heat_number: number; total: number; scores: number[] }> = []
+
+      if (Array.isArray(heats)) {
         for (const heat of heats) {
           if (heat.judges && Array.isArray(heat.judges)) {
-            const judge = heat.judges.find((j: { judge_number: number }) => j.judge_number === judgeNum)
+            const judge = heat.judges.find((j: { judge_number: number; judge_name?: string }) =>
+              matchesJudge(j, judgeName, judgeNames),
+            )
             if (judge?.scores && Array.isArray(judge.scores)) {
               const validScores = judge.scores.filter((s: number | null) => s !== null && !Number.isNaN(s))
-              const dogKey = `${row.name_lat}_${row.name_ru || ''}`
-              if (!dogStats.has(dogKey)) {
-                dogStats.set(dogKey, {
-                  name: row.name_lat || '',
-                  name_ru: row.name_ru || null,
-                  scores: [],
-                  events: [],
-                })
+              if (validScores.length > 0) {
+                stats_scores_push: {
+                  const heatTotal = validScores.reduce((a: number, b: number) => a + b, 0)
+                  eventHeats.push({
+                    heat_number: heat.heat_number ?? (eventHeats.length + 1),
+                    total: heatTotal,
+                    scores: validScores,
+                  })
+                }
               }
-              const stats = dogStats.get(dogKey)!
-              stats.scores.push(...validScores)
-              stats.events.push({
-                title: row.event_title || '',
-                date: row.date_start || '',
-                total: validScores.reduce((a: number, b: number) => a + b, 0),
-              })
             }
           }
+        }
+      }
+
+      if (eventHeats.length > 0) {
+        if (!dogStats.has(dogKey)) {
+          dogStats.set(dogKey, {
+            name: row.name_lat || '',
+            name_ru: row.name_ru || null,
+            scores: [],
+            events: [],
+          })
+        }
+        const stats = dogStats.get(dogKey)!
+        for (const eh of eventHeats) {
+          stats.scores.push(...eh.scores)
+        }
+
+        const eventTotal = eventHeats.reduce((a, b) => a + b.total, 0)
+        const eventAvg = Math.round((eventTotal / eventHeats.length) * 10) / 10
+
+        const existingEv = stats.events.find(
+          (e) =>
+            (row.event_id && e.event_id === row.event_id) ||
+            (e.title === (row.event_title || '') && e.date === (row.date_start || ''))
+        )
+
+        if (existingEv) {
+          existingEv.heats.push(...eventHeats)
+          existingEv.total = existingEv.heats.reduce((a, b) => a + b.total, 0)
+          existingEv.avg_score = Math.round((existingEv.total / existingEv.heats.length) * 10) / 10
+        } else {
+          stats.events.push({
+            event_id: row.event_id,
+            title: row.event_title || '',
+            date: row.date_start || '',
+            total: eventTotal,
+            avg_score: eventAvg,
+            heats: eventHeats,
+          })
         }
       }
     } catch {
@@ -247,22 +306,21 @@ function formatDogsArray(
     try {
       const heats = JSON.parse(row.heats_json || '[]')
       const judgeNames = parseJudgeNames(row.event_judges)
-      const judgeNum = judgeNames.indexOf(judgeName) + 1
 
-      if (judgeNum > 0) {
-        for (const heat of heats) {
-          if (heat.judges && Array.isArray(heat.judges)) {
-            const judge = heat.judges.find((j: { judge_number: number }) => j.judge_number === judgeNum)
-            if (judge?.scores && Array.isArray(judge.scores)) {
-              const validScores = judge.scores.filter((s: number | null) => s !== null && !Number.isNaN(s))
-              const dogData = dogsArray.find((d) => d.name === row.name_lat && d.name_ru === row.name_ru)
-              if (dogData) {
-                validScores.forEach((score: number, idx: number) => {
-                  if (idx < 5 && dogData.scores_by_criteria[idx] !== undefined) {
-                    dogData.scores_by_criteria[idx].push(score)
-                  }
-                })
-              }
+      for (const heat of heats) {
+        if (heat.judges && Array.isArray(heat.judges)) {
+          const judge = heat.judges.find((j: { judge_number: number; judge_name?: string }) =>
+            matchesJudge(j, judgeName, judgeNames),
+          )
+          if (judge?.scores && Array.isArray(judge.scores)) {
+            const validScores = judge.scores.filter((s: number | null) => s !== null && !Number.isNaN(s))
+            const dogData = dogsArray.find((d) => d.name === row.name_lat && d.name_ru === row.name_ru)
+            if (dogData) {
+              validScores.forEach((score: number, idx: number) => {
+                if (idx < 5 && dogData.scores_by_criteria[idx] !== undefined) {
+                  dogData.scores_by_criteria[idx].push(score)
+                }
+              })
             }
           }
         }
@@ -288,10 +346,18 @@ export function formatBreedData(breedStats: Map<string, BreedStatsAcc>, rows: Ju
     const dogStats = aggregateDogStats(rows, judgeName, breed)
     const dogsArray = formatDogsArray(dogStats, rows, judgeName, breed)
 
+    const uniqueEvents = new Set<string | number>()
+    for (const d of dogsArray) {
+      for (const ev of (d as any).events || []) {
+        uniqueEvents.add(ev.event_id ?? `${ev.date}|${ev.title}`)
+      }
+    }
+
     breedData.push({
       breed,
       count: stats.count,
       evaluations_count: Math.round(stats.count / 5),
+      events_count: uniqueEvents.size,
       avg_score: avgScore,
       min_score: minScore,
       max_score: maxScore,
@@ -312,18 +378,17 @@ export function aggregateCriteriaStats(rows: JudgeRawRow[], judgeName: string): 
     try {
       const heats = JSON.parse(row.heats_json || '[]')
       const judgeNames = parseJudgeNames(row.event_judges)
-      const judgeNum = judgeNames.indexOf(judgeName) + 1
 
-      if (judgeNum > 0) {
-        for (const heat of heats) {
-          if (heat.judges && Array.isArray(heat.judges)) {
-            const judge = heat.judges.find((j: { judge_number: number }) => j.judge_number === judgeNum)
-            if (judge?.scores && Array.isArray(judge.scores)) {
-              const validScores = judge.scores.filter((s: number | null) => s !== null && !Number.isNaN(s))
-              validScores.forEach((score: number, idx: number) => {
-                if (idx < 5 && criteriaStats[idx] !== undefined) criteriaStats[idx].push(score)
-              })
-            }
+      for (const heat of heats) {
+        if (heat.judges && Array.isArray(heat.judges)) {
+          const judge = heat.judges.find((j: { judge_number: number; judge_name?: string }) =>
+            matchesJudge(j, judgeName, judgeNames),
+          )
+          if (judge?.scores && Array.isArray(judge.scores)) {
+            const validScores = judge.scores.filter((s: number | null) => s !== null && !Number.isNaN(s))
+            validScores.forEach((score: number, idx: number) => {
+              if (idx < 5 && criteriaStats[idx] !== undefined) criteriaStats[idx].push(score)
+            })
           }
         }
       }
@@ -363,16 +428,15 @@ export function aggregateAllScores(rows: JudgeRawRow[], judgeName: string): numb
     try {
       const heats = JSON.parse(row.heats_json || '[]')
       const judgeNames = parseJudgeNames(row.event_judges)
-      const judgeNum = judgeNames.indexOf(judgeName) + 1
 
-      if (judgeNum > 0) {
-        for (const heat of heats) {
-          if (heat.judges && Array.isArray(heat.judges)) {
-            const judge = heat.judges.find((j: { judge_number: number }) => j.judge_number === judgeNum)
-            if (judge?.scores && Array.isArray(judge.scores)) {
-              const validScores = judge.scores.filter((s: number | null) => s !== null && !Number.isNaN(s))
-              allScores.push(...validScores)
-            }
+      for (const heat of heats) {
+        if (heat.judges && Array.isArray(heat.judges)) {
+          const judge = heat.judges.find((j: { judge_number: number; judge_name?: string }) =>
+            matchesJudge(j, judgeName, judgeNames),
+          )
+          if (judge?.scores && Array.isArray(judge.scores)) {
+            const validScores = judge.scores.filter((s: number | null) => s !== null && !Number.isNaN(s))
+            allScores.push(...validScores)
           }
         }
       }

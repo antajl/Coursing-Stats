@@ -2,7 +2,7 @@
   "schema": "coursing-stats/index-top-score-v1",
   "year": 2019,
   "rating_score_version": "cs-v1",
-  "count": 257,
+  "count": 258,
   "items": [
     {
       "dog_id": 9411,
@@ -1550,21 +1550,6 @@
       "rating_score": 87.19
     },
     {
-      "dog_id": 9968,
-      "name_lat": "TSARSKAYA PRIHOT SAYURI",
-      "name_ru": "TSARSKAYA PRIHOT SAYURI",
-      "breed": "ИРЛАНДСКИЙ ВОЛКОДАВ",
-      "year": 2019,
-      "best_score": 350,
-      "total_starts": 2,
-      "best_judge_score": 91,
-      "avg_judge_score": 86.63,
-      "year_from": 2019,
-      "year_to": 2019,
-      "judge_eval_count": 8,
-      "rating_score": 87.04
-    },
-    {
       "dog_id": 10299,
       "name_lat": "MILIY ZVER CHANTEL",
       "name_ru": "MILIY ZVER CHANTEL",
@@ -1608,6 +1593,21 @@
       "year_to": 2019,
       "judge_eval_count": 6,
       "rating_score": 86.93
+    },
+    {
+      "dog_id": 10350,
+      "name_lat": "TSARSKAJA PRIHOT SAURI",
+      "name_ru": "TSARSKAJA PRIHOT SAURI",
+      "breed": "ИРЛАНДСКИЙ ВОЛКОДАВ",
+      "year": 2019,
+      "best_score": 350,
+      "total_starts": 1,
+      "best_judge_score": 91,
+      "avg_judge_score": 87.5,
+      "year_from": 2019,
+      "year_to": 2019,
+      "judge_eval_count": 4,
+      "rating_score": 86.73
     },
     {
       "dog_id": 9970,
@@ -2733,6 +2733,21 @@
       "year_to": 2019,
       "judge_eval_count": 6,
       "rating_score": 86.38
+    },
+    {
+      "dog_id": 9968,
+      "name_lat": "TSARSKAYA PRIHOT SAYURI",
+      "name_ru": "TSARSKAYA PRIHOT SAYURI",
+      "breed": "ИРЛАНДСКИЙ ВОЛКОДАВ",
+      "year": 2019,
+      "best_score": 343,
+      "total_starts": 1,
+      "best_judge_score": 89,
+      "avg_judge_score": 85.75,
+      "year_from": 2019,
+      "year_to": 2019,
+      "judge_eval_count": 4,
+      "rating_score": 86.26
     },
     {
       "dog_id": 10265,

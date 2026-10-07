@@ -5,6 +5,7 @@
 
 export type JudgeScoreBlock = {
   judge_number: number
+  judge_name?: string
   scores: (number | null)[]
   sum: number | null
 }
@@ -31,10 +32,11 @@ export function sumCriteriaScores(scores: (number | null)[] | null | undefined):
   return scores.reduce<number>((acc, s) => acc + (s ?? 0), 0)
 }
 
-export function makeJudge(judgeNumber: number, scores: (number | null)[]): JudgeScoreBlock | null {
+export function makeJudge(judgeNumber: number, scores: (number | null)[], judgeName?: string): JudgeScoreBlock | null {
   if (!scores.some((s) => s !== null)) return null
   return {
     judge_number: judgeNumber,
+    ...(judgeName ? { judge_name: judgeName } : {}),
     scores: scores.slice(0, 5),
     sum: sumCriteriaScores(scores),
   }
