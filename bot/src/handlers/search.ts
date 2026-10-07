@@ -187,7 +187,7 @@ export function createSearch(api: CoursingStatsAPI, cache?: KVNamespace) {
     // Validate minimum length for name search
     if (!validateSearchQuery(text)) {
       await safeEditOrReply(ctx,
-        '❌ Минимальная длина запроса - 2 символа.\n\nВведите более длинное название или ID собаки для поиска.',
+        '❌ Минимальная длина запроса - 2 символа.\n\nВведите более длинную кличку собаки для поиска.',
         { reply_markup: getNavigationButtons('main_menu', 'main_menu') },
         cache
       );
