@@ -10,6 +10,9 @@ export function YandexMetrica() {
     typeof window !== 'undefined' &&
     (window.location.hostname === 'localhost' ||
       window.location.hostname === '127.0.0.1' ||
+      window.location.hostname.startsWith('192.168.') ||
+      window.location.hostname.startsWith('10.') ||
+      window.location.hostname.startsWith('172.') ||
       window.location.hostname.endsWith('.local'))
 
   if (import.meta.env.DEV || isLocalhost) {
@@ -29,7 +32,7 @@ export function YandexMetrica() {
 
           ym(${YANDEX_METRICA_ID}, 'init', {
             ssr: true,
-            webvisor: true,
+            webvisor: false,
             clickmap: true,
             accurateTrackBounce: true,
             trackLinks: true

@@ -4,6 +4,7 @@ import DoninoGroupCardList from './stats/DoninoGroupCardList'
 import DoninoStatsSummary from './stats/DoninoStatsSummary'
 import type { GroupBy } from './stats/constants'
 import { CollapsibleDistributionChart } from './stats/statsUi'
+import { SegmentedTabs } from '../../components/ui/SegmentedTabs'
 import {
   buildCoursingGroupedStats,
   buildSexByDogMap,
@@ -165,30 +166,16 @@ export default function DoninoStatsColumns({
       )}
 
       {/* Мобильный переключатель колонок статистики */}
-      <div className="flex rounded-xl border border-old-money-200/80 bg-cream-100 p-1 lg:hidden">
-        <button
-          type="button"
-          onClick={() => setMobileTab('speed')}
-          className={`flex-1 rounded-lg py-1.5 px-3 text-xs font-semibold transition-all ${
-            mobileTab === 'speed'
-              ? 'bg-camel-500 text-charcoal-900 shadow-sm'
-              : 'text-charcoal-600 hover:text-charcoal-900'
-          }`}
-        >
-          Замер скорости
-        </button>
-        <button
-          type="button"
-          onClick={() => setMobileTab('coursing')}
-          className={`flex-1 rounded-lg py-1.5 px-3 text-xs font-semibold transition-all ${
-            mobileTab === 'coursing'
-              ? 'bg-camel-500 text-charcoal-900 shadow-sm'
-              : 'text-charcoal-600 hover:text-charcoal-900'
-          }`}
-        >
-          Бега 350 м
-        </button>
-      </div>
+      <SegmentedTabs
+        breakpoint="lg"
+        tabs={[
+          { id: 'speed', label: 'Замер скорости' },
+          { id: 'coursing', label: 'Бега 350 м' },
+        ]}
+        activeTab={mobileTab}
+        onChange={setMobileTab}
+        ariaLabel="Дисциплины статистики Донино"
+      />
 
       <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-2 lg:gap-8">
         <section className={`min-w-0 ${mobileTab === 'speed' ? 'block' : 'hidden lg:block'}`}>

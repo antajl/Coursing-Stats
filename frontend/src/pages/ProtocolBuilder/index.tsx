@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { createPortal } from 'react-dom'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { usePublicCalendarVisible } from '../../hooks/useStaticData'
+import { MobileSubNavTabs } from '../../components/ui/MobileSubNavTabs'
 import {
   Plus,
   Trash2,
@@ -227,6 +228,7 @@ interface ActiveDogSexMenuState {
 }
 
 export default function ProtocolBuilder() {
+  const navigate = useNavigate()
   const calendarVisible = usePublicCalendarVisible('competitions')
   const [kind, setKind] = useState<CompetitionKind>('coursing')
   const [header, setHeader] = useState<CompetitionHeader>(DEFAULT_HEADER)
@@ -759,33 +761,22 @@ export default function ProtocolBuilder() {
   return (
     <>
       {/* Mobile-only tab switcher */}
-      <div className="mb-4 flex items-center justify-between md:hidden print:hidden">
-        <div className="flex w-full items-center gap-1.5 rounded-xl border border-old-money-200/80 bg-white/80 p-1 shadow-xs sm:w-auto">
-          <Link
-            to="/competitions?tab=ranking"
-            className="flex flex-1 sm:flex-initial items-center justify-center gap-1.5 rounded-lg py-1.5 px-3.5 text-xs font-semibold text-charcoal-600 hover:text-charcoal-900 hover:bg-cream-50/50 transition-all"
-          >
-            Рейтинг
-          </Link>
-          {calendarVisible && (
-            <Link
-              to="/competitions?tab=archive"
-              className="flex flex-1 sm:flex-initial items-center justify-center gap-1.5 rounded-lg py-1.5 px-3.5 text-xs font-semibold text-charcoal-600 hover:text-charcoal-900 hover:bg-cream-50/50 transition-all"
-            >
-              Архив
-            </Link>
-          )}
-          <Link
-            to="/competitions?tab=judges"
-            className="flex flex-1 sm:flex-initial items-center justify-center gap-1.5 rounded-lg py-1.5 px-3.5 text-xs font-semibold text-charcoal-600 hover:text-charcoal-900 hover:bg-cream-50/50 transition-all"
-          >
-            Судьи
-          </Link>
-          <div className="flex flex-1 sm:flex-initial items-center justify-center gap-1.5 rounded-lg py-1.5 px-3.5 text-xs font-semibold bg-camel-500 text-charcoal-900 shadow-sm">
-            Конструктор
-          </div>
-        </div>
-      </div>
+      <MobileSubNavTabs
+        tabs={[
+          { id: 'ranking', label: 'Рейтинг' },
+          ...(calendarVisible ? [{ id: 'archive', label: 'Архив' }] : []),
+          { id: 'judges', label: 'Судьи' },
+          { id: 'builder', label: 'Конструктор' },
+        ]}
+        activeTab="builder"
+        onChange={(tabId) => {
+          if (tabId === 'ranking') navigate('/competitions?tab=ranking')
+          else if (tabId === 'archive') navigate('/competitions?tab=archive')
+          else if (tabId === 'judges') navigate('/competitions?tab=judges')
+        }}
+        ariaLabel="Разделы соревнований"
+        className="print:hidden"
+      />
 
       <div className="space-y-5 pb-20">
 

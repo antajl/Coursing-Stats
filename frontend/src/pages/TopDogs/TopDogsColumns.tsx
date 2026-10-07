@@ -4,6 +4,7 @@ import DogCard, { DOG_CARD_HEIGHT_CLASS } from '../../components/DogCard'
 import EmptyState from '../../components/EmptyState'
 import DoninoColumnPlaque, { DoninoColumnShell } from '../SpeedRecords/DoninoColumnPlaque'
 import CoursingRatingHint from './CoursingRatingHint'
+import { SegmentedTabs } from '../../components/ui/SegmentedTabs'
 import { useInfiniteScroll } from '../../hooks/useInfiniteScroll'
 import { useListReveal } from '../../hooks/useListReveal'
 import { parseDogName } from '../../lib/dogName'
@@ -176,41 +177,25 @@ export default function TopDogsColumns({
   return (
     <div className="space-y-4">
       {/* Mobile discipline switcher (< lg) */}
-      <div className="lg:hidden flex items-center justify-center p-1 bg-cream-100 rounded-xl border border-old-money-200/60 shadow-sm">
-        <button
-          type="button"
-          onClick={() => setSelectedMobileColumn('coursing')}
-          className={`flex-1 flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg text-xs font-semibold transition-all ${
-            activeMobileColumn === 'coursing'
-              ? 'bg-white text-charcoal-900 shadow-sm border border-old-money-200/80'
-              : 'text-charcoal-600 hover:text-charcoal-900'
-          }`}
-        >
-          <span>Курсинг</span>
-          <CoursingRatingHint embedded as="span" />
-          <span className={`h-4 min-w-[1.25rem] px-1 rounded-full text-[10px] font-bold flex items-center justify-center leading-none ${
-            activeMobileColumn === 'coursing' ? 'bg-camel-100 text-camel-800' : 'bg-charcoal-200/60 text-charcoal-600'
-          }`}>
-            {filteredCombined.length}
-          </span>
-        </button>
-        <button
-          type="button"
-          onClick={() => setSelectedMobileColumn('racing')}
-          className={`flex-1 flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg text-xs font-semibold transition-all ${
-            activeMobileColumn === 'racing'
-              ? 'bg-white text-charcoal-900 shadow-sm border border-old-money-200/80'
-              : 'text-charcoal-600 hover:text-charcoal-900'
-          }`}
-        >
-          <span>Рейсинг</span>
-          <span className={`h-4 min-w-[1.25rem] px-1 rounded-full text-[10px] font-bold flex items-center justify-center leading-none ${
-            activeMobileColumn === 'racing' ? 'bg-warm-blue-100 text-warm-blue-800' : 'bg-charcoal-200/60 text-charcoal-600'
-          }`}>
-            {filteredSpeed.length}
-          </span>
-        </button>
-      </div>
+      <SegmentedTabs
+        breakpoint="lg"
+        tabs={[
+          {
+            id: 'coursing',
+            label: 'Курсинг',
+            hint: <CoursingRatingHint embedded as="span" />,
+            count: filteredCombined.length,
+          },
+          {
+            id: 'racing',
+            label: 'Рейсинг',
+            count: filteredSpeed.length,
+          },
+        ]}
+        activeTab={activeMobileColumn}
+        onChange={(id) => setSelectedMobileColumn(id as 'coursing' | 'racing')}
+        ariaLabel="Дисциплины рейтинга"
+      />
 
       <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-2 lg:gap-8">
         <div className={activeMobileColumn === 'racing' ? 'hidden lg:block' : 'block'}>

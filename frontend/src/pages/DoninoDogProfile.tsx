@@ -11,6 +11,7 @@ import DoninoAttribution from '../components/DoninoAttribution'
 import { api } from '../services/api'
 import HoverTooltip from '../components/ui/HoverTooltip'
 import AnimatedMeterBar from '../components/AnimatedMeterBar'
+import { SegmentedTabs } from '../components/ui/SegmentedTabs'
 
 export default function DoninoDogProfile() {
   const { name, breed } = useParams()
@@ -275,30 +276,16 @@ export default function DoninoDogProfile() {
 
           {/* Мобильный переключатель дисциплин (если есть обе) */}
           {hasSpeedRecords && hasCoursingRecords && (
-            <div className="mb-4 flex rounded-xl border border-old-money-200/80 bg-cream-100 p-1 md:hidden">
-              <button
-                type="button"
-                onClick={() => setMobileTab('speed')}
-                className={`flex-1 rounded-lg py-1.5 px-3 text-xs font-semibold transition-all ${
-                  mobileTab === 'speed'
-                    ? 'bg-camel-500 text-charcoal-900 shadow-sm'
-                    : 'text-charcoal-600 hover:text-charcoal-900'
-                }`}
-              >
-                Замер скорости ({uniqueSpeedRecords.length})
-              </button>
-              <button
-                type="button"
-                onClick={() => setMobileTab('coursing')}
-                className={`flex-1 rounded-lg py-1.5 px-3 text-xs font-semibold transition-all ${
-                  mobileTab === 'coursing'
-                    ? 'bg-camel-500 text-charcoal-900 shadow-sm'
-                    : 'text-charcoal-600 hover:text-charcoal-900'
-                }`}
-              >
-                Бега 350 м ({coursingHistory.length})
-              </button>
-            </div>
+            <SegmentedTabs
+              tabs={[
+                { id: 'speed', label: 'Замер скорости', count: uniqueSpeedRecords.length },
+                { id: 'coursing', label: 'Бега 350 м', count: coursingHistory.length },
+              ]}
+              activeTab={mobileTab}
+              onChange={setMobileTab}
+              ariaLabel="Дисциплины собаки"
+              className="mb-4"
+            />
           )}
 
           {/* Статистика и история */}
