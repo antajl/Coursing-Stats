@@ -2,7 +2,7 @@
   "schema": "coursing-stats/index-top-score-v1",
   "year": null,
   "rating_score_version": "cs-v1",
-  "count": 1832,
+  "count": 1833,
   "items": [
     {
       "dog_id": 1,
@@ -18197,12 +18197,12 @@
       "breed": "ИРЛАНДСКИЙ ВОЛКОДАВ",
       "year_from": 2017,
       "year_to": 2019,
-      "best_score": 350,
-      "total_starts": 5,
+      "best_score": 349,
+      "total_starts": 4,
       "best_judge_score": 91,
-      "avg_judge_score": 86.81,
-      "judge_eval_count": 16,
-      "rating_score": 87.93
+      "avg_judge_score": 86.58,
+      "judge_eval_count": 12,
+      "rating_score": 87.55
     },
     {
       "dog_id": 9969,
@@ -22615,6 +22615,20 @@
       "rating_score": 85.08
     },
     {
+      "dog_id": 10350,
+      "name_lat": "TSARSKAJA PRIHOT SAURI",
+      "name_ru": "TSARSKAJA PRIHOT SAURI",
+      "breed": "ИРЛАНДСКИЙ ВОЛКОДАВ",
+      "year_from": 2019,
+      "year_to": 2019,
+      "best_score": 350,
+      "total_starts": 1,
+      "best_judge_score": 91,
+      "avg_judge_score": 87.5,
+      "judge_eval_count": 4,
+      "rating_score": 86.73
+    },
+    {
       "dog_id": 10351,
       "name_lat": "ИДЕЛЬ ВЕНТО ЗОДИАК ФОР ХАУС ОФ ХАУНДС",
       "name_ru": "ИДЕЛЬ ВЕНТО ЗОДИАК ФОР ХАУС ОФ ХАУНДС",
@@ -25640,9 +25654,9 @@
     },
     {
       "dog_id": 10767,
-      "name_lat": "ANGELIC WINGS",
-      "name_ru": "АНДЖЕЛИК ВИНГС",
-      "breed": "УИППЕТ",
+      "name_lat": "BORZOMIR BARIJAT AMIRA",
+      "name_ru": "BORZOMIR BARIJAT AMIRA",
+      "breed": "СЛЮГИ",
       "year_from": 2026,
       "year_to": 2026,
       "best_score": 354,

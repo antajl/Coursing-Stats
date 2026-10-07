@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/competition-v1",
-  "exported_at": "2026-08-08T23:55:24.001Z",
-  "source": "reparse-legacy",
+  "exported_at": "2026-10-07T16:12:13.263Z",
+  "source": "archive-full-results-legacy",
   "event_id": 1568,
   "event": {
     "id": 1568,
@@ -20,22 +20,22 @@
     "results_url": "https://web.archive.org/web/20190919235708/http://procoursing.ru/Full_Results_2019-09-15.html",
     "confirmed": 0,
     "last_modified": null,
-    "scraped_at": "2026-08-08T23:55:24.001Z",
+    "scraped_at": "2026-10-07T16:12:13.263Z",
     "telegram_url": null,
     "full_title": null,
     "event_date": "2019-09-15",
     "protocol_location": null,
-    "judges": null,
+    "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
     "track_schemes": [],
     "admin_verified_at": null
   },
-  "result_count": 92,
+  "result_count": 110,
   "results": [
     {
       "id": 26866,
       "event_id": 1568,
       "dog_id": 43,
-      "breed_class": "Басенджи - Стандартный - Микс",
+      "breed_class": "Басенджи - Стандартный - Кобель",
       "catalog_no": 2,
       "placement": 1,
       "total_score": 355,
@@ -52,6 +52,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   18,
@@ -63,6 +64,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   18,
@@ -84,6 +86,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   18,
                   18,
@@ -95,6 +98,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   18,
@@ -113,7 +117,7 @@
         "grand_total": 355
       },
       "raw_text": "1 | 2 | Басенджи | Стандартный | Кобель | SUNRISE LEUR ADAM | 1 | 17 | 18 | 18 | 17 | 17 | 177 | 59 | 18 | 18 | 17 | 18 | 17 | 178 | 355 | CC | Победитель Кубка России",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "sunrise-leur-adam--басенджи",
       "dog": {
@@ -130,7 +134,7 @@
       "id": 26867,
       "event_id": 1568,
       "dog_id": 10100,
-      "breed_class": "Басенджи - Стандартный - Микс",
+      "breed_class": "Басенджи - Стандартный - Кобель",
       "catalog_no": 1,
       "placement": 2,
       "total_score": 350,
@@ -147,6 +151,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   18,
@@ -158,6 +163,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   18,
@@ -179,6 +185,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   17,
                   17,
@@ -190,6 +197,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   17,
@@ -208,7 +216,7 @@
         "grand_total": 350
       },
       "raw_text": "2 | 1 | Басенджи | Стандартный | Кобель | AMAGAMMA NAMIB MALAVI | 2 | 17 | 18 | 18 | 17 | 18 | 176 | 57 | 17 | 17 | 17 | 17 | 18 | 174 | 350 | CC | CACL",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "amagamma-namib-malavi--басенджи",
       "dog": {
@@ -225,7 +233,7 @@
       "id": 26868,
       "event_id": 1568,
       "dog_id": 50,
-      "breed_class": "Басенджи - Стандартный - Микс",
+      "breed_class": "Басенджи - Стандартный - Кобель",
       "catalog_no": 3,
       "placement": 3,
       "total_score": 350,
@@ -242,6 +250,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   18,
                   17,
@@ -253,6 +262,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   18,
@@ -274,6 +284,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   16,
                   17,
@@ -285,6 +296,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   18,
@@ -303,7 +315,7 @@
         "grand_total": 350
       },
       "raw_text": "3 | 3 | Басенджи | Стандартный | Кобель | ИТУРИ ПАЗЗЛ ЕКСТРАОРДИНАРИ СМАРТ | 2 | 18 | 17 | 18 | 16 | 17 | 176 | 58 | 16 | 17 | 17 | 16 | 18 | 174 | 350 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "итури-паззл-екстраординари-смарт--басенджи",
       "dog": {
@@ -320,7 +332,7 @@
       "id": 26869,
       "event_id": 1568,
       "dog_id": 10375,
-      "breed_class": "Басенджи - Стандартный - Микс",
+      "breed_class": "Басенджи - Стандартный - Кобель",
       "catalog_no": 5,
       "placement": 4,
       "total_score": 350,
@@ -337,6 +349,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   18,
                   18,
@@ -348,6 +361,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   18,
@@ -369,6 +383,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   17,
                   16,
@@ -380,6 +395,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   18,
@@ -398,7 +414,7 @@
         "grand_total": 350
       },
       "raw_text": "4 | 5 | Басенджи | Стандартный | Кобель | СТАР КАРУНА ТЕЛЛУР ДЖАНГЛ ЧАЙЛД | 3 | 18 | 18 | 17 | 18 | 18 | 178 | 57 | 17 | 16 | 17 | 16 | 18 | 172 | 350 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "стар-каруна-теллур-джангл-чаилд--басенджи",
       "dog": {
@@ -415,7 +431,7 @@
       "id": 26870,
       "event_id": 1568,
       "dog_id": 7167,
-      "breed_class": "Басенджи - Стандартный - Микс",
+      "breed_class": "Басенджи - Стандартный - Кобель",
       "catalog_no": 4,
       "placement": 5,
       "total_score": 329,
@@ -432,6 +448,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   17,
@@ -443,6 +460,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   17,
@@ -464,6 +482,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   17,
                   17,
@@ -475,6 +494,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   16,
@@ -493,7 +513,7 @@
         "grand_total": 329
       },
       "raw_text": "5 | 4 | Басенджи | Стандартный | Кобель | ИТУРИ ПАЗЗЛ ИЗЮМ В ШОКОЛАДЕ | 1 | 17 | 17 | 18 | 16 | 18 | 1571 | 58 | 17 | 17 | 17 | 17 | 17 | 172 | 329 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "итури-паззл-изюм-в-шоколаде--басенджи",
       "dog": {
@@ -510,7 +530,7 @@
       "id": 26871,
       "event_id": 1568,
       "dog_id": 10203,
-      "breed_class": "Басенджи - Стандартный - Микс",
+      "breed_class": "Басенджи - Стандартный - Сука",
       "catalog_no": 8,
       "placement": 1,
       "total_score": 358,
@@ -527,6 +547,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   18,
                   18,
@@ -538,6 +559,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   18,
@@ -559,6 +581,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   18,
                   18,
@@ -570,6 +593,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   19,
                   18,
@@ -588,7 +612,7 @@
         "grand_total": 358
       },
       "raw_text": "1 | 8 | Басенджи | Стандартный | Сука | БОННИ | 5 | 18 | 18 | 17 | 18 | 18 | 178 | 60 | 18 | 18 | 17 | 18 | 18 | 180 | 358 | CC | Победитель Кубка России",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "бонни--басенджи",
       "dog": {
@@ -605,7 +629,7 @@
       "id": 26872,
       "event_id": 1568,
       "dog_id": 10264,
-      "breed_class": "Басенджи - Стандартный - Микс",
+      "breed_class": "Басенджи - Стандартный - Сука",
       "catalog_no": 6,
       "placement": 2,
       "total_score": 346,
@@ -622,6 +646,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   17,
@@ -633,6 +658,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   18,
@@ -654,6 +680,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   17,
                   17,
@@ -665,6 +692,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   17,
                   17,
@@ -683,7 +711,7 @@
         "grand_total": 346
       },
       "raw_text": "2 | 6 | Басенджи | Стандартный | Сука | AFIYA MONIFA AFRIKA | 4 | 17 | 17 | 17 | 16 | 17 | 174 | 60 | 17 | 17 | 17 | 16 | 17 | 172 | 346 | CC | CACL",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "afiya-monifa-afrika--басенджи",
       "dog": {
@@ -691,6 +719,45 @@
         "dog_key": "afiya-monifa-afrika--басенджи",
         "name_lat": "AFIYA MONIFA AFRIKA",
         "name_ru": "AFIYA MONIFA AFRIKA",
+        "breed": "БАСЕНДЖИ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 27229,
+      "event_id": 1568,
+      "dog_id": 564,
+      "breed_class": "Басенджи - Стандартный - Сука",
+      "catalog_no": 7,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dnf",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 4,
+            "bib_color": "#00a2e8",
+            "judges": [],
+            "total": null,
+            "disqualified": true,
+            "disqualification_reason": "Сошёл"
+          }
+        ]
+      },
+      "raw_text": " | 7 | Басенджи | Стандартный | Сука | SUNRISE LEUR ARISHA | 4 | Сошёл |  |  |  |  |  |  |  |  |  |  | ",
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
+      "status_reason": "Сошёл",
+      "dog_key": "sunrise-leur-arisha--басенджи",
+      "dog": {
+        "id": 564,
+        "dog_key": "sunrise-leur-arisha--басенджи",
+        "name_lat": "SUNRISE LEUR ARISHA",
+        "name_ru": "SUNRISE LEUR ARISHA",
         "breed": "БАСЕНДЖИ",
         "sex": null,
         "owner": null
@@ -717,6 +784,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   18,
                   19,
@@ -728,6 +796,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   17,
                   19,
@@ -749,6 +818,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   18,
@@ -760,6 +830,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -778,7 +849,7 @@
         "grand_total": 359
       },
       "raw_text": "1 | 12 | Грейхаунд | Стандартный | Сука | DARKIE | 46 | 18 | 19 | 18 | 17 | 18 | 180 | 98 | 17 | 18 | 18 | 17 | 18 | 179 | 359 | CC | Победитель Кубка России",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "darkie--греихаунд",
       "dog": {
@@ -812,6 +883,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   16,
                   17,
@@ -823,6 +895,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   18,
@@ -844,6 +917,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   18,
                   18,
@@ -855,6 +929,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -873,7 +948,7 @@
         "grand_total": 358
       },
       "raw_text": "2 | 10 | Грейхаунд | Стандартный | Кобель | BEL ETUAL GERTSOG GAMILTON | 45 | 16 | 17 | 17 | 16 | 18 | 175 | 99 | 18 | 18 | 18 | 19 | 18 | 183 | 358 | CC | CACL",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "bel-etual-gertsog-gamilton--греихаунд",
       "dog": {
@@ -907,6 +982,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   16,
                   16,
@@ -918,6 +994,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   17,
                   17,
@@ -939,6 +1016,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   17,
@@ -950,6 +1028,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   17,
                   19,
@@ -968,7 +1047,7 @@
         "grand_total": 341
       },
       "raw_text": "3 | 11 | Грейхаунд | Стандартный | Кобель | HEPI HEPRI FIRE OF MY HEART | 45 | 16 | 16 | 16 | 15 | 17 | 166 | 98 | 17 | 17 | 17 | 16 | 18 | 175 | 341 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "hepi-hepri-fire-of-my-heart--греихаунд",
       "dog": {
@@ -984,7 +1063,7 @@
     {
       "id": 26876,
       "event_id": 1568,
-      "dog_id": 9968,
+      "dog_id": 10350,
       "breed_class": "Ирландский волкодав - Стандартный - Микс",
       "catalog_no": 18,
       "placement": 1,
@@ -1002,6 +1081,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   16,
                   18,
@@ -1013,6 +1093,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   17,
                   17,
@@ -1034,6 +1115,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   17,
@@ -1045,6 +1127,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -1063,11 +1146,11 @@
         "grand_total": 350
       },
       "raw_text": "1 | 18 | Ирландский волкодав | Стандартный | Сука | TSARSKAJA PRIHOT SAURI | 47 | 16 | 18 | 17 | 17 | 18 | 173 | 100 | 17 | 17 | 17 | 17 | 18 | 177 | 350 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "tsarskaja-prihot-sauri--ирландскии-волкодав",
       "dog": {
-        "id": 9968,
+        "id": 10350,
         "dog_key": "tsarskaja-prihot-sauri--ирландскии-волкодав",
         "name_lat": "TSARSKAJA PRIHOT SAURI",
         "name_ru": "TSARSKAJA PRIHOT SAURI",
@@ -1097,6 +1180,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   16,
                   16,
@@ -1108,6 +1192,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   17,
                   16,
@@ -1129,6 +1214,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   16,
                   16,
@@ -1140,6 +1226,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   17,
                   18,
@@ -1158,7 +1245,7 @@
         "grand_total": 333
       },
       "raw_text": "2 | 16 | Ирландский волкодав | Стандартный | Кобель | MILIY ZVER CINCINNAT | 47 | 16 | 16 | 16 | 15 | 16 | 164 | 100 | 16 | 16 | 17 | 16 | 18 | 169 | 333 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "miliy-zver-cincinnat--ирландскии-волкодав",
       "dog": {
@@ -1192,6 +1279,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   17,
                   18,
@@ -1203,6 +1291,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Карелина Н.В.",
                 "scores": [
                   18,
                   17,
@@ -1224,6 +1313,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   18,
                   18,
@@ -1235,6 +1325,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   18,
@@ -1253,7 +1344,7 @@
         "grand_total": 353
       },
       "raw_text": "1 | 19 | Левретка | Стандартный | Кобель | ARNO NERO STELLA DI CELESTE | 30 | 17 | 18 | 17 | 17 | 18 | 175 | 83 | 18 | 18 | 18 | 16 | 18 | 178 | 353 | CC | Победитель Кубка России",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "arno-nero-stella-di-celeste--левретка",
       "dog": {
@@ -1287,6 +1378,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   17,
                   17,
@@ -1298,6 +1390,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Карелина Н.В.",
                 "scores": [
                   18,
                   18,
@@ -1319,6 +1412,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   17,
@@ -1330,6 +1424,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   17,
@@ -1348,7 +1443,7 @@
         "grand_total": 350
       },
       "raw_text": "2 | 21 | Левретка | Стандартный | Сука | HOUSE OF HOUNDS NAOMI | 29 | 17 | 17 | 16 | 18 | 17 | 175 | 83 | 17 | 17 | 18 | 17 | 18 | 175 | 350 | CC | CACL",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "house-of-hounds-naomi--левретка",
       "dog": {
@@ -1356,6 +1451,45 @@
         "dog_key": "house-of-hounds-naomi--левретка",
         "name_lat": "HOUSE OF HOUNDS NAOMI",
         "name_ru": "HOUSE OF HOUNDS NAOMI",
+        "breed": "ЛЕВРЕТКА",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 27230,
+      "event_id": 1568,
+      "dog_id": 10766,
+      "breed_class": "Левретка - Стандартный - Микс",
+      "catalog_no": 20,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dnf",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 29,
+            "bib_color": "#00a2e8",
+            "judges": [],
+            "total": null,
+            "disqualified": true,
+            "disqualification_reason": "Сошёл"
+          }
+        ]
+      },
+      "raw_text": " | 20 | Левретка | Стандартный | Сука | DESERT SNOW ITALI | 29 | Сошёл |  |  |  |  |  |  |  |  |  |  | ",
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
+      "status_reason": "Сошёл",
+      "dog_key": "desert-snow-itali--левретка",
+      "dog": {
+        "id": 10766,
+        "dog_key": "desert-snow-itali--левретка",
+        "name_lat": "DESERT SNOW ITALI",
+        "name_ru": "DESERT SNOW ITALI",
         "breed": "ЛЕВРЕТКА",
         "sex": null,
         "owner": null
@@ -1382,6 +1516,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   16,
                   16,
@@ -1393,6 +1528,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   17,
                   17,
@@ -1414,6 +1550,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   17,
@@ -1425,6 +1562,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   17,
                   19,
@@ -1443,7 +1581,7 @@
         "grand_total": 344
       },
       "raw_text": "1 | 24 | Родезийский риджбек | Стандартный | Сука | DEYONGA GAYA MONIFA | 48 | 16 | 16 | 17 | 16 | 17 | 170 | 101 | 17 | 17 | 17 | 16 | 17 | 174 | 344 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "deyonga-gaya-monifa--родезиискии-риджбек",
       "dog": {
@@ -1451,6 +1589,80 @@
         "dog_key": "deyonga-gaya-monifa--родезиискии-риджбек",
         "name_lat": "DEYONGA GAYA MONIFA",
         "name_ru": "DEYONGA GAYA MONIFA",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 27231,
+      "event_id": 1568,
+      "dog_id": 9769,
+      "breed_class": "Родезийский риджбек - Стандартный - Микс",
+      "catalog_no": 25,
+      "placement": null,
+      "total_score": 168,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dnf",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 48,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "judge_name": "Вронская О.В.",
+                "scores": [
+                  15,
+                  17,
+                  17,
+                  15,
+                  16
+                ],
+                "sum": 80
+              },
+              {
+                "judge_number": 2,
+                "judge_name": "Видус Г.С.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 168,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 101,
+            "bib_color": "#00a2e8",
+            "judges": [],
+            "total": null,
+            "disqualified": true,
+            "disqualification_reason": "Снят владельцем"
+          }
+        ],
+        "grand_total": 168
+      },
+      "raw_text": " | 25 | Родезийский риджбек | Стандартный | Сука | SUNHILL RIDGES NOLA ADEOLA | 48 | 15 | 17 | 17 | 15 | 16 | 168 | 101 | Снят владельцем |  | 168 |  | ",
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
+      "status_reason": "Снят владельцем",
+      "dog_key": "sunhill-ridges-nola-adeola--родезиискии-риджбек",
+      "dog": {
+        "id": 9769,
+        "dog_key": "sunhill-ridges-nola-adeola--родезиискии-риджбек",
+        "name_lat": "SUNHILL RIDGES NOLA ADEOLA",
+        "name_ru": "SUNHILL RIDGES NOLA ADEOLA",
         "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
         "sex": null,
         "owner": null
@@ -1477,6 +1689,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   18,
                   19,
@@ -1488,6 +1701,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   19,
                   18,
@@ -1509,6 +1723,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   18,
@@ -1520,6 +1735,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -1538,7 +1754,7 @@
         "grand_total": 362
       },
       "raw_text": "1 | 26 | Родезийский риджбек | Юниоры | Сука | SHABANI'S PIPPILOTTA | 49 | 18 | 19 | 18 | 18 | 18 | 182 | 102 | 17 | 18 | 18 | 17 | 18 | 180 | 362 |  | Лучший юниор",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "shabanis-pippilotta--родезиискии-риджбек",
       "dog": {
@@ -1572,6 +1788,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   18,
                   18,
@@ -1583,6 +1800,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Карелина Н.В.",
                 "scores": [
                   19,
                   19,
@@ -1604,6 +1822,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   18,
                   18,
@@ -1615,6 +1834,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -1633,7 +1853,7 @@
         "grand_total": 366
       },
       "raw_text": "1 | 35 | Русская псовая борзая | Стандартный | Сука | RAZGULJAI CHERTOVKA | 34 | 18 | 18 | 17 | 18 | 18 | 184 | 87 | 18 | 18 | 18 | 18 | 18 | 182 | 366 | CC | Победитель Кубка России",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "razguljai-chertovka--русская-псовая-борзая",
       "dog": {
@@ -1667,6 +1887,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   17,
                   17,
@@ -1678,6 +1899,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Карелина Н.В.",
                 "scores": [
                   18,
                   18,
@@ -1699,6 +1921,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   18,
                   18,
@@ -1710,6 +1933,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -1728,7 +1952,7 @@
         "grand_total": 359
       },
       "raw_text": "2 | 28 | Русская псовая борзая | Стандартный | Кобель | OBEREG | 34 | 17 | 17 | 17 | 17 | 18 | 179 | 88 | 18 | 18 | 18 | 17 | 18 | 180 | 359 | CC | CACL",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "obereg--русская-псовая-борзая",
       "dog": {
@@ -1762,6 +1986,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   17,
                   18,
@@ -1773,6 +1998,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Карелина Н.В.",
                 "scores": [
                   18,
                   19,
@@ -1794,6 +2020,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   18,
@@ -1805,6 +2032,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -1823,7 +2051,7 @@
         "grand_total": 358
       },
       "raw_text": "3 | 34 | Русская псовая борзая | Стандартный | Сука | RAZGULJAI CHAROVNITSA | 31 | 17 | 18 | 17 | 17 | 17 | 180 | 85 | 17 | 18 | 18 | 16 | 18 | 178 | 358 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "razguljai-charovnitsa--русская-псовая-борзая",
       "dog": {
@@ -1857,6 +2085,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   18,
                   18,
@@ -1868,6 +2097,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Карелина Н.В.",
                 "scores": [
                   17,
                   18,
@@ -1889,6 +2119,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   18,
                   18,
@@ -1900,6 +2131,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -1918,7 +2150,7 @@
         "grand_total": 357
       },
       "raw_text": "4 | 33 | Русская псовая борзая | Стандартный | Сука | LUNNAJA RADUGA DIVNAYA MECHTA | 36 | 18 | 18 | 18 | 18 | 17 | 177 | 86 | 18 | 18 | 18 | 17 | 18 | 180 | 357 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "lunnaja-raduga-divnaya-mechta--русская-псовая-борзая",
       "dog": {
@@ -1952,6 +2184,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   17,
                   18,
@@ -1963,6 +2196,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Карелина Н.В.",
                 "scores": [
                   18,
                   18,
@@ -1984,6 +2218,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   17,
@@ -1995,6 +2230,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -2013,7 +2249,7 @@
         "grand_total": 354
       },
       "raw_text": "5 | 30 | Русская псовая борзая | Стандартный | Сука | BARSKAYA PRIKHOT JASMINE | 35 | 17 | 18 | 16 | 16 | 18 | 178 | 89 | 17 | 17 | 17 | 16 | 18 | 176 | 354 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "barskaya-prikhot-jasmine--русская-псовая-борзая",
       "dog": {
@@ -2047,6 +2283,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   16,
                   18,
@@ -2058,6 +2295,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Карелина Н.В.",
                 "scores": [
                   17,
                   18,
@@ -2079,6 +2317,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   16,
                   17,
@@ -2090,6 +2329,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   17,
                   19,
@@ -2108,7 +2348,7 @@
         "grand_total": 350
       },
       "raw_text": "6 | 27 | Русская псовая борзая | Стандартный | Кобель | BRIZ | 33 | 16 | 18 | 17 | 17 | 18 | 175 | 88 | 16 | 17 | 18 | 16 | 17 | 175 | 350 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "briz--русская-псовая-борзая",
       "dog": {
@@ -2142,6 +2382,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   16,
                   18,
@@ -2153,6 +2394,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Карелина Н.В.",
                 "scores": [
                   19,
                   19,
@@ -2174,6 +2416,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   16,
                   17,
@@ -2185,6 +2428,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   16,
                   18,
@@ -2203,7 +2447,7 @@
         "grand_total": 348
       },
       "raw_text": "7 | 32 | Русская псовая борзая | Стандартный | Сука | EXLIBRIS FALCO RUS HRABRAYA SERDTSEM | 35 | 16 | 18 | 17 | 17 | 17 | 180 | 86 | 16 | 17 | 18 | 15 | 17 | 168 | 348 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "exlibris-falco-rus-hrabraya-serdtsem--русская-псовая-борзая",
       "dog": {
@@ -2237,6 +2481,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   16,
                   18,
@@ -2248,6 +2493,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Карелина Н.В.",
                 "scores": [
                   17,
                   18,
@@ -2269,6 +2515,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   16,
                   17,
@@ -2280,6 +2527,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   17,
                   19,
@@ -2298,7 +2546,7 @@
         "grand_total": 346
       },
       "raw_text": "8 | 31 | Русская псовая борзая | Стандартный | Сука | BELKA BICHI SENIYA | 32 | 16 | 18 | 17 | 18 | 17 | 174 | 85 | 16 | 17 | 17 | 16 | 17 | 172 | 346 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "belka-bichi-seniya--русская-псовая-борзая",
       "dog": {
@@ -2332,6 +2580,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   16,
                   17,
@@ -2343,6 +2592,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Карелина Н.В.",
                 "scores": [
                   19,
                   18,
@@ -2364,6 +2614,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   18,
@@ -2375,6 +2626,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -2393,7 +2645,7 @@
         "grand_total": 345
       },
       "raw_text": "9 | 36 | Русская псовая борзая | Стандартный | Сука | БРАСЛЕТКА ИЗ ПОСАДСКОЙ СВОРЫ | 31 | 16 | 17 | 17 | 16 | 17 | 176 | 84 | 17 | 18 | 18 | 16 | 18 | 169 | 345 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "браслетка-из-посадскои-своры--русская-псовая-борзая",
       "dog": {
@@ -2427,6 +2679,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   17,
                   17,
@@ -2438,6 +2691,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Карелина Н.В.",
                 "scores": [
                   18,
                   17,
@@ -2459,6 +2713,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   15,
                   17,
@@ -2470,6 +2725,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   15,
                   19,
@@ -2488,7 +2744,7 @@
         "grand_total": 325
       },
       "raw_text": "10 | 37 | Русская псовая борзая | Стандартный | Сука | БУЛА | 33 | 17 | 17 | 16 | 17 | 16 | 170 | 87 | 15 | 17 | 18 | 15 | 16 | 155 | 325 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "була--русская-псовая-борзая",
       "dog": {
@@ -2496,6 +2752,80 @@
         "dog_key": "була--русская-псовая-борзая",
         "name_lat": "БУЛА",
         "name_ru": "БУЛА",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 27232,
+      "event_id": 1568,
+      "dog_id": 10062,
+      "breed_class": "Русская псовая борзая - Стандартный - Микс",
+      "catalog_no": 29,
+      "placement": null,
+      "total_score": 132,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dnf",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 32,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "judge_name": "Вронская О.В.",
+                "scores": [
+                  15,
+                  17,
+                  15,
+                  10,
+                  10
+                ],
+                "sum": 67
+              },
+              {
+                "judge_number": 2,
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  15,
+                  12,
+                  12,
+                  14,
+                  12
+                ],
+                "sum": 65
+              }
+            ],
+            "total": 132,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 84,
+            "bib_color": "red",
+            "judges": [],
+            "total": null,
+            "disqualified": true,
+            "disqualification_reason": "Сошёл"
+          }
+        ],
+        "grand_total": 132
+      },
+      "raw_text": " | 29 | Русская псовая борзая | Стандартный | Сука | BARSKAYA PRIKHOT GORDOST SERDTSA MOEGO | 32 | 15 | 17 | 15 | 10 | 10 | 132 | 84 | Сошёл |  | 132 |  | ",
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
+      "status_reason": "Сошёл",
+      "dog_key": "barskaya-prikhot-gordost-serdtsa-moego--русская-псовая-борзая",
+      "dog": {
+        "id": 10062,
+        "dog_key": "barskaya-prikhot-gordost-serdtsa-moego--русская-псовая-борзая",
+        "name_lat": "BARSKAYA PRIKHOT GORDOST SERDTSA MOEGO",
+        "name_ru": "BARSKAYA PRIKHOT GORDOST SERDTSA MOEGO",
         "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
         "sex": null,
         "owner": null
@@ -2522,6 +2852,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   19,
                   18,
@@ -2533,6 +2864,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Карелина Н.В.",
                 "scores": [
                   18,
                   18,
@@ -2554,6 +2886,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   18,
                   17,
@@ -2565,6 +2898,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -2583,7 +2917,7 @@
         "grand_total": 360
       },
       "raw_text": "1 | 38 | Русская псовая борзая | Юниоры | Кобель | RAZGULJAI SHALYI | 37 | 19 | 18 | 17 | 18 | 18 | 182 | 90 | 18 | 17 | 17 | 18 | 18 | 178 | 360 |  | Лучший юниор",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "razguljai-shalyi--русская-псовая-борзая",
       "dog": {
@@ -2617,6 +2951,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   18,
                   19,
@@ -2628,6 +2963,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   17,
                   17,
@@ -2649,6 +2985,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   17,
@@ -2660,6 +2997,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -2678,7 +3016,7 @@
         "grand_total": 353
       },
       "raw_text": "1 | 42 | Салюки | Стандартный | Кобель | ИМРАН ГАЛСАН КАДАРИ | 39 | 18 | 19 | 18 | 18 | 18 | 177 | 91 | 17 | 17 | 18 | 16 | 18 | 176 | 353 | CC | Победитель Кубка России",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "имран-галсан-кадари--салюки",
       "dog": {
@@ -2712,6 +3050,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   17,
                   17,
@@ -2723,6 +3062,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   18,
@@ -2744,6 +3084,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   17,
@@ -2755,6 +3096,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -2773,7 +3115,7 @@
         "grand_total": 352
       },
       "raw_text": "2 | 41 | Салюки | Стандартный | Кобель | IMRAN FАRKHINUR | 38 | 17 | 17 | 17 | 17 | 17 | 174 | 91 | 17 | 17 | 18 | 17 | 18 | 178 | 352 | CC | CACL",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "imran-fаrkhinur--салюки",
       "dog": {
@@ -2807,6 +3149,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   17,
                   17,
@@ -2818,6 +3161,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   17,
                   18,
@@ -2839,6 +3183,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   16,
                   16,
@@ -2850,6 +3195,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -2868,7 +3214,7 @@
         "grand_total": 345
       },
       "raw_text": "3 | 39 | Салюки | Стандартный | Кобель | AL NAFISEH FAIZUL ANWAR | 39 | 17 | 17 | 17 | 16 | 17 | 172 | 92 | 16 | 16 | 18 | 15 | 17 | 173 | 345 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "al-nafiseh-faizul-anwar--салюки",
       "dog": {
@@ -2902,6 +3248,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   16,
                   18,
@@ -2913,6 +3260,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   17,
                   17,
@@ -2934,6 +3282,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   16,
                   17,
@@ -2945,6 +3294,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -2963,7 +3313,7 @@
         "grand_total": 343
       },
       "raw_text": "4 | 40 | Салюки | Стандартный | Кобель | IMRAN ENSAR FALAYHAN | 38 | 16 | 18 | 17 | 16 | 18 | 171 | 92 | 16 | 17 | 18 | 15 | 17 | 172 | 343 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "imran-ensar-falayhan--салюки",
       "dog": {
@@ -2997,6 +3347,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   17,
                   19,
@@ -3008,6 +3359,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   17,
                   18,
@@ -3029,6 +3381,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   18,
@@ -3040,6 +3393,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   19,
                   19,
@@ -3058,7 +3412,7 @@
         "grand_total": 363
       },
       "raw_text": "1 | 43 | Салюки | Стандартный | Сука | AL NAFISEH CALEELA | 40 | 17 | 19 | 18 | 18 | 19 | 180 | 94 | 17 | 18 | 18 | 18 | 18 | 183 | 363 | CC | Победитель Кубка России",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "al-nafiseh-caleela--салюки",
       "dog": {
@@ -3092,6 +3446,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   18,
                   19,
@@ -3103,6 +3458,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   18,
@@ -3124,6 +3480,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   18,
                   18,
@@ -3135,6 +3492,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -3153,7 +3511,7 @@
         "grand_total": 361
       },
       "raw_text": "2 | 45 | Салюки | Стандартный | Сука | AL NAFISEH FAIRUZA | 41 | 18 | 19 | 17 | 18 | 17 | 180 | 93 | 18 | 18 | 18 | 18 | 18 | 181 | 361 | CC | CACL",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "al-nafiseh-fairuza--салюки",
       "dog": {
@@ -3187,6 +3545,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   18,
                   17,
@@ -3198,6 +3557,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   18,
@@ -3219,6 +3579,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   18,
@@ -3230,6 +3591,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -3248,7 +3610,7 @@
         "grand_total": 358
       },
       "raw_text": "3 | 47 | Салюки | Стандартный | Сука | AL NAFISEH GHAALIYA | 43 | 18 | 17 | 18 | 18 | 18 | 179 | 96 | 17 | 18 | 18 | 17 | 18 | 179 | 358 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "al-nafiseh-ghaaliya--салюки",
       "dog": {
@@ -3282,6 +3644,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   16,
                   19,
@@ -3293,6 +3656,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   17,
                   19,
@@ -3314,6 +3678,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   17,
@@ -3325,6 +3690,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -3343,7 +3709,7 @@
         "grand_total": 356
       },
       "raw_text": "4 | 44 | Салюки | Стандартный | Сука | AL NAFISEH ELEEZA | 42 | 16 | 19 | 18 | 18 | 18 | 178 | 96 | 17 | 17 | 18 | 16 | 18 | 178 | 356 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "al-nafiseh-eleeza--салюки",
       "dog": {
@@ -3377,6 +3743,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   17,
                   18,
@@ -3388,6 +3755,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   18,
@@ -3409,6 +3777,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   18,
                   18,
@@ -3420,6 +3789,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -3438,7 +3808,7 @@
         "grand_total": 355
       },
       "raw_text": "5 | 46 | Салюки | Стандартный | Сука | AL NAFISEH FALAKARA | 42 | 17 | 18 | 18 | 17 | 17 | 176 | 95 | 18 | 18 | 18 | 17 | 18 | 179 | 355 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "al-nafiseh-falakara--салюки",
       "dog": {
@@ -3472,6 +3842,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   17,
                   18,
@@ -3483,6 +3854,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   17,
                   17,
@@ -3504,6 +3876,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   18,
                   17,
@@ -3515,6 +3888,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -3533,7 +3907,7 @@
         "grand_total": 354
       },
       "raw_text": "6 | 50 | Салюки | Стандартный | Сука | АЛЬ НАФИСЭХ ГОЛЬНАР | 40 | 17 | 18 | 17 | 17 | 18 | 175 | 93 | 18 | 17 | 17 | 17 | 18 | 179 | 354 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "аль-нафисэх-гольнар--салюки",
       "dog": {
@@ -3567,6 +3941,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   17,
                   18,
@@ -3578,6 +3953,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   18,
@@ -3599,6 +3975,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   16,
                   17,
@@ -3610,6 +3987,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   17,
                   19,
@@ -3628,7 +4006,7 @@
         "grand_total": 351
       },
       "raw_text": "7 | 49 | Салюки | Стандартный | Сука | SALGREY’S OLIFF | 43 | 17 | 18 | 17 | 17 | 18 | 178 | 94 | 16 | 17 | 18 | 16 | 17 | 173 | 351 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "salgrey-s-oliff--салюки",
       "dog": {
@@ -3662,6 +4040,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   16,
                   18,
@@ -3673,6 +4052,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   17,
                   17,
@@ -3694,6 +4074,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   17,
@@ -3705,6 +4086,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   17,
                   19,
@@ -3723,7 +4105,7 @@
         "grand_total": 346
       },
       "raw_text": "8 | 48 | Салюки | Стандартный | Сука | DIVINA ROSA ALMERIA | 41 | 16 | 18 | 16 | 16 | 18 | 171 | 95 | 17 | 17 | 18 | 16 | 18 | 175 | 346 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "divina-rosa-almeria--салюки",
       "dog": {
@@ -3757,6 +4139,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   17,
                   17,
@@ -3768,6 +4151,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   17,
                   17,
@@ -3789,6 +4173,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   18,
                   18,
@@ -3800,6 +4185,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -3818,7 +4204,7 @@
         "grand_total": 358
       },
       "raw_text": "1 | 51 | Салюки | Юниоры | Сука | БЕЛЬ ЭТУАЛЬ ДЭЙЛИ СМАЙЛ | 44 | 17 | 17 | 17 | 18 | 17 | 174 | 97 | 18 | 18 | 18 | 18 | 18 | 184 | 358 |  | Лучший юниор",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "бель-этуаль-дэили-смаил--салюки",
       "dog": {
@@ -3852,6 +4238,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   17,
                   18,
@@ -3863,6 +4250,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   17,
                   17,
@@ -3884,6 +4272,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   18,
@@ -3895,6 +4284,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -3913,7 +4303,7 @@
         "grand_total": 355
       },
       "raw_text": "1 | 53 | Слюги | Стандартный | Кобель | BORZOMIR BASEL AKMAL | 51 | 17 | 18 | 17 | 17 | 18 | 174 | 103 | 17 | 18 | 18 | 17 | 18 | 181 | 355 | CC | Победитель Кубка России",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "borzomir-basel-akmal--слюги",
       "dog": {
@@ -3947,6 +4337,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   18,
                   19,
@@ -3958,6 +4349,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   17,
                   18,
@@ -3979,6 +4371,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   18,
@@ -3990,6 +4383,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   16,
                   19,
@@ -4008,7 +4402,7 @@
         "grand_total": 353
       },
       "raw_text": "2 | 54 | Слюги | Стандартный | Сука | BORZOMIR BAKHRUZ AZIZA | 51 | 18 | 19 | 17 | 18 | 17 | 177 | 104 | 17 | 18 | 18 | 17 | 18 | 176 | 353 | CC | CACL",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "borzomir-bakhruz-aziza--слюги",
       "dog": {
@@ -4042,6 +4436,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   15,
                   18,
@@ -4053,6 +4448,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   17,
                   18,
@@ -4074,6 +4470,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   17,
@@ -4085,6 +4482,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   18,
@@ -4103,7 +4501,7 @@
         "grand_total": 348
       },
       "raw_text": "3 | 52 | Слюги | Стандартный | Кобель | BORZOMIR BARFAR AMAN | 50 | 15 | 18 | 17 | 16 | 17 | 172 | 104 | 17 | 17 | 18 | 17 | 18 | 176 | 348 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "borzomir-barfar-aman--слюги",
       "dog": {
@@ -4111,6 +4509,80 @@
         "dog_key": "borzomir-barfar-aman--слюги",
         "name_lat": "BORZOMIR BARFAR AMAN",
         "name_ru": "BORZOMIR BARFAR AMAN",
+        "breed": "СЛЮГИ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 27233,
+      "event_id": 1568,
+      "dog_id": 10767,
+      "breed_class": "Слюги - Стандартный - Микс",
+      "catalog_no": 55,
+      "placement": null,
+      "total_score": 161,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dnf",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 50,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "judge_name": "Вронская О.В.",
+                "scores": [
+                  14,
+                  18,
+                  17,
+                  13,
+                  15
+                ],
+                "sum": 77
+              },
+              {
+                "judge_number": 2,
+                "judge_name": "Видус Г.С.",
+                "scores": [
+                  16,
+                  16,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 161,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 103,
+            "bib_color": "#00a2e8",
+            "judges": [],
+            "total": null,
+            "disqualified": true,
+            "disqualification_reason": "Сошёл"
+          }
+        ],
+        "grand_total": 161
+      },
+      "raw_text": " | 55 | Слюги | Стандартный | Сука | BORZOMIR BARIJAT AMIRA | 50 | 14 | 18 | 17 | 13 | 15 | 161 | 103 | Сошёл |  | 161 |  | ",
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
+      "status_reason": "Сошёл",
+      "dog_key": "borzomir-barijat-amira--слюги",
+      "dog": {
+        "id": 10767,
+        "dog_key": "borzomir-barijat-amira--слюги",
+        "name_lat": "BORZOMIR BARIJAT AMIRA",
+        "name_ru": "BORZOMIR BARIJAT AMIRA",
         "breed": "СЛЮГИ",
         "sex": null,
         "owner": null
@@ -4137,6 +4609,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   16,
                   18,
@@ -4148,6 +4621,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   18,
@@ -4169,6 +4643,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   18,
                   18,
@@ -4180,6 +4655,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   19,
                   19,
@@ -4198,7 +4674,7 @@
         "grand_total": 355
       },
       "raw_text": "1 | 57 | Тазы | Стандартный | Кобель | БОРЗОМИР АРМАН | 52 | 16 | 18 | 17 | 16 | 17 | 174 | 106 | 18 | 18 | 18 | 17 | 18 | 181 | 355 | CC | Победитель Кубка России",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "борзомир-арман--тазы",
       "dog": {
@@ -4232,6 +4708,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   18,
                   18,
@@ -4243,6 +4720,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   17,
@@ -4264,6 +4742,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   18,
                   18,
@@ -4275,6 +4754,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -4293,7 +4773,7 @@
         "grand_total": 355
       },
       "raw_text": "2 | 56 | Тазы | Стандартный | Кобель | BORZOMIR AMIR | 53 | 18 | 18 | 17 | 17 | 17 | 175 | 105 | 18 | 18 | 18 | 17 | 18 | 180 | 355 | CC | CACL",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "borzomir-amir--тазы",
       "dog": {
@@ -4327,6 +4807,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   17,
                   17,
@@ -4338,6 +4819,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   17,
                   17,
@@ -4359,6 +4841,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   17,
@@ -4370,6 +4853,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   18,
@@ -4388,7 +4872,7 @@
         "grand_total": 343
       },
       "raw_text": "3 | 58 | Тазы | Стандартный | Сука | АВРОРА ПЛАТИНУМ АБЭЛЬ | 52 | 17 | 17 | 16 | 15 | 16 | 168 | 105 | 17 | 17 | 18 | 17 | 18 | 175 | 343 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "аврора-платинум-абэль--тазы",
       "dog": {
@@ -4422,6 +4906,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   16,
                   17,
@@ -4433,6 +4918,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   17,
                   19,
@@ -4454,6 +4940,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   16,
                   18,
@@ -4465,6 +4952,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   18,
@@ -4483,7 +4971,7 @@
         "grand_total": 346
       },
       "raw_text": "1 | 60 | Уиппет | Ветераны-спринтеры | Кобель | ЖАН ХАРЛЕЙ МАЙПРЕТТИ ФРОМ ЭЛИТА | 28 | 16 | 17 | 17 | 15 | 18 | 171 | 82 | 16 | 18 | 17 | 16 | 18 | 175 | 346 | CC | Лучший ветеран",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "жан-харлеи-маипретти-фром-элита--уиппет",
       "dog": {
@@ -4517,6 +5005,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   18,
                   18,
@@ -4528,6 +5017,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -4549,6 +5039,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   18,
                   19,
@@ -4560,6 +5051,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   19,
@@ -4578,7 +5070,7 @@
         "grand_total": 361
       },
       "raw_text": "1 | 81 | Уиппет | Стандартный | Кобель | STANGERS LAND BLACKTHORNE WINTER | 13 | 18 | 18 | 17 | 17 | 18 | 179 | 66 | 18 | 19 | 18 | 17 | 18 | 182 | 361 | CC | Победитель Кубка России",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "stangers-land-blackthorne-winter--уиппет",
       "dog": {
@@ -4612,6 +5104,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   18,
@@ -4623,6 +5116,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -4644,6 +5138,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   18,
                   18,
@@ -4655,6 +5150,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   18,
@@ -4673,7 +5169,7 @@
         "grand_total": 359
       },
       "raw_text": "2 | 79 | Уиппет | Стандартный | Кобель | SHERWOOD FOREST HERO | 15 | 17 | 18 | 18 | 17 | 18 | 179 | 70 | 18 | 18 | 18 | 18 | 18 | 180 | 359 | CC | CACL",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "sherwood-forest-hero--уиппет",
       "dog": {
@@ -4707,6 +5203,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   17,
@@ -4718,6 +5215,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -4739,6 +5237,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   18,
                   17,
@@ -4750,6 +5249,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   19,
@@ -4768,7 +5268,7 @@
         "grand_total": 358
       },
       "raw_text": "3 | 73 | Уиппет | Стандартный | Кобель | ANTHRAX GO-BYE | 12 | 17 | 17 | 18 | 17 | 18 | 178 | 67 | 18 | 17 | 18 | 18 | 18 | 180 | 358 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "anthrax-go-bye--уиппет",
       "dog": {
@@ -4802,6 +5302,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   18,
@@ -4813,6 +5314,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -4834,6 +5336,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   17,
                   19,
@@ -4845,6 +5348,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   19,
@@ -4863,7 +5367,7 @@
         "grand_total": 358
       },
       "raw_text": "4 | 82 | Уиппет | Стандартный | Кобель | STRONG STOAT | 16 | 17 | 18 | 18 | 17 | 18 | 179 | 70 | 17 | 19 | 17 | 17 | 18 | 179 | 358 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "strong-stoat--уиппет",
       "dog": {
@@ -4897,6 +5401,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   18,
                   18,
@@ -4908,6 +5413,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -4929,6 +5435,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   17,
                   18,
@@ -4940,6 +5447,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   18,
@@ -4958,7 +5466,7 @@
         "grand_total": 357
       },
       "raw_text": "5 | 84 | Уиппет | Стандартный | Кобель | VASURU TAFFI’S FIRST-EVER FOREVER | 17 | 18 | 18 | 18 | 17 | 18 | 180 | 67 | 17 | 18 | 18 | 16 | 18 | 177 | 357 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "vasuru-taffi-s-first-ever-forever--уиппет",
       "dog": {
@@ -4992,6 +5500,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   18,
                   18,
@@ -5003,6 +5512,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   17,
                   19,
@@ -5024,6 +5534,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   17,
                   18,
@@ -5035,6 +5546,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   17,
                   19,
@@ -5053,7 +5565,7 @@
         "grand_total": 355
       },
       "raw_text": "6 | 78 | Уиппет | Стандартный | Кобель | RIDER OF ROHAN BRODWINEK | 14 | 18 | 18 | 18 | 17 | 18 | 178 | 69 | 17 | 18 | 18 | 16 | 18 | 177 | 355 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "rider-of-rohan-brodwinek--уиппет",
       "dog": {
@@ -5087,6 +5599,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   17,
@@ -5098,6 +5611,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -5119,6 +5633,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   16,
                   19,
@@ -5130,6 +5645,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   18,
@@ -5148,7 +5664,7 @@
         "grand_total": 354
       },
       "raw_text": "7 | 80 | Уиппет | Стандартный | Кобель | SHOW MUST GO ON | 14 | 17 | 17 | 18 | 17 | 18 | 177 | 68 | 16 | 19 | 18 | 16 | 18 | 177 | 354 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "show-must-go-on--уиппет",
       "dog": {
@@ -5182,6 +5698,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   18,
@@ -5193,6 +5710,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -5214,6 +5732,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   17,
                   18,
@@ -5225,6 +5744,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   18,
@@ -5243,7 +5763,7 @@
         "grand_total": 353
       },
       "raw_text": "8 | 75 | Уиппет | Стандартный | Кобель | EFFLORESCO'S MAVISCAL | 12 | 17 | 18 | 18 | 16 | 18 | 176 | 66 | 17 | 18 | 18 | 17 | 17 | 177 | 353 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "efflorescos-maviscal--уиппет",
       "dog": {
@@ -5277,6 +5797,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   17,
@@ -5288,6 +5809,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   16,
                   18,
@@ -5309,6 +5831,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   18,
                   18,
@@ -5320,6 +5843,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   18,
@@ -5338,7 +5862,7 @@
         "grand_total": 351
       },
       "raw_text": "9 | 76 | Уиппет | Стандартный | Кобель | KULIKOVO POLE VELIZH STEPNOY OKHOTNIK | 13 | 17 | 17 | 18 | 16 | 17 | 172 | 68 | 18 | 18 | 18 | 17 | 18 | 179 | 351 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "kulikovo-pole-velizh-stepnoy-okhotnik--уиппет",
       "dog": {
@@ -5372,6 +5896,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   17,
@@ -5383,6 +5908,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   17,
                   19,
@@ -5404,6 +5930,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   18,
                   17,
@@ -5415,6 +5942,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   19,
@@ -5433,7 +5961,7 @@
         "grand_total": 351
       },
       "raw_text": "10 | 83 | Уиппет | Стандартный | Кобель | VALPAIN PEK BLOSSOM DRAGON | 15 | 17 | 17 | 17 | 16 | 17 | 172 | 69 | 18 | 17 | 18 | 17 | 18 | 179 | 351 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "valpain-pek-blossom-dragon--уиппет",
       "dog": {
@@ -5467,6 +5995,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   17,
@@ -5478,6 +6007,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   16,
                   19,
@@ -5499,6 +6029,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   16,
                   19,
@@ -5510,6 +6041,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   18,
@@ -5528,7 +6060,7 @@
         "grand_total": 350
       },
       "raw_text": "11 | 77 | Уиппет | Стандартный | Кобель | LET IT BE | 16 | 17 | 17 | 18 | 16 | 18 | 173 | 71 | 16 | 19 | 17 | 16 | 18 | 177 | 350 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "let-it-be--уиппет",
       "dog": {
@@ -5562,6 +6094,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   17,
@@ -5573,6 +6106,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -5594,6 +6128,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   17,
                   19,
@@ -5605,6 +6140,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   19,
@@ -5623,7 +6159,7 @@
         "grand_total": 358
       },
       "raw_text": "1 | 87 | Уиппет | Стандартный | Сука | GRACE AMBER | 21 | 17 | 17 | 18 | 16 | 18 | 177 | 78 | 17 | 19 | 18 | 18 | 18 | 181 | 358 | CC | Победитель Кубка России",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "grace-amber--уиппет",
       "dog": {
@@ -5657,6 +6193,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   18,
@@ -5668,6 +6205,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   17,
                   19,
@@ -5689,6 +6227,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   18,
                   18,
@@ -5700,6 +6239,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   19,
                   19,
@@ -5718,7 +6258,7 @@
         "grand_total": 357
       },
       "raw_text": "2 | 89 | Уиппет | Стандартный | Сука | LAST UNICORN | 26 | 17 | 18 | 18 | 16 | 18 | 176 | 79 | 18 | 18 | 18 | 17 | 18 | 181 | 357 | CC | CACL",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "last-unicorn--уиппет",
       "dog": {
@@ -5752,6 +6292,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   18,
                   17,
@@ -5763,6 +6304,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -5784,6 +6326,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   16,
                   19,
@@ -5795,6 +6338,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   19,
                   19,
@@ -5813,7 +6357,7 @@
         "grand_total": 357
       },
       "raw_text": "3 | 95 | Уиппет | Стандартный | Сука | STANGERS LAND BRATISLAVA | 21 | 18 | 17 | 18 | 17 | 18 | 178 | 75 | 16 | 19 | 18 | 16 | 18 | 179 | 357 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "stangers-land-bratislava--уиппет",
       "dog": {
@@ -5847,6 +6391,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   16,
                   17,
@@ -5858,6 +6403,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   18,
@@ -5879,6 +6425,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   17,
                   19,
@@ -5890,6 +6437,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   19,
@@ -5908,7 +6456,7 @@
         "grand_total": 356
       },
       "raw_text": "4 | 85 | Уиппет | Стандартный | Сука | DERA BLUE | 23 | 16 | 17 | 18 | 17 | 18 | 176 | 80 | 17 | 19 | 18 | 16 | 18 | 180 | 356 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "dera-blue--уиппет",
       "dog": {
@@ -5942,6 +6490,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   18,
@@ -5953,6 +6502,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -5974,6 +6524,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   16,
                   19,
@@ -5985,6 +6536,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   19,
@@ -6003,7 +6555,7 @@
         "grand_total": 356
       },
       "raw_text": "5 | 92 | Уиппет | Стандартный | Сука | LOVE WILL FIND A WAY | 26 | 17 | 18 | 18 | 17 | 18 | 178 | 77 | 16 | 19 | 18 | 16 | 18 | 178 | 356 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "love-will-find-a-way--уиппет",
       "dog": {
@@ -6037,6 +6589,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   17,
@@ -6048,6 +6601,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -6069,6 +6623,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   17,
                   19,
@@ -6080,6 +6635,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   18,
@@ -6098,7 +6654,7 @@
         "grand_total": 355
       },
       "raw_text": "6 | 88 | Уиппет | Стандартный | Сука | ISTORIYA LUBVI SHIKARNAYA FORTUNA | 20 | 17 | 17 | 18 | 16 | 18 | 177 | 79 | 17 | 19 | 18 | 16 | 18 | 178 | 355 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "istoriya-lubvi-shikarnaya-fortuna--уиппет",
       "dog": {
@@ -6132,6 +6688,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   17,
@@ -6143,6 +6700,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   18,
@@ -6164,6 +6722,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   17,
                   18,
@@ -6175,6 +6734,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   19,
                   18,
@@ -6193,7 +6753,7 @@
         "grand_total": 354
       },
       "raw_text": "7 | 93 | Уиппет | Стандартный | Сука | STANGERS LAND ALKIONA | 22 | 17 | 17 | 18 | 17 | 18 | 176 | 80 | 17 | 18 | 17 | 17 | 18 | 178 | 354 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "stangers-land-alkiona--уиппет",
       "dog": {
@@ -6227,6 +6787,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   18,
@@ -6238,6 +6799,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   17,
                   19,
@@ -6259,6 +6821,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   17,
                   18,
@@ -6270,6 +6833,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   18,
@@ -6288,7 +6852,7 @@
         "grand_total": 354
       },
       "raw_text": "8 | 90 | Уиппет | Стандартный | Сука | LAVING BRIZ VESPA RAPIDA | 20 | 17 | 18 | 18 | 17 | 18 | 177 | 74 | 17 | 18 | 18 | 16 | 18 | 177 | 354 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "laving-briz-vespa-rapida--уиппет",
       "dog": {
@@ -6322,6 +6886,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   17,
@@ -6333,6 +6898,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -6354,6 +6920,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   16,
                   18,
@@ -6365,6 +6932,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   18,
@@ -6383,7 +6951,7 @@
         "grand_total": 354
       },
       "raw_text": "9 | 86 | Уиппет | Стандартный | Сука | DIAMANT TOY ER UMKA LUCHIK SCHASTIA | 24 | 17 | 17 | 18 | 17 | 18 | 178 | 76 | 16 | 18 | 18 | 16 | 18 | 176 | 354 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "diamant-toy-er-umka-luchik-schastia--уиппет",
       "dog": {
@@ -6417,6 +6985,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   18,
                   18,
@@ -6428,6 +6997,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   18,
@@ -6449,6 +7019,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   17,
                   18,
@@ -6460,6 +7031,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   17,
                   18,
@@ -6478,7 +7050,7 @@
         "grand_total": 354
       },
       "raw_text": "10 | 99 | Уиппет | Стандартный | Сука | VOROZHEYA IS SAGI O GARDARIKE | 19 | 18 | 18 | 18 | 17 | 18 | 179 | 75 | 17 | 18 | 18 | 16 | 17 | 175 | 354 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "vorozheya-is-sagi-o-gardarike--уиппет",
       "dog": {
@@ -6512,6 +7084,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   18,
@@ -6523,6 +7096,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -6544,6 +7118,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   16,
                   18,
@@ -6555,6 +7130,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   17,
                   18,
@@ -6573,7 +7149,7 @@
         "grand_total": 354
       },
       "raw_text": "11 | 96 | Уиппет | Стандартный | Сука | STANGERS LAND BRIZA | 22 | 17 | 18 | 18 | 17 | 18 | 179 | 72 | 16 | 18 | 17 | 17 | 18 | 175 | 354 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "stangers-land-briza--уиппет",
       "dog": {
@@ -6607,6 +7183,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   16,
                   18,
@@ -6618,6 +7195,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   16,
                   19,
@@ -6639,6 +7217,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   17,
                   18,
@@ -6650,6 +7229,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   18,
@@ -6668,7 +7248,7 @@
         "grand_total": 353
       },
       "raw_text": "12 | 101 | Уиппет | Стандартный | Сука | ЛАКШЕРИ ВИПП ЛЕДИ ДЕЙ | 23 | 16 | 18 | 18 | 16 | 18 | 175 | 77 | 17 | 18 | 18 | 17 | 18 | 178 | 353 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "лакшери-випп-леди-деи--уиппет",
       "dog": {
@@ -6702,6 +7282,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   18,
                   18,
@@ -6713,6 +7294,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   17,
                   18,
@@ -6734,6 +7316,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   16,
                   19,
@@ -6745,6 +7328,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   19,
@@ -6763,7 +7347,7 @@
         "grand_total": 352
       },
       "raw_text": "13 | 102 | Уиппет | Стандартный | Сука | РУССКИ ПАРК ДАНАЯ | 25 | 18 | 18 | 18 | 16 | 18 | 176 | 76 | 16 | 19 | 17 | 15 | 18 | 176 | 352 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "русски-парк-даная--уиппет",
       "dog": {
@@ -6797,6 +7381,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   16,
                   17,
@@ -6808,6 +7393,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   17,
                   18,
@@ -6829,6 +7415,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   16,
                   18,
@@ -6840,6 +7427,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   18,
@@ -6858,7 +7446,7 @@
         "grand_total": 351
       },
       "raw_text": "14 | 98 | Уиппет | Стандартный | Сука | VALPAIN PEK SANSA | 24 | 16 | 17 | 18 | 17 | 18 | 174 | 78 | 16 | 18 | 18 | 17 | 18 | 177 | 351 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "valpain-pek-sansa--уиппет",
       "dog": {
@@ -6892,6 +7480,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   17,
@@ -6903,6 +7492,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -6924,6 +7514,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   16,
                   18,
@@ -6935,6 +7526,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   19,
@@ -6953,7 +7545,7 @@
         "grand_total": 351
       },
       "raw_text": "15 | 91 | Уиппет | Стандартный | Сука | LET THE LOVE GO ON | 25 | 17 | 17 | 18 | 16 | 18 | 177 | 73 | 16 | 18 | 17 | 15 | 17 | 174 | 351 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "let-the-love-go-on--уиппет",
       "dog": {
@@ -6987,6 +7579,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   18,
@@ -6998,6 +7591,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   17,
                   19,
@@ -7019,6 +7613,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   17,
                   18,
@@ -7030,6 +7625,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   16,
                   18,
@@ -7048,7 +7644,7 @@
         "grand_total": 350
       },
       "raw_text": "16 | 100 | Уиппет | Стандартный | Сука | ЛАКШЕРИ ВИПП ЛАВАТЕРРА | 18 | 17 | 18 | 18 | 17 | 18 | 177 | 72 | 17 | 18 | 17 | 16 | 17 | 173 | 350 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "лакшери-випп-лаватерра--уиппет",
       "dog": {
@@ -7082,6 +7678,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   16,
                   18,
@@ -7093,6 +7690,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   17,
                   19,
@@ -7114,6 +7712,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   16,
                   19,
@@ -7125,6 +7724,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   17,
                   18,
@@ -7143,7 +7743,7 @@
         "grand_total": 349
       },
       "raw_text": "17 | 97 | Уиппет | Стандартный | Сука | VALPAIN PEK BON BON | 19 | 16 | 18 | 18 | 16 | 18 | 176 | 74 | 16 | 19 | 17 | 15 | 18 | 173 | 349 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "valpain-pek-bon-bon--уиппет",
       "dog": {
@@ -7177,6 +7777,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   18,
                   17,
@@ -7188,6 +7789,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -7209,6 +7811,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   15,
                   18,
@@ -7220,6 +7823,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   17,
                   17,
@@ -7238,7 +7842,7 @@
         "grand_total": 346
       },
       "raw_text": "18 | 94 | Уиппет | Стандартный | Сука | STANGERS LAND ALTANA | 18 | 18 | 17 | 18 | 16 | 18 | 178 | 73 | 15 | 18 | 17 | 14 | 16 | 168 | 346 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "stangers-land-altana--уиппет",
       "dog": {
@@ -7272,6 +7876,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   18,
                   19,
@@ -7283,6 +7888,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   17,
                   19,
@@ -7304,6 +7910,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   17,
                   19,
@@ -7315,6 +7922,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   18,
@@ -7333,7 +7941,7 @@
         "grand_total": 359
       },
       "raw_text": "1 | 65 | Уиппет | Стандартный-спринтеры | Кобель | BLACK JACK | 6 | 18 | 19 | 18 | 17 | 18 | 180 | 63 | 17 | 19 | 18 | 17 | 18 | 179 | 359 | CC | Победитель Кубка России",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "black-jack--уиппет",
       "dog": {
@@ -7367,6 +7975,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   18,
@@ -7378,6 +7987,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -7399,6 +8009,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   16,
                   18,
@@ -7410,6 +8021,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   18,
@@ -7428,7 +8040,7 @@
         "grand_total": 356
       },
       "raw_text": "2 | 64 | Уиппет | Стандартный-спринтеры | Кобель | BATMAN NIGHT SHADOW | 7 | 17 | 18 | 18 | 16 | 18 | 179 | 63 | 16 | 18 | 18 | 16 | 18 | 177 | 356 | CC | CACL",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "batman-night-shadow--уиппет",
       "dog": {
@@ -7462,6 +8074,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   17,
@@ -7473,6 +8086,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   17,
                   18,
@@ -7494,6 +8108,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   17,
                   19,
@@ -7505,6 +8120,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   18,
@@ -7523,7 +8139,7 @@
         "grand_total": 353
       },
       "raw_text": "3 | 66 | Уиппет | Стандартный-спринтеры | Кобель | BORN TO CHARM LEON | 8 | 17 | 17 | 18 | 18 | 18 | 175 | 62 | 17 | 19 | 18 | 17 | 18 | 178 | 353 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "born-to-charm-leon--уиппет",
       "dog": {
@@ -7557,6 +8173,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   17,
@@ -7568,6 +8185,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   17,
                   18,
@@ -7589,6 +8207,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   16,
                   18,
@@ -7600,6 +8219,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   18,
@@ -7618,7 +8238,7 @@
         "grand_total": 346
       },
       "raw_text": "4 | 68 | Уиппет | Стандартный-спринтеры | Кобель | ISTORIYA LUBVI SUPREME LOVE | 9 | 17 | 17 | 17 | 16 | 17 | 171 | 62 | 16 | 18 | 17 | 16 | 18 | 175 | 346 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "istoriya-lubvi-supreme-love--уиппет",
       "dog": {
@@ -7652,6 +8272,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   16,
                   16,
@@ -7663,6 +8284,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   17,
                   18,
@@ -7684,6 +8306,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   16,
                   18,
@@ -7695,6 +8318,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   17,
                   18,
@@ -7713,7 +8337,7 @@
         "grand_total": 342
       },
       "raw_text": "5 | 67 | Уиппет | Стандартный-спринтеры | Кобель | BRIZ LEGKIY VETER | 8 | 16 | 16 | 17 | 17 | 18 | 169 | 61 | 16 | 18 | 17 | 16 | 18 | 173 | 342 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "briz-legkiy-veter--уиппет",
       "dog": {
@@ -7747,6 +8371,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   16,
                   18,
@@ -7758,6 +8383,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   17,
                   18,
@@ -7779,6 +8405,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   16,
                   17,
@@ -7790,6 +8417,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   18,
@@ -7808,7 +8436,7 @@
         "grand_total": 340
       },
       "raw_text": "6 | 69 | Уиппет | Стандартный-спринтеры | Кобель | ИСТОРИЯ ЛЮБВИ ПЕТЕРБУРГ БЬЮТИФУЛ | 6 | 16 | 18 | 18 | 16 | 18 | 168 | 61 | 16 | 17 | 17 | 16 | 17 | 172 | 340 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "история-любви-петербург-бьютифул--уиппет",
       "dog": {
@@ -7816,6 +8444,80 @@
         "dog_key": "история-любви-петербург-бьютифул--уиппет",
         "name_lat": "ИСТОРИЯ ЛЮБВИ ПЕТЕРБУРГ БЬЮТИФУЛ",
         "name_ru": "ИСТОРИЯ ЛЮБВИ ПЕТЕРБУРГ БЬЮТИФУЛ",
+        "breed": "УИППЕТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 27234,
+      "event_id": 1568,
+      "dog_id": 9414,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобель",
+      "catalog_no": 61,
+      "placement": null,
+      "total_score": 157,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dnf",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 7,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  15,
+                  18
+                ],
+                "sum": 82
+              },
+              {
+                "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
+                "scores": [
+                  10,
+                  19,
+                  10,
+                  18,
+                  18
+                ],
+                "sum": 75
+              }
+            ],
+            "total": 157,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": true,
+            "disqualification_reason": "Снят владельцем"
+          }
+        ],
+        "grand_total": 157
+      },
+      "raw_text": " | 61 | Уиппет | Стандартный-спринтеры | Кобель | AMBER VEIV’S MARIUS | 7 | 16 | 17 | 16 | 15 | 18 | 157 |  | Снят владельцем |  | 157 |  | ",
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
+      "status_reason": "Снят владельцем",
+      "dog_key": "amber-veiv-s-marius--уиппет",
+      "dog": {
+        "id": 9414,
+        "dog_key": "amber-veiv-s-marius--уиппет",
+        "name_lat": "AMBER VEIV’S MARIUS",
+        "name_ru": "AMBER VEIV’S MARIUS",
         "breed": "УИППЕТ",
         "sex": null,
         "owner": null
@@ -7842,6 +8544,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   18,
                   18,
@@ -7853,6 +8556,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   18,
@@ -7874,6 +8578,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   18,
                   18,
@@ -7885,6 +8590,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   18,
@@ -7903,7 +8609,7 @@
         "grand_total": 358
       },
       "raw_text": "1 | 70 | Уиппет | Стандартный-спринтеры | Сука | LAVING BRIZ FLORENCE | 11 | 18 | 18 | 18 | 17 | 18 | 179 | 64 | 18 | 18 | 18 | 17 | 18 | 179 | 358 | CC | Победитель Кубка России",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "laving-briz-florence--уиппет",
       "dog": {
@@ -7937,6 +8643,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   17,
@@ -7948,6 +8655,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   18,
@@ -7969,6 +8677,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   18,
                   19,
@@ -7980,6 +8689,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   18,
@@ -7998,7 +8708,7 @@
         "grand_total": 349
       },
       "raw_text": "2 | 71 | Уиппет | Стандартный-спринтеры | Сука | RESTLESS WHIP VICTORIA | 10 | 17 | 17 | 18 | 16 | 17 | 171 | 65 | 18 | 19 | 17 | 17 | 17 | 178 | 349 | CC | CACL",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "restless-whip-victoria--уиппет",
       "dog": {
@@ -8032,6 +8742,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   16,
                   16,
@@ -8043,6 +8754,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   17,
                   18,
@@ -8064,6 +8776,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   17,
                   19,
@@ -8075,6 +8788,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   19,
@@ -8093,7 +8807,7 @@
         "grand_total": 342
       },
       "raw_text": "3 | 72 | Уиппет | Стандартный-спринтеры | Сука | VALPAIN PEK ANZU HANA | 10 | 16 | 16 | 18 | 16 | 17 | 162 | 64 | 17 | 19 | 18 | 16 | 18 | 180 | 342 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "valpain-pek-anzu-hana--уиппет",
       "dog": {
@@ -8127,6 +8841,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   18,
                   18,
@@ -8138,6 +8853,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -8159,6 +8875,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   17,
                   19,
@@ -8170,6 +8887,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   19,
@@ -8188,7 +8906,7 @@
         "grand_total": 359
       },
       "raw_text": "1 | 104 | Уиппет | Юниоры | Сука | EMERALD OF MY SOUL | 27 | 18 | 18 | 18 | 18 | 18 | 179 | 81 | 17 | 19 | 18 | 17 | 18 | 180 | 359 |  | Лучший юниор",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "emerald-of-my-soul--уиппет",
       "dog": {
@@ -8222,6 +8940,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   17,
@@ -8233,6 +8952,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   17,
                   18,
@@ -8254,6 +8974,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   15,
                   18,
@@ -8265,6 +8986,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   16,
                   18,
@@ -8283,7 +9005,7 @@
         "grand_total": 338
       },
       "raw_text": "2 | 103 | Уиппет | Юниоры | Сука | BYSTRA BIESY I CZADY | 27 | 17 | 17 | 18 | 17 | 18 | 172 | 81 | 15 | 18 | 16 | 14 | 16 | 166 | 338 |  | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "bystra-biesy-i-czady--уиппет",
       "dog": {
@@ -8317,6 +9039,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   16,
                   17,
@@ -8328,6 +9051,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   18,
@@ -8349,6 +9073,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   17,
@@ -8360,6 +9085,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -8378,7 +9104,7 @@
         "grand_total": 350
       },
       "raw_text": "1 | 107 | Фараонова собака | Стандартный | Сука | REEDLY ROAD MISS RIGHT | 54 | 16 | 17 | 17 | 16 | 18 | 174 | 108 | 17 | 17 | 18 | 17 | 18 | 176 | 350 | CC | Победитель Кубка России",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "reedly-road-miss-right--фараонова-собака",
       "dog": {
@@ -8412,6 +9138,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   17,
                   17,
@@ -8423,6 +9150,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   17,
                   17,
@@ -8444,6 +9172,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   18,
@@ -8455,6 +9184,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   17,
                   19,
@@ -8473,7 +9203,7 @@
         "grand_total": 348
       },
       "raw_text": "2 | 106 | Фараонова собака | Стандартный | Кобель | REEDLY ROAD QUE TAL | 55 | 17 | 17 | 17 | 16 | 17 | 171 | 108 | 17 | 18 | 18 | 17 | 18 | 177 | 348 | CC | CACL",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "reedly-road-que-tal--фараонова-собака",
       "dog": {
@@ -8507,6 +9237,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   15,
                   17,
@@ -8518,6 +9249,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   16,
                   18,
@@ -8539,6 +9271,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   18,
@@ -8550,6 +9283,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -8568,7 +9302,7 @@
         "grand_total": 346
       },
       "raw_text": "3 | 108 | Фараонова собака | Стандартный | Сука | REEDLY ROAD NIGHTY NIGHT | 54 | 15 | 17 | 17 | 15 | 17 | 167 | 107 | 17 | 18 | 18 | 17 | 18 | 179 | 346 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "reedly-road-nighty-night--фараонова-собака",
       "dog": {
@@ -8602,6 +9336,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   15,
                   18,
@@ -8613,6 +9348,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   17,
                   18,
@@ -8634,6 +9370,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   17,
                   17,
@@ -8645,6 +9382,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   17,
                   18,
@@ -8663,7 +9401,7 @@
         "grand_total": 344
       },
       "raw_text": "4 | 105 | Фараонова собака | Стандартный | Кобель | REEDLY ROAD MYBERN | 55 | 15 | 18 | 17 | 15 | 17 | 170 | 107 | 17 | 17 | 18 | 17 | 18 | 174 | 344 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "reedly-road-mybern--фараонова-собака",
       "dog": {
@@ -8697,6 +9435,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Вронская О.В.",
                 "scores": [
                   17,
                   19,
@@ -8708,6 +9447,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Видус Г.С.",
                 "scores": [
                   18,
                   18,
@@ -8729,6 +9469,7 @@
             "judges": [
               {
                 "judge_number": 1,
+                "judge_name": "Куликова Г.В.",
                 "scores": [
                   16,
                   18,
@@ -8740,6 +9481,7 @@
               },
               {
                 "judge_number": 2,
+                "judge_name": "Лукина Д.М.",
                 "scores": [
                   18,
                   19,
@@ -8758,7 +9500,7 @@
         "grand_total": 355
       },
       "raw_text": "1 | 109 | Чирнеко дель Этна | Стандартный | Кобель | COLISTO'S BIRBO | 56 | 17 | 19 | 17 | 17 | 17 | 177 | 109 | 16 | 18 | 18 | 16 | 18 | 178 | 355 | CC | ",
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "status_reason": null,
       "dog_key": "colistos-birbo--чирнеко-дель-этна",
       "dog": {
@@ -8767,6 +9509,399 @@
         "name_lat": "COLISTOS BIRBO",
         "name_ru": "COLISTOS BIRBO",
         "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 27235,
+      "event_id": 1568,
+      "dog_id": 619,
+      "breed_class": "Чирнеко дель Этна - Стандартный - Микс",
+      "catalog_no": 110,
+      "placement": null,
+      "total_score": 170,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dnf",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 56,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "judge_name": "Вронская О.В.",
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 84
+              },
+              {
+                "judge_number": 2,
+                "judge_name": "Видус Г.С.",
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 170,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 109,
+            "bib_color": "#00a2e8",
+            "judges": [],
+            "total": null,
+            "disqualified": true,
+            "disqualification_reason": "Сошёл"
+          }
+        ],
+        "grand_total": 170
+      },
+      "raw_text": " | 110 | Чирнеко дель Этна | Стандартный | Кобель | SERDZHIO | 56 | 16 | 18 | 17 | 16 | 17 | 170 | 109 | Сошёл |  | 170 |  | ",
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
+      "status_reason": "Сошёл",
+      "dog_key": "serdzhio--чирнеко-дель-этна",
+      "dog": {
+        "id": 619,
+        "dog_key": "serdzhio--чирнеко-дель-этна",
+        "name_lat": "SERDZHIO",
+        "name_ru": "SERDZHIO",
+        "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 27236,
+      "event_id": 1568,
+      "dog_id": 10039,
+      "breed_class": "Неприбывшие участники",
+      "catalog_no": 9,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dns",
+      "raw_scores_json": {
+        "heats": []
+      },
+      "raw_text": " | 9 | Грейхаунд | Стандартный | Кобель | ARTEFAKT KRISSAN | Неявка",
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
+      "status_reason": "Неявка",
+      "dog_key": "artefakt-krissan--греихаунд",
+      "dog": {
+        "id": 10039,
+        "dog_key": "artefakt-krissan--греихаунд",
+        "name_lat": "ARTEFAKT KRISSAN",
+        "name_ru": "ARTEFAKT KRISSAN",
+        "breed": "ГРЕЙХАУНД",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 27237,
+      "event_id": 1568,
+      "dog_id": 10297,
+      "breed_class": "Неприбывшие участники",
+      "catalog_no": 13,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dns",
+      "raw_scores_json": {
+        "heats": []
+      },
+      "raw_text": " | 13 | Дирхаунд | Стандартный | Сука | MARY POPPINS D'ARDALIE | Неявка",
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
+      "status_reason": "Неявка",
+      "dog_key": "mary-poppins-dardalie--дирхаунд",
+      "dog": {
+        "id": 10297,
+        "dog_key": "mary-poppins-dardalie--дирхаунд",
+        "name_lat": "MARY POPPINS DARDALIE",
+        "name_ru": "MARY POPPINS DARDALIE",
+        "breed": "ДИРХАУНД",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 27238,
+      "event_id": 1568,
+      "dog_id": 9568,
+      "breed_class": "Неприбывшие участники",
+      "catalog_no": 14,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dns",
+      "raw_scores_json": {
+        "heats": []
+      },
+      "raw_text": " | 14 | Дирхаунд | Стандартный | Сука | MERCEDES D'ARDALIE | Неявка",
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
+      "status_reason": "Неявка",
+      "dog_key": "mercedes-dardalie--дирхаунд",
+      "dog": {
+        "id": 9568,
+        "dog_key": "mercedes-dardalie--дирхаунд",
+        "name_lat": "MERCEDES DARDALIE",
+        "name_ru": "MERCEDES DARDALIE",
+        "breed": "ДИРХАУНД",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 27239,
+      "event_id": 1568,
+      "dog_id": 10301,
+      "breed_class": "Неприбывшие участники",
+      "catalog_no": 15,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dns",
+      "raw_scores_json": {
+        "heats": []
+      },
+      "raw_text": " | 15 | Ирландский волкодав | Стандартный | Кобель | MILIY ZVER CHARODEY | Неявка",
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
+      "status_reason": "Неявка",
+      "dog_key": "miliy-zver-charodey--ирландскии-волкодав",
+      "dog": {
+        "id": 10301,
+        "dog_key": "miliy-zver-charodey--ирландскии-волкодав",
+        "name_lat": "MILIY ZVER CHARODEY",
+        "name_ru": "MILIY ZVER CHARODEY",
+        "breed": "ИРЛАНДСКИЙ ВОЛКОДАВ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 27240,
+      "event_id": 1568,
+      "dog_id": 10299,
+      "breed_class": "Неприбывшие участники",
+      "catalog_no": 17,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dns",
+      "raw_scores_json": {
+        "heats": []
+      },
+      "raw_text": " | 17 | Ирландский волкодав | Стандартный | Сука | MILIY ZVER CHANTEL | Неявка",
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
+      "status_reason": "Неявка",
+      "dog_key": "miliy-zver-chantel--ирландскии-волкодав",
+      "dog": {
+        "id": 10299,
+        "dog_key": "miliy-zver-chantel--ирландскии-волкодав",
+        "name_lat": "MILIY ZVER CHANTEL",
+        "name_ru": "MILIY ZVER CHANTEL",
+        "breed": "ИРЛАНДСКИЙ ВОЛКОДАВ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 27241,
+      "event_id": 1568,
+      "dog_id": 10016,
+      "breed_class": "Неприбывшие участники",
+      "catalog_no": 22,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dns",
+      "raw_scores_json": {
+        "heats": []
+      },
+      "raw_text": " | 22 | Левретка | Стандартный | Сука | MUNNA | Неявка",
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
+      "status_reason": "Неявка",
+      "dog_key": "munna--левретка",
+      "dog": {
+        "id": 10016,
+        "dog_key": "munna--левретка",
+        "name_lat": "MUNNA",
+        "name_ru": "MUNNA",
+        "breed": "ЛЕВРЕТКА",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 27242,
+      "event_id": 1568,
+      "dog_id": 9975,
+      "breed_class": "Неприбывшие участники",
+      "catalog_no": 23,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dns",
+      "raw_scores_json": {
+        "heats": []
+      },
+      "raw_text": " | 23 | Родезийский риджбек | Стандартный | Кобель | PODAROK IZ AFRIKI YAS MOGOBI | Неявка",
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
+      "status_reason": "Неявка",
+      "dog_key": "podarok-iz-afriki-yas-mogobi--родезиискии-риджбек",
+      "dog": {
+        "id": 9975,
+        "dog_key": "podarok-iz-afriki-yas-mogobi--родезиискии-риджбек",
+        "name_lat": "PODAROK IZ AFRIKI YAS MOGOBI",
+        "name_ru": "PODAROK IZ AFRIKI YAS MOGOBI",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 27243,
+      "event_id": 1568,
+      "dog_id": 10144,
+      "breed_class": "Неприбывшие участники",
+      "catalog_no": 59,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dns",
+      "raw_scores_json": {
+        "heats": []
+      },
+      "raw_text": " | 59 | Уиппет | Ветераны-спринтеры | Кобель | ALMAZ DUSHA LAMBERT DIAMOND | Неявка",
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
+      "status_reason": "Неявка",
+      "dog_key": "almaz-dusha-lambert-diamond--уиппет",
+      "dog": {
+        "id": 10144,
+        "dog_key": "almaz-dusha-lambert-diamond--уиппет",
+        "name_lat": "ALMAZ DUSHA LAMBERT DIAMOND",
+        "name_ru": "ALMAZ DUSHA LAMBERT DIAMOND",
+        "breed": "УИППЕТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 27244,
+      "event_id": 1568,
+      "dog_id": 10150,
+      "breed_class": "Неприбывшие участники",
+      "catalog_no": 62,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dns",
+      "raw_scores_json": {
+        "heats": []
+      },
+      "raw_text": " | 62 | Уиппет | Стандартный-спринтеры | Кобель | ANYUTINY GLAZKI DARIUS I | Неявка",
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
+      "status_reason": "Неявка",
+      "dog_key": "anyutiny-glazki-darius-i--уиппет",
+      "dog": {
+        "id": 10150,
+        "dog_key": "anyutiny-glazki-darius-i--уиппет",
+        "name_lat": "ANYUTINY GLAZKI DARIUS I",
+        "name_ru": "ANYUTINY GLAZKI DARIUS I",
+        "breed": "УИППЕТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 27245,
+      "event_id": 1568,
+      "dog_id": 10155,
+      "breed_class": "Неприбывшие участники",
+      "catalog_no": 63,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dns",
+      "raw_scores_json": {
+        "heats": []
+      },
+      "raw_text": " | 63 | Уиппет | Стандартный-спринтеры | Кобель | ANYUTINY GLAZKI ELVIN JONES | Неявка",
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
+      "status_reason": "Неявка",
+      "dog_key": "anyutiny-glazki-elvin-jones--уиппет",
+      "dog": {
+        "id": 10155,
+        "dog_key": "anyutiny-glazki-elvin-jones--уиппет",
+        "name_lat": "ANYUTINY GLAZKI ELVIN JONES",
+        "name_ru": "ANYUTINY GLAZKI ELVIN JONES",
+        "breed": "УИППЕТ",
+        "sex": null,
+        "owner": null
+      }
+    },
+    {
+      "id": 27246,
+      "event_id": 1568,
+      "dog_id": 10004,
+      "breed_class": "Неприбывшие участники",
+      "catalog_no": 74,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dns",
+      "raw_scores_json": {
+        "heats": []
+      },
+      "raw_text": " | 74 | Уиппет | Стандартный | Кобель | BLUE WIND OF TRIUMPH | Неявка",
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
+      "status_reason": "Неявка",
+      "dog_key": "blue-wind-of-triumph--уиппет",
+      "dog": {
+        "id": 10004,
+        "dog_key": "blue-wind-of-triumph--уиппет",
+        "name_lat": "BLUE WIND OF TRIUMPH",
+        "name_ru": "BLUE WIND OF TRIUMPH",
+        "breed": "УИППЕТ",
         "sex": null,
         "owner": null
       }

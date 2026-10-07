@@ -564,7 +564,7 @@ async function main() {
         if (dogDirty && !DRY_RUN) saveDog(dog, exportedAt)
 
         competitionResults.push({
-          id: nextResultId++,
+          id: prevRow?.id ?? nextResultId++,
           event_id: eventId,
           dog_id: dog?.id ?? null,
           breed_class: row.breed_class ?? null,

@@ -300,7 +300,7 @@ function buildDogJudgesStats(rows: CompetitionHistoryRow[]): DogJudgesStats | nu
 
         const judgeNum = j.judge_number;
         const judgeRole = judgeNum === 1 ? 'Главный судья' : 'Судья';
-        const judgeName = judgeNames[judgeNum - 1] || (judgeNames.length === 1 ? judgeNames[0] : `Судья ${judgeNum}`);
+        const judgeName = j.judge_name || judgeNames[judgeNum - 1] || (judgeNames.length === 1 ? judgeNames[0] : `Судья ${judgeNum}`);
 
         allHeatScores.push(score);
 

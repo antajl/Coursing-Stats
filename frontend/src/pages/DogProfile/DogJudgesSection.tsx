@@ -400,10 +400,7 @@ export function DogJudgesSection({ judgeStats }: DogJudgesSectionProps) {
       </div>
 
       {/* Сноска и пояснение в стиле Old Money */}
-      <div className="mt-4 border-t border-old-money-100 pt-3 text-[11px] leading-relaxed text-charcoal-500 space-y-1">
-        <p>
-          <strong>Курсинг и БЗМП:</strong> баллы выставлены экспертами по 5 критериям за забеги (в бегах борзых баллы не выставляются, применяется хронометраж).
-        </p>
+      <div className="mt-4 border-t border-old-money-100 pt-3 text-[11px] leading-relaxed text-charcoal-500">
         <p>
           <strong>Дельта (Δ):</strong> разница между средней оценкой судьи и общим средним собаки. Отклонения в пределах ±2.5 б. считаются обычной судейской вариацией; мягкий индикатор подсвечивает выраженное отклонение.
         </p>

@@ -174,16 +174,29 @@ function readFiveScores(cells: CellInfo[], start: number): {
 
 function isParticipantStart(cells: CellInfo[]): boolean {
   if (cells.length < 6) return false
-  if (!/^\d+$/.test(cells[0]?.text || '')) return false
-  // Skip pure score-continuation rows (5–10 small numbers, no breed text)
-  const breedLike = cells[1]?.text || cells[2]?.text || ''
-  if (/^\d+$/.test(breedLike) && cells.length <= 12) return false
-  return true
+  const c0 = cells[0]?.text || ''
+  const c1 = cells[1]?.text || ''
+  // Standard format: № in cells[0]
+  if (/^\d+$/.test(c0)) {
+    // Skip pure score-continuation rows (5–10 small numbers, no breed text)
+    const breedLike = c1 || cells[2]?.text || ''
+    if (/^\d+$/.test(breedLike) && cells.length <= 12) return false
+    return true
+  }
+  // Withdrawn/DNS row where placement in cells[0] is empty, but catalog_no is in cells[1] and breed in cells[2]
+  if (c0 === '' && /^\d+$/.test(c1) && cells[2]?.text && !/^\d+$/.test(cells[2].text)) {
+    return true
+  }
+  return false
 }
 
 function detectHasCatalog(cells: CellInfo[]): boolean {
+  const c0 = cells[0]?.text || ''
+  const c1 = cells[1]?.text || ''
   // 2021+: №, catalog, breed, class, sex, name
-  if (/^\d+$/.test(cells[1]?.text || '') && cells[2]?.text && !/^\d+$/.test(cells[2].text)) return true
+  if (/^\d+$/.test(c1) && cells[2]?.text && !/^\d+$/.test(cells[2].text)) return true
+  // Empty placement in cells[0], catalog in cells[1]
+  if (c0 === '' && /^\d+$/.test(c1) && cells[2]?.text && !/^\d+$/.test(cells[2].text)) return true
   return false
 }
 
@@ -226,6 +239,24 @@ function parseFollowJudgeScores(
 }
 
 export function extractJudgesFromColspanHeaders($: cheerio.CheerioAPI): string | null {
+  // 1. Check if there is an explicit judges table (e.g., event 1568)
+  let tableJudges: string[] = []
+  $('table').each((_, tbl) => {
+    if (tableJudges.length > 0) return
+    const txt = $(tbl).text()
+    if (txt.includes('Судьи') && (txt.includes('Главный судья') || txt.includes('судья'))) {
+      const matches = [...txt.matchAll(/([А-ЯЁ][а-яё]+\s+[А-ЯЁ]\.[А-ЯЁ]\.)/g)]
+      const names = [...new Set(matches.map((m) => m[1]))]
+      if (names.length > 0) {
+        tableJudges = names
+      }
+    }
+  })
+  if (tableJudges.length > 0) {
+    return tableJudges.join(', ')
+  }
+
+  // 2. Colspan header cells above score columns
   let found: string[] = []
   $('tr').slice(0, 15).each((_, tr) => {
     $(tr).find('td[colspan="5"], th[colspan="5"]').each((_, cell) => {
@@ -307,8 +338,11 @@ export function parseLegacyFullResultsHTML(html: string): LegacyFullResultsParse
   title = title.replace(/\s*\([^)]*\)\s*$/, '')
   title = title.replace(/,\s*\d{2}-\d{2}\.\d{2}\.\d{4}\s*$/, '')
   title = title.replace(/,\s*\d{2}\.\d{2}\.\d{4}\s*$/, '')
-  title = clean(title) || header || null
   const judges = extractJudgesFromColspanHeaders($)
+  const hasComplexJudgesTable = $('table').toArray().some((tbl) => {
+    const txt = $(tbl).text()
+    return txt.includes('Судьи') && txt.includes('Главный судья') && txt.includes('Забег 1')
+  })
 
   const results: LegacyFullResultRow[] = []
   const processed = new Set<number>()
@@ -381,19 +415,38 @@ export function parseLegacyFullResultsHTML(html: string): LegacyFullResultsParse
       }
     }
 
+    // Function to resolve judge name by breed, heat number and judge index
+    const resolveJudgeName = (heatNumber: number, jIdx: number): string | undefined => {
+      if (hasComplexJudgesTable) {
+        const b = (breed || '').toUpperCase()
+        if (b.includes('БАСЕНДЖИ') || b.includes('УИППЕТ')) {
+          if (heatNumber === 1) return jIdx === 0 ? 'Куликова Г.В.' : 'Лукина Д.М.'
+          return jIdx === 0 ? 'Вронская О.В.' : 'Видус Г.С.'
+        }
+        if (b.includes('ЛЕВРЕТКА') || b.includes('РУССКАЯ ПСОВАЯ') || b.includes('РПБ')) {
+          if (heatNumber === 1) return jIdx === 0 ? 'Вронская О.В.' : 'Карелина Н.В.'
+          return jIdx === 0 ? 'Куликова Г.В.' : 'Лукина Д.М.'
+        }
+        // Остальные породы
+        if (heatNumber === 1) return jIdx === 0 ? 'Вронская О.В.' : 'Видус Г.С.'
+        return jIdx === 0 ? 'Куликова Г.В.' : 'Лукина Д.М.'
+      }
+      return undefined
+    }
+
     const judgesHeat1: JudgeScoreBlock[] = []
-    const j1h1 = makeJudge(1, h1j1.scores)
+    const j1h1 = makeJudge(1, h1j1.scores, resolveJudgeName(1, 0))
     if (j1h1) judgesHeat1.push(j1h1)
     followJudgesScores.forEach((f, fIdx) => {
-      const j = makeJudge(fIdx + 2, f.heat1)
+      const j = makeJudge(fIdx + 2, f.heat1, resolveJudgeName(1, fIdx + 1))
       if (j) judgesHeat1.push(j)
     })
 
     const judgesHeat2: JudgeScoreBlock[] = []
-    const j1h2 = makeJudge(1, h2j1.scores)
+    const j1h2 = makeJudge(1, h2j1.scores, resolveJudgeName(2, 0))
     if (j1h2) judgesHeat2.push(j1h2)
     followJudgesScores.forEach((f, fIdx) => {
-      const j = makeJudge(fIdx + 2, f.heat2)
+      const j = makeJudge(fIdx + 2, f.heat2, resolveJudgeName(2, fIdx + 1))
       if (j) judgesHeat2.push(j)
     })
 
