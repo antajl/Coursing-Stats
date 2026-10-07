@@ -42,7 +42,7 @@ describe('formatDogCard', () => {
     const text = formatDogCard(sampleDog());
     expect(text).toContain('Курсинг');
     expect(text).toContain('Бега борзых');
-    expect(text).toContain('Стартов: 10');
+    expect(text).toContain('Участий: 10');
     expect(text).toContain('Лучший балл: 300');
     expect(text).toContain('Лучшая оценка судьи: 93');
     expect(text).toContain('2  🥈 1  🥉 0');
@@ -78,7 +78,7 @@ describe('formatDogCard', () => {
       },
     });
     expect(text).toContain('Выставки');
-    expect(text).toContain('Выставок: 2');
+    expect(text).toContain('Участий: 2');
     expect(text).toContain('Высшая награда: ЮКЧП');
     expect(text).toContain('ЮКЧП, ВКЧП');
     expect(text).not.toContain('Титулов:');

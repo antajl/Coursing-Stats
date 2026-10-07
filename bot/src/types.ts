@@ -51,6 +51,7 @@ export interface DogData {
     };
     competitions?: Competition[];
   };
+  competitions?: Competition[];
 }
 
 export interface Competition {

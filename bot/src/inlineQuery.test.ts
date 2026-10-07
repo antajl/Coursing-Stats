@@ -47,7 +47,7 @@ describe('inlineQuery', () => {
 
     expect(result.title).toContain('REX');
     expect(result.description).toContain('Курсинг: 7');
-    expect(result.input_message_content.message_text).toContain('Стартов: 7');
+    expect(result.input_message_content.message_text).toContain('Участий: 7');
     expect(result.input_message_content.message_text).toContain('Лучший балл: 300');
     expect(result.input_message_content.message_text).not.toContain('Открыть в боте');
     expect(result.input_message_content.message_text).not.toContain('Бега борзых');
