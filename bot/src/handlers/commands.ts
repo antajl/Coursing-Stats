@@ -29,23 +29,6 @@ import { isDogFavorite } from './utils/presentDogCard';
 import { sendHomeScreen, sendMenuScreen, WELCOME_TEXT } from './utils/menuScreen';
 import type { KVNamespace } from './context';
 
-/**
- * Helper function for adding emoji reactions
- * @param ctx - контекст Grammy
- * @param emoji - emoji для реакции
- */
-async function addReaction(ctx: any, emoji: string) {
-  try {
-    await ctx.api.setMessageReaction(
-      ctx.chat?.id,
-      ctx.callbackQuery?.message?.message_id,
-      [{ type: 'emoji', emoji }]
-    );
-  } catch (error) {
-    // Ignore if reactions not supported
-    console.error('[addReaction] Failed to add reaction:', error);
-  }
-}
 
 /**
  * Безопасно редактирует сообщение или отправляет новое если редактирование не удается
@@ -82,6 +65,13 @@ export async function safeEditOrReply(ctx: any, text: string, options: any = {},
         return;
       }
       await ctx.editMessageText(text, options);
+      if (chatId && msg.message_id) {
+        if (options?.reaction) {
+          ctx.api.setMessageReaction(chatId, msg.message_id, [{ type: 'emoji', emoji: options.reaction }]).catch(() => {});
+        } else {
+          ctx.api.setMessageReaction(chatId, msg.message_id, []).catch(() => {});
+        }
+      }
       return;
     } catch (editError: any) {
       if (editError?.description?.includes('message is not modified')) {
@@ -97,7 +87,13 @@ export async function safeEditOrReply(ctx: any, text: string, options: any = {},
 
     if (lastMessageId) {
       try {
-        await ctx.api.editMessageText(chatId, parseInt(lastMessageId, 10), text, options);
+        const msgIdNum = parseInt(lastMessageId, 10);
+        await ctx.api.editMessageText(chatId, msgIdNum, text, options);
+        if (options?.reaction) {
+          ctx.api.setMessageReaction(chatId, msgIdNum, [{ type: 'emoji', emoji: options.reaction }]).catch(() => {});
+        } else {
+          ctx.api.setMessageReaction(chatId, msgIdNum, []).catch(() => {});
+        }
         return; // Successfully edited active window in-place!
       } catch (inPlaceError: any) {
         if (inPlaceError?.description?.includes('message is not modified')) {
@@ -128,9 +124,14 @@ export async function safeEditOrReply(ctx: any, text: string, options: any = {},
 
   try {
     const message = await ctx.reply(text, options);
-    if (message?.message_id && userId && cache) {
-      const lastMessageKey = `last_message:${userId}`;
-      await cache.put(lastMessageKey, message.message_id.toString(), { expirationTtl: 86400 });
+    if (message?.message_id) {
+      if (options?.reaction && chatId) {
+        ctx.api.setMessageReaction(chatId, message.message_id, [{ type: 'emoji', emoji: options.reaction }]).catch(() => {});
+      }
+      if (userId && cache) {
+        const lastMessageKey = `last_message:${userId}`;
+        await cache.put(lastMessageKey, message.message_id.toString(), { expirationTtl: 86400 });
+      }
     }
   } catch (replyError) {
     console.error('[safeEditOrReply] Failed to send reply:', replyError);
@@ -486,10 +487,8 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
 
   /**
    * Обработчик кнопки main_menu для возврата в главное меню
-   * @param ctx - контекст Grammy
    */
   commands.callbackQuery('main_menu', async (ctx) => {
-    await addReaction(ctx, '👀');
     await returnToHomeScreen(ctx);
   });
 
@@ -498,7 +497,6 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
    * @param ctx - контекст Grammy
    */
   commands.callbackQuery('search_dog', async (ctx) => {
-    await addReaction(ctx, '🔍');
     const chatId = ctx.chat?.id;
     if (chatId) {
       await ctx.api.sendChatAction(chatId, 'typing');
@@ -506,7 +504,11 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
     
     await safeEditOrReply(ctx,
       'Введите кличку собаки (можно частично):',
-      { parse_mode: 'HTML', reply_markup: getNavigationButtons('main_menu', 'main_menu') },
+      {
+        parse_mode: 'HTML',
+        reply_markup: getNavigationButtons('main_menu', 'main_menu'),
+        reaction: '🔍',
+      },
       cache
     );
   });
@@ -527,10 +529,10 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
    * @param ctx - контекст Grammy
    */
   commands.callbackQuery('competitions_menu', async (ctx) => {
-    await addReaction(ctx, '🏆');
     await safeEditOrReply(ctx, '<b>🏆 Соревнования</b>\n\nВыберите действие:', {
       parse_mode: 'HTML',
       reply_markup: getCompetitionsMenu(),
+      reaction: '🏆',
     }, cache);
   });
 
@@ -539,10 +541,10 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
    * @param ctx - контекст Grammy
    */
   commands.callbackQuery('shows_menu', async (ctx) => {
-    await addReaction(ctx, '🎪');
     await safeEditOrReply(ctx, '<b>🎪 Выставки</b>\n\nВыберите действие:', {
       parse_mode: 'HTML',
       reply_markup: getShowsMenu(),
+      reaction: '🎪',
     }, cache);
   });
 
@@ -551,10 +553,10 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
    * @param ctx - контекст Grammy
    */
   commands.callbackQuery('guide_menu', async (ctx) => {
-    await addReaction(ctx, '📚');
     await safeEditOrReply(ctx, '<b>📚 Справка</b>\n\nВыберите раздел:', {
       parse_mode: 'HTML',
       reply_markup: getGuideMenu(),
+      reaction: '📚',
     }, cache);
   });
 
@@ -589,7 +591,11 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
     await safeEditOrReply(
       ctx,
       'Введите кличку собаки (можно частично):',
-      { parse_mode: 'HTML', reply_markup: getNavigationButtons('main_menu', 'main_menu') },
+      {
+        parse_mode: 'HTML',
+        reply_markup: getNavigationButtons('main_menu', 'main_menu'),
+        reaction: '🔍',
+      },
       cache,
     );
   });
@@ -598,6 +604,7 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
     await safeEditOrReply(ctx, '<b>🏆 Рейтинги соревнований</b>\n\nВыберите дисциплину или категорию:', {
       parse_mode: 'HTML',
       reply_markup: getCompetitionsMenu(),
+      reaction: '🏆',
     }, cache);
   });
 
