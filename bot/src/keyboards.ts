@@ -13,9 +13,6 @@ export function getPersistentReplyKeyboard(): Keyboard {
 
 export function getMainInlineMenu(): InlineKeyboard {
   const keyboard = new InlineKeyboard()
-    .text(`${unicodeIcons.search} Найти собаку`, 'search_dog')
-    .switchInlineCurrent(`${unicodeIcons.search} В чате`, '')
-    .row()
     .text(`${unicodeIcons.calendar} Соревнования`, 'competitions_menu')
     .text(`${unicodeIcons.shows} Выставки`, 'shows_menu')
     .row()

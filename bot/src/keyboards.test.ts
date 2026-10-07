@@ -24,7 +24,7 @@ describe('Keyboards', () => {
       expect(inlineKeyboard.length).toBeGreaterThan(0);
       const callbacks = inlineKeyboard.flat().map((b) => ('callback_data' in b ? b.callback_data : null));
       expect(callbacks).toContain('favorites');
-      expect(callbacks).toContain('search_dog');
+      // search_dog moved to bottom reply keyboard
     });
   });
 
