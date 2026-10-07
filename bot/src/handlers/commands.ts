@@ -330,15 +330,6 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
     keyboard: getMainInlineMenu(),
   });
 
-  // Ensure persistent reply keyboard is active in user chat
-  const chatId = ctx.chat?.id;
-  if (chatId) {
-    try {
-      await ctx.api.sendMessage(chatId, 'Меню навигации закреплено под строкой ввода:', {
-        reply_markup: getPersistentReplyKeyboard(),
-      });
-    } catch {}
-  }
 
   // Delete the /start message
   if (ctx.message) {
