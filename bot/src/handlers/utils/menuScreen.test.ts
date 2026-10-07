@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
-import { sendHomeScreen, WELCOME_TEXT } from './menuScreen';
+import { sendHomeScreen, WELCOME_TEXT, MENU_HEADER } from './menuScreen';
 
 describe('menuScreen', () => {
   it('sends two messages on forceNew: true (banner with reply keyboard + menu message)', async () => {
@@ -30,7 +30,7 @@ describe('menuScreen', () => {
 
     // Should send inline menu as second message
     expect(sendMessage).toHaveBeenCalledTimes(1);
-    expect(sendMessage.mock.calls[0][1]).toBe('<b>Разделы:</b>');
+    expect(sendMessage.mock.calls[0][1]).toBe(MENU_HEADER);
     expect(sendMessage.mock.calls[0][2].reply_markup).toBeDefined();
 
     // Should save both photo and menu message IDs in KV cache
@@ -70,7 +70,7 @@ describe('menuScreen', () => {
     expect(editMessageText).toHaveBeenCalledWith(
       12345,
       102,
-      '<b>Разделы:</b>',
+      MENU_HEADER,
       expect.objectContaining({ parse_mode: 'HTML' }),
     );
 
