@@ -40,22 +40,32 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Montserrat:ital,wght@1,400&display=swap" rel="stylesheet">
     <script>
-      // Если /assets/*.js не загрузился (MIME/HTML после деплоя) — reload с cache-bust.
+      // 1. Очищаем параметр ?_csrb из адресной строки после перезагрузки с cache-bust (для чистого URL)
       (function () {
+        try {
+          if (location.search.indexOf('_csrb=') !== -1) {
+            var u = new URL(location.href);
+            u.searchParams.delete('_csrb');
+            var cleanUrl = u.pathname + (u.search ? u.search : '') + u.hash;
+            history.replaceState(history.state, '', cleanUrl);
+          }
+        } catch (e) {}
+
+        // 2. Если /assets/*.js не загрузился (MIME/HTML после деплоя) — reload с cache-bust.
         var KEY = 'cs:asset-reload';
         function reloadOnce() {
           // Игнорируем поисковых роботов, чтобы не плодить дубли страниц с параметром ?_csrb
-          if (/bot|google|yandex|bing|slurp|crawler|spider/i.test(navigator.userAgent || '')) return;
+          if (/bot|google|yandex|bing|slurp|crawler|spider|facebookexternalhit|duckduckbot/i.test(navigator.userAgent || '')) return;
           try {
             var now = Date.now();
             var prev = Number(sessionStorage.getItem(KEY) || 0);
             if (prev && now - prev < 15000) return;
             sessionStorage.setItem(KEY, String(now));
-          } catch (e) {}
+          } catch (e1) {}
           try {
-            var u = new URL(location.href);
-            u.searchParams.set('_csrb', String(Date.now()));
-            location.replace(u.href);
+            var url = new URL(location.href);
+            url.searchParams.set('_csrb', String(Date.now()));
+            location.replace(url.href);
           } catch (e2) {
             location.reload();
           }

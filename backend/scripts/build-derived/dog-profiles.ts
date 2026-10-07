@@ -3,6 +3,8 @@ import path from 'node:path';
 import type Database from 'better-sqlite3';
 import { dataV1Path, listJsonFiles } from '../../lib/local-data/paths';
 import { aggregateQualificationTitles } from '../../src/lib/qualification-titles';
+import { parseJudgeNames } from '../../src/lib/judge-names';
+import { judgeDetailKey } from '../../src/lib/static-api';
 import { PARTICIPATION_STATUSES_SQL, RACING_EXCLUDED_STATUSES_SQL } from '../../src/lib/racing-status';
 import { cdnPackShardKey, type DogProfilePackFile } from '../../lib/cdn-packs';
 import { INDEXES_DIR } from './shared';
@@ -20,6 +22,7 @@ type CompetitionHistoryRow = {
   competition_kind: string | null;
   results_url: string | null;
   location: string | null;
+  event_judges: string | null;
   dog_id: number;
   placement: number | null;
   total_score: number | null;
@@ -214,6 +217,172 @@ function buildRacingStats(medalRows: RacingMedalRow[], speedRows: RacingSpeedRow
   };
 }
 
+function extractSingleJudgeHeatScore(j: { scores?: (number | null)[]; sum?: number | null }): number | null {
+  if (Array.isArray(j.scores) && j.scores.length > 0) {
+    const valid = j.scores.filter((s): s is number => typeof s === 'number' && !Number.isNaN(s) && s > 0);
+    if (valid.length > 0) {
+      return valid.reduce((a, b) => a + b, 0);
+    }
+  }
+  if (typeof j.sum === 'number' && !Number.isNaN(j.sum) && j.sum > 0) {
+    return j.sum > 100 ? Math.round((j.sum / 2) * 100) / 100 : j.sum;
+  }
+  return null;
+}
+
+export type DogJudgeEvent = {
+  event_id: number;
+  title: string;
+  date: string;
+  avg_score: number;
+  scores: number[];
+  role?: string;
+};
+
+export type DogJudgeItem = {
+  judge_name: string;
+  judge_key: string;
+  starts_count: number;
+  starts_percent: number;
+  evaluations_count: number;
+  avg_score: number;
+  min_score: number;
+  max_score: number;
+  delta_vs_dog_avg: number;
+  events: DogJudgeEvent[];
+};
+
+export type DogJudgesStats = {
+  total_starts: number;
+  total_judges: number;
+  global_avg_score: number;
+  highest_concentration: {
+    judge_name: string;
+    starts_count: number;
+    starts_percent: number;
+  } | null;
+  judges: DogJudgeItem[];
+};
+
+function buildDogJudgesStats(rows: CompetitionHistoryRow[]): DogJudgesStats | null {
+  const allHeatScores: number[] = [];
+
+  type JudgeEntry = {
+    judge_name: string;
+    events: Map<number, { event_id: number; title: string; date: string; scores: number[]; role: string }>;
+    all_scores: number[];
+  };
+
+  const judgeMap = new Map<string, JudgeEntry>();
+  let coursingEventsCount = 0;
+
+  for (const row of rows) {
+    if (!row.raw_scores_json || !row.event_judges) continue;
+    if (row.event_type !== 'coursing' && row.event_type !== 'bzmp') continue;
+
+    let raw: any;
+    try {
+      raw = JSON.parse(row.raw_scores_json);
+    } catch {
+      continue;
+    }
+
+    const judgeNames = parseJudgeNames(row.event_judges);
+    if (judgeNames.length === 0 || !Array.isArray(raw.heats) || raw.heats.length === 0) continue;
+
+    coursingEventsCount += 1;
+
+    for (const heat of raw.heats) {
+      if (!Array.isArray(heat.judges)) continue;
+      for (const j of heat.judges) {
+        const score = extractSingleJudgeHeatScore(j);
+        if (score === null) continue;
+
+        const judgeNum = j.judge_number;
+        const judgeRole = judgeNum === 1 ? 'Главный судья' : 'Судья';
+        const judgeName = judgeNames[judgeNum - 1] || (judgeNames.length === 1 ? judgeNames[0] : `Судья ${judgeNum}`);
+
+        allHeatScores.push(score);
+
+        let entry = judgeMap.get(judgeName);
+        if (!entry) {
+          entry = {
+            judge_name: judgeName,
+            events: new Map(),
+            all_scores: [],
+          };
+          judgeMap.set(judgeName, entry);
+        }
+        entry.all_scores.push(score);
+
+        let ev = entry.events.get(row.event_id);
+        if (!ev) {
+          ev = {
+            event_id: row.event_id,
+            title: row.title || 'Соревнование',
+            date: row.date_start || '',
+            role: judgeRole,
+            scores: [],
+          };
+          entry.events.set(row.event_id, ev);
+        }
+        ev.scores.push(score);
+      }
+    }
+  }
+
+  if (allHeatScores.length === 0) {
+    return null;
+  }
+
+  const globalAvg = Math.round((allHeatScores.reduce((a, b) => a + b, 0) / allHeatScores.length) * 100) / 100;
+
+  const judges: DogJudgeItem[] = Array.from(judgeMap.values()).map((entry) => {
+    const judgeAvg = Math.round((entry.all_scores.reduce((a, b) => a + b, 0) / entry.all_scores.length) * 100) / 100;
+    const startsCount = entry.events.size;
+    const startsPercent = coursingEventsCount > 0 ? Math.round((startsCount / coursingEventsCount) * 100) : 0;
+    const delta = Math.round((judgeAvg - globalAvg) * 100) / 100;
+
+    return {
+      judge_name: entry.judge_name,
+      judge_key: judgeDetailKey(entry.judge_name),
+      starts_count: startsCount,
+      starts_percent: startsPercent,
+      evaluations_count: entry.all_scores.length,
+      avg_score: judgeAvg,
+      min_score: Math.min(...entry.all_scores),
+      max_score: Math.max(...entry.all_scores),
+      delta_vs_dog_avg: delta,
+      events: Array.from(entry.events.values()).map((ev) => ({
+        event_id: ev.event_id,
+        title: ev.title,
+        date: ev.date,
+        role: ev.role,
+        avg_score: Math.round((ev.scores.reduce((a, b) => a + b, 0) / ev.scores.length) * 100) / 100,
+        scores: ev.scores,
+      })),
+    };
+  });
+
+  judges.sort((a, b) => b.starts_count - a.starts_count || b.evaluations_count - a.evaluations_count);
+
+  const topConcentration = judges.length > 0 && coursingEventsCount >= 3 && judges[0].starts_percent >= 33
+    ? {
+        judge_name: judges[0].judge_name,
+        starts_count: judges[0].starts_count,
+        starts_percent: judges[0].starts_percent,
+      }
+    : null;
+
+  return {
+    total_starts: coursingEventsCount,
+    total_judges: judges.length,
+    global_avg_score: globalAvg,
+    highest_concentration: topConcentration,
+    judges,
+  };
+}
+
 type DogProfileMeta = {
   id: number;
   name_lat: string | null;
@@ -285,7 +454,7 @@ export function buildDogProfiles(db: Database.Database) {
     .prepare(
       `SELECT
         e.id AS event_id, e.date_start, e.date_end, e.title, e.event_type, e.competition_kind,
-        e.results_url, e.location, r.dog_id, r.placement, r.total_score, r.qualification, r.status, r.raw_scores_json
+        e.results_url, e.location, e.judges AS event_judges, r.dog_id, r.placement, r.total_score, r.qualification, r.status, r.raw_scores_json
        FROM events e
        JOIN results r ON e.id = r.event_id
        WHERE r.status NOT IN ${RACING_EXCLUDED_STATUSES_SQL}
@@ -361,11 +530,13 @@ export function buildDogProfiles(db: Database.Database) {
       pedigree_url: fromFile && 'pedigree_url' in fromFile ? fromFile.pedigree_url : (fromDb?.pedigree_url ?? null),
     };
 
+    const dogCompetitions = competitionsByDog.get(dogId) ?? [];
     const coursing_stats = buildCoursingStats(coursingByDog.get(dogId) ?? []);
     const racing_stats = buildRacingStats(racingMedalsByDog.get(dogId) ?? [], racingSpeedByDog.get(dogId) ?? []);
+    const judge_stats = buildDogJudgesStats(dogCompetitions);
     const titles = aggregateQualificationTitles(qualificationsByDog.get(dogId) ?? []);
 
-    const competitions = (competitionsByDog.get(dogId) ?? []).map((row) => {
+    const competitions = dogCompetitions.map((row) => {
       const base = {
         event_id: row.event_id,
         date_start: row.date_start,
@@ -406,8 +577,10 @@ export function buildDogProfiles(db: Database.Database) {
         pedigree_url: dog.pedigree_url,
         coursing_stats,
         racing_stats,
+        judge_stats,
         titles,
       },
+      judge_stats,
       competitions,
     };
 
