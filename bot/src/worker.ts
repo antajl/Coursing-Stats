@@ -153,7 +153,7 @@ export default {
               body: JSON.stringify({
                 commands: [
                   { command: 'start', description: 'Главное меню' },
-                  { command: 'search', description: 'Поиск собаки по кличке или ID' },
+                  { command: 'search', description: 'Поиск собаки по кличке' },
                   { command: 'breed', description: 'Поиск собак по породе' },
                   { command: 'ratings', description: 'Рейтинги и топы (включая Elo)' },
                   { command: 'archive', description: 'Архив соревнований и выставок' },

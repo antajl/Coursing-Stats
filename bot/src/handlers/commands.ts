@@ -321,7 +321,7 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
 • Поиск по породе /breed
 
 <b>Как использовать:</b>
-Напишите кличку или ID собаки или выберите действие из меню ниже
+Напишите кличку собаки или выберите действие из меню ниже
     `.trim();
 
   await sendMenuScreen(ctx, cache, {
@@ -362,7 +362,7 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
   });
 
   commands.command('search', async (ctx) => {
-    await safeEditOrReply(ctx, 'Введите кличку или ID собаки (число):', {
+    await safeEditOrReply(ctx, 'Введите кличку собаки:', {
       parse_mode: 'HTML',
       reply_markup: getNavigationButtons('main_menu', 'main_menu'),
     }, cache);
@@ -537,7 +537,7 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
 • Поиск по породе /breed
 
 <b>Как использовать:</b>
-Напишите кличку или ID собаки или выберите действие из меню ниже
+Напишите кличку собаки или выберите действие из меню ниже
     `.trim();
 
     await sendMenuScreen(ctx, cache, {
@@ -568,7 +568,7 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
     }
     
     await safeEditOrReply(ctx,
-      'Введите кличку собаки (можно частично) или её ID:',
+      'Введите кличку собаки (можно частично):',
       { parse_mode: 'HTML', reply_markup: getNavigationButtons('main_menu', 'main_menu') },
       cache
     );
@@ -654,7 +654,7 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
     }
     await safeEditOrReply(
       ctx,
-      'Введите кличку собаки (можно частично) или её ID:',
+      'Введите кличку собаки (можно частично):',
       { parse_mode: 'HTML', reply_markup: getNavigationButtons('main_menu', 'main_menu') },
       cache,
     );
