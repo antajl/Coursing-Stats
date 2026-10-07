@@ -1,6 +1,17 @@
-import { InlineKeyboard } from 'grammy';
+import { InlineKeyboard, Keyboard } from 'grammy';
 import { unicodeIcons } from './icons';
 import { Dog } from './types';
+
+export function getPersistentReplyKeyboard(): Keyboard {
+  return new Keyboard()
+    .text('🏠 Главное меню')
+    .text('🔍 Поиск собаки')
+    .row()
+    .text('🏆 Рейтинги')
+    .text('📅 Календарь')
+    .resized()
+    .persistent();
+}
 
 export function getMainInlineMenu(): InlineKeyboard {
   const keyboard = new InlineKeyboard()
@@ -361,7 +372,7 @@ export function getDogCardKeyboard(
     .text('🏠 На главную', 'main_menu');
 }
 
-/** Клавиатура для inline-карточки (кнопка в избранное, сайт и возврат в главное меню бота) */
+/** Клавиатура для inline-карточки (кнопка в избранное и ссылка на сайт) */
 export function getInlineDogCardKeyboard(
   dogId: string,
   options: { isFavorite?: boolean } = {},
@@ -372,9 +383,7 @@ export function getInlineDogCardKeyboard(
 
   return new InlineKeyboard()
     .text(favoriteButton.text, favoriteButton.callback)
-    .url('Профиль на сайте', `https://coursing-stats.ru/dog/${dogId}`)
-    .row()
-    .text('🏠 Главное меню', 'main_menu');
+    .url('Профиль на сайте', `https://coursing-stats.ru/dog/${dogId}`);
 }
 
 export function getCompareKeyboard(firstDogId: string): InlineKeyboard {

@@ -1,6 +1,14 @@
 import { Composer } from 'grammy';
 import { CoursingStatsAPI } from '../api';
-import { getMainInlineMenu, getNavigationButtons, getCompetitionsMenu, getShowsMenu, getGuideMenu, getDoninoKeyboard } from '../keyboards';
+import {
+  getMainInlineMenu,
+  getPersistentReplyKeyboard,
+  getNavigationButtons,
+  getCompetitionsMenu,
+  getShowsMenu,
+  getGuideMenu,
+  getDoninoKeyboard,
+} from '../keyboards';
 import { validateDogId } from './utils/validators';
 import { buildDogCardPresentation, handleDogIdSearch } from './utils/presentDogCard';
 import {
@@ -322,6 +330,20 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
     keyboard: getMainInlineMenu(),
   });
 
+  // Ensure persistent reply keyboard is active in user chat
+  const chatId = ctx.chat?.id;
+  if (chatId) {
+    try {
+      await ctx.api.sendMessage(chatId, '👇 Меню навигации закреплено под строкой ввода:', {
+        reply_markup: getPersistentReplyKeyboard(),
+      }).then((m: any) => {
+        // Immediately delete the helper text so chat stays completely clean,
+        // but Telegram keeps the persistent keyboard docked!
+        ctx.api.deleteMessage(chatId, m.message_id).catch(() => {});
+      });
+    } catch {}
+  }
+
   // Delete the /start message
   if (ctx.message) {
     try {
@@ -616,6 +638,55 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
    */
   commands.callbackQuery('cancel_search', async (ctx) => {
     await returnToHomeScreen(ctx);
+  });
+
+  /**
+   * Обработчики постоянных кнопок нижней клавиатуры (ReplyKeyboard)
+   */
+  commands.hears('🏠 Главное меню', async (ctx) => {
+    await returnToHomeScreen(ctx);
+  });
+
+  commands.hears('🔍 Поиск собаки', async (ctx) => {
+    const chatId = ctx.chat?.id;
+    if (chatId) {
+      await ctx.api.sendChatAction(chatId, 'typing').catch(() => {});
+    }
+    await safeEditOrReply(
+      ctx,
+      'Введите кличку собаки (можно частично) или её ID:',
+      { parse_mode: 'HTML', reply_markup: getNavigationButtons('main_menu', 'main_menu') },
+      cache,
+    );
+  });
+
+  commands.hears('🏆 Рейтинги', async (ctx) => {
+    await sendMenuScreen(ctx, cache, {
+      photoUrl: BOT_PHOTOS.competitions,
+      text: '<b>🏆 Рейтинги соревнований</b>\n\nВыберите дисциплину или категорию:',
+      keyboard: getCompetitionsMenu(),
+    });
+  });
+
+  commands.hears(['📅 Календарь', 'Архив'], async (ctx) => {
+    const currentYear = new Date().getFullYear();
+    const events = await api.getCalendar(currentYear.toString());
+    if (!events || events.length === 0) {
+      await safeEditOrReply(ctx, 'Не удалось загрузить архив соревнований', {
+        reply_markup: getNavigationButtons('main_menu', 'main_menu'),
+      }, cache);
+      return;
+    }
+    const { filterUpcomingEvents, sortEventsByDate, formatCalendarText } = await import('./calendar/filters');
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const upcomingEvents = sortEventsByDate(filterUpcomingEvents(events, today));
+    const text = formatCalendarText(upcomingEvents, currentYear, 'all');
+    const { getCalendarKeyboard } = await import('../keyboards');
+    await safeEditOrReply(ctx, text, {
+      parse_mode: 'HTML',
+      reply_markup: getCalendarKeyboard(0, false, 'all'),
+    }, cache);
   });
 
   return commands;
