@@ -154,7 +154,7 @@ export function formatDogCard(dogData: DogData, options: FormatDogCardOptions = 
     `<i>${breed}</i>`,
   ];
 
-    if (hasDisciplineActivity(c) || c.best_score != null || c.best_judge_score != null) {
+      if (hasDisciplineActivity(c) || c.best_score != null || c.best_judge_score != null) {
     const bestScore = c.best_score != null ? String(c.best_score) : "—";
     const bestJudge = c.best_judge_score != null ? String(c.best_judge_score) : "—";
 
@@ -179,7 +179,8 @@ export function formatDogCard(dogData: DogData, options: FormatDogCardOptions = 
 
     const coursingBlock = [
       "<b>Курсинг</b>",
-      "• Участий: " + c.total_starts + " · " + scoreParts.join(" · "),
+      "• Участий: " + c.total_starts,
+      "• " + scoreParts.join(" · "),
       "• Лучшая оценка судьи: " + bestJudge,
       "• Медали: 🥇 " + c.gold + "  🥈 " + c.silver + "  🥉 " + c.bronze,
     ].join("\n");
@@ -197,7 +198,8 @@ export function formatDogCard(dogData: DogData, options: FormatDogCardOptions = 
 
     const racingBlock = [
       "<b>Бега борзых</b>",
-      "• Участий: " + r.total_starts + " · " + speedParts.join(" · "),
+      "• Участий: " + r.total_starts,
+      "• " + speedParts.join(" · "),
       "• Медали: 🥇 " + r.gold + "  🥈 " + r.silver + "  🥉 " + r.bronze,
     ].join("\n");
     lines.push("", "<blockquote>" + racingBlock + "</blockquote>");
