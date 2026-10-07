@@ -30,12 +30,13 @@ describe('Keyboards', () => {
 
   describe('getNavigationButtons', () => {
     it('should return navigation buttons', () => {
-      const keyboard = getNavigationButtons('back', 'home');
+      const keyboard = getNavigationButtons('back');
       expect(keyboard).toBeDefined();
       const inlineKeyboard = keyboard.inline_keyboard;
       expect(inlineKeyboard).toBeDefined();
       expect(inlineKeyboard.length).toBe(1);
-      expect(inlineKeyboard[0].length).toBe(2);
+      expect(inlineKeyboard[0].length).toBe(1);
+      expect(inlineKeyboard[0][0].text).toContain('Назад');
     });
   });
 
