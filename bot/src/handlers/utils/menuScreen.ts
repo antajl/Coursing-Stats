@@ -54,6 +54,9 @@ export async function sendHomeScreen(
           parse_mode: 'HTML',
           reply_markup: getMainInlineMenu(),
         });
+        if (chatId && ctx.callbackQuery?.message?.message_id) {
+          ctx.api?.setMessageReaction?.(chatId, ctx.callbackQuery.message.message_id, [])?.catch?.(() => {});
+        }
         return;
       } catch (editError: any) {
         if (editError?.description?.includes('message is not modified')) {
@@ -71,10 +74,12 @@ export async function sendHomeScreen(
 
       if (lastPhotoId && lastMessageId) {
         try {
-          await ctx.api.editMessageText(chatId, parseInt(lastMessageId, 10), '<b>Разделы:</b>', {
+          const msgIdNum = parseInt(lastMessageId, 10);
+          await ctx.api.editMessageText(chatId, msgIdNum, '<b>Разделы:</b>', {
             parse_mode: 'HTML',
             reply_markup: getMainInlineMenu(),
           });
+          ctx.api?.setMessageReaction?.(chatId, msgIdNum, [])?.catch?.(() => {});
           return; // Успешно отредактировали на месте
         } catch (editError: any) {
           if (editError?.description?.includes('message is not modified')) {

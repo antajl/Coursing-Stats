@@ -5,18 +5,6 @@ import { formatDoninoTopChatText } from '../../inlineQuery';
 import type { KVNamespace } from '../context';
 import { safeEditOrReply } from '../commands';
 
-async function addReaction(ctx: any, emoji: string) {
-  try {
-    await ctx.api.setMessageReaction(
-      ctx.chat?.id,
-      ctx.callbackQuery?.message?.message_id,
-      [{ type: 'emoji', emoji }]
-    );
-  } catch (error) {
-    console.error('[addReaction] Failed to add reaction:', error);
-  }
-}
-
 async function editDoninoList(ctx: any, text: string, kind: 'speed' | 'coursing', cache?: KVNamespace) {
   const reply_markup = getDoninoKeyboard(kind);
   await safeEditOrReply(ctx, text, { parse_mode: 'HTML', reply_markup }, cache);
@@ -33,11 +21,11 @@ export function createDonino(api: CoursingStatsAPI, cache?: KVNamespace) {
 
   // Donino records main menu — same tops as inline «донино курсинг»
   donino.callbackQuery('donino_records', async (ctx) => {
-    await addReaction(ctx, '⏱');
     const records = await api.getSpeedRecords();
     const text = formatDoninoTopChatText(records.speed, records.coursing, { only: 'speed' });
 
-    await editDoninoList(ctx, text, 'speed', cache);
+    const reply_markup = getDoninoKeyboard('speed');
+    await safeEditOrReply(ctx, text, { parse_mode: 'HTML', reply_markup, reaction: '⏱' }, cache);
   });
 
   donino.callbackQuery('donino_speed', async (ctx) => {

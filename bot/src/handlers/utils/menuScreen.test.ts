@@ -49,6 +49,7 @@ describe('menuScreen', () => {
     };
 
     const editMessageText = vi.fn().mockResolvedValue(true);
+    const setMessageReaction = vi.fn().mockResolvedValue(true);
     const sendPhoto = vi.fn();
     const sendMessage = vi.fn();
 
@@ -57,6 +58,7 @@ describe('menuScreen', () => {
       chat: { id: 12345 },
       api: {
         editMessageText,
+        setMessageReaction,
         sendPhoto,
         sendMessage,
       },
