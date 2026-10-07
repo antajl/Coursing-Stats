@@ -1,6 +1,6 @@
 {
   "schema": "coursing-stats/index-judges-summary-v1",
-  "count": 28,
+  "count": 30,
   "judges": [
     {
       "id": "Карелина Н.В.",
@@ -16,13 +16,13 @@
     {
       "id": "Козлова И.В.",
       "name": "Козлова И.В.",
-      "total_evaluations": 7165,
-      "total_evaluations_count": 1433,
-      "avg_score": 16.647592463363573,
-      "unique_breeds": 35,
+      "total_evaluations": 8685,
+      "total_evaluations_count": 1737,
+      "avg_score": 16.75141047783535,
+      "unique_breeds": 40,
       "unique_disciplines": 3,
-      "unique_events": 13,
-      "unique_dogs": 404
+      "unique_events": 14,
+      "unique_dogs": 554
     },
     {
       "id": "Крылова Е.В.",
@@ -166,6 +166,28 @@
       "unique_disciplines": 2,
       "unique_events": 4,
       "unique_dogs": 161
+    },
+    {
+      "id": "Bali O.",
+      "name": "Bali O.",
+      "total_evaluations": 1520,
+      "total_evaluations_count": 304,
+      "avg_score": 17.71907894736842,
+      "unique_breeds": 14,
+      "unique_disciplines": 1,
+      "unique_events": 1,
+      "unique_dogs": 152
+    },
+    {
+      "id": "Голиздрин А.",
+      "name": "Голиздрин А.",
+      "total_evaluations": 1520,
+      "total_evaluations_count": 304,
+      "avg_score": 16.973026315789475,
+      "unique_breeds": 14,
+      "unique_disciplines": 1,
+      "unique_events": 1,
+      "unique_dogs": 152
     },
     {
       "id": "Богаченко В.В.",
@@ -317,6 +339,7 @@
     "АКИТА",
     "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
     "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+    "АРГЕНТИНСКИЙ ДОГ",
     "АФГАНСКАЯ АБОРИГЕННАЯ БОРЗАЯ",
     "АФГАНСКАЯ БОРЗАЯ",
     "БАСЕНДЖИ",
@@ -338,6 +361,7 @@
     "ДЖЕК РАССЕЛ ТЕРЬЕР",
     "ДИРХАУНД",
     "ДОБЕРМАН",
+    "ИРЛАНДСКИЙ ВОЛКОДАВ",
     "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
     "ИРЛАНДСКИЙ ТЕРЬЕР",
     "ИСПАНСКАЯ БОРЗАЯ (ГАЛЬГО)",
@@ -348,6 +372,7 @@
     "КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ СОБАКА) СТАНДАРТ",
     "КСОЛОИТЦКУИНТЛИ СТАНДАРТ",
     "ЛАБРАДОР РЕТРИВЕР",
+    "ЛЕВРЕТКА",
     "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
     "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
     "МЕТИС",

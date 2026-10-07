@@ -3,7 +3,7 @@ import { Calendar, Users, MapPin, Building2, User, PawPrint, Download, FileText,
 import BreedGroupDivider from './components/BreedGroupDivider'
 import HoverTooltip from '../../../components/ui/HoverTooltip'
 import { formatDate } from './utils'
-import { getEventHeadline } from '../eventListUtils'
+import { getEventHeadline, formatCompetitionJudgesWithRoles } from '../eventListUtils'
 import type { Event, Result, TrackScheme } from './types'
 
 interface EventHeaderProps {
@@ -177,8 +177,8 @@ export default function EventHeader({ event, results }: EventHeaderProps) {
               )}
               {event.judges && (
                 <div className="flex items-center gap-2 text-sm">
-                  <User className="h-4 w-4 text-old-money-500" />
-                  <span className="text-old-money-700">{event.judges}</span>
+                  <User className="h-4 w-4 text-old-money-500 shrink-0" />
+                  <span className="text-old-money-700">{formatCompetitionJudgesWithRoles(event.judges)}</span>
                 </div>
               )}
               {trackSchemes.length > 0 && (

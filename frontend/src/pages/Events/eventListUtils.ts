@@ -284,6 +284,20 @@ export function formatJudgesShort(judges?: string | null): string {
   return parseJudgeNames(judges).join(', ')
 }
 
+/**
+ * Всегда оформляет судей с указанием ролей:
+ * 1-й судья — «Главный судья: X»
+ * 2-й и последующие — «судья: Y» (или «судьи: Y, Z»)
+ */
+export function formatCompetitionJudgesWithRoles(judgesRaw?: string | null): string {
+  if (!judgesRaw) return ''
+  const names = parseJudgeNames(judgesRaw)
+  if (names.length === 0) return judgesRaw.trim()
+  if (names.length === 1) return `Главный судья: ${names[0]}`
+  if (names.length === 2) return `Главный судья: ${names[0]}, судья: ${names[1]}`
+  return `Главный судья: ${names[0]}, судьи: ${names.slice(1).join(', ')}`
+}
+
 /** @deprecated use getEventHeadline for calendar rows */
 export function getEventTitle(event: CalendarEvent): string {
   if (event.title) return event.title

@@ -44,6 +44,7 @@ import { ShowsColumn } from './ShowsColumn'
 import { EmptyDisciplineColumn } from './EmptyDisciplineColumn'
 import { DoninoSpeedColumn } from './DoninoSpeedColumn'
 import { DoninoCoursingColumn } from './DoninoCoursingColumn'
+import { DogJudgesSection, type DogJudgesStats } from './DogJudgesSection'
 import { CollapsibleSection } from '../../components/ui/CollapsibleSection'
 import {
   HISTORY_DEFAULT,
@@ -263,6 +264,7 @@ export default function DogProfile() {
 
   const coursing = dog?.coursing_stats || {}
   const racing = dog?.racing_stats || {}
+  const judgeStats = (dog?.judge_stats as DogJudgesStats | undefined) || null
   const hasCoursingData = (coursing.total_starts || 0) > 0
   const hasRacingData = (racing.total_starts || 0) > 0
   const coursingEvents = useMemo(
@@ -638,19 +640,26 @@ export default function DogProfile() {
             <>
               {activeDiscipline === 'coursing' && (
                 showCoursingColumn ? (
-                  <CoursingColumn
-                    hasCoursingData={hasCoursingData}
-                    hasCourseMedals={hasCourseMedals}
-                    coursing={coursing}
-                    coursingEvents={coursingEvents}
-                    visibleCoursingEvents={visibleCoursingEvents}
-                    eventResultsUrls={eventResultsUrls}
-                    bestScoreEventId={bestScoreEventId}
-                    bestJudgeScoreEventId={bestJudgeScoreEventId}
-                    avgJudgeScoreEventId={avgJudgeScoreEventId}
-                    showAllCoursingEvents={showAllCoursingEvents}
-                    onToggleShowAll={() => setShowAllCoursingEvents((v) => !v)}
-                  />
+                  <>
+                    <CoursingColumn
+                      hasCoursingData={hasCoursingData}
+                      hasCourseMedals={hasCourseMedals}
+                      coursing={coursing}
+                      coursingEvents={coursingEvents}
+                      visibleCoursingEvents={visibleCoursingEvents}
+                      eventResultsUrls={eventResultsUrls}
+                      bestScoreEventId={bestScoreEventId}
+                      bestJudgeScoreEventId={bestJudgeScoreEventId}
+                      avgJudgeScoreEventId={avgJudgeScoreEventId}
+                      showAllCoursingEvents={showAllCoursingEvents}
+                      onToggleShowAll={() => setShowAllCoursingEvents((v) => !v)}
+                    />
+                    {judgeStats && (
+                      <div className="mt-6">
+                        <DogJudgesSection judgeStats={judgeStats} />
+                      </div>
+                    )}
+                  </>
                 ) : (
                   <EmptyDisciplineColumn title="Курсинг / БЗМП" theme="forest" />
                 )
@@ -751,6 +760,13 @@ export default function DogProfile() {
             <EmptyDisciplineColumn title="Выставки" theme="camel" />
           )}
         </div>
+
+        {/* Десктопная секция судей */}
+        {judgeStats && (
+          <div className="hidden md:block">
+            <DogJudgesSection judgeStats={judgeStats} />
+          </div>
+        )}
 
         {/* Десктопное Донино: CollapsibleSection внизу */}
         {(hasSpeedRecords || hasCoursingRecords) && (

@@ -10,6 +10,7 @@ import {
   isEventCancelled,
   isImportantCompetition,
   parseJudgeNames,
+  formatCompetitionJudgesWithRoles,
 } from './eventListUtils'
 
 interface EventListRowProps {
@@ -97,10 +98,11 @@ export default function EventListRow({ event }: EventListRowProps) {
           </div>
         )}
         {visibleJudges.length > 0 && (
-          <div className="text-[11px] text-charcoal-500 truncate sm:hidden mt-0.5" title={judgeNames.join(', ')}>
-            <span className="text-charcoal-400">Судьи: </span>
-            {visibleJudges.join(', ')}
-            {extraJudges > 0 && ` +${extraJudges}`}
+          <div
+            className="text-[11px] text-charcoal-500 truncate sm:hidden mt-0.5"
+            title={formatCompetitionJudgesWithRoles(event.judges)}
+          >
+            {formatCompetitionJudgesWithRoles(event.judges)}
           </div>
         )}
       </div>
@@ -108,14 +110,15 @@ export default function EventListRow({ event }: EventListRowProps) {
       {showJudgesColumn && (
         <div
           className="hidden sm:flex w-[9.5rem] shrink-0 flex-col items-end justify-center gap-0.5 self-stretch pl-3 border-l border-old-money-200/80"
-          title={judgeNames.join(', ')}
+          title={formatCompetitionJudgesWithRoles(event.judges)}
         >
           {visibleJudges.map((name, index) => (
             <span
               key={`${name}-${index}`}
               className="w-full whitespace-nowrap text-right text-[11px] leading-tight text-charcoal-500"
+              title={index === 0 ? `Главный судья: ${name}` : `Судья: ${name}`}
             >
-              {name}
+              {index === 0 ? <strong className="font-semibold text-charcoal-700">{name}</strong> : name}
             </span>
           ))}
           {extraJudges > 0 && (
