@@ -7,7 +7,8 @@ export function getPersistentReplyKeyboard(): Keyboard {
     .text('🏠 Главное меню')
     .text('🔍 Поиск собаки')
     .resized()
-    .persistent();
+    .persistent()
+    .placeholder('Выберите действие или введите кличку...');
 }
 
 export function getMainInlineMenu(): InlineKeyboard {

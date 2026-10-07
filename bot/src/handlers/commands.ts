@@ -334,12 +334,8 @@ export function createCommands(api: CoursingStatsAPI, cache?: KVNamespace) {
   const chatId = ctx.chat?.id;
   if (chatId) {
     try {
-      await ctx.api.sendMessage(chatId, '👇 Меню навигации закреплено под строкой ввода:', {
+      await ctx.api.sendMessage(chatId, 'Меню навигации закреплено под строкой ввода:', {
         reply_markup: getPersistentReplyKeyboard(),
-      }).then((m: any) => {
-        // Immediately delete the helper text so chat stays completely clean,
-        // but Telegram keeps the persistent keyboard docked!
-        ctx.api.deleteMessage(chatId, m.message_id).catch(() => {});
       });
     } catch {}
   }
