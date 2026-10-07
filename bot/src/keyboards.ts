@@ -357,13 +357,9 @@ export function getDogCardKeyboard(
     ? { text: '⭐ В избранном', callback: `remove_favorite:${dogId}` }
     : { text: 'В избранное', callback: `add_favorite:${dogId}` };
 
-  const shareQuery = options.dogName || dogId;
-
   return new InlineKeyboard()
     .text(favoriteButton.text, favoriteButton.callback)
-    .switchInline('↗️ Поделиться', shareQuery)
-    .row()
-    .webApp('Профиль на сайте', `https://coursing-stats.ru/dog/${dogId}`)
+    .url('Профиль на сайте', `https://coursing-stats.ru/dog/${dogId}`)
     .row()
     .text('← Назад', backCallback)
     .text('🏠 На главную', 'main_menu');
