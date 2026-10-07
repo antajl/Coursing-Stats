@@ -27,8 +27,7 @@ export function getMainInlineMenu(): InlineKeyboard {
 
 export function getBackButton(): InlineKeyboard {
   return new InlineKeyboard()
-    .text(`${unicodeIcons.back} Назад`, 'back')
-    .text(`${unicodeIcons.home} На главную`, 'main_menu');
+    .text(`${unicodeIcons.back} Назад`, 'back');
 }
 
 // Competitions sub-menu (archive, ratings, judges)
@@ -67,10 +66,9 @@ export function getGuideMenu(): InlineKeyboard {
     .text(`${unicodeIcons.back} Назад`, 'main_menu');
 }
 
-export function getNavigationButtons(backCallback: string, homeCallback: string): InlineKeyboard {
+export function getNavigationButtons(backCallback: string, _homeCallback?: string): InlineKeyboard {
   return new InlineKeyboard()
-    .text(`${unicodeIcons.back} Назад`, backCallback)
-    .text(`${unicodeIcons.home} На главную`, homeCallback);
+    .text(`${unicodeIcons.back} Назад`, backCallback);
 }
 
 export function getCategoriesMenu(): InlineKeyboard {
@@ -80,8 +78,7 @@ export function getCategoriesMenu(): InlineKeyboard {
     .row()
     .text(`${unicodeIcons.ratings} Elo-рейтинг`, 'rating_elo')
     .row()
-    .text(`${unicodeIcons.back} Назад`, 'main_menu')
-    .text(`${unicodeIcons.home} На главную`, 'main_menu');
+    .text(`${unicodeIcons.back} Назад`, 'competitions_menu');
 }
 
 export function getYearsMenu(category: string, includeAllYears: boolean = true): InlineKeyboard {
@@ -116,7 +113,6 @@ export function getYearsMenu(category: string, includeAllYears: boolean = true):
 
   keyboard.row();
   keyboard.text(`${unicodeIcons.back} Назад`, 'ratings');
-  keyboard.text(`${unicodeIcons.home} На главную`, 'main_menu');
   return keyboard;
 }
 
@@ -142,8 +138,7 @@ export function getDoninoMenu(): InlineKeyboard {
     .text('Курсинг', 'donino_speed')
     .text('Рейсинг 350м', 'donino_coursing')
     .row()
-    .text('← Назад', 'main_menu')
-    .text('🏠 На главную', 'main_menu');
+    .text('← Назад', 'main_menu');
 }
 
 export function getDoninoKeyboard(currentType: 'speed' | 'coursing'): InlineKeyboard {
@@ -161,8 +156,7 @@ export function getDoninoKeyboard(currentType: 'speed' | 'coursing'): InlineKeyb
     .row()
     .url('Открыть на сайте', 'https://coursing-stats.ru/speed-records')
     .row()
-    .text('← Назад', 'main_menu')
-    .text('🏠 На главную', 'main_menu');
+    .text('← Назад', 'main_menu');
 
   return keyboard;
 }
@@ -172,8 +166,7 @@ export function getJudgesMenu(): InlineKeyboard {
     .text('Судьи соревнований', 'judges_competition')
     .text('Судьи выставок', 'judges_show')
     .row()
-    .text('← Назад', 'main_menu')
-    .text('🏠 На главную', 'main_menu');
+    .text('← Назад', 'main_menu');
 }
 
 export function getJudgesKeyboard(currentType: 'competition' | 'shows'): InlineKeyboard {
@@ -194,8 +187,7 @@ export function getJudgesKeyboard(currentType: 'competition' | 'shows'): InlineK
   }
 
   keyboard.row();
-  keyboard.text('← Назад', 'main_menu');
-  keyboard.text('🏠 На главную', 'main_menu');
+  keyboard.text('← Назад', 'judges');
 
   return keyboard;
 }
@@ -274,8 +266,7 @@ export function getRatingKeyboard(discipline: string, category: string, year: st
   }
 
   keyboard.row();
-  keyboard.text('← Назад', 'main_menu');
-  keyboard.text('🏠 На главную', 'main_menu');
+  keyboard.text('← Назад', 'ratings');
 
   return keyboard;
 }
@@ -323,7 +314,6 @@ export function getCalendarKeyboard(offset: string | number = 0, isShows: boolea
 
   keyboard.row();
   keyboard.text('← Назад', isShows ? 'shows_menu' : 'competitions_menu');
-  keyboard.text('🏠 На главную', 'main_menu');
 
   return keyboard;
 }
@@ -342,7 +332,6 @@ export function getFavoritesKeyboard(
   });
 
   keyboard.text(`${unicodeIcons.back} Назад`, 'main_menu');
-  keyboard.text(`${unicodeIcons.home} На главную`, 'main_menu');
   return keyboard;
 }
 
@@ -357,9 +346,7 @@ export function getDogCardKeyboard(
 
   return new InlineKeyboard()
     .text(favoriteButton.text, favoriteButton.callback)
-    .url('Профиль на сайте', `https://coursing-stats.ru/dog/${dogId}`)
-    .row()
-    .text('🏠 На главную', 'main_menu');
+    .url('Профиль на сайте', `https://coursing-stats.ru/dog/${dogId}`);
 }
 
 /** Клавиатура для inline-карточки (кнопка в избранное и ссылка на сайт) */
@@ -380,6 +367,5 @@ export function getCompareKeyboard(firstDogId: string): InlineKeyboard {
   return new InlineKeyboard()
     .text('Отмена сравнения', 'compare_cancel')
     .row()
-    .text('← Назад', 'main_menu')
-    .text('🏠 На главную', 'main_menu');
+    .text('← Назад', 'main_menu');
 }
