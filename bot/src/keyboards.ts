@@ -350,7 +350,7 @@ export function getFavoritesKeyboard(
 
 export function getDogCardKeyboard(
   dogId: string,
-  backCallback: string = 'main_menu',
+  _backCallback: string = 'main_menu',
   options: { isFavorite?: boolean; dogName?: string } = {},
 ): InlineKeyboard {
   const favoriteButton = options.isFavorite
@@ -361,7 +361,6 @@ export function getDogCardKeyboard(
     .text(favoriteButton.text, favoriteButton.callback)
     .url('Профиль на сайте', `https://coursing-stats.ru/dog/${dogId}`)
     .row()
-    .text('← Назад', backCallback)
     .text('🏠 На главную', 'main_menu');
 }
 
