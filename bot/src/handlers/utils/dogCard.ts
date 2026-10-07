@@ -154,38 +154,65 @@ export function formatDogCard(dogData: DogData, options: FormatDogCardOptions = 
     `<i>${breed}</i>`,
   ];
 
-  if (hasDisciplineActivity(c) || c.best_score != null || c.best_judge_score != null) {
-    const bestScore = c.best_score != null ? String(c.best_score) : '—';
-    const bestJudge = c.best_judge_score != null ? String(c.best_judge_score) : '—';
+    if (hasDisciplineActivity(c) || c.best_score != null || c.best_judge_score != null) {
+    const bestScore = c.best_score != null ? String(c.best_score) : "—";
+    const bestJudge = c.best_judge_score != null ? String(c.best_judge_score) : "—";
+
+    let avgScoreStr: string | null = null;
+    if (dogData.competitions && dogData.competitions.length > 0) {
+      const coursingComps = dogData.competitions.filter(
+        (comp: any) => (comp.event_type === "coursing" || comp.event_type === "bzmp") && typeof comp.total_score === "number"
+      );
+      if (coursingComps.length > 0) {
+        const sum = coursingComps.reduce((acc: number, cur: any) => acc + (cur.total_score as number), 0);
+        avgScoreStr = String(Math.round((sum / coursingComps.length) * 10) / 10);
+      }
+    }
+    if (!avgScoreStr && c.avg_judge_score != null) {
+      avgScoreStr = String(c.avg_judge_score);
+    }
+
+    const scoreParts = ["Лучший балл: " + bestScore];
+    if (avgScoreStr) {
+      scoreParts.push("Средний: " + avgScoreStr);
+    }
+
     const coursingBlock = [
-      `🏆 <b>Курсинг</b>`,
-      `• Стартов: ${c.total_starts} · Лучший балл: ${bestScore}`,
-      `• Лучшая оценка судьи: ${bestJudge}`,
-      `• Медали: 🥇 ${c.gold}  🥈 ${c.silver}  🥉 ${c.bronze}`,
-    ].join('\n');
-    lines.push('', `<blockquote>${coursingBlock}</blockquote>`);
+      "<b>Курсинг</b>",
+      "• Участий: " + c.total_starts + " · " + scoreParts.join(" · "),
+      "• Лучшая оценка судьи: " + bestJudge,
+      "• Медали: 🥇 " + c.gold + "  🥈 " + c.silver + "  🥉 " + c.bronze,
+    ].join("\n");
+    lines.push("", "<blockquote>" + coursingBlock + "</blockquote>");
   }
 
   if (hasDisciplineActivity(r) || r.best_speed != null) {
-    const bestSpeed = r.best_speed != null ? `${r.best_speed} км/ч` : '—';
+    const bestSpeed = r.best_speed != null ? r.best_speed + " км/ч" : "—";
+    const avgSpeed = r.avg_speed != null ? r.avg_speed + " км/ч" : null;
+
+    const speedParts = ["Макс. скорость: " + bestSpeed];
+    if (avgSpeed) {
+      speedParts.push("Средняя: " + avgSpeed);
+    }
+
     const racingBlock = [
-      `⚡ <b>Бега борзых</b>`,
-      `• Стартов: ${r.total_starts} · Макс. скорость: ${bestSpeed}`,
-      `• Медали: 🥇 ${r.gold}  🥈 ${r.silver}  🥉 ${r.bronze}`,
-    ].join('\n');
-    lines.push('', `<blockquote>${racingBlock}</blockquote>`);
+      "<b>Бега борзых</b>",
+      "• Участий: " + r.total_starts + " · " + speedParts.join(" · "),
+      "• Медали: 🥇 " + r.gold + "  🥈 " + r.silver + "  🥉 " + r.bronze,
+    ].join("\n");
+    lines.push("", "<blockquote>" + racingBlock + "</blockquote>");
   }
 
   if (shows && shows.total_shows > 0) {
     const titleLines = formatShowTitleLines(shows);
     const showsBlock = [
-      `🎪 <b>Выставки РКФ</b>`,
-      `• Выставок: ${shows.total_shows} · Высшая награда: ${formatShowAward(shows.best_award)}`,
-      ...(titleLines.length > 0 ? [`• Титулы: ${titleLines.join(', ')}`] : []),
-    ].join('\n');
-    const quoteTag = titleLines.length > 0 ? 'blockquote expandable' : 'blockquote';
-    lines.push('', `<${quoteTag}>${showsBlock}</${quoteTag.split(' ')[0]}>`);
+      "<b>Выставки РКФ</b>",
+      "• Участий: " + shows.total_shows + " · Высшая награда: " + formatShowAward(shows.best_award),
+      ...(titleLines.length > 0 ? ["• Титулы: " + titleLines.join(", ")] : []),
+    ].join("\n");
+    const quoteTag = titleLines.length > 0 ? "blockquote expandable" : "blockquote";
+    lines.push("", "<" + quoteTag + ">" + showsBlock + "</" + quoteTag.split(" ")[0] + ">");
   }
 
-  return lines.join('\n').trim();
+  return lines.join("\n").trim();
 }
