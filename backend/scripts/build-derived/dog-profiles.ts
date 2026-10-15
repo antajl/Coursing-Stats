@@ -592,6 +592,7 @@ export function buildDogProfiles(db: Database.Database) {
     const keyName = slugifyDog(dog.name_ru || dog.name_lat || 'dog', 40);
     const keyBreed = slugifyDog(dog.breed || 'unknown', 24);
     const generatedKey = `${keyName}--${keyBreed}`;
+    const effectiveKey = (fromFile as any)?.dog_key || generatedKey;
 
     const existingDogIndex = dogsIndexMap.get(dogId) as any;
     const sex = (dog as any).sex || existingDogIndex?.sex || null;
@@ -601,18 +602,18 @@ export function buildDogProfiles(db: Database.Database) {
       existingDogIndex.breed = dog.breed || existingDogIndex.breed || '';
       existingDogIndex.competition_count = Math.max(existingDogIndex.competition_count || 0, competitions.length);
       if (sex) existingDogIndex.sex = sex;
-      if (!existingDogIndex.dog_key) existingDogIndex.dog_key = generatedKey;
-      if (!existingDogIndex.file_by_id) existingDogIndex.file_by_id = `dogs/by-id/${dogId}.json`;
-      if (!existingDogIndex.file_by_key) existingDogIndex.file_by_key = `dogs/by-key/${existingDogIndex.dog_key}.json`;
+      existingDogIndex.dog_key = effectiveKey;
+      existingDogIndex.file_by_id = `dogs/by-id/${dogId}.json`;
+      existingDogIndex.file_by_key = `dogs/by-key/${effectiveKey}.json`;
     } else {
       dogsIndexMap.set(dogId, {
         id: dogId,
-        dog_key: generatedKey,
+        dog_key: effectiveKey,
         name_lat: dog.name_lat || '',
         name_ru: dog.name_ru || '',
         breed: dog.breed || '',
         file_by_id: `dogs/by-id/${dogId}.json`,
-        file_by_key: `dogs/by-key/${generatedKey}.json`,
+        file_by_key: `dogs/by-key/${effectiveKey}.json`,
         competition_count: competitions.length,
         sex,
       });
@@ -653,7 +654,9 @@ export function buildDogProfiles(db: Database.Database) {
     `  → dog-profiles/pack-*.json (${packs.size} packs, ${sortedDogIds.length} dogs, ${(packBytes / (1024 * 1024)).toFixed(1)} MB)`,
   );
 
-  const dogsIndexList = Array.from(dogsIndexMap.values()).sort((a, b) => a.id - b.id);
+  const dogsIndexList = Array.from(dogsIndexMap.values())
+    .filter((d) => allDogIds.has(d.id))
+    .sort((a, b) => a.id - b.id);
   for (let attempt = 0; attempt < 5; attempt++) {
     try {
       fs.writeFileSync(dogsIndexPath, JSON.stringify(dogsIndexList, null, 2), 'utf-8');

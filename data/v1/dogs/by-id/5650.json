@@ -6,7 +6,7 @@
   "name_lat": "BRAVE HEART SIMBA",
   "name_ru": "БРЕЙВ ХАРТ СИМБА",
   "breed": "УИППЕТ",
-  "sex": null,
+  "sex": "Кобель",
   "owner": null,
   "pedigree_url": "https://whippet.breedarchive.com/animal/view/brave-heart-simba-6d7081ca-f18b-446a-bed6-07e1eed9df4c",
   "competition_ids": [
@@ -24,7 +24,9 @@
     1300,
     1304,
     1317,
-    1545
+    1545,
+    1550,
+    2022002
   ],
   "competition_files": [
     "competitions/2025/04-апрель/1255-чемпионат-россии-курсинг-борзых.json",
@@ -41,6 +43,8 @@
     "competitions/2026/04-апрель/1300-чркф-курсинг-борзых.json",
     "competitions/2026/04-апрель/1304-чркф-курсинг-борзых.json",
     "competitions/2026/05-май/1317-чемпионат-россии-курсинг-борзых.json",
-    "competitions/2026/06-июнь/1545-пчркф-курсинг-борзых-фараонова-собака-уиппет-сал.json"
+    "competitions/2026/06-июнь/1545-пчркф-курсинг-борзых-фараонова-собака-уиппет-сал.json",
+    "competitions/2026/09-сентябрь/2022002-чркф-по-бегам-борзых.json",
+    "competitions/2026/08-август/1550-чркф-бега-борзых.json"
   ]
 }

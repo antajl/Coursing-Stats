@@ -111,4 +111,50 @@ describe('competition ingestion logic', () => {
     const match = findMatchingDog(draft, dogs);
     expect(match).toBeNull();
   });
+
+  it('ensures no orphan dog IDs exist in 2026 competitions', async () => {
+    const fs = await import('node:fs');
+    const path = await import('node:path');
+    const ROOT = path.resolve(__dirname, '../..');
+    const byIdDir = path.join(ROOT, 'data/v1/dogs/by-id');
+    const comps2026Dir = path.join(ROOT, 'data/v1/competitions/2026');
+
+    const dogsById = new Set(
+      fs.readdirSync(byIdDir)
+        .filter((f) => f.endsWith('.json'))
+        .map((f) => parseInt(f.replace('.json', ''), 10))
+        .filter((n) => !isNaN(n))
+    );
+
+    const orphans: Array<{ comp: string; dog_id: number; name: string }> = [];
+
+    function scan(dir: string) {
+      if (!fs.existsSync(dir)) return;
+      for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+        const full = path.join(dir, entry.name);
+        if (entry.isDirectory()) {
+          scan(full);
+        } else if (entry.name.endsWith('.json')) {
+          try {
+            const comp = JSON.parse(fs.readFileSync(full, 'utf-8'));
+            if (Array.isArray(comp.results)) {
+              for (const r of comp.results) {
+                if (r && typeof r.dog_id === 'number' && !dogsById.has(r.dog_id)) {
+                  orphans.push({
+                    comp: entry.name,
+                    dog_id: r.dog_id,
+                    name: r.dog?.name_ru || r.dog?.name_lat || 'unknown',
+                  });
+                }
+              }
+            }
+          } catch {}
+        }
+      }
+    }
+
+    scan(comps2026Dir);
+    expect(orphans).toEqual([]);
+  });
 });
+

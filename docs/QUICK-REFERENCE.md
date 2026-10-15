@@ -124,7 +124,7 @@ npx tsx scripts/repair/rebuild-show-snapshot.ts
 ## Key Files
 
 ### Configuration
-- `.devin/config.json` — Devin configuration
+- `AGENTS.md` — Agent instructions & skill router
 - `.mcp.json` — MCP server configuration (GitHub, Cloudflare)
 - `package.json` — dependencies and scripts
 

@@ -152,6 +152,7 @@ function loadCompetitions(db: Database.Database) {
       if (eventId != null) row.event_id = eventId;
       if (row.dog_id == null && dog?.id != null) row.dog_id = dog.id;
       if (row.event_id == null || row.dog_id == null) continue;
+      delete row.id;
       insertRow(db, 'results', row);
     }
   }

@@ -7,8 +7,8 @@
     "initial_rating": 1500,
     "breed_pools": true
   },
-  "exported_at": "2026-10-07T16:12:31.910Z",
-  "count": 373,
+  "exported_at": "2026-10-15T09:59:14.615Z",
+  "count": 407,
   "items": [
     {
       "dog_id": 5766,
@@ -37,7 +37,7 @@
       "name_lat": "ЛУННАЯ РАДУГА ЯСМИН /LUNNAJA RADUGA YASMIN",
       "name_ru": "ЛУННАЯ РАДУГА ЯСМИН /LUNNAJA RADUGA YASMIN",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "sex": null,
+      "sex": "Сука",
       "owner": null,
       "pedigree_url": null,
       "total_starts": 16,
@@ -121,6 +121,28 @@
       "rank": 5
     },
     {
+      "dog_id": 122,
+      "name_lat": "STANGERS LAND VERSAILLES CHARMAN",
+      "name_ru": "СТАНГЕРС ЛАНД ВЕРСАЛЬ ШАРМАН",
+      "breed": "УИППЕТ",
+      "sex": "Кобель",
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 27,
+      "best_score": 370,
+      "avg_judge_score": 87.21,
+      "best_judge_score": 96,
+      "gold": 5,
+      "silver": 7,
+      "bronze": 7,
+      "elo_rating": 1552,
+      "elo_races": 10,
+      "elo_reliable": true,
+      "elo_low_data": false,
+      "elo_insufficient": false,
+      "rank": 6
+    },
+    {
       "dog_id": 5973,
       "name_lat": "ОБЕРЕГ РУСИ ИТИЛЬ /OBEREG RUSI ITIL",
       "name_ru": "ОБЕРЕГ РУСИ ИТИЛЬ /OBEREG RUSI ITIL",
@@ -140,14 +162,14 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 6
+      "rank": 7
     },
     {
       "dog_id": 182,
       "name_lat": "ARIES KHAN PHREIA PASIPHAE",
       "name_ru": "ARIES KHAN PHREIA PASIPHAE",
       "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
-      "sex": null,
+      "sex": "Сука",
       "owner": null,
       "pedigree_url": null,
       "total_starts": 29,
@@ -157,28 +179,6 @@
       "gold": 18,
       "silver": 3,
       "bronze": 5,
-      "elo_rating": 1546,
-      "elo_races": 8,
-      "elo_reliable": true,
-      "elo_low_data": false,
-      "elo_insufficient": false,
-      "rank": 7
-    },
-    {
-      "dog_id": 122,
-      "name_lat": "STANGERS LAND VERSAILLES CHARMAN",
-      "name_ru": "СТАНГЕРС ЛАНД ВЕРСАЛЬ ШАРМАН",
-      "breed": "УИППЕТ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": null,
-      "total_starts": 26,
-      "best_score": 370,
-      "avg_judge_score": 87.22,
-      "best_judge_score": 96,
-      "gold": 5,
-      "silver": 7,
-      "bronze": 7,
       "elo_rating": 1546,
       "elo_races": 8,
       "elo_reliable": true,
@@ -319,28 +319,6 @@
       "rank": 14
     },
     {
-      "dog_id": 5782,
-      "name_lat": "EMUL DE GEPARD GELILA AL RAWDA",
-      "name_ru": "ЭМУЛЬ ДЭ ГЕПАРД ГЕЛИЛА АЛЬ РАВДА",
-      "breed": "САЛЮКИ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": "https://saluki.breedarchive.com/animal/view/emul-de-gepard-gelila-al-rawda-699f7593-397c-4b71-89a7-09e352f30907",
-      "total_starts": 5,
-      "best_score": 357,
-      "avg_judge_score": 84.35,
-      "best_judge_score": 94,
-      "gold": 4,
-      "silver": 0,
-      "bronze": 0,
-      "elo_rating": 1536,
-      "elo_races": 6,
-      "elo_reliable": false,
-      "elo_low_data": true,
-      "elo_insufficient": false,
-      "rank": 15
-    },
-    {
       "dog_id": 5745,
       "name_lat": "DARING CAPITAN ORLIKOVA",
       "name_ru": "ДЭЙРИНГ КАПИТАН ОРЛИКОВА",
@@ -360,7 +338,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 16
+      "rank": 15
     },
     {
       "dog_id": 6128,
@@ -382,29 +360,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 17
-    },
-    {
-      "dog_id": 874,
-      "name_lat": "BLADE RUNNER",
-      "name_ru": "BLADE RUNNER",
-      "breed": "УИППЕТ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": "https://whippet.breedarchive.com/animal/view/blade-runner-ca646e76-297e-43b8-b930-ab234471206f",
-      "total_starts": 1,
-      "best_score": 247,
-      "avg_judge_score": 82.33,
-      "best_judge_score": 84,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "elo_rating": 1535,
-      "elo_races": 2,
-      "elo_reliable": false,
-      "elo_low_data": false,
-      "elo_insufficient": true,
-      "rank": 18
+      "rank": 16
     },
     {
       "dog_id": 6203,
@@ -426,7 +382,29 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 19
+      "rank": 17
+    },
+    {
+      "dog_id": 5631,
+      "name_lat": "STANGERS LAND ZAMIR",
+      "name_ru": "СТАНГЕРС ЛАНД ЗАМИР",
+      "breed": "УИППЕТ",
+      "sex": "Кобель",
+      "owner": null,
+      "pedigree_url": "https://whippet.breedarchive.com/animal/view/stangers-land-zamir-e40675c5-a3a2-4730-9080-3f95acd0d186",
+      "total_starts": 25,
+      "best_score": 367,
+      "avg_judge_score": 87.35,
+      "best_judge_score": 97,
+      "gold": 11,
+      "silver": 8,
+      "bronze": 2,
+      "elo_rating": 1533,
+      "elo_races": 6,
+      "elo_reliable": false,
+      "elo_low_data": true,
+      "elo_insufficient": false,
+      "rank": 18
     },
     {
       "dog_id": 861,
@@ -448,7 +426,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 20
+      "rank": 19
     },
     {
       "dog_id": 503,
@@ -470,6 +448,28 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
+      "rank": 20
+    },
+    {
+      "dog_id": 10742,
+      "name_lat": "BEL ETUAL KAYALA",
+      "name_ru": "БЕЛЬ ЭТУАЛЬ КАЯЛА",
+      "breed": "САЛЮКИ",
+      "sex": "Сука",
+      "owner": "Булгадарян М.Н.",
+      "pedigree_url": null,
+      "total_starts": 1,
+      "best_score": 355,
+      "avg_judge_score": 88.75,
+      "best_judge_score": 90,
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0,
+      "elo_rating": 1532,
+      "elo_races": 2,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
       "rank": 21
     },
     {
@@ -561,26 +561,48 @@
       "rank": 25
     },
     {
-      "dog_id": 5631,
-      "name_lat": "STANGERS LAND ZAMIR",
-      "name_ru": "СТАНГЕРС ЛАНД ЗАМИР",
+      "dog_id": 5645,
+      "name_lat": "СТАНГЕРС ЛАНД КАТАЛИНА /STANGERS LAND KATALINA",
+      "name_ru": "СТАНГЕРС ЛАНД КАТАЛИНА /STANGERS LAND KATALINA",
       "breed": "УИППЕТ",
-      "sex": null,
+      "sex": "Сука",
       "owner": null,
-      "pedigree_url": "https://whippet.breedarchive.com/animal/view/stangers-land-zamir-e40675c5-a3a2-4730-9080-3f95acd0d186",
-      "total_starts": 24,
-      "best_score": 367,
-      "avg_judge_score": 87.39,
-      "best_judge_score": 97,
-      "gold": 11,
-      "silver": 8,
-      "bronze": 2,
+      "pedigree_url": "https://whippet.breedarchive.com/animal/view/stangers-land-katalina-fe539f34-fbd8-4d0a-8e19-ec2fd0d8d141",
+      "total_starts": 7,
+      "best_score": 361,
+      "avg_judge_score": 85.96,
+      "best_judge_score": 98,
+      "gold": 4,
+      "silver": 0,
+      "bronze": 0,
       "elo_rating": 1530,
-      "elo_races": 4,
-      "elo_reliable": false,
-      "elo_low_data": true,
+      "elo_races": 14,
+      "elo_reliable": true,
+      "elo_low_data": false,
       "elo_insufficient": false,
       "rank": 26
+    },
+    {
+      "dog_id": 5782,
+      "name_lat": "EMUL DE GEPARD GELILA AL RAWDA",
+      "name_ru": "ЭМУЛЬ ДЭ ГЕПАРД ГЕЛИЛА АЛЬ РАВДА",
+      "breed": "САЛЮКИ",
+      "sex": "Сука",
+      "owner": null,
+      "pedigree_url": "https://saluki.breedarchive.com/animal/view/emul-de-gepard-gelila-al-rawda-699f7593-397c-4b71-89a7-09e352f30907",
+      "total_starts": 6,
+      "best_score": 357,
+      "avg_judge_score": 84.83,
+      "best_judge_score": 94,
+      "gold": 4,
+      "silver": 1,
+      "bronze": 0,
+      "elo_rating": 1530,
+      "elo_races": 8,
+      "elo_reliable": true,
+      "elo_low_data": false,
+      "elo_insufficient": false,
+      "rank": 27
     },
     {
       "dog_id": 772,
@@ -602,7 +624,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 27
+      "rank": 28
     },
     {
       "dog_id": 402,
@@ -624,14 +646,14 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 28
+      "rank": 29
     },
     {
       "dog_id": 5634,
       "name_lat": "STANGERS LAND ZENIT",
       "name_ru": "СТАНГЕРС ЛАНД ЗЕНИТ",
       "breed": "УИППЕТ",
-      "sex": null,
+      "sex": "Кобель",
       "owner": null,
       "pedigree_url": "https://whippet.breedarchive.com/animal/view/stangers-land-zenit-3c6671d8-c78f-461f-9cd8-f92ebd205c77",
       "total_starts": 21,
@@ -646,20 +668,20 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 29
+      "rank": 30
     },
     {
-      "dog_id": 6026,
-      "name_lat": "DOGONI VETER OPUISSANTE SAMSARA",
-      "name_ru": "ДОГОНИ ВЕТЕР ОПЮИСАНТ САМСАРА",
+      "dog_id": 875,
+      "name_lat": "BITE THERABBIT",
+      "name_ru": "BITE THERABBIT",
       "breed": "УИППЕТ",
-      "sex": null,
+      "sex": "Сука",
       "owner": null,
-      "pedigree_url": "https://whippet.breedarchive.com/animal/view/dogoni-veter-opuissante-samsara-355d0cca-2ce9-426d-9613-8954c8c6d211",
+      "pedigree_url": null,
       "total_starts": 2,
       "best_score": 357,
-      "avg_judge_score": 85.88,
-      "best_judge_score": 92,
+      "avg_judge_score": 86.71,
+      "best_judge_score": 93,
       "gold": 1,
       "silver": 1,
       "bronze": 0,
@@ -668,14 +690,14 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 30
+      "rank": 31
     },
     {
       "dog_id": 5621,
       "name_lat": "I’M A LEGEND ANYWAY",
       "name_ru": "ИМ Э ЛЕГЕНД ЭНИВЕЙ",
       "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
-      "sex": null,
+      "sex": "Сука",
       "owner": null,
       "pedigree_url": null,
       "total_starts": 8,
@@ -690,7 +712,29 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 31
+      "rank": 32
+    },
+    {
+      "dog_id": 6026,
+      "name_lat": "DOGONI VETER OPUISSANTE SAMSARA",
+      "name_ru": "ДОГОНИ ВЕТЕР ОПЮИСАНТ САМСАРА",
+      "breed": "УИППЕТ",
+      "sex": "Сука",
+      "owner": null,
+      "pedigree_url": "https://whippet.breedarchive.com/animal/view/dogoni-veter-opuissante-samsara-355d0cca-2ce9-426d-9613-8954c8c6d211",
+      "total_starts": 3,
+      "best_score": 357,
+      "avg_judge_score": 86,
+      "best_judge_score": 92,
+      "gold": 1,
+      "silver": 1,
+      "bronze": 0,
+      "elo_rating": 1526,
+      "elo_races": 6,
+      "elo_reliable": false,
+      "elo_low_data": true,
+      "elo_insufficient": false,
+      "rank": 33
     },
     {
       "dog_id": 5986,
@@ -712,7 +756,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 32
+      "rank": 34
     },
     {
       "dog_id": 269,
@@ -734,7 +778,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 33
+      "rank": 35
     },
     {
       "dog_id": 488,
@@ -755,50 +799,6 @@
       "elo_races": 9,
       "elo_reliable": true,
       "elo_low_data": false,
-      "elo_insufficient": false,
-      "rank": 34
-    },
-    {
-      "dog_id": 5645,
-      "name_lat": "СТАНГЕРС ЛАНД КАТАЛИНА /STANGERS LAND KATALINA",
-      "name_ru": "СТАНГЕРС ЛАНД КАТАЛИНА /STANGERS LAND KATALINA",
-      "breed": "УИППЕТ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": "https://whippet.breedarchive.com/animal/view/stangers-land-katalina-fe539f34-fbd8-4d0a-8e19-ec2fd0d8d141",
-      "total_starts": 6,
-      "best_score": 361,
-      "avg_judge_score": 85.67,
-      "best_judge_score": 98,
-      "gold": 4,
-      "silver": 0,
-      "bronze": 0,
-      "elo_rating": 1525,
-      "elo_races": 12,
-      "elo_reliable": true,
-      "elo_low_data": false,
-      "elo_insufficient": false,
-      "rank": 35
-    },
-    {
-      "dog_id": 5901,
-      "name_lat": "BAXTER BERN",
-      "name_ru": "БАКСТЕР БЕРН",
-      "breed": "ФАРАОНОВА СОБАКА",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": "https://pharaohhound.breedarchive.com/animal/view/baxter-bern-3429e681-7434-4d81-b6dc-849fffb4967a",
-      "total_starts": 9,
-      "best_score": 349,
-      "avg_judge_score": 84,
-      "best_judge_score": 90,
-      "gold": 2,
-      "silver": 6,
-      "bronze": 0,
-      "elo_rating": 1525,
-      "elo_races": 6,
-      "elo_reliable": false,
-      "elo_low_data": true,
       "elo_insufficient": false,
       "rank": 36
     },
@@ -891,6 +891,28 @@
       "rank": 40
     },
     {
+      "dog_id": 874,
+      "name_lat": "BLADE RUNNER",
+      "name_ru": "BLADE RUNNER",
+      "breed": "УИППЕТ",
+      "sex": "Кобель",
+      "owner": null,
+      "pedigree_url": "https://whippet.breedarchive.com/animal/view/blade-runner-ca646e76-297e-43b8-b930-ab234471206f",
+      "total_starts": 2,
+      "best_score": 347,
+      "avg_judge_score": 84.86,
+      "best_judge_score": 91,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "elo_rating": 1523,
+      "elo_races": 4,
+      "elo_reliable": false,
+      "elo_low_data": true,
+      "elo_insufficient": false,
+      "rank": 41
+    },
+    {
       "dog_id": 6104,
       "name_lat": "ЭВОНТИ АБСОЛЮТ ВИННЕР /EVONTY ABSOLUTE WINNER",
       "name_ru": "ЭВОНТИ АБСОЛЮТ ВИННЕР /EVONTY ABSOLUTE WINNER",
@@ -910,7 +932,29 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 41
+      "rank": 42
+    },
+    {
+      "dog_id": 10740,
+      "name_lat": "FLYONA",
+      "name_ru": "ФЛЁНА",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "sex": "Сука",
+      "owner": "Чаркина Е.В.",
+      "pedigree_url": null,
+      "total_starts": 1,
+      "best_score": 355,
+      "avg_judge_score": 88.75,
+      "best_judge_score": 91,
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0,
+      "elo_rating": 1523,
+      "elo_races": 2,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 43
     },
     {
       "dog_id": 5657,
@@ -932,7 +976,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 42
+      "rank": 44
     },
     {
       "dog_id": 5716,
@@ -954,7 +998,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 43
+      "rank": 45
     },
     {
       "dog_id": 731,
@@ -976,7 +1020,29 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 44
+      "rank": 46
+    },
+    {
+      "dog_id": 5901,
+      "name_lat": "BAXTER BERN",
+      "name_ru": "БАКСТЕР БЕРН",
+      "breed": "ФАРАОНОВА СОБАКА",
+      "sex": "Кобель",
+      "owner": null,
+      "pedigree_url": "https://pharaohhound.breedarchive.com/animal/view/baxter-bern-3429e681-7434-4d81-b6dc-849fffb4967a",
+      "total_starts": 10,
+      "best_score": 349,
+      "avg_judge_score": 84.03,
+      "best_judge_score": 90,
+      "gold": 2,
+      "silver": 6,
+      "bronze": 0,
+      "elo_rating": 1522,
+      "elo_races": 8,
+      "elo_reliable": true,
+      "elo_low_data": false,
+      "elo_insufficient": false,
+      "rank": 47
     },
     {
       "dog_id": 10472,
@@ -998,7 +1064,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 45
+      "rank": 48
     },
     {
       "dog_id": 513,
@@ -1020,7 +1086,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 46
+      "rank": 49
     },
     {
       "dog_id": 766,
@@ -1042,7 +1108,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 47
+      "rank": 50
     },
     {
       "dog_id": 860,
@@ -1064,7 +1130,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 48
+      "rank": 51
     },
     {
       "dog_id": 178,
@@ -1086,29 +1152,29 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 49
+      "rank": 52
     },
     {
-      "dog_id": 748,
-      "name_lat": "МОНАННА РЕПАБЛИК ХИДАН /MONANNA REPUBLIC HIDAN",
-      "name_ru": "МОНАННА РЕПАБЛИК ХИДАН /MONANNA REPUBLIC HIDAN",
-      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
-      "sex": null,
+      "dog_id": 5903,
+      "name_lat": "HEIDI SOTIS DJED ATUM",
+      "name_ru": "ХЕЙДИ СОТИС ДЖЕД АТУМ",
+      "breed": "ФАРАОНОВА СОБАКА",
+      "sex": "Кобель",
       "owner": null,
-      "pedigree_url": "https://italiangreyhound.breedarchive.com/animal/view/monanna-republic-hidan-087073df-a0b2-43fd-a8ac-fef7cfa7d0fe",
+      "pedigree_url": "https://pharaohhound.breedarchive.com/animal/view/heidi-sotis-djed-atum-88f77a8b-3fd8-49b8-882d-c6739d8b671f",
       "total_starts": 3,
-      "best_score": 358,
-      "avg_judge_score": 84.5,
-      "best_judge_score": 96,
+      "best_score": 357,
+      "avg_judge_score": 86.25,
+      "best_judge_score": 91,
       "gold": 2,
-      "silver": 1,
+      "silver": 0,
       "bronze": 0,
       "elo_rating": 1521,
       "elo_races": 6,
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 50
+      "rank": 53
     },
     {
       "dog_id": 649,
@@ -1130,7 +1196,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 51
+      "rank": 54
     },
     {
       "dog_id": 670,
@@ -1152,7 +1218,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 52
+      "rank": 55
     },
     {
       "dog_id": 6290,
@@ -1174,7 +1240,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 53
+      "rank": 56
     },
     {
       "dog_id": 5635,
@@ -1196,7 +1262,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 54
+      "rank": 57
     },
     {
       "dog_id": 674,
@@ -1218,7 +1284,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 55
+      "rank": 58
     },
     {
       "dog_id": 5762,
@@ -1240,14 +1306,14 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 56
+      "rank": 59
     },
     {
       "dog_id": 5820,
       "name_lat": "ИРКИСС ВОЛЬПЕ КЬЯРА /IRKISS VOLPE CHIARA",
       "name_ru": "ИРКИСС ВОЛЬПЕ КЬЯРА /IRKISS VOLPE CHIARA",
       "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
-      "sex": null,
+      "sex": "Сука",
       "owner": null,
       "pedigree_url": "https://cirneco.breedarchive.com/animal/view/irkiss-volpe-chiara-14d720c2-e8b2-4382-9b06-78aa4c49bf7b",
       "total_starts": 3,
@@ -1262,29 +1328,29 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 57
+      "rank": 60
     },
     {
-      "dog_id": 875,
-      "name_lat": "BITE THERABBIT",
-      "name_ru": "BITE THERABBIT",
+      "dog_id": 756,
+      "name_lat": "WILDABOUT DOUBLE ATOMIC RACE",
+      "name_ru": "WILDABOUT DOUBLE ATOMIC RACE",
       "breed": "УИППЕТ",
-      "sex": null,
+      "sex": "Кобель",
       "owner": null,
-      "pedigree_url": null,
-      "total_starts": 1,
-      "best_score": 250,
-      "avg_judge_score": 83.33,
-      "best_judge_score": 88,
-      "gold": 0,
-      "silver": 1,
+      "pedigree_url": "https://whippet.breedarchive.com/animal/view/wildabout-double-atomic-race-237cb5dd-f7b1-44bc-bdc9-3d91c24d11c7",
+      "total_starts": 5,
+      "best_score": 354,
+      "avg_judge_score": 84.8,
+      "best_judge_score": 91,
+      "gold": 2,
+      "silver": 2,
       "bronze": 0,
       "elo_rating": 1519,
-      "elo_races": 2,
-      "elo_reliable": false,
+      "elo_races": 10,
+      "elo_reliable": true,
       "elo_low_data": false,
-      "elo_insufficient": true,
-      "rank": 58
+      "elo_insufficient": false,
+      "rank": 61
     },
     {
       "dog_id": 856,
@@ -1306,7 +1372,73 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 59
+      "rank": 62
+    },
+    {
+      "dog_id": 7088,
+      "name_lat": "STANGERS LAND VALDIVIA",
+      "name_ru": "СТАНГЕРС ЛАНД ВАЛЬДИВИЯ",
+      "breed": "УИППЕТ",
+      "sex": "Сука",
+      "owner": null,
+      "pedigree_url": "https://whippet.breedarchive.com/animal/view/stangers-land-valdivia-0342aa6d-8506-4f85-b134-9e36a5c1c81c",
+      "total_starts": 26,
+      "best_score": 372,
+      "avg_judge_score": 87.85,
+      "best_judge_score": 96,
+      "gold": 7,
+      "silver": 2,
+      "bronze": 5,
+      "elo_rating": 1519,
+      "elo_races": 2,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 63
+    },
+    {
+      "dog_id": 10753,
+      "name_lat": "IRKISS NENSI",
+      "name_ru": "ИРКИСС НЭНСИ",
+      "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+      "sex": "Сука",
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 1,
+      "best_score": 350,
+      "avg_judge_score": 87.5,
+      "best_judge_score": 89,
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0,
+      "elo_rating": 1519,
+      "elo_races": 2,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 64
+    },
+    {
+      "dog_id": 263,
+      "name_lat": "STANGERS LAND INGRID ELEGANT",
+      "name_ru": "СТАНГЕРС ЛАНД ИНГРИД ЭЛЕГАНТ",
+      "breed": "УИППЕТ",
+      "sex": "Сука",
+      "owner": null,
+      "pedigree_url": "https://whippet.breedarchive.com/animal/view/stangers-land-ingrid-elegant-1cf47213-4b06-4316-9199-ce48cc9d8917",
+      "total_starts": 19,
+      "best_score": 370,
+      "avg_judge_score": 86.99,
+      "best_judge_score": 97,
+      "gold": 6,
+      "silver": 3,
+      "bronze": 2,
+      "elo_rating": 1518,
+      "elo_races": 16,
+      "elo_reliable": true,
+      "elo_low_data": false,
+      "elo_insufficient": false,
+      "rank": 65
     },
     {
       "dog_id": 5779,
@@ -1328,7 +1460,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 60
+      "rank": 66
     },
     {
       "dog_id": 302,
@@ -1350,29 +1482,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 61
-    },
-    {
-      "dog_id": 263,
-      "name_lat": "STANGERS LAND INGRID ELEGANT",
-      "name_ru": "СТАНГЕРС ЛАНД ИНГРИД ЭЛЕГАНТ",
-      "breed": "УИППЕТ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": "https://whippet.breedarchive.com/animal/view/stangers-land-ingrid-elegant-1cf47213-4b06-4316-9199-ce48cc9d8917",
-      "total_starts": 18,
-      "best_score": 370,
-      "avg_judge_score": 86.97,
-      "best_judge_score": 97,
-      "gold": 6,
-      "silver": 3,
-      "bronze": 2,
-      "elo_rating": 1517,
-      "elo_races": 14,
-      "elo_reliable": true,
-      "elo_low_data": false,
-      "elo_insufficient": false,
-      "rank": 62
+      "rank": 67
     },
     {
       "dog_id": 5769,
@@ -1394,14 +1504,14 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 63
+      "rank": 68
     },
     {
       "dog_id": 5815,
       "name_lat": "БОННИ ФЛАИНГ ФЛЭШ /BONNY FLYING FLASH",
       "name_ru": "БОННИ ФЛАИНГ ФЛЭШ /BONNY FLYING FLASH",
       "breed": "УИППЕТ",
-      "sex": null,
+      "sex": "Сука",
       "owner": null,
       "pedigree_url": "https://whippet.breedarchive.com/animal/view/bonny-flying-flash-5c2447c6-6dbc-46c5-b81d-724cb49a8539",
       "total_starts": 2,
@@ -1416,7 +1526,29 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 64
+      "rank": 69
+    },
+    {
+      "dog_id": 748,
+      "name_lat": "МОНАННА РЕПАБЛИК ХИДАН /MONANNA REPUBLIC HIDAN",
+      "name_ru": "МОНАННА РЕПАБЛИК ХИДАН /MONANNA REPUBLIC HIDAN",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
+      "sex": "Кобель",
+      "owner": null,
+      "pedigree_url": "https://italiangreyhound.breedarchive.com/animal/view/monanna-republic-hidan-087073df-a0b2-43fd-a8ac-fef7cfa7d0fe",
+      "total_starts": 4,
+      "best_score": 358,
+      "avg_judge_score": 85,
+      "best_judge_score": 96,
+      "gold": 2,
+      "silver": 2,
+      "bronze": 0,
+      "elo_rating": 1517,
+      "elo_races": 8,
+      "elo_reliable": true,
+      "elo_low_data": false,
+      "elo_insufficient": false,
+      "rank": 70
     },
     {
       "dog_id": 41,
@@ -1438,7 +1570,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 65
+      "rank": 71
     },
     {
       "dog_id": 10621,
@@ -1460,7 +1592,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 66
+      "rank": 72
     },
     {
       "dog_id": 726,
@@ -1482,7 +1614,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 67
+      "rank": 73
     },
     {
       "dog_id": 504,
@@ -1504,7 +1636,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 68
+      "rank": 74
     },
     {
       "dog_id": 5900,
@@ -1526,7 +1658,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 69
+      "rank": 75
     },
     {
       "dog_id": 779,
@@ -1548,51 +1680,29 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 70
+      "rank": 76
     },
     {
       "dog_id": 6068,
       "name_lat": "STANGERS LAND IRTYSH TERRIFIC",
       "name_ru": "СТАНГЕРС ЛАНД ИРТЫШ ТЕРРИФИК",
       "breed": "УИППЕТ",
-      "sex": null,
+      "sex": "Кобель",
       "owner": null,
       "pedigree_url": "https://whippet.breedarchive.com/animal/view/stangers-land-irtysh-terrific-725cb583-aea1-4e64-baba-122d897259a8",
-      "total_starts": 5,
+      "total_starts": 6,
       "best_score": 348,
-      "avg_judge_score": 84.4,
+      "avg_judge_score": 84.29,
       "best_judge_score": 90,
       "gold": 0,
       "silver": 1,
       "bronze": 1,
       "elo_rating": 1516,
-      "elo_races": 4,
-      "elo_reliable": false,
-      "elo_low_data": true,
-      "elo_insufficient": false,
-      "rank": 71
-    },
-    {
-      "dog_id": 5896,
-      "name_lat": "BARCELONA ENCANTADORA",
-      "name_ru": "БАРСЕЛОНА ЭНКАНТАДОРА",
-      "breed": "УИППЕТ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": "https://whippet.breedarchive.com/animal/view/barcelona-encantadora-0be7d2fd-2593-40d8-a791-d05a2c0441ef",
-      "total_starts": 10,
-      "best_score": 525,
-      "avg_judge_score": 82.73,
-      "best_judge_score": 92,
-      "gold": 1,
-      "silver": 2,
-      "bronze": 0,
-      "elo_rating": 1515,
       "elo_races": 6,
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 72
+      "rank": 77
     },
     {
       "dog_id": 544,
@@ -1614,7 +1724,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 73
+      "rank": 78
     },
     {
       "dog_id": 691,
@@ -1636,7 +1746,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 74
+      "rank": 79
     },
     {
       "dog_id": 717,
@@ -1658,29 +1768,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 75
-    },
-    {
-      "dog_id": 5821,
-      "name_lat": "INDIANA JONES",
-      "name_ru": "ИНДИАНА ДЖОНС",
-      "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": "https://cirneco.breedarchive.com/animal/view/indiana-jones-d1137fdb-e4a0-48a8-80fd-674bf430a8b6",
-      "total_starts": 13,
-      "best_score": 347,
-      "avg_judge_score": 82.47,
-      "best_judge_score": 93,
-      "gold": 0,
-      "silver": 7,
-      "bronze": 4,
-      "elo_rating": 1514,
-      "elo_races": 4,
-      "elo_reliable": false,
-      "elo_low_data": true,
-      "elo_insufficient": false,
-      "rank": 76
+      "rank": 80
     },
     {
       "dog_id": 5891,
@@ -1702,7 +1790,29 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 77
+      "rank": 81
+    },
+    {
+      "dog_id": 5906,
+      "name_lat": "HEIDI SOTIS DELIMARA MINTAKA",
+      "name_ru": "ХЕЙДИ СОТИС ДЕЛИМАРА МИНТАКА",
+      "breed": "ФАРАОНОВА СОБАКА",
+      "sex": "Сука",
+      "owner": null,
+      "pedigree_url": "https://pharaohhound.breedarchive.com/animal/view/heidi-sotis-delimara-mintaka-4e79b054-2f7c-4cdc-8cd8-caa241634607",
+      "total_starts": 6,
+      "best_score": 359,
+      "avg_judge_score": 85.42,
+      "best_judge_score": 92,
+      "gold": 4,
+      "silver": 0,
+      "bronze": 1,
+      "elo_rating": 1514,
+      "elo_races": 8,
+      "elo_reliable": true,
+      "elo_low_data": false,
+      "elo_insufficient": false,
+      "rank": 82
     },
     {
       "dog_id": 6232,
@@ -1724,7 +1834,29 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 78
+      "rank": 83
+    },
+    {
+      "dog_id": 5644,
+      "name_lat": "СТАНГЕРС ЛАНД КОРИЦА /STANGERS LAND KORITSA",
+      "name_ru": "СТАНГЕРС ЛАНД КОРИЦА /STANGERS LAND KORITSA",
+      "breed": "УИППЕТ",
+      "sex": "Сука",
+      "owner": null,
+      "pedigree_url": "https://whippet.breedarchive.com/animal/view/stangers-land-koritsa-d2c8ed84-41ad-4731-bed8-01ab995f8078",
+      "total_starts": 6,
+      "best_score": 348,
+      "avg_judge_score": 84.88,
+      "best_judge_score": 90,
+      "gold": 0,
+      "silver": 1,
+      "bronze": 2,
+      "elo_rating": 1513,
+      "elo_races": 12,
+      "elo_reliable": true,
+      "elo_low_data": false,
+      "elo_insufficient": false,
+      "rank": 84
     },
     {
       "dog_id": 314,
@@ -1746,7 +1878,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 79
+      "rank": 85
     },
     {
       "dog_id": 712,
@@ -1768,7 +1900,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 80
+      "rank": 86
     },
     {
       "dog_id": 5858,
@@ -1790,29 +1922,29 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 81
+      "rank": 87
     },
     {
       "dog_id": 6036,
       "name_lat": "IRKISS RAZZO CHIANTI",
       "name_ru": "ИРКИСС РАЦЦО КЬЯНТИ",
       "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
-      "sex": null,
+      "sex": "Сука",
       "owner": null,
       "pedigree_url": "https://cirneco.breedarchive.com/animal/view/irkiss-razzo-chianti-be080f38-7b30-457c-bd15-2e2b542d949c",
-      "total_starts": 8,
+      "total_starts": 9,
       "best_score": 351,
-      "avg_judge_score": 82.75,
+      "avg_judge_score": 82.86,
       "best_judge_score": 90,
       "gold": 5,
       "silver": 2,
       "bronze": 1,
       "elo_rating": 1513,
-      "elo_races": 6,
-      "elo_reliable": false,
-      "elo_low_data": true,
+      "elo_races": 8,
+      "elo_reliable": true,
+      "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 82
+      "rank": 88
     },
     {
       "dog_id": 6031,
@@ -1834,7 +1966,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 83
+      "rank": 89
     },
     {
       "dog_id": 6285,
@@ -1856,7 +1988,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 84
+      "rank": 90
     },
     {
       "dog_id": 5668,
@@ -1878,29 +2010,29 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 85
+      "rank": 91
     },
     {
       "dog_id": 5755,
       "name_lat": "ARIES KHAN SAMUEL FORSAGE JACKSON",
       "name_ru": "ARIES KHAN SAMUEL FORSAGE JACKSON",
       "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
-      "sex": null,
+      "sex": "Кобель",
       "owner": null,
       "pedigree_url": null,
-      "total_starts": 10,
+      "total_starts": 11,
       "best_score": 498,
-      "avg_judge_score": 79.36,
+      "avg_judge_score": 79.4,
       "best_judge_score": 91,
       "gold": 1,
-      "silver": 0,
+      "silver": 1,
       "bronze": 4,
       "elo_rating": 1512,
-      "elo_races": 8,
+      "elo_races": 10,
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 86
+      "rank": 92
     },
     {
       "dog_id": 750,
@@ -1922,7 +2054,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 87
+      "rank": 93
     },
     {
       "dog_id": 853,
@@ -1944,7 +2076,29 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 88
+      "rank": 94
+    },
+    {
+      "dog_id": 5646,
+      "name_lat": "STANGERS LAND VALENCIA",
+      "name_ru": "СТАНГЕРС ЛАНД ВАЛЕНСИЯ",
+      "breed": "УИППЕТ",
+      "sex": "Сука",
+      "owner": null,
+      "pedigree_url": "https://whippet.breedarchive.com/animal/view/stangers-land-valencia-03f1aa88-e96b-4d07-822c-cf5fab04c640",
+      "total_starts": 30,
+      "best_score": 368,
+      "avg_judge_score": 87.38,
+      "best_judge_score": 98,
+      "gold": 8,
+      "silver": 8,
+      "bronze": 4,
+      "elo_rating": 1511,
+      "elo_races": 14,
+      "elo_reliable": true,
+      "elo_low_data": false,
+      "elo_insufficient": false,
+      "rank": 95
     },
     {
       "dog_id": 5638,
@@ -1966,7 +2120,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 89
+      "rank": 96
     },
     {
       "dog_id": 683,
@@ -1988,7 +2142,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 90
+      "rank": 97
     },
     {
       "dog_id": 836,
@@ -2010,29 +2164,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 91
-    },
-    {
-      "dog_id": 5823,
-      "name_lat": "IRKISS SLAVA",
-      "name_ru": "ИРКИСС СЛАВА",
-      "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": "https://cirneco.breedarchive.com/animal/view/irkiss-slava-1f9c9009-7142-4bd1-a95b-6e9ab68e768a",
-      "total_starts": 8,
-      "best_score": 353,
-      "avg_judge_score": 82.44,
-      "best_judge_score": 90,
-      "gold": 3,
-      "silver": 2,
-      "bronze": 2,
-      "elo_rating": 1511,
-      "elo_races": 4,
-      "elo_reliable": false,
-      "elo_low_data": true,
-      "elo_insufficient": false,
-      "rank": 92
+      "rank": 98
     },
     {
       "dog_id": 5783,
@@ -2054,29 +2186,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 93
-    },
-    {
-      "dog_id": 756,
-      "name_lat": "WILDABOUT DOUBLE ATOMIC RACE",
-      "name_ru": "WILDABOUT DOUBLE ATOMIC RACE",
-      "breed": "УИППЕТ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": "https://whippet.breedarchive.com/animal/view/wildabout-double-atomic-race-237cb5dd-f7b1-44bc-bdc9-3d91c24d11c7",
-      "total_starts": 4,
-      "best_score": 347,
-      "avg_judge_score": 83.88,
-      "best_judge_score": 90,
-      "gold": 1,
-      "silver": 2,
-      "bronze": 0,
-      "elo_rating": 1511,
-      "elo_races": 8,
-      "elo_reliable": true,
-      "elo_low_data": false,
-      "elo_insufficient": false,
-      "rank": 94
+      "rank": 99
     },
     {
       "dog_id": 765,
@@ -2098,7 +2208,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 95
+      "rank": 100
     },
     {
       "dog_id": 309,
@@ -2120,14 +2230,14 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 96
+      "rank": 101
     },
     {
       "dog_id": 5874,
       "name_lat": "WITCH OF SHERWOOD",
       "name_ru": "WITCH OF SHERWOOD",
       "breed": "УИППЕТ",
-      "sex": null,
+      "sex": "Сука",
       "owner": null,
       "pedigree_url": "https://whippet.breedarchive.com/animal/view/witch-of-sherwood-f9bea523-2c78-426b-a717-caf7db8a1c73",
       "total_starts": 13,
@@ -2142,7 +2252,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 97
+      "rank": 102
     },
     {
       "dog_id": 878,
@@ -2164,29 +2274,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 98
-    },
-    {
-      "dog_id": 5644,
-      "name_lat": "СТАНГЕРС ЛАНД КОРИЦА /STANGERS LAND KORITSA",
-      "name_ru": "СТАНГЕРС ЛАНД КОРИЦА /STANGERS LAND KORITSA",
-      "breed": "УИППЕТ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": "https://whippet.breedarchive.com/animal/view/stangers-land-koritsa-d2c8ed84-41ad-4731-bed8-01ab995f8078",
-      "total_starts": 5,
-      "best_score": 348,
-      "avg_judge_score": 84.45,
-      "best_judge_score": 90,
-      "gold": 0,
-      "silver": 1,
-      "bronze": 2,
-      "elo_rating": 1509,
-      "elo_races": 10,
-      "elo_reliable": true,
-      "elo_low_data": false,
-      "elo_insufficient": false,
-      "rank": 99
+      "rank": 103
     },
     {
       "dog_id": 5647,
@@ -2208,29 +2296,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 100
-    },
-    {
-      "dog_id": 643,
-      "name_lat": "URAL ULKEN SATTILIK NORTH FAMILY",
-      "name_ru": "URAL ULKEN SATTILIK NORTH FAMILY",
-      "breed": "УИППЕТ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": "https://whippet.breedarchive.com/animal/view/ural-ulken-sattilik-north-family-25447262-8ae1-417a-baaa-bbb194c3a4ab",
-      "total_starts": 2,
-      "best_score": 341,
-      "avg_judge_score": 85.13,
-      "best_judge_score": 88,
-      "gold": 2,
-      "silver": 0,
-      "bronze": 0,
-      "elo_rating": 1509,
-      "elo_races": 4,
-      "elo_reliable": false,
-      "elo_low_data": true,
-      "elo_insufficient": false,
-      "rank": 101
+      "rank": 104
     },
     {
       "dog_id": 152,
@@ -2252,7 +2318,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 102
+      "rank": 105
     },
     {
       "dog_id": 5822,
@@ -2274,14 +2340,14 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 103
+      "rank": 106
     },
     {
       "dog_id": 5878,
       "name_lat": "WHOLE WORLD IN HER EYES",
       "name_ru": "УХОУЛ УОРЛД ИН ХЕ АЙЗ",
       "breed": "УИППЕТ",
-      "sex": null,
+      "sex": "Сука",
       "owner": null,
       "pedigree_url": "https://whippet.breedarchive.com/animal/view/whole-world-in-her-eyes-b1c838c1-5c78-4e03-b4ee-651a8d5d2d82",
       "total_starts": 15,
@@ -2296,7 +2362,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 104
+      "rank": 107
     },
     {
       "dog_id": 5947,
@@ -2318,51 +2384,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 105
-    },
-    {
-      "dog_id": 5637,
-      "name_lat": "STANGERS LAND IRWIN DIVNYI",
-      "name_ru": "СТАНГЕРС ЛАНД ИРВИН ДИВНЫЙ",
-      "breed": "УИППЕТ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": "https://whippet.breedarchive.com/animal/view/stangers-land-irwin-divnyi-2227644b-ae0c-47e7-a75f-7100a35a8ba0",
-      "total_starts": 17,
-      "best_score": 530,
-      "avg_judge_score": 85.5,
-      "best_judge_score": 98,
-      "gold": 4,
-      "silver": 3,
-      "bronze": 1,
-      "elo_rating": 1508,
-      "elo_races": 10,
-      "elo_reliable": true,
-      "elo_low_data": false,
-      "elo_insufficient": false,
-      "rank": 106
-    },
-    {
-      "dog_id": 5661,
-      "name_lat": "STANGERS LAND INTERNAL ENERGY",
-      "name_ru": "СТАНГЕРС ЛАНД ИНТЕРНАЛ ЭНЕРДЖИ",
-      "breed": "УИППЕТ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": "https://whippet.breedarchive.com/animal/view/stangers-land-internal-energy-efc9e0bf-c569-45b0-bc49-1a69d78eccb9",
-      "total_starts": 9,
-      "best_score": 533,
-      "avg_judge_score": 86.38,
-      "best_judge_score": 94,
-      "gold": 1,
-      "silver": 1,
-      "bronze": 3,
-      "elo_rating": 1508,
-      "elo_races": 8,
-      "elo_reliable": true,
-      "elo_low_data": false,
-      "elo_insufficient": false,
-      "rank": 107
+      "rank": 108
     },
     {
       "dog_id": 5968,
@@ -2384,7 +2406,29 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 108
+      "rank": 109
+    },
+    {
+      "dog_id": 85,
+      "name_lat": "STANGERS LAND BRATISLAVA",
+      "name_ru": "STANGERS LAND BRATISLAVA",
+      "breed": "УИППЕТ",
+      "sex": "Сука",
+      "owner": null,
+      "pedigree_url": "https://whippet.breedarchive.com/animal/view/stangers-land-bratislava-db3fb012-8c49-492a-8c37-6063624b663d",
+      "total_starts": 21,
+      "best_score": 539,
+      "avg_judge_score": 88.3,
+      "best_judge_score": 95,
+      "gold": 2,
+      "silver": 2,
+      "bronze": 6,
+      "elo_rating": 1508,
+      "elo_races": 4,
+      "elo_reliable": false,
+      "elo_low_data": true,
+      "elo_insufficient": false,
+      "rank": 110
     },
     {
       "dog_id": 5977,
@@ -2406,7 +2450,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 109
+      "rank": 111
     },
     {
       "dog_id": 6176,
@@ -2428,7 +2472,29 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 110
+      "rank": 112
+    },
+    {
+      "dog_id": 643,
+      "name_lat": "URAL ULKEN SATTILIK NORTH FAMILY",
+      "name_ru": "URAL ULKEN SATTILIK NORTH FAMILY",
+      "breed": "УИППЕТ",
+      "sex": "Кобель",
+      "owner": null,
+      "pedigree_url": "https://whippet.breedarchive.com/animal/view/ural-ulken-sattilik-north-family-25447262-8ae1-417a-baaa-bbb194c3a4ab",
+      "total_starts": 3,
+      "best_score": 352,
+      "avg_judge_score": 86.08,
+      "best_judge_score": 91,
+      "gold": 3,
+      "silver": 0,
+      "bronze": 0,
+      "elo_rating": 1507,
+      "elo_races": 6,
+      "elo_reliable": false,
+      "elo_low_data": true,
+      "elo_insufficient": false,
+      "rank": 113
     },
     {
       "dog_id": 35,
@@ -2450,7 +2516,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 111
+      "rank": 114
     },
     {
       "dog_id": 311,
@@ -2472,7 +2538,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 112
+      "rank": 115
     },
     {
       "dog_id": 713,
@@ -2494,42 +2560,20 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 113
+      "rank": 116
     },
     {
-      "dog_id": 5907,
-      "name_lat": "AMENEMHET ANDORA TA MALTA",
-      "name_ru": "АМЕНЕМХЕТ АНДОРА ТА МАЛЬТА",
-      "breed": "ФАРАОНОВА СОБАКА",
-      "sex": null,
+      "dog_id": 5811,
+      "name_lat": "МИКЕЛЕ АНДЖЕЛО ДЕЛЬ СОЛЕ /MICHELE ANGELO DEL SOLE",
+      "name_ru": "МИКЕЛЕ АНДЖЕЛО ДЕЛЬ СОЛЕ /MICHELE ANGELO DEL SOLE",
+      "breed": "УИППЕТ",
+      "sex": "Кобель",
       "owner": null,
-      "pedigree_url": "https://pharaohhound.breedarchive.com/animal/view/amenemhet-andora-ta-malta-c2850585-5a72-478f-be4c-be71f186e7f4",
-      "total_starts": 16,
-      "best_score": 348,
-      "avg_judge_score": 83.56,
-      "best_judge_score": 92,
-      "gold": 4,
-      "silver": 7,
-      "bronze": 3,
-      "elo_rating": 1507,
-      "elo_races": 6,
-      "elo_reliable": false,
-      "elo_low_data": true,
-      "elo_insufficient": false,
-      "rank": 114
-    },
-    {
-      "dog_id": 5902,
-      "name_lat": "HEIDI SOTIS DESHRET GEB",
-      "name_ru": "ХЕЙДИ СОТИС ДИШРЕТ ГЕБ",
-      "breed": "ФАРАОНОВА СОБАКА",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": "https://pharaohhound.breedarchive.com/animal/view/heidi-sotis-deshret-geb-9900134c-7556-40b5-bcf2-d7038d6720b0",
+      "pedigree_url": "https://whippet.breedarchive.com/animal/view/michele-angelo-del-sole-2712e057-89ac-4dd3-a6a3-6d6ca766fc92",
       "total_starts": 2,
-      "best_score": 331,
-      "avg_judge_score": 82.63,
-      "best_judge_score": 86,
+      "best_score": 354,
+      "avg_judge_score": 87.75,
+      "best_judge_score": 98,
       "gold": 1,
       "silver": 0,
       "bronze": 1,
@@ -2538,7 +2582,29 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 115
+      "rank": 117
+    },
+    {
+      "dog_id": 5896,
+      "name_lat": "BARCELONA ENCANTADORA",
+      "name_ru": "БАРСЕЛОНА ЭНКАНТАДОРА",
+      "breed": "УИППЕТ",
+      "sex": "Сука",
+      "owner": null,
+      "pedigree_url": "https://whippet.breedarchive.com/animal/view/barcelona-encantadora-0be7d2fd-2593-40d8-a791-d05a2c0441ef",
+      "total_starts": 11,
+      "best_score": 525,
+      "avg_judge_score": 83.07,
+      "best_judge_score": 92,
+      "gold": 1,
+      "silver": 2,
+      "bronze": 0,
+      "elo_rating": 1507,
+      "elo_races": 8,
+      "elo_reliable": true,
+      "elo_low_data": false,
+      "elo_insufficient": false,
+      "rank": 118
     },
     {
       "dog_id": 427,
@@ -2560,7 +2626,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 116
+      "rank": 119
     },
     {
       "dog_id": 867,
@@ -2582,7 +2648,29 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 117
+      "rank": 120
+    },
+    {
+      "dog_id": 7363,
+      "name_lat": "ROSSO BOREALE VRAENT KOBI",
+      "name_ru": "РОССО БОРЕАЛЕ ВРАЕНТ КОБИ",
+      "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+      "sex": "Кобель",
+      "owner": null,
+      "pedigree_url": "https://cirneco.breedarchive.com/animal/view/rosso-boreale-vraent-kobi-146ff751-1db1-4783-8c8c-5de7afce1761",
+      "total_starts": 11,
+      "best_score": 359,
+      "avg_judge_score": 84.93,
+      "best_judge_score": 94,
+      "gold": 4,
+      "silver": 2,
+      "bronze": 2,
+      "elo_rating": 1507,
+      "elo_races": 2,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 121
     },
     {
       "dog_id": 5748,
@@ -2604,51 +2692,51 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 118
+      "rank": 122
     },
     {
-      "dog_id": 5903,
-      "name_lat": "HEIDI SOTIS DJED ATUM",
-      "name_ru": "ХЕЙДИ СОТИС ДЖЕД АТУМ",
-      "breed": "ФАРАОНОВА СОБАКА",
-      "sex": null,
+      "dog_id": 5798,
+      "name_lat": "STANGERS LAND KOMETA",
+      "name_ru": "СТАНГЕРС ЛАНД КОМЕТА",
+      "breed": "УИППЕТ",
+      "sex": "Сука",
       "owner": null,
-      "pedigree_url": "https://pharaohhound.breedarchive.com/animal/view/heidi-sotis-djed-atum-88f77a8b-3fd8-49b8-882d-c6739d8b671f",
-      "total_starts": 2,
-      "best_score": 357,
-      "avg_judge_score": 85.75,
-      "best_judge_score": 91,
-      "gold": 1,
-      "silver": 0,
-      "bronze": 0,
-      "elo_rating": 1506,
-      "elo_races": 4,
-      "elo_reliable": false,
-      "elo_low_data": true,
-      "elo_insufficient": false,
-      "rank": 119
-    },
-    {
-      "dog_id": 5906,
-      "name_lat": "HEIDI SOTIS DELIMARA MINTAKA",
-      "name_ru": "ХЕЙДИ СОТИС ДЕЛИМАРА МИНТАКА",
-      "breed": "ФАРАОНОВА СОБАКА",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": "https://pharaohhound.breedarchive.com/animal/view/heidi-sotis-delimara-mintaka-4e79b054-2f7c-4cdc-8cd8-caa241634607",
+      "pedigree_url": "https://whippet.breedarchive.com/animal/view/stangers-land-kometa-0ba4b120-d8e9-45bb-b8f3-b11e101da1f8",
       "total_starts": 5,
-      "best_score": 359,
-      "avg_judge_score": 85.35,
-      "best_judge_score": 92,
-      "gold": 4,
-      "silver": 0,
-      "bronze": 0,
+      "best_score": 356,
+      "avg_judge_score": 87.06,
+      "best_judge_score": 95,
+      "gold": 1,
+      "silver": 2,
+      "bronze": 1,
+      "elo_rating": 1506,
+      "elo_races": 9,
+      "elo_reliable": true,
+      "elo_low_data": false,
+      "elo_insufficient": false,
+      "rank": 123
+    },
+    {
+      "dog_id": 5902,
+      "name_lat": "HEIDI SOTIS DESHRET GEB",
+      "name_ru": "ХЕЙДИ СОТИС ДИШРЕТ ГЕБ",
+      "breed": "ФАРАОНОВА СОБАКА",
+      "sex": "Кобель",
+      "owner": null,
+      "pedigree_url": "https://pharaohhound.breedarchive.com/animal/view/heidi-sotis-deshret-geb-9900134c-7556-40b5-bcf2-d7038d6720b0",
+      "total_starts": 3,
+      "best_score": 347,
+      "avg_judge_score": 84,
+      "best_judge_score": 90,
+      "gold": 1,
+      "silver": 1,
+      "bronze": 1,
       "elo_rating": 1506,
       "elo_races": 6,
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 120
+      "rank": 124
     },
     {
       "dog_id": 5954,
@@ -2670,7 +2758,29 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 121
+      "rank": 125
+    },
+    {
+      "dog_id": 6152,
+      "name_lat": "ARIES KHAN SCYTHIAN SIMURAN",
+      "name_ru": "АРИЕС ХАН СКИФ СИМУРАН",
+      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+      "sex": "Кобель",
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 8,
+      "best_score": 351,
+      "avg_judge_score": 83.9,
+      "best_judge_score": 92,
+      "gold": 5,
+      "silver": 2,
+      "bronze": 0,
+      "elo_rating": 1506,
+      "elo_races": 4,
+      "elo_reliable": false,
+      "elo_low_data": true,
+      "elo_insufficient": false,
+      "rank": 126
     },
     {
       "dog_id": 10767,
@@ -2692,51 +2802,95 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 122
+      "rank": 127
     },
     {
-      "dog_id": 5646,
-      "name_lat": "STANGERS LAND VALENCIA",
-      "name_ru": "СТАНГЕРС ЛАНД ВАЛЕНСИЯ",
+      "dog_id": 5637,
+      "name_lat": "STANGERS LAND IRWIN DIVNYI",
+      "name_ru": "СТАНГЕРС ЛАНД ИРВИН ДИВНЫЙ",
       "breed": "УИППЕТ",
-      "sex": null,
+      "sex": "Кобель",
       "owner": null,
-      "pedigree_url": "https://whippet.breedarchive.com/animal/view/stangers-land-valencia-03f1aa88-e96b-4d07-822c-cf5fab04c640",
-      "total_starts": 29,
-      "best_score": 368,
-      "avg_judge_score": 87.38,
+      "pedigree_url": "https://whippet.breedarchive.com/animal/view/stangers-land-irwin-divnyi-2227644b-ae0c-47e7-a75f-7100a35a8ba0",
+      "total_starts": 18,
+      "best_score": 530,
+      "avg_judge_score": 85.47,
       "best_judge_score": 98,
-      "gold": 8,
-      "silver": 8,
-      "bronze": 4,
+      "gold": 4,
+      "silver": 3,
+      "bronze": 1,
       "elo_rating": 1505,
       "elo_races": 12,
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 123
+      "rank": 128
     },
     {
       "dog_id": 5683,
       "name_lat": "ХАУС ЗЭ РЭЙНБОУ УЗОЧИ ЗИКИМО",
       "name_ru": "ХАУС ЗЭ РЭЙНБОУ УЗОЧИ ЗИКИМО",
       "breed": "БАСЕНДЖИ",
-      "sex": null,
+      "sex": "Кобель",
       "owner": null,
       "pedigree_url": null,
-      "total_starts": 17,
+      "total_starts": 18,
       "best_score": 353,
-      "avg_judge_score": 85.81,
+      "avg_judge_score": 85.96,
       "best_judge_score": 93,
-      "gold": 9,
+      "gold": 10,
       "silver": 3,
       "bronze": 0,
       "elo_rating": 1505,
-      "elo_races": 4,
+      "elo_races": 6,
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 124
+      "rank": 129
+    },
+    {
+      "dog_id": 5803,
+      "name_lat": "YARYJ VETER IZ POLETA MECHTI",
+      "name_ru": "ЯРЫЙ ВЕТЕР ИЗ ПОЛЕТА МЕЧТЫ",
+      "breed": "УИППЕТ",
+      "sex": "Кобель",
+      "owner": null,
+      "pedigree_url": "https://whippet.breedarchive.com/animal/view/yaryj-veter-iz-poleta-mechti-44612092-94ad-4927-989b-df0f61e5dcc2",
+      "total_starts": 8,
+      "best_score": 353,
+      "avg_judge_score": 85.75,
+      "best_judge_score": 98,
+      "gold": 0,
+      "silver": 2,
+      "bronze": 1,
+      "elo_rating": 1505,
+      "elo_races": 6,
+      "elo_reliable": false,
+      "elo_low_data": true,
+      "elo_insufficient": false,
+      "rank": 130
+    },
+    {
+      "dog_id": 5907,
+      "name_lat": "AMENEMHET ANDORA TA MALTA",
+      "name_ru": "АМЕНЕМХЕТ АНДОРА ТА МАЛЬТА",
+      "breed": "ФАРАОНОВА СОБАКА",
+      "sex": "Сука",
+      "owner": null,
+      "pedigree_url": "https://pharaohhound.breedarchive.com/animal/view/amenemhet-andora-ta-malta-c2850585-5a72-478f-be4c-be71f186e7f4",
+      "total_starts": 17,
+      "best_score": 348,
+      "avg_judge_score": 83.71,
+      "best_judge_score": 92,
+      "gold": 4,
+      "silver": 7,
+      "bronze": 3,
+      "elo_rating": 1505,
+      "elo_races": 8,
+      "elo_reliable": true,
+      "elo_low_data": false,
+      "elo_insufficient": false,
+      "rank": 131
     },
     {
       "dog_id": 5998,
@@ -2758,7 +2912,51 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 125
+      "rank": 132
+    },
+    {
+      "dog_id": 10750,
+      "name_lat": "SHNEYDER RICH REM",
+      "name_ru": "ШНЕЙДЕР РИЧ РЭМ",
+      "breed": "ФАРАОНОВА СОБАКА",
+      "sex": "male",
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 1,
+      "best_score": 338,
+      "avg_judge_score": 84.5,
+      "best_judge_score": 86,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 1,
+      "elo_rating": 1505,
+      "elo_races": 2,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 133
+    },
+    {
+      "dog_id": 5661,
+      "name_lat": "STANGERS LAND INTERNAL ENERGY",
+      "name_ru": "СТАНГЕРС ЛАНД ИНТЕРНАЛ ЭНЕРДЖИ",
+      "breed": "УИППЕТ",
+      "sex": "Сука",
+      "owner": null,
+      "pedigree_url": "https://whippet.breedarchive.com/animal/view/stangers-land-internal-energy-efc9e0bf-c569-45b0-bc49-1a69d78eccb9",
+      "total_starts": 10,
+      "best_score": 533,
+      "avg_judge_score": 86.36,
+      "best_judge_score": 94,
+      "gold": 1,
+      "silver": 1,
+      "bronze": 3,
+      "elo_rating": 1504,
+      "elo_races": 10,
+      "elo_reliable": true,
+      "elo_low_data": false,
+      "elo_insufficient": false,
+      "rank": 134
     },
     {
       "dog_id": 5694,
@@ -2780,7 +2978,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 126
+      "rank": 135
     },
     {
       "dog_id": 5966,
@@ -2802,14 +3000,36 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 127
+      "rank": 136
+    },
+    {
+      "dog_id": 9271,
+      "name_lat": "МИСТФИЛД ДОДЖЕР",
+      "name_ru": "МИСТФИЛД ДОДЖЕР",
+      "breed": "УИППЕТ",
+      "sex": "Кобель",
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 6,
+      "best_score": 360,
+      "avg_judge_score": 87.21,
+      "best_judge_score": 99,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "elo_rating": 1504,
+      "elo_races": 2,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 137
     },
     {
       "dog_id": 5650,
       "name_lat": "BRAVE HEART SIMBA",
       "name_ru": "БРЕЙВ ХАРТ СИМБА",
       "breed": "УИППЕТ",
-      "sex": null,
+      "sex": "Кобель",
       "owner": null,
       "pedigree_url": "https://whippet.breedarchive.com/animal/view/brave-heart-simba-6d7081ca-f18b-446a-bed6-07e1eed9df4c",
       "total_starts": 12,
@@ -2824,7 +3044,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 128
+      "rank": 138
     },
     {
       "dog_id": 5633,
@@ -2846,29 +3066,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 129
-    },
-    {
-      "dog_id": 5725,
-      "name_lat": "ИНТРИГАС ВИАРДО /INTRIGAS VIARDO",
-      "name_ru": "ИНТРИГАС ВИАРДО /INTRIGAS VIARDO",
-      "breed": "УИППЕТ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": null,
-      "total_starts": 4,
-      "best_score": 357,
-      "avg_judge_score": 87.38,
-      "best_judge_score": 96,
-      "gold": 0,
-      "silver": 1,
-      "bronze": 0,
-      "elo_rating": 1503,
-      "elo_races": 2,
-      "elo_reliable": false,
-      "elo_low_data": false,
-      "elo_insufficient": true,
-      "rank": 130
+      "rank": 139
     },
     {
       "dog_id": 707,
@@ -2890,7 +3088,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 131
+      "rank": 140
     },
     {
       "dog_id": 706,
@@ -2912,7 +3110,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 132
+      "rank": 141
     },
     {
       "dog_id": 5749,
@@ -2934,7 +3132,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 133
+      "rank": 142
     },
     {
       "dog_id": 819,
@@ -2956,29 +3154,29 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 134
+      "rank": 143
     },
     {
-      "dog_id": 5811,
-      "name_lat": "МИКЕЛЕ АНДЖЕЛО ДЕЛЬ СОЛЕ /MICHELE ANGELO DEL SOLE",
-      "name_ru": "МИКЕЛЕ АНДЖЕЛО ДЕЛЬ СОЛЕ /MICHELE ANGELO DEL SOLE",
-      "breed": "УИППЕТ",
-      "sex": null,
+      "dog_id": 5823,
+      "name_lat": "IRKISS SLAVA",
+      "name_ru": "ИРКИСС СЛАВА",
+      "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+      "sex": "Сука",
       "owner": null,
-      "pedigree_url": "https://whippet.breedarchive.com/animal/view/michele-angelo-del-sole-2712e057-89ac-4dd3-a6a3-6d6ca766fc92",
-      "total_starts": 1,
-      "best_score": 354,
-      "avg_judge_score": 88.5,
-      "best_judge_score": 98,
-      "gold": 1,
-      "silver": 0,
-      "bronze": 0,
+      "pedigree_url": "https://cirneco.breedarchive.com/animal/view/irkiss-slava-1f9c9009-7142-4bd1-a95b-6e9ab68e768a",
+      "total_starts": 9,
+      "best_score": 353,
+      "avg_judge_score": 81.81,
+      "best_judge_score": 90,
+      "gold": 3,
+      "silver": 2,
+      "bronze": 2,
       "elo_rating": 1503,
-      "elo_races": 2,
+      "elo_races": 6,
       "elo_reliable": false,
-      "elo_low_data": false,
-      "elo_insufficient": true,
-      "rank": 135
+      "elo_low_data": true,
+      "elo_insufficient": false,
+      "rank": 144
     },
     {
       "dog_id": 5836,
@@ -3000,14 +3198,14 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 136
+      "rank": 145
     },
     {
       "dog_id": 5889,
       "name_lat": "УОКИНГ УЭЛШ РУТС /WALKING WELSH ROUTES",
       "name_ru": "УОКИНГ УЭЛШ РУТС /WALKING WELSH ROUTES",
       "breed": "УИППЕТ",
-      "sex": null,
+      "sex": "Кобель",
       "owner": null,
       "pedigree_url": "https://whippet.breedarchive.com/animal/view/walking-welsh-routes-7ea02781-2571-4e14-8bea-99a15a4ede18",
       "total_starts": 15,
@@ -3022,7 +3220,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 137
+      "rank": 146
     },
     {
       "dog_id": 778,
@@ -3044,7 +3242,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 138
+      "rank": 147
     },
     {
       "dog_id": 136,
@@ -3066,7 +3264,29 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 139
+      "rank": 148
+    },
+    {
+      "dog_id": 10792,
+      "name_lat": "AIYA WIND",
+      "name_ru": "АЙЯ ВИНД",
+      "breed": "Уиппет",
+      "sex": "Сука",
+      "owner": "Корнилова М.",
+      "pedigree_url": null,
+      "total_starts": 1,
+      "best_score": 356,
+      "avg_judge_score": 89,
+      "best_judge_score": 90,
+      "gold": 0,
+      "silver": 1,
+      "bronze": 0,
+      "elo_rating": 1503,
+      "elo_races": 2,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 149
     },
     {
       "dog_id": 5617,
@@ -3088,29 +3308,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 140
-    },
-    {
-      "dog_id": 270,
-      "name_lat": "STANGERS LAND BRIZA",
-      "name_ru": "STANGERS LAND BRIZA",
-      "breed": "УИППЕТ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": "https://whippet.breedarchive.com/animal/view/stangers-land-briza-f36c1675-d31e-48a5-940f-48c2a3f03a0e",
-      "total_starts": 24,
-      "best_score": 534,
-      "avg_judge_score": 87.84,
-      "best_judge_score": 97,
-      "gold": 5,
-      "silver": 3,
-      "bronze": 1,
-      "elo_rating": 1502,
-      "elo_races": 4,
-      "elo_reliable": false,
-      "elo_low_data": true,
-      "elo_insufficient": false,
-      "rank": 141
+      "rank": 150
     },
     {
       "dog_id": 5741,
@@ -3132,7 +3330,29 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 142
+      "rank": 151
+    },
+    {
+      "dog_id": 5821,
+      "name_lat": "INDIANA JONES",
+      "name_ru": "ИНДИАНА ДЖОНС",
+      "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+      "sex": "Кобель",
+      "owner": null,
+      "pedigree_url": "https://cirneco.breedarchive.com/animal/view/indiana-jones-d1137fdb-e4a0-48a8-80fd-674bf430a8b6",
+      "total_starts": 14,
+      "best_score": 347,
+      "avg_judge_score": 82.36,
+      "best_judge_score": 93,
+      "gold": 0,
+      "silver": 7,
+      "bronze": 4,
+      "elo_rating": 1502,
+      "elo_races": 6,
+      "elo_reliable": false,
+      "elo_low_data": true,
+      "elo_insufficient": false,
+      "rank": 152
     },
     {
       "dog_id": 768,
@@ -3154,29 +3374,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 143
-    },
-    {
-      "dog_id": 6027,
-      "name_lat": "ГРЕЙС КЭНДИ /GRACE CANDY",
-      "name_ru": "ГРЕЙС КЭНДИ /GRACE CANDY",
-      "breed": "УИППЕТ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": "https://whippet.breedarchive.com/animal/view/grace-candy-8e55c9d0-8deb-45ff-83fc-cabe289271dd",
-      "total_starts": 9,
-      "best_score": 351,
-      "avg_judge_score": 83.34,
-      "best_judge_score": 94,
-      "gold": 0,
-      "silver": 1,
-      "bronze": 4,
-      "elo_rating": 1502,
-      "elo_races": 4,
-      "elo_reliable": false,
-      "elo_low_data": true,
-      "elo_insufficient": false,
-      "rank": 144
+      "rank": 153
     },
     {
       "dog_id": 671,
@@ -3198,7 +3396,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 145
+      "rank": 154
     },
     {
       "dog_id": 689,
@@ -3220,7 +3418,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 146
+      "rank": 155
     },
     {
       "dog_id": 6197,
@@ -3242,7 +3440,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 147
+      "rank": 156
     },
     {
       "dog_id": 6223,
@@ -3264,7 +3462,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 148
+      "rank": 157
     },
     {
       "dog_id": 5628,
@@ -3286,7 +3484,29 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 149
+      "rank": 158
+    },
+    {
+      "dog_id": 5662,
+      "name_lat": "STANGERS LAND EZHEVIKA",
+      "name_ru": "СТАНГЕРС ЛАНД ЕЖЕВИКА",
+      "breed": "УИППЕТ",
+      "sex": "Сука",
+      "owner": null,
+      "pedigree_url": "https://whippet.breedarchive.com/animal/view/stangers-land-ezhevika-94f9d47e-7e9f-413f-bae6-2be1b8d04475",
+      "total_starts": 24,
+      "best_score": 510,
+      "avg_judge_score": 86.48,
+      "best_judge_score": 94,
+      "gold": 6,
+      "silver": 7,
+      "bronze": 4,
+      "elo_rating": 1500,
+      "elo_races": 7,
+      "elo_reliable": false,
+      "elo_low_data": true,
+      "elo_insufficient": false,
+      "rank": 159
     },
     {
       "dog_id": 5643,
@@ -3308,7 +3528,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 150
+      "rank": 160
     },
     {
       "dog_id": 647,
@@ -3330,7 +3550,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 151
+      "rank": 161
     },
     {
       "dog_id": 648,
@@ -3352,7 +3572,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 152
+      "rank": 162
     },
     {
       "dog_id": 652,
@@ -3374,7 +3594,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 153
+      "rank": 163
     },
     {
       "dog_id": 653,
@@ -3396,7 +3616,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 154
+      "rank": 164
     },
     {
       "dog_id": 654,
@@ -3418,7 +3638,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 155
+      "rank": 165
     },
     {
       "dog_id": 656,
@@ -3440,7 +3660,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 156
+      "rank": 166
     },
     {
       "dog_id": 129,
@@ -3462,7 +3682,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 157
+      "rank": 167
     },
     {
       "dog_id": 669,
@@ -3484,7 +3704,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 158
+      "rank": 168
     },
     {
       "dog_id": 667,
@@ -3506,7 +3726,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 159
+      "rank": 169
     },
     {
       "dog_id": 665,
@@ -3528,7 +3748,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 160
+      "rank": 170
     },
     {
       "dog_id": 666,
@@ -3550,7 +3770,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 161
+      "rank": 171
     },
     {
       "dog_id": 668,
@@ -3572,7 +3792,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 162
+      "rank": 172
     },
     {
       "dog_id": 688,
@@ -3594,7 +3814,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 163
+      "rank": 173
     },
     {
       "dog_id": 5712,
@@ -3616,7 +3836,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 164
+      "rank": 174
     },
     {
       "dog_id": 698,
@@ -3638,7 +3858,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 165
+      "rank": 175
     },
     {
       "dog_id": 699,
@@ -3660,7 +3880,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 166
+      "rank": 176
     },
     {
       "dog_id": 5700,
@@ -3682,7 +3902,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 167
+      "rank": 177
     },
     {
       "dog_id": 695,
@@ -3704,7 +3924,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 168
+      "rank": 178
     },
     {
       "dog_id": 716,
@@ -3726,7 +3946,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 169
+      "rank": 179
     },
     {
       "dog_id": 720,
@@ -3748,7 +3968,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 170
+      "rank": 180
     },
     {
       "dog_id": 710,
@@ -3770,7 +3990,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 171
+      "rank": 181
     },
     {
       "dog_id": 711,
@@ -3792,7 +4012,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 172
+      "rank": 182
     },
     {
       "dog_id": 7397,
@@ -3814,7 +4034,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 173
+      "rank": 183
     },
     {
       "dog_id": 745,
@@ -3836,7 +4056,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 174
+      "rank": 184
     },
     {
       "dog_id": 747,
@@ -3858,36 +4078,14 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 175
-    },
-    {
-      "dog_id": 5879,
-      "name_lat": "STANGERS LAND ISLANDIYA FLARING ICE",
-      "name_ru": "СТАНГЕРС ЛАНД ИСЛАНДИЯ ФЛЭРИНГ АЙС",
-      "breed": "УИППЕТ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": "https://whippet.breedarchive.com/animal/view/stangers-land-islandiya-flaring-ice-67363bac-c9ea-484d-ad2d-cbe17ac9a7ee",
-      "total_starts": 13,
-      "best_score": 356,
-      "avg_judge_score": 85.02,
-      "best_judge_score": 94,
-      "gold": 1,
-      "silver": 1,
-      "bronze": 2,
-      "elo_rating": 1500,
-      "elo_races": 6,
-      "elo_reliable": false,
-      "elo_low_data": true,
-      "elo_insufficient": false,
-      "rank": 176
+      "rank": 185
     },
     {
       "dog_id": 5909,
       "name_lat": "ЦВЕТ СОЛНЦА ЖИЗНЕННЫЙ ПРИНЦИП ЛЮБИТЬ /TSVET SOLNTSA ZHIZNENNYY PRINTSIP LYUBIT",
       "name_ru": "ЦВЕТ СОЛНЦА ЖИЗНЕННЫЙ ПРИНЦИП ЛЮБИТЬ /TSVET SOLNTSA ZHIZNENNYY PRINTSIP LYUBIT",
       "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
-      "sex": null,
+      "sex": "Кобель",
       "owner": null,
       "pedigree_url": null,
       "total_starts": 2,
@@ -3902,7 +4100,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 177
+      "rank": 186
     },
     {
       "dog_id": 774,
@@ -3924,7 +4122,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 178
+      "rank": 187
     },
     {
       "dog_id": 775,
@@ -3946,7 +4144,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 179
+      "rank": 188
     },
     {
       "dog_id": 783,
@@ -3968,7 +4166,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 180
+      "rank": 189
     },
     {
       "dog_id": 771,
@@ -3990,7 +4188,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 181
+      "rank": 190
     },
     {
       "dog_id": 764,
@@ -4012,7 +4210,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 182
+      "rank": 191
     },
     {
       "dog_id": 784,
@@ -4034,7 +4232,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 183
+      "rank": 192
     },
     {
       "dog_id": 780,
@@ -4056,7 +4254,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 184
+      "rank": 193
     },
     {
       "dog_id": 828,
@@ -4078,7 +4276,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 185
+      "rank": 194
     },
     {
       "dog_id": 50,
@@ -4100,7 +4298,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 186
+      "rank": 195
     },
     {
       "dog_id": 869,
@@ -4122,7 +4320,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 187
+      "rank": 196
     },
     {
       "dog_id": 27,
@@ -4144,7 +4342,359 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 188
+      "rank": 197
+    },
+    {
+      "dog_id": 10777,
+      "name_lat": "SHERWOOD S KNJAZHESKOGO DVORA",
+      "name_ru": "ШЕРВУД С КНЯЖЕСКОГО ДВОРА",
+      "breed": "Басенджи",
+      "sex": "Кобель",
+      "owner": "Милютина Е.С.",
+      "pedigree_url": null,
+      "total_starts": 1,
+      "best_score": 343,
+      "avg_judge_score": 85.75,
+      "best_judge_score": 89,
+      "gold": 0,
+      "silver": 1,
+      "bronze": 0,
+      "elo_rating": 1500,
+      "elo_races": 2,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 198
+    },
+    {
+      "dog_id": 43,
+      "name_lat": "SUNRISE LEUR ADAM",
+      "name_ru": "SUNRISE LEUR ADAM",
+      "breed": "БАСЕНДЖИ",
+      "sex": "Кобель",
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 18,
+      "best_score": 355,
+      "avg_judge_score": 84.63,
+      "best_judge_score": 91,
+      "gold": 2,
+      "silver": 7,
+      "bronze": 3,
+      "elo_rating": 1500,
+      "elo_races": 2,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 199
+    },
+    {
+      "dog_id": 10778,
+      "name_lat": "SEMARGL",
+      "name_ru": "СЕМАРГЛ",
+      "breed": "Ирландский вольфхаунд",
+      "sex": "Кобель",
+      "owner": "Румянцева Е.В.",
+      "pedigree_url": null,
+      "total_starts": 1,
+      "best_score": 325,
+      "avg_judge_score": 81.25,
+      "best_judge_score": 88,
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0,
+      "elo_rating": 1500,
+      "elo_races": 2,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 200
+    },
+    {
+      "dog_id": 10779,
+      "name_lat": "SOLAR SPIRIT VEGA",
+      "name_ru": "СОЛАР СПИРИТ ВЕГА",
+      "breed": "Родезийский риджбек",
+      "sex": "Сука",
+      "owner": "Галактионова C.Н.",
+      "pedigree_url": null,
+      "total_starts": 1,
+      "best_score": 319,
+      "avg_judge_score": 79.75,
+      "best_judge_score": 84,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 1,
+      "elo_rating": 1500,
+      "elo_races": 2,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 201
+    },
+    {
+      "dog_id": 10266,
+      "name_lat": "ДЖЕЛАНИ РЕД ТРОЙ",
+      "name_ru": "ДЖЕЛАНИ РЕД ТРОЙ",
+      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+      "sex": "Кобель",
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 2,
+      "best_score": 350,
+      "avg_judge_score": 82.75,
+      "best_judge_score": 88,
+      "gold": 2,
+      "silver": 0,
+      "bronze": 0,
+      "elo_rating": 1500,
+      "elo_races": 2,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 202
+    },
+    {
+      "dog_id": 10787,
+      "name_lat": "STANGERS LAND LAGGAR FALCON",
+      "name_ru": "СТАНГЕРС ЛАНД ЛАГГАР ФАЛКОН",
+      "breed": "Уиппет",
+      "sex": "Кобель",
+      "owner": "Аверина О.В.",
+      "pedigree_url": null,
+      "total_starts": 1,
+      "best_score": 345,
+      "avg_judge_score": 86.25,
+      "best_judge_score": 92,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "elo_rating": 1500,
+      "elo_races": 2,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 203
+    },
+    {
+      "dog_id": 10788,
+      "name_lat": "ANGELIC WINGS",
+      "name_ru": "АНГЕЛИК ВИНГС",
+      "breed": "Уиппет",
+      "sex": "Сука",
+      "owner": "Мальцева Э.Р.",
+      "pedigree_url": null,
+      "total_starts": 1,
+      "best_score": 356,
+      "avg_judge_score": 89,
+      "best_judge_score": 92,
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0,
+      "elo_rating": 1500,
+      "elo_races": 2,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 204
+    },
+    {
+      "dog_id": 10789,
+      "name_lat": "DREAMY DOVE",
+      "name_ru": "ДРИМИ ДАВ",
+      "breed": "Уиппет",
+      "sex": "Сука",
+      "owner": "Чичкина О.О.",
+      "pedigree_url": null,
+      "total_starts": 1,
+      "best_score": 351,
+      "avg_judge_score": 87.75,
+      "best_judge_score": 91,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "elo_rating": 1500,
+      "elo_races": 2,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 205
+    },
+    {
+      "dog_id": 10790,
+      "name_lat": "FIRE FIELD AGNIS",
+      "name_ru": "ФАЙЕР ФИЛД АГНИС",
+      "breed": "Уиппет",
+      "sex": "Кобель",
+      "owner": "Шевченко А.А.",
+      "pedigree_url": null,
+      "total_starts": 1,
+      "best_score": 340,
+      "avg_judge_score": 85,
+      "best_judge_score": 87,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "elo_rating": 1500,
+      "elo_races": 2,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 206
+    },
+    {
+      "dog_id": 10791,
+      "name_lat": "INTRIGA'S MARVEL",
+      "name_ru": "ИНТРИГА'С МАРВЕЛ",
+      "breed": "Уиппет",
+      "sex": "Кобель",
+      "owner": "Рябова О.А. / Маляренко Н.В.",
+      "pedigree_url": null,
+      "total_starts": 1,
+      "best_score": 347,
+      "avg_judge_score": 86.75,
+      "best_judge_score": 89,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "elo_rating": 1500,
+      "elo_races": 2,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 207
+    },
+    {
+      "dog_id": 10794,
+      "name_lat": "RESTLESS WHIP DENIZE",
+      "name_ru": "РЕСТЛЕСС УИП ДЕНИЗЕ",
+      "breed": "Уиппет",
+      "sex": "Сука",
+      "owner": "Pusep Y.N.",
+      "pedigree_url": null,
+      "total_starts": 1,
+      "best_score": 341,
+      "avg_judge_score": 85.25,
+      "best_judge_score": 87,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "elo_rating": 1500,
+      "elo_races": 2,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 208
+    },
+    {
+      "dog_id": 9714,
+      "name_lat": "У ДАР ХАН",
+      "name_ru": "У ДАР ХАН",
+      "breed": "ХОРТАЯ БОРЗАЯ",
+      "sex": "Кобель",
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 1,
+      "best_score": 352,
+      "avg_judge_score": 88,
+      "best_judge_score": 90,
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0,
+      "elo_rating": 1500,
+      "elo_races": 2,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 209
+    },
+    {
+      "dog_id": 10795,
+      "name_lat": "ARTU",
+      "name_ru": "АРТУ",
+      "breed": "Чирнеко дель Этна",
+      "sex": "Кобель",
+      "owner": "Никулина И.A.",
+      "pedigree_url": null,
+      "total_starts": 1,
+      "best_score": 347,
+      "avg_judge_score": 86.75,
+      "best_judge_score": 89,
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0,
+      "elo_rating": 1500,
+      "elo_races": 2,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 210
+    },
+    {
+      "dog_id": 10796,
+      "name_lat": "IRKISS VIVA ILLYRIA",
+      "name_ru": "ИРКИСС ВИВА ИЛЛИРИЯ",
+      "breed": "Чирнеко дель Этна",
+      "sex": "Сука",
+      "owner": "Епишина Т.А.",
+      "pedigree_url": null,
+      "total_starts": 1,
+      "best_score": 343,
+      "avg_judge_score": 85.75,
+      "best_judge_score": 91,
+      "gold": 0,
+      "silver": 1,
+      "bronze": 0,
+      "elo_rating": 1500,
+      "elo_races": 2,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 211
+    },
+    {
+      "dog_id": 7120,
+      "name_lat": "ROSSO BOREALE VITTORIYA SIDA",
+      "name_ru": "РОССО БОРЕАЛЕ ВИТТОРИЯ СИДА",
+      "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+      "sex": "Сука",
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 17,
+      "best_score": 362,
+      "avg_judge_score": 83.85,
+      "best_judge_score": 176,
+      "gold": 5,
+      "silver": 2,
+      "bronze": 4,
+      "elo_rating": 1500,
+      "elo_races": 2,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 212
+    },
+    {
+      "dog_id": 282,
+      "name_lat": "TESORO SOLARE DOMENICO",
+      "name_ru": "TESORO SOLARE DOMENICO",
+      "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+      "sex": "Кобель",
+      "owner": null,
+      "pedigree_url": "https://cirneco.breedarchive.com/animal/view/tesoro-solare-domenico-c6db290e-8631-4dcd-a49c-a47f608f929b",
+      "total_starts": 18,
+      "best_score": 354,
+      "avg_judge_score": 80.28,
+      "best_judge_score": 91,
+      "gold": 8,
+      "silver": 5,
+      "bronze": 1,
+      "elo_rating": 1500,
+      "elo_races": 2,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 213
     },
     {
       "dog_id": 245,
@@ -4166,7 +4716,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 189
+      "rank": 214
     },
     {
       "dog_id": 690,
@@ -4188,14 +4738,14 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 190
+      "rank": 215
     },
     {
       "dog_id": 738,
       "name_lat": "ALPHAS BORA",
       "name_ru": "ALPHAS BORA",
       "breed": "УИППЕТ",
-      "sex": null,
+      "sex": "Кобель",
       "owner": null,
       "pedigree_url": "https://whippet.breedarchive.com/animal/view/alphas-bora-294dfa90-d56e-4b8d-b001-1aa723b429a0",
       "total_starts": 3,
@@ -4210,7 +4760,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 191
+      "rank": 216
     },
     {
       "dog_id": 6122,
@@ -4232,7 +4782,29 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 192
+      "rank": 217
+    },
+    {
+      "dog_id": 7365,
+      "name_lat": "ROSSO BOREALE VARVARA",
+      "name_ru": "РОССО БОРЕАЛЕ ВАРВАРА",
+      "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+      "sex": "Сука",
+      "owner": null,
+      "pedigree_url": "https://cirneco.breedarchive.com/animal/view/rosso-boreale-varvara-6c6b983c-885a-4cb6-81f6-2245cbc7ca9b",
+      "total_starts": 12,
+      "best_score": 352,
+      "avg_judge_score": 85.29,
+      "best_judge_score": 91,
+      "gold": 6,
+      "silver": 4,
+      "bronze": 1,
+      "elo_rating": 1499,
+      "elo_races": 2,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 218
     },
     {
       "dog_id": 673,
@@ -4254,7 +4826,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 193
+      "rank": 219
     },
     {
       "dog_id": 685,
@@ -4276,7 +4848,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 194
+      "rank": 220
     },
     {
       "dog_id": 5792,
@@ -4298,7 +4870,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 195
+      "rank": 221
     },
     {
       "dog_id": 769,
@@ -4320,7 +4892,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 196
+      "rank": 222
     },
     {
       "dog_id": 708,
@@ -4342,7 +4914,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 197
+      "rank": 223
     },
     {
       "dog_id": 709,
@@ -4364,36 +4936,14 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 198
-    },
-    {
-      "dog_id": 5798,
-      "name_lat": "STANGERS LAND KOMETA",
-      "name_ru": "СТАНГЕРС ЛАНД КОМЕТА",
-      "breed": "УИППЕТ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": "https://whippet.breedarchive.com/animal/view/stangers-land-kometa-0ba4b120-d8e9-45bb-b8f3-b11e101da1f8",
-      "total_starts": 4,
-      "best_score": 352,
-      "avg_judge_score": 86.42,
-      "best_judge_score": 95,
-      "gold": 1,
-      "silver": 2,
-      "bronze": 0,
-      "elo_rating": 1497,
-      "elo_races": 7,
-      "elo_reliable": false,
-      "elo_low_data": true,
-      "elo_insufficient": false,
-      "rank": 199
+      "rank": 224
     },
     {
       "dog_id": 5814,
       "name_lat": "ЕРЕМА /EREMA",
       "name_ru": "ЕРЕМА /EREMA",
       "breed": "УИППЕТ",
-      "sex": null,
+      "sex": "Кобель",
       "owner": null,
       "pedigree_url": null,
       "total_starts": 1,
@@ -4408,7 +4958,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 200
+      "rank": 225
     },
     {
       "dog_id": 5763,
@@ -4430,51 +4980,95 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 201
+      "rank": 226
     },
     {
-      "dog_id": 85,
-      "name_lat": "STANGERS LAND BRATISLAVA",
-      "name_ru": "STANGERS LAND BRATISLAVA",
+      "dog_id": 6027,
+      "name_lat": "ГРЕЙС КЭНДИ /GRACE CANDY",
+      "name_ru": "ГРЕЙС КЭНДИ /GRACE CANDY",
       "breed": "УИППЕТ",
-      "sex": null,
+      "sex": "Сука",
       "owner": null,
-      "pedigree_url": "https://whippet.breedarchive.com/animal/view/stangers-land-bratislava-db3fb012-8c49-492a-8c37-6063624b663d",
-      "total_starts": 20,
-      "best_score": 539,
-      "avg_judge_score": 88.36,
-      "best_judge_score": 95,
-      "gold": 1,
-      "silver": 2,
-      "bronze": 6,
+      "pedigree_url": "https://whippet.breedarchive.com/animal/view/grace-candy-8e55c9d0-8deb-45ff-83fc-cabe289271dd",
+      "total_starts": 10,
+      "best_score": 351,
+      "avg_judge_score": 83.49,
+      "best_judge_score": 94,
+      "gold": 0,
+      "silver": 1,
+      "bronze": 4,
+      "elo_rating": 1497,
+      "elo_races": 6,
+      "elo_reliable": false,
+      "elo_low_data": true,
+      "elo_insufficient": false,
+      "rank": 227
+    },
+    {
+      "dog_id": 10776,
+      "name_lat": "INTRIGA'S MAGNOLIA",
+      "name_ru": "ИНТРИГАС МАГНОЛИЯ",
+      "breed": "УИППЕТ",
+      "sex": "Сука",
+      "owner": "Горельченко О.М.",
+      "pedigree_url": null,
+      "total_starts": 1,
+      "best_score": 347,
+      "avg_judge_score": 86.75,
+      "best_judge_score": 89,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
       "elo_rating": 1497,
       "elo_races": 2,
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 202
+      "rank": 228
     },
     {
-      "dog_id": 5803,
-      "name_lat": "YARYJ VETER IZ POLETA MECHTI",
-      "name_ru": "ЯРЫЙ ВЕТЕР ИЗ ПОЛЕТА МЕЧТЫ",
-      "breed": "УИППЕТ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": "https://whippet.breedarchive.com/animal/view/yaryj-veter-iz-poleta-mechti-44612092-94ad-4927-989b-df0f61e5dcc2",
-      "total_starts": 7,
+      "dog_id": 10793,
+      "name_lat": "E'NIKTA",
+      "name_ru": "Е'НИКТА",
+      "breed": "Уиппет",
+      "sex": "Сука",
+      "owner": "Лагунова И.В.",
+      "pedigree_url": null,
+      "total_starts": 1,
       "best_score": 353,
-      "avg_judge_score": 85.46,
-      "best_judge_score": 98,
+      "avg_judge_score": 88.25,
+      "best_judge_score": 89,
       "gold": 0,
-      "silver": 1,
-      "bronze": 1,
-      "elo_rating": 1496,
-      "elo_races": 4,
+      "silver": 0,
+      "bronze": 0,
+      "elo_rating": 1497,
+      "elo_races": 2,
       "elo_reliable": false,
-      "elo_low_data": true,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 229
+    },
+    {
+      "dog_id": 5652,
+      "name_lat": "ИСТОРИЯ ЛЮБВИ ИЗУМРУД",
+      "name_ru": "ИСТОРИЯ ЛЮБВИ ИЗУМРУД",
+      "breed": "УИППЕТ",
+      "sex": "Кобель",
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 22,
+      "best_score": 358,
+      "avg_judge_score": 85.85,
+      "best_judge_score": 98,
+      "gold": 6,
+      "silver": 4,
+      "bronze": 3,
+      "elo_rating": 1496,
+      "elo_races": 13,
+      "elo_reliable": true,
+      "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 203
+      "rank": 230
     },
     {
       "dog_id": 822,
@@ -4496,7 +5090,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 204
+      "rank": 231
     },
     {
       "dog_id": 6198,
@@ -4518,7 +5112,29 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 205
+      "rank": 232
+    },
+    {
+      "dog_id": 10769,
+      "name_lat": "HALLAM TERRA OBSESSION AT REEDLY ROAD",
+      "name_ru": "ХАЛЛАМ ТЕРРА ОБСЕСШН ЭТ РИДЛИ РОУД",
+      "breed": "ФАРАОНОВА СОБАКА",
+      "sex": "female",
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 1,
+      "best_score": 347,
+      "avg_judge_score": 86.75,
+      "best_judge_score": 88,
+      "gold": 0,
+      "silver": 1,
+      "bronze": 0,
+      "elo_rating": 1496,
+      "elo_races": 2,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 233
     },
     {
       "dog_id": 612,
@@ -4540,29 +5156,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 206
-    },
-    {
-      "dog_id": 697,
-      "name_lat": "СТАНГЕРС ЛАНД КАСПИЙ /STANGERS LAND KASPIJ",
-      "name_ru": "СТАНГЕРС ЛАНД КАСПИЙ /STANGERS LAND KASPIJ",
-      "breed": "УИППЕТ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": "https://whippet.breedarchive.com/animal/view/stangers-land-kaspij-95486b10-9433-4bff-84ab-110f31b1be69",
-      "total_starts": 3,
-      "best_score": 346,
-      "avg_judge_score": 82.75,
-      "best_judge_score": 89,
-      "gold": 1,
-      "silver": 0,
-      "bronze": 1,
-      "elo_rating": 1495,
-      "elo_races": 6,
-      "elo_reliable": false,
-      "elo_low_data": true,
-      "elo_insufficient": false,
-      "rank": 207
+      "rank": 234
     },
     {
       "dog_id": 5760,
@@ -4584,7 +5178,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 208
+      "rank": 235
     },
     {
       "dog_id": 5872,
@@ -4606,7 +5200,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 209
+      "rank": 236
     },
     {
       "dog_id": 5860,
@@ -4628,7 +5222,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 210
+      "rank": 237
     },
     {
       "dog_id": 6273,
@@ -4650,7 +5244,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 211
+      "rank": 238
     },
     {
       "dog_id": 5649,
@@ -4672,14 +5266,14 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 212
+      "rank": 239
     },
     {
       "dog_id": 5653,
       "name_lat": "SAGITA VOLAT GERO POST TE",
       "name_ru": "САДЖИТЕЙ ВОЛЕЙТ ГЕРО ПОСТ ТЕ",
       "breed": "УИППЕТ",
-      "sex": null,
+      "sex": "Кобель",
       "owner": null,
       "pedigree_url": null,
       "total_starts": 8,
@@ -4694,29 +5288,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 213
-    },
-    {
-      "dog_id": 5662,
-      "name_lat": "STANGERS LAND EZHEVIKA",
-      "name_ru": "СТАНГЕРС ЛАНД ЕЖЕВИКА",
-      "breed": "УИППЕТ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": "https://whippet.breedarchive.com/animal/view/stangers-land-ezhevika-94f9d47e-7e9f-413f-bae6-2be1b8d04475",
-      "total_starts": 23,
-      "best_score": 510,
-      "avg_judge_score": 86.44,
-      "best_judge_score": 94,
-      "gold": 6,
-      "silver": 7,
-      "bronze": 4,
-      "elo_rating": 1494,
-      "elo_races": 5,
-      "elo_reliable": false,
-      "elo_low_data": true,
-      "elo_insufficient": false,
-      "rank": 214
+      "rank": 240
     },
     {
       "dog_id": 5663,
@@ -4738,7 +5310,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 215
+      "rank": 241
     },
     {
       "dog_id": 700,
@@ -4760,7 +5332,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 216
+      "rank": 242
     },
     {
       "dog_id": 7259,
@@ -4782,7 +5354,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 217
+      "rank": 243
     },
     {
       "dog_id": 686,
@@ -4804,7 +5376,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 218
+      "rank": 244
     },
     {
       "dog_id": 719,
@@ -4826,7 +5398,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 219
+      "rank": 245
     },
     {
       "dog_id": 781,
@@ -4848,14 +5420,14 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 220
+      "rank": 246
     },
     {
       "dog_id": 5962,
       "name_lat": "ARIES KHAN RIVIERA AL RISHA SANGREAL",
       "name_ru": "АРИЕС ХАН РИВЬЕРА АЛЬ РИША САНГРИЭЛЬ",
       "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
-      "sex": null,
+      "sex": "Сука",
       "owner": null,
       "pedigree_url": null,
       "total_starts": 35,
@@ -4870,7 +5442,29 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 221
+      "rank": 247
+    },
+    {
+      "dog_id": 10754,
+      "name_lat": "ERIN",
+      "name_ru": "ЭРИН",
+      "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+      "sex": "Сука",
+      "owner": "Беспалова П.А.",
+      "pedigree_url": null,
+      "total_starts": 1,
+      "best_score": 343,
+      "avg_judge_score": 85.75,
+      "best_judge_score": 88,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 1,
+      "elo_rating": 1494,
+      "elo_races": 2,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 248
     },
     {
       "dog_id": 5624,
@@ -4892,7 +5486,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 222
+      "rank": 249
     },
     {
       "dog_id": 36,
@@ -4914,7 +5508,51 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 223
+      "rank": 250
+    },
+    {
+      "dog_id": 270,
+      "name_lat": "STANGERS LAND BRIZA",
+      "name_ru": "STANGERS LAND BRIZA",
+      "breed": "УИППЕТ",
+      "sex": "Сука",
+      "owner": null,
+      "pedigree_url": "https://whippet.breedarchive.com/animal/view/stangers-land-briza-f36c1675-d31e-48a5-940f-48c2a3f03a0e",
+      "total_starts": 25,
+      "best_score": 534,
+      "avg_judge_score": 87.72,
+      "best_judge_score": 97,
+      "gold": 5,
+      "silver": 4,
+      "bronze": 1,
+      "elo_rating": 1493,
+      "elo_races": 6,
+      "elo_reliable": false,
+      "elo_low_data": true,
+      "elo_insufficient": false,
+      "rank": 251
+    },
+    {
+      "dog_id": 5736,
+      "name_lat": "NEVERITA’S RENUAR",
+      "name_ru": "НЕВЕРИТА’С РЕНУАР",
+      "breed": "БАСЕНДЖИ",
+      "sex": "Кобель",
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 5,
+      "best_score": 337,
+      "avg_judge_score": 81.11,
+      "best_judge_score": 87,
+      "gold": 0,
+      "silver": 2,
+      "bronze": 2,
+      "elo_rating": 1493,
+      "elo_races": 10,
+      "elo_reliable": true,
+      "elo_low_data": false,
+      "elo_insufficient": false,
+      "rank": 252
     },
     {
       "dog_id": 5757,
@@ -4936,7 +5574,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 224
+      "rank": 253
     },
     {
       "dog_id": 5764,
@@ -4958,7 +5596,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 225
+      "rank": 254
     },
     {
       "dog_id": 5784,
@@ -4980,14 +5618,14 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 226
+      "rank": 255
     },
     {
       "dog_id": 372,
       "name_lat": "ЕЕ ВЕЛИЧЕСТВО /EE VELITCHESTVO",
       "name_ru": "ЕЕ ВЕЛИЧЕСТВО /EE VELITCHESTVO",
       "breed": "БАСЕНДЖИ",
-      "sex": null,
+      "sex": "Сука",
       "owner": null,
       "pedigree_url": null,
       "total_starts": 10,
@@ -5002,14 +5640,58 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 227
+      "rank": 256
+    },
+    {
+      "dog_id": 5834,
+      "name_lat": "АПРИОРИ СТАР ЮКОС /APRIORI STAR YUKOS",
+      "name_ru": "АПРИОРИ СТАР ЮКОС /APRIORI STAR YUKOS",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
+      "sex": "Кобель",
+      "owner": null,
+      "pedigree_url": "https://italiangreyhound.breedarchive.com/animal/view/apriori-star-yukos-c242414e-38cc-423a-81ab-a4b1600730bf",
+      "total_starts": 5,
+      "best_score": 354,
+      "avg_judge_score": 85.1,
+      "best_judge_score": 95,
+      "gold": 2,
+      "silver": 3,
+      "bronze": 0,
+      "elo_rating": 1493,
+      "elo_races": 8,
+      "elo_reliable": true,
+      "elo_low_data": false,
+      "elo_insufficient": false,
+      "rank": 257
+    },
+    {
+      "dog_id": 5879,
+      "name_lat": "STANGERS LAND ISLANDIYA FLARING ICE",
+      "name_ru": "СТАНГЕРС ЛАНД ИСЛАНДИЯ ФЛЭРИНГ АЙС",
+      "breed": "УИППЕТ",
+      "sex": "Сука",
+      "owner": null,
+      "pedigree_url": "https://whippet.breedarchive.com/animal/view/stangers-land-islandiya-flaring-ice-67363bac-c9ea-484d-ad2d-cbe17ac9a7ee",
+      "total_starts": 14,
+      "best_score": 356,
+      "avg_judge_score": 85.08,
+      "best_judge_score": 94,
+      "gold": 1,
+      "silver": 1,
+      "bronze": 2,
+      "elo_rating": 1493,
+      "elo_races": 8,
+      "elo_reliable": true,
+      "elo_low_data": false,
+      "elo_insufficient": false,
+      "rank": 258
     },
     {
       "dog_id": 541,
       "name_lat": "APRIORI STAR SIRIUS SUNNI BOY",
       "name_ru": "АПРИОРИ СТАР СИРИУС СУННИ БОЙ",
       "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
-      "sex": null,
+      "sex": "Кобель",
       "owner": null,
       "pedigree_url": null,
       "total_starts": 10,
@@ -5024,7 +5706,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 228
+      "rank": 259
     },
     {
       "dog_id": 5664,
@@ -5046,7 +5728,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 229
+      "rank": 260
     },
     {
       "dog_id": 308,
@@ -5068,7 +5750,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 230
+      "rank": 261
     },
     {
       "dog_id": 718,
@@ -5090,7 +5772,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 231
+      "rank": 262
     },
     {
       "dog_id": 752,
@@ -5112,7 +5794,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 232
+      "rank": 263
     },
     {
       "dog_id": 5772,
@@ -5134,51 +5816,29 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 233
+      "rank": 264
     },
     {
-      "dog_id": 753,
-      "name_lat": "NOWRUZ NARCISSUS IBN MALA OD VJETRA",
-      "name_ru": "NOWRUZ NARCISSUS IBN MALA OD VJETRA",
-      "breed": "САЛЮКИ",
-      "sex": null,
+      "dog_id": 6137,
+      "name_lat": "PERM VELIKAYA ZEFIR",
+      "name_ru": "ПЕРМЬ ВЕЛИКАЯ ЗЕФИР",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
+      "sex": "Кобель",
       "owner": null,
-      "pedigree_url": "https://saluki.breedarchive.com/animal/view/nowruz-narcissus-ibn-mala-od-vjetra-a53671f1-de6b-496c-b5f2-0880c1bc6888",
-      "total_starts": 4,
-      "best_score": 334,
-      "avg_judge_score": 78.75,
-      "best_judge_score": 88,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 1,
+      "pedigree_url": "https://italiangreyhound.breedarchive.com/animal/view/perm-velikaya-zefir-3db4d7d8-a9e5-4b5d-9125-f65e7083aca2",
+      "total_starts": 13,
+      "best_score": 361,
+      "avg_judge_score": 82.8,
+      "best_judge_score": 98,
+      "gold": 2,
+      "silver": 8,
+      "bronze": 0,
       "elo_rating": 1492,
-      "elo_races": 6,
+      "elo_races": 4,
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 234
-    },
-    {
-      "dog_id": 6222,
-      "name_lat": "CHEREZ TERNII K ZVYOZDAM IZ POLETA MECHTI",
-      "name_ru": "ЧЕРЕЗ ТЕРНИИ К ЗВЕЗДАМ ИЗ ПОЛЕТА МЕЧТЫ",
-      "breed": "УИППЕТ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": "https://whippet.breedarchive.com/animal/view/cherez-ternii-k-zvyozdam-iz-poleta-mechti-4c74e027-5f86-414f-a8d7-78402cfee64d",
-      "total_starts": 4,
-      "best_score": 333,
-      "avg_judge_score": 87.31,
-      "best_judge_score": 176,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "elo_rating": 1492,
-      "elo_races": 2,
-      "elo_reliable": false,
-      "elo_low_data": false,
-      "elo_insufficient": true,
-      "rank": 235
+      "rank": 265
     },
     {
       "dog_id": 40,
@@ -5200,7 +5860,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 236
+      "rank": 266
     },
     {
       "dog_id": 692,
@@ -5222,7 +5882,29 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 237
+      "rank": 267
+    },
+    {
+      "dog_id": 118,
+      "name_lat": "ALIA LUX ZAFFIRO",
+      "name_ru": "ALIA LUX ZAFFIRO",
+      "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+      "sex": "Кобель",
+      "owner": null,
+      "pedigree_url": "https://cirneco.breedarchive.com/animal/view/alia-lux-zaffiro-42b92ed7-d5da-4fb0-9ee8-9a651d833484",
+      "total_starts": 9,
+      "best_score": 339,
+      "avg_judge_score": 81.36,
+      "best_judge_score": 90,
+      "gold": 1,
+      "silver": 4,
+      "bronze": 0,
+      "elo_rating": 1491,
+      "elo_races": 6,
+      "elo_reliable": false,
+      "elo_low_data": true,
+      "elo_insufficient": false,
+      "rank": 268
     },
     {
       "dog_id": 6202,
@@ -5244,7 +5926,29 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 238
+      "rank": 269
+    },
+    {
+      "dog_id": 10768,
+      "name_lat": "REEDLY ROAD WILLEMIJN",
+      "name_ru": "РИДЛИ РОУД ВИЛЛЕМЕЙН",
+      "breed": "ФАРАОНОВА СОБАКА",
+      "sex": "female",
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 1,
+      "best_score": 335,
+      "avg_judge_score": 83.75,
+      "best_judge_score": 87,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "elo_rating": 1491,
+      "elo_races": 2,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 270
     },
     {
       "dog_id": 5881,
@@ -5266,7 +5970,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 239
+      "rank": 271
     },
     {
       "dog_id": 9336,
@@ -5288,7 +5992,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 240
+      "rank": 272
     },
     {
       "dog_id": 6030,
@@ -5310,7 +6014,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 241
+      "rank": 273
     },
     {
       "dog_id": 6048,
@@ -5332,7 +6036,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 242
+      "rank": 274
     },
     {
       "dog_id": 855,
@@ -5354,7 +6058,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 243
+      "rank": 275
     },
     {
       "dog_id": 6250,
@@ -5376,51 +6080,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 244
-    },
-    {
-      "dog_id": 5652,
-      "name_lat": "ИСТОРИЯ ЛЮБВИ ИЗУМРУД",
-      "name_ru": "ИСТОРИЯ ЛЮБВИ ИЗУМРУД",
-      "breed": "УИППЕТ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": null,
-      "total_starts": 21,
-      "best_score": 358,
-      "avg_judge_score": 85.75,
-      "best_judge_score": 98,
-      "gold": 6,
-      "silver": 3,
-      "bronze": 3,
-      "elo_rating": 1489,
-      "elo_races": 11,
-      "elo_reliable": true,
-      "elo_low_data": false,
-      "elo_insufficient": false,
-      "rank": 245
-    },
-    {
-      "dog_id": 5729,
-      "name_lat": "ТИМИРЯЗЕВСКИЙ ПАРК МАРГАРЕТ /TIMIRIAZEVSKIJ PARK MARGARET",
-      "name_ru": "ТИМИРЯЗЕВСКИЙ ПАРК МАРГАРЕТ /TIMIRIAZEVSKIJ PARK MARGARET",
-      "breed": "УИППЕТ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": "https://whippet.breedarchive.com/animal/view/timiriazevskij-park-margaret-3eb638a9-3d2a-43a3-be0f-f27f3eedeb34",
-      "total_starts": 4,
-      "best_score": 362,
-      "avg_judge_score": 87.94,
-      "best_judge_score": 96,
-      "gold": 1,
-      "silver": 1,
-      "bronze": 1,
-      "elo_rating": 1489,
-      "elo_races": 2,
-      "elo_reliable": false,
-      "elo_low_data": false,
-      "elo_insufficient": true,
-      "rank": 246
+      "rank": 276
     },
     {
       "dog_id": 5696,
@@ -5442,7 +6102,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 247
+      "rank": 277
     },
     {
       "dog_id": 38,
@@ -5464,7 +6124,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 248
+      "rank": 278
     },
     {
       "dog_id": 5797,
@@ -5486,7 +6146,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 249
+      "rank": 279
     },
     {
       "dog_id": 737,
@@ -5508,7 +6168,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 250
+      "rank": 280
     },
     {
       "dog_id": 5774,
@@ -5530,51 +6190,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 251
-    },
-    {
-      "dog_id": 5834,
-      "name_lat": "АПРИОРИ СТАР ЮКОС /APRIORI STAR YUKOS",
-      "name_ru": "АПРИОРИ СТАР ЮКОС /APRIORI STAR YUKOS",
-      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": "https://italiangreyhound.breedarchive.com/animal/view/apriori-star-yukos-c242414e-38cc-423a-81ab-a4b1600730bf",
-      "total_starts": 4,
-      "best_score": 354,
-      "avg_judge_score": 84.69,
-      "best_judge_score": 95,
-      "gold": 1,
-      "silver": 3,
-      "bronze": 0,
-      "elo_rating": 1489,
-      "elo_races": 6,
-      "elo_reliable": false,
-      "elo_low_data": true,
-      "elo_insufficient": false,
-      "rank": 252
-    },
-    {
-      "dog_id": 369,
-      "name_lat": "GALMAD STAR VEDAGOR",
-      "name_ru": "GALMAD STAR VEDAGOR",
-      "breed": "ФАРАОНОВА СОБАКА",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": "https://pharaohhound.breedarchive.com/animal/view/galmad-star-vedagor-9352539a-f34e-4702-aaa5-9a0a43a01c12",
-      "total_starts": 8,
-      "best_score": 343,
-      "avg_judge_score": 83.63,
-      "best_judge_score": 89,
-      "gold": 2,
-      "silver": 0,
-      "bronze": 5,
-      "elo_rating": 1489,
-      "elo_races": 2,
-      "elo_reliable": false,
-      "elo_low_data": false,
-      "elo_insufficient": true,
-      "rank": 253
+      "rank": 281
     },
     {
       "dog_id": 767,
@@ -5596,7 +6212,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 254
+      "rank": 282
     },
     {
       "dog_id": 675,
@@ -5618,7 +6234,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 255
+      "rank": 283
     },
     {
       "dog_id": 5892,
@@ -5640,7 +6256,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 256
+      "rank": 284
     },
     {
       "dog_id": 854,
@@ -5662,7 +6278,29 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 257
+      "rank": 285
+    },
+    {
+      "dog_id": 8349,
+      "name_lat": "RITM SERDTSA IZ POLETA MECHTI",
+      "name_ru": "РИТМ СЕРДЦА ИЗ ПОЛЕТА МЕЧТЫ",
+      "breed": "УИППЕТ",
+      "sex": "Кобель",
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 5,
+      "best_score": 351,
+      "avg_judge_score": 88.41,
+      "best_judge_score": 156,
+      "gold": 0,
+      "silver": 1,
+      "bronze": 0,
+      "elo_rating": 1488,
+      "elo_races": 2,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 286
     },
     {
       "dog_id": 37,
@@ -5684,7 +6322,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 258
+      "rank": 287
     },
     {
       "dog_id": 5807,
@@ -5706,7 +6344,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 259
+      "rank": 288
     },
     {
       "dog_id": 5796,
@@ -5728,7 +6366,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 260
+      "rank": 289
     },
     {
       "dog_id": 5857,
@@ -5750,7 +6388,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 261
+      "rank": 290
     },
     {
       "dog_id": 782,
@@ -5772,14 +6410,14 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 262
+      "rank": 291
     },
     {
       "dog_id": 5964,
       "name_lat": "ARIES KHAN SKADI SARAMA FAST & FURIOUS",
       "name_ru": "АРИЕС ХАН СКАДИ САРАМА ФАСТ & ФЬЮРИОС",
       "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
-      "sex": null,
+      "sex": "Сука",
       "owner": null,
       "pedigree_url": null,
       "total_starts": 14,
@@ -5794,7 +6432,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 263
+      "rank": 292
     },
     {
       "dog_id": 500,
@@ -5816,7 +6454,29 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 264
+      "rank": 293
+    },
+    {
+      "dog_id": 5636,
+      "name_lat": "STANGERS LAND VINCENT",
+      "name_ru": "СТАНГЕРС ЛАНД ВИНСЕНТ",
+      "breed": "УИППЕТ",
+      "sex": "Кобель",
+      "owner": null,
+      "pedigree_url": "https://whippet.breedarchive.com/animal/view/stangers-land-vincent-b966bd10-2019-4794-9555-bb3fa2f1c502",
+      "total_starts": 26,
+      "best_score": 360,
+      "avg_judge_score": 84.74,
+      "best_judge_score": 93,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 3,
+      "elo_rating": 1486,
+      "elo_races": 12,
+      "elo_reliable": true,
+      "elo_low_data": false,
+      "elo_insufficient": false,
+      "rank": 294
     },
     {
       "dog_id": 321,
@@ -5838,7 +6498,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 265
+      "rank": 295
     },
     {
       "dog_id": 5756,
@@ -5860,7 +6520,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 266
+      "rank": 296
     },
     {
       "dog_id": 744,
@@ -5882,7 +6542,29 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 267
+      "rank": 297
+    },
+    {
+      "dog_id": 5908,
+      "name_lat": "HEIDI SOTIS DJGANTIYA MUT",
+      "name_ru": "ХЕЙДИ СОТИС ДЖГАНТИЯ МУТ",
+      "breed": "ФАРАОНОВА СОБАКА",
+      "sex": "Сука",
+      "owner": null,
+      "pedigree_url": "https://pharaohhound.breedarchive.com/animal/view/heidi-sotis-djgantiya-mut-28b0e4dc-2083-4a19-a3c8-9874b5874263",
+      "total_starts": 3,
+      "best_score": 355,
+      "avg_judge_score": 86.25,
+      "best_judge_score": 93,
+      "gold": 1,
+      "silver": 1,
+      "bronze": 1,
+      "elo_rating": 1486,
+      "elo_races": 6,
+      "elo_reliable": false,
+      "elo_low_data": true,
+      "elo_insufficient": false,
+      "rank": 298
     },
     {
       "dog_id": 5839,
@@ -5904,29 +6586,73 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 268
+      "rank": 299
     },
     {
-      "dog_id": 5636,
-      "name_lat": "STANGERS LAND VINCENT",
-      "name_ru": "СТАНГЕРС ЛАНД ВИНСЕНТ",
+      "dog_id": 6222,
+      "name_lat": "CHEREZ TERNII K ZVYOZDAM IZ POLETA MECHTI",
+      "name_ru": "ЧЕРЕЗ ТЕРНИИ К ЗВЕЗДАМ ИЗ ПОЛЕТА МЕЧТЫ",
       "breed": "УИППЕТ",
-      "sex": null,
+      "sex": "Кобель",
       "owner": null,
-      "pedigree_url": "https://whippet.breedarchive.com/animal/view/stangers-land-vincent-b966bd10-2019-4794-9555-bb3fa2f1c502",
-      "total_starts": 25,
-      "best_score": 360,
-      "avg_judge_score": 84.64,
-      "best_judge_score": 93,
+      "pedigree_url": "https://whippet.breedarchive.com/animal/view/cherez-ternii-k-zvyozdam-iz-poleta-mechti-4c74e027-5f86-414f-a8d7-78402cfee64d",
+      "total_starts": 5,
+      "best_score": 347,
+      "avg_judge_score": 87.18,
+      "best_judge_score": 176,
       "gold": 0,
       "silver": 0,
-      "bronze": 2,
-      "elo_rating": 1485,
-      "elo_races": 10,
-      "elo_reliable": true,
-      "elo_low_data": false,
+      "bronze": 0,
+      "elo_rating": 1486,
+      "elo_races": 4,
+      "elo_reliable": false,
+      "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 269
+      "rank": 300
+    },
+    {
+      "dog_id": 5725,
+      "name_lat": "ИНТРИГАС ВИАРДО /INTRIGAS VIARDO",
+      "name_ru": "ИНТРИГАС ВИАРДО /INTRIGAS VIARDO",
+      "breed": "УИППЕТ",
+      "sex": "Сука",
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 5,
+      "best_score": 357,
+      "avg_judge_score": 86.5,
+      "best_judge_score": 96,
+      "gold": 0,
+      "silver": 1,
+      "bronze": 0,
+      "elo_rating": 1485,
+      "elo_races": 4,
+      "elo_reliable": false,
+      "elo_low_data": true,
+      "elo_insufficient": false,
+      "rank": 301
+    },
+    {
+      "dog_id": 877,
+      "name_lat": "ДИАПЕНСИЯ ЛАППОНИКА /DIAPENSIA LAPPONICA",
+      "name_ru": "ДИАПЕНСИЯ ЛАППОНИКА /DIAPENSIA LAPPONICA",
+      "breed": "УИППЕТ",
+      "sex": "Сука",
+      "owner": null,
+      "pedigree_url": "https://whippet.breedarchive.com/animal/view/diapensia-lapponica-02b957de-d76d-4158-ad7b-c3e2668f507b",
+      "total_starts": 3,
+      "best_score": 351,
+      "avg_judge_score": 83.73,
+      "best_judge_score": 94,
+      "gold": 0,
+      "silver": 1,
+      "bronze": 0,
+      "elo_rating": 1485,
+      "elo_races": 6,
+      "elo_reliable": false,
+      "elo_low_data": true,
+      "elo_insufficient": false,
+      "rank": 302
     },
     {
       "dog_id": 7384,
@@ -5948,29 +6674,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 270
-    },
-    {
-      "dog_id": 118,
-      "name_lat": "ALIA LUX ZAFFIRO",
-      "name_ru": "ALIA LUX ZAFFIRO",
-      "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": "https://cirneco.breedarchive.com/animal/view/alia-lux-zaffiro-42b92ed7-d5da-4fb0-9ee8-9a651d833484",
-      "total_starts": 8,
-      "best_score": 339,
-      "avg_judge_score": 80.96,
-      "best_judge_score": 90,
-      "gold": 1,
-      "silver": 3,
-      "bronze": 0,
-      "elo_rating": 1485,
-      "elo_races": 4,
-      "elo_reliable": false,
-      "elo_low_data": true,
-      "elo_insufficient": false,
-      "rank": 271
+      "rank": 303
     },
     {
       "dog_id": 655,
@@ -5992,29 +6696,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 272
-    },
-    {
-      "dog_id": 5736,
-      "name_lat": "NEVERITA’S RENUAR",
-      "name_ru": "НЕВЕРИТА’С РЕНУАР",
-      "breed": "БАСЕНДЖИ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": null,
-      "total_starts": 4,
-      "best_score": 322,
-      "avg_judge_score": 80.21,
-      "best_judge_score": 86,
-      "gold": 0,
-      "silver": 2,
-      "bronze": 1,
-      "elo_rating": 1484,
-      "elo_races": 8,
-      "elo_reliable": true,
-      "elo_low_data": false,
-      "elo_insufficient": false,
-      "rank": 273
+      "rank": 304
     },
     {
       "dog_id": 5876,
@@ -6036,51 +6718,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 274
-    },
-    {
-      "dog_id": 831,
-      "name_lat": "TIMIRIAZEVSKIJ PARK OLIVIA",
-      "name_ru": "TIMIRIAZEVSKIJ PARK OLIVIA",
-      "breed": "УИППЕТ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": null,
-      "total_starts": 2,
-      "best_score": 350,
-      "avg_judge_score": 85.88,
-      "best_judge_score": 90,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "elo_rating": 1484,
-      "elo_races": 4,
-      "elo_reliable": false,
-      "elo_low_data": true,
-      "elo_insufficient": false,
-      "rank": 275
-    },
-    {
-      "dog_id": 6152,
-      "name_lat": "ARIES KHAN SCYTHIAN SIMURAN",
-      "name_ru": "АРИЕС ХАН СКИФ СИМУРАН",
-      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": null,
-      "total_starts": 7,
-      "best_score": 347,
-      "avg_judge_score": 83.31,
-      "best_judge_score": 92,
-      "gold": 4,
-      "silver": 2,
-      "bronze": 0,
-      "elo_rating": 1484,
-      "elo_races": 2,
-      "elo_reliable": false,
-      "elo_low_data": false,
-      "elo_insufficient": true,
-      "rank": 276
+      "rank": 305
     },
     {
       "dog_id": 773,
@@ -6102,29 +6740,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 277
-    },
-    {
-      "dog_id": 5908,
-      "name_lat": "HEIDI SOTIS DJGANTIYA MUT",
-      "name_ru": "ХЕЙДИ СОТИС ДЖГАНТИЯ МУТ",
-      "breed": "ФАРАОНОВА СОБАКА",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": "https://pharaohhound.breedarchive.com/animal/view/heidi-sotis-djgantiya-mut-28b0e4dc-2083-4a19-a3c8-9874b5874263",
-      "total_starts": 2,
-      "best_score": 355,
-      "avg_judge_score": 85.88,
-      "best_judge_score": 93,
-      "gold": 0,
-      "silver": 1,
-      "bronze": 1,
-      "elo_rating": 1483,
-      "elo_races": 4,
-      "elo_reliable": false,
-      "elo_low_data": true,
-      "elo_insufficient": false,
-      "rank": 278
+      "rank": 306
     },
     {
       "dog_id": 5632,
@@ -6146,7 +6762,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 279
+      "rank": 307
     },
     {
       "dog_id": 5969,
@@ -6168,7 +6784,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 280
+      "rank": 308
     },
     {
       "dog_id": 723,
@@ -6190,7 +6806,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 281
+      "rank": 309
     },
     {
       "dog_id": 5801,
@@ -6212,29 +6828,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 282
-    },
-    {
-      "dog_id": 877,
-      "name_lat": "ДИАПЕНСИЯ ЛАППОНИКА /DIAPENSIA LAPPONICA",
-      "name_ru": "ДИАПЕНСИЯ ЛАППОНИКА /DIAPENSIA LAPPONICA",
-      "breed": "УИППЕТ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": "https://whippet.breedarchive.com/animal/view/diapensia-lapponica-02b957de-d76d-4158-ad7b-c3e2668f507b",
-      "total_starts": 2,
-      "best_score": 328,
-      "avg_judge_score": 81.43,
-      "best_judge_score": 94,
-      "gold": 0,
-      "silver": 1,
-      "bronze": 0,
-      "elo_rating": 1482,
-      "elo_races": 4,
-      "elo_reliable": false,
-      "elo_low_data": true,
-      "elo_insufficient": false,
-      "rank": 283
+      "rank": 310
     },
     {
       "dog_id": 5938,
@@ -6256,14 +6850,36 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 284
+      "rank": 311
+    },
+    {
+      "dog_id": 831,
+      "name_lat": "TIMIRIAZEVSKIJ PARK OLIVIA",
+      "name_ru": "TIMIRIAZEVSKIJ PARK OLIVIA",
+      "breed": "УИППЕТ",
+      "sex": "Сука",
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 3,
+      "best_score": 350,
+      "avg_judge_score": 85.42,
+      "best_judge_score": 90,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "elo_rating": 1482,
+      "elo_races": 6,
+      "elo_reliable": false,
+      "elo_low_data": true,
+      "elo_insufficient": false,
+      "rank": 312
     },
     {
       "dog_id": 6066,
       "name_lat": "AINA TANDAIV GREIT STAR",
       "name_ru": "АЙНА ТАНДАЙВ ГРЕЙТ СТАР",
       "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
-      "sex": null,
+      "sex": "Сука",
       "owner": null,
       "pedigree_url": null,
       "total_starts": 16,
@@ -6278,7 +6894,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 285
+      "rank": 313
     },
     {
       "dog_id": 873,
@@ -6300,7 +6916,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 286
+      "rank": 314
     },
     {
       "dog_id": 180,
@@ -6322,7 +6938,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 287
+      "rank": 315
     },
     {
       "dog_id": 863,
@@ -6344,7 +6960,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 288
+      "rank": 316
     },
     {
       "dog_id": 876,
@@ -6366,7 +6982,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 289
+      "rank": 317
     },
     {
       "dog_id": 7294,
@@ -6388,7 +7004,29 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 290
+      "rank": 318
+    },
+    {
+      "dog_id": 5729,
+      "name_lat": "ТИМИРЯЗЕВСКИЙ ПАРК МАРГАРЕТ /TIMIRIAZEVSKIJ PARK MARGARET",
+      "name_ru": "ТИМИРЯЗЕВСКИЙ ПАРК МАРГАРЕТ /TIMIRIAZEVSKIJ PARK MARGARET",
+      "breed": "УИППЕТ",
+      "sex": "Сука",
+      "owner": null,
+      "pedigree_url": "https://whippet.breedarchive.com/animal/view/timiriazevskij-park-margaret-3eb638a9-3d2a-43a3-be0f-f27f3eedeb34",
+      "total_starts": 5,
+      "best_score": 362,
+      "avg_judge_score": 87.55,
+      "best_judge_score": 96,
+      "gold": 1,
+      "silver": 1,
+      "bronze": 1,
+      "elo_rating": 1480,
+      "elo_races": 4,
+      "elo_reliable": false,
+      "elo_low_data": true,
+      "elo_insufficient": false,
+      "rank": 319
     },
     {
       "dog_id": 714,
@@ -6410,7 +7048,29 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 291
+      "rank": 320
+    },
+    {
+      "dog_id": 5804,
+      "name_lat": "METEL AVGUSTA DAZZLING DAGGER",
+      "name_ru": "МЕТЕЛЬ АВГУСТА ДАЗЗЛИНГ ДАГГЕР",
+      "breed": "УИППЕТ",
+      "sex": "Кобель",
+      "owner": null,
+      "pedigree_url": "https://whippet.breedarchive.com/animal/view/metel-avgusta-dazzling-dagger-af29d057-3923-4f59-9860-a43c2cf09c42",
+      "total_starts": 5,
+      "best_score": 353,
+      "avg_judge_score": 84.2,
+      "best_judge_score": 98,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 1,
+      "elo_rating": 1480,
+      "elo_races": 10,
+      "elo_reliable": true,
+      "elo_low_data": false,
+      "elo_insufficient": false,
+      "rank": 321
     },
     {
       "dog_id": 5750,
@@ -6432,7 +7092,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 292
+      "rank": 322
     },
     {
       "dog_id": 6129,
@@ -6454,29 +7114,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 293
-    },
-    {
-      "dog_id": 5622,
-      "name_lat": "ВЕТЛУГА ХАЛВА РЕЙСДОГ /VETLUGA HALVA RACEDOG",
-      "name_ru": "ВЕТЛУГА ХАЛВА РЕЙСДОГ /VETLUGA HALVA RACEDOG",
-      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": "https://italiangreyhound.breedarchive.com/animal/view/vetluga-halva-racedog-1b18acc8-ad6c-4544-96d3-ecebf2dec71b",
-      "total_starts": 4,
-      "best_score": 348,
-      "avg_judge_score": 81.44,
-      "best_judge_score": 90,
-      "gold": 1,
-      "silver": 1,
-      "bronze": 1,
-      "elo_rating": 1479,
-      "elo_races": 8,
-      "elo_reliable": true,
-      "elo_low_data": false,
-      "elo_insufficient": false,
-      "rank": 294
+      "rank": 323
     },
     {
       "dog_id": 5659,
@@ -6498,7 +7136,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 295
+      "rank": 324
     },
     {
       "dog_id": 5888,
@@ -6520,14 +7158,14 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 296
+      "rank": 325
     },
     {
       "dog_id": 10701,
       "name_lat": "ZARYANA",
       "name_ru": "ЗАРЬЯНА /ZARYANA",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "sex": null,
+      "sex": "Сука",
       "owner": null,
       "pedigree_url": "https://borzoi.breedarchive.com/animal/view/zaryana-a3bd491d-a4c6-401c-9afb-82048ddd4120",
       "total_starts": 8,
@@ -6542,7 +7180,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 297
+      "rank": 326
     },
     {
       "dog_id": 5629,
@@ -6564,7 +7202,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 298
+      "rank": 327
     },
     {
       "dog_id": 693,
@@ -6586,7 +7224,29 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 299
+      "rank": 328
+    },
+    {
+      "dog_id": 5810,
+      "name_lat": "CHUDESNAYA CZELITELNICZA IZ POLETA MECHTI",
+      "name_ru": "ЧУДЕСНАЯ ЦЕЛИТЕЛЬНИЦА ИЗ ПОЛЕТА МЕЧТЫ",
+      "breed": "УИППЕТ",
+      "sex": "Сука",
+      "owner": null,
+      "pedigree_url": "https://whippet.breedarchive.com/animal/view/chudesnaya-czelitelnicza-iz-poleta-mechti-7060bba3-20d3-4843-804b-946943d322f6",
+      "total_starts": 9,
+      "best_score": 354,
+      "avg_judge_score": 82.97,
+      "best_judge_score": 95,
+      "gold": 0,
+      "silver": 1,
+      "bronze": 1,
+      "elo_rating": 1478,
+      "elo_races": 6,
+      "elo_reliable": false,
+      "elo_low_data": true,
+      "elo_insufficient": false,
+      "rank": 329
     },
     {
       "dog_id": 5742,
@@ -6608,14 +7268,14 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 300
+      "rank": 330
     },
     {
       "dog_id": 5897,
       "name_lat": "ENOLA MAD RUSH",
       "name_ru": "ЭНОЛА МЭД РАШ",
       "breed": "УИППЕТ",
-      "sex": null,
+      "sex": "Сука",
       "owner": null,
       "pedigree_url": "https://whippet.breedarchive.com/animal/view/enola-mad-rush-9d5c0057-bb2e-4ae2-a19b-f45b3dd349bf",
       "total_starts": 3,
@@ -6630,7 +7290,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 301
+      "rank": 331
     },
     {
       "dog_id": 770,
@@ -6652,7 +7312,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 302
+      "rank": 332
     },
     {
       "dog_id": 5679,
@@ -6674,7 +7334,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 303
+      "rank": 333
     },
     {
       "dog_id": 680,
@@ -6696,7 +7356,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 304
+      "rank": 334
     },
     {
       "dog_id": 5746,
@@ -6718,7 +7378,29 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 305
+      "rank": 335
+    },
+    {
+      "dog_id": 753,
+      "name_lat": "NOWRUZ NARCISSUS IBN MALA OD VJETRA",
+      "name_ru": "NOWRUZ NARCISSUS IBN MALA OD VJETRA",
+      "breed": "САЛЮКИ",
+      "sex": "Кобель",
+      "owner": null,
+      "pedigree_url": "https://saluki.breedarchive.com/animal/view/nowruz-narcissus-ibn-mala-od-vjetra-a53671f1-de6b-496c-b5f2-0880c1bc6888",
+      "total_starts": 5,
+      "best_score": 334,
+      "avg_judge_score": 79,
+      "best_judge_score": 88,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 2,
+      "elo_rating": 1477,
+      "elo_races": 8,
+      "elo_reliable": true,
+      "elo_low_data": false,
+      "elo_insufficient": false,
+      "rank": 336
     },
     {
       "dog_id": 5981,
@@ -6740,7 +7422,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 306
+      "rank": 337
     },
     {
       "dog_id": 788,
@@ -6762,7 +7444,29 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 307
+      "rank": 338
+    },
+    {
+      "dog_id": 10773,
+      "name_lat": "FLAWLESS",
+      "name_ru": "ФЛОЛЕСС",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "sex": "Кобель",
+      "owner": "Монтенегро Т.Г.",
+      "pedigree_url": null,
+      "total_starts": 1,
+      "best_score": 307,
+      "avg_judge_score": 76.75,
+      "best_judge_score": 87,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 1,
+      "elo_rating": 1477,
+      "elo_races": 2,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 339
     },
     {
       "dog_id": 5673,
@@ -6784,29 +7488,29 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 308
+      "rank": 340
     },
     {
-      "dog_id": 5810,
-      "name_lat": "CHUDESNAYA CZELITELNICZA IZ POLETA MECHTI",
-      "name_ru": "ЧУДЕСНАЯ ЦЕЛИТЕЛЬНИЦА ИЗ ПОЛЕТА МЕЧТЫ",
+      "dog_id": 697,
+      "name_lat": "СТАНГЕРС ЛАНД КАСПИЙ /STANGERS LAND KASPIJ",
+      "name_ru": "СТАНГЕРС ЛАНД КАСПИЙ /STANGERS LAND KASPIJ",
       "breed": "УИППЕТ",
-      "sex": null,
+      "sex": "Кобель",
       "owner": null,
-      "pedigree_url": "https://whippet.breedarchive.com/animal/view/chudesnaya-czelitelnicza-iz-poleta-mechti-7060bba3-20d3-4843-804b-946943d322f6",
-      "total_starts": 8,
-      "best_score": 347,
-      "avg_judge_score": 82.18,
-      "best_judge_score": 95,
-      "gold": 0,
+      "pedigree_url": "https://whippet.breedarchive.com/animal/view/stangers-land-kaspij-95486b10-9433-4bff-84ab-110f31b1be69",
+      "total_starts": 4,
+      "best_score": 346,
+      "avg_judge_score": 82.75,
+      "best_judge_score": 89,
+      "gold": 1,
       "silver": 0,
       "bronze": 1,
       "elo_rating": 1476,
-      "elo_races": 4,
-      "elo_reliable": false,
-      "elo_low_data": true,
+      "elo_races": 8,
+      "elo_reliable": true,
+      "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 309
+      "rank": 341
     },
     {
       "dog_id": 507,
@@ -6828,7 +7532,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 310
+      "rank": 342
     },
     {
       "dog_id": 271,
@@ -6850,7 +7554,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 311
+      "rank": 343
     },
     {
       "dog_id": 296,
@@ -6872,7 +7576,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 312
+      "rank": 344
     },
     {
       "dog_id": 6148,
@@ -6894,7 +7598,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 313
+      "rank": 345
     },
     {
       "dog_id": 6292,
@@ -6916,29 +7620,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 314
-    },
-    {
-      "dog_id": 6137,
-      "name_lat": "PERM VELIKAYA ZEFIR",
-      "name_ru": "ПЕРМЬ ВЕЛИКАЯ ЗЕФИР",
-      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": "https://italiangreyhound.breedarchive.com/animal/view/perm-velikaya-zefir-3db4d7d8-a9e5-4b5d-9125-f65e7083aca2",
-      "total_starts": 12,
-      "best_score": 361,
-      "avg_judge_score": 82.58,
-      "best_judge_score": 98,
-      "gold": 1,
-      "silver": 8,
-      "bronze": 0,
-      "elo_rating": 1476,
-      "elo_races": 2,
-      "elo_reliable": false,
-      "elo_low_data": false,
-      "elo_insufficient": true,
-      "rank": 315
+      "rank": 346
     },
     {
       "dog_id": 661,
@@ -6960,7 +7642,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 316
+      "rank": 347
     },
     {
       "dog_id": 715,
@@ -6982,7 +7664,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 317
+      "rank": 348
     },
     {
       "dog_id": 743,
@@ -7004,7 +7686,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 318
+      "rank": 349
     },
     {
       "dog_id": 777,
@@ -7026,7 +7708,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 319
+      "rank": 350
     },
     {
       "dog_id": 1,
@@ -7048,7 +7730,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 320
+      "rank": 351
     },
     {
       "dog_id": 785,
@@ -7070,7 +7752,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 321
+      "rank": 352
     },
     {
       "dog_id": 316,
@@ -7092,7 +7774,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 322
+      "rank": 353
     },
     {
       "dog_id": 795,
@@ -7114,7 +7796,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 323
+      "rank": 354
     },
     {
       "dog_id": 858,
@@ -7136,7 +7818,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 324
+      "rank": 355
     },
     {
       "dog_id": 6154,
@@ -7158,7 +7840,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 325
+      "rank": 356
     },
     {
       "dog_id": 870,
@@ -7180,7 +7862,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 326
+      "rank": 357
     },
     {
       "dog_id": 866,
@@ -7202,7 +7884,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 327
+      "rank": 358
     },
     {
       "dog_id": 6200,
@@ -7224,29 +7906,29 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 328
+      "rank": 359
     },
     {
       "dog_id": 6220,
       "name_lat": "STANGERS LAND ZLATAN",
       "name_ru": "СТАНГЕРС ЛАНД ЗЛАТАН",
       "breed": "УИППЕТ",
-      "sex": null,
+      "sex": "Кобель",
       "owner": null,
       "pedigree_url": "https://whippet.breedarchive.com/animal/view/stangers-land-zlatan-0a5eb34a-389f-432e-975e-44283e775d97",
-      "total_starts": 17,
+      "total_starts": 18,
       "best_score": 356,
-      "avg_judge_score": 84.44,
+      "avg_judge_score": 84.31,
       "best_judge_score": 91,
       "gold": 1,
       "silver": 0,
       "bronze": 2,
       "elo_rating": 1475,
-      "elo_races": 4,
+      "elo_races": 6,
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 329
+      "rank": 360
     },
     {
       "dog_id": 298,
@@ -7268,7 +7950,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 330
+      "rank": 361
     },
     {
       "dog_id": 7027,
@@ -7290,7 +7972,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 331
+      "rank": 362
     },
     {
       "dog_id": 7347,
@@ -7312,7 +7994,29 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 332
+      "rank": 363
+    },
+    {
+      "dog_id": 10785,
+      "name_lat": "SALYUKOV DANTE",
+      "name_ru": "САЛЮКОВ ДАНТЕ",
+      "breed": "Салюки",
+      "sex": "Кобель",
+      "owner": "Горденина М.Д.",
+      "pedigree_url": null,
+      "total_starts": 1,
+      "best_score": 0,
+      "avg_judge_score": 0,
+      "best_judge_score": 0,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "elo_rating": 1475,
+      "elo_races": 1,
+      "elo_reliable": false,
+      "elo_low_data": false,
+      "elo_insufficient": true,
+      "rank": 364
     },
     {
       "dog_id": 5789,
@@ -7334,29 +8038,29 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 333
+      "rank": 365
     },
     {
-      "dog_id": 5804,
-      "name_lat": "METEL AVGUSTA DAZZLING DAGGER",
-      "name_ru": "МЕТЕЛЬ АВГУСТА ДАЗЗЛИНГ ДАГГЕР",
-      "breed": "УИППЕТ",
-      "sex": null,
+      "dog_id": 10516,
+      "name_lat": "SOLAR SPIRIT AMARULA",
+      "name_ru": "SOLAR SPIRIT AMARULA",
+      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+      "sex": "Сука",
       "owner": null,
-      "pedigree_url": "https://whippet.breedarchive.com/animal/view/metel-avgusta-dazzling-dagger-af29d057-3923-4f59-9860-a43c2cf09c42",
-      "total_starts": 4,
-      "best_score": 353,
-      "avg_judge_score": 83.69,
-      "best_judge_score": 98,
+      "pedigree_url": null,
+      "total_starts": 7,
+      "best_score": 512,
+      "avg_judge_score": 79.27,
+      "best_judge_score": 88,
       "gold": 0,
       "silver": 0,
-      "bronze": 1,
+      "bronze": 0,
       "elo_rating": 1474,
-      "elo_races": 8,
-      "elo_reliable": true,
+      "elo_races": 1,
+      "elo_reliable": false,
       "elo_low_data": false,
-      "elo_insufficient": false,
-      "rank": 334
+      "elo_insufficient": true,
+      "rank": 366
     },
     {
       "dog_id": 672,
@@ -7378,7 +8082,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 335
+      "rank": 367
     },
     {
       "dog_id": 5771,
@@ -7400,7 +8104,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 336
+      "rank": 368
     },
     {
       "dog_id": 6191,
@@ -7422,7 +8126,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 337
+      "rank": 369
     },
     {
       "dog_id": 5656,
@@ -7444,7 +8148,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 338
+      "rank": 370
     },
     {
       "dog_id": 651,
@@ -7466,7 +8170,29 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 339
+      "rank": 371
+    },
+    {
+      "dog_id": 369,
+      "name_lat": "GALMAD STAR VEDAGOR",
+      "name_ru": "GALMAD STAR VEDAGOR",
+      "breed": "ФАРАОНОВА СОБАКА",
+      "sex": "Кобель",
+      "owner": null,
+      "pedigree_url": "https://pharaohhound.breedarchive.com/animal/view/galmad-star-vedagor-9352539a-f34e-4702-aaa5-9a0a43a01c12",
+      "total_starts": 9,
+      "best_score": 343,
+      "avg_judge_score": 83.07,
+      "best_judge_score": 89,
+      "gold": 2,
+      "silver": 0,
+      "bronze": 5,
+      "elo_rating": 1472,
+      "elo_races": 4,
+      "elo_reliable": false,
+      "elo_low_data": true,
+      "elo_insufficient": false,
+      "rank": 372
     },
     {
       "dog_id": 865,
@@ -7488,7 +8214,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 340
+      "rank": 373
     },
     {
       "dog_id": 7341,
@@ -7510,7 +8236,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 341
+      "rank": 374
     },
     {
       "dog_id": 6218,
@@ -7532,29 +8258,29 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 342
+      "rank": 375
     },
     {
       "dog_id": 5658,
       "name_lat": "VARVAR KONAN BESSTRASHNYI",
       "name_ru": "ВАРВАР КОНАН БЕССТРАШНЫЙ",
       "breed": "УИППЕТ",
-      "sex": null,
+      "sex": "Кобель",
       "owner": null,
       "pedigree_url": "https://whippet.breedarchive.com/animal/view/varvar-konan-besstrashnyi-f56cf8c2-dde6-4ddf-923d-68f9980381c1",
-      "total_starts": 49,
+      "total_starts": 50,
       "best_score": 528,
-      "avg_judge_score": 85.95,
+      "avg_judge_score": 85.94,
       "best_judge_score": 174,
       "gold": 5,
       "silver": 11,
       "bronze": 2,
-      "elo_rating": 1470,
-      "elo_races": 13,
+      "elo_rating": 1469,
+      "elo_races": 15,
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 343
+      "rank": 376
     },
     {
       "dog_id": 5819,
@@ -7576,7 +8302,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 344
+      "rank": 377
     },
     {
       "dog_id": 8,
@@ -7598,7 +8324,29 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 345
+      "rank": 378
+    },
+    {
+      "dog_id": 5622,
+      "name_lat": "ВЕТЛУГА ХАЛВА РЕЙСДОГ /VETLUGA HALVA RACEDOG",
+      "name_ru": "ВЕТЛУГА ХАЛВА РЕЙСДОГ /VETLUGA HALVA RACEDOG",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
+      "sex": "Сука",
+      "owner": null,
+      "pedigree_url": "https://italiangreyhound.breedarchive.com/animal/view/vetluga-halva-racedog-1b18acc8-ad6c-4544-96d3-ecebf2dec71b",
+      "total_starts": 5,
+      "best_score": 348,
+      "avg_judge_score": 80.65,
+      "best_judge_score": 90,
+      "gold": 1,
+      "silver": 2,
+      "bronze": 1,
+      "elo_rating": 1467,
+      "elo_races": 10,
+      "elo_reliable": true,
+      "elo_low_data": false,
+      "elo_insufficient": false,
+      "rank": 379
     },
     {
       "dog_id": 5620,
@@ -7620,7 +8368,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 346
+      "rank": 380
     },
     {
       "dog_id": 5739,
@@ -7642,7 +8390,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 347
+      "rank": 381
     },
     {
       "dog_id": 6240,
@@ -7664,51 +8412,29 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 348
-    },
-    {
-      "dog_id": 5618,
-      "name_lat": "ИТУРИ ПАЗЗЛ ИМПЕРАТОР /ITURY PUZZLE IMPERATOR",
-      "name_ru": "ИТУРИ ПАЗЗЛ ИМПЕРАТОР /ITURY PUZZLE IMPERATOR",
-      "breed": "БАСЕНДЖИ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": null,
-      "total_starts": 5,
-      "best_score": 323,
-      "avg_judge_score": 79.38,
-      "best_judge_score": 83,
-      "gold": 0,
-      "silver": 2,
-      "bronze": 1,
-      "elo_rating": 1466,
-      "elo_races": 9,
-      "elo_reliable": true,
-      "elo_low_data": false,
-      "elo_insufficient": false,
-      "rank": 349
+      "rank": 382
     },
     {
       "dog_id": 5768,
       "name_lat": "ЛУННАЯ РАДУГА ЗАПОВЕДЬ /LUNNAJA RADUGA ZAPOVED",
       "name_ru": "ЛУННАЯ РАДУГА ЗАПОВЕДЬ /LUNNAJA RADUGA ZAPOVED",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "sex": null,
+      "sex": "Сука",
       "owner": null,
       "pedigree_url": null,
-      "total_starts": 3,
+      "total_starts": 4,
       "best_score": 344,
-      "avg_judge_score": 84.25,
+      "avg_judge_score": 84.75,
       "best_judge_score": 89,
       "gold": 0,
-      "silver": 0,
+      "silver": 1,
       "bronze": 0,
       "elo_rating": 1466,
-      "elo_races": 5,
+      "elo_races": 7,
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 350
+      "rank": 383
     },
     {
       "dog_id": 5979,
@@ -7730,7 +8456,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 351
+      "rank": 384
     },
     {
       "dog_id": 722,
@@ -7752,14 +8478,14 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 352
+      "rank": 385
     },
     {
       "dog_id": 760,
       "name_lat": "BEYOND BLUE DOUGHNUT",
       "name_ru": "BEYOND BLUE DOUGHNUT",
       "breed": "УИППЕТ",
-      "sex": null,
+      "sex": "Кобель",
       "owner": null,
       "pedigree_url": "https://whippet.breedarchive.com/animal/view/beyond-blue-doughnut-ab7ae487-12f6-47ae-b199-b0c82c1e71f1",
       "total_starts": 3,
@@ -7774,7 +8500,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 353
+      "rank": 386
     },
     {
       "dog_id": 5770,
@@ -7796,7 +8522,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 354
+      "rank": 387
     },
     {
       "dog_id": 5841,
@@ -7818,7 +8544,29 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 355
+      "rank": 388
+    },
+    {
+      "dog_id": 5618,
+      "name_lat": "ИТУРИ ПАЗЗЛ ИМПЕРАТОР /ITURY PUZZLE IMPERATOR",
+      "name_ru": "ИТУРИ ПАЗЗЛ ИМПЕРАТОР /ITURY PUZZLE IMPERATOR",
+      "breed": "БАСЕНДЖИ",
+      "sex": "Кобель",
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 6,
+      "best_score": 324,
+      "avg_judge_score": 79.7,
+      "best_judge_score": 83,
+      "gold": 0,
+      "silver": 2,
+      "bronze": 1,
+      "elo_rating": 1458,
+      "elo_races": 11,
+      "elo_reliable": true,
+      "elo_low_data": false,
+      "elo_insufficient": false,
+      "rank": 389
     },
     {
       "dog_id": 5761,
@@ -7840,29 +8588,29 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 356
+      "rank": 390
     },
     {
       "dog_id": 5640,
       "name_lat": "БРАЙТ САН БАУНТИ /BRIGHT SUN BOUNTY",
       "name_ru": "БРАЙТ САН БАУНТИ /BRIGHT SUN BOUNTY",
       "breed": "УИППЕТ",
-      "sex": null,
+      "sex": "Кобель",
       "owner": null,
       "pedigree_url": "https://whippet.breedarchive.com/animal/view/bright-sun-bounty-be99bd34-a0a5-474a-8f2d-c7bd6c472803",
-      "total_starts": 13,
+      "total_starts": 14,
       "best_score": 360,
-      "avg_judge_score": 84.45,
+      "avg_judge_score": 84.5,
       "best_judge_score": 92,
       "gold": 0,
       "silver": 1,
       "bronze": 1,
       "elo_rating": 1456,
-      "elo_races": 7,
-      "elo_reliable": false,
-      "elo_low_data": true,
+      "elo_races": 9,
+      "elo_reliable": true,
+      "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 357
+      "rank": 391
     },
     {
       "dog_id": 6073,
@@ -7884,7 +8632,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 358
+      "rank": 392
     },
     {
       "dog_id": 5625,
@@ -7906,7 +8654,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 359
+      "rank": 393
     },
     {
       "dog_id": 142,
@@ -7928,29 +8676,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 360
-    },
-    {
-      "dog_id": 617,
-      "name_lat": "STANGERS LAND GOLDIE TRISH",
-      "name_ru": "СТАНГЕРС ЛАНД ГОЛДИ ТРИШ",
-      "breed": "УИППЕТ",
-      "sex": null,
-      "owner": null,
-      "pedigree_url": null,
-      "total_starts": 14,
-      "best_score": 355,
-      "avg_judge_score": 85.4,
-      "best_judge_score": 92,
-      "gold": 1,
-      "silver": 0,
-      "bronze": 1,
-      "elo_rating": 1452,
-      "elo_races": 2,
-      "elo_reliable": false,
-      "elo_low_data": false,
-      "elo_insufficient": true,
-      "rank": 361
+      "rank": 394
     },
     {
       "dog_id": 5639,
@@ -7972,7 +8698,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 362
+      "rank": 395
     },
     {
       "dog_id": 5828,
@@ -7994,7 +8720,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 363
+      "rank": 396
     },
     {
       "dog_id": 6153,
@@ -8016,7 +8742,7 @@
       "elo_reliable": false,
       "elo_low_data": false,
       "elo_insufficient": true,
-      "rank": 364
+      "rank": 397
     },
     {
       "dog_id": 5818,
@@ -8038,14 +8764,14 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 365
+      "rank": 398
     },
     {
       "dog_id": 5743,
       "name_lat": "BOSKO BOKARI TSARONA WONDERLAKE",
       "name_ru": "БОСКО БОКАРИ ЦАРОНА ВОНДЕРЛАЙК",
       "breed": "БАСЕНДЖИ",
-      "sex": null,
+      "sex": "Сука",
       "owner": null,
       "pedigree_url": null,
       "total_starts": 20,
@@ -8060,7 +8786,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 366
+      "rank": 399
     },
     {
       "dog_id": 5781,
@@ -8082,7 +8808,7 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 367
+      "rank": 400
     },
     {
       "dog_id": 516,
@@ -8104,7 +8830,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 368
+      "rank": 401
     },
     {
       "dog_id": 5824,
@@ -8126,7 +8852,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 369
+      "rank": 402
     },
     {
       "dog_id": 5655,
@@ -8148,29 +8874,51 @@
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 370
+      "rank": 403
     },
     {
       "dog_id": 5641,
       "name_lat": "BLAZE OF GLORY",
       "name_ru": "БЛЭЙЗ ОФ ГЛОРИ",
       "breed": "УИППЕТ",
-      "sex": null,
+      "sex": "Кобель",
       "owner": null,
       "pedigree_url": null,
-      "total_starts": 17,
+      "total_starts": 18,
       "best_score": 522,
-      "avg_judge_score": 84.21,
+      "avg_judge_score": 84.09,
       "best_judge_score": 92,
       "gold": 1,
       "silver": 0,
       "bronze": 3,
-      "elo_rating": 1441,
-      "elo_races": 8,
+      "elo_rating": 1442,
+      "elo_races": 10,
       "elo_reliable": true,
       "elo_low_data": false,
       "elo_insufficient": false,
-      "rank": 371
+      "rank": 404
+    },
+    {
+      "dog_id": 617,
+      "name_lat": "STANGERS LAND GOLDIE TRISH",
+      "name_ru": "СТАНГЕРС ЛАНД ГОЛДИ ТРИШ",
+      "breed": "УИППЕТ",
+      "sex": "Сука",
+      "owner": null,
+      "pedigree_url": null,
+      "total_starts": 15,
+      "best_score": 355,
+      "avg_judge_score": 85.13,
+      "best_judge_score": 92,
+      "gold": 1,
+      "silver": 0,
+      "bronze": 1,
+      "elo_rating": 1438,
+      "elo_races": 4,
+      "elo_reliable": false,
+      "elo_low_data": true,
+      "elo_insufficient": false,
+      "rank": 405
     },
     {
       "dog_id": 837,
@@ -8192,7 +8940,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 372
+      "rank": 406
     },
     {
       "dog_id": 5747,
@@ -8214,7 +8962,7 @@
       "elo_reliable": false,
       "elo_low_data": true,
       "elo_insufficient": false,
-      "rank": 373
+      "rank": 407
     }
   ]
 }

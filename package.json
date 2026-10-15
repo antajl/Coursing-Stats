@@ -91,8 +91,6 @@
     "data:quick": "echo \"Quick data check...\" && echo \"Data directories check - see data/v1/ for details\"",
     "perf:measure": "npx tsx backend/scripts/measure-performance.ts",
     "perf:compare": "npx tsx backend/scripts/compare-performance.ts",
-    "perf:update-baseline": "npx tsx backend/scripts/measure-performance.ts && node -e \"const fs=require('fs'); const perf=require('./.devin/performance-baseline.json'); perf.timestamp=new Date().toISOString(); fs.writeFileSync('.devin/performance-baseline.json',JSON.stringify(perf,null,2))\"",
-    "perf:quick": "echo \"Quick performance check...\" && echo \"Performance measurement requires detailed scripts - see .devin/skills/performance-review/SKILL.md\"",
     "quality:report": "npx tsx backend/scripts/generate-quality-report.ts"
   },
   "dependencies": {

@@ -6,7 +6,7 @@
   "name_lat": "YARYJ VETER IZ POLETA MECHTI",
   "name_ru": "ЯРЫЙ ВЕТЕР ИЗ ПОЛЕТА МЕЧТЫ",
   "breed": "УИППЕТ",
-  "sex": null,
+  "sex": "Кобель",
   "owner": null,
   "competition_ids": [
     1255,
@@ -16,6 +16,10 @@
     1307,
     1310,
     1444,
+    1550,
+    2022000,
+    2022002,
+    2022003,
     20231007
   ],
   "competition_files": [
@@ -26,7 +30,11 @@
     "competitions/2026/04-апрель/1307-чркф-курсинг-борзых.json",
     "competitions/2026/04-апрель/1310-чркф-курсинг-борзых.json",
     "competitions/2023/10-октябрь/1444-кубок-россии-по-курсингу.json",
-    "competitions/2023/10-октябрь/20231007--07-08102023-.json"
+    "competitions/2023/10-октябрь/20231007--07-08102023-.json",
+    "competitions/2026/09-сентябрь/2022002-чркф-по-бегам-борзых.json",
+    "competitions/2026/08-август/1550-чркф-бега-борзых.json",
+    "competitions/2026/09-сентябрь/2022000-чемпионат-россии-по-бегам-борзых.json",
+    "competitions/2026/10-октябрь/2022003-чркф-по-курсингу-борзых.json"
   ],
   "pedigree_url": "https://whippet.breedarchive.com/animal/view/yaryj-veter-iz-poleta-mechti-44612092-94ad-4927-989b-df0f61e5dcc2"
 }

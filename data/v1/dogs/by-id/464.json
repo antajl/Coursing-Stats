@@ -1,1 +1,30 @@
-{"schema":"coursing-stats/dog-v1","exported_at":"2026-07-08T00:31:32.188Z","id":464,"dog_key":"feel-my-heart-dramiel-cosmic--уиппет","name_lat":"FEEL MY HEART DRAMIEL COSMIC","name_ru":"ФЕЕЛ МАЙ ХЕАРТ ДРАМИЭЛЬ КОСМИК","breed":"УИППЕТ","sex":null,"owner":null,"competition_ids":[1272,1285,1287],"competition_files":["competitions/2025/06-июнь/1272-чркф-бега-борзых.json","competitions/2025/09-сентябрь/1285-чемпионат-россии-бега-борзых.json","competitions/2025/09-сентябрь/1287-пчркф-малая-итальянская-борзая-уиппет-чирнеко-де.json"],"pedigree_url":"https://whippet.breedarchive.com/animal/view/feel-my-heart-dramiel-cosmic-82ad4e63-bc2e-4662-903a-b814e86f7884"}
+{
+  "schema": "coursing-stats/dog-v1",
+  "exported_at": "2026-07-08T00:31:32.188Z",
+  "id": 464,
+  "dog_key": "feel-my-heart-dramiel-cosmic--уиппет",
+  "name_lat": "FEEL MY HEART DRAMIEL COSMIC",
+  "name_ru": "ФЕЕЛ МАЙ ХЕАРТ ДРАМИЭЛЬ КОСМИК",
+  "breed": "УИППЕТ",
+  "sex": "Сука",
+  "owner": null,
+  "competition_ids": [
+    1272,
+    1285,
+    1287,
+    1550,
+    2022000,
+    2022001,
+    2022002
+  ],
+  "competition_files": [
+    "competitions/2025/06-июнь/1272-чркф-бега-борзых.json",
+    "competitions/2025/09-сентябрь/1285-чемпионат-россии-бега-борзых.json",
+    "competitions/2025/09-сентябрь/1287-пчркф-малая-итальянская-борзая-уиппет-чирнеко-де.json",
+    "competitions/2026/09-сентябрь/2022002-чркф-по-бегам-борзых.json",
+    "competitions/2026/08-август/1550-чркф-бега-борзых.json",
+    "competitions/2026/09-сентябрь/2022000-чемпионат-россии-по-бегам-борзых.json",
+    "competitions/2026/09-сентябрь/2022001-клубный-чемпионат-по-рейсингу.json"
+  ],
+  "pedigree_url": "https://whippet.breedarchive.com/animal/view/feel-my-heart-dramiel-cosmic-82ad4e63-bc2e-4662-903a-b814e86f7884"
+}

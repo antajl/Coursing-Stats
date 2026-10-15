@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/index-top-speed-v1",
   "year": null,
-  "count": 542,
+  "count": 541,
   "items": [
     {
       "dog_id": 462,
@@ -66,8 +66,8 @@
       "year_from": 2023,
       "year_to": 2026,
       "best_speed": 62.5,
-      "avg_speed": 53,
-      "total_starts": 8
+      "avg_speed": 52.87,
+      "total_starts": 9
     },
     {
       "dog_id": 9653,
@@ -130,10 +130,10 @@
       "name_ru": "УХОУЛ УОРЛД ИН ХЕ АЙЗ",
       "breed": "УИППЕТ",
       "year_from": 2024,
-      "year_to": 2025,
+      "year_to": 2026,
       "best_speed": 60.606,
-      "avg_speed": 53.47,
-      "total_starts": 4
+      "avg_speed": 52.79,
+      "total_starts": 5
     },
     {
       "dog_id": 578,
@@ -196,10 +196,10 @@
       "name_ru": "АМАЗОНКА ДОЧЬ ЧАРОДЕЯ /AMAZONKA DOCH CHARODEYA",
       "breed": "УИППЕТ",
       "year_from": 2023,
-      "year_to": 2024,
+      "year_to": 2026,
       "best_speed": 59.254,
-      "avg_speed": 54.08,
-      "total_starts": 3
+      "avg_speed": 53.06,
+      "total_starts": 4
     },
     {
       "dog_id": 122,
@@ -396,8 +396,8 @@
       "year_from": 2025,
       "year_to": 2026,
       "best_speed": 56.426,
-      "avg_speed": 54.09,
-      "total_starts": 6
+      "avg_speed": 54.12,
+      "total_starts": 7
     },
     {
       "dog_id": 566,
@@ -506,8 +506,8 @@
       "year_from": 2025,
       "year_to": 2026,
       "best_speed": 54.783,
-      "avg_speed": 52.48,
-      "total_starts": 4
+      "avg_speed": 52.62,
+      "total_starts": 5
     },
     {
       "dog_id": 583,
@@ -528,8 +528,8 @@
       "year_from": 2025,
       "year_to": 2026,
       "best_speed": 54.711,
-      "avg_speed": 52.15,
-      "total_starts": 5
+      "avg_speed": 52.33,
+      "total_starts": 6
     },
     {
       "dog_id": 10385,
@@ -550,8 +550,8 @@
       "year_from": 2025,
       "year_to": 2026,
       "best_speed": 54.475,
-      "avg_speed": 53.42,
-      "total_starts": 2
+      "avg_speed": 53.34,
+      "total_starts": 3
     },
     {
       "dog_id": 9747,
@@ -693,8 +693,8 @@
       "year_from": 2021,
       "year_to": 2026,
       "best_speed": 53.749,
-      "avg_speed": 45.17,
-      "total_starts": 10
+      "avg_speed": 44.94,
+      "total_starts": 11
     },
     {
       "dog_id": 5757,
@@ -770,8 +770,8 @@
       "year_from": 2020,
       "year_to": 2026,
       "best_speed": 53.202,
-      "avg_speed": 43.41,
-      "total_starts": 11
+      "avg_speed": 43.39,
+      "total_starts": 12
     },
     {
       "dog_id": 10080,
@@ -928,15 +928,15 @@
       "total_starts": 1
     },
     {
-      "dog_id": 10744,
-      "name_lat": "BONNY FLYING FLASH",
-      "name_ru": "БОННИ ФЛАИНГ ФЛЭШ",
+      "dog_id": 5815,
+      "name_lat": "БОННИ ФЛАИНГ ФЛЭШ /BONNY FLYING FLASH",
+      "name_ru": "БОННИ ФЛАИНГ ФЛЭШ /BONNY FLYING FLASH",
       "breed": "УИППЕТ",
       "year_from": 2026,
       "year_to": 2026,
       "best_speed": 52.786,
-      "avg_speed": 52.22,
-      "total_starts": 2
+      "avg_speed": 52.28,
+      "total_starts": 4
     },
     {
       "dog_id": 10428,
@@ -970,17 +970,6 @@
       "best_speed": 52.654,
       "avg_speed": 50.45,
       "total_starts": 4
-    },
-    {
-      "dog_id": 5815,
-      "name_lat": "БОННИ ФЛАИНГ ФЛЭШ /BONNY FLYING FLASH",
-      "name_ru": "БОННИ ФЛАИНГ ФЛЭШ /BONNY FLYING FLASH",
-      "breed": "УИППЕТ",
-      "year_from": 2026,
-      "year_to": 2026,
-      "best_speed": 52.61,
-      "avg_speed": 52.54,
-      "total_starts": 1
     },
     {
       "dog_id": 555,
@@ -1101,7 +1090,7 @@
       "year_to": 2026,
       "best_speed": 52.239,
       "avg_speed": 51.62,
-      "total_starts": 2
+      "total_starts": 3
     },
     {
       "dog_id": 10029,
@@ -1133,8 +1122,8 @@
       "year_from": 2026,
       "year_to": 2026,
       "best_speed": 52.196,
-      "avg_speed": 51.95,
-      "total_starts": 1
+      "avg_speed": 51.37,
+      "total_starts": 2
     },
     {
       "dog_id": 9286,
@@ -1412,6 +1401,17 @@
       "total_starts": 3
     },
     {
+      "dog_id": 5897,
+      "name_lat": "ENOLA MAD RUSH",
+      "name_ru": "ЭНОЛА МЭД РАШ",
+      "breed": "УИППЕТ",
+      "year_from": 2026,
+      "year_to": 2026,
+      "best_speed": 51.555,
+      "avg_speed": 50.93,
+      "total_starts": 1
+    },
+    {
       "dog_id": 5661,
       "name_lat": "STANGERS LAND INTERNAL ENERGY",
       "name_ru": "СТАНГЕРС ЛАНД ИНТЕРНАЛ ЭНЕРДЖИ",
@@ -1439,10 +1439,10 @@
       "name_ru": "КУПИДОН",
       "breed": "УИППЕТ",
       "year_from": 2025,
-      "year_to": 2026,
+      "year_to": 2025,
       "best_speed": 51.513,
-      "avg_speed": 50.62,
-      "total_starts": 4
+      "avg_speed": 50.5,
+      "total_starts": 3
     },
     {
       "dog_id": 9952,
@@ -1489,6 +1489,17 @@
       "total_starts": 1
     },
     {
+      "dog_id": 5874,
+      "name_lat": "WITCH OF SHERWOOD",
+      "name_ru": "WITCH OF SHERWOOD",
+      "breed": "УИППЕТ",
+      "year_from": 2026,
+      "year_to": 2026,
+      "best_speed": 51.282,
+      "avg_speed": 50.79,
+      "total_starts": 2
+    },
+    {
       "dog_id": 242,
       "name_lat": "WHIPPOLLY ELIXIR",
       "name_ru": "УИППОЛЛИ ЭЛИКСИР",
@@ -1522,17 +1533,6 @@
       "total_starts": 3
     },
     {
-      "dog_id": 10745,
-      "name_lat": "AMAZONKA DOCH CHARODEYA",
-      "name_ru": "АМАЗОНКА ДОЧЬ ЧАРОДЕЯ",
-      "breed": "УИППЕТ",
-      "year_from": 2026,
-      "year_to": 2026,
-      "best_speed": 51.199,
-      "avg_speed": 51.01,
-      "total_starts": 1
-    },
-    {
       "dog_id": 10200,
       "name_lat": "ПРИМА ПОЛЯРИС",
       "name_ru": "ПРИМА ПОЛЯРИС",
@@ -1564,6 +1564,17 @@
       "best_speed": 51.14,
       "avg_speed": 49.86,
       "total_starts": 4
+    },
+    {
+      "dog_id": 5649,
+      "name_lat": "KUPIDON",
+      "name_ru": "КУПИДОН",
+      "breed": "УИППЕТ",
+      "year_from": 2026,
+      "year_to": 2026,
+      "best_speed": 51.13636363636364,
+      "avg_speed": 50.71,
+      "total_starts": 3
     },
     {
       "dog_id": 501,
@@ -1654,6 +1665,17 @@
       "total_starts": 3
     },
     {
+      "dog_id": 738,
+      "name_lat": "ALPHAS BORA",
+      "name_ru": "ALPHAS BORA",
+      "breed": "УИППЕТ",
+      "year_from": 2026,
+      "year_to": 2026,
+      "best_speed": 50.971,
+      "avg_speed": 50.23,
+      "total_starts": 2
+    },
+    {
       "dog_id": 10365,
       "name_lat": "ЭБРО",
       "name_ru": "ЭБРО",
@@ -1698,17 +1720,6 @@
       "total_starts": 1
     },
     {
-      "dog_id": 738,
-      "name_lat": "ALPHAS BORA",
-      "name_ru": "ALPHAS BORA",
-      "breed": "УИППЕТ",
-      "year_from": 2026,
-      "year_to": 2026,
-      "best_speed": 50.889,
-      "avg_speed": 49.96,
-      "total_starts": 1
-    },
-    {
       "dog_id": 10191,
       "name_lat": "ALISA V STRANE CHUDES",
       "name_ru": "ALISA V STRANE CHUDES",
@@ -1738,8 +1749,8 @@
       "year_from": 2026,
       "year_to": 2026,
       "best_speed": 50.847457627118644,
-      "avg_speed": 50.37,
-      "total_starts": 2
+      "avg_speed": 50.44,
+      "total_starts": 3
     },
     {
       "dog_id": 10364,
@@ -1775,17 +1786,6 @@
       "total_starts": 1
     },
     {
-      "dog_id": 5649,
-      "name_lat": "KUPIDON",
-      "name_ru": "КУПИДОН",
-      "breed": "УИППЕТ",
-      "year_from": 2026,
-      "year_to": 2026,
-      "best_speed": 50.663,
-      "avg_speed": 50.43,
-      "total_starts": 1
-    },
-    {
       "dog_id": 254,
       "name_lat": "STANGERS LAND ZENIT",
       "name_ru": "СТАНГЕРС ЛАНД ЗЕНИТ",
@@ -1795,17 +1795,6 @@
       "best_speed": 50.663,
       "avg_speed": 50.22,
       "total_starts": 2
-    },
-    {
-      "dog_id": 5874,
-      "name_lat": "WITCH OF SHERWOOD",
-      "name_ru": "WITCH OF SHERWOOD",
-      "breed": "УИППЕТ",
-      "year_from": 2026,
-      "year_to": 2026,
-      "best_speed": 50.643,
-      "avg_speed": 50.64,
-      "total_starts": 1
     },
     {
       "dog_id": 10345,
@@ -1896,6 +1885,17 @@
       "total_starts": 1
     },
     {
+      "dog_id": 5889,
+      "name_lat": "УОКИНГ УЭЛШ РУТС /WALKING WELSH ROUTES",
+      "name_ru": "УОКИНГ УЭЛШ РУТС /WALKING WELSH ROUTES",
+      "breed": "УИППЕТ",
+      "year_from": 2026,
+      "year_to": 2026,
+      "best_speed": 50.461,
+      "avg_speed": 50.05,
+      "total_starts": 2
+    },
+    {
       "dog_id": 10192,
       "name_lat": "VALPAIN PEK BLAVATSKAYA",
       "name_ru": "VALPAIN PEK BLAVATSKAYA",
@@ -1907,26 +1907,15 @@
       "total_starts": 1
     },
     {
-      "dog_id": 10746,
-      "name_lat": "STANGERS LAND KATALINA",
-      "name_ru": "СТАНГЕРС ЛАНД КАТАЛИНА",
+      "dog_id": 5645,
+      "name_lat": "СТАНГЕРС ЛАНД КАТАЛИНА /STANGERS LAND KATALINA",
+      "name_ru": "СТАНГЕРС ЛАНД КАТАЛИНА /STANGERS LAND KATALINA",
       "breed": "УИППЕТ",
       "year_from": 2026,
       "year_to": 2026,
       "best_speed": 50.38,
-      "avg_speed": 50.38,
-      "total_starts": 1
-    },
-    {
-      "dog_id": 5889,
-      "name_lat": "УОКИНГ УЭЛШ РУТС /WALKING WELSH ROUTES",
-      "name_ru": "УОКИНГ УЭЛШ РУТС /WALKING WELSH ROUTES",
-      "breed": "УИППЕТ",
-      "year_from": 2026,
-      "year_to": 2026,
-      "best_speed": 50.38,
-      "avg_speed": 50,
-      "total_starts": 1
+      "avg_speed": 49.67,
+      "total_starts": 2
     },
     {
       "dog_id": 5634,
@@ -1936,8 +1925,8 @@
       "year_from": 2023,
       "year_to": 2026,
       "best_speed": 50.38,
-      "avg_speed": 50.3,
-      "total_starts": 2
+      "avg_speed": 50.02,
+      "total_starts": 3
     },
     {
       "dog_id": 586,
@@ -2084,7 +2073,7 @@
     },
     {
       "dog_id": 10743,
-      "name_lat": "MALENKIY PRINTS IZ POLETA MECHTI",
+      "name_lat": "MALENKIJ PRINTS IZ POLETA MECHTI",
       "name_ru": "МАЛЕНЬКИЙ ПРИНЦ ИЗ ПОЛЕТА МЕЧТЫ",
       "breed": "УИППЕТ",
       "year_from": 2026,
@@ -2156,8 +2145,8 @@
       "year_from": 2026,
       "year_to": 2026,
       "best_speed": 50.04,
-      "avg_speed": 49.6,
-      "total_starts": 2
+      "avg_speed": 49.63,
+      "total_starts": 3
     },
     {
       "dog_id": 257,
@@ -2182,15 +2171,15 @@
       "total_starts": 1
     },
     {
-      "dog_id": 10749,
-      "name_lat": "EREMA",
-      "name_ru": "ЕРЕМА",
+      "dog_id": 5814,
+      "name_lat": "ЕРЕМА /EREMA",
+      "name_ru": "ЕРЕМА /EREMA",
       "breed": "УИППЕТ",
       "year_from": 2026,
       "year_to": 2026,
-      "best_speed": 49.96,
-      "avg_speed": 49.7,
-      "total_starts": 1
+      "best_speed": 49.98,
+      "avg_speed": 49.63,
+      "total_starts": 2
     },
     {
       "dog_id": 20,
@@ -2222,8 +2211,8 @@
       "year_from": 2025,
       "year_to": 2026,
       "best_speed": 49.881,
-      "avg_speed": 49.46,
-      "total_starts": 5
+      "avg_speed": 49.49,
+      "total_starts": 6
     },
     {
       "dog_id": 585,
@@ -2332,8 +2321,8 @@
       "year_from": 2026,
       "year_to": 2026,
       "best_speed": 49.626,
-      "avg_speed": 48.96,
-      "total_starts": 2
+      "avg_speed": 48.77,
+      "total_starts": 3
     },
     {
       "dog_id": 617,
@@ -2347,6 +2336,17 @@
       "total_starts": 2
     },
     {
+      "dog_id": 5782,
+      "name_lat": "EMUL DE GEPARD GELILA AL RAWDA",
+      "name_ru": "ЭМУЛЬ ДЭ ГЕПАРД ГЕЛИЛА АЛЬ РАВДА",
+      "breed": "САЛЮКИ",
+      "year_from": 2026,
+      "year_to": 2026,
+      "best_speed": 49.587,
+      "avg_speed": 48.34,
+      "total_starts": 4
+    },
+    {
       "dog_id": 10431,
       "name_lat": "САНЖАР КАМАЛЬ",
       "name_ru": "САНЖАР КАМАЛЬ",
@@ -2358,6 +2358,17 @@
       "total_starts": 1
     },
     {
+      "dog_id": 10776,
+      "name_lat": "INTRIGA'S MAGNOLIA",
+      "name_ru": "ИНТРИГАС МАГНОЛИЯ",
+      "breed": "УИППЕТ",
+      "year_from": 2026,
+      "year_to": 2026,
+      "best_speed": 49.528,
+      "avg_speed": 49.51,
+      "total_starts": 1
+    },
+    {
       "dog_id": 10741,
       "name_lat": "FLESH-ROYAL",
       "name_ru": "ФЛЕШ-РОЯЛЬ",
@@ -2365,8 +2376,8 @@
       "year_from": 2026,
       "year_to": 2026,
       "best_speed": 49.528,
-      "avg_speed": 48.43,
-      "total_starts": 2
+      "avg_speed": 48.2,
+      "total_starts": 3
     },
     {
       "dog_id": 10373,
@@ -2497,8 +2508,8 @@
       "year_from": 2024,
       "year_to": 2026,
       "best_speed": 49.36,
-      "avg_speed": 44.64,
-      "total_starts": 4
+      "avg_speed": 44.3,
+      "total_starts": 5
     },
     {
       "dog_id": 5644,
@@ -2688,17 +2699,6 @@
       "total_starts": 3
     },
     {
-      "dog_id": 5645,
-      "name_lat": "СТАНГЕРС ЛАНД КАТАЛИНА /STANGERS LAND KATALINA",
-      "name_ru": "СТАНГЕРС ЛАНД КАТАЛИНА /STANGERS LAND KATALINA",
-      "breed": "УИППЕТ",
-      "year_from": 2026,
-      "year_to": 2026,
-      "best_speed": 48.989,
-      "avg_speed": 48.96,
-      "total_starts": 1
-    },
-    {
       "dog_id": 7265,
       "name_lat": "BORZOMIR BAKHRUZ AZIZA",
       "name_ru": "БОРЗОМИР БАХРУЗ АЗИЗА",
@@ -2853,17 +2853,6 @@
       "total_starts": 1
     },
     {
-      "dog_id": 5782,
-      "name_lat": "EMUL DE GEPARD GELILA AL RAWDA",
-      "name_ru": "ЭМУЛЬ ДЭ ГЕПАРД ГЕЛИЛА АЛЬ РАВДА",
-      "breed": "САЛЮКИ",
-      "year_from": 2026,
-      "year_to": 2026,
-      "best_speed": 48.611,
-      "avg_speed": 48.05,
-      "total_starts": 3
-    },
-    {
       "dog_id": 8516,
       "name_lat": "SOKOL & K EFROSINIYA",
       "name_ru": "SOKOL & K EFROSINIYA",
@@ -3007,6 +2996,17 @@
       "total_starts": 1
     },
     {
+      "dog_id": 10740,
+      "name_lat": "FLYONA",
+      "name_ru": "ФЛЁНА",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2026,
+      "year_to": 2026,
+      "best_speed": 48.165,
+      "avg_speed": 46.22,
+      "total_starts": 3
+    },
+    {
       "dog_id": 10146,
       "name_lat": "STANGERS LAND ALTANA",
       "name_ru": "STANGERS LAND ALTANA",
@@ -3128,6 +3128,17 @@
       "total_starts": 3
     },
     {
+      "dog_id": 10742,
+      "name_lat": "BEL ETUAL KAYALA",
+      "name_ru": "БЕЛЬ ЭТУАЛЬ КАЯЛА",
+      "breed": "САЛЮКИ",
+      "year_from": 2026,
+      "year_to": 2026,
+      "best_speed": 47.763,
+      "avg_speed": 47.15,
+      "total_starts": 3
+    },
+    {
       "dog_id": 10330,
       "name_lat": "RESTLESS WHIP VICTORIA",
       "name_ru": "RESTLESS WHIP VICTORIA",
@@ -3234,8 +3245,8 @@
       "year_from": 2024,
       "year_to": 2026,
       "best_speed": 47.563,
-      "avg_speed": 41.53,
-      "total_starts": 4
+      "avg_speed": 40.49,
+      "total_starts": 5
     },
     {
       "dog_id": 847,
@@ -3337,17 +3348,6 @@
       "total_starts": 1
     },
     {
-      "dog_id": 10740,
-      "name_lat": "FLYONA",
-      "name_ru": "ФЛЕНА",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "year_from": 2026,
-      "year_to": 2026,
-      "best_speed": 47.191,
-      "avg_speed": 45.62,
-      "total_starts": 2
-    },
-    {
       "dog_id": 418,
       "name_lat": "BORZOMIR DZHAMAL",
       "name_ru": "БОРЗОМИР ДЖАМАЛЬ",
@@ -3368,17 +3368,6 @@
       "best_speed": 47.103,
       "avg_speed": 46.02,
       "total_starts": 1
-    },
-    {
-      "dog_id": 10742,
-      "name_lat": "BEL ETUAL KAYALA",
-      "name_ru": "БЕЛЬ ЭТУАЛЬ КАЯЛА",
-      "breed": "САЛЮКИ",
-      "year_from": 2026,
-      "year_to": 2026,
-      "best_speed": 47.068,
-      "avg_speed": 46.88,
-      "total_starts": 2
     },
     {
       "dog_id": 455,
@@ -3455,6 +3444,17 @@
       "year_to": 2026,
       "best_speed": 46.823,
       "avg_speed": 46.68,
+      "total_starts": 1
+    },
+    {
+      "dog_id": 10773,
+      "name_lat": "FLAWLESS",
+      "name_ru": "ФЛОЛЕСС",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2026,
+      "year_to": 2026,
+      "best_speed": 46.805,
+      "avg_speed": 45.97,
       "total_starts": 1
     },
     {
@@ -3619,8 +3619,8 @@
       "year_from": 2025,
       "year_to": 2026,
       "best_speed": 46.188,
-      "avg_speed": 44.1,
-      "total_starts": 6
+      "avg_speed": 43.76,
+      "total_starts": 7
     },
     {
       "dog_id": 93,
@@ -3663,8 +3663,8 @@
       "year_from": 2024,
       "year_to": 2026,
       "best_speed": 45.969,
-      "avg_speed": 43.62,
-      "total_starts": 5
+      "avg_speed": 43.79,
+      "total_starts": 6
     },
     {
       "dog_id": 5664,
@@ -3756,7 +3756,7 @@
     },
     {
       "dog_id": 10747,
-      "name_lat": "TALIYA CVETUSCHAYA",
+      "name_lat": "TALIYA TSVETUSHCHAYA AZALIYA",
       "name_ru": "ТАЛИЯ ЦВЕТУЩАЯ АЗАЛИЯ",
       "breed": "УИППЕТ",
       "year_from": 2026,
@@ -3773,8 +3773,8 @@
       "year_from": 2023,
       "year_to": 2026,
       "best_speed": 45.711,
-      "avg_speed": 39.77,
-      "total_starts": 7
+      "avg_speed": 39.63,
+      "total_starts": 8
     },
     {
       "dog_id": 10161,
@@ -3852,6 +3852,17 @@
       "best_speed": 45.38,
       "avg_speed": 45.2,
       "total_starts": 1
+    },
+    {
+      "dog_id": 7256,
+      "name_lat": "ИМРАН ДЖАЗЗИ /IMRAN JAZZEE",
+      "name_ru": "ИМРАН ДЖАЗЗИ /IMRAN JAZZEE",
+      "breed": "САЛЮКИ",
+      "year_from": 2026,
+      "year_to": 2026,
+      "best_speed": 45.324,
+      "avg_speed": 40.29,
+      "total_starts": 2
     },
     {
       "dog_id": 10485,
@@ -4005,7 +4016,7 @@
       "year_to": 2026,
       "best_speed": 44.69670095778645,
       "avg_speed": 43.47,
-      "total_starts": 2
+      "total_starts": 3
     },
     {
       "dog_id": 7197,
@@ -4096,6 +4107,17 @@
       "total_starts": 2
     },
     {
+      "dog_id": 10750,
+      "name_lat": "SHNEYDER RICH REM",
+      "name_ru": "ШНЕЙДЕР РИЧ РЭМ",
+      "breed": "ФАРАОНОВА СОБАКА",
+      "year_from": 2026,
+      "year_to": 2026,
+      "best_speed": 44.413,
+      "avg_speed": 43.57,
+      "total_starts": 3
+    },
+    {
       "dog_id": 9974,
       "name_lat": "ANVAR NURI ZHIGER SHAY",
       "name_ru": "ANVAR NURI ZHIGER SHAY",
@@ -4125,19 +4147,8 @@
       "year_from": 2026,
       "year_to": 2026,
       "best_speed": 44.335,
-      "avg_speed": 43.8,
-      "total_starts": 2
-    },
-    {
-      "dog_id": 10750,
-      "name_lat": "SHNEYDER RICH REM",
-      "name_ru": "ШНЕЙДЕР РИЧ РЭМ",
-      "breed": "ФАРАОНОВА СОБАКА",
-      "year_from": 2026,
-      "year_to": 2026,
-      "best_speed": 44.31938093563138,
-      "avg_speed": 43.18,
-      "total_starts": 2
+      "avg_speed": 43.7,
+      "total_starts": 3
     },
     {
       "dog_id": 10370,
@@ -4180,8 +4191,8 @@
       "year_from": 2026,
       "year_to": 2026,
       "best_speed": 44.16403785488959,
-      "avg_speed": 43.8,
-      "total_starts": 1
+      "avg_speed": 43.23,
+      "total_starts": 2
     },
     {
       "dog_id": 9586,
@@ -4224,8 +4235,8 @@
       "year_from": 2026,
       "year_to": 2026,
       "best_speed": 43.841,
-      "avg_speed": 43.53,
-      "total_starts": 1
+      "avg_speed": 42.71,
+      "total_starts": 2
     },
     {
       "dog_id": 290,
@@ -4426,6 +4437,17 @@
       "total_starts": 1
     },
     {
+      "dog_id": 5820,
+      "name_lat": "ИРКИСС ВОЛЬПЕ КЬЯРА /IRKISS VOLPE CHIARA",
+      "name_ru": "ИРКИСС ВОЛЬПЕ КЬЯРА /IRKISS VOLPE CHIARA",
+      "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+      "year_from": 2026,
+      "year_to": 2026,
+      "best_speed": 42.945,
+      "avg_speed": 41.8,
+      "total_starts": 2
+    },
+    {
       "dog_id": 189,
       "name_lat": "ARIES KHAN SAMUEL FORSAGE JACKSON",
       "name_ru": "АРИЕС ХАН СЭМЮЭЛЬ ФОРСАЖ ДЖЕКСОН",
@@ -4468,17 +4490,6 @@
       "best_speed": 42.828,
       "avg_speed": 42.39,
       "total_starts": 2
-    },
-    {
-      "dog_id": 10752,
-      "name_lat": "IRKISS VOLPE CHIARA",
-      "name_ru": "ИРКИСС ВОЛЬПЕ КЬЯРА",
-      "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
-      "year_from": 2026,
-      "year_to": 2026,
-      "best_speed": 42.799,
-      "avg_speed": 42.49,
-      "total_starts": 1
     },
     {
       "dog_id": 118,
@@ -4613,15 +4624,15 @@
       "total_starts": 3
     },
     {
-      "dog_id": 10736,
-      "name_lat": "VETLUGA HALVA RACEDOG",
-      "name_ru": "ВЕТЛУГА ХАЛВА РЕЙСДОГ",
+      "dog_id": 5622,
+      "name_lat": "ВЕТЛУГА ХАЛВА РЕЙСДОГ /VETLUGA HALVA RACEDOG",
+      "name_ru": "ВЕТЛУГА ХАЛВА РЕЙСДОГ /VETLUGA HALVA RACEDOG",
       "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
       "year_from": 2026,
       "year_to": 2026,
       "best_speed": 42.367,
-      "avg_speed": 41.99,
-      "total_starts": 1
+      "avg_speed": 41.85,
+      "total_starts": 2
     },
     {
       "dog_id": 7355,
@@ -4636,7 +4647,7 @@
     },
     {
       "dog_id": 10737,
-      "name_lat": "GRACE HAUND JASMINE NOIR",
+      "name_lat": "GREJS KHAUND ZHASMIN NUAR",
       "name_ru": "ГРЭЙС ХАУНД ЖАСМИН НУАР",
       "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
       "year_from": 2026,
@@ -4841,7 +4852,7 @@
       "year_to": 2026,
       "best_speed": 41.847,
       "avg_speed": 40.17,
-      "total_starts": 3
+      "total_starts": 4
     },
     {
       "dog_id": 10415,
@@ -4867,7 +4878,7 @@
     },
     {
       "dog_id": 10753,
-      "name_lat": "IRKISS NANSY",
+      "name_lat": "IRKISS NENSI",
       "name_ru": "ИРКИСС НЭНСИ",
       "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
       "year_from": 2026,
@@ -4928,8 +4939,8 @@
       "year_from": 2026,
       "year_to": 2026,
       "best_speed": 41.44736842105264,
-      "avg_speed": 40.55,
-      "total_starts": 2
+      "avg_speed": 40.53,
+      "total_starts": 3
     },
     {
       "dog_id": 571,
@@ -5434,8 +5445,8 @@
       "year_from": 2025,
       "year_to": 2026,
       "best_speed": 39.265,
-      "avg_speed": 39.02,
-      "total_starts": 2
+      "avg_speed": 38.73,
+      "total_starts": 4
     },
     {
       "dog_id": 10037,
@@ -5446,17 +5457,6 @@
       "year_to": 2018,
       "best_speed": 39.25,
       "avg_speed": 39.25,
-      "total_starts": 1
-    },
-    {
-      "dog_id": 10730,
-      "name_lat": "NICOL SAN S KNJAZHESKOGO DVORA",
-      "name_ru": "НИКОЛЬ САН С КНЯЖЕСКОГО ДВОРА",
-      "breed": "БАСЕНДЖИ",
-      "year_from": 2026,
-      "year_to": 2026,
-      "best_speed": 39.118,
-      "avg_speed": 38.75,
       "total_starts": 1
     },
     {
@@ -5537,17 +5537,6 @@
       "total_starts": 1
     },
     {
-      "dog_id": 10732,
-      "name_lat": "EE VELICHESTVO",
-      "name_ru": "ЕЕ ВЕЛИЧЕСТВО",
-      "breed": "БАСЕНДЖИ",
-      "year_from": 2026,
-      "year_to": 2026,
-      "best_speed": 38.544,
-      "avg_speed": 38.36,
-      "total_starts": 1
-    },
-    {
       "dog_id": 748,
       "name_lat": "МОНАННА РЕПАБЛИК ХИДАН /MONANNA REPUBLIC HIDAN",
       "name_ru": "МОНАННА РЕПАБЛИК ХИДАН /MONANNA REPUBLIC HIDAN",
@@ -5555,8 +5544,8 @@
       "year_from": 2026,
       "year_to": 2026,
       "best_speed": 38.4967919340055,
-      "avg_speed": 37.77,
-      "total_starts": 1
+      "avg_speed": 37.78,
+      "total_starts": 2
     },
     {
       "dog_id": 10731,
@@ -5566,8 +5555,8 @@
       "year_from": 2026,
       "year_to": 2026,
       "best_speed": 38.38,
-      "avg_speed": 38.15,
-      "total_starts": 1
+      "avg_speed": 36.63,
+      "total_starts": 2
     },
     {
       "dog_id": 396,
@@ -5681,14 +5670,14 @@
     },
     {
       "dog_id": 10733,
-      "name_lat": "DINA DEIO",
+      "name_lat": "DINA DEJO",
       "name_ru": "ДИНА ДЭЙО",
       "breed": "БАСЕНДЖИ",
       "year_from": 2026,
       "year_to": 2026,
       "best_speed": 37.124,
-      "avg_speed": 34.2,
-      "total_starts": 1
+      "avg_speed": 33.09,
+      "total_starts": 2
     },
     {
       "dog_id": 7902,
@@ -5779,6 +5768,17 @@
       "total_starts": 1
     },
     {
+      "dog_id": 541,
+      "name_lat": "APRIORI STAR SIRIUS SUNNI BOY",
+      "name_ru": "АПРИОРИ СТАР СИРИУС СУННИ БОЙ",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
+      "year_from": 2023,
+      "year_to": 2026,
+      "best_speed": 36.301,
+      "avg_speed": 35.66,
+      "total_starts": 2
+    },
+    {
       "dog_id": 389,
       "name_lat": "ENIGMA S KNJAZHESKOGO DVORA",
       "name_ru": "ENIGMA S KNJAZHESKOGO DVORA",
@@ -5809,17 +5809,6 @@
       "year_to": 2025,
       "best_speed": 35.875,
       "avg_speed": 35.7,
-      "total_starts": 1
-    },
-    {
-      "dog_id": 7256,
-      "name_lat": "ИМРАН ДЖАЗЗИ /IMRAN JAZZEE",
-      "name_ru": "ИМРАН ДЖАЗЗИ /IMRAN JAZZEE",
-      "breed": "САЛЮКИ",
-      "year_from": 2026,
-      "year_to": 2026,
-      "best_speed": 35.836,
-      "avg_speed": 35.84,
       "total_starts": 1
     },
     {

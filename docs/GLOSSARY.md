@@ -30,6 +30,7 @@ verified: 2026-10-05
 |--------|-------------|-----------|
 | **CDN-only** | Архитектурный принцип публичного сайта: фронтенд читает только статичный JSON по пути `/data/v1/`. На проде сайта нет активного бекенда, D1 или серверного runtime. | [sheets/00-overview.md](sheets/00-overview.md), [sheets/02-data-pipeline.md](sheets/02-data-pipeline.md) |
 | **Yandex Object Storage** | Текущий постоянный хостинг фронтенда и статических данных CDN (`https://storage.yandexcloud.net`). Деплоится автоматически через GitHub Actions (`deploy.yml`). | [sheets/09-ops-deploy.md](sheets/09-ops-deploy.md), [ADR-001](decisions/001-cloudflare-pages-hosting.md) |
+| **Google Диск** | Хранилище исходных документов соревнований (PDF каталоги, DOCX регламенты, протоколы). Синхронизируется через локальную папку `C:\Users\Antal\Documents\Google.Disk\Competitions`. Заменил Яндекс Диск для внешних ссылок. | [sheets/03-competitions.md](sheets/03-competitions.md) |
 | **Cloudflare Pages** | Предыдущий хостинг статики (заменен на Yandex Object Storage для стабильной доступности в РФ без VPN). | [ADR-001](decisions/001-cloudflare-pages-hosting.md) |
 | **Cloudflare Workers** | Среда исполнения Telegram-бота (`@coursing_stats_bot`). В веб-части сайта не используется. | [sheets/08-bot.md](sheets/08-bot.md) |
 | **CDN Pack** | Шардированные JSON-паки (`pack-000.json` … `pack-255.json`), содержащие профили собак (`dog-profiles`) и судей выставок. Позволяют обойти лимиты числа файлов при деплое. | [ADR-014](decisions/014-cdn-packs-vs-turso.md), `backend/lib/cdn-packs.ts` |
