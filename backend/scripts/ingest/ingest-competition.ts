@@ -145,6 +145,33 @@ export function loadAllDogs(): { dogs: Map<number, StoredDog>; maxDogId: number 
     }
   }
 
+  const dogsIndexPath = path.join(ROOT, 'data/v1/indexes/dogs-index.json');
+  if (fs.existsSync(dogsIndexPath)) {
+    try {
+      const idxDogs = JSON.parse(fs.readFileSync(dogsIndexPath, 'utf-8'));
+      if (Array.isArray(idxDogs)) {
+        for (const item of idxDogs) {
+          if (item && typeof item.id === 'number' && !dogs.has(item.id)) {
+            dogs.set(item.id, {
+              id: item.id,
+              dog_key: item.dog_key || '',
+              name_lat: item.name_lat || '',
+              name_ru: item.name_ru || null,
+              breed: item.breed || '',
+              sex: item.sex || null,
+              owner: null,
+              competition_ids: [],
+              competition_files: []
+            });
+            if (item.id > maxDogId) maxDogId = item.id;
+          }
+        }
+      }
+    } catch {
+      // ignore
+    }
+  }
+
   return { dogs, maxDogId };
 }
 

@@ -36,6 +36,17 @@
       "unique_dogs": 501
     },
     {
+      "id": "Иванова Г.С.",
+      "name": "Иванова Г.С.",
+      "total_evaluations": 6750,
+      "total_evaluations_count": 1350,
+      "avg_score": 16.74969549330085,
+      "unique_breeds": 44,
+      "unique_disciplines": 2,
+      "unique_events": 13,
+      "unique_dogs": 449
+    },
+    {
       "id": "Крылова Е.В.",
       "name": "Крылова Е.В.",
       "total_evaluations": 6635,
@@ -67,17 +78,6 @@
       "unique_disciplines": 3,
       "unique_events": 8,
       "unique_dogs": 442
-    },
-    {
-      "id": "Иванова Г.С.",
-      "name": "Иванова Г.С.",
-      "total_evaluations": 5815,
-      "total_evaluations_count": 1163,
-      "avg_score": 16.730339073317946,
-      "unique_breeds": 38,
-      "unique_disciplines": 2,
-      "unique_events": 12,
-      "unique_dogs": 396
     },
     {
       "id": "Серова Т.Г.",
@@ -168,6 +168,17 @@
       "unique_dogs": 161
     },
     {
+      "id": "Полякова Г.Б.",
+      "name": "Полякова Г.Б.",
+      "total_evaluations": 1525,
+      "total_evaluations_count": 305,
+      "avg_score": 15.984705025491625,
+      "unique_breeds": 19,
+      "unique_disciplines": 2,
+      "unique_events": 3,
+      "unique_dogs": 169
+    },
+    {
       "id": "Bali O.",
       "name": "Bali O.",
       "total_evaluations": 1520,
@@ -190,17 +201,6 @@
       "unique_dogs": 152
     },
     {
-      "id": "Богаченко В.В.",
-      "name": "Богаченко В.В.",
-      "total_evaluations": 1420,
-      "total_evaluations_count": 284,
-      "avg_score": 17.143661971830987,
-      "unique_breeds": 15,
-      "unique_disciplines": 2,
-      "unique_events": 5,
-      "unique_dogs": 127
-    },
-    {
       "id": "Кузнецова Н.Н.",
       "name": "Кузнецова Н.Н.",
       "total_evaluations": 1420,
@@ -210,6 +210,17 @@
       "unique_disciplines": 2,
       "unique_events": 3,
       "unique_dogs": 132
+    },
+    {
+      "id": "Богаченко В.В.",
+      "name": "Богаченко В.В.",
+      "total_evaluations": 1420,
+      "total_evaluations_count": 284,
+      "avg_score": 17.143661971830987,
+      "unique_breeds": 15,
+      "unique_disciplines": 2,
+      "unique_events": 5,
+      "unique_dogs": 127
     },
     {
       "id": "Евграфова О.Н.",
@@ -278,17 +289,6 @@
       "unique_dogs": 61
     },
     {
-      "id": "Полякова Г.Б.",
-      "name": "Полякова Г.Б.",
-      "total_evaluations": 590,
-      "total_evaluations_count": 118,
-      "avg_score": 13.623287671232877,
-      "unique_breeds": 13,
-      "unique_disciplines": 2,
-      "unique_events": 2,
-      "unique_dogs": 85
-    },
-    {
       "id": "Гродинская Т.Л.",
       "name": "Гродинская Т.Л.",
       "total_evaluations": 540,
@@ -350,6 +350,7 @@
     "БИГЛЬ",
     "БОРДЕР КОЛЛИ",
     "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
+    "Басенджи",
     "ВЕЙМАРАНЕР К Ш",
     "ВЕНГЕРСКАЯ ВЫЖЛА",
     "ВЕНГЕРСКАЯ ВЫЖЛА К Ш",
@@ -367,6 +368,7 @@
     "ИСПАНСКАЯ БОРЗАЯ (ГАЛЬГО)",
     "ИСПАНСКИЙ ГАЛЬГО",
     "ИТАЛЬЯНСКАЯ КОРОТКОШЕРСТНАЯ ГОНЧАЯ",
+    "Ирландский вольфхаунд",
     "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ",
     "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
     "КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ СОБАКА) СТАНДАРТ",
@@ -393,6 +395,7 @@
     "РОТВЕЙЛЕР",
     "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "РУССКАЯ ЦВЕТНАЯ БОЛОНКА",
+    "Родезийский риджбек",
     "САЛЮКИ",
     "САМОЕД",
     "СИБИРСКИЙ ХАСКИ",
@@ -402,10 +405,12 @@
     "ТАЙСКИЙ РИДЖБЕК",
     "ТАКСА МИНИАТЮРНАЯ (Г Ш, Д Ш, Ж Ш)",
     "УИППЕТ",
+    "Уиппет",
     "ФАРАОНОВА СОБАКА",
     "ХОРТАЯ БОРЗАЯ",
     "ЦВЕРГПИНЧЕР",
     "ЧИРНЕКО ДЕЛЬ ЭТНА",
+    "Чирнеко дель Этна",
     "ШНАУЦЕР",
     "ЯКУТСКАЯ ЛАЙКА"
   ]

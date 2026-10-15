@@ -6,19 +6,25 @@
   "name_lat": "ВЕТЛУГА ХАЛВА РЕЙСДОГ /VETLUGA HALVA RACEDOG",
   "name_ru": "ВЕТЛУГА ХАЛВА РЕЙСДОГ /VETLUGA HALVA RACEDOG",
   "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
-  "sex": null,
+  "sex": "Сука",
   "owner": null,
   "pedigree_url": "https://italiangreyhound.breedarchive.com/animal/view/vetluga-halva-racedog-1b18acc8-ad6c-4544-96d3-ecebf2dec71b",
   "competition_ids": [
     1300,
     1310,
     1314,
-    1317
+    1317,
+    2022000,
+    2022002,
+    2022003
   ],
   "competition_files": [
     "competitions/2026/04-апрель/1300-чркф-курсинг-борзых.json",
     "competitions/2026/04-апрель/1310-чркф-курсинг-борзых.json",
     "competitions/2026/05-май/1314-чркф-курсинг-борзых.json",
-    "competitions/2026/05-май/1317-чемпионат-россии-курсинг-борзых.json"
+    "competitions/2026/05-май/1317-чемпионат-россии-курсинг-борзых.json",
+    "competitions/2026/09-сентябрь/2022002-чркф-по-бегам-борзых.json",
+    "competitions/2026/09-сентябрь/2022000-чемпионат-россии-по-бегам-борзых.json",
+    "competitions/2026/10-октябрь/2022003-чркф-по-курсингу-борзых.json"
   ]
 }

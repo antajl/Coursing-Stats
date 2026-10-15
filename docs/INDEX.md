@@ -61,7 +61,6 @@ All sheets verified 2026-10-01.
 | File | Purpose |
 |------|---------|
 | [AGENTS.md](../AGENTS.md) | Agent entry point, forbidden patterns |
-| [.devin/config.json](../.devin/config.json) | Devin configuration |
 | [.mcp.json](../.mcp.json) | MCP server configuration |
 | [package.json](../package.json) | Dependencies and scripts |
 | [wrangler.toml](../wrangler.toml) | Cloudflare Workers configuration |

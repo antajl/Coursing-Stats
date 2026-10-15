@@ -6,7 +6,7 @@
   "name_lat": "STANGERS LAND INTERNAL ENERGY",
   "name_ru": "СТАНГЕРС ЛАНД ИНТЕРНАЛ ЭНЕРДЖИ",
   "breed": "УИППЕТ",
-  "sex": null,
+  "sex": "Сука",
   "owner": null,
   "pedigree_url": "https://whippet.breedarchive.com/animal/view/stangers-land-internal-energy-efc9e0bf-c569-45b0-bc49-1a69d78eccb9",
   "competition_ids": [
@@ -21,7 +21,11 @@
     1300,
     1307,
     1310,
-    1315
+    1315,
+    1550,
+    2022000,
+    2022001,
+    2022003
   ],
   "competition_files": [
     "competitions/2025/06-июнь/1272-чркф-бега-борзых.json",
@@ -35,7 +39,11 @@
     "competitions/2026/04-апрель/1300-чркф-курсинг-борзых.json",
     "competitions/2026/04-апрель/1307-чркф-курсинг-борзых.json",
     "competitions/2026/04-апрель/1310-чркф-курсинг-борзых.json",
-    "competitions/2026/05-май/1315-пчркф-курсинг-борзых-родезиискии-риджбек-чирнеко.json"
+    "competitions/2026/05-май/1315-пчркф-курсинг-борзых-родезиискии-риджбек-чирнеко.json",
+    "competitions/2026/08-август/1550-чркф-бега-борзых.json",
+    "competitions/2026/09-сентябрь/2022000-чемпионат-россии-по-бегам-борзых.json",
+    "competitions/2026/09-сентябрь/2022001-клубный-чемпионат-по-рейсингу.json",
+    "competitions/2026/10-октябрь/2022003-чркф-по-курсингу-борзых.json"
   ],
   "merged_alias_ids": [
     502

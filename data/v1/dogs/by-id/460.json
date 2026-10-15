@@ -6,19 +6,25 @@
   "name_lat": "STATNIY BARON",
   "name_ru": "СТАТНЫЙ БАРОН",
   "breed": "УИППЕТ",
-  "sex": null,
+  "sex": "Кобель",
   "owner": null,
   "pedigree_url": "https://whippet.breedarchive.com/animal/view/statniy-baron-6f691d4a-7a80-4e91-83ff-ea93311277bc",
   "competition_ids": [
     1272,
     1285,
     1287,
-    1294
+    1294,
+    2022000,
+    2022001,
+    2022002
   ],
   "competition_files": [
     "competitions/2025/06-июнь/1272-чркф-бега-борзых.json",
     "competitions/2025/09-сентябрь/1285-чемпионат-россии-бега-борзых.json",
     "competitions/2025/09-сентябрь/1287-пчркф-малая-итальянская-борзая-уиппет-чирнеко-де.json",
-    "competitions/2025/10-октябрь/1294-чркф-курсинг-борзых.json"
+    "competitions/2025/10-октябрь/1294-чркф-курсинг-борзых.json",
+    "competitions/2026/09-сентябрь/2022002-чркф-по-бегам-борзых.json",
+    "competitions/2026/09-сентябрь/2022000-чемпионат-россии-по-бегам-борзых.json",
+    "competitions/2026/09-сентябрь/2022001-клубный-чемпионат-по-рейсингу.json"
   ]
 }

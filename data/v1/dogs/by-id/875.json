@@ -6,12 +6,14 @@
   "name_lat": "BITE THERABBIT",
   "name_ru": "BITE THERABBIT",
   "breed": "УИППЕТ",
-  "sex": null,
+  "sex": "Сука",
   "owner": null,
   "competition_ids": [
-    1317
+    1317,
+    2022003
   ],
   "competition_files": [
-    "competitions/2026/05-май/1317-чемпионат-россии-курсинг-борзых.json"
+    "competitions/2026/05-май/1317-чемпионат-россии-курсинг-борзых.json",
+    "competitions/2026/10-октябрь/2022003-чркф-по-курсингу-борзых.json"
   ]
 }
