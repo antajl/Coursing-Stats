@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/donino-speed-v1",
   "source": "google-sheets",
-  "count": 275,
+  "count": 276,
   "records": [
     {
       "breed": "Уиппет",
@@ -1386,8 +1386,8 @@
       "name": "Тайсон",
       "speed_km_h": 44,
       "date": "2026-10-04",
-      "screenshot_url": "https://disk.yandex.ru/d/IvlxUUn2j3Ka2A",
-      "status": "new",
+      "screenshot_url": "https://disk.yandex.ru/i/8yWJoToXNEDO_w",
+      "status": "normal",
       "track_type": "прямая",
       "history": []
     },
@@ -1750,13 +1750,38 @@
       "history": []
     },
     {
+      "breed": "Фокстерьер",
+      "sex": "К",
+      "name": "Билли",
+      "speed_km_h": 34,
+      "date": "2026-10-17",
+      "screenshot_url": "https://disk.yandex.ru/i/zICebqHHZ5_YXQ",
+      "status": "new",
+      "track_type": "курсинг",
+      "history": [
+        {
+          "speed_km_h": 36,
+          "date": "2025-11-29",
+          "track_type": null
+        },
+        {
+          "speed_km_h": 34,
+          "date": "2025-09-07"
+        },
+        {
+          "speed_km_h": 32,
+          "date": "2025-07-13"
+        }
+      ]
+    },
+    {
       "breed": "Метис",
       "sex": "К",
       "name": "Герц",
       "speed_km_h": 33,
       "date": "2026-10-04",
       "screenshot_url": "https://disk.yandex.ru/i/ew4C5-HbHYwB_g",
-      "status": "new",
+      "status": "normal",
       "track_type": "курсинг",
       "history": []
     },
@@ -3285,6 +3310,11 @@
       "history": [
         {
           "speed_km_h": 34,
+          "date": "2026-10-17",
+          "track_type": "курсинг"
+        },
+        {
+          "speed_km_h": 34,
           "date": "2025-09-07"
         },
         {
@@ -3588,6 +3618,11 @@
       "status": "old",
       "history": [
         {
+          "speed_km_h": 34,
+          "date": "2026-10-17",
+          "track_type": "курсинг"
+        },
+        {
           "speed_km_h": 36,
           "date": "2025-11-29",
           "track_type": null
@@ -3744,6 +3779,11 @@
       "screenshot_url": "https://disk.yandex.ru/i/16HpATFHoeoLHw",
       "status": "improved",
       "history": [
+        {
+          "speed_km_h": 34,
+          "date": "2026-10-17",
+          "track_type": "курсинг"
+        },
         {
           "speed_km_h": 36,
           "date": "2025-11-29",
