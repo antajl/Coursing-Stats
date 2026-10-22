@@ -343,6 +343,7 @@ export default function DogProfile() {
         (Array.isArray(showDog.history) && showDog.history.length > 0)),
   )
 
+    
   const availableTabs = useMemo(() => {
     const tabs: Array<{
       id: DisciplineTabId
@@ -677,7 +678,6 @@ export default function DogProfile() {
             })}
           </div>
         )}
-
         {/* Мобильный вид: отображение только выбранной дисциплины */}
         <div className="mb-6 block md:hidden">
           {availableTabs.length === 0 ? (
@@ -787,7 +787,7 @@ export default function DogProfile() {
               showAllCoursingEvents={showAllCoursingEvents}
               onToggleShowAll={() => setShowAllCoursingEvents((v) => !v)}
               rank={headerRanks.find((r) => r.key === 'coursing')}
-              breed={headerBreed}
+                      breed={headerBreed}
             />
           ) : (
             <EmptyDisciplineColumn title="Курсинг / БЗМП" theme="forest" />
@@ -806,7 +806,7 @@ export default function DogProfile() {
               showAllRacingEvents={showAllRacingEvents}
               onToggleShowAll={() => setShowAllRacingEvents((v) => !v)}
               rank={headerRanks.find((r) => r.key === 'racing')}
-              breed={headerBreed}
+                    breed={headerBreed}
             />
           ) : (
             <EmptyDisciplineColumn title="Бега борзых" theme="warm-blue" />
@@ -816,7 +816,7 @@ export default function DogProfile() {
             <ShowsColumn
               dog={showDog}
               rank={headerRanks.find((r) => r.key === 'shows')}
-              breed={headerBreed}
+                    breed={headerBreed}
             />
           ) : (
             <EmptyDisciplineColumn title="Выставки" theme="camel" />

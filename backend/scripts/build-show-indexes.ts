@@ -1,5 +1,6 @@
 import * as fs from 'fs'
 import * as path from 'path'
+import { writeFeaturedShowsFile } from './shows/build-featured-shows'
 import { fileURLToPath } from 'url'
 import {
   bestShowAward,

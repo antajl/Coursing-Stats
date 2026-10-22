@@ -106,4 +106,16 @@ describe('show-dog-dedupe', () => {
     expect(dogs[0]!.breed).toBe('САЛЮКИ')
     expect(dogs[0]!.total_shows).toBe(8)
   })
+
+  it('does not link short 2-word names across different breeds (e.g. Afina Mudraya Pug vs Weimaraner)', () => {
+    const showDogs = [
+      dog({ id: 'x', name_lat: 'АФИНА МУДРАЯ', breed: 'МОПС' }),
+    ]
+    const { linked } = linkShowDogsByUniqueName(showDogs, [
+      { id: 774, name_lat: 'AFINA MUDRAYA', name_ru: 'АФИНА МУДРАЯ', breed: 'ВЕЙМАРАНЕР К Ш' },
+    ])
+    expect(linked).toBe(0)
+    expect(showDogs[0]!.competition_dog_id).toBeNull()
+    expect(showDogs[0]!.breed).toBe('МОПС')
+  })
 })

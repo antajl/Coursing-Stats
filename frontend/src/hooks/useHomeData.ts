@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { api } from '../services/api'
-import { getShowCalendar, getShowHomeTop, type ShowHomeTopDog, type ShowRkfCalendarEntry } from '../lib/staticData'
+import { getShowCalendar, getShowFeatured, getShowHomeTop, type ShowHomeTopDog, type ShowRkfCalendarEntry } from '../lib/staticData'
 import type { CalendarEvent } from '../pages/Events/eventListUtils'
 
 const CURRENT_SEASON = new Date().getFullYear()
@@ -113,7 +113,7 @@ export function useHomeData() {
           api.getStats(),
           api.getShowHeroStats(),
           api.getEvents(),
-          getShowCalendar(String(CURRENT_SEASON)),
+          getShowFeatured(String(CURRENT_SEASON)),
           api.getTopPlacement(String(CURRENT_SEASON), '', 0, 'gold', 3, 0),
           api.getTopScore(String(CURRENT_SEASON), '', 0, 'rating_score', 3, 0),
           api.getTopSpeed(String(CURRENT_SEASON), '', 0, 'best_speed', 3, 0),

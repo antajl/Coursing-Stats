@@ -4,7 +4,7 @@ import PageLoader from './components/PageLoader';
 import { isLocalDev } from './lib/env';
 import { usePublicCalendarVisible } from './hooks/useStaticData';
 
-const Home = lazy(() => import('./pages/Home'));
+import Home from './pages/Home';
 const Competitions = lazy(() => import('./pages/Competitions'));
 const Shows = lazy(() => import('./pages/Shows'));
 const ShowDogProfile = lazy(() => import('./pages/Shows/ShowDogProfile'));

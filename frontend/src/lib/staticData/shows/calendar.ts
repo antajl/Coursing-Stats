@@ -269,6 +269,26 @@ export async function getShowCalendar(
   return { success: true, data }
 }
 
+
+/**
+ * Легковесный список избранных/недавних выставок для главной страницы
+ * (~3 КБ вместо 5.9 МБ полного календаря RKF).
+ */
+export async function getShowFeatured(
+  year?: string,
+): Promise<ApiResult<ShowRkfCalendarEntry[]>> {
+  const res = await fetchJson<{ schema?: string; shows?: ShowRkfCalendarEntry[] } | ShowRkfCalendarEntry[]>(
+    'shows/indexes/featured-shows.json',
+  )
+  if (res.success && res.data) {
+    const list = Array.isArray(res.data) ? res.data : res.data.shows ?? []
+    if (list.length > 0) {
+      return { success: true, data: list }
+    }
+  }
+  return getShowCalendar(year)
+}
+
 export async function getShowExhibition(exhibitionId: string): Promise<ApiResult<ShowExhibition>> {
   console.debug('[getShowExhibition] Loading exhibition:', exhibitionId)
 

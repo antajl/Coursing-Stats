@@ -5,6 +5,7 @@
 import { isBreedFragment } from '../parsers/shows/parse-rkf-certificate-pdf'
 import {
   collectDogNameParts,
+  breedsEquivalent,
   type DogIdentityFields,
 } from './dog-identity-match'
 import {
@@ -364,6 +365,12 @@ export function linkShowDogsByUniqueName<T extends ShowDogDedupeFields & DogIden
     }
     if (candidateIds.size !== 1) continue
     const hit = [...candidateIds.values()][0]!
+    if (showDog.breed && !breedsEquivalent(showDog, hit)) {
+      const words = showKey.split(' ').filter(Boolean)
+      if (words.length < 4 && showKey.length < 22) {
+        continue
+      }
+    }
     showDog.competition_dog_id = hit.id
     if (hit.breed?.trim()) {
       showDog.breed = cleanShowBreedLabel(hit.breed)

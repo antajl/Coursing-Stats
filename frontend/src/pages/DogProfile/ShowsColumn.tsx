@@ -1,6 +1,6 @@
 import { useLayoutEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight } from 'lucide-react'
+import { Crown, ArrowRight, Award } from 'lucide-react'
 import {
   parseShowTitles,
   presentShowAwards,
@@ -19,7 +19,6 @@ import { HISTORY_DEFAULT } from './dogProfileStats'
 import {
   DisciplineColumnShell,
   DisciplineFooterRow,
-  DisciplineHero,
   DisciplineHistoryCard,
   DisciplineStatsCard,
   disciplineTheme,
@@ -34,10 +33,6 @@ export type ShowHistoryEntry = {
   placement: number
   title?: string
   grade?: string
-  /** Original event page (rkf.online / LC). */
-  url?: string
-  /** Original PDF report when available. */
-  reports_link?: string
 }
 
 type ShowsColumnProps = {
@@ -48,6 +43,15 @@ type ShowsColumnProps = {
 
 const THEME = 'camel' as const
 
+function formatShowsCount(count: number): string {
+  const mod10 = count % 10
+  const mod100 = count % 100
+  if (mod100 >= 11 && mod100 <= 19) return `${count} выставок`
+  if (mod10 === 1) return `${count} выставка`
+  if (mod10 >= 2 && mod10 <= 4) return `${count} выставки`
+  return `${count} выставок`
+}
+
 function resolveBestGradeLabel(dog: ShowsColumnProps['dog']): string | null {
   if (dog.best_grade?.trim()) return dog.best_grade.trim()
   const history = Array.isArray(dog.history) ? dog.history : []
@@ -57,7 +61,6 @@ function resolveBestGradeLabel(dog: ShowsColumnProps['dog']): string | null {
 function ProfileShowAwardsFooter({ titles }: { titles: ShowDogCardData['titles'] }) {
   const awards = presentShowAwards(titles)
   const rowRef = useRef<HTMLDivElement>(null)
-  // 0 до measure — иначе чипы раздувают ширину и RO видит «бесконечный» budget
   const [maxVisible, setMaxVisible] = useState(0)
   const awardKey = awards.join(',')
 
@@ -67,67 +70,15 @@ function ProfileShowAwardsFooter({ titles }: { titles: ShowDogCardData['titles']
       setMaxVisible(0)
       return
     }
-
     const update = () => {
-      setMaxVisible(maxShowAwardsForWidth(row.clientWidth, titles, awards))
+      const w = row.clientWidth
+      setMaxVisible(maxShowAwardsForWidth(w))
     }
-
     update()
-    const ro = new ResizeObserver(update)
+    const ro = new ResizeObserver(() => update())
     ro.observe(row)
     return () => ro.disconnect()
-  }, [awardKey, titles])
-
-  if (awards.length === 0) {
-    return (
-      <span className="text-sm text-old-money-500">Нет наград</span>
-    )
-  }
-
-  return (
-    <div
-      ref={rowRef}
-      className="flex min-w-0 w-full max-w-full flex-nowrap items-center justify-center gap-1 overflow-hidden"
-    >
-      {renderShowAwardChips({
-        titles,
-        size: 'sm',
-        maxVisible,
-        nowrap: true,
-      })}
-    </div>
-  )
-}
-
-/** Награды одной выставки в истории — по ширине строки (без ×N). */
-function HistoryShowAwardsRow({
-  titles,
-}: {
-  titles: ReturnType<typeof parseShowTitles>
-}) {
-  const awards = presentShowAwards(titles)
-  const rowRef = useRef<HTMLDivElement>(null)
-  const [maxVisible, setMaxVisible] = useState(0)
-  const awardKey = awards.join(',')
-
-  useLayoutEffect(() => {
-    const row = rowRef.current
-    if (!row || awards.length === 0) {
-      setMaxVisible(0)
-      return
-    }
-
-    const update = () => {
-      setMaxVisible(
-        maxShowAwardsForWidth(row.clientWidth, titles, awards, { showCounts: false }),
-      )
-    }
-
-    update()
-    const ro = new ResizeObserver(update)
-    ro.observe(row)
-    return () => ro.disconnect()
-  }, [awardKey, titles])
+  }, [awardKey, awards.length])
 
   if (awards.length === 0) return null
 
@@ -147,7 +98,6 @@ function HistoryShowAwardsRow({
   )
 }
 
-/** Колонка выставок — тот же каркас, что Курсинг / Бега. */
 export function ShowsColumn({ dog, rank, breed }: ShowsColumnProps) {
   const t = disciplineTheme(THEME)
   const [showAll, setShowAll] = useState(false)
@@ -157,65 +107,101 @@ export function ShowsColumn({ dog, rank, breed }: ShowsColumnProps) {
   const history = Array.isArray(dog.history) ? dog.history : []
   const visible = showAll ? history : history.slice(0, HISTORY_DEFAULT)
   const bestGrade = resolveBestGradeLabel(dog)
+  const totalShows = history.length
 
   const dogBreed = breed || dog.breed || ''
-  const rankBadge = rank && (rank.breedRank != null || rank.rank != null) ? (
+  const rankingUrl = `/shows?tab=ranking${dogBreed ? `&breed=${encodeURIComponent(dogBreed)}` : ''}`
+
+  const hasBreedRank = rank?.breedRank != null
+  const hasOverallRank = rank?.rank != null
+
+  const headerLink = (
     <Link
-      to={`/shows?tab=ranking${dogBreed ? `&breed=${encodeURIComponent(dogBreed)}` : ''}`}
-      className="shrink-0 inline-flex items-center gap-1 rounded-full border border-camel-200/90 bg-camel-100/70 px-2.5 py-0.5 text-[11px] font-semibold text-camel-900 transition-colors hover:bg-camel-100 hover:border-camel-300"
+      to={rankingUrl}
+      className="shrink-0 inline-flex items-center gap-1 rounded-full border border-camel-200/90 bg-camel-100/70 px-2.5 py-0.5 text-xs font-semibold text-camel-900 transition-colors hover:bg-camel-100 hover:border-camel-300"
       title="Открыть рейтинг выставок"
     >
-      {rank.breedRank != null ? (
-        <span>
-          <strong className="text-camel-950 font-bold">#{rank.breedRank}</strong> в породе
-          {rank.rank != null && (
-            <span className="text-[10px] font-normal text-camel-700 ml-1">· #{rank.rank} все</span>
-          )}
-        </span>
-      ) : rank.rank != null ? (
-        <span>
-          Общий: <strong className="text-camel-950 font-bold">#{rank.rank}</strong>
-        </span>
-      ) : null}
+      <span>Рейтинг</span>
       <ArrowRight className="h-3 w-3 text-camel-700 shrink-0" />
     </Link>
-  ) : null
-
-  const cellClass = `min-h-[5.5rem] min-w-0 rounded-xl border p-4 text-center ${t.cellBorder} ${t.cellBg}`
+  )
 
   return (
     <DisciplineColumnShell>
-      <DisciplineStatsCard theme={THEME} title="Выставки" rankBadge={rankBadge}>
-        <DisciplineHero
-          theme={THEME}
-          label="Лучшая награда"
-          value={
-            bestBadge && bestLabel ? (
-              <HoverTooltip label={bestLabel} placement="top" delayMs={0} portal>
-                <span tabIndex={0}>{bestBadge}</span>
-              </HoverTooltip>
-            ) : (
-              bestBadge || '—'
-            )
-          }
-          footerAlwaysVisible
-          footer={'\u00a0'}
-        />
+      <DisciplineStatsCard theme={THEME} title="Выставки" rankBadge={headerLink}>
+        <div className="flex h-full flex-col justify-between gap-3">
+          {/* Верх: Подиум со статусом в породе и числом выставок */}
+          <Link
+            to={rankingUrl}
+            className="group block rounded-xl border border-camel-200/90 bg-camel-50/80 p-3 transition-colors hover:bg-camel-100/80"
+            title="Открыть рейтинг выставок РКФ"
+          >
+            <div className="flex items-center justify-between gap-2">
+              <div className="flex items-center gap-2.5 min-w-0">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-camel-700 text-white shadow-2xs">
+                  <Crown className="h-4 w-4" />
+                </div>
+                <div className="min-w-0">
+                  <div className="flex items-baseline gap-1.5 leading-tight">
+                    <span className="text-base font-bold text-camel-950 sm:text-lg">
+                      {hasBreedRank ? `#${rank.breedRank} в породе` : 'Рейтинг выставок'}
+                    </span>
+                  </div>
+                  <div className="text-[11px] text-camel-800 truncate">
+                    {hasOverallRank ? `№${rank?.rank} среди всех пород` : 'Рейтинг РКФ'}
+                  </div>
+                </div>
+              </div>
 
-        <div className="mb-4 shrink-0">
-          <div className={cellClass}>
-            <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-old-money-500">
-              Лучшая оценка
+              <div className="shrink-0 text-right">
+                <span className="inline-flex items-center gap-1 rounded-full border border-camel-200 bg-white/90 px-2.5 py-1 text-xs font-semibold text-charcoal-700">
+                  <Award className="h-3.5 w-3.5 text-camel-700" />
+                  <span>{formatShowsCount(totalShows)}</span>
+                </span>
+              </div>
             </div>
-            <div className="flex justify-center pt-1">
-              <ShowGradeChip grade={bestGrade} size="md" />
+          </Link>
+
+          {/* Центр: Высшая награда */}
+          <div className="flex flex-1 flex-col items-center justify-center rounded-xl border border-camel-200/90 bg-white p-3 text-center">
+            <span className="text-[11px] font-semibold uppercase tracking-wider text-charcoal-500 mb-0.5">
+              Высшая награда
+            </span>
+            <div className="text-2xl font-bold text-camel-950 sm:text-3xl truncate max-w-full">
+              {bestBadge && bestLabel ? (
+                <HoverTooltip label={bestLabel} placement="top" delayMs={0} portal>
+                  <span tabIndex={0} className="cursor-help">{bestBadge}</span>
+                </HoverTooltip>
+              ) : (
+                bestBadge || bestLabel || 'Участник рингов'
+              )}
+            </div>
+            {bestGrade && (
+              <span className="mt-1 text-[11px] font-medium text-charcoal-600">
+                Оценка: <strong className="text-camel-800 font-semibold">{bestGrade}</strong>
+              </span>
+            )}
+          </div>
+
+          {/* Низ: 2 карточки показателей */}
+          <div className="grid grid-cols-2 gap-2 text-center text-xs shrink-0">
+            <div className="rounded-lg border border-old-money-200 bg-cream-50/80 p-2">
+              <div className="text-[10px] uppercase text-charcoal-500 mb-0.5">Лучшая оценка</div>
+              <div className="flex justify-center pt-0.5">
+                <ShowGradeChip grade={bestGrade} size="sm" />
+              </div>
+            </div>
+
+            <div className="rounded-lg border border-old-money-200 bg-cream-50/80 p-2">
+              <div className="text-[10px] uppercase text-charcoal-500 mb-0.5">Ринги РКФ</div>
+              <div className="font-bold tabular-nums text-charcoal-800 text-sm sm:text-base">
+                {formatShowsCount(totalShows)}
+              </div>
             </div>
           </div>
         </div>
 
-        <DisciplineFooterRow>
-          <ProfileShowAwardsFooter titles={dog.titles} />
-        </DisciplineFooterRow>
+        <ProfileShowAwardsFooter titles={dog.titles} />
       </DisciplineStatsCard>
 
       {history.length > 0 && (
@@ -229,25 +215,38 @@ export function ShowsColumn({ dog, rank, breed }: ShowsColumnProps) {
               const rowBody = (
                 <>
                   <div className="min-w-0 flex-shrink-0 break-words text-xs font-bold uppercase tracking-wide text-camel-700">
-                    {entry.exhibition_title && entry.exhibition_title.length > 50 ? (
-                      <HoverTooltip label={entry.exhibition_title} placement="top" variant="site" delayMs={0} portal>
-                        <span className="cursor-help">{entry.exhibition_title.slice(0, 50)}...</span>
-                      </HoverTooltip>
-                    ) : (
-                      entry.exhibition_title || 'Выставка'
-                    )}
+                    {entry.exhibition_title || 'Выставка РКФ'}
                   </div>
                   <HistoryMetaRow
-                    date={entry.date || '—'}
+                    date={
+                      entry.date
+                        ? (() => {
+                            const [day, month, year] = entry.date.split('.')
+                            return `${day}.${month}.${year}`
+                          })()
+                        : '—'
+                    }
                     placement={entry.placement}
-                    trailing={<ShowGradeChip grade={entry.grade} />}
+                    grade={entry.grade}
                   />
                   <div className="min-w-0 flex-1 overflow-hidden">
-                    <HistoryShowAwardsRow titles={entryTitles} />
+                    {entryTitles.length > 0 && (
+                      <div className="mt-1 flex flex-wrap gap-1">
+                        {entryTitles.slice(0, 3).map((t, i) => (
+                          <span
+                            key={i}
+                            className="inline-block rounded-md border border-camel-200 bg-camel-50/90 px-1.5 py-0.5 text-[10px] font-semibold text-camel-800"
+                          >
+                            {t}
+                          </span>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </>
               )
-              return (
+
+              return entry.exhibition_id ? (
                 <Link
                   key={rowKey}
                   to={`${localExhibitionPath}/${entry.exhibition_id}`}
@@ -255,18 +254,25 @@ export function ShowsColumn({ dog, rank, breed }: ShowsColumnProps) {
                 >
                   {rowBody}
                 </Link>
+              ) : (
+                <div key={rowKey} className={rowClass}>
+                  {rowBody}
+                </div>
               )
             })}
-            {history.length > HISTORY_DEFAULT && (
+          </div>
+
+          {history.length > 4 && (
+            <div className="mt-3 text-center">
               <button
                 type="button"
                 onClick={() => setShowAll((v) => !v)}
-                className="text-sm font-semibold text-camel-700"
+                className="text-xs font-semibold text-camel-700 transition-colors hover:text-camel-900 hover:underline"
               >
-                {showAll ? 'Свернуть' : `Показать все ${history.length} выставок`}
+                {showAll ? 'Свернуть историю' : `Показать все ${history.length} выставок`}
               </button>
-            )}
-          </div>
+            </div>
+          )}
         </DisciplineHistoryCard>
       )}
     </DisciplineColumnShell>

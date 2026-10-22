@@ -33,6 +33,7 @@
     "add-procoursing-source": "npx tsx backend/scripts/source/add-procoursing-source.ts",
     "ingest-competition": "npx tsx backend/scripts/ingest/ingest-competition.ts",
     "export-protocol": "npx tsx backend/scripts/export/export-protocol-vector.ts",
+    "enhance-protocol": "python backend/scripts/tools/enhance-protocol-pdf.py",
     "rebuild-calendar-index": "npx tsx backend/scripts/rebuild-calendar-index.ts",
     "parse-coursing": "npx tsx backend/parsers/coursing/index.ts",
     "parse-bzmp": "npx tsx backend/parsers/bzmp/index.ts",

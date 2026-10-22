@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { api } from '../../../services/api'
 import {
   getShowCalendar,
+  getShowFeatured,
   getShowHomeTop,
   type ShowHomeTopDog,
   type ShowRkfCalendarEntry,
@@ -71,7 +72,7 @@ export function useHomeData() {
           api.getStats(),
           api.getShowHeroStats(),
           api.getEvents(),
-          getShowCalendar(String(CURRENT_SEASON)),
+          getShowFeatured(String(CURRENT_SEASON)),
           // Full season slices — merge (standing B) then breed top slides
           api.getTopPlacement(String(CURRENT_SEASON), '', 0, 'gold', null, 0),
           api.getTopScore(String(CURRENT_SEASON), '', 0, 'rating_score', null, 0),

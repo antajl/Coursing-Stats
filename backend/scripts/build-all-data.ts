@@ -184,6 +184,9 @@ if (fs.existsSync(path.join(ROOT, showRankingMonolith))) {
   process.exit(1);
 }
 
+// Featured shows for home page (lean slice ~3KB instead of 5.9MB full calendar)
+run('npx tsx backend/scripts/shows/build-featured-shows.ts', 'Featured shows build');
+
 // Also copy data for local preview (frontend/public/data/v1/)
 run('node frontend/scripts/copy-data.js', 'Data copy for preview');
 
