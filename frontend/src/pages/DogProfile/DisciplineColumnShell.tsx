@@ -92,8 +92,8 @@ export function DisciplineStatsCard({
     <div
       className={`flex h-[24rem] shrink-0 flex-col overflow-hidden rounded-xl border bg-white p-5 md:h-[25rem] md:p-6 ${t.cardBorder}`}
     >
-      <div className="mb-4 flex items-center justify-between gap-2 shrink-0 flex-wrap">
-        <h2 className="text-lg font-bold tracking-tight text-charcoal-800 md:text-xl">
+      <div className="mb-4 flex items-center justify-between gap-1.5 shrink-0 min-w-0">
+        <h2 className="text-base sm:text-lg font-bold tracking-tight text-charcoal-800 md:text-xl truncate shrink min-w-0">
           {title}
         </h2>
         {rankBadge}

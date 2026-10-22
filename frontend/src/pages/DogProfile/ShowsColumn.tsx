@@ -162,12 +162,12 @@ export function ShowsColumn({ dog, rank, breed }: ShowsColumnProps) {
   const rankBadge = rank && (rank.breedRank != null || rank.rank != null) ? (
     <Link
       to={`/shows?tab=ranking${dogBreed ? `&breed=${encodeURIComponent(dogBreed)}` : ''}`}
-      className="inline-flex items-center gap-1.5 rounded-full border border-camel-200/90 bg-camel-100/70 px-2.5 py-0.5 text-xs font-semibold text-camel-900 transition-colors hover:bg-camel-100 hover:border-camel-300"
+      className="shrink-0 inline-flex items-center gap-1 rounded-full border border-camel-200/90 bg-camel-100/70 px-2.5 py-0.5 text-[11px] font-semibold text-camel-900 transition-colors hover:bg-camel-100 hover:border-camel-300"
       title="Открыть рейтинг выставок"
     >
       {rank.breedRank != null ? (
         <span>
-          В породе: <strong className="text-camel-950 font-bold">#{rank.breedRank}</strong>
+          <strong className="text-camel-950 font-bold">#{rank.breedRank}</strong> в породе
           {rank.rank != null && (
             <span className="text-[10px] font-normal text-camel-700 ml-1">· #{rank.rank} все</span>
           )}

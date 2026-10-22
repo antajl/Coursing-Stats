@@ -1,5 +1,15 @@
 import { Link } from 'react-router-dom'
-import { createContext, useContext, useMemo, memo, type FC, type NamedExoticComponent } from 'react'
+import {
+  createContext,
+  useContext,
+  useMemo,
+  memo,
+  useRef,
+  useState,
+  useEffect,
+  type FC,
+  type NamedExoticComponent,
+} from 'react'
 import { dogYearBadge } from '../lib/season'
 import { parseDogName } from '../lib/dogName'
 import { displayBreed } from '../lib/breedMapping'
@@ -7,7 +17,7 @@ import { ratingScoreFromRow } from '../../../backend/lib/rating/coursing-rating-
 import { MedalIcon, type MedalVariant } from './MedalTally'
 import OwnerCrownName from './OwnerCrownName'
 import MedalBadge from './MedalBadge'
-import RankBadge from './RankBadge'
+import RankBadge, { DeltaBadge } from './RankBadge'
 import CombinedMetricsRotator from './CombinedMetricsRotator'
 
 // Context for compound components
@@ -242,16 +252,54 @@ const DogCardHeader: FC = function DogCardHeader() {
   const yearBadge = dogYearBadge(dog, filterYear)
   const showYear = yearBadge && (!filterYear || filterYear === 'all')
 
+  const nameRef = useRef<HTMLHeadingElement>(null)
+  const [isTruncated, setIsTruncated] = useState(false)
+
+  useEffect(() => {
+    const el = nameRef.current
+    if (!el) return
+    const checkTruncation = () => {
+      setIsTruncated(el.scrollWidth > el.clientWidth + 1)
+    }
+    checkTruncation()
+    if (document.fonts?.ready) {
+      document.fonts.ready.then(checkTruncation)
+    }
+    window.addEventListener('resize', checkTruncation)
+    return () => window.removeEventListener('resize', checkTruncation)
+  }, [primary])
+
   return (
-    <div className="min-w-0 overflow-hidden">
-      <OwnerCrownName name={primary} dogId={dog.dog_id} kind="competition">
-        <h3
-          className="text-xs font-bold leading-snug text-charcoal-900 break-words line-clamp-2"
-          title={secondary ? `${primary} / ${secondary}` : primary}
-        >
-          {primary}
-        </h3>
-      </OwnerCrownName>
+    <div className="min-w-0">
+      <div className="group/name relative min-w-0">
+        <div className="flex items-center gap-1.5 min-w-0">
+          <OwnerCrownName name={primary} dogId={dog.dog_id} kind="competition">
+            <h3
+              ref={nameRef}
+              className="text-xs font-bold leading-snug text-charcoal-900 truncate"
+              title={secondary ? `${primary} / ${secondary}` : primary}
+            >
+              {primary}
+            </h3>
+          </OwnerCrownName>
+        </div>
+
+        {isTruncated && (
+          <div
+            className="pointer-events-none absolute -left-1.5 -top-1 z-30 hidden group-hover/name:block min-w-full max-w-[22rem] rounded-md border border-old-money-200/90 bg-white/98 px-2 py-1 shadow-lg backdrop-blur-xs transition-opacity duration-150"
+            aria-hidden
+          >
+            <div className="text-xs font-bold leading-snug text-charcoal-900 break-words">
+              {primary}
+            </div>
+            {secondary && (
+              <div className="mt-0.5 text-[10px] font-medium text-charcoal-500 leading-tight">
+                {secondary}
+              </div>
+            )}
+          </div>
+        )}
+      </div>
       <div className="flex items-center gap-1 text-[10px]">
         <span className="text-charcoal-600 font-medium truncate">
           {breedDisplay.primary}
@@ -388,9 +436,15 @@ const DogCardRank: FC<{ className?: string }> = function DogCardRank({ className
   const { rank, dog } = useDogCardContext()
   if (rank == null || rank <= 0) return null
   const delta = (dog as any)?.rank_delta
+
   return (
-    <div className={`flex shrink-0 items-center self-stretch pr-2 ${className}`}>
-      <RankBadge rank={rank} delta={delta} />
+    <div
+      className={`flex min-h-0 min-w-[2.75rem] sm:min-w-[3rem] shrink-0 flex-col justify-between items-center pr-2 sm:pr-2.5 mr-2 sm:mr-2.5 border-r border-old-money-200/70 self-stretch ${className}`}
+    >
+      <RankBadge rank={rank} hideDelta />
+      <div className="flex items-center justify-center h-5">
+        {delta ? <DeltaBadge delta={delta} /> : null}
+      </div>
     </div>
   )
 }
@@ -426,8 +480,8 @@ const DogCardInner = function DogCard({ dog, type, filterYear, rank, variant = '
         {type === 'combined' && elo ? (
           <>
             {/* Mobile layout (< sm) */}
-            <div className="flex sm:hidden flex-row items-stretch w-full min-h-[4.75rem] py-0.5 gap-2 overflow-hidden">
-              <DogCardRank className="pr-0 self-center" />
+            <div className="flex sm:hidden flex-row items-stretch w-full min-h-[4.75rem] py-0.5 overflow-hidden">
+              <DogCardRank />
               <div className="flex min-w-0 flex-1 flex-col justify-between gap-1 overflow-hidden">
                 <div className="pr-10 min-w-0">
                   <DogCardHeader />
@@ -455,16 +509,18 @@ const DogCardInner = function DogCard({ dog, type, filterYear, rank, variant = '
             {/* Desktop layout (>= sm) */}
             <div className="hidden sm:flex flex-row items-stretch w-full min-w-0">
               <DogCardRank />
-              <div className="flex min-h-0 min-w-0 flex-1 flex-col justify-between gap-0 overflow-hidden">
+              <div className="flex min-h-0 min-w-0 flex-1 flex-col justify-between gap-0">
                 <DogCardHeader />
                 <DogCardMedals />
               </div>
 
-              <div className="mr-8 flex min-h-0 min-w-[10.5rem] shrink-0 flex-col justify-between border-l border-old-money-200/60 pl-2">
-                <CombinedMetricsRotator
-                  csValue={formatIndexScore(dog)}
-                  eloValue={elo.value}
-                />
+              <div className="mr-7 flex min-h-0 min-w-[7.5rem] sm:min-w-[8rem] shrink-0 flex-col justify-between border-l border-old-money-200/60 pl-2">
+                <div className="flex items-center justify-end">
+                  <CombinedMetricsRotator
+                    csValue={formatIndexScore(dog)}
+                    eloValue={elo.value}
+                  />
+                </div>
                 <div className="flex justify-end">
                   <StartsLabel starts={dog.total_starts || 0} size="md" />
                 </div>
@@ -474,8 +530,8 @@ const DogCardInner = function DogCard({ dog, type, filterYear, rank, variant = '
         ) : type === 'speed' ? (
           <>
             {/* Mobile layout (< sm) */}
-            <div className="flex sm:hidden flex-row items-stretch w-full min-h-[4.75rem] py-0.5 gap-2 overflow-hidden">
-              <DogCardRank className="pr-0 self-center" />
+            <div className="flex sm:hidden flex-row items-stretch w-full min-h-[4.75rem] py-0.5 overflow-hidden">
+              <DogCardRank />
               <div className="flex min-w-0 flex-1 flex-col justify-between gap-1 overflow-hidden">
                 <div className="pr-10 min-w-0">
                   <DogCardHeader />
@@ -497,7 +553,7 @@ const DogCardInner = function DogCard({ dog, type, filterYear, rank, variant = '
             {/* Desktop layout (>= sm) */}
             <div className="hidden sm:flex flex-row items-stretch w-full min-w-0">
               <DogCardRank />
-              <div className="flex min-h-0 min-w-0 flex-1 flex-col justify-between gap-0 overflow-hidden">
+              <div className="flex min-h-0 min-w-0 flex-1 flex-col justify-between gap-0">
                 <DogCardHeader />
                 <div className="flex items-center gap-1.5 text-xs text-charcoal-600">
                   <span className="text-[11px] text-charcoal-500">Средняя скорость:</span>
@@ -508,8 +564,8 @@ const DogCardInner = function DogCard({ dog, type, filterYear, rank, variant = '
                 </div>
               </div>
 
-              <div className="mr-8 flex min-h-0 min-w-[10.5rem] shrink-0 flex-col justify-between border-l border-old-money-200/60 pl-2">
-                <div className="flex items-baseline justify-end gap-1 leading-none">
+              <div className="mr-7 flex min-h-0 min-w-[7.5rem] sm:min-w-[8rem] shrink-0 flex-col justify-between border-l border-old-money-200/60 pl-2">
+                <div className="flex items-baseline justify-end gap-1.5 leading-none">
                   <span className="text-lg font-bold tabular-nums text-camel-700">
                     {dog.best_speed ? dog.best_speed.toFixed(1) : '—'}
                   </span>

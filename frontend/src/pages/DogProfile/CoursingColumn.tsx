@@ -75,21 +75,21 @@ export function CoursingColumn({
   const rankBadge = rank && (rank.yearBreedRank != null || rank.breedRank != null || rank.rank != null) ? (
     <Link
       to={`/competitions?tab=ranking${dogBreed ? `&breed=${encodeURIComponent(dogBreed)}` : ''}`}
-      className="inline-flex items-center gap-1.5 rounded-full border border-forest-200/90 bg-forest-50/90 px-2.5 py-0.5 text-xs font-semibold text-forest-800 transition-colors hover:bg-forest-100 hover:border-forest-300"
+      className="shrink-0 inline-flex items-center gap-1 rounded-full border border-forest-200/90 bg-forest-50/90 px-2.5 py-0.5 text-[11px] font-semibold text-forest-800 transition-colors hover:bg-forest-100 hover:border-forest-300"
       title="Открыть рейтинг курсинга"
     >
       {rank.yearBreedRank != null ? (
         <span>
-          В породе: <strong className="text-forest-950 font-bold">#{rank.yearBreedRank}</strong>
-          <span className="text-[10px] font-normal text-forest-700 ml-1">2026</span>
+          <strong className="text-forest-950 font-bold">#{rank.yearBreedRank}</strong> в породе
+          <span className="text-[10px] font-normal text-forest-700 ml-0.5">'26</span>
           {rank.breedRank != null && (
             <span className="text-[10px] font-normal text-forest-600 ml-1">· #{rank.breedRank} все</span>
           )}
         </span>
       ) : rank.breedRank != null ? (
         <span>
-          В породе: <strong className="text-forest-950 font-bold">#{rank.breedRank}</strong>
-          <span className="text-[10px] font-normal text-forest-600 ml-1">все время</span>
+          <strong className="text-forest-950 font-bold">#{rank.breedRank}</strong> в породе
+          <span className="text-[10px] font-normal text-forest-600 ml-1">все</span>
         </span>
       ) : rank.rank != null ? (
         <span>
