@@ -34,6 +34,19 @@ describe('breedarchive', () => {
     expect(pickExactBreedArchiveHit(hits, 'MISSING')).toBeNull();
   });
 
+  it('matches diacritics insensitively (e.g. Dévaj vs DEVAJ)', () => {
+    const hits = [
+      {
+        label: 'Dévaj 1976 Zarooq',
+        linkName: 'devaj-1976-zarooq',
+        uuid: '69b2a2f6-adc5-406b-8309-d9c17febcc4b',
+        nameLower: 'dévaj 1976 zarooq',
+      },
+    ];
+    expect(pickExactBreedArchiveHit(hits, 'DEVAJ 1976 ZAROOQ')?.uuid).toBe('69b2a2f6-adc5-406b-8309-d9c17febcc4b');
+    expect(pickExactBreedArchiveHit(hits, 'Dévaj 1976 Zarooq')?.uuid).toBe('69b2a2f6-adc5-406b-8309-d9c17febcc4b');
+  });
+
   it('resolves URL via search API', async () => {
     const mockFetch = async () =>
       ({

@@ -1,3 +1,5 @@
+import { canonicalBreed, matchesBreedFilter } from './breedMapping'
+
 /**
  * Клиентский порт backend/src/lib/judge-stats.ts + judge-names.ts.
  * Используется когда выбраны фильтры (порода/дисциплина), для которых
@@ -56,8 +58,12 @@ export function filterJudgeRawRows(
   rows: JudgeRawRow[],
   opts: { breed?: string; discipline?: string; year?: string },
 ): JudgeRawRow[] {
+  const filterCanon = opts.breed ? canonicalBreed(opts.breed) : ''
   return rows.filter((row) => {
-    if (opts.breed && row.breed !== opts.breed) return false
+    if (filterCanon) {
+      const rowCanon = ((row as any)._canonBreed ??= canonicalBreed(row.breed || ''))
+      if (rowCanon !== filterCanon) return false
+    }
     if (opts.discipline && row.event_type !== opts.discipline) return false
     if (opts.year && !(row.date_start ?? '').startsWith(`${opts.year}-`)) return false
     return true
@@ -94,7 +100,7 @@ export function aggregateJudgeStats(rows: JudgeRawRow[]): Map<string, JudgeStats
             if (judge.scores && Array.isArray(judge.scores)) {
               stats.total_evaluations += judge.scores.length
               stats.scores.push(...judge.scores)
-              if (row.breed) stats.breeds.add(row.breed)
+              if (row.breed) stats.breeds.add(canonicalBreed(row.breed))
               if (row.event_type) stats.disciplines.add(row.event_type)
               stats.events.add(row.event_id)
               const dogKey =
@@ -171,7 +177,8 @@ export function aggregateBreedStats(rows: JudgeRawRow[], judgeName: string): Map
           )
           if (judge?.scores && Array.isArray(judge.scores)) {
             const validScores = judge.scores.filter((s: number | null) => s !== null && !Number.isNaN(s))
-            const breed = row.breed || ''
+            const breed = ((row as any)._canonBreed ??= canonicalBreed(row.breed || ''))
+            if (!breed) continue
             if (!breedStats.has(breed)) breedStats.set(breed, { count: 0, scores: [] })
             const stats = breedStats.get(breed)!
             stats.count += validScores.length
@@ -209,7 +216,8 @@ function aggregateDogStats(rows: JudgeRawRow[], judgeName: string, breed: string
   const dogStats = new Map<string, DogStatsAcc>()
 
   for (const row of rows) {
-    if (row.breed !== breed) continue
+    const rowBreed = ((row as any)._canonBreed ??= canonicalBreed(row.breed || ''))
+    if (breed && rowBreed !== breed) continue
     try {
       const heats = JSON.parse(row.heats_json || '[]')
       const judgeNames = parseJudgeNames(row.event_judges)
@@ -302,7 +310,8 @@ function formatDogsArray(
   }))
 
   for (const row of rows) {
-    if (row.breed !== breed) continue
+    const rowBreed = ((row as any)._canonBreed ??= canonicalBreed(row.breed || ''))
+    if (breed && rowBreed !== breed) continue
     try {
       const heats = JSON.parse(row.heats_json || '[]')
       const judgeNames = parseJudgeNames(row.event_judges)

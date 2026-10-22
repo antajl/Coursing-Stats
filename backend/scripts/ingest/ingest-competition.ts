@@ -25,6 +25,7 @@ import { slugify, dogKey, monthFolder } from '../export/d1-export-utils.js';
 import { normalizeDogName, normalizeBreed, normalizeText } from '../../lib/text-normalization.js';
 import { collectDogNameParts } from '../../lib/dog-identity-match.js';
 import { dogNamesLikelySame } from '../../lib/dog-name-parts.js';
+import { matchesBreedFilter } from '../../src/lib/breed-mapping.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../..');
 const DOGS_BY_ID = path.join(ROOT, 'data/v1/dogs/by-id');
@@ -179,6 +180,10 @@ export function findMatchingDog(
   draftDog: DraftDog,
   allDogs: Map<number, StoredDog>
 ): { matchedDog: StoredDog; matchType: 'exact' | 'parts' | 'translit'; confidence: number } | null {
+  if (draftDog.id && allDogs.has(draftDog.id)) {
+    return { matchedDog: allDogs.get(draftDog.id)!, matchType: 'exact', confidence: 1.0 };
+  }
+
   const draftNameLat = (draftDog.name_lat || draftDog.name || '').trim();
   const draftNameRu = (draftDog.name_ru || '').trim();
   const draftBreedNorm = normalizeBreed(draftDog.breed);
@@ -195,8 +200,7 @@ export function findMatchingDog(
 
   // Pass 1: Exact dog_key or exact normalized name within same breed
   for (const stored of allDogs.values()) {
-    const storedBreedNorm = normalizeBreed(stored.breed);
-    if (storedBreedNorm !== draftBreedNorm) continue;
+    if (!matchesBreedFilter(stored.breed, draftDog.breed)) continue;
 
     if (stored.dog_key === draftKey) {
       return { matchedDog: stored, matchType: 'exact', confidence: 1.0 };
@@ -217,8 +221,7 @@ export function findMatchingDog(
 
   // Pass 2: Name parts overlap (RU/EN slash names)
   for (const stored of allDogs.values()) {
-    const storedBreedNorm = normalizeBreed(stored.breed);
-    if (storedBreedNorm !== draftBreedNorm) continue;
+    if (!matchesBreedFilter(stored.breed, draftDog.breed)) continue;
 
     if (
       dogNamesLikelySame(
@@ -233,8 +236,7 @@ export function findMatchingDog(
   // Pass 3: Transliteration token overlap
   if (draftTokens.size >= 2) {
     for (const stored of allDogs.values()) {
-      const storedBreedNorm = normalizeBreed(stored.breed);
-      if (storedBreedNorm !== draftBreedNorm) continue;
+      if (!matchesBreedFilter(stored.breed, draftDog.breed)) continue;
 
       const storedTranslit = transliterateRuToLat(stored.name_ru || stored.name_lat);
       const storedTokens = new Set(

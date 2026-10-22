@@ -6,6 +6,7 @@
 
 import { normalizeText } from './text-normalization'
 import { collectDogNameParts } from './dog-identity-match'
+import { matchesBreedFilter } from '../src/lib/breed-mapping'
 
 export type DogNameFields = {
   name_lat?: string | null;
@@ -19,9 +20,7 @@ function normalizeBreed(breed?: string | null): string {
 
 /** Одна порода + пересечение частей клички → вероятно одна собака. */
 export function dogNamesLikelySame(a: DogNameFields, b: DogNameFields): boolean {
-  const breedA = normalizeBreed(a.breed);
-  const breedB = normalizeBreed(b.breed);
-  if (breedA && breedB && breedA !== breedB) return false;
+  if (a.breed && b.breed && !matchesBreedFilter(a.breed, b.breed)) return false;
 
   const partsA = collectDogNameParts(a.name_lat, a.name_ru);
   const partsB = collectDogNameParts(b.name_lat, b.name_ru);

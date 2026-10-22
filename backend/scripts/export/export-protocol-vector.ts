@@ -1,28 +1,31 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { execSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
 
-interface DogInfo {
+export interface DogInfo {
   name_ru?: string;
   name_lat?: string;
   breed?: string;
   sex?: string;
 }
 
-interface JudgeScore {
+export interface JudgeScore {
   scores?: number[];
   sum?: number;
 }
 
-interface Heat {
+export interface Heat {
   heat_number?: number;
   bib_number?: number;
   bib_color?: string;
   judges?: JudgeScore[];
   total?: number;
+  time?: number | null;
+  speed_kmh?: number | null;
 }
 
-interface CompetitionResult {
+export interface CompetitionResult {
   catalog_no: number;
   breed_class: string;
   placement?: number | null;
@@ -32,18 +35,26 @@ interface CompetitionResult {
   status?: string;
   status_reason?: string | null;
   raw_scores_json?: {
+    format?: string;
     heats?: Heat[];
   };
   dog?: DogInfo;
 }
 
-interface CompetitionData {
+export interface CompetitionData {
   event_id: number;
   event: {
+    id?: number;
     name?: string;
     date?: string;
+    date_start?: string;
+    date_end?: string;
     location?: string;
     title?: string;
+    competition_kind?: string;
+    competition_type?: string;
+    full_title?: string;
+    event_type?: string;
   };
   results: CompetitionResult[];
 }
@@ -52,11 +63,14 @@ export function normalizeBreed(b: string): string {
   if (!b) return '';
   const s = b.trim().toLowerCase();
   if (s.includes('басенджи')) return 'Басенджи';
+  if (s.includes('грейхаунд')) return 'Грейхаунд';
   if (s.includes('ирландский')) return 'Ирландский вольфхаунд';
   if (s.includes('малая') || s.includes('итальянская')) return 'Малая итальянская борзая';
+  if (s.includes('поденко')) return 'Поденко Ибиценко (к-ш, г-ш)';
   if (s.includes('родезийский') || s.includes('риджбек')) return 'Родезийский риджбек';
   if (s.includes('русская') || s.includes('псовая')) return 'Русская псовая борзая';
   if (s.includes('салюки')) return 'Салюки';
+  if (s.includes('тазы')) return 'Тазы';
   if (s.includes('уиппет')) return 'Уиппет';
   if (s.includes('фараонова')) return 'Фараонова собака';
   if (s.includes('хортая')) return 'Хортая борзая';
@@ -101,6 +115,526 @@ export function formatDogName(dog?: DogInfo): string {
   return escapeHtml(ru || en);
 }
 
+export function buildEventTitle(comp: CompetitionData): string {
+  if (comp.event.full_title) return comp.event.full_title;
+  const kind = comp.event.competition_kind || '';
+  const type = comp.event.competition_type || 'курсингу';
+  const kindLabel = kind === 'ЧРКФ' ? 'Чемпионат РКФ' : (comp.event.title || 'Соревнование');
+
+  let dateStr = comp.event.date_start || '';
+  if (comp.event.date_start && comp.event.date_end && comp.event.date_start !== comp.event.date_end) {
+    const s = comp.event.date_start.split('-');
+    const e = comp.event.date_end.split('-');
+    if (s[0] === e[0] && s[1] === e[1]) {
+      dateStr = `${s[2]}-${e[2]}.${e[1]}.${e[0]}`;
+    } else {
+      dateStr = `${s[2]}.${s[1]}.${s[0]} - ${e[2]}.${e[1]}.${e[0]}`;
+    }
+  } else if (dateStr) {
+    const s = dateStr.split('-');
+    dateStr = `${s[2]}.${s[1]}.${s[0]}`;
+  }
+
+  let loc = '';
+  if (comp.event.location) {
+    if (comp.event.location.includes('Донино')) {
+      loc = ' (Московская обл., г. Раменское, д. Донино)';
+    } else {
+      loc = ` (${comp.event.location})`;
+    }
+  }
+  let typeStr = type.toLowerCase();
+  if (typeStr === 'бега борзых') {
+    typeStr = 'по бегам борзых';
+  } else if (!typeStr.startsWith('по ')) {
+    typeStr = `по ${typeStr}`;
+  }
+  const doninoPrefix = (comp.event.location && comp.event.location.includes('Донино')) ? ' (Донино)' : '';
+  return `${kindLabel} ${typeStr}${doninoPrefix}, ${dateStr}${loc}`;
+}
+
+// ----------------------------------------------------
+// RACING SPECIFIC RENDERING (Бега борзых)
+// ----------------------------------------------------
+
+export function renderRacingBibCell(heat?: Heat | null): string {
+  if (!heat || !heat.bib_color) {
+    return '<td></td>';
+  }
+  const color = heat.bib_color.toLowerCase();
+  let bg = '#ffffff';
+  let textColor = '#000000';
+  let num = '3';
+
+  if (color === 'red') {
+    bg = '#ff0000';
+    textColor = '#ffffff';
+    num = '1';
+  } else if (color === 'blue') {
+    bg = '#00a2e8';
+    textColor = '#000000';
+    num = '2';
+  } else if (color === 'white') {
+    bg = '#ffffff';
+    textColor = '#000000';
+    num = '3';
+  } else if (color === 'black') {
+    bg = '#000000';
+    textColor = '#ffffff';
+    num = '4';
+  } else if (color === 'yellow') {
+    bg = '#ffff00';
+    textColor = '#000000';
+    num = '5';
+  }
+
+  return `<td style="background-color: ${bg} !important; color: ${textColor}; font-weight: bold;">${num}</td>`;
+}
+
+export function renderRacingTimeSpeed(
+  heat?: Heat | null,
+  statusReason?: string | null,
+  distance: number = 350
+): string {
+  if (statusReason) {
+    return `<td class="time-speed-cell status-cell">${statusReason}</td>`;
+  }
+  if (!heat || heat.time == null) {
+    return '<td></td>';
+  }
+  const time = heat.time;
+  const speed_ms = (distance / time).toFixed(2);
+  const speed_kmh = heat.speed_kmh != null
+    ? heat.speed_kmh.toFixed(3)
+    : ((distance / time) * 3.6).toFixed(3);
+
+  return `<td class="time-speed-cell">${time.toFixed(2)} с<br>${speed_ms} м/с<br>${speed_kmh} км/ч</td>`;
+}
+
+export function buildRacingProtocolHtml(comp: CompetitionData): string {
+  const eventTitle = buildEventTitle(comp);
+
+  const dnsList: CompetitionResult[] = [];
+  const breedClassPairs = new Map<string, { males: CompetitionResult[], females: CompetitionResult[] }>();
+
+  for (const r of comp.results) {
+    if (r.status === 'dns') {
+      dnsList.push(r);
+      continue;
+    }
+    const breed = normalizeBreed(r.dog?.breed || '');
+    let className = 'Стандартный';
+    if (r.breed_class.includes('Ветераны')) className = 'Ветераны';
+    else if (r.breed_class.includes('Стандартный-спринтеры')) className = 'Стандартный-спринтеры';
+
+    const pairKey = `${breed}_${className}`;
+    if (!breedClassPairs.has(pairKey)) {
+      breedClassPairs.set(pairKey, { males: [], females: [] });
+    }
+    let sex = normalizeSex(r.dog?.sex || '');
+    if (r.breed_class.includes('Кобель') || r.breed_class.includes('Кобели')) {
+      sex = 'Кобель';
+    } else if (r.breed_class.includes('Сука') || r.breed_class.includes('Суки')) {
+      sex = 'Сука';
+    }
+    if (sex === 'Кобель') {
+      breedClassPairs.get(pairKey)!.males.push(r);
+    } else {
+      breedClassPairs.get(pairKey)!.females.push(r);
+    }
+  }
+
+  const activeGroups = new Map<string, CompetitionResult[]>();
+
+  for (const [pairKey, pair] of breedClassPairs.entries()) {
+    const hasMales = pair.males.length > 0;
+    const hasFemales = pair.females.length > 0;
+
+    let isMix = false;
+    if (hasMales && hasFemales) {
+      const malePlaces = new Set(pair.males.map(m => m.placement).filter(p => p != null));
+      const femalePlaces = new Set(pair.females.map(f => f.placement).filter(p => p != null));
+      let hasOverlap = false;
+      for (const p of malePlaces) {
+        if (femalePlaces.has(p)) {
+          hasOverlap = true;
+          break;
+        }
+      }
+      isMix = !hasOverlap;
+    }
+
+    if (isMix) {
+      activeGroups.set(`${pairKey}_Микс`, [...pair.males, ...pair.females]);
+    } else {
+      if (hasMales) activeGroups.set(`${pairKey}_Кобели`, pair.males);
+      if (hasFemales) activeGroups.set(`${pairKey}_Суки`, pair.females);
+    }
+  }
+
+  const CANONICAL_GROUP_ORDER = [
+    'Басенджи_Стандартный_Кобели',
+    'Басенджи_Стандартный_Суки',
+    'Грейхаунд_Стандартный_Кобели',
+    'Малая итальянская борзая_Ветераны_Кобели',
+    'Малая итальянская борзая_Ветераны_Суки',
+    'Малая итальянская борзая_Стандартный-спринтеры_Микс',
+    'Малая итальянская борзая_Стандартный-спринтеры_Кобели',
+    'Малая итальянская борзая_Стандартный-спринтеры_Суки',
+    'Поденко Ибиценко (к-ш, г-ш)_Стандартный_Кобели',
+    'Поденко Ибиценко (к-ш, г-ш)_Стандартный_Суки',
+    'Родезийский риджбек_Стандартный_Кобели',
+    'Родезийский риджбек_Стандартный_Суки',
+    'Русская псовая борзая_Стандартный_Микс',
+    'Русская псовая борзая_Стандартный_Кобели',
+    'Русская псовая борзая_Стандартный_Суки',
+    'Салюки_Стандартный_Микс',
+    'Салюки_Стандартный_Кобели',
+    'Салюки_Стандартный_Суки',
+    'Тазы_Стандартный_Кобели',
+    'Тазы_Стандартный_Суки',
+    'Уиппет_Стандартный_Кобели',
+    'Уиппет_Стандартный_Суки',
+    'Уиппет_Стандартный-спринтеры_Кобели',
+    'Уиппет_Стандартный-спринтеры_Суки',
+    'Фараонова собака_Стандартный_Микс',
+    'Фараонова собака_Стандартный_Кобели',
+    'Фараонова собака_Стандартный_Суки',
+    'Чирнеко дель Этна_Стандартный_Кобели',
+    'Чирнеко дель Этна_Стандартный_Суки'
+  ];
+
+  const sortedGroupEntries = [...activeGroups.entries()].sort((a, b) => {
+    const idxA = CANONICAL_GROUP_ORDER.indexOf(a[0]);
+    const idxB = CANONICAL_GROUP_ORDER.indexOf(b[0]);
+    if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+    if (idxA !== -1) return -1;
+    if (idxB !== -1) return 1;
+    return a[0].localeCompare(b[0], 'ru');
+  });
+
+  const sortedActiveGroups = new Map(sortedGroupEntries);
+
+  for (const dogs of sortedActiveGroups.values()) {
+    dogs.sort((a, b) => {
+      const pa = a.placement ?? 999;
+      const pb = b.placement ?? 999;
+      if (pa !== pb) return pa - pb;
+      return a.catalog_no - b.catalog_no;
+    });
+  }
+
+  dnsList.sort((a, b) => a.catalog_no - b.catalog_no);
+
+  let tableRowsHtml = `
+    <tr class="top-title-row">
+      <td colspan="18">${escapeHtml(eventTitle)}</td>
+    </tr>
+    <tr class="col-header">
+      <td>Место</td>
+      <td>№</td>
+      <td>Порода</td>
+      <td>Класс</td>
+      <td>Пол</td>
+      <td>Кличка</td>
+      <td>Дистанция<br>(м)</td>
+      <td>Забег<br>1</td>
+      <td>Попона</td>
+      <td>Время 1<br>Скорость</td>
+      <td>Забег<br>2</td>
+      <td>Попона</td>
+      <td>Время 2<br>Скорость</td>
+      <td>Забег<br>3</td>
+      <td>Попона</td>
+      <td>Время 3<br>Скорость</td>
+      <td>СС</td>
+      <td>Титул</td>
+    </tr>
+  `;
+
+  for (const [groupName, dogs] of sortedActiveGroups.entries()) {
+    tableRowsHtml += `
+      <tr class="group-row">
+        <td colspan="18" class="group-header">${escapeHtml(groupName)}</td>
+      </tr>
+    `;
+
+    for (const res of dogs) {
+      const dog = res.dog;
+      const dogName = formatDogName(dog);
+      const breed = escapeHtml(normalizeBreed(dog?.breed || ''));
+      let sex = escapeHtml(normalizeSex(dog?.sex || ''));
+      if (res.breed_class.includes('Кобель') || res.breed_class.includes('Кобели')) {
+        sex = 'Кобель';
+      } else if (res.breed_class.includes('Сука') || res.breed_class.includes('Суки')) {
+        sex = 'Сука';
+      }
+
+      let className = 'Стандартный';
+      if (res.breed_class.includes('Ветераны')) className = 'Ветераны';
+      else if (res.breed_class.includes('Стандартный-спринтеры')) className = 'Стандартный-<br>спринтеры';
+
+      const heats = res.raw_scores_json?.heats || [];
+      const heat1 = heats.find(h => h.heat_number === 1) || null;
+      const heat2 = heats.find(h => h.heat_number === 2) || null;
+      const heat3 = heats.find(h => h.heat_number === 3) || null;
+
+      const place = res.placement ? res.placement : '';
+      const vc = res.vc ? escapeHtml(res.vc) : '';
+      const qual = res.qualification ? escapeHtml(res.qualification) : '';
+
+      let h1Reason: string | null = null;
+      let h2Reason: string | null = null;
+      let h3Reason: string | null = null;
+
+      if (res.status !== 'finished' && res.status !== 'dns') {
+        const rawReason = res.status_reason || (res.status === 'disqualified' ? 'Дисквалификация' : 'Снятие');
+        const formattedReason = escapeHtml(rawReason)
+          .replace(' (Вход в круг)', '<br>(Вход в круг)')
+          .replace(' (Агрессия на старте)', '<br>(Агрессия на старте)')
+          .replace(' (Агрессия)', '<br>(Агрессия)')
+          .replace(' (Нарушение экипировки)', '<br>(Нарушение экипировки)')
+          .replace(' (Остановка на трассе)', '<br>(Остановка на трассе)')
+          .replace('Снят владельцем', 'Снят<br>владельцем')
+          .replace(' (Возврат к владельцу)', '<br>(Возврат к владельцу)');
+
+        if (heat1 && heat1.time == null) {
+          h1Reason = formattedReason;
+        } else if (heat2 && heat2.time == null) {
+          h2Reason = formattedReason;
+        } else if (heat3 && heat3.time == null) {
+          h3Reason = formattedReason;
+        } else if (!heat2) {
+          h2Reason = formattedReason;
+        }
+      }
+
+      tableRowsHtml += `
+        <tr class="participant-row">
+          <td>${place}</td>
+          <td>${res.catalog_no}</td>
+          <td>${breed}</td>
+          <td>${className}</td>
+          <td>${sex}</td>
+          <td class="dog-name-cell">${dogName}</td>
+          <td>350</td>
+          <td>${heat1?.bib_number ?? ''}</td>
+          ${renderRacingBibCell(heat1)}
+          ${renderRacingTimeSpeed(heat1, h1Reason)}
+          <td>${heat2?.bib_number ?? ''}</td>
+          ${renderRacingBibCell(heat2)}
+          ${renderRacingTimeSpeed(heat2, h2Reason)}
+          <td>${heat3?.bib_number ?? ''}</td>
+          ${renderRacingBibCell(heat3)}
+          ${renderRacingTimeSpeed(heat3, h3Reason)}
+          <td>${qual}</td>
+          <td>${vc}</td>
+        </tr>
+      `;
+    }
+  }
+
+  // DNS section (Неявившиеся участники) at bottom
+  if (dnsList.length > 0) {
+    tableRowsHtml += `
+      <tr class="group-row">
+        <td colspan="18" class="group-header">Неявившиеся участники</td>
+      </tr>
+    `;
+
+    for (const res of dnsList) {
+      const dog = res.dog;
+      const dogName = formatDogName(dog);
+      const breed = escapeHtml(normalizeBreed(dog?.breed || ''));
+      let sex = escapeHtml(normalizeSex(dog?.sex || ''));
+      if (res.breed_class.includes('Кобель') || res.breed_class.includes('Кобели')) {
+        sex = 'Кобель';
+      } else if (res.breed_class.includes('Сука') || res.breed_class.includes('Суки')) {
+        sex = 'Сука';
+      }
+
+      let className = 'Стандартный';
+      if (res.breed_class.includes('Ветераны')) className = 'Ветераны';
+      else if (res.breed_class.includes('Стандартный-спринтеры')) className = 'Стандартный-<br>спринтеры';
+
+      tableRowsHtml += `
+        <tr class="dns-row">
+          <td></td>
+          <td>${res.catalog_no}</td>
+          <td>${breed}</td>
+          <td>${className}</td>
+          <td>${sex}</td>
+          <td class="dog-name-cell">${dogName}</td>
+          <td colspan="12" class="status-cell">Неявка</td>
+        </tr>
+      `;
+    }
+  }
+
+  return `<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>${escapeHtml(eventTitle)}</title>
+  <style>
+    @page {
+      size: A4 landscape;
+      margin: 1.5mm 1.5mm 1.5mm 1.5mm;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      background: #ffffff;
+      color: #000000;
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      font-size: 11pt;
+      line-height: 1.25;
+    }
+    table.protocol-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 1.5px;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+    th, td {
+      border-top: 1px solid #4c4c4c;
+      border-left: 1px solid #4c4c4c;
+      border-right: 1px solid #b2b2b2;
+      border-bottom: 1px solid #b2b2b2;
+      background-color: #ffffff;
+      padding: 4px 3px;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 10.5pt;
+      font-weight: normal;
+    }
+    tr.top-title-row td {
+      font-size: 14pt;
+      font-weight: bold;
+      padding: 7px 4px;
+    }
+    tr.col-header td {
+      font-size: 10pt;
+      font-weight: normal;
+      padding: 4px 1px;
+    }
+    tr.group-row {
+      page-break-inside: avoid;
+      page-break-after: avoid;
+    }
+    td.group-header {
+      background-color: #c0c0c0 !important;
+      font-size: 11.5pt;
+      font-weight: normal;
+      text-align: center;
+      padding: 4.5px 3px;
+    }
+    td.dog-name-cell {
+      text-align: center;
+      font-size: 10.5pt;
+      line-height: 1.25;
+      padding: 4px 4px;
+    }
+    td.time-speed-cell {
+      font-size: 9.5pt;
+      line-height: 1.15;
+      padding: 3px 2px;
+    }
+    td.status-cell {
+      text-align: center;
+      font-style: italic;
+      font-size: 10pt;
+      padding: 4px 3px;
+    }
+    tr.dns-row td {
+      background-color: #c0c0c0 !important;
+    }
+    tr.participant-row {
+      page-break-inside: avoid;
+    }
+
+    @media print {
+      @page {
+        size: A4 landscape;
+        margin: 1.5mm 1.5mm 1.5mm 1.5mm;
+      }
+      html, body {
+        font-size: 8.5pt;
+        line-height: 1.15;
+      }
+      th, td {
+        font-size: 8.5pt;
+        padding: 2.5px 1.5px;
+      }
+      tr.top-title-row td {
+        font-size: 11pt;
+        padding: 3px;
+      }
+      tr.col-header td {
+        font-size: 8.5pt;
+        padding: 2px 1px;
+      }
+      td.group-header {
+        font-size: 9.5pt;
+        padding: 2.5px 2px;
+      }
+      td.dog-name-cell {
+        font-size: 8.5pt;
+        padding: 2px 3px;
+      }
+      td.time-speed-cell {
+        font-size: 7.5pt;
+        line-height: 1.1;
+        padding: 1.5px 1px;
+      }
+      td.status-cell {
+        font-size: 8.5pt;
+      }
+    }
+  </style>
+</head>
+<body>
+  <table class="protocol-table">
+    <colgroup>
+      <col style="width: 3.0%;">
+      <col style="width: 2.5%;">
+      <col style="width: 9.5%;">
+      <col style="width: 7.5%;">
+      <col style="width: 3.8%;">
+      <col style="width: 21.7%;">
+      <col style="width: 4.0%;">
+      <col style="width: 3.5%;">
+      <col style="width: 3.0%;">
+      <col style="width: 7.0%;">
+      <col style="width: 3.5%;">
+      <col style="width: 3.0%;">
+      <col style="width: 7.0%;">
+      <col style="width: 3.5%;">
+      <col style="width: 3.0%;">
+      <col style="width: 7.0%;">
+      <col style="width: 2.3%;">
+      <col style="width: 5.2%;">
+    </colgroup>
+    <tbody>
+      ${tableRowsHtml}
+    </tbody>
+  </table>
+</body>
+</html>`;
+}
+
+// ----------------------------------------------------
+// COURSING SPECIFIC RENDERING (Курсинг борзых)
+// ----------------------------------------------------
+
 export function renderBibCellRowspan(heat?: Heat | null): string {
   if (!heat || heat.bib_number == null) {
     return '<td rowspan="2"></td>';
@@ -129,36 +663,9 @@ export function renderScores(judge?: JudgeScore | null): string {
   return `<td>${s[0]}</td><td>${s[1]}</td><td>${s[2]}</td><td>${s[3]}</td><td>${s[4]}</td><td>${judge.sum ?? ''}</td>`;
 }
 
-export function buildEventTitle(comp: CompetitionData): string {
-  if (comp.event.full_title) return comp.event.full_title;
-  const kind = comp.event.competition_kind || '';
-  const type = comp.event.competition_type || 'курсингу';
-  const kindLabel = kind === 'ЧРКФ' ? 'Чемпионат РКФ' : (comp.event.title || 'Соревнование');
-
-  let dateStr = comp.event.date_start || '';
-  if (comp.event.date_start && comp.event.date_end && comp.event.date_start !== comp.event.date_end) {
-    const s = comp.event.date_start.split('-');
-    const e = comp.event.date_end.split('-');
-    if (s[0] === e[0] && s[1] === e[1]) {
-      dateStr = `${s[2]}-${e[2]}.${e[1]}.${e[0]}`;
-    } else {
-      dateStr = `${s[2]}.${s[1]}.${s[0]} - ${e[2]}.${e[1]}.${e[0]}`;
-    }
-  } else if (dateStr) {
-    const s = dateStr.split('-');
-    dateStr = `${s[2]}.${s[1]}.${s[0]}`;
-  }
-
-  const loc = comp.event.location ? ` (${comp.event.location.replace('район, д. Донино', 'Раменское, д. Донино')})` : '';
-  const typeStr = type.toLowerCase().startsWith('по ') ? type.toLowerCase() : `по ${type.toLowerCase()}`;
-  return `${kindLabel} ${typeStr}, ${dateStr}${loc}`;
-}
-
-export function buildProtocolHtml(comp: CompetitionData): string {
+export function buildCoursingProtocolHtml(comp: CompetitionData): string {
   const eventTitle = buildEventTitle(comp);
 
-  // Determine groups: separate male/female vs Mix
-  // A (breed, class) is Mix if both sexes are present and compete together (or if breed_class mentions Микс)
   const breedClassSexMap = new Map<string, CompetitionResult[]>();
   const dnsList: CompetitionResult[] = [];
 
@@ -181,7 +688,6 @@ export function buildProtocolHtml(comp: CompetitionData): string {
     breedClassSexMap.get(key)!.push(r);
   }
 
-  // Check which (breed, class) pairs share heats or have mixed placements
   const breedClassPairs = new Map<string, { males: CompetitionResult[], females: CompetitionResult[] }>();
   for (const r of comp.results) {
     if (r.status === 'dns') continue;
@@ -193,7 +699,12 @@ export function buildProtocolHtml(comp: CompetitionData): string {
     if (!breedClassPairs.has(pairKey)) {
       breedClassPairs.set(pairKey, { males: [], females: [] });
     }
-    const sex = normalizeSex(r.dog?.sex || '');
+    let sex = normalizeSex(r.dog?.sex || '');
+    if (r.breed_class.includes('Кобель') || r.breed_class.includes('Кобели')) {
+      sex = 'Кобель';
+    } else if (r.breed_class.includes('Сука') || r.breed_class.includes('Суки')) {
+      sex = 'Сука';
+    }
     if (sex === 'Кобель') {
       breedClassPairs.get(pairKey)!.males.push(r);
     } else {
@@ -207,12 +718,8 @@ export function buildProtocolHtml(comp: CompetitionData): string {
     const hasMales = pair.males.length > 0;
     const hasFemales = pair.females.length > 0;
 
-    // Check if both males and females exist AND either:
-    // 1) Any placement is duplicate (meaning separate sex rankings) OR
-    // 2) Placements are unique across the union (meaning single shared mixed ranking)
     let isMix = false;
     if (hasMales && hasFemales) {
-      // Check for duplicate placement numbers (like 1st male and 1st female)
       const malePlaces = new Set(pair.males.map(m => m.placement).filter(p => p != null));
       const femalePlaces = new Set(pair.females.map(f => f.placement).filter(p => p != null));
       let hasOverlap = false;
@@ -222,8 +729,6 @@ export function buildProtocolHtml(comp: CompetitionData): string {
           break;
         }
       }
-      // If there is NO overlap in placements (e.g., place 1, 2, 3, 4 are males, place 5 is female), it is a shared Mix!
-      // If there IS overlap (both have place 1), they ran separate classes!
       isMix = !hasOverlap;
     }
 
@@ -235,8 +740,50 @@ export function buildProtocolHtml(comp: CompetitionData): string {
     }
   }
 
-  // Sort dogs inside groups by placement (or catalog_no if no placement)
-  for (const dogs of activeGroups.values()) {
+  const CANONICAL_GROUP_ORDER = [
+    'Басенджи_Стандартный_Кобели',
+    'Басенджи_Стандартный_Суки',
+    'Грейхаунд_Стандартный_Кобели',
+    'Малая итальянская борзая_Ветераны_Кобели',
+    'Малая итальянская борзая_Ветераны_Суки',
+    'Малая итальянская борзая_Стандартный-спринтеры_Микс',
+    'Малая итальянская борзая_Стандартный-спринтеры_Кобели',
+    'Малая итальянская борзая_Стандартный-спринтеры_Суки',
+    'Поденко Ибиценко (к-ш, г-ш)_Стандартный_Кобели',
+    'Поденко Ибиценко (к-ш, г-ш)_Стандартный_Суки',
+    'Родезийский риджбек_Стандартный_Кобели',
+    'Родезийский риджбек_Стандартный_Суки',
+    'Русская псовая борзая_Стандартный_Микс',
+    'Русская псовая борзая_Стандартный_Кобели',
+    'Русская псовая борзая_Стандартный_Суки',
+    'Салюки_Стандартный_Микс',
+    'Салюки_Стандартный_Кобели',
+    'Салюки_Стандартный_Суки',
+    'Тазы_Стандартный_Кобели',
+    'Тазы_Стандартный_Суки',
+    'Уиппет_Стандартный_Кобели',
+    'Уиппет_Стандартный_Суки',
+    'Уиппет_Стандартный-спринтеры_Кобели',
+    'Уиппет_Стандартный-спринтеры_Суки',
+    'Фараонова собака_Стандартный_Микс',
+    'Фараонова собака_Стандартный_Кобели',
+    'Фараонова собака_Стандартный_Суки',
+    'Чирнеко дель Этна_Стандартный_Кобели',
+    'Чирнеко дель Этна_Стандартный_Суки'
+  ];
+
+  const sortedGroupEntries = [...activeGroups.entries()].sort((a, b) => {
+    const idxA = CANONICAL_GROUP_ORDER.indexOf(a[0]);
+    const idxB = CANONICAL_GROUP_ORDER.indexOf(b[0]);
+    if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+    if (idxA !== -1) return -1;
+    if (idxB !== -1) return 1;
+    return a[0].localeCompare(b[0], 'ru');
+  });
+
+  const sortedActiveGroups = new Map(sortedGroupEntries);
+
+  for (const dogs of sortedActiveGroups.values()) {
     dogs.sort((a, b) => {
       const pa = a.placement ?? 999;
       const pb = b.placement ?? 999;
@@ -247,10 +794,7 @@ export function buildProtocolHtml(comp: CompetitionData): string {
 
   dnsList.sort((a, b) => a.catalog_no - b.catalog_no);
 
-  let tableRowsHtml = '';
-
-  // Title row (Row 1 of table)
-  tableRowsHtml += `
+  let tableRowsHtml = `
     <tr class="top-title-row">
       <td colspan="25">${escapeHtml(eventTitle)}</td>
     </tr>
@@ -277,7 +821,7 @@ export function buildProtocolHtml(comp: CompetitionData): string {
     </tr>
   `;
 
-  for (const [groupName, dogs] of activeGroups.entries()) {
+  for (const [groupName, dogs] of sortedActiveGroups.entries()) {
     tableRowsHtml += `
       <tr class="group-row">
         <td colspan="25" class="group-header">${escapeHtml(groupName)}</td>
@@ -288,7 +832,12 @@ export function buildProtocolHtml(comp: CompetitionData): string {
       const dog = res.dog;
       const dogName = formatDogName(dog);
       const breed = escapeHtml(normalizeBreed(dog?.breed || ''));
-      const sex = escapeHtml(normalizeSex(dog?.sex || ''));
+      let sex = escapeHtml(normalizeSex(dog?.sex || ''));
+      if (res.breed_class.includes('Кобель') || res.breed_class.includes('Кобели')) {
+        sex = 'Кобель';
+      } else if (res.breed_class.includes('Сука') || res.breed_class.includes('Суки')) {
+        sex = 'Сука';
+      }
 
       let className = 'Стандартный';
       if (res.breed_class.includes('Ветераны')) className = 'Ветераны';
@@ -355,35 +904,7 @@ export function buildProtocolHtml(comp: CompetitionData): string {
         continue;
       }
 
-      // Case 3: Only 1 heat completed, no heat 2
-      if (heats.length === 1) {
-        tableRowsHtml += `
-          <tr class="participant-row">
-            <td rowspan="2">${place}</td>
-            <td rowspan="2">${res.catalog_no}</td>
-            <td rowspan="2">${breed}</td>
-            <td rowspan="2">${className}</td>
-            <td rowspan="2">${sex}</td>
-            <td rowspan="2" class="dog-name-cell">${dogName}</td>
-            ${renderBibCellRowspan(heat1)}
-            ${renderScores(j1_h1)}
-            <td rowspan="2">${heat1 ? heat1.total : ''}</td>
-            <td rowspan="2"></td>
-            <td></td><td></td><td></td><td></td><td></td><td></td>
-            <td rowspan="2"></td>
-            <td rowspan="2">${totalScore}</td>
-            <td rowspan="2">${vc}</td>
-            <td rowspan="2">${qual}</td>
-          </tr>
-          <tr class="participant-row">
-            ${renderScores(j2_h1)}
-            <td></td><td></td><td></td><td></td><td></td><td></td>
-          </tr>
-        `;
-        continue;
-      }
-
-      // Case 4: Standard completed 2-run participant
+      // Case 3: Standard 2-run participant
       tableRowsHtml += `
         <tr class="participant-row">
           <td rowspan="2">${place}</td>
@@ -422,7 +943,12 @@ export function buildProtocolHtml(comp: CompetitionData): string {
       const dog = res.dog;
       const dogName = formatDogName(dog);
       const breed = escapeHtml(normalizeBreed(dog?.breed || ''));
-      const sex = escapeHtml(normalizeSex(dog?.sex || ''));
+      let sex = escapeHtml(normalizeSex(dog?.sex || ''));
+      if (res.breed_class.includes('Кобель') || res.breed_class.includes('Кобели')) {
+        sex = 'Кобель';
+      } else if (res.breed_class.includes('Сука') || res.breed_class.includes('Суки')) {
+        sex = 'Сука';
+      }
 
       let className = 'Стандартный';
       if (res.breed_class.includes('Ветераны')) className = 'Ветераны';
@@ -610,6 +1136,17 @@ export function buildProtocolHtml(comp: CompetitionData): string {
 </html>`;
 }
 
+export function buildProtocolHtml(comp: CompetitionData): string {
+  const isRacing = comp.event.event_type === 'racing' || 
+    (comp.event.competition_type && comp.event.competition_type.toLowerCase().includes('бег')) ||
+    comp.results.some(r => r.raw_scores_json?.format === 'racing');
+
+  if (isRacing) {
+    return buildRacingProtocolHtml(comp);
+  }
+  return buildCoursingProtocolHtml(comp);
+}
+
 export function compilePdfWithEdge(htmlPath: string, pdfPath: string): boolean {
   const edgePaths = [
     'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
@@ -631,8 +1168,6 @@ export function compilePdfWithEdge(htmlPath: string, pdfPath: string): boolean {
   }
 }
 
-import { fileURLToPath } from 'node:url';
-
 // CLI entrypoint
 const isMain = process.argv[1] && (
   process.argv[1] === fileURLToPath(import.meta.url) ||
@@ -650,7 +1185,6 @@ if (isMain) {
 
   let jsonPath = inputArg;
   if (/^\d+$/.test(inputArg)) {
-    // Search competitions for eventId
     const baseDir = path.resolve('data/v1/competitions');
     let foundPath: string | null = null;
     function walk(dir: string) {
@@ -672,6 +1206,10 @@ if (isMain) {
 
   const compData: CompetitionData = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
   const outDir = outputDirArg ? path.resolve(outputDirArg) : path.dirname(jsonPath);
+
+  if (!fs.existsSync(outDir)) {
+    fs.mkdirSync(outDir, { recursive: true });
+  }
 
   const outHtml = path.join(outDir, 'protocol_vector.html');
   const outPdf = path.join(outDir, 'protocol_vector.pdf');

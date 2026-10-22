@@ -118,6 +118,10 @@ export function normalizeDogName(name: string): string {
   return name.trim().replace(/\s+/g, ' ').toLowerCase();
 }
 
+export function stripDiacritics(str: string): string {
+  return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
 export function breedArchiveSubdomain(breed: string | null | undefined): string | null {
   if (!breed?.trim()) return null;
   return breedLookup.get(normalizeBreedKey(breed)) ?? null;
@@ -137,6 +141,15 @@ export function pickExactBreedArchiveHit(
     (hit) => normalizeDogName(hit.nameLower) === target || normalizeDogName(hit.label) === target,
   );
   if (exact.length === 1) return exact[0]!;
+
+  const targetClean = stripDiacritics(target);
+  const diacriticMatches = hits.filter(
+    (hit) =>
+      stripDiacritics(normalizeDogName(hit.nameLower)) === targetClean ||
+      stripDiacritics(normalizeDogName(hit.label)) === targetClean,
+  );
+  if (diacriticMatches.length === 1) return diacriticMatches[0]!;
+
   return null;
 }
 

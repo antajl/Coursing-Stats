@@ -1,4 +1,5 @@
 import { parseJudgeNames } from './judge-names';
+import { canonicalBreed, matchesBreedFilter } from './breed-mapping';
 
 export interface JudgeStats {
   name: string;
@@ -79,7 +80,7 @@ export function aggregateJudgeStats(results: any[]): Map<string, JudgeStats> {
             if (judge.scores && Array.isArray(judge.scores)) {
               stats.total_evaluations += judge.scores.length;
               stats.scores.push(...judge.scores);
-              stats.breeds.add(row.breed);
+              if (row.breed) stats.breeds.add(canonicalBreed(row.breed));
               stats.disciplines.add(row.event_type);
               stats.events.add(row.event_id);
               const dogKey =
@@ -156,11 +157,12 @@ export function aggregateBreedStats(
           if (judge && judge.scores && Array.isArray(judge.scores)) {
             const validScores = judge.scores.filter((s: any) => s !== null && !isNaN(s));
 
-            if (!breedStats.has(row.breed)) {
-              breedStats.set(row.breed, { count: 0, scores: [] });
+            const breedKey = canonicalBreed(row.breed || '');
+            if (!breedStats.has(breedKey)) {
+              breedStats.set(breedKey, { count: 0, scores: [] });
             }
 
-            const stats = breedStats.get(row.breed)!;
+            const stats = breedStats.get(breedKey)!;
             stats.count += validScores.length;
             stats.scores.push(...validScores);
           }
@@ -185,7 +187,9 @@ export function aggregateDogStats(
   const dogStats = new Map<string, DogStats>();
 
   for (const row of results) {
-    if (row.breed === breed) {
+    const rowBreed = (row._canonBreed ??= canonicalBreed(row.breed || ""));
+    if (breed && rowBreed !== breed) continue;
+    {
       try {
         const heats = JSON.parse(row.heats_json || '[]');
         const judgeNames = parseJudgeNames(row.event_judges);
@@ -285,7 +289,9 @@ export function formatDogsArray(
 
   // Распределяем оценки по категориям для каждой собаки
   for (const row of results) {
-    if (row.breed === breed) {
+    const rowBreed = (row._canonBreed ??= canonicalBreed(row.breed || ""));
+    if (breed && rowBreed !== breed) continue;
+    {
       try {
         const heats = JSON.parse(row.heats_json || '[]');
         const judgeNames = parseJudgeNames(row.event_judges);

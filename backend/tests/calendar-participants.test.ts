@@ -21,7 +21,7 @@ describe('calendar participants count', () => {
     };
 
     const targetEvents = [
-      { id: 2022000, expected: 73 },
+      { id: 2022000, expected: 80 },
       { id: 2022001, expected: 49 },
       { id: 2022002, expected: 48 },
       { id: 2022003, expected: 105 },

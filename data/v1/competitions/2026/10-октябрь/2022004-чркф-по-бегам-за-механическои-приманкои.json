@@ -1,0 +1,1936 @@
+{
+  "schema": "coursing-stats/competition-v1",
+  "exported_at": "2026-10-22T15:39:21.249Z",
+  "source": "manual-entry",
+  "event_id": 2022004,
+  "event": {
+    "id": 2022004,
+    "year": 2026,
+    "date_start": "2026-10-10",
+    "date_end": "2026-10-11",
+    "rank_label": "ЧРКФ\n(БЗМП)",
+    "event_type": "bzmp",
+    "competition_kind": "ЧРКФ",
+    "competition_type": "БЗМП",
+    "title": "ЧРКФ по бегам за механической приманкой",
+    "host_club": "МОРОО \"Федерация спортивно-прикладного собаководства\"",
+    "region": null,
+    "location": "Московская область, Раменский район, д. Донино",
+    "catalog_url": "https://drive.google.com/file/d/1v6FEJtI7OFH33xFM95SpH_TDkpuAHQHW/view?usp=sharing",
+    "results_url": null,
+    "rules_url": "https://drive.google.com/file/d/1fO7PDOzGXZel_xa1tsb4AFf9GbFkBOsS/view?usp=sharing",
+    "results_pdf_url": "https://drive.google.com/file/d/1cXME9uBHqaLwKL7nsUf4vessPTSraa3L/view?usp=sharing",
+    "confirmed": 1,
+    "last_modified": "2026-10-22T15:39:21.249Z",
+    "scraped_at": null,
+    "telegram_url": null,
+    "full_title": null,
+    "event_date": null,
+    "protocol_location": null,
+    "judges": "Полякова Г.Б., Иванова Г.С.",
+    "track_schemes": []
+  },
+  "result_count": 20,
+  "results": [
+    {
+      "id": 1,
+      "event_id": 2022004,
+      "dog_id": 764,
+      "breed_class": "Американский голый терьер - Стандартный - Кобели",
+      "catalog_no": 1,
+      "placement": 1,
+      "total_score": 356,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 81,
+            "bib_number": 81,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 87
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              }
+            ],
+            "total": 177,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 95,
+            "bib_number": 95,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 91
+              }
+            ],
+            "total": 179,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 356,
+        "format": "bzmp"
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 764,
+        "dog_key": "payki--американскии-голыи-терье",
+        "name_lat": "PAYKI",
+        "name_ru": "ПАЙКИ",
+        "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 2,
+      "event_id": 2022004,
+      "dog_id": 10815,
+      "breed_class": "Американский стаффордширский терьер - Стандартный - Микс",
+      "catalog_no": 2,
+      "placement": 1,
+      "total_score": 345,
+      "judge_count": 2,
+      "qualification": "Чемпион РКФ, RegCACMB",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 2,
+            "bib_number": 2,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  17,
+                  16
+                ],
+                "sum": 86
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 169,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 20,
+            "bib_number": 20,
+            "bib_color": "white",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  19,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 176,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 345,
+        "format": "bzmp"
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10815,
+        "dog_key": "legendary-hero-bronx--американскии-стаффордшир",
+        "name_lat": "LEGENDARY HERO BRONX",
+        "name_ru": "ЛЕГЕНДАРНЫЙ ГЕРОЙ БРОНКС",
+        "breed": "Американский стаффордширский терьер",
+        "sex": "Кобель",
+        "owner": "Кудрявцева В.А."
+      }
+    },
+    {
+      "id": 3,
+      "event_id": 2022004,
+      "dog_id": 512,
+      "breed_class": "Американский стаффордширский терьер - Стандартный - Микс",
+      "catalog_no": 4,
+      "placement": 2,
+      "total_score": 336,
+      "judge_count": 2,
+      "qualification": "CACMB",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 4,
+            "bib_number": 4,
+            "bib_color": "white",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  17,
+                  16
+                ],
+                "sum": 83
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 167,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 22,
+            "bib_number": 22,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 84
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 169,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 336,
+        "format": "bzmp"
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 512,
+        "dog_key": "denvers-elite-amazing--американскии-стаффордшир",
+        "name_lat": "DENVERS ELITE AMAZING",
+        "name_ru": "ДЕНВЕРС ЭЛИТ АМАЙЗИНГ",
+        "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 4,
+      "event_id": 2022004,
+      "dog_id": 513,
+      "breed_class": "Американский стаффордширский терьер - Стандартный - Микс",
+      "catalog_no": 5,
+      "placement": 3,
+      "total_score": 335,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 4,
+            "bib_number": 4,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 86
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  16,
+                  18
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 171,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 20,
+            "bib_number": 20,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  16,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 81
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  16,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 164,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 335,
+        "format": "bzmp"
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 513,
+        "dog_key": "denvers-elite-shape-my-impreza-soul--американскии-стаффордшир",
+        "name_lat": "DENVERS ELITE SHAPE MY IMPREZA SOUL",
+        "name_ru": "ДЕНВЕРС ЭЛИТ ШЕЙП МАЙ ИМПРЕЗА СОУЛ",
+        "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 5,
+      "event_id": 2022004,
+      "dog_id": 511,
+      "breed_class": "Американский стаффордширский терьер - Стандартный - Микс",
+      "catalog_no": 3,
+      "placement": 4,
+      "total_score": 331,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 2,
+            "bib_number": 2,
+            "bib_color": "white",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  15,
+                  16,
+                  15,
+                  15
+                ],
+                "sum": 77
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  16,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 162,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 22,
+            "bib_number": 22,
+            "bib_color": "white",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  16,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 84
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 169,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 331,
+        "format": "bzmp"
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 511,
+        "dog_key": "бонавентура-голд-луна-росса-bonaventura---американскии-стаффордшир",
+        "name_lat": "БОНАВЕНТУРА ГОЛД ЛУНА РОССА /BONAVENTURA GOLD LUNA ROSSA",
+        "name_ru": "БОНАВЕНТУРА ГОЛД ЛУНА РОССА /BONAVENTURA GOLD LUNA ROSSA",
+        "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 6,
+      "event_id": 2022004,
+      "dog_id": 765,
+      "breed_class": "Без породы - Стандартный - Кобели",
+      "catalog_no": 6,
+      "placement": 1,
+      "total_score": 344,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 126,
+            "bib_number": 126,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  16,
+                  17
+                ],
+                "sum": 83
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 167,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 140,
+            "bib_number": 140,
+            "bib_color": "white",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 177,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 344,
+        "format": "bzmp"
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 765,
+        "dog_key": "норд--без-породы",
+        "name_lat": "НОРД",
+        "name_ru": "НОРД",
+        "breed": "БЕЗ ПОРОДЫ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 7,
+      "event_id": 2022004,
+      "dog_id": 766,
+      "breed_class": "Без породы - Стандартный - Кобели",
+      "catalog_no": 7,
+      "placement": 2,
+      "total_score": 336,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 125,
+            "bib_number": 125,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 83
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  17,
+                  16
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 165,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 139,
+            "bib_number": 139,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 86
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 171,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 336,
+        "format": "bzmp"
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 766,
+        "dog_key": "yug-pit-knls-elbrus--без-породы",
+        "name_lat": "YUG PIT KNLS ELBRUS",
+        "name_ru": "YUG PIT KNLS ELBRUS",
+        "breed": "БЕЗ ПОРОДЫ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 8,
+      "event_id": 2022004,
+      "dog_id": 774,
+      "breed_class": "Веймаранер к-ш - Стандартный - Суки",
+      "catalog_no": 8,
+      "placement": 1,
+      "total_score": 353,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 120,
+            "bib_number": 120,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 178,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 135,
+            "bib_number": 135,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 87
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 175,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 353,
+        "format": "bzmp"
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 774,
+        "dog_key": "afina-mudraya--веимаранер-к-ш",
+        "name_lat": "AFINA MUDRAYA",
+        "name_ru": "АФИНА МУДРАЯ",
+        "breed": "ВЕЙМАРАНЕР К Ш",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 9,
+      "event_id": 2022004,
+      "dog_id": 775,
+      "breed_class": "Венгерская выжла - Стандартный - Кобели",
+      "catalog_no": 9,
+      "placement": 1,
+      "total_score": 350,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 121,
+            "bib_number": 121,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 87
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 174,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 135,
+            "bib_number": 135,
+            "bib_color": "white",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 86
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 90
+              }
+            ],
+            "total": 176,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 350,
+        "format": "bzmp"
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 775,
+        "dog_key": "zov-poley-terrakot--венгерская-выжла-к-ш",
+        "name_lat": "ZOV POLEY TERRAKOT",
+        "name_ru": "ЗОВ ПОЛЕЙ ТЕРРАКОТ",
+        "breed": "ВЕНГЕРСКАЯ ВЫЖЛА К Ш",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 10,
+      "event_id": 2022004,
+      "dog_id": 747,
+      "breed_class": "Далматин - Стандартный - Суки",
+      "catalog_no": 10,
+      "placement": 1,
+      "total_score": 350,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 122,
+            "bib_number": 122,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 175,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 136,
+            "bib_number": 136,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  17,
+                  17
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 175,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 350,
+        "format": "bzmp"
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 747,
+        "dog_key": "auroras-moon-limitless-ebony-potention--далматин",
+        "name_lat": "AURORAS MOON LIMITLESS EBONY POTENTION",
+        "name_ru": "АВРОРАС МУН ЛИМИТЛЕСС ЭБОНИ ПОТЕНШН",
+        "breed": "ДАЛМАТИН",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 11,
+      "event_id": 2022004,
+      "dog_id": 776,
+      "breed_class": "Ирландский терьер - Стандартный - Суки",
+      "catalog_no": 11,
+      "placement": 1,
+      "total_score": 347,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 123,
+            "bib_number": 123,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 86
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 91
+              }
+            ],
+            "total": 177,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 137,
+            "bib_number": 137,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  16,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 85
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 170,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 347,
+        "format": "bzmp"
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 776,
+        "dog_key": "dushechka-krasa-iz-doma-alantes--ирландскии-терьер",
+        "name_lat": "DUSHECHKA KRASA IZ DOMA ALANTES",
+        "name_ru": "ДУШЕЧКА КРАСА ИЗ ДОМА АЛАНТЕС",
+        "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 12,
+      "event_id": 2022004,
+      "dog_id": 777,
+      "breed_class": "Ирландский терьер - Стандартный - Суки",
+      "catalog_no": 12,
+      "placement": 2,
+      "total_score": 332,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 123,
+            "bib_number": 123,
+            "bib_color": "white",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  16,
+                  16,
+                  17,
+                  15
+                ],
+                "sum": 79
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 164,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 137,
+            "bib_number": 137,
+            "bib_color": "white",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  16,
+                  18
+                ],
+                "sum": 84
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 168,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 332,
+        "format": "bzmp"
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 777,
+        "dog_key": "nezhnoye-plamya-edana--ирландскии-терьер",
+        "name_lat": "NEZHNOYE PLAMYA EDANA",
+        "name_ru": "НЕЖНОЕ ПЛАМЯ ЭДАНА",
+        "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 13,
+      "event_id": 2022004,
+      "dog_id": 10816,
+      "breed_class": "Немецкая овчарка - Стандартный - Микс",
+      "catalog_no": 16,
+      "placement": 1,
+      "total_score": 341,
+      "judge_count": 2,
+      "qualification": "Чемпион РКФ, RegCACMB",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 3,
+            "bib_number": 3,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  17,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 85
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 172,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 21,
+            "bib_number": 21,
+            "bib_color": "white",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 84
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 169,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 341,
+        "format": "bzmp"
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10816,
+        "dog_key": "yara--немецкая-овчарка",
+        "name_lat": "YARA",
+        "name_ru": "ЯРА",
+        "breed": "Немецкая овчарка",
+        "sex": "Сука",
+        "owner": "Бухарева Е.А."
+      }
+    },
+    {
+      "id": 14,
+      "event_id": 2022004,
+      "dog_id": 779,
+      "breed_class": "Немецкая овчарка - Стандартный - Микс",
+      "catalog_no": 14,
+      "placement": 2,
+      "total_score": 339,
+      "judge_count": 2,
+      "qualification": "CACMB, RegCACMB",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 1,
+            "bib_color": "white",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  17,
+                  16,
+                  17,
+                  18
+                ],
+                "sum": 86
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 174,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 21,
+            "bib_number": 21,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  16,
+                  16,
+                  15,
+                  16
+                ],
+                "sum": 79
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 165,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 339,
+        "format": "bzmp"
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 779,
+        "dog_key": "virna--немецкая-овчарка-д-ш-к-ш",
+        "name_lat": "VIRNA",
+        "name_ru": "ВИРНА",
+        "breed": "НЕМЕЦКАЯ ОВЧАРКА (Д Ш, К Ш)",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 15,
+      "event_id": 2022004,
+      "dog_id": 780,
+      "breed_class": "Немецкая овчарка - Стандартный - Микс",
+      "catalog_no": 17,
+      "placement": 3,
+      "total_score": 327,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 3,
+            "bib_number": 3,
+            "bib_color": "white",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  15,
+                  16,
+                  16,
+                  16
+                ],
+                "sum": 79
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 163,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 19,
+            "bib_number": 19,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  14,
+                  15,
+                  16,
+                  17
+                ],
+                "sum": 78
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 164,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 327,
+        "format": "bzmp"
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 780,
+        "dog_key": "yustitsiya-iz-belogo-jara-l-h--немецкая-овчарка-д-ш-к-ш",
+        "name_lat": "YUSTITSIYA IZ BELOGO JARA (L H)",
+        "name_ru": "ЮСТИЦИЯ ИЗ БЕЛОГО ЯРА (Д Ш)",
+        "breed": "НЕМЕЦКАЯ ОВЧАРКА (Д Ш, К Ш)",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 16,
+      "event_id": 2022004,
+      "dog_id": 10817,
+      "breed_class": "Немецкая овчарка - Стандартный - Микс",
+      "catalog_no": 15,
+      "placement": 4,
+      "total_score": 318,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 5,
+            "bib_number": 5,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  16,
+                  15,
+                  16,
+                  15
+                ],
+                "sum": 77
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  16,
+                  15,
+                  17,
+                  17
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 158,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 19,
+            "bib_number": 19,
+            "bib_color": "white",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  16,
+                  15,
+                  16,
+                  16
+                ],
+                "sum": 78
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  16,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 160,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 318,
+        "format": "bzmp"
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10817,
+        "dog_key": "viski-fon-der-espenshtrasse--немецкая-овчарка",
+        "name_lat": "VISKI FON DER ESPENSHTRASSE",
+        "name_ru": "ВИСКИ ФОН ДЕР ЭСПЕНШТРАССЕ",
+        "breed": "Немецкая овчарка",
+        "sex": "Сука",
+        "owner": "Алексахина Е.О."
+      }
+    },
+    {
+      "id": 17,
+      "event_id": 2022004,
+      "dog_id": 10818,
+      "breed_class": "Немецкая овчарка - Стандартный - Микс",
+      "catalog_no": 13,
+      "placement": 5,
+      "total_score": 313,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 1,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  14,
+                  16,
+                  16,
+                  16
+                ],
+                "sum": 77
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  16,
+                  16,
+                  15,
+                  17
+                ],
+                "sum": 80
+              }
+            ],
+            "total": 157,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 23,
+            "bib_number": 23,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  15,
+                  15,
+                  16,
+                  16
+                ],
+                "sum": 78
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  15,
+                  16,
+                  15,
+                  16
+                ],
+                "sum": 78
+              }
+            ],
+            "total": 156,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 313,
+        "format": "bzmp"
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10818,
+        "dog_key": "tilsitten-schloss-brindisi-l-h--немецкая-овчарка",
+        "name_lat": "TILSITTEN SCHLOSS BRINDISI (L-H)",
+        "name_ru": "ТИЛЬЗИТЕН ШЛОСС БРИНДИЗИ (Д-Ш)",
+        "breed": "Немецкая овчарка",
+        "sex": "Кобель",
+        "owner": "Алексахина Е.О."
+      }
+    },
+    {
+      "id": 18,
+      "event_id": 2022004,
+      "dog_id": 653,
+      "breed_class": "Самоед - Стандартный - Суки",
+      "catalog_no": 18,
+      "placement": 1,
+      "total_score": 340,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 82,
+            "bib_number": 82,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  17,
+                  18
+                ],
+                "sum": 85
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  16,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 168,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 96,
+            "bib_number": 96,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  16,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 84
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  17,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 172,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 340,
+        "format": "bzmp"
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 653,
+        "dog_key": "snezhnoe-ocharovanie-zhasmin-princzess--самоед",
+        "name_lat": "SNEZHNOE OCHAROVANIE ZHASMIN PRINCZESS",
+        "name_ru": "СНЕЖНОЕ ОЧАРОВАНИЕ ЖАСМИН ПРИНЦЕСС",
+        "breed": "САМОЕД",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 19,
+      "event_id": 2022004,
+      "dog_id": 7754,
+      "breed_class": "Сибирский хаски - Стандартный - Суки",
+      "catalog_no": 19,
+      "placement": 1,
+      "total_score": 322,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 104,
+            "bib_number": 104,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 84
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  15,
+                  16,
+                  15,
+                  16,
+                  16
+                ],
+                "sum": 78
+              }
+            ],
+            "total": 162,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 111,
+            "bib_number": 111,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  15,
+                  15,
+                  16,
+                  17
+                ],
+                "sum": 80
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  15,
+                  16,
+                  16,
+                  17
+                ],
+                "sum": 80
+              }
+            ],
+            "total": 160,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 322,
+        "format": "bzmp"
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 7754,
+        "dog_key": "эверест--метис",
+        "name_lat": "ЭВЕРЕСТ",
+        "name_ru": "ЭВЕРЕСТ",
+        "breed": "МЕТИС",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 20,
+      "event_id": 2022004,
+      "dog_id": 7767,
+      "breed_class": "Цвергпинчер - Стандартный - Кобели",
+      "catalog_no": 20,
+      "placement": 1,
+      "total_score": 352,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 124,
+            "bib_number": 124,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 176,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 138,
+            "bib_number": 138,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  19,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 91
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  18,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 176,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "grand_total": 352,
+        "format": "bzmp"
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 7767,
+        "dog_key": "zvezda-gardariki-ultimatum--цвергпинчер",
+        "name_lat": "ZVEZDA GARDARIKI ULTIMATUM",
+        "name_ru": "ЗВЕЗДА ГАРДАРИКИ УЛЬТИМАТУМ",
+        "breed": "ЦВЕРГПИНЧЕР",
+        "sex": "Кобель",
+        "owner": null
+      }
+    }
+  ]
+}

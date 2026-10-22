@@ -13,7 +13,8 @@ export function breedNormalizeKey(breed: string): string {
     .replace(/[\u00a0]/g, ' ')
     .replace(/\s+/g, ' ')
     // JS \b is ASCII-only — use explicit separators for К Ш → К-Ш
-    .replace(/(^|[\s(,])([КГДЖ])\s+Ш(?=$|[\s),])/g, '$1$2-Ш')
+    .replace(/(^|[\s(,])([КГДЖ])[\s/]+Ш(?=$|[\s),])/g, '$1$2-Ш')
+    .replace(/\(([КГДЖ]-Ш)\)/g, '$1')
     .replace(/\s*,\s*/g, ', ')
     .replace(/\s*-\s*/g, '-')
     .replace(/КОНТИНЕНТАЛЬНЫЙТОЙ/g, 'КОНТИНЕНТАЛЬНЫЙ ТОЙ')
@@ -165,7 +166,6 @@ export const BREED_ALIAS_BY_KEY: Record<string, string> = {
   'РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ': 'РУССКИЙ ТОЙ Г-Ш',
   'КОЛЛИ КОРОТКОШЕРСТНЫЙ': 'КОЛЛИ К-Ш',
   'НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ': 'НЕМЕЦКАЯ ОВЧАРКА Д-Ш',
-  'НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ': 'НЕМЕЦКАЯ ОВЧАРКА К-Ш',
   'ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ': 'ТАКСА СТАНДАРТНАЯ Г-Ш',
   'ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ': 'ТАКСА СТАНДАРТНАЯ Д-Ш',
   'ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ': 'ТАКСА СТАНДАРТНАЯ Ж-Ш',
@@ -211,7 +211,6 @@ export const BREED_ALIAS_BY_KEY: Record<string, string> = {
   СОЛЬЮ: 'ЦВЕРГШНАУЦЕР П-С',
 
   'МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ': 'НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРОКРАСЫ',
-  'НЕМЕЦКАЯ ОВЧАРКА (ТИП НЕ УКАЗАН)': 'НЕМЕЦКАЯ ОВЧАРКА К-Ш',
   'АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ': 'МИНИАТЮРНАЯ АМЕРИКАНСКАЯ ОВЧАРКА',
   'АМЕРИКАНСКАЯ ОВЧАРКА': 'МИНИАТЮРНАЯ АМЕРИКАНСКАЯ ОВЧАРКА',
   'ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ': 'ФРАНЦУЗСКИЙ БУЛЬДОГ',
@@ -272,4 +271,10 @@ export function appendBreedFilter(
     query: `${query} AND ${column} IN (${placeholders})`,
     params: [...params, ...variants],
   }
+}
+
+export function matchesBreedFilter(rowBreed: string | null | undefined, filterBreed: string): boolean {
+  if (!filterBreed) return true
+  if (!rowBreed) return false
+  return breedAliasKey(canonicalBreed(rowBreed)) === breedAliasKey(canonicalBreed(filterBreed))
 }
