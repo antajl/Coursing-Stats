@@ -13,6 +13,7 @@ import {
 } from 'lucide-react'
 import { useState, useMemo } from 'react'
 import OwnerCrownName from '../../components/OwnerCrownName'
+import DogSexIcon from '../../components/DogSexIcon'
 import type { DogTitle } from '../../lib/qualificationTitles'
 import { DogProfileAwardsBar } from './DogProfileAwardsBar'
 import { parseDogName } from '../../lib/dogName'
@@ -274,133 +275,35 @@ export function DogProfileHeader({
       })
     }
 
-    // 6. Высшие титулы
-    const hasMajorTitle = competitionTitles?.some((t) =>
-      ['ЧРКФ РК', 'ПКР РК', 'ПЧРКФ РК', 'Чемпион РКФ'].includes(t.title),
-    )
-    if (hasMajorTitle) {
-      const topTitle = competitionTitles.find((t) =>
-        ['ПКР РК', 'ЧРКФ РК', 'ПЧРКФ РК'].includes(t.title),
-      )?.title || 'Чемпион'
-      items.push({
-        id: 'major-champion',
-        label: topTitle,
-        sublabel: 'Титул',
-        icon: <Award className="h-3.5 w-3.5 text-amber-700 shrink-0" />,
-        color: 'bg-amber-50 text-amber-950 border border-amber-300 shadow-2xs',
-        tooltip: 'Обладатель высших сертификатных и чемпионских титулов',
-      })
-    }
-
     return items
   }, [ranks, dog, competitionTitles])
 
   return (
     <div className="relative mb-6">
-      <div className="relative min-w-0 rounded-xl border border-old-money-200/80 bg-white p-4 sm:p-5 md:p-8">
-        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
+      <div className="relative min-w-0 rounded-xl border border-old-money-200/80 bg-white p-4 sm:p-5 md:p-6">
+        {/* Верх: Кличка слева + Бейджи рейтингов справа */}
+        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
           <div className="min-w-0 flex-1">
-            <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-              <OwnerCrownName name={primary} dogId={dog.id} kind="competition">
-                <h1 className="break-words text-2xl font-bold tracking-tight text-charcoal-900 md:text-3xl">
-                  {primary}
-                </h1>
-              </OwnerCrownName>
-              {dog.sex && (
-                <span className="text-lg font-medium text-charcoal-400">
-                  {dog.sex === 'M' ? '♂' : '♀'}
-                </span>
-              )}
-            </div>
+            <OwnerCrownName name={primary} dogId={dog.id} kind="competition">
+              <h1 className="break-words text-2xl font-bold tracking-tight text-charcoal-900 md:text-3xl">
+                {primary}
+              </h1>
+            </OwnerCrownName>
             {secondary ? (
-              <div className="mt-1 text-base font-medium text-charcoal-400">
+              <div className="mt-1 text-sm sm:text-base font-medium text-charcoal-400">
                 {secondary}
               </div>
             ) : showRuName ? (
-              <div className="mt-1 text-base font-medium text-old-money-500">
+              <div className="mt-1 text-sm sm:text-base font-medium text-old-money-500">
                 {dog.name_ru}
               </div>
             ) : null}
-            <div className="mt-2.5 flex flex-wrap items-center gap-2">
-              <div className="min-w-0">
-                <span
-                  className="inline-block rounded-full border border-old-money-200 bg-cream-100 px-4 py-1.5 text-sm font-semibold text-charcoal-700"
-                  title={
-                    breedDisplay.secondary
-                      ? `${breedDisplay.primary} — ${breedDisplay.secondary}`
-                      : breedDisplay.primary
-                  }
-                >
-                  {breedDisplay.primary}
-                </span>
-              </div>
-              {dog.pedigree_url && (
-                <a
-                  href={dog.pedigree_url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 rounded-full border border-old-money-200 bg-white px-3 py-1.5 text-xs font-semibold text-camel-700 transition-colors hover:border-camel-400 hover:bg-camel-50"
-                >
-                  <img
-                    src={BREED_ARCHIVE_FAVICON}
-                    alt=""
-                    role="presentation"
-                    aria-hidden="true"
-                    width={14}
-                    height={14}
-                    className="h-3.5 w-3.5 shrink-0 rounded-sm"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  Breed Archive
-                </a>
-              )}
-              <button
-                type="button"
-                onClick={handleToggleFavorite}
-                disabled={loadingFavorite}
-                className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-50 ${
-                  favorite
-                    ? 'border-amber-400 bg-amber-50 text-amber-700 hover:border-amber-500 hover:bg-amber-100'
-                    : 'border-old-money-200 bg-white text-camel-700 hover:border-camel-400 hover:bg-camel-50'
-                }`}
-                aria-label={favorite ? 'Удалить из избранного' : 'Добавить в избранное'}
-                title={favorite ? 'Удалить из избранного' : 'Добавить в избранное'}
-                data-export-ignore
-              >
-                <StarIcon className={`h-3.5 w-3.5 shrink-0 ${favorite ? 'fill-current' : ''}`} aria-hidden />
-                {favorite ? 'В избранном' : 'В избранное'}
-              </button>
-              <a
-                href={`https://t.me/coursing_stats_bot?start=dog_${dog.id}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 rounded-full border border-old-money-200 bg-white px-3 py-1.5 text-xs font-semibold text-camel-700 transition-colors hover:border-camel-400 hover:bg-camel-50"
-                aria-label="Отслеживать собаку в Telegram"
-                title="Отслеживать собаку в Telegram: результаты и место в топе"
-                data-export-ignore
-              >
-                <img
-                  src={TELEGRAM_FAVICON}
-                  alt=""
-                  role="presentation"
-                  aria-hidden="true"
-                  width={14}
-                  height={14}
-                  className="h-3.5 w-3.5 shrink-0 rounded-full"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <span>Отслеживать</span>
-              </a>
-            </div>
           </div>
 
-          {/* Right column on desktop: Achievement Badges */}
           {achievements.length > 0 && (
-            <div className="flex flex-wrap items-center justify-start lg:justify-end gap-1.5 sm:gap-2 max-w-xl self-start">
+            <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 shrink-0 lg:justify-end">
               {achievements.map((ach) => (
-                <HoverTooltip key={ach.id} label={ach.tooltip}>
+                <HoverTooltip key={ach.id} label={ach.tooltip} placement="bottom" portal>
                   <div className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold ${ach.color}`}>
                     {ach.icon}
                     <span>{ach.label}</span>
@@ -414,17 +317,106 @@ export function DogProfileHeader({
           )}
         </div>
 
+        {/* Средняя строка: Порода, Пол, Ссылки, Кнопки, и Владелец справа */}
+        <div className="mt-3.5 flex flex-wrap items-center justify-between gap-2.5">
+          <div className="flex flex-wrap items-center gap-2">
+            <span
+              className="inline-block rounded-full border border-old-money-200 bg-cream-100 px-3.5 py-1.5 text-xs sm:text-sm font-semibold text-charcoal-700"
+              title={
+                breedDisplay.secondary
+                  ? `${breedDisplay.primary} — ${breedDisplay.secondary}`
+                  : breedDisplay.primary
+              }
+            >
+              {breedDisplay.primary}
+            </span>
+
+            {dog.sex && (
+              <span
+                className="inline-flex items-center gap-1.5 rounded-full border border-old-money-200 bg-cream-100 px-3 py-1.5 text-xs sm:text-sm font-semibold text-charcoal-700"
+                title={dog.sex === 'M' || dog.sex?.toLowerCase() === 'кобель' ? 'Кобель' : 'Сука'}
+              >
+                <DogSexIcon sex={dog.sex} size={15} />
+                <span>{dog.sex === 'M' || dog.sex?.toLowerCase() === 'кобель' ? 'Кобель' : 'Сука'}</span>
+              </span>
+            )}
+
+            {dog.pedigree_url && (
+              <a
+                href={dog.pedigree_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-full border border-old-money-200 bg-white px-3 py-1.5 text-xs font-semibold text-camel-700 transition-colors hover:border-camel-400 hover:bg-camel-50"
+              >
+                <img
+                  src={BREED_ARCHIVE_FAVICON}
+                  alt=""
+                  role="presentation"
+                  aria-hidden="true"
+                  width={14}
+                  height={14}
+                  className="h-3.5 w-3.5 shrink-0 rounded-sm"
+                  loading="lazy"
+                  decoding="async"
+                />
+                Breed Archive
+              </a>
+            )}
+
+            <button
+              type="button"
+              onClick={handleToggleFavorite}
+              disabled={loadingFavorite}
+              className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-50 ${
+                favorite
+                  ? 'border-amber-400 bg-amber-50 text-amber-700 hover:border-amber-500 hover:bg-amber-100'
+                  : 'border-old-money-200 bg-white text-camel-700 hover:border-camel-400 hover:bg-camel-50'
+              }`}
+              aria-label={favorite ? 'Удалить из избранного' : 'Добавить в избранное'}
+              title={favorite ? 'Удалить из избранного' : 'Добавить в избранное'}
+              data-export-ignore
+            >
+              <StarIcon className={`h-3.5 w-3.5 shrink-0 ${favorite ? 'fill-current' : ''}`} aria-hidden />
+              {favorite ? 'В избранном' : 'В избранное'}
+            </button>
+
+            <a
+              href={`https://t.me/coursing_stats_bot?start=dog_${dog.id}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-full border border-old-money-200 bg-white px-3 py-1.5 text-xs font-semibold text-camel-700 transition-colors hover:border-camel-400 hover:bg-camel-50"
+              aria-label="Отслеживать собаку в Telegram"
+              title="Отслеживать собаку в Telegram: результаты и место в топе"
+              data-export-ignore
+            >
+              <img
+                src={TELEGRAM_FAVICON}
+                alt=""
+                role="presentation"
+                aria-hidden="true"
+                width={14}
+                height={14}
+                className="h-3.5 w-3.5 shrink-0 rounded-full"
+                loading="lazy"
+                decoding="async"
+              />
+              <span>Отслеживать</span>
+            </a>
+          </div>
+
+          {dog.owner && (
+            <div className="text-xs text-charcoal-600 sm:text-right">
+              <span className="font-semibold text-charcoal-800">Владелец:</span> {dog.owner}
+            </div>
+          )}
+        </div>
+
+        {/* Нижняя строка: Все титулы и награды собаки (по центру) */}
         {hasTitles && (
           <DogProfileAwardsBar
             competitionTitles={competitionTitles}
             showTitles={showTitles}
           />
-        )}
-
-        {dog.owner && (
-          <div className="mt-4 border-t border-old-money-100 pt-4 text-sm text-old-money-700">
-            <span className="font-semibold text-old-money-800">Владелец:</span> {dog.owner}
-          </div>
         )}
       </div>
     </div>

@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, useState } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Crown, ArrowRight, Award } from 'lucide-react'
 import {
@@ -11,8 +11,6 @@ import {
 import { bestShowGradeLabel } from '../../../../backend/lib/show-grades'
 import { ShowGradeChip } from '../../lib/ShowGradeChip'
 import type { ShowDogCardData } from '../Shows/ShowDogCard'
-import { maxShowAwardsForWidth } from '../Shows/ShowDogCard'
-import { renderShowAwardChips } from '../../lib/awardChipRender'
 import HoverTooltip from '../../components/ui/HoverTooltip'
 import { localExhibitionPath } from '../../lib/env'
 import { HISTORY_DEFAULT } from './dogProfileStats'
@@ -58,45 +56,6 @@ function resolveBestGradeLabel(dog: ShowsColumnProps['dog']): string | null {
   return bestShowGradeLabel(history.map((h) => h.grade))
 }
 
-function ProfileShowAwardsFooter({ titles }: { titles: ShowDogCardData['titles'] }) {
-  const awards = presentShowAwards(titles)
-  const rowRef = useRef<HTMLDivElement>(null)
-  const [maxVisible, setMaxVisible] = useState(0)
-  const awardKey = awards.join(',')
-
-  useLayoutEffect(() => {
-    const row = rowRef.current
-    if (!row || awards.length === 0) {
-      setMaxVisible(0)
-      return
-    }
-    const update = () => {
-      setMaxVisible(maxShowAwardsForWidth(row.clientWidth, titles, awards))
-    }
-    update()
-    const ro = new ResizeObserver(update)
-    ro.observe(row)
-    return () => ro.disconnect()
-  }, [awardKey, titles])
-
-  if (awards.length === 0) return null
-
-  return (
-    <div
-      ref={rowRef}
-      className="mt-1.5 flex min-w-0 w-full flex-nowrap items-center gap-1 overflow-hidden"
-    >
-      {renderShowAwardChips({
-        titles,
-        size: 'sm',
-        showCounts: false,
-        maxVisible,
-        nowrap: true,
-      })}
-    </div>
-  )
-}
-
 export function ShowsColumn({ dog, rank, breed }: ShowsColumnProps) {
   const t = disciplineTheme(THEME)
   const [showAll, setShowAll] = useState(false)
@@ -136,27 +95,44 @@ export function ShowsColumn({ dog, rank, breed }: ShowsColumnProps) {
             title="Открыть рейтинг выставок РКФ"
           >
             <div className="flex items-center justify-between gap-2">
+              {/* Слева: Место в породе + общий зачёт */}
               <div className="flex items-center gap-2.5 min-w-0">
                 <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-camel-700 text-white shadow-2xs">
                   <Crown className="h-4 w-4" />
                 </div>
                 <div className="min-w-0">
-                  <div className="flex items-baseline gap-1.5 leading-tight">
-                    <span className="text-base font-bold text-camel-950 sm:text-lg">
+                  <div className="flex items-center gap-1.5 leading-tight">
+                    <span className="text-sm font-bold text-camel-950 sm:text-base whitespace-nowrap">
                       {hasBreedRank ? `#${rank.breedRank} в породе` : 'Рейтинг выставок'}
                     </span>
                   </div>
-                  <div className="text-[11px] text-camel-800 truncate">
-                    {hasOverallRank ? `№${rank?.rank} среди всех пород` : 'Рейтинг РКФ'}
+                  <div className="text-[11px] text-camel-800 leading-tight mt-0.5 whitespace-nowrap">
+                    {hasOverallRank ? `№${rank?.rank} в общем топе` : 'Рейтинг РКФ'}
                   </div>
                 </div>
               </div>
 
-              <div className="shrink-0 text-right">
-                <span className="inline-flex items-center gap-1 rounded-full border border-camel-200 bg-white/90 px-2.5 py-1 text-xs font-semibold text-charcoal-700">
-                  <Award className="h-3.5 w-3.5 text-camel-700" />
-                  <span>{formatShowsCount(totalShows)}</span>
-                </span>
+              {/* Справа: Количество выставок */}
+              <div className="shrink-0 flex items-center leading-tight">
+                {bestBadge ? (
+                  <span className="inline-flex items-center gap-1 rounded-full border border-camel-200 bg-white/90 px-2.5 py-0.5 text-xs font-bold text-camel-950">
+                    <Award className="h-3.5 w-3.5 text-camel-700" />
+                    <span>{bestBadge}</span>
+                    {bestGrade && (
+                      <span className="text-[10px] font-normal text-camel-700">· {bestGrade}</span>
+                    )}
+                  </span>
+                ) : bestGrade ? (
+                  <span className="inline-flex items-center gap-1 rounded-full border border-camel-200 bg-white/90 px-2.5 py-0.5 text-xs font-bold text-camel-950">
+                    <Award className="h-3.5 w-3.5 text-camel-700" />
+                    <span>{bestGrade}</span>
+                  </span>
+                ) : (
+                  <span className="inline-flex items-center gap-1 rounded-full border border-camel-200 bg-white/90 px-2.5 py-0.5 text-xs font-semibold text-camel-800">
+                    <Award className="h-3.5 w-3.5 text-camel-700" />
+                    <span>Участник</span>
+                  </span>
+                )}
               </div>
             </div>
           </Link>
@@ -199,8 +175,6 @@ export function ShowsColumn({ dog, rank, breed }: ShowsColumnProps) {
             </div>
           </div>
         </div>
-
-        <ProfileShowAwardsFooter titles={dog.titles} />
       </DisciplineStatsCard>
 
       {history.length > 0 && (

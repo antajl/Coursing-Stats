@@ -114,6 +114,8 @@ export function DogProfileAwardsBar({
         tabIndex={0}
         aria-label="Награды и титулы собаки"
       >
+        <div className="flex items-center gap-2 mx-auto min-w-min">
+
         {hasComp && (
           <div className="flex shrink-0 items-center gap-1.5">
             <span className="inline-flex shrink-0 items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-old-money-500">
@@ -122,9 +124,9 @@ export function DogProfileAwardsBar({
             </span>
             <div className="flex items-center gap-1">
               {sortedComp.map((item) => renderChip(item, 'comp'))}
-            </div>
-          </div>
-        )}
+                    </div>
+      </div>
+    )}
 
         {hasComp && hasShow && (
           <span className="mx-1 h-3.5 w-px shrink-0 bg-old-money-200" aria-hidden />
@@ -141,6 +143,7 @@ export function DogProfileAwardsBar({
             </div>
           </div>
         )}
+        </div>
       </div>
     </div>
   )

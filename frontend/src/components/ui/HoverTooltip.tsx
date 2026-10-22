@@ -35,6 +35,7 @@ export default function HoverTooltip({
   const tooltipRef = useRef<HTMLSpanElement>(null)
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const [open, setOpen] = useState(false)
+  const [actualPlacement, setActualPlacement] = useState<'top' | 'bottom'>(placement)
   const [coords, setCoords] = useState({ top: 0, left: 0, transformX: '-50%' })
   const tipId = useId()
   const useCssOnly = !portal && delayMs <= 0
@@ -67,8 +68,18 @@ export default function HoverTooltip({
       transformX = '-100%'
     }
 
+    const navOffset = 64
+    const tipHeight = tooltipRef.current?.offsetHeight || (variant === 'site' ? 60 : 44)
+    let effectivePlacement = placement
+    if (placement === 'top' && rect.top - tipHeight - 8 < navOffset) {
+      effectivePlacement = 'bottom'
+    } else if (placement === 'bottom' && rect.bottom + tipHeight + 8 > window.innerHeight) {
+      effectivePlacement = 'top'
+    }
+
+    setActualPlacement(effectivePlacement)
     setCoords({
-      top: placement === 'bottom' ? rect.bottom + 6 : rect.top - 6,
+      top: effectivePlacement === 'bottom' ? rect.bottom + 6 : rect.top - 6,
       left,
       transformX,
     })
@@ -146,8 +157,8 @@ export default function HoverTooltip({
             style={{ 
               top: coords.top, 
               left: coords.left,
-              transform: `translateX(${coords.transformX}) ${placement === 'bottom' ? '' : 'translateY(-100%)'}`,
-              zIndex: 'var(--z-tooltip)'
+              transform: `translateX(${coords.transformX}) ${actualPlacement === 'bottom' ? '' : 'translateY(-100%)'}`,
+              zIndex: 'var(--z-tooltip, 1000)'
             }}
           >
             {label}
@@ -187,7 +198,7 @@ export default function HoverTooltip({
                 ? 'block'
                 : 'hidden'
           }`}
-          style={{ zIndex: 'var(--z-tooltip)' }}
+          style={{ zIndex: 'var(--z-tooltip, 1000)' }}
         >
           {label}
         </span>

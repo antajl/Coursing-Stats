@@ -113,61 +113,54 @@ export function RacingColumn({
               title="Открыть рейтинг породы по бегам"
             >
               <div className="flex items-center justify-between gap-2">
+                {/* Слева: Место в породе + исторический зачёт */}
                 <div className="flex items-center gap-2.5 min-w-0">
                   <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-warm-blue-700 text-white shadow-2xs">
                     <Crown className="h-4 w-4" />
                   </div>
                   <div className="min-w-0">
-                    <div className="flex items-baseline gap-1.5 leading-tight">
-                      <span className="text-base font-bold text-warm-blue-950 sm:text-lg">
+                    <div className="flex items-center gap-1.5 leading-tight">
+                      <span className="text-sm font-bold text-warm-blue-950 sm:text-base whitespace-nowrap">
                         {has2026
                           ? `#${rank.yearBreedRank} в породе`
                           : hasHistory
                             ? `#${rank.breedRank} в породе`
                             : rank?.rank != null
                               ? `#${rank.rank} в общем топе`
-                              : 'Участник бегов'}
+                              : 'Бега'}
                       </span>
                       {has2026 && (
-                        <span className="rounded-md bg-warm-blue-200/80 px-1.5 py-0.5 text-[10px] font-bold text-warm-blue-900 leading-none">
-                          '26
-                        </span>
+                        <span className="inline-flex items-center justify-center rounded-md bg-warm-blue-200/90 px-1.5 py-0.5 text-[10px] font-bold text-warm-blue-900 leading-none tracking-tight">2026</span>
                       )}
                     </div>
-                    <div className="text-[11px] text-warm-blue-700 truncate">
+                    <div className="text-[11px] text-warm-blue-700 leading-tight mt-0.5 whitespace-nowrap">
                       {has2026 && hasHistory ? (
-                        <span>№{rank?.breedRank} в породе за всё время</span>
+                        `№${rank?.breedRank} за всё время`
                       ) : hasHistory ? (
-                        <span>в породе за всё время</span>
+                        'за всё время'
                       ) : hasAnyRank ? (
-                        <span>сезонный зачёт</span>
+                        'сезонный зачёт'
                       ) : (
-                        <span>беговой рейтинг</span>
+                        'беговой рейтинг'
                       )}
                     </div>
                   </div>
                 </div>
 
-                <div className="shrink-0 text-right">
+                {/* Справа: Медали и количество стартов */}
+                <div className="shrink-0 flex items-center leading-tight">
                   {hasRacingMedals ? (
-                    <div className="flex flex-col items-end gap-0.5">
-                      <MedalTally
-                        gold={racing.gold}
-                        silver={racing.silver}
-                        bronze={racing.bronze}
-                        size="md"
-                        showZero
-                      />
-                      {startsCount > 0 && (
-                        <span className="text-[10px] font-medium text-warm-blue-700">
-                          {formatStartsCount(startsCount)}
-                        </span>
-                      )}
-                    </div>
+                    <MedalTally
+                      gold={racing.gold}
+                      silver={racing.silver}
+                      bronze={racing.bronze}
+                      size="sm"
+                      showZero
+                    />
                   ) : startsCount > 0 ? (
-                    <span className="inline-flex items-center gap-1 rounded-full border border-warm-blue-200 bg-white/90 px-2.5 py-1 text-xs font-semibold text-charcoal-700">
-                      <Medal className="h-3.5 w-3.5 text-warm-blue-600" />
-                      <span>{formatStartsCount(startsCount)}</span>
+                    <span className="inline-flex items-center gap-1 rounded-full border border-warm-blue-200 bg-white/90 px-2 py-0.5 text-[11px] font-semibold text-charcoal-700">
+                      <Medal className="h-3 w-3 text-warm-blue-600" />
+                      <span>Участник</span>
                     </span>
                   ) : null}
                 </div>

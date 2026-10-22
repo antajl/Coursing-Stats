@@ -623,7 +623,7 @@ export default function DogProfile() {
         {/* Мобильный сегмент-контрол дисциплин */}
         {availableTabs.length > 1 && (
           <div
-            className={`mb-4 w-full p-1 rounded-2xl bg-cream-100/80 border border-old-money-200/90 shadow-2xs md:hidden ${
+            className={`mb-4 w-full p-1 rounded-2xl bg-cream-100/80 border border-old-money-200/90 shadow-2xs lg:hidden ${
               availableTabs.length <= 3
                 ? 'grid gap-1.5'
                 : 'flex items-center gap-1.5 overflow-x-auto no-scrollbar'
@@ -679,7 +679,7 @@ export default function DogProfile() {
           </div>
         )}
         {/* Мобильный вид: отображение только выбранной дисциплины */}
-        <div className="mb-6 block md:hidden">
+        <div className="mb-6 block lg:hidden">
           {availableTabs.length === 0 ? (
             <EmptyDisciplineColumn title="Курсинг / БЗМП" theme="forest" />
           ) : (
@@ -772,7 +772,7 @@ export default function DogProfile() {
         </div>
 
         {/* Десктопный вид: 3 колонки рядом */}
-        <div className="mb-6 hidden items-stretch gap-4 md:grid md:grid-cols-3 md:gap-6 lg:gap-8">
+        <div className="mb-6 hidden items-stretch gap-4 lg:grid lg:grid-cols-3 lg:gap-5 xl:gap-6">
           {showCoursingColumn ? (
             <CoursingColumn
               hasCoursingData={hasCoursingData}
