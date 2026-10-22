@@ -8,17 +8,19 @@ export interface QuickBreedItem {
   key: string
   label: string
   fullName: string
+  /** Responsive visibility on desktop: hides on narrow screens to prevent toolbar collision */
+  desktopVisibility?: string
 }
 
 export const TOP_QUICK_BREEDS: QuickBreedItem[] = [
-  { key: 'УИППЕТ', label: 'Уиппет', fullName: 'Уиппет' },
-  { key: 'РУССКАЯ ПСОВАЯ БОРЗАЯ', label: 'РПБ', fullName: 'Русская псовая борзая' },
-  { key: 'БАСЕНДЖИ', label: 'Басенджи', fullName: 'Басенджи' },
-  { key: 'РОДЕЗИЙСКИЙ РИДЖБЕК', label: 'Риджбек', fullName: 'Родезийский риджбек' },
-  { key: 'САЛЮКИ', label: 'Салюки', fullName: 'Салюки' },
-  { key: 'ЧИРНЕКО ДЕЛЬ ЭТНА', label: 'Чирнеко', fullName: 'Чирнеко дель Этна' },
-  { key: 'ФАРАОНОВА СОБАКА', label: 'Фараон', fullName: 'Фараонова собака' },
-  { key: 'ГРЕЙХАУНД', label: 'Грейхаунд', fullName: 'Грейхаунд' },
+  { key: 'УИППЕТ', label: 'Уиппет', fullName: 'Уиппет', desktopVisibility: 'inline-flex' },
+  { key: 'РУССКАЯ ПСОВАЯ БОРЗАЯ', label: 'РПБ', fullName: 'Русская псовая борзая', desktopVisibility: 'inline-flex' },
+  { key: 'БАСЕНДЖИ', label: 'Басенджи', fullName: 'Басенджи', desktopVisibility: 'inline-flex' },
+  { key: 'РОДЕЗИЙСКИЙ РИДЖБЕК', label: 'Риджбек', fullName: 'Родезийский риджбек', desktopVisibility: 'inline-flex md:hidden lg:inline-flex' },
+  { key: 'САЛЮКИ', label: 'Салюки', fullName: 'Салюки', desktopVisibility: 'inline-flex md:hidden xl:inline-flex' },
+  { key: 'ЧИРНЕКО ДЕЛЬ ЭТНА', label: 'Чирнеко', fullName: 'Чирнеко дель Этна', desktopVisibility: 'inline-flex md:hidden 2xl:inline-flex' },
+  { key: 'ФАРАОНОВА СОБАКА', label: 'Фараон', fullName: 'Фараонова собака', desktopVisibility: 'inline-flex md:hidden 2xl:inline-flex' },
+  { key: 'ГРЕЙХАУНД', label: 'Грейхаунд', fullName: 'Грейхаунд', desktopVisibility: 'inline-flex md:hidden 2xl:inline-flex' },
 ]
 
 interface QuickBreedBarProps {
@@ -62,7 +64,7 @@ export default function QuickBreedBar({
 
   return (
     <div
-      className={`flex items-center gap-1.5 overflow-x-auto no-scrollbar py-1 w-full ${className}`.trim()}
+      className={`flex items-center gap-1.5 overflow-x-auto no-scrollbar py-1 pr-2 w-full ${className}`.trim()}
       role="toolbar"
       aria-label="Быстрый выбор породы"
     >
@@ -83,13 +85,14 @@ export default function QuickBreedBar({
       {/* Топ-породы */}
       {TOP_QUICK_BREEDS.map((breed) => {
         const isActive = matchesBreedFilter(normalizedSelected, breed.key)
+        const visibility = isActive ? 'inline-flex' : (breed.desktopVisibility || 'inline-flex')
         return (
           <button
             key={breed.key}
             type="button"
             onClick={() => handlePillClick(breed.key)}
             title={breed.fullName}
-            className={`inline-flex h-8 shrink-0 items-center rounded-full px-3 text-xs font-semibold transition-all cursor-pointer whitespace-nowrap ${
+            className={`${visibility} h-8 shrink-0 items-center rounded-full px-3 text-xs font-semibold transition-all cursor-pointer whitespace-nowrap ${
               isActive
                 ? 'bg-camel-500 text-charcoal-900 border border-camel-600 shadow-xs'
                 : 'border border-old-money-200/80 bg-cream-50 text-charcoal-700 hover:bg-old-money-50 hover:text-charcoal-900'

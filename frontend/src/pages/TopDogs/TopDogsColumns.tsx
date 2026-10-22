@@ -102,7 +102,6 @@ export default function TopDogsColumns({
       asHeader
       title="Курсинг / БЗМП"
       count={filteredCombined.length}
-      action={<CoursingRatingHint embedded variant="unified" />}
     />
   )
 

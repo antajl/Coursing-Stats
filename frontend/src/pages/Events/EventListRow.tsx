@@ -147,7 +147,7 @@ export default function EventListRow({ event }: EventListRowProps) {
       eventId={event.id}
       procoursingUrl={procoursingUrl}
       className={rowClassName}
-      title={procoursingUrl ? 'Результаты на procoursing.ru' : getEventHeadline(event)}
+
     >
       {rowContent}
     </ProcoursingEventLink>

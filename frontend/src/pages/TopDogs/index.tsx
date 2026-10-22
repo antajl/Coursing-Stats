@@ -13,6 +13,7 @@ import {
 import LoadingCard from '../../components/LoadingCard'
 import TopDogsFilters from './TopDogsFilters'
 import TopDogsColumns from './TopDogsColumns'
+import CoursingRatingHint from './CoursingRatingHint'
 import { filterCombinedRanking, filterSpeed } from './filterUtils'
 import {
   DEFAULT_ACTIVE_SEASON,
@@ -266,6 +267,7 @@ export default function TopDogs() {
         onResetFilters={handleResetFilters}
         onResetPanelFilters={handleResetPanelFilters}
         dropdownRef={dropdownRef}
+        trailing={<CoursingRatingHint embedded variant="unified" />}
       />
 
       {showListSkeleton ? (

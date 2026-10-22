@@ -46,7 +46,7 @@ function PageToolbarActions() {
   const showEnd = Boolean(exportAction || trailing)
   if (!showEnd) return null
   return (
-    <div className="flex shrink-0 items-center gap-2">
+    <div className="flex shrink-0 items-center gap-2 ml-auto">
       {exportAction}
       {trailing}
     </div>
@@ -114,7 +114,7 @@ export default function PageToolbar({
             <div className={`flex flex-wrap items-center justify-between gap-2 ${topRowClassName}`.trim()}>
               <div className="flex min-w-0 flex-1 flex-wrap items-center gap-2">{filters}</div>
               {showEnd && (
-                <div className="flex shrink-0 items-center gap-2">
+                <div className="flex shrink-0 items-center gap-2 ml-auto">
                   {exportAction}
                   {trailing}
                 </div>

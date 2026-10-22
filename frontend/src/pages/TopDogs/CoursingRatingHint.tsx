@@ -1,4 +1,5 @@
-import { Info } from 'lucide-react'
+import { Info, Award, Zap, BarChart2, FileText } from 'lucide-react'
+import ModernDropdown from '../../components/ui/ModernDropdown'
 import HoverTooltip from '../../components/ui/HoverTooltip'
 
 function RatingFormulaIcon({ size = 13 }: { size?: number }) {
@@ -18,6 +19,70 @@ function RatingFormulaIcon({ size = 13 }: { size?: number }) {
     </svg>
   )
 }
+
+/** Содержимое модального окна «О рейтинге» */
+export const RATING_MODAL_CONTENT = (
+  <div className="p-3.5 space-y-3 text-charcoal-800">
+    <div className="flex items-center gap-1.5 text-xs font-bold text-charcoal-900 border-b border-old-money-200/80 pb-2">
+      <Info className="h-4 w-4 text-camel-700 shrink-0" aria-hidden />
+      <span>Как устроен рейтинг сезона</span>
+    </div>
+
+    <div className="space-y-2.5 text-xs">
+      <div className="flex items-start gap-2.5">
+        <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-md bg-amber-100 text-amber-900 text-[11px] font-bold border border-amber-300/80 shadow-2xs">
+          1
+        </span>
+        <div className="leading-tight">
+          <div className="flex items-center gap-1 font-semibold text-charcoal-900">
+            <Award className="h-3.5 w-3.5 text-amber-600 shrink-0" aria-hidden />
+            <span>Медали (главный критерий)</span>
+          </div>
+          <p className="text-[11px] text-charcoal-600 mt-0.5 leading-snug">
+            Золото ценнее серебра и бронзы. При равенстве наград выше собака с <strong>меньшим</strong> числом стартов.
+          </p>
+        </div>
+      </div>
+
+      <div className="flex items-start gap-2.5">
+        <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-md bg-camel-100 text-camel-900 text-[11px] font-bold border border-camel-300/80 shadow-2xs">
+          2
+        </span>
+        <div className="leading-tight">
+          <div className="flex items-center gap-1 font-semibold text-charcoal-900">
+            <Zap className="h-3.5 w-3.5 text-camel-600 shrink-0" aria-hidden />
+            <span>Индекс CS (тай-брейкер)</span>
+          </div>
+          <p className="text-[11px] text-charcoal-600 mt-0.5 leading-snug">
+            Средняя судейская оценка за технику забегов. Разрешает ничьи при одинаковых медалях.
+          </p>
+        </div>
+      </div>
+
+      <div className="flex items-start gap-2.5">
+        <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-md bg-cream-200 text-charcoal-700 text-[11px] font-bold border border-old-money-300 shadow-2xs">
+          3
+        </span>
+        <div className="leading-tight">
+          <div className="flex items-center gap-1 font-semibold text-charcoal-900">
+            <BarChart2 className="h-3.5 w-3.5 text-charcoal-500 shrink-0" aria-hidden />
+            <span>Рейтинг Elo</span>
+          </div>
+          <p className="text-[11px] text-charcoal-600 mt-0.5 leading-snug">
+            Сила соперников в забегах (статистический показатель, на место в зачёте не влияет).
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div className="border-t border-old-money-200/80 pt-2.5 mt-2.5 text-[10.5px] leading-relaxed text-charcoal-600 flex items-start gap-1.5">
+      <FileText className="h-3.5 w-3.5 text-camel-700 shrink-0 mt-0.5" aria-hidden />
+      <p>
+        <strong className="text-charcoal-800 font-semibold">Примечание:</strong> спортивные результаты и статистика формируются на основе официальных протоколов соревнований и архивов ProCoursing.ru. Сведения могут содержать ошибки или быть неполными из-за фрагментарности открытых источников и ручного ведения ранних баз организаторами.
+      </p>
+    </div>
+  </div>
+)
 
 const TOOLTIP_CONTENT = (
   <div className="max-w-[20rem] space-y-2.5">
@@ -49,44 +114,6 @@ const TOOLTIP_CONTENT = (
   </div>
 )
 
-const UNIFIED_TOOLTIP_CONTENT = (
-  <div className="max-w-[22rem] space-y-3 p-1">
-    <div>
-      <div className="flex items-center gap-1.5 text-xs font-bold text-charcoal-900 border-b border-old-money-200 pb-1.5 mb-2">
-        <Info className="h-4 w-4 text-camel-700 shrink-0" aria-hidden />
-        <span>Зачёт сезона и статус данных</span>
-      </div>
-
-      <p className="text-[11px] font-semibold text-camel-800 uppercase tracking-wider mb-1">
-        Как рассчитывается зачёт
-      </p>
-      <ol className="list-decimal space-y-1 pl-4 text-[11px] leading-snug text-charcoal-700">
-        <li>
-          <strong>Медали</strong> — первичный критерий (золото ценнее серебра и бронзы). При равенстве наград выше собака с <strong>меньшим</strong> числом стартов.
-        </li>
-        <li>
-          <strong>Индекс CS</strong> — средняя судейская оценка за технику бега (разрешает ничьи по медалям).
-        </li>
-        <li>
-          <strong>Elo</strong> — сила соперников в забегах (на место в зачёте не влияет).
-        </li>
-      </ol>
-    </div>
-
-    <div className="rounded-lg bg-old-money-100/70 p-2.5 border border-old-money-200/90 text-[11px] leading-relaxed text-charcoal-700 space-y-1">
-      <div className="font-semibold text-charcoal-900 flex items-center gap-1 text-[11px]">
-        <span>Общественный независимый архив</span>
-      </div>
-      <p>
-        Статистика формируется на основе опубликованных протоколов соревнований и архивов ProCoursing.ru.
-      </p>
-      <p className="text-[10px] text-charcoal-500 leading-normal">
-        Сведения могут содержать ошибки или быть неполными из-за фрагментарности открытых источников и ручного ведения ранних баз организаторами. Проект не является официальным сайтом РКФ.
-      </p>
-    </div>
-  </div>
-)
-
 interface CoursingRatingHintProps {
   embedded?: boolean
   as?: 'button' | 'span'
@@ -103,17 +130,22 @@ export default function CoursingRatingHint({
 
   if (variant === 'unified') {
     return (
-      <HoverTooltip label={UNIFIED_TOOLTIP_CONTENT} placement="bottom" variant="site" interactive portal>
-        <button
-          type="button"
-          className="inline-flex items-center gap-1.5 rounded-full border border-old-money-300/90 bg-cream-50/90 px-2.5 py-0.5 text-xs font-semibold text-charcoal-800 shadow-2xs hover:border-camel-500 hover:bg-cream-100 hover:text-charcoal-900 transition-all cursor-pointer"
-          aria-label="О зачёте и открытых данных"
-        >
-          <Info className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
-          <span className="hidden sm:inline">О зачёте и источниках</span>
-          <span className="sm:hidden">О зачёте</span>
-        </button>
-      </HoverTooltip>
+      <ModernDropdown
+        trigger={
+          <button
+            type="button"
+            className="inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full border border-old-money-300/80 bg-cream-50 px-3 text-xs font-semibold text-charcoal-800 hover:border-camel-500 hover:bg-cream-100 hover:text-charcoal-900 transition-all cursor-pointer shadow-2xs"
+            aria-label="О рейтинге и источниках данных"
+          >
+            <Info className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
+            <span>О рейтинге</span>
+          </button>
+        }
+        width="340px"
+        portal
+      >
+        {RATING_MODAL_CONTENT}
+      </ModernDropdown>
     )
   }
 
@@ -123,12 +155,12 @@ export default function CoursingRatingHint({
         {...(as === 'button' ? { type: 'button' as const } : {})}
         className={
           embedded
-            ? 'inline-flex h-5 w-5 items-center justify-center rounded text-old-money-600 hover:text-charcoal-800'
-            : 'inline-flex items-center justify-center rounded p-1 text-charcoal-500 hover:text-charcoal-800'
+            ? 'cursor-help text-charcoal-500 hover:text-charcoal-800 transition-colors p-0.5 -m-0.5 rounded inline-flex items-center align-middle'
+            : 'text-xs text-charcoal-500 hover:text-charcoal-800 transition-colors p-1 rounded inline-flex items-center'
         }
-        aria-label="Как считается рейтинг"
+        aria-label="Как рассчитывается зачёт сезона"
       >
-        <RatingFormulaIcon />
+        <RatingFormulaIcon size={embedded ? 13 : 15} />
       </Tag>
     </HoverTooltip>
   )

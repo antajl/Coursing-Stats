@@ -8,13 +8,9 @@ import {
   type CalendarEvent,
   groupEventsByMonth,
   getEventYear,
-  isImportantCompetition,
   parseDate,
 } from './eventListUtils'
-import EventsToolbar, {
-  CURRENT_SEASON,
-  type EventsQuickPreset,
-} from './EventsToolbar'
+import EventsToolbar, { CURRENT_SEASON } from './EventsToolbar'
 import EventsMonthList from './EventsMonthList'
 
 export default function Events() {
@@ -27,15 +23,10 @@ export default function Events() {
     return monthParam
   })
   const [filterDiscipline, setFilterDiscipline] = useState(() => searchParams.get('discipline') || '')
-  const [filterCompetitionKind, setFilterCompetitionKind] = useState(() => searchParams.get('kind') || '')
-  const [filterChampionshipsOnly, setFilterChampionshipsOnly] = useState(
-    () => searchParams.get('championships') === '1',
-  )
   const [filterWithProtocol, setFilterWithProtocol] = useState(
     () => searchParams.get('protocol') === '1' || searchParams.get('results') === '1',
   )
   const [searchQuery, setSearchQuery] = useState(() => searchParams.get('search') || '')
-  const [quickPreset, setQuickPreset] = useState<EventsQuickPreset>(null)
 
   useEffect(() => {
     reachGoal('competition_view')
@@ -68,18 +59,11 @@ export default function Events() {
     return years
   }, [yearsArray])
 
-  const allCompetitionKinds = [
-    ...new Set(events.map((e) => e.competition_kind).filter(Boolean)),
-  ].sort() as string[]
-
   const handleResetFilters = () => {
     setFilterYear(CURRENT_SEASON)
     setFilterMonth('')
     setFilterDiscipline('')
-    setFilterCompetitionKind('')
-    setFilterChampionshipsOnly(false)
     setFilterWithProtocol(false)
-    setQuickPreset(null)
     setSearchQuery('')
   }
 
@@ -93,13 +77,11 @@ export default function Events() {
         else params.delete('month')
         if (filterDiscipline) params.set('discipline', filterDiscipline)
         else params.delete('discipline')
-        if (filterCompetitionKind) params.set('kind', filterCompetitionKind)
-        else params.delete('kind')
-        if (filterChampionshipsOnly) params.set('championships', '1')
-        else params.delete('championships')
         if (filterWithProtocol) params.set('protocol', '1')
         else params.delete('protocol')
         params.delete('results')
+        params.delete('kind')
+        params.delete('championships')
         if (searchQuery) params.set('search', searchQuery)
         else params.delete('search')
         return params
@@ -110,22 +92,10 @@ export default function Events() {
     filterYear,
     filterMonth,
     filterDiscipline,
-    filterCompetitionKind,
-    filterChampionshipsOnly,
     filterWithProtocol,
     searchQuery,
     setSearchParams,
   ])
-
-  const applyChampionshipsPreset = () => {
-    if (quickPreset === 'championships') {
-      handleResetFilters()
-      return
-    }
-    setQuickPreset('championships')
-    setFilterChampionshipsOnly(true)
-    setFilterDiscipline('')
-  }
 
   const filteredEvents = useMemo(() => {
     return events
@@ -143,8 +113,6 @@ export default function Events() {
           if (!hasProtocol) return false
         }
         if (filterDiscipline && event.event_type !== filterDiscipline) return false
-        if (filterCompetitionKind && event.competition_kind !== filterCompetitionKind) return false
-        if (filterChampionshipsOnly && !isImportantCompetition(event.competition_kind)) return false
 
         if (searchQuery) {
           const query = searchQuery.toLowerCase()
@@ -181,8 +149,6 @@ export default function Events() {
     filterMonth,
     filterWithProtocol,
     filterDiscipline,
-    filterCompetitionKind,
-    filterChampionshipsOnly,
     searchQuery,
   ])
 
@@ -205,20 +171,9 @@ export default function Events() {
       onFilterMonthChange={setFilterMonth}
       filterDiscipline={filterDiscipline}
       onFilterDisciplineChange={setFilterDiscipline}
-      filterCompetitionKind={filterCompetitionKind}
-      onFilterCompetitionKindChange={setFilterCompetitionKind}
-      filterChampionshipsOnly={filterChampionshipsOnly}
-      onClearChampionships={() => {
-        setQuickPreset(null)
-        setFilterChampionshipsOnly(false)
-      }}
       filterWithProtocol={filterWithProtocol}
       onFilterWithProtocolChange={setFilterWithProtocol}
-      quickPreset={quickPreset}
-      onClearQuickPreset={() => setQuickPreset(null)}
-      onChampionshipsPreset={applyChampionshipsPreset}
       sortedYears={sortedYears}
-      allCompetitionKinds={allCompetitionKinds}
       onResetFilters={handleResetFilters}
       stats={
         eventsLoading

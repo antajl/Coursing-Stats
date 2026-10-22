@@ -28,7 +28,7 @@ export default function ProcoursingEventLink({
 
   // Внутренняя страница результатов
   return (
-    <Link to={`/event/${eventId}`} className={className} title={title ?? 'Результаты соревнования'}>
+    <Link to={`/event/${eventId}`} className={className} title={title}>
       {children}
     </Link>
   )

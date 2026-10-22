@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useState, type ReactNode } from 'react'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarFiltersDropdown from '../../components/toolbar/ToolbarFiltersDropdown'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
@@ -28,6 +28,7 @@ interface TopDogsFiltersProps {
   onResetFilters: () => void
   onResetPanelFilters: () => void
   dropdownRef?: React.RefObject<HTMLDivElement>
+  trailing?: ReactNode
 }
 
 export default function TopDogsFilters({
@@ -48,6 +49,7 @@ export default function TopDogsFilters({
   filterSpeedFrom,
   onSpeedFromChange,
   dropdownRef,
+  trailing,
 }: TopDogsFiltersProps) {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -89,7 +91,7 @@ export default function TopDogsFilters({
                 value={searchQuery}
                 onChange={onSearchChange}
                 placeholder="Кличка, порода…"
-                className="flex-1 min-w-0 sm:w-48 md:w-44 lg:w-52"
+                className="flex-1 min-w-0 sm:w-44 md:w-40 lg:w-48"
               />
               <div className="shrink-0">
                 <ModernDropdown
@@ -201,7 +203,7 @@ export default function TopDogsFilters({
             <div className="hidden md:block h-5 w-px bg-old-money-300 shrink-0 mx-0.5" aria-hidden="true" />
 
             {/* Выбор породы на той же строке на md+ / строка 2 на мобилке */}
-            <div className="flex-1 min-w-0 w-full md:w-auto overflow-hidden">
+            <div className="flex-1 min-w-0 w-full md:w-auto">
               <QuickBreedBar
                 selectedBreed={filterBreed}
                 onSelectBreed={onBreedChange}
@@ -211,6 +213,7 @@ export default function TopDogsFilters({
             </div>
           </div>
         }
+        trailing={trailing}
       />
     </div>
   )
