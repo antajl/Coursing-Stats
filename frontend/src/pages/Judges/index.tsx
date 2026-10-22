@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo, useRef } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useSearchParams } from 'react-router-dom'
 import { ChevronDown, X } from 'lucide-react'
 import { SEO } from '../../components/SEO'
 import { useYandexGoal } from '../../components/YandexMetrica'
@@ -10,6 +10,7 @@ import ModernDropdown from '../../components/ui/ModernDropdown'
 import BreedSearchDropdown from '../../components/ui/BreedSearchDropdown'
 import { toolbarPillTriggerClass } from '../../lib/toolbar'
 import { formatBreedName } from '../../lib/breedMapping'
+import { DEFAULT_ACTIVE_SEASON, initialSeasonYearFilter, resolveActiveSeason } from '../../lib/season'
 import { useJudges, useCompetingBreeds, useYears } from '../../hooks/useStaticData'
 import EmptyState from '../../components/EmptyState'
 import LoadingCard from '../../components/LoadingCard'
@@ -32,10 +33,36 @@ const DISCIPLINE_OPTIONS = [
 
 export default function Judges() {
   const location = useLocation()
+  const [searchParams] = useSearchParams()
   const isEmbedded = location.pathname === '/competitions'
   const { reachGoal } = useYandexGoal()
+  const { data: breedsData } = useCompetingBreeds()
+  const { data: yearsData } = useYears()
+
+  const dogIndex = breedsData?.success ? breedsData.data?.dogIndex || [] : []
+  const competingBreeds = breedsData?.success ? breedsData.data?.breeds || [] : []
+
+  const availableYears = useMemo(() => {
+    const rawYears = yearsData?.success ? yearsData.data?.years || [] : []
+    const strYears = rawYears.map(String).filter((y) => Number(y) >= 2021)
+    return strYears.length > 0 ? strYears : ['2026', '2025', '2024', '2023', '2022', '2021']
+  }, [yearsData])
+
+  const activeSeason = useMemo(() => resolveActiveSeason(availableYears), [availableYears])
+
   const [searchQuery, setSearchQuery] = useState('')
-  const [filterYear, setFilterYear] = useState('')
+  const [filterYear, setFilterYear] = useState(() =>
+    initialSeasonYearFilter(searchParams, DEFAULT_ACTIVE_SEASON),
+  )
+
+  const hasUrlYear = searchParams.get('year') !== null
+  useEffect(() => {
+    if (!hasUrlYear && availableYears.length > 0) {
+      const resolved = resolveActiveSeason(availableYears)
+      setFilterYear((prev) => (prev === DEFAULT_ACTIVE_SEASON ? resolved : prev))
+    }
+  }, [hasUrlYear, availableYears])
+
   const [filterBreed, setFilterBreed] = useState('')
   const [filterDiscipline, setFilterDiscipline] = useState('')
   const [yearOpen, setYearOpen] = useState(false)
@@ -54,18 +81,7 @@ export default function Judges() {
     }
   }, [isEmbedded, reachGoal])
 
-  const { data: breedsData } = useCompetingBreeds()
-  const { data: yearsData } = useYears()
   const { data: judgesData, isLoading: loading } = useJudges(filterBreed, filterDiscipline, filterYear)
-
-  const dogIndex = breedsData?.success ? breedsData.data?.dogIndex || [] : []
-  const competingBreeds = breedsData?.success ? breedsData.data?.breeds || [] : []
-
-  const availableYears = useMemo(() => {
-    const rawYears = yearsData?.success ? yearsData.data?.years || [] : []
-    const strYears = rawYears.map(String).filter((y) => Number(y) >= 2021)
-    return strYears.length > 0 ? strYears : ['2026', '2025', '2024', '2023', '2022', '2021']
-  }, [yearsData])
 
   const judges = judgesData?.success
     ? Array.isArray(judgesData.data?.judges)
@@ -153,11 +169,12 @@ export default function Judges() {
     }
   }, [visibleCount, sortedJudges.length])
 
-  const hasActiveFilters = Boolean(filterYear || filterBreed || filterDiscipline || searchQuery)
+  const isYearNonDefault = filterYear !== '' && filterYear !== activeSeason
+  const hasActiveFilters = Boolean(isYearNonDefault || filterBreed || filterDiscipline || searchQuery)
 
   const clearFilters = () => {
     setSearchQuery('')
-    setFilterYear('')
+    setFilterYear(activeSeason)
     setFilterBreed('')
     setFilterDiscipline('')
   }
@@ -192,7 +209,7 @@ export default function Judges() {
                   trigger={
                     <button
                       type="button"
-                      className={`shrink-0 ${toolbarPillTriggerClass(Boolean(filterYear))}`}
+                      className={`shrink-0 ${toolbarPillTriggerClass(isYearNonDefault)}`}
                     >
                       <span>{!filterYear ? 'Все года' : filterYear}</span>
                       <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
@@ -315,11 +332,11 @@ export default function Judges() {
                 </ModernDropdown>
 
                 {/* Reset Filters button */}
-                {(filterYear || filterBreed || filterDiscipline) && (
+                {(isYearNonDefault || filterBreed || filterDiscipline) && (
                   <button
                     type="button"
                     onClick={() => {
-                      setFilterYear('')
+                      setFilterYear(activeSeason)
                       setFilterBreed('')
                       setFilterDiscipline('')
                     }}

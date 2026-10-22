@@ -140,7 +140,7 @@ export default function DoninoPageToolbar({
 
   const yearTriggerLabel =
     filterYears.length === 0
-      ? 'Год'
+      ? 'Все года'
       : filterYears.length === 1
         ? filterYears[0]
         : `Год · ${filterYears.length}`

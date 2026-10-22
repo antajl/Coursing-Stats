@@ -15,16 +15,13 @@ import LoadingCard from '../../components/LoadingCard'
 import TopDogsFilters from './TopDogsFilters'
 import TopDogsColumns from './TopDogsColumns'
 import { filterCombinedRanking, filterSpeed } from './filterUtils'
+import {
+  DEFAULT_ACTIVE_SEASON,
+  initialSeasonYearFilter,
+  resolveActiveSeason,
+} from '../../lib/season'
 import { buildCombinedRanking } from './mergeCombinedRanking'
 import { useFavorites } from '../../hooks/useFavorites'
-
-const CURRENT_SEASON = String(new Date().getFullYear())
-
-function initialYearFilter(searchParams: URLSearchParams): string {
-  const fromUrl = searchParams.get('year')
-  if (fromUrl === null) return ''
-  return fromUrl
-}
 
 export default function TopDogs() {
   const location = useLocation()
@@ -33,7 +30,7 @@ export default function TopDogs() {
   const { reachGoal } = useYandexGoal()
   const { favorites, toggleFavorite } = useFavorites()
 
-  const [filterYear, setFilterYear] = useState(() => initialYearFilter(searchParams))
+  const [filterYear, setFilterYear] = useState(() => initialSeasonYearFilter(searchParams, DEFAULT_ACTIVE_SEASON))
   const [isNoticeDismissed, setIsNoticeDismissed] = useState(false)
   const [filterBreed, setFilterBreed] = useState(() => searchParams.get('breed') || '')
   const [searchQuery, setSearchQuery] = useState(() => searchParams.get('search') || '')
@@ -77,6 +74,17 @@ export default function TopDogs() {
   const years = yearsData?.success ? yearsData.data?.years || [] : []
   const dogIndex = breedsData?.success ? breedsData.data?.dogIndex || [] : []
 
+  const activeSeason = useMemo(() => resolveActiveSeason(years), [years])
+
+  // Sync with resolved active season once years load if user did not provide an explicit year in URL
+  const hasUrlYear = searchParams.get('year') !== null
+  useEffect(() => {
+    if (!hasUrlYear && years.length > 0) {
+      const resolved = resolveActiveSeason(years)
+      setFilterYear((prev) => (prev === DEFAULT_ACTIVE_SEASON ? resolved : prev))
+    }
+  }, [hasUrlYear, years])
+
   const breedValues = breeds
   const yearValues = years.map(String)
 
@@ -118,21 +126,21 @@ export default function TopDogs() {
   )
 
   const handleResetFilters = useCallback(() => {
-    setFilterYear('')
+    setFilterYear(activeSeason)
     setFilterBreed('')
     setSearchQuery('')
     setFilterMinStarts('')
     setFilterScoreFrom('')
     setFilterSpeedFrom('')
-  }, [])
+  }, [activeSeason])
 
   const handleResetPanelFilters = useCallback(() => {
-    setFilterYear('')
+    setFilterYear(activeSeason)
     setFilterBreed('')
     setFilterMinStarts('')
     setFilterScoreFrom('')
     setFilterSpeedFrom('')
-  }, [])
+  }, [activeSeason])
 
   const showListSkeleton = isInitialLoad && loading
 
@@ -171,7 +179,7 @@ export default function TopDogs() {
         onSearchChange={setSearchQuery}
         filterYear={filterYear}
         onYearChange={setFilterYear}
-        currentSeason={CURRENT_SEASON}
+        currentSeason={activeSeason}
         yearValues={yearValues}
         filterBreed={filterBreed}
         onBreedChange={setFilterBreed}

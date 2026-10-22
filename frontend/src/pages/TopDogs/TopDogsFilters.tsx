@@ -4,6 +4,7 @@ import ToolbarFiltersDropdown from '../../components/toolbar/ToolbarFiltersDropd
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
 import BreedSearchDropdown from '../../components/ui/BreedSearchDropdown'
 import ModernDropdown from '../../components/ui/ModernDropdown'
+import QuickBreedBar from './QuickBreedBar'
 import {
   TOOLBAR_FILTER_SECTION_LABEL,
   TOOLBAR_NUMBER_INPUT,
@@ -86,13 +87,14 @@ export default function TopDogsFilters({
     [yearValues]
   )
 
+  const isYearNonDefault = filterYear !== '' && filterYear !== currentSeason
   const hasActiveFilters =
-    filterYear !== '' ||
-    filterBreed ||
-    searchQuery ||
-    filterMinStarts ||
-    filterScoreFrom ||
-    filterSpeedFrom
+    isYearNonDefault ||
+    Boolean(filterBreed) ||
+    Boolean(searchQuery) ||
+    Boolean(filterMinStarts) ||
+    Boolean(filterScoreFrom) ||
+    Boolean(filterSpeedFrom)
 
   const hasThresholdFilters = filterMinStarts || filterScoreFrom || filterSpeedFrom
   const thresholdCount = [filterMinStarts, filterScoreFrom, filterSpeedFrom].filter(Boolean).length
@@ -123,7 +125,7 @@ export default function TopDogsFilters({
     <button
       type="button"
       className={`inline-flex h-8 items-center rounded-full border px-3.5 text-xs font-semibold whitespace-nowrap transition-colors gap-1.5 ${
-        filterYear
+        isYearNonDefault
           ? 'border-camel-500 bg-camel-500 text-charcoal-900'
           : 'border-old-money-200 bg-cream-50 text-charcoal-700 hover:bg-old-money-50'
       }`}
@@ -311,6 +313,14 @@ export default function TopDogsFilters({
             )}
             {shareButton}
           </div>
+        }
+        bottomLeft={
+          <QuickBreedBar
+            selectedBreed={filterBreed}
+            onSelectBreed={onBreedChange}
+            breedValues={breedValues}
+            dogIndex={dogIndex}
+          />
         }
       />
     </div>

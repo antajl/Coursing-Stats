@@ -34,7 +34,9 @@ interface HeroShowStats {
   breeds: number
 }
 
-const CURRENT_SEASON = new Date().getFullYear()
+import { resolveActiveSeason } from '../../../lib/season'
+
+const CURRENT_SEASON = Number(resolveActiveSeason())
 
 export function useHomeData() {
   const [stats, setStats] = useState<HeroStats | null>(null)

@@ -65,7 +65,7 @@ export function NavDesktop({
           width={1128}
           height={224}
           alt="Coursing Stats"
-          className="h-[52px] lg:h-[61px]"
+          className="h-[52px] lg:h-[61px] w-auto"
           style={{ objectFit: 'contain' }}
           loading="lazy"
           decoding="async"

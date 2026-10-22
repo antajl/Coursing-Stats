@@ -14,8 +14,21 @@ import type { ShowDogCardData } from './ShowDogCard'
 import { useDebounce } from '../../hooks/useDebounce'
 import { dogNameMatchesQuery } from '../../lib/dogName'
 import { matchesBreedFilter, uniqueCanonicalBreeds } from '../../lib/breedMapping'
+import { initialSeasonYearFilter, resolveActiveSeason } from '../../lib/season'
 
-const CURRENT_SEASON = String(new Date().getFullYear())
+const SHOW_RANKING_YEARS = [
+  '2026',
+  '2025',
+  '2024',
+  '2023',
+  '2022',
+  '2021',
+  '2019',
+  '2018',
+  '2017',
+] as const
+
+const SHOW_ACTIVE_SEASON = resolveActiveSeason(SHOW_RANKING_YEARS)
 
 /** Let page0 paint + free the network before pulling the multi‑MB season file. */
 const FULL_RANKING_DELAY_MS = 1200
@@ -28,10 +41,9 @@ export default function ShowRanking() {
   const [searchParams] = useSearchParams()
   const [allDogs, setAllDogs] = useState<ShowDogCardData[]>([])
   const [searchQuery, setSearchQuery] = useState(() => searchParams.get('search') || '')
-  const [filterYear, setFilterYear] = useState(() => {
-    const fromUrl = searchParams.get('year')
-    return fromUrl === null ? CURRENT_SEASON : fromUrl
-  })
+  const [filterYear, setFilterYear] = useState(() =>
+    initialSeasonYearFilter(searchParams, SHOW_ACTIVE_SEASON),
+  )
   const [filterBreed, setFilterBreed] = useState(() => searchParams.get('breed') || '')
   const [filterGroup, setFilterGroup] = useState(() => searchParams.get('group') || '')
   const [awardMins, setAwardMins] = useState<ShowAwardMinFilters>(() => ({
@@ -178,7 +190,7 @@ export default function ShowRanking() {
   }, [])
 
   const handleResetFilters = () => {
-    setFilterYear(CURRENT_SEASON)
+    setFilterYear(SHOW_ACTIVE_SEASON)
     setFilterBreed('')
     setFilterGroup('')
     setAwardMins({ ...EMPTY_AWARD_MINS })
@@ -186,7 +198,7 @@ export default function ShowRanking() {
   }
 
   const handleResetPanelFilters = () => {
-    setFilterYear(CURRENT_SEASON)
+    setFilterYear(SHOW_ACTIVE_SEASON)
     setFilterBreed('')
     setFilterGroup('')
     setAwardMins({ ...EMPTY_AWARD_MINS })
@@ -208,7 +220,7 @@ export default function ShowRanking() {
         onSearchChange={setSearchQuery}
         filterYear={filterYear}
         onYearChange={setFilterYear}
-        currentSeason={CURRENT_SEASON}
+        currentSeason={SHOW_ACTIVE_SEASON}
         yearValues={years}
         filterBreed={filterBreed}
         onBreedChange={setFilterBreed}

@@ -39,8 +39,8 @@ export const ANIMATION = {
 // Image dimensions (in pixels)
 export const IMAGES = {
   HERO_TITLE: {
-    WIDTH: 1200,
-    HEIGHT: 600,
+    WIDTH: 1160,
+    HEIGHT: 725,
   },
   LOGO: {
     HEIGHT_MOBILE: 40,  // h-10

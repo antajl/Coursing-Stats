@@ -2,6 +2,7 @@ import { useState, useEffect, useRef, useMemo, useCallback } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { useSpeedRecords, useCoursingRecords } from '../../hooks/useStaticData'
 import { formatRecordDate, getRecordYear, parseRecordDate, parseRecordHistory } from '../../lib/recordDates'
+import { DEFAULT_ACTIVE_SEASON, resolveActiveSeason } from '../../lib/season'
 import { buildSexByDogMap } from './stats/doninoStatsUtils'
 import type { GroupBy } from './stats/constants'
 import type { DogsIndexEntry } from '../../lib/competingBreeds'
@@ -54,11 +55,9 @@ export function useSpeedRecordsPage() {
   const speedRecordsQuery = useSpeedRecords('', '', 10000, '', '')
   const coursingRecordsQuery = useCoursingRecords('', 10000, '', '')
 
-  const CURRENT_SEASON = String(new Date().getFullYear())
-
   const [filterYears, setFilterYears] = useState<string[]>(() => {
     const raw = searchParams.get('years') ?? searchParams.get('year')
-    if (raw === null) return [CURRENT_SEASON]
+    if (raw === null) return [DEFAULT_ACTIVE_SEASON]
     if (raw === '' || raw === 'all') return []
     return raw.split(',').filter(Boolean)
   })
@@ -390,41 +389,6 @@ export function useSpeedRecordsPage() {
     setFilterBreeds(breed ? [breed] : [])
   }, [])
 
-  const clearAllFilters = useCallback(() => {
-    setFilterYears([CURRENT_SEASON])
-    setFilterBreeds([])
-    setFilterSexes([])
-    setSearchQuery('')
-    setFilterMinSpeed('')
-    setFilterMaxSpeed('')
-    setFilterMinTime('')
-    setFilterMaxTime('')
-  }, [CURRENT_SEASON])
-
-  const clearPanelFilters = useCallback(() => {
-    setFilterYears([CURRENT_SEASON])
-    setFilterBreeds([])
-    setFilterSexes([])
-    setFilterMinSpeed('')
-    setFilterMaxSpeed('')
-    setFilterMinTime('')
-    setFilterMaxTime('')
-  }, [CURRENT_SEASON])
-
-  const isYearNonDefault =
-    filterYears.length !== 1 || filterYears[0] !== CURRENT_SEASON
-
-  const hasActiveFilters = Boolean(
-    isYearNonDefault ||
-      filterBreeds.length > 0 ||
-      filterSexes.length > 0 ||
-      searchQuery ||
-      filterMinSpeed ||
-      filterMaxSpeed ||
-      filterMinTime ||
-      filterMaxTime
-  )
-
   const years = useMemo(() => {
     const set = new Set<string>()
     for (const r of bestSpeedRecords) {
@@ -437,6 +401,53 @@ export function useSpeedRecordsPage() {
     }
     return [...set].sort().reverse()
   }, [bestSpeedRecords, bestCoursingRecords])
+
+  const activeSeason = useMemo(() => resolveActiveSeason(years), [years])
+
+  const hasUrlYear = (searchParams.get('years') ?? searchParams.get('year')) !== null
+  useEffect(() => {
+    if (!hasUrlYear && years.length > 0) {
+      const resolved = resolveActiveSeason(years)
+      setFilterYears((prev) =>
+        prev.length === 1 && prev[0] === DEFAULT_ACTIVE_SEASON ? [resolved] : prev,
+      )
+    }
+  }, [hasUrlYear, years])
+
+  const clearAllFilters = useCallback(() => {
+    setFilterYears([activeSeason])
+    setFilterBreeds([])
+    setFilterSexes([])
+    setSearchQuery('')
+    setFilterMinSpeed('')
+    setFilterMaxSpeed('')
+    setFilterMinTime('')
+    setFilterMaxTime('')
+  }, [activeSeason])
+
+  const clearPanelFilters = useCallback(() => {
+    setFilterYears([activeSeason])
+    setFilterBreeds([])
+    setFilterSexes([])
+    setFilterMinSpeed('')
+    setFilterMaxSpeed('')
+    setFilterMinTime('')
+    setFilterMaxTime('')
+  }, [activeSeason])
+
+  const isYearNonDefault =
+    filterYears.length !== 1 || filterYears[0] !== activeSeason
+
+  const hasActiveFilters = Boolean(
+    isYearNonDefault ||
+      filterBreeds.length > 0 ||
+      filterSexes.length > 0 ||
+      searchQuery ||
+      filterMinSpeed ||
+      filterMaxSpeed ||
+      filterMinTime ||
+      filterMaxTime
+  )
 
   const breeds = useMemo(() => {
     const set = new Set<string>()
@@ -475,7 +486,7 @@ export function useSpeedRecordsPage() {
     setSearchQuery,
     filterYears,
     onYearChange,
-    currentSeason: CURRENT_SEASON,
+    currentSeason: activeSeason,
     filterBreeds,
     onBreedChange,
     filterSexes,

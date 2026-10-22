@@ -49,7 +49,7 @@ export function NavMobile({
             width={1128}
             height={224}
             alt="Coursing Stats"
-            className="h-10"
+            className="h-10 w-auto"
             loading="lazy"
             decoding="async"
             style={{ objectFit: 'contain' }}

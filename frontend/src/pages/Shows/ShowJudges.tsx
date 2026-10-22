@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo, useRef } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { ChevronDown, X } from 'lucide-react'
 import ShowJudgeCard from '../../components/ShowJudgeCard'
 import PageToolbar from '../../components/toolbar/PageToolbar'
@@ -6,6 +7,7 @@ import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
 import ModernDropdown from '../../components/ui/ModernDropdown'
 import BreedSearchDropdown from '../../components/ui/BreedSearchDropdown'
 import { toolbarPillTriggerClass } from '../../lib/toolbar'
+import { initialSeasonYearFilter, resolveActiveSeason } from '../../lib/season'
 import { useShowJudges, useShowJudgesPage0 } from '../../hooks/useStaticData'
 import EmptyState from '../../components/EmptyState'
 import SkeletonLoader from '../../components/SkeletonLoader'
@@ -13,7 +15,8 @@ import RecordSortBar from '../SpeedRecords/RecordSortBar'
 import type { ShowJudge } from '../../lib/staticData'
 import { matchesBreedFilter, uniqueCanonicalBreeds, formatBreedName } from '../../lib/breedMapping'
 
-const SHOW_YEARS = ['2026', '2025', '2024']
+const SHOW_YEARS = ['2026', '2025', '2024'] as const
+const SHOW_JUDGES_ACTIVE_SEASON = resolveActiveSeason(SHOW_YEARS)
 
 /** Full judges.json (~12 MB) must not race page0 — wait after first paint. */
 const FULL_JUDGES_DELAY_MS = 2500
@@ -47,8 +50,11 @@ function judgeExcellentPctForCard(judge: ShowJudge, year: string): number | null
 }
 
 export default function ShowJudges() {
+  const [searchParams] = useSearchParams()
   const [searchQuery, setSearchQuery] = useState('')
-  const [filterYear, setFilterYear] = useState('')
+  const [filterYear, setFilterYear] = useState(() =>
+    initialSeasonYearFilter(searchParams, SHOW_JUDGES_ACTIVE_SEASON),
+  )
   const [filterBreed, setFilterBreed] = useState('')
   const [yearOpen, setYearOpen] = useState(false)
   const [sortKey, setSortKey] = useState<SortKey>('exhibitions')
@@ -182,11 +188,12 @@ export default function ShowJudges() {
     }
   }
 
-  const hasActiveFilters = Boolean(filterYear || filterBreed || searchQuery)
+  const isYearNonDefault = filterYear !== '' && filterYear !== SHOW_JUDGES_ACTIVE_SEASON
+  const hasActiveFilters = Boolean(isYearNonDefault || filterBreed || searchQuery)
 
   const clearFilters = () => {
     setSearchQuery('')
-    setFilterYear('')
+    setFilterYear(SHOW_JUDGES_ACTIVE_SEASON)
     setFilterBreed('')
   }
 
@@ -237,7 +244,7 @@ export default function ShowJudges() {
                   trigger={
                     <button
                       type="button"
-                      className={`shrink-0 ${toolbarPillTriggerClass(Boolean(filterYear))}`}
+                      className={`shrink-0 ${toolbarPillTriggerClass(isYearNonDefault)}`}
                     >
                       <span>{!filterYear ? 'Все года' : filterYear}</span>
                       <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
@@ -306,11 +313,11 @@ export default function ShowJudges() {
                 />
 
                 {/* Reset Filters button */}
-                {(filterYear || filterBreed) && (
+                {(isYearNonDefault || filterBreed) && (
                   <button
                     type="button"
                     onClick={() => {
-                      setFilterYear('')
+                      setFilterYear(SHOW_JUDGES_ACTIVE_SEASON)
                       setFilterBreed('')
                     }}
                     className="shrink-0 inline-flex items-center gap-1 rounded-lg px-2.5 py-1.5 text-xs font-medium text-old-money-600 hover:text-charcoal-900 hover:bg-cream-100 transition-colors"
