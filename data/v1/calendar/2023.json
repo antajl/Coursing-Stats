@@ -2,8 +2,8 @@
   "schema": "coursing-stats/calendar-v1",
   "year": 2023,
   "exported_at": "2026-09-28T13:21:42.917Z",
-  "event_count": 16,
-  "with_results": 16,
+  "event_count": 17,
+  "with_results": 17,
   "events": [
     {
       "id": 20230415,
@@ -316,6 +316,31 @@
       "results_file": "20230903--cacl-03092023-.json",
       "result_count": 68,
       "participants_count": 68
+    },
+    {
+      "id": 20230924,
+      "year": 2023,
+      "date_start": "2023-09-24",
+      "date_end": null,
+      "rank_label": "Осенний Марафон - 2023",
+      "rank_code": null,
+      "discipline_code": null,
+      "event_type": "coursing",
+      "competition_kind": "",
+      "competition_type": "Курсинг борзых",
+      "title": "Осенний Марафон - 2023",
+      "full_title": "Осенний Марафон - 2023",
+      "host_club": "",
+      "region": null,
+      "location": "Московская обл., Купавна",
+      "results_url": "http://procoursing.ru/Complete_Results_2023-09-24_C.html",
+      "catalog_url": null,
+      "confirmed": 0,
+      "judges": "Крылова Е.В., Рубина А.В.",
+      "has_results": true,
+      "results_file": "competitions/2023/09-сентябрь/20230924--2023-24092023-.json",
+      "result_count": 50,
+      "participants_count": 50
     },
     {
       "id": 20230926,
