@@ -71,14 +71,13 @@ function ProfileShowAwardsFooter({ titles }: { titles: ShowDogCardData['titles']
       return
     }
     const update = () => {
-      const w = row.clientWidth
-      setMaxVisible(maxShowAwardsForWidth(w))
+      setMaxVisible(maxShowAwardsForWidth(row.clientWidth, titles, awards))
     }
     update()
-    const ro = new ResizeObserver(() => update())
+    const ro = new ResizeObserver(update)
     ro.observe(row)
     return () => ro.disconnect()
-  }, [awardKey, awards.length])
+  }, [awardKey, titles])
 
   if (awards.length === 0) return null
 
