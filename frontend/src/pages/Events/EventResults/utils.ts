@@ -21,7 +21,7 @@ export function groupResultsByBreedClass(results: Result[]): {
   const grouped = results.reduce<Record<string, Result[]>>((acc, result) => {
     // Неявки всегда в отдельной группе в конце списка (как в modern-протоколах)
     const groupKey =
-      result.status === 'dns'
+      (result.status === 'dns' || result.status === 'absent')
         ? 'Неприбывшие участники'
         : result.breed_class || 'Другие'
     if (!acc[groupKey]) acc[groupKey] = []
@@ -38,8 +38,8 @@ export function groupResultsByBreedClass(results: Result[]): {
 
   for (const groupKey of sortedGroups) {
     grouped[groupKey].sort((a, b) => {
-      const aDns = a.status === 'dns' ? 1 : 0
-      const bDns = b.status === 'dns' ? 1 : 0
+      const aDns = (a.status === 'dns' || a.status === 'absent') ? 1 : 0
+      const bDns = (b.status === 'dns' || b.status === 'absent') ? 1 : 0
       if (aDns !== bDns) return aDns - bDns
       return (a.placement || 999) - (b.placement || 999)
     })
@@ -58,7 +58,7 @@ export function groupRacingResults(results: Result[]): {
 } {
   const grouped = results.reduce<Record<string, Result[]>>((acc, result) => {
     // Неявки всегда в отдельной группе в конце списка
-    if (result.status === 'dns') {
+    if ((result.status === 'dns' || result.status === 'absent')) {
       if (!acc['Неприбывшие участники']) acc['Неприбывшие участники'] = []
       acc['Неприбывшие участники'].push(result)
       return acc
@@ -94,8 +94,8 @@ export function groupRacingResults(results: Result[]): {
   // Sort results within each group by breed, then class, then by placement
   for (const groupKey of sortedGroups) {
     grouped[groupKey].sort((a, b) => {
-      const aDns = a.status === 'dns' ? 1 : 0
-      const bDns = b.status === 'dns' ? 1 : 0
+      const aDns = (a.status === 'dns' || a.status === 'absent') ? 1 : 0
+      const bDns = (b.status === 'dns' || b.status === 'absent') ? 1 : 0
       if (aDns !== bDns) return aDns - bDns
       
       // Sort by breed

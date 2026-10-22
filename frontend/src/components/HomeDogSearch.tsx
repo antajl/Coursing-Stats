@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useId, useMemo, useRef, useState, type FormEvent } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Icons } from '../lib/icons'
+import { canonicalBreed, displayBreed, formatBreedName } from '../lib/breedMapping'
 import {
   dogNameMatchesQuery,
   dogNameSearchText,
@@ -34,7 +35,7 @@ function dogDedupeKey(dog: HomeSearchDog): string {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, ' ')
     .trim()
-  const breed = normalizeBreed(dog.breed || '')
+  const breed = canonicalBreed(dog.breed || '')
   return `${lat}|${breed}`
 }
 
@@ -42,7 +43,14 @@ function scoreDog(dog: HomeSearchDog, q: string): number {
   if (!q.trim()) return 0
   const breedQ = normalizeBreed(q)
   const breed = normalizeBreed(dog.breed || '')
-  const breedHit = breedQ.length >= 2 && breed.includes(breedQ)
+  const display = dog.breed ? displayBreed(dog.breed) : null
+  const displayPrimary = display?.primary ? normalizeBreed(display.primary) : ''
+  const displaySecondary = display?.secondary ? normalizeBreed(display.secondary) : ''
+  const breedHit = breedQ.length >= 2 && (
+    breed.includes(breedQ) ||
+    (displayPrimary && displayPrimary.includes(breedQ)) ||
+    (displaySecondary && displaySecondary.includes(breedQ))
+  )
 
   if (!dogNameMatchesQuery(dog.name_lat, dog.name_ru, q) && !breedHit) return 0
 
@@ -259,7 +267,7 @@ export default function HomeDogSearch({ className = '' }: HomeDogSearchProps) {
                   }}
                 >
                   <span className="home-v2-search-name">{primary}</span>
-                  {dog.breed && <span className="home-v2-search-breed">{dog.breed}</span>}
+                  {dog.breed && <span className="home-v2-search-breed">{formatBreedName(dog.breed)}</span>}
                 </button>
               </li>
             )

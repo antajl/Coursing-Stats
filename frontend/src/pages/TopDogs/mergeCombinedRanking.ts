@@ -30,6 +30,7 @@ export type CombinedRankingDog = {
   elo_races?: number
   rank?: number
   rank_delta?: number | 'NEW' | null
+  rank_delta_breed?: number | 'NEW' | null
 }
 
 type LooseDog = Record<string, unknown> & {
@@ -79,6 +80,7 @@ function mergeDog(into: CombinedRankingDog, from: LooseDog): CombinedRankingDog 
     elo_rating: asNum(from.elo_rating) ?? into.elo_rating,
     elo_races: asNum(from.elo_races) ?? into.elo_races,
     rank_delta: (from.rank_delta as number | 'NEW' | undefined) ?? into.rank_delta,
+    rank_delta_breed: (from.rank_delta_breed as number | 'NEW' | undefined) ?? into.rank_delta_breed,
   }
 }
 
@@ -95,6 +97,7 @@ function mergeEloOnly(into: CombinedRankingDog, from: LooseDog): CombinedRanking
     elo_rating: asNum(from.elo_rating) ?? into.elo_rating,
     elo_races: asNum(from.elo_races) ?? into.elo_races,
     rank_delta: (from.rank_delta as number | 'NEW' | undefined) ?? into.rank_delta,
+    rank_delta_breed: (from.rank_delta_breed as number | 'NEW' | undefined) ?? into.rank_delta_breed,
   }
 }
 

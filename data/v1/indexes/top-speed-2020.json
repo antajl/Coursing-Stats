@@ -13,7 +13,8 @@
       "best_speed": 56,
       "avg_speed": 55.23,
       "total_starts": 2,
-      "rank_delta": 0
+      "rank_delta": 0,
+      "rank_delta_breed": 0
     },
     {
       "dog_id": 10425,
@@ -25,7 +26,8 @@
       "best_speed": 55.78,
       "avg_speed": 54.95,
       "total_starts": 2,
-      "rank_delta": 0
+      "rank_delta": 0,
+      "rank_delta_breed": 0
     },
     {
       "dog_id": 10082,
@@ -37,7 +39,8 @@
       "best_speed": 55.08,
       "avg_speed": 53.66,
       "total_starts": 2,
-      "rank_delta": 0
+      "rank_delta": 0,
+      "rank_delta_breed": 0
     },
     {
       "dog_id": 10331,
@@ -49,7 +52,8 @@
       "best_speed": 54.8,
       "avg_speed": 53.89,
       "total_starts": 2,
-      "rank_delta": 0
+      "rank_delta": 0,
+      "rank_delta_breed": 0
     },
     {
       "dog_id": 10426,
@@ -61,7 +65,8 @@
       "best_speed": 54.27,
       "avg_speed": 52.89,
       "total_starts": 2,
-      "rank_delta": 0
+      "rank_delta": 0,
+      "rank_delta_breed": 0
     },
     {
       "dog_id": 10433,
@@ -73,19 +78,8 @@
       "best_speed": 54.194,
       "avg_speed": 54.12,
       "total_starts": 1,
-      "rank_delta": "NEW"
-    },
-    {
-      "dog_id": 10189,
-      "name_lat": "MOLNIYA",
-      "name_ru": "MOLNIYA",
-      "breed": "УИППЕТ",
-      "year_from": 2020,
-      "year_to": 2020,
-      "best_speed": 54.1,
-      "avg_speed": 52.58,
-      "total_starts": 2,
-      "rank_delta": -1
+      "rank_delta": "NEW",
+      "rank_delta_breed": "NEW"
     },
     {
       "dog_id": 78,
@@ -97,7 +91,21 @@
       "best_speed": 54.1,
       "avg_speed": 52.71,
       "total_starts": 2,
-      "rank_delta": -1
+      "rank_delta": -1,
+      "rank_delta_breed": -1
+    },
+    {
+      "dog_id": 10189,
+      "name_lat": "MOLNIYA",
+      "name_ru": "MOLNIYA",
+      "breed": "УИППЕТ",
+      "year_from": 2020,
+      "year_to": 2020,
+      "best_speed": 54.1,
+      "avg_speed": 52.58,
+      "total_starts": 2,
+      "rank_delta": -1,
+      "rank_delta_breed": -1
     },
     {
       "dog_id": 10427,
@@ -109,7 +117,8 @@
       "best_speed": 54.08,
       "avg_speed": 52.88,
       "total_starts": 2,
-      "rank_delta": -1
+      "rank_delta": -1,
+      "rank_delta_breed": -1
     },
     {
       "dog_id": 10385,
@@ -121,7 +130,8 @@
       "best_speed": 54.077,
       "avg_speed": 53.98,
       "total_starts": 2,
-      "rank_delta": "NEW"
+      "rank_delta": "NEW",
+      "rank_delta_breed": "NEW"
     },
     {
       "dog_id": 262,
@@ -133,7 +143,8 @@
       "best_speed": 53.98,
       "avg_speed": 52.69,
       "total_starts": 2,
-      "rank_delta": -2
+      "rank_delta": -2,
+      "rank_delta_breed": -2
     },
     {
       "dog_id": 10184,
@@ -145,7 +156,8 @@
       "best_speed": 53.94,
       "avg_speed": 53.09,
       "total_starts": 2,
-      "rank_delta": -2
+      "rank_delta": -2,
+      "rank_delta_breed": -2
     },
     {
       "dog_id": 10319,
@@ -157,7 +169,8 @@
       "best_speed": 53.57,
       "avg_speed": 52.35,
       "total_starts": 2,
-      "rank_delta": -2
+      "rank_delta": -2,
+      "rank_delta_breed": -2
     },
     {
       "dog_id": 10077,
@@ -169,7 +182,8 @@
       "best_speed": 53.55,
       "avg_speed": 52.75,
       "total_starts": 2,
-      "rank_delta": -2
+      "rank_delta": -1,
+      "rank_delta_breed": -1
     },
     {
       "dog_id": 85,
@@ -181,7 +195,8 @@
       "best_speed": 53.55,
       "avg_speed": 52.68,
       "total_starts": 2,
-      "rank_delta": -2
+      "rank_delta": -3,
+      "rank_delta_breed": -3
     },
     {
       "dog_id": 10023,
@@ -193,7 +208,8 @@
       "best_speed": 53.18,
       "avg_speed": 51.88,
       "total_starts": 2,
-      "rank_delta": -2
+      "rank_delta": -2,
+      "rank_delta_breed": -2
     },
     {
       "dog_id": 10359,
@@ -205,7 +221,8 @@
       "best_speed": 53.1,
       "avg_speed": 51.74,
       "total_starts": 2,
-      "rank_delta": -2
+      "rank_delta": -2,
+      "rank_delta_breed": -2
     },
     {
       "dog_id": 10543,
@@ -217,7 +234,8 @@
       "best_speed": 53.02,
       "avg_speed": 53.02,
       "total_starts": 1,
-      "rank_delta": -2
+      "rank_delta": -2,
+      "rank_delta_breed": -2
     },
     {
       "dog_id": 10428,
@@ -229,7 +247,8 @@
       "best_speed": 52.78,
       "avg_speed": 51.36,
       "total_starts": 2,
-      "rank_delta": -2
+      "rank_delta": -2,
+      "rank_delta_breed": -2
     },
     {
       "dog_id": 555,
@@ -241,7 +260,8 @@
       "best_speed": 52.61,
       "avg_speed": 52.43,
       "total_starts": 1,
-      "rank_delta": "NEW"
+      "rank_delta": "NEW",
+      "rank_delta_breed": "NEW"
     },
     {
       "dog_id": 10259,
@@ -253,7 +273,8 @@
       "best_speed": 52.522,
       "avg_speed": 52.11,
       "total_starts": 1,
-      "rank_delta": "NEW"
+      "rank_delta": "NEW",
+      "rank_delta_breed": "NEW"
     },
     {
       "dog_id": 10080,
@@ -265,7 +286,8 @@
       "best_speed": 52.45,
       "avg_speed": 51.17,
       "total_starts": 2,
-      "rank_delta": -4
+      "rank_delta": -4,
+      "rank_delta_breed": -4
     },
     {
       "dog_id": 9388,
@@ -277,7 +299,8 @@
       "best_speed": 52.43,
       "avg_speed": 51.67,
       "total_starts": 2,
-      "rank_delta": -4
+      "rank_delta": -4,
+      "rank_delta_breed": -4
     },
     {
       "dog_id": 10424,
@@ -289,7 +312,8 @@
       "best_speed": 52.15,
       "avg_speed": 51.98,
       "total_starts": 1,
-      "rank_delta": -4
+      "rank_delta": -4,
+      "rank_delta_breed": -4
     },
     {
       "dog_id": 10081,
@@ -301,7 +325,8 @@
       "best_speed": 52.02,
       "avg_speed": 51.99,
       "total_starts": 1,
-      "rank_delta": -4
+      "rank_delta": -4,
+      "rank_delta_breed": -4
     },
     {
       "dog_id": 9342,
@@ -313,7 +338,8 @@
       "best_speed": 51.831,
       "avg_speed": 51.39,
       "total_starts": 1,
-      "rank_delta": "NEW"
+      "rank_delta": "NEW",
+      "rank_delta_breed": "NEW"
     },
     {
       "dog_id": 9456,
@@ -325,7 +351,8 @@
       "best_speed": 51.81,
       "avg_speed": 51.34,
       "total_starts": 2,
-      "rank_delta": -5
+      "rank_delta": -5,
+      "rank_delta_breed": -5
     },
     {
       "dog_id": 9931,
@@ -337,7 +364,8 @@
       "best_speed": 51.79,
       "avg_speed": 50.71,
       "total_starts": 2,
-      "rank_delta": -5
+      "rank_delta": -5,
+      "rank_delta_breed": -5
     },
     {
       "dog_id": 9435,
@@ -349,7 +377,8 @@
       "best_speed": 51.32,
       "avg_speed": 50.23,
       "total_starts": 2,
-      "rank_delta": -5
+      "rank_delta": -5,
+      "rank_delta_breed": -5
     },
     {
       "dog_id": 10429,
@@ -361,7 +390,8 @@
       "best_speed": 51.26,
       "avg_speed": 49.91,
       "total_starts": 2,
-      "rank_delta": -5
+      "rank_delta": -5,
+      "rank_delta_breed": -5
     },
     {
       "dog_id": 10434,
@@ -373,7 +403,8 @@
       "best_speed": 51.012,
       "avg_speed": 50.86,
       "total_starts": 1,
-      "rank_delta": "NEW"
+      "rank_delta": "NEW",
+      "rank_delta_breed": "NEW"
     },
     {
       "dog_id": 10321,
@@ -385,7 +416,8 @@
       "best_speed": 50.992,
       "avg_speed": 50.87,
       "total_starts": 1,
-      "rank_delta": "NEW"
+      "rank_delta": "NEW",
+      "rank_delta_breed": "NEW"
     },
     {
       "dog_id": 10365,
@@ -397,7 +429,8 @@
       "best_speed": 50.928,
       "avg_speed": 50.21,
       "total_starts": 1,
-      "rank_delta": "NEW"
+      "rank_delta": "NEW",
+      "rank_delta_breed": "NEW"
     },
     {
       "dog_id": 10364,
@@ -409,7 +442,8 @@
       "best_speed": 50.764,
       "avg_speed": 50.35,
       "total_starts": 1,
-      "rank_delta": "NEW"
+      "rank_delta": "NEW",
+      "rank_delta_breed": "NEW"
     },
     {
       "dog_id": 10084,
@@ -421,7 +455,8 @@
       "best_speed": 50.43,
       "avg_speed": 50.09,
       "total_starts": 1,
-      "rank_delta": -9
+      "rank_delta": -9,
+      "rank_delta_breed": -7
     },
     {
       "dog_id": 10431,
@@ -433,7 +468,8 @@
       "best_speed": 49.584,
       "avg_speed": 48.61,
       "total_starts": 1,
-      "rank_delta": "NEW"
+      "rank_delta": "NEW",
+      "rank_delta_breed": "NEW"
     },
     {
       "dog_id": 10435,
@@ -445,7 +481,8 @@
       "best_speed": 49.431,
       "avg_speed": 49.25,
       "total_starts": 1,
-      "rank_delta": "NEW"
+      "rank_delta": "NEW",
+      "rank_delta_breed": "NEW"
     },
     {
       "dog_id": 9317,
@@ -457,7 +494,8 @@
       "best_speed": 49.428,
       "avg_speed": 46.62,
       "total_starts": 1,
-      "rank_delta": "NEW"
+      "rank_delta": "NEW",
+      "rank_delta_breed": "NEW"
     },
     {
       "dog_id": 10432,
@@ -469,7 +507,8 @@
       "best_speed": 49.133,
       "avg_speed": 48.44,
       "total_starts": 1,
-      "rank_delta": "NEW"
+      "rank_delta": "NEW",
+      "rank_delta_breed": "NEW"
     },
     {
       "dog_id": 9279,
@@ -481,7 +520,8 @@
       "best_speed": 49.04,
       "avg_speed": 48.95,
       "total_starts": 1,
-      "rank_delta": -13
+      "rank_delta": -13,
+      "rank_delta_breed": -8
     },
     {
       "dog_id": 7265,
@@ -493,7 +533,8 @@
       "best_speed": 48.966,
       "avg_speed": 48.56,
       "total_starts": 2,
-      "rank_delta": "NEW"
+      "rank_delta": "NEW",
+      "rank_delta_breed": "NEW"
     },
     {
       "dog_id": 228,
@@ -505,7 +546,8 @@
       "best_speed": 48.703,
       "avg_speed": 48.15,
       "total_starts": 2,
-      "rank_delta": "NEW"
+      "rank_delta": "NEW",
+      "rank_delta_breed": "NEW"
     },
     {
       "dog_id": 10420,
@@ -517,7 +559,8 @@
       "best_speed": 48.64,
       "avg_speed": 48.38,
       "total_starts": 1,
-      "rank_delta": -15
+      "rank_delta": -15,
+      "rank_delta_breed": 0
     },
     {
       "dog_id": 10354,
@@ -529,7 +572,8 @@
       "best_speed": 48.322,
       "avg_speed": 48.14,
       "total_starts": 1,
-      "rank_delta": "NEW"
+      "rank_delta": "NEW",
+      "rank_delta_breed": "NEW"
     },
     {
       "dog_id": 10032,
@@ -541,7 +585,8 @@
       "best_speed": 48.184,
       "avg_speed": 47.91,
       "total_starts": 1,
-      "rank_delta": "NEW"
+      "rank_delta": "NEW",
+      "rank_delta_breed": "NEW"
     },
     {
       "dog_id": 10421,
@@ -553,7 +598,8 @@
       "best_speed": 48.18,
       "avg_speed": 45.8,
       "total_starts": 1,
-      "rank_delta": -17
+      "rank_delta": -17,
+      "rank_delta_breed": 0
     },
     {
       "dog_id": 9383,
@@ -565,7 +611,8 @@
       "best_speed": 47.95,
       "avg_speed": 47.03,
       "total_starts": 2,
-      "rank_delta": -17
+      "rank_delta": -17,
+      "rank_delta_breed": -2
     },
     {
       "dog_id": 10327,
@@ -577,7 +624,8 @@
       "best_speed": 47.655,
       "avg_speed": 47.62,
       "total_starts": 1,
-      "rank_delta": "NEW"
+      "rank_delta": "NEW",
+      "rank_delta_breed": "NEW"
     },
     {
       "dog_id": 9865,
@@ -589,7 +637,8 @@
       "best_speed": 47.35,
       "avg_speed": 47.31,
       "total_starts": 1,
-      "rank_delta": -18
+      "rank_delta": -18,
+      "rank_delta_breed": -10
     },
     {
       "dog_id": 10368,
@@ -601,7 +650,8 @@
       "best_speed": 46.741,
       "avg_speed": 46.47,
       "total_starts": 1,
-      "rank_delta": "NEW"
+      "rank_delta": "NEW",
+      "rank_delta_breed": "NEW"
     },
     {
       "dog_id": 9385,
@@ -613,7 +663,8 @@
       "best_speed": 46.67,
       "avg_speed": 46.4,
       "total_starts": 2,
-      "rank_delta": -19
+      "rank_delta": -19,
+      "rank_delta_breed": -1
     },
     {
       "dog_id": 10369,
@@ -625,7 +676,8 @@
       "best_speed": 46.62,
       "avg_speed": 45.78,
       "total_starts": 1,
-      "rank_delta": -19
+      "rank_delta": -19,
+      "rank_delta_breed": -1
     },
     {
       "dog_id": 10071,
@@ -637,7 +689,8 @@
       "best_speed": 46.377,
       "avg_speed": 46.18,
       "total_starts": 1,
-      "rank_delta": "NEW"
+      "rank_delta": "NEW",
+      "rank_delta_breed": "NEW"
     },
     {
       "dog_id": 10422,
@@ -649,7 +702,8 @@
       "best_speed": 45.83,
       "avg_speed": 45.79,
       "total_starts": 1,
-      "rank_delta": -20
+      "rank_delta": -20,
+      "rank_delta_breed": 0
     },
     {
       "dog_id": 10418,
@@ -661,7 +715,8 @@
       "best_speed": 45.73,
       "avg_speed": 45.56,
       "total_starts": 1,
-      "rank_delta": -20
+      "rank_delta": -20,
+      "rank_delta_breed": 0
     },
     {
       "dog_id": 10423,
@@ -673,7 +728,8 @@
       "best_speed": 45.43,
       "avg_speed": 45.08,
       "total_starts": 1,
-      "rank_delta": -20
+      "rank_delta": -20,
+      "rank_delta_breed": 0
     },
     {
       "dog_id": 10161,
@@ -685,7 +741,8 @@
       "best_speed": 45.42,
       "avg_speed": 44.43,
       "total_starts": 2,
-      "rank_delta": -20
+      "rank_delta": -20,
+      "rank_delta_breed": 0
     },
     {
       "dog_id": 10202,
@@ -697,7 +754,8 @@
       "best_speed": 43.81,
       "avg_speed": 43.25,
       "total_starts": 2,
-      "rank_delta": -20
+      "rank_delta": -20,
+      "rank_delta_breed": 0
     },
     {
       "dog_id": 10089,
@@ -709,7 +767,8 @@
       "best_speed": 43.57,
       "avg_speed": 43.36,
       "total_starts": 1,
-      "rank_delta": -20
+      "rank_delta": -20,
+      "rank_delta_breed": 0
     },
     {
       "dog_id": 9712,
@@ -721,7 +780,8 @@
       "best_speed": 43.56,
       "avg_speed": 43.56,
       "total_starts": 2,
-      "rank_delta": -20
+      "rank_delta": -20,
+      "rank_delta_breed": 0
     },
     {
       "dog_id": 10419,
@@ -733,7 +793,8 @@
       "best_speed": 43.5,
       "avg_speed": 43.16,
       "total_starts": 2,
-      "rank_delta": -20
+      "rank_delta": -20,
+      "rank_delta_breed": 0
     },
     {
       "dog_id": 9386,
@@ -745,7 +806,8 @@
       "best_speed": 43.45,
       "avg_speed": 42.82,
       "total_starts": 2,
-      "rank_delta": -20
+      "rank_delta": -20,
+      "rank_delta_breed": -1
     },
     {
       "dog_id": 10348,
@@ -757,7 +819,8 @@
       "best_speed": 43.44,
       "avg_speed": 43.44,
       "total_starts": 2,
-      "rank_delta": -20
+      "rank_delta": -20,
+      "rank_delta_breed": 0
     },
     {
       "dog_id": 10430,
@@ -769,7 +832,8 @@
       "best_speed": 43.254,
       "avg_speed": 42.96,
       "total_starts": 1,
-      "rank_delta": "NEW"
+      "rank_delta": "NEW",
+      "rank_delta_breed": "NEW"
     },
     {
       "dog_id": 282,
@@ -781,7 +845,8 @@
       "best_speed": 42.39,
       "avg_speed": 42.39,
       "total_starts": 2,
-      "rank_delta": -21
+      "rank_delta": -21,
+      "rank_delta_breed": 0
     },
     {
       "dog_id": 9255,
@@ -793,7 +858,8 @@
       "best_speed": 42.37,
       "avg_speed": 41.43,
       "total_starts": 2,
-      "rank_delta": -21
+      "rank_delta": -21,
+      "rank_delta_breed": 0
     },
     {
       "dog_id": 7355,
@@ -805,7 +871,8 @@
       "best_speed": 42.29,
       "avg_speed": 41.56,
       "total_starts": 2,
-      "rank_delta": -21
+      "rank_delta": -21,
+      "rank_delta_breed": 0
     },
     {
       "dog_id": 10415,
@@ -817,7 +884,8 @@
       "best_speed": 41.84,
       "avg_speed": 41.42,
       "total_starts": 1,
-      "rank_delta": -21
+      "rank_delta": -21,
+      "rank_delta_breed": 0
     },
     {
       "dog_id": 9296,
@@ -829,7 +897,8 @@
       "best_speed": 41.73,
       "avg_speed": 41.22,
       "total_starts": 1,
-      "rank_delta": -21
+      "rank_delta": -21,
+      "rank_delta_breed": 0
     },
     {
       "dog_id": 182,
@@ -841,7 +910,8 @@
       "best_speed": 41.51,
       "avg_speed": 40.88,
       "total_starts": 2,
-      "rank_delta": -21
+      "rank_delta": -21,
+      "rank_delta_breed": 0
     },
     {
       "dog_id": 10035,
@@ -853,7 +923,8 @@
       "best_speed": 41.434,
       "avg_speed": 41.11,
       "total_starts": 2,
-      "rank_delta": "NEW"
+      "rank_delta": "NEW",
+      "rank_delta_breed": "NEW"
     },
     {
       "dog_id": 9368,
@@ -865,7 +936,8 @@
       "best_speed": 41.05,
       "avg_speed": 39.88,
       "total_starts": 2,
-      "rank_delta": -22
+      "rank_delta": -22,
+      "rank_delta_breed": 0
     },
     {
       "dog_id": 10163,
@@ -877,7 +949,8 @@
       "best_speed": 41.029,
       "avg_speed": 41.03,
       "total_starts": 1,
-      "rank_delta": "NEW"
+      "rank_delta": "NEW",
+      "rank_delta_breed": "NEW"
     },
     {
       "dog_id": 9240,
@@ -889,7 +962,8 @@
       "best_speed": 40.89,
       "avg_speed": 40.08,
       "total_starts": 2,
-      "rank_delta": -23
+      "rank_delta": -23,
+      "rank_delta_breed": -1
     },
     {
       "dog_id": 10416,
@@ -901,7 +975,8 @@
       "best_speed": 40.85,
       "avg_speed": 40.01,
       "total_starts": 2,
-      "rank_delta": -23
+      "rank_delta": -23,
+      "rank_delta_breed": -1
     },
     {
       "dog_id": 10363,
@@ -913,7 +988,8 @@
       "best_speed": 40.385,
       "avg_speed": 40.14,
       "total_starts": 1,
-      "rank_delta": "NEW"
+      "rank_delta": "NEW",
+      "rank_delta_breed": "NEW"
     },
     {
       "dog_id": 43,
@@ -925,7 +1001,8 @@
       "best_speed": 39.85,
       "avg_speed": 38.86,
       "total_starts": 2,
-      "rank_delta": -24
+      "rank_delta": -24,
+      "rank_delta_breed": -2
     },
     {
       "dog_id": 9329,
@@ -937,7 +1014,8 @@
       "best_speed": 39.78,
       "avg_speed": 39.49,
       "total_starts": 2,
-      "rank_delta": -24
+      "rank_delta": -24,
+      "rank_delta_breed": -2
     },
     {
       "dog_id": 10100,
@@ -949,7 +1027,8 @@
       "best_speed": 39.73,
       "avg_speed": 39.22,
       "total_starts": 2,
-      "rank_delta": -24
+      "rank_delta": -24,
+      "rank_delta_breed": -2
     },
     {
       "dog_id": 10349,
@@ -961,7 +1040,8 @@
       "best_speed": 39.63,
       "avg_speed": 38.96,
       "total_starts": 2,
-      "rank_delta": -24
+      "rank_delta": -24,
+      "rank_delta_breed": -2
     },
     {
       "dog_id": 9248,
@@ -973,7 +1053,8 @@
       "best_speed": 39.51,
       "avg_speed": 39.13,
       "total_starts": 2,
-      "rank_delta": -24
+      "rank_delta": -24,
+      "rank_delta_breed": 0
     },
     {
       "dog_id": 5683,
@@ -985,7 +1066,8 @@
       "best_speed": 39.35,
       "avg_speed": 39.16,
       "total_starts": 2,
-      "rank_delta": -24
+      "rank_delta": -24,
+      "rank_delta_breed": -2
     },
     {
       "dog_id": 564,
@@ -997,7 +1079,8 @@
       "best_speed": 39.326,
       "avg_speed": 38.96,
       "total_starts": 1,
-      "rank_delta": "NEW"
+      "rank_delta": "NEW",
+      "rank_delta_breed": "NEW"
     },
     {
       "dog_id": 10169,
@@ -1009,7 +1092,8 @@
       "best_speed": 38.567,
       "avg_speed": 38.33,
       "total_starts": 1,
-      "rank_delta": "NEW"
+      "rank_delta": "NEW",
+      "rank_delta_breed": "NEW"
     },
     {
       "dog_id": 10171,
@@ -1021,7 +1105,8 @@
       "best_speed": 37.804,
       "avg_speed": 37.44,
       "total_starts": 1,
-      "rank_delta": "NEW"
+      "rank_delta": "NEW",
+      "rank_delta_breed": "NEW"
     },
     {
       "dog_id": 10165,
@@ -1033,7 +1118,8 @@
       "best_speed": 37.322,
       "avg_speed": 36.87,
       "total_starts": 1,
-      "rank_delta": "NEW"
+      "rank_delta": "NEW",
+      "rank_delta_breed": "NEW"
     },
     {
       "dog_id": 10417,
@@ -1045,7 +1131,8 @@
       "best_speed": 36.55,
       "avg_speed": 36.26,
       "total_starts": 2,
-      "rank_delta": -28
+      "rank_delta": -28,
+      "rank_delta_breed": -4
     },
     {
       "dog_id": 10583,
@@ -1057,7 +1144,8 @@
       "best_speed": 28.78,
       "avg_speed": 28.78,
       "total_starts": 1,
-      "rank_delta": -28
+      "rank_delta": -28,
+      "rank_delta_breed": -2
     }
   ]
 }

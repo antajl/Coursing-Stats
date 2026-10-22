@@ -18,7 +18,7 @@ export default function PlacementBadge({ result }: PlacementBadgeProps) {
     )
   }
 
-  if (result.status === 'dns') {
+  if (result.status === 'dns' || result.status === 'absent') {
     return (
       <HoverTooltip label="Неявка" placement="top" variant="site" delayMs={0} portal>
         <div className="w-6 h-6 md:w-7 md:h-7 rounded-full bg-gray-100 border-2 border-gray-400 flex items-center justify-center cursor-help">

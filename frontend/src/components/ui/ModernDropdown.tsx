@@ -11,6 +11,12 @@ interface ModernDropdownProps {
   portal?: boolean
   /** Fixed width for dropdown (e.g., '280px', '320px') */
   width?: string
+  /** Whether hovering over trigger opens dropdown (also clickable) */
+  openOnHover?: boolean
+  /** Delay in ms before opening on hover (default 60ms) */
+  openDelay?: number
+  /** Delay in ms before closing on mouse leave (default 200ms) */
+  closeDelay?: number
 }
 
 export default function ModernDropdown({
@@ -21,22 +27,85 @@ export default function ModernDropdown({
   onOpenChange,
   portal = true,
   width,
+  openOnHover = false,
+  openDelay = 60,
+  closeDelay = 200,
 }: ModernDropdownProps) {
   const [internalOpen, setInternalOpen] = useState(false)
   const [positionReady, setPositionReady] = useState(false)
   const triggerRef = useRef<HTMLDivElement>(null)
   const dropdownRef = useRef<HTMLDivElement>(null)
-  
+  const openTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+
   const isOpen = controlledOpen !== undefined ? controlledOpen : internalOpen
   const setIsOpen = onOpenChange || setInternalOpen
 
-  const toggle = () => {
-    setIsOpen(!isOpen)
-    setPositionReady(false)
+  const clearTimers = () => {
+    if (openTimerRef.current) {
+      clearTimeout(openTimerRef.current)
+      openTimerRef.current = null
+    }
+    if (closeTimerRef.current) {
+      clearTimeout(closeTimerRef.current)
+      closeTimerRef.current = null
+    }
   }
+
+  useEffect(() => {
+    return () => clearTimers()
+  }, [])
+
+  const toggle = () => {
+    clearTimers()
+    setIsOpen(!isOpen)
+    if (!isOpen) {
+      setPositionReady(false)
+    }
+  }
+
+  const openDropdown = () => {
+    clearTimers()
+    if (!isOpen) {
+      setIsOpen(true)
+      setPositionReady(false)
+    }
+  }
+
   const close = () => {
+    clearTimers()
     setIsOpen(false)
     setPositionReady(false)
+  }
+
+  const handleMouseEnter = () => {
+    if (!openOnHover) return
+    if (closeTimerRef.current) {
+      clearTimeout(closeTimerRef.current)
+      closeTimerRef.current = null
+    }
+    if (!isOpen) {
+      if (openDelay > 0) {
+        openTimerRef.current = setTimeout(() => {
+          openDropdown()
+        }, openDelay)
+      } else {
+        openDropdown()
+      }
+    }
+  }
+
+  const handleMouseLeave = () => {
+    if (!openOnHover) return
+    if (openTimerRef.current) {
+      clearTimeout(openTimerRef.current)
+      openTimerRef.current = null
+    }
+    if (isOpen) {
+      closeTimerRef.current = setTimeout(() => {
+        close()
+      }, closeDelay)
+    }
   }
 
   // Handle click outside
@@ -45,7 +114,7 @@ export default function ModernDropdown({
 
     const handleClickOutside = (event: MouseEvent) => {
       if (
-        dropdownRef.current && 
+        dropdownRef.current &&
         !dropdownRef.current.contains(event.target as Node) &&
         triggerRef.current &&
         !triggerRef.current.contains(event.target as Node)
@@ -94,7 +163,7 @@ export default function ModernDropdown({
 
     // Calculate position immediately to prevent flash
     updatePosition()
-    
+
     // Use requestAnimationFrame to ensure position is set before render
     requestAnimationFrame(() => {
       updatePosition()
@@ -103,7 +172,7 @@ export default function ModernDropdown({
 
     window.addEventListener('scroll', updatePosition, true)
     window.addEventListener('resize', updatePosition)
-    
+
     return () => {
       window.removeEventListener('scroll', updatePosition, true)
       window.removeEventListener('resize', updatePosition)
@@ -113,6 +182,8 @@ export default function ModernDropdown({
   const dropdownContent = (
     <div
       ref={dropdownRef}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       className={`rounded-lg border border-old-money-200 bg-white shadow-lg ${className}`}
       style={{
         position: portal ? 'fixed' : 'absolute',
@@ -130,7 +201,12 @@ export default function ModernDropdown({
   )
 
   return (
-    <div ref={triggerRef} className="relative inline-block">
+    <div
+      ref={triggerRef}
+      className="relative inline-block"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <div
         onClick={toggle}
         onKeyDown={(e) => {
@@ -146,14 +222,10 @@ export default function ModernDropdown({
       >
         {trigger}
       </div>
-      
-      {isOpen && positionReady && (
-        portal ? (
-          createPortal(dropdownContent, document.body)
-        ) : (
-          dropdownContent
-        )
-      )}
+
+      {isOpen &&
+        positionReady &&
+        (portal ? createPortal(dropdownContent, document.body) : dropdownContent)}
     </div>
   )
 }

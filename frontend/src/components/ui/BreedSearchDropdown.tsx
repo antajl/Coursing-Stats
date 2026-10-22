@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useMemo, type KeyboardEvent } from 'react'
 import ModernDropdown from './ModernDropdown'
-import { uniqueCanonicalBreeds, displayBreed } from '../../lib/breedMapping'
-import { deriveCompetingBreeds, type DogsIndexEntry } from '../../lib/competingBreeds'
+import { uniqueCanonicalBreeds, displayBreed, matchesBreedFilter } from '../../lib/breedMapping'
+import { deriveCompetingBreeds, countCompetingBreeds, type DogsIndexEntry } from '../../lib/competingBreeds'
 
 interface BreedSearchDropdownProps {
   breeds: string[]
@@ -36,14 +36,7 @@ export default function BreedSearchDropdown({
   // Count dogs per breed if dogIndex is provided
   const breedCounts = useMemo(() => {
     if (!dogIndex || dogIndex.length === 0) return new Map<string, number>()
-    const counts = new Map<string, number>()
-    for (const dog of dogIndex) {
-      const breed = dog.breed?.trim()
-      if (!breed || (dog.competition_count ?? 0) <= 0) continue
-      if (/^\d+$/.test(breed)) continue
-      counts.set(breed, (counts.get(breed) ?? 0) + 1)
-    }
-    return counts
+    return countCompetingBreeds(dogIndex)
   }, [dogIndex])
   
   // Filter breeds based on search query
@@ -152,7 +145,7 @@ export default function BreedSearchDropdown({
           ) : (
             filteredBreeds.map((breed) => {
               const display = displayBreed(breed)
-              const isSelected = breed === selectedBreed
+              const isSelected = selectedBreed ? matchesBreedFilter(selectedBreed, breed) : false
               const count = breedCounts.get(breed)
               
               return (

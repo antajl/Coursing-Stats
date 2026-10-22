@@ -12,6 +12,7 @@ import {
 } from '../../src/lib/judge-stats';
 import { judgeDetailKey } from '../../src/lib/static-api';
 import { INDEXES_DIR, writeIndex } from './shared';
+import { canonicalBreed } from '../../src/lib/breed-mapping';
 
 const JUDGES_RAW_ROWS_SQL = `
   SELECT
@@ -61,7 +62,7 @@ export function buildJudgesSummary(db: Database.Database) {
     schema: 'coursing-stats/index-judges-summary-v1',
     count: judgesData.length,
     judges: judgesData,
-    availableBreeds: breeds.map((b) => b.breed),
+    availableBreeds: Array.from(new Set(breeds.map((b) => (b.breed ? canonicalBreed(b.breed) : "")).filter((b) => Boolean(b) && b !== "БЕЗ ПОРОДЫ"))).sort((a, b) => a.localeCompare(b, "ru")),
   });
 
   writeIndex('judges-raw-rows.json', rows);

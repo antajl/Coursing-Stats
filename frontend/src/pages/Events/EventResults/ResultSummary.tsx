@@ -44,7 +44,7 @@ export function Scoreboard({ score, showVc, vc }: { score: number | string; show
 }
 
 export function ResultScorePanel({ result }: { result: Result }) {
-  const isDisqualified = result.status === 'disqualified' || result.status === 'dns'
+  const isDisqualified = result.status === 'disqualified' || (result.status === 'dns' || result.status === 'absent')
   const statusLabel = displayStatusReason(result.status_reason)
   const showVc = hasHighestQualification(result.vc)
   const dqShownInHeats = hasDisqualifiedHeat(parseRawScores(result.raw_scores_json))
@@ -61,7 +61,7 @@ export function ResultScorePanel({ result }: { result: Result }) {
       </div>
     )
   }
-  if (result.status === 'dns') {
+  if ((result.status === 'dns' || result.status === 'absent')) {
     return <div className="text-right text-xs text-charcoal-600 md:text-sm">Неявка</div>
   }
   if (isDisqualified) return null
@@ -69,7 +69,7 @@ export function ResultScorePanel({ result }: { result: Result }) {
 }
 
 export default function ResultSummary({ result }: ResultSummaryProps) {
-  const isDisqualified = result.status === 'disqualified' || result.status === 'dns'
+  const isDisqualified = result.status === 'disqualified' || (result.status === 'dns' || result.status === 'absent')
   const statusLabel = displayStatusReason(result.status_reason)
   const dqShownInHeats = hasDisqualifiedHeat(parseRawScores(result.raw_scores_json))
 
@@ -89,7 +89,7 @@ export default function ResultSummary({ result }: ResultSummaryProps) {
         {result.status === 'disqualified' && statusLabel && !dqShownInHeats && (
           <div className="text-xs italic text-red-600 md:hidden">{statusLabel}</div>
         )}
-        {result.status === 'dns' && (
+        {(result.status === 'dns' || result.status === 'absent') && (
           <div className="text-xs text-gray-600 md:hidden">Неявка</div>
         )}
       </div>

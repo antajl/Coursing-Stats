@@ -86,7 +86,7 @@ function HeatBlock({
     .filter(({ heatJudge }) => heatJudge.scores?.some(s => s !== null && s !== undefined))
   const showHeatTotal = heat.total != null && heat.total !== ''
 
-  const heatBadge = <PoponaCell number={heat.bib_number} color={heat.bib_color} compact />
+  const heatBadge = <PoponaCell number={heat.bib_number ?? heat.heat_number} color={heat.bib_color} compact />
 
   const heatTotalCell =
     showHeatTotal && !isHeatDisqualified ? (

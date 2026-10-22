@@ -83,6 +83,7 @@ export default function TopDogsFilters({
     <div className="mb-4" ref={dropdownRef}>
       <PageToolbar
         bare
+        topRowClassName="flex-wrap md:flex-nowrap"
         filters={
           <div className="flex flex-col md:flex-row md:items-center gap-2 w-full min-w-0">
             {/* Строка 1 на мобилке / начало единой строки на десктопе */}

@@ -3,6 +3,7 @@ import { PARTICIPATION_STATUSES_SQL, RACING_EXCLUDED_STATUSES_SQL } from '../../
 import { attachScoreMetrics } from '../../lib/data-logic/attach-score-metrics';
 import { sortScoreItems } from '../../lib/data-logic/sort-top';
 import { COURSING_RATING_SCORE_VERSION } from '../../lib/rating/coursing-rating-score';
+import { canonicalBreed } from '../../src/lib/breed-mapping';
 import { writeIndex } from './shared';
 
 const PLACEMENT_ALL_YEARS_SQL = `
@@ -64,46 +65,60 @@ export function buildTopIndexes(db: Database.Database) {
       .prepare(
         `SELECT *, year AS year_from, year AS year_to
          FROM v_top_by_placement WHERE year = ?
-         ORDER BY gold DESC, silver DESC, bronze DESC`,
+         ORDER BY gold DESC, silver DESC, bronze DESC, total_starts DESC, dog_id ASC`,
       )
       .all(year) as Array<Record<string, unknown>>;
 
-    // Calculate rank delta comparing current season standings with standings prior to latest event
-    const coursingEvents = db.prepare(`
-      SELECT id FROM events 
+    // Calculate rank delta comparing current season standings with standings prior to latest event date
+    const coursingDates = db.prepare(`
+      SELECT DISTINCT date_start FROM events 
       WHERE year = ? AND event_type IN ('coursing', 'bzmp')
       ORDER BY date_start ASC
-    `).all(year) as Array<{ id: number }>;
+    `).all(year) as Array<{ date_start: string }>;
 
     let prevRankMap: Map<number, number> | null = null;
-    if (coursingEvents.length >= 2) {
-      const latestEventId = coursingEvents[coursingEvents.length - 1].id;
+    let prevBreedRankMap: Map<number, number> | null = null;
+    if (coursingDates.length >= 2) {
+      const latestDate = coursingDates[coursingDates.length - 1].date_start;
       const prevPlacement = db.prepare(`
-        SELECT d.id AS dog_id
+        SELECT d.id AS dog_id, d.breed
         FROM results r
         JOIN dogs d ON d.id = r.dog_id
         JOIN events e ON r.event_id = e.id
         WHERE r.status IN ${PARTICIPATION_STATUSES_SQL}
           AND e.event_type IN ('coursing', 'bzmp')
           AND e.year = ?
-          AND e.id != ?
+          AND e.date_start != ?
         GROUP BY d.id
         ORDER BY 
           SUM(CASE WHEN r.placement = 1 THEN 1 ELSE 0 END) DESC,
           SUM(CASE WHEN r.placement = 2 THEN 1 ELSE 0 END) DESC,
           SUM(CASE WHEN r.placement = 3 THEN 1 ELSE 0 END) DESC,
-          COUNT(*) DESC
-      `).all(year, latestEventId) as Array<{ dog_id: number }>;
+          COUNT(*) DESC,
+          d.id ASC
+      `).all(year, latestDate) as Array<{ dog_id: number; breed: string }>;
 
       prevRankMap = new Map();
+      prevBreedRankMap = new Map();
+      const prevBreedCounters = new Map<string, number>();
       prevPlacement.forEach((row, idx) => {
         prevRankMap!.set(row.dog_id, idx + 1);
+        const b = canonicalBreed((row.breed || '').trim());
+        const breedRank = (prevBreedCounters.get(b) || 0) + 1;
+        prevBreedCounters.set(b, breedRank);
+        prevBreedRankMap!.set(row.dog_id, breedRank);
       });
     }
 
+    const currentBreedCounters = new Map<string, number>();
     const placementWithDelta = placement.map((dog: any, idx: number) => {
       const currentRank = idx + 1;
+      const b = canonicalBreed((dog.breed || '').trim());
+      const currentBreedRank = (currentBreedCounters.get(b) || 0) + 1;
+      currentBreedCounters.set(b, currentBreedRank);
+
       let rank_delta: number | 'NEW' | null = null;
+      let rank_delta_breed: number | 'NEW' | null = null;
       if (prevRankMap) {
         const prevRank = prevRankMap.get(dog.dog_id);
         if (prevRank == null) {
@@ -112,9 +127,20 @@ export function buildTopIndexes(db: Database.Database) {
           rank_delta = prevRank - currentRank;
         }
       }
+
+      if (prevBreedRankMap) {
+        const prevBreedRank = prevBreedRankMap.get(dog.dog_id);
+        if (prevBreedRank == null) {
+          rank_delta_breed = 'NEW';
+        } else {
+          rank_delta_breed = prevBreedRank - currentBreedRank;
+        }
+      }
+
       return {
         ...dog,
         rank_delta,
+        rank_delta_breed,
       };
     });
 
@@ -203,34 +229,47 @@ export function buildTopSpeedIndexes(db: Database.Database) {
 
   for (const year of years) {
     const items = db
-      .prepare(`${SPEED_BASE_SQL} AND e.year = ? GROUP BY d.id HAVING best_speed IS NOT NULL ORDER BY best_speed DESC`)
+      .prepare(`${SPEED_BASE_SQL} AND e.year = ? GROUP BY d.id HAVING best_speed IS NOT NULL ORDER BY best_speed DESC, avg_speed DESC, total_starts DESC, d.id ASC`)
       .all(year) as Array<Record<string, unknown>>;
 
-    // Calculate rank delta comparing current season speed standings with standings prior to latest racing event
-    const racingEvents = db.prepare(`
-      SELECT id FROM events 
+    // Calculate rank delta comparing current season speed standings with standings prior to latest racing event date
+    const racingDates = db.prepare(`
+      SELECT DISTINCT date_start FROM events 
       WHERE year = ? AND event_type = 'racing'
       ORDER BY date_start ASC
-    `).all(year) as Array<{ id: number }>;
+    `).all(year) as Array<{ date_start: string }>;
 
     let prevSpeedRankMap: Map<number, number> | null = null;
-    if (racingEvents.length >= 2) {
-      const latestRacingId = racingEvents[racingEvents.length - 1].id;
+    let prevSpeedBreedRankMap: Map<number, number> | null = null;
+    if (racingDates.length >= 2) {
+      const latestRacingDate = racingDates[racingDates.length - 1].date_start;
       const prevSpeed = db.prepare(`
-        ${SPEED_BASE_SQL} AND e.year = ? AND e.id != ? 
+        ${SPEED_BASE_SQL} AND e.year = ? AND e.date_start != ? 
         GROUP BY d.id HAVING best_speed IS NOT NULL 
-        ORDER BY best_speed DESC
-      `).all(year, latestRacingId) as Array<{ dog_id: number }>;
+        ORDER BY best_speed DESC, avg_speed DESC, total_starts DESC, d.id ASC
+      `).all(year, latestRacingDate) as Array<{ dog_id: number; breed: string }>;
 
       prevSpeedRankMap = new Map();
+      prevSpeedBreedRankMap = new Map();
+      const speedBreedCounters = new Map<string, number>();
       prevSpeed.forEach((row, idx) => {
         prevSpeedRankMap!.set(row.dog_id, idx + 1);
+        const b = canonicalBreed((row.breed || '').trim());
+        const breedRank = (speedBreedCounters.get(b) || 0) + 1;
+        speedBreedCounters.set(b, breedRank);
+        prevSpeedBreedRankMap!.set(row.dog_id, breedRank);
       });
     }
 
+    const currentSpeedBreedCounters = new Map<string, number>();
     const itemsWithDelta = items.map((dog: any, idx: number) => {
       const currentRank = idx + 1;
+      const b = canonicalBreed((dog.breed || '').trim());
+      const currentBreedRank = (currentSpeedBreedCounters.get(b) || 0) + 1;
+      currentSpeedBreedCounters.set(b, currentBreedRank);
+
       let rank_delta: number | 'NEW' | null = null;
+      let rank_delta_breed: number | 'NEW' | null = null;
       if (prevSpeedRankMap) {
         const prevRank = prevSpeedRankMap.get(dog.dog_id);
         if (prevRank == null) {
@@ -239,9 +278,20 @@ export function buildTopSpeedIndexes(db: Database.Database) {
           rank_delta = prevRank - currentRank;
         }
       }
+
+      if (prevSpeedBreedRankMap) {
+        const prevBreedRank = prevSpeedBreedRankMap.get(dog.dog_id);
+        if (prevBreedRank == null) {
+          rank_delta_breed = 'NEW';
+        } else {
+          rank_delta_breed = prevBreedRank - currentBreedRank;
+        }
+      }
+
       return {
         ...dog,
         rank_delta,
+        rank_delta_breed,
       };
     });
 

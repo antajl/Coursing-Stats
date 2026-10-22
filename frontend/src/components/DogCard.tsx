@@ -1,15 +1,5 @@
 import { Link } from 'react-router-dom'
-import {
-  createContext,
-  useContext,
-  useMemo,
-  memo,
-  useRef,
-  useState,
-  useEffect,
-  type FC,
-  type NamedExoticComponent,
-} from 'react'
+import { createContext, useContext, useMemo, memo, type FC, type NamedExoticComponent } from 'react'
 import { dogYearBadge } from '../lib/season'
 import { parseDogName } from '../lib/dogName'
 import { displayBreed } from '../lib/breedMapping'
@@ -252,53 +242,17 @@ const DogCardHeader: FC = function DogCardHeader() {
   const yearBadge = dogYearBadge(dog, filterYear)
   const showYear = yearBadge && (!filterYear || filterYear === 'all')
 
-  const nameRef = useRef<HTMLHeadingElement>(null)
-  const [isTruncated, setIsTruncated] = useState(false)
-
-  useEffect(() => {
-    const el = nameRef.current
-    if (!el) return
-    const checkTruncation = () => {
-      setIsTruncated(el.scrollWidth > el.clientWidth + 1)
-    }
-    checkTruncation()
-    if (document.fonts?.ready) {
-      document.fonts.ready.then(checkTruncation)
-    }
-    window.addEventListener('resize', checkTruncation)
-    return () => window.removeEventListener('resize', checkTruncation)
-  }, [primary])
-
   return (
-    <div className="min-w-0">
-      <div className="group/name relative min-w-0">
-        <div className="flex items-center gap-1.5 min-w-0">
-          <OwnerCrownName name={primary} dogId={dog.dog_id} kind="competition">
-            <h3
-              ref={nameRef}
-              className="text-xs font-bold leading-snug text-charcoal-900 truncate"
-              title={secondary ? `${primary} / ${secondary}` : primary}
-            >
-              {primary}
-            </h3>
-          </OwnerCrownName>
-        </div>
-
-        {isTruncated && (
-          <div
-            className="pointer-events-none absolute -left-1.5 -top-1 z-30 hidden group-hover/name:block min-w-full max-w-[22rem] rounded-md border border-old-money-200/90 bg-white/98 px-2 py-1 shadow-lg backdrop-blur-xs transition-opacity duration-150"
-            aria-hidden
+    <div className="min-w-0 overflow-hidden">
+      <div className="flex items-center gap-1.5 min-w-0">
+        <OwnerCrownName name={primary} dogId={dog.dog_id} kind="competition">
+          <h3
+            className="text-xs font-bold leading-snug text-charcoal-900 truncate"
+            title={secondary ? `${primary} / ${secondary}` : primary}
           >
-            <div className="text-xs font-bold leading-snug text-charcoal-900 break-words">
-              {primary}
-            </div>
-            {secondary && (
-              <div className="mt-0.5 text-[10px] font-medium text-charcoal-500 leading-tight">
-                {secondary}
-              </div>
-            )}
-          </div>
-        )}
+            {primary}
+          </h3>
+        </OwnerCrownName>
       </div>
       <div className="flex items-center gap-1 text-[10px]">
         <span className="text-charcoal-600 font-medium truncate">
@@ -598,6 +552,7 @@ const DogCardInner = function DogCard({ dog, type, filterYear, rank, variant = '
 const DogCardMemo = memo(DogCardInner, (prevProps, nextProps) => {
   return (
     prevProps.dog.dog_id === nextProps.dog.dog_id &&
+    (prevProps.dog as any)?.rank_delta === (nextProps.dog as any)?.rank_delta &&
     prevProps.type === nextProps.type &&
     prevProps.filterYear === nextProps.filterYear &&
     prevProps.rank === nextProps.rank &&

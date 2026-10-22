@@ -16,10 +16,10 @@
     "host_club": "МОРОО \"Федерация спортивно-прикладного собаководства\"",
     "region": null,
     "location": "Московская область, Раменский район, д. Донино",
-    "catalog_url": "https://disk.yandex.ru/i/B5s3jaw79SE01g",
+    "catalog_url": "https://drive.google.com/file/d/13HWRvyNij5eHV6h1VGYaLu1VAGu5j2pH/view",
     "results_url": null,
-    "rules_url": "https://disk.yandex.ru/i/PqHWBSCZh4G0dw",
-    "results_pdf_url": null,
+    "rules_url": "https://drive.google.com/file/d/1VNjBCX01jpgkDTC4j0M2GmEf14vAxJ5L/view",
+    "results_pdf_url": "https://drive.google.com/file/d/1TzQz1lLPPp0GLU4VuUhr4Z90QZvIK1J1/view",
     "confirmed": 1,
     "last_modified": "2026-10-15T08:57:22.428Z",
     "scraped_at": null,
@@ -78,8 +78,8 @@
       "dog": {
         "id": 372,
         "dog_key": "ее-величество-ee-velitchestvo--басенджи",
-        "name_lat": "ЕЕ ВЕЛИЧЕСТВО /EE VELITCHESTVO",
-        "name_ru": "ЕЕ ВЕЛИЧЕСТВО /EE VELITCHESTVO",
+        "name_lat": "EE VELITCHESTVO",
+        "name_ru": "ЕЁ ВЕЛИЧЕСТВО",
         "breed": "БАСЕНДЖИ",
         "sex": "Сука",
         "owner": null
@@ -343,8 +343,8 @@
       "dog": {
         "id": 5621,
         "dog_key": "i-m-a-legend-anyway--малая-итальянская-борзая",
-        "name_lat": "I’M A LEGEND ANYWAY",
-        "name_ru": "ИМ Э ЛЕГЕНД ЭНИВЕЙ",
+        "name_lat": "I'M A LEGEND ANYWAY",
+        "name_ru": "И'М Э ЛЕГЕНД ЭНИВЕЙ",
         "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
         "sex": "Сука",
         "owner": null
@@ -466,7 +466,7 @@
       "total_score": 29.14,
       "judge_count": 0,
       "qualification": "CACL, RegCACL",
-      "vc": "",
+      "vc": "CC",
       "status": "finished",
       "raw_scores_json": {
         "heats": [
@@ -674,7 +674,15 @@
       "vc": "",
       "status": "disqualified",
       "raw_scores_json": {
-        "heats": [],
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 14,
+            "bib_color": "blue",
+            "time": null,
+            "speed_kmh": null
+          }
+        ],
         "grand_total": null,
         "normalized_score": null,
         "format": "racing"
@@ -686,7 +694,7 @@
         "id": 5755,
         "dog_key": "aries-khan-samuel-forsage-jackson--родезиискии-риджбек",
         "name_lat": "ARIES KHAN SAMUEL FORSAGE JACKSON",
-        "name_ru": "ARIES KHAN SAMUEL FORSAGE JACKSON",
+        "name_ru": "АРИЕС ХАН СЭМЮЭЛЬ ФОРСАЖ ДЖЕКСОН",
         "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
         "sex": "Кобель",
         "owner": null
@@ -818,6 +826,13 @@
             "bib_color": "white",
             "time": 26.4,
             "speed_kmh": 47.727
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 25,
+            "bib_color": "blue",
+            "time": null,
+            "speed_kmh": null
           }
         ],
         "grand_total": 26.4,
@@ -989,8 +1004,8 @@
       "dog": {
         "id": 7256,
         "dog_key": "имран-джаззи-imran-jazzee--салюки",
-        "name_lat": "ИМРАН ДЖАЗЗИ /IMRAN JAZZEE",
-        "name_ru": "ИМРАН ДЖАЗЗИ /IMRAN JAZZEE",
+        "name_lat": "ИМРАН ДЖАЗЗИ",
+        "name_ru": "ИМРАН ДЖАЗЗИ",
         "breed": "САЛЮКИ",
         "sex": "Кобель",
         "owner": null
@@ -1095,12 +1110,14 @@
       "dog": {
         "id": 459,
         "dog_key": "devaj-1976-zarooq--уиппет",
-        "name_lat": "DEVAJ 1976 ZAROOQ",
-        "name_ru": "DEVAJ 1976 ZAROOQ",
+        "name_lat": "Dévaj 1976 Zarooq",
+        "name_ru": "Dévaj 1976 Zarooq",
         "breed": "УИППЕТ",
         "sex": "Кобель",
-        "owner": null
-      }
+        "owner": null,
+        "pedigree_url": "https://whippet.breedarchive.com/animal/view/devaj-1976-zarooq-69b2a2f6-adc5-406b-8309-d9c17febcc4b"
+      },
+      "dog_key": "devaj-1976-zarooq--уиппет"
     },
     {
       "id": 22,
@@ -1759,7 +1776,7 @@
         "name_lat": "KUPIDON",
         "name_ru": "КУПИДОН",
         "breed": "УИППЕТ",
-        "sex": "F",
+        "sex": "Кобель",
         "owner": null
       }
     },
@@ -1855,8 +1872,8 @@
       "dog": {
         "id": 5814,
         "dog_key": "ерема-erema--уиппет",
-        "name_lat": "ЕРЕМА /EREMA",
-        "name_ru": "ЕРЕМА /EREMA",
+        "name_lat": "EREMA",
+        "name_ru": "ЕРЁМА",
         "breed": "УИППЕТ",
         "sex": "Кобель",
         "owner": null
@@ -2398,6 +2415,13 @@
             "bib_color": "red",
             "time": 32.07,
             "speed_kmh": 39.289
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 40,
+            "bib_color": "red",
+            "time": null,
+            "speed_kmh": null
           }
         ],
         "grand_total": 29.34,
@@ -2441,7 +2465,7 @@
       "dog": {
         "id": 5653,
         "dog_key": "sagita-volat-gero-post-te--уиппет",
-        "name_lat": "SAGITA VOLAT GERO POST TE",
+        "name_lat": "САДЖИТЕЙ ВОЛЕЙТ ГЕРО ПОСТ ТЕ",
         "name_ru": "САДЖИТЕЙ ВОЛЕЙТ ГЕРО ПОСТ ТЕ",
         "breed": "УИППЕТ",
         "sex": "Кобель",
