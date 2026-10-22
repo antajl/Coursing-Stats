@@ -32,6 +32,7 @@
     "download-archive-results": "npx tsx backend/scripts/import/download-archive-results.ts",
     "add-procoursing-source": "npx tsx backend/scripts/source/add-procoursing-source.ts",
     "ingest-competition": "npx tsx backend/scripts/ingest/ingest-competition.ts",
+    "export-protocol": "npx tsx backend/scripts/export/export-protocol-vector.ts",
     "rebuild-calendar-index": "npx tsx backend/scripts/rebuild-calendar-index.ts",
     "parse-coursing": "npx tsx backend/parsers/coursing/index.ts",
     "parse-bzmp": "npx tsx backend/parsers/bzmp/index.ts",

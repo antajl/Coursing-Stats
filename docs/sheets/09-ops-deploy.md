@@ -43,6 +43,19 @@ GitHub Actions (deploy.yml)
 
 ---
 
+## Политика кэширования (S3 / Yandex Object Storage)
+
+Для идеальных показателей Core Web Vitals и оптимизации трафика деплой `deploy.yml` выставляет строгие заголовки `Cache-Control`:
+
+| Тип ресурса | Путь | Cache-Control | Зачем |
+|---|---|---|---|
+| Хэшированные чанки JS/CSS | `/assets/*` | `public, max-age=31536000, immutable` | Кэш на 1 год: имена содержат контентный хэш и build-stamp, повторная загрузка исключена |
+| Статические медиа | `/assets/hero/*`, баннеры, фавиконки | `public, max-age=604800` | Кэш на 1 неделю |
+| Входные HTML | `index.html`, `404.html` | `public, max-age=0, must-revalidate` | Мгновенное применение новых версий без задержки |
+| Данные CDN | `/data/v1/*` | `public, max-age=3600, must-revalidate` | Кэш на 1 час для экономии трафика мобильных клиентов |
+
+---
+
 ## Деплой Telegram-бота
 
 Бот хостится на **Cloudflare Workers**:

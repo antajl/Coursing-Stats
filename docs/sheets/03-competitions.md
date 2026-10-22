@@ -51,7 +51,7 @@ verified: 2026-10-01
 После парса/правки результатов → при необходимости `sync-archive-comps-to-calendar` → `yarn run build-all-data`.  
 Reparse по id из URL `/event/:id`: `npx tsx backend/scripts/import/reparse-calendar-event-ids.ts [--archive] <id>…`  
 Парсеры: см. [06-parsers](06-parsers.md).  
-Правка данных: прямое редактирование JSON в `data/v1/competitions/` или `data/v1/calendar/` → `build-all-data`. Автоматизированное добавление: см. [ROADMAP](../ROADMAP.md) (Ветка 1 `yarn ingest-competition`).
+Правка данных: прямое редактирование JSON в `data/v1/competitions/` или `data/v1/calendar/` → `build-all-data`. Автоматизированное добавление: см. [ROADMAP](../ROADMAP.md) (Ветка 1 `yarn ingest-competition`). Оцифровка исходных протоколов в векторный PDF: `yarn export-protocol <id>` (см. [16-protocol-template](16-protocol-template.md)).
 
 ## Pitfalls
 
