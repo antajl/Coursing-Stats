@@ -385,11 +385,12 @@ const DogCardStats: FC = function DogCardStats() {
 }
 
 const DogCardRank: FC<{ className?: string }> = function DogCardRank({ className = '' }) {
-  const { rank } = useDogCardContext()
+  const { rank, dog } = useDogCardContext()
   if (rank == null || rank <= 0) return null
+  const delta = (dog as any)?.rank_delta
   return (
     <div className={`flex shrink-0 items-center self-stretch pr-2 ${className}`}>
-      <RankBadge rank={rank} />
+      <RankBadge rank={rank} delta={delta} />
     </div>
   )
 }
@@ -525,7 +526,7 @@ const DogCardInner = function DogCard({ dog, type, filterYear, rank, variant = '
         ) : (
           <>
             <div className="flex w-full items-start gap-2 overflow-hidden">
-              {rank != null && rank > 0 && <RankBadge rank={rank} />}
+              {rank != null && rank > 0 && <RankBadge rank={rank} delta={(dog as any)?.rank_delta} />}
               <div className="min-w-0 flex-1">
                 <DogCardHeader />
               </div>

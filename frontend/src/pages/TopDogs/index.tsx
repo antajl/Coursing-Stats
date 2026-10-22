@@ -140,8 +140,8 @@ export default function TopDogs() {
     <div className={isEmbedded ? 'max-w-full mx-auto pb-2 sm:pb-4' : 'px-4 pb-4'}>
       {!isEmbedded && (
         <SEO
-          title="Рейтинг собак"
-          description="Единый рейтинг курсинга и БЗМП: зачёт сезона по медалям, CS как тай-брейк, Elo на карточке как справка. Фильтры по породе и сезону."
+          title="Рейтинг собак: курсинг и бега борзых 2026"
+          description="Рейтинг собак по курсингу и бегам борзых сезона 2026 года: лидеры по породам (уиппеты, РПБ, басенджи, грейхаунды), медали, очки CS и динамика позиций."
           canonicalUrl="https://coursing-stats.ru/competitions?tab=ranking"
         />
       )}

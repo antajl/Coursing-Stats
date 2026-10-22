@@ -23,7 +23,7 @@ const DEFAULT_KEYWORDS = [
 ].join(', ')
 
 export function SEO({ title, description, keywords, ogImage, noIndex, canonicalUrl }: SEOProps) {
-  const fullTitle = `${title} | Coursing Stats`
+  const fullTitle = title.includes('Coursing Stats') ? title : `${title} | Coursing Stats`
   const defaultImage = 'https://coursing-stats.ru/og-image.svg'
   const siteUrl = 'https://coursing-stats.ru'
 

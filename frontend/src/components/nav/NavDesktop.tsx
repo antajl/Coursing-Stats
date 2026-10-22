@@ -62,6 +62,8 @@ export function NavDesktop({
       >
         <img
           src="/assets/brand/logo.webp"
+          width={1128}
+          height={224}
           alt="Coursing Stats"
           className="h-[52px] lg:h-[61px]"
           style={{ objectFit: 'contain' }}

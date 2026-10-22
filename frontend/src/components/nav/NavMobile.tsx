@@ -46,6 +46,8 @@ export function NavMobile({
         >
           <img
             src="/assets/brand/logo.webp"
+            width={1128}
+            height={224}
             alt="Coursing Stats"
             className="h-10"
             loading="lazy"

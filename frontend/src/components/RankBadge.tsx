@@ -1,5 +1,8 @@
+import { TrendingUp, TrendingDown } from 'lucide-react'
+
 interface RankBadgeProps {
   rank: number
+  delta?: number | 'NEW' | null
   className?: string
 }
 
@@ -9,24 +12,53 @@ const RANK_IMAGES = {
   3: '/assets/badges/coursing-stats-3.webp',
 }
 
-export default function RankBadge({ rank, className = '' }: RankBadgeProps) {
+export default function RankBadge({ rank, delta, className = '' }: RankBadgeProps) {
   if (rank <= 0) return null
+
+  const deltaElement =
+    delta === 'NEW' ? (
+      <span
+        className="mt-0.5 inline-flex items-center px-1 py-0.2 rounded text-[9px] font-bold bg-amber-100 text-amber-800"
+        title="Новый участник в сезоне"
+      >
+        NEW
+      </span>
+    ) : typeof delta === 'number' && delta > 0 ? (
+      <span
+        className="mt-0.5 inline-flex items-center text-[10px] font-bold text-forest-700 tabular-nums"
+        title={`Поднялся на ${delta} ${delta === 1 ? 'позицию' : 'позиции'}`}
+      >
+        <TrendingUp className="h-2.5 w-2.5 mr-0.5" />+{delta}
+      </span>
+    ) : typeof delta === 'number' && delta < 0 ? (
+      <span
+        className="mt-0.5 inline-flex items-center text-[10px] font-bold text-terracotta-700 tabular-nums"
+        title={`Опустился на ${Math.abs(delta)} ${Math.abs(delta) === 1 ? 'позицию' : 'позиции'}`}
+      >
+        <TrendingDown className="h-2.5 w-2.5 mr-0.5" />{delta}
+      </span>
+    ) : null
 
   // Top 3: image badge
   if (rank <= 3) {
     const imageSrc = RANK_IMAGES[rank as keyof typeof RANK_IMAGES]
     return (
       <div
-        className={`inline-flex items-center justify-center min-h-[44px] min-w-[44px] w-9 h-9 sm:w-10 sm:h-10 ${className}`}
+        className={`flex flex-col items-center justify-center min-h-[44px] min-w-[44px] ${className}`}
         aria-label={`Rank ${rank}`}
       >
-        <img
-          src={imageSrc}
-          alt={`Rank ${rank}`}
-          className="w-full h-full object-contain"
-          loading="lazy"
-          decoding="async"
-        />
+        <div className="w-9 h-9 sm:w-10 sm:h-10">
+          <img
+            src={imageSrc}
+            width={256}
+            height={213}
+            alt={`Rank ${rank}`}
+            className="w-full h-full object-contain"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        {deltaElement}
       </div>
     )
   }
@@ -34,12 +66,13 @@ export default function RankBadge({ rank, className = '' }: RankBadgeProps) {
   // Rank 4+: text-based, centered, subtle Old Money rounded badge
   return (
     <div
-      className={`min-h-[44px] min-w-[44px] flex items-center justify-center ${className}`}
+      className={`min-h-[44px] min-w-[44px] flex flex-col items-center justify-center ${className}`}
       aria-label={`Rank ${rank}`}
     >
       <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-cream-200/70 border border-old-money-200/60 text-xs font-bold tabular-nums text-charcoal-700 shadow-2xs">
         {rank}
       </span>
+      {deltaElement}
     </div>
   )
 }

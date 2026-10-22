@@ -104,14 +104,14 @@ export default function EventResults() {
     competition_kind: event.competition_kind,
     competition_type: event.competition_type,
   })
-  const description = `Результаты соревнований по ${eventType} ${eventDate} в ${event.location || ''}. ${results.length} участников. Статистика и результаты.`
+  const description = `Результаты забегов: ${eventType} ${eventDate} в ${event.location || ''}. ${results.length} участников. Баллы за забеги, победители и сертификаты на Coursing Stats.`
 
   return (
     <>
       <SEO
-        title={`${eventName} - ${eventDate}`}
+        title={`${eventName} — результаты соревнований (${eventDate})`}
         description={description}
-        keywords={`${eventName}, ${eventType}, ${event.location}, результаты, статистика, РКФ, ${eventDate}`}
+        keywords={`${eventName}, ${eventType}, ${event.location}, результаты соревнований, результаты забегов, статистика, РКФ, ${eventDate}`}
         canonicalUrl={`https://coursing-stats.ru/event/${id}`}
       />
       <div className="max-w-full mx-auto pb-2 sm:pb-4">

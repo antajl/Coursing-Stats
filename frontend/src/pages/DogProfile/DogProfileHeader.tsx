@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Star as StarIcon, Rabbit, Gauge, Sparkles } from 'lucide-react'
+import { Star as StarIcon, Rabbit, Gauge, Sparkles, ArrowRight } from 'lucide-react'
 import { useState } from 'react'
 import OwnerCrownName from '../../components/OwnerCrownName'
 import type { DogTitle } from '../../lib/qualificationTitles'
@@ -18,6 +18,8 @@ const profileLogger = createLogger('dog-profile')
 
 /** Локальная копия favicon Breed Archive (см. public/assets/icons/). */
 const BREED_ARCHIVE_FAVICON = '/assets/icons/breedarchive.webp'
+/** Официальный favicon Telegram (см. public/assets/icons/). */
+const TELEGRAM_FAVICON = '/assets/icons/telegram.svg'
 
 export type ProfileHeaderRank = {
   key: 'coursing' | 'racing' | 'shows'
@@ -51,9 +53,10 @@ type DogProfileHeaderProps = {
   }
 }
 
-function RanksTable({
+function DogStandingHonorCard({
   ranks,
   renderPlace,
+  dogBreed,
 }: {
   ranks: ProfileHeaderRank[]
   renderPlace: (
@@ -62,94 +65,113 @@ function RanksTable({
     value: number | null | undefined,
     row: ProfileHeaderRank | undefined,
   ) => React.ReactNode
+  dogBreed?: string
 }) {
+  const activeRanks = ranks.filter(
+    (r) => r.rank != null || r.yearRank != null || r.breedRank != null || r.yearBreedRank != null,
+  )
+
+  if (activeRanks.length === 0) return null
+
   return (
-    <div className="grid grid-cols-4 gap-1">
-      <div />
-      {(['coursing', 'racing', 'shows'] as const).map((key, index) => {
-        const icon =
-          key === 'coursing' ? (
-            <Rabbit className="h-4 w-4 text-charcoal-400" />
-          ) : key === 'racing' ? (
-            <Gauge className="h-4 w-4 text-charcoal-400" />
-          ) : (
-            <Sparkles className="h-4 w-4 text-charcoal-400" />
-          )
-        const label =
-          key === 'coursing' ? 'Курсинг' : key === 'racing' ? 'Бега' : 'Выставки'
-        const href =
-          key === 'shows' ? '/shows?tab=ranking&year=' : '/competitions?tab=ranking&year='
-        return (
-          <Link key={key} to={href} className="group">
+    <div className="flex flex-col gap-2 rounded-xl border border-old-money-200/90 bg-cream-50/70 p-3 shadow-xs">
+      <div className="flex items-center justify-between gap-2 border-b border-old-money-200/60 pb-1.5">
+        <span className="text-[11px] font-semibold uppercase tracking-wider text-charcoal-600">
+          Место в рейтинге
+        </span>
+        <span className="text-[10px] text-old-money-500">
+          сезон / всё время
+        </span>
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+        {activeRanks.map((r) => {
+          const icon =
+            r.key === 'coursing' ? (
+              <Rabbit className="h-4 w-4 text-camel-700" />
+            ) : r.key === 'racing' ? (
+              <Gauge className="h-4 w-4 text-camel-700" />
+            ) : (
+              <Sparkles className="h-4 w-4 text-camel-700" />
+            )
+
+          const label =
+            r.key === 'coursing' ? 'Курсинг' : r.key === 'racing' ? 'Бега' : 'Выставки'
+
+          const rankingLink =
+            r.key === 'shows'
+              ? `/shows?tab=ranking${dogBreed ? `&breed=${encodeURIComponent(dogBreed)}` : ''}`
+              : `/competitions?tab=ranking${dogBreed ? `&breed=${encodeURIComponent(dogBreed)}` : ''}`
+
+          return (
             <div
-              className={`mb-1 flex items-center justify-center gap-1 ${
-                index > 0 ? 'border-l border-charcoal-200/10 pl-2' : ''
-              }`}
+              key={r.key}
+              className="group relative flex flex-col justify-between rounded-lg border border-old-money-200/70 bg-white p-2.5 transition-all hover:border-camel-400 hover:shadow-xs"
             >
-              {icon}
-              <div className="text-[10px] font-medium uppercase text-charcoal-500">
-                {label}
+              <div className="flex items-center justify-between gap-1.5 mb-1.5">
+                <div className="flex items-center gap-1.5">
+                  {icon}
+                  <span className="text-xs font-bold text-charcoal-800">{label}</span>
+                </div>
+                <Link
+                  to={rankingLink}
+                  className="inline-flex items-center text-[10px] font-medium text-camel-700 hover:text-camel-900 group-hover:underline"
+                  title={`Открыть рейтинг: ${label}`}
+                >
+                  <span>Топ</span>
+                  <ArrowRight className="h-3 w-3 ml-0.5" />
+                </Link>
+              </div>
+
+              {/* Порода (сезонная и общая) */}
+              <div className="space-y-1 text-xs">
+                <div className="flex items-center justify-between text-[11px]">
+                  <span className="text-charcoal-500">В породе:</span>
+                  <div className="flex items-center gap-1.5 font-semibold">
+                    {r.yearBreedRank != null ? (
+                      <span className="text-camel-800">
+                        {renderPlace(r.key, 'yearBreed', r.yearBreedRank, r)}
+                        <span className="text-[9px] font-normal text-charcoal-400 ml-0.5">год</span>
+                      </span>
+                    ) : null}
+                    {r.breedRank != null ? (
+                      <span className="text-charcoal-600">
+                        {renderPlace(r.key, 'breed', r.breedRank, r)}
+                        <span className="text-[9px] font-normal text-charcoal-400 ml-0.5">все</span>
+                      </span>
+                    ) : null}
+                    {r.yearBreedRank == null && r.breedRank == null && (
+                      <span className="text-charcoal-400">—</span>
+                    )}
+                  </div>
+                </div>
+
+                {/* Общий зачёт */}
+                <div className="flex items-center justify-between text-[10px] text-charcoal-400 border-t border-old-money-100 pt-1">
+                  <span>Общий:</span>
+                  <div className="flex items-center gap-1.5">
+                    {r.yearRank != null ? (
+                      <span>
+                        {renderPlace(r.key, 'year', r.yearRank, r)}
+                        <span className="text-[9px] text-charcoal-400 ml-0.5">год</span>
+                      </span>
+                    ) : null}
+                    {r.rank != null ? (
+                      <span>
+                        {renderPlace(r.key, 'overall', r.rank, r)}
+                        <span className="text-[9px] text-charcoal-400 ml-0.5">все</span>
+                      </span>
+                    ) : null}
+                    {r.yearRank == null && r.rank == null && (
+                      <span>—</span>
+                    )}
+                  </div>
+                </div>
               </div>
             </div>
-          </Link>
-        )
-      })}
-      <div className="pr-2 text-right text-[10px] text-charcoal-400">Общий</div>
-      {(['coursing', 'racing', 'shows'] as const).map((key, index) => {
-        const r = ranks.find((rank) => rank.key === key)
-        return (
-          <div
-            key={key}
-            className={`flex h-4 items-center justify-end ${
-              index > 0 ? 'border-l border-charcoal-200/10 pl-2' : ''
-            }`}
-          >
-            {renderPlace(key, 'overall', r?.rank, r)}
-          </div>
-        )
-      })}
-      <div className="pr-2 text-right text-[10px] text-charcoal-400">За год</div>
-      {(['coursing', 'racing', 'shows'] as const).map((key, index) => {
-        const r = ranks.find((rank) => rank.key === key)
-        return (
-          <div
-            key={key}
-            className={`flex h-4 items-center justify-end ${
-              index > 0 ? 'border-l border-charcoal-200/10 pl-2' : ''
-            }`}
-          >
-            {renderPlace(key, 'year', r?.yearRank, r)}
-          </div>
-        )
-      })}
-      <div className="pr-2 text-right text-[10px] text-charcoal-400">Порода</div>
-      {(['coursing', 'racing', 'shows'] as const).map((key, index) => {
-        const r = ranks.find((rank) => rank.key === key)
-        return (
-          <div
-            key={key}
-            className={`flex h-4 items-center justify-end ${
-              index > 0 ? 'border-l border-charcoal-200/10 pl-2' : ''
-            }`}
-          >
-            {renderPlace(key, 'breed', r?.breedRank, r)}
-          </div>
-        )
-      })}
-      <div className="pr-2 text-right text-[10px] text-charcoal-400">Пор. за год</div>
-      {(['coursing', 'racing', 'shows'] as const).map((key, index) => {
-        const r = ranks.find((rank) => rank.key === key)
-        return (
-          <div
-            key={key}
-            className={`flex h-4 items-center justify-end ${
-              index > 0 ? 'border-l border-charcoal-200/10 pl-2' : ''
-            }`}
-          >
-            {renderPlace(key, 'yearBreed', r?.yearBreedRank, r)}
-          </div>
-        )
-      })}
+          )
+        })}
+      </div>
     </div>
   )
 }
@@ -300,28 +322,39 @@ export function DogProfileHeader({
                 <StarIcon className={`h-3.5 w-3.5 shrink-0 ${favorite ? 'fill-current' : ''}`} aria-hidden />
                 {favorite ? 'В избранном' : 'В избранное'}
               </button>
+              <a
+                href={`https://t.me/coursing_stats_bot?start=dog_${dog.id}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-full border border-old-money-200 bg-white px-3 py-1.5 text-xs font-semibold text-camel-700 transition-colors hover:border-camel-400 hover:bg-camel-50"
+                aria-label="Отслеживать собаку в Telegram"
+                title="Отслеживать собаку в Telegram: результаты и место в топе"
+                data-export-ignore
+              >
+                <img
+                  src={TELEGRAM_FAVICON}
+                  alt=""
+                  role="presentation"
+                  aria-hidden="true"
+                  width={14}
+                  height={14}
+                  className="h-3.5 w-3.5 shrink-0 rounded-full"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span>Отслеживать</span>
+              </a>
             </div>
           </div>
-          {hasRanks ? (
-            <div
-              className="hidden shrink-0 absolute top-0 right-0 z-10 md:block md:relative md:mt-0 md:ml-4"
-              aria-label="Места в рейтингах"
-            >
-              <div className="px-4 py-2 rounded-lg border border-old-money-200/80 bg-white md:border-none md:bg-transparent md:p-0 md:rounded-none">
-                <RanksTable ranks={ranks} renderPlace={renderPlace} />
-              </div>
-            </div>
-          ) : null}
         </div>
 
         {hasRanks ? (
-          <div
-            className="mt-4 block md:hidden rounded-xl border border-old-money-200/80 bg-cream-50/60 p-3 overflow-x-auto no-scrollbar"
-            aria-label="Места в рейтингах"
-          >
-            <div className="min-w-[270px]">
-              <RanksTable ranks={ranks} renderPlace={renderPlace} />
-            </div>
+          <div className="mt-4" aria-label="Места в рейтингах">
+            <DogStandingHonorCard
+              ranks={ranks}
+              renderPlace={renderPlace}
+              dogBreed={dog.breed}
+            />
           </div>
         ) : null}
 

@@ -26,30 +26,30 @@ export type BreadcrumbItem = { name: string; url: string }
 export const HUB_PAGES: HubMeta[] = [
   {
     path: '/',
-    title: 'Статистика курсинга, бегов и выставок собак | Coursing Stats',
+    title: 'Coursing Stats — Рейтинг и статистика собак: курсинг, бега, выставки',
     description:
-      'Coursing Stats — агрегатор результатов курсинга, бегов борзых и выставок РКФ (в т.ч. протоколы с procoursing.ru): карьера собаки, награды и рейтинги с 2015 года.',
-    h1: 'Статистика курсинга, бегов и выставок собак',
+      'Статистика и рейтинги собак в России: курсинг и бега борзых, рекорды Донино, выставки РКФ. Карьера собаки, награды, медали и рейтинг с 2015 года.',
+    h1: 'Рейтинг и статистика собак: курсинг, бега, выставки',
     paragraph:
-      'Агрегатор результатов: выступления, награды, рейтинги и экспертные оценки. Курсинг и бега (протоколы с procoursing.ru), выставки РКФ — с 2015 года.',
+      'Статистика выступлений, награды, медали и рейтинги собак: курсинг и бега борзых, выставки РКФ и замеры скорости в Донино с 2015 года.',
   },
   {
     path: '/competitions',
-    title: 'Рейтинг собак: курсинг и бега борзых | Coursing Stats',
+    title: 'Рейтинг собак: курсинг и бега борзых 2026 | Coursing Stats',
     description:
-      'Два отдельных рейтинга — по медалям и по очкам CS (курсинг, БЗМП, бега борзых) — плюс статистика судей. Источник протоколов — procoursing.ru, данные с 2015 года.',
-    h1: 'Рейтинг собак: курсинг и бега борзых',
+      'Рейтинг собак по курсингу и бегам борзых сезона 2026 года: лидеры по породам (уиппеты, РПБ, басенджи, грейхаунды), медали, очки CS и динамика позиций.',
+    h1: 'Рейтинг собак: курсинг и бега борзых 2026',
     paragraph:
-      'Два отдельных рейтинга — по медалям и по очкам (индекс CS), плюс статистика судей. Источник протоколов — procoursing.ru.',
+      'Рейтинг собак по курсингу и бегам борзых сезона 2026: зачёт по медалям и очкам CS, динамика лидеров и статистика судей.',
   },
   {
     path: '/shows',
-    title: 'Рейтинг выставочных собак РКФ | Coursing Stats',
+    title: 'Рейтинг выставочных собак РКФ 2026 — Топ чемпионов и судьи | Coursing Stats',
     description:
-      'Рейтинг собак по выставкам РКФ: награды дня (CAC, BOB, ЧРКФ и др.), профили и статистика судей. Ссылки на оригиналы rkf.online.',
-    h1: 'Рейтинг выставочных собак РКФ',
+      'Рейтинг собак по выставкам РКФ 2026 года: награды дня (CAC, BOB, ЧРКФ и др.), профили чемпионов и статистика судей. Ссылки на оригиналы rkf.online.',
+    h1: 'Рейтинг выставочных собак РКФ 2026',
     paragraph:
-      'Рейтинг собак по выставкам РКФ: награды дня (CAC, BOB, ЧРКФ и др.), профили и статистика судей. Оригиналы протоколов — на rkf.online.',
+      'Рейтинг собак по выставкам РКФ 2026 года: награды дня (CAC, BOB, ЧРКФ и др.), профили чемпионов и статистика судей. Оригиналы отчетов — на rkf.online.',
   },
   {
     path: '/speed-records',
@@ -76,7 +76,7 @@ export const HUB_PAGES: HubMeta[] = [
       'Информация о проекте Coursing Stats: стек технологий, архитектура, реализованные улучшения, исходный код.',
     h1: '',
     paragraph:
-      'Некоммерческий агрегатор статистики: результаты соревнований с procoursing.ru, выставки РКФ и рекорды полигона Донино.',
+      'Электронный архив спортивной статистики: результаты соревнований, выставки РКФ и рекорды полигона Донино.',
   },
 ]
 
@@ -219,6 +219,68 @@ export function buildNeutralSpaShell(html: string): string {
   return out
 }
 
+/**
+ * Standalone 404 HTML for Yandex Object Storage (error_document: 404.html).
+ * Retains exact Old Money theme, CSS links, fonts, Nav header and 404 dogs artwork.
+ * Omits client SPA script to prevent unnecessary hydration errors or flash on dead URLs.
+ */
+export function build404Html(spaHtml: string): string {
+  let html = spaHtml
+  html = replaceTitle(html, 'Страница не найдена | Coursing Stats')
+  html = replaceOrInsertMetaDescription(html, 'Страница не найдена.')
+  // Remove canonical link (404 shouldn't have canonical)
+  html = html.replace(/<link\s+rel=["']canonical["'][^>]*>\s*/gi, '')
+  // Ensure noindex, nofollow for search engines
+  if (/<meta\s+name=["']robots["'][^>]*>/i.test(html)) {
+    html = html.replace(
+      /<meta\s+name=["']robots["'][^>]*>/i,
+      '<meta name="robots" content="noindex, nofollow" />',
+    )
+  } else {
+    html = html.replace(/<\/head>/i, '  <meta name="robots" content="noindex, nofollow" />\n</head>')
+  }
+  // Strip LD+JSON and OG URL
+  html = html.replace(/<script\s+type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>\s*/gi, '')
+  html = html.replace(/<meta\s+property=["']og:url["'][^>]*>\s*/gi, '')
+  html = html.replace(/<meta\s+name=["']twitter:url["'][^>]*>\s*/gi, '')
+  html = replaceOrInsertMetaProperty(html, 'og:title', 'Страница не найдена | Coursing Stats')
+  html = replaceOrInsertMetaProperty(html, 'og:description', 'Страница не найдена.')
+  html = replaceOrInsertMetaName(html, 'twitter:title', 'Страница не найдена | Coursing Stats')
+  html = replaceOrInsertMetaName(html, 'twitter:description', 'Страница не найдена.')
+  // Strip client JS bundle and modulepreload so 404 is pure rock-solid standalone HTML
+  html = html.replace(/<link\s+rel=["']modulepreload["'][^>]*>\s*/gi, '')
+  html = html.replace(/<script\s+type=["']module["'][^>]*>[\s\S]*?<\/script>\s*/gi, '')
+
+  const bodyHtml = [
+    `<div class="print:hidden" aria-hidden="true" style="position: fixed; inset: 0; z-index: 2; pointer-events: none; opacity: 0.048; mix-blend-mode: multiply; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E&quot;); background-size: 120px 120px; background-repeat: repeat;"></div>`,
+    `<div class="cs-page-shell min-h-screen">`,
+    `  <nav class="nav-glass sticky top-0 z-50 relative border-b border-cream-300/20 shadow-[0_4px_7px_-2px_rgba(43,37,32,0.34)] print:hidden">`,
+    `    <div class="flex h-16 w-full items-center justify-between px-3 sm:px-4 md:px-6 lg:px-8 max-w-7xl mx-auto">`,
+    `      <a href="/" class="flex min-w-0 shrink-0 items-center gap-2 font-semibold text-lg tracking-tight text-camel-800">`,
+    `        Coursing Stats`,
+    `      </a>`,
+    `      <div class="flex items-center gap-4 sm:gap-6 text-sm font-medium text-old-money-700">`,
+    `        <a href="/competitions" class="hover:text-camel-800 transition-colors">Соревнования</a>`,
+    `        <a href="/shows" class="hover:text-camel-800 transition-colors">Выставки</a>`,
+    `        <a href="/speed-records" class="hover:text-camel-800 transition-colors">Донино</a>`,
+    `        <a href="/guide" class="hover:text-camel-800 transition-colors">Справочник</a>`,
+    `        <a href="/about" class="hover:text-camel-800 transition-colors">О проекте</a>`,
+    `      </div>`,
+    `    </div>`,
+    `  </nav>`,
+    `  <div class="fixed inset-0 z-40 overflow-hidden">`,
+    `    <picture>`,
+    `      <source srcset="/assets/errors/404-dogs-mobile.png" media="(max-width: 768px)">`,
+    `      <img src="/assets/errors/404-dogs.png" alt="Силуэты борзых" class="absolute top-16 left-0 right-0 bottom-0 h-full w-full object-cover">`,
+    `    </picture>`,
+    `  </div>`,
+    `</div>`,
+  ].join('\n')
+
+  html = setRootBody(html, bodyHtml)
+  return html
+}
+
 /** Patch SPA shell: title, description, canonical, OG/Twitter, optional JSON-LD, #root body. */
 export function applyMetaToSpaShell(spaHtml: string, options: ApplyMetaOptions): string {
   const ogImage = options.ogImage || `${SITE_ORIGIN}/og-image.svg`
@@ -342,13 +404,15 @@ export function dogMetaFromProfile(profile: {
     .filter((t): t is string => Boolean(t))
     .slice(0, 5)
 
+  const medalSummary = gold > 0 ? `${gold} побед (золото)` : medals.length > 0 ? medals.join(', ') : ''
+
   const title = breed
-    ? `${name} (${breed}) — статистика курсинг, бега, выставки | Coursing Stats`
-    : `${name} — статистика курсинг, бега, выставки | Coursing Stats`
+    ? `${name} (${breed}) — профиль, медали и результаты забегов | Coursing Stats`
+    : `${name} — профиль, медали и результаты забегов | Coursing Stats`
   const description =
     facts.length > 0
-      ? `${name}${breed ? ` (${breed})` : ''}: ${facts.join('; ')}. Статистика на Coursing Stats.`
-      : `Статистика собаки ${name}${breed ? ` (${breed})` : ''}: курсинг, бега борзых, выставки и Донино.`
+      ? `${name}${breed ? ` (${breed})` : ''}: ${medalSummary ? `${medalSummary}, ` : ''}${facts.join('; ')}. Профиль спортивной карьеры собаки, результаты забегов и оценки судей на Coursing Stats.`
+      : `Профиль спортивной карьеры и результаты собаки ${name}${breed ? ` (${breed})` : ''}: курсинг, бега борзых, медали и рекорды на Coursing Stats.`
 
   return {
     title,
@@ -382,12 +446,12 @@ export function dogMetaFromShowRanking(entry: {
   }
 
   const title = breed
-    ? `${name} (${breed}) — выставки РКФ | Coursing Stats`
-    : `${name} — выставки РКФ | Coursing Stats`
+    ? `${name} (${breed}) — выставочная карьера и награды РКФ | Coursing Stats`
+    : `${name} — выставочная карьера и награды РКФ | Coursing Stats`
   const description =
     facts.length > 0
-      ? `${name}${breed ? ` (${breed})` : ''}: ${facts.join('; ')}. Профиль на Coursing Stats.`
-      : `Выставочный профиль ${name}${breed ? ` (${breed})` : ''} на Coursing Stats.`
+      ? `${name}${breed ? ` (${breed})` : ''}: ${facts.join('; ')}. Профиль выставочной карьеры, оценки экспертов и награды РКФ на Coursing Stats.`
+      : `Выставочный профиль и награды собаки ${name}${breed ? ` (${breed})` : ''} на выставках РКФ на Coursing Stats.`
 
   return {
     title,
@@ -446,13 +510,13 @@ export function eventMetaFromEntry(entry: {
   const kind = entry.competition_kind || entry.event_type || 'курсинг'
   const n = entry.result_count
   const title = date
-    ? `${headline} — ${date} | Coursing Stats`
-    : `${headline} | Coursing Stats`
+    ? `${headline} — результаты соревнований (${date}) | Coursing Stats`
+    : `${headline} — результаты соревнований | Coursing Stats`
   const description = [
-    `Результаты: ${kind}${date ? ` ${date}` : ''}`,
+    `Результаты забегов: ${kind}${date ? ` от ${date}` : ''}`,
     location ? location : null,
     n != null && n > 0 ? `${n} участников` : null,
-    'Протокол на Coursing Stats.',
+    'Баллы за забеги, победители по породам и сертификаты на Coursing Stats.',
   ]
     .filter(Boolean)
     .join('. ')
@@ -497,11 +561,11 @@ export function sportJudgeMeta(judge: {
     judge.unique_breeds != null ? `${judge.unique_breeds} пород` : null,
     judge.unique_dogs != null ? `${judge.unique_dogs} собак` : null,
   ].filter(Boolean)
-  const title = `${name} — судья по курсингу и бегам борзых | Coursing Stats`
+  const title = `Судья ${name} — статистика курсинга и бегов борзых | Coursing Stats`
   const description =
     facts.length > 0
-      ? `Судья по курсингу и бегам ${name}: статистика забегов (${facts.join(', ')}), судимые породы и оценки собак на Coursing Stats.`
-      : `Судья по курсингу и бегам борзых ${name}: профиль, статистика судейства и судимые породы на Coursing Stats.`
+      ? `Судья по курсингу и бегам борзых ${name}: статистика судейства (${facts.join(', ')}), судимые породы, оценки собак и история стартов на Coursing Stats.`
+      : `Судья по курсингу и бегам борзых ${name}: профиль, статистика судейства, оценки собак и судимые породы на Coursing Stats.`
   return {
     title,
     description,
@@ -597,10 +661,10 @@ export function showJudgeMeta(judge: {
     judge.total_judged != null ? `${judge.total_judged} оценок` : null,
     judge.unique_breeds != null ? `${judge.unique_breeds} пород` : null,
   ].filter(Boolean)
-  const title = `${name} — судья РКФ: статистика выставок, породы, строгость оценок | Coursing Stats`
+  const title = `Судья РКФ ${name} — статистика выставок, строгость оценок и породы | Coursing Stats`
   const description =
     facts.length > 0
-      ? `Судья РКФ / FCI ${name}: статистика судейства на выставках собак (${facts.join(', ')}), строгость оценок (% отлично), породы и история судейства.`
+      ? `Судья РКФ / FCI ${name}: статистика судейства на выставках собак (${facts.join(', ')}), строгость оценок (% отлично), любимые породы и история выставок на Coursing Stats.`
       : `Судья РКФ / FCI ${name}: статистика судейства на выставках собак, строгость оценок (% отлично), породы и история судейства на Coursing Stats.`
   return {
     title,

@@ -1,12 +1,11 @@
-import * as Sentry from '@sentry/react';
-
-export function initSentry() {
+export async function initSentry() {
   const dsn = import.meta.env.VITE_SENTRY_DSN;
   
   if (!dsn) {
-    console.debug('Sentry DSN not found, skipping Sentry initialization');
     return;
   }
+
+  const Sentry = await import('@sentry/react');
 
   Sentry.init({
     dsn,

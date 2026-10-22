@@ -30,9 +30,8 @@ export function HomeBreedCarouselPager({
 
   return (
     <div className="mt-auto border-t border-old-money-100">
-      <div
-        className="flex items-center justify-center gap-1.5 px-3 py-2"
-        role="tablist"
+      <nav
+        className="flex items-center justify-center gap-0.5 px-3 py-1"
         aria-label={ariaLabel}
       >
         {dots.map((dot, i) => {
@@ -41,20 +40,23 @@ export function HomeBreedCarouselPager({
             <button
               key={dot.key}
               type="button"
-              role="tab"
-              aria-selected={active}
               aria-label={dot.label}
               title={dot.label}
-              className={`h-1.5 rounded-full transition-all duration-300 ${
-                active
-                  ? 'w-4 bg-camel-500'
-                  : 'w-1.5 bg-old-money-300 hover:bg-old-money-400'
-              }`}
+              className="inline-flex min-h-[44px] min-w-[36px] items-center justify-center px-1 py-2 focus:outline-none"
               onClick={() => go(i)}
-            />
+            >
+              <span
+                className={`h-1.5 rounded-full transition-all duration-300 ${
+                  active
+                    ? 'w-4 bg-camel-500'
+                    : 'w-1.5 bg-old-money-300 hover:bg-old-money-400'
+                }`}
+                aria-hidden="true"
+              />
+            </button>
           )
         })}
-      </div>
+      </nav>
 
       {autoplay && (
         <>

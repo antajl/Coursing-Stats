@@ -176,15 +176,25 @@ export default function HomeHeroStage({ children, metrics, onCloseMetrics }: Hom
       aria-label="Главный экран"
     >
       <div ref={mediaRef} className="home-v2-stage-media block" aria-hidden>
-        <img
-          src="/assets/hero/background.webp"
-          alt=""
-          role="presentation"
-          aria-hidden="true"
-          className="home-v2-stage-layer"
-          loading="eager"
-          fetchPriority="high"
-        />
+        <picture>
+          <source
+            media="(max-width: 768px)"
+            srcSet="/assets/hero/background-mobile.webp"
+            width={820}
+            height={431}
+          />
+          <img
+            src="/assets/hero/background.webp"
+            width={1731}
+            height={909}
+            alt=""
+            role="presentation"
+            aria-hidden="true"
+            className="home-v2-stage-layer"
+            loading="eager"
+            fetchPriority="high"
+          />
+        </picture>
       </div>
 
       <div

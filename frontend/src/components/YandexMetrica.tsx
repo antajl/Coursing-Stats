@@ -40,7 +40,7 @@ export function YandexMetrica() {
         `}
       </script>
       <noscript>
-        {`<div><img src="https://mc.yandex.ru/watch/${YANDEX_METRICA_ID}" style="position:absolute; left:-9999px;" alt="" role="presentation" aria-hidden="true" /></div>`}
+        {`<div><img src="https://mc.yandex.ru/watch/${YANDEX_METRICA_ID}" width="1" height="1" style="position:absolute; left:-9999px;" alt="" role="presentation" aria-hidden="true" /></div>`}
       </noscript>
     </Helmet>
   )

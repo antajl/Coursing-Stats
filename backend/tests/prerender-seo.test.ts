@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest'
 import {
   applyMetaToSpaShell,
   breadcrumbJsonLd,
+  build404Html,
   buildDogBodyHtml,
   buildHubBodyHtml,
   buildNeutralSpaShell,
@@ -25,6 +26,19 @@ const SPA_SHELL = `<!doctype html>
 </html>`
 
 describe('prerender-seo helpers', () => {
+  it('build404Html generates standalone 404 with noindex, no canonical, and 404 artwork', () => {
+    const html = build404Html(SPA_SHELL)
+    expect(html).toContain('<title>Страница не найдена | Coursing Stats</title>')
+    expect(html).toContain('<meta name="robots" content="noindex, nofollow" />')
+    expect(html).not.toMatch(/rel=["']canonical["']/)
+    expect(html).not.toContain('src="/assets/index-abc123.js"')
+    expect(html).toContain('href="/assets/index-abc123.css"')
+    expect(html).toContain('404-dogs.png')
+    expect(html).toContain('404-dogs-mobile.png')
+    expect(html).toContain('Coursing Stats')
+    expect(html).toContain('href="/competitions"')
+  })
+
   it('escapeHtml escapes markup characters', () => {
     expect(escapeHtml(`A & B <"c">`)).toBe('A &amp; B &lt;&quot;c&quot;&gt;')
   })
@@ -142,13 +156,14 @@ describe('prerender-seo helpers', () => {
     expect(meta.h1).toBe('ЧРКФ Курсинг')
   })
 
-  it('HUB_PAGES mid-tail: Донино + procoursing without stuffing', () => {
+  it('HUB_PAGES: clean brand descriptions without procoursing or technical jargon', () => {
     const home = HUB_PAGES.find((h) => h.path === '/')!
     const competitions = HUB_PAGES.find((h) => h.path === '/competitions')!
     const donino = HUB_PAGES.find((h) => h.path === '/speed-records')!
-    expect(home.description.toLowerCase()).toContain('procoursing')
-    expect(home.description.toLowerCase()).toContain('агрегатор')
-    expect(competitions.description.toLowerCase()).toContain('procoursing')
+    expect(home.description.toLowerCase()).not.toContain('procoursing')
+    expect(home.description.toLowerCase()).not.toContain('агрегатор')
+    expect(competitions.description.toLowerCase()).not.toContain('procoursing')
+    expect(home.description).toMatch(/карьера собаки|награды|медали|рейтинг/i)
     expect(competitions.description).toMatch(/медал/i)
     expect(competitions.description).toMatch(/CS|очк/i)
     expect(donino.title.toLowerCase()).toContain('донино')

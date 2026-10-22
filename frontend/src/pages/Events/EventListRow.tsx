@@ -6,7 +6,6 @@ import {
   DISCIPLINE_BORDER,
   formatRowDateParts,
   getEventHeadline,
-  getEventMeta,
   isEventCancelled,
   isImportantCompetition,
   parseJudgeNames,
@@ -29,12 +28,18 @@ export default function EventListRow({ event }: EventListRowProps) {
       : `${dateParts.day} ${dateParts.month}.`
     : null
   const judgeNames = parseJudgeNames(event.judges)
-  const participants = event.participants_count ?? 0
+  const participants =
+    (typeof event.participants_count === 'number' && event.participants_count > 0)
+      ? event.participants_count
+      : (typeof event.result_count === 'number' && event.result_count > 0)
+        ? event.result_count
+        : 0
   const visibleJudges = judgeNames.slice(0, 4)
   const extraJudges = judgeNames.length - visibleJudges.length
   const cancelled = isEventCancelled(event)
   const TrophyIcon = Icons.championship
   const PawIcon = Icons.paw
+  const LocationIcon = Icons.location
   const procoursingUrl = normalizeProcoursingUrl(event.results_url)
 
   const showJudgesColumn = visibleJudges.length > 0
@@ -88,18 +93,24 @@ export default function EventListRow({ event }: EventListRowProps) {
                 Отменён
               </span>
             )}
-            <span className="line-clamp-2 min-w-0">{getEventHeadline(event)}</span>
+            <span className="break-words min-w-0">{getEventHeadline(event)}</span>
           </div>
           {participantsBadge}
         </div>
-        {getEventMeta(event) && (
-          <div className="text-xs text-charcoal-500 truncate mt-0.5" title={getEventMeta(event)}>
-            {getEventMeta(event)}
+        {event.location && (
+          <div className="mt-1 flex items-start gap-1 text-xs text-charcoal-700">
+            <LocationIcon className="h-3.5 w-3.5 shrink-0 mt-0.5 text-camel-600" strokeWidth={1.75} />
+            <span className="font-medium text-charcoal-800 break-words leading-tight">{event.location}</span>
+          </div>
+        )}
+        {event.host_club && event.host_club !== event.location && (
+          <div className="mt-0.5 text-[11px] text-charcoal-500 break-words leading-tight pl-4 sm:pl-0">
+            {event.host_club}
           </div>
         )}
         {visibleJudges.length > 0 && (
           <div
-            className="text-[11px] text-charcoal-500 truncate sm:hidden mt-0.5"
+            className="mt-0.5 text-[11px] text-charcoal-500 break-words leading-tight sm:hidden pl-4 sm:pl-0"
             title={formatCompetitionJudgesWithRoles(event.judges)}
           >
             {formatCompetitionJudgesWithRoles(event.judges)}

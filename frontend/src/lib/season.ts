@@ -1,3 +1,47 @@
+/**
+ * Дефолтный активный сезон для фолбэка (пока список доступных годов загружается).
+ */
+export const DEFAULT_ACTIVE_SEASON = '2026'
+
+/**
+ * Определение активного спортивного сезона с защитой от пустого января / межсезонья.
+ * Если на календаре наступил новый год (например, 2027), но в доступных годах
+ * (с реальными протоколами соревнований/выставок) его ещё нет,
+ * функция возвращает последний год с фактическими данными (например, 2026).
+ */
+export function resolveActiveSeason(
+  availableYears?: (string | number)[] | null,
+  calendarYear: number = new Date().getFullYear(),
+): string {
+  const currentStr = String(calendarYear)
+  if (!availableYears || availableYears.length === 0) {
+    return DEFAULT_ACTIVE_SEASON
+  }
+  const strYears = availableYears.map(String).filter(Boolean)
+  if (strYears.includes(currentStr)) {
+    return currentStr
+  }
+  // Находим самый свежий год с фактическими данными
+  const sorted = [...strYears].sort((a, b) => Number(b) - Number(a))
+  return sorted[0] || DEFAULT_ACTIVE_SEASON
+}
+
+/**
+ * Извлекает начальное значение фильтра года из URL query parameters.
+ * Если параметр ?year отсутствует в URL, возвращает активный сезон (дефолт).
+ * Если передан ?year=all или ?year=, возвращает '' (все года).
+ * Если передан конкретный год ?year=2024, возвращает '2024'.
+ */
+export function initialSeasonYearFilter(
+  searchParams: URLSearchParams,
+  activeSeason: string = DEFAULT_ACTIVE_SEASON,
+): string {
+  const fromUrl = searchParams.get('year')
+  if (fromUrl === null) return activeSeason
+  if (fromUrl === 'all' || fromUrl === '') return ''
+  return fromUrl
+}
+
 function yearRangeBadge(
   from: number,
   to: number,

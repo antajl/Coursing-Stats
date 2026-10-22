@@ -32,6 +32,7 @@ import {
 import { toPng } from 'html-to-image'
 import LoadingCard from '../../components/LoadingCard'
 import ErrorState from '../../components/ErrorState'
+import NotFound from '../NotFound'
 import { SEO } from '../../components/SEO'
 import { JsonLd, breadcrumbListSchema } from '../../components/JsonLd'
 import { useYandexGoal } from '../../components/YandexMetrica'
@@ -416,20 +417,7 @@ export default function DogProfile() {
   }
 
   if (!dog && !showDog) {
-    return (
-      <ErrorState
-        title="Собака не найдена"
-        message={`ID: ${competitionId || showRouteDogId || '—'}`}
-        action={
-          <Link
-            to={isLegacyShowRoute || !dog ? '/shows?tab=ranking' : '/competitions?tab=ranking'}
-            className="rounded-xl border-2 border-camel-300 bg-white px-4 py-2 text-sm font-semibold text-camel-700 transition-all hover:border-camel-400 hover:bg-camel-50"
-          >
-            К рейтингу
-          </Link>
-        }
-      />
-    )
+    return <NotFound />
   }
 
   const headerDog = dog ?? {
@@ -488,16 +476,18 @@ export default function DogProfile() {
   if (hasCoursingRecords && coursingStats?.bestTime != null) {
     seoFacts.push(`350 м ${coursingStats.bestTime.toFixed(2)} с`)
   }
+  const totalGold = (coursing?.gold || 0) + (racing?.gold || 0)
+  const medalText = totalGold > 0 ? `${totalGold} побед (золото)` : ''
   const description =
     seoFacts.length > 0
-      ? `${dogName} (${dogBreed}): ${seoFacts.join('; ')}. Статистика на Coursing Stats.`
-      : `Статистика собаки ${dogName} (${dogBreed}): курсинг, бега борзых, выставки и Донино.`
-  const keywords = [dogName, dogBreed, 'курсинг', 'бега борзых', 'выставки', 'Донино', 'статистика', dogTitles, 'РКФ']
+      ? `${dogName} (${dogBreed}): ${medalText ? `${medalText}, ` : ''}${seoFacts.join('; ')}. Спортивная карьера, медали и результаты забегов на Coursing Stats.`
+      : `Спортивная карьера и результаты собаки ${dogName} (${dogBreed}): курсинг, бега борзых, медали и рекорды на Coursing Stats.`
+  const keywords = [dogName, dogBreed, 'курсинг', 'бега борзых', 'рейтинг борзых 2026', 'выставки', 'Донино', 'статистика', dogTitles, 'РКФ']
     .filter(Boolean)
     .join(', ')
   const seoTitle = dogBreed
-    ? `${dogName} (${dogBreed}) — статистика курсинг, бега, выставки`
-    : `${dogName} — статистика курсинг, бега, выставки`
+    ? `${dogName} (${dogBreed}) — профиль, медали и результаты забегов`
+    : `${dogName} — профиль, медали и результаты забегов`
 
   const visibleSpeedHistory = showAllSpeedHistory
     ? (speedStats?.history ?? [])

@@ -13,6 +13,7 @@ import {
   SITE_ORIGIN,
   applyMetaToSpaShell,
   breadcrumbJsonLd,
+  build404Html,
   buildDogBodyHtml,
   buildHubBodyHtml,
   buildNeutralSpaShell,
@@ -578,6 +579,13 @@ function main(): void {
   // and do NOT use `/* /….html 200` (CF pretty-URLs rewrite → visible 308 to /name).
   const shellForPages = buildNeutralSpaShell(spaHtml)
   writeHtml(path.join(DIST, 'spa-shell', 'index.html'), shellForPages)
+
+  // Standalone 404 for Yandex Object Storage (error_document: 404.html)
+  const html404 = build404Html(spaHtml)
+  writeHtml(path.join(DIST, '404.html'), html404)
+  const public404 = path.join(ROOT, 'frontend/public/404.html')
+  fs.writeFileSync(public404, html404, 'utf8')
+  console.log(`[prerender-seo] Generated 404.html (${Buffer.byteLength(html404, 'utf8')} bytes)`)
 
   const hubs = prerenderHubs(shellForPages)
   const profilesDir = resolveProfilesDir()

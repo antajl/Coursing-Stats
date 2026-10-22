@@ -65,10 +65,10 @@ export default function Home() {
     return (
       <div className="home-v2" ref={pageRef}>
         <SEO
-          title="Статистика курсинга, бегов и выставок собак"
-          description="Coursing Stats — агрегатор результатов курсинга, бегов борзых и выставок РКФ (в т.ч. протоколы с procoursing.ru): карьера собаки, награды и рейтинги с 2015 года."
+          title="Coursing Stats — Рейтинг и статистика собак: курсинг, бега, выставки"
+          description="Статистика и рейтинги собак в России: курсинг и бега борзых, рекорды Донино, выставки РКФ. Карьера собаки, награды, медали и рейтинг с 2015 года."
           canonicalUrl="https://coursing-stats.ru/"
-          keywords="курсинг, бега борзых, статистика курсинга, рейтинг собак, выставки РКФ, procoursing"
+          keywords="курсинг, бега борзых, статистика курсинга, рейтинг собак 2026, выставки РКФ, донино"
         />
         <div className="wrap home-v2-body">
           <div className="home-v2-error" role="alert" aria-live="assertive">
@@ -84,10 +84,10 @@ export default function Home() {
   return (
     <div className="home-v2" ref={pageRef}>
       <SEO
-        title="Статистика курсинга, бегов и выставок собак"
-        description="Coursing Stats — агрегатор результатов курсинга, бегов борзых и выставок РКФ (в т.ч. протоколы с procoursing.ru): карьера собаки, награды и рейтинги с 2015 года."
+        title="Coursing Stats — Рейтинг и статистика собак: курсинг, бега, выставки"
+        description="Статистика и рейтинги собак в России: курсинг и бега борзых, рекорды Донино, выставки РКФ. Карьера собаки, награды, медали и рейтинг с 2015 года."
         canonicalUrl="https://coursing-stats.ru/"
-        keywords="курсинг, бега борзых, статистика курсинга, рейтинг собак, выставки РКФ, procoursing"
+        keywords="курсинг, бега борзых, статистика курсинга, рейтинг собак 2026, выставки РКФ, донино"
       />
       <JsonLd data={organizationSchema} />
       <JsonLd data={webSiteSchema} />

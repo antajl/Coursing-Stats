@@ -15,6 +15,8 @@ export interface CalendarEvent {
   has_results?: boolean
   judges?: string | null
   participants_count?: number
+  result_count?: number
+  results_file?: string | null
 }
 
 export const DISCIPLINE_BORDER: Record<string, string> = {

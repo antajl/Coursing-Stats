@@ -39,8 +39,9 @@ function DoninoRecordsSectionInner({
             <div className="donino-home-list" role="list" aria-label="Рекорды скорости на замере">
               {doninoSpeedRecords.length > 0 ? (
                 doninoSpeedRecords.map((record) => (
+                  <div key={`speed-${record.breed}-${record.name}`} role="listitem">
                   <DoninoHomeRecordRow
-                    key={`speed-${record.breed}-${record.name}`}
+
                     mode="speed"
                     name={record.name}
                     breed={record.breed}
@@ -51,6 +52,7 @@ function DoninoRecordsSectionInner({
                     speedKmh={record.speed_km_h}
                     trackType={record.track_type}
                   />
+                  </div>
                 ))
               ) : (
                 <p className="donino-home-empty" role="status">Нет данных</p>
@@ -62,8 +64,9 @@ function DoninoRecordsSectionInner({
             <div className="donino-home-list" role="list" aria-label="Рекорды времени на бегах 350 м">
               {doninoCoursingRanked.length > 0 ? (
                 doninoCoursingRanked.map((record) => (
+                  <div key={`coursing-${record.breed}-${record.name}`} role="listitem">
                   <DoninoHomeRecordRow
-                    key={`coursing-${record.breed}-${record.name}`}
+
                     mode="coursing"
                     name={record.name}
                     breed={record.breed}
@@ -74,6 +77,7 @@ function DoninoRecordsSectionInner({
                     timeSeconds={record.time_seconds}
                     trackType={record.track_type}
                   />
+                  </div>
                 ))
               ) : (
                 <p className="donino-home-empty" role="status">Нет данных</p>

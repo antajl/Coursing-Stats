@@ -17,7 +17,10 @@
   text-decoration:none; color:inherit;
   transition:background-color .15s ease;
 }
-.donino-home-row:last-child{border-bottom:none;}
+.donino-home-row:last-child,
+.donino-home-list > [role="listitem"]:last-child .donino-home-row {
+  border-bottom: none;
+}
 .donino-home-row--skeleton{pointer-events:none;}
 .donino-home-row-breed{
   font-size:11px; font-weight:500; letter-spacing:.01em;

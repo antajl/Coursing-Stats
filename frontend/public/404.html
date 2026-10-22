@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicons/favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/svg+xml" href="/favicons/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#F5F1E8" />
+    <title>Страница не найдена | Coursing Stats</title>
+    <meta name="description" content="Страница не найдена." />
+    <meta name="keywords" content="курсинг, бега борзых, статистика курсинга, рейтинг собак, рекорды Донино, выставки, РКФ" />
+    <meta name="author" content="Coursing Stats" />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3SKPEE7PZ0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-3SKPEE7PZ0');
+    </script>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Страница не найдена | Coursing Stats" />
+    <meta property="og:description" content="Страница не найдена." />
+    <meta property="og:locale" content="ru_RU" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://coursing-stats.ru/" />
+    <meta property="twitter:title" content="Coursing Stats — статистика курсинга, бегов и выставок" />
+    <meta property="twitter:description" content="Рейтинги собак: курсинг и бега, рекорды Донино, выставки РКФ." />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Montserrat:ital,wght@1,400&display=swap" rel="stylesheet">
+    <script>
+      // 1. Очищаем параметр ?_csrb из адресной строки после перезагрузки с cache-bust (для чистого URL)
+      (function () {
+        try {
+          if (location.search.indexOf('_csrb=') !== -1) {
+            var u = new URL(location.href);
+            u.searchParams.delete('_csrb');
+            var cleanUrl = u.pathname + (u.search ? u.search : '') + u.hash;
+            history.replaceState(history.state, '', cleanUrl);
+          }
+        } catch (e) {}
+
+        // 2. Если /assets/*.js не загрузился (MIME/HTML после деплоя) — reload с cache-bust.
+        var KEY = 'cs:asset-reload';
+        function reloadOnce() {
+          // Игнорируем поисковых роботов, чтобы не плодить дубли страниц с параметром ?_csrb
+          if (/bot|google|yandex|bing|slurp|crawler|spider|facebookexternalhit|duckduckbot/i.test(navigator.userAgent || '')) return;
+          try {
+            var now = Date.now();
+            var prev = Number(sessionStorage.getItem(KEY) || 0);
+            if (prev && now - prev < 15000) return;
+            sessionStorage.setItem(KEY, String(now));
+          } catch (e1) {}
+          try {
+            var url = new URL(location.href);
+            url.searchParams.set('_csrb', String(Date.now()));
+            location.replace(url.href);
+          } catch (e2) {
+            location.reload();
+          }
+        }
+        window.addEventListener('error', function (e) {
+          var t = e && e.target;
+          if (!t || t.tagName !== 'SCRIPT') return;
+          var src = t.src || '';
+          if (src.indexOf('/assets/') !== -1) reloadOnce();
+        }, true);
+      })();
+    </script>
+    <link rel="stylesheet" crossorigin href="/assets/index-D7O8I66P.css">
+    <meta name="robots" content="noindex, nofollow" />
+  <meta name="twitter:title" content="Страница не найдена | Coursing Stats" />
+  <meta name="twitter:description" content="Страница не найдена." />
+</head>
+  <body>
+    <div id="root"><div class="print:hidden" aria-hidden="true" style="position: fixed; inset: 0; z-index: 2; pointer-events: none; opacity: 0.048; mix-blend-mode: multiply; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E&quot;); background-size: 120px 120px; background-repeat: repeat;"></div>
+<div class="cs-page-shell min-h-screen">
+  <nav class="nav-glass sticky top-0 z-50 relative border-b border-cream-300/20 shadow-[0_4px_7px_-2px_rgba(43,37,32,0.34)] print:hidden">
+    <div class="flex h-16 w-full items-center justify-between px-3 sm:px-4 md:px-6 lg:px-8 max-w-7xl mx-auto">
+      <a href="/" class="flex min-w-0 shrink-0 items-center gap-2 font-semibold text-lg tracking-tight text-camel-800">
+        Coursing Stats
+      </a>
+      <div class="flex items-center gap-4 sm:gap-6 text-sm font-medium text-old-money-700">
+        <a href="/competitions" class="hover:text-camel-800 transition-colors">Соревнования</a>
+        <a href="/shows" class="hover:text-camel-800 transition-colors">Выставки</a>
+        <a href="/speed-records" class="hover:text-camel-800 transition-colors">Донино</a>
+        <a href="/guide" class="hover:text-camel-800 transition-colors">Справочник</a>
+        <a href="/about" class="hover:text-camel-800 transition-colors">О проекте</a>
+      </div>
+    </div>
+  </nav>
+  <div class="fixed inset-0 z-40 overflow-hidden">
+    <picture>
+      <source srcset="/assets/errors/404-dogs-mobile.png" media="(max-width: 768px)">
+      <img src="/assets/errors/404-dogs.png" alt="Силуэты борзых" class="absolute top-16 left-0 right-0 bottom-0 h-full w-full object-cover">
+    </picture>
+  </div>
+</div></div>
+  </body>
+</html>

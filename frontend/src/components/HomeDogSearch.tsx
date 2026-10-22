@@ -220,6 +220,8 @@ export default function HomeDogSearch({ className = '' }: HomeDogSearchProps) {
                 setOpen(false)
               }
             }}
+            role="combobox"
+            aria-haspopup="listbox"
             aria-autocomplete="list"
             aria-controls={listId}
             aria-expanded={open && results.length > 0}
