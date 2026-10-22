@@ -4,7 +4,6 @@ import { useYears, useEvents } from '../../hooks/useApi'
 import { useYandexGoal } from '../../components/YandexMetrica'
 import EmptyState from '../../components/EmptyState'
 import SkeletonLoader from '../../components/SkeletonLoader'
-import { Archive, X } from 'lucide-react'
 import {
   type CalendarEvent,
   groupEventsByMonth,
@@ -21,7 +20,6 @@ import EventsMonthList from './EventsMonthList'
 export default function Events() {
   const [searchParams, setSearchParams] = useSearchParams()
   const { reachGoal } = useYandexGoal()
-  const [isBannerDismissed, setIsBannerDismissed] = useState(false)
   const [filterYear, setFilterYear] = useState(() => searchParams.get('year') || CURRENT_SEASON)
   const [filterMonth, setFilterMonth] = useState(() => {
     const monthParam = searchParams.get('month')
@@ -234,31 +232,9 @@ export default function Events() {
     />
   )
 
-  const archiveBanner = isBannerDismissed ? null : (
-    <div className="mb-4 flex items-start justify-between gap-3 rounded-xl border border-old-money-200/80 bg-cream-50/70 p-3.5 text-xs text-charcoal-700 shadow-xs">
-      <div className="flex items-start gap-3">
-        <Archive className="mt-0.5 h-4 w-4 shrink-0 text-camel-700" aria-hidden />
-        <div className="leading-relaxed">
-          <span className="font-semibold text-charcoal-900">Общественный архив соревнований:</span>{' '}
-          раздел сохраняет спортивную историю забегов на основе официальных публикаций организаторов, секретариатов и архивов ProCoursing.ru.
-          Сведения могут содержать ошибки или быть неполными из-за фрагментарности открытых источников и ручного ведения ранних баз организаторами.
-        </div>
-      </div>
-      <button
-        type="button"
-        onClick={() => setIsBannerDismissed(true)}
-        className="shrink-0 rounded p-1 text-charcoal-400 hover:bg-cream-200/60 hover:text-charcoal-700 transition-colors"
-        aria-label="Закрыть уведомление"
-      >
-        <X className="h-4 w-4" aria-hidden />
-      </button>
-    </div>
-  )
-
   if (eventsLoading) {
     return (
       <div className="max-w-full mx-auto pb-2 sm:pb-4">
-        {archiveBanner}
         <div className="mb-4">{toolbar}</div>
         <SkeletonLoader variant="card" count={6} />
       </div>
@@ -267,7 +243,6 @@ export default function Events() {
 
   return (
     <div className="max-w-full mx-auto pb-2 sm:pb-4">
-      {archiveBanner}
       <div className="mb-4">{toolbar}</div>
 
       {filteredEvents.length === 0 ? (

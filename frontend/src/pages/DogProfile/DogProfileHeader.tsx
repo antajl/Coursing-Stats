@@ -1,6 +1,17 @@
 import { Link } from 'react-router-dom'
-import { Star as StarIcon, Rabbit, Gauge, Sparkles, ArrowRight } from 'lucide-react'
-import { useState } from 'react'
+import {
+  Star as StarIcon,
+  Rabbit,
+  Gauge,
+  Sparkles,
+  ArrowRight,
+  Trophy,
+  Medal,
+  Award,
+  Crown,
+  Zap,
+} from 'lucide-react'
+import { useState, useMemo } from 'react'
 import OwnerCrownName from '../../components/OwnerCrownName'
 import type { DogTitle } from '../../lib/qualificationTitles'
 import { DogProfileAwardsBar } from './DogProfileAwardsBar'
@@ -8,6 +19,7 @@ import { parseDogName } from '../../lib/dogName'
 import { displayBreed } from '../../lib/breedMapping'
 import { useFavorites } from '../../hooks/useFavorites'
 import { createLogger } from '../../lib/logging'
+import HoverTooltip from '../../components/ui/HoverTooltip'
 import StandingPlaceButton, {
   type RankDomain,
   type StandingExplainerInput,
@@ -51,129 +63,6 @@ type DogProfileHeaderProps = {
     racing?: StandingExplainerInput | null
     shows?: StandingExplainerInput | null
   }
-}
-
-function DogStandingHonorCard({
-  ranks,
-  renderPlace,
-  dogBreed,
-}: {
-  ranks: ProfileHeaderRank[]
-  renderPlace: (
-    domain: RankDomain,
-    scope: StandingExplainerScope,
-    value: number | null | undefined,
-    row: ProfileHeaderRank | undefined,
-  ) => React.ReactNode
-  dogBreed?: string
-}) {
-  const activeRanks = ranks.filter(
-    (r) => r.rank != null || r.yearRank != null || r.breedRank != null || r.yearBreedRank != null,
-  )
-
-  if (activeRanks.length === 0) return null
-
-  return (
-    <div className="flex flex-col gap-2 rounded-xl border border-old-money-200/90 bg-cream-50/70 p-3 shadow-xs">
-      <div className="flex items-center justify-between gap-2 border-b border-old-money-200/60 pb-1.5">
-        <span className="text-[11px] font-semibold uppercase tracking-wider text-charcoal-600">
-          Место в рейтинге
-        </span>
-        <span className="text-[10px] text-old-money-500">
-          сезон / всё время
-        </span>
-      </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
-        {activeRanks.map((r) => {
-          const icon =
-            r.key === 'coursing' ? (
-              <Rabbit className="h-4 w-4 text-camel-700" />
-            ) : r.key === 'racing' ? (
-              <Gauge className="h-4 w-4 text-camel-700" />
-            ) : (
-              <Sparkles className="h-4 w-4 text-camel-700" />
-            )
-
-          const label =
-            r.key === 'coursing' ? 'Курсинг' : r.key === 'racing' ? 'Бега' : 'Выставки'
-
-          const rankingLink =
-            r.key === 'shows'
-              ? `/shows?tab=ranking${dogBreed ? `&breed=${encodeURIComponent(dogBreed)}` : ''}`
-              : `/competitions?tab=ranking${dogBreed ? `&breed=${encodeURIComponent(dogBreed)}` : ''}`
-
-          return (
-            <div
-              key={r.key}
-              className="group relative flex flex-col justify-between rounded-lg border border-old-money-200/70 bg-white p-2.5 transition-all hover:border-camel-400 hover:shadow-xs"
-            >
-              <div className="flex items-center justify-between gap-1.5 mb-1.5">
-                <div className="flex items-center gap-1.5">
-                  {icon}
-                  <span className="text-xs font-bold text-charcoal-800">{label}</span>
-                </div>
-                <Link
-                  to={rankingLink}
-                  className="inline-flex items-center text-[10px] font-medium text-camel-700 hover:text-camel-900 group-hover:underline"
-                  title={`Открыть рейтинг: ${label}`}
-                >
-                  <span>Топ</span>
-                  <ArrowRight className="h-3 w-3 ml-0.5" />
-                </Link>
-              </div>
-
-              {/* Порода (сезонная и общая) */}
-              <div className="space-y-1 text-xs">
-                <div className="flex items-center justify-between text-[11px]">
-                  <span className="text-charcoal-500">В породе:</span>
-                  <div className="flex items-center gap-1.5 font-semibold">
-                    {r.yearBreedRank != null ? (
-                      <span className="text-camel-800">
-                        {renderPlace(r.key, 'yearBreed', r.yearBreedRank, r)}
-                        <span className="text-[9px] font-normal text-charcoal-400 ml-0.5">год</span>
-                      </span>
-                    ) : null}
-                    {r.breedRank != null ? (
-                      <span className="text-charcoal-600">
-                        {renderPlace(r.key, 'breed', r.breedRank, r)}
-                        <span className="text-[9px] font-normal text-charcoal-400 ml-0.5">все</span>
-                      </span>
-                    ) : null}
-                    {r.yearBreedRank == null && r.breedRank == null && (
-                      <span className="text-charcoal-400">—</span>
-                    )}
-                  </div>
-                </div>
-
-                {/* Общий зачёт */}
-                <div className="flex items-center justify-between text-[10px] text-charcoal-400 border-t border-old-money-100 pt-1">
-                  <span>Общий:</span>
-                  <div className="flex items-center gap-1.5">
-                    {r.yearRank != null ? (
-                      <span>
-                        {renderPlace(r.key, 'year', r.yearRank, r)}
-                        <span className="text-[9px] text-charcoal-400 ml-0.5">год</span>
-                      </span>
-                    ) : null}
-                    {r.rank != null ? (
-                      <span>
-                        {renderPlace(r.key, 'overall', r.rank, r)}
-                        <span className="text-[9px] text-charcoal-400 ml-0.5">все</span>
-                      </span>
-                    ) : null}
-                    {r.yearRank == null && r.rank == null && (
-                      <span>—</span>
-                    )}
-                  </div>
-                </div>
-              </div>
-            </div>
-          )
-        })}
-      </div>
-    </div>
-  )
 }
 
 export function DogProfileHeader({
@@ -246,10 +135,170 @@ export function DogProfileHeader({
     }
   }
 
+  const achievements = useMemo(() => {
+    const items: Array<{
+      id: string
+      label: string
+      sublabel?: string
+      icon: React.ReactNode
+      color: string
+      tooltip: string
+    }> = []
+
+    const coursing = ranks?.find((r) => r.key === 'coursing')
+    const racing = ranks?.find((r) => r.key === 'racing')
+    const shows = ranks?.find((r) => r.key === 'shows')
+
+    // 1. Подиум в породе (сезон курсинга)
+    if (coursing?.yearBreedRank === 1) {
+      items.push({
+        id: 'coursing-breed-1',
+        label: 'Топ-1 в породе',
+        sublabel: 'Курсинг 2026',
+        icon: <Trophy className="h-3.5 w-3.5 text-amber-600 shrink-0" />,
+        color: 'bg-amber-50 text-amber-950 border border-amber-300/90 shadow-2xs',
+        tooltip: '№1 среди всех собак породы в сезоне по курсингу',
+      })
+    } else if (coursing?.yearBreedRank === 2) {
+      items.push({
+        id: 'coursing-breed-2',
+        label: 'Топ-2 в породе',
+        sublabel: 'Курсинг 2026',
+        icon: <Medal className="h-3.5 w-3.5 text-slate-600 shrink-0" />,
+        color: 'bg-slate-50 text-slate-900 border border-slate-300/90 shadow-2xs',
+        tooltip: '№2 среди всех собак породы в сезоне по курсингу',
+      })
+    } else if (coursing?.yearBreedRank === 3) {
+      items.push({
+        id: 'coursing-breed-3',
+        label: 'Топ-3 в породе',
+        sublabel: 'Курсинг 2026',
+        icon: <Medal className="h-3.5 w-3.5 text-amber-700 shrink-0" />,
+        color: 'bg-orange-50 text-amber-950 border border-amber-300/80 shadow-2xs',
+        tooltip: '№3 среди всех собак породы в сезоне по курсингу',
+      })
+    } else if (coursing?.yearBreedRank && coursing.yearBreedRank <= 5) {
+      items.push({
+        id: 'coursing-breed-top5',
+        label: `Топ-${coursing.yearBreedRank} в породе`,
+        sublabel: 'Курсинг 2026',
+        icon: <Award className="h-3.5 w-3.5 text-camel-700 shrink-0" />,
+        color: 'bg-cream-100 text-charcoal-800 border border-old-money-200/90',
+        tooltip: `Входит в топ-${coursing.yearBreedRank} собак породы в сезоне`,
+      })
+    }
+
+    // 2. Подиум в общем рейтинге сезона (курсинг)
+    if (coursing?.yearRank === 1) {
+      items.push({
+        id: 'coursing-overall-1',
+        label: 'Топ-1 сезона 2026',
+        sublabel: 'Общий зачёт',
+        icon: <Crown className="h-3.5 w-3.5 text-amber-600 shrink-0" />,
+        color: 'bg-amber-100/90 text-amber-950 border border-amber-400 font-bold shadow-2xs',
+        tooltip: 'Абсолютный лидер общего сезона по курсингу среди всех пород',
+      })
+    } else if (coursing?.yearRank === 2) {
+      items.push({
+        id: 'coursing-overall-2',
+        label: 'Топ-2 сезона 2026',
+        sublabel: 'Общий зачёт',
+        icon: <Trophy className="h-3.5 w-3.5 text-slate-600 shrink-0" />,
+        color: 'bg-slate-100 text-slate-900 border border-slate-300 font-semibold shadow-2xs',
+        tooltip: '2 место в общем сезоне по курсингу среди всех пород',
+      })
+    } else if (coursing?.yearRank === 3) {
+      items.push({
+        id: 'coursing-overall-3',
+        label: 'Топ-3 сезона 2026',
+        sublabel: 'Общий зачёт',
+        icon: <Trophy className="h-3.5 w-3.5 text-amber-700 shrink-0" />,
+        color: 'bg-orange-50 text-amber-950 border border-amber-300 font-semibold shadow-2xs',
+        tooltip: '3 место в общем сезоне по курсингу среди всех пород',
+      })
+    } else if (coursing?.yearRank && coursing.yearRank <= 10) {
+      items.push({
+        id: 'coursing-overall-top10',
+        label: `Топ-${coursing.yearRank} сезона`,
+        sublabel: 'Общий зачёт',
+        icon: <Award className="h-3.5 w-3.5 text-camel-700 shrink-0" />,
+        color: 'bg-cream-100 text-charcoal-800 border border-old-money-200/90',
+        tooltip: `Входит в топ-${coursing.yearRank} общего рейтинга сезона`,
+      })
+    }
+
+    // 3. Бега борзых (рейсинг)
+    if (racing?.yearBreedRank && racing.yearBreedRank <= 3) {
+      items.push({
+        id: 'racing-breed-podium',
+        label: `Топ-${racing.yearBreedRank} в бегах`,
+        sublabel: 'Рейсинг 2026',
+        icon: <Zap className="h-3.5 w-3.5 text-forest-600 shrink-0" />,
+        color: 'bg-forest-50 text-forest-900 border border-forest-300 shadow-2xs',
+        tooltip: `${racing.yearBreedRank} место в рейтинге по максимальной скорости в бегах`,
+      })
+    } else if (racing?.yearBreedRank && racing.yearBreedRank <= 10) {
+      items.push({
+        id: 'racing-breed-top10',
+        label: `Топ-${racing.yearBreedRank} в бегах`,
+        sublabel: 'Рейсинг 2026',
+        icon: <Zap className="h-3.5 w-3.5 text-forest-700 shrink-0" />,
+        color: 'bg-forest-50/70 text-forest-800 border border-forest-200',
+        tooltip: `Входит в топ-${racing.yearBreedRank} собак породы по скорости в бегах`,
+      })
+    }
+
+    // 4. Скорость 55+ км/ч (Мастер скорости)
+    const rawSpeed = dog?.racing_stats?.best_speed || dog?.best_speed
+    const speedVal = rawSpeed ? Number(rawSpeed) : null
+    if (speedVal && speedVal >= 55) {
+      items.push({
+        id: 'speed-master',
+        label: 'Мастер скорости',
+        sublabel: `${speedVal.toFixed(1)} км/ч`,
+        icon: <Zap className="h-3.5 w-3.5 text-sky-600 shrink-0" />,
+        color: 'bg-sky-50 text-sky-950 border border-sky-300 shadow-2xs',
+        tooltip: `Зафиксирована выдающаяся скорость в бегах: ${speedVal.toFixed(1)} км/ч`,
+      })
+    }
+
+    // 5. Выставки (если топ в породе)
+    if (shows?.yearBreedRank && shows.yearBreedRank <= 3) {
+      items.push({
+        id: 'shows-breed-podium',
+        label: `Топ-${shows.yearBreedRank} выставок`,
+        sublabel: 'РКФ',
+        icon: <Sparkles className="h-3.5 w-3.5 text-camel-700 shrink-0" />,
+        color: 'bg-cream-100 text-charcoal-800 border border-old-money-200',
+        tooltip: `${shows.yearBreedRank} место в рейтинге выставок РКФ в породе`,
+      })
+    }
+
+    // 6. Высшие титулы
+    const hasMajorTitle = competitionTitles?.some((t) =>
+      ['ЧРКФ РК', 'ПКР РК', 'ПЧРКФ РК', 'Чемпион РКФ'].includes(t.title),
+    )
+    if (hasMajorTitle) {
+      const topTitle = competitionTitles.find((t) =>
+        ['ПКР РК', 'ЧРКФ РК', 'ПЧРКФ РК'].includes(t.title),
+      )?.title || 'Чемпион'
+      items.push({
+        id: 'major-champion',
+        label: topTitle,
+        sublabel: 'Титул',
+        icon: <Award className="h-3.5 w-3.5 text-amber-700 shrink-0" />,
+        color: 'bg-amber-50 text-amber-950 border border-amber-300 shadow-2xs',
+        tooltip: 'Обладатель высших сертификатных и чемпионских титулов',
+      })
+    }
+
+    return items
+  }, [ranks, dog, competitionTitles])
+
   return (
     <div className="relative mb-6">
       <div className="relative min-w-0 rounded-xl border border-old-money-200/80 bg-white p-4 sm:p-5 md:p-8">
-        <div className="flex items-start gap-4">
+        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
           <div className="min-w-0 flex-1">
             <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
               <OwnerCrownName name={primary} dogId={dog.id} kind="competition">
@@ -346,17 +395,24 @@ export function DogProfileHeader({
               </a>
             </div>
           </div>
-        </div>
 
-        {hasRanks ? (
-          <div className="mt-4" aria-label="Места в рейтингах">
-            <DogStandingHonorCard
-              ranks={ranks}
-              renderPlace={renderPlace}
-              dogBreed={dog.breed}
-            />
-          </div>
-        ) : null}
+          {/* Right column on desktop: Achievement Badges */}
+          {achievements.length > 0 && (
+            <div className="flex flex-wrap items-center justify-start lg:justify-end gap-1.5 sm:gap-2 max-w-xl self-start">
+              {achievements.map((ach) => (
+                <HoverTooltip key={ach.id} label={ach.tooltip}>
+                  <div className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold ${ach.color}`}>
+                    {ach.icon}
+                    <span>{ach.label}</span>
+                    {ach.sublabel && (
+                      <span className="text-[10px] font-normal opacity-80">· {ach.sublabel}</span>
+                    )}
+                  </div>
+                </HoverTooltip>
+              ))}
+            </div>
+          )}
+        </div>
 
         {hasTitles && (
           <DogProfileAwardsBar

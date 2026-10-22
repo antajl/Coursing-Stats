@@ -35,6 +35,7 @@ All sheets verified 2026-10-01.
 | [13-racing-standards](sheets/13-racing-standards.md) | Racing standards | Sex, breed classes, quorums |
 | [14-design-system](sheets/14-design-system.md) | Design System | UI Kit, Old Money tokens, desktop & mobile patterns |
 | [15-seo-analytics](sheets/15-seo-analytics.md) | SEO & Search Analytics | Search Console, Yandex Webmaster, mobile user behavior |
+| [16-protocol-template](sheets/16-protocol-template.md) | Protocol Template | Стандарт вёрстки официальных протоколов (HTML / PDF) |
 
 ## Architecture Decision Records (docs/decisions/)
 

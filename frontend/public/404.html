@@ -33,11 +33,19 @@
     <meta property="twitter:title" content="Coursing Stats — статистика курсинга, бегов и выставок" />
     <meta property="twitter:description" content="Рейтинги собак: курсинг и бега, рекорды Донино, выставки РКФ." />
     
+    <!-- Preconnect & Fonts (Non-blocking) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Montserrat:ital,wght@1,400&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Montserrat:ital,wght@1,400&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Montserrat:ital,wght@1,400&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Montserrat:ital,wght@1,400&display=swap">
+    </noscript>
+
+    <!-- Preload Hero Image (LCP Optimization: Mobile & Desktop) -->
+    <link rel="preload" as="image" href="/assets/hero/background-mobile.webp" type="image/webp" media="(max-width: 768px)" fetchpriority="high">
+    <link rel="preload" as="image" href="/assets/hero/background.webp" type="image/webp" media="(min-width: 769px)" fetchpriority="high">
+
     <script>
       // 1. Очищаем параметр ?_csrb из адресной строки после перезагрузки с cache-bust (для чистого URL)
       (function () {
@@ -77,7 +85,7 @@
         }, true);
       })();
     </script>
-    <link rel="stylesheet" crossorigin href="/assets/index-D7O8I66P.css">
+    <link rel="stylesheet" crossorigin href="/assets/index-Bj98GZNB.css">
     <meta name="robots" content="noindex, nofollow" />
   <meta name="twitter:title" content="Страница не найдена | Coursing Stats" />
   <meta name="twitter:description" content="Страница не найдена." />
@@ -105,6 +113,6 @@
       <img src="/assets/errors/404-dogs.png" alt="Силуэты борзых" class="absolute top-16 left-0 right-0 bottom-0 h-full w-full object-cover">
     </picture>
   </div>
-</div></div>
+</div></div>
   </body>
 </html>

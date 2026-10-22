@@ -1,11 +1,14 @@
 import { useMemo, useState } from 'react'
-import { ChevronDown } from 'lucide-react'
+import { ChevronDown, Info } from 'lucide-react'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
 import ToolbarTip from '../../components/toolbar/ToolbarTip'
 import ModernDropdown from '../../components/ui/ModernDropdown'
+import MonthYearDropdown from '../../components/toolbar/MonthYearDropdown'
+import HoverTooltip from '../../components/ui/HoverTooltip'
 import { Icons } from '../../lib/icons'
-import { LEGEND_DOT_COLOR, MONTH_FILTER_OPTIONS } from './eventListUtils'
+import { LEGEND_DOT_COLOR } from './eventListUtils'
+import { resolveActiveSeason } from '../../lib/season'
 import {
   TOOLBAR_CHIP,
   TOOLBAR_CHIP_ACTIVE,
@@ -15,7 +18,7 @@ import {
 
 export type EventsQuickPreset = 'championships' | null
 
-export const CURRENT_SEASON = String(new Date().getFullYear())
+export const CURRENT_SEASON = resolveActiveSeason()
 
 export const DISCIPLINE_OPTIONS = [
   { value: 'coursing', label: 'Курсинг' },
@@ -59,6 +62,26 @@ export type EventsToolbarProps = {
   }
 }
 
+const ARCHIVE_TOOLTIP_CONTENT = (
+  <div className="max-w-[22rem] space-y-2.5 p-1">
+    <div className="flex items-center gap-1.5 text-xs font-bold text-charcoal-900 border-b border-old-money-200 pb-1.5 mb-2">
+      <Info className="h-4 w-4 text-camel-700 shrink-0" aria-hidden />
+      <span>Общественный архив соревнований</span>
+    </div>
+    <p className="text-[11px] leading-relaxed text-charcoal-700">
+      Раздел сохраняет спортивную историю забегов на основе официальных публикаций организаторов, секретариатов и архивов ProCoursing.ru.
+    </p>
+    <div className="rounded-lg bg-old-money-100/70 p-2.5 border border-old-money-200/90 text-[10px] leading-normal text-charcoal-600 space-y-1">
+      <p>
+        Сведения могут содержать ошибки или быть неполными из-за фрагментарности открытых источников и ручного ведения ранних баз организаторами соревнований.
+      </p>
+      <p className="font-medium text-charcoal-700">
+        Проект является независимым общественным архивом и не является официальным сайтом РКФ.
+      </p>
+    </div>
+  </div>
+)
+
 export default function EventsToolbar({
   searchQuery,
   onSearchChange,
@@ -82,8 +105,6 @@ export default function EventsToolbar({
   onResetFilters,
   stats,
 }: EventsToolbarProps) {
-  const [yearDropdownOpen, setYearDropdownOpen] = useState(false)
-  const [monthDropdownOpen, setMonthDropdownOpen] = useState(false)
   const [disciplineDropdownOpen, setDisciplineDropdownOpen] = useState(false)
   const [kindDropdownOpen, setKindDropdownOpen] = useState(false)
 
@@ -120,97 +141,15 @@ export default function EventsToolbar({
         className="w-full sm:!w-auto min-w-0 sm:min-w-[200px] max-w-sm"
       />
       <div className="flex max-w-full items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5 w-full sm:w-auto sm:flex-wrap">
-        <ModernDropdown
-          trigger={
-            <button
-              type="button"
-              className={toolbarPillTriggerClass(filterYear !== CURRENT_SEASON)}
-            >
-              {!filterYear ? 'Все года' : filterYear !== CURRENT_SEASON ? filterYear : 'Год'}
-              <ChevronDown className="h-3.5 w-3.5 shrink-0" aria-hidden />
-            </button>
-          }
-          isOpen={yearDropdownOpen}
-          onOpenChange={setYearDropdownOpen}
-          width="120px"
-        >
-          <div className="max-h-60 overflow-y-auto p-1" role="menu">
-            <button
-              type="button"
-              role="menuitem"
-              onClick={() => {
-                onFilterYearChange('')
-                onClearQuickPreset()
-                setYearDropdownOpen(false)
-              }}
-              className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
-                !filterYear
-                  ? 'bg-camel-500 text-charcoal-900'
-                  : 'text-charcoal-700 hover:bg-camel-100'
-              }`}
-            >
-              Все года
-            </button>
-            {sortedYears.map((year) => (
-              <button
-                key={year}
-                type="button"
-                role="menuitem"
-                onClick={() => {
-                  onFilterYearChange(year)
-                  onClearQuickPreset()
-                  setYearDropdownOpen(false)
-                }}
-                className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
-                  filterYear === year
-                    ? 'bg-camel-500 text-charcoal-900'
-                    : 'text-charcoal-700 hover:bg-camel-100'
-                }`}
-              >
-                {year}
-              </button>
-            ))}
-          </div>
-        </ModernDropdown>
-
-        <ModernDropdown
-          trigger={
-            <button
-              type="button"
-              className={toolbarPillTriggerClass(Boolean(filterMonth))}
-            >
-              {filterMonth
-                ? MONTH_FILTER_OPTIONS.find((m) => m.value === filterMonth)?.label || filterMonth
-                : 'Месяц'}
-              <ChevronDown className="h-3.5 w-3.5 shrink-0" aria-hidden />
-            </button>
-          }
-          isOpen={monthDropdownOpen}
-          onOpenChange={setMonthDropdownOpen}
-          width="160px"
-        >
-          <div className="max-h-60 overflow-y-auto p-1" role="menu">
-            {MONTH_FILTER_OPTIONS.map((opt) => (
-              <button
-                key={opt.value || 'all'}
-                type="button"
-                role="menuitem"
-                onClick={() => {
-                  onFilterMonthChange(opt.value)
-                  onClearQuickPreset()
-                  setMonthDropdownOpen(false)
-                }}
-                className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
-                  filterMonth === opt.value
-                    ? 'bg-camel-500 text-charcoal-900'
-                    : 'text-charcoal-700 hover:bg-camel-100'
-                }`}
-              >
-                {opt.label}
-              </button>
-            ))}
-          </div>
-        </ModernDropdown>
+        <MonthYearDropdown
+          selectedYear={filterYear}
+          onSelectYear={onFilterYearChange}
+          selectedMonth={filterMonth}
+          onSelectMonth={onFilterMonthChange}
+          sortedYears={sortedYears}
+          currentSeason={CURRENT_SEASON}
+          onClearPreset={onClearQuickPreset}
+        />
 
         <ModernDropdown
           trigger={
@@ -355,7 +294,7 @@ export default function EventsToolbar({
       filters={filters}
       bottomLeft={
         stats ? (
-          <>
+          <div className="flex flex-wrap items-center gap-2">
             <p className="hidden sm:block text-xs text-charcoal-500">
               {`Всего событий: ${stats.total} · отфильтровано: ${stats.filtered} · с результатом: ${stats.withResult}`}
               {filterDiscipline && (
@@ -367,7 +306,24 @@ export default function EventsToolbar({
                 ? `${stats.total} соб. · рез: ${stats.withResult}`
                 : `${stats.filtered}/${stats.total} · рез: ${stats.withResult}`}
             </p>
-          </>
+            <HoverTooltip
+              label={ARCHIVE_TOOLTIP_CONTENT}
+              placement="bottom"
+              variant="site"
+              interactive
+              portal
+            >
+              <button
+                type="button"
+                className="inline-flex items-center gap-1.5 rounded-full border border-old-money-300/90 bg-cream-50/90 px-2.5 py-0.5 text-xs font-semibold text-charcoal-800 shadow-2xs hover:border-camel-500 hover:bg-cream-100 hover:text-charcoal-900 transition-all cursor-pointer"
+                aria-label="Об открытом архиве и протоколах"
+              >
+                <Info className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
+                <span className="hidden sm:inline">Об архиве и источниках</span>
+                <span className="sm:hidden">Об архиве</span>
+              </button>
+            </HoverTooltip>
+          </div>
         ) : undefined
       }
       bottomRight={legend}

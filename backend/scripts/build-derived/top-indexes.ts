@@ -66,13 +66,63 @@ export function buildTopIndexes(db: Database.Database) {
          FROM v_top_by_placement WHERE year = ?
          ORDER BY gold DESC, silver DESC, bronze DESC`,
       )
-      .all(year);
+      .all(year) as Array<Record<string, unknown>>;
+
+    // Calculate rank delta comparing current season standings with standings prior to latest event
+    const coursingEvents = db.prepare(`
+      SELECT id FROM events 
+      WHERE year = ? AND event_type IN ('coursing', 'bzmp')
+      ORDER BY date_start ASC
+    `).all(year) as Array<{ id: number }>;
+
+    let prevRankMap: Map<number, number> | null = null;
+    if (coursingEvents.length >= 2) {
+      const latestEventId = coursingEvents[coursingEvents.length - 1].id;
+      const prevPlacement = db.prepare(`
+        SELECT d.id AS dog_id
+        FROM results r
+        JOIN dogs d ON d.id = r.dog_id
+        JOIN events e ON r.event_id = e.id
+        WHERE r.status IN ${PARTICIPATION_STATUSES_SQL}
+          AND e.event_type IN ('coursing', 'bzmp')
+          AND e.year = ?
+          AND e.id != ?
+        GROUP BY d.id
+        ORDER BY 
+          SUM(CASE WHEN r.placement = 1 THEN 1 ELSE 0 END) DESC,
+          SUM(CASE WHEN r.placement = 2 THEN 1 ELSE 0 END) DESC,
+          SUM(CASE WHEN r.placement = 3 THEN 1 ELSE 0 END) DESC,
+          COUNT(*) DESC
+      `).all(year, latestEventId) as Array<{ dog_id: number }>;
+
+      prevRankMap = new Map();
+      prevPlacement.forEach((row, idx) => {
+        prevRankMap!.set(row.dog_id, idx + 1);
+      });
+    }
+
+    const placementWithDelta = placement.map((dog: any, idx: number) => {
+      const currentRank = idx + 1;
+      let rank_delta: number | 'NEW' | null = null;
+      if (prevRankMap) {
+        const prevRank = prevRankMap.get(dog.dog_id);
+        if (prevRank == null) {
+          rank_delta = 'NEW';
+        } else {
+          rank_delta = prevRank - currentRank;
+        }
+      }
+      return {
+        ...dog,
+        rank_delta,
+      };
+    });
 
     writeIndex(`top-placement-${year}.json`, {
       schema: 'coursing-stats/index-top-placement-v1',
       year,
-      count: placement.length,
-      items: placement,
+      count: placementWithDelta.length,
+      items: placementWithDelta,
     });
 
     const score = db
@@ -154,13 +204,52 @@ export function buildTopSpeedIndexes(db: Database.Database) {
   for (const year of years) {
     const items = db
       .prepare(`${SPEED_BASE_SQL} AND e.year = ? GROUP BY d.id HAVING best_speed IS NOT NULL ORDER BY best_speed DESC`)
-      .all(year);
+      .all(year) as Array<Record<string, unknown>>;
+
+    // Calculate rank delta comparing current season speed standings with standings prior to latest racing event
+    const racingEvents = db.prepare(`
+      SELECT id FROM events 
+      WHERE year = ? AND event_type = 'racing'
+      ORDER BY date_start ASC
+    `).all(year) as Array<{ id: number }>;
+
+    let prevSpeedRankMap: Map<number, number> | null = null;
+    if (racingEvents.length >= 2) {
+      const latestRacingId = racingEvents[racingEvents.length - 1].id;
+      const prevSpeed = db.prepare(`
+        ${SPEED_BASE_SQL} AND e.year = ? AND e.id != ? 
+        GROUP BY d.id HAVING best_speed IS NOT NULL 
+        ORDER BY best_speed DESC
+      `).all(year, latestRacingId) as Array<{ dog_id: number }>;
+
+      prevSpeedRankMap = new Map();
+      prevSpeed.forEach((row, idx) => {
+        prevSpeedRankMap!.set(row.dog_id, idx + 1);
+      });
+    }
+
+    const itemsWithDelta = items.map((dog: any, idx: number) => {
+      const currentRank = idx + 1;
+      let rank_delta: number | 'NEW' | null = null;
+      if (prevSpeedRankMap) {
+        const prevRank = prevSpeedRankMap.get(dog.dog_id);
+        if (prevRank == null) {
+          rank_delta = 'NEW';
+        } else {
+          rank_delta = prevRank - currentRank;
+        }
+      }
+      return {
+        ...dog,
+        rank_delta,
+      };
+    });
 
     writeIndex(`top-speed-${year}.json`, {
       schema: 'coursing-stats/index-top-speed-v1',
       year,
-      count: items.length,
-      items,
+      count: itemsWithDelta.length,
+      items: itemsWithDelta,
     });
   }
 

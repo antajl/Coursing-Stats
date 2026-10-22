@@ -1,5 +1,6 @@
 import { useLayoutEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { ArrowRight } from 'lucide-react'
 import {
   parseShowTitles,
   presentShowAwards,
@@ -24,6 +25,7 @@ import {
   disciplineTheme,
 } from './DisciplineColumnShell'
 import { HistoryMetaRow } from './HistoryPlacement'
+import type { ProfileHeaderRank } from './DogProfileHeader'
 
 export type ShowHistoryEntry = {
   date: string
@@ -40,6 +42,8 @@ export type ShowHistoryEntry = {
 
 type ShowsColumnProps = {
   dog: ShowDogCardData & { history?: ShowHistoryEntry[] }
+  rank?: ProfileHeaderRank
+  breed?: string
 }
 
 const THEME = 'camel' as const
@@ -144,7 +148,7 @@ function HistoryShowAwardsRow({
 }
 
 /** Колонка выставок — тот же каркас, что Курсинг / Бега. */
-export function ShowsColumn({ dog }: ShowsColumnProps) {
+export function ShowsColumn({ dog, rank, breed }: ShowsColumnProps) {
   const t = disciplineTheme(THEME)
   const [showAll, setShowAll] = useState(false)
   const bestKey = (dog.best_award as ShowAwardKey | null) ?? null
@@ -154,11 +158,34 @@ export function ShowsColumn({ dog }: ShowsColumnProps) {
   const visible = showAll ? history : history.slice(0, HISTORY_DEFAULT)
   const bestGrade = resolveBestGradeLabel(dog)
 
+  const dogBreed = breed || dog.breed || ''
+  const rankBadge = rank && (rank.breedRank != null || rank.rank != null) ? (
+    <Link
+      to={`/shows?tab=ranking${dogBreed ? `&breed=${encodeURIComponent(dogBreed)}` : ''}`}
+      className="inline-flex items-center gap-1.5 rounded-full border border-camel-200/90 bg-camel-100/70 px-2.5 py-0.5 text-xs font-semibold text-camel-900 transition-colors hover:bg-camel-100 hover:border-camel-300"
+      title="Открыть рейтинг выставок"
+    >
+      {rank.breedRank != null ? (
+        <span>
+          В породе: <strong className="text-camel-950 font-bold">#{rank.breedRank}</strong>
+          {rank.rank != null && (
+            <span className="text-[10px] font-normal text-camel-700 ml-1">· #{rank.rank} все</span>
+          )}
+        </span>
+      ) : rank.rank != null ? (
+        <span>
+          Общий: <strong className="text-camel-950 font-bold">#{rank.rank}</strong>
+        </span>
+      ) : null}
+      <ArrowRight className="h-3 w-3 text-camel-700 shrink-0" />
+    </Link>
+  ) : null
+
   const cellClass = `min-h-[5.5rem] min-w-0 rounded-xl border p-4 text-center ${t.cellBorder} ${t.cellBg}`
 
   return (
     <DisciplineColumnShell>
-      <DisciplineStatsCard theme={THEME} title="Выставки">
+      <DisciplineStatsCard theme={THEME} title="Выставки" rankBadge={rankBadge}>
         <DisciplineHero
           theme={THEME}
           label="Лучшая награда"

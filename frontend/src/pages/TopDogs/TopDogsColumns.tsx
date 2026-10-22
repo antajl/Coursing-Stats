@@ -60,6 +60,7 @@ interface TopDogsColumnsProps {
   filterYear: string
   favorites: Set<string>
   onToggleFavorite: (dogId: string, meta?: FavoriteDogMeta) => void
+  disclaimerMode?: string
 }
 
 export default function TopDogsColumns({
@@ -68,6 +69,7 @@ export default function TopDogsColumns({
   filterYear,
   favorites,
   onToggleFavorite,
+  disclaimerMode = 'column',
 }: TopDogsColumnsProps) {
   const [selectedMobileColumn, setSelectedMobileColumn] = useState<'coursing' | 'racing' | null>(null)
   const activeMobileColumn =
@@ -100,12 +102,7 @@ export default function TopDogsColumns({
       asHeader
       title="Курсинг / БЗМП"
       count={filteredCombined.length}
-      action={
-        <span className="inline-flex items-center gap-1.5 text-xs text-old-money-700 font-medium">
-          <span className="hidden sm:inline">Ранг по победам и медалям</span>
-          <CoursingRatingHint embedded />
-        </span>
-      }
+      action={<CoursingRatingHint embedded variant="unified" />}
     />
   )
 
@@ -114,11 +111,6 @@ export default function TopDogsColumns({
       asHeader
       title="Рейсинг"
       count={filteredSpeed.length}
-      action={
-        <span className="inline-flex items-center gap-1 text-xs text-old-money-700 font-medium">
-          <span className="hidden sm:inline">Ранг по максимальной скорости</span>
-        </span>
-      }
     />
   )
 

@@ -152,7 +152,45 @@ export default function DogProfile() {
     }
   }, [competitionId, dog, loading, showRouteDogId, showRouteBreed, isLegacyShowRoute, profileId])
 
-  // Места во всременных рейтингах: любая комбинация из курсинга / бегов / выставок
+  // 0ms Latency: populate headerRanks immediately from precomputed dog.ranks
+  useEffect(() => {
+    if (!dog) return
+    const precomputed = (dog as any)?.ranks || (dog as any)?.dog?.ranks
+    if (!precomputed) return
+
+    const initial: ProfileHeaderRank[] = []
+    if (precomputed.coursing && (precomputed.coursing.rank != null || precomputed.coursing.yearRank != null)) {
+      initial.push({
+        key: 'coursing',
+        label: 'Курсинг',
+        rank: precomputed.coursing.rank ?? null,
+        yearRank: precomputed.coursing.yearRank ?? undefined,
+        breedRank: precomputed.coursing.breedRank ?? undefined,
+        yearBreedRank: precomputed.coursing.yearBreedRank ?? undefined,
+        href: `/competitions?tab=ranking&year=${precomputed.coursing.year || '2026'}`,
+      })
+    }
+    if (precomputed.racing && (precomputed.racing.rank != null || precomputed.racing.yearRank != null)) {
+      initial.push({
+        key: 'racing',
+        label: 'Бега',
+        rank: precomputed.racing.rank ?? null,
+        yearRank: precomputed.racing.yearRank ?? undefined,
+        breedRank: precomputed.racing.breedRank ?? undefined,
+        yearBreedRank: precomputed.racing.yearBreedRank ?? undefined,
+        href: `/competitions?tab=ranking&year=${precomputed.racing.year || '2026'}`,
+      })
+    }
+
+    if (initial.length > 0) {
+      setHeaderRanks((prev) => {
+        const existingShow = prev.find((r) => r.key === 'shows')
+        return existingShow ? [...initial, existingShow] : initial
+      })
+    }
+  }, [dog])
+
+  // Места во всременных рейтингах: дозагрузка выставок или фоллбэк для курсинга/бегов
   useEffect(() => {
     let cancelled = false
     const loadRanks = async () => {
@@ -164,79 +202,97 @@ export default function DogProfile() {
         ? events[events.length - 1].date.substring(0, 4)
         : currentYear
       // Для выставок берём последний год из истории или текущий год
-      // Дата в формате DD.MM.YYYY, поэтому берём символы с индекса 6 (год)
       const showYear = showDog?.history && showDog.history.length > 0 && showDog.history[showDog.history.length - 1].date
         ? showDog.history[showDog.history.length - 1].date.substring(6, 10)
-        : '2026' // Используем 2026 как текущий год для выставок
+        : '2026'
 
-      // Получаем all-time и годовые рейтинги (общие и по породе)
-      const [allTimePlacementRank, allTimeSpeedRank, yearPlacementRank, yearSpeedRank, allTimeBreedPlacementRank, allTimeBreedSpeedRank, yearBreedPlacementRank, yearBreedSpeedRank, showYearRank, showBreedRank] = await Promise.all([
-        getDogAllTimePlacementRank(competitionDogId),
-        getDogAllTimeSpeedRank(competitionDogId),
-        getDogPlacementRank(competitionDogId, competitionYear),
-        getDogSpeedRank(competitionDogId, competitionYear),
-        getDogBreedPlacementRank(competitionDogId, breed, ''), // All-time breed
-        getDogBreedSpeedRank(competitionDogId, breed, ''), // All-time breed
-        getDogBreedPlacementRank(competitionDogId, breed, competitionYear), // Year breed
-        getDogBreedSpeedRank(competitionDogId, breed, competitionYear), // Year breed
-        getShowDogYearRank({
+      const precomputed = (dog as any)?.ranks || (dog as any)?.dog?.ranks
+      const hasPrecomputedSport = Boolean(precomputed?.coursing || precomputed?.racing)
+
+      // Если данные курсинга и бегов уже есть из пака, запрашиваем только выставки (экономит 8 запросов!)
+      const [
+        allTimePlacementRank,
+        allTimeSpeedRank,
+        yearPlacementRank,
+        yearSpeedRank,
+        allTimeBreedPlacementRank,
+        allTimeBreedSpeedRank,
+        yearBreedPlacementRank,
+        yearBreedSpeedRank,
+        showYearRank,
+        showBreedRank,
+      ] = await Promise.all([
+        hasPrecomputedSport ? Promise.resolve(null) : getDogAllTimePlacementRank(competitionDogId),
+        hasPrecomputedSport ? Promise.resolve(null) : getDogAllTimeSpeedRank(competitionDogId),
+        hasPrecomputedSport ? Promise.resolve(null) : getDogPlacementRank(competitionDogId, competitionYear),
+        hasPrecomputedSport ? Promise.resolve(null) : getDogSpeedRank(competitionDogId, competitionYear),
+        hasPrecomputedSport ? Promise.resolve(null) : getDogBreedPlacementRank(competitionDogId, breed, ''),
+        hasPrecomputedSport ? Promise.resolve(null) : getDogBreedSpeedRank(competitionDogId, breed, ''),
+        hasPrecomputedSport ? Promise.resolve(null) : getDogBreedPlacementRank(competitionDogId, breed, competitionYear),
+        hasPrecomputedSport ? Promise.resolve(null) : getDogBreedSpeedRank(competitionDogId, breed, competitionYear),
+        showDog ? getShowDogYearRank({
           showId: showDog?.id,
           competitionId: competitionDogId ?? showDog?.competition_dog_id ?? null,
           year: showYear,
-        }),
-        getShowDogBreedRank({
+        }) : Promise.resolve(null),
+        showDog ? getShowDogBreedRank({
           showId: showDog?.id,
           competitionId: null,
           breed,
           year: showYear,
-        }),
+        }) : Promise.resolve(null),
       ])
 
       if (cancelled) return
-      const next: ProfileHeaderRank[] = []
-      if (allTimePlacementRank != null) {
-        next.push({
-          key: 'coursing',
-          label: 'Курсинг',
-          rank: allTimePlacementRank,
-          yearRank: yearPlacementRank ?? undefined,
-          breedRank: allTimeBreedPlacementRank ?? undefined,
-          yearBreedRank: yearBreedPlacementRank ?? undefined,
-          href: '/competitions?tab=ranking&year=',
-        })
-      }
-      if (allTimeSpeedRank != null) {
-        next.push({
-          key: 'racing',
-          label: 'Бега',
-          rank: allTimeSpeedRank,
-          yearRank: yearSpeedRank ?? undefined,
-          breedRank: allTimeBreedSpeedRank ?? undefined,
-          yearBreedRank: yearBreedSpeedRank ?? undefined,
-          href: '/competitions?tab=ranking&year=',
-        })
-      }
-      if (showYearRank != null && showYearRank > 0) {
-        next.push({
-          key: 'shows',
-          label: 'Выставки',
-          rank: showYearRank,
-          breedRank: showBreedRank ?? undefined,
-          href: '/shows?tab=ranking&year=',
-        })
-      } else if (showDog) {
-        // Если есть showDog, но нет рейтинга, всё равно показываем блок с прочерками
-        next.push({
-          key: 'shows',
-          label: 'Выставки',
-          rank: null,
-          breedRank: showBreedRank ?? undefined,
-          href: '/shows?tab=ranking&year=',
-        })
-      }
-      setHeaderRanks(next)
+      setHeaderRanks((prev) => {
+        const next: ProfileHeaderRank[] = hasPrecomputedSport ? [...prev.filter((r) => r.key !== 'shows')] : []
+
+        if (!hasPrecomputedSport) {
+          if (allTimePlacementRank != null) {
+            next.push({
+              key: 'coursing',
+              label: 'Курсинг',
+              rank: allTimePlacementRank,
+              yearRank: yearPlacementRank ?? undefined,
+              breedRank: allTimeBreedPlacementRank ?? undefined,
+              yearBreedRank: yearBreedPlacementRank ?? undefined,
+              href: '/competitions?tab=ranking&year=',
+            })
+          }
+          if (allTimeSpeedRank != null) {
+            next.push({
+              key: 'racing',
+              label: 'Бега',
+              rank: allTimeSpeedRank,
+              yearRank: yearSpeedRank ?? undefined,
+              breedRank: allTimeBreedSpeedRank ?? undefined,
+              yearBreedRank: yearBreedSpeedRank ?? undefined,
+              href: '/competitions?tab=ranking&year=',
+            })
+          }
+        }
+
+        if (showYearRank != null && showYearRank > 0) {
+          next.push({
+            key: 'shows',
+            label: 'Выставки',
+            rank: showYearRank,
+            breedRank: showBreedRank ?? undefined,
+            href: '/shows?tab=ranking&year=',
+          })
+        } else if (showDog) {
+          next.push({
+            key: 'shows',
+            label: 'Выставки',
+            rank: null,
+            breedRank: showBreedRank ?? undefined,
+            href: '/shows?tab=ranking&year=',
+          })
+        }
+
+        return next
+      })
     }
-    // Загружаем рейтинги когда есть либо competition dog, либо show dog
     if (!dog && !showDog) return
     if (loading || showsLoading) return
     void loadRanks()
@@ -643,6 +699,8 @@ export default function DogProfile() {
                       avgJudgeScoreEventId={avgJudgeScoreEventId}
                       showAllCoursingEvents={showAllCoursingEvents}
                       onToggleShowAll={() => setShowAllCoursingEvents((v) => !v)}
+                      rank={headerRanks.find((r) => r.key === 'coursing')}
+                      breed={headerBreed}
                     />
                     {judgeStats && (
                       <div className="mt-6">
@@ -668,6 +726,8 @@ export default function DogProfile() {
                     avgSpeedEventId={avgSpeedEventId}
                     showAllRacingEvents={showAllRacingEvents}
                     onToggleShowAll={() => setShowAllRacingEvents((v) => !v)}
+                    rank={headerRanks.find((r) => r.key === 'racing')}
+                    breed={headerBreed}
                   />
                 ) : (
                   <EmptyDisciplineColumn title="Бега борзых" theme="warm-blue" />
@@ -676,7 +736,11 @@ export default function DogProfile() {
 
               {activeDiscipline === 'shows' && (
                 showDog ? (
-                  <ShowsColumn dog={showDog} />
+                  <ShowsColumn
+                    dog={showDog}
+                    rank={headerRanks.find((r) => r.key === 'shows')}
+                    breed={headerBreed}
+                  />
                 ) : (
                   <EmptyDisciplineColumn title="Выставки" theme="camel" />
                 )
@@ -722,6 +786,8 @@ export default function DogProfile() {
               avgJudgeScoreEventId={avgJudgeScoreEventId}
               showAllCoursingEvents={showAllCoursingEvents}
               onToggleShowAll={() => setShowAllCoursingEvents((v) => !v)}
+              rank={headerRanks.find((r) => r.key === 'coursing')}
+              breed={headerBreed}
             />
           ) : (
             <EmptyDisciplineColumn title="Курсинг / БЗМП" theme="forest" />
@@ -739,13 +805,19 @@ export default function DogProfile() {
               avgSpeedEventId={avgSpeedEventId}
               showAllRacingEvents={showAllRacingEvents}
               onToggleShowAll={() => setShowAllRacingEvents((v) => !v)}
+              rank={headerRanks.find((r) => r.key === 'racing')}
+              breed={headerBreed}
             />
           ) : (
             <EmptyDisciplineColumn title="Бега борзых" theme="warm-blue" />
           )}
 
           {showDog ? (
-            <ShowsColumn dog={showDog} />
+            <ShowsColumn
+              dog={showDog}
+              rank={headerRanks.find((r) => r.key === 'shows')}
+              breed={headerBreed}
+            />
           ) : (
             <EmptyDisciplineColumn title="Выставки" theme="camel" />
           )}

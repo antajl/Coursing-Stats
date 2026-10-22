@@ -18,24 +18,24 @@ export default function RankBadge({ rank, delta, className = '' }: RankBadgeProp
   const deltaElement =
     delta === 'NEW' ? (
       <span
-        className="mt-0.5 inline-flex items-center px-1 py-0.2 rounded text-[9px] font-bold bg-amber-100 text-amber-800"
+        className="mt-1 inline-flex items-center px-1.5 py-0.5 rounded text-[9px] font-bold bg-amber-100 text-amber-900 border border-amber-300/80 leading-none shadow-2xs"
         title="Новый участник в сезоне"
       >
         NEW
       </span>
     ) : typeof delta === 'number' && delta > 0 ? (
       <span
-        className="mt-0.5 inline-flex items-center text-[10px] font-bold text-forest-700 tabular-nums"
+        className="mt-1 inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded text-[9px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300/80 tabular-nums leading-none shadow-2xs"
         title={`Поднялся на ${delta} ${delta === 1 ? 'позицию' : 'позиции'}`}
       >
-        <TrendingUp className="h-2.5 w-2.5 mr-0.5" />+{delta}
+        <TrendingUp className="h-2.5 w-2.5 stroke-[2.5]" />+{delta}
       </span>
     ) : typeof delta === 'number' && delta < 0 ? (
       <span
-        className="mt-0.5 inline-flex items-center text-[10px] font-bold text-terracotta-700 tabular-nums"
+        className="mt-1 inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded text-[9px] font-bold bg-rose-100 text-rose-800 border border-rose-300/80 tabular-nums leading-none shadow-2xs"
         title={`Опустился на ${Math.abs(delta)} ${Math.abs(delta) === 1 ? 'позицию' : 'позиции'}`}
       >
-        <TrendingDown className="h-2.5 w-2.5 mr-0.5" />{delta}
+        <TrendingDown className="h-2.5 w-2.5 stroke-[2.5]" />{delta}
       </span>
     ) : null
 

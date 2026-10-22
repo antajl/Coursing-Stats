@@ -79,10 +79,12 @@ export function DisciplineColumnShell({ children }: { children: ReactNode }) {
 export function DisciplineStatsCard({
   theme,
   title,
+  rankBadge,
   children,
 }: {
   theme: DisciplineTheme
   title: string
+  rankBadge?: ReactNode
   children: ReactNode
 }) {
   const t = THEME[theme]
@@ -90,9 +92,12 @@ export function DisciplineStatsCard({
     <div
       className={`flex h-[24rem] shrink-0 flex-col overflow-hidden rounded-xl border bg-white p-5 md:h-[25rem] md:p-6 ${t.cardBorder}`}
     >
-      <h2 className="mb-4 shrink-0 text-lg font-bold tracking-tight text-charcoal-800 md:text-xl">
-        {title}
-      </h2>
+      <div className="mb-4 flex items-center justify-between gap-2 shrink-0 flex-wrap">
+        <h2 className="text-lg font-bold tracking-tight text-charcoal-800 md:text-xl">
+          {title}
+        </h2>
+        {rankBadge}
+      </div>
       <div className="flex min-h-0 flex-1 flex-col overflow-hidden">{children}</div>
     </div>
   )

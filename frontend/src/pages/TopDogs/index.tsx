@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef, useMemo, useCallback } from 'react'
 import { useSearchParams, useLocation } from 'react-router-dom'
-import { Info, X } from 'lucide-react'
 import { SEO } from '../../components/SEO'
 import { useYandexGoal } from '../../components/YandexMetrica'
 import {
@@ -25,13 +24,12 @@ import { useFavorites } from '../../hooks/useFavorites'
 
 export default function TopDogs() {
   const location = useLocation()
-  const [searchParams] = useSearchParams()
+  const [searchParams, setSearchParams] = useSearchParams()
   const isEmbedded = location.pathname === '/competitions'
   const { reachGoal } = useYandexGoal()
   const { favorites, toggleFavorite } = useFavorites()
 
   const [filterYear, setFilterYear] = useState(() => initialSeasonYearFilter(searchParams, DEFAULT_ACTIVE_SEASON))
-  const [isNoticeDismissed, setIsNoticeDismissed] = useState(false)
   const [filterBreed, setFilterBreed] = useState(() => searchParams.get('breed') || '')
   const [searchQuery, setSearchQuery] = useState(() => searchParams.get('search') || '')
   const [isInitialLoad, setIsInitialLoad] = useState(true)
@@ -84,6 +82,100 @@ export default function TopDogs() {
       setFilterYear((prev) => (prev === DEFAULT_ACTIVE_SEASON ? resolved : prev))
     }
   }, [hasUrlYear, years])
+
+  // Synchronize state with URL search params so the browser address bar updates automatically
+  const isFirstRender = useRef(true)
+  useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false
+      return
+    }
+
+    setSearchParams(
+      (prev) => {
+        const next = new URLSearchParams(prev)
+        let changed = false
+
+        // Breed
+        const currentBreed = next.get('breed') || ''
+        if (filterBreed !== currentBreed) {
+          if (filterBreed) next.set('breed', filterBreed)
+          else next.delete('breed')
+          changed = true
+        }
+
+        // Year
+        const currentYear = next.get('year')
+        const targetYearParam =
+          filterYear === '' ? 'all' : filterYear !== activeSeason ? filterYear : null
+        if (targetYearParam !== null) {
+          if (currentYear !== targetYearParam) {
+            next.set('year', targetYearParam)
+            changed = true
+          }
+        } else {
+          if (currentYear === 'all' || (currentYear && currentYear !== activeSeason)) {
+            next.delete('year')
+            changed = true
+          }
+        }
+
+        // Search query
+        const trimmedSearch = searchQuery.trim()
+        const currentSearch = next.get('search') || ''
+        if (trimmedSearch !== currentSearch) {
+          if (trimmedSearch) next.set('search', trimmedSearch)
+          else next.delete('search')
+          changed = true
+        }
+
+        // Thresholds
+        if (filterMinStarts !== (next.get('minStarts') || '')) {
+          if (filterMinStarts) next.set('minStarts', filterMinStarts)
+          else next.delete('minStarts')
+          changed = true
+        }
+        if (filterScoreFrom !== (next.get('scoreFrom') || '')) {
+          if (filterScoreFrom) next.set('scoreFrom', filterScoreFrom)
+          else next.delete('scoreFrom')
+          changed = true
+        }
+        if (filterSpeedFrom !== (next.get('speedFrom') || '')) {
+          if (filterSpeedFrom) next.set('speedFrom', filterSpeedFrom)
+          else next.delete('speedFrom')
+          changed = true
+        }
+
+        return changed ? next : prev
+      },
+      { replace: true },
+    )
+  }, [
+    filterBreed,
+    filterYear,
+    searchQuery,
+    filterMinStarts,
+    filterScoreFrom,
+    filterSpeedFrom,
+    activeSeason,
+    setSearchParams,
+  ])
+
+  // Respond to browser back/forward navigation
+  useEffect(() => {
+    const breedFromUrl = searchParams.get('breed') || ''
+    if (breedFromUrl !== filterBreed) {
+      setFilterBreed(breedFromUrl)
+    }
+
+    const yearFromUrl = searchParams.get('year')
+    if (yearFromUrl !== null) {
+      const targetYear = yearFromUrl === 'all' ? '' : yearFromUrl
+      if (targetYear !== filterYear) {
+        setFilterYear(targetYear)
+      }
+    }
+  }, [searchParams])
 
   const breedValues = breeds
   const yearValues = years.map(String)
@@ -153,26 +245,6 @@ export default function TopDogs() {
           canonicalUrl="https://coursing-stats.ru/competitions?tab=ranking"
         />
       )}
-      {!isNoticeDismissed && (
-        <div className="mb-4 flex items-start justify-between gap-3 rounded-xl border border-old-money-200/80 bg-cream-50/70 p-3.5 text-xs text-charcoal-700 shadow-xs">
-          <div className="flex items-start gap-3">
-            <Info className="mt-0.5 h-4 w-4 shrink-0 text-camel-700" aria-hidden />
-            <div className="leading-relaxed">
-              <span className="font-semibold text-charcoal-900">Общественный рейтинг:</span>{' '}
-              статистика рассчитывается на основе опубликованных протоколов соревнований и архивов ProCoursing.ru.
-              Сведения могут содержать ошибки или быть неполными из-за фрагментарности открытых источников и ручного ведения ранних баз организаторами.
-            </div>
-          </div>
-          <button
-            type="button"
-            onClick={() => setIsNoticeDismissed(true)}
-            className="shrink-0 rounded p-1 text-charcoal-400 hover:bg-cream-200/60 hover:text-charcoal-700 transition-colors"
-            aria-label="Закрыть уведомление"
-          >
-            <X className="h-4 w-4" aria-hidden />
-          </button>
-        </div>
-      )}
 
       <TopDogsFilters
         searchQuery={searchQuery}
@@ -194,8 +266,6 @@ export default function TopDogs() {
         onResetFilters={handleResetFilters}
         onResetPanelFilters={handleResetPanelFilters}
         dropdownRef={dropdownRef}
-        totalCoursing={filteredCombined.length}
-        totalRacing={filteredSpeed.length}
       />
 
       {showListSkeleton ? (
@@ -213,6 +283,7 @@ export default function TopDogs() {
               console.error('Failed to toggle favorite:', error)
             })
           }}
+          disclaimerMode="column"
         />
       )}
     </div>

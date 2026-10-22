@@ -385,6 +385,23 @@ export default function StandingPlaceButton({
         )
       : null
 
+  const badgeContent =
+    value === 1 ? (
+      <span className="inline-flex items-center rounded bg-amber-100/90 px-1.5 py-0.5 text-[10px] font-bold tabular-nums text-amber-950 border border-amber-300/80 shadow-2xs">
+        #1
+      </span>
+    ) : value === 2 ? (
+      <span className="inline-flex items-center rounded bg-slate-100 px-1.5 py-0.5 text-[10px] font-bold tabular-nums text-slate-800 border border-slate-300/80 shadow-2xs">
+        #2
+      </span>
+    ) : value === 3 ? (
+      <span className="inline-flex items-center rounded bg-orange-50 px-1.5 py-0.5 text-[10px] font-bold tabular-nums text-amber-950 border border-amber-300/70 shadow-2xs">
+        #3
+      </span>
+    ) : (
+      <span className="tabular-nums">#{value}</span>
+    )
+
   return (
     <>
       <button
@@ -398,7 +415,7 @@ export default function StandingPlaceButton({
         }`}
         aria-label={`Место ${value}: объяснить рейтинг (${domainLabel(domain)})`}
       >
-        <span className="tabular-nums">#{value}</span>
+        {badgeContent}
       </button>
       {panel}
     </>

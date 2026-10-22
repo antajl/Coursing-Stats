@@ -1,3 +1,4 @@
+import { Info } from 'lucide-react'
 import HoverTooltip from '../../components/ui/HoverTooltip'
 
 function RatingFormulaIcon({ size = 13 }: { size?: number }) {
@@ -48,17 +49,74 @@ const TOOLTIP_CONTENT = (
   </div>
 )
 
+const UNIFIED_TOOLTIP_CONTENT = (
+  <div className="max-w-[22rem] space-y-3 p-1">
+    <div>
+      <div className="flex items-center gap-1.5 text-xs font-bold text-charcoal-900 border-b border-old-money-200 pb-1.5 mb-2">
+        <Info className="h-4 w-4 text-camel-700 shrink-0" aria-hidden />
+        <span>Зачёт сезона и статус данных</span>
+      </div>
+
+      <p className="text-[11px] font-semibold text-camel-800 uppercase tracking-wider mb-1">
+        Как рассчитывается зачёт
+      </p>
+      <ol className="list-decimal space-y-1 pl-4 text-[11px] leading-snug text-charcoal-700">
+        <li>
+          <strong>Медали</strong> — первичный критерий (золото ценнее серебра и бронзы). При равенстве наград выше собака с <strong>меньшим</strong> числом стартов.
+        </li>
+        <li>
+          <strong>Индекс CS</strong> — средняя судейская оценка за технику бега (разрешает ничьи по медалям).
+        </li>
+        <li>
+          <strong>Elo</strong> — сила соперников в забегах (на место в зачёте не влияет).
+        </li>
+      </ol>
+    </div>
+
+    <div className="rounded-lg bg-old-money-100/70 p-2.5 border border-old-money-200/90 text-[11px] leading-relaxed text-charcoal-700 space-y-1">
+      <div className="font-semibold text-charcoal-900 flex items-center gap-1 text-[11px]">
+        <span>Общественный независимый архив</span>
+      </div>
+      <p>
+        Статистика формируется на основе опубликованных протоколов соревнований и архивов ProCoursing.ru.
+      </p>
+      <p className="text-[10px] text-charcoal-500 leading-normal">
+        Сведения могут содержать ошибки или быть неполными из-за фрагментарности открытых источников и ручного ведения ранних баз организаторами. Проект не является официальным сайтом РКФ.
+      </p>
+    </div>
+  </div>
+)
+
 interface CoursingRatingHintProps {
   embedded?: boolean
   as?: 'button' | 'span'
+  variant?: 'default' | 'unified'
 }
 
-/** Иконка ⓘ у заголовка зачёта сезона. */
+/** Иконка или бейдж ⓘ у заголовка зачёта сезона. */
 export default function CoursingRatingHint({
   embedded = false,
   as = 'button',
+  variant = 'default',
 }: CoursingRatingHintProps) {
   const Tag = as
+
+  if (variant === 'unified') {
+    return (
+      <HoverTooltip label={UNIFIED_TOOLTIP_CONTENT} placement="bottom" variant="site" interactive portal>
+        <button
+          type="button"
+          className="inline-flex items-center gap-1.5 rounded-full border border-old-money-300/90 bg-cream-50/90 px-2.5 py-0.5 text-xs font-semibold text-charcoal-800 shadow-2xs hover:border-camel-500 hover:bg-cream-100 hover:text-charcoal-900 transition-all cursor-pointer"
+          aria-label="О зачёте и открытых данных"
+        >
+          <Info className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
+          <span className="hidden sm:inline">О зачёте и источниках</span>
+          <span className="sm:hidden">О зачёте</span>
+        </button>
+      </HoverTooltip>
+    )
+  }
+
   return (
     <HoverTooltip label={TOOLTIP_CONTENT} placement="bottom" variant="site" interactive portal>
       <Tag
@@ -75,4 +133,3 @@ export default function CoursingRatingHint({
     </HoverTooltip>
   )
 }
-

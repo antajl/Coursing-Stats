@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+import { ArrowRight } from 'lucide-react'
 import MedalTally from '../../components/MedalTally'
 import ProcoursingEventLink from '../../components/ProcoursingEventLink'
 import { procoursingUrlForEventId } from '../../lib/procoursingLinks'
@@ -12,6 +14,7 @@ import {
   disciplineTheme,
 } from './DisciplineColumnShell'
 import { HistoryMetaRow } from './HistoryPlacement'
+import type { ProfileHeaderRank } from './DogProfileHeader'
 
 type CoursingStats = {
   best_score?: number | string | null
@@ -44,6 +47,8 @@ type CoursingColumnProps = {
   avgJudgeScoreEventId: string | number | null
   showAllCoursingEvents: boolean
   onToggleShowAll: () => void
+  rank?: ProfileHeaderRank
+  breed?: string
 }
 
 const THEME = 'forest' as const
@@ -60,9 +65,40 @@ export function CoursingColumn({
   avgJudgeScoreEventId,
   showAllCoursingEvents,
   onToggleShowAll,
+  rank,
+  breed,
 }: CoursingColumnProps) {
   const t = disciplineTheme(THEME)
   if (!hasCoursingData && coursingEvents.length === 0) return null
+
+  const dogBreed = breed || ''
+  const rankBadge = rank && (rank.yearBreedRank != null || rank.breedRank != null || rank.rank != null) ? (
+    <Link
+      to={`/competitions?tab=ranking${dogBreed ? `&breed=${encodeURIComponent(dogBreed)}` : ''}`}
+      className="inline-flex items-center gap-1.5 rounded-full border border-forest-200/90 bg-forest-50/90 px-2.5 py-0.5 text-xs font-semibold text-forest-800 transition-colors hover:bg-forest-100 hover:border-forest-300"
+      title="Открыть рейтинг курсинга"
+    >
+      {rank.yearBreedRank != null ? (
+        <span>
+          В породе: <strong className="text-forest-950 font-bold">#{rank.yearBreedRank}</strong>
+          <span className="text-[10px] font-normal text-forest-700 ml-1">2026</span>
+          {rank.breedRank != null && (
+            <span className="text-[10px] font-normal text-forest-600 ml-1">· #{rank.breedRank} все</span>
+          )}
+        </span>
+      ) : rank.breedRank != null ? (
+        <span>
+          В породе: <strong className="text-forest-950 font-bold">#{rank.breedRank}</strong>
+          <span className="text-[10px] font-normal text-forest-600 ml-1">все время</span>
+        </span>
+      ) : rank.rank != null ? (
+        <span>
+          Общий: <strong className="text-forest-950 font-bold">#{rank.rank}</strong>
+        </span>
+      ) : null}
+      <ArrowRight className="h-3 w-3 text-forest-600 shrink-0" />
+    </Link>
+  ) : null
 
   const heroInner = (
     <>
@@ -81,7 +117,7 @@ export function CoursingColumn({
   return (
     <DisciplineColumnShell>
       {hasCoursingData && (
-        <DisciplineStatsCard theme={THEME} title="Курсинг / БЗМП">
+        <DisciplineStatsCard theme={THEME} title="Курсинг / БЗМП" rankBadge={rankBadge}>
           {bestScoreEventId ? (
             <ProcoursingEventLink
               eventId={bestScoreEventId}

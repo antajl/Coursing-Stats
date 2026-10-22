@@ -41,8 +41,6 @@ export default function ShowCalendar() {
   const [searchQuery, setSearchQuery] = useState(() => searchParams.get('search') || '')
   const [quickPreset, setQuickPreset] = useState<QuickPreset>(null)
   const [expandedKeys, setExpandedKeys] = useState<Set<string>>(() => new Set())
-  const [yearDropdownOpen, setYearDropdownOpen] = useState(false)
-  const [monthDropdownOpen, setMonthDropdownOpen] = useState(false)
 
   useEffect(() => {
     getShowRkfCalendarYears().then((list) => {
@@ -200,12 +198,8 @@ export default function ShowCalendar() {
           currentSeason={CURRENT_SEASON}
           sortedYears={sortedYears}
           onYearChange={setFilterYear}
-          yearDropdownOpen={yearDropdownOpen}
-          onYearDropdownOpenChange={setYearDropdownOpen}
           filterMonth={filterMonth}
           onMonthChange={setFilterMonth}
-          monthDropdownOpen={monthDropdownOpen}
-          onMonthDropdownOpenChange={setMonthDropdownOpen}
           filterLcOnly={filterLcOnly}
           onLcOnlyChange={setFilterLcOnly}
           onClearQuickPreset={() => setQuickPreset(null)}

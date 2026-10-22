@@ -77,7 +77,7 @@ export default function QuickBreedBar({
         }`}
         aria-pressed={!normalizedSelected}
       >
-        Все
+        Все породы
       </button>
 
       {/* Топ-породы */}

@@ -492,6 +492,97 @@ export function buildDogProfiles(db: Database.Database) {
 
   const packs = new Map<string, Record<string, unknown>>();
 
+  // Pre-load top ranking indexes for 0ms latency in dog profiles
+  const topPlacementAllPath = path.join(INDEXES_DIR, 'top-placement-all.json');
+  const topSpeedAllPath = path.join(INDEXES_DIR, 'top-speed-all.json');
+  const placementYearMap = new Map<string, any[]>();
+  const speedYearMap = new Map<string, any[]>();
+
+  try {
+    for (const file of fs.readdirSync(INDEXES_DIR)) {
+      const mP = file.match(/^top-placement-(\d{4})\.json$/);
+      if (mP) {
+        try {
+          const doc = JSON.parse(fs.readFileSync(path.join(INDEXES_DIR, file), 'utf-8'));
+          if (Array.isArray(doc.items)) placementYearMap.set(mP[1], doc.items);
+        } catch {}
+      }
+      const mS = file.match(/^top-speed-(\d{4})\.json$/);
+      if (mS) {
+        try {
+          const doc = JSON.parse(fs.readFileSync(path.join(INDEXES_DIR, file), 'utf-8'));
+          if (Array.isArray(doc.items)) speedYearMap.set(mS[1], doc.items);
+        } catch {}
+      }
+    }
+  } catch {}
+
+  let pAllItems: any[] = [];
+  try {
+    if (fs.existsSync(topPlacementAllPath)) {
+      pAllItems = JSON.parse(fs.readFileSync(topPlacementAllPath, 'utf-8')).items || [];
+    }
+  } catch {}
+
+  let sAllItems: any[] = [];
+  try {
+    if (fs.existsSync(topSpeedAllPath)) {
+      sAllItems = JSON.parse(fs.readFileSync(topSpeedAllPath, 'utf-8')).items || [];
+    }
+  } catch {}
+
+  const placementAllMap = new Map<number, { rank: number; breedRank: number }>();
+  {
+    const pBreedCounts = new Map<string, number>();
+    for (let i = 0; i < pAllItems.length; i++) {
+      const it = pAllItems[i];
+      const breed = it.breed || '';
+      const bRank = (pBreedCounts.get(breed) || 0) + 1;
+      pBreedCounts.set(breed, bRank);
+      placementAllMap.set(Number(it.dog_id), { rank: i + 1, breedRank: bRank });
+    }
+  }
+
+  const speedAllMap = new Map<number, { rank: number; breedRank: number }>();
+  {
+    const sBreedCounts = new Map<string, number>();
+    for (let i = 0; i < sAllItems.length; i++) {
+      const it = sAllItems[i];
+      const breed = it.breed || '';
+      const bRank = (sBreedCounts.get(breed) || 0) + 1;
+      sBreedCounts.set(breed, bRank);
+      speedAllMap.set(Number(it.dog_id), { rank: i + 1, breedRank: bRank });
+    }
+  }
+
+  const placementYearDogMap = new Map<string, Map<number, { rank: number; breedRank: number }>>();
+  for (const [year, items] of placementYearMap.entries()) {
+    const dMap = new Map<number, { rank: number; breedRank: number }>();
+    const bCounts = new Map<string, number>();
+    for (let i = 0; i < items.length; i++) {
+      const it = items[i];
+      const breed = it.breed || '';
+      const bRank = (bCounts.get(breed) || 0) + 1;
+      bCounts.set(breed, bRank);
+      dMap.set(Number(it.dog_id), { rank: i + 1, breedRank: bRank });
+    }
+    placementYearDogMap.set(year, dMap);
+  }
+
+  const speedYearDogMap = new Map<string, Map<number, { rank: number; breedRank: number }>>();
+  for (const [year, items] of speedYearMap.entries()) {
+    const dMap = new Map<number, { rank: number; breedRank: number }>();
+    const bCounts = new Map<string, number>();
+    for (let i = 0; i < items.length; i++) {
+      const it = items[i];
+      const breed = it.breed || '';
+      const bRank = (bCounts.get(breed) || 0) + 1;
+      bCounts.set(breed, bRank);
+      dMap.set(Number(it.dog_id), { rank: i + 1, breedRank: bRank });
+    }
+    speedYearDogMap.set(year, dMap);
+  }
+
   const dogsIndexPath = path.join(INDEXES_DIR, 'dogs-index.json');
   const dogsIndexMap = new Map<number, {
     id: number;
@@ -565,6 +656,54 @@ export function buildDogProfiles(db: Database.Database) {
       return base;
     });
 
+    const currentYear = '2026';
+    const latestCompYear = competitions.length > 0 && competitions[0].date_start
+      ? competitions[0].date_start.substring(0, 4)
+      : currentYear;
+    const targetYear = placementYearDogMap.has(latestCompYear) ? latestCompYear : currentYear;
+
+    const pAll = placementAllMap.get(dogId);
+    const pYear = placementYearDogMap.get(targetYear)?.get(dogId);
+    const sAll = speedAllMap.get(dogId);
+    const sYear = speedYearDogMap.get(targetYear)?.get(dogId);
+
+    const ranks: {
+      coursing?: {
+        rank: number | null;
+        yearRank: number | null;
+        breedRank: number | null;
+        yearBreedRank: number | null;
+        year: string;
+      };
+      racing?: {
+        rank: number | null;
+        yearRank: number | null;
+        breedRank: number | null;
+        yearBreedRank: number | null;
+        year: string;
+      };
+    } = {};
+
+    if (pAll || pYear) {
+      ranks.coursing = {
+        rank: pAll?.rank ?? null,
+        yearRank: pYear?.rank ?? null,
+        breedRank: pAll?.breedRank ?? null,
+        yearBreedRank: pYear?.breedRank ?? null,
+        year: targetYear,
+      };
+    }
+
+    if (sAll || sYear) {
+      ranks.racing = {
+        rank: sAll?.rank ?? null,
+        yearRank: sYear?.rank ?? null,
+        breedRank: sAll?.breedRank ?? null,
+        yearBreedRank: sYear?.breedRank ?? null,
+        year: targetYear,
+      };
+    }
+
     const payload = {
       schema: 'coursing-stats/index-dog-profile-v1',
       dog: {
@@ -579,7 +718,9 @@ export function buildDogProfiles(db: Database.Database) {
         racing_stats,
         judge_stats,
         titles,
+        ranks,
       },
+      ranks,
       judge_stats,
       competitions,
     };
