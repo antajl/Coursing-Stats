@@ -18,6 +18,8 @@ interface CalendarEvent {
   title?: string | null
   has_results?: boolean
   results_file?: string | null
+  result_count?: number
+  participants_count?: number
   [key: string]: unknown
 }
 
@@ -43,17 +45,72 @@ export function rebuildCalendarIndexes(): { total: number; years: number } {
 
   for (const file of files) {
     const year = Number(file.replace('.json', ''))
-    const data = JSON.parse(fs.readFileSync(path.join(CALENDAR_DIR, file), 'utf-8')) as {
+    const filePath = path.join(CALENDAR_DIR, file)
+    const data = JSON.parse(fs.readFileSync(filePath, 'utf-8')) as {
       events?: CalendarEvent[]
+      event_count?: number
+      with_results?: number
+      [key: string]: unknown
     }
 
+    let fileChanged = false
+
     for (const event of data.events ?? []) {
+      const month = monthFolder(String(event.date_start ?? ''))
+      const resolved = resolveResultsFilePath(event.results_file, Number(event.year ?? year), month)
+
+      if (resolved) {
+        const fullCompPath = path.join(V1, resolved)
+        if (fs.existsSync(fullCompPath)) {
+          try {
+            const compDoc = JSON.parse(fs.readFileSync(fullCompPath, 'utf-8')) as {
+              result_count?: number
+              results?: Array<{ dog_id?: number }>
+            }
+            const results = Array.isArray(compDoc.results) ? compDoc.results : []
+            const compResultCount =
+              typeof compDoc.result_count === 'number' && compDoc.result_count > 0
+                ? compDoc.result_count
+                : results.length
+            const uniqueDogs =
+              new Set(
+                results
+                  .map((r) => r.dog_id)
+                  .filter((id): id is number => typeof id === 'number'),
+              ).size || compResultCount
+
+            if (compResultCount > 0) {
+              if (event.has_results !== true) {
+                event.has_results = true
+                fileChanged = true
+              }
+              if (event.result_count !== compResultCount) {
+                event.result_count = compResultCount
+                fileChanged = true
+              }
+              if (event.participants_count !== uniqueDogs) {
+                event.participants_count = uniqueDogs
+                fileChanged = true
+              }
+            }
+          } catch (err) {
+            console.warn(`Failed to inspect competition file ${resolved}:`, err)
+          }
+        }
+      }
+
       calendarManifest.push({
         ...event,
         year: Number(event.year ?? year),
-        month: monthFolder(String(event.date_start ?? '')),
+        month,
         calendar_file: `calendar/${year}.json`,
       })
+    }
+
+    if (fileChanged) {
+      data.event_count = (data.events ?? []).length
+      data.with_results = (data.events ?? []).filter((e) => e.has_results).length
+      writeJson(filePath, data)
     }
   }
 

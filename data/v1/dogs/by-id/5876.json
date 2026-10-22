@@ -6,7 +6,7 @@
   "name_lat": "DIAMANT TOP KRISTAL",
   "name_ru": "ДИАМАНТ ТОП КРИСТАЛ",
   "breed": "УИППЕТ",
-  "sex": null,
+  "sex": "Сука",
   "owner": null,
   "pedigree_url": "https://whippet.breedarchive.com/animal/view/diamant-top-kristal-f976069d-5395-4865-89c9-3946d0629840",
   "competition_ids": [
@@ -23,7 +23,9 @@
     1314,
     1317,
     1550,
-    2022000
+    2022000,
+    2026001,
+    2026002
   ],
   "competition_files": [
     "competitions/2025/04-апрель/1251-чркф-курсинг-борзых.json",
@@ -39,6 +41,8 @@
     "competitions/2026/05-май/1314-чркф-курсинг-борзых.json",
     "competitions/2026/05-май/1317-чемпионат-россии-курсинг-борзых.json",
     "competitions/2026/08-август/1550-чркф-бега-борзых.json",
-    "competitions/2026/09-сентябрь/2022000-чемпионат-россии-по-бегам-борзых.json"
+    "competitions/2026/09-сентябрь/2022000-чемпионат-россии-по-бегам-борзых.json",
+    "competitions/2026/06-июнь/2026001-монопородныи-чемпионат-по-курсингу-борзых-уиппет.json",
+    "competitions/2026/08-август/2026002-кубок-россии-по-курсингу-борзых.json"
   ]
 }

@@ -562,6 +562,7 @@ export async function ingestCompetition(
       has_results: true,
       results_file: relCompPath,
       result_count: processedResults.length,
+      participants_count: new Set(processedResults.map((r) => r.dog_id)).size,
     };
 
     if (existingEvIdx >= 0) {

@@ -191,13 +191,19 @@ function main() {
     }
 
     const resultCount = doc.result_count ?? doc.results?.length ?? 0
+    const participantsCount =
+      new Set(
+        (doc.results || [])
+          .map((r: { dog_id?: number }) => r?.dog_id)
+          .filter((id): id is number => typeof id === 'number'),
+      ).size || resultCount
     const month = monthFolder(doc.event.date_start)
 
     if (best) {
       best.ev.has_results = resultCount > 0
       best.ev.results_file = rel
       best.ev.result_count = resultCount
-      best.ev.participants_count = resultCount
+      best.ev.participants_count = participantsCount
       if (doc.event.results_url) best.ev.results_url = doc.event.results_url
       if (!best.ev.location && doc.event.location) best.ev.location = doc.event.location
       if (doc.event.judges) best.ev.judges = doc.event.judges
@@ -244,7 +250,7 @@ function main() {
         has_results: resultCount > 0,
         results_file: rel,
         result_count: resultCount,
-        participants_count: resultCount,
+        participants_count: participantsCount,
       }
       events.push(neu)
       report.push({

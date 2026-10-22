@@ -2,8 +2,8 @@
   "schema": "coursing-stats/calendar-v1",
   "year": 2026,
   "exported_at": "2026-09-28T13:14:08.803Z",
-  "event_count": 22,
-  "with_results": 22,
+  "event_count": 25,
+  "with_results": 25,
   "events": [
     {
       "id": 1301,
@@ -415,6 +415,24 @@
       "participants_count": 56
     },
     {
+      "id": 2026001,
+      "year": 2026,
+      "date_start": "2026-06-27",
+      "date_end": "2026-06-28",
+      "rank_label": "ПЧРКФ\n(Курсинг борзых)",
+      "event_type": "coursing",
+      "competition_kind": "ПЧРКФ",
+      "competition_type": "Курсинг борзых",
+      "title": "Монопородный чемпионат по курсингу борзых (Уиппет, Чирнеко дель Этна, Салюки)",
+      "host_club": "МОРОО \"Федерация спортивно-прикладного собаководства\"",
+      "region": null,
+      "location": "Московская область, д. Суханово",
+      "has_results": true,
+      "results_file": "competitions/2026/06-июнь/2026001-монопородныи-чемпионат-по-курсингу-борзых-уиппет.json",
+      "result_count": 44,
+      "participants_count": 44
+    },
+    {
       "id": 1550,
       "year": 2026,
       "month": "08-август",
@@ -441,6 +459,24 @@
       "participants_count": 51
     },
     {
+      "id": 2026002,
+      "year": 2026,
+      "date_start": "2026-08-22",
+      "date_end": "2026-08-23",
+      "rank_label": "Кубок России\n(Курсинг борзых)",
+      "event_type": "coursing",
+      "competition_kind": "Кубок России",
+      "competition_type": "Курсинг борзых",
+      "title": "Кубок России по курсингу борзых",
+      "host_club": "МОРОО \"Федерация спортивно-прикладного собаководства\"",
+      "region": null,
+      "location": "Московская обл., д. Суханово",
+      "has_results": true,
+      "results_file": "competitions/2026/08-август/2026002-кубок-россии-по-курсингу-борзых.json",
+      "result_count": 115,
+      "participants_count": 115
+    },
+    {
       "id": 2022000,
       "year": 2026,
       "month": "09-сентябрь",
@@ -463,8 +499,8 @@
       "judges": "Полякова Г.Б., Иванова Г.С., Гольдинова Л.М., Куликова Г.В.",
       "has_results": true,
       "results_file": "competitions/2026/09-сентябрь/2022000-чемпионат-россии-по-бегам-борзых.json",
-      "result_count": 0,
-      "participants_count": 0
+      "result_count": 73,
+      "participants_count": 73
     },
     {
       "id": 2022001,
@@ -489,8 +525,8 @@
       "judges": null,
       "has_results": true,
       "results_file": "competitions/2026/09-сентябрь/2022001-клубный-чемпионат-по-рейсингу.json",
-      "result_count": 0,
-      "participants_count": 0
+      "result_count": 49,
+      "participants_count": 49
     },
     {
       "id": 2022002,
@@ -516,7 +552,25 @@
       "has_results": true,
       "results_file": "competitions/2026/09-сентябрь/2022002-чркф-по-бегам-борзых.json",
       "result_count": 48,
-      "participants_count": 0
+      "participants_count": 48
+    },
+    {
+      "id": 2026003,
+      "year": 2026,
+      "date_start": "2026-10-03",
+      "date_end": "2026-10-04",
+      "rank_label": "ЧРКФ\n(Курсинг борзых)",
+      "event_type": "coursing",
+      "competition_kind": "ЧРКФ",
+      "competition_type": "Курсинг борзых",
+      "title": "Чемпионат РКФ по курсингу",
+      "host_club": "МОРОО \"Федерация спортивно-прикладного собаководства\"",
+      "region": null,
+      "location": "Московская область, д. Михайловское",
+      "has_results": true,
+      "results_file": "competitions/2026/10-октябрь/2026003-чемпионат-ркф-по-курсингу.json",
+      "result_count": 36,
+      "participants_count": 36
     },
     {
       "id": 2022003,
@@ -542,7 +596,7 @@
       "has_results": true,
       "results_file": "competitions/2026/10-октябрь/2022003-чркф-по-курсингу-борзых.json",
       "result_count": 105,
-      "participants_count": 0
+      "participants_count": 105
     }
   ]
 }
