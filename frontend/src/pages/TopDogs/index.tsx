@@ -5,7 +5,6 @@ import { useYandexGoal } from '../../components/YandexMetrica'
 import {
   useTopPlacement,
   useTopScore,
-  useTopElo,
   useTopSpeed,
   useCompetingBreeds,
   useYears,
@@ -57,11 +56,10 @@ export default function TopDogs() {
   const { data: yearsData, isLoading: yearsLoading } = useYears()
   const { data: topPlacementData, isLoading: placementLoading } = useTopPlacement(filterYear)
   const { data: topScoreData, isLoading: scoreLoading } = useTopScore(filterYear)
-  const { data: topEloData, isLoading: eloLoading } = useTopElo(filterYear)
   const { data: topSpeedData, isLoading: speedLoading } = useTopSpeed(filterYear)
 
   const loading =
-    breedsLoading || yearsLoading || placementLoading || scoreLoading || eloLoading || speedLoading
+    breedsLoading || yearsLoading || placementLoading || scoreLoading || speedLoading
 
   useEffect(() => {
     if (!loading) {
@@ -183,7 +181,6 @@ export default function TopDogs() {
 
   const topPlacement = topPlacementData?.success ? topPlacementData.data?.items || [] : []
   const topScore = topScoreData?.success ? topScoreData.data?.items || [] : []
-  const topElo = topEloData?.success ? topEloData.data?.items || [] : []
   const topSpeed = topSpeedData?.success ? topSpeedData.data?.items || [] : []
 
   const filterParams = {
@@ -198,10 +195,9 @@ export default function TopDogs() {
     () =>
       buildCombinedRanking(
         topPlacement as Record<string, unknown>[],
-        topScore as Record<string, unknown>[],
-        topElo as Record<string, unknown>[]
+        topScore as Record<string, unknown>[]
       ),
-    [topPlacement, topScore, topElo]
+    [topPlacement, topScore]
   )
 
   const rankedSpeed = useMemo(

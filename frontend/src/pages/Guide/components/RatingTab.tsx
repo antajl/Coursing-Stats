@@ -51,42 +51,26 @@ export default function RatingTab() {
               Формула плотности медалей (standingScore):
             </div>
             <div className="mt-2 rounded-lg border border-camel-200 bg-white px-3 py-2 font-mono text-xs font-semibold text-camel-900 shadow-2xs">
-              Плотность наград = (3.0 × Золото + 1.0 × Серебро + 0.5 × Бронза) / (Число стартов + 4)
+              Плотность наград = (3.0 × Золото + 1.0 × Серебро + 0.5 × Бронза) / (Число забегов + 4)
             </div>
             <p className="mt-2 text-xs leading-relaxed text-charcoal-700">
-              Золотые медали имеют наибольший вес. Знаменатель <code>(+ 4)</code> защищает от случайного взлёта после одного успешного старта и стимулирует регулярное участие.
+              Золотые медали имеют наибольший вес. Знаменатель <code>(+ 4)</code> защищает от случайного взлёта после одного успешного забега и стимулирует стабильное участие.
             </p>
           </div>
 
-          <div className="grid gap-3 sm:grid-cols-2">
-            <div className="rounded-xl border border-old-money-200 bg-white p-3.5 shadow-2xs">
-              <div className="text-[11px] font-bold uppercase tracking-wider text-camel-800">
-                Индекс стабильности CS v1
-              </div>
-              <div className="mt-1.5 rounded-md border border-old-money-200 bg-old-money-50/60 p-2 font-mono text-[11px] leading-relaxed text-charcoal-800">
-                <p>μ̃ = (μ × n + 85 × 12) / (n + 12)</p>
-                <p>P = B &gt; μ̃ ? 0,15 × min(B − μ̃, 4) : 0</p>
-                <p>E = min(2, 0,5 × log₂(S + 1))</p>
-                <p className="mt-1 font-semibold text-camel-800">CS = round(μ̃ + P + E, 2)</p>
-              </div>
-              <p className="mt-2 text-[11px] text-old-money-600">
-                μ̃ — байесовское среднее, P — пиковый бонус (до +0.6), E — опыт за число стартов (до +2.0).
-              </p>
+          <div className="rounded-xl border border-old-money-200 bg-white p-3.5 shadow-2xs">
+            <div className="text-[11px] font-bold uppercase tracking-wider text-camel-800">
+              Индекс стабильности CS v1
             </div>
-
-            <div className="rounded-xl border border-old-money-200 bg-white p-3.5 shadow-2xs">
-              <div className="text-[11px] font-bold uppercase tracking-wider text-camel-800">
-                Справочный рейтинг силы Elo v2
-              </div>
-              <div className="mt-1.5 rounded-md border border-old-money-200 bg-old-money-50/60 p-2 font-mono text-[11px] leading-relaxed text-charcoal-800">
-                <p>E_A = 1 / (1 + 10^((R_B − R_A) / 400))</p>
-                <p>S_A = 0,5 + 0,5 × tanh((score_A − score_B) / 8)</p>
-                <p className="mt-1 font-semibold text-camel-800">R_A' = R_A + K × (S_A − E_A)</p>
-              </div>
-              <p className="mt-2 text-[11px] text-old-money-600">
-                Начальный уровень: 1500 очков. Базовый коэффициент K0=50. Дисквалификация обнуляет исход забега.
-              </p>
+            <div className="mt-1.5 rounded-md border border-old-money-200 bg-old-money-50/60 p-2 font-mono text-[11px] leading-relaxed text-charcoal-800">
+              <p>μ̃ = (μ × n + 85 × 12) / (n + 12)</p>
+              <p>P = B &gt; μ̃ ? 0,15 × min(B − μ̃, 4) : 0</p>
+              <p>E = min(2, 0,5 × log₂(S + 1))</p>
+              <p className="mt-1 font-semibold text-camel-800">CS = round(μ̃ + P + E, 2)</p>
             </div>
+            <p className="mt-2 text-[11px] text-old-money-600">
+              μ̃ — байесовское среднее, P — пиковый бонус (до +0.6), E — опыт за число забегов (до +2.0).
+            </p>
           </div>
         </div>
       </SectionCard>

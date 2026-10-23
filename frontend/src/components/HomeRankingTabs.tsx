@@ -1,11 +1,10 @@
 import { useLayoutEffect, useRef, useState, useEffect } from 'react'
 
-export type HomeRankingTab = 'placement' | 'score' | 'speed' | 'elo'
+export type HomeRankingTab = 'placement' | 'score' | 'speed'
 
 const SEGMENTS: { id: HomeRankingTab; label: string }[] = [
   { id: 'placement', label: 'Медали' },
   { id: 'score', label: 'Очки' },
-  { id: 'elo', label: 'Elo' },
   { id: 'speed', label: 'Скорость' },
 ]
 

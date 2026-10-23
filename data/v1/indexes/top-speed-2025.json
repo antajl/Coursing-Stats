@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/index-top-speed-v1",
   "year": 2025,
-  "count": 158,
+  "count": 154,
   "items": [
     {
       "dog_id": 462,
@@ -30,9 +30,9 @@
       "rank_delta_breed": 0
     },
     {
-      "dog_id": 566,
+      "dog_id": 9598,
       "name_lat": "RUSSKIY VETER ZHATKA",
-      "name_ru": "РУССКИЙ ВЕТЕР ЖАТКА",
+      "name_ru": "RUSSKIY VETER ZHATKA",
       "breed": "ГРЕЙХАУНД",
       "year_from": 2025,
       "year_to": 2025,
@@ -199,7 +199,7 @@
       "rank_delta_breed": 0
     },
     {
-      "dog_id": 110,
+      "dog_id": 5797,
       "name_lat": "DZHIPSI LILIT BOGINYA NOCHI",
       "name_ru": "ДЖИПСИ ЛИЛИТ БОГИНЯ НОЧИ",
       "breed": "УИППЕТ",
@@ -277,7 +277,7 @@
       "rank_delta_breed": 0
     },
     {
-      "dog_id": 300,
+      "dog_id": 5650,
       "name_lat": "BRAVE HEART SIMBA",
       "name_ru": "БРЕЙВ ХАРТ СИМБА",
       "breed": "УИППЕТ",
@@ -316,7 +316,7 @@
       "rank_delta_breed": 0
     },
     {
-      "dog_id": 121,
+      "dog_id": 5637,
       "name_lat": "STANGERS LAND IRWIN DIVNYI",
       "name_ru": "СТАНГЕРС ЛАНД ИРВИН ДИВНЫЙ",
       "breed": "УИППЕТ",
@@ -329,7 +329,7 @@
       "rank_delta_breed": 0
     },
     {
-      "dog_id": 345,
+      "dog_id": 263,
       "name_lat": "STANGERS LAND INGRID ELEGANT",
       "name_ru": "СТАНГЕРС ЛАНД ИНГРИД ЭЛЕГАНТ",
       "breed": "УИППЕТ",
@@ -355,7 +355,7 @@
       "rank_delta_breed": 0
     },
     {
-      "dog_id": 239,
+      "dog_id": 5649,
       "name_lat": "KUPIDON",
       "name_ru": "КУПИДОН",
       "breed": "УИППЕТ",
@@ -407,7 +407,7 @@
       "rank_delta_breed": 0
     },
     {
-      "dog_id": 242,
+      "dog_id": 7288,
       "name_lat": "WHIPPOLLY ELIXIR",
       "name_ru": "УИППОЛЛИ ЭЛИКСИР",
       "breed": "УИППЕТ",
@@ -420,7 +420,7 @@
       "rank_delta_breed": 0
     },
     {
-      "dog_id": 157,
+      "dog_id": 6122,
       "name_lat": "RUSSKIY VETER ZHGUCHAYA BLONDINKA",
       "name_ru": "РУССКИЙ ВЕТЕР ЖГУЧАЯ БЛОНДИНКА",
       "breed": "ГРЕЙХАУНД",
@@ -433,7 +433,7 @@
       "rank_delta_breed": 0
     },
     {
-      "dog_id": 274,
+      "dog_id": 5896,
       "name_lat": "BARCELONA ENCANTADORA",
       "name_ru": "БАРСЕЛОНА ЭНКАНТАДОРА",
       "breed": "УИППЕТ",
@@ -446,7 +446,7 @@
       "rank_delta_breed": 0
     },
     {
-      "dog_id": 111,
+      "dog_id": 5663,
       "name_lat": "STANGERS LAND ZLATOSLAVA",
       "name_ru": "СТАНГЕРС ЛАНД ЗЛАТОСЛАВА",
       "breed": "УИППЕТ",
@@ -459,7 +459,7 @@
       "rank_delta_breed": 0
     },
     {
-      "dog_id": 254,
+      "dog_id": 5634,
       "name_lat": "STANGERS LAND ZENIT",
       "name_ru": "СТАНГЕРС ЛАНД ЗЕНИТ",
       "breed": "УИППЕТ",
@@ -485,7 +485,7 @@
       "rank_delta_breed": 0
     },
     {
-      "dog_id": 586,
+      "dog_id": 5897,
       "name_lat": "ENOLA MAD RUSH",
       "name_ru": "ЭНОЛА МЭД РАШ",
       "breed": "УИППЕТ",
@@ -550,9 +550,9 @@
       "rank_delta_breed": 0
     },
     {
-      "dog_id": 257,
+      "dog_id": 7313,
       "name_lat": "WOKEN UP IN HIGHLANDS",
-      "name_ru": "УОКЕН АП ИН ХАЙЛЕНДС",
+      "name_ru": "WOKEN UP IN HIGHLANDS",
       "breed": "УИППЕТ",
       "year_from": 2025,
       "year_to": 2025,
@@ -572,7 +572,7 @@
       "best_speed": 49.921,
       "avg_speed": 48.89,
       "total_starts": 2,
-      "rank_delta": 14,
+      "rank_delta": 13,
       "rank_delta_breed": 4
     },
     {
@@ -589,7 +589,7 @@
       "rank_delta_breed": -2
     },
     {
-      "dog_id": 585,
+      "dog_id": 8723,
       "name_lat": "ESHTON VORTEX FORCE",
       "name_ru": "ЭШТОН ВОРТЕКС ФОРС",
       "breed": "УИППЕТ",
@@ -667,6 +667,19 @@
       "rank_delta_breed": 0
     },
     {
+      "dog_id": 6191,
+      "name_lat": "YU KISS SO SHKODNOGO DVORA",
+      "name_ru": "Ю КИСС СО ШКОДНОГО ДВОРА",
+      "breed": "САЛЮКИ",
+      "year_from": 2025,
+      "year_to": 2025,
+      "best_speed": 49.655,
+      "avg_speed": 48.45,
+      "total_starts": 2,
+      "rank_delta": -3,
+      "rank_delta_breed": 0
+    },
+    {
       "dog_id": 393,
       "name_lat": "ARTEFAKT JUMAX",
       "name_ru": "ARTEFAKT JUMAX",
@@ -674,21 +687,8 @@
       "year_from": 2025,
       "year_to": 2025,
       "best_speed": 49.655,
-      "avg_speed": 49.05,
-      "total_starts": 1,
-      "rank_delta": -3,
-      "rank_delta_breed": 0
-    },
-    {
-      "dog_id": 6191,
-      "name_lat": "YU KISS SO SHKODNOGO DVORA",
-      "name_ru": "YU KISS SO SHKODNOGO DVORA",
-      "breed": "САЛЮКИ",
-      "year_from": 2025,
-      "year_to": 2025,
-      "best_speed": 49.655,
-      "avg_speed": 48.11,
-      "total_starts": 1,
+      "avg_speed": 47.91,
+      "total_starts": 2,
       "rank_delta": -3,
       "rank_delta_breed": 0
     },
@@ -717,19 +717,6 @@
       "total_starts": 3,
       "rank_delta": -3,
       "rank_delta_breed": -3
-    },
-    {
-      "dog_id": 215,
-      "name_lat": "YU KISS SO SHKODNOGO DVORA",
-      "name_ru": "Ю КИСС СО ШКОДНОГО ДВОРА",
-      "breed": "САЛЮКИ",
-      "year_from": 2025,
-      "year_to": 2025,
-      "best_speed": 49.431,
-      "avg_speed": 48.79,
-      "total_starts": 1,
-      "rank_delta": -3,
-      "rank_delta_breed": 0
     },
     {
       "dog_id": 453,
@@ -771,7 +758,7 @@
       "rank_delta_breed": 0
     },
     {
-      "dog_id": 71,
+      "dog_id": 7073,
       "name_lat": "BEL ETUAL LEXINGTON",
       "name_ru": "БЕЛЬ ЭТУАЛЬ ЛЕКСИНГТОН",
       "breed": "САЛЮКИ",
@@ -784,7 +771,7 @@
       "rank_delta_breed": 0
     },
     {
-      "dog_id": 99,
+      "dog_id": 5655,
       "name_lat": "GOLDI KRAUND IONSI BIRGINSON",
       "name_ru": "ГОЛДИ КРАУНД ИОНСИ БИРГИНСОН",
       "breed": "УИППЕТ",
@@ -823,7 +810,7 @@
       "rank_delta_breed": 0
     },
     {
-      "dog_id": 80,
+      "dog_id": 5639,
       "name_lat": "DOGONI VETER NEBESNYI ETUDE",
       "name_ru": "ДОГОНИ ВЕТЕР НЕБЕСНЫЙ ЭТЮД",
       "breed": "УИППЕТ",
@@ -914,7 +901,7 @@
       "rank_delta_breed": 0
     },
     {
-      "dog_id": 225,
+      "dog_id": 5779,
       "name_lat": "SALGREYS VELAR",
       "name_ru": "САЛГРЕЙС ВЕЛАР",
       "breed": "САЛЮКИ",
@@ -935,19 +922,6 @@
       "year_to": 2025,
       "best_speed": 47.872,
       "avg_speed": 47.72,
-      "total_starts": 1,
-      "rank_delta": -2,
-      "rank_delta_breed": 0
-    },
-    {
-      "dog_id": 567,
-      "name_lat": "ARTEFAKT JUMAX",
-      "name_ru": "АРТЕФАКТ ЮМАКС",
-      "breed": "ГРЕЙХАУНД",
-      "year_from": 2025,
-      "year_to": 2025,
-      "best_speed": 47.619,
-      "avg_speed": 46.76,
       "total_starts": 1,
       "rank_delta": -2,
       "rank_delta_breed": 0
@@ -979,9 +953,9 @@
       "rank_delta_breed": -2
     },
     {
-      "dog_id": 81,
+      "dog_id": 5633,
       "name_lat": "YUVENTUS SKORYJ",
-      "name_ru": "ЮВЕНТУС СКОРЫЙ",
+      "name_ru": "YUVENTUS SKORYJ",
       "breed": "УИППЕТ",
       "year_from": 2025,
       "year_to": 2025,
@@ -992,7 +966,7 @@
       "rank_delta_breed": -2
     },
     {
-      "dog_id": 418,
+      "dog_id": 7956,
       "name_lat": "BORZOMIR DZHAMAL",
       "name_ru": "БОРЗОМИР ДЖАМАЛЬ",
       "breed": "ТАЗЫ",
@@ -1031,7 +1005,7 @@
       "rank_delta_breed": 0
     },
     {
-      "dog_id": 220,
+      "dog_id": 5781,
       "name_lat": "SALUKOV SINDBAD STORY OF SEVEN SEAS",
       "name_ru": "САЛЮКОВ СИНБАД СТОРИ ОФ СЕВЕН СИАС",
       "breed": "САЛЮКИ",
@@ -1122,7 +1096,7 @@
       "rank_delta_breed": 0
     },
     {
-      "dog_id": 552,
+      "dog_id": 6240,
       "name_lat": "ANTIQUE GODDESS",
       "name_ru": "АНТИК ГОДДЕС",
       "breed": "УИППЕТ",
@@ -1148,7 +1122,7 @@
       "rank_delta_breed": 0
     },
     {
-      "dog_id": 419,
+      "dog_id": 7959,
       "name_lat": "BORZOMIR DZHAMIL",
       "name_ru": "БОРЗОМИР ДЖАМИЛЬ",
       "breed": "ТАЗЫ",
@@ -1189,7 +1163,7 @@
     {
       "dog_id": 109,
       "name_lat": "LUXURY WHIPP ORKHIDEYA",
-      "name_ru": "ЛАКШЕРИ ВИПП ОРХИДЕЯ",
+      "name_ru": "ЛАКШЕРИ УИПП ОРХИДЕЯ",
       "breed": "УИППЕТ",
       "year_from": 2025,
       "year_to": 2025,
@@ -1226,7 +1200,7 @@
       "rank_delta_breed": 0
     },
     {
-      "dog_id": 188,
+      "dog_id": 5964,
       "name_lat": "ARIES KHAN SKADI SARAMA FAST & FURIOUS",
       "name_ru": "АРИЕС ХАН СКАДИ САРАМА ФАСТ & ФЬЮРИОС",
       "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
@@ -1239,15 +1213,15 @@
       "rank_delta_breed": 0
     },
     {
-      "dog_id": 549,
+      "dog_id": 8516,
       "name_lat": "SOKOL & K EFROSINIYA",
-      "name_ru": "СОКОЛ & K ЕФРОСИНИЯ",
+      "name_ru": "SOKOL & K EFROSINIYA",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "year_from": 2025,
       "year_to": 2025,
       "best_speed": 45.833,
-      "avg_speed": 44.63,
-      "total_starts": 1,
+      "avg_speed": 44.22,
+      "total_starts": 2,
       "rank_delta": -2,
       "rank_delta_breed": 0
     },
@@ -1265,7 +1239,7 @@
       "rank_delta_breed": 0
     },
     {
-      "dog_id": 584,
+      "dog_id": 5903,
       "name_lat": "HEIDI SOTIS DJED ATUM",
       "name_ru": "ХЕЙДИ СОТИС ДЖЕД АТУМ",
       "breed": "ФАРАОНОВА СОБАКА",
@@ -1343,7 +1317,7 @@
       "rank_delta_breed": 0
     },
     {
-      "dog_id": 531,
+      "dog_id": 5906,
       "name_lat": "HEIDI SOTIS DELIMARA MINTAKA",
       "name_ru": "ХЕЙДИ СОТИС ДЕЛИМАРА МИНТАКА",
       "breed": "ФАРАОНОВА СОБАКА",
@@ -1408,7 +1382,7 @@
       "rank_delta_breed": 0
     },
     {
-      "dog_id": 397,
+      "dog_id": 7912,
       "name_lat": "BERKANA",
       "name_ru": "БЕРКАНА",
       "breed": "ПОДЕНКО ИБИЦЕНКО (К Ш, Г Ш)",
@@ -1434,7 +1408,7 @@
       "rank_delta_breed": 0
     },
     {
-      "dog_id": 290,
+      "dog_id": 5823,
       "name_lat": "IRKISS SLAVA",
       "name_ru": "ИРКИСС СЛАВА",
       "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
@@ -1443,19 +1417,6 @@
       "best_speed": 43.841,
       "avg_speed": 43.02,
       "total_starts": 2,
-      "rank_delta": -2,
-      "rank_delta_breed": 0
-    },
-    {
-      "dog_id": 8516,
-      "name_lat": "SOKOL & K EFROSINIYA",
-      "name_ru": "SOKOL & K EFROSINIYA",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "year_from": 2025,
-      "year_to": 2025,
-      "best_speed": 43.813,
-      "avg_speed": 43.81,
-      "total_starts": 1,
       "rank_delta": -2,
       "rank_delta_breed": 0
     },
@@ -1525,20 +1486,20 @@
       "rank_delta_breed": 0
     },
     {
-      "dog_id": 189,
+      "dog_id": 5755,
       "name_lat": "ARIES KHAN SAMUEL FORSAGE JACKSON",
-      "name_ru": "АРИЕС ХАН СЭМЮЭЛЬ ФОРСАЖ ДЖЕКСОН",
+      "name_ru": "ARIES KHAN SAMUEL FORSAGE JACKSON",
       "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
       "year_from": 2025,
       "year_to": 2025,
       "best_speed": 42.843,
-      "avg_speed": 42.56,
-      "total_starts": 3,
+      "avg_speed": 41.37,
+      "total_starts": 4,
       "rank_delta": -2,
       "rank_delta_breed": 0
     },
     {
-      "dog_id": 186,
+      "dog_id": 6152,
       "name_lat": "ARIES KHAN SCYTHIAN SIMURAN",
       "name_ru": "АРИЕС ХАН СКИФ СИМУРАН",
       "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
@@ -1564,7 +1525,7 @@
       "rank_delta_breed": 0
     },
     {
-      "dog_id": 62,
+      "dog_id": 7064,
       "name_lat": "PODAROK SUDBY",
       "name_ru": "ПОДАРОК СУДЬБЫ",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
@@ -1642,7 +1603,7 @@
       "rank_delta_breed": 0
     },
     {
-      "dog_id": 400,
+      "dog_id": 7911,
       "name_lat": "ASTEMIR",
       "name_ru": "АСТЕМИР",
       "breed": "ПОДЕНКО ИБИЦЕНКО (К Ш, Г Ш)",
@@ -1655,7 +1616,7 @@
       "rank_delta_breed": 0
     },
     {
-      "dog_id": 399,
+      "dog_id": 7909,
       "name_lat": "ALRISHA ZVEZDA SAPFIRA",
       "name_ru": "АЛЬРИША ЗВЕЗДА САПФИРА",
       "breed": "ПОДЕНКО ИБИЦЕНКО (К Ш, Г Ш)",
@@ -1681,19 +1642,6 @@
       "rank_delta_breed": 0
     },
     {
-      "dog_id": 5755,
-      "name_lat": "ARIES KHAN SAMUEL FORSAGE JACKSON",
-      "name_ru": "ARIES KHAN SAMUEL FORSAGE JACKSON",
-      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
-      "year_from": 2025,
-      "year_to": 2025,
-      "best_speed": 41.847,
-      "avg_speed": 40.17,
-      "total_starts": 1,
-      "rank_delta": -2,
-      "rank_delta_breed": 0
-    },
-    {
       "dog_id": 417,
       "name_lat": "АЛЛАДИН ВАЛИ ДЛЯ БОРЗОМИР /ALLADIN VALI DLYA BORZOMIR",
       "name_ru": "АЛЛАДИН ВАЛИ ДЛЯ БОРЗОМИР /ALLADIN VALI DLYA BORZOMIR",
@@ -1707,7 +1655,7 @@
       "rank_delta_breed": 0
     },
     {
-      "dog_id": 289,
+      "dog_id": 7365,
       "name_lat": "ROSSO BOREALE VARVARA",
       "name_ru": "РОССО БОРЕАЛЕ ВАРВАРА",
       "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
@@ -1785,7 +1733,7 @@
       "rank_delta_breed": 0
     },
     {
-      "dog_id": 562,
+      "dog_id": 851,
       "name_lat": "NASLEDIYE ETERA UINSTON DZHEJMS SETLER",
       "name_ru": "НАСЛЕДНИЕ ЕТЕРА УИНСТОН ДЖЕЙМС СЕТЛЕР",
       "breed": "БАСЕНДЖИ",
@@ -1824,7 +1772,7 @@
       "rank_delta_breed": 0
     },
     {
-      "dog_id": 539,
+      "dog_id": 5746,
       "name_lat": "ELAN LAN BYSTRAYA",
       "name_ru": "ЕЛАНЬ ЛАНЬ БЫСТРАЯ",
       "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
@@ -1889,7 +1837,7 @@
       "rank_delta_breed": 0
     },
     {
-      "dog_id": 287,
+      "dog_id": 7363,
       "name_lat": "ROSSO BOREALE VRAENT KOBI",
       "name_ru": "РОССО БОРЕАЛЕ ВРАЕНТ КОБИ",
       "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
@@ -1993,7 +1941,7 @@
       "rank_delta_breed": 0
     },
     {
-      "dog_id": 548,
+      "dog_id": 8501,
       "name_lat": "GAKERU ABUBAKAR",
       "name_ru": "ГАКЕРУ АБУБАКАР",
       "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",

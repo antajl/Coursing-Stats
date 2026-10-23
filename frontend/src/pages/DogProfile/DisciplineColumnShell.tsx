@@ -90,7 +90,7 @@ export function DisciplineStatsCard({
   const t = THEME[theme]
   return (
     <div
-      className={`flex h-[24rem] shrink-0 flex-col overflow-hidden rounded-xl border bg-white p-5 md:h-[25rem] md:p-6 ${t.cardBorder}`}
+      className={`flex h-[24rem] shrink-0 flex-col overflow-hidden rounded-xl border bg-white p-4 sm:p-5 xl:p-6 md:h-[25rem] ${t.cardBorder}`}
     >
       <div className="mb-4 flex items-center justify-between gap-1.5 shrink-0 min-w-0">
         <h2 className="text-base sm:text-lg font-bold tracking-tight text-charcoal-800 md:text-xl truncate shrink min-w-0">
@@ -194,27 +194,33 @@ export function DisciplineFooterRow({ children }: { children?: ReactNode }) {
 export function DisciplineHistoryCard({
   theme,
   participations,
+  label,
   children,
 }: {
   theme: DisciplineTheme
-  /** Total starts / shows — shown at top as «Участий N». */
+  /** Total events / shows — shown at top as label + N. */
   participations?: number
+  label?: string
   children: ReactNode
 }) {
   const t = THEME[theme]
+  const displayLabel =
+    label ?? (theme === 'forest' ? 'Состязаний' : theme === 'warm-blue' ? 'Забегов' : 'Выставок')
   return (
-    <div className={`rounded-xl border bg-white p-5 md:p-6 ${t.cardBorder}`}>
+    <div
+      className={`flex flex-col rounded-xl border bg-white p-4 sm:p-5 xl:p-6 lg:flex-1 lg:min-h-[26rem] ${t.cardBorder}`}
+    >
       {participations != null && participations > 0 ? (
-        <div className="mb-3 flex items-baseline justify-between gap-2 border-b border-old-money-100 pb-2">
+        <div className="mb-3 flex shrink-0 items-baseline justify-between gap-2 border-b border-old-money-100 pb-2">
           <span className="text-xs font-semibold uppercase tracking-wide text-charcoal-500">
-            Участий
+            {displayLabel}
           </span>
           <span className="text-sm font-bold tabular-nums text-charcoal-800">
             {participations}
           </span>
         </div>
       ) : null}
-      {children}
+      <div className="flex flex-1 flex-col justify-between">{children}</div>
     </div>
   )
 }

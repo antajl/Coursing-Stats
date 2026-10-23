@@ -2,7 +2,7 @@
   "schema": "coursing-stats/index-top-score-v1",
   "year": 2021,
   "rating_score_version": "cs-v1",
-  "count": 269,
+  "count": 263,
   "items": [
     {
       "dog_id": 555,
@@ -33,21 +33,6 @@
       "year_to": 2021,
       "judge_eval_count": 12,
       "rating_score": 88.64
-    },
-    {
-      "dog_id": 10257,
-      "name_lat": "РУССКИ ПАРК ДАНАЯ",
-      "name_ru": "РУССКИ ПАРК ДАНАЯ",
-      "breed": "УИППЕТ",
-      "year": 2021,
-      "best_score": 372,
-      "total_starts": 3,
-      "best_judge_score": 95,
-      "avg_judge_score": 90.67,
-      "year_from": 2021,
-      "year_to": 2021,
-      "judge_eval_count": 12,
-      "rating_score": 89.43
     },
     {
       "dog_id": 10455,
@@ -335,6 +320,21 @@
       "rating_score": 87.3
     },
     {
+      "dog_id": 9629,
+      "name_lat": "BEATRIS IZ SOZVEZDIYA SURSKIKH PSOV",
+      "name_ru": "БЕАТРИС ИЗ СОЗВЕЗДИЯ СУРСКИХ ПСОВ",
+      "breed": "УИППЕТ",
+      "year": 2021,
+      "best_score": 363,
+      "total_starts": 4,
+      "best_judge_score": 92,
+      "avg_judge_score": 87.06,
+      "year_from": 2021,
+      "year_to": 2021,
+      "judge_eval_count": 16,
+      "rating_score": 87.94
+    },
+    {
       "dog_id": 10447,
       "name_lat": "ТОТ ЕЩЕ ТЕМП",
       "name_ru": "ТОТ ЕЩЕ ТЕМП",
@@ -365,34 +365,19 @@
       "rating_score": 87.54
     },
     {
-      "dog_id": 10456,
-      "name_lat": "BEATRIS IZ SOZVEZDIYA SURSKIKH PSOV",
-      "name_ru": "BEATRIS IZ SOZVEZDIYA SURSKIKH PSOV",
-      "breed": "УИППЕТ",
-      "year": 2021,
-      "best_score": 363,
-      "total_starts": 1,
-      "best_judge_score": 92,
-      "avg_judge_score": 90.75,
-      "year_from": 2021,
-      "year_to": 2021,
-      "judge_eval_count": 4,
-      "rating_score": 87.54
-    },
-    {
       "dog_id": 10429,
-      "name_lat": "КЕТЛИН РУТГЕР",
+      "name_lat": "KETLIN RUTGER",
       "name_ru": "КЕТЛИН РУТГЕР",
       "breed": "УИППЕТ",
       "year": 2021,
-      "best_score": 362,
-      "total_starts": 5,
+      "best_score": 542,
+      "total_starts": 6,
       "best_judge_score": 95,
-      "avg_judge_score": 87.4,
+      "avg_judge_score": 87.92,
       "year_from": 2021,
       "year_to": 2021,
-      "judge_eval_count": 20,
-      "rating_score": 88.39
+      "judge_eval_count": 24,
+      "rating_score": 88.95
     },
     {
       "dog_id": 10331,
@@ -438,21 +423,6 @@
       "year_to": 2021,
       "judge_eval_count": 8,
       "rating_score": 87.69
-    },
-    {
-      "dog_id": 10521,
-      "name_lat": "KETLIN RUTGER",
-      "name_ru": "KETLIN RUTGER",
-      "breed": "УИППЕТ",
-      "year": 2021,
-      "best_score": 542,
-      "total_starts": 1,
-      "best_judge_score": 92,
-      "avg_judge_score": 90.5,
-      "year_from": 2021,
-      "year_to": 2021,
-      "judge_eval_count": 4,
-      "rating_score": 87.48
     },
     {
       "dog_id": 9927,
@@ -1370,6 +1340,21 @@
       "rating_score": 88.37
     },
     {
+      "dog_id": 10257,
+      "name_lat": "RUSSKI PARK DANAYA",
+      "name_ru": "РУССКИ ПАРК ДАНАЯ",
+      "breed": "УИППЕТ",
+      "year": 2021,
+      "best_score": 531,
+      "total_starts": 4,
+      "best_judge_score": 95,
+      "avg_judge_score": 90.25,
+      "year_from": 2021,
+      "year_to": 2021,
+      "judge_eval_count": 16,
+      "rating_score": 89.76
+    },
+    {
       "dog_id": 9868,
       "name_lat": "EFFLORESCOS MAVISCAL",
       "name_ru": "EFFLORESCOS MAVISCAL",
@@ -1438,21 +1423,6 @@
       "best_score": 356,
       "total_starts": 1,
       "best_judge_score": 94,
-      "avg_judge_score": 89,
-      "year_from": 2021,
-      "year_to": 2021,
-      "judge_eval_count": 4,
-      "rating_score": 87.1
-    },
-    {
-      "dog_id": 10519,
-      "name_lat": "RUSSKI PARK DANAYA",
-      "name_ru": "RUSSKI PARK DANAYA",
-      "breed": "УИППЕТ",
-      "year": 2021,
-      "best_score": 531,
-      "total_starts": 1,
-      "best_judge_score": 93,
       "avg_judge_score": 89,
       "year_from": 2021,
       "year_to": 2021,
@@ -1762,7 +1732,7 @@
     {
       "dog_id": 10425,
       "name_lat": "PALLADA ASTRUM",
-      "name_ru": "PALLADA ASTRUM",
+      "name_ru": "ПАЛЛАДА АСТРУМ",
       "breed": "УИППЕТ",
       "year": 2021,
       "best_score": 354,
@@ -1955,21 +1925,6 @@
       "rating_score": 86.85
     },
     {
-      "dog_id": 9541,
-      "name_lat": "ЦВЕТ СОЛНЦА ДРЕВНЯЯ ЛЕГЕНДА",
-      "name_ru": "ЦВЕТ СОЛНЦА ДРЕВНЯЯ ЛЕГЕНДА",
-      "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
-      "year": 2021,
-      "best_score": 352,
-      "total_starts": 1,
-      "best_judge_score": 91,
-      "avg_judge_score": 88,
-      "year_from": 2021,
-      "year_to": 2021,
-      "judge_eval_count": 4,
-      "rating_score": 86.85
-    },
-    {
       "dog_id": 9712,
       "name_lat": "REEDLY ROAD MYBERN",
       "name_ru": "REEDLY ROAD MYBERN",
@@ -2017,7 +1972,7 @@
     {
       "dog_id": 9388,
       "name_lat": "ENTAYLI YOZ",
-      "name_ru": "ENTAYLI YOZ",
+      "name_ru": "ЭНТАЙЛИ ЙОЗ",
       "breed": "УИППЕТ",
       "year": 2021,
       "best_score": 522,
@@ -2405,21 +2360,6 @@
       "rating_score": 86.19
     },
     {
-      "dog_id": 9629,
-      "name_lat": "БЕАТРИС ИЗ СОЗВЕЗДИЯ СУРСКИХ ПСОВ",
-      "name_ru": "БЕАТРИС ИЗ СОЗВЕЗДИЯ СУРСКИХ ПСОВ",
-      "breed": "УИППЕТ",
-      "year": 2021,
-      "best_score": 347,
-      "total_starts": 3,
-      "best_judge_score": 89,
-      "avg_judge_score": 85.83,
-      "year_from": 2021,
-      "year_to": 2021,
-      "judge_eval_count": 12,
-      "rating_score": 86.95
-    },
-    {
       "dog_id": 10035,
       "name_lat": "SOLLUCERO",
       "name_ru": "SOLLUCERO",
@@ -2452,7 +2392,7 @@
     {
       "dog_id": 10017,
       "name_lat": "DEYONGA GAYA MONIFA",
-      "name_ru": "DEYONGA GAYA MONIFA",
+      "name_ru": "ДЕЙОНГА ГАЙА МОНИФА",
       "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
       "year": 2021,
       "best_score": 347,
@@ -2525,6 +2465,21 @@
       "rating_score": 87.05
     },
     {
+      "dog_id": 10525,
+      "name_lat": "TSVET SOLNTSA DREVNYAYA LEGENDA",
+      "name_ru": "ЦВЕТ СОЛНЦА ДРЕВНЯЯ ЛЕГЕНДА",
+      "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+      "year": 2021,
+      "best_score": 517,
+      "total_starts": 2,
+      "best_judge_score": 91,
+      "avg_judge_score": 87.25,
+      "year_from": 2021,
+      "year_to": 2021,
+      "judge_eval_count": 8,
+      "rating_score": 87.29
+    },
+    {
       "dog_id": 10515,
       "name_lat": "ARIES KHAN PHOEBE PIPIRIMA",
       "name_ru": "ARIES KHAN PHOEBE PIPIRIMA",
@@ -2570,21 +2525,6 @@
       "rating_score": 86.69
     },
     {
-      "dog_id": 10525,
-      "name_lat": "TSVET SOLNTSA DREVNYAYA LEGENDA",
-      "name_ru": "TSVET SOLNTSA DREVNYAYA LEGENDA",
-      "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
-      "year": 2021,
-      "best_score": 517,
-      "total_starts": 1,
-      "best_judge_score": 90,
-      "avg_judge_score": 86.5,
-      "year_from": 2021,
-      "year_to": 2021,
-      "judge_eval_count": 4,
-      "rating_score": 86.48
-    },
-    {
       "dog_id": 50,
       "name_lat": "ИТУРИ ПАЗЗЛ ЕКСТРАОРДИНАРИ СМАРТ",
       "name_ru": "ИТУРИ ПАЗЗЛ ЕКСТРАОРДИНАРИ СМАРТ",
@@ -2602,23 +2542,8 @@
     {
       "dog_id": 51,
       "name_lat": "SONETA STAR IZ DIVNOGO SADA",
-      "name_ru": "SONETA STAR IZ DIVNOGO SADA",
+      "name_ru": "СОНЕТА СТАР ИЗ ДИВНОГО САДА",
       "breed": "БАСЕНДЖИ",
-      "year": 2021,
-      "best_score": 346,
-      "total_starts": 1,
-      "best_judge_score": 90,
-      "avg_judge_score": 86.5,
-      "year_from": 2021,
-      "year_to": 2021,
-      "judge_eval_count": 4,
-      "rating_score": 86.48
-    },
-    {
-      "dog_id": 9667,
-      "name_lat": "СОЛАР СПИРИТ АМОН РА",
-      "name_ru": "СОЛАР СПИРИТ АМОН РА",
-      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
       "year": 2021,
       "best_score": 346,
       "total_starts": 1,
@@ -2735,21 +2660,6 @@
       "rating_score": 86.41
     },
     {
-      "dog_id": 10488,
-      "name_lat": "КУЛИКОВО ПОЛЕ ГЕЛИОС",
-      "name_ru": "КУЛИКОВО ПОЛЕ ГЕЛИОС",
-      "breed": "УИППЕТ",
-      "year": 2021,
-      "best_score": 345,
-      "total_starts": 1,
-      "best_judge_score": 90,
-      "avg_judge_score": 86.25,
-      "year_from": 2021,
-      "year_to": 2021,
-      "judge_eval_count": 4,
-      "rating_score": 86.41
-    },
-    {
       "dog_id": 10333,
       "name_lat": "REEDLY ROAD QUIDDITCH",
       "name_ru": "REEDLY ROAD QUIDDITCH",
@@ -2825,6 +2735,21 @@
       "rating_score": 88.89
     },
     {
+      "dog_id": 10488,
+      "name_lat": "KULIKOVO POLE GELIOS",
+      "name_ru": "КУЛИКОВО ПОЛЕ ГЕЛИОС",
+      "breed": "УИППЕТ",
+      "year": 2021,
+      "best_score": 520,
+      "total_starts": 2,
+      "best_judge_score": 90,
+      "avg_judge_score": 86.13,
+      "year_from": 2021,
+      "year_to": 2021,
+      "judge_eval_count": 8,
+      "rating_score": 86.84
+    },
+    {
       "dog_id": 10359,
       "name_lat": "SHOW MUST GO ON",
       "name_ru": "SHOW MUST GO ON",
@@ -2840,24 +2765,9 @@
       "rating_score": 86.19
     },
     {
-      "dog_id": 10523,
-      "name_lat": "KULIKOVO POLE GELIOS",
-      "name_ru": "KULIKOVO POLE GELIOS",
-      "breed": "УИППЕТ",
-      "year": 2021,
-      "best_score": 520,
-      "total_starts": 1,
-      "best_judge_score": 89,
-      "avg_judge_score": 86,
-      "year_from": 2021,
-      "year_to": 2021,
-      "judge_eval_count": 4,
-      "rating_score": 86.31
-    },
-    {
-      "dog_id": 10511,
+      "dog_id": 9311,
       "name_lat": "FEERIYA PAFF",
-      "name_ru": "FEERIYA PAFF",
+      "name_ru": "ФЕЕРИЯ ПАФФ",
       "breed": "ГРЕЙХАУНД",
       "year": 2021,
       "best_score": 518,
@@ -2901,7 +2811,7 @@
     },
     {
       "dog_id": 10014,
-      "name_lat": "ГЕЗАН ГОРЕДЕННА",
+      "name_lat": "GEZAN GOREDENNA",
       "name_ru": "ГЕЗАН ГОРЕДЕННА",
       "breed": "БАСЕНДЖИ",
       "year": 2021,
@@ -3275,6 +3185,21 @@
       "rating_score": 86.93
     },
     {
+      "dog_id": 10514,
+      "name_lat": "SOLAR SPIRIT AMON RA",
+      "name_ru": "СОЛАР СПИРИТ АМОН РА",
+      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+      "year": 2021,
+      "best_score": 512,
+      "total_starts": 2,
+      "best_judge_score": 90,
+      "avg_judge_score": 85.63,
+      "year_from": 2021,
+      "year_to": 2021,
+      "judge_eval_count": 8,
+      "rating_score": 86.64
+    },
+    {
       "dog_id": 10528,
       "name_lat": "МАГНИФИКО НЕРО",
       "name_ru": "МАГНИФИКО НЕРО",
@@ -3288,21 +3213,6 @@
       "year_to": 2021,
       "judge_eval_count": 4,
       "rating_score": 85.9
-    },
-    {
-      "dog_id": 10514,
-      "name_lat": "SOLAR SPIRIT AMON RA",
-      "name_ru": "SOLAR SPIRIT AMON RA",
-      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
-      "year": 2021,
-      "best_score": 512,
-      "total_starts": 1,
-      "best_judge_score": 87,
-      "avg_judge_score": 84.75,
-      "year_from": 2021,
-      "year_to": 2021,
-      "judge_eval_count": 4,
-      "rating_score": 85.75
     },
     {
       "dog_id": 10516,
@@ -3980,9 +3890,9 @@
       "rating_score": 83.42
     },
     {
-      "dog_id": 10497,
+      "dog_id": 9515,
       "name_lat": "PERM VELIKAYA SAFYANA",
-      "name_ru": "PERM VELIKAYA SAFYANA",
+      "name_ru": "ПЕРМЬ ВЕЛИКАЯ САФЬЯНА",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "year": 2021,
       "best_score": 293,

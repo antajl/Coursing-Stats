@@ -62,15 +62,6 @@ if (fs.existsSync(derivedIndexes)) {
   assertNonEmptyIndex('data/v1/indexes/judges-summary.json', 'judges', 'judges-summary');
 }
 
-// Elo v2: must run AFTER dog-profiles rebuild (derived indexes wipe elo_* fields)
-const eloExtract = path.join(ROOT, 'backend/scripts/elo/extract-races.ts');
-if (fs.existsSync(eloExtract)) {
-  run('npx tsx backend/scripts/elo/extract-races.ts', 'Elo races extract (v3)');
-  run('npx tsx backend/scripts/elo/generate-elo-index.ts', 'Elo indexes generate (v2)');
-  run('npx tsx backend/scripts/elo/verify-three-levels.ts', 'Elo three-level verify');
-  assertNonEmptyIndex('data/v1/indexes/top-elo-all.json', 'items', 'top-elo-all');
-}
-
 // Show indexes need local RKF PDF exports (data/local/shows/exhibitions-rkf, gitignored).
 // Without them, rebuild uses only ~88 LC HTML shows → wipes BIS/BIG and shrinks ranking.
 // CI must ship committed data/v1/shows/indexes/* as-is.

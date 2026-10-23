@@ -64,7 +64,8 @@ export function normalizeBreed(b: string): string {
   const s = b.trim().toLowerCase();
   if (s.includes('басенджи')) return 'Басенджи';
   if (s.includes('грейхаунд')) return 'Грейхаунд';
-  if (s.includes('ирландский')) return 'Ирландский вольфхаунд';
+  if (s.includes('ирландский вольфхаунд') || (s.includes('ирландский') && !s.includes('терьер'))) return 'Ирландский вольфхаунд';
+  if (s.includes('ирландский терьер')) return 'Ирландский терьер';
   if (s.includes('малая') || s.includes('итальянская')) return 'Малая итальянская борзая';
   if (s.includes('поденко')) return 'Поденко Ибиценко (к-ш, г-ш)';
   if (s.includes('родезийский') || s.includes('риджбек')) return 'Родезийский риджбек';
@@ -76,6 +77,20 @@ export function normalizeBreed(b: string): string {
   if (s.includes('хортая')) return 'Хортая борзая';
   if (s.includes('чирнеко')) return 'Чирнеко дель Этна';
   return b.trim();
+}
+
+export function parseBreedClass(breedClass?: string | null, defaultBreed: string = '', defaultSex: string = '') {
+  const parts = (breedClass || '').split(' - ').map(s => s.trim());
+  const breed = parts[0] || defaultBreed || '';
+  const className = parts[1] || 'Стандартный';
+  let category = parts[2] || defaultSex || 'Микс';
+
+  if (category === 'Кобель' || category === 'Кобели') category = 'Кобели';
+  else if (category === 'Сука' || category === 'Суки') category = 'Суки';
+  else category = 'Микс';
+
+  const groupHeader = `${breed}_${className}_${category}`;
+  return { breed, className, category, groupHeader };
 }
 
 export function normalizeSex(s: string): string {
@@ -214,102 +229,25 @@ export function renderRacingTimeSpeed(
 export function buildRacingProtocolHtml(comp: CompetitionData): string {
   const eventTitle = buildEventTitle(comp);
 
+  const activeGroups = new Map<string, CompetitionResult[]>();
   const dnsList: CompetitionResult[] = [];
-  const breedClassPairs = new Map<string, { males: CompetitionResult[], females: CompetitionResult[] }>();
 
   for (const r of comp.results) {
     if (r.status === 'dns') {
       dnsList.push(r);
       continue;
     }
-    const breed = normalizeBreed(r.dog?.breed || '');
-    let className = 'Стандартный';
-    if (r.breed_class.includes('Ветераны')) className = 'Ветераны';
-    else if (r.breed_class.includes('Стандартный-спринтеры')) className = 'Стандартный-спринтеры';
-
-    const pairKey = `${breed}_${className}`;
-    if (!breedClassPairs.has(pairKey)) {
-      breedClassPairs.set(pairKey, { males: [], females: [] });
+    const info = parseBreedClass(r.breed_class, r.dog?.breed, r.dog?.sex);
+    if (!activeGroups.has(info.groupHeader)) {
+      activeGroups.set(info.groupHeader, []);
     }
-    let sex = normalizeSex(r.dog?.sex || '');
-    if (r.breed_class.includes('Кобель') || r.breed_class.includes('Кобели')) {
-      sex = 'Кобель';
-    } else if (r.breed_class.includes('Сука') || r.breed_class.includes('Суки')) {
-      sex = 'Сука';
-    }
-    if (sex === 'Кобель') {
-      breedClassPairs.get(pairKey)!.males.push(r);
-    } else {
-      breedClassPairs.get(pairKey)!.females.push(r);
-    }
+    activeGroups.get(info.groupHeader)!.push(r);
   }
-
-  const activeGroups = new Map<string, CompetitionResult[]>();
-
-  for (const [pairKey, pair] of breedClassPairs.entries()) {
-    const hasMales = pair.males.length > 0;
-    const hasFemales = pair.females.length > 0;
-
-    let isMix = false;
-    if (hasMales && hasFemales) {
-      const malePlaces = new Set(pair.males.map(m => m.placement).filter(p => p != null));
-      const femalePlaces = new Set(pair.females.map(f => f.placement).filter(p => p != null));
-      let hasOverlap = false;
-      for (const p of malePlaces) {
-        if (femalePlaces.has(p)) {
-          hasOverlap = true;
-          break;
-        }
-      }
-      isMix = !hasOverlap;
-    }
-
-    if (isMix) {
-      activeGroups.set(`${pairKey}_Микс`, [...pair.males, ...pair.females]);
-    } else {
-      if (hasMales) activeGroups.set(`${pairKey}_Кобели`, pair.males);
-      if (hasFemales) activeGroups.set(`${pairKey}_Суки`, pair.females);
-    }
-  }
-
-  const CANONICAL_GROUP_ORDER = [
-    'Басенджи_Стандартный_Кобели',
-    'Басенджи_Стандартный_Суки',
-    'Грейхаунд_Стандартный_Кобели',
-    'Малая итальянская борзая_Ветераны_Кобели',
-    'Малая итальянская борзая_Ветераны_Суки',
-    'Малая итальянская борзая_Стандартный-спринтеры_Микс',
-    'Малая итальянская борзая_Стандартный-спринтеры_Кобели',
-    'Малая итальянская борзая_Стандартный-спринтеры_Суки',
-    'Поденко Ибиценко (к-ш, г-ш)_Стандартный_Кобели',
-    'Поденко Ибиценко (к-ш, г-ш)_Стандартный_Суки',
-    'Родезийский риджбек_Стандартный_Кобели',
-    'Родезийский риджбек_Стандартный_Суки',
-    'Русская псовая борзая_Стандартный_Микс',
-    'Русская псовая борзая_Стандартный_Кобели',
-    'Русская псовая борзая_Стандартный_Суки',
-    'Салюки_Стандартный_Микс',
-    'Салюки_Стандартный_Кобели',
-    'Салюки_Стандартный_Суки',
-    'Тазы_Стандартный_Кобели',
-    'Тазы_Стандартный_Суки',
-    'Уиппет_Стандартный_Кобели',
-    'Уиппет_Стандартный_Суки',
-    'Уиппет_Стандартный-спринтеры_Кобели',
-    'Уиппет_Стандартный-спринтеры_Суки',
-    'Фараонова собака_Стандартный_Микс',
-    'Фараонова собака_Стандартный_Кобели',
-    'Фараонова собака_Стандартный_Суки',
-    'Чирнеко дель Этна_Стандартный_Кобели',
-    'Чирнеко дель Этна_Стандартный_Суки'
-  ];
 
   const sortedGroupEntries = [...activeGroups.entries()].sort((a, b) => {
-    const idxA = CANONICAL_GROUP_ORDER.indexOf(a[0]);
-    const idxB = CANONICAL_GROUP_ORDER.indexOf(b[0]);
-    if (idxA !== -1 && idxB !== -1) return idxA - idxB;
-    if (idxA !== -1) return -1;
-    if (idxB !== -1) return 1;
+    const minA = Math.min(...a[1].map(d => d.catalog_no || 9999));
+    const minB = Math.min(...b[1].map(d => d.catalog_no || 9999));
+    if (minA !== minB) return minA - minB;
     return a[0].localeCompare(b[0], 'ru');
   });
 
@@ -362,17 +300,10 @@ export function buildRacingProtocolHtml(comp: CompetitionData): string {
     for (const res of dogs) {
       const dog = res.dog;
       const dogName = formatDogName(dog);
-      const breed = escapeHtml(normalizeBreed(dog?.breed || ''));
-      let sex = escapeHtml(normalizeSex(dog?.sex || ''));
-      if (res.breed_class.includes('Кобель') || res.breed_class.includes('Кобели')) {
-        sex = 'Кобель';
-      } else if (res.breed_class.includes('Сука') || res.breed_class.includes('Суки')) {
-        sex = 'Сука';
-      }
-
-      let className = 'Стандартный';
-      if (res.breed_class.includes('Ветераны')) className = 'Ветераны';
-      else if (res.breed_class.includes('Стандартный-спринтеры')) className = 'Стандартный-<br>спринтеры';
+      const info = parseBreedClass(res.breed_class, dog?.breed, dog?.sex);
+      const breed = escapeHtml(info.breed);
+      let sex = escapeHtml(dog?.sex || (info.category === 'Кобели' ? 'Кобель' : info.category === 'Суки' ? 'Сука' : ''));
+      const className = escapeHtml(info.className.replace('Стандартный-спринтеры', 'Стандартный-<br>спринтеры'));
 
       const heats = res.raw_scores_json?.heats || [];
       const heat1 = heats.find(h => h.heat_number === 1) || null;
@@ -445,17 +376,10 @@ export function buildRacingProtocolHtml(comp: CompetitionData): string {
     for (const res of dnsList) {
       const dog = res.dog;
       const dogName = formatDogName(dog);
-      const breed = escapeHtml(normalizeBreed(dog?.breed || ''));
-      let sex = escapeHtml(normalizeSex(dog?.sex || ''));
-      if (res.breed_class.includes('Кобель') || res.breed_class.includes('Кобели')) {
-        sex = 'Кобель';
-      } else if (res.breed_class.includes('Сука') || res.breed_class.includes('Суки')) {
-        sex = 'Сука';
-      }
-
-      let className = 'Стандартный';
-      if (res.breed_class.includes('Ветераны')) className = 'Ветераны';
-      else if (res.breed_class.includes('Стандартный-спринтеры')) className = 'Стандартный-<br>спринтеры';
+      const info = parseBreedClass(res.breed_class, dog?.breed, dog?.sex);
+      const breed = escapeHtml(info.breed);
+      let sex = escapeHtml(dog?.sex || (info.category === 'Кобели' ? 'Кобель' : info.category === 'Суки' ? 'Сука' : ''));
+      const className = escapeHtml(info.className.replace('Стандартный-спринтеры', 'Стандартный-<br>спринтеры'));
 
       tableRowsHtml += `
         <tr class="dns-row">
@@ -666,7 +590,7 @@ export function renderScores(judge?: JudgeScore | null): string {
 export function buildCoursingProtocolHtml(comp: CompetitionData): string {
   const eventTitle = buildEventTitle(comp);
 
-  const breedClassSexMap = new Map<string, CompetitionResult[]>();
+  const activeGroups = new Map<string, CompetitionResult[]>();
   const dnsList: CompetitionResult[] = [];
 
   for (const r of comp.results) {
@@ -674,110 +598,17 @@ export function buildCoursingProtocolHtml(comp: CompetitionData): string {
       dnsList.push(r);
       continue;
     }
-
-    const breed = normalizeBreed(r.dog?.breed || '');
-    let className = 'Стандартный';
-    if (r.breed_class.includes('Ветераны')) className = 'Ветераны';
-    else if (r.breed_class.includes('Стандартный-спринтеры')) className = 'Стандартный-спринтеры';
-
-    const sex = normalizeSex(r.dog?.sex || '');
-    const key = `${breed}_${className}_${sex}`;
-    if (!breedClassSexMap.has(key)) {
-      breedClassSexMap.set(key, []);
+    const info = parseBreedClass(r.breed_class, r.dog?.breed, r.dog?.sex);
+    if (!activeGroups.has(info.groupHeader)) {
+      activeGroups.set(info.groupHeader, []);
     }
-    breedClassSexMap.get(key)!.push(r);
+    activeGroups.get(info.groupHeader)!.push(r);
   }
-
-  const breedClassPairs = new Map<string, { males: CompetitionResult[], females: CompetitionResult[] }>();
-  for (const r of comp.results) {
-    if (r.status === 'dns') continue;
-    const breed = normalizeBreed(r.dog?.breed || '');
-    let className = 'Стандартный';
-    if (r.breed_class.includes('Ветераны')) className = 'Ветераны';
-    else if (r.breed_class.includes('Стандартный-спринтеры')) className = 'Стандартный-спринтеры';
-    const pairKey = `${breed}_${className}`;
-    if (!breedClassPairs.has(pairKey)) {
-      breedClassPairs.set(pairKey, { males: [], females: [] });
-    }
-    let sex = normalizeSex(r.dog?.sex || '');
-    if (r.breed_class.includes('Кобель') || r.breed_class.includes('Кобели')) {
-      sex = 'Кобель';
-    } else if (r.breed_class.includes('Сука') || r.breed_class.includes('Суки')) {
-      sex = 'Сука';
-    }
-    if (sex === 'Кобель') {
-      breedClassPairs.get(pairKey)!.males.push(r);
-    } else {
-      breedClassPairs.get(pairKey)!.females.push(r);
-    }
-  }
-
-  const activeGroups = new Map<string, CompetitionResult[]>();
-
-  for (const [pairKey, pair] of breedClassPairs.entries()) {
-    const hasMales = pair.males.length > 0;
-    const hasFemales = pair.females.length > 0;
-
-    let isMix = false;
-    if (hasMales && hasFemales) {
-      const malePlaces = new Set(pair.males.map(m => m.placement).filter(p => p != null));
-      const femalePlaces = new Set(pair.females.map(f => f.placement).filter(p => p != null));
-      let hasOverlap = false;
-      for (const p of malePlaces) {
-        if (femalePlaces.has(p)) {
-          hasOverlap = true;
-          break;
-        }
-      }
-      isMix = !hasOverlap;
-    }
-
-    if (isMix) {
-      activeGroups.set(`${pairKey}_Микс`, [...pair.males, ...pair.females]);
-    } else {
-      if (hasMales) activeGroups.set(`${pairKey}_Кобели`, pair.males);
-      if (hasFemales) activeGroups.set(`${pairKey}_Суки`, pair.females);
-    }
-  }
-
-  const CANONICAL_GROUP_ORDER = [
-    'Басенджи_Стандартный_Кобели',
-    'Басенджи_Стандартный_Суки',
-    'Грейхаунд_Стандартный_Кобели',
-    'Малая итальянская борзая_Ветераны_Кобели',
-    'Малая итальянская борзая_Ветераны_Суки',
-    'Малая итальянская борзая_Стандартный-спринтеры_Микс',
-    'Малая итальянская борзая_Стандартный-спринтеры_Кобели',
-    'Малая итальянская борзая_Стандартный-спринтеры_Суки',
-    'Поденко Ибиценко (к-ш, г-ш)_Стандартный_Кобели',
-    'Поденко Ибиценко (к-ш, г-ш)_Стандартный_Суки',
-    'Родезийский риджбек_Стандартный_Кобели',
-    'Родезийский риджбек_Стандартный_Суки',
-    'Русская псовая борзая_Стандартный_Микс',
-    'Русская псовая борзая_Стандартный_Кобели',
-    'Русская псовая борзая_Стандартный_Суки',
-    'Салюки_Стандартный_Микс',
-    'Салюки_Стандартный_Кобели',
-    'Салюки_Стандартный_Суки',
-    'Тазы_Стандартный_Кобели',
-    'Тазы_Стандартный_Суки',
-    'Уиппет_Стандартный_Кобели',
-    'Уиппет_Стандартный_Суки',
-    'Уиппет_Стандартный-спринтеры_Кобели',
-    'Уиппет_Стандартный-спринтеры_Суки',
-    'Фараонова собака_Стандартный_Микс',
-    'Фараонова собака_Стандартный_Кобели',
-    'Фараонова собака_Стандартный_Суки',
-    'Чирнеко дель Этна_Стандартный_Кобели',
-    'Чирнеко дель Этна_Стандартный_Суки'
-  ];
 
   const sortedGroupEntries = [...activeGroups.entries()].sort((a, b) => {
-    const idxA = CANONICAL_GROUP_ORDER.indexOf(a[0]);
-    const idxB = CANONICAL_GROUP_ORDER.indexOf(b[0]);
-    if (idxA !== -1 && idxB !== -1) return idxA - idxB;
-    if (idxA !== -1) return -1;
-    if (idxB !== -1) return 1;
+    const minA = Math.min(...a[1].map(d => d.catalog_no || 9999));
+    const minB = Math.min(...b[1].map(d => d.catalog_no || 9999));
+    if (minA !== minB) return minA - minB;
     return a[0].localeCompare(b[0], 'ru');
   });
 
@@ -815,9 +646,19 @@ export function buildCoursingProtocolHtml(comp: CompetitionData): string {
       <td rowspan="2">СС</td>
       <td rowspan="2">Титул</td>
     </tr>
-    <tr class="sub-col-header">
-      <td>Ман.</td><td>Резв.</td><td>Вын.</td><td>Прес.</td><td>Энт.</td><td>Сум.</td>
-      <td>Ман.</td><td>Резв.</td><td>Вын.</td><td>Прес.</td><td>Энт.</td><td>Сум.</td>
+    <tr class="col-header sub-header">
+      <td>Ман.</td>
+      <td>Резв.</td>
+      <td>Вын.</td>
+      <td>Прес.</td>
+      <td>Энт.</td>
+      <td>Сум.</td>
+      <td>Ман.</td>
+      <td>Резв.</td>
+      <td>Вын.</td>
+      <td>Прес.</td>
+      <td>Энт.</td>
+      <td>Сум.</td>
     </tr>
   `;
 
@@ -831,17 +672,10 @@ export function buildCoursingProtocolHtml(comp: CompetitionData): string {
     for (const res of dogs) {
       const dog = res.dog;
       const dogName = formatDogName(dog);
-      const breed = escapeHtml(normalizeBreed(dog?.breed || ''));
-      let sex = escapeHtml(normalizeSex(dog?.sex || ''));
-      if (res.breed_class.includes('Кобель') || res.breed_class.includes('Кобели')) {
-        sex = 'Кобель';
-      } else if (res.breed_class.includes('Сука') || res.breed_class.includes('Суки')) {
-        sex = 'Сука';
-      }
-
-      let className = 'Стандартный';
-      if (res.breed_class.includes('Ветераны')) className = 'Ветераны';
-      else if (res.breed_class.includes('Стандартный-спринтеры')) className = 'Стандартный-<br>спринтеры';
+      const info = parseBreedClass(res.breed_class, dog?.breed, dog?.sex);
+      const breed = escapeHtml(info.breed);
+      let sex = escapeHtml(dog?.sex || (info.category === 'Кобели' ? 'Кобель' : info.category === 'Суки' ? 'Сука' : ''));
+      const className = escapeHtml(info.className.replace('Стандартный-спринтеры', 'Стандартный-<br>спринтеры'));
 
       const heats = res.raw_scores_json?.heats || [];
       const heat1 = heats[0] || null;
@@ -942,17 +776,10 @@ export function buildCoursingProtocolHtml(comp: CompetitionData): string {
     for (const res of dnsList) {
       const dog = res.dog;
       const dogName = formatDogName(dog);
-      const breed = escapeHtml(normalizeBreed(dog?.breed || ''));
-      let sex = escapeHtml(normalizeSex(dog?.sex || ''));
-      if (res.breed_class.includes('Кобель') || res.breed_class.includes('Кобели')) {
-        sex = 'Кобель';
-      } else if (res.breed_class.includes('Сука') || res.breed_class.includes('Суки')) {
-        sex = 'Сука';
-      }
-
-      let className = 'Стандартный';
-      if (res.breed_class.includes('Ветераны')) className = 'Ветераны';
-      else if (res.breed_class.includes('Стандартный-спринтеры')) className = 'Стандартный-<br>спринтеры';
+      const info = parseBreedClass(res.breed_class, dog?.breed, dog?.sex);
+      const breed = escapeHtml(info.breed);
+      let sex = escapeHtml(dog?.sex || (info.category === 'Кобели' ? 'Кобель' : info.category === 'Суки' ? 'Сука' : ''));
+      const className = escapeHtml(info.className.replace('Стандартный-спринтеры', 'Стандартный-<br>спринтеры'));
 
       tableRowsHtml += `
         <tr class="dns-row">
@@ -1211,8 +1038,8 @@ if (isMain) {
     fs.mkdirSync(outDir, { recursive: true });
   }
 
-  const outHtml = path.join(outDir, 'protocol_vector.html');
-  const outPdf = path.join(outDir, 'protocol_vector.pdf');
+  const outHtml = path.join(outDir, 'protocol_cs.html');
+  const outPdf = path.join(outDir, 'protocol_cs.pdf');
 
   const htmlContent = buildProtocolHtml(compData);
   fs.writeFileSync(outHtml, htmlContent, 'utf8');

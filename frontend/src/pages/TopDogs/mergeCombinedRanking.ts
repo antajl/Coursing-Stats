@@ -124,7 +124,7 @@ function compareSeasonStanding(a: CombinedRankingDog, b: CombinedRankingDog): nu
 export function buildCombinedRanking(
   placement: LooseDog[],
   score: LooseDog[],
-  elo: LooseDog[]
+  elo: LooseDog[] = []
 ): CombinedRankingDog[] {
   const byId = new Map<number, CombinedRankingDog>()
 

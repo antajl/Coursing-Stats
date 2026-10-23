@@ -1,12 +1,11 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useState, type ReactNode } from 'react'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarFiltersDropdown from '../../components/toolbar/ToolbarFiltersDropdown'
-import ToolbarFilterOptionList from '../../components/toolbar/ToolbarFilterOptionList'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
-import BreedSearchDropdown from '../../components/ui/BreedSearchDropdown'
 import ModernDropdown from '../../components/ui/ModernDropdown'
+import QuickBreedBar, { SHOW_CANDIDATE_BREEDS } from '../TopDogs/QuickBreedBar'
+import ShowRatingHint from './ShowRatingHint'
 import {
-  TOOLBAR_FILTER_SECTION_LABEL,
   TOOLBAR_NUMBER_INPUT,
 } from '../../lib/toolbar'
 import {
@@ -16,6 +15,19 @@ import {
 } from '../../../../backend/lib/show-award-ranking'
 
 export type ShowAwardMinFilters = Partial<Record<ShowAwardKey, string>>
+
+const FCI_GROUPS = [
+  'Борзые',
+  'Шпицы и примитивные типы собак',
+  'Гончие, гончие по кровяному следу и родственные породы',
+  'Терьеры',
+  'Таксы',
+  'Комнатно-декоративные собаки',
+  'Пастушьи и скотогонные собаки, кроме швейцарских скотогонных собак',
+  'Пинчеры и шнауцеры - догообразные и швейцарские горные скотогонные собаки',
+  'Легавые',
+  'Ретриверы спаниели, водяные собаки',
+]
 
 interface ShowRankingFiltersProps {
   searchQuery: string
@@ -36,6 +48,7 @@ interface ShowRankingFiltersProps {
   onResetFilters: () => void
   onResetPanelFilters: () => void
   dropdownRef?: React.RefObject<HTMLDivElement>
+  trailing?: ReactNode
 }
 
 export default function ShowRankingFilters({
@@ -51,15 +64,14 @@ export default function ShowRankingFilters({
   dogIndex,
   filterGroup = '',
   onGroupChange,
-  groupValues = [],
   awardMins,
   onAwardMinChange,
-  onResetFilters,
   onResetPanelFilters,
   dropdownRef,
+  trailing,
 }: ShowRankingFiltersProps) {
   const [yearDropdownOpen, setYearDropdownOpen] = useState(false)
-  
+
   const sortedYears = useMemo(
     () => [...yearValues].sort((a, b) => Number(b) - Number(a)),
     [yearValues],
@@ -68,96 +80,33 @@ export default function ShowRankingFilters({
   const hasAwardMins = SHOW_FILTER_AWARD_KEYS.some((key) => Boolean(awardMins[key]))
   const awardMinCount = SHOW_FILTER_AWARD_KEYS.filter((key) => Boolean(awardMins[key])).length
   const yearIsNonDefault = filterYear !== '' && filterYear !== currentSeason
-  const hasActiveFilters =
-    yearIsNonDefault || filterBreed || filterGroup || searchQuery || hasAwardMins
-  const hasPanelFilters = Boolean(hasAwardMins)
 
-  const panelFilterCount = useMemo(() => {
-    let n = 0
-    n += awardMinCount
-    return n
-  }, [awardMinCount])
-
-  const activeFilterChips = useMemo(() => {
-    const chips = []
-
-    if (yearIsNonDefault) {
-      chips.push({
-        key: 'year',
-        label: filterYear || 'Все года',
-        onRemove: () => onYearChange(''),
-      })
-    }
-
-    if (filterBreed) {
-      chips.push({
-        key: 'breed',
-        label: filterBreed,
-        onRemove: () => onBreedChange(''),
-      })
-    }
-
-    if (filterGroup) {
-      chips.push({
-        key: 'group',
-        label: filterGroup,
-        onRemove: () => onGroupChange(''),
-      })
-    }
-
-    for (const key of SHOW_FILTER_AWARD_KEYS) {
-      if (!awardMins[key]) continue
-      chips.push({
-        key: `min-${key}`,
-        label: `${SHOW_AWARD_BADGE[key]} ≥ ${awardMins[key]}`,
-        onRemove: () => onAwardMinChange(key, ''),
-      })
-    }
-
-    return chips
-  }, [
-    yearIsNonDefault,
-    filterYear,
-    filterBreed,
-    filterGroup,
-    awardMins,
-    onYearChange,
-    onBreedChange,
-    onGroupChange,
-    onAwardMinChange,
-  ])
-
-  const handleBreedSelect = (breed: string) => {
-    onBreedChange(filterBreed === breed ? '' : breed)
-  }
-
-  const breedTrigger = (
-    <button
-      type="button"
-      className={`inline-flex h-8 items-center rounded-full border px-3.5 text-xs font-semibold whitespace-nowrap transition-colors gap-1.5 ${
-        filterBreed
-          ? 'border-camel-500 bg-camel-500 text-charcoal-900'
-          : 'border-old-money-200 bg-cream-50 text-charcoal-700 hover:bg-old-money-50'
-      }`}
-    >
-      {filterBreed || 'Порода'}
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-down h-3.5 w-3.5 transition-transform" aria-hidden>
-        <path d="m6 9 6 6 6-6"></path>
-      </svg>
-    </button>
-  )
+  const panelFilterCount = (filterGroup ? 1 : 0) + awardMinCount
+  const hasPanelFilters = panelFilterCount > 0
 
   const yearTrigger = (
     <button
       type="button"
-      className={`inline-flex h-8 items-center rounded-full border px-3.5 text-xs font-semibold whitespace-nowrap transition-colors gap-1.5 ${
-        filterYear && filterYear !== currentSeason
-          ? 'border-camel-500 bg-camel-500 text-charcoal-900'
+      className={`inline-flex h-8 items-center rounded-full border px-3.5 text-xs font-semibold whitespace-nowrap transition-colors gap-1.5 cursor-pointer ${
+        yearIsNonDefault
+          ? 'border-camel-500 bg-camel-500 text-charcoal-900 shadow-2xs'
           : 'border-old-money-200 bg-cream-50 text-charcoal-700 hover:bg-old-money-50'
       }`}
     >
-      {filterYear || 'Год'}
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-down h-3.5 w-3.5 transition-transform" aria-hidden>
+      {filterYear || 'Все года'}
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="lucide lucide-chevron-down h-3.5 w-3.5 transition-transform"
+        aria-hidden
+      >
         <path d="m6 9 6 6 6-6"></path>
       </svg>
     </button>
@@ -167,111 +116,116 @@ export default function ShowRankingFilters({
     <div className="mb-4" ref={dropdownRef}>
       <PageToolbar
         bare
-        topRowClassName="pr-0 md:pr-32"
+        topRowClassName="flex-wrap md:flex-nowrap"
         filters={
-          <>
-            <ToolbarSearch
-              value={searchQuery}
-              onChange={onSearchChange}
-              placeholder="Кличка, порода…"
-              className="w-full sm:!w-auto min-w-0 sm:min-w-[200px] max-w-sm"
-            />
-            <div className="flex max-w-full flex-wrap items-center gap-1.5 w-full sm:w-auto">
-              {/* Year dropdown */}
-              <ModernDropdown
-                trigger={yearTrigger}
-                isOpen={yearDropdownOpen}
-                onOpenChange={setYearDropdownOpen}
-                width="120px"
-              >
-                <div className="p-1 min-w-[100px]">
-                  <div className="max-h-60 overflow-y-auto" role="menu">
-                    <button
-                      role="menuitem"
-                      onClick={() => {
-                        onYearChange('')
-                        setYearDropdownOpen(false)
-                      }}
-                      className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
-                        !filterYear
-                          ? 'bg-camel-500 text-charcoal-900'
-                          : 'text-charcoal-700 hover:bg-camel-100'
-                      }`}
-                    >
-                      Все года
-                    </button>
-                    {sortedYears.map((year) => (
+          <div className="flex flex-col md:flex-row md:items-center gap-2 w-full min-w-0">
+            {/* Строка 1 на мобилке / начало единой строки на десктопе */}
+            <div className="flex items-center gap-2 shrink-0 w-full md:w-auto">
+              <ToolbarSearch
+                value={searchQuery}
+                onChange={onSearchChange}
+                placeholder="Кличка, порода…"
+                className="flex-1 min-w-0 sm:w-44 md:w-40 lg:w-48"
+              />
+
+              {/* Выбор года */}
+              <div className="shrink-0">
+                <ModernDropdown
+                  trigger={yearTrigger}
+                  isOpen={yearDropdownOpen}
+                  onOpenChange={setYearDropdownOpen}
+                  width="120px"
+                >
+                  <div className="p-1 min-w-[100px]">
+                    <div className="max-h-60 overflow-y-auto" role="menu">
                       <button
-                        key={year}
+                        type="button"
                         role="menuitem"
                         onClick={() => {
-                          onYearChange(year)
+                          onYearChange('')
                           setYearDropdownOpen(false)
                         }}
-                        className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
-                          filterYear === year
-                            ? 'bg-camel-500 text-charcoal-900'
+                        className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors cursor-pointer ${
+                          !filterYear
+                            ? 'bg-camel-500 text-charcoal-900 font-medium'
                             : 'text-charcoal-700 hover:bg-camel-100'
                         }`}
                       >
-                        {year}
+                        Все года
                       </button>
-                    ))}
+                      {sortedYears.map((year) => (
+                        <button
+                          key={year}
+                          type="button"
+                          role="menuitem"
+                          onClick={() => {
+                            onYearChange(year)
+                            setYearDropdownOpen(false)
+                          }}
+                          className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors cursor-pointer ${
+                            filterYear === year
+                              ? 'bg-camel-500 text-charcoal-900 font-medium'
+                              : 'text-charcoal-700 hover:bg-camel-100'
+                          }`}
+                        >
+                          {year}
+                        </button>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              </ModernDropdown>
+                </ModernDropdown>
+              </div>
 
-              {/* Breed dropdown */}
-              <BreedSearchDropdown
-                breeds={breedValues}
-                selectedBreed={filterBreed}
-                onSelect={handleBreedSelect}
-                trigger={breedTrigger}
-                dogIndex={dogIndex}
-              />
-
-
-              {/* Award minimums dropdown */}
-              {hasAwardMins && (
+              {/* Панель фильтров наград и групп (всегда доступна!) */}
+              <div className="shrink-0">
                 <ToolbarFiltersDropdown
-                  active={hasAwardMins}
-                  activeCount={awardMinCount}
+                  active={hasPanelFilters}
+                  activeCount={panelFilterCount}
                   fillContent
-                  panelClassName="md:w-[min(300px,calc(100vw-2rem))]"
-                  onReset={() => {
-                    for (const key of SHOW_FILTER_AWARD_KEYS) {
-                      onAwardMinChange(key, '')
-                    }
-                  }}
+                  panelClassName="md:w-[min(320px,calc(100vw-2rem))]"
+                  onReset={onResetPanelFilters}
                   label="Награды"
                 >
-                  <div className="flex min-h-0 flex-1 flex-col overflow-y-auto overscroll-contain p-2">
-                    <details
-                      className="group shrink-0 rounded-lg border border-old-money-200/80 bg-white/50"
-                      defaultOpen={hasAwardMins}
-                    >
-                      <summary className="flex cursor-pointer list-none items-center justify-between gap-2 px-3 py-2.5 text-xs font-semibold text-charcoal-700 marker:content-none [&::-webkit-details-marker]:hidden">
-                        <span className="flex items-center gap-2">
-                          Награды (минимум)
-                          {awardMinCount > 0 ? (
-                            <span className="inline-flex h-4 min-w-4 items-center justify-center rounded-full bg-camel-500/90 px-1 text-[10px] font-bold tabular-nums text-charcoal-900">
-                              {awardMinCount}
-                            </span>
-                          ) : null}
+                  <div className="flex flex-col gap-3 p-3">
+                    {onGroupChange && (
+                      <div className="space-y-1">
+                        <label className="text-[11px] font-semibold uppercase tracking-wider text-charcoal-600">
+                          Группа пород
+                        </label>
+                        <select
+                          value={filterGroup}
+                          onChange={(e) => onGroupChange(e.target.value)}
+                          className="w-full h-8 text-xs rounded-lg border border-old-money-200 bg-white px-2.5 text-charcoal-800 focus:border-camel-500 focus:outline-none focus:ring-1 focus:ring-camel-500"
+                        >
+                          <option value="">Все группы FCI</option>
+                          {FCI_GROUPS.map((g) => (
+                            <option key={g} value={g}>
+                              {g}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+                    )}
+
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-[11px] font-semibold uppercase tracking-wider text-charcoal-600">
+                          Минимум наград
                         </span>
-                        <span className="text-old-money-400 transition-transform group-open:rotate-180">
-                          ▾
-                        </span>
-                      </summary>
-                      <div className="grid max-h-40 grid-cols-2 gap-2 overflow-y-auto overflow-x-hidden border-t border-old-money-200/70 px-3 py-3">
+                        {hasAwardMins && (
+                          <span className="text-[10px] text-camel-700 font-medium">
+                            активно: {awardMinCount}
+                          </span>
+                        )}
+                      </div>
+                      <div className="grid grid-cols-2 gap-2 max-h-56 overflow-y-auto pr-0.5">
                         {SHOW_FILTER_AWARD_KEYS.map((key) => (
-                          <label key={key} className="block min-w-0 space-y-0.5">
+                          <label key={key} className="block space-y-0.5">
                             <span className="text-[11px] font-medium text-charcoal-600">
                               {SHOW_AWARD_BADGE[key]}
                             </span>
                             <input
-                              type="number"
-                              min={0}
+                              type="text"
                               inputMode="numeric"
                               placeholder="мин."
                               value={awardMins[key] || ''}
@@ -283,13 +237,31 @@ export default function ShowRankingFilters({
                           </label>
                         ))}
                       </div>
-                    </details>
+                    </div>
                   </div>
                 </ToolbarFiltersDropdown>
-              )}
+              </div>
             </div>
-          </>
+
+            {/* Разделитель между поиском/годом и породами на десктопе */}
+            <div
+              className="hidden md:block h-5 w-px bg-old-money-300 shrink-0 mx-0.5"
+              aria-hidden="true"
+            />
+
+            {/* Выбор породы на той же строке на md+ / строка 2 на мобилке */}
+            <div className="flex-1 min-w-0 w-full md:w-auto">
+              <QuickBreedBar
+                selectedBreed={filterBreed}
+                onSelectBreed={onBreedChange}
+                breedValues={breedValues}
+                dogIndex={dogIndex}
+                candidateBreeds={SHOW_CANDIDATE_BREEDS}
+              />
+            </div>
+          </div>
         }
+        trailing={trailing ?? <ShowRatingHint embedded />}
       />
     </div>
   )

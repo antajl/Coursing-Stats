@@ -64,7 +64,6 @@ export function useHomeData() {
           showsCalData,
           placementData,
           scoreData,
-          eloData,
           showHomeTopData,
           doninoSpeedData,
           doninoCoursingData,
@@ -76,7 +75,6 @@ export function useHomeData() {
           // Full season slices — merge (standing B) then breed top slides
           api.getTopPlacement(String(CURRENT_SEASON), '', 0, 'gold', null, 0),
           api.getTopScore(String(CURRENT_SEASON), '', 0, 'rating_score', null, 0),
-          api.getTopElo(String(CURRENT_SEASON), '', 0, 'elo_rating', null, 0),
           getShowHomeTop(String(CURRENT_SEASON)),
           api.getSpeedRecordsTopByBreed(3),
           api.getCoursingRecordsTopByBreed(3),
@@ -119,12 +117,10 @@ export function useHomeData() {
 
         const placement = extractTopDogs(placementData.success ? placementData.data : null)
         const score = extractTopDogs(scoreData.success ? scoreData.data : null)
-        const elo = extractTopDogs(eloData.success ? eloData.data : null)
-        if (placement.length > 0 || score.length > 0 || elo.length > 0) {
+        if (placement.length > 0 || score.length > 0) {
           const combined = buildCombinedRanking(
             placement as Record<string, unknown>[],
-            score as Record<string, unknown>[],
-            elo as Record<string, unknown>[],
+            score as Record<string, unknown>[]
           )
           setCompetitionSlides(buildTopBreedSlides(combined, 5, 3))
         }

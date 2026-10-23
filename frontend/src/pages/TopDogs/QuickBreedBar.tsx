@@ -31,6 +31,22 @@ export const CANDIDATE_BREEDS: QuickBreedItem[] = [
   { key: 'АЗАВАК', label: 'Азавак', fullName: 'Азавак', estWidth: 80 },
 ]
 
+export const SHOW_CANDIDATE_BREEDS: QuickBreedItem[] = [
+  { key: 'УИППЕТ', label: 'Уиппет', fullName: 'Уиппет', estWidth: 76 },
+  { key: 'РУССКАЯ ПСОВАЯ БОРЗАЯ', label: 'РПБ', fullName: 'Русская псовая борзая', estWidth: 58 },
+  { key: 'БАСЕНДЖИ', label: 'Басенджи', fullName: 'Басенджи', estWidth: 86 },
+  { key: 'САЛЮКИ', label: 'Салюки', fullName: 'Салюки', estWidth: 76 },
+  { key: 'ЛЕВРЕТКА', label: 'Левретка', fullName: 'Левретка', estWidth: 86 },
+  { key: 'ИРЛАНДСКИЙ ВОЛКОДАВ', label: 'Ирл. волкодав', fullName: 'Ирландский волкодав', estWidth: 116 },
+  { key: 'ГРЕЙХАУНД', label: 'Грейхаунд', fullName: 'Грейхаунд', estWidth: 96 },
+  { key: 'АФГАНСКАЯ БОРЗАЯ', label: 'Афган', fullName: 'Афганская борзая', estWidth: 76 },
+  { key: 'РОДЕЗИЙСКИЙ РИДЖБЕК', label: 'Риджбек', fullName: 'Родезийский риджбек', estWidth: 86 },
+  { key: 'ЧИРНЕКО ДЕЛЬ ЭТНА', label: 'Чирнеко', fullName: 'Чирнеко дель Этна', estWidth: 86 },
+  { key: 'ФАРАОНОВА СОБАКА', label: 'Фараон', fullName: 'Фараонова собака', estWidth: 80 },
+  { key: 'ТАКСА', label: 'Такса', fullName: 'Такса', estWidth: 70 },
+  { key: 'ПУДЕЛЬ', label: 'Пудель', fullName: 'Пудель', estWidth: 76 },
+]
+
 export const TOP_QUICK_BREEDS = CANDIDATE_BREEDS
 
 interface QuickBreedBarProps {
@@ -38,6 +54,7 @@ interface QuickBreedBarProps {
   onSelectBreed: (breed: string) => void
   breedValues: string[]
   dogIndex?: DogsIndexEntry[]
+  candidateBreeds?: QuickBreedItem[]
   className?: string
 }
 
@@ -49,8 +66,10 @@ export default function QuickBreedBar({
   onSelectBreed,
   breedValues,
   dogIndex,
+  candidateBreeds,
   className = '',
 }: QuickBreedBarProps) {
+  const candidates = candidateBreeds ?? CANDIDATE_BREEDS
   const containerRef = useRef<HTMLDivElement>(null)
   const allBtnRef = useRef<HTMLButtonElement>(null)
   const moreBtnRef = useRef<HTMLButtonElement>(null)
@@ -89,7 +108,7 @@ export default function QuickBreedBar({
     const moreW = moreBtnRef.current?.offsetWidth || 114
     const minW = minBtnRef.current?.offsetWidth || 86
     const widths: Record<string, number> = {}
-    CANDIDATE_BREEDS.forEach((b, i) => {
+    candidates.forEach((b, i) => {
       widths[b.key] = itemRefs.current[i]?.offsetWidth || b.estWidth
     })
     setMeasured({ allW, moreW, minW, widths })
@@ -109,7 +128,7 @@ export default function QuickBreedBar({
       window.addEventListener('resize', updateContainer)
       return () => window.removeEventListener('resize', updateContainer)
     }
-  }, [])
+  }, [candidates])
 
   const normalizedSelected = useMemo(
     () => (selectedBreed ? canonicalBreed(selectedBreed) : ''),
@@ -144,7 +163,7 @@ export default function QuickBreedBar({
     // Если выбрана порода, которой нет в топ-кандидатах — резервируем место под её чип
     let rareChip: string | null = null
     if (normalizedSelected) {
-      const isCandidate = CANDIDATE_BREEDS.some((b) =>
+      const isCandidate = candidates.some((b) =>
         matchesBreedFilter(normalizedSelected, b.key),
       )
       if (!isCandidate) {
@@ -159,7 +178,7 @@ export default function QuickBreedBar({
     const visible: QuickBreedItem[] = []
     let isSelectedInVisible = false
 
-    for (const breed of CANDIDATE_BREEDS) {
+    for (const breed of candidates) {
       const bW = measured?.widths[breed.key] ?? breed.estWidth
       const cost = GAP + bW
       if (remaining >= cost) {
@@ -184,7 +203,7 @@ export default function QuickBreedBar({
       visibleBreeds: visible,
       rareBreedChip: rareChip,
     }
-  }, [containerWidth, measured, normalizedSelected, selectedDisplay])
+  }, [containerWidth, measured, normalizedSelected, selectedDisplay, candidates])
 
   const handlePillClick = (breedKey: string) => {
     if (matchesBreedFilter(normalizedSelected, breedKey)) {
@@ -224,7 +243,7 @@ export default function QuickBreedBar({
           <span>Породы</span>
           <ChevronDown className="h-3.5 w-3.5" />
         </button>
-        {CANDIDATE_BREEDS.map((breed, i) => (
+        {candidates.map((breed, i) => (
           <button
             key={breed.key}
             ref={(el) => {

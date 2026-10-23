@@ -16,7 +16,7 @@ import OwnerCrownName from '../../components/OwnerCrownName'
 import DogSexIcon from '../../components/DogSexIcon'
 import type { DogTitle } from '../../lib/qualificationTitles'
 import { DogProfileAwardsBar } from './DogProfileAwardsBar'
-import { parseDogName } from '../../lib/dogName'
+import { parseDogName, toDogTitleCase } from '../../lib/dogName'
 import { displayBreed } from '../../lib/breedMapping'
 import { useFavorites } from '../../hooks/useFavorites'
 import { createLogger } from '../../lib/logging'
@@ -295,7 +295,7 @@ export function DogProfileHeader({
               </div>
             ) : showRuName ? (
               <div className="mt-1 text-sm sm:text-base font-medium text-old-money-500">
-                {dog.name_ru}
+                {toDogTitleCase(dog.name_ru)}
               </div>
             ) : null}
           </div>

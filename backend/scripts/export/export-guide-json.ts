@@ -99,5 +99,12 @@ const guideData = {
   },
 };
 
-fs.writeFileSync(OUT_FILE, JSON.stringify(guideData, null, 2), 'utf-8');
+const tmpFile = `${OUT_FILE}.tmp`;
+fs.writeFileSync(tmpFile, JSON.stringify(guideData, null, 2), 'utf-8');
+try {
+  fs.renameSync(tmpFile, OUT_FILE);
+} catch {
+  fs.unlinkSync(OUT_FILE);
+  fs.renameSync(tmpFile, OUT_FILE);
+}
 console.log(`✓ guide.json successfully written to ${OUT_FILE}`);

@@ -55,9 +55,7 @@ export default function EventListRow({ event }: EventListRowProps) {
       </span>
     ) : null
 
-  const rowClassName = `grid grid-cols-[4.75rem_minmax(0,1fr)] ${
-    showJudgesColumn ? 'sm:grid-cols-[6rem_minmax(0,1fr)_9.5rem]' : 'sm:grid-cols-[6rem_minmax(0,1fr)]'
-  } items-center gap-2.5 sm:gap-4 rounded-lg border border-old-money-200 border-l-4 ${borderClass} bg-cream-50 px-2.5 py-2 sm:px-3 sm:py-2.5 mb-1.5 transition-colors hover:bg-camel-100 ${
+  const rowClassName = `grid grid-cols-[4.75rem_minmax(0,1fr)] sm:grid-cols-[6rem_minmax(0,1fr)_9.5rem] items-center gap-2.5 sm:gap-4 rounded-lg border border-old-money-200 border-l-4 ${borderClass} bg-cream-50 px-2.5 py-2 sm:px-3 sm:py-2.5 mb-1.5 transition-colors hover:bg-camel-100 ${
     cancelled ? 'opacity-70' : ''
   } ${
     important
@@ -118,7 +116,7 @@ export default function EventListRow({ event }: EventListRowProps) {
         )}
       </div>
 
-      {showJudgesColumn && (
+      {showJudgesColumn ? (
         <div
           className="hidden sm:flex w-[9.5rem] shrink-0 flex-col items-end justify-center gap-0.5 self-stretch pl-3 border-l border-old-money-200/80"
           title={formatCompetitionJudgesWithRoles(event.judges)}
@@ -138,6 +136,8 @@ export default function EventListRow({ event }: EventListRowProps) {
             </span>
           )}
         </div>
+      ) : (
+        <div className="hidden sm:block w-[9.5rem] shrink-0" aria-hidden="true" />
       )}
     </>
   )

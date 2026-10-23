@@ -4,20 +4,25 @@
   "id": 10425,
   "dog_key": "pallada-astrum--уиппет",
   "name_lat": "PALLADA ASTRUM",
-  "name_ru": "PALLADA ASTRUM",
+  "name_ru": "ПАЛЛАДА АСТРУМ",
   "breed": "УИППЕТ",
   "sex": null,
   "owner": null,
   "competition_ids": [
+    1559,
     1571,
     1572,
     1578,
-    1583
+    1583,
+    1586
   ],
   "competition_files": [
+    "competitions/2018/06-июнь/1559-бега-борзых-за-механическим-заицем-круг.json",
+    "competitions/2018/06-июнь/1586-1-басенджи-стандартныи-кобели-amagamma-namib-mal.json",
     "competitions/2020/09-сентябрь/1571-чемпионат-россии-по-бегам-борзых-за-механическим.json",
     "competitions/2020/09-сентябрь/1572-кубок-россии-по-бегам-борзых-за-механическим-заи.json",
     "competitions/2021/06-июнь/1578-чемпионат-ркф-cacl-по-бегам-борзых.json",
     "competitions/2021/10-октябрь/1583-заичик-листопадничек-курсинг-cacil-cacl.json"
-  ]
+  ],
+  "pedigree_url": null
 }

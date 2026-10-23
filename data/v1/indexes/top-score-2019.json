@@ -2,7 +2,7 @@
   "schema": "coursing-stats/index-top-score-v1",
   "year": 2019,
   "rating_score_version": "cs-v1",
-  "count": 258,
+  "count": 253,
   "items": [
     {
       "dog_id": 9411,
@@ -261,7 +261,7 @@
     },
     {
       "dog_id": 10257,
-      "name_lat": "РУССКИ ПАРК ДАНАЯ",
+      "name_lat": "RUSSKI PARK DANAYA",
       "name_ru": "РУССКИ ПАРК ДАНАЯ",
       "breed": "УИППЕТ",
       "year": 2019,
@@ -590,6 +590,21 @@
       "rating_score": 87.16
     },
     {
+      "dog_id": 10099,
+      "name_lat": "KAVKAZON PIRAT",
+      "name_ru": "КАВКАЗОН ПИРАТ",
+      "breed": "БАСЕНДЖИ",
+      "year": 2019,
+      "best_score": 535,
+      "total_starts": 3,
+      "best_judge_score": 92,
+      "avg_judge_score": 88.07,
+      "year_from": 2019,
+      "year_to": 2019,
+      "judge_eval_count": 14,
+      "rating_score": 88.25
+    },
+    {
       "dog_id": 10330,
       "name_lat": "RESTLESS WHIP VICTORIA",
       "name_ru": "RESTLESS WHIP VICTORIA",
@@ -603,21 +618,6 @@
       "year_to": 2019,
       "judge_eval_count": 10,
       "rating_score": 87.94
-    },
-    {
-      "dog_id": 10285,
-      "name_lat": "KAVKAZON PIRAT",
-      "name_ru": "KAVKAZON PIRAT",
-      "breed": "БАСЕНДЖИ",
-      "year": 2019,
-      "best_score": 535,
-      "total_starts": 1,
-      "best_judge_score": 92,
-      "avg_judge_score": 89.17,
-      "year_from": 2019,
-      "year_to": 2019,
-      "judge_eval_count": 6,
-      "rating_score": 87.49
     },
     {
       "dog_id": 49,
@@ -875,21 +875,6 @@
       "rating_score": 88.33
     },
     {
-      "dog_id": 10253,
-      "name_lat": "ИМРАН ГАЛСАН КАДАРИ",
-      "name_ru": "ИМРАН ГАЛСАН КАДАРИ",
-      "breed": "САЛЮКИ",
-      "year": 2019,
-      "best_score": 354,
-      "total_starts": 3,
-      "best_judge_score": 91,
-      "avg_judge_score": 87.67,
-      "year_from": 2019,
-      "year_to": 2019,
-      "judge_eval_count": 12,
-      "rating_score": 87.93
-    },
-    {
       "dog_id": 10355,
       "name_lat": "АЛЬ НАФИСЭХ ГОЛЬНАР",
       "name_ru": "АЛЬ НАФИСЭХ ГОЛЬНАР",
@@ -1027,7 +1012,7 @@
     {
       "dog_id": 9673,
       "name_lat": "AGATA KRISTI",
-      "name_ru": "AGATA KRISTI",
+      "name_ru": "АГАТА КРИСТИ",
       "breed": "УИППЕТ",
       "year": 2019,
       "best_score": 353,
@@ -1190,6 +1175,36 @@
       "rating_score": 87.16
     },
     {
+      "dog_id": 10253,
+      "name_lat": "IMRAN GALSAN KADARI",
+      "name_ru": "ИМРАН ГАЛСАН КАДАРИ",
+      "breed": "САЛЮКИ",
+      "year": 2019,
+      "best_score": 528,
+      "total_starts": 4,
+      "best_judge_score": 91,
+      "avg_judge_score": 87.78,
+      "year_from": 2019,
+      "year_to": 2019,
+      "judge_eval_count": 18,
+      "rating_score": 88.43
+    },
+    {
+      "dog_id": 10014,
+      "name_lat": "GEZAN GOREDENNA",
+      "name_ru": "ГЕЗАН ГОРЕДЕННА",
+      "breed": "БАСЕНДЖИ",
+      "year": 2019,
+      "best_score": 528,
+      "total_starts": 2,
+      "best_judge_score": 90,
+      "avg_judge_score": 87.6,
+      "year_from": 2019,
+      "year_to": 2019,
+      "judge_eval_count": 10,
+      "rating_score": 87.55
+    },
+    {
       "dog_id": 619,
       "name_lat": "SERDZHIO",
       "name_ru": "SERDZHIO",
@@ -1220,21 +1235,6 @@
       "rating_score": 87.1
     },
     {
-      "dog_id": 10238,
-      "name_lat": "IMRAN GALSAN KADARI",
-      "name_ru": "IMRAN GALSAN KADARI",
-      "breed": "САЛЮКИ",
-      "year": 2019,
-      "best_score": 528,
-      "total_starts": 1,
-      "best_judge_score": 91,
-      "avg_judge_score": 88,
-      "year_from": 2019,
-      "year_to": 2019,
-      "judge_eval_count": 6,
-      "rating_score": 87.1
-    },
-    {
       "dog_id": 9759,
       "name_lat": "JUCARO SPI FINITO",
       "name_ru": "JUCARO SPI FINITO",
@@ -1254,21 +1254,6 @@
       "name_lat": "ARTEFAKT HONEYMOON",
       "name_ru": "ARTEFAKT HONEYMOON",
       "breed": "ГРЕЙХАУНД",
-      "year": 2019,
-      "best_score": 528,
-      "total_starts": 1,
-      "best_judge_score": 90,
-      "avg_judge_score": 88,
-      "year_from": 2019,
-      "year_to": 2019,
-      "judge_eval_count": 6,
-      "rating_score": 87.1
-    },
-    {
-      "dog_id": 10287,
-      "name_lat": "GEZAN GOREDENNA",
-      "name_ru": "GEZAN GOREDENNA",
-      "breed": "БАСЕНДЖИ",
       "year": 2019,
       "best_score": 528,
       "total_starts": 1,
@@ -1368,21 +1353,6 @@
       "year_to": 2019,
       "judge_eval_count": 8,
       "rating_score": 86.99
-    },
-    {
-      "dog_id": 10099,
-      "name_lat": "КАВКАЗОН ПИРАТ",
-      "name_ru": "КАВКАЗОН ПИРАТ",
-      "breed": "БАСЕНДЖИ",
-      "year": 2019,
-      "best_score": 351,
-      "total_starts": 2,
-      "best_judge_score": 89,
-      "avg_judge_score": 87.25,
-      "year_from": 2019,
-      "year_to": 2019,
-      "judge_eval_count": 8,
-      "rating_score": 87.16
     },
     {
       "dog_id": 10361,
@@ -1593,21 +1563,6 @@
       "year_to": 2019,
       "judge_eval_count": 6,
       "rating_score": 86.93
-    },
-    {
-      "dog_id": 10350,
-      "name_lat": "TSARSKAJA PRIHOT SAURI",
-      "name_ru": "TSARSKAJA PRIHOT SAURI",
-      "breed": "ИРЛАНДСКИЙ ВОЛКОДАВ",
-      "year": 2019,
-      "best_score": 350,
-      "total_starts": 1,
-      "best_judge_score": 91,
-      "avg_judge_score": 87.5,
-      "year_from": 2019,
-      "year_to": 2019,
-      "judge_eval_count": 4,
-      "rating_score": 86.73
     },
     {
       "dog_id": 9970,
@@ -1955,21 +1910,6 @@
       "rating_score": 86.53
     },
     {
-      "dog_id": 10014,
-      "name_lat": "ГЕЗАН ГОРЕДЕННА",
-      "name_ru": "ГЕЗАН ГОРЕДЕННА",
-      "breed": "БАСЕНДЖИ",
-      "year": 2019,
-      "best_score": 348,
-      "total_starts": 1,
-      "best_judge_score": 87,
-      "avg_judge_score": 87,
-      "year_from": 2019,
-      "year_to": 2019,
-      "judge_eval_count": 4,
-      "rating_score": 86.23
-    },
-    {
       "dog_id": 10088,
       "name_lat": "VASURU TAFFI’S FIRST EVER FOREVER",
       "name_ru": "VASURU TAFFI’S FIRST EVER FOREVER",
@@ -2002,7 +1942,7 @@
     {
       "dog_id": 10017,
       "name_lat": "DEYONGA GAYA MONIFA",
-      "name_ru": "DEYONGA GAYA MONIFA",
+      "name_ru": "ДЕЙОНГА ГАЙА МОНИФА",
       "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
       "year": 2019,
       "best_score": 521,
@@ -2017,7 +1957,7 @@
     {
       "dog_id": 10323,
       "name_lat": "LUXURY VIPP LADY DAY",
-      "name_ru": "LUXURY VIPP LADY DAY",
+      "name_ru": "ЛАКШЕРИ ВИПП ЛЕДИ ДЭЙ",
       "breed": "УИППЕТ",
       "year": 2019,
       "best_score": 521,
@@ -2090,6 +2030,21 @@
       "rating_score": 87.35
     },
     {
+      "dog_id": 10300,
+      "name_lat": "TSARSKAJA PRIHOT SAYURI",
+      "name_ru": "ЦАРСКАЯ ПРИХОТЬ САЮРИ",
+      "breed": "ИРЛАНДСКИЙ ВОЛКОДАВ",
+      "year": 2019,
+      "best_score": 520,
+      "total_starts": 2,
+      "best_judge_score": 91,
+      "avg_judge_score": 87,
+      "year_from": 2019,
+      "year_to": 2019,
+      "judge_eval_count": 10,
+      "rating_score": 87.3
+    },
+    {
       "dog_id": 10275,
       "name_lat": "SHAL",
       "name_ru": "SHAL",
@@ -2103,21 +2058,6 @@
       "year_to": 2019,
       "judge_eval_count": 6,
       "rating_score": 86.95
-    },
-    {
-      "dog_id": 10300,
-      "name_lat": "TSARSKAJA PRIHOT SAYURI",
-      "name_ru": "TSARSKAJA PRIHOT SAYURI",
-      "breed": "ИРЛАНДСКИЙ ВОЛКОДАВ",
-      "year": 2019,
-      "best_score": 520,
-      "total_starts": 1,
-      "best_judge_score": 91,
-      "avg_judge_score": 86.67,
-      "year_from": 2019,
-      "year_to": 2019,
-      "judge_eval_count": 6,
-      "rating_score": 86.66
     },
     {
       "dog_id": 10303,
@@ -2302,7 +2242,7 @@
     {
       "dog_id": 10171,
       "name_lat": "PODAROK IZ AFRIKI YAKITA MOKKO",
-      "name_ru": "PODAROK IZ AFRIKI YAKITA MOKKO",
+      "name_ru": "ПОДАРОК ИЗ АФРИКИ ЯКИТА МОККО",
       "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
       "year": 2019,
       "best_score": 518,
@@ -2362,7 +2302,7 @@
     {
       "dog_id": 10288,
       "name_lat": "ITURI PUZZLE IZYUM V CHOCOLADE",
-      "name_ru": "ITURI PUZZLE IZYUM V CHOCOLADE",
+      "name_ru": "ИТУРИ ПАЗЗЛ ИЗЮМ В ШОКОЛАДЕ",
       "breed": "БАСЕНДЖИ",
       "year": 2019,
       "best_score": 518,
@@ -2812,7 +2752,7 @@
     {
       "dog_id": 10037,
       "name_lat": "VIKONTESSA NTANDA UORNESH",
-      "name_ru": "VIKONTESSA NTANDA UORNESH",
+      "name_ru": "ВИКОНТЕССА НТАНДА УОРНЕШ",
       "breed": "БАСЕНДЖИ",
       "year": 2019,
       "best_score": 514,
@@ -3170,24 +3110,24 @@
       "rating_score": 87.14
     },
     {
-      "dog_id": 9896,
-      "name_lat": "DOROGOY DRUG SAGAYDAK",
-      "name_ru": "DOROGOY DRUG SAGAYDAK",
+      "dog_id": 10110,
+      "name_lat": "DOROGOY DRUG SOKRUSHAY",
+      "name_ru": "ДОРОГОЙ ДРУГ СОКРУШАЙ",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "year": 2019,
       "best_score": 505,
-      "total_starts": 1,
+      "total_starts": 3,
       "best_judge_score": 88,
-      "avg_judge_score": 84.17,
+      "avg_judge_score": 82.86,
       "year_from": 2019,
       "year_to": 2019,
-      "judge_eval_count": 6,
-      "rating_score": 85.71
+      "judge_eval_count": 14,
+      "rating_score": 85.45
     },
     {
-      "dog_id": 10307,
-      "name_lat": "DOROGOY DRUG SOKRUСHAY",
-      "name_ru": "DOROGOY DRUG SOKRUСHAY",
+      "dog_id": 9896,
+      "name_lat": "DOROGOY DRUG SAGAYDAK",
+      "name_ru": "DOROGOY DRUG SAGAYDAK",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "year": 2019,
       "best_score": 505,
@@ -3230,9 +3170,9 @@
       "rating_score": 85.77
     },
     {
-      "dog_id": 10326,
+      "dog_id": 9798,
       "name_lat": "BUSI VAFA ELFA",
-      "name_ru": "BUSI VAFA ELFA",
+      "name_ru": "БУСИ ВАФА ЭЛЬФА",
       "breed": "УИППЕТ",
       "year": 2019,
       "best_score": 504,
@@ -3320,21 +3260,6 @@
       "rating_score": 85.6
     },
     {
-      "dog_id": 10110,
-      "name_lat": "DOROGOY DRUG SOKRUSHAY",
-      "name_ru": "DOROGOY DRUG SOKRUSHAY",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "year": 2019,
-      "best_score": 333,
-      "total_starts": 2,
-      "best_judge_score": 88,
-      "avg_judge_score": 81.88,
-      "year_from": 2019,
-      "year_to": 2019,
-      "judge_eval_count": 8,
-      "rating_score": 85.14
-    },
-    {
       "dog_id": 9975,
       "name_lat": "PODAROK IZ AFRIKI YAS MOGOBI",
       "name_ru": "PODAROK IZ AFRIKI YAS MOGOBI",
@@ -3367,7 +3292,7 @@
     {
       "dog_id": 10172,
       "name_lat": "PODAROK IZ AFRIKI FLANNA RUFARO",
-      "name_ru": "PODAROK IZ AFRIKI FLANNA RUFARO",
+      "name_ru": "ПОДАРОК ИЗ АФРИКИ ФЛАННА РУФАРО",
       "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
       "year": 2019,
       "best_score": 497,
@@ -3472,7 +3397,7 @@
     {
       "dog_id": 9964,
       "name_lat": "NABAMBA SHANITA",
-      "name_ru": "NABAMBA SHANITA",
+      "name_ru": "НАБАМБА ШАНИТА",
       "breed": "БАСЕНДЖИ",
       "year": 2019,
       "best_score": 491,
@@ -3712,7 +3637,7 @@
     {
       "dog_id": 10118,
       "name_lat": "VOLYA VOLNAYA GOSPOZHA UDACHA",
-      "name_ru": "VOLYA VOLNAYA GOSPOZHA UDACHA",
+      "name_ru": "ВОЛЯ ВОЛЬНАЯ ГОСПОЖА УДАЧА",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "year": 2019,
       "best_score": 311,

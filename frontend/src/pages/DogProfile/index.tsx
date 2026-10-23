@@ -29,6 +29,7 @@ import {
   buildDogProfileTitleGroups,
   maxMergeDogTitles,
 } from '../../lib/qualificationTitles'
+import { toDogTitleCase } from '../../lib/dogName'
 import { toPng } from 'html-to-image'
 import LoadingCard from '../../components/LoadingCard'
 import ErrorState from '../../components/ErrorState'
@@ -75,7 +76,7 @@ export default function DogProfile() {
   const [showAllRacingEvents, setShowAllRacingEvents] = useState(false)
   const [showDog, setShowDog] = useState<ShowDogCardData | null>(null)
   const [showsLoading, setShowsLoading] = useState(true)
-  const [headerRanks, setHeaderRanks] = useState<ProfileHeaderRank[]>([])
+  const [asyncRanks, setAsyncRanks] = useState<ProfileHeaderRank[]>([])
 
   const exportRef = useRef(null)
   const { reachGoal } = useYandexGoal()
@@ -152,11 +153,11 @@ export default function DogProfile() {
     }
   }, [competitionId, dog, loading, showRouteDogId, showRouteBreed, isLegacyShowRoute, profileId])
 
-  // 0ms Latency: populate headerRanks immediately from precomputed dog.ranks
-  useEffect(() => {
-    if (!dog) return
+  // 0ms Latency: предрасчитанные ранги курсинга и бегов доступны синхронно через useMemo (без моргания)
+  const precomputedSportRanks = useMemo<ProfileHeaderRank[]>(() => {
+    if (!dog) return []
     const precomputed = (dog as any)?.ranks || (dog as any)?.dog?.ranks
-    if (!precomputed) return
+    if (!precomputed) return []
 
     const initial: ProfileHeaderRank[] = []
     if (precomputed.coursing && (precomputed.coursing.rank != null || precomputed.coursing.yearRank != null)) {
@@ -181,14 +182,35 @@ export default function DogProfile() {
         href: `/competitions?tab=ranking&year=${precomputed.racing.year || '2026'}`,
       })
     }
+    return initial
+  }, [dog])
 
-    if (initial.length > 0) {
-      setHeaderRanks((prev) => {
-        const existingShow = prev.find((r) => r.key === 'shows')
-        return existingShow ? [...initial, existingShow] : initial
+  // Итоговые headerRanks: предрасчитанный спорт + выставочные ранги из карточки/дозагрузки
+  const headerRanks = useMemo<ProfileHeaderRank[]>(() => {
+    const map = new Map<string, ProfileHeaderRank>()
+    for (const r of precomputedSportRanks) {
+      map.set(r.key, r)
+    }
+    if (showDog) {
+      const showAllTimeBreedRank =
+        (showDog as any)?.breed_rank ?? (showDog as any)?.breedRank ?? undefined
+      const has2026Show = Boolean(
+        showDog.history && showDog.history.some((h) => h.date && h.date.includes('2026')),
+      )
+      map.set('shows', {
+        key: 'shows',
+        label: 'Выставки',
+        rank: showDog.rank ?? null,
+        breedRank: showAllTimeBreedRank,
+        yearBreedRank: undefined,
+        href: `/shows?tab=ranking&year=${has2026Show ? '2026' : ''}`,
       })
     }
-  }, [dog])
+    for (const r of asyncRanks) {
+      map.set(r.key, r)
+    }
+    return Array.from(map.values())
+  }, [precomputedSportRanks, showDog, asyncRanks])
 
   // Места во всременных рейтингах: дозагрузка выставок или фоллбэк для курсинга/бегов
   useEffect(() => {
@@ -201,10 +223,16 @@ export default function DogProfile() {
       const competitionYear = events.length > 0 && events[events.length - 1].date
         ? events[events.length - 1].date.substring(0, 4)
         : currentYear
-      // Для выставок берём последний год из истории или текущий год
-      const showYear = showDog?.history && showDog.history.length > 0 && showDog.history[showDog.history.length - 1].date
-        ? showDog.history[showDog.history.length - 1].date.substring(6, 10)
-        : '2026'
+      // Для выставок проверяем участие в сезоне 2026
+      const has2026Show = Boolean(
+        showDog?.history &&
+          showDog.history.some((h) => h.date && h.date.includes('2026')),
+      )
+      const showYear = has2026Show
+        ? '2026'
+        : showDog?.history && showDog.history[0]?.date
+          ? showDog.history[0].date.substring(6, 10)
+          : '2026'
 
       const precomputed = (dog as any)?.ranks || (dog as any)?.dog?.ranks
       const hasPrecomputedSport = Boolean(precomputed?.coursing || precomputed?.racing)
@@ -244,8 +272,8 @@ export default function DogProfile() {
       ])
 
       if (cancelled) return
-      setHeaderRanks((prev) => {
-        const next: ProfileHeaderRank[] = hasPrecomputedSport ? [...prev.filter((r) => r.key !== 'shows')] : []
+      setAsyncRanks((prev) => {
+        const next: ProfileHeaderRank[] = []
 
         if (!hasPrecomputedSport) {
           if (allTimePlacementRank != null) {
@@ -272,21 +300,18 @@ export default function DogProfile() {
           }
         }
 
-        if (showYearRank != null && showYearRank > 0) {
+        if (showDog) {
+          const showAllTimeBreedRank =
+            (showDog as any)?.breed_rank ?? (showDog as any)?.breedRank ?? undefined
+          const showYearBreedRank = has2026Show ? (showBreedRank ?? undefined) : undefined
+
           next.push({
             key: 'shows',
             label: 'Выставки',
-            rank: showYearRank,
-            breedRank: showBreedRank ?? undefined,
-            href: '/shows?tab=ranking&year=',
-          })
-        } else if (showDog) {
-          next.push({
-            key: 'shows',
-            label: 'Выставки',
-            rank: null,
-            breedRank: showBreedRank ?? undefined,
-            href: '/shows?tab=ranking&year=',
+            rank: showYearRank ?? null,
+            breedRank: showAllTimeBreedRank ?? showBreedRank ?? undefined,
+            yearBreedRank: showYearBreedRank,
+            href: `/shows?tab=ranking&year=${has2026Show ? '2026' : ''}`,
           })
         }
 
@@ -504,7 +529,7 @@ export default function DogProfile() {
   const bestSpeedEventId = racing.best_speed_event_id || null
   const avgSpeedEventId = racing.avg_speed_event_id || null
 
-  const dogName = headerDog.name_lat || headerDog.name_ru || 'Собака'
+  const dogName = toDogTitleCase(headerDog.name_lat || headerDog.name_ru || 'Собака')
   const dogBreed = headerDog.breed || headerBreed || ''
   const dogTitles = titles.map((t) => t.title).join(', ')
 
@@ -595,8 +620,6 @@ export default function DogProfile() {
                   total_starts: coursing.total_starts,
                   avg_judge_score: coursing.avg_judge_score,
                   best_judge_score: coursing.best_judge_score,
-                  elo_rating: dog?.elo_rating ?? null,
-                  elo_races: dog?.elo_races ?? null,
                 }
               : null,
             racing: hasRacingData

@@ -21,8 +21,6 @@ export type StandingExplainerInput = {
   avg_judge_score?: number | null
   best_judge_score?: number | null
   judge_eval_count?: number | null
-  elo_rating?: number | null
-  elo_races?: number | null
   // racing
   best_speed?: number | null
   avg_speed?: number | null
@@ -137,7 +135,6 @@ function CoursingBody({ data, scope }: { data: StandingExplainerInput; scope: St
   const bronze = data.bronze ?? 0
   const starts = data.total_starts ?? 0
   const cs = formatCs(data)
-  const elo = data.elo_rating
   return (
     <ol className="list-decimal space-y-1.5 pl-4 text-[11px] leading-snug text-charcoal-700">
       <li>
@@ -145,7 +142,7 @@ function CoursingBody({ data, scope }: { data: StandingExplainerInput; scope: St
         {starts > 0 ? (
           <>
             {' '}
-            за <strong>{starts}</strong> участий
+            за <strong>{starts}</strong> забегов
             {scope === 'overall' || scope === 'breed' ? ' (карьера)' : ''}.
           </>
         ) : null}
@@ -159,16 +156,6 @@ function CoursingBody({ data, scope }: { data: StandingExplainerInput; scope: St
           </>
         ) : null}
         .
-      </li>
-      <li>
-        <strong>Elo</strong>
-        {elo != null ? (
-          <>
-            {' '}
-            <strong>{elo}</strong>
-          </>
-        ) : null}{' '}
-        — справка, <strong>на место не влияет</strong>.
       </li>
     </ol>
   )
@@ -204,10 +191,10 @@ function RacingBody({ data }: { data: StandingExplainerInput }) {
         </li>
       ) : starts > 0 ? (
         <li>
-          Участий в бегах: <strong>{starts}</strong>.
+          Забегов на бегах: <strong>{starts}</strong>.
         </li>
       ) : null}
-      <li>Медали курсинга и Elo на порядок в колонке «Бега» не влияют.</li>
+      <li>Медали курсинга на порядок в колонке «Бега» не влияют.</li>
     </ol>
   )
 }

@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/index-top-placement-v1",
   "year": 2024,
-  "count": 472,
+  "count": 469,
   "items": [
     {
       "dog_id": 50,
@@ -210,7 +210,7 @@
       "total_starts": 4,
       "year_from": 2024,
       "year_to": 2024,
-      "rank_delta": 12,
+      "rank_delta": 13,
       "rank_delta_breed": 1
     },
     {
@@ -223,6 +223,21 @@
       "silver": 4,
       "bronze": 1,
       "total_starts": 8,
+      "year_from": 2024,
+      "year_to": 2024,
+      "rank_delta": -1,
+      "rank_delta_breed": 0
+    },
+    {
+      "dog_id": 51,
+      "name_lat": "SONETA STAR IZ DIVNOGO SADA",
+      "name_ru": "СОНЕТА СТАР ИЗ ДИВНОГО САДА",
+      "breed": "БАСЕНДЖИ",
+      "year": 2024,
+      "gold": 3,
+      "silver": 3,
+      "bronze": 0,
+      "total_starts": 7,
       "year_from": 2024,
       "year_to": 2024,
       "rank_delta": -1,
@@ -570,7 +585,7 @@
       "total_starts": 13,
       "year_from": 2024,
       "year_to": 2024,
-      "rank_delta": 40,
+      "rank_delta": 39,
       "rank_delta_breed": 8
     },
     {
@@ -587,6 +602,21 @@
       "year_to": 2024,
       "rank_delta": -3,
       "rank_delta_breed": -1
+    },
+    {
+      "dog_id": 387,
+      "name_lat": "НИКОЛЬ САН С КНЯЖЕСКОГО ДВОРА /NICOL SAN S KNJAZHESKOGO DVORA",
+      "name_ru": "НИКОЛЬ САН С КНЯЖЕСКОГО ДВОРА /NICOL SAN S KNJAZHESKOGO DVORA",
+      "breed": "БАСЕНДЖИ",
+      "year": 2024,
+      "gold": 2,
+      "silver": 1,
+      "bronze": 1,
+      "total_starts": 4,
+      "year_from": 2024,
+      "year_to": 2024,
+      "rank_delta": -3,
+      "rank_delta_breed": 0
     },
     {
       "dog_id": 510,
@@ -628,21 +658,6 @@
       "silver": 1,
       "bronze": 0,
       "total_starts": 4,
-      "year_from": 2024,
-      "year_to": 2024,
-      "rank_delta": -3,
-      "rank_delta_breed": 0
-    },
-    {
-      "dog_id": 140,
-      "name_lat": "СОНЕТА СТАР ИЗ ДИВНОГО САДА",
-      "name_ru": "СОНЕТА СТАР ИЗ ДИВНОГО САДА",
-      "breed": "БАСЕНДЖИ",
-      "year": 2024,
-      "gold": 2,
-      "silver": 1,
-      "bronze": 0,
-      "total_starts": 3,
       "year_from": 2024,
       "year_to": 2024,
       "rank_delta": -3,
@@ -885,7 +900,7 @@
       "total_starts": 2,
       "year_from": 2024,
       "year_to": 2024,
-      "rank_delta": 62,
+      "rank_delta": 60,
       "rank_delta_breed": 0
     },
     {
@@ -930,7 +945,7 @@
       "total_starts": 2,
       "year_from": 2024,
       "year_to": 2024,
-      "rank_delta": 70,
+      "rank_delta": 68,
       "rank_delta_breed": 0
     },
     {
@@ -1005,7 +1020,7 @@
       "total_starts": 2,
       "year_from": 2024,
       "year_to": 2024,
-      "rank_delta": 90,
+      "rank_delta": 88,
       "rank_delta_breed": 16
     },
     {
@@ -1144,10 +1159,10 @@
       "rank_delta_breed": -2
     },
     {
-      "dog_id": 51,
-      "name_lat": "SONETA STAR IZ DIVNOGO SADA",
-      "name_ru": "SONETA STAR IZ DIVNOGO SADA",
-      "breed": "БАСЕНДЖИ",
+      "dog_id": 5823,
+      "name_lat": "IRKISS SLAVA",
+      "name_ru": "ИРКИСС СЛАВА",
+      "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
       "year": 2024,
       "gold": 1,
       "silver": 2,
@@ -1168,21 +1183,6 @@
       "silver": 2,
       "bronze": 0,
       "total_starts": 4,
-      "year_from": 2024,
-      "year_to": 2024,
-      "rank_delta": -4,
-      "rank_delta_breed": 0
-    },
-    {
-      "dog_id": 5823,
-      "name_lat": "IRKISS SLAVA",
-      "name_ru": "ИРКИСС СЛАВА",
-      "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
-      "year": 2024,
-      "gold": 1,
-      "silver": 2,
-      "bronze": 0,
-      "total_starts": 3,
       "year_from": 2024,
       "year_to": 2024,
       "rank_delta": -4,
@@ -1238,21 +1238,6 @@
       "name_lat": "CAVALLIERIK UNIKUM",
       "name_ru": "КАВАЛЛЬЕРИК УНИКУМ",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "year": 2024,
-      "gold": 1,
-      "silver": 1,
-      "bronze": 1,
-      "total_starts": 3,
-      "year_from": 2024,
-      "year_to": 2024,
-      "rank_delta": -3,
-      "rank_delta_breed": 0
-    },
-    {
-      "dog_id": 387,
-      "name_lat": "НИКОЛЬ САН С КНЯЖЕСКОГО ДВОРА /NICOL SAN S KNJAZHESKOGO DVORA",
-      "name_ru": "НИКОЛЬ САН С КНЯЖЕСКОГО ДВОРА /NICOL SAN S KNJAZHESKOGO DVORA",
-      "breed": "БАСЕНДЖИ",
       "year": 2024,
       "gold": 1,
       "silver": 1,
@@ -1365,7 +1350,7 @@
       "total_starts": 2,
       "year_from": 2024,
       "year_to": 2024,
-      "rank_delta": 139,
+      "rank_delta": 138,
       "rank_delta_breed": 4
     },
     {
@@ -2507,21 +2492,6 @@
       "year_to": 2024,
       "rank_delta": -7,
       "rank_delta_breed": 0
-    },
-    {
-      "dog_id": 10730,
-      "name_lat": "NICOL SAN S KNJAZHESKOGO DVORA",
-      "name_ru": "НИКОЛЬ САН С КНЯЖЕСКОГО ДВОРА",
-      "breed": "БАСЕНДЖИ",
-      "year": 2024,
-      "gold": 1,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 1,
-      "year_from": 2024,
-      "year_to": 2024,
-      "rank_delta": -7,
-      "rank_delta_breed": -1
     },
     {
       "dog_id": 5874,
@@ -4251,7 +4221,7 @@
     {
       "dog_id": 10514,
       "name_lat": "SOLAR SPIRIT AMON RA",
-      "name_ru": "SOLAR SPIRIT AMON RA",
+      "name_ru": "СОЛАР СПИРИТ АМОН РА",
       "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
       "year": 2024,
       "gold": 0,
@@ -4341,7 +4311,7 @@
     {
       "dog_id": 9388,
       "name_lat": "ENTAYLI YOZ",
-      "name_ru": "ENTAYLI YOZ",
+      "name_ru": "ЭНТАЙЛИ ЙОЗ",
       "breed": "УИППЕТ",
       "year": 2024,
       "gold": 0,
@@ -5145,7 +5115,7 @@
       "total_starts": 2,
       "year_from": 2024,
       "year_to": 2024,
-      "rank_delta": 38,
+      "rank_delta": 37,
       "rank_delta_breed": -1
     },
     {
@@ -5190,7 +5160,7 @@
       "total_starts": 2,
       "year_from": 2024,
       "year_to": 2024,
-      "rank_delta": 37,
+      "rank_delta": 36,
       "rank_delta_breed": 4
     },
     {
@@ -5344,6 +5314,21 @@
       "rank_delta_breed": 0
     },
     {
+      "dog_id": 9629,
+      "name_lat": "BEATRIS IZ SOZVEZDIYA SURSKIKH PSOV",
+      "name_ru": "БЕАТРИС ИЗ СОЗВЕЗДИЯ СУРСКИХ ПСОВ",
+      "breed": "УИППЕТ",
+      "year": 2024,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 2,
+      "year_from": 2024,
+      "year_to": 2024,
+      "rank_delta": -10,
+      "rank_delta_breed": 0
+    },
+    {
       "dog_id": 9636,
       "name_lat": "ГОЛДЕН АЙРИС БЕЙСИ",
       "name_ru": "ГОЛДЕН АЙРИС БЕЙСИ",
@@ -5372,21 +5357,6 @@
       "year_to": 2024,
       "rank_delta": -10,
       "rank_delta_breed": -2
-    },
-    {
-      "dog_id": 10456,
-      "name_lat": "BEATRIS IZ SOZVEZDIYA SURSKIKH PSOV",
-      "name_ru": "BEATRIS IZ SOZVEZDIYA SURSKIKH PSOV",
-      "breed": "УИППЕТ",
-      "year": 2024,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 2,
-      "year_from": 2024,
-      "year_to": 2024,
-      "rank_delta": -10,
-      "rank_delta_breed": 0
     },
     {
       "dog_id": 10536,
@@ -5528,21 +5498,6 @@
       "name_lat": "RUNNING RAIDERS GRIM REAPER",
       "name_ru": "RUNNING RAIDERS GRIM REAPER",
       "breed": "УИППЕТ",
-      "year": 2024,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 1,
-      "year_from": 2024,
-      "year_to": 2024,
-      "rank_delta": -10,
-      "rank_delta_breed": 0
-    },
-    {
-      "dog_id": 290,
-      "name_lat": "IRKISS SLAVA",
-      "name_ru": "ИРКИСС СЛАВА",
-      "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
       "year": 2024,
       "gold": 0,
       "silver": 0,
@@ -6155,7 +6110,7 @@
     },
     {
       "dog_id": 9311,
-      "name_lat": "ФЕЕРИЯ ПАФФ",
+      "name_lat": "FEERIYA PAFF",
       "name_ru": "ФЕЕРИЯ ПАФФ",
       "breed": "ГРЕЙХАУНД",
       "year": 2024,
@@ -6696,7 +6651,7 @@
     {
       "dog_id": 9673,
       "name_lat": "AGATA KRISTI",
-      "name_ru": "AGATA KRISTI",
+      "name_ru": "АГАТА КРИСТИ",
       "breed": "УИППЕТ",
       "year": 2024,
       "gold": 0,

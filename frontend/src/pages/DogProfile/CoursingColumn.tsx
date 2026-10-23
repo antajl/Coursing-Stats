@@ -52,13 +52,13 @@ type CoursingColumnProps = {
 
 const THEME = 'forest' as const
 
-function formatStartsCount(count: number): string {
+function formatCompetitionsCount(count: number): string {
   const mod10 = count % 10
   const mod100 = count % 100
-  if (mod100 >= 11 && mod100 <= 19) return `${count} стартов`
-  if (mod10 === 1) return `${count} старт`
-  if (mod10 >= 2 && mod10 <= 4) return `${count} старта`
-  return `${count} стартов`
+  if (mod100 >= 11 && mod100 <= 19) return `${count} состязаний`
+  if (mod10 === 1) return `${count} состязание`
+  if (mod10 >= 2 && mod10 <= 4) return `${count} состязания`
+  return `${count} состязаний`
 }
 
 export function CoursingColumn({
@@ -95,6 +95,7 @@ export function CoursingColumn({
   const hasHistory = rank?.breedRank != null
   const hasAnyRank = has2026 || hasHistory || rank?.rank != null
   const startsCount = coursingEvents.length
+  const competitionsCount = startsCount || (typeof coursing.total_starts === 'number' ? coursing.total_starts : 0)
 
   const headerLink = (
     <Link
@@ -118,33 +119,28 @@ export function CoursingColumn({
               className="group block rounded-xl border border-forest-200/90 bg-forest-50/80 p-3 transition-colors hover:bg-forest-100/80"
               title="Открыть рейтинг породы по курсингу"
             >
-              <div className="flex items-center justify-between gap-2">
+              <div className="flex items-center justify-between gap-2 min-w-0">
                 {/* Слева: Место в породе + исторический зачёт */}
-                <div className="flex items-center gap-2.5 min-w-0">
+                <div className="flex items-center gap-2.5 min-w-0 flex-1">
                   <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-forest-700 text-white shadow-2xs">
                     <Crown className="h-4 w-4" />
                   </div>
-                  <div className="min-w-0">
+                  <div className="min-w-0 flex-1">
                     <div className="flex items-center gap-1.5 leading-tight">
-                      <span className="text-sm font-bold text-forest-950 sm:text-base whitespace-nowrap">
+                      <span className="text-sm font-bold text-forest-950 xl:text-base truncate block">
                         {has2026
-                          ? `#${rank.yearBreedRank} в породе`
+                          ? `#${rank.yearBreedRank} в сезоне 2026`
                           : hasHistory
-                            ? `#${rank.breedRank} в породе`
-                            : rank?.rank != null
-                              ? `#${rank.rank} в общем топе`
-                              : 'Состязания'}
+                            ? `№${rank.breedRank} за всё время`
+                            : 'Состязания'}
                       </span>
-                      {has2026 && (
-                        <span className="inline-flex items-center justify-center rounded-md bg-forest-200/90 px-1.5 py-0.5 text-[10px] font-bold text-forest-900 leading-none tracking-tight">2026</span>
-                      )}
                     </div>
-                    <div className="text-[11px] text-forest-700 leading-tight mt-0.5 whitespace-nowrap">
+                    <div className="text-[11px] text-forest-700 leading-tight mt-0.5 truncate">
                       {has2026 && hasHistory ? (
                         `№${rank?.breedRank} за всё время`
                       ) : hasHistory ? (
-                        'за всё время'
-                      ) : hasAnyRank ? (
+                        'исторический зачёт'
+                      ) : has2026 ? (
                         'сезонный зачёт'
                       ) : (
                         'состязания РКФ'
@@ -165,7 +161,7 @@ export function CoursingColumn({
                     />
                   ) : startsCount > 0 ? (
                     <span className="inline-flex items-center gap-1 rounded-full border border-forest-200 bg-white/90 px-2 py-0.5 text-[11px] font-semibold text-charcoal-700">
-                      <Medal className="h-3 w-3 text-forest-600" />
+                      <Medal className="h-3 w-3 text-forest-600 shrink-0" />
                       <span>Участник</span>
                     </span>
                   ) : null}
@@ -188,7 +184,7 @@ export function CoursingColumn({
                   {formatScore(coursing.best_score)}
                 </span>
                 <span className="mt-1 flex items-center gap-1 text-[11px] font-medium text-forest-700 group-hover:underline">
-                  <span>Протокол забега</span>
+                  <span>Протокол состязания</span>
                   <ArrowRight className="h-3 w-3 shrink-0" />
                 </span>
               </ProcoursingEventLink>
@@ -203,49 +199,35 @@ export function CoursingColumn({
               </div>
             )}
 
-            {/* Низ: 2 карточки судейских оценок */}
+            {/* Низ: 2 карточки показателей */}
             <div className="grid grid-cols-2 gap-2 text-center text-xs shrink-0">
-              {bestJudgeScoreEventId ? (
+              {avgJudgeScoreEventId || bestJudgeScoreEventId ? (
                 <ProcoursingEventLink
-                  eventId={bestJudgeScoreEventId}
-                  procoursingUrl={bestJudgeUrl}
-                  className="rounded-lg border border-old-money-200 bg-cream-50/80 p-2 transition-colors hover:bg-cream-100/90"
-                  title="Открыть состязание с лучшей оценкой"
-                >
-                  <div className="text-[10px] uppercase text-charcoal-500 mb-0.5">Лучшая оценка</div>
-                  <div className="font-bold tabular-nums text-charcoal-800 text-sm sm:text-base">
-                    {formatScore(coursing.best_judge_score)}
-                  </div>
-                </ProcoursingEventLink>
-              ) : (
-                <div className="rounded-lg border border-old-money-200 bg-cream-50/80 p-2">
-                  <div className="text-[10px] uppercase text-charcoal-500 mb-0.5">Лучшая оценка</div>
-                  <div className="font-bold tabular-nums text-charcoal-800 text-sm sm:text-base">
-                    {formatScore(coursing.best_judge_score)}
-                  </div>
-                </div>
-              )}
-
-              {avgJudgeScoreEventId ? (
-                <ProcoursingEventLink
-                  eventId={avgJudgeScoreEventId}
-                  procoursingUrl={avgJudgeUrl}
+                  eventId={(avgJudgeScoreEventId ?? bestJudgeScoreEventId)!}
+                  procoursingUrl={avgJudgeUrl ?? bestJudgeUrl}
                   className="rounded-lg border border-old-money-200 bg-cream-50/80 p-2 transition-colors hover:bg-cream-100/90"
                   title="Открыть состязание со средней оценкой"
                 >
                   <div className="text-[10px] uppercase text-charcoal-500 mb-0.5">Средняя оценка</div>
                   <div className="font-bold tabular-nums text-charcoal-800 text-sm sm:text-base">
-                    {formatScore(coursing.avg_judge_score)}
+                    {formatScore(coursing.avg_judge_score ?? coursing.best_judge_score)}
                   </div>
                 </ProcoursingEventLink>
               ) : (
                 <div className="rounded-lg border border-old-money-200 bg-cream-50/80 p-2">
                   <div className="text-[10px] uppercase text-charcoal-500 mb-0.5">Средняя оценка</div>
                   <div className="font-bold tabular-nums text-charcoal-800 text-sm sm:text-base">
-                    {formatScore(coursing.avg_judge_score)}
+                    {formatScore(coursing.avg_judge_score ?? coursing.best_judge_score)}
                   </div>
                 </div>
               )}
+
+              <div className="rounded-lg border border-old-money-200 bg-cream-50/80 p-2">
+                <div className="text-[10px] uppercase text-charcoal-500 mb-0.5">Состязания</div>
+                <div className="font-bold tabular-nums text-charcoal-800 text-sm sm:text-base">
+                  {formatCompetitionsCount(competitionsCount)}
+                </div>
+              </div>
             </div>
           </div>
         </DisciplineStatsCard>
@@ -253,7 +235,7 @@ export function CoursingColumn({
 
       {coursingEvents.length > 0 && (
         <DisciplineHistoryCard theme={THEME} participations={coursingEvents.length}>
-          <div>
+          <div className="flex-1">
             {visibleCoursingEvents.map((event, idx) => {
               const cardClass =
                 'block border-b border-forest-200/80 py-3 h-[6.5rem] transition-colors last:border-b-0 hover:bg-forest-50/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-camel-500'
@@ -300,8 +282,8 @@ export function CoursingColumn({
             })}
           </div>
 
-          {coursingEvents.length > 4 && (
-            <div className="mt-3 text-center">
+          {coursingEvents.length > 3 && (
+            <div className="mt-auto pt-3 text-center shrink-0 min-h-[2.25rem] flex items-center justify-center">
               <button
                 type="button"
                 onClick={onToggleShowAll}

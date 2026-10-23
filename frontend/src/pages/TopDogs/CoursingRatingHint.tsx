@@ -39,7 +39,7 @@ export const RATING_MODAL_CONTENT = (
             <span>Медали (главный критерий)</span>
           </div>
           <p className="text-[11px] text-charcoal-600 mt-0.5 leading-snug">
-            Золото ценнее серебра и бронзы. При равенстве наград выше собака с <strong>меньшим</strong> числом стартов.
+            Золото ценнее серебра и бронзы. При равенстве наград выше собака с <strong>меньшим</strong> числом забегов.
           </p>
         </div>
       </div>
@@ -55,21 +55,6 @@ export const RATING_MODAL_CONTENT = (
           </div>
           <p className="text-[11px] text-charcoal-600 mt-0.5 leading-snug">
             Средняя судейская оценка за технику забегов. Разрешает ничьи при одинаковых медалях.
-          </p>
-        </div>
-      </div>
-
-      <div className="flex items-start gap-2.5">
-        <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-md bg-cream-200 text-charcoal-700 text-[11px] font-bold border border-old-money-300 shadow-2xs">
-          3
-        </span>
-        <div className="leading-tight">
-          <div className="flex items-center gap-1 font-semibold text-charcoal-900">
-            <BarChart2 className="h-3.5 w-3.5 text-charcoal-500 shrink-0" aria-hidden />
-            <span>Рейтинг Elo</span>
-          </div>
-          <p className="text-[11px] text-charcoal-600 mt-0.5 leading-snug">
-            Сила соперников в забегах (статистический показатель, на место в зачёте не влияет).
           </p>
         </div>
       </div>
@@ -93,7 +78,7 @@ const TOOLTIP_CONTENT = (
     <ol className="list-decimal space-y-1.5 pl-4 text-[11px] leading-snug text-charcoal-700">
       <li>
         <strong>Медали</strong> — первичный критерий (золото ценнее серебра и бронзы). При одинаковом наборе
-        наград выше тот, кто собрал его за <strong>меньшее</strong> число участий (выше эффективность).
+        наград выше тот, кто собрал его за <strong>меньшее</strong> число забегов (выше эффективность).
       </li>
       <li>
         Индекс <strong>CS</strong> используется при равных результатах по медалям. Учитывает стабильность и
@@ -105,10 +90,6 @@ const TOOLTIP_CONTENT = (
       <p>
         <strong>CS</strong> — средняя оценка судей с учётом пиковых результатов и опыта. Используется для
         разрешения ничьих при равных медалях.
-      </p>
-      <p>
-        <strong>Elo</strong> — рейтинг силы собаки на основе уровня её соперников в забегах. На место в зачёте
-        не влияет.
       </p>
     </div>
   </div>

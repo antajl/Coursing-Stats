@@ -1,27 +1,37 @@
 import { useInfiniteScroll } from '../../hooks/useInfiniteScroll'
+import { useListReveal } from '../../hooks/useListReveal'
 import EmptyState from '../../components/EmptyState'
+import DoninoColumnPlaque, { DoninoColumnShell } from '../SpeedRecords/DoninoColumnPlaque'
 import ShowDogCard, { type ShowDogCardData } from './ShowDogCard'
+import type { FavoriteDogMeta } from '../../hooks/useFavorites'
 
 export type RankedShowDog = ShowDogCardData & { rank: number }
 
 interface ShowRankingColumnsProps {
   dogs: RankedShowDog[]
   filterYear: string
+  favorites?: Set<string>
+  onToggleFavorite?: (dogId: string, meta: FavoriteDogMeta) => void
 }
 
 function dogListKey(dog: ShowDogCardData): string {
-  // RKF ring id не уникален — ключ по кличке + породе + id
   const name = (dog.name_lat || dog.name_ru || '').toUpperCase().replace(/\s+/g, ' ').trim()
   return `${name}|${dog.breed}|${dog.id}`
 }
 
-export default function ShowRankingColumns({ dogs, filterYear }: ShowRankingColumnsProps) {
+export default function ShowRankingColumns({
+  dogs,
+  filterYear,
+  favorites,
+  onToggleFavorite,
+}: ShowRankingColumnsProps) {
   const { visibleCount, loadMoreRef, hasMore } = useInfiniteScroll(dogs.length, [
     filterYear,
     dogs.length,
   ])
 
   const visibleDogs = dogs.slice(0, visibleCount)
+  const revealRef = useListReveal(visibleDogs.length > 0)
 
   if (dogs.length === 0) {
     return (
@@ -32,13 +42,28 @@ export default function ShowRankingColumns({ dogs, filterYear }: ShowRankingColu
     )
   }
 
+  const plaque = (
+    <DoninoColumnPlaque
+      asHeader
+      title="Рейтинг выставок РКФ"
+      count={dogs.length}
+    />
+  )
+
   return (
     <div className="space-y-4">
-      <div className="grid min-w-0 grid-cols-1 gap-0 rounded-xl border border-old-money-200">
+      <DoninoColumnShell plaque={plaque} listRef={revealRef}>
         {visibleDogs.map((dog) => (
-          <ShowDogCard key={dogListKey(dog)} dog={dog} rank={dog.rank} filterYear={filterYear} />
+          <ShowDogCard
+            key={dogListKey(dog)}
+            dog={dog}
+            rank={dog.rank}
+            filterYear={filterYear}
+            favorites={favorites}
+            onToggleFavorite={onToggleFavorite}
+          />
         ))}
-      </div>
+      </DoninoColumnShell>
 
       {hasMore && (
         <div

@@ -56,6 +56,42 @@ function resolveBestGradeLabel(dog: ShowsColumnProps['dog']): string | null {
   return bestShowGradeLabel(history.map((h) => h.grade))
 }
 
+function resolveBestAwardExhibitionId(
+  history: ShowHistoryEntry[],
+  bestKey: ShowAwardKey | null,
+  bestBadge: string | null,
+): number | null {
+  if (!history || history.length === 0) return null
+
+  // 1. Поиск выставки с высшей наградой bestKey
+  if (bestKey) {
+    const matched = history.find((entry) => {
+      if (!entry.exhibition_id) return false
+      try {
+        const parsed = parseShowTitles(entry.title || '')
+        if (parsed[bestKey] && parsed[bestKey] > 0) return true
+      } catch {
+        // ignore
+      }
+      if (bestBadge && entry.title && entry.title.includes(bestBadge)) {
+        return true
+      }
+      return false
+    })
+    if (matched?.exhibition_id) return matched.exhibition_id
+  }
+
+  // 2. Fallback: выставка с отличной оценкой
+  const bestGradeMatch = history.find(
+    (entry) => entry.exhibition_id && /отл/i.test(entry.grade || ''),
+  )
+  if (bestGradeMatch?.exhibition_id) return bestGradeMatch.exhibition_id
+
+  // 3. Fallback: первая выставка в истории с ID
+  const fallback = history.find((entry) => Boolean(entry.exhibition_id))
+  return fallback?.exhibition_id ?? null
+}
+
 export function ShowsColumn({ dog, rank, breed }: ShowsColumnProps) {
   const t = disciplineTheme(THEME)
   const [showAll, setShowAll] = useState(false)
@@ -66,12 +102,14 @@ export function ShowsColumn({ dog, rank, breed }: ShowsColumnProps) {
   const visible = showAll ? history : history.slice(0, HISTORY_DEFAULT)
   const bestGrade = resolveBestGradeLabel(dog)
   const totalShows = history.length
+  const bestExhibitionId = resolveBestAwardExhibitionId(history, bestKey, bestBadge)
 
   const dogBreed = breed || dog.breed || ''
   const rankingUrl = `/shows?tab=ranking${dogBreed ? `&breed=${encodeURIComponent(dogBreed)}` : ''}`
 
-  const hasBreedRank = rank?.breedRank != null
-  const hasOverallRank = rank?.rank != null
+  const has2026 = rank?.yearBreedRank != null
+  const allTimeRank = rank?.breedRank ?? dog.breed_rank ?? null
+  const hasHistory = allTimeRank != null
 
   const headerLink = (
     <Link
@@ -94,42 +132,57 @@ export function ShowsColumn({ dog, rank, breed }: ShowsColumnProps) {
             className="group block rounded-xl border border-camel-200/90 bg-camel-50/80 p-3 transition-colors hover:bg-camel-100/80"
             title="Открыть рейтинг выставок РКФ"
           >
-            <div className="flex items-center justify-between gap-2">
+            <div className="flex items-center justify-between gap-2 min-w-0">
               {/* Слева: Место в породе + общий зачёт */}
-              <div className="flex items-center gap-2.5 min-w-0">
+              <div className="flex items-center gap-2.5 min-w-0 flex-1">
                 <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-camel-700 text-white shadow-2xs">
                   <Crown className="h-4 w-4" />
                 </div>
-                <div className="min-w-0">
+                <div className="min-w-0 flex-1">
                   <div className="flex items-center gap-1.5 leading-tight">
-                    <span className="text-sm font-bold text-camel-950 sm:text-base whitespace-nowrap">
-                      {hasBreedRank ? `#${rank.breedRank} в породе` : 'Рейтинг выставок'}
+                    <span className="text-sm font-bold text-camel-950 xl:text-base truncate block">
+                      {has2026
+                        ? `#${rank.yearBreedRank} в сезоне 2026`
+                        : hasHistory
+                          ? `№${allTimeRank} за всё время`
+                          : 'Выставки'}
                     </span>
                   </div>
-                  <div className="text-[11px] text-camel-800 leading-tight mt-0.5 whitespace-nowrap">
-                    {hasOverallRank ? `№${rank?.rank} в общем топе` : 'Рейтинг РКФ'}
+                  <div className="text-[11px] text-camel-800 leading-tight mt-0.5 truncate">
+                    {has2026 && hasHistory ? (
+                      `№${allTimeRank} за всё время`
+                    ) : hasHistory ? (
+                      'исторический зачёт'
+                    ) : has2026 ? (
+                      'сезонный зачёт'
+                    ) : (
+                      'выставки РКФ'
+                    )}
                   </div>
                 </div>
               </div>
 
-              {/* Справа: Количество выставок */}
+              {/* Справа: Лучшая награда или статус */}
               <div className="shrink-0 flex items-center leading-tight">
                 {bestBadge ? (
-                  <span className="inline-flex items-center gap-1 rounded-full border border-camel-200 bg-white/90 px-2.5 py-0.5 text-xs font-bold text-camel-950">
-                    <Award className="h-3.5 w-3.5 text-camel-700" />
+                  <span
+                    className="inline-flex items-center gap-1 rounded-full border border-camel-200 bg-white/90 px-2 py-0.5 text-xs font-bold text-camel-950"
+                    title={bestGrade ? `${bestBadge} · оценка: ${bestGrade}` : bestBadge}
+                  >
+                    <Award className="h-3.5 w-3.5 text-camel-700 shrink-0" />
                     <span>{bestBadge}</span>
-                    {bestGrade && (
-                      <span className="text-[10px] font-normal text-camel-700">· {bestGrade}</span>
-                    )}
                   </span>
                 ) : bestGrade ? (
-                  <span className="inline-flex items-center gap-1 rounded-full border border-camel-200 bg-white/90 px-2.5 py-0.5 text-xs font-bold text-camel-950">
-                    <Award className="h-3.5 w-3.5 text-camel-700" />
+                  <span
+                    className="inline-flex items-center gap-1 rounded-full border border-camel-200 bg-white/90 px-2 py-0.5 text-xs font-bold text-camel-950"
+                    title={`Оценка: ${bestGrade}`}
+                  >
+                    <Award className="h-3.5 w-3.5 text-camel-700 shrink-0" />
                     <span>{bestGrade}</span>
                   </span>
                 ) : (
-                  <span className="inline-flex items-center gap-1 rounded-full border border-camel-200 bg-white/90 px-2.5 py-0.5 text-xs font-semibold text-camel-800">
-                    <Award className="h-3.5 w-3.5 text-camel-700" />
+                  <span className="inline-flex items-center gap-1 rounded-full border border-camel-200 bg-white/90 px-2 py-0.5 text-xs font-semibold text-camel-800">
+                    <Award className="h-3.5 w-3.5 text-camel-700 shrink-0" />
                     <span>Участник</span>
                   </span>
                 )}
@@ -138,37 +191,62 @@ export function ShowsColumn({ dog, rank, breed }: ShowsColumnProps) {
           </Link>
 
           {/* Центр: Высшая награда */}
-          <div className="flex flex-1 flex-col items-center justify-center rounded-xl border border-camel-200/90 bg-white p-3 text-center">
-            <span className="text-[11px] font-semibold uppercase tracking-wider text-charcoal-500 mb-0.5">
-              Высшая награда
-            </span>
-            <div className="text-2xl font-bold text-camel-950 sm:text-3xl truncate max-w-full">
-              {bestBadge && bestLabel ? (
-                <HoverTooltip label={bestLabel} placement="top" delayMs={0} portal>
-                  <span tabIndex={0} className="cursor-help">{bestBadge}</span>
-                </HoverTooltip>
-              ) : (
-                bestBadge || bestLabel || 'Участник рингов'
+          {bestExhibitionId ? (
+            <Link
+              to={`${localExhibitionPath}/${bestExhibitionId}`}
+              className="group flex flex-1 flex-col items-center justify-center rounded-xl border border-camel-200/90 bg-white p-3 text-center transition-colors hover:bg-camel-50/50"
+              title="Посмотреть протокол выставки"
+            >
+              <span className="text-[11px] font-semibold uppercase tracking-wider text-charcoal-500 mb-0.5">
+                Высшая награда
+              </span>
+              <div className="text-2xl font-bold text-camel-950 sm:text-3xl truncate max-w-full">
+                {bestBadge && bestLabel ? (
+                  <HoverTooltip label={bestLabel} placement="top" delayMs={0} portal>
+                    <span tabIndex={0} className="cursor-help">{bestBadge}</span>
+                  </HoverTooltip>
+                ) : (
+                  bestBadge || bestLabel || 'Участник рингов'
+                )}
+              </div>
+              <span className="mt-1 flex items-center gap-1 text-[11px] font-medium text-camel-800 group-hover:underline">
+                <span>Протокол выставки</span>
+                <ArrowRight className="h-3 w-3 shrink-0" />
+              </span>
+            </Link>
+          ) : (
+            <div className="flex flex-1 flex-col items-center justify-center rounded-xl border border-camel-200/90 bg-white p-3 text-center">
+              <span className="text-[11px] font-semibold uppercase tracking-wider text-charcoal-500 mb-0.5">
+                Высшая награда
+              </span>
+              <div className="text-2xl font-bold text-camel-950 sm:text-3xl truncate max-w-full">
+                {bestBadge && bestLabel ? (
+                  <HoverTooltip label={bestLabel} placement="top" delayMs={0} portal>
+                    <span tabIndex={0} className="cursor-help">{bestBadge}</span>
+                  </HoverTooltip>
+                ) : (
+                  bestBadge || bestLabel || 'Участник рингов'
+                )}
+              </div>
+              {bestGrade && (
+                <span className="mt-1 text-[11px] font-medium text-charcoal-600">
+                  Оценка: <strong className="text-camel-800 font-semibold">{bestGrade}</strong>
+                </span>
               )}
             </div>
-            {bestGrade && (
-              <span className="mt-1 text-[11px] font-medium text-charcoal-600">
-                Оценка: <strong className="text-camel-800 font-semibold">{bestGrade}</strong>
-              </span>
-            )}
-          </div>
+          )}
 
           {/* Низ: 2 карточки показателей */}
           <div className="grid grid-cols-2 gap-2 text-center text-xs shrink-0">
             <div className="rounded-lg border border-old-money-200 bg-cream-50/80 p-2">
-              <div className="text-[10px] uppercase text-charcoal-500 mb-0.5">Лучшая оценка</div>
+              <div className="text-[10px] uppercase text-charcoal-500 mb-0.5">Оценка в ринге</div>
               <div className="flex justify-center pt-0.5">
                 <ShowGradeChip grade={bestGrade} size="sm" />
               </div>
             </div>
 
             <div className="rounded-lg border border-old-money-200 bg-cream-50/80 p-2">
-              <div className="text-[10px] uppercase text-charcoal-500 mb-0.5">Ринги РКФ</div>
+              <div className="text-[10px] uppercase text-charcoal-500 mb-0.5">Выставки</div>
               <div className="font-bold tabular-nums text-charcoal-800 text-sm sm:text-base">
                 {formatShowsCount(totalShows)}
               </div>
@@ -179,7 +257,7 @@ export function ShowsColumn({ dog, rank, breed }: ShowsColumnProps) {
 
       {history.length > 0 && (
         <DisciplineHistoryCard theme={THEME} participations={history.length}>
-          <div>
+          <div className="flex-1">
             {visible.map((entry, idx) => {
               const entryTitles = parseShowTitles(entry.title || '')
               const rowKey = `${entry.exhibition_id}-${idx}`
@@ -235,8 +313,8 @@ export function ShowsColumn({ dog, rank, breed }: ShowsColumnProps) {
             })}
           </div>
 
-          {history.length > 4 && (
-            <div className="mt-3 text-center">
+          {history.length > 3 && (
+            <div className="mt-auto pt-3 text-center shrink-0 min-h-[2.25rem] flex items-center justify-center">
               <button
                 type="button"
                 onClick={() => setShowAll((v) => !v)}

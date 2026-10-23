@@ -4,20 +4,27 @@
   "id": 10110,
   "dog_key": "dorogoy-drug-sokrushay--русская-псовая-борзая",
   "name_lat": "DOROGOY DRUG SOKRUSHAY",
-  "name_ru": "DOROGOY DRUG SOKRUSHAY",
+  "name_ru": "ДОРОГОЙ ДРУГ СОКРУШАЙ",
   "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
   "sex": null,
   "owner": null,
   "competition_ids": [
+    1553,
+    1555,
     1558,
     1561,
     1563,
+    1564,
     1566
   ],
   "competition_files": [
+    "competitions/2016/02-февраль/1553-чемпионат-по-курсингу-мартовскии-заяц.json",
+    "competitions/2017/02-февраль/1555-чемпионат-по-курсингу-мартовскии-заяц.json",
     "competitions/2018/03-март/1558-чемпионат-по-курсингу-мартовскии-заяц-2018.json",
     "competitions/2018/08-август/1561-международныи-чемпионат-по-курсингу-cacil-чемпио.json",
     "competitions/2019/03-март/1563-чемпионат-по-курсингу-мартовскии-заяц-2019.json",
+    "competitions/2019/04-апрель/1564-международныи-чемпионат-по-курсингу-чемпионат-ро.json",
     "competitions/2019/08-август/1566-чемпионат-ркф-cacl.json"
-  ]
+  ],
+  "pedigree_url": null
 }

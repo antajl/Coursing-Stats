@@ -2,7 +2,7 @@
   "schema": "coursing-stats/index-top-score-v1",
   "year": 2018,
   "rating_score_version": "cs-v1",
-  "count": 208,
+  "count": 205,
   "items": [
     {
       "dog_id": 10115,
@@ -110,6 +110,21 @@
       "rating_score": 87.23
     },
     {
+      "dog_id": 10253,
+      "name_lat": "IMRAN GALSAN KADARI",
+      "name_ru": "ИМРАН ГАЛСАН КАДАРИ",
+      "breed": "САЛЮКИ",
+      "year": 2018,
+      "best_score": 530,
+      "total_starts": 2,
+      "best_judge_score": 92,
+      "avg_judge_score": 86.63,
+      "year_from": 2018,
+      "year_to": 2018,
+      "judge_eval_count": 8,
+      "rating_score": 87.04
+    },
+    {
       "dog_id": 10130,
       "name_lat": "AL NAFISEH DA’IM",
       "name_ru": "AL NAFISEH DA’IM",
@@ -168,21 +183,6 @@
       "year_to": 2018,
       "judge_eval_count": 8,
       "rating_score": 86.84
-    },
-    {
-      "dog_id": 10238,
-      "name_lat": "IMRAN GALSAN KADARI",
-      "name_ru": "IMRAN GALSAN KADARI",
-      "breed": "САЛЮКИ",
-      "year": 2018,
-      "best_score": 530,
-      "total_starts": 1,
-      "best_judge_score": 92,
-      "avg_judge_score": 89.25,
-      "year_from": 2018,
-      "year_to": 2018,
-      "judge_eval_count": 4,
-      "rating_score": 87.16
     },
     {
       "dog_id": 10086,
@@ -410,6 +410,21 @@
       "rating_score": 86.98
     },
     {
+      "dog_id": 9952,
+      "name_lat": "GROM PROMETEY",
+      "name_ru": "ГРОМ ПРОМЕТЕЙ",
+      "breed": "УИППЕТ",
+      "year": 2018,
+      "best_score": 530,
+      "total_starts": 3,
+      "best_judge_score": 91,
+      "avg_judge_score": 86.33,
+      "year_from": 2018,
+      "year_to": 2018,
+      "judge_eval_count": 12,
+      "rating_score": 87.27
+    },
+    {
       "dog_id": 9993,
       "name_lat": "IMRAN ENSAR FALAYHAN",
       "name_ru": "IMRAN ENSAR FALAYHAN",
@@ -423,21 +438,6 @@
       "year_to": 2018,
       "judge_eval_count": 12,
       "rating_score": 86.89
-    },
-    {
-      "dog_id": 10243,
-      "name_lat": "GROM PROMETEY",
-      "name_ru": "GROM PROMETEY",
-      "breed": "УИППЕТ",
-      "year": 2018,
-      "best_score": 530,
-      "total_starts": 1,
-      "best_judge_score": 91,
-      "avg_judge_score": 88.25,
-      "year_from": 2018,
-      "year_to": 2018,
-      "judge_eval_count": 4,
-      "rating_score": 86.91
     },
     {
       "dog_id": 10194,
@@ -742,7 +742,7 @@
     {
       "dog_id": 9964,
       "name_lat": "NABAMBA SHANITA",
-      "name_ru": "NABAMBA SHANITA",
+      "name_ru": "НАБАМБА ШАНИТА",
       "breed": "БАСЕНДЖИ",
       "year": 2018,
       "best_score": 350,
@@ -920,24 +920,9 @@
       "rating_score": 86.81
     },
     {
-      "dog_id": 9952,
-      "name_lat": "ГРОМ ПРОМЕТЕЙ",
-      "name_ru": "ГРОМ ПРОМЕТЕЙ",
-      "breed": "УИППЕТ",
-      "year": 2018,
-      "best_score": 348,
-      "total_starts": 2,
-      "best_judge_score": 91,
-      "avg_judge_score": 85.38,
-      "year_from": 2018,
-      "year_to": 2018,
-      "judge_eval_count": 8,
-      "rating_score": 86.54
-    },
-    {
       "dog_id": 10110,
       "name_lat": "DOROGOY DRUG SOKRUSHAY",
-      "name_ru": "DOROGOY DRUG SOKRUSHAY",
+      "name_ru": "ДОРОГОЙ ДРУГ СОКРУШАЙ",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "year": 2018,
       "best_score": 514,
@@ -1191,7 +1176,7 @@
     },
     {
       "dog_id": 10099,
-      "name_lat": "КАВКАЗОН ПИРАТ",
+      "name_lat": "KAVKAZON PIRAT",
       "name_ru": "КАВКАЗОН ПИРАТ",
       "breed": "БАСЕНДЖИ",
       "year": 2018,
@@ -1475,9 +1460,9 @@
       "rating_score": 86.26
     },
     {
-      "dog_id": 10116,
+      "dog_id": 9984,
       "name_lat": "VOLYA VOL’NAYA GORDAYA RUS’",
-      "name_ru": "VOLYA VOL’NAYA GORDAYA RUS’",
+      "name_ru": "ВОЛЯ ВОЛЬНАЯ ГОРДАЯ РУСЬ",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "year": 2018,
       "best_score": 343,
@@ -1506,7 +1491,7 @@
     },
     {
       "dog_id": 10014,
-      "name_lat": "ГЕЗАН ГОРЕДЕННА",
+      "name_lat": "GEZAN GOREDENNA",
       "name_ru": "ГЕЗАН ГОРЕДЕННА",
       "breed": "БАСЕНДЖИ",
       "year": 2018,
@@ -1762,7 +1747,7 @@
     {
       "dog_id": 10186,
       "name_lat": "DIOSKUR VEKTOR SKOROSTI",
-      "name_ru": "DIOSKUR VEKTOR SKOROSTI",
+      "name_ru": "ДИОСКУР ВЕКТОР СКОРОСТИ",
       "breed": "УИППЕТ",
       "year": 2018,
       "best_score": 341,
@@ -1777,7 +1762,7 @@
     {
       "dog_id": 10017,
       "name_lat": "DEYONGA GAYA MONIFA",
-      "name_ru": "DEYONGA GAYA MONIFA",
+      "name_ru": "ДЕЙОНГА ГАЙА МОНИФА",
       "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
       "year": 2018,
       "best_score": 340,
@@ -2000,21 +1985,6 @@
       "rating_score": 85.58
     },
     {
-      "dog_id": 10253,
-      "name_lat": "ИМРАН ГАЛСАН КАДАРИ",
-      "name_ru": "ИМРАН ГАЛСАН КАДАРИ",
-      "breed": "САЛЮКИ",
-      "year": 2018,
-      "best_score": 336,
-      "total_starts": 1,
-      "best_judge_score": 88,
-      "avg_judge_score": 84,
-      "year_from": 2018,
-      "year_to": 2018,
-      "judge_eval_count": 4,
-      "rating_score": 85.74
-    },
-    {
       "dog_id": 10211,
       "name_lat": "ITURY PUZZLE IZYUM V SHOKOLADE",
       "name_ru": "ITURY PUZZLE IZYUM V SHOKOLADE",
@@ -2092,7 +2062,7 @@
     {
       "dog_id": 10118,
       "name_lat": "VOLYA VOLNAYA GOSPOZHA UDACHA",
-      "name_ru": "VOLYA VOLNAYA GOSPOZHA UDACHA",
+      "name_ru": "ВОЛЯ ВОЛЬНАЯ ГОСПОЖА УДАЧА",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "year": 2018,
       "best_score": 334,
@@ -2407,17 +2377,17 @@
     {
       "dog_id": 9673,
       "name_lat": "AGATA KRISTI",
-      "name_ru": "AGATA KRISTI",
+      "name_ru": "АГАТА КРИСТИ",
       "breed": "УИППЕТ",
       "year": 2018,
       "best_score": 324,
-      "total_starts": 1,
-      "best_judge_score": 87,
-      "avg_judge_score": 81,
+      "total_starts": 2,
+      "best_judge_score": 89,
+      "avg_judge_score": 75.13,
       "year_from": 2018,
       "year_to": 2018,
-      "judge_eval_count": 4,
-      "rating_score": 84.95
+      "judge_eval_count": 8,
+      "rating_score": 82.44
     },
     {
       "dog_id": 10256,
@@ -2451,7 +2421,7 @@
     },
     {
       "dog_id": 10257,
-      "name_lat": "РУССКИ ПАРК ДАНАЯ",
+      "name_lat": "RUSSKI PARK DANAYA",
       "name_ru": "РУССКИ ПАРК ДАНАЯ",
       "breed": "УИППЕТ",
       "year": 2018,
@@ -2690,21 +2660,6 @@
       "rating_score": 83.99
     },
     {
-      "dog_id": 10148,
-      "name_lat": "АГАТА КРИСТИ",
-      "name_ru": "АГАТА КРИСТИ",
-      "breed": "УИППЕТ",
-      "year": 2018,
-      "best_score": 277,
-      "total_starts": 1,
-      "best_judge_score": 89,
-      "avg_judge_score": 69.25,
-      "year_from": 2018,
-      "year_to": 2018,
-      "judge_eval_count": 4,
-      "rating_score": 82.16
-    },
-    {
       "dog_id": 10040,
       "name_lat": "ARTEFAKT HONEYMOON",
       "name_ru": "ARTEFAKT HONEYMOON",
@@ -2795,6 +2750,21 @@
       "rating_score": null
     },
     {
+      "dog_id": 9853,
+      "name_lat": "LA DUSHKA",
+      "name_ru": "ЛА ДУШКА",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year": 2018,
+      "best_score": null,
+      "total_starts": 1,
+      "best_judge_score": null,
+      "avg_judge_score": null,
+      "year_from": 2018,
+      "year_to": 2018,
+      "judge_eval_count": 0,
+      "rating_score": null
+    },
+    {
       "dog_id": 9916,
       "name_lat": "DIOSKURY RA",
       "name_ru": "DIOSKURY RA",
@@ -2857,7 +2827,7 @@
     {
       "dog_id": 10037,
       "name_lat": "VIKONTESSA NTANDA UORNESH",
-      "name_ru": "VIKONTESSA NTANDA UORNESH",
+      "name_ru": "ВИКОНТЕССА НТАНДА УОРНЕШ",
       "breed": "БАСЕНДЖИ",
       "year": 2018,
       "best_score": null,
@@ -2948,21 +2918,6 @@
       "dog_id": 10124,
       "name_lat": "FANTASTIC FORTUNA POLOT",
       "name_ru": "FANTASTIC FORTUNA POLOT",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "year": 2018,
-      "best_score": null,
-      "total_starts": 1,
-      "best_judge_score": null,
-      "avg_judge_score": null,
-      "year_from": 2018,
-      "year_to": 2018,
-      "judge_eval_count": 0,
-      "rating_score": null
-    },
-    {
-      "dog_id": 10125,
-      "name_lat": "LA DUSHKA",
-      "name_ru": "LA DUSHKA",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "year": 2018,
       "best_score": null,

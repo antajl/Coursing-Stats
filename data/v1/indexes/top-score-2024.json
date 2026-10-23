@@ -2,7 +2,7 @@
   "schema": "coursing-stats/index-top-score-v1",
   "year": 2024,
   "rating_score_version": "cs-v1",
-  "count": 472,
+  "count": 469,
   "items": [
     {
       "dog_id": 10677,
@@ -1631,13 +1631,13 @@
       "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
       "year": 2024,
       "best_score": 353,
-      "total_starts": 3,
+      "total_starts": 4,
       "best_judge_score": 89,
       "avg_judge_score": 83.5,
       "year_from": 2024,
       "year_to": 2024,
       "judge_eval_count": 12,
-      "rating_score": 85.85
+      "rating_score": 86.01
     },
     {
       "dog_id": 7236,
@@ -1730,9 +1730,9 @@
       "rating_score": 86.44
     },
     {
-      "dog_id": 10456,
+      "dog_id": 9629,
       "name_lat": "BEATRIS IZ SOZVEZDIYA SURSKIKH PSOV",
-      "name_ru": "BEATRIS IZ SOZVEZDIYA SURSKIKH PSOV",
+      "name_ru": "БЕАТРИС ИЗ СОЗВЕЗДИЯ СУРСКИХ ПСОВ",
       "breed": "УИППЕТ",
       "year": 2024,
       "best_score": 352,
@@ -2032,7 +2032,7 @@
     {
       "dog_id": 9388,
       "name_lat": "ENTAYLI YOZ",
-      "name_ru": "ENTAYLI YOZ",
+      "name_ru": "ЭНТАЙЛИ ЙОЗ",
       "breed": "УИППЕТ",
       "year": 2024,
       "best_score": 350,
@@ -2300,6 +2300,21 @@
       "rating_score": 86.43
     },
     {
+      "dog_id": 51,
+      "name_lat": "SONETA STAR IZ DIVNOGO SADA",
+      "name_ru": "СОНЕТА СТАР ИЗ ДИВНОГО САДА",
+      "breed": "БАСЕНДЖИ",
+      "year": 2024,
+      "best_score": 348,
+      "total_starts": 7,
+      "best_judge_score": 168,
+      "avg_judge_score": 83.42,
+      "year_from": 2024,
+      "year_to": 2024,
+      "judge_eval_count": 24,
+      "rating_score": 86.05
+    },
+    {
       "dog_id": 7050,
       "name_lat": "NIKA IZ DOMA PRINTSESSY DIANY",
       "name_ru": "НИКА ИЗ ДОМА ПРИНЦЕССЫ ДИАНЫ",
@@ -2313,21 +2328,6 @@
       "year_to": 2024,
       "judge_eval_count": 12,
       "rating_score": 86.48
-    },
-    {
-      "dog_id": 140,
-      "name_lat": "СОНЕТА СТАР ИЗ ДИВНОГО САДА",
-      "name_ru": "СОНЕТА СТАР ИЗ ДИВНОГО САДА",
-      "breed": "БАСЕНДЖИ",
-      "year": 2024,
-      "best_score": 348,
-      "total_starts": 3,
-      "best_judge_score": 90,
-      "avg_judge_score": 85.25,
-      "year_from": 2024,
-      "year_to": 2024,
-      "judge_eval_count": 12,
-      "rating_score": 86.73
     },
     {
       "dog_id": 5739,
@@ -3830,21 +3830,6 @@
       "rating_score": 85.6
     },
     {
-      "dog_id": 51,
-      "name_lat": "SONETA STAR IZ DIVNOGO SADA",
-      "name_ru": "SONETA STAR IZ DIVNOGO SADA",
-      "breed": "БАСЕНДЖИ",
-      "year": 2024,
-      "best_score": 338,
-      "total_starts": 4,
-      "best_judge_score": 168,
-      "avg_judge_score": 81.58,
-      "year_from": 2024,
-      "year_to": 2024,
-      "judge_eval_count": 12,
-      "rating_score": 85.05
-    },
-    {
       "dog_id": 178,
       "name_lat": "JELANY RED TROY",
       "name_ru": "JELANY RED TROY",
@@ -4132,7 +4117,7 @@
     {
       "dog_id": 10514,
       "name_lat": "SOLAR SPIRIT AMON RA",
-      "name_ru": "SOLAR SPIRIT AMON RA",
+      "name_ru": "СОЛАР СПИРИТ АМОН РА",
       "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
       "year": 2024,
       "best_score": 335,
@@ -6026,7 +6011,7 @@
       "breed": "БАСЕНДЖИ",
       "year": 2024,
       "best_score": null,
-      "total_starts": 3,
+      "total_starts": 4,
       "best_judge_score": null,
       "avg_judge_score": null,
       "year_from": 2024,
@@ -6350,21 +6335,6 @@
       "rating_score": null
     },
     {
-      "dog_id": 290,
-      "name_lat": "IRKISS SLAVA",
-      "name_ru": "ИРКИСС СЛАВА",
-      "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
-      "year": 2024,
-      "best_score": null,
-      "total_starts": 1,
-      "best_judge_score": null,
-      "avg_judge_score": null,
-      "year_from": 2024,
-      "year_to": 2024,
-      "judge_eval_count": 0,
-      "rating_score": null
-    },
-    {
       "dog_id": 383,
       "name_lat": "MIA SANTO’S ILVA NEVA",
       "name_ru": "MIA SANTO’S ILVA NEVA",
@@ -6621,7 +6591,7 @@
     },
     {
       "dog_id": 9311,
-      "name_lat": "ФЕЕРИЯ ПАФФ",
+      "name_lat": "FEERIYA PAFF",
       "name_ru": "ФЕЕРИЯ ПАФФ",
       "breed": "ГРЕЙХАУНД",
       "year": 2024,
@@ -6922,7 +6892,7 @@
     {
       "dog_id": 9673,
       "name_lat": "AGATA KRISTI",
-      "name_ru": "AGATA KRISTI",
+      "name_ru": "АГАТА КРИСТИ",
       "breed": "УИППЕТ",
       "year": 2024,
       "best_score": null,
@@ -7059,21 +7029,6 @@
       "name_lat": "ZLAT OHARRY BADIKHAN",
       "name_ru": "ЗЛАТ ОХАРРИ БАДИХАН",
       "breed": "АФГАНСКАЯ БОРЗАЯ",
-      "year": 2024,
-      "best_score": null,
-      "total_starts": 1,
-      "best_judge_score": null,
-      "avg_judge_score": null,
-      "year_from": 2024,
-      "year_to": 2024,
-      "judge_eval_count": 0,
-      "rating_score": null
-    },
-    {
-      "dog_id": 10730,
-      "name_lat": "NICOL SAN S KNJAZHESKOGO DVORA",
-      "name_ru": "НИКОЛЬ САН С КНЯЖЕСКОГО ДВОРА",
-      "breed": "БАСЕНДЖИ",
       "year": 2024,
       "best_score": null,
       "total_starts": 1,

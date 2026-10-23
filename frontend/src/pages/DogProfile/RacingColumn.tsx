@@ -50,13 +50,13 @@ type RacingColumnProps = {
 
 const THEME = 'warm-blue' as const
 
-function formatStartsCount(count: number): string {
+function formatRunsCount(count: number): string {
   const mod10 = count % 10
   const mod100 = count % 100
-  if (mod100 >= 11 && mod100 <= 19) return `${count} стартов`
-  if (mod10 === 1) return `${count} старт`
-  if (mod10 >= 2 && mod10 <= 4) return `${count} старта`
-  return `${count} стартов`
+  if (mod100 >= 11 && mod100 <= 19) return `${count} забегов`
+  if (mod10 === 1) return `${count} забег`
+  if (mod10 >= 2 && mod10 <= 4) return `${count} забега`
+  return `${count} забегов`
 }
 
 export function RacingColumn({
@@ -112,33 +112,28 @@ export function RacingColumn({
               className="group block rounded-xl border border-warm-blue-200/90 bg-warm-blue-50/80 p-3 transition-colors hover:bg-warm-blue-100/80"
               title="Открыть рейтинг породы по бегам"
             >
-              <div className="flex items-center justify-between gap-2">
+              <div className="flex items-center justify-between gap-2 min-w-0">
                 {/* Слева: Место в породе + исторический зачёт */}
-                <div className="flex items-center gap-2.5 min-w-0">
+                <div className="flex items-center gap-2.5 min-w-0 flex-1">
                   <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-warm-blue-700 text-white shadow-2xs">
                     <Crown className="h-4 w-4" />
                   </div>
-                  <div className="min-w-0">
+                  <div className="min-w-0 flex-1">
                     <div className="flex items-center gap-1.5 leading-tight">
-                      <span className="text-sm font-bold text-warm-blue-950 sm:text-base whitespace-nowrap">
+                      <span className="text-sm font-bold text-warm-blue-950 xl:text-base truncate block">
                         {has2026
-                          ? `#${rank.yearBreedRank} в породе`
+                          ? `#${rank.yearBreedRank} в сезоне 2026`
                           : hasHistory
-                            ? `#${rank.breedRank} в породе`
-                            : rank?.rank != null
-                              ? `#${rank.rank} в общем топе`
-                              : 'Бега'}
+                            ? `№${rank.breedRank} за всё время`
+                            : 'Бега'}
                       </span>
-                      {has2026 && (
-                        <span className="inline-flex items-center justify-center rounded-md bg-warm-blue-200/90 px-1.5 py-0.5 text-[10px] font-bold text-warm-blue-900 leading-none tracking-tight">2026</span>
-                      )}
                     </div>
-                    <div className="text-[11px] text-warm-blue-700 leading-tight mt-0.5 whitespace-nowrap">
+                    <div className="text-[11px] text-warm-blue-700 leading-tight mt-0.5 truncate">
                       {has2026 && hasHistory ? (
                         `№${rank?.breedRank} за всё время`
                       ) : hasHistory ? (
-                        'за всё время'
-                      ) : hasAnyRank ? (
+                        'исторический зачёт'
+                      ) : has2026 ? (
                         'сезонный зачёт'
                       ) : (
                         'беговой рейтинг'
@@ -159,7 +154,7 @@ export function RacingColumn({
                     />
                   ) : startsCount > 0 ? (
                     <span className="inline-flex items-center gap-1 rounded-full border border-warm-blue-200 bg-white/90 px-2 py-0.5 text-[11px] font-semibold text-charcoal-700">
-                      <Medal className="h-3 w-3 text-warm-blue-600" />
+                      <Medal className="h-3 w-3 text-warm-blue-600 shrink-0" />
                       <span>Участник</span>
                     </span>
                   ) : null}
@@ -223,9 +218,9 @@ export function RacingColumn({
               )}
 
               <div className="rounded-lg border border-old-money-200 bg-cream-50/80 p-2">
-                <div className="text-[10px] uppercase text-charcoal-500 mb-0.5">Старты на бегах</div>
+                <div className="text-[10px] uppercase text-charcoal-500 mb-0.5">Забеги</div>
                 <div className="font-bold tabular-nums text-charcoal-800 text-sm sm:text-base">
-                  {formatStartsCount(startsCount)}
+                  {formatRunsCount(startsCount)}
                 </div>
               </div>
             </div>
@@ -235,7 +230,7 @@ export function RacingColumn({
 
       {racingEvents.length > 0 && (
         <DisciplineHistoryCard theme={THEME} participations={racingEvents.length}>
-          <div>
+          <div className="flex-1">
             {visibleRacingEvents.map((event, idx) => {
               const cardClass =
                 'block border-b border-warm-blue-200/80 py-3 h-[6.5rem] transition-colors last:border-b-0 hover:bg-warm-blue-50/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-camel-500'
@@ -283,8 +278,8 @@ export function RacingColumn({
             })}
           </div>
 
-          {racingEvents.length > 4 && (
-            <div className="mt-3 text-center">
+          {racingEvents.length > 3 && (
+            <div className="mt-auto pt-3 text-center shrink-0 min-h-[2.25rem] flex items-center justify-center">
               <button
                 type="button"
                 onClick={onToggleShowAll}

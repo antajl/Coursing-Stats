@@ -1193,33 +1193,81 @@ async function main() {
   const allTimeRanksById: Record<string, number> = {}
   const allTimeRanksByCompetitionId: Record<string, number> = {}
   
-  // Строим Map для быстрого поиска all-time rank
+  // Строим Map для быстрого поиска all-time rank и all-time breed rank
   const allTimeDogMap = new Map<string, number>()
+  const allTimeBreedCounters = new Map<string, number>()
+  const allTimeBreedDogMap = new Map<string, number>()
   for (let i = 0; i < dogs.length; i++) {
-    allTimeDogMap.set(dogs[i].id, i + 1)
+    const d = dogs[i]
+    allTimeDogMap.set(d.id, i + 1)
+    const breedKey = (d.breed || '').toUpperCase().trim()
+    const bRank = (allTimeBreedCounters.get(breedKey) || 0) + 1
+    allTimeBreedCounters.set(breedKey, bRank)
+    allTimeBreedDogMap.set(d.id, bRank)
   }
   
-  // Собираем всех собак из всех годовых рейтингов
-  console.log('Collecting all dogs from year rankings for details/lookup...')
-  const allYearDogs = new Map<string, ShowDog>()
+  // Собираем всех собак для details/lookup:
+  // БАЗА — all-time собаки (полная история за все годы, суммарные титулы и высшая награда).
+  console.log('Collecting all dogs from all-time and year rankings for details/lookup...')
+  const allDetailDogs = new Map<string, ShowDog>()
+  for (const dog of dogs) {
+    allDetailDogs.set(dog.id, {
+      ...dog,
+      titles: { ...dog.titles },
+      history: [...dog.history],
+    })
+  }
+  
+  // Дополняем и объединяем из годовых рейтингов
   for (const [year, yearDogs] of rankingByYear) {
     for (const dog of yearDogs) {
-      if (!allYearDogs.has(dog.id)) {
-        allYearDogs.set(dog.id, dog)
+      const existing = allDetailDogs.get(dog.id)
+      if (!existing) {
+        allDetailDogs.set(dog.id, {
+          ...dog,
+          titles: { ...dog.titles },
+          history: [...dog.history],
+        })
+      } else {
+        // Добавляем выставки из годового среза, если их ещё нет в истории
+        const existingExIds = new Set(existing.history.map((h) => h.exhibition_id))
+        for (const h of dog.history) {
+          if (!existingExIds.has(h.exhibition_id)) {
+            existing.history.push(h)
+            existingExIds.add(h.exhibition_id)
+            existing.total_shows = (existing.total_shows || 0) + 1
+          }
+        }
+        // Мержим титулы и обновляем лучшую награду и оценку
+        existing.titles = mergeShowTitles(existing.titles, dog.titles)
+        const recalculatedScore = showRankScore(existing.titles)
+        if (recalculatedScore > (existing.rank_score ?? 0)) {
+          existing.rank_score = recalculatedScore
+        }
+        existing.best_award = bestShowAward(existing.titles)
+        if (dog.best_grade && (!existing.best_grade || dog.best_grade !== existing.best_grade)) {
+          existing.best_grade = bestShowGradeLabel(existing.history.map((h) => h.grade))
+        }
       }
     }
   }
-  console.log(`Collected ${allYearDogs.size} unique dogs from year rankings`)
   
-  // Строим details/lookup из объединения годовых рейтингов
-  console.log('Building dog-details shards and lookup from year rankings...')
+  // Сортируем историю выставок по дате (свежие сверху) для всех собак
+  for (const dog of allDetailDogs.values()) {
+    dog.history.sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')))
+  }
+  console.log(`Collected ${allDetailDogs.size} unique dogs for details/lookup`)
+  
+  // Строим details/lookup из объединения
+  console.log('Building dog-details shards and lookup...')
   let processed = 0
-  for (const dog of allYearDogs.values()) {
+  for (const dog of allDetailDogs.values()) {
     processed++
     if (processed % 50000 === 0) {
-      console.log(`  Processing details: ${processed}/${allYearDogs.size} dogs...`)
+      console.log(`  Processing details: ${processed}/${allDetailDogs.size} dogs...`)
     }
     const rank = allTimeDogMap.get(dog.id) || 0 // all-time rank, если есть
+    const breed_rank = allTimeBreedDogMap.get(dog.id) || 0 // all-time breed rank, если есть
     if (rank > 0) allTimeRanksById[dog.id] = rank
     if (dog.competition_dog_id != null) {
       if (rank > 0) allTimeRanksByCompetitionId[String(dog.competition_dog_id)] = rank
@@ -1242,6 +1290,7 @@ async function main() {
       total_shows: dog.total_shows || 0,
       rank_score: dog.rank_score ?? 0,
       rank,
+      breed_rank,
       best_award: dog.best_award ?? null,
       best_grade: dog.best_grade ?? null,
       titles: compactShowTitles(dog.titles),

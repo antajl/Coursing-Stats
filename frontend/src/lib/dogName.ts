@@ -142,38 +142,79 @@ function splitRawNameParts(raw?: string | null): string[] {
   return [...parts]
 }
 
-/** Русская и латинская части: из «RU / EN» в name_lat или из name_lat + name_ru. */
+const LOWER_WORDS = new Set([
+  'из', 'с', 'со', 'от', 'до', 'для', 'без', 'над', 'под', 'при', 'про', 'по', 'за', 'во',
+  'de', 'del', 'der', 'di', 'du', 'da', 'von', 'vom', 'van', 'den', 'la', 'le',
+  'of', 'the', 'in', 'on', 'at', 'and', 'und', 'et',
+])
+
+/** Преобразует кличку собаки в титульный (книжный) регистр (Стангерс Ланд Зодиак, Rider of Rohan). */
+export function toDogTitleCase(str: string): string {
+  if (!str) return ''
+  return str
+    .split(/(\s+|[-/()'"’‘„“«»])/)
+    .map((token, idx, arr) => {
+      if (!token || /^\s+$/.test(token) || /^[-/()'"’‘„“«»]+$/.test(token)) {
+        return token
+      }
+      if (/^(I|II|III|IV|V|VI|VII|VIII|IX|X|XI|XII)$/i.test(token)) {
+        return token.toUpperCase()
+      }
+      if (/^\d+$/.test(token)) {
+        return token
+      }
+      if (/^(RKF|РКФ|FCI|ФЦИ|CACL|CACIL|CACIT|CAC)$/i.test(token)) {
+        return token.toUpperCase()
+      }
+      const lower = token.toLowerCase()
+      const hasPrevWord = arr.slice(0, idx).some((t) => /[^\s\-/()'"’‘„“«»]/.test(t))
+      if (hasPrevWord && LOWER_WORDS.has(lower)) {
+        return lower
+      }
+      return lower.charAt(0).toUpperCase() + lower.slice(1)
+    })
+    .join('')
+}
+
+export function formatDogNameCase(
+  name: string | null | undefined,
+  mode: 'upper' | 'title',
+): string {
+  if (!name) return ''
+  if (mode === 'upper') {
+    return name.toUpperCase()
+  }
+  return toDogTitleCase(name)
+}
+
+/** Русская и латинская части: из «RU / EN» в name_lat или из name_lat + name_ru. Клички возвращаются в Title Case. */
 export function parseDogName(
   nameLat?: string | null,
   nameRu?: string | null,
 ): ParsedDogName {
+  let primary = ''
+  let secondary: string | null = null
+
   // Если есть слеш в name_lat - разделяем (русская часть основная, английская secondary)
   if (nameLat && nameLat.includes('/')) {
     const slashParts = nameLat.split('/')
-    return {
-      primary: slashParts[0].trim(),
-      secondary: slashParts.slice(1).join('/').trim() || null,
-    }
+    primary = slashParts[0].trim()
+    secondary = slashParts.slice(1).join('/').trim() || null
+  } else if (nameRu && !nameLat) {
+    primary = nameRu
+  } else if (nameLat && !nameRu) {
+    primary = nameLat
+  } else if (nameLat && nameRu && nameLat !== nameRu) {
+    primary = nameRu
+    secondary = nameLat
+  } else {
+    primary = nameLat || nameRu || ''
   }
 
-  // Если есть только name_ru
-  if (nameRu && !nameLat) {
-    return { primary: nameRu, secondary: null }
+  return {
+    primary: toDogTitleCase(primary),
+    secondary: secondary ? toDogTitleCase(secondary) : null,
   }
-
-  // Если есть только name_lat
-  if (nameLat && !nameRu) {
-    return { primary: nameLat, secondary: null }
-  }
-
-  // Если есть оба поля и они отличаются - name_ru основная, name_lat secondary
-  if (nameLat && nameRu && nameLat !== nameRu) {
-    return { primary: nameRu, secondary: nameLat }
-  }
-
-  // Иначе - используем что есть
-  const name = nameLat || nameRu || ''
-  return { primary: name, secondary: null }
 }
 
 export function dogNameSearchText(

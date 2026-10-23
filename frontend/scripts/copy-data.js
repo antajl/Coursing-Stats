@@ -13,7 +13,7 @@ const { shouldExcludePublishPath } = await import(
 
 function rmrf(dir) {
   if (!fs.existsSync(dir)) return
-  fs.rmSync(dir, { recursive: true, force: true })
+  fs.rmSync(dir, { recursive: true, force: true, maxRetries: 10, retryDelay: 100 })
 }
 
 function copyDirectory(src, dest, relativePath = '') {
