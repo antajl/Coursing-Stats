@@ -14,15 +14,16 @@ import ScoringDetail from './ScoringDetail'
 interface DetailPanelProps {
   rawScores: RawScores | null
   result: Result
+  bestTimesByRace?: Record<string, number>
 }
 
-export default function DetailPanel({ rawScores, result }: DetailPanelProps) {
+export default function DetailPanel({ rawScores, result, bestTimesByRace }: DetailPanelProps) {
   if (!hasDisplayableRawScores(rawScores)) {
     return null
   }
 
   if (isRacingFormat(rawScores)) {
-    return <RacingDetail rawScores={rawScores!} />
+    return <RacingDetail rawScores={rawScores!} bestTimesByRace={bestTimesByRace} />
   }
 
   return <ScoringDetail rawScores={rawScores!} result={result} />

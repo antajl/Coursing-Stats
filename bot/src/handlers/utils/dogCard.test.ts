@@ -104,4 +104,14 @@ describe('formatDogCard', () => {
     );
     expect(text).not.toContain('Event 1');
   });
+
+  it('shows aggression warning for single and repeat incidents', () => {
+    const single = formatDogCard(sampleDog({ aggression_count: 1 }));
+    expect(single).toContain('Безопасность на трассе');
+    expect(single).toContain('Дисквалификация за агрессию (1)');
+
+    const repeat = formatDogCard(sampleDog({ aggression_count: 3 }));
+    expect(repeat).toContain('Безопасность на трассе');
+    expect(repeat).toContain('Повторная агрессия (рецидив: 3)');
+  });
 });

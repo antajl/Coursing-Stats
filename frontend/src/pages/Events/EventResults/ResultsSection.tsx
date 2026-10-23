@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import ResultCard from './ResultCard'
-import { groupResultsByBreedClass, groupRacingResults, isRacingFormat, parseRawScores } from './utils'
+import { groupResultsByBreedClass, groupRacingResults, isRacingFormat, parseRawScores, getBestTimesByRace } from './utils'
 import type { Result } from './types'
 
 interface ResultsSectionProps {
@@ -32,6 +32,10 @@ export default function ResultsSection({ results }: ResultsSectionProps) {
     const rawScores = parseRawScores(r.raw_scores_json)
     return isRacingFormat(rawScores)
   })
+
+  const bestTimesByRace = useMemo(() => {
+    return isRacing ? getBestTimesByRace(results) : {}
+  }, [isRacing, results])
 
   const { grouped, sortedGroups } = isRacing 
     ? groupRacingResults(results)
@@ -101,7 +105,7 @@ export default function ResultsSection({ results }: ResultsSectionProps) {
           const sortedBreeds = Object.keys(breedGroups).sort()
 
           return (
-            <section key={groupKey} className="space-y-4 mb-6 overflow-hidden">
+            <section key={groupKey} className="space-y-4 mb-6">
               <div className="flex items-center justify-between gap-3 bg-camel-100 pl-4 py-2 pr-3 rounded-lg border-t border-b border-r border-camel-200 rounded-tl-lg rounded-tr-lg">
                 <h3 className="min-w-0 flex-1 text-lg font-bold tracking-tight text-camel-800">
                   {groupKey}
@@ -149,7 +153,12 @@ export default function ResultsSection({ results }: ResultsSectionProps) {
                     </div>
                     <div className="space-y-2">
                       {sortedResults.map((result, idx) => (
-                        <ResultCard key={`${result.dog_id}-${idx}`} result={result} index={idx} />
+                        <ResultCard
+                          key={`${result.dog_id}-${idx}`}
+                          result={result}
+                          index={idx}
+                          bestTimesByRace={bestTimesByRace}
+                        />
                       ))}
                     </div>
                   </div>
@@ -173,7 +182,12 @@ export default function ResultsSection({ results }: ResultsSectionProps) {
             </div>
             <div className="space-y-2">
               {groupResults.map((result, idx) => (
-                <ResultCard key={`${result.dog_id}-${idx}`} result={result} index={idx} />
+                <ResultCard
+                  key={`${result.dog_id}-${idx}`}
+                  result={result}
+                  index={idx}
+                  bestTimesByRace={bestTimesByRace}
+                />
               ))}
             </div>
           </section>

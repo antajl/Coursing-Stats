@@ -72,6 +72,56 @@ export function personSchema({
   }
 }
 
+export function profilePageSchema(options: {
+  url: string
+  name: string
+  alternateName?: string | string[] | null
+  description?: string
+  breed?: string
+}): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ProfilePage',
+    '@id': options.url,
+    url: options.url,
+    name: options.name,
+    ...(options.description ? { description: options.description } : {}),
+    mainEntity: {
+      '@type': 'Thing',
+      name: options.name,
+      ...(options.alternateName ? { alternateName: options.alternateName } : {}),
+      ...(options.breed ? { description: `Порода: ${options.breed}` } : {}),
+      url: options.url,
+    },
+  }
+}
+
+export function sportsEventSchema(options: {
+  url: string
+  name: string
+  startDate?: string | null
+  location?: string | null
+  description?: string
+}): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'SportsEvent',
+    '@id': options.url,
+    url: options.url,
+    name: options.name,
+    ...(options.startDate ? { startDate: options.startDate } : {}),
+    ...(options.location
+      ? {
+          location: {
+            '@type': 'Place',
+            name: options.location,
+          },
+        }
+      : {}),
+    ...(options.description ? { description: options.description } : {}),
+  }
+}
+
 // Organization schema для Coursing Stats
 export const organizationSchema = {
   '@context': 'https://schema.org',

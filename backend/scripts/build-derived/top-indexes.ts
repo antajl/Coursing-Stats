@@ -4,6 +4,8 @@ import { attachScoreMetrics } from '../../lib/data-logic/attach-score-metrics';
 import { sortScoreItems } from '../../lib/data-logic/sort-top';
 import { COURSING_RATING_SCORE_VERSION } from '../../lib/rating/coursing-rating-score';
 import { canonicalBreed } from '../../src/lib/breed-mapping';
+import { loadDogAggressionMap } from '../../src/lib/aggression';
+import { loadInferredSexMap } from '../../src/lib/dog-sex';
 import { writeIndex } from './shared';
 
 const PLACEMENT_ALL_YEARS_SQL = `
@@ -56,6 +58,10 @@ const SCORE_ALL_YEARS_SQL = `
 `;
 
 export function buildTopIndexes(db: Database.Database) {
+  const aggressionMap = loadDogAggressionMap(db);
+  const getAggCount = (dogId: number) => aggressionMap.get(dogId)?.length || undefined;
+  const sexMap = loadInferredSexMap(db);
+  const getSex = (dogId: number) => sexMap.get(dogId) || undefined;
   const years = (db.prepare('SELECT DISTINCT year FROM events ORDER BY year').all() as { year: number }[])
     .map((r) => r.year)
     .filter(Boolean);
@@ -141,6 +147,8 @@ export function buildTopIndexes(db: Database.Database) {
         ...dog,
         rank_delta,
         rank_delta_breed,
+        aggression_count: getAggCount(Number(dog.dog_id)),
+        sex: getSex(Number(dog.dog_id)),
       };
     });
 
@@ -159,6 +167,12 @@ export function buildTopIndexes(db: Database.Database) {
       .all(year) as Record<string, unknown>[];
     attachScoreMetrics(db, score, year);
     sortScoreItems(score);
+    for (const s of score) {
+      const count = getAggCount(Number(s.dog_id));
+      if (count) s.aggression_count = count;
+      const sex = getSex(Number(s.dog_id));
+      if (sex) s.sex = sex;
+    }
 
     writeIndex(`top-score-${year}.json`, {
       schema: 'coursing-stats/index-top-score-v1',
@@ -169,7 +183,15 @@ export function buildTopIndexes(db: Database.Database) {
     });
   }
 
-  const placementAll = db.prepare(PLACEMENT_ALL_YEARS_SQL).all();
+  const placementAll = (db.prepare(PLACEMENT_ALL_YEARS_SQL).all() as Array<Record<string, unknown>>).map((dog) => {
+    const count = getAggCount(Number(dog.dog_id));
+    const sex = getSex(Number(dog.dog_id));
+    return {
+      ...dog,
+      ...(count ? { aggression_count: count } : {}),
+      ...(sex ? { sex } : {}),
+    };
+  });
   writeIndex('top-placement-all.json', {
     schema: 'coursing-stats/index-top-placement-v1',
     year: null,
@@ -180,6 +202,12 @@ export function buildTopIndexes(db: Database.Database) {
   const scoreAll = db.prepare(SCORE_ALL_YEARS_SQL).all() as Record<string, unknown>[];
   attachScoreMetrics(db, scoreAll);
   sortScoreItems(scoreAll);
+  for (const s of scoreAll) {
+    const count = getAggCount(Number(s.dog_id));
+    if (count) s.aggression_count = count;
+    const sex = getSex(Number(s.dog_id));
+    if (sex) s.sex = sex;
+  }
   writeIndex('top-score-all.json', {
     schema: 'coursing-stats/index-top-score-v1',
     year: null,
@@ -221,6 +249,10 @@ const SPEED_BASE_SQL = `
 `;
 
 export function buildTopSpeedIndexes(db: Database.Database) {
+  const aggressionMap = loadDogAggressionMap(db);
+  const getAggCount = (dogId: number) => aggressionMap.get(dogId)?.length || undefined;
+  const sexMap = loadInferredSexMap(db);
+  const getSex = (dogId: number) => sexMap.get(dogId) || undefined;
   const years = (db.prepare('SELECT DISTINCT year FROM events WHERE event_type = \'racing\' ORDER BY year').all() as {
     year: number;
   }[])
@@ -292,6 +324,8 @@ export function buildTopSpeedIndexes(db: Database.Database) {
         ...dog,
         rank_delta,
         rank_delta_breed,
+        aggression_count: getAggCount(Number(dog.dog_id)),
+        sex: getSex(Number(dog.dog_id)),
       };
     });
 
@@ -303,7 +337,15 @@ export function buildTopSpeedIndexes(db: Database.Database) {
     });
   }
 
-  const all = db.prepare(`${SPEED_BASE_SQL} GROUP BY d.id HAVING best_speed IS NOT NULL ORDER BY best_speed DESC`).all();
+  const all = (db.prepare(`${SPEED_BASE_SQL} GROUP BY d.id HAVING best_speed IS NOT NULL ORDER BY best_speed DESC`).all() as Array<Record<string, unknown>>).map((dog) => {
+    const count = getAggCount(Number(dog.dog_id));
+    const sex = getSex(Number(dog.dog_id));
+    return {
+      ...dog,
+      ...(count ? { aggression_count: count } : {}),
+      ...(sex ? { sex } : {}),
+    };
+  });
   writeIndex('top-speed-all.json', {
     schema: 'coursing-stats/index-top-speed-v1',
     year: null,

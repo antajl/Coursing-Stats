@@ -21,6 +21,7 @@ import { displayBreed } from '../../lib/breedMapping'
 import { useFavorites } from '../../hooks/useFavorites'
 import { createLogger } from '../../lib/logging'
 import HoverTooltip from '../../components/ui/HoverTooltip'
+import DogAggressionBadge from './DogAggressionBadge'
 import StandingPlaceButton, {
   type RankDomain,
   type StandingExplainerInput,
@@ -275,6 +276,20 @@ export function DogProfileHeader({
       })
     }
 
+    // 6. Универсал (топ и в курсинге, и в бегах)
+    const coursingRank = coursing?.yearBreedRank ?? coursing?.breedRank ?? coursing?.rank
+    const racingRank = racing?.yearBreedRank ?? racing?.breedRank ?? racing?.rank
+    if (coursingRank && coursingRank <= 10 && racingRank && racingRank <= 10) {
+      items.push({
+        id: 'dual-athlete',
+        label: 'Универсал',
+        sublabel: 'Курсинг + Бега',
+        icon: <Sparkles className="h-3.5 w-3.5 text-amber-600 shrink-0" />,
+        color: 'bg-amber-50 text-amber-950 border border-amber-300 shadow-2xs font-semibold',
+        tooltip: 'Успешно выступает в обеих дисциплинах: входит в топ рейтинга и по курсингу, и по бегам борзых',
+      })
+    }
+
     return items
   }, [ranks, dog, competitionTitles])
 
@@ -340,6 +355,13 @@ export function DogProfileHeader({
                 <span>{dog.sex === 'M' || dog.sex?.toLowerCase() === 'кобель' ? 'Кобель' : 'Сука'}</span>
               </span>
             )}
+
+            {dog.aggression_count && dog.aggression_count > 0 ? (
+              <DogAggressionBadge
+                count={dog.aggression_count}
+                incidents={dog.aggression_incidents}
+              />
+            ) : null}
 
             {dog.pedigree_url && (
               <a

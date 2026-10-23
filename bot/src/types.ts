@@ -49,6 +49,14 @@ export interface DogData {
       points: number;
       titles?: string[];
     };
+    aggression_count?: number;
+    aggression_incidents?: Array<{
+      event_id: number;
+      year?: number | null;
+      date: string | null;
+      title: string | null;
+      reason: string;
+    }>;
     competitions?: Competition[];
   };
   competitions?: Competition[];

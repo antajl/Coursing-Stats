@@ -6,6 +6,7 @@ import SkeletonLoader from '../../../components/SkeletonLoader'
 import EventHeader from './EventHeader'
 import ResultsSection from './ResultsSection'
 import { SEO } from '../../../components/SEO'
+import { JsonLd, breadcrumbListSchema, sportsEventSchema } from '../../../components/JsonLd'
 import { getEventHeadline } from '../eventListUtils'
 import { isLocalDev } from '../../../lib/env'
 import type { Event, Result } from './types'
@@ -88,14 +89,16 @@ export default function EventResults() {
         : event.competition_kind === 'bzmp'
           ? 'БЗМП'
           : 'соревнования'
-  const eventDate = event.event_date
+  const rawDate = event.event_date || event.date_start
+  const eventDate = rawDate
     ? (() => {
-        const [year, month, day] = event.event_date.split('-')
+        const [year, month, day] = rawDate.split('-')
+        if (!year || !month || !day) return rawDate
         const date = new Date(parseInt(year), parseInt(month) - 1, parseInt(day))
         return date.toLocaleDateString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' })
       })()
     : ''
-  const eventName = getEventHeadline({
+  const rawHeadline = getEventHeadline({
     id: Number(id) || 0,
     date_start: event.date_start || '',
     rank_label: event.rank_label,
@@ -104,15 +107,36 @@ export default function EventResults() {
     competition_kind: event.competition_kind,
     competition_type: event.competition_type,
   })
-  const description = `Результаты забегов: ${eventType} ${eventDate} в ${event.location || ''}. ${results.length} участников. Баллы за забеги, победители и сертификаты на Coursing Stats.`
+  const eventName = rawHeadline.replace(/[\s\-·—]+$/, '')
+  const dateSuffix = eventDate ? ` (${eventDate})` : ''
+  const description = `Результаты забегов: ${eventType}${eventDate ? ` ${eventDate}` : ''}${event.location ? ` в ${event.location}` : ''}. ${results.length} участников. Баллы за забеги, победители и сертификаты на Coursing Stats.`
 
   return (
     <>
       <SEO
-        title={`${eventName} — результаты соревнований (${eventDate})`}
+        title={`${eventName}${dateSuffix} — результаты соревнований`}
         description={description}
-        keywords={`${eventName}, ${eventType}, ${event.location}, результаты соревнований, результаты забегов, статистика, РКФ, ${eventDate}`}
+        keywords={`${eventName}, ${eventType}, ${event.location || ''}, результаты соревнований, результаты забегов, статистика, РКФ, ${eventDate}`}
         canonicalUrl={`https://coursing-stats.ru/event/${id}`}
+      />
+      <JsonLd
+        data={{
+          '@context': 'https://schema.org',
+          '@graph': [
+            breadcrumbListSchema([
+              { name: 'Главная', url: '/' },
+              { name: 'Соревнования', url: '/competitions' },
+              { name: eventName, url: `/event/${id}` },
+            ]),
+            sportsEventSchema({
+              url: `https://coursing-stats.ru/event/${id}`,
+              name: eventName,
+              startDate: event.date_start || event.event_date || null,
+              location: event.location || null,
+              description,
+            }),
+          ],
+        }}
       />
       <div className="max-w-full mx-auto pb-2 sm:pb-4">
         {error && (

@@ -123,6 +123,42 @@ export function parseRawScores(rawScoresJson: string | RawScores | null | undefi
   }
 }
 
+export function getBestTimesByRace(results: Result[]): Record<string, number> {
+  const heatsByBib: Record<string, { times: number[]; totalParticipants: number }> = {}
+
+  for (const r of results) {
+    if (r.status === 'dns' || r.status === 'absent') continue
+
+    const rawScores = parseRawScores(r.raw_scores_json)
+    if (!rawScores?.heats) continue
+
+    for (const heat of rawScores.heats) {
+      if (heat.bib_number == null) continue
+      const key = String(heat.bib_number)
+      if (!heatsByBib[key]) {
+        heatsByBib[key] = { times: [], totalParticipants: 0 }
+      }
+      heatsByBib[key].totalParticipants += 1
+
+      if (!heat.disqualified && heat.time != null) {
+        const t = typeof heat.time === 'number' ? heat.time : parseFloat(String(heat.time))
+        if (!isNaN(t) && t > 0) {
+          heatsByBib[key].times.push(t)
+        }
+      }
+    }
+  }
+
+  const bestTimes: Record<string, number> = {}
+  for (const [bib, data] of Object.entries(heatsByBib)) {
+    if (data.totalParticipants >= 2 && data.times.length > 0) {
+      bestTimes[bib] = Math.min(...data.times)
+    }
+  }
+
+  return bestTimes
+}
+
 export function isRacingFormat(rawScores: RawScores | null): boolean {
   if (!rawScores) return false
   return (

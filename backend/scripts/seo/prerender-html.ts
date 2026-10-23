@@ -16,6 +16,9 @@ export type HubMeta = {
 export type DogProfileInput = {
   id: string | number
   name: string
+  secondaryName?: string | null
+  rawRuName?: string | null
+  rawLatName?: string | null
   breed?: string | null
   facts: string[]
   recentCompetitions?: string[]
@@ -324,6 +327,87 @@ export function buildHubBodyHtml(hub: Pick<HubMeta, 'path' | 'h1' | 'paragraph'>
   ].join('\n')
 }
 
+const LOWER_WORDS = new Set([
+  'из', 'с', 'со', 'от', 'до', 'для', 'без', 'над', 'под', 'при', 'про', 'по', 'за', 'во',
+  'de', 'del', 'der', 'di', 'du', 'da', 'von', 'vom', 'van', 'den', 'la', 'le',
+  'of', 'the', 'in', 'on', 'at', 'and', 'und', 'et',
+])
+
+/** Преобразует кличку или название в Title Case (Стангерс Ланд Зодиак, Rider of Rohan). */
+export function toDogTitleCase(str: string): string {
+  if (!str) return ''
+  return str
+    .split(/(\s+|[-/()'"’‘„“«»])/)
+    .map((token, idx, arr) => {
+      if (!token || /^\s+$/.test(token) || /^[-/()'"’‘„“«»]+$/.test(token)) {
+        return token
+      }
+      if (/^(I|II|III|IV|V|VI|VII|VIII|IX|X|XI|XII)$/i.test(token)) {
+        return token.toUpperCase()
+      }
+      if (/^\d+$/.test(token)) {
+        return token
+      }
+      if (/^(RKF|РКФ|FCI|ФЦИ|CACL|CACIL|CACIT|CAC)$/i.test(token)) {
+        return token.toUpperCase()
+      }
+      const lower = token.toLowerCase()
+      const hasPrevWord = arr.slice(0, idx).some((t) => /[^\s\-/()'"’‘„“«»]/.test(t))
+      if (hasPrevWord && LOWER_WORDS.has(lower)) {
+        return lower
+      }
+      return lower.charAt(0).toUpperCase() + lower.slice(1)
+    })
+    .join('')
+}
+
+/**
+ * Разделяет русское и латинское имя для SEO:
+ * primary: русское имя (если есть), secondary: латинское (если есть и отличается).
+ */
+export function resolveDogNames(
+  nameLat?: string | null,
+  nameRu?: string | null,
+): { primary: string; secondary: string | null } {
+  let primary = ''
+  let secondary: string | null = null
+
+  if (nameLat && nameLat.includes('/')) {
+    const slashParts = nameLat.split('/')
+    primary = slashParts[0].trim()
+    secondary = slashParts.slice(1).join('/').trim() || null
+  } else if (nameRu && !nameLat) {
+    primary = nameRu
+  } else if (nameLat && !nameRu) {
+    primary = nameLat
+  } else if (nameLat && nameRu && nameLat !== nameRu) {
+    primary = nameRu
+    secondary = nameLat
+  } else {
+    primary = nameLat || nameRu || ''
+  }
+
+  return {
+    primary: toDogTitleCase(primary),
+    secondary: secondary ? toDogTitleCase(secondary) : null,
+  }
+}
+
+/** Форматирует дату YYYY-MM-DD на русском языке без пустых скобок. */
+export function formatEventDateRu(dateStr?: string | null): string {
+  if (!dateStr) return ''
+  const m = String(dateStr).match(/^(\d{4})-(\d{2})-(\d{2})/)
+  if (!m) return dateStr
+  const [, y, mo, d] = m
+  const months = [
+    'января', 'февраля', 'марта', 'апреля', 'мая', 'июня',
+    'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря',
+  ]
+  const monthName = months[parseInt(mo, 10) - 1]
+  if (!monthName) return dateStr
+  return `${parseInt(d, 10)} ${monthName} ${y} г.`
+}
+
 export function buildDogBodyHtml(dog: DogProfileInput): string {
   const name = dog.name || 'Собака'
   const breed = dog.breed ? ` (${dog.breed})` : ''
@@ -332,6 +416,15 @@ export function buildDogBodyHtml(dog: DogProfileInput): string {
     `<a href="/competitions">Рейтинг</a>`,
     `<span>${escapeHtml(name)}</span>`,
   ].join(' → ')
+
+  const secondaryBlock = dog.secondaryName
+    ? `<p class="dog-secondary-name"><strong>Международная кличка:</strong> ${escapeHtml(dog.secondaryName)}</p>`
+    : ''
+
+  const rawAliases = [dog.rawRuName, dog.rawLatName].filter(Boolean)
+  const aliasBlock = rawAliases.length > 0
+    ? `<p class="dog-aliases"><small>По каталогу: ${escapeHtml(rawAliases.join(' / '))}</small></p>`
+    : ''
 
   const factItems = dog.facts
     .filter(Boolean)
@@ -344,7 +437,7 @@ export function buildDogBodyHtml(dog: DogProfileInput): string {
   const comps = (dog.recentCompetitions || []).filter(Boolean).slice(0, 5)
   const compsBlock =
     comps.length > 0
-      ? `<h2>Недавние участия</h2><ul>${comps.map((t) => `<li>${escapeHtml(t)}</li>`).join('')}</ul>`
+      ? `<h2>Недавние забеги</h2><ul>${comps.map((t) => `<li>${escapeHtml(t)}</li>`).join('')}</ul>`
       : ''
 
   const links = [
@@ -358,6 +451,8 @@ export function buildDogBodyHtml(dog: DogProfileInput): string {
     `<main>`,
     `<nav aria-label="Хлебные крошки">${crumbs}</nav>`,
     `<h1>${escapeHtml(name)}${escapeHtml(breed)}</h1>`,
+    secondaryBlock,
+    aliasBlock,
     factsBlock,
     compsBlock,
     `<nav aria-label="Разделы сайта">${links}</nav>`,
@@ -375,11 +470,20 @@ export function dogMetaFromProfile(profile: {
     racing_stats?: { total_starts?: number; gold?: number; silver?: number; bronze?: number } | null
   } | null
   competitions?: Array<{ title?: string | null; date_start?: string | null }> | null
-}): { title: string; description: string; body: DogProfileInput; breadcrumbs: BreadcrumbItem[] } {
+}): {
+  title: string
+  description: string
+  body: DogProfileInput
+  breadcrumbs: BreadcrumbItem[]
+  jsonLd: Record<string, unknown>
+} {
   const dog = profile.dog || {}
   const id = dog.id ?? ''
-  const name = dog.name_lat || dog.name_ru || 'Собака'
-  const breed = dog.breed || ''
+  const { primary, secondary } = resolveDogNames(dog.name_lat, dog.name_ru)
+  const name = primary || 'Собака'
+  const displayName = secondary && secondary !== name ? `${name} (${secondary})` : name
+  const breed = dog.breed ? toDogTitleCase(dog.breed) : ''
+
   const facts: string[] = []
   const cs = dog.coursing_stats
   const rs = dog.racing_stats
@@ -407,22 +511,67 @@ export function dogMetaFromProfile(profile: {
   const medalSummary = gold > 0 ? `${gold} побед (золото)` : medals.length > 0 ? medals.join(', ') : ''
 
   const title = breed
-    ? `${name} (${breed}) — профиль, медали и результаты забегов | Coursing Stats`
-    : `${name} — профиль, медали и результаты забегов | Coursing Stats`
+    ? `${displayName} (${breed}) — профиль собаки, результаты забегов и медали | Coursing Stats`
+    : `${displayName} — профиль собаки, результаты забегов и медали | Coursing Stats`
   const description =
     facts.length > 0
-      ? `${name}${breed ? ` (${breed})` : ''}: ${medalSummary ? `${medalSummary}, ` : ''}${facts.join('; ')}. Профиль спортивной карьеры собаки, результаты забегов и оценки судей на Coursing Stats.`
-      : `Профиль спортивной карьеры и результаты собаки ${name}${breed ? ` (${breed})` : ''}: курсинг, бега борзых, медали и рекорды на Coursing Stats.`
+      ? `${displayName}${breed ? ` (${breed})` : ''}: ${medalSummary ? `${medalSummary}, ` : ''}${facts.join('; ')}. Профиль спортивной карьеры собаки, результаты забегов и оценки судей на Coursing Stats.`
+      : `Профиль спортивной карьеры и результаты собаки ${displayName}${breed ? ` (${breed})` : ''}: курсинг, бега борзых, медали и рекорды на Coursing Stats.`
+
+  const breadcrumbs = [
+    { name: 'Главная', url: '/' },
+    { name: 'Рейтинг', url: '/competitions' },
+    { name, url: `/dog/${id}` },
+  ]
+
+  const alternateNames = Array.from(
+    new Set(
+      [secondary, dog.name_ru, dog.name_lat].filter(
+        (n): n is string => Boolean(n && n !== name),
+      ),
+    ),
+  )
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      breadcrumbJsonLd(breadcrumbs),
+      {
+        '@type': 'ProfilePage',
+        '@id': `${SITE_ORIGIN}/dog/${id}/`,
+        url: `${SITE_ORIGIN}/dog/${id}/`,
+        name: displayName,
+        description,
+        mainEntity: {
+          '@type': 'Thing',
+          name,
+          ...(alternateNames.length === 1
+            ? { alternateName: alternateNames[0] }
+            : alternateNames.length > 1
+              ? { alternateName: alternateNames }
+              : {}),
+          ...(breed ? { description: `Порода: ${breed}` } : {}),
+          url: `${SITE_ORIGIN}/dog/${id}/`,
+        },
+      },
+    ],
+  }
 
   return {
     title,
     description,
-    body: { id, name, breed, facts, recentCompetitions: recent },
-    breadcrumbs: [
-      { name: 'Главная', url: '/' },
-      { name: 'Рейтинг', url: '/competitions' },
-      { name, url: `/dog/${id}` },
-    ],
+    body: {
+      id,
+      name,
+      secondaryName: secondary,
+      rawRuName: dog.name_ru,
+      rawLatName: dog.name_lat,
+      breed,
+      facts,
+      recentCompetitions: recent,
+    },
+    breadcrumbs,
+    jsonLd,
   }
 }
 
@@ -433,10 +582,18 @@ export function dogMetaFromShowRanking(entry: {
   breed?: string | null
   total_shows?: number | null
   best_award?: string | null
-}): { title: string; description: string; body: DogProfileInput; breadcrumbs: BreadcrumbItem[] } {
+}): {
+  title: string
+  description: string
+  body: DogProfileInput
+  breadcrumbs: BreadcrumbItem[]
+  jsonLd: Record<string, unknown>
+} {
   const id = entry.id ?? ''
-  const name = entry.name_lat || entry.name_ru || 'Собака'
-  const breed = entry.breed || ''
+  const { primary, secondary } = resolveDogNames(entry.name_lat, entry.name_ru)
+  const name = primary || 'Собака'
+  const displayName = secondary && secondary !== name ? `${name} (${secondary})` : name
+  const breed = entry.breed ? toDogTitleCase(entry.breed) : ''
   const facts: string[] = []
   if (entry.total_shows != null && entry.total_shows > 0) {
     facts.push(`Выставки: ${entry.total_shows}`)
@@ -446,22 +603,67 @@ export function dogMetaFromShowRanking(entry: {
   }
 
   const title = breed
-    ? `${name} (${breed}) — выставочная карьера и награды РКФ | Coursing Stats`
-    : `${name} — выставочная карьера и награды РКФ | Coursing Stats`
+    ? `${displayName} (${breed}) — выставочная карьера и награды РКФ | Coursing Stats`
+    : `${displayName} — выставочная карьера и награды РКФ | Coursing Stats`
   const description =
     facts.length > 0
-      ? `${name}${breed ? ` (${breed})` : ''}: ${facts.join('; ')}. Профиль выставочной карьеры, оценки экспертов и награды РКФ на Coursing Stats.`
-      : `Выставочный профиль и награды собаки ${name}${breed ? ` (${breed})` : ''} на выставках РКФ на Coursing Stats.`
+      ? `${displayName}${breed ? ` (${breed})` : ''}: ${facts.join('; ')}. Профиль выставочной карьеры, оценки экспертов и награды РКФ на Coursing Stats.`
+      : `Выставочный профиль и награды собаки ${displayName}${breed ? ` (${breed})` : ''} на выставках РКФ на Coursing Stats.`
+
+  const breadcrumbs = [
+    { name: 'Главная', url: '/' },
+    { name: 'Рейтинг', url: '/competitions' },
+    { name, url: `/dog/${id}` },
+  ]
+
+  const alternateNames = Array.from(
+    new Set(
+      [secondary, entry.name_ru, entry.name_lat].filter(
+        (n): n is string => Boolean(n && n !== name),
+      ),
+    ),
+  )
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      breadcrumbJsonLd(breadcrumbs),
+      {
+        '@type': 'ProfilePage',
+        '@id': `${SITE_ORIGIN}/dog/${id}/`,
+        url: `${SITE_ORIGIN}/dog/${id}/`,
+        name: displayName,
+        description,
+        mainEntity: {
+          '@type': 'Thing',
+          name,
+          ...(alternateNames.length === 1
+            ? { alternateName: alternateNames[0] }
+            : alternateNames.length > 1
+              ? { alternateName: alternateNames }
+              : {}),
+          ...(breed ? { description: `Порода: ${breed}` } : {}),
+          url: `${SITE_ORIGIN}/dog/${id}/`,
+        },
+      },
+    ],
+  }
 
   return {
     title,
     description,
-    body: { id, name, breed, facts, recentCompetitions: [] },
-    breadcrumbs: [
-      { name: 'Главная', url: '/' },
-      { name: 'Рейтинг', url: '/competitions' },
-      { name, url: `/dog/${id}` },
-    ],
+    body: {
+      id,
+      name,
+      secondaryName: secondary,
+      rawRuName: entry.name_ru,
+      rawLatName: entry.name_lat,
+      breed,
+      facts,
+      recentCompetitions: [],
+    },
+    breadcrumbs,
+    jsonLd,
   }
 }
 
@@ -471,6 +673,7 @@ export type SimpleEntityMeta = {
   h1: string
   paragraph: string
   breadcrumbs: BreadcrumbItem[]
+  jsonLd?: Record<string, unknown>
   sectionLinks: { href: string; label: string }[]
 }
 
@@ -504,16 +707,16 @@ export function eventMetaFromEntry(entry: {
   event_type?: string | null
   competition_kind?: string | null
 }): SimpleEntityMeta {
-  const headline = entry.title?.trim() || `Соревнование ${entry.id}`
-  const date = entry.date_start || ''
+  const headline = (entry.title?.trim() || `Соревнование ${entry.id}`).replace(/[\s\-·—]+$/, '')
+  const dateFormatted = entry.date_start ? formatEventDateRu(entry.date_start) : ''
   const location = entry.location?.trim() || ''
   const kind = entry.competition_kind || entry.event_type || 'курсинг'
   const n = entry.result_count
-  const title = date
-    ? `${headline} — результаты соревнований (${date}) | Coursing Stats`
+  const title = dateFormatted
+    ? `${headline} (${dateFormatted}) — результаты соревнований | Coursing Stats`
     : `${headline} — результаты соревнований | Coursing Stats`
   const description = [
-    `Результаты забегов: ${kind}${date ? ` от ${date}` : ''}`,
+    `Результаты забегов: ${kind}${dateFormatted ? ` от ${dateFormatted}` : ''}`,
     location ? location : null,
     n != null && n > 0 ? `${n} участников` : null,
     'Баллы за забеги, победители по породам и сертификаты на Coursing Stats.',
@@ -522,7 +725,7 @@ export function eventMetaFromEntry(entry: {
     .join('. ')
   const paragraph = [
     `Результаты соревнования по виду «${kind}»`,
-    date ? `от ${date}` : null,
+    dateFormatted ? `от ${dateFormatted}` : null,
     location ? `в ${location}` : null,
     n != null && n > 0 ? `(${n} участников)` : null,
     'Статистика курсинга, бегов борзых и рейтинги на Coursing Stats.',
@@ -530,16 +733,42 @@ export function eventMetaFromEntry(entry: {
     .filter(Boolean)
     .join(' ')
 
+  const breadcrumbs = [
+    { name: 'Главная', url: '/' },
+    { name: 'Соревнования', url: '/competitions' },
+    { name: headline, url: `/event/${entry.id}/` },
+  ]
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      breadcrumbJsonLd(breadcrumbs),
+      {
+        '@type': 'SportsEvent',
+        '@id': `${SITE_ORIGIN}/event/${entry.id}/`,
+        url: `${SITE_ORIGIN}/event/${entry.id}/`,
+        name: headline,
+        ...(entry.date_start ? { startDate: entry.date_start } : {}),
+        ...(location
+          ? {
+              location: {
+                '@type': 'Place',
+                name: location,
+              },
+            }
+          : {}),
+        description,
+      },
+    ],
+  }
+
   return {
     title,
     description,
     h1: headline,
     paragraph,
-    breadcrumbs: [
-      { name: 'Главная', url: '/' },
-      { name: 'Соревнования', url: '/competitions' },
-      { name: headline, url: `/event/${entry.id}/` },
-    ],
+    breadcrumbs,
+    jsonLd,
     sectionLinks: [
       { href: '/competitions?tab=calendar', label: 'Календарь' },
       { href: '/competitions?tab=ranking', label: 'Рейтинг' },
@@ -564,18 +793,40 @@ export function sportJudgeMeta(judge: {
   const title = `Судья ${name} — статистика курсинга и бегов борзых | Coursing Stats`
   const description =
     facts.length > 0
-      ? `Судья по курсингу и бегам борзых ${name}: статистика судейства (${facts.join(', ')}), судимые породы, оценки собак и история стартов на Coursing Stats.`
+      ? `Судья по курсингу и бегам борзых ${name}: статистика судейства (${facts.join(', ')}), судимые породы, оценки собак и история забегов на Coursing Stats.`
       : `Судья по курсингу и бегам борзых ${name}: профиль, статистика судейства, оценки собак и судимые породы на Coursing Stats.`
+  const url = `${SITE_ORIGIN}/judges/${encodeURIComponent(judge.id)}/`
+  const breadcrumbs = [
+    { name: 'Главная', url: '/' },
+    { name: 'Судьи', url: '/competitions?tab=judges' },
+    { name: name, url: `/judges/${encodeURIComponent(judge.id)}/` },
+  ]
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      breadcrumbJsonLd(breadcrumbs),
+      {
+        '@type': 'Person',
+        '@id': url,
+        url,
+        name,
+        jobTitle: 'Судья по курсингу и бегам борзых',
+        description,
+        worksFor: {
+          '@type': 'Organization',
+          name: 'Российская Кинологическая Федерация (РКФ)',
+        },
+      },
+    ],
+  }
+
   return {
     title,
     description,
     h1: name,
     paragraph: description,
-    breadcrumbs: [
-      { name: 'Главная', url: '/' },
-      { name: 'Судьи', url: '/competitions?tab=judges' },
-      { name: name, url: `/judges/${encodeURIComponent(judge.id)}/` },
-    ],
+    breadcrumbs,
+    jsonLd,
     sectionLinks: [
       { href: '/competitions?tab=judges', label: 'Судьи' },
       { href: '/competitions', label: 'Соревнования' },
@@ -587,19 +838,42 @@ export function sportJudgeMeta(judge: {
 export function doninoMeta(dog: { name: string; breed: string }): SimpleEntityMeta {
   const title = `${dog.name} (${dog.breed}) — рекорды Донино | Coursing Stats`
   const description = `Рекорды ${dog.name} (${dog.breed}) на полигоне Курсинг Донино: замер скорости и бега 350 м.`
+  const url = `${SITE_ORIGIN}/donino-dog/${encodeURIComponent(dog.name)}/${encodeURIComponent(dog.breed)}/`
+  const breadcrumbs = [
+    { name: 'Главная', url: '/' },
+    { name: 'Донино', url: '/speed-records' },
+    {
+      name: dog.name,
+      url: `/donino-dog/${encodeURIComponent(dog.name)}/${encodeURIComponent(dog.breed)}/`,
+    },
+  ]
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      breadcrumbJsonLd(breadcrumbs),
+      {
+        '@type': 'ProfilePage',
+        '@id': url,
+        url,
+        name: `${dog.name} (${dog.breed})`,
+        description,
+        mainEntity: {
+          '@type': 'Thing',
+          name: dog.name,
+          description: `Порода: ${dog.breed}`,
+          url,
+        },
+      },
+    ],
+  }
+
   return {
     title,
     description,
     h1: `${dog.name} (${dog.breed})`,
     paragraph: description,
-    breadcrumbs: [
-      { name: 'Главная', url: '/' },
-      { name: 'Донино', url: '/speed-records' },
-      {
-        name: dog.name,
-        url: `/donino-dog/${encodeURIComponent(dog.name)}/${encodeURIComponent(dog.breed)}/`,
-      },
-    ],
+    breadcrumbs,
+    jsonLd,
     sectionLinks: [
       { href: '/speed-records', label: 'Рекорды Донино' },
       { href: '/competitions', label: 'Соревнования' },
@@ -631,16 +905,36 @@ export function exhibitionMeta(entry: {
   ]
     .filter(Boolean)
     .join('. ')
+
+  const breadcrumbs = [
+    { name: 'Главная', url: '/' },
+    { name: 'Выставки', url: '/shows' },
+    { name: headline, url: `/shows/exhibition/${entry.id}/` },
+  ]
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      breadcrumbJsonLd(breadcrumbs),
+      {
+        '@type': 'Event',
+        '@id': `${SITE_ORIGIN}/shows/exhibition/${entry.id}/`,
+        url: `${SITE_ORIGIN}/shows/exhibition/${entry.id}/`,
+        name: headline,
+        ...(date ? { startDate: date } : {}),
+        ...(city ? { location: { '@type': 'Place', name: city } } : {}),
+        description,
+      },
+    ],
+  }
+
   return {
     title,
     description,
     h1: headline,
     paragraph: description,
-    breadcrumbs: [
-      { name: 'Главная', url: '/' },
-      { name: 'Выставки', url: '/shows' },
-      { name: headline, url: `/shows/exhibition/${entry.id}/` },
-    ],
+    breadcrumbs,
+    jsonLd,
     sectionLinks: [
       { href: '/shows?tab=calendar', label: 'Календарь выставок' },
       { href: '/shows?tab=ranking', label: 'Рейтинг' },
@@ -666,16 +960,39 @@ export function showJudgeMeta(judge: {
     facts.length > 0
       ? `Судья РКФ / FCI ${name}: статистика судейства на выставках собак (${facts.join(', ')}), строгость оценок (% отлично), любимые породы и история выставок на Coursing Stats.`
       : `Судья РКФ / FCI ${name}: статистика судейства на выставках собак, строгость оценок (% отлично), породы и история судейства на Coursing Stats.`
+  const url = `${SITE_ORIGIN}/shows/judges/${encodeURIComponent(judge.id)}/`
+  const breadcrumbs = [
+    { name: 'Главная', url: '/' },
+    { name: 'Судьи выставок', url: '/shows?tab=judges' },
+    { name: name, url: `/shows/judges/${encodeURIComponent(judge.id)}/` },
+  ]
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      breadcrumbJsonLd(breadcrumbs),
+      {
+        '@type': 'Person',
+        '@id': url,
+        url,
+        name,
+        jobTitle: 'Судья по породам собак РКФ / FCI',
+        description,
+        worksFor: {
+          '@type': 'Organization',
+          name: 'Российская Кинологическая Федерация (РКФ)',
+        },
+      },
+    ],
+  }
+
   return {
     title,
     description,
     h1: name,
     paragraph: description,
-    breadcrumbs: [
-      { name: 'Главная', url: '/' },
-      { name: 'Судьи выставок', url: '/shows?tab=judges' },
-      { name: name, url: `/shows/judges/${encodeURIComponent(judge.id)}/` },
-    ],
+    breadcrumbs,
+    jsonLd,
     sectionLinks: [
       { href: '/shows?tab=judges', label: 'Судьи выставок' },
       { href: '/shows', label: 'Выставки' },

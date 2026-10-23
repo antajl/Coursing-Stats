@@ -29,13 +29,14 @@ import {
   buildDogProfileTitleGroups,
   maxMergeDogTitles,
 } from '../../lib/qualificationTitles'
-import { toDogTitleCase } from '../../lib/dogName'
+import { parseDogName, toDogTitleCase } from '../../lib/dogName'
+import { displayBreed } from '../../lib/breedMapping'
 import { toPng } from 'html-to-image'
 import LoadingCard from '../../components/LoadingCard'
 import ErrorState from '../../components/ErrorState'
 import NotFound from '../NotFound'
 import { SEO } from '../../components/SEO'
-import { JsonLd, breadcrumbListSchema } from '../../components/JsonLd'
+import { JsonLd, breadcrumbListSchema, profilePageSchema } from '../../components/JsonLd'
 import { useYandexGoal } from '../../components/YandexMetrica'
 import { buildEventResultsUrlMap } from '../../lib/procoursingLinks'
 import type { ShowDogCardData } from '../Shows/ShowDogCard'
@@ -529,8 +530,16 @@ export default function DogProfile() {
   const bestSpeedEventId = racing.best_speed_event_id || null
   const avgSpeedEventId = racing.avg_speed_event_id || null
 
-  const dogName = toDogTitleCase(headerDog.name_lat || headerDog.name_ru || 'Собака')
-  const dogBreed = headerDog.breed || headerBreed || ''
+  const { primary: primaryDogName, secondary: secondaryDogName } = parseDogName(
+    headerDog.name_lat,
+    headerDog.name_ru,
+  )
+  const dogName = primaryDogName || toDogTitleCase(headerDog.name_lat || headerDog.name_ru || 'Собака')
+  const displayName =
+    secondaryDogName && secondaryDogName !== dogName
+      ? `${dogName} (${secondaryDogName})`
+      : dogName
+  const dogBreed = displayBreed(headerDog.breed || headerBreed || '').primary || headerDog.breed || headerBreed || ''
   const dogTitles = titles.map((t) => t.title).join(', ')
 
   const profilePath = dog
@@ -562,14 +571,28 @@ export default function DogProfile() {
   const medalText = totalGold > 0 ? `${totalGold} побед (золото)` : ''
   const description =
     seoFacts.length > 0
-      ? `${dogName} (${dogBreed}): ${medalText ? `${medalText}, ` : ''}${seoFacts.join('; ')}. Спортивная карьера, медали и результаты забегов на Coursing Stats.`
-      : `Спортивная карьера и результаты собаки ${dogName} (${dogBreed}): курсинг, бега борзых, медали и рекорды на Coursing Stats.`
-  const keywords = [dogName, dogBreed, 'курсинг', 'бега борзых', 'рейтинг борзых 2026', 'выставки', 'Донино', 'статистика', dogTitles, 'РКФ']
+      ? `${displayName} (${dogBreed}): ${medalText ? `${medalText}, ` : ''}${seoFacts.join('; ')}. Профиль собаки, спортивная карьера, медали и результаты забегов на Coursing Stats.`
+      : `Профиль собаки ${displayName} (${dogBreed}): курсинг, бега борзых, медали и рекорды на Coursing Stats.`
+  const keywords = [
+    dogName,
+    secondaryDogName,
+    headerDog.name_ru,
+    headerDog.name_lat,
+    dogBreed,
+    'курсинг',
+    'бега борзых',
+    'рейтинг борзых 2026',
+    'выставки',
+    'Донино',
+    'статистика',
+    dogTitles,
+    'РКФ',
+  ]
     .filter(Boolean)
     .join(', ')
   const seoTitle = dogBreed
-    ? `${dogName} (${dogBreed}) — профиль, медали и результаты забегов`
-    : `${dogName} — профиль, медали и результаты забегов`
+    ? `${displayName} (${dogBreed}) — профиль собаки, результаты забегов и медали`
+    : `${displayName} — профиль собаки, результаты забегов и медали`
 
   const visibleSpeedHistory = showAllSpeedHistory
     ? (speedStats?.history ?? [])
@@ -587,6 +610,14 @@ export default function DogProfile() {
   void fromSpeedRecords
   void fromCoursingRecords
 
+  const alternateNames = Array.from(
+    new Set(
+      [secondaryDogName, headerDog.name_ru, headerDog.name_lat].filter(
+        (n): n is string => Boolean(n && n !== dogName),
+      ),
+    ),
+  )
+
   return (
     <>
       <SEO
@@ -596,11 +627,23 @@ export default function DogProfile() {
         canonicalUrl={canonicalUrl}
       />
       <JsonLd
-        data={breadcrumbListSchema([
-          { name: 'Главная', url: '/' },
-          { name: 'Рейтинг', url: '/competitions?tab=ranking' },
-          { name: dogName, url: profilePath },
-        ])}
+        data={{
+          '@context': 'https://schema.org',
+          '@graph': [
+            breadcrumbListSchema([
+              { name: 'Главная', url: '/' },
+              { name: 'Рейтинг', url: '/competitions?tab=ranking' },
+              { name: dogName, url: profilePath },
+            ]),
+            profilePageSchema({
+              url: canonicalUrl,
+              name: displayName,
+              alternateName: alternateNames.length === 1 ? alternateNames[0] : alternateNames.length > 1 ? alternateNames : null,
+              breed: dogBreed,
+              description,
+            }),
+          ],
+        }}
       />
       <div ref={exportRef}>
         <DogProfileHeader

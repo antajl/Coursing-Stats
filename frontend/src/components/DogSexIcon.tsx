@@ -4,33 +4,53 @@ interface DogSexIconProps {
   sex: string
   className?: string
   size?: number
+  strokeWidth?: number
+  variant?: 'colored' | 'neutral'
 }
 
-export default function DogSexIcon({ sex, className = '', size = 16 }: DogSexIconProps) {
+export default function DogSexIcon({
+  sex,
+  className = '',
+  size = 16,
+  strokeWidth = 2,
+  variant = 'colored',
+}: DogSexIconProps) {
   const s = sex.trim().toLowerCase()
-  if (s === 'сука' || s === 'с' || s === 'female' || s === 'f') {
+  const isFemale = s === 'сука' || s === 'с' || s === 'female' || s === 'f'
+  const isMale = s === 'кобель' || s === 'к' || s === 'male' || s === 'm'
+
+  if (!isFemale && !isMale) return null
+
+  const hasCustomTextColor = /\btext-/.test(className)
+  const colorClass = hasCustomTextColor
+    ? ''
+    : variant === 'neutral'
+      ? 'text-charcoal-500'
+      : isFemale
+        ? 'text-rose-400'
+        : 'text-slate-500'
+
+  const mergedClass = `shrink-0 ${colorClass} ${className}`.trim().replace(/\s+/g, ' ')
+
+  if (isFemale) {
     return (
       <Venus
         size={size}
-        strokeWidth={2}
-        className={`shrink-0 text-rose-400 ${className}`}
+        strokeWidth={strokeWidth}
+        className={mergedClass}
         aria-label="Сука"
         title="Сука"
       />
     )
   }
 
-  if (s === 'кобель' || s === 'к' || s === 'male' || s === 'm') {
-    return (
-      <Mars
-        size={size}
-        strokeWidth={2}
-        className={`shrink-0 text-slate-500 ${className}`}
-        aria-label="Кобель"
-        title="Кобель"
-      />
-    )
-  }
-
-  return null
+  return (
+    <Mars
+      size={size}
+      strokeWidth={strokeWidth}
+      className={mergedClass}
+      aria-label="Кобель"
+      title="Кобель"
+    />
+  )
 }

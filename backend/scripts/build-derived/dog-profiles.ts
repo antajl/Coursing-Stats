@@ -7,6 +7,7 @@ import { parseJudgeNames } from '../../src/lib/judge-names';
 import { judgeDetailKey } from '../../src/lib/static-api';
 import { PARTICIPATION_STATUSES_SQL, RACING_EXCLUDED_STATUSES_SQL } from '../../src/lib/racing-status';
 import { cdnPackShardKey, type DogProfilePackFile } from '../../lib/cdn-packs';
+import { loadDogAggressionMap } from '../../src/lib/aggression';
 import { INDEXES_DIR } from './shared';
 
 type CoursingRow = { dog_id: number; event_id: number; total_score: number | null; placement: number | null; raw_scores_json: string | null };
@@ -28,6 +29,7 @@ type CompetitionHistoryRow = {
   total_score: number | null;
   qualification: string | null;
   status: string | null;
+  status_reason: string | null;
   raw_scores_json: string | null;
 };
 
@@ -414,6 +416,28 @@ function loadDogMetadataFromById(): Map<number, DogProfileMeta> {
 }
 
 export function buildDogProfiles(db: Database.Database) {
+  const aggressionMap = loadDogAggressionMap(db);
+
+  // Safely infer sex from results breed_class if missing in dog profile (only when 100% consistent)
+  const inferredSexMap = new Map<number, 'M' | 'F'>();
+  {
+    const sexRows = db.prepare('SELECT dog_id, breed_class FROM results WHERE breed_class IS NOT NULL').all() as Array<{ dog_id: number; breed_class: string }>;
+    const counters = new Map<number, { M: number; F: number }>();
+    for (const r of sexRows) {
+      let s: 'M' | 'F' | null = null;
+      if (/кобел|male\b|\bм\b/i.test(r.breed_class)) s = 'M';
+      else if (/сук|female\b|\bж\b/i.test(r.breed_class)) s = 'F';
+      if (s) {
+        const c = counters.get(r.dog_id) ?? { M: 0, F: 0 };
+        c[s]++;
+        counters.set(r.dog_id, c);
+      }
+    }
+    for (const [id, c] of counters) {
+      if (c.M > 0 && c.F === 0) inferredSexMap.set(id, 'M');
+      else if (c.F > 0 && c.M === 0) inferredSexMap.set(id, 'F');
+    }
+  }
   const dogs = db.prepare('SELECT id, name_lat, name_ru, breed, sex, owner, pedigree_url FROM dogs ORDER BY id').all() as DogProfileMeta[];
   const dogsById = new Map(dogs.map((dog) => [dog.id, dog]));
   const metadataById = loadDogMetadataFromById();
@@ -454,7 +478,7 @@ export function buildDogProfiles(db: Database.Database) {
     .prepare(
       `SELECT
         e.id AS event_id, e.date_start, e.date_end, e.title, e.event_type, e.competition_kind,
-        e.results_url, e.location, e.judges AS event_judges, r.dog_id, r.placement, r.total_score, r.qualification, r.status, r.raw_scores_json
+        e.results_url, e.location, e.judges AS event_judges, r.dog_id, r.placement, r.total_score, r.qualification, r.status, r.status_reason, r.raw_scores_json
        FROM events e
        JOIN results r ON e.id = r.event_id
        WHERE r.status NOT IN ${RACING_EXCLUDED_STATUSES_SQL}
@@ -616,7 +640,11 @@ export function buildDogProfiles(db: Database.Database) {
       name_lat: fromFile?.name_lat ?? fromDb?.name_lat ?? null,
       name_ru: fromFile?.name_ru ?? fromDb?.name_ru ?? null,
       breed: fromFile?.breed ?? fromDb?.breed ?? null,
-      sex: fromFile?.sex ?? fromDb?.sex ?? null,
+      sex: (() => {
+        const raw = fromFile?.sex ?? fromDb?.sex ?? inferredSexMap.get(dogId) ?? null;
+        if (!raw) return null;
+        return /кобел|male|^m$/i.test(raw) ? 'M' : (/сук|female|^f$/i.test(raw) ? 'F' : raw);
+      })(),
       owner: fromFile?.owner ?? fromDb?.owner ?? null,
       pedigree_url: fromFile && 'pedigree_url' in fromFile ? fromFile.pedigree_url : (fromDb?.pedigree_url ?? null),
     };
@@ -641,6 +669,7 @@ export function buildDogProfiles(db: Database.Database) {
         total_score: row.total_score,
         qualification: row.qualification?.trim() ? row.qualification.trim() : null,
         status: row.status,
+        status_reason: row.status_reason || null,
       };
       
       // Add racing-specific data for racing events
@@ -704,6 +733,9 @@ export function buildDogProfiles(db: Database.Database) {
       };
     }
 
+    const aggression_incidents = aggressionMap.get(dogId) ?? [];
+    const aggression_count = aggression_incidents.length;
+
     const payload = {
       schema: 'coursing-stats/index-dog-profile-v1',
       dog: {
@@ -718,11 +750,15 @@ export function buildDogProfiles(db: Database.Database) {
         racing_stats,
         judge_stats,
         titles,
+        aggression_count,
+        aggression_incidents,
         ranks,
       },
       ranks,
       judge_stats,
       competitions,
+      aggression_count,
+      aggression_incidents,
     };
 
     const shard = cdnPackShardKey(dogId);
@@ -746,6 +782,7 @@ export function buildDogProfiles(db: Database.Database) {
       existingDogIndex.dog_key = effectiveKey;
       existingDogIndex.file_by_id = `dogs/by-id/${dogId}.json`;
       existingDogIndex.file_by_key = `dogs/by-key/${effectiveKey}.json`;
+      if (aggression_count > 0) existingDogIndex.aggression_count = aggression_count;
     } else {
       dogsIndexMap.set(dogId, {
         id: dogId,
@@ -757,6 +794,7 @@ export function buildDogProfiles(db: Database.Database) {
         file_by_key: `dogs/by-key/${effectiveKey}.json`,
         competition_count: competitions.length,
         sex,
+        ...(aggression_count > 0 ? { aggression_count } : {}),
       });
     }
   }

@@ -145,15 +145,58 @@ describe('prerender-seo helpers', () => {
   it('eventMetaFromEntry builds RU title and description', () => {
     const meta = eventMetaFromEntry({
       id: '1250',
-      title: 'ЧРКФ Курсинг',
+      title: 'ЧРКФ Курсинг - ',
       date_start: '2025-03-08',
       location: 'Екатеринбург',
       result_count: 40,
       competition_kind: 'ЧРКФ',
     })
     expect(meta.title).toContain('ЧРКФ Курсинг')
+    expect(meta.title).not.toContain(' - ')
+    expect(meta.title).not.toContain('()')
     expect(meta.description).toContain('участников')
     expect(meta.h1).toBe('ЧРКФ Курсинг')
+  })
+
+  it('dogMetaFromProfile supports bilingual names (RU and EN) for search relevance', async () => {
+    const { dogMetaFromProfile } = await import('../scripts/seo/prerender-html')
+    const meta = dogMetaFromProfile({
+      dog: {
+        id: 5782,
+        name_ru: 'ЭМУЛЬ ДЭ ГЕПАРД ГЕЛИЛА АЛЬ РАВДА',
+        name_lat: 'EMUL DE GEPARD GELILA AL RAWDA',
+        breed: 'САЛЮКИ',
+        coursing_stats: { total_starts: 9, gold: 8, silver: 1, bronze: 0 },
+        racing_stats: { total_starts: 4, gold: 0, silver: 2, bronze: 1 },
+      },
+      competitions: [{ title: 'Чемпионат России по курсингу', date_start: '2026-05-15' }],
+    })
+
+    // Both RU and EN must be present in Title
+    expect(meta.title).toContain('Эмуль Дэ Гепард Гелила Аль Равда')
+    expect(meta.title).toContain('Emul de Gepard Gelila Al Rawda')
+    expect(meta.title).toContain('Салюки')
+    expect(meta.title).toContain('Coursing Stats')
+
+    // Both RU and EN must be present in Description
+    expect(meta.description).toContain('Эмуль Дэ Гепард Гелила Аль Равда')
+    expect(meta.description).toContain('Emul de Gepard Gelila Al Rawda')
+    expect(meta.description).toContain('Салюки')
+
+    // Body data contains raw aliases and secondary name
+    expect(meta.body.name).toBe('Эмуль Дэ Гепард Гелила Аль Равда')
+    expect(meta.body.secondaryName).toBe('Emul de Gepard Gelila Al Rawda')
+    expect(meta.body.rawRuName).toBe('ЭМУЛЬ ДЭ ГЕПАРД ГЕЛИЛА АЛЬ РАВДА')
+    expect(meta.body.rawLatName).toBe('EMUL DE GEPARD GELILA AL RAWDA')
+
+    // JSON-LD contains ProfilePage with name and alternateName
+    expect(meta.jsonLd).toBeDefined()
+    const graph = (meta.jsonLd as any)['@graph'] as any[]
+    expect(Array.isArray(graph)).toBe(true)
+    const profilePage = graph.find((item) => item['@type'] === 'ProfilePage')
+    expect(profilePage).toBeDefined()
+    expect(profilePage.mainEntity.name).toBe('Эмуль Дэ Гепард Гелила Аль Равда')
+    expect(profilePage.mainEntity.alternateName).toContain('Emul de Gepard Gelila Al Rawda')
   })
 
   it('HUB_PAGES: clean brand descriptions without procoursing or technical jargon', () => {

@@ -119,9 +119,6 @@ export default function ShowRanking() {
     enabled: Boolean(rankingYear) && allowFullLoad,
   })
 
-  const hasFullRanking = Boolean(rankingData?.success && rankingData.data)
-  const rankingPartial = hasPage0 && !hasFullRanking
-
   // Synchronous memoized allDogs: zero delay, no useState or effect lag
   const allDogs = useMemo<ShowDogCardData[]>(() => {
     if (rankingData?.success && rankingData.data) {
@@ -309,8 +306,6 @@ export default function ShowRanking() {
     })
   }, [rankedDogs, filterBreed, filterGroup, awardMins, debouncedSearchQuery])
 
-  const isFiltering = searchQuery !== debouncedSearchQuery
-
   const handleAwardMinChange = useCallback((key: ShowAwardKey, value: string) => {
     setAwardMins((prev) => ({ ...prev, [key]: value }))
   }, [])
@@ -373,28 +368,16 @@ export default function ShowRanking() {
           </p>
         </div>
       ) : (
-        <>
-          {rankingPartial ? (
-            <p className="mb-3 text-xs text-charcoal-500" aria-live="polite">
-              Показан топ рейтинга — полный сезон подгружается…
-            </p>
-          ) : null}
-          {isFiltering && (
-            <p className="mb-3 text-xs text-camel-600 animate-pulse">
-              Фильтрация...
-            </p>
-          )}
-          <ShowRankingColumns
-            dogs={filteredDogs}
-            filterYear={rankingYear}
-            favorites={favorites}
-            onToggleFavorite={(dogId, meta) => {
-              void toggleFavorite(dogId, meta).catch((error) => {
-                console.error('Failed to toggle favorite:', error)
-              })
-            }}
-          />
-        </>
+        <ShowRankingColumns
+          dogs={filteredDogs}
+          filterYear={rankingYear}
+          favorites={favorites}
+          onToggleFavorite={(dogId, meta) => {
+            void toggleFavorite(dogId, meta).catch((error) => {
+              console.error('Failed to toggle favorite:', error)
+            })
+          }}
+        />
       )}
     </div>
   )

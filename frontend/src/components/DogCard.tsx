@@ -8,6 +8,9 @@ import { MedalIcon, type MedalVariant } from './MedalTally'
 import OwnerCrownName from './OwnerCrownName'
 import MedalBadge from './MedalBadge'
 import RankBadge, { DeltaBadge } from './RankBadge'
+import { ShieldAlert } from 'lucide-react'
+import HoverTooltip from './ui/HoverTooltip'
+import DogSexIcon from './DogSexIcon'
 
 // Context for compound components
 interface DogCardContextValue {
@@ -60,6 +63,8 @@ interface DogCardProps {
     judge_eval_count?: number
     best_speed?: number
     avg_speed?: number
+    aggression_count?: number
+    sex?: string | null
   }
   type: 'placement' | 'score' | 'speed' | 'combined'
   filterYear: string
@@ -238,11 +243,37 @@ const DogCardHeader: FC = function DogCardHeader() {
             {primary}
           </h3>
         </OwnerCrownName>
+        {dog.aggression_count && dog.aggression_count > 0 ? (
+          <HoverTooltip
+            label={
+              dog.aggression_count === 1
+                ? 'Дисквалификация за агрессию (1 состязание)'
+                : `Повторная агрессия (рецидив: ${dog.aggression_count} состязания)`
+            }
+            placement="top"
+            portal
+          >
+            <span
+              className="inline-flex items-center shrink-0 p-0.5 rounded text-rose-600 transition-transform hover:scale-110 cursor-help"
+              aria-label="Внимание: агрессия на трассе"
+            >
+              <ShieldAlert className="h-3.5 w-3.5" aria-hidden />
+            </span>
+          </HoverTooltip>
+        ) : null}
       </div>
       <div className="flex items-center gap-1 text-[10px]">
         <span className="text-charcoal-600 font-medium truncate">
           {breedDisplay.primary}
         </span>
+        {dog.sex && (
+          <>
+            <span className="text-charcoal-300 shrink-0" aria-hidden>
+              ·
+            </span>
+            <DogSexIcon sex={dog.sex} size={11} variant="neutral" strokeWidth={2.25} />
+          </>
+        )}
         {showYear && (
           <>
             <span className="text-charcoal-300 shrink-0" aria-hidden>

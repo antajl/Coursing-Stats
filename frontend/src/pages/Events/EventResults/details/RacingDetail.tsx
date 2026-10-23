@@ -3,18 +3,29 @@ import PoponaCell from '../components/PoponaCell'
 
 interface RacingDetailProps {
   rawScores: RawScores
+  bestTimesByRace?: Record<string, number>
 }
 
-export default function RacingDetail({ rawScores }: RacingDetailProps) {
+export default function RacingDetail({ rawScores, bestTimesByRace }: RacingDetailProps) {
   const heats = rawScores.heats || []
 
   return (
     <>
       <div className="md:hidden">
-        <div className="flex gap-2 overflow-x-auto pb-2">
+        <div className="flex gap-2 overflow-x-auto pb-2 pt-1">
           {heats.map((heat, heatIdx) => {
             const isHeatDisqualified = !heat.time && !heat.speed_kmh
             const speedMs = heat.speed_kmh ? (heat.speed_kmh / 3.6).toFixed(1) : null
+            const heatTime = typeof heat.time === 'number' ? heat.time : parseFloat(String(heat.time || ''))
+            const isFastestInRace = Boolean(
+              heat.bib_number != null &&
+              !heat.disqualified &&
+              !isNaN(heatTime) &&
+              heatTime > 0 &&
+              bestTimesByRace &&
+              bestTimesByRace[String(heat.bib_number)] != null &&
+              Math.abs(heatTime - bestTimesByRace[String(heat.bib_number)]) < 0.001
+            )
 
             return (
               <div key={heatIdx} className="flex-shrink-0 bg-white rounded-xl p-3 border border-old-money-200 min-w-[140px]">
@@ -24,10 +35,10 @@ export default function RacingDetail({ rawScores }: RacingDetailProps) {
                   </div>
                 </div>
                 <div className="space-y-1 text-center">
-                  <div>
-                    <PoponaCell number={heat.bib_number} color={heat.bib_color} />
+                  <div className="pt-1 flex items-center justify-center">
+                    <PoponaCell number={heat.bib_number} color={heat.bib_color} isWinner={isFastestInRace} />
                   </div>
-                  <div className="font-bold text-charcoal-900">
+                  <div className={`font-bold ${isFastestInRace ? 'text-camel-800' : 'text-charcoal-900'}`}>
                     {heat.time ? `${heat.time} с` : '—'}
                   </div>
                   <div className="font-bold text-charcoal-900">
@@ -73,11 +84,11 @@ export default function RacingDetail({ rawScores }: RacingDetailProps) {
         )}
       </div>
 
-      <div className="hidden md:block overflow-x-auto">
+      <div className="hidden md:block overflow-x-auto py-1">
         <table className="w-full text-xs min-w-[520px]">
           <colgroup>
             <col className="w-16" />
-            <col className="w-12" />
+            <col className="w-14" />
             <col className="w-20" />
             <col className="w-20" />
             <col className="w-24" />
@@ -87,23 +98,33 @@ export default function RacingDetail({ rawScores }: RacingDetailProps) {
               const isHeatDisqualified = !heat.time && !heat.speed_kmh
               const isBest = rawScores.grand_total && heat.time === rawScores.grand_total
               const speedMs = heat.speed_kmh ? (heat.speed_kmh / 3.6).toFixed(1) : null
+              const heatTime = typeof heat.time === 'number' ? heat.time : parseFloat(String(heat.time || ''))
+              const isFastestInRace = Boolean(
+                heat.bib_number != null &&
+                !heat.disqualified &&
+                !isNaN(heatTime) &&
+                heatTime > 0 &&
+                bestTimesByRace &&
+                bestTimesByRace[String(heat.bib_number)] != null &&
+                Math.abs(heatTime - bestTimesByRace[String(heat.bib_number)]) < 0.001
+              )
 
               return (
                 <tr key={heatIdx} className={heatIdx > 0 ? 'border-t border-old-money-200' : ''}>
-                  <td className={`py-0.5 pr-2 font-semibold text-charcoal-900 align-middle ${isBest ? 'font-bold text-camel-700' : ''} ${isHeatDisqualified ? 'text-red-600' : ''}`}>
+                  <td className={`py-2 pr-2 font-semibold text-charcoal-900 align-middle ${isBest ? 'font-bold text-camel-700' : ''} ${isHeatDisqualified ? 'text-red-600' : ''}`}>
                     <span className="text-old-money-400 mr-0.5">№</span>
                     {heat.heat_number || '—'}
                   </td>
-                  <td className="py-0.5 pr-2 text-center align-middle">
-                    <PoponaCell number={heat.bib_number} color={heat.bib_color} />
+                  <td className="py-2 pr-2 text-center align-middle">
+                    <PoponaCell number={heat.bib_number} color={heat.bib_color} isWinner={isFastestInRace} />
                   </td>
-                  <td className={`py-0.5 pr-2 text-center align-middle ${isHeatDisqualified ? 'text-red-600 italic' : 'text-charcoal-900'} ${isBest ? 'font-bold' : ''}`}>
+                  <td className={`py-2 pr-2 text-center align-middle ${isHeatDisqualified ? 'text-red-600 italic' : isFastestInRace ? 'font-bold text-camel-800' : isBest ? 'font-bold text-charcoal-900' : 'text-charcoal-900'}`}>
                     {heat.time ? `${heat.time} сек` : '-'}
                   </td>
-                  <td className={`py-0.5 pr-2 text-center align-middle ${isHeatDisqualified ? 'text-red-600 italic' : 'text-charcoal-900'}`}>
+                  <td className={`py-2 pr-2 text-center align-middle ${isHeatDisqualified ? 'text-red-600 italic' : 'text-charcoal-900'}`}>
                     {speedMs ? `${speedMs} м/с` : '-'}
                   </td>
-                  <td className={`py-0.5 pr-2 text-center align-middle ${isHeatDisqualified ? 'text-red-600 italic' : 'text-camel-700 font-bold'}`}>
+                  <td className={`py-2 pr-2 text-center align-middle ${isHeatDisqualified ? 'text-red-600 italic' : 'text-camel-700 font-bold'}`}>
                     {heat.speed_kmh ? `${heat.speed_kmh.toFixed(1)} км/ч` : '-'}
                   </td>
                 </tr>

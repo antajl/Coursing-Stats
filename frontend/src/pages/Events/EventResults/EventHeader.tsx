@@ -1,9 +1,10 @@
 import type { ReactNode } from 'react'
-import { Calendar, Users, MapPin, Building2, User, PawPrint, Download, FileText, BookOpen } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { Calendar, Users, MapPin, Building2, User, PawPrint, Download, FileText, BookOpen, ExternalLink } from 'lucide-react'
 import BreedGroupDivider from './components/BreedGroupDivider'
 import HoverTooltip from '../../../components/ui/HoverTooltip'
 import { formatDate } from './utils'
-import { getEventHeadline, formatCompetitionJudgesWithRoles } from '../eventListUtils'
+import { getEventHeadline, formatCompetitionJudgesWithRoles, parseJudgeNames } from '../eventListUtils'
 import type { Event, Result, TrackScheme } from './types'
 
 interface EventHeaderProps {
@@ -147,22 +148,44 @@ export default function EventHeader({ event, results }: EventHeaderProps) {
               <FileText className="h-4 w-4" aria-hidden />
               <span className="hidden sm:inline">Каталог</span>
             </a>
-            <a
-              href={event.results_pdf_url || '#'}
-              target={event.results_pdf_url ? '_blank' : undefined}
-              rel={event.results_pdf_url ? 'noopener noreferrer' : undefined}
-              className={`inline-flex flex-shrink-0 items-center gap-1.5 rounded-full border px-2.5 py-1.5 text-xs font-medium shadow-sm transition-colors ${
-                event.results_pdf_url
-                  ? 'border-camel-200 bg-camel-50 text-camel-700 hover:border-camel-400 hover:bg-camel-100'
-                  : 'border-old-money-200 bg-old-money-50 text-old-money-400 cursor-not-allowed'
-              }`}
-              aria-label="Результаты"
-              title={event.results_pdf_url ? 'Результаты' : 'Результаты недоступны'}
-              onClick={(e) => !event.results_pdf_url && e.preventDefault()}
-            >
-              <Download className="h-4 w-4" aria-hidden />
-              <span className="hidden sm:inline">Результаты</span>
-            </a>
+            {event.results_url && (
+              <a
+                href={event.results_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-[44px] sm:min-h-0 flex-shrink-0 items-center gap-1.5 rounded-full border border-camel-200 bg-camel-50 px-2.5 py-1.5 text-xs font-medium text-camel-700 shadow-sm transition-colors hover:border-camel-400 hover:bg-camel-100"
+                aria-label="Результаты (HTML)"
+                title="Результаты соревнований (векторный HTML)"
+              >
+                <ExternalLink className="h-4 w-4" aria-hidden />
+                <span className="hidden sm:inline">Результаты</span>
+              </a>
+            )}
+            {event.results_pdf_url && (
+              <a
+                href={event.results_pdf_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-[44px] sm:min-h-0 flex-shrink-0 items-center gap-1.5 rounded-full border border-camel-200 bg-camel-50 px-2.5 py-1.5 text-xs font-medium text-camel-700 shadow-sm transition-colors hover:border-camel-400 hover:bg-camel-100"
+                aria-label="Протокол PDF"
+                title="Официальный протокол (PDF)"
+              >
+                <Download className="h-4 w-4" aria-hidden />
+                <span className="hidden sm:inline">{event.results_url ? 'PDF' : 'Результаты'}</span>
+              </a>
+            )}
+            {!event.results_url && !event.results_pdf_url && (
+              <a
+                href="#"
+                className="inline-flex min-h-[44px] sm:min-h-0 flex-shrink-0 items-center gap-1.5 rounded-full border border-old-money-200 bg-old-money-50 px-2.5 py-1.5 text-xs font-medium text-old-money-400 shadow-sm cursor-not-allowed"
+                aria-label="Результаты недоступны"
+                title="Результаты недоступны"
+                onClick={(e) => e.preventDefault()}
+              >
+                <Download className="h-4 w-4" aria-hidden />
+                <span className="hidden sm:inline">Результаты</span>
+              </a>
+            )}
           </div>
         </div>
 
@@ -178,7 +201,24 @@ export default function EventHeader({ event, results }: EventHeaderProps) {
               {event.judges && (
                 <div className="flex items-center gap-2 text-sm">
                   <User className="h-4 w-4 text-old-money-500 shrink-0" />
-                  <span className="text-old-money-700">{formatCompetitionJudgesWithRoles(event.judges)}</span>
+                  <div className="flex flex-wrap items-center gap-x-1.5 text-old-money-700">
+                    <span className="text-old-money-500 font-medium">Судьи:</span>
+                    {parseJudgeNames(event.judges).length > 0 ? (
+                      parseJudgeNames(event.judges).map((judgeName, idx, arr) => (
+                        <span key={judgeName} className="inline-flex items-center">
+                          <Link
+                            to={`/judges/${encodeURIComponent(judgeName)}`}
+                            className="text-camel-800 hover:text-camel-900 hover:underline font-medium transition-colors"
+                          >
+                            {judgeName}
+                          </Link>
+                          {idx < arr.length - 1 && <span className="text-old-money-400">,</span>}
+                        </span>
+                      ))
+                    ) : (
+                      <span>{formatCompetitionJudgesWithRoles(event.judges)}</span>
+                    )}
+                  </div>
                 </div>
               )}
               {trackSchemes.length > 0 && (

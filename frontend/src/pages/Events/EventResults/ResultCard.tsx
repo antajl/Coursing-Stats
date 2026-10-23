@@ -8,9 +8,10 @@ import type { Result } from './types'
 interface ResultCardProps {
   result: Result
   index: number
+  bestTimesByRace?: Record<string, number>
 }
 
-export default function ResultCard({ result, index }: ResultCardProps) {
+export default function ResultCard({ result, index, bestTimesByRace }: ResultCardProps) {
   const rawScores = parseRawScores(result.raw_scores_json)
   const accent = placementAccentClass(result.placement)
   const isPodium = result.placement != null && result.placement <= 3
@@ -19,13 +20,13 @@ export default function ResultCard({ result, index }: ResultCardProps) {
   const cardContent = (
     <div
       className={[
-        'group/card overflow-visible rounded-lg border border-old-money-200 bg-cream-50 transition-all duration-200 ease-in-out hover:scale-[1.01] hover:shadow-md hover:bg-old-money-100/80',
+        'group/card overflow-visible rounded-lg border border-old-money-200 bg-cream-50 transition-all duration-200 ease-in-out hover:shadow-md hover:border-camel-300 hover:bg-old-money-100/80',
         result.dog_id ? 'cursor-pointer' : '',
         accent,
         alternate ? 'bg-white/60' : '',
       ].filter(Boolean).join(' ')}
     >
-      <div className="flex items-center gap-2 p-1.5 md:gap-3 md:p-2">
+      <div className="flex items-center gap-2 p-1.5 md:gap-3 md:p-2 pr-2.5 md:pr-3">
         <ResultSummary result={result} />
 
         <div className="ml-auto flex-shrink-0 pl-1">
@@ -35,7 +36,7 @@ export default function ResultCard({ result, index }: ResultCardProps) {
 
       <div className="border-t border-old-money-100 px-1.5 pb-1.5 md:px-2 md:pb-2">
         <div className="mx-2 mr-2 md:mx-0 md:mr-4">
-          <DetailPanel rawScores={rawScores} result={result} />
+          <DetailPanel rawScores={rawScores} result={result} bestTimesByRace={bestTimesByRace} />
         </div>
       </div>
     </div>

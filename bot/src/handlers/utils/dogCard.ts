@@ -216,5 +216,18 @@ export function formatDogCard(dogData: DogData, options: FormatDogCardOptions = 
     lines.push("", "<" + quoteTag + ">" + showsBlock + "</" + quoteTag.split(" ")[0] + ">");
   }
 
+  if (dog.aggression_count && dog.aggression_count > 0) {
+    const count = dog.aggression_count;
+    const isRepeat = count >= 2;
+    const warningText = isRepeat
+      ? `Повторная агрессия (рецидив: ${count})`
+      : 'Дисквалификация за агрессию (1)';
+    const safetyBlock = [
+      '<b>Безопасность на трассе</b>',
+      `• ⚠️ ${warningText}`,
+    ].join('\n');
+    lines.push('', '<blockquote>' + safetyBlock + '</blockquote>');
+  }
+
   return lines.join("\n").trim();
 }

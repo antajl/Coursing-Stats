@@ -42,6 +42,11 @@ function LegacyJudgesListRedirect() {
 
 
 
+function LegacyCompetitionRedirect() {
+  const { id } = useParams<{ id: string }>();
+  return <Navigate to={`/event/${id}`} replace />;
+}
+
 function LegacyExhibitionRedirect() {
   const { id } = useParams<{ id: string }>();
   if (!isLocalDev) return <Navigate to="/shows" replace />;
@@ -93,6 +98,7 @@ export default function AppRoutes() {
         <Route path="/spa-shell" element={<Navigate to="/" replace />} />
         <Route path="/spa-shell/*" element={<Navigate to="/" replace />} />
         <Route path="/competitions" element={<Competitions />} />
+        <Route path="/competitions/:id" element={<LegacyCompetitionRedirect />} />
         <Route path="/protocol-builder" element={<ProtocolBuilder />} />
         <Route path="/procoursing" element={<LegacyProcoursingRedirect />} />
         <Route path="/shows" element={<Shows />} />

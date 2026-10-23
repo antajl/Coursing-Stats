@@ -14,13 +14,46 @@ function hasHighestQualification(vc: Result['vc']): boolean {
   return Boolean(vc?.trim())
 }
 
+/**
+ * Normalizes qualification and VC.
+ * If VC is a long title string (e.g. "Чемпион России, CACL") and qualification is a short code (e.g. "CC"),
+ * or VC contains titles while qualification is empty, swap them so awards render in QualificationBadges
+ * and never occlude the Scoreboard.
+ */
+export function normalizeQualificationAndVc(result: Result): { qualification?: string | null; vc?: string | null } {
+  let qual = result.qualification?.trim() || null
+  let vc = result.vc?.trim() || null
+
+  const isShortVcCode = (val: string | null) => {
+    if (!val) return false
+    const upper = val.toUpperCase()
+    return upper === 'CC' || upper === 'СС' || upper === 'BCL' || upper === 'CQ' || upper === '+' || upper.length <= 4
+  }
+
+  // If vc has awards/titles (or is long) and qual is a short VC code (like "CC") or empty
+  if (vc && (!isShortVcCode(vc) || vc.includes(',')) && (!qual || isShortVcCode(qual))) {
+    const temp = vc
+    vc = isShortVcCode(qual) ? qual : null
+    qual = temp
+  }
+
+  // If vc is still not short, move it into qual so it renders in QualificationBadges instead of covering the scoreboard
+  if (vc && (!isShortVcCode(vc) || vc.includes(','))) {
+    if (!qual) qual = vc
+    else if (!qual.includes(vc)) qual = `${qual}, ${vc}`
+    vc = null
+  }
+
+  return { qualification: qual, vc }
+}
+
 export function VcBadge({ vc, corner = false }: { vc: string; corner?: boolean }) {
   const badgeClass = corner
-    ? 'inline-block cursor-help rounded border border-camel-200 bg-camel-100 px-1 py-px text-[10px] font-semibold leading-tight text-camel-800 shadow-sm'
+    ? 'inline-block max-w-[3.5rem] truncate cursor-help rounded border border-camel-200 bg-camel-100 px-1 py-px text-[10px] font-semibold leading-tight text-camel-800 shadow-sm'
     : 'inline-block cursor-help rounded border border-camel-200 bg-camel-100 px-1.5 py-0.5 text-xs font-semibold text-camel-800'
 
   return (
-    <HoverTooltip label="Высшая квалификация" placement={corner ? 'bottom' : 'top'}>
+    <HoverTooltip label="Высшая квалификация" placement={corner ? 'bottom' : 'top'} portal>
       <span className={badgeClass}>{vc}</span>
     </HoverTooltip>
   )
@@ -30,7 +63,7 @@ export function Scoreboard({ score, showVc, vc }: { score: number | string; show
   return (
     <div className="relative">
       {showVc && (
-        <div className="absolute -right-3 -top-2.5 z-10">
+        <div className="absolute right-0 -top-2 z-10">
           <VcBadge vc={vc} corner />
         </div>
       )}
@@ -44,34 +77,52 @@ export function Scoreboard({ score, showVc, vc }: { score: number | string; show
 }
 
 export function ResultScorePanel({ result }: { result: Result }) {
-  const isDisqualified = result.status === 'disqualified' || (result.status === 'dns' || result.status === 'absent')
   const statusLabel = displayStatusReason(result.status_reason)
-  const showVc = hasHighestQualification(result.vc)
-  const dqShownInHeats = hasDisqualifiedHeat(parseRawScores(result.raw_scores_json))
+  const { vc } = normalizeQualificationAndVc(result)
+  const showVc = hasHighestQualification(vc)
 
   if (result.total_score) {
-    return <Scoreboard score={result.total_score} showVc={showVc} vc={result.vc || 'СС'} />
+    return <Scoreboard score={result.total_score} showVc={showVc} vc={vc || 'СС'} />
   }
-  if (showVc) return <VcBadge vc={result.vc || 'СС'} />
-  if (result.status === 'disqualified' && statusLabel) {
-    if (dqShownInHeats) return null
+  if (showVc) return <VcBadge vc={vc || 'СС'} />
+
+  if (statusLabel) {
     return (
-      <div className="max-w-[8rem] text-right text-xs italic text-red-600 md:text-sm">
+      <div className="text-right text-xs italic font-semibold text-red-600 md:text-sm whitespace-nowrap">
         {statusLabel}
       </div>
     )
   }
-  if ((result.status === 'dns' || result.status === 'absent')) {
-    return <div className="text-right text-xs text-charcoal-600 md:text-sm">Неявка</div>
+
+  if (result.status === 'dismissed') {
+    return <div className="text-right text-xs italic font-semibold text-red-600 md:text-sm whitespace-nowrap">Отстранение</div>
   }
-  if (isDisqualified) return null
+  if (result.status === 'disqualified') {
+    return <div className="text-right text-xs italic font-semibold text-red-600 md:text-sm whitespace-nowrap">Дисквалификация</div>
+  }
+  if (result.status === 'dnf') {
+    return <div className="text-right text-xs italic font-semibold text-red-600 md:text-sm whitespace-nowrap">Не финишировал</div>
+  }
+  if (result.status === 'eliminated') {
+    return <div className="text-right text-xs italic font-semibold text-red-600 md:text-sm whitespace-nowrap">Выбывание</div>
+  }
+  if (result.status === 'dns' || result.status === 'absent') {
+    return <div className="text-right text-xs text-charcoal-600 md:text-sm whitespace-nowrap">Неявка</div>
+  }
+
   return null
 }
 
 export default function ResultSummary({ result }: ResultSummaryProps) {
-  const isDisqualified = result.status === 'disqualified' || (result.status === 'dns' || result.status === 'absent')
+  const isNonFinisher =
+    result.status === 'disqualified' ||
+    result.status === 'dismissed' ||
+    result.status === 'eliminated' ||
+    result.status === 'dnf' ||
+    result.status === 'dns' ||
+    result.status === 'absent'
   const statusLabel = displayStatusReason(result.status_reason)
-  const dqShownInHeats = hasDisqualifiedHeat(parseRawScores(result.raw_scores_json))
+  const { qualification } = normalizeQualificationAndVc(result)
 
   return (
     <div className="flex min-w-0 flex-1 items-center gap-2 md:gap-3">
@@ -82,15 +133,15 @@ export default function ResultSummary({ result }: ResultSummaryProps) {
       <div className="min-w-0 flex-1">
         <div className="flex flex-wrap items-center gap-2">
           <DogNameLink result={result} />
-          {!isDisqualified && result.qualification && (
-            <QualificationBadges qualification={result.qualification} />
+          {!isNonFinisher && qualification && (
+            <QualificationBadges qualification={qualification} />
           )}
         </div>
-        {result.status === 'disqualified' && statusLabel && !dqShownInHeats && (
-          <div className="text-xs italic text-red-600 md:hidden">{statusLabel}</div>
+        {statusLabel && (
+          <div className="text-xs italic font-medium text-red-600 md:hidden mt-0.5">{statusLabel}</div>
         )}
-        {(result.status === 'dns' || result.status === 'absent') && (
-          <div className="text-xs text-gray-600 md:hidden">Неявка</div>
+        {(result.status === 'dns' || result.status === 'absent') && !statusLabel && (
+          <div className="text-xs text-gray-600 md:hidden mt-0.5">Неявка</div>
         )}
       </div>
     </div>

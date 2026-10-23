@@ -108,7 +108,7 @@ function prerenderCompetitionDogs(spaHtml: string, profilesDir: string): number 
       description: meta.description,
       canonicalUrl: `${SITE_ORIGIN}/dog/${id}/`,
       bodyHtml: buildDogBodyHtml(meta.body),
-      jsonLd: breadcrumbJsonLd(meta.breadcrumbs),
+      jsonLd: meta.jsonLd || breadcrumbJsonLd(meta.breadcrumbs),
     })
     writeHtml(path.join(DIST, 'dog', id, 'index.html'), html)
     written++
@@ -218,7 +218,7 @@ function prerenderShowOnlyDogs(spaHtml: string): number {
       description: meta.description,
       canonicalUrl: `${SITE_ORIGIN}/dog/${id}/`,
       bodyHtml: buildDogBodyHtml(meta.body),
-      jsonLd: breadcrumbJsonLd(meta.breadcrumbs),
+      jsonLd: meta.jsonLd || breadcrumbJsonLd(meta.breadcrumbs),
     })
     writeHtml(outFile, html)
     written++
@@ -322,7 +322,7 @@ function prerenderEvents(spaHtml: string): number {
       description: meta.description,
       canonicalUrl: `${SITE_ORIGIN}/event/${id}/`,
       bodyHtml: buildSimpleEntityBodyHtml(meta),
-      jsonLd: breadcrumbJsonLd(meta.breadcrumbs),
+      jsonLd: meta.jsonLd || breadcrumbJsonLd(meta.breadcrumbs),
     })
     writeHtml(path.join(DIST, 'event', id, 'index.html'), html)
     written++
@@ -357,7 +357,7 @@ function prerenderSportJudges(spaHtml: string): number {
       description: meta.description,
       canonicalUrl: `${SITE_ORIGIN}/judges/${encodeURIComponent(id)}/`,
       bodyHtml: buildSimpleEntityBodyHtml(meta),
-      jsonLd: breadcrumbJsonLd(meta.breadcrumbs),
+      jsonLd: meta.jsonLd || breadcrumbJsonLd(meta.breadcrumbs),
     })
     writeHtml(path.join(DIST, 'judges', staticSeoPathSegment(id), 'index.html'), html)
     written++
@@ -387,7 +387,7 @@ function prerenderDoninoDogs(spaHtml: string): number {
       description: meta.description,
       canonicalUrl: `${SITE_ORIGIN}/donino-dog/${encodeURIComponent(dog.name)}/${encodeURIComponent(dog.breed)}/`,
       bodyHtml: buildSimpleEntityBodyHtml(meta),
-      jsonLd: breadcrumbJsonLd(meta.breadcrumbs),
+      jsonLd: meta.jsonLd || breadcrumbJsonLd(meta.breadcrumbs),
     })
     writeHtml(
       path.join(
@@ -487,7 +487,7 @@ function prerenderExhibitions(spaHtml: string): number {
       description: meta.description,
       canonicalUrl: `${SITE_ORIGIN}/shows/exhibition/${id}/`,
       bodyHtml: buildSimpleEntityBodyHtml(meta),
-      jsonLd: breadcrumbJsonLd(meta.breadcrumbs),
+      jsonLd: meta.jsonLd || breadcrumbJsonLd(meta.breadcrumbs),
     })
     writeHtml(path.join(DIST, 'shows', 'exhibition', id, 'index.html'), html)
     written++
@@ -546,7 +546,7 @@ function prerenderShowJudges(spaHtml: string): number {
       description: meta.description,
       canonicalUrl: `${SITE_ORIGIN}/shows/judges/${encodeURIComponent(id)}/`,
       bodyHtml: buildSimpleEntityBodyHtml(meta),
-      jsonLd: breadcrumbJsonLd(meta.breadcrumbs),
+      jsonLd: meta.jsonLd || breadcrumbJsonLd(meta.breadcrumbs),
     })
     writeHtml(path.join(DIST, 'shows', 'judges', staticSeoPathSegment(id), 'index.html'), html)
     written++
