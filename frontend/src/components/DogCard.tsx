@@ -548,6 +548,9 @@ const DogCardMemo = memo(DogCardInner, (prevProps, nextProps) => {
   return (
     prevProps.dog.dog_id === nextProps.dog.dog_id &&
     (prevProps.dog as any)?.rank_delta === (nextProps.dog as any)?.rank_delta &&
+    prevProps.dog.year_from === nextProps.dog.year_from &&
+    prevProps.dog.year_to === nextProps.dog.year_to &&
+    prevProps.dog.year === nextProps.dog.year &&
     prevProps.type === nextProps.type &&
     prevProps.filterYear === nextProps.filterYear &&
     prevProps.rank === nextProps.rank &&

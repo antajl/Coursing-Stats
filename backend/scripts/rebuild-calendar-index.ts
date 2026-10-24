@@ -23,6 +23,20 @@ interface CalendarEvent {
   [key: string]: unknown
 }
 
+/** Legacy aliases from old 4-digit D1 competition IDs to canonical archive IDs */
+const LEGACY_EVENT_ALIASES: Record<string, string> = {
+  '1224': '20240408',
+  '1227': '20240512',
+  '1233': '20240617',
+  '1455': '20240609',
+  '1456': '20240615',
+  '1238': '20240825',
+  '1464': '20240833',
+  '1466': '20240908',
+  '1245': '20240923',
+  '1249': '20241028',
+}
+
 /** Путь относительно data/v1/ для fetchJson на фронте. */
 export function resolveResultsFilePath(
   resultsFile: string | null | undefined,
@@ -168,6 +182,14 @@ export function rebuildCalendarIndexes(): { total: number; years: number } {
       putById(m[1], next)
     }
   }
+
+  // Alias legacy 4-digit IDs to canonical archive events so old bookmarks and links resolve
+  for (const [legacyId, canonicalId] of Object.entries(LEGACY_EVENT_ALIASES)) {
+    if (eventsById[canonicalId] && !eventsById[legacyId]) {
+      eventsById[legacyId] = eventsById[canonicalId]
+    }
+  }
+
   writeJson(path.join(V1, 'indexes/events-by-id.json'), eventsById)
 
   return { total: calendarManifest.length, years: files.length }

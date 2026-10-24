@@ -31,7 +31,14 @@ function main() {
     const full = path.join(COMPS, rel)
     try {
       const doc = JSON.parse(fs.readFileSync(full, 'utf-8')) as {
-        event?: { id?: number; date?: string; title?: string; event_type?: string; type?: string }
+        event?: {
+          id?: number
+          date?: string
+          date_start?: string
+          title?: string
+          event_type?: string
+          type?: string
+        }
         event_id?: number
         results?: unknown[]
       }
@@ -46,7 +53,7 @@ function main() {
       metas.push({
         relPath: `competitions/${rel.replace(/\\/g, '/')}`,
         eventId,
-        date: event.date ?? null,
+        date: event.date_start ?? event.date ?? null,
         title: event.title ?? null,
         eventType: (event.event_type ?? event.type ?? null) as string | null,
         resultsCount: results.length,

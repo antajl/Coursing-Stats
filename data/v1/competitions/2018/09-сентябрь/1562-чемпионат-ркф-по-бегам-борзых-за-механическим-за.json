@@ -1,6 +1,6 @@
 {
   "schema": "coursing-stats/competition-v1",
-  "exported_at": "2026-08-08T20:12:46.253Z",
+  "exported_at": "2026-10-24T13:40:10.250Z",
   "source": "archive-full-results-legacy",
   "event_id": 1562,
   "event": {
@@ -8,26 +8,29 @@
     "year": 2018,
     "date_start": "2018-09-15",
     "date_end": null,
-    "rank_label": "Чемпионат РКФ по бегам борзых за механическим зайцем (курсинг)",
+    "rank_label": "Чемпионат РКФ по курсингу борзых",
     "event_type": "coursing",
-    "competition_kind": null,
-    "competition_type": null,
-    "title": "Чемпионат РКФ по бегам борзых за механическим зайцем (курсинг)",
+    "competition_kind": "ЧРКФ",
+    "competition_type": "Курсинг борзых",
+    "title": "Чемпионат РКФ по курсингу борзых",
     "host_club": null,
     "region": null,
-    "location": "М.О., Новый Милет",
+    "location": "Московская область, Новый Милет",
     "catalog_url": null,
-    "results_url": null,
+    "results_url": "https://web.archive.org/web/20180919124248/http://procoursing.ru/Full_Results_2018-09-15.html",
     "confirmed": 0,
     "last_modified": null,
-    "scraped_at": "2026-08-08T20:12:46.253Z",
+    "scraped_at": "2026-10-24T13:40:10.250Z",
     "telegram_url": null,
-    "full_title": null,
+    "full_title": "Чемпионат РКФ по курсингу борзых",
     "event_date": "2018-09-15",
     "protocol_location": null,
     "judges": null,
     "track_schemes": [],
-    "admin_verified_at": null
+    "admin_verified_at": null,
+    "rank_code": "ЧРКФ",
+    "discipline_code": "coursing",
+    "results_pdf_url": "https://drive.google.com/file/d/18hsaXJwoUJ9Kw0rOKuM1gJ17oRLr7Uyt/view?usp=sharing"
   },
   "result_count": 61,
   "results": [
@@ -113,7 +116,7 @@
         "grand_total": 327
       },
       "raw_text": "2 | Басенджи | Стандартный | Сука | GABRIELLI ULFIYA | 1 | 16 | 16 | 16 | 16 | 15 | 165 | 54 | 15 | 16 | 16 | 16 | 15 | 162 | 327 | 1 | CC | Чемпион РКФ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "gabrielli-ulfiya--басенджи",
       "dog": {
@@ -208,7 +211,7 @@
         "grand_total": 309
       },
       "raw_text": "3 | Басенджи | Стандартный | Сука | ЩЕДРАЯ ДУША | 1 | 15 | 15 | 15 | 14 | 15 | 154 | 54 | 15 | 16 | 15 | 16 | 15 | 155 | 309 | 2 | CC | CACL",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "щедрая-душа--басенджи",
       "dog": {
@@ -280,7 +283,7 @@
         "grand_total": 164
       },
       "raw_text": "1 | Басенджи | Стандартный | Кобель | ИТУРИ ПАЗЗЛ ЕКСТРАОРДИНАРИ СМАРТ | 1 | 16 | 17 | 16 | 16 | 15 | 164 | 54 | Дисквалификация |  | 164 |  |  | ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": "Дисквалификация",
       "dog_key": "итури-паззл-екстраординари-смарт--басенджи",
       "dog": {
@@ -375,7 +378,7 @@
         "grand_total": 349
       },
       "raw_text": "8 | Грейхаунд | Стандартный | Сука | BLACK SILK | 3 | 15 | 16 | 18 | 20 | 18 | 169 | 57 | 18 | 19 | 18 | 18 | 18 | 180 | 349 | 1 | CC | Чемпион РКФ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "black-silk--греихаунд",
       "dog": {
@@ -470,7 +473,7 @@
         "grand_total": 325
       },
       "raw_text": "6 | Грейхаунд | Стандартный | Кобель | HEPI HEPRI ONE WISH | 3 | 14 | 15 | 17 | 20 | 16 | 159 | 55 | 17 | 16 | 15 | 17 | 16 | 166 | 325 | 2 | CC | CACL",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "hepi-hepri-one-wish--греихаунд",
       "dog": {
@@ -565,7 +568,7 @@
         "grand_total": 317
       },
       "raw_text": "7 | Грейхаунд | Стандартный | Кобель | RISE OF AN EMPIRE FOR HEPI HEPRI | 2 | 16 | 16 | 15 | 16 | 15 | 150 | 55 | 16 | 16 | 16 | 17 | 16 | 167 | 317 | 3 | CC | ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "rise-of-an-empire-for-hepi-hepri--греихаунд",
       "dog": {
@@ -660,7 +663,7 @@
         "grand_total": 316
       },
       "raw_text": "5 | Грейхаунд | Стандартный | Кобель | ARTEFAKT KRISSAN | 2 | 15 | 15 | 16 | 16 | 16 | 147 | 56 | 17 | 18 | 16 | 17 | 16 | 169 | 316 | 4 | CC | ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "artefakt-krissan--греихаунд",
       "dog": {
@@ -755,7 +758,7 @@
         "grand_total": 311
       },
       "raw_text": "4 | Грейхаунд | Стандартный | Кобель | ARTEFAKT HONEYMOON | 4 | 13 | 15 | 15 | 20 | 16 | 146 | 56 | 17 | 18 | 16 | 16 | 16 | 165 | 311 | 5 | CC | ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "artefakt-honeymoon--греихаунд",
       "dog": {
@@ -850,7 +853,7 @@
         "grand_total": 356
       },
       "raw_text": "9 | Левретка | Стандартный | Сука | DANIEL VENTO VITTORIA | 5 | 18 | 17 | 18 | 19 | 18 | 177 | 58 | 19 | 18 | 18 | 19 | 18 | 179 | 356 | 1 | CC | ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "daniel-vento-vittoria--левретка",
       "dog": {
@@ -945,7 +948,7 @@
         "grand_total": 332
       },
       "raw_text": "12 | Родезийский риджбек | Стандартный | Сука | РИДЖЕ`С СТАР ОРСИ БЮТИФУЛ ГЁЛ | 6 | 14 | 16 | 16 | 16 | 16 | 163 | 60 | 17 | 18 | 17 | 17 | 16 | 169 | 332 | 1 | CC | Чемпион РКФ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "риджес-стар-орси-бютифул-гел--родезиискии-риджбек",
       "dog": {
@@ -1040,7 +1043,7 @@
         "grand_total": 331
       },
       "raw_text": "10 | Родезийский риджбек | Стандартный | Сука | DEYONGA GAYA MONIFA | 7 | 16 | 17 | 18 | 17 | 17 | 168 | 59 | 16 | 17 | 16 | 16 | 15 | 163 | 331 | 2 | CC | CACL",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "deyonga-gaya-monifa--родезиискии-риджбек",
       "dog": {
@@ -1135,7 +1138,7 @@
         "grand_total": 313
       },
       "raw_text": "11 | Родезийский риджбек | Стандартный | Сука | БЬЮСОУЛ КУЛ КУИН | 6 | 15 | 15 | 15 | 16 | 16 | 157 | 59 | 15 | 16 | 16 | 15 | 15 | 156 | 313 | 3 | CC | ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "бьюсоул-кул-куин--родезиискии-риджбек",
       "dog": {
@@ -1230,7 +1233,7 @@
         "grand_total": 335
       },
       "raw_text": "17 | Русская псовая борзая | Стандартный | Сука | KAVALERKA | 9 | 17 | 17 | 17 | 17 | 16 | 170 | 61 | 16 | 17 | 17 | 17 | 16 | 165 | 335 | 1 | CC | Чемпион РКФ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "kavalerka--русская-псовая-борзая",
       "dog": {
@@ -1325,7 +1328,7 @@
         "grand_total": 330
       },
       "raw_text": "18 | Русская псовая борзая | Стандартный | Сука | TAMIR ANI POZEMKA | 8 | 14 | 18 | 18 | 17 | 17 | 158 | 63 | 17 | 18 | 16 | 17 | 17 | 172 | 330 | 2 | CC | CACL",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "tamir-ani-pozemka--русская-псовая-борзая",
       "dog": {
@@ -1420,7 +1423,7 @@
         "grand_total": 320
       },
       "raw_text": "15 | Русская псовая борзая | Стандартный | Сука | BARSKAYA PRIKHOT GORDOST SERDTSA MOEGO | 10 | 15 | 16 | 17 | 17 | 15 | 160 | 62 | 14 | 16 | 14 | 15 | 15 | 160 | 320 | 3 | CC | ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "barskaya-prikhot-gordost-serdtsa-moego--русская-псовая-борзая",
       "dog": {
@@ -1507,15 +1510,15 @@
                 "sum": 87
               }
             ],
-            "total": 1511,
+            "total": 151,
             "disqualified": false,
             "disqualification_reason": null
           }
         ],
         "grand_total": 317
       },
-      "raw_text": "16 | Русская псовая борзая | Стандартный | Сука | BARSKAYA PRIKHOT JASMINE | 8 | 16 | 17 | 17 | 17 | 16 | 166 | 61 | 16 | 17 | 16 | 16 | 16 | 1511 | 317 | 4 | CC | ",
-      "judges": null,
+      "raw_text": "16 | Русская псовая борзая | Стандартный | Сука | BARSKAYA PRIKHOT JASMINE | 8 | 16 | 17 | 17 | 17 | 16 | 166 | 61 | 16 | 17 | 16 | 16 | 16 | 151 | 317 | 4 | CC | ",
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "barskaya-prikhot-jasmine--русская-псовая-борзая",
       "dog": {
@@ -1610,7 +1613,7 @@
         "grand_total": 287
       },
       "raw_text": "13 | Русская псовая борзая | Стандартный | Кобель | BARSKAYA PRIKHOT ZLATOY YANTAR | 9 | 15 | 15 | 15 | 10 | 13 | 138 | 62 | 13 | 15 | 10 | 14 | 15 | 149 | 287 | 5 | CC | ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "barskaya-prikhot-zlatoy-yantar--русская-псовая-борзая",
       "dog": {
@@ -1705,7 +1708,7 @@
         "grand_total": 347
       },
       "raw_text": "23 | Салюки | Стандартный | Кобель | IMRAN FАRKHINUR | 12 | 16 | 17 | 18 | 18 | 15 | 167 | 66 | 18 | 18 | 18 | 18 | 17 | 180 | 347 | 1 | CC | Чемпион РКФ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "imran-fаrkhinur--салюки",
       "dog": {
@@ -1800,7 +1803,7 @@
         "grand_total": 343
       },
       "raw_text": "19 | Салюки | Стандартный | Кобель | AL NAFISEH DA’IM | 12 | 17 | 17 | 18 | 18 | 16 | 169 | 65 | 16 | 18 | 17 | 17 | 16 | 174 | 343 | 2 | CC | CACL",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "al-nafiseh-da-im--салюки",
       "dog": {
@@ -1895,7 +1898,7 @@
         "grand_total": 325
       },
       "raw_text": "22 | Салюки | Стандартный | Кобель | IMRAN FAYSAL FINIST | 13 | 17 | 17 | 17 | 18 | 16 | 166 | 64 | 15 | 16 | 15 | 14 | 15 | 159 | 325 | 3 | CC | ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "imran-faysal-finist--салюки",
       "dog": {
@@ -1990,7 +1993,7 @@
         "grand_total": 324
       },
       "raw_text": "21 | Салюки | Стандартный | Кобель | IMRAN ENSAR FALAYHAN | 11 | 16 | 17 | 17 | 17 | 15 | 159 | 64 | 16 | 17 | 15 | 16 | 15 | 165 | 324 | 4 | CC | ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "imran-ensar-falayhan--салюки",
       "dog": {
@@ -2085,7 +2088,7 @@
         "grand_total": 316
       },
       "raw_text": "20 | Салюки | Стандартный | Кобель | DIOSKURY MARENGO | 11 | 13 | 15 | 17 | 16 | 15 | 150 | 65 | 16 | 17 | 16 | 16 | 16 | 166 | 316 | 5 | CC | ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "dioskury-marengo--салюки",
       "dog": {
@@ -2180,7 +2183,7 @@
         "grand_total": 342
       },
       "raw_text": "25 | Салюки | Стандартный | Сука | DIVINA ROSA ALMERIA | 15 | 17 | 17 | 17 | 17 | 17 | 167 | 67 | 17 | 18 | 18 | 18 | 17 | 175 | 342 | 1 | CC | Чемпион РКФ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "divina-rosa-almeria--салюки",
       "dog": {
@@ -2275,7 +2278,7 @@
         "grand_total": 336
       },
       "raw_text": "26 | Салюки | Стандартный | Сука | IMRAN FARISHTA AMAL | 14 | 16 | 16 | 17 | 17 | 16 | 163 | 68 | 17 | 17 | 16 | 18 | 17 | 173 | 336 | 2 | CC | CACL",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "imran-farishta-amal--салюки",
       "dog": {
@@ -2370,7 +2373,7 @@
         "grand_total": 332
       },
       "raw_text": "24 | Салюки | Стандартный | Сука | AL NAFISEH EIFA | 14 | 15 | 17 | 17 | 16 | 15 | 156 | 67 | 18 | 17 | 17 | 18 | 17 | 176 | 332 | 3 | CC | ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "al-nafiseh-eifa--салюки",
       "dog": {
@@ -2465,7 +2468,7 @@
         "grand_total": 351
       },
       "raw_text": "27 | Салюки | Юниоры | Кобель | AL NAFISEH FAIZUL ANWAR | 17 | 18 | 18 | 18 | 18 | 18 | 178 | 69 | 17 | 18 | 17 | 17 | 16 | 173 | 351 | 1 |  | Лучший юниор",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "al-nafiseh-faizul-anwar--салюки",
       "dog": {
@@ -2560,7 +2563,7 @@
         "grand_total": 337
       },
       "raw_text": "29 | Салюки | Юниоры | Сука | AL NAFISEH FAIRUZA | 16 | 16 | 16 | 16 | 16 | 16 | 163 | 69 | 16 | 18 | 17 | 17 | 16 | 174 | 337 | 2 |  | ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "al-nafiseh-fairuza--салюки",
       "dog": {
@@ -2655,7 +2658,7 @@
         "grand_total": 336
       },
       "raw_text": "28 | Салюки | Юниоры | Кобель | ИМРАН ГАЛСАН КАДАРИ | 16 | 15 | 17 | 17 | 17 | 15 | 162 | 70 | 17 | 17 | 18 | 18 | 16 | 174 | 336 | 3 |  | ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "имран-галсан-кадари--салюки",
       "dog": {
@@ -2750,7 +2753,7 @@
         "grand_total": 301
       },
       "raw_text": "43 | Уиппет | Ветераны | Кобель | ALMAZ DUSHA LAMBERT DIAMOND | 18 | 12 | 16 | 17 | 17 | 15 | 139 | 36 | 15 | 17 | 18 | 17 | 15 | 162 | 301 | 1 | CC | Лучший ветеран",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "almaz-dusha-lambert-diamond--уиппет",
       "dog": {
@@ -2845,7 +2848,7 @@
         "grand_total": 346
       },
       "raw_text": "45 | Уиппет | Стандартный | Кобель | EFFLORESCO'S MAVISCAL | 21 | 17 | 17 | 17 | 18 | 17 | 174 | 38 | 17 | 18 | 17 | 18 | 16 | 172 | 346 | 1 | CC | Чемпион РКФ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "efflorescos-maviscal--уиппет",
       "dog": {
@@ -2940,7 +2943,7 @@
         "grand_total": 343
       },
       "raw_text": "48 | Уиппет | Стандартный | Кобель | LISTEN TO YOUR HEART | 21 | 16 | 17 | 18 | 18 | 17 | 173 | 37 | 16 | 17 | 18 | 18 | 15 | 170 | 343 | 2 | CC | CACL",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "listen-to-your-heart--уиппет",
       "dog": {
@@ -3035,7 +3038,7 @@
         "grand_total": 341
       },
       "raw_text": "44 | Уиппет | Стандартный | Кобель | DIOSKUR VEKTOR SKOROSTI | 20 | 17 | 17 | 17 | 18 | 17 | 172 | 37 | 16 | 17 | 18 | 18 | 15 | 169 | 341 | 3 | CC | ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "dioskur-vektor-skorosti--уиппет",
       "dog": {
@@ -3130,7 +3133,7 @@
         "grand_total": 338
       },
       "raw_text": "49 | Уиппет | Стандартный | Кобель | VASURU TAFFI’S FIRST-EVER FOREVER | 22 | 18 | 18 | 18 | 18 | 18 | 173 | 39 | 14 | 17 | 17 | 19 | 15 | 165 | 338 | 4 | CC | ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "vasuru-taffi-s-first-ever-forever--уиппет",
       "dog": {
@@ -3225,7 +3228,7 @@
         "grand_total": 333
       },
       "raw_text": "38 | Уиппет | Стандартный | Кобель | LUXURY WHIPP LAZER | 19 | 18 | 18 | 18 | 18 | 17 | 172 | 38 | 16 | 16 | 17 | 16 | 15 | 161 | 333 | 5 | CC | ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "luxury-whipp-lazer--уиппет",
       "dog": {
@@ -3320,7 +3323,7 @@
         "grand_total": 327
       },
       "raw_text": "46 | Уиппет | Стандартный | Кобель | FIERCE FIREBALL FIFTH GEAR | 19 | 17 | 17 | 18 | 18 | 18 | 168 | 39 | 14 | 16 | 16 | 19 | 15 | 159 | 327 | 6 | CC | ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "fierce-fireball-fifth-gear--уиппет",
       "dog": {
@@ -3415,7 +3418,7 @@
         "grand_total": 303
       },
       "raw_text": "47 | Уиппет | Стандартный | Кобель | LET IT BE | 20 | 17 | 16 | 18 | 18 | 17 | 169 | 40 | 5 | 17 | 19 | 19 | 10 | 134 | 303 | 7 | CC | ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "let-it-be--уиппет",
       "dog": {
@@ -3510,7 +3513,7 @@
         "grand_total": 349
       },
       "raw_text": "55 | Уиппет | Стандартный | Сука | LOVE WILL FIND A WAY | 26 | 16 | 18 | 17 | 17 | 16 | 172 | 42 | 17 | 18 | 18 | 18 | 16 | 177 | 349 | 1 | CC | Чемпион РКФ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "love-will-find-a-way--уиппет",
       "dog": {
@@ -3605,7 +3608,7 @@
         "grand_total": 338
       },
       "raw_text": "52 | Уиппет | Стандартный | Сука | GRACE AMBER | 27 | 18 | 18 | 17 | 17 | 17 | 169 | 41 | 16 | 17 | 18 | 19 | 15 | 169 | 338 | 2 | CC | CACL",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "grace-amber--уиппет",
       "dog": {
@@ -3700,7 +3703,7 @@
         "grand_total": 331
       },
       "raw_text": "54 | Уиппет | Стандартный | Сука | LET THE LOVE GO ON | 23 | 16 | 17 | 17 | 18 | 16 | 164 | 44 | 15 | 17 | 17 | 18 | 16 | 167 | 331 | 3 | CC | ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "let-the-love-go-on--уиппет",
       "dog": {
@@ -3795,7 +3798,7 @@
         "grand_total": 329
       },
       "raw_text": "51 | Уиппет | Стандартный | Сука | DIAMANT TOY ER UMKA LUCHIK SCHASTIA | 23 | 16 | 17 | 17 | 18 | 17 | 168 | 43 | 15 | 18 | 19 | 18 | 13 | 161 | 329 | 4 | CC | ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "diamant-toy-er-umka-luchik-schastia--уиппет",
       "dog": {
@@ -3890,7 +3893,7 @@
         "grand_total": 324
       },
       "raw_text": "60 | Уиппет | Стандартный | Сука | ЛАКШЕРИ ВИПП ЛАРКИ | 24 | 14 | 17 | 16 | 17 | 16 | 157 | 42 | 16 | 17 | 16 | 18 | 16 | 167 | 324 | 5 | CC | ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "лакшери-випп-ларки--уиппет",
       "dog": {
@@ -3985,7 +3988,7 @@
         "grand_total": 324
       },
       "raw_text": "50 | Уиппет | Стандартный | Сука | AGATA KRISTI | 24 | 18 | 18 | 17 | 17 | 17 | 168 | 43 | 14 | 16 | 17 | 18 | 12 | 156 | 324 | 6 | CC | ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "agata-kristi--уиппет",
       "dog": {
@@ -4080,7 +4083,7 @@
         "grand_total": 322
       },
       "raw_text": "61 | Уиппет | Стандартный | Сука | РУССКИ ПАРК ДАНАЯ | 26 | 17 | 17 | 16 | 16 | 16 | 167 | 41 | 14 | 16 | 18 | 18 | 14 | 155 | 322 | 7 | CC | ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "русски-парк-даная--уиппет",
       "dog": {
@@ -4175,7 +4178,7 @@
         "grand_total": 314
       },
       "raw_text": "53 | Уиппет | Стандартный | Сука | LAST UNICORN | 25 | 13 | 17 | 17 | 17 | 16 | 163 | 44 | 14 | 18 | 18 | 18 | 15 | 151 | 314 | 8 | CC | ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "last-unicorn--уиппет",
       "dog": {
@@ -4247,7 +4250,7 @@
         "grand_total": 167
       },
       "raw_text": "59 | Уиппет | Стандартный | Сука | ВАЛЬПАЙН ПЭК БОНАНЗА | 25 | 16 | 17 | 17 | 17 | 17 | 167 | 45 | Сошёл |  | 167 |  |  | ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": "Сошёл",
       "dog_key": "вальпаин-пэк-бонанза--уиппет",
       "dog": {
@@ -4342,7 +4345,7 @@
         "grand_total": 348
       },
       "raw_text": "39 | Уиппет | Стандартный-спринтеры | Кобель | ГРОМ ПРОМЕТЕЙ | 32 | 18 | 17 | 17 | 18 | 17 | 170 | 48 | 18 | 18 | 19 | 19 | 17 | 178 | 348 | 1 | CC | Чемпион РКФ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "гром-прометеи--уиппет",
       "dog": {
@@ -4437,7 +4440,7 @@
         "grand_total": 344
       },
       "raw_text": "33 | Уиппет | Стандартный-спринтеры | Кобель | BATMAN NIGHT SHADOW | 30 | 18 | 19 | 19 | 18 | 18 | 174 | 50 | 16 | 17 | 18 | 18 | 17 | 170 | 344 | 2 | CC | CACL",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "batman-night-shadow--уиппет",
       "dog": {
@@ -4532,7 +4535,7 @@
         "grand_total": 334
       },
       "raw_text": "41 | Уиппет | Стандартный-спринтеры | Кобель | ЛАКШЕРИ КИН КВИК ФЛЭШ | 30 | 18 | 18 | 17 | 18 | 17 | 170 | 49 | 16 | 17 | 17 | 17 | 15 | 164 | 334 | 3 | CC | ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "лакшери-кин-квик-флэш--уиппет",
       "dog": {
@@ -4627,7 +4630,7 @@
         "grand_total": 332
       },
       "raw_text": "31 | Уиппет | Стандартный-спринтеры | Кобель | ANYUTINY GLAZKI ELVIN JONES | 31 | 16 | 17 | 16 | 17 | 17 | 164 | 48 | 17 | 17 | 18 | 18 | 16 | 168 | 332 | 4 | CC | ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "anyutiny-glazki-elvin-jones--уиппет",
       "dog": {
@@ -4722,7 +4725,7 @@
         "grand_total": 329
       },
       "raw_text": "35 | Уиппет | Стандартный-спринтеры | Кобель | BRIZ LEGKIY VETER | 28 | 16 | 17 | 16 | 17 | 16 | 165 | 51 | 14 | 17 | 17 | 17 | 15 | 164 | 329 | 5 | CC | ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "briz-legkiy-veter--уиппет",
       "dog": {
@@ -4817,7 +4820,7 @@
         "grand_total": 314
       },
       "raw_text": "40 | Уиппет | Стандартный-спринтеры | Кобель | ЛАКШЕРИ ВИПП ЛАНСЕЛОТ | 32 | 16 | 16 | 16 | 17 | 16 | 161 | 51 | 13 | 17 | 17 | 16 | 15 | 153 | 314 | 6 | CC | ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "лакшери-випп-ланселот--уиппет",
       "dog": {
@@ -4889,7 +4892,7 @@
         "grand_total": 176
       },
       "raw_text": "34 | Уиппет | Стандартный-спринтеры | Кобель | BLACK JACK | 31 | 18 | 18 | 18 | 18 | 18 | 176 | 49 | Сошёл |  | 176 |  |  | ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": "Сошёл",
       "dog_key": "black-jack--уиппет",
       "dog": {
@@ -4961,7 +4964,7 @@
         "grand_total": 174
       },
       "raw_text": "42 | Уиппет | Стандартный-спринтеры | Сука | VALPAIN PEK AKEMI HIME | 29 | 18 | 18 | 17 | 17 | 17 | 174 | 46 | Сошёл |  | 174 |  |  | ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": "Сошёл",
       "dog_key": "valpain-pek-akemi-hime--уиппет",
       "dog": {
@@ -5033,7 +5036,7 @@
         "grand_total": 167
       },
       "raw_text": "36 | Уиппет | Стандартный-спринтеры | Кобель | GOLIAF NEON | 33 | 16 | 17 | 17 | 17 | 17 | 167 | 50 | Снят до старта |  | 167 |  |  | ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": "Снят до старта",
       "dog_key": "goliaf-neon--уиппет",
       "dog": {
@@ -5105,7 +5108,7 @@
         "grand_total": 166
       },
       "raw_text": "32 | Уиппет | Стандартный-спринтеры | Кобель | AVATAR S PLANETY PANDORA | 29 | 17 | 18 | 16 | 18 | 16 | 166 | 47 | Сошёл |  | 166 |  |  | ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": "Сошёл",
       "dog_key": "avatar-s-planety-pandora--уиппет",
       "dog": {
@@ -5177,7 +5180,7 @@
         "grand_total": 166
       },
       "raw_text": "37 | Уиппет | Стандартный-спринтеры | Кобель | KULIKOVO POLE BARON | 33 | 17 | 17 | 16 | 17 | 17 | 166 | 47 | Сошёл |  | 166 |  |  | ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": "Сошёл",
       "dog_key": "kulikovo-pole-baron--уиппет",
       "dog": {
@@ -5249,7 +5252,7 @@
         "grand_total": 156
       },
       "raw_text": "30 | Уиппет | Стандартный-спринтеры | Кобель | ANYUTINY GLAZKI DARIUS I | 28 | 16 | 16 | 15 | 17 | 16 | 156 | 46 | Сошёл |  | 156 |  |  | ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": "Сошёл",
       "dog_key": "anyutiny-glazki-darius-i--уиппет",
       "dog": {
@@ -5344,7 +5347,7 @@
         "grand_total": 327
       },
       "raw_text": "62 | Чирнеко дель Этна | Ветераны | Кобель | COLISTO’S BEATO | 34 | 17 | 16 | 16 | 17 | 17 | 162 | 52 | 17 | 17 | 16 | 16 | 14 | 165 | 327 | 1 | CC | Лучший ветеран",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "colisto-s-beato--чирнеко-дель-этна",
       "dog": {
@@ -5439,7 +5442,7 @@
         "grand_total": 314
       },
       "raw_text": "63 | Чирнеко дель Этна | Стандартный | Кобель | SOLLUCERO | 35 | 18 | 17 | 17 | 17 | 17 | 166 | 53 | 14 | 17 | 15 | 12 | 10 | 148 | 314 | 1 | CC | Чемпион РКФ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": null,
       "dog_key": "sollucero--чирнеко-дель-этна",
       "dog": {
@@ -5463,7 +5466,7 @@
       "judge_count": 2,
       "qualification": "",
       "vc": "",
-      "status": "disqualified",
+      "status": "dnf",
       "raw_scores_json": {
         "heats": [
           {
@@ -5478,7 +5481,7 @@
         ]
       },
       "raw_text": "64 | Чирнеко дель Этна | Стандартный | Кобель | TESORO SOLARE DOMENICO | 35 | Сошёл |  |  |  |  |  |  |  |  |  |  |  | ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": "Сошёл",
       "dog_key": "tesoro-solare-domenico--чирнеко-дель-этна",
       "dog": {
@@ -5494,7 +5497,7 @@
     {
       "id": 20885,
       "event_id": 1562,
-      "dog_id": 10374,
+      "dog_id": 10260,
       "breed_class": "Чирнеко дель Этна - Стандартный - Кобель",
       "catalog_no": 65,
       "placement": null,
@@ -5502,7 +5505,7 @@
       "judge_count": 2,
       "qualification": "",
       "vc": "",
-      "status": "disqualified",
+      "status": "dnf",
       "raw_scores_json": {
         "heats": [
           {
@@ -5517,11 +5520,11 @@
         ]
       },
       "raw_text": "65 | Чирнеко дель Этна | Стандартный | Кобель | ТESORО SOLARE FORTUNATO | 35 | Сошёл |  |  |  |  |  |  |  |  |  |  |  | ",
-      "judges": null,
+      "judges": "Главный судья/Судья",
       "status_reason": "Сошёл",
       "dog_key": "тesorо-solare-fortunato--чирнеко-дель-этна",
       "dog": {
-        "id": 10374,
+        "id": 10260,
         "dog_key": "тesorо-solare-fortunato--чирнеко-дель-этна",
         "name_lat": "ТESORО SOLARE FORTUNATO",
         "name_ru": "ТESORО SOLARE FORTUNATO",

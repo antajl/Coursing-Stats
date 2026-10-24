@@ -88,8 +88,10 @@ function cellInfos($: cheerio.CheerioAPI, tr: any): CellInfo[] {
     .toArray()
     .map((c) => {
       const el = $(c)
+      const clone = el.clone()
+      clone.find('sup, a[href*="remark"]').remove()
       return {
-        text: clean(el.text()),
+        text: clean(clone.text()),
         colspan: Math.max(1, parseInt(el.attr('colspan') || '1', 10) || 1),
         rowspan: Math.max(1, parseInt(el.attr('rowspan') || '1', 10) || 1),
         el,

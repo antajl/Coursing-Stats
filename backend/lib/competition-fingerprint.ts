@@ -9,7 +9,14 @@ import { fileURLToPath } from 'node:url'
 import { walkJson } from './audit-utils.js'
 
 export type CompetitionFingerprintDoc = {
-  event?: { id?: number; date?: string; title?: string; event_type?: string; type?: string }
+  event?: {
+    id?: number
+    date?: string
+    date_start?: string
+    title?: string
+    event_type?: string
+    type?: string
+  }
   event_id?: number
   results?: Array<{
     dog_id?: number
@@ -23,7 +30,7 @@ export type CompetitionFingerprintDoc = {
 
 export function competitionContentFingerprint(doc: CompetitionFingerprintDoc): string {
   const event = doc.event ?? {}
-  const date = event.date ?? ''
+  const date = (event.date_start ?? event.date ?? '').slice(0, 10)
   const eventType = (event.event_type ?? event.type ?? '').toString().toLowerCase()
   const rows = (doc.results ?? [])
     .map((r) => {

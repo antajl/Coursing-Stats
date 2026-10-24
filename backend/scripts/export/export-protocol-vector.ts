@@ -136,46 +136,49 @@ export function formatDogName(dog?: DogInfo): string {
   return escapeHtml(ru || en);
 }
 
-export function buildEventTitle(comp: CompetitionData): string {
-  if (comp.event.full_title) return comp.event.full_title;
-  const kind = comp.event.competition_kind || '';
-  const type = comp.event.competition_type || 'курсингу';
-  const kindLabel = kind === 'ЧРКФ' ? 'Чемпионат РКФ' : (comp.event.title || 'Соревнование');
+export function isGenericJudgePlaceholder(j?: string | null): boolean {
+  if (!j) return true;
+  const s = j.trim().toLowerCase();
+  if (!s) return true;
+  if (s === 'главный судья/судья' || s === 'главный судья' || s === 'судья' || s === 'судьи') return true;
+  return false;
+}
 
-  let dateStr = comp.event.date_start || '';
-  if (comp.event.date_start && comp.event.date_end && comp.event.date_start !== comp.event.date_end) {
-    const s = comp.event.date_start.split('-');
-    const e = comp.event.date_end.split('-');
+export function buildEventTitle(comp: CompetitionData): string {
+  const ev = comp.event;
+  let baseTitle = (ev.full_title || ev.title || 'Соревнования').trim();
+
+  let dateStr = '';
+  if (ev.date_start && ev.date_end && ev.date_start !== ev.date_end) {
+    const s = ev.date_start.split('-');
+    const e = ev.date_end.split('-');
     if (s[0] === e[0] && s[1] === e[1]) {
       dateStr = `${s[2]}-${e[2]}.${e[1]}.${e[0]}`;
     } else {
       dateStr = `${s[2]}.${s[1]}.${s[0]} - ${e[2]}.${e[1]}.${e[0]}`;
     }
-  } else if (dateStr) {
-    const s = dateStr.split('-');
-    dateStr = `${s[2]}.${s[1]}.${s[0]}`;
+  } else if (ev.date_start || ev.date) {
+    const d = (ev.date_start || ev.date || '').split('-');
+    if (d.length === 3) dateStr = `${d[2]}.${d[1]}.${d[0]}`;
   }
 
-  let loc = '';
-  if (comp.event.location) {
-    if (comp.event.location.includes('Донино')) {
-      loc = ' (Московская обл., г. Раменское, д. Донино)';
-    } else {
-      loc = ` (${comp.event.location})`;
-    }
+  let locStr = '';
+  if (ev.location) {
+    const cleanLoc = ev.location.trim().replace(/^\(|\)$/g, '');
+    locStr = ` (${cleanLoc})`;
   }
-  let typeStr = type.toLowerCase();
-  if (typeStr === 'бега борзых' || typeStr.includes('бега')) {
-    typeStr = 'по бегам борзых';
-  } else if (typeStr === 'курсинг борзых' || typeStr.includes('курсинг')) {
-    typeStr = 'по курсингу борзых';
-  } else if (typeStr === 'бзмп' || typeStr.includes('приманк')) {
-    typeStr = 'по бегам за механической приманкой';
-  } else if (!typeStr.startsWith('по ')) {
-    typeStr = `по ${typeStr}`;
+
+  const hasDate = /\b\d{2}[.\-–]\d{2}[.\-–]\d{4}\b|\b\d{2}\.\d{2}\.\d{4}\b/.test(baseTitle);
+  const hasLoc = /\([^)]*(?:обл|район|г\.|д\.|посад|милет|суханово|донино|левково|купавна)[^)]*\)/i.test(baseTitle);
+
+  let finalTitle = baseTitle;
+  if (!hasDate && dateStr) {
+    finalTitle += `, ${dateStr}`;
   }
-  const doninoPrefix = (comp.event.location && comp.event.location.includes('Донино') && !loc.includes('Донино')) ? ' (Донино)' : '';
-  return `${kindLabel} ${typeStr}${doninoPrefix}, ${dateStr}${loc}`;
+  if (!hasLoc && locStr) {
+    finalTitle += locStr;
+  }
+  return finalTitle;
 }
 
 // ----------------------------------------------------
@@ -184,7 +187,7 @@ export function buildMetaRowsHtml(comp: CompetitionData, colspan: number): strin
   if (comp.event.host_club) {
     html += `\r\n    <tr class="meta-row">\r\n      <td colspan="${colspan}"><b>Организатор:</b> ${escapeHtml(comp.event.host_club)}</td>\r\n    </tr>`;
   }
-  if (comp.event.judges) {
+  if (comp.event.judges && !isGenericJudgePlaceholder(comp.event.judges)) {
     html += `\r\n    <tr class="meta-row">\r\n      <td colspan="${colspan}"><b>Судьи:</b> ${escapeHtml(comp.event.judges)}</td>\r\n    </tr>`;
   }
   return html;
@@ -337,6 +340,12 @@ export function buildRacingProtocolHtml(comp: CompetitionData): string {
     `;
 
     const groupMaxHeats = Math.max(...dogs.map(d => d.raw_scores_json?.heats?.length || 0));
+    const groupValidHeat = dogs
+      .flatMap(d => d.raw_scores_json?.heats || [])
+      .find(h => h.time != null && h.time > 0 && h.speed_kmh != null && h.speed_kmh > 0);
+    const defaultGroupDistance = groupValidHeat && groupValidHeat.time && groupValidHeat.speed_kmh
+      ? Math.round((groupValidHeat.speed_kmh / 3.6) * groupValidHeat.time)
+      : ((comp.event as any)?.distance || 350);
 
     for (const res of dogs) {
       const dog = res.dog;
@@ -391,6 +400,14 @@ export function buildRacingProtocolHtml(comp: CompetitionData): string {
         }
       }
 
+      let dogDistance = defaultGroupDistance;
+      const validHeat = heats.find(h => h.time != null && h.time > 0 && h.speed_kmh != null && h.speed_kmh > 0);
+      if (validHeat && validHeat.time && validHeat.speed_kmh) {
+        dogDistance = Math.round((validHeat.speed_kmh / 3.6) * validHeat.time);
+      } else if (res.raw_scores_json?.distance) {
+        dogDistance = Number(res.raw_scores_json.distance);
+      }
+
       tableRowsHtml += `
         <tr class="participant-row">
           <td>${place}</td>
@@ -399,16 +416,16 @@ export function buildRacingProtocolHtml(comp: CompetitionData): string {
           <td>${className}</td>
           <td>${sex}</td>
           <td class="dog-name-cell">${dogName}</td>
-          <td>350</td>
+          <td>${dogDistance}</td>
           <td>${getRacingRaceNumber(heat1)}</td>
           ${renderRacingBibCell(heat1)}
-          ${renderRacingTimeSpeed(heat1, h1Reason)}
+          ${renderRacingTimeSpeed(heat1, h1Reason, dogDistance)}
           <td>${getRacingRaceNumber(heat2)}</td>
           ${renderRacingBibCell(heat2)}
-          ${renderRacingTimeSpeed(heat2, h2Reason)}
+          ${renderRacingTimeSpeed(heat2, h2Reason, dogDistance)}
           <td>${getRacingRaceNumber(heat3)}</td>
           ${renderRacingBibCell(heat3)}
-          ${renderRacingTimeSpeed(heat3, h3Reason)}
+          ${renderRacingTimeSpeed(heat3, h3Reason, dogDistance)}
           <td>${vc}</td>
           <td>${qual}</td>
         </tr>
@@ -640,12 +657,12 @@ export function getCoursingBibStyle(heat?: Heat | null): { bg: string; color: st
   return { bg, color };
 }
 
-export function renderBibCellRowspan(heat?: Heat | null): string {
+export function renderBibCellRowspan(heat?: Heat | null, rowspan: number = 2): string {
   if (!heat || heat.bib_number == null) {
-    return '<td rowspan="2"></td>';
+    return `<td rowspan="${rowspan}"></td>`;
   }
   const { bg, color } = getCoursingBibStyle(heat);
-  return `<td rowspan="2" style="background-color: ${bg} !important; color: ${color}; font-style: italic;">${heat.bib_number}</td>`;
+  return `<td rowspan="${rowspan}" style="background-color: ${bg} !important; color: ${color}; font-style: italic;">${heat.bib_number}</td>`;
 }
 
 export function renderBibCellSingle(heat?: Heat | null): string {
@@ -702,6 +719,11 @@ export function buildCoursingProtocolHtml(comp: CompetitionData): string {
 
   dnsList.sort((a, b) => a.catalog_no - b.catalog_no);
 
+  const maxJudges = Math.max(
+    2,
+    ...comp.results.flatMap(r => (r.raw_scores_json?.heats || []).map(h => h.judges?.length || 0))
+  );
+
   const metaRowsHtml = buildMetaRowsHtml(comp, 25);
 
   let tableRowsHtml = `
@@ -716,10 +738,10 @@ export function buildCoursingProtocolHtml(comp: CompetitionData): string {
       <td rowspan="2">Пол</td>
       <td rowspan="2">Кличка</td>
       <td rowspan="2">Забег<br>1</td>
-      <td colspan="6">Главный судья/Судья</td>
+      <td colspan="6">${comp.event.judges && !isGenericJudgePlaceholder(comp.event.judges) ? escapeHtml(comp.event.judges) : 'Оценки по критериям'}</td>
       <td rowspan="2">Сумма<br>1</td>
       <td rowspan="2">Забег<br>2</td>
-      <td colspan="6">Главный судья/Судья</td>
+      <td colspan="6">${comp.event.judges && !isGenericJudgePlaceholder(comp.event.judges) ? escapeHtml(comp.event.judges) : 'Оценки по критериям'}</td>
       <td rowspan="2">Сумма<br>2</td>
       <td rowspan="2">Общая<br>сумма</td>
       <td rowspan="2">СС</td>
@@ -762,9 +784,11 @@ export function buildCoursingProtocolHtml(comp: CompetitionData): string {
 
       const j1_h1 = heat1?.judges?.[0] || null;
       const j2_h1 = heat1?.judges?.[1] || null;
+      const j3_h1 = heat1?.judges?.[2] || null;
 
       const j1_h2 = heat2?.judges?.[0] || null;
       const j2_h2 = heat2?.judges?.[1] || null;
+      const j3_h2 = heat2?.judges?.[2] || null;
 
       const place = res.placement ? res.placement : '';
       const totalScore = res.total_score ? res.total_score : '';
@@ -790,29 +814,33 @@ export function buildCoursingProtocolHtml(comp: CompetitionData): string {
         continue;
       }
 
-      // Case 2: Eliminated in Heat 2 (2 rows, heat 2 scores merged with reason)
+      // Case 2: Eliminated in Heat 2
       if (res.status === 'eliminated' && heats.length > 1) {
         const reason = res.status_reason ? `Отстранение (${res.status_reason})` : 'Отстранение';
         tableRowsHtml += `
           <tr class="participant-row">
-            <td rowspan="2">${place}</td>
-            <td rowspan="2">${res.catalog_no}</td>
-            <td rowspan="2">${breed}</td>
-            <td rowspan="2">${className}</td>
-            <td rowspan="2">${sex}</td>
-            <td rowspan="2" class="dog-name-cell">${dogName}</td>
-            ${renderBibCellRowspan(heat1)}
+            <td rowspan="${maxJudges}">${place}</td>
+            <td rowspan="${maxJudges}">${res.catalog_no}</td>
+            <td rowspan="${maxJudges}">${breed}</td>
+            <td rowspan="${maxJudges}">${className}</td>
+            <td rowspan="${maxJudges}">${sex}</td>
+            <td rowspan="${maxJudges}" class="dog-name-cell">${dogName}</td>
+            ${renderBibCellRowspan(heat1, maxJudges)}
             ${renderScores(j1_h1)}
-            <td rowspan="2">${heat1 ? heat1.total : ''}</td>
-            ${renderBibCellRowspan(heat2)}
-            <td colspan="7" rowspan="2" class="status-cell">${escapeHtml(reason)}</td>
-            <td rowspan="2">${totalScore}</td>
-            <td rowspan="2">${vc}</td>
-            <td rowspan="2">${qual}</td>
+            <td rowspan="${maxJudges}">${heat1 ? heat1.total : ''}</td>
+            ${renderBibCellRowspan(heat2, maxJudges)}
+            <td colspan="7" rowspan="${maxJudges}" class="status-cell">${escapeHtml(reason)}</td>
+            <td rowspan="${maxJudges}">${totalScore}</td>
+            <td rowspan="${maxJudges}">${vc}</td>
+            <td rowspan="${maxJudges}">${qual}</td>
           </tr>
           <tr class="participant-row">
             ${renderScores(j2_h1)}
           </tr>
+          ${maxJudges >= 3 ? `
+          <tr class="participant-row">
+            ${renderScores(j3_h1)}
+          </tr>` : ''}
         `;
         continue;
       }
@@ -820,26 +848,31 @@ export function buildCoursingProtocolHtml(comp: CompetitionData): string {
       // Case 3: Standard 2-run participant
       tableRowsHtml += `
         <tr class="participant-row">
-          <td rowspan="2">${place}</td>
-          <td rowspan="2">${res.catalog_no}</td>
-          <td rowspan="2">${breed}</td>
-          <td rowspan="2">${className}</td>
-          <td rowspan="2">${sex}</td>
-          <td rowspan="2" class="dog-name-cell">${dogName}</td>
-          ${renderBibCellRowspan(heat1)}
+          <td rowspan="${maxJudges}">${place}</td>
+          <td rowspan="${maxJudges}">${res.catalog_no}</td>
+          <td rowspan="${maxJudges}">${breed}</td>
+          <td rowspan="${maxJudges}">${className}</td>
+          <td rowspan="${maxJudges}">${sex}</td>
+          <td rowspan="${maxJudges}" class="dog-name-cell">${dogName}</td>
+          ${renderBibCellRowspan(heat1, maxJudges)}
           ${renderScores(j1_h1)}
-          <td rowspan="2">${heat1 ? heat1.total : ''}</td>
-          ${renderBibCellRowspan(heat2)}
+          <td rowspan="${maxJudges}">${heat1 ? heat1.total : ''}</td>
+          ${renderBibCellRowspan(heat2, maxJudges)}
           ${renderScores(j1_h2)}
-          <td rowspan="2">${heat2 ? heat2.total : ''}</td>
-          <td rowspan="2">${totalScore}</td>
-          <td rowspan="2">${vc}</td>
-          <td rowspan="2">${qual}</td>
+          <td rowspan="${maxJudges}">${heat2 ? heat2.total : ''}</td>
+          <td rowspan="${maxJudges}">${totalScore}</td>
+          <td rowspan="${maxJudges}">${vc}</td>
+          <td rowspan="${maxJudges}">${qual}</td>
         </tr>
         <tr class="participant-row">
           ${renderScores(j2_h1)}
           ${renderScores(j2_h2)}
         </tr>
+        ${maxJudges >= 3 ? `
+        <tr class="participant-row">
+          ${renderScores(j3_h1)}
+          ${renderScores(j3_h2)}
+        </tr>` : ''}
       `;
     }
   }

@@ -136,4 +136,52 @@ describe('buildCombinedRanking season standing B', () => {
     expect(dog.elo_rating).toBe(1561)
     expect(dog.elo_races).toBe(6)
   })
+
+  it('merges year_from and year_to spanning all appearances', () => {
+    const rows = buildCombinedRanking(
+      [
+        {
+          dog_id: 1,
+          name_lat: 'SpanDog',
+          breed: 'БАСЕНДЖИ',
+          year_from: 2015,
+          year_to: 2018,
+          gold: 2,
+          total_starts: 5,
+        },
+      ],
+      [
+        {
+          dog_id: 1,
+          rating_score: 88,
+          year_from: 2017,
+          year_to: 2019,
+          judge_eval_count: 10,
+        },
+      ]
+    )
+    expect(rows[0].year_from).toBe(2015)
+    expect(rows[0].year_to).toBe(2019)
+  })
+
+  it('preserves single-year fields from year indexes', () => {
+    const rows = buildCombinedRanking(
+      [
+        {
+          dog_id: 2,
+          name_lat: 'SingleYearDog',
+          breed: 'УИППЕТ',
+          year: 2024,
+          year_from: 2024,
+          year_to: 2024,
+          gold: 1,
+          total_starts: 2,
+        },
+      ],
+      []
+    )
+    expect(rows[0].year).toBe(2024)
+    expect(rows[0].year_from).toBe(2024)
+    expect(rows[0].year_to).toBe(2024)
+  })
 })

@@ -1,6 +1,6 @@
 {
   "schema": "coursing-stats/competition-v1",
-  "exported_at": "2026-08-08T20:12:46.253Z",
+  "exported_at": "2026-10-24T13:39:49.649Z",
   "source": "archive-full-results-legacy",
   "event_id": 1561,
   "event": {
@@ -8,26 +8,28 @@
     "year": 2018,
     "date_start": "2018-08-25",
     "date_end": "2018-08-26",
-    "rank_label": "Международный чемпионат по курсингу CACIL, Чемпионат РКФ",
+    "rank_label": "Международный чемпионат по курсингу CACIL & Чемпионат РКФ",
     "event_type": "coursing",
-    "competition_kind": null,
-    "competition_type": null,
-    "title": "Международный чемпионат по курсингу CACIL, Чемпионат РКФ",
+    "competition_kind": "CACIL",
+    "competition_type": "Курсинг борзых",
+    "title": "Международный чемпионат по курсингу CACIL & Чемпионат РКФ",
     "host_club": null,
     "region": null,
-    "location": "Московская обл., Ленинский р-н, д.Суханово",
+    "location": "Московская область, Ленинский район, д. Суханово",
     "catalog_url": null,
-    "results_url": null,
+    "results_url": "https://web.archive.org/web/20190822140510/http://procoursing.ru/Full_Results_2018-08-26.html",
     "confirmed": 0,
     "last_modified": null,
-    "scraped_at": "2026-08-08T20:12:46.253Z",
+    "scraped_at": "2026-10-24T13:39:49.649Z",
     "telegram_url": null,
-    "full_title": null,
+    "full_title": "Международный чемпионат по курсингу CACIL & Чемпионат РКФ",
     "event_date": "2018-08-25",
     "protocol_location": null,
     "judges": null,
     "track_schemes": [],
-    "admin_verified_at": null
+    "admin_verified_at": null,
+    "rank_code": "CACIL",
+    "results_pdf_url": "https://drive.google.com/file/d/125AM_EvFBmdB6NbGZV2-d-7zbmlAV6rw/view?usp=sharing"
   },
   "result_count": 104,
   "results": [
@@ -39,7 +41,7 @@
       "catalog_no": 4,
       "placement": 1,
       "total_score": 523,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "Чемпион РКФ",
       "vc": "CC",
       "status": "finished",
@@ -71,6 +73,17 @@
                   18
                 ],
                 "sum": 90
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
               }
             ],
             "total": 261,
@@ -103,6 +116,17 @@
                   18
                 ],
                 "sum": 90
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 87
               }
             ],
             "total": 262,
@@ -134,7 +158,7 @@
       "catalog_no": 2,
       "placement": 2,
       "total_score": 520,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "CACL",
       "vc": "CC",
       "status": "finished",
@@ -166,6 +190,17 @@
                   18
                 ],
                 "sum": 90
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  16,
+                  16,
+                  17,
+                  18
+                ],
+                "sum": 83
               }
             ],
             "total": 255,
@@ -198,6 +233,17 @@
                   18
                 ],
                 "sum": 90
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 88
               }
             ],
             "total": 265,
@@ -229,7 +275,7 @@
       "catalog_no": 6,
       "placement": 3,
       "total_score": 514,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -261,6 +307,17 @@
                   18
                 ],
                 "sum": 88
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  15,
+                  16,
+                  16,
+                  15,
+                  16
+                ],
+                "sum": 78
               }
             ],
             "total": 251,
@@ -293,6 +350,17 @@
                   18
                 ],
                 "sum": 88
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 91
               }
             ],
             "total": 263,
@@ -324,7 +392,7 @@
       "catalog_no": 3,
       "placement": 4,
       "total_score": 511,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -356,6 +424,17 @@
                   18
                 ],
                 "sum": 88
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
               }
             ],
             "total": 256,
@@ -388,6 +467,17 @@
                   18
                 ],
                 "sum": 88
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 84
               }
             ],
             "total": 255,
@@ -419,7 +509,7 @@
       "catalog_no": 1,
       "placement": 5,
       "total_score": 511,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -451,6 +541,17 @@
                   18
                 ],
                 "sum": 86
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
               }
             ],
             "total": 256,
@@ -483,6 +584,17 @@
                   18
                 ],
                 "sum": 85
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  15,
+                  16
+                ],
+                "sum": 83
               }
             ],
             "total": 255,
@@ -514,7 +626,7 @@
       "catalog_no": 8,
       "placement": 6,
       "total_score": 510,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -546,6 +658,17 @@
                   18
                 ],
                 "sum": 88
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 87
               }
             ],
             "total": 255,
@@ -578,6 +701,17 @@
                   18
                 ],
                 "sum": 86
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
               }
             ],
             "total": 255,
@@ -609,7 +743,7 @@
       "catalog_no": 7,
       "placement": 7,
       "total_score": 500,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -641,6 +775,17 @@
                   18
                 ],
                 "sum": 87
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  16,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 84
               }
             ],
             "total": 252,
@@ -673,6 +818,17 @@
                   18
                 ],
                 "sum": 87
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  16,
+                  15,
+                  16,
+                  17
+                ],
+                "sum": 80
               }
             ],
             "total": 248,
@@ -704,7 +860,7 @@
       "catalog_no": 9,
       "placement": 1,
       "total_score": 521,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "Чемпион РКФ",
       "vc": "CC",
       "status": "finished",
@@ -736,6 +892,17 @@
                   18
                 ],
                 "sum": 88
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
               }
             ],
             "total": 263,
@@ -768,6 +935,17 @@
                   17
                 ],
                 "sum": 88
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
               }
             ],
             "total": 258,
@@ -799,7 +977,7 @@
       "catalog_no": 10,
       "placement": 2,
       "total_score": 518,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "CACL",
       "vc": "CC",
       "status": "finished",
@@ -831,6 +1009,17 @@
                   18
                 ],
                 "sum": 90
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  16
+                ],
+                "sum": 84
               }
             ],
             "total": 259,
@@ -863,6 +1052,17 @@
                   18
                 ],
                 "sum": 88
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  17,
+                  17
+                ],
+                "sum": 86
               }
             ],
             "total": 259,
@@ -889,12 +1089,12 @@
     {
       "id": 20730,
       "event_id": 1561,
-      "dog_id": 10292,
+      "dog_id": 10214,
       "breed_class": "Басенджи - Стандартный - Сука",
       "catalog_no": 12,
       "placement": 3,
       "total_score": 514,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -926,6 +1126,17 @@
                   18
                 ],
                 "sum": 88
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  16,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 86
               }
             ],
             "total": 262,
@@ -958,6 +1169,17 @@
                   17
                 ],
                 "sum": 86
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  17,
+                  15,
+                  17,
+                  17
+                ],
+                "sum": 83
               }
             ],
             "total": 252,
@@ -972,7 +1194,7 @@
       "status_reason": null,
       "dog_key": "magik-kalliopa--басенджи",
       "dog": {
-        "id": 10292,
+        "id": 10214,
         "dog_key": "magik-kalliopa--басенджи",
         "name_lat": "MAGIK KALLIOPA",
         "name_ru": "MAGIK KALLIOPA",
@@ -989,7 +1211,7 @@
       "catalog_no": 11,
       "placement": 4,
       "total_score": 507,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -1021,6 +1243,17 @@
                   18
                 ],
                 "sum": 88
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  16,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 84
               }
             ],
             "total": 258,
@@ -1053,6 +1286,17 @@
                   18
                 ],
                 "sum": 86
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  16,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 82
               }
             ],
             "total": 249,
@@ -1084,7 +1328,7 @@
       "catalog_no": 13,
       "placement": null,
       "total_score": 249,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "",
       "status": "dnf",
@@ -1116,6 +1360,17 @@
                   18
                 ],
                 "sum": 87
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  16,
+                  17,
+                  16,
+                  15
+                ],
+                "sum": 82
               }
             ],
             "total": 249,
@@ -1156,7 +1411,7 @@
       "catalog_no": 19,
       "placement": 1,
       "total_score": 532,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "Чемпион РКФ",
       "vc": "CC",
       "status": "finished",
@@ -1180,6 +1435,17 @@
               },
               {
                 "judge_number": 2,
+                "scores": [
+                  17,
+                  19,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_number": 3,
                 "scores": [
                   17,
                   19,
@@ -1220,6 +1486,17 @@
                   18
                 ],
                 "sum": 91
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  18,
+                  16,
+                  18,
+                  18
+                ],
+                "sum": 87
               }
             ],
             "total": 267,
@@ -1251,7 +1528,7 @@
       "catalog_no": 16,
       "placement": 2,
       "total_score": 524,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "Чемпион РКФ, CACIL",
       "vc": "CC",
       "status": "finished",
@@ -1283,6 +1560,17 @@
                   18
                 ],
                 "sum": 90
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  17,
+                  18
+                ],
+                "sum": 85
               }
             ],
             "total": 263,
@@ -1315,6 +1603,17 @@
                   18
                 ],
                 "sum": 90
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 86
               }
             ],
             "total": 261,
@@ -1346,7 +1645,7 @@
       "catalog_no": 17,
       "placement": 3,
       "total_score": 513,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "CACL",
       "vc": "CC",
       "status": "finished",
@@ -1378,6 +1677,17 @@
                   18
                 ],
                 "sum": 86
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  16,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 82
               }
             ],
             "total": 256,
@@ -1410,6 +1720,17 @@
                   18
                 ],
                 "sum": 88
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  16,
+                  15,
+                  17,
+                  17
+                ],
+                "sum": 82
               }
             ],
             "total": 257,
@@ -1441,7 +1762,7 @@
       "catalog_no": 15,
       "placement": 4,
       "total_score": 507,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "R.CACIL",
       "vc": "CC",
       "status": "finished",
@@ -1473,6 +1794,17 @@
                   18
                 ],
                 "sum": 87
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  16,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 83
               }
             ],
             "total": 254,
@@ -1505,6 +1837,17 @@
                   17
                 ],
                 "sum": 85
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  16,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 83
               }
             ],
             "total": 253,
@@ -1536,7 +1879,7 @@
       "catalog_no": 20,
       "placement": 5,
       "total_score": 506,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "CACL",
       "vc": "CC",
       "status": "finished",
@@ -1568,6 +1911,17 @@
                   18
                 ],
                 "sum": 87
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  16,
+                  17,
+                  17,
+                  16
+                ],
+                "sum": 82
               }
             ],
             "total": 253,
@@ -1600,6 +1954,17 @@
                   18
                 ],
                 "sum": 89
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  16,
+                  16
+                ],
+                "sum": 81
               }
             ],
             "total": 253,
@@ -1631,7 +1996,7 @@
       "catalog_no": 14,
       "placement": 6,
       "total_score": 413,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "",
       "status": "finished",
@@ -1663,6 +2028,17 @@
                   18
                 ],
                 "sum": 88
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 85
               }
             ],
             "total": 259,
@@ -1695,6 +2071,17 @@
                   15
                 ],
                 "sum": 77
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  10,
+                  10,
+                  10,
+                  10,
+                  12
+                ],
+                "sum": 52
               }
             ],
             "total": 154,
@@ -1726,7 +2113,7 @@
       "catalog_no": 18,
       "placement": 7,
       "total_score": 337,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "",
       "status": "finished",
@@ -1758,6 +2145,17 @@
                   18
                 ],
                 "sum": 88
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 90
               }
             ],
             "total": 262,
@@ -1790,6 +2188,17 @@
                   15
                 ],
                 "sum": 75
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "sum": 0
               }
             ],
             "total": 75,
@@ -1814,14 +2223,14 @@
       }
     },
     {
-      "id": 20740,
+      "id": 27247,
       "event_id": 1561,
-      "dog_id": 9568,
+      "dog_id": 10218,
       "breed_class": "Дирхаунд - Стандартный - Микс",
       "catalog_no": 21,
       "placement": 1,
       "total_score": 521,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -1853,6 +2262,17 @@
                   18
                 ],
                 "sum": 90
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 88
               }
             ],
             "total": 262,
@@ -1885,6 +2305,17 @@
                   18
                 ],
                 "sum": 87
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  17,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
               }
             ],
             "total": 259,
@@ -1897,12 +2328,12 @@
       "raw_text": "21 | Дирхаунд | Стандартный | Сука | MERSEDES D'ARDALIE | 72 | 16 | 16 | 17 | 17 | 18 | 262 | 89 | 16 | 17 | 17 | 17 | 16 | 259 | 521 | CC | 1 |  |  | ",
       "judges": null,
       "status_reason": null,
-      "dog_key": "mercedes-dardalie--дирхаунд",
+      "dog_key": "mersedes-dardalie--дирхаунд",
       "dog": {
-        "id": 9568,
-        "dog_key": "mercedes-dardalie--дирхаунд",
-        "name_lat": "MERCEDES DARDALIE",
-        "name_ru": "MERCEDES DARDALIE",
+        "id": 10218,
+        "dog_key": "mersedes-dardalie--дирхаунд",
+        "name_lat": "MERSEDES DARDALIE",
+        "name_ru": "MERSEDES DARDALIE",
         "breed": "ДИРХАУНД",
         "sex": null,
         "owner": null
@@ -1916,7 +2347,7 @@
       "catalog_no": 22,
       "placement": 1,
       "total_score": 535,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "Лучший ветеран",
       "vc": "CC",
       "status": "finished",
@@ -1948,6 +2379,17 @@
                   18
                 ],
                 "sum": 91
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 88
               }
             ],
             "total": 263,
@@ -1980,6 +2422,17 @@
                   18
                 ],
                 "sum": 93
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  19,
+                  20
+                ],
+                "sum": 95
               }
             ],
             "total": 272,
@@ -2011,7 +2464,7 @@
       "catalog_no": 23,
       "placement": 1,
       "total_score": 530,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -2043,6 +2496,17 @@
                   18
                 ],
                 "sum": 90
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 85
               }
             ],
             "total": 255,
@@ -2075,6 +2539,17 @@
                   18
                 ],
                 "sum": 91
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  19,
+                  19,
+                  18,
+                  19,
+                  19
+                ],
+                "sum": 94
               }
             ],
             "total": 275,
@@ -2109,7 +2584,7 @@
       "judge_count": 2,
       "qualification": "",
       "vc": "",
-      "status": "disqualified",
+      "status": "dnf",
       "raw_scores_json": {
         "heats": [
           {
@@ -2145,7 +2620,7 @@
       "catalog_no": 27,
       "placement": 1,
       "total_score": 513,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "Чемпион РКФ",
       "vc": "CC",
       "status": "finished",
@@ -2175,6 +2650,17 @@
                   17,
                   18,
                   18
+                ],
+                "sum": 86
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  17,
+                  17,
+                  17,
+                  17
                 ],
                 "sum": 86
               }
@@ -2209,6 +2695,17 @@
                   18
                 ],
                 "sum": 85
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
               }
             ],
             "total": 257,
@@ -2240,7 +2737,7 @@
       "catalog_no": 25,
       "placement": 2,
       "total_score": 511,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "CACL",
       "vc": "CC",
       "status": "finished",
@@ -2272,6 +2769,17 @@
                   18
                 ],
                 "sum": 87
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  16,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 82
               }
             ],
             "total": 255,
@@ -2304,6 +2812,17 @@
                   18
                 ],
                 "sum": 86
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 88
               }
             ],
             "total": 256,
@@ -2335,7 +2854,7 @@
       "catalog_no": 26,
       "placement": 3,
       "total_score": 499,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -2367,6 +2886,17 @@
                   18
                 ],
                 "sum": 84
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
               }
             ],
             "total": 251,
@@ -2395,6 +2925,17 @@
                   16,
                   16,
                   17,
+                  17,
+                  18
+                ],
+                "sum": 84
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  16,
+                  16,
                   17,
                   18
                 ],
@@ -2430,7 +2971,7 @@
       "catalog_no": 28,
       "placement": 1,
       "total_score": 272,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "",
       "status": "finished",
@@ -2462,6 +3003,17 @@
                   15
                 ],
                 "sum": 76
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  16,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 84
               }
             ],
             "total": 237,
@@ -2494,6 +3046,17 @@
                   0
                 ],
                 "sum": 0
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  10
+                ],
+                "sum": 10
               }
             ],
             "total": 35,
@@ -2525,7 +3088,7 @@
       "catalog_no": 31,
       "placement": 1,
       "total_score": 500,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "Чемпион РКФ",
       "vc": "CC",
       "status": "finished",
@@ -2557,6 +3120,17 @@
                   18
                 ],
                 "sum": 87
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  17,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
               }
             ],
             "total": 257,
@@ -2589,6 +3163,17 @@
                   17
                 ],
                 "sum": 85
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  15,
+                  16,
+                  16,
+                  16,
+                  17
+                ],
+                "sum": 80
               }
             ],
             "total": 243,
@@ -2620,7 +3205,7 @@
       "catalog_no": 33,
       "placement": 2,
       "total_score": 493,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "CACL",
       "vc": "CC",
       "status": "finished",
@@ -2652,6 +3237,17 @@
                   17
                 ],
                 "sum": 87
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
               }
             ],
             "total": 254,
@@ -2680,6 +3276,17 @@
                   15,
                   16,
                   17,
+                  17,
+                  17
+                ],
+                "sum": 82
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  16,
+                  16,
                   17,
                   17
                 ],
@@ -2715,7 +3322,7 @@
       "catalog_no": 29,
       "placement": 3,
       "total_score": 488,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -2747,6 +3354,17 @@
                   17
                 ],
                 "sum": 85
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 84
               }
             ],
             "total": 247,
@@ -2775,6 +3393,17 @@
                   15,
                   16,
                   16,
+                  17,
+                  17
+                ],
+                "sum": 81
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  16,
+                  15,
                   17,
                   17
                 ],
@@ -2810,7 +3439,7 @@
       "catalog_no": 30,
       "placement": 4,
       "total_score": 473,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -2842,6 +3471,17 @@
                   17
                 ],
                 "sum": 85
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  16,
+                  15,
+                  17,
+                  16
+                ],
+                "sum": 80
               }
             ],
             "total": 238,
@@ -2872,6 +3512,17 @@
                   16,
                   17,
                   17
+                ],
+                "sum": 80
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  15,
+                  16,
+                  16,
+                  17,
+                  16
                 ],
                 "sum": 80
               }
@@ -2905,7 +3556,7 @@
       "catalog_no": 32,
       "placement": 5,
       "total_score": 449,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -2937,6 +3588,17 @@
                   17
                 ],
                 "sum": 82
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  15,
+                  16,
+                  15,
+                  17,
+                  17
+                ],
+                "sum": 80
               }
             ],
             "total": 235,
@@ -2969,6 +3631,17 @@
                   15
                 ],
                 "sum": 73
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  13,
+                  15,
+                  13,
+                  13,
+                  14
+                ],
+                "sum": 68
               }
             ],
             "total": 214,
@@ -3000,7 +3673,7 @@
       "catalog_no": 37,
       "placement": 1,
       "total_score": 525,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "Чемпион РКФ",
       "vc": "CC",
       "status": "finished",
@@ -3032,6 +3705,17 @@
                   18
                 ],
                 "sum": 90
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  18,
+                  19,
+                  18,
+                  18
+                ],
+                "sum": 91
               }
             ],
             "total": 269,
@@ -3061,6 +3745,17 @@
                   17,
                   17,
                   18,
+                  18
+                ],
+                "sum": 87
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  17,
+                  17,
+                  17,
                   18
                 ],
                 "sum": 87
@@ -3095,7 +3790,7 @@
       "catalog_no": 39,
       "placement": 2,
       "total_score": 520,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "CACL",
       "vc": "CC",
       "status": "finished",
@@ -3123,6 +3818,17 @@
                   17,
                   18,
                   18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  18,
+                  17,
                   18,
                   18
                 ],
@@ -3159,6 +3865,17 @@
                   18
                 ],
                 "sum": 89
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  17,
+                  18
+                ],
+                "sum": 85
               }
             ],
             "total": 256,
@@ -3190,7 +3907,7 @@
       "catalog_no": 35,
       "placement": 3,
       "total_score": 514,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -3222,6 +3939,17 @@
                   18
                 ],
                 "sum": 87
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
               }
             ],
             "total": 256,
@@ -3251,6 +3979,17 @@
                   18,
                   18,
                   17,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  18,
                   18
                 ],
                 "sum": 88
@@ -3285,7 +4024,7 @@
       "catalog_no": 36,
       "placement": 4,
       "total_score": 492,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -3317,6 +4056,17 @@
                   18
                 ],
                 "sum": 84
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
               }
             ],
             "total": 252,
@@ -3347,6 +4097,17 @@
                   16,
                   17,
                   18
+                ],
+                "sum": 82
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  15,
+                  17,
+                  17,
+                  16,
+                  17
                 ],
                 "sum": 82
               }
@@ -3380,7 +4141,7 @@
       "catalog_no": 38,
       "placement": 5,
       "total_score": 304,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "",
       "status": "finished",
@@ -3412,6 +4173,17 @@
                   15
                 ],
                 "sum": 75
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  15,
+                  16,
+                  15,
+                  16,
+                  16
+                ],
+                "sum": 78
               }
             ],
             "total": 227,
@@ -3444,6 +4216,17 @@
                   0
                 ],
                 "sum": 0
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  10,
+                  10,
+                  10,
+                  10,
+                  12
+                ],
+                "sum": 52
               }
             ],
             "total": 77,
@@ -3478,7 +4261,7 @@
       "judge_count": 2,
       "qualification": "",
       "vc": "",
-      "status": "disqualified",
+      "status": "dnf",
       "raw_scores_json": {
         "heats": [
           {
@@ -3514,7 +4297,7 @@
       "catalog_no": 40,
       "placement": 1,
       "total_score": 530,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "Лучший юниор",
       "vc": "",
       "status": "finished",
@@ -3546,6 +4329,17 @@
                   18
                 ],
                 "sum": 90
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
               }
             ],
             "total": 268,
@@ -3570,6 +4364,17 @@
               },
               {
                 "judge_number": 2,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_number": 3,
                 "scores": [
                   18,
                   18,
@@ -3609,7 +4414,7 @@
       "catalog_no": 53,
       "placement": 1,
       "total_score": 538,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "Чемпион РКФ, CACIL",
       "vc": "CC",
       "status": "finished",
@@ -3641,6 +4446,17 @@
                   18
                 ],
                 "sum": 90
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
               }
             ],
             "total": 270,
@@ -3673,6 +4489,17 @@
                   18
                 ],
                 "sum": 92
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  16,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 83
               }
             ],
             "total": 268,
@@ -3704,7 +4531,7 @@
       "catalog_no": 49,
       "placement": 2,
       "total_score": 517,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "CACL",
       "vc": "CC",
       "status": "finished",
@@ -3736,6 +4563,17 @@
                   18
                 ],
                 "sum": 89
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 87
               }
             ],
             "total": 263,
@@ -3768,6 +4606,17 @@
                   18
                 ],
                 "sum": 89
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  15,
+                  15,
+                  15,
+                  16,
+                  16
+                ],
+                "sum": 77
               }
             ],
             "total": 254,
@@ -3799,7 +4648,7 @@
       "catalog_no": 41,
       "placement": 3,
       "total_score": 514,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "Чемпион РКФ",
       "vc": "CC",
       "status": "finished",
@@ -3831,6 +4680,17 @@
                   18
                 ],
                 "sum": 90
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  16,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
               }
             ],
             "total": 262,
@@ -3863,6 +4723,17 @@
                   18
                 ],
                 "sum": 90
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  15,
+                  16,
+                  17,
+                  16
+                ],
+                "sum": 81
               }
             ],
             "total": 252,
@@ -3894,7 +4765,7 @@
       "catalog_no": 54,
       "placement": 4,
       "total_score": 505,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -3926,6 +4797,17 @@
                   17
                 ],
                 "sum": 85
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  17,
+                  15,
+                  17,
+                  17
+                ],
+                "sum": 82
               }
             ],
             "total": 251,
@@ -3958,6 +4840,17 @@
                   18
                 ],
                 "sum": 90
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  16,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 83
               }
             ],
             "total": 254,
@@ -3984,12 +4877,12 @@
     {
       "id": 20764,
       "event_id": 1561,
-      "dog_id": 10021,
+      "dog_id": 10231,
       "breed_class": "Русская псовая борзая - Стандартный - Сука",
       "catalog_no": 51,
       "placement": 5,
       "total_score": 495,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "R.CACIL",
       "vc": "CC",
       "status": "finished",
@@ -4021,6 +4914,17 @@
                   17
                 ],
                 "sum": 83
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  16,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 82
               }
             ],
             "total": 246,
@@ -4053,6 +4957,17 @@
                   17
                 ],
                 "sum": 86
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  16,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 83
               }
             ],
             "total": 249,
@@ -4067,7 +4982,7 @@
       "status_reason": null,
       "dog_key": "lunnaja-raduga-belaya-noch--русская-псовая-борзая",
       "dog": {
-        "id": 10021,
+        "id": 10231,
         "dog_key": "lunnaja-raduga-belaya-noch--русская-псовая-борзая",
         "name_lat": "LUNNAJA RADUGA BELAYA NOCH",
         "name_ru": "LUNNAJA RADUGA BELAYA NOCH",
@@ -4084,7 +4999,7 @@
       "catalog_no": 46,
       "placement": 6,
       "total_score": 488,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "CACL",
       "vc": "CC",
       "status": "finished",
@@ -4116,6 +5031,17 @@
                   17
                 ],
                 "sum": 83
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  16,
+                  15,
+                  17,
+                  17
+                ],
+                "sum": 82
               }
             ],
             "total": 247,
@@ -4140,6 +5066,17 @@
               },
               {
                 "judge_number": 2,
+                "scores": [
+                  15,
+                  16,
+                  16,
+                  16,
+                  16
+                ],
+                "sum": 79
+              },
+              {
+                "judge_number": 3,
                 "scores": [
                   15,
                   16,
@@ -4179,7 +5116,7 @@
       "catalog_no": 44,
       "placement": 7,
       "total_score": 469,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -4211,6 +5148,17 @@
                   18
                 ],
                 "sum": 89
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  17,
+                  15,
+                  17,
+                  17
+                ],
+                "sum": 83
               }
             ],
             "total": 257,
@@ -4243,6 +5191,17 @@
                   16
                 ],
                 "sum": 81
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  15,
+                  15,
+                  15,
+                  16,
+                  15
+                ],
+                "sum": 76
               }
             ],
             "total": 212,
@@ -4274,7 +5233,7 @@
       "catalog_no": 52,
       "placement": 8,
       "total_score": 435,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "",
       "status": "finished",
@@ -4306,6 +5265,17 @@
                   16
                 ],
                 "sum": 81
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  17,
+                  13,
+                  13,
+                  10
+                ],
+                "sum": 69
               }
             ],
             "total": 223,
@@ -4338,6 +5308,17 @@
                   15
                 ],
                 "sum": 75
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  16,
+                  15,
+                  15,
+                  15
+                ],
+                "sum": 77
               }
             ],
             "total": 212,
@@ -4369,7 +5350,7 @@
       "catalog_no": 48,
       "placement": null,
       "total_score": 238,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "",
       "status": "dnf",
@@ -4401,6 +5382,17 @@
                   16
                 ],
                 "sum": 79
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  15,
+                  16,
+                  16,
+                  14
+                ],
+                "sum": 77
               }
             ],
             "total": 238,
@@ -4483,7 +5475,7 @@
       "judge_count": 2,
       "qualification": "",
       "vc": "",
-      "status": "disqualified",
+      "status": "dnf",
       "raw_scores_json": {
         "heats": [
           {
@@ -4561,7 +5553,7 @@
       "judge_count": 2,
       "qualification": "",
       "vc": "",
-      "status": "disqualified",
+      "status": "dnf",
       "raw_scores_json": {
         "heats": [
           {
@@ -4597,7 +5589,7 @@
       "catalog_no": 58,
       "placement": 1,
       "total_score": 534,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "Чемпион РКФ, CACIL",
       "vc": "CC",
       "status": "finished",
@@ -4629,6 +5621,17 @@
                   18
                 ],
                 "sum": 90
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
               }
             ],
             "total": 268,
@@ -4661,6 +5664,17 @@
                   18
                 ],
                 "sum": 90
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 92
               }
             ],
             "total": 266,
@@ -4692,7 +5706,7 @@
       "catalog_no": 60,
       "placement": 2,
       "total_score": 529,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "CACL, R.CACIL",
       "vc": "CC",
       "status": "finished",
@@ -4724,6 +5738,17 @@
                   18
                 ],
                 "sum": 88
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
               }
             ],
             "total": 264,
@@ -4756,6 +5781,17 @@
                   18
                 ],
                 "sum": 89
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  19,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 92
               }
             ],
             "total": 265,
@@ -4787,7 +5823,7 @@
       "catalog_no": 59,
       "placement": 3,
       "total_score": 526,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -4819,6 +5855,17 @@
                   18
                 ],
                 "sum": 89
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 84
               }
             ],
             "total": 260,
@@ -4851,6 +5898,17 @@
                   18
                 ],
                 "sum": 89
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 88
               }
             ],
             "total": 266,
@@ -4882,7 +5940,7 @@
       "catalog_no": 55,
       "placement": 4,
       "total_score": 518,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "Чемпион РКФ",
       "vc": "CC",
       "status": "finished",
@@ -4914,6 +5972,17 @@
                   19
                 ],
                 "sum": 90
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  16,
+                  16,
+                  16,
+                  17
+                ],
+                "sum": 82
               }
             ],
             "total": 261,
@@ -4946,6 +6015,17 @@
                   18
                 ],
                 "sum": 87
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  16,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 83
               }
             ],
             "total": 257,
@@ -4977,7 +6057,7 @@
       "catalog_no": 57,
       "placement": 5,
       "total_score": 515,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "CACL",
       "vc": "CC",
       "status": "finished",
@@ -5009,6 +6089,17 @@
                   18
                 ],
                 "sum": 88
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  15,
+                  16,
+                  16,
+                  17
+                ],
+                "sum": 80
               }
             ],
             "total": 252,
@@ -5041,6 +6132,17 @@
                   18
                 ],
                 "sum": 90
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  16,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 84
               }
             ],
             "total": 263,
@@ -5072,7 +6174,7 @@
       "catalog_no": 56,
       "placement": 6,
       "total_score": 504,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -5104,6 +6206,17 @@
                   17
                 ],
                 "sum": 86
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  15,
+                  15,
+                  16,
+                  17
+                ],
+                "sum": 79
               }
             ],
             "total": 250,
@@ -5136,6 +6249,17 @@
                   17
                 ],
                 "sum": 87
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  16,
+                  17,
+                  17,
+                  16
+                ],
+                "sum": 83
               }
             ],
             "total": 254,
@@ -5167,7 +6291,7 @@
       "catalog_no": 61,
       "placement": 1,
       "total_score": 530,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "Лучший юниор",
       "vc": "",
       "status": "finished",
@@ -5199,6 +6323,17 @@
                   18
                 ],
                 "sum": 90
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
               }
             ],
             "total": 268,
@@ -5231,6 +6366,17 @@
                   18
                 ],
                 "sum": 92
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
               }
             ],
             "total": 262,
@@ -5243,10 +6389,10 @@
       "raw_text": "61 | Салюки | Юниоры | Кобель | IMRAN GALSAN KADARI | 11 | 17 | 19 | 18 | 18 | 18 | 268 | 28 | 16 | 18 | 17 | 17 | 17 | 262 | 530 |  | 1 | Лучший юниор |  | ",
       "judges": null,
       "status_reason": null,
-      "dog_key": "имран-галсан-кадари--салюки",
+      "dog_key": "imran-galsan-kadari--салюки",
       "dog": {
         "id": 10253,
-        "dog_key": "имран-галсан-кадари--салюки",
+        "dog_key": "imran-galsan-kadari--салюки",
         "name_lat": "IMRAN GALSAN KADARI",
         "name_ru": "ИМРАН ГАЛСАН КАДАРИ",
         "breed": "САЛЮКИ",
@@ -5262,7 +6408,7 @@
       "catalog_no": 64,
       "placement": 1,
       "total_score": 501,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "Чемпион РКФ",
       "vc": "CC",
       "status": "finished",
@@ -5294,6 +6440,17 @@
                   18
                 ],
                 "sum": 89
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 86
               }
             ],
             "total": 256,
@@ -5326,6 +6483,17 @@
                   17
                 ],
                 "sum": 85
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  16,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 83
               }
             ],
             "total": 245,
@@ -5357,7 +6525,7 @@
       "catalog_no": 66,
       "placement": 2,
       "total_score": 470,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "CACL",
       "vc": "CC",
       "status": "finished",
@@ -5389,6 +6557,17 @@
                   18
                 ],
                 "sum": 82
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  17,
+                  15,
+                  15,
+                  15
+                ],
+                "sum": 78
               }
             ],
             "total": 234,
@@ -5421,6 +6600,17 @@
                   17
                 ],
                 "sum": 81
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  15,
+                  15,
+                  16,
+                  15
+                ],
+                "sum": 77
               }
             ],
             "total": 236,
@@ -5452,7 +6642,7 @@
       "catalog_no": 62,
       "placement": 3,
       "total_score": 469,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -5484,6 +6674,17 @@
                   16
                 ],
                 "sum": 83
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  16,
+                  15,
+                  15,
+                  15
+                ],
+                "sum": 77
               }
             ],
             "total": 236,
@@ -5516,6 +6717,17 @@
                   16
                 ],
                 "sum": 78
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  15,
+                  16,
+                  16,
+                  17,
+                  16
+                ],
+                "sum": 80
               }
             ],
             "total": 233,
@@ -5546,8 +6758,8 @@
       "breed_class": "Тайский риджбек - Стандартный - Микс",
       "catalog_no": 65,
       "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "total_score": 250,
+      "judge_count": 3,
       "qualification": "",
       "vc": "",
       "status": "disqualified",
@@ -5579,6 +6791,17 @@
                   18
                 ],
                 "sum": 86
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  17,
+                  17
+                ],
+                "sum": 86
               }
             ],
             "total": 250,
@@ -5591,10 +6814,11 @@
             "bib_color": "yellow",
             "judges": [],
             "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "disqualified": true,
+            "disqualification_reason": "Агрессия"
           }
-        ]
+        ],
+        "grand_total": 250
       },
       "raw_text": "65 | Тайский риджбек | Стандартный | Сука | ALV BEYLA IZ LF | 81 | 15 | 16 | 16 | 15 | 16 | 250 | 95 | Агрессия |  | 250 |  |  |  |  | ",
       "judges": null,
@@ -5617,8 +6841,8 @@
       "breed_class": "Тайский риджбек - Стандартный - Микс",
       "catalog_no": 63,
       "placement": null,
-      "total_score": null,
-      "judge_count": 2,
+      "total_score": 247,
+      "judge_count": 3,
       "qualification": "",
       "vc": "",
       "status": "disqualified",
@@ -5650,6 +6874,17 @@
                   18
                 ],
                 "sum": 89
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  15,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 83
               }
             ],
             "total": 247,
@@ -5662,10 +6897,11 @@
             "bib_color": "red",
             "judges": [],
             "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "disqualified": true,
+            "disqualification_reason": "Агрессия"
           }
-        ]
+        ],
+        "grand_total": 247
       },
       "raw_text": "63 | Тайский риджбек | Стандартный | Кобель | EMIRESKY TSAR | 80 | 15 | 16 | 16 | 14 | 14 | 247 | 96 | Агрессия |  | 247 |  |  |  |  | ",
       "judges": null,
@@ -5689,7 +6925,7 @@
       "catalog_no": 67,
       "placement": 1,
       "total_score": 494,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "Лучший юниор",
       "vc": "",
       "status": "finished",
@@ -5721,6 +6957,17 @@
                   18
                 ],
                 "sum": 86
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  16,
+                  16,
+                  15,
+                  16
+                ],
+                "sum": 80
               }
             ],
             "total": 244,
@@ -5753,6 +7000,17 @@
                   18
                 ],
                 "sum": 89
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 84
               }
             ],
             "total": 250,
@@ -5784,7 +7042,7 @@
       "catalog_no": 84,
       "placement": 1,
       "total_score": 539,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "Чемпион РКФ, CACIL",
       "vc": "CC",
       "status": "finished",
@@ -5816,6 +7074,17 @@
                   18
                 ],
                 "sum": 92
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 91
               }
             ],
             "total": 271,
@@ -5843,6 +7112,17 @@
                 "scores": [
                   17,
                   19,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  18,
                   18,
                   18,
                   18
@@ -5879,7 +7159,7 @@
       "catalog_no": 88,
       "placement": 2,
       "total_score": 534,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "CACL, R.CACIL",
       "vc": "CC",
       "status": "finished",
@@ -5911,6 +7191,17 @@
                   18
                 ],
                 "sum": 91
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  19,
+                  17,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
               }
             ],
             "total": 267,
@@ -5943,6 +7234,17 @@
                   18
                 ],
                 "sum": 90
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
               }
             ],
             "total": 267,
@@ -5974,7 +7276,7 @@
       "catalog_no": 87,
       "placement": 3,
       "total_score": 531,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -6006,6 +7308,17 @@
                   18
                 ],
                 "sum": 89
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  17,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 86
               }
             ],
             "total": 263,
@@ -6038,6 +7351,17 @@
                   19
                 ],
                 "sum": 91
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 88
               }
             ],
             "total": 268,
@@ -6069,7 +7393,7 @@
       "catalog_no": 91,
       "placement": 4,
       "total_score": 529,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -6101,6 +7425,17 @@
                   18
                 ],
                 "sum": 91
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
               }
             ],
             "total": 264,
@@ -6133,6 +7468,17 @@
                   18
                 ],
                 "sum": 88
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
               }
             ],
             "total": 265,
@@ -6164,7 +7510,7 @@
       "catalog_no": 85,
       "placement": 5,
       "total_score": 526,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -6196,6 +7542,17 @@
                   18
                 ],
                 "sum": 90
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  16,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 83
               }
             ],
             "total": 260,
@@ -6228,6 +7585,17 @@
                   18
                 ],
                 "sum": 89
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  18,
+                  18
+                ],
+                "sum": 86
               }
             ],
             "total": 266,
@@ -6259,7 +7627,7 @@
       "catalog_no": 92,
       "placement": 6,
       "total_score": 526,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -6283,6 +7651,17 @@
               },
               {
                 "judge_number": 2,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_number": 3,
                 "scores": [
                   18,
                   18,
@@ -6323,6 +7702,17 @@
                   18
                 ],
                 "sum": 89
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 88
               }
             ],
             "total": 262,
@@ -6354,7 +7744,7 @@
       "catalog_no": 83,
       "placement": 7,
       "total_score": 525,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -6386,6 +7776,17 @@
                   18
                 ],
                 "sum": 89
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
               }
             ],
             "total": 263,
@@ -6418,6 +7819,17 @@
                   18
                 ],
                 "sum": 87
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
               }
             ],
             "total": 262,
@@ -6449,7 +7861,7 @@
       "catalog_no": 90,
       "placement": 8,
       "total_score": 523,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -6481,6 +7893,17 @@
                   18
                 ],
                 "sum": 91
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  16,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 86
               }
             ],
             "total": 262,
@@ -6513,6 +7936,17 @@
                   18
                 ],
                 "sum": 88
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 87
               }
             ],
             "total": 261,
@@ -6544,7 +7978,7 @@
       "catalog_no": 89,
       "placement": 9,
       "total_score": 514,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -6576,6 +8010,17 @@
                   18
                 ],
                 "sum": 88
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  17,
+                  18,
+                  17,
+                  16
+                ],
+                "sum": 86
               }
             ],
             "total": 259,
@@ -6608,6 +8053,17 @@
                   18
                 ],
                 "sum": 88
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  16,
+                  18,
+                  17,
+                  16
+                ],
+                "sum": 84
               }
             ],
             "total": 255,
@@ -6639,7 +8095,7 @@
       "catalog_no": 86,
       "placement": 10,
       "total_score": 496,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -6671,6 +8127,17 @@
                   18
                 ],
                 "sum": 86
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  12,
+                  13,
+                  12,
+                  15,
+                  15
+                ],
+                "sum": 67
               }
             ],
             "total": 233,
@@ -6703,6 +8170,17 @@
                   18
                 ],
                 "sum": 90
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  17,
+                  17
+                ],
+                "sum": 86
               }
             ],
             "total": 263,
@@ -6734,7 +8212,7 @@
       "catalog_no": 96,
       "placement": 1,
       "total_score": 533,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "Чемпион РКФ",
       "vc": "CC",
       "status": "finished",
@@ -6766,6 +8244,17 @@
                   18
                 ],
                 "sum": 92
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
               }
             ],
             "total": 267,
@@ -6790,6 +8279,17 @@
               },
               {
                 "judge_number": 2,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_number": 3,
                 "scores": [
                   18,
                   18,
@@ -6829,7 +8329,7 @@
       "catalog_no": 98,
       "placement": 2,
       "total_score": 533,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "CACL, CACIL",
       "vc": "CC",
       "status": "finished",
@@ -6861,6 +8361,17 @@
                   18
                 ],
                 "sum": 92
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
               }
             ],
             "total": 271,
@@ -6893,6 +8404,17 @@
                   18
                 ],
                 "sum": 88
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
               }
             ],
             "total": 262,
@@ -6924,7 +8446,7 @@
       "catalog_no": 94,
       "placement": 3,
       "total_score": 529,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "R.CACIL",
       "vc": "CC",
       "status": "finished",
@@ -6956,6 +8478,17 @@
                   18
                 ],
                 "sum": 90
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  17,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 85
               }
             ],
             "total": 258,
@@ -6988,6 +8521,17 @@
                   18
                 ],
                 "sum": 90
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
               }
             ],
             "total": 271,
@@ -7019,7 +8563,7 @@
       "catalog_no": 101,
       "placement": 4,
       "total_score": 525,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -7051,6 +8595,17 @@
                   18
                 ],
                 "sum": 89
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 84
               }
             ],
             "total": 255,
@@ -7083,6 +8638,17 @@
                   18
                 ],
                 "sum": 90
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  19,
+                  19
+                ],
+                "sum": 93
               }
             ],
             "total": 270,
@@ -7114,7 +8680,7 @@
       "catalog_no": 99,
       "placement": 5,
       "total_score": 525,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -7146,6 +8712,17 @@
                   18
                 ],
                 "sum": 90
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
               }
             ],
             "total": 261,
@@ -7178,6 +8755,17 @@
                   18
                 ],
                 "sum": 90
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  16,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 84
               }
             ],
             "total": 264,
@@ -7209,7 +8797,7 @@
       "catalog_no": 97,
       "placement": 6,
       "total_score": 524,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -7241,6 +8829,17 @@
                   18
                 ],
                 "sum": 89
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  17,
+                  18,
+                  17,
+                  17
+                ],
+                "sum": 87
               }
             ],
             "total": 260,
@@ -7269,6 +8868,17 @@
                   17,
                   17,
                   18,
+                  18,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  18,
+                  17,
                   18,
                   18
                 ],
@@ -7304,7 +8914,7 @@
       "catalog_no": 100,
       "placement": 7,
       "total_score": 522,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -7328,6 +8938,17 @@
               },
               {
                 "judge_number": 2,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_number": 3,
                 "scores": [
                   18,
                   18,
@@ -7368,6 +8989,17 @@
                   18
                 ],
                 "sum": 88
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 83
               }
             ],
             "total": 257,
@@ -7399,7 +9031,7 @@
       "catalog_no": 95,
       "placement": 8,
       "total_score": 511,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -7431,6 +9063,17 @@
                   18
                 ],
                 "sum": 88
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 84
               }
             ],
             "total": 255,
@@ -7463,6 +9106,17 @@
                   18
                 ],
                 "sum": 89
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 84
               }
             ],
             "total": 256,
@@ -7494,7 +9148,7 @@
       "catalog_no": 102,
       "placement": 9,
       "total_score": 509,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -7526,6 +9180,17 @@
                   18
                 ],
                 "sum": 90
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 84
               }
             ],
             "total": 257,
@@ -7558,6 +9223,17 @@
                   18
                 ],
                 "sum": 90
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  16,
+                  16,
+                  16,
+                  16
+                ],
+                "sum": 81
               }
             ],
             "total": 252,
@@ -7589,7 +9265,7 @@
       "catalog_no": 103,
       "placement": 10,
       "total_score": 505,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -7621,6 +9297,17 @@
                   18
                 ],
                 "sum": 88
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  18,
+                  18
+                ],
+                "sum": 85
               }
             ],
             "total": 256,
@@ -7653,6 +9340,17 @@
                   18
                 ],
                 "sum": 87
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  15,
+                  16,
+                  16,
+                  16,
+                  16
+                ],
+                "sum": 79
               }
             ],
             "total": 249,
@@ -7684,7 +9382,7 @@
       "catalog_no": 72,
       "placement": 1,
       "total_score": 531,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "Чемпион РКФ",
       "vc": "CC",
       "status": "finished",
@@ -7711,6 +9409,17 @@
                 "scores": [
                   17,
                   19,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  18,
                   18,
                   18,
                   18
@@ -7748,6 +9457,17 @@
                   18
                 ],
                 "sum": 89
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 87
               }
             ],
             "total": 264,
@@ -7779,7 +9499,7 @@
       "catalog_no": 77,
       "placement": 2,
       "total_score": 530,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "CACL",
       "vc": "CC",
       "status": "finished",
@@ -7811,6 +9531,17 @@
                   18
                 ],
                 "sum": 91
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 92
               }
             ],
             "total": 271,
@@ -7843,6 +9574,17 @@
                   18
                 ],
                 "sum": 88
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
               }
             ],
             "total": 259,
@@ -7855,10 +9597,10 @@
       "raw_text": "77 | Уиппет | Стандартный-спринтеры | Кобель | GROM PROMETEY | 37 | 17 | 18 | 18 | 17 | 18 | 271 | 57 | 17 | 17 | 18 | 17 | 17 | 259 | 530 | CC | 2 | CACL |  | ",
       "judges": null,
       "status_reason": null,
-      "dog_key": "гром-прометеи--уиппет",
+      "dog_key": "grom-prometey--уиппет",
       "dog": {
         "id": 9952,
-        "dog_key": "гром-прометеи--уиппет",
+        "dog_key": "grom-prometey--уиппет",
         "name_lat": "GROM PROMETEY",
         "name_ru": "ГРОМ ПРОМЕТЕЙ",
         "breed": "УИППЕТ",
@@ -7874,7 +9616,7 @@
       "catalog_no": 71,
       "placement": 3,
       "total_score": 525,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -7906,6 +9648,17 @@
                   18
                 ],
                 "sum": 89
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
               }
             ],
             "total": 262,
@@ -7938,6 +9691,17 @@
                   18
                 ],
                 "sum": 88
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 84
               }
             ],
             "total": 263,
@@ -7969,7 +9733,7 @@
       "catalog_no": 74,
       "placement": 4,
       "total_score": 524,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -8001,6 +9765,17 @@
                   18
                 ],
                 "sum": 90
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 91
               }
             ],
             "total": 265,
@@ -8033,6 +9808,17 @@
                   18
                 ],
                 "sum": 90
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  16,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 82
               }
             ],
             "total": 259,
@@ -8064,7 +9850,7 @@
       "catalog_no": 69,
       "placement": 5,
       "total_score": 524,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -8096,6 +9882,17 @@
                   18
                 ],
                 "sum": 91
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  19,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
               }
             ],
             "total": 265,
@@ -8128,6 +9925,17 @@
                   18
                 ],
                 "sum": 87
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 84
               }
             ],
             "total": 259,
@@ -8159,7 +9967,7 @@
       "catalog_no": 68,
       "placement": 6,
       "total_score": 522,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -8191,6 +9999,17 @@
                   18
                 ],
                 "sum": 89
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 91
               }
             ],
             "total": 260,
@@ -8223,6 +10042,17 @@
                   18
                 ],
                 "sum": 89
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 88
               }
             ],
             "total": 262,
@@ -8254,7 +10084,7 @@
       "catalog_no": 76,
       "placement": 7,
       "total_score": 521,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -8286,6 +10116,17 @@
                   18
                 ],
                 "sum": 91
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  17,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 85
               }
             ],
             "total": 262,
@@ -8318,6 +10159,17 @@
                   18
                 ],
                 "sum": 89
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 84
               }
             ],
             "total": 259,
@@ -8349,7 +10201,7 @@
       "catalog_no": 70,
       "placement": 8,
       "total_score": 519,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -8381,6 +10233,17 @@
                   18
                 ],
                 "sum": 89
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 87
               }
             ],
             "total": 258,
@@ -8413,6 +10276,17 @@
                   18
                 ],
                 "sum": 88
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 84
               }
             ],
             "total": 261,
@@ -8444,7 +10318,7 @@
       "catalog_no": 75,
       "placement": 9,
       "total_score": 514,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -8476,6 +10350,17 @@
                   18
                 ],
                 "sum": 89
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 88
               }
             ],
             "total": 258,
@@ -8508,6 +10393,17 @@
                   18
                 ],
                 "sum": 89
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  16,
+                  15,
+                  17,
+                  17
+                ],
+                "sum": 81
               }
             ],
             "total": 256,
@@ -8539,7 +10435,7 @@
       "catalog_no": 82,
       "placement": 10,
       "total_score": 513,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -8571,6 +10467,17 @@
                   18
                 ],
                 "sum": 91
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 87
               }
             ],
             "total": 261,
@@ -8603,6 +10510,17 @@
                   18
                 ],
                 "sum": 87
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  16,
+                  16,
+                  17,
+                  18
+                ],
+                "sum": 84
               }
             ],
             "total": 252,
@@ -8634,7 +10552,7 @@
       "catalog_no": 78,
       "placement": 11,
       "total_score": 507,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -8666,6 +10584,17 @@
                   18
                 ],
                 "sum": 88
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 89
               }
             ],
             "total": 256,
@@ -8698,6 +10627,17 @@
                   17
                 ],
                 "sum": 86
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  15,
+                  17,
+                  16,
+                  16,
+                  16
+                ],
+                "sum": 80
               }
             ],
             "total": 251,
@@ -8729,7 +10669,7 @@
       "catalog_no": 106,
       "placement": 1,
       "total_score": 513,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -8761,6 +10701,17 @@
                   17
                 ],
                 "sum": 84
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  15,
+                  16,
+                  16,
+                  15,
+                  15
+                ],
+                "sum": 77
               }
             ],
             "total": 248,
@@ -8793,6 +10744,17 @@
                   18
                 ],
                 "sum": 90
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
               }
             ],
             "total": 265,
@@ -8824,7 +10786,7 @@
       "catalog_no": 105,
       "placement": 2,
       "total_score": 493,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -8856,6 +10818,17 @@
                   17
                 ],
                 "sum": 85
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  16,
+                  17
+                ],
+                "sum": 82
               }
             ],
             "total": 250,
@@ -8888,6 +10861,17 @@
                   18
                 ],
                 "sum": 84
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  15,
+                  15,
+                  16,
+                  16
+                ],
+                "sum": 78
               }
             ],
             "total": 243,
@@ -8919,7 +10903,7 @@
       "catalog_no": 107,
       "placement": 1,
       "total_score": 522,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -8951,6 +10935,17 @@
                   17
                 ],
                 "sum": 84
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  19,
+                  18,
+                  19,
+                  19,
+                  20
+                ],
+                "sum": 95
               }
             ],
             "total": 258,
@@ -8983,6 +10978,17 @@
                   18
                 ],
                 "sum": 89
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  19,
+                  20
+                ],
+                "sum": 95
               }
             ],
             "total": 264,
@@ -9014,7 +11020,7 @@
       "catalog_no": 108,
       "placement": 1,
       "total_score": 522,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "Лучший ветеран",
       "vc": "CC",
       "status": "finished",
@@ -9046,6 +11052,17 @@
                   18
                 ],
                 "sum": 90
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
               }
             ],
             "total": 260,
@@ -9078,6 +11095,17 @@
                   18
                 ],
                 "sum": 89
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
               }
             ],
             "total": 262,
@@ -9109,7 +11137,7 @@
       "catalog_no": 112,
       "placement": 1,
       "total_score": 526,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "Чемпион РКФ",
       "vc": "CC",
       "status": "finished",
@@ -9141,6 +11169,17 @@
                   18
                 ],
                 "sum": 90
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  18,
+                  17,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 87
               }
             ],
             "total": 264,
@@ -9173,6 +11212,17 @@
                   18
                 ],
                 "sum": 90
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  16,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 84
               }
             ],
             "total": 262,
@@ -9204,7 +11254,7 @@
       "catalog_no": 109,
       "placement": 2,
       "total_score": 507,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "CACL",
       "vc": "CC",
       "status": "finished",
@@ -9236,6 +11286,17 @@
                   18
                 ],
                 "sum": 89
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 83
               }
             ],
             "total": 254,
@@ -9268,6 +11329,17 @@
                   17
                 ],
                 "sum": 85
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 84
               }
             ],
             "total": 253,
@@ -9299,7 +11371,7 @@
       "catalog_no": 110,
       "placement": 3,
       "total_score": 420,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "CC",
       "status": "finished",
@@ -9331,6 +11403,17 @@
                   10
                 ],
                 "sum": 45
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  11,
+                  12,
+                  10,
+                  10,
+                  11
+                ],
+                "sum": 54
               }
             ],
             "total": 154,
@@ -9355,6 +11438,17 @@
               },
               {
                 "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_number": 3,
                 "scores": [
                   17,
                   18,
@@ -9392,9 +11486,9 @@
       "dog_id": 9958,
       "breed_class": "Чирнеко дель Этна - Стандартный - Кобель",
       "catalog_no": 111,
-      "placement": 109,
+      "placement": 4,
       "total_score": 109,
-      "judge_count": 2,
+      "judge_count": 3,
       "qualification": "",
       "vc": "",
       "status": "finished",
@@ -9426,6 +11520,17 @@
                   0
                 ],
                 "sum": 0
+              },
+              {
+                "judge_number": 3,
+                "scores": [
+                  10,
+                  11,
+                  11,
+                  11,
+                  11
+                ],
+                "sum": 54
               }
             ],
             "total": 109,

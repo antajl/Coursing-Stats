@@ -17,6 +17,9 @@ export type CombinedRankingDog = {
   sex?: string | null
   owner?: string | null
   pedigree_url?: string | null
+  year?: number
+  year_from?: number
+  year_to?: number
   gold?: number
   silver?: number
   bronze?: number
@@ -47,6 +50,18 @@ function asNum(v: unknown): number | undefined {
   return Number.isFinite(n) ? n : undefined
 }
 
+function mergeYearFrom(a?: number, b?: number): number | undefined {
+  if (a == null) return b
+  if (b == null) return a
+  return Math.min(a, b)
+}
+
+function mergeYearTo(a?: number, b?: number): number | undefined {
+  if (a == null) return b
+  if (b == null) return a
+  return Math.max(a, b)
+}
+
 /** CS only from explicit rating_score or rows that can compute it (need judge_eval_count). */
 function ratingScoreFromSource(from: LooseDog, into: CombinedRankingDog): number | undefined {
   const explicit = asNum(from.rating_score)
@@ -61,6 +76,9 @@ function ratingScoreFromSource(from: LooseDog, into: CombinedRankingDog): number
 }
 
 function mergeDog(into: CombinedRankingDog, from: LooseDog): CombinedRankingDog {
+  const fromYearFrom = asNum(from.year_from) ?? asNum(from.year)
+  const fromYearTo = asNum(from.year_to) ?? asNum(from.year) ?? fromYearFrom
+
   return {
     ...into,
     name_lat: (from.name_lat as string) || into.name_lat,
@@ -69,6 +87,9 @@ function mergeDog(into: CombinedRankingDog, from: LooseDog): CombinedRankingDog 
     sex: (from.sex as string | null | undefined) ?? into.sex,
     owner: (from.owner as string | null | undefined) ?? into.owner,
     pedigree_url: (from.pedigree_url as string | null | undefined) ?? into.pedigree_url,
+    year: asNum(from.year) ?? into.year,
+    year_from: mergeYearFrom(into.year_from, fromYearFrom),
+    year_to: mergeYearTo(into.year_to, fromYearTo),
     gold: asNum(from.gold) ?? into.gold,
     silver: asNum(from.silver) ?? into.silver,
     bronze: asNum(from.bronze) ?? into.bronze,
@@ -91,11 +112,17 @@ function mergeDog(into: CombinedRankingDog, from: LooseDog): CombinedRankingDog 
  * Never let those overwrite season placement/score stats on the combined card.
  */
 function mergeEloOnly(into: CombinedRankingDog, from: LooseDog): CombinedRankingDog {
+  const fromYearFrom = asNum(from.year_from) ?? asNum(from.year)
+  const fromYearTo = asNum(from.year_to) ?? asNum(from.year) ?? fromYearFrom
+
   return {
     ...into,
     name_lat: into.name_lat || String(from.name_lat || `DOG_${into.dog_id}`),
     name_ru: into.name_ru ?? (from.name_ru as string | undefined),
     breed: into.breed || String(from.breed || ''),
+    year: asNum(from.year) ?? into.year,
+    year_from: mergeYearFrom(into.year_from, fromYearFrom),
+    year_to: mergeYearTo(into.year_to, fromYearTo),
     elo_rating: asNum(from.elo_rating) ?? into.elo_rating,
     elo_races: asNum(from.elo_races) ?? into.elo_races,
     rank_delta: (from.rank_delta as number | 'NEW' | undefined) ?? into.rank_delta,
