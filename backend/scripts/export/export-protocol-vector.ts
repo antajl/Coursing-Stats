@@ -82,8 +82,11 @@ export function normalizeBreed(b: string): string {
 }
 
 export function parseBreedClass(breedClass?: string | null, defaultBreed: string = '', defaultSex: string = '') {
-  const parts = (breedClass || '').split(' - ').map(s => s.trim());
-  const breed = parts[0] || defaultBreed || '';
+  let parts = (breedClass || '').split(' - ').map(s => s.trim());
+  if (parts[0] === 'Неявившиеся участники' || parts[0] === 'Неприбывшие участники') {
+    parts = [];
+  }
+  const breed = parts[0] || normalizeBreed(defaultBreed) || '';
   const className = parts[1] || 'Стандартный';
   let category = parts[2] || defaultSex || 'Микс';
 
