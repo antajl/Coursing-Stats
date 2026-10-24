@@ -1,6 +1,5 @@
 import { Info, Award, Trophy, Crown, FileText } from 'lucide-react'
 import ModernDropdown from '../../components/ui/ModernDropdown'
-import HoverTooltip from '../../components/ui/HoverTooltip'
 
 export const SHOW_RATING_MODAL_CONTENT = (
   <div className="p-3.5 space-y-3 text-charcoal-800">
@@ -83,7 +82,7 @@ interface ShowRatingHintProps {
   embedded?: boolean
 }
 
-export default function ShowRatingHint({ embedded }: ShowRatingHintProps) {
+export default function ShowRatingHint({ embedded: _embedded }: ShowRatingHintProps) {
   const trigger = (
     <button
       type="button"
@@ -95,30 +94,8 @@ export default function ShowRatingHint({ embedded }: ShowRatingHintProps) {
     </button>
   )
 
-  if (embedded) {
-    return (
-      <HoverTooltip
-        label={TOOLTIP_CONTENT}
-        placement="bottom"
-        variant="site"
-        delayMs={300}
-      >
-        <div>
-          <ModernDropdown
-            trigger={trigger}
-            width="340px"
-            portal
-            openOnHover
-          >
-            {SHOW_RATING_MODAL_CONTENT}
-          </ModernDropdown>
-        </div>
-      </HoverTooltip>
-    )
-  }
-
   return (
-    <ModernDropdown trigger={trigger} width="340px" portal openOnHover>
+    <ModernDropdown trigger={trigger} width="340px" portal closeOnScroll>
       {SHOW_RATING_MODAL_CONTENT}
     </ModernDropdown>
   )

@@ -318,7 +318,8 @@ export default function StandingPlaceButton({
 
   useEffect(() => {
     if (!open) return
-    const onDoc = (e: MouseEvent) => {
+    updateCoords()
+    const onDoc = (e: MouseEvent | TouchEvent) => {
       const t = e.target as Node
       if (triggerRef.current?.contains(t) || panelRef.current?.contains(t)) return
       setOpen(false)
@@ -326,11 +327,22 @@ export default function StandingPlaceButton({
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') setOpen(false)
     }
-    document.addEventListener('mousedown', onDoc)
+    const onScroll = (e: Event) => {
+      const target = e.target as Node | null
+      if (target && panelRef.current?.contains(target)) return
+      setOpen(false)
+    }
+    const onResize = () => setOpen(false)
+
+    document.addEventListener('pointerdown', onDoc)
     document.addEventListener('keydown', onKey)
+    window.addEventListener('scroll', onScroll, true)
+    window.addEventListener('resize', onResize)
     return () => {
-      document.removeEventListener('mousedown', onDoc)
+      document.removeEventListener('pointerdown', onDoc)
       document.removeEventListener('keydown', onKey)
+      window.removeEventListener('scroll', onScroll, true)
+      window.removeEventListener('resize', onResize)
     }
   }, [open])
 
@@ -341,7 +353,12 @@ export default function StandingPlaceButton({
   const updateCoords = () => {
     const rect = triggerRef.current?.getBoundingClientRect()
     if (!rect) return
-    setCoords({ top: rect.bottom + 8, left: Math.min(rect.left + rect.width / 2, window.innerWidth - 160) })
+    const scrollY = window.scrollY || document.documentElement.scrollTop
+    const scrollX = window.scrollX || document.documentElement.scrollLeft
+    setCoords({
+      top: rect.bottom + scrollY + 8,
+      left: Math.max(scrollX + 140, Math.min(rect.left + scrollX + rect.width / 2, scrollX + window.innerWidth - 160)),
+    })
   }
 
   const toggle = () => {
@@ -357,8 +374,8 @@ export default function StandingPlaceButton({
             id={tipId}
             role="dialog"
             aria-label={scopeTitle(domain, scope, value)}
-            className="fixed min-w-[15.5rem] max-w-[19rem] -translate-x-1/2 rounded-lg border border-old-money-300 bg-cream-50 px-3 py-2.5 text-[11px] font-normal text-charcoal-800 shadow-lg"
-            style={{ top: coords.top, left: coords.left, zIndex: 'var(--z-tooltip)' }}
+            className="absolute z-40 min-w-[15.5rem] max-w-[19rem] -translate-x-1/2 rounded-lg border border-old-money-300 bg-cream-50 px-3 py-2.5 text-[11px] font-normal text-charcoal-800 shadow-lg"
+            style={{ top: coords.top, left: coords.left }}
           >
             <StandingExplainerBody
               domain={domain}

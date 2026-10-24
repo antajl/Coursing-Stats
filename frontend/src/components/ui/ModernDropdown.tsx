@@ -17,6 +17,8 @@ interface ModernDropdownProps {
   openDelay?: number
   /** Delay in ms before closing on mouse leave (default 200ms) */
   closeDelay?: number
+  /** Close dropdown when window or page scrolls */
+  closeOnScroll?: boolean
 }
 
 export default function ModernDropdown({
@@ -30,6 +32,7 @@ export default function ModernDropdown({
   openOnHover = false,
   openDelay = 60,
   closeDelay = 200,
+  closeOnScroll = false,
 }: ModernDropdownProps) {
   const [internalOpen, setInternalOpen] = useState(false)
   const [positionReady, setPositionReady] = useState(false)
@@ -112,19 +115,20 @@ export default function ModernDropdown({
   useEffect(() => {
     if (!isOpen) return
 
-    const handleClickOutside = (event: MouseEvent) => {
+    const handleClickOutside = (event: MouseEvent | TouchEvent) => {
+      const target = event.target as Node | null
       if (
         dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node) &&
+        !dropdownRef.current.contains(target) &&
         triggerRef.current &&
-        !triggerRef.current.contains(event.target as Node)
+        !triggerRef.current.contains(target)
       ) {
         close()
       }
     }
 
-    document.addEventListener('mousedown', handleClickOutside)
-    return () => document.removeEventListener('mousedown', handleClickOutside)
+    document.addEventListener('pointerdown', handleClickOutside)
+    return () => document.removeEventListener('pointerdown', handleClickOutside)
   }, [isOpen])
 
   // Handle escape key
@@ -170,14 +174,32 @@ export default function ModernDropdown({
       setPositionReady(true)
     })
 
-    window.addEventListener('scroll', updatePosition, true)
-    window.addEventListener('resize', updatePosition)
+    const handleScroll = (e: Event) => {
+      if (closeOnScroll) {
+        const target = e.target as Node | null
+        if (target && dropdownRef.current?.contains(target)) return
+        close()
+        return
+      }
+      updatePosition()
+    }
+
+    const handleResize = () => {
+      if (closeOnScroll) {
+        close()
+        return
+      }
+      updatePosition()
+    }
+
+    window.addEventListener('scroll', handleScroll, true)
+    window.addEventListener('resize', handleResize)
 
     return () => {
-      window.removeEventListener('scroll', updatePosition, true)
-      window.removeEventListener('resize', updatePosition)
+      window.removeEventListener('scroll', handleScroll, true)
+      window.removeEventListener('resize', handleResize)
     }
-  }, [isOpen, width])
+  }, [isOpen, width, closeOnScroll])
 
   const dropdownContent = (
     <div

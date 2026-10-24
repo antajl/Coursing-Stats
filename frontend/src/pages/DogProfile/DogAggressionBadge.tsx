@@ -1,7 +1,7 @@
 import { useEffect, useId, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { Link } from 'react-router-dom'
-import { ShieldAlert, X } from 'lucide-react'
+import { ShieldAlert } from 'lucide-react'
 
 export interface AggressionIncident {
   event_id: number
@@ -38,9 +38,21 @@ export default function DogAggressionBadge({ count = 0, incidents = [] }: DogAgg
 
   const isRepeat = effectiveCount >= 2
 
+  const updateCoords = () => {
+    const rect = triggerRef.current?.getBoundingClientRect()
+    if (!rect) return
+    const scrollY = window.scrollY || document.documentElement.scrollTop
+    const scrollX = window.scrollX || document.documentElement.scrollLeft
+    const panelWidth = Math.min(window.innerWidth - 32, 352)
+    const maxLeft = scrollX + window.innerWidth - panelWidth - 16
+    const left = Math.max(scrollX + 16, Math.min(rect.left + scrollX, maxLeft))
+    setCoords({ top: rect.bottom + scrollY + 6, left })
+  }
+
   useEffect(() => {
     if (!open) return
-    const onDoc = (e: MouseEvent) => {
+    updateCoords()
+    const onDoc = (e: MouseEvent | TouchEvent) => {
       const t = e.target as Node
       if (triggerRef.current?.contains(t) || panelRef.current?.contains(t)) return
       setOpen(false)
@@ -48,20 +60,24 @@ export default function DogAggressionBadge({ count = 0, incidents = [] }: DogAgg
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') setOpen(false)
     }
-    document.addEventListener('mousedown', onDoc)
+    const onScroll = (e: Event) => {
+      const target = e.target as Node | null
+      if (target && panelRef.current?.contains(target)) return
+      setOpen(false)
+    }
+    const onResize = () => setOpen(false)
+
+    document.addEventListener('pointerdown', onDoc)
     document.addEventListener('keydown', onKey)
+    window.addEventListener('scroll', onScroll, true)
+    window.addEventListener('resize', onResize)
     return () => {
-      document.removeEventListener('mousedown', onDoc)
+      document.removeEventListener('pointerdown', onDoc)
       document.removeEventListener('keydown', onKey)
+      window.removeEventListener('scroll', onScroll, true)
+      window.removeEventListener('resize', onResize)
     }
   }, [open])
-
-  const updateCoords = () => {
-    const rect = triggerRef.current?.getBoundingClientRect()
-    if (!rect) return
-    const left = Math.max(16, Math.min(rect.left, window.innerWidth - 340))
-    setCoords({ top: rect.bottom + 6, left })
-  }
 
   const toggle = () => {
     if (!open) updateCoords()
@@ -99,7 +115,7 @@ export default function DogAggressionBadge({ count = 0, incidents = [] }: DogAgg
             role="dialog"
             aria-label="Подробности дисквалификаций за агрессию"
             style={{ top: coords.top, left: coords.left }}
-            className="fixed z-[100] w-[min(calc(100vw-32px),22rem)] rounded-xl border border-old-money-200 bg-white p-4 shadow-xl text-left"
+            className="absolute z-40 w-[min(calc(100vw-32px),22rem)] rounded-xl border border-old-money-200 bg-white p-4 shadow-xl text-left"
           >
             <div className="flex items-start justify-between gap-2 border-b border-old-money-100 pb-2.5">
               <div className="min-w-0">
@@ -114,7 +130,7 @@ export default function DogAggressionBadge({ count = 0, incidents = [] }: DogAgg
               <button
                 type="button"
                 onClick={() => setOpen(false)}
-                className="rounded-md p-1 text-charcoal-400 hover:bg-cream-100 hover:text-charcoal-700 transition-colors"
+                className="rounded-md p-1.5 text-charcoal-400 hover:bg-cream-100 hover:text-charcoal-700 transition-colors cursor-pointer"
                 aria-label="Закрыть"
               >
                 <X className="h-4 w-4" />

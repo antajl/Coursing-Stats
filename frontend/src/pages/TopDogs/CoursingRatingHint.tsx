@@ -112,7 +112,7 @@ export default function CoursingRatingHint({
   if (variant === 'unified') {
     return (
       <ModernDropdown
-        openOnHover
+        closeOnScroll
         trigger={
           <button
             type="button"

@@ -130,7 +130,7 @@ export default function EventsToolbar({
 
   const trailing = (
     <ModernDropdown
-      openOnHover
+      closeOnScroll
       trigger={
         <button
           type="button"
