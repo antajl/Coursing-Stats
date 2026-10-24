@@ -145,7 +145,15 @@ function CsDetailLine({
   )
 }
 
-export function StartsLabel({ starts, size = 'sm' }: { starts: number; size?: 'sm' | 'md' }) {
+export function StartsLabel({
+  starts,
+  size = 'sm',
+  label = 'Забегов',
+}: {
+  starts: number
+  size?: 'sm' | 'md'
+  label?: string
+}) {
   // md ≈ favorite button box (28×28): same row height, label not micro-type
   const text =
     size === 'md'
@@ -157,7 +165,7 @@ export function StartsLabel({ starts, size = 'sm' }: { starts: number; size?: 's
       : 'inline-block w-[3ch] text-right font-semibold tabular-nums text-charcoal-700'
   return (
     <div className={`flex shrink-0 items-center gap-1.5 ${text}`}>
-      <span>Забегов</span>
+      <span>{label}</span>
       <span className={num}>{starts}</span>
     </div>
   )

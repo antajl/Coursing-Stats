@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
-import { Calendar, Users, MapPin, Building2, User, PawPrint, Download, FileText, BookOpen, ExternalLink } from 'lucide-react'
+import { Calendar, Users, MapPin, Building2, User, PawPrint, Download, FileText, BookOpen } from 'lucide-react'
 import BreedGroupDivider from './components/BreedGroupDivider'
 import HoverTooltip from '../../../components/ui/HoverTooltip'
 import { formatDate } from './utils'
@@ -148,20 +148,7 @@ export default function EventHeader({ event, results }: EventHeaderProps) {
               <FileText className="h-4 w-4" aria-hidden />
               <span className="hidden sm:inline">Каталог</span>
             </a>
-            {event.results_url && (
-              <a
-                href={event.results_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex min-h-[44px] sm:min-h-0 flex-shrink-0 items-center gap-1.5 rounded-full border border-camel-200 bg-camel-50 px-2.5 py-1.5 text-xs font-medium text-camel-700 shadow-sm transition-colors hover:border-camel-400 hover:bg-camel-100"
-                aria-label="Результаты (HTML)"
-                title="Результаты соревнований (векторный HTML)"
-              >
-                <ExternalLink className="h-4 w-4" aria-hidden />
-                <span className="hidden sm:inline">Результаты</span>
-              </a>
-            )}
-            {event.results_pdf_url && (
+            {event.results_pdf_url ? (
               <a
                 href={event.results_pdf_url}
                 target="_blank"
@@ -171,20 +158,17 @@ export default function EventHeader({ event, results }: EventHeaderProps) {
                 title="Официальный протокол (PDF)"
               >
                 <Download className="h-4 w-4" aria-hidden />
-                <span className="hidden sm:inline">{event.results_url ? 'PDF' : 'Результаты'}</span>
+                <span className="hidden sm:inline">Протокол PDF</span>
               </a>
-            )}
-            {!event.results_url && !event.results_pdf_url && (
-              <a
-                href="#"
+            ) : (
+              <span
                 className="inline-flex min-h-[44px] sm:min-h-0 flex-shrink-0 items-center gap-1.5 rounded-full border border-old-money-200 bg-old-money-50 px-2.5 py-1.5 text-xs font-medium text-old-money-400 shadow-sm cursor-not-allowed"
-                aria-label="Результаты недоступны"
-                title="Результаты недоступны"
-                onClick={(e) => e.preventDefault()}
+                aria-label="Протокол PDF недоступен"
+                title="PDF протокол формируется"
               >
                 <Download className="h-4 w-4" aria-hidden />
-                <span className="hidden sm:inline">Результаты</span>
-              </a>
+                <span className="hidden sm:inline">Протокол PDF</span>
+              </span>
             )}
           </div>
         </div>

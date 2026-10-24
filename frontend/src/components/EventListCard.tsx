@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { type CalendarEvent } from '../pages/Events/eventListUtils'
 import { type ShowRkfCalendarEntry } from '../lib/staticData'
 import EmptyState from './EmptyState'
@@ -28,11 +29,9 @@ export default function EventListCard({
           </div>
           {events.length > 0 ? (
             events.slice(0, 3).map((event) => (
-              <a
+              <Link
                 key={event.id}
-                href={event.results_url ?? '#'}
-                target={event.results_url ? '_blank' : undefined}
-                rel={event.results_url ? 'noopener noreferrer' : undefined}
+                to={`/event/${event.id}`}
                 className="flex min-h-[44px] items-center gap-2 text-xs hover:text-camel-700 transition-colors hover:bg-camel-50/60 px-2 py-2 rounded-lg group focus:outline-none focus:ring-1 focus:ring-camel-500"
               >
                 <span className="text-charcoal-500 text-xs tabular-nums whitespace-nowrap shrink-0 group-hover:text-camel-700 font-medium">
@@ -46,7 +45,7 @@ export default function EventListCard({
                 <svg className="w-3.5 h-3.5 text-charcoal-400 group-hover:text-camel-600 shrink-0 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </a>
+              </Link>
             ))
           ) : (
             <EmptyState
@@ -62,11 +61,9 @@ export default function EventListCard({
           </div>
           {shows.length > 0 ? (
             shows.slice(0, 3).map((show) => (
-              <a
+              <Link
                 key={show.id}
-                href={show.url ?? '#'}
-                target={show.url ? '_blank' : undefined}
-                rel={show.url ? 'noopener noreferrer' : undefined}
+                to={`/shows/exhibition/${show.id}`}
                 className="flex min-h-[44px] items-center gap-2 text-xs hover:text-camel-700 transition-colors hover:bg-camel-50/60 px-2 py-2 rounded-lg group focus:outline-none focus:ring-1 focus:ring-camel-500"
               >
                 <span className="text-charcoal-500 text-xs tabular-nums whitespace-nowrap shrink-0 group-hover:text-camel-700 font-medium">
@@ -80,7 +77,7 @@ export default function EventListCard({
                 <svg className="w-3.5 h-3.5 text-charcoal-400 group-hover:text-camel-600 shrink-0 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </a>
+              </Link>
             ))
           ) : (
             <EmptyState

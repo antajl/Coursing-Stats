@@ -19,7 +19,6 @@ import { useJudgeDetails } from '../../hooks/useStaticData'
 import { SEO } from '../../components/SEO'
 import { JsonLd, personSchema } from '../../components/JsonLd'
 import { formatJudgeDisplayName, getJudgeInitials, getSportJudgeStrictnessBadge } from '../../lib/judgeUiUtils'
-import ProcoursingAttribution from '../../components/ProcoursingAttribution'
 import { handleSortToggle, sortArray, type SortState } from '../../lib/judgeSortUtils'
 
 type ListTab = 'breeds' | 'events' | 'criteria'
@@ -1214,8 +1213,6 @@ export default function JudgeDetail() {
             )}
           </div>
         </div>
-
-        <ProcoursingAttribution className="text-center" />
       </div>
     </>
   )

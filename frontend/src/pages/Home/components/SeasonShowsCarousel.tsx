@@ -78,18 +78,17 @@ export default function SeasonShowsCarousel({
           const { primary } = parseDogName(dog.name_lat, dog.name_ru)
           return (
             <div key={`${slide.breedKey}-${dog.id}`} className="relative group" role="listitem">
-            <HomeSeasonTopRow
-
-              to={showDogProfilePath(dog)}
-              name={primary}
-              breed={dog.breed}
-              sex={dog.sex}
-              dogId={dog.competition_dog_id}
-              meta={String(CURRENT_SEASON)}
-              metric={showHomeMetric(dog)}
-              showTitles={showHomeMetric(dog)}
-              rank={dog.rank ?? i + 1}
-              totalStarts={dog.total_shows}
+              <HomeSeasonTopRow
+                to={showDogProfilePath(dog)}
+                name={primary}
+                breed={dog.breed}
+                sex={dog.sex}
+                dogId={dog.competition_dog_id}
+                metric={showHomeMetric(dog)}
+                showTitles={showHomeMetric(dog)}
+                rank={dog.rank ?? i + 1}
+                totalStarts={dog.total_shows}
+                bestAward={dog.best_award}
               />
             </div>
           )

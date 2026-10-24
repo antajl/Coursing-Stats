@@ -169,7 +169,7 @@ export default defineConfig(({ mode }) => {
           "font-src 'self' https://fonts.gstatic.com; " +
           "connect-src 'self' ws: wss: https://coursing-stats.ru https://api.telegram.org https://coursing-stats-antajl.aws-eu-west-1.turso.io https://auth-worker.antajltube.workers.dev https://www.googletagmanager.com; " +
           "frame-src 'self' https://coursing-stats.ru https://t.me; " +
-          "frame-ancestors 'self' https://coursing-stats.ru http://procoursing.ru https://procoursing.ru; " +
+          "frame-ancestors 'self' https://coursing-stats.ru; " +
           "worker-src 'self' blob:; " +
           "form-action 'self'; " +
           "upgrade-insecure-requests;",
