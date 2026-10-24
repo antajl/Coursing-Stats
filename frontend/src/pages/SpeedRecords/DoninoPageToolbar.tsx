@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import { ChevronDown } from 'lucide-react'
+import { ChevronDown, X } from 'lucide-react'
 import DogSexIcon from '../../components/DogSexIcon'
 import FilterSelect from '../../components/FilterSelect'
 import PageToolbar from '../../components/toolbar/PageToolbar'
@@ -7,6 +7,8 @@ import ToolbarFiltersDropdown from '../../components/toolbar/ToolbarFiltersDropd
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
 import QuickBreedBar from '../TopDogs/QuickBreedBar'
 import ModernDropdown from '../../components/ui/ModernDropdown'
+import BreedSearchDropdown from '../../components/ui/BreedSearchDropdown'
+import { formatBreedName } from '../../lib/breedMapping'
 import { TOOLBAR_NUMBER_INPUT, toolbarPillTriggerClass } from '../../lib/toolbar'
 import type { DogsIndexEntry } from '../../lib/competingBreeds'
 import { displayBreed } from '../../lib/breedMapping'
@@ -147,14 +149,26 @@ export default function DoninoPageToolbar({
         topRowClassName="flex-wrap md:flex-nowrap"
         filters={
           <div className="flex flex-col md:flex-row md:items-center gap-2 w-full min-w-0">
-            {/* Строка 1 на мобилке / левая группа на десктопе */}
-            <div className="flex max-w-full flex-wrap items-center gap-1.5 shrink-0 w-full md:w-auto">
+            {/* Строка 1 на мобилке: Поиск на всю ширину */}
+            <div className="w-full md:hidden">
               <ToolbarSearch
                 value={searchQuery}
                 onChange={onSearchChange}
                 placeholder="Кличка, порода…"
-                className="flex-1 min-w-0 sm:w-44 md:w-40 lg:w-48"
+                className="w-full min-w-0"
               />
+            </div>
+
+            {/* Строка 2 на мобилке / левая группа на десктопе */}
+            <div className="flex max-w-full flex-wrap items-center gap-1.5 shrink-0 w-full md:w-auto">
+              <div className="hidden md:block">
+                <ToolbarSearch
+                  value={searchQuery}
+                  onChange={onSearchChange}
+                  placeholder="Кличка, порода…"
+                  className="sm:w-44 md:w-40 lg:w-48"
+                />
+              </div>
               <ModernDropdown
                 trigger={
                   <button
@@ -345,13 +359,54 @@ export default function DoninoPageToolbar({
                   </div>
                 </ToolbarFiltersDropdown>
               ) : null}
+
+              {/* Выбор породы выпадающим списком на мобилке */}
+              <div className="shrink-0 md:hidden">
+                <BreedSearchDropdown
+                  breeds={breeds}
+                  selectedBreed={filterBreeds[0] || ''}
+                  onSelect={(breed) => {
+                    if (onBreedChange) {
+                      onBreedChange(breed)
+                    } else {
+                      for (const b of [...filterBreeds]) onToggleFilter('breed', b)
+                      if (breed) onToggleFilter('breed', breed)
+                    }
+                  }}
+                  trigger={
+                    <button
+                      type="button"
+                      className={`shrink-0 ${toolbarPillTriggerClass(filterBreeds.length > 0)}`}
+                    >
+                      <span className="truncate max-w-[130px]">
+                        {filterBreeds.length > 0 ? formatBreedName(filterBreeds[0]) : 'Порода'}
+                      </span>
+                      <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
+                    </button>
+                  }
+                  dogIndex={dogIndex}
+                />
+              </div>
+
+              {/* Сброс фильтров на мобилке */}
+              {hasActiveFilters && (
+                <button
+                  type="button"
+                  onClick={onClearFilters}
+                  className="md:hidden shrink-0 inline-flex items-center gap-1 rounded-lg px-2.5 py-1.5 text-xs font-medium text-old-money-600 hover:text-charcoal-900 hover:bg-cream-100 transition-colors"
+                  title="Сбросить все фильтры"
+                >
+                  <X className="h-3.5 w-3.5" />
+                  <span>Сбросить</span>
+                </button>
+              )}
             </div>
 
             {/* Разделитель между фильтрами и породами на десктопе */}
             <div className="hidden md:block h-5 w-px bg-old-money-300 shrink-0 mx-0.5" aria-hidden="true" />
 
-            {/* Быстрый выбор пород QuickBreedBar */}
-            <div className="flex-1 min-w-0 w-full md:w-auto">
+            {/* Быстрый выбор пород QuickBreedBar — только на десктопе! */}
+            <div className="hidden md:block flex-1 min-w-0 w-full md:w-auto">
               <QuickBreedBar
                 selectedBreed={filterBreeds[0] || ''}
                 onSelectBreed={(breed) => {

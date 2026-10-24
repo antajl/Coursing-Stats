@@ -286,7 +286,7 @@ export function build404Html(spaHtml: string): string {
 
 /** Patch SPA shell: title, description, canonical, OG/Twitter, optional JSON-LD, #root body. */
 export function applyMetaToSpaShell(spaHtml: string, options: ApplyMetaOptions): string {
-  const ogImage = options.ogImage || `${SITE_ORIGIN}/og-image.svg`
+  const ogImage = options.ogImage || `${SITE_ORIGIN}/og-image.png`
   let html = spaHtml
   html = replaceTitle(html, options.title)
   html = replaceOrInsertMetaDescription(html, options.description)
@@ -296,6 +296,9 @@ export function applyMetaToSpaShell(spaHtml: string, options: ApplyMetaOptions):
   html = replaceOrInsertMetaProperty(html, 'og:title', options.title)
   html = replaceOrInsertMetaProperty(html, 'og:description', options.description)
   html = replaceOrInsertMetaProperty(html, 'og:image', ogImage)
+  html = replaceOrInsertMetaProperty(html, 'og:image:width', '1200')
+  html = replaceOrInsertMetaProperty(html, 'og:image:height', '630')
+  html = replaceOrInsertMetaProperty(html, 'og:image:type', 'image/png')
   html = replaceOrInsertMetaProperty(html, 'og:locale', 'ru_RU')
   html = replaceOrInsertMetaProperty(html, 'og:site_name', 'Coursing Stats')
   html = replaceOrInsertMetaName(html, 'twitter:card', 'summary_large_image')

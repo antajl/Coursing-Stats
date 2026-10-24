@@ -24,7 +24,7 @@ const DEFAULT_KEYWORDS = [
 
 export function SEO({ title, description, keywords, ogImage, noIndex, canonicalUrl }: SEOProps) {
   const fullTitle = title.includes('Coursing Stats') ? title : `${title} | Coursing Stats`
-  const defaultImage = 'https://coursing-stats.ru/og-image.svg'
+  const defaultImage = 'https://coursing-stats.ru/og-image.png'
   const siteUrl = 'https://coursing-stats.ru'
 
   return (
@@ -43,6 +43,9 @@ export function SEO({ title, description, keywords, ogImage, noIndex, canonicalU
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage || defaultImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:type" content="image/png" />
       <meta property="og:locale" content="ru_RU" />
       <meta property="og:site_name" content="Coursing Stats" />
 

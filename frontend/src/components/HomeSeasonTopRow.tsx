@@ -160,7 +160,7 @@ export default function HomeSeasonTopRow({
           {renderMetricLine}
         </div>
 
-        <div className="mr-6 sm:mr-7 flex min-h-0 min-w-[4.75rem] sm:min-w-[8rem] shrink-0 flex-col justify-center items-end border-l border-old-money-200/60 pl-2 sm:pl-2.5">
+        <div className="mr-6 sm:mr-7 flex min-h-0 w-[6.5rem] sm:w-[8.5rem] shrink-0 flex-col justify-center items-start border-l border-old-money-200/60 pl-2 sm:pl-2.5">
           <div className="flex flex-col items-start gap-1 sm:gap-1.5">
             <StartsLabel starts={participations} size="md" label="Выставок" />
             {renderBestAwardOrMedals}

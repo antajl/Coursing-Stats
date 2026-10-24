@@ -1,4 +1,6 @@
-import { Info, FileText } from 'lucide-react'
+import { useState } from 'react'
+import { Info, FileText, ChevronDown } from 'lucide-react'
+import { toolbarPillTriggerClass } from '../../lib/toolbar'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
 import ToolbarTip from '../../components/toolbar/ToolbarTip'
@@ -75,6 +77,7 @@ export default function EventsToolbar({
   availableMonthsByYear,
   stats,
 }: EventsToolbarProps) {
+  const [disciplineDropdownOpen, setDisciplineDropdownOpen] = useState(false)
   const disciplineLabel =
     DISCIPLINE_OPTIONS.find((d) => d.value === filterDiscipline)?.label || 'Дисциплина'
 
@@ -137,7 +140,62 @@ export default function EventsToolbar({
           availableMonthsByYear={availableMonthsByYear}
         />
 
-        <div className="flex items-center gap-1 rounded-full border border-old-money-200/80 bg-cream-50 p-0.5">
+        {/* Выбор дисциплины выпадающим списком на мобилке */}
+        <div className="shrink-0 sm:hidden">
+          <ModernDropdown
+            trigger={
+              <button
+                type="button"
+                className={`shrink-0 ${toolbarPillTriggerClass(Boolean(filterDiscipline))}`}
+              >
+                <span>{filterDiscipline ? disciplineLabel : 'Дисциплина'}</span>
+                <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
+              </button>
+            }
+            isOpen={disciplineDropdownOpen}
+            onOpenChange={setDisciplineDropdownOpen}
+            width="160px"
+          >
+            <div className="p-1 max-h-60 overflow-y-auto" role="menu">
+              <button
+                type="button"
+                role="menuitem"
+                onClick={() => {
+                  onFilterDisciplineChange('')
+                  setDisciplineDropdownOpen(false)
+                }}
+                className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
+                  !filterDiscipline
+                    ? 'bg-camel-500 text-charcoal-900 font-semibold'
+                    : 'text-charcoal-700 hover:bg-camel-100'
+                }`}
+              >
+                Все дисциплины
+              </button>
+              {DISCIPLINE_OPTIONS.map((d) => (
+                <button
+                  key={d.value}
+                  type="button"
+                  role="menuitem"
+                  onClick={() => {
+                    onFilterDisciplineChange(d.value)
+                    setDisciplineDropdownOpen(false)
+                  }}
+                  className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
+                    filterDiscipline === d.value
+                      ? 'bg-camel-500 text-charcoal-900 font-semibold'
+                      : 'text-charcoal-700 hover:bg-camel-100'
+                  }`}
+                >
+                  {d.label}
+                </button>
+              ))}
+            </div>
+          </ModernDropdown>
+        </div>
+
+        {/* Кнопки дисциплин на десктопе */}
+        <div className="hidden sm:flex items-center gap-1 rounded-full border border-old-money-200/80 bg-cream-50 p-0.5">
           {DISCIPLINE_OPTIONS.map((d) => {
             const active = filterDiscipline === d.value
             return (

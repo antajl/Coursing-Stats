@@ -1,12 +1,16 @@
 import { useMemo, useState, type ReactNode } from 'react'
+import { ChevronDown, X } from 'lucide-react'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarFiltersDropdown from '../../components/toolbar/ToolbarFiltersDropdown'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
 import ModernDropdown from '../../components/ui/ModernDropdown'
+import BreedSearchDropdown from '../../components/ui/BreedSearchDropdown'
 import QuickBreedBar, { SHOW_CANDIDATE_BREEDS } from '../TopDogs/QuickBreedBar'
 import ShowRatingHint from './ShowRatingHint'
+import { formatBreedName } from '../../lib/breedMapping'
 import {
   TOOLBAR_NUMBER_INPUT,
+  toolbarPillTriggerClass,
 } from '../../lib/toolbar'
 import {
   SHOW_AWARD_BADGE,
@@ -133,7 +137,7 @@ export default function ShowRankingFilters({
             </div>
 
             {/* Строка 2 на мобилке / левая группа на десктопе */}
-            <div className="flex items-center gap-2 shrink-0 w-full md:w-auto">
+            <div className="flex flex-wrap items-center gap-1.5 shrink-0 w-full md:w-auto">
               <div className="hidden md:block">
                 <ToolbarSearch
                   value={searchQuery}
@@ -191,7 +195,28 @@ export default function ShowRankingFilters({
                 </ModernDropdown>
               </div>
 
-              {/* Панель фильтров наград и групп (всегда доступна!) */}
+              {/* Выбор породы выпадающим списком на мобилке */}
+              <div className="shrink-0 md:hidden">
+                <BreedSearchDropdown
+                  breeds={breedValues}
+                  selectedBreed={filterBreed}
+                  onSelect={onBreedChange}
+                  trigger={
+                    <button
+                      type="button"
+                      className={`shrink-0 ${toolbarPillTriggerClass(Boolean(filterBreed))}`}
+                    >
+                      <span className="truncate max-w-[130px]">
+                        {filterBreed ? formatBreedName(filterBreed) : 'Порода'}
+                      </span>
+                      <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
+                    </button>
+                  }
+                  dogIndex={dogIndex}
+                />
+              </div>
+
+              {/* Панель фильтров наград и групп */}
               <div className="shrink-0">
                 <ToolbarFiltersDropdown
                   active={hasPanelFilters}
@@ -264,8 +289,8 @@ export default function ShowRankingFilters({
               aria-hidden="true"
             />
 
-            {/* Выбор породы на той же строке на md+ / строка 2 на мобилке */}
-            <div className="flex-1 min-w-0 w-full md:w-auto">
+            {/* Выбор породы QuickBreedBar — только на десктопе! */}
+            <div className="hidden md:block flex-1 min-w-0 w-full md:w-auto">
               <QuickBreedBar
                 selectedBreed={filterBreed}
                 onSelectBreed={onBreedChange}
