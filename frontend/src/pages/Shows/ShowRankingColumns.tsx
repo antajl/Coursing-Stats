@@ -24,7 +24,7 @@ function dogListKey(dog: ShowDogCardData): string {
 export default function ShowRankingColumns({
   dogs,
   filterYear,
-    filterBreed,
+  filterBreed,
   favorites,
   onToggleFavorite,
 }: ShowRankingColumnsProps) {

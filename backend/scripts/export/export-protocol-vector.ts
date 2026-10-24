@@ -55,6 +55,8 @@ export interface CompetitionData {
     competition_type?: string;
     full_title?: string;
     event_type?: string;
+    host_club?: string | null;
+    judges?: string | null;
   };
   results: CompetitionResult[];
 }
@@ -159,16 +161,31 @@ export function buildEventTitle(comp: CompetitionData): string {
     }
   }
   let typeStr = type.toLowerCase();
-  if (typeStr === 'бега борзых') {
+  if (typeStr === 'бега борзых' || typeStr.includes('бега')) {
     typeStr = 'по бегам борзых';
+  } else if (typeStr === 'курсинг борзых' || typeStr.includes('курсинг')) {
+    typeStr = 'по курсингу борзых';
+  } else if (typeStr === 'бзмп' || typeStr.includes('приманк')) {
+    typeStr = 'по бегам за механической приманкой';
   } else if (!typeStr.startsWith('по ')) {
     typeStr = `по ${typeStr}`;
   }
-  const doninoPrefix = (comp.event.location && comp.event.location.includes('Донино')) ? ' (Донино)' : '';
+  const doninoPrefix = (comp.event.location && comp.event.location.includes('Донино') && !loc.includes('Донино')) ? ' (Донино)' : '';
   return `${kindLabel} ${typeStr}${doninoPrefix}, ${dateStr}${loc}`;
 }
 
 // ----------------------------------------------------
+export function buildMetaRowsHtml(comp: CompetitionData, colspan: number): string {
+  let html = '';
+  if (comp.event.host_club) {
+    html += `\r\n    <tr class="meta-row">\r\n      <td colspan="${colspan}"><b>Организатор:</b> ${escapeHtml(comp.event.host_club)}</td>\r\n    </tr>`;
+  }
+  if (comp.event.judges) {
+    html += `\r\n    <tr class="meta-row">\r\n      <td colspan="${colspan}"><b>Судьи:</b> ${escapeHtml(comp.event.judges)}</td>\r\n    </tr>`;
+  }
+  return html;
+}
+
 // RACING SPECIFIC RENDERING (Бега борзых)
 // ----------------------------------------------------
 
@@ -264,10 +281,12 @@ export function buildRacingProtocolHtml(comp: CompetitionData): string {
 
   dnsList.sort((a, b) => a.catalog_no - b.catalog_no);
 
+  const metaRowsHtml = buildMetaRowsHtml(comp, 18);
+
   let tableRowsHtml = `
     <tr class="top-title-row">
       <td colspan="18">${escapeHtml(eventTitle)}</td>
-    </tr>
+    </tr>${metaRowsHtml}
     <tr class="col-header">
       <td>Место</td>
       <td>№</td>
@@ -445,6 +464,12 @@ export function buildRacingProtocolHtml(comp: CompetitionData): string {
       font-weight: bold;
       padding: 7px 4px;
     }
+    tr.meta-row td {
+      font-size: 10.5pt;
+      font-weight: normal;
+      padding: 3.5px 4px;
+      text-align: center;
+    }
     tr.col-header td {
       font-size: 10pt;
       font-weight: normal;
@@ -501,6 +526,10 @@ export function buildRacingProtocolHtml(comp: CompetitionData): string {
       tr.top-title-row td {
         font-size: 11pt;
         padding: 3px;
+      }
+      tr.meta-row td {
+        font-size: 8.5pt;
+        padding: 2px 2px;
       }
       tr.col-header td {
         font-size: 8.5pt;
@@ -625,10 +654,12 @@ export function buildCoursingProtocolHtml(comp: CompetitionData): string {
 
   dnsList.sort((a, b) => a.catalog_no - b.catalog_no);
 
+  const metaRowsHtml = buildMetaRowsHtml(comp, 25);
+
   let tableRowsHtml = `
     <tr class="top-title-row">
       <td colspan="25">${escapeHtml(eventTitle)}</td>
-    </tr>
+    </tr>${metaRowsHtml}
     <tr class="col-header">
       <td rowspan="2">Место</td>
       <td rowspan="2">№</td>
@@ -845,6 +876,12 @@ export function buildCoursingProtocolHtml(comp: CompetitionData): string {
       font-weight: bold;
       padding: 7px 4px;
     }
+    tr.meta-row td {
+      font-size: 10.5pt;
+      font-weight: normal;
+      padding: 3.5px 4px;
+      text-align: center;
+    }
     tr.col-header td {
       font-size: 10pt;
       font-weight: normal;
@@ -903,6 +940,10 @@ export function buildCoursingProtocolHtml(comp: CompetitionData): string {
       tr.top-title-row td {
         font-size: 11pt;
         padding: 3px;
+      }
+      tr.meta-row td {
+        font-size: 8.5pt;
+        padding: 2px 2px;
       }
       tr.col-header td {
         font-size: 8.5pt;

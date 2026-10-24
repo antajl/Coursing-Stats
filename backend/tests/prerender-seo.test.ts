@@ -3,9 +3,12 @@ import {
   applyMetaToSpaShell,
   breadcrumbJsonLd,
   build404Html,
+  buildCompetitionsHubHtml,
   buildDogBodyHtml,
   buildHubBodyHtml,
   buildNeutralSpaShell,
+  competitionsJsonLd,
+  DEFAULT_COMPETITION_FAQS,
   escapeHtml,
   eventMetaFromEntry,
   HUB_PAGES,
@@ -212,5 +215,39 @@ describe('prerender-seo helpers', () => {
     expect(donino.title.toLowerCase()).toContain('донино')
     expect(donino.title.toLowerCase()).toMatch(/курсинг/)
     expect(donino.description.toLowerCase()).toMatch(/в донино|курсинг донино/)
+  })
+
+  it('buildCompetitionsHubHtml renders semantic H1, AI Overview FAQ, and dog leader links', () => {
+    const compHub = HUB_PAGES.find((h) => h.path === '/competitions')!
+    const html = buildCompetitionsHubHtml(compHub, [
+      {
+        dog_id: 5645,
+        name_lat: 'STANGERS LAND KATALINA',
+        name_ru: 'СТАНГЕРС ЛАНД КАТАЛИНА',
+        breed: 'УИППЕТ',
+        gold: 4,
+        silver: 1,
+        bronze: 0,
+        total_starts: 9,
+      },
+    ])
+
+    expect(html).toContain('<h1>')
+    expect(html).toContain('Частые вопросы о рейтинге курсинга в России')
+    expect(html).toContain('Существует ли единый всероссийский рейтинг собак по курсингу?')
+    expect(html).toContain('Coursing Stats на основе официальных протоколов соревнований РКФ с 2015 года')
+    expect(html).toContain('забегов: 9')
+    expect(html).not.toContain('стартов:')
+    expect(html).toContain('<a href="/dog/5645">Стангерс Ланд Каталина</a>')
+  })
+
+  it('competitionsJsonLd outputs FAQPage schema with questions and answers', () => {
+    const jsonLd = competitionsJsonLd(DEFAULT_COMPETITION_FAQS)
+    const graph = (jsonLd as any)['@graph'] as any[]
+    const faqPage = graph.find((item) => item['@type'] === 'FAQPage')
+    expect(faqPage).toBeDefined()
+    expect(faqPage.mainEntity.length).toBeGreaterThanOrEqual(3)
+    expect(faqPage.mainEntity[0].name).toContain('Существует ли единый всероссийский рейтинг')
+    expect(faqPage.mainEntity[0].acceptedAnswer.text).toContain('Coursing Stats')
   })
 })

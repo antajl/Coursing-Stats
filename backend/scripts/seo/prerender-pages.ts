@@ -14,10 +14,13 @@ import {
   applyMetaToSpaShell,
   breadcrumbJsonLd,
   build404Html,
+  buildCompetitionsHubHtml,
   buildDogBodyHtml,
   buildHubBodyHtml,
   buildNeutralSpaShell,
   buildSimpleEntityBodyHtml,
+  competitionsJsonLd,
+  DEFAULT_COMPETITION_FAQS,
   dogMetaFromProfile,
   dogMetaFromShowRanking,
   doninoMeta,
@@ -123,13 +126,35 @@ function hubOutPath(hubPath: string): string {
 }
 
 function prerenderHubs(spaHtml: string): number {
+  let topPlacementDogs: any[] = []
+  const topPlacementPath = path.join(ROOT, 'data/v1/indexes/top-placement-2026.json')
+  if (fs.existsSync(topPlacementPath)) {
+    try {
+      const parsed = JSON.parse(fs.readFileSync(topPlacementPath, 'utf8'))
+      if (Array.isArray(parsed.items)) {
+        topPlacementDogs = parsed.items
+      }
+    } catch {
+      // ignore
+    }
+  }
+
   for (const hub of HUB_PAGES) {
     const canonicalUrl = hub.path === '/' ? `${SITE_ORIGIN}/` : `${SITE_ORIGIN}${hub.path.replace(/\/?$/, '/')}`
+    let bodyHtml = buildHubBodyHtml(hub)
+    let jsonLd: Record<string, unknown> | undefined
+
+    if (hub.path === '/competitions') {
+      bodyHtml = buildCompetitionsHubHtml(hub, topPlacementDogs)
+      jsonLd = competitionsJsonLd(DEFAULT_COMPETITION_FAQS)
+    }
+
     const html = applyMetaToSpaShell(spaHtml, {
       title: hub.title,
       description: hub.description,
       canonicalUrl,
-      bodyHtml: buildHubBodyHtml(hub),
+      bodyHtml,
+      jsonLd,
     })
     writeHtml(hubOutPath(hub.path), html)
   }
