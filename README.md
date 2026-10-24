@@ -8,11 +8,8 @@
   *Open-source cynological analytics platform for sighthound sports, RKF shows and speed records*
 
   <p align="center">
-    <a href="https://coursing-stats.ru"><strong>coursing-stats.ru »</strong></a>
-    <br />
-    <br />
     <a href="https://coursing-stats.ru">
-      <img src="https://img.shields.io/badge/Status-Production-2e7d32?style=flat-square" alt="Production" />
+      <img src="https://img.shields.io/badge/Status-Live-2e7d32?style=flat-square" alt="Status Live" />
     </a>
     <a href="https://t.me/coursing_stats_bot">
       <img src="https://img.shields.io/badge/Telegram_Bot-@coursing__stats__bot-2CA5E0?style=flat-square&logo=telegram&logoColor=white" alt="Telegram Bot" />
@@ -32,7 +29,7 @@
   </p>
 
   <p align="center">
-    <a href="https://coursing-stats.ru">Веб-сайт</a> •
+    <a href="https://coursing-stats.ru"><strong>coursing-stats.ru</strong></a> •
     <a href="https://t.me/coursing_stats_bot">Telegram-бот</a> •
     <a href="docs/ROADMAP.md">Дорожная карта</a> •
     <a href="docs/MAP.md">Документация</a> •
@@ -58,21 +55,39 @@
 
 ---
 
-## Архитектура трёх доменов
+## Архитектура и поток данных
 
 ```mermaid
 flowchart LR
-    CS[CoursingStats] --> Sport[Спорт: Курсинг и Бега]
-    CS --> Shows[Выставки РКФ]
-    CS --> Donino[Донино: Спринт]
+    subgraph Sources[Источники]
+        P[procoursing.ru]
+        R[Отчеты РКФ]
+        D[Полигон Донино]
+    end
 
-    Sport --> S_Data[Procoursing.ru 2015–2026<br>Медали + Очки CS]
-    Shows --> Sh_Data[Официальные отчеты РКФ<br>1.5M+ собак / 60k+ выставок]
-    Donino --> D_Data[Радарные замеры км/ч<br>Курсинг 350 м в секундах]
+    subgraph Pipeline[Пайплайн данных]
+        Ingest[yarn ingest-competition]
+        Parsers[Парсеры и валидация]
+        Build[yarn build-all-data]
+    end
+
+    subgraph Storage[Хранение и CDN]
+        CDN[Static CDN /data/v1/]
+        Turso[(Turso Edge SQLite)]
+    end
+
+    subgraph Clients[Интерфейсы]
+        Web[Веб-сайт React 19]
+        Bot[Telegram-бот Workers]
+    end
+
+    Sources --> Pipeline --> Storage --> Clients
 ```
 
+### Три домена данных
+
 | Домен | Что отслеживает | Источники и алгоритмы |
-|---|---|---|
+|:---|:---|:---|
 | **Соревнования (Sport)** | Курсинг, бега за механической приманкой (БЗМП), круговой трек. Профили собак, статистика судей, динамика забегов. | Данные 2015–2026 гг. Независимые зачёты: **Медали** (подиумы) и **Очки CS** (баллы за качество забегов). |
 | **Выставки РКФ (Shows)** | Национальный выставочный рейтинг, протоколы рингов, профили экспертов-судей и архивы (CAC, CACIB, моно). | Парсинг официальных PDF-отчетов РКФ. База из более чем 1.5 млн собак и расчет годовых рейтингов по породам и группам FCI. |
 | **Донино (Speed)** | Фиксация спринтерских рекордов борзых на специализированной трассе в Донино. | Радарные замеры максимальной скорости (**км/ч**) и прохождение дистанции курсинга 350 м (**секунды**). |
@@ -82,8 +97,8 @@ flowchart LR
 ## Масштаб платформы
 
 | Показатель | Значение |
-|---|---|
-| Спортивные турниры | 157 состязаний (2015–2026) |
+|:---|---:|
+| Спортивные турниры (курсинг, бега, БЗМП) | 157 состязаний (2015–2026) |
 | Спортивные собаки в базе | 2 341 собака |
 | Результаты забегов в протоколах | 9 082 записи |
 | Выставки РКФ | 60 000+ выставок |
