@@ -78,12 +78,12 @@ export default function JudgeCard({ judge }: JudgeCardProps) {
         </div>
 
         <div className="mt-1 flex flex-wrap items-center gap-2 text-xs text-charcoal-500">
-          <span>{judge.unique_events || 0} соревнований</span>
-          <span>·</span>
-          <span>{judge.unique_breeds || 0} пород</span>
+          <span className="hidden sm:inline">{judge.unique_events || 0} соревнований</span>
+          <span className="hidden sm:inline">·</span>
+          <span className="hidden sm:inline">{judge.unique_breeds || 0} пород</span>
           {typeof judge.unique_dogs === 'number' && (
             <>
-              <span>·</span>
+              <span className="hidden sm:inline">·</span>
               <span>{judge.unique_dogs} собак</span>
             </>
           )}

@@ -208,17 +208,18 @@ export default function HomeHeroStage({ children, metrics, onCloseMetrics }: Hom
         <div
           ref={metricsRef}
           data-metrics-panel="true"
-          className="relative z-40 w-full max-w-xl mx-auto px-3 pt-2 md:pt-0 md:fixed md:top-20 md:max-w-5xl md:px-0 max-h-[calc(88dvh-4rem)] md:max-h-none overflow-y-auto md:overflow-visible will-change-opacity pointer-events-auto home-v2-stage-metrics"
+          className="relative z-40 w-full max-w-xl mx-auto px-3 pt-2 pb-4 md:py-0 md:fixed md:top-20 md:max-w-5xl md:px-0 will-change-opacity pointer-events-auto home-v2-stage-metrics"
         >
           {/* Mobile close button: smoothly collapses stage so content flies up */}
           <div className="md:hidden flex justify-end pb-1.5">
             <button
               type="button"
               onClick={handleCloseMobile}
-              className="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md shadow text-xs font-semibold text-char-800 flex items-center gap-1 active:scale-95 border border-camel-200/80 transition-transform"
+              className="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md shadow text-xs font-semibold text-char-800 flex items-center gap-1.5 active:scale-95 border border-camel-200/80 transition-transform"
               aria-label="Закрыть блок ближайших событий"
             >
-              ✕ Закрыть
+              <Icons.close className="w-3.5 h-3.5 text-char-600" aria-hidden />
+              <span>Закрыть</span>
             </button>
           </div>
           {metrics}

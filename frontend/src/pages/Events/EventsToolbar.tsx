@@ -82,17 +82,50 @@ export default function EventsToolbar({
     onFilterDisciplineChange(filterDiscipline === d ? '' : d)
   }
 
+  const trailing = (
+    <ModernDropdown
+      closeOnScroll
+      trigger={
+        <button
+          type="button"
+          className="inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full border border-old-money-300/80 bg-cream-50 px-3 text-xs font-semibold text-charcoal-800 hover:border-camel-500 hover:bg-cream-100 hover:text-charcoal-900 transition-all cursor-pointer shadow-2xs"
+          aria-label="Об открытом архиве и источниках"
+        >
+          <Info className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
+          <span>Об архиве</span>
+        </button>
+      }
+      width="340px"
+      portal
+    >
+      {ARCHIVE_MODAL_CONTENT}
+    </ModernDropdown>
+  )
+
   const filters = (
-    <>
-      <div className="flex w-full min-w-0 items-center gap-2 sm:w-auto">
+    <div className="flex flex-col sm:flex-row sm:items-center gap-2 w-full min-w-0">
+      {/* Строка 1 на мобилке: Поиск + Об архиве */}
+      <div className="flex items-center gap-2 w-full sm:hidden">
         <ToolbarSearch
           value={searchQuery}
           onChange={onSearchChange}
           placeholder="Название, клуб, регион…"
-          className="w-full min-w-0 sm:w-auto sm:min-w-[190px]"
+          className="flex-1 min-w-0"
+        />
+        <div className="shrink-0">{trailing}</div>
+      </div>
+
+      {/* Поиск на десктопе */}
+      <div className="hidden sm:flex min-w-0 items-center gap-2 sm:w-auto">
+        <ToolbarSearch
+          value={searchQuery}
+          onChange={onSearchChange}
+          placeholder="Название, клуб, регион…"
+          className="w-auto min-w-[200px]"
         />
       </div>
 
+      {/* Строка 2 на мобилке / продолжение на десктопе */}
       <div className="flex max-w-full flex-wrap items-center gap-1.5 sm:gap-2">
         <MonthYearDropdown
           selectedYear={filterYear}
@@ -125,34 +158,14 @@ export default function EventsToolbar({
           })}
         </div>
       </div>
-    </>
-  )
-
-  const trailing = (
-    <ModernDropdown
-      closeOnScroll
-      trigger={
-        <button
-          type="button"
-          className="inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full border border-old-money-300/80 bg-cream-50 px-3 text-xs font-semibold text-charcoal-800 hover:border-camel-500 hover:bg-cream-100 hover:text-charcoal-900 transition-all cursor-pointer shadow-2xs"
-          aria-label="Об открытом архиве и источниках"
-        >
-          <Info className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
-          <span>Об архиве</span>
-        </button>
-      }
-      width="340px"
-      portal
-    >
-      {ARCHIVE_MODAL_CONTENT}
-    </ModernDropdown>
+    </div>
   )
 
   const legend = (
-    <div className="flex items-center justify-end gap-x-2 sm:gap-x-3.5 gap-y-1">
+    <div className="flex items-center justify-end gap-x-1.5 sm:gap-x-3.5 gap-y-1">
       {LEGEND.map(({ key, label, tip }) => (
         <ToolbarTip key={key} label={tip}>
-          <span className="inline-flex items-center gap-1 sm:gap-1.5 text-[11px] sm:text-xs text-charcoal-500 whitespace-nowrap">
+          <span className="inline-flex items-center gap-1 sm:gap-1.5 text-[10px] sm:text-xs text-charcoal-500 whitespace-nowrap">
             <span className={`h-2 w-2 rounded-sm shrink-0 ${LEGEND_DOT_COLOR[key]}`} />
             {label}
           </span>
@@ -165,7 +178,7 @@ export default function EventsToolbar({
     <PageToolbar
       bare
       filters={filters}
-      trailing={trailing}
+      trailing={<div className="hidden sm:block">{trailing}</div>}
       bottomLeft={
         stats ? (
           <div className="flex flex-wrap items-center gap-x-2 gap-y-1">

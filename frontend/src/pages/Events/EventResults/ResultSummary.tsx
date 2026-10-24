@@ -11,7 +11,10 @@ interface ResultSummaryProps {
 }
 
 function hasHighestQualification(vc: Result['vc']): boolean {
-  return Boolean(vc?.trim())
+  if (!vc?.trim()) return false
+  const t = vc.trim()
+  if (/^\d+$/.test(t)) return false
+  return true
 }
 
 /**
@@ -24,10 +27,15 @@ export function normalizeQualificationAndVc(result: Result): { qualification?: s
   let qual = result.qualification?.trim() || null
   let vc = result.vc?.trim() || null
 
+  // Ignore pure numeric values mistakenly stored in vc (e.g. catalog numbers)
+  if (vc && /^\d+$/.test(vc)) {
+    vc = null
+  }
+
   const isShortVcCode = (val: string | null) => {
     if (!val) return false
     const upper = val.toUpperCase()
-    return upper === 'CC' || upper === 'СС' || upper === 'BCL' || upper === 'CQ' || upper === '+' || upper.length <= 4
+    return upper === 'CC' || upper === 'СС' || upper === 'BCL' || upper === 'CQ' || upper === '+' || upper === 'ВК' || upper.length <= 4
   }
 
   // If vc has awards/titles (or is long) and qual is a short VC code (like "CC") or empty
@@ -44,30 +52,29 @@ export function normalizeQualificationAndVc(result: Result): { qualification?: s
     vc = null
   }
 
+  // If qual already contains vc, avoid showing duplicate VC badge
+  if (vc && qual && qual.toUpperCase().split(/[\s,]+/).includes(vc.toUpperCase())) {
+    vc = null
+  }
+
   return { qualification: qual, vc }
 }
 
 export function VcBadge({ vc, corner = false }: { vc: string; corner?: boolean }) {
-  const badgeClass = corner
-    ? 'inline-block max-w-[3.5rem] truncate cursor-help rounded border border-camel-200 bg-camel-100 px-1 py-px text-[10px] font-semibold leading-tight text-camel-800 shadow-sm'
-    : 'inline-block cursor-help rounded border border-camel-200 bg-camel-100 px-1.5 py-0.5 text-xs font-semibold text-camel-800'
-
   return (
-    <HoverTooltip label="Высшая квалификация" placement={corner ? 'bottom' : 'top'} portal>
-      <span className={badgeClass}>{vc}</span>
+    <HoverTooltip label="Высшая квалификация" placement="top" portal>
+      <span className="inline-flex items-center justify-center rounded-md border border-camel-200 bg-camel-100 px-1.5 py-0.5 text-xs font-semibold leading-none text-camel-800 shadow-xs cursor-help select-none whitespace-nowrap">
+        {vc}
+      </span>
     </HoverTooltip>
   )
 }
 
 export function Scoreboard({ score, showVc, vc }: { score: number | string; showVc: boolean; vc: string }) {
   return (
-    <div className="relative">
-      {showVc && (
-        <div className="absolute right-0 -top-2 z-10">
-          <VcBadge vc={vc} corner />
-        </div>
-      )}
-      <div className="flex min-w-[3.5rem] flex-col items-end rounded-lg border border-old-money-200 bg-white/90 px-2 py-1">
+    <div className="flex items-center gap-1.5">
+      {showVc && <VcBadge vc={vc} />}
+      <div className="flex min-w-[3.25rem] flex-col items-center justify-center rounded-lg border border-old-money-200 bg-white/90 px-2 py-1 shadow-xs">
         <div className="font-serif text-lg font-bold tabular-nums leading-none text-camel-700 md:text-xl">
           {score}
         </div>

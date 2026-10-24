@@ -328,21 +328,21 @@ export default function ShowJudges() {
                   </button>
                 )}
 
-              {/* Mobile sort options inside the horizontal scroll row */}
-              <div className="sm:hidden flex items-center gap-1.5 shrink-0 pl-1 border-l border-old-money-200/80">
-                <RecordSortBar
-                  options={SORT_OPTIONS}
-                  sortField={sortKey}
-                  sortDirection={sortDir}
-                  onSort={(field) => selectSort(field as SortKey)}
-                  hideLabel
-                />
-              </div>
             </div>
           </div>
         }
         trailing={
           <div className="hidden sm:flex items-center gap-2">
+            <RecordSortBar
+              options={SORT_OPTIONS}
+              sortField={sortKey}
+              sortDirection={sortDir}
+              onSort={(field) => selectSort(field as SortKey)}
+            />
+          </div>
+        }
+        bottomLeft={
+          <div className="sm:hidden w-full flex items-center justify-between">
             <RecordSortBar
               options={SORT_OPTIONS}
               sortField={sortKey}

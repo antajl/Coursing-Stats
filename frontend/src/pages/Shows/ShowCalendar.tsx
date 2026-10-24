@@ -19,6 +19,7 @@ import {
   ShowCalendarToolbar,
   type QuickPreset,
 } from './ShowCalendar/ShowCalendarToolbar'
+import ShowCalendarHint from './ShowCalendar/ShowCalendarHint'
 import {
   ShowCalendarMonthList,
   type ShowCalendarFlatRow,
@@ -204,7 +205,6 @@ export default function ShowCalendar() {
   const pageToolbar = (
     <PageToolbar
       bare
-      topRowClassName="pr-0 md:pr-32"
       filters={
         <ShowCalendarToolbar
           searchQuery={searchQuery}
@@ -221,6 +221,7 @@ export default function ShowCalendar() {
           availableMonths={availableMonths}
         />
       }
+      trailing={<div className="hidden sm:block"><ShowCalendarHint /></div>}
       bottomLeft={
         <>
           <p className="hidden sm:block text-xs text-charcoal-500">

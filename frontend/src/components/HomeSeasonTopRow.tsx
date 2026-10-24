@@ -152,52 +152,16 @@ export default function HomeSeasonTopRow({
     >
       {isTop3 && rank != null ? <Top3AccentBar rank={rank} /> : null}
 
-      {/* Mobile layout (< sm) */}
-      <div className="flex sm:hidden flex-row items-stretch w-full min-h-[4.75rem] py-0.5 overflow-hidden">
-        {rank != null && rank > 0 ? renderRank(rank) : null}
-        <div className="flex min-w-0 flex-1 flex-col justify-between gap-1 overflow-hidden">
-          <div className="pr-10 min-w-0">{renderHeader}</div>
-
-          <div className="flex items-center justify-between gap-2 min-w-0">
-            <div className="flex min-w-0 items-center gap-1.5 truncate">
-              {bestAward ? (
-                <span
-                  className={`inline-flex items-center px-1.5 py-0.5 rounded text-[9px] font-bold ${showAwardBadgeClass(
-                    bestAward as any,
-                  )}`}
-                >
-                  {SHOW_BADGE_MAP[bestAward] || bestAward}
-                </span>
-              ) : gold !== undefined && silver !== undefined && bronze !== undefined ? (
-                <div className="flex min-w-0 shrink-0 items-center gap-1 text-xs">
-                  <MedalBadge variant="gold" count={gold || 0} size="sm" />
-                  <MedalBadge variant="silver" count={silver || 0} size="sm" />
-                  <MedalBadge variant="bronze" count={bronze || 0} size="sm" />
-                </div>
-              ) : null}
-              <span className="text-[10px] font-semibold text-camel-700 truncate">
-                {showTitles || metric}
-              </span>
-            </div>
-            <div className="flex items-center justify-end gap-0.5 text-[11px] font-semibold text-charcoal-700 tabular-nums shrink-0 min-w-[2.25rem]">
-              <span className="tabular-nums text-right">{participations}</span>
-              <span className="text-[9px] font-normal text-charcoal-500">выст.</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Desktop layout (>= sm) */}
-      <div className="hidden sm:flex flex-row items-stretch w-full min-w-0">
+      <div className="flex flex-row items-stretch w-full min-w-0">
         {rank != null && rank > 0 ? renderRank(rank) : null}
 
-        <div className="flex min-h-0 min-w-0 flex-1 flex-col justify-center gap-1">
+        <div className="flex min-h-0 min-w-0 flex-1 flex-col justify-center gap-0.5 sm:gap-1">
           {renderHeader}
           {renderMetricLine}
         </div>
 
-        <div className="mr-7 flex min-h-0 min-w-[7.5rem] sm:min-w-[8rem] shrink-0 flex-col justify-center items-end border-l border-old-money-200/60 pl-2">
-          <div className="flex flex-col items-start gap-1.5">
+        <div className="mr-6 sm:mr-7 flex min-h-0 min-w-[4.75rem] sm:min-w-[8rem] shrink-0 flex-col justify-center items-end border-l border-old-money-200/60 pl-2 sm:pl-2.5">
+          <div className="flex flex-col items-start gap-1 sm:gap-1.5">
             <StartsLabel starts={participations} size="md" label="Выставок" />
             {renderBestAwardOrMedals}
           </div>

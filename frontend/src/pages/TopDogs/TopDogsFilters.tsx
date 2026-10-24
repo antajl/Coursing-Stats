@@ -86,14 +86,27 @@ export default function TopDogsFilters({
         topRowClassName="flex-wrap md:flex-nowrap"
         filters={
           <div className="flex flex-col md:flex-row md:items-center gap-2 w-full min-w-0">
-            {/* Строка 1 на мобилке / начало единой строки на десктопе */}
-            <div className="flex items-center gap-2 shrink-0 w-full md:w-auto">
+            {/* Строка 1 на мобилке: Поиск + О рейтинге */}
+            <div className="flex items-center gap-2 w-full md:hidden">
               <ToolbarSearch
                 value={searchQuery}
                 onChange={onSearchChange}
                 placeholder="Кличка, порода…"
-                className="flex-1 min-w-0 sm:w-44 md:w-40 lg:w-48"
+                className="flex-1 min-w-0"
               />
+              {trailing && <div className="shrink-0">{trailing}</div>}
+            </div>
+
+            {/* Строка 2 на мобилке / левая группа на десктопе */}
+            <div className="flex items-center gap-2 shrink-0 w-full md:w-auto">
+              <div className="hidden md:block">
+                <ToolbarSearch
+                  value={searchQuery}
+                  onChange={onSearchChange}
+                  placeholder="Кличка, порода…"
+                  className="sm:w-44 md:w-40 lg:w-48"
+                />
+              </div>
               <div className="shrink-0">
                 <ModernDropdown
                   trigger={yearTrigger}
@@ -214,7 +227,7 @@ export default function TopDogsFilters({
             </div>
           </div>
         }
-        trailing={trailing}
+        trailing={trailing ? <div className="hidden md:block">{trailing}</div> : null}
       />
     </div>
   )

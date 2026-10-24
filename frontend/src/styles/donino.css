@@ -70,9 +70,16 @@
 .donino-list-row-chart{min-width:0;}
 .donino-list-row-screen{
   display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px;
-  border-left:1px solid var(--om-200); padding:8px 10px;
-  font-size:10px; font-weight:600; color:var(--om-600); text-decoration:none;
+  border-left:1px solid var(--om-200); padding:6px 6px;
+  font-size:9px; font-weight:600; color:var(--om-600); text-decoration:none;
+  min-width:44px; min-height:44px;
   transition:background .15s ease, color .15s ease;
+}
+@media(min-width:640px){
+  .donino-list-row-screen{
+    padding:8px 10px;
+    font-size:10px;
+  }
 }
 .donino-list-row-screen:hover{background:var(--camel-50); color:var(--camel-700);}
 .donino-list-row--embedded .donino-list-row-screen{

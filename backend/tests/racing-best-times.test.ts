@@ -150,4 +150,26 @@ describe('normalizeQualificationAndVc', () => {
     expect(normalized.qualification).toBe('CACL, RegCACL')
     expect(normalized.vc).toBeNull()
   })
+
+  it('ignores pure numeric values mistakenly stored in vc', () => {
+    const normalized = normalizeQualificationAndVc({
+      dog_id: 4,
+      qualification: 'CACL',
+      vc: '18',
+    })
+
+    expect(normalized.qualification).toBe('CACL')
+    expect(normalized.vc).toBeNull()
+  })
+
+  it('deduplicates vc if qualification already contains it', () => {
+    const normalized = normalizeQualificationAndVc({
+      dog_id: 5,
+      qualification: 'CACL, CC',
+      vc: 'CC',
+    })
+
+    expect(normalized.qualification).toBe('CACL, CC')
+    expect(normalized.vc).toBeNull()
+  })
 })

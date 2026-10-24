@@ -148,25 +148,35 @@ function CsDetailLine({
 export function StartsLabel({
   starts,
   size = 'sm',
-  label = 'Забегов',
+  label,
 }: {
   starts: number
   size?: 'sm' | 'md'
   label?: string
 }) {
   // md ≈ favorite button box (28×28): same row height, label not micro-type
-  const text =
-    size === 'md'
-      ? 'h-7 text-sm text-charcoal-600'
-      : 'text-[9px] text-charcoal-500'
-  const num =
-    size === 'md'
-      ? 'inline-block w-[3ch] text-right text-base font-bold tabular-nums leading-none text-charcoal-800'
-      : 'inline-block w-[3ch] text-right font-semibold tabular-nums text-charcoal-700'
+  const isMd = size === 'md'
   return (
-    <div className={`flex shrink-0 items-center gap-1.5 ${text}`}>
-      <span>{label}</span>
-      <span className={num}>{starts}</span>
+    <div
+      className={`flex shrink-0 items-center gap-1 sm:gap-1.5 ${
+        isMd ? 'h-5 sm:h-7 text-xs sm:text-sm text-charcoal-600' : 'text-[9px] text-charcoal-500'
+      }`}
+    >
+      {label ? (
+        <span>{label}</span>
+      ) : (
+        <>
+          <span className="hidden sm:inline">Забегов</span>
+          <span className="sm:hidden text-[10px] text-charcoal-500">Заб.</span>
+        </>
+      )}
+      <span
+        className={`inline-block text-right font-bold tabular-nums leading-none text-charcoal-800 ${
+          isMd ? 'text-xs sm:text-base sm:w-[3ch]' : 'text-[10px] sm:text-xs'
+        }`}
+      >
+        {starts}
+      </span>
     </div>
   )
 }
@@ -300,7 +310,7 @@ const DogCardHeader: FC = function DogCardHeader() {
 const DogCardMedals: FC = function DogCardMedals() {
   const { dog } = useDogCardContext()
   return (
-    <div className="flex min-w-0 shrink-0 items-center gap-1.5 text-xs">
+    <div className="flex min-w-0 shrink-0 items-center gap-1 sm:gap-1.5 text-xs">
       <MedalBadge variant="gold" count={dog.gold || 0} size="sm" />
       <MedalBadge variant="silver" count={dog.silver || 0} size="sm" />
       <MedalBadge variant="bronze" count={dog.bronze || 0} size="sm" />
@@ -394,7 +404,7 @@ const DogCardRank: FC<{ className?: string }> = function DogCardRank({ className
 
   return (
     <div
-      className={`flex min-h-0 min-w-[2.75rem] sm:min-w-[3rem] shrink-0 flex-col items-center justify-start pt-1 pr-2 sm:pr-2.5 mr-2 sm:mr-2.5 border-r border-old-money-200/70 self-stretch ${className}`}
+      className={`flex min-h-0 min-w-[2.75rem] sm:min-w-[3rem] shrink-0 flex-col items-center justify-start pt-0.5 sm:pt-1 pr-2 sm:pr-2.5 mr-2 sm:mr-2.5 border-r border-old-money-200/70 self-stretch ${className}`}
     >
       <RankBadge rank={rank} delta={delta} />
     </div>
@@ -429,105 +439,54 @@ const DogCardInner = function DogCard({ dog, type, filterYear, rank, variant = '
       <Link to={`/dog/${dog.dog_id}`} className={shellClass}>
         {isTop3 && rank != null ? <Top3AccentBar rank={rank} /> : null}
         {type === 'combined' ? (
-          <>
-            {/* Mobile layout (< sm) */}
-            <div className="flex sm:hidden flex-row items-stretch w-full min-h-[4.75rem] py-0.5 overflow-hidden">
-              <DogCardRank />
-              <div className="flex min-w-0 flex-1 flex-col justify-between gap-1 overflow-hidden">
-                <div className="pr-10 min-w-0">
-                  <DogCardHeader />
-                </div>
-
-                <div className="flex items-center justify-between gap-2 min-w-0">
-                  <DogCardMedals />
-                  <div className="flex items-center gap-1.5 shrink-0">
-                    <div className="text-right">
-                      <span className="text-xs font-bold tabular-nums text-camel-700">{formatIndexScore(dog)}</span>
-                      <span className="text-[8px] font-semibold text-charcoal-500 ml-0.5">CS</span>
-                    </div>
-                    <span className="text-old-money-300" aria-hidden>·</span>
-                    <div className="flex items-center justify-end gap-0.5 text-[11px] font-semibold text-charcoal-700 tabular-nums shrink-0 min-w-[2.25rem]">
-                      <span className="tabular-nums text-right">{dog.total_starts || 0}</span>
-                      <span className="text-[9px] font-normal text-charcoal-500">заб.</span>
-                    </div>
-                  </div>
-                </div>
+          <div className="flex flex-row items-stretch w-full min-w-0">
+            <DogCardRank />
+            <div className="flex min-h-0 min-w-0 flex-1 flex-col justify-center gap-0.5 sm:gap-1">
+              <DogCardHeader />
+              <div className="flex items-center gap-1 text-[10px] sm:text-[11px] text-charcoal-500">
+                <span>Индекс CS:</span>
+                <strong className="font-semibold text-charcoal-800 tabular-nums">
+                  {formatIndexScore(dog)}
+                </strong>
               </div>
             </div>
 
-            {/* Desktop layout (>= sm) */}
-            <div className="hidden sm:flex flex-row items-stretch w-full min-w-0">
-              <DogCardRank />
-              <div className="flex min-h-0 min-w-0 flex-1 flex-col justify-center gap-1">
-                <DogCardHeader />
-                <div className="flex items-center gap-1 text-[11px] text-charcoal-500">
-                  <span>Индекс CS:</span>
-                  <strong className="font-semibold text-charcoal-800 tabular-nums">
-                    {formatIndexScore(dog)}
-                  </strong>
-                </div>
-              </div>
-
-              <div className="mr-7 flex min-h-0 min-w-[7.5rem] sm:min-w-[8rem] shrink-0 flex-col justify-center items-end border-l border-old-money-200/60 pl-2">
-                <div className="flex flex-col items-start gap-1.5">
-                  <StartsLabel starts={dog.total_starts || 0} size="md" />
-                  <DogCardMedals />
-                </div>
+            <div className="mr-6 sm:mr-7 flex min-h-0 min-w-[4.75rem] sm:min-w-[8rem] shrink-0 flex-col justify-center items-end border-l border-old-money-200/60 pl-2 sm:pl-2.5">
+              <div className="flex flex-col items-start gap-1 sm:gap-1.5">
+                <StartsLabel starts={dog.total_starts || 0} size="md" />
+                <DogCardMedals />
               </div>
             </div>
-          </>
+          </div>
         ) : type === 'speed' ? (
-          <>
-            {/* Mobile layout (< sm) */}
-            <div className="flex sm:hidden flex-row items-stretch w-full min-h-[4.75rem] py-0.5 overflow-hidden">
-              <DogCardRank />
-              <div className="flex min-w-0 flex-1 flex-col justify-between gap-1 overflow-hidden">
-                <div className="pr-10 min-w-0">
-                  <DogCardHeader />
-                </div>
-                <div className="flex items-center justify-between gap-2 min-w-0">
-                  <div className="flex items-center gap-1.5 text-[11px] text-charcoal-600 min-w-0 truncate">
-                    <span>макс: <strong className="font-bold text-charcoal-800 tabular-nums">{dog.best_speed ? dog.best_speed.toFixed(1) : '-'}</strong></span>
-                    <span className="text-old-money-300" aria-hidden>·</span>
-                    <span>сред: <strong className="font-bold text-charcoal-800 tabular-nums">{dog.avg_speed ? dog.avg_speed.toFixed(1) : '-'}</strong> км/ч</span>
-                  </div>
-                  <div className="flex items-center justify-end gap-0.5 text-[11px] font-semibold text-charcoal-700 tabular-nums shrink-0 min-w-[2.25rem]">
-                    <span className="tabular-nums text-right">{dog.total_starts || 0}</span>
-                    <span className="text-[9px] font-normal text-charcoal-500">заб.</span>
-                  </div>
-                </div>
+          <div className="flex flex-row items-stretch w-full min-w-0">
+            <DogCardRank />
+            <div className="flex min-h-0 min-w-0 flex-1 flex-col justify-center gap-0.5 sm:gap-1">
+              <DogCardHeader />
+              <div className="flex items-center gap-1 text-[10px] sm:text-[11px] text-charcoal-500">
+                <span className="hidden sm:inline">Средняя скорость:</span>
+                <span className="sm:hidden">Ср. скор:</span>
+                <strong className="font-semibold text-charcoal-800 tabular-nums">
+                  {dog.avg_speed ? dog.avg_speed.toFixed(1) : '—'}
+                </strong>
+                <span className="text-[9px] sm:text-[10px] text-charcoal-400">км/ч</span>
               </div>
             </div>
 
-            {/* Desktop layout (>= sm) */}
-            <div className="hidden sm:flex flex-row items-stretch w-full min-w-0">
-              <DogCardRank />
-              <div className="flex min-h-0 min-w-0 flex-1 flex-col justify-center gap-1">
-                <DogCardHeader />
-                <div className="flex items-center gap-1 text-[11px] text-charcoal-500">
-                  <span>Средняя скорость:</span>
-                  <strong className="font-semibold text-charcoal-800 tabular-nums">
-                    {dog.avg_speed ? dog.avg_speed.toFixed(1) : '—'}
-                  </strong>
-                  <span className="text-[10px] text-charcoal-400">км/ч</span>
-                </div>
-              </div>
-
-              <div className="mr-7 flex min-h-0 min-w-[7.5rem] sm:min-w-[8rem] shrink-0 flex-col justify-center items-end border-l border-old-money-200/60 pl-2">
-                <div className="flex flex-col items-start gap-1.5">
-                  <StartsLabel starts={dog.total_starts || 0} size="md" />
-                  <div className="flex items-baseline gap-1.5 leading-none">
-                    <span className="text-lg font-bold tabular-nums text-camel-700">
-                      {dog.best_speed ? dog.best_speed.toFixed(1) : '—'}
-                    </span>
-                    <span className="text-[8px] font-semibold uppercase tracking-wide text-charcoal-500">
-                      макс. км/ч
-                    </span>
-                  </div>
+            <div className="mr-6 sm:mr-7 flex min-h-0 min-w-[4.75rem] sm:min-w-[8rem] shrink-0 flex-col justify-center items-end border-l border-old-money-200/60 pl-2 sm:pl-2.5">
+              <div className="flex flex-col items-start gap-1 sm:gap-1.5">
+                <StartsLabel starts={dog.total_starts || 0} size="md" />
+                <div className="flex items-baseline gap-1 sm:gap-1.5 leading-none">
+                  <span className="text-base sm:text-lg font-bold tabular-nums text-camel-700">
+                    {dog.best_speed ? dog.best_speed.toFixed(1) : '—'}
+                  </span>
+                  <span className="text-[8px] font-semibold uppercase tracking-wide text-charcoal-500">
+                    макс. км/ч
+                  </span>
                 </div>
               </div>
             </div>
-          </>
+          </div>
         ) : (
           <>
             <div className="flex w-full items-start gap-2 overflow-hidden">

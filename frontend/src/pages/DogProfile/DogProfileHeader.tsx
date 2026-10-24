@@ -218,9 +218,9 @@ export function DogProfileHeader({
         color: 'bg-orange-50 text-amber-950 border border-amber-300 font-semibold shadow-2xs',
         tooltip: '3 место в общем сезоне по курсингу среди всех пород',
       })
-    } else if (coursing?.yearRank && coursing.yearRank <= 10) {
+    } else if (coursing?.yearRank && coursing.yearRank <= 5) {
       items.push({
-        id: 'coursing-overall-top10',
+        id: 'coursing-overall-top5',
         label: `Топ-${coursing.yearRank} сезона`,
         sublabel: 'Общий зачёт',
         icon: <Award className="h-3.5 w-3.5 text-camel-700 shrink-0" />,
@@ -239,9 +239,9 @@ export function DogProfileHeader({
         color: 'bg-forest-50 text-forest-900 border border-forest-300 shadow-2xs',
         tooltip: `${racing.yearBreedRank} место в рейтинге по максимальной скорости в бегах`,
       })
-    } else if (racing?.yearBreedRank && racing.yearBreedRank <= 10) {
+    } else if (racing?.yearBreedRank && racing.yearBreedRank <= 5) {
       items.push({
-        id: 'racing-breed-top10',
+        id: 'racing-breed-top5',
         label: `Топ-${racing.yearBreedRank} в бегах`,
         sublabel: 'Рейсинг 2026',
         icon: <Zap className="h-3.5 w-3.5 text-forest-700 shrink-0" />,
@@ -265,7 +265,7 @@ export function DogProfileHeader({
     }
 
     // 5. Выставки (если топ в породе)
-    if (shows?.yearBreedRank && shows.yearBreedRank <= 3) {
+    if (shows?.yearBreedRank && shows.yearBreedRank <= 5) {
       items.push({
         id: 'shows-breed-podium',
         label: `Топ-${shows.yearBreedRank} выставок`,
@@ -273,20 +273,6 @@ export function DogProfileHeader({
         icon: <Sparkles className="h-3.5 w-3.5 text-camel-700 shrink-0" />,
         color: 'bg-cream-100 text-charcoal-800 border border-old-money-200',
         tooltip: `${shows.yearBreedRank} место в рейтинге выставок РКФ в породе`,
-      })
-    }
-
-    // 6. Универсал (топ и в курсинге, и в бегах)
-    const coursingRank = coursing?.yearBreedRank ?? coursing?.breedRank ?? coursing?.rank
-    const racingRank = racing?.yearBreedRank ?? racing?.breedRank ?? racing?.rank
-    if (coursingRank && coursingRank <= 10 && racingRank && racingRank <= 10) {
-      items.push({
-        id: 'dual-athlete',
-        label: 'Универсал',
-        sublabel: 'Курсинг + Бега',
-        icon: <Sparkles className="h-3.5 w-3.5 text-amber-600 shrink-0" />,
-        color: 'bg-amber-50 text-amber-950 border border-amber-300 shadow-2xs font-semibold',
-        tooltip: 'Успешно выступает в обеих дисциплинах: входит в топ рейтинга и по курсингу, и по бегам борзых',
       })
     }
 

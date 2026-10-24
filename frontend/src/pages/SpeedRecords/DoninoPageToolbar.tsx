@@ -1,9 +1,8 @@
-import { useMemo, useState, useEffect, useRef } from 'react'
-import { ChevronDown, Download } from 'lucide-react'
+import { useMemo, useState } from 'react'
+import { ChevronDown } from 'lucide-react'
 import DogSexIcon from '../../components/DogSexIcon'
 import FilterSelect from '../../components/FilterSelect'
 import PageToolbar from '../../components/toolbar/PageToolbar'
-import ToolbarChip from '../../components/toolbar/ToolbarChip'
 import ToolbarFiltersDropdown from '../../components/toolbar/ToolbarFiltersDropdown'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
 import QuickBreedBar from '../TopDogs/QuickBreedBar'
@@ -11,7 +10,6 @@ import ModernDropdown from '../../components/ui/ModernDropdown'
 import { TOOLBAR_NUMBER_INPUT, toolbarPillTriggerClass } from '../../lib/toolbar'
 import type { DogsIndexEntry } from '../../lib/competingBreeds'
 import { displayBreed } from '../../lib/breedMapping'
-import { exportDoninoToExcel, exportDoninoStatsToExcel } from './exportExcel'
 import { GROUP_BY_OPTIONS, type GroupBy } from './stats/constants'
 
 interface DoninoPageToolbarProps {
@@ -43,8 +41,8 @@ interface DoninoPageToolbarProps {
   onClearPanelFilters: () => void
   hasActiveFilters: boolean
   dogIndex?: DogsIndexEntry[]
-  speedRecords: { name: string; sex: string; breed: string; speed_km_h: number; date: string; screenshot_url?: string }[]
-  coursingRecords: { name: string; breed: string; time_seconds: number; date: string }[]
+  speedRecords?: { name: string; sex: string; breed: string; speed_km_h: number; date: string; screenshot_url?: string }[]
+  coursingRecords?: { name: string; breed: string; time_seconds: number; date: string }[]
   speedStats?: { breed: string; count: number; bestSpeed: number; avgSpeed: number }[]
   coursingStats?: { breed: string; count: number; bestTime: number; avgTime: number }[]
 }
@@ -88,32 +86,9 @@ export default function DoninoPageToolbar({
   onClearPanelFilters,
   hasActiveFilters,
   dogIndex: propDogIndex,
-  speedRecords,
-  coursingRecords,
-  speedStats,
-  coursingStats,
 }: DoninoPageToolbarProps) {
-  const [exportDropdownOpen, setExportDropdownOpen] = useState(false)
   const [yearDropdownOpen, setYearDropdownOpen] = useState(false)
   const [sexDropdownOpen, setSexDropdownOpen] = useState(false)
-  const exportDropdownRef = useRef<HTMLDivElement>(null)
-  const canExportStats = view === 'stats' && Boolean(speedStats && coursingStats)
-
-  useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (exportDropdownRef.current && !exportDropdownRef.current.contains(event.target as Node)) {
-        setExportDropdownOpen(false)
-      }
-    }
-    if (exportDropdownOpen) {
-      document.addEventListener('mousedown', handleClickOutside)
-    }
-    return () => document.removeEventListener('mousedown', handleClickOutside)
-  }, [exportDropdownOpen])
-
-  useEffect(() => {
-    if (!canExportStats) setExportDropdownOpen(false)
-  }, [canExportStats])
 
   const hasThresholdFilters = Boolean(
     filterMinSpeed || filterMaxSpeed || filterMinTime || filterMaxTime,
@@ -370,47 +345,6 @@ export default function DoninoPageToolbar({
                   </div>
                 </ToolbarFiltersDropdown>
               ) : null}
-
-              <div className="relative shrink-0" ref={exportDropdownRef}>
-                {canExportStats ? (
-                  <>
-                    <ToolbarChip onClick={() => setExportDropdownOpen(!exportDropdownOpen)}>
-                      <Download className="h-3.5 w-3.5" strokeWidth={2} />
-                      Excel
-                      <ChevronDown className="ml-1 h-3.5 w-3.5" strokeWidth={2} />
-                    </ToolbarChip>
-                    {exportDropdownOpen && (
-                      <div className="absolute right-0 top-full z-50 mt-1 min-w-[160px] rounded-lg border border-old-money-200 bg-white shadow-lg">
-                        <button
-                          type="button"
-                          onClick={() => {
-                            exportDoninoToExcel(speedRecords, coursingRecords)
-                            setExportDropdownOpen(false)
-                          }}
-                          className="w-full px-4 py-2 text-left text-sm text-charcoal-700 hover:bg-cream-50"
-                        >
-                          Записи
-                        </button>
-                        <button
-                          type="button"
-                          onClick={() => {
-                            exportDoninoStatsToExcel(speedStats!, coursingStats!)
-                            setExportDropdownOpen(false)
-                          }}
-                          className="w-full px-4 py-2 text-left text-sm text-charcoal-700 hover:bg-cream-50"
-                        >
-                          Статистика
-                        </button>
-                      </div>
-                    )}
-                  </>
-                ) : (
-                  <ToolbarChip onClick={() => exportDoninoToExcel(speedRecords, coursingRecords)}>
-                    <Download className="h-3.5 w-3.5" strokeWidth={2} />
-                    Excel
-                  </ToolbarChip>
-                )}
-              </div>
             </div>
 
             {/* Разделитель между фильтрами и породами на десктопе */}

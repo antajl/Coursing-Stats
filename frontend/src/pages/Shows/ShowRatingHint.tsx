@@ -58,7 +58,7 @@ export const SHOW_RATING_MODAL_CONTENT = (
     <div className="border-t border-old-money-200/80 pt-2.5 mt-2.5 text-[10.5px] leading-relaxed text-charcoal-600 flex items-start gap-1.5">
       <FileText className="h-3.5 w-3.5 text-camel-700 shrink-0 mt-0.5" aria-hidden />
       <p>
-        <strong className="text-charcoal-800 font-semibold">Источник данных:</strong> официальные ведомости и протоколы РКФ (rkf.online). Проект собирает открытую статистику и формирует независимый аналитический рейтинг сезона.
+        <strong className="text-charcoal-800 font-semibold">Примечание:</strong> выставочные результаты систематизированы на основе официальных ведомостей и каталогов РКФ (rkf.online). Сведения могут содержать ошибки или быть неполными из-за фрагментарности открытых источников и ручного ведения баз организаторами. Проект не является официальным сайтом РКФ.
       </p>
     </div>
   </div>
