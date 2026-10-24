@@ -27,6 +27,7 @@ import {
   dogMetaFromShowRanking,
   doninoMeta,
   eventMetaFromEntry,
+  type EventWinnerSummary,
   exhibitionMeta,
   showJudgeMeta,
   sportJudgeMeta,
@@ -328,7 +329,19 @@ function prerenderEvents(spaHtml: string): number {
         event_type?: string | null
         competition_kind?: string | null
       }
-      results?: unknown[]
+      results?: Array<{
+        placement?: number | null
+        total_score?: number | null
+        speed_kmh?: number | null
+        average_speed?: number | null
+        vc?: string | null
+        qualification?: string | null
+        dog?: {
+          name_ru?: string | null
+          name_lat?: string | null
+          breed?: string | null
+        } | null
+      }>
     }>(path.join(ROOT, 'data/v1', entry.results_file))
     if (comp?.event) {
       title = title || comp.event.title || null
@@ -336,7 +349,22 @@ function prerenderEvents(spaHtml: string): number {
       eventType = eventType || comp.event.event_type || null
       kind = kind || comp.event.competition_kind || null
     }
-    if (Array.isArray(comp?.results)) resultCount = comp.results.length
+    const winners: EventWinnerSummary[] = []
+    if (Array.isArray(comp?.results)) {
+      resultCount = comp.results.length
+      for (const r of comp.results) {
+        if (r.placement === 1 && (r.dog?.name_ru || r.dog?.name_lat)) {
+          winners.push({
+            name: r.dog.name_ru || r.dog.name_lat || '',
+            breed: r.dog.breed || null,
+            score: r.total_score || null,
+            speed_kmh: r.speed_kmh || r.average_speed || null,
+            title: [r.vc, r.qualification].filter(Boolean).join(', ') || null,
+          })
+          if (winners.length >= 5) break
+        }
+      }
+    }
 
     const meta = eventMetaFromEntry({
       id,
@@ -346,6 +374,7 @@ function prerenderEvents(spaHtml: string): number {
       result_count: resultCount,
       event_type: eventType,
       competition_kind: kind,
+      winners,
     })
     const html = applyMetaToSpaShell(spaHtml, {
       title: meta.title,
@@ -570,6 +599,7 @@ function prerenderShowJudges(spaHtml: string): number {
       display_name: j.display_name,
       total_judged: j.total_judged,
       unique_breeds: j.unique_breeds,
+      excellent_rate: j.excellent_rate,
     })
     const html = applyMetaToSpaShell(spaHtml, {
       title: meta.title,

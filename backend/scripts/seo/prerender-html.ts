@@ -38,12 +38,12 @@ export const HUB_PAGES: HubMeta[] = [
   },
   {
     path: '/competitions',
-    title: 'Рейтинг собак в курсинге и бегах борзых — Единый рейтинг России | Coursing Stats',
+    title: 'Календарь и результаты соревнований по курсингу 2026 — Расписание и рейтинг РКФ | Coursing Stats',
     description:
-      'Единый всероссийский рейтинг собак по курсингу и бегам борзых: турнирная таблица соревнований РКФ с 2015 года. Медальный зачёт, результаты и рекорды скорости за забеги, очки стабильности CS и лидеры по породам (салюки, уиппеты, РПБ).',
-    h1: 'Рейтинг собак в курсинге и бегах борзых',
+      'Расписание и календарь соревнований по курсингу и бегам борзых 2026 года: даты состязаний РКФ, регламенты, официальные протоколы и результаты забегов. Медальный зачёт, единый рейтинг, очки CS и рекорды пород на Coursing Stats.',
+    h1: 'Расписание соревнований, результаты и рейтинг собак в курсинге',
     paragraph:
-      'Единая турнирная таблица и всероссийский рейтинг собак по курсингу и бегам борзых: результаты соревнований РКФ с 2015 года, медальный зачёт, очки CS и замеры скорости.',
+      'Календарь состязаний по курсингу и бегам борзых на 2026 год, официальные протоколы РКФ с 2015 года, турнирная таблица, медальный зачёт, очки CS и результаты забегов.',
   },
   {
     path: '/shows',
@@ -56,12 +56,12 @@ export const HUB_PAGES: HubMeta[] = [
   },
   {
     path: '/speed-records',
-    title: 'Курсинг в Донино: рекорды скорости и бега 350 м | Coursing Stats',
+    title: 'Курсинг Донино — результаты забегов, замеры скорости (км/ч) и рекорды борзых | Coursing Stats',
     description:
-      'Рекорды курсинга в Донино: замер скорости (км/ч) и бега борзых на 350 м (сек) на полигоне Курсинг Донино. Таблицы по породам, статистика и история.',
-    h1: 'Курсинг в Донино: рекорды скорости и бега 350 м',
+      'База бегового клуба «Курсинг в Донино»: результаты забегов, радарные замеры скорости (км/ч) и таблица рекордов борзых на 350 м (сек). Салюки, уиппеты, РПБ, басенджи на полигоне в Раменском районе.',
+    h1: 'Курсинг Донино: замеры скорости радаром и рекорды забегов на 350 м',
     paragraph:
-      'Две отдельные таблицы курсинга в Донино: замер скорости (км/ч) и бега борзых на 350 м (секунды). Данные с полигона Курсинг Донино.',
+      'Официальная база бегового клуба «Курсинг в Донино»: замеры пиковой скорости радаром (км/ч) и результаты бегов борзых на круговой дистанции 350 м (секунды).',
   },
   {
     path: '/guide',
@@ -328,6 +328,11 @@ export function buildHubBodyHtml(hub: Pick<HubMeta, 'path' | 'h1' | 'paragraph'>
 }
 
 export const DEFAULT_COMPETITION_FAQS = [
+  {
+    question: 'Где найти актуальное расписание и календарь соревнований по курсингу борзых на 2026 год?',
+    answer:
+      'Актуальное расписание соревнований, квалификационных забегов и тренировок по курсингу и бегам борзых на 2026 год представлено в календаре состязаний на портале Coursing Stats. В расписании публикуются официальные даты турниров РКФ, регламенты, площадки проведения (беговой клуб в Донино, Санкт-Петербург, Минск и др.) и ссылки на регистрацию.',
+  },
   {
     question: 'Существует ли единый всероссийский рейтинг собак по курсингу?',
     answer:
@@ -938,6 +943,14 @@ export function buildSimpleEntityBodyHtml(meta: Omit<SimpleEntityMeta, 'title' |
   ].join('\n')
 }
 
+export interface EventWinnerSummary {
+  name: string
+  breed?: string | null
+  score?: number | null
+  title?: string | null
+  speed_kmh?: number | null
+}
+
 export function eventMetaFromEntry(entry: {
   id: string
   title?: string | null
@@ -946,6 +959,7 @@ export function eventMetaFromEntry(entry: {
   result_count?: number | null
   event_type?: string | null
   competition_kind?: string | null
+  winners?: EventWinnerSummary[]
 }): SimpleEntityMeta {
   const headline = (entry.title?.trim() || `Соревнование ${entry.id}`).replace(/[\s\-·—]+$/, '')
   const dateFormatted = entry.date_start ? formatEventDateRu(entry.date_start) : ''
@@ -955,20 +969,32 @@ export function eventMetaFromEntry(entry: {
   const title = dateFormatted
     ? `${headline} (${dateFormatted}) — результаты соревнований | Coursing Stats`
     : `${headline} — результаты соревнований | Coursing Stats`
-  const description = [
-    `Результаты забегов: ${kind}${dateFormatted ? ` от ${dateFormatted}` : ''}`,
+
+  const winnerTexts = (entry.winners || []).slice(0, 3).map((w) => {
+    const breed = w.breed ? toDogTitleCase(w.breed) : ''
+    const dogName = toDogTitleCase(w.name)
+    const scoreText = w.score ? `${w.score} б.` : w.speed_kmh ? `${w.speed_kmh} км/ч` : null
+    const details = [breed, scoreText, w.title || null].filter(Boolean).join(', ')
+    return details ? `${dogName} (${details})` : dogName
+  })
+  const winnersPart = winnerTexts.length > 0 ? `Победители: ${winnerTexts.join('; ')}` : null
+
+  const descriptionParts = [
+    `Результаты состязания: ${kind}${dateFormatted ? ` от ${dateFormatted}` : ''}`,
     location ? location : null,
     n != null && n > 0 ? `${n} участников` : null,
-    'Баллы за забеги, победители по породам и сертификаты на Coursing Stats.',
-  ]
-    .filter(Boolean)
-    .join('. ')
+    winnersPart,
+    'Официальный протокол забегов, баллы судей и сертификаты РКФ на Coursing Stats',
+  ].filter((p): p is string => Boolean(p))
+
+  const description = descriptionParts.map((s) => s.replace(/\.+$/, '')).join('. ') + '.'
   const paragraph = [
-    `Результаты соревнования по виду «${kind}»`,
+    `Результаты состязания по виду «${kind}»`,
     dateFormatted ? `от ${dateFormatted}` : null,
     location ? `в ${location}` : null,
     n != null && n > 0 ? `(${n} участников)` : null,
-    'Статистика курсинга, бегов борзых и рейтинги на Coursing Stats.',
+    winnersPart ? `${winnersPart}.` : null,
+    'Статистика курсинга, бегов борзых и официальные протоколы на Coursing Stats.',
   ]
     .filter(Boolean)
     .join(' ')
@@ -998,6 +1024,18 @@ export function eventMetaFromEntry(entry: {
             }
           : {}),
         description,
+        ...(winnerTexts.length > 0 ? { award: winnerTexts } : {}),
+        ...(entry.winners && entry.winners.length > 0
+          ? {
+              competitor: entry.winners.slice(0, 5).map((w) => ({
+                '@type': 'Thing',
+                name: toDogTitleCase(w.name),
+                description: [w.breed ? toDogTitleCase(w.breed) : null, w.title || null]
+                  .filter(Boolean)
+                  .join(', '),
+              })),
+            }
+          : {}),
       },
     ],
   }
@@ -1017,6 +1055,36 @@ export function eventMetaFromEntry(entry: {
   }
 }
 
+export const SPORT_JUDGE_FULL_NAMES: Record<string, string> = {
+  'Орлова М.О.': 'Орлова Марина Олеговна',
+  'Богаченко В.В.': 'Богаченко Владимир Владимирович',
+  'Гольдинова Л.М.': 'Гольдинова Лариса Михайловна',
+  'Полякова Г.Б.': 'Полякова Галина Борисовна',
+  'Кудрявцева Н.Г.': 'Кудрявцева Нина Георгиевна',
+  'Коршунова И.А.': 'Коршунова Ирина Александровна',
+  'Карелина Н.В.': 'Карелина Наталья Владимировна',
+  'Вронская О.В.': 'Вронская Ольга Владимировна',
+  'Козлова И.В.': 'Козлова Ирина Валерьевна',
+  'Иванова Г.С.': 'Иванова Галина Сергеевна',
+  'Лукина Д.М.': 'Лукина Дина Михайловна',
+  'Серова Т.Г.': 'Серова Татьяна Геннадьевна',
+  'Рубина А.В.': 'Рубина Алла Владимировна',
+  'Егорова М.А.': 'Егорова Марина Анатольевна',
+  'Петровас Н.Е.': 'Петровас Наталья Евгеньевна',
+  'Корепанова Т.В.': 'Корепанова Татьяна Владимировна',
+  'Меркушенкова О.В.': 'Меркушенкова Ольга Владимировна',
+  'Кузнецова Н.Н.': 'Кузнецова Надежда Николаевна',
+  'Евграфова О.Н.': 'Евграфова Ольга Николаевна',
+  'Луговая К.И.': 'Луговая Ксения Игоревна',
+  'Куликова Г.В.': 'Куликова Галина Владимировна',
+  'Видус Г.С.': 'Видус Галина Сергеевна',
+  'Минина С.В.': 'Минина Светлана Владимировна',
+  'Гродинская Т.Л.': 'Гродинская Татьяна Леонидовна',
+  'Мухотин Н.П.': 'Мухотин Николай Павлович',
+  'Табуева Т.А.': 'Табуева Татьяна Александровна',
+  'Гуриненко А.В.': 'Гуриненко Александр Васильевич',
+}
+
 export function sportJudgeMeta(judge: {
   id: string
   name?: string | null
@@ -1024,22 +1092,24 @@ export function sportJudgeMeta(judge: {
   unique_breeds?: number | null
   unique_dogs?: number | null
 }): SimpleEntityMeta {
-  const name = judge.name?.trim() || judge.id
+  const shortName = judge.name?.trim() || judge.id
+  const fullName = SPORT_JUDGE_FULL_NAMES[shortName] || null
+  const displayName = fullName ? `${fullName} (${shortName})` : shortName
   const facts = [
     judge.unique_events != null ? `${judge.unique_events} соревнований` : null,
     judge.unique_breeds != null ? `${judge.unique_breeds} пород` : null,
     judge.unique_dogs != null ? `${judge.unique_dogs} собак` : null,
   ].filter(Boolean)
-  const title = `Судья ${name} — статистика курсинга и бегов борзых | Coursing Stats`
+  const title = `Судья РКФ ${displayName} — статистика курсинга и бегов борзых | Coursing Stats`
   const description =
     facts.length > 0
-      ? `Судья по курсингу и бегам борзых ${name}: статистика судейства (${facts.join(', ')}), судимые породы, оценки собак и история забегов на Coursing Stats.`
-      : `Судья по курсингу и бегам борзых ${name}: профиль, статистика судейства, оценки собак и судимые породы на Coursing Stats.`
+      ? `Судья РКФ по курсингу и бегам борзых ${displayName}: статистика судейства (${facts.join(', ')}), судимые породы, оценки собак и история забегов на Coursing Stats.`
+      : `Судья РКФ по курсингу и бегам борзых ${displayName}: профиль, статистика судейства, оценки собак и судимые породы на Coursing Stats.`
   const url = `${SITE_ORIGIN}/judges/${encodeURIComponent(judge.id)}/`
   const breadcrumbs = [
     { name: 'Главная', url: '/' },
     { name: 'Судьи', url: '/competitions?tab=judges' },
-    { name: name, url: `/judges/${encodeURIComponent(judge.id)}/` },
+    { name: displayName, url: `/judges/${encodeURIComponent(judge.id)}/` },
   ]
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -1049,8 +1119,11 @@ export function sportJudgeMeta(judge: {
         '@type': 'Person',
         '@id': url,
         url,
-        name,
-        jobTitle: 'Судья по курсингу и бегам борзых',
+        name: fullName || shortName,
+        alternateName: [shortName, fullName].filter(
+          (n): n is string => Boolean(n) && n !== (fullName || shortName),
+        ),
+        jobTitle: 'Судья по курсингу и бегам борзых РКФ',
         description,
         worksFor: {
           '@type': 'Organization',
@@ -1063,7 +1136,7 @@ export function sportJudgeMeta(judge: {
   return {
     title,
     description,
-    h1: name,
+    h1: displayName,
     paragraph: description,
     breadcrumbs,
     jsonLd,
@@ -1189,17 +1262,20 @@ export function showJudgeMeta(judge: {
   display_name?: string | null
   total_judged?: number | null
   unique_breeds?: number | null
+  excellent_rate?: number | null
 }): SimpleEntityMeta {
-  const name = judge.display_name?.trim() || judge.name?.trim() || judge.id
+  const rawName = judge.display_name?.trim() || judge.name?.trim() || judge.id
+  const name = toDogTitleCase(rawName)
   const facts = [
     judge.total_judged != null ? `${judge.total_judged} оценок` : null,
     judge.unique_breeds != null ? `${judge.unique_breeds} пород` : null,
+    judge.excellent_rate != null ? `${Math.round(judge.excellent_rate * 100)}% отлично` : null,
   ].filter(Boolean)
-  const title = `Судья РКФ ${name} — статистика выставок, строгость оценок и породы | Coursing Stats`
+  const title = `Эксперт РКФ ${name} — судья выставок собак, статистика и отзывы | Coursing Stats`
   const description =
     facts.length > 0
-      ? `Судья РКФ / FCI ${name}: статистика судейства на выставках собак (${facts.join(', ')}), строгость оценок (% отлично), любимые породы и история выставок на Coursing Stats.`
-      : `Судья РКФ / FCI ${name}: статистика судейства на выставках собак, строгость оценок (% отлично), породы и история судейства на Coursing Stats.`
+      ? `Эксперт РКФ / FCI ${name}: статистика судейства на выставках собак (${facts.join(', ')}), строгость оценок, судимые породы и отзывы на Coursing Stats.`
+      : `Эксперт РКФ / FCI ${name}: статистика судейства на выставках собак, строгость оценок (% отлично), породы и история судейства на Coursing Stats.`
   const url = `${SITE_ORIGIN}/shows/judges/${encodeURIComponent(judge.id)}/`
   const breadcrumbs = [
     { name: 'Главная', url: '/' },
@@ -1216,7 +1292,10 @@ export function showJudgeMeta(judge: {
         '@id': url,
         url,
         name,
-        jobTitle: 'Судья по породам собак РКФ / FCI',
+        alternateName: [rawName, judge.name, judge.display_name].filter(
+          (n): n is string => Boolean(n) && n !== name,
+        ),
+        jobTitle: 'Эксперт РКФ / Судья по экстерьеру собак',
         description,
         worksFor: {
           '@type': 'Organization',

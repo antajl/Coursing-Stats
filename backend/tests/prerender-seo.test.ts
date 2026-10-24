@@ -15,6 +15,8 @@ import {
   eventMetaFromEntry,
   guideJsonLd,
   HUB_PAGES,
+  showJudgeMeta,
+  sportJudgeMeta,
 } from '../scripts/seo/prerender-html'
 
 const SPA_SHELL = `<!doctype html>
@@ -249,9 +251,71 @@ describe('prerender-seo helpers', () => {
     const graph = (jsonLd as any)['@graph'] as any[]
     const faqPage = graph.find((item) => item['@type'] === 'FAQPage')
     expect(faqPage).toBeDefined()
-    expect(faqPage.mainEntity.length).toBeGreaterThanOrEqual(3)
-    expect(faqPage.mainEntity[0].name).toContain('Существует ли единый всероссийский рейтинг')
+    expect(faqPage.mainEntity.length).toBeGreaterThanOrEqual(4)
+    expect(faqPage.mainEntity[0].name).toContain('актуальное расписание и календарь соревнований по курсингу')
+    expect(faqPage.mainEntity.some((q: any) => q.name.includes('Существует ли единый всероссийский рейтинг'))).toBe(true)
     expect(faqPage.mainEntity[0].acceptedAnswer.text).toContain('Coursing Stats')
+  })
+
+  it('eventMetaFromEntry formats top winners in description and SportsEvent award', () => {
+    const meta = eventMetaFromEntry({
+      id: '1545',
+      title: 'ПЧРКФ Курсинг борзых',
+      date_start: '2026-06-20',
+      location: 'Москва, Раменское',
+      result_count: 57,
+      competition_kind: 'ПЧРКФ',
+      winners: [
+        {
+          name: 'ЮНИОН СВЕТЛЫЙ',
+          breed: 'УИППЕТ',
+          score: 369,
+          title: 'ПЧРКФ РК',
+        },
+      ],
+    })
+
+    expect(meta.description).toContain('Победители: Юнион Светлый (Уиппет, 369 б., ПЧРКФ РК)')
+    const sportsEvent = (meta.jsonLd as any)['@graph'].find((item: any) => item['@type'] === 'SportsEvent')
+    expect(sportsEvent).toBeDefined()
+    expect(sportsEvent.award).toContain('Юнион Светлый (Уиппет, 369 б., ПЧРКФ РК)')
+    expect(sportsEvent.competitor[0].name).toBe('Юнион Светлый')
+  })
+
+  it('sportJudgeMeta maps known judge initials to full name for exact search match', () => {
+    const meta = sportJudgeMeta({
+      id: 'Орлова М.О.',
+      name: 'Орлова М.О.',
+      unique_events: 4,
+      unique_breeds: 15,
+      unique_dogs: 300,
+    })
+
+    expect(meta.title).toContain('Орлова Марина Олеговна (Орлова М.О.)')
+    expect(meta.description).toContain('Орлова Марина Олеговна (Орлова М.О.)')
+    expect(meta.h1).toBe('Орлова Марина Олеговна (Орлова М.О.)')
+    const person = (meta.jsonLd as any)['@graph'].find((item: any) => item['@type'] === 'Person')
+    expect(person.name).toBe('Орлова Марина Олеговна')
+    expect(person.alternateName).toContain('Орлова М.О.')
+    expect(person.jobTitle).toContain('Судья по курсингу и бегам борзых')
+  })
+
+  it('showJudgeMeta formats judge name in TitleCase without all-caps and sets RKF expert title', () => {
+    const meta = showJudgeMeta({
+      id: 'орлова|м|о',
+      display_name: 'ОРЛОВА МАРИНА ОЛЕГОВНА',
+      total_judged: 300,
+      unique_breeds: 4,
+      excellent_rate: 0.7466,
+    })
+
+    expect(meta.title).toContain('Эксперт РКФ Орлова Марина Олеговна')
+    expect(meta.title).not.toContain('ОРЛОВА')
+    expect(meta.description).toContain('75% отлично')
+    expect(meta.description).toContain('Эксперт РКФ / FCI Орлова Марина Олеговна')
+    const person = (meta.jsonLd as any)['@graph'].find((item: any) => item['@type'] === 'Person')
+    expect(person.name).toBe('Орлова Марина Олеговна')
+    expect(person.jobTitle).toContain('Эксперт РКФ')
   })
 
   it('buildGuideHubHtml renders semantic table with breed speeds and Google AI Overview FAQ', () => {
