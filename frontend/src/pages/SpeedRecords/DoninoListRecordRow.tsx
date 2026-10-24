@@ -5,7 +5,8 @@ import DogSexIcon from '../../components/DogSexIcon'
 import OwnerCrownName from '../../components/OwnerCrownName'
 import SpeedHistorySparkline from '../../components/SpeedHistorySparkline'
 import SpeedStatusBadge from '../../components/SpeedStatusBadge'
-import { formatRecordDate, formatDoninoSpeedKmh, parseRecordHistory } from '../../lib/recordDates'
+import RankBadge from '../../components/RankBadge'
+import { formatRecordDate, formatDoninoSpeedKmh, parseRecordHistory, isRecentRecordDate } from '../../lib/recordDates'
 import { buildCoursingTimeline } from '../../components/CoursingHistorySparkline'
 import { buildSpeedTimeline } from '../../components/SpeedHistorySparkline'
 
@@ -23,6 +24,7 @@ interface DoninoListRecordRowProps {
   trackType?: string | null
   /** Flat row inside DoninoColumnShell (default true — only used there). */
   embedded?: boolean
+  rank?: number
 }
 
 function formatTime(value: number): string {
@@ -65,10 +67,12 @@ export default function DoninoListRecordRow({
   screenshotUrl,
   trackType,
   embedded = true,
+  rank,
 }: DoninoListRecordRowProps) {
   const historyItems = parseRecordHistory(history)
-  const showUpd = historyItems.length > 0 || status === 'improved'
-  const showNew = status === 'new'
+  const isRecent = isRecentRecordDate(date)
+  const showNew = isRecent && status === 'new'
+  const showUpd = isRecent && !showNew && (status === 'improved' || historyItems.length > 0)
   const rowClass = embedded ? 'donino-list-row donino-list-row--embedded' : 'donino-list-row'
 
   const hasSparkline =
@@ -97,22 +101,29 @@ export default function DoninoListRecordRow({
       state={{ from: mode === 'speed' ? 'speed-records' : 'coursing-records' }}
       className="donino-list-row-link group min-w-0 flex-1 border-b border-old-money-200 bg-white py-2 px-4 transition-colors duration-200 hover:bg-camel-100/60"
     >
-      <div className="donino-home-row-main min-w-0">
-        <div className="flex min-w-0 items-center gap-2">
-          <OwnerCrownName name={name} breed={breed} kind="donino">
-            <span className="break-words font-serif text-base font-bold leading-snug text-charcoal-900 line-clamp-2">
-              {name}
-            </span>
-          </OwnerCrownName>
-          {sex && <DogSexIcon sex={sex} />}
-        </div>
-        {(date || breed) && (
-          <div className="mt-0.5 flex min-w-0 items-center gap-1.5 text-xs text-old-money-500">
-            {date && <span>{formatRecordDate(date)}</span>}
-            {date && breed && <span className="text-old-money-300">·</span>}
-            {breed && <span className="donino-home-row-breed">{breed}</span>}
+      <div className="flex items-center gap-2.5 min-w-0 flex-1">
+        {rank != null && (
+          <div className="shrink-0 flex items-center justify-center w-6 sm:w-7">
+            <RankBadge rank={rank} />
           </div>
         )}
+        <div className="donino-home-row-main min-w-0 flex-1">
+          <div className="flex min-w-0 items-center gap-2">
+            <OwnerCrownName name={name} breed={breed} kind="donino">
+              <span className="break-words font-serif text-base font-bold leading-snug text-charcoal-900 line-clamp-2">
+                {name}
+              </span>
+            </OwnerCrownName>
+            {sex && <DogSexIcon sex={sex} />}
+          </div>
+          {(date || breed) && (
+            <div className="mt-0.5 flex min-w-0 items-center gap-1.5 text-xs text-old-money-500">
+              {date && <span>{formatRecordDate(date)}</span>}
+              {date && breed && <span className="text-old-money-300">·</span>}
+              {breed && <span className="donino-home-row-breed">{breed}</span>}
+            </div>
+          )}
+        </div>
       </div>
 
       <div

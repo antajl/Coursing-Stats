@@ -5,7 +5,7 @@ import OwnerCrownName from './OwnerCrownName'
 import SpeedStatusBadge from './SpeedStatusBadge'
 import SpeedHistorySparkline from './SpeedHistorySparkline'
 import CoursingHistorySparkline from './CoursingHistorySparkline'
-import { formatRecordDate, formatDoninoSpeedKmh, parseRecordHistory } from '../lib/recordDates'
+import { formatRecordDate, formatDoninoSpeedKmh, parseRecordHistory, isRecentRecordDate } from '../lib/recordDates'
 import { buildCoursingTimeline } from './CoursingHistorySparkline'
 import { buildSpeedTimeline } from './SpeedHistorySparkline'
 
@@ -63,9 +63,10 @@ export default function DoninoHomeRecordRow({
   rise = false,
   trackType,
 }: DoninoHomeRecordRowProps) {
-  const showNew = status === 'new'
   const historyItems = parseRecordHistory(history)
-  const showUpd = historyItems.length > 0 || status === 'improved'
+  const isRecent = isRecentRecordDate(date)
+  const showNew = isRecent && status === 'new'
+  const showUpd = isRecent && !showNew && (status === 'improved' || historyItems.length > 0)
 
   const hasSparkline =
     mode === 'speed'

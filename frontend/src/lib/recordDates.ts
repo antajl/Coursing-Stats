@@ -259,3 +259,23 @@ export function formatDoninoSpeedKmh(value: number | string | null | undefined):
   const rounded = Math.round(n * 10) / 10
   return Number.isInteger(rounded) ? String(rounded) : rounded.toFixed(1)
 }
+export const DEFAULT_MAX_RECENT_RECORD_DAYS = 30
+
+/**
+ * Проверяет, является ли дата замера недавней (по умолчанию не старше 30 дней).
+ * @param value Дата (строка ISO, DD.MM.YYYY, серийный номер Excel и т.д.)
+ * @param maxDays Максимальный возраст в днях (по умолчанию 30)
+ * @param referenceDate Опорная дата (по умолчанию Date.now(), можно передать для тестов)
+ */
+export function isRecentRecordDate(
+  value: string | number | null | undefined,
+  maxDays = DEFAULT_MAX_RECENT_RECORD_DAYS,
+  referenceDate: Date | number = Date.now()
+): boolean {
+  const date = parseRecordDate(value)
+  if (!date) return false
+  const refTime = typeof referenceDate === 'number' ? referenceDate : referenceDate.getTime()
+  const diffMs = refTime - date.getTime()
+  const diffDays = diffMs / (1000 * 60 * 60 * 24)
+  return diffDays >= -1 && diffDays <= maxDays
+}

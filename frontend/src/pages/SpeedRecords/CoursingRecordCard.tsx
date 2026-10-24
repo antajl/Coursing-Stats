@@ -3,7 +3,7 @@ import CoursingHistorySparkline from '../../components/CoursingHistorySparkline'
 import DogSexIcon from '../../components/DogSexIcon'
 import OwnerCrownName from '../../components/OwnerCrownName'
 import SpeedStatusBadge from '../../components/SpeedStatusBadge'
-import { formatRecordDate } from '../../lib/recordDates'
+import { formatRecordDate, isRecentRecordDate } from '../../lib/recordDates'
 import { Icons } from '../../lib/icons'
 
 interface CoursingRecordCardProps {
@@ -27,7 +27,7 @@ export default function CoursingRecordCard({ record }: CoursingRecordCardProps) 
       <span className="inline-block rounded-full bg-camel-600 px-3 py-1.5 text-sm font-bold text-white shadow-sm">
         {record.time_seconds} сек
       </span>
-      {hasHistoryChart && <SpeedStatusBadge variant="upd" />}
+      {isRecentRecordDate(record.date) && (hasHistoryChart || (record as any).status === 'improved') && <SpeedStatusBadge variant="upd" />}
     </div>
   )
 

@@ -9,6 +9,7 @@ export default function SpeedStatusBadge({ variant }: SpeedStatusBadgeProps) {
   if (variant === 'new') {
     return (
       <span
+        title="Новый результат (за последние 30 дней)"
         className={`${badgeBase} border-green-700 bg-green-600 text-white`}
       >
         new
@@ -18,6 +19,7 @@ export default function SpeedStatusBadge({ variant }: SpeedStatusBadgeProps) {
 
   return (
     <span
+      title="Обновлённый рекорд (за последние 30 дней)"
       className={`${badgeBase} border-blue-700 bg-blue-600 text-white`}
     >
       upd

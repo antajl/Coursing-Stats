@@ -4,7 +4,7 @@ import DogSexIcon from '../../components/DogSexIcon'
 import OwnerCrownName from '../../components/OwnerCrownName'
 import SpeedHistorySparkline from '../../components/SpeedHistorySparkline'
 import SpeedStatusBadge from '../../components/SpeedStatusBadge'
-import { formatRecordDate } from '../../lib/recordDates'
+import { formatRecordDate, isRecentRecordDate } from '../../lib/recordDates'
 import { Icons } from '../../lib/icons'
 
 interface SpeedRecordCardProps {
@@ -25,13 +25,17 @@ export default function SpeedRecordCard({ record }: SpeedRecordCardProps) {
   const ChevronRight = Icons.chevronRight
   const hasHistoryChart = Array.isArray(record.history) && record.history.length > 0
 
+  const isRecent = isRecentRecordDate(record.date)
+  const showNew = isRecent && record.status === 'new'
+  const showUpd = isRecent && !showNew && (record.status === 'improved' || hasHistoryChart)
+
   const speedBlock = (
     <div className="relative shrink-0">
       <span className="inline-block rounded-full bg-camel-600 px-3 py-1.5 text-xs font-bold text-white shadow-sm">
         {record.speed_km_h} км/ч
       </span>
-      {record.status === 'new' && <SpeedStatusBadge variant="new" />}
-      {record.status === 'improved' && <SpeedStatusBadge variant="upd" />}
+      {showNew && <SpeedStatusBadge variant="new" />}
+      {showUpd && <SpeedStatusBadge variant="upd" />}
     </div>
   )
 

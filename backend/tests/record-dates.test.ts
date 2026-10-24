@@ -14,6 +14,7 @@ import {
   speedKmhToTime350,
   speedRecordDedupeKey,
   time350ToSpeedKmh,
+  isRecentRecordDate,
 } from '../../frontend/src/lib/recordDates'
 
 describe('recordDates', () => {
@@ -68,4 +69,18 @@ describe('recordDates', () => {
     expect(stats.maxSpeed).toBeCloseTo(55.2, 1)
     expect(avgSpeedFromCoursingTimes(times)!).toBeCloseTo(stats.avgSpeed, 1)
   })
-})
+it('correctly identifies recent records within maxDays', () => {
+    const ref = new Date('2026-10-24T12:00:00Z')
+    // 2 days ago
+    expect(isRecentRecordDate('2026-10-22', 30, ref)).toBe(true)
+    // 24 days ago
+    expect(isRecentRecordDate('2026-09-30', 30, ref)).toBe(true)
+    // 35 days ago (older than 30 days)
+    expect(isRecentRecordDate('2026-09-19', 30, ref)).toBe(false)
+    // 5 months ago (May 2026)
+    expect(isRecentRecordDate('2026-05-11', 30, ref)).toBe(false)
+    // empty / invalid
+    expect(isRecentRecordDate(null, 30, ref)).toBe(false)
+    expect(isRecentRecordDate('', 30, ref)).toBe(false)
+  })
+});
