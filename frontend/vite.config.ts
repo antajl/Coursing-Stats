@@ -167,7 +167,7 @@ export default defineConfig(({ mode }) => {
           "style-src 'self' 'unsafe-inline' https://coursing-stats.ru https://fonts.googleapis.com; " +
           "img-src 'self' data: blob: https://coursing-stats.ru https://*.googleusercontent.com https://*.gstatic.com; " +
           "font-src 'self' https://fonts.gstatic.com; " +
-          "connect-src 'self' ws: wss: https://coursing-stats.ru https://api.telegram.org https://coursing-stats-antajl.aws-eu-west-1.turso.io https://auth-worker.antajltube.workers.dev https://www.googletagmanager.com; " +
+          "connect-src 'self' ws: wss: https://coursing-stats.ru https://api.telegram.org https://auth-worker.antajltube.workers.dev https://www.googletagmanager.com; " +
           "frame-src 'self' https://coursing-stats.ru https://t.me; " +
           "frame-ancestors 'self' https://coursing-stats.ru; " +
           "worker-src 'self' blob:; " +

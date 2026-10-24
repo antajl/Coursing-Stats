@@ -41,9 +41,6 @@ jobs:
       - name: Build frontend
         working-directory: ./frontend
         run: yarn build
-        env:
-          VITE_TURSO_URL: ${{ secrets.VITE_TURSO_URL }}
-          VITE_TURSO_AUTH_TOKEN: ${{ secrets.VITE_TURSO_AUTH_TOKEN }}
 
       - name: Prerender SEO HTML
         run: yarn run prerender-seo
@@ -59,6 +56,7 @@ jobs:
           aws s3 sync frontend/dist/assets/ s3://${{ secrets.S3_BUCKET }}/assets/ \
             --endpoint-url https://storage.yandexcloud.net \
             --acl public-read \
+            --size-only \
             --cache-control "public, max-age=31536000, immutable"
 
           # 2. Static media (images, favicons, banners) get 1 week caching
@@ -69,14 +67,17 @@ jobs:
             --exclude "assets/*" \
             --exclude "data/*" \
             --exclude "*.html" \
+            --size-only \
             --cache-control "public, max-age=604800"
 
-          # 3. HTML entrypoints get max-age=0, must-revalidate so deploys are instant
+          # 3. HTML entrypoints get max-age=0, must-revalidate so deploys are instant.
+          # --size-only prevents re-uploading 25,000 unchanged prerendered HTML files on every commit.
           aws s3 sync frontend/dist/ s3://${{ secrets.S3_BUCKET }}/ \
             --endpoint-url https://storage.yandexcloud.net \
             --acl public-read \
             --exclude "*" \
             --include "*.html" \
+            --size-only \
             --cache-control "public, max-age=0, must-revalidate"
 
           aws s3 website s3://${{ secrets.S3_BUCKET }}/ \
@@ -155,6 +156,7 @@ jobs:
           aws s3 sync data/v1/ s3://${{ secrets.S3_BUCKET }}/data/v1/ \
             --endpoint-url https://storage.yandexcloud.net \
             --acl public-read \
+            --size-only \
             --cache-control "public, max-age=3600, must-revalidate" \
             --delete
         env:

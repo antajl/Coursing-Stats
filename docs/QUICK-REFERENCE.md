@@ -14,14 +14,14 @@ Static React site for dog competition statistics:
 
 ### Three Domains
 1. **Competitions** — procoursing.ru data, calendars, protocols, rankings (medals, CS points; Elo removed)
-2. **Shows** — RKF exhibitions, Turso for large protocols, CDN for rankings
+2. **Shows** — RKF exhibitions, S3 CDN for compressed protocols, CDN for rankings
 3. **Donino** — Speed records, separate dog identity
 
 ### Tech Stack
 - **Frontend:** React 19 + Vite + Tailwind CSS
 - **Backend:** Node.js + TypeScript + SQLite (local dev only)
 - **Bot:** Cloudflare Workers + Grammy + KV
-- **Data:** JSON in `data/v1/` (canonical source in git) + Turso for exhibitions
+- **Data:** JSON in `data/v1/` (canonical source in git) + S3 CDN for exhibition protocols
 - **Package Manager:** yarn@1.22.22
 
 ### Deployment
@@ -76,9 +76,9 @@ procoursing / Google Sheets / RKF PDF
 - **RIGHT:** Use explicit mappings (competition_dog_id, dog_links, stable project logic)
 - **Skill:** `sport-show-linkage` — always use when linking sport↔show dogs
 
-### 2. CDN vs Turso Violations
-- **WRONG:** Reading ranking/calendar from Turso
-- **RIGHT:** Only exhibition protocols from Turso, everything else from CDN
+### 2. S3 CDN Violations
+- **WRONG:** Using external runtime databases (Turso, D1) on production
+- **RIGHT:** 100% static JSON from S3 CDN (protocols at /data/v1/shows/protocols/{id}.json in gzip)
 - **Reason:** Production is CDN-only, no Worker/D1 runtime
 
 ### 3. Merging Ratings

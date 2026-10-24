@@ -292,7 +292,13 @@ export async function getShowFeatured(
 export async function getShowExhibition(exhibitionId: string): Promise<ApiResult<ShowExhibition>> {
   console.debug('[getShowExhibition] Loading exhibition:', exhibitionId)
 
-  // 1. Try JSON index (for LC allowlist exhibitions)
+  // 1. Try static JSON protocol from S3 / CDN (zero latency in РФ)
+  try {
+    const directProtocol = await fetchJson<ShowExhibition>(`shows/protocols/${exhibitionId}.json`)
+    if (directProtocol?.id) return { success: true, data: directProtocol }
+  } catch {}
+
+  // 2. Try JSON index (for LC allowlist exhibitions)
   try {
     const index = await fetchJson<Record<string, string>>('shows/index.json')
     const filePath = index?.[exhibitionId]
@@ -310,16 +316,6 @@ export async function getShowExhibition(exhibitionId: string): Promise<ApiResult
     if (directRaw?.id) return { success: true, data: directRaw }
   } catch {}
 
-  // 3. Try Turso database (contains all RKF exhibitions 2019-2026)
-  try {
-    const { getExhibitionById } = await import('../../turso')
-    const exhibition = await getExhibitionById(exhibitionId)
-    if (exhibition) {
-      return { success: true, data: exhibition }
-    }
-  } catch (error) {
-    console.error('[getShowExhibition] Turso query failed:', error)
-  }
 
   console.warn('[getShowExhibition] Exhibition not found anywhere:', exhibitionId)
   return {

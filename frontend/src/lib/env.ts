@@ -5,7 +5,7 @@ export const isLocalDev = import.meta.env.DEV
  * Публичные вкладки «Календарь» на проде — через `data/v1/ui-flags.json`
  * (scripts/show-calendar-*.bat / hide-calendar-*.bat). Локально календари всегда видны.
  *
- * Протоколы выставок `/shows/exhibition/:id` — на сайте (Turso).
+ * Протоколы выставок `/shows/exhibition/:id` — на сайте (S3 / CDN).
  * Протоколы соревнований `/event/:id` — на сайте (CDN).
  */
 

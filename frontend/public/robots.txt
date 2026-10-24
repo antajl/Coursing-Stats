@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 
+Disallow: /data/
 Disallow: /admin
 Disallow: /admin/
 Disallow: /login

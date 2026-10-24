@@ -18,7 +18,7 @@ verified: 2026-10-01
 | Формат CDN | **JSON** (+ gzip/Brotli на edge); канон редактируемый |
 | Паки | sport `dog-profiles/pack-*`, show `judge-details/pack-*` (ADR-014) |
 | Календари | `ui-flags.json`: competitions **ON**, shows **ON** |
-| Turso | Только протоколы выставок RKF (`getShowExhibition`; LC allowlist ещё на CDN) |
+| Turso | Полностью удалён из проекта. Все 51 429 протоколов выставок отдаются напрямую с Яндекс S3 (gzip) |
 | CDN limits | ≤~20k файлов; exclude: `dogs/by-id`, bulk `shows/exhibitions` (`publish-exclude.js`) |
 | Dev | Vite `:5173` (`yarn run dev`) — чистый статический фронтенд |
 | Рейтинги спорта | зачёт сезона (медали/КПД) → CS tie-break (Elo полностью удалён из UI/пайплайна) — никогда не мерджить в одно число |
@@ -34,7 +34,7 @@ verified: 2026-10-01
 | Соревнования, medals/CS, judges | [sheets/03-competitions.md](sheets/03-competitions.md) |
 | Импорт соревнований, протоколов, собак | [.agents/skills/competition-ingest/SKILL.md](../.agents/skills/competition-ingest/SKILL.md) |
 | Бега борзых, sex, breed_class, кворум | [sheets/13-racing-standards.md](sheets/13-racing-standards.md) |
-| Выставки, RKF, Turso protocols | [sheets/04-shows.md](sheets/04-shows.md) |
+| Выставки, RKF, протоколы выставок S3 | [sheets/04-shows.md](sheets/04-shows.md) |
 | Донино speed ≠ 350m | [sheets/05-donino.md](sheets/05-donino.md) |
 | Парсеры procoursing | [sheets/06-parsers.md](sheets/06-parsers.md) |
 | Routes, ui-flags, React Query | [sheets/07-frontend.md](sheets/07-frontend.md) |

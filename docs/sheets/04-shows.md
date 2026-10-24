@@ -7,15 +7,15 @@ verified: 2026-10-01
 
 ## Purpose
 
-Выставки РКФ: рейтинг, календарь, судьи, протоколы PDF, Turso для больших протоколов.
+Выставки РКФ: рейтинг, календарь, судьи, протоколы PDF, статические протоколы S3/CDN (gzip).
 
 ## Truth table
 
 | Что | Откуда |
 |-----|--------|
 | Ranking / calendar / judges / home-top | **CDN** `data/v1/shows/indexes/*`, calendar JSON |
-| Протокол `/shows/exhibition/:id` | Сначала `shows/index.json` → CDN JSON (LC allowlist); miss → **Turso** `@libsql/client` |
-| Bulk `shows/exhibitions/*.json` | **Не** на CDN (~5k); только ~90 из `shows/index.json` |
+| Протокол `/shows/exhibition/:id` | Прямой fetch с S3 CDN `shows/protocols/${id}.json` (gzip); fallback: `shows/index.json` (LC allowlist) |
+| Bulk протоколы выставок | Все 51 429 протоколов (2019–2026) на S3 CDN (`shows/protocols/*.json`) в gzip |
 | ShowRanking / ShowCalendar | React Query → **CDN**, не Turso |
 | All-time `dog-ranking.json` | &gt;25 MB — **не** в CDN deploy |
 | Lookup | `show-dog-lookup/{0-f}.json` шарды (~обход 25 MB) |
@@ -23,7 +23,7 @@ verified: 2026-10-01
 | Show judge detail | `shows/indexes/judge-details/pack-*.json` (`byKey`) |
 | Identity | show dog id **≠** competition `dog_id` |
 | Calendar prod | `ui-flags.publicCalendars.shows: true` |
-| Env | `VITE_TURSO_URL`, `VITE_TURSO_AUTH_TOKEN`; scripts: `.env.ai` `TURSO_*` |
+| Env | Не требуются для рантайма сайта (Turso полностью удален; протоколы на S3) |
 
 ### PDF pipeline (кратко)
 
@@ -36,7 +36,6 @@ Skill: `shows-pdf-pipeline`.
 ## Key files
 
 - `frontend/src/lib/staticData/shows.ts` — barrel → `shows/{calendar,ranking,judges,home}.ts`
-- `frontend/src/lib/turso.ts`
 - `frontend/src/pages/Shows/*` — page shells + folders `ShowExhibitionDetail/`, `ShowCalendar/`, `ShowJudgeDetail/`
 - `backend/lib/show-award-ranking.ts` — barrel → `show-awards/{order,normalize,match,score}.ts`
 - `backend/lib/cdn-packs.ts` — общий шардер паков
@@ -53,8 +52,8 @@ yarn run ingest-rkf-calendar
 yarn run download-rkf-reports
 yarn run parse-rkf-reports
 yarn run rebuild-show-year
-# Turso:
-yarn run turso:import-shows
+# Выгрузка протоколов на Яндекс S3 (gzip):
+npx tsx backend/scripts/shows/export-protocols-to-s3.ts --all
 # Ремонт данных 2026:
 npx tsx backend/scripts/repair/repair-2026-shows.ts
 npx tsx backend/scripts/repair/repair-sqlite-2026.ts

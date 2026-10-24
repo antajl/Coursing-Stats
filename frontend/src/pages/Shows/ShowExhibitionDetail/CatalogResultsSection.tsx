@@ -26,6 +26,7 @@ import {
 } from '../showExhibitionUtils'
 import { TitleChips } from './TitleChips'
 import { BreedTitleRowView, ExhibitionDogNameLink } from './ExhibitionDogNameLink'
+import { formatJudgeDisplayName } from '../../../lib/judgeUiUtils'
 
 function ClassResultsTable({ classes }: { classes: ClassResultGroup[] }) {
   return (
@@ -316,7 +317,7 @@ function BreedAccordionItem({
           {catalog.breed_judge && (
             <div className="mt-0.5 flex items-center gap-1 text-xs text-charcoal-600">
               <UserRound className="h-3 w-3 shrink-0" aria-hidden />
-              <span>{catalog.breed_judge}</span>
+              <span>{formatJudgeDisplayName(catalog.breed_judge)}</span>
             </div>
           )}
         </div>

@@ -20,7 +20,7 @@ verified: 2026-10-01
 | Деплой бота | **Manual only**: `cd bot; yarn run build; yarn run deploy` (Cloudflare Workers) |
 | Cron обновления Донино | `.github/workflows/update-speed-records.yml` (2 раза в день: 05:00 и 17:00 UTC) |
 | Локальная разработка | `yarn run dev` → Vite SPA на `http://localhost:5173` |
-| Секреты сайта | GitHub Repository Secrets (`AWS_*`, `S3_BUCKET`, `VITE_TURSO_*`) |
+| Секреты сайта | GitHub Repository Secrets (`AWS_*`, `S3_BUCKET`) |
 | Секреты бота | Cloudflare Workers Dashboard / `wrangler secret put` |
 | Локальные секреты | `.env.ai` (gitignored) |
 
@@ -40,6 +40,12 @@ GitHub Actions (deploy.yml)
        └── 4. If data/v1/ changed:
               aws s3 sync data/v1/ -> s3://$S3_BUCKET/data/v1/ (Yandex Object Storage)
 ```
+
+---
+
+### Защита от лишних списаний биллинга (--size-only)
+В CI-скрипте `deploy.yml` для команд `aws s3 sync` **обязателен флаг `--size-only`**.
+GitHub Actions запускается в чистом контейнере, из-за чего локальные файлы HTML после пререндера получают свежие даты изменения. Без `--size-only` утилита AWS CLI заливает заново все 25 000–30 000 файлов на каждый коммит (свыше 1 млн операций PUT в месяц = ~570 ₽). Флаг `--size-only` проверяет фактический размер файла в бакете и заливает только действительно изменившиеся файлы (0–5 файлов на коммит).
 
 ---
 
@@ -110,8 +116,6 @@ yarn run build-all-data
 | `AWS_ACCESS_KEY_ID` | GitHub Secrets | Ключ доступа к Yandex Object Storage (S3 API) |
 | `AWS_SECRET_ACCESS_KEY` | GitHub Secrets | Секретный ключ к Yandex Object Storage |
 | `S3_BUCKET` | GitHub Secrets | Имя бакета Yandex Object Storage |
-| `VITE_TURSO_URL` | GitHub Secrets / `.env.ai` | URL базы Turso для протоколов выставок |
-| `VITE_TURSO_AUTH_TOKEN` | GitHub Secrets / `.env.ai` | Токен доступа к Turso |
 | `TELEGRAM_BOT_TOKEN` | Cloudflare Workers Secrets | Токен Telegram-бота |
 | `TELEGRAM_SECRET_TOKEN` | Cloudflare Workers Secrets | Секрет валидации вебхука Telegram |
 

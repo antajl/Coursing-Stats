@@ -19,29 +19,25 @@ export interface StrictnessBadgeInfo {
  */
 export function formatJudgeDisplayName(name: string): string {
   if (!name) return ''
-  // If name has cyrillic or latin letters and is completely uppercase
-  if (name === name.toUpperCase() && /[А-ЯA-Z]/.test(name)) {
-    return name
-      .toLowerCase()
-      .split(/\s+/)
-      .map((word) => {
-        if (!word) return ''
-        return word
-          .split('-')
-          .map((part) => {
-            if (part.includes('.')) {
-              return part
-                .split('.')
-                .map((seg) => (seg ? seg.charAt(0).toUpperCase() + seg.slice(1) : ''))
-                .join('.')
-            }
-            return part.charAt(0).toUpperCase() + part.slice(1)
-          })
-          .join('-')
-      })
-      .join(' ')
-  }
   return name
+    .toLowerCase()
+    .split(/\s+/)
+    .map((word) => {
+      if (!word) return ''
+      return word
+        .split('-')
+        .map((part) => {
+          if (part.includes('.')) {
+            return part
+              .split('.')
+              .map((seg) => (seg ? seg.charAt(0).toUpperCase() + seg.slice(1) : ''))
+              .join('.')
+          }
+          return part.charAt(0).toUpperCase() + part.slice(1)
+        })
+        .join('-')
+    })
+    .join(' ')
 }
 
 /**
