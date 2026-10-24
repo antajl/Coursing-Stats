@@ -37,14 +37,14 @@ export default function SeasonCompetitionsCarousel({
   return (
     <div className="flex min-h-0 min-w-0 flex-1 flex-col">
       <div className="home-v2-col-head home-v2-col-head--tabs">
-        <span className="shrink-0">Соревнования</span>
+        <span className="hidden md:inline shrink-0">Соревнования</span>
         <div
-          className="flex min-w-0 flex-1 items-center justify-center gap-1.5 px-2"
+          className="flex min-w-0 flex-1 items-center justify-start md:justify-center gap-1.5 pr-2 md:px-2"
           style={fadeStyle}
         >
           <Link
             to={rankingHref}
-            className="truncate text-[12px] font-medium text-camel-700 hover:underline"
+            className="truncate text-[12px] font-semibold text-camel-800 hover:underline"
             title={`Рейтинг: ${slide.breedLabel}`}
           >
             {slide.breedLabel}
