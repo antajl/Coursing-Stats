@@ -282,7 +282,7 @@ export default function ShowRanking() {
       return rankedDogs
     }
 
-    return rankedDogs.filter((dog) => {
+    const filtered = rankedDogs.filter((dog) => {
       if (hasBreed) {
         if (!dog.breed) return false
         if (breedAliasKey(canonicalBreed(dog.breed)) !== targetBreedKey) return false
@@ -304,6 +304,12 @@ export default function ShowRanking() {
       }
       return true
     })
+
+    return filtered.map((dog, i) => ({
+      ...dog,
+      overall_rank: dog.overall_rank ?? dog.rank,
+      rank: i + 1,
+    }))
   }, [rankedDogs, filterBreed, filterGroup, awardMins, debouncedSearchQuery])
 
   const handleAwardMinChange = useCallback((key: ShowAwardKey, value: string) => {
@@ -371,6 +377,7 @@ export default function ShowRanking() {
         <ShowRankingColumns
           dogs={filteredDogs}
           filterYear={rankingYear}
+          filterBreed={filterBreed}
           favorites={favorites}
           onToggleFavorite={(dogId, meta) => {
             void toggleFavorite(dogId, meta).catch((error) => {

@@ -35,6 +35,8 @@ export interface ShowDogCardData {
   rank?: number
   /** 1-based место в рейтинге по породе за всё время. */
   breed_rank?: number
+  /** Место в общем рейтинге РКФ (до применения фильтров по породе/группе). */
+  overall_rank?: number
   titles: ShowTitleCounts
   competition_dog_id?: number | null
   /** Catalog/ring # for legacy /shows/dog/{catalog}/{breed} URLs. */
@@ -166,7 +168,16 @@ function ShowDogCardInner({
           <div className="flex min-h-0 min-w-[2.75rem] sm:min-w-[3rem] shrink-0 flex-col justify-between items-center pr-2 sm:pr-2.5 mr-2 sm:mr-2.5 border-r border-old-money-200/70 self-stretch">
             <RankBadge rank={rank} hideDelta />
             <div className="flex items-center justify-center h-4 sm:h-5">
-              {(dog as any)?.rank_delta ? <DeltaBadge delta={(dog as any).rank_delta} /> : null}
+              {dog.overall_rank != null && dog.overall_rank !== rank ? (
+                <span
+                  className="text-[9px] font-medium text-charcoal-400 tabular-nums leading-none tracking-tight"
+                  title={`Место в общем зачёте РКФ: ${dog.overall_rank}`}
+                >
+                  №{dog.overall_rank}
+                </span>
+              ) : (dog as any)?.rank_delta ? (
+                <DeltaBadge delta={(dog as any).rank_delta} />
+              ) : null}
             </div>
           </div>
         )}
@@ -303,6 +314,7 @@ const ShowDogCardMemo = memo(ShowDogCardInner, (prevProps, nextProps) => {
     prevProps.dog.id === nextProps.dog.id &&
     prevProps.dog.total_shows === nextProps.dog.total_shows &&
     prevProps.rank === nextProps.rank &&
+    prevProps.dog.overall_rank === nextProps.dog.overall_rank &&
     prevProps.filterYear === nextProps.filterYear &&
     Boolean(prevProps.favorites?.has(getShowDogFavId(prevProps.dog))) ===
       Boolean(nextProps.favorites?.has(getShowDogFavId(nextProps.dog)))

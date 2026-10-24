@@ -38,12 +38,12 @@ export const HUB_PAGES: HubMeta[] = [
   },
   {
     path: '/competitions',
-    title: 'Рейтинг собак: курсинг и бега борзых 2026 | Coursing Stats',
+    title: 'Рейтинг собак в курсинге и бегах борзых — Единый рейтинг России | Coursing Stats',
     description:
-      'Рейтинг собак по курсингу и бегам борзых сезона 2026 года: лидеры по породам (уиппеты, РПБ, басенджи, грейхаунды), медали, очки CS и динамика позиций.',
-    h1: 'Рейтинг собак: курсинг и бега борзых 2026',
+      'Единый всероссийский рейтинг собак по курсингу и бегам борзых: турнирная таблица соревнований РКФ с 2015 года. Медальный зачёт, баллы за забеги, очки стабильности CS и лидеры по породам.',
+    h1: 'Рейтинг собак в курсинге и бегах борзых',
     paragraph:
-      'Рейтинг собак по курсингу и бегам борзых сезона 2026: зачёт по медалям и очкам CS, динамика лидеров и статистика судей.',
+      'Единая турнирная таблица и всероссийский рейтинг собак по курсингу и бегам борзых: результаты соревнований РКФ с 2015 года, медальный зачёт, очки CS и замеры скорости.',
   },
   {
     path: '/shows',
@@ -322,6 +322,104 @@ export function buildHubBodyHtml(hub: Pick<HubMeta, 'path' | 'h1' | 'paragraph'>
     `<main>`,
     `<h1>${escapeHtml(hub.h1)}</h1>`,
     `<p>${escapeHtml(hub.paragraph)}</p>`,
+    hubNavHtml(hub.path),
+    `</main>`,
+  ].join('\n')
+}
+
+export const DEFAULT_COMPETITION_FAQS = [
+  {
+    question: 'Существует ли единый всероссийский рейтинг собак по курсингу?',
+    answer:
+      'Да. Единый всероссийский рейтинг и постоянная турнирная таблица собак по курсингу и бегам борзых формируются и поддерживаются на портале Coursing Stats на основе официальных протоколов соревнований РКФ с 2015 года. В рейтинге учитываются результаты забегов, медали (золото, серебро, бронза), очки стабильности CS и замеры максимальной скорости по всем породам борзых (уиппеты, РПБ, салюки, басенджи и др.).',
+  },
+  {
+    question: 'Как рассчитывается рейтинг собак в курсинге?',
+    answer:
+      'В едином рейтинге курсинга порядок определяет зачёт сезона: 1) Медали и эффективность (золото весомее серебра и бронзы; при равных медалях выше тот, кто собрал их за меньшее число забегов). 2) Индекс стабильности CS служит тай-брейком при равном медальном зачёте. В бегах борзых (рейсинге) порядок определяется по максимальной зафиксированной скорости в км/ч.',
+  },
+  {
+    question: 'Какие породы борзых участвуют в рейтинге курсинга?',
+    answer:
+      'В рейтинге соревнуются основные породы борзых: уиппеты, русские псовые борзые (РПБ), салюки, басенджи, малая итальянская борзая (левретка), афганские борзые, грейхаунды, фараоновы собаки и другие породы 10-й и 5-й групп FCI.',
+  },
+]
+
+export function competitionsJsonLd(
+  faqs: Array<{ question: string; answer: string }> = DEFAULT_COMPETITION_FAQS,
+): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      breadcrumbJsonLd([
+        { name: 'Главная', url: '/' },
+        { name: 'Соревнования', url: '/competitions' },
+      ]),
+      {
+        '@type': 'FAQPage',
+        mainEntity: faqs.map((f) => ({
+          '@type': 'Question',
+          name: f.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: f.answer,
+          },
+        })),
+      },
+    ],
+  }
+}
+
+export function buildCompetitionsHubHtml(
+  hub: Pick<HubMeta, 'path' | 'h1' | 'paragraph'>,
+  topItems?: Array<{
+    dog_id: number
+    name_ru?: string | null
+    name_lat?: string | null
+    breed: string
+    gold: number
+    silver: number
+    bronze: number
+    total_starts: number
+  }>,
+): string {
+  const faqBlocks = DEFAULT_COMPETITION_FAQS.map(
+    (f) =>
+      `<section><h3>${escapeHtml(f.question)}</h3><p>${escapeHtml(f.answer)}</p></section>`,
+  ).join('\n')
+
+  let topDogsSection = ''
+  if (topItems && topItems.length > 0) {
+    const listItems = topItems
+      .slice(0, 10)
+      .map((d) => {
+        const { primary, secondary } = resolveDogNames(d.name_lat, d.name_ru)
+        const name = primary || 'Собака'
+        const breed = d.breed ? toDogTitleCase(d.breed) : ''
+        const medals = []
+        if (d.gold) medals.push(`золото: ${d.gold}`)
+        if (d.silver) medals.push(`серебро: ${d.silver}`)
+        if (d.bronze) medals.push(`бронза: ${d.bronze}`)
+        const medalStr = medals.length > 0 ? ` (${medals.join(', ')})` : ''
+        return `<li><a href="/dog/${d.dog_id}">${escapeHtml(name)}</a> — ${escapeHtml(breed)}${escapeHtml(medalStr)}, забегов: ${d.total_starts}</li>`
+      })
+      .join('\n')
+
+    topDogsSection = [
+      `<h2>Лидеры текущего сезона по курсингу</h2>`,
+      `<ul>`,
+      listItems,
+      `</ul>`,
+    ].join('\n')
+  }
+
+  return [
+    `<main>`,
+    `<h1>${escapeHtml(hub.h1)}</h1>`,
+    `<p>${escapeHtml(hub.paragraph)}</p>`,
+    topDogsSection,
+    `<h2>Частые вопросы о рейтинге курсинга в России</h2>`,
+    faqBlocks,
     hubNavHtml(hub.path),
     `</main>`,
   ].join('\n')

@@ -3,6 +3,7 @@ import { useListReveal } from '../../hooks/useListReveal'
 import EmptyState from '../../components/EmptyState'
 import DoninoColumnPlaque, { DoninoColumnShell } from '../SpeedRecords/DoninoColumnPlaque'
 import ShowDogCard, { type ShowDogCardData } from './ShowDogCard'
+import { displayBreed } from '../../lib/breedMapping'
 import type { FavoriteDogMeta } from '../../hooks/useFavorites'
 
 export type RankedShowDog = ShowDogCardData & { rank: number }
@@ -10,6 +11,7 @@ export type RankedShowDog = ShowDogCardData & { rank: number }
 interface ShowRankingColumnsProps {
   dogs: RankedShowDog[]
   filterYear: string
+  filterBreed?: string
   favorites?: Set<string>
   onToggleFavorite?: (dogId: string, meta: FavoriteDogMeta) => void
 }
@@ -22,11 +24,13 @@ function dogListKey(dog: ShowDogCardData): string {
 export default function ShowRankingColumns({
   dogs,
   filterYear,
+    filterBreed,
   favorites,
   onToggleFavorite,
 }: ShowRankingColumnsProps) {
   const { visibleCount, loadMoreRef, hasMore } = useInfiniteScroll(dogs.length, [
     filterYear,
+    filterBreed,
     dogs.length,
   ])
 
@@ -45,7 +49,7 @@ export default function ShowRankingColumns({
   const plaque = (
     <DoninoColumnPlaque
       asHeader
-      title="Рейтинг выставок РКФ"
+      title={filterBreed ? `Рейтинг выставок РКФ · ${displayBreed(filterBreed).primary || filterBreed}` : 'Рейтинг выставок РКФ'}
       count={dogs.length}
     />
   )
