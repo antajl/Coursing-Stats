@@ -36,8 +36,8 @@ jobs:
 
       - name: Commit updated data files
         run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
+          git config --local user.email "antajl@yandex.ru"
+          git config --local user.name "antajl"
           git add data/v1/donino/speed_records.json data/v1/donino/coursing_records.json
           if git diff --staged --quiet; then
             echo "No data changes to commit"
