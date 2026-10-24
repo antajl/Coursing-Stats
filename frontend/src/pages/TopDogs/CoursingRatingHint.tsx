@@ -63,7 +63,7 @@ export const RATING_MODAL_CONTENT = (
     <div className="border-t border-old-money-200/80 pt-2.5 mt-2.5 text-[10.5px] leading-relaxed text-charcoal-600 flex items-start gap-1.5">
       <FileText className="h-3.5 w-3.5 text-camel-700 shrink-0 mt-0.5" aria-hidden />
       <p>
-        <strong className="text-charcoal-800 font-semibold">Примечание:</strong> спортивные результаты и статистика формируются на основе официальных протоколов соревнований и архивов ProCoursing.ru. Сведения могут содержать ошибки или быть неполными из-за фрагментарности открытых источников и ручного ведения ранних баз организаторами.
+        <strong className="text-charcoal-800 font-semibold">Примечание:</strong> спортивная статистика и результаты состязаний систематизированы на основе официальных протоколов организаторов, полевых секретариатов и материалов ProCoursing.ru. Сведения могут содержать ошибки или быть неполными из-за фрагментарности открытых источников и ручного ведения ранних баз организаторами.
       </p>
     </div>
   </div>

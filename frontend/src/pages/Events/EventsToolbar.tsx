@@ -29,7 +29,7 @@ export const ARCHIVE_MODAL_CONTENT = (
       <span>Общественный архив соревнований</span>
     </div>
     <p className="text-[11px] leading-relaxed text-charcoal-700">
-      Раздел сохраняет спортивную историю забегов на основе официальных протоколов соревнований и архивов ProCoursing.ru.
+      Раздел сохраняет спортивную историю забегов на основе официальных протоколов организаторов, полевых секретариатов и материалов ProCoursing.ru.
     </p>
     <div className="border-t border-old-money-200/80 pt-2.5 text-[10.5px] leading-relaxed text-charcoal-600 flex items-start gap-1.5">
       <FileText className="h-3.5 w-3.5 text-camel-700 shrink-0 mt-0.5" aria-hidden />

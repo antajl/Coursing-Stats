@@ -153,7 +153,7 @@ export default function EventResults() {
         <div className="mt-8 border-t border-old-money-200/60 pt-4 pb-4 text-center">
           <p className="text-xs leading-relaxed text-charcoal-500">
             Сведения протокола систематизированы на основе официальных публикаций организаторов состязаний,
-            полевых секретариатов и архивов ProCoursing.ru.
+            полевых секретариатов и материалов ProCoursing.ru.
           </p>
         </div>
       </div>
