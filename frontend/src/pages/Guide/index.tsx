@@ -10,6 +10,7 @@ import RatingTab from './components/RatingTab'
 import ShowsTab from './components/ShowsTab'
 import TitlesTab from './components/TitlesTab'
 import DoninoTab from './components/DoninoTab'
+import SpeedsTab from './components/SpeedsTab'
 
 const GUIDE_SECTIONS = [
   {
@@ -46,6 +47,14 @@ const GUIDE_SECTIONS = [
     description:
       'Как устроен зачёт сезона Coursing Stats: медали и эффективность, индекс CS, Elo как справка.',
     keywords: 'рейтинг курсинг, зачёт сезона, индекс CS, Elo, медали курсинг',
+  },
+  {
+    id: 'speeds',
+    label: 'Скорость пород',
+    description:
+      'Скорость бега и рекорды пород борзых в км/ч: уиппет, салюки, русская псовая борзая, левретка, грейхаунд. Сравнение спринта и дистанционной выносливости.',
+    keywords:
+      'рекорд скорости салюки, какая максимальная скорость уиппета, русская борзая скорость бега, левретка скорость бега, скорость борзых км ч',
   },
 ] as const
 
@@ -97,6 +106,7 @@ export default function Guide() {
         {activeTab === 'donino' && <DoninoTab />}
         {activeTab === 'protocol' && <ProtocolTab />}
         {activeTab === 'rating' && <RatingTab />}
+        {activeTab === 'speeds' && <SpeedsTab />}
       </div>
     </>
   )

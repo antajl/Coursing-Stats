@@ -16,10 +16,12 @@ import {
   build404Html,
   buildCompetitionsHubHtml,
   buildDogBodyHtml,
+  buildGuideHubHtml,
   buildHubBodyHtml,
   buildNeutralSpaShell,
   buildSimpleEntityBodyHtml,
   competitionsJsonLd,
+  guideJsonLd,
   DEFAULT_COMPETITION_FAQS,
   dogMetaFromProfile,
   dogMetaFromShowRanking,
@@ -147,6 +149,9 @@ function prerenderHubs(spaHtml: string): number {
     if (hub.path === '/competitions') {
       bodyHtml = buildCompetitionsHubHtml(hub, topPlacementDogs)
       jsonLd = competitionsJsonLd(DEFAULT_COMPETITION_FAQS)
+    } else if (hub.path === '/guide') {
+      bodyHtml = buildGuideHubHtml(hub)
+      jsonLd = guideJsonLd()
     }
 
     const html = applyMetaToSpaShell(spaHtml, {

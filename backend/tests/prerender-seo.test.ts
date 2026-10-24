@@ -5,12 +5,15 @@ import {
   build404Html,
   buildCompetitionsHubHtml,
   buildDogBodyHtml,
+  buildGuideHubHtml,
   buildHubBodyHtml,
   buildNeutralSpaShell,
   competitionsJsonLd,
   DEFAULT_COMPETITION_FAQS,
+  DEFAULT_GUIDE_SPEED_FAQS,
   escapeHtml,
   eventMetaFromEntry,
+  guideJsonLd,
   HUB_PAGES,
 } from '../scripts/seo/prerender-html'
 
@@ -249,5 +252,37 @@ describe('prerender-seo helpers', () => {
     expect(faqPage.mainEntity.length).toBeGreaterThanOrEqual(3)
     expect(faqPage.mainEntity[0].name).toContain('Существует ли единый всероссийский рейтинг')
     expect(faqPage.mainEntity[0].acceptedAnswer.text).toContain('Coursing Stats')
+  })
+
+  it('buildGuideHubHtml renders semantic table with breed speeds and Google AI Overview FAQ', () => {
+    const guideHub = HUB_PAGES.find((h) => h.path === '/guide')!
+    const html = buildGuideHubHtml(guideHub)
+
+    expect(html).toContain('<h1>')
+    expect(html).toContain('Скорость и рекорды пород борзых (км/ч)')
+    expect(html).toContain('Салюки (персидская борзая)')
+    expect(html).toContain('до 68,8 км/ч')
+    expect(html).toContain('Уиппет')
+    expect(html).toContain('до 64–70 км/ч')
+    expect(html).toContain('Русская псовая борзая (РПБ)')
+    expect(html).toContain('Малая итальянская борзая (левретка)')
+    expect(html).toContain('Какова максимальная скорость салюки и рекорд породы?')
+    expect(html).toContain('Какая максимальная скорость бега уиппета?')
+    expect(html).toContain('Какова скорость бега русской псовой борзой (РПБ)?')
+    expect(html).toContain('Какую скорость развивает левретка (малая итальянская борзая)?')
+    expect(html).toContain('<a href="/competitions">')
+    expect(html).toContain('<a href="/speed-records">')
+  })
+
+  it('guideJsonLd outputs FAQPage schema with breed speed questions', () => {
+    const jsonLd = guideJsonLd(DEFAULT_GUIDE_SPEED_FAQS)
+    const graph = (jsonLd as any)['@graph'] as any[]
+    const faqPage = graph.find((item) => item['@type'] === 'FAQPage')
+    expect(faqPage).toBeDefined()
+    expect(faqPage.mainEntity.length).toBeGreaterThanOrEqual(5)
+    expect(faqPage.mainEntity[0].name).toContain('Какова максимальная скорость салюки')
+    expect(faqPage.mainEntity[0].acceptedAnswer.text).toContain('68,8 км/ч')
+    expect(faqPage.mainEntity[1].name).toContain('скорость бега уиппета')
+    expect(faqPage.mainEntity[2].name).toContain('скорость бега русской псовой борзой')
   })
 })

@@ -150,6 +150,12 @@ export const GUIDE_MENU_ITEMS: NavMenuItem[] = [
     icon: Icons.trend,
     isActive: guideTabActive('rating'),
   },
+  {
+    to: '/guide?tab=speeds',
+    label: 'Скорость пород',
+    icon: Icons.speedFlash,
+    isActive: guideTabActive('speeds'),
+  },
 ]
 
 export const DATA_SOURCE_LINKS = [
