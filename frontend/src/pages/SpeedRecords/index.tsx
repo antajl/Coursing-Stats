@@ -49,8 +49,6 @@ function SpeedRecords() {
         page.filterSexes.join(','),
         page.sortField,
         page.sortDirection,
-        page.coursingSortField,
-        page.coursingSortDirection,
       ].join('|'),
     [
       page.searchQuery,
@@ -59,8 +57,6 @@ function SpeedRecords() {
       page.filterSexes,
       page.sortField,
       page.sortDirection,
-      page.coursingSortField,
-      page.coursingSortDirection,
     ]
   )
 
@@ -126,12 +122,9 @@ function SpeedRecords() {
             <DoninoRecordsColumns
               speedRecords={page.filteredRecords}
               coursingRecords={page.filteredCoursingRecords}
-              speedSortField={page.sortField}
-              speedSortDirection={page.sortDirection}
-              coursingSortField={page.coursingSortField}
-              coursingSortDirection={page.coursingSortDirection}
-              onSpeedSort={page.handleSort}
-              onCoursingSort={page.handleCoursingSort}
+              sortField={page.sortField}
+              sortDirection={page.sortDirection}
+              onSort={page.handleSort}
               resetScrollKey={scrollResetKey}
             />
           )}

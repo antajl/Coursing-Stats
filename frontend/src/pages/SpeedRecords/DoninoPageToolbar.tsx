@@ -6,7 +6,7 @@ import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarChip from '../../components/toolbar/ToolbarChip'
 import ToolbarFiltersDropdown from '../../components/toolbar/ToolbarFiltersDropdown'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
-import BreedSearchDropdown from '../../components/ui/BreedSearchDropdown'
+import QuickBreedBar from '../TopDogs/QuickBreedBar'
 import ModernDropdown from '../../components/ui/ModernDropdown'
 import { TOOLBAR_NUMBER_INPUT, toolbarPillTriggerClass } from '../../lib/toolbar'
 import type { DogsIndexEntry } from '../../lib/competingBreeds'
@@ -159,17 +159,7 @@ export default function DoninoPageToolbar({
         ? sexLabel(filterSexes[0]!)
         : `Пол · ${filterSexes.length}`
 
-  const breedTrigger = (
-    <button
-      type="button"
-      className={toolbarPillTriggerClass(filterBreeds.length > 0)}
-      title={filterBreeds.length > 1 ? filterBreeds.join(', ') : (filterBreeds[0] ? (displayBreed(filterBreeds[0]).primary || filterBreeds[0]) : 'Порода')}
-      aria-label={filterBreeds.length > 1 ? `Породы: ${filterBreeds.join(', ')}` : filterBreeds[0] ? `Порода: ${displayBreed(filterBreeds[0]).primary || filterBreeds[0]}` : 'Порода'}
-    >
-      <span className="shrink-0">{breedTriggerLabel}</span>
-      <PillChevron />
-    </button>
-  )
+
 
   const isYearActive =
     filterYears.length > 0 &&
@@ -179,16 +169,17 @@ export default function DoninoPageToolbar({
     <div ref={dropdownRef}>
       <PageToolbar
         bare
-        topRowClassName="pr-0 md:pr-32"
+        topRowClassName="flex-wrap md:flex-nowrap"
         filters={
-          <>
-            <ToolbarSearch
-              value={searchQuery}
-              onChange={onSearchChange}
-              placeholder="Кличка, порода…"
-              className="w-full sm:!w-auto min-w-0 sm:min-w-[200px] max-w-sm"
-            />
-            <div className="flex max-w-full flex-wrap items-center gap-1.5 w-full sm:w-auto">
+          <div className="flex flex-col md:flex-row md:items-center gap-2 w-full min-w-0">
+            {/* Строка 1 на мобилке / левая группа на десктопе */}
+            <div className="flex max-w-full flex-wrap items-center gap-1.5 shrink-0 w-full md:w-auto">
+              <ToolbarSearch
+                value={searchQuery}
+                onChange={onSearchChange}
+                placeholder="Кличка, порода…"
+                className="flex-1 min-w-0 sm:w-44 md:w-40 lg:w-48"
+              />
               <ModernDropdown
                 trigger={
                   <button
@@ -252,24 +243,7 @@ export default function DoninoPageToolbar({
                 </div>
               </ModernDropdown>
 
-              <BreedSearchDropdown
-                breeds={breeds}
-                selectedBreed={filterBreeds[0]}
-                onSelect={(breed) => {
-                  if (onBreedChange) {
-                    onBreedChange(breed)
-                  } else {
-                    if (!breed) {
-                      for (const b of [...filterBreeds]) onToggleFilter('breed', b)
-                    } else {
-                      for (const b of [...filterBreeds]) onToggleFilter('breed', b)
-                      onToggleFilter('breed', breed)
-                    }
-                  }
-                }}
-                trigger={breedTrigger}
-                dogIndex={dogIndex}
-              />
+
 
               <ModernDropdown
                 trigger={
@@ -438,7 +412,27 @@ export default function DoninoPageToolbar({
                 )}
               </div>
             </div>
-          </>
+
+            {/* Разделитель между фильтрами и породами на десктопе */}
+            <div className="hidden md:block h-5 w-px bg-old-money-300 shrink-0 mx-0.5" aria-hidden="true" />
+
+            {/* Быстрый выбор пород QuickBreedBar */}
+            <div className="flex-1 min-w-0 w-full md:w-auto">
+              <QuickBreedBar
+                selectedBreed={filterBreeds[0] || ''}
+                onSelectBreed={(breed) => {
+                  if (onBreedChange) {
+                    onBreedChange(breed)
+                  } else {
+                    for (const b of [...filterBreeds]) onToggleFilter('breed', b)
+                    if (breed) onToggleFilter('breed', breed)
+                  }
+                }}
+                breedValues={breeds}
+                dogIndex={dogIndex}
+              />
+            </div>
+          </div>
         }
       />
       {view === 'table' && filterSexes.length > 0 && (

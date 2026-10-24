@@ -5,14 +5,8 @@ import { useInfiniteScroll } from '../../hooks/useInfiniteScroll'
 import RecordSortBar from './RecordSortBar'
 import { SegmentedTabs } from '../../components/ui/SegmentedTabs'
 
-const SPEED_SORT_OPTIONS = [
-  { field: 'speed_km_h', label: 'Скорость' },
-  { field: 'date', label: 'Дата' },
-  { field: 'name', label: 'Кличка' },
-]
-
-const COURSING_SORT_OPTIONS = [
-  { field: 'time_seconds', label: 'Время' },
+const UNIFIED_SORT_OPTIONS = [
+  { field: 'result', label: 'Результат' },
   { field: 'date', label: 'Дата' },
   { field: 'name', label: 'Кличка' },
 ]
@@ -28,6 +22,7 @@ interface SpeedRecord {
   status?: string
   history?: unknown[]
   track_type?: string | null
+  rank?: number
 }
 
 interface CoursingRecord {
@@ -39,29 +34,24 @@ interface CoursingRecord {
   date: string
   status?: string
   history?: unknown[]
+  rank?: number
 }
 
 interface DoninoRecordsColumnsProps {
   speedRecords: SpeedRecord[]
   coursingRecords: CoursingRecord[]
-  speedSortField: string
-  speedSortDirection: string
-  coursingSortField: string
-  coursingSortDirection: string
-  onSpeedSort: (field: string) => void
-  onCoursingSort: (field: string) => void
+  sortField: string
+  sortDirection: string
+  onSort: (field: string) => void
   resetScrollKey: string
 }
 
 export default function DoninoRecordsColumns({
   speedRecords,
   coursingRecords,
-  speedSortField,
-  speedSortDirection,
-  coursingSortField,
-  coursingSortDirection,
-  onSpeedSort,
-  onCoursingSort,
+  sortField,
+  sortDirection,
+  onSort,
   resetScrollKey,
 }: DoninoRecordsColumnsProps) {
   const [mobileTab, setMobileTab] = useState<'speed' | 'coursing'>('speed')
@@ -77,6 +67,18 @@ export default function DoninoRecordsColumns({
     return <div className="py-12 text-center text-old-money-600">Нет данных</div>
   }
 
+  const speedPlaque = (
+    <div className="hidden lg:block">
+      <DoninoColumnPlaque asHeader title="Замер" count={speedRecords.length} />
+    </div>
+  )
+
+  const coursingPlaque = (
+    <div className="hidden lg:block">
+      <DoninoColumnPlaque asHeader title="Бега 350 м" count={coursingRecords.length} />
+    </div>
+  )
+
   return (
     <div className="space-y-4">
       {/* Мобильный переключатель дисциплин */}
@@ -91,19 +93,19 @@ export default function DoninoRecordsColumns({
         ariaLabel="Дисциплины полигона Донино"
       />
 
+      {/* Единая сортировка для обеих колонок */}
+      <div className="flex items-center justify-between">
+        <RecordSortBar
+          options={UNIFIED_SORT_OPTIONS}
+          sortField={sortField}
+          sortDirection={sortDirection}
+          onSort={onSort}
+        />
+      </div>
+
       <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-2 lg:gap-8">
         <div className={`min-w-0 space-y-3 ${mobileTab === 'speed' ? 'block' : 'hidden lg:block'}`}>
-          <div className="min-h-8">
-            <RecordSortBar
-              options={SPEED_SORT_OPTIONS}
-              sortField={speedSortField}
-              sortDirection={speedSortDirection}
-              onSort={onSpeedSort}
-            />
-          </div>
-          <DoninoColumnShell
-            plaque={<DoninoColumnPlaque asHeader title="Замер" count={speedRecords.length} />}
-          >
+          <DoninoColumnShell plaque={speedPlaque}>
             {visibleSpeed.length > 0 ? (
               visibleSpeed.map((record) => (
                 <DoninoListRecordRow
@@ -118,6 +120,7 @@ export default function DoninoRecordsColumns({
                   speedKmh={record.speed_km_h}
                   screenshotUrl={record.screenshot_url}
                   trackType={record.track_type}
+                  rank={record.rank}
                 />
               ))
             ) : (
@@ -127,19 +130,7 @@ export default function DoninoRecordsColumns({
         </div>
 
         <div className={`min-w-0 space-y-3 ${mobileTab === 'coursing' ? 'block' : 'hidden lg:block'}`}>
-          <div className="min-h-8">
-            <RecordSortBar
-              options={COURSING_SORT_OPTIONS}
-              sortField={coursingSortField}
-              sortDirection={coursingSortDirection}
-              onSort={onCoursingSort}
-            />
-          </div>
-          <DoninoColumnShell
-            plaque={
-              <DoninoColumnPlaque asHeader title="Бега 350 м" count={coursingRecords.length} />
-            }
-          >
+          <DoninoColumnShell plaque={coursingPlaque}>
             {visibleCoursing.length > 0 ? (
               visibleCoursing.map((record) => (
                 <DoninoListRecordRow
@@ -152,6 +143,7 @@ export default function DoninoRecordsColumns({
                   status={record.status}
                   history={record.history}
                   timeSeconds={record.time_seconds}
+                  rank={record.rank}
                 />
               ))
             ) : (
