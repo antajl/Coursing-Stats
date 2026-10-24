@@ -442,19 +442,24 @@ export function buildDogProfiles(db: Database.Database) {
   const dogsById = new Map(dogs.map((dog) => [dog.id, dog]));
   const metadataById = loadDogMetadataFromById();
 
-  const coursingRows = db
+  const rawCoursingRows = db
     .prepare(
       `SELECT r.dog_id, r.event_id, r.total_score, r.placement, r.raw_scores_json
        FROM results r JOIN events e ON r.event_id = e.id
        WHERE r.status IN ${PARTICIPATION_STATUSES_SQL} AND e.event_type IN ('coursing', 'bzmp')`,
     )
     .all() as CoursingRow[];
+  const coursingRows = rawCoursingRows.filter((r) => {
+    const raw = r.raw_scores_json || '';
+    return !raw.includes('"round_time"') && !raw.includes('"format":"racing"');
+  });
 
   const racingMedalRows = db
     .prepare(
       `SELECT r.dog_id, r.placement
        FROM results r JOIN events e ON r.event_id = e.id
-       WHERE r.status NOT IN ${RACING_EXCLUDED_STATUSES_SQL} AND e.event_type = 'racing'`,
+       WHERE r.status NOT IN ${RACING_EXCLUDED_STATUSES_SQL}
+         AND (e.event_type = 'racing' OR r.raw_scores_json LIKE '%"round_time"%' OR r.raw_scores_json LIKE '%"speed_kmh"%')`,
     )
     .all() as RacingMedalRow[];
 
@@ -462,7 +467,8 @@ export function buildDogProfiles(db: Database.Database) {
     .prepare(
       `SELECT r.dog_id, r.event_id, r.raw_scores_json
        FROM results r JOIN events e ON r.event_id = e.id
-       WHERE r.status NOT IN ${RACING_EXCLUDED_STATUSES_SQL} AND e.event_type = 'racing'
+       WHERE r.status NOT IN ${RACING_EXCLUDED_STATUSES_SQL}
+         AND (e.event_type = 'racing' OR r.raw_scores_json LIKE '%"round_time"%' OR r.raw_scores_json LIKE '%"speed_kmh"%')
          AND r.raw_scores_json IS NOT NULL`,
     )
     .all() as RacingSpeedRow[];
@@ -656,12 +662,14 @@ export function buildDogProfiles(db: Database.Database) {
     const titles = aggregateQualificationTitles(qualificationsByDog.get(dogId) ?? []);
 
     const competitions = dogCompetitions.map((row) => {
+      const isRacing = row.event_type === 'racing' || Boolean(row.raw_scores_json && (row.raw_scores_json.includes('"round_time"') || row.raw_scores_json.includes('"speed_kmh"')));
+      const effectiveEventType = isRacing ? 'racing' : (row.event_type || 'coursing');
       const base = {
         event_id: row.event_id,
         date_start: row.date_start,
         date_end: row.date_end,
         title: row.title,
-        event_type: row.event_type,
+        event_type: effectiveEventType,
         competition_kind: row.competition_kind,
         results_url: row.results_url,
         location: row.location,
@@ -673,7 +681,7 @@ export function buildDogProfiles(db: Database.Database) {
       };
       
       // Add racing-specific data for racing events
-      if (row.event_type === 'racing' && row.raw_scores_json) {
+      if (effectiveEventType === 'racing' && row.raw_scores_json) {
         const racingData = extractRacingEventData(row.raw_scores_json);
         return {
           ...base,
