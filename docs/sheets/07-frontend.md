@@ -45,7 +45,7 @@ yarn run dev
 cd frontend; yarn run build
 ```
 
-SEO prerender: `yarn run prerender-seo` после `frontend build` (CI). По умолчанию пишет HTML хабов, dogs, events, судей спорта, Донино, **выставок** и **судей выставок**. Выкл show-пакетов: `PRERENDER_EXHIBITIONS=0` / `PRERENDER_SHOW_JUDGES=0`. Fallback: `/spa-shell/index.html`.
+SEO prerender: `yarn run prerender-seo` после `frontend build` (CI). По умолчанию пишет HTML хабов, dogs (включая топ-15 000 активных собак выставок), events, судей спорта, Донино, **выставок** и **судей выставок**. Выкл show-пакетов: `PRERENDER_EXHIBITIONS=0` / `PRERENDER_SHOW_JUDGES=0` / `PRERENDER_SHOW_ONLY=0`. Fallback: `/spa-shell/index.html`.
 
 ## Pitfalls
 
@@ -53,6 +53,7 @@ SEO prerender: `yarn run prerender-seo` после `frontend build` (CI). По �
 - Не хардкодить counters — `manifest.json`.
 - Performance ranking shows: отдельный backlog; не ломать lean indexes.
 - React Query: не шарить один `queryKey` между `useApi` и `useStaticData` с разным shape (годы календаря: `['api','years']` vs `['staticData','years']`) — иначе dropdown «Год» схлопывается до 5 лет.
+- **S3 SPA Fallback Invariant**: никогда не настраивать S3 `--error-document` на статический `404.html` без JS и не вырезать `<script type="module">` из fallback-страниц. S3 не имеет собственного серверного роутинга, поэтому `--error-document` обязан отдавать рабочую SPA-оболочку (`index.html`), иначе при прямом переходе из поиска на непререндеренные профили собак пользователи получают 404.
 
 ## See also
 
