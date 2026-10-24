@@ -1,9 +1,9 @@
 {
   "schema": "coursing-stats/calendar-v1",
   "year": 2018,
-  "exported_at": "2026-10-07T15:02:50.261Z",
-  "event_count": 6,
-  "with_results": 6,
+  "exported_at": "2026-10-24T22:45:01.390774Z",
+  "event_count": 8,
+  "with_results": 8,
   "events": [
     {
       "id": 20180309,
@@ -31,6 +31,28 @@
       "result_count": 124,
       "participants_count": 124,
       "results_pdf_url": "https://drive.google.com/file/d/12vwchiboHaVbZgpmWCmq7pzB0cGJq6kH/view?usp=sharing"
+    },
+    {
+      "id": 20180603,
+      "year": 2018,
+      "date_start": "2018-06-03",
+      "date_end": "2018-06-03",
+      "rank_label": "Состязание свор \"Тройка, птица весенняя - 2018\"",
+      "event_type": "other",
+      "competition_kind": "Командное состязание",
+      "competition_type": "Состязание свор «Тройка»",
+      "title": "Состязание свор \"Тройка, птица весенняя - 2018\"",
+      "host_club": null,
+      "region": null,
+      "location": "Московская область, д. Михайловское",
+      "results_url": "http://www.procoursing.ru/results/2018-06-03/",
+      "results_pdf_url": "https://drive.google.com/file/d/1AOEFzMudCVAtPbiK0cLKd3h392vb5cZ2/view?usp=sharing",
+      "confirmed": 1,
+      "has_results": true,
+      "judges": null,
+      "results_file": "competitions/2018/06-июнь/20180603-состязание-свор-троика-птица-весенняя-2018.json",
+      "result_count": 36,
+      "participants_count": 36
     },
     {
       "id": 20180611,
@@ -166,6 +188,29 @@
       "results_file": "competitions/2018/09-сентябрь/20180930-открытыи-чемпионат-нкп-русская-псовая-борзая-осе.json",
       "result_count": 25,
       "participants_count": 25
+    },
+    {
+      "id": 20181021,
+      "year": 2018,
+      "date_start": "2018-10-21",
+      "date_end": "2018-10-21",
+      "rank_label": "Состязание свор \"Тройка, птица осенняя - 2018\"",
+      "event_type": "other",
+      "competition_kind": "Командное состязание",
+      "competition_type": "Состязание свор «Тройка»",
+      "title": "Состязание свор \"Тройка, птица осенняя - 2018\"",
+      "host_club": null,
+      "region": null,
+      "location": "Московская область, д. Михайловское",
+      "results_url": "http://www.procoursing.ru/results/2018-10-21/",
+      "results_pdf_url": "https://drive.google.com/file/d/1QEheDyrGF0yRLz7CSlFIj3OTsvEjIK97/view?usp=sharing",
+      "confirmed": 1,
+      "has_results": true,
+      "judges": null,
+      "results_file": "competitions/2018/10-октябрь/20181021-состязание-свор-троика-птица-осенняя-2018.json",
+      "result_count": 37,
+      "participants_count": 37
     }
-  ]
+  ],
+  "total_events": 8
 }

@@ -1,0 +1,3065 @@
+{
+  "schema": "coursing-stats/competition-v1",
+  "exported_at": "2026-10-24T22:45:01.348640Z",
+  "source": "manual-entry",
+  "event_id": 20171029,
+  "event": {
+    "id": 20171029,
+    "year": 2017,
+    "date_start": "2017-10-29",
+    "date_end": "2017-10-29",
+    "rank_label": "Командное состязание\n\"Состязание свор \"Тройка, птица осенняя - 2017\"\"",
+    "event_type": "other",
+    "competition_kind": "Командное состязание",
+    "competition_type": "Состязание свор «Тройка»",
+    "title": "Состязание свор \"Тройка, птица осенняя - 2017\"",
+    "host_club": null,
+    "region": null,
+    "location": "Московская область, д. Михайловское",
+    "catalog_url": null,
+    "results_url": "http://www.procoursing.ru/results/2017-10-29/",
+    "rules_url": null,
+    "results_pdf_url": "https://drive.google.com/file/d/1JOSax0LXW7uJSKVjA7MHERXRA-kKi2YX/view?usp=sharing",
+    "confirmed": 1,
+    "last_modified": "2026-10-24T22:45:01.348646Z",
+    "scraped_at": null,
+    "telegram_url": null,
+    "full_title": "Состязание свор \"Тройка, птица осенняя - 2017\"",
+    "event_date": null,
+    "protocol_location": null,
+    "judges": "Главный судья: Вронская О.В., судья 2: Демидова Е.Ю.",
+    "track_schemes": []
+  },
+  "result_count": 34,
+  "results": [
+    {
+      "id": 1,
+      "event_id": 20171029,
+      "dog_id": 10841,
+      "breed_class": "Команда № 3",
+      "catalog_no": 3,
+      "placement": 1,
+      "total_score": 332,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10841,
+        "name": "Лакки",
+        "name_ru": "Лакки",
+        "name_lat": "Лакки",
+        "breed": "Родезийский риджбек",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 3",
+        "team_placement": 1,
+        "team_members": [
+          "Лакки",
+          "Лира",
+          "Тина Трейдинг Кармель"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 5,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  18,
+                  26,
+                  4,
+                  3
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  7,
+                  18,
+                  27,
+                  4,
+                  3
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 168
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 15,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  7,
+                  17,
+                  25,
+                  4,
+                  4
+                ],
+                "sum": 82
+              },
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  17,
+                  26,
+                  4,
+                  4
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 164
+          }
+        ],
+        "grand_total": 332
+      }
+    },
+    {
+      "id": 2,
+      "event_id": 20171029,
+      "dog_id": 10842,
+      "breed_class": "Команда № 3",
+      "catalog_no": 3,
+      "placement": 1,
+      "total_score": 332,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10842,
+        "name": "Лира",
+        "name_ru": "Лира",
+        "name_lat": "Лира",
+        "breed": "Родезийский риджбек",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 3",
+        "team_placement": 1,
+        "team_members": [
+          "Лакки",
+          "Лира",
+          "Тина Трейдинг Кармель"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 5,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  18,
+                  26,
+                  4,
+                  3
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  7,
+                  18,
+                  27,
+                  4,
+                  3
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 168
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 15,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  7,
+                  17,
+                  25,
+                  4,
+                  4
+                ],
+                "sum": 82
+              },
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  17,
+                  26,
+                  4,
+                  4
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 164
+          }
+        ],
+        "grand_total": 332
+      }
+    },
+    {
+      "id": 3,
+      "event_id": 20171029,
+      "dog_id": 10105,
+      "breed_class": "Команда № 3",
+      "catalog_no": 3,
+      "placement": 1,
+      "total_score": 332,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10105,
+        "name": "TINA TRADING KARMEL",
+        "name_ru": "TINA TRADING KARMEL",
+        "name_lat": "TINA TRADING KARMEL",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 3",
+        "team_placement": 1,
+        "team_members": [
+          "Лакки",
+          "Лира",
+          "Тина Трейдинг Кармель"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 5,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  18,
+                  26,
+                  4,
+                  3
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  7,
+                  18,
+                  27,
+                  4,
+                  3
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 168
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 15,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  7,
+                  17,
+                  25,
+                  4,
+                  4
+                ],
+                "sum": 82
+              },
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  17,
+                  26,
+                  4,
+                  4
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 164
+          }
+        ],
+        "grand_total": 332
+      }
+    },
+    {
+      "id": 4,
+      "event_id": 20171029,
+      "dog_id": 9939,
+      "breed_class": "Команда № 4",
+      "catalog_no": 4,
+      "placement": 2,
+      "total_score": 323,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 9939,
+        "name": "BBVADDIN BONGANI BAHA",
+        "name_ru": "BBVADDIN BONGANI BAHA",
+        "name_lat": "BBVADDIN BONGANI BAHA",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 4",
+        "team_placement": 2,
+        "team_members": [
+          "BBVADDIN BONGANI BAHA",
+          "SALONGA VASCO DA GAMA",
+          "Форсаж Леюр Феникс"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 6,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  7,
+                  18,
+                  27,
+                  4,
+                  4
+                ],
+                "sum": 87
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  6,
+                  18,
+                  20,
+                  4,
+                  4
+                ],
+                "sum": 75
+              }
+            ],
+            "total": 162
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 16,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  7,
+                  18,
+                  25,
+                  3,
+                  4
+                ],
+                "sum": 83
+              },
+              {
+                "scores": [
+                  17,
+                  7,
+                  6,
+                  17,
+                  22,
+                  5,
+                  4
+                ],
+                "sum": 78
+              }
+            ],
+            "total": 161
+          }
+        ],
+        "grand_total": 323
+      }
+    },
+    {
+      "id": 5,
+      "event_id": 20171029,
+      "dog_id": 9808,
+      "breed_class": "Команда № 4",
+      "catalog_no": 4,
+      "placement": 2,
+      "total_score": 323,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 9808,
+        "name": "SALONGA VASCO DA GAMA",
+        "name_ru": "SALONGA VASCO DA GAMA",
+        "name_lat": "SALONGA VASCO DA GAMA",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 4",
+        "team_placement": 2,
+        "team_members": [
+          "BBVADDIN BONGANI BAHA",
+          "SALONGA VASCO DA GAMA",
+          "Форсаж Леюр Феникс"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 6,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  7,
+                  18,
+                  27,
+                  4,
+                  4
+                ],
+                "sum": 87
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  6,
+                  18,
+                  20,
+                  4,
+                  4
+                ],
+                "sum": 75
+              }
+            ],
+            "total": 162
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 16,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  7,
+                  18,
+                  25,
+                  3,
+                  4
+                ],
+                "sum": 83
+              },
+              {
+                "scores": [
+                  17,
+                  7,
+                  6,
+                  17,
+                  22,
+                  5,
+                  4
+                ],
+                "sum": 78
+              }
+            ],
+            "total": 161
+          }
+        ],
+        "grand_total": 323
+      }
+    },
+    {
+      "id": 6,
+      "event_id": 20171029,
+      "dog_id": 10843,
+      "breed_class": "Команда № 4",
+      "catalog_no": 4,
+      "placement": 2,
+      "total_score": 323,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10843,
+        "name": "Форсаж Леюр Феникс",
+        "name_ru": "Форсаж Леюр Феникс",
+        "name_lat": "Форсаж Леюр Феникс",
+        "breed": "Басенджи",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 4",
+        "team_placement": 2,
+        "team_members": [
+          "BBVADDIN BONGANI BAHA",
+          "SALONGA VASCO DA GAMA",
+          "Форсаж Леюр Феникс"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 6,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  7,
+                  18,
+                  27,
+                  4,
+                  4
+                ],
+                "sum": 87
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  6,
+                  18,
+                  20,
+                  4,
+                  4
+                ],
+                "sum": 75
+              }
+            ],
+            "total": 162
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 16,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  7,
+                  18,
+                  25,
+                  3,
+                  4
+                ],
+                "sum": 83
+              },
+              {
+                "scores": [
+                  17,
+                  7,
+                  6,
+                  17,
+                  22,
+                  5,
+                  4
+                ],
+                "sum": 78
+              }
+            ],
+            "total": 161
+          }
+        ],
+        "grand_total": 323
+      }
+    },
+    {
+      "id": 7,
+      "event_id": 20171029,
+      "dog_id": 10844,
+      "breed_class": "Команда № 10",
+      "catalog_no": 10,
+      "placement": 3,
+      "total_score": 322,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10844,
+        "name": "Брют",
+        "name_ru": "Брют",
+        "name_lat": "Брют",
+        "breed": "Дружественные - Макси",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 10",
+        "team_placement": 3,
+        "team_members": [
+          "Брют",
+          "Покемон",
+          "Рыжий"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 7,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  9,
+                  8,
+                  18,
+                  24,
+                  4,
+                  3
+                ],
+                "sum": 83
+              },
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  19,
+                  26,
+                  4,
+                  3
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 166
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 17,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  18,
+                  23,
+                  3,
+                  2
+                ],
+                "sum": 79
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  6,
+                  17,
+                  25,
+                  4,
+                  2
+                ],
+                "sum": 77
+              }
+            ],
+            "total": 156
+          }
+        ],
+        "grand_total": 322
+      }
+    },
+    {
+      "id": 8,
+      "event_id": 20171029,
+      "dog_id": 10845,
+      "breed_class": "Команда № 10",
+      "catalog_no": 10,
+      "placement": 3,
+      "total_score": 322,
+      "judge_count": 2,
+      "status": "reserve",
+      "dog": {
+        "id": 10845,
+        "name": "Грета",
+        "name_ru": "Грета",
+        "name_lat": "Грета",
+        "breed": "Дружественные - Макси",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 10",
+        "team_placement": 3,
+        "team_members": [
+          "Брют",
+          "Покемон",
+          "Рыжий"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 7,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  9,
+                  8,
+                  18,
+                  24,
+                  4,
+                  3
+                ],
+                "sum": 83
+              },
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  19,
+                  26,
+                  4,
+                  3
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 166
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 17,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  18,
+                  23,
+                  3,
+                  2
+                ],
+                "sum": 79
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  6,
+                  17,
+                  25,
+                  4,
+                  2
+                ],
+                "sum": 77
+              }
+            ],
+            "total": 156
+          }
+        ],
+        "grand_total": 322
+      }
+    },
+    {
+      "id": 9,
+      "event_id": 20171029,
+      "dog_id": 10846,
+      "breed_class": "Команда № 10",
+      "catalog_no": 10,
+      "placement": 3,
+      "total_score": 322,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10846,
+        "name": "Покемон",
+        "name_ru": "Покемон",
+        "name_lat": "Покемон",
+        "breed": "Дружественные - Макси",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 10",
+        "team_placement": 3,
+        "team_members": [
+          "Брют",
+          "Покемон",
+          "Рыжий"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 7,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  9,
+                  8,
+                  18,
+                  24,
+                  4,
+                  3
+                ],
+                "sum": 83
+              },
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  19,
+                  26,
+                  4,
+                  3
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 166
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 17,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  18,
+                  23,
+                  3,
+                  2
+                ],
+                "sum": 79
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  6,
+                  17,
+                  25,
+                  4,
+                  2
+                ],
+                "sum": 77
+              }
+            ],
+            "total": 156
+          }
+        ],
+        "grand_total": 322
+      }
+    },
+    {
+      "id": 10,
+      "event_id": 20171029,
+      "dog_id": 10847,
+      "breed_class": "Команда № 10",
+      "catalog_no": 10,
+      "placement": 3,
+      "total_score": 322,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10847,
+        "name": "Рыжий",
+        "name_ru": "Рыжий",
+        "name_lat": "Рыжий",
+        "breed": "Дружественные - Макси",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 10",
+        "team_placement": 3,
+        "team_members": [
+          "Брют",
+          "Покемон",
+          "Рыжий"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 7,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  9,
+                  8,
+                  18,
+                  24,
+                  4,
+                  3
+                ],
+                "sum": 83
+              },
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  19,
+                  26,
+                  4,
+                  3
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 166
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 17,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  18,
+                  23,
+                  3,
+                  2
+                ],
+                "sum": 79
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  6,
+                  17,
+                  25,
+                  4,
+                  2
+                ],
+                "sum": 77
+              }
+            ],
+            "total": 156
+          }
+        ],
+        "grand_total": 322
+      }
+    },
+    {
+      "id": 11,
+      "event_id": 20171029,
+      "dog_id": 9894,
+      "breed_class": "Команда № 8",
+      "catalog_no": 8,
+      "placement": 4,
+      "total_score": 319,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 9894,
+        "name": "PODAROK IZ AFRIKI KITA JAZZ",
+        "name_ru": "PODAROK IZ AFRIKI KITA JAZZ",
+        "name_lat": "PODAROK IZ AFRIKI KITA JAZZ",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 8",
+        "team_placement": 4,
+        "team_members": [
+          "PODAROK IZ AFRIKI KITA JAZZ",
+          "Podarok iz Afriki Yas Mogobi",
+          "Tina Trading Monreal'"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 1,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  17,
+                  26,
+                  3,
+                  4
+                ],
+                "sum": 85
+              },
+              {
+                "scores": [
+                  15,
+                  7,
+                  5,
+                  15,
+                  25,
+                  4,
+                  3
+                ],
+                "sum": 74
+              }
+            ],
+            "total": 159
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 16,
+            "judges": [
+              {
+                "scores": [
+                  16,
+                  8,
+                  7,
+                  17,
+                  23,
+                  4,
+                  4
+                ],
+                "sum": 79
+              },
+              {
+                "scores": [
+                  17,
+                  7,
+                  6,
+                  17,
+                  26,
+                  4,
+                  4
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 160
+          }
+        ],
+        "grand_total": 319
+      }
+    },
+    {
+      "id": 12,
+      "event_id": 20171029,
+      "dog_id": 9975,
+      "breed_class": "Команда № 8",
+      "catalog_no": 8,
+      "placement": 4,
+      "total_score": 319,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 9975,
+        "name": "PODAROK IZ AFRIKI YAS MOGOBI",
+        "name_ru": "PODAROK IZ AFRIKI YAS MOGOBI",
+        "name_lat": "PODAROK IZ AFRIKI YAS MOGOBI",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 8",
+        "team_placement": 4,
+        "team_members": [
+          "PODAROK IZ AFRIKI KITA JAZZ",
+          "Podarok iz Afriki Yas Mogobi",
+          "Tina Trading Monreal'"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 1,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  17,
+                  26,
+                  3,
+                  4
+                ],
+                "sum": 85
+              },
+              {
+                "scores": [
+                  15,
+                  7,
+                  5,
+                  15,
+                  25,
+                  4,
+                  3
+                ],
+                "sum": 74
+              }
+            ],
+            "total": 159
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 16,
+            "judges": [
+              {
+                "scores": [
+                  16,
+                  8,
+                  7,
+                  17,
+                  23,
+                  4,
+                  4
+                ],
+                "sum": 79
+              },
+              {
+                "scores": [
+                  17,
+                  7,
+                  6,
+                  17,
+                  26,
+                  4,
+                  4
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 160
+          }
+        ],
+        "grand_total": 319
+      }
+    },
+    {
+      "id": 13,
+      "event_id": 20171029,
+      "dog_id": 10222,
+      "breed_class": "Команда № 8",
+      "catalog_no": 8,
+      "placement": 4,
+      "total_score": 319,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10222,
+        "name": "TINA TRADING MONREAL",
+        "name_ru": "TINA TRADING MONREAL",
+        "name_lat": "TINA TRADING MONREAL",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 8",
+        "team_placement": 4,
+        "team_members": [
+          "PODAROK IZ AFRIKI KITA JAZZ",
+          "Podarok iz Afriki Yas Mogobi",
+          "Tina Trading Monreal'"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 1,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  17,
+                  26,
+                  3,
+                  4
+                ],
+                "sum": 85
+              },
+              {
+                "scores": [
+                  15,
+                  7,
+                  5,
+                  15,
+                  25,
+                  4,
+                  3
+                ],
+                "sum": 74
+              }
+            ],
+            "total": 159
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 16,
+            "judges": [
+              {
+                "scores": [
+                  16,
+                  8,
+                  7,
+                  17,
+                  23,
+                  4,
+                  4
+                ],
+                "sum": 79
+              },
+              {
+                "scores": [
+                  17,
+                  7,
+                  6,
+                  17,
+                  26,
+                  4,
+                  4
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 160
+          }
+        ],
+        "grand_total": 319
+      }
+    },
+    {
+      "id": 14,
+      "event_id": 20171029,
+      "dog_id": 9968,
+      "breed_class": "Команда № 5",
+      "catalog_no": 5,
+      "placement": 5,
+      "total_score": 315,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 9968,
+        "name": "TSARSKAYA PRIHOT SAYURI",
+        "name_ru": "TSARSKAYA PRIHOT SAYURI",
+        "name_lat": "TSARSKAYA PRIHOT SAYURI",
+        "breed": "ИРЛАНДСКИЙ ВОЛКОДАВ",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 5",
+        "team_placement": 5,
+        "team_members": [
+          "TSARSKAYA PRIHOT SAYURI",
+          "Tsennaya Idea is Volshebnogo Lesa",
+          "Милый Зверь Цинциннат"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 3,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  7,
+                  17,
+                  25,
+                  4,
+                  4
+                ],
+                "sum": 83
+              },
+              {
+                "scores": [
+                  16,
+                  6,
+                  6,
+                  15,
+                  24,
+                  4,
+                  4
+                ],
+                "sum": 75
+              }
+            ],
+            "total": 158
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 13,
+            "judges": [
+              {
+                "scores": [
+                  16,
+                  7,
+                  7,
+                  17,
+                  25,
+                  3,
+                  4
+                ],
+                "sum": 79
+              },
+              {
+                "scores": [
+                  15,
+                  7,
+                  7,
+                  17,
+                  24,
+                  4,
+                  4
+                ],
+                "sum": 78
+              }
+            ],
+            "total": 157
+          }
+        ],
+        "grand_total": 315
+      }
+    },
+    {
+      "id": 15,
+      "event_id": 20171029,
+      "dog_id": 10848,
+      "breed_class": "Команда № 5",
+      "catalog_no": 5,
+      "placement": 5,
+      "total_score": 315,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10848,
+        "name": "Tsennaya Idea is Volshebnogo Lesa",
+        "name_ru": "Tsennaya Idea is Volshebnogo Lesa",
+        "name_lat": "Tsennaya Idea is Volshebnogo Lesa",
+        "breed": "Ирландский волкодав",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 5",
+        "team_placement": 5,
+        "team_members": [
+          "TSARSKAYA PRIHOT SAYURI",
+          "Tsennaya Idea is Volshebnogo Lesa",
+          "Милый Зверь Цинциннат"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 3,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  7,
+                  17,
+                  25,
+                  4,
+                  4
+                ],
+                "sum": 83
+              },
+              {
+                "scores": [
+                  16,
+                  6,
+                  6,
+                  15,
+                  24,
+                  4,
+                  4
+                ],
+                "sum": 75
+              }
+            ],
+            "total": 158
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 13,
+            "judges": [
+              {
+                "scores": [
+                  16,
+                  7,
+                  7,
+                  17,
+                  25,
+                  3,
+                  4
+                ],
+                "sum": 79
+              },
+              {
+                "scores": [
+                  15,
+                  7,
+                  7,
+                  17,
+                  24,
+                  4,
+                  4
+                ],
+                "sum": 78
+              }
+            ],
+            "total": 157
+          }
+        ],
+        "grand_total": 315
+      }
+    },
+    {
+      "id": 16,
+      "event_id": 20171029,
+      "dog_id": 9967,
+      "breed_class": "Команда № 5",
+      "catalog_no": 5,
+      "placement": 5,
+      "total_score": 315,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 9967,
+        "name": "MILIY ZVER CINCINNAT",
+        "name_ru": "MILIY ZVER CINCINNAT",
+        "name_lat": "MILIY ZVER CINCINNAT",
+        "breed": "ИРЛАНДСКИЙ ВОЛКОДАВ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 5",
+        "team_placement": 5,
+        "team_members": [
+          "TSARSKAYA PRIHOT SAYURI",
+          "Tsennaya Idea is Volshebnogo Lesa",
+          "Милый Зверь Цинциннат"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 3,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  7,
+                  17,
+                  25,
+                  4,
+                  4
+                ],
+                "sum": 83
+              },
+              {
+                "scores": [
+                  16,
+                  6,
+                  6,
+                  15,
+                  24,
+                  4,
+                  4
+                ],
+                "sum": 75
+              }
+            ],
+            "total": 158
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 13,
+            "judges": [
+              {
+                "scores": [
+                  16,
+                  7,
+                  7,
+                  17,
+                  25,
+                  3,
+                  4
+                ],
+                "sum": 79
+              },
+              {
+                "scores": [
+                  15,
+                  7,
+                  7,
+                  17,
+                  24,
+                  4,
+                  4
+                ],
+                "sum": 78
+              }
+            ],
+            "total": 157
+          }
+        ],
+        "grand_total": 315
+      }
+    },
+    {
+      "id": 17,
+      "event_id": 20171029,
+      "dog_id": 9248,
+      "breed_class": "Команда № 2",
+      "catalog_no": 2,
+      "placement": 6,
+      "total_score": 313,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 9248,
+        "name": "ARIES KHAN MARLON BRANDO",
+        "name_ru": "ARIES KHAN MARLON BRANDO",
+        "name_lat": "ARIES KHAN MARLON BRANDO",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 2",
+        "team_placement": 6,
+        "team_members": [
+          "ARIES KHAN MARLON BRANDO",
+          "AVE CAESAR ABBA DANCING QUEEN",
+          "TINA TRADING MONA"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 8,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  7,
+                  18,
+                  27,
+                  4,
+                  4
+                ],
+                "sum": 87
+              },
+              {
+                "scores": [
+                  14,
+                  6,
+                  4,
+                  17,
+                  20,
+                  4,
+                  4
+                ],
+                "sum": 69
+              }
+            ],
+            "total": 156
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 18,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  7,
+                  18,
+                  26,
+                  4,
+                  4
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  15,
+                  5,
+                  6,
+                  16,
+                  22,
+                  4,
+                  3
+                ],
+                "sum": 71
+              }
+            ],
+            "total": 157
+          }
+        ],
+        "grand_total": 313
+      }
+    },
+    {
+      "id": 18,
+      "event_id": 20171029,
+      "dog_id": 9768,
+      "breed_class": "Команда № 2",
+      "catalog_no": 2,
+      "placement": 6,
+      "total_score": 313,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 9768,
+        "name": "AVE CAESAR ABBA DANCING QUEEN",
+        "name_ru": "AVE CAESAR ABBA DANCING QUEEN",
+        "name_lat": "AVE CAESAR ABBA DANCING QUEEN",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 2",
+        "team_placement": 6,
+        "team_members": [
+          "ARIES KHAN MARLON BRANDO",
+          "AVE CAESAR ABBA DANCING QUEEN",
+          "TINA TRADING MONA"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 8,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  7,
+                  18,
+                  27,
+                  4,
+                  4
+                ],
+                "sum": 87
+              },
+              {
+                "scores": [
+                  14,
+                  6,
+                  4,
+                  17,
+                  20,
+                  4,
+                  4
+                ],
+                "sum": 69
+              }
+            ],
+            "total": 156
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 18,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  7,
+                  18,
+                  26,
+                  4,
+                  4
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  15,
+                  5,
+                  6,
+                  16,
+                  22,
+                  4,
+                  3
+                ],
+                "sum": 71
+              }
+            ],
+            "total": 157
+          }
+        ],
+        "grand_total": 313
+      }
+    },
+    {
+      "id": 19,
+      "event_id": 20171029,
+      "dog_id": 9837,
+      "breed_class": "Команда № 2",
+      "catalog_no": 2,
+      "placement": 6,
+      "total_score": 313,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 9837,
+        "name": "TINA TRADING MONA",
+        "name_ru": "TINA TRADING MONA",
+        "name_lat": "TINA TRADING MONA",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 2",
+        "team_placement": 6,
+        "team_members": [
+          "ARIES KHAN MARLON BRANDO",
+          "AVE CAESAR ABBA DANCING QUEEN",
+          "TINA TRADING MONA"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 8,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  7,
+                  18,
+                  27,
+                  4,
+                  4
+                ],
+                "sum": 87
+              },
+              {
+                "scores": [
+                  14,
+                  6,
+                  4,
+                  17,
+                  20,
+                  4,
+                  4
+                ],
+                "sum": 69
+              }
+            ],
+            "total": 156
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 18,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  7,
+                  18,
+                  26,
+                  4,
+                  4
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  15,
+                  5,
+                  6,
+                  16,
+                  22,
+                  4,
+                  3
+                ],
+                "sum": 71
+              }
+            ],
+            "total": 157
+          }
+        ],
+        "grand_total": 313
+      }
+    },
+    {
+      "id": 20,
+      "event_id": 20171029,
+      "dog_id": 10050,
+      "breed_class": "Команда № 7",
+      "catalog_no": 7,
+      "placement": 7,
+      "total_score": 311,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10050,
+        "name": "ANVAR NURI ELANDGE LEO",
+        "name_ru": "ANVAR NURI ELANDGE LEO",
+        "name_lat": "ANVAR NURI ELANDGE LEO",
+        "breed": "ПОДЕНКО ИБИЦЕНКО",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 7",
+        "team_placement": 7,
+        "team_members": [
+          "ANVAR NURI ELANDGE LEO",
+          "ANVAR NURI ZHIGER SHAY",
+          "АНВАР НУРИ ЕЛЛОУ УАЙЛД ФЛАУЭР"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 9,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  8,
+                  8,
+                  18,
+                  26,
+                  4,
+                  3
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  16,
+                  6,
+                  5,
+                  16,
+                  20,
+                  4,
+                  2
+                ],
+                "sum": 69
+              }
+            ],
+            "total": 155
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 19,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  7,
+                  17,
+                  24,
+                  4,
+                  4
+                ],
+                "sum": 82
+              },
+              {
+                "scores": [
+                  16,
+                  6,
+                  6,
+                  16,
+                  23,
+                  3,
+                  4
+                ],
+                "sum": 74
+              }
+            ],
+            "total": 156
+          }
+        ],
+        "grand_total": 311
+      }
+    },
+    {
+      "id": 21,
+      "event_id": 20171029,
+      "dog_id": 9974,
+      "breed_class": "Команда № 7",
+      "catalog_no": 7,
+      "placement": 7,
+      "total_score": 311,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 9974,
+        "name": "ANVAR NURI ZHIGER SHAY",
+        "name_ru": "ANVAR NURI ZHIGER SHAY",
+        "name_lat": "ANVAR NURI ZHIGER SHAY",
+        "breed": "ПОДЕНКО ИБИЦЕНКО",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 7",
+        "team_placement": 7,
+        "team_members": [
+          "ANVAR NURI ELANDGE LEO",
+          "ANVAR NURI ZHIGER SHAY",
+          "АНВАР НУРИ ЕЛЛОУ УАЙЛД ФЛАУЭР"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 9,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  8,
+                  8,
+                  18,
+                  26,
+                  4,
+                  3
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  16,
+                  6,
+                  5,
+                  16,
+                  20,
+                  4,
+                  2
+                ],
+                "sum": 69
+              }
+            ],
+            "total": 155
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 19,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  7,
+                  17,
+                  24,
+                  4,
+                  4
+                ],
+                "sum": 82
+              },
+              {
+                "scores": [
+                  16,
+                  6,
+                  6,
+                  16,
+                  23,
+                  3,
+                  4
+                ],
+                "sum": 74
+              }
+            ],
+            "total": 156
+          }
+        ],
+        "grand_total": 311
+      }
+    },
+    {
+      "id": 22,
+      "event_id": 20171029,
+      "dog_id": 10849,
+      "breed_class": "Команда № 7",
+      "catalog_no": 7,
+      "placement": 7,
+      "total_score": 311,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10849,
+        "name": "АНВАР НУРИ ЕЛЛОУ УАЙЛД ФЛАУЭР",
+        "name_ru": "АНВАР НУРИ ЕЛЛОУ УАЙЛД ФЛАУЭР",
+        "name_lat": "АНВАР НУРИ ЕЛЛОУ УАЙЛД ФЛАУЭР",
+        "breed": "Поденко Ибиценко (к-ш, г-ш)",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 7",
+        "team_placement": 7,
+        "team_members": [
+          "ANVAR NURI ELANDGE LEO",
+          "ANVAR NURI ZHIGER SHAY",
+          "АНВАР НУРИ ЕЛЛОУ УАЙЛД ФЛАУЭР"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 9,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  8,
+                  8,
+                  18,
+                  26,
+                  4,
+                  3
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  16,
+                  6,
+                  5,
+                  16,
+                  20,
+                  4,
+                  2
+                ],
+                "sum": 69
+              }
+            ],
+            "total": 155
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 19,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  7,
+                  17,
+                  24,
+                  4,
+                  4
+                ],
+                "sum": 82
+              },
+              {
+                "scores": [
+                  16,
+                  6,
+                  6,
+                  16,
+                  23,
+                  3,
+                  4
+                ],
+                "sum": 74
+              }
+            ],
+            "total": 156
+          }
+        ],
+        "grand_total": 311
+      }
+    },
+    {
+      "id": 23,
+      "event_id": 20171029,
+      "dog_id": 10100,
+      "breed_class": "Команда № 6",
+      "catalog_no": 6,
+      "placement": 8,
+      "total_score": 302,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10100,
+        "name": "AMAGAMMA NAMIB MALAVI",
+        "name_ru": "AMAGAMMA NAMIB MALAVI",
+        "name_lat": "AMAGAMMA NAMIB MALAVI",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 6",
+        "team_placement": 8,
+        "team_members": [
+          "LIVELONG HIT ZHENEVIEVA",
+          "Вондерленд Итар Рио Санта Рита",
+          "Нимерия"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 2,
+            "judges": [
+              {
+                "scores": [
+                  16,
+                  7,
+                  6,
+                  16,
+                  21,
+                  3,
+                  2
+                ],
+                "sum": 71
+              },
+              {
+                "scores": [
+                  14,
+                  7,
+                  5,
+                  16,
+                  20,
+                  4,
+                  1
+                ],
+                "sum": 67
+              }
+            ],
+            "total": 138
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 12,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  18,
+                  25,
+                  4,
+                  4
+                ],
+                "sum": 85
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  6,
+                  17,
+                  25,
+                  4,
+                  4
+                ],
+                "sum": 79
+              }
+            ],
+            "total": 164
+          }
+        ],
+        "grand_total": 302
+      }
+    },
+    {
+      "id": 24,
+      "event_id": 20171029,
+      "dog_id": 10099,
+      "breed_class": "Команда № 6",
+      "catalog_no": 6,
+      "placement": 8,
+      "total_score": 302,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10099,
+        "name": "КАВКАЗОН ПИРАТ",
+        "name_ru": "КАВКАЗОН ПИРАТ",
+        "name_lat": "KAVKAZON PIRAT",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 6",
+        "team_placement": 8,
+        "team_members": [
+          "LIVELONG HIT ZHENEVIEVA",
+          "Вондерленд Итар Рио Санта Рита",
+          "Нимерия"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 2,
+            "judges": [
+              {
+                "scores": [
+                  16,
+                  7,
+                  6,
+                  16,
+                  21,
+                  3,
+                  2
+                ],
+                "sum": 71
+              },
+              {
+                "scores": [
+                  14,
+                  7,
+                  5,
+                  16,
+                  20,
+                  4,
+                  1
+                ],
+                "sum": 67
+              }
+            ],
+            "total": 138
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 12,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  18,
+                  25,
+                  4,
+                  4
+                ],
+                "sum": 85
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  6,
+                  17,
+                  25,
+                  4,
+                  4
+                ],
+                "sum": 79
+              }
+            ],
+            "total": 164
+          }
+        ],
+        "grand_total": 302
+      }
+    },
+    {
+      "id": 25,
+      "event_id": 20171029,
+      "dog_id": 10098,
+      "breed_class": "Команда № 6",
+      "catalog_no": 6,
+      "placement": 8,
+      "total_score": 302,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10098,
+        "name": "ITURY PUZZLE ITUURY IZEGBE",
+        "name_ru": "ITURY PUZZLE ITUURY IZEGBE",
+        "name_lat": "ITURY PUZZLE ITUURY IZEGBE",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 6",
+        "team_placement": 8,
+        "team_members": [
+          "LIVELONG HIT ZHENEVIEVA",
+          "Вондерленд Итар Рио Санта Рита",
+          "Нимерия"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 2,
+            "judges": [
+              {
+                "scores": [
+                  16,
+                  7,
+                  6,
+                  16,
+                  21,
+                  3,
+                  2
+                ],
+                "sum": 71
+              },
+              {
+                "scores": [
+                  14,
+                  7,
+                  5,
+                  16,
+                  20,
+                  4,
+                  1
+                ],
+                "sum": 67
+              }
+            ],
+            "total": 138
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 12,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  18,
+                  25,
+                  4,
+                  4
+                ],
+                "sum": 85
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  6,
+                  17,
+                  25,
+                  4,
+                  4
+                ],
+                "sum": 79
+              }
+            ],
+            "total": 164
+          }
+        ],
+        "grand_total": 302
+      }
+    },
+    {
+      "id": 26,
+      "event_id": 20171029,
+      "dog_id": 10850,
+      "breed_class": "Команда № 11",
+      "catalog_no": 11,
+      "placement": 9,
+      "total_score": 287,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10850,
+        "name": "Gordost Imperatora Janus",
+        "name_ru": "Gordost Imperatora Janus",
+        "name_lat": "Gordost Imperatora Janus",
+        "breed": "Дружественные - Мини",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 11",
+        "team_placement": 9,
+        "team_members": [
+          "Gordost Imperatora Janus",
+          "Ларго из компании Себастьяна",
+          "Эклерина Никон Фокс"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 4,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  7,
+                  17,
+                  20,
+                  4,
+                  4
+                ],
+                "sum": 77
+              },
+              {
+                "scores": [
+                  16,
+                  5,
+                  4,
+                  17,
+                  15,
+                  4,
+                  4
+                ],
+                "sum": 65
+              }
+            ],
+            "total": 142
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 14,
+            "judges": [
+              {
+                "scores": [
+                  16,
+                  7,
+                  7,
+                  16,
+                  20,
+                  4,
+                  4
+                ],
+                "sum": 74
+              },
+              {
+                "scores": [
+                  16,
+                  5,
+                  6,
+                  16,
+                  20,
+                  4,
+                  4
+                ],
+                "sum": 71
+              }
+            ],
+            "total": 145
+          }
+        ],
+        "grand_total": 287
+      }
+    },
+    {
+      "id": 27,
+      "event_id": 20171029,
+      "dog_id": 10851,
+      "breed_class": "Команда № 11",
+      "catalog_no": 11,
+      "placement": 9,
+      "total_score": 287,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10851,
+        "name": "Ларго из компании Себастьяна",
+        "name_ru": "Ларго из компании Себастьяна",
+        "name_lat": "Ларго из компании Себастьяна",
+        "breed": "Дружественные - Мини",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 11",
+        "team_placement": 9,
+        "team_members": [
+          "Gordost Imperatora Janus",
+          "Ларго из компании Себастьяна",
+          "Эклерина Никон Фокс"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 4,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  7,
+                  17,
+                  20,
+                  4,
+                  4
+                ],
+                "sum": 77
+              },
+              {
+                "scores": [
+                  16,
+                  5,
+                  4,
+                  17,
+                  15,
+                  4,
+                  4
+                ],
+                "sum": 65
+              }
+            ],
+            "total": 142
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 14,
+            "judges": [
+              {
+                "scores": [
+                  16,
+                  7,
+                  7,
+                  16,
+                  20,
+                  4,
+                  4
+                ],
+                "sum": 74
+              },
+              {
+                "scores": [
+                  16,
+                  5,
+                  6,
+                  16,
+                  20,
+                  4,
+                  4
+                ],
+                "sum": 71
+              }
+            ],
+            "total": 145
+          }
+        ],
+        "grand_total": 287
+      }
+    },
+    {
+      "id": 28,
+      "event_id": 20171029,
+      "dog_id": 10852,
+      "breed_class": "Команда № 11",
+      "catalog_no": 11,
+      "placement": 9,
+      "total_score": 287,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10852,
+        "name": "Эклерина Никон Фокс",
+        "name_ru": "Эклерина Никон Фокс",
+        "name_lat": "Эклерина Никон Фокс",
+        "breed": "Дружественные - Мини",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 11",
+        "team_placement": 9,
+        "team_members": [
+          "Gordost Imperatora Janus",
+          "Ларго из компании Себастьяна",
+          "Эклерина Никон Фокс"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 4,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  7,
+                  17,
+                  20,
+                  4,
+                  4
+                ],
+                "sum": 77
+              },
+              {
+                "scores": [
+                  16,
+                  5,
+                  4,
+                  17,
+                  15,
+                  4,
+                  4
+                ],
+                "sum": 65
+              }
+            ],
+            "total": 142
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 14,
+            "judges": [
+              {
+                "scores": [
+                  16,
+                  7,
+                  7,
+                  16,
+                  20,
+                  4,
+                  4
+                ],
+                "sum": 74
+              },
+              {
+                "scores": [
+                  16,
+                  5,
+                  6,
+                  16,
+                  20,
+                  4,
+                  4
+                ],
+                "sum": 71
+              }
+            ],
+            "total": 145
+          }
+        ],
+        "grand_total": 287
+      }
+    },
+    {
+      "id": 29,
+      "event_id": 20171029,
+      "dog_id": 10853,
+      "breed_class": "Команда № 9",
+      "catalog_no": 9,
+      "placement": 10,
+      "total_score": 282,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10853,
+        "name": "Гезан Гореденна",
+        "name_ru": "Гезан Гореденна",
+        "name_lat": "Гезан Гореденна",
+        "breed": "Басенджи",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 9",
+        "team_placement": 10,
+        "team_members": [
+          "Гезан Гореденна",
+          "ИТУРИ ПАЗЗЛ ЕКСТРАОРДИНАРИ СМАРТ",
+          "ХАУС ЗЭ РЭЙНБОУ ИФЕН"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 10,
+            "judges": [
+              {
+                "scores": [
+                  16,
+                  7,
+                  7,
+                  16,
+                  24,
+                  4,
+                  4
+                ],
+                "sum": 78
+              },
+              {
+                "scores": [
+                  16,
+                  6,
+                  5,
+                  16,
+                  20,
+                  4,
+                  4
+                ],
+                "sum": 71
+              }
+            ],
+            "total": 149
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 20,
+            "judges": [
+              {
+                "scores": [
+                  15,
+                  6,
+                  6,
+                  16,
+                  20,
+                  3,
+                  3
+                ],
+                "sum": 69
+              },
+              {
+                "scores": [
+                  16,
+                  4,
+                  4,
+                  15,
+                  18,
+                  3,
+                  4
+                ],
+                "sum": 64
+              }
+            ],
+            "total": 133
+          }
+        ],
+        "grand_total": 282
+      }
+    },
+    {
+      "id": 30,
+      "event_id": 20171029,
+      "dog_id": 10383,
+      "breed_class": "Команда № 9",
+      "catalog_no": 9,
+      "placement": 10,
+      "total_score": 282,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10383,
+        "name": "ЛАКШЕРИ ВИПП ЛЕДИ ДЕЙ",
+        "name_ru": "ЛАКШЕРИ ВИПП ЛЕДИ ДЕЙ",
+        "name_lat": "ЛАКШЕРИ ВИПП ЛЕДИ ДЕЙ",
+        "breed": "УИППЕТ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 9",
+        "team_placement": 10,
+        "team_members": [
+          "Гезан Гореденна",
+          "ИТУРИ ПАЗЗЛ ЕКСТРАОРДИНАРИ СМАРТ",
+          "ХАУС ЗЭ РЭЙНБОУ ИФЕН"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 10,
+            "judges": [
+              {
+                "scores": [
+                  16,
+                  7,
+                  7,
+                  16,
+                  24,
+                  4,
+                  4
+                ],
+                "sum": 78
+              },
+              {
+                "scores": [
+                  16,
+                  6,
+                  5,
+                  16,
+                  20,
+                  4,
+                  4
+                ],
+                "sum": 71
+              }
+            ],
+            "total": 149
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 20,
+            "judges": [
+              {
+                "scores": [
+                  15,
+                  6,
+                  6,
+                  16,
+                  20,
+                  3,
+                  3
+                ],
+                "sum": 69
+              },
+              {
+                "scores": [
+                  16,
+                  4,
+                  4,
+                  15,
+                  18,
+                  3,
+                  4
+                ],
+                "sum": 64
+              }
+            ],
+            "total": 133
+          }
+        ],
+        "grand_total": 282
+      }
+    },
+    {
+      "id": 31,
+      "event_id": 20171029,
+      "dog_id": 10101,
+      "breed_class": "Команда № 9",
+      "catalog_no": 9,
+      "placement": 10,
+      "total_score": 282,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10101,
+        "name": "ХАУС ЗЭ РЭЙНБОУ ИФЕН",
+        "name_ru": "ХАУС ЗЭ РЭЙНБОУ ИФЕН",
+        "name_lat": "ХАУС ЗЭ РЭЙНБОУ ИФЕН",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 9",
+        "team_placement": 10,
+        "team_members": [
+          "Гезан Гореденна",
+          "ИТУРИ ПАЗЗЛ ЕКСТРАОРДИНАРИ СМАРТ",
+          "ХАУС ЗЭ РЭЙНБОУ ИФЕН"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 10,
+            "judges": [
+              {
+                "scores": [
+                  16,
+                  7,
+                  7,
+                  16,
+                  24,
+                  4,
+                  4
+                ],
+                "sum": 78
+              },
+              {
+                "scores": [
+                  16,
+                  6,
+                  5,
+                  16,
+                  20,
+                  4,
+                  4
+                ],
+                "sum": 71
+              }
+            ],
+            "total": 149
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 20,
+            "judges": [
+              {
+                "scores": [
+                  15,
+                  6,
+                  6,
+                  16,
+                  20,
+                  3,
+                  3
+                ],
+                "sum": 69
+              },
+              {
+                "scores": [
+                  16,
+                  4,
+                  4,
+                  15,
+                  18,
+                  3,
+                  4
+                ],
+                "sum": 64
+              }
+            ],
+            "total": 133
+          }
+        ],
+        "grand_total": 282
+      }
+    },
+    {
+      "id": 32,
+      "event_id": 20171029,
+      "dog_id": 10017,
+      "breed_class": "Команда № 1",
+      "catalog_no": 1,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 0,
+      "status": "dns",
+      "dog": {
+        "id": 10017,
+        "name": "ДЕЙОНГА ГАЙА МОНИФА",
+        "name_ru": "ДЕЙОНГА ГАЙА МОНИФА",
+        "name_lat": "DEYONGA GAYA MONIFA",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 1",
+        "team_placement": null,
+        "team_members": [],
+        "ran": false,
+        "heats": [],
+        "grand_total": null
+      }
+    },
+    {
+      "id": 33,
+      "event_id": 20171029,
+      "dog_id": 10854,
+      "breed_class": "Команда № 1",
+      "catalog_no": 1,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 0,
+      "status": "dns",
+      "dog": {
+        "id": 10854,
+        "name": "SUNHILL RIDGES MADAGASKAR",
+        "name_ru": "SUNHILL RIDGES MADAGASKAR",
+        "name_lat": "SUNHILL RIDGES MADAGASKAR",
+        "breed": "Родезийский риджбек",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 1",
+        "team_placement": null,
+        "team_members": [],
+        "ran": false,
+        "heats": [],
+        "grand_total": null
+      }
+    },
+    {
+      "id": 34,
+      "event_id": 20171029,
+      "dog_id": 9977,
+      "breed_class": "Команда № 1",
+      "catalog_no": 1,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 0,
+      "status": "dns",
+      "dog": {
+        "id": 9977,
+        "name": "РИДЖЕС СТАР ОРСИ БЮТИФУЛ ГЕЛ",
+        "name_ru": "РИДЖЕС СТАР ОРСИ БЮТИФУЛ ГЕЛ",
+        "name_lat": "РИДЖЕС СТАР ОРСИ БЮТИФУЛ ГЕЛ",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 1",
+        "team_placement": null,
+        "team_members": [],
+        "ran": false,
+        "heats": [],
+        "grand_total": null
+      }
+    }
+  ]
+}

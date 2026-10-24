@@ -10,7 +10,8 @@ interface ScoringDetailProps {
   result: Result
 }
 
-const CRITERIA = ['М', 'Р', 'В', 'П', 'Э'] as const
+const CRITERIA_5 = ['М', 'Р', 'В', 'П', 'Э'] as const
+const CRITERIA_7 = ['Ск', 'Эн', 'Лв', 'Пм', 'Вз', 'НП', 'БП'] as const
 
 function criterionTitle(c: string): string {
   const map: Record<string, string> = {
@@ -19,6 +20,13 @@ function criterionTitle(c: string): string {
     В: 'Выносливость',
     П: 'Преследование',
     Э: 'Энтузиазм',
+    Ск: 'Скорость (max 20)',
+    Эн: 'Энтузиазм (max 10)',
+    Лв: 'Ловкость (max 10)',
+    Пм: 'Поимка (max 20)',
+    Вз: 'Взаимодействие своры (max 30)',
+    НП: 'На поводке (max 5)',
+    БП: 'Без поводка (max 5)',
   }
   return map[c] ?? c
 }
@@ -50,7 +58,7 @@ function ScoreCell({
   criterion,
   value,
 }: {
-  criterion: (typeof CRITERIA)[number]
+  criterion: string
   value: number | null | undefined
 }) {
   const display = value !== null && value !== undefined ? value : '-'
@@ -80,6 +88,8 @@ function HeatBlock({
   statusLabel: string | null
   showDivider: boolean
 }) {
+  const is7 = (heat.judges || []).some(j => (j.scores?.length || 0) > 5)
+  const criteriaList = is7 ? CRITERIA_7 : CRITERIA_5
   const isHeatDisqualified = heat.disqualified
   const judgeRows = (heat.judges || [])
     .map((heatJudge, judgeIdx) => ({ heatJudge, judgeIdx }))
@@ -124,7 +134,7 @@ function HeatBlock({
           <colgroup>
             <col className="w-[3.5rem]" />
             <col className="w-[6.5rem]" />
-            {CRITERIA.map(c => (
+            {criteriaList.map(c => (
               <col key={c} />
             ))}
             <col className="w-10" />
@@ -149,7 +159,7 @@ function HeatBlock({
                   <td className="py-1 pr-2 align-middle text-charcoal-900">
                     {judgeLabel}
                   </td>
-                  {CRITERIA.map((criterion, ci) => (
+                  {criteriaList.map((criterion, ci) => (
                     <ScoreCell key={criterion} criterion={criterion} value={heatJudge.scores?.[ci]} />
                   ))}
                   <td className="rounded bg-old-money-50 py-1 pl-1 text-center align-middle">
