@@ -2,8 +2,8 @@
   "schema": "coursing-stats/calendar-v1",
   "year": 2016,
   "exported_at": "2026-10-07T15:02:50.261Z",
-  "event_count": 2,
-  "with_results": 2,
+  "event_count": 3,
+  "with_results": 3,
   "events": [
     {
       "id": 20160227,
@@ -58,6 +58,25 @@
       "result_count": 58,
       "participants_count": 58,
       "results_pdf_url": "https://drive.google.com/file/d/1qM4bE1Wuf2lVI1enaxFBpuWHCQtCpyJI/view?usp=sharing"
+    },
+    {
+      "id": 20160807,
+      "year": 2016,
+      "date_start": "2016-08-06",
+      "date_end": "2016-08-07",
+      "rank_label": "Дружественные забеги",
+      "event_type": "coursing",
+      "competition_kind": "Дружественные забеги",
+      "competition_type": "Курсинг",
+      "title": "Дружественные забеги",
+      "host_club": null,
+      "region": null,
+      "location": "Московская область, д. Михайловское",
+      "has_results": true,
+      "results_file": "competitions/2016/08-август/20160807-дружественные-забеги.json",
+      "result_count": 4,
+      "participants_count": 4,
+      "results_pdf_url": "https://drive.google.com/file/d/12kyaO1IF13S448kAapMMSvT9t9Tfjw-o/view?usp=sharing"
     }
   ]
 }

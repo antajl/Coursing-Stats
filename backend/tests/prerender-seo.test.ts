@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest'
 import {
   applyMetaToSpaShell,
   breadcrumbJsonLd,
+  breedHubMeta,
   build404Html,
   buildCompetitionsHubHtml,
   buildDogBodyHtml,
@@ -14,6 +15,7 @@ import {
   escapeHtml,
   eventMetaFromEntry,
   guideJsonLd,
+  homepageJsonLd,
   HUB_PAGES,
   showJudgeMeta,
   sportJudgeMeta,
@@ -348,5 +350,69 @@ describe('prerender-seo helpers', () => {
     expect(faqPage.mainEntity[0].acceptedAnswer.text).toContain('68,8 км/ч')
     expect(faqPage.mainEntity[1].name).toContain('скорость бега уиппета')
     expect(faqPage.mainEntity[2].name).toContain('скорость бега русской псовой борзой')
+  })
+
+  it('homepageJsonLd outputs valid WebSite and Organization schemas with Knowledge Graph entities', () => {
+    const jsonLd = homepageJsonLd()
+    const graph = (jsonLd as any)['@graph'] as any[]
+    expect(Array.isArray(graph)).toBe(true)
+    const website = graph.find((item) => item['@type'] === 'WebSite')
+    expect(website).toBeDefined()
+    expect(website.name).toBe('Coursing Stats')
+    expect(website.alternateName).toContain('ProCoursing')
+
+    const org = graph.find((item) => item['@type'] === 'Organization')
+    expect(org).toBeDefined()
+    expect(org.logo).toContain('og-image.png')
+    expect(org.knowsAbout).toContain('Курсинг')
+  })
+
+  it('breedHubMeta generates rich semantic content and FAQPage schema for breed hubs', () => {
+    const meta = breedHubMeta({
+      slug: 'whippet',
+      canonicalKey: 'УИППЕТ',
+      nameRu: 'Уиппет',
+      nameLat: 'Whippet',
+      fci: 'FCI 162',
+      lead: 'Малая английская борзая',
+      description: 'Самая скоростная порода',
+      faqs: [
+        { question: 'Скорость уиппета?', answer: 'До 64 км/ч' },
+      ],
+      topDogs: [
+        { id: 5645, name: 'Стангерс Ланд Каталина', starts: 9, gold: 4, silver: 1, bronze: 0 },
+      ],
+      speedRecords: [
+        { name: 'Драм', speed_kmh: 64, date: '2026-05-11' },
+      ],
+    })
+
+    expect(meta.title).toContain('Уиппет (Whippet)')
+    expect(meta.h1).toContain('Уиппет (Whippet) в курсинге и бегах')
+    expect(meta.contentHtml).toContain('<a href="/dog/5645/"><strong>Стангерс Ланд Каталина</strong></a>')
+    expect(meta.contentHtml).toContain('Драм</strong>: 64 км/ч')
+    expect(meta.contentHtml).toContain('href="/competitions?tab=ranking&breed=%D0%A3%D0%98%D0%9F%D0%9F%D0%95%D0%A2"')
+
+    const graph = (meta.jsonLd as any)['@graph'] as any[]
+    const faq = graph.find((i) => i['@type'] === 'FAQPage')
+    expect(faq).toBeDefined()
+    expect(faq.mainEntity[0].name).toBe('Скорость уиппета?')
+  })
+
+  it('eventMetaFromEntry generates clickable links to dogs in contentHtml and Place location', () => {
+    const meta = eventMetaFromEntry({
+      id: '2026001',
+      title: 'Чемпионат РКФ',
+      date_start: '2026-06-15',
+      location: 'Московская область, Донино',
+      winners: [
+        { dogId: 5645, name: 'Стангерс Ланд Каталина', breed: 'Уиппет', score: 350 },
+      ],
+    })
+
+    expect(meta.contentHtml).toContain('<a href="/dog/5645/"><strong>Стангерс Ланд Каталина</strong></a>')
+    const sportsEvent = (meta.jsonLd as any)['@graph'].find((i: any) => i['@type'] === 'SportsEvent')
+    expect(sportsEvent.location['@type']).toBe('Place')
+    expect(sportsEvent.location.address.addressLocality).toBe('Московская область, Донино')
   })
 })

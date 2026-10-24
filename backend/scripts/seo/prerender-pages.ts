@@ -20,8 +20,10 @@ import {
   buildHubBodyHtml,
   buildNeutralSpaShell,
   buildSimpleEntityBodyHtml,
+  breedHubMeta,
   competitionsJsonLd,
   guideJsonLd,
+  homepageJsonLd,
   DEFAULT_COMPETITION_FAQS,
   dogMetaFromProfile,
   dogMetaFromShowRanking,
@@ -32,6 +34,7 @@ import {
   showJudgeMeta,
   sportJudgeMeta,
 } from './prerender-html.js'
+import { CORE_BREED_HUBS } from '../../../frontend/src/lib/breed-hubs-data.js'
 import { loadExhibitionIdsForSitemap } from '../build-derived/sitemap.js'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT = path.resolve(__dirname, '../../..')
@@ -147,7 +150,9 @@ function prerenderHubs(spaHtml: string): number {
     let bodyHtml = buildHubBodyHtml(hub)
     let jsonLd: Record<string, unknown> | undefined
 
-    if (hub.path === '/competitions') {
+    if (hub.path === '/') {
+      jsonLd = homepageJsonLd()
+    } else if (hub.path === '/competitions') {
       bodyHtml = buildCompetitionsHubHtml(hub, topPlacementDogs)
       jsonLd = competitionsJsonLd(DEFAULT_COMPETITION_FAQS)
     } else if (hub.path === '/guide') {
@@ -355,13 +360,31 @@ function prerenderEvents(spaHtml: string): number {
       for (const r of comp.results) {
         if (r.placement === 1 && (r.dog?.name_ru || r.dog?.name_lat)) {
           winners.push({
+            dogId: (r as any).dog_id || r.dog?.id || null,
             name: r.dog.name_ru || r.dog.name_lat || '',
             breed: r.dog.breed || null,
             score: r.total_score || null,
             speed_kmh: r.speed_kmh || r.average_speed || null,
             title: [r.vc, r.qualification].filter(Boolean).join(', ') || null,
           })
-          if (winners.length >= 5) break
+        }
+      }
+      if (winners.length < 15) {
+        for (const r of comp.results) {
+          if (
+            (r.placement === 2 || r.placement === 3) &&
+            (r.dog?.name_ru || r.dog?.name_lat)
+          ) {
+            winners.push({
+              dogId: (r as any).dog_id || r.dog?.id || null,
+              name: r.dog.name_ru || r.dog.name_lat || '',
+              breed: r.dog.breed || null,
+              score: r.total_score || null,
+              speed_kmh: r.speed_kmh || r.average_speed || null,
+              title: [r.vc, r.qualification].filter(Boolean).join(', ') || null,
+            })
+            if (winners.length >= 15) break
+          }
         }
       }
     }
@@ -619,6 +642,84 @@ function prerenderShowJudges(spaHtml: string): number {
   return written
 }
 
+function prerenderBreedHubs(spaHtml: string): number {
+  const topPlacementPath = path.join(ROOT, 'data/v1/indexes/top-placement-2026.json')
+  let topDogs: Array<{
+    dog_id: number
+    name_ru?: string | null
+    name_lat?: string | null
+    breed: string
+    gold: number
+    silver: number
+    bronze: number
+    total_starts: number
+  }> = []
+  if (fs.existsSync(topPlacementPath)) {
+    try {
+      const parsed = JSON.parse(fs.readFileSync(topPlacementPath, 'utf8'))
+      if (Array.isArray(parsed.items)) topDogs = parsed.items
+    } catch {}
+  }
+
+  const speedDoc = readJsonFile<
+    Array<{ name?: string; breed?: string; speed_km_h?: number; date?: string }>
+  >(path.join(ROOT, 'data/v1/donino/speed_records.json'))
+  const speedRows = Array.isArray(speedDoc) ? speedDoc : (speedDoc as any)?.records || []
+
+  let written = 0
+  for (const b of CORE_BREED_HUBS) {
+    const breedUpper = b.canonicalKey.toUpperCase()
+    const breedTop = topDogs
+      .filter(
+        (d) =>
+          (d.breed || '').toUpperCase().includes(breedUpper) ||
+          (d.breed || '').toUpperCase() === breedUpper,
+      )
+      .slice(0, 5)
+      .map((d) => ({
+        id: d.dog_id,
+        name: d.name_ru || d.name_lat || 'Собака',
+        starts: d.total_starts || 0,
+        gold: d.gold || 0,
+        silver: d.silver || 0,
+        bronze: d.bronze || 0,
+      }))
+
+    const breedSpeeds = speedRows
+      .filter(
+        (r) =>
+          (r.breed || '').toUpperCase().includes(breedUpper) ||
+          breedUpper.includes((r.breed || '').toUpperCase()),
+      )
+      .slice(0, 3)
+      .map((r) => ({
+        name: r.name || '',
+        speed_kmh: r.speed_km_h || 0,
+        date: r.date,
+      }))
+
+    const meta = breedHubMeta({
+      ...b,
+      topDogs: breedTop,
+      speedRecords: breedSpeeds,
+    })
+
+    const canonicalUrl = `${SITE_ORIGIN}/breeds/${b.slug}/`
+    const html = applyMetaToSpaShell(spaHtml, {
+      title: meta.title,
+      description: meta.description,
+      canonicalUrl,
+      bodyHtml: buildSimpleEntityBodyHtml(meta),
+      jsonLd: meta.jsonLd || breadcrumbJsonLd(meta.breadcrumbs),
+    })
+
+    writeHtml(path.join(DIST, 'breeds', b.slug, 'index.html'), html)
+    writeHtml(path.join(DIST, 'breed', b.slug, 'index.html'), html)
+    written++
+  }
+  return written
+}
+
 function main(): void {
   const started = Date.now()
 
@@ -648,6 +749,7 @@ function main(): void {
   console.log(`[prerender-seo] Generated 404.html (${Buffer.byteLength(html404, 'utf8')} bytes)`)
 
   const hubs = prerenderHubs(shellForPages)
+  const breedHubs = prerenderBreedHubs(shellForPages)
   const profilesDir = resolveProfilesDir()
   const competitionDogs = prerenderCompetitionDogs(shellForPages, profilesDir)
   const showOnlyDogs = prerenderShowOnlyDogs(shellForPages)
@@ -658,12 +760,15 @@ function main(): void {
   const exhibitions = prerenderExhibitions(shellForPages)
   const showJudges = prerenderShowJudges(shellForPages)
 
-  // Ensure sitemap.xml and robots.txt are copied to dist for deployment
-  const sitemapSrc = path.join(ROOT, 'frontend/public/sitemap.xml')
-  const sitemapDst = path.join(DIST, 'sitemap.xml')
-  if (fs.existsSync(sitemapSrc)) {
-    fs.copyFileSync(sitemapSrc, sitemapDst)
-    console.log(`[prerender-seo] Copied sitemap.xml to dist (${fs.statSync(sitemapDst).size} bytes)`)
+  // Ensure all sitemap*.xml and robots.txt are copied to dist for deployment
+  const publicDir = path.join(ROOT, 'frontend/public')
+  for (const file of fs.readdirSync(publicDir)) {
+    if (file.startsWith('sitemap') && file.endsWith('.xml')) {
+      const src = path.join(publicDir, file)
+      const dst = path.join(DIST, file)
+      fs.copyFileSync(src, dst)
+      console.log(`[prerender-seo] Copied ${file} to dist (${fs.statSync(dst).size} bytes)`)
+    }
   }
 
   const robotsSrc = path.join(ROOT, 'frontend/public/robots.txt')
@@ -676,7 +781,7 @@ function main(): void {
   const elapsed = Date.now() - started
 
   console.log(
-    `[prerender-seo] hubs=${hubs} dogs=${dogs} (competition=${competitionDogs}, show-only=${showOnlyDogs}) events=${events} judges=${judges} donino=${donino} exhibitions=${exhibitions} showJudges=${showJudges} elapsed=${elapsed}ms`,
+    `[prerender-seo] hubs=${hubs} breedHubs=${breedHubs} dogs=${dogs} (competition=${competitionDogs}, show-only=${showOnlyDogs}) events=${events} judges=${judges} donino=${donino} exhibitions=${exhibitions} showJudges=${showJudges} elapsed=${elapsed}ms`,
   )
 }
 

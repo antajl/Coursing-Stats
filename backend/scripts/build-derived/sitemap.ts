@@ -3,6 +3,7 @@ import path from 'node:path'
 import type Database from 'better-sqlite3'
 import { parseJudgeNames } from '../../src/lib/judge-names'
 import { PUBLIC_DIR, ROOT, SITE_BASE_URL, writeIndex } from './shared'
+import { CORE_BREED_HUBS } from '../../../frontend/src/lib/breed-hubs-data'
 
 function xmlEscape(value: string): string {
   return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
@@ -35,6 +36,10 @@ const STATIC_PAGES: SitemapUrl[] = [
 /** Pure collector — unit-tested without sqlite. */
 export function collectSitemapUrls(sources: SitemapUrlSources): SitemapUrl[] {
   const out: SitemapUrl[] = [...STATIC_PAGES]
+
+  for (const b of CORE_BREED_HUBS) {
+    out.push({ loc: `/breeds/${b.slug}/`, changefreq: 'weekly', priority: '0.85' })
+  }
 
   for (const id of sources.eventIds) {
     out.push({ loc: `/event/${id}/`, changefreq: 'monthly', priority: '0.7' })
@@ -85,6 +90,21 @@ export function renderSitemapXml(urls: SitemapUrl[]): string {
     xml += '  </url>\n'
   }
   xml += '</urlset>'
+  return xml
+}
+
+export function renderSitemapIndexXml(sitemaps: Array<{ loc: string; lastmod?: string }>): string {
+  let xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
+  xml += '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+  for (const s of sitemaps) {
+    xml += '  <sitemap>\n'
+    xml += `    <loc>${xmlEscape(SITE_BASE_URL + s.loc)}</loc>\n`
+    if (s.lastmod) {
+      xml += `    <lastmod>${s.lastmod}</lastmod>\n`
+    }
+    xml += '  </sitemap>\n'
+  }
+  xml += '</sitemapindex>'
   return xml
 }
 
@@ -206,10 +226,69 @@ export function buildSitemap(db: Database.Database) {
     showJudgeIds,
   })
 
-  const xml = renderSitemapXml(urls)
+  const now = new Date().toISOString().split('T')[0]
+
+  const mainUrls: SitemapUrl[] = [
+    ...STATIC_PAGES,
+    ...CORE_BREED_HUBS.map((b) => ({
+      loc: `/breeds/${b.slug}/`,
+      changefreq: 'weekly',
+      priority: '0.85',
+    })),
+    ...doninoDogs.map((d) => ({
+      loc: `/donino-dog/${encodeURIComponent(d.name)}/${encodeURIComponent(d.breed)}/`,
+      changefreq: 'monthly',
+      priority: '0.5',
+    })),
+  ]
+  const eventUrls: SitemapUrl[] = eventIds.map((id) => ({
+    loc: `/event/${id}/`,
+    changefreq: 'monthly',
+    priority: '0.7',
+  }))
+  const dogUrls: SitemapUrl[] = dogs.map((d) => ({
+    loc: `/dog/${d.id}/`,
+    changefreq: 'monthly',
+    priority: '0.6',
+  }))
+  const judgeUrls: SitemapUrl[] = [
+    ...sportJudgeNames.map((name) => ({
+      loc: `/judges/${encodeURIComponent(name)}/`,
+      changefreq: 'monthly',
+      priority: '0.5',
+    })),
+    ...showJudgeIds.map((id) => ({
+      loc: `/shows/judges/${encodeURIComponent(id)}/`,
+      changefreq: 'monthly',
+      priority: '0.5',
+    })),
+  ]
+  const showUrls: SitemapUrl[] = exhibitionIds.map((id) => ({
+    loc: `/shows/exhibition/${encodeURIComponent(id)}/`,
+    changefreq: 'monthly',
+    priority: '0.55',
+  }))
+
   fs.mkdirSync(PUBLIC_DIR, { recursive: true })
+  fs.writeFileSync(path.join(PUBLIC_DIR, 'sitemap-main.xml'), renderSitemapXml(mainUrls), 'utf-8')
+  fs.writeFileSync(path.join(PUBLIC_DIR, 'sitemap-events.xml'), renderSitemapXml(eventUrls), 'utf-8')
+  fs.writeFileSync(path.join(PUBLIC_DIR, 'sitemap-dogs.xml'), renderSitemapXml(dogUrls), 'utf-8')
+  fs.writeFileSync(path.join(PUBLIC_DIR, 'sitemap-judges.xml'), renderSitemapXml(judgeUrls), 'utf-8')
+  fs.writeFileSync(path.join(PUBLIC_DIR, 'sitemap-shows.xml'), renderSitemapXml(showUrls), 'utf-8')
+
+  const indexXml = renderSitemapIndexXml([
+    { loc: '/sitemap-main.xml', lastmod: now },
+    { loc: '/sitemap-events.xml', lastmod: now },
+    { loc: '/sitemap-dogs.xml', lastmod: now },
+    { loc: '/sitemap-judges.xml', lastmod: now },
+    { loc: '/sitemap-shows.xml', lastmod: now },
+  ])
+  fs.writeFileSync(path.join(PUBLIC_DIR, 'sitemap-index.xml'), indexXml, 'utf-8')
+
+  const xml = renderSitemapXml(urls)
   fs.writeFileSync(path.join(PUBLIC_DIR, 'sitemap.xml'), xml, 'utf-8')
   console.log(
     `  → frontend/public/sitemap.xml (${urls.length} urls; events=${eventIds.length}, exhibitions=${exhibitionIds.length}, showJudges=${showJudgeIds.length})`,
   )
+  console.log(`  → generated modular sitemaps + sitemap-index.xml`)
 }

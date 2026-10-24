@@ -1,0 +1,205 @@
+{
+  "schema": "coursing-stats/competition-v1",
+  "exported_at": "2026-10-24T18:35:15.098Z",
+  "source": "manual-entry",
+  "event_id": 20150809,
+  "event": {
+    "id": 20150809,
+    "year": 2015,
+    "date_start": "2015-08-08",
+    "date_end": "2015-08-09",
+    "rank_label": "Дружественные забеги",
+    "event_type": "coursing",
+    "competition_kind": "Дружественные забеги",
+    "competition_type": "Курсинг",
+    "title": "Дружественные забеги",
+    "host_club": null,
+    "region": null,
+    "location": "Московская область, Сергиево-Посадский р-н",
+    "catalog_url": null,
+    "results_url": "http://www.procoursing.ru/results/2015-08-08_F/",
+    "rules_url": null,
+    "results_pdf_url": "https://drive.google.com/file/d/1hAxDytRuM_zMXhBSgyZEgj9T_fG0txvG/view?usp=sharing",
+    "confirmed": 1,
+    "last_modified": "2026-10-24T18:35:15.098Z",
+    "scraped_at": null,
+    "telegram_url": null,
+    "full_title": null,
+    "event_date": null,
+    "protocol_location": null,
+    "judges": "Главный судья: Серова Т.Г., судья: Вронская О.В.",
+    "track_schemes": []
+  },
+  "result_count": 2,
+  "results": [
+    {
+      "id": 1,
+      "event_id": 20150809,
+      "dog_id": 10833,
+      "breed_class": "Дружественные - Макси - Стандартный - Кобели",
+      "catalog_no": 2,
+      "placement": 1,
+      "total_score": 365,
+      "judge_count": 2,
+      "status": "completed",
+      "dog": {
+        "id": 10833,
+        "name": "Стэн",
+        "name_ru": "Стэн",
+        "name_lat": "Stan",
+        "breed": "Дружественные - Макси",
+        "sex": "male"
+      },
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 1,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  19,
+                  18
+                ],
+                "sum": 91
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 180
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 3,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  20,
+                  18
+                ],
+                "sum": 94
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 91
+              }
+            ],
+            "total": 185
+          }
+        ],
+        "grand_total": 365
+      }
+    },
+    {
+      "id": 2,
+      "event_id": 20150809,
+      "dog_id": 10834,
+      "breed_class": "Дружественные - Макси - Стандартный - Кобели",
+      "catalog_no": 1,
+      "placement": 2,
+      "total_score": 358,
+      "judge_count": 2,
+      "status": "completed",
+      "dog": {
+        "id": 10834,
+        "name": "Amon Lucky Boy из Империи Демонов",
+        "name_ru": "Амон Лаки Бой из Империи Демонов",
+        "name_lat": "Amon Lucky Boy iz Imperii Demonov",
+        "breed": "Дружественные - Макси",
+        "sex": "male"
+      },
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 1,
+            "bib_color": "blue",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 87
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  19,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 176
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 4,
+            "bib_color": "blue",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  19,
+                  19,
+                  18
+                ],
+                "sum": 91
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  19,
+                  18,
+                  19,
+                  18
+                ],
+                "sum": 91
+              }
+            ],
+            "total": 182
+          }
+        ],
+        "grand_total": 358
+      }
+    }
+  ],
+  "results_pdf_url": "https://drive.google.com/file/d/1hAxDytRuM_zMXhBSgyZEgj9T_fG0txvG/view?usp=sharing"
+}

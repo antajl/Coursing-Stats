@@ -1,0 +1,245 @@
+{
+  "schema": "coursing-stats/competition-v1",
+  "exported_at": "2026-10-24T18:35:28.746Z",
+  "source": "manual-entry",
+  "event_id": 20160807,
+  "event": {
+    "id": 20160807,
+    "year": 2016,
+    "date_start": "2016-08-06",
+    "date_end": "2016-08-07",
+    "rank_label": "Дружественные забеги",
+    "event_type": "coursing",
+    "competition_kind": "Дружественные забеги",
+    "competition_type": "Курсинг",
+    "title": "Дружественные забеги",
+    "host_club": null,
+    "region": null,
+    "location": "Московская область, д. Михайловское",
+    "catalog_url": null,
+    "results_url": "http://www.procoursing.ru/results/2016-08-06_F/",
+    "rules_url": null,
+    "results_pdf_url": "https://drive.google.com/file/d/12kyaO1IF13S448kAapMMSvT9t9Tfjw-o/view?usp=sharing",
+    "confirmed": 1,
+    "last_modified": "2026-10-24T18:35:28.746Z",
+    "scraped_at": null,
+    "telegram_url": null,
+    "full_title": null,
+    "event_date": null,
+    "protocol_location": null,
+    "judges": "Главный судья: Демидова Е.Ю., судья: Иванова Г.С.",
+    "track_schemes": []
+  },
+  "result_count": 4,
+  "results": [
+    {
+      "id": 1,
+      "event_id": 20160807,
+      "dog_id": 10835,
+      "breed_class": "Дружественные - Макси - Стандартный - Суки",
+      "catalog_no": 2,
+      "placement": 1,
+      "total_score": 336,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "CC",
+      "status": "completed",
+      "dog": {
+        "id": 10835,
+        "name": "Amalia Maria Neapoletanskaya",
+        "name_ru": "Амалия Мария Неаполитанская",
+        "name_lat": "Amalia Maria Neapoletanskaya",
+        "breed": "Дружественные - Макси",
+        "sex": "female"
+      },
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 34,
+            "bib_color": "blue",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  16,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 83
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  16,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 166
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 66,
+            "bib_color": "blue",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  16,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 84
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 170
+          }
+        ],
+        "grand_total": 336
+      }
+    },
+    {
+      "id": 2,
+      "event_id": 20160807,
+      "dog_id": 10833,
+      "breed_class": "Дружественные - Макси - Стандартный - Кобели",
+      "catalog_no": 1,
+      "placement": 2,
+      "total_score": 330,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "CC",
+      "status": "completed",
+      "dog": {
+        "id": 10833,
+        "name": "Стэн",
+        "name_ru": "Стэн",
+        "name_lat": "Stan",
+        "breed": "Дружественные - Макси",
+        "sex": "male"
+      },
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 34,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  17,
+                  15,
+                  15,
+                  15
+                ],
+                "sum": 77
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 161
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 66,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 84
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 169
+          }
+        ],
+        "grand_total": 330
+      }
+    },
+    {
+      "id": 3,
+      "event_id": 20160807,
+      "dog_id": 10836,
+      "breed_class": "Дружественные - Мини - Стандартный - Кобели",
+      "catalog_no": 3,
+      "placement": null,
+      "status": "dns",
+      "status_reason": "Неявка",
+      "dog": {
+        "id": 10836,
+        "name": "DAR SHAH EVERLY",
+        "name_ru": "ДАР ШАХ ЭВЕРЛИ",
+        "name_lat": "DAR SHAH EVERLY",
+        "breed": "Дружественные - Мини",
+        "sex": "male"
+      }
+    },
+    {
+      "id": 4,
+      "event_id": 20160807,
+      "dog_id": 10837,
+      "breed_class": "Дружественные - Мини - Стандартный - Кобели",
+      "catalog_no": 4,
+      "placement": null,
+      "status": "dns",
+      "status_reason": "Неявка",
+      "dog": {
+        "id": 10837,
+        "name": "Кросс",
+        "name_ru": "Кросс",
+        "name_lat": "Cross",
+        "breed": "Дружественные - Мини",
+        "sex": "male"
+      }
+    }
+  ],
+  "results_pdf_url": "https://drive.google.com/file/d/12kyaO1IF13S448kAapMMSvT9t9Tfjw-o/view?usp=sharing"
+}

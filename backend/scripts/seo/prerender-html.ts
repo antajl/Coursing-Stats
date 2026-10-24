@@ -13,6 +13,14 @@ export type HubMeta = {
   paragraph: string
 }
 
+export type DogRecentCompItem = {
+  eventId?: string | number
+  title: string
+  date?: string | null
+  placement?: number | null
+  qualification?: string | null
+}
+
 export type DogProfileInput = {
   id: string | number
   name: string
@@ -21,7 +29,7 @@ export type DogProfileInput = {
   rawLatName?: string | null
   breed?: string | null
   facts: string[]
-  recentCompetitions?: string[]
+  recentCompetitions?: Array<string | DogRecentCompItem>
 }
 
 export type BreadcrumbItem = { name: string; url: string }
@@ -260,23 +268,27 @@ export function build404Html(spaHtml: string): string {
     `<div class="print:hidden" aria-hidden="true" style="position: fixed; inset: 0; z-index: 2; pointer-events: none; opacity: 0.048; mix-blend-mode: multiply; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E&quot;); background-size: 120px 120px; background-repeat: repeat;"></div>`,
     `<div class="cs-page-shell min-h-screen">`,
     `  <nav class="nav-glass sticky top-0 z-50 relative border-b border-cream-300/20 shadow-[0_4px_7px_-2px_rgba(43,37,32,0.34)] print:hidden">`,
-    `    <div class="flex h-16 w-full items-center justify-between px-3 sm:px-4 md:px-6 lg:px-8 max-w-7xl mx-auto">`,
-    `      <a href="/" class="flex min-w-0 shrink-0 items-center gap-2 font-semibold text-lg tracking-tight text-camel-800">`,
-    `        Coursing Stats`,
+    `    <div class="flex h-14 sm:h-16 w-full items-center justify-between px-3 sm:px-4 md:px-6 lg:px-8 max-w-7xl mx-auto">`,
+    `      <a href="/" class="flex min-w-0 shrink-0 items-center gap-2 transition-opacity hover:opacity-85" aria-label="Coursing Stats">`,
+    `        <img src="/assets/brand/logo.webp" width="1128" height="224" alt="Coursing Stats" class="h-9 sm:h-11 w-auto" style="object-fit: contain;">`,
     `      </a>`,
-    `      <div class="flex items-center gap-4 sm:gap-6 text-sm font-medium text-old-money-700">`,
+    `      <div class="hidden md:flex items-center gap-4 lg:gap-6 text-sm font-medium text-old-money-700">`,
     `        <a href="/competitions" class="hover:text-camel-800 transition-colors">Соревнования</a>`,
     `        <a href="/shows" class="hover:text-camel-800 transition-colors">Выставки</a>`,
     `        <a href="/speed-records" class="hover:text-camel-800 transition-colors">Донино</a>`,
     `        <a href="/guide" class="hover:text-camel-800 transition-colors">Справочник</a>`,
     `        <a href="/about" class="hover:text-camel-800 transition-colors">О проекте</a>`,
     `      </div>`,
+    `      <a href="/" class="md:hidden inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-cream-300/60 bg-cream-100/70 text-xs font-semibold text-camel-900 hover:text-camel-950 hover:bg-cream-200/80 transition-colors min-h-[44px]">`,
+    `        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 shrink-0" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
+    `        <span>На главную</span>`,
+    `      </a>`,
     `    </div>`,
     `  </nav>`,
-    `  <div class="fixed inset-0 z-40 overflow-hidden">`,
+    `  <div class="fixed inset-0 z-40 overflow-hidden pointer-events-none">`,
     `    <picture>`,
     `      <source srcset="/assets/errors/404-dogs-mobile.png" media="(max-width: 768px)">`,
-    `      <img src="/assets/errors/404-dogs.png" alt="Силуэты борзых" class="absolute top-16 left-0 right-0 bottom-0 h-full w-full object-cover">`,
+    `      <img src="/assets/errors/404-dogs.png" alt="Силуэты борзых" class="absolute top-14 sm:top-16 left-0 right-0 bottom-0 h-full w-full object-cover">`,
     `    </picture>`,
     `  </div>`,
     `</div>`,
@@ -359,6 +371,39 @@ export const DEFAULT_COMPETITION_FAQS = [
       'В единой турнирной таблице Coursing Stats по каждой породе борзых (салюки, уиппеты, РПБ и др.) доступны официальные результаты соревнований РКФ, медальный зачёт, скорость и очки стабильности CS. Для радарных полевых замеров полигона Донино на сайте предусмотрен специальный раздел «Донино».',
   },
 ]
+
+export function homepageJsonLd(): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebSite',
+        '@id': `${SITE_ORIGIN}/#website`,
+        url: `${SITE_ORIGIN}/`,
+        name: 'Coursing Stats',
+        alternateName: ['Курсинг Статс', 'ProCoursing', 'CoursingStats'],
+        description:
+          'Единая всероссийская база и статистика курсинга, бегов борзых и выставок собак РКФ с 2015 года.',
+        inLanguage: 'ru-RU',
+      },
+      {
+        '@type': 'Organization',
+        '@id': `${SITE_ORIGIN}/#organization`,
+        name: 'Coursing Stats',
+        url: `${SITE_ORIGIN}/`,
+        logo: `${SITE_ORIGIN}/og-image.png`,
+        sameAs: ['https://t.me/coursing_stats_bot'],
+        knowsAbout: [
+          'Курсинг',
+          'Бега борзых',
+          'Российская кинологическая федерация',
+          'Борзые породы собак',
+          'Замеры скорости собак Донино',
+        ],
+      },
+    ],
+  }
+}
 
 export function competitionsJsonLd(
   faqs: Array<{ question: string; answer: string }> = DEFAULT_COMPETITION_FAQS,
@@ -684,10 +729,27 @@ export function buildDogBodyHtml(dog: DogProfileInput): string {
     ? `<ul>${factItems}</ul>`
     : `<p>Статистика собаки на Coursing Stats.</p>`
 
-  const comps = (dog.recentCompetitions || []).filter(Boolean).slice(0, 5)
+  const comps = (dog.recentCompetitions || []).filter(Boolean).slice(0, 8)
   const compsBlock =
     comps.length > 0
-      ? `<h2>Недавние забеги</h2><ul>${comps.map((t) => `<li>${escapeHtml(t)}</li>`).join('')}</ul>`
+      ? `<h2>Недавние забеги и соревнования</h2><ul>${comps
+          .map((item) => {
+            if (typeof item === 'string') {
+              return `<li>${escapeHtml(item)}</li>`
+            }
+            const link = item.eventId
+              ? `<a href="/event/${item.eventId}/"><strong>${escapeHtml(item.title)}</strong></a>`
+              : `<strong>${escapeHtml(item.title)}</strong>`
+            const extra = [
+              item.date ? formatEventDateRu(item.date) : null,
+              item.placement ? `${item.placement} место` : null,
+              item.qualification ? `(${escapeHtml(item.qualification)})` : null,
+            ]
+              .filter(Boolean)
+              .join(', ')
+            return `<li>${link}${extra ? ` — ${extra}` : ''}</li>`
+          })
+          .join('')}</ul>`
       : ''
 
   const links = [
@@ -752,11 +814,20 @@ export function dogMetaFromProfile(profile: {
   if (bronze) medals.push(`бронза ${bronze}`)
   if (medals.length) facts.push(`Медали: ${medals.join(', ')}`)
 
-  const recent = [...(profile.competitions || [])]
+  const recent: DogRecentCompItem[] = [...(profile.competitions || [])]
+    .filter((c): c is NonNullable<typeof c> => Boolean(c && (c.title || (c as any).event_id || (c as any).id)))
     .sort((a, b) => String(b.date_start || '').localeCompare(String(a.date_start || '')))
-    .map((c) => c.title)
-    .filter((t): t is string => Boolean(t))
-    .slice(0, 5)
+    .slice(0, 8)
+    .map((c) => {
+      const anyC = c as any
+      return {
+        eventId: anyC.event_id || anyC.id,
+        title: c.title || 'Соревнование',
+        date: c.date_start || null,
+        placement: anyC.placement ?? null,
+        qualification: anyC.qualification ?? null,
+      }
+    })
 
   const medalSummary = gold > 0 ? `${gold} побед (золото)` : medals.length > 0 ? medals.join(', ') : ''
 
@@ -922,6 +993,7 @@ export type SimpleEntityMeta = {
   description: string
   h1: string
   paragraph: string
+  contentHtml?: string
   breadcrumbs: BreadcrumbItem[]
   jsonLd?: Record<string, unknown>
   sectionLinks: { href: string; label: string }[]
@@ -943,12 +1015,16 @@ export function buildSimpleEntityBodyHtml(meta: Omit<SimpleEntityMeta, 'title' |
     `<nav aria-label="Хлебные крошки">${crumbs}</nav>`,
     `<h1>${escapeHtml(meta.h1)}</h1>`,
     `<p>${escapeHtml(meta.paragraph)}</p>`,
+    meta.contentHtml ? meta.contentHtml : '',
     `<nav aria-label="Разделы сайта">${links}</nav>`,
     `</main>`,
-  ].join('\n')
+  ]
+    .filter(Boolean)
+    .join('\n')
 }
 
 export interface EventWinnerSummary {
+  dogId?: number | string | null
   name: string
   breed?: string | null
   score?: number | null
@@ -1004,6 +1080,26 @@ export function eventMetaFromEntry(entry: {
     .filter(Boolean)
     .join(' ')
 
+  let contentHtml = ''
+  if (entry.winners && entry.winners.length > 0) {
+    const listItems = entry.winners.map((w) => {
+      const breed = w.breed ? ` (${escapeHtml(toDogTitleCase(w.breed))})` : ''
+      const dogName = toDogTitleCase(w.name)
+      const dogLink = w.dogId
+        ? `<a href="/dog/${w.dogId}/"><strong>${escapeHtml(dogName)}</strong></a>`
+        : `<strong>${escapeHtml(dogName)}</strong>`
+      const details = [
+        w.title ? `<em>${escapeHtml(w.title)}</em>` : null,
+        w.score ? `${w.score} б.` : null,
+        w.speed_kmh ? `${w.speed_kmh} км/ч` : null,
+      ]
+        .filter(Boolean)
+        .join(' · ')
+      return `<li>${dogLink}${breed}${details ? ` — ${details}` : ''}</li>`
+    }).join('')
+    contentHtml = `<h2>Результаты и призеры состязания</h2><ol>${listItems}</ol>`
+  }
+
   const breadcrumbs = [
     { name: 'Главная', url: '/' },
     { name: 'Соревнования', url: '/competitions' },
@@ -1025,6 +1121,11 @@ export function eventMetaFromEntry(entry: {
               location: {
                 '@type': 'Place',
                 name: location,
+                address: {
+                  '@type': 'PostalAddress',
+                  addressLocality: location,
+                  addressCountry: 'RU',
+                },
               },
             }
           : {}),
@@ -1050,6 +1151,7 @@ export function eventMetaFromEntry(entry: {
     description,
     h1: headline,
     paragraph,
+    contentHtml,
     breadcrumbs,
     jsonLd,
     sectionLinks: [
@@ -1320,6 +1422,108 @@ export function showJudgeMeta(judge: {
     sectionLinks: [
       { href: '/shows?tab=judges', label: 'Судьи выставок' },
       { href: '/shows', label: 'Выставки' },
+      { href: '/guide', label: 'Справочник' },
+    ],
+  }
+}
+
+export interface BreedHubMetaInput {
+  slug: string
+  canonicalKey: string
+  nameRu: string
+  nameLat: string
+  fci: string
+  lead: string
+  description: string
+  faqs: Array<{ question: string; answer: string }>
+  topDogs?: Array<{
+    id: number | string
+    name: string
+    starts: number
+    gold: number
+    silver: number
+    bronze: number
+  }>
+  speedRecords?: Array<{ name: string; speed_kmh: number; date?: string }>
+}
+
+export function breedHubMeta(input: BreedHubMetaInput): SimpleEntityMeta {
+  const title = `${input.nameRu} (${input.nameLat}) — рейтинг в курсинге, результаты забегов и рекорды скорости | Coursing Stats`
+  const description = `Всероссийский рейтинг породы ${input.nameRu} (${input.nameLat}, ${input.fci}) в курсинге и бегах борзых: топ сезона, рекорды скорости в Донино (км/ч), протоколы соревнований РКФ и результаты забегов на Coursing Stats.`
+  const url = `${SITE_ORIGIN}/breeds/${input.slug}/`
+
+  const breadcrumbs = [
+    { name: 'Главная', url: '/' },
+    { name: 'Соревнования', url: '/competitions' },
+    { name: input.nameRu, url },
+  ]
+
+  let contentHtml = `<p class="lead">${escapeHtml(input.lead)}</p>`
+  contentHtml += `<p>${escapeHtml(input.description)}</p>`
+
+  if (input.speedRecords && input.speedRecords.length > 0) {
+    contentHtml += `<h2>Рекорды скорости породы (Донино, км/ч)</h2><ul>`
+    for (const r of input.speedRecords) {
+      contentHtml += `<li><strong>${escapeHtml(r.name)}</strong>: ${r.speed_kmh} км/ч${r.date ? ` (${r.date})` : ''}</li>`
+    }
+    contentHtml += `</ul>`
+  }
+
+  if (input.topDogs && input.topDogs.length > 0) {
+    contentHtml += `<h2>Лидеры сезона в курсинге и бегах</h2><ol>`
+    for (const d of input.topDogs) {
+      const medals: string[] = []
+      if (d.gold) medals.push(`золото ${d.gold}`)
+      if (d.silver) medals.push(`серебро ${d.silver}`)
+      if (d.bronze) medals.push(`бронза ${d.bronze}`)
+      const medalStr = medals.length > 0 ? ` (${medals.join(', ')})` : ''
+      contentHtml += `<li><a href="/dog/${d.id}/"><strong>${escapeHtml(d.name)}</strong></a> — ${d.starts} забегов${medalStr}</li>`
+    }
+    contentHtml += `</ol>`
+  }
+
+  contentHtml += `<p><a href="/competitions?tab=ranking&breed=${encodeURIComponent(input.canonicalKey)}"><strong>Смотреть полную турнирную таблицу породы ${escapeHtml(input.nameRu)} →</strong></a></p>`
+
+  const faqItems = input.faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: f.answer,
+    },
+  }))
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      breadcrumbJsonLd(breadcrumbs),
+      {
+        '@type': 'FAQPage',
+        '@id': `${url}#faq`,
+        mainEntity: faqItems,
+      },
+      {
+        '@type': 'ItemPage',
+        '@id': url,
+        url,
+        name: title,
+        description,
+      },
+    ],
+  }
+
+  return {
+    title,
+    description,
+    h1: `${input.nameRu} (${input.nameLat}) в курсинге и бегах`,
+    paragraph: input.lead,
+    contentHtml,
+    breadcrumbs,
+    jsonLd,
+    sectionLinks: [
+      { href: `/competitions?tab=ranking&breed=${encodeURIComponent(input.canonicalKey)}`, label: `Рейтинг: ${input.nameRu}` },
+      { href: '/speed-records', label: 'Рекорды Донино' },
+      { href: '/competitions?tab=calendar', label: 'Календарь' },
       { href: '/guide', label: 'Справочник' },
     ],
   }

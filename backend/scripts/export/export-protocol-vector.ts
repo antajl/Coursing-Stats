@@ -398,7 +398,7 @@ export function buildRacingProtocolHtml(comp: CompetitionData): string {
       const dogName = formatDogName(dog);
       const info = parseBreedClass(res.breed_class, dog?.breed, dog?.sex);
       const breed = escapeHtml(info.breed);
-      let sex = escapeHtml(dog?.sex || (info.category === 'Кобели' ? 'Кобель' : info.category === 'Суки' ? 'Сука' : ''));
+      let sex = escapeHtml(normalizeSex(dog?.sex || '') || (info.category === 'Кобели' ? 'Кобель' : info.category === 'Суки' ? 'Сука' : ''));
       const className = escapeHtml(info.className).replace('Стандартный-спринтеры', 'Стандартный-<br>спринтеры');
 
       const heats = res.raw_scores_json?.heats || [];
@@ -505,7 +505,7 @@ export function buildRacingProtocolHtml(comp: CompetitionData): string {
       const dogName = formatDogName(dog);
       const info = parseBreedClass(res.breed_class, dog?.breed, dog?.sex);
       const breed = escapeHtml(info.breed);
-      let sex = escapeHtml(dog?.sex || (info.category === 'Кобели' ? 'Кобель' : info.category === 'Суки' ? 'Сука' : ''));
+      let sex = escapeHtml(normalizeSex(dog?.sex || '') || (info.category === 'Кобели' ? 'Кобель' : info.category === 'Суки' ? 'Сука' : ''));
       const className = escapeHtml(info.className).replace('Стандартный-спринтеры', 'Стандартный-<br>спринтеры');
 
       tableRowsHtml += `
@@ -901,7 +901,7 @@ export function buildCoursingProtocolHtml(comp: CompetitionData): string {
       const dogName = formatDogName(dog);
       const info = parseBreedClass(res.breed_class, dog?.breed, dog?.sex);
       const breed = escapeHtml(info.breed);
-      let sex = escapeHtml(dog?.sex || (info.category === 'Кобели' ? 'Кобель' : info.category === 'Суки' ? 'Сука' : ''));
+      let sex = escapeHtml(normalizeSex(dog?.sex || '') || (info.category === 'Кобели' ? 'Кобель' : info.category === 'Суки' ? 'Сука' : ''));
       const className = escapeHtml(info.className).replace('Стандартный-спринтеры', 'Стандартный-<br>спринтеры');
 
       const heats = res.raw_scores_json?.heats || [];
@@ -1061,7 +1061,7 @@ export function buildCoursingProtocolHtml(comp: CompetitionData): string {
       const dogName = formatDogName(dog);
       const info = parseBreedClass(res.breed_class, dog?.breed, dog?.sex);
       const breed = escapeHtml(info.breed);
-      let sex = escapeHtml(dog?.sex || (info.category === 'Кобели' ? 'Кобель' : info.category === 'Суки' ? 'Сука' : ''));
+      let sex = escapeHtml(normalizeSex(dog?.sex || '') || (info.category === 'Кобели' ? 'Кобель' : info.category === 'Суки' ? 'Сука' : ''));
       const className = escapeHtml(info.className).replace('Стандартный-спринтеры', 'Стандартный-<br>спринтеры');
 
       tableRowsHtml += `
