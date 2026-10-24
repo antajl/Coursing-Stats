@@ -12,38 +12,39 @@
     "event_type": "racing",
     "competition_kind": "Клубный чемпионат",
     "competition_type": "Бега борзых",
-    "title": "Клубный чемпионат по рейсингу",
+    "title": "Клубный чемпионат по бегам борзых",
     "host_club": "Курсинг в Донино",
     "region": null,
     "location": "Московская область, Раменский район, д. Донино",
-    "catalog_url": "https://disk.yandex.ru/i/IcFYEackRReIpQ",
+    "catalog_url": "https://drive.google.com/file/d/19xXXOM54_WzV7IOIhvAUmC72hwtCX3Fm/view?usp=sharing",
     "results_url": null,
-    "rules_url": "https://disk.yandex.ru/d/1M8qFUHZx8Ehng",
-    "results_pdf_url": "https://disk.yandex.ru/i/t13Yh7egy7TxLQ",
+    "rules_url": "https://drive.google.com/file/d/1bv51StWxPp8vz-N3dEBYn8aaURhkCX2T/view?usp=sharing",
+    "results_pdf_url": "https://drive.google.com/file/d/18ZCBZQfYs48PjDXzAwUBuwQbpaDCGsaj/view?usp=sharing",
     "confirmed": 1,
     "last_modified": null,
     "scraped_at": null,
     "telegram_url": null,
-    "full_title": null,
+    "full_title": "Клубный чемпионат по бегам борзых, 20.09.2026 (Московская обл., г. Раменское, д. Донино)",
     "event_date": null,
     "protocol_location": null,
-    "judges": null,
+    "judges": "Манухин М.А. (руководитель серии)",
     "track_schemes": []
   },
-  "result_count": 49,
+  "result_count": 52,
   "results": [
     {
       "id": 1,
       "event_id": 2022001,
       "dog_id": 10742,
-      "breed_class": "Салюки - стандарт - Прогресс",
-      "catalog_no": null,
+      "breed_class": "Салюки - стандарт (Прогресс) - сука",
+      "catalog_no": 1,
       "placement": 1,
       "total_score": 26.83,
       "judge_count": 0,
       "qualification": "Чемпионов",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -76,14 +77,15 @@
       "id": 2,
       "event_id": 2022001,
       "dog_id": 460,
-      "breed_class": "Уиппет - стандарт - Прогресс",
-      "catalog_no": null,
+      "breed_class": "Уиппет - стандарт (Прогресс) - кобель",
+      "catalog_no": 2,
       "placement": 1,
       "total_score": 25.43,
       "judge_count": 0,
       "qualification": "Чемпионов",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -116,14 +118,15 @@
       "id": 3,
       "event_id": 2022001,
       "dog_id": 5640,
-      "breed_class": "Уиппет - стандарт - Прогресс",
-      "catalog_no": null,
+      "breed_class": "Уиппет - стандарт (Прогресс) - кобель",
+      "catalog_no": 3,
       "placement": 2,
       "total_score": 25.48,
       "judge_count": 0,
       "qualification": "Прогресс",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -156,14 +159,15 @@
       "id": 4,
       "event_id": 2022001,
       "dog_id": 5644,
-      "breed_class": "Уиппет - стандарт - Прогресс",
-      "catalog_no": null,
+      "breed_class": "Уиппет - стандарт (Прогресс) - сука",
+      "catalog_no": 4,
       "placement": 1,
-      "total_score": 25.53,
+      "total_score": 25.58,
       "judge_count": 0,
       "qualification": "Чемпионов",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -188,8 +192,8 @@
             "speed_kmh": 49.25723221266615
           }
         ],
-        "grand_total": 25.53,
-        "normalized_score": 25.53,
+        "grand_total": 25.58,
+        "normalized_score": 25.58,
         "format": "racing"
       },
       "dog": {
@@ -203,14 +207,15 @@
       "id": 5,
       "event_id": 2022001,
       "dog_id": 5881,
-      "breed_class": "Уиппет - стандарт - Прогресс",
-      "catalog_no": null,
+      "breed_class": "Уиппет - стандарт (Прогресс) - сука",
+      "catalog_no": 5,
       "placement": 6,
       "total_score": 26.97,
       "judge_count": 0,
       "qualification": "Прогресс",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -243,14 +248,15 @@
       "id": 6,
       "event_id": 2022001,
       "dog_id": 5810,
-      "breed_class": "Уиппет - стандарт - Прогресс",
-      "catalog_no": null,
+      "breed_class": "Уиппет - стандарт (Прогресс) - сука",
+      "catalog_no": 6,
       "placement": 4,
-      "total_score": 25.68,
+      "total_score": 26.57,
       "judge_count": 0,
       "qualification": "Прогресс",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -275,8 +281,8 @@
             "speed_kmh": 47.42190440346255
           }
         ],
-        "grand_total": 25.68,
-        "normalized_score": 25.68,
+        "grand_total": 26.57,
+        "normalized_score": 26.57,
         "format": "racing"
       },
       "dog": {
@@ -290,14 +296,15 @@
       "id": 7,
       "event_id": 2022001,
       "dog_id": 6240,
-      "breed_class": "Уиппет - стандарт - Прогресс",
-      "catalog_no": null,
+      "breed_class": "Уиппет - стандарт (Прогресс) - сука",
+      "catalog_no": 7,
       "placement": 5,
       "total_score": 26.63,
       "judge_count": 0,
       "qualification": "Прогресс",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -330,14 +337,15 @@
       "id": 8,
       "event_id": 2022001,
       "dog_id": 269,
-      "breed_class": "Уиппет - стандарт - Прогресс",
-      "catalog_no": null,
+      "breed_class": "Уиппет - стандарт (Прогресс) - сука",
+      "catalog_no": 8,
       "placement": 3,
-      "total_score": 25.5,
+      "total_score": 26.11,
       "judge_count": 0,
       "qualification": "Прогресс",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -362,8 +370,8 @@
             "speed_kmh": 48.257372654155496
           }
         ],
-        "grand_total": 25.5,
-        "normalized_score": 25.5,
+        "grand_total": 26.11,
+        "normalized_score": 26.11,
         "format": "racing"
       },
       "dog": {
@@ -376,62 +384,16 @@
     {
       "id": 9,
       "event_id": 2022001,
-      "dog_id": 321,
-      "breed_class": "Уиппет - стандарт - Прогресс",
-      "catalog_no": null,
-      "placement": 2,
-      "total_score": 25.49,
-      "judge_count": 0,
-      "qualification": "Прогресс",
-      "vc": "",
-      "status": "finished",
-      "raw_scores_json": {
-        "heats": [
-          {
-            "heat_number": 1,
-            "bib_number": null,
-            "bib_color": "",
-            "time": 26.84,
-            "speed_kmh": 46.944858420268254
-          },
-          {
-            "heat_number": 2,
-            "bib_number": null,
-            "bib_color": "",
-            "time": 25.49,
-            "speed_kmh": 49.43114947038055
-          },
-          {
-            "heat_number": 3,
-            "bib_number": null,
-            "bib_color": "",
-            "time": 25.76,
-            "speed_kmh": 48.91304347826087
-          }
-        ],
-        "grand_total": 25.49,
-        "normalized_score": 25.49,
-        "format": "racing"
-      },
-      "dog": {
-        "name_lat": "ИНТРИГА'С МАГНОЛИЯ",
-        "name_ru": "ИНТРИГА'С МАГНОЛИЯ",
-        "breed": "УИППЕТ",
-        "sex": "Сука"
-      }
-    },
-    {
-      "id": 10,
-      "event_id": 2022001,
       "dog_id": 7288,
-      "breed_class": "Уиппет - спринтер - Прогресс",
-      "catalog_no": null,
+      "breed_class": "Уиппет - спринтер (Прогресс) - кобель",
+      "catalog_no": 9,
       "placement": 1,
       "total_score": 24.78,
       "judge_count": 0,
       "qualification": "Чемпионов",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -461,17 +423,18 @@
       }
     },
     {
-      "id": 11,
+      "id": 10,
       "event_id": 2022001,
       "dog_id": 5653,
-      "breed_class": "Уиппет - спринтер - Прогресс",
-      "catalog_no": null,
+      "breed_class": "Уиппет - спринтер (Прогресс) - кобель",
+      "catalog_no": 10,
       "placement": 2,
       "total_score": 24.9,
       "judge_count": 0,
       "qualification": "Прогресс",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -501,17 +464,92 @@
       }
     },
     {
+      "id": 11,
+      "event_id": 2022001,
+      "dog_id": 5798,
+      "breed_class": "Уиппет - стандарт (Прогресс) - сука",
+      "catalog_no": 11,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "dns",
+      "status_reason": "Неявка (DNS)",
+      "raw_scores_json": {
+        "heats": [],
+        "grand_total": null,
+        "normalized_score": null,
+        "format": "racing"
+      },
+      "dog": {
+        "name_lat": "STANGERS LAND KOMETA",
+        "name_ru": "СТАНГЕРС ЛАНД КОМЕТА",
+        "breed": "Уиппет",
+        "sex": "сука"
+      }
+    },
+    {
       "id": 12,
       "event_id": 2022001,
+      "dog_id": 321,
+      "breed_class": "Уиппет - стандарт (Прогресс) - сука",
+      "catalog_no": 12,
+      "placement": 2,
+      "total_score": 25.76,
+      "judge_count": 0,
+      "qualification": "Прогресс",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": null,
+            "bib_color": "",
+            "time": 26.84,
+            "speed_kmh": 46.944858420268254
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": "",
+            "time": 25.49,
+            "speed_kmh": 49.43114947038055
+          },
+          {
+            "heat_number": 3,
+            "bib_number": null,
+            "bib_color": "",
+            "time": 25.76,
+            "speed_kmh": 48.91304347826087
+          }
+        ],
+        "grand_total": 25.76,
+        "normalized_score": 25.76,
+        "format": "racing"
+      },
+      "dog": {
+        "name_lat": "ИНТРИГА'С МАГНОЛИЯ",
+        "name_ru": "ИНТРИГА'С МАГНОЛИЯ",
+        "breed": "УИППЕТ",
+        "sex": "Сука"
+      }
+    },
+    {
+      "id": 13,
+      "event_id": 2022001,
       "dog_id": 5896,
-      "breed_class": "Уиппет - спринтер - Прогресс",
-      "catalog_no": null,
+      "breed_class": "Уиппет - спринтер (Прогресс) - сука",
+      "catalog_no": 13,
       "placement": 1,
       "total_score": 25.21,
       "judge_count": 0,
       "qualification": "Чемпионов",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -541,57 +579,18 @@
       }
     },
     {
-      "id": 13,
-      "event_id": 2022001,
-      "dog_id": 748,
-      "breed_class": "Левретка - стандарт - Прогресс",
-      "catalog_no": null,
-      "placement": 1,
-      "total_score": 32.73,
-      "judge_count": 0,
-      "qualification": "Чемпионов",
-      "vc": "",
-      "status": "finished",
-      "raw_scores_json": {
-        "heats": [
-          {
-            "heat_number": 1,
-            "bib_number": null,
-            "bib_color": "",
-            "time": 34.01,
-            "speed_kmh": 37.04792708027051
-          },
-          {
-            "heat_number": 2,
-            "bib_number": null,
-            "bib_color": "",
-            "time": 32.73,
-            "speed_kmh": 38.4967919340055
-          }
-        ],
-        "grand_total": 32.73,
-        "normalized_score": 32.73,
-        "format": "racing"
-      },
-      "dog": {
-        "name_lat": "MONANNA REPUBLIC HIDAN",
-        "name_ru": "",
-        "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
-        "sex": "Кобель"
-      }
-    },
-    {
       "id": 14,
       "event_id": 2022001,
       "dog_id": 369,
-      "breed_class": "Фараонова собака - стандарт - Прогресс",
-      "catalog_no": null,
+      "breed_class": "Фараонова собака - стандарт (Прогресс) - кобель",
+      "catalog_no": 14,
       "placement": 1,
       "total_score": 33.47,
       "judge_count": 0,
       "qualification": "Чемпионов",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -623,15 +622,42 @@
     {
       "id": 15,
       "event_id": 2022001,
+      "dog_id": 5902,
+      "breed_class": "Фараонова собака - стандарт (Прогресс) - кобель",
+      "catalog_no": 15,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "dns",
+      "status_reason": "Неявка (DNS)",
+      "raw_scores_json": {
+        "heats": [],
+        "grand_total": null,
+        "normalized_score": null,
+        "format": "racing"
+      },
+      "dog": {
+        "name_lat": "HEIDI SOTIS DESHRET GEB",
+        "name_ru": "ХЕЙДИ СОТИС ДИШРЕТ ГЕБ",
+        "breed": "Фараонова собака",
+        "sex": "кобель"
+      }
+    },
+    {
+      "id": 16,
+      "event_id": 2022001,
       "dog_id": 6066,
-      "breed_class": "Родезийский риджбек - стандарт - Прогресс",
-      "catalog_no": null,
+      "breed_class": "Родезийский риджбек - стандарт (Прогресс) - сука",
+      "catalog_no": 16,
       "placement": 1,
       "total_score": 27.89,
       "judge_count": 0,
       "qualification": "Чемпионов",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -661,17 +687,18 @@
       }
     },
     {
-      "id": 16,
+      "id": 17,
       "event_id": 2022001,
       "dog_id": 5760,
-      "breed_class": "Родезийский риджбек - стандарт - Прогресс",
-      "catalog_no": null,
+      "breed_class": "Родезийский риджбек - стандарт (Прогресс) - сука",
+      "catalog_no": 17,
       "placement": 2,
       "total_score": 29.48,
       "judge_count": 0,
       "qualification": "Прогресс",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -701,17 +728,18 @@
       }
     },
     {
-      "id": 17,
+      "id": 18,
       "event_id": 2022001,
       "dog_id": 5909,
-      "breed_class": "Чирнеко дель'Этна - стандарт - Прогресс",
-      "catalog_no": null,
+      "breed_class": "Чирнеко дель'Этна - стандарт (Прогресс) - кобель",
+      "catalog_no": 18,
       "placement": 1,
       "total_score": 28.53,
       "judge_count": 0,
       "qualification": "Чемпионов",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -741,17 +769,18 @@
       }
     },
     {
-      "id": 18,
+      "id": 19,
       "event_id": 2022001,
       "dog_id": 10740,
-      "breed_class": "РПБ - стандарт - Прогресс",
-      "catalog_no": null,
+      "breed_class": "Русская псовая борзая - стандарт (Прогресс) - сука",
+      "catalog_no": 19,
       "placement": 1,
       "total_score": 27.58,
       "judge_count": 0,
       "qualification": "Чемпионов",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -781,17 +810,18 @@
       }
     },
     {
-      "id": 19,
+      "id": 20,
       "event_id": 2022001,
       "dog_id": 10741,
-      "breed_class": "РПБ - стандарт - Прогресс",
-      "catalog_no": null,
+      "breed_class": "Русская псовая борзая - стандарт (Прогресс) - кобель",
+      "catalog_no": 20,
       "placement": 1,
       "total_score": 25.97,
       "judge_count": 0,
       "qualification": "Чемпионов",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -821,17 +851,18 @@
       }
     },
     {
-      "id": 20,
+      "id": 21,
       "event_id": 2022001,
       "dog_id": 10766,
-      "breed_class": "РПБ - стандарт - Прогресс",
-      "catalog_no": null,
+      "breed_class": "Русская псовая борзая - стандарт (Прогресс) - кобель",
+      "catalog_no": 21,
       "placement": 2,
       "total_score": 27.36,
       "judge_count": 0,
       "qualification": "Прогресс",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -860,21 +891,21 @@
         "sex": "Кобель",
         "id": 10766,
         "dog_key": "флолесс--русская-псовая-борзая"
-      },
-      "dog_key": "флолесс--русская-псовая-борзая"
+      }
     },
     {
-      "id": 21,
+      "id": 22,
       "event_id": 2022001,
       "dog_id": 10404,
-      "breed_class": "РПБ - ветеран - Прогресс",
-      "catalog_no": null,
+      "breed_class": "Русская псовая борзая - ветеран (Прогресс) - сука",
+      "catalog_no": 22,
       "placement": null,
       "total_score": 37.07,
       "judge_count": 0,
       "qualification": "Прогресс",
       "vc": "",
-      "status": "finished",
+      "status": "withdrawn",
+      "status_reason": "Снят владельцем",
       "raw_scores_json": {
         "heats": [
           {
@@ -897,17 +928,18 @@
       }
     },
     {
-      "id": 22,
+      "id": 23,
       "event_id": 2022001,
       "dog_id": 776,
-      "breed_class": "Ирландский терьер - стандарт - Прогресс",
-      "catalog_no": null,
+      "breed_class": "Ирландский терьер - стандарт (Прогресс) - сука",
+      "catalog_no": 23,
       "placement": 1,
       "total_score": 31.5,
       "judge_count": 0,
       "qualification": "Чемпионов",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -922,7 +954,7 @@
             "bib_number": null,
             "bib_color": "",
             "time": 31.5,
-            "speed_kmh": 40
+            "speed_kmh": 40.0
           }
         ],
         "grand_total": 31.5,
@@ -937,17 +969,18 @@
       }
     },
     {
-      "id": 23,
+      "id": 24,
       "event_id": 2022001,
       "dog_id": 5782,
-      "breed_class": "Салюки - стандарт - Чемпионы",
-      "catalog_no": null,
+      "breed_class": "Салюки - стандарт (Чемпионы) - сука",
+      "catalog_no": 24,
       "placement": 1,
       "total_score": 25.96,
       "judge_count": 0,
       "qualification": "Абсолют",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -977,17 +1010,18 @@
       }
     },
     {
-      "id": 24,
+      "id": 25,
       "event_id": 2022001,
       "dog_id": 554,
-      "breed_class": "Уиппет - стандарт - Чемпионы",
-      "catalog_no": null,
+      "breed_class": "Уиппет - стандарт (Чемпионы) - сука",
+      "catalog_no": 25,
       "placement": 1,
       "total_score": 23.34,
       "judge_count": 0,
       "qualification": "Абсолют",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -1017,17 +1051,18 @@
       }
     },
     {
-      "id": 25,
+      "id": 26,
       "event_id": 2022001,
       "dog_id": 10767,
-      "breed_class": "Уиппет - стандарт - Чемпионы",
-      "catalog_no": null,
+      "breed_class": "Уиппет - стандарт (Чемпионы) - сука",
+      "catalog_no": 26,
       "placement": 3,
       "total_score": 25.65,
       "judge_count": 0,
       "qualification": "Чемпионов",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -1056,21 +1091,21 @@
         "sex": "Сука",
         "id": 10767,
         "dog_key": "angelic-wings--уиппет"
-      },
-      "dog_key": "angelic-wings--уиппет"
+      }
     },
     {
-      "id": 26,
+      "id": 27,
       "event_id": 2022001,
       "dog_id": 5815,
-      "breed_class": "Уиппет - стандарт - Чемпионы",
-      "catalog_no": null,
+      "breed_class": "Уиппет - стандарт (Чемпионы) - сука",
+      "catalog_no": 27,
       "placement": 2,
       "total_score": 24.07,
       "judge_count": 0,
       "qualification": "Чемпионов",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -1101,17 +1136,18 @@
       }
     },
     {
-      "id": 27,
+      "id": 28,
       "event_id": 2022001,
       "dog_id": 5649,
-      "breed_class": "Уиппет - спринтер - Чемпионы",
-      "catalog_no": null,
+      "breed_class": "Уиппет - спринтер (Чемпионы) - кобель",
+      "catalog_no": 28,
       "placement": 3,
       "total_score": 24.64,
       "judge_count": 0,
       "qualification": "Чемпионов",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -1142,17 +1178,18 @@
       }
     },
     {
-      "id": 28,
+      "id": 29,
       "event_id": 2022001,
       "dog_id": 10748,
-      "breed_class": "Уиппет - спринтер - Чемпионы",
-      "catalog_no": null,
+      "breed_class": "Уиппет - спринтер (Чемпионы) - кобель",
+      "catalog_no": 29,
       "placement": 1,
       "total_score": 23.83,
       "judge_count": 0,
       "qualification": "Абсолют",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -1182,17 +1219,18 @@
       }
     },
     {
-      "id": 29,
+      "id": 30,
       "event_id": 2022001,
       "dog_id": 5656,
-      "breed_class": "Уиппет - спринтер - Чемпионы",
-      "catalog_no": null,
+      "breed_class": "Уиппет - спринтер (Чемпионы) - кобель",
+      "catalog_no": 30,
       "placement": 2,
       "total_score": 23.43,
       "judge_count": 0,
       "qualification": "Чемпионов",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -1223,17 +1261,18 @@
       }
     },
     {
-      "id": 30,
+      "id": 31,
       "event_id": 2022001,
       "dog_id": 464,
-      "breed_class": "Уиппет - спринтер - Чемпионы",
-      "catalog_no": null,
+      "breed_class": "Уиппет - спринтер (Чемпионы) - сука",
+      "catalog_no": 31,
       "placement": 1,
       "total_score": 23.4,
       "judge_count": 0,
       "qualification": "Абсолют",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -1263,17 +1302,18 @@
       }
     },
     {
-      "id": 31,
+      "id": 32,
       "event_id": 2022001,
       "dog_id": 5663,
-      "breed_class": "Уиппет - спринтер - Чемпионы",
-      "catalog_no": null,
+      "breed_class": "Уиппет - спринтер (Чемпионы) - сука",
+      "catalog_no": 32,
       "placement": 3,
       "total_score": 25.72,
       "judge_count": 0,
       "qualification": "Чемпионов",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -1303,17 +1343,18 @@
       }
     },
     {
-      "id": 32,
+      "id": 33,
       "event_id": 2022001,
       "dog_id": 5661,
-      "breed_class": "Уиппет - спринтер - Чемпионы",
-      "catalog_no": null,
+      "breed_class": "Уиппет - спринтер (Чемпионы) - сука",
+      "catalog_no": 33,
       "placement": 2,
       "total_score": 25.48,
       "judge_count": 0,
       "qualification": "Чемпионов",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -1343,17 +1384,18 @@
       }
     },
     {
-      "id": 33,
+      "id": 34,
       "event_id": 2022001,
       "dog_id": 10750,
-      "breed_class": "Фараонова собака - стандарт - Чемпионы",
-      "catalog_no": null,
+      "breed_class": "Фараонова собака - стандарт (Чемпионы) - кобель",
+      "catalog_no": 34,
       "placement": 1,
       "total_score": 28.43,
       "judge_count": 0,
       "qualification": "Абсолют",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -1382,21 +1424,21 @@
         "sex": "Кобель",
         "id": 10750,
         "dog_key": "шнеидер-рич-рэм--фараонова-собака"
-      },
-      "dog_key": "шнеидер-рич-рэм--фараонова-собака"
+      }
     },
     {
-      "id": 34,
+      "id": 35,
       "event_id": 2022001,
       "dog_id": 5908,
-      "breed_class": "Фараонова собака - стандарт - Чемпионы",
-      "catalog_no": null,
+      "breed_class": "Фараонова собака - стандарт (Чемпионы) - сука",
+      "catalog_no": 35,
       "placement": 1,
       "total_score": 28.95,
       "judge_count": 0,
       "qualification": "Абсолют",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -1426,17 +1468,18 @@
       }
     },
     {
-      "id": 35,
+      "id": 36,
       "event_id": 2022001,
       "dog_id": 5907,
-      "breed_class": "Фараонова собака - стандарт - Чемпионы",
-      "catalog_no": null,
+      "breed_class": "Фараонова собака - стандарт (Чемпионы) - сука",
+      "catalog_no": 36,
       "placement": 2,
       "total_score": 29.92,
       "judge_count": 0,
       "qualification": "Чемпионов",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -1466,17 +1509,18 @@
       }
     },
     {
-      "id": 36,
+      "id": 37,
       "event_id": 2022001,
       "dog_id": 5755,
-      "breed_class": "Родезийский риджбек - стандарт - Чемпионы",
-      "catalog_no": null,
+      "breed_class": "Родезийский риджбек - стандарт (Чемпионы) - кобель",
+      "catalog_no": 37,
       "placement": null,
       "total_score": null,
       "judge_count": 0,
       "qualification": "Чемпионов",
       "vc": "",
-      "status": "dns",
+      "status": "withdrawn",
+      "status_reason": "Снят владельцем",
       "raw_scores_json": {
         "heats": [],
         "grand_total": null,
@@ -1492,17 +1536,18 @@
       }
     },
     {
-      "id": 37,
+      "id": 38,
       "event_id": 2022001,
       "dog_id": 5757,
-      "breed_class": "Родезийский риджбек - стандарт - Чемпионы",
-      "catalog_no": null,
+      "breed_class": "Родезийский риджбек - стандарт (Чемпионы) - кобель",
+      "catalog_no": 38,
       "placement": 1,
       "total_score": 27.77,
       "judge_count": 0,
       "qualification": "Абсолют",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -1532,17 +1577,18 @@
       }
     },
     {
-      "id": 38,
+      "id": 39,
       "event_id": 2022001,
       "dog_id": 5962,
-      "breed_class": "Родезийский риджбек - стандарт - Чемпионы",
-      "catalog_no": null,
+      "breed_class": "Родезийский риджбек - стандарт (Чемпионы) - сука",
+      "catalog_no": 39,
       "placement": 1,
       "total_score": 28.57,
       "judge_count": 0,
       "qualification": "Абсолют",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -1572,17 +1618,85 @@
       }
     },
     {
-      "id": 39,
+      "id": 40,
+      "event_id": 2022001,
+      "dog_id": 5834,
+      "breed_class": "Малая итальянская борзая - стандарт (Чемпионы) - кобель",
+      "catalog_no": 40,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "dns",
+      "status_reason": "Неявка (DNS)",
+      "raw_scores_json": {
+        "heats": [],
+        "grand_total": null,
+        "normalized_score": null,
+        "format": "racing"
+      },
+      "dog": {
+        "name_lat": "APRIORI STAR YUKOS",
+        "name_ru": "АПРИОРИ СТАР ЮКОС",
+        "breed": "Малая итальянская борзая",
+        "sex": "кобель"
+      }
+    },
+    {
+      "id": 41,
+      "event_id": 2022001,
+      "dog_id": 748,
+      "breed_class": "Левретка - стандарт (Прогресс) - кобель",
+      "catalog_no": 41,
+      "placement": 1,
+      "total_score": 32.73,
+      "judge_count": 0,
+      "qualification": "Чемпионов",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": null,
+            "bib_color": "",
+            "time": 34.01,
+            "speed_kmh": 37.04792708027051
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": "",
+            "time": 32.73,
+            "speed_kmh": 38.4967919340055
+          }
+        ],
+        "grand_total": 32.73,
+        "normalized_score": 32.73,
+        "format": "racing"
+      },
+      "dog": {
+        "name_lat": "MONANNA REPUBLIC HIDAN",
+        "name_ru": "",
+        "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
+        "sex": "Кобель"
+      }
+    },
+    {
+      "id": 42,
       "event_id": 2022001,
       "dog_id": 10754,
-      "breed_class": "Чирнеко дель'Этна - стандарт - Чемпионы",
-      "catalog_no": null,
+      "breed_class": "Чирнеко дель'Этна - стандарт (Чемпионы) - сука",
+      "catalog_no": 42,
       "placement": 1,
       "total_score": 30.4,
       "judge_count": 0,
       "qualification": "Абсолют",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -1612,17 +1726,18 @@
       }
     },
     {
-      "id": 40,
+      "id": 43,
       "event_id": 2022001,
       "dog_id": 5828,
-      "breed_class": "Басенджи - стандарт - Чемпионы",
-      "catalog_no": null,
+      "breed_class": "Басенджи - стандарт (Чемпионы) - кобель",
+      "catalog_no": 43,
       "placement": 1,
       "total_score": 30.51,
       "judge_count": 0,
       "qualification": "Абсолют",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -1652,17 +1767,18 @@
       }
     },
     {
-      "id": 41,
+      "id": 44,
       "event_id": 2022001,
       "dog_id": 766,
-      "breed_class": "АПБТ - стандарт - Чемпионы",
-      "catalog_no": null,
+      "breed_class": "АПБТ - стандарт (Чемпионы) - кобель",
+      "catalog_no": 44,
       "placement": 1,
       "total_score": 33.31,
       "judge_count": 0,
       "qualification": "Абсолют",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -1692,17 +1808,18 @@
       }
     },
     {
-      "id": 42,
+      "id": 45,
       "event_id": 2022001,
       "dog_id": 267,
-      "breed_class": "Уиппет - стандарт - Абсолют",
-      "catalog_no": null,
+      "breed_class": "Уиппет - стандарт (Абсолют) - сука",
+      "catalog_no": 45,
       "placement": 1,
       "total_score": 24.02,
       "judge_count": 0,
       "qualification": "Абсолют",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -1732,17 +1849,18 @@
       }
     },
     {
-      "id": 43,
+      "id": 46,
       "event_id": 2022001,
       "dog_id": 5903,
-      "breed_class": "Фараонова собака - стандарт - Абсолют",
-      "catalog_no": null,
+      "breed_class": "Фараонова собака - стандарт (Абсолют) - кобель",
+      "catalog_no": 46,
       "placement": 1,
       "total_score": 28.48,
       "judge_count": 0,
       "qualification": "Абсолют",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -1772,17 +1890,18 @@
       }
     },
     {
-      "id": 44,
+      "id": 47,
       "event_id": 2022001,
       "dog_id": 5964,
-      "breed_class": "Родезийский риджбек - стандарт - Абсолют",
-      "catalog_no": null,
+      "breed_class": "Родезийский риджбек - стандарт (Абсолют) - сука",
+      "catalog_no": 47,
       "placement": 1,
       "total_score": 28.19,
       "judge_count": 0,
       "qualification": "Абсолют",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -1812,17 +1931,18 @@
       }
     },
     {
-      "id": 45,
+      "id": 48,
       "event_id": 2022001,
       "dog_id": 10762,
-      "breed_class": "Уиппет - юниор",
-      "catalog_no": null,
+      "breed_class": "Уиппет - юниор - кобель",
+      "catalog_no": 48,
       "placement": 1,
       "total_score": 24.39,
       "judge_count": 0,
       "qualification": "",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -1852,17 +1972,18 @@
       }
     },
     {
-      "id": 46,
+      "id": 49,
       "event_id": 2022001,
       "dog_id": 10763,
-      "breed_class": "Уиппет - юниор",
-      "catalog_no": null,
+      "breed_class": "Уиппет - юниор - сука",
+      "catalog_no": 49,
       "placement": 1,
       "total_score": 25.29,
       "judge_count": 0,
       "qualification": "",
       "vc": "",
-      "status": "finished",
+      "status": "withdrawn",
+      "status_reason": "Снят владельцем",
       "raw_scores_json": {
         "heats": [
           {
@@ -1885,17 +2006,18 @@
       }
     },
     {
-      "id": 47,
+      "id": 50,
       "event_id": 2022001,
       "dog_id": 10764,
-      "breed_class": "Уиппет - юниор",
-      "catalog_no": null,
+      "breed_class": "Уиппет - юниор - сука",
+      "catalog_no": 50,
       "placement": 2,
       "total_score": 26.57,
       "judge_count": 0,
       "qualification": "",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -1925,17 +2047,18 @@
       }
     },
     {
-      "id": 48,
+      "id": 51,
       "event_id": 2022001,
       "dog_id": 10765,
-      "breed_class": "Фараонова собака - юниор",
-      "catalog_no": null,
+      "breed_class": "Фараонова собака - юниор - кобель",
+      "catalog_no": 51,
       "placement": 1,
       "total_score": 29.82,
       "judge_count": 0,
       "qualification": "",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
@@ -1965,17 +2088,18 @@
       }
     },
     {
-      "id": 49,
+      "id": 52,
       "event_id": 2022001,
       "dog_id": 9123,
-      "breed_class": "Гальго - юниор",
-      "catalog_no": null,
+      "breed_class": "Испанская борзая (гальго) - юниор - кобель",
+      "catalog_no": 52,
       "placement": 1,
       "total_score": 24.51,
       "judge_count": 0,
       "qualification": "",
       "vc": "",
       "status": "finished",
+      "status_reason": null,
       "raw_scores_json": {
         "heats": [
           {
