@@ -1,11 +1,15 @@
 import { useMemo, useState, type ReactNode } from 'react'
+import { ChevronDown, X } from 'lucide-react'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarFiltersDropdown from '../../components/toolbar/ToolbarFiltersDropdown'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
 import ModernDropdown from '../../components/ui/ModernDropdown'
+import BreedSearchDropdown from '../../components/ui/BreedSearchDropdown'
 import QuickBreedBar from './QuickBreedBar'
+import { formatBreedName } from '../../lib/breedMapping'
 import {
   TOOLBAR_NUMBER_INPUT,
+  toolbarPillTriggerClass,
 } from '../../lib/toolbar'
 
 interface TopDogsFiltersProps {
@@ -98,7 +102,7 @@ export default function TopDogsFilters({
             </div>
 
             {/* Строка 2 на мобилке / левая группа на десктопе */}
-            <div className="flex items-center gap-2 shrink-0 w-full md:w-auto">
+            <div className="flex flex-wrap items-center gap-1.5 shrink-0 w-full md:w-auto">
               <div className="hidden md:block">
                 <ToolbarSearch
                   value={searchQuery}
@@ -107,6 +111,8 @@ export default function TopDogsFilters({
                   className="sm:w-44 md:w-40 lg:w-48"
                 />
               </div>
+
+              {/* Выбор года */}
               <div className="shrink-0">
                 <ModernDropdown
                   trigger={yearTrigger}
@@ -150,6 +156,27 @@ export default function TopDogsFilters({
                     </div>
                   </div>
                 </ModernDropdown>
+              </div>
+
+              {/* Выбор породы выпадающим списком на мобилке */}
+              <div className="shrink-0 md:hidden">
+                <BreedSearchDropdown
+                  breeds={breedValues}
+                  selectedBreed={filterBreed}
+                  onSelect={onBreedChange}
+                  trigger={
+                    <button
+                      type="button"
+                      className={`shrink-0 ${toolbarPillTriggerClass(Boolean(filterBreed))}`}
+                    >
+                      <span className="truncate max-w-[130px]">
+                        {filterBreed ? formatBreedName(filterBreed) : 'Порода'}
+                      </span>
+                      <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
+                    </button>
+                  }
+                  dogIndex={dogIndex}
+                />
               </div>
 
               {/* Выпадающий список порогов (если активны) */}
@@ -211,13 +238,26 @@ export default function TopDogsFilters({
                   </div>
                 </ToolbarFiltersDropdown>
               )}
+
+              {/* Сброс фильтров на мобилке */}
+              {(isYearNonDefault || filterBreed) && (
+                <button
+                  type="button"
+                  onClick={onResetFilters}
+                  className="md:hidden shrink-0 inline-flex items-center gap-1 rounded-lg px-2.5 py-1.5 text-xs font-medium text-old-money-600 hover:text-charcoal-900 hover:bg-cream-100 transition-colors"
+                  title="Сбросить все фильтры"
+                >
+                  <X className="h-3.5 w-3.5" />
+                  <span>Сбросить</span>
+                </button>
+              )}
             </div>
 
             {/* Разделитель между годом и породами на десктопе */}
             <div className="hidden md:block h-5 w-px bg-old-money-300 shrink-0 mx-0.5" aria-hidden="true" />
 
-            {/* Выбор породы на той же строке на md+ / строка 2 на мобилке */}
-            <div className="flex-1 min-w-0 w-full md:w-auto">
+            {/* Выбор породы QuickBreedBar — только на десктопе! */}
+            <div className="hidden md:block flex-1 min-w-0 w-full md:w-auto">
               <QuickBreedBar
                 selectedBreed={filterBreed}
                 onSelectBreed={onBreedChange}
