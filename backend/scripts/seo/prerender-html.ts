@@ -248,8 +248,10 @@ export function build404Html(spaHtml: string): string {
   html = html.replace(/<meta\s+name=["']twitter:url["'][^>]*>\s*/gi, '')
   html = replaceOrInsertMetaProperty(html, 'og:title', 'Страница не найдена | Coursing Stats')
   html = replaceOrInsertMetaProperty(html, 'og:description', 'Страница не найдена.')
+  html = replaceOrInsertMetaProperty(html, 'og:image', `${SITE_ORIGIN}/og-image.png`)
   html = replaceOrInsertMetaName(html, 'twitter:title', 'Страница не найдена | Coursing Stats')
   html = replaceOrInsertMetaName(html, 'twitter:description', 'Страница не найдена.')
+  html = replaceOrInsertMetaName(html, 'twitter:image', `${SITE_ORIGIN}/og-image.png`)
   // Strip client JS bundle and modulepreload so 404 is pure rock-solid standalone HTML
   html = html.replace(/<link\s+rel=["']modulepreload["'][^>]*>\s*/gi, '')
   html = html.replace(/<script\s+type=["']module["'][^>]*>[\s\S]*?<\/script>\s*/gi, '')
