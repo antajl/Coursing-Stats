@@ -24,6 +24,7 @@ export interface ShowCalendarToolbarProps {
   filterLcOnly: boolean
   onLcOnlyChange: (value: boolean) => void
   onClearQuickPreset: () => void
+  availableMonths?: Set<string>
 }
 
 export function ShowCalendarToolbar({
@@ -38,6 +39,7 @@ export function ShowCalendarToolbar({
   filterLcOnly,
   onLcOnlyChange,
   onClearQuickPreset,
+  availableMonths,
 }: ShowCalendarToolbarProps) {
   return (
     <>
@@ -56,6 +58,7 @@ export function ShowCalendarToolbar({
           sortedYears={sortedYears}
           currentSeason={currentSeason}
           onClearPreset={onClearQuickPreset}
+          availableMonthsByYear={availableMonths ? { [filterYear]: availableMonths } : undefined}
         />
 
         <button

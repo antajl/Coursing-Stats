@@ -620,13 +620,31 @@ export function buildRacingProtocolHtml(comp: CompetitionData): string {
 // COURSING SPECIFIC RENDERING (Курсинг борзых)
 // ----------------------------------------------------
 
+export function getCoursingBibStyle(heat?: Heat | null): { bg: string; color: string } {
+  if (!heat || heat.bib_number == null) {
+    return { bg: '#ffffff', color: '#000000' };
+  }
+  const rawColor = (heat.bib_color || '').toLowerCase().trim();
+  let bg = '#ffffff';
+  const color = '#000000';
+
+  if (rawColor === 'red' || rawColor === '#ff0000') {
+    bg = '#ff0000';
+  } else if (rawColor === 'blue' || rawColor === '#00a2e8' || rawColor === '#00ccff') {
+    bg = '#00a2e8';
+  } else if (rawColor === 'yellow' || rawColor === '#ffff00' || rawColor === '#ebe1b0' || rawColor === '#f7f6f0') {
+    bg = '#f7f6f0'; // Нежный тёплый оттенок белого (off-white)
+  } else if (rawColor.startsWith('#') && (rawColor.length === 7 || rawColor.length === 4)) {
+    bg = rawColor;
+  }
+  return { bg, color };
+}
+
 export function renderBibCellRowspan(heat?: Heat | null): string {
   if (!heat || heat.bib_number == null) {
     return '<td rowspan="2"></td>';
   }
-  const isRed = heat.bib_color === 'red';
-  const bg = isRed ? '#ff0000' : '#ffffff';
-  const color = isRed ? '#ffffff' : '#000000';
+  const { bg, color } = getCoursingBibStyle(heat);
   return `<td rowspan="2" style="background-color: ${bg} !important; color: ${color}; font-style: italic;">${heat.bib_number}</td>`;
 }
 
@@ -634,9 +652,7 @@ export function renderBibCellSingle(heat?: Heat | null): string {
   if (!heat || heat.bib_number == null) {
     return '<td></td>';
   }
-  const isRed = heat.bib_color === 'red';
-  const bg = isRed ? '#ff0000' : '#ffffff';
-  const color = isRed ? '#ffffff' : '#000000';
+  const { bg, color } = getCoursingBibStyle(heat);
   return `<td style="background-color: ${bg} !important; color: ${color}; font-style: italic;">${heat.bib_number}</td>`;
 }
 

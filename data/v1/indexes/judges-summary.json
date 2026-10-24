@@ -1,7 +1,18 @@
 {
   "schema": "coursing-stats/index-judges-summary-v1",
-  "count": 30,
+  "count": 31,
   "judges": [
+    {
+      "id": "Козлова И.В.",
+      "name": "Козлова И.В.",
+      "total_evaluations": 9855,
+      "total_evaluations_count": 1971,
+      "avg_score": 16.80355149670218,
+      "unique_breeds": 40,
+      "unique_disciplines": 3,
+      "unique_events": 17,
+      "unique_dogs": 630
+    },
     {
       "id": "Карелина Н.В.",
       "name": "Карелина Н.В.",
@@ -14,37 +25,26 @@
       "unique_dogs": 476
     },
     {
-      "id": "Козлова И.В.",
-      "name": "Козлова И.В.",
-      "total_evaluations": 8985,
-      "total_evaluations_count": 1797,
-      "avg_score": 16.758486366165833,
-      "unique_breeds": 37,
-      "unique_disciplines": 3,
-      "unique_events": 16,
-      "unique_dogs": 555
-    },
-    {
       "id": "Вронская О.В.",
       "name": "Вронская О.В.",
-      "total_evaluations": 7105,
-      "total_evaluations_count": 1421,
-      "avg_score": 17.05540673903849,
-      "unique_breeds": 34,
+      "total_evaluations": 8425,
+      "total_evaluations_count": 1685,
+      "avg_score": 17.01949364079401,
+      "unique_breeds": 37,
       "unique_disciplines": 3,
-      "unique_events": 16,
-      "unique_dogs": 500
+      "unique_events": 18,
+      "unique_dogs": 603
     },
     {
       "id": "Иванова Г.С.",
       "name": "Иванова Г.С.",
-      "total_evaluations": 6950,
-      "total_evaluations_count": 1390,
-      "avg_score": 16.75812647754137,
-      "unique_breeds": 43,
+      "total_evaluations": 8225,
+      "total_evaluations_count": 1645,
+      "avg_score": 16.73591943304737,
+      "unique_breeds": 44,
       "unique_disciplines": 2,
-      "unique_events": 14,
-      "unique_dogs": 462
+      "unique_events": 16,
+      "unique_dogs": 596
     },
     {
       "id": "Крылова Е.В.",
@@ -82,13 +82,13 @@
     {
       "id": "Серова Т.Г.",
       "name": "Серова Т.Г.",
-      "total_evaluations": 4765,
-      "total_evaluations_count": 953,
-      "avg_score": 16.467079948696025,
-      "unique_breeds": 36,
+      "total_evaluations": 5215,
+      "total_evaluations_count": 1043,
+      "avg_score": 16.362714508580343,
+      "unique_breeds": 37,
       "unique_disciplines": 3,
-      "unique_events": 7,
-      "unique_dogs": 409
+      "unique_events": 8,
+      "unique_dogs": 456
     },
     {
       "id": "Рубина А.В.",
@@ -111,6 +111,17 @@
       "unique_disciplines": 3,
       "unique_events": 6,
       "unique_dogs": 240
+    },
+    {
+      "id": "Полякова Г.Б.",
+      "name": "Полякова Г.Б.",
+      "total_evaluations": 2465,
+      "total_evaluations_count": 493,
+      "avg_score": 16.35408560311284,
+      "unique_breeds": 27,
+      "unique_disciplines": 3,
+      "unique_events": 5,
+      "unique_dogs": 283
     },
     {
       "id": "Кудрявцева Н.Г.",
@@ -144,17 +155,6 @@
       "unique_disciplines": 1,
       "unique_events": 4,
       "unique_dogs": 166
-    },
-    {
-      "id": "Полякова Г.Б.",
-      "name": "Полякова Г.Б.",
-      "total_evaluations": 1725,
-      "total_evaluations_count": 345,
-      "avg_score": 16.08836617927527,
-      "unique_breeds": 26,
-      "unique_disciplines": 3,
-      "unique_events": 4,
-      "unique_dogs": 189
     },
     {
       "id": "Корепанова Т.В.",
@@ -311,6 +311,17 @@
       "unique_dogs": 54
     },
     {
+      "id": "Демидова Е.Ю.",
+      "name": "Демидова Е.Ю.",
+      "total_evaluations": 535,
+      "total_evaluations_count": 107,
+      "avg_score": 15.321495327102804,
+      "unique_breeds": 10,
+      "unique_disciplines": 1,
+      "unique_events": 1,
+      "unique_dogs": 54
+    },
+    {
       "id": "Табуева Т.А.",
       "name": "Табуева Т.А.",
       "total_evaluations": 380,
@@ -364,6 +375,7 @@
     "ИТАЛЬЯНСКАЯ КОРОТКОШЕРСТНАЯ ГОНЧАЯ",
     "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
     "КСОЛОИТЦКУИНТЛИ (СТАНДАРТНЫЙ)",
+    "КСОЛОИТЦКУИНТЛИ МЕДИО",
     "ЛАБРАДОР РЕТРИВЕР",
     "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
     "МЕТИС",

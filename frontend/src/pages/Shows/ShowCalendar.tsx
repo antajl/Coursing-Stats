@@ -186,6 +186,21 @@ export default function ShowCalendar() {
     [years],
   )
 
+  const availableMonths = useMemo(() => {
+    if (!exhibitions || exhibitions.length === 0) return undefined
+    const set = new Set<string>()
+    for (const ex of exhibitions) {
+      if (ex.date) {
+        const parts = ex.date.split('.')
+        if (parts.length === 3) {
+          const m = String(parseInt(parts[1], 10))
+          if (m && !isNaN(Number(m))) set.add(m)
+        }
+      }
+    }
+    return set
+  }, [exhibitions])
+
   const pageToolbar = (
     <PageToolbar
       bare
@@ -203,6 +218,7 @@ export default function ShowCalendar() {
           filterLcOnly={filterLcOnly}
           onLcOnlyChange={setFilterLcOnly}
           onClearQuickPreset={() => setQuickPreset(null)}
+          availableMonths={availableMonths}
         />
       }
       bottomLeft={

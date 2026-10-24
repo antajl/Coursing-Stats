@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react'
-import { ChevronDown, ChevronLeft, ChevronRight, ArrowLeft } from 'lucide-react'
+import { useMemo, useState } from 'react'
+import { ChevronDown } from 'lucide-react'
 import ModernDropdown from '../ui/ModernDropdown'
 import { toolbarPillTriggerClass } from '../../lib/toolbar'
 import { resolveActiveSeason } from '../../lib/season'
@@ -28,6 +28,15 @@ export interface MonthYearDropdownProps {
   currentSeason?: string
   onClearPreset?: () => void
   className?: string
+  /**
+   * Optional map of year -> Set or array of available month numbers ('1'..'12').
+   * If provided, months with no events will be disabled.
+   */
+  availableMonthsByYear?: Record<string, string[] | Set<string>>
+  /**
+   * Optional callback returning available month numbers ('1'..'12') for given year.
+   */
+  getAvailableMonths?: (year: string) => string[] | Set<string> | undefined
 }
 
 export function formatPeriodLabel(
@@ -47,6 +56,19 @@ export function formatPeriodLabel(
   return 'Все года'
 }
 
+/**
+ * Sorts years strictly chronologically (ascending, earliest first: 2015 -> 2026).
+ * Ensures deduplication and ignores invalid/non-numeric values.
+ */
+export function sortYearsChronologically(years: (string | number)[]): string[] {
+  const numeric = years
+    .map(String)
+    .map((y) => y.trim())
+    .filter((y) => y && !isNaN(Number(y)))
+  const unique = Array.from(new Set(numeric))
+  return unique.sort((a, b) => Number(a) - Number(b))
+}
+
 export default function MonthYearDropdown({
   selectedYear,
   onSelectYear,
@@ -56,43 +78,48 @@ export default function MonthYearDropdown({
   currentSeason = resolveActiveSeason(),
   onClearPreset,
   className = '',
+  availableMonthsByYear,
+  getAvailableMonths,
 }: MonthYearDropdownProps) {
   const [isOpen, setIsOpen] = useState(false)
-  const [viewMode, setViewMode] = useState<'months' | 'years'>('months')
+  const [viewMode, setViewMode] = useState<'years' | 'months'>('years')
 
-  // Fallback years if empty
-  const availableYears = sortedYears.length > 0 ? sortedYears : [currentSeason]
+  // Chronological order (earliest -> newest, e.g. 2015 -> 2026)
+  const chronologicalYears = useMemo(() => {
+    const list = sortYearsChronologically(sortedYears)
+    return list.length > 0 ? list : [currentSeason || '2026']
+  }, [sortedYears, currentSeason])
 
-  // Track which year is being inspected in the picker view
-  const [viewingYear, setViewingYear] = useState<string>(() => {
-    return selectedYear || currentSeason || availableYears[0] || '2026'
-  })
+  // Context year for the month view
+  const activeSeason =
+    selectedYear ||
+    currentSeason ||
+    chronologicalYears[chronologicalYears.length - 1] ||
+    '2026'
 
-  // Whenever dropdown opens, sync viewing year and reset to months mode
+  // Whenever dropdown opens:
+  // If a month filter is active, open on 'months'; if whole year or all years, open on 'years'
   const handleOpenChange = (open: boolean) => {
     if (open) {
-      setViewingYear(selectedYear || currentSeason || availableYears[0] || '2026')
-      setViewMode('months')
+      setViewMode(selectedMonth ? 'months' : 'years')
     }
     setIsOpen(open)
   }
 
-  // Navigation index in availableYears (descending order, e.g. 2026, 2025...)
-  const currentIndex = availableYears.indexOf(viewingYear)
-  const isNewest = currentIndex <= 0
-  const isOldest = currentIndex === -1 || currentIndex >= availableYears.length - 1
-
-  const handlePrevYear = () => {
-    if (!isOldest && currentIndex !== -1) {
-      setViewingYear(availableYears[currentIndex + 1])
+  // Determine available months for the active season
+  const availableMonthsForActiveSeason = useMemo(() => {
+    let raw: string[] | Set<string> | undefined
+    if (getAvailableMonths) {
+      raw = getAvailableMonths(activeSeason)
+    } else if (availableMonthsByYear) {
+      raw = availableMonthsByYear[activeSeason] || availableMonthsByYear[activeSeason || 'all']
     }
-  }
+    if (!raw) return null
+    return raw instanceof Set ? raw : new Set(raw)
+  }, [activeSeason, getAvailableMonths, availableMonthsByYear])
 
-  const handleNextYear = () => {
-    if (!isNewest && currentIndex > 0) {
-      setViewingYear(availableYears[currentIndex - 1])
-    }
-  }
+  const isYearDisabled =
+    availableMonthsForActiveSeason !== null && availableMonthsForActiveSeason.size === 0
 
   const isNonDefault =
     Boolean(selectedMonth) || (Boolean(selectedYear) && selectedYear !== currentSeason)
@@ -116,153 +143,170 @@ export default function MonthYearDropdown({
       trigger={trigger}
       isOpen={isOpen}
       onOpenChange={handleOpenChange}
-      width="276px"
+      width="280px"
     >
       <div className="p-3 text-xs text-charcoal-800 space-y-2.5">
-        {/* Header: All Years Pill + Year Navigator */}
-        <div className="flex items-center justify-between pb-2 border-b border-old-money-200/60 gap-1.5">
+        {/* Segmented Mode Switcher: Год / Месяц */}
+        <div
+          className="grid grid-cols-2 p-0.5 rounded-lg bg-cream-100/90 border border-old-money-200/80 gap-0.5"
+          role="tablist"
+          aria-label="Режим выбора периода"
+        >
           <button
             type="button"
-            onClick={() => {
-              onSelectYear('')
-              onSelectMonth('')
-              onClearPreset?.()
-              setIsOpen(false)
-            }}
-            className={`px-2.5 py-1 rounded-full text-xs font-medium transition-colors border ${
-              !selectedYear && !selectedMonth
-                ? 'bg-camel-500 text-charcoal-900 font-semibold border-camel-600 shadow-xs'
-                : 'bg-cream-100/70 hover:bg-camel-100 text-charcoal-700 border-old-money-200/60'
+            role="tab"
+            aria-selected={viewMode === 'years'}
+            onClick={() => setViewMode('years')}
+            className={`py-1 rounded-md text-xs font-semibold transition-all text-center cursor-pointer ${
+              viewMode === 'years'
+                ? 'bg-camel-500 text-charcoal-900 shadow-2xs'
+                : 'text-charcoal-600 hover:text-charcoal-900 hover:bg-cream-200/60'
             }`}
           >
-            Все года
+            Год
           </button>
-
-          {viewMode === 'months' ? (
-            <div className="flex items-center gap-0.5">
-              <button
-                type="button"
-                onClick={handlePrevYear}
-                disabled={isOldest}
-                className="p-1 rounded-md text-charcoal-600 hover:bg-camel-100 hover:text-charcoal-900 disabled:opacity-30 disabled:hover:bg-transparent transition-colors"
-                aria-label="Предыдущий год"
-                title="Предыдущий год"
-              >
-                <ChevronLeft className="h-4 w-4" />
-              </button>
-
-              <button
-                type="button"
-                onClick={() => setViewMode('years')}
-                className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md font-semibold text-charcoal-900 hover:bg-camel-100 hover:text-charcoal-950 transition-colors"
-                title="Выбрать другой год"
-              >
-                <span className="tabular-nums">{viewingYear}</span>
-                <ChevronDown className="h-3 w-3 text-charcoal-500" />
-              </button>
-
-              <button
-                type="button"
-                onClick={handleNextYear}
-                disabled={isNewest}
-                className="p-1 rounded-md text-charcoal-600 hover:bg-camel-100 hover:text-charcoal-900 disabled:opacity-30 disabled:hover:bg-transparent transition-colors"
-                aria-label="Следующий год"
-                title="Следующий год"
-              >
-                <ChevronRight className="h-4 w-4" />
-              </button>
-            </div>
-          ) : (
-            <button
-              type="button"
-              onClick={() => setViewMode('months')}
-              className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-xs font-medium text-charcoal-600 hover:bg-camel-100 hover:text-charcoal-900 transition-colors"
-            >
-              <ArrowLeft className="h-3.5 w-3.5" />
-              <span>К месяцам</span>
-            </button>
-          )}
+          <button
+            type="button"
+            role="tab"
+            aria-selected={viewMode === 'months'}
+            onClick={() => setViewMode('months')}
+            className={`py-1 rounded-md text-xs font-semibold transition-all text-center cursor-pointer ${
+              viewMode === 'months'
+                ? 'bg-camel-500 text-charcoal-900 shadow-2xs'
+                : 'text-charcoal-600 hover:text-charcoal-900 hover:bg-cream-200/60'
+            }`}
+          >
+            Месяц
+          </button>
         </div>
 
-        {/* View Mode: Months Grid */}
-        {viewMode === 'months' && (
-          <div className="space-y-2">
-            {/* Quick full-year button */}
+        {/* View Mode: Years */}
+        {viewMode === 'years' && (
+          <div role="tabpanel" aria-label="Выбор года" className="space-y-2">
             <button
               type="button"
               onClick={() => {
-                onSelectYear(viewingYear)
+                onSelectYear('')
+                onSelectMonth('')
+                onClearPreset?.()
+                setIsOpen(false)
+              }}
+              className={`w-full py-1.5 px-3 rounded-lg text-xs transition-colors border text-center cursor-pointer ${
+                !selectedYear && !selectedMonth
+                  ? 'bg-camel-500 text-charcoal-900 font-semibold border-camel-600 shadow-xs'
+                  : 'bg-cream-100/70 hover:bg-camel-100 text-charcoal-700 border-old-money-200/60 font-medium'
+              }`}
+              title="Показать события за все доступные сезоны архива"
+            >
+              Все года
+            </button>
+
+            <div className="space-y-1">
+              <div className="text-[11px] font-medium text-charcoal-500 px-0.5">
+                Выберите год архива:
+              </div>
+              <div
+                className="grid grid-cols-3 gap-1.5 max-h-52 overflow-y-auto no-scrollbar p-0.5"
+                role="grid"
+                aria-label="Годы"
+              >
+                {chronologicalYears.map((year) => {
+                  const isSelected = selectedYear === year && !selectedMonth
+                  return (
+                    <button
+                      key={year}
+                      type="button"
+                      onClick={() => {
+                        onSelectYear(year)
+                        onSelectMonth('')
+                        onClearPreset?.()
+                        setIsOpen(false)
+                      }}
+                      className={`h-8 rounded-lg text-xs transition-colors tabular-nums font-medium cursor-pointer ${
+                        isSelected
+                          ? 'bg-camel-500 text-charcoal-900 font-semibold shadow-xs'
+                          : 'bg-cream-100/70 text-charcoal-700 hover:bg-camel-100 hover:text-charcoal-900 border border-old-money-200/60'
+                      }`}
+                      title={`Сезон ${year}`}
+                    >
+                      {year}
+                    </button>
+                  )
+                })}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* View Mode: Months */}
+        {viewMode === 'months' && (
+          <div role="tabpanel" aria-label="Выбор месяца" className="space-y-2">
+            <button
+              type="button"
+              disabled={isYearDisabled}
+              aria-disabled={isYearDisabled}
+              onClick={() => {
+                if (isYearDisabled) return
+                onSelectYear(activeSeason)
                 onSelectMonth('')
                 onClearPreset?.()
                 setIsOpen(false)
               }}
               className={`w-full py-1.5 px-3 rounded-lg text-xs transition-colors border text-center ${
-                selectedYear === viewingYear && !selectedMonth
-                  ? 'bg-camel-500 text-charcoal-900 font-semibold border-camel-600 shadow-xs'
-                  : 'bg-cream-100/70 hover:bg-camel-100 text-charcoal-700 border-old-money-200/60 font-medium'
+                isYearDisabled
+                  ? 'text-charcoal-400/40 bg-cream-50/20 cursor-not-allowed select-none opacity-30 border-transparent'
+                  : !selectedMonth
+                    ? 'bg-camel-500 text-charcoal-900 font-semibold border-camel-600 shadow-xs cursor-pointer'
+                    : 'bg-cream-100/70 hover:bg-camel-100 text-charcoal-700 border-old-money-200/60 font-medium cursor-pointer'
               }`}
+              title={
+                isYearDisabled
+                  ? 'Все месяцы (нет событий)'
+                  : `Все месяцы сезона ${activeSeason}`
+              }
             >
-              Весь {viewingYear} год
+              Все месяцы
             </button>
 
-            {/* 4x3 Months Grid */}
-            <div className="grid grid-cols-4 gap-1.5" role="grid" aria-label="Месяцы">
-              {MONTHS_GRID.map((m) => {
-                const isSelected =
-                  (selectedYear === viewingYear || (!selectedYear && viewingYear === currentSeason)) &&
-                  selectedMonth === m.value
-                return (
-                  <button
-                    key={m.value}
-                    type="button"
-                    onClick={() => {
-                      onSelectYear(viewingYear)
-                      onSelectMonth(m.value)
-                      onClearPreset?.()
-                      setIsOpen(false)
-                    }}
-                    className={`h-8 rounded-lg text-xs transition-all flex items-center justify-center font-medium ${
-                      isSelected
-                        ? 'bg-camel-500 text-charcoal-900 font-semibold shadow-xs'
-                        : 'text-charcoal-700 hover:bg-camel-100 hover:text-charcoal-900 border border-transparent hover:border-old-money-200/60'
-                    }`}
-                    title={m.full}
-                  >
-                    {m.short}
-                  </button>
-                )
-              })}
-            </div>
-          </div>
-        )}
+            <div className="space-y-1">
+              <div className="text-[11px] font-medium text-charcoal-500 px-0.5">
+                Месяцы сезона {activeSeason}:
+              </div>
 
-        {/* View Mode: Years Grid */}
-        {viewMode === 'years' && (
-          <div className="space-y-1.5">
-            <div className="text-[11px] font-medium text-charcoal-500 px-1">
-              Выберите год архива:
-            </div>
-            <div className="grid grid-cols-3 gap-1.5 max-h-52 overflow-y-auto no-scrollbar p-0.5">
-              {availableYears.map((year) => {
-                const isCurrentViewing = year === viewingYear
-                return (
-                  <button
-                    key={year}
-                    type="button"
-                    onClick={() => {
-                      setViewingYear(year)
-                      setViewMode('months')
-                    }}
-                    className={`h-8 rounded-lg text-xs transition-colors tabular-nums font-medium ${
-                      isCurrentViewing
-                        ? 'bg-camel-500 text-charcoal-900 font-semibold shadow-xs'
-                        : 'bg-cream-100/60 text-charcoal-700 hover:bg-camel-100 hover:text-charcoal-900'
-                    }`}
-                  >
-                    {year}
-                  </button>
-                )
-              })}
+              {/* 4x3 Months Grid */}
+              <div className="grid grid-cols-4 gap-1.5" role="grid" aria-label="Месяцы">
+                {MONTHS_GRID.map((m) => {
+                  const isSelected = selectedMonth === m.value
+                  const isAvailable = availableMonthsForActiveSeason
+                    ? availableMonthsForActiveSeason.has(m.value)
+                    : true
+                  return (
+                    <button
+                      key={m.value}
+                      type="button"
+                      disabled={!isAvailable}
+                      aria-disabled={!isAvailable}
+                      onClick={() => {
+                        if (!isAvailable) return
+                        onSelectYear(activeSeason)
+                        onSelectMonth(m.value)
+                        onClearPreset?.()
+                        setIsOpen(false)
+                      }}
+                      className={`h-8 rounded-lg text-xs transition-all flex items-center justify-center font-medium ${
+                        isSelected
+                          ? 'bg-camel-500 text-charcoal-900 font-semibold shadow-xs cursor-pointer'
+                          : !isAvailable
+                            ? 'text-charcoal-400/40 bg-cream-50/20 cursor-not-allowed select-none opacity-30 border border-transparent'
+                            : 'text-charcoal-700 hover:bg-camel-100 hover:text-charcoal-900 border border-transparent hover:border-old-money-200/60 cursor-pointer'
+                      }`}
+                      title={!isAvailable ? `${m.full} (нет событий)` : m.full}
+                    >
+                      {m.short}
+                    </button>
+                  )
+                })}
+              </div>
             </div>
           </div>
         )}
@@ -288,3 +332,5 @@ export default function MonthYearDropdown({
     </ModernDropdown>
   )
 }
+
+

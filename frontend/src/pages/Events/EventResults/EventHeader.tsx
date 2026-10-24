@@ -68,6 +68,11 @@ export default function EventHeader({ event, results }: EventHeaderProps) {
   const participantsCount = new Set(results.map(r => r.dog_id)).size
   const breedsCount = new Set(results.map(r => r.breed)).size
 
+  const rulesUrl = event.rules_url?.trim()
+  const catalogUrl = event.catalog_url?.trim()
+  const resultsPdfUrl = event.results_pdf_url?.trim()
+  const hasLinks = Boolean(rulesUrl || catalogUrl || resultsPdfUrl)
+
   return (
     <div className="relative mb-4">
       <div className="min-w-0 rounded-xl border border-old-money-200 bg-gradient-to-br from-cream-50 to-white px-4 py-4 md:px-5 md:py-4.5">
@@ -115,62 +120,49 @@ export default function EventHeader({ event, results }: EventHeaderProps) {
               </div>
             </div>
           </div>
-          <div className="mt-2 flex flex-wrap gap-2">
-            <a
-              href={event.rules_url || '#'}
-              target={event.rules_url ? '_blank' : undefined}
-              rel={event.rules_url ? 'noopener noreferrer' : undefined}
-              className={`inline-flex flex-shrink-0 items-center gap-1.5 rounded-full border px-2.5 py-1.5 text-xs font-medium shadow-sm transition-colors ${
-                event.rules_url
-                  ? 'border-camel-200 bg-camel-50 text-camel-700 hover:border-camel-400 hover:bg-camel-100'
-                  : 'border-old-money-200 bg-old-money-50 text-old-money-400 cursor-not-allowed'
-              }`}
-              aria-label="Регламент"
-              title={event.rules_url ? 'Регламент' : 'Регламент недоступен'}
-              onClick={(e) => !event.rules_url && e.preventDefault()}
-            >
-              <BookOpen className="h-4 w-4" aria-hidden />
-              <span className="hidden sm:inline">Регламент</span>
-            </a>
-            <a
-              href={event.catalog_url || '#'}
-              target={event.catalog_url ? '_blank' : undefined}
-              rel={event.catalog_url ? 'noopener noreferrer' : undefined}
-              className={`inline-flex flex-shrink-0 items-center gap-1.5 rounded-full border px-2.5 py-1.5 text-xs font-medium shadow-sm transition-colors ${
-                event.catalog_url
-                  ? 'border-camel-200 bg-camel-50 text-camel-700 hover:border-camel-400 hover:bg-camel-100'
-                  : 'border-old-money-200 bg-old-money-50 text-old-money-400 cursor-not-allowed'
-              }`}
-              aria-label="Каталог"
-              title={event.catalog_url ? 'Каталог' : 'Каталог недоступен'}
-              onClick={(e) => !event.catalog_url && e.preventDefault()}
-            >
-              <FileText className="h-4 w-4" aria-hidden />
-              <span className="hidden sm:inline">Каталог</span>
-            </a>
-            {event.results_pdf_url ? (
-              <a
-                href={event.results_pdf_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex min-h-[44px] sm:min-h-0 flex-shrink-0 items-center gap-1.5 rounded-full border border-camel-200 bg-camel-50 px-2.5 py-1.5 text-xs font-medium text-camel-700 shadow-sm transition-colors hover:border-camel-400 hover:bg-camel-100"
-                aria-label="Протокол PDF"
-                title="Официальный протокол (PDF)"
-              >
-                <Download className="h-4 w-4" aria-hidden />
-                <span className="hidden sm:inline">Протокол PDF</span>
-              </a>
-            ) : (
-              <span
-                className="inline-flex min-h-[44px] sm:min-h-0 flex-shrink-0 items-center gap-1.5 rounded-full border border-old-money-200 bg-old-money-50 px-2.5 py-1.5 text-xs font-medium text-old-money-400 shadow-sm cursor-not-allowed"
-                aria-label="Протокол PDF недоступен"
-                title="PDF протокол формируется"
-              >
-                <Download className="h-4 w-4" aria-hidden />
-                <span className="hidden sm:inline">Протокол PDF</span>
-              </span>
-            )}
-          </div>
+          {hasLinks && (
+            <div className="mt-2 flex flex-wrap gap-2">
+              {rulesUrl && (
+                <a
+                  href={rulesUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-[44px] sm:min-h-0 flex-shrink-0 items-center gap-1.5 rounded-full border border-camel-200 bg-camel-50 px-2.5 py-1.5 text-xs font-medium text-camel-700 shadow-sm transition-colors hover:border-camel-400 hover:bg-camel-100"
+                  aria-label="Регламент"
+                  title="Регламент"
+                >
+                  <BookOpen className="h-4 w-4" aria-hidden />
+                  <span className="hidden sm:inline">Регламент</span>
+                </a>
+              )}
+              {catalogUrl && (
+                <a
+                  href={catalogUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-[44px] sm:min-h-0 flex-shrink-0 items-center gap-1.5 rounded-full border border-camel-200 bg-camel-50 px-2.5 py-1.5 text-xs font-medium text-camel-700 shadow-sm transition-colors hover:border-camel-400 hover:bg-camel-100"
+                  aria-label="Каталог"
+                  title="Каталог"
+                >
+                  <FileText className="h-4 w-4" aria-hidden />
+                  <span className="hidden sm:inline">Каталог</span>
+                </a>
+              )}
+              {resultsPdfUrl && (
+                <a
+                  href={resultsPdfUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-[44px] sm:min-h-0 flex-shrink-0 items-center gap-1.5 rounded-full border border-camel-200 bg-camel-50 px-2.5 py-1.5 text-xs font-medium text-camel-700 shadow-sm transition-colors hover:border-camel-400 hover:bg-camel-100"
+                  aria-label="Протокол PDF"
+                  title="Официальный протокол (PDF)"
+                >
+                  <Download className="h-4 w-4" aria-hidden />
+                  <span className="hidden sm:inline">Протокол PDF</span>
+                </a>
+              )}
+            </div>
+          )}
         </div>
 
         {(event.host_club || event.judges || trackSchemes.length > 0) && (

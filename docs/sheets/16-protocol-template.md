@@ -165,9 +165,11 @@ th, td {
   ```html
   <td rowspan="2" style="background-color: #ff0000 !important; color: #ffffff; font-style: italic;">119</td>
   ```
-  Цвета попон:
-  * Красная: `background-color: #ff0000; color: #ffffff; font-style: italic;`
-  * Белая: `background-color: #ffffff; color: #000000; font-style: italic;`
+  Цвета попон в курсинге (текст номера забега всегда чёрным курсивом `color: #000000; font-style: italic;`):
+  * **Красная:** `background-color: #ff0000 !important;` (собака 1 в паре/тройке)
+  * **Синяя / Голубая:** `background-color: #00a2e8 !important;` (собака 2 или 3 в тройке)
+  * **Белая:** `background-color: #ffffff !important;` (в паре) или `#f7f6f0 !important;` (в тройке деликатный тёплый оттенок off-white, 97% яркости, чтобы номер не терялся на белом фоне)
+  * *Внимание:* в курсинге строго запрещено использовать едкий неоновый жёлтый `#ffff00` (жёлтый закреплён строго за боксом 5 в рейсинге) или тёмно-бежевый цвет.
 * **Строка 1:**
   * Колонки 1–6 (`rowspan="2"`)
   * Номер Забега 1 (`rowspan="2"`)

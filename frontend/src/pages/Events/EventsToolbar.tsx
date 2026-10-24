@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Info, FileText } from 'lucide-react'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
@@ -54,6 +53,7 @@ export type EventsToolbarProps = {
   onFilterWithProtocolChange: (value: boolean) => void
   sortedYears: string[]
   onResetFilters: () => void
+  availableMonthsByYear?: Record<string, string[] | Set<string>>
   /** When omitted (loading), stats row is hidden. */
   stats?: {
     total: number
@@ -72,10 +72,9 @@ export default function EventsToolbar({
   filterDiscipline,
   onFilterDisciplineChange,
   sortedYears,
+  availableMonthsByYear,
   stats,
 }: EventsToolbarProps) {
-  const [monthYearDropdownOpen, setMonthYearDropdownOpen] = useState(false)
-
   const disciplineLabel =
     DISCIPLINE_OPTIONS.find((d) => d.value === filterDiscipline)?.label || 'Дисциплина'
 
@@ -96,13 +95,13 @@ export default function EventsToolbar({
 
       <div className="flex max-w-full flex-wrap items-center gap-1.5 sm:gap-2">
         <MonthYearDropdown
-          isOpen={monthYearDropdownOpen}
-          onOpenChange={setMonthYearDropdownOpen}
-          filterYear={filterYear}
-          onFilterYearChange={onFilterYearChange}
-          filterMonth={filterMonth}
-          onFilterMonthChange={onFilterMonthChange}
+          selectedYear={filterYear}
+          onSelectYear={onFilterYearChange}
+          selectedMonth={filterMonth}
+          onSelectMonth={onFilterMonthChange}
           sortedYears={sortedYears}
+          currentSeason={CURRENT_SEASON}
+          availableMonthsByYear={availableMonthsByYear}
         />
 
         <div className="flex items-center gap-1 rounded-full border border-old-money-200/80 bg-cream-50 p-0.5">

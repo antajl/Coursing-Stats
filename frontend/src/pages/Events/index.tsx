@@ -12,11 +12,14 @@ import {
 } from './eventListUtils'
 import EventsToolbar, { CURRENT_SEASON } from './EventsToolbar'
 import EventsMonthList from './EventsMonthList'
+import { initialSeasonYearFilter } from '../../lib/season'
 
 export default function Events() {
   const [searchParams, setSearchParams] = useSearchParams()
   const { reachGoal } = useYandexGoal()
-  const [filterYear, setFilterYear] = useState(() => searchParams.get('year') || CURRENT_SEASON)
+  const [filterYear, setFilterYear] = useState(() =>
+    initialSeasonYearFilter(searchParams, CURRENT_SEASON),
+  )
   const [filterMonth, setFilterMonth] = useState(() => {
     const monthParam = searchParams.get('month')
     if (!monthParam || monthParam === 'from_previous') return ''
@@ -34,17 +37,25 @@ export default function Events() {
 
   const { data: yearsData } = useYears()
   const { data: eventsData, isLoading: eventsLoading } = useEvents(filterYear)
+  const { data: allEventsData } = useEvents('')
 
   const yearsArray = yearsData?.success && Array.isArray(yearsData.data) ? yearsData.data : []
   const events: CalendarEvent[] =
     eventsData?.success && Array.isArray(eventsData.data) ? eventsData.data : []
 
   const sortedYears = useMemo(() => {
-    const allYears = yearsArray
+    const fromYearsData = yearsArray
       .map((y: { year?: number } | number) => (typeof y === 'object' ? y.year : y))
-      .filter((y): y is number => typeof y === 'number' && Number.isFinite(y))
+      .filter((y: unknown): y is number => typeof y === 'number' && Number.isFinite(y))
 
-    const years = [CURRENT_SEASON, ...allYears]
+    const fromAllEvents = Array.isArray(allEventsData?.data)
+      ? (allEventsData.data as CalendarEvent[])
+          .map((e) => e.year || (e.date_start ? new Date(e.date_start).getFullYear() : undefined))
+          .filter((y: unknown): y is number => typeof y === 'number' && Number.isFinite(y))
+      : []
+
+    const combined = [...fromYearsData, ...fromAllEvents]
+    const years = [CURRENT_SEASON, ...combined]
       .map(String)
       .filter(Boolean)
       .sort((a, b) => Number(b) - Number(a))
@@ -57,7 +68,32 @@ export default function Events() {
     }
 
     return years
-  }, [yearsArray])
+  }, [yearsArray, allEventsData])
+
+  const availableMonthsByYear = useMemo(() => {
+    const map: Record<string, Set<string>> = {}
+    const allYearsMonths = new Set<string>()
+
+    const allList = Array.isArray(allEventsData?.data) ? allEventsData.data : []
+    const currentList = Array.isArray(eventsData?.data) ? eventsData.data : []
+    const listToUse = allList.length > 0 ? allList : currentList
+
+    for (const e of listToUse) {
+      const year = String(e.year || (e.date_start ? new Date(e.date_start).getFullYear() : ''))
+      const d = parseDate(e.date_start)
+      if (!d) continue
+      const m = String(d.getMonth() + 1)
+      allYearsMonths.add(m)
+
+      if (year) {
+        if (!map[year]) map[year] = new Set()
+        map[year].add(m)
+      }
+    }
+    map[''] = allYearsMonths
+    map['all'] = allYearsMonths
+    return map
+  }, [allEventsData, eventsData])
 
   const handleResetFilters = () => {
     setFilterYear(CURRENT_SEASON)
@@ -71,7 +107,8 @@ export default function Events() {
     setSearchParams(
       (prev) => {
         const params = new URLSearchParams(prev)
-        if (filterYear && filterYear !== CURRENT_SEASON) params.set('year', filterYear)
+        if (filterYear === '') params.set('year', 'all')
+        else if (filterYear !== CURRENT_SEASON) params.set('year', filterYear)
         else params.delete('year')
         if (filterMonth) params.set('month', filterMonth)
         else params.delete('month')
@@ -174,6 +211,7 @@ export default function Events() {
       filterWithProtocol={filterWithProtocol}
       onFilterWithProtocolChange={setFilterWithProtocol}
       sortedYears={sortedYears}
+      availableMonthsByYear={availableMonthsByYear}
       onResetFilters={handleResetFilters}
       stats={
         eventsLoading
