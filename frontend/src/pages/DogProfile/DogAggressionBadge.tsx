@@ -117,24 +117,14 @@ export default function DogAggressionBadge({ count = 0, incidents = [] }: DogAgg
             style={{ top: coords.top, left: coords.left }}
             className="absolute z-40 w-[min(calc(100vw-32px),22rem)] rounded-xl border border-old-money-200 bg-white p-4 shadow-xl text-left"
           >
-            <div className="flex items-start justify-between gap-2 border-b border-old-money-100 pb-2.5">
-              <div className="min-w-0">
-                <div className="flex items-center gap-1.5 text-xs font-bold text-charcoal-900">
-                  <ShieldAlert className={`h-4 w-4 shrink-0 ${iconClass}`} />
-                  <span>{isRepeat ? 'Повторная агрессия (рецидив)' : 'Дисквалификация за агрессию'}</span>
-                </div>
-                <p className="mt-0.5 text-[11px] text-charcoal-500">
-                  Официальные записи в судейских протоколах РКФ
-                </p>
+            <div className="border-b border-old-money-100 pb-2.5">
+              <div className="flex items-center gap-1.5 text-xs font-bold text-charcoal-900">
+                <ShieldAlert className={`h-4 w-4 shrink-0 ${iconClass}`} />
+                <span>{isRepeat ? 'Повторная агрессия (рецидив)' : 'Дисквалификация за агрессию'}</span>
               </div>
-              <button
-                type="button"
-                onClick={() => setOpen(false)}
-                className="rounded-md p-1.5 text-charcoal-400 hover:bg-cream-100 hover:text-charcoal-700 transition-colors cursor-pointer"
-                aria-label="Закрыть"
-              >
-                <X className="h-4 w-4" />
-              </button>
+              <p className="mt-0.5 text-[11px] text-charcoal-500">
+                Официальные записи в судейских протоколах РКФ
+              </p>
             </div>
 
             <div className="mt-3 space-y-2.5 max-h-60 overflow-y-auto pr-1">

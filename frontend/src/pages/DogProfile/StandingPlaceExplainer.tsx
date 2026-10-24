@@ -257,18 +257,10 @@ function StandingExplainerBody({
 
   return (
     <div className="max-w-[19rem] space-y-2.5 text-left">
-      <div className="flex items-start justify-between gap-2">
+      <div>
         <p className="text-[12px] font-semibold leading-tight text-charcoal-900">
           {scopeTitle(domain, scope, place)}
         </p>
-        <button
-          type="button"
-          onClick={onClose}
-          className="shrink-0 rounded p-0.5 text-charcoal-400 hover:text-charcoal-700"
-          aria-label="Закрыть"
-        >
-          ×
-        </button>
       </div>
       <p className="text-[11px] leading-snug text-charcoal-700">
         {scopeLead(domain, scope)}
