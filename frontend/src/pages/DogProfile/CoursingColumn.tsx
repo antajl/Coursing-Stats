@@ -32,6 +32,7 @@ type DogEvent = {
   total_score?: number | string | null
   qualification?: string | null
   status?: string | null
+  status_reason?: string | null
 }
 
 type CoursingColumnProps = {
@@ -259,6 +260,7 @@ export function CoursingColumn({
                     }
                     placement={event.placement}
                     status={event.status}
+                    statusReason={event.status_reason}
                   />
                   <div className="min-w-0 flex-1 overflow-hidden">
                     <EventQualificationChips qualification={event.qualification as string | null | undefined} />

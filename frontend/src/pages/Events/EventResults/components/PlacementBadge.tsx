@@ -1,5 +1,6 @@
 import type { Result } from '../types'
 import HoverTooltip from '../../../../components/ui/HoverTooltip'
+import { displayStatusReason } from '../../../../lib/statusReason'
 
 interface PlacementBadgeProps {
   result: Result
@@ -10,17 +11,20 @@ export default function PlacementBadge({ result }: PlacementBadgeProps) {
     result.status === 'disqualified' ||
     result.status === 'dismissed' ||
     result.status === 'eliminated' ||
-    result.status === 'dnf'
+    result.status === 'dnf' ||
+    result.status === 'withdrawn'
   ) {
     const defaultLabel =
       result.status === 'dismissed'
         ? 'Отстранение'
         : result.status === 'dnf'
-          ? 'Не финишировал'
+          ? 'Сошёл'
           : result.status === 'eliminated'
             ? 'Выбывание'
-            : 'Дисквалификация'
-    const label = result.status_reason || defaultLabel
+            : result.status === 'withdrawn'
+              ? 'Снят'
+              : 'Дисквалификация'
+    const label = displayStatusReason(result.status_reason) || defaultLabel
 
     return (
       <HoverTooltip label={label} placement="top" variant="site" delayMs={0} portal>

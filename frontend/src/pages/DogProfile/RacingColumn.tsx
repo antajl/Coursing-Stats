@@ -31,6 +31,7 @@ type DogEvent = {
   speed?: number | string | null
   qualification?: string | null
   status?: string | null
+  status_reason?: string | null
 }
 
 type RacingColumnProps = {
@@ -254,6 +255,7 @@ export function RacingColumn({
                     }
                     placement={event.placement}
                     status={event.status}
+                    statusReason={event.status_reason}
                     speed={event.speed}
                   />
                   <div className="min-w-0 flex-1 overflow-hidden">
