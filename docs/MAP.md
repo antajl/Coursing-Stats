@@ -21,7 +21,7 @@ verified: 2026-10-01
 | Turso | Только протоколы выставок RKF (`getShowExhibition`; LC allowlist ещё на CDN) |
 | CDN limits | ≤~20k файлов; exclude: `dogs/by-id`, bulk `shows/exhibitions` (`publish-exclude.js`) |
 | Dev | Vite `:5173` (`yarn run dev`) — чистый статический фронтенд |
-| Рейтинги спорта | зачёт сезона (медали/КПД) → CS tie-break; Elo display-only — никогда не мерджить в одно число |
+| Рейтинги спорта | зачёт сезона (медали/КПД) → CS tie-break (Elo полностью удалён из UI/пайплайна) — никогда не мерджить в одно число |
 
 ## Задача → файл
 

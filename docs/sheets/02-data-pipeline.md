@@ -44,7 +44,6 @@ data/v1/
 1. rebuild calendar  
 2. `build-data-snapshot`  
 3. `build-derived-indexes` (+ assert tops/judges)  
-4. Elo extract/generate/verify  
 5. show indexes **если** local RKF есть  
 6. `frontend/scripts/copy-data.js`  
 7. `verify-publish-gates` (+ `--public`)

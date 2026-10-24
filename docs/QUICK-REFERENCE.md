@@ -13,7 +13,7 @@ Static React site for dog competition statistics:
 ## Architecture
 
 ### Three Domains
-1. **Competitions** — procoursing.ru data, calendars, protocols, rankings (medals, CS points, Elo)
+1. **Competitions** — procoursing.ru data, calendars, protocols, rankings (medals, CS points; Elo removed)
 2. **Shows** — RKF exhibitions, Turso for large protocols, CDN for rankings
 3. **Donino** — Speed records, separate dog identity
 
