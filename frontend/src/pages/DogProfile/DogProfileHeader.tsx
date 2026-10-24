@@ -297,8 +297,8 @@ export function DogProfileHeader({
     <div className="relative mb-6">
       <div className="relative min-w-0 rounded-xl border border-old-money-200/80 bg-white p-4 sm:p-5 md:p-6">
         {/* Верх: Кличка слева + Бейджи рейтингов справа */}
-        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
-          <div className="min-w-0 flex-1">
+        <div className="flex flex-col xl:flex-row xl:items-start xl:justify-between gap-3 sm:gap-4">
+          <div className="min-w-0 flex-1 xl:min-w-[280px]">
             <OwnerCrownName name={primary} dogId={dog.id} kind="competition">
               <h1 className="break-words text-2xl font-bold tracking-tight text-charcoal-900 md:text-3xl">
                 {primary}
@@ -316,10 +316,10 @@ export function DogProfileHeader({
           </div>
 
           {achievements.length > 0 && (
-            <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 shrink-0 lg:justify-end">
+            <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 min-w-0 xl:max-w-2xl xl:justify-end">
               {achievements.map((ach) => (
                 <HoverTooltip key={ach.id} label={ach.tooltip} placement="bottom" portal>
-                  <div className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold ${ach.color}`}>
+                  <div className={`inline-flex shrink-0 items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold whitespace-nowrap ${ach.color}`}>
                     {ach.icon}
                     <span>{ach.label}</span>
                     {ach.sublabel && (
