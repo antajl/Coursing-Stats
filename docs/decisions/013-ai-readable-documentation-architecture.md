@@ -5,7 +5,7 @@ Accepted
 
 ## Navigation update (2026-09-28 / 2026-10-05)
 
-Current agent documentation is **`docs/MAP.md` + `docs/sheets/` (00–15) + `docs/GLOSSARY.md` + `docs/decisions/`**.  
+Current agent documentation is **`docs/MAP.md` + `docs/sheets/` (00–16) + `docs/GLOSSARY.md` + `docs/decisions/`**.  
 The 2026-08-05 `canonical/` / `working/` / `wiki/` layout and intermediate `docs/manifest.yaml` / `docs/index/*.yaml` files were retired as redundant overhead in favor of pure Markdown navigation (`docs/MAP.md` router and `docs/GLOSSARY.md`).
 
 ## Date

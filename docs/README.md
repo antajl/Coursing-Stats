@@ -37,6 +37,7 @@
 - **[13 — Racing Standards](sheets/13-racing-standards.md)** — стандарты бегов по кругу: пол, ростовые классы, кворумы
 - **[14 — Design System](sheets/14-design-system.md)** — дизайн-система Old Money: цвета, типографика, Lucide, FHD/2K адаптив, запрет эмодзи
 - **[15 — SEO & Analytics](sheets/15-seo-analytics.md)** — Search Console, Яндекс.Вебмастер, поведение мобильных пользователей
+- **[16 — Protocol Template](sheets/16-protocol-template.md)** — стандарт вёрстки и оцифровки официальных протоколов (HTML / PDF)
 
 ---
 

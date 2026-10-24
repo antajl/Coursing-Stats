@@ -83,7 +83,7 @@ procoursing / Google Sheets / RKF PDF
 
 ### 3. Merging Ratings
 - **WRONG:** Merge medals, CS points, Elo into composite (0.4*Elo + 0.3*CS + …)
-- **RIGHT:** Keep separate: top-placement-*, top-score-*, top-elo-*, top-speed-*
+- **RIGHT:** Keep separate: top-placement-*, top-score-*, top-speed-*
 
 ### 4. Show Ranking Validation
 - **Current:** Year-based files (dog-ranking-2017.json, dog-ranking-2018.json, etc.)
@@ -150,18 +150,24 @@ npx tsx scripts/repair/rebuild-show-snapshot.ts
 
 Project-specific skills (auto-activated by context):
 - `three-domains` — routing across Competitions/Shows/Donino
+- `competition-ingest` — safe competition and protocol ingestion
 - `competitions-domain` — competitions-specific logic
 - `shows-domain` — exhibitions-specific logic
 - `donino-domain` — Donino-specific logic
 - `sport-show-linkage` — safe dog identity linking
 - `coursing-stats-parsers` — procoursing.ru parsers
 - `shows-pdf-pipeline` — RKF PDF processing
+- `coursing-stats-dev` — build-all-data, CDN pipeline, publish gates
+- `bot-add-handler` — Telegram bot handlers & keyboards
+- `bot-deploy` — Telegram bot Cloudflare deployment
+- `workers-best-practices` — Workers & KV patterns
+- `old-money-design` — Saluki / Old Money UI design system
 
 Global skills (auto-activated):
-- `ponytail` — lazy development, YAGNI
-- `verification-before-completion` — verify before claiming done
-- `test-driven-development` — TDD methodology
-- `debugging-and-error-recovery` — systematic debugging
+- `ponytail` — minimal code, YAGNI, stdlib first
+- `verification-before-completion` — verify with tests before claiming done
+- `incremental-implementation` — thin vertical slices
+- `old-money-design` — Old Money UI aesthetic, no emojis, WCAG targets
 
 ## Last Verified
 

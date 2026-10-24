@@ -27,7 +27,7 @@ verified: 2026-09-22
 ## Identity rules
 
 - Одна кличка ≠ одна собака между доменами. `show id ≠ competition dog_id` (совпадения чисел случайны).
-- Связь sport↔show: `dog_links` (planned) / `competition_dog_id` в show-индексах.
+- Связь sport↔show: `dog_links` (planned) / `competition_dog_id` в show-индексах. Запрет межпородных связок: связывание по кличке допустимо только при эквивалентности пород (`breedsEquivalent`) и хронологической валидности (дата события >= дата рождения собаки).
 - Sport↔donino: только если в donino JSON есть `dog_id`.
 - Судьи соревнований ≠ судьи выставок.
 
@@ -43,8 +43,8 @@ verified: 2026-09-22
 
 ## Key files
 
-- `.cursor/rules/00-three-domains.mdc`
-- `.cursor/skills/three-domains/SKILL.md`
+- `AGENTS.md`
+- `.agents/skills/three-domains/SKILL.md`
 - Domain skills: `competitions-domain`, `shows-domain`, `donino-domain`
 - `frontend/src/AppRoutes.tsx`
 

@@ -59,7 +59,7 @@ bot/src/handlers/commands.ts   # /start, menus
 bot/src/handlers/search.ts     # text search + compare mode
 bot/src/handlers/{ratings,calendar,judges,donino,favorites,dogs,comparison,guide}/
 bot/wrangler.toml
-.cursor/skills/bot-add-handler/
+.agents/skills/bot-add-handler/
 ```
 
 ## Workflows

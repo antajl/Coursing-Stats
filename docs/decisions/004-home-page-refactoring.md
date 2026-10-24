@@ -79,5 +79,5 @@ The main home page (Home.tsx) had grown to 607 lines with multiple issues:
 
 ## References
 
-- Refactoring summary: .devin/HOME-PAGE-REFACTORING.md
-- Performance review: .devin/skills/performance-review/SKILL.md
+- Frontend architecture: docs/sheets/07-frontend.md
+- Design system: docs/sheets/14-design-system.md

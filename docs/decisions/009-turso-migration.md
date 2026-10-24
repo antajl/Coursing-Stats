@@ -53,11 +53,11 @@ RKF Calendar → CDN JSON → Frontend (calendar)
 ### Implementation Details
 
 **Completed:**
-- ✅ Frontend reads from Turso via @libsql/client
-- ✅ Pako gzip decompression for Turso BLOB data
-- ✅ CSP configuration allows Turso requests
-- ✅ React Query caching (5-minute staleTime) for exhibition views
-- ✅ ShowCalendar links all RKF exhibitions to /shows/exhibition/:id
+- [x] Frontend reads from Turso via @libsql/client
+- [x] Pako gzip decompression for Turso BLOB data
+- [x] CSP configuration allows Turso requests
+- [x] React Query caching (5-minute staleTime) for exhibition views
+- [x] ShowCalendar links all RKF exhibitions to /shows/exhibition/:id
 
 ### Benefits
 
@@ -98,12 +98,12 @@ const exhibition = await getExhibitionById('10000', 2021)
 
 ## Migration Steps
 
-1. ✅ Import exhibitions-rkf to Turso (51,429 rows, 100%)
-2. ✅ Create GitHub Actions sync workflow
-3. ✅ Frontend Turso client (created, with React Query)
-4. ✅ Update frontend to use Turso for exhibition protocols
-5. ✅ Update documentation (ADR-009, AGENTS.md, wiki)
-6. ✅ Test on production
+1. [x] Import exhibitions-rkf to Turso (51,429 rows, 100%)
+2. [x] Create GitHub Actions sync workflow
+3. [x] Frontend Turso client (created, with React Query)
+4. [x] Update frontend to use Turso for exhibition protocols
+5. [x] Update documentation (ADR-009, AGENTS.md, wiki)
+6. [x] Test on production
 
 ## Rollback Plan
 
@@ -114,7 +114,7 @@ const exhibition = await getExhibitionById('10000', 2021)
 
 ### Manual Rollback Steps
 1. If Turso is unstable: set `useFallback = true` in exhibitions-adapter.ts
-2. If credentials leak: rotate Turso token in Cloudflare Pages
+2. If credentials leak: rotate Turso token in GitHub Secrets / .env.ai
 3. If quota exceeded: enable JSON fallback, increase Turso plan
 4. Complete rollback: revert to JSON-only architecture
 

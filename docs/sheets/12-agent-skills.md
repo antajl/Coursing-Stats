@@ -22,7 +22,7 @@ verified: 2026-10-01
 1. Project skills (`.agents/skills/`)
 2. Global / builtin skills (`ponytail`, `verification-before-completion`, `incremental-implementation`)
 
-### Project skills (10 доменных скиллов)
+### Project skills (13 доменных скиллов)
 
 | Skill | Когда |
 |-------|-------|
@@ -36,16 +36,20 @@ verified: 2026-10-01
 | `coursing-stats-dev` | сборка индексов, CDN-only пайплайн, publish-gates |
 | `coursing-stats-parsers` | парсеры procoursing.ru (windows-1251, grand_total) |
 | `bot-add-handler` | добавление команд и клавиатур в Telegram-бота |
+| `bot-deploy` | деплой Telegram-бота в Cloudflare Workers через wrangler |
+| `workers-best-practices` | правила разработки и проверки Cloudflare Workers |
+| `old-money-design` | дизайн-система Old Money, цвета, типографика, адаптивность, запрет эмодзи |
 
 ### Global (активируются автоматически)
 
 - `ponytail` — минималистичные решения, YAGNI, стандартная библиотека
 - `verification-before-completion` — обязательная проверка тестами перед отчетом о готовности
 - `incremental-implementation` — пошаговая разработка тонкими вертикальными слайсами
+- `old-money-design` — эстетика Old Money, отсутствие эмодзи, палитра camel/cream, touch targets >= 44px
 
 ## Key files
 
-- `.agents/skills/*/SKILL.md` — 10 доменных скиллов проекта
+- `.agents/skills/*/SKILL.md` — 13 доменных скиллов проекта
 - `AGENTS.md` — главная точка входа для любого ИИ-агента
 - `docs/ROADMAP.md` — 4 ветки развития и правила работы
 - `.mcp.json` — конфигурация MCP-серверов (GitHub Copilot, Cloudflare)

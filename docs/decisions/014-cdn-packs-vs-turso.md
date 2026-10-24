@@ -35,7 +35,7 @@ Shard function: `backend/lib/cdn-packs.ts` (`cdnPackShardKey`, 256 shards).
 
 - Not “everything in Turso”
 - Not paid R2 / second Cloudflare account for this
-- Not deleting `dogs/by-id` from git (build/import still need it); it is excluded from Pages copy
+- Not deleting `dogs/by-id` from git (build/import still need it); it is excluded from CDN copy
 
 ## Consequences
 

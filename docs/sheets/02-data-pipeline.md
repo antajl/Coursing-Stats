@@ -14,7 +14,7 @@ verified: 2026-09-22
 | Факт | |
 |------|--|
 | Канон | `data/v1/` в git |
-| Generated для Pages | `frontend/public/data/v1/` (gitignore) через `copy-data` |
+| Generated для CDN | `frontend/public/data/v1/` (gitignore) через `copy-data` |
 | Indexes | Не править вручную — `build-all-data` |
 | Как строятся indexes | JSON → **in-memory SQLite** (`openDb`), не stale `pc-db.sqlite` |
 | Calendar UI | `calendar/{year}.json` + `indexes/calendar-index.json` / `events-by-id.json` |
@@ -30,7 +30,7 @@ data/v1/
   manifest.json, breeds.json, ui-flags.json
   calendar/{year}.json
   competitions/{year}/{month}/{id}-{slug}.json   # results[] внутри
-  dogs/by-id|by-key/                             # git/билд; не на Pages
+  dogs/by-id|by-key/                             # git/билд; не на CDN
   donino/speed_records.json | coursing_records.json
   indexes/dog-profiles/pack-*.json               # sport profiles (256 packs)
   indexes/*                                      # tops, judges, events-by-id…
@@ -41,9 +41,10 @@ data/v1/
 
 ### Pipeline (`yarn run build-all-data`)
 
-1. rebuild calendar  
-2. `build-data-snapshot`  
-3. `build-derived-indexes` (+ assert tops/judges)  
+1. rebuild calendar (`rebuild-calendar-index.ts`)  
+2. `export-guide-json.ts`  
+3. `build-data-snapshot` (SQLite)  
+4. `build-derived-indexes` (+ assert tops/judges)  
 5. show indexes **если** local RKF есть  
 6. `frontend/scripts/copy-data.js`  
 7. `verify-publish-gates` (+ `--public`)

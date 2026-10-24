@@ -63,4 +63,4 @@ Initially, **Cloudflare Pages** was chosen for frontend hosting. Cloudflare Work
 ## References
 
 - Cloudflare Pages documentation: https://developers.cloudflare.com/pages/
-- CI/CD rules: .devin/rules/ci-cd-rules.mdc
+- CI/CD deployment: docs/sheets/09-ops-deploy.md

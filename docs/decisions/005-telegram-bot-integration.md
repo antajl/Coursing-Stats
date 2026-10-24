@@ -59,10 +59,10 @@ Push notifications for new results were considered but are **not implemented**.
 ### Implementation
 - Deploy: `cd bot; yarn run build && yarn run test:run && yarn run deploy` (manual)
 - Docs: `docs/sheets/08-bot.md`
-- Skill: `.cursor/skills/bot-add-handler/SKILL.md`
+- Skill: `.agents/skills/bot-add-handler/SKILL.md`
 
 ## References
 
 - Bot documentation: docs/sheets/08-bot.md
 - Security: docs/sheets/10-security.md
-- Bot skills: .cursor/skills/bot-add-handler/SKILL.md
+- Bot skills: .agents/skills/bot-add-handler/SKILL.md

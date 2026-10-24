@@ -71,5 +71,5 @@ Coursing Stats needed a data storage solution that provides:
 
 ## References
 
-- Data workflow: .devin/skills/data-workflow/SKILL.md
+- Data workflow: .agents/skills/coursing-stats-dev/SKILL.md
 - Data docs: docs/sheets/02-data-pipeline.md

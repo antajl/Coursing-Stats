@@ -49,7 +49,7 @@ verified: 2026-09-22
 - `backend/scripts/import/sync-archive-comps-to-calendar.ts` — `results_file` / `has_results` в `calendar/`
 - `backend/parsers/shows/parse-rkf-certificate-pdf.ts` — barrel; impl в `rkf-cert/`
 - `backend/scripts/test/test-parsers-fixtures.ts`
-- Skill: `.cursor/skills/coursing-stats-parsers/`
+- Skill: `.agents/skills/coursing-stats-parsers/`
 
 ## Workflows
 

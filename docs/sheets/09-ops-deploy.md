@@ -18,7 +18,7 @@ verified: 2026-10-01
 | Публичный runtime | **Отсутствует** (чистый статический хостинг + CDN JSON, без D1/Workers на проде сайта) |
 | Пайплайн деплоя сайта | **GitHub Actions** (`.github/workflows/deploy.yml`) по пушу в `main` |
 | Деплой бота | **Manual only**: `cd bot; yarn run build; yarn run deploy` (Cloudflare Workers) |
-| Cron обновления Донино | `.github/workflows/update-speed-records.yml` (еженедельно по вторникам) |
+| Cron обновления Донино | `.github/workflows/update-speed-records.yml` (2 раза в день: 05:00 и 17:00 UTC) |
 | Локальная разработка | `yarn run dev` → Vite SPA на `http://localhost:5173` |
 | Секреты сайта | GitHub Repository Secrets (`AWS_*`, `S3_BUCKET`, `VITE_TURSO_*`) |
 | Секреты бота | Cloudflare Workers Dashboard / `wrangler secret put` |
