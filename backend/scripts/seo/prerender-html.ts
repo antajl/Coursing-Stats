@@ -233,7 +233,7 @@ export function buildNeutralSpaShell(html: string): string {
 /**
  * Standalone 404 HTML for Yandex Object Storage (error_document: 404.html).
  * Retains exact Old Money theme, CSS links, fonts, Nav header and 404 dogs artwork.
- * Omits client SPA script to prevent unnecessary hydration errors or flash on dead URLs.
+ * Preserves client SPA scripts so dynamic routes (show dogs, judges, etc.) hydrate seamlessly.
  */
 export function build404Html(spaHtml: string): string {
   let html = spaHtml
@@ -260,9 +260,9 @@ export function build404Html(spaHtml: string): string {
   html = replaceOrInsertMetaName(html, 'twitter:title', 'Страница не найдена | Coursing Stats')
   html = replaceOrInsertMetaName(html, 'twitter:description', 'Страница не найдена.')
   html = replaceOrInsertMetaName(html, 'twitter:image', `${SITE_ORIGIN}/og-image.png`)
-  // Strip client JS bundle and modulepreload so 404 is pure rock-solid standalone HTML
-  html = html.replace(/<link\s+rel=["']modulepreload["'][^>]*>\s*/gi, '')
-  html = html.replace(/<script\s+type=["']module["'][^>]*>[\s\S]*?<\/script>\s*/gi, '')
+  // Invariant: preserve client JS bundle (<script type="module">) and modulepreload
+  // so when S3 or a proxy serves 404.html for dynamic SPA routes (e.g. show dogs /dog/:id, judges),
+  // the React router can bootstrap, fetch the data, and render the dog profile.
 
   const bodyHtml = [
     `<div class="print:hidden" aria-hidden="true" style="position: fixed; inset: 0; z-index: 2; pointer-events: none; opacity: 0.048; mix-blend-mode: multiply; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E&quot;); background-size: 120px 120px; background-repeat: repeat;"></div>`,

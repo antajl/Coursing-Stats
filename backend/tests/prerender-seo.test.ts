@@ -41,7 +41,8 @@ describe('prerender-seo helpers', () => {
     expect(html).toContain('<title>Страница не найдена | Coursing Stats</title>')
     expect(html).toContain('<meta name="robots" content="noindex, nofollow" />')
     expect(html).not.toMatch(/rel=["']canonical["']/)
-    expect(html).not.toContain('src="/assets/index-abc123.js"')
+    // Client script must be preserved so dynamic SPA routes (show dogs, etc.) hydrate on S3 fallback
+    expect(html).toContain('src="/assets/index-abc123.js"')
     expect(html).toContain('href="/assets/index-abc123.css"')
     expect(html).toContain('404-dogs.png')
     expect(html).toContain('404-dogs-mobile.png')

@@ -189,7 +189,7 @@ type ShowRankingEntry = {
  */
 function collectShowOnlyDogs(): Map<string, ShowRankingEntry> {
   const map = new Map<string, ShowRankingEntry>()
-  if (process.env.PRERENDER_SHOW_ONLY !== '1') return map
+  if (process.env.PRERENDER_SHOW_ONLY === '0') return map
   if (!fs.existsSync(SHOW_RANKING_GLOB_DIR)) return map
 
   const files = fs
@@ -232,7 +232,7 @@ function prerenderShowOnlyDogs(spaHtml: string): number {
   const dogs = collectShowOnlyDogs()
   if (dogs.size === 0) return 0
 
-  const maxExtra = Math.max(0, Number(process.env.PRERENDER_SHOW_ONLY_MAX || 2000) || 2000)
+  const maxExtra = Math.max(0, Number(process.env.PRERENDER_SHOW_ONLY_MAX || 15000) || 15000)
   // Prefer dogs with more shows
   const ranked = [...dogs.entries()].sort(
     (a, b) => (b[1].total_shows || 0) - (a[1].total_shows || 0),
