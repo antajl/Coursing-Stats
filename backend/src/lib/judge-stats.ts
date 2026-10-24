@@ -62,7 +62,11 @@ export function aggregateJudgeStats(results: any[]): Map<string, JudgeStats> {
         if (heat.judges && Array.isArray(heat.judges)) {
           for (const judge of heat.judges) {
             const judgeNum = judge.judge_number;
-            const judgeName = judge.judge_name || judgeNames[judgeNum - 1] || `Судья ${judgeNum}`;
+            const judgeName =
+              judge.judge_name ||
+              (typeof judgeNum === 'number' && judgeNum > 0 ? judgeNames[judgeNum - 1] || `Судья ${judgeNum}` : undefined);
+
+            if (!judgeName || judgeName.includes('undefined')) continue;
 
             if (!judgeStats.has(judgeName)) {
               judgeStats.set(judgeName, {

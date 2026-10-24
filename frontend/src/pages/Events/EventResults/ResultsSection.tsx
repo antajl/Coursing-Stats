@@ -27,23 +27,37 @@ export default function ResultsSection({ results }: ResultsSectionProps) {
     )
   }
 
-  // Detect if this is a racing event
-  const isRacing = results.some(r => {
-    const rawScores = parseRawScores(r.raw_scores_json)
-    return isRacingFormat(rawScores)
-  })
+  // Split results if multi-discipline event (e.g. Marathon with Racing and Coursing)
+  const racingResults = useMemo(() => {
+    return results.filter(r => isRacingFormat(parseRawScores(r.raw_scores_json)))
+  }, [results])
+
+  const coursingResults = useMemo(() => {
+    return results.filter(r => !isRacingFormat(parseRawScores(r.raw_scores_json)))
+  }, [results])
+
+  const isMultiDiscipline = racingResults.length > 0 && coursingResults.length > 0
+  const [activeTab, setActiveTab] = useState<'racing' | 'coursing'>('racing')
+
+  const activeResults = isMultiDiscipline
+    ? (activeTab === 'racing' ? racingResults : coursingResults)
+    : results
+
+  const isRacing = isMultiDiscipline
+    ? activeTab === 'racing'
+    : results.some(r => isRacingFormat(parseRawScores(r.raw_scores_json)))
 
   const bestTimesByRace = useMemo(() => {
-    return isRacing ? getBestTimesByRace(results) : {}
-  }, [isRacing, results])
+    return isRacing ? getBestTimesByRace(activeResults) : {}
+  }, [isRacing, activeResults])
 
   const { grouped, sortedGroups } = isRacing 
-    ? groupRacingResults(results)
-    : groupResultsByBreedClass(results)
+    ? groupRacingResults(activeResults)
+    : groupResultsByBreedClass(activeResults)
 
-  const breeds = Array.from(new Set(results.map(r => r.dog.breed))).sort()
+  const breeds = Array.from(new Set(activeResults.map(r => r.dog.breed))).sort()
 
-  const filteredResults = results.filter(result => {
+  const filteredResults = activeResults.filter(result => {
     const matchesSearch = searchQuery === '' ||
       result.name_ru?.toLowerCase().includes(searchQuery.toLowerCase()) ||
       result.name_lat?.toLowerCase().includes(searchQuery.toLowerCase())
@@ -59,6 +73,44 @@ export default function ResultsSection({ results }: ResultsSectionProps) {
 
   return (
     <div className="space-y-4">
+      {isMultiDiscipline && (
+        <div className="flex border-b border-old-money-200 gap-2 overflow-x-auto pb-px">
+          <button
+            type="button"
+            onClick={() => {
+              setActiveTab('racing')
+              setSelectedBreed('')
+            }}
+            className={`min-h-[44px] px-4 py-2 text-sm font-semibold rounded-t-lg transition-colors flex items-center gap-2 whitespace-nowrap ${
+              activeTab === 'racing'
+                ? 'bg-camel-100 text-camel-900 border-b-2 border-camel-700'
+                : 'text-charcoal-600 hover:text-charcoal-900 hover:bg-cream-100'
+            }`}
+          >
+            <span>1-й раунд: Рейсинг (480 м)</span>
+            <span className="rounded-full bg-camel-200/70 px-2 py-0.5 text-xs text-camel-800 tabular-nums">
+              {racingResults.length}
+            </span>
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              setActiveTab('coursing')
+              setSelectedBreed('')
+            }}
+            className={`min-h-[44px] px-4 py-2 text-sm font-semibold rounded-t-lg transition-colors flex items-center gap-2 whitespace-nowrap ${
+              activeTab === 'coursing'
+                ? 'bg-camel-100 text-camel-900 border-b-2 border-camel-700'
+                : 'text-charcoal-600 hover:text-charcoal-900 hover:bg-cream-100'
+            }`}
+          >
+            <span>2-й раунд: Курсинг</span>
+            <span className="rounded-full bg-camel-200/70 px-2 py-0.5 text-xs text-camel-800 tabular-nums">
+              {coursingResults.length}
+            </span>
+          </button>
+        </div>
+      )}
       <div className="flex flex-col sm:flex-row gap-3">
         <div className="relative flex-1">
           <input

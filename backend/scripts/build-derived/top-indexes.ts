@@ -23,7 +23,9 @@ const PLACEMENT_ALL_YEARS_SQL = `
   FROM results r
   JOIN dogs d ON d.id = r.dog_id
   JOIN events e ON r.event_id = e.id
-  WHERE r.status IN ${PARTICIPATION_STATUSES_SQL} AND e.event_type IN ('coursing', 'bzmp')
+  WHERE r.status IN ${PARTICIPATION_STATUSES_SQL}
+    AND e.event_type IN ('coursing', 'bzmp')
+    AND (r.raw_scores_json IS NULL OR r.raw_scores_json NOT LIKE '%"round_time"%')
   GROUP BY d.id
   ORDER BY gold DESC, silver DESC, bronze DESC
 `;
@@ -53,7 +55,9 @@ const SCORE_ALL_YEARS_SQL = `
   FROM results r
   JOIN dogs d ON d.id = r.dog_id
   JOIN events e ON r.event_id = e.id
-  WHERE r.status IN ${PARTICIPATION_STATUSES_SQL} AND e.event_type IN ('coursing', 'bzmp')
+  WHERE r.status IN ${PARTICIPATION_STATUSES_SQL}
+    AND e.event_type IN ('coursing', 'bzmp')
+    AND (r.raw_scores_json IS NULL OR r.raw_scores_json NOT LIKE '%"round_time"%')
   GROUP BY d.id
 `;
 
@@ -93,6 +97,7 @@ export function buildTopIndexes(db: Database.Database) {
         JOIN events e ON r.event_id = e.id
         WHERE r.status IN ${PARTICIPATION_STATUSES_SQL}
           AND e.event_type IN ('coursing', 'bzmp')
+          AND (r.raw_scores_json IS NULL OR r.raw_scores_json NOT LIKE '%"round_time"%')
           AND e.year = ?
           AND e.date_start != ?
         GROUP BY d.id

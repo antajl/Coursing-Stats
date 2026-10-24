@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/index-top-placement-v1",
   "year": null,
-  "count": 1849,
+  "count": 1859,
   "items": [
     {
       "dog_id": 182,
@@ -1284,6 +1284,19 @@
       "sex": "M"
     },
     {
+      "dog_id": 10065,
+      "name_lat": "RUSSKIY AZART INTENSEDOR MONDEO ESTRAVADOS AT SOLOVYEV",
+      "name_ru": "RUSSKIY AZART INTENSEDOR MONDEO ESTRAVADOS AT SOLOVYEV",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2017,
+      "year_to": 2019,
+      "gold": 3,
+      "silver": 3,
+      "bronze": 1,
+      "total_starts": 7,
+      "sex": "M"
+    },
+    {
       "dog_id": 5748,
       "name_lat": "VENTO STELLARE ARCHIBALD",
       "name_ru": "ВЕНТО СТЕЛЛАРЕ АРЧИБАЛЬД",
@@ -2330,19 +2343,6 @@
       "sex": "M"
     },
     {
-      "dog_id": 10065,
-      "name_lat": "RUSSKIY AZART INTENSEDOR MONDEO ESTRAVADOS AT SOLOVYEV",
-      "name_ru": "RUSSKIY AZART INTENSEDOR MONDEO ESTRAVADOS AT SOLOVYEV",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "year_from": 2017,
-      "year_to": 2019,
-      "gold": 2,
-      "silver": 2,
-      "bronze": 1,
-      "total_starts": 5,
-      "sex": "M"
-    },
-    {
       "dog_id": 10332,
       "name_lat": "REEDLY ROAD QUE TAL",
       "name_ru": "REEDLY ROAD QUE TAL",
@@ -2913,6 +2913,19 @@
       "bronze": 0,
       "total_starts": 4,
       "sex": "M"
+    },
+    {
+      "dog_id": 10251,
+      "name_lat": "KAVALERKA",
+      "name_ru": "KAVALERKA",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2018,
+      "year_to": 2019,
+      "gold": 2,
+      "silver": 1,
+      "bronze": 0,
+      "total_starts": 3,
+      "sex": "F"
     },
     {
       "dog_id": 10319,
@@ -5585,6 +5598,19 @@
       "sex": "F"
     },
     {
+      "dog_id": 9843,
+      "name_lat": "LOVETS UDALETS",
+      "name_ru": "ЛОВЕЦ УДАЛЕЦ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2015,
+      "year_to": 2019,
+      "gold": 1,
+      "silver": 1,
+      "bronze": 0,
+      "total_starts": 3,
+      "sex": "M"
+    },
+    {
       "dog_id": 9876,
       "name_lat": "REEDLY ROAD GOOD MORNING",
       "name_ru": "REEDLY ROAD GOOD MORNING",
@@ -5724,6 +5750,19 @@
       "silver": 1,
       "bronze": 0,
       "total_starts": 3,
+      "sex": "F"
+    },
+    {
+      "dog_id": 10273,
+      "name_lat": "SOLOVYEV TSAREVNA LEBED",
+      "name_ru": "SOLOVYEV TSAREVNA LEBED",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2019,
+      "year_to": 2019,
+      "gold": 1,
+      "silver": 1,
+      "bronze": 0,
+      "total_starts": 5,
       "sex": "F"
     },
     {
@@ -5884,6 +5923,58 @@
       "breed": "Уиппет",
       "year_from": 2026,
       "year_to": 2026,
+      "gold": 1,
+      "silver": 1,
+      "bronze": 0,
+      "total_starts": 2,
+      "sex": "F"
+    },
+    {
+      "dog_id": 10827,
+      "name_lat": "RAS-PUTIN",
+      "name_ru": "РАС-ПУТИН",
+      "breed": "Русская псовая борзая",
+      "year_from": 2019,
+      "year_to": 2019,
+      "gold": 1,
+      "silver": 1,
+      "bronze": 0,
+      "total_starts": 2,
+      "sex": "M"
+    },
+    {
+      "dog_id": 10828,
+      "name_lat": "RE-KRUT",
+      "name_ru": "РЕ-КРУТ",
+      "breed": "Русская псовая борзая",
+      "year_from": 2019,
+      "year_to": 2019,
+      "gold": 1,
+      "silver": 1,
+      "bronze": 0,
+      "total_starts": 2,
+      "sex": "M"
+    },
+    {
+      "dog_id": 10830,
+      "name_lat": "VASART SOLARE",
+      "name_ru": "ВАСАРТ СОЛАРЕ",
+      "breed": "Русская псовая борзая",
+      "year_from": 2019,
+      "year_to": 2019,
+      "gold": 1,
+      "silver": 1,
+      "bronze": 0,
+      "total_starts": 2,
+      "sex": "F"
+    },
+    {
+      "dog_id": 10831,
+      "name_lat": "POCO-MAXA",
+      "name_ru": "ПОКО-МАХА",
+      "breed": "Русская псовая борзая",
+      "year_from": 2019,
+      "year_to": 2019,
       "gold": 1,
       "silver": 1,
       "bronze": 0,
@@ -9311,18 +9402,6 @@
       "total_starts": 1
     },
     {
-      "dog_id": 10251,
-      "name_lat": "KAVALERKA",
-      "name_ru": "KAVALERKA",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "year_from": 2018,
-      "year_to": 2018,
-      "gold": 1,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 1
-    },
-    {
       "dog_id": 10255,
       "name_lat": "FIERCE FIREBALL FIFTH GEAR",
       "name_ru": "FIERCE FIREBALL FIFTH GEAR",
@@ -11702,6 +11781,19 @@
       "sex": "M"
     },
     {
+      "dog_id": 10204,
+      "name_lat": "OBEREG",
+      "name_ru": "OBEREG",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2019,
+      "year_to": 2019,
+      "gold": 0,
+      "silver": 1,
+      "bronze": 1,
+      "total_starts": 2,
+      "sex": "M"
+    },
+    {
       "dog_id": 10217,
       "name_lat": "HEPI HEPRI ONE WISH",
       "name_ru": "HEPI HEPRI ONE WISH",
@@ -13670,19 +13762,6 @@
       "total_starts": 1
     },
     {
-      "dog_id": 10204,
-      "name_lat": "OBEREG",
-      "name_ru": "OBEREG",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "year_from": 2019,
-      "year_to": 2019,
-      "gold": 0,
-      "silver": 1,
-      "bronze": 0,
-      "total_starts": 1,
-      "sex": "M"
-    },
-    {
       "dog_id": 10213,
       "name_lat": "BONNY",
       "name_ru": "BONNY",
@@ -14798,6 +14877,19 @@
       "sex": "F"
     },
     {
+      "dog_id": 10832,
+      "name_lat": "ROSSI-YANKA",
+      "name_ru": "РОССИ-ЯНКА",
+      "breed": "Русская псовая борзая",
+      "year_from": 2019,
+      "year_to": 2019,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 2,
+      "total_starts": 2,
+      "sex": "F"
+    },
+    {
       "dog_id": 6,
       "name_lat": "ИРИШМАН АНАЙРЭ",
       "name_ru": "ИРИШМАН АНАЙРЭ",
@@ -15805,6 +15897,19 @@
       "sex": "M"
     },
     {
+      "dog_id": 9479,
+      "name_lat": "SOLOVYEV SHELKOVYI ANGEL",
+      "name_ru": "СОЛОВЬЕВ ШЕЛКОВЫЙ АНГЕЛ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2019,
+      "year_to": 2019,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 1,
+      "total_starts": 2,
+      "sex": "M"
+    },
+    {
       "dog_id": 9515,
       "name_lat": "PERM VELIKAYA SAFYANA",
       "name_ru": "ПЕРМЬ ВЕЛИКАЯ САФЬЯНА",
@@ -16069,6 +16174,19 @@
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "year_from": 2015,
       "year_to": 2018,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 1,
+      "total_starts": 2,
+      "sex": "F"
+    },
+    {
+      "dog_id": 9856,
+      "name_lat": "PATRIARSHIE PRUDY RASKIDA",
+      "name_ru": "PATRIARSHIE PRUDY RASKIDA",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2015,
+      "year_to": 2019,
       "gold": 0,
       "silver": 0,
       "bronze": 1,
@@ -16356,6 +16474,19 @@
       "silver": 0,
       "bronze": 1,
       "total_starts": 2,
+      "sex": "M"
+    },
+    {
+      "dog_id": 10056,
+      "name_lat": "SOLOVYEV BRAVY GUSAR",
+      "name_ru": "SOLOVYEV BRAVY GUSAR",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2017,
+      "year_to": 2019,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 1,
+      "total_starts": 3,
       "sex": "M"
     },
     {
@@ -16986,6 +17117,32 @@
       "breed": "Салюки",
       "year_from": 2026,
       "year_to": 2026,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 1,
+      "total_starts": 1,
+      "sex": "M"
+    },
+    {
+      "dog_id": 10822,
+      "name_lat": "CHARODEYKA MOEY DUSHI IZ RAZDOLIA",
+      "name_ru": "ЧАРОДЕЙКА МОЕЙ ДУШИ ИЗ РАЗДОЛЬЯ",
+      "breed": "Русская псовая борзая",
+      "year_from": 2019,
+      "year_to": 2019,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 1,
+      "total_starts": 1,
+      "sex": "F"
+    },
+    {
+      "dog_id": 10829,
+      "name_lat": "YASNYJ SOKOL IZ RAZDOLIA",
+      "name_ru": "ЯСНЫЙ СОКОЛ ИЗ РАЗДОЛЬЯ",
+      "breed": "Русская псовая борзая",
+      "year_from": 2019,
+      "year_to": 2019,
       "gold": 0,
       "silver": 0,
       "bronze": 1,
@@ -20833,19 +20990,6 @@
       "sex": "M"
     },
     {
-      "dog_id": 9843,
-      "name_lat": "LOVETS UDALETS",
-      "name_ru": "ЛОВЕЦ УДАЛЕЦ",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "year_from": 2015,
-      "year_to": 2015,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 1,
-      "sex": "M"
-    },
-    {
       "dog_id": 9844,
       "name_lat": "DOROGOY DRUG RAZLETKA",
       "name_ru": "DOROGOY DRUG RAZLETKA",
@@ -20963,29 +21107,16 @@
       "sex": "F"
     },
     {
-      "dog_id": 9856,
-      "name_lat": "PATRIARSHIE PRUDY RASKIDA",
-      "name_ru": "PATRIARSHIE PRUDY RASKIDA",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "year_from": 2015,
-      "year_to": 2015,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 1,
-      "sex": "F"
-    },
-    {
       "dog_id": 9857,
       "name_lat": "PATRIARSHIE PRUDY RUSSA",
       "name_ru": "PATRIARSHIE PRUDY RUSSA",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "year_from": 2015,
-      "year_to": 2015,
+      "year_to": 2019,
       "gold": 0,
       "silver": 0,
       "bronze": 0,
-      "total_starts": 1,
+      "total_starts": 3,
       "sex": "F"
     },
     {
@@ -21655,19 +21786,6 @@
       "silver": 0,
       "bronze": 0,
       "total_starts": 1
-    },
-    {
-      "dog_id": 10056,
-      "name_lat": "SOLOVYEV BRAVY GUSAR",
-      "name_ru": "SOLOVYEV BRAVY GUSAR",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "year_from": 2017,
-      "year_to": 2017,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 1,
-      "sex": "M"
     },
     {
       "dog_id": 10057,
@@ -22415,19 +22533,6 @@
       "bronze": 0,
       "total_starts": 1,
       "sex": "M"
-    },
-    {
-      "dog_id": 10273,
-      "name_lat": "SOLOVYEV TSAREVNA LEBED",
-      "name_ru": "SOLOVYEV TSAREVNA LEBED",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "year_from": 2019,
-      "year_to": 2019,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 3,
-      "sex": "F"
     },
     {
       "dog_id": 10274,
@@ -23803,6 +23908,32 @@
       "bronze": 0,
       "total_starts": 1,
       "sex": "M"
+    },
+    {
+      "dog_id": 10819,
+      "name_lat": "ZHURAVLIK",
+      "name_ru": "ЖУРАВЛИК",
+      "breed": "Русская псовая борзая",
+      "year_from": 2019,
+      "year_to": 2019,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 2,
+      "sex": "M"
+    },
+    {
+      "dog_id": 10824,
+      "name_lat": "SOLOVYEV SNEZHNAYA BRUNHILDA",
+      "name_ru": "СОЛОВЬЕВ СНЕЖНАЯ БРУНГИЛЬДА",
+      "breed": "Русская псовая борзая",
+      "year_from": 2019,
+      "year_to": 2019,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 1,
+      "sex": "F"
     }
   ]
 }

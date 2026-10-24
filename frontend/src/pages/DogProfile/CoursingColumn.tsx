@@ -130,7 +130,7 @@ export function CoursingColumn({
                     <div className="flex items-center gap-1.5 leading-tight">
                       <span className="text-sm font-bold text-forest-950 xl:text-base truncate block">
                         {has2026
-                          ? `#${rank.yearBreedRank} в сезоне 2026`
+                          ? `#${rank.yearBreedRank} в 2026`
                           : hasHistory
                             ? `№${rank.breedRank} за всё время`
                             : 'Состязания'}
