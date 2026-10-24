@@ -199,3 +199,6 @@ CHANGELOG.md
 # Temporary inspect & dump scripts/files
 temp_*
 backend/scripts/*.py
+
+__pycache__/
+*.pyc
