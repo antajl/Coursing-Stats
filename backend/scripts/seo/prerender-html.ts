@@ -703,6 +703,21 @@ export function formatEventDateRu(dateStr?: string | null): string {
   return `${parseInt(d, 10)} ${monthName} ${y} г.`
 }
 
+/** Преобразует дату (DD.MM.YYYY или ISO) в канонический формат ISO 8601 YYYY-MM-DD для Schema.org */
+export function toIsoDate(dateStr?: string | null): string | undefined {
+  if (!dateStr) return undefined
+  const s = String(dateStr).trim()
+  const dmy = s.match(/^(\d{2})\.(\d{2})\.(\d{4})$/)
+  if (dmy) {
+    return `${dmy[3]}-${dmy[2]}-${dmy[1]}`
+  }
+  const iso = s.match(/^(\d{4}-\d{2}-\d{2})/)
+  if (iso) {
+    return iso[1]
+  }
+  return undefined
+}
+
 export function buildDogBodyHtml(dog: DogProfileInput): string {
   const name = dog.name || 'Собака'
   const breed = dog.breed ? ` (${dog.breed})` : ''
@@ -858,7 +873,7 @@ export function dogMetaFromProfile(profile: {
     '@graph': [
       breadcrumbJsonLd(breadcrumbs),
       {
-        '@type': 'ProfilePage',
+        '@type': 'ItemPage',
         '@id': `${SITE_ORIGIN}/dog/${id}/`,
         url: `${SITE_ORIGIN}/dog/${id}/`,
         name: displayName,
@@ -950,7 +965,7 @@ export function dogMetaFromShowRanking(entry: {
     '@graph': [
       breadcrumbJsonLd(breadcrumbs),
       {
-        '@type': 'ProfilePage',
+        '@type': 'ItemPage',
         '@id': `${SITE_ORIGIN}/dog/${id}/`,
         url: `${SITE_ORIGIN}/dog/${id}/`,
         name: displayName,
@@ -1036,6 +1051,8 @@ export function eventMetaFromEntry(entry: {
   id: string
   title?: string | null
   date_start?: string | null
+  date_end?: string | null
+  organizer?: string | null
   location?: string | null
   result_count?: number | null
   event_type?: string | null
@@ -1106,6 +1123,10 @@ export function eventMetaFromEntry(entry: {
     { name: headline, url: `/event/${entry.id}/` },
   ]
 
+  const startIso = toIsoDate(entry.date_start)
+  const endIso = toIsoDate(entry.date_end) || startIso
+  const organizerName = entry.organizer?.trim() || 'Российская кинологическая федерация (РКФ)'
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -1115,7 +1136,14 @@ export function eventMetaFromEntry(entry: {
         '@id': `${SITE_ORIGIN}/event/${entry.id}/`,
         url: `${SITE_ORIGIN}/event/${entry.id}/`,
         name: headline,
-        ...(entry.date_start ? { startDate: entry.date_start } : {}),
+        ...(startIso ? { startDate: startIso } : {}),
+        ...(endIso ? { endDate: endIso } : {}),
+        eventStatus: 'https://schema.org/EventScheduled',
+        eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+        organizer: {
+          '@type': 'Organization',
+          name: organizerName,
+        },
         ...(location
           ? {
               location: {
@@ -1272,7 +1300,7 @@ export function doninoMeta(dog: { name: string; breed: string }): SimpleEntityMe
     '@graph': [
       breadcrumbJsonLd(breadcrumbs),
       {
-        '@type': 'ProfilePage',
+        '@type': 'ItemPage',
         '@id': url,
         url,
         name: `${dog.name} (${dog.breed})`,
@@ -1308,6 +1336,7 @@ export function exhibitionMeta(entry: {
   date?: string | null
   city?: string | null
   dogCount?: number | null
+  club?: string | null
 }): SimpleEntityMeta {
   const headline = entry.title?.trim() || `Выставка ${entry.id}`
   const date = entry.date || ''
@@ -1332,6 +1361,9 @@ export function exhibitionMeta(entry: {
     { name: headline, url: `/shows/exhibition/${entry.id}/` },
   ]
 
+  const startDateIso = toIsoDate(date)
+  const organizerName = entry.club?.trim() || 'Российская кинологическая федерация (РКФ)'
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -1341,8 +1373,28 @@ export function exhibitionMeta(entry: {
         '@id': `${SITE_ORIGIN}/shows/exhibition/${entry.id}/`,
         url: `${SITE_ORIGIN}/shows/exhibition/${entry.id}/`,
         name: headline,
-        ...(date ? { startDate: date } : {}),
-        ...(city ? { location: { '@type': 'Place', name: city } } : {}),
+        ...(startDateIso
+          ? {
+              startDate: startDateIso,
+              endDate: startDateIso,
+            }
+          : {}),
+        eventStatus: 'https://schema.org/EventScheduled',
+        eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+        organizer: {
+          '@type': 'Organization',
+          name: organizerName,
+          url: 'https://rkf.org.ru',
+        },
+        location: {
+          '@type': 'Place',
+          name: city || 'Россия',
+          address: {
+            '@type': 'PostalAddress',
+            ...(city ? { addressLocality: city } : {}),
+            addressCountry: 'RU',
+          },
+        },
         description,
       },
     ],

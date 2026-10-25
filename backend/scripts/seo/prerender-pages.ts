@@ -488,9 +488,12 @@ function prerenderDoninoDogs(spaHtml: string): number {
 
 function buildCalendarExhibitionLookup(): Map<
   string,
-  { title?: string | null; date?: string | null; city?: string | null }
+  { title?: string | null; date?: string | null; city?: string | null; club?: string | null }
 > {
-  const map = new Map<string, { title?: string | null; date?: string | null; city?: string | null }>()
+  const map = new Map<
+    string,
+    { title?: string | null; date?: string | null; city?: string | null; club?: string | null }
+  >()
   const dir = path.join(ROOT, 'data/v1/shows/calendar-rkf')
   if (!fs.existsSync(dir)) return map
   for (const file of fs.readdirSync(dir)) {
@@ -502,14 +505,16 @@ function buildCalendarExhibitionLookup(): Map<
         title?: string | null
         date?: string | null
         city?: string | null
+        club?: string | null
       }>
     }>(path.join(dir, file))
     for (const e of doc?.exhibitions || []) {
+      const info = { title: e.title, date: e.date, city: e.city, club: e.club }
       if (e.id != null) {
-        map.set(String(e.id), { title: e.title, date: e.date, city: e.city })
+        map.set(String(e.id), info)
       }
       if (e.lc_exhibition_id != null) {
-        map.set(String(e.lc_exhibition_id), { title: e.title, date: e.date, city: e.city })
+        map.set(String(e.lc_exhibition_id), info)
       }
     }
   }
@@ -536,6 +541,7 @@ function prerenderExhibitions(spaHtml: string): number {
     let title = calMeta?.title || null
     let date = calMeta?.date || null
     let city = calMeta?.city || null
+    let club = calMeta?.club || null
 
     const type1 = readJsonFile<{ dogs?: unknown[]; dogs_count?: number }>(
       path.join(ROOT, 'data/v1/shows/exhibitions', `${id}-type1.json`),
@@ -549,6 +555,7 @@ function prerenderExhibitions(spaHtml: string): number {
         title?: string
         date?: string
         city?: string
+        club?: string
         dogs?: unknown[]
         results?: unknown[]
       }>(path.join(ROOT, 'data/v1/shows', index[id]))
@@ -556,6 +563,7 @@ function prerenderExhibitions(spaHtml: string): number {
         title = title || fileEx.title || null
         date = date || fileEx.date || null
         city = city || fileEx.city || null
+        club = club || fileEx.club || null
         dogCount =
           (Array.isArray(fileEx.dogs) && fileEx.dogs.length) ||
           (Array.isArray(fileEx.results) && fileEx.results.length) ||
@@ -563,7 +571,7 @@ function prerenderExhibitions(spaHtml: string): number {
       }
     }
 
-    const meta = exhibitionMeta({ id, title, date, city, dogCount })
+    const meta = exhibitionMeta({ id, title, date, city, dogCount, club })
     const html = applyMetaToSpaShell(spaHtml, {
       title: meta.title,
       description: meta.description,

@@ -14,11 +14,13 @@ import {
   DEFAULT_GUIDE_SPEED_FAQS,
   escapeHtml,
   eventMetaFromEntry,
+  exhibitionMeta,
   guideJsonLd,
   homepageJsonLd,
   HUB_PAGES,
   showJudgeMeta,
   sportJudgeMeta,
+  toIsoDate,
 } from '../scripts/seo/prerender-html'
 
 const SPA_SHELL = `<!doctype html>
@@ -200,14 +202,14 @@ describe('prerender-seo helpers', () => {
     expect(meta.body.rawRuName).toBe('ЭМУЛЬ ДЭ ГЕПАРД ГЕЛИЛА АЛЬ РАВДА')
     expect(meta.body.rawLatName).toBe('EMUL DE GEPARD GELILA AL RAWDA')
 
-    // JSON-LD contains ProfilePage with name and alternateName
+    // JSON-LD contains ItemPage with name and alternateName
     expect(meta.jsonLd).toBeDefined()
     const graph = (meta.jsonLd as any)['@graph'] as any[]
     expect(Array.isArray(graph)).toBe(true)
-    const profilePage = graph.find((item) => item['@type'] === 'ProfilePage')
-    expect(profilePage).toBeDefined()
-    expect(profilePage.mainEntity.name).toBe('Эмуль Дэ Гепард Гелила Аль Равда')
-    expect(profilePage.mainEntity.alternateName).toContain('Emul de Gepard Gelila Al Rawda')
+    const itemPage = graph.find((item) => item['@type'] === 'ItemPage')
+    expect(itemPage).toBeDefined()
+    expect(itemPage.mainEntity.name).toBe('Эмуль Дэ Гепард Гелила Аль Равда')
+    expect(itemPage.mainEntity.alternateName).toContain('Emul de Gepard Gelila Al Rawda')
   })
 
   it('HUB_PAGES: clean brand descriptions without procoursing or technical jargon', () => {
@@ -281,6 +283,12 @@ describe('prerender-seo helpers', () => {
     expect(meta.description).toContain('Победители: Юнион Светлый (Уиппет, 369 б., ПЧРКФ РК)')
     const sportsEvent = (meta.jsonLd as any)['@graph'].find((item: any) => item['@type'] === 'SportsEvent')
     expect(sportsEvent).toBeDefined()
+    expect(sportsEvent.startDate).toBe('2026-06-20')
+    expect(sportsEvent.endDate).toBe('2026-06-20')
+    expect(sportsEvent.eventStatus).toBe('https://schema.org/EventScheduled')
+    expect(sportsEvent.eventAttendanceMode).toBe('https://schema.org/OfflineEventAttendanceMode')
+    expect(sportsEvent.organizer['@type']).toBe('Organization')
+    expect(sportsEvent.organizer.name).toBe('Российская кинологическая федерация (РКФ)')
     expect(sportsEvent.award).toContain('Юнион Светлый (Уиппет, 369 б., ПЧРКФ РК)')
     expect(sportsEvent.competitor[0].name).toBe('Юнион Светлый')
   })
@@ -416,4 +424,33 @@ describe('prerender-seo helpers', () => {
     expect(sportsEvent.location['@type']).toBe('Place')
     expect(sportsEvent.location.address.addressLocality).toBe('Московская область, Донино')
   })
-})
+  it('exhibitionMeta converts DD.MM.YYYY to ISO 8601 and includes eventStatus and organizer', () => {
+    const meta = exhibitionMeta({
+      id: '66457',
+      title: 'Рейтинговая выставка клуба "МОО КЛЖ СИБИРЯК"',
+      date: '31.08.2024',
+      city: 'Горно-Алтайск',
+      dogCount: 356,
+      club: 'МОО КЛЖ СИБИРЯК',
+    })
+
+    const event = (meta.jsonLd as any)['@graph'].find((i: any) => i['@type'] === 'Event')
+    expect(event).toBeDefined()
+    expect(event.startDate).toBe('2024-08-31')
+    expect(event.endDate).toBe('2024-08-31')
+    expect(event.eventStatus).toBe('https://schema.org/EventScheduled')
+    expect(event.eventAttendanceMode).toBe('https://schema.org/OfflineEventAttendanceMode')
+    expect(event.organizer['@type']).toBe('Organization')
+    expect(event.organizer.name).toBe('МОО КЛЖ СИБИРЯК')
+    expect(event.location['@type']).toBe('Place')
+    expect(event.location.name).toBe('Горно-Алтайск')
+    expect(event.location.address.addressLocality).toBe('Горно-Алтайск')
+  })
+
+  it('toIsoDate handles DD.MM.YYYY, ISO dates and empty values correctly', () => {
+    expect(toIsoDate('31.08.2024')).toBe('2024-08-31')
+    expect(toIsoDate('2026-06-15')).toBe('2026-06-15')
+    expect(toIsoDate('')).toBeUndefined()
+    expect(toIsoDate(null)).toBeUndefined()
+  })
+});

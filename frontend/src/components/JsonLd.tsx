@@ -81,7 +81,7 @@ export function profilePageSchema(options: {
 }): Record<string, unknown> {
   return {
     '@context': 'https://schema.org',
-    '@type': 'ProfilePage',
+    '@type': 'ItemPage',
     '@id': options.url,
     url: options.url,
     name: options.name,
@@ -96,25 +96,58 @@ export function profilePageSchema(options: {
   }
 }
 
+export const itemPageSchema = profilePageSchema
+
+function toIsoDate(dateStr?: string | null): string | null {
+  if (!dateStr) return null
+  const s = String(dateStr).trim()
+  const dmy = s.match(/^(\d{2})\.(\d{2})\.(\d{4})$/)
+  if (dmy) {
+    return `${dmy[3]}-${dmy[2]}-${dmy[1]}`
+  }
+  const iso = s.match(/^(\d{4}-\d{2}-\d{2})/)
+  if (iso) {
+    return iso[1]
+  }
+  return s
+}
+
 export function sportsEventSchema(options: {
   url: string
   name: string
   startDate?: string | null
+  endDate?: string | null
   location?: string | null
+  organizer?: string | null
   description?: string
 }): Record<string, unknown> {
+  const startIso = toIsoDate(options.startDate)
+  const endIso = toIsoDate(options.endDate) || startIso
+
   return {
     '@context': 'https://schema.org',
     '@type': 'SportsEvent',
     '@id': options.url,
     url: options.url,
     name: options.name,
-    ...(options.startDate ? { startDate: options.startDate } : {}),
+    ...(startIso ? { startDate: startIso } : {}),
+    ...(endIso ? { endDate: endIso } : {}),
+    eventStatus: 'https://schema.org/EventScheduled',
+    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+    organizer: {
+      '@type': 'Organization',
+      name: options.organizer || 'Российская кинологическая федерация (РКФ)',
+    },
     ...(options.location
       ? {
           location: {
             '@type': 'Place',
             name: options.location,
+            address: {
+              '@type': 'PostalAddress',
+              addressLocality: options.location,
+              addressCountry: 'RU',
+            },
           },
         }
       : {}),
