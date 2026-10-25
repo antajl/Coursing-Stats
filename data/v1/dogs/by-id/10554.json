@@ -6,12 +6,16 @@
   "name_lat": "KORVET ZVEZDNYY IZ POLETA MECHTI",
   "name_ru": "KORVET ZVEZDNYY IZ POLETA MECHTI",
   "breed": "УИППЕТ",
-  "sex": null,
+  "sex": "Кобель",
   "owner": null,
   "competition_ids": [
-    1579
+    1579,
+    20191005,
+    20201003
   ],
   "competition_files": [
-    "competitions/2021/08-август/1579-чемпионат-ркф-cacl-по-бегам-борзых-за-механическ.json"
+    "competitions/2021/08-август/1579-чемпионат-ркф-cacl-по-бегам-борзых-за-механическ.json",
+    "competitions/2019/10-октябрь/20191005-международные-состязания-по-курсингу-cacil-cacl.json",
+    "competitions/2020/10-октябрь/20201003-международныи-чемпионат-по-курсингу-cacil-чемпио.json"
   ]
 }

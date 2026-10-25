@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/index-top-speed-v1",
   "year": 2019,
-  "count": 108,
+  "count": 131,
   "items": [
     {
       "dog_id": 10385,
@@ -110,7 +110,7 @@
       "year_to": 2019,
       "best_speed": 52.38,
       "avg_speed": 51.7,
-      "total_starts": 1,
+      "total_starts": 2,
       "rank_delta": -2,
       "rank_delta_breed": -2,
       "sex": "M"
@@ -124,7 +124,7 @@
       "year_to": 2019,
       "best_speed": 52.38,
       "avg_speed": 50.34,
-      "total_starts": 3,
+      "total_starts": 4,
       "rank_delta": -2,
       "rank_delta_breed": -2,
       "sex": "M"
@@ -138,7 +138,7 @@
       "year_to": 2019,
       "best_speed": 52.32,
       "avg_speed": 50.92,
-      "total_starts": 3,
+      "total_starts": 4,
       "rank_delta": -2,
       "rank_delta_breed": -2,
       "sex": "M"
@@ -152,7 +152,7 @@
       "year_to": 2019,
       "best_speed": 52.24,
       "avg_speed": 50.77,
-      "total_starts": 3,
+      "total_starts": 4,
       "rank_delta": 4,
       "rank_delta_breed": 4,
       "sex": "F"
@@ -166,7 +166,7 @@
       "year_to": 2019,
       "best_speed": 52.2,
       "avg_speed": 49.98,
-      "total_starts": 2,
+      "total_starts": 3,
       "rank_delta": 10,
       "rank_delta_breed": 9,
       "sex": "F"
@@ -208,7 +208,7 @@
       "year_to": 2019,
       "best_speed": 51.99,
       "avg_speed": 49.92,
-      "total_starts": 3,
+      "total_starts": 4,
       "rank_delta": -6,
       "rank_delta_breed": -6,
       "sex": "M"
@@ -222,8 +222,8 @@
       "year_to": 2019,
       "best_speed": 51.81,
       "avg_speed": 48.84,
-      "total_starts": 2,
-      "rank_delta": 21,
+      "total_starts": 3,
+      "rank_delta": 22,
       "rank_delta_breed": 16,
       "sex": "M"
     },
@@ -250,7 +250,7 @@
       "year_to": 2019,
       "best_speed": 51.7,
       "avg_speed": 49.64,
-      "total_starts": 2,
+      "total_starts": 3,
       "rank_delta": 9,
       "rank_delta_breed": 7,
       "sex": "M"
@@ -278,7 +278,7 @@
       "year_to": 2019,
       "best_speed": 51.61,
       "avg_speed": 51.48,
-      "total_starts": 1,
+      "total_starts": 2,
       "rank_delta": -9,
       "rank_delta_breed": -9,
       "sex": "M"
@@ -376,7 +376,7 @@
       "year_to": 2019,
       "best_speed": 50.64,
       "avg_speed": 49.28,
-      "total_starts": 2,
+      "total_starts": 3,
       "rank_delta": -8,
       "rank_delta_breed": -8,
       "sex": "M"
@@ -391,7 +391,7 @@
       "best_speed": 50.3,
       "avg_speed": 47.54,
       "total_starts": 3,
-      "rank_delta": 10,
+      "rank_delta": 11,
       "rank_delta_breed": 5,
       "sex": "M"
     },
@@ -418,7 +418,7 @@
       "year_to": 2019,
       "best_speed": 50.19,
       "avg_speed": 49.14,
-      "total_starts": 2,
+      "total_starts": 3,
       "rank_delta": -10,
       "rank_delta_breed": -10,
       "sex": "F"
@@ -432,7 +432,7 @@
       "year_to": 2019,
       "best_speed": 50,
       "avg_speed": 49.94,
-      "total_starts": 1,
+      "total_starts": 2,
       "rank_delta": "NEW",
       "rank_delta_breed": "NEW",
       "sex": "M"
@@ -446,8 +446,8 @@
       "year_to": 2019,
       "best_speed": 49.92,
       "avg_speed": 48.7,
-      "total_starts": 2,
-      "rank_delta": 0,
+      "total_starts": 3,
+      "rank_delta": 1,
       "rank_delta_breed": -4,
       "sex": "M"
     },
@@ -460,8 +460,8 @@
       "year_to": 2019,
       "best_speed": 49.74,
       "avg_speed": 48.57,
-      "total_starts": 2,
-      "rank_delta": 2,
+      "total_starts": 3,
+      "rank_delta": 3,
       "rank_delta_breed": -3,
       "sex": "F"
     },
@@ -488,7 +488,7 @@
       "best_speed": 49.39,
       "avg_speed": 46.89,
       "total_starts": 2,
-      "rank_delta": 7,
+      "rank_delta": 13,
       "rank_delta_breed": 3,
       "sex": "M"
     },
@@ -501,7 +501,7 @@
       "year_to": 2019,
       "best_speed": 49.32,
       "avg_speed": 49.13,
-      "total_starts": 1,
+      "total_starts": 2,
       "rank_delta": "NEW",
       "rank_delta_breed": "NEW",
       "sex": "F"
@@ -515,7 +515,7 @@
       "year_to": 2019,
       "best_speed": 49.3,
       "avg_speed": 48.94,
-      "total_starts": 1,
+      "total_starts": 2,
       "rank_delta": -14,
       "rank_delta_breed": -14,
       "sex": "M"
@@ -584,9 +584,10 @@
       "year_to": 2019,
       "best_speed": 48.21,
       "avg_speed": 48.11,
-      "total_starts": 1,
+      "total_starts": 2,
       "rank_delta": -11,
-      "rank_delta_breed": -11
+      "rank_delta_breed": -11,
+      "sex": "F"
     },
     {
       "dog_id": 10178,
@@ -603,6 +604,20 @@
       "sex": "M"
     },
     {
+      "dog_id": 10204,
+      "name_lat": "OBEREG",
+      "name_ru": "OBEREG",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2019,
+      "year_to": 2019,
+      "best_speed": 48.157,
+      "avg_speed": 48.16,
+      "total_starts": 2,
+      "rank_delta": -12,
+      "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
       "dog_id": 9936,
       "name_lat": "VALPAIN PEK ANZU HANA",
       "name_ru": "VALPAIN PEK ANZU HANA",
@@ -611,7 +626,7 @@
       "year_to": 2019,
       "best_speed": 48.13,
       "avg_speed": 47.49,
-      "total_starts": 1,
+      "total_starts": 2,
       "rank_delta": -11,
       "rank_delta_breed": -10,
       "sex": "F"
@@ -681,10 +696,52 @@
       "year_to": 2019,
       "best_speed": 47.22,
       "avg_speed": 47.22,
-      "total_starts": 1,
+      "total_starts": 2,
       "rank_delta": -10,
       "rank_delta_breed": -8,
       "sex": "F"
+    },
+    {
+      "dog_id": 10542,
+      "name_lat": "BULA",
+      "name_ru": "BULA",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2019,
+      "year_to": 2019,
+      "best_speed": 46.741,
+      "avg_speed": 46.74,
+      "total_starts": 1,
+      "rank_delta": -10,
+      "rank_delta_breed": 0,
+      "sex": "F"
+    },
+    {
+      "dog_id": 10118,
+      "name_lat": "VOLYA VOLNAYA GOSPOZHA UDACHA",
+      "name_ru": "ВОЛЯ ВОЛЬНАЯ ГОСПОЖА УДАЧА",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2019,
+      "year_to": 2019,
+      "best_speed": 46.654,
+      "avg_speed": 46.65,
+      "total_starts": 1,
+      "rank_delta": -10,
+      "rank_delta_breed": 0,
+      "sex": "F"
+    },
+    {
+      "dog_id": 10422,
+      "name_lat": "KATZ PTYAGIN",
+      "name_ru": "KATZ PTYAGIN",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2019,
+      "year_to": 2019,
+      "best_speed": 46.519,
+      "avg_speed": 46.52,
+      "total_starts": 1,
+      "rank_delta": -10,
+      "rank_delta_breed": 0,
+      "sex": "M"
     },
     {
       "dog_id": 10144,
@@ -697,7 +754,36 @@
       "avg_speed": 46.08,
       "total_starts": 1,
       "rank_delta": -10,
-      "rank_delta_breed": -8
+      "rank_delta_breed": -8,
+      "sex": "M"
+    },
+    {
+      "dog_id": 10273,
+      "name_lat": "SOLOVYEV TSAREVNA LEBED",
+      "name_ru": "SOLOVYEV TSAREVNA LEBED",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2019,
+      "year_to": 2019,
+      "best_speed": 46.118,
+      "avg_speed": 45.49,
+      "total_starts": 2,
+      "rank_delta": -10,
+      "rank_delta_breed": 0,
+      "sex": "F"
+    },
+    {
+      "dog_id": 10886,
+      "name_lat": "",
+      "name_ru": "РУССКАЯ ЗАБАВА ЭЛЕКТРА",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2019,
+      "year_to": 2019,
+      "best_speed": 46.021,
+      "avg_speed": 46.02,
+      "total_starts": 1,
+      "rank_delta": -10,
+      "rank_delta_breed": 0,
+      "sex": "F"
     },
     {
       "dog_id": 10150,
@@ -728,6 +814,20 @@
       "sex": "M"
     },
     {
+      "dog_id": 10423,
+      "name_lat": "GOLDEN DREAM ROYAL LILY",
+      "name_ru": "GOLDEN DREAM ROYAL LILY",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2019,
+      "year_to": 2019,
+      "best_speed": 45.806,
+      "avg_speed": 45.81,
+      "total_starts": 1,
+      "rank_delta": -9,
+      "rank_delta_breed": 0,
+      "sex": "F"
+    },
+    {
       "dog_id": 9383,
       "name_lat": "BORZOMIR BASEL AKMAL",
       "name_ru": "BORZOMIR BASEL AKMAL",
@@ -742,6 +842,20 @@
       "sex": "M"
     },
     {
+      "dog_id": 10887,
+      "name_lat": "",
+      "name_ru": "ЕДИНСТВЕННАЯ ОТ ЗЛАТЫ И ЗЕВСА",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2019,
+      "year_to": 2019,
+      "best_speed": 45.254,
+      "avg_speed": 45.25,
+      "total_starts": 1,
+      "rank_delta": -9,
+      "rank_delta_breed": 0,
+      "sex": "F"
+    },
+    {
       "dog_id": 10368,
       "name_lat": "БОРЗОМИР АРМАН",
       "name_ru": "БОРЗОМИР АРМАН",
@@ -752,7 +866,8 @@
       "avg_speed": 44.55,
       "total_starts": 1,
       "rank_delta": -9,
-      "rank_delta_breed": 0
+      "rank_delta_breed": 0,
+      "sex": "M"
     },
     {
       "dog_id": 10366,
@@ -776,25 +891,11 @@
       "year_from": 2019,
       "year_to": 2019,
       "best_speed": 44.895,
-      "avg_speed": 44.9,
-      "total_starts": 1,
+      "avg_speed": 40.28,
+      "total_starts": 2,
       "rank_delta": -9,
       "rank_delta_breed": 0,
       "sex": "M"
-    },
-    {
-      "dog_id": 10273,
-      "name_lat": "SOLOVYEV TSAREVNA LEBED",
-      "name_ru": "SOLOVYEV TSAREVNA LEBED",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "year_from": 2019,
-      "year_to": 2019,
-      "best_speed": 44.871,
-      "avg_speed": 44.87,
-      "total_starts": 1,
-      "rank_delta": -9,
-      "rank_delta_breed": 0,
-      "sex": "F"
     },
     {
       "dog_id": 10831,
@@ -862,7 +963,7 @@
       "best_speed": 44.38,
       "avg_speed": 43.47,
       "total_starts": 3,
-      "rank_delta": -3,
+      "rank_delta": -2,
       "rank_delta_breed": 0,
       "sex": "F"
     },
@@ -891,7 +992,8 @@
       "avg_speed": 37.92,
       "total_starts": 1,
       "rank_delta": -10,
-      "rank_delta_breed": 0
+      "rank_delta_breed": 0,
+      "sex": "F"
     },
     {
       "dog_id": 10370,
@@ -916,7 +1018,7 @@
       "best_speed": 44.25,
       "avg_speed": 43.46,
       "total_starts": 2,
-      "rank_delta": -5,
+      "rank_delta": -2,
       "rank_delta_breed": 1,
       "sex": "M"
     },
@@ -930,7 +1032,7 @@
       "best_speed": 44.19,
       "avg_speed": 42.05,
       "total_starts": 2,
-      "rank_delta": 1,
+      "rank_delta": 5,
       "rank_delta_breed": 0,
       "sex": "F"
     },
@@ -944,6 +1046,20 @@
       "best_speed": 44.127,
       "avg_speed": 44.13,
       "total_starts": 1,
+      "rank_delta": -12,
+      "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
+      "dog_id": 10829,
+      "name_lat": "YASNYJ SOKOL IZ RAZDOLIA",
+      "name_ru": "ЯСНЫЙ СОКОЛ ИЗ РАЗДОЛЬЯ",
+      "breed": "Русская псовая борзая",
+      "year_from": 2019,
+      "year_to": 2019,
+      "best_speed": 44.045,
+      "avg_speed": 41.88,
+      "total_starts": 2,
       "rank_delta": -12,
       "rank_delta_breed": 0,
       "sex": "M"
@@ -986,9 +1102,37 @@
       "best_speed": 43.61,
       "avg_speed": 42.47,
       "total_starts": 2,
-      "rank_delta": -7,
+      "rank_delta": -4,
       "rank_delta_breed": 2,
       "sex": "M"
+    },
+    {
+      "dog_id": 9514,
+      "name_lat": "DONSKOI CARABOSSE",
+      "name_ru": "DONSKOI CARABOSSE",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2019,
+      "year_to": 2019,
+      "best_speed": 43.459,
+      "avg_speed": 43.46,
+      "total_starts": 1,
+      "rank_delta": -12,
+      "rank_delta_breed": 0,
+      "sex": "F"
+    },
+    {
+      "dog_id": 10066,
+      "name_lat": "BARSKAYA PRIKHOT JASMINE",
+      "name_ru": "BARSKAYA PRIKHOT JASMINE",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2019,
+      "year_to": 2019,
+      "best_speed": 43.182,
+      "avg_speed": 43.18,
+      "total_starts": 1,
+      "rank_delta": -12,
+      "rank_delta_breed": 0,
+      "sex": "F"
     },
     {
       "dog_id": 10089,
@@ -1002,6 +1146,20 @@
       "total_starts": 1,
       "rank_delta": -12,
       "rank_delta_breed": -2,
+      "sex": "M"
+    },
+    {
+      "dog_id": 10879,
+      "name_lat": "",
+      "name_ru": "БОРЗОЙ ЦАРСКИЙ ФЕНИКС",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2019,
+      "year_to": 2019,
+      "best_speed": 42.836,
+      "avg_speed": 42.84,
+      "total_starts": 1,
+      "rank_delta": -11,
+      "rank_delta_breed": 0,
       "sex": "M"
     },
     {
@@ -1096,11 +1254,81 @@
       "year_from": 2019,
       "year_to": 2019,
       "best_speed": 41.97,
-      "avg_speed": 41.97,
-      "total_starts": 1,
+      "avg_speed": 41.91,
+      "total_starts": 2,
       "rank_delta": -9,
       "rank_delta_breed": 0,
       "sex": "F"
+    },
+    {
+      "dog_id": 10880,
+      "name_lat": "ANGELUS SPIRIT OF THE TSAR",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2019,
+      "year_to": 2019,
+      "best_speed": 41.732,
+      "avg_speed": 41.73,
+      "total_starts": 1,
+      "rank_delta": -9,
+      "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
+      "dog_id": 10881,
+      "name_lat": "JUSTSO ARCHES OPSIS KALOPSIS",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2019,
+      "year_to": 2019,
+      "best_speed": 41.545,
+      "avg_speed": 41.55,
+      "total_starts": 1,
+      "rank_delta": -9,
+      "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
+      "dog_id": 10882,
+      "name_lat": "BORN TO BE WILD SPIRIT OF THE TSAR",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2019,
+      "year_to": 2019,
+      "best_speed": 41.516,
+      "avg_speed": 41.52,
+      "total_starts": 1,
+      "rank_delta": -9,
+      "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
+      "dog_id": 10888,
+      "name_lat": "",
+      "name_ru": "ГОЛОС ВЕТРА ИЗ РАЗДОЛЬЯ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2019,
+      "year_to": 2019,
+      "best_speed": 41.408,
+      "avg_speed": 41.41,
+      "total_starts": 1,
+      "rank_delta": -9,
+      "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
+      "dog_id": 10883,
+      "name_lat": "",
+      "name_ru": "СИДОР",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2019,
+      "year_to": 2019,
+      "best_speed": 41.273,
+      "avg_speed": 41.27,
+      "total_starts": 1,
+      "rank_delta": -9,
+      "rank_delta_breed": 0,
+      "sex": "M"
     },
     {
       "dog_id": 9939,
@@ -1256,20 +1484,6 @@
       "sex": "M"
     },
     {
-      "dog_id": 10829,
-      "name_lat": "YASNYJ SOKOL IZ RAZDOLIA",
-      "name_ru": "ЯСНЫЙ СОКОЛ ИЗ РАЗДОЛЬЯ",
-      "breed": "Русская псовая борзая",
-      "year_from": 2019,
-      "year_to": 2019,
-      "best_speed": 39.724,
-      "avg_speed": 39.72,
-      "total_starts": 1,
-      "rank_delta": -9,
-      "rank_delta_breed": 0,
-      "sex": "M"
-    },
-    {
       "dog_id": 10165,
       "name_lat": "NASLEDIYE ETERA NINFA DEL BOSCO",
       "name_ru": "NASLEDIYE ETERA NINFA DEL BOSCO",
@@ -1334,8 +1548,8 @@
       "year_from": 2019,
       "year_to": 2019,
       "best_speed": 38.954,
-      "avg_speed": 38.95,
-      "total_starts": 1,
+      "avg_speed": 37.05,
+      "total_starts": 2,
       "rank_delta": -10,
       "rank_delta_breed": 0,
       "sex": "F"
@@ -1377,8 +1591,8 @@
       "year_from": 2019,
       "year_to": 2019,
       "best_speed": 38.692,
-      "avg_speed": 38.69,
-      "total_starts": 1,
+      "avg_speed": 38.16,
+      "total_starts": 2,
       "rank_delta": -10,
       "rank_delta_breed": 0,
       "sex": "F"
@@ -1424,6 +1638,20 @@
       "rank_delta_breed": 0
     },
     {
+      "dog_id": 10884,
+      "name_lat": "",
+      "name_ru": "УЛАН",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2019,
+      "year_to": 2019,
+      "best_speed": 37.318,
+      "avg_speed": 37.32,
+      "total_starts": 1,
+      "rank_delta": -9,
+      "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
       "dog_id": 10166,
       "name_lat": "AFRIKANSKIY MOLCHUN ELEGANTNAYA MOYA",
       "name_ru": "AFRIKANSKIY MOLCHUN ELEGANTNAYA MOYA",
@@ -1438,6 +1666,20 @@
       "sex": "F"
     },
     {
+      "dog_id": 9850,
+      "name_lat": "ДВИНСКОЙ РОСЯ",
+      "name_ru": "ДВИНСКОЙ РОСЯ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2019,
+      "year_to": 2019,
+      "best_speed": 36.598,
+      "avg_speed": 36.6,
+      "total_starts": 1,
+      "rank_delta": -9,
+      "rank_delta_breed": 0,
+      "sex": "F"
+    },
+    {
       "dog_id": 10138,
       "name_lat": "EMIRESKY TSAR",
       "name_ru": "EMIRESKY TSAR",
@@ -1446,10 +1688,24 @@
       "year_to": 2019,
       "best_speed": 36.56,
       "avg_speed": 35.23,
-      "total_starts": 1,
+      "total_starts": 2,
       "rank_delta": -9,
       "rank_delta_breed": 0,
       "aggression_count": 1,
+      "sex": "M"
+    },
+    {
+      "dog_id": 10885,
+      "name_lat": "",
+      "name_ru": "ГЕРМЕС ИЗ СЕВЕРНОЙ ОХОТЫ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2019,
+      "year_to": 2019,
+      "best_speed": 36.529,
+      "avg_speed": 36.53,
+      "total_starts": 1,
+      "rank_delta": -9,
+      "rank_delta_breed": 0,
       "sex": "M"
     },
     {
@@ -1464,6 +1720,48 @@
       "total_starts": 1,
       "rank_delta": "NEW",
       "rank_delta_breed": "NEW",
+      "sex": "M"
+    },
+    {
+      "dog_id": 10177,
+      "name_lat": "BRAVA",
+      "name_ru": "BRAVA",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2019,
+      "year_to": 2019,
+      "best_speed": 34.807,
+      "avg_speed": 34.81,
+      "total_starts": 1,
+      "rank_delta": -10,
+      "rank_delta_breed": 0,
+      "sex": "F"
+    },
+    {
+      "dog_id": 10352,
+      "name_lat": "BUDENNYI",
+      "name_ru": "BUDENNYI",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2019,
+      "year_to": 2019,
+      "best_speed": 34.272,
+      "avg_speed": 34.27,
+      "total_starts": 1,
+      "rank_delta": -10,
+      "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
+      "dog_id": 10128,
+      "name_lat": "NEVSKAYA LEGENDA MOROZ",
+      "name_ru": "NEVSKAYA LEGENDA MOROZ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2019,
+      "year_to": 2019,
+      "best_speed": 32.715,
+      "avg_speed": 32.72,
+      "total_starts": 2,
+      "rank_delta": -10,
+      "rank_delta_breed": 0,
       "sex": "M"
     },
     {
@@ -1494,6 +1792,20 @@
       "sex": "M"
     },
     {
+      "dog_id": 10062,
+      "name_lat": "BARSKAYA PRIKHOT GORDOST SERDTSA MOEGO",
+      "name_ru": "BARSKAYA PRIKHOT GORDOST SERDTSA MOEGO",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2019,
+      "year_to": 2019,
+      "best_speed": 27.252,
+      "avg_speed": 27.25,
+      "total_starts": 1,
+      "rank_delta": -10,
+      "rank_delta_breed": 0,
+      "sex": "F"
+    },
+    {
       "dog_id": 10372,
       "name_lat": "ADORA BUNCY CREAMY ISABELLA",
       "name_ru": "ADORA BUNCY CREAMY ISABELLA",
@@ -1505,6 +1817,20 @@
       "total_starts": 1,
       "rank_delta": -10,
       "rank_delta_breed": 0
+    },
+    {
+      "dog_id": 10889,
+      "name_lat": "METEL' AVGUSTA AARON",
+      "name_ru": "МЕТЕЛЬ АВГУСТА ААРОН",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2019,
+      "year_to": 2019,
+      "best_speed": 24.5,
+      "avg_speed": 24.5,
+      "total_starts": 1,
+      "rank_delta": -10,
+      "rank_delta_breed": 0,
+      "sex": "F"
     }
   ]
 }

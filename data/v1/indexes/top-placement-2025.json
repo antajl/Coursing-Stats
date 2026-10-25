@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/index-top-placement-v1",
   "year": 2025,
-  "count": 632,
+  "count": 628,
   "items": [
     {
       "dog_id": 182,
@@ -459,8 +459,8 @@
     },
     {
       "dog_id": 6290,
-      "name_lat": "ЭЛВИН /ELVIN",
-      "name_ru": "ЭЛВИН /ELVIN",
+      "name_lat": "ELVIN",
+      "name_ru": "ЭЛВИН",
       "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
       "year": 2025,
       "gold": 3,
@@ -1016,7 +1016,7 @@
       "total_starts": 2,
       "year_from": 2025,
       "year_to": 2025,
-      "rank_delta": 88,
+      "rank_delta": 91,
       "rank_delta_breed": 5,
       "sex": "M"
     },
@@ -1033,7 +1033,8 @@
       "year_from": 2025,
       "year_to": 2025,
       "rank_delta": -2,
-      "rank_delta_breed": 0
+      "rank_delta_breed": 0,
+      "sex": "F"
     },
     {
       "dog_id": 404,
@@ -1658,7 +1659,7 @@
       "total_starts": 3,
       "year_from": 2025,
       "year_to": 2025,
-      "rank_delta": 181,
+      "rank_delta": 182,
       "rank_delta_breed": 1,
       "sex": "F"
     },
@@ -1674,7 +1675,7 @@
       "total_starts": 2,
       "year_from": 2025,
       "year_to": 2025,
-      "rank_delta": 48,
+      "rank_delta": 51,
       "rank_delta_breed": 11,
       "sex": "M"
     },
@@ -1690,7 +1691,7 @@
       "total_starts": 2,
       "year_from": 2025,
       "year_to": 2025,
-      "rank_delta": 48,
+      "rank_delta": 51,
       "rank_delta_breed": 8,
       "sex": "F"
     },
@@ -1851,9 +1852,41 @@
       "total_starts": 2,
       "year_from": 2025,
       "year_to": 2025,
-      "rank_delta": 229,
+      "rank_delta": 228,
       "rank_delta_breed": 29,
       "sex": "F"
+    },
+    {
+      "dog_id": 9230,
+      "name_lat": "PES",
+      "name_ru": "ПЕС",
+      "breed": "МЕТИС",
+      "year": 2025,
+      "gold": 1,
+      "silver": 1,
+      "bronze": 0,
+      "total_starts": 2,
+      "year_from": 2025,
+      "year_to": 2025,
+      "rank_delta": -5,
+      "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
+      "dog_id": 9232,
+      "name_lat": "BONYA",
+      "name_ru": "БОНЯ",
+      "breed": "МЕТИС",
+      "year": 2025,
+      "gold": 1,
+      "silver": 1,
+      "bronze": 0,
+      "total_starts": 2,
+      "year_from": 2025,
+      "year_to": 2025,
+      "rank_delta": -5,
+      "rank_delta_breed": 0,
+      "sex": "M"
     },
     {
       "dog_id": 5641,
@@ -2172,7 +2205,7 @@
       "total_starts": 3,
       "year_from": 2025,
       "year_to": 2025,
-      "rank_delta": 351,
+      "rank_delta": 346,
       "rank_delta_breed": 88,
       "sex": "F"
     },
@@ -2316,7 +2349,7 @@
       "total_starts": 2,
       "year_from": 2025,
       "year_to": 2025,
-      "rank_delta": 44,
+      "rank_delta": 45,
       "rank_delta_breed": 1
     },
     {
@@ -2396,6 +2429,22 @@
       "year_to": 2025,
       "rank_delta": -7,
       "rank_delta_breed": -2,
+      "sex": "F"
+    },
+    {
+      "dog_id": 8938,
+      "name_lat": "KORA",
+      "name_ru": "КОРА",
+      "breed": "БЕЗ ПОРОДЫ",
+      "year": 2025,
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 2,
+      "year_from": 2025,
+      "year_to": 2025,
+      "rank_delta": -7,
+      "rank_delta_breed": 0,
       "sex": "F"
     },
     {
@@ -3000,8 +3049,8 @@
     },
     {
       "dog_id": 5807,
-      "name_lat": "МАЛЕНЬКИЙ ПРИНЦ ИЗ ПОЛЕТА МЕЧТЫ /MALENKIY PRINTS IZ POLETA MECHTI",
-      "name_ru": "МАЛЕНЬКИЙ ПРИНЦ ИЗ ПОЛЕТА МЕЧТЫ /MALENKIY PRINTS IZ POLETA MECHTI",
+      "name_lat": "MALENKIY PRINTS IZ POLETA MECHTI",
+      "name_ru": "МАЛЕНЬКИЙ ПРИНЦ ИЗ ПОЛЕТА МЕЧТЫ",
       "breed": "УИППЕТ",
       "year": 2025,
       "gold": 1,
@@ -3187,22 +3236,6 @@
       "sex": "M"
     },
     {
-      "dog_id": 7396,
-      "name_lat": "KORA",
-      "name_ru": "КОРА",
-      "breed": "БЕЗ ПОРОДЫ",
-      "year": 2025,
-      "gold": 1,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 1,
-      "year_from": 2025,
-      "year_to": 2025,
-      "rank_delta": -5,
-      "rank_delta_breed": 0,
-      "sex": "F"
-    },
-    {
       "dog_id": 7401,
       "name_lat": "PANDORA VON HAUS BOCCIA",
       "name_ru": "PANDORA VON HAUS BOCCIA /PANDORA VON HAUS BOCCIA",
@@ -3344,21 +3377,6 @@
       "rank_delta": -5,
       "rank_delta_breed": 0,
       "sex": "F"
-    },
-    {
-      "dog_id": 7756,
-      "name_lat": "PES",
-      "name_ru": "ПЕС",
-      "breed": "МЕТИС",
-      "year": 2025,
-      "gold": 1,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 1,
-      "year_from": 2025,
-      "year_to": 2025,
-      "rank_delta": -5,
-      "rank_delta_breed": 0
     },
     {
       "dog_id": 7767,
@@ -3593,22 +3611,6 @@
       "year_to": 2025,
       "rank_delta": -5,
       "rank_delta_breed": -1
-    },
-    {
-      "dog_id": 9232,
-      "name_lat": "БОНЯ",
-      "name_ru": "БОНЯ",
-      "breed": "МЕТИС",
-      "year": 2025,
-      "gold": 1,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 1,
-      "year_from": 2025,
-      "year_to": 2025,
-      "rank_delta": -5,
-      "rank_delta_breed": 0,
-      "sex": "M"
     },
     {
       "dog_id": 9324,
@@ -4277,7 +4279,7 @@
       "total_starts": 2,
       "year_from": 2025,
       "year_to": 2025,
-      "rank_delta": 32,
+      "rank_delta": 33,
       "rank_delta_breed": 2,
       "sex": "M"
     },
@@ -4299,9 +4301,26 @@
     },
     {
       "dog_id": 5738,
-      "name_lat": "ЯГОДНАЯ КАРАМЕЛЬКА /YAGODNAYA KARAMELKA",
-      "name_ru": "ЯГОДНАЯ КАРАМЕЛЬКА /YAGODNAYA KARAMELKA",
+      "name_lat": "YAGODNAYA KARAMELKA",
+      "name_ru": "ЯГОДНАЯ КАРАМЕЛЬКА",
       "breed": "БАСЕНДЖИ",
+      "year": 2025,
+      "gold": 0,
+      "silver": 1,
+      "bronze": 1,
+      "total_starts": 2,
+      "year_from": 2025,
+      "year_to": 2025,
+      "rank_delta": -6,
+      "rank_delta_breed": 0,
+      "aggression_count": 1,
+      "sex": "F"
+    },
+    {
+      "dog_id": 9236,
+      "name_lat": "KNOPA",
+      "name_ru": "КНОПА",
+      "breed": "МЕТИС",
       "year": 2025,
       "gold": 0,
       "silver": 1,
@@ -4638,8 +4657,8 @@
     },
     {
       "dog_id": 5761,
-      "name_lat": "АРИЕС ХАН САНДРА САЛАМАНДРА АЛЕКСАНДРА /ARIES KHAN SANDRA SALAMANDER ALEXANDRA",
-      "name_ru": "АРИЕС ХАН САНДРА САЛАМАНДРА АЛЕКСАНДРА /ARIES KHAN SANDRA SALAMANDER ALEXANDRA",
+      "name_lat": "ARIES KHAN SANDRA SALAMANDER ALEXANDRA",
+      "name_ru": "АРИЕС ХАН САНДРА САЛАМАНДРА АЛЕКСАНДРА",
       "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
       "year": 2025,
       "gold": 0,
@@ -4650,6 +4669,7 @@
       "year_to": 2025,
       "rank_delta": -5,
       "rank_delta_breed": 0,
+      "aggression_count": 1,
       "sex": "F"
     },
     {
@@ -4728,7 +4748,8 @@
       "year_from": 2025,
       "year_to": 2025,
       "rank_delta": -5,
-      "rank_delta_breed": 0
+      "rank_delta_breed": 0,
+      "sex": "F"
     },
     {
       "dog_id": 7387,
@@ -5414,36 +5435,6 @@
       "sex": "F"
     },
     {
-      "dog_id": 7750,
-      "name_lat": "KNOPA",
-      "name_ru": "КНОПА",
-      "breed": "МЕТИС",
-      "year": 2025,
-      "gold": 0,
-      "silver": 1,
-      "bronze": 0,
-      "total_starts": 1,
-      "year_from": 2025,
-      "year_to": 2025,
-      "rank_delta": -5,
-      "rank_delta_breed": 0
-    },
-    {
-      "dog_id": 7755,
-      "name_lat": "BONYA",
-      "name_ru": "БОНЯ",
-      "breed": "МЕТИС",
-      "year": 2025,
-      "gold": 0,
-      "silver": 1,
-      "bronze": 0,
-      "total_starts": 1,
-      "year_from": 2025,
-      "year_to": 2025,
-      "rank_delta": -5,
-      "rank_delta_breed": 0
-    },
-    {
       "dog_id": 7820,
       "name_lat": "MIA SANTOS MARCO QWINTO",
       "name_ru": "МИА САНТОС МАРКО КВИНТО",
@@ -5659,22 +5650,6 @@
       "year_to": 2025,
       "rank_delta": -4,
       "rank_delta_breed": -1
-    },
-    {
-      "dog_id": 9230,
-      "name_lat": "ПЕС",
-      "name_ru": "ПЕС",
-      "breed": "МЕТИС",
-      "year": 2025,
-      "gold": 0,
-      "silver": 1,
-      "bronze": 0,
-      "total_starts": 1,
-      "year_from": 2025,
-      "year_to": 2025,
-      "rank_delta": -4,
-      "rank_delta_breed": 0,
-      "sex": "M"
     },
     {
       "dog_id": 5755,
@@ -5946,7 +5921,7 @@
       "total_starts": 3,
       "year_from": 2025,
       "year_to": 2025,
-      "rank_delta": 90,
+      "rank_delta": 89,
       "rank_delta_breed": 38,
       "sex": "F"
     },
@@ -6902,22 +6877,6 @@
       "year_to": 2025,
       "rank_delta": -7,
       "rank_delta_breed": -2
-    },
-    {
-      "dog_id": 9236,
-      "name_lat": "КНОПА",
-      "name_ru": "КНОПА",
-      "breed": "МЕТИС",
-      "year": 2025,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 1,
-      "total_starts": 1,
-      "year_from": 2025,
-      "year_to": 2025,
-      "rank_delta": -7,
-      "rank_delta_breed": 0,
-      "sex": "F"
     },
     {
       "dog_id": 5655,
@@ -9782,21 +9741,6 @@
       "rank_delta_breed": -7,
       "aggression_count": 1,
       "sex": "M"
-    },
-    {
-      "dog_id": 8938,
-      "name_lat": "КОРА",
-      "name_ru": "КОРА",
-      "breed": "БЕЗ ПОРОДЫ",
-      "year": 2025,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 1,
-      "year_from": 2025,
-      "year_to": 2025,
-      "rank_delta": -8,
-      "rank_delta_breed": 0
     },
     {
       "dog_id": 8939,

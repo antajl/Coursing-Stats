@@ -577,6 +577,7 @@
       "total_starts": 1,
       "rank_delta": -1,
       "rank_delta_breed": -1,
+      "aggression_count": 1,
       "sex": "M"
     },
     {
@@ -779,7 +780,7 @@
       "sex": "M"
     },
     {
-      "dog_id": 453,
+      "dog_id": 8646,
       "name_lat": "BORZIE SENAVIAN LAGUNA",
       "name_ru": "БОРЗЫЕ СЕНАВИАН ЛАГУНА",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
@@ -1943,8 +1944,8 @@
     },
     {
       "dog_id": 5738,
-      "name_lat": "ЯГОДНАЯ КАРАМЕЛЬКА /YAGODNAYA KARAMELKA",
-      "name_ru": "ЯГОДНАЯ КАРАМЕЛЬКА /YAGODNAYA KARAMELKA",
+      "name_lat": "YAGODNAYA KARAMELKA",
+      "name_ru": "ЯГОДНАЯ КАРАМЕЛЬКА",
       "breed": "БАСЕНДЖИ",
       "year_from": 2025,
       "year_to": 2025,
@@ -1953,6 +1954,7 @@
       "total_starts": 1,
       "rank_delta": -2,
       "rank_delta_breed": 0,
+      "aggression_count": 1,
       "sex": "F"
     },
     {
@@ -2161,7 +2163,8 @@
       "avg_speed": 33.14,
       "total_starts": 1,
       "rank_delta": -2,
-      "rank_delta_breed": 0
+      "rank_delta_breed": 0,
+      "sex": "F"
     }
   ]
 }

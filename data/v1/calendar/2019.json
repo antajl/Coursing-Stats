@@ -2,8 +2,8 @@
   "schema": "coursing-stats/calendar-v1",
   "year": 2019,
   "exported_at": "2026-10-07T15:02:50.262Z",
-  "event_count": 7,
-  "with_results": 7,
+  "event_count": 12,
+  "with_results": 12,
   "events": [
     {
       "id": 20190302,
@@ -29,7 +29,35 @@
       "has_results": true,
       "results_file": "competitions/2019/03-март/1563-чемпионат-по-курсингу-мартовскии-заяц-2019.json",
       "result_count": 93,
-      "participants_count": 93
+      "participants_count": 93,
+      "results_pdf_url": "https://drive.google.com/file/d/1M8HvMqjSH879me0UY4J1my4u1dwWftAm/view?usp=sharing"
+    },
+    {
+      "id": 20190414,
+      "year": 2019,
+      "month": "04-апрель",
+      "date_start": "2019-04-14",
+      "date_end": "2019-04-14",
+      "title": "Командное состязание \"Тройка, птица весенняя - 2019\"",
+      "full_title": "Командное состязание \"Тройка, птица весенняя - 2019\"",
+      "rank_label": "Командное состязание \"Тройка, птица весенняя - 2019\"",
+      "rank_code": "Тройка",
+      "discipline_code": "coursing",
+      "event_type": "other",
+      "competition_kind": "Командное состязание",
+      "competition_type": "Состязание свор «Тройка»",
+      "host_club": "",
+      "region": null,
+      "location": "Московская область, деревня Михайловское",
+      "results_url": "http://procoursing.ru/results/2019-04-14/",
+      "catalog_url": null,
+      "results_pdf_url": "https://drive.google.com/file/d/1mjoJ9F71VWls0_lKHhCStik3sWjjR8Uh/view?usp=sharing",
+      "confirmed": 1,
+      "judges": null,
+      "has_results": true,
+      "results_file": "competitions/2019/04-апрель/20190414-командное-состязание-троика-птица-весенняя-2019.json",
+      "result_count": 30,
+      "participants_count": 30
     },
     {
       "id": 20190427,
@@ -55,7 +83,8 @@
       "has_results": true,
       "results_file": "competitions/2019/04-апрель/1564-международныи-чемпионат-по-курсингу-чемпионат-ро.json",
       "result_count": 159,
-      "participants_count": 159
+      "participants_count": 159,
+      "results_pdf_url": "https://drive.google.com/file/d/1U29--1bUxScnb11mu7ycHmZKMxIqv35M/view?usp=sharing"
     },
     {
       "id": 20190615,
@@ -81,7 +110,27 @@
       "has_results": true,
       "results_file": "competitions/2019/06-июнь/1565-бега-борзых-за-механическим-заицем-круг.json",
       "result_count": 58,
-      "participants_count": 58
+      "participants_count": 58,
+      "results_pdf_url": "https://drive.google.com/file/d/1ZcgWfiO3QlpDaUU6vKWi83zBYKUcGS0O/view?usp=sharing"
+    },
+    {
+      "id": 20190811,
+      "year": 2019,
+      "date_start": "2019-08-11",
+      "date_end": "2019-08-11",
+      "rank_label": "Тестовое состязание по рейсингу",
+      "event_type": "racing",
+      "competition_kind": "Тестовое состязание",
+      "competition_type": "Бега борзых (рейсинг)",
+      "title": "Тестовое состязание по рейсингу",
+      "host_club": null,
+      "region": null,
+      "location": "Московская область, город Раменское",
+      "has_results": true,
+      "results_file": "competitions/2019/08-август/20190811-тестовое-состязание-по-реисингу.json",
+      "result_count": 34,
+      "participants_count": 34,
+      "results_pdf_url": "https://drive.google.com/file/d/1UUhqHpISE4pTPen2DEHr1k0xBfQq-lRQ/view?usp=sharing"
     },
     {
       "id": 20190824,
@@ -107,7 +156,8 @@
       "has_results": true,
       "results_file": "competitions/2019/08-август/1566-чемпионат-ркф-cacl.json",
       "result_count": 111,
-      "participants_count": 111
+      "participants_count": 111,
+      "results_pdf_url": "https://drive.google.com/file/d/1w0Hoae1Da0Udr1Q6zTPIyoSgdFTSga0G/view?usp=sharing"
     },
     {
       "id": 20190901,
@@ -133,7 +183,35 @@
       "has_results": true,
       "results_file": "competitions/2019/09-сентябрь/1567-кубок-россии-по-бегам-борзых.json",
       "result_count": 56,
-      "participants_count": 56
+      "participants_count": 56,
+      "results_pdf_url": "https://drive.google.com/file/d/1HyNrlSSXNU5-cMsfE8IevEWHrC6OhQPR/view?usp=sharing"
+    },
+    {
+      "id": 20190908,
+      "year": 2019,
+      "month": "09-сентябрь",
+      "date_start": "2019-09-08",
+      "date_end": "2019-09-08",
+      "title": "Открытый чемпионат НКП \"Русская псовая борзая\" \"Осенний Марафон - 2019\"",
+      "full_title": "Открытый чемпионат НКП \"Русская псовая борзая\" \"Осенний Марафон - 2019\"",
+      "rank_label": "Открытый чемпионат НКП РПБ \"Осенний Марафон - 2019\"",
+      "rank_code": "Чемпионат НКП",
+      "discipline_code": "coursing",
+      "event_type": "coursing",
+      "competition_kind": "Чемпионат НКП",
+      "competition_type": "Осенний Марафон (Рейсинг + Курсинг)",
+      "host_club": "НКП \"Русская псовая борзая\"",
+      "region": null,
+      "location": "Московская область, д. Новый Милет",
+      "results_url": "http://procoursing.ru/results/2019-09-08_R/",
+      "catalog_url": null,
+      "results_pdf_url": "https://drive.google.com/file/d/1aWVIKTl2tfcyamWPtz_gk6h80hwd-dKg/view?usp=sharing",
+      "confirmed": 1,
+      "judges": null,
+      "has_results": true,
+      "results_file": "competitions/2019/09-сентябрь/20190908-открытыи-чемпионат-нкп-русская-псовая-борзая-осе.json",
+      "result_count": 53,
+      "participants_count": 30
     },
     {
       "id": 20190915,
@@ -141,11 +219,11 @@
       "month": "09-сентябрь",
       "date_start": "2019-09-15",
       "date_end": null,
-      "title": "КР по рейсингу",
-      "full_title": "КР по рейсингу",
-      "rank_label": "КР по рейсингу",
+      "title": "КР по курсингу",
+      "full_title": "КР по курсингу",
+      "rank_label": "КР по курсингу",
       "rank_code": "КР",
-      "discipline_code": "racing",
+      "discipline_code": "coursing",
       "event_type": "coursing",
       "competition_kind": "Кубок России",
       "competition_type": "Курсинг борзых",
@@ -155,11 +233,12 @@
       "results_url": null,
       "catalog_url": null,
       "confirmed": 0,
-      "judges": null,
+      "judges": "Куликова Г.В., Лукина Д.М., Вронская О.В., Видус Г.С., Карелина Н.В.",
       "has_results": true,
       "results_file": "competitions/2019/09-сентябрь/1568-кубок-россии-по-бегам-борзых-курсинг.json",
       "result_count": 110,
-      "participants_count": 110
+      "participants_count": 110,
+      "results_pdf_url": "https://drive.google.com/file/d/1QajrT-oJ5_UP0ewt17uL42vqXGMci-xt/view?usp=sharing"
     },
     {
       "id": 20190922,
@@ -185,7 +264,55 @@
       "has_results": true,
       "results_file": "competitions/2019/09-сентябрь/1569-национальные-состязания-по-бегам-борзых-за-механ.json",
       "result_count": 40,
-      "participants_count": 40
+      "participants_count": 40,
+      "results_pdf_url": "https://drive.google.com/file/d/1z0_vFDf_1GGGutrUUvo3kHB8rrzF817S/view?usp=sharing"
+    },
+    {
+      "id": 20191005,
+      "year": 2019,
+      "date_start": "2019-10-05",
+      "date_end": "2019-10-06",
+      "rank_label": "Международные состязания по курсингу ранга CACIL & CACL",
+      "event_type": "coursing",
+      "competition_kind": "CACIL / CACL",
+      "competition_type": "Курсинг борзых",
+      "title": "Международные состязания по курсингу CACIL & CACL",
+      "host_club": null,
+      "region": null,
+      "location": "Московская область, город Красноармейск, деревня Михайловское",
+      "has_results": true,
+      "results_file": "competitions/2019/10-октябрь/20191005-международные-состязания-по-курсингу-cacil-cacl.json",
+      "result_count": 131,
+      "participants_count": 131,
+      "results_pdf_url": "https://drive.google.com/file/d/1ge9TYjqCOMKXAVYmE9oUKx2kXnwdcOGO/view?usp=sharing",
+      "judges": "Dyka Beritt Kerstin, Коршунова И.А., Вронская О.В., Серова Т.Г., Иванова Г.С."
+    },
+    {
+      "id": 20191110,
+      "year": 2019,
+      "month": "11-ноябрь",
+      "date_start": "2019-11-10",
+      "date_end": "2019-11-10",
+      "title": "Командное состязание \"Тройка, птица осенняя - 2019\"",
+      "full_title": "Командное состязание \"Тройка, птица осенняя - 2019\"",
+      "rank_label": "Командное состязание \"Тройка, птица осенняя - 2019\"",
+      "rank_code": "Тройка",
+      "discipline_code": "coursing",
+      "event_type": "other",
+      "competition_kind": "Командное состязание",
+      "competition_type": "Состязание свор «Тройка»",
+      "host_club": "",
+      "region": null,
+      "location": "Московская область, деревня Михайловское",
+      "results_url": "http://procoursing.ru/results/2019-11-10/",
+      "catalog_url": null,
+      "results_pdf_url": "https://drive.google.com/file/d/1R0LZAXaiYoJzzmR5rgldGvagc0Bcs2xn/view?usp=sharing",
+      "confirmed": 1,
+      "judges": "Вронская О.В., Бычкова О.",
+      "has_results": true,
+      "results_file": "competitions/2019/11-ноябрь/20191110-командное-состязание-троика-птица-осенняя-2019.json",
+      "result_count": 66,
+      "participants_count": 66
     }
   ]
 }

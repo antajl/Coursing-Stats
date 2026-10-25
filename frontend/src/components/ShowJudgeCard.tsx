@@ -36,7 +36,7 @@ function StatPill({
   )
 }
 
-export default function ShowJudgeCard({ judge }: { judge: ShowJudgeCardData }) {
+export default function ShowJudgeCard({ judge, filterYear }: { judge: ShowJudgeCardData; filterYear?: string }) {
   const chips = (judge.breedChips || []).slice(0, 2)
   const extraBreeds = Math.max(0, judge.breedsCount - chips.length)
   const rawName = judge.display_name || judge.name
@@ -46,9 +46,11 @@ export default function ShowJudgeCard({ judge }: { judge: ShowJudgeCardData }) {
   const excellentRateFraction = judge.excellentPct != null ? judge.excellentPct / 100 : null
   const strictness = getStrictnessBadge(excellentRateFraction, judge.graded)
 
+  const linkTo = `/shows/judges/${encodeURIComponent(judge.id)}${filterYear ? '?year=' + filterYear : ''}`
+
   return (
     <Link
-      to={`/shows/judges/${encodeURIComponent(judge.id)}`}
+      to={linkTo}
       className="group flex flex-col gap-3 rounded-xl border border-old-money-200/90 bg-white p-3.5 sm:p-4 transition-all duration-200 hover:border-camel-300 hover:bg-cream-50/70 hover:shadow-xs sm:flex-row sm:items-center sm:gap-4"
     >
       {/* Monogram avatar */}

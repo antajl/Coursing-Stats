@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/index-top-speed-v1",
   "year": 2026,
-  "count": 148,
+  "count": 147,
   "items": [
     {
       "dog_id": 842,
@@ -483,14 +483,14 @@
     },
     {
       "dog_id": 5807,
-      "name_lat": "МАЛЕНЬКИЙ ПРИНЦ ИЗ ПОЛЕТА МЕЧТЫ /MALENKIY PRINTS IZ POLETA MECHTI",
-      "name_ru": "МАЛЕНЬКИЙ ПРИНЦ ИЗ ПОЛЕТА МЕЧТЫ /MALENKIY PRINTS IZ POLETA MECHTI",
+      "name_lat": "MALENKIY PRINTS IZ POLETA MECHTI",
+      "name_ru": "МАЛЕНЬКИЙ ПРИНЦ ИЗ ПОЛЕТА МЕЧТЫ",
       "breed": "УИППЕТ",
       "year_from": 2026,
       "year_to": 2026,
       "best_speed": 50.521,
-      "avg_speed": 50.33,
-      "total_starts": 1,
+      "avg_speed": 50.19,
+      "total_starts": 2,
       "rank_delta": -1,
       "rank_delta_breed": -1,
       "sex": "M"
@@ -546,20 +546,6 @@
       "year_to": 2026,
       "best_speed": 50.139,
       "avg_speed": 49.74,
-      "total_starts": 1,
-      "rank_delta": -1,
-      "rank_delta_breed": -1,
-      "sex": "M"
-    },
-    {
-      "dog_id": 10743,
-      "name_lat": "MALENKIJ PRINTS IZ POLETA MECHTI",
-      "name_ru": "МАЛЕНЬКИЙ ПРИНЦ ИЗ ПОЛЕТА МЕЧТЫ",
-      "breed": "УИППЕТ",
-      "year_from": 2026,
-      "year_to": 2026,
-      "best_speed": 50.119,
-      "avg_speed": 50.05,
       "total_starts": 1,
       "rank_delta": -1,
       "rank_delta_breed": -1,
@@ -1732,7 +1718,7 @@
       "sex": "F"
     },
     {
-      "dog_id": 10751,
+      "dog_id": 6290,
       "name_lat": "ELVIN",
       "name_ru": "ЭЛВИН",
       "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
@@ -1832,7 +1818,7 @@
       "sex": "F"
     },
     {
-      "dog_id": 10734,
+      "dog_id": 5738,
       "name_lat": "YAGODNAYA KARAMELKA",
       "name_ru": "ЯГОДНАЯ КАРАМЕЛЬКА",
       "breed": "БАСЕНДЖИ",

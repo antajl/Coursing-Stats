@@ -6,10 +6,15 @@
   "name_lat": "DJINI LAMBOR",
   "name_ru": "DJINI LAMBOR",
   "breed": "УИППЕТ",
-  "sex": null,
+  "sex": "Кобель",
   "owner": null,
-  "competition_ids": [],
+  "competition_ids": [
+    20191005,
+    20201003
+  ],
   "competition_files": [
-    "competitions/2019/04-апрель/1564-международныи-чемпионат-по-курсингу-чемпионат-ро.json"
+    "competitions/2019/04-апрель/1564-международныи-чемпионат-по-курсингу-чемпионат-ро.json",
+    "competitions/2019/10-октябрь/20191005-международные-состязания-по-курсингу-cacil-cacl.json",
+    "competitions/2020/10-октябрь/20201003-международныи-чемпионат-по-курсингу-cacil-чемпио.json"
   ]
 }

@@ -2,8 +2,8 @@
   "schema": "coursing-stats/calendar-v1",
   "year": 2020,
   "exported_at": "2026-10-07T15:02:50.262Z",
-  "event_count": 4,
-  "with_results": 4,
+  "event_count": 6,
+  "with_results": 6,
   "events": [
     {
       "id": 20200815,
@@ -29,7 +29,8 @@
       "has_results": true,
       "results_file": "competitions/2020/08-август/1570-бега-за-механическои-приманкои.json",
       "result_count": 10,
-      "participants_count": 10
+      "participants_count": 10,
+      "results_pdf_url": "https://drive.google.com/file/d/1CH0yMiHDv635qva9BXo-DS9VBdFhR9OF/view?usp=sharing"
     },
     {
       "id": 202008151,
@@ -55,7 +56,28 @@
       "has_results": true,
       "results_file": "competitions/2020/08-август/1584-состязания-по-бегам-борзых-курсинг-чркф.json",
       "result_count": 51,
-      "participants_count": 51
+      "participants_count": 51,
+      "results_pdf_url": "https://drive.google.com/file/d/1rgDJ4Q59bYkWqZjRCzgIO6SesglZt69Q/view?usp=sharing"
+    },
+    {
+      "id": 20200822,
+      "year": 2020,
+      "date_start": "2020-08-22",
+      "date_end": "2020-08-23",
+      "rank_label": "Международный чемпионат по курсингу CACIL & Чемпионат РКФ - CACL",
+      "event_type": "coursing",
+      "competition_kind": "CACIL / CACL",
+      "competition_type": "Курсинг борзых",
+      "title": "Международный чемпионат по курсингу CACIL & Чемпионат РКФ - CACL",
+      "host_club": null,
+      "region": "Московская область",
+      "location": "Московская область, Ленинский район, д. Суханово",
+      "has_results": true,
+      "results_file": "competitions/2020/08-август/20200822-международныи-чемпионат-по-курсингу-cacil-чемпио.json",
+      "result_count": 113,
+      "participants_count": 113,
+      "results_pdf_url": "https://drive.google.com/file/d/1nN5vFh8o5oCGDScKOkG7o2Uu3Yftk9w1/view?usp=sharing",
+      "judges": "Козлова И.В., Иванова Г.С., Вронская О.В."
     },
     {
       "id": 20200912,
@@ -81,7 +103,8 @@
       "has_results": true,
       "results_file": "competitions/2020/09-сентябрь/1571-чемпионат-россии-по-бегам-борзых-за-механическим.json",
       "result_count": 68,
-      "participants_count": 68
+      "participants_count": 68,
+      "results_pdf_url": "https://drive.google.com/file/d/13Q75J4St69Odjy4SFuFQUNGHPYoBRSkZ/view?usp=sharing"
     },
     {
       "id": 20200920,
@@ -107,7 +130,28 @@
       "has_results": true,
       "results_file": "competitions/2020/09-сентябрь/1572-кубок-россии-по-бегам-борзых-за-механическим-заи.json",
       "result_count": 74,
-      "participants_count": 74
+      "participants_count": 74,
+      "results_pdf_url": "https://drive.google.com/file/d/1a3Vvv_afIrje0A0xZqIeehm8vMXTTvhf/view?usp=sharing"
+    },
+    {
+      "id": 20201003,
+      "year": 2020,
+      "date_start": "2020-10-03",
+      "date_end": "2020-10-04",
+      "rank_label": "Международный чемпионат по курсингу CACIL - Чемпионат России по курсингу",
+      "event_type": "coursing",
+      "competition_kind": "CACIL / CACL",
+      "competition_type": "Курсинг борзых",
+      "title": "Международный чемпионат по курсингу CACIL - Чемпионат России по курсингу",
+      "host_club": null,
+      "region": "Московская область",
+      "location": "Московская область, Михайловское",
+      "has_results": true,
+      "results_file": "competitions/2020/10-октябрь/20201003-международныи-чемпионат-по-курсингу-cacil-чемпио.json",
+      "result_count": 141,
+      "participants_count": 141,
+      "results_pdf_url": "https://drive.google.com/file/d/1NIK9rwTvagwUIIBa13nIoFzBWJ20EvZp/view?usp=sharing",
+      "judges": "Егорова М.А., Орлова М.О., Куликова Г.В."
     }
   ]
 }

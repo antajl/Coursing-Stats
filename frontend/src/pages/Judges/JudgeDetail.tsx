@@ -276,6 +276,14 @@ export default function JudgeDetail() {
 
   const allEvents = useMemo(() => collectEvents(sortedBreeds), [sortedBreeds])
 
+  const distinctEventCount = useMemo(() => {
+    const set = new Set<string>()
+    for (const e of allEvents) {
+      set.add(`${e.date}|${e.title}`)
+    }
+    return set.size
+  }, [allEvents])
+
   const availableYears = useMemo(() => {
     const baseBreeds = (baseData?.breed_stats as BreedStat[] | undefined) || []
     const years = collectEvents(baseBreeds)
@@ -380,7 +388,7 @@ export default function JudgeDetail() {
   /** Листы оценок (собака×проба), как в списке — не сырые критерии. */
   const totalEvals = Math.round(totalEvalsRaw / 5)
   const breedCount = sortedBreeds.length
-  const eventCount = allEvents.length
+  const eventCount = distinctEventCount
   const strictnessBadge = getSportJudgeStrictnessBadge(avgScore, totalEvals)
 
   return (

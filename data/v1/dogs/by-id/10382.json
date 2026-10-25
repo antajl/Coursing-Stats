@@ -6,12 +6,18 @@
   "name_lat": "ISTORIYA LUBVI SHIKARNAYA FORTUNA",
   "name_ru": "ISTORIYA LUBVI SHIKARNAYA FORTUNA",
   "breed": "УИППЕТ",
-  "sex": null,
+  "sex": "Сука",
   "owner": null,
   "competition_ids": [
-    1568
+    1568,
+    20190811,
+    20191005,
+    20201003
   ],
   "competition_files": [
-    "competitions/2019/09-сентябрь/1568-кубок-россии-по-бегам-борзых-курсинг.json"
+    "competitions/2019/09-сентябрь/1568-кубок-россии-по-бегам-борзых-курсинг.json",
+    "competitions/2019/08-август/20190811-тестовое-состязание-по-реисингу.json",
+    "competitions/2019/10-октябрь/20191005-международные-состязания-по-курсингу-cacil-cacl.json",
+    "competitions/2020/10-октябрь/20201003-международныи-чемпионат-по-курсингу-cacil-чемпио.json"
   ]
 }

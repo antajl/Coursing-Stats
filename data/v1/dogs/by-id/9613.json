@@ -1,15 +1,23 @@
 {
   "schema": "coursing-stats/dog-v1",
-  "exported_at": "2026-07-08T00:31:32.188Z",
+  "exported_at": "2026-10-25T05:08:00.126Z",
   "id": 9613,
   "dog_key": "злат-охарри-бадихан--афганская-борзая",
-  "name_lat": "ЗЛАТ ОХАРРИ БАДИХАН",
+  "name_lat": "ZLAT OHARRY BADIKHAN",
   "name_ru": "ЗЛАТ ОХАРРИ БАДИХАН",
   "breed": "АФГАНСКАЯ БОРЗАЯ",
   "sex": null,
   "owner": null,
   "competition_ids": [
-    1457
+    1457,
+    20240616
   ],
-  "competition_files": []
+  "competition_files": [
+    "competitions/2024/06-июнь/20240616--cacl-16062024-.json"
+  ],
+  "pedigree_url": null,
+  "merged_alias_ids": [
+    10712
+  ],
+  "merged_aliases": []
 }

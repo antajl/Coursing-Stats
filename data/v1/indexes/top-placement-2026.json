@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/index-top-placement-v1",
   "year": 2026,
-  "count": 480,
+  "count": 478,
   "items": [
     {
       "dog_id": 5645,
@@ -246,8 +246,8 @@
     },
     {
       "dog_id": 5738,
-      "name_lat": "ЯГОДНАЯ КАРАМЕЛЬКА /YAGODNAYA KARAMELKA",
-      "name_ru": "ЯГОДНАЯ КАРАМЕЛЬКА /YAGODNAYA KARAMELKA",
+      "name_lat": "YAGODNAYA KARAMELKA",
+      "name_ru": "ЯГОДНАЯ КАРАМЕЛЬКА",
       "breed": "БАСЕНДЖИ",
       "year": 2026,
       "gold": 3,
@@ -258,6 +258,7 @@
       "year_to": 2026,
       "rank_delta": -4,
       "rank_delta_breed": 0,
+      "aggression_count": 1,
       "sex": "F"
     },
     {
@@ -578,7 +579,7 @@
       "total_starts": 3,
       "year_from": 2026,
       "year_to": 2026,
-      "rank_delta": 73,
+      "rank_delta": 74,
       "rank_delta_breed": 6,
       "sex": "F"
     },
@@ -594,8 +595,8 @@
       "total_starts": 3,
       "year_from": 2026,
       "year_to": 2026,
-      "rank_delta": 74,
-      "rank_delta_breed": 4,
+      "rank_delta": 75,
+      "rank_delta_breed": 5,
       "sex": "M"
     },
     {
@@ -673,7 +674,7 @@
       "total_starts": 2,
       "year_from": 2026,
       "year_to": 2026,
-      "rank_delta": 93,
+      "rank_delta": 94,
       "rank_delta_breed": 3,
       "sex": "M"
     },
@@ -689,7 +690,7 @@
       "total_starts": 2,
       "year_from": 2026,
       "year_to": 2026,
-      "rank_delta": 93,
+      "rank_delta": 94,
       "rank_delta_breed": 2,
       "sex": "M"
     },
@@ -705,7 +706,7 @@
       "total_starts": 2,
       "year_from": 2026,
       "year_to": 2026,
-      "rank_delta": 95,
+      "rank_delta": 96,
       "rank_delta_breed": 0,
       "sex": "F"
     },
@@ -721,7 +722,7 @@
       "total_starts": 2,
       "year_from": 2026,
       "year_to": 2026,
-      "rank_delta": 95,
+      "rank_delta": 96,
       "rank_delta_breed": 1,
       "sex": "M"
     },
@@ -737,7 +738,7 @@
       "total_starts": 2,
       "year_from": 2026,
       "year_to": 2026,
-      "rank_delta": 95,
+      "rank_delta": 96,
       "rank_delta_breed": 0,
       "sex": "F"
     },
@@ -1635,7 +1636,7 @@
       "total_starts": 2,
       "year_from": 2026,
       "year_to": 2026,
-      "rank_delta": 16,
+      "rank_delta": 17,
       "rank_delta_breed": 0,
       "sex": "F"
     },
@@ -1990,6 +1991,22 @@
       "sex": "M"
     },
     {
+      "dog_id": 6290,
+      "name_lat": "ELVIN",
+      "name_ru": "ЭЛВИН",
+      "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+      "year": 2026,
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 2,
+      "year_from": 2026,
+      "year_to": 2026,
+      "rank_delta": -16,
+      "rank_delta_breed": -1,
+      "sex": "M"
+    },
+    {
       "dog_id": 10786,
       "name_lat": "METEL' AVGUSTA AYREON",
       "name_ru": "МЕТЕЛЬ АВГУСТА АЙРЕОН",
@@ -2017,7 +2034,7 @@
       "total_starts": 2,
       "year_from": 2026,
       "year_to": 2026,
-      "rank_delta": 43,
+      "rank_delta": 42,
       "rank_delta_breed": -1,
       "sex": "M"
     },
@@ -2814,22 +2831,6 @@
       "sex": "F"
     },
     {
-      "dog_id": 6290,
-      "name_lat": "ЭЛВИН /ELVIN",
-      "name_ru": "ЭЛВИН /ELVIN",
-      "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
-      "year": 2026,
-      "gold": 1,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 1,
-      "year_from": 2026,
-      "year_to": 2026,
-      "rank_delta": -10,
-      "rank_delta_breed": 0,
-      "sex": "M"
-    },
-    {
       "dog_id": 7754,
       "name_lat": "ЭВЕРЕСТ",
       "name_ru": "ЭВЕРЕСТ",
@@ -3618,8 +3619,8 @@
     },
     {
       "dog_id": 5761,
-      "name_lat": "АРИЕС ХАН САНДРА САЛАМАНДРА АЛЕКСАНДРА /ARIES KHAN SANDRA SALAMANDER ALEXANDRA",
-      "name_ru": "АРИЕС ХАН САНДРА САЛАМАНДРА АЛЕКСАНДРА /ARIES KHAN SANDRA SALAMANDER ALEXANDRA",
+      "name_lat": "ARIES KHAN SANDRA SALAMANDER ALEXANDRA",
+      "name_ru": "АРИЕС ХАН САНДРА САЛАМАНДРА АЛЕКСАНДРА",
       "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
       "year": 2026,
       "gold": 0,
@@ -3630,6 +3631,7 @@
       "year_to": 2026,
       "rank_delta": -22,
       "rank_delta_breed": -2,
+      "aggression_count": 1,
       "sex": "F"
     },
     {
@@ -3850,8 +3852,8 @@
       "total_starts": 2,
       "year_from": 2026,
       "year_to": 2026,
-      "rank_delta": 206,
-      "rank_delta_breed": 5,
+      "rank_delta": 204,
+      "rank_delta_breed": 4,
       "sex": "F"
     },
     {
@@ -4683,6 +4685,22 @@
       "sex": "F"
     },
     {
+      "dog_id": 5807,
+      "name_lat": "MALENKIY PRINTS IZ POLETA MECHTI",
+      "name_ru": "МАЛЕНЬКИЙ ПРИНЦ ИЗ ПОЛЕТА МЕЧТЫ",
+      "breed": "УИППЕТ",
+      "year": 2026,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 1,
+      "total_starts": 4,
+      "year_from": 2026,
+      "year_to": 2026,
+      "rank_delta": -22,
+      "rank_delta_breed": -3,
+      "sex": "M"
+    },
+    {
       "dog_id": 5824,
       "name_lat": "ROSSO BOREALE IRKISS",
       "name_ru": "РОССО БОРЕАЛЕ ИРКИСС",
@@ -4697,22 +4715,6 @@
       "rank_delta": -22,
       "rank_delta_breed": -2,
       "sex": "F"
-    },
-    {
-      "dog_id": 5807,
-      "name_lat": "МАЛЕНЬКИЙ ПРИНЦ ИЗ ПОЛЕТА МЕЧТЫ /MALENKIY PRINTS IZ POLETA MECHTI",
-      "name_ru": "МАЛЕНЬКИЙ ПРИНЦ ИЗ ПОЛЕТА МЕЧТЫ /MALENKIY PRINTS IZ POLETA MECHTI",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 1,
-      "total_starts": 3,
-      "year_from": 2026,
-      "year_to": 2026,
-      "rank_delta": -22,
-      "rank_delta_breed": -3,
-      "sex": "M"
     },
     {
       "dog_id": 5815,
@@ -6244,8 +6246,8 @@
       "total_starts": 2,
       "year_from": 2026,
       "year_to": 2026,
-      "rank_delta": 54,
-      "rank_delta_breed": 18,
+      "rank_delta": 52,
+      "rank_delta_breed": 17,
       "sex": "F"
     },
     {
@@ -6260,8 +6262,8 @@
       "total_starts": 2,
       "year_from": 2026,
       "year_to": 2026,
-      "rank_delta": 54,
-      "rank_delta_breed": 18,
+      "rank_delta": 52,
+      "rank_delta_breed": 17,
       "sex": "M"
     },
     {
@@ -7431,38 +7433,6 @@
       "rank_delta": -24,
       "rank_delta_breed": -2,
       "sex": "F"
-    },
-    {
-      "dog_id": 10743,
-      "name_lat": "MALENKIJ PRINTS IZ POLETA MECHTI",
-      "name_ru": "МАЛЕНЬКИЙ ПРИНЦ ИЗ ПОЛЕТА МЕЧТЫ",
-      "breed": "УИППЕТ",
-      "year": 2026,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 1,
-      "year_from": 2026,
-      "year_to": 2026,
-      "rank_delta": -24,
-      "rank_delta_breed": -3,
-      "sex": "M"
-    },
-    {
-      "dog_id": 10751,
-      "name_lat": "ELVIN",
-      "name_ru": "ЭЛВИН",
-      "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
-      "year": 2026,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 1,
-      "year_from": 2026,
-      "year_to": 2026,
-      "rank_delta": -24,
-      "rank_delta_breed": -5,
-      "sex": "M"
     },
     {
       "dog_id": 10767,

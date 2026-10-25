@@ -80,6 +80,10 @@ export function rebuildCalendarIndexes(): { total: number; years: number } {
             const compDoc = JSON.parse(fs.readFileSync(fullCompPath, 'utf-8')) as {
               result_count?: number
               results?: Array<{ dog_id?: number }>
+              event?: {
+                judges?: string | null
+                results_pdf_url?: string | null
+              }
             }
             const results = Array.isArray(compDoc.results) ? compDoc.results : []
             const compResultCount =
@@ -104,6 +108,14 @@ export function rebuildCalendarIndexes(): { total: number; years: number } {
               }
               if (event.participants_count !== uniqueDogs) {
                 event.participants_count = uniqueDogs
+                fileChanged = true
+              }
+              if (compDoc.event?.judges && (!event.judges || event.judges === '')) {
+                event.judges = compDoc.event.judges
+                fileChanged = true
+              }
+              if (compDoc.event?.results_pdf_url && !event.results_pdf_url) {
+                event.results_pdf_url = compDoc.event.results_pdf_url
                 fileChanged = true
               }
             }

@@ -61,10 +61,7 @@ export function aggregateJudgeStats(results: any[]): Map<string, JudgeStats> {
       for (const heat of heats) {
         if (heat.judges && Array.isArray(heat.judges)) {
           for (const judge of heat.judges) {
-            const judgeNum = judge.judge_number;
-            const judgeName =
-              judge.judge_name ||
-              (typeof judgeNum === 'number' && judgeNum > 0 ? judgeNames[judgeNum - 1] || `Судья ${judgeNum}` : undefined);
+            const judgeName = resolveJudgeName(judge, judgeNames);
 
             if (!judgeName || judgeName.includes('undefined')) continue;
 
@@ -82,8 +79,9 @@ export function aggregateJudgeStats(results: any[]): Map<string, JudgeStats> {
 
             const stats = judgeStats.get(judgeName)!;
             if (judge.scores && Array.isArray(judge.scores)) {
-              stats.total_evaluations += judge.scores.length;
-              stats.scores.push(...judge.scores);
+              const validScores = judge.scores.filter((s: any) => s !== null && !isNaN(s));
+              stats.total_evaluations += validScores.length;
+              stats.scores.push(...validScores);
               if (row.breed) stats.breeds.add(canonicalBreed(row.breed));
               stats.disciplines.add(row.event_type);
               stats.events.add(row.event_id);
@@ -104,12 +102,24 @@ export function aggregateJudgeStats(results: any[]): Map<string, JudgeStats> {
   return judgeStats;
 }
 
-function matchesJudge(j: any, judgeName: string, judgeNames: string[]): boolean {
-  if (j.judge_name) {
-    return j.judge_name === judgeName;
+export function resolveJudgeName(
+  j: { judge_number?: number; judge_name?: string },
+  judgeNames: string[],
+): string | undefined {
+  if (j.judge_name) return j.judge_name;
+  const num = j.judge_number;
+  if (typeof num === 'number' && num > 0) {
+    return judgeNames[num - 1] || `Судья ${num}`;
   }
-  const judgeNum = judgeNames.indexOf(judgeName) + 1;
-  return judgeNum > 0 && j.judge_number === judgeNum;
+  return undefined;
+}
+
+export function matchesJudge(
+  j: { judge_number?: number; judge_name?: string },
+  judgeName: string,
+  judgeNames: string[],
+): boolean {
+  return resolveJudgeName(j, judgeNames) === judgeName;
 }
 
 /**
@@ -157,18 +167,19 @@ export function aggregateBreedStats(
 
       for (const heat of heats) {
         if (heat.judges && Array.isArray(heat.judges)) {
-          const judge = heat.judges.find((j: any) => matchesJudge(j, judgeName, judgeNames));
-          if (judge && judge.scores && Array.isArray(judge.scores)) {
-            const validScores = judge.scores.filter((s: any) => s !== null && !isNaN(s));
+          for (const judge of heat.judges) {
+            if (matchesJudge(judge, judgeName, judgeNames) && judge.scores && Array.isArray(judge.scores)) {
+              const validScores = judge.scores.filter((s: any) => s !== null && !isNaN(s));
 
-            const breedKey = canonicalBreed(row.breed || '');
-            if (!breedStats.has(breedKey)) {
-              breedStats.set(breedKey, { count: 0, scores: [] });
+              const breedKey = canonicalBreed(row.breed || '');
+              if (!breedStats.has(breedKey)) {
+                breedStats.set(breedKey, { count: 0, scores: [] });
+              }
+
+              const stats = breedStats.get(breedKey)!;
+              stats.count += validScores.length;
+              stats.scores.push(...validScores);
             }
-
-            const stats = breedStats.get(breedKey)!;
-            stats.count += validScores.length;
-            stats.scores.push(...validScores);
           }
         }
       }
@@ -204,16 +215,17 @@ export function aggregateDogStats(
         if (Array.isArray(heats)) {
           for (const heat of heats) {
             if (heat.judges && Array.isArray(heat.judges)) {
-              const judge = heat.judges.find((j: any) => matchesJudge(j, judgeName, judgeNames));
-              if (judge && judge.scores && Array.isArray(judge.scores)) {
-                const validScores = judge.scores.filter((s: any) => s !== null && !isNaN(s));
-                if (validScores.length > 0) {
-                  const heatTotal = validScores.reduce((a: number, b: number) => a + b, 0);
-                  eventHeats.push({
-                    heat_number: heat.heat_number ?? (eventHeats.length + 1),
-                    total: heatTotal,
-                    scores: validScores
-                  });
+              for (const judge of heat.judges) {
+                if (matchesJudge(judge, judgeName, judgeNames) && judge.scores && Array.isArray(judge.scores)) {
+                  const validScores = judge.scores.filter((s: any) => s !== null && !isNaN(s));
+                  if (validScores.length > 0) {
+                    const heatTotal = validScores.reduce((a: number, b: number) => a + b, 0);
+                    eventHeats.push({
+                      heat_number: heat.heat_number ?? (eventHeats.length + 1),
+                      total: heatTotal,
+                      scores: validScores
+                    });
+                  }
                 }
               }
             }
@@ -302,19 +314,20 @@ export function formatDogsArray(
 
         for (const heat of heats) {
           if (heat.judges && Array.isArray(heat.judges)) {
-            const judge = heat.judges.find((j: any) => matchesJudge(j, judgeName, judgeNames));
-            if (judge && judge.scores && Array.isArray(judge.scores)) {
-              const validScores = judge.scores.filter((s: any) => s !== null && !isNaN(s));
-              const dogData = dogsArray.find((d: any) =>
-                d.name === row.name_lat && d.name_ru === row.name_ru
-              );
+            for (const judge of heat.judges) {
+              if (matchesJudge(judge, judgeName, judgeNames) && judge.scores && Array.isArray(judge.scores)) {
+                const validScores = judge.scores.filter((s: any) => s !== null && !isNaN(s));
+                const dogData = dogsArray.find((d: any) =>
+                  d.name === row.name_lat && d.name_ru === row.name_ru
+                );
 
-              if (dogData) {
-                validScores.forEach((score: number, idx: number) => {
-                  if (idx < 5 && dogData.scores_by_criteria[idx] !== undefined) {
-                    (dogData.scores_by_criteria as Record<number, number[]>)[idx].push(score);
-                  }
-                });
+                if (dogData) {
+                  validScores.forEach((score: number, idx: number) => {
+                    if (idx < 5 && dogData.scores_by_criteria[idx] !== undefined) {
+                      (dogData.scores_by_criteria as Record<number, number[]>)[idx].push(score);
+                    }
+                  });
+                }
               }
             }
           }
@@ -389,15 +402,16 @@ export function aggregateCriteriaStats(
 
       for (const heat of heats) {
         if (heat.judges && Array.isArray(heat.judges)) {
-          const judge = heat.judges.find((j: any) => matchesJudge(j, judgeName, judgeNames));
-          if (judge && judge.scores && Array.isArray(judge.scores)) {
-            const validScores = judge.scores.filter((s: any) => s !== null && !isNaN(s));
+          for (const judge of heat.judges) {
+            if (matchesJudge(judge, judgeName, judgeNames) && judge.scores && Array.isArray(judge.scores)) {
+              const validScores = judge.scores.filter((s: any) => s !== null && !isNaN(s));
 
-            validScores.forEach((score: number, idx: number) => {
-              if (idx < 5 && criteriaStats[idx] !== undefined) {
-                (criteriaStats[idx] as number[]).push(score);
-              }
-            });
+              validScores.forEach((score: number, idx: number) => {
+                if (idx < 5 && criteriaStats[idx] !== undefined) {
+                  (criteriaStats[idx] as number[]).push(score);
+                }
+              });
+            }
           }
         }
       }
@@ -422,7 +436,7 @@ export function formatCriteriaData(criteriaStats: CriteriaStats): any[] {
       criteriaData.push({
         name: criteriaNames[i],
         count: scores.length,
-        evaluations_count: Math.round(scores.length / 5),
+        evaluations_count: scores.length,
         avg_score: scores.reduce((a: number, b: number) => a + b, 0) / scores.length,
         min_score: Math.min(...scores),
         max_score: Math.max(...scores)
@@ -451,40 +465,41 @@ export function aggregateAllScoresAndDogTotals(
 
       for (const heat of heats) {
         if (heat.judges && Array.isArray(heat.judges)) {
-          const judge = heat.judges.find((j: any) => matchesJudge(j, judgeName, judgeNames));
-          if (judge && judge.scores && Array.isArray(judge.scores)) {
-            const validScores = judge.scores.filter((s: any) => s !== null && !isNaN(s));
+          for (const judge of heat.judges) {
+            if (matchesJudge(judge, judgeName, judgeNames) && judge.scores && Array.isArray(judge.scores)) {
+              const validScores = judge.scores.filter((s: any) => s !== null && !isNaN(s));
 
-            allScores.push(...validScores);
+              allScores.push(...validScores);
 
-            const dogKey = `${row.dog_id}_${row.event_id}`;
-            if (!dogTotalScores.has(dogKey)) {
-              dogTotalScores.set(dogKey, {
-                dog_id: row.dog_id,
-                dog_name: `${row.name_lat} ${row.name_ru ? `(${row.name_ru})` : ''}`,
-                breed: row.breed,
-                event_id: row.event_id,
-                event_title: row.event_title,
-                event_date: row.date_start,
-                total_score: 0,
-                score_count: 0
+              const dogKey = `${row.dog_id}_${row.event_id}`;
+              if (!dogTotalScores.has(dogKey)) {
+                dogTotalScores.set(dogKey, {
+                  dog_id: row.dog_id,
+                  dog_name: `${row.name_lat} ${row.name_ru ? `(${row.name_ru})` : ''}`,
+                  breed: row.breed,
+                  event_id: row.event_id,
+                  event_title: row.event_title,
+                  event_date: row.date_start,
+                  total_score: 0,
+                  score_count: 0
+                });
+              }
+
+              const sum = validScores.reduce((a: number, b: number) => a + b, 0);
+              dogTotalScores.get(dogKey)!.total_score += sum;
+              dogTotalScores.get(dogKey)!.score_count += validScores.length;
+
+              validScores.forEach((score: number) => {
+                recentEvaluations.push({
+                  score,
+                  breed: row.breed,
+                  dog: `${row.name_lat} ${row.name_ru ? `(${row.name_ru})` : ''}`,
+                  event: row.event_title,
+                  date: row.date_start,
+                  discipline: row.event_type
+                });
               });
             }
-
-            const sum = validScores.reduce((a: number, b: number) => a + b, 0);
-            dogTotalScores.get(dogKey)!.total_score += sum;
-            dogTotalScores.get(dogKey)!.score_count += validScores.length;
-
-            validScores.forEach((score: number) => {
-              recentEvaluations.push({
-                score,
-                breed: row.breed,
-                dog: `${row.name_lat} ${row.name_ru ? `(${row.name_ru})` : ''}`,
-                event: row.event_title,
-                date: row.date_start,
-                discipline: row.event_type
-              });
-            });
           }
         }
       }

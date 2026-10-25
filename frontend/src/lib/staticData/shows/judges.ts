@@ -27,6 +27,7 @@ export interface ShowJudge {
   graded?: number
   by_year_excellent?: Record<string, number>
   by_year_graded?: Record<string, number>
+  by_year_breeds?: Record<string, number>
 }
 
 export interface ShowJudgeDetail {

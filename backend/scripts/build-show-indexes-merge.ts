@@ -39,6 +39,7 @@ import {
 } from '../lib/show-breed-judge-clean'
 import {
   collapseShowDogsByExactName,
+  collapseShowDogsByTranslit,
   collapseShowDogsByNamePrefix,
 } from '../lib/show-dog-dedupe'
 
@@ -451,11 +452,17 @@ async function main() {
   console.log(`Linked show→competition by unique name (breed fix): ${nameLink.linked}`)
 
   const collapsedAll = collapseShowDogsByExactName(dogs as any)
-  const collapsedPrefix = collapseShowDogsByNamePrefix(collapsedAll.dogs as any)
+  const collapsedTranslit = collapseShowDogsByTranslit(collapsedAll.dogs as any)
+  const collapsedPrefix = collapseShowDogsByNamePrefix(collapsedTranslit.dogs as any)
   dogs = (collapsedPrefix.dogs as any).sort(compareShowDogs)
   console.log(
     `Collapsed same-name multi-breed cards: ${collapsedAll.collapsedGroups} groups, −${collapsedAll.removedCards} cards`,
   )
+  if (collapsedTranslit.removedCards > 0) {
+    console.log(
+      `Collapsed transliterated RU↔EN cards: ${collapsedTranslit.collapsedGroups} groups, −${collapsedTranslit.removedCards} cards`,
+    )
+  }
   if (collapsedPrefix.removedCards > 0) {
     console.log(
       `Collapsed truncated-name prefixes: ${collapsedPrefix.collapsedGroups} groups, −${collapsedPrefix.removedCards} cards → ${dogs.length} dogs`,
@@ -790,6 +797,18 @@ function buildJudgesIndex(exhibitions: ShowExhibition[]): {
     for (const year of acc.exhibitionYears.values()) {
       byYear[year] = (byYear[year] || 0) + 1
     }
+    const byYearBreedsSet: Record<string, Set<string>> = {}
+    for (const [exId, bMap] of acc.exhibitionBreedCounts) {
+      const year = acc.exhibitionYears.get(exId)
+      if (!year) continue
+      if (!byYearBreedsSet[year]) byYearBreedsSet[year] = new Set()
+      for (const breed of bMap.keys()) byYearBreedsSet[year].add(breed)
+    }
+    const by_year_breeds: Record<string, number> = {}
+    for (const [year, bSet] of Object.entries(byYearBreedsSet)) {
+      by_year_breeds[year] = bSet.size
+    }
+
     const breedEntries = [...acc.breeds.entries()]
       .map(([breed, count]) => ({ breed, count }))
       .sort((a, b) => b.count - a.count || a.breed.localeCompare(b.breed, 'ru'))
@@ -813,6 +832,7 @@ function buildJudgesIndex(exhibitions: ShowExhibition[]): {
       by_year: byYear,
       excellent_rate,
       graded: acc.gradedTotal,
+      by_year_breeds,
     })
     details.push({
       id,

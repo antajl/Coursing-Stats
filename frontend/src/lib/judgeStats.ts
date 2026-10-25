@@ -27,6 +27,7 @@ export function parseJudgeNames(judgesString: string | null | undefined): string
   if (!judgesString) return []
 
   const cleaned = judgesString
+    .replace(/\s*\([^)]*\)/g, '')
     .replace(/Главный\s+судья\s*[:\s-]+\s*/gi, '')
     .replace(/судья\s*[:\s-]+\s*/gi, '')
     .replace(/^\d+\s*[-–]\s*/gm, '')
@@ -81,8 +82,7 @@ export function aggregateJudgeStats(rows: JudgeRawRow[]): Map<string, JudgeStats
       for (const heat of heats) {
         if (heat.judges && Array.isArray(heat.judges)) {
           for (const judge of heat.judges) {
-            const judgeNum = judge.judge_number
-            const judgeName = judge.judge_name || judgeNames[judgeNum - 1] || `Судья ${judgeNum}`
+            const judgeName = resolveJudgeName(judge, judgeNames)
 
             if (!judgeStats.has(judgeName)) {
               judgeStats.set(judgeName, {
@@ -98,8 +98,9 @@ export function aggregateJudgeStats(rows: JudgeRawRow[]): Map<string, JudgeStats
 
             const stats = judgeStats.get(judgeName)!
             if (judge.scores && Array.isArray(judge.scores)) {
-              stats.total_evaluations += judge.scores.length
-              stats.scores.push(...judge.scores)
+              const validScores = judge.scores.filter((s: any) => s !== null && !isNaN(s))
+              stats.total_evaluations += validScores.length
+              stats.scores.push(...validScores)
               if (row.breed) stats.breeds.add(canonicalBreed(row.breed))
               if (row.event_type) stats.disciplines.add(row.event_type)
               stats.events.add(row.event_id)
@@ -120,16 +121,24 @@ export function aggregateJudgeStats(rows: JudgeRawRow[]): Map<string, JudgeStats
   return judgeStats
 }
 
-function matchesJudge(
-  j: { judge_number: number; judge_name?: string },
+export function resolveJudgeName(
+  j: { judge_number?: number; judge_name?: string },
+  judgeNames: string[],
+): string | undefined {
+  if (j.judge_name) return j.judge_name
+  const num = j.judge_number
+  if (typeof num === 'number' && num > 0) {
+    return judgeNames[num - 1] || `Судья ${num}`
+  }
+  return undefined
+}
+
+export function matchesJudge(
+  j: { judge_number?: number; judge_name?: string },
   judgeName: string,
   judgeNames: string[],
 ): boolean {
-  if (j.judge_name) {
-    return j.judge_name === judgeName
-  }
-  const judgeNum = judgeNames.indexOf(judgeName) + 1
-  return judgeNum > 0 && j.judge_number === judgeNum
+  return resolveJudgeName(j, judgeNames) === judgeName
 }
 
 export function formatJudgesData(judgeStats: Map<string, JudgeStatsAcc>) {
@@ -390,14 +399,13 @@ export function aggregateCriteriaStats(rows: JudgeRawRow[], judgeName: string): 
 
       for (const heat of heats) {
         if (heat.judges && Array.isArray(heat.judges)) {
-          const judge = heat.judges.find((j: { judge_number: number; judge_name?: string }) =>
-            matchesJudge(j, judgeName, judgeNames),
-          )
-          if (judge?.scores && Array.isArray(judge.scores)) {
-            const validScores = judge.scores.filter((s: number | null) => s !== null && !Number.isNaN(s))
-            validScores.forEach((score: number, idx: number) => {
-              if (idx < 5 && criteriaStats[idx] !== undefined) criteriaStats[idx].push(score)
-            })
+          for (const judge of heat.judges) {
+            if (matchesJudge(judge, judgeName, judgeNames) && judge.scores && Array.isArray(judge.scores)) {
+              const validScores = judge.scores.filter((s: number | null) => s !== null && !Number.isNaN(s))
+              validScores.forEach((score: number, idx: number) => {
+                if (idx < 5 && criteriaStats[idx] !== undefined) criteriaStats[idx].push(score)
+              })
+            }
           }
         }
       }
@@ -419,7 +427,7 @@ export function formatCriteriaData(criteriaStats: CriteriaStats) {
       criteriaData.push({
         name: criteriaNames[i],
         count: scores.length,
-        evaluations_count: Math.round(scores.length / 5),
+        evaluations_count: scores.length,
         avg_score: scores.reduce((a, b) => a + b, 0) / scores.length,
         min_score: Math.min(...scores),
         max_score: Math.max(...scores),

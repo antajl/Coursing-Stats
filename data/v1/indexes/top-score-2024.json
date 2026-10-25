@@ -47,7 +47,8 @@
       "year_from": 2024,
       "year_to": 2024,
       "judge_eval_count": 0,
-      "rating_score": null
+      "rating_score": null,
+      "sex": "F"
     },
     {
       "dog_id": 9381,
@@ -69,7 +70,7 @@
     {
       "dog_id": 10679,
       "name_lat": "MERCEDES DARDALIE",
-      "name_ru": null,
+      "name_ru": "MERCEDES D'ARDALIE",
       "breed": "ДИРХАУНД (ШОТЛАНДСКАЯ БОРЗАЯ)",
       "year": 2024,
       "best_score": null,
@@ -79,7 +80,8 @@
       "year_from": 2024,
       "year_to": 2024,
       "judge_eval_count": 0,
-      "rating_score": null
+      "rating_score": null,
+      "sex": "F"
     },
     {
       "dog_id": 10671,
@@ -190,7 +192,8 @@
       "year_from": 2024,
       "year_to": 2024,
       "judge_eval_count": 0,
-      "rating_score": null
+      "rating_score": null,
+      "sex": "F"
     },
     {
       "dog_id": 7623,
@@ -2325,9 +2328,9 @@
       "sex": "M"
     },
     {
-      "dog_id": 9557,
-      "name_lat": "АЙЗА ЛУННЫЙ СВЕТ /AYZA LUNNYJ SVET",
-      "name_ru": "АЙЗА ЛУННЫЙ СВЕТ /AYZA LUNNYJ SVET",
+      "dog_id": 812,
+      "name_lat": "AJZA LUNNYJ SVET",
+      "name_ru": "АЙЗА ЛУННЫЙ СВЕТ",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "year": 2024,
       "best_score": 349,
@@ -2337,7 +2340,8 @@
       "year_from": 2024,
       "year_to": 2024,
       "judge_eval_count": 8,
-      "rating_score": 86.89
+      "rating_score": 86.89,
+      "sex": "F"
     },
     {
       "dog_id": 377,
@@ -4893,6 +4897,7 @@
       "year_to": 2024,
       "judge_eval_count": 8,
       "rating_score": 84.69,
+      "aggression_count": 1,
       "sex": "M"
     },
     {
@@ -5461,7 +5466,8 @@
       "year_from": 2024,
       "year_to": 2024,
       "judge_eval_count": 4,
-      "rating_score": 84.85
+      "rating_score": 84.85,
+      "sex": "F"
     },
     {
       "dog_id": 8275,
@@ -6598,6 +6604,21 @@
       "rating_score": null
     },
     {
+      "dog_id": 9613,
+      "name_lat": "ZLAT OHARRY BADIKHAN",
+      "name_ru": "ЗЛАТ ОХАРРИ БАДИХАН",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
+      "year": 2024,
+      "best_score": null,
+      "total_starts": 1,
+      "best_judge_score": null,
+      "avg_judge_score": null,
+      "year_from": 2024,
+      "year_to": 2024,
+      "judge_eval_count": 0,
+      "rating_score": null
+    },
+    {
       "dog_id": 9663,
       "name_lat": "ТИМ СПИРИТ ГРЕНУЙ II",
       "name_ru": "ТИМ СПИРИТ ГРЕНУЙ II",
@@ -6724,21 +6745,6 @@
       "judge_eval_count": 0,
       "rating_score": null,
       "sex": "F"
-    },
-    {
-      "dog_id": 10712,
-      "name_lat": "ZLAT OHARRY BADIKHAN",
-      "name_ru": "ЗЛАТ ОХАРРИ БАДИХАН",
-      "breed": "АФГАНСКАЯ БОРЗАЯ",
-      "year": 2024,
-      "best_score": null,
-      "total_starts": 1,
-      "best_judge_score": null,
-      "avg_judge_score": null,
-      "year_from": 2024,
-      "year_to": 2024,
-      "judge_eval_count": 0,
-      "rating_score": null
     }
   ]
 }

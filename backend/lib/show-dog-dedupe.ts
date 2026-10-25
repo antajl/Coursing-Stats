@@ -3,6 +3,7 @@
  * Key = exact normalized full name (not catalog #). Safe when name is long enough.
  */
 import { isBreedFragment } from '../parsers/shows/parse-rkf-certificate-pdf'
+import { transliterateRuToLat } from './text-normalization.js'
 import {
   collectDogNameParts,
   breedsEquivalent,
@@ -145,6 +146,13 @@ function mergeDogGroup<T extends ShowDogDedupeFields>(group: T[]): T {
     if (dog.catalog_id && !base.catalog_id) base.catalog_id = dog.catalog_id
   }
 
+  // Ensure name_lat and name_ru reflect proper Latin and Cyrillic forms
+  const allNames = group.flatMap((d) => [d.name_lat, d.name_ru].filter(Boolean))
+  const latin = allNames.find((n) => /[a-z]/i.test(n) && !/[а-яё]/i.test(n))
+  const cyrillic = allNames.find((n) => /[а-яё]/i.test(n) && !/[a-z]/i.test(n))
+  if (latin) base.name_lat = latin
+  if (cyrillic) base.name_ru = cyrillic
+
   base.history.sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')))
   base.rank_score = showRankScore(base.titles)
   base.best_award = bestShowAward(base.titles)
@@ -223,6 +231,78 @@ export function collapseShowDogsByExactName<T extends ShowDogDedupeFields>(
  * («ЭМУЛЬ ДЭ ГЕПАРД ГЕЛИЛА» → «… АЛЬ РАВДА»), when unambiguous.
  * O(n log n) via sorted keys + binary search (not O(n²)).
  */
+
+/**
+ * Merge cards within the same canonical breed where one card has Cyrillic spelling
+ * and another has Latin spelling that transliterates to the exact same name.
+ * Strictly checks that canonical breeds are equivalent (never mixes breeds).
+ * Prevents merge if cards have distinct non-null competition_dog_id values.
+ */
+export function collapseShowDogsByTranslit<T extends ShowDogDedupeFields>(
+  dogs: T[],
+): CollapseShowDogsResult<T> {
+  const strong: T[] = []
+  const weak: T[] = []
+
+  for (const dog of dogs) {
+    if (isStrongShowDogName(dog.name_lat, dog.name_ru)) {
+      strong.push(dog)
+    } else {
+      weak.push(dog)
+    }
+  }
+
+  // Group by canonical breed + transliterated name key
+  const byBreedTranslit = new Map<string, T[]>()
+
+  for (const dog of strong) {
+    const breed = cleanShowBreedLabel(dog.breed)
+    if (!breed || isGarbageShowBreed(breed)) {
+      weak.push(dog)
+      continue
+    }
+
+    const primaryKey = primaryShowDogNameKey(dog.name_lat, dog.name_ru)
+    const translit = transliterateRuToLat(primaryKey)
+    if (!translit || translit.length < 8) {
+      weak.push(dog)
+      continue
+    }
+
+    const groupKey = `${breed}|||${translit}`
+    const list = byBreedTranslit.get(groupKey) || []
+    list.push(dog)
+    byBreedTranslit.set(groupKey, list)
+  }
+
+  const out: T[] = [...weak]
+  let collapsedGroups = 0
+  let removedCards = 0
+
+  for (const [, group] of byBreedTranslit) {
+    if (group.length === 1) {
+      out.push(group[0]!)
+      continue
+    }
+
+    // Safety: ensure no competition dog collision
+    const compIds = [
+      ...new Set(group.map((d) => d.competition_dog_id).filter((id): id is number => id != null)),
+    ]
+    if (compIds.length > 1) {
+      // Conflicting competition dogs: keep separate
+      out.push(...group)
+      continue
+    }
+
+    out.push(mergeDogGroup(group))
+    collapsedGroups++
+    removedCards += group.length - 1
+  }
+
+  return { dogs: out, collapsedGroups, removedCards }
+}
+
 export function collapseShowDogsByNamePrefix<T extends ShowDogDedupeFields>(
   dogs: T[],
 ): CollapseShowDogsResult<T> {

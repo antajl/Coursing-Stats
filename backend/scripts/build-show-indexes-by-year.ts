@@ -39,6 +39,7 @@ import {
 } from '../lib/show-breed-judge-clean'
 import {
   collapseShowDogsByExactName,
+  collapseShowDogsByTranslit,
   collapseShowDogsByNamePrefix,
 } from '../lib/show-dog-dedupe'
 import { getExhibitionsRkfStore } from '../lib/exhibitions-rkf-store'
@@ -512,11 +513,17 @@ async function main() {
   console.log(`Linked show→competition by unique name: ${nameLink.linked}`)
 
   const collapsedAll = collapseShowDogsByExactName(dogs as any)
-  const collapsedPrefix = collapseShowDogsByNamePrefix(collapsedAll.dogs as any)
+  const collapsedTranslit = collapseShowDogsByTranslit(collapsedAll.dogs as any)
+  const collapsedPrefix = collapseShowDogsByNamePrefix(collapsedTranslit.dogs as any)
   dogs = (collapsedPrefix.dogs as any).sort(compareShowDogs)
   console.log(
     `Collapsed same-name multi-breed cards: ${collapsedAll.collapsedGroups} groups, −${collapsedAll.removedCards} cards`,
   )
+  if (collapsedTranslit.removedCards > 0) {
+    console.log(
+      `Collapsed transliterated RU↔EN cards: ${collapsedTranslit.collapsedGroups} groups, −${collapsedTranslit.removedCards} cards`,
+    )
+  }
 
   const idByKey = assignStableProfileIds(dogs)
   console.log(`Assigned stable profile ids for ${dogs.length} dogs`)

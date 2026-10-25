@@ -46,3 +46,27 @@ export function normalizeDogName(name: string | null | undefined): string {
 export function normalizeBreed(breed: string | null | undefined): string {
   return normalizeText(breed)
 }
+
+export const RU_TO_LAT_MAP: Record<string, string> = {
+  А: 'A', Б: 'B', В: 'V', Г: 'G', Д: 'D', Е: 'E', Ё: 'E', Ж: 'ZH', З: 'Z',
+  И: 'I', Й: 'Y', К: 'K', Л: 'L', М: 'M', Н: 'N', О: 'O', П: 'P', Р: 'R',
+  С: 'S', Т: 'T', У: 'U', Ф: 'F', Х: 'KH', Ц: 'TS', Ч: 'CH', Ш: 'SH', Щ: 'SHCH',
+  Ъ: '', Ы: 'Y', Ь: '', Э: 'E', Ю: 'YU', Я: 'YA',
+}
+
+/**
+ * Transliterates Russian text into standard Latin according to RKF/sports conventions.
+ */
+export function transliterateRuToLat(text: string): string {
+  if (!text) return ''
+  const upper = text.toUpperCase().replace(/Ё/g, 'Е')
+  let res = ''
+  for (const ch of upper) {
+    if (RU_TO_LAT_MAP[ch] !== undefined) {
+      res += RU_TO_LAT_MAP[ch]
+    } else {
+      res += ch
+    }
+  }
+  return normalizeText(res)
+}

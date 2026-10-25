@@ -382,7 +382,7 @@ export default function Judges() {
         <div ref={listRevealRef} className="grid grid-cols-1 gap-2">
           {sortedJudges.slice(0, visibleCount).map((judge) => (
             <div key={judge.id} data-list-item>
-              <JudgeCard judge={judge} />
+              <JudgeCard judge={judge} filterYear={filterYear} filterDiscipline={filterDiscipline} />
             </div>
           ))}
           {sortedJudges.length > visibleCount && (

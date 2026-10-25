@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import {
   collapseShowDogsByExactName,
+  collapseShowDogsByTranslit,
   collapseShowDogsByNamePrefix,
   isGarbageShowBreed,
   isStrongShowDogName,
@@ -118,4 +119,39 @@ describe('show-dog-dedupe', () => {
     expect(showDogs[0]!.competition_dog_id).toBeNull()
     expect(showDogs[0]!.breed).toBe('МОПС')
   })
-})
+  it('collapses Cyrillic and Latin cards via transliteration within same breed', () => {
+    const lat = 'STRAZH SEVERA EDGAR'
+    const cyr = 'СТРАЖ СЕВЕРА ЭДГАР'
+    const { dogs, collapsedGroups, removedCards } = collapseShowDogsByTranslit([
+      dog({ id: '1', name_lat: lat, breed: 'ИРЛАНДСКИЙ ВОЛКОДАВ', total_shows: 3, titles: { CAC: 2 } }),
+      dog({ id: '2', name_lat: cyr, breed: 'ИРЛАНДСКИЙ ВОЛКОДАВ', total_shows: 2, titles: { BOB: 1 } }),
+    ])
+    expect(collapsedGroups).toBe(1)
+    expect(removedCards).toBe(1)
+    expect(dogs).toHaveLength(1)
+    expect(dogs[0]!.name_lat).toBe(lat)
+    expect(dogs[0]!.name_ru).toBe(cyr)
+    expect(dogs[0]!.breed).toBe('ИРЛАНДСКИЙ ВОЛКОДАВ')
+    expect(dogs[0]!.total_shows).toBe(5)
+    expect(dogs[0]!.titles.CAC).toBe(2)
+    expect(dogs[0]!.titles.BOB).toBe(1)
+  })
+
+  it('does NOT collapse transliterated names across different breeds', () => {
+    const { dogs, collapsedGroups } = collapseShowDogsByTranslit([
+      dog({ id: '1', name_lat: 'AFINA MUDRAYA', breed: 'ВЕЙМАРАНЕР' }),
+      dog({ id: '2', name_lat: 'АФИНА МУДРАЯ', breed: 'МОПС' }),
+    ])
+    expect(collapsedGroups).toBe(0)
+    expect(dogs).toHaveLength(2)
+  })
+
+  it('does NOT collapse transliterated names with conflicting competition IDs', () => {
+    const { dogs, collapsedGroups } = collapseShowDogsByTranslit([
+      dog({ id: '1', name_lat: 'STRAZH SEVERA EDGAR', breed: 'ИРЛАНДСКИЙ ВОЛКОДАВ', competition_dog_id: 101 }),
+      dog({ id: '2', name_lat: 'СТРАЖ СЕВЕРА ЭДГАР', breed: 'ИРЛАНДСКИЙ ВОЛКОДАВ', competition_dog_id: 202 }),
+    ])
+    expect(collapsedGroups).toBe(0)
+    expect(dogs).toHaveLength(2)
+  })
+});

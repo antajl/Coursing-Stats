@@ -6,14 +6,18 @@
   "name_lat": "MUFFIN S ISUMINKOY",
   "name_ru": "MUFFIN S ISUMINKOY",
   "breed": "УИППЕТ",
-  "sex": null,
+  "sex": "Кобель",
   "owner": null,
   "competition_ids": [
     1565,
-    1567
+    1567,
+    20190811,
+    20191005
   ],
   "competition_files": [
     "competitions/2019/06-июнь/1565-бега-борзых-за-механическим-заицем-круг.json",
-    "competitions/2019/09-сентябрь/1567-кубок-россии-по-бегам-борзых.json"
+    "competitions/2019/09-сентябрь/1567-кубок-россии-по-бегам-борзых.json",
+    "competitions/2019/08-август/20190811-тестовое-состязание-по-реисингу.json",
+    "competitions/2019/10-октябрь/20191005-международные-состязания-по-курсингу-cacil-cacl.json"
   ]
 }

@@ -369,6 +369,7 @@ export default function ShowJudges() {
           {sortedJudges.slice(0, visibleCount).map((judge) => (
             <ShowJudgeCard
               key={judge.id || judge.name}
+              filterYear={filterYear}
               judge={{
                 id: judge.id || judge.name,
                 name: judge.name,
@@ -376,7 +377,9 @@ export default function ShowJudges() {
                 exhibitionsCount: filterYear
                   ? (judge.by_year?.[filterYear] ?? 0)
                   : judge.total_judged,
-                breedsCount: judge.unique_breeds ?? judge.breeds?.length ?? 0,
+                breedsCount: filterYear
+                  ? (judge.by_year_breeds?.[filterYear] ?? (judge.unique_breeds ?? judge.breeds?.length ?? 0))
+                  : (judge.unique_breeds ?? judge.breeds?.length ?? 0),
                 breedChips: (judge.breeds || []).slice(0, 2),
                 excellentPct: judgeExcellentPctForCard(judge, filterYear),
                 graded: filterYear ? judge.by_year_graded?.[filterYear] : judge.graded,

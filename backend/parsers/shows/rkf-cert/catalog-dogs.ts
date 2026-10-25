@@ -42,8 +42,19 @@ export function isPlausibleJudgeName(raw: string): boolean {
   const words = name.split(/\s+/).filter(Boolean)
   if (words.length < 2) return false
   // Must look like a person: has lowercase somewhere OR (2–4 ALLCAPS words typical for FIO)
+  // Reject admin notes
+  if (/\b(решени[ею]\s+вк|вопрос\s+\d+|по\s+решению\s+вк|изменено\s+по\s+решению)\b/iu.test(name)) return false
+
+  // Reject show/breed phrases without person names
+  if (/^(отл\s+сас|отл\s+\d|выставке\s+моно|вельш\s+корги|такса\s+(?:кроличья|стандартная|миниатюрная))/iu.test(name)) return false
+
+  // Must look like a person: has lowercase somewhere OR (2–5 ALLCAPS words typical for FIO)
   const hasLower = /[a-zа-яё]/.test(name)
-  if (hasLower) return /[A-Za-zА-Яа-яЁё]/.test(name)
+  if (hasLower) {
+    const breedish = /^(?:ОВЧАРКА|ТЕРЬЕР|РЕТРИВЕР|БУЛЬДОГ|КОРГИ|ШПИЦ|ПУДЕЛЬ|ХАСКИ|ДОБЕРМАН|РОТВЕЙЛЕР|МОПС|БИГЛЬ|КОЛЛИ|ШЕЛТИ|МАЛЬТЕЗЕ|БАСЕНДЖИ|СИБА|ПИНЧЕР|СПАНИЕЛЬ|ТАКСА)/iu
+    if (words.length >= 2 && breedish.test(words[0]) && breedish.test(words[1])) return false
+    return /[A-Za-zА-Яа-яЁё]/.test(name)
+  }
   if (words.length >= 2 && words.length <= 5 && words.every((w) => /^[А-ЯЁA-Z][А-ЯЁA-Z'’\-]*$/.test(w))) {
     // Filter obvious breed words as first token
     const breedish =

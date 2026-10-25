@@ -1298,7 +1298,7 @@ export function buildTeamCoursingProtocolHtml(comp: CompetitionData): string {
   for (const r of comp.results) {
     const teamNo = r.catalog_no;
     if (!teamMap.has(teamNo)) {
-      const isDns = r.status === 'dns' || r.raw_scores_json?.ran === false;
+      const isDns = (r.status === 'dns' || r.raw_scores_json?.ran === false) && !r.total_score && !r.placement;
       teamMap.set(teamNo, {
         catalog_no: teamNo,
         team_name: r.breed_class || `Команда № ${teamNo}`,

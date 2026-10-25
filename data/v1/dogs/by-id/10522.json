@@ -6,18 +6,20 @@
   "name_lat": "STILAR HALESTORM",
   "name_ru": "STILAR HALESTORM",
   "breed": "УИППЕТ",
-  "sex": null,
+  "sex": "Кобель",
   "owner": null,
   "competition_ids": [
     1582,
+    20201003,
     20230415,
-    20230819,
-    20230701
+    20230701,
+    20230819
   ],
   "competition_files": [
     "competitions/2021/09-сентябрь/1582-кубок-россии-курсинг-борзых.json",
     "competitions/2023/04-апрель/20230415--15-16042023-.json",
     "competitions/2023/08-август/20230819--cacl-19082023-.json",
-    "competitions/2023/07-июль/20230701--br-cacl-br-01072023-.json"
+    "competitions/2023/07-июль/20230701--br-cacl-br-01072023-.json",
+    "competitions/2020/10-октябрь/20201003-международныи-чемпионат-по-курсингу-cacil-чемпио.json"
   ]
 }

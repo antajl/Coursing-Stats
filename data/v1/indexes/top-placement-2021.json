@@ -294,7 +294,7 @@
     },
     {
       "dog_id": 9230,
-      "name_lat": "ПЕС",
+      "name_lat": "PES",
       "name_ru": "ПЕС",
       "breed": "МЕТИС",
       "year": 2021,
@@ -352,7 +352,8 @@
       "year_from": 2021,
       "year_to": 2021,
       "rank_delta": -3,
-      "rank_delta_breed": 0
+      "rank_delta_breed": 0,
+      "sex": "M"
     },
     {
       "dog_id": 9255,
@@ -1019,7 +1020,7 @@
       "year_to": 2021,
       "rank_delta": -11,
       "rank_delta_breed": 0,
-      "sex": "F"
+      "sex": "M"
     },
     {
       "dog_id": 10473,
@@ -1129,7 +1130,8 @@
       "year_from": 2021,
       "year_to": 2021,
       "rank_delta": -16,
-      "rank_delta_breed": 0
+      "rank_delta_breed": 0,
+      "sex": "F"
     },
     {
       "dog_id": 600,
@@ -1352,7 +1354,8 @@
       "year_from": 2021,
       "year_to": 2021,
       "rank_delta": -13,
-      "rank_delta_breed": -1
+      "rank_delta_breed": -1,
+      "sex": "M"
     },
     {
       "dog_id": 10316,
@@ -1493,7 +1496,8 @@
       "year_from": 2021,
       "year_to": 2021,
       "rank_delta": -13,
-      "rank_delta_breed": -1
+      "rank_delta_breed": -1,
+      "sex": "F"
     },
     {
       "dog_id": 10502,
@@ -1553,7 +1557,8 @@
       "year_from": 2021,
       "year_to": 2021,
       "rank_delta": -13,
-      "rank_delta_breed": 0
+      "rank_delta_breed": 0,
+      "sex": "M"
     },
     {
       "dog_id": 10526,
@@ -1731,7 +1736,7 @@
     },
     {
       "dog_id": 9236,
-      "name_lat": "КНОПА",
+      "name_lat": "KNOPA",
       "name_ru": "КНОПА",
       "breed": "МЕТИС",
       "year": 2021,
@@ -1822,7 +1827,8 @@
       "year_from": 2021,
       "year_to": 2021,
       "rank_delta": 34,
-      "rank_delta_breed": 0
+      "rank_delta_breed": 0,
+      "sex": "F"
     },
     {
       "dog_id": 10478,
@@ -2027,7 +2033,8 @@
       "year_from": 2021,
       "year_to": 2021,
       "rank_delta": 107,
-      "rank_delta_breed": 2
+      "rank_delta_breed": 2,
+      "sex": "F"
     },
     {
       "dog_id": 228,
@@ -2654,7 +2661,7 @@
     },
     {
       "dog_id": 9232,
-      "name_lat": "БОНЯ",
+      "name_lat": "BONYA",
       "name_ru": "БОНЯ",
       "breed": "МЕТИС",
       "year": 2021,
@@ -2746,7 +2753,8 @@
       "year_from": 2021,
       "year_to": 2021,
       "rank_delta": -16,
-      "rank_delta_breed": 0
+      "rank_delta_breed": 0,
+      "sex": "F"
     },
     {
       "dog_id": 8949,
@@ -2903,7 +2911,8 @@
       "year_from": 2021,
       "year_to": 2021,
       "rank_delta": -15,
-      "rank_delta_breed": 0
+      "rank_delta_breed": 0,
+      "sex": "F"
     },
     {
       "dog_id": 10463,
@@ -3139,6 +3148,7 @@
       "year_to": 2021,
       "rank_delta": 0,
       "rank_delta_breed": 4,
+      "aggression_count": 1,
       "sex": "M"
     },
     {
@@ -3747,7 +3757,8 @@
       "year_from": 2021,
       "year_to": 2021,
       "rank_delta": -17,
-      "rank_delta_breed": -1
+      "rank_delta_breed": -1,
+      "sex": "M"
     },
     {
       "dog_id": 10321,

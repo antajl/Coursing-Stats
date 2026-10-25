@@ -6,14 +6,18 @@
   "name_lat": "LUXURY WHIPP LAVATERRA",
   "name_ru": "LUXURY WHIPP LAVATERRA",
   "breed": "УИППЕТ",
-  "sex": null,
+  "sex": "Сука",
   "owner": null,
   "competition_ids": [
     1565,
-    1571
+    1571,
+    20191005,
+    20201003
   ],
   "competition_files": [
     "competitions/2019/06-июнь/1565-бега-борзых-за-механическим-заицем-круг.json",
-    "competitions/2020/09-сентябрь/1571-чемпионат-россии-по-бегам-борзых-за-механическим.json"
+    "competitions/2020/09-сентябрь/1571-чемпионат-россии-по-бегам-борзых-за-механическим.json",
+    "competitions/2019/10-октябрь/20191005-международные-состязания-по-курсингу-cacil-cacl.json",
+    "competitions/2020/10-октябрь/20201003-международныи-чемпионат-по-курсингу-cacil-чемпио.json"
   ]
 }

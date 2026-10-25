@@ -1,0 +1,2160 @@
+{
+  "schema": "coursing-stats/competition-v1",
+  "exported_at": "2026-10-25T13:22:00.921Z",
+  "source": "manual-entry",
+  "event_id": 20190908,
+  "event": {
+    "id": 20190908,
+    "year": 2019,
+    "date_start": "2019-09-08",
+    "date_end": "2019-09-08",
+    "rank_label": "Открытый чемпионат НКП РПБ \"Осенний Марафон - 2019\"",
+    "event_type": "coursing",
+    "competition_kind": "Чемпионат НКП",
+    "competition_type": "Осенний Марафон (Рейсинг + Курсинг)",
+    "title": "Открытый чемпионат НКП \"Русская псовая борзая\" \"Осенний Марафон - 2019\"",
+    "host_club": "НКП \"Русская псовая борзая\"",
+    "region": null,
+    "location": "Московская область, д. Новый Милет",
+    "catalog_url": null,
+    "results_url": "http://procoursing.ru/results/2019-09-08_R/",
+    "rules_url": null,
+    "results_pdf_url": "https://drive.google.com/file/d/1aWVIKTl2tfcyamWPtz_gk6h80hwd-dKg/view?usp=sharing",
+    "confirmed": 1,
+    "last_modified": "2026-10-25T13:22:00.922Z",
+    "scraped_at": null,
+    "telegram_url": null,
+    "full_title": "Открытый чемпионат НКП \"Русская псовая борзая\" \"Осенний Марафон - 2019\"",
+    "event_date": "2019-09-08",
+    "protocol_location": null,
+    "judges": null,
+    "track_schemes": []
+  },
+  "result_count": 53,
+  "results": [
+    {
+      "id": 1,
+      "event_id": 20190908,
+      "dog_id": 10204,
+      "breed_class": "Русская псовая борзая - 1-й раунд (Рейсинг) - Стандартный - Кобель",
+      "catalog_no": 10,
+      "placement": 1,
+      "total_score": 36.63,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10204,
+        "name": "OBEREG",
+        "name_ru": "OBEREG",
+        "name_lat": "OBEREG",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "distance": 490,
+        "grand_total": 36.63,
+        "format": "racing",
+        "heats": [
+          {
+            "heat_number": 6,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 36.63,
+            "speed_kmh": 48.157
+          }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "event_id": 20190908,
+      "dog_id": 10422,
+      "breed_class": "Русская псовая борзая - 1-й раунд (Рейсинг) - Стандартный - Кобель",
+      "catalog_no": 7,
+      "placement": 2,
+      "total_score": 37.92,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10422,
+        "name": "KATZ PTYAGIN",
+        "name_ru": "KATZ PTYAGIN",
+        "name_lat": "KATZ PTYAGIN",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null
+      },
+      "raw_scores_json": {
+        "distance": 490,
+        "grand_total": 37.92,
+        "format": "racing",
+        "heats": [
+          {
+            "heat_number": 3,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 37.92,
+            "speed_kmh": 46.519
+          }
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "event_id": 20190908,
+      "dog_id": 10829,
+      "breed_class": "Русская псовая борзая - 1-й раунд (Рейсинг) - Стандартный - Кобель",
+      "catalog_no": 14,
+      "placement": 3,
+      "total_score": 40.05,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10829,
+        "name": "YASNYJ SOKOL IZ RAZDOLIA",
+        "name_ru": "ЯСНЫЙ СОКОЛ ИЗ РАЗДОЛЬЯ",
+        "name_lat": "YASNYJ SOKOL IZ RAZDOLIA",
+        "breed": "Русская псовая борзая",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "distance": 490,
+        "grand_total": 40.05,
+        "format": "racing",
+        "heats": [
+          {
+            "heat_number": 4,
+            "bib_number": 5,
+            "bib_color": "yellow",
+            "time": 40.05,
+            "speed_kmh": 44.045
+          }
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "event_id": 20190908,
+      "dog_id": 10879,
+      "breed_class": "Русская псовая борзая - 1-й раунд (Рейсинг) - Стандартный - Кобель",
+      "catalog_no": 17,
+      "placement": 4,
+      "total_score": 41.18,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10879,
+        "name": "БОРЗОЙ ЦАРСКИЙ ФЕНИКС",
+        "name_ru": "БОРЗОЙ ЦАРСКИЙ ФЕНИКС",
+        "name_lat": "БОРЗОЙ ЦАРСКИЙ ФЕНИКС",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "distance": 490,
+        "grand_total": 41.18,
+        "format": "racing",
+        "heats": [
+          {
+            "heat_number": 13,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 41.18,
+            "speed_kmh": 42.836
+          }
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "event_id": 20190908,
+      "dog_id": 10880,
+      "breed_class": "Русская псовая борзая - 1-й раунд (Рейсинг) - Стандартный - Кобель",
+      "catalog_no": 1,
+      "placement": 5,
+      "total_score": 42.27,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10880,
+        "name": "ANGELUS SPIRIT OF THE TSAR",
+        "name_ru": "ANGELUS SPIRIT OF THE TSAR",
+        "name_lat": "ANGELUS SPIRIT OF THE TSAR",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "distance": 490,
+        "grand_total": 42.27,
+        "format": "racing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 42.27,
+            "speed_kmh": 41.732
+          }
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "event_id": 20190908,
+      "dog_id": 10881,
+      "breed_class": "Русская псовая борзая - 1-й раунд (Рейсинг) - Стандартный - Кобель",
+      "catalog_no": 6,
+      "placement": 6,
+      "total_score": 42.46,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10881,
+        "name": "JUSTSO ARCHES OPSIS KALOPSIS",
+        "name_ru": "JUSTSO ARCHES OPSIS KALOPSIS",
+        "name_lat": "JUSTSO ARCHES OPSIS KALOPSIS",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "distance": 490,
+        "grand_total": 42.46,
+        "format": "racing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 42.46,
+            "speed_kmh": 41.545
+          }
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "event_id": 20190908,
+      "dog_id": 10882,
+      "breed_class": "Русская псовая борзая - 1-й раунд (Рейсинг) - Стандартный - Кобель",
+      "catalog_no": 2,
+      "placement": 7,
+      "total_score": 42.49,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10882,
+        "name": "BORN TO BE WILD SPIRIT OF THE TSAR",
+        "name_ru": "BORN TO BE WILD SPIRIT OF THE TSAR",
+        "name_lat": "BORN TO BE WILD SPIRIT OF THE TSAR",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "distance": 490,
+        "grand_total": 42.49,
+        "format": "racing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 42.49,
+            "speed_kmh": 41.516
+          }
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "event_id": 20190908,
+      "dog_id": 10883,
+      "breed_class": "Русская псовая борзая - 1-й раунд (Рейсинг) - Стандартный - Кобель",
+      "catalog_no": 22,
+      "placement": 8,
+      "total_score": 42.74,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10883,
+        "name": "СИДОР",
+        "name_ru": "СИДОР",
+        "name_lat": "СИДОР",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "distance": 490,
+        "grand_total": 42.74,
+        "format": "racing",
+        "heats": [
+          {
+            "heat_number": 10,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 42.74,
+            "speed_kmh": 41.273
+          }
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "event_id": 20190908,
+      "dog_id": 10884,
+      "breed_class": "Русская псовая борзая - 1-й раунд (Рейсинг) - Стандартный - Кобель",
+      "catalog_no": 45,
+      "placement": 9,
+      "total_score": 47.27,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10884,
+        "name": "УЛАН",
+        "name_ru": "УЛАН",
+        "name_lat": "УЛАН",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "distance": 490,
+        "grand_total": 47.27,
+        "format": "racing",
+        "heats": [
+          {
+            "heat_number": 9,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 47.27,
+            "speed_kmh": 37.318
+          }
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "event_id": 20190908,
+      "dog_id": 10885,
+      "breed_class": "Русская псовая борзая - 1-й раунд (Рейсинг) - Стандартный - Кобель",
+      "catalog_no": 18,
+      "placement": 10,
+      "total_score": 48.29,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10885,
+        "name": "ГЕРМЕС ИЗ СЕВЕРНОЙ ОХОТЫ",
+        "name_ru": "ГЕРМЕС ИЗ СЕВЕРНОЙ ОХОТЫ",
+        "name_lat": "ГЕРМЕС ИЗ СЕВЕРНОЙ ОХОТЫ",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "distance": 490,
+        "grand_total": 48.29,
+        "format": "racing",
+        "heats": [
+          {
+            "heat_number": 9,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 48.29,
+            "speed_kmh": 36.529
+          }
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "event_id": 20190908,
+      "dog_id": 10827,
+      "breed_class": "Русская псовая борзая - 1-й раунд (Рейсинг) - Стандартный - Кобель",
+      "catalog_no": 11,
+      "placement": 11,
+      "total_score": 49.45,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10827,
+        "name": "RAS-PUTIN",
+        "name_ru": "РАС-ПУТИН",
+        "name_lat": "RAS-PUTIN",
+        "breed": "Русская псовая борзая",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "distance": 490,
+        "grand_total": 49.45,
+        "format": "racing",
+        "heats": [
+          {
+            "heat_number": 8,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 49.45,
+            "speed_kmh": 35.672
+          }
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "event_id": 20190908,
+      "dog_id": 10352,
+      "breed_class": "Русская псовая борзая - 1-й раунд (Рейсинг) - Стандартный - Кобель",
+      "catalog_no": 4,
+      "placement": 12,
+      "total_score": 51.47,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10352,
+        "name": "BUDENNYI",
+        "name_ru": "BUDENNYI",
+        "name_lat": "BUDENNYI",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null
+      },
+      "raw_scores_json": {
+        "distance": 490,
+        "grand_total": 51.47,
+        "format": "racing",
+        "heats": [
+          {
+            "heat_number": 2,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 51.47,
+            "speed_kmh": 34.272
+          }
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "event_id": 20190908,
+      "dog_id": 10128,
+      "breed_class": "Русская псовая борзая - 1-й раунд (Рейсинг) - Стандартный - Кобель",
+      "catalog_no": 9,
+      "placement": 13,
+      "total_score": 53.92,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10128,
+        "name": "NEVSKAYA LEGENDA MOROZ",
+        "name_ru": "NEVSKAYA LEGENDA MOROZ",
+        "name_lat": "NEVSKAYA LEGENDA MOROZ",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "distance": 490,
+        "grand_total": 53.92,
+        "format": "racing",
+        "heats": [
+          {
+            "heat_number": 5,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 53.92,
+            "speed_kmh": 32.715
+          }
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "event_id": 20190908,
+      "dog_id": 10542,
+      "breed_class": "Русская псовая борзая - 1-й раунд (Рейсинг) - Стандартный - Сука",
+      "catalog_no": 26,
+      "placement": 1,
+      "total_score": 37.74,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10542,
+        "name": "BULA",
+        "name_ru": "BULA",
+        "name_lat": "BULA",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null
+      },
+      "raw_scores_json": {
+        "distance": 490,
+        "grand_total": 37.74,
+        "format": "racing",
+        "heats": [
+          {
+            "heat_number": 6,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 37.74,
+            "speed_kmh": 46.741
+          }
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "event_id": 20190908,
+      "dog_id": 10118,
+      "breed_class": "Русская псовая борзая - 1-й раунд (Рейсинг) - Стандартный - Сука",
+      "catalog_no": 32,
+      "placement": 2,
+      "total_score": 37.81,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10118,
+        "name": "VOLYA VOL`NAYA GOSPOZHA UDACHA",
+        "name_ru": "ВОЛЯ ВОЛЬНАЯ ГОСПОЖА УДАЧА",
+        "name_lat": "VOLYA VOLNAYA GOSPOZHA UDACHA",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null
+      },
+      "raw_scores_json": {
+        "distance": 490,
+        "grand_total": 37.81,
+        "format": "racing",
+        "heats": [
+          {
+            "heat_number": 11,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 37.81,
+            "speed_kmh": 46.654
+          }
+        ]
+      }
+    },
+    {
+      "id": 16,
+      "event_id": 20190908,
+      "dog_id": 10273,
+      "breed_class": "Русская псовая борзая - 1-й раунд (Рейсинг) - Стандартный - Сука",
+      "catalog_no": 31,
+      "placement": 3,
+      "total_score": 38.25,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10273,
+        "name": "SOLOVYEV TSAREVNA LEBED'",
+        "name_ru": "SOLOVYEV TSAREVNA LEBED",
+        "name_lat": "SOLOVYEV TSAREVNA LEBED",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "distance": 490,
+        "grand_total": 38.25,
+        "format": "racing",
+        "heats": [
+          {
+            "heat_number": 10,
+            "bib_number": 5,
+            "bib_color": "yellow",
+            "time": 38.25,
+            "speed_kmh": 46.118
+          }
+        ]
+      }
+    },
+    {
+      "id": 17,
+      "event_id": 20190908,
+      "dog_id": 10886,
+      "breed_class": "Русская псовая борзая - 1-й раунд (Рейсинг) - Стандартный - Сука",
+      "catalog_no": 39,
+      "placement": 4,
+      "total_score": 38.33,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10886,
+        "name": "РУССКАЯ ЗАБАВА ЭЛЕКТРА",
+        "name_ru": "РУССКАЯ ЗАБАВА ЭЛЕКТРА",
+        "name_lat": "РУССКАЯ ЗАБАВА ЭЛЕКТРА",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "distance": 490,
+        "grand_total": 38.33,
+        "format": "racing",
+        "heats": [
+          {
+            "heat_number": 7,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 38.33,
+            "speed_kmh": 46.021
+          }
+        ]
+      }
+    },
+    {
+      "id": 18,
+      "event_id": 20190908,
+      "dog_id": 10423,
+      "breed_class": "Русская псовая борзая - 1-й раунд (Рейсинг) - Стандартный - Сука",
+      "catalog_no": 29,
+      "placement": 5,
+      "total_score": 38.51,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10423,
+        "name": "GOLDEN DREAM ROYAL LILY",
+        "name_ru": "GOLDEN DREAM ROYAL LILY",
+        "name_lat": "GOLDEN DREAM ROYAL LILY",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null
+      },
+      "raw_scores_json": {
+        "distance": 490,
+        "grand_total": 38.51,
+        "format": "racing",
+        "heats": [
+          {
+            "heat_number": 3,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 38.51,
+            "speed_kmh": 45.806
+          }
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "event_id": 20190908,
+      "dog_id": 10887,
+      "breed_class": "Русская псовая борзая - 1-й раунд (Рейсинг) - Стандартный - Сука",
+      "catalog_no": 36,
+      "placement": 6,
+      "total_score": 38.98,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10887,
+        "name": "ЕДИНСТВЕННАЯ ОТ ЗЛАТЫ И ЗЕВСА",
+        "name_ru": "ЕДИНСТВЕННАЯ ОТ ЗЛАТЫ И ЗЕВСА",
+        "name_lat": "ЕДИНСТВЕННАЯ ОТ ЗЛАТЫ И ЗЕВСА",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "distance": 490,
+        "grand_total": 38.98,
+        "format": "racing",
+        "heats": [
+          {
+            "heat_number": 14,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 38.98,
+            "speed_kmh": 45.254
+          }
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "event_id": 20190908,
+      "dog_id": 9514,
+      "breed_class": "Русская псовая борзая - 1-й раунд (Рейсинг) - Стандартный - Сука",
+      "catalog_no": 28,
+      "placement": 7,
+      "total_score": 40.59,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 9514,
+        "name": "DONSKOI CARABOSSE",
+        "name_ru": "DONSKOI CARABOSSE",
+        "name_lat": "DONSKOI CARABOSSE",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null
+      },
+      "raw_scores_json": {
+        "distance": 490,
+        "grand_total": 40.59,
+        "format": "racing",
+        "heats": [
+          {
+            "heat_number": 10,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 40.59,
+            "speed_kmh": 43.459
+          }
+        ]
+      }
+    },
+    {
+      "id": 21,
+      "event_id": 20190908,
+      "dog_id": 10066,
+      "breed_class": "Русская псовая борзая - 1-й раунд (Рейсинг) - Стандартный - Сука",
+      "catalog_no": 44,
+      "placement": 8,
+      "total_score": 40.85,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10066,
+        "name": "BARSKAYA PRIKHOT JASMINE",
+        "name_ru": "BARSKAYA PRIKHOT JASMINE",
+        "name_lat": "BARSKAYA PRIKHOT JASMINE",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null
+      },
+      "raw_scores_json": {
+        "distance": 490,
+        "grand_total": 40.85,
+        "format": "racing",
+        "heats": [
+          {
+            "heat_number": 7,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 40.85,
+            "speed_kmh": 43.182
+          }
+        ]
+      }
+    },
+    {
+      "id": 22,
+      "event_id": 20190908,
+      "dog_id": 10338,
+      "breed_class": "Русская псовая борзая - 1-й раунд (Рейсинг) - Стандартный - Сука",
+      "catalog_no": 33,
+      "placement": 9,
+      "total_score": 42.16,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10338,
+        "name": "YASKUL",
+        "name_ru": "YASKUL",
+        "name_lat": "YASKUL",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null
+      },
+      "raw_scores_json": {
+        "distance": 490,
+        "grand_total": 42.16,
+        "format": "racing",
+        "heats": [
+          {
+            "heat_number": 6,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 42.16,
+            "speed_kmh": 41.841
+          }
+        ]
+      }
+    },
+    {
+      "id": 23,
+      "event_id": 20190908,
+      "dog_id": 10832,
+      "breed_class": "Русская псовая борзая - 1-й раунд (Рейсинг) - Стандартный - Сука",
+      "catalog_no": 38,
+      "placement": 10,
+      "total_score": 46.87,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10832,
+        "name": "РОССИ-ЯНКА",
+        "name_ru": "РОССИ-ЯНКА",
+        "name_lat": "ROSSI-YANKA",
+        "breed": "Русская псовая борзая",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "distance": 490,
+        "grand_total": 46.87,
+        "format": "racing",
+        "heats": [
+          {
+            "heat_number": 12,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 46.87,
+            "speed_kmh": 37.636
+          }
+        ]
+      }
+    },
+    {
+      "id": 24,
+      "event_id": 20190908,
+      "dog_id": 9850,
+      "breed_class": "Русская псовая борзая - 1-й раунд (Рейсинг) - Стандартный - Сука",
+      "catalog_no": 35,
+      "placement": 11,
+      "total_score": 48.2,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 9850,
+        "name": "ДВИНСКОЙ РОСЯ",
+        "name_ru": "ДВИНСКОЙ РОСЯ",
+        "name_lat": "ДВИНСКОЙ РОСЯ",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null
+      },
+      "raw_scores_json": {
+        "distance": 490,
+        "grand_total": 48.2,
+        "format": "racing",
+        "heats": [
+          {
+            "heat_number": 13,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 48.2,
+            "speed_kmh": 36.598
+          }
+        ]
+      }
+    },
+    {
+      "id": 25,
+      "event_id": 20190908,
+      "dog_id": 10822,
+      "breed_class": "Русская псовая борзая - 1-й раунд (Рейсинг) - Стандартный - Сука",
+      "catalog_no": 27,
+      "placement": 12,
+      "total_score": 50.2,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10822,
+        "name": "CHARODEYKA MOEY DUSHI IZ RAZDOLIA",
+        "name_ru": "ЧАРОДЕЙКА МОЕЙ ДУШИ ИЗ РАЗДОЛЬЯ",
+        "name_lat": "CHARODEYKA MOEY DUSHI IZ RAZDOLIA",
+        "breed": "Русская псовая борзая",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "distance": 490,
+        "grand_total": 50.2,
+        "format": "racing",
+        "heats": [
+          {
+            "heat_number": 4,
+            "bib_number": 6,
+            "bib_color": "white",
+            "time": 50.2,
+            "speed_kmh": 35.139
+          }
+        ]
+      }
+    },
+    {
+      "id": 26,
+      "event_id": 20190908,
+      "dog_id": 10177,
+      "breed_class": "Русская псовая борзая - 1-й раунд (Рейсинг) - Стандартный - Сука",
+      "catalog_no": 25,
+      "placement": 13,
+      "total_score": 50.68,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10177,
+        "name": "BRAVA",
+        "name_ru": "BRAVA",
+        "name_lat": "BRAVA",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null
+      },
+      "raw_scores_json": {
+        "distance": 490,
+        "grand_total": 50.68,
+        "format": "racing",
+        "heats": [
+          {
+            "heat_number": 2,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 50.68,
+            "speed_kmh": 34.807
+          }
+        ]
+      }
+    },
+    {
+      "id": 27,
+      "event_id": 20190908,
+      "dog_id": 10062,
+      "breed_class": "Русская псовая борзая - 1-й раунд (Рейсинг) - Стандартный - Сука",
+      "catalog_no": 43,
+      "placement": 14,
+      "total_score": 64.73,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10062,
+        "name": "BARSKAYA PRIKHOT GORDOST SERDTSA MOEGO",
+        "name_ru": "BARSKAYA PRIKHOT GORDOST SERDTSA MOEGO",
+        "name_lat": "BARSKAYA PRIKHOT GORDOST SERDTSA MOEGO",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null
+      },
+      "raw_scores_json": {
+        "distance": 490,
+        "grand_total": 64.73,
+        "format": "racing",
+        "heats": [
+          {
+            "heat_number": 7,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 64.73,
+            "speed_kmh": 27.252
+          }
+        ]
+      }
+    },
+    {
+      "id": 28,
+      "event_id": 20190908,
+      "dog_id": 10888,
+      "breed_class": "Русская псовая борзая - 1-й раунд (Рейсинг) - Юниоры - Кобель",
+      "catalog_no": 19,
+      "placement": 1,
+      "total_score": 42.6,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10888,
+        "name": "ГОЛОС ВЕТРА ИЗ РАЗДОЛЬЯ",
+        "name_ru": "ГОЛОС ВЕТРА ИЗ РАЗДОЛЬЯ",
+        "name_lat": "ГОЛОС ВЕТРА ИЗ РАЗДОЛЬЯ",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "distance": 490,
+        "grand_total": 42.6,
+        "format": "racing",
+        "heats": [
+          {
+            "heat_number": 4,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 42.6,
+            "speed_kmh": 41.408
+          }
+        ]
+      }
+    },
+    {
+      "id": 29,
+      "event_id": 20190908,
+      "dog_id": 10889,
+      "breed_class": "Русская псовая борзая - 1-й раунд (Рейсинг) - Юниоры - Сука",
+      "catalog_no": 42,
+      "placement": 2,
+      "total_score": 72,
+      "judge_count": 0,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10889,
+        "name": "МЕТЕЛЬ АВГУСТА ААРОН",
+        "name_ru": "МЕТЕЛЬ АВГУСТА ААРОН",
+        "name_lat": "МЕТЕЛЬ АВГУСТА ААРОН",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "distance": 490,
+        "grand_total": 72,
+        "format": "racing",
+        "heats": [
+          {
+            "heat_number": 3,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 72,
+            "speed_kmh": 24.5
+          }
+        ]
+      }
+    },
+    {
+      "id": 30,
+      "event_id": 20190908,
+      "dog_id": 10422,
+      "breed_class": "Русская псовая борзая - 2-й раунд (Курсинг) - Стандартный - Кобель",
+      "catalog_no": 7,
+      "placement": 1,
+      "total_score": 89,
+      "judge_count": 1,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10422,
+        "name": "KATZ PTYAGIN",
+        "name_ru": "KATZ PTYAGIN",
+        "name_lat": "KATZ PTYAGIN",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null
+      },
+      "raw_scores_json": {
+        "grand_total": 89,
+        "heats": [
+          {
+            "heat_number": 17,
+            "bib_number": 1,
+            "bib_color": "red",
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 89
+          }
+        ]
+      }
+    },
+    {
+      "id": 31,
+      "event_id": 20190908,
+      "dog_id": 10881,
+      "breed_class": "Русская псовая борзая - 2-й раунд (Курсинг) - Стандартный - Кобель",
+      "catalog_no": 6,
+      "placement": 1,
+      "total_score": 89,
+      "judge_count": 1,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10881,
+        "name": "JUSTSO ARCHES OPSIS KALOPSIS",
+        "name_ru": "JUSTSO ARCHES OPSIS KALOPSIS",
+        "name_lat": "JUSTSO ARCHES OPSIS KALOPSIS",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "grand_total": 89,
+        "heats": [
+          {
+            "heat_number": 15,
+            "bib_number": 2,
+            "bib_color": "white",
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 89
+          }
+        ]
+      }
+    },
+    {
+      "id": 32,
+      "event_id": 20190908,
+      "dog_id": 9479,
+      "breed_class": "Русская псовая борзая - 2-й раунд (Курсинг) - Стандартный - Кобель",
+      "catalog_no": 12,
+      "placement": 2,
+      "total_score": 89,
+      "judge_count": 1,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 9479,
+        "name": "SOLOVYEV SHELKOVYI ANGEL",
+        "name_ru": "СОЛОВЬЕВ ШЕЛКОВЫЙ АНГЕЛ",
+        "name_lat": "SOLOVYEV SHELKOVYI ANGEL",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "grand_total": 89,
+        "heats": [
+          {
+            "heat_number": 20,
+            "bib_number": 1,
+            "bib_color": "red",
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  17,
+                  17,
+                  19,
+                  18
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 89
+          }
+        ]
+      }
+    },
+    {
+      "id": 33,
+      "event_id": 20190908,
+      "dog_id": 10204,
+      "breed_class": "Русская псовая борзая - 2-й раунд (Курсинг) - Стандартный - Кобель",
+      "catalog_no": 10,
+      "placement": 3,
+      "total_score": 89,
+      "judge_count": 1,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10204,
+        "name": "OBEREG",
+        "name_ru": "OBEREG",
+        "name_lat": "OBEREG",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "grand_total": 89,
+        "heats": [
+          {
+            "heat_number": 21,
+            "bib_number": 2,
+            "bib_color": "white",
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 89
+          }
+        ]
+      }
+    },
+    {
+      "id": 34,
+      "event_id": 20190908,
+      "dog_id": 10880,
+      "breed_class": "Русская псовая борзая - 2-й раунд (Курсинг) - Стандартный - Кобель",
+      "catalog_no": 1,
+      "placement": 4,
+      "total_score": 85,
+      "judge_count": 1,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10880,
+        "name": "ANGELUS SPIRIT OF THE TSAR",
+        "name_ru": "ANGELUS SPIRIT OF THE TSAR",
+        "name_lat": "ANGELUS SPIRIT OF THE TSAR",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "grand_total": 85,
+        "heats": [
+          {
+            "heat_number": 15,
+            "bib_number": 1,
+            "bib_color": "red",
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 85
+          }
+        ]
+      }
+    },
+    {
+      "id": 35,
+      "event_id": 20190908,
+      "dog_id": 10883,
+      "breed_class": "Русская псовая борзая - 2-й раунд (Курсинг) - Стандартный - Кобель",
+      "catalog_no": 22,
+      "placement": 5,
+      "total_score": 85,
+      "judge_count": 1,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10883,
+        "name": "СИДОР",
+        "name_ru": "СИДОР",
+        "name_lat": "СИДОР",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "grand_total": 85,
+        "heats": [
+          {
+            "heat_number": 25,
+            "bib_number": 2,
+            "bib_color": "white",
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 85
+          }
+        ]
+      }
+    },
+    {
+      "id": 36,
+      "event_id": 20190908,
+      "dog_id": 10884,
+      "breed_class": "Русская псовая борзая - 2-й раунд (Курсинг) - Стандартный - Кобель",
+      "catalog_no": 45,
+      "placement": 6,
+      "total_score": 83,
+      "judge_count": 1,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10884,
+        "name": "УЛАН",
+        "name_ru": "УЛАН",
+        "name_lat": "УЛАН",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "grand_total": 83,
+        "heats": [
+          {
+            "heat_number": 24,
+            "bib_number": 2,
+            "bib_color": "white",
+            "judges": [
+              {
+                "scores": [
+                  16,
+                  16,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 83
+          }
+        ]
+      }
+    },
+    {
+      "id": 37,
+      "event_id": 20190908,
+      "dog_id": 10879,
+      "breed_class": "Русская псовая борзая - 2-й раунд (Курсинг) - Стандартный - Кобель",
+      "catalog_no": 17,
+      "placement": 7,
+      "total_score": 83,
+      "judge_count": 1,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10879,
+        "name": "БОРЗОЙ ЦАРСКИЙ ФЕНИКС",
+        "name_ru": "БОРЗОЙ ЦАРСКИЙ ФЕНИКС",
+        "name_lat": "БОРЗОЙ ЦАРСКИЙ ФЕНИКС",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "grand_total": 83,
+        "heats": [
+          {
+            "heat_number": 29,
+            "bib_number": 1,
+            "bib_color": "red",
+            "judges": [
+              {
+                "scores": [
+                  16,
+                  16,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 83
+          }
+        ]
+      }
+    },
+    {
+      "id": 38,
+      "event_id": 20190908,
+      "dog_id": 10885,
+      "breed_class": "Русская псовая борзая - 2-й раунд (Курсинг) - Стандартный - Кобель",
+      "catalog_no": 18,
+      "placement": 8,
+      "total_score": 82,
+      "judge_count": 1,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10885,
+        "name": "ГЕРМЕС ИЗ СЕВЕРНОЙ ОХОТЫ",
+        "name_ru": "ГЕРМЕС ИЗ СЕВЕРНОЙ ОХОТЫ",
+        "name_lat": "ГЕРМЕС ИЗ СЕВЕРНОЙ ОХОТЫ",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "grand_total": 82,
+        "heats": [
+          {
+            "heat_number": 24,
+            "bib_number": 1,
+            "bib_color": "red",
+            "judges": [
+              {
+                "scores": [
+                  15,
+                  16,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 82
+          }
+        ]
+      }
+    },
+    {
+      "id": 39,
+      "event_id": 20190908,
+      "dog_id": 10352,
+      "breed_class": "Русская псовая борзая - 2-й раунд (Курсинг) - Стандартный - Кобель",
+      "catalog_no": 4,
+      "placement": 9,
+      "total_score": 78,
+      "judge_count": 1,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10352,
+        "name": "BUDENNYI",
+        "name_ru": "BUDENNYI",
+        "name_lat": "BUDENNYI",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null
+      },
+      "raw_scores_json": {
+        "grand_total": 78,
+        "heats": [
+          {
+            "heat_number": 16,
+            "bib_number": 1,
+            "bib_color": "red",
+            "judges": [
+              {
+                "scores": [
+                  15,
+                  16,
+                  16,
+                  15,
+                  16
+                ],
+                "sum": 78
+              }
+            ],
+            "total": 78
+          }
+        ]
+      }
+    },
+    {
+      "id": 40,
+      "event_id": 20190908,
+      "dog_id": 10118,
+      "breed_class": "Русская псовая борзая - 2-й раунд (Курсинг) - Стандартный - Сука",
+      "catalog_no": 32,
+      "placement": 1,
+      "total_score": 94,
+      "judge_count": 1,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10118,
+        "name": "VOLYA VOL`NAYA GOSPOZHA UDACHA",
+        "name_ru": "ВОЛЯ ВОЛЬНАЯ ГОСПОЖА УДАЧА",
+        "name_lat": "VOLYA VOLNAYA GOSPOZHA UDACHA",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null
+      },
+      "raw_scores_json": {
+        "grand_total": 94,
+        "heats": [
+          {
+            "heat_number": 26,
+            "bib_number": 1,
+            "bib_color": "red",
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  19,
+                  19
+                ],
+                "sum": 94
+              }
+            ],
+            "total": 94
+          }
+        ]
+      }
+    },
+    {
+      "id": 41,
+      "event_id": 20190908,
+      "dog_id": 10273,
+      "breed_class": "Русская псовая борзая - 2-й раунд (Курсинг) - Стандартный - Сука",
+      "catalog_no": 31,
+      "placement": 2,
+      "total_score": 92,
+      "judge_count": 1,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10273,
+        "name": "SOLOVYEV TSAREVNA LEBED'",
+        "name_ru": "SOLOVYEV TSAREVNA LEBED",
+        "name_lat": "SOLOVYEV TSAREVNA LEBED",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "grand_total": 92,
+        "heats": [
+          {
+            "heat_number": 25,
+            "bib_number": 1,
+            "bib_color": "red",
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  19,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 92
+              }
+            ],
+            "total": 92
+          }
+        ]
+      }
+    },
+    {
+      "id": 42,
+      "event_id": 20190908,
+      "dog_id": 10423,
+      "breed_class": "Русская псовая борзая - 2-й раунд (Курсинг) - Стандартный - Сука",
+      "catalog_no": 29,
+      "placement": 3,
+      "total_score": 91,
+      "judge_count": 1,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10423,
+        "name": "GOLDEN DREAM ROYAL LILY",
+        "name_ru": "GOLDEN DREAM ROYAL LILY",
+        "name_lat": "GOLDEN DREAM ROYAL LILY",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null
+      },
+      "raw_scores_json": {
+        "grand_total": 91,
+        "heats": [
+          {
+            "heat_number": 17,
+            "bib_number": 2,
+            "bib_color": "white",
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 91
+              }
+            ],
+            "total": 91
+          }
+        ]
+      }
+    },
+    {
+      "id": 43,
+      "event_id": 20190908,
+      "dog_id": 10542,
+      "breed_class": "Русская псовая борзая - 2-й раунд (Курсинг) - Стандартный - Сука",
+      "catalog_no": 26,
+      "placement": 4,
+      "total_score": 91,
+      "judge_count": 1,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10542,
+        "name": "BULA",
+        "name_ru": "BULA",
+        "name_lat": "BULA",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null
+      },
+      "raw_scores_json": {
+        "grand_total": 91,
+        "heats": [
+          {
+            "heat_number": 21,
+            "bib_number": 1,
+            "bib_color": "red",
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 91
+              }
+            ],
+            "total": 91
+          }
+        ]
+      }
+    },
+    {
+      "id": 44,
+      "event_id": 20190908,
+      "dog_id": 10886,
+      "breed_class": "Русская псовая борзая - 2-й раунд (Курсинг) - Стандартный - Сука",
+      "catalog_no": 39,
+      "placement": 5,
+      "total_score": 91,
+      "judge_count": 1,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10886,
+        "name": "РУССКАЯ ЗАБАВА ЭЛЕКТРА",
+        "name_ru": "РУССКАЯ ЗАБАВА ЭЛЕКТРА",
+        "name_lat": "РУССКАЯ ЗАБАВА ЭЛЕКТРА",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "grand_total": 91,
+        "heats": [
+          {
+            "heat_number": 22,
+            "bib_number": 1,
+            "bib_color": "red",
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  19,
+                  18
+                ],
+                "sum": 91
+              }
+            ],
+            "total": 91
+          }
+        ]
+      }
+    },
+    {
+      "id": 45,
+      "event_id": 20190908,
+      "dog_id": 9514,
+      "breed_class": "Русская псовая борзая - 2-й раунд (Курсинг) - Стандартный - Сука",
+      "catalog_no": 28,
+      "placement": 6,
+      "total_score": 90,
+      "judge_count": 1,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 9514,
+        "name": "DONSKOI CARABOSSE",
+        "name_ru": "DONSKOI CARABOSSE",
+        "name_lat": "DONSKOI CARABOSSE",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null
+      },
+      "raw_scores_json": {
+        "grand_total": 90,
+        "heats": [
+          {
+            "heat_number": 25,
+            "bib_number": 2,
+            "bib_color": "white",
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              }
+            ],
+            "total": 90
+          }
+        ]
+      }
+    },
+    {
+      "id": 46,
+      "event_id": 20190908,
+      "dog_id": 10062,
+      "breed_class": "Русская псовая борзая - 2-й раунд (Курсинг) - Стандартный - Сука",
+      "catalog_no": 43,
+      "placement": 7,
+      "total_score": 89,
+      "judge_count": 1,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10062,
+        "name": "BARSKAYA PRIKHOT GORDOST SERDTSA MOEGO",
+        "name_ru": "BARSKAYA PRIKHOT GORDOST SERDTSA MOEGO",
+        "name_lat": "BARSKAYA PRIKHOT GORDOST SERDTSA MOEGO",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null
+      },
+      "raw_scores_json": {
+        "grand_total": 89,
+        "heats": [
+          {
+            "heat_number": 22,
+            "bib_number": 2,
+            "bib_color": "white",
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  19,
+                  18
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 89
+          }
+        ]
+      }
+    },
+    {
+      "id": 47,
+      "event_id": 20190908,
+      "dog_id": 10887,
+      "breed_class": "Русская псовая борзая - 2-й раунд (Курсинг) - Стандартный - Сука",
+      "catalog_no": 36,
+      "placement": 8,
+      "total_score": 87,
+      "judge_count": 1,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10887,
+        "name": "ЕДИНСТВЕННАЯ ОТ ЗЛАТЫ И ЗЕВСА",
+        "name_ru": "ЕДИНСТВЕННАЯ ОТ ЗЛАТЫ И ЗЕВСА",
+        "name_lat": "ЕДИНСТВЕННАЯ ОТ ЗЛАТЫ И ЗЕВСА",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "grand_total": 87,
+        "heats": [
+          {
+            "heat_number": 29,
+            "bib_number": 2,
+            "bib_color": "white",
+            "judges": [
+              {
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 87
+          }
+        ]
+      }
+    },
+    {
+      "id": 48,
+      "event_id": 20190908,
+      "dog_id": 10832,
+      "breed_class": "Русская псовая борзая - 2-й раунд (Курсинг) - Стандартный - Сука",
+      "catalog_no": 38,
+      "placement": 9,
+      "total_score": 85,
+      "judge_count": 1,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10832,
+        "name": "РОССИ-ЯНКА",
+        "name_ru": "РОССИ-ЯНКА",
+        "name_lat": "ROSSI-YANKA",
+        "breed": "Русская псовая борзая",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "grand_total": 85,
+        "heats": [
+          {
+            "heat_number": 27,
+            "bib_number": 1,
+            "bib_color": "red",
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  16,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 85
+          }
+        ]
+      }
+    },
+    {
+      "id": 49,
+      "event_id": 20190908,
+      "dog_id": 10066,
+      "breed_class": "Русская псовая борзая - 2-й раунд (Курсинг) - Стандартный - Сука",
+      "catalog_no": 44,
+      "placement": 10,
+      "total_score": 81,
+      "judge_count": 1,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10066,
+        "name": "BARSKAYA PRIKHOT JASMINE",
+        "name_ru": "BARSKAYA PRIKHOT JASMINE",
+        "name_lat": "BARSKAYA PRIKHOT JASMINE",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null
+      },
+      "raw_scores_json": {
+        "grand_total": 81,
+        "heats": [
+          {
+            "heat_number": 22,
+            "bib_number": 2,
+            "bib_color": "white",
+            "judges": [
+              {
+                "scores": [
+                  16,
+                  16,
+                  16,
+                  16,
+                  17
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 81
+          }
+        ]
+      }
+    },
+    {
+      "id": 50,
+      "event_id": 20190908,
+      "dog_id": 10822,
+      "breed_class": "Русская псовая борзая - 2-й раунд (Курсинг) - Стандартный - Сука",
+      "catalog_no": 27,
+      "placement": 11,
+      "total_score": 80,
+      "judge_count": 1,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10822,
+        "name": "CHARODEYKA MOEY DUSHI IZ RAZDOLIA",
+        "name_ru": "ЧАРОДЕЙКА МОЕЙ ДУШИ ИЗ РАЗДОЛЬЯ",
+        "name_lat": "CHARODEYKA MOEY DUSHI IZ RAZDOLIA",
+        "breed": "Русская псовая борзая",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "grand_total": 80,
+        "heats": [
+          {
+            "heat_number": 18,
+            "bib_number": 2,
+            "bib_color": "white",
+            "judges": [
+              {
+                "scores": [
+                  16,
+                  16,
+                  16,
+                  16,
+                  16
+                ],
+                "sum": 80
+              }
+            ],
+            "total": 80
+          }
+        ]
+      }
+    },
+    {
+      "id": 51,
+      "event_id": 20190908,
+      "dog_id": 10177,
+      "breed_class": "Русская псовая борзая - 2-й раунд (Курсинг) - Стандартный - Сука",
+      "catalog_no": 25,
+      "placement": 12,
+      "total_score": 76,
+      "judge_count": 1,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10177,
+        "name": "BRAVA",
+        "name_ru": "BRAVA",
+        "name_lat": "BRAVA",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": null
+      },
+      "raw_scores_json": {
+        "grand_total": 76,
+        "heats": [
+          {
+            "heat_number": 16,
+            "bib_number": 2,
+            "bib_color": "white",
+            "judges": [
+              {
+                "scores": [
+                  16,
+                  15,
+                  15,
+                  15,
+                  15
+                ],
+                "sum": 76
+              }
+            ],
+            "total": 76
+          }
+        ]
+      }
+    },
+    {
+      "id": 52,
+      "event_id": 20190908,
+      "dog_id": 10889,
+      "breed_class": "Русская псовая борзая - 2-й раунд (Курсинг) - Юниоры - Сука",
+      "catalog_no": 42,
+      "placement": 1,
+      "total_score": 84,
+      "judge_count": 1,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10889,
+        "name": "МЕТЕЛЬ АВГУСТА ААРОН",
+        "name_ru": "МЕТЕЛЬ АВГУСТА ААРОН",
+        "name_lat": "МЕТЕЛЬ АВГУСТА ААРОН",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "grand_total": 84,
+        "heats": [
+          {
+            "heat_number": 17,
+            "bib_number": 2,
+            "bib_color": "white",
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  16,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 84
+          }
+        ]
+      }
+    },
+    {
+      "id": 53,
+      "event_id": 20190908,
+      "dog_id": 10888,
+      "breed_class": "Русская псовая борзая - 2-й раунд (Курсинг) - Юниоры - Кобель",
+      "catalog_no": 19,
+      "placement": 2,
+      "total_score": 83,
+      "judge_count": 1,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "status_reason": null,
+      "dog": {
+        "id": 10888,
+        "name": "ГОЛОС ВЕТРА ИЗ РАЗДОЛЬЯ",
+        "name_ru": "ГОЛОС ВЕТРА ИЗ РАЗДОЛЬЯ",
+        "name_lat": "ГОЛОС ВЕТРА ИЗ РАЗДОЛЬЯ",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "grand_total": 83,
+        "heats": [
+          {
+            "heat_number": 18,
+            "bib_number": 2,
+            "bib_color": "white",
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  17,
+                  16
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 83
+          }
+        ]
+      }
+    }
+  ]
+}

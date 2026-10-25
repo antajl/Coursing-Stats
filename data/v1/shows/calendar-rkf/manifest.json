@@ -2,12 +2,12 @@
   "schema": "coursing-stats/show-calendar-rkf-v1",
   "source": "rkf.online",
   "category_id": 1,
-  "date_from": "2019-01-01",
-  "date_to": "2027-12-31",
-  "fetched_at": "2026-07-23T11:20:19.078Z",
-  "count": 62088,
-  "api_count": 62088,
-  "lc_protocol_count": 196,
+  "date_from": "2026-01-01",
+  "date_to": "2026-12-31",
+  "fetched_at": "2026-10-25T14:49:11.589Z",
+  "count": 62089,
+  "api_count": 9724,
+  "lc_protocol_count": 198,
   "known_lc_ids": 92,
   "years": [
     {
@@ -47,8 +47,15 @@
     },
     {
       "year": "2026",
-      "count": 9723,
-      "lc_protocol_count": 34
+      "count": 9724,
+      "lc_protocol_count": 36
     }
-  ]
+  ],
+  "last_ingest": {
+    "date_from": "2026-01-01",
+    "date_to": "2026-12-31",
+    "count": 9724,
+    "api_count": 9724,
+    "lc_protocol_count": 36
+  }
 }

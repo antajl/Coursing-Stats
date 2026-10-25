@@ -22,7 +22,15 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execSync } from 'node:child_process';
 import { slugify, dogKey, monthFolder } from '../export/d1-export-utils.js';
-import { normalizeDogName, normalizeBreed, normalizeText } from '../../lib/text-normalization.js';
+import {
+  normalizeDogName,
+  normalizeBreed,
+  normalizeText,
+  transliterateRuToLat,
+  RU_TO_LAT_MAP,
+} from '../../lib/text-normalization.js';
+
+export { transliterateRuToLat, RU_TO_LAT_MAP };
 import { collectDogNameParts } from '../../lib/dog-identity-match.js';
 import { dogNamesLikelySame } from '../../lib/dog-name-parts.js';
 import { matchesBreedFilter } from '../../src/lib/breed-mapping.js';
@@ -103,26 +111,6 @@ export interface StoredDog {
   [key: string]: unknown;
 }
 
-const RU_TO_LAT_MAP: Record<string, string> = {
-  А: 'A', Б: 'B', В: 'V', Г: 'G', Д: 'D', Е: 'E', Ё: 'E', Ж: 'ZH', З: 'Z',
-  И: 'I', Й: 'Y', К: 'K', Л: 'L', М: 'M', Н: 'N', О: 'O', П: 'P', Р: 'R',
-  С: 'S', Т: 'T', У: 'U', Ф: 'F', Х: 'KH', Ц: 'TS', Ч: 'CH', Ш: 'SH', Щ: 'SHCH',
-  Ъ: '', Ы: 'Y', Ь: '', Э: 'E', Ю: 'YU', Я: 'YA',
-};
-
-export function transliterateRuToLat(text: string): string {
-  if (!text) return '';
-  const upper = text.toUpperCase().replace(/Ё/g, 'Е');
-  let res = '';
-  for (const ch of upper) {
-    if (RU_TO_LAT_MAP[ch] !== undefined) {
-      res += RU_TO_LAT_MAP[ch];
-    } else {
-      res += ch;
-    }
-  }
-  return normalizeText(res);
-}
 
 export function loadAllDogs(): { dogs: Map<number, StoredDog>; maxDogId: number } {
   const dogs = new Map<number, StoredDog>();
@@ -375,6 +363,12 @@ export async function ingestCompetition(
 
       // Update existing dog
       let changed = false;
+      if (!Array.isArray(targetDog.competition_ids)) {
+        targetDog.competition_ids = [];
+      }
+      if (!Array.isArray(targetDog.competition_files)) {
+        targetDog.competition_files = [];
+      }
       if (!targetDog.competition_ids.includes(eventId)) {
         targetDog.competition_ids.push(eventId);
         targetDog.competition_ids.sort((a, b) => a - b);
@@ -390,6 +384,10 @@ export async function ingestCompetition(
       }
       if (!targetDog.name_ru && nameRu) {
         targetDog.name_ru = nameRu;
+        changed = true;
+      }
+      if (!targetDog.name_lat && nameLat) {
+        targetDog.name_lat = nameLat;
         changed = true;
       }
 

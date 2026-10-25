@@ -6,16 +6,20 @@
   "name_lat": "VOROZHEYA IS SAGI O GARDARIKE",
   "name_ru": "VOROZHEYA IS SAGI O GARDARIKE",
   "breed": "УИППЕТ",
-  "sex": null,
+  "sex": "Сука",
   "owner": null,
   "competition_ids": [
     1566,
     1568,
-    1579
+    1579,
+    20191005,
+    20200822
   ],
   "competition_files": [
     "competitions/2019/08-август/1566-чемпионат-ркф-cacl.json",
     "competitions/2019/09-сентябрь/1568-кубок-россии-по-бегам-борзых-курсинг.json",
-    "competitions/2021/08-август/1579-чемпионат-ркф-cacl-по-бегам-борзых-за-механическ.json"
+    "competitions/2021/08-август/1579-чемпионат-ркф-cacl-по-бегам-борзых-за-механическ.json",
+    "competitions/2019/10-октябрь/20191005-международные-состязания-по-курсингу-cacil-cacl.json",
+    "competitions/2020/08-август/20200822-международныи-чемпионат-по-курсингу-cacil-чемпио.json"
   ]
 }

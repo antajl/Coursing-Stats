@@ -14,6 +14,8 @@ export interface JudgeCardData {
 
 interface JudgeCardProps {
   judge: JudgeCardData
+  filterYear?: string
+  filterDiscipline?: string
 }
 
 function StatPill({
@@ -37,7 +39,7 @@ function StatPill({
   )
 }
 
-export default function JudgeCard({ judge }: JudgeCardProps) {
+export default function JudgeCard({ judge, filterYear, filterDiscipline }: JudgeCardProps) {
   const displayName = formatJudgeDisplayName(judge.name)
   const initials = getJudgeInitials(displayName)
   const strictness = getSportJudgeStrictnessBadge(
@@ -49,9 +51,15 @@ export default function JudgeCard({ judge }: JudgeCardProps) {
       ? `${(judge.avg_score * 5).toFixed(1)} б.`
       : '—'
 
+  const queryParams = new URLSearchParams()
+  if (filterYear) queryParams.set('year', filterYear)
+  if (filterDiscipline) queryParams.set('discipline', filterDiscipline)
+  const queryStr = queryParams.toString()
+  const linkTo = `/judges/${encodeURIComponent(judge.id)}${queryStr ? '?' + queryStr : ''}`
+
   return (
     <Link
-      to={`/judges/${encodeURIComponent(judge.id)}`}
+      to={linkTo}
       className="group flex flex-col gap-3 rounded-xl border border-old-money-200/90 bg-white p-3.5 sm:p-4 transition-all duration-200 hover:border-camel-300 hover:bg-cream-50/70 hover:shadow-xs sm:flex-row sm:items-center sm:gap-4"
     >
       {/* Monogram avatar (Desktop) */}

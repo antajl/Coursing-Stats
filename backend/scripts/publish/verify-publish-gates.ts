@@ -219,6 +219,45 @@ function main() {
     }
   }
 
+  // Judges integrity: summary must match individual detail files
+  const judgesSummaryRel = 'indexes/judges-summary.json'
+  if (fs.existsSync(path.join(dataRoot, judgesSummaryRel))) {
+    const summaryDoc = readJson(path.join(dataRoot, judgesSummaryRel)) as {
+      judges?: Array<{ name: string; total_evaluations: number }>
+    }
+    const judgesList = summaryDoc?.judges || []
+    let mismatches = 0
+    for (const j of judgesList) {
+      const key = Buffer.from(j.name, 'utf8')
+        .toString('base64')
+        .replace(/\+/g, '-')
+        .replace(/\//g, '_')
+        .replace(/=+$/, '')
+      const detailPath = path.join(dataRoot, `indexes/judge-details/${key}.json`)
+      if (!fs.existsSync(detailPath)) {
+        mismatches++
+        continue
+      }
+      const detailDoc = readJson(detailPath) as { total_evaluations?: number }
+      if (detailDoc.total_evaluations !== j.total_evaluations) {
+        mismatches++
+      }
+    }
+    if (mismatches === 0) {
+      gates.push({
+        ok: true,
+        label: 'judge_integrity',
+        detail: `all ${judgesList.length} sport judges match detail files`,
+      })
+    } else {
+      gates.push({
+        ok: false,
+        label: 'judge_integrity',
+        detail: `${mismatches} judge(s) have mismatch between summary and detail`,
+      })
+    }
+  }
+
   const oversized: Array<{ path: string; bytes: number }> = []
   const fileEntries: Array<{ path: string; bytes: number; sha256?: string }> = []
   const relFiles = walkFiles(dataRoot)

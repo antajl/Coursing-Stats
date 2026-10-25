@@ -1,0 +1,5838 @@
+{
+  "schema": "coursing-stats/competition-v1",
+  "exported_at": "2026-10-25T13:25:05.163Z",
+  "source": "manual-entry",
+  "event_id": 20191110,
+  "event": {
+    "id": 20191110,
+    "year": 2019,
+    "date_start": "2019-11-10",
+    "date_end": "2019-11-10",
+    "rank_label": "Командное состязание\n\"Состязание свор \"Тройка, птица осенняя - 2019\"\"",
+    "event_type": "other",
+    "competition_kind": "Командное состязание",
+    "competition_type": "Состязание свор «Тройка»",
+    "title": "Состязание свор \"Тройка, птица осенняя - 2019\"",
+    "host_club": null,
+    "region": null,
+    "location": "Московская область, д. Михайловское",
+    "catalog_url": null,
+    "results_url": "http://procoursing.ru/results/2019-11-10/",
+    "rules_url": null,
+    "results_pdf_url": "https://drive.google.com/file/d/1R0LZAXaiYoJzzmR5rgldGvagc0Bcs2xn/view?usp=sharing",
+    "confirmed": 1,
+    "last_modified": "2026-10-25T13:25:05.164Z",
+    "scraped_at": null,
+    "telegram_url": null,
+    "full_title": "Состязание свор \"Тройка, птица осенняя - 2019\"",
+    "event_date": "2019-11-10",
+    "protocol_location": null,
+    "judges": "Вронская О.В., Бычкова О.",
+    "track_schemes": []
+  },
+  "result_count": 66,
+  "results": [
+    {
+      "id": 1,
+      "event_id": 20191110,
+      "dog_id": 10901,
+      "breed_class": "Команда № 14",
+      "catalog_no": 14,
+      "placement": 1,
+      "total_score": 377,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10901,
+        "name": "Acuarela Del’Rio Vanilla Sky",
+        "name_ru": "Acuarela Del’Rio Vanilla Sky",
+        "name_lat": "Acuarela Del’Rio Vanilla Sky",
+        "breed": "УИППЕТ",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 14",
+        "team_placement": 1,
+        "team_members": [
+          "Acuarela Del’Rio Vanilla Sky",
+          "NUGABE IRON LEDY",
+          "ГОЛДИ КРАУНД БЕАТРИСА"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 8,
+            "bib_number": 8,
+            "judges": [
+              {
+                "scores": [
+                  20,
+                  10,
+                  8,
+                  18,
+                  27,
+                  5,
+                  5
+                ],
+                "sum": 93
+              },
+              {
+                "scores": [
+                  19,
+                  10,
+                  9,
+                  19,
+                  26,
+                  5,
+                  5
+                ],
+                "sum": 93
+              }
+            ],
+            "total": 186
+          },
+          {
+            "heat_number": 26,
+            "bib_number": 26,
+            "judges": [
+              {
+                "scores": [
+                  20,
+                  10,
+                  10,
+                  20,
+                  27,
+                  5,
+                  3
+                ],
+                "sum": 95
+              },
+              {
+                "scores": [
+                  19,
+                  10,
+                  9,
+                  20,
+                  29,
+                  5,
+                  4
+                ],
+                "sum": 96
+              }
+            ],
+            "total": 191
+          }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "event_id": 20191110,
+      "dog_id": 10001,
+      "breed_class": "Команда № 14",
+      "catalog_no": 14,
+      "placement": 1,
+      "total_score": 377,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10001,
+        "name": "NUGABE IRON LEDY",
+        "name_ru": "NUGABE IRON LEDY",
+        "name_lat": "NUGABE IRON LEDY",
+        "breed": "УИППЕТ",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 14",
+        "team_placement": 1,
+        "team_members": [
+          "Acuarela Del’Rio Vanilla Sky",
+          "NUGABE IRON LEDY",
+          "ГОЛДИ КРАУНД БЕАТРИСА"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 8,
+            "bib_number": 8,
+            "judges": [
+              {
+                "scores": [
+                  20,
+                  10,
+                  8,
+                  18,
+                  27,
+                  5,
+                  5
+                ],
+                "sum": 93
+              },
+              {
+                "scores": [
+                  19,
+                  10,
+                  9,
+                  19,
+                  26,
+                  5,
+                  5
+                ],
+                "sum": 93
+              }
+            ],
+            "total": 186
+          },
+          {
+            "heat_number": 26,
+            "bib_number": 26,
+            "judges": [
+              {
+                "scores": [
+                  20,
+                  10,
+                  10,
+                  20,
+                  27,
+                  5,
+                  3
+                ],
+                "sum": 95
+              },
+              {
+                "scores": [
+                  19,
+                  10,
+                  9,
+                  20,
+                  29,
+                  5,
+                  4
+                ],
+                "sum": 96
+              }
+            ],
+            "total": 191
+          }
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "event_id": 20191110,
+      "dog_id": 9866,
+      "breed_class": "Команда № 14",
+      "catalog_no": 14,
+      "placement": 1,
+      "total_score": 377,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 9866,
+        "name": "ГОЛДИ КРАУНД БЕАТРИСА",
+        "name_ru": "ГОЛДИ КРАУНД БЕАТРИСА",
+        "name_lat": "ГОЛДИ КРАУНД БЕАТРИСА",
+        "breed": "УИППЕТ",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 14",
+        "team_placement": 1,
+        "team_members": [
+          "Acuarela Del’Rio Vanilla Sky",
+          "NUGABE IRON LEDY",
+          "ГОЛДИ КРАУНД БЕАТРИСА"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 8,
+            "bib_number": 8,
+            "judges": [
+              {
+                "scores": [
+                  20,
+                  10,
+                  8,
+                  18,
+                  27,
+                  5,
+                  5
+                ],
+                "sum": 93
+              },
+              {
+                "scores": [
+                  19,
+                  10,
+                  9,
+                  19,
+                  26,
+                  5,
+                  5
+                ],
+                "sum": 93
+              }
+            ],
+            "total": 186
+          },
+          {
+            "heat_number": 26,
+            "bib_number": 26,
+            "judges": [
+              {
+                "scores": [
+                  20,
+                  10,
+                  10,
+                  20,
+                  27,
+                  5,
+                  3
+                ],
+                "sum": 95
+              },
+              {
+                "scores": [
+                  19,
+                  10,
+                  9,
+                  20,
+                  29,
+                  5,
+                  4
+                ],
+                "sum": 96
+              }
+            ],
+            "total": 191
+          }
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "event_id": 20191110,
+      "dog_id": 9232,
+      "breed_class": "Команда № 1",
+      "catalog_no": 1,
+      "placement": 2,
+      "total_score": 376,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 9232,
+        "name": "БОНЯ",
+        "name_ru": "БОНЯ",
+        "name_lat": "BONYA",
+        "breed": "МЕТИС",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 1",
+        "team_placement": 2,
+        "team_members": [
+          "БОНЯ",
+          "Пес",
+          "РАЙРИДЖЕ ИЗИДА ИДА"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 14,
+            "bib_number": 14,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  10,
+                  10,
+                  19,
+                  27,
+                  5,
+                  4
+                ],
+                "sum": 94
+              },
+              {
+                "scores": [
+                  19,
+                  10,
+                  9,
+                  20,
+                  27,
+                  5,
+                  5
+                ],
+                "sum": 95
+              }
+            ],
+            "total": 189
+          },
+          {
+            "heat_number": 32,
+            "bib_number": 32,
+            "judges": [
+              {
+                "scores": [
+                  20,
+                  10,
+                  10,
+                  19,
+                  26,
+                  5,
+                  5
+                ],
+                "sum": 95
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  19,
+                  26,
+                  5,
+                  5
+                ],
+                "sum": 92
+              }
+            ],
+            "total": 187
+          }
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "event_id": 20191110,
+      "dog_id": 9230,
+      "breed_class": "Команда № 1",
+      "catalog_no": 1,
+      "placement": 2,
+      "total_score": 376,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 9230,
+        "name": "Пес",
+        "name_ru": "ПЕС",
+        "name_lat": "PES",
+        "breed": "МЕТИС",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 1",
+        "team_placement": 2,
+        "team_members": [
+          "БОНЯ",
+          "Пес",
+          "РАЙРИДЖЕ ИЗИДА ИДА"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 14,
+            "bib_number": 14,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  10,
+                  10,
+                  19,
+                  27,
+                  5,
+                  4
+                ],
+                "sum": 94
+              },
+              {
+                "scores": [
+                  19,
+                  10,
+                  9,
+                  20,
+                  27,
+                  5,
+                  5
+                ],
+                "sum": 95
+              }
+            ],
+            "total": 189
+          },
+          {
+            "heat_number": 32,
+            "bib_number": 32,
+            "judges": [
+              {
+                "scores": [
+                  20,
+                  10,
+                  10,
+                  19,
+                  26,
+                  5,
+                  5
+                ],
+                "sum": 95
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  19,
+                  26,
+                  5,
+                  5
+                ],
+                "sum": 92
+              }
+            ],
+            "total": 187
+          }
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "event_id": 20191110,
+      "dog_id": 10108,
+      "breed_class": "Команда № 1",
+      "catalog_no": 1,
+      "placement": 2,
+      "total_score": 376,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10108,
+        "name": "РАЙРИДЖЕ ИЗИДА ИДА",
+        "name_ru": "РАЙРИДЖЕ ИЗИДА ИДА",
+        "name_lat": "РАЙРИДЖЕ ИЗИДА ИДА",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 1",
+        "team_placement": 2,
+        "team_members": [
+          "БОНЯ",
+          "Пес",
+          "РАЙРИДЖЕ ИЗИДА ИДА"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 14,
+            "bib_number": 14,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  10,
+                  10,
+                  19,
+                  27,
+                  5,
+                  4
+                ],
+                "sum": 94
+              },
+              {
+                "scores": [
+                  19,
+                  10,
+                  9,
+                  20,
+                  27,
+                  5,
+                  5
+                ],
+                "sum": 95
+              }
+            ],
+            "total": 189
+          },
+          {
+            "heat_number": 32,
+            "bib_number": 32,
+            "judges": [
+              {
+                "scores": [
+                  20,
+                  10,
+                  10,
+                  19,
+                  26,
+                  5,
+                  5
+                ],
+                "sum": 95
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  19,
+                  26,
+                  5,
+                  5
+                ],
+                "sum": 92
+              }
+            ],
+            "total": 187
+          }
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "event_id": 20191110,
+      "dog_id": 10902,
+      "breed_class": "Команда № 7",
+      "catalog_no": 7,
+      "placement": 3,
+      "total_score": 375,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10902,
+        "name": "Вилли",
+        "name_ru": "Вилли",
+        "name_lat": "Вилли",
+        "breed": "УИППЕТ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 7",
+        "team_placement": 3,
+        "team_members": [
+          "Вилли",
+          "Волк",
+          "ДЖИНИ ЛАМБОР"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 1,
+            "judges": [
+              {
+                "scores": [
+                  20,
+                  10,
+                  9,
+                  19,
+                  27,
+                  4,
+                  4
+                ],
+                "sum": 93
+              },
+              {
+                "scores": [
+                  19,
+                  10,
+                  9,
+                  20,
+                  28,
+                  4,
+                  5
+                ],
+                "sum": 95
+              }
+            ],
+            "total": 188
+          },
+          {
+            "heat_number": 38,
+            "bib_number": 38,
+            "judges": [
+              {
+                "scores": [
+                  20,
+                  10,
+                  9,
+                  20,
+                  26,
+                  4,
+                  4
+                ],
+                "sum": 93
+              },
+              {
+                "scores": [
+                  19,
+                  10,
+                  9,
+                  19,
+                  28,
+                  4,
+                  5
+                ],
+                "sum": 94
+              }
+            ],
+            "total": 187
+          }
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "event_id": 20191110,
+      "dog_id": 10903,
+      "breed_class": "Команда № 7",
+      "catalog_no": 7,
+      "placement": 3,
+      "total_score": 375,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10903,
+        "name": "Волк",
+        "name_ru": "Волк",
+        "name_lat": "Волк",
+        "breed": "УИППЕТ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 7",
+        "team_placement": 3,
+        "team_members": [
+          "Вилли",
+          "Волк",
+          "ДЖИНИ ЛАМБОР"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 1,
+            "judges": [
+              {
+                "scores": [
+                  20,
+                  10,
+                  9,
+                  19,
+                  27,
+                  4,
+                  4
+                ],
+                "sum": 93
+              },
+              {
+                "scores": [
+                  19,
+                  10,
+                  9,
+                  20,
+                  28,
+                  4,
+                  5
+                ],
+                "sum": 95
+              }
+            ],
+            "total": 188
+          },
+          {
+            "heat_number": 38,
+            "bib_number": 38,
+            "judges": [
+              {
+                "scores": [
+                  20,
+                  10,
+                  9,
+                  20,
+                  26,
+                  4,
+                  4
+                ],
+                "sum": 93
+              },
+              {
+                "scores": [
+                  19,
+                  10,
+                  9,
+                  19,
+                  28,
+                  4,
+                  5
+                ],
+                "sum": 94
+              }
+            ],
+            "total": 187
+          }
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "event_id": 20191110,
+      "dog_id": 298,
+      "breed_class": "Команда № 7",
+      "catalog_no": 7,
+      "placement": 3,
+      "total_score": 375,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 298,
+        "name": "ДЖИНИ ЛАМБОР",
+        "name_ru": "ДЖИНИ ЛАМБОР",
+        "name_lat": "ДЖИНИ ЛАМБОР",
+        "breed": "УИППЕТ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 7",
+        "team_placement": 3,
+        "team_members": [
+          "Вилли",
+          "Волк",
+          "ДЖИНИ ЛАМБОР"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 1,
+            "judges": [
+              {
+                "scores": [
+                  20,
+                  10,
+                  9,
+                  19,
+                  27,
+                  4,
+                  4
+                ],
+                "sum": 93
+              },
+              {
+                "scores": [
+                  19,
+                  10,
+                  9,
+                  20,
+                  28,
+                  4,
+                  5
+                ],
+                "sum": 95
+              }
+            ],
+            "total": 188
+          },
+          {
+            "heat_number": 38,
+            "bib_number": 38,
+            "judges": [
+              {
+                "scores": [
+                  20,
+                  10,
+                  9,
+                  20,
+                  26,
+                  4,
+                  4
+                ],
+                "sum": 93
+              },
+              {
+                "scores": [
+                  19,
+                  10,
+                  9,
+                  19,
+                  28,
+                  4,
+                  5
+                ],
+                "sum": 94
+              }
+            ],
+            "total": 187
+          }
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "event_id": 20191110,
+      "dog_id": 9795,
+      "breed_class": "Команда № 11",
+      "catalog_no": 11,
+      "placement": 4,
+      "total_score": 375,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 9795,
+        "name": "ISTORIYA LUBVI LUXURY DOVE",
+        "name_ru": "ISTORIYA LUBVI LUXURY DOVE",
+        "name_lat": "ISTORIYA LUBVI LUXURY DOVE",
+        "breed": "УИППЕТ",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 11",
+        "team_placement": 4,
+        "team_members": [
+          "ISTORIYA LUBVI LUXURY DOVE",
+          "LUXURY WHIPP LADY DAY",
+          "LUXURY WHIPP LAZER"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 13,
+            "bib_number": 13,
+            "judges": [
+              {
+                "scores": [
+                  20,
+                  10,
+                  9,
+                  20,
+                  27,
+                  5,
+                  5
+                ],
+                "sum": 96
+              },
+              {
+                "scores": [
+                  19,
+                  10,
+                  9,
+                  19,
+                  27,
+                  5,
+                  5
+                ],
+                "sum": 94
+              }
+            ],
+            "total": 190
+          },
+          {
+            "heat_number": 31,
+            "bib_number": 31,
+            "judges": [
+              {
+                "scores": [
+                  20,
+                  10,
+                  9,
+                  18,
+                  27,
+                  4,
+                  5
+                ],
+                "sum": 93
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  19,
+                  27,
+                  5,
+                  4
+                ],
+                "sum": 92
+              }
+            ],
+            "total": 185
+          }
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "event_id": 20191110,
+      "dog_id": 10543,
+      "breed_class": "Команда № 11",
+      "catalog_no": 11,
+      "placement": 4,
+      "total_score": 375,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10543,
+        "name": "LUXURY WHIPP LADY DAY",
+        "name_ru": "LUXURY WHIPP LADY DAY",
+        "name_lat": "LUXURY WHIPP LADY DAY",
+        "breed": "УИППЕТ",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 11",
+        "team_placement": 4,
+        "team_members": [
+          "ISTORIYA LUBVI LUXURY DOVE",
+          "LUXURY WHIPP LADY DAY",
+          "LUXURY WHIPP LAZER"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 13,
+            "bib_number": 13,
+            "judges": [
+              {
+                "scores": [
+                  20,
+                  10,
+                  9,
+                  20,
+                  27,
+                  5,
+                  5
+                ],
+                "sum": 96
+              },
+              {
+                "scores": [
+                  19,
+                  10,
+                  9,
+                  19,
+                  27,
+                  5,
+                  5
+                ],
+                "sum": 94
+              }
+            ],
+            "total": 190
+          },
+          {
+            "heat_number": 31,
+            "bib_number": 31,
+            "judges": [
+              {
+                "scores": [
+                  20,
+                  10,
+                  9,
+                  18,
+                  27,
+                  4,
+                  5
+                ],
+                "sum": 93
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  19,
+                  27,
+                  5,
+                  4
+                ],
+                "sum": 92
+              }
+            ],
+            "total": 185
+          }
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "event_id": 20191110,
+      "dog_id": 10254,
+      "breed_class": "Команда № 11",
+      "catalog_no": 11,
+      "placement": 4,
+      "total_score": 375,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10254,
+        "name": "LUXURY WHIPP LAZER",
+        "name_ru": "LUXURY WHIPP LAZER",
+        "name_lat": "LUXURY WHIPP LAZER",
+        "breed": "УИППЕТ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 11",
+        "team_placement": 4,
+        "team_members": [
+          "ISTORIYA LUBVI LUXURY DOVE",
+          "LUXURY WHIPP LADY DAY",
+          "LUXURY WHIPP LAZER"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 13,
+            "bib_number": 13,
+            "judges": [
+              {
+                "scores": [
+                  20,
+                  10,
+                  9,
+                  20,
+                  27,
+                  5,
+                  5
+                ],
+                "sum": 96
+              },
+              {
+                "scores": [
+                  19,
+                  10,
+                  9,
+                  19,
+                  27,
+                  5,
+                  5
+                ],
+                "sum": 94
+              }
+            ],
+            "total": 190
+          },
+          {
+            "heat_number": 31,
+            "bib_number": 31,
+            "judges": [
+              {
+                "scores": [
+                  20,
+                  10,
+                  9,
+                  18,
+                  27,
+                  4,
+                  5
+                ],
+                "sum": 93
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  19,
+                  27,
+                  5,
+                  4
+                ],
+                "sum": 92
+              }
+            ],
+            "total": 185
+          }
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "event_id": 20191110,
+      "dog_id": 10197,
+      "breed_class": "Команда № 8",
+      "catalog_no": 8,
+      "placement": 5,
+      "total_score": 374,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10197,
+        "name": "ЛАКШЕРИ ВИПП ЛАВАТЕРРА",
+        "name_ru": "ЛАКШЕРИ ВИПП ЛАВАТЕРРА",
+        "name_lat": "ЛАКШЕРИ ВИПП ЛАВАТЕРРА",
+        "breed": "УИППЕТ",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 8",
+        "team_placement": 5,
+        "team_members": [
+          "ЛАКШЕРИ ВИПП ЛАВАТЕРРА",
+          "ЛАКШЕРИ КАРМЕН ЛИНУ РАННЕ",
+          "ЛАКШЕРИ КИН КВИК ФЛЭШ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 17,
+            "bib_number": 17,
+            "judges": [
+              {
+                "scores": [
+                  20,
+                  10,
+                  8,
+                  18,
+                  26,
+                  5,
+                  5
+                ],
+                "sum": 92
+              },
+              {
+                "scores": [
+                  19,
+                  10,
+                  9,
+                  18,
+                  29,
+                  4,
+                  5
+                ],
+                "sum": 94
+              }
+            ],
+            "total": 186
+          },
+          {
+            "heat_number": 35,
+            "bib_number": 35,
+            "judges": [
+              {
+                "scores": [
+                  20,
+                  10,
+                  9,
+                  18,
+                  26,
+                  5,
+                  5
+                ],
+                "sum": 93
+              },
+              {
+                "scores": [
+                  19,
+                  10,
+                  9,
+                  19,
+                  29,
+                  5,
+                  4
+                ],
+                "sum": 95
+              }
+            ],
+            "total": 188
+          }
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "event_id": 20191110,
+      "dog_id": 10028,
+      "breed_class": "Команда № 8",
+      "catalog_no": 8,
+      "placement": 5,
+      "total_score": 374,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10028,
+        "name": "ЛАКШЕРИ КАРМЕН ЛИНУ РАННЕ",
+        "name_ru": "ЛАКШЕРИ КАРМЕН ЛИНУ РАННЕ",
+        "name_lat": "ЛАКШЕРИ КАРМЕН ЛИНУ РАННЕ",
+        "breed": "УИППЕТ",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 8",
+        "team_placement": 5,
+        "team_members": [
+          "ЛАКШЕРИ ВИПП ЛАВАТЕРРА",
+          "ЛАКШЕРИ КАРМЕН ЛИНУ РАННЕ",
+          "ЛАКШЕРИ КИН КВИК ФЛЭШ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 17,
+            "bib_number": 17,
+            "judges": [
+              {
+                "scores": [
+                  20,
+                  10,
+                  8,
+                  18,
+                  26,
+                  5,
+                  5
+                ],
+                "sum": 92
+              },
+              {
+                "scores": [
+                  19,
+                  10,
+                  9,
+                  18,
+                  29,
+                  4,
+                  5
+                ],
+                "sum": 94
+              }
+            ],
+            "total": 186
+          },
+          {
+            "heat_number": 35,
+            "bib_number": 35,
+            "judges": [
+              {
+                "scores": [
+                  20,
+                  10,
+                  9,
+                  18,
+                  26,
+                  5,
+                  5
+                ],
+                "sum": 93
+              },
+              {
+                "scores": [
+                  19,
+                  10,
+                  9,
+                  19,
+                  29,
+                  5,
+                  4
+                ],
+                "sum": 95
+              }
+            ],
+            "total": 188
+          }
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "event_id": 20191110,
+      "dog_id": 9800,
+      "breed_class": "Команда № 8",
+      "catalog_no": 8,
+      "placement": 5,
+      "total_score": 374,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 9800,
+        "name": "ЛАКШЕРИ КИН КВИК ФЛЭШ",
+        "name_ru": "ЛАКШЕРИ КИН КВИК ФЛЭШ",
+        "name_lat": "ЛАКШЕРИ КИН КВИК ФЛЭШ",
+        "breed": "УИППЕТ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 8",
+        "team_placement": 5,
+        "team_members": [
+          "ЛАКШЕРИ ВИПП ЛАВАТЕРРА",
+          "ЛАКШЕРИ КАРМЕН ЛИНУ РАННЕ",
+          "ЛАКШЕРИ КИН КВИК ФЛЭШ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 17,
+            "bib_number": 17,
+            "judges": [
+              {
+                "scores": [
+                  20,
+                  10,
+                  8,
+                  18,
+                  26,
+                  5,
+                  5
+                ],
+                "sum": 92
+              },
+              {
+                "scores": [
+                  19,
+                  10,
+                  9,
+                  18,
+                  29,
+                  4,
+                  5
+                ],
+                "sum": 94
+              }
+            ],
+            "total": 186
+          },
+          {
+            "heat_number": 35,
+            "bib_number": 35,
+            "judges": [
+              {
+                "scores": [
+                  20,
+                  10,
+                  9,
+                  18,
+                  26,
+                  5,
+                  5
+                ],
+                "sum": 93
+              },
+              {
+                "scores": [
+                  19,
+                  10,
+                  9,
+                  19,
+                  29,
+                  5,
+                  4
+                ],
+                "sum": 95
+              }
+            ],
+            "total": 188
+          }
+        ]
+      }
+    },
+    {
+      "id": 16,
+      "event_id": 20191110,
+      "dog_id": 9892,
+      "breed_class": "Команда № 21",
+      "catalog_no": 21,
+      "placement": 6,
+      "total_score": 372,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 9892,
+        "name": "LIVELONG HIT ZHENEVIEVA",
+        "name_ru": "LIVELONG HIT ZHENEVIEVA",
+        "name_lat": "LIVELONG HIT ZHENEVIEVA",
+        "breed": "КСОЛОИТЦКУИНТЛИ МЕДИО",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 21",
+        "team_placement": 6,
+        "team_members": [
+          "LIVELONG HIT ZHENEVIEVA",
+          "Вондерленд Итар Рио Санта Рита",
+          "Нимерия"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 7,
+            "bib_number": 7,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  10,
+                  8,
+                  19,
+                  26,
+                  4,
+                  5
+                ],
+                "sum": 91
+              },
+              {
+                "scores": [
+                  19,
+                  10,
+                  9,
+                  19,
+                  28,
+                  5,
+                  5
+                ],
+                "sum": 95
+              }
+            ],
+            "total": 186
+          },
+          {
+            "heat_number": 25,
+            "bib_number": 25,
+            "judges": [
+              {
+                "scores": [
+                  20,
+                  10,
+                  9,
+                  19,
+                  27,
+                  3,
+                  4
+                ],
+                "sum": 92
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  18,
+                  29,
+                  5,
+                  5
+                ],
+                "sum": 94
+              }
+            ],
+            "total": 186
+          }
+        ]
+      }
+    },
+    {
+      "id": 17,
+      "event_id": 20191110,
+      "dog_id": 10904,
+      "breed_class": "Команда № 21",
+      "catalog_no": 21,
+      "placement": 6,
+      "total_score": 372,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10904,
+        "name": "Вондерленд Итар Рио Санта Рита",
+        "name_ru": "Вондерленд Итар Рио Санта Рита",
+        "name_lat": "Вондерленд Итар Рио Санта Рита",
+        "breed": "КСОЛОИТЦКУИНТЛИ МЕДИО",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 21",
+        "team_placement": 6,
+        "team_members": [
+          "LIVELONG HIT ZHENEVIEVA",
+          "Вондерленд Итар Рио Санта Рита",
+          "Нимерия"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 7,
+            "bib_number": 7,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  10,
+                  8,
+                  19,
+                  26,
+                  4,
+                  5
+                ],
+                "sum": 91
+              },
+              {
+                "scores": [
+                  19,
+                  10,
+                  9,
+                  19,
+                  28,
+                  5,
+                  5
+                ],
+                "sum": 95
+              }
+            ],
+            "total": 186
+          },
+          {
+            "heat_number": 25,
+            "bib_number": 25,
+            "judges": [
+              {
+                "scores": [
+                  20,
+                  10,
+                  9,
+                  19,
+                  27,
+                  3,
+                  4
+                ],
+                "sum": 92
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  18,
+                  29,
+                  5,
+                  5
+                ],
+                "sum": 94
+              }
+            ],
+            "total": 186
+          }
+        ]
+      }
+    },
+    {
+      "id": 18,
+      "event_id": 20191110,
+      "dog_id": 10905,
+      "breed_class": "Команда № 21",
+      "catalog_no": 21,
+      "placement": 6,
+      "total_score": 372,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10905,
+        "name": "Нимерия",
+        "name_ru": "Нимерия",
+        "name_lat": "Нимерия",
+        "breed": "ПОЙНТЕР",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 21",
+        "team_placement": 6,
+        "team_members": [
+          "LIVELONG HIT ZHENEVIEVA",
+          "Вондерленд Итар Рио Санта Рита",
+          "Нимерия"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 7,
+            "bib_number": 7,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  10,
+                  8,
+                  19,
+                  26,
+                  4,
+                  5
+                ],
+                "sum": 91
+              },
+              {
+                "scores": [
+                  19,
+                  10,
+                  9,
+                  19,
+                  28,
+                  5,
+                  5
+                ],
+                "sum": 95
+              }
+            ],
+            "total": 186
+          },
+          {
+            "heat_number": 25,
+            "bib_number": 25,
+            "judges": [
+              {
+                "scores": [
+                  20,
+                  10,
+                  9,
+                  19,
+                  27,
+                  3,
+                  4
+                ],
+                "sum": 92
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  18,
+                  29,
+                  5,
+                  5
+                ],
+                "sum": 94
+              }
+            ],
+            "total": 186
+          }
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "event_id": 20191110,
+      "dog_id": 9117,
+      "breed_class": "Команда № 17",
+      "catalog_no": 17,
+      "placement": 7,
+      "total_score": 371,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 9117,
+        "name": "БОННИ",
+        "name_ru": "БОННИ",
+        "name_lat": "Бонни",
+        "breed": "Уиппет",
+        "sex": "F"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 17",
+        "team_placement": 7,
+        "team_members": [
+          "БОННИ",
+          "Жак",
+          "Чаки"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 4,
+            "bib_number": 4,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  10,
+                  19,
+                  27,
+                  5,
+                  3
+                ],
+                "sum": 92
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  20,
+                  27,
+                  5,
+                  2
+                ],
+                "sum": 91
+              }
+            ],
+            "total": 183
+          },
+          {
+            "heat_number": 22,
+            "bib_number": 22,
+            "judges": [
+              {
+                "scores": [
+                  20,
+                  9,
+                  9,
+                  19,
+                  27,
+                  5,
+                  5
+                ],
+                "sum": 94
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  18,
+                  29,
+                  5,
+                  5
+                ],
+                "sum": 94
+              }
+            ],
+            "total": 188
+          }
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "event_id": 20191110,
+      "dog_id": 10866,
+      "breed_class": "Команда № 17",
+      "catalog_no": 17,
+      "placement": 7,
+      "total_score": 371,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10866,
+        "name": "Жак",
+        "name_ru": "Жак",
+        "name_lat": "Жак",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 17",
+        "team_placement": 7,
+        "team_members": [
+          "БОННИ",
+          "Жак",
+          "Чаки"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 4,
+            "bib_number": 4,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  10,
+                  19,
+                  27,
+                  5,
+                  3
+                ],
+                "sum": 92
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  20,
+                  27,
+                  5,
+                  2
+                ],
+                "sum": 91
+              }
+            ],
+            "total": 183
+          },
+          {
+            "heat_number": 22,
+            "bib_number": 22,
+            "judges": [
+              {
+                "scores": [
+                  20,
+                  9,
+                  9,
+                  19,
+                  27,
+                  5,
+                  5
+                ],
+                "sum": 94
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  18,
+                  29,
+                  5,
+                  5
+                ],
+                "sum": 94
+              }
+            ],
+            "total": 188
+          }
+        ]
+      }
+    },
+    {
+      "id": 21,
+      "event_id": 20191110,
+      "dog_id": 10907,
+      "breed_class": "Команда № 17",
+      "catalog_no": 17,
+      "placement": 7,
+      "total_score": 371,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10907,
+        "name": "Чаки",
+        "name_ru": "Чаки",
+        "name_lat": "Чаки",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 17",
+        "team_placement": 7,
+        "team_members": [
+          "БОННИ",
+          "Жак",
+          "Чаки"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 4,
+            "bib_number": 4,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  10,
+                  19,
+                  27,
+                  5,
+                  3
+                ],
+                "sum": 92
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  20,
+                  27,
+                  5,
+                  2
+                ],
+                "sum": 91
+              }
+            ],
+            "total": 183
+          },
+          {
+            "heat_number": 22,
+            "bib_number": 22,
+            "judges": [
+              {
+                "scores": [
+                  20,
+                  9,
+                  9,
+                  19,
+                  27,
+                  5,
+                  5
+                ],
+                "sum": 94
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  18,
+                  29,
+                  5,
+                  5
+                ],
+                "sum": 94
+              }
+            ],
+            "total": 188
+          }
+        ]
+      }
+    },
+    {
+      "id": 22,
+      "event_id": 20191110,
+      "dog_id": 9939,
+      "breed_class": "Команда № 18",
+      "catalog_no": 18,
+      "placement": 8,
+      "total_score": 369,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 9939,
+        "name": "BBVADDIN BONGANI BAHA",
+        "name_ru": "BBVADDIN BONGANI BAHA",
+        "name_lat": "BBVADDIN BONGANI BAHA",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 18",
+        "team_placement": 8,
+        "team_members": [
+          "BBVADDIN BONGANI BAHA",
+          "SALONGA VASCO DA GAMA",
+          "ФОРСАЖ ЛЕЮР ФЕНИКС"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 18,
+            "bib_number": 18,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  10,
+                  9,
+                  18,
+                  27,
+                  4,
+                  4
+                ],
+                "sum": 90
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  19,
+                  25,
+                  5,
+                  5
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 179
+          },
+          {
+            "heat_number": 36,
+            "bib_number": 36,
+            "judges": [
+              {
+                "scores": [
+                  20,
+                  10,
+                  9,
+                  20,
+                  27,
+                  5,
+                  5
+                ],
+                "sum": 96
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  18,
+                  29,
+                  5,
+                  5
+                ],
+                "sum": 94
+              }
+            ],
+            "total": 190
+          }
+        ]
+      }
+    },
+    {
+      "id": 23,
+      "event_id": 20191110,
+      "dog_id": 9808,
+      "breed_class": "Команда № 18",
+      "catalog_no": 18,
+      "placement": 8,
+      "total_score": 369,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 9808,
+        "name": "SALONGA VASCO DA GAMA",
+        "name_ru": "SALONGA VASCO DA GAMA",
+        "name_lat": "SALONGA VASCO DA GAMA",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 18",
+        "team_placement": 8,
+        "team_members": [
+          "BBVADDIN BONGANI BAHA",
+          "SALONGA VASCO DA GAMA",
+          "ФОРСАЖ ЛЕЮР ФЕНИКС"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 18,
+            "bib_number": 18,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  10,
+                  9,
+                  18,
+                  27,
+                  4,
+                  4
+                ],
+                "sum": 90
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  19,
+                  25,
+                  5,
+                  5
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 179
+          },
+          {
+            "heat_number": 36,
+            "bib_number": 36,
+            "judges": [
+              {
+                "scores": [
+                  20,
+                  10,
+                  9,
+                  20,
+                  27,
+                  5,
+                  5
+                ],
+                "sum": 96
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  18,
+                  29,
+                  5,
+                  5
+                ],
+                "sum": 94
+              }
+            ],
+            "total": 190
+          }
+        ]
+      }
+    },
+    {
+      "id": 24,
+      "event_id": 20191110,
+      "dog_id": 9878,
+      "breed_class": "Команда № 18",
+      "catalog_no": 18,
+      "placement": 8,
+      "total_score": 369,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 9878,
+        "name": "ФОРСАЖ ЛЕЮР ФЕНИКС",
+        "name_ru": "ФОРСАЖ ЛЕЮР ФЕНИКС",
+        "name_lat": "ФОРСАЖ ЛЕЮР ФЕНИКС",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 18",
+        "team_placement": 8,
+        "team_members": [
+          "BBVADDIN BONGANI BAHA",
+          "SALONGA VASCO DA GAMA",
+          "ФОРСАЖ ЛЕЮР ФЕНИКС"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 18,
+            "bib_number": 18,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  10,
+                  9,
+                  18,
+                  27,
+                  4,
+                  4
+                ],
+                "sum": 90
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  19,
+                  25,
+                  5,
+                  5
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 179
+          },
+          {
+            "heat_number": 36,
+            "bib_number": 36,
+            "judges": [
+              {
+                "scores": [
+                  20,
+                  10,
+                  9,
+                  20,
+                  27,
+                  5,
+                  5
+                ],
+                "sum": 96
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  18,
+                  29,
+                  5,
+                  5
+                ],
+                "sum": 94
+              }
+            ],
+            "total": 190
+          }
+        ]
+      }
+    },
+    {
+      "id": 25,
+      "event_id": 20191110,
+      "dog_id": 10262,
+      "breed_class": "Команда № 5",
+      "catalog_no": 5,
+      "placement": 9,
+      "total_score": 364,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10262,
+        "name": "ELEN VLADKHINS FINWEST BASTER",
+        "name_ru": "ELEN VLADKHINS FINWEST BASTER",
+        "name_lat": "ELEN VLADKHINS FINWEST BASTER",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 5",
+        "team_placement": 9,
+        "team_members": [
+          "ELEN VLADKHINS FINWEST BASTER",
+          "Бася",
+          "Фокс"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 6,
+            "bib_number": 6,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  19,
+                  27,
+                  4,
+                  4
+                ],
+                "sum": 91
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  19,
+                  25,
+                  5,
+                  5
+                ],
+                "sum": 91
+              }
+            ],
+            "total": 182
+          },
+          {
+            "heat_number": 24,
+            "bib_number": 24,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  10,
+                  9,
+                  19,
+                  26,
+                  4,
+                  4
+                ],
+                "sum": 90
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  19,
+                  27,
+                  5,
+                  4
+                ],
+                "sum": 92
+              }
+            ],
+            "total": 182
+          }
+        ]
+      }
+    },
+    {
+      "id": 26,
+      "event_id": 20191110,
+      "dog_id": 10908,
+      "breed_class": "Команда № 5",
+      "catalog_no": 5,
+      "placement": 9,
+      "total_score": 364,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10908,
+        "name": "Бася",
+        "name_ru": "Бася",
+        "name_lat": "Бася",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 5",
+        "team_placement": 9,
+        "team_members": [
+          "ELEN VLADKHINS FINWEST BASTER",
+          "Бася",
+          "Фокс"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 6,
+            "bib_number": 6,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  19,
+                  27,
+                  4,
+                  4
+                ],
+                "sum": 91
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  19,
+                  25,
+                  5,
+                  5
+                ],
+                "sum": 91
+              }
+            ],
+            "total": 182
+          },
+          {
+            "heat_number": 24,
+            "bib_number": 24,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  10,
+                  9,
+                  19,
+                  26,
+                  4,
+                  4
+                ],
+                "sum": 90
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  19,
+                  27,
+                  5,
+                  4
+                ],
+                "sum": 92
+              }
+            ],
+            "total": 182
+          }
+        ]
+      }
+    },
+    {
+      "id": 27,
+      "event_id": 20191110,
+      "dog_id": 10909,
+      "breed_class": "Команда № 5",
+      "catalog_no": 5,
+      "placement": 9,
+      "total_score": 364,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10909,
+        "name": "Фокс",
+        "name_ru": "Фокс",
+        "name_lat": "Фокс",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 5",
+        "team_placement": 9,
+        "team_members": [
+          "ELEN VLADKHINS FINWEST BASTER",
+          "Бася",
+          "Фокс"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 6,
+            "bib_number": 6,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  19,
+                  27,
+                  4,
+                  4
+                ],
+                "sum": 91
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  19,
+                  25,
+                  5,
+                  5
+                ],
+                "sum": 91
+              }
+            ],
+            "total": 182
+          },
+          {
+            "heat_number": 24,
+            "bib_number": 24,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  10,
+                  9,
+                  19,
+                  26,
+                  4,
+                  4
+                ],
+                "sum": 90
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  19,
+                  27,
+                  5,
+                  4
+                ],
+                "sum": 92
+              }
+            ],
+            "total": 182
+          }
+        ]
+      }
+    },
+    {
+      "id": 28,
+      "event_id": 20191110,
+      "dog_id": 10017,
+      "breed_class": "Команда № 16",
+      "catalog_no": 16,
+      "placement": 10,
+      "total_score": 356,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10017,
+        "name": "DEYONGA GAYA MONIFA",
+        "name_ru": "ДЕЙОНГА ГАЙА МОНИФА",
+        "name_lat": "DEYONGA GAYA MONIFA",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 16",
+        "team_placement": 10,
+        "team_members": [
+          "DEYONGA GAYA MONIFA",
+          "MAKAO LINE LADY LOVE",
+          "TINA TRADING BRIGHT BOY"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 12,
+            "bib_number": 12,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  19,
+                  23,
+                  4,
+                  4
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  19,
+                  28,
+                  5,
+                  5
+                ],
+                "sum": 92
+              }
+            ],
+            "total": 178
+          },
+          {
+            "heat_number": 30,
+            "bib_number": 30,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  10,
+                  8,
+                  18,
+                  23,
+                  4,
+                  4
+                ],
+                "sum": 84
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  19,
+                  28,
+                  5,
+                  5
+                ],
+                "sum": 94
+              }
+            ],
+            "total": 178
+          }
+        ]
+      }
+    },
+    {
+      "id": 29,
+      "event_id": 20191110,
+      "dog_id": 10269,
+      "breed_class": "Команда № 16",
+      "catalog_no": 16,
+      "placement": 10,
+      "total_score": 356,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10269,
+        "name": "MAKAO LINE LADY LOVE",
+        "name_ru": "MAKAO LINE LADY LOVE",
+        "name_lat": "MAKAO LINE LADY LOVE",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 16",
+        "team_placement": 10,
+        "team_members": [
+          "DEYONGA GAYA MONIFA",
+          "MAKAO LINE LADY LOVE",
+          "TINA TRADING BRIGHT BOY"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 12,
+            "bib_number": 12,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  19,
+                  23,
+                  4,
+                  4
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  19,
+                  28,
+                  5,
+                  5
+                ],
+                "sum": 92
+              }
+            ],
+            "total": 178
+          },
+          {
+            "heat_number": 30,
+            "bib_number": 30,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  10,
+                  8,
+                  18,
+                  23,
+                  4,
+                  4
+                ],
+                "sum": 84
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  19,
+                  28,
+                  5,
+                  5
+                ],
+                "sum": 94
+              }
+            ],
+            "total": 178
+          }
+        ]
+      }
+    },
+    {
+      "id": 30,
+      "event_id": 20191110,
+      "dog_id": 10104,
+      "breed_class": "Команда № 16",
+      "catalog_no": 16,
+      "placement": 10,
+      "total_score": 356,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10104,
+        "name": "TINA TRADING BRIGHT BOY",
+        "name_ru": "TINA TRADING BRIGHT BOY",
+        "name_lat": "TINA TRADING BRIGHT BOY",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 16",
+        "team_placement": 10,
+        "team_members": [
+          "DEYONGA GAYA MONIFA",
+          "MAKAO LINE LADY LOVE",
+          "TINA TRADING BRIGHT BOY"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 12,
+            "bib_number": 12,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  19,
+                  23,
+                  4,
+                  4
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  19,
+                  28,
+                  5,
+                  5
+                ],
+                "sum": 92
+              }
+            ],
+            "total": 178
+          },
+          {
+            "heat_number": 30,
+            "bib_number": 30,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  10,
+                  8,
+                  18,
+                  23,
+                  4,
+                  4
+                ],
+                "sum": 84
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  19,
+                  28,
+                  5,
+                  5
+                ],
+                "sum": 94
+              }
+            ],
+            "total": 178
+          }
+        ]
+      }
+    },
+    {
+      "id": 31,
+      "event_id": 20191110,
+      "dog_id": 10863,
+      "breed_class": "Команда № 4",
+      "catalog_no": 4,
+      "placement": 11,
+      "total_score": 352,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10863,
+        "name": "Барт",
+        "name_ru": "Барт",
+        "name_lat": "Барт",
+        "breed": "Бигль",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 4",
+        "team_placement": 11,
+        "team_members": [
+          "Барт",
+          "Жанка",
+          "Тинка"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 5,
+            "bib_number": 5,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  18,
+                  26,
+                  4,
+                  5
+                ],
+                "sum": 88
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  19,
+                  24,
+                  4,
+                  5
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 175
+          },
+          {
+            "heat_number": 23,
+            "bib_number": 23,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  9,
+                  8,
+                  18,
+                  25,
+                  5,
+                  4
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  17,
+                  9,
+                  8,
+                  20,
+                  27,
+                  5,
+                  5
+                ],
+                "sum": 91
+              }
+            ],
+            "total": 177
+          }
+        ]
+      }
+    },
+    {
+      "id": 32,
+      "event_id": 20191110,
+      "dog_id": 10910,
+      "breed_class": "Команда № 4",
+      "catalog_no": 4,
+      "placement": 11,
+      "total_score": 352,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10910,
+        "name": "Жанка",
+        "name_ru": "Жанка",
+        "name_lat": "Жанка",
+        "breed": "БИГЛЬ",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 4",
+        "team_placement": 11,
+        "team_members": [
+          "Барт",
+          "Жанка",
+          "Тинка"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 5,
+            "bib_number": 5,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  18,
+                  26,
+                  4,
+                  5
+                ],
+                "sum": 88
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  19,
+                  24,
+                  4,
+                  5
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 175
+          },
+          {
+            "heat_number": 23,
+            "bib_number": 23,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  9,
+                  8,
+                  18,
+                  25,
+                  5,
+                  4
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  17,
+                  9,
+                  8,
+                  20,
+                  27,
+                  5,
+                  5
+                ],
+                "sum": 91
+              }
+            ],
+            "total": 177
+          }
+        ]
+      }
+    },
+    {
+      "id": 33,
+      "event_id": 20191110,
+      "dog_id": 9148,
+      "breed_class": "Команда № 4",
+      "catalog_no": 4,
+      "placement": 11,
+      "total_score": 352,
+      "judge_count": 2,
+      "status": "reserve",
+      "dog": {
+        "id": 9148,
+        "name": "Макс",
+        "name_ru": "Макс",
+        "name_lat": "Макс",
+        "breed": "Уиппет",
+        "sex": "F"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 4",
+        "team_placement": 11,
+        "team_members": [
+          "Барт",
+          "Жанка",
+          "Тинка"
+        ],
+        "ran": false,
+        "heats": [
+          {
+            "heat_number": 5,
+            "bib_number": 5,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  18,
+                  26,
+                  4,
+                  5
+                ],
+                "sum": 88
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  19,
+                  24,
+                  4,
+                  5
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 175
+          },
+          {
+            "heat_number": 23,
+            "bib_number": 23,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  9,
+                  8,
+                  18,
+                  25,
+                  5,
+                  4
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  17,
+                  9,
+                  8,
+                  20,
+                  27,
+                  5,
+                  5
+                ],
+                "sum": 91
+              }
+            ],
+            "total": 177
+          }
+        ]
+      }
+    },
+    {
+      "id": 34,
+      "event_id": 20191110,
+      "dog_id": 10865,
+      "breed_class": "Команда № 4",
+      "catalog_no": 4,
+      "placement": 11,
+      "total_score": 352,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10865,
+        "name": "Тинка",
+        "name_ru": "Тинка",
+        "name_lat": "Тинка",
+        "breed": "Бигль",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 4",
+        "team_placement": 11,
+        "team_members": [
+          "Барт",
+          "Жанка",
+          "Тинка"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 5,
+            "bib_number": 5,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  18,
+                  26,
+                  4,
+                  5
+                ],
+                "sum": 88
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  19,
+                  24,
+                  4,
+                  5
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 175
+          },
+          {
+            "heat_number": 23,
+            "bib_number": 23,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  9,
+                  8,
+                  18,
+                  25,
+                  5,
+                  4
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  17,
+                  9,
+                  8,
+                  20,
+                  27,
+                  5,
+                  5
+                ],
+                "sum": 91
+              }
+            ],
+            "total": 177
+          }
+        ]
+      }
+    },
+    {
+      "id": 35,
+      "event_id": 20191110,
+      "dog_id": 10911,
+      "breed_class": "Команда № 2",
+      "catalog_no": 2,
+      "placement": 12,
+      "total_score": 352,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10911,
+        "name": "POWER I GRATSE DARKNESS QUEEN",
+        "name_ru": "POWER I GRATSE DARKNESS QUEEN",
+        "name_lat": "POWER I GRATSE DARKNESS QUEEN",
+        "breed": "ДОБЕРМАН ПИНЧЕР",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 2",
+        "team_placement": 12,
+        "team_members": [
+          "POWER I GRATSE DARKNESS QUEEN",
+          "Боння",
+          "КНОПА"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 10,
+            "bib_number": 10,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  19,
+                  27,
+                  5,
+                  5
+                ],
+                "sum": 93
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  18,
+                  25,
+                  4,
+                  5
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 181
+          },
+          {
+            "heat_number": 28,
+            "bib_number": 28,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  18,
+                  23,
+                  4,
+                  5
+                ],
+                "sum": 85
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  18,
+                  23,
+                  5,
+                  5
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 171
+          }
+        ]
+      }
+    },
+    {
+      "id": 36,
+      "event_id": 20191110,
+      "dog_id": 10912,
+      "breed_class": "Команда № 2",
+      "catalog_no": 2,
+      "placement": 12,
+      "total_score": 352,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10912,
+        "name": "Боння",
+        "name_ru": "Боння",
+        "name_lat": "Боння",
+        "breed": "МЕТИС",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 2",
+        "team_placement": 12,
+        "team_members": [
+          "POWER I GRATSE DARKNESS QUEEN",
+          "Боння",
+          "КНОПА"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 10,
+            "bib_number": 10,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  19,
+                  27,
+                  5,
+                  5
+                ],
+                "sum": 93
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  18,
+                  25,
+                  4,
+                  5
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 181
+          },
+          {
+            "heat_number": 28,
+            "bib_number": 28,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  18,
+                  23,
+                  4,
+                  5
+                ],
+                "sum": 85
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  18,
+                  23,
+                  5,
+                  5
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 171
+          }
+        ]
+      }
+    },
+    {
+      "id": 37,
+      "event_id": 20191110,
+      "dog_id": 9236,
+      "breed_class": "Команда № 2",
+      "catalog_no": 2,
+      "placement": 12,
+      "total_score": 352,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 9236,
+        "name": "КНОПА",
+        "name_ru": "КНОПА",
+        "name_lat": "KNOPA",
+        "breed": "МЕТИС",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 2",
+        "team_placement": 12,
+        "team_members": [
+          "POWER I GRATSE DARKNESS QUEEN",
+          "Боння",
+          "КНОПА"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 10,
+            "bib_number": 10,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  19,
+                  27,
+                  5,
+                  5
+                ],
+                "sum": 93
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  18,
+                  25,
+                  4,
+                  5
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 181
+          },
+          {
+            "heat_number": 28,
+            "bib_number": 28,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  18,
+                  23,
+                  4,
+                  5
+                ],
+                "sum": 85
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  18,
+                  23,
+                  5,
+                  5
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 171
+          }
+        ]
+      }
+    },
+    {
+      "id": 38,
+      "event_id": 20191110,
+      "dog_id": 10913,
+      "breed_class": "Команда № 19",
+      "catalog_no": 19,
+      "placement": 13,
+      "total_score": 351,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10913,
+        "name": "Амади",
+        "name_ru": "Амади",
+        "name_lat": "Амади",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 19",
+        "team_placement": 13,
+        "team_members": [
+          "Амади",
+          "ИТУРИ ПАЗЗЛ ЕКСТРАОРДИНАРИ СМАРТ",
+          "ИТУРИ ПАЗЗЛ ИЗЮМ В ШОКОЛАДЕ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 9,
+            "bib_number": 9,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  18,
+                  26,
+                  5,
+                  4
+                ],
+                "sum": 89
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  18,
+                  23,
+                  5,
+                  3
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 173
+          },
+          {
+            "heat_number": 27,
+            "bib_number": 27,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  10,
+                  9,
+                  18,
+                  23,
+                  4,
+                  4
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  18,
+                  28,
+                  5,
+                  4
+                ],
+                "sum": 92
+              }
+            ],
+            "total": 178
+          }
+        ]
+      }
+    },
+    {
+      "id": 39,
+      "event_id": 20191110,
+      "dog_id": 50,
+      "breed_class": "Команда № 19",
+      "catalog_no": 19,
+      "placement": 13,
+      "total_score": 351,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 50,
+        "name": "ИТУРИ ПАЗЗЛ ЕКСТРАОРДИНАРИ СМАРТ",
+        "name_ru": "ИТУРИ ПАЗЗЛ ЕКСТРАОРДИНАРИ СМАРТ",
+        "name_lat": "ИТУРИ ПАЗЗЛ ЕКСТРАОРДИНАРИ СМАРТ",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 19",
+        "team_placement": 13,
+        "team_members": [
+          "Амади",
+          "ИТУРИ ПАЗЗЛ ЕКСТРАОРДИНАРИ СМАРТ",
+          "ИТУРИ ПАЗЗЛ ИЗЮМ В ШОКОЛАДЕ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 9,
+            "bib_number": 9,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  18,
+                  26,
+                  5,
+                  4
+                ],
+                "sum": 89
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  18,
+                  23,
+                  5,
+                  3
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 173
+          },
+          {
+            "heat_number": 27,
+            "bib_number": 27,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  10,
+                  9,
+                  18,
+                  23,
+                  4,
+                  4
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  18,
+                  28,
+                  5,
+                  4
+                ],
+                "sum": 92
+              }
+            ],
+            "total": 178
+          }
+        ]
+      }
+    },
+    {
+      "id": 40,
+      "event_id": 20191110,
+      "dog_id": 7167,
+      "breed_class": "Команда № 19",
+      "catalog_no": 19,
+      "placement": 13,
+      "total_score": 351,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 7167,
+        "name": "ИТУРИ ПАЗЗЛ ИЗЮМ В ШОКОЛАДЕ",
+        "name_ru": "ИТУРИ ПАЗЗЛ ИЗЮМ В ШОКОЛАДЕ",
+        "name_lat": "ITURY PUZZLE IZYUM V CHOCOLADE",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 19",
+        "team_placement": 13,
+        "team_members": [
+          "Амади",
+          "ИТУРИ ПАЗЗЛ ЕКСТРАОРДИНАРИ СМАРТ",
+          "ИТУРИ ПАЗЗЛ ИЗЮМ В ШОКОЛАДЕ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 9,
+            "bib_number": 9,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  18,
+                  26,
+                  5,
+                  4
+                ],
+                "sum": 89
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  18,
+                  23,
+                  5,
+                  3
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 173
+          },
+          {
+            "heat_number": 27,
+            "bib_number": 27,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  10,
+                  9,
+                  18,
+                  23,
+                  4,
+                  4
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  18,
+                  28,
+                  5,
+                  4
+                ],
+                "sum": 92
+              }
+            ],
+            "total": 178
+          }
+        ]
+      }
+    },
+    {
+      "id": 41,
+      "event_id": 20191110,
+      "dog_id": 43,
+      "breed_class": "Команда № 20",
+      "catalog_no": 20,
+      "placement": 14,
+      "total_score": 347,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 43,
+        "name": "SUNRISE LEUR ADAM",
+        "name_ru": "SUNRISE LEUR ADAM",
+        "name_lat": "SUNRISE LEUR ADAM",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 20",
+        "team_placement": 14,
+        "team_members": [
+          "SUNRISE LEUR ADAM",
+          "SUNRISE LEUR ARISHA",
+          "БЕНУА"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 3,
+            "bib_number": 3,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  9,
+                  18,
+                  25,
+                  4,
+                  5
+                ],
+                "sum": 87
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  19,
+                  25,
+                  4,
+                  5
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 176
+          },
+          {
+            "heat_number": 21,
+            "bib_number": 21,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  18,
+                  21,
+                  5,
+                  4
+                ],
+                "sum": 84
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  18,
+                  25,
+                  5,
+                  4
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 171
+          }
+        ]
+      }
+    },
+    {
+      "id": 42,
+      "event_id": 20191110,
+      "dog_id": 564,
+      "breed_class": "Команда № 20",
+      "catalog_no": 20,
+      "placement": 14,
+      "total_score": 347,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 564,
+        "name": "SUNRISE LEUR ARISHA",
+        "name_ru": "SUNRISE LEUR ARISHA",
+        "name_lat": "SUNRISE LEUR ARISHA",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 20",
+        "team_placement": 14,
+        "team_members": [
+          "SUNRISE LEUR ADAM",
+          "SUNRISE LEUR ARISHA",
+          "БЕНУА"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 3,
+            "bib_number": 3,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  9,
+                  18,
+                  25,
+                  4,
+                  5
+                ],
+                "sum": 87
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  19,
+                  25,
+                  4,
+                  5
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 176
+          },
+          {
+            "heat_number": 21,
+            "bib_number": 21,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  18,
+                  21,
+                  5,
+                  4
+                ],
+                "sum": 84
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  18,
+                  25,
+                  5,
+                  4
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 171
+          }
+        ]
+      }
+    },
+    {
+      "id": 43,
+      "event_id": 20191110,
+      "dog_id": 10349,
+      "breed_class": "Команда № 20",
+      "catalog_no": 20,
+      "placement": 14,
+      "total_score": 347,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10349,
+        "name": "БЕНУА",
+        "name_ru": "БЕНУА",
+        "name_lat": "БЕНУА",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 20",
+        "team_placement": 14,
+        "team_members": [
+          "SUNRISE LEUR ADAM",
+          "SUNRISE LEUR ARISHA",
+          "БЕНУА"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 3,
+            "bib_number": 3,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  9,
+                  18,
+                  25,
+                  4,
+                  5
+                ],
+                "sum": 87
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  19,
+                  25,
+                  4,
+                  5
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 176
+          },
+          {
+            "heat_number": 21,
+            "bib_number": 21,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  18,
+                  21,
+                  5,
+                  4
+                ],
+                "sum": 84
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  18,
+                  25,
+                  5,
+                  4
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 171
+          }
+        ]
+      }
+    },
+    {
+      "id": 44,
+      "event_id": 20191110,
+      "dog_id": 10841,
+      "breed_class": "Команда № 9",
+      "catalog_no": 9,
+      "placement": 15,
+      "total_score": 342,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10841,
+        "name": "Лакки",
+        "name_ru": "Лакки",
+        "name_lat": "Лакки",
+        "breed": "Родезийский риджбек",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 9",
+        "team_placement": 15,
+        "team_members": [
+          "Лакки",
+          "Лира",
+          "Узури"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 15,
+            "bib_number": 15,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  19,
+                  25,
+                  4,
+                  4
+                ],
+                "sum": 87
+              },
+              {
+                "scores": [
+                  19,
+                  10,
+                  9,
+                  19,
+                  28,
+                  5,
+                  5
+                ],
+                "sum": 95
+              }
+            ],
+            "total": 182
+          },
+          {
+            "heat_number": 33,
+            "bib_number": 33,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  9,
+                  17,
+                  19,
+                  3,
+                  4
+                ],
+                "sum": 78
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  20,
+                  20,
+                  4,
+                  4
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 160
+          }
+        ]
+      }
+    },
+    {
+      "id": 45,
+      "event_id": 20191110,
+      "dog_id": 10842,
+      "breed_class": "Команда № 9",
+      "catalog_no": 9,
+      "placement": 15,
+      "total_score": 342,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10842,
+        "name": "Лира",
+        "name_ru": "Лира",
+        "name_lat": "Лира",
+        "breed": "Родезийский риджбек",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 9",
+        "team_placement": 15,
+        "team_members": [
+          "Лакки",
+          "Лира",
+          "Узури"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 15,
+            "bib_number": 15,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  19,
+                  25,
+                  4,
+                  4
+                ],
+                "sum": 87
+              },
+              {
+                "scores": [
+                  19,
+                  10,
+                  9,
+                  19,
+                  28,
+                  5,
+                  5
+                ],
+                "sum": 95
+              }
+            ],
+            "total": 182
+          },
+          {
+            "heat_number": 33,
+            "bib_number": 33,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  9,
+                  17,
+                  19,
+                  3,
+                  4
+                ],
+                "sum": 78
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  20,
+                  20,
+                  4,
+                  4
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 160
+          }
+        ]
+      }
+    },
+    {
+      "id": 46,
+      "event_id": 20191110,
+      "dog_id": 10914,
+      "breed_class": "Команда № 9",
+      "catalog_no": 9,
+      "placement": 15,
+      "total_score": 342,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10914,
+        "name": "Узури",
+        "name_ru": "Узури",
+        "name_lat": "Узури",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 9",
+        "team_placement": 15,
+        "team_members": [
+          "Лакки",
+          "Лира",
+          "Узури"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 15,
+            "bib_number": 15,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  19,
+                  25,
+                  4,
+                  4
+                ],
+                "sum": 87
+              },
+              {
+                "scores": [
+                  19,
+                  10,
+                  9,
+                  19,
+                  28,
+                  5,
+                  5
+                ],
+                "sum": 95
+              }
+            ],
+            "total": 182
+          },
+          {
+            "heat_number": 33,
+            "bib_number": 33,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  9,
+                  17,
+                  19,
+                  3,
+                  4
+                ],
+                "sum": 78
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  20,
+                  20,
+                  4,
+                  4
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 160
+          }
+        ]
+      }
+    },
+    {
+      "id": 47,
+      "event_id": 20191110,
+      "dog_id": 10915,
+      "breed_class": "Команда № 13",
+      "catalog_no": 13,
+      "placement": 16,
+      "total_score": 341,
+      "judge_count": 2,
+      "status": "reserve",
+      "dog": {
+        "id": 10915,
+        "name": "Art-Fantasy Eva",
+        "name_ru": "Art-Fantasy Eva",
+        "name_lat": "Art-Fantasy Eva",
+        "breed": "БИГЛЬ",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 13",
+        "team_placement": 16,
+        "team_members": [
+          "Lemon Drop iz doma Eleonory",
+          "Винстон",
+          "Заряд Бодрости из Гостевого дома"
+        ],
+        "ran": false,
+        "heats": [
+          {
+            "heat_number": 2,
+            "bib_number": 2,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  9,
+                  17,
+                  25,
+                  4,
+                  4
+                ],
+                "sum": 84
+              },
+              {
+                "scores": [
+                  16,
+                  8,
+                  8,
+                  19,
+                  25,
+                  4,
+                  5
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 169
+          },
+          {
+            "heat_number": 20,
+            "bib_number": 20,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  17,
+                  23,
+                  5,
+                  4
+                ],
+                "sum": 82
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  9,
+                  19,
+                  26,
+                  5,
+                  5
+                ],
+                "sum": 90
+              }
+            ],
+            "total": 172
+          }
+        ]
+      }
+    },
+    {
+      "id": 48,
+      "event_id": 20191110,
+      "dog_id": 10916,
+      "breed_class": "Команда № 13",
+      "catalog_no": 13,
+      "placement": 16,
+      "total_score": 341,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10916,
+        "name": "Lemon Drop iz doma Eleonory",
+        "name_ru": "Lemon Drop iz doma Eleonory",
+        "name_lat": "Lemon Drop iz doma Eleonory",
+        "breed": "БИГЛЬ",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 13",
+        "team_placement": 16,
+        "team_members": [
+          "Lemon Drop iz doma Eleonory",
+          "Винстон",
+          "Заряд Бодрости из Гостевого дома"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 2,
+            "bib_number": 2,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  9,
+                  17,
+                  25,
+                  4,
+                  4
+                ],
+                "sum": 84
+              },
+              {
+                "scores": [
+                  16,
+                  8,
+                  8,
+                  19,
+                  25,
+                  4,
+                  5
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 169
+          },
+          {
+            "heat_number": 20,
+            "bib_number": 20,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  17,
+                  23,
+                  5,
+                  4
+                ],
+                "sum": 82
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  9,
+                  19,
+                  26,
+                  5,
+                  5
+                ],
+                "sum": 90
+              }
+            ],
+            "total": 172
+          }
+        ]
+      }
+    },
+    {
+      "id": 49,
+      "event_id": 20191110,
+      "dog_id": 10917,
+      "breed_class": "Команда № 13",
+      "catalog_no": 13,
+      "placement": 16,
+      "total_score": 341,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10917,
+        "name": "Винстон",
+        "name_ru": "Винстон",
+        "name_lat": "Винстон",
+        "breed": "БИГЛЬ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 13",
+        "team_placement": 16,
+        "team_members": [
+          "Lemon Drop iz doma Eleonory",
+          "Винстон",
+          "Заряд Бодрости из Гостевого дома"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 2,
+            "bib_number": 2,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  9,
+                  17,
+                  25,
+                  4,
+                  4
+                ],
+                "sum": 84
+              },
+              {
+                "scores": [
+                  16,
+                  8,
+                  8,
+                  19,
+                  25,
+                  4,
+                  5
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 169
+          },
+          {
+            "heat_number": 20,
+            "bib_number": 20,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  17,
+                  23,
+                  5,
+                  4
+                ],
+                "sum": 82
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  9,
+                  19,
+                  26,
+                  5,
+                  5
+                ],
+                "sum": 90
+              }
+            ],
+            "total": 172
+          }
+        ]
+      }
+    },
+    {
+      "id": 50,
+      "event_id": 20191110,
+      "dog_id": 10918,
+      "breed_class": "Команда № 13",
+      "catalog_no": 13,
+      "placement": 16,
+      "total_score": 341,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10918,
+        "name": "Заряд Бодрости из Гостевого дома",
+        "name_ru": "Заряд Бодрости из Гостевого дома",
+        "name_lat": "Заряд Бодрости из Гостевого дома",
+        "breed": "БИГЛЬ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 13",
+        "team_placement": 16,
+        "team_members": [
+          "Lemon Drop iz doma Eleonory",
+          "Винстон",
+          "Заряд Бодрости из Гостевого дома"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 2,
+            "bib_number": 2,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  9,
+                  17,
+                  25,
+                  4,
+                  4
+                ],
+                "sum": 84
+              },
+              {
+                "scores": [
+                  16,
+                  8,
+                  8,
+                  19,
+                  25,
+                  4,
+                  5
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 169
+          },
+          {
+            "heat_number": 20,
+            "bib_number": 20,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  17,
+                  23,
+                  5,
+                  4
+                ],
+                "sum": 82
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  9,
+                  19,
+                  26,
+                  5,
+                  5
+                ],
+                "sum": 90
+              }
+            ],
+            "total": 172
+          }
+        ]
+      }
+    },
+    {
+      "id": 51,
+      "event_id": 20191110,
+      "dog_id": 10034,
+      "breed_class": "Команда № 15",
+      "catalog_no": 15,
+      "placement": 17,
+      "total_score": 334,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10034,
+        "name": "COLISTO’S BEATO",
+        "name_ru": "COLISTO’S BEATO",
+        "name_lat": "COLISTO’S BEATO",
+        "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 15",
+        "team_placement": 17,
+        "team_members": [
+          "COLISTO’S BEATO",
+          "COLISTO’S GVENDA",
+          "SOLLUCERO"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 19,
+            "bib_number": 19,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  17,
+                  23,
+                  4,
+                  4
+                ],
+                "sum": 82
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  17,
+                  26,
+                  5,
+                  4
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 171
+          },
+          {
+            "heat_number": 37,
+            "bib_number": 37,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  7,
+                  17,
+                  21,
+                  5,
+                  4
+                ],
+                "sum": 79
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  9,
+                  16,
+                  24,
+                  5,
+                  4
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 163
+          }
+        ]
+      }
+    },
+    {
+      "id": 52,
+      "event_id": 20191110,
+      "dog_id": 10036,
+      "breed_class": "Команда № 15",
+      "catalog_no": 15,
+      "placement": 17,
+      "total_score": 334,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10036,
+        "name": "COLISTO’S GVENDA",
+        "name_ru": "COLISTO’S GVENDA",
+        "name_lat": "COLISTO’S GVENDA",
+        "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 15",
+        "team_placement": 17,
+        "team_members": [
+          "COLISTO’S BEATO",
+          "COLISTO’S GVENDA",
+          "SOLLUCERO"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 19,
+            "bib_number": 19,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  17,
+                  23,
+                  4,
+                  4
+                ],
+                "sum": 82
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  17,
+                  26,
+                  5,
+                  4
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 171
+          },
+          {
+            "heat_number": 37,
+            "bib_number": 37,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  7,
+                  17,
+                  21,
+                  5,
+                  4
+                ],
+                "sum": 79
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  9,
+                  16,
+                  24,
+                  5,
+                  4
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 163
+          }
+        ]
+      }
+    },
+    {
+      "id": 53,
+      "event_id": 20191110,
+      "dog_id": 10035,
+      "breed_class": "Команда № 15",
+      "catalog_no": 15,
+      "placement": 17,
+      "total_score": 334,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10035,
+        "name": "SOLLUCERO",
+        "name_ru": "SOLLUCERO",
+        "name_lat": "SOLLUCERO",
+        "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 15",
+        "team_placement": 17,
+        "team_members": [
+          "COLISTO’S BEATO",
+          "COLISTO’S GVENDA",
+          "SOLLUCERO"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 19,
+            "bib_number": 19,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  17,
+                  23,
+                  4,
+                  4
+                ],
+                "sum": 82
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  17,
+                  26,
+                  5,
+                  4
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 171
+          },
+          {
+            "heat_number": 37,
+            "bib_number": 37,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  7,
+                  17,
+                  21,
+                  5,
+                  4
+                ],
+                "sum": 79
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  9,
+                  16,
+                  24,
+                  5,
+                  4
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 163
+          }
+        ]
+      }
+    },
+    {
+      "id": 54,
+      "event_id": 20191110,
+      "dog_id": 10919,
+      "breed_class": "Команда № 3",
+      "catalog_no": 3,
+      "placement": 18,
+      "total_score": 331,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10919,
+        "name": "GEM BY GEM KUNLUN STREET FIGHTER",
+        "name_ru": "GEM BY GEM KUNLUN STREET FIGHTER",
+        "name_lat": "GEM BY GEM KUNLUN STREET FIGHTER",
+        "breed": "АНГЛИЙСКИЙ СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 3",
+        "team_placement": 18,
+        "team_members": [
+          "GEM BY GEM KUNLUN STREET FIGHTER",
+          "Rubina's Balky Baks",
+          "Голден Айрис Влата"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 11,
+            "bib_number": 11,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  18,
+                  19,
+                  4,
+                  4
+                ],
+                "sum": 78
+              },
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  19,
+                  20,
+                  5,
+                  4
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 159
+          },
+          {
+            "heat_number": 29,
+            "bib_number": 29,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  17,
+                  24,
+                  5,
+                  5
+                ],
+                "sum": 87
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  18,
+                  22,
+                  5,
+                  5
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 172
+          }
+        ]
+      }
+    },
+    {
+      "id": 55,
+      "event_id": 20191110,
+      "dog_id": 10920,
+      "breed_class": "Команда № 3",
+      "catalog_no": 3,
+      "placement": 18,
+      "total_score": 331,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10920,
+        "name": "Rubina's Balky Baks",
+        "name_ru": "Rubina's Balky Baks",
+        "name_lat": "Rubina's Balky Baks",
+        "breed": "АМЕРИКАНСКИЙ ПИТБУЛЬТЕРЬЕР",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 3",
+        "team_placement": 18,
+        "team_members": [
+          "GEM BY GEM KUNLUN STREET FIGHTER",
+          "Rubina's Balky Baks",
+          "Голден Айрис Влата"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 11,
+            "bib_number": 11,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  18,
+                  19,
+                  4,
+                  4
+                ],
+                "sum": 78
+              },
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  19,
+                  20,
+                  5,
+                  4
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 159
+          },
+          {
+            "heat_number": 29,
+            "bib_number": 29,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  17,
+                  24,
+                  5,
+                  5
+                ],
+                "sum": 87
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  18,
+                  22,
+                  5,
+                  5
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 172
+          }
+        ]
+      }
+    },
+    {
+      "id": 56,
+      "event_id": 20191110,
+      "dog_id": 10921,
+      "breed_class": "Команда № 3",
+      "catalog_no": 3,
+      "placement": 18,
+      "total_score": 331,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10921,
+        "name": "Голден Айрис Влата",
+        "name_ru": "Голден Айрис Влата",
+        "name_lat": "Голден Айрис Влата",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 3",
+        "team_placement": 18,
+        "team_members": [
+          "GEM BY GEM KUNLUN STREET FIGHTER",
+          "Rubina's Balky Baks",
+          "Голден Айрис Влата"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 11,
+            "bib_number": 11,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  18,
+                  19,
+                  4,
+                  4
+                ],
+                "sum": 78
+              },
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  19,
+                  20,
+                  5,
+                  4
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 159
+          },
+          {
+            "heat_number": 29,
+            "bib_number": 29,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  17,
+                  24,
+                  5,
+                  5
+                ],
+                "sum": 87
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  18,
+                  22,
+                  5,
+                  5
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 172
+          }
+        ]
+      }
+    },
+    {
+      "id": 57,
+      "event_id": 20191110,
+      "dog_id": 10922,
+      "breed_class": "Команда № 6",
+      "catalog_no": 6,
+      "placement": 19,
+      "total_score": 329,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10922,
+        "name": "Вербена",
+        "name_ru": "Вербена",
+        "name_lat": "Вербена",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 6",
+        "team_placement": 19,
+        "team_members": [
+          "Вербена",
+          "Вишенка",
+          "Вьюга"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 16,
+            "bib_number": 16,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  15,
+                  19,
+                  5,
+                  5
+                ],
+                "sum": 75
+              },
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  17,
+                  27,
+                  5,
+                  5
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 162
+          },
+          {
+            "heat_number": 34,
+            "bib_number": 34,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  9,
+                  20,
+                  18,
+                  5,
+                  5
+                ],
+                "sum": 83
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  9,
+                  20,
+                  19,
+                  5,
+                  5
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 167
+          }
+        ]
+      }
+    },
+    {
+      "id": 58,
+      "event_id": 20191110,
+      "dog_id": 10923,
+      "breed_class": "Команда № 6",
+      "catalog_no": 6,
+      "placement": 19,
+      "total_score": 329,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10923,
+        "name": "Вишенка",
+        "name_ru": "Вишенка",
+        "name_lat": "Вишенка",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 6",
+        "team_placement": 19,
+        "team_members": [
+          "Вербена",
+          "Вишенка",
+          "Вьюга"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 16,
+            "bib_number": 16,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  15,
+                  19,
+                  5,
+                  5
+                ],
+                "sum": 75
+              },
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  17,
+                  27,
+                  5,
+                  5
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 162
+          },
+          {
+            "heat_number": 34,
+            "bib_number": 34,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  9,
+                  20,
+                  18,
+                  5,
+                  5
+                ],
+                "sum": 83
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  9,
+                  20,
+                  19,
+                  5,
+                  5
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 167
+          }
+        ]
+      }
+    },
+    {
+      "id": 59,
+      "event_id": 20191110,
+      "dog_id": 10924,
+      "breed_class": "Команда № 6",
+      "catalog_no": 6,
+      "placement": 19,
+      "total_score": 329,
+      "judge_count": 2,
+      "status": "finished",
+      "dog": {
+        "id": 10924,
+        "name": "Вьюга",
+        "name_ru": "Вьюга",
+        "name_lat": "Вьюга",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 6",
+        "team_placement": 19,
+        "team_members": [
+          "Вербена",
+          "Вишенка",
+          "Вьюга"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 16,
+            "bib_number": 16,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  15,
+                  19,
+                  5,
+                  5
+                ],
+                "sum": 75
+              },
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  17,
+                  27,
+                  5,
+                  5
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 162
+          },
+          {
+            "heat_number": 34,
+            "bib_number": 34,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  9,
+                  20,
+                  18,
+                  5,
+                  5
+                ],
+                "sum": 83
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  9,
+                  20,
+                  19,
+                  5,
+                  5
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 167
+          }
+        ]
+      }
+    },
+    {
+      "id": 60,
+      "event_id": 20191110,
+      "dog_id": 10925,
+      "breed_class": "Команда № 6",
+      "catalog_no": 6,
+      "placement": 19,
+      "total_score": 329,
+      "judge_count": 2,
+      "status": "reserve",
+      "dog": {
+        "id": 10925,
+        "name": "Кубань",
+        "name_ru": "Кубань",
+        "name_lat": "Кубань",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 6",
+        "team_placement": 19,
+        "team_members": [
+          "Вербена",
+          "Вишенка",
+          "Вьюга"
+        ],
+        "ran": false,
+        "heats": [
+          {
+            "heat_number": 16,
+            "bib_number": 16,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  15,
+                  19,
+                  5,
+                  5
+                ],
+                "sum": 75
+              },
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  17,
+                  27,
+                  5,
+                  5
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 162
+          },
+          {
+            "heat_number": 34,
+            "bib_number": 34,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  9,
+                  20,
+                  18,
+                  5,
+                  5
+                ],
+                "sum": 83
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  9,
+                  20,
+                  19,
+                  5,
+                  5
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 167
+          }
+        ]
+      }
+    },
+    {
+      "id": 61,
+      "event_id": 20191110,
+      "dog_id": 9833,
+      "breed_class": "Команда № 10",
+      "catalog_no": 10,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "status": "dns",
+      "dog": {
+        "id": 9833,
+        "name": "ARIES KHAN INDIANA JONES",
+        "name_ru": "ARIES KHAN INDIANA JONES",
+        "name_lat": "ARIES KHAN INDIANA JONES",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 10",
+        "team_placement": null,
+        "team_members": [],
+        "ran": false,
+        "heats": []
+      }
+    },
+    {
+      "id": 62,
+      "event_id": 20191110,
+      "dog_id": 9835,
+      "breed_class": "Команда № 10",
+      "catalog_no": 10,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "status": "dns",
+      "dog": {
+        "id": 9835,
+        "name": "Aries Khan Lisbeth By Hintza",
+        "name_ru": "ARIES KHAN LISBETH BY HINTZA",
+        "name_lat": "ARIES KHAN LISBETH BY HINTZA",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 10",
+        "team_placement": null,
+        "team_members": [],
+        "ran": false,
+        "heats": []
+      }
+    },
+    {
+      "id": 63,
+      "event_id": 20191110,
+      "dog_id": 10926,
+      "breed_class": "Команда № 10",
+      "catalog_no": 10,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "status": "dns",
+      "dog": {
+        "id": 10926,
+        "name": "Aries Khan Marilyn Monroe",
+        "name_ru": "Aries Khan Marilyn Monroe",
+        "name_lat": "Aries Khan Marilyn Monroe",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 10",
+        "team_placement": null,
+        "team_members": [],
+        "ran": false,
+        "heats": []
+      }
+    },
+    {
+      "id": 64,
+      "event_id": 20191110,
+      "dog_id": 10857,
+      "breed_class": "Команда № 12",
+      "catalog_no": 12,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "status": "dns",
+      "dog": {
+        "id": 10857,
+        "name": "Tamir Ani Pervozvet",
+        "name_ru": "Тамир Ани Первоцвет",
+        "name_lat": "Тамир Ани Первоцвет",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Кобель"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 12",
+        "team_placement": null,
+        "team_members": [],
+        "ran": false,
+        "heats": []
+      }
+    },
+    {
+      "id": 65,
+      "event_id": 20191110,
+      "dog_id": 10126,
+      "breed_class": "Команда № 12",
+      "catalog_no": 12,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "status": "dns",
+      "dog": {
+        "id": 10126,
+        "name": "TAMIR ANI POZEMKA",
+        "name_ru": "TAMIR ANI POZEMKA",
+        "name_lat": "TAMIR ANI POZEMKA",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 12",
+        "team_placement": null,
+        "team_members": [],
+        "ran": false,
+        "heats": []
+      }
+    },
+    {
+      "id": 66,
+      "event_id": 20191110,
+      "dog_id": 9503,
+      "breed_class": "Команда № 12",
+      "catalog_no": 12,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "status": "dns",
+      "dog": {
+        "id": 9503,
+        "name": "Tamir Ani Pustelga",
+        "name_ru": "ТАМИР АНИ ПУСТЕЛЬГА",
+        "name_lat": "ТАМИР АНИ ПУСТЕЛЬГА",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Сука"
+      },
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "team_name": "Команда № 12",
+        "team_placement": null,
+        "team_members": [],
+        "ran": false,
+        "heats": []
+      }
+    }
+  ]
+}

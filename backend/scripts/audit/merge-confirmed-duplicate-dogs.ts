@@ -53,6 +53,102 @@ type DogCard = {
   [key: string]: unknown
 }
 
+function pickBestNames(
+  keep: DogCard,
+  alias: DogCard,
+): { name_lat: string | null; name_ru: string | null } {
+  const allNames = [
+    keep.name_lat,
+    keep.name_ru,
+    alias.name_lat,
+    alias.name_ru,
+    ...(keep.merged_aliases || []),
+    ...(alias.merged_aliases || []),
+  ].filter((s): s is string => typeof s === 'string' && s.trim().length > 0)
+
+  const expanded: string[] = []
+  for (const n of allNames) {
+    expanded.push(n.trim())
+    if (n.includes('/')) {
+      for (const chunk of n.split('/')) {
+        const c = chunk.trim()
+        if (c.length >= 2) expanded.push(c)
+      }
+    }
+  }
+
+  // Pure Latin (contains latin letters, no Cyrillic)
+  const latins = expanded.filter((s) => /[a-z]/i.test(s) && !/[а-яё]/i.test(s))
+  // Pure Cyrillic (contains cyrillic letters, no Latin)
+  const cyrillics = expanded.filter((s) => /[а-яё]/i.test(s) && !/[a-z]/i.test(s))
+
+  let bestLat: string | null = null
+  if (latins.length > 0) {
+    bestLat = latins.find((s) => s === keep.name_lat) || latins[0]!
+  } else {
+    bestLat = keep.name_lat || alias.name_lat || null
+  }
+
+  let bestRu: string | null = null
+  if (cyrillics.length > 0) {
+    bestRu = cyrillics.find((s) => s === keep.name_ru) || cyrillics[0]!
+  } else {
+    bestRu = keep.name_ru || alias.name_ru || null
+  }
+
+  return { name_lat: bestLat, name_ru: bestRu }
+}
+
+const GARBAGE_DOG_IDS = [602, 9694, 9695, 9696, 9697]
+
+function cleanGarbageDogs(apply: boolean) {
+  console.log(`\nChecking garbage dog profiles (${GARBAGE_DOG_IDS.join(', ')})...`)
+  let garbageRowsRemoved = 0
+
+  const compFiles = [
+    path.join(COMPS, '2025/09-сентябрь/1292-чркф-курсинг-борзых.json'),
+    path.join(COMPS, '2023/04-апрель/1428-национальные-монопородные-состязания.json'),
+  ]
+
+  for (const file of compFiles) {
+    if (!fs.existsSync(file)) continue
+    const doc = JSON.parse(fs.readFileSync(file, 'utf-8')) as {
+      results?: Array<{ dog_id?: number }>
+    }
+    if (!Array.isArray(doc.results)) continue
+
+    const prevLen = doc.results.length
+    doc.results = doc.results.filter(
+      (r) => !r.dog_id || !GARBAGE_DOG_IDS.includes(r.dog_id),
+    )
+    const removed = prevLen - doc.results.length
+    if (removed > 0) {
+      garbageRowsRemoved += removed
+      console.log(`Removed ${removed} garbage rows from ${path.basename(file)}`)
+      if (apply) safeWriteJson(file, doc)
+    }
+  }
+
+  for (const gid of GARBAGE_DOG_IDS) {
+    const p = path.join(BY_ID, `${gid}.json`)
+    if (fs.existsSync(p)) {
+      try {
+        const dog = JSON.parse(fs.readFileSync(p, 'utf-8')) as DogCard
+        if (apply) {
+          fs.unlinkSync(p)
+          if (dog.dog_key) {
+            const kp = path.join(BY_KEY, `${dog.dog_key}.json`)
+            if (fs.existsSync(kp)) fs.unlinkSync(kp)
+          }
+        }
+        console.log(`Removed garbage dog card ${gid} (${dog.dog_key || 'no key'})`)
+      } catch {
+        if (apply && fs.existsSync(p)) fs.unlinkSync(p)
+      }
+    }
+  }
+}
+
 function safeWriteJson(filePath: string, data: unknown) {
   const content = JSON.stringify(data, null, 2) + '\n'
   let attempts = 5
@@ -120,6 +216,9 @@ function main() {
   console.log(`Input pairs: ${rawMerges.length}`)
   console.log(`======================================================\n`)
 
+  // Step 0: Clean known parser garbage noise
+  cleanGarbageDogs(apply)
+
   // Step 1: Filter valid pairs where both dogs exist (or if alias was already partially merged, skip)
   const aliasToKeep = new Map<
     number,
@@ -165,14 +264,15 @@ function main() {
     for (const row of doc.results) {
       const aliasId = row.dog_id
       if (aliasId && aliasToKeep.has(aliasId)) {
-        const { keepId, keepDog } = aliasToKeep.get(aliasId)!
+        const { keepId, keepDog, aliasDog } = aliasToKeep.get(aliasId)!
         row.dog_id = keepId
+        const bestNames = pickBestNames(keepDog, aliasDog)
         if (row.dog && typeof row.dog === 'object') {
           row.dog = {
             ...row.dog,
             id: keepId,
-            name_lat: keepDog.name_lat ?? row.dog.name_lat,
-            name_ru: keepDog.name_ru ?? row.dog.name_ru,
+            name_lat: bestNames.name_lat ?? row.dog.name_lat,
+            name_ru: bestNames.name_ru ?? row.dog.name_ru,
             breed: keepDog.breed ?? row.dog.breed,
           }
         }
@@ -213,18 +313,19 @@ function main() {
       ...(aliasDog.competition_files ?? []),
     ])
 
+    const bestNames = pickBestNames(keepDog, aliasDog)
     const aliasesSet = new Set(keepDog.merged_aliases ?? [])
-    if (aliasDog.name_lat && aliasDog.name_lat !== keepDog.name_lat) {
-      aliasesSet.add(aliasDog.name_lat)
-    }
-    if (aliasDog.name_ru && aliasDog.name_ru !== keepDog.name_ru) {
-      aliasesSet.add(aliasDog.name_ru)
+    for (const n of [keepDog.name_lat, keepDog.name_ru, aliasDog.name_lat, aliasDog.name_ru]) {
+      if (n && n !== bestNames.name_lat && n !== bestNames.name_ru) {
+        aliasesSet.add(n)
+      }
     }
 
     const updated: DogCard = {
       ...keepDog,
       exported_at: new Date().toISOString(),
-      name_ru: keepDog.name_ru || aliasDog.name_ru || null,
+      name_lat: bestNames.name_lat,
+      name_ru: bestNames.name_ru,
       sex: keepDog.sex || aliasDog.sex || null,
       owner: keepDog.owner || aliasDog.owner || null,
       pedigree_url: keepDog.pedigree_url || aliasDog.pedigree_url || null,
@@ -237,8 +338,10 @@ function main() {
     log.push({
       aliasId,
       keepId,
-      alias_name: aliasDog.name_lat,
-      keep_name: keepDog.name_lat,
+      alias_name: aliasDog.name_lat || aliasDog.name_ru,
+      keep_name: updated.name_lat || updated.name_ru,
+      name_lat: updated.name_lat,
+      name_ru: updated.name_ru,
       reason,
     })
 

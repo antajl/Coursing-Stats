@@ -6,12 +6,14 @@
   "name_lat": "PABLO PICASSO",
   "name_ru": "PABLO PICASSO",
   "breed": "ЛЕВРЕТКА",
-  "sex": null,
+  "sex": "Кобель",
   "owner": null,
   "competition_ids": [
-    1569
+    1569,
+    20190811
   ],
   "competition_files": [
-    "competitions/2019/09-сентябрь/1569-национальные-состязания-по-бегам-борзых-за-механ.json"
+    "competitions/2019/09-сентябрь/1569-национальные-состязания-по-бегам-борзых-за-механ.json",
+    "competitions/2019/08-август/20190811-тестовое-состязание-по-реисингу.json"
   ]
 }

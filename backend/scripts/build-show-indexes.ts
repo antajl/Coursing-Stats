@@ -26,6 +26,8 @@ import {
   normalizeShowJudgeDisplayName,
   parseShowJudgeNameParts,
   showJudgeMergeKey,
+  translitLatSurname,
+  GIVEN_CANON_EN_TO_RU,
 } from '../lib/show-judge-name'
 import {
   addBreedAliasPair,
@@ -46,6 +48,7 @@ import {
 } from '../parsers/shows/parse-rkf-certificate-pdf'
 import {
   collapseShowDogsByExactName,
+  collapseShowDogsByTranslit,
   collapseShowDogsByNamePrefix,
   linkShowDogsByUniqueName,
 } from '../lib/show-dog-dedupe'
@@ -470,6 +473,7 @@ interface ShowJudgeEntry {
   /** % отлично по годам (0–1), только годы с graded > 0. */
   by_year_excellent?: Record<string, number>
   by_year_graded?: Record<string, number>
+  by_year_breeds?: Record<string, number>
 }
 
 interface ShowJudgeDetailExhibition {
@@ -529,9 +533,42 @@ function exhibitionRkfUrl(exhibition: ShowExhibition): string | undefined {
 }
 
 /** Предпочитаем частое написание; при равной частоте — более длинная форма с отчеством, затем не ALL CAPS. */
+function toProperCaseJudge(name: string): string {
+  if (!name) return ''
+  const isAllUpper = name === name.toUpperCase() && /[A-ZА-ЯЁ]/.test(name)
+  const isAllLower = name === name.toLowerCase() && /[a-zа-яё]/.test(name)
+  if (!isAllUpper && !isAllLower) {
+    return name.trim()
+  }
+  return name
+    .toLowerCase()
+    .split(/\s+/)
+    .map((word) => {
+      if (!word) return ''
+      return word
+        .split('-')
+        .map((part) => {
+          if (part.includes('.')) {
+            return part
+              .split('.')
+              .map((seg) => (seg ? seg.charAt(0).toUpperCase() + seg.slice(1) : ''))
+              .join('.')
+          }
+          return part.charAt(0).toUpperCase() + part.slice(1)
+        })
+        .join('-')
+    })
+    .join(' ')
+}
+
 function pickCanonicalJudgeName(nameCounts: Map<string, number>): { normalized: string; display: string } {
   const entries = [...nameCounts.entries()]
   entries.sort((a, b) => {
+    // If the entry has Cyrillic names, strongly prefer Cyrillic over Latin
+    const aCyr = /[а-яё]/i.test(a[0])
+    const bCyr = /[а-яё]/i.test(b[0])
+    if (aCyr !== bCyr) return aCyr ? -1 : 1
+
     // Prefer higher frequency
     if (b[1] !== a[1]) return b[1] - a[1]
     
@@ -552,14 +589,14 @@ function pickCanonicalJudgeName(nameCounts: Map<string, number>): { normalized: 
     
     return a[0].localeCompare(b[0], 'en')
   })
-  const displayName = entries[0]![0]
-  // Normalize for the id/name field (lowercase for consistency)
-  const normalized = displayName
+  const rawDisplay = entries[0]![0]
+  const display = toProperCaseJudge(rawDisplay)
+  const normalized = display
     .normalize('NFKC')
     .replace(/[\u00a0\s]+/g, ' ')
     .trim()
     .toLowerCase()
-  return { normalized, display: displayName }
+  return { normalized, display }
 }
 
 function buildJudgesIndex(exhibitions: ShowExhibition[]): {
@@ -598,18 +635,52 @@ function buildJudgesIndex(exhibitions: ShowExhibition[]): {
     map.set(key, (map.get(key) || 0) + 1)
   }
 
+  const mergeJudgeAcc = (dest: Acc, src: Acc) => {
+    for (const [n, c] of src.nameCounts) {
+      dest.nameCounts.set(n, (dest.nameCounts.get(n) || 0) + c)
+    }
+    for (const [id, meta] of src.exhibitionMeta) {
+      if (!dest.exhibitionMeta.has(id)) dest.exhibitionMeta.set(id, meta)
+    }
+    for (const [id, year] of src.exhibitionYears) {
+      if (!dest.exhibitionYears.has(id)) dest.exhibitionYears.set(id, year)
+    }
+    for (const [id, map] of src.exhibitionGradeCounts) {
+      let destMap = dest.exhibitionGradeCounts.get(id)
+      if (!destMap) {
+        destMap = new Map()
+        dest.exhibitionGradeCounts.set(id, destMap)
+      }
+      for (const [gk, n] of map) destMap.set(gk, (destMap.get(gk) || 0) + n)
+    }
+    for (const [id, map] of src.exhibitionBreedCounts) {
+      let destMap = dest.exhibitionBreedCounts.get(id)
+      if (!destMap) {
+        destMap = new Map()
+        dest.exhibitionBreedCounts.set(id, destMap)
+      }
+      for (const [b, n] of map) destMap.set(b, (destMap.get(b) || 0) + n)
+    }
+    for (const [b, n] of src.breeds) {
+      dest.breeds.set(b, (dest.breeds.get(b) || 0) + n)
+    }
+    for (const [gk, n] of src.gradeCounts) {
+      dest.gradeCounts.set(gk, (dest.gradeCounts.get(gk) || 0) + n)
+    }
+    dest.gradedTotal += src.gradedTotal
+  }
+
   const touch = (
     raw: string | undefined | null,
     exhibition: ShowExhibition,
     breed?: string,
     grade?: string | null,
   ) => {
-    const name = (raw || '').replace(/[\u00a0\s]+/g, ' ').trim()
-    if (!name) return
-    if (!isPlausibleJudgeName(name)) return
+    const rawTrimmed = (raw || '').replace(/[\u00a0\s]+/g, ' ').trim()
+    if (!rawTrimmed) return
+    const normalized = normalizeShowJudgeDisplayName(rawTrimmed)
+    if (!normalized || !isPlausibleJudgeName(normalized)) return
     
-    // Use merge key for deduplication instead of simple normalization
-    const normalized = normalizeShowJudgeDisplayName(name)
     const parts = parseShowJudgeNameParts(normalized)
     const key = showJudgeMergeKey(parts)
 
@@ -631,38 +702,7 @@ function buildJudgesIndex(exhibitions: ShowExhibition[]): {
         if (wildAcc) {
           const existing = byKey.get(key)
           if (existing && existing !== wildAcc) {
-            for (const [n, c] of wildAcc.nameCounts) {
-              existing.nameCounts.set(n, (existing.nameCounts.get(n) || 0) + c)
-            }
-            for (const [id, meta] of wildAcc.exhibitionMeta) {
-              if (!existing.exhibitionMeta.has(id)) existing.exhibitionMeta.set(id, meta)
-            }
-            for (const [id, year] of wildAcc.exhibitionYears) {
-              if (!existing.exhibitionYears.has(id)) existing.exhibitionYears.set(id, year)
-            }
-            for (const [id, map] of wildAcc.exhibitionGradeCounts) {
-              let dest = existing.exhibitionGradeCounts.get(id)
-              if (!dest) {
-                dest = new Map()
-                existing.exhibitionGradeCounts.set(id, dest)
-              }
-              for (const [gk, n] of map) dest.set(gk, (dest.get(gk) || 0) + n)
-            }
-            for (const [id, map] of wildAcc.exhibitionBreedCounts) {
-              let dest = existing.exhibitionBreedCounts.get(id)
-              if (!dest) {
-                dest = new Map()
-                existing.exhibitionBreedCounts.set(id, dest)
-              }
-              for (const [b, n] of map) dest.set(b, (dest.get(b) || 0) + n)
-            }
-            for (const [b, n] of wildAcc.breeds) {
-              existing.breeds.set(b, (existing.breeds.get(b) || 0) + n)
-            }
-            for (const [gk, n] of wildAcc.gradeCounts) {
-              existing.gradeCounts.set(gk, (existing.gradeCounts.get(gk) || 0) + n)
-            }
-            existing.gradedTotal += wildAcc.gradedTotal
+            mergeJudgeAcc(existing, wildAcc)
           } else if (!existing) {
             byKey.set(key, wildAcc)
           }
@@ -686,7 +726,7 @@ function buildJudgesIndex(exhibitions: ShowExhibition[]): {
       }
       byKey.set(actualKey, acc)
     }
-    acc.nameCounts.set(name, (acc.nameCounts.get(name) || 0) + 1)
+    acc.nameCounts.set(normalized, (acc.nameCounts.get(normalized) || 0) + 1)
     if (!acc.exhibitionMeta.has(exhibition.id)) {
       const year = extractYear(exhibition.date)
       acc.exhibitionMeta.set(exhibition.id, {
@@ -797,6 +837,50 @@ function buildJudgesIndex(exhibitions: ShowExhibition[]): {
     grades: baselineGrades,
   }
 
+  // Post-processing pass: merge any remaining Latin variants of Russian judges into their canonical Cyrillic profiles
+  const cyrJudgesBySurname = new Map<string, Array<{ key: string; acc: Acc; first: string }>>()
+  for (const [key, acc] of byKey) {
+    if (!/^[а-яё]/i.test(key)) continue
+    const [last, first] = key.split('|')
+    if (!last) continue
+    let l = cyrJudgesBySurname.get(last)
+    if (!l) {
+      l = []
+      cyrJudgesBySurname.set(last, l)
+    }
+    l.push({ key, acc, first })
+  }
+
+  for (const [latKey, latAcc] of [...byKey.entries()]) {
+    if (/^[а-яё]/i.test(latKey)) continue
+    const [p0, p1] = latKey.split('|')
+    if (!p0 || !p1) continue
+
+    for (const [candLast, candFirst] of [[p0, p1], [p1, p0]]) {
+      const cyrLast = translitLatSurname(candLast)
+      if (!cyrLast) continue
+      const ruGiven = GIVEN_CANON_EN_TO_RU[candFirst.toLowerCase()]
+      if (!ruGiven) continue
+
+      const candidates = cyrJudgesBySurname.get(cyrLast)
+      if (!candidates || candidates.length === 0) continue
+
+      const ruStem = ruGiven.replace(/[яйаеь]$/, '')
+      const matchedCyr = candidates.filter((c) => {
+        const { display } = pickCanonicalJudgeName(c.acc.nameCounts)
+        return display.toLowerCase().includes(ruStem)
+      })
+
+      if (matchedCyr.length > 0) {
+        matchedCyr.sort((a, b) => b.acc.exhibitionMeta.size - a.acc.exhibitionMeta.size)
+        const target = matchedCyr[0]
+        mergeJudgeAcc(target.acc, latAcc)
+        byKey.delete(latKey)
+        break
+      }
+    }
+  }
+
   const details: ShowJudgeDetail[] = []
   const list: ShowJudgeEntry[] = []
 
@@ -879,6 +963,18 @@ function buildJudgesIndex(exhibitions: ShowExhibition[]): {
       by_year_excellent[year] = (byYearExcellentCounts[year] || 0) / graded
     }
 
+    const byYearBreedsSet: Record<string, Set<string>> = {}
+    for (const [exId, bMap] of acc.exhibitionBreedCounts) {
+      const year = acc.exhibitionYears.get(exId)
+      if (!year) continue
+      if (!byYearBreedsSet[year]) byYearBreedsSet[year] = new Set()
+      for (const breed of bMap.keys()) byYearBreedsSet[year].add(breed)
+    }
+    const by_year_breeds: Record<string, number> = {}
+    for (const [year, bSet] of Object.entries(byYearBreedsSet)) {
+      by_year_breeds[year] = bSet.size
+    }
+
     list.push({
       id,
       name,
@@ -892,6 +988,7 @@ function buildJudgesIndex(exhibitions: ShowExhibition[]): {
       ...(Object.keys(by_year_excellent).length > 0
         ? { by_year_excellent, by_year_graded: byYearGraded }
         : {}),
+      ...(Object.keys(by_year_breeds).length > 0 ? { by_year_breeds } : {}),
     })
     details.push({
       id,
@@ -1012,6 +1109,50 @@ async function main() {
     `Sanitized breed+judge glue: ${breedJudgeStripped} fields on ${sanitizedEx} LC shows`,
   )
 
+  console.log('Building show judges index...')
+  const { list: judges, details: judgeDetails, baseline } = buildJudgesIndex(exhibitions)
+  const judgesCount = judges.length
+  console.log(`Built index for ${judgesCount} judges`)
+  fs.writeFileSync(path.join(INDEXES_DIR, 'judges.json'), JSON.stringify(judges))
+  writeJudgesPage0(judges)
+
+  // Save strictness baseline
+  fs.writeFileSync(
+    path.join(INDEXES_DIR, 'judges-strictness-baseline.json'),
+    JSON.stringify(baseline, null, 2),
+  )
+  console.log(`  Saved judges-strictness-baseline.json (graded=${baseline.graded}, excellent_rate=${(baseline.excellent_rate * 100).toFixed(1)}%)`)
+
+  const judgeDetailsDir = path.join(INDEXES_DIR, 'judge-details')
+  if (fs.existsSync(judgeDetailsDir)) {
+    for (const name of fs.readdirSync(judgeDetailsDir)) {
+      if (name.endsWith('.json')) fs.unlinkSync(path.join(judgeDetailsDir, name))
+    }
+  } else {
+    fs.mkdirSync(judgeDetailsDir, { recursive: true })
+  }
+  const judgePacks = new Map<string, Record<string, unknown>>()
+  for (const detail of judgeDetails) {
+    const fileKey = showJudgeDetailFileKey(detail.id)
+    const shard = cdnPackShardKey(fileKey)
+    const bucket = judgePacks.get(shard) ?? {}
+    bucket[fileKey] = detail
+    judgePacks.set(shard, bucket)
+  }
+  let judgePackBytes = 0
+  for (const [shard, byKey] of [...judgePacks.entries()].sort((a, b) => a[0].localeCompare(b[0]))) {
+    const body = JSON.stringify({
+      schema: 'coursing-stats/show-judge-detail-pack-v1',
+      shard,
+      byKey,
+    })
+    judgePackBytes += Buffer.byteLength(body)
+    fs.writeFileSync(path.join(judgeDetailsDir, `pack-${shard}.json`), body)
+  }
+  console.log(
+    `  Saved judge-details/pack-*.json (${judgePacks.size} packs, ${judgeDetails.length} judges, ${(judgePackBytes / (1024 * 1024)).toFixed(1)} MB)`,
+  )
+
   console.log('Building dog ranking (all-time)…')
   let dogs = buildDogRanking(exhibitions)
   console.log(`Built ranking for ${dogs.length} dogs (all time)`)
@@ -1026,7 +1167,8 @@ async function main() {
   console.log(`Linked show→competition by unique name (breed fix): ${nameLink.linked}`)
 
   const collapsedAll = collapseShowDogsByExactName(dogs)
-  const collapsedPrefix = collapseShowDogsByNamePrefix(collapsedAll.dogs)
+  const collapsedTranslit = collapseShowDogsByTranslit(collapsedAll.dogs)
+  const collapsedPrefix = collapseShowDogsByNamePrefix(collapsedTranslit.dogs)
   dogs = collapsedPrefix.dogs.sort(compareShowDogs)
   console.log(
     `Collapsed same-name multi-breed cards: ${collapsedAll.collapsedGroups} groups, −${collapsedAll.removedCards} cards`,
@@ -1053,17 +1195,53 @@ async function main() {
     linkShowDogsToCompetitions(yearDogsRaw, competitionDogs, aliasMap)
     linkShowDogsByUniqueName(yearDogsRaw, competitionDogs)
     const yearCollapsed = collapseShowDogsByExactName(yearDogsRaw)
-    const yearPrefix = collapseShowDogsByNamePrefix(yearCollapsed.dogs)
+    const yearTranslit = collapseShowDogsByTranslit(yearCollapsed.dogs)
+    const yearPrefix = collapseShowDogsByNamePrefix(yearTranslit.dogs)
     const yearDogs = yearPrefix.dogs.sort(compareShowDogs)
     rankingByYear.set(year, yearDogs)
     applyStableProfileIds(yearDogs, idByKey)
-    const removed = yearCollapsed.removedCards + yearPrefix.removedCards
+    const removed = yearCollapsed.removedCards + yearTranslit.removedCards + yearPrefix.removedCards
     if (removed > 0) {
       console.log(
         `  ${year}: collapsed ${yearCollapsed.collapsedGroups + yearPrefix.collapsedGroups} name groups (−${removed} cards)`,
       )
     }
   }
+
+  // Лёгкий календарь для списка выставок (не полные exhibitions/*.json)
+  const calendarDir = path.join(SHOWS_DIR, 'calendar')
+  if (!fs.existsSync(calendarDir)) fs.mkdirSync(calendarDir, { recursive: true })
+
+  const calendarByYear = new Map<string, Array<Record<string, unknown>>>()
+  for (const exhibition of exhibitions) {
+    const year = extractYear(exhibition.date)
+    const resultsCount = Array.isArray(exhibition.results) ? exhibition.results.length : 0
+    const entry = {
+      id: exhibition.id,
+      date: exhibition.date,
+      title: exhibition.title,
+      location: exhibition.location || '',
+      rank: exhibition.rank || '',
+      type: exhibition.type || '',
+      club: exhibition.club || '',
+      judges: Array.isArray(exhibition.judges) ? exhibition.judges : [],
+      has_results: resultsCount > 0,
+      results_count: resultsCount,
+    }
+    const list = calendarByYear.get(year) || []
+    list.push(entry)
+    calendarByYear.set(year, list)
+  }
+
+  for (const [year, entries] of calendarByYear) {
+    entries.sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')))
+    const filePath = path.join(calendarDir, `${year}.json`)
+    fs.writeFileSync(filePath, JSON.stringify({ year, exhibitions: entries }))
+    console.log(`  Saved calendar/${year}.json (${entries.length} exhibitions)`)
+  }
+
+  // Освобождаем память: массив exhibitions (~54k объектов с результатами) больше не нужен
+  exhibitions.length = 0
 
   // Годовые файлы на CDN (lean JSON). Если год > ~24 MB — режем на части по месту в рейтинге.
   const PAGES_LIMIT_BYTES = 25 * 1024 * 1024
@@ -1211,11 +1389,7 @@ async function main() {
   console.log('Collecting all dogs from all-time and year rankings for details/lookup...')
   const allDetailDogs = new Map<string, ShowDog>()
   for (const dog of dogs) {
-    allDetailDogs.set(dog.id, {
-      ...dog,
-      titles: { ...dog.titles },
-      history: [...dog.history],
-    })
+    allDetailDogs.set(dog.id, dog)
   }
   
   // Дополняем и объединяем из годовых рейтингов
@@ -1223,11 +1397,7 @@ async function main() {
     for (const dog of yearDogs) {
       const existing = allDetailDogs.get(dog.id)
       if (!existing) {
-        allDetailDogs.set(dog.id, {
-          ...dog,
-          titles: { ...dog.titles },
-          history: [...dog.history],
-        })
+        allDetailDogs.set(dog.id, dog)
       } else {
         // Добавляем выставки из годового среза, если их ещё нет в истории
         const existingExIds = new Set(existing.history.map((h) => h.exhibition_id))
@@ -1410,48 +1580,6 @@ async function main() {
   )
   console.log(`  Saved breed-aliases.json (${aliasPairs.length} pairs)`)
 
-  const { list: judges, details: judgeDetails, baseline } = buildJudgesIndex(exhibitions)
-  console.log(`Built index for ${judges.length} judges`)
-  fs.writeFileSync(path.join(INDEXES_DIR, 'judges.json'), JSON.stringify(judges))
-  writeJudgesPage0(judges)
-
-  // Save strictness baseline
-  fs.writeFileSync(
-    path.join(INDEXES_DIR, 'judges-strictness-baseline.json'),
-    JSON.stringify(baseline, null, 2),
-  )
-  console.log(`  Saved judges-strictness-baseline.json (graded=${baseline.graded}, excellent_rate=${(baseline.excellent_rate * 100).toFixed(1)}%)`)
-
-  const judgeDetailsDir = path.join(INDEXES_DIR, 'judge-details')
-  if (fs.existsSync(judgeDetailsDir)) {
-    for (const name of fs.readdirSync(judgeDetailsDir)) {
-      if (name.endsWith('.json')) fs.unlinkSync(path.join(judgeDetailsDir, name))
-    }
-  } else {
-    fs.mkdirSync(judgeDetailsDir, { recursive: true })
-  }
-  const judgePacks = new Map<string, Record<string, unknown>>()
-  for (const detail of judgeDetails) {
-    const fileKey = showJudgeDetailFileKey(detail.id)
-    const shard = cdnPackShardKey(fileKey)
-    const bucket = judgePacks.get(shard) ?? {}
-    bucket[fileKey] = detail
-    judgePacks.set(shard, bucket)
-  }
-  let judgePackBytes = 0
-  for (const [shard, byKey] of [...judgePacks.entries()].sort((a, b) => a[0].localeCompare(b[0]))) {
-    const body = JSON.stringify({
-      schema: 'coursing-stats/show-judge-detail-pack-v1',
-      shard,
-      byKey,
-    })
-    judgePackBytes += Buffer.byteLength(body)
-    fs.writeFileSync(path.join(judgeDetailsDir, `pack-${shard}.json`), body)
-  }
-  console.log(
-    `  Saved judge-details/pack-*.json (${judgePacks.size} packs, ${judgeDetails.length} judges, ${(judgePackBytes / (1024 * 1024)).toFixed(1)} MB)`,
-  )
-
   // Лёгкие счётчики для главной (CDN; не тянуть dog-ranking.json)
   let appearances = 0
   for (const d of dogs) appearances += Number(d.total_shows) || 0
@@ -1475,7 +1603,7 @@ async function main() {
     exhibitions: exhibitionsCount,
     appearances,
     dogs: dogs.length,
-    judges: judges.length,
+    judges: judgesCount,
     breeds: showBreeds.size,
     updated_at: new Date().toISOString().slice(0, 10),
   }
@@ -1483,38 +1611,6 @@ async function main() {
   console.log(
     `  Saved hero-stats.json (exhibitions=${heroStats.exhibitions}, dogs=${heroStats.dogs}, judges=${heroStats.judges}, breeds=${heroStats.breeds})`,
   )
-
-  // Лёгкий календарь для списка выставок (не полные exhibitions/*.json)
-  const calendarDir = path.join(SHOWS_DIR, 'calendar')
-  if (!fs.existsSync(calendarDir)) fs.mkdirSync(calendarDir, { recursive: true })
-
-  const calendarByYear = new Map<string, Array<Record<string, unknown>>>()
-  for (const exhibition of exhibitions) {
-    const year = extractYear(exhibition.date)
-    const resultsCount = Array.isArray(exhibition.results) ? exhibition.results.length : 0
-    const entry = {
-      id: exhibition.id,
-      date: exhibition.date,
-      title: exhibition.title,
-      location: exhibition.location || '',
-      rank: exhibition.rank || '',
-      type: exhibition.type || '',
-      club: exhibition.club || '',
-      judges: Array.isArray(exhibition.judges) ? exhibition.judges : [],
-      has_results: resultsCount > 0,
-      results_count: resultsCount,
-    }
-    const list = calendarByYear.get(year) || []
-    list.push(entry)
-    calendarByYear.set(year, list)
-  }
-
-  for (const [year, entries] of calendarByYear) {
-    entries.sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')))
-    const filePath = path.join(calendarDir, `${year}.json`)
-    fs.writeFileSync(filePath, JSON.stringify({ year, exhibitions: entries }))
-    console.log(`  Saved calendar/${year}.json (${entries.length} exhibitions)`)
-  }
 
   // Generate search manifest sharded by name prefix (first 2 characters)
   const searchDir = path.join(INDEXES_DIR, 'search')

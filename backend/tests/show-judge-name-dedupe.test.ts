@@ -62,6 +62,19 @@ describe('show judge name deduplication', () => {
       expect(normalizeShowJudgeDisplayName('Dmitrii TROFIMOV')).toBe('dmitry trofimov')
       expect(normalizeShowJudgeDisplayName('Dmitriy TROFIMOV')).toBe('dmitry trofimov')
     })
+
+    it('fixes OCR word wraps and spaces', () => {
+      expect(normalizeShowJudgeDisplayName('мищенк о елена владим ировна')).toBe('мищенко елена владимировна')
+      expect(normalizeShowJudgeDisplayName('чайковс кая флёра рашидо вна')).toBe('чайковская флера рашидовна')
+      expect(normalizeShowJudgeDisplayName('мордвино-ва татьяна александ-ровна')).toBe('мордвинова татьяна александровна')
+      expect(normalizeShowJudgeDisplayName('гаврило ва яна адольф овна')).toBe('гаврилова яна адольфовна')
+    })
+
+    it('strips administrative notes and decision prefixes', () => {
+      expect(normalizeShowJudgeDisplayName('ivan ristović (изменено по решению вк от 02.11.2024 в. 16)')).toBe('ivan ristović')
+      expect(normalizeShowJudgeDisplayName('19.01.22 вопрос 23) тесленко ольга анатольевна')).toBe('тесленко ольга анатольевна')
+      expect(normalizeShowJudgeDisplayName('Реваз Хомасуридзе / Revaz Khomasuridze')).toBe('реваз хомасуридзе')
+    })
   })
 
   describe('parseShowJudgeNameParts', () => {
@@ -107,6 +120,21 @@ describe('show judge name deduplication', () => {
         firstInitial: '',
         middleInitial: '',
       })
+    })
+
+    it('parses Russian [Given] [Patronymic] [Last] and [Given] [Last] orders', () => {
+      const p1 = parseShowJudgeNameParts('екатерина васильевна сенашенко')
+      expect(p1.last).toBe('сенашенко')
+      expect(p1.first).toBe('екатерина')
+      expect(p1.middle).toBe('васильевна')
+
+      const p2 = parseShowJudgeNameParts('алексей белкин')
+      expect(p2.last).toBe('белкин')
+      expect(p2.first).toBe('алексей')
+
+      const p3 = parseShowJudgeNameParts('lychkovskaya natalya')
+      expect(p3.last).toBe('lychkovskaya')
+      expect(p3.first).toBe('natalya')
     })
   })
 
@@ -179,6 +207,37 @@ describe('show judge name deduplication', () => {
       expect(showJudgeMergeKeyFromRaw('Natalia Sedykh')).not.toBe(
         showJudgeMergeKeyFromRaw('Nikolay Sedykh'),
       )
+    })
+
+    it('normalizes Latin name variants regardless of word order', () => {
+      expect(showJudgeMergeKeyFromRaw('Alexey BELKIN')).toBe('belkin|alexey|*')
+      expect(showJudgeMergeKeyFromRaw('Belkin Alexey')).toBe('belkin|alexey|*')
+
+      expect(showJudgeMergeKeyFromRaw('Natalia Lychkovskaya')).toBe('lychkovskaya|natalya|*')
+      expect(showJudgeMergeKeyFromRaw('Lychkovskaya Natalya')).toBe('lychkovskaya|natalya|*')
+
+      expect(showJudgeMergeKeyFromRaw('Екатерина Васильевна Сенашенко')).toBe(
+        showJudgeMergeKeyFromRaw('Сенашенко Екатерина Васильевна'),
+      )
+      expect(showJudgeMergeKeyFromRaw('Сергеевич Белкин Алексей')).toBe(
+        showJudgeMergeKeyFromRaw('Белкин Алексей Сергеевич'),
+      )
+      expect(showJudgeMergeKeyFromRaw('Васильевна Сенашенко Екатерина')).toBe(
+        showJudgeMergeKeyFromRaw('Сенашенко Екатерина Васильевна'),
+      )
+      expect(showJudgeMergeKeyFromRaw('Адольфовна Гаврилова Яна')).toBe(
+        showJudgeMergeKeyFromRaw('Гаврилова Яна Адольфовна'),
+      )
+      expect(showJudgeMergeKeyFromRaw('Борисович Седых Николай')).toBe(
+        showJudgeMergeKeyFromRaw('Седых Николай Борисович'),
+      )
+    })
+
+    it('cleans leaked breed names and warning markers', () => {
+      expect(showJudgeMergeKeyFromRaw('Американская акита Дудко Д')).toBe('дудко|д|*')
+      expect(showJudgeMergeKeyFromRaw('Доберман Дудко Д')).toBe('дудко|д|*')
+      expect(showJudgeMergeKeyFromRaw('Леонбергер Дудко Д')).toBe('дудко|д|*')
+      expect(showJudgeMergeKeyFromRaw('Яна Гаврилова Внимание!!!')).toBe('гаврилова|я|*')
     })
 
     it('does not merge clearly different people', () => {

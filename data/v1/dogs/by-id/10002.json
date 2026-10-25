@@ -6,19 +6,21 @@
   "name_lat": "WHIPPOLLY ILLIRIA",
   "name_ru": "WHIPPOLLY ILLIRIA",
   "breed": "УИППЕТ",
-  "sex": null,
+  "sex": "Сука",
   "owner": null,
   "competition_ids": [
     1555,
     1556,
     1558,
     1560,
-    1587
+    1587,
+    20191005
   ],
   "competition_files": [
     "competitions/2017/02-февраль/1555-чемпионат-по-курсингу-мартовскии-заяц.json",
     "competitions/2017/08-август/1556-региональные-состязания-по-бегам-борзых-cacl.json",
     "competitions/2018/03-март/1558-чемпионат-по-курсингу-мартовскии-заяц-2018.json",
-    "competitions/2018/08-август/1560-чемпионат-ркф-по-бегам-борзых.json"
+    "competitions/2018/08-август/1560-чемпионат-ркф-по-бегам-борзых.json",
+    "competitions/2019/10-октябрь/20191005-международные-состязания-по-курсингу-cacil-cacl.json"
   ]
 }

@@ -6,20 +6,24 @@
   "name_lat": "KORONA SOLNTSA IZ POLETA MECHTI",
   "name_ru": "KORONA SOLNTSA IZ POLETA MECHTI",
   "breed": "УИППЕТ",
-  "sex": null,
+  "sex": "Сука",
   "owner": null,
   "competition_ids": [
     1572,
     1574,
     1575,
     1582,
-    1583
+    1583,
+    20200822,
+    20201003
   ],
   "competition_files": [
     "competitions/2020/09-сентябрь/1572-кубок-россии-по-бегам-борзых-за-механическим-заи.json",
     "competitions/2021/04-апрель/1574-чемпионат-ркф-по-курсингу.json",
     "competitions/2021/04-апрель/1575-чепионат-ркф-по-курсингу-борзых.json",
     "competitions/2021/09-сентябрь/1582-кубок-россии-курсинг-борзых.json",
-    "competitions/2021/10-октябрь/1583-заичик-листопадничек-курсинг-cacil-cacl.json"
+    "competitions/2021/10-октябрь/1583-заичик-листопадничек-курсинг-cacil-cacl.json",
+    "competitions/2020/08-август/20200822-международныи-чемпионат-по-курсингу-cacil-чемпио.json",
+    "competitions/2020/10-октябрь/20201003-международныи-чемпионат-по-курсингу-cacil-чемпио.json"
   ]
 }

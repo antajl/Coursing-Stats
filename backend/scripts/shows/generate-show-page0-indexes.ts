@@ -75,6 +75,7 @@ type JudgeRow = {
   graded?: number
   by_year_excellent?: Record<string, number>
   by_year_graded?: Record<string, number>
+  by_year_breeds?: Record<string, number>
 }
 
 function leanJudgeForList(j: JudgeRow): JudgeRow {
@@ -92,6 +93,7 @@ function leanJudgeForList(j: JudgeRow): JudgeRow {
     graded: j.graded,
     by_year_excellent: j.by_year_excellent,
     by_year_graded: j.by_year_graded,
+    by_year_breeds: j.by_year_breeds,
   }
 }
 

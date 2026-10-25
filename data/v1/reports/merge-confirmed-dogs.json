@@ -1,466 +1,227 @@
 {
   "schema": "coursing-stats/merge-confirmed-dogs-v1",
-  "generated_at": "2026-10-01T09:59:01.054Z",
+  "generated_at": "2026-10-25T05:08:00.135Z",
   "applied": true,
   "totals": {
-    "pairs": 65,
-    "results_remapped": 143,
-    "files_modified": 44
+    "pairs": 24,
+    "results_remapped": 28,
+    "files_modified": 15
   },
   "merges": [
     {
-      "aliasId": 174,
-      "keepId": 5757,
-      "alias_name": "КЭЙОД /KEYOD",
-      "keep_name": "KEYOD",
-      "reason": "Name containment / slash-name variant"
+      "aliasId": 9521,
+      "keepId": 10643,
+      "alias_name": "ДРИМ НЕЙШН АНДАНТЕ",
+      "keep_name": "DRIM NEISHN ANDANTE",
+      "name_lat": "DRIM NEISHN ANDANTE",
+      "name_ru": "ДРИМ НЕЙШН АНДАНТЕ",
+      "reason": "Heuristic name overlap in same breed"
     },
     {
-      "aliasId": 183,
-      "keepId": 5839,
-      "alias_name": "ТИНА ТРЕЙДИНГ НИККИ ФРАНЦИСКА /TINA TRADING NIKKI FRANCISKA",
-      "keep_name": "TINA TRADING NIKKI FRANCISKA",
-      "reason": "Name containment / slash-name variant"
+      "aliasId": 10644,
+      "keepId": 9522,
+      "alias_name": "DRIM NEISHN AKHAMKARA",
+      "keep_name": "DRIM NEISHN AKHAMKARA",
+      "name_lat": "DRIM NEISHN AKHAMKARA",
+      "name_ru": "ДРИМ НЕЙШН АХАМКАРА",
+      "reason": "Heuristic name overlap in same breed"
     },
     {
-      "aliasId": 184,
-      "keepId": 5962,
-      "alias_name": "АРИЕС ХАН РИВЬЕРА АЛЬ РИША САНГРИЭЛЬ /ARIES KHAN RIVIERA AL RISHA SANGREAL",
-      "keep_name": "ARIES KHAN RIVIERA AL RISHA SANGREAL",
-      "reason": "Name containment / slash-name variant"
+      "aliasId": 10645,
+      "keepId": 9523,
+      "alias_name": "MEDAWLARK BE BOP A LULA",
+      "keep_name": "MEDAWLARK BE BOP A LULA",
+      "name_lat": "MEDAWLARK BE BOP A LULA",
+      "name_ru": "МЕДОУЛАРК БИ БОП Э ЛУЛА",
+      "reason": "Heuristic name overlap in same breed"
     },
     {
-      "aliasId": 338,
-      "keepId": 6066,
-      "alias_name": "АЙНА ТАНДАЙВ ГРЕЙТ СТАР /AINA TANDAIV GREIT STAR",
-      "keep_name": "AINA TANDAIV GREIT STAR",
-      "reason": "Name containment / slash-name variant"
+      "aliasId": 10712,
+      "keepId": 9613,
+      "alias_name": "ZLAT OHARRY BADIKHAN",
+      "keep_name": "ZLAT OHARRY BADIKHAN",
+      "name_lat": "ZLAT OHARRY BADIKHAN",
+      "name_ru": "ЗЛАТ ОХАРРИ БАДИХАН",
+      "reason": "Heuristic name overlap in same breed"
     },
     {
-      "aliasId": 10597,
-      "keepId": 9258,
-      "alias_name": "CHERNOSLIV",
-      "keep_name": "ЧЕРНОСЛИВ",
+      "aliasId": 10853,
+      "keepId": 10014,
+      "alias_name": "Гезан Гореденна",
+      "keep_name": "GEZAN GOREDENNA",
+      "name_lat": "GEZAN GOREDENNA",
+      "name_ru": "ГЕЗАН ГОРЕДЕННА",
       "reason": "Exact RU↔EN transliteration match"
     },
     {
-      "aliasId": 10598,
-      "keepId": 9260,
-      "alias_name": "OBEREG RUSI AMETIST",
-      "keep_name": "ОБЕРЕГ РУСИ АМЕТИСТ",
+      "aliasId": 10860,
+      "keepId": 10263,
+      "alias_name": "Итури Паззл Маунтаин Деу",
+      "keep_name": "ИТУРИ ПАЗЗЛ МАУНТАИН ДЕУ",
+      "name_lat": "ИТУРИ ПАЗЗЛ МАУНТАИН ДЕУ",
+      "name_ru": "ИТУРИ ПАЗЗЛ МАУНТАИН ДЕУ",
+      "reason": "Name containment / slash-name variant"
+    },
+    {
+      "aliasId": 10288,
+      "keepId": 7167,
+      "alias_name": "ITURI PUZZLE IZYUM V CHOCOLADE",
+      "keep_name": "ITURY PUZZLE IZYUM V CHOCOLADE",
+      "name_lat": "ITURY PUZZLE IZYUM V CHOCOLADE",
+      "name_ru": "ИТУРИ ПАЗЗЛ ИЗЮМ В ШОКОЛАДЕ",
+      "reason": "Heuristic name overlap in same breed"
+    },
+    {
+      "aliasId": 10734,
+      "keepId": 5738,
+      "alias_name": "YAGODNAYA KARAMELKA",
+      "keep_name": "YAGODNAYA KARAMELKA",
+      "name_lat": "YAGODNAYA KARAMELKA",
+      "name_ru": "ЯГОДНАЯ КАРАМЕЛЬКА",
+      "reason": "Name containment / slash-name variant"
+    },
+    {
+      "aliasId": 10843,
+      "keepId": 9878,
+      "alias_name": "Форсаж Леюр Феникс",
+      "keep_name": "ФОРСАЖ ЛЕЮР ФЕНИКС",
+      "name_lat": "ФОРСАЖ ЛЕЮР ФЕНИКС",
+      "name_ru": "ФОРСАЖ ЛЕЮР ФЕНИКС",
+      "reason": "Name containment / slash-name variant"
+    },
+    {
+      "aliasId": 7396,
+      "keepId": 8938,
+      "alias_name": "KORA",
+      "keep_name": "KORA",
+      "name_lat": "KORA",
+      "name_ru": "КОРА",
       "reason": "Exact RU↔EN transliteration match"
     },
     {
-      "aliasId": 9429,
-      "keepId": 10648,
-      "alias_name": "ДВОЙНОЙ ОБГОН ИЗ СЕЛА ЦАРЕВО",
-      "keep_name": "DVOYNOY OBGON IZ SELA TSAREVO",
+      "aliasId": 9557,
+      "keepId": 812,
+      "alias_name": "АЙЗА ЛУННЫЙ СВЕТ /AYZA LUNNYJ SVET",
+      "keep_name": "AJZA LUNNYJ SVET",
+      "name_lat": "AJZA LUNNYJ SVET",
+      "name_ru": "АЙЗА ЛУННЫЙ СВЕТ",
+      "reason": "Heuristic name overlap in same breed"
+    },
+    {
+      "aliasId": 7750,
+      "keepId": 9236,
+      "alias_name": "KNOPA",
+      "keep_name": "KNOPA",
+      "name_lat": "KNOPA",
+      "name_ru": "КНОПА",
       "reason": "Exact RU↔EN transliteration match"
     },
     {
-      "aliasId": 10667,
-      "keepId": 9379,
-      "alias_name": "PRELESTA",
-      "keep_name": "ПРЕЛЕСТА",
+      "aliasId": 7755,
+      "keepId": 9232,
+      "alias_name": "BONYA",
+      "keep_name": "BONYA",
+      "name_lat": "BONYA",
+      "name_ru": "БОНЯ",
       "reason": "Exact RU↔EN transliteration match"
     },
     {
-      "aliasId": 9670,
-      "keepId": 10691,
-      "alias_name": "НОБЛ ТРАДИШИН ЗАТЕЯ /NOBLE TRADITION ZATEYA",
-      "keep_name": "NOBLE TRADITION ZATEYA",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 6181,
-      "keepId": 10701,
-      "alias_name": "ЗАРЬЯНА /ZARYANA",
-      "keep_name": "ZARYANA",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 10724,
-      "keepId": 409,
-      "alias_name": "OGON",
-      "keep_name": "ОГОНЬ /OGON",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 10725,
-      "keepId": 412,
-      "alias_name": "OTRADA DUSHI",
-      "keep_name": "ОТРАДА ДУШИ /OTRADA DUSHI",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 10726,
-      "keepId": 404,
-      "alias_name": "MAGIYA",
-      "keep_name": "МАГИЯ /MAGIYA",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 191,
-      "keepId": 7224,
-      "alias_name": "БЛЕСК /BLESK",
-      "keep_name": "BLESK",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 205,
-      "keepId": 7239,
-      "alias_name": "ЛУННАЯ РАДУГА ЦАРСКАЯ ВОДКА /LUNNAJA RADUGA CZARSKAYA VODKA",
-      "keep_name": "LUNNAJA RADUGA CZARSKAYA VODKA",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 209,
-      "keepId": 7244,
-      "alias_name": "ФАЙЗА /FAJZA",
-      "keep_name": "FAJZA",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 414,
-      "keepId": 7945,
-      "alias_name": "З ДАРА /Z DARA",
-      "keep_name": "Z DARA",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 9375,
-      "keepId": 452,
-      "alias_name": "БОРЗЫЕ СЕНАВИАН ДАНАРА",
-      "keep_name": "БОРЗЫЕ СЕНАВИАН ДАНАРА /BORZIE SENAVIAN DANARA",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 9371,
-      "keepId": 454,
-      "alias_name": "BORZIE SENAVIAN GYURZA",
-      "keep_name": "БОРЗЫЕ СЕНАВИАН ГЮРЗА /BORZIE SENAVIAN GYURZA",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 8519,
-      "keepId": 550,
-      "alias_name": "BEARS VICTORY KRYLATAYA LEGENDA",
-      "keep_name": "БЕАРС ВИКТОРИ КРЫЛАТАЯ ЛЕГЕНДА /BEARS VICTORY KRYLATAYA LEGENDA",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 8517,
-      "keepId": 551,
-      "alias_name": "GULYA",
-      "keep_name": "ГУЛЯ /GULYA",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 58,
-      "keepId": 5764,
-      "alias_name": "БОРЗЫЕ СЕНАВИАН ЕГОР /BORZIE SENAVIAN EGOR",
-      "keep_name": "BORZIE SENAVIAN EGOR",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 65,
-      "keepId": 5774,
-      "alias_name": "БОРЗЫЕ СЕНАВИАН ДОРА /BORZIE SENAVIAN DORA",
-      "keep_name": "BORZIE SENAVIAN DORA",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 10651,
-      "keepId": 9532,
-      "alias_name": "BEL ETUAL LIBERTANGO",
-      "keep_name": "БЕЛЬ ЭТУАЛЬ ЛИБЕРТАНГО",
+      "aliasId": 7756,
+      "keepId": 9230,
+      "alias_name": "PES",
+      "keep_name": "PES",
+      "name_lat": "PES",
+      "name_ru": "ПЕС",
       "reason": "Exact RU↔EN transliteration match"
     },
     {
-      "aliasId": 7264,
-      "keepId": 226,
-      "alias_name": "БОРЗОМИР ГАЛИЯ БАСМА",
-      "keep_name": "БОРЗОМИР ГАЛИЯ БАСМА /BORZOMIR GALIJA BASMA",
+      "aliasId": 10854,
+      "keepId": 10051,
+      "alias_name": "SUNHILL RIDGES MADAGASKAR",
+      "keep_name": "SUNHILL RIDGES MADAGASKAR",
+      "name_lat": "SUNHILL RIDGES MADAGASKAR",
+      "name_ru": "SUNHILL RIDGES MADAGASKAR",
       "reason": "Name containment / slash-name variant"
     },
     {
-      "aliasId": 230,
-      "keepId": 6202,
-      "alias_name": "СЭХРА ЭЛЬ МЕРГЕН БАСИР /SEHRA EL MERGEN BASIR",
-      "keep_name": "SEHRA EL MERGEN BASIR",
+      "aliasId": 10739,
+      "keepId": 5761,
+      "alias_name": "ARIES KHAN SANDRA SALAMANDRA ALEKSANDRA",
+      "keep_name": "ARIES KHAN SANDRA SALAMANDER ALEXANDRA",
+      "name_lat": "ARIES KHAN SANDRA SALAMANDER ALEXANDRA",
+      "name_ru": "АРИЕС ХАН САНДРА САЛАМАНДРА АЛЕКСАНДРА",
+      "reason": "High token overlap after transliteration (5 shared tokens)"
+    },
+    {
+      "aliasId": 10855,
+      "keepId": 10126,
+      "alias_name": "Tamir Ani POZEMKA",
+      "keep_name": "TAMIR ANI POZEMKA",
+      "name_lat": "TAMIR ANI POZEMKA",
+      "name_ru": "TAMIR ANI POZEMKA",
       "reason": "Name containment / slash-name variant"
     },
     {
-      "aliasId": 7272,
-      "keepId": 234,
-      "alias_name": "БОРЗОМИР ДЮНА",
-      "keep_name": "БОРЗОМИР ДЮНА /BORZOMIR DUNA",
+      "aliasId": 9262,
+      "keepId": 10599,
+      "alias_name": "ЛУННАЯ РАДУГА ПАНГЕЯ УЛЬТИМА",
+      "keep_name": "LUNNAJA RADUGA PANGEYA ULTIMA",
+      "name_lat": "LUNNAJA RADUGA PANGEYA ULTIMA",
+      "name_ru": "ЛУННАЯ РАДУГА ПАНГЕЯ УЛЬТИМА",
+      "reason": "Heuristic name overlap in same breed"
+    },
+    {
+      "aliasId": 10600,
+      "keepId": 9264,
+      "alias_name": "AH SHALUNYA",
+      "keep_name": "AH SHALUNYA",
+      "name_lat": "AH SHALUNYA",
+      "name_ru": "АХ ШАЛУНЬЯ",
+      "reason": "Heuristic name overlap in same breed"
+    },
+    {
+      "aliasId": 10858,
+      "keepId": 9503,
+      "alias_name": "Тамир Ани Пустельга",
+      "keep_name": "ТАМИР АНИ ПУСТЕЛЬГА",
+      "name_lat": "ТАМИР АНИ ПУСТЕЛЬГА",
+      "name_ru": "ТАМИР АНИ ПУСТЕЛЬГА",
       "reason": "Name containment / slash-name variant"
     },
     {
-      "aliasId": 235,
-      "keepId": 6203,
-      "alias_name": "СЭХРА ЭЛЬ МИРАСДАР /SEHRA EL MIRASDAR",
-      "keep_name": "SEHRA EL MIRASDAR",
+      "aliasId": 453,
+      "keepId": 8646,
+      "alias_name": "BORZIE SENAVIAN LAGUNA",
+      "keep_name": "BORZIE SENAVIAN LAGUNA",
+      "name_lat": "BORZIE SENAVIAN LAGUNA",
+      "name_ru": "БОРЗЫЕ СЕНАВИАН ЛАГУНА",
+      "reason": "Heuristic name overlap in same breed"
+    },
+    {
+      "aliasId": 10743,
+      "keepId": 5807,
+      "alias_name": "MALENKIJ PRINTS IZ POLETA MECHTI",
+      "keep_name": "MALENKIY PRINTS IZ POLETA MECHTI",
+      "name_lat": "MALENKIY PRINTS IZ POLETA MECHTI",
+      "name_ru": "МАЛЕНЬКИЙ ПРИНЦ ИЗ ПОЛЕТА МЕЧТЫ",
+      "reason": "Heuristic name overlap in same breed"
+    },
+    {
+      "aliasId": 10839,
+      "keepId": 9933,
+      "alias_name": "DIAMANT TOY ER UMKA LUCHIK SCHASTIA",
+      "keep_name": "DIAMANT TOY ER UMKA LUCHIK SCHASTIA",
+      "name_lat": "DIAMANT TOY ER UMKA LUCHIK SCHASTIA",
+      "name_ru": "DIAMANT TOY ER UMKA LUCHIK SCHASTIA",
       "reason": "Name containment / slash-name variant"
     },
     {
-      "aliasId": 101,
-      "keepId": 5727,
-      "alias_name": "СТАНГЕРС ЛАНД ЗОДИАК /STANGERS LAND ZODIAK",
-      "keep_name": "STANGERS LAND ZODIAK",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 10454,
-      "keepId": 577,
-      "alias_name": "КУЛИКОВО ПОЛЕ ДАНТЕ",
-      "keep_name": "KULIKOVO POLE DANTE",
-      "reason": "Exact RU↔EN transliteration match"
-    },
-    {
-      "aliasId": 5880,
-      "keepId": 10472,
-      "alias_name": "ГАРДА /GARDA",
-      "keep_name": "GARDA",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 10481,
-      "keepId": 9586,
-      "alias_name": "КУЛИКОВО ПОЛЕ ГОРДЕЯ",
-      "keep_name": "KULIKOVO POLE GORDEYA",
-      "reason": "Exact RU↔EN transliteration match"
-    },
-    {
-      "aliasId": 7677,
-      "keepId": 10615,
-      "alias_name": "ВАЛЬПАЙН ПЭК КЛАРИССА /VALPAIN PEK KLARISSA",
-      "keep_name": "VALPAIN PEK KLARISSA",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 5805,
-      "keepId": 10621,
-      "alias_name": "КЕТЛИН ДАРСИ /KETLIN DARCY",
-      "keep_name": "KETLIN DARCY",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 10666,
-      "keepId": 9341,
-      "alias_name": "ЛАКШЕРИ ВИПП НОРД ВИНД /LUXURY WHIPP NORD WIND",
-      "keep_name": "ЛАКШЕРИ ВИПП НОРД ВИНД",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 7346,
-      "keepId": 10670,
-      "alias_name": "КЕНДЗИОР ХЕПБЕРН ИЗ ДОМА ПРОНИНЫХ /KENDZIOR HEPBURN IZ DOMA PRONINYKH",
-      "keep_name": "KENDZIOR HEPBURN IZ DOMA PRONINYKH",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 10696,
-      "keepId": 5889,
-      "alias_name": "WALKING WELSH ROUTES",
-      "keep_name": "УОКИНГ УЭЛШ РУТС /WALKING WELSH ROUTES",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 107,
-      "keepId": 5891,
-      "alias_name": "ЛАКОСТА РАНДЕВУ /LAKOSTE RANDEWO",
-      "keep_name": "LAKOSTE RANDEWO",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 7683,
-      "keepId": 10702,
-      "alias_name": "ВАЛЬПАЙН ПЭК КОРВИН ПРИНЦ ОФ ЭМБЕР /VALPAIN PEK KORWIN PRINCE OF AMBER",
-      "keep_name": "VALPAIN PEK KORWIN PRINCE OF AMBER",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 10708,
-      "keepId": 5632,
-      "alias_name": "STANGERS LAND ERMAKQ",
-      "keep_name": "STANGERS LAND ERMAK",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 123,
-      "keepId": 5631,
-      "alias_name": "СТАНГЕРС ЛАНД ЗАМИР /STANGERS LAND ZAMIR",
-      "keep_name": "STANGERS LAND ZAMIR",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 124,
-      "keepId": 5878,
-      "alias_name": "УХОУЛ УОРЛД ИН ХЕ АЙЗ /WHOLE WORLD IN HER EYES",
-      "keep_name": "WHOLE WORLD IN HER EYES",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 125,
-      "keepId": 6073,
-      "alias_name": "СТОРМ РАЙС /STORM RISE",
-      "keep_name": "STORM RISE",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 25,
-      "keepId": 7027,
-      "alias_name": "ВАЛТТЕРИ СИЛЬВЕР ВИНГС /VALTTERY SILVER WINGS",
-      "keep_name": "VALTTERY SILVER WINGS",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 253,
-      "keepId": 6223,
-      "alias_name": "БУМЕРАНГ ДОБРА /BUMERANG DOBRA",
-      "keep_name": "BUMERANG DOBRA",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 7973,
-      "keepId": 447,
-      "alias_name": "МИСТРЕСС ОФ КОППЕР ХИЛЛ",
-      "keep_name": "МИСТРЕСС ОФ КОППЕР ХИЛЛ /MISTRESS OF COPPER HILL",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 502,
-      "keepId": 5661,
-      "alias_name": "СТАНГЕРС ЛАНД ИНТЕРНАЛ ЭНЕРДЖИ /STANGERS LAND INTERNAL ENERGY",
-      "keep_name": "STANGERS LAND INTERNAL ENERGY",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 9741,
-      "keepId": 5634,
-      "alias_name": "STANGERS LAND ZENIT CHARMAN",
-      "keep_name": "STANGERS LAND ZENIT",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 74,
-      "keepId": 5635,
-      "alias_name": "ЮНИОН СВЕТЛЫЙ /YUNION SVETLYJ",
-      "keep_name": "YUNION SVETLYJ",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 76,
-      "keepId": 5636,
-      "alias_name": "СТАНГЕРС ЛАНД ВИНСЕНТ /STANGERS LAND VINCENT",
-      "keep_name": "STANGERS LAND VINCENT",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 9743,
-      "keepId": 5641,
-      "alias_name": "BLAZE OF GLORY DAGGER",
-      "keep_name": "BLAZE OF GLORY",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 86,
-      "keepId": 5643,
-      "alias_name": "СТАНГЕРС ЛАНД Е ЛАНЬ /STANGERS LAND E LAN",
-      "keep_name": "STANGERS LAND E LAN",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 82,
-      "keepId": 5656,
-      "alias_name": "УРАЛ СПИРИТ САЛАМАНДР /URAL SPIRIT SALAMANDER",
-      "keep_name": "URAL SPIRIT SALAMANDER",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 98,
-      "keepId": 5658,
-      "alias_name": "ВАРВАР КОНАН БЕССТРАШНЫЙ /VARVAR KONAN BESSTRASHNYI",
-      "keep_name": "VARVAR KONAN BESSTRASHNYI",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 79,
-      "keepId": 6220,
-      "alias_name": "СТАНГЕРС ЛАНД ЗЛАТАН /STANGERS LAND ZLATAN",
-      "keep_name": "STANGERS LAND ZLATAN",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 84,
-      "keepId": 7088,
-      "alias_name": "СТАНГЕРС ЛАНД ВАЛЬДИВИЯ /STANGERS LAND VALDIVIA",
-      "keep_name": "STANGERS LAND VALDIVIA",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 7118,
-      "keepId": 10622,
-      "alias_name": "ИЛИФИЯ ИЗ ШНЕЙДЕР РИЧ /ILIFIA IZ SCHNEIDER RICH",
-      "keep_name": "ILIFIA IZ SCHNEIDER RICH",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 10625,
-      "keepId": 6285,
-      "alias_name": "GANI SHA DEN IZ SCHNEIDER RICH",
-      "keep_name": "JANI SHA DEN IZ SCHNEIDER RICH",
-      "reason": "High token overlap after transliteration (4 shared tokens)"
-    },
-    {
-      "aliasId": 9690,
-      "keepId": 10706,
-      "alias_name": "СОСЕДИ ПО ПЛАНЕТЕ РИКОШЕТ",
-      "keep_name": "SOSEDI PO PLANETE RIKOSHET",
-      "reason": "Exact RU↔EN transliteration match"
-    },
-    {
-      "aliasId": 113,
-      "keepId": 5664,
-      "alias_name": "РОКСИ ИФЕ ШАНИ ИЗ ШНЕЙДЕР РИЧ /ROKSI IFE SHANI IZ SCHNEIDER RICH",
-      "keep_name": "ROKSI IFE SHANI IZ SCHNEIDER RICH",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 279,
-      "keepId": 7354,
-      "alias_name": "ГАЛМАД СТАР ВОИБОР /GALMAD STAR VOIBOR",
-      "keep_name": "GALMAD STAR VOIBOR",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 370,
-      "keepId": 5901,
-      "alias_name": "БАКСТЕР БЕРН /BAXTER BERN",
-      "keep_name": "BAXTER BERN",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 532,
-      "keepId": 5907,
-      "alias_name": "АМЕНЕМХЕТ АНДОРА ТА МАЛЬТА /AMENEMHET ANDORA TA MALTA",
-      "keep_name": "AMENEMHET ANDORA TA MALTA",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 10626,
-      "keepId": 654,
-      "alias_name": "ЦЕСВИЛЬ ГАРДЕН ИРИНУС ГОЛД БРЕЙН",
-      "keep_name": "ЦЕСВИЛЬ ГАРДЕН ИРИНУС ГОЛД БРЕЙН /TSESVIL GARDEN IRINUS GOLD BREIN",
-      "reason": "Name containment / slash-name variant"
-    },
-    {
-      "aliasId": 286,
-      "keepId": 6292,
-      "alias_name": "ИРКИСС СИД /IRKISS SID",
-      "keep_name": "IRKISS SID",
+      "aliasId": 10751,
+      "keepId": 6290,
+      "alias_name": "ELVIN",
+      "keep_name": "ELVIN",
+      "name_lat": "ELVIN",
+      "name_ru": "ЭЛВИН",
       "reason": "Name containment / slash-name variant"
     }
   ]

@@ -1,28 +1,36 @@
 {
   "schema": "coursing-stats/dog-v1",
-  "exported_at": "2026-07-11T10:55:51.099Z",
+  "exported_at": "2026-10-25T05:08:00.128Z",
   "id": 5738,
   "dog_key": "ягодная-карамелька-yagodnaya-karamelka--басенджи",
-  "name_lat": "ЯГОДНАЯ КАРАМЕЛЬКА /YAGODNAYA KARAMELKA",
-  "name_ru": "ЯГОДНАЯ КАРАМЕЛЬКА /YAGODNAYA KARAMELKA",
+  "name_lat": "YAGODNAYA KARAMELKA",
+  "name_ru": "ЯГОДНАЯ КАРАМЕЛЬКА",
   "breed": "БАСЕНДЖИ",
-  "sex": null,
+  "sex": "Сука",
   "owner": null,
   "pedigree_url": null,
   "competition_ids": [
     1255,
+    1272,
     1275,
     1307,
     1315,
     1317,
-    1272
+    2022000
   ],
   "competition_files": [
     "competitions/2025/04-апрель/1255-чемпионат-россии-курсинг-борзых.json",
+    "competitions/2025/06-июнь/1272-чркф-бега-борзых.json",
     "competitions/2025/06-июнь/1275-пчркф-басенджи-родезиискии-риджбек-русская-псова.json",
     "competitions/2026/04-апрель/1307-чркф-курсинг-борзых.json",
     "competitions/2026/05-май/1315-пчркф-курсинг-борзых-родезиискии-риджбек-чирнеко.json",
     "competitions/2026/05-май/1317-чемпионат-россии-курсинг-борзых.json",
-    "competitions/2025/06-июнь/1272-чркф-бега-борзых.json"
+    "competitions/2026/09-сентябрь/2022000-чемпионат-россии-по-бегам-борзых.json"
+  ],
+  "merged_alias_ids": [
+    10734
+  ],
+  "merged_aliases": [
+    "ЯГОДНАЯ КАРАМЕЛЬКА /YAGODNAYA KARAMELKA"
   ]
 }

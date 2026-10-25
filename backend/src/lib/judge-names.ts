@@ -3,6 +3,7 @@ export function parseJudgeNames(judgesString: string): string[] {
   if (!judgesString) return [];
 
   let cleaned = judgesString
+    .replace(/\s*\([^)]*\)/g, '')
     .replace(/Главный\s+судья\s*[:\s-]+\s*/gi, '')
     .replace(/судь[яи](\s*\d+)?\s*[:\s-]+\s*/gi, '')
     .replace(/^\d+\s*[-–]\s*/gm, '')

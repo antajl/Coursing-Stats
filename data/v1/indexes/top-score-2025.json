@@ -2,7 +2,7 @@
   "schema": "coursing-stats/index-top-score-v1",
   "year": 2025,
   "rating_score_version": "cs-v1",
-  "count": 632,
+  "count": 628,
   "items": [
     {
       "dog_id": 9099,
@@ -2488,6 +2488,22 @@
       "sex": "F"
     },
     {
+      "dog_id": 9230,
+      "name_lat": "PES",
+      "name_ru": "ПЕС",
+      "breed": "МЕТИС",
+      "year": 2025,
+      "best_score": 349,
+      "total_starts": 2,
+      "best_judge_score": 99,
+      "avg_judge_score": 85.25,
+      "year_from": 2025,
+      "year_to": 2025,
+      "judge_eval_count": 8,
+      "rating_score": 86.49,
+      "sex": "M"
+    },
+    {
       "dog_id": 5822,
       "name_lat": "IRKISS SOPHIA",
       "name_ru": "ИРКИСС СОФИЯ",
@@ -2518,21 +2534,6 @@
       "judge_eval_count": 8,
       "rating_score": 86.48,
       "sex": "F"
-    },
-    {
-      "dog_id": 7756,
-      "name_lat": "PES",
-      "name_ru": "ПЕС",
-      "breed": "МЕТИС",
-      "year": 2025,
-      "best_score": 349,
-      "total_starts": 1,
-      "best_judge_score": 99,
-      "avg_judge_score": 87.25,
-      "year_from": 2025,
-      "year_to": 2025,
-      "judge_eval_count": 4,
-      "rating_score": 86.66
     },
     {
       "dog_id": 7458,
@@ -2695,6 +2696,22 @@
       "sex": "M"
     },
     {
+      "dog_id": 9236,
+      "name_lat": "KNOPA",
+      "name_ru": "КНОПА",
+      "breed": "МЕТИС",
+      "year": 2025,
+      "best_score": 348,
+      "total_starts": 2,
+      "best_judge_score": 93,
+      "avg_judge_score": 86.25,
+      "year_from": 2025,
+      "year_to": 2025,
+      "judge_eval_count": 8,
+      "rating_score": 86.89,
+      "sex": "F"
+    },
+    {
       "dog_id": 5906,
       "name_lat": "HEIDI SOTIS DELIMARA MINTAKA",
       "name_ru": "ХЕЙДИ СОТИС ДЕЛИМАРА МИНТАКА",
@@ -2741,21 +2758,6 @@
       "judge_eval_count": 8,
       "rating_score": 86.73,
       "sex": "F"
-    },
-    {
-      "dog_id": 7750,
-      "name_lat": "KNOPA",
-      "name_ru": "КНОПА",
-      "breed": "МЕТИС",
-      "year": 2025,
-      "best_score": 348,
-      "total_starts": 1,
-      "best_judge_score": 93,
-      "avg_judge_score": 87,
-      "year_from": 2025,
-      "year_to": 2025,
-      "judge_eval_count": 4,
-      "rating_score": 86.6
     },
     {
       "dog_id": 7131,
@@ -3988,8 +3990,8 @@
     },
     {
       "dog_id": 5738,
-      "name_lat": "ЯГОДНАЯ КАРАМЕЛЬКА /YAGODNAYA KARAMELKA",
-      "name_ru": "ЯГОДНАЯ КАРАМЕЛЬКА /YAGODNAYA KARAMELKA",
+      "name_lat": "YAGODNAYA KARAMELKA",
+      "name_ru": "ЯГОДНАЯ КАРАМЕЛЬКА",
       "breed": "БАСЕНДЖИ",
       "year": 2025,
       "best_score": 343,
@@ -4000,6 +4002,7 @@
       "year_to": 2025,
       "judge_eval_count": 8,
       "rating_score": 86.59,
+      "aggression_count": 1,
       "sex": "F"
     },
     {
@@ -4324,22 +4327,6 @@
       "sex": "M"
     },
     {
-      "dog_id": 9236,
-      "name_lat": "КНОПА",
-      "name_ru": "КНОПА",
-      "breed": "МЕТИС",
-      "year": 2025,
-      "best_score": 342,
-      "total_starts": 1,
-      "best_judge_score": 92,
-      "avg_judge_score": 85.5,
-      "year_from": 2025,
-      "year_to": 2025,
-      "judge_eval_count": 4,
-      "rating_score": 86.23,
-      "sex": "F"
-    },
-    {
       "dog_id": 383,
       "name_lat": "MIA SANTO’S ILVA NEVA",
       "name_ru": "MIA SANTO’S ILVA NEVA",
@@ -4469,8 +4456,8 @@
     },
     {
       "dog_id": 6290,
-      "name_lat": "ЭЛВИН /ELVIN",
-      "name_ru": "ЭЛВИН /ELVIN",
+      "name_lat": "ELVIN",
+      "name_ru": "ЭЛВИН",
       "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
       "year": 2025,
       "best_score": 341,
@@ -4759,8 +4746,8 @@
     },
     {
       "dog_id": 5761,
-      "name_lat": "АРИЕС ХАН САНДРА САЛАМАНДРА АЛЕКСАНДРА /ARIES KHAN SANDRA SALAMANDER ALEXANDRA",
-      "name_ru": "АРИЕС ХАН САНДРА САЛАМАНДРА АЛЕКСАНДРА /ARIES KHAN SANDRA SALAMANDER ALEXANDRA",
+      "name_lat": "ARIES KHAN SANDRA SALAMANDER ALEXANDRA",
+      "name_ru": "АРИЕС ХАН САНДРА САЛАМАНДРА АЛЕКСАНДРА",
       "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
       "year": 2025,
       "best_score": 340,
@@ -4771,6 +4758,7 @@
       "year_to": 2025,
       "judge_eval_count": 8,
       "rating_score": 85.04,
+      "aggression_count": 1,
       "sex": "F"
     },
     {
@@ -5768,6 +5756,22 @@
       "sex": "F"
     },
     {
+      "dog_id": 9232,
+      "name_lat": "BONYA",
+      "name_ru": "БОНЯ",
+      "breed": "МЕТИС",
+      "year": 2025,
+      "best_score": 336,
+      "total_starts": 2,
+      "best_judge_score": 90,
+      "avg_judge_score": 83.75,
+      "year_from": 2025,
+      "year_to": 2025,
+      "judge_eval_count": 8,
+      "rating_score": 85.89,
+      "sex": "M"
+    },
+    {
       "dog_id": 7945,
       "name_lat": "Z DARA",
       "name_ru": "З ДАРА",
@@ -5798,21 +5802,6 @@
       "judge_eval_count": 4,
       "rating_score": 85.85,
       "sex": "F"
-    },
-    {
-      "dog_id": 7755,
-      "name_lat": "BONYA",
-      "name_ru": "БОНЯ",
-      "breed": "МЕТИС",
-      "year": 2025,
-      "best_score": 336,
-      "total_starts": 1,
-      "best_judge_score": 90,
-      "avg_judge_score": 84,
-      "year_from": 2025,
-      "year_to": 2025,
-      "judge_eval_count": 4,
-      "rating_score": 85.85
     },
     {
       "dog_id": 440,
@@ -5989,6 +5978,22 @@
       "sex": "F"
     },
     {
+      "dog_id": 8938,
+      "name_lat": "KORA",
+      "name_ru": "КОРА",
+      "breed": "БЕЗ ПОРОДЫ",
+      "year": 2025,
+      "best_score": 335,
+      "total_starts": 2,
+      "best_judge_score": 85,
+      "avg_judge_score": 83.75,
+      "year_from": 2025,
+      "year_to": 2025,
+      "judge_eval_count": 4,
+      "rating_score": 85.53,
+      "sex": "F"
+    },
+    {
       "dog_id": 10670,
       "name_lat": "KENDZIOR HEPBURN IZ DOMA PRONINYKH",
       "name_ru": "КЕНДЗИОР ХЕПБЕРН ИЗ ДОМА ПРОНИНЫХ /KENDZIOR HEPBURN IZ DOMA PRONINYKH",
@@ -6022,8 +6027,8 @@
     },
     {
       "dog_id": 5807,
-      "name_lat": "МАЛЕНЬКИЙ ПРИНЦ ИЗ ПОЛЕТА МЕЧТЫ /MALENKIY PRINTS IZ POLETA MECHTI",
-      "name_ru": "МАЛЕНЬКИЙ ПРИНЦ ИЗ ПОЛЕТА МЕЧТЫ /MALENKIY PRINTS IZ POLETA MECHTI",
+      "name_lat": "MALENKIY PRINTS IZ POLETA MECHTI",
+      "name_ru": "МАЛЕНЬКИЙ ПРИНЦ ИЗ ПОЛЕТА МЕЧТЫ",
       "breed": "УИППЕТ",
       "year": 2025,
       "best_score": 335,
@@ -6051,22 +6056,6 @@
       "judge_eval_count": 4,
       "rating_score": 85.23,
       "sex": "M"
-    },
-    {
-      "dog_id": 7396,
-      "name_lat": "KORA",
-      "name_ru": "КОРА",
-      "breed": "БЕЗ ПОРОДЫ",
-      "year": 2025,
-      "best_score": 335,
-      "total_starts": 1,
-      "best_judge_score": 85,
-      "avg_judge_score": 83.75,
-      "year_from": 2025,
-      "year_to": 2025,
-      "judge_eval_count": 4,
-      "rating_score": 85.23,
-      "sex": "F"
     },
     {
       "dog_id": 5662,
@@ -6310,22 +6299,6 @@
       "sex": "M"
     },
     {
-      "dog_id": 9232,
-      "name_lat": "БОНЯ",
-      "name_ru": "БОНЯ",
-      "breed": "МЕТИС",
-      "year": 2025,
-      "best_score": 334,
-      "total_starts": 1,
-      "best_judge_score": 85,
-      "avg_judge_score": 83.5,
-      "year_from": 2025,
-      "year_to": 2025,
-      "judge_eval_count": 4,
-      "rating_score": 85.18,
-      "sex": "M"
-    },
-    {
       "dog_id": 10615,
       "name_lat": "VALPAIN PEK KLARISSA",
       "name_ru": "ВАЛЬПАЙН ПЭК КЛАРИССА /VALPAIN PEK KLARISSA",
@@ -6549,22 +6522,6 @@
       "sex": "M"
     },
     {
-      "dog_id": 9230,
-      "name_lat": "ПЕС",
-      "name_ru": "ПЕС",
-      "breed": "МЕТИС",
-      "year": 2025,
-      "best_score": 333,
-      "total_starts": 1,
-      "best_judge_score": 84,
-      "avg_judge_score": 83.25,
-      "year_from": 2025,
-      "year_to": 2025,
-      "judge_eval_count": 4,
-      "rating_score": 85.06,
-      "sex": "M"
-    },
-    {
       "dog_id": 7289,
       "name_lat": "KULIKOVO POLE GERMES",
       "name_ru": "КУЛИКОВО ПОЛЕ ГЕРМЕС",
@@ -6609,7 +6566,8 @@
       "year_from": 2025,
       "year_to": 2025,
       "judge_eval_count": 8,
-      "rating_score": 85.14
+      "rating_score": 85.14,
+      "sex": "F"
     },
     {
       "dog_id": 8515,
@@ -8750,21 +8708,6 @@
       "sex": "M"
     },
     {
-      "dog_id": 8938,
-      "name_lat": "КОРА",
-      "name_ru": "КОРА",
-      "breed": "БЕЗ ПОРОДЫ",
-      "year": 2025,
-      "best_score": 79,
-      "total_starts": 1,
-      "best_judge_score": 79,
-      "avg_judge_score": null,
-      "year_from": 2025,
-      "year_to": 2025,
-      "judge_eval_count": 0,
-      "rating_score": null
-    },
-    {
       "dog_id": 386,
       "name_lat": "СОЛОВЬЕВ ВЕСЕННЕЕ СОЛНЫШКО /SOLOVYOV VESENNEE SOLNYSHKO",
       "name_ru": "СОЛОВЬЕВ ВЕСЕННЕЕ СОЛНЫШКО /SOLOVYOV VESENNEE SOLNYSHKO",
@@ -9458,7 +9401,8 @@
       "year_from": 2025,
       "year_to": 2025,
       "judge_eval_count": 4,
-      "rating_score": 81.77
+      "rating_score": 81.77,
+      "sex": "F"
     },
     {
       "dog_id": 7949,
