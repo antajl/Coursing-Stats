@@ -12,7 +12,8 @@ export function sanitizeBreedName(raw: string): string {
   // 1. Убираем сноски, звездочки и буллеты (*Порода -> Порода)
   str = str.replace(/[*•]/g, '').trim()
 
-  if (!str || str === '18' || /^(?:SIGHTHOUND)?БЕЗ\s+ПОРОДЫ$/i.test(str)) {
+  if (/^\d+$/.test(str)) return ''
+  if (!str || /^(?:SIGHTHOUND)?БЕЗ\s+ПОРОДЫ$/i.test(str)) {
     return 'БЕЗ ПОРОДЫ'
   }
 
@@ -182,7 +183,6 @@ export function breedAliasKey(breed: string): string {
 }
 
 export const BREED_ALIAS_BY_KEY: Record<string, string> = {
-  '18': 'БЕЗ ПОРОДЫ',
   'БЕЗ ПОРОДЫ': 'БЕЗ ПОРОДЫ',
   'SIGHTHOUNDБЕЗ ПОРОДЫ': 'БЕЗ ПОРОДЫ',
   'ЛАБРАДОРРЕТРИВЕР': 'ЛАБРАДОР РЕТРИВЕР',
@@ -496,7 +496,7 @@ export const BREED_CANONICAL_MAP: Record<string, string> = { ...BREED_ALIAS_BY_K
 export function canonicalBreed(breed: string): string {
   const raw = (breed || '').trim()
   if (!raw) return raw
-  if (/^\d+$/.test(raw)) return 'БЕЗ ПОРОДЫ'
+  if (/^\d+$/.test(raw)) return ''
   const full = breedNormalizeKey(raw).replace(/\s*\/+\s*$/, '').trim()
   if (BREED_ALIAS_BY_KEY[full]) return BREED_ALIAS_BY_KEY[full]
   const key = breedAliasKey(raw).replace(/\s*\/+\s*$/, '').trim()
