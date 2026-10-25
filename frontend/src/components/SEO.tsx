@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
 
 interface SEOProps {
@@ -27,9 +28,20 @@ export function SEO({ title, description, keywords, ogImage, noIndex, canonicalU
   const defaultImage = 'https://coursing-stats.ru/og-image.png'
   const siteUrl = 'https://coursing-stats.ru'
 
+  useEffect(() => {
+    document.title = fullTitle
+    // Гарантируем отсутствие дубликатов тега <title> в <head> при гидратации
+    const titles = document.head.querySelectorAll('title')
+    if (titles.length > 1) {
+      for (let i = 1; i < titles.length; i++) {
+        titles[i].remove()
+      }
+    }
+  }, [fullTitle])
+
   return (
     <Helmet>
-      <title>{fullTitle}</title>
+      {/* Управление <title> ведётся через useEffect, чтобы избежать дублирования тега в React 19 */}
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords || DEFAULT_KEYWORDS} />
 

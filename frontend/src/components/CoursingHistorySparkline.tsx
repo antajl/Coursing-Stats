@@ -103,8 +103,8 @@ export default function CoursingHistorySparkline({
       className={`h-16 w-full max-w-[260px] ${className}`}
       role="img"
       aria-label={`История времени: от ${formatTime(minTime)} до ${formatTime(maxTime)} сек`}
+      title={points.map((point) => `${formatTime(point.time_seconds)} сек`).join(' → ')}
     >
-      <title>{points.map((point) => `${formatTime(point.time_seconds)} сек`).join(' → ')}</title>
 
       <defs>
         <linearGradient id={gradientId} x1="0" y1="0" x2="0" y2="1">
