@@ -19,9 +19,9 @@ CoursingStats — агрегатор статистики собак: сорев
 | Bot | Cloudflare Workers + Grammy + KV |
 | Package manager | **yarn@1.22.22** |
 | Календари на проде | ON (`data/v1/ui-flags.json`) |
-| Turso | Только протоколы выставок RKF (не ranking/calendar) |
+| Turso | Полностью удалён из проекта. Все 51 429 протоколов выставок (2019–2026) отдаются статически из Яндекс S3 CDN (`/data/v1/shows/protocols/{id}.json`) в сжатом виде gzip |
 | CDN packs | Профили спорта и судьи выставок — `pack-*.json` ([ADR-014](../decisions/014-cdn-packs-vs-turso.md)) |
-| CDN slim | `dogs/by-id` и bulk exhibitions **не** копируются на прод |
+| CDN slim | `dogs/by-id` **не** копируется на прод (сайт читает шардированные `indexes/dog-profiles/pack-*.json`) |
 
 **Статистика (ориентир 2026-09):** соревнования 161/163 с results / ~2 577 dogs / ~9 104 результатов; выставки ~62k в каталоге; Донино — отдельные JSON.
 

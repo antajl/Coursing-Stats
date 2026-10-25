@@ -117,8 +117,8 @@ curl https://<worker>.workers.dev/health
 cd backend
 npx tsx scripts/repair/rebuild-show-year.ts --year=2026
 
-# Rebuild exhibition snapshot
-npx tsx scripts/repair/rebuild-show-snapshot.ts
+# Rebuild exhibition snapshot (12 GB heap wrapper)
+yarn run rebuild-show-snapshot
 ```
 
 ## Key Files

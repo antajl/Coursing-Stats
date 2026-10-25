@@ -16,9 +16,9 @@ Two publish layers, one build pipeline:
 
 | Layer | What | Where in prod |
 |-------|------|----------------|
-| **Canon** | Source of truth for rebuilds | `data/v1/` in git (+ local SQLite for sport indexes); RKF protocols also in Turso |
-| **Hot CDN** | Calendars, rankings, Donino, list indexes, **packed** sport dog profiles, **packed** show judge-details, LC allowlist exhibitions | `/data/v1/*.json` on Pages |
-| **Cold Turso** | Full RKF exhibition protocol blobs | `exhibitions_rkf` |
+| **Canon** | Source of truth for rebuilds | `data/v1/` in git (+ local SQLite for sport indexes) |
+| **Hot CDN** | Calendars, rankings, Donino, list indexes, **packed** sport dog profiles, **packed** show judge-details | `/data/v1/*.json` на S3 CDN |
+| **S3 Protocols** | Полные протоколы выставок (51 429 файлов, gzip) | `/data/v1/shows/protocols/{id}.json` на S3 CDN |
 
 ### Packing rules (by category only)
 

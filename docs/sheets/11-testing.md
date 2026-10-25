@@ -33,6 +33,9 @@ yarn run publish-gates
 ```
 
 - Fixtures: `backend/tests/fixtures/`
+- Data & Judge integrity: `backend/tests/competition-integrity.test.ts` (100% calendar-linked, 0 duplicates), `backend/tests/judge-integrity.test.ts` (summary ↔ details sync)
+- SEO & SPA prerender: `backend/tests/prerender-seo.test.ts` (Schema.org ItemPage, ISO-даты, SPA fallback)
+- Dedupe: `backend/tests/show-dog-dedupe.test.ts`, `backend/tests/show-judge-name-dedupe.test.ts`
 - PDF shows tests: `backend/tests/parse-rkf-certificate-pdf.test.ts`, `show-grades.test.ts`
 - Publish slim: `backend/tests/publish-exclude.test.ts`, `backend/tests/cdn-packs.test.ts`, `spa-fallback-redirects.test.ts`
 - WCAG AA contrast: `backend/tests/wcag-contrast.test.ts` (автотест палитры Old Money)

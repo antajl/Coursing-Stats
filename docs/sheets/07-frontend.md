@@ -7,7 +7,7 @@ verified: 2026-10-01
 
 ## Purpose
 
-React 19 + Vite + Tailwind SPA (деплой на Yandex Object Storage). Данные: static JSON; Turso только для miss протоколов выставок. **Light theme only** (dark mode removed 2026-09-22, CSS reduced by 23%).
+React 19 + Vite + Tailwind SPA (деплой на Yandex Object Storage). Данные: static JSON с CDN (без рантайм базы данных). **Light theme only** (dark mode removed 2026-09-22, CSS reduced by 23%).
 
 ## Truth table
 
@@ -19,14 +19,14 @@ React 19 + Vite + Tailwind SPA (деплой на Yandex Object Storage). Дан
 | Show judge detail | `shows/judges.ts` → `judge-details/pack-XXX.json` (`byKey`) |
 | Calendars gate | `data/v1/ui-flags.json` + `usePublicCalendarVisible` — local всегда видно |
 | Shows lists | React Query (`staleTime` ~5 min) → CDN |
-| Exhibition detail | LC allowlist CDN → Turso fallback (`lib/turso.ts`) |
+| Exhibition detail | S3 CDN `shows/protocols/${id}.json` (gzip) |
 | Design | PageToolbar, SALUKI theme, Home Hero & Contextual Logo — см. [14-design-system.md](14-design-system.md) |
 | Years dropdown | `indexes/years.json`; hooks: `useApi` `['api','years']` ≠ `useStaticData` `['staticData','years']` |
 | iframe | `frontend/public/_headers` frame-ancestors |
 
 ### Main routes
 
-`/`, `/competitions`, `/shows`, `/speed-records`, `/guide`, `/about`, `/dog/:id`, `/event/:id`, `/donino-dog/:name/:breed`, `/shows/exhibition/:id`, `/shows/dog/…`, `/judges/:judgeId`, `/shows/judges/:judgeId`
+`/`, `/competitions`, `/shows`, `/speed-records`, `/guide`, `/guide/breed-speeds/:breed`, `/about`, `/dog/:id`, `/event/:id`, `/donino-dog/:name/:breed`, `/shows/exhibition/:id`, `/shows/dog/…`, `/judges/:judgeId`, `/shows/judges/:judgeId`
 
 ## Key files
 
@@ -36,7 +36,7 @@ React 19 + Vite + Tailwind SPA (деплой на Yandex Object Storage). Дан
 - `frontend/src/lib/judgeUiUtils.ts` — инициалы для монограмм судей, бейджи строгости и утилиты отображения
 - `frontend/src/lib/staticData/*` — доменные barrels (`shows.ts` → `shows/…`)
 - `frontend/src/components/toolbar/**`
-- `frontend/.env.example` — `VITE_TURSO_*`
+- `frontend/.env.example` — параметры сборки фронтенда
 
 ## Workflows
 

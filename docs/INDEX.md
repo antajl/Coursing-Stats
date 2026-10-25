@@ -23,7 +23,7 @@ All sheets verified 2026-10-01.
 | [01-three-domains](sheets/01-three-domains.md) | Three domains | Competitions, Shows, Donino boundaries |
 | [02-data-pipeline](sheets/02-data-pipeline.md) | Data pipeline | Build process, canonical data, indexes |
 | [03-competitions](sheets/03-competitions.md) | Competitions | Coursing, BZMP, racing, rankings |
-| [04-shows](sheets/04-shows.md) | Shows | RKF exhibitions, Turso, protocols |
+| [04-shows](sheets/04-shows.md) | Shows | RKF exhibitions, S3 protocols, judges |
 | [05-donino](sheets/05-donino.md) | Donino | Speed records, coursing records |
 | [06-parsers](sheets/06-parsers.md) | Parsers | procoursing.ru, RKF PDF parsing |
 | [07-frontend](sheets/07-frontend.md) | Frontend | React, Vite, Tailwind, routing |
@@ -49,7 +49,7 @@ All sheets verified 2026-10-01.
 | [006](decisions/006-pdf-processing-optimization.md) | PDF Processing Optimization | Accepted | 2026-08-03 |
 | [007](decisions/007-exhibitions-rkf-sqlite-migration.md) | Exhibitions-RKF SQLite Migration | Accepted | 2026-08-03 |
 | [008](decisions/008-unified-event-structure.md) | Unified Event Structure | Deprecated | 2026-08-03 / 2026-09-28 |
-| [009](decisions/009-turso-migration.md) | Turso Migration | Completed | 2026-08-03 |
+| [009](decisions/009-turso-migration.md) | Turso Migration | Superseded | 2026-08-03 / 2026-10-25 |
 | [010](decisions/010-automatic-rkf-monitoring.md) | Automatic RKF Calendar Monitoring | Deprecated | 2026-08-04 / 2026-09-28 |
 | [012](decisions/012-typescript-strict-and-structured-logging.md) | TypeScript Strict and Structured Logging | Accepted | 2026-08-05 |
 | [013](decisions/013-ai-readable-documentation-architecture.md) | AI-Readable Documentation Architecture | Accepted | 2026-08-05 |

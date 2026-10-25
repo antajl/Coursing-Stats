@@ -52,6 +52,7 @@ data/v1/
 ### Publish-gates
 
 - results &gt; 0, tops/judges non-empty, season top, file ≤ **24.5 MB**
+- `judge_integrity`: 100% судей из `indexes/judges-summary.json` обязаны совпадать с `indexes/judge-details/{key}.json` по числу оценок и турниров
 - Исключения: `backend/scripts/publish/publish-exclude.js` (синхрон с `copy-data`)
 
 ### Что уезжает на CDN (Yandex Object Storage)
@@ -60,7 +61,8 @@ data/v1/
 |------|---------|--------|
 | `calendar/`, `indexes/` (tops, events-by-id, dog-profiles, …), `donino/`, `competitions/` | да | горячее CDN |
 | `shows/calendar-*`, `shows/indexes/*` (кроме oversized) | да | списки/календари |
-| `shows/exhibitions/*` bulk (~5k) | **нет** | Turso; на CDN только allowlist из `shows/index.json` (~90 LC) |
+| `shows/protocols/*` (51 429 файлов) | да (S3) | выгружаются скриптом `export-protocols-to-s3.ts` в gzip напрямую в бакет |
+| `shows/exhibitions/*` bulk (~5k) | **нет** | Turso удалён; протоколы отдаются статически из `shows/protocols/{id}.json` |
 | `dogs/by-id/` | **нет** | сайт читает `indexes/dog-profiles/pack-*.json` |
 | `indexes/dog-profiles/` | **паки** `pack-000…255.json` | не per-id |
 | `shows/indexes/judge-details/` | **паки** `pack-*.json` | не per-id |

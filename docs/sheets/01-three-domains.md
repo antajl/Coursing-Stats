@@ -14,7 +14,7 @@ verified: 2026-09-22
 | Домен | Hub | Собаки | Судьи | Данные |
 |-------|-----|--------|-------|--------|
 | **Соревнования** | `/competitions` | `dog_id` (procoursing, обычно &lt;1M) | `indexes/judges-*` | CDN JSON |
-| **Выставки** | `/shows` | show id / hash (≥1M для hash) | `shows/indexes/judges.json` | CDN indexes + **Turso для протоколов** |
+| **Выставки** | `/shows` | show id / hash (≥1M для hash) | `shows/indexes/judges.json` | CDN indexes + **S3 CDN для протоколов** (gzip) |
 | **Донино** | `/speed-records` | name + breed slug | нет | CDN `donino/*.json` |
 
 | Маршрут | Домен |
@@ -37,7 +37,7 @@ verified: 2026-09-22
 |---------|--------------|-------|--------|
 | Calendar | `calendar/{year}.json` | `shows/calendar-rkf/` | — |
 | Rankings | `indexes/top-*` | `shows/indexes/dog-ranking-{year}.json` | inline JSON |
-| Protocols | `competitions/...json` | LC allowlist CDN / RKF → **Turso** | — |
+| Protocols | `competitions/...json` | S3 CDN `shows/protocols/{id}.json` (gzip) | — |
 | Profiles | `indexes/dog-profiles/pack-*.json` | `dog-details/` + `show-dog-lookup/` shards | filter name+breed |
 | Judge details | `indexes/judge-details/{key}.json` (~50) | `shows/indexes/judge-details/pack-*.json` | — |
 
@@ -50,7 +50,7 @@ verified: 2026-09-22
 
 ## Pitfalls
 
-- Не читать ranking выставок из Turso — Turso только exhibition payload.
+- Turso полностью удален из проекта; все протоколы выставок отдаются со статического S3 CDN (gzip).
 - Не объединять индексы судей двух доменов.
 - Open gap: sport↔show linkage неполный.
 

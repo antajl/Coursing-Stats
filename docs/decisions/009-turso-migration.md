@@ -1,8 +1,8 @@
 # ADR-009: Migrate to Turso SQLite for Exhibitions-RKF
 
-**Status:** Completed (Frontend direct Turso access + caching)
+**Status:** Superseded / Retired (2026-10-25: Turso полностью удалён из проекта, все 51 429 протоколов перенесены на статический S3 CDN в gzip)
 **Date:** 2026-08-03
-**Updated:** 2026-09-28 (Legacy issues removed — Turso working correctly)
+**Updated:** 2026-10-25 (Turso removed; static S3 CDN protocols in gzip)
 **Decision:** Replace JSON CDN with Turso SQLite for exhibitions-rkf data
 
 ## Context

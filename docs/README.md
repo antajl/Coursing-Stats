@@ -25,7 +25,7 @@
 - **[01 — Three Domains](sheets/01-three-domains.md)** — границы Соревнований, Выставок и Донино
 - **[02 — Data Pipeline](sheets/02-data-pipeline.md)** — сборка `data/v1`, индексы, CDN packs, publish-gates
 - **[03 — Competitions](sheets/03-competitions.md)** — курсинг, БЗМП, рейсинг, медали ≠ очки CS, профили `/dog/:id`
-- **[04 — Shows](sheets/04-shows.md)** — выставки РКФ, протоколы Turso, судьи
+- **[04 — Shows](sheets/04-shows.md)** — выставки РКФ, протоколы S3 CDN, судьи
 - **[05 — Donino](sheets/05-donino.md)** — замеры скорости (км/ч) и круговой трек 350м (секунды)
 - **[06 — Parsers](sheets/06-parsers.md)** — парсеры procoursing.ru (windows-1251) и PDF РКФ
 - **[07 — Frontend](sheets/07-frontend.md)** — React, Vite, Tailwind CSS, маршруты, React Query
@@ -53,7 +53,7 @@
 - **[ADR-006](decisions/006-pdf-processing-optimization.md)** — Оптимизация обработки PDF выставок
 - **[ADR-007](decisions/007-exhibitions-rkf-sqlite-migration.md)** — Миграция каталогов РКФ в SQLite
 - **[ADR-008](decisions/008-unified-event-structure.md)** — *[Deprecated]* Унификация структуры событий
-- **[ADR-009](decisions/009-turso-migration.md)** — Хранение тяжелых протоколов выставок в Turso libSQL
+- **[ADR-009](decisions/009-turso-migration.md)** — *[Superseded]* Хранение протоколов выставок в Turso libSQL (заменено на S3 CDN)
 - **[ADR-010](decisions/010-automatic-rkf-monitoring.md)** — *[Deprecated]* Автомониторинг календаря РКФ
 - **[ADR-012](decisions/012-typescript-strict-and-structured-logging.md)** — Строгий TypeScript и структурированное логирование
 - **[ADR-013](decisions/013-ai-readable-documentation-architecture.md)** — Архитектура документации (MAP + sheets)
