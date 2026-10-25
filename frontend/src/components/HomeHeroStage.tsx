@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react'
-import gsap from 'gsap'
-import { prefersReducedMotion, useGSAP } from '../lib/motion'
+import { prefersReducedMotion } from '../lib/motion'
 import { Icons } from '../lib/icons'
 import { ANIMATION, BREAKPOINTS, LAYOUT } from '../lib/constants'
 
@@ -118,42 +117,36 @@ export default function HomeHeroStage({ children, metrics, onCloseMetrics }: Hom
     stage.style.height = `${currentHeight}px`
 
     const metricsEl = metricsRef.current
-
-    const tl = gsap.timeline({
-      onUpdate: () => {
-        window.dispatchEvent(new Event('scroll'))
-      },
-      onComplete: () => {
-        setMobileClosed(true)
-        window.dispatchEvent(new Event('scroll'))
-      },
-    })
-
     if (metricsEl) {
-      tl.to(
-        metricsEl,
+      metricsEl.animate(
+        [
+          { opacity: 1, transform: 'translateY(0px)' },
+          { opacity: 0, transform: 'translateY(-16px)' },
+        ],
         {
-          opacity: 0,
-          y: -16,
-          duration: 0.3,
-          ease: 'power2.in',
+          duration: 300,
+          easing: 'ease-in',
+          fill: 'forwards',
         },
-        0
       )
     }
 
-    tl.to(
-      stage,
+    const stageAnim = stage.animate(
+      [
+        { height: `${currentHeight}px`, opacity: 1, paddingTop: '', paddingBottom: '' },
+        { height: '0px', opacity: 0, paddingTop: '0px', paddingBottom: '0px' },
+      ],
       {
-        height: 0,
-        opacity: 0,
-        paddingTop: 0,
-        paddingBottom: 0,
-        duration: 0.55,
-        ease: 'power2.inOut',
+        duration: 550,
+        easing: 'ease-in-out',
+        fill: 'forwards',
       },
-      0.08
     )
+
+    stageAnim.onfinish = () => {
+      setMobileClosed(true)
+      window.dispatchEvent(new Event('scroll'))
+    }
   }
 
   const handleScrollDown = () => {
@@ -185,6 +178,7 @@ export default function HomeHeroStage({ children, metrics, onCloseMetrics }: Hom
           />
           <img
             src="/assets/hero/background.webp"
+            srcSet="/assets/hero/background.webp 1x"
             width={1731}
             height={909}
             alt=""
@@ -193,6 +187,7 @@ export default function HomeHeroStage({ children, metrics, onCloseMetrics }: Hom
             className="home-v2-stage-layer"
             loading="eager"
             fetchPriority="high"
+            decoding="async"
           />
         </picture>
       </div>

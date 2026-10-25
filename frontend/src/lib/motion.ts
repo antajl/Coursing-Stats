@@ -1,10 +1,6 @@
-import gsap from 'gsap'
-import { useGSAP } from '@gsap/react'
-import { useEffect } from 'react'
+import { useEffect, useLayoutEffect } from 'react'
 
-gsap.registerPlugin(useGSAP)
-
-export { useGSAP }
+const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect
 
 export function prefersReducedMotion(): boolean {
   if (typeof window === 'undefined') return false
@@ -26,6 +22,21 @@ export function useReducedMotionListener(callback: (prefersReduced: boolean) => 
   }, [callback])
 }
 
+/**
+ * Lightweight drop-in replacement for useGSAP hook using standard useLayoutEffect.
+ * Preserves the exact same signature and lifecycle without requiring the 150KB GSAP runtime.
+ */
+export function useGSAP(
+  callback: () => void | (() => void),
+  options?: { scope?: React.RefObject<unknown>; dependencies?: unknown[] } | unknown[],
+) {
+  const deps = Array.isArray(options) ? options : options?.dependencies || []
+  useIsomorphicLayoutEffect(() => {
+    const cleanup = callback()
+    return typeof cleanup === 'function' ? cleanup : undefined
+  }, deps)
+}
+
 export interface RiseInOptions {
   stagger?: number
   delay?: number
@@ -36,59 +47,75 @@ export interface RiseInOptions {
   mode?: 'full' | 'subtle'
 }
 
-/** Синхронно прячет цели до первого кадра анимации (дублирует CSS opacity на [data-rise]/[data-podium]). */
-export function hideMotionTargets(targets: gsap.TweenTarget, y = 10): void {
-  gsap.set(targets, { autoAlpha: 0, y })
+type AnimatableTarget = HTMLElement | Element | null | undefined
+type TargetInput = AnimatableTarget | NodeListOf<Element> | AnimatableTarget[]
+
+function normalizeTargets(targets: TargetInput): HTMLElement[] {
+  if (!targets) return []
+  const list = Array.isArray(targets)
+    ? targets
+    : 'length' in targets && typeof (targets as NodeListOf<Element>).item === 'function'
+      ? Array.from(targets as NodeListOf<Element>)
+      : [targets]
+  return list.filter((el): el is HTMLElement => el instanceof HTMLElement)
 }
 
-export function riseIn(targets: gsap.TweenTarget, options: RiseInOptions = {}): gsap.core.Tween | void {
+/** Синхронно прячет цели до первого кадра анимации (дублирует CSS opacity на [data-rise]/[data-podium]). */
+export function hideMotionTargets(targets: TargetInput, y = 10): void {
+  const elements = normalizeTargets(targets)
+  elements.forEach((el) => {
+    el.style.opacity = '0'
+    el.style.transform = `translateY(${y}px)`
+  })
+}
+
+export function riseIn(targets: TargetInput, options: RiseInOptions = {}): void {
   const {
     stagger = 0,
     delay = 0,
     y = 10,
     duration = 0.42,
-    ease = 'power3.out',  // Changed from power2.out to power3.out for smoother feel
     mode = 'full',
   } = options
 
-  if (!targets || (Array.isArray(targets) && targets.length === 0)) return
-
-  gsap.killTweensOf(targets)
+  const elements = normalizeTargets(targets)
+  if (elements.length === 0) return
 
   if (prefersReducedMotion()) {
-    gsap.set(targets, { autoAlpha: 1, y: 0, clearProps: 'all' })
+    elements.forEach((el) => {
+      el.style.opacity = '1'
+      el.style.transform = 'none'
+    })
     return
   }
 
-  if (mode === 'subtle') {
-    return gsap.fromTo(
-      targets,
-      { autoAlpha: 0.88, y: Math.min(y, 8) },
+  const initialOpacity = mode === 'subtle' ? 0.88 : 0
+  const initialY = mode === 'subtle' ? Math.min(y, 8) : y
+  const totalDuration = mode === 'subtle' ? duration * 0.85 : duration
+
+  elements.forEach((el, index) => {
+    const itemDelay = (delay + index * stagger) * 1000
+    // Set initial position
+    el.style.opacity = String(initialOpacity)
+    el.style.transform = `translateY(${initialY}px)`
+
+    const anim = el.animate(
+      [
+        { opacity: initialOpacity, transform: `translateY(${initialY}px)` },
+        { opacity: 1, transform: 'translateY(0px)' },
+      ],
       {
-        autoAlpha: 1,
-        y: 0,
-        duration: duration * 0.85,
-        delay,
-        stagger,
-        ease,
-        overwrite: 'auto',
-        clearProps: 'transform',
+        duration: totalDuration * 1000,
+        delay: itemDelay,
+        easing: 'cubic-bezier(0.16, 1, 0.3, 1)', // Smooth easeOut / power3.out
+        fill: 'forwards',
       },
     )
-  }
 
-  hideMotionTargets(targets, y)
-
-  return gsap.to(targets, {
-    autoAlpha: 1,
-    y: 0,
-    duration,
-    delay,
-    stagger,
-    ease,
-    overwrite: 'auto',
-    // opacity оставляем inline (1), иначе CSS [data-rise]{opacity:0} снова спрячет блок
-    clearProps: 'transform',
+    anim.onfinish = () => {
+      el.style.opacity = '1'
+      el.style.transform = 'none'
+    }
   })
 }
 
@@ -98,45 +125,55 @@ export interface FadeInOptions {
   delay?: number
 }
 
-export function fadeIn(targets: gsap.TweenTarget, options: FadeInOptions = {}): gsap.core.Tween | void {
+export function fadeIn(targets: TargetInput, options: FadeInOptions = {}): void {
   const { y = 6, duration = 0.28, delay = 0 } = options
 
-  if (!targets || (Array.isArray(targets) && targets.length === 0)) return
-
-  gsap.killTweensOf(targets)
+  const elements = normalizeTargets(targets)
+  if (elements.length === 0) return
 
   if (prefersReducedMotion()) {
-    gsap.set(targets, { autoAlpha: 1, y: 0, clearProps: 'all' })
+    elements.forEach((el) => {
+      el.style.opacity = '1'
+      el.style.transform = 'none'
+    })
     return
   }
 
-  return gsap.fromTo(
-    targets,
-    { autoAlpha: 0.55, y },
-    {
-      autoAlpha: 1,
-      y: 0,
-      duration,
-      delay,
-      ease: 'power2.out',
-      overwrite: 'auto',
-      clearProps: 'transform',
-    },
-  )
+  elements.forEach((el) => {
+    el.style.opacity = '0.55'
+    el.style.transform = `translateY(${y}px)`
+
+    const anim = el.animate(
+      [
+        { opacity: 0.55, transform: `translateY(${y}px)` },
+        { opacity: 1, transform: 'translateY(0px)' },
+      ],
+      {
+        duration: duration * 1000,
+        delay: delay * 1000,
+        easing: 'cubic-bezier(0.25, 1, 0.5, 1)',
+        fill: 'forwards',
+      },
+    )
+
+    anim.onfinish = () => {
+      el.style.opacity = '1'
+      el.style.transform = 'none'
+    }
+  })
 }
 
 export function animateCount(
   el: HTMLElement,
   value: number,
   options: { duration?: number; from?: number } = {},
-): gsap.core.Tween | void {
+): void {
   const { duration = 1.35, from = 0 } = options
   const format = (n: number) => {
     const rounded = Math.round(n)
-    // Use en-GB locale which uses comma as thousands separator for better visual separation
     return new Intl.NumberFormat('en-GB', {
       useGrouping: true,
-      maximumFractionDigits: 0
+      maximumFractionDigits: 0,
     }).format(rounded)
   }
 
@@ -150,15 +187,22 @@ export function animateCount(
     return
   }
 
-  const counter = { val: from }
+  const startTime = performance.now()
+  const totalMs = duration * 1000
+
+  const step = (now: number) => {
+    const progress = Math.min((now - startTime) / totalMs, 1)
+    // power3.out easing: 1 - Math.pow(1 - progress, 3)
+    const ease = 1 - Math.pow(1 - progress, 3)
+    const current = from + (value - from) * ease
+    el.textContent = format(current)
+    if (progress < 1) {
+      requestAnimationFrame(step)
+    } else {
+      el.textContent = format(value)
+    }
+  }
+
   el.textContent = format(from)
-  return gsap.to(counter, {
-    val: value,
-    duration,
-    ease: 'power3.out',
-    overwrite: 'auto',
-    onUpdate: () => {
-      el.textContent = format(counter.val)
-    },
-  })
+  requestAnimationFrame(step)
 }

@@ -145,6 +145,9 @@ export default defineConfig(({ mode }) => {
       cssMinify: 'esbuild',
     },
     server: {
+      watch: {
+        ignored: ['**/data/v1/**', '**/data/local/**'],
+      },
       proxy: {
         '/api': {
           target: 'http://127.0.0.1:8787',

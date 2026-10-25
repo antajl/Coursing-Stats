@@ -27,13 +27,7 @@ export default function Home() {
     featuredShows,
     competitionSlides,
     showSlides,
-    topPlacement,
-    topScore,
-    topSpeed,
-    doninoSpeedRecords,
-    doninoCoursingRecords,
-    topShowDogs,
-    loading,
+    doninoSpeedRecords, doninoCoursingRecords, heroLoading, seasonLoading, doninoLoading, loading,
     error,
   } = homeData
 
@@ -99,16 +93,20 @@ export default function Home() {
             className="flex flex-col items-start gap-4 lg:gap-6 select-none max-w-full"
             style={{ width: 'clamp(400px, 36vw, 720px)' }}
           >
-            <img
-              src="/assets/hero/title.webp"
-              width={IMAGES.HERO_TITLE.WIDTH}
-              height={IMAGES.HERO_TITLE.HEIGHT}
-              alt="Coursing Stats"
-              data-page-logo="desktop"
-              loading="eager"
-              fetchPriority="high"
-              className="w-full h-auto drop-shadow-md pointer-events-none"
-            />
+            <picture>
+              <source media="(max-width: 768px)" srcSet="/assets/hero/title-mobile.webp" width={560} height={350} />
+              <img
+                src="/assets/hero/title.webp"
+                width={IMAGES.HERO_TITLE.WIDTH}
+                height={IMAGES.HERO_TITLE.HEIGHT}
+                alt="Coursing Stats"
+                data-page-logo="desktop"
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
+                className="w-full h-auto drop-shadow-md pointer-events-none"
+              />
+            </picture>
             <div className="w-full max-w-[500px] ml-6 lg:ml-10 pointer-events-auto">
               <HomeDogSearch className="w-full" />
             </div>
@@ -120,7 +118,7 @@ export default function Home() {
             shows={featuredShows}
             stats={stats}
             showStats={showStats}
-            loading={loading}
+            loading={heroLoading}
             formatDate={memoizedFormatDate}
           />
         }
@@ -138,13 +136,15 @@ export default function Home() {
         {/* Mobile Header: Logo & Search directly above SeasonTopSection */}
         <div id="content-start" className="md:hidden flex flex-col items-center pt-2 pb-4 scroll-mt-14">
           <img
-            src="/assets/hero/title.webp"
-            width={IMAGES.HERO_TITLE.WIDTH}
-            height={IMAGES.HERO_TITLE.HEIGHT}
+            src="/assets/hero/title-mobile.webp"
+            srcSet="/assets/hero/title-mobile.webp 1x, /assets/hero/title.webp 2x"
+            width={560}
+            height={350}
             alt="Coursing Stats"
             data-page-logo="mobile"
             className="w-[280px] sm:w-[320px] max-w-[88vw] h-auto mx-auto drop-shadow-sm pointer-events-none select-none"
             loading="lazy"
+            decoding="async"
           />
           <div className="w-full max-w-md px-2 pt-2 pb-2">
             <HomeDogSearch className="w-full" />
@@ -155,14 +155,14 @@ export default function Home() {
         <SeasonTopSection
           competitionSlides={competitionSlides}
           showSlides={showSlides}
-          loading={loading}
+          loading={seasonLoading}
         />
 
         {/* Donino records section */}
         <DoninoRecordsSection
           doninoSpeedRecords={doninoSpeedRecords}
           doninoCoursingRecords={doninoCoursingRecords}
-          loading={loading}
+          loading={doninoLoading}
         />
 
         {/* Footer */}

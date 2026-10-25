@@ -45,9 +45,9 @@ export function NavMobile({
           tabIndex={logoVisible ? undefined : -1}
         >
           <img
-            src="/assets/brand/logo.webp"
-            width={1128}
-            height={224}
+            src="/assets/brand/logo-mobile.webp"
+            width={400}
+            height={79}
             alt="Coursing Stats"
             className="h-10 w-auto"
             loading="lazy"
