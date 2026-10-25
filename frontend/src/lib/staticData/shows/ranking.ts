@@ -261,7 +261,7 @@ export async function getShowDogDetail(id: string): Promise<ApiResult<ShowDog>> 
   console.debug('[getShowDogDetail] Shard loaded, keys:', pack ? Object.keys(pack).length : 'null')
   const raw = pack?.[id]
   if (!raw) {
-    console.warn('[getShowDogDetail] Dog not found in shard:', id)
+    console.debug('[getShowDogDetail] Dog not found in shard:', id)
     return { success: false, error: `Show dog ${id} not found` }
   }
   console.debug('[getShowDogDetail] Dog found:', raw.name_lat)

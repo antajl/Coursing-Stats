@@ -30,7 +30,7 @@ interface TopDogsFiltersProps {
   filterSpeedFrom: string
   onSpeedFromChange: (value: string) => void
   onResetFilters: () => void
-  onResetPanelFilters: () => void
+  onResetPanelFilters?: () => void
   dropdownRef?: React.RefObject<HTMLDivElement>
   trailing?: ReactNode
 }
@@ -52,6 +52,7 @@ export default function TopDogsFilters({
   onScoreFromChange,
   filterSpeedFrom,
   onSpeedFromChange,
+  onResetFilters,
   dropdownRef,
   trailing,
 }: TopDogsFiltersProps) {
