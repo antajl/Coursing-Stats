@@ -73,7 +73,7 @@ export function isBreedFragment(raw: string): boolean {
   }
   const opens = (t.match(/\(/g) || []).length
   const closes = (t.match(/\)/g) || []).length
-  if (opens !== closes) return true
+  if (opens !== closes && words.length <= 2) return true
   return false
 }
 
@@ -130,6 +130,9 @@ export function mergeBreedCarry(prevFull: string, fragment: string): string {
   const base = breedBaseForCarry(prevFull)
   if (!frag) return prevFull
   if (frag.toUpperCase().startsWith(base.toUpperCase())) return frag
+  if (!isBreedContinuationLine(frag) && !BREED_WRAP_SUFFIX_RE.test(frag)) {
+    return frag
+  }
   return joinCellLines([base, frag])
 }
 

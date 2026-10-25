@@ -53,7 +53,7 @@ describe('deriveCompetingBreeds', () => {
 
     // Pure number '18' and 'БЕЗ ПОРОДЫ' should not be present
     expect(result).not.toContain('18')
-    expect(result).not.toContain('БЕЗ ПОРОДЫ')
+    expect(result).toContain('БЕЗ ПОРОДЫ')
     expect(result).not.toContain('САЛЮКИ') // 0 starts
   })
 

@@ -1,3 +1,4 @@
+import { canonicalBreed } from '../../src/lib/breed-mapping'
 import fs from 'node:fs'
 import path from 'node:path'
 
@@ -43,7 +44,7 @@ async function main() {
     for (const [key, dog] of Object.entries(raw)) {
       if (dog.id !== key) continue // skip competition aliases
       totalUnique++
-      const breed = (dog.breed || '').toUpperCase().trim()
+      const breed = canonicalBreed(dog.breed || '')
       let list = breedMap.get(breed)
       if (!list) {
         list = []

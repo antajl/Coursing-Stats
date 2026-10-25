@@ -235,7 +235,7 @@ export default function ShowRanking() {
     const idx: import('../../lib/competingBreeds').DogsIndexEntry[] = []
     const breedList: string[] = []
     for (const [breed, count] of counts.entries()) {
-      idx.push({ breed, competition_count: count })
+      idx.push({ breed, competition_count: count, dog_count: count })
       breedList.push(breed)
     }
     breedList.sort((a, b) => a.localeCompare(b, 'ru'))

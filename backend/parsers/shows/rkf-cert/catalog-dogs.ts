@@ -1,3 +1,4 @@
+import { sanitizeBreedName } from '../../../src/lib/breed-mapping'
 import {
   matchShowAwardToken,
   normalizeCertLookalikes,
@@ -206,6 +207,8 @@ function parseItemsColumnAware(items: PdfItem[]): ParsedCertDog[] {
     if (isBreedFragment(dog.breed) && lastFullBreed) {
       dog.breed = mergeBreedCarry(lastFullBreed, dog.breed)
     }
+    if (!dog.breed) continue
+    dog.breed = sanitizeBreedName(dog.breed)
     if (!dog.breed) continue
     if (!isBreedFragment(dog.breed)) lastFullBreed = dog.breed
 
