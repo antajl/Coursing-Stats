@@ -85,6 +85,7 @@ export default function Guide() {
 
   return (
     <>
+      <h1 className="sr-only">Справочник: рекорды скорости пород, титулы и правила курсинга</h1>
       <SEO
         title={`Справочник — ${section.label}`}
         description={section.description}

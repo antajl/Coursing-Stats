@@ -40,7 +40,7 @@ const SPA_SHELL = `<!doctype html>
 describe('prerender-seo helpers', () => {
   it('build404Html generates standalone 404 with noindex, no canonical, and 404 artwork', () => {
     const html = build404Html(SPA_SHELL)
-    expect(html).toContain('<title>Страница не найдена | Coursing Stats</title>')
+    expect(html).toContain('<title data-rh="true">Страница не найдена | Coursing Stats</title>')
     expect(html).toContain('<meta name="robots" content="noindex, nofollow" />')
     expect(html).not.toMatch(/rel=["']canonical["']/)
     // Client script must be preserved so dynamic SPA routes (show dogs, etc.) hydrate on S3 fallback
@@ -64,9 +64,9 @@ describe('prerender-seo helpers', () => {
       bodyHtml: '<main><h1>Рейтинг</h1></main>',
     })
 
-    expect(html).toContain('<title>Рейтинг собак | Coursing Stats</title>')
-    expect(html).toContain('<meta name="description" content="Описание рейтинга" />')
-    expect(html).toContain('<link rel="canonical" href="https://coursing-stats.ru/competitions" />')
+    expect(html).toContain('<title data-rh="true">Рейтинг собак | Coursing Stats</title>')
+    expect(html).toContain('<meta name="description" content="Описание рейтинга" data-rh="true" />')
+    expect(html).toContain('<link rel="canonical" href="https://coursing-stats.ru/competitions" data-rh="true" />')
     expect(html).toContain('src="/assets/index-abc123.js"')
     expect(html).toContain('href="/assets/index-abc123.css"')
     expect(html).toMatch(/<div id="root">[\s\S]*<h1>Рейтинг<\/h1>/)
@@ -148,7 +148,7 @@ describe('prerender-seo helpers', () => {
       canonicalUrl: 'https://coursing-stats.ru/',
       bodyHtml: '<main><h1>Статистика курсинга, бегов и выставок собак</h1></main>',
     })
-    expect(home).toContain('<link rel="canonical" href="https://coursing-stats.ru/" />')
+    expect(home).toContain('<link rel="canonical" href="https://coursing-stats.ru/" data-rh="true" />')
     const neutral = buildNeutralSpaShell(home)
     expect(neutral).not.toMatch(/rel=["']canonical["']/)
     expect(neutral).not.toContain('property="og:url"')

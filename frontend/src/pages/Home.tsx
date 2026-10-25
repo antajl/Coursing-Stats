@@ -59,14 +59,14 @@ export default function Home() {
     return (
       <div className="home-v2" ref={pageRef}>
         <SEO
-          title="Coursing Stats — Рейтинг и статистика собак: курсинг, бега, выставки"
+          title="Coursing Stats — Рейтинг и статистика собак: курсинг, бега, выставки РКФ"
           description="Статистика и рейтинги собак в России: курсинг и бега борзых, рекорды Донино, выставки РКФ. Карьера собаки, награды, медали и рейтинг с 2015 года."
           canonicalUrl="https://coursing-stats.ru/"
           keywords="курсинг, бега борзых, статистика курсинга, рейтинг собак 2026, выставки РКФ, донино"
         />
         <div className="wrap home-v2-body">
           <div className="home-v2-error" role="alert" aria-live="assertive">
-            <h2>Ошибка загрузки данных</h2>
+            <h1 className="text-xl font-bold text-charcoal-900 mb-2">Ошибка загрузки данных</h1>
             <p>Не удалось загрузить данные главной страницы. Пожалуйста, попробуйте обновить страницу.</p>
             <button onClick={() => window.location.reload()} aria-label="Обновить страницу">Обновить страницу</button>
           </div>
@@ -77,8 +77,9 @@ export default function Home() {
 
   return (
     <div className="home-v2" ref={pageRef}>
+      <h1 className="sr-only">Рейтинг и статистика собак: курсинг, бега, выставки</h1>
       <SEO
-        title="Coursing Stats — Рейтинг и статистика собак: курсинг, бега, выставки"
+        title="Coursing Stats — Рейтинг и статистика собак: курсинг, бега, выставки РКФ"
         description="Статистика и рейтинги собак в России: курсинг и бега борзых, рекорды Донино, выставки РКФ. Карьера собаки, награды, медали и рейтинг с 2015 года."
         canonicalUrl="https://coursing-stats.ru/"
         keywords="курсинг, бега борзых, статистика курсинга, рейтинг собак 2026, выставки РКФ, донино"

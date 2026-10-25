@@ -37,7 +37,7 @@ export type BreadcrumbItem = { name: string; url: string }
 export const HUB_PAGES: HubMeta[] = [
   {
     path: '/',
-    title: 'Coursing Stats — Рейтинг и статистика собак: курсинг, бега, выставки',
+    title: 'Coursing Stats — Рейтинг и статистика собак: курсинг, бега, выставки РКФ',
     description:
       'Статистика и рейтинги собак в России: курсинг и бега борзых, рекорды Донино, выставки РКФ. Карьера собаки, награды, медали и рейтинг с 2015 года.',
     h1: 'Рейтинг и статистика собак: курсинг, бега, выставки',
@@ -124,32 +124,50 @@ export function breadcrumbJsonLd(items: BreadcrumbItem[]): Record<string, unknow
 
 function replaceOrInsertMetaDescription(html: string, description: string): string {
   const desc = escapeHtml(description)
+  const tag = `<meta name="description" content="${desc}" data-rh="true" />`
   if (/<meta\s+name=["']description["'][^>]*>/i.test(html)) {
-    return html.replace(
-      /<meta\s+name=["']description["'][^>]*>/i,
-      `<meta name="description" content="${desc}" />`,
-    )
+    let replaced = false
+    return html.replace(/<meta\s+name=["']description["'][^>]*>\s*/gi, () => {
+      if (!replaced) {
+        replaced = true
+        return `${tag}\n  `
+      }
+      return ''
+    })
   }
-  return html.replace(/<\/head>/i, `  <meta name="description" content="${desc}" />\n</head>`)
+  return html.replace(/<\/head>/i, `  ${tag}\n</head>`)
 }
 
 function replaceOrInsertCanonical(html: string, canonicalUrl: string): string {
   const href = escapeHtml(canonicalUrl)
-  if (/<link\s+rel=["']canonical["'][^>]*>/i.test(html)) {
-    return html.replace(
-      /<link\s+rel=["']canonical["'][^>]*>/i,
-      `<link rel="canonical" href="${href}" />`,
-    )
+  const tag = `<link rel="canonical" href="${href}" data-rh="true" />`
+  if (/<link\s+[^>]*rel=["']canonical["'][^>]*>/i.test(html)) {
+    let replaced = false
+    return html.replace(/<link\s+[^>]*rel=["']canonical["'][^>]*>\s*/gi, () => {
+      if (!replaced) {
+        replaced = true
+        return `${tag}\n  `
+      }
+      return ''
+    })
   }
-  return html.replace(/<\/head>/i, `  <link rel="canonical" href="${href}" />\n</head>`)
+  return html.replace(/<\/head>/i, `  ${tag}\n</head>`)
 }
 
 function replaceTitle(html: string, title: string): string {
   const safe = escapeHtml(title)
-  if (/<title>[\s\S]*?<\/title>/i.test(html)) {
-    return html.replace(/<title>[\s\S]*?<\/title>/i, `<title>${safe}</title>`)
+  const tag = `<title data-rh="true">${safe}</title>`
+  if (/<title\b[^>]*>[\s\S]*?<\/title>/i.test(html)) {
+    let replaced = false
+    return html.replace(/<title\b[^>]*>[\s\S]*?<\/title>\s*/gi, () => {
+      if (!replaced) {
+        replaced = true
+        return `${tag}\n  `
+      }
+      return ''
+    })
   }
-  return html.replace(/<\/head>/i, `  <title>${safe}</title>\n</head>`)
+  return html.replace(/<\/head>/i, `  ${tag}\n</head>`)
 }
 
 function injectJsonLd(html: string, data: Record<string, unknown> | null | undefined): string {
@@ -172,20 +190,35 @@ function setRootBody(html: string, bodyHtml: string): string {
 
 function replaceOrInsertMetaProperty(html: string, property: string, content: string): string {
   const safe = escapeHtml(content)
-  const re = new RegExp(
-    `<meta\\s+property=["']${property}["'][^>]*>`,
-    'i',
-  )
-  const tag = `<meta property="${property}" content="${safe}" />`
-  if (re.test(html)) return html.replace(re, tag)
+  const re = new RegExp(`<meta\\s+property=["']${property}["'][^>]*>\\s*`, 'gi')
+  const tag = `<meta property="${property}" content="${safe}" data-rh="true" />`
+  if (re.test(html)) {
+    let replaced = false
+    return html.replace(re, () => {
+      if (!replaced) {
+        replaced = true
+        return `${tag}\n  `
+      }
+      return ''
+    })
+  }
   return html.replace(/<\/head>/i, `  ${tag}\n</head>`)
 }
 
 function replaceOrInsertMetaName(html: string, name: string, content: string): string {
   const safe = escapeHtml(content)
-  const re = new RegExp(`<meta\\s+name=["']${name}["'][^>]*>`, 'i')
-  const tag = `<meta name="${name}" content="${safe}" />`
-  if (re.test(html)) return html.replace(re, tag)
+  const re = new RegExp(`<meta\\s+(?:name|property)=["']${name}["'][^>]*>\\s*`, 'gi')
+  const tag = `<meta name="${name}" content="${safe}" data-rh="true" />`
+  if (re.test(html)) {
+    let replaced = false
+    return html.replace(re, () => {
+      if (!replaced) {
+        replaced = true
+        return `${tag}\n  `
+      }
+      return ''
+    })
+  }
   return html.replace(/<\/head>/i, `  ${tag}\n</head>`)
 }
 
@@ -201,7 +234,7 @@ export type ApplyMetaOptions = {
 /** Strip hub/dog patches so SPA fallback never advertises home canonical. */
 export function buildNeutralSpaShell(html: string): string {
   let out = html
-  out = out.replace(/<link\s+rel=["']canonical["'][^>]*>\s*/gi, '')
+  out = out.replace(/<link\s+[^>]*rel=["']canonical["'][^>]*>\s*/gi, '')
   out = out.replace(
     /<script\s+type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>\s*/gi,
     '',

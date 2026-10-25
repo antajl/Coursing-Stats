@@ -57,6 +57,7 @@ GitHub Actions запускается в чистом контейнере, из
 |---|---|---|---|
 | Хэшированные чанки JS/CSS | `/assets/*` | `public, max-age=31536000, immutable` | Кэш на 1 год: имена содержат контентный хэш и build-stamp, повторная загрузка исключена |
 | Статические медиа | `/assets/hero/*`, баннеры, фавиконки | `public, max-age=604800` | Кэш на 1 неделю |
+| Корневые мета-файлы | `robots.txt`, `llms.txt`, `sitemap*.xml` | `public, max-age=604800` | Корневые директивы для поисковых краулеров и LLM-агентов (живут в `frontend/public/`) |
 | Входные HTML | `index.html`, `404.html` | `public, max-age=0, must-revalidate` | Мгновенное применение новых версий без задержки |
 | SPA Fallback | S3 `--error-document index.html` | — | Роутинг динамических страниц (профили выставочных собак, фильтры) через клиентский SPA React |
 | Данные CDN | `/data/v1/*` | `public, max-age=3600, must-revalidate` | Кэш на 1 час для экономии трафика мобильных клиентов |
