@@ -43,6 +43,7 @@
     "turso:import-shows-cached": "npx tsx backend/scripts/import-to-turso-cached.ts",
     "turso:create-dog-links": "npx tsx backend/scripts/create-dog-links.ts",
     "shows:import-local": "npx tsx backend/scripts/import-to-local-sqlite.ts",
+    "monitor-rkf-shows": "npx tsx backend/scripts/shows/monitor-new-rkf-protocols.ts",
     "rebuild-show-year": "npx tsx backend/scripts/build-show-indexes-by-year.ts",
     "rebuild-show-snapshot": "node backend/scripts/run-with-memory.cjs backend/scripts/build-show-indexes.ts",
     "generate-show-page0": "npx tsx backend/scripts/shows/generate-show-page0-indexes.ts",

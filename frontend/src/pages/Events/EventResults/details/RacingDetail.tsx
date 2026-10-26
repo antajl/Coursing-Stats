@@ -69,10 +69,10 @@ export default function RacingDetail({ rawScores, bestTimesByRace }: RacingDetai
 
         {rawScores.grand_total && (
           <div className="mt-3 rounded-xl border border-camel-200 bg-camel-50 p-3 text-center">
-            <span className="text-sm text-gray-600">Лучшее время: </span>
+            <span className="text-sm text-old-money-600">Лучшее время: </span>
             <span className="text-lg font-bold text-camel-700">{rawScores.grand_total} сек</span>
-            <span className="mx-2 text-gray-400">|</span>
-            <span className="text-sm text-gray-600">Скорость: </span>
+            <span className="mx-2 text-old-money-300">|</span>
+            <span className="text-sm text-old-money-600">Скорость: </span>
             <span className="text-lg font-bold text-camel-700">
               {(() => {
                 const bestHeat = heats.find(h => {

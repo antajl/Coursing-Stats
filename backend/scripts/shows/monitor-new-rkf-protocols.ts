@@ -430,6 +430,46 @@ async function main() {
       const entryMonoBreed = (entry.breeds || '').trim()
       const isMono = !entryMonoBreed.includes(',') && entryMonoBreed.length >= 4
 
+      // Scan and recover wrapped breeds in results
+      for (let idx = 0; idx < parsedDogs.length; idx++) {
+        const b = cleanSoftHyphens(parsedDogs[idx].breed).trim()
+        if (isMono) {
+          const upperMono = entryMonoBreed.toUpperCase()
+          if (upperMono.startsWith(b) || isBreedFragment(b)) {
+            parsedDogs[idx].breed = upperMono
+            continue
+          }
+          if (['ТИГРОВЫЙ', 'РЫЖИЙ', 'ЧЕРНЫЙ', 'БЕЛЫЙ', 'ПАЛЕВЫЙ'].includes(b)) {
+            parsedDogs[idx].breed = `${upperMono} (${b})`
+            continue
+          }
+        }
+
+        if (isBreedFragment(b)) {
+          let nextValid = ''
+          for (let j = idx + 1; j < parsedDogs.length; j++) {
+            if (!isBreedFragment(parsedDogs[j].breed)) { nextValid = parsedDogs[j].breed; break; }
+          }
+          let prevValid = ''
+          for (let j = idx - 1; j >= 0; j--) {
+            if (!isBreedFragment(parsedDogs[j].breed)) { prevValid = parsedDogs[j].breed; break; }
+          }
+
+          if (b === 'АМЕРИКАНСКАЯ') {
+            if (prevValid.includes('АКИТА') || nextValid.includes('АКИТА')) parsedDogs[idx].breed = 'АМЕРИКАНСКАЯ АКИТА'
+          } else if (b === 'АМЕРИКАНСКИЙ') {
+            if (nextValid.includes('КОКЕР') || nextValid.includes('СПАНИЕЛЬ')) parsedDogs[idx].breed = 'АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ'
+            else if (nextValid.includes('СТАФФОРД') || nextValid.includes('ТЕРЬЕР')) parsedDogs[idx].breed = 'АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР'
+          } else if (b === 'БЕЛЬГИЙСКИЙ') {
+            parsedDogs[idx].breed = 'БЕЛЬГИЙСКИЙ ГРИФФОН'
+          }
+        } else if (b === 'КОКЕР СПАНИЕЛЬ' && parsedDogs[idx - 1]?.breed === 'АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ') {
+          parsedDogs[idx].breed = 'АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ'
+        } else if (b.includes('КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР')) {
+          parsedDogs[idx].breed = 'ЗОЛОТИСТЫЙ РЕТРИВЕР'
+        }
+      }
+
       const judgesSet = new Set<string>()
       const results = parsedDogs.map((d) => {
         const normJudge = cleanJudgeName(d.judge)
@@ -441,19 +481,9 @@ async function main() {
         for (const b of badges) awardTitle = appendAward(awardTitle, b)
         if (d.bob) awardTitle = appendAward(awardTitle, 'ЛПП')
 
-        let breedName = cleanSoftHyphens(d.breed).trim()
-        if (isMono) {
-          const upperMono = entryMonoBreed.toUpperCase()
-          if (upperMono.startsWith(breedName) || isBreedFragment(breedName)) {
-            breedName = upperMono
-          } else if (['ТИГРОВЫЙ', 'РЫЖИЙ', 'ЧЕРНЫЙ', 'БЕЛЫЙ', 'ПАЛЕВЫЙ'].includes(breedName)) {
-            breedName = `${upperMono} (${breedName})`
-          }
-        }
-
         return {
           dog_name: cleanSoftHyphens(d.dog_name),
-          breed: breedName,
+          breed: cleanSoftHyphens(d.breed).trim(),
           catalog_number: d.catalog_number,
           birth_date: d.birth_date,
           pedigree: d.pedigree,

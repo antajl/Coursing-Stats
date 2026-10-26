@@ -128,8 +128,54 @@ function HeatBlock({
   }
 
   return (
-    <div className={showDivider ? 'border-t border-old-money-200 pt-1.5' : ''}>
-      <div className="overflow-x-auto">
+    <div className={showDivider ? 'border-t border-old-money-200 pt-2' : ''}>
+      {/* Mobile view (< sm) */}
+      <div className="sm:hidden space-y-2 py-0.5">
+        <div className="flex items-center justify-between border-b border-old-money-100 pb-1.5">
+          <div className="flex items-center gap-2">
+            {heatBadge}
+            <span className="text-xs font-medium text-charcoal-700">
+              {heat.heat_number != null ? `Забег ${heat.heat_number}` : 'Забег'}
+            </span>
+          </div>
+          {showHeatTotal && (
+            <div className="inline-flex items-baseline gap-1 text-xs">
+              <span className="text-[10px] uppercase tracking-wide text-old-money-500">Итого:</span>
+              <span className="font-bold tabular-nums text-camel-800 text-sm">{heat.total}</span>
+            </div>
+          )}
+        </div>
+
+        {judgeRows.map(({ heatJudge, judgeIdx }) => {
+          const judgeTitle = judgeIdx === 0 ? 'Главный судья' : `Судья ${judgeIdx + 1}`
+          return (
+            <div key={judgeIdx} className="rounded-lg bg-old-money-50/70 p-2 border border-old-money-200/60">
+              <div className="flex items-center justify-between text-[11px] mb-1.5">
+                <span className="font-medium text-old-money-700">{judgeTitle}</span>
+                <span className="font-semibold text-charcoal-900 tabular-nums">
+                  Σ {heatJudge.sum ?? '-'}
+                </span>
+              </div>
+              <div className={`grid ${is7 ? 'grid-cols-7' : 'grid-cols-5'} gap-1 text-center`}>
+                {criteriaList.map((c, ci) => {
+                  const val = heatJudge.scores?.[ci]
+                  return (
+                    <div key={c} className="rounded bg-white/90 p-1 border border-old-money-100">
+                      <div className="text-[9px] font-medium text-old-money-500 uppercase">{c}</div>
+                      <div className={`text-xs font-semibold tabular-nums mt-0.5 ${scoreCellClass(val)}`}>
+                        {val !== null && val !== undefined ? val : '-'}
+                      </div>
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+          )
+        })}
+      </div>
+
+      {/* Desktop view (>= sm) */}
+      <div className="hidden sm:block overflow-x-auto">
         <table className="w-full min-w-[280px] table-fixed text-xs">
           <colgroup>
             <col className="w-[3.5rem]" />

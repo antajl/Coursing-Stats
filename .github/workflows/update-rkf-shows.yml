@@ -1,0 +1,59 @@
+name: Monitor & Ingest RKF Shows
+
+on:
+  schedule:
+    # Every Monday at 04:00 UTC (07:00 MSK)
+    - cron: "0 4 * * 1"
+  workflow_dispatch:
+    inputs:
+      year:
+        description: "Year to monitor (e.g. 2026)"
+        required: false
+        default: "2026"
+      limit:
+        description: "Limit number of exhibitions (0 = all)"
+        required: false
+        default: "0"
+
+permissions:
+  contents: write
+
+jobs:
+  monitor-rkf:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Run RKF Protocol Monitor & Quality Gate
+        env:
+          YC_ACCESS_KEY_ID: ${{ secrets.YC_ACCESS_KEY_ID }}
+          YC_SECRET_ACCESS_KEY: ${{ secrets.YC_SECRET_ACCESS_KEY }}
+          YC_BUCKET: coursing-stats.ru
+        run: |
+          YEAR="${{ github.event.inputs.year || '2026' }}"
+          LIMIT="${{ github.event.inputs.limit || '0' }}"
+          node --max-old-space-size=8192 ./node_modules/tsx/dist/cli.mjs backend/scripts/shows/monitor-new-rkf-protocols.ts --year=$YEAR --limit=$LIMIT
+
+      - name: Commit updated calendar and show indexes
+        run: |
+          git config --local user.email "antajl@yandex.ru"
+          git config --local user.name "antajl"
+          git add data/v1/shows/calendar-rkf/ data/v1/shows/indexes/
+          if git diff --staged --quiet; then
+            echo "No calendar or index changes to commit"
+          else
+            git commit -m "Update RKF exhibitions calendar and indexes"
+            git push
+          fi

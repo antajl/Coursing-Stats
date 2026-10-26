@@ -30,6 +30,7 @@ function isSoftHyphenContinuation(prev: string, next: string): boolean {
 export function isBreedContinuationLine(str: string): boolean {
   const t = normToken(str)
   if (!t) return false
+  if (/^ЗОЛОТИСТЫЙ\s+РЕТРИВЕР(?:\s|$|,)/i.test(t)) return false
   if (BREED_CONTINUATION_START_RE.test(t)) return true
   // Wrapped leftovers: «ПЛАЩОМ, С», «ПОДПАЛОМ,» — but NOT a new breed that ends with a comma
   // («ПУДЕЛЬ ТОЙ ЧЁРНЫЙ,» must start a new block, not glue onto «ПТИ БРАБАНСОН»).
