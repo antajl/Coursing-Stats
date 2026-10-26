@@ -242,6 +242,8 @@ export type DogJudgeEvent = {
   discipline?: 'coursing' | 'racing';
 };
 
+export type DogJudgeVerdict = 'favors' | 'strict' | 'neutral' | 'racing_only';
+
 export type DogJudgeItem = {
   judge_name: string;
   judge_key: string;
@@ -252,6 +254,14 @@ export type DogJudgeItem = {
   min_score: number | null;
   max_score: number | null;
   delta_vs_dog_avg: number | null;
+  co_judge_diff: number | null;
+  co_judge_heats_count: number;
+  avg_placement: number | null;
+  best_placement: number | null;
+  placements: number[];
+  win_rate: number | null;
+  podium_rate: number | null;
+  verdict: DogJudgeVerdict;
   disciplines?: ('coursing' | 'racing')[];
   events: DogJudgeEvent[];
 };
@@ -265,6 +275,7 @@ export type DogJudgesStats = {
   racing_events_count: number;
   total_judges: number;
   global_avg_score: number;
+  dog_avg_placement: number | null;
   highest_concentration: {
     judge_name: string;
     starts_count: number;
@@ -275,11 +286,14 @@ export type DogJudgesStats = {
 
 function buildDogJudgesStats(rows: CompetitionHistoryRow[]): DogJudgesStats | null {
   const allHeatScores: number[] = [];
+  const dogAllPlacements: number[] = [];
 
   type JudgeEntry = {
     judge_name: string;
     events: Map<number, { event_id: number; title: string; date: string; scores: number[]; role: string; discipline: 'coursing' | 'racing' }>;
     all_scores: number[];
+    co_judge_diffs: number[];
+    placements: number[];
     disciplines: Set<'coursing' | 'racing'>;
   };
 
@@ -290,6 +304,10 @@ function buildDogJudgesStats(rows: CompetitionHistoryRow[]): DogJudgesStats | nu
   let racingWithoutJudgesCount = 0;
 
   for (const row of rows) {
+    if (typeof row.placement === 'number' && row.placement > 0) {
+      dogAllPlacements.push(row.placement);
+    }
+
     const isRacing = row.event_type === 'racing';
     const isCoursing = row.event_type === 'coursing' || row.event_type === 'bzmp';
     if (!isRacing && !isCoursing) continue;
@@ -319,28 +337,42 @@ function buildDogJudgesStats(rows: CompetitionHistoryRow[]): DogJudgesStats | nu
 
       for (const heat of raw.heats) {
         if (!Array.isArray(heat.judges)) continue;
+
+        // Extract scores for all judges in this heat for pair comparison
+        const heatJudgeScores: { name: string; score: number; role: string }[] = [];
         for (const j of heat.judges) {
           const score = extractSingleJudgeHeatScore(j);
           if (score === null) continue;
-
           const judgeNum = j.judge_number;
           const judgeRole = judgeNum === 1 ? 'Главный судья' : 'Судья';
           const judgeName = j.judge_name || judgeNames[judgeNum - 1] || (judgeNames.length === 1 ? judgeNames[0] : `Судья ${judgeNum}`);
-
+          heatJudgeScores.push({ name: judgeName, score, role: judgeRole });
           allHeatScores.push(score);
+        }
 
-          let entry = judgeMap.get(judgeName);
+        for (let idx = 0; idx < heatJudgeScores.length; idx++) {
+          const cur = heatJudgeScores[idx];
+          let entry = judgeMap.get(cur.name);
           if (!entry) {
             entry = {
-              judge_name: judgeName,
+              judge_name: cur.name,
               events: new Map(),
               all_scores: [],
+              co_judge_diffs: [],
+              placements: [],
               disciplines: new Set(),
             };
-            judgeMap.set(judgeName, entry);
+            judgeMap.set(cur.name, entry);
           }
-          entry.all_scores.push(score);
+          entry.all_scores.push(cur.score);
           entry.disciplines.add('coursing');
+
+          // Pair comparison with co-judges in the same heat
+          if (heatJudgeScores.length >= 2) {
+            const others = heatJudgeScores.filter((_, oIdx) => oIdx !== idx);
+            const avgOther = others.reduce((acc, o) => acc + o.score, 0) / others.length;
+            entry.co_judge_diffs.push(cur.score - avgOther);
+          }
 
           let ev = entry.events.get(row.event_id);
           if (!ev) {
@@ -348,13 +380,23 @@ function buildDogJudgesStats(rows: CompetitionHistoryRow[]): DogJudgesStats | nu
               event_id: row.event_id,
               title: row.title || 'Соревнование',
               date: row.date_start || '',
-              role: judgeRole,
+              role: cur.role,
               scores: [],
               discipline: 'coursing',
             };
             entry.events.set(row.event_id, ev);
           }
-          ev.scores.push(score);
+          ev.scores.push(cur.score);
+        }
+      }
+
+      // Add placement to all judges of this event
+      if (typeof row.placement === 'number' && row.placement > 0) {
+        for (const jName of judgeNames) {
+          const entry = judgeMap.get(jName);
+          if (entry && !entry.placements.includes(row.placement)) {
+            entry.placements.push(row.placement);
+          }
         }
       }
     } else if (isRacing) {
@@ -372,11 +414,17 @@ function buildDogJudgesStats(rows: CompetitionHistoryRow[]): DogJudgesStats | nu
             judge_name: judgeName,
             events: new Map(),
             all_scores: [],
+            co_judge_diffs: [],
+            placements: [],
             disciplines: new Set(),
           };
           judgeMap.set(judgeName, entry);
         }
         entry.disciplines.add('racing');
+
+        if (typeof row.placement === 'number' && row.placement > 0 && !entry.placements.includes(row.placement)) {
+          entry.placements.push(row.placement);
+        }
 
         if (!entry.events.has(row.event_id)) {
           entry.events.set(row.event_id, {
@@ -400,6 +448,10 @@ function buildDogJudgesStats(rows: CompetitionHistoryRow[]): DogJudgesStats | nu
     ? Math.round((allHeatScores.reduce((a, b) => a + b, 0) / allHeatScores.length) * 100) / 100
     : 0;
 
+  const dogAvgPlacement = dogAllPlacements.length > 0
+    ? Math.round((dogAllPlacements.reduce((a, b) => a + b, 0) / dogAllPlacements.length) * 100) / 100
+    : null;
+
   const totalEventsWithJudges = coursingEventsCount + racingEventsCount;
 
   const judges: DogJudgeItem[] = Array.from(judgeMap.values()).map((entry) => {
@@ -411,6 +463,36 @@ function buildDogJudgesStats(rows: CompetitionHistoryRow[]): DogJudgesStats | nu
     const startsPercent = totalEventsWithJudges > 0 ? Math.round((startsCount / totalEventsWithJudges) * 100) : 0;
     const delta = judgeAvg !== null && globalAvg > 0 ? Math.round((judgeAvg - globalAvg) * 100) / 100 : null;
 
+    const coJudgeDiff = entry.co_judge_diffs.length > 0
+      ? Math.round((entry.co_judge_diffs.reduce((a, b) => a + b, 0) / entry.co_judge_diffs.length) * 100) / 100
+      : null;
+
+    const avgPlacement = entry.placements.length > 0
+      ? Math.round((entry.placements.reduce((a, b) => a + b, 0) / entry.placements.length) * 100) / 100
+      : null;
+
+    const bestPlacement = entry.placements.length > 0 ? Math.min(...entry.placements) : null;
+    const winCount = entry.placements.filter((p) => p === 1).length;
+    const podiumCount = entry.placements.filter((p) => p <= 3).length;
+    const winRate = entry.placements.length > 0 ? Math.round((winCount / entry.placements.length) * 100) : null;
+    const podiumRate = entry.placements.length > 0 ? Math.round((podiumCount / entry.placements.length) * 100) : null;
+
+    let verdict: DogJudgeVerdict = 'neutral';
+    if (!hasScores && entry.disciplines.has('racing') && !entry.disciplines.has('coursing')) {
+      verdict = 'racing_only';
+    } else {
+      const favorsByDiff = coJudgeDiff !== null && coJudgeDiff >= 2.0;
+      const strictByDiff = coJudgeDiff !== null && coJudgeDiff <= -2.0;
+      const favorsByPlace = avgPlacement !== null && dogAvgPlacement !== null && avgPlacement <= 1.5 && (dogAvgPlacement - avgPlacement >= 0.5);
+      const strictByPlace = avgPlacement !== null && dogAvgPlacement !== null && avgPlacement >= 3.0 && (avgPlacement - dogAvgPlacement >= 1.0);
+
+      if (favorsByDiff || favorsByPlace) {
+        verdict = 'favors';
+      } else if (strictByDiff || strictByPlace) {
+        verdict = 'strict';
+      }
+    }
+
     return {
       judge_name: entry.judge_name,
       judge_key: judgeDetailKey(entry.judge_name),
@@ -421,6 +503,14 @@ function buildDogJudgesStats(rows: CompetitionHistoryRow[]): DogJudgesStats | nu
       min_score: hasScores ? Math.min(...entry.all_scores) : null,
       max_score: hasScores ? Math.max(...entry.all_scores) : null,
       delta_vs_dog_avg: delta,
+      co_judge_diff: coJudgeDiff,
+      co_judge_heats_count: entry.co_judge_diffs.length,
+      avg_placement: avgPlacement,
+      best_placement: bestPlacement,
+      placements: entry.placements,
+      win_rate: winRate,
+      podium_rate: podiumRate,
+      verdict,
       disciplines: Array.from(entry.disciplines),
       events: Array.from(entry.events.values()).map((ev) => ({
         event_id: ev.event_id,
@@ -436,7 +526,13 @@ function buildDogJudgesStats(rows: CompetitionHistoryRow[]): DogJudgesStats | nu
     };
   });
 
-  judges.sort((a, b) => b.starts_count - a.starts_count || (b.avg_score ?? 0) - (a.avg_score ?? 0));
+  judges.sort((a, b) => {
+    // Default sort: highest podium / best placement first
+    if (a.avg_placement !== null && b.avg_placement !== null) {
+      return a.avg_placement - b.avg_placement || (b.co_judge_diff ?? 0) - (a.co_judge_diff ?? 0);
+    }
+    return (a.avg_placement ?? 99) - (b.avg_placement ?? 99);
+  });
 
   const topConcentration = judges.length > 0 && totalEventsWithJudges >= 3 && judges[0].starts_percent >= 30
     ? {
@@ -455,6 +551,7 @@ function buildDogJudgesStats(rows: CompetitionHistoryRow[]): DogJudgesStats | nu
     racing_events_count: racingEventsCount,
     total_judges: judges.length,
     global_avg_score: globalAvg,
+    dog_avg_placement: dogAvgPlacement,
     highest_concentration: topConcentration,
     judges,
   };

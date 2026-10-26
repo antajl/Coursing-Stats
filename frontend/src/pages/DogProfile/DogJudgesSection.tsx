@@ -13,6 +13,7 @@ import {
   Award,
   AlertCircle,
   X,
+  Trophy,
 } from 'lucide-react'
 
 export interface DogJudgeEventDetail {
@@ -25,6 +26,8 @@ export interface DogJudgeEventDetail {
   discipline?: 'coursing' | 'racing'
 }
 
+export type DogJudgeVerdict = 'favors' | 'strict' | 'neutral' | 'racing_only'
+
 export interface DogJudgeItem {
   judge_name: string
   judge_key: string
@@ -35,6 +38,14 @@ export interface DogJudgeItem {
   min_score: number | null
   max_score: number | null
   delta_vs_dog_avg: number | null
+  co_judge_diff?: number | null
+  co_judge_heats_count?: number
+  avg_placement?: number | null
+  best_placement?: number | null
+  placements?: number[]
+  win_rate?: number | null
+  podium_rate?: number | null
+  verdict?: DogJudgeVerdict
   disciplines?: ('coursing' | 'racing')[]
   events: DogJudgeEventDetail[]
 }
@@ -48,6 +59,7 @@ export interface DogJudgesStats {
   racing_events_count?: number
   total_judges: number
   global_avg_score: number
+  dog_avg_placement?: number | null
   highest_concentration?: {
     judge_name: string
     starts_count: number
@@ -116,28 +128,28 @@ function parseJudgeList(rawJudges: string | null | undefined): string[] {
     .filter((s) => s.length > 2 && !s.toLowerCase().includes('круг:'))
 }
 
-type SortField = 'starts' | 'score' | 'name'
+type SortField = 'placement' | 'strictness' | 'co_judge' | 'score' | 'starts' | 'name'
 type SortOrder = 'asc' | 'desc'
 type ViewMode = 'judges' | 'competitions'
-type DisciplineFilter = 'all' | 'coursing' | 'racing' | 'frequent'
-type EventFilter = 'all' | 'coursing' | 'racing' | 'without_judges'
+type BiasFilter = 'all' | 'high_places' | 'higher_than_co' | 'lower_than_co' | 'racing'
 
 const INITIAL_VISIBLE_JUDGES = 8
 
 export function DogJudgesSection({ judgeStats, competitions = [] }: DogJudgesSectionProps) {
   const [viewMode, setViewMode] = useState<ViewMode>('judges')
   const [expandedJudge, setExpandedJudge] = useState<string | null>(null)
-  const [sortField, setSortField] = useState<SortField>('starts')
-  const [sortOrder, setSortOrder] = useState<SortOrder>('desc')
+  const [sortField, setSortField] = useState<SortField>('placement')
+  const [sortOrder, setSortOrder] = useState<SortOrder>('asc')
   const [searchQuery, setSearchQuery] = useState('')
-  const [disciplineFilter, setDisciplineFilter] = useState<DisciplineFilter>('all')
-  const [eventFilter, setEventFilter] = useState<EventFilter>('all')
+  const [biasFilter, setBiasFilter] = useState<BiasFilter>('all')
+  const [eventFilter, setEventFilter] = useState<'all' | 'coursing' | 'racing' | 'without_judges'>('all')
   const [isExpandedAll, setIsExpandedAll] = useState(false)
 
   const totalEvents = judgeStats.total_events ?? judgeStats.total_starts
   const totalCoursing = judgeStats.total_coursing_events ?? totalEvents
   const withoutJudges = judgeStats.events_without_judges ?? 0
   const racingEventsCount = judgeStats.racing_events_count ?? 0
+  const dogAvgPlacement = judgeStats.dog_avg_placement ?? null
 
   const toggleExpand = (judgeName: string) => {
     setExpandedJudge((prev) => (prev === judgeName ? null : judgeName))
@@ -148,24 +160,40 @@ export function DogJudgesSection({ judgeStats, competitions = [] }: DogJudgesSec
       setSortOrder((prev) => (prev === 'asc' ? 'desc' : 'asc'))
     } else {
       setSortField(field)
-      setSortOrder(field === 'name' ? 'asc' : 'desc')
+      // Для мест и строгости естественный дефолтный порядок:
+      // placement: asc (1-е места вверху)
+      // strictness: desc (худшие места и наибольшие минусы вверху)
+      // co_judge: desc (наибольший плюс вверху)
+      // score: desc (высшие баллы вверху)
+      // starts: desc (больше турниров вверху)
+      if (field === 'placement' || field === 'name') {
+        setSortOrder('asc')
+      } else {
+        setSortOrder('desc')
+      }
     }
   }
 
   // Расчет counts для фильтров
   const filterCounts = useMemo(() => {
-    const coursing = judgeStats.judges.filter((j) =>
-      j.disciplines ? j.disciplines.includes('coursing') : j.evaluations_count > 0,
+    const highPlaces = judgeStats.judges.filter(
+      (j) => j.avg_placement !== null && j.avg_placement !== undefined && j.avg_placement <= 2.5,
+    ).length
+    const higherThanCo = judgeStats.judges.filter(
+      (j) => j.co_judge_diff !== null && j.co_judge_diff !== undefined && j.co_judge_diff >= 1.5,
+    ).length
+    const lowerThanCo = judgeStats.judges.filter(
+      (j) => j.co_judge_diff !== null && j.co_judge_diff !== undefined && j.co_judge_diff <= -1.5,
     ).length
     const racing = judgeStats.judges.filter((j) =>
       j.disciplines ? j.disciplines.includes('racing') : false,
     ).length
-    const frequent = judgeStats.judges.filter((j) => j.starts_count >= 2).length
     return {
       all: judgeStats.judges.length,
-      coursing,
+      highPlaces,
+      higherThanCo,
+      lowerThanCo,
       racing,
-      frequent,
     }
   }, [judgeStats.judges])
 
@@ -179,21 +207,42 @@ export function DogJudgesSection({ judgeStats, competitions = [] }: DogJudgesSec
       list = list.filter((j) => j.judge_name.toLowerCase().includes(q))
     }
 
-    // Фильтр по дисциплинам
-    if (disciplineFilter === 'coursing') {
-      list = list.filter((j) =>
-        j.disciplines ? j.disciplines.includes('coursing') : j.evaluations_count > 0,
+    // Фильтр по поведению/предвзятости
+    if (biasFilter === 'high_places') {
+      list = list.filter(
+        (j) => j.avg_placement !== null && j.avg_placement !== undefined && j.avg_placement <= 2.5,
       )
-    } else if (disciplineFilter === 'racing') {
+    } else if (biasFilter === 'higher_than_co') {
+      list = list.filter(
+        (j) => j.co_judge_diff !== null && j.co_judge_diff !== undefined && j.co_judge_diff >= 1.5,
+      )
+    } else if (biasFilter === 'lower_than_co') {
+      list = list.filter(
+        (j) => j.co_judge_diff !== null && j.co_judge_diff !== undefined && j.co_judge_diff <= -1.5,
+      )
+    } else if (biasFilter === 'racing') {
       list = list.filter((j) => (j.disciplines ? j.disciplines.includes('racing') : false))
-    } else if (disciplineFilter === 'frequent') {
-      list = list.filter((j) => j.starts_count >= 2)
     }
 
     // Сортировка
     list.sort((a, b) => {
       let comparison = 0
-      if (sortField === 'score') {
+      if (sortField === 'placement') {
+        const placeA = a.avg_placement ?? 999
+        const placeB = b.avg_placement ?? 999
+        comparison = placeA - placeB || (b.co_judge_diff ?? 0) - (a.co_judge_diff ?? 0)
+      } else if (sortField === 'strictness') {
+        // Худшие места и занижения к напарнику вверху
+        const placeA = a.avg_placement ?? 0
+        const placeB = b.avg_placement ?? 0
+        const diffA = a.co_judge_diff ?? 0
+        const diffB = b.co_judge_diff ?? 0
+        comparison = placeB - placeA || diffA - diffB
+      } else if (sortField === 'co_judge') {
+        const diffA = a.co_judge_diff ?? -999
+        const diffB = b.co_judge_diff ?? -999
+        comparison = diffA - diffB
+      } else if (sortField === 'score') {
         const scoreA = a.avg_score ?? -1
         const scoreB = b.avg_score ?? -1
         comparison = scoreA - scoreB
@@ -207,7 +256,7 @@ export function DogJudgesSection({ judgeStats, competitions = [] }: DogJudgesSec
     })
 
     return list
-  }, [judgeStats.judges, searchQuery, disciplineFilter, sortField, sortOrder])
+  }, [judgeStats.judges, searchQuery, biasFilter, sortField, sortOrder])
 
   // Соревнования для вкладки "По соревнованиям"
   const competitionItems = useMemo(() => {
@@ -228,15 +277,9 @@ export function DogJudgesSection({ judgeStats, competitions = [] }: DogJudgesSec
   }, [competitions])
 
   const filteredCompetitions = useMemo(() => {
-    if (eventFilter === 'coursing') {
-      return competitionItems.filter((c) => c.isCoursing)
-    }
-    if (eventFilter === 'racing') {
-      return competitionItems.filter((c) => c.isRacing)
-    }
-    if (eventFilter === 'without_judges') {
-      return competitionItems.filter((c) => !c.hasJudges)
-    }
+    if (eventFilter === 'coursing') return competitionItems.filter((c) => c.isCoursing)
+    if (eventFilter === 'racing') return competitionItems.filter((c) => c.isRacing)
+    if (eventFilter === 'without_judges') return competitionItems.filter((c) => !c.hasJudges)
     return competitionItems
   }, [competitionItems, eventFilter])
 
@@ -263,7 +306,7 @@ export function DogJudgesSection({ judgeStats, competitions = [] }: DogJudgesSec
           </div>
           <div className="min-w-0">
             <h3 className="font-serif text-lg font-bold text-charcoal-900 leading-snug">
-              Судейская статистика
+              Судейский профиль и места
             </h3>
             <p className="text-xs text-charcoal-500">
               <span className="font-medium text-charcoal-800">{totalEvents}</span>{' '}
@@ -273,13 +316,20 @@ export function DogJudgesSection({ judgeStats, competitions = [] }: DogJudgesSec
                   {' '}(из {totalCoursing} в курсинге)
                 </span>
               )}
+              {dogAvgPlacement !== null && (
+                <>
+                  <span className="mx-1.5 text-charcoal-300">·</span>
+                  ср. место собаки:{' '}
+                  <span className="font-semibold text-charcoal-800">{dogAvgPlacement.toFixed(1)}</span>
+                </>
+              )}
               <span className="mx-1.5 text-charcoal-300">·</span>
               {judgeStats.total_judges} {pluralizeJudges(judgeStats.total_judges)}
             </p>
           </div>
         </div>
 
-        {/* Переключатель режима: Эксперты / По соревнованиям */}
+        {/* Переключатель режима: Аналитика судей / Хронология по турнирам */}
         <div className="flex items-center self-start sm:self-auto rounded-xl bg-cream-100/80 p-1 text-xs border border-old-money-200/60">
           <button
             type="button"
@@ -290,8 +340,8 @@ export function DogJudgesSection({ judgeStats, competitions = [] }: DogJudgesSec
                 : 'text-charcoal-600 hover:text-charcoal-900'
             }`}
           >
-            <Scale className="h-3.5 w-3.5" aria-hidden />
-            <span>Эксперты</span>
+            <Trophy className="h-3.5 w-3.5 text-camel-700" aria-hidden />
+            <span>Места и эксперты</span>
             <span
               className={`rounded px-1.5 py-0.2 text-[10px] ${
                 viewMode === 'judges'
@@ -329,34 +379,27 @@ export function DogJudgesSection({ judgeStats, competitions = [] }: DogJudgesSec
         </div>
       </div>
 
-      {/* KPI Карточки: 4 компактных плитки метрик в стиле Old Money */}
+      {/* KPI Карточки: 4 компактных плитки метрик */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-2.5 sm:gap-3 mb-5">
-        {/* Карточка 1: Состязания с судейством */}
+        {/* Карточка 1: Ср. место собаки */}
         <div className="rounded-xl border border-old-money-200/70 bg-cream-50/50 p-3">
           <div className="text-[11px] font-medium text-charcoal-500 mb-0.5">
-            Экспертизы
+            Базовый уровень собаки
           </div>
           <div className="flex items-baseline gap-1.5">
             <span className="font-serif text-lg sm:text-xl font-bold tabular-nums text-charcoal-900">
-              {totalEvents}
-            </span>
-            <span className="text-[11px] text-charcoal-400">
-              из {competitionItems.length || totalEvents} турниров
+              {dogAvgPlacement !== null ? `${dogAvgPlacement.toFixed(1)} место` : '—'}
             </span>
           </div>
           <div className="mt-1 text-[10px] text-charcoal-400">
-            {racingEventsCount > 0 ? (
-              <span>{totalEvents - racingEventsCount} курсинг · {racingEventsCount} бега</span>
-            ) : (
-              <span>Курсинг и БЗМП</span>
-            )}
+            среднее место по всем турнирам
           </div>
         </div>
 
         {/* Карточка 2: Средний балл (курсинг) */}
         <div className="rounded-xl border border-old-money-200/70 bg-cream-50/50 p-3">
           <div className="text-[11px] font-medium text-charcoal-500 mb-0.5">
-            Средний балл
+            Средний балл за заезды
           </div>
           <div className="flex items-baseline gap-1.5">
             <span className="font-serif text-lg sm:text-xl font-bold tabular-nums text-forest-800">
@@ -383,92 +426,128 @@ export function DogJudgesSection({ judgeStats, competitions = [] }: DogJudgesSec
             </span>
           </div>
           <div className="mt-1 text-[10px] text-charcoal-400">
-            {filterCounts.frequent > 0 ? (
-              <span>{filterCounts.frequent} судили повторно (≥2)</span>
-            ) : (
-              <span>Разнообразный состав</span>
-            )}
+            {filterCounts.highPlaces} судей принесли топ-2
           </div>
         </div>
 
-        {/* Карточка 4: Топ-эксперт карьеры */}
+        {/* Карточка 4: Парные расхождения */}
         <div className="rounded-xl border border-old-money-200/70 bg-cream-50/50 p-3">
           <div className="text-[11px] font-medium text-charcoal-500 mb-0.5">
-            Главный эксперт
+            Парные сравнения заездов
           </div>
-          {judgeStats.highest_concentration ? (
-            <>
-              <div className="font-semibold text-charcoal-900 truncate text-sm sm:text-base" title={judgeStats.highest_concentration.judge_name}>
-                {judgeStats.highest_concentration.judge_name}
-              </div>
-              <div className="mt-1 text-[10px] text-amber-800 font-medium">
-                {judgeStats.highest_concentration.starts_count} состязаний ({judgeStats.highest_concentration.starts_percent}% карьеры)
-              </div>
-            </>
-          ) : judgeStats.judges[0] ? (
-            <>
-              <div className="font-semibold text-charcoal-900 truncate text-sm sm:text-base">
-                {judgeStats.judges[0].judge_name}
-              </div>
-              <div className="mt-1 text-[10px] text-charcoal-400">
-                {judgeStats.judges[0].starts_count} {pluralizeEvents(judgeStats.judges[0].starts_count)}
-              </div>
-            </>
-          ) : (
-            <div className="text-xs text-charcoal-400">—</div>
-          )}
+          <div className="flex items-baseline gap-1.5">
+            <span className="font-serif text-lg sm:text-xl font-bold tabular-nums text-charcoal-900">
+              {filterCounts.higherThanCo + filterCounts.lowerThanCo > 0 ? (
+                <span className="text-amber-800">{filterCounts.higherThanCo + filterCounts.lowerThanCo} с расхождением</span>
+              ) : (
+                'Консенсус'
+              )}
+            </span>
+          </div>
+          <div className="mt-1 text-[10px] text-charcoal-400">
+            {filterCounts.higherThanCo} щедрее · {filterCounts.lowerThanCo} строже напарников
+          </div>
         </div>
       </div>
 
-      {/* Оповещение о высокой концентрации (если собака провела много соревнований под 1 экспертом) */}
-      {judgeStats.highest_concentration && (
-        <div className="mb-4 flex items-start gap-2.5 rounded-xl border border-amber-200/70 bg-amber-50/50 p-3 text-xs text-amber-900">
-          <Info className="mt-0.5 h-4 w-4 shrink-0 text-amber-600" aria-hidden />
-          <div className="leading-relaxed">
-            <span className="font-semibold">Судейская концентрация: </span>
-            {judgeStats.highest_concentration.starts_percent}% соревнований (
-            {judgeStats.highest_concentration.starts_count} из {totalEvents}) собака
-            провела под экспертизой <strong>{judgeStats.highest_concentration.judge_name}</strong>.
-          </div>
-        </div>
-      )}
-
       {/* =========================================================================
-          ВИД 1: ПО ЭКСПЕРТАМ
+          ВИД 1: ПО СУДЬЯМ (МЕСТА, СТРОГОСТЬ, ПАРНОЕ РАСХОЖДЕНИЕ)
           ========================================================================= */}
       {viewMode === 'judges' && (
         <>
-          {/* Тулбар фильтрации и поиска */}
-          <div className="mb-4 flex flex-col gap-2.5 sm:flex-row sm:items-center sm:justify-between">
-            {/* Поиск */}
-            <div className="relative flex-1 sm:max-w-xs">
-              <Search className="absolute left-2.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-charcoal-400" aria-hidden />
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Поиск эксперта..."
-                className="w-full rounded-lg border border-old-money-200/80 bg-cream-50/40 py-1.5 pl-8 pr-7 text-xs text-charcoal-900 placeholder:text-charcoal-400 focus:border-camel-500 focus:bg-white focus:outline-none transition-colors"
-              />
-              {searchQuery && (
+          {/* Тулбар сортировки и фильтрации */}
+          <div className="mb-4 flex flex-col gap-3">
+            {/* Верхняя строка: Поиск + Сортировки */}
+            <div className="flex flex-col gap-2.5 sm:flex-row sm:items-center sm:justify-between">
+              {/* Поиск */}
+              <div className="relative flex-1 sm:max-w-xs">
+                <Search className="absolute left-2.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-charcoal-400" aria-hidden />
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Поиск судьи..."
+                  className="w-full rounded-lg border border-old-money-200/80 bg-cream-50/40 py-1.5 pl-8 pr-7 text-xs text-charcoal-900 placeholder:text-charcoal-400 focus:border-camel-500 focus:bg-white focus:outline-none transition-colors"
+                />
+                {searchQuery && (
+                  <button
+                    type="button"
+                    onClick={() => setSearchQuery('')}
+                    className="absolute right-2 top-1/2 -translate-y-1/2 text-charcoal-400 hover:text-charcoal-700"
+                    aria-label="Очистить поиск"
+                  >
+                    <X className="h-3 w-3" />
+                  </button>
+                )}
+              </div>
+
+              {/* Кнопки умной сортировки */}
+              <div className="flex flex-wrap items-center gap-1 self-start sm:self-auto rounded-lg bg-cream-100/70 p-1 text-xs">
                 <button
                   type="button"
-                  onClick={() => setSearchQuery('')}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 text-charcoal-400 hover:text-charcoal-700"
-                  aria-label="Очистить поиск"
+                  onClick={() => handleSort('placement')}
+                  className={`flex items-center gap-1 rounded-md px-2.5 py-1 font-medium transition-all ${
+                    sortField === 'placement'
+                      ? 'bg-white text-charcoal-900 shadow-2xs font-semibold'
+                      : 'text-charcoal-600 hover:text-charcoal-900'
+                  }`}
+                  title="Судьи, под которыми собака заняла высшие места (золото/призы)"
                 >
-                  <X className="h-3 w-3" />
+                  <Trophy className="h-3 w-3 text-camel-600" aria-hidden />
+                  <span>Высшие места</span>
+                  {sortField === 'placement' && (
+                    <span className="text-[10px] text-charcoal-500">
+                      {sortOrder === 'asc' ? '▲' : '▼'}
+                    </span>
+                  )}
                 </button>
-              )}
+
+                <button
+                  type="button"
+                  onClick={() => handleSort('strictness')}
+                  className={`flex items-center gap-1 rounded-md px-2.5 py-1 font-medium transition-all ${
+                    sortField === 'strictness'
+                      ? 'bg-white text-charcoal-900 shadow-2xs font-semibold'
+                      : 'text-charcoal-600 hover:text-charcoal-900'
+                  }`}
+                  title="Судьи, под которыми собака заняла низшие места или получила занижение"
+                >
+                  <span>Худшие места / строгие</span>
+                  {sortField === 'strictness' && (
+                    <span className="text-[10px] text-charcoal-500">
+                      {sortOrder === 'desc' ? '▼' : '▲'}
+                    </span>
+                  )}
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => handleSort('co_judge')}
+                  className={`flex items-center gap-1 rounded-md px-2.5 py-1 font-medium transition-all ${
+                    sortField === 'co_judge'
+                      ? 'bg-white text-charcoal-900 shadow-2xs font-semibold'
+                      : 'text-charcoal-600 hover:text-charcoal-900'
+                  }`}
+                  title="Разница оценок с напарником по заезду"
+                >
+                  <span>vs Напарник</span>
+                  {sortField === 'co_judge' && (
+                    <span className="text-[10px] text-charcoal-500">
+                      {sortOrder === 'desc' ? '▼' : '▲'}
+                    </span>
+                  )}
+                </button>
+              </div>
             </div>
 
-            {/* Фильтры-чипы по дисциплинам */}
-            <div className="flex flex-wrap items-center gap-1.5">
+            {/* Фильтры-чипы по поведению */}
+            <div className="flex flex-wrap items-center gap-1.5 text-xs">
+              <span className="text-[11px] font-medium text-charcoal-400 mr-1">Фильтр:</span>
               <button
                 type="button"
-                onClick={() => setDisciplineFilter('all')}
-                className={`rounded-lg px-2.5 py-1 text-xs font-medium transition-all ${
-                  disciplineFilter === 'all'
+                onClick={() => setBiasFilter('all')}
+                className={`rounded-lg px-2.5 py-1 font-medium transition-all ${
+                  biasFilter === 'all'
                     ? 'bg-charcoal-900 text-white font-semibold'
                     : 'bg-cream-100/70 text-charcoal-600 hover:text-charcoal-900 hover:bg-cream-200/50'
                 }`}
@@ -478,41 +557,41 @@ export function DogJudgesSection({ judgeStats, competitions = [] }: DogJudgesSec
 
               <button
                 type="button"
-                onClick={() => setDisciplineFilter('coursing')}
-                className={`rounded-lg px-2.5 py-1 text-xs font-medium transition-all ${
-                  disciplineFilter === 'coursing'
+                onClick={() => setBiasFilter('high_places')}
+                className={`rounded-lg px-2.5 py-1 font-medium transition-all ${
+                  biasFilter === 'high_places'
                     ? 'bg-forest-800 text-white font-semibold'
                     : 'bg-cream-100/70 text-charcoal-600 hover:text-charcoal-900 hover:bg-cream-200/50'
                 }`}
               >
-                Курсинг ({filterCounts.coursing})
+                Топ-места (≤2.5) ({filterCounts.highPlaces})
               </button>
 
-              {filterCounts.racing > 0 && (
+              {filterCounts.higherThanCo > 0 && (
                 <button
                   type="button"
-                  onClick={() => setDisciplineFilter('racing')}
-                  className={`rounded-lg px-2.5 py-1 text-xs font-medium transition-all ${
-                    disciplineFilter === 'racing'
-                      ? 'bg-warm-blue-800 text-white font-semibold'
-                      : 'bg-cream-100/70 text-charcoal-600 hover:text-charcoal-900 hover:bg-cream-200/50'
+                  onClick={() => setBiasFilter('higher_than_co')}
+                  className={`rounded-lg px-2.5 py-1 font-medium transition-all ${
+                    biasFilter === 'higher_than_co'
+                      ? 'bg-forest-800 text-white font-semibold'
+                      : 'bg-cream-100/70 text-forest-700 hover:bg-cream-200/50'
                   }`}
                 >
-                  Бега ({filterCounts.racing})
+                  Щедрее напарников (+Δ) ({filterCounts.higherThanCo})
                 </button>
               )}
 
-              {filterCounts.frequent > 0 && (
+              {filterCounts.lowerThanCo > 0 && (
                 <button
                   type="button"
-                  onClick={() => setDisciplineFilter('frequent')}
-                  className={`rounded-lg px-2.5 py-1 text-xs font-medium transition-all ${
-                    disciplineFilter === 'frequent'
-                      ? 'bg-camel-800 text-white font-semibold'
-                      : 'bg-cream-100/70 text-charcoal-600 hover:text-charcoal-900 hover:bg-cream-200/50'
+                  onClick={() => setBiasFilter('lower_than_co')}
+                  className={`rounded-lg px-2.5 py-1 font-medium transition-all ${
+                    biasFilter === 'lower_than_co'
+                      ? 'bg-rose-800 text-white font-semibold'
+                      : 'bg-cream-100/70 text-rose-700 hover:bg-cream-200/50'
                   }`}
                 >
-                  Повторные ({filterCounts.frequent})
+                  Строже напарников (-Δ) ({filterCounts.lowerThanCo})
                 </button>
               )}
             </div>
@@ -538,21 +617,42 @@ export function DogJudgesSection({ judgeStats, competitions = [] }: DogJudgesSec
                     </button>
                   </th>
 
+                  {/* Колонка Места под судьёй */}
                   <th className="px-3 py-2.5 text-center">
                     <button
                       type="button"
-                      onClick={() => handleSort('starts')}
+                      onClick={() => handleSort('placement')}
                       className={`mx-auto flex items-center gap-1 hover:text-charcoal-900 ${
-                        sortField === 'starts' ? 'font-bold text-charcoal-900' : ''
+                        sortField === 'placement' ? 'font-bold text-charcoal-900' : ''
                       }`}
+                      title="Фактические занятые собакой места под этим судьей"
                     >
-                      <span>Соревнования</span>
-                      {sortField === 'starts' && (
+                      <Trophy className="h-3 w-3 text-camel-600" aria-hidden />
+                      <span>Места собаки</span>
+                      {sortField === 'placement' && (
+                        <span>{sortOrder === 'asc' ? '▲' : '▼'}</span>
+                      )}
+                    </button>
+                  </th>
+
+                  {/* Колонка Расхождение с напарником по забегам */}
+                  <th className="px-3 py-2.5 text-center">
+                    <button
+                      type="button"
+                      onClick={() => handleSort('co_judge')}
+                      className={`mx-auto flex items-center gap-1 hover:text-charcoal-900 ${
+                        sortField === 'co_judge' ? 'font-bold text-charcoal-900' : ''
+                      }`}
+                      title="Разница баллов с напарником в одних и тех же заездах (положительная = ставит выше напарника, отрицательная = занижает)"
+                    >
+                      <span>vs Напарник</span>
+                      {sortField === 'co_judge' && (
                         <span>{sortOrder === 'desc' ? '▼' : '▲'}</span>
                       )}
                     </button>
                   </th>
 
+                  {/* Колонка Ср. балл */}
                   <th className="px-3 py-2.5 text-right">
                     <button
                       type="button"
@@ -568,10 +668,6 @@ export function DogJudgesSection({ judgeStats, competitions = [] }: DogJudgesSec
                     </button>
                   </th>
 
-                  <th className="px-3 py-2.5 text-right font-medium text-charcoal-500">
-                    Дельта (Δ)
-                  </th>
-
                   <th className="py-2.5 pr-2 pl-2 text-right w-8">
                     <span className="sr-only">Действия</span>
                   </th>
@@ -582,18 +678,29 @@ export function DogJudgesSection({ judgeStats, competitions = [] }: DogJudgesSec
                 {visibleJudges.map((judge) => {
                   const isExpanded = expandedJudge === judge.judge_name
                   const hasScores = judge.avg_score !== null
-                  const hasLowData = judge.evaluations_count < 2 && judgeStats.total_starts < 3
-                  const delta = judge.delta_vs_dog_avg
+                  const avgPlace = judge.avg_placement
+                  const coDiff = judge.co_judge_diff
 
-                  let deltaBadgeClass = 'border-old-money-200/60 bg-cream-50/60 text-charcoal-600'
-                  let DeltaIcon: any = null
-                  if (hasScores && !hasLowData && delta !== null) {
-                    if (delta >= 2.5) {
-                      deltaBadgeClass = 'border-forest-200/80 bg-forest-50/60 text-forest-800'
-                      DeltaIcon = TrendingUp
-                    } else if (delta <= -2.5) {
-                      deltaBadgeClass = 'border-rose-200/80 bg-rose-50/60 text-rose-800'
-                      DeltaIcon = TrendingDown
+                  // Оформление плашки среднего места
+                  let placeBadgeClass = 'text-charcoal-700 bg-cream-50'
+                  if (avgPlace !== null && avgPlace !== undefined) {
+                    if (avgPlace <= 1.5) {
+                      placeBadgeClass = 'text-forest-900 bg-forest-50 border border-forest-200/80 font-bold'
+                    } else if (avgPlace >= 3.5) {
+                      placeBadgeClass = 'text-rose-900 bg-rose-50 border border-rose-200/80'
+                    }
+                  }
+
+                  // Оформление разницы с напарником
+                  let coDiffBadgeClass = 'text-charcoal-500 bg-cream-50 border border-old-money-200/60'
+                  let CoDiffIcon: any = null
+                  if (coDiff !== null && coDiff !== undefined) {
+                    if (coDiff >= 2.0) {
+                      coDiffBadgeClass = 'text-forest-900 bg-forest-50 border border-forest-200/90 font-bold'
+                      CoDiffIcon = TrendingUp
+                    } else if (coDiff <= -2.0) {
+                      coDiffBadgeClass = 'text-rose-900 bg-rose-50 border border-rose-200/90 font-bold'
+                      CoDiffIcon = TrendingDown
                     }
                   }
 
@@ -626,78 +733,100 @@ export function DogJudgesSection({ judgeStats, competitions = [] }: DogJudgesSec
                               <ExternalLink className="h-3 w-3" aria-hidden />
                             </Link>
 
-                            {/* Чипы дисциплин */}
-                            {hasCoursing && hasRacing ? (
-                              <span className="rounded bg-camel-100 px-1 py-0.2 text-[9px] font-semibold text-camel-800">
-                                Курсинг + Бега
+                            {/* Чипы вердикта */}
+                            {coDiff !== null && coDiff !== undefined && coDiff >= 3.0 && (
+                              <span className="rounded bg-forest-100/80 px-1.5 py-0.2 text-[9px] font-semibold text-forest-800">
+                                Лояльнее напарника
                               </span>
-                            ) : hasRacing ? (
-                              <span className="rounded bg-warm-blue-100 px-1 py-0.2 text-[9px] font-semibold text-warm-blue-800">
+                            )}
+                            {coDiff !== null && coDiff !== undefined && coDiff <= -3.0 && (
+                              <span className="rounded bg-rose-100/80 px-1.5 py-0.2 text-[9px] font-semibold text-rose-800">
+                                Строже напарника
+                              </span>
+                            )}
+                            {hasRacing && !hasCoursing && (
+                              <span className="rounded bg-warm-blue-100 px-1.5 py-0.2 text-[9px] font-semibold text-warm-blue-800">
                                 Бега
                               </span>
-                            ) : null}
+                            )}
                           </div>
 
-                          <div className="text-[10px] text-charcoal-400 tabular-nums">
-                            {hasScores && judge.min_score !== null && judge.max_score !== null ? (
-                              judge.min_score === judge.max_score
-                                ? `диапазон: ${judge.min_score} б.`
-                                : `диапазон: ${judge.min_score}–${judge.max_score} б.`
-                            ) : (
-                              'судейство бегов (хронометраж)'
-                            )}
+                          <div className="text-[10px] text-charcoal-400 mt-0.5">
+                            {judge.starts_count} {pluralizeEvents(judge.starts_count)}
+                            {judge.evaluations_count > 0 && ` · ${judge.evaluations_count} ${pluralizeEvals(judge.evaluations_count)}`}
                           </div>
                         </td>
 
-                        {/* Соревнования и оценки */}
+                        {/* Места собаки под этим экспертом */}
                         <td className="px-3 py-2.5 text-center align-middle whitespace-nowrap">
-                          <div className="font-semibold tabular-nums text-charcoal-800">
-                            {judge.starts_count}{' '}
-                            <span className="text-[10px] font-normal text-charcoal-400">
-                              ({judge.starts_percent}%)
-                            </span>
-                          </div>
-                          <div className="text-[10px] text-charcoal-400 tabular-nums">
-                            {judge.evaluations_count > 0 ? (
-                              `${judge.evaluations_count} ${pluralizeEvals(judge.evaluations_count)}`
-                            ) : (
-                              'бега'
-                            )}
-                          </div>
+                          {avgPlace !== null && avgPlace !== undefined ? (
+                            <div>
+                              <div className="flex items-center justify-center gap-1">
+                                {judge.placements && judge.placements.map((p, pIdx) => (
+                                  <span
+                                    key={pIdx}
+                                    className={`inline-flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-bold ${
+                                      p === 1
+                                        ? 'bg-amber-100 text-amber-900 border border-amber-300'
+                                        : p === 2
+                                        ? 'bg-slate-100 text-slate-800 border border-slate-300'
+                                        : p === 3
+                                        ? 'bg-orange-100 text-orange-900 border border-orange-300'
+                                        : 'bg-stone-100 text-stone-700'
+                                    }`}
+                                  >
+                                    {p}
+                                  </span>
+                                ))}
+                              </div>
+                              <div className="mt-1">
+                                <span className={`inline-block rounded px-1.5 py-0.2 text-[10px] ${placeBadgeClass}`}>
+                                  ср. {avgPlace.toFixed(1)} м.
+                                </span>
+                              </div>
+                            </div>
+                          ) : (
+                            <span className="text-[10px] text-charcoal-400">—</span>
+                          )}
+                        </td>
+
+                        {/* Разница с напарником по заездам */}
+                        <td className="px-3 py-2.5 text-center align-middle whitespace-nowrap">
+                          {coDiff !== null && coDiff !== undefined ? (
+                            <div className="inline-flex flex-col items-center">
+                              <span
+                                className={`inline-flex items-center gap-1 rounded-md px-2 py-0.5 text-[11px] tabular-nums ${coDiffBadgeClass}`}
+                                title={`В одних и тех же заездах ставит ${coDiff > 0 ? 'выше' : 'ниже'} напарника на ${Math.abs(coDiff)} б.`}
+                              >
+                                {CoDiffIcon && <CoDiffIcon className="h-3 w-3" aria-hidden />}
+                                {coDiff > 0 ? `+${coDiff.toFixed(2)}` : coDiff.toFixed(2)} б.
+                              </span>
+                              <span className="text-[9px] text-charcoal-400 mt-0.5">
+                                к напарнику
+                              </span>
+                            </div>
+                          ) : (
+                            <span className="text-[10px] text-charcoal-400">—</span>
+                          )}
                         </td>
 
                         {/* Средний балл */}
                         <td className="px-3 py-2.5 text-right align-middle font-bold tabular-nums text-charcoal-800 whitespace-nowrap">
                           {hasScores && judge.avg_score !== null ? (
-                            judge.avg_score.toFixed(2)
+                            <div>
+                              <div>{judge.avg_score.toFixed(2)}</div>
+                              {judge.min_score !== null && judge.max_score !== null && (
+                                <div className="text-[10px] font-normal text-charcoal-400">
+                                  {judge.min_score === judge.max_score
+                                    ? `${judge.min_score} б.`
+                                    : `${judge.min_score}–${judge.max_score} б.`}
+                                </div>
+                              )}
+                            </div>
                           ) : (
                             <span className="text-[10px] font-normal text-charcoal-400 bg-cream-100 rounded px-1.5 py-0.5">
-                              время
+                              хронометраж
                             </span>
-                          )}
-                        </td>
-
-                        {/* Дельта */}
-                        <td className="px-3 py-2.5 text-right align-middle whitespace-nowrap">
-                          {!hasScores ? (
-                            <span className="text-[10px] text-charcoal-400">—</span>
-                          ) : hasLowData ? (
-                            <span
-                              className="inline-flex items-center rounded-md border border-stone-200 bg-stone-50 px-1.5 py-0.5 text-[10px] text-charcoal-400"
-                              title="Мало данных для объективной дельты"
-                            >
-                              мало данных
-                            </span>
-                          ) : delta !== null ? (
-                            <span
-                              className={`inline-flex items-center gap-1 rounded-md border px-2 py-0.5 text-[11px] font-semibold tabular-nums ${deltaBadgeClass}`}
-                              title={`Разница со средним собаки: ${delta > 0 ? '+' : ''}${delta.toFixed(2)}`}
-                            >
-                              {DeltaIcon && <DeltaIcon className="h-3 w-3" aria-hidden />}
-                              {delta > 0 ? `+${delta.toFixed(2)}` : delta.toFixed(2)}
-                            </span>
-                          ) : (
-                            <span className="text-[10px] text-charcoal-400">—</span>
                           )}
                         </td>
 
@@ -721,12 +850,12 @@ export function DogJudgesSection({ judgeStats, competitions = [] }: DogJudgesSec
                         </td>
                       </tr>
 
-                      {/* Раскрывающийся блок деталей турниров под этим экспертом */}
+                      {/* Раскрывающийся блок деталей турниров */}
                       {isExpanded && (
                         <tr className="bg-cream-50/50">
                           <td colSpan={5} className="border-t border-old-money-100 px-4 py-3">
                             <div className="mb-2 text-[11px] font-semibold uppercase tracking-wider text-charcoal-500">
-                              Состязания под экспертизой {judge.judge_name}:
+                              Турниры и заезды под экспертизой {judge.judge_name}:
                             </div>
                             <div className="space-y-2">
                               {judge.events.map((ev, idx) => (
@@ -741,12 +870,6 @@ export function DogJudgesSection({ judgeStats, competitions = [] }: DogJudgesSec
                                         <Calendar className="h-3 w-3 text-charcoal-400" aria-hidden />
                                         <span>{ev.date}</span>
                                       </span>
-
-                                      {ev.discipline === 'racing' && (
-                                        <span className="rounded bg-warm-blue-50 border border-warm-blue-200 px-1.5 py-0.2 text-[9px] font-semibold text-warm-blue-800">
-                                          Бега борзых
-                                        </span>
-                                      )}
 
                                       {ev.role && (
                                         <span
@@ -989,11 +1112,10 @@ export function DogJudgesSection({ judgeStats, competitions = [] }: DogJudgesSec
       {/* Сноска и пояснение в стиле Old Money */}
       <div className="mt-4 border-t border-old-money-100 pt-3 text-[11px] leading-relaxed text-charcoal-500 space-y-1.5">
         <p>
-          <strong>Дельта (Δ):</strong> разница между средней оценкой эксперта и общим средним собаки в курсинге. Отклонения в пределах ±2.5 б. считаются обычной судейской вариацией; мягкий индикатор подсвечивает выраженное отклонение.
+          <strong>Места собаки:</strong> фактические занятые места в состязаниях под этим экспертом и среднее место (ср. М).
         </p>
-        <p className="text-charcoal-400">
-          <Info className="inline h-3.5 w-3.5 mr-1 text-charcoal-400 align-[-2px]" aria-hidden />
-          В судейский пул включены все официальные эксперты курсинга и бегов борзых. Бега борзых (рейсинг) оцениваются по чистому времени и учитываются по количеству участий без балльной шкалы.
+        <p>
+          <strong>vs Напарник:</strong> расхождение оценок с напарником по коллегии в одних и тех же заездах курсинга. Положительное значение показывает, что эксперт оценил собаку щедрее коллеги; отрицательное — строже коллеги на той же трассе.
         </p>
       </div>
     </section>
