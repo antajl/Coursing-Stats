@@ -1,0 +1,517 @@
+{
+  "schema": "coursing-stats/competition-v1",
+  "exported_at": "2026-10-26T08:16:32.436Z",
+  "source": "manual-entry",
+  "event_id": 20221019,
+  "event": {
+    "id": 20221019,
+    "year": 2022,
+    "date_start": "2022-09-03",
+    "date_end": "2022-09-03",
+    "rank_label": "Кубок России",
+    "event_type": "bzmp",
+    "competition_kind": "",
+    "competition_type": "",
+    "title": "Кубок России по бегам за механической приманкой, 03.09.2022 (Калужская обл., б/о Головинка)",
+    "host_club": null,
+    "region": "Калужская область",
+    "location": "Калужская область, б/о Головинка",
+    "catalog_url": null,
+    "results_url": null,
+    "rules_url": null,
+    "results_pdf_url": null,
+    "confirmed": 1,
+    "last_modified": "2026-10-26T08:16:32.436Z",
+    "scraped_at": null,
+    "telegram_url": null,
+    "full_title": null,
+    "event_date": null,
+    "protocol_location": null,
+    "judges": [
+      "Карелина Н.В.",
+      "Петровас Н.Е."
+    ],
+    "track_schemes": []
+  },
+  "result_count": 8,
+  "results": [
+    {
+      "id": 1,
+      "event_id": 20221019,
+      "dog_id": 9216,
+      "breed_class": "Американский голый терьер - Стандартный - Кобели",
+      "catalog_no": 1,
+      "placement": null,
+      "total_score": 108,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "withdrawn",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  12,
+                  12,
+                  10,
+                  12,
+                  10
+                ],
+                "sum": 56
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  10,
+                  10,
+                  10,
+                  12,
+                  10
+                ],
+                "sum": 52
+              }
+            ],
+            "total": 108
+          },
+          {
+            "heat_number": 7,
+            "blanket": "red",
+            "disqualified": true,
+            "disqualification_reason": "Сошёл",
+            "total": 0
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9216,
+        "dog_key": "паик-paiyk--американскии-голыи-терье",
+        "name_lat": "ПАЙК /PAIYK",
+        "name_ru": "ПАЙК /PAIYK",
+        "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 2,
+      "event_id": 20221019,
+      "dog_id": 715,
+      "breed_class": "Бигль - Стандартный - Кобели",
+      "catalog_no": 3,
+      "placement": 1,
+      "total_score": 329,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Победитель Кубка России",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 2,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  16,
+                  16,
+                  15,
+                  16,
+                  16
+                ],
+                "sum": 79
+              }
+            ],
+            "total": 167
+          },
+          {
+            "heat_number": 9,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  16,
+                  16,
+                  15,
+                  15,
+                  15
+                ],
+                "sum": 77
+              }
+            ],
+            "total": 162
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 715,
+        "dog_key": "вильям-николло-паганини--бигль",
+        "name_lat": "ВИЛЬЯМ НИКОЛЛО ПАГАНИНИ",
+        "name_ru": "ВИЛЬЯМ НИКОЛЛО ПАГАНИНИ",
+        "breed": "БИГЛЬ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 3,
+      "event_id": 20221019,
+      "dog_id": 11050,
+      "breed_class": "Бигль - Стандартный - Кобели",
+      "catalog_no": 5,
+      "placement": 2,
+      "total_score": 302,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 2,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  17,
+                  18,
+                  17,
+                  16
+                ],
+                "sum": 84
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  16,
+                  15,
+                  15,
+                  16,
+                  16
+                ],
+                "sum": 78
+              }
+            ],
+            "total": 162
+          },
+          {
+            "heat_number": 8,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  13,
+                  13,
+                  14,
+                  15,
+                  14
+                ],
+                "sum": 69
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  14,
+                  14,
+                  15,
+                  15,
+                  13
+                ],
+                "sum": 71
+              }
+            ],
+            "total": 140
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11050,
+        "dog_key": "elvis--бигль",
+        "name_lat": "ELVIS",
+        "name_ru": "ЭЛВИС",
+        "breed": "Бигль",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 4,
+      "event_id": 20221019,
+      "dog_id": 11051,
+      "breed_class": "Бигль - Стандартный - Кобели",
+      "catalog_no": 4,
+      "placement": 3,
+      "total_score": 250,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 3,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  10,
+                  11,
+                  11,
+                  11,
+                  10
+                ],
+                "sum": 53
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  10,
+                  10,
+                  10,
+                  10,
+                  10
+                ],
+                "sum": 50
+              }
+            ],
+            "total": 103
+          },
+          {
+            "heat_number": 9,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  15,
+                  15,
+                  14,
+                  15
+                ],
+                "sum": 75
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  14,
+                  15,
+                  14,
+                  15,
+                  14
+                ],
+                "sum": 72
+              }
+            ],
+            "total": 147
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11051,
+        "dog_key": "ред-американа-аи-ве-тач-ту-мач--бигль",
+        "name_lat": "РЕД АМЕРИКАНА АЙ'ВЕ ТАЧ ТУ МАЧ",
+        "name_ru": "РЕД АМЕРИКАНА АЙ'ВЕ ТАЧ ТУ МАЧ",
+        "breed": "Бигль",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 5,
+      "event_id": 20221019,
+      "dog_id": 9220,
+      "breed_class": "Бигль - Стандартный - Кобели",
+      "catalog_no": 2,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "withdrawn",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 3,
+            "blanket": "red",
+            "disqualified": true,
+            "disqualification_reason": "Сошёл",
+            "total": 0
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9220,
+        "dog_key": "арес--бигль",
+        "name_lat": "АРЕС",
+        "name_ru": "АРЕС",
+        "breed": "БИГЛЬ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 6,
+      "event_id": 20221019,
+      "dog_id": 9235,
+      "breed_class": "Метис - Стандартный - Суки",
+      "catalog_no": 6,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "withdrawn",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 4,
+            "blanket": "red",
+            "disqualified": true,
+            "disqualification_reason": "Сошёл",
+            "total": 0
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9235,
+        "dog_key": "brave-fighter-s-milk-and-honey--метис",
+        "name_lat": "BRAVE FIGHTER’S MILK AND HONEY",
+        "name_ru": "BRAVE FIGHTER’S MILK AND HONEY",
+        "breed": "МЕТИС",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 7,
+      "event_id": 20221019,
+      "dog_id": 10504,
+      "breed_class": "Цвергпинчер - Ветераны - Суки",
+      "catalog_no": 7,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "withdrawn",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 5,
+            "blanket": "red",
+            "disqualified": true,
+            "disqualification_reason": "Сошёл",
+            "total": 0
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10504,
+        "dog_key": "вандебор-егоза-чарует-глаза--цвергпинчер",
+        "name_lat": "ВАНДЕБОР ЕГОЗА ЧАРУЕТ ГЛАЗА",
+        "name_ru": "ВАНДЕБОР ЕГОЗА ЧАРУЕТ ГЛАЗА",
+        "breed": "ЦВЕРГПИНЧЕР",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 8,
+      "event_id": 20221019,
+      "dog_id": 11036,
+      "breed_class": "Цвергпинчер - Стандартный - Кобели",
+      "catalog_no": 8,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "withdrawn",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 6,
+            "blanket": "red",
+            "disqualified": true,
+            "disqualification_reason": "Сошёл",
+            "total": 0
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11036,
+        "dog_key": "petit-prince-d-artagnan--цвергпинчер",
+        "name_lat": "PETIT PRINCE D'ARTAGNAN",
+        "name_ru": "PETIT PRINCE D'ARTAGNAN",
+        "breed": "Цвергпинчер",
+        "sex": "Кобель",
+        "owner": null
+      }
+    }
+  ]
+}

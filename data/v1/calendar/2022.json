@@ -2,8 +2,8 @@
   "schema": "coursing-stats/calendar-v1",
   "year": 2022,
   "exported_at": "2026-09-28T13:21:42.917Z",
-  "event_count": 11,
-  "with_results": 11,
+  "event_count": 12,
+  "with_results": 12,
   "events": [
     {
       "id": 20221009,
@@ -216,6 +216,28 @@
       "results_file": "competitions/2022/09-сентябрь/20221018-чемпионат-ркф-по-курсингу-03-04-09-2022-калужска.json",
       "result_count": 76,
       "participants_count": 76,
+      "judges": [
+        "Карелина Н.В.",
+        "Петровас Н.Е."
+      ]
+    },
+    {
+      "id": 20221019,
+      "year": 2022,
+      "date_start": "2022-09-03",
+      "date_end": "2022-09-03",
+      "rank_label": "Кубок России",
+      "event_type": "bzmp",
+      "competition_kind": "",
+      "competition_type": "",
+      "title": "Кубок России по бегам за механической приманкой, 03.09.2022 (Калужская обл., б/о Головинка)",
+      "host_club": null,
+      "region": "Калужская область",
+      "location": "Калужская область, б/о Головинка",
+      "has_results": true,
+      "results_file": "competitions/2022/09-сентябрь/20221019-кубок-россии-по-бегам-за-механическои-приманкои-.json",
+      "result_count": 8,
+      "participants_count": 8,
       "judges": [
         "Карелина Н.В.",
         "Петровас Н.Е."

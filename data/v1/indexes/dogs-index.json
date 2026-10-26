@@ -3631,7 +3631,7 @@
     "file_by_id": "dogs/by-id/715.json",
     "file_by_key": "dogs/by-key/вильям-николло-паганини--бигль.json",
     "competition_count": 4,
-    "sex": "female"
+    "sex": "M"
   },
   {
     "id": 716,
@@ -11305,7 +11305,7 @@
     "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
     "file_by_id": "dogs/by-id/9216.json",
     "file_by_key": "dogs/by-key/паик-paiyk--американскии-голыи-терье.json",
-    "competition_count": 1,
+    "competition_count": 2,
     "sex": "M"
   },
   {
@@ -11514,7 +11514,7 @@
     "breed": "МЕТИС",
     "file_by_id": "dogs/by-id/9235.json",
     "file_by_key": "dogs/by-key/brave-fighter-s-milk-and-honey--метис.json",
-    "competition_count": 3,
+    "competition_count": 4,
     "sex": "F"
   },
   {
@@ -23410,7 +23410,7 @@
     "breed": "ЦВЕРГПИНЧЕР",
     "file_by_id": "dogs/by-id/10504.json",
     "file_by_key": "dogs/by-key/вандебор-егоза-чарует-глаза--цвергпинчер.json",
-    "competition_count": 1,
+    "competition_count": 2,
     "sex": "F"
   },
   {
@@ -27929,7 +27929,7 @@
     "breed": "Цвергпинчер",
     "file_by_id": "dogs/by-id/11036.json",
     "file_by_key": "dogs/by-key/petit-prince-d-artagnan--цвергпинчер.json",
-    "competition_count": 1,
+    "competition_count": 2,
     "sex": "M"
   },
   {
@@ -28074,5 +28074,27 @@
     "file_by_key": "dogs/by-key/спарта--хортая-борзая.json",
     "competition_count": 1,
     "sex": "F"
+  },
+  {
+    "id": 11050,
+    "dog_key": "элвис--бигль",
+    "name_lat": "ELVIS",
+    "name_ru": "ЭЛВИС",
+    "breed": "Бигль",
+    "file_by_id": "dogs/by-id/11050.json",
+    "file_by_key": "dogs/by-key/элвис--бигль.json",
+    "competition_count": 1,
+    "sex": "M"
+  },
+  {
+    "id": 11051,
+    "dog_key": "ред-американа-аи-ве-тач-ту-мач--бигль",
+    "name_lat": "РЕД АМЕРИКАНА АЙ'ВЕ ТАЧ ТУ МАЧ",
+    "name_ru": "РЕД АМЕРИКАНА АЙ'ВЕ ТАЧ ТУ МАЧ",
+    "breed": "Бигль",
+    "file_by_id": "dogs/by-id/11051.json",
+    "file_by_key": "dogs/by-key/ред-американа-аи-ве-тач-ту-мач--бигль.json",
+    "competition_count": 1,
+    "sex": "M"
   }
 ]

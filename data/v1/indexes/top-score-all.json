@@ -2,7 +2,7 @@
   "schema": "coursing-stats/index-top-score-v1",
   "year": null,
   "rating_score_version": "cs-v1",
-  "count": 2000,
+  "count": 2002,
   "items": [
     {
       "dog_id": 1,
@@ -4067,14 +4067,15 @@
       "name_lat": "ВИЛЬЯМ НИКОЛЛО ПАГАНИНИ",
       "name_ru": "ВИЛЬЯМ НИКОЛЛО ПАГАНИНИ",
       "breed": "БИГЛЬ",
-      "year_from": 2025,
+      "year_from": 2022,
       "year_to": 2026,
-      "best_score": 320,
-      "total_starts": 2,
-      "best_judge_score": 84,
-      "avg_judge_score": 80,
-      "judge_eval_count": 4,
-      "rating_score": 84.58
+      "best_score": 329,
+      "total_starts": 3,
+      "best_judge_score": 88,
+      "avg_judge_score": 81.13,
+      "judge_eval_count": 8,
+      "rating_score": 85.05,
+      "sex": "M"
     },
     {
       "dog_id": 716,
@@ -29839,6 +29840,36 @@
       "avg_judge_score": null,
       "judge_eval_count": 0,
       "rating_score": null,
+      "sex": "M"
+    },
+    {
+      "dog_id": 11050,
+      "name_lat": "ELVIS",
+      "name_ru": "ЭЛВИС",
+      "breed": "Бигль",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_score": 302,
+      "total_starts": 1,
+      "best_judge_score": 84,
+      "avg_judge_score": 75.5,
+      "judge_eval_count": 4,
+      "rating_score": 83.33,
+      "sex": "M"
+    },
+    {
+      "dog_id": 11051,
+      "name_lat": "РЕД АМЕРИКАНА АЙ'ВЕ ТАЧ ТУ МАЧ",
+      "name_ru": "РЕД АМЕРИКАНА АЙ'ВЕ ТАЧ ТУ МАЧ",
+      "breed": "Бигль",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_score": 250,
+      "total_starts": 1,
+      "best_judge_score": 75,
+      "avg_judge_score": 62.5,
+      "judge_eval_count": 4,
+      "rating_score": 79.88,
       "sex": "M"
     }
   ]
