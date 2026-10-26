@@ -6,19 +6,20 @@
   "name_lat": "DAYTONA MYSTIC DRIVE",
   "name_ru": "ДЕЙТОНА МИСТИК ДРАЙВ",
   "breed": "УИППЕТ",
-  "sex": null,
+  "sex": "Сука",
   "owner": null,
   "pedigree_url": "https://whippet.breedarchive.com/animal/view/daytona-mystic-drive-f6f63118-7a8b-4ebc-bf8a-d6aa39665acc",
   "competition_ids": [
     1217,
     1432,
     1436,
-    20240609,
-    20240615,
-    20240908,
+    20221016,
     20230415,
     20230819,
-    20231007
+    20231007,
+    20240609,
+    20240615,
+    20240908
   ],
   "competition_files": [
     "competitions/2023/06-июнь/1432-чемпионат-ркф-cacl-по-бегам-борзых.json",
@@ -29,6 +30,7 @@
     "competitions/2024/09-сентябрь/20240908--08092024-.json",
     "competitions/2023/04-апрель/20230415--15-16042023-.json",
     "competitions/2023/10-октябрь/20231007--07-08102023-.json",
-    "competitions/2023/08-август/20230819--cacl-19082023-.json"
+    "competitions/2023/08-август/20230819--cacl-19082023-.json",
+    "competitions/2022/06-июнь/20221016-чемпионат-ркф-по-бегам-борзых-круг-12-06-2022-м-.json"
   ]
 }
