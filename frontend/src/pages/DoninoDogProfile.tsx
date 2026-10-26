@@ -340,244 +340,228 @@ export default function DoninoDogProfile() {
 
   // Early returns (must be after all hooks)
   if (loading) {
-    return (
-      <div className="min-h-screen p-6">
-        <div className="max-w-4xl mx-auto">
-          <SkeletonLoader variant="card" count={3} />
-        </div>
-      </div>
-    )
+    return <SkeletonLoader variant="card" count={3} />
   }
 
   if (error) {
-    return (
-      <div className="min-h-screen p-6">
-        <ErrorState title="Ошибка" message={error} onRetry={() => window.location.reload()} />
-      </div>
-    )
+    return <ErrorState title="Ошибка" message={error} onRetry={() => window.location.reload()} />
   }
 
   if (!data) {
-    return (
-      <div className="min-h-screen p-6">
-        <ErrorState title="Данные не найдены" message="Собака не найдена в базе данных" />
-      </div>
-    )
+    return <ErrorState title="Данные не найдены" message="Собака не найдена в базе данных" />
   }
 
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} keywords={seoKeywords} canonicalUrl={seoCanonical} />
-      <div className="p-4 md:p-6">
-        <div className="max-w-4xl mx-auto">
-          <div ref={exportRef}>
-            {/* Шапка профиля */}
-            <div className="relative mb-6">
-              <div className="rounded-2xl border-2 border-old-money-200 bg-white p-4 sm:p-5 md:p-6 shadow-md">
-                <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
-                  {/* Левая часть: Кличка и пол */}
-                  <div className="min-w-0 flex-1">
-                    <div className="flex flex-wrap items-baseline gap-2.5 sm:gap-3">
-                      <OwnerCrownName name={data?.name} breed={data?.breed} kind="donino">
-                        <h1 className="break-words text-2xl font-bold tracking-tight text-charcoal-900 md:text-3xl">
-                          {displayName}
-                        </h1>
-                      </OwnerCrownName>
-                      {dogSex && <DogSexIcon sex={dogSex} size={20} className="mb-0.5 shrink-0" />}
-                    </div>
-                  </div>
-
-                  {/* Правая часть: Достижения и награды (подиум Old Money) */}
-                  {achievements.length > 0 && (
-                    <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 md:justify-end">
-                      {achievements.map((badge) => (
-                        <HoverTooltip key={badge.id} label={badge.tooltip}>
-                          <div
-                            className={`inline-flex shrink-0 items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold ${badge.color}`}
-                          >
-                            {badge.icon}
-                            <span>{badge.label}</span>
-                            {badge.sublabel && (
-                              <span className="font-normal opacity-80">· {badge.sublabel}</span>
-                            )}
-                          </div>
-                        </HoverTooltip>
-                      ))}
-                    </div>
-                  )}
-                </div>
-
-                {/* Нижняя строка шапки: Порода, Избранное, Ссылка в спорт */}
-                <div className="mt-4 flex flex-wrap items-center justify-between gap-2.5 pt-3 border-t border-old-money-100">
-                  <div className="flex flex-wrap items-center gap-2">
-                    <span
-                      className="inline-block rounded-full border border-old-money-200 bg-cream-100 px-3.5 py-1.5 text-xs sm:text-sm font-semibold text-charcoal-700"
-                      title={
-                        breedInfo.secondary
-                          ? `${breedInfo.primary} — ${breedInfo.secondary}`
-                          : breedInfo.primary
-                      }
-                    >
-                      {breedInfo.primary}
-                    </span>
-
-                    {/* Кнопка в избранное */}
-                    <button
-                      type="button"
-                      onClick={handleToggleFavorite}
-                      disabled={loadingFavorite}
-                      className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-50 ${
-                        favorite
-                          ? 'border-amber-400 bg-amber-50 text-amber-700 hover:border-amber-500 hover:bg-amber-100'
-                          : 'border-old-money-200 bg-white text-camel-700 hover:border-camel-400 hover:bg-camel-50'
-                      }`}
-                      aria-label={favorite ? 'Удалить из избранного' : 'Добавить в избранное'}
-                      title={favorite ? 'Удалить из избранного' : 'Добавить в избранное'}
-                      data-export-ignore
-                    >
-                      <StarIcon
-                        className={`h-3.5 w-3.5 shrink-0 ${favorite ? 'fill-current' : ''}`}
-                        aria-hidden
-                      />
-                      <span>{favorite ? 'В избранном' : 'В избранное'}</span>
-                    </button>
-
-                    {/* Ссылка на официальный профиль в спорте при наличии dog_id */}
-                    {data?.dog_id && (
-                      <Link
-                        to={`/dog/${data.dog_id}`}
-                        className="inline-flex items-center gap-1.5 rounded-full border border-forest-200 bg-forest-50 px-3.5 py-1.5 text-xs font-semibold text-forest-800 transition-colors hover:border-forest-300 hover:bg-forest-100"
-                        title="Перейти в официальный спортивный профиль собаки (соревнования РКФ)"
-                        data-export-ignore
-                      >
-                        <Trophy className="h-3.5 w-3.5 text-forest-600 shrink-0" />
-                        <span>Профиль в спорте</span>
-                        <ArrowRight className="h-3 w-3 text-forest-600 shrink-0" />
-                      </Link>
-                    )}
-                  </div>
+      <div ref={exportRef}>
+        {/* Шапка профиля */}
+        <div className="relative mb-6">
+          <div className="relative min-w-0 rounded-xl border border-old-money-200/80 bg-white p-4 sm:p-5 md:p-6">
+            <div className="flex flex-col xl:flex-row xl:items-start xl:justify-between gap-3 sm:gap-4">
+              {/* Левая часть: Кличка и пол */}
+              <div className="min-w-0 flex-1 xl:min-w-[280px]">
+                <div className="flex flex-wrap items-baseline gap-2.5 sm:gap-3">
+                  <OwnerCrownName name={data?.name} breed={data?.breed} kind="donino">
+                    <h1 className="break-words text-2xl font-bold tracking-tight text-charcoal-900 md:text-3xl">
+                      {displayName}
+                    </h1>
+                  </OwnerCrownName>
+                  {dogSex && <DogSexIcon sex={dogSex} size={20} className="mb-0.5 shrink-0" />}
                 </div>
               </div>
+
+              {/* Правая часть: Достижения и награды (подиум Old Money) */}
+              {achievements.length > 0 && (
+                <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 min-w-0 xl:max-w-2xl xl:justify-end">
+                  {achievements.map((badge) => (
+                    <HoverTooltip key={badge.id} label={badge.tooltip}>
+                      <div
+                        className={`inline-flex shrink-0 items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold ${badge.color}`}
+                      >
+                        {badge.icon}
+                        <span>{badge.label}</span>
+                        {badge.sublabel && (
+                          <span className="font-normal opacity-80">· {badge.sublabel}</span>
+                        )}
+                      </div>
+                    </HoverTooltip>
+                  ))}
+                </div>
+              )}
             </div>
 
-            {/* Мобильный переключатель дисциплин (если есть обе) */}
-            {hasSpeedRecords && hasCoursingRecords && (
-              <SegmentedTabs
-                tabs={[
-                  { id: 'speed', label: 'Замер скорости', count: uniqueSpeedRecords.length },
-                  { id: 'coursing', label: 'Бега 350 м', count: coursingHistory.length },
-                ]}
-                activeTab={mobileTab}
-                onChange={setMobileTab}
-                ariaLabel="Дисциплины собаки"
-                className="mb-4"
-              />
-            )}
+            {/* Нижняя строка шапки: Порода, Избранное, Ссылка в спорт */}
+            <div className="mt-4 flex flex-wrap items-center justify-between gap-2.5 pt-3 border-t border-old-money-100">
+              <div className="flex flex-wrap items-center gap-2">
+                <span
+                  className="inline-block rounded-full border border-old-money-200 bg-cream-100 px-3.5 py-1.5 text-xs sm:text-sm font-semibold text-charcoal-700"
+                  title={
+                    breedInfo.secondary
+                      ? `${breedInfo.primary} — ${breedInfo.secondary}`
+                      : breedInfo.primary
+                  }
+                >
+                  {breedInfo.primary}
+                </span>
 
-            {/* Статистика и история */}
-            {(hasSpeedRecords || hasCoursingRecords) && (
-              <div className="mb-6 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
-                {hasSpeedRecords ? (
-                  <div
-                    className={`min-w-0 flex-col gap-4 ${
-                      mobileTab === 'speed' || !hasCoursingRecords ? 'flex' : 'hidden md:flex'
-                    }`}
+                {/* Кнопка в избранное */}
+                <button
+                  type="button"
+                  onClick={handleToggleFavorite}
+                  disabled={loadingFavorite}
+                  className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-50 ${
+                    favorite
+                      ? 'border-amber-400 bg-amber-50 text-amber-700 hover:border-amber-500 hover:bg-amber-100'
+                      : 'border-old-money-200 bg-white text-camel-700 hover:border-camel-400 hover:bg-camel-50'
+                  }`}
+                  aria-label={favorite ? 'Удалить из избранного' : 'Добавить в избранное'}
+                  title={favorite ? 'Удалить из избранного' : 'Добавить в избранное'}
+                  data-export-ignore
+                >
+                  <StarIcon
+                    className={`h-3.5 w-3.5 shrink-0 ${favorite ? 'fill-current' : ''}`}
+                    aria-hidden
+                  />
+                  <span>{favorite ? 'В избранном' : 'В избранное'}</span>
+                </button>
+
+                {/* Ссылка на официальный профиль в спорте при наличии dog_id */}
+                {data?.dog_id && (
+                  <Link
+                    to={`/dog/${data.dog_id}`}
+                    className="inline-flex items-center gap-1.5 rounded-full border border-forest-200 bg-forest-50 px-3.5 py-1.5 text-xs font-semibold text-forest-800 transition-colors hover:border-forest-300 hover:bg-forest-100"
+                    title="Перейти в официальный спортивный профиль собаки (соревнования РКФ)"
+                    data-export-ignore
                   >
-                    <div className="flex min-h-[22rem] md:h-[25rem] shrink-0 flex-col rounded-2xl border-2 border-warm-blue-200 bg-white p-4 sm:p-5 shadow-md md:p-6">
-                      <h2 className="mb-3 sm:mb-4 shrink-0 text-lg font-bold tracking-tight text-charcoal-800 md:text-xl">
-                        Замер скорости
-                      </h2>
+                    <Trophy className="h-3.5 w-3.5 text-forest-600 shrink-0" />
+                    <span>Профиль в спорте</span>
+                    <ArrowRight className="h-3 w-3 text-forest-600 shrink-0" />
+                  </Link>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
 
-                      <div className="mb-3 sm:mb-4 flex h-[6.5rem] sm:h-[7.25rem] shrink-0 flex-col items-center justify-center rounded-xl border-2 border-warm-blue-200 bg-warm-blue-50 p-3 sm:p-4 text-center">
-                        <div className="mb-1 sm:mb-2 text-xs font-semibold uppercase tracking-wide text-charcoal-500">
-                          Лучшая скорость
-                        </div>
-                        <div className="whitespace-nowrap text-3xl sm:text-4xl font-bold tracking-tight text-warm-blue-800">
-                          {data?.speedStats?.bestSpeed?.toFixed(1) || '—'}
-                          <span className="ml-1.5 sm:ml-2 text-sm sm:text-base font-normal text-charcoal-400">
-                            км/ч
-                          </span>
-                        </div>
+        {/* Мобильный переключатель дисциплин (если есть обе) */}
+        {hasSpeedRecords && hasCoursingRecords && (
+          <SegmentedTabs
+            tabs={[
+              { id: 'speed', label: 'Замер скорости', count: uniqueSpeedRecords.length },
+              { id: 'coursing', label: 'Бега 350 м', count: coursingHistory.length },
+            ]}
+            activeTab={mobileTab}
+            onChange={setMobileTab}
+            ariaLabel="Дисциплины собаки"
+            className="mb-4"
+          />
+        )}
+
+        {/* Статистика и история */}
+        {(hasSpeedRecords || hasCoursingRecords) && (
+          <div className="mb-6 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-5 xl:gap-6">
+            {hasSpeedRecords ? (
+              <div
+                className={`min-w-0 flex-col gap-4 ${
+                  mobileTab === 'speed' || !hasCoursingRecords ? 'flex' : 'hidden md:flex'
+                }`}
+              >
+                <div className="flex min-h-[22rem] md:h-[25rem] shrink-0 flex-col rounded-xl border border-warm-blue-200 bg-white p-4 sm:p-5 md:p-6">
+                  <h2 className="mb-3 sm:mb-4 shrink-0 text-lg font-bold tracking-tight text-charcoal-800 md:text-xl">
+                    Замер скорости
+                  </h2>
+
+                  <div className="mb-3 sm:mb-4 flex h-[6.5rem] sm:h-[7.25rem] shrink-0 flex-col items-center justify-center rounded-xl border border-warm-blue-200 bg-warm-blue-50 p-3 sm:p-4 text-center">
+                    <div className="mb-1 sm:mb-2 text-xs font-semibold uppercase tracking-wide text-charcoal-500">
+                      Лучшая скорость
+                    </div>
+                    <div className="whitespace-nowrap text-3xl sm:text-4xl font-bold tracking-tight text-warm-blue-800">
+                      {data?.speedStats?.bestSpeed?.toFixed(1) || '—'}
+                      <span className="ml-1.5 sm:ml-2 text-sm sm:text-base font-normal text-charcoal-400">
+                        км/ч
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="mb-2 sm:mb-4 grid min-h-0 flex-1 grid-cols-2 gap-2 sm:gap-3 content-start">
+                    <div className="rounded-xl border border-warm-blue-200 bg-warm-blue-50 p-2.5 sm:p-4 text-center">
+                      <div className="mb-1 text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-old-money-500">
+                        Средняя
                       </div>
-
-                      <div className="mb-2 sm:mb-4 grid min-h-0 flex-1 grid-cols-2 gap-2 sm:gap-3 content-start">
-                        <div className="rounded-xl border border-warm-blue-200 bg-warm-blue-50 p-2.5 sm:p-4 text-center">
-                          <div className="mb-1 text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-old-money-500">
-                            Средняя
-                          </div>
-                          <div className="whitespace-nowrap text-xl sm:text-2xl font-bold text-warm-blue-900">
-                            {data?.speedStats?.avgSpeed?.toFixed(1) || '—'}
-                            <span className="ml-1 text-xs sm:text-sm font-normal text-charcoal-400">
-                              км/ч
-                            </span>
-                          </div>
-                        </div>
-                        <div className="rounded-xl border border-warm-blue-200 bg-warm-blue-50 p-2.5 sm:p-4 text-center">
-                          <div className="mb-1 text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-old-money-500">
-                            Замеров
-                          </div>
-                          <div className="text-xl sm:text-2xl font-bold text-warm-blue-900">
-                            {uniqueSpeedRecords.length}
-                          </div>
-                        </div>
-                        <div className="rounded-xl border border-warm-blue-200 bg-warm-blue-50 p-2.5 sm:p-4 text-center">
-                          <div className="mb-1 text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-old-money-500">
-                            Рейтинг в породе
-                          </div>
-                          <div className="text-xl sm:text-2xl font-bold text-charcoal-800">
-                            {data?.speedStats?.breedRank > 0 ? (
-                              <>
-                                #{data.speedStats.breedRank}
-                                <span className="ml-1 text-xs sm:text-sm font-normal text-charcoal-400">
-                                  из {data.speedStats.breedTotal}
-                                </span>
-                              </>
-                            ) : (
-                              '—'
-                            )}
-                          </div>
-                        </div>
-                        <div
-                          className="rounded-xl border border-dashed border-warm-blue-200 bg-warm-blue-50/50 opacity-50"
-                          aria-hidden
-                        />
+                      <div className="whitespace-nowrap text-xl sm:text-2xl font-bold text-warm-blue-900">
+                        {data?.speedStats?.avgSpeed?.toFixed(1) || '—'}
+                        <span className="ml-1 text-xs sm:text-sm font-normal text-charcoal-400">
+                          км/ч
+                        </span>
                       </div>
                     </div>
-
-                    {uniqueSpeedRecords.length > 0 && (
-                      <div className="rounded-2xl border-2 border-warm-blue-200 bg-white p-4 sm:p-5 shadow-md md:p-6">
-                        <h3 className="mb-3 sm:mb-4 text-base font-bold tracking-tight text-charcoal-800 md:text-lg">
-                          История
-                        </h3>
-                        <div className="space-y-2">
-                          {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-                          {uniqueSpeedRecords.map((record: any, idx: number) => (
-                            <div key={idx} className="flex items-center gap-2.5 sm:gap-4">
-                              <div className="w-20 sm:w-24 shrink-0 text-right text-xs sm:text-sm text-charcoal-700">
-                                {formatRecordDate(record.date)}
-                              </div>
-                              <div className="relative h-6 flex-1 overflow-hidden rounded-full bg-cream-200">
-                                <AnimatedMeterBar
-                                  percent={(Number(record.speed_km_h) / 80) * 100}
-                                  className="h-full rounded-full bg-gradient-to-r from-warm-blue-400 to-warm-blue-600 transition-[width] duration-500 ease-out"
-                                />
-                                <div className="absolute inset-0 flex items-center justify-center text-xs sm:text-sm font-bold text-charcoal-900">
-                                  {Number(record.speed_km_h).toFixed(1)} км/ч
-                                </div>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
+                    <div className="rounded-xl border border-warm-blue-200 bg-warm-blue-50 p-2.5 sm:p-4 text-center">
+                      <div className="mb-1 text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-old-money-500">
+                        Замеров
                       </div>
-                    )}
+                      <div className="text-xl sm:text-2xl font-bold text-warm-blue-900">
+                        {uniqueSpeedRecords.length}
+                      </div>
+                    </div>
+                    <div className="rounded-xl border border-warm-blue-200 bg-warm-blue-50 p-2.5 sm:p-4 text-center">
+                      <div className="mb-1 text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-old-money-500">
+                        Рейтинг в породе
+                      </div>
+                      <div className="text-xl sm:text-2xl font-bold text-charcoal-800">
+                        {data?.speedStats?.breedRank > 0 ? (
+                          <>
+                            #{data.speedStats.breedRank}
+                            <span className="ml-1 text-xs sm:text-sm font-normal text-charcoal-400">
+                              из {data.speedStats.breedTotal}
+                            </span>
+                          </>
+                        ) : (
+                          '—'
+                        )}
+                      </div>
+                    </div>
+                    <div
+                      className="rounded-xl border border-dashed border-warm-blue-200 bg-warm-blue-50/50 opacity-50"
+                      aria-hidden
+                    />
                   </div>
-                ) : (
-                  <div
-                    className={`min-h-[22rem] md:h-[25rem] shrink-0 flex-col rounded-2xl border-2 border-dashed border-warm-blue-200 bg-white p-4 sm:p-5 shadow-md md:p-6 ${
-                      mobileTab === 'speed' || !hasCoursingRecords ? 'flex' : 'hidden md:flex'
-                    }`}
-                  >
-                    <h2 className="mb-4 shrink-0 text-lg font-bold tracking-tight text-charcoal-800 md:text-xl">
+                </div>
+
+                {uniqueSpeedRecords.length > 0 && (
+                  <div className="rounded-xl border border-warm-blue-200 bg-white p-4 sm:p-5 md:p-6">
+                    <h3 className="mb-3 sm:mb-4 text-base font-bold tracking-tight text-charcoal-800 md:text-lg">
+                      История
+                    </h3>
+                    <div className="space-y-2">
+                      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+                      {uniqueSpeedRecords.map((record: any, idx: number) => (
+                        <div key={idx} className="flex items-center gap-2.5 sm:gap-4">
+                          <div className="w-20 sm:w-24 shrink-0 text-right text-xs sm:text-sm text-charcoal-700">
+                            {formatRecordDate(record.date)}
+                          </div>
+                          <div className="relative h-6 flex-1 overflow-hidden rounded-full bg-cream-200">
+                            <AnimatedMeterBar
+                              percent={(Number(record.speed_km_h) / 80) * 100}
+                              className="h-full rounded-full bg-gradient-to-r from-warm-blue-400 to-warm-blue-600 transition-[width] duration-500 ease-out"
+                            />
+                            <div className="absolute inset-0 flex items-center justify-center text-xs sm:text-sm font-bold text-charcoal-900">
+                              {Number(record.speed_km_h).toFixed(1)} км/ч
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <div
+                className={`min-h-[22rem] md:h-[25rem] shrink-0 flex-col rounded-xl border border-dashed border-warm-blue-200 bg-white p-4 sm:p-5 md:p-6 ${
+                  mobileTab === 'speed' || !hasCoursingRecords ? 'flex' : 'hidden md:flex'
+                }`}
+              >
+                <h2 className="mb-4 shrink-0 text-lg font-bold tracking-tight text-charcoal-800 md:text-xl">
                       Замер скорости
                     </h2>
                     <div className="mb-4 flex h-[6.5rem] sm:h-[7.25rem] shrink-0 flex-col items-center justify-center rounded-xl border border-dashed border-warm-blue-200 bg-warm-blue-50/50 opacity-50">
@@ -598,12 +582,12 @@ export default function DoninoDogProfile() {
                       mobileTab === 'coursing' || !hasSpeedRecords ? 'flex' : 'hidden md:flex'
                     }`}
                   >
-                    <div className="flex min-h-[22rem] md:h-[25rem] shrink-0 flex-col rounded-2xl border-2 border-forest-200 bg-white p-4 sm:p-5 shadow-md md:p-6">
+                    <div className="flex min-h-[22rem] md:h-[25rem] shrink-0 flex-col rounded-xl border border-forest-200 bg-white p-4 sm:p-5 md:p-6">
                       <h2 className="mb-3 sm:mb-4 shrink-0 text-lg font-bold tracking-tight text-charcoal-800 md:text-xl">
                         Бега борзых (350 м)
                       </h2>
 
-                      <div className="mb-3 sm:mb-4 flex h-[6.5rem] sm:h-[7.25rem] shrink-0 flex-col items-center justify-center rounded-xl border-2 border-forest-200 bg-forest-50 p-3 sm:p-4 text-center">
+                      <div className="mb-3 sm:mb-4 flex h-[6.5rem] sm:h-[7.25rem] shrink-0 flex-col items-center justify-center rounded-xl border border-forest-200 bg-forest-50 p-3 sm:p-4 text-center">
                         <div className="mb-1 sm:mb-2 text-xs font-semibold uppercase tracking-wide text-charcoal-500">
                           Лучшее время
                         </div>
@@ -660,7 +644,7 @@ export default function DoninoDogProfile() {
                     </div>
 
                     {coursingHistory.length > 0 && (
-                      <div className="rounded-2xl border-2 border-forest-200 bg-white p-4 sm:p-5 shadow-md md:p-6">
+                      <div className="rounded-xl border border-forest-200 bg-white p-4 sm:p-5 md:p-6">
                         <h3 className="mb-3 sm:mb-4 text-base font-bold tracking-tight text-charcoal-800 md:text-lg">
                           История
                         </h3>
@@ -688,7 +672,7 @@ export default function DoninoDogProfile() {
                   </div>
                 ) : (
                   <div
-                    className={`min-h-[22rem] md:h-[25rem] shrink-0 flex-col rounded-2xl border-2 border-dashed border-forest-200 bg-white p-4 sm:p-5 shadow-md md:p-6 ${
+                    className={`min-h-[22rem] md:h-[25rem] shrink-0 flex-col rounded-xl border border-dashed border-forest-200 bg-white p-4 sm:p-5 md:p-6 ${
                       mobileTab === 'coursing' || !hasSpeedRecords ? 'flex' : 'hidden md:flex'
                     }`}
                   >
@@ -710,14 +694,12 @@ export default function DoninoDogProfile() {
             )}
 
             {!hasSpeedRecords && !hasCoursingRecords && (
-              <div className="rounded-2xl border-2 border-old-money-200 bg-white p-6 text-center shadow-md">
+              <div className="rounded-xl border border-old-money-200/80 bg-white p-6 text-center">
                 <p className="text-old-money-600">Нет записей для этой собаки</p>
               </div>
             )}
 
             <DoninoAttribution className="mt-6 text-center" />
-          </div>
-        </div>
       </div>
     </>
   )

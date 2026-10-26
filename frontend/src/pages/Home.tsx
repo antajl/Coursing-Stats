@@ -95,7 +95,7 @@ export default function Home() {
         children={
           <div
             className="flex flex-col items-start gap-4 lg:gap-6 select-none max-w-full"
-            style={{ width: 'clamp(320px, 28vw, 640px)' }}
+            style={{ width: 'clamp(280px, 26vw, 560px)' }}
           >
             <picture>
               <source media="(max-width: 768px)" srcSet="/assets/hero/title-mobile.webp" width={560} height={350} />
@@ -111,7 +111,7 @@ export default function Home() {
                 className="w-full h-auto drop-shadow-md pointer-events-none"
               />
             </picture>
-            <div className="w-full max-w-[500px] ml-6 lg:ml-10 pointer-events-auto">
+            <div className="w-full max-w-[440px] ml-4 lg:ml-8 pointer-events-auto">
               <HomeDogSearch className="w-full" />
             </div>
           </div>
@@ -155,8 +155,8 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Tablet / compressed desktop (< 1280px): MetricsWidget in body flow to prevent covering hero logo */}
-        <div className="hidden md:block xl:hidden mb-8">
+        {/* Tablet / compressed desktop (< 1024px): MetricsWidget in body flow to prevent covering hero logo */}
+        <div className="hidden md:block lg:hidden mb-8">
           <MetricsWidget
             events={featuredEvents}
             shows={featuredShows}

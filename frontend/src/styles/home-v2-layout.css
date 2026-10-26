@@ -68,14 +68,6 @@ main:has(.home-v2) {
     min-height: 600px;
     padding-bottom: 0;
   }
-  .home-v2-stage-content {
-    left: max(1.5rem, calc((100vw - 2048px) / 2 + 1.5rem));
-  }
-}
-@media (min-width: 1280px) {
-  .home-v2-stage-metrics {
-    right: max(1rem, calc((100vw - 2048px) / 2 + 1rem));
-  }
 }
 @media (max-width: 767px) {
   .home-v2-stage--closed {

@@ -17,8 +17,9 @@ export default function HomeHeroStage({ children, metrics, onCloseMetrics }: Hom
   const mediaRef = useRef<HTMLDivElement>(null)
   const metricsRef = useRef<HTMLDivElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
+  const desktopOverlayRef = useRef<HTMLDivElement>(null)
 
-  // Scroll fade for metrics widget and hero content (logo + search) on desktop
+  // Scroll fade for desktop overlay (logo + search + metrics)
   useEffect(() => {
     const handleScroll = () => {
       if (window.innerWidth < BREAKPOINTS.MOBILE) return
@@ -28,18 +29,11 @@ export default function HomeHeroStage({ children, metrics, onCloseMetrics }: Hom
       const fadeOpacity = String(Math.max(0, 1 - progress))
       const isFadedOut = progress >= 0.98
 
-      const metricsEl = metricsRef.current
-      if (metricsEl) {
-        metricsEl.style.opacity = fadeOpacity
-        metricsEl.style.pointerEvents = isFadedOut ? 'none' : 'auto'
-        metricsEl.style.visibility = isFadedOut ? 'hidden' : 'visible'
-      }
-
-      const contentEl = contentRef.current
-      if (contentEl) {
-        contentEl.style.opacity = fadeOpacity
-        contentEl.style.pointerEvents = isFadedOut ? 'none' : 'auto'
-        contentEl.style.visibility = isFadedOut ? 'hidden' : 'visible'
+      const overlayEl = desktopOverlayRef.current
+      if (overlayEl) {
+        overlayEl.style.opacity = fadeOpacity
+        overlayEl.style.pointerEvents = isFadedOut ? 'none' : 'auto'
+        overlayEl.style.visibility = isFadedOut ? 'hidden' : 'visible'
       }
     }
 
@@ -152,18 +146,33 @@ export default function HomeHeroStage({ children, metrics, onCloseMetrics }: Hom
         </picture>
       </div>
 
+      {/* Desktop Hero Overlay (>= 768px): Unified flex row prevents any overlap between logo and metrics */}
       <div
-        ref={contentRef}
-        className="hidden md:block md:fixed md:top-20 z-20 will-change-opacity w-fit max-w-full home-v2-stage-content opacity-100 pointer-events-auto visible"
+        ref={desktopOverlayRef}
+        className="hidden md:block md:fixed md:top-20 inset-x-0 z-20 will-change-opacity pointer-events-none"
       >
-        {children}
+        <div className="w-full max-w-[2048px] mx-auto px-4 lg:px-6 flex justify-between items-start gap-4 lg:gap-6">
+          <div ref={contentRef} className="pointer-events-auto shrink-0 w-fit max-w-[45vw]">
+            {children}
+          </div>
+
+          {metrics && (
+            <div
+              data-metrics-panel="true"
+              className="pointer-events-auto shrink min-w-0 max-w-4xl hidden lg:block"
+            >
+              {metrics}
+            </div>
+          )}
+        </div>
       </div>
 
+      {/* Mobile Metrics (< 768px) */}
       {metrics && (
         <div
           ref={metricsRef}
           data-metrics-panel="true"
-          className="relative z-40 w-full max-w-xl mx-auto px-3 pt-2 pb-4 md:hidden xl:block xl:py-0 xl:fixed xl:top-20 xl:max-w-5xl xl:px-0 will-change-opacity pointer-events-auto home-v2-stage-metrics"
+          className="relative z-40 w-full max-w-xl mx-auto px-3 pt-2 pb-4 md:hidden will-change-opacity pointer-events-auto"
         >
           {/* Mobile close button: smoothly collapses stage so content flies up */}
           <div className="md:hidden flex justify-end pb-1.5">
