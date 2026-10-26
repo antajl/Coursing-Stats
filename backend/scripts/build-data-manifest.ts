@@ -204,15 +204,19 @@ export function buildDataManifest() {
   };
 
   const manifestPath = path.join(DATA_V1, 'manifest.json');
-  fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2) + '\n', 'utf8');
+  const manifestTmp = path.join(DATA_V1, 'manifest.json.tmp');
+  fs.writeFileSync(manifestTmp, JSON.stringify(manifest, null, 2) + '\n', 'utf8');
+  fs.renameSync(manifestTmp, manifestPath);
 
   // Also write clean breeds.json
   const breedsPath = path.join(DATA_V1, 'breeds.json');
+  const breedsTmp = path.join(DATA_V1, 'breeds.json.tmp');
   fs.writeFileSync(
-    breedsPath,
+    breedsTmp,
     JSON.stringify({ breeds: sortedBreeds }, null, 2) + '\n',
     'utf8',
   );
+  fs.renameSync(breedsTmp, breedsPath);
 
   console.log(`✓ Updated data/v1/manifest.json & data/v1/breeds.json:`);
   console.log(`  Events: ${manifest.counts.events}`);

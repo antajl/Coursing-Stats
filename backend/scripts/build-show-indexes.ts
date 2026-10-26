@@ -53,6 +53,7 @@ import {
   linkShowDogsByUniqueName,
 } from '../lib/show-dog-dedupe'
 import { getExhibitionsRkfStore } from '../lib/exhibitions-rkf-store'
+import { canonicalBreed } from '../src/lib/breed-mapping'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -1624,7 +1625,10 @@ async function main() {
   const showBreeds = new Set<string>()
   for (const d of dogs) {
     const breed = String((d as { breed?: string }).breed || '').trim()
-    if (breed) showBreeds.add(breed)
+    const canon = canonicalBreed(breed)
+    if (canon && canon !== 'UNKNOWN' && !/^\d+$/.test(canon)) {
+      showBreeds.add(canon)
+    }
   }
   const heroStats = {
     schema: 'coursing-stats/show-hero-stats-v1',
